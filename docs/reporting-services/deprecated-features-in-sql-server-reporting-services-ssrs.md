@@ -2,7 +2,7 @@
 title: Recursos preteridos do SQL Server Reporting Services no SQL Server 2016 | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - HTML OWC rendering extension [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1aee888aa086908ddbaf120bf4a62d1f23ce4948
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5aca8d992817ab65a6f618ff544f1dfa0e02252e
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031265"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502751"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2016"></a>Recursos preteridos do SQL Server Reporting Services no SQL Server 2016
 

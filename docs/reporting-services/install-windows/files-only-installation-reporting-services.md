@@ -8,14 +8,14 @@ helpviewer_keywords:
 - files-only installation [Reporting Services]
 - installation options [Reporting Services]
 ms.assetid: bdc74a8f-046c-4aa0-bfbd-4f1711dfb9ce
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9bb08af2be944093346f3769ef5cc533592ad86f
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8874115765a659b76e5d187df7414bedb3548ed9
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711227"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502929"
 ---
 # <a name="files-only-installation-reporting-services"></a>Instalação somente de arquivos (Reporting Services)
   O termo*instalação somente de arquivos* refere-se a uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em que a instalação cria a estrutura de pastas para os arquivos de programas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , copia os arquivos para o disco, registra o serviço Servidor de Relatório no computador local, configura a conta de serviço, concede permissões de arquivo a essa conta e registra o provedor WMI do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -59,7 +59,13 @@ setup /q /ACTION=install /FEATURES=RS /InstanceName=MSSQLSERVER /RSSVCACCOUNT="N
  [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  [Instalar o Reporting Services no modo do SharePoint](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
+
+::: moniker-end
+
  [Instalar o servidor de relatórios de modo nativo do Reporting Services](~/reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)   
  [Ferramentas do Reporting Services](../../reporting-services/tools/reporting-services-tools.md)  
   

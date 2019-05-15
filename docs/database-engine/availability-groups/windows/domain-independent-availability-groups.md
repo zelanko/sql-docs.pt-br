@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b332dbf2fe0876e324ff7c892588a0121a6b4e7c
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: c11900048bf7f32e39f993cb8369162a468be13d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744556"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090251"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Criar um grupo de disponibilidade independente de domínio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Um sufixo DNS comum é necessário para o Cluster de Grupo de Trabalho do Grupo 
 
 Atualmente, a criação de um Grupo de Disponibilidade Independente de Domínio não pode ser realizada por completo com o SQL Server Management Studio. Embora a criação do Grupo de Disponibilidade Independente de Domínio seja basicamente o mesmo que a criação de um grupo de disponibilidade normal, alguns aspectos (como a criação de certificados) apenas são possíveis com o Transact-SQL. O exemplo abaixo pressupõe uma configuração do grupo de disponibilidade com duas réplicas: uma primária e uma secundária. 
 
-1. [Usando as instruções deste link](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/), implante um Cluster de Grupo de Trabalho composto por todos os servidores que farão parte do grupo de disponibilidade. Verifique se o sufixo DNS comum já está configurado antes de configurar o Cluster de Grupo de Trabalho.
+1. [Usando as instruções deste link](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059), implante um Cluster de Grupo de Trabalho composto por todos os servidores que farão parte do grupo de disponibilidade. Verifique se o sufixo DNS comum já está configurado antes de configurar o Cluster de Grupo de Trabalho.
 2. [Habilite o recurso Grupos de Disponibilidade AlwaysOn](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) em cada instância que fará parte do grupo de disponibilidade. Isso exigirá uma reinicialização de cada instância do SQL Server.
 3. Cada instância que hospedará a réplica primária exige uma chave mestra de banco de dados. Se uma chave mestra ainda não existir, execute o seguinte comando:
 

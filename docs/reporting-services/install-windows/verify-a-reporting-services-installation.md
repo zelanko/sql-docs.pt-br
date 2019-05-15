@@ -12,17 +12,22 @@ helpviewer_keywords:
 - report servers [Reporting Services], verifying installations
 - Setup [Reporting Services], verifying installations
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3c3f3bb02022fe4bbb8090c2160fa3cf75cfefa7
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5c1c2bb116f08dca2df111b6cccd9d6f0bf28160
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814049"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503291"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verificar uma instalação do Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem ser instalados em um de dois modos: Nativo ou SharePoint. As etapas que você deve seguir para verificar a instalação dependem do modo do servidor de relatório.  
+
+> [!NOTE]
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ##  <a name="bkmk_sharepointmode"></a> Verificar a instalação do modo do SharePoint  
   
@@ -71,6 +76,8 @@ ms.locfileid: "51814049"
 1.  Concluir um dos tutoriais do Reporting Services. Para obter mais informações, consulte [Tutoriais do Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).  
   
 2.  Baixe o banco de dados de exemplo do AdventureWorks e os relatórios de exemplo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no GitHub. Para obter mais informações, consulte os [Bancos de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
+
+::: moniker-end
   
 ##  <a name="bkmk_nativemode"></a> Verificar uma instalação no modo Nativo  
  Quando você instala um servidor de relatório do modo Nativo usando a configuração padrão, a Instalação instala e implanta o servidor. Você pode verificar se a Instalação implantou o servidor de relatório executando alguns testes simples. Você deve ser um administrador local para executar essas etapas. Para permitir que outros usuários executem o teste, você deve configurar o acesso ao servidor de relatório para tais usuários.  

@@ -1,9 +1,8 @@
 ---
 title: Caixa de diálogo Abrir Arquivo | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
@@ -13,88 +12,87 @@ ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f504d7d2369f2cdb1014ec2f1f27854e9275075c
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 6416bc03407e1256a12116fd5d837b00a570ee43
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53327890"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095231"
 ---
 # <a name="open-file-dialog-box"></a>Caixa de diálogo Abrir Arquivo
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Use a caixa de diálogo **Abrir Arquivo** para abrir um arquivo existente no disco. Você também pode usar essa caixa de diálogo para abrir um arquivo já aberto usando opções de codificação de linguagem diferentes.  
+  Use a caixa de diálogo **Abrir Arquivo** para abrir um arquivo existente no disco. Você também pode usar essa caixa de diálogo para abrir um arquivo já aberto usando opções de codificação de linguagem diferentes.  
   
-Para acessar essa caixa de diálogo, selecione **Abrir** no menu **Arquivo** e escolha **Arquivo**. Essa caixa de diálogo também é exibida quando você abre arquivos de outros elementos, como a caixa de diálogo **Ferramentas Externas** . No menu **Arquivo** , selecione **Abrir**e escolha **Projeto/Solução** para abrir a caixa de diálogo **Abrir Projeto** semelhante.  
+ Para acessar essa caixa de diálogo, selecione **Abrir** no menu **Arquivo** e escolha **Arquivo**. Essa caixa de diálogo também é exibida quando você abre arquivos de outros elementos, como a caixa de diálogo **Ferramentas Externas** . No menu **Arquivo** , selecione **Abrir**e escolha **Projeto/Solução** para abrir a caixa de diálogo **Abrir Projeto** semelhante.  
   
 > [!NOTE]  
-> Antes de abrir um projeto ou componente no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], determine a integridade de seu código. O ato de abrir o projeto ou componente em um [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pode executar seu código em um processo de confiança em sua máquina local.  
+>  Antes de abrir um projeto ou componente no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], determine a integridade de seu código. O ato de abrir o projeto ou componente em um [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pode executar seu código em um processo de confiança em sua máquina local.  
   
 ## <a name="option"></a>Opção  
-**Look in**  
-Localize a pasta de projeto existente nesse menu suspenso. A seleção de uma pasta nessa lista exibe o conteúdo da pasta no painel principal.  
+ **Look in**  
+ Localize a pasta de projeto existente nesse menu suspenso. A seleção de uma pasta nessa lista exibe o conteúdo da pasta no painel principal.  
   
 ## <a name="my-places-bar"></a>Barra Meus Locais  
-**Área de Trabalho**  
-Exibe os arquivos e pastas localizadas na área de trabalho.  
+ **Área de Trabalho**  
+ Exibe os arquivos e pastas localizadas na área de trabalho.  
   
-**Meus Projetos**  
-Exibe os arquivos e pastas na pasta **Projetos** dos usuários.  
+ **Meus Projetos**  
+ Exibe os arquivos e pastas na pasta **Projetos** dos usuários.  
   
-**Meu Computador**  
-Exibe os conteúdos de seu disco flexível, disco rígido e unidade de CD-ROM.  
+ **Meu Computador**  
+ Exibe os conteúdos de seu disco flexível, disco rígido e unidade de CD-ROM.  
   
 ## <a name="folder-list"></a>Lista de Pastas  
-**Nome do arquivo**  
-Use esta opção para filtrar os arquivos e pastas a serem exibidos. Insira um nome de arquivo completo ou parcial pelo qual filtrar. Você pode usar o asterisco (*) como um curinga.  
+ **Nome do arquivo**  
+ Use esta opção para filtrar os arquivos e pastas a serem exibidos. Insira um nome de arquivo completo ou parcial pelo qual filtrar. Você pode usar o asterisco (*) como um curinga.  
   
-**Arquivos do tipo**  
-Use esta opção para filtrar o conteúdo da pasta ou diretório selecionado em Examinar para um tipo de arquivo particular.  
+ **Arquivos do tipo**  
+ Use esta opção para filtrar o conteúdo da pasta ou diretório selecionado em Examinar para um tipo de arquivo particular.  
   
-**Opções de codificação e Abrir com**  
-Para usar a caixa de diálogo **Abrir com** para especificar um editor para o arquivo de destino, selecione o retângulo pequeno à direita do botão **Abrir** e escolha **Abrir com**. Se necessário, você também pode especificar um esquema de codificação de linguagem para aplicar ao abrir o arquivo selecionado. Para isso, selecione um programa na lista que contém "**com Codificação**" e escolha **Abrir** para exibir a **caixa de diálogo Codificação**. Esse botão nem sempre está disponível.  
+ **Opções de codificação e Abrir com**  
+ Para usar a caixa de diálogo **Abrir com** para especificar um editor para o arquivo de destino, selecione o retângulo pequeno à direita do botão **Abrir** e escolha **Abrir com**. Se necessário, você também pode especificar um esquema de codificação de linguagem para aplicar ao abrir o arquivo selecionado. Para isso, selecione um programa na lista que contém "**com Codificação**" e escolha **Abrir** para exibir a **caixa de diálogo Codificação**. Esse botão nem sempre está disponível.  
   
 ## <a name="toolbar"></a>Barra de Ferramentas  
-**Navegação Regressiva**  
-Retorna a pasta, unidade ou local de Internet exibido por último.  
+ **Navegação Regressiva**  
+ Retorna a pasta, unidade ou local de Internet exibido por último.  
   
-**Um nível acima**  
-Navega na árvore até a próxima pasta mais alta na exibição em árvore.  
+ **Um nível acima**  
+ Navega na árvore até a próxima pasta mais alta na exibição em árvore.  
   
-**Pesquisar na Web**  
-Esse botão não está disponível.  
+ **Pesquisar na Web**  
+ Esse botão não está disponível.  
   
-**Delete (excluir) (excluir)**  
-Exclui os arquivos ou pastas selecionadas do armazenamento.  
+ **Delete (excluir) (excluir)**  
+ Exclui os arquivos ou pastas selecionadas do armazenamento.  
   
-**Nova Pasta**  
-Exibe a caixa de diálogo **Nova Pasta** . Use esta opção para criar uma nova pasta filho abaixo da pasta selecionada na caixa de listagem suspensa **Examinar** .  
+ **Nova Pasta**  
+ Exibe a caixa de diálogo **Nova Pasta** . Use esta opção para criar uma nova pasta filho abaixo da pasta selecionada na caixa de listagem suspensa **Examinar** .  
   
-## <a name="views"></a>exibições  
-Fornece opções para organizar e exibir o conteúdo do item selecionado na caixa de listagem suspensa **Exibições** .  
+## <a name="views"></a>Exibições  
+ Fornece opções para organizar e exibir o conteúdo do item selecionado na caixa de listagem suspensa **Exibições** .  
   
-**Miniaturas**  
-Exibe miniaturas de itens no painel de exibição.  
+ **Miniaturas**  
+ Exibe miniaturas de itens no painel de exibição.  
   
-**Lado a lado**  
-Exibe arquivos e pastas como ícones grandes.  
+ **Lado a lado**  
+ Exibe arquivos e pastas como ícones grandes.  
   
-**Ícones**  
-Exibe arquivos e pastas como ícones pequenos.  
+ **Ícones**  
+ Exibe arquivos e pastas como ícones pequenos.  
   
-**Lista**  
-Exibe arquivos e pastas em formato de lista.  
+ **Lista**  
+ Exibe arquivos e pastas em formato de lista.  
   
-**Detalhes**  
-Exibe o nome, tamanho, tipo e data da última modificação de arquivos e pastas em formato de lista. Para ordenar por um detalhe específico, clique no cabeçalho da sua coluna.  
+ **Detalhes**  
+ Exibe o nome, tamanho, tipo e data da última modificação de arquivos e pastas em formato de lista. Para ordenar por um detalhe específico, clique no cabeçalho da sua coluna.  
   
-**Exibição da Web**  
-Esse comando não está disponível.  
+ **Exibição da Web**  
+ Esse comando não está disponível.  
   
 ## <a name="tools"></a>Ferramentas  
-Selecione uma ferramenta para aplicar ao item selecionado no painel de conteúdo.  
+ Selecione uma ferramenta para aplicar ao item selecionado no painel de conteúdo.  
   
-**Delete (excluir)**  
-Exclui o arquivo ou pasta selecionado do armazenamento.  
+ **Delete (excluir)**  
+ Exclui o arquivo ou pasta selecionado do armazenamento.  
   
-**Mapear Unidade de Rede**  
-Abre a caixa de diálogo **Mapear Unidade de Rede** .  
+ **Mapear Unidade de Rede**  
+ Abre a caixa de diálogo **Mapear Unidade de Rede** .  

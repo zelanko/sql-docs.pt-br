@@ -9,14 +9,14 @@ helpviewer_keywords:
 - configuration options [Reporting Services]
 - report servers [Reporting Services], configuring
 - components [Reporting Services], Reporting Services Configuration tool
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fec3d74b5b6d4d4387249ba3e4d5254aebfa1bed
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c6ea2a8ad189f5973b6fa3bb761be5c8596de761
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029015"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503635"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Gerenciador de Configurações do Reporting Services (Modo Nativo).
 
@@ -27,7 +27,7 @@ ms.locfileid: "50029015"
 Use o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no Modo Nativo. Se você instalou um servidor de relatório usando a opção de instalação somente arquivos, deverá usar o Gerenciador de Configuração para configurar o servidor antes de poder usá-lo. Se você instalou um servidor de relatório usando a opção de instalação de configuração padrão, poderá usar o Gerenciador de Configurações para verificar ou modificar as configurações que foram especificadas durante a instalação. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pode ser usado para configurar uma instância local ou remota do servidor de relatório.
 
 > [!NOTE]
-> A partir da versão [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não foi desenvolvido para gerenciar servidores de relatório no modo do SharePoint. O modo do SharePoint é gerenciado e configurado por meio de scripts da Administração Central do SharePoint e do PowerShell.  
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016. A partir da versão [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não foi desenvolvido para gerenciar servidores de relatório no modo do SharePoint. O modo do SharePoint é gerenciado e configurado por meio de scripts da Administração Central do SharePoint e do PowerShell.  
   
 ##  <a name="bkmk_scenarios"></a> Cenários para usar o Gerenciador de Configuração do Reporting Services.  
  Você pode usar a ferramenta Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para executar as seguintes tarefas:  

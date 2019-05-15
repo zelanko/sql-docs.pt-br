@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edaaf496dc8f58c2db8b3e01938b43d2437b39f8
-ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
+ms.openlocfilehash: 691f88eab85d4a9adda1cb44d5d234eb1f6360fd
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55428623"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503129"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -93,7 +93,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE STATISTICS statistics_name   
-    ON [ database_name . [schema_name ] . | schema_name. ] table_name   
+    ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( column_name  [ ,...n ] )   
     [ WHERE <filter_predicate> ]  
     [ WITH {  
@@ -255,7 +255,7 @@ CREATE STATISTICS ContactMail1
     WITH SAMPLE 5 PERCENT;  
 ```  
   
-### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>b. Usando CREATE STATISTICS com FULLSCAN e NORECOMPUTE  
+### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>B. Usando CREATE STATISTICS com FULLSCAN e NORECOMPUTE  
  O exemplo a seguir cria a estatística `NamePurchase` de todas as linhas das colunas `BusinessEntityID` e `EmailPromotion` da tabela `Person` e desabilita o recálculo de estatísticas.  
   
 ```sql  

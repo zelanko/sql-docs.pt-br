@@ -1,52 +1,68 @@
 ---
 title: Acessar itens do Servidor de Relatório usando o acesso à URL | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 05/08/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - referencing URL items for report server access
 - URL access [Reporting Services], report servers
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9a7f5c3452d63ad622dfd24d6ec3756ac5a028b2
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: fbc368b7e2dc781e0ca63f82c142d276472a7f1e
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812920"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503927"
 ---
 # <a name="access-report-server-items-using-url-access"></a>Acessar itens do Servidor de Relatório usando o acesso à URL
   Este tópico descreve como acessar itens de catálogo de diferentes tipos em um banco de dados do servidor de relatório ou em um site do SharePoint usando *rs:Command*=*Value*. Não é necessário adicionar de fato essa cadeia de caracteres de parâmetro. Se você omiti-la, o servidor de relatório avaliará o tipo de item e selecionará o valor de parâmetro apropriado automaticamente. No entanto, usar a cadeia de caracteres *rs:Command*=*Value* na URL melhora o desempenho do servidor de relatórios.  
   
  Observe a sintaxe do proxy `_vti_bin` nos exemplos a seguir. Para obter mais informações sobre como usar a sintaxe do proxy, consulte [Referência de parâmetro de acesso à URL](../reporting-services/url-access-parameter-reference.md).  
+
+> [!NOTE]
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
   
 ## <a name="access-a-report"></a>Acessar um relatório  
  Para exibir um relatório no navegador, use o parâmetro *rs:Command*=*Render* . Por exemplo:  
   
  - **Nativo** `https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  - **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver? https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
   
 > [!TIP]  
 >  É importante que a URL inclua a sintaxe do proxy `_vti_bin` para rotear a solicitação através do SharePoint e do proxy HTTP [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . O proxy adiciona qualquer contexto à solicitação HTTP, o contexto necessário para garantir a execução adequada do relatório para servidores de relatório no modo do SharePoint.  
+
+::: moniker-end
   
 ## <a name="access-a-resource"></a>Acessar um recurso  
  Para acessar um recurso, use o parâmetro *rs:Command*=*GetResourceContents* . Se o recurso for compatível com o navegador, como uma imagem, ele será aberto no navegador. Caso contrário, você será solicitado a abrir ou salvar o arquivo ou recurso em disco.  
   
  **Nativo** `https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver? https://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
+
+::: moniker-end
   
 ## <a name="access-a-data-source"></a>Acessar uma fonte de dados  
  Para acessar uma fonte de dados, use o parâmetro *rs:Command*=*GetDataSourceContents* . Se houver suporte para XML, a definição da fonte de dados será exibida se você for um usuário autenticado com a permissão **Ler Conteúdo** na fonte de dados. Por exemplo:  
   
  **Nativo** `https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver? https://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
  A estrutura XML pode ter uma aparência semelhante a esta:  
+
+::: moniker-end
   
 ```  
 <DataSourceDefinition>  
@@ -66,8 +82,12 @@ ms.locfileid: "51812920"
  Para acessar o conteúdo de uma pasta, use o parâmetro *rs:Command*=*GetChildren* . Uma página genérica de navegação em pasta será retornada contendo links para subpastas, relatórios, fontes de dados e recursos na pasta solicitada. Por exemplo:  
   
  **Nativo** `https://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver? https://myspsite/subsite/Sales&rs:Command=GetChildren`  
+
+::: moniker-end
   
  A interface do usuário que você vê é semelhante ao modo de procura do diretório usado pelo [!INCLUDE[msCoName](../includes/msconame-md.md)] IIS (Servidor de Informações da Internet). O número de versão, inclusive o número de compilação, do servidor de relatório também é exibido embaixo da listagem de pastas.  
   

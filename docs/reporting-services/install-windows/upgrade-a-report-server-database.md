@@ -2,29 +2,33 @@
 title: Atualizar um banco de dados do servidor de relatório | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - report server database
 - upgrading Reporting Services
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 03b999b35cf9b308d683c8888980d7e60a24fb36
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8a386e072660c67e2885b8b6303a066f71a23b01
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027525"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502644"
 ---
 # <a name="upgrade-a-report-server-database"></a>Atualizar um banco de dados do servidor de relatório
 
 O banco de dados do servidor de relatório fornece armazenamento para uma ou mais instâncias do servidor de relatório. Como o esquema do banco de dados do servidor de relatório pode ser alterado a cada versão nova do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é necessário que a versão do banco de dados corresponda à versão da instância do servidor de relatório que você está usando. Na maioria dos casos, um banco de dados do servidor de relatório pode ser atualizado automaticamente sem ação específica de sua parte.  
   
  **Modo nativo**: no modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o banco de dados do servidor de relatório é realmente composto de dois bancos de dados que têm os nomes padrão de ReportServer e ReportServerTempDB.  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  **Modo do SharePoint:** no modo do SharePoint do SQL Server 2016 Reporting Services, o banco de dados do servidor de relatório é, na verdade, uma coleção de bancos de dados que foi criada para cada instância do aplicativo do serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+
+::: moniker-end
 
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Maneiras de atualizar um banco de dados do servidor de relatório de modo nativo
 

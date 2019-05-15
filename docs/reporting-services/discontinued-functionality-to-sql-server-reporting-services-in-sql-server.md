@@ -1,21 +1,21 @@
 ---
 title: Funcionalidade descontinuada
-author: markingmyname
-ms.author: maghan
-manager: kfile
-ms.reviewer: ''
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
 ms.custom: seodec18
-ms.date: 12/14/2018
-ms.openlocfilehash: a40674afa51e52d3e84731711fc9edc013f69a46
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
-ms.translationtype: HT
+ms.date: 04/26/2019
+ms.openlocfilehash: 4ccadf456472b98a1ffc37f1d2988a161f86e375
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53552928"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503984"
 ---
 # <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>Funcionalidade descontinuada no SSRS (SQL Server Reporting Services)
 
@@ -29,14 +29,12 @@ Um *recurso descontinuado* é aquele que não tem mais suporte. Ele pode também
 
 |Recurso|Substituição ou solução alternativa|
 |-|-|
-|Carregar modelos de relatório por meio do portal da Web|Isso ainda pode ser feito por meio da API SOAP.|
-|Gerenciar modelos de relatório por meio do portal da Web|Isso ainda pode ser feito por meio da API SOAP.|
 |Personalizar folhas de estilo para o Visualizador de HTML e o Gerenciador de Relatórios|Você ainda pode [marca o portal da Web](branding-the-web-portal.md).|
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Novidades no Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-[Alterações de comportamento do SQL Server Reporting Services no SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
-[Recursos preteridos do SQL Server Reporting Services no SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
+* [Novidades no Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+* [Alterações de comportamento do SQL Server Reporting Services no SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
+* [Recursos preteridos do SQL Server Reporting Services no SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

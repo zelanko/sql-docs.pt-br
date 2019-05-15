@@ -9,14 +9,14 @@ helpviewer_keywords:
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a0e990b52a9433f959288dcf2e3518f85b8a6f67
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1b1ca1f19741002cee1ca9025582c6436f1522a5
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710637"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503040"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurar uma implantação em expansão do servidor de relatório em modo nativo.
 
@@ -26,7 +26,10 @@ O modo nativo do Reporting Services oferece suporte a um modelo de implantação
 
 Para o Servidor de Relatórios do Microsoft Power BI, é necessário configurar a afinidade de cliente (às vezes chamada de sessões temporárias) no balanceador de carga para qualquer ambiente de expansão para garantir um desempenho adequado.  
   
-Para o Reporting Services do SQL Server 2016 e anteriores, os servidores de relatório do modo do SharePoint utilizam a infraestrutura de produtos do SharePoint para expansão. A expansão do modo do SharePoint é executada acrescentando mais servidores de relatório de modo do SharePoint ao farm do SharePoint. Para obter informações sobre expansão no modo do SharePoint, veja [Adicionar um servidor de relatório a um farm &#40;Expansão do SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+Para o Reporting Services do SQL Server 2016 e anteriores, os servidores de relatório do modo do SharePoint utilizam a infraestrutura de produtos do SharePoint para expansão. A expansão do modo do SharePoint é executada acrescentando mais servidores de relatório de modo do SharePoint ao farm do SharePoint. Para obter informações sobre a expansão no modo do SharePoint, consulte [Adicionar outro servidor de relatório a um farm &#40;Expansão do SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+
+> [!NOTE]
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
  
   Uma *implantação de expansão* é usada nos seguintes cenários:  
   

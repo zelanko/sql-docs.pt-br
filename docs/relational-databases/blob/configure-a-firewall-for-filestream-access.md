@@ -1,9 +1,8 @@
 ---
 title: Configurar um firewall para acesso ao FILESTREAM | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: sql
-ms.prod_service: database-engine
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: filestream
 ms.topic: conceptual
@@ -14,15 +13,14 @@ ms.assetid: fc52007f-c26f-4f8e-b9d8-55a7978f4d56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9801498a7bb87ae2705745a45a3a5dc7678516e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 445b70f174eb9e0293173427c5550b29df067e5c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667344"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094212"
 ---
 # <a name="configure-a-firewall-for-filestream-access"></a>Configurar um firewall para acesso ao FILESTREAM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Para usar FILESTREAM em um ambiente protegido por firewall, o cliente e o servidor devem poder resolver nomes DNS para o servidor que contém os arquivos de FILESTREAM. O FILESTREAM exige que as portas de compartilhamento de arquivos do Windows 139 e 445 estejam abertas.  
   
 ### <a name="to-open-the-windows-file-sharing-ports-on-a-computer-that-is-running-windows-7"></a>Para abrir as portas de compartilhamento de arquivos do Windows em um computador que está executando o Windows 7  

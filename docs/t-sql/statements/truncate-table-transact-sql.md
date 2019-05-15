@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da038c619f4679600087fb3d46e88d96b059794b
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 82107dd0e4e5927eec1670a2a4e9fcf933ae35df
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801560"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503309"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,8 +46,7 @@ Remove todas as linhas de uma tabela ou partições especificadas de uma tabela 
 -- Syntax for SQL Server and Azure SQL Database  
   
 TRUNCATE TABLE   
-    [ { database_name .[ schema_name ] . | schema_name . } ]  
-    table_name  
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( PARTITIONS ( { <partition_number_expression> | <range> }   
     [ , ...n ] ) ) ]  
 [ ; ]  
@@ -59,7 +58,7 @@ TRUNCATE TABLE
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_name  
+TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  
 [;]  
 ```  
   
@@ -152,7 +151,7 @@ FROM HumanResources.JobCandidate;
 GO  
 ```  
   
-### <a name="b-truncate-table-partitions"></a>b. Truncar a tabela de partições  
+### <a name="b-truncate-table-partitions"></a>B. Truncar a tabela de partições  
   
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   

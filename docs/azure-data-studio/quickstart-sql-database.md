@@ -2,8 +2,8 @@
 title: 'Início Rápido: Conectar e consultar um banco de dados SQL do Azure'
 titleSuffix: Azure Data Studio
 description: Este início rápido mostra como usar o Studio de dados do Azure para se conectar a um banco de dados SQL e executar uma consulta
-ms.custom: seodec18
-ms.date: 12/21/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: d368f38589530f27db98c3c61b9cec4610818ae4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a961cd08baab13b87241492df4adef52d5846daf
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255967"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620362"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Início Rápido: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar e consultar o banco de dados SQL do Azure
 
@@ -39,7 +39,7 @@ Se você não tiver um servidor SQL Azure, conclua um dos inícios rápidos de b
 
 Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para estabelecer uma conexão ao seu servidor de banco de dados SQL.
 
-1. Na primeira vez que você executar [!INCLUDE[name-sos](../includes/name-sos-short.md)] as **Conexão** deve abrir a página. Se você não vir as **Conexão** página, selecione **Adicionar Conexão**, ou o **nova Conexão** ícone no **servidores** barra lateral:
+1. Na primeira vez que você executar [!INCLUDE[name-sos](../includes/name-sos-short.md)] as **boas-vindas** deve abrir a página. Se você não vir as **bem-vindo** página, selecione **ajudar** > **boas-vindas**. Selecione **nova Conexão** para abrir o **Conexão** painel:
    
    ![Novo ícone de Conexão](media/quickstart-sql-database/new-connection-icon.png)
 

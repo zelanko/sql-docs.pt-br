@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a312663c26142bfd532adbcaba80d2a6ee30d6db
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.openlocfilehash: 6222daffd3f008486f8c2be59f74a8c605caa2f7
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683676"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502858"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -90,7 +90,7 @@ Para obter mais informações sobre as convenções de sintaxe, consulte [Conven
 ## <a name="syntax-for-disk-based-tables"></a>Sintaxe para tabelas baseadas em disco
 
 ```
-ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
+ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
     {
@@ -249,7 +249,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 ## <a name="syntax-for-memory-optimized-tables"></a>Sintaxe para tabelas com otimização de memória
 
 ```
-ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
+ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
     {
@@ -380,7 +380,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 
 -- Syntax for Azure SQL Data Warehouse and Analytics Platform System
 
-ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_name
+ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {
     ALTER COLUMN column_name
         {
@@ -848,7 +848,7 @@ Quando você desabilitar o Stretch para uma tabela, tem duas opções para os da
 - Para desabilitar o Stretch de uma tabela e copiar os dados remotos da tabela do Azure de volta para o SQL Server, execute o comando a seguir. Esse comando não pode ser cancelado.
 
     ```sql
-    ALTER TABLE \<table name>
+    ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;
     ```
 
@@ -859,7 +859,7 @@ Depois que todos os dados remotos forem copiados do Azure de volta para o SQL Se
 - Para desabilitar o Stretch de uma tabela e abandonar os dados remotos, execute o comando a seguir.
 
     ```sql
-    ALTER TABLE \<table_name>
+    ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;
     ```
 
@@ -1042,7 +1042,7 @@ ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL ;
 GO
 ```
 
-#### <a name="b-adding-a-column-with-a-constraint"></a>b. Adicionando uma coluna com uma restrição
+#### <a name="b-adding-a-column-with-a-constraint"></a>B. Adicionando uma coluna com uma restrição
 
 O exemplo a seguir adiciona uma nova coluna com uma restrição `UNIQUE`.
 
@@ -1279,7 +1279,7 @@ GO
 ALTER TABLE dbo.doc_exb DROP COLUMN column_c, column_d;
 ```
 
-#### <a name="b-dropping-constraints-and-columns"></a>b. Descartando restrições e colunas
+#### <a name="b-dropping-constraints-and-columns"></a>B. Descartando restrições e colunas
 
 O primeiro exemplo remove uma restrição `UNIQUE` de uma tabela. O segundo exemplo remove duas restrições e uma única coluna.
 
@@ -1304,7 +1304,7 @@ GO
 -- The keyword CONSTRAINT is optional. The keyword COLUMN is required.
 ALTER TABLE dbo.doc_exc
 
-    DROP CONSTRAINT CONSTRAINT my_constraint, my_pk_constraint, COLUMN column_b ;
+    DROP CONSTRAINT my_constraint, my_pk_constraint, COLUMN column_b ;
 GO
 ```
 
@@ -1359,7 +1359,7 @@ DROP TABLE dbo.doc_exy ;
 GO
 ```
 
-#### <a name="b-changing-the-size-of-a-column"></a>b. Alterando o tamanho de uma coluna
+#### <a name="b-changing-the-size-of-a-column"></a>B. Alterando o tamanho de uma coluna
 
 O exemplo a seguir aumenta o tamanho de uma coluna **varchar** e a precisão e escala de uma coluna **decimal**. Como essas colunas contêm dados, o tamanho da coluna só pode ser aumentado. Além disso, observe que `col_a` está definido como um índice exclusivo. O tamanho de `col_a` ainda pode ser aumentado, pois o tipo de dados é um **varchar** e o índice não é o resultado de uma restrição PRIMARY KEY.
 
@@ -1471,7 +1471,7 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;
 
 Para obter exemplos de compactação de dados adicionais, consulte [Compactação de dados](../../relational-databases/data-compression/data-compression.md).
 
-#### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>b. Modificando uma tabela columnstore para alterar a compactação de arquivamento
+#### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>B. Modificando uma tabela columnstore para alterar a compactação de arquivamento
 
 O exemplo a seguir compacta ainda mais uma partição de tabela columnstore aplicando um algoritmo de compactação adicional. Essa compactação reduz a tabela para um tamanho menor, mas também aumenta o tempo necessário para armazenamento e recuperação. Isso pode ser útil para fins de arquivamento, ou em outras situações que exijam menos espaço e possam dispensar mais tempo para armazenamento e recuperação.
 
@@ -1584,7 +1584,7 @@ ALTER TABLE dbo.cnst_example CHECK CONSTRAINT salary_cap;
 INSERT INTO dbo.cnst_example VALUES (4,'Eric James',110000) ;
 ```
 
-#### <a name="b-disabling-and-re-enabling-a-trigger"></a>b. Desabilitando e reabilitando um gatilho
+#### <a name="b-disabling-and-re-enabling-a-trigger"></a>B. Desabilitando e reabilitando um gatilho
 
 O exemplo a seguir usa a opção `DISABLE TRIGGER` de `ALTER TABLE` para desabilitar o gatilho e permitir uma inserção que normalmente violaria o gatilho. `ENABLE TRIGGER` é usado para reabilitar o gatilho.
 
@@ -1640,7 +1640,7 @@ REBUILD WITH
 ;
 ```
 
-#### <a name="b-online-alter-column"></a>b. Alteração online de coluna
+#### <a name="b-online-alter-column"></a>B. Alteração online de coluna
 
 O exemplo a seguir mostra como executar uma operação de alteração de coluna com a opção ONLINE.
 
@@ -1683,7 +1683,7 @@ ALTER TABLE InsurancePolicy
 SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 1 YEAR));
 ```
 
-#### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>b. Migrar uma solução existente para usar o controle de versão do sistema
+#### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>B. Migrar uma solução existente para usar o controle de versão do sistema
 
 O exemplo a seguir mostra como migrar para o controle de versão do sistema de uma solução que usa gatilhos para imitar simular o suporte temporal. O exemplo supõe que há uma solução existente que usa uma tabela `ProjectTask` e uma tabela `ProjectTaskHistory` para sua solução existente, que usa as colunas `Changed Date` e `Revised Date` para seus períodos, que essas colunas de período não usam o datatype `datetime2` e que a tabela `ProjectTask` tem uma chave primária definida.
 
@@ -1757,7 +1757,7 @@ WHERE p.partition_id IS NOT NULL
     AND t.name = 'FactResellerSales';
 ```
 
-### <a name="b-determining-boundary-values-for-a-partitioned-table"></a>b. Determinando os valores de limite para uma tabela particionada
+### <a name="b-determining-boundary-values-for-a-partitioned-table"></a>B. Determinando os valores de limite para uma tabela particionada
 
 A consulta a seguir retorna os valores de limite para cada partição na tabela `FactResellerSales` .
 

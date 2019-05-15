@@ -13,21 +13,21 @@ helpviewer_keywords:
 - push pin [SQL Server Management Studio]
 - tool windows [SQL Server Management Studio]
 ms.assetid: bebf8383-dcaf-466e-84f5-63b81c9cfe52
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 377bc150d0e357a245a9281aa853ce834a50de36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9bd9f0a6698b5af88d7a8bf86752f6d1c11bd6b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774164"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090039"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>Compreender o gerenciamento de janelas do SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 As janelas de ferramenta do [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] são um sistema altamente funcional, flexível e eficiente que permite que você:  
   
--   Maximize a área de trabalho de usuário para desenvolvimento e administração.  
+-   Maximize o workspace de usuário para desenvolvimento e administração.  
   
 -   Reduza o número de janelas não usadas exibidas simultaneamente.  
   

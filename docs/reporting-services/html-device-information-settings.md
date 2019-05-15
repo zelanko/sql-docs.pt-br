@@ -2,21 +2,21 @@
 title: Configurações de informações do dispositivo HTML | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML [Reporting Services], rendering
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a8acf400f03ec77aff21d839dee132ba5258f54f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7c0d477364c4920e8220aef96629b24e34650ebb
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403631"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503097"
 ---
 # <a name="html-device-information-settings"></a>Configurações de informações do dispositivo HTML
 A tabela a seguir lista as configurações de informações de dispositivos para renderização no formato HTML.  
@@ -26,7 +26,7 @@ A tabela a seguir lista as configurações de informações de dispositivos para
   
 |Configuração|Valor|  
 |-------------|-----------|  
-|**AccessibleTablix**|Indica se a renderização será realizada com metadados de acessibilidade adicionais para uso com leitores de tela. Os metadados de acessibilidade adicionais tornam o relatório renderizado compatível com os seguintes padrões técnicos da seção "Informações e Aplicativos de Intranet e Internet na Web" (1194.22) do documento de Normas de Acessibilidade Eletrônica e de Tecnologia da Informação (Seção 508):<br /><br /> (g) Os cabeçalhos de linhas e colunas das tabelas de dados serão identificados.<br /><br /> (h) A marcação será usada para associar células de dados e células de cabeçalho de tabelas de dados que tenham dois ou mais níveis lógicos de cabeçalhos de linha ou coluna.|  
+|**AccessibleTablix**|Indica se a renderização será realizada com metadados de acessibilidade adicionais para uso com leitores de tela. Os metadados de acessibilidade adicionais tornam o relatório renderizado em conformidade com os seguintes padrões técnicos da seção "Informações e Aplicativos de Intranet e Internet na Web" (1194.22) do documento de Normas de Acessibilidade Eletrônica e de Tecnologia da Informação (Seção 508):<br /><br /> (g) Os cabeçalhos de linhas e colunas das tabelas de dados serão identificados.<br /><br /> (h) A marcação será usada para associar células de dados e células de cabeçalho de tabelas de dados que tenham dois ou mais níveis lógicos de cabeçalhos de linha ou coluna.|  
 |**ActionScript(\*)**|Especifica o nome da função JavaScript a usar quando um evento de ação ocorre, como detalhar ou clicar no indicador. Se esse parâmetro for especificado, um evento de ação disparará a função JavaScript nomeada em vez de um postback para o servidor.|  
 |**BookmarkID**|A ID de indicador para ir para o relatório.|  
 |**DocMap**|Indica se você deve mostrar ou ocultar o mapa do documento do relatório. O valor padrão desse parâmetro é **true**.|  

@@ -13,12 +13,12 @@ ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a63af515ccbca170c480bc2df2dfa0a84387dda7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d24a66ce59b3908a04e3ab7719265fbef3c96f58
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038537"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503215"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ CREATE SELECTIVE XML INDEX index_name
     [WITH (<index_options>)]  
   
 <table_object> ::=  
- { [database_name. [schema_name ] . | schema_name. ] table_name }  
+ { database_name.schema_name.table_name | schema_name.table_name | table_name }  
   
 <promoted_node_path_list> ::=   
 <named_promoted_node_path_item> [, <promoted_node_path_list>]  
