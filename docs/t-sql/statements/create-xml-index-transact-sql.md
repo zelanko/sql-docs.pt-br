@@ -28,12 +28,12 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b021451fc0334d931b0321272b23d7ac4100ee3a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7e07f3083f29d40f67b8ecf7716aae7a68979bfb
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024957"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502802"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,10 +58,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 [ ; ]  
   
 <object> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_name  
-}  
+{ database_name.schema_name.table_name | schema_name.table_name | table_name }
   
 <xml_index_option> ::=  
 {   
@@ -265,7 +262,7 @@ CREATE PRIMARY XML INDEX PXML_ProductModel_CatalogDescription
 GO  
 ```  
   
-### <a name="b-creating-a-secondary-xml-index"></a>b. Criando um índice XML secundário  
+### <a name="b-creating-a-secondary-xml-index"></a>B. Criando um índice XML secundário  
  O exemplo a seguir cria um índice XML secundário na coluna `CatalogDescription` da tabela `Production.ProductModel`.  
   
 ```sql  
