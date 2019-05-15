@@ -1,19 +1,19 @@
 ---
 title: Criar um banco de dados de servidor de relatório Configuration Manager do SSRS | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/15/2018
-ms.openlocfilehash: 9fee8b60cff2b0c8bdfa2e38576cfed036f09584
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
-ms.translationtype: HT
+ms.openlocfilehash: 7f04bff24ca1472b35b71c5e8f04d017714ddf0f
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54184982"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502666"
 ---
 # <a name="create-a-report-server-database"></a>Criar um banco de dados do servidor de relatório 
 
@@ -25,7 +25,12 @@ O modo nativo do Servidor SQL [!INCLUDE[ssRSnoversion](../../includes/ssrsnovers
 
 Os bancos de dados são criados juntamente e associados por nome. Com uma instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] padrão, os bancos de dados são nomeados **reportserver** e **reportservertempdb**. Coletivamente, os dois bancos de dados são chamados de **banco de dados do servidor de relatório** ou **catálogo do servidor de relatório**.
 
-O **modo do SharePoint** do SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]inclui um terceiro banco de dados que é usado para metadados de alertas de dados. Os três bancos de dados são criados para cada aplicativo de serviço SSRS. Por padrão, os nomes de banco de dados incluem um GUID que representa o aplicativo de serviço. A seguir são apresentados nomes de exemplo dos três bancos de dados do modo do SharePoint:
+O **modo do SharePoint** do SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]inclui um terceiro banco de dados que é usado para metadados de alertas de dados. Os três bancos de dados são criados para cada aplicativo de serviço SSRS. Por padrão, os nomes de banco de dados incluem um GUID que representa o aplicativo de serviço. 
+
+> [!NOTE]
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
+
+A seguir são apresentados nomes de exemplo dos três bancos de dados do modo do SharePoint:
 
 - ReportingService_90a9f37075544f22953c4a62e4a9f370  
   
@@ -46,6 +51,8 @@ O **modo do SharePoint** do SQL Server [!INCLUDE[ssRSnoversion](../../includes/s
 - **Automático**. Use o Assistente de instalação do SQL Server se você escolher a opção de configuração padrão para instalação. No Assistente de Instalação do SQL Server, essa opção é **Instalar e configurar** na página **Opções de Instalação do Servidor de Relatório**. Caso escolha a opção **Instalar somente**, você deverá usar o Gerenciador de Configurações do Reporting Services para criar o banco de dados.  
   
 - **Manual**. Use o SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Crie manualmente o banco de dados do servidor de relatório se você usa um [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] remoto para hospedar o banco de dados. Confira mais informações em [Criar um banco de dados de servidor de relatório no modo nativo](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ### <a name="sharepoint-mode"></a>SharePoint 
 A página **Opções de Instalação do Servidor de Relatório** tem apenas uma opção para o modo do SharePoint, **Somente Instalar**. Esta opção instala todos os arquivos do SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o serviço compartilhado do SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. A próxima etapa é criar pelo menos um aplicativo de serviço do SSRS de uma das seguintes maneiras:  
@@ -53,6 +60,8 @@ A página **Opções de Instalação do Servidor de Relatório** tem apenas uma 
 - Vá para a Administração Central do SharePoint Server para criar um aplicativo de serviço SSRS. Confira mais informações na seção **criar um aplicativo de serviço** de [Instalar o primeiro servidor de relatório no modo do SharePoint](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
 - Use os cmdlets do PowerShell do SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para criar um aplicativo de serviço e os bancos de dados do servidor de relatório. Para obter mais informações, confira a amostra da criação de aplicativos de serviço no tópico [Cmdlets do PowerShell para modo do SharePoint do Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+
+::: moniker-end
   
 ## <a name="database-server-version-requirements"></a>Requisitos de versão do servidor de banco de dados
 

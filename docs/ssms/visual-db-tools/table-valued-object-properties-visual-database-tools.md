@@ -1,9 +1,8 @@
 ---
 title: Propriedades de objeto com valor de tabela (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
@@ -13,44 +12,44 @@ ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 243ad5c0489f2af49823eb0663efbb8b6b474056
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c01858a75b6f0660ee65a2725a19ebf5a56200e1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519854"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098089"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Propriedades de objeto com valor de tabela (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Essas propriedades aparecem na janela Propriedades quando você seleciona um objeto com valor de tabela no **Designer de Consulta e Exibição**. O objeto com valor de tabela pode ser uma exibição, sinônimo, tabela derivada ou função com valor de tabela. A menos que indicado em contrário, essas propriedades são somente leitura na janela **Propriedades** .  
+  Essas propriedades aparecem na janela Propriedades quando você seleciona um objeto com valor de tabela no **Designer de Consulta e Exibição**. O objeto com valor de tabela pode ser uma exibição, sinônimo, tabela derivada ou função com valor de tabela. A menos que indicado em contrário, essas propriedades são somente leitura na janela **Propriedades** .  
   
 > [!NOTE]  
-> As propriedades desse tópico são classificadas por categoria e não em ordem alfabética.  
+>  As propriedades desse tópico são classificadas por categoria e não em ordem alfabética.  
   
 > [!NOTE]  
-> As caixas de diálogo e os comandos de menu encontrados podem diferir daqueles descritos na Ajuda, dependendo das configurações ativas ou edição. Para alterar suas configurações, selecione **Importar e Exportar Configurações** no menu **Ferramentas** .  
+>  As caixas de diálogo e os comandos de menu encontrados podem diferir daqueles descritos na Ajuda, dependendo das configurações ativas ou edição. Para alterar suas configurações, selecione **Importar e Exportar Configurações** no menu **Ferramentas** .  
   
-**Categoria de identidade**  
-Expande para exibir propriedades do **Nome** e **Tipo TVO** .  
+ **Categoria de identidade**  
+ Expande para exibir propriedades do **Nome** e **Tipo TVO** .  
   
-**Nome**  
-Mostra o nome do objeto com valor de tabela selecionado.  
+ **Nome**  
+ Mostra o nome do objeto com valor de tabela selecionado.  
   
-**Tipo TVO**  
-Mostra o tipo de objeto com valor de tabela. Pode ser uma tabela base, exibição, função com valor de tabela ou uma tabela derivada.  
+ **Tipo TVO**  
+ Mostra o tipo de objeto com valor de tabela. Pode ser uma tabela base, exibição, função com valor de tabela ou uma tabela derivada.  
   
-**Categoria Designer de Consultas**  
-Expande para mostrar propriedades para **Alias**, **Lista de colunas**, **Nome completo**e **Parâmetro**.  
+ **Categoria Designer de Consultas**  
+ Expande para mostrar propriedades para **Alias**, **Lista de colunas**, **Nome completo**e **Parâmetro**.  
   
-**Alias**  
-Mostra o nome do alias para o objeto com valor de tabela selecionado. Para adicionar ou alterar um alias, digite-o no campo.  
+ **Alias**  
+ Mostra o nome do alias para o objeto com valor de tabela selecionado. Para adicionar ou alterar um alias, digite-o no campo.  
   
-**Lista de colunas**  
-Mostra o nome das colunas incluídas no objeto com valor de tabela selecionado. Para vê-las em uma janela separada, clique em Lista de colunas e então clique nas reticências (...) à direita da propriedade.  
+ **Lista de colunas**  
+ Mostra o nome das colunas incluídas no objeto com valor de tabela selecionado. Para vê-las em uma janela separada, clique em Lista de colunas e então clique nas reticências (...) à direita da propriedade.  
   
-**Nome completo**  
-Mostra o nome do objeto com valor de tabela selecionado, inclusive informações adicionais como o esquema ou fonte de dados do objeto.  
+ **Nome completo**  
+ Mostra o nome do objeto com valor de tabela selecionado, inclusive informações adicionais como o esquema ou fonte de dados do objeto.  
   
-**Parâmetro**  
-Mostra os parâmetros definidos para a função com valor de tabela selecionada. Para definir um valor para os parâmetros, clique em Lista de parâmetros e então clique nas reticências (...) à direita da propriedade. Digite os valores na caixa de diálogo de Parâmetros de função. Essa propriedade só está disponível quando é selecionada uma função com valor de tabela.  
+ **Parâmetro**  
+ Mostra os parâmetros definidos para a função com valor de tabela selecionada. Para definir um valor para os parâmetros, clique em Lista de parâmetros e então clique nas reticências (...) à direita da propriedade. Digite os valores na caixa de diálogo de Parâmetros de função. Essa propriedade só está disponível quando é selecionada uma função com valor de tabela.  
+  
   
