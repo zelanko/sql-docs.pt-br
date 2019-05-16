@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: dcf3231fbff0ec4c3ea32e94f7b974a62faf05e6
 ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38032722"
@@ -96,7 +96,7 @@ ms.locfileid: "38032722"
   
  Use funções DMX para obter as informações que são descobertas durante o treinamento dos modelos e para calcular novas informações. É possível usar essas funções para várias finalidades, inclusive para retornar estatísticas que descrevem os dados subjacentes ou a precisão da previsão, ou para retornar uma explicação expandida de uma previsão.  
   
- **Para obter mais informações****informações:** [Noções básicas sobre o DMX instrução Select](../dmx/understanding-the-dmx-select-statement.md), [funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [Estrutura e uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md), [extensões de mineração de dados &#40;DMX&#41; referência de função  ](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **Para obter mais informações** **informações:** [Noções básicas sobre o DMX instrução Select](../dmx/understanding-the-dmx-select-statement.md), [funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [Estrutura e uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md), [extensões de mineração de dados &#40;DMX&#41; referência de função  ](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
  [De volta às instruções DMX](#BKMK_DMXStatements)  
   
