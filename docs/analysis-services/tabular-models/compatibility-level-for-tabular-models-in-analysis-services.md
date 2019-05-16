@@ -1,6 +1,6 @@
 ---
 title: Nível de compatibilidade para modelos tabulares no Analysis Services | Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fd70a673744d2e401e8a28f6ce2c533434e1c75e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 45ea2e048a7ea7ae7d041614d62a280ee3698131
+ms.sourcegitcommit: 4cb96c291529e9bdf0a95fb3610b350583eb36d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472319"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65709122"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Nível de compatibilidade para modelos tabulares do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
   O *nível de compatibilidade* refere-se a comportamentos específicos à versão no mecanismo do Analysis Services. Por exemplo, o DirectQuery e os metadados de objeto de tabela têm implementações diferentes dependendo do nível de compatibilidade. Em geral, você deve escolher o nível de compatibilidade mais recente com suporte pelos servidores.
 
-  **O nível de compatibilidade mais recente é 1400** 
+  **O nível de compatibilidade com suporte mais recente é 1400** 
   
 Os principais recursos no nível de compatibilidade 1400 incluem:
 
@@ -38,8 +38,9 @@ Os principais recursos no nível de compatibilidade 1400 incluem:
 |||  
 |-|-|- 
 |**Nível de compatibilidade**|**Versão do servidor __**| 
-|1400|Azure Analysis Services, SQL Server 2017 |  
-|1200|Azure Analysis Services, SQL Server 2017, SQL Server 2016| 
+|1470|2019 do SQL Server (CTP 2.3 e posteriores) | 
+|1400|Azure Analysis Services, SQL Server 2019, SQL Server 2017 |  
+|1200|Azure Analysis Services, SQL Server 2019, SQL Server 2017, SQL Server 2016| 
 |1103|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
 |1100|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
 
