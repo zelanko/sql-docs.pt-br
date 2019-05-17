@@ -52,7 +52,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
   
  O operador de comparação na *critérios* pode ser "**>**"(maior que),"**\<**" (menor que), "=" (igual), "> =" (maior que ou igual), "< =" (menor ou igual), "<>" (não igual), ou "como" (correspondência de padrões).  
   
- O valor em *critérios* pode ser uma cadeia de caracteres, número de ponto flutuante ou data. Os valores de cadeia de caracteres são delimitados com aspas simples ou marcas de "#" (sinal numérico) (por exemplo, "estado = 'WA'" ou "estado = WA # #"). Valores de data são delimitados com marcas de "#" (sinal numérico) (por exemplo, "start_date > # 97 / #7/22"). Esses valores podem conter horas, minutos e segundos para indicar os carimbos de hora, mas não devem conter milissegundos ou ocorrerão erros.  
+ O valor em *critérios* pode ser uma cadeia de caracteres, número de ponto flutuante ou data. Os valores de cadeia de caracteres são delimitados com aspas simples ou marcas de "#" (sinal numérico) (por exemplo, "estado = 'WA'" ou "estado = WA # #"). Valores de data são delimitados com marcas de "#" (sinal numérico) (por exemplo, "start_date > #7/22/97#"). Esses valores podem conter horas, minutos e segundos para indicar os carimbos de hora, mas não devem conter milissegundos ou ocorrerão erros.  
   
  Se o operador de comparação é "como", o valor de cadeia de caracteres pode conter um asterisco (*) para localizar uma ou mais ocorrências de qualquer caractere ou subcadeia de caracteres. Por exemplo, "estado, como estou\*'" corresponde a Maine e Massachusetts. Você também pode usar asteriscos à esquerda e à direita para localizar uma subcadeia de caracteres contida dentro dos valores. Por exemplo, "estado como '\*como\*'" corresponde a Alaska, Arkansas e Massachusetts.  
   
