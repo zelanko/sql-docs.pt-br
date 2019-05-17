@@ -1,5 +1,5 @@
 ---
-title: Como gravar um teste de unidade do SQL Server executado no escopo de uma única transação | Microsoft Docs
+title: 'Como fazer: gravar um teste de unidade do SQL Server executado no escopo de uma única transação | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b96ff3e9775e38a7eb61449d6a2ed5e9bc4d6db4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ded1e5f6aeace66f4be991b192e601c455871c26
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681284"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099554"
 ---
-# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Como: Gravar um teste de unidade do SQL Server executado no escopo de uma única transação
+# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Como fazer: Gravar um teste de unidade do SQL Server executado no escopo de uma única transação
 Você pode modificar os teste de unidade para execução no escopo de uma única transação. Se você usar essa abordagem, poderá reverter todas as alterações decretadas pelo teste após seu término. Os procedimentos a seguir descreve como:  
   
 -   Criar uma transação em seu script de teste Transact\-SQL que usa **BEGIN TRANSACTION** e **ROLLBACK TRANSACTION**.  
@@ -156,7 +156,7 @@ Neste exemplo, você está usando uma transação de ambiente com o tipo [System
     ```  
   
 ## <a name="to-start-the-distributed-transaction-coordinator-service"></a>Para iniciar o serviço Coordenador de Transações Distribuídas  
-Alguns procedimentos deste tópico usam os tipos do assembly System.Transactions. Antes de executar estes procedimentos, verifique se o serviço Coordenador de Transações Distribuídas está em execução no computador em que os testes de unidade são executados. Do contrário, o teste apresentará falha, e a seguinte mensagem de erro será exibida: "O método de teste *ProjectName*.*TestName*.*MethodName* lançou a exceção: System.Data.SqlClient.SqlException: MSDTC no servidor '*ComputerName*' não está disponível".  
+Alguns procedimentos deste tópico usam os tipos do assembly System.Transactions. Antes de executar estes procedimentos, verifique se o serviço Coordenador de Transações Distribuídas está em execução no computador em que os testes de unidade são executados. Caso contrário, os testes falham e a seguinte mensagem de erro aparece: "O método de teste *ProjectName*.*TestName*.*MethodName* gerou a exceção: System.Data.SqlClient.SqlException: MSDTC no servidor '*ComputerName*' não está disponível".  
   
 #### <a name="to-start-the-distributed-transaction-coordinator-service"></a>Para iniciar o serviço Coordenador de Transações Distribuídas  
   

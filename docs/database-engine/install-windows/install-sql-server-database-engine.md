@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 83fb5aa641537e99f7562f6c4fd7981b8e2233b5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 30d657ed93a0ff272370f340dbba59c9e72c0079
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532756"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484331"
 ---
 # <a name="install-sql-server-database-engine"></a>Instalar o Mecanismo de Banco de Dados do SQL Server
 
@@ -37,7 +37,7 @@ Os seguintes recursos são instalados quando você seleciona o **Mecanismo de Ba
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   Replicação - é um componente opcional  
+-   [Replicação do SQL Server](../../relational-databases/replication/sql-server-replication.md) – é um componente opcional  
 
 -   [Serviços de Machine Learning (no banco de dados) com o R e Python](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) – é um componente opcional
 
@@ -47,6 +47,9 @@ Os seguintes recursos são instalados quando você seleciona o **Mecanismo de Ba
   
     > [!NOTE]  
     >  Nesta versão, se você marcar a caixa de seleção **Data Quality Services** na instalação, o servidor DQS (Data Quality Services) não será instalado. Será necessário executar etapas adicionais pós-instalação para instalar o servidor DQS. Para obter mais informações, consulte [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
+    
+- [Serviço de Consulta Polybase para Dados Externos](../../relational-databases/polybase/polybase-guide.md) – é um componente opcional 
+
   
  Os seguintes recursos adicionais são opções para muitos cenários de usuário típicos:  
   

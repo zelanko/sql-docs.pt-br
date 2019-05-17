@@ -1,7 +1,7 @@
 ---
 title: Migrando colunas computadas | Microsoft Docs
 ms.custom: ''
-ms.date: 12/16/2016
+ms.date: 12/17/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,21 +11,21 @@ ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c41e5cc3d72f2871e5dfbd9e68d32d85f4d0c53c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 07e50f290d7e1e0a9202c1aaeae02d1dce76dbfa
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829555"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104422"
 ---
 # <a name="migrating-computed-columns"></a>Criando colunas computadas
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 As colunas computadas não têm suporte em tabelas com otimização de memória. No entanto, você pode simular uma coluna computada.
 
-**Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há suporte para colunas computadas em índices e tabelas com otimização de memória.
+Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] em diante, há suporte para colunas computadas em índices e tabelas com otimização de memória.
 
 Considere a necessidade da persistência de suas colunas computadas ao migrar as tabelas baseadas em disco para as tabelas com otimização de memória. As diferentes características de desempenho das tabelas com otimização de memória e dos procedimentos armazenados compilados nativamente podem negar a necessidade da persistência.  
   
@@ -64,14 +64,17 @@ CREATE VIEW dbo.v_order_details AS
 --  
 -- Total is computed as SalePrice * Quantity and is persisted.  
 -- we need to create insert and update procedures to calculate Total.  
+
 CREATE PROCEDURE sp_insert_order_details   
 @OrderId int, @ProductId int, @SalePrice money, @Quantity int  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH (LANGUAGE = N'english', TRANSACTION ISOLATION LEVEL = SNAPSHOT)  
+
 -- compute the value here.   
 -- this stored procedure works with single rows only.  
 -- for bulk inserts, accept a table-valued parameter into the stored procedure  
 -- and use an INSERT INTO SELECT statement.  
+
 DECLARE @total money = @SalePrice * @Quantity  
 INSERT INTO dbo.OrderDetails (OrderId, ProductId, SalePrice, Quantity, Total)  
 VALUES (@OrderId, @ProductId, @SalePrice, @Quantity, @total)  
@@ -82,8 +85,10 @@ CREATE PROCEDURE sp_update_order_details_by_id
 @OrderId int, @ProductId int, @SalePrice money, @Quantity int  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH (LANGUAGE = N'english', TRANSACTION ISOLATION LEVEL = SNAPSHOT)  
+
 -- compute the value here.   
 -- this stored procedure works with single rows only.  
+
 DECLARE @total money = @SalePrice * @Quantity  
 UPDATE dbo.OrderDetails   
 SET ProductId = @ProductId, SalePrice = @SalePrice, Quantity = @Quantity, Total = @total  

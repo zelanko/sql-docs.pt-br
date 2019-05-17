@@ -1,5 +1,5 @@
 ---
-title: Como adicionar condições de teste a testes de unidade do SQL Server | Microsoft Docs
+title: 'Como fazer: adicionar condições de teste a testes de unidade do SQL Server | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 63446667e82beef51798f7b1d97e3b13911898b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f4dc9a023b74c104e232546ec6c4f8c2bd93919
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731216"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65103253"
 ---
-# <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Como: Adicionar condições de teste a testes de unidade do SQL Server
+# <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Como fazer: Adicionar condições de teste a testes de unidade do SQL Server
 Você pode adicionar condições de teste a um teste de unidade do SQL Server usando o **Designer de Teste de Unidade do SQL Server**. Quando você salvar a classe de teste, as condições de teste serão salvas automaticamente no projeto de teste como código Visual C\# ou Visual Basic no arquivo de código-fonte contendo a classe de teste. Após salvar uma condição de teste, você poderá editá-la no **Designer de Teste de Unidade do SQL Server** ou em seu arquivo de código-fonte.  
   
 ### <a name="to-add-test-conditions-to-a-sql-server-unit-test"></a>Para adicionar condições de teste a um teste de unidade do SQL Server  
@@ -49,10 +49,10 @@ Você pode adicionar condições de teste a um teste de unidade do SQL Server us
   
 ## <a name="see-also"></a>Consulte Também  
 [Criando e definindo testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Como criar um teste de unidade do SQL Server vazio](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
-[Como criar testes de unidade do SQL Server para funções, gatilhos e procedimentos armazenados](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
+[Como: Criar um teste de unidade do SQL Server vazio](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
+[Como: Criar testes de unidade do SQL Server para funções, gatilhos e procedimentos armazenados](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
 [Usar condições de teste nos testes de unidade do SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [Scripts nos testes de unidade do SQL Server](../ssdt/scripts-in-sql-server-unit-tests.md)  
 [Interpretar resultados do teste de unidade do SQL Server](../ssdt/interpreting-sql-server-unit-test-results.md)  
-[Como executar testes de unidade do SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  
+[Como: Executar testes de unidade do SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  
   

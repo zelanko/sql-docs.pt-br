@@ -1,7 +1,7 @@
 ---
 title: Configurar o PolyBase para acessar dados externos com tipos genéricos ODBC | Microsoft Docs
 ms.custom: ''
-ms.date: 10/16/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: polybase
@@ -9,17 +9,17 @@ ms.topic: conceptual
 author: Abiola
 ms.author: aboke
 manager: craigg
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cb5efcb4c4abdc29aa71bf4a5e59ebe039d8a9e
-ms.sourcegitcommit: ee76381cfb1c16e0a063315c9c7005f10e98cfe6
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
+ms.openlocfilehash: aebe81e430212a817e5ef07137a14a1453608b9e
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072841"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775471"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurar o PolyBase para acessar dados externos no SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 O PolyBase no SQL Server 2019 permite que você se conecte a fontes de dados compatíveis com o ODBC usando o conector ODBC. 
 
@@ -28,6 +28,8 @@ O PolyBase no SQL Server 2019 permite que você se conecte a fontes de dados com
 Observação: o recurso só funciona no SQL Server no Windows. 
 
 Se você ainda não instalou o PolyBase, veja [Instalação do PolyBase](polybase-installation.md).
+
+ Antes de criar um banco de dados de credencial no escopo, uma [Chave Mestra](../../t-sql/statements/create-master-key-transact-sql.md) deve ser criada. 
 
 Primeiro baixe e instale o driver ODBC da fonte de dados à qual você deseja se conectar em cada um dos nós do PolyBase. Depois que o driver estiver instalado corretamente, você poderá exibir e testar o driver em "Administrador da Fonte de Dados ODBC".
 
@@ -45,83 +47,48 @@ Primeiro baixe e instale o driver ODBC da fonte de dados à qual você deseja se
 
 Para consultar os dados de uma fonte de dados ODBC, você precisa criar tabelas externas para referenciar os dados externos. Esta seção fornece um código de exemplo para criar tabelas externas.
 
-Estes objetos serão criados nesta seção:
+Os seguintes comandos Transact-SQL são usados nesta seção:
 
-- CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
-- CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
-- CREATE EXTERNAL TABLE (Transact-SQL) 
-- CREATE STATISTICS (Transact-SQL)
+- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
+- [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
-1. Crie uma chave mestra no banco de dados, caso ainda não exista. Isso é necessário para criptografar o segredo da credencial.
+1. Crie uma credencial no escopo do banco de dados para acessar a fonte ODBC.
 
-     ```sql
-      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
-     ```
-    ## <a name="arguments"></a>Argumentos
-    PASSWORD ='password'
-
-    É a senha usada para criptografar a chave mestra no banco de dados. password precisa atender aos requisitos da política de senha do Windows do computador que está hospedando a instância do SQL Server.
-
-1. Crie uma credencial no escopo do banco de dados para acessar a fonte de dados ODBC.
-
-     ```sql
-     /*  specify credentials to external data source
-     *  IDENTITY: user name for external source.  
-     *  SECRET: password for external source.
-     */
-     CREATE DATABASE SCOPED CREDENTIAL credential_name
-     WITH IDENTITY = 'username', Secret = 'password';
-     ```
+    ```sql
+    /*  specify credentials to external data source
+    *  IDENTITY: user name for external source. 
+    *  SECRET: password for external source.
+    */
+    CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
+    ```
 
 1. Crie uma fonte de dados externa, usando [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
-     ```sql
+    ```sql
     /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
     *CONNECTION_OPTIONS: Specify driver location
     *  CREDENTIAL: the database scoped credential, created above.
     */  
     CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH ( 
-    LOCATION = odbc://<ODBC server address>[:<port>],
+    WITH ( LOCATION = odbc://<ODBC server address>[:<port>],
     CONNECTION_OPTIONS = 'Driver={<Name of Installed Driver>};
     ServerNode = <name of server  address>:<Port>',
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = credential_name
-    );
-
-     ```
-
-
-1.  Crie tabelas externas que representem dados na fonte de dados externa usando [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
- 
-     ```sql
-     /*  LOCATION: ODBC data source table/view
-     *  DATA_SOURCE: the external data source, created above.
-     */
-     CREATE EXTERNAL TABLE customer(
-     C_CUSTKEY INT NOT NULL,
-     C_NAME VARCHAR(25) NOT NULL,
-     C_ADDRESS VARCHAR(40) NOT NULL,
-     C_NATIONKEY INT NOT NULL,
-     C_PHONE CHAR(15) NOT NULL,
-     C_ACCTBAL DECIMAL(15,2) NOT NULL,
-     C_MKTSEGMENT CHAR(10) NOT NULL,
-     C_COMMENT VARCHAR(117) NOT NULL
-      )
-      WITH (
-      LOCATION='customer',
-      DATA_SOURCE= external_data_source_name
-     );
-      ```
+    CREDENTIAL = credential_nam );
+    ```
 
 1. **Opcional:** Crie estatísticas em uma tabela externa.
 
     É recomendável criar estatísticas em colunas de tabelas externas, especialmente aquelas usadas para junções, filtros e agregações, a fim de ter o desempenho de consulta ideal.
 
-     ```sql
-      CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
-     ```
+    ```sql
+    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
+    ```
+
+>[!IMPORTANT] 
+>Depois de criar uma fonte de dados externa, você pode usar o comando [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) para criar uma tabela que possa ser consultada por essa fonte. 
 
 ## <a name="next-steps"></a>Próximas etapas
 

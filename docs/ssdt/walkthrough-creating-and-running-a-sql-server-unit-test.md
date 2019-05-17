@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fde8f649921ebd1410b8b19d8f4883502e56f640
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: f49d7d43e136adaadb2bda5b37fa6f7e8b63f4e7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305954"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101935"
 ---
-# <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Passo a passo: Criar e Executar um Teste de Unidade do SQL Server
+# <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Passo a passo: Criar e executar um teste de unidade do SQL Server
 Neste passo a passo, você criará um teste de unidade do SQL Server que verifica o comportamento de vários procedimentos armazenados. Os testes de unidade do SQL Server são criados para facilitar a identificação de falhas no código que podem resultar em comportamento incorreto do aplicativo. Você pode executar testes de unidade do SQL Server e teste de aplicativo como parte de um pacote automatizado de testes.  
   
 Neste passo a passo, você executará as seguintes tarefas:  
@@ -723,7 +723,7 @@ Os testes presumem que o banco de dados começa em um estado limpo. Você criar�
     |--------|-------------------|  
     |Sales_uspPlaceNewOrderTest|Aprovado|  
     |Sales_uspShowOrderDetailsTest|Aprovado|  
-    |Sales_uspFillOrderTest|Falha na execução com o seguinte erro: "Falha da condição ScalarValueCondition (scalarValueCondition2): ResultSet 1, linha 1, coluna 1: os valores não correspondem, real: '-100' esperado: '100'. " Esse erro ocorre porque a definição do procedimento armazenado contém um erro secundário.|  
+    |Sales_uspFillOrderTest|Falha na execução com o seguinte erro: "A condição ScalarValueCondition (scalarValueCondition2) falhou: ResultSet 1, linha 1, coluna 1: os valores não correspondem, real: '-100' esperado: '100'. " Esse erro ocorre porque a definição do procedimento armazenado contém um erro secundário.|  
   
     Em seguida, você corrigirá o erro e executará o teste novamente.  
   

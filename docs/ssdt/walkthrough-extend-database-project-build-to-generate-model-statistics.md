@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: estender a compilação do projeto de banco de dados para gerar as estatísticas do modelo | Microsoft Docs'
+title: 'Passo a passo: Estender o build do projeto de banco de dados para gerar as estatísticas do modelo | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9841763f003b0a177913da72cf6dd3efd0c4d3d3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e90952527e5510d4a49fa7b7a72843c059686b96
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523417"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102035"
 ---
-# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Passo a passo: Estenda a Compilação do Projeto de Banco de Dados para Gerar as Estatísticas do Modelo
+# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Passo a passo: extensão da Compilação do Projeto de Banco de Dados para geração de estatísticas do modelo
 Você pode criar um colaborador de compilação para executar ações personalizadas ao compilar um projeto de banco de dados. Neste passo a passo, você cria um colaborador de compilação chamado ModelStatistics que gera estatísticas do modelo de banco de dados SQL quando você cria um projeto de banco de dados. Como esse colaborador de compilação usa parâmetros quando você compila, algumas etapas adicionais serão necessárias.  
   
 Neste passo a passo, você realizará as tarefas principais a seguir:  
@@ -593,5 +593,5 @@ Você pode criar ferramentas adicionais para executar o processamento do arquivo
   
 ## <a name="see-also"></a>Consulte Também  
 [Personalizar a compilação e a implantação do banco de dados usando os colaboradores de compilação e implantação](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[Passo a passo: estender a implantação do projeto de banco de dados para analisar o plano de implantação](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[Passo a passo: Estender a implantação do projeto de banco de dados para analisar o plano de implantação](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 832db366e3596b4e4b4f2ab1e930178986147923
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b93af690fb15c7ab62084d7175612508b5a22445
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63202448"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL)
 
@@ -60,6 +60,8 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 ## <a name="sql-server"></a>SQL Server
 
 O espelhamento de banco de dados, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] e os níveis de compatibilidade são opções `SET`, mas são descritos em artigos separados devido ao seu tamanho. Para saber mais, confira [Espelhamento de Banco de Dados de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) e [Nível de compatibilidade de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
+
+Configurações com escopo de banco de dados são usadas para definir várias configurações de banco de dados no nível do banco de dados individual. Para obter mais informações, veja [ALTERAR A CONFIGURAÇÃO NO ESCOPO DO BANCO DE DADOS](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 > [!NOTE]
 > Muitas opções de definição de banco de dados podem ser configuradas para a sessão atual usando [Instruções SET](../../t-sql/statements/set-statements-transact-sql.md) e são configuradas com frequência por aplicativos quando eles são conectados. As opções definidas no nível de sessão substituem os valores de **ALTER DATABASE SET** . As opções de banco de dados descritas abaixo são os valores que podem ser definidos para as sessões que não fornecem explicitamente outros valores de definição de conjunto.

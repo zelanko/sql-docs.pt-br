@@ -1,7 +1,7 @@
 ---
-title: Restrições de Borda do Graph | Microsoft Docs
+title: Restrições de borda de grafo | Microsoft Docs
 ms.custom: ''
-ms.date: 09/11/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,14 +18,14 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d8c2549196021754dc5ad343a38604eba6651f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86544dee5262a1d04c1ff1d8e59f8ddac5e9b5ce
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833864"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774650"
 ---
-# <a name="edge-constraints"></a>Restrições de borda
+# <a name="edge-constraints"></a>Restrições do Microsoft Edge
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
   Restrições de borda podem ser usadas para impor a integridade dos dados e uma semântica específica às tabelas de borda no banco de dados de gráfico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 

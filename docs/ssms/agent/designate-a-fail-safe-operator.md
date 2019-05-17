@@ -13,16 +13,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - notifications [SQL Server], job status
 ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2f79ccd9b759275f3811ed0de2cb84114ce0609f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5ea7a499e2d0577b8ac0d57cbb0f530958af9ff8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501985"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096527"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Designar um operador à prova de falhas
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ Somente membros da função de servidor fixa **sysadmin** podem designar operado
   
 5.  Na lista **Operador** , selecione o operador que você deseja tornar à prova de falhas.  
   
-6.  Marque qualquer uma ou todas as caixas de seleção a seguir para especificar como o operador será notificado: **Email**, **Pager**ou **Net send**.  
+6.  Marque uma ou todas as seguintes caixas de seleção para especificar como o operador será notificado: **Email**, **Pager** ou **Net send**.  
   
 7.  Quando terminar, clique em **OK**.  
   

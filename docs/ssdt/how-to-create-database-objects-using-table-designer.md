@@ -1,5 +1,5 @@
 ---
-title: Como criar objetos de banco de dados usando o Designer de Tabela | Microsoft Docs
+title: 'Como fazer: criar objetos de banco de dados usando o Designer de Tabela | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.design.table.scriptpanel
 - sql.data.tools.design.table.context.view
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1b253e8b820652bf76771047e498dabd119bcb81
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6c48efccdb4d32d9b471aae758e31084c7b87a7b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396139"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098152"
 ---
-# <a name="how-to-create-database-objects-using-table-designer"></a>Como: Criar objetos de banco de dados usando o Designer de Tabela
+# <a name="how-to-create-database-objects-using-table-designer"></a>Como fazer: Criar objetos de banco de dados usando o Designer de Tabela
 Além de ser semelhante visualmente ao SSMS, no novo nó **SQL Server** do **Pesquisador de Objetos do SQL Server** você pode criar novos objetos usando menus contextuais que funcionam como suas contrapartes do SSMS.  
   
 Por exemplo, você pode criar um novo banco de dados no nó **Bancos de Dados**. De maneira semelhante, você pode selecionar um banco de dados específico e criar ou editar definições de tabela e seus objetos de programação relacionados rapidamente usando o novo Designer de Tabela. Do Designer de Tabela, você pode alternar para um painel de script que permite editar diretamente o script que define esta tabela.  
@@ -57,7 +57,7 @@ Por exemplo, você pode criar um novo banco de dados no nó **Bancos de Dados**.
 5.  Adicione outra nova coluna. Insira **Endereço** para o campo **Nome**, **nvarchar (MAX)** para **Tipo de Dados** e desmarque o campo **Permitir Nulos**.  
   
     > [!WARNING]  
-    > Quando você estiver editando objetos de um banco de dados conectado, não os salve em sua unidade local. Para salvar corretamente suas alterações no banco de dados, execute as etapas no próximo procedimento [Como atualizar um banco de dados conectados com o Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
+    > Quando você estiver editando objetos de um banco de dados conectado, não os salve em sua unidade local. Para salvar suas alterações corretamente no banco de dados, siga as etapas no próximo procedimento [Como: atualizar um banco de dados conectado com o Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
   
 6.  Repita as etapas acima para criar outra tabela chamada **Cliente**. Dessa vez, adicione as colunas seguintes à tabela Cliente usando a Grade de Colunas. E lembre-se de alterar o script de forma que o nome da tabela seja `[dbo].[Customer]`.  
   

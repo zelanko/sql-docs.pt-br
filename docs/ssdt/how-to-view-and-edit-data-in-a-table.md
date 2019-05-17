@@ -1,5 +1,5 @@
 ---
-title: Como exibir e editar dados em uma tabela | Microsoft Docs
+title: 'Como fazer: exibir e editar dados em uma tabela | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,17 +11,17 @@ f1_keywords:
 - SQL.DATA.TOOLS.QUERYRESULTS.F1
 - sql.data.tools.queryresults.executequerydeletingrow
 ms.assetid: bb67ce83-a87a-4e14-84cd-9a5930fe74c8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 543611c2e5c327d50ea7155969a670ac4a0e836e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d58efcf38da2e444a606967d2daa806c74df4b1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685424"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099596"
 ---
-# <a name="how-to-view-and-edit-data-in-a-table"></a>Como: Exibir e editar dados em uma tabela
+# <a name="how-to-view-and-edit-data-in-a-table"></a>Como fazer: Exibir e editar dados em uma tabela
 Você pode exibir, editar e excluir dados de uma tabela existente usando um Editor de Dados visual.  
   
 > [!WARNING]  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], designing
 - database diagrams [SQL Server], creating
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 177c3e0e4dcd6e632b82501441fdb240bcc19b42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e55163886d39fc59cd8ce8787088f3645fb7e51
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787494"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105597"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Passo a passo: Adicionando e alterando um diagrama de banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ Para concluir este passo a passo, você precisará de:
   
 3.  Clique com o botão direito do mouse no nó Diagramas de Banco de Dados e escolha **Novo Diagrama de Banco de Dados**.  
   
-    Se o banco de dados não tiver os objetos necessários para criar diagramas, a mensagem a seguir será exibida: **Este banco de dados não tem um ou mais dos objetos de suporte necessários para usar a diagramação de banco de dados. Deseja criá-los?** Escolha **Sim**.  
+    Se o banco de dados não tiver os objetos necessários para criar diagramas, a seguinte mensagem será exibida: **Este banco de dados não tem um ou mais dos objetos de suporte necessários para usar a diagramação de banco de dados. Deseja criá-los?** Escolha **Sim**.  
   
     A caixa de diálogo **Adicionar Tabela** será exibida.  
   
@@ -60,7 +60,7 @@ Para concluir este passo a passo, você precisará de:
   
 1.  Clique com o botão direito do mouse na tabela `Address` . No menu de atalho, aponte para **Exibição de Tabela**e clique em **Padrão**.  
   
-    A grade da tabela mostra três colunas: **Nome da Coluna**, **Tipo de Dados**e **Permitir Nulos**.  
+    A grade da tabela mostra três colunas: **Nome da Coluna**, **Tipo de Dados** e **Permitir Nulos**.  
   
 2.  Clique com o botão direito do mouse na tabela `Address` , clique em **Exibir Tabela** e selecione **Chaves**.  
   
@@ -74,7 +74,7 @@ Para concluir este passo a passo, você precisará de:
   
 2.  Na caixa de diálogo **Escolher Nome** , clique em **OK** para aceitar o nome padrão **Tabela1**.  
   
-    Uma nova grade de tabela aparece com três colunas: **Nome da Coluna**, **Tipo de Dados**e **Permitir Nulos**.  
+    Uma nova grade de tabela aparece com três colunas: **Nome da Coluna**, **Tipo de Dados** e **Permitir Nulos**.  
   
 3.  Adicione as seguintes informações na **Tabela1**:  
   
@@ -132,7 +132,7 @@ Você pode adicionar restrições de verificação e fazer relações entre tabe
   
 2.  Arraste `T2col1` para `T1col1`.  
   
-    Duas caixas de diálogo são exibidas: **Relação de Chaves Estrangeiras** na tela de fundo e **Tabelas e Colunas** em primeiro plano.  
+    Duas caixas de diálogo são exibidas: **Relação de Chave Estrangeira** na tela de fundo e **Tabelas e Colunas** em primeiro plano.  
   
 3.  Clique em **OK** para salvar a nova relação.  
   

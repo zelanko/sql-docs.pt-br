@@ -14,22 +14,29 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a769ed13e8c95c3ae5a948f6a9bb1be577280e99
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 97eac599fd057d8a9ae335943e7e818df4b49ba4
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582760"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65372447"
 ---
-# <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection"></a>Auditoria local para coleta de dados de diagnóstico e uso do SQL Server
+# <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Auditoria local para coleta de dados de diagnóstico e uso do SQL Server (Programa de Aperfeiçoamento da Experiência do Usuário)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ## <a name="introduction"></a>Introdução
 
-O Microsoft SQL Server contém recursos habilitados para Internet que podem coletar e enviar à Microsoft informações sobre seu computador ou dispositivo. Isso é chamado de *informações padrão do computador*. O componente de auditoria local da [Coleta Dados de Diagnóstico e Uso do SQL Server](https://support.microsoft.com/kb/3153756) grava dados coletados pelo serviço em uma pasta designada, que representa os dados (logs) que serão enviados à Microsoft. A finalidade da auditoria local é permitir que os clientes vejam todos os dados que a Microsoft coleta com esse recurso, para fins de conformidade, regulatórios ou de validação de privacidade.  
+O Microsoft SQL Server contém recursos habilitados para Internet que podem coletar e enviar à Microsoft informações sobre seu computador ou dispositivo. Isso é chamado de *informações padrão do computador*. O componente de auditoria local da [Coleta Dados de Diagnóstico e Uso do SQL Server](usage-and-diagnostic-data-configuration-for-sql-server.md) grava dados coletados pelo serviço em uma pasta designada, que representa os dados (logs) que serão enviados à Microsoft. A finalidade da auditoria local é permitir que os clientes vejam todos os dados que a Microsoft coleta com esse recurso, para fins de conformidade, regulatórios ou de validação de privacidade.  
 
 A partir do SQL Server 2016 CU2, é configurável no nível da instância no Mecanismo de Banco de Dados do SQL Server e o SSAS (Analysis Services). No SQL Server 2016 CU4 e no SQL Server 2016 SP1, a auditoria local também está habilitada para o SQL Server Integration Services (SSIS). Outros componentes do SQL Server que são instalados durante a instalação e as ferramentas do SQL Server que são baixadas ou instaladas após a instalação não têm o recurso de auditoria local para coleta de dados de diagnóstico e uso.
+
+## <a name="remarks"></a>Remarks
+
+ - Não há suporte para remover ou desabilitar o serviço Programa de Aperfeiçoamento da Experiência do Usuário do SQL. 
+ - Não há suporte para remover os recursos do Programa de Aperfeiçoamento da Experiência do Usuário do SQL do Grupo de Clusters. 
+
+Para recusar a coleta de dados, veja [Ativando ou desativando a auditoria local](#turning-local-audit-on-or-off)
 
 ## <a name="prerequisites"></a>Prerequisites 
 

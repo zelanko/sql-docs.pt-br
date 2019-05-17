@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 34cea0d4a251266d21218cefaee2d5f122e574ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0b6949adf3c92d14d081ef07d8e30605a22fe9d8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543899"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102013"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Usando asserções Transact-SQL nos testes de unidade do SQL Server
 Em um teste de unidade do SQL Server, um script de teste Transact\-SQL executa e retorna um resultado. Muitas vezes, os resultados são retornados como um conjunto de resultados. Você pode validar resultados usando condições de teste. Por exemplo, você pode usar uma condição de teste para verificar quantas linhas foram retornadas em um conjunto de resultados específico ou para verificar quanto tempo um teste específico levou para ser executado. Para saber mais sobre as condições de teste, confira [Usar as condições de teste em Testes de unidade do SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  
@@ -57,7 +57,7 @@ Onde:
   
 Todos os parâmetros não especificados são ignorados. Você passa esses parâmetros para a instrução RAISERROR no código do banco de dados. Se você especificar MatchFirstError = true, o atributo corresponderá a qualquer SqlError na exceção. O comportamento padrão (MatchFirstError = true) é retornar somente o primeiro erro.  
   
-Para obter um exemplo de como usar as exceções esperadas e um teste de unidade negativo do SQL Server, consulte [Passo a passo: criar e executar um teste de unidade do SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
+Para obter um exemplo de como usar as exceções esperadas e um teste de unidade negativo do SQL Server, veja [Passo a passo: Criar e Executar um Teste de Unidade do SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
 ## <a name="the-raiserror-statement"></a>A instrução RAISERROR  
   
@@ -79,11 +79,11 @@ onde:
   
 @ErrorState é um número inteiro arbitrário de 1 a 127. Você pode usar esse número inteiro para fazer a distinção entre as ocorrências de um único erro gerado em locais diferentes no código.  
   
-Para saber mais, confira [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Confira um exemplo de como usar RAISERROR em um teste de unidade do SQL Server no tópico [Como gravar um teste de unidade do SQL Server executado no escopo de uma única transação](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
+Para saber mais, confira [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Um exemplo de como usar RAISERROR em um teste de unidade do SQL Server é apresentado no tópico [Como Gravar um teste de unidade do SQL Server executado no escopo de uma única transação](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Criando e definindo testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Usar condições de teste nos testes de unidade do SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [Verificar o código do banco de dados usando os testes de unidade do SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-[Como abrir um teste de unidade do SQL Server para edição](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
+[Como: Abrir um teste de unidade do SQL Server a ser editado](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
   

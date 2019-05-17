@@ -2,7 +2,7 @@
 title: 'Grupos de disponibilidade: uma solução de alta disponibilidade e recuperação de desastre'
 description: Os Grupos de Disponibilidade AlwaysOn são uma solução de alta disponibilidade e de recuperação de desastre do SQL Server que fornece uma alternativa de nível empresarial para o espelhamento de banco de dados, com mais funcionalidades. Saiba mais sobre os conceitos básicos e a funcionalidade desse recurso.
 ms.custom: seodec18
-ms.date: 05/17/2016
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -17,12 +17,12 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54c5cf218021b2a585ff50afb22ac7594ab4b2d6
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: b369247fccdac3407670b5edc63c0f5490fac23e
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974275"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775548"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Grupos de disponibilidade Always On: uma solução de alta disponibilidade e recuperação de desastre
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,9 @@ ms.locfileid: "57974275"
   
     -   *Modo de confirmação síncrona*. Este modo de disponibilidade enfatiza a alta disponibilidade e a proteção dos dados sobre o desempenho, às custas do aumento da latência de transação. Um determinado grupo de disponibilidade pode dar suporte a até três réplicas de disponibilidade de confirmação síncrona, incluindo a réplica primária atual.  
   
-     Para obter mais informações, veja [Modos de disponibilidade &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+     Para obter mais informações, consulte [Modos de disponibilidade &#40;Grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md). 
+
+     [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] aumenta o número máximo de réplicas síncronas para 5, um aumento com relação às 3 no [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)]. Você pode configurar esse grupo de cinco réplicas para ter failover automático dentro do grupo. Há uma réplica primária, além de quatro réplicas secundárias síncronas.
   
 -   Dá suporte a várias formas de failover de disponibilidade-grupo: failover automático, failover manual planejado (geralmente referenciado como um "failover manual" simples) e failover manual forçado (geralmente referenciado como "failover forçado" simples). Para obter mais informações, consulte [Failover e modos de failover &#40;grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   

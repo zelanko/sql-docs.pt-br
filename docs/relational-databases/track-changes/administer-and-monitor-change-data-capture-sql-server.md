@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d460fcffef089e77825feb19b13602b3a118d20
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 807f347bb176f6d8b3191f9f10c8f30448ce9b1f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991899"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099965"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar e monitorar a captura de dados de alteração (SQL Server)
 
@@ -176,6 +176,11 @@ O coletor de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
 4. No data warehouse configurado na etapa 1, localize a tabela custom_snapshots.cdc_log_scan_data. Essa tabela fornece um instantâneo histórico dos dados das sessões de verificação de log. Esses dados podem ser usados para analisar a latência, a taxa de transferência e outras medidas de desempenho ao longo do tempo.  
   
+## <a name="ScriptUpgrade"></a> Modo de atualização de script
+
+Quando você aplicar atualizações ou service packs cumulativos a uma instância, na reinicialização, a instância pode entrar no modo de Atualização de Script. Nesse modo, o SQL Server pode executar uma etapa para analisar e atualizar tabelas internas de CDA, o que pode resultar na recriação de objetos como índices em tabelas de captura. Dependendo da quantidade de dados envolvidos, esta etapa pode levar algum tempo ou causar um alto uso de log de transações para bancos de dados do CDA habilitados.
+
+
 ## <a name="see-also"></a>Consulte Também
 
 - [Controle de alterações de dados &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)

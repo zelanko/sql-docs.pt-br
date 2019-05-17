@@ -28,16 +28,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2440f1b61b1b97fab41bf22e1fd466cd30b8e4cf
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 75beb2bb5fa33f20050efc38060ae82ba78c588a
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58797036"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095331"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
 Cria um logon para bancos de dados SQL Server, Banco de Dados SQL, SQL Data Warehouse ou Analytics Platform System. Clique em uma das guias a seguir para a sintaxe, argumentos, comentários, permissões e exemplos de uma versão específica.
+
+CREATE LOGIN participa de transações. Se CREATE LOGIN for executado em uma transação e a transação for revertida, criação do logon será revertida. Se executado em uma transação, o logon criado não poderá ser usado até a transação ser confirmada.
 
 Para obter mais informações sobre as convenções de sintaxe, consulte [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 

@@ -11,12 +11,13 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6783112203e5c63aae41749f942da6240265eea3
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: b3e6a0fc14137ca13e3539a7046edf576b4719ed
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872296"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775047"
 ---
 # <a name="install-polybase-on-windows"></a>Instalar o PolyBase no Windows
 
@@ -40,15 +41,16 @@ Para instalar uma versão de avaliação do SQL Server, vá para [avaliações d
    
 - O TCP/IP deve estar habilitado para o PolyBase para funcionar corretamente. O TCP/IP está habilitado por padrão em todas as edições do SQL Server, exceto nas edições Developer e Express do SQL Server. Para que o PolyBase funcione corretamente nas edições Developer e Express, é necessário habilitar a conectividade TCP/IP. Veja [Habilitar ou desabilitar um protocolo de rede de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
-- MSVC++ 2012. 
 
-> [!NOTE]
-> 
+>[!NOTE] 
 > O PolyBase pode ser instalado apenas em uma instância SQL Server por computador.
-> 
-> [!IMPORTANT]
-> 
-> Para usar a funcionalidade de aplicação de computação no Hadoop, o cluster do Hadoop de destino deve ter os componentes principais do HDFS, YARN e MapReduce, com o servidor de histórico de trabalhos habilitado. O PolyBase envia a consulta de aplicação via MapReduce e recebe o status do servidor de histórico de trabalhos. A consulta falhará se não tiver um desses componentes.
+
+
+>[!NOTE]
+>Para usar o PolyBase, você deve permissões no nível de sysadmin ou SERVER CONTROL no banco de dados.
+
+>[!IMPORTANT]
+>Para usar a funcionalidade de aplicação de computação no Hadoop, o cluster do Hadoop de destino deve ter os componentes principais do HDFS, YARN e MapReduce, com o servidor de histórico de trabalhos habilitado. O PolyBase envia a consulta de aplicação via MapReduce e recebe o status do servidor de histórico de trabalhos. A consulta falhará se não tiver um desses componentes.
   
 ## <a name="single-node-or-polybase-scale-out-group"></a>Nó único ou grupo de escala horizontal do PolyBase
 
@@ -74,11 +76,10 @@ Depois de instalar o PolyBase autônomo ou em um grupo de escala horizontal, voc
    ![Serviços do PolyBase](../../relational-databases/polybase/media/install-wizard.png "Serviços do PolyBase")  
    
 4. Na página Configuração do Servidor, defina o **Serviço do Mecanismo PolyBase do SQL Server** e o **Serviço de Movimentação de Dados PolyBase do SQL Server** para serem executados na mesma conta de domínio.  
-   
-   > [!IMPORTANT] 
-   >
+
+   >[!IMPORTANT]
    >Em um grupo de escala horizontal do PolyBase, o serviço de Movimentação de Dados e de Mecanismo de PolyBase em todos os nós devem ser executados na mesma conta de domínio. Confira [Grupos de escala horizontal do PolyBase](#enable).
-   
+
 5. Na página Configuração do PolyBase, escolha uma das duas opções. Para obter mais informações, confira [grupos de escala horizontal do PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  
    
    - Use a instância do SQL Server como uma instância habilitada para PolyBase autônoma.  
@@ -91,8 +92,7 @@ Depois de instalar o PolyBase autônomo ou em um grupo de escala horizontal, voc
    
 6. Na página de Configuração do PolyBase, especifique um intervalo de portas com pelo menos seis portas. A instalação do SQL Server aloca as primeiras seis portas disponíveis do intervalo.  
 
-   > [!IMPORTANT]
-   >
+   >[!IMPORTANT]
    > Após a instalação, é necessário [habilitar o recurso do PolyBase](#enable).
 
 

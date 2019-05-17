@@ -26,12 +26,12 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9677ef3717fb83bdaf6ea108279b98a6598adced
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: ae555bf3eaef4d7befd89a572ab926d189183e4e
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980342"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775996"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE – Funções de gatilho (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,6 +65,8 @@ UPDATE ( column )
 >  A cláusula IF UPDATE(*column*) funciona da mesma forma que uma cláusula IF, IF...ELSE ou WHILE, podendo usar o bloco BEGIN...END. Para obter mais informações, consulte [Linguagem de controle de fluxo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
  UPDATE(*column*) pode ser usado em qualquer lugar do corpo de um gatilho [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ 
+Se um gatilho se aplicar a uma coluna, o valor `UPDATED` será retornado como `true` ou `1`, mesmo que o valor da coluna permaneça inalterado. Isso é por design, e o gatilho deve implementar a lógica de negócios que determina se a operação de inserir/atualizar/excluir é permitida ou não. 
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria um gatilho que imprime uma mensagem para o cliente quando qualquer pessoa tentar atualizar as colunas `StateProvinceID` ou `PostalCode` da tabela `Address`.  

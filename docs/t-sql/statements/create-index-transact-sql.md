@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbe34c0441e455fad18d87b5ddb5dfbc3081c378
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 0e53128745296653d3892947310d03d8acc2d780
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802304"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65504122"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -118,10 +118,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 [ ; ]
   
 <object> ::=
-{
-    [ database_name. [ schema_name ] . | schema_name. ]
-    table_or_view_name
-}
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
 
 <relational_index_option> ::=
 {
@@ -788,7 +785,7 @@ CREATE INDEX IX_VendorID ON dbo.ProductVendor (VendorID DESC, Name ASC, Address 
 CREATE INDEX IX_VendorID ON Purchasing..ProductVendor (VendorID);
 ```
 
-### <a name="b-create-a-simple-nonclustered-rowstore-composite-index"></a>b. Criar um índice composto rowstore não clusterizado simples
+### <a name="b-create-a-simple-nonclustered-rowstore-composite-index"></a>B. Criar um índice composto rowstore não clusterizado simples
 
 O exemplo a seguir cria um índice composto não clusterizado nas colunas `SalesQuota` e `SalesYTD` da tabela `Sales.SalesPerson`.
 

@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f109fd19d6c74fc60746fdccd5560b8aa482eb02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a262107294988e0d624e4b423147b5e5183a629
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832994"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097435"
 ---
-# <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Passo a passo: usando uma condição de teste personalizada para verificar os resultados de um procedimento armazenado
-Neste passo a passo da extensão de recursos, você criará uma condição de teste e verificará sua funcionalidade criando um teste de unidade do SQL Server. O processo inclui criar um projeto de biblioteca de classes para a condição de teste, além de assiná-lo e instalá-lo. Se você já tiver uma condição de teste para atualização, confira [Como atualizar uma condição de teste personalizado do Visual Studio 2010 de uma versão anterior do SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
+# <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Passo a passo: Usar uma condição de teste personalizada para verificar os resultados de um procedimento armazenado
+Neste passo a passo da extensão de recursos, você criará uma condição de teste e verificará sua funcionalidade criando um teste de unidade do SQL Server. O processo inclui criar um projeto de biblioteca de classes para a condição de teste, além de assiná-lo e instalá-lo. Se você já tiver uma condição de teste que queira atualizar, veja [Como atualizar uma condição de teste personalizada do Visual Studio 2010 de uma versão anterior do SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
   
 Este passo a passo ilustra as seguintes tarefas:  
   
@@ -121,7 +121,7 @@ Agora, você renomeará **Class1** para **ResultSetColumnCountCondition** e o de
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  Adicione [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx). Confira [Como criar condições de teste para o Designer de teste de unidade do SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md) para saber mais sobre UnitTesting.Conditions.ExportTestConditionAttribute.  
+5.  Adicione [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx). Veja [Como criar condições de teste para o Designer de teste de unidade do SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md) para saber mais sobre UnitTesting.Conditions.ExportTestConditionAttribute.  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  
@@ -381,7 +381,7 @@ Em seguida, precisamos criar um teste de unidade. Para criar um teste de unidade
   
 6.  Clique em **Cancelar** para criar o teste de unidade sem configurar o projeto de teste para usar uma conexão de banco de dados. O teste em branco aparece no Designer de Teste de Unidade do SQL Server. Um arquivo do código-fonte do Visual C\# é adicionado ao projeto de teste.  
   
-    Para saber mais sobre como criar e configurar testes de unidade de banco de dados com conexões de banco de dados, consulte [Como criar um teste de unidade do SQL Server vazio](../ssdt/how-to-create-an-empty-sql-server-unit-test.md).  
+    Para obter mais informações sobre como criar e configurar testes de unidade de banco de dados com conexões de banco de dados, veja [Como criar um teste de unidade do SQL Server vazio](../ssdt/how-to-create-an-empty-sql-server-unit-test.md).  
   
 7.  Clique em **Clique aqui para criar** para concluir a criação do teste de unidade. Você verá a nova condição de teste exibia no projeto do SQL Server.  
   
@@ -400,7 +400,7 @@ Para exibir a nova condição de teste:
   
 5.  Na janela **Propriedades**, configure as propriedades Count, Enabled e ResultSet.  
   
-    Para saber mais, confira [Como adicionar condições de teste a testes de unidade do SQL Server](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
+    Para obter mais informações, confira [Como Adicionar condições de teste a testes de unidade do SQL Server](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Condições de teste personalizadas para testes de unidade do SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  

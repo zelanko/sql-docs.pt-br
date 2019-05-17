@@ -18,16 +18,16 @@ helpviewer_keywords:
 - performance counters [SQL Server], SQL Server Agent
 - counters [SQL Server], SQL Server Agent
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7e5b353725cda984a65cbbbb35878c6d79ae4bb5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 316f943091de15857b4654e98b4910061806def6
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698964"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089362"
 ---
 # <a name="use-performance-objects"></a>Usar objetos de desempenho
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,5 +57,5 @@ A tabela a seguir mostra como os objetos de desempenho do serviço do [!INCLUDE[
   
 ## <a name="see-also"></a>Consulte Também  
 [Monitorar e ajustar o desempenho](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-[Como iniciar o Monitor do Sistema (Windows)](https://msdn.microsoft.com/5e51bb79-5737-470b-9c47-fac330c001c5)  
+[Como: Iniciar o Monitor do Sistema (Windows)](https://msdn.microsoft.com/5e51bb79-5737-470b-9c47-fac330c001c5)  
   

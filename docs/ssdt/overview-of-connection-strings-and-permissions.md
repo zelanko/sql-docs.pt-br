@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a61361460513e546e459aa6183b8081f510d8ed7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 413d6ad71b70cc4ddca8205589d25e224bbcad76
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646864"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102027"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>Visão geral das cadeias de conexão e permissões
 Para executar testes de unidade do SQL Server, você deve se conectar a um servidor de banco de dados usando uma ou duas cadeias de conexão específicas. Cada cadeia de conexão representa uma conta com as permissões específicas que você deve ter para executar a tarefa ou o conjunto de tarefas em um script específico como parte do teste. Você pode especificar essas cadeias de caracteres na caixa de diálogo **Configuração de Teste do SQL Server** ou editando manualmente o arquivo app.config do projeto de teste.  
@@ -27,7 +27,7 @@ Na caixa de diálogo **Configuração de Teste do SQL Server**, você pode espec
 > [!NOTE]  
 > O contexto de execução e o contexto privilegiado serão diferentes somente se você usar a autenticação do SQL Server. Se você usar a autenticação do Windows, as mesmas credenciais serão usadas para ambas as cadeias de conexão.  
   
--   Contexto de execução (obrigatório) - uma conta de usuário para executar o script de teste. Essa cadeia de conexão deve ter as mesmas credenciais que você espera que os usuários tenham. Isso é importante porque garante que as permissões apropriadas sejam aplicadas ao banco de dados. Para obter mais informações, consulte [Como: Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
+-   Contexto de execução (obrigatório) - uma conta de usuário para executar o script de teste. Essa cadeia de conexão deve ter as mesmas credenciais que você espera que os usuários tenham. Isso é importante porque garante que as permissões apropriadas sejam aplicadas ao banco de dados. Para obter mais informações, confira [Como Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
   
     No arquivo app.config do projeto de teste, esse é o elemento `ExecutionContext`.  
   

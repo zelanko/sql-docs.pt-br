@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 42896bb62b5566c955c86c43618a8f64e4968b5a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 32462daf6d747b278be788d2364e01c2e8912114
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405863"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101925"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>Visão geral de extensibilidade para regras de análise de código do banco de dados
 As edições do Visual Studio contendo SQL Server Data Tools incluem regras de análise de código para relatórios em avisos de design, nomeação e desempenho Transact\-SQL em seu código de banco de dados. Para saber mais, confira [Analisar o código do banco de dados para melhorar a qualidade do código](https://msdn.microsoft.com/library/dd172133(v=vs.100).aspx).  
@@ -30,7 +30,7 @@ O diagrama a seguir ilustra como os componentes de regras de análise de código
   
 ![Componentes de regras de análise de código do banco de dados](../ssdt/media/ssdt-database-code-analysis-rules-components.jpg "Componentes de regras de análise de código do banco de dados")  
   
-Quando você usa o recurso de regras de análise de código do banco de dados, seja executando a análise de código estático diretamente (para obter mais informações, confira [Como analisar o código Transact-SQL para encontrar defeitos](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)) ou executando uma compilação, todas as regras são carregadas e usadas de acordo com a forma como você as configurou em seu projeto. Para saber mais, confira [Como habilitar e desabilitar regras específicas para análise estática de código de banco de dados](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx). O Gerenciador de Extensões também carregará todos os assemblies de regra personalizada que você tenha criado e registrado. Para saber mais, confira [Como instalar e gerenciar extensões de recurso](../ssdt/how-to-install-and-manage-feature-extensions.md).  
+Quando você usa o recurso de regras de análise de código de banco de dados, seja executando a análise de código estático diretamente (para obter mais informações, veja [Como analisar o código do Transact-SQL para localizar defeitos](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)) ou executando um build, todas as regras são carregadas e usadas de acordo com o modo como você as configurou em seu projeto. Para obter mais informações, confira [Como habilitar e desabilitar regras específicas para análise estática de código do banco de dados](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx). O Gerenciador de Extensões também carregará todos os assemblies de regra personalizada que você tenha criado e registrado. Para obter mais informações, confira [Como instalar e gerenciar extensões de recurso](../ssdt/how-to-install-and-manage-feature-extensions.md).  
   
 Uma classe de regra de análise de código personalizada herda de [SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx). A classe de regra personalizada pode acessar um número de objetos úteis por meio de seu contexto de execução de regra. Eles incluem:  
   

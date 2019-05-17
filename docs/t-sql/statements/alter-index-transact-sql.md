@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e7779ffa5875e50040a0e066097b7eed852a97d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a103a0a8681d5128b021783a5e5509c46c9fad32
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980412"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502874"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,8 +83,7 @@ ALTER INDEX { index_name | ALL } ON <object>
   
 <object> ::=   
 {  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
+    { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
 }  
   
 <rebuild_index_option > ::=  
@@ -735,8 +734,7 @@ A seguinte funcionalidade está desabilitada para operações de recompilação 
    -    ALTER TABLE com recompilação de índice  
    -    O comando DDL com "RESUMEABLE = ON" não pode ser executado em uma transação explícita (não pode fazer parte do bloco begin tran... commit)
    -    Recompile um índice que tenha colunas TIMESTAMP ou computadas como colunas chave.
--   Caso a tabela base contenha colunas LOB retomáveis clusterizadas, a recompilação do índice clusterizado exigirá um bloqueio Sch-M no início desta operação
-   -    A opção SORT_IN_TEMPDB=ON não é compatível com índice retomável 
+-   Caso a tabela base contenha colunas LOB retomáveis clusterizadas, a recompilação do índice clusterizado exigirá um bloqueio Sch-M no início desta operação 
 
 > [!NOTE]
 > O comando DDL é executado até ser concluído, pausar ou falhar. Caso o comando pause, será emitido um erro indicando que a operação foi colocada em pausa e que a criação de índice não foi concluída. Para obter mais informações sobre o status atual do índice, veja [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Como antes, no caso de uma falha, um erro será emitido também. 
@@ -870,7 +868,7 @@ ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GR
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
-### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>b. Compactar rowgroups delta CLOSED para o columnstore  
+### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>B. Compactar rowgroups delta CLOSED para o columnstore  
  Este exemplo usa a opção REORGANIZE para compactar cada rowgroup delta CLOSED para o columnstore como um rowgroup compactado.   Isso não é necessário, mas é útil quando o motor de tupla não está compactando rowgroups CLOSED com rapidez suficiente.  
   
 ```sql  
@@ -1005,7 +1003,7 @@ GO
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
 ```  
   
-### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>b. Recriando todos os índices de uma tabela e especificando opções  
+### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>B. Recriando todos os índices de uma tabela e especificando opções  
  O exemplo a seguir especifica a palavra-chave ALL. Isso recompila todos os índices associados à tabela Production.Product no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Três opções são especificadas.  
   
 **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

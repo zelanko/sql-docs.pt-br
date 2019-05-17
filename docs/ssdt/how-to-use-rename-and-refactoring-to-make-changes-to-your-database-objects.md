@@ -1,5 +1,5 @@
 ---
-title: Como usar renomeação e refatoração para fazer alterações em seus objetos de banco de dados | Microsoft Docs
+title: 'Como fazer: Usar renomeação e refatoração para fazer alterações em seus objetos de banco de dados | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -14,17 +14,17 @@ f1_keywords:
 - sql.data.tools.dbrefactoring.moveschemadialog
 - sql.data.tools.dbrefactoring.renameserverdatabasedialog
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 971df125a63ecdd1e46b6b884198886cccbcc378
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9da86a5e15f1b683a0e7c040cd4e6d906d54f47
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737664"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090092"
 ---
-# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Como: Usar renomeação e refatoração para fazer alterações em seus objetos de banco de dados
+# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Como fazer: Usar renomeação e refatoração para fazer alterações em seus objetos de banco de dados
 O menu contextual Refatorar no Editor de Transact\-SQL permite renomear ou mover um objeto para um esquema diferente e permite uma visualização de todas as áreas afetadas antes de confirmar a alteração. Você também pode usar o menu Refatorar para qualificar completamente todas as referências a objetos de banco de dados ou expandir os caracteres curinga nas instruções `SELECT` em seu projeto de banco de dados.  
   
 > [!NOTE]  

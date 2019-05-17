@@ -11,15 +11,15 @@ f1_keywords:
 - sql.data.tools.dbprojectwizard.general
 - sql.data.tools.dbprojectwizard.summary
 ms.assetid: e61e830d-9fcd-45e7-b7b4-93a42155dd56
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 96effd7670d22461f6c347c9220f7a3c26b7f611
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e4c14a1e4f0ef2196cf2cebfd5e1c531cf7878e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624514"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101953"
 ---
 # <a name="project-oriented-offline-database-development"></a>Desenvolvimento de banco de dados offline orientado a projetos
 Esta seção descreve os recursos fornecidos pelo SSDT (SQL Server Data Tools) para criar, compilar, depurar e publicar um projeto de banco de dados.  
@@ -37,18 +37,18 @@ Usando o SSDT, você pode criar um projeto de banco de dados offline e implement
 |[Caixa de diálogo Adicionar referência de banco de dados](../ssdt/add-database-reference-dialog-box.md)|Descreve várias formas de adicionar uma referência de banco de dados.|  
 |[Caixa de diálogo Verificar atualizações](../ssdt/check-for-updates-dialog-box.md)|Descreve como o SQL Server Data Tools pode verificar atualizações do produto.|  
 |[Configurações de projeto de banco de dados](../ssdt/database-project-settings.md)|Descreve várias configurações de projeto para controlar os aspectos do seu banco de dados e criar configurações.|  
-|[Como procurar objetos em um projeto de banco de dados do SQL Server](../ssdt/how-to-browse-objects-in-a-sql-server-database-project.md)|O Pesquisador de Objetos do SQL Server no Visual Studio agora contém um nó Projetos dedicado, sob o qual todos os projetos de bancos de dados do SQL Server em sua solução são agrupados em uma hierarquia semelhante à do SQL Server Management Studio.|  
+|[Como: procurar objetos em um projeto de banco de dados do SQL Server](../ssdt/how-to-browse-objects-in-a-sql-server-database-project.md)|O Pesquisador de Objetos do SQL Server no Visual Studio agora contém um nó Projetos dedicado, sob o qual todos os projetos de bancos de dados do SQL Server em sua solução são agrupados em uma hierarquia semelhante à do SQL Server Management Studio.|  
 |[Janela Operações de ferramentas de dados](../ssdt/data-tools-operations-window.md)|Descreve a janela **Operações de Ferramentas de Dados** , que mostra o progresso de algumas operações e notifica sobre erros.|  
 |[Opções do Editor Transact-SQL](../ssdt/transact-sql-editor-options.md)|Descreve as opções do Transact\-SQL.|  
-|[Como criar um novo projeto de banco de dados](../ssdt/how-to-create-a-new-database-project.md)|Crie um projeto de banco de dados e importe o esquema de banco de dados existente.|  
-|[Como usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)|Compare os esquemas de um banco de dados e um projeto e sincronize-os.|  
-|[Como compilar e implantar em um banco de dados local](../ssdt/how-to-build-and-deploy-to-a-local-database.md)|Use a instância local do SQL Server sob demanda, que é ativada quando um projeto de banco de dados é depurado.|  
-|[Como alterar a plataforma de destino e publicar um projeto de banco de dados](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)|Altere a plataforma SQL Server de destino do seu projeto para qualquer instância com suporte do SQL Server e valide a sintaxe.|  
-|[Como criar um instantâneo de um projeto](../ssdt/how-to-create-a-snapshot-of-a-project.md)|Crie um proxy somente leitura do esquema de banco de dados e reverta o projeto de origem quando são aplicadas alterações indesejáveis ao projeto.|  
-|[Como usar objetos do Microsoft SQL Server 2012 no seu projeto](../ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md)|Adicione um novo objeto de sequência a seu projeto.|  
-|[Como trabalhar com objetos de banco de dados CLR](../ssdt/how-to-work-with-clr-database-objects.md)|Crie e publique objetos CLR no projeto de banco de dados do SQL Server Data Tools.|  
-|[Como converter projetos de banco de dados do Visual Studio 2010 em projetos de banco de dados do SQL Server e redirecionar para uma plataforma diferente](../ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md)|Converta projetos existentes de Banco de Dados, objetos CLR e Aplicativo da Camada de Dados do SQL Server criados no Visual Studio 2010 no projeto de banco de dados do SQL Server Data Tools.|  
-|[Como especificar scripts de pré-implantação ou pós-implantação](../ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md)|Discute como usar scripts que você quer executar antes ou após a implantação de seu banco de dados.|  
+|[Como: Criar um projeto de banco de dados](../ssdt/how-to-create-a-new-database-project.md)|Crie um projeto de banco de dados e importe o esquema de banco de dados existente.|  
+|[Como: Usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)|Compare os esquemas de um banco de dados e um projeto e sincronize-os.|  
+|[Como: Criar e implantar em um banco de dados local](../ssdt/how-to-build-and-deploy-to-a-local-database.md)|Use a instância local do SQL Server sob demanda, que é ativada quando um projeto de banco de dados é depurado.|  
+|[Como: Alterar a plataforma de destino e publicar um projeto de banco de dados](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)|Altere a plataforma SQL Server de destino do seu projeto para qualquer instância com suporte do SQL Server e valide a sintaxe.|  
+|[Como: Criar um instantâneo de um projeto](../ssdt/how-to-create-a-snapshot-of-a-project.md)|Crie um proxy somente leitura do esquema de banco de dados e reverta o projeto de origem quando são aplicadas alterações indesejáveis ao projeto.|  
+|[Como: Usar objetos do Microsoft SQL Server 2012 no seu projeto](../ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md)|Adicione um novo objeto de sequência a seu projeto.|  
+|[Como: Trabalhar com objetos de banco de dados CLR](../ssdt/how-to-work-with-clr-database-objects.md)|Crie e publique objetos CLR no projeto de banco de dados do SQL Server Data Tools.|  
+|[Como: Converter projetos de banco de dados do Visual Studio 2010 em projetos de banco de dados do SQL Server e redirecionar para uma plataforma diferente](../ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md)|Converta projetos existentes de Banco de Dados, objetos CLR e Aplicativo da Camada de Dados do SQL Server criados no Visual Studio 2010 no projeto de banco de dados do SQL Server Data Tools.|  
+|[Como: Especificar scripts de pré-implantação ou pós-implantação](../ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md)|Discute como usar scripts que você quer executar antes ou após a implantação de seu banco de dados.|  
   
 ## <a name="related-sections"></a>Seções relacionadas  
 [Gerenciar tabelas, relações e corrigir erros](../ssdt/manage-tables-relationships-and-fix-errors.md)  

@@ -12,14 +12,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6c92421a2c29964683489c93b59e98a398d9262
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c9f4f22990a4fb1fa3fdb78241cf2989027e7106
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661245"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106261"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Restauração por etapas de bancos de dados com tabelas com otimização de memória
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   A restauração por etapas tem suporte em bancos de dados com tabelas com otimização de memória, exceto para uma restrição descrita abaixo. Para obter mais informações sobre backup e restauração por etapas, veja [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) e [Restaurações por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
@@ -27,7 +28,7 @@ ms.locfileid: "51661245"
   
 -   Se você submeter a backup (ou restaurar) o grupo de arquivos primário, especifique o grupo de arquivos com otimização de memória.  
   
--   Se você submeter a backup (ou restaurar) o grupo de arquivos com otimização de memória, especifique o grupo de arquivos primário.  
+-   Se você fizer backup (ou restaurar) do grupo de arquivos com otimização de memória, especifique o grupo de arquivos primário.  
   
  Os principais cenários para backup e restauração por etapas são:  
   
@@ -46,59 +47,107 @@ ms.locfileid: "51661245"
 ## <a name="samples"></a>Exemplos  
  Os exemplos usam o seguinte esquema:  
   
-```  
-CREATE DATABASE imoltp  
-ON PRIMARY (name = imoltp_primary1, filename = 'c:\data\imoltp_data1.mdf')  
-LOG ON (name = imoltp_log, filename = 'c:\data\imoltp_log.ldf')  
+```sql
+CREATE DATABASE imoltp
+    ON PRIMARY (
+        name = imoltp_primary1,
+        filename = 'c:\data\imoltp_data1.mdf')
+    LOG ON (
+        name = imoltp_log,
+        filename = 'c:\data\imoltp_log.ldf');
+    GO  
+  
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = imoltp_primary2,
+        filename = 'c:\data\imoltp_data2.ndf');
 GO  
   
-ALTER DATABASE imoltp ADD FILE (name = imoltp_primary2, filename = 'c:\data\imoltp_data2.ndf')  
+ALTER DATABASE imoltp
+    ADD FILEGROUP imoltp_secondary;
+
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = imoltp_secondary,
+        filename = 'c:\data\imoltp_secondary.ndf')
+            TO FILEGROUP imoltp_secondary;
 GO  
   
-ALTER DATABASE imoltp ADD FILEGROUP imoltp_secondary  
-ALTER DATABASE imoltp ADD FILE (name = imoltp_secondary, filename = 'c:\data\imoltp_secondary.ndf') TO FILEGROUP imoltp_secondary  
-GO  
-  
-ALTER DATABASE imoltp ADD FILEGROUP imoltp_mod CONTAINS MEMORY_OPTIMIZED_DATA   
-ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod   
-ALTER DATABASE imoltp ADD FILE (name='imoltp_mod2', filename='c:\data\imoltp_mod2') TO FILEGROUP imoltp_mod   
+ALTER DATABASE imoltp
+    ADD FILEGROUP imoltp_mod
+    CONTAINS MEMORY_OPTIMIZED_DATA;
+
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = 'imoltp_mod1',
+        filename = 'c:\data\imoltp_mod1')
+            TO FILEGROUP imoltp_mod;
+
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = 'imoltp_mod2',
+        filename = 'c:\data\imoltp_mod2')
+            TO FILEGROUP imoltp_mod;
 GO  
 ```  
   
 ### <a name="backup"></a>Backup  
  Este exemplo mostra como fazer backup do grupo de arquivos primário e do grupo de arquivos com otimização de memória. Você deve especificar o grupo de arquivos primário e com otimização de memória.  
   
-```  
-backup database imoltp filegroup='primary', filegroup='imoltp_mod' to disk='c:\data\imoltp.dmp' with init  
-```  
+```sql
+BACKUP database imoltp
+    filegroup = 'primary',
+    filegroup = 'imoltp_mod'
+    to disk = 'c:\data\imoltp.dmp'
+    with init;
+```
   
  O exemplo a seguir mostra que o backup de grupos de arquivos, que não sejam o grupo de arquivos primário e com otimização de memória, funciona de maneira semelhante para os bancos de dados sem tabelas com otimização de memória. O comando a seguir faz backup do grupo de arquivos secundário  
   
-```  
-backup database imoltp filegroup='imoltp_secondary' to disk='c:\data\imoltp_secondary.dmp' with init  
-```  
+```sql
+BACKUP database imoltp
+    filegroup = 'imoltp_secondary'
+    to disk = 'c:\data\imoltp_secondary.dmp'
+    with init;
+```
   
 ### <a name="restore"></a>Restaurar  
  O exemplo a seguir mostra como restaurar o grupo de arquivos primário e o grupo de arquivos com otimização de memória juntos.  
-  
-```  
-restore database imoltp filegroup = 'primary', filegroup = 'imoltp_mod'   
-from disk='c:\data\imoltp.dmp' with partial, norecovery  
-  
---restore the transaction log  
- RESTORE LOG [imoltp] FROM DISK = N'c:\data\imoltp_log.dmp' WITH  FILE = 1,  NOUNLOAD,  STATS = 10  
-GO  
-```  
+
+```sql
+RESTORE database imoltp
+    filegroup = 'primary',
+    filegroup = 'imoltp_mod'
+    from disk = 'c:\data\imoltp.dmp'
+    with
+        partial,
+        norecovery;
+
+-- Restore the transaction log.
+
+RESTORE LOG [imoltp]
+    FROM DISK = N'c:\data\imoltp_log.dmp'
+    WITH
+        FILE = 1,
+        NOUNLOAD,
+        STATS = 10;
+GO
+```
   
  O próximo exemplo mostra que a restauração de grupos de arquivos, que não sejam o grupo de arquivos primário e com otimização de memória, funciona de maneira semelhante para os bancos de dados sem tabelas com otimização de memória.  
   
-```  
-RESTORE DATABASE [imoltp] FILE = N'imoltp_secondary'   
-FROM  DISK = N'c:\data\imoltp_secondary.dmp' WITH  FILE = 1,  RECOVERY,  NOUNLOAD,  STATS = 10  
-GO  
-```  
-  
+```sql
+RESTORE DATABASE [imoltp]
+    FILE = N'imoltp_secondary'
+    FROM DISK = N'c:\data\imoltp_secondary.dmp'
+    WITH
+        FILE = 1,
+        RECOVERY,
+        NOUNLOAD,
+        STATS = 10;
+GO
+```
+
 ## <a name="see-also"></a>Consulte Também  
  [Backup, restauração e recuperação de tabelas com otimização de memória](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
-  
-  
+

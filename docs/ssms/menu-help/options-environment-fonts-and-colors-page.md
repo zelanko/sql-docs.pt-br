@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: edb990e57f3f02db207959a4511d3b23069b0db4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 755cc08f8e431e062ce9fdf3049d99453d724be6
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507758"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098373"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Opções (página Ambiente – Fontes e Cores)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,9 +57,9 @@ Exibe os itens cujas cores de primeiro plano e de plano de fundo você pode modi
   
 Alguns itens de exibição incluem:  
   
--   Margem de indicador: a margem à esquerda do Editor de Códigos onde os ícones dos pontos de interrupção e de indicadores são exibidos.  
+-   Margem de indicadores: a margem à esquerda do Editor de Códigos em que os ícones dos pontos de interrupção e de indicador são exibidos.  
   
--   Texto recolhível: um bloco de texto ou código que pode ser inserido ou extraído da exibição no Editor de Códigos (apenas XML).  
+-   Texto recolhível: um bloco de texto ou código que pode ser inserido ou extraído da exibição no CodeEditor (apenas XML).  
   
 **Primeiro plano do item**  
 Exibe as cores disponíveis que você pode escolher para o primeiro plano do item selecionado em **Itens de exibição**. Como alguns itens estão relacionados, deve ser mantido um esquema de exibição consistente. Por exemplo, alterar a cor do primeiro plano do texto também altera a cor do primeiro plano de elementos como Cadeias de caracteres.  

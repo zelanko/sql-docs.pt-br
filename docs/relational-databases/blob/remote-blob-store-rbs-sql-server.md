@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Remote Blob Store (RBS) [SQL Server]
 - RBS (Remote Blob Store) [SQL Server]
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a4748e76ac377e87003f2b811753db5de1cbe02
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 589edbc9b3f19597a84a3393f693078bca89dee7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393651"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094179"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>RBS (Armazenamento de Blob Remoto) [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "52393651"
   
 ### <a name="rotating-the-symmetric-key"></a>Girando a chave simétrica  
  Ao usar o RBS, você deve girar periodicamente a chave simétrica do repositório de credenciais. Essa é uma melhor prática comum de segurança para atender às políticas de segurança organizacional.  Um modo de girar a chave simétrica do repositório de credenciais do RBS é usar o [script abaixo](#Key_rotation) no banco de dados RBS.  Você também pode usar esse script para migrar para propriedades com nível de criptografia mais forte, como o comprimento da chave ou algoritmo. Faça backup de seu banco de dados antes da rotação de chaves.  Na conclusão do seu script, ele tem algumas etapas de verificação.  
-Se suas políticas de segurança exigem diferentes propriedades de chave (por exemplo, comprimento de chave ou algoritmo) daquelas fornecidas, o script pode ser usado como um modelo. Modifique as propriedades de chave em dois locais: 1) a criação da chave temporárias 2) a criação da chave permanente.  
+Se suas políticas de segurança exigem diferentes propriedades de chave (por exemplo, comprimento de chave ou algoritmo) daquelas fornecidas, o script pode ser usado como um modelo. Modifique as propriedades de chave em dois locais: 1) a criação da chave temporária 2) a criação da chave permanente.  
   
 ##  <a name="rbsresources"></a> Recursos do RBS  
   

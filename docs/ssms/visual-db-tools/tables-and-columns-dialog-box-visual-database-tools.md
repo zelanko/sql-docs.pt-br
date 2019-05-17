@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.tablesandcolumns
 ms.assetid: 8cf27be1-e66d-4735-a428-9ab4b33af4f5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ce7a90a76547d579324fa61246b5b126be8f4b72
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 380c605e4b1504b943c5e0312b29b287b95158ec
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528006"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098484"
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>Caixa de dialogo Tabelas e Colunas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,5 +47,5 @@ Lista as colunas da tabela selecionada na lista da **Tabela de Chaves Estrangeir
 > As colunas selecionadas para a chave estrangeira devem ter o mesmo tipo de dados das colunas primárias às quais elas correspondem. Deve haver um número igual de colunas em cada uma das chaves. Por exemplo, se a chave primária da tabela no lado primário da relação estiver composta de duas colunas, será necessário coincidir cada uma dessas colunas com uma coluna na tabela no lado da chave estrangeira da relação.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como criar relações entre tabelas (Visual Database Tools)](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
+[Como: criar relações entre tabelas (Visual Database Tools)](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
   

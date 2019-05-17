@@ -12,16 +12,16 @@ helpviewer_keywords:
 - target servers [SQL Server], polling interval
 - polling interval [SQL Server]
 ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8ba2b92e32f5429a873016bdea3f2643dd644292
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fc65ce77ecedb8b5587ab68fb532e72224ca6067
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696898"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095492"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>Set the Polling Interval for Target Servers
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Este tópico descreve como definir a frequência com que o [!INCLUDE[msCoName](.
   
 -   **Antes de começar:**  [Segurança](#Security)  
   
--   **Para definir o intervalo de sondagem para servidores de destino usando:** [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
+-   **Para definir o intervalo de sondagem de servidores de destino usando:** [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
   
 ## <a name="BeforeYouBegin"></a>Antes de começar  
 Cada servidor de destino pode executar uma instância do mesmo trabalho ao mesmo tempo. Cada servidor de destino sonda o servidor mestre periodicamente, baixa uma cópia dos eventuais trabalhos novos a ele atribuídos e, em seguida, desconecta-se. O servidor de destino executa o trabalho localmente e, depois, reconecta-se ao servidor mestre para carregar o status do resultado do trabalho.  

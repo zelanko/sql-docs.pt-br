@@ -1,6 +1,6 @@
 ---
 title: Pontos de verificação de banco de dados (SQL Server) | Microsoft Docs
-ms.date: 09/23/2016
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -28,18 +28,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d3b1b147bd954ce449315b9efb459767941b045
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a7d761a88d570cfe65c3660656adde6f90e93c21
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518094"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775384"
 ---
 # <a name="database-checkpoints-sql-server"></a>Pontos de verificação de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
- Um *ponto de verificação* cria um bom ponto conhecido a partir do qual o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pode começar a aplicar as alterações contidas no log durante a recuperação após um desligamento ou uma falha inesperada.  
- 
-  
+ Um *ponto de verificação* cria um bom ponto conhecido a partir do qual o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pode começar a aplicar as alterações contidas no log durante a recuperação após um desligamento ou uma falha inesperada.
+
 ##  <a name="Overview"></a> Visão geral   
 Por razões de desempenho, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa modificações nas páginas de banco de dados, no cache do buffer e não grava essas páginas em disco após cada alteração. Em vez disso, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] emite um ponto de verificação periodicamente em cada banco de dados. Um *ponto de verificação* grava as páginas atuais modificadas na memória (conhecidas como *páginas sujas*) e as informações do log de transações de memória para disco e, além disso, registra informações sobre o log de transações.  
   
@@ -93,7 +92,8 @@ Normalmente, os valores padrão fornecem um ótimo desempenho de recuperação. 
   
 Se você decidir aumentar a configuração **recovery interval** , recomendamos fazer isso gradativamente em pequenos incrementos e avaliar o efeito de cada aumento incremental no desempenho de recuperação. Esse método é importante porque, à medida que a configuração **recovery interval** aumenta, a recuperação de banco de dados demora mais tempo para ser concluída. Por exemplo, se você alterar **recovery interval** para 10 minutos, a recuperação levará aproximadamente 10 vezes mais tempo para ser concluída do que se **recovery interval** tivesse sido definido para um minuto.  
   
-##  <a name="IndirectChkpt"></a> Pontos de verificação indiretos  
+##  <a name="IndirectChkpt"></a> Pontos de verificação indiretos
+  
 Pontos de verificação indiretos, introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], fornecem uma alternativa de nível de banco de dados configurável para os pontos de verificação automáticos. Isso pode ser configurado especificando a opção de configuração de banco de dados **tempo de recuperação de destino**. Para obter mais informações, veja [Alterar o tempo de recuperação de destino de um banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).
 No caso de uma falha de sistema, pontos de verificação indiretos fornecem um tempo de recuperação mais previsível potencialmente mais rápido do que os pontos de verificação automáticos. Os pontos de verificação indiretos oferecem as seguintes vantagens:  
   
@@ -110,6 +110,10 @@ No entanto, uma carga de trabalho transacional online em um banco de dados confi
 > [!IMPORTANT]
 > O ponto de verificação indireto é o comportamento padrão de novos bancos de dados criados no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], incluindo os bancos de dados de Modelo de TempDB.          
 > Os bancos de dados atualizados no local ou restaurados com base em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usarão o comportamento de ponto de verificação automático anterior, a menos que tenham sido explicitamente alterados para usar o ponto de verificação indireto.       
+
+### <a name="ctp23"></a> Escalabilidade de ponto de verificação indireto aprimorada
+
+Antes do [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)], você podia encontrar erros de agendador sem resposta quando há um banco de dados que gera um grande número de páginas sujas, assim como `tempdb`. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] apresenta melhor escalabilidade para o ponto de verificação indireto, que deve ajudar a evitar esses erros em bancos de dados que têm uma carga de trabalho de `UPDATE`/`INSERT` pesada.
   
 ##  <a name="EventsCausingChkpt"></a> Pontos de verificação internos  
 Os pontos de verificação internos são gerados por vários componentes de servidor para garantir que as imagens de disco correspondam ao estado atual do log. Pontos de verificação internos são gerados em resposta aos eventos seguintes:  
@@ -126,6 +130,7 @@ Os pontos de verificação internos são gerados por vários componentes de serv
   
 -   Colocando uma FCI (instância de cluster de failover) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offline.      
   
+
 ##  <a name="RelatedTasks"></a> Related tasks  
  **Para alterar o intervalo de recuperação em uma instância de servidor**  
   

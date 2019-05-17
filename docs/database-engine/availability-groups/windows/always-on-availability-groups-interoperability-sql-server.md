@@ -14,12 +14,12 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34d019792a898290c65371e32f83b49911cb27a3
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 9600287fb847dcea4f24c565a843e9757e364c5e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973816"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105239"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Grupos de disponibilidade Always On: interoperabilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,6 +52,7 @@ A tabela a seguir lista os recursos do [!INCLUDE[ssNoVersion](../../../includes/
 Os seguintes recursos interoperam com [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] com restrições específicas. Consulte os tópicos vinculados para obter detalhes.
 
 - Transações distribuídas/transações entre bancos de dados ([!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] e Windows Server 2016). Para obter mais informações, consulte [Transações entre bancos de dados e transações distribuídas para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
+- [Coletor de dados do sistema de estatísticas de consulta](../../../relational-databases/data-collection/system-data-collection-set-reports.md#Query) não pode ser executado de forma confiável em um ambiente com secundários não legíveis. Para usar o coletor de dados do sistema de estatísticas de consulta, defina todas as réplicas do grupo de disponibilidade para permitir [acesso de leitura](configure-read-only-access-on-an-availability-replica-sql-server.md). 
 
 ## <a name="NoInterop"></a> Recursos que não interoperam com grupos de disponibilidade AlwaysOn
 

@@ -11,33 +11,17 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b2157846fe2102a35412c82b0da24638298aafd2
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872316"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104919"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorar o desempenho de Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   O aspecto do desempenho de Grupos de Disponibilidade Always On é crucial para manter o SLA (Contrato de Nível de Serviço) dos seus bancos de dados de mais críticos. A compreensão de como os grupos de disponibilidade enviam logs para réplicas secundárias pode ajudá-lo a estimar o RTO (objetivo de tempo de recuperação) e o RPO (objetivo de ponto de recuperação) de sua implementação de disponibilidade e identificar gargalos no mau desempenho de grupos de disponibilidade ou réplicas. Este artigo descreve o processo de sincronização, mostra como calcular algumas das principais métricas e fornece os links para alguns dos cenários comuns de solução de problemas de desempenho.  
-  
- Veja os tópicos que serão abordados:  
-  
--   [Processo de sincronização de dados](#data-synchronization-process)  
-  
--   [Portões de controle de fluxo](#flow-control-gates)  
-  
--   [Estimando o tempo de failover (RTO)](#estimating-failover-time-rto)  
-  
--   [Estimando o potencial de perda de dados (RPO)](#estimating-potential-data-loss-rpo)  
-  
--   [Monitoramento de RTO e RPO](#monitoring-for-rto-and-rpo)  
-  
--   [Cenários de solução de problemas de desempenho](#BKMK_SCENARIOS)  
-  
--   [Eventos estendidos úteis](#BKMK_XEVENTS)  
-  
+   
 ##  <a name="data-synchronization-process"></a>Processo de sincronização de dados  
  Para estimar o tempo para a sincronização completa e identificar o gargalo, você precisa entender o processo de sincronização. O gargalo de desempenho pode estar em qualquer lugar do processo e localizar esse gargalo poderá ajudá-lo a se obter detalhes sobre os problemas subjacentes. A figura e a tabela a seguir ilustram o processo de sincronização de dados:  
   
@@ -48,7 +32,7 @@ ms.locfileid: "58872316"
 |**Sequência**|**Descrição da etapa**|**Comentários**|**Métricas úteis**|  
 |1|Geração de log|Os dados de log são liberados para o disco. Esse log deve ser replicado para as réplicas secundárias. Os registros de log entram na fila de envio.|[SQL Server:Database > bytes de log liberados\s](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Capturar|Os logs de cada banco de dados são capturados e enviados para a fila de parceiro correspondente (um por par de réplica de banco de dados). Esse processo de captura é executado continuamente enquanto a réplica de disponibilidade está conectada e a movimentação de dados não é suspensa por qualquer razão e o par de réplica de banco de dados está aparecendo como Sincronizando ou Sincronizado. Se o processo de captura não puder verificar e enfileirar as mensagens com a rapidez necessária, a fila de envio de log se acumulará.|[SQL Server:Availability Replica > Bytes enviados à replica\s](~/relational-databases/performance-monitor/sql-server-availability-replica.md), que é uma agregação de soma de todas as mensagens de banco de dados enfileiradas para essa réplica de disponibilidade.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) e [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/s) na réplica primária.|  
-|3|Send|As mensagens na fila de cada réplica de banco de dados são removidas da fila e enviadas pela rede para a respectiva réplica secundária.|[SQL Server:Availability Replica > Bytes enviados ao transporte\s](~/relational-databases/performance-monitor/sql-server-availability-replica.md) e [SQL Server:Availability Replica > Tempo de confirmação de mensagem](~/relational-databases/performance-monitor/sql-server-availability-replica.md) (ms)|  
+|3|Send|As mensagens na fila de cada réplica de banco de dados são removidas da fila e enviadas pela rede para a respectiva réplica secundária.|[SQL Server: Réplica de Disponibilidade > Bytes enviados para transporte\s](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |4|Receber e armazenar em cache|Cada réplica secundária recebe e armazena em cache a mensagem.|Contador de desempenho [SQL Server:Availability Replica > Bytes de log recebidos/s](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |5|Proteção|O log é liberado na réplica secundária para proteção. Após a liberação do log, uma confirmação é enviada de volta para a réplica primária.<br /><br /> Depois que o log é protegido, a perda de dados é evitada.|Contador de desempenho [SQL Server:Database > Bytes de log liberados/s](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> Tipo de espera [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|Refaz|Refaz as páginas liberadas na réplica secundária. As páginas são mantidas na fila para refazer enquanto aguardam para serem refeitas.|[SQL Server:Database Replica: > Bytes refeitos/s](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) e [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> Tipo de espera [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  

@@ -1,7 +1,7 @@
 ---
 title: Suporte a ordenações e a Unicode | Microsoft Docs
 ms.custom: ''
-ms.date: 10/24/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89b07e80d9bb9c0a04fe3dd1829ab4b7180f1718
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 97e66c1c276131876a8a74ab49627f43374cb78f
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206435"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775032"
 ---
 # <a name="collation-and-unicode-support"></a>Suporte a ordenações e a Unicode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -147,15 +147,20 @@ Para usar os agrupamentos UTF-8 disponíveis no [!INCLUDE[sql-server-2019](../..
     
     -   Ordenações da versão 100    
     
-    -   Agrupamentos da versão 140    
+    -   Agrupamentos da versão 140   
+    
+    -   Ordenação binária BIN2<sup>1</sup>
     
 -   O sinalizador de UTF8 não pode ser aplicado a:    
     
     -   Agrupamentos da versão 90 sem suporte a caracteres suplementares (\_SC) ou a diferenciação de seletor de variação (\_VSS)    
     
-    -   As ordenações primárias BIN ou BIN2    
+    -   As ordenações primárias BIN ou BIN2<sup>2</sup>    
     
-    -   As ordenações do SQL\*       
+    -   As ordenações do SQL\*  
+    
+<sup>1</sup> A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3     
+<sup>2</sup> Até com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3
     
 Para avaliar os problemas relacionados ao uso de tipos de dados Unicode ou não Unicode, teste seu cenário para medir as diferenças de desempenho em seu ambiente. Uma boa prática é padronizar a ordenação usada nos sistemas de sua organização e implantar servidores e clientes Unicode sempre que possível.    
     
@@ -245,8 +250,18 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 Todas as novas ordenações têm suporte interno para caracteres suplementares, de modo que nenhum dos novas ordenações tem (ou precisa) do sinalizador de SC.
 
 Essas ordenações têm suporte em índices de Mecanismo de Banco de Dados, tabelas com otimização de memória, índices columnstore e módulos compilados nativamente.
-    
-##  <a name="Related_Tasks"></a> Tarefas Relacionadas    
+
+<a name="ctp23"></a>
+
+## <a name="utf-8-support"></a>Suporte para UTF-8
+
+O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] apresenta suporte completo para a amplamente utilizada codificação de caracteres UTF-8 como codificação de importação ou exportação ou como ordenação em nível de coluna ou banco de dados ou nível para dados de texto. A UTF-8 é permitida nos tipos de dados `CHAR` e `VARCHAR` e é habilitada quando você cria ou altera a ordenação de um objeto para uma ordenação com o sufixo `UTF8`. 
+
+Por exemplo, `LATIN1_GENERAL_100_CI_AS_SC` para `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. A UTF-8 só está disponível para agrupamentos do Windows com suporte para caracteres suplementares, conforme introduzido no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. `NCHAR` e `NVARCHAR` permitem somente a codificação UTF-16 e permanecem inalterados.
+
+Esse recurso pode fornecer economia de armazenamento significativa dependendo do conjunto de caracteres utilizado. Por exemplo, a alteração de um tipo de dados de coluna existente com cadeias de caracteres ASCII (Latinas) de `NCHAR(10)` para `CHAR(10)` usando uma ordenação habilitada para UTF-8 resulta em 50% de redução nos requisitos de armazenamento. Essa redução ocorre porque `NCHAR(10)` exige 20 bytes para armazenamento, enquanto `CHAR(10)` requer 10 bytes para a mesma cadeia de caracteres Unicode.
+
+##  <a name="Related_Tasks"></a> Tarefas relacionadas    
     
 |Tarefa|Tópico|    
 |----------|-----------|    
@@ -260,6 +275,7 @@ Essas ordenações têm suporte em índices de Mecanismo de Banco de Dados, tabe
 ##  <a name="Related_Content"></a> Conteúdo relacionado    
 [Práticas recomendadas para alteração em ordenações do SQL Server](https://go.microsoft.com/fwlink/?LinkId=113891)    
 [Usar o formato de caractere Unicode para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
+[Gravar instruções Transact-SQL internacionais](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 ["Práticas recomendadas para migração para Unicode no SQL Server"](https://go.microsoft.com/fwlink/?LinkId=113890) – deixou de receber manutenção   
 [Site de consórcio Unicode](https://go.microsoft.com/fwlink/?LinkId=48619)    
     

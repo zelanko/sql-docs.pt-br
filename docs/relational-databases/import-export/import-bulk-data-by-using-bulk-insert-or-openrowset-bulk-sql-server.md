@@ -19,16 +19,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - Transact-SQL bulk export/import operations
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c004a991872257baa045be6e0253d7d63979f2f7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c4fdd3b1512d64cb8c702e00ba89aed02d5abb0a
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542440"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946581"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importar Dados em Massa Usando BULK INSERT ou OPENROWSET(BULK...) (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "52542440"
   
  INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
- Quando usada em uma instrução INSERT, OPENROWSET(BULK...) dá suporte a dicas de tabela. Além das dicas de tabela comuns, como TABLOCK, a cláusula BULK pode aceitar as seguinte dicas de tabela especializadas: IGNORE_CONSTRAINTS (ignora somente as restrições CHECK), IGNORE_TRIGGERS, KEEPDEFAULTS e KEEPIDENTITY. Para obter mais informações, consulte [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ Quando usada em uma instrução INSERT, OPENROWSET(BULK...) dá suporte a dicas de tabela. Além das dicas de tabela comum, como TABLOCK, a cláusula BULK pode aceitar as seguintes dicas de tabela especializadas: IGNORE_CONSTRAINTS (ignora apenas as restrições CHECK), IGNORE_TRIGGERS, KEEPDEFAULTS e KEEPIDENTITY. Para obter mais informações, consulte [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Para obter informações sobre usos adicionais da opção de BULK, consulte [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   

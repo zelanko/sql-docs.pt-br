@@ -1,7 +1,7 @@
 ---
 title: Visão geral da restauração e recuperação (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 013458c80692f4b7f31ba1302028585496a0cd25
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 6a358aacd5bbfe165b908a3c737d4809cf1555f0
+ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242037"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65461821"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Visão geral da restauração e recuperação (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +155,22 @@ ms.locfileid: "54242037"
 -   [Assistente de Recuperação: Uma introdução](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
 -   [Assistente de Recuperação: Usando o SSMS para criar/restaurar backups divididos](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
-  
+
+## <a name="adr"></a> Recuperação acelerada de banco de dados
+
+O SQL Server 2019 versão prévia CTP 2.3 apresenta [Recuperação acelerada de banco de dados](/azure/sql-database/sql-database-accelerated-database-recovery/) para SQL Server local. A recuperação acelerada de banco de dados melhora significativamente a disponibilidade do banco de dados, especialmente na presença de transações de execução prolongada, remodelando o processo de recuperação do mecanismo de banco de dados do SQL Server. A [recuperação de banco de dados](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) é o processo que o SQL Server usa para cada banco de dados iniciar em um estado transacionalmente consistente – ou limpo. Um banco de dados, com a recuperação de banco de dados acelerada habilitada conclui a recuperação significativamente mais rápido após um failover ou outro desligamento não limpo. 
+
+Você pode habilitar a recuperação acelerada de banco de dados por banco de dados no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 ou posterior usando a sintaxe a seguir:
+
+```sql
+ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
+```
+
+> [!NOTE]
+> Essa sintaxe não é necessária para tirar proveito desse recurso no BD SQL do Azure, em que ele é ativado por padrão.
+
+Se você tiver bancos de dados críticos que estão sujeitos a grandes quantidades de transações, faça experiências com esse recurso durante a versão prévia. Forneça comentários à [equipe do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](<https://aka.ms/sqlfeedback>).
+
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
  Nenhum.  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - summarizing query results
 - aggregate functions [SQL Server], summarizing query results
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d49a3b4de2edfb3dc0c027ce54b5f6677d00abb6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 68b5acfe67f0fc8f1408a50a09f48ee9515e3cb9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535515"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105677"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Resumir ou agregar valores para todas as linhas em uma tabela (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ Quando você cria um valor de agregação único para todas as linhas em uma tab
   
     O Designer de Consulta e Exibição atribui automaticamente um alias de coluna à coluna que você está resumindo. Você pode substituir este alias por um mais significativo. Para obter detalhes, veja [Criar aliases de coluna &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
-4.  Na coluna de grade **Agrupar por**, selecione a função de agregação apropriada, como: **Soma**, **Média**, **Mín**, **Máx** e **Contar**. Se você quiser agregar somente linhas exclusivas no conjunto de resultados, escolha uma função de agregação com as opções DISTINCT, como **Min Distinct**. Não escolha **Agrupar por**, **Expressão**nem **Onde**, porque essas opções não se aplicam quando você agrega todas as linhas.  
+4.  Na coluna de grade **Agrupar por**, selecione a função de agregação apropriada, como: **Soma**, **Média**, **Mín**, **Máx** e **Contagem**. Se você quiser agregar somente linhas exclusivas no conjunto de resultados, escolha uma função de agregação com as opções DISTINCT, como **Min Distinct**. Não escolha **Agrupar por**, **Expressão**nem **Onde**, porque essas opções não se aplicam quando você agrega todas as linhas.  
   
     O Designer de Consulta e Exibição substitui o nome de coluna da instrução no [Painel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) com a função de agregação que você especificar. Por exemplo, a instrução SQL poderia se parecer com:  
   

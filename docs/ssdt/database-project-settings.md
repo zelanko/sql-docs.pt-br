@@ -38,15 +38,15 @@ f1_keywords:
 - sql.data.tools.dbassemblyinfo
 - sql.data.tools.extendedpropertieseditor.dialog
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 78dde89a5554dbd548cc2d1d5d4b1436f08c9662
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 1c3899fc603da55d03ae7acd1e11c7f485637f30
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143576"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099381"
 ---
 # <a name="database-project-settings"></a>Configurações de projeto de banco de dados
 Você usa as configurações de projeto de banco de dados para controlar aspectos do seu banco de dados, depuração e configurações de compilação. Essas configurações caem nas seguintes categorias.  
@@ -222,7 +222,7 @@ Além disso, a publicação de linha de comando permite que você substitua esse
 |Cadeia de Conexão de Destino|Fonte de Dados=(localdb)\\*SolutionName*;Catálogo Inicial=*DatabaseProjectName*;Segurança Integrada=True;Pooling=False;Tempo Limite de Conexão=30|Especifica as informações de conexão do servidor de banco de dados de destino para a configuração da compilação especificada. A cadeia de conexão padrão é em relação a uma instância e banco de dados LocalDB do SQL Server criados localmente.|  
 |Implantar propriedades do banco de dados|Sim|Especifica se as configurações de DatabaseProperties.DatabaseProperties são implantadas ou atualizadas quando você compila ou implanta o projeto de banco de dados.|  
 |Sempre recriar banco de dados|Não|Especifica se o banco de dados será cancelado e recriado em vez da execução de uma atualização incremental. Você pode selecionar essa caixa de seleção se desejar executar testes de unidade de banco de dados em uma implantação limpa do banco de dados, por exemplo. Se a caixa de seleção for limpa, o banco de dados existente será atualizado, em vez de ser removido e recriado.|  
-|Bloquear implantação incremental se puder ocorrer perda de dados|sim|Especifica se a implantação será interrompida se uma atualização provocar perda de dados. Se essa caixa de seleção for selecionada, as alterações que criariam a perda de dados farão com que a implantação seja interrompida com um erro, o que impede que os dados sejam perdidos. Por exemplo, a implantação seria interrompida se uma coluna `varchar(50)` fosse alterada para `varchar(30)`.<br /><br />**OBSERVAÇÃO:** A implantação será bloqueada apenas se as tabelas onde a perda de dados pode ocorrer contiverem dados. A implantação continuará se nenhum dado for perdido.|  
+|Bloquear implantação incremental se puder ocorrer perda de dados|sim|Especifica se a implantação será interrompida se uma atualização provocar perda de dados. Se essa caixa de seleção for selecionada, as alterações que criariam a perda de dados farão com que a implantação seja interrompida com um erro, o que impede que os dados sejam perdidos. Por exemplo, a implantação seria interrompida se uma coluna `varchar(50)` fosse alterada para `varchar(30)`.<br /><br />**OBSERVAÇÃO:** A implantação será bloqueada apenas se as tabelas em que a perda de dados pode ocorrer contiverem dados. A implantação continuará se nenhum dado for perdido.|  
 |REMOVER objetos no destino, mas não no projeto|não|Especifica se os objetos que estão no banco de dados de destino, mas não no projeto do banco de dados devem ser removidos como parte do script de implantação. É possível excluir alguns arquivos de seu projeto para removê-los temporariamente de seu script de compilação. No entanto, você pode deixar as versões existentes desses objetos no banco de dados de destino. Essa caixa de seleção não terá nenhum efeito se a caixa de seleção **Sempre recriar banco de dados** estiver selecionada, pois o banco de dados será removido.|  
 |No usar instruções ALTER ASSEMBLY para atualizar tipos CLR|Não|Especifica se as instruções ALTER ASSEMBLY são usadas para atualizar tipos CLR (Common Language Runtime) ou se o objeto que instancia o tipo CLR será removido e recriado quando você implantar alterações.|  
 |Avançado...|Não|Botão de comando que permite especificar opções que controlam os eventos e o comportamento da implantação.|  

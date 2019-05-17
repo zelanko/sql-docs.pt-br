@@ -1,8 +1,8 @@
 ---
 title: Mascaramento de dados dinâmicos | Microsoft Docs
-ms.date: 04/23/2018
+ms.date: 05/02/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -10,41 +10,41 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82afdd3febbd85efc137cc8877f5759ad6428ede
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 06a6ef378e621d055d039d22ea023d8d0d68f25b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317776"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088981"
 ---
 # <a name="dynamic-data-masking"></a>Mascaramento de dados dinâmicos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 ![Mascaramento de dados dinâmicos](../../relational-databases/security/media/dynamic-data-masking.png)
 
 O DDM (Máscara de Dados Dinâmicos) limita a exposição de dados confidenciais aplicando uma máscara para usuários sem privilégios. Ele pode ser usado para simplificar bastante o design e a codificação de segurança em seu aplicativo.  
 
-O mascaramento de dados dinâmicos ajuda a impedir o acesso não autorizado a dados confidenciais, permitindo que os clientes especifiquem a quantidade de dados confidenciais a revelar, com impacto mínimo sobre a camada de aplicativo. O DDM pode ser configurado no banco de dados para ocultar dados confidenciais no conjunto de resultados de uma consulta em relação aos campos do banco de dados designados, sendo que os dados no banco de dados não são alterados. O mascaramento de dados dinâmicos é fácil de usar com aplicativos existentes, já que as regras de mascaramento são aplicadas nos resultados da consulta. Muitos aplicativos podem mascarar dados confidenciais sem modificar consultas existentes.
+A máscara de dados dinâmicos ajuda a impedir o acesso não autorizado a dados confidenciais, permitindo que os clientes especifiquem a quantidade de dados confidenciais a revelar, com impacto mínimo sobre a camada de aplicativo. O DDM pode ser configurado em campos de banco de dados designados para ocultar dados confidenciais nos conjuntos de resultados de consultas. Com DDM, os dados no banco de dados não são alterados. O mascaramento de dados dinâmicos é fácil de usar com aplicativos existentes, já que as regras de mascaramento são aplicadas nos resultados da consulta. Muitos aplicativos podem mascarar dados confidenciais sem modificar consultas existentes.
 
 * Uma política de mascaramento de dados central atua diretamente nos campos confidenciais do banco de dados.
 * Designe usuários ou funções com privilégios que tenham acesso aos dados confidenciais.
-* O DDM traz recursos de mascaramento completo e parcial, bem como uma máscara aleatória para dados numéricos.
+* O DDM apresenta funções de máscara completa e parcial e uma máscara aleatória para dados numéricos.
 * Comandos simples do [!INCLUDE[tsql_md](../../includes/tsql-md.md)] definem e gerenciam máscaras.
 
-Por exemplo, um profissional de suporte de call center pode identificar os chamadores usando vários dígitos de seu número do seguro social ou número de cartão de crédito, mas esses itens de dados não devem ser totalmente expostos para o profissional de suporte. Uma regra de mascaramento pode ser definida para mascarar todos exceto os quatro últimos dígitos de qualquer número do seguro social ou número de cartão de crédito no conjunto de resultado de qualquer consulta. Em outro exemplo, ao usar a máscara de dados apropriada para proteger dados de informações de identificação pessoal (PII), um desenvolvedor pode consultar os ambientes de produção para fins de solução de problemas sem violar os regulamentos de conformidade.
+Por exemplo, um profissional de suporte do call center pode identificar chamadores por vários dígitos do seu número do seguro social ou número de cartão de crédito.  Números do seguro social ou números de cartão de crédito não devem ser totalmente expostos para o profissional de suporte. Uma regra de mascaramento pode ser definida para mascarar todos exceto os quatro últimos dígitos de qualquer número do seguro social ou número de cartão de crédito no conjunto de resultado de qualquer consulta. Em outro exemplo, ao usar a máscara de dados apropriada para proteger dados de informações de identificação pessoal (PII), um desenvolvedor pode consultar os ambientes de produção para fins de solução de problemas sem violar os regulamentos de conformidade.
 
 A finalidade do mascaramento de dados dinâmicos é limitar a exposição de dados confidenciais, impedindo que os usuários que não devem ter acesso a esses dados os visualizem. O mascaramento de dados dinâmicos não pretende impedir que usuários de banco de dados se conectem diretamente ao banco de dados e executem consultas abrangentes que exponham dados confidenciais. A Máscara de Dados Dinâmicos é complementar aos outros recursos de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (auditoria, criptografia, segurança em nível de linha...) e seu uso é altamente recomendável em conjunto com esses outros recursos, a fim de proteger melhor os dados confidenciais no banco de dados.  
   
-O mascaramento de dados dinâmicos está disponível em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], e é configurado usando comandos do [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para obter informações adicionais sobre como configurar o mascaramento de dados dinâmicos usando o portal do Azure, veja [Introdução ao Mascaramento de Dados Dinâmicos de Bancos de Dados SQL (portal do Azure)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
+O mascaramento de dados dinâmicos está disponível em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], e é configurado usando comandos do [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para obter mais informações sobre como configurar a máscara de dados dinâmicos usando o portal do Azure, veja [Introdução à Máscara de Dados Dinâmicos do Banco de Dados SQL (portal do Azure)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
   
-## <a name="defining-a-dynamic-data-mask"></a>Definir uma máscara de dados dinâmicos  
+## <a name="defining-a-dynamic-data-mask"></a>Definir uma máscara de dados dinâmicos
  Uma regra de mascaramento pode ser definida em uma coluna de tabela para ocultar os dados dessa coluna. Há quatro tipos de máscaras disponíveis.  
   
 |Função|Descrição|Exemplos|  
 |--------------|-----------------|--------------|  
 |Padrão|Mascaramento completo de acordo com os tipos de dados dos campos designados.<br /><br /> Para os tipos de dados string, use XXXX ou menos Xs se o tamanho do campo for inferior a quatro caracteres (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Para os tipos de dados numeric, use um valor zero (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Para os tipos de dados data e hora, use 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Para os tipos de dados binary, use um único byte de valor ASCII 0 (**binary**, **varbinary**, **image**).|Exemplo da sintaxe de definição de coluna: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Exemplo de sintaxe de alteração: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
-|Email|O método de mascaramento que expõe a primeira letra de um endereço de email e o sufixo constante ".com", na forma de um endereço de email. para obter informações sobre a ferramenta de configuração e recursos adicionais. `aXXX@XXXX.com`.|Exemplo da sintaxe de definição: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Exemplo de sintaxe de alteração: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
+|Email|O método de mascaramento que expõe a primeira letra de um endereço de email e o sufixo constante ".com", na forma de um endereço de email. `aXXX@XXXX.com`.|Exemplo da sintaxe de definição: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Exemplo de sintaxe de alteração: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |Random|Uma função de mascaramento aleatório para uso em qualquer tipo numérico para mascarar o valor original com um valor aleatório dentro de um intervalo especificado.|Exemplo da sintaxe de definição: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Exemplo de sintaxe de alteração: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
 |Cadeia de caracteres personalizada|O método de mascaramento que expõe as primeiras e últimas letras e adiciona uma cadeia de caracteres de preenchimento personalizada no meio. `prefix,[padding],suffix`<br /><br /> Observação: se o valor original for muito curto para completar a máscara inteira, parte do prefixo ou sufixo não será exposta.|Exemplo da sintaxe de definição: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Exemplo de sintaxe de alteração: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Exemplos adicionais:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
   
@@ -197,4 +197,4 @@ ALTER COLUMN LastName DROP MASKED;
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
- [Introdução ao mascaramento de dados dinâmicos do Banco de Dados SQL (Versão Prévia do portal do Azure)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+ [Introdução à máscara de dados dinâmicos do Banco de Dados SQL (portal do Azure)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  

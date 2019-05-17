@@ -16,15 +16,15 @@ helpviewer_keywords:
 - object search [SQL Server]
 - searching objects [SQL Server]
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9dfa6ac6a609b5bc562267383371fcd19a73215b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56cc6461f56dfa21b27a8cb9d7992a0c46627e9c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760284"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095277"
 ---
 # <a name="object-explorer-details-pane"></a>Painel Detalhes do Pesquisador de Objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -89,7 +89,7 @@ Detalhes do Pesquisador de Objetos dá suporte à seleção de vários objetos. 
 ## <a name="sql-server-object-search"></a>Pesquisa de objetos do SQL Server  
 Curingas  
   
--   Há suporte para os caracteres curinga padrão. Por exemplo, uma pesquisa por **dm_os%counters** retorna dm_os_memory_cache_counters e dm_os_performance_counters. Para obter mais informações, consulte [Como pesquisar com curingas](../../relational-databases/scripting/search-text-with-wildcards.md).  
+-   Há suporte para os caracteres curinga padrão. Por exemplo, uma pesquisa por **dm_os%counters** retorna dm_os_memory_cache_counters e dm_os_performance_counters. Para obter mais informações, confira [Como pesquisar com curingas](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
 Escopo de pesquisa  
   

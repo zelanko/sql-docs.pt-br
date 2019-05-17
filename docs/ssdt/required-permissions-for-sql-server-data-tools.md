@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 58d283ffaf2c8efd2b360a977af17d985117a2ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1eb77a0990d8f0e19458dd66ea7f73b933de961c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682212"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101847"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>Permissões necessárias para SQL Server Data Tools
 Antes de você realizar uma ação em um banco de dados no Visual Studio, faça logon com uma conta que tem determinadas permissões nesse banco de dados. As permissões específicas de que você precisa variam com base na ação que você deseja realizar. As seções a seguir descrevem cada ação que você pode querer realizar e a permissão específica de que você precisa para realizá-la.  
@@ -63,8 +63,8 @@ Você deve ter as permissões a seguir para realizar testes de unidade em um ban
 |Executar uma ação de teste|Você deve usar a conexão de banco de dados do contexto de execução. Para obter mais informações, consulte [Visão geral das cadeias de conexão e permissões](../ssdt/overview-of-connection-strings-and-permissions.md).|  
 |Executar uma ação de pré-teste ou pós-teste|Você deve usar a conexão de banco de dados do contexto privilegiado. Essa conexão de banco de dados tem mais permissões do que a conexão do contexto de execução.|  
 |Executar os scripts TestInitialize e TestCleanup|Você deve usar a conexão de banco de dados do contexto privilegiado.|  
-|Implantar alterações de banco de dados antes de executar os testes|Você deve usar a conexão de banco de dados do contexto privilegiado. Para obter mais informações, consulte [Como: Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
-|Gerar dados antes de executar os testes|Você deve usar a conexão de banco de dados do contexto privilegiado. Para obter mais informações, consulte [Como: Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
+|Implantar alterações de banco de dados antes de executar os testes|Você deve usar a conexão de banco de dados do contexto privilegiado. Para obter mais informações, confira [Como Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
+|Gerar dados antes de executar os testes|Você deve usar a conexão de banco de dados do contexto privilegiado. Para obter mais informações, confira [Como Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
   
 ## <a name="DataGenerationPermissions"></a>Permissões para gerar dados  
 Você deve ter as permissões **INSERT** e **SELECT** nos objetos no banco de dados de destino para gerar os dados de teste usando o Gerador de Dados. Se você limpar os dados antes de gerar dados, também deverá ter as permissões **DELETE** nos objetos no banco de dados de destino. Para redefinir a coluna **IDENTITY** em uma tabela, você deverá possuir a tabela ou ser membro da função db_owner ou db_ddladmin.  

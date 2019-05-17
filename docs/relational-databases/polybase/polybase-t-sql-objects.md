@@ -13,16 +13,17 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e50ec09c8986e042aa687363732c0c49b2bc883
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 3dce0805933c63f6562b687a9a4be429ad6ab681
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734674"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776023"
 ---
 # <a name="polybase-transact-sql-reference"></a>Referência do Transact-SQL do PolyBase
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Para usar o PolyBase, você precisa criar tabelas externas para fazer referência a seus dados externos.  
   
@@ -36,8 +37,8 @@ Para usar o PolyBase, você precisa criar tabelas externas para fazer referênci
   
 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
 
-> [!NOTE]
-> O PolyBase no SQL Server 2016 dá suporte somente a usuários do Windows. Se você tentar usar um usuário do SQL para consultar uma tabela externa do PolyBase, a consulta falhará.
+>[!NOTE]
+>Para usar o PolyBase, você deve permissões no nível de sysadmin ou SERVER CONTROL no banco de dados.
 
 ## <a name="prerequisites"></a>Prerequisites  
 
@@ -45,7 +46,7 @@ Configurar o PolyBase. Veja [Configuração do PolyBase](../../relational-databa
   
 ## <a name="create-external-tables-for-hadoop"></a>Criar tabelas externas para Hadoop
 
-Aplica-se a: SQL Server (começando com o 2016), Parallel Data Warehouse
+Aplica-se a: SQL Server (a partir do 2016), Parallel Data Warehouse
 
 **1. Criar uma credencial com escopo de banco de dados**
 
@@ -121,7 +122,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-blob-storage"></a>Criar tabelas externas para o armazenamento de blobs do Azure  
-Aplica-se a: SQL Server (começando com o 2016), SQL Data Warehouse do Azure, Parallel Data Warehouse
+Aplica-se a: SQL Server (a partir do 2016), SQL Data Warehouse do Azure, Parallel Data Warehouse
 
 **1. Criar uma credencial com escopo de banco de dados**  
 
@@ -196,7 +197,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Criar tabelas externas para o Azure Data Lake Store
-Aplica-se a: SQL Data Warehouse do Azure
+Aplica-se a: Azure SQL Data Warehouse
 
 Para obter mais informações, consulte [Carregar com o Azure Data Lake Store](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
 
@@ -286,6 +287,269 @@ WITH
 ```sql
 CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)  
 ```  
+
+## <a name="create-external-tables-for-sql-server"></a>Criar tabelas externas para SQL Server
+
+**1. Criar uma credencial com escopo de banco de dados**  
+
+```sql
+     -- Create a Master Key
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
+ 
+     /*  specify credentials to external data source
+     *  IDENTITY: user name for external source.  
+     *  SECRET: password for external source.
+     */
+     CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials   
+     WITH IDENTITY = 'username', Secret = 'password';
+```
+
+**2. Criar uma fonte de dados externa**
+
+```sql
+    /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
+    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    *  CREDENTIAL: the database scoped credential, created above.
+    */  
+    CREATE EXTERNAL DATA SOURCE SQLServerInstance
+    WITH ( 
+    LOCATION = 'sqlserver://SqlServer',
+    -- PUSHDOWN = ON | OFF,
+      CREDENTIAL = SQLServerCredentials
+    );
+```
+
+**4. Criar esquema** 
+
+```sql
+     CREATE SCHEMA sqlserver;
+     GO
+```
+
+**4. Criar uma tabela externa**  
+ 
+```sql
+     /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
+     *  DATA_SOURCE: the external data source, created above.
+     */
+     CREATE EXTERNAL TABLE sqlserver.customer(
+     C_CUSTKEY INT NOT NULL,
+     C_NAME VARCHAR(25) NOT NULL,
+     C_ADDRESS VARCHAR(40) NOT NULL,
+     C_NATIONKEY INT NOT NULL,
+     C_PHONE CHAR(15) NOT NULL,
+     C_ACCTBAL DECIMAL(15,2) NOT NULL,
+     C_MKTSEGMENT CHAR(10) NOT NULL,
+     C_COMMENT VARCHAR(117) NOT NULL
+      )
+      WITH (
+      LOCATION='tpch_10.dbo.customer',
+      DATA_SOURCE=SqlServerInstance
+     );
+ ```
+
+**5. Criar estatísticas**  
+
+```sql
+CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WITH FULLSCAN; 
+```
+
+## <a name="create-external-tables-for-oracle"></a>Criar tabelas externas para Oracle
+
+**1. Criar uma credencial com escopo de banco de dados**  
+
+ ```sql
+  -- Create a Master Key
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+
+   /*  
+   * Specify credentials to external data source
+   * IDENTITY: user name for external source.  
+   * SECRET: password for external source.
+   */
+   CREATE DATABASE SCOPED CREDENTIAL credential_name
+   WITH IDENTITY = 'username', Secret = 'password';
+```
+
+**2. Criar uma fonte de dados externa**
+
+  ```sql
+   /* 
+   * LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
+   * PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+   * CONNECTION_OPTIONS: Specify driver location
+   * CREDENTIAL: the database scoped credential, created above.
+   */  
+   CREATE EXTERNAL DATA SOURCE external_data_source_name
+   WITH ( 
+     LOCATION = 'oracle://<server address>[:<port>]',
+     -- PUSHDOWN = ON | OFF,
+     CREDENTIAL = credential_name)
+   ```
+
+
+
+**3. Criar uma tabela externa**  
+ 
+```sql
+   /*
+   * LOCATION: Oracle table/view in '<database_name>.<schema_name>.<object_name>' format
+   * DATA_SOURCE: the external data source, created above.
+   */
+   CREATE EXTERNAL TABLE customers(
+   [O_ORDERKEY] DECIMAL(38) NOT NULL,
+   [O_CUSTKEY] DECIMAL(38) NOT NULL,
+   [O_ORDERSTATUS] CHAR COLLATE Latin1_General_BIN NOT NULL,
+   [O_TOTALPRICE] DECIMAL(15,2) NOT NULL,
+   [O_ORDERDATE] DATETIME2(0) NOT NULL,
+   [O_ORDERPRIORITY] CHAR(15) COLLATE Latin1_General_BIN NOT NULL,
+   [O_CLERK] CHAR(15) COLLATE Latin1_General_BIN NOT NULL,
+   [O_SHIPPRIORITY] DECIMAL(38) NOT NULL,
+   [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
+   )
+   WITH (
+    LOCATION='customer',
+    DATA_SOURCE=  external_data_source_name
+   );
+   ```
+
+**4. Criar estatísticas**  
+
+  ```sql
+   CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
+   ```
+## <a name="create-external-tables-for-teradata"></a>Criar tabelas externas para Teradata
+
+**1. Criar uma credencial com escopo de banco de dados**  
+
+ ```sql
+  -- Create a Master Key
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+
+   /*  
+   * Specify credentials to external data source
+   * IDENTITY: user name for external source.  
+   * SECRET: password for external source.
+   */
+   CREATE DATABASE SCOPED CREDENTIAL credential_name
+   WITH IDENTITY = 'username', Secret = 'password';
+```
+
+**2. Criar uma fonte de dados externa**
+
+```sql
+    /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
+    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    * CONNECTION_OPTIONS: Specify driver location
+    *  CREDENTIAL: the database scoped credential, created above.
+    */  
+    CREATE EXTERNAL DATA SOURCE external_data_source_name
+    WITH ( 
+    LOCATION = teradata://<server address>[:<port>],
+   -- PUSHDOWN = ON | OFF,
+    CREDENTIAL =credential_name
+    );
+
+```
+
+
+
+**3. Criar uma tabela externa**  
+ 
+```sql
+     /*  LOCATION: Teradata table/view in '<database_name>.<object_name>' format
+      *  DATA_SOURCE: the external data source, created above.
+      */
+     CREATE EXTERNAL TABLE customer(
+      L_ORDERKEY INT NOT NULL,
+      L_PARTKEY INT NOT NULL,
+     L_SUPPKEY INT NOT NULL,
+     L_LINENUMBER INT NOT NULL,
+     L_QUANTITY DECIMAL(15,2) NOT NULL,
+     L_EXTENDEDPRICE DECIMAL(15,2) NOT NULL,
+     L_DISCOUNT DECIMAL(15,2) NOT NULL,
+     L_TAX DECIMAL(15,2) NOT NULL,
+     L_RETURNFLAG CHAR NOT NULL,
+     L_LINESTATUS CHAR NOT NULL,
+     L_SHIPDATE DATE NOT NULL,
+     L_COMMITDATE DATE NOT NULL,
+     L_RECEIPTDATE DATE NOT NULL,
+     L_SHIPINSTRUCT CHAR(25) NOT NULL,
+     L_SHIPMODE CHAR(10) NOT NULL,
+     L_COMMENT VARCHAR(44) NOT NULL
+     )
+     WITH (
+     LOCATION='customer',
+     DATA_SOURCE= external_data_source_name
+     );
+```
+
+**4. Criar estatísticas**  
+
+```sql
+      CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
+```
+## <a name="create-external-tables-for-mongodb"></a>Criar tabelas externas para MongoDB
+
+**1. Criar uma credencial com escopo de banco de dados**  
+
+ ```sql
+  -- Create a Master Key
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+
+   /*  
+   * Specify credentials to external data source
+   * IDENTITY: user name for external source.  
+   * SECRET: password for external source.
+   */
+   CREATE DATABASE SCOPED CREDENTIAL credential_name
+   WITH IDENTITY = 'username', Secret = 'password';
+```
+
+**2. Criar uma fonte de dados externa**
+
+```sql
+     /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
+    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    *CONNECTION_OPTIONS: Specify driver location
+    *  CREDENTIAL: the database scoped credential, created above.
+    */  
+    CREATE EXTERNAL DATA SOURCE external_data_source_name
+    WITH (
+    LOCATION = mongodb://<server>[:<port>],
+    -- PUSHDOWN = ON | OFF,
+      CREDENTIAL = credential_name
+    );
+```
+
+
+
+**3. Criar uma tabela externa**  
+ 
+```sql
+     /*  LOCATION: MongoDB table/view in '<database_name>.<schema_name>.<object_name>' format
+     *  DATA_SOURCE: the external data source, created above.
+     */
+     CREATE EXTERNAL TABLE customers(
+     [O_ORDERKEY] DECIMAL(38) NOT NULL,
+     [O_CUSTKEY] DECIMAL(38) NOT NULL,
+     [O_ORDERSTATUS] CHAR COLLATE Latin1_General_BIN NOT NULL,
+     [O_TOTALPRICE] DECIMAL(15,2) NOT NULL,
+     [O_ORDERDATE] DATETIME2(0) NOT NULL,
+     [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
+     )
+     WITH (
+     LOCATION='customer',
+     DATA_SOURCE= external_data_source_name
+     );
+```
+
+**4. Criar estatísticas**  
+
+```sql
+      CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
+```
+
 
 ## <a name="next-steps"></a>Próximas etapas  
 Para obter exemplos de consultas, veja [Consultas do PolyBase](../../relational-databases/polybase/polybase-queries.md).  

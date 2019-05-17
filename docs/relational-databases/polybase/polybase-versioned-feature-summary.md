@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2d02e13ea7ad1d74274f4412b6ab2bf476f452c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3a20544fb4f19611071f28b7cfc5f16fd7e462ce
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665421"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775953"
 ---
 # <a name="polybase-features-and-limitations"></a>Recursos e limitações do PolyBase
 
@@ -31,16 +31,16 @@ Esta tabela lista os principais recursos para o PolyBase e os produtos nos quais
 ||||||
 |-|-|-|-|-|   
 |**Recurso**|**SQL Server 2016**|**Banco de Dados SQL do Azure**|**Azure SQL Data Warehouse**|**Parallel Data Warehouse**| 
-|Consultar dados do Hadoop com [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|não|não|Sim|
-|Importar dados do Hadoop|Sim|não|não|Sim|
-|Exportar dados para o Hadoop  |Sim|não|não| Sim|
-|Consultar, importar e exportar para o Azure HDInsight |não|não|não|não
-|Enviar cálculos de consulta por push ao Hadoop|Sim|não|não|Sim|  
-|Importar dados do Armazenamento de Blobs do Azure|Sim|não|Sim|Sim| 
-|Exportar dados para o Armazenamento de Blobs do Azure|Sim|não|Sim|Sim|  
-|Importar dados do Azure Data Lake Store|não|não|Sim|não|    
-|Exportar dados do Azure Data Lake Store|não|não|Sim|não|
-|Executar consultas do PolyBase nas ferramentas do Microsoft BI|Sim|não|Sim|Sim|   
+|Consultar dados do Hadoop com [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|Não|Sim|
+|Importar dados do Hadoop|Sim|Não|Não|Sim|
+|Exportar dados para o Hadoop  |Sim|Não|Não| Sim|
+|Consultar, importar e exportar para o Azure HDInsight |Não|Não|Não|Não
+|Enviar cálculos de consulta por push ao Hadoop|Sim|Não|Não|Sim|  
+|Importar dados do Armazenamento de Blobs do Azure|Sim|Não|Sim|Sim| 
+|Exportar dados para o Armazenamento de Blobs do Azure|Sim|Não|Sim|Sim|  
+|Importar dados do Azure Data Lake Store|Não|Não|Sim|Não|    
+|Exportar dados do Azure Data Lake Store|Não|Não|Sim|Não|
+|Executar consultas do PolyBase nas ferramentas do Microsoft BI|Sim|Não|Sim|Sim|   
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>Computação de aplicação com suporte para operadores do T-SQL
 
@@ -49,18 +49,20 @@ No SQL Server e no APS, nem todos os operadores do T-SQL podem ser aplicados ao 
 ||||
 |-|-|-| 
 |**Tipo de operador**|**Pode ser enviado por push para Hadoop**|**Pode ser enviado por push para o Armazenamento de Blobs**|
-|Projeções de coluna|Sim|não|
-|Predicados|Sim|não|
-|Agregações|Parcial|não|
-|Junções entre tabelas externas|não|não|
-|Junções entre tabelas externas e tabelas locais|não|não|
-|Classificações|não|não|
+|Projeções de coluna|Sim|Não|
+|Predicados|Sim|Não|
+|Agregações|Parcial|Não|
+|Junções entre tabelas externas|Não|Não|
+|Junções entre tabelas externas e tabelas locais|Não|Não|
+|Classificações|Não|Não|
 
 A agregação parcial significa que uma agregação final deve ocorrer depois que os dados atingirem o SQL Server. Porém, uma parte da agregação ocorre no Hadoop. Esse método é comum nas agregações de computação em sistemas de processamento massivamente paralelos.  
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
 O PolyBase apresenta as seguintes limitações:
+
+- Para usar o PolyBase, você deve permissões no nível de sysadmin ou SERVER CONTROL no banco de dados.
 
 - O tamanho máximo de linha possível, incluindo o comprimento total das colunas de comprimento variável, não pode exceder 32 KB no SQL Server ou 1 MB no SQL Data Warehouse do Azure.
 

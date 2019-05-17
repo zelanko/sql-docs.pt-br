@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e33e1602f98094c6085d179982a252aa6abc840b
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: f5cda166fdd343392f85f5537877cbc7da3e05ae
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478281"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503733"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -70,7 +70,7 @@ Cria uma nova tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
 ```
 --Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
-    [ database_name . [ schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name. | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
 [ ; ]
 ```
@@ -80,7 +80,7 @@ CREATE TABLE
 ```
 --Disk-Based CREATE TABLE Syntax
 CREATE TABLE
-    [ database_name . [ schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ AS FileTable ]
     ( {   <column_definition>
         | <computed_column_definition>
@@ -265,10 +265,9 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```
 
 ```
---Memory optimized
-LE Syntax
+--Memory optimized CREATE TABLE Syntax
 CREATE TABLE
-    [database_name . [schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition>
     | [ <table_constraint> ] [ ,... n ]
     | [ <table_index> ]
@@ -640,7 +639,7 @@ SET NULL
 Todos os valores que compõem a chave estrangeira serão definidos como NULL se a linha correspondente na tabela pai for excluída. Para que essa restrição seja executada, as colunas de chave estrangeira devem ser anuláveis.
 
 SET DEFAULT    
-Todos os valores que compõem a chave estrangeira são definidos com seus valores padrão se a linha correspondente na tabela pai for excluída. Para que essa restrição seja executada, todas as colunas de chave estrangeira devem ter definições padrão. Se a coluna for anulável e não houver nenhum valor padrão explícito definido, NULL se tornará o valor padrão implícito para a coluna.
+Todos os valores que compõem a chave estrangeira serão definidos com seus valores padrão se a linha correspondente na tabela pai for excluída. Para que essa restrição seja executada, todas as colunas de chave estrangeira devem ter definições padrão. Se a coluna for anulável e não houver nenhum valor padrão explícito definido, NULL se tornará o valor padrão implícito para a coluna.
 
 Não especifique CASCADE se a tabela for incluída em uma publicação de mesclagem que usa registros lógicos. Para obter mais informações sobre registros lógicos, consulte [Agrupar alterações em linhas relacionadas com registros lógicos](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).
 
@@ -777,7 +776,7 @@ WITH
 Especifica uma ou mais opções de índice. Para obter uma descrição completa dessas opções, consulte [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md).
 
 PAD_INDEX = { ON | **OFF** }     
-Quando ON, a porcentagem de espaço livre especificada por FILLFACTOR será aplicada às páginas de nível intermediário do índice. Quando OFF ou se o valor de FILLFACTOR não foi especificado, as páginas de nível intermediário são preenchidas até próximo de sua capacidade, deixando espaço suficiente para pelo menos uma linha do tamanho máximo que o índice pode ter, considerando o conjunto de chaves em páginas intermediárias. O padrão é OFF.
+Quando ON, o percentual de espaço livre especificado por FILLFACTOR será aplicado às páginas de nível intermediário do índice. Quando OFF ou se o valor de FILLFACTOR não foi especificado, as páginas de nível intermediário são preenchidas até próximo de sua capacidade, deixando espaço suficiente para pelo menos uma linha do tamanho máximo que o índice pode ter, considerando o conjunto de chaves em páginas intermediárias. O padrão é OFF.
 
 FILLFACTOR **=**_fillfactor_     
 Especifica uma porcentagem que indica quanto [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve preencher o nível folha de cada página de índice durante a criação ou alteração do índice. *fillfactor* deve ser um valor inteiro de 1 a 100. O padrão é 0. Os valores de fator de preenchimento 0 e 100 são iguais em todos os aspectos.

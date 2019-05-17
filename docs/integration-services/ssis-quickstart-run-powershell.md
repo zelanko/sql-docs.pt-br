@@ -9,12 +9,12 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 101c0656aa8720743906e1f9e71075764942b7f3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: aea2f8900f4c56168b6e1ef95fe2383b1b8163cc
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282530"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376833"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>Executar um pacote do SSIS com o PowerShell
 Este guia de início rápido demonstra como usar um script do PowerShell para se conectar a um servidor de banco de dados e executar um pacote do SSIS.
@@ -37,12 +37,22 @@ Você não pode usar as informações neste guia de início rápido para executa
 
 Para executar o pacote no Banco de Dados SQL do Azure, obtenha as informações de conexão necessárias para se conectar ao SSISDB (banco de dados de catálogo do SSIS). Você precisa das informações de logon e de nome do servidor totalmente qualificado nos procedimentos a seguir.
 
-1. Faça logon no [portal do Azure](https://portal.azure.com/).
+1. Entre no [portal do Azure](https://portal.azure.com/).
 2. Selecione **Bancos de Dados SQL** no menu à esquerda e selecione o banco de dados do SSISDB na página **Bancos de dados SQL**. 
 3. Na página **Visão geral** do banco de dados, examine o nome totalmente qualificado do servidor. Para ver a opção **Clique para copiar**, passe o mouse sobre o nome do servidor. 
 4. Se você esquecer suas informações de logon do servidor de Banco de Dados SQL do Azure, navegue até a página do servidor de Banco de Dados SQL para exibir o nome do administrador de servidor. Você pode redefinir a senha, se necessário.
 5. Clique em **Mostrar cadeias de conexão de banco de dados**.
 6. Examine a cadeia de conexão **ADO.NET** completa.
+
+## <a name="ssis-powershell-provider"></a>Provedor do PowerShell do SSIS
+Você pode usar o Provedor do PowerShell do SSIS para se conectar a um catálogo do SSIS e executar pacotes dentro dele.
+
+Abaixo está um exemplo básico de como executar um pacote do SSIS em um catálogo de pacotes com o Provedor do PowerShell do SSIS.
+
+```powershell
+(Get-ChildItem SQLSERVER:\SSIS\localhost\Default\Catalogs\SSISDB\Folders\Project1Folder\Projects\'Integration Services Project1'\Packages\ |
+WHERE { $_.Name -eq 'Package.dtsx' }).Execute("false", $null)
+```
 
 ## <a name="powershell-script"></a>Script do PowerShell
 Forneça os valores adequados para as variáveis na parte superior do script a seguir e, em seguida, execute o script para executar o pacote do SSIS.

@@ -1,5 +1,5 @@
 ---
-title: Como exibir diferenças de dados | Microsoft Docs
+title: 'Como fazer: exibir diferenças de dados | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datacompare.f1
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6c913ffa52c07091e4eec45f6013a3540edfe810
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 935a2671c2496cb6cbb996d25cddc123bc4d782d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614248"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095919"
 ---
-# <a name="how-to-view-data-differences"></a>Como: exibir diferenças de dados
+# <a name="how-to-view-data-differences"></a>Como fazer: Exibir diferenças de dados
 Depois que você comparar os dados em dois bancos de dados, verá cada *objeto de banco de dados* que você comparou e seu status. Você também pode exibir os resultados para os registros dentro de cada objeto, agrupados por status.  
   
 Depois que você exibir as diferenças, poderá atualizar o *destino* para corresponder à *origem* para alguns ou todos os objetos ou registros que forem diferentes, ausentes ou novos.  
@@ -36,5 +36,5 @@ Depois que você exibir as diferenças, poderá atualizar o *destino* para corre
     -   Para exibir resultados para registros dentro de um objeto específico, clique no objeto no painel de resultados principal e clique em uma guia no painel Exibir Registros. Cada guia exibe todos os registros dentro desse objeto que têm um status específico: diferente, somente na origem, somente no destino e idêntico. Os dados são exibidos por registro e coluna.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Como: Usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

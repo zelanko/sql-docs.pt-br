@@ -13,12 +13,12 @@ ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20fc1e12f4aa3647016b4f39734eb0fa05cd7105
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d19670ec51172fc704d0387664f0c484315c7be7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703804"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105965"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurar o envio de logs (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47703804"
   
 5.  Na caixa **Caminho de rede para a pasta de backup** , digite o caminho de rede para o compartilhamento criado para a pasta de backup de log de transações.  
   
-6.  Se a pasta de backup estiver localizada no servidor primário, digite o caminho local para a pasta de backup na caixa **Se a pasta de backup estiver localizada no servidor primário, digite um caminho local para a pasta** . (Se a pasta de backup não estiver localizada no servidor primário, deixe essa caixa em branco.)  
+6.  **Se a pasta de backup estiver localizada no servidor primário, digite um caminho local na caixa da pasta de backup**. (Se a pasta de backup não estiver localizada no servidor primário, deixe essa caixa em branco.)  
   
     > [!IMPORTANT]  
     >  Se a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no servidor primário estiver sendo executada na conta Sistema Local, será necessário criar a pasta de backup no servidor primário e especificar um caminho local para a pasta.  
@@ -79,7 +79,7 @@ ms.locfileid: "47703804"
   
 8.  Observe a agenda de backup listada na caixa **Agenda** em **Trabalho de backup**. Se quiser personalizar a agenda para sua instalação, clique em **Agenda** e, em seguida, ajuste a Agenda do agente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , conforme necessário.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte à [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ao criar a configuração de envio de logs, é possível controlar o comportamento da compactação de backup de logs escolhendo uma das seguintes opções: **Usar a configuração padrão do servidor**, **Compactar o backup**ou **Não compactar o backup**. Para obter mais informações, consulte [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte à [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ao criar uma configuração de envio de logs, é possível controlar o comportamento de compactação de backup dos backups de log escolhendo uma das opções a seguir: **Usar a configuração de servidor padrão**, **Compactar backup** ou **Não compactar o backup**. Para obter mais informações, consulte [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Clique em **OK**.  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - grid showing query options [SQL Server]
 - adding query options into grid
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9f6beffa273fbb08c8d4c4066eac3e08f52ed4c4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8a4df3e9ed712975aa6d372dbc9afc3ce76bbeaa
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514050"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095203"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Painel de Critérios (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ Se o painel Critérios não estiver visível, clique com o botão direito do mou
 |coluna|Todos|Exibe o nome de uma coluna de dados utilizada para a consulta ou a expressão para uma coluna computada. Essa coluna está bloqueada, portanto, está sempre visível à medida que você rola horizontalmente.|  
 |Alias|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Especifica um nome alternativo para uma coluna ou o nome que você pode utilizar para uma coluna computada.|  
 |Table|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Especifica o nome da tabela ou objeto estruturado por tabela para a coluna de dados associada. Essa coluna está vazia para colunas computadas.|  
-|Saída|SELECT, INSERT FROM, MAKE TABLE|Especifica se uma coluna de dados é exibida na saída da consulta.<br /><br />Observação: se o banco de dados permitir, você poderá utilizar uma coluna de dados para classificar ou pesquisar cláusulas sem exibi-las no conjunto de resultados.|  
+|Saída|SELECT, INSERT FROM, MAKE TABLE|Especifica se uma coluna de dados é exibida na saída da consulta.<br /><br />Observação: Se o banco de dados permitir, você poderá usar uma coluna de dados para classificar ou pesquisar cláusulas sem exibi-las no conjunto de resultados.|  
 |Tipo de Classificação|SELECT, INSERT FROM|Especifica que a coluna de dados associada é utilizada para classificar os resultados da consulta e se a classificação é crescente ou decrescente.|  
 |Sort Order|SELECT, INSERT FROM|Especifica a prioridade de classificação das colunas de dados utilizadas para classificar o conjunto de resultados. Quando você altera a ordem de classificação de uma coluna de dados, a ordem de classificação de todas as outras colunas também é atualizada.|  
 |Group By|SELECT, INSERT FROM, MAKE TABLE|Especifica que a coluna de dados associada está sendo utilizada para criar uma consulta de agregação. Essa coluna de grade será exibida somente se você tiver escolhido **Group By** no menu **Ferramentas** ou tiver adicionado uma cláusula GROUP BY no painel SQL.<br /><br />Por padrão, o valor dessa coluna é definido como **Group By**e a coluna se torna parte da cláusula GROUP BY.<br /><br />Quando você se move para uma célula nessa coluna e seleciona uma função de agregação para ser aplicada à coluna de dados associada, por padrão, a expressão resultante é adicionada como uma coluna de saída para o conjunto de resultados.|  

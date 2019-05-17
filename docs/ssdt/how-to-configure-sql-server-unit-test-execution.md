@@ -1,5 +1,5 @@
 ---
-title: Como configurar a execução do teste de unidade do SQL Server | Microsoft Docs
+title: 'Como fazer: configurar a execução do teste de unidade do SQL Server | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 45c7429dfc8824859b06ef16616b0b999a3f6fd0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a1c1d288b79d9058a9aff7609290d2381c715575
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666755"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090179"
 ---
-# <a name="how-to-configure-sql-server-unit-test-execution"></a>Como: Configurar a execução do teste de unidade do SQL Server
+# <a name="how-to-configure-sql-server-unit-test-execution"></a>Como fazer: Configurar a execução do teste de unidade do SQL Server
 Configurando o projeto de teste, você pode especificar várias configurações que determinam como os testes de unidade do SQL Server serão executados. Essas configurações são armazenados no arquivo app.config do projeto de teste. Se você editar esse arquivo diretamente, os novos valores aparecerão na caixa de diálogo Configuração de Teste.  
   
 A solução pode conter vários projetos de teste. Cada projeto de teste contém um arquivo app.config (ou seja, um conjunto de configurações). Consequentemente, a solução pode conter diferentes conjuntos de testes de unidade (um para cada projeto de teste) configurados para serem executados de maneira diferente.  

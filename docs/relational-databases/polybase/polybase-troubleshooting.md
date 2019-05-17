@@ -1,7 +1,7 @@
 ---
 title: Monitorar e solucionar problemas do PolyBase | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.reviewer: ''
@@ -15,16 +15,17 @@ ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3c8c6922aca2d291527412e3384fe6682ba26556
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 70d6be59845433719cc462326d1135c77d34beee
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687504"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776151"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>Monitorar e solucionar problemas do PolyBase
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Para solucionar problemas do PolyBase, use as técnicas encontradas neste tópico.
 
@@ -218,7 +219,7 @@ Depois de configurar um conjunto de computadores como parte de um grupo de escal
 
 O PolyBase não estabelece uma interface com os serviços de HA do nó de nome como o Zookeeper ou o Knox atualmente. No entanto, há uma solução comprovada que pode ser usada para fornecer a funcionalidade.
 
-Solução alternativa: use o nome DNS para redirecionar conexões para o nó de nome ativo. Para fazer isso, você precisará garantir que a fonte de dados externa esteja usando um nome DNS para se comunicar com o nó de nome. Quando ocorrer o failover do nó de nome, você precisará alterar o endereço IP associado ao nome DNS usado na definição de fonte de dados externa. Isso redirecionará todas as novas conexões para o nó de nome correto. As conexões existentes falharão quando ocorrer failover. Para automatizar esse processo, uma "pulsação" pode executar o ping no nó de nome ativo. Se a pulsação falhar, é possível assumir que um failover ocorreu e alternar automaticamente para o endereço IP secundário.
+Solução alternativa: use o nome DNS para redirecionar conexões para o Nó de Nome ativo. Para fazer isso, você precisará garantir que a fonte de dados externa esteja usando um nome DNS para se comunicar com o nó de nome. Quando ocorrer o failover do nó de nome, você precisará alterar o endereço IP associado ao nome DNS usado na definição de fonte de dados externa. Isso redirecionará todas as novas conexões para o nó de nome correto. As conexões existentes falharão quando ocorrer failover. Para automatizar esse processo, uma "pulsação" pode executar o ping no nó de nome ativo. Se a pulsação falhar, é possível assumir que um failover ocorreu e alternar automaticamente para o endereço IP secundário.
 
 ## <a name="error-messages-and-possible-solutions"></a>Mensagens de erro e possíveis soluções
 

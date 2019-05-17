@@ -1,5 +1,5 @@
 ---
-title: Como instalar e gerenciar extensões de recurso | Microsoft Docs
+title: 'Como fazer: instalar e gerenciar extensões de recurso | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 04/26/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b77952b6c0d5985f4f93a7f3e81ced856e9907ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3240bd208a13342782fefeb19532fbabed7e81e1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613224"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099683"
 ---
-# <a name="how-to-install-and-manage-feature-extensions"></a>Como instalar e gerenciar extensões de recurso
+# <a name="how-to-install-and-manage-feature-extensions"></a>Como fazer: Instalar e gerenciar extensões de recurso
 Você pode adicionar regras para a análise de código do banco de dados, condições para testes de unidade de banco de dados e colaboradores de criação/implantação para aumentar a funcionalidade que as edições do Visual Studio, que incluem o SQL Server Data Tools, oferecem. No entanto, você deve primeiro instalar uma extensão de recurso antes de poder usá-la, se criou a extensão ou instalou uma que outra pessoa criou.  
   
 O local onde sua extensão será instalada depende do tipo de extensão e de onde você pretende usá-la. Nas últimas edições do Visual Studio, o local de instalação de alguns componentes foi movido do diretório de instalação do SQL Server para dentro do diretório do Visual Studio. Essa configuração facilita ter diferentes versões do software em execução lado a lado, mas significa que você talvez precise instalar sua extensão em vários locais, se desejar usá-la em outra versão do SQL Server Data Tools e na linha de comando.  
@@ -37,7 +37,7 @@ As extensões podem ser executadas como parte dos nossos serviços de linha de c
 |Tipo de extensão|Serviço da linha de comando|Pasta de instalação|  
 |------------------|------------------------|------------------|  
 |Condição de teste personalizado para testes de unidade do SQL Server|MSBuild / MSTest pode ser usado para executar testes de unidade no Prompt de Comando do Desenvolvedor para o Visual Studio 2013 e Ferramentas de linha de comando semelhantes.|A mesma de quando estiver sendo executado dentro do Visual Studio.|  
-|Colaboradores de compilação<br /><br />Colaboradores de implantação|[SqlPackage.exe](../tools/sqlpackage.md), ou usando os destinos Implantar ou Publicar do MSBuild ao criar um projeto de banco de dados.|MSBuild: a mesma de quando estiver sendo executado dentro do Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage.md): se localizado dentro do diretório do Visual Studio, a mesma que antes.<br /><br />Se o SqlPackage.exe e outras DLLs DacFx estiverem localizados fora desse diretório, as extensões devem ser incluídas no mesmo diretório ou em C:\Arquivos de Programas (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions.|  
+|Colaboradores de compilação<br /><br />Colaboradores de implantação|[SqlPackage.exe](../tools/sqlpackage.md), ou usando os destinos Implantar ou Publicar do MSBuild ao criar um projeto de banco de dados.|MSBuild: A mesma de quando estiver sendo executado dentro do Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage.md): se localizado dentro do diretório do Visual Studio, a mesma que antes.<br /><br />Se o SqlPackage.exe e outras DLLs DacFx estiverem localizados fora desse diretório, as extensões devem ser incluídas no mesmo diretório ou em C:\Arquivos de Programas (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions.|  
 |Regras de análise de código estático|O MSBuild pode ser usado para criar o projeto e executar análise de código estático.<br /><br />Além disso, você pode executar a análise de código usando uma API CodeAnalysisService de seus próprios aplicativos. Nesse caso, as regras de pesquisa de extensão funcionam da mesma forma como quando SqlPackage.exe é usado.|O mesmo ocorre para os Colaboradores de Compilação e Implantação|  
   
 > [!NOTE]  

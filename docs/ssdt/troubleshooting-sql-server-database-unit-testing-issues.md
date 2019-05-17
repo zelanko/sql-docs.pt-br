@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cf4c9cd1-7e73-4c3b-922a-68b9247e7b33
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 45e9264284a690dee4a2938f56afb1fa9d9afed2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a6a198d252f2363fc55e38677518ec02724e3e2
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626324"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102016"
 ---
 # <a name="troubleshooting-sql-server-database-unit-testing-issues"></a>Solucionando problemas de teste de unidade do banco de dados SQL Server
 Você pode encontrar os problemas neste tópico quando trabalha com as unidades de teste do SQL Server em um banco de dados:  
@@ -49,6 +49,6 @@ Se seus testes de unidade de banco de dados estão falhando devido a tempo limit
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como criar testes de unidade do SQL Server para funções, gatilhos e procedimentos armazenados](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
-[Como configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
+[Como: Criar testes de unidade do SQL Server para funções, gatilhos e procedimentos armazenados](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
+[Como: configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
   

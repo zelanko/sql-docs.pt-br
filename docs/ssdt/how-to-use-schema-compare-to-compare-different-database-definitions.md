@@ -1,5 +1,5 @@
 ---
-title: Como usar comparação de esquema para comparar definições de banco de dados diferentes | Microsoft Docs
+title: 'Como fazer: usar comparação de esquema para comparar definições de banco de dados diferentes | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -14,17 +14,17 @@ f1_keywords:
 - sql.data.tools.schemacompare.connectiondialog.f1
 - sql.data.tools.schemacompare.connectiondialog.error.f1
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2f8c03ebbb1b49258ae6a7f8744042f763fc7282
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd48c91bee175e3cc2bdb0031d70a9d8e68d95c4
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668544"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095936"
 ---
-# <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Como: Usar comparação de esquema para comparar definições de banco de dados diferentes
+# <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Como fazer: Usar comparação de esquema para comparar definições de banco de dados diferentes
 O SQL Server Data Tools (SSDT) inclui um utilitário de Comparação de Esquemas que você poderá usar para comparar duas definições de banco de dados.  A origem e o destino da comparação podem ser qualquer combinação do banco de dados conectado, do projeto de banco de dados do SQL Server, do instantâneo ou do arquivo .dacpac.  Os resultados da comparação aparecem como um conjunto de ações que devem ser executadas com o destino para torná-lo igual à origem.  Uma vez que a comparação esteja concluída, você poderá atualizar o destino diretamente (se o destino for um projeto ou um banco de dados) ou gerar um script de atualização que tenha o mesmo efeito.  
   
 As diferenças entre a origem e o destino aparecem em uma grade para facilitar a revisão.  Você poderá analisar e revisar cada diferença na grade de resultados ou no formulário de script.  Em seguida, poderá excluir diferenças específicas seletivamente.  

@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c7b3874277b1046233e4f728a19d3eee60aa851
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 18086e3f6fc0d49a269dc0a9b2d8ad65579faec5
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535848"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450093"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Atualizar instâncias de réplica do Grupo de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Antes de começar, examine as seguintes informações importantes:
 - [Verifique se a replicação ou captura de dados de alterações é usada para qualquer banco de dados do grupo de disponibilidade](#special-steps-for-change-data-capture-or-replication): Se qualquer banco de dados de disponibilidade estiver habilitado para CDA (captura de dados de alterações), conclua estas [instruções](#special-steps-for-change-data-capture-or-replication).
 
 >[!NOTE]  
->Não há suporte para a combinação de versões das instâncias do SQL Server no mesmo AG fora de uma atualização sem interrupção, que atualiza as réplicas adequadamente. Uma versão posterior de uma instância do SQL Server não pode ser adicionada como uma nova réplica a um AG existente. Por exemplo, uma réplica do SQL Server 2017 não pode ser adicionada a um AG existente do SQL Server 2016. Para migrar para uma nova versão da instância do SQL Server usando AGs, o único método com suporte é um AG distribuído, que está no SQL Server 2016 Enterprise Edition ou posterior.
+>Não há suporte para combinar versões das instâncias do SQL Server no mesmo AG fora de uma atualização sem interrupção e não deve existir nesse estado por longos períodos, já que a atualização deve ocorrer rapidamente. A outra opção para atualizar o SQL Server 2016 e posteriores é usando o grupo de disponibilidade distribuído.
 
 ## <a name="rolling-upgrade-basics-for-always-on-ags"></a>Noções básicas de atualização sem interrupção para AGs do AlwaysOn  
 Observe as diretrizes a seguir ao realizar atualizações de servidor para minimizar o tempo de inatividade e a perda de dados dos seus AGs:  

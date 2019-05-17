@@ -12,37 +12,46 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d8b2d57affda47622722ccefde214e5c2e61d51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6af025104d3d17ba7856df7739539ea065e4c197
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653294"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104993"
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>Implementando UPDATE com FROM ou subconsultas
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Os módulos do T-SQL compilados de forma nativa não dão suporte à cláusula FROM e não dão suporte a subconsultas em instruções UPDATE (elas têm suporte em SELECT). Instruções UPDATE com a cláusula FROM normalmente são usadas para atualizar informações em uma tabela baseada em um TVP (parâmetro com valor de tabela) ou para atualizar colunas em uma tabela em um gatilho AFTER. 
+
+
+Na instrução UPDATE Transact-SQL, em um módulo do T-SQL compilado nativamente, *não* há suporte para os seguintes elementos de sintaxe:
+
+- A cláusula FROM
+- Subconsultas
+
+Por outro lado, os elementos anteriores *têm* suporte em módulos compilados nativamente na instrução SELECT.
+
+Instruções UPDATE com uma cláusula FROM muitas vezes são usadas para atualizar informações em uma tabela baseada em um TVP (parâmetro com valor de tabela) ou para atualizar colunas em uma tabela em um gatilho AFTER.
 
 Para o cenário da atualização baseada em um TVP, consulte [Implementando a funcionalidade MERGE em um procedimento armazenado compilado de forma nativa](../../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md). 
 
-O exemplo abaixo ilustra uma atualização executada em um gatilho: a coluna LastUpdated da tabela é atualizada para a data/hora atuais das atualizações de AFTER. A solução alternativa usa uma variável de tabela com uma coluna de identidade e um loop WHILE para fazer a iteração das linhas na variável de tabela e realizar atualizações individuais.
-  
-Eis a instrução T-SQL UPDATE original:  
-  
-  
-  
-   ```
+O exemplo a seguir ilustra uma atualização executada em um gatilho. Na tabela, a coluna denominada LastUpdated é definida como a data e hora atual após as atualizações. A solução alternativa executa atualizações individuais usando os seguintes itens:
+
+- Uma variável de tabela que tem uma coluna IDENTITY.
+- Um loop WHILE para fazer a iteração das linhas na variável de tabela.
+
+Aqui está a instrução T-SQL UPDATE original:
+
+   ```sql
     UPDATE dbo.Table1  
         SET LastUpdated = SysDateTime()  
         FROM  
             dbo.Table1 t  
             JOIN Inserted i ON t.Id = i.Id;  
    ```
-  
-  
 
-O código T-SQL de exemplo nesta seção demonstra uma solução alternativa que fornece um bom desempenho. A solução alternativa é implementada em um gatilho compilado de forma nativa. Os itens cruciais para observar no código são:  
+O código T-SQL de exemplo no seguinte bloco demonstra uma solução alternativa que fornece um bom desempenho. A solução alternativa é implementada em um gatilho compilado de forma nativa. Os itens cruciais para observar no código são:  
   
 - O tipo chamado dbo.Type1, que é um tipo de tabela com otimização de memória.  
 - O loop WHILE no gatilho.  
@@ -50,13 +59,13 @@ O código T-SQL de exemplo nesta seção demonstra uma solução alternativa que
   
   
   
- ```
+ ```sql
     DROP TABLE IF EXISTS dbo.Table1;  
     go  
     DROP TYPE IF EXISTS dbo.Type1;  
     go  
-    -----------------------------  
-    -- Table and table type
+    -----------------------------
+    -- Table and table type.
     -----------------------------
   
     CREATE TABLE dbo.Table1  
@@ -78,9 +87,10 @@ O código T-SQL de exemplo nesta seção demonstra uma solução alternativa que
     )   
         WITH (MEMORY_OPTIMIZED = ON);  
     go  
-    ----------------------------- 
-    -- trigger that contains the workaround for UPDATE with FROM 
-    -----------------------------  
+    ----------------------------------------
+    -- Trigger that contains the workaround
+    -- for UPDATE with FROM.
+    ----------------------------------------
   
     CREATE TRIGGER dbo.tr_a_u_Table1  
         ON dbo.Table1  
@@ -120,9 +130,9 @@ O código T-SQL de exemplo nesta seção demonstra uma solução alternativa que
       END  
     END  
     go  
-    -----------------------------  
-    -- Test to verify functionality
-    -----------------------------  
+    ---------------------------------
+    -- Test to verify functionality.
+    ---------------------------------
   
     SET NOCOUNT ON;  
   
@@ -157,6 +167,4 @@ O código T-SQL de exemplo nesta seção demonstra uma solução alternativa que
     AFTER--Update   2      10      2016-04-20 21:18:43.8529692  
     AFTER--Update   3     600      2016-04-20 21:18:42.8394659  
     ****/  
-  
-  
  ```

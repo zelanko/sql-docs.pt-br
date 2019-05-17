@@ -1,7 +1,7 @@
 ---
 title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -29,12 +29,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bc908bd4186035bb1c9089139532c9fa413c8a8a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 192eb9d6fb313f689081c590f2881f028fd54ced
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327417"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774902"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -70,24 +70,33 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *path_to_file*  
- Especifica o caminho completo, incluindo o nome, do arquivo no qual o certificado deve ser salvo. Esse pode ser um caminho local ou um caminho UNC para um local de rede. O padrão é o caminho da pasta DATA do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- *path_to_private_key_file*  
- Especifica o caminho completo, incluindo o nome, do arquivo no qual a chave privada deve ser salva. Esse pode ser um caminho local ou um caminho UNC para um local de rede. O padrão é o caminho da pasta DATA do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ *certname*  
+ É o nome do certificado do qual fazer backup.
 
- *encryption_password*  
+ TO FILE = '*path_to_file*'  
+ Especifica o caminho completo, incluindo o nome, do arquivo no qual o certificado deve ser salvo. Esse pode ser um caminho local ou um caminho UNC para um local de rede. Se apenas um nome de arquivo for especificado, o arquivo será salvo na pasta de dados de usuário da instância padrão (que pode ou não ser a pasta DATA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Para o SQL Server Express LocalDB, a pasta de dados de usuário da instância padrão é o caminho especificado pela variável de ambiente `%USERPROFILE%` para a conta que criou a instância.  
+
+ WITH PRIVATE KEY especifica que a chave privada do certificado deve ser salva em um arquivo. Esta cláusula é opcional.
+
+ FILE = '*path_to_private_key_file*'  
+ Especifica o caminho completo, incluindo o nome, do arquivo no qual a chave privada deve ser salva. Esse pode ser um caminho local ou um caminho UNC para um local de rede. Se apenas um nome de arquivo for especificado, o arquivo será salvo na pasta de dados de usuário da instância padrão (que pode ou não ser a pasta DATA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Para o SQL Server Express LocalDB, a pasta de dados de usuário da instância padrão é o caminho especificado pela variável de ambiente `%USERPROFILE%` para a conta que criou a instância.  
+
+ ENCRYPTION BY PASSWORD = '*encryption_password*'  
  É a senha usada para criptografar a chave privada antes de gravá-la no arquivo de backup. A senha está sujeita a verificações de complexidade.  
   
- *decryption_password*  
+ DECRYPTION BY PASSWORD = '*decryption_password*'  
  É a senha usada para descriptografar a chave privada antes do backup da chave. Esse argumento não será necessário se o certificado for criptografado pela chave mestra. 
   
 ## <a name="remarks"></a>Remarks  
  Se a chave privada estiver criptografada com uma senha no banco de dados, a senha de descriptografia deverá ser especificada.  
   
- Quando você faz backup da chave privada em um arquivo, a criptografia é necessária. A senha usada para proteger o certificado não é a mesma senha usada para criptografar a chave privada do certificado.  
-  
- Para restaurar um certificado de backup, use a instrução [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).
+ Quando você faz backup da chave privada em um arquivo, a criptografia é necessária. A senha usada para proteger a chave privada no arquivo não é a mesma senha usada para criptografar a chave privada do certificado no banco de dados.  
+
+ As chaves privadas são salvas no formato de arquivo PVK.
+
+ Para restaurar um certificado de backup, com ou sem a chave privada, use a instrução [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).
+ 
+ Para restaurar uma chave privada para um certificado existente no banco de dados, use a instrução [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md).
  
  Ao executar um backup, os arquivos serão colocados em uma ACL da conta de serviço da instância do SQL Server. Se você precisar restaurar o certificado para um servidor que está em execução em uma conta diferente, será necessário ajustar as permissões nos arquivos para que a nova conta consiga lê-los. 
   
@@ -104,7 +113,7 @@ BACKUP CERTIFICATE sales05 TO FILE = 'c:\storedcerts\sales05cert';
 GO  
 ```  
   
-### <a name="b-exporting-a-certificate-and-a-private-key"></a>b. Exportando um certificado e uma chave privada  
+### <a name="b-exporting-a-certificate-and-a-private-key"></a>B. Exportando um certificado e uma chave privada  
  No exemplo a seguir, a chave privada do certificado do qual é feito backup será criptografada com a senha `997jkhUbhk$w4ez0876hKHJH5gh`.  
   
 ```  
@@ -129,6 +138,10 @@ GO
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
  [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
+ [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)  
+ [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)  
+ [CERTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/certproperty-transact-sql.md)  
   
   
 

@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf274779c038f6cb2111a1b01ca8315cbd0002e4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a9cdaf6d6fdf6ebe713cde17e87480b5fac4047f
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606416"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65367067"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Configurar a opção de configuração de servidor max degree of parallelism
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,28 @@ ms.locfileid: "51606416"
 -   Além das consultas e das operações de índice, essa opção também controla o paralelismo de DBCC CHECKTABLE, DBCC CHECKDB e DBCC CHECKFILEGROUP. É possível desabilitar a execução paralela de planos para essas instruções usando o sinalizador de rastreamento 2528. Para obter mais informações, veja, [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 ###  <a name="Guidelines"></a> Diretrizes  
-Use as seguintes diretrizes ao configurar o valor de configuração de servidor **max degree of parallelism**:
+A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], durante a inicialização do serviço, se o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detectar mais de oito núcleos por nó NUMA ou soquete na inicialização, os nós soft-NUMA serão criados automaticamente por padrão. O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] coloca os processadores lógicos do mesmo núcleo físico em nós soft-NUMA diferentes. As recomendações na tabela a seguir visam manter todos os threads de trabalho de uma consulta paralela dentro do mesmo nó soft-NUMA. Isso melhorará o desempenho das consultas e a distribuição de threads de trabalho em todos os nós NUMA para a carga de trabalho. Para obter mais informações, veja [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
+
+A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], use as seguintes diretrizes ao configurar o valor de configuração de servidor **grau máximo de paralelismo**:
+
+||||
+|----------------|-----------------|-----------------|
+|Servidor com um único nó NUMA|Menos de 16 processadores lógicos|Manter MAXDOP com o mesmo número ou abaixo do número de processadores lógicos|
+|Servidor com um único nó NUMA|Mais de 16 processadores lógicos|Manter MAXDOP em metade do número de processadores lógicos com um valor MAX de 16|
+|Servidor com vários nós NUMA|Menos de 16 processadores lógicos por nó NUMA|Manter MAXDOP com o mesmo número ou abaixo do número de processadores lógicos por nó NUMA|
+|Servidor com vários nós NUMA|Mais de 16 processadores lógicos por nó NUMA|Manter MAXDOP em metade do número de processadores lógicos por nó NUMA com um valor MAX de 16|
+  
+> [!NOTE]
+> O nó NUMA na tabela acima refere-se a nós soft-NUMA criados automaticamente pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versões superiores.   
+>  Use essas mesmas diretrizes ao definir a opção grau máximo de paralelismo para os grupos de carga de trabalho Resource Governor. Para obter mais informações, veja [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md).
+  
+Em [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], use as seguintes diretrizes ao configurar o valor de configuração de servidor **grau máximo de paralelismo**:
 
 ||||
 |----------------|-----------------|-----------------|
 |Servidor com um único nó NUMA|Menos de 8 processadores lógicos|Manter MAXDOP com o mesmo número ou abaixo do número de processadores lógicos|
 |Servidor com um único nó NUMA|Mais de 8 processadores lógicos|Manter MAXDOP em 8|
-|Servidor com vários nós NUMA|Menos de 8 processadores lógicos por nó NUMA|Manter MAXDOP com o mesmo número ou abaixo do número de processadores lógicos por nó NUMA|
+|Servidor com vários nós NUMA|Mais de 8 processadores lógicos por nó NUMA|Manter MAXDOP com o mesmo número ou abaixo do número de processadores lógicos por nó NUMA|
 |Servidor com vários nós NUMA|Mais de 8 processadores lógicos por nó NUMA|Manter MAXDOP em 8|
   
 ###  <a name="Security"></a> Segurança  
@@ -89,7 +104,7 @@ EXEC sp_configure 'show advanced options', 1;
 GO  
 RECONFIGURE WITH OVERRIDE;  
 GO  
-EXEC sp_configure 'max degree of parallelism', 8;  
+EXEC sp_configure 'max degree of parallelism', 16;  
 GO  
 RECONFIGURE WITH OVERRIDE;  
 GO  
@@ -97,7 +112,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção max degree of parallelism  
+##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção grau máximo de paralelismo  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte Também  

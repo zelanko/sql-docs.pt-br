@@ -1,5 +1,5 @@
 ---
-title: Configurar a coleta de dados de diagnóstico e uso nas ferramentas do SQL Server | Microsoft Docs
+title: Configurar a coleta de dados de diagnóstico e uso nas ferramentas do SQL Server (Programa de Aperfeiçoamento da Experiência do Usuário) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c60eb8cac357fba523196385e72a1b05a2c36f4
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: b089fd59814e8439bee929fdbc4f01fbc0340f75
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59243510"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376851"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools"></a>Configurar a coleta de dados de diagnóstico e uso nas ferramentas do SQL Server
+# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>Configurar a coleta de dados de diagnóstico e uso nas ferramentas do SQL Server (Programa de Aperfeiçoamento da Experiência do Usuário)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -29,7 +29,7 @@ Saiba como o Programa de Aperfeiçoamento da Experiência do Usuário ajuda a Mi
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>Aceitar e recusar o Programa de Aperfeiçoamento da Experiência do Usuário para SQL Server Data Tools  
 
- O Programa de Aperfeiçoamento da Experiência do Usuário foi projetado para ajudar a Microsoft a aperfeiçoar seus produtos ao longo do tempo. Esse programa coleta informações sobre o hardware do computador e sobre como as pessoas usam nossos produtos, sem interromper as tarefas dos usuários no computador. As informações coletadas ajudam a Microsoft a identificar os recursos que devem ser melhorados. Neste documento, abordaremos como aceitar ou recusar o Programa de Aperfeiçoamento da Experiência do Usuário para SSDT (SQL Server Data Tools) para o Visual Studio 2017, Visual Studio 2015 e Visual Studio 2013.  
+ O Programa de Aperfeiçoamento da Experiência do Usuário foi projetado para ajudar a Microsoft a aperfeiçoar seus produtos ao longo do tempo. Esse programa coleta informações sobre o hardware do computador e sobre como as pessoas usam nossos produtos, sem interromper as tarefas dos usuários no computador. As informações coletadas ajudam a Microsoft a identificar os recursos que devem ser melhorados. Neste documento, abordaremos como aceitar ou recusar o Programa de Aperfeiçoamento da Experiência do Usuário para SSDT (SQL Server Data Tools) para o Visual Studio 2017, Visual Studio 2015 e Visual Studio 2013.  Para obter informações sobre recusar o Programa de Aperfeiçoamento da Experiência do Usuário para o SQL Server, veja [Desativando a auditoria local para o SQL Server](usage-and-diagnostic-data-in-local-audit.md#turning-local-audit-on-or-off).
 
 ### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2017"></a>Opção e controle do Programa de Aperfeiçoamento da Experiência do Usuário e o SQL Server Data Tools para Visual Studio 2017
 
@@ -47,7 +47,7 @@ Saiba como o Programa de Aperfeiçoamento da Experiência do Usuário ajuda a Mi
   
 3.  Para desativar o CEIP, clique em **Não, prefiro não participar**e, em seguida, clique em **OK**.  
   
-     Para ativar o CEIP, clique em **Sim, quero participar** e, em seguida, clique em **OK**.  
+     Para ativar o CEIP, clique em **Sim, quero participar**e, em seguida, clique em **OK**.  
   
 
   
@@ -91,7 +91,7 @@ Valor = (DWORD)
   
 3.  Para desativar o CEIP, clique em **Não, prefiro não participar**e, em seguida, clique em **OK**.  
   
-     Para ativar o CEIP, clique em **Sim, quero participar** e, em seguida, clique em **OK**.  
+     Para ativar o CEIP, clique em **Sim, quero participar**e, em seguida, clique em **OK**.  
   
 
   

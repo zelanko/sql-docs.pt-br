@@ -1,7 +1,7 @@
 ---
 title: DBCC CLONEDATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: ''
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: c21fb619391701d3506c3c73f9acf699f4c5d54f
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: 5e8cc30ef8ce51a08ce12ed28b7c03bec0fc124d
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305334"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774840"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -115,9 +115,15 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> Se você tiver índices columnstore, veja [Considerações ao ajustar as consultas com índices Columnstore em bancos de dados do clone](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) para atualizar as estatísticas de índice columnstore antes de executar o comando **DBCC CLONEDATABASE**.  Começando com o SQL Server 2019, as etapas manuais descritas no artigo acima não serão mais necessárias, porque o comando **DBCC CLONEDATABASE** coleta essas informações automaticamente.
+> Se você tiver índices columnstore, veja [Considerações ao ajustar as consultas com índices Columnstore em bancos de dados do clone](https://techcommunity.microsoft.com/t5/SQL-Server/Considerations-when-tuning-your-queries-with-columnstore-indexes/ba-p/385294) para atualizar as estatísticas de índice columnstore antes de executar o comando **DBCC CLONEDATABASE**.  Começando com o SQL Server 2019, as etapas manuais descritas no artigo acima não serão mais necessárias, porque o comando **DBCC CLONEDATABASE** coleta essas informações automaticamente.
 
-Para obter informações relacionadas à segurança de dados em bancos de dados clonados, veja [Noções básicas sobre segurança de dados em bancos de dados clonados](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/).
+<a name="ctp23"></a>
+
+## <a name="stats-blob-for-columnstore-indexes"></a>Blob de estatísticas para índices columnstore
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], o `DBCC CLONEDATABASE` captura automaticamente os blobs de estatísticas para índices columnstore, de modo que nenhuma etapa manual é necessária.`DBCC CLONEDATABASE` cria uma cópia somente de esquema de um banco de dados que inclui todos os elementos necessários para solucionar problemas de desempenho de consulta sem copiar os dados. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o comando não copiava as estatísticas necessárias para solucionar problemas com precisão em consultas de índice de columnstore, e etapas manuais eram necessárias para capturar essas informações.
+
+Para obter informações relacionadas à segurança de dados em bancos de dados clonados, veja [Noções básicas sobre segurança de dados em bancos de dados clonados](https://techcommunity.microsoft.com/t5/SQL-Server/Understanding-data-security-in-cloned-databases-created-using/ba-p/385287).
 
 ## <a name="internal-database-snapshot"></a>Instantâneo de banco de dados interno
 DBCC CLONEDATABASE usa um instantâneo de banco de dados interno do banco de dados de origem para a consistência transacional necessária para executar a cópia. O uso desse instantâneo evita bloqueio e problemas de simultaneidade quando esses comandos são executados. Se um instantâneo não puder ser criado, DBCC CLONEDATABASE falhará. 
@@ -213,7 +219,7 @@ DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone);
 GO 
 ```  
   
-### <a name="b-creating-a-schema-only-clone-of-a-database-without-statistics"></a>b. Criação de um clone somente de esquema de banco de dados sem estatísticas 
+### <a name="b-creating-a-schema-only-clone-of-a-database-without-statistics"></a>B. Criação de um clone somente de esquema de banco de dados sem estatísticas 
 O exemplo a seguir cria um clone do banco de dados AdventureWorks que não inclui estatísticas ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 e versões posteriores)
 
 ```sql  

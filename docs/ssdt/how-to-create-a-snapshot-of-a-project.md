@@ -1,5 +1,5 @@
 ---
-title: Como criar um instantâneo de um projeto | Microsoft Docs
+title: 'Como fazer: criar um instantâneo de um projeto | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog
 - sql.data.tools.SqlProjectImportSnapshotDialog.dialog
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c564788a1d77d9af83de28a2b4dbea022ea28ec1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4093d18cfce9e7a5632039cf819955762c84adc1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530781"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098075"
 ---
-# <a name="how-to-create-a-snapshot-of-a-project"></a>Como: Criar um instantâneo de um projeto
+# <a name="how-to-create-a-snapshot-of-a-project"></a>Como fazer: Criar um instantâneo de um projeto
 Um arquivo de **Aplicativo da camada de dados** fornece uma representação somente leitura do esquema de banco de dados no momento em que ele é criado. Ele está sendo tratado basicamente como um esquema de banco de dados do qual você pode importar os objetos de esquema de volta para um projeto. Você também pode compará-lo com o esquema de um banco de dados ou um projeto e atualizar o banco de dados ou o projeto para refletir o esquema definido no instantâneo.  
   
 No caso de um erro do usuário em um projeto de banco de dados de origem, você poderá reverter projeto de origem ao estado em que estava quando o instantâneo foi criado. Você também pode estabelecer instantâneos em várias fases de seu desenvolvimento para a finalidade de linha de base.  
@@ -65,5 +65,5 @@ No caso de um erro do usuário em um projeto de banco de dados de origem, você 
     Você pode localizar facilmente o delta de instantâneos diferentes usando a Comparação de Esquemas. Neste caso, você pode descobrir como seu projeto evolui durante o processo de desenvolvimento.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Como: Usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

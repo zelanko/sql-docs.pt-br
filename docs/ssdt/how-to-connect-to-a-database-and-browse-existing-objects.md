@@ -1,5 +1,5 @@
 ---
-title: Como se conectar a um banco de dados e procurar objetos existentes | Microsoft Docs
+title: 'Como fazer: conectar-se a um banco de dados e procurar objetos existentes | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.connectionpicker.f1
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7b29eac3b080a78f2552a2558b3ab3278b89a1bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 21096819ebd7a54ab8f4505ad980c0e6a5266d6f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670455"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098111"
 ---
-# <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Como: Conecte-se a um Banco de Dados e Procure Objetos Existentes
+# <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Como fazer: conectar-se a um Banco de Dados e Procure Objetos Existentes
 Uma tarefa muito comum para administradores de banco de dados e desenvolvedores é conectar a um banco de dados online, criar ou procurar seu esquema e consultar seus objetos. O Pesquisador de Objetos do SQL Server no Visual Studio agora contém um nó **SQL Server** dedicado, sob o qual todas as instâncias conectadas do SQL Server e seus respectivos bancos de dados são agrupados em uma hierarquia semelhante ao SSMS. As instâncias conectadas do SQL Server podem ser uma instância local, como um SQL Server 2008 em execução, ou uma instância do SQL Azure externa.  
   
 O procedimento a seguir supõe que você já tem o banco de dados de exemplo AdventureWorks instalado. Use [CodePlex](https://msftdbprodsamples.codeplex.com/) para localizar e instalar bancos de dados de exemplo para diferentes versões do SQL Server. Se preferir, você também pode seguir as etapas e usar um banco de dados existente no seu servidor.  

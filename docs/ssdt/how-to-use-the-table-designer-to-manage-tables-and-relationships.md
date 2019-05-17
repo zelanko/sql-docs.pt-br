@@ -1,5 +1,5 @@
 ---
-title: Como usar o Designer de Tabela para gerenciar tabelas e relacionamentos | Microsoft Docs
+title: 'Como fazer: usar o Designer de Tabela para gerenciar tabelas e relacionamentos | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -12,17 +12,17 @@ f1_keywords:
 - sql.data.tools.design.table.columnsgrid.view
 - sql.data.tools.design.table.scriptpanel
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6a312fbcfe6cfb25f612bb095bcff70656009a11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d70fe813437ff6204173dc20df90d029f6568fb
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652864"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096859"
 ---
-# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Como: Usar o Designer de Tabela para gerenciar tabelas e relacionamentos
+# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Como fazer: Usar o Designer de Tabela para gerenciar tabelas e relacionamentos
 O Designer de Tabela fornece uma experiência visual juntamente com o Editor Transact\-SQL para criar e editar a estrutura de tabelas, incluindo objetos de programação específicos de tabela, para bancos de dados do SQL Server.  Ele é iniciado quando você cria uma nova tabela para um banco de dados conectado ou um projeto, ou quando você clica duas vezes para editar uma tabela no Pesquisador de Objetos do SQL Server ou no Gerenciador de Soluções.  
   
 O designer é composto por Grade de Colunas, Painel de Script e Painel Contexto. A Grade de Colunas lista todas as colunas na tabela. Você pode adicionar, editar e excluir colunas nesta grade.  O Painel de Contexto lhe dá uma visão lógica da definição de tabela (Chaves, Índices, Restrições, Gatilhos, etc.) e permite que você selecione um objeto para realçar as relações com colunas individuais. Você também pode adicionar novos objetos à tabela nesse painel e editar as propriedades de um objeto selecionado na Grade de Propriedades. O Painel de Script mostra a definição da estrutura de tabela, realça o script do objeto selecionado no Painel Contexto ou Grade de Colunas. Você pode editar o script lado a lado com a Grade de Colunas e o Painel Contexto na exibição. As alterações de qualquer um dos três painéis serão propagadas para os outros dois imediatamente.  
@@ -57,5 +57,5 @@ O designer é composto por Grade de Colunas, Painel de Script e Painel Contexto.
     Observe que a experiência de criar e editar entidades de banco de dados para um projeto offline é idêntica a executar as tarefas com um banco de dados conectado.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como criar objetos de banco de dados usando o Designer de Tabela](../ssdt/how-to-create-database-objects-using-table-designer.md)  
+[Como: Criar objetos de banco de dados usando o Designer de Tabela](../ssdt/how-to-create-database-objects-using-table-designer.md)  
   

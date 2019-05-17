@@ -12,15 +12,15 @@ helpviewer_keywords:
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 75f0c0b036a261c7262934f1ac03c4a0edf4e2f5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c36a1b7235b1a323bbace94762411aa2c71df15b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526707"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094268"
 ---
 # <a name="load-files-into-filetables"></a>Carregar arquivos em FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "52526707"
 |Localização atual dos arquivos|Opções de migração|  
 |-------------------------------|---------------------------|  
 |Os arquivos estão atualmente armazenados no sistema de arquivos.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não tem conhecimento dos arquivos.|Como uma FileTable é semelhante a uma pasta no sistema de arquivos do Windows, você pode carregar arquivos com facilidade em uma nova FileTable usando qualquer um dos métodos disponíveis para mover ou copiar arquivos. Esses métodos incluem o Windows Explorer, opções de linha de comando, inclusive xcopy e robocopy, e scripts ou aplicativos personalizados.<br /><br /> Você não pode converter uma pasta existente em uma FileTable.|  
-|Os arquivos estão atualmente armazenados no sistema de arquivos.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém uma tabela de metadados que possui ponteiros para os arquivos.|A primeira etapa é mover ou copiar os arquivos usando um dos métodos mencionados acima.<br /><br /> A segunda etapa é atualizar a tabela existente de metadados para apontar para o novo local dos arquivos.<br /><br /> Para obter mais informações, consulte [Exemplo: migrando arquivos do sistema de arquivos para uma FileTable](#HowToMigrateFiles) neste artigo.|  
+|Os arquivos estão atualmente armazenados no sistema de arquivos.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém uma tabela de metadados que possui ponteiros para os arquivos.|A primeira etapa é mover ou copiar os arquivos usando um dos métodos mencionados acima.<br /><br /> A segunda etapa é atualizar a tabela existente de metadados para apontar para o novo local dos arquivos.<br /><br /> Para obter mais informações, confira [Exemplo: migrando arquivos do sistema de arquivos para uma FileTable](#HowToMigrateFiles) neste artigo.|  
   
-###  <a name="HowToLoadNew"></a> Como carregar arquivos em uma nova FileTable  
+###  <a name="HowToLoadNew"></a> Como Carregar arquivos em uma nova FileTable  
 Você pode usar os seguintes métodos para carregar arquivos em uma FileTable:  
   
 -   Arrastar e soltar arquivos das pastas de origem para a pasta da nova FileTable no Windows Explorer.  
@@ -99,7 +99,7 @@ UPDATE PhotoMetadata
   
     -   INSERT INTO... SELECT * FROM OPENROWSET(BULK ...) com a cláusula IGNORE_CONSTRAINTS.  
   
-###  <a name="HowToBulkLoad"></a> Como carregar arquivos em massa em uma FileTable  
+###  <a name="HowToBulkLoad"></a> Como Carregar arquivos em massa em uma nova FileTable  
  Você pode usar vários métodos para carregar arquivos em massa em uma FileTable:  
   
 -   **bcp**  
@@ -122,7 +122,7 @@ UPDATE PhotoMetadata
   
  Para obter informações sobre como desabilitar as restrições de FileTable, consulte [Gerenciar FileTables](../../relational-databases/blob/manage-filetables.md).  
   
-###  <a name="disabling"></a> Como desabilitar restrições de FileTable para carregamento em massa  
+###  <a name="disabling"></a> Como Desabilitar restrições de FileTable para carregamento em massa  
  Para carregar os arquivos em massa em uma FileTable sem a sobrecarga de impor as restrições definidas pelo sistema, você pode desabilitar temporariamente as restrições. Para obter mais informações, consulte [Gerenciar FileTables](../../relational-databases/blob/manage-filetables.md).  
   
 ## <a name="see-also"></a>Consulte Também  

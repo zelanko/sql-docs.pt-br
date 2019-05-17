@@ -12,14 +12,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49c5203d03ed1a216f4aedc6913ea6e1bddefa2d
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: f3b341f6e40fdc5acf618d3f81c5932b9be50149
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711507"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106226"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Monitorando o desempenho de procedimentos armazenados compilados nativamente
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Este artigo discute como é possível monitorar o desempenho de procedimentos armazenados e de outros módulos T-SQL, ambos compilados nativamente.  
   
@@ -29,7 +30,9 @@ ms.locfileid: "52711507"
  **line_number**junto com **object_id** no evento estendido pode ser usado para investigar a consulta. A consulta a seguir pode ser usada para recuperar a definição de procedimento. O número da linha pode ser usado para identificar a consulta na definição:  
   
 ```sql  
-select [definition] from sys.sql_modules where object_id=object_id  
+SELECT [definition]
+    from sys.sql_modules
+    where object_id=object_id;
 ```  
   
   
@@ -38,7 +41,7 @@ select [definition] from sys.sql_modules where object_id=object_id
 
 As estatísticas de execução são refletidas nas exibições do sistema [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) e [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md), bem como no [Repositório de Consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
 
-### <a name="enabling-procedure-level-execution-statistics-collection"></a>Habilitando a coleta de estatísticas de execução de nível de procedimento
+## <a name="procedure-level-execution-statistics"></a>Estatísticas de execução em nível de procedimento
 
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: habilite ou desabilite a coleta de estatísticas em procedimentos armazenados compilados nativamente no nível de procedimento usando [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  A instrução a seguir permite a coleta de estatísticas de execução de nível de procedimento para todos os módulos T-SQL compilados nativamente na instância atual:
 ```sql
@@ -47,10 +50,12 @@ EXEC sys.sp_xtp_control_proc_exec_stats 1
 
 **[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: habilite ou desabilite a coleta de estatísticas em procedimentos armazenados compilados nativamente no nível de procedimento usando a opção [configuração com a configuração de escopo do banco de dados](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `XTP_PROCEDURE_EXECUTION_STATISTICS`. A instrução a seguir permite a coleta de estatísticas de execução de nível de procedimento para todos os módulos T-SQL compilados nativamente no banco de dados atual:
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON
+ALTER DATABASE
+    SCOPED CONFIGURATION
+    SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON;
 ```
 
-### <a name="enabling-query-level-execution-statistics-collection"></a>Habilitando a coleta de estatísticas de execução de nível de consulta
+## <a name="query-level-execution-statistics"></a>Estatísticas de execução em nível de consulta
 
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: habilite ou desabilite a coleta de estatísticas em procedimentos armazenados compilados nativamente no nível de consulta usando [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  A instrução a seguir permite a coleta de estatísticas de execução de nível de consulta para todos os módulos T-SQL compilados nativamente na instância atual:
 ```sql
@@ -59,7 +64,9 @@ EXEC sys.sp_xtp_control_query_exec_stats 1
 
 **[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: habilite ou desabilite a coleta de estatísticas em procedimentos armazenados compilados nativamente no nível de instrução usando a opção [configuração com a configuração de escopo do banco de dados](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `XTP_QUERY_EXECUTION_STATISTICS`. A instrução a seguir permite a coleta de estatísticas de execução de nível de consulta para todos os módulos T-SQL compilados nativamente no banco de dados atual:
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON
+ALTER DATABASE
+    SCOPED CONFIGURATION
+    SET XTP_QUERY_EXECUTION_STATISTICS = ON;
 ```
 
 ## <a name="sample-queries"></a>Consultas de exemplo
@@ -68,49 +75,63 @@ ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON
  
   
  A seguinte consulta retorna os nomes de procedimento e as estatísticas de execução para procedimentos armazenados compilados de modo nativo no banco de dados atual, após a coleta de estatísticas:  
-  
-```sql  
-select object_id,  
-       object_name(object_id) as 'object name',  
-       cached_time,  
-       last_execution_time,  
-       execution_count,  
-       total_worker_time,  
-       last_worker_time,  
-       min_worker_time,  
-       max_worker_time,  
-       total_elapsed_time,  
-       last_elapsed_time,  
-       min_elapsed_time,  
-       max_elapsed_time   
-from sys.dm_exec_procedure_stats  
-where database_id=db_id() and object_id in (select object_id   
-from sys.sql_modules where uses_native_compilation=1)  
-order by total_worker_time desc  
-```  
-  
- A seguinte consulta retorna o texto da consulta, bem como as estatísticas de execução para todas as consultas em procedimentos armazenados compilados de modo nativo no banco de dados atual, para as quais as estatísticas foram coletadas, ordenadas pelo tempo de trabalho total, em ordem decrescente:  
-  
-```sql  
-select st.objectid,   
-       object_name(st.objectid) as 'object name',   
-       SUBSTRING(st.text, (qs.statement_start_offset/2) + 1, ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1) as 'query text',   
-       qs.creation_time,  
-       qs.last_execution_time,  
-       qs.execution_count,  
-       qs.total_worker_time,  
-       qs.last_worker_time,  
-       qs.min_worker_time,  
-       qs.max_worker_time,  
-       qs.total_elapsed_time,  
-       qs.last_elapsed_time,  
-       qs.min_elapsed_time,  
-       qs.max_elapsed_time  
-from sys.dm_exec_query_stats qs cross apply sys.dm_exec_sql_text(sql_handle) st  
-where  st.dbid=db_id() and st.objectid in (select object_id   
-from sys.sql_modules where uses_native_compilation=1)  
-order by qs.total_worker_time desc  
-```  
+
+```sql
+SELECT
+        object_id,
+        object_name(object_id) as 'object name',
+        cached_time,
+        last_execution_time,  execution_count,
+        total_worker_time,    last_worker_time,
+        min_worker_time,      max_worker_time,
+        total_elapsed_time,   last_elapsed_time,
+        min_elapsed_time,     max_elapsed_time
+    from
+        sys.dm_exec_procedure_stats
+    where
+        database_id = db_id()
+        and
+        object_id in
+            (
+            SELECT object_id
+                from sys.sql_modules
+                where uses_native_compilation=1
+            )
+    order by
+        total_worker_time desc;
+```
+
+A seguinte consulta retorna o texto da consulta, bem como as estatísticas de execução para todas as consultas em procedimentos armazenados compilados de modo nativo no banco de dados atual, para as quais as estatísticas foram coletadas, ordenadas pelo tempo de trabalho total, em ordem decrescente:  
+
+```sql
+SELECT
+        st.objectid,
+        object_name(st.objectid) as 'object name',
+        SUBSTRING()
+            st.text,
+            (qs.statement_start_offset/2) + 1,
+            ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1
+            ) as 'query text',
+        qs.creation_time,
+        qs.last_execution_time,   qs.execution_count,
+        qs.total_worker_time,     qs.last_worker_time,
+        qs.min_worker_time,       qs.max_worker_time,
+        qs.total_elapsed_time,    qs.last_elapsed_time,
+        qs.min_elapsed_time,      qs.max_elapsed_time
+    FROM
+                    sys.dm_exec_query_stats qs
+        cross apply sys.dm_exec_sql_text(sql_handle) st
+    WHERE
+        st.dbid = db_id()
+        and
+        st.objectid in
+            (SELECT object_id
+                from sys.sql_modules
+                where uses_native_compilation=1
+            )
+    ORDER BY
+        qs.total_worker_time desc;
+```
 
 ## <a name="query-execution-plans"></a>Planos de execução de consulta
 

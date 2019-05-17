@@ -1,5 +1,5 @@
 ---
-title: Como atualizar um banco de dados conectado com o Power Buffer | Microsoft Docs
+title: 'Como fazer: atualizar um banco de dados conectado com o Power Buffer | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.commitpreview.dialog
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6d1b5a5c1a20f52d9a0060e54ce38f6cca816a63
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9663829f679eeb0c829a94be00c86a7f1e0544af
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396779"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098424"
 ---
-# <a name="how-to-update-a-connected-database-with-power-buffer"></a>Como atualizar um banco de dados conectado com o Power Buffer
+# <a name="how-to-update-a-connected-database-with-power-buffer"></a>Como fazer: Atualizar um banco de dados conectado com o Power Buffer
 A tecnologia Power Buffer do SQL Server Data Tools facilita a aplicação de alterações em seu banco de dados conectado, armazenando todas as suas edições na sessão atual. Qualquer erro causado ao editar na janela Power Buffer (no Editor Transact\-SQL ou no Designer de Tabela) é exibido imediatamente no painel **Lista de Erros**, permitindo que você siga os erros identificados para a devida solução de problemas. Você pode verificar suas alterações pendentes até estar pronto para aplicá-las no seu banco de dados. Durante o processo de atualização, o SSDT automaticamente cria um script ALTER com base nas suas edições e o alerta para qualquer problema potencial. Você pode aplicar todas as alterações acumuladas em todas as janelas abertas do Power Buffer no mesmo banco de dados, ou salvar o script ALTER para ser implantado posteriormente.  
   
 O SSDT também reconhece as alterações feitas em seu esquema de banco de dados fora do Visual Studio. Por exemplo, se você adicionar uma nova tabela a um banco de dados existente no SQL Server Management Studio, essa alteração aparecerá imediatamente no Pesquisador de Objetos do SQL Server no Visual Studio sem precisar atualizá-lo manualmente. O recurso de detecção de descompasso garante que você esteja sempre exibindo a definição de esquema mais recente de um banco de dados no Pesquisador de Objetos do SQL Server. Observe que nenhum objeto de banco de dados aberto no Designer de Tabela ou no Editor Transact\-SQL para edição será atualizado para mostrar alterações fora do Visual Studio.  
@@ -63,5 +63,5 @@ Os procedimentos a seguir utilizam entidades criadas em procedimentos anteriores
 5.  Clique com o botão direito em **Table_1** e selecione **Excluir**. Clique em **Atualizar Banco de Dados** na caixa de diálogo **Visualizar Alterações de Banco de Dados**.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como corrigir erros](../ssdt/how-to-fix-errors.md)  
+[Como: Consertar erros](../ssdt/how-to-fix-errors.md)  
   

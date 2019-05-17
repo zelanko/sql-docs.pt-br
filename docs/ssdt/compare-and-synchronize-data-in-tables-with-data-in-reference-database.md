@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 23b3057a23737eb43206f9615ce2f83bad6f5610
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 567855c53848a354ec03c8de7fea1bb37c1c2a21
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745104"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105809"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>Comparar e sincronizar dados em uma ou mais tabelas com dados em um banco de dados de referência
 Você pode comparar os dados em um banco de dados de *origem* e em um banco de dados de *destino* e especificar quais tabelas devem ser comparadas. Você pode examinar os dados e decidir quais alterações serão sincronizadas. Você pode atualizar o destino para sincronizar os bancos de dados ou exportar o script de atualização para o editor Transact\-SQL ou para um arquivo.  
@@ -27,9 +27,9 @@ Você pode comparar dados em dois bancos de dados, mas não pode especificar um 
   
 Esta seção contém os seguintes tópicos:  
   
--   [Como comparar e sincronizar os dados de dois bancos de dados](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
+-   [Como: comparar e sincronizar os dados de dois bancos de dados](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
   
--   [Como exibir diferenças de dados](../ssdt/how-to-view-data-differences.md)  
+-   [Como: exibir diferenças de dados](../ssdt/how-to-view-data-differences.md)  
   
 ## <a name="requirements"></a>Requisitos  
 Quando você compara dados em uma tabela ou exibição, a tabela ou exibição no banco de dados de origem deve compartilhar vários atributos com uma tabela ou exibição no banco de dados de destino. Tabelas e exibições que não atendem os critérios a seguir não são comparadas e não aparecem na segunda página do assistente **Nova Comparação de Dados**:  
@@ -49,9 +49,9 @@ Cada objeto tem uma chave ou índice que determina os outros objetos aos quais c
 ## <a name="common-tasks"></a>Tarefas comuns  
 Nesta seção, você pode encontrar descrições das tarefas comuns que oferecem suporte para esse cenário.  
   
-**Definir opções para controlar como os dados são comparados**: quando você compara dados, pode ignorar com segurança colunas de identidade, desabilitar gatilhos e desabilitar chaves estrangeiras. Você também pode ignorar chaves primárias, índices e restrições exclusivas do script de atualização.  
+**Definir opções para controlar como os dados são comparados:** quando você compara dados, pode ignorar as colunas de identidade, desabilitar gatilhos e desabilitar chaves estrangeiras. Você também pode ignorar chaves primárias, índices e restrições exclusivas do script de atualização.  
   
-**Comparar dados em tabelas e opcionalmente atualizar o destino para corresponder à origem:** depois de especificar um banco de dados de origem e destino para comparar e executar a comparação, você poderá exibir os resultados na janela **Comparação de Dados**. Você não pode exibir somente os detalhes das diferenças, mas também o script de atualização que você pode usar para sincronizar os dados. Depois de identificar as diferenças entre os dois bancos de dados, você poderá especificar uma ação para cada diferença. Você pode atualizar o destino ou exportar o script de atualização para o editor Transact\-SQL ou para um arquivo. Talvez você queira exportar o script de modo que você ou outra pessoa possa examiná-lo antes de aplicar as alterações.  
+**Comparar dados em tabelas e, opcionalmente, atualizar o destino para corresponder à origem:** Depois de especificar uma origem e um banco de dados de destino com o qual comparar e executar a comparação, você pode exibir os resultados na janela **Comparação de Dados**. Você não pode exibir somente os detalhes das diferenças, mas também o script de atualização que você pode usar para sincronizar os dados. Depois de identificar as diferenças entre os dois bancos de dados, você poderá especificar uma ação para cada diferença. Você pode atualizar o destino ou exportar o script de atualização para o editor Transact\-SQL ou para um arquivo. Talvez você queira exportar o script de modo que você ou outra pessoa possa examiná-lo antes de aplicar as alterações.  
   
 ## <a name="UnderstandingDataCompareResults"></a>Entender os resultados da comparação  
 A tabela a seguir descreve as cinco colunas na janela **Comparação de Dados**.  
@@ -69,5 +69,5 @@ Quando você clica em qualquer tabela ou exibição na janela **Comparação de 
   
 ## <a name="see-also"></a>Consulte Também  
 [SQL Server Data Tools](../ssdt/sql-server-data-tools.md)  
-[Como usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Como: Usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

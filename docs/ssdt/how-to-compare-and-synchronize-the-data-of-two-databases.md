@@ -1,5 +1,5 @@
 ---
-title: Como comparar e sincronizar os dados de dois bancos de dados | Microsoft Docs
+title: 'Como fazer: comparar e sincronizar os dados de dois bancos de dados | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -12,17 +12,17 @@ f1_keywords:
 - sql.data.tools.datacompare.watermark.f1
 - sql.data.tools.datacompare.connection.objectselection.f1
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a481e5c603f5bf427b7d86dd19203fd899694b6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a7c0599cf45e822dfca7cef48414512fffa4a74
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685724"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090119"
 ---
-# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Como comparar e sincronizar os dados de dois bancos de dados
+# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Como fazer: Comparar e sincronizar os dados de dois bancos de dados
 Você pode comparar os dados contidos em dois bancos de dados. Os bancos de dados que você compara são conhecidos como *origem* e *destino*.  
   
 > [!NOTE]  
@@ -39,7 +39,7 @@ Depois que a comparação tiver sido concluída, você poderá executar outras e
 Para saber mais, confira [Comparar e sincronizar dados em uma ou mais tabelas com dados em um banco de dados de referência](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).  
   
 > [!NOTE]  
-> Você também pode comparar o *esquema* de dois bancos de dados ou de duas versões do mesmo banco de dados. Para saber mais, confira [Como usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
+> Você também pode comparar o *esquema* de dois bancos de dados ou de duas versões do mesmo banco de dados. Para obter mais informações, confira [Como usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
   
 ## <a name="CompareDatabaseData"></a>Comparar dados do banco de dados  
   

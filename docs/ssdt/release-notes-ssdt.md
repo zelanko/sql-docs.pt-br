@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 44229bbe0bd0a4df65e9dfbfe213c6a14cee0f42
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 80836cb5ab67f221ff3f9965d1980bcbc9c8378d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241875"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101908"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Notas sobre a versão para o SSDT (SQL Server Data Tools)
 
@@ -46,6 +46,36 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+## <a name="1591nbsp-ssdt-for-vs-2017"></a>15.9.1,&nbsp; SSDT para VS 2017
+
+_Lançamento:_ &nbsp; 27 de abril de 2019  
+_Número de build:_ &nbsp; 14.0.16191.0  
+_SSDT para Visual Studio 2017._
+
+### <a name="whats-new"></a>Novidades
+
+#### <a name="ssis"></a>SSIS
+
+| Novo item | Detalhes |
+| :------- | :------ |
+| Corrigido um problema em que a persistência correta de parte do pacote não era possível quando se tinha uma versão anterior do SQL Server como destino | &nbsp; |
+| Corrigido um problema em que não era possível adicionar a expressão à restrição de precedência ao usar parte do pacote | &nbsp; |
+| Corrigido um problema em que o botão "Ajuda" do Gerenciador de Conexões e Origem do Power Query não era vinculado ao documento correto | &nbsp; |
+| Corrigido um problema em que a versão de build do SSIS não era exibida na janela de ajuda do VS | &nbsp; |
+| Adicionada a propriedade "ConnectByProxy" ao gerenciador de conexão de Arquivo Simples e OLE DB, o que pode habilitar o acesso a dados locais com IR Auto-hospedada no Azure-SSIS IR | &nbsp; |
+| Corrigido um problema em que componentes do ODBC eram mapeados para o tipo de dados DT_DBDATE incorretamente | &nbsp; |
+| Adicionada a propriedade "ConnectUsingManagedIdentity" ao gerenciador de conexão do OLE DB e ADO.NET, o que habilita a autenticação de identidade gerenciada a conectar-se à fonte de dados no Azure-SSIS IR | &nbsp; |
+
+### <a name="known-issues"></a>Problemas conhecidos
+
+| Problemas conhecidos | Detalhes |
+| :---------- | :------ |
+| A Tarefa Executar Pacote do SSIS não é compatível com a depuração quando ExecuteOutOfProcess está definido como True. | Esse problema aplica-se somente à depuração. O salvamento, a implantação e a execução por meio do DTExec.exe ou do catálogo do SSIS não são afetados. |
+| O SSDT para Visual Studio 2017 superior a 15.8 não dá suporte para a criação de pacotes com origem/destino Teradata. | Use o SSDT para Visual Studio 2017 (15.8). |
+| O Power Query Source pode não ser compatível com OData v4 quando SSIS e SSAS estiverem instalados na mesma instância do Visual Studio. | &nbsp; |
+| O Power Query Source pode não ser compatível com o uso de ODBC para se conectar ao Oracle quando SSIS e SSAS estiverem instalados na mesma instância do Visual Studio. | &nbsp; |
+| Power Query Source não é localizado. | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1590nbsp-ssdt-for-vs-2017"></a>15.9.0,&nbsp; SSDT para VS 2017
 
@@ -267,13 +297,13 @@ O SSDT para Visual Studio 2017 (15.5.0) passa da versão prévia para GA (dispon
 1. A interface do usuário da instalação está localizada.
 1. Substitua o ícone por uma versão de qualidade superior.
 
-**Integration Services (IS)**
+**IS (Integration Services)**
 1. Adição de uma etapa de validação de pacote no Assistente de Implantação ao implantar o Azure SSIS IR no ADF, que detecta problemas de compatibilidade potenciais em pacotes do SSIS a serem executados no Azure SSIS IR. Para obter mais informações, consulte [Validar pacotes do SSIS implantados no Azure](../integration-services/lift-shift/ssis-azure-validate-packages.md).
 1. A extensão do SSIS está localizada.
 
 ### <a name="bug-fixes"></a>Correções de bugs
 
-**Integration Services (IS)**
+**IS (Integration Services)**
 1. Correção de um problema no qual o layout do gerenciador de conexões OLEDB e ADO.NET está corrompido.
 2. Correção de um problema no qual um erro de assembly não encontrado é acionado durante a tentativa de editar uma Tarefa de Processamento de Dimensão.
 
@@ -294,7 +324,7 @@ _SSDT para Visual Studio 2015._
   - Detecção automática de tipo – quando essa opção estiver habilitada, o Editor de Consultas para fontes de dados modernas tentará detectar tipos de dados para consultas não estruturadas quando eles forem carregados. Se a detecção for bem-sucedida, uma nova etapa poderá ser adicionada à consulta.
   - Executar análise em segundo plano – quando essa opção estiver habilitada, o Editor de Consultas para fontes de dados modernas executará consultas na fonte de dados, conforme as consultas forem carregadas para analisar o esquema de saída da consulta.
 
-**Integration Services (IS)**
+**IS (Integration Services)**
 - Adição de uma etapa de validação de pacote no Assistente de Implantação ao implantar o Azure SSIS IR no ADF, que detecta problemas de compatibilidade potenciais em pacotes do SSIS a serem executados no Azure SSIS IR. Para obter mais informações, consulte [Validar pacotes do SSIS implantados no Azure](../integration-services/lift-shift/ssis-azure-validate-packages.md).
 
 
@@ -370,7 +400,7 @@ _SSDT para Visual Studio 2015._
 
 ### <a name="whats-new"></a>Novidades
 
-**Analysis Services (AS)**
+**AS (Analysis Services)**
 
 - O Cosmos DB e o HDI Spark estão habilitados nos modelos 1400.
 - Propriedades da fonte de dados de tabela.
@@ -383,7 +413,7 @@ _SSDT para Visual Studio 2015._
 
 ### <a name="known-issues"></a>Problemas conhecidos
 
-**Analysis Services (AS)**
+**AS (Analysis Services)**
 
 - Modelos de nível de compatibilidade 1400 no modo de Consulta direta que têm perspectivas falham ao consultar ou descobrir metadados.
 
@@ -391,7 +421,7 @@ _SSDT para Visual Studio 2015._
 
 - O novo formato do Projeto de relatório não mantém a associação do controle do código-fonte e gera um erro semelhante à mensagem:
 
-   *O arquivo de projeto C:\caminho não está associado ao controle do código-fonte, mas a solução contém informações de associação do controle do código-fonte nela.*
+   *O arquivo de projeto C:\path não está associado ao controle do código-fonte, mas a solução contém informações de associação do controle do código-fonte nela.*
  
    Para contornar esse problema, clique em **Usar associação da solução** toda vez que a solução for aberta.
 
@@ -403,7 +433,7 @@ _SSDT para Visual Studio 2015._
 
 ### <a name="bug-fixes"></a>Correções de bugs
 
-**Analysis Services (AS)**
+**AS (Analysis Services)**
 
 - Grande melhoria no desempenho ao carregar o modo de exibição de diagrama de modelos tabulares.
 - Inúmeros problemas corrigidos para melhorar a integração e a experiência com o PowerQuery nos modelos de nível de compatibilidade 1400.
@@ -607,11 +637,11 @@ _Compatível até o SQL Server 2017._
 - Tabular: uma variedade de melhorias e correções de desempenho na análise de DAX e na barra de fórmulas.
 - Tabular: o Gerenciador de Modelos Tabular não ficará mais visível se nenhum projeto Tabular do SSAS estiver aberto.
 - Multidimensional: foi corrigido um problema em que a caixa de diálogo de processamento não era utilizável em computadores com alto DPI.
-- Tabular: foi corrigido um problema em que o SSDT falhava ao abrir qualquer projeto de BI quando o SSMS já estava aberto. [Item do Connect](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- Tabular: foi corrigido um problema em que o SSDT falhava ao abrir qualquer projeto de BI quando o SSMS já estava aberto. [Conectar Item](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
 - Tabular: foi corrigido um problema em que hierarquias não estavam sendo salvas corretamente no arquivo bim em um modelo 1103. [Conectar Item](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
 - Tabular: foi corrigido um problema em que o modo de workspace integrado era permitido em computadores de 32 bits mesmo quando não havia suporte.
 - Tabular: foi corrigido um problema em que clicar em qualquer coisa no modo de semisseleção (digitando uma expressão DAX mas clicando em uma medida, por exemplo) podia causar falhas.
-- Tabular: foi corrigido um problema em que o Assistente de implantação redefiniria a propriedade .Name do modelo novamente para "Model". [Item do Connect](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
+- Tabular: foi corrigido um problema em que o Assistente de implantação redefiniria a propriedade .Name do modelo novamente para "Model". [Conectar Item](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
 - Tabular: foi corrigido um problema em que a seleção de uma hierarquia no TME deveria exibir propriedades mesmo se a exibição de diagrama não estivesse selecionada.
 - Tabular: foi corrigido um problema em que colar na barra de fórmula DAX colava imagens ou outros tipos de conteúdo em vez de texto ao colar de determinados aplicativos.
 - Tabular: foi corrigido um problema em que alguns modelos antigos no 1103 não podiam ser abertos devido à presença de medidas com uma definição específica.
@@ -642,14 +672,14 @@ _Compatível até o SQL Server 2017._
 - Correção de um problema durante a criação de relatórios no SSDT em que o modo de exibição de árvore dos parâmetros, fontes de dados e conjuntos de dados eram recolhidos quando a maioria das alterações era feita 
 - Corrigido um problema em que Salvar deveria salvar a versão do RDL e não a versão mais recente.
 - Corrigido um problema em que o SSDT RS está fazendo backup de arquivos quando o backup é desativado, entre vários outros problemas.
-- Corrigido um problema no construtor de relatórios em que um erro seria exibido quando você clicasse em "Dividir Células". [Item do Connect](https://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
-- Corrigido um problema em que o cache pode gerar dados incorretos em um relatório. [Item do Connect](https://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
+- Corrigido um problema no construtor de relatórios em que um erro seria exibido quando você clicasse em "Dividir Células". [Conectar Item](https://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
+- Corrigido um problema em que o cache pode gerar dados incorretos em um relatório. [Conectar Item](https://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
 
 **Projetos do IS:**
 - Corrigido um problema em que a configuração run64bitruntime não permanecia.
 - Corrigido um problema em que DataViewer não salvava colunas exibidas.
-- Corrigido um problema que Partes do Pacote oculta anotações. [Item do Connect](https://connect.microsoft.com/SQLServer/feedback/details/3106624/package-parts-hide-annotations)
-- Corrigido um problema que partes do pacote descarta as anotações e layouts de fluxo de dados. [Item do Connect](https://connect.microsoft.com/SQLServer/feedback/details/3109241/package-parts-discard-data-flow-layouts-and-annotations)
+- Corrigido um problema que Partes do Pacote oculta anotações. [Conectar Item](https://connect.microsoft.com/SQLServer/feedback/details/3106624/package-parts-hide-annotations)
+- Corrigido um problema que partes do pacote descarta as anotações e layouts de fluxo de dados. [Conectar Item](https://connect.microsoft.com/SQLServer/feedback/details/3109241/package-parts-discard-data-flow-layouts-and-annotations)
 - Corrigido um problema em que o SSDT falha ao importar o projeto do SQL Server.
 - Correção de um problema com a Tarefa do Sistema de Arquivos Hadoop TimeoutInMinutes padrão para 10 após abrir um pacote SSIS salvo e no tempo de execução.
 
@@ -764,7 +794,7 @@ _Para o SQL Server 2016._
 
 Agora há suporte para a Comparação de Esquemas nas APIs SqlPackage.exe e DacFx (Data-Tier Application Framework). Para obter detalhes, veja  [Schema Compare in SqlPackage and the Data-Tier Application Framework](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/) (Comparação de Esquemas na SqlPackage e na Data-Tier Application Framework).
 
-**Analysis Services – Modo Integrado de Workspace para SSDT Tabular (SSAS)**
+**Analysis Services – modo integrado de workspace para SSDT Tabular (SSAS)**
 
 O SSDT Tabular agora inclui uma instância do SSAS interna, que o SSDT Tabular inicia automaticamente em segundo plano se o modo de workspace integrado estiver habilitado, para que você possa adicionar e exibir dados, tabelas e colunas no designer de modelo sem ter que fornecer uma instância de servidor de workspace externo. Modo de workspace integrado não será alterado quando SSDT Tabular trabalhar com um servidor de workspace e o banco de dados. O que muda é onde o SSDT Tabular hospeda o banco de dados do workspace. Para habilitar o modo de workspace integrado, selecione a opção Workspace Integrado na caixa de diálogo Designer de Modelos de Tabela, exibida ao criar um novo projeto tabular. Para projetos tabulares existentes, que atualmente usam um servidor de workspace explícito, você pode mudar para o modo de workspace integrado, definindo o parâmetro Modo de Workspace Integrado como True na janela Propriedades, que é exibida quando você seleciona o arquivo Model.bim no Gerenciador de Soluções. Para obter detalhes, consulte a [Postagem de blog do Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/).
 

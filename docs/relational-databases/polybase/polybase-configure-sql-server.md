@@ -1,25 +1,25 @@
 ---
 title: Configurar o PolyBase para acessar dados externos no SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
 author: Abiola
 ms.author: aboke
+ms.reviewer: jroth
 manager: craigg
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: babfa67f96f9514d748e6d87c0230e154468eff4
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
+ms.openlocfilehash: fe5fd6f1842e02d85f6dcd9ee53884ff4cd289e2
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858591"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776078"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurar o PolyBase para acessar dados externos no SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Este artigo explica como usar o PolyBase em uma instância do SQL Server para consultar dados externos em outra instância do SQL Server.
 
@@ -27,86 +27,54 @@ Este artigo explica como usar o PolyBase em uma instância do SQL Server para co
 
 Se você ainda não instalou o PolyBase, veja [Instalação do PolyBase](polybase-installation.md). O artigo sobre a instalação explica os pré-requisitos.
 
-## <a name="configure-an-external-table"></a>Configurar uma tabela externa
+Antes de criar um banco de dados de credencial no escopo, uma [chave mestra](../../t-sql/statements/create-master-key-transact-sql.md) deve ser criada. 
+
+## <a name="configure-a-sql-server-external-data-source"></a>Configurar uma fonte de dados externa do SQL Server
 
 Para consultar os dados de uma fonte de dados do SQL Server, você precisa criar tabelas externas para fazer referência aos dados externos. Esta seção fornece código de exemplo para criar essas tabelas externas. 
  
 Para obter um desempenho de consulta ideal, crie estatísticas em colunas de tabelas externas, especialmente aquelas usadas para junções, filtros e agregações.
 
-Estes objetos serão criados nesta seção:
+Os seguintes comandos Transact-SQL são usados nesta seção:
 
-- CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
-- CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
-- CREATE EXTERNAL TABLE (Transact-SQL) 
-- CREATE STATISTICS (Transact-SQL)
+- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
+- [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
-1. Crie uma chave mestra no banco de dados. Uma chave mestra é necessária para criptografar o segredo da credencial.
+1.  Crie uma credencial no escopo do banco de dados para acessar a origem do MongoDB.
 
-     ```sql
-      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-     ```
+    ```sql
+    /*  specify credentials to external data source
+    *  IDENTITY: user name for external source.  
+    *  SECRET: password for external source.
+    */
+    CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials   
+    WITH IDENTITY = 'username', Secret = 'password';
+    ```
 
-1. Crie uma credencial com escopo de banco de dados.
+1. Crie uma fonte de dados externa, usando [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
-     ```sql
-     /*  specify credentials to external data source
-     *  IDENTITY: user name for external source.  
-     *  SECRET: password for external source.
-     */
-     CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials   
-     WITH IDENTITY = 'username', Secret = 'password';
-     ```
-
-1. Crie uma fonte de dados externa, usando [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Especifique a localização da fonte de dados externa e as credenciais para a fonte de dados do SQL Server.
-
-     ```sql
+    ```sql
     /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
     *  CREDENTIAL: the database scoped credential, created above.
-    */  
+    */
     CREATE EXTERNAL DATA SOURCE SQLServerInstance
-    WITH ( 
-    LOCATION = 'sqlserver://SqlServer',
+    WITH ( LOCATION = 'sqlserver://SqlServer',
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = SQLServerCredentials
-    );
+    CREDENTIAL = SQLServerCredentials);
+    ```
 
-     ```
+1. **Opcional:** Crie estatísticas em uma tabela externa.
 
-1. Crie esquemas para dados externos.
+    É recomendável criar estatísticas em colunas de tabelas externas, especialmente aquelas usadas para junções, filtros e agregações, a fim de ter o desempenho de consulta ideal.
 
-     ```sql
-     CREATE SCHEMA sqlserver;
-     GO
-     ```
+    ```sql
+    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN;
+    ```
 
-1.  Crie tabelas externas que representem os dados armazenados em uma instância do SQL Server externo com [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
- 
-     ```sql
-     /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
-     *  DATA_SOURCE: the external data source, created above.
-     */
-     CREATE EXTERNAL TABLE sqlserver.customer(
-     C_CUSTKEY INT NOT NULL,
-     C_NAME VARCHAR(25) NOT NULL,
-     C_ADDRESS VARCHAR(40) NOT NULL,
-     C_NATIONKEY INT NOT NULL,
-     C_PHONE CHAR(15) NOT NULL,
-     C_ACCTBAL DECIMAL(15,2) NOT NULL,
-     C_MKTSEGMENT CHAR(10) NOT NULL,
-     C_COMMENT VARCHAR(117) NOT NULL
-      )
-      WITH (
-      LOCATION='tpch_10.dbo.customer',
-      DATA_SOURCE=SqlServerInstance
-     );
-      ```
-
-1. Crie estatísticas em uma tabela externa.
-
-     ```sql
-      CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WITH FULLSCAN; 
-     ```
+>[!IMPORTANT] 
+>Depois de criar uma fonte de dados externa, você pode usar o comando [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) para criar uma tabela que possa ser consultada por essa fonte.
 
 ## <a name="sql-server-connector-compatible-types"></a>Tipos compatíveis com o conector do SQL Server
 

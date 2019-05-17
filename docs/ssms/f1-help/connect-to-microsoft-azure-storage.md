@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.swb.windowsazurestorage.connect.f1
 - SQL13.SWB.WINDOWSAZURESTORAGE.CONNECT.F1
 ms.assetid: ''
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cd9af00c06b2e999ec38d201e11fe305f7bb4e71
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2bcacf7ab799ef36ab0f28bcc78ad27be2afe67c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523567"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102708"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Conectar ao Armazenamento do Microsoft Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Especifique as informações a seguir sobre sua conta do Windows Azure e clique 
    >
    >  O valor de um dos cabeçalhos HTTP não está no formato correto. (Microsoft.SqlServer.StorageClient).
    >
-   >  O servidor remoto retornou um erro: (400) Solicitação Incorreta. (Sistema)
+   >  O servidor remoto retornou um erro: (400) Solicitação Inválida. (Sistema)
 
 2.  **Chave de Conta** – Especifique a chave de conta para a conta de armazenamento especificada.  
   

@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c2006cad1fd9ef8708257c331c2411fa916cca89
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: d1b91df1ecce9749ebdec3515a339ac31f2507b7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616219"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101991"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>Atualizar um projeto de teste mais antigo contendo testes de unidade de banco de dados
 Você pode atualizar um projeto de teste mais antigo, que foi criado no Visual Studio 2010 e que contém testes de unidade de banco de dados, para usar o novo tempo de execução e as ferramentas do teste de unidade de banco de dados do SQL Server Data Tools. Assim que você tiver atualizado um projeto mais antigo, você poderá adicionar os testes de unidade do SQL Server ao projeto (confira [Criar e definir testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md) para obter mais informações).  
@@ -24,7 +24,7 @@ Você pode atualizar um projeto de teste mais antigo, que foi criado no Visual S
 > [!TIP]  
 > Se você estiver usando o Visual Studio 2010, depois de adicionar os testes de unidade do SQL Server a um projeto de teste, não deverá adicionar testes de unidade usando o modelo de teste de unidade de banco de dados mais antigo. Se o fizer, precisará converter para o projeto novamente antes de os testes serem executados corretamente.  
   
-Se você tiver um projeto de banco de dados de teste que foi criado em uma versão mais antiga que o Visual Studio 2010, poderá usar as informações em [Como atualizar testes de unidade de banco de dados de versões antigas do Visual Studio](https://msdn.microsoft.com/library/dd193412(VS.100).aspx) para atualizar seu projeto de banco de dados para o Visual Studio 2010, antes de atualizar o projeto para o SQL Server Data Tools.  
+Se você tiver um projeto de banco de dados de teste criado em uma versão mais antiga que o Visual Studio 2010, poderá usar as informações em [Como atualizar testes de unidade de banco de dados de versões anteriores do Visual Studio](https://msdn.microsoft.com/library/dd193412(VS.100).aspx) para atualizar seu projeto de banco de dados para o Visual Studio 2010 antes de atualizar o projeto para o SQL Server Data Tools.  
   
 ### <a name="initiating-an-upgrade"></a>Iniciando uma atualização  
   

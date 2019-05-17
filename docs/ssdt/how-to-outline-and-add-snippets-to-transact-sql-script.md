@@ -1,5 +1,5 @@
 ---
-title: Como estruturar tópicos e adicionar snippets a scripts Transact-SQL | Microsoft Docs
+title: 'Como fazer: estruturar tópicos e adicionar snippets a scripts Transact-SQL | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ca62b3b637f5983f7448a99fd9073f60a509a809
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 842fb0e2b111b5bcd17b26d13db15e47aa5c1ad1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526060"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099664"
 ---
-# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Como estruturar tópicos e adicionar snippets a scripts Transact-SQL
+# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Como fazer: Estruturar tópicos e adicionar snippets a scripts Transact-SQL
 O SQL Server Data Tools inclui uma biblioteca de códigos que consiste em snippets de código prontos para serem inseridos no seu aplicativo. Cada snippet executa uma tarefa de script completa, como a criação de uma função, tabela, gatilho, índice, exibição, tipo de dados definido pelo usuário etc. Você pode inserir um snippet em seu código-fonte com alguns cliques do mouse. Estes snippets aumentam sua produtividade reduzindo a quantidade de tempo você gasta digitando.  
   
 Quando você precisa navegar para um snippet apropriado, pode usar o selecionador de snippet, que dá a você listas categorizadas de snippets para escolher. Depois de você ter adicionado o snippet a seu código, algumas partes dele podem precisar de personalização, como substituir nomes de variável por nomes mais apropriados, ou adicionar a lógica real de um procedimento armazenado. Você perceberá que o código de snippet inserido tem um ou mais pontos de substituição realçados no código para esta finalidade. Se você passar o ponteiro do mouse sobre o ponto de substituição, uma Dica de Ferramenta aparecerá para explicar como você pode alterar o código.  

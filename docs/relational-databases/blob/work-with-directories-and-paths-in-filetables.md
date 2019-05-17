@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c13eb6089e9be42733782c54d757a0e3035fe6f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c8f458f0405feec07a33a2355d117752c3b10e80
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418439"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094177"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Trabalhar com diretórios e caminhos em FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Descreve a estrutura de diretórios na qual os arquivos são armazenados em FileTables.  
   
-##  <a name="HowToDirectories"></a> Como trabalhar com diretórios e caminhos em FileTables  
+##  <a name="HowToDirectories"></a> Como Trabalhar com diretórios e caminhos em FileTables  
  É possível usar as 3 funções a seguir para trabalhar com diretórios FileTable no [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
 |Para obter este resultado|Use esta função|  

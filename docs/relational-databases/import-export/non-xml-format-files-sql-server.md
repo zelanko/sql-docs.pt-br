@@ -12,16 +12,16 @@ helpviewer_keywords:
 - format files [SQL Server], non-XML format files
 - bulk importing [SQL Server], format files
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fcf4ca3b7cd83a365bade7fe729e24ead04f4c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a407063bfd76e937f13587d02ad472df566bb83c
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665335"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946649"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Arquivos de formato não XML (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "47665335"
 |**Terminador**|Delimitador para separar os campos em um arquivo de dados. Terminadores comuns são vírgula (,), tabulação (\t) e término de linha (\r\n). Para obter mais informações, veja [Especificar terminadores de campo e linha &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).|  
 |**Ordem de coluna de servidor**|A ordem de exibição das colunas na tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por exemplo, se o quarto campo no arquivo de dados mapear para a sexta coluna em uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a ordem da coluna no servidor para o quarto campo será 6.<br /><br /> Para evitar que uma coluna na tabela receba dados do arquivo de dados, defina o valor da ordem da coluna no servidor como 0.|  
 |**Nome de coluna de servidor**|Nome da coluna copiado da tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O nome atual do campo não é necessário, mas o campo no arquivo de formato não deve ficar em branco.|  
-|**Agrupamento de coluna**|O agrupamento usado para armazenar dados de caracteres e Unicode no arquivo de dados.|  
+|**Ordenação de coluna**|A ordenação usada para armazenar dados de caracteres e Unicode no arquivo de dados.|  
   
 > [!NOTE]  
 >  Você pode modificar um arquivo de formato para importar em massa de um arquivo de dados no qual o número ou a ordem dos campos difere do número ou da ordem das colunas na tabela. Para obter mais informações, consulte a lista de [Tarefas relacionadas](#RelatedTasks) , mais adiante neste tópico.  

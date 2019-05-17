@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 423f2b52758c3fbc968e7b98b72c0c680a6c7a66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ae03c9a3bb170779a3ca47834ec0047e8b2cf1e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706164"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105937"
 ---
 # <a name="audit-logout-event-class"></a>Classe de evento Audit Logout
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "47706164"
 |**DatabaseName**|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |**Duration**|**bigint**|Tempo desde que o usuário fez logon (aproximadamente).|13|Sim|  
 |**EndTime**|**datetime**|Hora de término do logoff.|15|Sim|  
-|**EventClass**|**int**|Tipo de evento = 15.|27|não|  
-|**EventSequence**|**int**|A sequência de determinado evento dentro da solicitação.|51|não|  
+|**EventClass**|**int**|Tipo de evento = 15.|27|Não|  
+|**EventSequence**|**int**|A sequência de determinado evento dentro da solicitação.|51|Não|  
 |**EventSubClass**|**int**|Tipo de conexão usado pelo logon. 1 = Não em pool, 2 = Em pool.|21|Sim|  
 |**HostName**|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
@@ -49,7 +49,7 @@ ms.locfileid: "47706164"
 |**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26||  
 |**SessionLoginName**|**Nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |**SPID**|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
-|**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
+|**StartTime**|**datetime**|Hora de início do evento de Logon de Auditoria relacionado, se disponível.|14|Sim|  
 |**Êxito**|**int**|1 = êxito. 0 = falha. Por exemplo, o valor 1 indica êxito em uma verificação de permissões e o valor 0 indica falha nessa verificação.|23|Sim|  
 |**Writes**|**bigint**|Número de E/Ss de gravação lógicas emitidas pelo usuário durante a conexão.|17|Sim|  
 |**GroupID**|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  

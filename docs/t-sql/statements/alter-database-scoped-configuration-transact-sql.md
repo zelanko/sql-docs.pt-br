@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ccc25df3c3567907b50e37164d9090ca63fc58b6
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 31750fffc81fba1b22377578bddc09e1994e9b29
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582949"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64568344"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -49,6 +49,7 @@ Essa instrução permite várias definições de configuração de banco de dado
 - Habilite ou desabilite recursos de [processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md).
 - Habilite ou desabilite a [infraestrutura de criação de perfil de consulta leve](../../relational-databases/performance/query-profiling-infrastructure.md).
 - Habilitar ou desabilitar a nova mensagem de erro `String or binary data would be truncated`.
+- Habilitar ou desabilitar a coleta do último plano de execução real em [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 
 ![Ícone de link](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -85,6 +86,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
+    | LAST_QUERY_PLAN_STATS = { ON | OFF }
 }
 ```
 
@@ -154,16 +156,16 @@ PRIMARY
 
 Esse valor só é válido nos secundários enquanto o banco de dados está no primário e especifica que o valor dessa configuração em todos os secundários será o valor definido para o primário. Se a configuração do primário for alterada, o valor nos secundários será alterado da maneira apropriada sem precisar ser definido explicitamente. PRIMARY é a configuração padrão dos secundários.
 
-IDENTITY_CACHE **=** { **ON** | OFF }
+IDENTITY_CACHE **=** { **ON** | OFF }      
 
-**Aplica-se a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Habilita ou desabilita o cache de identidade no nível do banco de dados. O padrão é **ON**. O cache de identidade é usado para melhorar o desempenho de INSERT em tabelas com colunas de identidade. Para evitar lacunas nos valores de uma coluna de identidade em casos em que o servidor é reiniciado inesperadamente ou efetua failover para um servidor secundário, desabilite a opção IDENTITY_CACHE. Essa opção é semelhante ao [sinalizador de rastreamento 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) existente, exceto que ela pode ser definida no nível do banco de dados em vez de apenas no nível do servidor.
 
 > [!NOTE]
 > Essa opção só pode ser definida para o primário. Para obter mais informações, confira [colunas de identidade](create-table-transact-sql-identity-property.md).
 
-INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
+INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }   
 
 **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -172,18 +174,18 @@ Permite habilitar ou desabilitar a execução Intercalada para funções com val
 > [!NOTE]
 > Para o nível de compatibilidade do banco de dados 130 ou menor, esta configuração com escopo de banco de dados não tem nenhum efeito.
 
-BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
+BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}    
 
-**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Permite habilitar ou desabilitar Comentários de concessão de memória de modo de lote no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 140 e superior. Os comentários de concessão de memória de modo de lote é um recurso que faz parte do [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md) introduzido no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
 > [!NOTE]
 > Para o nível de compatibilidade do banco de dados 130 ou menor, esta configuração com escopo de banco de dados não tem nenhum efeito.
 
-BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
+BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}   
 
-**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Permite habilitar ou desabilitar junções adaptáveis do modo de lote no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 140 e superior. As junções adaptáveis do modo de lote é um recurso que faz parte do [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md) introduzido no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
@@ -192,7 +194,7 @@ Permite habilitar ou desabilitar junções adaptáveis do modo de lote no escopo
 
 TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
-**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (o recurso está na versão prévia pública)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (o recurso está em versão prévia pública)
 
 Permite habilitar ou desabilitar o inlining UDF do T-SQL Scalar no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 150 e superior. O inlining UDF Escalar do T-SQL faz parte da família de recursos de [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md).
 
@@ -218,7 +220,7 @@ Este valor eleva operações que dão suporte a ONLINE. As operações sem supor
 
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**Aplica-se a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (o recurso está na versão prévia pública)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (o recurso está em versão prévia pública)
 
 Permite que você selecione as opções para fazer com que o mecanismo eleve automaticamente operações com suporte para retomáveis. O padrão é OFF, o que significa que as operações não serão elevadas para retomáveis, a menos que especificado na instrução. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflete o valor atual de ELEVATE_RESUMABLE. Essas opções serão aplicadas somente a operações que têm suporte para retomável.
 
@@ -259,7 +261,7 @@ Para obter mais informações sobre monitoramento de desempenho de módulos [!IN
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (o recurso está na versão prévia pública)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (o recurso está em versão prévia pública)
 
 Permite habilitar ou desabilitar Comentários de concessão de memória de modo de linha no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 150 e superior. Os comentários de concessão de memória são um recurso que faz parte do [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md) introduzido no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] (o modo de linha é compatível com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
 
@@ -268,7 +270,7 @@ Permite habilitar ou desabilitar Comentários de concessão de memória de modo 
 
 BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF}
 
-**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (o recurso está na versão prévia pública)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (o recurso está em versão prévia pública)
 
 Permite habilitar ou desabilitar o modo de lote em rowstore no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 150 e superior. O modo de lote em rowstore é um recurso que faz parte da família de recursos de [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md).
 
@@ -277,7 +279,7 @@ Permite habilitar ou desabilitar o modo de lote em rowstore no escopo do banco d
 
 DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
 
-**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (o recurso está na versão prévia pública)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (o recurso está em versão prévia pública)
 
 Permite habilitar ou desabilitar a compilação adiada de variável de tabela no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 150 e superior. Compilação adiada de variável de tabela é um recurso que faz parte da família de recursos [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md).
 
@@ -295,13 +297,15 @@ Permite configurar a funcionalidade de soltar automaticamente para [tabelas temp
 
 LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
-**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Permite que você habilite ou desabilite a [infraestrutura de criação de perfil de consulta leve](../../relational-databases/performance/query-profiling-infrastructure.md). A LWP (infraestrutura de criação de perfil de consulta leve) fornece dados de desempenho de consulta de maneira mais eficiente do que os mecanismos de criação de perfil padrão e é habilitada por padrão.
 
+<a name="verbose-truncation"></a>
+
 VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
-**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
 
 Permite habilitar ou desabilitar a nova mensagem de erro `String or binary data would be truncated`. O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] apresenta uma mensagem de erro nova e mais específica (2628) para esse cenário:  
 
@@ -312,6 +316,12 @@ Quando essa opção é definida como ON no nível de compatibilidade do banco de
 Quando essa opção é definida como OFF no nível de compatibilidade do banco de dados 150, os erros de truncamento acionam a mensagem de erro anterior 8152.
 
 Para o nível de compatibilidade do banco de dados 140 ou inferior, a mensagem de erro 2628 permanece uma mensagem de erro de aceitação que exige a habilitação do [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 e essa configuração no escopo do banco de dados não tem nenhum efeito.
+
+LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
+
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) (o recurso está em versão prévia pública)
+
+Permite habilitar ou desabilitar a coleta das últimas estatísticas de plano de consulta (equivalente a um plano de execução real) em [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 
 ## <a name="Permissions"></a> Permissões
 
@@ -474,6 +484,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
 ### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>K. Apagar um plano de consulta do cache do plano
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
 Este exemplo limpa um plano específico do cache de procedimento 
 
 ```sql

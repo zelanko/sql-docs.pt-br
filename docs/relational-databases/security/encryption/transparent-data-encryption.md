@@ -1,7 +1,7 @@
 ---
 title: TDE (Transparent Data Encryption) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/08/2019
+ms.date: 05/09/2019
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -19,12 +19,12 @@ ms.author: aliceku
 ms.reviewer: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb61a9c18c8e0f2b164c8df01a8b84cebd5c8ab8
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.openlocfilehash: d944c2192e73fd0cb887d0491ecba707a90ff7b5
+ms.sourcegitcommit: 6ab60b426fc6ec7bb9e727323f520c0b05a20d06
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185122"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65527364"
 ---
 # <a name="transparent-data-encryption-tde"></a>Criptografia de Dados Transparente (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "54185122"
   
  A ilustração a seguir mostra a arquitetura de criptografia da TDE. Somente os itens de nível de banco de dados (a chave de criptografia do banco de dados e partes de ALTER DATABASE são configuráveis pelo usuário ao usar TDE em [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]).  
   
- ![Exibe a hierarquia descrita no tópico.](../../../relational-databases/security/encryption/media/tde-architecture.gif "Exibe a hierarquia descrita no tópico.")  
+ ![Exibe a hierarquia descrita no tópico.](../../../relational-databases/security/encryption/media/tde-architecture.png "Exibe a hierarquia descrita no tópico.")  
   
 ## <a name="using-transparent-data-encryption"></a>Usando Transparent Data Encryption  
  Para usar a TDE, execute estes procedimentos.  
@@ -226,9 +226,29 @@ GO
   
 ### <a name="transparent-data-encryption-and-filestream-data"></a>Transparent Data Encryption e FILESTREAM DATA  
  Os dados FILESTREAM não são criptografados nem mesmo quando a TDE está habilitada.  
+
+<a name="scan-suspend-resume"></a>
+
+## <a name="transparent-data-encryption-tde-scan"></a>Verificação de TDE (Transparent Data Encryption)
+
+Para habilitar a TDE (Transparent Data Encryption) em um banco de dados, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve executar uma verificação de criptografia que lê cada página dos arquivos de dados no pool de buffers e, em seguida, grava as páginas criptografadas de volta no disco. Para fornecer ao usuário mais controle sobre a verificação de criptografia, [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] introduz a sintaxe de verificação de TDE – suspender e retomar, de modo que você possa pausar a verificação enquanto a carga de trabalho do sistema estiver pesada ou durante horários comercialmente críticos e continuar a verificação mais tarde.
+
+Use a sintaxe a seguir para pausar a verificação de criptografia de TDE:
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+```
+
+De modo semelhante, a sintaxe a seguir retoma a verificação de criptografia de TDE:
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
+```
+
+Para mostrar o estado atual do exame de criptografia, `encryption_scan_state` foi adicionado à exibição de gerenciamento dinâmico `sys.dm_database_encryption_keys`. Também há uma nova coluna chamada `encryption_scan_modify_date` que conterá a data e hora da última alteração de estado da verificação de criptografia. Observe também que, se a instância [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for reiniciada enquanto a verificação de criptografia estiver em um estado suspenso, uma mensagem será registrada no log de erros na inicialização, indicando que há uma verificação existente em pausa.
   
 ## <a name="transparent-data-encryption-and-buffer-pool-extension"></a>Transparent Data Encryption e Extensão do Pool de Buffers  
- Arquivos relacionados à BPE (extensão do pool de buffers) não são criptografados quando o banco de dados é criptografado usando TDE. Você deve usar ferramentas de criptografia no nível de sistema de arquivos como Bitlocker ou EFS para arquivos relacionados à BPE.  
+ Arquivos relacionados à BPE (extensão do pool de buffers) não são criptografados quando o banco de dados é criptografado usando TDE. Você deve usar ferramentas de criptografia no nível de sistema de arquivos como BitLocker ou EFS para arquivos relacionados à BPE.  
   
 ## <a name="transparent-data-encryption-and-in-memory-oltp"></a>Transparent Data Encryption e OLTP na memória  
  A TDE pode ser habilitada em um banco de dados que tenha objetos OLTP na memória. No [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] e no [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] , os dados e os registros de log do OLTP in-memory serão criptografados se a TDE estiver habilitada. No [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] , os registros de log do OLTP in-memory serão criptografados se a TDE estiver habilitada, mas os arquivos no grupo de arquivos MEMORY_OPTIMIZED_DATA não serão criptografados.  

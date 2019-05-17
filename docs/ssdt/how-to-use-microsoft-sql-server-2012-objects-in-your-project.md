@@ -1,5 +1,5 @@
 ---
-title: Como usar objetos do Microsoft SQL Server 2012 no seu projeto | Microsoft Docs
+title: 'Como fazer: usar objetos do Microsoft SQL Server 2012 no seu projeto | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2ead75f8b71227b1bd3831b650cc036a66b5b325
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e3175f523a0cc6b91fd1d5bd955e6872a5cf0064
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397084"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098412"
 ---
-# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Como usar objetos do Microsoft SQL Server 2012 no seu projeto
+# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Como fazer: Usar objetos do Microsoft SQL Server 2012 no seu projeto
 Neste exemplo, você adicionará um objeto de sequência a um projeto de banco de dados destinado ao Microsoft SQL Server 2012.  
   
 As sequências são introduzidas no Microsoft SQL Server 2012. Uma sequência é um objeto associado a um esquema definido pelo usuário que gera uma sequência de valores numéricos de acordo com a especificação com a qual a sequência foi criada. A sequência de valores numéricos é gerada em ordem crescente ou decrescente em um intervalo definido e pode seguir um ciclo (repetir-se) conforme solicitado.  Para saber mais sobre objetos de sequência, consulte [Números de sequência](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx). Para saber mais sobre as novidades no Microsoft SQL Server 2012, confira [Novidades no SQL Server 2012](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  

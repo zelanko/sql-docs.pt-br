@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLSERVEROBJECTEXPLORER
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 536dbcddf73d8b6af5e1106a7eb279cc1db22f47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70fc970a214c001e00703ddaa79438d59e31e487
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655884"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105766"
 ---
 # <a name="connected-database-development"></a>Desenvolvimento de banco de dados conectado
 Esta seção descreve os recursos fornecidos pelo SQL Server Data Tools para criar e consultar um banco de dados conectado.  
@@ -32,15 +32,15 @@ Usando o Pesquisador de Objetos do SQL Server no Visual Studio, os desenvolvedor
   
 |Tópico|Descrição|  
 |---------|---------------|  
-|[Como se conectar a um banco de dados e procurar objetos existentes](../ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md)|Conecte-se a um banco de dados e procure suas entidades.|  
-|[Como criar objetos de banco de dados usando o Designer de Tabela](../ssdt/how-to-create-database-objects-using-table-designer.md)|Use o novo Designer de Tabela para criar tabelas e gerenciar relacionamentos de tabelas.|  
-|[Como atualizar um banco de dados conectado com o Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)|Atualize um banco de dados conectado sem escrever scripts ALTER.|  
+|[Como: conectar-se a um Banco de Dados e Procure Objetos Existentes](../ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md)|Conecte-se a um banco de dados e procure suas entidades.|  
+|[Como: Criar objetos de banco de dados usando o Designer de Tabela](../ssdt/how-to-create-database-objects-using-table-designer.md)|Use o novo Designer de Tabela para criar tabelas e gerenciar relacionamentos de tabelas.|  
+|[Como: atualizar um banco de dados conectado com o Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)|Atualize um banco de dados conectado sem escrever scripts ALTER.|  
 |[Caixa de diálogo Filtrar e Classificar](../ssdt/filter-and-sort-dialog-box.md)|Especifique quais dados devem ser exibidos na Exibição de Dados.|  
-|[Como criar novos objetos de banco de dados usando consultas](../ssdt/how-to-create-new-database-objects-using-queries.md)|Use o Editor Transact\-SQL para editar e executar scripts Transact\-SQL.|  
-|[Como editar uma tabela existente usando consultas](../ssdt/how-to-edit-an-existing-table-using-queries.md)|Grave scripts Transact\-SQL para editar a definição de uma tabela ou popular dados.|  
-|[Como exibir e editar dados em uma tabela](../ssdt/how-to-view-and-edit-data-in-a-table.md)|Use o Editor de Dados para exibir ou inserir dados em uma tabela.|  
-|[Como excluir objetos e resolver dependências](../ssdt/how-to-delete-objects-and-resolve-dependencies.md)|Renomeie ou exclua entidades de banco de dados e deixe o SQL Server Data Tools automaticamente resolver dependências de objeto.|  
-|[Como clonar um banco de dados existente](../ssdt/how-to-clone-an-existing-database.md)|Crie um banco de dados de desenvolvimento de um banco de dados de produção.|  
+|[Como: Criar novos objetos de banco de dados usando consultas](../ssdt/how-to-create-new-database-objects-using-queries.md)|Use o Editor Transact\-SQL para editar e executar scripts Transact\-SQL.|  
+|[Como: editar uma tabela existente usando consultas](../ssdt/how-to-edit-an-existing-table-using-queries.md)|Grave scripts Transact\-SQL para editar a definição de uma tabela ou popular dados.|  
+|[Como: exibir e editar dados em uma tabela](../ssdt/how-to-view-and-edit-data-in-a-table.md)|Use o Editor de Dados para exibir ou inserir dados em uma tabela.|  
+|[Como: excluir objetos e resolver dependências](../ssdt/how-to-delete-objects-and-resolve-dependencies.md)|Renomeie ou exclua entidades de banco de dados e deixe o SQL Server Data Tools automaticamente resolver dependências de objeto.|  
+|[Como: clonar um banco de dados existente](../ssdt/how-to-clone-an-existing-database.md)|Crie um banco de dados de desenvolvimento de um banco de dados de produção.|  
 |[Extrair, publicar e registrar arquivos .dacpac](../ssdt/extract-publish-and-register-dacpac-files.md)|Mostra como extrair e publicar arquivos .dacpac|  
   
 ## <a name="related-sections"></a>Seções relacionadas  

@@ -1,6 +1,6 @@
 ---
 title: Novidades no SQL Server 2019 | Microsoft Docs
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,18 +9,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4e2e29a3b473ca94ff203e99c9e4a76c803d69fc
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 09e1a4203ef519fb9939df2ba1892b85509f1324
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774601"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775483"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novidades no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se baseia em versões anteriores para ampliar o SQL Server como uma plataforma que fornece opções de linguagens de desenvolvimento, tipos de dados, operações locais ou na nuvem e sistemas operacionais. Este artigo resume o que há de novo para o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. A primeira seção identifica os recursos adicionados na versão prévia mais recente. As outras seções deste artigo fornecem detalhes sobre todos os recursos liberados até o momento para este [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se baseia em versões anteriores para ampliar o SQL Server como uma plataforma que fornece opções de linguagens de desenvolvimento, tipos de dados, operações locais ou na nuvem e sistemas operacionais. Este artigo resume o que há de novo para o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. 
+
+O artigo resume os recursos em cada versão e aponta para obter mais detalhes para cada recurso. A seção [Detalhes](#details) apresenta detalhes técnicos dos recursos que podem não estar disponíveis na documentação principal. As outras seções deste artigo fornecem detalhes sobre todos os recursos liberados até o momento para este [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 Para obter mais informações e ver os problemas conhecidos, consulte as [Notas sobre a versão do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](sql-server-ver15-release-notes.md).
 
@@ -32,35 +34,270 @@ Para obter mais informações e ver os problemas conhecidos, consulte as [Notas 
 
 **Use as [ferramentas mais recentes](#tools) para melhorar sua experiência com o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-## <a name="ctp-24"></a>CTP 2.4
+## <a name="ctp-25-april-2019"></a>CTP 2.5 abril de 2019
 
-A versão prévia do CTP (Community Technology Preview) 2.4 é a última versão pública do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Esta versão inclui aprimoramentos de versões CTP anteriores para corrigir bugs, melhorar a segurança e otimizar o desempenho. Além disso, os recursos a seguir foram adicionados ou aprimorados no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.4.
+A CTP (Community Technology Preview) 2.5 é a última versão pública do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Esta versão inclui aprimoramentos de versões CTP anteriores para corrigir bugs, melhorar a segurança e otimizar o desempenho. Além disso, os recursos a seguir foram adicionados ou aprimorados no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.5.
 
-- [Cluster de Big Data](#bigdatacluster)
-  - Diretrizes de suporte de GPU para execução de aprendizado profundo com o TensorFlow no Spark.
-  - Atualização de tempo de execução do Spark para o Spark 2.4.
-  - Suporte a `INSERT INTO SELECT` para o pool de dados.
-  - Cláusula de opção `FORCE SCALEOUTEXECUTION` e `DISABLE SCALEOUTEXECUTION` para consultas de tabela externa.
+### <a name="big-data-clusters"></a>Clusters de Big Data
 
-- [Mecanismo de banco de dados](#databaseengine)
-  - A mensagem de erro de truncamento inclui por padrão nomes de tabela e coluna, bem como o valor truncado. Veja [Truncamento](#truncation).
-  - O novo DMF `sys.dm_exec_query_plan_stats` retorna o equivalente do último plano de execução real conhecido para a maioria das consultas.
-  - Verificação de TDE (Transparent Data Encryption) – suspender e retomar.
+| Novo recurso ou atualização | Detalhes |
+|:---|:---|
+| Perfis de implantação | Use os [arquivos JSON de configuração de implantação](../big-data-cluster/deployment-guidance.md#configfile) para padrão e personalizados para implantações de cluster de Big Data, em vez de variáveis de ambiente. |
+| Implantações solicitadas | O `mssqlctl cluster create` agora solicitará qualquer configuração necessária para implantações padrão. |
+| Alterações de nome de ponto de extremidade de serviço e de pod | Para obter mais informações, veja [notas sobre a versão do cluster de Big Data](../big-data-cluster/release-notes-big-data-cluster.md). |
+| Melhorias a **mssqlctl** | Use **mssqlctl** para [listar pontos de extremidade externos](../big-data-cluster/deployment-guidance.md#endpoints) e verifique a versão do **mssqlctl** com o parâmetro `--version`. |
+| Instalação offline | [Orientação para implantações de cluster de Big Data offline](../big-data-cluster/deploy-offline.md). |
+| Melhorias em camadas do HDFS | Disposição em camadas do HDFS com relação ao armazenamento do Amazon S3. Suporte do OAuth para ADLS Gen2. Funcionalidade de cache para melhor desempenho. Para obter mais informações, veja [Disposição em camadas do HSDFS](../big-data-cluster/hdfs-tiering.md) |
+| Conector do Spark para SQL Server | [Ler e gravar no SQL Server do Spark usando o Conector JDBC do MSSQL](../big-data-cluster/spark-mssql-connector.md) |
+| &nbsp; | &nbsp; |
 
-- [SQL Server Analysis Services](#ssas)
-  - Relações muitos para muitos em modelos tabulares.
-  - Configurações de propriedade para governança de recursos.
+### <a name="database-engine"></a>Mecanismo de banco de dados
 
-As seções a seguir descrevem os novos recursos que foram introduzidos em versões anteriores de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md).
+| Novo recurso ou atualização | Detalhes |
+|:---|:---|
+| PolyBase em Linux. | [Instalar o PolyBase](../relational-databases/polybase/polybase-linux-setup.md) no Linux para conectores não Hadoop.<br/><br/>[Mapeamento de tipo do PolyBase](../relational-databases/polybase/polybase-type-mapping.md). |
+| Novo SDK de linguagem Java para SQL Server. | Simplifica o desenvolvimento de programas Java que podem ser executados do SQL Server. Veja [Novidades em Serviços do Machine Learning do SQL Server](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md). |
+| Expandido o escopo dos planos disponíveis no DMF `sys.dm_exec_query_plan_stats`. |Veja [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
+| Nova configuração no escopo do banco de dados `LAST_QUERY_PLAN_STATS` para habilitar o `sys.dm_exec_query_plan_stats`. |Veja [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|
+| Novos SRIDs (Spatial Reference Identifiers). |[GDA2020 australiano](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) fornece uma referência mais robusta e precisa, que está alinhada mais estreitamente a sistemas de posicionamento global. Os novos SRIDs são:<br/><br/> – 7843 – 2D geográfico<br/> – 7844 – 3D geográfico <br/><br/>A exibição [spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) contém as definições de SRIDs novos. |
+| &nbsp; | &nbsp; |
 
-## <a id="bigdatacluster"></a>Clusters de Big Data
+><sup>1</sup> Esse é um recurso de aceitação e exige que o [sinalizador de rastreamento](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 esteja habilitado ou que a definição de configuração no escopo do banco de dados `LAST_QUERY_PLAN_STATS` esteja definida como ON.
+
+## <a name="ctp-24-march-2019"></a>CTP 2.4 março de 2019
+
+### <a name="big-data-clusters"></a>Clusters de Big Data
+
+| Novo recurso ou atualização | Detalhes |
+|:---|:---|
+| Diretrizes de suporte de GPU para execução de aprendizado profundo com o TensorFlow no Spark. | [Implantar um cluster de Big Data com suporte GPU e executar o TensorFlow](../big-data-cluster/spark-gpu-tensorflow.md). |
+| As fontes de dados **SqlDataPool** e **SqlStoragePool** não são mais criadas por padrão. | Crie-os manualmente, se necessário. Veja os [problemas conhecidos](../big-data-cluster/release-notes-big-data-cluster.md#externaltablesctp24). |
+| Suporte a `INSERT INTO SELECT` para o pool de dados. | Para um exemplo, veja [Tutorial: Ingerir dados em um pool de dados do SQL Server com Transact-SQL](../big-data-cluster/tutorial-data-pool-ingest-sql.md). |
+| Opções `FORCE SCALEOUTEXECUTION` e `DISABLE SCALEOUTEXECUTION`. | Veja [Notas sobre a versão de clusters de Big Data](../big-data-cluster/release-notes-big-data-cluster.md#whats-new).|
+| Recomendações atualizadas de implantação do AKS. | Ao avaliar a clusters de Big Data no AKS, agora recomendamos usar um único nó de tamanho **Standard_L8s**. |
+| Atualização de tempo de execução do Spark para o Spark 2.4. | |
+| &nbsp; | &nbsp; |
+
+### <a name="database-engine"></a>Mecanismo de banco de dados
+
+| Novo recurso ou atualização | Detalhes |
+|:-----|:-----|
+|A mensagem de erro de truncamento inclui por padrão nomes de tabela e coluna, bem como o valor truncado.|[VERBOSE_TRUNCATION_WARNINGS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation)|
+|O novo DMF `sys.dm_exec_query_plan_stats` retorna o equivalente do último plano de execução real conhecido para a maioria das consultas. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
+|O novo evento estendido `query_post_execution_plan_profile` coleta o equivalente a um plano de execução real com base em criação de perfil leve, ao contrário de `query_post_execution_showplan`, que usa a criação de perfil padrão. |[Infraestrutura de criação de perfil de consulta](../relational-databases/performance/query-profiling-infrastructure.md)|
+|Verificação de TDE (Transparent Data Encryption) – suspender e retomar.|[Verificação de TDE (Transparent Data Encryption) – suspender e retomar](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
+| &nbsp; | &nbsp; |
+
+><sup>1</sup> Esse é um recurso de aceitação e requer que o [sinalizador de rastreamento](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 esteja habilitado.
+
+### <a name="sql-server-analysis-services-ssas"></a>SSAS (SQL Server Analysis Services)
+
+| Novo recurso ou atualização | Detalhes |
+|:-----|:-----|
+|Relações muitos para muitos em modelos tabulares.|[Relações muitos para muitos em modelos tabulares](#many-to-many-ctp24)|
+|Configurações de propriedade para governança de recursos.|[Configurações de propriedade para governança de recursos](#property-ctp24)|
+| &nbsp; | &nbsp; |
+
+## <a name="ctp-23-february-2019"></a>CTP 2.3 fevereiro de 2019
+
+### <a name="big-data-clusters"></a>Clusters de Big Data
+
+| Novo recurso ou atualização | Detalhes |
+| :---------- | :------ |
+| Enviar trabalhos do Spark em clusters de Big Data no IntelliJ. | [Enviar trabalhos do Spark em clusters de Big Data do SQL Server no IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md) |
+| CLI comum para gerenciamento de cluster e de implantação do aplicativo. | [Como implantar um aplicativo no cluster de Big Data do SQL Server 2019 (versão prévia)](../big-data-cluster/big-data-cluster-create-apps.md) |
+| Extensão do VS Code para implantar aplicativos em um cluster de Big Data. | [Como usar o VS Code para implantar aplicativos em clusters de Big Data do SQL Server](../big-data-cluster/app-deployment-extension.md) |
+| Muda para o uso de comando de ferramenta **mssqlctl**. | Para obter mais detalhes, veja o [problemas conhecidos de mssqlctl](../big-data-cluster/release-notes-big-data-cluster.md#mssqlctlctp23). |
+| Usar o Sparklyr em clusters de Big Data. | [Usar o Sparklyr em clusters de Big Data do SQL Server 2019](../big-data-cluster/sparklyr-from-RStudio.md) |
+| Montar armazenamento compatível com HDFS externo no cluster de Big Data com a disposição em **camadas do HDFS**. | Veja [Camadas do HDFS](../big-data-cluster/hdfs-tiering.md). |
+| Nova experiência de conexão unificada para a instância principal do SQL Server e o Gateway do HDFS/Spark. | Veja [Instância principal do SQL Server e o Gateway do HDFS/Spark](../big-data-cluster/connect-to-big-data-cluster.md). |
+| Excluir um cluster com **mssqlctl cluster delete** agora exclui somente os objetos no namespace que faziam parte do cluster de big data. | O namespace não é excluído. No entanto, em versões anteriores, esse comando excluía todo o namespace. |
+| Nomes de ponto de extremidade de _segurança_ foram alterados e consolidados. | **service-security-lb** e **service-security-nodeport** foram consolidados no ponto de extremidade **endpoint-security**. |
+| Nomes de ponto de extremidade de _proxy_ foram alterados e consolidados. | **service-proxy-lb** e **service-proxy-nodeport** foram consolidados no ponto de extremidade **endpoint-service-proxy**. |
+| Nomes de ponto de extremidade de _controlador_ foram alterados e consolidados. | **service-mssql-controller-lb** e **service-mssql-controller-nodeport** foram consolidados no ponto de extremidade **endpoint-controller**. |
+| &nbsp; | &nbsp; |
+
+### <a name="database-engine"></a>Mecanismo de banco de dados
+
+| Novo recurso ou atualização | Detalhes |
+|:-----|:-----|
+|Habilitar recuperação de banco de dados acelerada pode ser habilitada por banco de dados.| [Recuperação acelerada de banco de dados](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)|
+|Suporte à imposição de plano de Repositório de Consultas para cursores fast forward e static.|[Planejar forçar suporte para cursores fast forward e static](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23) |
+|Recompilações reduzidas para cargas de trabalho usando tabelas temporárias em vários escopos. |[Redução de recompilações para cargas de trabalho](../relational-databases/tables/tables.md#ctp23) |
+|Escalabilidade de ponto de verificação indiretos aprimorada. |[Escalabilidade de ponto de verificação indireto aprimorada](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
+|Suporte para UTF-8: Adiciona suporte para usar codificação de caracteres UTF-8 com uma ordenação BIN2 (`UTF8_BIN2`). |[Suporte a ordenações e a Unicode](../relational-databases/collations/collation-and-unicode-support.md) |
+|Defina as ações de exclusão em cascata em uma restrição de borda em um banco de dados de grafo. |[Restrições de borda](../relational-databases/tables/graph-edge-constraints.md) |
+|Habilite ou desabilite `LIGHTWEIGHT_QUERY_PROFILING` com a nova configuração no escopo do banco de dados. |[`VERBOSE_TRUNCATION_WARNINGS`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation) |
+| &nbsp; | &nbsp; |
+
+### <a name="tools"></a>Ferramentas
+
+| Novo recurso ou atualização | Detalhes |
+|:-----|:-----|
+|O Azure Data Studio dá suporte ao Azure Active Directory. |[Azure Data Studio](../azure-data-studio/what-is.md) |
+|A interface do usuário da exibição do notebook foi movida para o núcleo do Azure Data Studio. |[Como gerenciar notebooks no Azure Data Studio](../big-data-cluster/notebooks-how-to-manage.md) |
+|Um novo assistente foi adicionado para criar fontes de dados externas do HDFS (sistema de arquivos distribuído do Hadoop) para o cluster de Big Data do SQL Server. | [Ferramentas](#tools-ctp23)|
+|Interface do visualizador do notebook aprimorada. | [Ferramentas](#tools-ctp23) |
+|Novas APIs do notebook foram adicionadas.| [Ferramentas](#tools-ctp23) |
+|Adicionado o comando "Reinstalar dependências do notebook" para ajudá-lo com as atualizações de pacote do Python. | [Ferramentas](#tools-ctp23) |
+|Iniciar o Azure Data Studio do SSMS.| [Ferramentas](#tools-ctp23) |
+| &nbsp; | &nbsp; |
+
+### <a name="analysis-services"></a>Analysis Services
+
+| Novo recurso ou atualização | Detalhes |
+|:-----|:-----|
+|Grupos de cálculo em modelo tabular.| [Grupos de cálculo em modelo tabular](#calc-ctp24) |
+| &nbsp; | &nbsp; |
+
+## <a name="ctp-22-december-2018"></a>CTP 2.2 dezembro de 2018
+
+### <a name="big-data-clusters"></a>Clusters de Big Data
+
+| Novo recurso ou atualização | Detalhes |
+|:-----|:-----|
+|Usar o SparkR do Azure Data Studio em um cluster de Big Data. | |
+|Implantar aplicativos Python e R.|[Implantar aplicativos usando mssqlctl](../big-data-cluster/big-data-cluster-create-apps.md) |
+| &nbsp; | &nbsp; |
+
+### <a name="database-engine"></a>Mecanismo de banco de dados
+
+| Novo recurso ou atualização | Detalhes |
+|:-----|:-----|
+|Adiciona suporte para usar codificação de caracteres UTF-8 com replicação do SQL Server. |[Suporte a ordenações e a Unicode](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
+| &nbsp; | &nbsp; |
+
+
+### <a name="sql-server-on-linux"></a>SQL Server no Linux
+
+| Novo recurso ou atualização | Detalhes |
+|:-----|:-----|
+|Grupos de Disponibilidade Always On em contêineres do Docker com Kubernetes. |[Grupos de Disponibilidade Always On para contêineres](../linux/sql-server-ag-kubernetes.md) |
+| &nbsp; | &nbsp; |
+
+## <a name="ctp-21-november-2018"></a>CTP 2.1 novembro de 2018
+
+### <a name="database-engine"></a>Mecanismo de banco de dados
+
+| Novo recurso ou atualização | Detalhes |
+|:-----|:-----|
+|Adiciona suporte para selecionar a ordenação de UTF-8 como padrão durante a instalação do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |[Suporte a ordenações e a Unicode](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
+|Inlining do UDF escalar transforma automaticamente UDFs (funções definidas pelo usuário) escalares em expressões relacionais e as insere na consulta SQL chamada. |[Inlining de UDF escalar](../relational-databases/user-defined-functions/scalar-udf-inlining.md) |
+|O modo de exibição de gerenciamento dinâmico `sys.dm_exec_requests` de coluna `command` mostra `SELECT (STATMAN)` se um `SELECT` está aguardando até que uma operação de atualização de estatísticas síncronas seja concluída antes de continuar a execução da consulta. | [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) |
+|O novo tipo de espera `WAIT_ON_SYNC_STATISTICS_REFRESH` é exposto no modo de exibição de gerenciamento dinâmico `sys.dm_os_wait_stats`. Ele mostra o tempo de nível de instância acumulado gasto em operações de atualização de estatísticas síncronas.|[`sys.dm_os_wait_stats`](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) |
+|O pool de buffers híbrido é um novo recurso do mecanismo de banco de dados do SQL Server em que páginas de banco de dados em arquivos de banco de dados são colocadas em um dispositivo de PMEM (memória persistente) que será acessado diretamente quando necessário.|[Pool de buffers híbrido](../database-engine/configure-windows/hybrid-buffer-pool.md) |
+|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduz o mascaramento de dados estáticos. Você pode usar o de mascaramento dados estáticos para limpar dados confidenciais em cópias de bancos de dados do SQL Server.|[Máscara de dados estáticos](../relational-databases/security/static-data-masking.md) |
+|Usar aliases de exibição ou tabela derivada em consulta de correspondência de grafo |[Restrições de borda de grafo](../relational-databases/tables/graph-edge-constraints.md) |
+| &nbsp; | &nbsp; |
+
+### <a name="sql-server-on-linux"></a>SQL Server no Linux
+
+| Novo recurso ou atualização | Detalhes |
+|:-----|:-----|
+|Novo registro de contêiner para o SQL Server. |[Introdução a contêineres do SQL Server no Docker](../linux/quickstart-install-connect-docker.md) |
+| &nbsp; | &nbsp; |
+
+### <a name="tools"></a>Ferramentas
+
+| Novo recurso ou atualização | Detalhes |
+|:-----|:-----|
+|O [Azure Data Studio](../azure-data-studio/what-is.md) dá suporte a Conectar e gerenciar clusters de Big Data [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. | |
+| &nbsp; | &nbsp; |
+
+## <a name="ctp-20-october-2018"></a>CTP 2.0 outubro de 2018
+
+### <a name="big-data-clusters"></a>Clusters de Big Data
+
+| Novo recurso ou atualização | Detalhes |
+|:-----|:-----|
+|Implantar um cluster de Big Data com contêineres Spark Linux e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no Kubernetes. | |
+|Acessar Big Data do HDFS. | |
+|Executar análises avançadas e machine learning com o Spark. | |
+|Usar o Spark para fazer streaming de dados para pools de dados SQL. | |
+|Executar livros de consulta que fornecem uma experiência de notebook no **Azure Data Studio**.|[Engenharia de dados](../azure-data-studio/what-is.md#data-engineering)|
+| &nbsp; | &nbsp; |
+
+### <a name="database-engine"></a>Mecanismo de banco de dados
+
+| Novo recurso ou atualização | Detalhes |
+|:-----|:-----|
+|**COMPATIBILITY_LEVEL 150** do banco de dados adicionado. |[Nível de compatibilidade de ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) |
+|Criação de Índice Online Retomável.|[CREATE INDEX (Transact-SQL)](../t-sql/statements/create-index-transact-sql.md#resumable-indexes) |
+|Comentários de concessão de memória do modo de linha. |[Comentários de concessão de memória do modo de linha](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback) |
+|`COUNT DISTINCT` aproximado.|[Processamento de consulta aproximada](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)|
+|Modo de Lote em rowstore.|[Modo de Lote no Rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore) |
+|Compilação adiada de variável da tabela.|[Compilação Adiada de Variável da Tabela](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation) |
+|Extensão da linguagem Java.|[Extensão da linguagem Java](../advanced-analytics/java/extension-java.md) |
+|Mescle seus dados de gráfico atuais de tabelas de nó ou de borda com novos dados usando os predicados `MATCH` na instrução `MERGE`. | |
+|Restrições de borda.|[Restrições de borda de grafo](../relational-databases/tables/graph-edge-constraints.md) |
+|Configuração padrão com escopo de banco de dados para operações de DDL online e retomáveis.| |
+|Grupos de disponibilidade dão suporte a até cinco réplicas secundárias síncronas.|[Grupos de disponibilidade](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) |
+|Redirecionamento de conexão de leitura/gravação de réplica secundária para primária|[Redirecionamento de conexão de leitura/gravação de réplica secundária para primária – Grupos de Disponibilidade Always On](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md) |
+|Descoberta e Classificação de Dados do SQL.| [Classificação e descoberta de dados SQL](../relational-databases/security/sql-data-discovery-and-classification.md) |
+|Suporte estendido para dispositivos de memória persistentes.|[Pool de Buffers Híbrido](../database-engine/configure-windows/hybrid-buffer-pool.md) |
+|Suporte para estatísticas de columnstore em `DBCC CLONEDATABASE`|[Blob de estatísticas para índices columnstore](../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md#ctp23)|
+|`sp_estimate_data_compression_savings` apresenta `COLUMNSTORE` e `COLUMNSTORE_ARCHIVE`.|[Considerações para Índices Columnstore](../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md#considerations-for-columnstore-indexes)|
+|Serviços do Machine Learning com suporte no Cluster de Failover do Windows Server. |[ Novidades – Serviços do Machine Learning do SQL Server](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)|
+|Suporte para Machine Learning para modelagem baseada em partição.|[Novidades – Serviços do Machine Learning do SQL Server](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) |
+|Infraestrutura de perfil de consulta leve habilitada por padrão |[Infraestrutura de criação de perfil de estatísticas de execução de consulta leve v3](../relational-databases/performance/query-profiling-infrastructure.md#lightweight-query-execution-statistics-profiling-infrastructure-v3) |
+|Novos conectores de PolyBase para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata e MongoDB. |[O que é o PolyBase?](../relational-databases/polybase/polybase-guide.md) |
+|`sys.dm_db_page_info(database_id, file_id, page_id, mode)` retorna informações sobre uma página em um banco de dados. |[sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)|
+|Always Encrypted com enclaves seguros. |[Always Encrypted com enclaves seguros](../relational-databases/security/encryption/always-encrypted-enclaves.md) |
+|Compilar e recompilar índices de columnstore em cluster online. |[Executar operações de índice online](../relational-databases/indexes/perform-index-operations-online.md) |
+| &nbsp; | &nbsp; |
+
+### <a name="sql-server-on-linux"></a>SQL Server no Linux
+
+| Novo recurso ou atualização | Detalhes |
+|:-----|:-----|
+|Suporte para replicação |[Objetos de replicação do SQL Server em Linux](../linux/sql-server-linux-replication.md)
+|Suporte para MSDTC (Coordenador de Transações Distribuídas da Microsoft) |[Como configurar o MSDTC no Linux](../linux/sql-server-linux-configure-msdtc.md) |
+|Suporte para OpenLDAP para provedores de AD de terceiros |[Tutorial: Usar autenticação do Azure Active Directory com o SQL Server em Linux](../linux/sql-server-linux-active-directory-authentication.md) |
+|Machine Learning no Linux |[Configurar o Machine Learning no Linux](../linux/sql-server-linux-setup-machine-learning.md) |
+| &nbsp; | &nbsp; |
+
+### <a name="master-data-services"></a>Master Data Services
+
+| Novo recurso ou atualização | Detalhes |
+|:-----|:-----|
+|O portal do MDS (Master Data Services) não depende mais do Silverlight.| Todos os componentes do Silverlight anteriores foram substituídos por controles HTML.|
+| &nbsp; | &nbsp; |
+
+### <a name="security"></a>Segurança
+
+| Novo recurso ou atualização | Detalhes |
+|:-----|:-----|
+|Gerenciamento de certificados no SQL Server Configuration Manager|[Gerenciamento de certificado (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md)
+| &nbsp; | &nbsp; |
+
+### <a name="tools"></a>Ferramentas
+
+| Novo recurso ou atualização | Detalhes |
+|:-----|:-----|
+|O [Azure Data Studio](../azure-data-studio/what-is.md) dá suporte a Conectar e gerenciar clusters de Big Data [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |[O que é o Azure Data Studio](../azure-data-studio/what-is.md)|
+|Dá suporte a cenários que usam clusters de Big Data do SQL Server. |[Extensão do SQL Server 2019 (versão prévia)](../azure-data-studio/sql-server-2019-extension.md)|
+|[**SSMS (SQL Server Management Studio) 18.0 (versão prévia)**](../ssms/sql-server-management-studio-ssms.md): Dá suporte a [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].| |
+|Suporte para Always Encrypted com enclaves seguros. |[Always Encrypted com enclaves seguros](../relational-databases/security/encryption/always-encrypted-enclaves.md)|
+| &nbsp; | &nbsp; |
+
+
+## <a name="other-services"></a>Outros serviços
+
+No CTP 2.4, o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] não introduz novos recursos para os seguintes serviços:
+
+- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)
+- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS)
+
+## <a name="details"></a>Detalhes
+
+### <a id="bigdatacluster"></a>Clusters de Big Data
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Clusters de Big Data](../big-data-cluster/big-data-cluster-overview.md) permitem novos cenários, incluindo o seguinte:
 
 - [Suporte de GPU para execução de aprendizado profundo com o TensorFlow no Spark](../big-data-cluster/spark-gpu-tensorflow.md). (CTP 2.4)
 - Atualização de tempo de execução do Spark para o Spark 2.4. (CTP 2.4)
-- Suporte a `INSERT INTO SELECT` para o pool de dados.
-- Cláusula de opção `FORCE SCALEOUTEXECUTION` e `DISABLE SCALEOUTEXECUTION` para consultas de tabela externa.
+- Suporte do `INSERT INTO SELECT` para o pool de dados.)(CTP 2.4)
+- Cláusula de opção `FORCE SCALEOUTEXECUTION` e `DISABLE SCALEOUTEXECUTION` para consultas de tabela externa. (CTP 2.4)
 - [Enviar trabalhos do Spark em clusters de Big Data do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] no IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md). (CTP 2.3)
 - [Experiência de gerenciamento e implantação de aplicativo](../big-data-cluster/big-data-cluster-create-apps.md) para uma variedade de aplicativos, dados relacionados, incluindo operacionalizar modelos de aprendizado de máquina usando R e Python, executar trabalhos do SSIS (SQL Server Integration Services) e muito mais. (CTP 2.3)
 - [Usar o Sparklyr em [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] clusters de Big Data](../big-data-cluster/sparklyr-from-RStudio.md). (CTP 2.3)
@@ -75,15 +312,15 @@ As seções a seguir descrevem os novos recursos que foram introduzidos em vers�
  
 [!INCLUDE [Big data clusters preview](../includes/big-data-cluster-preview-note.md)]
 
-## <a id="databaseengine"></a> Mecanismo de Banco de Dados
+### <a id="databaseengine"></a> Mecanismo de Banco de Dados
 
 O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduz ou aprimora os recursos novos a seguir para o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].
 
-### <a name="new-querypostexecutionplanprofile-extended-event-ctp-24"></a>Novo evento estendido Query_post_execution_plan_profile (CTP 2.4)
+#### <a name="new-querypostexecutionplanprofile-extended-event-ctp-24"></a>Novo evento estendido Query_post_execution_plan_profile (CTP 2.4)
 
 O novo evento estendido `query_post_execution_plan_profile` coleta o equivalente a um plano de execução real com base em criação de perfil leve, ao contrário de `query_post_execution_showplan`, que usa a criação de perfil padrão. Para obter mais informações, confira [Infraestrutura de criação de perfil de consulta](../relational-databases/performance/query-profiling-infrastructure.md).
 
-#### <a name="example-1---extended-event-session-using-standard-profiling"></a>Exemplo 1 – sessão de evento estendido usando a criação de perfil padrão
+##### <a name="example-1---extended-event-session-using-standard-profiling"></a>Exemplo 1 – sessão de evento estendido usando a criação de perfil padrão
 
 ```sql
 CREATE EVENT SESSION [QueryPlanOld] ON SERVER 
@@ -97,7 +334,7 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
-#### <a name="example-2---extended-event-session-using-lightweight-profiling"></a>Exemplo 2 – sessão de evento estendido usando a criação de perfil leve
+##### <a name="example-2---extended-event-session-using-lightweight-profiling"></a>Exemplo 2 – sessão de evento estendido usando a criação de perfil leve
 
 ```sql
 CREATE EVENT SESSION [QueryPlanLWP] ON SERVER 
@@ -111,7 +348,7 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
-### <a name="new-dmf-sysdmexecqueryplanstats-ctp-24"></a>Novo DMF sys.dm_exec_query_plan_stats (CTP 2.4) 
+#### <a name="new-dmf-sysdmexecqueryplanstats-ctp-24"></a>Novo DMF sys.dm_exec_query_plan_stats (CTP 2.4) 
 
 O novo DMF `sys.dm_exec_query_plan_stats` retorna o equivalente do último plano de execução real conhecido para a maioria das consultas, com base na criação de perfil leve. Para obter mais informações, consulte [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) e [Infraestrutura de criação de perfil de consulta](../relational-databases/performance/query-profiling-infrastructure.md). Consulte o seguinte script como exemplo:
 
@@ -125,7 +362,7 @@ GO
 
 Esse é um recurso opcional e requer que o [sinalizador de rastreamento](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 esteja habilitado.
 
-### <a name="transparent-data-encryption-tde-scan---suspend-and-resume-ctp-24"></a>Verificação de TDE (Transparent Data Encryption) – suspender e retomar (CTP 2.4)
+#### <a name="transparent-data-encryption-tde-scan---suspend-and-resume-ctp-24"></a>Verificação de TDE (Transparent Data Encryption) – suspender e retomar (CTP 2.4)
 
 Para habilitar o [TDE (Transparent Data Encryption)](../relational-databases/security/encryption/transparent-data-encryption.md) em um banco de dados, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deve executar uma verificação de criptografia que lê cada página dos dados de arquivo no pool de buffers e, em seguida, grava as páginas criptografadas de volta no disco. Para fornecer ao usuário mais controle sobre a verificação de criptografia, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduz a sintaxe de verificação de TDE – suspender e retomar, de modo que você possa pausar a verificação enquanto a carga de trabalho do sistema estiver pesada ou durante horários comercialmente críticos e continuar a verificação mais tarde.
 
@@ -143,7 +380,7 @@ ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
 
 Para mostrar o estado atual do exame de criptografia, `encryption_scan_state` foi adicionado à exibição de gerenciamento dinâmico `sys.dm_database_encryption_keys`. Também há uma nova coluna chamada `encryption_scan_modify_date` que conterá a data e hora da última alteração de estado da verificação de criptografia. Observe também que, se a instância [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for reiniciada enquanto a verificação de criptografia estiver em um estado suspenso, uma mensagem será registrada no log de erros na inicialização, indicando que há uma verificação existente em pausa.
 
-### <a name="accelerated-database-recovery-ctp-23"></a>Recuperação de banco de dados acelerada (CTP 2.3)
+#### <a name="accelerated-database-recovery-ctp-23"></a>Recuperação de banco de dados acelerada (CTP 2.3)
 
 A [recuperação de banco de dados acelerada](/azure/sql-database/sql-database-accelerated-database-recovery/) melhora significativamente a disponibilidade do banco de dados, especialmente na presença de transações de execução prolongada, remodelando o processo de recuperação do mecanismo de banco de dados do SQL Server. A [recuperação de banco de dados](../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) é o processo que o SQL Server usa para cada banco de dados iniciar em um estado transacionalmente consistente – ou limpo. Um banco de dados, com a recuperação de banco de dados acelerada habilitada conclui a recuperação significativamente mais rápido após um failover ou outro desligamento não limpo. Do CTP 2.3 em diante, recuperação acelerada de banco de dados pode ser habilitada para cada banco de dados usando a seguinte sintaxe:
 
@@ -156,11 +393,11 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 Se você tiver bancos de dados críticos que estão sujeitos a grandes quantidades de transações, faça experiências com esse recurso durante a versão prévia. Forneça comentários à [equipe do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](<https://aka.ms/sqlfeedback>).
 
-### <a name="query-store-plan-forcing-support-for-fast-forward-and-static-cursors-ctp-23"></a>Suporte à imposição de plano de Repositório de Consultas para cursores fast forward e static (CTP 2.3)
+#### <a name="query-store-plan-forcing-support-for-fast-forward-and-static-cursors-ctp-23"></a>Suporte à imposição de plano de Repositório de Consultas para cursores fast forward e static (CTP 2.3)
 
 O Repositório de Consultas agora dá suporte à capacidade de impor os planos de execução de consulta para cursores fast forward e static de API e T-SQL. Agora há suporte para a imposição por meio de `sp_query_store_force_plan` ou por meio de relatórios do Repositório de Consultas do SQL Server Management Studio.
 
-### <a name="reduced-recompilations-for-workloads-using-temporary-tables-across-multiple-scopes-ctp-23"></a>Recompilações reduzidas para cargas de trabalho usando tabelas temporárias em vários escopos (CTP 2.3)
+#### <a name="reduced-recompilations-for-workloads-using-temporary-tables-across-multiple-scopes-ctp-23"></a>Recompilações reduzidas para cargas de trabalho usando tabelas temporárias em vários escopos (CTP 2.3)
 
 Antes desse recurso, ao fazer referência a uma tabela temporária com uma instrução DML (linguagem de manipulação de dados) (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), se a tabela temporária tivesse sido criada por um lote de escopo externo, isso resultaria em uma recompilação da instrução DML cada vez que ela fosse executada. Com essa melhoria, o SQL Server executa verificações adicionais leves para evitar recompilações desnecessárias:
 
@@ -169,11 +406,11 @@ Antes desse recurso, ao fazer referência a uma tabela temporária com uma instr
 
 O resultado final é uma redução de recompilações desnecessárias e sobrecarga de CPU.
 
-### <a name="improved-indirect-checkpoint-scalability-ctp-23"></a>Escalabilidade de pontos de verificação indiretos aprimorada (CTP 2.3)
+#### <a name="improved-indirect-checkpoint-scalability-ctp-23"></a>Escalabilidade de pontos de verificação indiretos aprimorada (CTP 2.3)
 
 Nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], os usuários podem enfrentar erros de agendador sem resposta quando há um banco de dados que gera um grande número de páginas sujas, assim como tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] apresenta melhor escalabilidade para o ponto de verificação indireto, que deve ajudar a evitar esses erros em bancos de dados que têm uma carga de trabalho de UPDATE/INSERT pesada.
 
-### <a name="utf-8-support-ctp-23"></a>Suporte a UTF-8 (CTP 2.3)
+#### <a name="utf-8-support-ctp-23"></a>Suporte a UTF-8 (CTP 2.3)
 
 Suporte completo para a amplamente utilizada codificação de caracteres UTF-8 como codificação de importação ou exportação, ou como ordenação em nível de banco de dados ou nível de coluna para dados de texto. A UTF-8 é permitida nos tipos de dados `CHAR` e `VARCHAR` e é habilitada quando você cria ou altera a ordenação de um objeto para uma ordenação com o sufixo `UTF8`. 
 
@@ -189,13 +426,13 @@ O **CTP 2.2** adiciona suporte para usar codificação de caracteres UTF-8 com r
 
 O **CTP 2.3** adiciona suporte para usar codificação de caracteres UTF-8 com uma ordenação BIN2 (UTF8_BIN2).
 
-### <a name="scalar-udf-inlining-ctp-21"></a>Inlining do UDF escalar (CTP 2.1)
+#### <a name="scalar-udf-inlining-ctp-21"></a>Inlining do UDF escalar (CTP 2.1)
 
 O inlining do UDF escalar transforma automaticamente funções definidas pelo usuário (UDF) escalares em expressões relacionais e as insere na consulta SQL de chamada, melhorando o desempenho de cargas de trabalho que aproveitam UDFs escalares. O inlining do UDF escalar possibilita a otimização baseada em custo de operações em UDFs e resulta em planos eficientes que são orientados ao conjunto e paralelos, em vez de planos de execução seriais ineficientes e iterativos. Esse recurso é habilitado por padrão no nível de compatibilidade do banco de dados 150.
 
 Para saber mais, confira [Scalar UDF Inlining](../relational-databases/user-defined-functions/scalar-udf-inlining.md) (Embutimento de UDF escalar).
 
-### <a name="a-nametruncation-truncation-error-message-improved-to-include-table-and-column-names-and-truncated-value-ctp-21"></a><a name="truncation" />Mensagem de erro de truncamento aprimorada para incluir nomes de tabela e coluna e o valor truncado (CTP 2.1)
+#### <a name="a-nametruncation-truncation-error-message-improved-to-include-table-and-column-names-and-truncated-value-ctp-21"></a><a name="truncation" />Mensagem de erro de truncamento aprimorada para incluir nomes de tabela e coluna e o valor truncado (CTP 2.1)
 
 A mensagem de erro com ID 8152 `String or binary data would be truncated` é familiar para muitos desenvolvedores e administradores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que desenvolvem ou mantêm cargas de trabalho de movimentação de dados. O erro é gerado durante transferências de dados entre uma origem e um destino com esquemas diferentes quando os dados de origem são muito grandes para caber no tipo de dados de destino. Essa mensagem de erro pode ter resolução demorada. O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] apresenta uma mensagem de erro nova e mais específica (2628) para esse cenário:  
 
@@ -208,23 +445,23 @@ A nova mensagem de erro 2628 fornece mais contexto para o problema de truncament
 **CTP 2.4** A mensagem de erro 2628 torna-se a mensagem de truncamento padrão e substitui a mensagem de erro 8152 no nível de compatibilidade do banco de dados 150. Uma nova configuração no escopo do banco de dados `VERBOSE_TRUNCATION_WARNINGS` é introduzida para alternar entre a mensagem de erro 2628 e a 8152 quando o nível de compatibilidade do banco de dados é 150. Para obter mais informações, veja [ALTERAR A CONFIGURAÇÃO NO ESCOPO DO BANCO DE DADOS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 Para o nível de compatibilidade do banco de dados 140 ou inferior, a mensagem de erro 2628 permanece uma mensagem de erro de aceitação que exige a habilitação do [sinalizador de rastreamento](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460.
 
-### <a name="improved-diagnostic-data-for-stats-blocking-ctp-21"></a>Dados de diagnóstico aprimorados para estatísticas de bloqueio (CTP 2.1)
+#### <a name="improved-diagnostic-data-for-stats-blocking-ctp-21"></a>Dados de diagnóstico aprimorados para estatísticas de bloqueio (CTP 2.1)
 
 A [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] fornece dados de diagnóstico aprimorados para consultas de longa execução que esperam operações de atualização de estatísticas síncronas. O modo de exibição de gerenciamento dinâmico `sys.dm_exec_requests` de coluna `command` mostra `SELECT (STATMAN)` se um `SELECT` está aguardando até que uma operação de atualização de estatísticas síncronas seja concluída antes de continuar a execução da consulta. Além disso, o novo tipo de espera `WAIT_ON_SYNC_STATISTICS_REFRESH` será exposto no modo de exibição de gerenciamento dinâmico `sys.dm_os_wait_stats`. Ele mostra o tempo de nível de instância acumulado gasto em operações de atualização de estatísticas síncronas.
 
-### <a name="hybrid-buffer-pool-ctp-21"></a>Pool de buffers híbrido (CTP 2.1)
+#### <a name="hybrid-buffer-pool-ctp-21"></a>Pool de buffers híbrido (CTP 2.1)
 
 O pool de buffers híbrido é um novo recurso do mecanismo de banco de dados do SQL Server em que páginas de banco de dados em arquivos de banco de dados são colocadas em um dispositivo de PMEM (memória persistente) que será acessado diretamente quando necessário. Como dispositivos PMEM fornecem uma latência muito baixa para o acesso a dados, o mecanismo pode não fazer uma cópia dos dados em uma área de "páginas limpas" do pool de buffers e simplesmente acessar a página diretamente no PMEM. O acesso é realizado usando E/S de memória mapeada, como ocorre com a capacitação. Isso oferece benefícios de desempenho, por evitar uma cópia da página para a DRAM e evitar a pilha de E/S do sistema operacional para acessar a página no armazenamento persistente. Esse recurso está disponível no SQL Server no Windows e no SQL Server no Linux.
 
 Para obter mais informações, confira [Pool de buffers híbrido](../database-engine/configure-windows/hybrid-buffer-pool.md)
 
-### <a name="static-data-masking-ctp-21"></a>Mascaramento de dados estáticos (CTP 2.1)
+#### <a name="static-data-masking-ctp-21"></a>Mascaramento de dados estáticos (CTP 2.1)
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduz o mascaramento de dados estáticos. Você pode usar o de mascaramento dados estáticos para limpar dados confidenciais em cópias de bancos de dados do SQL Server. O mascaramento de dados estáticos ajuda a criar uma cópia limpa de bancos de dados em que todas as informações confidenciais são alteradas de forma a tornar a cópia compartilhável com usuários de não produção. O mascaramento de dados estáticos pode ser usado para desenvolvimento, teste, análise e relatórios de negócios, conformidade, solução de problemas e qualquer outro cenário em que dados específicos não possam ser copiados para ambientes diferentes.
 
 O mascaramento de dados estáticos opera no nível de coluna. Selecione quais colunas mascarar e, para cada coluna selecionada, especifique uma função de mascaramento. O mascaramento de dados estáticos copia o banco de dados e, em seguida, aplica as funções de mascaramento especificadas às colunas.
 
-#### <a name="static-data-masking-vs-dynamic-data-masking"></a>Mascaramento de dados estáticos versus mascaramento de dados dinâmicos
+##### <a name="static-data-masking-vs-dynamic-data-masking"></a>Mascaramento de dados estáticos versus mascaramento de dados dinâmicos
 
 O mascaramento de dados é o processo de aplicação de uma máscara a um banco de dados para ocultar informações confidenciais e substituí-la por dados novos ou dados limpos. A Microsoft oferece duas opções de mascaramento: o mascaramento de dados estáticos e o mascaramento de dados dinâmicos. A Máscara de Dados Dinâmicos foi introduzida no [!INCLUDE[ssSQL16](../includes/sssql16-md.md)]. A seguinte tabela compara essas duas soluções:
 
@@ -232,7 +469,7 @@ O mascaramento de dados é o processo de aplicação de uma máscara a um banco 
 |:----|:----|
 |Ocorre em uma cópia do banco de dados <br/><br/>Dados originais não recuperáveis<br/><br/>O mascaramento ocorre no nível de armazenamento<br/><br/>Todos os usuários têm acesso aos mesmos dados mascarados<br/><br/>Voltado para o acesso contínuo de toda a equipe|Ocorre no banco de dados original<br/><br/>Dados originais intactos<br/><br/>O mascaramento ocorre dinamicamente no momento da consulta<br/><br/>O mascaramento varia com base na permissão do usuário <br/><br/>Voltado para o acesso específico de usuário pontual|
 
-### <a name="database-compatibility-level-ctp-20"></a>Nível de compatibilidade de banco de dados (CTP 2.0)
+#### <a name="database-compatibility-level-ctp-20"></a>Nível de compatibilidade de banco de dados (CTP 2.0)
 
 **COMPATIBILITY_LEVEL 150** do banco de dados adicionado. Para habilitar um banco de dados de usuário específico, execute:
 
@@ -240,7 +477,7 @@ O mascaramento de dados é o processo de aplicação de uma máscara a um banco 
    ALTER DATABASE database_name SET COMPATIBILITY_LEVEL =  150;
    ```
 
-### <a name="resumable-online-index-create-ctp-20"></a>Criação de índice online retomável (CTP 2.0)
+#### <a name="resumable-online-index-create-ctp-20"></a>Criação de índice online retomável (CTP 2.0)
 
 A **criação de índice online retomável** permite que uma operação de criação de índice fique em pausa e seja retomada posteriormente do ponto em que a operação parou ou falhou, em vez de reiniciar desde o início.
 
@@ -257,7 +494,7 @@ Além disso, esse recurso pode ser definido como padrão para um banco de dados 
 
 Para obter mais informações, consulte [Criação de índice online retomável](../t-sql/statements/create-index-transact-sql.md#resumable-indexes).
 
-### <a name="build-and-rebuild-clustered-columnstore-indexes-online-ctp-20"></a>Compilar e recompilar índices de columnstore em cluster online (CTP 2.0)
+#### <a name="build-and-rebuild-clustered-columnstore-indexes-online-ctp-20"></a>Compilar e recompilar índices de columnstore em cluster online (CTP 2.0)
 
 Converta tabelas de repositório de linha no formato columnstore. A criação de CCIs (índices columnstore clusterizados) era um processo offline nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] – exigindo que todas as alterações parassem enquanto o CCI era criado. Com o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] e o [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], você pode criar ou recriar CCI online. A carga de trabalho não será bloqueada e todas as alterações feitas nos dados subjacentes serão adicionadas de maneira transparente à tabela de destino de columnstore. Exemplos de novas instruções [!INCLUDE[tsql](../includes/tsql-md.md)] que podem ser usadas são:
 
@@ -273,7 +510,7 @@ Converta tabelas de repositório de linha no formato columnstore. A criação de
     REBUILD WITH (ONLINE = ON);
   ```
 
-### <a name="always-encrypted-with-secure-enclaves-ctp-20"></a>Always Encrypted com enclaves seguros (CTP 2.0)
+#### <a name="always-encrypted-with-secure-enclaves-ctp-20"></a>Always Encrypted com enclaves seguros (CTP 2.0)
 
 Expande o Always Encrypted com criptografia no local e cálculos avançados. As expansões são decorrentes da habilitação de cálculos em dados de texto sem formatação, dentro de um enclave seguro no lado do servidor.
 
@@ -287,7 +524,7 @@ Para conhecer detalhes, consulte [Always Encrypted com enclaves seguros](../rela
 > [!NOTE]
 > O Always Encrypted com enclaves seguros está disponível apenas no SO Windows.
 
-### <a name="intelligent-query-processing-ctp-20"></a>Processamento de consulta inteligente (CTP 2.0)
+#### <a name="intelligent-query-processing-ctp-20"></a>Processamento de consulta inteligente (CTP 2.0)
 
 - **Feedback de concessão de memória no modo de linha** expande o recurso de feedback de concessão de memória introduzido no [!INCLUDE[ssSQL17](../includes/sssql17-md.md)], ajustando os tamanhos da concessão de memória para os operadores de modo de lote e de linha. Para uma condição de concessão excessiva, se a memória concedida tiver mais de duas vezes o tamanho da memória real usada, o feedback de concessão de memória recalculará a concessão de memória. As execuções consecutivas, em seguida, solicitarão menos memória. Para uma concessão de memória de tamanho insuficiente que resulta em um despejo no disco, o feedback de concessão de memória acionará o recálculo da concessão de memória. As execuções consecutivas, em seguida, solicitarão mais memória. Esse recurso é habilitado por padrão no nível de compatibilidade do banco de dados 150.
 
@@ -310,11 +547,11 @@ Para conhecer detalhes, consulte [Always Encrypted com enclaves seguros](../rela
 
 Para usar recursos de processamento de consulta inteligente, defina o banco de dados `COMPATIBILITY_LEVEL = 150`.
 
-### <a id="programmability"></a> Extensões de programação de linguagem Java (CTP 2.0)
+#### <a id="programmability"></a> Extensões de programação de linguagem Java (CTP 2.0)
 
 - **Extensão da linguagem Java (versão prévia)**: Use a extensão da linguagem Java para executar o código Java em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], esta extensão é instalada quando você adiciona o recurso 'Serviços do Machine Learning (No Banco de Dados)' à instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-### <a id="sqlgraph"></a> Recursos do SQL Graph (CTP 2.3)
+#### <a id="sqlgraph"></a> Recursos do SQL Graph (CTP 2.3)
 
 - **Usar aliases de tabela derivada ou exibição na consulta de correspondência de gráfico (CTP 2.1)** Consultas do Graph na versão prévia [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] dão suporte ao uso de aliases de tabela derivada e exibição na sintaxe `MATCH`. Para usar esses aliases no `MATCH`, as exibições e as tabelas derivadas devem ser criadas em um conjunto de nós ou em um conjunto de tabelas de borda, usando o operador `UNION ALL`. As tabelas de nós ou de borda podem ou não ter filtros nelas. A capacidade de usar aliases de tabela derivada e exibição em consultas `MATCH` pode ser muito útil em cenários em que você deseja consultar entidades heterogêneas ou conexões heterogêneas entre duas ou mais entidades no gráfico.
 
@@ -324,7 +561,7 @@ Para usar recursos de processamento de consulta inteligente, defina o banco de d
 
   **(CTP 2.3)** Estendendo ainda mais esse recurso, você pode definir as ações de exclusão em cascata em uma restrição de borda. Você pode definir as ações que o mecanismo de banco de dados usa quando um usuário exclui os nós que uma determinada borda conecta.
 
-### <a name="database-scoped-default-setting-for-online-and-resumable-ddl-operations-ctp-20"></a>Configuração padrão com escopo de banco de dados para operações de DDL online e retomáveis (CTP 2.0)
+#### <a name="database-scoped-default-setting-for-online-and-resumable-ddl-operations-ctp-20"></a>Configuração padrão com escopo de banco de dados para operações de DDL online e retomáveis (CTP 2.0)
 
 - **A configuração padrão com escopo de banco de dados para operações de DDL online e retomáveis** permite a configuração de um comportamento padrão para operações de índice `ONLINE` e `RESUMABLE` no nível do banco de dados, em vez de definir essas opções para cada instrução DDL de índice individual, como criar ou recompilar o índice.
 
@@ -340,7 +577,7 @@ Sem esse recurso, você precisa especificar as opções online e retomáveis dir
 
 Para obter mais informações sobre operações retomáveis de índice, consulte [Criação de índice online retomável](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
 
-### <a id="ha"></a>Grupos de Disponibilidade Always On – mais réplicas síncronas (CTP 2.0)
+#### <a id="ha"></a>Grupos de Disponibilidade Always On – mais réplicas síncronas (CTP 2.0)
 
 - **Até cinco réplicas síncronas**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] aumenta o número máximo de réplicas síncronas para 5, de até de 3 no [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Você pode configurar esse grupo de cinco réplicas para ter failover automático dentro do grupo. Há uma réplica primária, além de quatro réplicas secundárias síncronas.
 
@@ -352,7 +589,7 @@ Para obter mais informações sobre operações retomáveis de índice, consulte
 
 Para conhecer os detalhes, consulte [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md) (Redirecionamento de conexão de leitura/gravação de réplica secundária para primária [Grupos de Disponibilidade Always On]).
 
-### <a name="data-discovery-and-classification-ctp-20"></a>Descoberta e classificação de dados (CTP 2.0)
+#### <a name="data-discovery-and-classification-ctp-20"></a>Descoberta e classificação de dados (CTP 2.0)
 
 A descoberta e classificação de dados fornece recursos avançados que são internos e nativos no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Classificar e rotular seus dados mais confidenciais fornece os seguintes benefícios:
 - ajuda a atender a padrões de privacidade de dados e requisitos de conformidade regulamentar.
@@ -366,7 +603,7 @@ A [auditoria](../relational-databases/security/auditing/sql-server-audit-databas
 >[!NOTE]
 >Não há nenhuma alteração em termos de como a auditoria é habilitada. Foi adicionado um novo campo aos registros de auditoria, `data_sensitivity_information`, que registra a classificações (rótulos) de confidencialidade dos dados reais que foram retornados pela consulta. Consulte [Auditoria de acesso a dados confidenciais](/azure/sql-database/sql-database-data-discovery-and-classification/#subheading-3).
 
-### <a name="expanded-support-for-persistent-memory-devices-ctp-20"></a>Suporte estendido para dispositivos de memória persistentes (CTP 2.0)
+#### <a name="expanded-support-for-persistent-memory-devices-ctp-20"></a>Suporte estendido para dispositivos de memória persistentes (CTP 2.0)
 
 Agora, qualquer arquivo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] colocado em um dispositivo de memória persistente pode funcionar no modo *capacitado*. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acessa o dispositivo diretamente, ignorando a pilha de armazenamento do sistema operacional usando operações de memória eficientes. Esse modo melhora o desempenho porque permite entrada/saída de baixa latência em relação a esses dispositivos.
     - Exemplos de arquivos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] incluem:
@@ -379,15 +616,15 @@ Agora, qualquer arquivo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] c
 > [!NOTE]
 > Para esta versão prévia, a capacitação de arquivos em dispositivos de memória persistente só está disponível no Linux. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no Windows dá suporte a dispositivos de memória persistente começando com o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)].
 
-### <a name="support-for-columnstore-statistics-in-dbcc-clonedatabase-ctp-20"></a>Suporte para estatísticas de columnstore em DBCC CLONEDATABASE (CTP 2.0)
+#### <a name="support-for-columnstore-statistics-in-dbcc-clonedatabase-ctp-20"></a>Suporte para estatísticas de columnstore em DBCC CLONEDATABASE (CTP 2.0)
 
 O `DBCC CLONEDATABASE` cria uma cópia somente de esquema de um banco de dados que inclui todos os elementos necessários para solucionar problemas de desempenho de consulta sem copiar os dados. Em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o comando não copiava as estatísticas necessárias para solucionar problemas com precisão em consultas de índice de columnstore, e etapas manuais eram necessárias para capturar essas informações. Agora, no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], o `DBCC CLONEDATABASE` captura automaticamente os blobs de estatísticas para índices columnstore, de modo que nenhuma etapa manual é necessária.
 
-### <a name="new-options-added-to-spestimatedatacompressionsavings-ctp-20"></a>Novas opções adicionadas a sp_estimate_data_compression_savings (CTP 2.0)
+#### <a name="new-options-added-to-spestimatedatacompressionsavings-ctp-20"></a>Novas opções adicionadas a sp_estimate_data_compression_savings (CTP 2.0)
 
 `sp_estimate_data_compression_savings` retorna o tamanho atual do objeto solicitado e faz a estimativa do tamanho do objeto para o estado de compactação solicitado. Atualmente, esse procedimento dá suporte a três opções: `NONE`, `ROW` e `PAGE`. O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduz duas novas opções: `COLUMNSTORE` e `COLUMNSTORE_ARCHIVE`. Essas novas opções permitirão que você estime a economia de espaço se um índice columnstore for criado na tabela usando a compactação de columnstore padrão ou de arquivos.
 
-### <a id="ml"></a> Modelagem baseada em partição e clusters de failover dos Serviços do Machine Learning do SQL Server (CTP 2.0)
+#### <a id="ml"></a> Modelagem baseada em partição e clusters de failover dos Serviços do Machine Learning do SQL Server (CTP 2.0)
 
 - **Modelagem baseada em partição**: Processe scripts externos por partição de seus dados usando os novos parâmetros adicionados ao `sp_execute_external_script`. Essa funcionalidade dá suporte ao treinamento de muitos modelos pequenos (um modelo para cada partição de dados) em vez de um modelo grande.
 
@@ -395,7 +632,7 @@ O `DBCC CLONEDATABASE` cria uma cópia somente de esquema de um banco de dados q
 
 Para obter informações detalhadas, consulte [Novidades dos Serviços do Machine Learning do SQL Server](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 
-### <a name="lightweight-query-profiling-infrastructure-enabled-by-default-ctp-20"></a>Infraestrutura de perfil de consulta leve habilitada por padrão (CTP 2.0)
+#### <a name="lightweight-query-profiling-infrastructure-enabled-by-default-ctp-20"></a>Infraestrutura de perfil de consulta leve habilitada por padrão (CTP 2.0)
 
 A infraestrutura de criação de perfil com consulta leve (LWP) fornece dados de desempenho de consulta de maneira mais eficiente do que os mecanismos de criação de perfil padrão. A criação de perfil leve agora está habilitada por padrão. Ela foi introduzida no [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. A criação de perfil leve oferece um mecanismo de coleção de estatísticas de execução de consulta com uma sobrecarga esperada de 2% da CPU, em comparação com uma sobrecarga de até 75% da CPU para o mecanismo de criação de perfil com consulta padrão. Em versões anteriores, ela ficava DESATIVADA por padrão. Os administradores de banco de dados podiam habilitá-la com o [sinalizador de rastreamento 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
@@ -403,11 +640,11 @@ Para obter mais informações sobre essa criação de perfil leve, confira [Infr
 
 **CTP 2.3** Uma nova configuração com escopo de banco de dados `LIGHTWEIGHT_QUERY_PROFILING` é introduzida para habilitar ou desabilitar a infraestrutura de criação de perfil de consulta leve.
 
-### <a id="polybase"></a>Novos conectores de PolyBase
+#### <a id="polybase"></a>Novos conectores de PolyBase
 
 - **Novos conectores para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata e MongoDB**: o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduz novos conectores para dados externos para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata e MongoDB.
 
-### <a name="new-sysdmdbpageinfo-system-function-returns-page-information-ctp-20"></a>A nova função de sistema sys.dm_db_page_info retorna informações da página (CTP 2.0)
+#### <a name="new-sysdmdbpageinfo-system-function-returns-page-information-ctp-20"></a>A nova função de sistema sys.dm_db_page_info retorna informações da página (CTP 2.0)
 
 `sys.dm_db_page_info(database_id, file_id, page_id, mode)` retorna informações sobre uma página em um banco de dados. A função retorna uma linha que contém as informações de cabeçalho da página, incluindo `object_id`, `index_id` e `partition_id`. Essa função substitui a necessidade de usar `DBCC PAGE` na maioria dos casos. 
 
@@ -421,7 +658,7 @@ FROM sys.dm_exec_requests AS d
     AS page_info;
 ```
 
-## <a id="sqllinux"></a> SQL Server no Linux
+### <a id="sqllinux"></a> SQL Server no Linux
 
 - **Grupos de Disponibilidade Always On em contêineres do Docker com Kubernetes (CTP 2.2)**: O Kubernetes pode orquestrar contêineres que executam instâncias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para fornecer um conjunto altamente disponível de bancos de dados com os Grupos de Disponibilidade Always On do SQL Server. Um operador de Kubernetes implanta um StatefulSet incluindo um contêiner com **contêiner mssql-server** e um monitor de integridade.
 
@@ -445,11 +682,11 @@ FROM sys.dm_exec_requests AS d
 
 - **Machine Learning no Linux (CTP 2.0)**: Os Serviços do Machine Learning do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (no banco de dados) agora são compatíveis com o Linux. O suporte inclui o procedimento armazenado `sp_execute_external_script`. Para obter instruções de como instalar os Serviços do Machine Learning no Linux, consulte [Instalar o suporte dos Serviços do Machine Learning do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] para R e Python no Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
-## <a id="mds"></a> Master Data Services 
+### <a id="mds"></a> Master Data Services 
 
 - **Controles do Silverlight substituídos por HTML (CTP 2.0)**: O portal do MDS (Master Data Services) não depende mais do Silverlight. Todos os componentes do Silverlight anteriores foram substituídos por controles HTML.
 
-## <a id="security"></a>Segurança
+### <a id="security"></a>Segurança
 
 - **Gerenciamento de certificados no SQL Server Configuration Manager (CTP 2.0)**: Certificados SSL/TLS são amplamente usados para proteger o acesso a instâncias do SQL Server. O gerenciamento de certificados agora está integrado ao SQL Server Configuration Manager, simplificando tarefas comuns como:
 
@@ -461,9 +698,11 @@ FROM sys.dm_exec_requests AS d
   > [!NOTE]
   > O usuário precisa ter permissões de administrador em todos os nós de cluster.
 
-## <a id="tools"></a>Ferramentas
+### <a id="tools"></a>Ferramentas
 
 - [**Azure Data Studio**](../azure-data-studio/what-is.md): Lançado anteriormente com nome de versão prévia SQL Operations Studio, o Azure Data Studio é uma ferramenta de área de trabalho leve, moderna, de software livre e multiplataforma comuns usada para as tarefas mais comuns no desenvolvimento e administração de dados. Com o Azure Data Studio e a [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]extensão da Versão prévia do](../azure-data-studio/sql-server-2019-extension.md), você pode se conectar ao SQL Server local e na nuvem do Windows, macOS e Linux. O Azure Data Studio permite:
+
+<a name = "tools-ctp23"></a>
 
   - Agora há suporte para o AAD. (CTP 2.3)
   - A interface do usuário da exibição do notebook foi movida para o núcleo do Azure Data Studio. (CTP 2.3)
@@ -500,15 +739,15 @@ FROM sys.dm_exec_requests AS d
   - Adicionado o parâmetro `–LoadBalancedReadOnlyRoutingList` a `Set-SqlAvailabilityReplica` e `New-SqlAvailabilityReplica`.
   - Atualizado o cmdlet `AnalysisService` para usar o token de logon armazenado em cache de `Login-AzureAsAccount` para o Azure Analysis Services.
 
-## <a id="ssas"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS) 
+### <a id="ssas"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS) 
 
-### <a name="many-to-many-relationships-in-tabular-models-ctp-24"></a>Relações muitos para muitos em modelos tabulares (CTP 2.4)
+#### <a name="many-to-many-ctp24"></a>Relações muitos para muitos em modelos tabulares (CTP 2.4)
 
 Esse recurso permite relações muitos para muitos entre tabelas em que ambas as colunas não são exclusivas. Uma relação pode ser definida entre uma tabela de dimensões e uma de fatos com uma granularidade maior do que a coluna de chave da dimensão. Isso evita a necessidade de normalizar as tabelas de dimensões e pode melhorar a experiência do usuário, já que o modelo resultante tem um número menor de tabelas com colunas agrupadas logicamente. Para esta versão CTP 2.4, relações muitos para muitos são recursos somente de mecanismo. 
 
 Relações muitos para muitos exigem que os modelos estejam no nível de compatibilidade 1470, que atualmente é compatível apenas com o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.3 e posterior. Para essa versão CTP 2.4, relações muitos para muitos podem ser criadas usando a API de TOM (objeto de modelo tabular), a TMSL (linguagem de script de modelo tabular) e a ferramenta de Editor de Tabelas de software livre. O suporte no SSDT (SQL Server Data Tools) será incluído em uma versão futura, bem como a documentação. Informações adicionais para esse e outros recursos lançados no CTP serão fornecidas no blog do Analysis Services.
 
-### <a name="memory-settings-for-resource-governance-ctp-24"></a>Configurações de memória para governança de recursos (CTP 2.4)
+#### <a name="property-ctp24"></a>Configurações de memória para governança de recursos (CTP 2.4)
 
 As configurações de memória descritas aqui já estão disponíveis no Azure Analysis Services. Começando com o CTP 2.4, elas agora também são compatíveis com o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Analysis Services. 
 
@@ -518,7 +757,7 @@ As configurações de memória descritas aqui já estão disponíveis no Azure A
 
 Essas propriedades podem ser definidas usando a versão mais recente do SSMS (SQL Server Management Studio). Informações adicionais para esse recurso serão fornecidas no blog do Analysis Services.
 
-### <a name="calculation-groups-in-tabular-models-ctp-23"></a>Grupos de cálculos em modelos de tabela (CTP 2.3) 
+#### <a name="calc-ctp24"></a>Grupos de cálculos em modelos de tabela (CTP 2.3) 
 
 Grupos de cálculos resolvem um problema comum em modelos complexos nos quais pode haver uma proliferação de medidas usando os mesmos cálculos, assim como em inteligência temporal. Grupos de cálculos são mostrados em clientes de relatório como uma tabela com uma única coluna. Cada valor na coluna representa um cálculo reutilizável ou um item de cálculo que pode ser aplicado a qualquer uma das medidas.  
 
@@ -535,7 +774,7 @@ Além das novas funções DAX, duas novas exibições de gerenciamento dinâmico
 - `TMSCHEMA_CALCULATION_GROUPS`  
 - `TMSCHEMA_CALCULATION_ITEMS`  
 
-#### <a name="limitations-in-this-release"></a>Limitações nesta versão:
+##### <a name="limitations-in-this-release"></a>Limitações nesta versão:
 
 - A função `ALLSELECTED DAX` ainda não é compatível.
 - A Segurança em Nível de Linha definida na tabela de grupo de cálculo ainda não é compatível.
@@ -543,20 +782,18 @@ Além das novas funções DAX, duas novas exibições de gerenciamento dinâmico
 - Expressões de DetailsRows que fazem referência a itens de cálculo ainda não são compatíveis.
 - MDX ainda não é compatível.
 
-#### <a name="known-issues-in-this-release"></a>Problemas conhecidos nesta versão:
+##### <a name="known-issues-in-this-release"></a>Problemas conhecidos nesta versão:
 
 - A presença de grupos de cálculo em um modelo pode fazer com que medidas retornem tipos de dados variantes, o que pode causar falhas de atualização em tabelas e colunas calculadas que fazem referência a essas medidas.
 
-#### <a name="compatibility-level"></a>Nível de Compatibilidade
+##### <a name="compatibility-level"></a>Nível de Compatibilidade
 
 Grupos de cálculos exigem que os modelos estejam no nível de compatibilidade 1470, que atualmente é compatível apenas com o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.3 e posterior. Neste momento, os grupos de cálculo podem ser criados usando a API de TOM (objeto de modelo tabular), a TMSL (linguagem de script de modelo tabular) e a ferramenta de Editor de Tabelas de software livre. O suporte no SSDT (SQL Server Data Tools) será incluído em uma versão futura, bem como a documentação. Informações adicionais para esse e outros recursos lançados no CTP serão fornecidas no blog do Analysis Services.
 
-## <a name="other-services"></a>Outros serviços
+## <a name="see-also"></a>Confira também
 
-No CTP 2.4, o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] não introduz novos recursos para os seguintes serviços:
-
-- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)
-- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS)
+- [`SqlServer` Módulo do PowerShell](https://www.powershellgallery.com/packages/Sqlserver)
+- [Documentação do SQL Server PowerShell](../powershell/sql-server-powershell.md)
 
 ## <a name="next-steps"></a>Próximas etapas
 
