@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2018
+ms.date: 05/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ed6edb74cea3c96ae8791c28b23510222aa69ecc
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62690818"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805166"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -778,6 +778,10 @@ Esse comando redefine todos os contadores como 0.
 |QUERY_TASK_ENQUEUE_MUTEX |TBD <br /> **Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QUERY_TRACEOUT |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |RBIO_WAIT_VLF |TBD <br /> **Aplica-se a**: do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|RBIO_RG_STORAGE |Ocorre quando um nó de computação em hiperescala banco de dados está sendo limitado devido ao consumo de log atrasado em todos os servidores de página. <br /> **Aplica-se ao**: Em hiperescala do banco de dados SQL do Azure.|
+|RBIO_RG_DESTAGE |Ocorre quando um nó de computação em hiperescala banco de dados está sendo limitado devido ao consumo de logs em atraso pelo armazenamento de log a longo prazo. <br /> **Aplica-se ao**: Em hiperescala do banco de dados SQL do Azure.|
+|RBIO_RG_REPLICA |Ocorre quando uma nó de computação de banco de dados está sendo limitado devido a hiperescala atrasado consumo de log pelos nós de réplica secundária legível. <br /> **Aplica-se ao**: Em hiperescala do banco de dados SQL do Azure.|
+|RBIO_RG_LOCALDESTAGE |Ocorre quando um nó de computação em hiperescala banco de dados está sendo limitado devido ao consumo de logs em atraso pelo serviço de log. <br /> **Aplica-se ao**: Em hiperescala do banco de dados SQL do Azure.|
 |RECOVER_CHANGEDB |Ocorre durante a sincronização do status do banco de dados em espera passiva.| 
 |RECOVERY_MGR_LOCK |TBD <br /> **Aplica-se a**: do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REDO_THREAD_PENDING_WORK |TBD <br /> **Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
