@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d5f74f1032ceac55dbaaa28a9dd5f1e400058d7f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190778"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65820268"
 ---
 Mecanismo de Banco de Dados do SQL Server 2008
