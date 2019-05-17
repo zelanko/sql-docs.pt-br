@@ -12,12 +12,12 @@ ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 09f9cc460368109e3e1a7fd7464602182bf188e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62754134"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805159"
 ---
 # <a name="set-warning-thresholds"></a>Configurar limites de aviso
   Use essa caixa de diálogo para habilitar e configurar um ou mais limites de aviso para o banco de dados selecionado na árvore de navegação da caixa de diálogo **Monitor de Espelhamento de Banco de Dados** .  
@@ -30,7 +30,7 @@ ms.locfileid: "62754134"
   
 ## <a name="options"></a>Opções  
  *A instância de servidor e seu status de conexão*  
- Nome de uma instância de servidor de parceiro no formato *SYSTEM***\\***INSTANCE_NAME*. Com relação a uma instância de servidor padrão, o nome do sistema é exibido.  
+ Nome de uma instância de servidor de parceiro no formato _SYSTEM_**\\**_INSTANCE_NAME_. Com relação a uma instância de servidor padrão, o nome do sistema é exibido.  
   
  Esse campo indica também se o monitor está conectado atualmente à instância de servidor. Os status de conexão possíveis são:  
   
