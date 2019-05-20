@@ -6,23 +6,22 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: faf7a9e3279d8a2a5606d21c359d6a4a2697cbeb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 793672d6f98d588b0f2d4c80963a29c41e392354
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296464"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775434"
 ---
 # <a name="glossary-report-builder"></a>Glossário (Construtor de Relatórios)
-  
   
 |Termo|Definição|  
 |----------|----------------|  
 |.NET Framework|Um componente integrante do Windows que dá suporte à criação, implantação e execução da próxima geração de aplicativos e serviços Web. Ele fornece um ambiente multilíngue baseado em padrões, altamente produtivo, para integrar investimentos existentes com aplicativos e serviços da próxima geração, bem como a agilidade para resolver os desafios de implantação e operação de aplicativos na escala da Internet. O .NET Framework consiste em três partes principais: o Common Language Runtime, um conjunto hierárquico de bibliotecas de classes unificadas e uma versão de ASP em componentes chamada de ASP.NET. Consulte também: ASP.NET, Common Language Runtime, biblioteca de classes do .NET Framework.|  
 |ActiveX Data Objects|Objetos do Component Object Model que fornecem acesso a fontes de dados. Essa API fornece uma camada entre o OLE DB e linguagens de programação, como o Visual Basic, o Visual Basic for Applications, o Active Server Pages e o Microsoft Internet Explorer Visual Basic Scripting.|  
-|relatório ad hoc|Um relatório .rdl criado com o Construtor de Relatórios 1.0 que acessa modelos de relatórios.|  
+|relatório ad hoc|  
 |adorno|Uma área de controle ou de status que é anexada à borda de um painel ou de uma janela, como uma barra de ferramentas ou régua.|  
 |agregação|Um valor resumido que compreende vários valores individuais.|  
 |função de agregação|Uma função que executa um cálculo em diversos valores e retorna um único valor resumido.|  
@@ -36,7 +35,7 @@ ms.locfileid: "56296464"
 |argumento|Um valor que fornece informações para uma ação, um evento, um método, uma propriedade, uma função ou um procedimento.|  
 |assembly|Um módulo de aplicativo gerenciado que contém metadados de classe e código gerenciado como um objeto no SQL Server, em relação ao qual as funções CLR, procedimentos armazenados, gatilhos, agregações definidas pelo usuário e tipos definidos pelo usuário podem ser criados no SQL Server.|  
 |autenticação|O processo de verificar a identidade de um usuário, computador, processo ou outra entidade validando as credenciais fornecidas pela entidade. Formas comuns de credenciais são assinaturas digitais, cartões inteligentes, dados biométricos e uma combinação de nomes e senhas de usuários.|  
-|autorização|1. A operação que verifica as permissões e os direitos de acesso que são concedidos a um usuário. 2. O processo de conceder a uma pessoa, um processo de computador ou um dispositivo acesso a certas informações, serviços ou funcionalidade.|  
+|autorização|1. A operação que verifica as permissões e os direitos de acesso que foram concedidos a um usuário. 2. O processo de conceder a uma pessoa, um processo de computador ou um dispositivo acesso a certas informações, serviços ou funcionalidade.|  
 |eixo|As linhas horizontal e vertical em um gráfico usadas para mostrar a posição de um ponto.|  
 |intervalo de eixo|O número de unidades entre marcas de escala principais em um eixo de gráfico. O intervalo é calculado automaticamente, mas pode ser definido manualmente.|  
 |fazer backup|Para fazer uma cópia duplicada de um programa, um disco ou dados.|  
@@ -60,7 +59,6 @@ ms.locfileid: "56296464"
 |região de dados do gráfico|Um item de relatório em um layout de relatório que exibe dados em um formato gráfico.|  
 |filho|Um membro no próximo nível inferior em uma hierarquia que está relacionado diretamente ao membro atual.|  
 |cláusula|No Transact-SQL, um subunidade de uma instrução SQL. Uma cláusula começa com uma palavra-chave.|  
-|relatório de clickthrough|Um relatório que exibe dados do modelo de relatório relacionado quando você clica nos dados dentro de um relatório renderizado pelo Construtor de Relatórios.|  
 |aplicativo cliente|Um aplicativo que recupera dados de um servidor e executa análise local e apresentação de dados de bancos de dados relacionais ou multidimensionais.|  
 |cursor do cliente|Um cursor que é implementado no cliente. O conjunto de resultados inteiro é transferido primeiro para o cliente, e o software da API do cliente implementa a funcionalidade do cursor a partir desse conjunto de resultados armazenado em cache.|  
 |CLR|Consulte outro termo: Common Language Runtime|  
@@ -91,9 +89,9 @@ ms.locfileid: "56296464"
 |mineração de dados|O processo de analisar dados para identificar padrões ou relações.|  
 |ponto de dados|A menor entidade individual em um gráfico.|  
 |extensão de processamento de dados|Um componente do Reporting Services usado para recuperar dados de relatório de uma fonte de dados externa.|  
-|provedor de dados|A camada de sofware que trata a comunicação entre extensões de dados e software personalizado específico para cada tipo de fonte de dados externa. Dependendo da fonte de dados específica, há vários provedores de dados disponíveis da Microsoft e de outros fornecedores.|  
+|provedor de dados|A camada de software que trata da comunicação entre extensões de dados e software personalizado específico para cada tipo de fonte de dados externa. Dependendo da fonte de dados específica, há vários provedores de dados disponíveis da Microsoft e de outros fornecedores.|  
 |região de dados|Um item de relatório que exibe linhas repetidas de dados de um conjunto de dados subjacente em uma tabela, uma matriz, uma lista ou um gráfico.|  
-|fonte de dados|1. No ADO e no OLE DB, a localização de uma fonte de dados exposta por um provedor OLE DB. 2. A fonte de dados de um objeto, como um cubo ou uma dimensão. Também é a especificação da informações necessárias para acessar dados de origem. Às vezes faz referência ao objeto de ClassType clsDataSource. <br />3. No Reporting Services, um tipo de fonte de dados, cadeia de conexão e credenciais especificados que podem ser salvos separadamente em um servidor de relatório e compartilhados entres projetos de relatórios, ou inseridos em um arquivo de definição de relatório (.rdl).|  
+|fonte de dados|1. No ADO e no OLE DB, a localização de uma fonte de dados exposta por um provedor OLE DB. 2. A fonte de dados de um objeto, como um cubo ou uma dimensão. Também é a especificação da informações necessárias para acessar dados de origem. Às vezes faz referência ao objeto de ClassType clsDataSource. <br />3. No Reporting Services, um tipo especificado de fonte de dados, cadeia de conexão e credenciais, que pode ser salvo separadamente em um servidor de relatório e compartilhado entres projetos de relatórios, ou inserido em um arquivo de definição de relatório (.rdl).|  
 |nome da fonte de dados|Em um relatório, o nome do objeto de fonte de dados.|  
 |tipo de dados|Um atributo que especifica o tipo de informações que pode ser armazenado em uma coluna, um parâmetro ou uma variável.|  
 |data warehouse|Um banco de dados especificamente estruturado para consulta e análise.|  
@@ -112,7 +110,7 @@ ms.locfileid: "56296464"
 |assinatura controlada por dados|Uma assinatura no Reporting Services que usa uma consulta para recuperar dados de assinatura de uma fonte de dados externa em tempo de execução.|  
 |conjunto de dados|1. No OLE DB para OLAP, o conjunto de dados multidimensionais que é o resultado da execução de uma instrução SELECT MDX.   <br />2. No Reporting Services, uma especificação nomeada que inclui uma definição de fonte de dados, uma definição de consulta e valores de parâmetro opcionais, campos calculados e informações de filtragem e ordenação como parte de um arquivo de definição de relatório (.rdl). Um arquivo .rdl pode ter vários conjuntos de dados.|  
 |DBCS|conjunto de caracteres de dois bytes|  
-|padrão|1. Um valor de dados, uma configuração de opção, uma ordenação ou um nome atribuído automaticamente pelo sistema, se um usuário não especificar o valor, a configuração, a ordenação ou o nome. 2. Uma ação executada automaticamente em determinados eventos, se o usuário não tiver especificado a ação a ser executada.|  
+|padrão|1. Um valor de dados, uma configuração de opção, uma ordenação ou um nome atribuído automaticamente pelo sistema se um usuário não especificar o valor, a configuração, a ordenação ou o nome. 2. Uma ação executada automaticamente em determinados eventos, se o usuário não tiver especificado a ação a ser executada.|  
 |banco de dados padrão|O banco de dados ao qual o usuário é conectado imediatamente após fazer logon no SQL Server.|  
 |instância padrão|A instância do SQL Server que usa o mesmo nome que o nome do computador no qual está instalada.|  
 |delimitador|1. No Transact-SQL, os caracteres que indicam o início e o fim de um nome de objeto, usando aspas duplas ("") ou colchetes ([]). 2. No Integration Services e no Reporting Services, caracteres que são usados para separar registros, campos ou cadeias de caracteres.|  
@@ -134,7 +132,7 @@ ms.locfileid: "56296464"
 |fontes de dados inseridas|Uma fonte de dados inserida é um elemento XML que representa uma conexão de dados e é incluída em uma única definição de relatório e usada por ela.|  
 |conjunto de dados inserido|Um conjunto de dados de relatório incluído em uma única definição de relatório ou uma única definição de parte de relatório.|  
 |criptografia|Um método para manter a confidencialidade de informações por meio da alteração de dados em um formulário ilegível.|  
-|entidade|1. No Reporting Services, uma entidade é uma coleção lógica de itens de modelo, inclusive campos de origem, funções, pastas e expressões, apresentados em termos de negócios familiares. 2. Nos Master Data Services, uma entidade é um objeto dentro de um modelo. Cada entidade contém membros relacionados que são definidos por atributos.|  
+|entidade|1. No Reporting Services, uma entidade é uma coleção lógica de itens de modelo, incluindo campos de origem, funções, pastas e expressões, apresentados em termos de negócios familiares. 2. Nos Master Data Services, uma entidade é um objeto dentro de um modelo. Cada entidade contém membros relacionados que são definidos por atributos.|  
 |enumeração|Um conjunto fixo de valores inteiros ou constantes de cadeia de caracteres que podem ser usados para especificar o valor de determinadas propriedades.|  
 |projeção equirretangular|Em um item de relatório de mapa, uma projeção cilíndrica equidistante muito simples na qual a coordenada horizontal é a longitude e a coordenada vertical é a latitude.|  
 |log de erros|1. No SQL Server, um arquivo de texto que registra informações do sistema. 2. No Integration Services, um registro de erros, avisos ou eventos que podem ser armazenados por vários provedores de logs, incluindo o SQL Server Profiler, o log de Eventos do Windows e o SQL Server.|  
@@ -148,7 +146,7 @@ ms.locfileid: "56296464"
 |campo|1. Uma área em uma janela ou registro que armazena um único valor de dados.  2. No Construtor de Relatórios, os campos de conjuntos de dados representam dados numéricos ou não numéricos de uma conexão de dados. Por exemplo, valores de vendas, vendas totais, nomes de clientes, identificadores de banco de dados, URLs, imagens e dados espaciais. Um relatório pode ter três tipos de campos: campos de conjunto de dados, campos calculados de conjunto de dados e campos internos.|  
 |filtro|1. Um conjunto de critérios que controla o conjunto de registros retornados como um conjunto de resultados.  2. Na Pesquisa de Texto Completo, com uma extensão de arquivo especificada, os filtros extraem o texto de um arquivo armazenado em um varbinary (máx.) ou coluna de imagem.|  
 |expressão de filtro|Uma expressão usada para filtrar dados no operador de Filtro.|  
-|arquivo simples|Um arquivo que consiste em registros de um único tipo de registro, no qual não há nenhuma informação sobre a estrutura inserida que administre relações entre os registros.|  
+|arquivo simples|Um arquivo que consiste em registros de um único tipo de registro, nos quais não há nenhuma informação sobre a estrutura inserida que administre relações entre os registros.|  
 |chave estrangeira|A coluna ou combinação de colunas cujos valores correspondem à chave primária (PK) ou chave exclusiva na mesma ou em outra tabela. Também conhecida como chave de referência.|  
 |tabela estrangeira|Uma tabela que contém uma chave estrangeira.|  
 |função|Um parte do código que opera como uma única unidade lógica. Uma função é chamada pelo nome, aceita parâmetros de entrada opcionais e retorna um parâmetro de status e de saída opcional.|  
@@ -166,7 +164,7 @@ ms.locfileid: "56296464"
 |mapa de calor|Um tipo de representação de mapa na qual a intensidade da cor de cada polígono corresponde aos dados analíticos relacionados. Por exemplo, valores baixos em um intervalo aparecem em azul (frio) e valores altos em vermelho (quente).|  
 |hierarquia|Uma estrutura de árvore lógica que organiza os membros de uma dimensão, de forma que cada membro tenha um membro pai e zero ou mais membros filho.|  
 |alta disponibilidade|Status de um recurso que permanece operacional e utilizável por clientes a maior parte do tempo com uma porcentagem muito baixa de falhas que interrompem o serviço.|  
-|HTML|Confira outro termo: Linguagem HTML|  
+|HTML|Consulte outro termo: Linguagem HTML|  
 |Visualizador de HTML|Uma interface do usuário que consiste em uma barra de ferramentas de relatório e em outros elementos de navegação para trabalhar com um relatório.|  
 |Linguagem HTML|Uma linguagem de marcação de texto usada para criar documentos para a Web. HTML define a estrutura e o layout de um documento Web usando uma variedade de marcas e atributos|  
 |identificador|O nome de um objeto em um banco de dados.|  
@@ -177,7 +175,7 @@ ms.locfileid: "56296464"
 |instância|1. Uma cópia do SQL Server em execução em um computador. 2. Uma cópia específica de um item de relatório, como uma parte de relatório, um sub-relatório, um membro dinâmico ou um grupo.|  
 |inteiro|Uma categoria de tipo de dados numérico que inclui os tipos de dados bigint, int, smallint e tinyint.|  
 |Protocolo IPSec|Regras que os computadores seguem para fornecer comunicação particular e segura pelas redes IP por meio do uso de serviços de segurança criptográfica.|  
-|IPsec|Confira outro termo: Protocolo IPSec|  
+|IPsec|Consulte outro termo: protocolo IPSec|  
 |ISO|Uma de duas agências de padrões internacionais responsáveis por desenvolver padrões de comunicação de dados internacionais. A ISO (International Organization for Standardization) trabalha intimamente com a IEC (International Electrotechnical Commission) para definir padrões de computação. Em conjunto, elas publicaram o padrão ISO/IEC SQL-92 para SQL.|  
 |atribuição de função em nível de item|Uma política de segurança que se aplica a um item na pasta do servidor de relatório.|  
 |definição de função em nível de item|um modelo de segurança que define uma função usada para controlar o acesso ou a interação com um item no namespace da pasta do servidor de relatório.|  
@@ -210,7 +208,7 @@ ms.locfileid: "56296464"
 |arquivo mestre|O arquivo instalado com versões anteriores do SQL Server usado para armazenar os bancos de dados do sistema mestre, modelo e tempdb, logs de transações, o banco de dados de exemplo de publicações e o log de transações.|  
 |campos de correspondência|Um conjunto de campos usados para criar um relacionamento entre dados analíticos e dados espaciais.|  
 |região de dados de matriz|Uma região de dados em um layout de relatório que oferece funcionalidade semelhante à de referências cruzadas e relatórios de Tabela Dinâmica. Em tempo de execução, conforme os dados e as regiões de dados do relatório são combinados, uma matriz cresce horizontalmente e verticalmente na página. Os valores das células da matriz exibem valores de agregação com escopo para a interseção dos grupos de linhas e de colunas aos quais a célula pertence.|  
-|MDX|Confira outro termo: Linguagem MDX|  
+|MDX|Consulte outro termo: linguagem MDX|  
 |projeção Mercador|Em um item de relatório de mapa, uma projeção de mapa cilíndrica criada por Gerardus Mercator em 1569.|  
 |metadados|Informações sobre as propriedades de dados, como o tipo de dados em uma coluna (numeric, text etc.) ou o comprimento de uma coluna; informações sobre um arquivo, como seu título, descrição, data de criação e data da última modificação; ou informações sobre a estrutura de dados ou informações que especificam o design de objetos, como cubos ou dimensões.|  
 |método|Uma função que executa uma ação por meio de um objeto COM, como no SQL-DMO, no OLE DB e no ActiveX Data Objects (ADO).|  
@@ -229,7 +227,7 @@ ms.locfileid: "56296464"
 |expressão numérica|Qualquer expressão avaliada como um número.|  
 |objeto|Um dos componentes de um banco de dados, como uma tabela, um índice ou um procedimento armazenado.|  
 |identificador de objeto|1. Um nome exclusivo dado a um objeto. 2. Nos Serviços de Metadados, um identificador exclusivo construído a partir de um GUID (identificador global exclusivo) e de um identificador interno.|  
-|Fonte de dados ODBC|1. O local de um conjunto de dados que pode ser acessado usando-se um driver ODBC. 2. Uma definição armazenada que contém todas as informações de conexão que um aplicativo ODBC exige para conectar-se à fonte de dados.|  
+|Fonte de dados ODBC|1. O local de um conjunto de dados que pode ser acessado por meio de um driver ODBC. 2. Uma definição armazenada que contém todas as informações de conexão que um aplicativo ODBC exige para conectar-se à fonte de dados.|  
 |driver ODBC|Uma DLL (biblioteca de vínculo dinâmico) que um aplicativo habilitado para ODBC, como o Excel, pode usar para acessar uma fonte de dados ODBC.|  
 |OGC|Open Geospatial Consortium|  
 |OLAP|Consulte outro termo: processamento analítico online|  
@@ -261,14 +259,14 @@ ms.locfileid: "56296464"
 |protocolo|Um conjunto padrão de formatos e procedimentos que permitem que computadores troquem informações.|  
 |provedor|1. Um provedor OLE DB. 2. Uma DLL (biblioteca de vínculo dinâmico) em processo que fornece acesso a um banco de dados.|  
 |parâmetros de consulta|Parâmetros que são especificados em uma consulta de conjunto de dados, como uma consulta Transact-SQL.|  
-|RDL|Confira outro termo: Linguagem RDL|  
+|RDL|Consulte outro termo: Linguagem de Definição de Relatório|  
 |registro|Um grupo de campos relacionados (colunas) de informações tratadas como uma unidade. Um registro é mais comumente chamado de uma linha em um banco de dados relacional.|  
 |retângulo|Um item de relatório que pode ser usado como um contêiner para vários itens de relatório ou como um elemento gráfico em um relatório.|  
 |hierarquia recursiva|1. Uma hierarquia de dados de um único conjunto de dados de relatório que inclui vários níveis hierárquicos em uma estrutura hierárquica, como a estrutura de subordinação para relações gerente-funcionário em uma hierarquia organizacional. 2. No Master Data Services, uma hierarquia derivada que inclui uma relação recursiva. Uma relação recursiva existe quando uma entidade tem um atributo baseado em domínio baseado na própria entidade.|  
 |banco de dados relacional|Um banco de dados ou um sistema de gerenciamento de banco de dados que armazena informações em tabelas, como linhas e colunas de dados, e conduz pesquisas por meio de dados em colunas especificadas de uma tabela para localizar dados adicionais em outra tabela.|  
 |sistema de gerenciamento de bancos de dados relacionais|Um sistema que organiza dados em linhas e colunas relacionadas.|  
 |OLAP relacional|Um modo de armazenamento que usa tabelas em um banco de dados relacional para armazenar estruturas multidimensionais.|  
-|relação|1. Um vínculo entre tabelas que faz referência à chave primária em uma tabela para uma chave estrangeira em outra tabela. A linha da relação é representada em um diagrama de banco de dados por uma linha sólida, se a integridade referencial entre as tabelas for imposta, ou por uma linha tracejada, se a integridade referencial não for imposta para transações INSERT e UPDATE. Os pontos de extremidade de uma linha de relação mostram o símbolo de uma chave primária para denotar uma relação entre chave primária e chave estrangeira, ou mostram um símbolo de infinito para denotar o lado da chave estrangeira de uma relação um para muitos. <br />2. Nos Serviços de Metadados, uma relação é uma associação entre um par de objetos em que um objeto é uma origem e o outro é um destino. A associação é repetida para cada par subsequente de objetos, de forma que o destino de uma relação se torna a origem da próxima relação. Desse modo, todos os objetos em um modelo de informações são associados por meio de uma cadeia de relações que se estendem de um objeto para o próximo em todo o modelo de informações.|  
+|relação|1. Um vínculo entre tabelas que faz referência à chave primária em uma tabela com uma chave estrangeira em outra tabela. A linha da relação é representada em um diagrama de banco de dados por uma linha sólida, se a integridade referencial entre as tabelas for imposta, ou por uma linha tracejada, se a integridade referencial não for imposta para transações INSERT e UPDATE. Os pontos de extremidade de uma linha de relação mostram o símbolo de uma chave primária para denotar uma relação entre chave primária e chave estrangeira, ou mostram um símbolo de infinito para denotar o lado da chave estrangeira de uma relação um para muitos. <br />2. Nos Serviços de Metadados, uma relação é uma associação entre um par de objetos em que um objeto é uma origem e o outro é um destino. A associação é repetida para cada par subsequente de objetos, de forma que o destino de uma relação se torna a origem da próxima relação. Desse modo, todos os objetos em um modelo de informações são associados por meio de uma cadeia de relações que se estendem de um objeto para o próximo em todo o modelo de informações.|  
 |relatório renderizado|Um relatório totalmente processado que contém informações de layout e de dados em um formato adequado para exibição.|  
 |extensão de renderização|Um componente no Reporting Services usado para processar o formato de saída de um relatório.|  
 |extensões de renderização|Um plug-in que renderiza relatórios para um formato específico.|  
@@ -283,12 +281,10 @@ ms.locfileid: "56296464"
 |layout de relatório|O posicionamento de regiões de dados, itens de relatório e texto dentro de um relatório e a formatação aplicada.|  
 |modelo de layout de relatório|Uma tabela pré-projetada, uma matriz ou um modelo de relatório de gráfico no Construtor de Relatórios.|  
 |link de relatório|Uma URL para um relatório vinculado por hiperlink.|  
-|modelo de relatório|Uma descrição de metadados de dados comerciais usados para criar relatórios ad hoc no Construtor de Relatórios.|  
 |parâmetro de relatório|Um parâmetro que é definido dentro de uma definição de relatório. Todos os parâmetros de consulta têm parâmetros de relatório, mas parâmetros de relatório podem ser criados independentemente de uma consulta.|  
 |partes de relatório|Itens de relatório que foram publicados separadamente em um servidor de relatório e podem ser reutilizados em outros relatórios. Itens de relatório como tabelas, matrizes, gráficos e imagens podem ser publicados como partes de relatório. As partes do relatório têm uma extensão de arquivo .rsc e estão em conformidade com o esquema componentdefinition.xsd.|  
 |extensão de processamento de relatório|Um componente do Reporting Services usado para estender a lógica de processamento de relatório.|  
 |renderização de relatório|A ação de combinar o layout do relatório com os dados da fonte de dados com a finalidade de exibir o relatório.|  
-|servidor de relatório|Um local na rede onde a versão ClickOnce do Construtor de Relatórios é iniciada e um relatório é salvo, gerenciado e publicado.|  
 |administrador do servidor de relatório|Um usuário com privilégios elevados que pode acessar todas as configurações e conteúdo de um servidor de relatório.|  
 |banco de dados do servidor de relatório|Um banco de dados que fornece armazenamento interno para um servidor de relatório.|  
 |conta de execução do servidor de relatório|A conta sob a qual o serviço Web Servidor de Relatório e o serviço Servidor de Relatório do Windows são executados.|  
@@ -300,13 +296,13 @@ ms.locfileid: "56296464"
 |controles ReportViewer|Um controle de servidor Web e do Windows Form que fornece processamento de relatório inserido em aplicativos do ASP.NET e do Windows Form.|  
 |recurso|Qualquer item em um banco de dados de servidor de relatório que não seja um relatório, uma pasta ou um item de fonte de dados compartilhado.|  
 |conjunto de resultados|O conjunto de linhas retornado de uma instrução SELECT.|  
-|função|1. Um usuário ou grupo ao qual um conjunto de permissões específicas é concedido.  <br />2. No Analysis Services, uma função usa contas de segurança do Windows para limitar o escopo de acesso e permissões quando os usuários acessam bancos de dados, cubos, dimensões e modelos de mineração de dados.  <br />3. Em uma sessão de espelhamento de banco de dados, o servidor principal e o servidor espelho executam funções espelho e complementares principais. Opcionalmente, a função de testemunha é executada por uma terceira instância de servidor.|  
+|função|1. Um usuário ou grupo ao qual um conjunto de permissões específicas é concedido.  <br />2. No Analysis Services, uma função usa contas de segurança do Windows para limitar o escopo de acesso e permissões quando os usuários acessam bancos de dados, cubos, dimensões e modelos de mineração de dados.  <br />3. Em uma sessão de espelhamento de banco de dados, o servidor principal e o servidor espelho executam funções espelho e principais complementares. Opcionalmente, a função de testemunha é executada por uma terceira instância de servidor.|  
 |atribuição de função|Uma política de segurança que define usuários e grupos que podem acessar itens específicos e executar determinadas operações.|  
 |definição de função|Uma coleção nomeada de tarefas que define as operações que podem ser executadas por um usuário em um servidor de relatório.|  
 |linha|Em uma tabela SQL, uma única ocorrência do objeto modelado pela tabela.|  
 |função de agregação de linhas|Uma função que gera valores resumidos que aparecem como linhas adicionais nos resultados da consulta.|  
 |filtro de linha|Um filtro que limita as linhas a serem incluídas em um conjunto de dados.|  
-|identificador de linha|1. Uma coluna ou conjunto de colunas usado para distinguir qualquer linha única de todas as outras linhas da tabela. 2. Em um heap, um ponteiro para a linha.|  
+|identificador de linha|1. Uma coluna ou conjunto de colunas usados para distinguir qualquer linha única de todas as outras linhas da tabela. 2. Em um heap, um ponteiro para a linha.|  
 |escalar|Um campo de valor único, em vez de uma agregação.|  
 |agregação escalar|Uma função de agregação, como MIN(), MAX() ou AVG(), que é especificada em uma lista de colunas da instrução SELECT que contém somente funções de agregação.|  
 |esquema|No padrão do SQL-92, uma coleção de objetos de banco de dados que são se propriedade de um único usuário e formam um único namespace. Um namespace é um conjunto de objetos que não podem ter nomes duplicados.|  
@@ -329,14 +325,14 @@ ms.locfileid: "56296464"
 |SKU|Um modo de identificar edições diferentes de um produto. Também é um acrônimo de Stock Keeping Unit (unidade de manutenção de estoque) (terminologia comercial padrão).|  
 |fatia|Um subconjunto dos dados em um cubo, especificado por meio da limitação de uma ou mais dimensões por membros da dimensão.|  
 |marca inteligente|Uma marca inteligente expõe configurações-chave diretamente na superfície de design para aumentar a produtividade global em tempo de design no Visual Studio 2005.|  
-|SMDL|Confira outro termo: linguagem SMDL|  
+|SMDL|Consulte outro termo: linguagem SMDL|  
 |instantâneo|Consulte outro termo: instantâneo de relatório|  
 |ordem de classificação|O conjunto de regras em uma ordenação que definem como os caracteres são avaliados em operações de comparação e a sequência na qual eles são classificados.|  
 |dados espaciais|Dados que especificam localizações de objetos em uma superfície plana ou curva. Os dados espaciais podem ser pontos, linhas ou polígonos.|  
 |tipos de dados espaciais|Especifica dados que representam informações geométricas (planares) ou geográficas (geodésicas).|  
-|SQL|Confira outro termo: SQL (Structured Query Language)|  
+|SQL|Consulte outro termo: linguagem SQL|  
 |consulta SQL|Uma instrução SQL, como SELECT, INSERT, UPDATE, DELETE ou CREATE TABLE.|  
-|Autenticação do SQL Server|O mecanismo para validar uma tentativa de conectar-se a uma instância do SQL Server especificando uma ID de logon e uma senha do SQL Server.|  
+|Autenticação do SQL Server|O mecanismo para validar uma tentativa de conexão a uma instância do SQL Server, especificando uma ID de logon e uma senha do SQL Server.|  
 |logon do SQL Server|Uma conta armazenada no SQL Server que permite que os usuários se conectem ao SQL Server.|  
 |instrução SQL|Um comando SQL ou Transact-SQL, como SELECT ou DELETE, que executa uma ação nos dados.|  
 |cadeia de conexão estática|Um conjunto de valores que o relatório usa para conectar-se à mesma fonte de dados sempre que é executado.|  
@@ -363,11 +359,10 @@ ms.locfileid: "56296464"
 |Instrumentação de Gerenciamento do Windows|Uma interface que fornece informações sobre objetos em um ambiente gerenciado.|  
 |WKB|Representação de dados WKB (Well Known Binary) conforme o especificado pelo OGC (Open Geospatial Consortium).|  
 |WKT|Representação de dados WKT (Well Known Text) conforme o especificado pelo OGC (Open Geospatial Consortium).|  
-|WMI|Confira outro termo: Instrumentação de Gerenciamento do Windows|  
+|WMI|Consulte outro termo: Instrumentação de Gerenciamento do Windows|  
 |eixo x|Consulte outro termo: eixo de categoria (x)|  
 |eixo y|Consulte outro termo: eixo de valor (y)|  
   
-## <a name="see-also"></a>Consulte Também  
- [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
-  
-  
+## <a name="see-also"></a>Confira também
+
+ [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)

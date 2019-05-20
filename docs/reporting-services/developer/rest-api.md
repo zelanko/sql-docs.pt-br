@@ -1,21 +1,21 @@
 ---
 title: Desenvolver com as APIs REST para o Reporting Services | Microsoft Docs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: c3ea066f93f2848ed822fdac24f37b2c5f179ac9
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+ms.openlocfilehash: d4f4af8dc03713046915f61effc684003303aaa9
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254691"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502738"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Desenvolver com as APIs REST para o Reporting Services
 
@@ -33,8 +33,8 @@ Um par de solicitação/resposta da API REST pode ser separado em cinco componen
 
 * O **URI de solicitação**, que consiste em `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`. Embora o URI de solicitação seja incluído no cabeçalho da mensagem de solicitação, chamamos o URI separadamente aqui porque a maioria das linguagens ou estruturas exige que ele seja passado separadamente da mensagem de solicitação.
 
-    * Esquema do URI: indica o protocolo usado para transmitir a solicitação. Por exemplo, `http` ou `https`.
-    * Host do URI: especifica o nome de domínio ou o endereço IP do servidor no qual o ponto de extremidade de serviço REST está hospedado, como `myserver.contoso.com`.
+    * Esquema de URI: indica o protocolo usado para transmitir a solicitação. Por exemplo, `http` ou `https`.
+    * Host de URI: especifica o nome de domínio ou o endereço IP do servidor no qual o ponto de extremidade de serviço REST está hospedado, como `myserver.contoso.com`.
     * Caminho do recurso: especifica o recurso ou a coleção de recursos, que pode incluir vários segmentos usados pelo serviço para determinar a seleção desses recursos. Por exemplo: `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` pode ser usado para obter as propriedades especificadas para o CatalogItem.
     * Cadeia de consulta (opcional): fornece parâmetros adicionais simples, como a versão de API ou os critérios de seleção de recursos.
 
@@ -56,7 +56,7 @@ Um par de solicitação/resposta da API REST pode ser separado em cinco componen
 
 ## <a name="api-documentation"></a>Documentação da API
 
-Uma API REST moderna necessita de uma documentação de API moderna. A API REST baseia-se na especificação OpenAPI (também conhecida como a especificação do Swagger) e a documentação está disponível no [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Além da documentação da API, o SwaggerHub ajuda a gerar uma biblioteca de cliente na linguagem de sua preferência – JavaScript, TypeScript, C#, Java, Python, Ruby e muito mais.
+Uma API REST moderna necessita de uma documentação de API moderna. A API REST baseia-se na especificação OpenAPI (também chamada a especificação do swagger) e a documentação está disponível no [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Além da documentação da API, o SwaggerHub ajuda a gerar uma biblioteca de cliente na linguagem de sua preferência – JavaScript, TypeScript, C#, Java, Python, Ruby e muito mais.
 
 ## <a name="testing-api-calls"></a>Testando chamadas à API
 

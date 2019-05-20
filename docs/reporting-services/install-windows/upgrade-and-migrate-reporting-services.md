@@ -1,36 +1,39 @@
 ---
 title: Atualizar e migrar o Reporting Services | Microsoft Docs
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 helpviewer_keywords:
 - SSRS, upgrading
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.topic: conceptual
 ms.date: 08/17/2017
-ms.openlocfilehash: e1c32d07408f9eaf2beeaff5d92865520b49f08d
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MTE75
+ms.openlocfilehash: 9717b74c7f59bec8da91fcbd24d4fbb2d79175d0
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583359"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502630"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
   Este tópico é uma visão geral das opções de atualização e migração do SQL Server Reporting Services. Há duas abordagens gerais para fazer upgrade de uma implantação do SQL Server Reporting Services:  
-  
+ 
 -   **Atualizar:** você atualiza os componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos servidores e instâncias onde elas estão instalados atualmente. Isto é geralmente chamado de atualização “no local”. A atualização in-loco não tem suporte de um modo de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para outro. Por exemplo, você não pode atualizar um servidor de relatório de modo nativo para um servidor de relatório no modo do SharePoint. Você pode migrar seus itens de relatório de um modo para outro. Para obter mais informações, confira a seção 'Migração do modo nativo para o SharePoint' mais adiante neste documento.  
   
 -   **Migrar**: Você instala e configura um novo ambiente do SharePoint, copia seus itens de relatório e recursos para o novo ambiente, e configura o novo ambiente para usar o conteúdo existente. Uma forma de nível inferior de migração é copiar os bancos de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], arquivos de configuração e, se estiver usando o modo do SharePoint, os bancos de dados de conteúdo do SharePoint.  
     
 > **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo do SharePoint
-  
+
+> [!NOTE]
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
+   
 ##  <a name="bkmk_known_issues"></a> Problemas de atualização conhecidos e práticas recomendadas  
  Para obter uma lista detalhada das edições e versões com suporte que você pode atualizar, consulte [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
@@ -220,7 +223,7 @@ ms.locfileid: "59583359"
   
 -   Grave o código que chama o provedor WMI para copiar dados entre bancos de dados. Para obter mais informações sobre essa abordagem, veja [Acessar o provedor WMI do Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
--   Se houver poucos itens, você poderá republicar relatórios, modelos de relatório e fontes de dados compartilhadas do Designer de Relatórios, do Designer de Modelo e do Construtor de Relatórios no novo servidor de relatório. Você deve recriar atribuições de função, assinaturas, agendas compartilhadas, agendas de instantâneo de relatório, propriedades personalizadas definidas em relatórios ou outros itens, segurança de item de modelo e propriedades definidas no servidor de relatório. Você perderá os dados do histórico de relatório e do log de execução de relatório.  
+-   Se houver poucos itens, você poderá republicar relatórios e fontes de dados compartilhadas do Designer de Relatórios, do Designer de Modelo e do Construtor de Relatórios no novo servidor de relatório. Você deve recriar atribuições de função, assinaturas, agendas compartilhadas, agendas de instantâneo de relatório, propriedades personalizadas definidas em relatórios ou outros itens, segurança de item de modelo e propriedades definidas no servidor de relatório. Você perderá os dados do histórico de relatório e do log de execução de relatório.  
   
   
 ##  <a name="bkmk_additional_resources"></a> Recursos adicionais  

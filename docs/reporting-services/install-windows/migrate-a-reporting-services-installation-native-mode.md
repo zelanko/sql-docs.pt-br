@@ -1,18 +1,18 @@
 ---
 title: Migrar uma instalação do Reporting Services (Modo Nativo) | Microsoft Docs
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.date: 11/06/2018
-ms.openlocfilehash: 2e7c5d6ecaebcdad5b3e2d9d23b4660f12e0bad7
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 96b55cafe46994f44f496679f2d66f887baf4dce
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712417"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503596"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrar uma instalação do Reporting Services (Modo Nativo)
 
@@ -38,9 +38,10 @@ Este tópico contém instruções passo a passo sobre como migrar uma das seguin
 * [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
 * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
-::: moniker-end
 
 Para obter informações sobre como migrar uma implantação do modo do SharePoint do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , veja [Migrar uma instalação do Reporting Services &#40;modo do SharePoint&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
+
+::: moniker-end
   
  A migração é definida como a movimentação de arquivos de dados de aplicativo para uma nova instância do SQL Server. Estes são os motivos comuns para a migração da sua instalação:  
   
@@ -89,7 +90,7 @@ Para obter informações sobre como migrar uma implantação do modo do SharePoi
   
 * Grave o código que chama o provedor WMI para copiar dados entre bancos de dados. Para obter mais informações sobre essa abordagem, veja [Acessar o provedor WMI do Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
-* Se houver poucos itens, você poderá republicar relatórios, modelos de relatório e fontes de dados compartilhadas do Designer de Relatórios, do Designer de Modelo e do Construtor de Relatórios no novo servidor de relatório. Recrie atribuições de função, assinaturas, agendamentos compartilhados, agendamentos de instantâneo, propriedades personalizadas definidas em relatórios ou outros itens, segurança de item de modelo e propriedades definidas no servidor de relatório. Esteja preparado para perder o histórico de relatórios e os dados de log de execução de relatório se você seguir essas ações.
+* Se houver poucos itens, é possível republicar relatórios e fontes de dados compartilhadas do Designer de Relatórios, do Designer de Modelos e do Construtor de Relatórios no novo servidor de relatório. Recrie atribuições de função, assinaturas, agendamentos compartilhados, agendamentos de instantâneo, propriedades personalizadas definidas em relatórios ou outros itens, segurança de item de modelo e propriedades definidas no servidor de relatório. Esteja preparado para perder o histórico de relatórios e os dados de log de execução de relatório se você seguir essas ações.
   
 ## <a name="bkmk_before_you_start"></a> Antes de iniciar
 

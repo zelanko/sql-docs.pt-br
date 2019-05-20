@@ -1,64 +1,69 @@
 ---
-title: 'Lição 2: Especificar informações de conexão (Reporting Services) | Microsoft Docs'
-ms.date: 05/23/2016
+title: 'Lição 2: Especificando informações de conexão (Reporting Services) | Microsoft Docs'
+ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: da47a0fd587d48dd9d932504d6a5cd45d0d54664
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0a0c21b2662fc14977c4ac57687754d15d544994
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294694"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106054"
 ---
-# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lição 2: Especificar informações de conexão (Reporting Services)
-Depois de adicionar um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ao de projeto de Tutorial na Lição 1, agora você precisa definir uma *fonte de dados*, que são informações de conexão usadas pelo relatório para acessar dados de um banco de dados relacional, banco de dados multidimensional ou outra origem.  
-  
-Nesta lição, você usa o banco de dados de exemplo [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] como a fonte de dados. Este tutorial pressupõe que esse banco de dados esteja localizado em uma instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] instalado no computador local.  
-  
-### <a name="to-set-up-a-connection"></a>Para configurar uma conexão  
-  
-1.  No painel **Dados do Relatório** , clique em **Nova** e em **Data Source**.  
-Se o painel **Dados do Relatório** não estiver visível, no menu **Exibir** , clique em **Dados do Relatório**.  
+# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lição 2: Especificando informações sobre conexão (Reporting Services)
 
-    ![ssrs-table-tutorial-2-new-data-source](../reporting-services/media/ssrs-table-tutorial-2-new-data-source.png)
+Na lição 1, você adicionou um relatório paginado do [!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-md.md)] ao seu projeto do Tutorial.
   
-   2.  Em **Nome**, digite *AdventureWorks2014*.  
-  
-3.  Garanta que a opção **Conexão inserida** está selecionada.  
-  
-4.  Em **Tipo**, selecione **Microsoft SQL Server**.  
-  
-5.  Em **Cadeia de conexão**, digite o seguinte:  
-  
-    ```  
-    Data source=localhost; initial catalog=AdventureWorks2014  
-    ```  
-  
-     Esta cadeia de conexão assume que o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], o servidor de relatório e o banco de dados [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] estão instalados no computador local e que você tem permissão para fazer logon no banco de dados [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] . Se o banco de dados AdventureWorks2014 não estiver no computador local, altere a cadeia de conexão e substitua *localhost* pelo nome da instância do servidor de banco de dados.
-  
-     >[!NOTE]  
-    >Se estiver usando o [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] com Serviços Avançados ou uma instância nomeada, a cadeia de conexão deverá incluir informações da instância:  
-    >  
-    >`Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2014`  
-    >  
-    >Para obter mais informações sobre cadeias de conexão, consulte: [Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
-     
-  
-6.  Clique em **Credenciais** no painel esquerdo e clique em **Usar Autenticação do Windows (segurança integrada)**.  
-  
-7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] A fonte de dados do **AdventureWorks2014** é adicionada ao painel **Dados do Relatório** .  
-![ssrs_adventureworks_datasource](../reporting-services/media/ssrs-adventureworks-datasource.png)  
-## <a name="next-task"></a>Próxima tarefa  
-Você definiu uma conexão com o banco de dados de exemplo [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] com êxito. Em seguida, você criará o relatório. Confira [Lição 3: Definir um conjunto de dados para o relatório de tabela &#40;Reporting Services&#41;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
-  
-## <a name="see-also"></a>Consulte Também  
-[Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
-  
-  
-  
+Nesta lição, você definirá uma *fonte de dados*, as informações de conexão que o relatório usa para acessar dados de um banco de dados relacional ou de outras fontes.
 
+Neste relatório, você adicionará o banco de dados de exemplo AdventureWorks2016 como sua fonte de dados. Este tutorial assume que esse banco de dados está localizado na instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] instalada no computador local.  
+
+## <a name="to-set-up-a-connection"></a>Para configurar uma conexão  
+
+1. No painel **Dados do Relatório**, selecione **Nova** > **Fonte de Dados**. Se o painel **Dados do Relatório** não estiver visível, selecione o menu **Exibição** > **Dados de Relatório**.
+
+    ![ssrs-table-tutorial-2-new-data-source](media/ssrs-table-tutorial-2-new-data-source.png)
+
+    A caixa de diálogo **Propriedades da Fonte de Dados** é aberta exibindo a seção **Geral**.
+
+    ![Caixa de diálogo Propriedades da Fonte de Dados](media/lesson-2-specifying-connection-information-reporting-services/vs-datasource-connection-properties-dialog-box.png)
+
+2. Na caixa de texto **Nome**, digite "AdventureWorks2016".
+
+3. Selecione o botão de opção **Conexão inserida**.
+
+4. Na caixa de seleção suspensa **Tipo**, selecione "Microsoft SQL Server".
+  
+5. Na caixa de texto **Cadeia de conexão**, digite a seguinte cadeia de caracteres:
+
+    `Data source=localhost; initial catalog=AdventureWorks2016`
+
+    > [!NOTE]
+    > Esta cadeia de conexão assume que [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], o servidor de relatório, e o banco de dados AdventureWorks2016 estão instalados no computador local.
+    >
+    >Altere a cadeia de conexão e substitua o "localhost" pelo nome do seu servidor/instância do banco de dados se a suposição não for verdadeira. Se estiver usando [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] ou uma instância nomeada do SQL Server, você precisará modificar a cadeia de conexão para incluir as informações da instância. Por exemplo:
+    >
+    > `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2016`
+    >
+    > Para obter mais informações sobre cadeias de conexão, você pode conferir a seção `See also` abaixo.
+
+6. Selecione a guia **Credenciais** e, na seção **Alterar as credenciais usadas para se conectar à fonte de dados**, selecione o botão de opção **Usar a Autenticação do Windows (segurança integrada)**.
+
+7. Selecione **OK** para concluir o processo.
+
+O Designer de Relatórios adiciona a fonte de dados AdventureWorks2016 no painel **Dados de Relatório**.
+
+![ssrs-adventureworks-datasource](media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-datasource2016.png)
+
+## <a name="next-steps"></a>Próximas etapas
+
+Nesta lição, você definiu com êxito uma conexão ao banco de dados de exemplo AdventureWorks2016. Continue na [Lição 3: Definir um conjunto de dados para o relatório de tabela &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).
+
+## <a name="see-also"></a>Confira também
+
+[Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

@@ -1,80 +1,70 @@
 ---
-title: 'Lição 1: Criar um projeto do servidor de relatório (Reporting Services) | Microsoft Docs'
-ms.date: 11/30/2016
+title: 'Lição 1: Criando um projeto do servidor de relatório (Reporting Services) | Microsoft Docs'
+ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 72d337f441d3aabb5dc1ee8801a5cec200904d23
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c3a32b6b27a8919d729c95bfe29f50c2bda81db8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292344"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095851"
 ---
-# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lição 1: Criar um projeto do servidor de relatórios (Reporting Services)
+# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lição 1: Criando um projeto do servidor de relatórios (Reporting Services)
 
-Nesta lição, você criará um *projeto do servidor de relatórios* e um *arquivo de definição de relatório (.rdl)* [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] no Visual Studio. 
+Nesta lição, você criará um *projeto do servidor de relatórios* e um arquivo de *definição de relatório (.rdl)* no *Designer de Relatórios*.
 
-Para criar um relatório com o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], primeiro você precisa de um projeto do servidor de relatório em que possa salvar o arquivo de definição (.rdl) do relatório e outros arquivos de recursos de que precisa para o relatório. 
+> [!NOTE]
+> [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] é um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ambiente para criar soluções de business intelligence. O SSDT contém um ambiente de autoria do Designer de Relatórios, em que você pode abrir, modificar, visualizar, salvar e implantar [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] definições de relatório paginados, fontes de dados compartilhados, conjuntos de dados compartilhados e partes de relatório.
 
-Nas próximas lições, você define uma fonte de dados para o relatório, define um conjunto de dados e define o layout do relatório. Quando você executa o relatório, os dados são recuperados e combinados ao layout e renderizados na tela. Depois disso, você pode exportá-los, imprimi-los ou salvá-los.  
+Criar relatórios com o Designer de Relatórios significa que você cria um projeto do servidor de relatório que contém os arquivos de relatórios e outros arquivos de recursos usados pelos relatórios.
+
+## <a name="to-create-a-report-server-project"></a>Para criar um projeto do servidor de relatórios
   
-  
-  
-## <a name="to-create-a-report-server-project"></a>Para criar um projeto do servidor de relatórios  
-  
-1.  Abra o [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)].  
-  
-2.  No menu **Arquivo** > **Novo** > **Projeto**.  
+1. No menu **Arquivo**, selecione **Novo** > **Projeto**.  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
-3.  Em **Instalados** > **Modelos** > **Business Intelligence**, clique em **Reporting Services**.
+2. Na coluna mais à esquerda em **Instalado**, selecione **Reporting Services**. Em alguns casos, talvez ele esteja no grupo **Business Intelligence**.
 
-    ![ssrs-ssdt-01-new-rs-project](../reporting-services/media/ssrs-ssdt-01-new-rs-project.png)
+    ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
-5. Clique em **Projeto do Servidor de Relatório** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png). 
+    > [!IMPORTANT]
+    > No VS, se você não vir o Reporting Services na coluna esquerda, adicione o Designer de Relatórios ao instalar a carga de trabalho do SSDT. No menu **Ferramentas**, selecione **Obter Ferramentas e Funcionalidades...**  e selecione **SQL Server Data Tools** nas cargas de trabalho exibidas. Se você não vir os objetos de serviços de relatórios na coluna central, adicione as extensões do Reporting Services. No menu **Ferramentas**, selecione **Extensões e Atualizações** > **Online**. Na coluna central, selecione **Projetos do Microsoft Reporting Services** > **Baixar** nas extensões exibidas. Para SSDT, confira [Baixar o SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
-   >**Observação**: se as opções **Business Intelligence** ou **Projeto do Servidor de Relatório** não estiverem visíveis, será necessário atualizar o SSDT com os modelos de Business Intelligence. Consulte [Baixar o SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md)  
-  
-5.  Em **Nome**, digite **Tutorial**.  
+3. Selecione o ícone **Projeto de Servidor de Relatório** &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;na coluna central da caixa de diálogo **Novo Projeto**.
 
-    Por padrão, ele é criado na pasta Visual Studio 2015\Projects em um novo diretório.
-    
-    ![ssrs-ssdt-01-solution-location](../reporting-services/media/ssrs-ssdt-01-solution-location.png)
-  
-6.  Clique em **OK** para criar o projeto.  
-  
-    O projeto Tutorial é exibido no painel Gerenciador de Soluções, à direita.  
-  
-## <a name="to-create-a-new-report-definition-file"></a>Para criar um novo arquivo de definição de relatório  
-  
-1.  No painel **Gerenciador de Soluções** , clique com o botão direito do mouse em **Relatórios** > **Adicionar** > **Novo Item**. 
+4. Na caixa de texto **Nome**, digite "Tutorial" como o nome do projeto. Por padrão, a caixa de texto **Local** exibe o caminho para a pasta "Documentos\Visual Studio 20xx\Projetos\". O Designer de Relatórios cria a pasta Tutorial nesse caminho e cria o projeto do Tutorial nessa pasta. Se o projeto não pertencer a uma solução VS, então o VS também cria um arquivo de solução (.sln).
 
-    >**Dica**: se você não vir o painel **Gerenciador de Soluções** , no menu **Exibir**, clique em **Gerenciador de Soluções**. 
+5. Selecione **OK** para criar o projeto. O projeto Tutorial é exibido no painel **Gerenciador de Soluções** à direita.
+  
+## <a name="creating-a-report-definition-file-rdl"></a>Criar um arquivo de definição de relatório (RDL)  
+  
+1. No painel **Gerenciador de Soluções**, clique com o botão direito do mouse na pasta **Relatórios**. Se você não vir o painel **Gerenciador de Soluções**, selecione o menu **Exibir** > **Gerenciador de Soluções**.
+
+2. Selecione **Adicionar** > **Novo Item**.
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
-  
-2.  Na janela **Adicionar Novo Item** , clique em **Relatório** ![ssrs_ssdt_report](../reporting-services/media/ssrs-ssdt-report.png).  
-  
-3.  Em **Nome**, digite **Sales Orders.rdl** e clique em **Adicionar**.  
-  
-    O Designer de Relatórios abre e exibe o novo arquivo .rdl na exibição Design.  
-    
-    ![ssrs-ssdt-01-new-report-designer](../reporting-services/media/ssrs-ssdt-01-new-report-designer.png)
-  
-     O Designer de Relatórios é um componente do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que é executado no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Ele tem dois modos de exibição: **Design** e **Visualização**. Clique em cada guia para alterar exibições.  
-  
-    Você define os dados no painel **Dados do Relatório** . Você define o layout do relatório no modo **Design** . É possível executar o relatório e ver sua aparência na exibição **Visualização** .  
-  
-## <a name="next-lesson"></a>Próxima lição  
-Você criou um projeto de relatório chamado "Tutorial" e adicionou um arquivo de definição de relatório (.rdl) ao projeto de relatório com êxito. Em seguida, você especificará uma fonte de dados para usar para o relatório. Veja a [Lição 2: Especificar informações sobre conexão &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
-  
-## <a name="see-also"></a>Consulte Também  
-[Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
-  
 
+3. Na janela **Adicionar Novo Item**, selecione o ícone **Relatório**.
+
+4. Digite "Pedidos de Vendas.rdl" na caixa de texto **Nome**.
+
+5. Selecione o botão **Adicionar** no canto inferior direito da caixa de diálogo **Adicionar Novo Item** para concluir o processo. O Designer de Relatórios abre e exibe o novo arquivo do relatório de Pedido de Vendas no modo de exibição de Design.
+
+    ![ssrs-ssdt-01-new-report-designer](media/ssrs-ssdt-01-new-report-designer.png)
+
+## <a name="next-steps"></a>Próximas etapas
+
+Até agora, você criou o projeto de relatório do Tutorial e o relatório Pedidos de Vendas. Nas próximas lições, você aprenderá como:
+
+- Configura uma fonte de dados para o relatório.
+- Criar um conjunto de dados a partir da fonte de dados.
+- Criar e formatar o layout do relatório.
+
+Continue na [Lição 2: especificar informações da conexão &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).

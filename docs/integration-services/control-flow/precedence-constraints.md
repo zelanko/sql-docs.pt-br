@@ -20,14 +20,18 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6df83cd3a7609097a6e27bd92c59daf24458548
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4d6daa4efcd865502429dad0cc8edd498e8a94f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283050"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727561"
 ---
 # <a name="precedence-constraints"></a>Restrições de precedência
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   As restrições de precedência vinculam executáveis, contêineres e tarefas em pacotes em um fluxo de controle e especificam condições que determinam a execução de executáveis. Um executável pode ser um contêiner Loop For, Loop Foreach ou Sequência; uma tarefa; ou um manipulador de eventos. Os manipuladores de eventos também usam restrições de precedência para vincular os seus executáveis a um fluxo de controle.  
   
  Uma restrição de precedência vincula dois executáveis: o de precedência e o restrito. O executável de precedência é executado antes do executável restrito e o resultado da execução do executável de precedência poderá determinar se o executável restrito será executado. O diagrama a seguir mostra dois executáveis vinculados por uma restrição de precedência.  
@@ -143,7 +147,7 @@ Use a caixa de diálogo **Editor de Restrição de Precedência** para configura
   
 2.  No Gerenciador de Soluções, clique duas vezes no pacote para abri-lo.  
   
-3.  Clique na guia **Fluxo de Controle** . Na superfície de design da guia **Fluxo de Controle** , clique com o botão direito do mouse na restrição de precedência e clique em **Propriedades**. Na janela Propriedades, modifique os valores de propriedade.  
+3.  Clique na guia **Fluxo de Controle** . Na superfície de design da guia Fluxo de Controle , clique com o botão direito do mouse na restrição de precedência e clique em **Propriedades**. Na janela Propriedades, modifique os valores de propriedade.  
   
 4.  Na janela **Propriedades** , defina as seguintes propriedades de leitura/gravação de restrições de precedência:  
   

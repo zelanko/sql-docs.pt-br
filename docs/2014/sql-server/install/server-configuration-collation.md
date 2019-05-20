@@ -40,7 +40,7 @@ ms.locfileid: "62653994"
 ## <a name="best-practices"></a>Práticas recomendadas  
  Para obter mais informações sobre uma tabela de localidades de Sistema do Windows e as ordenações padrão correspondentes usadas pela Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Configurações de ordenação na Instalação](https://go.microsoft.com/fwlink/?LinkId=190977).  
   
- Se possível, use uma ordenação exclusiva para sua organização. Dessa forma, não será preciso especificar explicitamente a ordenação para cada banco de dados, coluna, expressão ou identificador. Se você precisar trabalhar com várias ordenações e configurações de página de códigos diferentes, codifique suas consultas para considerar as regras da precedência de ordenação. Para obter mais informações, confira o tópico [Precedência de ordenação &amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/collation-precedence-transact-sql) nos Manuais Online.  
+ Se possível, use uma ordenação exclusiva para sua organização. Dessa forma, não será preciso especificar explicitamente a ordenação para cada banco de dados, coluna, expressão ou identificador. Se você precisar trabalhar com várias ordenações e configurações de página de códigos diferentes, codifique suas consultas para considerar as regras da precedência de ordenação. Para obter mais informações, confira o tópico [Precedência de ordenação &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql) nos Manuais Online.  
   
  Quando você selecionar uma ordenação para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], considere as seguintes recomendações:  
   

@@ -1,8 +1,8 @@
 ---
 title: Conceder acesso ao usuário a um servidor de relatório | Microsoft Docs
-ms.date: 05/15/2017
+ms.date: 05/6/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2baff221e28428daaf57deb8aaec7e8eb6d0d267
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d255d798bc73d446c22dff112606165a1def8ea4
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021850"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449693"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Conceder acesso ao usuário a um servidor de relatório
 
@@ -29,7 +29,7 @@ ms.locfileid: "50021850"
 
  **Servidores de relatório do modo do SharePoint:** para um servidor de relatório configurado para o modo integrado do SharePoint, configure o acesso a partir de um site do SharePoint usando permissões do SharePoint. Os níveis de permissão no site do SharePoint determinam o acesso ao conteúdo e às operações de servidor de relatório. Você deve ser um administrador de site para conceder permissões em um site do SharePoint. Para obter mais informações, consulte [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).
 
- **Servidores de relatório no modo nativo:** este tópico destina-se a um servidor de relatório configurado para o modo nativo e o uso do portal da Web para atribuir usuários a uma função. Existem dois tipos de funções:
+ **Servidores de relatório no modo nativo:** este artigo destina-se a um servidor de relatório configurado para o modo nativo e o uso do portal da Web para atribuir usuários a uma função. Existem dois tipos de funções:
 
 - As funções do nível de item são usadas para exibir, adicionar e gerenciar o conteúdo do servidor de relatório, as assinaturas, o processamento de relatórios e o histórico de relatórios. As atribuições de função do nível de item são definidas no nó raiz (a pasta Base) ou em pastas ou itens específicos mais distantes da hierarquia.
 
@@ -61,7 +61,7 @@ Revise a lista a seguir antes de adicionar usuários a um servidor de relatório
 
 5. Selecione **Adicionar grupo ou usuário**.
 
-6. Em **Grupo ou usuário**, insira uma conta de usuário ou grupo de domínio do Windows neste formato: \<domain>\\<account\>. 
+6. Em **Grupo ou usuário**, insira uma conta de usuário ou grupo de domínio do Windows neste formato: \<domain>\\<account\>.
 
     > [!NOTE]
     > Se estiver usando a autenticação de formulários ou a segurança personalizada, especifique a conta de usuário ou grupo no formato correto de sua implantação.
@@ -95,10 +95,8 @@ Revise a lista a seguir antes de adicionar usuários a um servidor de relatório
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Criar e gerenciar atribuições de função](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[Página Atribuição de Nova Função: Editar Atribuição de Função &#40;Gerenciador de Relatórios&#41;](https://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[Página Propriedades de Segurança, Itens &#40;Gerenciador de Relatórios&#41;](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
-[Atribuições de função](../../reporting-services/security/role-assignments.md)   
+[Criar e gerenciar atribuições de função](../../reporting-services/security/create-and-manage-role-assignments.md)  
+[Atribuições de função](../../reporting-services/security/role-assignments.md)  
 [Definições de função](../../reporting-services/security/role-definitions.md)  
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

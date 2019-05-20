@@ -1,161 +1,131 @@
 ---
-title: 'Lição 6: Adicionar agrupamentos e totais (Reporting Services) | Microsoft Docs'
-ms.date: 05/23/2016
+title: 'Lição 6: Adicionando agrupamentos e totais (Reporting Services) | Microsoft Docs'
+ms.date: 04/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 24d21ae735b44a7068ca929515b66e8a33aade8d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b5b9846a20615cf613dd50752ac63f2669b1e399
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290074"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089674"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lição 6: Adicionando agrupamentos e totais (Reporting Services)
-Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para organizar e resumir os dados.  
-  
-  
-## <a name="bkmk_groupdata"></a>Para agrupar dados em um relatório  
-  
-1.  Clique na guia **Design** .  
-  
-2.  Se o painel **Grupos de linhas** não estiver visível, clique com o botão direito do mouse na superfície de design, em seguida, clique em **Exibir** e em **Agrupamento**.  
-  
-3.  No painel **Dados do Relatório** , arraste o campo **Date** para o painel **Grupos de Linhas** . Coloque-o acima da linha chamada **(Detalhes)**.
-  
-    Observe que a alça de linha agora exibe um colchete para mostrar um grupo. A tabela também tem duas colunas Data – uma em cada lado de uma linha pontilhada vertical.  
-  
-    ![grupo de datas adicionado](../reporting-services/media/rs-basictablegroups1design.png "grupo de datas adicionado")  
-  
-4.  No painel **Dados do Relatório** , arraste o campo **Order** para o painel **Grupos de Linhas** . Coloque-o abaixo de Data e acima de **(Detalhes)**.
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 
-    ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
-  
-    Observe que o identificador de linha agora exibe dois colchetes ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png), para mostrar dois grupos. A tabela também tem duas colunas **Pedido** .  
-  
-5.  Exclua as colunas **Data** e **Pedido** originais à **direita** da linha dupla. Isso removerá os valores do registro individual para que apenas o valor do grupo seja exibido. Selecione as alças de coluna das duas colunas, clique com o botão direito do mouse e clique em **Excluir Colunas**.  
-  
-    ![Selecionar colunas a serem excluídas](../reporting-services/media/rs-basictablegroupsdeletecols.gif "Selecionar colunas a serem excluídas")  
-  
-6.  Para formatar a nova coluna de data, clique com o botão direito do mouse na célula com a expressão de campo `[Date]` e clique em **Propriedades da Caixa de Texto**.  
-  
-7.  Clique em **Número**e, no campo **Categoria** , clique em **Data**.  
-  
-8.  Na caixa **Tipo** , selecione **31 de janeiro de 2000**.  
-  
-9.  [!INCLUDE[clickOK](../includes/clickok-md.md)].  
-  
-10.  Alterne para a guia **Visualizar** para visualizar o relatório. Sua aparência deve ser similar a esta ilustração:  
-    ![rs_BasicTableGroupsPreview](../reporting-services/media/rs-basictablegroupspreview.png) 
-  
-## <a name="bkmk_addtotals"></a>Para adicionar totais a um relatório  
-  
-1.  Alterne para o modo Design.  
-  
-2.  Clique com o botão direito do mouse na célula da região de dados que contém o campo `[LineTotal]`e clique em **Adicionar Total**.  
-  
-    Isso adicionará uma linha com uma soma do valor monetário de cada pedido.  
-  
-3.  Clique com o botão direito do mouse na célula que contém o campo `[Qty]`e clique em **Adicionar Total**.  
-  
-    Isso adicionará uma soma da quantidade de cada pedido à linha de total.  
-  
-4.  Na célula vazia à esquerda de `Sum[Qty]`, digite o rótulo "**Total de Pedidos"**.  
-  
-5.  Você pode adicionar uma cor do plano de fundo à linha de total. Selecione as duas células de soma e a célula de rótulo.  
-  
-6.  No menu **Formatar** , clique em **Cor do Plano de Fundo**, clique em **Cinza Claro**e clique em **OK**.  
-  
-    ![Modo de exibição de Design: Tabela básica com total do pedido](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "Modo de exibição de Design: Tabela básica com total do pedido")  
-  
-## <a name="bkmk_adddailytotal"></a>Para adicionar um total diário a um relatório  
-  
-1.  Clique com o botão direito do mouse na célula **Pedido** , aponte para **Adicionar Total**e clique em **Após**.  
-  
-    Isso adicione uma nova linha contendo as somas de quantidade e valor em dólar de cada dia e o rótulo “**Total**” na parte inferior da coluna Pedido.  
-  
-2.  Digite o palavra **Diário** depois da palavra **Total** na mesma célula para que apareça **Total Diário**.  
-  
-3.  Selecione a célula **Total Diário** , as duas células **Soma** e a célula vazia entre eles.  
-  
-4.  No menu **Formatar** , clique em **Cor do Plano de Fundo**, clique em **Laranja**e clique em **OK**.  
-  
-    ![Definir a cor da tela de fundo para laranja](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
-  
-## <a name="bkmk_addgrandtotal"></a>Para adicionar um total geral a um relatório  
-  
-1.  Clique com o botão direito do mouse na célula Data, aponte para **Adicionar Total**e clique em **Após**.  
-  
-    Isso adicionará uma nova linha contendo as somas de quantidade e valor monetário de todo o relatório e o rótulo **Total** na coluna **Data** .  
-  
-2.  Digite a palavra **Geral** depois da palavra **Total** na mesma célula para que apareça **Total Geral**.  
-  
-3.  Selecione a célula **Total Geral** , as duas células **Soma** e as células vazias entre eles.  
-  
-4.  No menu **Formatar** , clique em **Cor do Plano de Fundo**, clique em **Azul Claro**e clique em **OK**.  
-  
-    ![Modo de exibição de Design: Total geral em tabela básica](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "Modo de exibição de Design: Total geral em tabela básica")  
-  
-5.  Clique em **Visualizar**.  
-  
-    A última página deve ser semelhante à imagem a seguir. Na barra de ferramentas, clique em Última Página ![ssrs_ssdt_viewertoolbar_lastpage](../reporting-services/media/ssrs-ssdt-viewertoolbar-lastpage.png).   
-  
-    ![Visualização: Tabela básica com total geral](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "Visualização: Tabela básica com total geral")  
-  
-## <a name="bkmk_publishreport"></a>Para publicar o relatório no Servidor de Relatório (opcional)  
-  
-1.  Uma etapa opcional é publicar o relatório concluído no servidor de relatório de modo nativo para poder exibi-lo no portal da Web.  
-  
-2.  Clique no menu **Projeto** e em **Propriedades do tutorial...**  
-  
-3.  Em **TargetServerURL** , digite o nome do servidor de relatório, por exemplo   
-    - `http:/<servername>/reportserver`  
-   
-    - `https://localhost/reportserver` funcionará se você estiver criando o relatório no servidor de relatório.  
-  
-  
-4. Observe que TargetReportFolder é o tutorial, o nome do projeto.  Esse é o nome da pasta na qual o relatório será implantado nas próximas etapas.  
-5. Clique em **OK**.  
-  
-6.  Clique no menu **Criar** e em **Implantar tutorial**.  
-  
-    Se você vir uma mensagem semelhante à seguinte na janela de saída, ela indicará uma implantação com êxito.  
-  
-    > ------ Compilação iniciada: Projeto: tutorial, Configuração: Depuração ------  
+Nesta lição final do tutorial, você adicionará agrupamentos e totais ao relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para organizar e resumir os dados.  
+
+## <a name="to-group-data-in-a-report"></a>Para agrupar dados em um relatório
+
+1. Selecione a guia **Design**.
+2. Se o painel **Grupos de Linhas** não estiver visível, clique com o botão direito do mouse na superfície de design e selecione **Exibir** >**Agrupamento**.
+3. No painel **Dados do Relatório**, arraste o campo `[Date]` para o painel **Grupos de Linhas**. Coloque-o acima da linha exibida como **= (Detalhes)**.
+
+    > [!NOTE]
+    > Observe que agora a alça de linha exibe um colchete para indicar um grupo. Agora a tabela também tem duas colunas de expressão `[Date]`, uma em cada lado de uma linha pontilhada vertical.
+    >
+    >![grupo de datas adicionado](media/rs-basictablegroups1design.png "grupo de datas adicionado")
+4. No painel **Dados do Relatório**, arraste o campo `[Order]` para o painel **Grupos de Linhas**. Coloque-o abaixo de **Data** e acima de **= (Detalhes)**.
+
+    ![ssrs_ssdt_addorderfield](media/ssrs-ssdt-addorderfield.png)
+
+    > [!NOTE]
+    > Observe que agora o identificador de linha exibe dois colchetes, ![ssrs_ssdt_rowgroupdoublehandles](media/ssrs-ssdt-rowgroupdoublehandles.png), para indicar dois grupos. Agora a tabela também tem duas colunas de expressão `[Order]`.
+
+5. Exclua as colunas originais da expressão `[Date]` e `[Order]` à direita da linha dupla. Selecione as alças de coluna das duas colunas, clique com o botão direito do mouse e selecione **Excluir Colunas**. O Designer de Relatórios remove as expressões de linhas individuais, assim somente as expressões de grupos são exibidas.
+
+    ![Selecionar colunas a serem excluídas](media/rs-basictablegroupsdeletecols.gif "Selecionar colunas a serem excluídas")
+
+6. Para formatar a nova coluna `[Date]`, clique com botão direito do mouse na célula da região de dados que contém a expressão `[Date]` e selecione **Propriedades da Caixa de Texto**.
+7. Selecione **Número**, na caixa de listagem de coluna à extrema esquerda, e **Data** na caixa de listagem **Categoria**.
+8. Na caixa de listagem **Tipo**, selecione **31 de janeiro de 2000**.
+9. Selecione **OK** para aplicar o formato.
+10. Visualize novamente o relatório. Ele deve estar como mostrado abaixo:
+
+    ![rs_BasicTableGroupsPreview](media/rs-basictablegroupspreview.png)
+
+## <a name="adding-totals-to-a-report"></a>Adicionar totais a um relatório
+
+1. Alterne para o modo **Design**.
+2. Clique com o botão direito do mouse na célula da região de dados que contém a expressão `[LineTotal]` e selecione **Adicionar Total**. O Designer de Relatórios adiciona uma linha com uma soma do valor monetário de cada pedido.
+3. Clique com o botão direito do mouse na célula que contém o campo `[Qty]` e clique em **Adicionar Total**. O Designer de Relatórios adiciona uma soma da quantidade de cada pedido à linha de totais.
+4. Na célula vazia à esquerda da célula `Sum[Qty]`, digite a cadeia de caracteres "Total de Pedidos".
+5. Você pode adicionar uma cor do plano de fundo à linha de total. Selecione as duas células de soma e a célula de rótulo.  
+6. No menu **Formato**, selecione o quadrado **Cor da Tela de Fundo** > **Cinza Claro**.
+7. Selecione **OK** para aplicar o formato.
+
+   ![Modo de exibição de Design: tabela básica com total do pedido](media/rs-basictablesumlinetotaldesign.gif "Modo de exibição de Design: tabela básica com total do pedido")
+
+## <a name="add-the-daily-total-to-the-report"></a>Adicionar o total diário ao relatório
+
+1. Clique com botão direito do mouse na célula de expressão `[Order]` e selecione **Adicionar Total** > **Após**. O Designer de Relatórios adiciona uma nova linha contendo as somas dos valores `[Qty]` e `[Linetotal]` para cada dia e a cadeia de caracteres "Total" na parte inferior da coluna de expressão `[Order]`.
+2. Digite a palavra "Diário" depois da palavra "Total" na mesma célula para que apareça "Total Diário".
+3. Selecione essa célula, as duas células adjacentes de total à direita e a célula vazia entre eles.
+4. No menu **Formato**, selecione o quadrado **Cor da Tela de Fundo** > **Laranja**.
+5. Selecione **OK** para aplicar o formato.
+
+   ![Definir a cor da tela de fundo para laranja](media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")
+
+## <a name="add-the-grand-total-to-the-report"></a>Adicionar o total geral ao relatório
+
+1. Clique com botão direito do mouse na célula de expressão `[Date]` e selecione **Adicionar Total** > **Após**. O Designer de Relatórios adiciona uma nova linha contendo as somas dos valores `[Qty]` e `[LineTotal]` do relatório inteiro e a cadeia de caracteres "Total" na parte inferior da coluna de expressão `[Date]`.
+2. Digite a palavra "Geral" depois da palavra "Total" na mesma célula para que apareça "Total Geral".
+3. Selecione a célula "Total Geral", as duas células `Sum()` e as células vazias entre elas.
+4. No menu **Formato**, selecione o quadrado **Cor da Tela de Fundo** > **Azul Claro**.
+5. Selecione **OK** para aplicar o formato.
+
+    ![Modo de exibição de Design: total geral em tabela básica](media/rs-basictablesumgrandtotaldesign.gif "Modo de exibição de Design: total geral em tabela básica")
+
+## <a name="preview-the-report"></a>Visualizar o relatório
+
+Para visualizar as alterações de formato, selecione a guia **Visualização**. Na barra de ferramentas **Visualização**, selecione o botão **Última Página**, que se parece com ![ssrs_ssdt_viewertoolbar_lastpage](media/ssrs-ssdt-viewertoolbar-lastpage.png). Os resultados devem ser exibidos como mostrado a seguir:
+
+   ![Visualização: tabela básica com total geral](media/rs-basictablesumgrandtotalpreview.gif "Visualização: tabela básica com total geral")
+
+## <a name="publishing-the-report-to-the-report-server-optional"></a>Publicar o relatório no *Servidor de Relatório* (opcional)
+
+Uma etapa opcional é publicar o relatório concluído no Servidor de Relatório para poder exibi-lo no portal da Web.
+
+1. Selecione o menu **Projeto** > **Propriedades do Tutorial...**
+2. Em **TargetServerURL**, digite o nome do servidor de relatório, por exemplo:
+    - `http:/<servername>/reportserver` ou
+    - `https://localhost/reportserver` funcionará se você estiver criando o relatório no servidor de relatório.
+
+3. **TargetReportFolder** é denominado Tutorial devido ao nome do projeto. O Designer de Relatórios implanta o relatório nesta pasta.
+4. Escolha **OK**.
+5. Selecione o menu **Compilar** > **Implantar Tutorial**.
+
+    Ver uma mensagem semelhante à seguinte na janela **Saída** indica uma implantação com êxito.
+
+    > ------ Compilação iniciada: Projeto: tutorial, Configuração: Debug ------  
     > Ignorando 'Sales Orders.rdl'. O item está atualizado.  
     > Compilação concluída – 0 erros, 0 avisos  
-    > ------ Implantação iniciada: Projeto: tutorial, Configuração: Depuração ------  
-    > Implantando em https://[nome do servidor]/reportserver  
+    > ------ Implantação iniciada: Projeto: tutorial, Configuração: Debug ------  
+    > Implantando em `https://[server name]/reportserver`  
     > Implantando relatório '/tutorial/Sales Orders'.  
     > Implantação concluída -- 0 erros, 0 avisos  
     > ========== Compilação: 1 com êxito ou atualizados, 0 com falha, 0 ignorados ==========  
-    > ========== Implantação: 1 bem-sucedido, 0 falha, 0 ignorado ==========  
-  
-    Se você vir uma mensagem de erro semelhante à seguinte, verifique se você tem permissões no servidor de relatório e se iniciou o [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] com privilégios de administrador.  
-  
-    > "As permissões concedidas ao usuário 'XXXXXXXX\\[seu nome de usuário]' não são suficientes para a execução desta operação."  
-  
-7.  Vá para o portal da Web com privilégios de administrador, por exemplo, clique com o botão direito do mouse no ícone do Internet Explorer e clique em **Executar como administrador**.  
-  
-    Navegue até a URL do portal da Web do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
-    **Observação:** a URL do *portal* é "Reports", não a URL do *Servidor* de Relatório de "Reportserver".  Por exemplo:   
-    `https://<server name>/reports`.  
-    `https://localhost/reports` funcionará se você estiver criando o relatório no servidor de relatório.  
-  
-8.  Procure a pasta que contém o relatório. O nome padrão é *tutorial*, o nome do projeto ou o nome digitado no campo TargetReportFolder nas propriedades do projeto.   
-Clique no nome do relatório **Pedidos de Venda** para exibir o relatório renderizado no navegador.  
-  
-    ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
- 
-Você concluiu com êxito o tutorial Criar um relatório de tabela básico.  
-  
-## <a name="see-also"></a>Consulte Também  
-[Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
-  
-  
-  
+    > ========== Implantação: 1 com êxito, 0 com falha, 0 ignorados ==========  
 
+    Se você vir uma mensagem de erro semelhante à seguinte, verifique se você tem permissões no servidor de relatório e se iniciou o [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] com privilégios de administrador.
+    >
+    > "As permissões concedidas ao usuário 'XXXXXXXX\\[seu nome de usuário]' não são suficientes para a execução desta operação."
+
+6. Abra um navegador com privilégios de administrador. Por exemplo, clique com botão direito do mouse no ícone do Internet Explorer e selecione **Executar como administrador**.
+7. Navegue até a URL do portal da Web.
+   - `https://<server name>/reports`.
+   - `https://localhost/reports` funcionará se você estiver criando o relatório no servidor de relatório.
+
+8. Selecione a pasta Tutorial e o relatório de "Pedidos de Vendas" para exibi-lo.
+
+    ![ssrs_tutorial_tutorialfolder](media/ssrs-tutorial-tutorialfolder.png)  
+
+Você concluiu com êxito o tutorial **Criando um relatório de tabela básico**.
+
+## <a name="see-also"></a>Confira também
+
+[Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)

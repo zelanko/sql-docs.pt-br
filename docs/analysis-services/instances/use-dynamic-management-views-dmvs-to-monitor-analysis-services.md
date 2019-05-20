@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
 ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/06/2018
 ms.locfileid: "52984097"
@@ -153,7 +153,7 @@ Conjuntos de linhas de esquema são descritos nos dois protocolos do SQL Server 
 |[DISCOVER_ENUMERATORS](https://msdn.microsoft.com/library/ee302012)|Retorna uma lista de nomes, tipos de dados e valores de enumeração dos enumeradores que recebem suporte do provedor do XMLA para uma fonte de dados específica.|  
 |[DISCOVER_INSTANCES](https://msdn.microsoft.com/library/ee320541)|Descreve as instâncias no servidor.|  
 |[DISCOVER_JOBS](https://msdn.microsoft.com/library/ee320363)|Oferece informações sobre os trabalhos ativos em execução no servidor. O trabalho é uma parte do comando que executa uma tarefa específica em nome desse comando.|  
-|[DISCOVER_KEYWORDS &AMP;#40;XMLA&AMP;#41;](https://msdn.microsoft.com/library/ee301719)|Retorna informações sobre palavras-chave reservadas pelo servidor do XMLA.|  
+|[DISCOVER_KEYWORDS &#40;XMLA&#41;](https://msdn.microsoft.com/library/ee301719)|Retorna informações sobre palavras-chave reservadas pelo servidor do XMLA.|  
 |[DISCOVER_LITERALS](https://msdn.microsoft.com/library/ee301320)|Retorna informações sobre literais suportados pelo servidor.|  
 |[DISCOVER_LOCATIONS](https://msdn.microsoft.com/library/ee302024)|Retorna informações sobre o conteúdo de um arquivo de backup. |
 |[DISCOVER_LOCKS](https://msdn.microsoft.com/library/ee320398)|Oferece informações sobre os bloqueios atuais no servidor.|  
