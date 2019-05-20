@@ -2,7 +2,7 @@
 title: Formatando linhas, cores e imagens (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -19,14 +19,14 @@ f1_keywords:
 - "10066"
 - sql13.rtp.rptdesigner.subreportproperties.border.f1
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5011f6e70ae4dc938ec90d06c6b32a0f78117ff9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3bc6e9b634ce9872b069381d58ed2dc89a0dc1d4
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292157"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576003"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Formatando linhas, cores e imagens (Construtor de Relatórios e SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permite formatar linhas, cores, regiões de dados, imagens e outros itens de relatório.  

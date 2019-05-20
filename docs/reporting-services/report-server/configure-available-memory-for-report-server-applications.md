@@ -2,21 +2,21 @@
 title: Configurar a memória disponível para aplicativos do Servidor de Relatório | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [Reporting Services]
 - memory thresholds [Reporting Services]
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ab39c1de4741906559002281dacf9b255274f9f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4727cff529db944205f46be291f65ebb653eb9bc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722704"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580385"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurar memória disponível para aplicativos do Servidor de Relatórios
   Embora o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possa usar toda a memória disponível, você pode substituir o comportamento padrão configurando um limite superior no valor total dos recursos de memória alocados a aplicativos do servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Você também poderá definir limites que façam com que o servidor de relatório altere a maneira de priorizar e processar solicitações se a pressão de memória estiver baixa, média ou alta. Em níveis baixos de pressão de memória, o servidor de relatório responde dando uma prioridade ligeiramente mais alta a um processamento de relatório interativo ou sob demanda. Em níveis altos de pressão de memória, o servidor de relatório usa várias técnicas para permanecer operacional usando os recursos limitados disponíveis.  
@@ -72,7 +72,7 @@ ms.locfileid: "47722704"
 |**MemorySafetyMargin**|Especifica uma porcentagem de **WorkingSetMaximum** que define o limite entre cenários de pressão média e baixa. Esse valor é a porcentagem de memória disponível reservada para o sistema e não pode ser usado para operações de servidor de relatório. O valor padrão é 80.|  
   
 > [!NOTE]  
->  As configurações **MemoryLimit** e **MaximumMemoryLimit** estão obsoletas no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e em versões posteriores. Se você atualizou uma instalação existente ou estiver usando um arquivo RSReportServer.config que contenha essas configurações, o servidor de relatório não mais lerá esses valores.  
+>  As definições**MemoryLimit** e **MaximumMemoryLimit** estão obsoletas no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e later versions. Se você atualizou uma instalação existente ou estiver usando um arquivo RSReportServer.config que contenha essas configurações, o servidor de relatório não mais lerá esses valores.  
   
 #### <a name="example-of-memory-configuration-settings"></a>Exemplo de definições de configuração de memória  
  O exemplo a seguir mostra as definições de configuração de um computador de servidor de relatório que usa valores de configuração de memória personalizados. Para adicionar **WorkingSetMaximum** ou **WorkingSetMinimum**, digite os elementos e os valores no arquivo RSReportServer.config. Ambos os valores são inteiros que expressam quilobytes de RAM que você está alocando aos aplicativos de servidor. O exemplo a seguir especifica que a alocação de memória total dos aplicativos de servidor de relatório não pode exceder 4 gigabytes. Se o valor padrão para **WorkingSetMinimum** (60% dos **WorkingSetMaximum**) for aceitável, você poderá omiti-lo e especificar apenas **WorkingSetMaximum** no arquivo RSReportServer.config. Este exemplo inclui **WorkingSetMinimum** para mostrar como seria se você quisesse adicioná-lo:  
@@ -91,6 +91,6 @@ ms.locfileid: "47722704"
  [Arquivo de Configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Arquivo de Configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Domínios do aplicativo para aplicativos do Servidor de Relatório](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
+ [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
   
   

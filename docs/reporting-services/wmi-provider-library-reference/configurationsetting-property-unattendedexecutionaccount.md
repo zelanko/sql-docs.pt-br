@@ -2,7 +2,7 @@
 title: Propriedade de UnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - UnattendedExecutionAccount property
 ms.assetid: ab5203ba-c01e-4020-8619-ee290cf9da07
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cb72687256a52528e0865873ca62fc5471abd8b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7df8794f3205feebc49495d27b4bd78a254a4638
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805494"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570202"
 ---
 # <a name="configurationsetting-property---unattendedexecutionaccount"></a>Propriedade de ConfigurationSetting – UnattendedExecutionAccount
   Retorna a conta do usuário que o servidor de relatório representa quando executa relatórios autônomos. Somente leitura.  

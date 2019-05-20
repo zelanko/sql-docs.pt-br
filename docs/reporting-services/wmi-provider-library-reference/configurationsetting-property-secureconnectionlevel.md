@@ -2,7 +2,7 @@
 title: Propriedade SecureConnectionLevel (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SecureConnectionLevel property
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 42beaf5446038bfaa0faf1b8e95a4eb5fc6d16b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: fdb8fc97b8b2403366e19456b7c744012ee9007f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727894"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570257"
 ---
 # <a name="configurationsetting-property---secureconnectionlevel"></a>Propriedade de ConfigurationSetting – SecureConnectionLevel
   Retorna o nível de conexão segura especificado no arquivo RSReportServer.config. Somente leitura.  

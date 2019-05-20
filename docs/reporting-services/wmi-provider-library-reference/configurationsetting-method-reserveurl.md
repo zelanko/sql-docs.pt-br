@@ -2,20 +2,20 @@
 title: Método ReserveURL (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - ReservedURL method
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 51c6c6834fa2f7d0d137d5d9c5236b189e213f3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e16dbe378ddab0b04237509a9fc9865d08468bba
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856764"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576701"
 ---
 # <a name="configurationsetting-method---reserveurl"></a>Método de ConfigurationSetting – ReserveURL
   Adiciona uma reserva de URL para um determinado aplicativo.  

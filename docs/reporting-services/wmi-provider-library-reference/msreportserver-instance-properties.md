@@ -2,7 +2,7 @@
 title: Propriedades MSReportServer_Instance | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - MSReportServer_Instance class
 ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c7e8f3fe4b47045a38d76b425b02d456ca6f97f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d1b8de8961ef9001c7ef94356a2b82bb248271af
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659544"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65569141"
 ---
 # <a name="msreportserverinstance-properties"></a>Propriedades MSReportServer_Instance
   A classe MSReportServer_Instance fornece informações básicas necessárias para um cliente se conectar a um servidor de relatório instalado.  

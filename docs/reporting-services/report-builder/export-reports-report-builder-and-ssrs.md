@@ -2,17 +2,17 @@
 title: Exportar relatórios (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2133fdc66f6dfe6ac4950b1fd9164a4de81f5b6c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0cb5c07545a719571c9fee26edc820006e9f0827
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289024"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580817"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Exportar relatórios (Construtor de Relatórios e SSRS)
 
@@ -100,11 +100,11 @@ ms.locfileid: "56289024"
   
 -   **Extensões do renderizador de quebra suave de página** As extensões de renderização de quebra suave de página mantêm o layout e a formatação do relatório. O arquivo resultante é otimizado para exibição com base em tela e entrega, como em uma página da Web ou nos controles do **ReportViewer** .  
   
-     As seguintes extensões de renderização de quebra de página flexível são suportadas: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word e Web archive (MHTML).  
+     As extensões de renderização de quebra de página flexível a seguir têm suporte: o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word e arquivo da Web (MHTML).  
   
 -   **Extensões de renderização de quebra de página impressa** As extensões do renderizador de quebra de página impressa mantêm o layout e a formatação do relatório. O arquivo resultante é otimizado para uma experiência consistente de impressão, ou para exibir o relatório online em formato de um livro.  
   
-     As seguintes extensões de renderização de quebra de página não flexível são suportadas: TIFF e PDF.  
+     As extensões de renderização de quebra de página não flexível a seguinte têm suporte: TIFF e PDF.  
   
 ##  <a name="ExportFormats"></a> Formatos para os quais você pode exportar enquanto exibe relatórios  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece extensões de renderização que renderizam relatórios em formatos diferentes. Você deve otimizar o design de relatório para seu formato de arquivo escolhido.  A tabela a seguir lista os formatos para osquais você pode exportar da interface do usuário.  Há formatos adicionais que podem ser usados com assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou caso você esteja exportando do acesso à URL.  Consulte a seção [Outros modos de exportar relatórios](#OtherWaysExportingReports)neste tópico.  
@@ -116,7 +116,7 @@ ms.locfileid: "56289024"
 |CSV|data|A extensão de renderização CSV (Comma-Separated Value) renderiza relatórios como uma representação mesclada dos dados de um relatório padronizado, em formato de texto simples que pode ser facilmente lido e que também permite a troca com vários aplicativos.<br /><br /> Para obter mais informações, consulte [Exportando para um arquivo CSV](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
 |EXCELOPENXML|Quebra de página flexível|Exibido como "Excel" nos menus de exportação ao examinar relatórios. A extensão de renderização do Excel renderiza um relatório como um documento do Excel (.xlsx) que é compatível com o [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013.  Para obter mais informações, consulte [Exportando para o Microsoft Excel](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |PowerPoint|Quebra de página não flexível|A extensão de renderização do PowerPoint renderiza um relatório como um documento do PowerPoint (.pptx) que é compatível com o PowerPoint 2013.|  
-|Arquivo TIFF|Quebra de página não flexível|A extensão de renderização da Imagem renderiza um relatório para um bitmap ou metarquivo. Por padrão, a extensão de renderização da Imagem produz um arquivo TIFF do relatório, que pode ser exibido em várias páginas. Quando o cliente receber a imagem, ela pode ser exibida em um visualizador de imagem e impressa.<br /><br /> A extensão de renderização de imagem pode gerar arquivos em qualquer um dos formatos suportados por [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG e TIFF.<br /><br /> Para obter mais informações, consulte [Exportando para um arquivo de imagem](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  
+|Arquivo TIFF|Quebra de página não flexível|A extensão de renderização da Imagem renderiza um relatório para um bitmap ou metarquivo. Por padrão, a extensão de renderização da Imagem produz um arquivo TIFF do relatório, que pode ser exibido em várias páginas. Quando o cliente receber a imagem, ela pode ser exibida em um visualizador de imagem e impressa.<br /><br /> A extensão de renderização de Imagem pode gerar arquivos em qualquer um dos formatos que tenham o suporte do [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG e TIFF.<br /><br /> Para obter mais informações, consulte [Exportando para um arquivo de imagem](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  
 |Arquivo da Web|Quebra de página flexível|A extensão de renderização HTML renderiza um relatório no formato HTML. A extensão de renderização também pode produzir páginas HTML totalmente formadas ou fragmentos de HTML a serem inseridos em outras páginas HTML. Todo o HTML é gerado com a codificação UTF-8.<br /><br /> A extensão de renderização HTML é a extensão de renderização padrão para relatórios que visualizados no Construtor de Relatórios e são exibidos em um navegador, incluindo quando executados no portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Para obter mais informações, consulte [Renderizando para HTML](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md).|  
 |WORDOPENXML|Quebra de página flexível|Exibido como "Word" no menu Exportar ao exibir relatórios. A extensão de renderização do Word renderiza um relatório como um documento do Word (.docx) que é compatível com o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013.  Para obter mais informações, consulte [Exportando para o Microsoft Word](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).|  
 |XML|Dados|A extensão XML de renderização retorna um relatório no formato XML. O esquema para o XML do relatório é específico para este relatório e contém somente dados. As informações de layout não são renderizadas e a paginação não é mantida pela extensão XML de renderização. O XML gerado por esta extensão pode ser importado para um banco de dados, usado como uma mensagem de dados XML ou enviado para um aplicativo personalizado.<br/><br/> Para obter mais informações, consulte [Exportando para XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).|  

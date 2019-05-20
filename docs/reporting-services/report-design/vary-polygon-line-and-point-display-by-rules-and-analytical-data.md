@@ -2,7 +2,7 @@
 title: Variar a exibição de polígono, linha e ponto por regras e dados analíticos | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +16,14 @@ f1_keywords:
 - "10536"
 - sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3279ace83e7ed2e3dc2f9997c68331fd0ddbb645
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4c323a03752ea7b9e0c7450dc53446191f3c3315
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286395"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578442"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Vary Polygon, Line, and Point Display by Rules and Analytical Data
   As opções de exibição para polígonos, linhas e pontos em uma camada do mapa são controladas pela definição de opções para a camada, estabelecendo regras para os elementos do mapa na camada ou substituindo opções para elementos de mapas inseridos específicos em uma camada.  
@@ -106,7 +106,7 @@ ms.locfileid: "56286395"
   
 -   **Ideal.** Crie intervalos que ajustem automaticamente a distribuição para criar subintervalos equilibrados. O número de subintervalos é determinado pelo algoritmo.  
   
--   **Personalizado.** Especifique seu próprio número de intervalos para controlar a distribuição de valores. Para os dados de exemplo, você pode especificar 3 intervalos: 1-2, 3-8, 9.  
+-   **Personalizado.** Especifique seu próprio número de intervalos para controlar a distribuição de valores. Para os dados do exemplo, você pode especificar 3 intervalos: 1-2, 3-8, 9.  
   
  Os valores de distribuição são usados pelas regras para variar os valores de exibição do elemento do mapa.  
   

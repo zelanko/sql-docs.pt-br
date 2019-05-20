@@ -2,7 +2,7 @@
 title: Pesquisar um relatório usando o acesso à URL | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - text searches [Reporting Services]
 - URL access [Reporting Services], report searches
 ms.assetid: 6f3410c4-7944-448f-bae8-bab3e8152d46
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a63f4c1c1ad925ee57def853c76f71ec52f9cb58
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b2568c2930080ddbb060f2c4d014c40476ab38f8
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813189"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570887"
 ---
 # <a name="search-a-report-using-url-access"></a>Pesquisar um relatório com acesso à URL
   Você pode pesquisar um relatório para obter um conjunto específico de texto usando o acesso de URL. Para pesquisar um relatório, defina o valor do parâmetro *rc:FindString* na URL igual ao texto para o qual você deseja pesquisar. Além disso, use os parâmetros *rc:StartFind* e *rc:EndFind* para estreitar sua pesquisa a páginas específicas dentro do relatório.  

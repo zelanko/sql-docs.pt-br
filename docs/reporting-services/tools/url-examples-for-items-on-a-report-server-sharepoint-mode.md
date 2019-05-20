@@ -2,18 +2,18 @@
 title: Exemplos de URL para itens em um servidor de relatório – modo do SharePoint | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7b787bdccdb913bd95051c8e3a4a3dd37fed5c01
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812949"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574014"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Exemplos de URL para itens em um servidor de relatório – modo do SharePoint
   Para publicar relatórios e itens relacionados em uma biblioteca do SharePoint, você pode publicar o conteúdo por meio das ferramentas de criação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , como o Designer de Relatórios ou carregar o conteúdo por meio das ações do site do SharePoint.  

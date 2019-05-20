@@ -2,20 +2,20 @@
 title: Definir as propriedades do servidor de relatório (Management Studio) | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], properties
 ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4e44e48a505cbbd69c20e3ff32c67108debd2538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e2632e93cf325a560434e0833e3bb5a7288f83ef
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794764"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578993"
 ---
 # <a name="set-report-server-properties-management-studio"></a>Definir propriedades do servidor de relatório (Management Studio)
   Você pode definir as propriedades do sistema do servidor de relatório no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para habilitar recursos ou definir padrões de servidor.  
@@ -28,6 +28,6 @@ ms.locfileid: "47794764"
   
 ## <a name="see-also"></a>Consulte Também  
  [Conectar-se a um servidor de relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Propriedades do sistema do Servidor de Relatório](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
+ [Propriedades do sistema do servidor de relatório](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   

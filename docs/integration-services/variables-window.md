@@ -16,14 +16,18 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7c0029a40ed27794f7b406ae6e6ba238a5e659e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: de404b8650c78671380a2515848a16a2ebf1b9f1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272746"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713610"
 ---
 # <a name="variables-window"></a>Janela Variáveis
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use a janela **Variáveis** para criar e modificar as variáveis definidas pelo usuário e para exibir as variáveis do sistema.  
   
  Por padrão, a janela **Variáveis** está localizada abaixo da área **Gerenciadores de Conexões** no Designer SSIS, no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Se não aparecer a janela **Variáveis**, clique em **Variáveis** no menu **SSIS** para exibir a janela.  

@@ -2,7 +2,7 @@
 title: Ferramentas do Reporting Services | Microsoft Docs
 ms.date: 05/31/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b227ef4d93c5629305c711e46b4278428986ce0b
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 676e64250a12d3c31dfcbe20683fd5bab5b7868a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712467"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581296"
 ---
 # <a name="reporting-services-tools"></a>Ferramentas do Reporting Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contém um conjunto de ferramentas gráficas e de script que dão suporte ao desenvolvimento e ao uso de relatórios em um ambiente gerenciado. O conjunto de ferramentas inclui ferramentas de desenvolvimento, de configuração e de administração, além de ferramentas de visualização de relatórios. Este tópico dá uma visão geral breve de cada ferramenta do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e como ela pode ser acessada.  

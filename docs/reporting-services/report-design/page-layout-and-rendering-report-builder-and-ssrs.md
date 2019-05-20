@@ -2,18 +2,18 @@
 title: Layout da página e renderização (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6b4d2193730a07ff59ddfc8c74189663f74e804b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8ec929d77b9805e3285b5d5a75940231b09cbd8e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289464"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576345"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Layout de página e renderização (Construtor de Relatórios e SSRS)
 Leia sobre as extensões de renderização do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para relatórios paginados se tiver certeza de que seu relatório tem a aparência desejada, incluindo o layout da página, quebras de página e tamanho do papel. 

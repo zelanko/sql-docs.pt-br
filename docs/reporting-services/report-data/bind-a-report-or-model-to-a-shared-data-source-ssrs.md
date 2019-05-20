@@ -2,21 +2,21 @@
 title: Associar um relatório a uma fonte de dados compartilhada (SSRS) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], shared
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0a72bb8d81564afbe632a68908baf4bad4dead82
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: bd958c0bbe781f7c39c2a2e00ecbc0ccfde7164e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507456"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573253"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>Associar um relatório a uma fonte de dados compartilhada (SSRS)
   Em algumas situações, por exemplo, quando você move um relatório de um servidor de teste para um servidor de produção, talvez seja necessário salvar o arquivo no computador local e carregá-lo em um servidor de relatório diferente. Ao carregar o relatório no novo servidor, você precisa associá-lo novamente a uma fonte de dados compartilhados que está armazenada no novo servidor de relatório. Se o relatório não for associado novamente, ele não funcionará corretamente quando for acessado do novo servidor de relatório.  

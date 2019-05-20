@@ -2,7 +2,7 @@
 title: Referências de coleções de variáveis de grupo e de relatório (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -15,14 +15,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.variables.f1
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5e23ffcae117f42770604ca60cd2fc2d313eb8a5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 97123f3e9802ddbdf452f66e83a1b3c00f99764d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286114"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581777"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Coleções internas – referências de variáveis de grupo e de relatório (Construtor de Relatórios)
   Quando há um cálculo complexo usado mais de uma vez em expressões em um relatório, convém criar uma variável. É possível criar uma variável do relatório ou uma variável do grupo. Os nomes de variável devem ser exclusivos em um relatório.  

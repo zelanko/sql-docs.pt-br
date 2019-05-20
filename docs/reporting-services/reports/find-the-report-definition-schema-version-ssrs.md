@@ -2,7 +2,7 @@
 title: Localizar a versão do esquema de definição de relatório (SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - Report Definition Language, XML schema
 - schemas [Reporting Services]
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cb28747cd85c007f968e5be0e980ca112638faec
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 67f1311e3f8bde71c52301178bf242d88e62c3a0
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254138"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576413"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Localizar a versão do esquema de definição de relatório (SSRS)
 
 Um arquivo de definição de relatório especifica o namespace do RDL para a versão do esquema de definição de relatório usado para validar o arquivo .rdl. Ao abrir um arquivo .rdl no ambiente de criação de relatório como o Designer de Relatórios do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou Construtor de Relatórios, se o relatório tiver sido criado para um namespace anterior, um arquivo de backup será criado automaticamente e o relatório será atualizado para o namespace atual. Se você salvar a definição de relatório atualizada, terá salvo o arquivo .rdl convertido. Esse é o único modo para atualizar uma definição de relatório. A própria definição de relatório não é atualizada em um servidor de relatório. O relatório compilado é atualizado em um servidor de relatório. Para obter mais informações, consulte [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Como: Identificar a versão do esquema RDL de um relatório  
+### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Como identificar a versão do esquema RDL de um relatório  
   
 1.  Abra o arquivo de relatório .rdl em um aplicativo como o Bloco de Notas ou Bloco de Notas XML 2007, que permite visualizar o xml.  
   
@@ -36,7 +36,7 @@ Um arquivo de definição de relatório especifica o namespace do RDL para a ver
   
      O namespace de definição de relatório é especificado pela seguinte URL: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Como: Identificar a versão do esquema RDL de um Designer de Relatórios  
+### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Como identificar a versão do esquema RDL de um Designer de Relatórios  
   
 1.  Abrir um novo projeto. A versão do projeto que você escolhe determina a versão do esquema RDL. No SQL Server, há suporte para mais de uma versão de esquema. Para obter mais informações, consulte [Implantação e suporte de versão no SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
@@ -59,7 +59,7 @@ Um arquivo de definição de relatório especifica o namespace do RDL para a ver
   
      O namespace de definição de relatório é especificado pela seguinte URL: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
-### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Como: Identificar a versão do esquema RDL no Servidor de Relatórios  
+### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Como identificar a versão do esquema RDL no Servidor de Relatórios  
   
 -   No Gerenciador de Relatórios, digite a URL para o servidor de relatório: Por exemplo, a URL a seguir especifica um servidor de relatório no computador local:  
   

@@ -2,7 +2,7 @@
 title: Gerenciar um processo em execução | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - displaying jobs
 - subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c029b1d3964b508655091e87c8774e76e4cc2639
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021950"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579011"
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] monitora o status dos trabalhos que estão em execução no servidor de relatório. Em intervalos regulares, o servidor de relatório examina os trabalhos em andamento e grava as informações de status no banco de dados do servidor de relatório ou os bancos de dados de aplicativo de serviço para o modo do SharePoint. Um trabalho está em andamento se algum dos seguintes processos estiver ocorrendo: execução de consulta em um servidor de banco de dados remoto ou local, processamento de relatórios e renderização de relatórios.  

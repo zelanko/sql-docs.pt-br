@@ -2,7 +2,7 @@
 title: Propriedade InstanceName (WMI MSReportServer_Instance) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: 98ab86fd-ed94-4cda-9c68-047d589bdea6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 01d216ffa7341ff0ba196510aa8e42bf74ddb47b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 966ab7aeaa4d1bb27fdaae8d4f452e6dffc4a269
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809114"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65569103"
 ---
 # <a name="msreportserverinstance-properties---instancename"></a>Propriedades de MSReportServer_Instance – InstanceName
   Retorna o nome de uma instância do servidor de relatório em um computador específico. Somente leitura.  
