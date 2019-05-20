@@ -1,8 +1,8 @@
 ---
-title: 'Tutorial: Criar um relatório de gráficos rápido offline (Construtor de Relatórios) | Microsoft Docs'
+title: 'Tutorial: Criar um relatório de gráfico rápido offline (Construtor de Relatórios) | Microsoft Docs'
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ee949dd6af1e421ca59f5319a19506490cc9b809
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 429ee4c7dcd0b6d58b2cbb3e223e8f7407339327
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286064"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571767"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Criar um relatório de gráficos rápido offline (Construtor de Relatórios)
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Criar um relatório de gráfico rápido offline (Construtor de Relatórios)
 
   Neste tutorial, você usa um Assistente para criar um gráfico de pizza em um relatório paginado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Em seguida, adicione porcentagens e modifique um pouco o gráfico de pizza. 
   

@@ -2,7 +2,7 @@
 title: Publicando relatórios em um servidor de relatório | Microsoft Docs
 ms.date: 06/01/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - deploying [Reporting Services], reports
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 44d376414ce4043bca6f053c6523365af5d96d4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: bc4d75a6af4441d2030a71306801449ee74a6a02
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714096"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579975"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Publicando relatórios em um servidor de relatórios
   Depois de criar e testar um relatório ou conjunto de relatórios, você pode usar os recursos implantação do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para publicar os relatórios em um servidor de relatório. Você pode publicar relatórios individuais ou um projeto do Servidor de Relatório que pode incluir vários relatórios e fontes de dados. A publicação de um projeto do Servidor de Relatório é a forma mais fácil de publicar vários relatórios. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa o termo *implantar*, em vez termo *publicar*. Os dois termos significam o mesmo.  

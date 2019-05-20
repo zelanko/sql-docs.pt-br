@@ -2,7 +2,7 @@
 title: Monitorando o desempenho do servidor de relatório | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - performance [Reporting Services]
 - Reporting Services, performance
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 369e398c92a9b7c2057ca07d75db66d461f773a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ba639ea5bc65cb8d5e753883418ad3937919fa1d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603644"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577660"
 ---
 # <a name="monitoring-report-server-performance"></a>Monitorando o desempenho do servidor de relatório
   Use as ferramentas de monitoramento de desempenho para monitorar o desempenho do servidor de relatório e avaliar a atividade do servidor, observar as tendências, diagnosticar gargalos do sistema e reunir dados que podem ajudar a determinar se a configuração atual do sistema é suficiente. Para ajustar o desempenho do servidor, você pode especificar com que frequência o domínio de aplicativo de servidor de relatório deve ser reciclado. Para obter mais informações, consulte [Configurar memória disponível para aplicativos do Servidor de Relatório](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  

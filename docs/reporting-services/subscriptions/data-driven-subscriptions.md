@@ -2,21 +2,21 @@
 title: Assinaturas controladas por dados | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d5bf68f2655a7ffb024d7458595fc0439a51817c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a2f4aaa4660bbb1ddfeae14da454bc96b3323a9d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020640"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575668"
 ---
 # <a name="data-driven-subscriptions"></a>assinaturas controladas por dados
   Uma assinatura controlada por dados fornece uma maneira de usar dados dinâmicos de assinatura recuperados de uma fonte de dados externa em tempo de execução. Uma assinatura controlada por dados também pode usar texto estático e valores padrão especificados pelo usuário quando a assinatura é definida. É possível usar assinaturas controladas por dados para fazer o seguinte:  

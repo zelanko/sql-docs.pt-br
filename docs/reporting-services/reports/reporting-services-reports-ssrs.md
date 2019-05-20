@@ -2,20 +2,20 @@
 title: Relatórios do Reporting Services (SSRS) | Microsoft Docs
 ms.date: 06/15/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 37a2fa01004fb3550422b44f48d83e1c79dc587b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b872952b1e84bfc12722e14234207ff67525699b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291354"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571025"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Relatórios do Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Os relatórios paginados são definições de relatório baseadas em XML que incluem dados de relatório e elementos de layout de relatório. Em um sistema de arquivos cliente, as definições de relatório têm a extensão de arquivo .rdl. Depois que você publica um relatório paginado, ele é um item de relatório armazenado no servidor de relatório ou site do SharePoint. Os relatórios paginados são uma parte da plataforma de relatório baseada em servidor fornecida pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Você também pode [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  

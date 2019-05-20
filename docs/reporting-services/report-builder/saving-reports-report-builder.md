@@ -2,18 +2,18 @@
 title: Salvando relatórios (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 42817b1524bd2bc0ada10e4b49bcd511c51dc549
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 105f335cf25d2e1e9cac28ca14900244d6fef942
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289485"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581116"
 ---
 # <a name="saving-reports-report-builder"></a>Salvando relatórios (Construtor de Relatórios)
   No Construtor de Relatórios, você pode salvar um relatório paginado em um servidor de relatório do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , na biblioteca do SharePoint, no compartilhamento de arquivos no qual você tem permissão de gravação ou no computador. 

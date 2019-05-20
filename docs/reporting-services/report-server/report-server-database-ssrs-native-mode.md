@@ -2,7 +2,7 @@
 title: Banco de dados do servidor de relatório (modo nativo do SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 899c7b5a116c7b544218aea64749c3f77e1222e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1790841420d86eea3cc3d7a19ccbd2e72283a425
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850295"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577580"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>Banco de dados do servidor relatório (modo nativo do SSRS)
   Um servidor de relatório é um servidor sem estado que usa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] para armazenar definições de objeto e metadados. Uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo nativo usa dois bancos de dados para separar os requisitos de armazenamento de dados persistente do armazenamento de dados temporário. Os bancos de dados são criados juntamente e associados por nome. Por padrão, os nomes do banco de dados são **reportserver** e **reportservertempdb**, respectivamente.  
@@ -66,7 +66,7 @@ ms.locfileid: "47850295"
  [Hospedar um banco de dados do servidor de relatório em um cluster de failover do SQL Server](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
  [Armazenar dados criptografados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Servidor de Relatório do Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
- [Administrar um banco de dados do Servidor de Relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
+ [Administrar um banco de dados de servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
  [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
  [Operações de backup e restauração para o Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)  
   

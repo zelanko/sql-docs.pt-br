@@ -1,19 +1,21 @@
 ---
 title: Adicionar dados de fontes de dados externas (SSRS) | Microsoft Docs
-ms.date: 03/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
-ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 53644a3442280089309807b156ef4ef9c842494b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+reviewer: ''
+ms.custom: ''
+ms.date: 03/17/2017
+ms.openlocfilehash: 946d16e240bc8601f695cc4fd5269e046672f122
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028405"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578230"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Adicionar dados de fontes de dados externas (SSRS)
   Para recuperar dados de uma fonte de dados externa, use uma conexão de dados. As informações da conexão de dados normalmente são fornecidas pelo proprietário da fonte de dados externa que é responsável por conceder permissões e especificar os tipos de credenciais a serem usados. As informações de conexão de dados são salvas como uma fonte de dados de relatório. O tipo de fonte de dados especifica a extensão de processamento de dados a ser usada para recuperar a fonte de dados.  
@@ -88,10 +90,9 @@ ms.locfileid: "50028405"
 |[Tipo de conexão OLE DB &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)|OLE DB|  
 |[Tipo de Conexão ODBC &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md)|ODBC|  
 |[Tipo de conexão XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)|XML|  
-|[Conexão de modelo de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)|Modelo .smdl|  
   
-  
-##  <a name="Related"></a> Seções relacionadas  
+##  <a name="Related"></a> Seções relacionadas
+
  Estas seções da documentação fornecem informações conceituais detalhadas sobre dados de relatório, bem como informações de procedimentos sobre como definir, personalizar e usar partes de um relatório relacionadas aos dados.  
   
 |Tópico|Descrição|  

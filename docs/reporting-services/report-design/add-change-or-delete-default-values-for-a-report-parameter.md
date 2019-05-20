@@ -2,7 +2,7 @@
 title: Adicionar, alterar ou excluir valores padrão de um parâmetro de relatório | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -10,14 +10,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.defaultvalues.f1
 - "10072"
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a53bc057873f8c6905c37f281793c7d00c54a547
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 902d28e7d37524ac0d1649642ca592b20ea5b3cf
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293404"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582039"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter"></a>Adicionar, alterar ou excluir valores padrão de um parâmetro de relatório
   Depois de criar um parâmetro de relatório, você poderá fornecer uma lista de valores padrão. Se todos os parâmetros tiverem um valor padrão válido, o relatório será executado automaticamente na primeira vez em que ele for exibido ou visualizado.  

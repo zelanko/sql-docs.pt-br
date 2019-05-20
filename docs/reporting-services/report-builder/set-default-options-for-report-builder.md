@@ -2,20 +2,20 @@
 title: Definir opções padrão para o Construtor de Relatórios | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0b1f78502b93cffb3f72593d8a383a301362ea39
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f6c77bc80b31eb34beea99d0634b17934ea01db4
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295973"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577914"
 ---
 # <a name="set-default-options-for-report-builder"></a>Definir opções padrão para o Construtor de Relatórios
   No Construtor de Relatórios, você pode definir um número de padrões úteis para tornar a criação de relatórios mais rápida e fácil.  Por exemplo, se você puder definir ou alterar o servidor de relatório padrão, o Construtor de Relatórios salva seus relatórios no mesmo servidor de relatório automaticamente, a menos que você especifique o contrário.  

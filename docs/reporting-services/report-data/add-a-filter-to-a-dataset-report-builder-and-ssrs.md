@@ -2,18 +2,18 @@
 title: Adicionar um filtro a um conjunto de dados (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec72f42975b7c81d50f58f0dc0a9ef141757e47d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c42f6cf00329129ea1137ecba4228a92f9665319
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660956"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571761"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>Adicionar um filtro a um conjunto de dados (Construtor de Relatórios e SSRS)
   Adicione um filtro a um conjunto de dados para limitar os dados em um relatório depois que os dados forem recuperados de uma fonte de dados externa. Quando você adiciona um filtro a um conjunto de dados, todas as partes de relatório ou regiões de dados usam somente dados que correspondem às condições de filtro.  

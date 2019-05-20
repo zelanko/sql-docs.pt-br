@@ -2,18 +2,18 @@
 title: Segurança (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bd51af5b1fe70d73d37f1bbefb07ada68d56cd4a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ed74bb929a41256117858cce3c1da79a5610cedb
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290804"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578007"
 ---
 # <a name="security-report-builder"></a>Segurança (Construtor de Relatórios)
   O Construtor de Relatórios é um aplicativo cliente de criação de relatórios projetado para funcionar com um servidor de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . O servidor de relatório pode ser configurado para funcionar em modo nativo como um servidor autônomo ou em modo integrado do SharePoint para oferecer suporte a relatórios em um site do SharePoint.  

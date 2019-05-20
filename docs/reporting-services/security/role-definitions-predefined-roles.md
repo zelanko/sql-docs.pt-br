@@ -2,7 +2,7 @@
 title: Funções predefinidas | Microsoft Docs
 ms.date: 10/22/2015
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5622d8245dee2440eb6d4cdfa5c5ee27c772bd0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e211010da8482a9a2707c2799812c813e2820832
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839024"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570634"
 ---
 # <a name="role-definitions---predefined-roles"></a>Definições de função – funções predefinidas
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é instalado com funções predefinidas que você pode usar para conceder acesso a operações de servidor de relatório. Cada função predefinida descreve uma coleção de tarefas relacionadas. Você pode atribuir grupos e contas do usuário a funções predefinidas para fornecer acesso imediato a operações de servidor de relatório.  
@@ -43,7 +43,7 @@ ms.locfileid: "47839024"
 |[Função Publicador](#bkmk_publisher)|Item|Os usuários atribuídos a essa função podem adicionar itens a um servidor de relatório, podendo inclusive criar e gerenciar pastas que contêm esses itens.|  
 |[Função Navegador](#bkmk_browser)|Item|Os usuários atribuídos a essa função podem executar e assinar relatórios e navegar pela estrutura de pastas.|  
 |[Função Construtor de Relatórios](#bkmk_reportbuilder)|Item|Os usuários atribuídos a essa função podem criar e editar relatórios no Construtor de Relatórios.|  
-|[Função Meus Relatórios](#bkmk_myreports)|Item|Os usuários atribuídos a essa função podem gerenciar um espaço de trabalho pessoal para armazenar e utilizar relatórios e outros itens.|  
+|[Função Meus Relatórios](#bkmk_myreports)|Item|Os usuários atribuídos a essa função podem gerenciar um workspace pessoal para armazenar e utilizar relatórios e outros itens.|  
 |[Função Administrador do Sistema](#bkmk_systemadministrator)|Sistema|Os usuários atribuídos a essa função podem habilitar recursos e definir padrões, definir a segurança do site, criar definições de função no Management Studio e gerenciar trabalhos.|  
 |[Função Usuário do Sistema](#bkmk_systemuser)|Sistema|Os usuários atribuídos a essa função podem exibir informações básicas sobre o servidor de relatório, como as informações de agendamento em uma agenda compartilhada.|  
   
@@ -211,7 +211,7 @@ ms.locfileid: "47839024"
  [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
  [Modificar ou excluir uma atribuição de função &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Tarefas e permissões](../../reporting-services/security/tasks-and-permissions.md)  
   
   

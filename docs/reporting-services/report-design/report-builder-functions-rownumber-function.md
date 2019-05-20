@@ -2,18 +2,18 @@
 title: Função RowNumber (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: adae59f691c1bd29e6da28c7e2ad9f267a9f2d11
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e918a674b48eeb34fad7ea660b7e907fc9dcb44b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292845"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577186"
 ---
 # <a name="report-builder-functions---rownumber-function"></a>Funções do Construtor de Relatórios – Função RowNumber
   Retorna uma contagem contínua do número de linhas para o escopo especificado.  

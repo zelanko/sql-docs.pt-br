@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a6d6d9dd46e6c54dc9be72e30a19498bf39391c
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
-ms.translationtype: HT
+ms.openlocfilehash: 24cc4fbe1a1cadeeb9c2e94fe0da85fce24db8a6
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65504000"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571498"
 ---
 # <a name="export-a-report-using-url-access"></a>Exportar um relatório com acesso à URL
   Opcionalmente, você pode especificar o formato no qual renderizará um relatório com o parâmetro de URL *rs:Format* .  Os formatos HTML 4.0 e HTM5 (extensão de renderização) realizarão a renderização no navegador e, para outros formatos, o navegador solicitará a gravação da saída de relatório em um arquivo local.  

@@ -210,7 +210,7 @@ GO
  Se uma fita foi acidentalmente deixada aberta, a maneira mais rápida para liberar a fita é usando o comando a seguir: RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Para obter mais informações, consulte [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
   
 ## <a name="using-the-windows-azure-blob-storage-service"></a>Usando o serviço de armazenamento de Blob do Windows Azure  
- Os backups do SQL Server podem ser gravados no serviço de armazenamento de Blob do Windows Azure.  Para obter mais informações sobre como usar o serviço de armazenamento de Blob do Windows Azure para seus backups, consulte [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Os backups do SQL Server podem ser gravados no serviço de armazenamento de Blob do Windows Azure.  Para obter mais informações sobre como usar o serviço de armazenamento de Blob do Windows Azure para seus backups, consulte [Backup e restauração do SQL Server com o serviço de armazenamento de Blob do Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ##  <a name="LogicalBackupDevice"></a> Usando um dispositivo de Backup lógico  
  Um *dispositivo de backup lógico* é um nome opcional definido pelo usuário que aponta para um dispositivo de backup físico específico (um arquivo de disco ou uma unidade de fita). Um dispositivo de backup lógico permite que você use nomes indiretos ao fazer referência ao dispositivo de backup físico correspondente.  

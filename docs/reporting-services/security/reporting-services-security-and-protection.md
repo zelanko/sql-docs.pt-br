@@ -2,21 +2,21 @@
 title: Segurança e proteção do Reporting Services | Microsoft Docs
 ms.date: 08/26/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services]
 - Reporting Services, security
 ms.assetid: 270075c5-bf12-4467-a775-abbda3d954a5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 22904f062ec460fce229835a6657610639419350
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 03234369ed7422433b35a5e3d296f6db1d1b2223
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850285"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570655"
 ---
 # <a name="reporting-services-security-and-protection"></a>Segurança e proteção do Reporting Services
   Você pode usar as informações desta seção para obter informações sobre os recursos de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Esta seção também explica os modelos de autorização e os provedores de autenticação com suporte no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

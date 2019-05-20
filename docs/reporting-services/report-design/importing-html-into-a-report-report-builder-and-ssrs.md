@@ -2,20 +2,20 @@
 title: Importando HTML para um relatório (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.date: 12/06/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 description: Saiba como usar uma caixa de texto para inserir em um relatório um texto formatado em HTML recuperado de um campo no conjunto de dados.
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ff0e5bffdc0704894029a223c5d3c47d18d8ac80
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 54bd3d5acaf487909a4965c1f73a2e8c00aef82a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289474"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580226"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importando HTML para um relatório (Construtor de Relatórios e SSRS)
   É possível usar uma caixa de texto para inserir em um relatório um texto formatado em HTML recuperado de um campo em seu conjunto de dados. O texto pode ser de qualquer expressão simples ou complexa avaliada como HTML formatado corretamente. O texto formatado pode ser renderizado em todos os formatos de saída com suporte, inclusive PDF.  
@@ -27,7 +27,7 @@ ms.locfileid: "56289474"
 > [!NOTE]  
 >  Ao importar texto contendo marcação HTML, os dados sempre devem ser analisados primeiro pela caixa de texto. Como apenas um subconjunto de marcas HTML possui suporte, o HTML mostrado no relatório renderizado pode ser diferente do HTML original.  
   
- Para começar rapidamente, confira [Tutorial: formatar o texto &#40Construtor de Relatórios&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Para começar a usar rapidamente, consulte [Tutorial: Formatar texto &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 ## <a name="supported-html-tags"></a>Tags HTML Suportadas  
  A seguir, há uma lista completa de marcas que são renderizadas como HTML quando definidas como texto de espaço reservado:  

@@ -2,19 +2,19 @@
 title: Criar um alerta de dados no Designer de Alertas de Dados | Microsoft Docs
 ms.date: 08/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c588a25b95e5625fa3ecd6d6b2765194a41be5a
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
-ms.translationtype: HT
+ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331506"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571572"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Criar um Alerta de Dados no Designer de Alertas de Dados
 
@@ -69,7 +69,7 @@ Você cria definições de alerta de dados no Designer de Alertas de Dados. Depo
   
      Dependendo do tipo dos dados da coluna selecionada, diferentes operadores de comparação serão listados. Se a coluna tiver um tipo de dados de data, um ícone de calendário será exibido ao lado do valor de limite da regra. É possível inserir dados com um clique em uma data no calendário ou por meio de digitação da data.  
   
-     O Designer de Alerta de Dados fornece dois modos de comparação: **Modo de Entrada de Valor** e **Modo de Seleção de Campo**. O padrão é **Modo de Entrada de Valor**. Você só pode adicionar cláusulas OR quando está no **Modo de Entrada de Valor** e está usando a comparação **is** .  
+     O Designer de Alertas de Dados fornece dois modos de comparação: **Modo de Entrada de Valor** e **Modo de Seleção de Campo**. O padrão é **Modo de Entrada de Valor**. Você só pode adicionar cláusulas OR quando está no **Modo de Entrada de Valor** e está usando a comparação **is** .  
   
 9. Para adicionar uma cláusula OR, clique na seta para baixo e clique em **Modo de Entrada de Valor**.  
   

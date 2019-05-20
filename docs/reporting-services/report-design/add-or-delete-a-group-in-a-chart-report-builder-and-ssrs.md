@@ -2,18 +2,18 @@
 title: Adicionar ou excluir um grupo de um gráfico (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3d095e1b064fdc8b53e9061cf7d1b6f9d3f84069
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b9c8e747ca0ca003e531381a6713b1a083a47d57
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296462"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581966"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Adicionar ou excluir um grupo em um gráfico (Construtor de Relatórios e SSRS)
 Nos relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , clique na região de dados do gráfico para exibir o painel **Dados do Gráfico** . Crie grupos arrastando campos de conjuntos de dados para as áreas **Grupos de Categorias** e **Grupos de Séries** . Para adicionar grupos aninhados, adicione vários campos à área.  

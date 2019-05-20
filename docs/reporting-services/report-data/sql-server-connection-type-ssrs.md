@@ -2,18 +2,18 @@
 title: Tipo de conexão do SQL Server (SSRS) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3ee7030c869ff39c18fdf1f6efc3e3cee61bffec
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3ade6eb0154c66a405bb49470a6773f7bdc80be5
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032005"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574912"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>O tipo de conexão do SQL Server (SSRS)
   Para incluir dados de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse tipo de fonte de dados interna é baseado na extensão de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Use esse tipo de fonte de dados para se conectar e para recuperar dados de uma versão atual e de versões anteriores de bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

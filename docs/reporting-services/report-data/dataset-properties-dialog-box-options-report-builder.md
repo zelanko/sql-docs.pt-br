@@ -2,7 +2,7 @@
 title: Caixa de diálogo Propriedades do Conjunto de Dados, Opções (Construtor de Relatórios) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: reference
 f1_keywords:
@@ -10,17 +10,17 @@ f1_keywords:
 - sql13.rtp.rptdesigner.datasetproperties.options.f1
 - "10130"
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7f9d4ad97d5d64fe08eb6aac6e0d83063a94bc46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e1db5bcd2401d1888fb6dc76e42c5840ed3b0b62
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623204"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573128"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Opções (Construtor de Relatórios)
-  Selecione **Opções** na caixa de diálogo **Propriedades do Conjunto de Dados** para alterar as opções dos dados, como as opções de agrupamento e tratar os subtotais como dados detalhados, para a consulta. Para obter mais informações sobre agrupamentos, consulte [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+  Selecione **Opções** na caixa de diálogo **Propriedades do Conjunto de Dados** para alterar as opções dos dados, como as opções de ordenação e tratar os subtotais como dados detalhados, para a consulta. Para obter mais informações sobre ordenações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Opções de dados que fazem parte de uma definição de conjunto de dados compartilhado no servidor de relatório afetam todos os relatórios que usam o conjunto de dados compartilhado. Você pode substituir opções para o banco de dados compartilhado depois de adicioná-lo ao relatório. Estas alterações afetam somente o relatório no qual são definidas.  
   
@@ -29,8 +29,8 @@ ms.locfileid: "47623204"
  Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opções  
- **Agrupamento**  
- Selecione uma localidade que determina a sequência de agrupamento a ser usada para classificar os dados. **Padrão** indica que o servidor de relatórios deve tentar derivar o valor a partir do provedor de dados quando o relatório é executado. Se o valor não puder ser derivado, o valor padrão será derivado da configuração de localidade do computador.  
+ **Ordenação**  
+ Selecione uma localidade que determina a sequência de ordenação a ser usada para classificar os dados. **Padrão** indica que o servidor de relatórios deve tentar derivar o valor a partir do provedor de dados quando o relatório é executado. Se o valor não puder ser derivado, o valor padrão será derivado da configuração de localidade do computador.  
   
  **Diferenciação de maiúsculas e minúsculas**  
  Selecione um valor que determina a diferenciação de maiúsculas e minúsculas. Esta opção indica se os dados são maiúsculas e minúsculas. Você pode definir a **Distinção de maiúsculas e minúsculas** como **Verdadeiro**, **Falso**ou **Automático**. O valor padrão, **Auto**, indica que o servidor de relatório deve tentar obter o valor do provedor de dados quando o relatório é executado. Se o provedor de dados não der suporte ao tipo de diferenciação de maiúsculas e minúsculas, o relatório será executado como se o valor fosse **False**. Se souber o valor e souber que ele tem suporte, escolha **Verdadeiro**.  

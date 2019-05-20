@@ -2,18 +2,18 @@
 title: Tipo de conexão da lista do SharePoint (SSRS) | Microsoft Docs
 ms.date: 05/10/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6b3936d04d63f50fb33b2d3d36e080f9a151a186
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 745d7696e7ad98c86586ffc4be2d2d1057fd388b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813569"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575353"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Conexões de conexão de lista do SharePoint (SSRS)
 
@@ -42,9 +42,9 @@ Use as informações deste tópico para criar uma fonte de dados. Para obter ins
 ||Credenciais com suporte|Modo clássico de Autenticação do Windows|* Autenticação de declarações|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Lista de farm local do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|Sim|  
-||Armazenado, Prompt, Nenhum (com credenciais do Windows)<br /><br /> Não há suporte para credenciais armazenadas e de prompt com credenciais que não sejam do Windows.|Sim|não|  
-|Lista remota do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|não<br /><br /> A autenticação baseada em formulários e a autenticação baseada em declarações não têm suporte para listas remotas do SharePoint.|  
-||Armazenado, Prompt, Nenhum (com credenciais do Windows)<br /><br /> Não há suporte para credenciais armazenadas e de prompt com credenciais que não sejam do Windows.|Sim|não<br /><br /> A autenticação baseada em formulários e a autenticação baseada em declarações não têm suporte para listas remotas do SharePoint.|  
+||Armazenado, Prompt, Nenhum (com credenciais do Windows)<br /><br /> Não há suporte para credenciais armazenadas e de prompt com credenciais que não sejam do Windows.|Sim|Não|  
+|Lista remota do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|Não<br /><br /> A autenticação baseada em formulários e a autenticação baseada em declarações não têm suporte para listas remotas do SharePoint.|  
+||Armazenado, Prompt, Nenhum (com credenciais do Windows)<br /><br /> Não há suporte para credenciais armazenadas e de prompt com credenciais que não sejam do Windows.|Sim|Não<br /><br /> A autenticação baseada em formulários e a autenticação baseada em declarações não têm suporte para listas remotas do SharePoint.|  
   
  *A autenticação do Windows, a FBA (autenticação baseada em formulários), os tokens SAML (linguagem de marcação de aplicativos seguros), outros provedores de identidade ou uma combinação de mais de um dos provedores de autenticação citados anteriormente.  
   
@@ -53,9 +53,9 @@ Use as informações deste tópico para criar uma fonte de dados. Para obter ins
 ||Credenciais com suporte|Modo clássico de Autenticação do Windows|* Autenticação de declarações|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Lista de farm local do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|Sim|  
-||Armazenado, Prompt, Nenhum (com credenciais do Windows)<br /><br /> Não há suporte para credenciais armazenadas e de prompt com credenciais que não sejam do Windows.|não|não|  
-|Lista remota do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|não<br /><br /> A autenticação baseada em formulários e a autenticação baseada em declarações não têm suporte para listas remotas do SharePoint.|  
-||Armazenado, Prompt, Nenhum (com credenciais do Windows)<br /><br /> Não há suporte para credenciais armazenadas e de prompt com credenciais que não sejam do Windows.|não|não<br /><br /> A autenticação baseada em formulários e a autenticação baseada em declarações não têm suporte para listas remotas do SharePoint.|  
+||Armazenado, Prompt, Nenhum (com credenciais do Windows)<br /><br /> Não há suporte para credenciais armazenadas e de prompt com credenciais que não sejam do Windows.|Não|Não|  
+|Lista remota do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|Não<br /><br /> A autenticação baseada em formulários e a autenticação baseada em declarações não têm suporte para listas remotas do SharePoint.|  
+||Armazenado, Prompt, Nenhum (com credenciais do Windows)<br /><br /> Não há suporte para credenciais armazenadas e de prompt com credenciais que não sejam do Windows.|Não|Não<br /><br /> A autenticação baseada em formulários e a autenticação baseada em declarações não têm suporte para listas remotas do SharePoint.|  
   
  *A autenticação do Windows, a FBA (autenticação baseada em formulários), os tokens SAML (linguagem de marcação de aplicativos seguros), outros provedores de identidade ou uma combinação de mais de um dos provedores de autenticação citados anteriormente.  
   

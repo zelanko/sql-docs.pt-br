@@ -2,21 +2,21 @@
 title: Entrega de compartilhamento de arquivos no Reporting Services | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9630c2ce992ae6e0ce2e662b32755a201d3f0ec4
-ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 181f349f4dc878f0612cf6635143469c2cbe3f34
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55889987"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575995"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Entrega de compartilhamento de arquivos no Reporting Services
   O SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui uma extensão de entrega de compartilhamento de arquivos que possibilita entregar um relatório a uma pasta. A extensão de entrega de compartilhamento de arquivos está disponível por padrão e não requer configuração adicional. Para que a entrega do arquivo seja bem-sucedida, você deve definir permissões de acesso de gravação na pasta compartilhada. A conta que exige permissões de gravador pode ser uma credencial configurada na assinatura ou uma **Conta de compartilhamento de arquivos** configurada para o servidor de relatório. Para obter mais informações sobre a conta de compartilhamento de arquivo, consulte [Configurações de assinatura e uma conta de compartilhamento de arquivos &#40;Gerenciador de Configurações&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Além disso, os usuários que precisam acessar os relatórios devem ter permissões de leitura na pasta compartilhada.  
@@ -68,9 +68,9 @@ ms.locfileid: "55889987"
 ##  <a name="bkmk_file_options"></a> Opções de arquivo  
  Ao criar uma assinatura de compartilhamento de arquivo, você pode definir como o nome do arquivo será criado e se o arquivo substituirá as versões anteriores do relatório. Um nome de arquivo totalmente qualificado possui três partes: nome, extensão e texto ou número anexado ao arquivo para criar um nome de arquivo exclusivo  
   
- **Nome de Arquivo:** O nome de arquivo é tem base no nome do relatório de origem, mas você pode fornecer um nome personalizado na assinatura. A extensão é opcional, mas se você especificá-la, o servidor de relatório criará uma extensão que corresponda ao formato de renderização.  
+ **Nome de Arquivo:** o nome de arquivo é tem base no nome do relatório de origem, mas você pode fornecer um nome personalizado na assinatura. A extensão é opcional, mas se você especificá-la, o servidor de relatório criará uma extensão que corresponda ao formato de renderização.  
   
- **Substituir:** Você pode especificar as opões de substituição para reusar o mesmo nome de arquivo para cada entrega de relatório ou para criar um novo arquivo. Para substituir o arquivo, é necessário usar o mesmo nome e extensão de arquivo.  
+ **Substituição:** você pode especificar as opões de substituição para reusar o mesmo nome de arquivo para cada entrega de relatório ou para criar um novo arquivo. Para substituir o arquivo, é necessário usar o mesmo nome e extensão de arquivo.  
   
  Uma abordagem alternativa para criar arquivos exclusivos para cada entrega é incluir um carimbo de hora no nome de arquivo. Para fazer isso, adicione a variável **@timestamp** ao nome de arquivo (por exemplo, *CompanySales@timestamp*). Com essa abordagem, o nome de arquivo será exclusivo por definição, portanto, nunca será substituído.  
   

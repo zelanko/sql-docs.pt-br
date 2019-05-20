@@ -2,18 +2,18 @@
 title: Tipo de conexão do SQL Server Parallel Data Warehouse (SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1253ef0bc89bc72dbd3b0e19fe8fca90f68c75e4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0b27ad8b4eddabca20be239c1126e4e6acc44737
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029844"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574991"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Tipo de conexão do SQL Server Parallel Data Warehouse (SSRS)
 
