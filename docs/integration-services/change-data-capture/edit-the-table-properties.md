@@ -13,14 +13,18 @@ ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9899756eb86e3f56ca90b6dc567146408a6588ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f629b0f7905cce4547d76ddfe97adc7dedd17079
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278075"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728849"
 ---
 # <a name="edit-the-table-properties"></a>Editar as propriedades da tabela
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use esta caixa de diálogo para editar as colunas específicas da tabela selecionada onde as alterações estão sendo capturadas. Você também pode editar as informações de **Função de Segurança** e **Instância de Captura** .  
   
 ### <a name="to-edit-the-columns-to-include-in-the-cdc-instance"></a>Para editar as colunas a serem incluídas na instância CDC  

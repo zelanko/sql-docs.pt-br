@@ -14,14 +14,18 @@ ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0781278539a1c01be5aec69dd86e4d0f93e65dde
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 44abaccaf7b41d4dec249e868a5c365f324eb7e0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271815"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724833"
 ---
 # <a name="year-ssis-expression"></a>YEAR (Expressão SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Retorna um inteiro que representa o ano da parte da data.  
   
 ## <a name="syntax"></a>Sintaxe  

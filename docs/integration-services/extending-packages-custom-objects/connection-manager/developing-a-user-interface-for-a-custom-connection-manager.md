@@ -14,14 +14,18 @@ ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cda25c052e24a8520bd0312993552d7eaf5605f4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 86fdc72c811fd82140e9414a3b425a6d8ca6dcb9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289682"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724698"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Desenvolvendo uma interface do usuário para um gerenciador de conexões personalizado
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Depois de ter substituído a implementação das propriedades e dos métodos da classe de base para fornecer sua funcionalidade personalizada, talvez você queira criar uma interface do usuário personalizada para seu gerenciador de conexões. Se você não criar uma interface de usuário personalizada, os usuários poderão configurar seu gerenciador de conexões somente utilizando a janela Propriedades.  
   
  Em um projeto ou assembly de interface do usuário personalizado, você normalmente tem duas classes – uma classe que implementa <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> e o formulário do Windows exibido para reunir informações do usuário.  

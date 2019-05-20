@@ -11,14 +11,18 @@ ms.assetid: 26616eb8-9e80-434d-b22a-ece1b00f449d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e29d6f3619d8bfe728d9270899b3dc72b20bb12c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 807cefcb077fd5cf2d11d6ccae9800157395cfc1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273507"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724610"
 ---
 # <a name="extending-packages-with-custom-objects"></a>Estendendo pacotes com objetos personalizados
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Se os componentes fornecidos no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não atenderem às suas necessidades, você poderá ampliar a capacidade do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] com a codificação de suas próprias extensões. Há duas opções distintas para estender seus pacotes: você pode escrever código dentro dos wrappers avançados fornecidos pela tarefa e o componente Script, ou pode criar extensões personalizadas do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a partir do zero com a derivação das classes base fornecidas pelo modelo de objeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  Essa seção explora a opção mais avançada – extensão de pacotes com objetos personalizados.  

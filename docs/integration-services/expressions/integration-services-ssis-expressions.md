@@ -17,14 +17,18 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d6bf32e59bd433ec0916568e8eb873724beac13b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f5b93a38b461cb56348902beef37ef696d3f0723
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290342"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725301"
 ---
 # <a name="integration-services-ssis-expressions"></a>Expressões do SSIS (Integration Services)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Uma expressão é uma combinação de símbolos (identificadores, literais, funções e operadores) gera um único valor de dados. Expressões simples podem ser uma única constante, variável ou função. Na maioria das vezes, as expressões são complexas, usando diversos operadores e funções e consultando diversas colunas e variáveis. No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], as expressões podem ser usadas para definir condições para instruções CASE, criar e atualizar valores em colunas de dados, atribuir valores às variáveis, atualizar ou preencher propriedades em tempo de execução, definir restrições em restrições de precedência e fornecem as expressões usadas pelo contêiner Loop For.  
   
  As expressões têm base em uma linguagem de expressão e no avaliador de expressão. O avaliador de expressão analisa a expressão e determina se ela segue as regras da linguagem de expressão. Para obter mais informações sobre a sintaxe de expressão e os literais e identificadores com suporte, consulte os tópicos a seguir.  

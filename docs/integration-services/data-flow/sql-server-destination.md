@@ -22,14 +22,18 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 19fe20d882810488e077ed1158b79c3399cc12f8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: becd2493929fb12ddcec6a0623dec7c46f7b5a2d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290582"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726336"
 ---
 # <a name="sql-server-destination"></a>destino do SQL Server
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O destino do SQL Server conecta-se a um banco de dados local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e efetua carregamentos de dados em massa em tabelas e modos de exibição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Não é possível usar o destino do SQL Server em pacotes que acessam um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um servidor remoto. Em vez disso, os pacotes devem usar o destino OLE DB. Para obter mais informações, consulte [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
   
 ## <a name="permissions"></a>Permissões  

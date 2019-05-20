@@ -11,14 +11,18 @@ ms.assetid: 4a301cb0-2f5b-41ba-81bf-46b41d07f137
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a12faf8abe604adac73af56586b40338c5aa48cd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ae98170e3c6628afc75934cece345bbbfbc22267
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277485"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728638"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Credenciais Oracle para executar script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Para executar o script de log suplementar do console do Oracle CDC Designer, o programa solicita as credenciais do usuário Oracle que está executando o script. Para executar este script, o usuário Oracle deve ter permissão ALTER TABLE para todas as tabelas a serem capturadas e permissão SELECT na exibição DBA_LOG_GROUPS.  
   
 ## <a name="task-list"></a>Lista de Tarefas  

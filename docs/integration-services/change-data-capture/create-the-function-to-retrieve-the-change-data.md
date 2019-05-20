@@ -13,14 +13,18 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 49c4e75641056db17faabcc937ee1ec76fd470d5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7890ea871365188918a2b45105848b748f5aa670
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280330"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728984"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Criar a função para recuperar os dados de alteração
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Após concluir o fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que executa uma carga incremental de dados de alteração, a próxima tarefa é criar uma função com valor de tabela que recupera os dados de alteração. É preciso criar esta função apenas uma vez antes da primeira carga incremental.  
   
 > [!NOTE]  

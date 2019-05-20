@@ -11,14 +11,18 @@ ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 08b40a56d9a6c8bc3c3fed0940cc9afdef115a05
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c78416e70f9d37dbedf338b0475bbcb4fdf7a208
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275052"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726729"
 ---
 # <a name="look-up-infopackage"></a>Pesquisar InfoPackage
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use a caixa de diálogo **Pesquisar InfoPackage** para pesquisar um InfoPackage definido no sistema SAP Netweaver BW. Quando a lista de InfoPackages é exibida, selecione o InfoPackage que você quer e o destino preencherá as opções associadas com os valores necessários.  
   
  O destino SAP BW do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 para SAP BW usa a caixa de diálogo **Pesquisar Cadeia de Processo** . Para obter mais informações sobre o destino SAP BW, confira [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  

@@ -13,14 +13,18 @@ ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c16d757432c964f778b39c8cc4e290faf7711ef0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fee01a2531ce405f212c2559d91ec0ea241b9784
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277585"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728623"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>Executar uma carga incremental de várias tabelas
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   No tópico [Melhorando cargas incrementais com o Change Data Capture](../../integration-services/change-data-capture/change-data-capture-ssis.md), o diagrama ilustra um pacote básico que executa uma carga incremental em apenas uma tabela. No entanto, carregar uma tabela não é tão comum quanto ter que realizar uma carga incremental de diversas tabelas.  
   
  Ao executar uma carga incremental de diversas tabelas, algumas etapas devem ser realizadas uma vez para todas as tabelas e outras etapas devem ser repetidas para cada tabela de origem. Você tem mais de uma opção para implementar estas etapas no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:  

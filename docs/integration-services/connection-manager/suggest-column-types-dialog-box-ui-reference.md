@@ -13,14 +13,18 @@ ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bc599088afb3705c825a36e8d671a906de85c942
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4b76d9fd1d248d463f8b62a1c9358851db34fd3f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271489"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728087"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Sugerir Tipos de Coluna
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use a caixa de diálogo **Sugerir Tipos de Coluna** para identificar o tipo de dados e o tamanho das colunas em um Gerenciador de Conexões de Arquivos Simples, com base em uma amostragem do conteúdo dos arquivos.  
   
  Para saber mais sobre os tipos de dados usados pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Tipos de dados do Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  

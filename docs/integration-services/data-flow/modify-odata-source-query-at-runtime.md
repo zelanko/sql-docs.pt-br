@@ -11,14 +11,18 @@ ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4835193453b1f58f7aa6dec5c81cd3c349bc6a04
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4a29245c790f97d92529ff2bf1e100675b3c9530
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275432"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726690"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>Fornecer uma consulta de OData Source em tempo de execução
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  Você pode alterar a consulta de OData Source em tempo de execução adicionando uma *expressão* à propriedade **[Origem OData].[Consulta]** da Tarefa de Fluxo de Dados.  
   
  As colunas retornadas precisarão ser as mesmas colunas retornadas em tempo de design, caso contrário, você obterá um erro quando o pacote for executado. Certifique-se de especificar as mesmas colunas (na mesma ordem) ao usar a opção de consulta de $select. Uma alternativa mais segura para usar a opção de $select é desmarcar as colunas que você não deseja diretamente na interface do usuário do componente de origem.  

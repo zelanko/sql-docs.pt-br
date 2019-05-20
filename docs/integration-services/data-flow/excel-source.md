@@ -19,14 +19,18 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4284edefaec85304fdf189de6ea53f4de87a7efd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dff785052650e18bbd6f8763771c7a7495f10dcd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290032"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726858"
 ---
 # <a name="excel-source"></a>Origem do Excel
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A origem do Excel extrai dados de planilhas ou intervalos em pastas de trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
 
 > [!IMPORTANT]

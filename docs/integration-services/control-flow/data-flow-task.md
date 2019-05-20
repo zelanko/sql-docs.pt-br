@@ -19,14 +19,18 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cca0fb51c67bf4cba471b10c30267d535d83d159
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 295c5156c1f3b27f5030c27d70311e34f0141f18
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274084"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727816"
 ---
 # <a name="data-flow-task"></a>Tarefa de Fluxo de Dados
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A tarefa de Fluxo de Dados encapsula o mecanismo de fluxo de dados que move dados entre as origens e os destinos, permitindo que o usuário transforme, limpe e modifique os dados à medida que são movidos. A adição de uma tarefa de Fluxo de Dados em um pacote de fluxo de controle permite que o pacote extraia, transforme e carregue dados.  
   
  Um fluxo de dados consiste em pelo menos um componente de fluxo de dados, mas normalmente é um conjunto de componentes de fluxo de dados conectados: fontes que extraem dados; transformações que modificam, roteiam ou resumem dados; e destinos que carregam dados.  

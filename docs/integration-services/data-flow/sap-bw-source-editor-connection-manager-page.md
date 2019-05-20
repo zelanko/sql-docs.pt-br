@@ -13,14 +13,18 @@ ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 01cb2819982a452e365bcf13e0a949e1006f2c97
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 041f05a2d7ae623ee40db320676555dad5468459
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280570"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726394"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Editor de Origem SAP BW (página Gerenciador de Conexões)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem SAP BW** para selecionar o gerenciador de conexões SAP BW para a origem de SAP BW. Nesta página, você também seleciona o modo de execução e os parâmetros para extrair os dados do sistema SAP Netweaver BW.  
   
  Para saber mais sobre o componente de origem do SAP BW do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 para SAP BW, consulte [Origem SAP BW](../../integration-services/data-flow/sap-bw-source.md).  

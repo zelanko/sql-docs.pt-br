@@ -14,14 +14,18 @@ ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6220df1c2f636056df92451d32ad44b77d94d894
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 93bbfcc8b76fe6fe1028b5b13395e0a88a6b359a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279210"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726359"
 ---
 # <a name="source-assistant"></a>Assistente de origem
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O componente Assistente de Origem ajuda a criar um componente de origem e um gerenciador de conexões. O componente está localizado na seção **Favoritos** da Caixa de Ferramentas do SSIS.  
   
 > [!NOTE]  

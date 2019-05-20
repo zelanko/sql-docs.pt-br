@@ -14,14 +14,18 @@ f1_keywords:
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 20421d29832aab8fdeb9532c335c689a1314ad2e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2026e33a9e31f437615e8270c61681ec95b287b2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276198"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728107"
 ---
 # <a name="odata-connection-manager"></a>Gerenciador de conexões do OData
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  Conecte-se a uma fonte de dados OData com um gerenciador de conexões OData. Um Componente do OData Source usa um gerenciador de conexões OData para se conectar a uma fonte de dados OData e consumir dados do serviço. Para obter mais informações, consulte [OData Source](../../integration-services/data-flow/odata-source.md).  
   
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>Adição do Gerenciador de Conexões OData a um Pacote SSIS  

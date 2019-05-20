@@ -17,14 +17,18 @@ ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3150d6a8c42a9e4cb0c4cb0cf17b581be61fd418
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 71ecd9b7eb0dc1f1371d31d4e97c230536249168
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280871"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726229"
 ---
 # <a name="conditional-split-transformation"></a>Transformação Divisão Condicional
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A transformação Divisão Condicional pode rotear linhas de dados para saídas diferentes, dependendo do conteúdo dos dados. A implementação da transformação Divisão Condicional é semelhante a uma estrutura de decisão CASE em uma linguagem de programação. A transformação avalia expressões e, com base nos resultados, direciona a linha de dados para a saída especificada. Essa transformação também fornece uma saída padrão, de forma que, se uma linha não corresponder a nenhuma expressão, ela será direcionada para a saída padrão.  
   
 ## <a name="configuration-of-the-conditional-split-transformation"></a>Configuração da transformação Divisão Condicional  

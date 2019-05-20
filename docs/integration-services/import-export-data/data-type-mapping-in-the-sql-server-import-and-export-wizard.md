@@ -10,14 +10,18 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bbccfb6504a6b84735b3310c98b8805d2fce6e68
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 71e52e1e20575f52e4aefde27e16578411c2ea2d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221830"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723818"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Mapeamento de Tipo de Dados no Assistente para Importação e Exportação do SQL Server
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  No Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você pode definir o nome, o tipo de dados e as propriedades do tipo de dados das colunas nas novas tabelas e arquivos de destino, mas não é possível especificar conversões personalizadas para valores de coluna. Como resultado, o mapeamento interno dos tipos de dados de origem para destino é importante.  
   
 ##  <a name="wizardMapping"></a> Como o assistente mapeia tipos de dados entre a origem e o destino?

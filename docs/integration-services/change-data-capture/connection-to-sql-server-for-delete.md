@@ -11,14 +11,18 @@ ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 687515d64bb4b8fd9f49ac894a944453f33defc1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 997f0cf8793b0a809db39abd2b8d484529151950
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277525"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728953"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>Conexão para o SQL Server para exclusão
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Quando um logon sem uma função de banco de dados que inclui permissão de gravação (por exemplo a função **db_owner**) ao banco de dados MSXDBCDC tenta excluir uma instância Oracle CDC, a caixa de diálogo Conectar-se ao SQL Server é exibida.  
   
  Nesta caixa de diálogo, você deve inserir as credenciais de um logon que tem permissão de gravação ao banco de dados MSXDBCDC, como a função de banco de dados **db_owner** para excluir a instância Oracle CDC.  

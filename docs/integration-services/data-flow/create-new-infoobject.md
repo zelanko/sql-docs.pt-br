@@ -11,14 +11,18 @@ ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3e5d0ac61e65618527d5da8c7a8bcf2b5808b143
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9d08b6058a6ef034a197cb259cc7e4d503e69ed8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290762"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727039"
 ---
 # <a name="create-new-infoobject"></a>Criar Novo InfoObject
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use a caixa de diálogo **Criar Novo InfoObject** para criar um novo InfoObject no sistema SAP Netweaver BW.  
   
  Você pode abrir a caixa de diálogo **Criar InfoObject** da página **Gerenciador de Conexões** do **Editor de Destino SAP BW**. Para obter mais informações sobre o destino SAP BW, consulte [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  

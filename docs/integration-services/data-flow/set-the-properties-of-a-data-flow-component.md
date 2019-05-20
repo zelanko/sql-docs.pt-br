@@ -13,14 +13,18 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cc77716e8df17175c0951645eb1034b6ecb9e183
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e2dcaff5b7b8ad834eb12277c587b222b8f782d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282660"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726378"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Definir as propriedades de um componente de fluxo de dados
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Para definir as propriedades de componentes de fluxo de dados, que incluem origens, destinos e transformações, use um dos seguintes recursos:  
   
 -   Os editores de componente fornecidos pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Esses editores incluem somente as propriedades personalizadas de cada componente de fluxo de dados.  
@@ -155,7 +159,7 @@ Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../../in
 |IsSorted|Booliano|Indica se os dados na entrada são classificados.|  
 |Nome|Cadeia de caracteres|Nome da entrada.|  
 |SourceLocale|Integer|ID de localidade (LCID) dos dados de entrada.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina como o componente manipula os truncamentos que ocorrem no processamento de linhas. para obter informações sobre a ferramenta de configuração e recursos adicionais. Os valores são **Fail component**, **Ignore failure**e **Redirect row**.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina como o componente manipula os truncamentos que ocorrem no processamento de linhas. . Os valores são **Fail component**, **Ignore failure**e **Redirect row**.|  
   
  Os destinos e algumas transformações não oferecem suporte a saídas de erro e as propriedades ErrorRowDisposition e TruncationRowDisposition dos componentes são somente leitura.  
   

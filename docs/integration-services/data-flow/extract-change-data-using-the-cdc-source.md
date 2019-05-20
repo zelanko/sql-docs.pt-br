@@ -11,14 +11,18 @@ ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: edb9b3188669883b6f1d744185c4b643dffdface
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 92a2d442803d8d6268cce71e202f2e912ed707b8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271123"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726853"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Extrair dados de alteração por meio da origem CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Para adicionar e configurar uma origem de CDC, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma tarefa Controle de CDC.  
   
  Para obter mais informações sobre a tarefa Controle de CDC, consulte [Tarefa Controle de CDC](../../integration-services/control-flow/cdc-control-task.md).  

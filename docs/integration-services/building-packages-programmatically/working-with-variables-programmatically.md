@@ -23,14 +23,18 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d46d8b70e22422b821190db5717b0c22062ea75d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 13543306533afaf22bbfd12a283d6a6a3e8bdef1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278045"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729247"
 ---
 # <a name="working-with-variables-programmatically"></a>Trabalhando com variáveis programaticamente
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   As variáveis são uma forma de definir valores e controlar processos dinamicamente em pacotes, contêineres, tarefas e manipuladores de eventos. As variáveis também podem ser usadas por restrições de precedência para controlar a direção do fluxo de dados para tarefas diferentes. As variáveis têm uma série de usos:  
   
 -   Atualizar propriedades de um pacote em tempo de execução.  

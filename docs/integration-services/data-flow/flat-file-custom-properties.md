@@ -11,14 +11,18 @@ ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 18b1fd7ce88d7b9be5dfa8440a9675945e99837c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7e2e2fffae3b6c57e0251fdd5b851160824de0f8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280450"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726790"
 ---
 # <a name="flat-file-custom-properties"></a>Propriedades personalizadas de arquivo simples
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **Propriedades personalizadas de fontes**  
   
  A fonte de Arquivo Simples tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  

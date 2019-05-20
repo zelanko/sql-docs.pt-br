@@ -19,14 +19,18 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b3c641f9ade72d1a821739f84e20e04305951a25
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 64fb0e9310230634c36ee0c1bca0cf9c89914bab
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274418"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726878"
 ---
 # <a name="integration-services-data-types"></a>Tipos de dados do Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Quando dados entram em um fluxo de dados em um pacote, a fonte que extrai esses dados converte-os em um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Dados numéricos são atribuídos a um tipo de dados numéricos, dados de cadeia são atribuídos a um tipo de dados de caractere e datas são atribuídas a um tipo de dados de data. Outros dados, como GUIDs e BLOBs, também são atribuídos aos tipos de dados apropriados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Se dados tiverem um tipo de dados que não pode ser convertido em um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ocorrerá um erro.  
   
  Alguns componentes de fluxo de dados convertem tipos de dados entre os tipos de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e os tipos de dados gerenciados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Para obter mais informações sobre o mapeamento entre [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e tipos de dados gerenciados, consulte [Trabalhando com tipos de dados no fluxo de dados](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
@@ -61,7 +65,7 @@ ms.locfileid: "58274418"
 |DT_UI4|Um inteiro não assinado de quatro bytes.|  
 |DT_UI8|Um inteiro não assinado de oito bytes.|  
 |DT_WSTR|Uma cadeia de caracteres Unicode com terminação nula com um comprimento máximo de 4000 caracteres. (Se um valor de coluna contiver terminadores nulos adicionais, a cadeia será truncada na ocorrência do primeiro nulo.)|  
-|DT_IMAGE|Um valor binário com um tamanho máximo de 2^31-1 (2.147.483.647) bytes. para obter informações sobre a ferramenta de configuração e recursos adicionais.|  
+|DT_IMAGE|Um valor binário com um tamanho máximo de 2^31-1 (2.147.483.647) bytes. .|  
 |DT_NTEXT|Uma cadeia de caracteres Unicode com um comprimento máximo de 2^30–1 (1.073.741.823) caracteres.|  
 |DT_TEXT|Uma cadeia de caracteres [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS com um comprimento máximo de 2^31–1 (2.147.483.647) caracteres.|  
   

@@ -17,14 +17,18 @@ ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d24b53d8f94f2478198aa8678d309703d0af274e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 71370adeca366b2002244c7f0aabfbca639579c7
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282951"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805200"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Criando uma transformação assíncrona com o componente Script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Você usa um componente de transformação no fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para modificar e analisar dados à medida que eles passam da origem ao destino. Uma transformação com saídas síncronas processa cada linha de entrada que passa pelo componente. Uma transformação com saídas assíncronas pode aguardar para concluir seu processamento depois de receber todas as linhas de entrada ou ela pode gerar algumas linhas antes de receber todas as linhas de entrada. Esse tópico discute uma transformação assíncrona. Se o processamento exigir uma transformação síncrona, consulte [Criando uma transformação síncrona com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md). Para obter mais informações sobre as diferenças entre componentes síncronos e assíncronos, consulte [Compreendendo as transformações síncronas e assíncronas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
   
  Para obter uma visão geral do componente Script, consulte [Estendendo o fluxo de dados com o componente Script](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  

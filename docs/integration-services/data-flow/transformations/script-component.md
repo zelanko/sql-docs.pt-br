@@ -23,14 +23,18 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e9c75fdd486c88e2f4cd0d58d7e310b44ea140a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a67c3c406c5375e32ed2e49fe59b7f362f421e0d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280640"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725914"
 ---
 # <a name="script-component"></a>Componente Script
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O componente Script hospeda o script e permite que um pacote inclua e execute um código de script personalizado. Você pode usar o componente Script em pacotes para as seguintes finalidades:  
   
 -   Aplicar várias transformações a dados em vez de usar transformações múltiplas no fluxo de dados. Por exemplo, um script pode adicionar os valores em duas colunas e depois calcular a média da soma.  

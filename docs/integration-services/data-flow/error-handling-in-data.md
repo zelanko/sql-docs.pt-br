@@ -23,14 +23,18 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3a60ec842c22f5c11972b9765f230a00c672ca0e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 28f2c5ecd2e25e9e3bbdd59cd8ea79b58b756cb7
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277174"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726914"
 ---
 # <a name="error-handling-in-data"></a>Tratamento de erros em dados
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Quando um componente de fluxo de dados aplica uma transformação aos dados da coluna, extrai dados de fontes ou carrega dados nos destinos, podem ocorrer erros. Frequentemente, os erros ocorrem por causa de valores de dados inesperados. Por exemplo, uma conversão de dados falha porque uma coluna contém uma cadeia de caracteres em vez de um número, uma inserção em uma coluna de banco de dados falha porque os dados são uma data e a coluna tem um tipo de dados numéricos, ou uma expressão não é avaliada porque o valor de uma coluna é zero, resultando em uma operação matemática que não é válida.  
   
  Em geral, os erros se enquadram nas categorias a seguir:  

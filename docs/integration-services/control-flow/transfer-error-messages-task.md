@@ -17,14 +17,18 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6d28d68409ccdee801c1a614add2559ae69b1ac6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cc7a5b230120f7f392d33793a18994932ce8f05c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282990"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727399"
 ---
 # <a name="transfer-error-messages-task"></a>Tarefa Transferir Mensagens de Erro
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A tarefa Transferir Mensagens de Erro transfere uma ou mais mensagens de erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidas pelo usuário entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mensagens definidas pelo usuário são mensagens com um identificador igual ou maior que 50000. Mensagens com identificador menor que 50000 são mensagens de erro do sistema e não podem ser transferidas usando-se a tarefa Transferir Mensagens de Erro.  
   
  A tarefa Transferir Mensagens de Erro pode ser configurada para transferir todas as mensagens de erro ou só as mensagens de erro especificadas. Mensagens de erro definidas pelo usuário podem estar disponíveis em vários idiomas diferentes e a tarefa pode ser configurada para só transferir mensagens em idiomas selecionados. Uma versão us_english da mensagem, que usa a página de código 1033, deve estar no servidor de destino para que você possa transferir versões em outro idioma da mensagem para esse servidor.  

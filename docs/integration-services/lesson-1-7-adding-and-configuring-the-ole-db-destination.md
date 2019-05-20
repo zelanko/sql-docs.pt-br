@@ -11,14 +11,18 @@ ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47ba9be2a6ff8a03f40cc6253b0dbd0674e1ec48
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 620314ec11154737dc6d35bcf1d3e2587aaab2a1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281820"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722990"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Lição 1-7: Adicionar e configurar o destino OLE DB
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Seu pacote agora pode extrair dados de uma fonte de arquivo simples e transforma esses dados em um formato compatível com o destino. A próxima tarefa é carregar os dados transformados no destino. Para carregar os dados, adicione um destino OLE DB ao fluxo de dados. O destino do OLE DB pode usar uma tabela, exibição de banco de dados ou um comando SQL para carregar os dados em uma diversidade de bancos de dados em conformidade com o OLE DB.  
   

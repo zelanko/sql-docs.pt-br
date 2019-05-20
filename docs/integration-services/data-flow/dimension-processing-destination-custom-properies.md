@@ -11,14 +11,18 @@ ms.assetid: 9700f663-53f2-49b6-b1ef-92c7b752d6a1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8c14320079573ffe63980a4ee0d27a0562b45333
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: db68e2b9d24c60378e94436652d3e5daead94369
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283051"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726928"
 ---
 # <a name="dimension-processing-destination-custom-properies"></a>Propriedades personalizadas do destino de processamento de dimensões
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O destino Processamento de Dimensões tem propriedades personalizadas e propriedades comuns a todos os componentes de fluxo de dados.  
   
  A tabela a seguir descreve as propriedades personalizadas do destino Processamento de Dimensões. Todas as propriedades são de leitura/gravação.  

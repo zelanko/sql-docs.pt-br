@@ -11,14 +11,18 @@ ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1124d4f7f0d5adfe7836b27d2331bda32a8284d8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f036866a41376b2ee37076ac311b7dbe3f3d56e4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281390"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726541"
 ---
 # <a name="raw-file-custom-properties"></a>Propriedades personalizadas de arquivo bruto
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **Propriedades personalizadas de fontes**  
   
  A fonte Arquivo Bruto tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  

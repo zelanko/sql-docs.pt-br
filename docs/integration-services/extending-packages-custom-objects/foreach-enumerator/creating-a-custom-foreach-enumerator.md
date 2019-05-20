@@ -16,14 +16,18 @@ ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0c665a05485b2830045cdc46d0afa43e541d2a73
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a3e40472e41f9798499770e0a2198c52a1d32e44
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283040"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724574"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>Criando um enumerador Foreach personalizado
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   As etapas envolvidas na criação de um enumerador foreach personalizado são semelhantes às etapas da criação de qualquer outro objeto personalizado do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
   
 -   Crie uma classe nova herdada da classe base. Para um enumerador foreach, a classe base é <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>.  

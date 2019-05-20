@@ -13,14 +13,18 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f84f4e0e0e5b0529f3b79cd64cd9bb605737adf5
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 504c05882d1e7c690b8ddbd46c331073f63bbb7c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59242494"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726998"
 ---
 # <a name="data-streaming-destination"></a>Destino do Fluxo de Dados
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O **Destino do Fluxo de Dados** é um componente de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS), que permite que o **Provedor OLE DB para SSIS** consuma a saída de um pacote SSIS como um conjunto de resultados de tabelas. Você pode criar um servidor vinculado que use o Provedor OLE DB para SSIS e então execute uma consulta SQL no servidor vinculado para exibir os dados retornados pelo pacote SSIS.  
   
  No exemplo a seguir, a consulta a seguir retorna a saída do pacote Package.dtsx no projeto SSISPackagePublishing na pasta do Power BI do Catálogo do SSIS. Essa consulta usa o servidor vinculado chamado [Servidor Vinculado Padrão para o Integration Services] que, por sua vez, usa o novo Provedor OLE DB para SSIS. A consulta inclui o nome da pasta, o nome do projeto e o nome do pacote no catálogo do SSIS. O Provedor OLE DB para SSIS executa o pacote especificado na consulta e retorna o conjunto de resultados tabulares.  

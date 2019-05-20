@@ -16,14 +16,18 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9594567f4412ddf72943a397c7fa3d425f8fb27
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2914cdec402cee3be7ba92d74e0c8ff7db8fd41e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273427"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726629"
 ---
 # <a name="odbc-destination"></a>Destino ODBC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O destino ODBC carrega dados em massa em tabelas de bancos de dados com suporte ODBC. O destino ODBC usa um gerenciador de conexões ODBC para se conectar à fonte de dados.  
   
  Um destino ODBC inclui mapeamentos entre as colunas de entrada e as colunas da fonte de dados de destino. Você não precisa mapear as colunas de entrada para todas as colunas de destino, mas, dependendo das propriedades das colunas de destino, poderão ocorrer erros se nenhuma das colunas de entrada for mapeada para as colunas de destino. Por exemplo, se uma coluna de destino não permitir valores nulos, uma coluna de entrada deve ser mapeada para aquela coluna de destino. Além disso, colunas de tipos diferentes podem ser mapeadas, porém se os dados de entrada não forem compatíveis com o tipo de coluna de destino, um erro ocorrerá em tempo de execução. Dependendo da configuração de comportamento do erro, o erro será ignorado, causará uma falha ou a linha será enviada à saída de erro.  

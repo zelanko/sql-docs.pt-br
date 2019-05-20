@@ -13,14 +13,18 @@ ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 55d2dda005fb0e01cc65f374967f776e85b8fc25
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 61a95fef0bdc8ae31631c0c86f43f9ca5fa6a98b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270694"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725014"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (Expressão SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Retorna o número especificado de caracteres da parte mais à direita da expressão character especificada.  
   
 ## <a name="syntax"></a>Sintaxe  

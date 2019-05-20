@@ -18,14 +18,18 @@ ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 526ecbfaf5b445ccf116675b60d6560790bfb88c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f4e9157dc3e3fb7bffe8365290ef6e4be1878f81
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273497"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727459"
 ---
 # <a name="sequence-container"></a>Contêiner de sequência
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O contêiner da sequência define um fluxo de controle que é um subconjunto do fluxo de controle do pacote. Os contêineres da sequência agrupam o pacote em vários fluxos de controle separados, cada um contendo uma ou mais tarefas e contêineres, que são executados dentro do fluxo de controle de pacote geral.  
   
  O contêiner Sequência pode incluir múltiplas tarefas além de outros contêineres. Adicionar tarefas e contêineres a um contêiner de Sequência é semelhante a adicioná-los a um pacote, exceto que você arrasta as tarefas e contêineres para o contêiner de Sequência e não para o contêiner de pacote. Se o contêiner Sequência incluir mais de uma tarefa ou contêiner, você pode conectá-los usando restrições de precedência, exatamente como faria em um pacote. Para obter mais informações, consulte [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  

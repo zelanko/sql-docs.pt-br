@@ -11,14 +11,18 @@ ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eced99b566e94b6b4010b209e942e2518e33df1d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ec8b4ee24e4217492c34319f94976aed44550037
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274843"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727076"
 ---
 # <a name="create-infopackage"></a>Criar InfoPackage
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use a caixa de diálogo **Criar Novo InfoPackage** para criar um novo InfoPackage no sistema SAP Netweaver BW.  
   
  Você pode abrir a caixa de diálogo **Criar InfoPackage** da página **Gerenciador de Conexões** do **Editor de Destino SAP BW**. Para obter mais informações sobre o destino SAP BW, consulte [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  

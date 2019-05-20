@@ -13,14 +13,18 @@ ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 92e04343c48ca9e51d98713366b015d5817f2071
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9547e76602ab82b7cc66b62eb52d37857de95ab4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290382"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726455"
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>Editor de Destino de SAP BW (página Saída de Erro)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use a página **Saída de Erro** do **Editor de Destino SAP BW** para especificar opções de tratamento de erro.  
   
  Para saber mais sobre o destino SAP BW do Connector 1.1 do [!INCLUDE[msCoName](../../includes/msconame-md.md)] para SAP BW, consulte [Destino SAP BW](../../integration-services/data-flow/sap-bw-destination.md).  

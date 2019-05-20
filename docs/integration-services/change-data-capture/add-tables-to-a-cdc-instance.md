@@ -13,14 +13,18 @@ ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e2b709c9e6de54b24da2b99668e85ed72a17651
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 505699164f49511adb95465e0b74e9e90c8f7dc6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273658"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729118"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>Adicionar tabelas a uma instância CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use a caixa de diálogo Seleção de Tabela para adicionar tabelas da origem do Oracle para a instância CDC. As tabelas selecionadas são adicionadas à lista na guia **Tabelas** do editor de Propriedades.  
   
  Por padrão, nenhuma tabela está incluída na lista de tabelas nesta caixa de diálogo. Você pode marcar a caixa de seleção **(Selecionar Tudo)** ou pesquisar tabelas específicas.  
@@ -28,14 +32,14 @@ ms.locfileid: "58273658"
  **Para pesquisar tabelas específicas**  
  Insira os critérios de pesquisa da seguinte maneira e clique em **Pesquisar**:  
   
--   **Esquema**: selecione um esquema de banco de dados da lista. Somente tabelas que têm esquema serão incluídas na lista.  
+-   **Esquema**: selecione um esquema de banco de dados na lista. Somente tabelas que têm esquema serão incluídas na lista.  
   
 -   **Padrão de nome de tabela**: insira qualquer cadeia de caracteres. Somente tabelas que incluem a cadeia de caracteres inserida serão exibidas.  
   
 > [!NOTE]  
 >  Você pode inserir critérios em um ou ambos os campos.  
   
--   **Exibir as 1.000 primeiras tabelas correspondentes**: Por padrão, esta caixa é selecionada. Limita o vídeo às primeiras 1000 tabelas compatíveis. Se você desmarcar a caixa de seleção, todas as tabelas que correspondem aos critérios serão exibidas. Se houver um número grande de tabelas, poderá levar muito tempo para exibir a lista.  
+-   **Exibir as 1.000 primeiras tabelas correspondentes**: por padrão, esta caixa é selecionada. Limita o vídeo às primeiras 1000 tabelas compatíveis. Se você desmarcar a caixa de seleção, todas as tabelas que correspondem aos critérios serão exibidas. Se houver um número grande de tabelas, poderá levar muito tempo para exibir a lista.  
   
  **Para selecionar tabelas a serem incluídas na instância CDC**  
  Clique na caixa de seleção ao lado de qualquer uma das tabelas que você quer incluir e clique em **Adicionar**. As tabelas são adicionadas à lista na página **Selecionar Tabelas e Colunas** do Assistente de Nova Instância.  

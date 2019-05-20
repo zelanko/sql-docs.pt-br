@@ -11,14 +11,18 @@ ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e799ce450bfca9301218fe1b2c29aaf9a49562d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d2342216a550b285454417be36da9e7f15b661af
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270791"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725965"
 ---
 # <a name="map-columns-to-composite-domains"></a>Mapear colunas para domínios compostos
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Um domínio composto consiste em dois ou mais domínios únicos. Você pode mapear várias colunas para o domínio, ou pode mapear uma única coluna com valores limitados para o domínio.  
   
  Quando você tiver várias colunas, deverá mapear uma coluna para cada domínio único no domínio composto para aplicar as regras do domínio composto para a limpeza de dados. Selecione os domínios únicos contidos no domínio composto, no Cliente Data Quality. Para obter mais informações, consulte [Criar um domínio composto](../../../data-quality-services/create-a-composite-domain.md).  

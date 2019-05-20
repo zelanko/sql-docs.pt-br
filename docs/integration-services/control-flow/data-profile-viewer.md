@@ -16,14 +16,18 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ab05ec317c7c2b653dd965f1420e4097f84e3a51
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: feacddee000b296e5a0687e63deb1cb75fe1b04c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272367"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727806"
 ---
 # <a name="data-profile-viewer"></a>Visualizador de Perfil de Dados
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Exibir e analisar os perfis de dados são a próxima etapa no processo de criação de perfil de dados. Esses perfis podem ser exibidos depois que você executar a tarefa Criação de Perfil de Dados dentro de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e computá-los. Para obter mais informações sobre como configurar e executar a tarefa Criação de Perfil de Dados, consulte [Configuração da Tarefa Criação de Perfil de Dados](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
   
 > [!IMPORTANT]  

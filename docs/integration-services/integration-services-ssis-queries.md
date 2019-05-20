@@ -18,14 +18,18 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d1c5ab11bd6fb6447e991eea64ba2d8a10dfca5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 706ea983c2fcbd8607ed64f8257d96ad89189d27
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289426"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723537"
 ---
 # <a name="integration-services-ssis-queries"></a>Consultas do SSIS (Integration Services)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A tarefa Executar SQL, a origem OLE DB, o destino OLE DB e a transformação Pesquisa podem usar consultas de SQL. Na tarefa Executar SQL, as instruções SQL podem criar, atualizar e excluir objetos de banco de dados e dados; executar procedimentos armazenados e executar instruções SELECT. Na origem OLE DB e na transformação Pesquisa, as instruções SQL são normalmente instruções SELECT ou EXEC. Esta última normalmente executa procedimentos que retornam conjuntos de resultados.  
   
  Uma consulta pode ser analisada para estabelecer se é válida. Ao analisar uma consulta que usa uma conexão com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a consulta é analisada, executada e o resultado de execução (sucesso ou falha) é atribuído ao resultado da análise. Se a consulta usar uma conexão com dados que seja diferente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a instrução só será analisada.  

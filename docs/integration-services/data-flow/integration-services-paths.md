@@ -21,14 +21,18 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3aa227c82d9481863c6cca360fdac41cec3ace13
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6d66c98acec072ff2ce3afa4fb2ecfb0236f05ec
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282450"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726869"
 ---
 # <a name="integration-services-paths"></a>Caminhos do Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Um caminho conecta dois componentes em um fluxo de dados conectando a saída de um componente de fluxo de dados à entrada de outro componente. Um caminho tem uma origem e um destino. Por exemplo, se um caminho conectar uma origem OLE DB e uma transformação Classificação, a origem OLE DB será a origem do caminho e a transformação Classificação será o destino do caminho. A origem é o componente onde o caminho inicia, e o destino é o componente onde o caminho termina.  
   
  Se você executar um pacote no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , será possível exibir os dados em um fluxo de dados anexando visualizadores de dados a um caminho. Um visualizador de dados pode ser configurado para exibir dados em uma grade. Um visualizador de dados é uma ferramenta útil de depuração. Para obter mais informações, consulte [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  

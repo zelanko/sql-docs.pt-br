@@ -14,14 +14,18 @@ ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0f6f206382d74ace29bdc34e8e25426079c016f6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f3f35e1178af11111cdbdd00d1cbdba51660c098
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281920"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728035"
 ---
 # <a name="azure-blob-upload-task"></a>Tarefa de Carregamento de Blobs do Azure
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 A **Tarefa de Upload de Blobs do Azure** permite que um pacote SSIS carregue arquivos para um armazenamento de blobs do Azure.
     
 Para adicionar uma **Tarefa de Upload de Blobs do Azure**, arraste-a e solte-a no Designer SSIS, e clique duas vezes ou com o botão direito do mouse em **Editar** para ver a caixa de diálogo **Editor da Tarefa de Upload de Blobs do Azure** .  

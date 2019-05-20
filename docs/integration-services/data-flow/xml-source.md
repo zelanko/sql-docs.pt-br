@@ -20,14 +20,18 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 50775777118d9f276e744f2c8fd8aff06bf0f0fe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9e6c504b96e181a0362cf7d20daa95017d2140fa
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290622"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725709"
 ---
 # <a name="xml-source"></a>Origem XML
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A origem XML lê um arquivo de dados XML e preenche as colunas na saída de origem com os dados.  
   
  Os dados de arquivos XML frequentemente incluem relações hierárquicas. Por exemplo, um arquivo de dados XML pode representar catálogos e itens em catálogos. Antes de os dados serem inseridos no fluxo de dados, é necessário determinar a relação dos elementos no arquivo de dados XML e gerar uma saída para cada elemento do arquivo.  

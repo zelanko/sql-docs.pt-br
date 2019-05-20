@@ -14,14 +14,18 @@ ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3bb02a98330a7ad93e7784ae9ce6d08284585ff9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0128172fa800cde1dafb0a127a1463e3295ce06f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275948"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724987"
 ---
 # <a name="round-ssis-expression"></a>ROUND (Expressão SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Retorna uma expressão numérica arredondada ao comprimento ou precisão especificados. O parâmetro de comprimento deve ser avaliado como um inteiro.  
   
 ## <a name="syntax"></a>Sintaxe  

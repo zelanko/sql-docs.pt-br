@@ -13,14 +13,18 @@ ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c285b74765fea81374c8cfbb861851c35323fd68
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 80f61800efa790132d3d3cf28285fd7648348e5d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271782"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724773"
 ---
 # <a name="creating-a-custom-connection-manager"></a>Criando um gerenciador de conexões personalizado
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   As etapas a seguir para criar um gerenciador de conexões personalizado são semelhantes às etapas de criação de qualquer outro objeto personalizado do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
   
 -   Crie uma classe nova herdada da classe base. Para um gerenciador de conexões, a classe base é <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>.  

@@ -17,14 +17,18 @@ ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 945b92c5f73ad139b79f66e4ca2aeccdb1aabdb7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0b02552c4fae1e2266d8a98f1d71457b6e2709fc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277145"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724664"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>Métodos de tempo de execução de um componente de fluxo de dados
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   No tempo de execução, a tarefa de fluxo de dados examina a sequência de componentes, prepara um plano de execução e gerencia um pool de threads de trabalho que executa o plano de trabalho. A tarefa carrega linhas de dados de origens, processa essas linhas através de transformações e as salva em destinos.  
   
 ## <a name="sequence-of-method-execution"></a>Sequência de execução do método  

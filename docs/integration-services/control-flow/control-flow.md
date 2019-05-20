@@ -15,14 +15,18 @@ ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a023b8a1a24c8e98856d1540574e1c3c99f87c7d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2ac6b4018d24d3ee94d50482295541c36cbafe14
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282870"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727847"
 ---
 # <a name="control-flow"></a>Fluxo de Controle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Um pacote consiste em um fluxo de controle e, opcionalmente, em um ou mais fluxos de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece três tipos diferentes de elementos de fluxo de controle: contêineres, que fornecem estruturas em pacotes, tarefas, que oferecem funcionalidade e restrições de precedência, que conectam os executáveis, os contêineres e as tarefas em um fluxo de controle ordenado.  
   
  Para obter mais informações, consulte [Restrições de precedência](../../integration-services/control-flow/precedence-constraints.md), [Contêineres do Integration Services](../../integration-services/control-flow/integration-services-containers.md)e [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md).  

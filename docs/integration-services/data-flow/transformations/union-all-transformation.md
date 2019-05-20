@@ -19,14 +19,18 @@ ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9069bffba5739a7eb53c12315ba3d28702e3398
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4173a5153dbd05977fcb8cd42b695d3654b1584
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273753"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725835"
 ---
 # <a name="union-all-transformation"></a>transformação Unir Tudo
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A transformação Union All combina várias entradas em apenas uma saída. Por exemplo, as saídas provenientes de cinco origens de Arquivo Simples diferentes podem ser aplicadas à transformação Unir Tudo e combinadas em apenas uma saída.  
   
 ## <a name="inputs-and-outputs"></a>Entradas e saídas  

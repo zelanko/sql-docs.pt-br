@@ -13,14 +13,18 @@ ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1f75364a019bbf6f4827d060cfd1daa7076137ea
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f4515d920039c6dacd48e4b969928d525a1cec67
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58269988"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725049"
 ---
 # <a name="power-ssis-expression"></a>POWER (Expressão SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Retorna o resultado da elevação de uma expressão numérica a uma potência. O parâmetro de potência deve ser avaliado como um inteiro.  
   
 ## <a name="syntax"></a>Sintaxe  

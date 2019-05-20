@@ -20,14 +20,18 @@ ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 40019c35b3e7b7374b0b0c2066a5ba3e5c2656e1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fb5be38de88d46a379da31dbe2f570269e4e3a25
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281906"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727898"
 ---
 # <a name="check-database-integrity-task"></a>Tarefa Verificar Integridade do Banco de Dados
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A tarefa Verificar Integridade do Banco de Dados verifica a alocação e integridade estrutural de todos os objetos no banco de dados especificado. A tarefa pode verificar um único ou vários bancos de dados, e você também pode optar por verificar os índices de banco de dados.  
   
  A tarefa Verificar Integridade do Banco de Dados encapsula a instrução DBCC CHECKDB. Para obter mais informações, veja [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).  

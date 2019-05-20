@@ -13,14 +13,18 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 95a771a7eb5f8f77f7ee7e869c0a434b1b604d26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 124d7c0aec844b1a600f051473835e0be667824f
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282390"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805181"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE em pacotes do Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Na versão atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a instrução SQL em uma tarefa Executar SQL pode conter uma instrução MERGE. A instrução MERGE permite realizar várias operações INSERT, UPDATE e DELETE em uma única instrução.  
   
  Para usar a instrução MERGE em um pacote, siga estas etapas:  

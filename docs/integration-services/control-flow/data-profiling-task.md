@@ -17,14 +17,18 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2512be2c3fcac33c3bb87700f8925a0f4743a8a4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dfe740bfa0ec25d577565f310ebeb3ea5e5d9274
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275085"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727761"
 ---
 # <a name="data-profiling-task"></a>Tarefa Criação de Perfil de Dados
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A tarefa Criação de Perfil de Dados computa vários perfis ajudam a familiarizar-se com uma fonte de dados e a identificar problemas nos dados que precisam ser corrigidos.  
   
  É possível usar a tarefa Criação de perfil de dados dentro de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para criar perfil de dados armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e identificar possíveis problemas com a qualidade dos dados.  

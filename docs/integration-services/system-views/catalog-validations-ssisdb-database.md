@@ -11,14 +11,18 @@ ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c57087e46ec596ae002ef00b802b62b97ee65e0e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9c2bf8fe0f0cefb0557fb17160bcfffab957dda1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280530"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714134"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (banco de dados SSISDB)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Exibe os detalhes de todas as validações de projeto e pacote no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

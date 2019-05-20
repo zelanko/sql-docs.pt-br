@@ -17,14 +17,18 @@ ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a65a8be5dd71b6c1400dc325b34016e9df7f8192
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a33198113b770aff85a52a153272f019d4ffdca7
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275529"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726271"
 ---
 # <a name="cache-transform"></a>transformação Cache
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A Transformação Cache gera um conjunto de dados de referência para uma Transformação Pesquisa, gravando dados de uma fonte de dados conectada no fluxo de dados para um gerenciador de conexões de Cache. A transformação Pesquisa executa pesquisas, unindo dados em colunas de entrada de uma fonte de dados conectados com colunas no banco de dados de referência.  
   
  Você pode usar o gerenciador de conexões de Cache quando deseja configurar a Transformação Pesquisa para executar no modo de cache cheio. Nesse modo, o conjunto de dados de referência é carregado no cache antes da execução da Transformação Pesquisa.  

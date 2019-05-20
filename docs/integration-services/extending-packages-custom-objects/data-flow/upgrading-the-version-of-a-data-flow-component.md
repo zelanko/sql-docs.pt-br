@@ -16,14 +16,18 @@ ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b077a211fdbf1a9550863fd1cec63dbea5de138f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b54c1dea4db82b9a8379237bd141a45d7c7d0c19
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282180"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724634"
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>Atualizando a versão de um componente de fluxo de dados
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Pacotes criados com uma versão mais antiga do seu componente podem conter metadados que não são mais válidos, como propriedades personalizadas cujo uso foi modificado em versões mais recentes do componente. É possível substituir o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> para atualizar os metadados salvos anteriormente em pacotes mais antigos, a fim de refletir as propriedades atuais do seu componente.  
   
 > [!NOTE]  

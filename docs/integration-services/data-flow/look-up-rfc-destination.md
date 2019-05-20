@@ -11,14 +11,18 @@ ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 046ec13269181eedda2d9fcfd891e7dd823db372
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 960c172b5634ba081fdcec404f13d0314e512f91
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282230"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726707"
 ---
 # <a name="look-up-rfc-destination"></a>Pesquisar destino RFC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use a caixa de diálogo **Pesquisar Destino RFC** para pesquisar um Destino RFC definido no sistema SAP Netweaver BW. Quando a lista de Destino RFC disponível é exibida, selecione o destino que você quer e o componente preencherá as opções associadas com os valores necessários.  
   
  A origem SAP BW e o destino SAP BW usam a caixa de diálogo **Pesquisar Destino RFC** . Para obter mais informações sobre esses componentes do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 para SAP BW, consulte [Fonte SAP BW](../../integration-services/data-flow/sap-bw-source.md) e [Destino SAP BW](../../integration-services/data-flow/sap-bw-destination.md).  

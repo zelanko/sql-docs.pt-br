@@ -11,14 +11,18 @@ ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 188735b5a02150ba801154e338090ce75dc23060
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e8903517affd4d0a8e395a17cb97e27ddd5a67d5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274179"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722446"
 ---
 # <a name="lesson-2-add-looping-with-ssis"></a>Lição 2: Adicionar looping com o SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Na [Lição 1: Criar um projeto e pacote básico com o SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md), você criou um pacote que extrai dados de uma fonte de arquivo simples. Os dados então são transformados usando transformações de Pesquisa. Por fim, o pacote carrega os dados para uma cópia da tabela de fatos **FactCurrencyRate** no banco de dados de amostra **AdventureWorksDW2012**.  
   

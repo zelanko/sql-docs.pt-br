@@ -15,14 +15,18 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3046b281141649746c8d93496a0ddbb8ad3607c6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8cb534e6306d590c6a1c407ef92fdcd2ae729415
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282840"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727548"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Loop por meio de arquivos do Excel e tabelas usando um contêiner de Loop Foreach
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Os procedimentos neste tópico descrevem como criar um loop através de pastas de trabalho do Excel ou através de tabelas em uma pasta de trabalho do Excel, usando o contêiner Loop Foreach com o enumerador apropriado.  
 
 > [!IMPORTANT]

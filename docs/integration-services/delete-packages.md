@@ -11,14 +11,18 @@ ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4cae6eec034f56f94635ec33bd2550e96a726d7c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 358780e6a25e6f39459e90eaba7f7d6e4b3e7ac8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270505"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725680"
 ---
 # <a name="delete-packages"></a>Excluir pacotes
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], você pode excluir pacotes salvos no sistema de arquivos. Se você excluir um pacote, ele será excluído permanentemente e não poderá ser restaurado em um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 > [!NOTE]  

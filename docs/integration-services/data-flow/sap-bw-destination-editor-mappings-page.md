@@ -13,14 +13,18 @@ ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6c08d741f5f084a250ef9b9fde3a4e9640b52bdc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 67bf33bef52d88685a754729eb22131100be0c50
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274244"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726439"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>Editor de Destino de SAP BW (página Mapeamentos)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use a página **Mapeamentos** do **Editor de Destino SAP BW** para mapear colunas de entrada para colunas de destino.  
   
  Para saber mais sobre o destino SAP BW do Connector 1.1 do [!INCLUDE[msCoName](../../includes/msconame-md.md)] para SAP BW, consulte [Destino SAP BW](../../integration-services/data-flow/sap-bw-destination.md).  

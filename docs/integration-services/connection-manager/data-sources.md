@@ -13,14 +13,18 @@ ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0fe7839e08e38096b4b942dc3119d3a560c0a0fa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d316864d3dffb26680a503ad1b43bcb4b3ab94a8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277625"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728318"
 ---
 # <a name="data-sources"></a>Fontes de dados
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] inclui um objeto de tempo de design que você pode usar em pacotes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] : a fonte de dados.  
   
  Um objeto de fonte de dados é uma referência para uma conexão e, no mínimo, inclui uma cadeia de caracteres de conexão e um identificador de fonte de dados. Ele também pode incluir metadados adicionais como uma descrição, um nome, um nome de usuário e uma senha.  

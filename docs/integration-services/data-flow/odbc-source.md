@@ -16,14 +16,18 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0518701a8f776fbe625fa77d35bfcc4f961973b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8a0bef11a16b939c4d169a3b2ee967d6b374f2eb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289832"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726618"
 ---
 # <a name="odbc-source"></a>Origem ODBC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A origem ODBC extrai dados de um banco de dados com suporte do ODBC usando uma tabela de banco de dados, uma exibição ou uma instrução SQL.  
   
  A origem ODBC tem os seguintes modos de acesso a dados para extrair dados:  

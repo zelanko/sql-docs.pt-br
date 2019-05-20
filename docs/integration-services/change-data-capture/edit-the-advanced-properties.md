@@ -13,14 +13,18 @@ ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 82f88ed25a758ebd6b8fcbe86a8b5c1b8065a1aa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9d016237a9793b89406091088ae9c973620f4631
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289612"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728885"
 ---
 # <a name="edit-the-advanced-properties"></a>Editar as propriedades avançadas
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use a guia **Advanced** para acrescentar propriedades especiais à instância de CDC.  
   
 #### <a name="to-add-advanced-properties-to-the-cdc-instance"></a>Para acrescentar propriedades avançadas à instância CDC  

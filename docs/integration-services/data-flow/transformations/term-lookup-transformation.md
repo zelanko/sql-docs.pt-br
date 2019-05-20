@@ -24,14 +24,18 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc197ee015ac6ca35613bbb54dd48bbca67b2faa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4f9dc06cb17b0135f6368824235e264bfcddddb2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290302"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725786"
 ---
 # <a name="term-lookup-transformation"></a>transformação Pesquisa de Termos
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A transformação Pesquisa de Termo corresponde termos extraídos de texto em uma coluna de entrada de transformação com termos em uma tabela de referência. Ela conta o número de vezes em que um termo na tabela de pesquisa ocorre no conjunto de dados de entrada e grava a contagem junto com o termo da tabela de referência nas colunas na saída de transformação. Essa transformação é útil para criar uma lista de palavras personalizada com base no texto de entrada, completa com estatísticas de frequência de palavras.  
   
  Antes de a transformação pesquisa de termos executar uma pesquisa, ela extrai palavras do texto em uma coluna de entrada usando o mesmo método da transformação extração de termos:  

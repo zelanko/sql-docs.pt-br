@@ -13,14 +13,18 @@ ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c267518f15bb87dddfd1139e80c3c7922bdf37c1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0860c983b6d00f1ec1199f716cae73140e5b84d5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278055"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724168"
 ---
 # <a name="using-variables-in-the-script-component"></a>Usando variáveis no componente Script
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   As variáveis armazenam valores que um pacote e seus contêineres, tarefas e manipuladores de eventos podem usar em tempo de execução. Para obter mais informações, consulte [Variáveis do SSIS &#40;Integration Services&#41;](../../../integration-services/integration-services-ssis-variables.md).  
   
  Você pode tornar as variáveis existentes disponíveis para acesso somente leitura ou leitura/gravação por meio de seu script personalizado inserindo listas de variáveis delimitadas por vírgulas nos campos **ReadOnlyVariables** e **ReadWriteVariables** na página **Script** do **Editor de Transformação Scripts**. Lembre-se de que os nomes de variáveis diferenciam maiúsculas de minúsculas. Use a propriedade **Value** para ler e gravar em variáveis individuais. O componente Script trata qualquer bloqueio necessário em segundo plano, à medida que seu script manipula as variáveis em tempo de execução.  

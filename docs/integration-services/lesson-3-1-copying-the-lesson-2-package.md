@@ -11,14 +11,18 @@ ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b9e03c2b26d702dee0edc1ef445a4a362e9ab359
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 75a1cd07710bb95c041d0de8a00cb23f7354eb91
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281410"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722404"
 ---
 # <a name="lesson-3-1-copy-the-lesson-2-package"></a>Lição 3-1: Copiar o pacote da Lição 2
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Nesta tarefa, você pode criar uma cópia do pacote Lesson 2.dtsx da Lição 2. Se você não tiver concluído a Lição 2, poderá adicionar o pacote completo da Lição 2 incluído com o tutorial do projeto e então copiar esse pacote. Você usa esta cópia nova ao longo de toda a lição 3.
 

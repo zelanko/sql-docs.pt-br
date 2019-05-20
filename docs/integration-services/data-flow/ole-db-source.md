@@ -19,14 +19,18 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b160f1a6aa71b612c80eb21daa8d2173376cee69
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f666a224c2e41fb50a1a62748e7d8f1666d0beb9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272983"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726641"
 ---
 # <a name="ole-db-source"></a>Origem de OLE DB
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A origem de OLE DB extrai dados de uma variedade de bancos de dados relacionais compatíveis com OLE DB usando uma tabela de banco de dados, uma exibição ou um comando SQL. Por exemplo, a origem de OLE DB pode extrair dados de tabelas em [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access ou bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  

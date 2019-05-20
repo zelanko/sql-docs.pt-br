@@ -11,14 +11,18 @@ ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 10af58bf19696175926090a87f87551e4738c674
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3c8fbab9c430f28b5814dee137056c5c7f69a02e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271639"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726764"
 ---
 # <a name="look-up-infoobject"></a>Pesquisar InfoObject
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use a caixa de diálogo **Pesquisar InfoObject** para pesquisar um InfoObject definido no sistema SAP Netweaver BW. Quando a lista de InfoObjects disponível é exibida, selecione o InfoObject que você quer e o destino do SAP BW preencherá as opções associadas com os valores necessários.  
   
  O destino SAP BW do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 para SAP BW usa a caixa de diálogo **Pesquisar InfoObject** . Para obter mais informações sobre o destino SAP BW, consulte [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  

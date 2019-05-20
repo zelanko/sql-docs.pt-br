@@ -11,14 +11,18 @@ ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f373cf121a0368508e9b4b3380ef5c674a9fc9f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f3714d58bea5ce8751f2b520a6c4f75353f48a64
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271672"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728769"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Tipos de dados de instância Oracle CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A Instância Oracle CDC oferece suporte à maioria dos tipos de dados Oracle. As seções a seguir descrevem os tipos de dados com suporte e sem suporte.  
   
 ## <a name="supported-data-types"></a>Tipos de dados com suporte  

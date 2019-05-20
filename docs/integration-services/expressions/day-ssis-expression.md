@@ -14,14 +14,18 @@ ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4f85a19231a7d3e3adaf514ef304f459357c5ec0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b116852f7e079d675ee2a98b358882d02550f18b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271949"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725489"
 ---
 # <a name="day-ssis-expression"></a>DAY (Expressão SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Retorna um inteiro que representa a parte do dia em uma data.  
   
 ## <a name="syntax"></a>Sintaxe  

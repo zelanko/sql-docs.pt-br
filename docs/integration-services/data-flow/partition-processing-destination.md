@@ -20,14 +20,18 @@ ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d6daa486e4b079f5839aa08dea38ed2161f810e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 22fa9d76887451e57f41c8536efc71d954e2e78c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273326"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726564"
 ---
 # <a name="partition-processing-destination"></a>Destino de processamento de partições
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O destino de Processamento de Partição carrega e processa uma partição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter mais informações sobre partições, consulte [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
   
  O destino de Processamento de Partições inclui os seguintes recursos :  

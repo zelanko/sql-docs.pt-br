@@ -22,14 +22,18 @@ ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b2076e445d90945d02ab41ac2ec2cb6165ba08f1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5335e93d133787f1ee2f855d3a2eb9ad1faa2824
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290102"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724787"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>Desenvolvendo um componente de transformação personalizado com saídas síncronas
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Os componentes de transformação com saídas síncronas recebem linhas de componentes upstream e leem ou modificam os valores das colunas dessas linhas à medida que passam as linhas para os componentes downstream. Eles também podem definir colunas de saída adicionais derivadas das colunas fornecidas pelos componentes upstream, mas não acrescentam linhas ao fluxo de dados. Para obter mais informações sobre a diferença entre componentes síncronos e assíncronos, consulte [Compreender as transformações síncronas e assíncronas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
   
  Esse tipo de componente é adequado para tarefas em que os dados são modificados em linha, à medida que são fornecidos ao componente, e o componente não tem que ver todas as linhas antes de processá-las. É o componente mais fácil a desenvolver por que as transformações com saídas síncronas em geral não se conectam a fontes de dados externas, gerenciam colunas de metadados externas ou adicionam linhas a buffers de saída.  

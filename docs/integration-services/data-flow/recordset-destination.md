@@ -18,14 +18,18 @@ ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c8f12ca10a98e278d43023bebcb1c3b3d6b169d8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9bcae930fc19aa252356f94fbdd387c2f721d048
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281640"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726515"
 ---
 # <a name="recordset-destination"></a>Destino do Conjunto de Registros
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O destino do conjunto de registros cria e popula um conjunto de registros ADO na memória. A forma do conjunto de registros é definida na entrada para o destino de conjunto de registros no tempo de design.  
   
 ## <a name="configuration-of-the-recordset-destination"></a>Configuração do destino do conjunto de registros  
