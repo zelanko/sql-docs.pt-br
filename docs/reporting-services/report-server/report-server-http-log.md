@@ -2,20 +2,20 @@
 title: Log HTTP do Servidor de Relatório | Microsoft Docs
 ms.date: 03/02/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 85e0bf1588739c5e27ec46273ad1a24908639c14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2d290d32cbe05a0e378486cad72c5f39a2bc6e58
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789944"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581397"
 ---
 # <a name="report-server-http-log"></a>Log HTTP do Servidor de Relatório
   O log HTTP do servidor de relatório mantém um registro de cada solicitação HTTP e resposta manipuladas pelo servidor de relatório. Como os erros de estouro e tempo limite de solicitação não atingem o servidor de relatório, eles não são registrados no arquivo de log.  
@@ -57,24 +57,24 @@ ms.locfileid: "47789944"
 |Campo|Descrição|Padrão|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Esse valor é opcional. O valor padrão é ReportServerServiceHTTP_. Você pode especificar um valor diferente se desejar usar uma convenção de nomeação de arquivo diferente (por exemplo, para incluir o nome do servidor se estiver salvando arquivos de log em um local central).|Sim|  
-|HTTPTraceSwitches|Esse valor é opcional. Se esse valor for especificado, você poderá configurar os campos usados no arquivo de log em um formato delimitado por vírgula.|não|  
-|data|A data em que a atividade ocorreu.|não|  
-|Hora|A hora em que a atividade ocorreu.|não|  
+|HTTPTraceSwitches|Esse valor é opcional. Se esse valor for especificado, você poderá configurar os campos usados no arquivo de log em um formato delimitado por vírgula.|Não|  
+|data|A data em que a atividade ocorreu.|Não|  
+|Hora|A hora em que a atividade ocorreu.|Não|  
 |ClientIp|O endereço IP do cliente que acessa o servidor de relatório.|Sim|  
-|UserName|O nome do usuário que acessou o servidor de relatório.|não|  
-|ServerPort|O número da porta usada para a conexão.|não|  
-|Host|O conteúdo do cabeçalho do host.|não|  
+|UserName|O nome do usuário que acessou o servidor de relatório.|Não|  
+|ServerPort|O número da porta usada para a conexão.|Não|  
+|Host|O conteúdo do cabeçalho do host.|Não|  
 |Método|A ação ou método SOAP chamado do cliente.|Sim|  
 |UriStem|O recurso acessado.|Sim|  
-|UriQuery|A consulta usada para acessar o recurso.|não|  
+|UriQuery|A consulta usada para acessar o recurso.|Não|  
 |ProtocolStatus|O código de status HTTP.|Sim|  
-|BytesReceived|O número de bytes recebidos pelo servidor.|não|  
-|TimeTaken|O tempo (em milissegundos) desde o instante em que HTTP.SYS retorna os dados da solicitação até o servidor concluir o último envio, sem contar o tempo de transmissão de rede.|não|  
-|ProtocolVersion|A versão de protocolo usada pelo cliente.|não|  
-|UserAgent|O tipo de navegador usado pelo cliente.|não|  
-|CookieReceived|O conteúdo do cookie recebido pelo servidor.|não|  
-|CookieSent|O conteúdo do cookie enviado pelo servidor.|não|  
-|Referenciador|O site anterior visitado pelo cliente.|não|  
+|BytesReceived|O número de bytes recebidos pelo servidor.|Não|  
+|TimeTaken|O tempo (em milissegundos) desde o instante em que HTTP.SYS retorna os dados da solicitação até o servidor concluir o último envio, sem contar o tempo de transmissão de rede.|Não|  
+|ProtocolVersion|A versão de protocolo usada pelo cliente.|Não|  
+|UserAgent|O tipo de navegador usado pelo cliente.|Não|  
+|CookieReceived|O conteúdo do cookie recebido pelo servidor.|Não|  
+|CookieSent|O conteúdo do cookie enviado pelo servidor.|Não|  
+|Referenciador|O site anterior visitado pelo cliente.|Não|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Log de rastreamento do serviço Servidor de Relatório](../../reporting-services/report-server/report-server-service-trace-log.md)   

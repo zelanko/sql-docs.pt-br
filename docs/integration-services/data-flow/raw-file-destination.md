@@ -21,14 +21,18 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c89496fabad28d3491d9b2f648d6355ae404685b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 529bfc2a46ddb4cb6bbd0eb90f9d39dda0af63b1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282291"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726528"
 ---
 # <a name="raw-file-destination"></a>Destino do Arquivo Bruto
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O destino Arquivo Bruto grava dados brutos em um arquivo. Devido ao formato dos dados ser nativo para o destino, os dados não requerem nenhuma tradução e pouca análise. Isso significa que o destino do Arquivo Bruto pode gravar dados mais rápido que outros destinos, tais como o Arquivo Plano e os destinos de OLE DB.  
   
  Além de gravar dados brutos em um arquivo, você também pode usar o destino Arquivo Bruto para gerar um arquivo bruto vazio que contém somente as colunas (arquivo somente de metadados), sem ter que executar o pacote. Use a fonte Arquivo Bruto para recuperar dados brutos que foram escritos previamente pelo destino. Você também pode apontar a fonte Arquivo Bruto para o arquivo somente de metadados.  

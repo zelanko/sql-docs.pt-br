@@ -10,14 +10,18 @@ ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3772028888e7c91b9be9b6fd3f905fb57db8636b
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: a359cdc0467d06cf0f67c1229981466f9b440101
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221940"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723917"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do MySQL (Assistente de Importação e Exportação do SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Este tópico mostra como se conectar a uma fonte de dados do **MySQL** (arquivo de texto) por meio da página **Escolher uma Fonte de Dados** ou **Escolher um Destino** do Assistente de Importação e Exportação do SQL Server. Há vários provedores de dados que você pode usar para se conectar ao MySQL.
 
 > [!IMPORTANT]

@@ -15,14 +15,18 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c6167895a35781d0adf91869a4bcdc3ab4d79a5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 20a65f9755e0cea30a79435f885912c15cce5e7b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275257"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725767"
 ---
 # <a name="transform-data-with-transformations"></a>Transformar dados com transformações
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui três tipos de componentes de fluxo de dados: fontes, transformações e destinos.  
   
  O diagrama a seguir mostra um fluxo de dados simples que tem uma fonte, duas transformações e um destino.  

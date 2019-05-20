@@ -10,14 +10,18 @@ ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2e62c1e9457f45ee6bac5c27235f71f459c1eeda
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 1f05baa17bb09b5cafcd775160d2f585004d00b1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222100"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723830"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Introdução a este exemplo simples do Assistente de Importação e Exportação
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Saiba o que esperar do Assistente de Importação e Exportação do SQL Server examinando um cenário comum – a importação de dados de uma planilha do Excel para um banco de dados do SQL Server. Mesmo se você pretende usar uma fonte e um destino diferentes, este tópico mostra mais do que você precisa saber sobre como executar o assistente.
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Pré-requisito – O assistente está instalado no computador?

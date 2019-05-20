@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 35a3e6612516750e360e1e223e8e323d068daef1
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 51c2efbde3a87c85722022b9114354e8f57d8c9d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420081"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718553"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Mestre de Expansão de Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 O Mestre do Scale Out gerencia o sistema do Scale Out por meio do Catálogo do SSISDB e do serviço Mestre do Scale Out. 
 
@@ -28,7 +32,7 @@ O serviço Mestre do Scale Out é um serviço Windows responsável pela comunica
 
 ## <a name="scale-out-views-and-stored-procedures-in-ssisdb"></a>Exibições e procedimentos armazenados do Scale Out no SSISDB
 
-### <a name="views"></a>exibições
+### <a name="views"></a>Exibições
 
 - [[catalog].[master_properties]](../../integration-services/system-views/catalog-master-properties-ssisdb-database.md)
 - [[catalog].[worker_agents]](../../integration-services/system-views/catalog-worker-agents-ssisdb-database.md)

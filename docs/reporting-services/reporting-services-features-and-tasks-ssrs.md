@@ -2,21 +2,21 @@
 title: Recursos e tarefas do Reporting Services (SSRS) | Microsoft Docs
 ms.date: 12/18/2015
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, programming
 - development [Reporting Services]
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2dcdb2dff46534f52cd8fb115edd8d29072c98a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8e0b79b8a76b36071f8d5f0767ac313a6ed5489b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623374"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580061"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Recursos e tarefas do Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é organizado por meio de relatórios e recursos de relatório, recursos de servidor de relatório e recursos do produto [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

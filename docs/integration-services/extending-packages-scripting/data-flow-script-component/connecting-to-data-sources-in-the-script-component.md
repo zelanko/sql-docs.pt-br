@@ -13,14 +13,18 @@ ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 247b0b7a1f54417257d3af0e59f07dadf6d669e6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6f9d4fecd34be2464947ce3c493b8bd333d2ce0c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280390"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724160"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>Conectando-se a fontes de dados no componente de Script
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Um gerenciador de conexões é uma unidade conveniente que encapsula e armazena as informações necessárias para conexão com uma fonte de dados de um tipo específico. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Conexões](../../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
  Você pode tornar os gerenciadores de conexões existentes disponíveis para acesso por meio de script personalizado no componente de origem ou destino, clicando nos botões **Adicionar** e **Remover** na página **Gerenciadores de Conexões** do **Editor de Transformação Scripts**. Entretanto, você deverá gravar seu próprio código personalizado para carregar ou salvar seus dados e, possivelmente, abrir e fechar a conexão com a fonte de dados. Para obter mais informações sobre a página **Gerenciador de Conexões** do **Editor de Transformação Scripts**, consulte [Configurando o componente Script no Editor de Componente Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) e [Editor de Transformação Scripts &#40;Página Gerenciadores de Conexões&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md).  

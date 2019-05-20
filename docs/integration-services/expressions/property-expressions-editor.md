@@ -15,14 +15,18 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7626cff9ab80ef15d6cec283efd8a50a8d038ef1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 815eedc74e64a8c9e6ef38ba8cb9c8b0048aecbd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275180"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725076"
 ---
 # <a name="property-expressions-editor"></a>Editor de Expressões de Propriedades
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use a caixa de diálogo **Editor de Expressões de Propriedades** para criar, editar ou excluir as expressões de propriedades que atualizam os valores das propriedades.  
   
 ## <a name="options"></a>Opções  

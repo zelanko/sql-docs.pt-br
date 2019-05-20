@@ -11,14 +11,18 @@ ms.assetid: b9c08992-500c-447e-bc19-1eb13c9b0293
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7826759b07f590e1dd75be61db4f967cd022821
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 569f9ce489fdc592e0f923e17b2fa2901442c9f7
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274276"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65716556"
 ---
 # <a name="catalogdeletefolder-ssisdb-database"></a>catalog.delete_folder (Banco de dados SSISDB)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Exclui uma pasta do catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

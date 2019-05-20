@@ -11,14 +11,18 @@ ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9e03e2deced99be885ee5b0982fd8d3b3ed0f367
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 25e07fb354d739d6a8aa1964e50e31e847194471
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271187"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727059"
 ---
 # <a name="create-infosource-for-transaction-data"></a>Criar InfoSource para os dados da transação
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use a caixa de diálogo **Criar InfoSource para os Dados da Transação** para criar um novo InfoSource para dados de transação no sistema SAP Netweaver BW.  
   
  Você pode abrir a caixa de diálogo **Criar InfoSource para os Dados da Transação** da página **Gerenciador de Conexões** do **Editor de Destino SAP BW**. Para obter mais informações sobre o destino SAP BW, consulte [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  

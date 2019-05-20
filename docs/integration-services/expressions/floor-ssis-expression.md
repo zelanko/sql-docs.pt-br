@@ -14,14 +14,18 @@ ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 581af0f46f9ef2408a016f8b89c10812d82a807e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f419fa11c27f912f9e020c83ec8c2164a7b4b13f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275736"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725404"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR (Expressão SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Retorna o maior inteiro que é menor que ou igual a uma expressão numérica.  
   
 ## <a name="syntax"></a>Sintaxe  

@@ -26,14 +26,18 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: edead99162483ab8721384a382d59bdaa1a262a8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 072a0506d4dad9aad762cae77cad97a3bf16bdd3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277375"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717870"
 ---
 # <a name="set-package-properties"></a>Definir as propriedades do pacote
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Ao criar um pacote no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] usando a interface gráfica fornecida pelo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , você define as propriedades do objeto do pacote na janela Propriedades.  
   
  A janela **Propriedades** fornece uma lista de propriedades categorizada e alfabética. Para classificar a janela **Propriedades** por categoria, clique no ícone Categorizado.  

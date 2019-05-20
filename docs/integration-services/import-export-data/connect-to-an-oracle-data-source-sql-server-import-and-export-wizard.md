@@ -10,14 +10,18 @@ ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 106318f35e6cf4ee730b4cd2a6b0cb1831151041
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 04a7354fac044a835ab5d5649d56c01e72e6e995
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221930"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723880"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do Oracle (Assistente de Importação e Exportação do SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Este tópico mostra como se conectar a uma fonte de dados do **Oracle** (arquivo de texto) por meio da página **Escolher uma Fonte de Dados** ou **Escolher um Destino** do Assistente de Importação e Exportação do SQL Server. Há vários provedores de dados que você pode usar para se conectar ao Oracle.
 
 > [!IMPORTANT]

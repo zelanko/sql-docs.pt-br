@@ -18,14 +18,18 @@ ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 078d028bb1f997e6a198c91b8019519f81460ae6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5bd648817edb921df46c73f341d02b9e389fa522
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270643"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724315"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Consultando o Active Directory com a tarefa Script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Aplicativos de processamento de dados corporativos, como pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], em geral, precisam processar dados de forma diferente com base na classificação, no nome do cargo ou em outras características dos funcionários armazenadas no Active Directory. O Active Directory é um serviço de diretório do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows que fornece um repositório centralizado de metadados, não apenas sobre usuários, mas também sobre outros ativos organizacionais como computadores e impressoras. O namespace **System.DirectoryServices** no Microsoft .NET Framework fornece classes para trabalhar com o Active Directory, a fim de ajudar você a direcionar o fluxo de trabalho de processamento de dados com base nas informações que ele armazena.  
   
 > [!NOTE]  
@@ -44,7 +48,7 @@ ms.locfileid: "58270643"
   
 4.  No projeto de script, adicione uma referência ao namespace **System.DirectoryServices**.  
   
-5.  para obter informações sobre a ferramenta de configuração e recursos adicionais. No seu código, use uma instrução **Imports** para importar o namespace **DirectoryServices**.  
+5.  . No seu código, use uma instrução **Imports** para importar o namespace **DirectoryServices**.  
   
 > [!NOTE]  
 >  Para executar esse script com sucesso, sua empresa deve usar o Active Directory em sua rede e armazenar as informações do funcionário que este exemplo usa.  

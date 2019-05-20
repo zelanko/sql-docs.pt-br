@@ -11,14 +11,18 @@ ms.date: 08/09/2018
 ms.author: janinez
 author: janinezhang
 manager: craigg
-ms.openlocfilehash: 9ba9dde07be2e879dc44f6d3fd105d0b315f5f98
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: 8a2d8444e0b19ed4672e9582ef9802d0cd6f6fe7
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671192"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720738"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Carregar dados no SQL Data Warehouse do Azure com o SSIS (SQL Server Integration Services)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Criar um pacote do SSIS (SQL Server Integration Services) para carregar dados no [SQL Data Warehouse do Azure](/azure/sql-data-warehouse/index). Opcionalmente, você pode reestruturar, transformar e limpar os dados conforme eles passam pelo fluxo de dados do SSIS.
 

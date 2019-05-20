@@ -14,14 +14,18 @@ ms.assetid: d082f42a-d7e7-49f5-a503-ac44ba630832
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 34bc5338938376bb3327fe4f95dd1f14eac9c144
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 51785a66b005ec3c7f9b6af498803064c93635a9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272078"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725191"
 ---
 # <a name="ltrim-ssis-expression"></a>LTRIM (Expressão SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Retorna uma expressão de caractere depois de remover espaços em branco à esquerda.  
   
 > [!NOTE]  

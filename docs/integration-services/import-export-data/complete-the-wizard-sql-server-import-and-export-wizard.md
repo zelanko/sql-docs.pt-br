@@ -12,14 +12,18 @@ ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a8a3624eeae89d520fb9e97e50af1d32de6dab55
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: fadf1fac6929433c217241039634a7af8658f4f6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222040"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723998"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Concluir o Assistente (Assistente de Importação e Exportação do SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Depois de especificar se deseja executar a operação de cópia imediatamente e, opcionalmente, salvar o pacote criado pelo assistente, o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra **Concluir o assistente**. Nessa página, examine as opções feitas no assistente e, em seguida, clique em **Concluir** para iniciar a operação de cópia.
  
 ## <a name="screen-shot-of-the-complete-the-wizard-page"></a>Captura de tela da página Concluir o Assistente 

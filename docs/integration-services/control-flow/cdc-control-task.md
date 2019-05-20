@@ -14,14 +14,18 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 87815205efb5598dd2901b46d4220092f76cde4a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 875eada43d37add815b3e4f3c0634273be324174
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283030"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727919"
 ---
 # <a name="cdc-control-task"></a>Tarefa Controle de CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A tarefa Controle de CDC é usada para controlar o ciclo de vida de pacotes de captura de dados de alterações (CDC). Ela trata a sincronização de pacotes CDC com o pacote de carga inicial e o gerenciamento de intervalos de LSN (número de sequência de log) processados na execução de um pacote CDC. Além disso, a tarefa Controle de CDC lida com cenários de erro e recuperação.  
   
  A tarefa Controle de CDC mantém o estado do pacote CDC em uma variável de pacote SSIS e também pode persisti-lo em uma tabela de banco de dados para que o estado seja mantido nas ativações de pacote e entre vários pacotes que juntos executam um processo CDC comum (por exemplo, uma tarefa pode ser responsável pelo carregamento inicial e a outra pelas atualizações trickle-feed).  

@@ -14,14 +14,18 @@ ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 608e3fd8ebf7de4e2f84357c8b7a1874c33e1230
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a82624d43f63ff8e774c61198021e29cd080366e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279611"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714511"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (Banco de dados SSISDB)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Exibe os detalhes de todos os pacotes exibidos no catálogo do **SSISDB**.  

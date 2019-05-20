@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: c498f71be24d3f9e26aa1f6854dc048e0c9d6b89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fd30ccac5cfb88d2b9258268ecc6844b78ddb53
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698114"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721291"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Conectar-se ao SSISDB (Catálogo do SSIS) no Azure
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Encontre as informações de conexão necessárias para se conectar ao SSISDB (Catálogo do SSIS) hospedado em um servidor de Banco de Dados SQL do Azure. Você precisa dos seguintes itens para se conectar:
 - nome do servidor totalmente qualificado

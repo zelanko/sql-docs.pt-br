@@ -11,17 +11,22 @@ author: aliceku
 ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91b0fde06d400b2c519e9e6c86854197a2aecd13
-ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
+ms.openlocfilehash: 1cf3b95ec5836ac86770bd0cd9784f0617b91846
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59516462"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580975"
 ---
 # <a name="static-data-masking"></a>Máscara de Dados Estáticos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-A Máscara de Dados Estáticos liberada é um componente do [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 versão prévia 5 e superior. Decidimos que nosso protótipo atual não atende a expectativas do nosso cliente. Portanto, não levaremos essa funcionalidade adiante. Atualizaremos a todos sobre nossos planos se tivermos um candidato de substituição.
+A Máscara de Dados Estáticos liberada é um componente do [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 versão prévia 5 e superior. 
+> [!IMPORTANT]
+> Decidimos que nosso protótipo atual não atende a expectativas do nosso cliente. Portanto, não levaremos essa funcionalidade adiante. Atualizaremos a todos sobre nossos planos se tivermos um candidato de substituição.
+>
+
+
 
 ![Mascaramento de dados estáticos](../../relational-databases/security/media/sql-static-data-masking/static_data_masking_intro_image.PNG)
 

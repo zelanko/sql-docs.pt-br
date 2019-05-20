@@ -17,14 +17,18 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d8e8a699ababd04002cd85582f55ae7903f0474
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 013e0d0d28d961496e4bec367775d16f994a5e97
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275419"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723516"
 ---
 # <a name="integration-services-user-interface"></a>Interface do usuário do Integration Services
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Além das superfícies de design nas guias do Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] , a interface do usuário fornece acesso às seguintes janelas e caixas de diálogo para adicionar recursos a pacotes e configurar as propriedades de objetos do pacote:  
   
 -   As caixas de diálogo e janelas usadas para adicionar funcionalidades, como log e configurações, a pacotes.  

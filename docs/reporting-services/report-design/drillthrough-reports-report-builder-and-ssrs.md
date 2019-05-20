@@ -2,18 +2,18 @@
 title: Relatórios de detalhamento (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c44196f8a61208e378936ad9cb40bf75ad28e36f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ccc5c2950baf10cad0e7f9495b446286576b27bc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290274"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579351"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Relatórios detalhados (Construtor de Relatórios e SSRS)
   Um relatório detalhado é um relatório que pode ser aberto pelo usuário quando ele clicar em um link dentro de outro relatório. Os relatórios detalhados normalmente contêm detalhes sobre um item que está em um relatório de resumo original. Por exemplo, nesta ilustração, o relatório de resumo de vendas lista ordens e totais de vendas. Quando um usuário clica em um número de ordem na lista de resumo, outro relatório é aberto, exibindo os detalhes da ordem.  
@@ -25,7 +25,7 @@ ms.locfileid: "56290274"
 > [!NOTE]  
 >  Ao trabalhar no Construtor de Relatórios, você deve estar conectado a um servidor de relatório para exibir o relatório detalhado que é aberto quando clica no link de detalhamento no relatório principal.  
   
- Para começar rapidamente nos relatórios detalhados, confira o [Tutorial: Criar relatórios principal e de detalhamento &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
+ Para se familiarizar rapidamente com os relatórios detalhados, consulte [Tutorial: Criando relatórios principais e de detalhamento &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
    
 ## <a name="parameters-in-drillthrough-reports"></a>Parâmetros em relatórios detalhados  
  Geralmente, o relatório detalhado contém parâmetros que são passados para ele pelo relatório de resumo. No exemplo de relatório de resumo de vendas, o relatório inclui o campo [OrderNumber] na caixa de texto de uma célula da tabela. O relatório detalhado contém um parâmetro que usa o número do pedido como um valor. Ao definir o link do relatório detalhado na caixa de texto de [OrderNumber], defina também o parâmetro do relatório de destino como [OrderNumber]. Quando o usuário clica no número da ordem no relatório de resumo, o relatório de detalhes de destino é aberto e exibe as informações desse número de ordem. Para exibir instruções sobre como personalizar relatórios de detalhamento com base nos valores de parâmetro, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) e [Função InScope &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-inscope-function.md).  

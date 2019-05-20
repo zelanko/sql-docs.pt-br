@@ -11,14 +11,18 @@ ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6ba2488aff0efdb6ed0d1c4ae03ec46ba6a6a25
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 80d2eb1ec30b4729deb4891c451fc5967bec9d54
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277905"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722075"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>Lição 3-2: Adicionar e configurar o registro em log
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Nesta tarefa, você habilita o log do fluxo de dados no pacote Lesson 3.dtsx. Então, você configura um provedor de log de arquivo de texto para armazenar os eventos PipelineExecutionPlan e PipelineExecuteTrees em log. O provedor de log de arquivos de texto cria logs que são fáceis exibir e de transportar. A simplicidade destes arquivos de log faz estes arquivos úteis durante a fase de teste básico de um pacote. É possível também exibir as entradas de log na janela **Eventos de Log** do Designer [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   

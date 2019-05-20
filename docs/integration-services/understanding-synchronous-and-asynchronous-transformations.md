@@ -16,14 +16,18 @@ ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7e47c5474daa564c63cb80c72f14df6fe990b5e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: faeb7edf94c402a6a4558f95c2b42a6c6f4b3d1c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283020"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713601"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Compreendendo as transformações síncronas e assíncronas
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Para compreender a diferença entre uma transformação síncrona e uma assíncrona no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], é mais fácil começar com a transformação síncrona. Se uma transformação síncrona não satisfizer suas necessidades, seu design poderá exigir uma transformação assíncrona.  
   
 ## <a name="synchronous-transformations"></a>Transformações síncronas  
@@ -42,7 +46,7 @@ ms.locfileid: "58283020"
   
 -   Não há nenhuma correspondência um-para-um entre linhas de entrada e linhas de saída. Um exemplo é a transformação Agregação, onde o componente tem que acrescentar uma linha à saída para reter os valores de agregação computados.  
   
- No script e na programação do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], você especifica uma transformação assíncrona atribuindo um valor 0 à propriedade **SynchronousInputID** das saídas do componente. para obter informações sobre a ferramenta de configuração e recursos adicionais. Dessa forma, o mecanismo de fluxo de dados é informado para enviar cada linha automaticamente para as saídas. Em seguida, você deve gravar código para enviar cada linha de maneira explícita para a saída apropriada, adicionando-o ao novo buffer de saída que é criado para a saída de uma transformação assíncrona.  
+ No script e na programação do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], você especifica uma transformação assíncrona atribuindo um valor 0 à propriedade **SynchronousInputID** das saídas do componente. . Dessa forma, o mecanismo de fluxo de dados é informado para enviar cada linha automaticamente para as saídas. Em seguida, você deve gravar código para enviar cada linha de maneira explícita para a saída apropriada, adicionando-o ao novo buffer de saída que é criado para a saída de uma transformação assíncrona.  
   
 > [!NOTE]  
 >  Como um componente de origem também deve adicionar explicitamente cada linha que lê na fonte de dados para seus buffers de saída, uma fonte parecerá uma transformação com saídas assíncronas.  

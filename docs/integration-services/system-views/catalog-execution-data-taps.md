@@ -11,14 +11,18 @@ ms.assetid: 54226c01-5b8f-4730-8a5f-1da2613f9689
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f305c0439c7c7f30343f1dea42b5965716f9e927
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fe54f3560c0c4584dcf7c9f84864a3552ed23172
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280350"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714781"
 ---
-# <a name="catalogexecutiondatataps"></a>catalog.execution_data_taps
+# <a name="catalogexecutiondatataps"></a>catalog.execution_data_taps 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Exibe informações para cada toque de dados definido em uma execução.  

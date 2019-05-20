@@ -16,14 +16,18 @@ ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 17c536592b2ea50436d817773e4006526e342fe2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: bea0342ef01511621629559cb627447d66340071
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274269"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725209"
 ---
 # <a name="lower-ssis-expression"></a>LOWER (Expressão SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Retorna uma expressão character depois de converter caracteres maiúsculos em minúsculos.  
   
 ## <a name="syntax"></a>Sintaxe  

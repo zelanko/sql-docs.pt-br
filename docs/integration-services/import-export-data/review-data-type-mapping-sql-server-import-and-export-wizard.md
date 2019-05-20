@@ -12,14 +12,18 @@ ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d5805f1c9f7455423bf4fab43c6092e880e62448
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8af55ff084a0f6202bf830a006b01460748d8b4e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281520"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723775"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Revisar mapeamento de tipo de dados (Assistente de Importação e Exportação do SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Se você especificou um mapeamento de tipo de dados que pode não ter êxito na lista **Mapeamentos** da caixa de diálogo **Mapeamentos de coluna** , o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra a página **Revisar mapeamento de tipo de dados** . Nesta página, examine as informações detalhadas sobre conversões de tipo de dados que o assistente precisa executar para tornar os dados de origem compatíveis com o destino. Essas informações incluem dicas visuais para fazer distinção entre conversões de tipo de dados que se espera que sejam bem-sucedidas de conversões que podem causar erros ou truncamentos. Para cada conversão, decida se deseja aceitar a conversão sugerida pelo assistente e especifique como manipular qualquer eventual erro que possa surgir.   
   
 > [!TIP]

@@ -15,14 +15,18 @@ ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 146d9be6b10acf2fbe27db2ef540ebd0dae3beea
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 719869587b9c30c4c8ad14b2d0364b90fb7e1b48
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279330"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725525"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (Expressão SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Retorna um novo valor DT_DBTIMESTAMP depois de adicionar um número que representa um intervalo de data ou hora para a parte especificada na data. O parâmetro de número deve ser avaliado como um inteiro e o parâmetro de data deve ser avaliado como uma data válida.  
   
 ## <a name="syntax"></a>Sintaxe  

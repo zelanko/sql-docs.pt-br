@@ -11,14 +11,18 @@ ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6068cb284bc0ff8d29f9a4c4da5b5bf3174ce5cd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 733e71edda284d8051cc1f641ae94a3518e6b0d1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274486"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715741"
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (Banco de dados SSISDB)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Inicia uma instância de execução no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

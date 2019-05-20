@@ -11,14 +11,18 @@ ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42cc80b22f5daae0deeaa355b4c8d23d2c888455
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9da51ac14564fc7e6a00b7ee9d9f5325073b6b48
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289842"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728789"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>Como editar as propriedades de instância CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Este procedimento descreve como usar o CDC Designer Console para editar as propriedades de configuração para uma instância CDC.  
   
 ### <a name="to-edit-the-cdc-instance-configuration-properties"></a>Para editar as propriedades de configuração da instância CDC  

@@ -13,14 +13,18 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0096e6ff64267e6568abd22729f250a4c76adc03
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8614217f7b8b081d43468d25707aa394c917b1ff
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281860"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725757"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Passo a passo: Publicar um pacote do SSIS como uma exibição SQL
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Este passo a passo fornece as etapas detalhadas para publicar um pacote SSIS como um modo SQL em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="prerequisites"></a>Prerequisites  

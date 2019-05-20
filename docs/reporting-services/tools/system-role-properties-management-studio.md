@@ -2,20 +2,20 @@
 title: Propriedades de função do sistema (Management Studio) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.systemroleproperties.f1
 ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 883cf52d51acc280fae37ce918f476e757fd34ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f3084f12a417986571c3feb2195e513f071f9dbb
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723234"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576028"
 ---
 # <a name="system-role-properties-management-studio"></a>Propriedades de Função do Sistema (Management Studio)
   Use a página Funções do Sistema para exibir as definições de funções do sistema atualmente definidas no servidor de relatório. Uma definição de função do sistema contém uma coleção de tarefas nomeada executada com relação a todo o site e não com relação a um item individual. Definições de função são atribuídas a um usuário ou a grupos para criar uma atribuição de função resultante. As tarefas na definição de função especificam o que o usuário ou grupo pode fazer.  
@@ -40,7 +40,7 @@ ms.locfileid: "47723234"
   
 ## <a name="see-also"></a>Consulte Também  
  [Servidor de Relatório na ajuda F1 do Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Tarefas em nível de sistema](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)   
+ [Tarefas de nível de sistema](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)   
  [Tarefas e permissões](../../reporting-services/security/tasks-and-permissions.md)   
  [Funções predefinidas](../../reporting-services/security/role-definitions-predefined-roles.md)  
   

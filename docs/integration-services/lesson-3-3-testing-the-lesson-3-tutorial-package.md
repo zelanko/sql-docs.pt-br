@@ -11,14 +11,18 @@ ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c7e644744a53318ed1359bc0cdb47c3c896ed5ff
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5884506c83dfc0f3cbee6119ad9047807c35fbfe
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274848"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722095"
 ---
 # <a name="lesson-3-3-test-the-lesson-3-tutorial-package"></a>Lição 3-3: Testar o pacote de tutorial da Lição 3
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Nesta tarefa, você executa o pacote **Lesson 3.dtsx**. Conforme o pacote é executado, a janela **Registrar Eventos em Log** relaciona as entradas de log que o SSIS grava no arquivo de log pelo provedor de logs. Depois que o pacote concluir a execução, você poderá exibir o conteúdo do arquivo de log.  
   

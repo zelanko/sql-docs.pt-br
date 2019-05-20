@@ -20,14 +20,18 @@ ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 96badece6d707558fa9fcda87bdf9f71af64255e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5c432741bd8ba3d369230ac72e26ee5516d21d97
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290432"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726809"
 ---
 # <a name="flat-file-destination"></a>Destino de arquivo simples
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O destino de Arquivo Simples grava dados em um arquivo de texto. O arquivo de texto pode ser em formato delimitado, de largura fixa, largura fixa com delimitador de linha ou com imperfeição à direita.  
   
  Você pode configurar o destino de arquivo simples das seguintes formas:  

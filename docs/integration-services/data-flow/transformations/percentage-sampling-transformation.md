@@ -22,14 +22,18 @@ ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 98bd158b4b83a9d1fdef3911b7a2b3105aca28d2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 67fb4b94e777a974ff42c59d730a58bb1396f289
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275278"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725920"
 ---
 # <a name="percentage-sampling-transformation"></a>transformação Amostragem Percentual
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A transformação Amostragem Percentual cria um conjunto de dados de exemplo, selecionando um percentual das linhas de entrada da transformação. O conjunto de dados de exemplo é uma seleção aleatória das linhas da entrada da transformação, para que o exemplo resultante seja representativo da entrada.  
   
 > [!NOTE]  

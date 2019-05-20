@@ -19,14 +19,18 @@ ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e51589ee33e03fca23167357f7022d817f808981
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b19b574a61ad5667d6617b68b8472589a2328bb1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289992"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717845"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Ajuda F1 do Assistente de Atualização de Pacotes SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use o Assistente de Atualização de Pacote do SSIS para fazer upgrade de pacotes criados por versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para o formato de pacote da versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  **Para executar o Assistente de Atualização de Pacotes SSIS**  

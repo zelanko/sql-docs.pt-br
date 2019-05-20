@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: b9a699ba1764af5728f7731626dc94400dc4d246
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: bb649888638ec4e194d64679b73fc69806664fc3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578806"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718462"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Trabalho de Expansão de Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 O Trabalho do Scale Out executa o serviço Trabalho do Scale Out para efetuar pull de tarefas de execução no Mestre do Scale Out. Em seguida, o trabalho executa os pacotes localmente com `ISServerExec.exe`.
 

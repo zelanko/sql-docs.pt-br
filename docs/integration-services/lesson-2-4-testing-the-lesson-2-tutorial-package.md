@@ -11,14 +11,18 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7524010d42675b2eb503f8b8f43205a7ef2705b6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a5240f2f255281709bf563f5a82dc70ecb534d6e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272205"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722461"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>Lição 2-4: Testar o pacote de tutorial da Lição 2
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Com o contêiner Loop Foreach e o gerenciador de conexões de Arquivo Simples agora configurado, o pacote da Lição 2 pode iterar pelos 14 arquivos simples na pasta Dados de Exemplo. Cada vez que um nome de arquivo corresponde aos critérios especificados, o contêiner Loop Foreach preenche a variável definida pelo usuário com o nome do arquivo. Essa variável, por sua vez, atualiza a propriedade ConnectionString do gerenciador de conexões de Arquivo Simples, que se conecta àquele arquivo simples. O contêiner Foreach Loop então executa a tarefa de fluxo de dados não modificada com relação aos dados nesse arquivo simples.  
   

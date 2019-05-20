@@ -12,14 +12,18 @@ ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 708448cb0993af1bdb9f4d1784daf217ffd442c8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c147014aa6554612a51be0ed2369aba053c8c68a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270705"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723692"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Especificar cópia ou consulta de tabela (Assistente de Importação e Exportação do SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Depois de fornecer informações sobre o destino dos dados e sobre como se conectar a eles, o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra **Especificar cópia ou consulta de tabela**. Nesta página, escolha uma das opções a seguir.
 -   **Copiar dados de uma ou mais tabelas ou exibições**. Você deseja selecionar uma tabela ou tabelas de uma lista.
 -   **Gravar uma consulta para especificar os dados a serem transferidos**. Você deseja inserir ou colar o texto de uma consulta SQL.

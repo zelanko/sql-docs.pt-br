@@ -11,14 +11,18 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0561da6cd6877d9129a6581d2d415b3675c467a6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6d689ee12759b6d894a068bf5a9f9437a0631ef0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281810"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726970"
 ---
 # <a name="define-a-state-variable"></a>Definir uma variável de estado
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Este procedimento descreve como definir uma variável de pacote onde o estado CDC é armazenado.  
   
  A variável de estado CDC é carregada, inicializada e atualizada pela tarefa Controle de CDC e é usada pelo componente de fluxo de dados de Origem CDC para determinar o intervalo de processamento atual para alterar registros. A variável de estado CDC pode ser definida em qualquer contêiner comum à tarefa de Controle de CDC e à origem CDC. Isso pode estar no nível do pacote, mas pode estar também em outros contêineres, como um contêiner de loop.  

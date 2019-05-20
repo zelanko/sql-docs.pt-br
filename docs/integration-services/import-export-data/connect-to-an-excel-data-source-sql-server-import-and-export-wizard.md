@@ -10,14 +10,18 @@ ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e91a32da57488153e9d916cb70232d64c9b38a1b
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 747cf2bb865fb9b3fcdb11a43e410f574556dcc5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221810"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723893"
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do Excel (Assistente de Importação e Exportação do SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Este artigo mostra como se conectar a uma fonte de dados do **Microsoft Excel** por meio da página **Escolher uma Fonte de Dados** ou **Escolher um Destino** do Assistente de Importação e Exportação do SQL Server.
 
 A captura de tela a seguir mostra uma conexão de exemplo a uma pasta de trabalho do Microsoft Excel.

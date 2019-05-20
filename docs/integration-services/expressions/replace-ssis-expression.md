@@ -14,14 +14,18 @@ ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fb24d4b5e53d4892d2c9946ce3dc95dd74b0ca20
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 229e8b3d06d9524936be25758ee22d65234d25a4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276905"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725086"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (Expressão SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Retorna uma expressão de caractere depois de substituir uma cadeia de caracteres na expressão por uma cadeia diferente ou vazia.  
   
 > [!NOTE]  

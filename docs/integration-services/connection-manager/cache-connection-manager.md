@@ -15,14 +15,18 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f68d68c9302bccd55ef01b104a592a0462fbe669
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 80f4948d7223dbe4f95b7b81fcc7043796cf2809
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289932"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728315"
 ---
 # <a name="cache-connection-manager"></a>Gerenciador de conexões do cache
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O gerenciador de conexões do Cache lê dados da transformação Cache ou de um arquivo de cache (.caw) e salva os dados em um arquivo de cache. Se você configurar o gerenciador de conexões do Cache para usar um arquivo de cache, os dados sempre serão armazenados na memória.  
   
  A transformação Cache grava dados de uma fonte de dados conectada no fluxo de dados para um gerenciador de conexões do Cache. A transformação Pesquisa em um pacote realiza pesquisas nos dados.  

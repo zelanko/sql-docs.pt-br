@@ -11,14 +11,18 @@ ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4102d6139594bb0fd8aa36ea6b038ae897213634
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4e7ba7f740e970292abe922a89a0a015cb5ef792
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272337"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713705"
 ---
 # <a name="catalogworkeragents-ssisdb-database"></a>catalog.worker_agents (Banco de Dados SSISDB)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Exibe as informações do Trabalho do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out.

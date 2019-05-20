@@ -11,14 +11,18 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc16bdad7012738fde65fbd695dae019d9d41f2c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4c843fa7af8e3390e820714886b7988edab878d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277065"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720822"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Lição 6-4: Implantar o pacote da Lição 6
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Implantar o pacote envolve a adição do pacote no catálogo de SSISDB no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em uma instância do SQL Server. Nesta lição, você adicionará o pacote da Lição 6 no catálogo SSISDB, definirá o novo parâmetro e executará o pacote. Nesta lição, você usará o SQL Server Management Studio para adicionar o pacote da Lição 6 ao catálogo SSISDB e implantará esse pacote. Depois de implantar o pacote, você modificará o parâmetro para apontar para um novo local e, em seguida, executará o pacote.   
 Nesta tarefa, você:  

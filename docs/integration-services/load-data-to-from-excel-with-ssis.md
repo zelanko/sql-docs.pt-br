@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3fe8e30ec548703a8210680bca10f75304cbc3c8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 77125f88ed8d378a0cc2dc60ae47db641a681a95
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282600"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720477"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importar dados do Excel ou exportar dados para o Excel com o SSIS (SQL Server Integration Services)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Este artigo descreve as informações de conexão que você precisa fornecer e as configurações que deve configurar, para importar dados do Excel ou exportar dados para o Excel com o SQL Server Integration Services (SSIS).
 

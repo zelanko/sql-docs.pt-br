@@ -14,14 +14,18 @@ ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 90c7ee4cff732acbd068dc50ff9f009c26dc41c1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4c07444ff1dd425671fbc17176fc3aa94e0705bd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281290"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725605"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (Não de bit a bit) (Expressão SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Executa uma negação bit a bit de um inteiro. Esse operador pode ser se aplicado a tipos de dados inteiro assinados e não assinados.  
   
 ## <a name="syntax"></a>Sintaxe  

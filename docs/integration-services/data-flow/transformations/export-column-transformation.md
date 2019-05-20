@@ -22,14 +22,18 @@ ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0d0b7124909a7759f61d97fc748a527c31237e33
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e47a17c2802b9de56c567d4f12a2edcff84f1061
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289792"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726121"
 ---
 # <a name="export-column-transformation"></a>Transformação Exportar Colunas
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A transformação Exportar Coluna lê dados em um fluxo de dados e os insere em um arquivo. Por exemplo, se o fluxo de dados contiver informações de produtos, como uma imagem de cada produto, você poderá usar a transformação Exportar Coluna para salvar essas imagens em arquivos.  
   
 ## <a name="append-and-truncate-options"></a>Opções de anexar e truncar  

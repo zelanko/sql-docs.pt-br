@@ -11,14 +11,18 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5e1b4aef64ef4b7f0d99d7b5f44e88ca26d063c0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3cc37fe2dce76dd59baf776238e141a685c94cb3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281660"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722566"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lição 1: Criar um projeto e pacote básico com o SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Nessa lição, você cria um pacote ETL simples que extrai dados de uma fonte única de arquivo simples, transforma os dados usando duas transformações de pesquisa e grava os dados transformados em uma cópia da tabela de fatos **FactCurrencyRate** no banco de dados de exemplo **AdventureWorksDW2012**. Como parte dessa lição, você aprende a criar novos pacotes, adicionar e configurar conexões de destino e de fonte de dados e trabalhar com novos fluxos de controle e componentes de fluxo.  
   

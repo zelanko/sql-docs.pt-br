@@ -17,14 +17,18 @@ ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 78fabbab0e38e65fdb77dc1b1a5e300154d1569a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ad0dca79322d67e357f4629357367f0ecfb50b03
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280610"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805222"
 ---
 # <a name="rebuild-index-task"></a>Tarefa Recriar Índice
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A tarefa Recriar Índice recria índices em tabelas e exibições de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre o gerenciamento de índices, consulte [Reorganizar e recriar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
  Utilizando a tarefa Recriar Índice, um pacote pode reconstruir índices em um único banco de dados ou em vários bancos de dados. Se a tarefa recriar somente os índices em um único banco de dados, você poderá escolher as exibições e as tabelas cujos índices a tarefa recriará.  

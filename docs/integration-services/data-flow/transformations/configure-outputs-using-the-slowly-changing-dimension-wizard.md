@@ -15,14 +15,18 @@ ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74f1d8df75ae85367f57de01e9f8a60bab902242
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b4013b26e52c98566557d8195b5b401956d0721b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274305"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726208"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurar saídas por meio do Assistente para Dimensões de Alteração Lenta
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O Assistente para Dimensões de Alteração Lenta funciona como o editor da transformação Dimensão de Alteração Lenta. Criar e configurar o fluxo de dados para alterar dados de dimensão lentamente pode ser uma tarefa complexa. O Assistente para Dimensões de Alteração Lenta oferece o método mais simples para criar o fluxo de dados para as saídas da transformação Dimensão de Alteração Lenta, guiando você pelas etapas de mapeamento de colunas, selecionando colunas de chave de negócio, definindo atributos de alteração de coluna e configurando o suporte para membros de dimensão deduzidos.  
   
  Você deve escolher pelo menos uma coluna de chave de negócio na tabela de dimensões e mapeá-la para uma coluna de entrada. O valor da chave de negócio vincula um registro na fonte a um registro na tabela de dimensões. A transformação usa esse mapeamento para localizar o registro na tabela de dimensões e determinar se um registro é novo ou está em alteração. A chave de negócio é geralmente a chave primária na fonte, mas poderá ser uma chave alternativa desde que identifique um registro com exclusividade e seu valor não se altere. A chave de negócio também pode ser uma chave composta, que consiste em várias colunas. A chave primária na tabela de dimensões é geralmente uma chave substituta, o que significa um valor numérico gerado automaticamente por uma coluna de identidade ou por uma solução personalizada, como um script.  

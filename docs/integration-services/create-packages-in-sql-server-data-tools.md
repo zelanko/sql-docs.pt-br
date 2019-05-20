@@ -16,14 +16,18 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a14545174705a0352023567bbb943d56dac9d336
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ea0f60f98ef86908e7e81f810c9160a71d91755c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279370"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727295"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Copiar pacotes nas Ferramentas de Dados do SQL Server
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], você pode criar um novo pacote usando um dos métodos a seguir:  
   
 -   Use o modelo de pacote incluído no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

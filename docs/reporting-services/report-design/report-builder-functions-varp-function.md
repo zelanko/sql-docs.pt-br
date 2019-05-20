@@ -2,18 +2,18 @@
 title: Função VarP (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: e4f86ab3-bdb3-4e4a-9a9d-7ae7abdf4dc4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 062544e43b95a6e0e6143f5d44c89bda302900da
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2712a66e020324ab529fe0dc1759957fbc53f4e8
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291054"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576721"
 ---
 # <a name="report-builder-functions---varp-function"></a>Funções do Construtor de Relatórios – Função VarP
   Retorna a variação da população de todos os valores numéricos não nulos especificados pela expressão, avaliados no contexto do escopo fornecido.  
