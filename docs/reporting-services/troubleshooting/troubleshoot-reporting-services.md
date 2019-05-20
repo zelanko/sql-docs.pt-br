@@ -2,18 +2,18 @@
 title: Solução de problemas do Reporting Services | Microsoft Docs
 ms.date: 01/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 6eeed553-512d-4603-9b14-0492a9d052b5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 13a85c169421f4ab794ed95f8696d32e5215f6c9
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: dbb4194cf0b70f88ff9feba476dcd8cf85712618
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087925"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574290"
 ---
 # <a name="troubleshoot-reporting-services"></a>Solucionar problemas do Reporting Services
   Os tópicos desta seção ajudam a identificar e solucionar problemas com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

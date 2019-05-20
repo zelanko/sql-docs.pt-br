@@ -11,14 +11,18 @@ ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 77b941d4f1460b81acf2e90185f6e1a4d9ecbde9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b1ff09c90aece19ea306ec91b8d5cb0d95da937c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277515"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727229"
 ---
 # <a name="ado-net-custom-properties"></a>Propriedades personalizadas do ADO NET
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **Propriedades personalizadas de fontes**  
   
  A origem do ADO NET tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  

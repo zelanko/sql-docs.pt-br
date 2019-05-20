@@ -14,14 +14,18 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a3c679aa51da959d0b24af2247f563446ac283a0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6f258f39bac4f26546f9283bce9cfcff5b5420f4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281530"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719625"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Eventos registrados em log por um pacote do Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] registra várias mensagens de eventos no log de eventos de Aplicativo do Windows. Um pacote registra estas mensagens quando é iniciado e interrompido e quando ocorrem determinados problemas.  
   
  Este tópico contém informações sobre as mensagens de evento comuns registradas por um pacote no log de eventos de Aplicativo. Por padrão, um pacote registra algumas dessas mensagens mesmo que você não tenha habilitado o log no pacote. Todavia, existem outras mensagens que serão registradas em log pelo pacote apenas se você tiver habilitado o log nele. Independentemente de o pacote registrar essas mensagens em log por padrão ou de o log estar habilitado, a Origem do Evento das mensagens é SQLISPackage.  

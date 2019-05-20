@@ -18,14 +18,18 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c59a55f8ccb713024394ecf611299f71a5cf733c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2aa9ecc0364accdd9050cae303afb545faf394ba
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271974"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727334"
 ---
 # <a name="web-service-task"></a>Tarefa Serviços Web
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A tarefa Serviço Web executa um método de serviço Web. Você pode usar essa tarefa para os seguintes propósitos:  
   
 -   Gravar em uma variável os valores retornados pelo método de serviço da Web. Por exemplo, você pode obter a temperatura mais alta do dia a partir do método de serviço da Web e, em seguida, pode utilizar esse valor para atualizar uma variável usada em uma expressão que define um valor de coluna.  

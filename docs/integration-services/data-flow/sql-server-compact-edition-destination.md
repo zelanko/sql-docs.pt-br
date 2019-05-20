@@ -17,14 +17,18 @@ ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d69637856a3f8057f287944e68b48cd9de99bf0f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e53d934902bb58b2e5d4ba66dc5bb55a8f9c03c7
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273247"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726346"
 ---
 # <a name="sql-server-compact-edition-destination"></a>Destino do SQL Server Compact Edition
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact grava dados em bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
 > [!NOTE]  

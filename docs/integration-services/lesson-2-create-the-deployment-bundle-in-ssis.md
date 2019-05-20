@@ -11,14 +11,18 @@ ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a5058fb2f654ad7aa0325e53e045179688885abc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cab62307fa880ff6ac4f1a948c3abfa138ca1377
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279230"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722368"
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>Lição 2: criar o pacote de implantação no SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Na [Lição 1: preparando-se para criar o pacote de implantação](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), você criou o projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] chamado Tutorial de Implantação, adicionou os pacotes e os arquivos de suporte ao projeto e implementou configurações em pacotes.  
   
 Nesta lição, você criará um pacote de implantação, que é uma pasta que contém os itens que você precisa para instalar os pacotes em outro computador. O pacote de implantação incluirá um manifesto de implantação, cópias dos pacotes e cópias dos arquivos de suporte do projeto do Tutorial de Implantação. O manifesto de implantação lista os pacotes, os diversos arquivos e as configurações do pacote de implantação.  

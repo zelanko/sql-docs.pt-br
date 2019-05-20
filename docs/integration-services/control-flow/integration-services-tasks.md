@@ -27,14 +27,18 @@ ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 90726ed8ff3b8180e8c65c35d055dcb985001f92
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6fede95f6d1a0a9b9ca2d8ea0324d5787c87d7b0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276127"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727590"
 ---
 # <a name="integration-services-tasks"></a>Tarefas do Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   As tarefas são elementos de fluxo de controle que definem unidades de trabalho que são executadas em um fluxo de controle de pacote. Um pacote do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é composto de uma ou mais tarefas. Se o pacote contiver mais de uma tarefa, elas estarão conectadas e sequenciadas no fluxo de controle por restrições de precedência.  
   
  Você também poderá escrever tarefas personalizadas que usam uma linguagem de programação que oferece suporte a COM, como Visual Basic, ou uma linguagem de programação .NET, como C#.  

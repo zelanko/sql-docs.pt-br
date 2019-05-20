@@ -11,14 +11,18 @@ ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e75d66755f85650c6ac8630c08dc38e5d295b6f1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c9942407693caaf1a8c0c2ef3222c20a237774c2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273669"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729101"
 ---
 # <a name="cdc-instance-deployment-script"></a>Script de implantação de instância CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A caixa de diálogo CDC Instance Deployment Script que exibe o script de implantação de instância CDC. Este script pode ser usado para recriar o banco de dados CDC com todos os seus artefatos em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente.  
   
  Depois de concluído o script de implantação, você deve ter certeza do seguinte:  

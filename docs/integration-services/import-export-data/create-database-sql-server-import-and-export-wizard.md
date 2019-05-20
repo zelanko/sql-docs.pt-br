@@ -12,14 +12,18 @@ ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3a81b45e3d744573b99d270ae7983a599e8fabf
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 3b051e5f2dc951eb07d4a23a5a22e15f1b2cc071
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222010"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805122"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Criar banco de dados (Assistente de Importação e Exportação do SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Se você selecionar **Novo** na página **Escolher um Destino** para criar um novo banco de dados de destino do SQL Server, o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostrará a caixa de diálogo **Criar Banco de Dados** . Nessa página, você deve fornecer um nome para o novo banco de dados. Você também pode alterar as configurações para o tamanho inicial e o aumento automático do novo banco de dados e seu arquivo de log. 
 
 A caixa de diálogo **Criar Banco de Dados** do assistente oferece apenas as opções básicas que estão disponíveis para criar um novo banco de dados do SQL Server. Para ver e configurar todas as opções para um novo banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para criar o banco de dados ou para configurá-lo após a criação dele pelo assistente. 

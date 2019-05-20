@@ -11,14 +11,18 @@ ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ef9d19eea3ca9c7207f8b55b612006a0807f2f5e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e3297b1b799865f600476a65e63e65a29bc2d3c4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281440"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728660"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>Preparar o script de visualização do SQL Server para Oracle CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Esta caixa de diálogo mostra o script Prepare SQL que cria o banco de dados MSXDBCDC. Este banco de dados deve estar em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para isto ser usado com o Oracle CDC para SQL Server.  
   
  Faça o seguinte na caixa de diálogo Prepare SQL Server Script.  

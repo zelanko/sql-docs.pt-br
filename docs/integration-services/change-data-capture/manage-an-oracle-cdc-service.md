@@ -13,14 +13,18 @@ ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4d5bf2b8247d3ee7907f5a064f090c88344c18e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2d3941108c9cd8969f4082a4c6aed765f39bb013
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275583"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728677"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Você pode usar o Console de Configuração do Serviço CDC para gerenciar um Serviço CDC específico.  
   
  **Para selecionar o serviço CDC com o qual você deseja trabalhar**  

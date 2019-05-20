@@ -28,14 +28,18 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 00ed915265b9b3c19e7bafdcf7d6c41208e8319a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6d4d453c1e5c6de342ac81fdd828a570bdc33e5a
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280460"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805265"
 ---
 # <a name="package-management-ssis-service"></a>Gerenciamento de pacotes (serviço SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O gerenciamento de pacotes inclui monitoramento, gerenciamento, importação e exportação de pacotes.  
  
  ## <a name="package-store"></a>Repositório de pacotes  

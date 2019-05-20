@@ -11,14 +11,18 @@ ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5f9f4b912a8d57a2c6f2b11f710e414edfadfb94
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4a12576e083a30a939964803687198ae0842fb73
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277555"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715846"
 ---
-# <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value
+# <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Define o valor de uma propriedade para uma instância de execução no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

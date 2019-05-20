@@ -2,23 +2,23 @@
 title: Referências de coleções de parâmetros (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d88a76bcba0350b39fed6b4e41d3b5ae80b2738f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 137eb9b9cf7a5a64843e163ece3b4767dd8e1852
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290134"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581801"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>Coleções internas – referências de coleções de parâmetros (Construtor de Relatórios)
   Os parâmetros de relatório são umas das coleções internas que você pode fazer referência a partir de uma expressão. Incluindo parâmetros em uma expressão, é possível personalizar os dados e a aparência do relatório com base nas opções feitas por um usuário. As expressões podem ser usadas para qualquer propriedade de item de relatório ou propriedade de caixa de texto que fornece a opção (*Fx*) ou \<**Expression**>. As expressões também são usadas para controlar o conteúdo e a aparência do relatório de outras maneiras. Para obter mais informações, consulte [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
- Quando você compara os valores do parâmetro com os valores do campo do conjunto de dados em tempo de execução, os tipos de dados para os dois itens que você está comparando devem ser os mesmos. Os parâmetros de relatório podem ser de um dos seguintes tipos: Boolean, DateTime, Integer, Float, ou Text, que representa o tipo de dados String subjacente. Se necessário, você pode precisar converter o tipo de dados do valor do parâmetro para corresponder ao valor do conjunto de dados. Para obter mais informações, consulte [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
+ Quando você compara os valores do parâmetro com os valores do campo do conjunto de dados em tempo de execução, os tipos de dados para os dois itens que você está comparando devem ser os mesmos. Os parâmetros de relatório podem ser de um dos seguintes tipos: Boolean, DateTime, Integer, Float, ou Text, que representa a String de tipo de dados subjacentes. Se necessário, você pode precisar converter o tipo de dados do valor do parâmetro para corresponder ao valor do conjunto de dados. Para obter mais informações, consulte [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
  Para incluir uma referência de parâmetro em uma expressão, você deve entender como especificar a sintaxe correta para a referência de parâmetro que varia, dependendo de se o parâmetro tem diversos valores ou um valor único.  
   

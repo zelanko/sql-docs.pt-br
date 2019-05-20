@@ -14,14 +14,18 @@ ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fbaa082b67c3093911f000a42e639c5eac9a81a0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5f219cf46c3b8833086f5b7b4b3f058200ca92b5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280580"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725326"
 ---
 # <a name="hex-ssis-expression"></a>HEX (Expressão SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Retorna uma cadeia de caracteres que representa o valor hexadecimal de um inteiro.  
   
 ## <a name="syntax"></a>Sintaxe  

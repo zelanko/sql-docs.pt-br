@@ -15,16 +15,16 @@ helpviewer_keywords:
 - sqlcmd utility, scripts
 - setvar command
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7e6128e455714f8b5977903646f01d6d8d1584c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7fbf5c43d58f56a3a383023e5818f1494e86ed68
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642635"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821862"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd – Usar com variáveis de script
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -118,7 +118,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 | SQLCMDWORKSTATION       | -H             | R   | "ComputerName"          |
 | SQLCMDDBNAME            | -d             | R   | ""                      |
 | SQLCMDLOGINTIMEOUT      | -l             | R/W | "8" (segundos)           |
-| SQLCMDSTATTIMEOUT       | -t             | R/W | "0" = espere indefinidamente |
+| SQLCMDSTATTIMEOUT       | -T             | R/W | "0" = espere indefinidamente |
 | SQLCMDHEADERS           | -H             | R/W | "0"                     |
 | SQLCMDCOLSEP            | -S             | R/W | " ."                     |
 | SQLCMDCOLWIDTH          | -w             | R/W | "0"                     |

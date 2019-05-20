@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: cedbd1516706191980dc7817a9bc7434def30831
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 24768e1b230631009d94a1c449f08164157ed481
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241451"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718420"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Suporte do Scale Out para alta disponibilidade
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 No SSIS Scale Out, a alta disponibilidade do lado do Trabalho do Scale Out é fornecida com a execução de pacotes com vários Trabalhos do Scale Out.
 
@@ -112,5 +116,5 @@ Para atualizar o Scale Out em um ambiente de alta disponibilidade, execute as [e
 
 ## <a name="next-steps"></a>Próximas etapas
 Para saber mais, veja os tópicos a seguir:
--   [Mestre de Expansão de Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
--   [Trabalho de Expansão de Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)
+-   [Mestre do SSIS (Integration Services) Scale Out](integration-services-ssis-scale-out-master.md)
+-   [Trabalho do SSIS (Integration Services) Scale Out](integration-services-ssis-scale-out-worker.md)

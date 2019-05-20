@@ -2,20 +2,20 @@
 title: Método RemoveSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - RemoveSSLCertificateBindings method
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f19c414c199020f3c85226b1ea691618649e070e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ae98fa644b5aa200db807fd93380802e66eb4eb4
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716004"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571273"
 ---
 # <a name="configurationsetting-method---removesslcertificatebinding"></a>Método de ConfigurationSetting – RemoveSSLCertificateBinding
   Remove uma associação de Certificado SSL.  

@@ -11,14 +11,18 @@ ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5d6fa25037765ead5089062812c1847f47a204b6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 65d0e8f1cb831d0312b043e8bb7540d86c2d5f78
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276280"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720378"
 ---
 # <a name="microsoft-connector-for-sap-bw-components"></a>Componentes do Microsoft Connector 1.1 para SAP BW
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Esta seção contém os tópicos que descrevem os três componentes do [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 para SAP BW:  
   
 -   Gerenciador de conexões SAP BW  

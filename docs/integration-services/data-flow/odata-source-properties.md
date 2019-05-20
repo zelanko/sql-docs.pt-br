@@ -11,14 +11,18 @@ ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d1eacda4e9c37c861b323b306865f829a240610
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6a7bc11692944f5da349760e3b1e12f473fb15b3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273796"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726678"
 ---
 # <a name="odata-source-properties"></a>Propriedades da origem do OData
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Ao clicar com o botão direito do mouse em **OData Source** no fluxo de dados e clicar em **Propriedades**, você verá as propriedades do componente de **OData Source** na janela **Propriedades**.  
 
 ## <a name="properties"></a>Propriedades 

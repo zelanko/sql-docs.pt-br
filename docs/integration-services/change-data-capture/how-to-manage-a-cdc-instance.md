@@ -11,14 +11,18 @@ ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7a7f15a409168c55e18da3585042715ac4aef898
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5fd3788cb31e7e3e6408cc7161f45ba008cf081c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270931"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728777"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Este procedimento descreve como usar o CDC Designer Console para gerenciar operações de instância CDC em tempo de execução.  
   
 ### <a name="to-manage-cdc-instance-operations"></a>Para gerenciar operações de instância CDC  

@@ -15,14 +15,18 @@ ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b5ba4c8a12c194eda57379c1fa382e70142bf8b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4a4ade06f7275007c17834fbee3d69e2d5583d7f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280510"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729188"
 ---
 # <a name="folder-properties-dialog-box"></a>Caixa de diálogo Propriedades da Pasta
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Uma pasta contém projetos e ambientes no catálogo do **SSISDB** . Cada pasta define permissões que se aplicam aos conteúdo da pasta. Para obter mais informações sobre permissões do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consulte [catalog.grant_permission &#40;Banco de Dados do SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md).  
   
 ## <a name="to-set-folder-description-and-permissions"></a>Para definir descrição de pasta e permissões  

@@ -13,14 +13,18 @@ ms.author: haoqian
 manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 4c718dd14e1c7d2fc508efa403a9abfbcbae100d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b466bb90d9a40599bad9c924da7f2ae6f5f74089
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205805"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718295"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Executar pacotes no SSIS (Integration Services) Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Depois de implantar pacotes no servidor do Integration Services, execute-os no Scale Out usando um dos seguintes métodos:
 
 -   [Caixa de diálogo Executar Pacote no Scale Out](#scale_out_dialog)

@@ -13,14 +13,18 @@ ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3475e0b818b39a787371a11397a09dbf613be3f6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 09c4ff1eaccf529ba30a7bd0d4b9884ae94139ec
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277325"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725038"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE (Expressão SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Retorna uma expressão de caractere que é replicada várias vezes. O argumento *times* deve ser avaliado como um inteiro.  
   
 > [!NOTE]  

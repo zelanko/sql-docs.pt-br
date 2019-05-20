@@ -13,14 +13,18 @@ ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b542d886c20ef0560e92565106d72d8e1303e2b8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 781f734ac394ffa1374c6bc93861c552dc32618a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290522"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727670"
 ---
 # <a name="expression-task"></a>Tarefa de Expressão
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A Tarefa de Expressão cria e avalia expressões que definem valores de variáveis em tempo de execução, usando o Construtor de Expressões. Quando você edita a tarefa, o [Expression Builder](../../integration-services/expressions/expression-builder.md) é iniciado.  
   
 ## <a name="expression-examples"></a>Exemplos de expressões  
