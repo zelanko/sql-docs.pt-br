@@ -7,12 +7,12 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.date: 11/06/2018
-ms.openlocfilehash: 96b55cafe46994f44f496679f2d66f887baf4dce
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
-ms.translationtype: HT
+ms.openlocfilehash: fe461a189bcf7a123db40674a5cd035621151999
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503596"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570720"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrar uma instalação do Reporting Services (Modo Nativo)
 

@@ -44,7 +44,7 @@ ms.locfileid: "65484537"
 |------------------|-----------------|  
 |**Nome do banco de dados**|Especifique um nome para o banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
 |**Ordenação padrão do SQL Server**|Selecione para usar a configuração de ordenação atual do banco de dados da instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificada para o novo banco de dados.|  
-|**Ordenação do Windows**|Especifique as configurações de ordenação do Windows para uso com o novo banco de dados. As ordenações do Windows definem regras para armazenar dados de caractere com base em uma localidade do Windows associada. Para obter mais informações sobre ordenações do Windows e as opções associadas, consulte [Nome de ordenação do Windows &amp;#40;Transact-SQL&amp;#41;](../t-sql/statements/windows-collation-name-transact-sql.md).<br /><br /> Observação: A lista **Ordenação do Windows** e as opções associadas são habilitadas apenas depois que você desmarca a caixa **Ordenação padrão do SQL Server**.|  
+|**Ordenação do Windows**|Especifique as configurações de ordenação do Windows para uso com o novo banco de dados. As ordenações do Windows definem regras para armazenar dados de caractere com base em uma localidade do Windows associada. Para obter mais informações sobre ordenações do Windows e as opções associadas, consulte [Nome de ordenação do Windows &#40;Transact-SQL&#41;](../t-sql/statements/windows-collation-name-transact-sql.md).<br /><br /> Observação: A lista **Ordenação do Windows** e as opções associadas são habilitadas apenas depois que você desmarca a caixa **Ordenação padrão do SQL Server**.|  
   
 ## <a name="administrator-account"></a>Conta Administrador  
   

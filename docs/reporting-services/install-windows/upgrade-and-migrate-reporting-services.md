@@ -12,12 +12,12 @@ ms.author: maggies
 manager: kfile
 ms.topic: conceptual
 ms.date: 08/17/2017
-ms.openlocfilehash: 9717b74c7f59bec8da91fcbd24d4fbb2d79175d0
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
-ms.translationtype: HT
+ms.openlocfilehash: dc205f966d0e5556f8dc6f722190d477b5d89327
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65502630"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570732"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 

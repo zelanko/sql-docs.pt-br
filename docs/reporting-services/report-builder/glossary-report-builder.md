@@ -2,18 +2,18 @@
 title: Glossário (Construtor de Relatórios) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 793672d6f98d588b0f2d4c80963a29c41e392354
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
-ms.translationtype: HT
+ms.openlocfilehash: 3f4f8a9e97890f398c61210b6f00829b6add20c1
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775434"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580725"
 ---
 # <a name="glossary-report-builder"></a>Glossário (Construtor de Relatórios)
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b944ca316825e65ce2d1854709e0a08ce1fd1cb8
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
-ms.translationtype: HT
+ms.openlocfilehash: 28695a4849b29c6e593f42489fc149efd9a8db53
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449616"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570643"
 ---
 # <a name="role-assignments---modify-or-delete"></a>Atribuições de função – Modificar ou excluir
 

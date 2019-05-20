@@ -28,7 +28,7 @@ ms.locfileid: "63225024"
 > [!NOTE]  
 >  Ao importar texto contendo marcação HTML, os dados sempre devem ser analisados primeiro pela caixa de texto. Como apenas um subconjunto de marcas HTML possui suporte, o HTML mostrado no relatório renderizado pode ser diferente do HTML original.  
   
- Para começar rapidamente, confira [Tutorial: formatar o texto &#40Construtor de Relatórios&#41;](../tutorial-format-text-report-builder.md).  
+ Para começar rapidamente, confira [Tutorial: formatar o texto &#40;Construtor de Relatórios&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
