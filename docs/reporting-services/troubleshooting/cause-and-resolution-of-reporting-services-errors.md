@@ -2,7 +2,7 @@
 title: Causa e resolução de erros do Reporting Services | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - errors [Reporting Services]
 - troubleshooting [Reporting Services], errors
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b330d2dc764a029f805d5063cf99019574173c4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a554e3f4ce5f7f5f844038eeb8c31f84e205312c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784235"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575576"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Causa e resolução de erros do Reporting Services
   Este tópico contém informações sobre causas e resoluções para diversos erros relacionados ao [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Os tópicos de mensagem de erro nesta seção fornecem uma explicação da mensagem de erro, possíveis causas e ações para a correção do problema.  
