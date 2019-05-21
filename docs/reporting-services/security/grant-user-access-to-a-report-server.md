@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d255d798bc73d446c22dff112606165a1def8ea4
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
-ms.translationtype: HT
+ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449693"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619605"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Conceder acesso ao usuário a um servidor de relatório
 
@@ -53,24 +53,24 @@ Revise a lista a seguir antes de adicionar usuários a um servidor de relatório
 
 1. Inicie o [portal da Web](../web-portal-ssrs-native-mode.md).
 
-2. Selecione o *ícone de engrenagem* no canto superior direito.
+2. Selecione o ícone da **Engrenagem** no canto superior direito e **Configurações do Site** no menu suspenso.
 
-3. Selecione **Configurações de Site**.
+    ![Ícone de engrenagem do portal da Web do servidor de relatório e menu suspenso](../../reporting-services/security/media/settings-icon-and-menu.png)
 
-4. Selecione **Segurança**.
+3. Selecione **Segurança**.
 
-5. Selecione **Adicionar grupo ou usuário**.
+4. Selecione **Adicionar grupo ou usuário**.
 
-6. Em **Grupo ou usuário**, insira uma conta de usuário ou grupo de domínio do Windows neste formato: \<domain>\\<account\>.
+5. Em **Grupo ou usuário**, insira uma conta de usuário ou grupo de domínio do Windows neste formato: \<domain>\\<account\>.
 
     > [!NOTE]
     > Se estiver usando a autenticação de formulários ou a segurança personalizada, especifique a conta de usuário ou grupo no formato correto de sua implantação.
 
-7. Selecione uma função de sistema e, em seguida, **OK**.
+6. Selecione uma função de sistema e, em seguida, **OK**.
 
     As funções são cumulativas; desse modo, se você selecionar Administrador do Sistema e Usuário do Sistema, um usuário ou grupo poderá executar tarefas nas duas funções.
 
-8. Repita o procedimento para criar atribuições para usuários ou grupos adicionais.
+7. Repita o procedimento para criar atribuições para usuários ou grupos adicionais.
 
 ### <a name="to-add-a-user-or-group-to-an-item-role"></a>Para adicionar um usuário ou grupo a uma função de item
 
