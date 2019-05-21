@@ -25,9 +25,9 @@ ms.locfileid: "65478900"
 ## <a name="workflow-for-data-quality-matching"></a>Fluxo de trabalho para correspondência de qualidade de dados  
  Ao usar o DQS com o MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], use o fluxo de trabalho seguinte:  
   
-1.  Recupere uma lista de dados gerenciados no MDS e combine-a com uma lista não gerenciada no MDS. Para obter mais informações, consulte [Combine Data &#40;MDS Add-in for Excel&#41;](combine-data-mds-add-in-for-excel.md).  
+1.  Recupere uma lista de dados gerenciados no MDS e combine-a com uma lista não gerenciada no MDS. Para obter mais informações, consulte [Combinar dados &#40;Suplemento MDS para Excel&#41;](combine-data-mds-add-in-for-excel.md).  
   
-2.  Use o conhecimento do DQS para comparar os dados na lista combinada. Para obter mais informações, consulte [Match Similar Data &#40;MDS Add-in for Excel&#41;](match-similar-data-mds-add-in-for-excel.md).  
+2.  Use o conhecimento do DQS para comparar os dados na lista combinada. Para obter mais informações, consulte [Corresponder dados semelhantes &#40;Suplemento MDS para Excel&#41;](match-similar-data-mds-add-in-for-excel.md).  
   
 3.  Para exibir mais detalhes sobre as semelhanças encontradas pelo DQS, mostre as colunas de detalhe.  
   
