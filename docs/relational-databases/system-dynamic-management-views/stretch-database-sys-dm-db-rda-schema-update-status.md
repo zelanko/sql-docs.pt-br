@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_db_rda_schema_update_status dynamic management view
 ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 930e717767c44f5d8151cd94c29f9b6aaa205fa4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85c12ae224203def43c9f9953cada0c336e9ebbd
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755794"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947386"
 ---
 # <a name="stretch-database---sysdmdbrdaschemaupdatestatus"></a>Stretch Database - sys.dm_db_rda_schema_update_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47755794"
   
  **dm_db_rda_schema_update_status** tem como escopo o contexto de banco de dados atual. Verifique se que você está no contexto da tabela habilitados para Stretch para a qual você deseja ver o status de atualização do esquema de banco de dados.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|A ID local habilitado para ampliação da tabela de esquema de arquivar cujos dados remotos está sendo atualizada.|  
 |**database_id**|**int**|A ID do banco de dados que contém a tabela local habilitada para Stretch.|  

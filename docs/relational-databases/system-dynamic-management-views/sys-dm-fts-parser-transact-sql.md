@@ -1,9 +1,8 @@
 ---
-title: fts_parser (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_parser (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -17,15 +16,16 @@ helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-author: douglaslMS
-ms.author: douglasl
+auauthor: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: e296632c0444ba634f87755266efc442038c073d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3e20fc07e286fb4fd22596f32f0abd90e5533979
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535303"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944237"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  O identificador de localidade (LCID) do separador de palavras a ser usado para analisar *query_string*.  
   
  *stoplist_id*  
- ID da lista de palavras irrelevantes, se houver, para ser usada pelo separador de palavras identificado por *lcid*. *stoplist_id* está **int**. Se você especificar 'NULL', nenhuma lista de palavras irrelevantes será usada. Se especificar 0, será usada a LISTA DE PALAVRAS IRRELEVANTES do sistema.  
+ ID da lista de palavras irrelevantes, se houver, para ser usada pelo separador de palavras identificado por *lcid*. *stoplist_id* está **int**. Se você especificar 'NULL', nenhuma lista de palavras irrelevantes é usada. Se especificar 0, será usada a LISTA DE PALAVRAS IRRELEVANTES do sistema.  
   
  Uma ID da lista de palavras irrelevantes é exclusiva em um banco de dados. Para obter a ID da lista de palavras irrelevantes para um índice de texto completo em uma determinada tabela, use o [fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) exibição do catálogo.  
   
@@ -68,7 +68,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|palavra-chave|**varbinary(128)**|A representação hexadecimal de uma determinada palavra-chave retornada por um separador de palavras. Essa representação é usada para armazenar a palavra-chave no índice de texto completo. Esse valor não é legível, mas é útil para relacionadas a uma determinada palavra-chave para a saída retornada por outros modos de exibição de gerenciamento dinâmico que retornam o conteúdo de um índice de texto completo, como [DM fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) e [ DM fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Observação:** OxFF representa o caractere especial que indica o término de um arquivo ou conjunto de dados.|  
+|palavra-chave|**varbinary(128)**|A representação hexadecimal de uma determinada palavra-chave retornada por um separador de palavras. Essa representação é usada para armazenar a palavra-chave no índice de texto completo. Esse valor não é legível, mas é útil para relacionadas a uma determinada palavra-chave para a saída retornada por outros modos de exibição de gerenciamento dinâmico que retornam o conteúdo de um índice de texto completo, como [DM fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) e [ DM fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Observação:** OxFF representa o caractere especial que indica o final de um arquivo ou conjunto de dados.|  
 |group_id|**int**|Contém um valor de inteiro que é útil para diferenciar o grupo lógico a partir do qual um determinado termo foi gerado. Por exemplo, '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' produz os seguintes valores group_id em inglês:<br /><br /> 1: Servidor<br />2: DB<br />3: DB|  
 |phrase_id|**int**|Contém um valor inteiro que é útil para diferenciar os casos em que formas alternativas de palavras compostas, como texto completo, são geradas pelo separador de palavras. Às vezes, devido à existência de palavras compostas ('multi-million'), formas alternativas são geradas pelo separador de palavras. Às vezes, essas formas alternativas (frases) precisam ser diferenciadas.<br /><br /> Por exemplo, '`multi-million`' produz os seguintes valores phrase_id em inglês:<br /><br /> 1 para `multi`<br />1 para `million`<br />2 para `multimillion`|  
 |ocorrência|**int**|Indica a ordem de cada termo no resultado da análise. Por exemplo, a ocorrência "`SQL Server query processor`" de frase poderia conter os seguintes valores de ocorrência para os termos da frase em inglês:<br /><br /> 1 para `SQL`<br />2 para `Server`<br />3 para `query`<br />4 para `processor`|  
@@ -140,7 +140,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0, 0);  
 ```  
   
-### <a name="b-displaying-the-output-of-a-given-word-breaker-in-the-context-of-stoplist-filtering"></a>b. Exibindo a saída de um determinado separador de palavras no contexto de filtro da lista de palavras irrelevantes  
+### <a name="b-displaying-the-output-of-a-given-word-breaker-in-the-context-of-stoplist-filtering"></a>B. Exibindo a saída de um determinado separador de palavras no contexto de filtro da lista de palavras irrelevantes  
  O exemplo a seguir retorna a saída a partir do uso do separador de palavras em inglês, cujo LCID é 1033, uma lista de palavras irrelevantes em inglês, cuja ID é 77, na cadeia de caracteres de consulta a seguir:  
   
  `"The Microsoft business analysis" OR "MS revenue"`  
