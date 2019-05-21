@@ -143,7 +143,7 @@ Exemplos:
   
 `rv=25`  
   
-**-S***target_appliance*  
+* *-S***target_appliance*  
 Especifica o dispositivo de PDW do SQL Server que receberá os dados carregados.  
   
 *Para conexões do Infiniband*, *target_appliance* é especificado como o < nome do dispositivo >-SQLCTL01. Para configurar isso é chamado de conexão, consulte [configurar adaptadores de rede InfiniBand](configure-infiniband-network-adapters.md).  
@@ -159,7 +159,7 @@ For more information about this install option, see [Install dwloader Command-Li
 **-T** *target_database_name.*[*schema*].*table_name*  
 O nome de três partes para a tabela de destino.  
   
-**-I***source_data_location*  
+* *-I***source_data_location*  
 O local dos arquivos de origem de um ou mais para carregar. Cada arquivo de origem deve ser um arquivo de texto ou um arquivo de texto compactados com gzip. Apenas um arquivo de origem pode ser compactado em cada arquivo gzip.  
   
 Para formatar um arquivo de origem:  
