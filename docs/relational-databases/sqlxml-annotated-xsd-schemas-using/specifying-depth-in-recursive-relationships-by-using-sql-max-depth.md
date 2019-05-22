@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +19,16 @@ helpviewer_keywords:
 - recursive joins [SQLXML]
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa36c8cc75aecfbff8bba1b2d04c7f296da88147
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 84011f13a222ee66fdbfe5bf57d3ef74dd41a052
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030717"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980758"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Especificando a profundidade em relações recursivas usando sql:max-depth
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -235,7 +235,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Use o **SQL: max-profundidade** anotação no esquema para especificar a profundidade de recursão em uma relação recursiva que é descrita no esquema. O valor de **SQL: max-profundidade** anotação é um inteiro positivo (1 a 50) que indica o número de recursões:  Um valor de 1 para a recursão no elemento para o qual o **SQL: max-profundidade** anotação é especificada; um valor de 2 para a recursão no nível de elemento no qual **SQL: max-profundidade** for especificado ; e assim por diante.  
   
 > [!NOTE]  
->  Na implementação subjacente, uma consulta XPath que é especificada em um esquema de mapeamento é convertida em uma consulta SELECT ... FOR XML EXPLICIT. Essa consulta requer que você especifique uma profundidade finita de recursão. Quanto maior o valor especificado para **SQL: max-profundidade**, quanto maior a consulta FOR XML EXPLICIT que será gerado. Isso poderá pode tornar mais lenta a recuperação.  
+>  Na implementação subjacente, uma consulta XPath que é especificada em um esquema de mapeamento é convertida em um SELECT... PARA uma consulta XML explícita. Essa consulta requer que você especifique uma profundidade finita de recursão. Quanto maior o valor especificado para **SQL: max-profundidade**, quanto maior a consulta FOR XML EXPLICIT que será gerado. Isso poderá pode tornar mais lenta a recuperação.  
   
 > [!NOTE]  
 >  Updategrams e o Carregamento em Massa de XML ignoram a anotação max-depth. Isso significa que atualizações ou inserções recursivas acontecerão, independentemente do valor especificado para max-depth.  
