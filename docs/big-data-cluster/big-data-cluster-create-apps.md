@@ -6,17 +6,17 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5953b5b36639438d80805bfb3dacc850d8c67dce
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 462bff09e37f293f39109e9c129fcbb0ca4d2111
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775374"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994110"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Como implantar um aplicativo no cluster de big data do SQL Server (versão prévia)
 
@@ -45,7 +45,7 @@ Há suporte para os seguintes tipos de aplicativos:
 
 ## <a name="capabilities"></a>Recursos
 
-No SQL Server de 2019 (visualização) 2.5 CTP você pode criar, excluir, descrevem, inicializar, lista executar e atualizar seu aplicativo. A tabela a seguir descreve os comandos de implantação do aplicativo que você pode usar com **mssqlctl**.
+No SQL Server de 2019 (visualização) CTP 3.0 você pode criar, excluir, descrevem, inicializar, lista executar e atualizar seu aplicativo. A tabela a seguir descreve os comandos de implantação do aplicativo que você pode usar com **mssqlctl**.
 
 |Comando |Descrição |
 |:---|:---|
@@ -68,10 +68,10 @@ As seções a seguir descrevem esses comandos em mais detalhes.
 
 ## <a name="sign-in"></a>Entrar
 
-Antes de implantar ou interagir com aplicativos, primeiro entre no seu SQL Server cluster de big data com o `mssqlctl login` comando. Especifique o endereço IP externo do `mgmtproxy-svc-external` serviço (por exemplo: `https://ip-address:30777`) junto com o nome de usuário e senha para o cluster.
+Antes de implantar ou interagir com aplicativos, primeiro entre no seu SQL Server cluster de big data com o `mssqlctl login` comando. Especifique o endereço IP externo do `controller-svc-external` serviço (por exemplo: `https://ip-address:30080`) junto com o nome de usuário e senha para o cluster.
 
 ```bash
-mssqlctl login -e https://<ip-address-of-mgmtproxy-svc-external>:30777 -u <user-name> -p <password>
+mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
 ```
 
 ## <a name="aks"></a>AKS

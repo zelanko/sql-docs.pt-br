@@ -1,27 +1,27 @@
 ---
-title: S3 de montagem para disposição em camadas do HDFS
+title: Montagem S3 para camadas do HDFS
 titleSuffix: SQL Server big data clusters
 description: Este artigo explica como configurar o HDFS disposição em camadas para montar um sistema de arquivo externo do S3 no HDFS em um cluster de big data do SQL Server 2019 (visualização).
 author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/15/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 79c09d5bcff26c9f5867e5b0fb38bd019b681b5c
-ms.sourcegitcommit: 89abd4cd4323ae5ee284571cd69a9fe07d869664
+ms.openlocfilehash: 4254c1c47e64013533574345c14518fdc2afcb7c
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64330601"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993954"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Como montar S3 para o HDFS disposição em camadas em um cluster de big data
 
 As seções a seguir fornecem um exemplo de como configurar o HDFS disposição em camadas com uma fonte de dados do armazenamento de S3.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - [Cluster de big data implantados](deployment-guidance.md)
 - [Ferramentas de big data](deploy-big-data-tools.md)
@@ -30,7 +30,7 @@ As seções a seguir fornecem um exemplo de como configurar o HDFS disposição 
 - Criar e carregar dados para um bucket S3 
   - Carregar CSV ou Parquet arquivos para o bucket S3. Isso é que os dados externos do HDFS que serão montados no HDFS no cluster de big data.
 
-## <a name="access-keys"></a>Teclas de acesso
+## <a name="access-keys"></a>Chaves de acesso
 
 1. Abra um prompt de comando em um computador cliente que possa acessar seu cluster de big data.
 
@@ -48,22 +48,22 @@ As seções a seguir fornecem um exemplo de como configurar o HDFS disposição 
 
 Agora que você preparou um arquivo de credencial com chaves de acesso, você pode começar a montagem. As etapas a seguir montagem o armazenamento remoto do HDFS no S3 no armazenamento local de HDFS do seu cluster de big data.
 
-1. Use **kubectl** para localizar o endereço IP para o **mgmtproxy-svc-externo** serviço em seu cluster de big data. Procure os **External-IP**.
+1. Use **kubectl** para localizar o endereço IP para o ponto de extremidade **controlador-svc-externo** serviço em seu cluster de big data. Procure os **External-IP**.
 
    ```bash
-   kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-cluster-name>
    ```
 
-1. Faça logon com **mssqlctl** usando o endereço IP externo do ponto de extremidade de proxy de gerenciamento com o nome de usuário do cluster e a senha:
+1. Faça logon com **mssqlctl** usando o endereço IP externo do ponto de extremidade de controlador com seu nome de usuário do cluster e a senha:
 
    ```bash
-   mssqlctl login -e https://<IP-of-mgmtproxy-svc-external>:30777/ -u <username> -p <password>
+   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. Montar o armazenamento HDFS remoto no Azure usando **montagem do armazenamento mssqlctl criar**. Substitua os valores de espaço reservado antes de executar o comando a seguir:
+1. Montar o armazenamento HDFS remoto no Azure usando **mssqlctl montagem do pool de armazenamento do cluster crie**. Substitua os valores de espaço reservado antes de executar o comando a seguir:
 
    ```bash
-   mssqlctl storage mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
+   mssqlctl cluster storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -76,21 +76,21 @@ Se montado com êxito, você deve ser capaz de consultar os dados do HDFS e exec
 Para listar o status de todas as montagens no seu cluster de big data, use o seguinte comando:
 
 ```bash
-mssqlctl storage mount status
+mssqlctl cluster storage-pool mount status
 ```
 
 Para listar o status de uma montagem de um caminho específico no HDFS, use o seguinte comando:
 
 ```bash
-mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Excluir a montagem
 
-Para excluir a montagem, use o **mssqlctl armazenamento montagem exclusão** de comando e especifique o caminho de montagem no HDFS:
+Para excluir a montagem, use o **mssqlctl exclusão de montagem de pool de armazenamento de cluster** de comando e especifique o caminho de montagem no HDFS:
 
 ```bash
-mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Próximas etapas

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 51e6f11460e7a7c1f650b68624cc09d7cea76399
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.openlocfilehash: 3914bc088ab8974c92a24131d69590b4353f068e
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877658"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994089"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Monitorar e solucionar problemas de clusters de grandes dados do SQL Server
 
@@ -121,7 +121,7 @@ Os seguintes serviços dão suporte a conexões externas para o cluster de big d
 | **appproxy-svc-external** | Suporte a cenários de implantação do aplicativo. |
 
 > [!TIP]
-> Essa é uma maneira de exibir os serviços com **kubectl**, mas também é possível usar `mssqlctl cluster endpoints list` comando para exibir esses pontos de extremidade. Para obter mais informações, consulte [obter pontos de extremidade de cluster de big data](deployment-guidance.md#endpoints).
+> Essa é uma maneira de exibir os serviços com **kubectl**, mas também é possível usar `mssqlctl cluster endpoint list` comando para exibir esses pontos de extremidade. Para obter mais informações, consulte [obter pontos de extremidade de cluster de big data](deployment-guidance.md#endpoints).
 
 ## <a name="get-service-details"></a>Obter detalhes do serviço
 

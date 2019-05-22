@@ -1,7 +1,7 @@
 ---
 title: sys.DM db_resource_stats (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/21/2019
+ms.date: 05/21/2019
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f3b8defbb43cd07afe38915c6a0c14cb226fbf2c
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 3ca0aa09718d8310ccb6ba304d8cc5595d8c5299
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58325499"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993885"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,6 +44,10 @@ ms.locfileid: "58325499"
 |max_session_percent|**decimal (5,2)**|Máximo de sessões simultâneas em percentual do limite da camada de serviço do banco de dados.|  
 |dtu_limit|**int**|Banco de dados max DTU configuração atual para este banco de dados durante esse intervalo. Para bancos de dados usando o modelo baseado em vCore, esta coluna é NULL.|
 |cpu_limit|**decimal (5,2)**|Número de vCores para esse banco de dados durante esse intervalo. Para bancos de dados usando o modelo baseado em DTU, esta coluna é NULL.|
+|avg_instance_cpu_percent|**decimal (5,2)**|Banco de dados média da CPU em porcentagem.|
+|avg_instance_memory_percent|**decimal (5,2)**|Média de utilização de memória do banco de dados em percentual.|
+|avg_login_rate_percent|**decimal (5,2)**|Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.|
+|replica_role|**int**|Representa a função da réplica com 0 como primário, 1 como secundário e 2 como encaminhador (primário do secundário geográfico). Você verá "1" quando conectado com a intenção somente leitura para todos os secundários legíveis. Se estiver se conectando a um secundário geográfico sem especificar intenção somente leitura, você deve ver "2" (conectando-se para o encaminhador).|
 |||
   
 > [!TIP]  

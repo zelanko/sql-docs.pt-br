@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2452651fde63b08483e238d900ec82f3a93c146e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: ed1516c14a8a49269ea0768a2ddafb9e255c24a9
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65945158"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994150"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Tutorial: Executar um exemplo de notebook em um cluster de big data do SQL Server
 
@@ -52,7 +52,7 @@ Use as instruções a seguir para carregar o arquivo do bloco de anotações de 
 
 As etapas a seguir mostram como abrir o arquivo do bloco de anotações no estúdio de dados do Azure:
 
-1. No estúdio de dados do Azure, conecte-se ao gateway de HDFS/Spark do seu cluster de big data. Para obter mais informações, consulte [conectar-se ao gateway de HDFS/Spark](connect-to-big-data-cluster.md#hdfs).
+1. No estúdio de dados do Azure, conecte-se à instância mestre do seu cluster de big data. Para obter mais informações, consulte [conectar-se a um cluster de big data](connect-to-big-data-cluster.md).
 
 1. Clique duas vezes na conexão de gateway de HDFS/Spark na **servidores** janela. Em seguida, selecione **abrir Notebook**.
 

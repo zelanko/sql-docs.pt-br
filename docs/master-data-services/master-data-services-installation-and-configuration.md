@@ -1,7 +1,7 @@
 ---
 title: Instalação e configuração do Master Data Services | Microsoft Docs
 ms.custom: ''
-ms.date: 07/28/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f177e333353cb8fb48b86a320c8e77e37a8991ae
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 2d1cd12ff92b45c78eaf3dbe17a08c4e83d0f3b1
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488221"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994113"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalação e configuração do Master Data Services
 
@@ -128,8 +128,19 @@ Se você estiver interessado em fazer alterações na instalação do [!INCLUDE[
   
 2.  Clique em **Criar Banco de Dados**e em **Avançar** no **Assistente para Criar Banco de Dados**.  
   
-3.  Na página **Servidor de Banco de Dados** , selecione o **Tipo de autenticação** e clique em **Testar Conexão** para confirmar se você pode se conectar ao banco de dados usando as credenciais para o tipo de autenticação selecionado. Clique em **Avançar**.
-  
+3.  Sobre o **servidor de banco de dados** , especifique a instância do SQL Server. 
+
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] Adiciona suporte para a instância gerenciada do SQL Server. Defina o valor de **instância do SQL Server** instância gerenciada para o host de um banco de dados do SQL Azure. Por exemplo, `xxxxxx.xxxxxx.database.windows.net`.
+
+4. Selecione o **tipo de autenticação** e, em seguida, clique em **Conexão de teste** para confirmar que você pode se conectar ao banco de dados usando as credenciais para o tipo de autenticação que você selecionou. Clique em **Avançar**.
+
+    >Para [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], para se conectar ao banco de dados SQL de instância gerenciada, use um dos seguintes tipos de autenticação:
+    >
+    >- Autenticação integrada do Active Directory do Azure: **Usuário atual – integrada ao Active Directory**
+    >- SQL Server Authentication: **Conta do SQL Server**.
+    >
+    >Na instância gerenciada do banco de dados SQL, o usuário deve ser um membro do `sysadmin` função de servidor fixa.
+
     > [!NOTE]  
     >  Quando você seleciona **Usuário Atual – Segurança Integrada** como o tipo de autenticação, a caixa **Nome de usuário** é somente leitura e exibe o nome da conta de usuário do Windows que está conectado ao computador. Se você estiver executando o [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] em uma VM (máquina Virtual) do Azure, a caixa **Nome de usuário** exibe o nome da VM e o nome de usuário para a conta de administrador local na VM. 
 

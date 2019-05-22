@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3084d9ecc80dcd8f283a52ca5559783626a7ca4e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 874648daaccdb3d16f54d7b976bac1ef2543bafe
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775592"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994072"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>O que é o controlador em um cluster de big data do SQL Server?
 
@@ -38,11 +38,7 @@ O serviço do controlador fornece as seguintes funcionalidades principais:
 
 ## <a name="deploying-the-controller-service"></a>Implantando o serviço do controlador
 
-O controlador é implantado e hospedado no mesmo namespace do Kubernetes em que o cliente deseja criar um cluster de big data. Esse serviço é instalado por um administrador do Kubernetes durante a inicialização do cluster, usando o utilitário de linha de comando mssqlctl:
-
-```bash
-mssqlctl cluster create --name <name of your cluster>
-```
+O controlador é implantado e hospedado no mesmo namespace do Kubernetes em que o cliente deseja criar um cluster de big data. Esse serviço é instalado por um administrador de Kubernetes durante cluster bootstrap, usando o **mssqlctl** utilitário de linha de comando. Para obter mais informações, consulte [Introdução aos clusters de grandes dados do SQL Server](deploy-get-started.md).
 
 O fluxo de trabalho buildout definirá o layout na parte superior do Kubernetes um cluster de big data totalmente funcional do SQL Server que inclui todos os componentes descritos os [visão geral](big-data-cluster-overview.md) artigo. O fluxo de trabalho de inicialização primeiro cria o serviço do controlador, e quando isso for implantado, o serviço do controlador coordena a instalação e configuração do rest da parte dos serviços de pools de armazenamento, computação, dados e mestre.
 

@@ -3,17 +3,17 @@ title: Instalar novos pacotes de idioma R - serviços do SQL Server Machine Lear
 description: Adicionar novos pacotes de R para SQL Server 2016 R Services ou serviços SQL Server 2017 Machine Learning (no banco de dados)
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f443113222181f0909bd72048e3c3f5c739df4ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b8c935400188ae6905a9915907fb097d02100ad2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62506923"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994204"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Instalar novos pacotes de R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ Este artigo descreve como instalar novos pacotes de R em uma instância do SQL S
 
 A biblioteca de pacotes de R está fisicamente localizada na pasta arquivos de programa da instância do SQL Server em uma pasta segura com acesso restrito. Gravação para este local requer permissões de administrador.
 
-Não-administradores podem instalar pacotes, mas isso exige configuração addititional e capacidade não está disponível em instalações inicias. Há duas abordagens para instalações de pacote de não administrador: RevoScaleR usando a versão 9.0.1 e posterior, ou usando CREATE EXTERNAL LIBRARY (apenas no SQL Server 2017). No SQL Server 2017, **dbo_owner** ou outro usuário com permissão CREATE EXTERNAL LIBRARY pode instalar pacotes R no banco de dados atual.
+Não-administradores podem instalar pacotes, mas isso exige configuração adicional e a capacidade não está disponível em instalações inicias. Há duas abordagens para instalações de pacote de não administrador: RevoScaleR usando a versão 9.0.1 e posterior, ou usando CREATE EXTERNAL LIBRARY (apenas no SQL Server 2017). No SQL Server 2017, **dbo_owner** ou outro usuário com permissão CREATE EXTERNAL LIBRARY pode instalar pacotes R no banco de dados atual.
 
 Os desenvolvedores do R estão acostumados a criação de bibliotecas de usuário para os pacotes que precisam se localizado centralmente as bibliotecas estão fora dos limites. Essa prática é problemática para código de R executando em uma instância do mecanismo de banco de dados do SQL Server. SQL Server não pode carregar pacotes de bibliotecas externas, mesmo se essa biblioteca está no mesmo computador. Somente os pacotes da biblioteca de instância podem ser usados no código R em execução no SQL Server.
 
@@ -41,7 +41,6 @@ Acesso de sistema de arquivos normalmente é restrito no servidor e, mesmo que v
 Antes de instalar novos pacotes, considere se os recursos habilitados por um determinado pacote são adequados em um ambiente do SQL Server. Em um ambiente do SQL Server protegido, você talvez queira evitar o seguinte:
 
 + Pacotes que exigem acesso à rede
-+ Pacotes que requerem Java ou outras estruturas não geralmente usadas em um ambiente do SQL Server
 + Pacotes que exigem acesso de sistema de arquivos com privilégios elevados
 + Pacote é usado para desenvolvimento da web ou outras tarefas que não são beneficiadas pela execução dentro do SQL Server
 
@@ -51,7 +50,7 @@ Em geral, os servidores que hospedam os bancos de dados de produção bloqueiam 
 
 Identificar todas as dependências fica complicado. Para R, é recomendável que você use [miniCRAN para criar um repositório local](create-a-local-package-repository-using-minicran.md) e, em seguida, transferir o repositório completamente definido para uma instância isolada do SQL Server.
 
-Também é possível executar essas etapas manualmente:
+Como alternativa, você pode executar essas etapas manualmente:
 
 1. Identificar todas as dependências de pacote. 
 2. Verifique se todos os pacotes necessários já estão instalados no servidor. Se o pacote estiver instalado, verifique se a versão correta.

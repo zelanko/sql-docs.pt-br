@@ -5,17 +5,17 @@ description: Este tutorial demonstra como ingestão de dados para o pool de dado
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: eb0bd2639dc2e2738215c51a18d87a3eb771c826
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 8500bbb9946289eca10d126e1d06e1510ef738a8
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583429"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994157"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Ingestão de dados para um pool de dados do SQL Server com o Transact-SQL
 
@@ -63,7 +63,7 @@ As seguintes etapas criam uma tabela externa no pool de dados chamado **web_clic
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
    ```
 
 1. Criar uma tabela externa chamada **web_clickstream_clicks_data_pool** no pool de dados.
@@ -79,7 +79,7 @@ As seguintes etapas criam uma tabela externa no pool de dados chamado **web_clic
       );
    ```
   
-1. No CTP 2.4 a criação do pool de dados é assíncrona, mas não há nenhuma maneira de determinar quando ela for concluída ainda. Aguarde dois minutos verificar se que o pool de dados é criado antes de continuar.
+1. No CTP 3.0, a criação do pool de dados é assíncrona, mas não há nenhuma maneira de determinar quando ela for concluída ainda. Aguarde dois minutos verificar se que o pool de dados é criado antes de continuar.
 
 ## <a name="load-data"></a>Carregar dados
 
@@ -88,32 +88,13 @@ As etapas a seguir ingestão de dados de sequência de cliques de web de exemplo
 1. Defina variáveis para a consulta que você deseja usar para inserir dados no pool de dados. Para o CTP 2.3 ou anterior, o **modelo... sp_data_pool_table_insert_data** procedimento armazenado é necessária. Para o CTP 2.4 e versões posteriores, você pode usar um `INSERT INTO` instrução para inserir os resultados da consulta no pool de dados (o **web_clickstream_clicks_data_pool** tabela externa).
 
    ```sql
-   IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-   BEGIN
-      INSERT INTO web_clickstream_clicks_data_pool
-      SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
-        FROM sales.dbo.web_clickstreams_hdfs_parquet
-      INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
-                              AND wcs_user_sk IS NOT NULL)
-      GROUP BY wcs_user_sk, i_category_id
-      HAVING COUNT_BIG(*) > 100;
-   END
-
-   ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-   BEGIN
-      DECLARE @db_name SYSNAME = 'Sales'
-      DECLARE @schema_name SYSNAME = 'dbo'
-      DECLARE @table_name SYSNAME = 'web_clickstream_clicks_data_pool'
-      DECLARE @query NVARCHAR(MAX) = '
-      SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
-      FROM sales.dbo.web_clickstreams
-      INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
-         AND wcs_user_sk IS NOT NULL)
-      GROUP BY wcs_user_sk, i_category_id
-      HAVING COUNT_BIG(*) > 100;'
-
-      EXEC model..sp_data_pool_table_insert_data @db_name, @schema_name, @table_name, @query
-   END
+   INSERT INTO web_clickstream_clicks_data_pool
+   SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
+     FROM sales.dbo.web_clickstreams_hdfs_parquet
+   INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
+                           AND wcs_user_sk IS NOT NULL)
+   GROUP BY wcs_user_sk, i_category_id
+   HAVING COUNT_BIG(*) > 100;
    ```
 
 1. Inspecione os dados inseridos com duas consultas SELECT.

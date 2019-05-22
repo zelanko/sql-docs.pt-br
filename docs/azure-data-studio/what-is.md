@@ -11,12 +11,12 @@ manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
-ms.openlocfilehash: 00c8a5aeba30d16e2ae2f5c98290797765c9a357
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: e93c417f286246f6db25d0463cec97eba8541c1c
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620183"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993845"
 ---
 # <a name="what-is-azure-data-studio"></a>O que é o Studio de dados do Azure?
 
@@ -165,3 +165,7 @@ Para saber mais sobre a criação de extensões, consulte [criação de extensã
 - [Baixe e instale [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 - [Conectar e consultar o SQL Server](quickstart-sql-server.md)
 - [Conectar e consultar o banco de dados SQL](quickstart-sql-database.md)
+
+[!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

@@ -5,16 +5,16 @@ description: Artigo de referência para comandos de depuração de cluster mssql
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5099a9ac611602e0c4c8d7f0103421e34b7fa8a2
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: c309817841bb0b3aeaacc613c327f9d446ccc8c2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774863"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993656"
 ---
 # <a name="mssqlctl-cluster-debug"></a>Depuração de cluster do mssqlctl
 
@@ -28,7 +28,7 @@ O artigo a seguir fornece referência para o **depuração de cluster** comandos
 [logs de cópia de depuração de cluster de mssqlctl](#mssqlctl-cluster-debug-copy-logs) | Copie os logs.
 [mssqlctl de despejo de depuração de cluster](#mssqlctl-cluster-debug-dump) | Despejo de registro em log do gatilho.
 ## <a name="mssqlctl-cluster-debug-copy-logs"></a>logs de cópia de depuração de cluster de mssqlctl
-Copie os logs de depuração do cluster.
+Copiar os logs de depuração do cluster - config kube é necessária no seu sistema.
 ```bash
 mssqlctl cluster debug copy-logs --namespace -n 
                                  [--container -c]  
@@ -60,7 +60,7 @@ Cadeia de caracteres de consulta JMESPath. Ver [ http://jmespath.org/ ](http://j
 #### `--verbose`
 Aumente o nível de detalhes do registro em log. Use--debug para logs de depuração completos.
 ## <a name="mssqlctl-cluster-debug-dump"></a>mssqlctl de despejo de depuração de cluster
-Disparar um despejo de registro em log e copiá-lo do contêiner.
+Disparar um despejo de registro em log e copiá-lo do contêiner - config kube é necessária no seu sistema.
 ```bash
 mssqlctl cluster debug dump --namespace -n 
                             --container -c  

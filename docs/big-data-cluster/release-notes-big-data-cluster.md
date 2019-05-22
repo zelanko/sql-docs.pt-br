@@ -5,17 +5,17 @@ description: Este artigo descreve as últimas atualizações e problemas conheci
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7bdd39fc4b66c0485b453a6541e1f4c22abb5242
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: ca3448efc180a82363023106baf33f973e666fb6
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775075"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993354"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notas de versão para clusters de grandes dados no SQL Server
 
@@ -25,6 +25,104 @@ Este artigo lista as atualizações e saiba que esses problemas para as versões
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
+## <a id="ctp30"></a> CTP 3.0 (maio)
+
+As seções a seguir descrevem os novos recursos e problemas conhecidos para clusters de grandes dados no SQL Server de 2019 CTP 3.0.
+
+### <a name="whats-new"></a>What's New
+
+| Novo recurso ou atualização | Detalhes |
+|:---|:---|
+| **mssqlctl** atualizações | Vários **mssqlctl** [atualizações de comando e parâmetro](../big-data-cluster/reference-mssqlctl.md). Isso inclui uma atualização para o **mssqlctl logon** comando, que agora tem como alvo o nome de usuário do controlador e o ponto de extremidade. |
+| Aprimoramentos no armazenamento | Suporte para diferentes configurações de armazenamento para logs e dados. Além disso, o número de declarações de volume persistente para um cluster de big data foi reduzido. |
+| Várias instâncias de pool de computação | Suporte para várias instâncias do pool de computação. |
+| Recursos e o comportamento do novo pool | O pool de computação agora é usado por padrão para operações de pool de dados e o pool de armazenamento em um **ROUND_ROBIN** apenas para distribuição. O pool de dados agora pode mais usar um novo novos **REPLICADO** tipo de distribuição, o que significa que os mesmos dados estão presentes em todas as instâncias de pool de dados. |
+
+### <a name="known-issues"></a>Problemas conhecidos
+
+As seções a seguir descrevem os problemas conhecidos e as limitações desta versão.
+
+#### <a name="hdfs"></a>HDFS
+
+- O estúdio de dados do Azure retornará um erro ao tentar criar uma nova pasta no HDFS. Para habilitar essa funcionalidade, instale o build insiders do Studio de dados do Azure:
+  
+   - [Instalador de usuário do Windows - **build Insiders**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-user/insider)
+   - [Instalador de sistema do Windows - **build Insiders**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64/insider)
+   - [Windows ZIP - **build Insiders**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-archive/insider)
+   - [macOS ZIP - **build Insiders**](https://azuredatastudio-update.azurewebsites.net/latest/darwin/insider)
+   - [Linux TAR. GZ - **build Insiders**](https://azuredatastudio-update.azurewebsites.net/latest/linux-x64/insider)
+
+- Se o botão direito do mouse em um arquivo no HDFS para visualizá-lo, você poderá ver o seguinte erro:
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   Atualmente não há nenhuma maneira de visualizar arquivos maiores do que 30 MB no estúdio de dados do Azure.
+
+- Não há suporte para alterações de configuração para o HDFS que envolvem alterações para o hdfs-site. XML.
+
+#### <a name="deployment"></a>Implantação
+
+- Não há suporte para os procedimentos de implantação anterior para clusters grandes de dados habilitadas para GPU no CTP 3.0. Um procedimento de alternativas de implantação está sendo investigado. Por enquanto, o artigo "Implantar um big data com suporte GPU do cluster e executar o TensorFlow" tenha sido temporariamente não publicado para evitar confusão.
+
+- Não há suporte para atualizar um cluster de dados de grandes dados de uma versão anterior.
+
+   > [!IMPORTANT]
+   > Você deve fazer backup dos dados e, em seguida, exclua seu cluster de big data existente (usando a versão anterior do **mssqlctl**) antes de implantar a versão mais recente. Para obter mais informações, consulte [atualizar para uma nova versão](deployment-upgrade.md).
+
+- Depois de implantar no AKS, você poderá ver os seguintes dois eventos de aviso da implantação. Os dois eventos são problemas conhecidos, mas eles não evitam que você implantar com êxito o cluster de big data no AKS.
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- Se uma implantação de cluster de big data falhar, o namespace associado não é removido. Isso pode resultar em um namespace órfão no cluster. Uma solução alternativa é excluir o namespace manualmente antes de implantar um cluster com o mesmo nome.
+
+#### <a name="external-tables"></a>Tabelas externas
+
+- Implantação de cluster de big data não cria mais o **SqlDataPool** e **SqlStoragePool** fontes de dados externas. Você pode criar essas fontes de dados manualmente para dar suporte à virtualização de dados para o pool de dados e o pool de armazenamento.
+
+   > [!NOTE]
+   > O URI para a criação destas fontes de dados externas é diferente entre CTPs. Consulte os comandos Transact-SQL abaixo para ver como criá-los 
+
+   ```sql
+   -- Create default data sources for SQL Big Data Cluster
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+ 
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+   ```
+
+- É possível criar uma tabela externa do pool de dados para uma tabela que tem sem suporte a tipos de coluna. Se você consultar a tabela externa, você receberá uma mensagem semelhante à seguinte:
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- Se você consultar uma tabela externa do pool de armazenamento, você poderá receber um erro se o arquivo subjacente está sendo copiado no HDFS ao mesmo tempo.
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- Se você estiver criando uma tabela externa para o Oracle que usam tipos de dados de caractere, o Assistente de virtualização do Azure Data Studio interpreta essas colunas como VARCHAR na definição da tabela externa. Isso causará uma falha na DDL da tabela externa. Modifique o esquema do Oracle para usar o tipo de NVARCHAR2, ou criar instruções de tabela externa manualmente e especificar NVARCHAR em vez de usar o assistente.
+
+#### <a name="application-deployment"></a>Implantação de aplicativo
+
+- Ao chamar um aplicativo de R, Python ou MLeap da API RESTful, a chamada expirará em 5 minutos.
+
+#### <a name="spark-and-notebooks"></a>Spark e notebooks
+
+- Endereços IP de POD podem mudar no ambiente do Kubernetes como reinicializações de PODs. No cenário em que o pod de mestre é reiniciado, a sessão do Spark pode falhar com `NoRoteToHostException`. Isso é causado por caches JVM que não são atualizados com o novo IP endereços.
+
+- Se você tiver o Jupyter já instalado e um Python separado no Windows, os blocos de anotações do Spark podem falhar. Para contornar esse problema, atualize o Jupyter para a versão mais recente.
+
+- Em um bloco de anotações, se você clicar na **adicionar texto** de comando, a célula de texto for adicionada no modo de visualização, em vez de modo de edição. Você pode clicar no ícone de visualização para alternar para modo de edição e editar a célula.
+
+#### <a name="security"></a>Segurança
+
+- O SA_PASSWORD faz parte do ambiente e detectáveis (por exemplo, em um arquivo de despejo de cabo). Você deve redefinir o SA_PASSWORD na instância mestre após a implantação. Isso não é um bug, mas uma etapa de segurança. Para obter mais informações sobre como alterar o SA_PASSWORD em um contêiner do Linux, consulte [alterar a senha SA](../linux/quickstart-install-connect-docker.md#sapassword).
+
+- Logs AKS podem conter a senha SA para implantações de cluster de big data.
+
 ## <a id="ctp25"></a> CTP 2.5 (abril)
 
 As seções a seguir descrevem os novos recursos e problemas conhecidos para clusters de grandes dados no SQL Server de 2019 CTP 2.5.
@@ -33,10 +131,10 @@ As seções a seguir descrevem os novos recursos e problemas conhecidos para clu
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---|
-| Perfis de implantação | Use o padrão e personalizadas [arquivos JSON de configuração de implantação](deployment-guidance.md#configfile) para implantações de cluster de big data, em vez de variáveis de ambiente. |
-| Implantações solicitadas | `mssqlctl cluster create` Agora solicitará qualquer configuração necessária para implantações de padrão. |
+| Perfis de implantação | Use os [arquivos JSON de configuração de implantação](deployment-guidance.md#configfile) para padrão e personalizados para implantações de cluster de Big Data, em vez de variáveis de ambiente. |
+| Implantações solicitadas | O `mssqlctl cluster create` agora solicitará qualquer configuração necessária para implantações padrão. |
 | Alterações de nome de ponto de extremidade de serviço e de pod | Os seguintes pontos de extremidade externos foram alteradas nomes:<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
-| **mssqlctl** melhorias | Use **mssqlctl** à [listar pontos de extremidade externos](deployment-guidance.md#endpoints) e verifique a versão do **mssqlctl** com o `--version` parâmetro. |
+| Melhorias a **mssqlctl** | Use **mssqlctl** para [listar pontos de extremidade externos](deployment-guidance.md#endpoints) e verifique a versão do **mssqlctl** com o parâmetro `--version`. |
 | Instalação offline | Diretrizes para implantações de cluster de grandes dados off-line. |
 | Melhorias em camadas do HDFS | Suportam a disposição em camadas S3, cache de montagem e OAuth para Gen2 ADLS. |
 | Novo `mssql` conector do Spark SQL Server | |
@@ -60,24 +158,19 @@ As seções a seguir descrevem os problemas conhecidos e as limitações desta v
 
 - Se uma implantação de cluster de big data falhar, o namespace associado não é removido. Isso pode resultar em um namespace órfão no cluster. Uma solução alternativa é excluir o namespace manualmente antes de implantar um cluster com o mesmo nome.
 
-
-
-#### <a id="externaltablesctp24"></a> Tabelas externas
+#### <a name="external-tables"></a>Tabelas externas
 
 - Implantação de cluster de big data não cria mais o **SqlDataPool** e **SqlStoragePool** fontes de dados externas. Você pode criar essas fontes de dados manualmente para dar suporte à virtualização de dados para o pool de dados e o pool de armazenamento.
 
    ```sql
-   -- Create the SqlDataPool data source:
+   -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-     CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-
-   -- Create the SqlStoragePool data source:
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+ 
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-   BEGIN
-     CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
-   END
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
    ```
 
 - É possível criar uma tabela externa do pool de dados para uma tabela que tem sem suporte a tipos de coluna. Se você consultar a tabela externa, você receberá uma mensagem semelhante à seguinte:
@@ -126,11 +219,11 @@ As seções a seguir descrevem os novos recursos e problemas conhecidos para clu
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---|
-| Diretrizes de suporte de GPU para execução de aprendizado profundo com o TensorFlow no Spark. | [Implantar um cluster de big data com suporte GPU e executar o TensorFlow](spark-gpu-tensorflow.md). |
-| **SqlDataPool** e **SqlStoragePool** fontes de dados não são mais criadas por padrão. | Criá-los manualmente, se necessário. Consulte a [problemas conhecidos](#externaltablesctp24). |
-| Suporte a `INSERT INTO SELECT` para o pool de dados. | Por exemplo, consulte [Tutorial: Ingestão de dados para um pool de dados do SQL Server com o Transact-SQL](tutorial-data-pool-ingest-sql.md). |
-| `FORCE SCALEOUTEXECUTION` e `DISABLE SCALEOUTEXECUTION` opção. | Força ou desabilita o uso da computação do pool para consultas em tabelas externas. Por exemplo, `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
-| Recomendações atualizadas de implantação do AKS. | Ao avaliar a clusters de big data no AKS, agora recomendamos usar um único nó de tamanho **Standard_L8s**. |
+| Diretrizes de suporte de GPU para execução de aprendizado profundo com o TensorFlow no Spark. | [Implantar um cluster de Big Data com suporte GPU e executar o TensorFlow](spark-gpu-tensorflow.md). |
+| As fontes de dados **SqlDataPool** e **SqlStoragePool** não são mais criadas por padrão. | Crie-os manualmente, se necessário. Veja os [problemas conhecidos](#externaltablesctp24). |
+| Suporte a `INSERT INTO SELECT` para o pool de dados. | Para um exemplo, veja [Tutorial: Ingerir dados em um pool de dados do SQL Server com Transact-SQL](tutorial-data-pool-ingest-sql.md). |
+| Opções `FORCE SCALEOUTEXECUTION` e `DISABLE SCALEOUTEXECUTION`. | Força ou desabilita o uso da computação do pool para consultas em tabelas externas. Por exemplo, `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
+| Recomendações atualizadas de implantação do AKS. | Ao avaliar a clusters de Big Data no AKS, agora recomendamos usar um único nó de tamanho **Standard_L8s**. |
 | Atualização de tempo de execução do Spark para o Spark 2.4. | |
 
 ### <a name="known-issues"></a>Problemas conhecidos
@@ -201,21 +294,14 @@ Um novo cliente de Python Kubernetes (versão 9.0.0) alterado os namespaces de e
 - Implantação de cluster de big data não cria mais o **SqlDataPool** e **SqlStoragePool** fontes de dados externas. Você pode criar essas fontes de dados manualmente para dar suporte à virtualização de dados para o pool de dados e o pool de armazenamento.
 
    ```sql
-   -- Create the SqlDataPool data source:
+   -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-     CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-
-   -- Create the SqlStoragePool data source:
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+ 
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-   BEGIN
-     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
        CREATE EXTERNAL DATA SOURCE SqlStoragePool
        WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-   END
    ```
 
 - É possível criar uma tabela externa do pool de dados para uma tabela que tem sem suporte a tipos de coluna. Se você consultar a tabela externa, você receberá uma mensagem semelhante à seguinte:
@@ -264,17 +350,17 @@ As seções a seguir descrevem os novos recursos e problemas conhecidos para clu
 
 | Novo recurso ou atualização | Detalhes |
 | :---------- | :------ |
-| Envie trabalhos do Spark em clusters de big data no IntelliJ. | [Enviar trabalhos do Spark em clusters de grandes dados do SQL Server no IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
-| CLI comuns para gerenciamento de cluster e de implantação do aplicativo. | [Como implantar um aplicativo no cluster de big data do SQL Server 2019 (visualização)](big-data-cluster-create-apps.md) |
-| Extensão de código do VS para implantar aplicativos em um cluster de big data. | [Como usar o VS Code para implantar aplicativos em clusters de grandes dados do SQL Server](app-deployment-extension.md) |
-| Altera para o **mssqlctl** uso do comando de ferramentas. | Para obter mais detalhes, consulte o [problemas conhecidos de mssqlctl](#mssqlctlctp23). |
-| Usar Sparklyr no cluster de big data | [Usar Sparklyr no cluster de big data do SQL Server de 2019](sparklyr-from-RStudio.md) |
-| Montar armazenamento compatível com HDFS externo no cluster de Big Data com a disposição em **camadas do HDFS**. | Ver [HDFS camadas](hdfs-tiering.md). |
-| Nova experiência de conexão unificado para a instância mestre do SQL Server e o Gateway HDFS/Spark. | Ver [instância mestre do SQL Server e o Gateway HDFS/Spark](connect-to-big-data-cluster.md). |
-| Excluir um cluster com **mssqlctl cluster delete** agora exclui somente os objetos no namespace que faziam parte do cluster de big data. | O namespace não é excluído. No entanto, em versões anteriores, esse comando exclui todo o namespace. |
-| _Segurança_ nomes de ponto de extremidade foram alterados e consolidados. | **serviço de segurança de lb** e **serviço de segurança de nodeport** foram consolidados no **segurança de ponto de extremidade** ponto de extremidade. |
-| _Proxy_ nomes de ponto de extremidade foram alterados e consolidados. | **serviço de proxy de lb** e **serviço de proxy de nodeport** foram consolidados no **ponto de extremidade de serviço de proxy** ponto de extremidade. |
-| _Controlador_ nomes de ponto de extremidade foram alterados e consolidados. | **serviço mssql-controlador lb** e **serviço mssql-controlador nodeport** foram consolidados no **controlador do ponto de extremidade** ponto de extremidade. |
+| Enviar trabalhos do Spark em clusters de Big Data no IntelliJ. | [Enviar trabalhos do Spark em clusters de Big Data do SQL Server no IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
+| CLI comum para gerenciamento de cluster e de implantação do aplicativo. | [Como implantar um aplicativo no cluster de Big Data do SQL Server 2019 (versão prévia)](big-data-cluster-create-apps.md) |
+| Extensão do VS Code para implantar aplicativos em um cluster de Big Data. | [Como usar o VS Code para implantar aplicativos em clusters de Big Data do SQL Server](app-deployment-extension.md) |
+| Muda para o uso de comando de ferramenta **mssqlctl**. | Para obter mais detalhes, veja o [problemas conhecidos de mssqlctl](#mssqlctlctp23). |
+| Usar Sparklyr no cluster de big data | [Usar o Sparklyr em clusters de Big Data do SQL Server 2019](sparklyr-from-RStudio.md) |
+| Montar armazenamento compatível com HDFS externo no cluster de Big Data com a disposição em **camadas do HDFS**. | Veja [Camadas do HDFS](hdfs-tiering.md). |
+| Nova experiência de conexão unificada para a instância principal do SQL Server e o Gateway do HDFS/Spark. | Veja [Instância principal do SQL Server e o Gateway do HDFS/Spark](connect-to-big-data-cluster.md). |
+| Excluir um cluster com **mssqlctl cluster delete** agora exclui somente os objetos no namespace que faziam parte do cluster de big data. | O namespace não é excluído. No entanto, em versões anteriores, esse comando excluía todo o namespace. |
+| Nomes de ponto de extremidade de _segurança_ foram alterados e consolidados. | **service-security-lb** e **service-security-nodeport** foram consolidados no ponto de extremidade **endpoint-security**. |
+| Nomes de ponto de extremidade de _proxy_ foram alterados e consolidados. | **service-proxy-lb** e **service-proxy-nodeport** foram consolidados no ponto de extremidade **endpoint-service-proxy**. |
+| Nomes de ponto de extremidade de _controlador_ foram alterados e consolidados. | **service-mssql-controller-lb** e **service-mssql-controller-nodeport** foram consolidados no ponto de extremidade **endpoint-controller**. |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemas conhecidos

@@ -1,51 +1,37 @@
 ---
-title: Documentação de extensões de programação e aprendizado de máquina do R e Python – Machine Learning do SQL Server
+title: Documentação - serviços de aprendizado de máquina do SQL Server de aprendizado de máquina de R e Python
 description: R e Python no SQL Server, com a modelagem de ciência de dados interna e algoritmos de aprendizado de máquina para análise de dados corporativos em escala.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/10/2019
+ms.date: 05/22/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 20acdf2789158bf067319930a5be65770eae67f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e93d9ad5fd6415b6d8c1b6208857e81d60de2bd0
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63126828"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994125"
 ---
-# <a name="sql-server-machine-learning"></a>Machine Learning do SQL Server
+# <a name="sql-server-machine-learning-services"></a>Serviços de SQL Server Machine Learning
+
+## <a name="sql-server-machine-learning-services-r-and-python-documentation"></a>Documentação dos serviços (R e Python) de aprendizado de máquina do SQL Server
+
+Saiba como usar bibliotecas externas do R e Python e linguagens em dados relacionais residentes com nossos guias de início rápido, tutoriais e artigos de instruções. As bibliotecas de R e Python no [Machine Learning do SQL Server](what-is-sql-server-machine-learning.md) incluem distribuições de base, modelos de ciência de dados, algoritmos de aprendizado de máquina e funções para conduzir a análise de alto desempenho em escala, sem precisar transferir dados pela rede.
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-
-## <a name="sql-server-machine-learning-and-programming-extensions-documentation"></a>Documentação de extensões de programação e Machine Learning do SQL Server
-
-Saiba como usar bibliotecas externas do R e Python e linguagens em dados relacionais residentes com nossos guias de início rápido, tutoriais e artigos de instruções. As bibliotecas de R e Python no [Machine Learning do SQL Server](what-is-sql-server-machine-learning.md) incluem distribuições de base, modelos de ciência de dados, algoritmos de aprendizado de máquina e funções para conduzir a análise de alto desempenho em escala, sem precisar transferir dados pela rede.
-
-No SQL Server 2019, a execução de código Java usa a mesma estrutura de extensibilidade como R e Python, mas não inclui bibliotecas de função de aprendizado de máquina e de ciência de dados. Para obter mais informações sobre novos recursos, veja [Novidades nos serviços do Computador SQL Server](what-s-new-in-sql-server-machine-learning-services.md).
-
-|   |   |
-|---|:--|
-| ![Logotipo do R](media/index/logo_r.png) | R de software livre, estendido com [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) e algoritmos da IA da Microsoft no [MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package). Essas bibliotecas fornecem modelos de previsão, análise estatística, visualização e manipulação de dados em escala.<br/>A integração do R começa no [SQL Server 2016](install/sql-r-services-windows-install.md) e também está no [SQL Server 2017](install/sql-machine-learning-services-windows-install.md). |
-| ![Logotipo do Python](media/index/logo_python.png) | Os desenvolvedores de Python podem usar as bibliotecas [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) e [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) da Microsoft para análise preditiva e aprendizado de máquina em escala. As bibliotecas compatíveis com Anaconda e Python 3.5 são a distribuição de linha de base.<br/>A integração do Python começa no [SQL Server 2017](install/sql-machine-learning-services-windows-install.md). |
-| ![Logotipo do Java](media/index/logo_java.png) | Os desenvolvedores de Java podem usar a [extensão da linguagem Java](java/extension-java.md) para encapsular o código em procedimentos armazenados ou em um formato binário acessível por meio do Transact-SQL.<br/>A integração do Java começa no [SQL Server 2019 – versão prévia](install/sql-machine-learning-services-ver15.md). |
-| &nbsp; | &nbsp; |
+> [!NOTE]
+> Para a documentação do Java, consulte o [documentação de extensões de linguagem do SQL Server](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 ::: moniker-end
-
-::: moniker range="=sql-server-2016||=sql-server-2017"
-
-## <a name="sql-server-machine-learning-r-and-python-documentation"></a>Documentação de Python e R do Machine Learning do SQL Server
-
-Saiba como usar bibliotecas externas do R e Python e linguagens em dados relacionais residentes com nossos guias de início rápido, tutoriais e artigos de instruções. As bibliotecas de R e Python no [Machine Learning do SQL Server](what-is-sql-server-machine-learning.md) incluem distribuições de base, modelos de ciência de dados, algoritmos de aprendizado de máquina e funções para conduzir a análise de alto desempenho em escala, sem precisar transferir dados pela rede.
 
 |   |   |
 |---|:--|
 | ![Logotipo do R](media/index/logo_r.png) | R de software livre, estendido com [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) e algoritmos da IA da Microsoft no [MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package). Essas bibliotecas fornecem modelos de previsão, análise estatística, visualização e manipulação de dados em escala.<br/>A integração do R começa no [SQL Server 2016](install/sql-r-services-windows-install.md) e também está no [SQL Server 2017](install/sql-machine-learning-services-windows-install.md). |
 | ![Logotipo do Python](media/index/logo_python.png) | Os desenvolvedores de Python podem usar as bibliotecas [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) e [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) da Microsoft para análise preditiva e aprendizado de máquina em escala. As bibliotecas compatíveis com Anaconda e Python 3.5 são a distribuição de linha de base.<br/>A integração do Python começa no [SQL Server 2017](install/sql-machine-learning-services-windows-install.md). |
 | &nbsp; | &nbsp; |
-::: moniker-end
 
 ## <a name="5-minute-quickstarts"></a>Guias de início rápido de cinco minutos
 

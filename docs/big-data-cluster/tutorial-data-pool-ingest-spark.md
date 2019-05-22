@@ -5,17 +5,17 @@ description: Este tutorial demonstra como ingestão de dados para o pool de dado
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9d49cb6af93880fe1cec391e4464b813777f7109
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: dcdbee449f15e070920660d5470135f4f8ae93a0
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582749"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994163"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Ingestão de dados para um pool de dados do SQL Server com trabalhos do Spark
 
@@ -56,7 +56,7 @@ As seguintes etapas criam uma tabela externa no pool de dados chamado **web_clic
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
    ```
 
 1. Criar uma tabela externa chamada **web_clickstreams_spark_results** no pool de dados.
@@ -74,13 +74,13 @@ As seguintes etapas criam uma tabela externa no pool de dados chamado **web_clic
       );
    ```
   
-1. No CTP 2.4 a criação do pool de dados é assíncrona, mas não há nenhuma maneira de determinar quando ela for concluída ainda. Aguarde dois minutos verificar se que o pool de dados é criado antes de continuar.
+1. No CTP 3.0, a criação do pool de dados é assíncrona, mas não há nenhuma maneira de determinar quando ela for concluída ainda. Aguarde dois minutos verificar se que o pool de dados é criado antes de continuar.
 
 ## <a name="start-a-spark-streaming-job"></a>Iniciar um trabalho de streaming do Spark
 
 A próxima etapa é criar um trabalho que carrega dados de sequência de cliques da web do pool de armazenamento (HDFS) de streaming do Spark para a tabela externa que você criou no pool de dados.
 
-1. No estúdio de dados do Azure, conecte-se a **gateway HDFS/Spark** do seu cluster de big data. Para obter mais informações, consulte [conectar-se ao gateway de HDFS/Spark](connect-to-big-data-cluster.md#hdfs).
+1. No estúdio de dados do Azure, conecte-se à instância mestre do seu cluster de big data. Para obter mais informações, consulte [conectar-se a um cluster de big data](connect-to-big-data-cluster.md).
 
 1. Clique duas vezes na conexão de gateway de HDFS/Spark na **servidores** janela. Em seguida, selecione **novo trabalho de Spark**.
 

@@ -5,16 +5,16 @@ description: Saiba como executar uma implantação offline de um cluster de big 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afd7c0e3b8fcf92721e95231175cb33d81c6775e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 49c96300792adfefa32152ec73911ba32fac47ee
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759143"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994013"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Executar uma implantação offline de um cluster de big data do SQL Server
 
@@ -42,7 +42,7 @@ As etapas a seguir descrevem como efetuar pull de cluster de big data imagens de
    > [!TIP]
    > Esses comandos usam o PowerShell como um exemplo, mas você pode executá-los de cmd, bash ou qualquer shell de comando que pode executar o docker. No Linux, adicionar `sudo` para cada comando.
 
-1. O cluster de big data de pull imagens de contêiner, repetindo o comando a seguir. Substitua `<SOURCE_IMAGE_NAME>` com cada [nome da imagem](#images). Substitua `<SOURCE_DOCKER_TAG>` com a marca para big data de cluster versão, como **ctp2.5**.  
+1. O cluster de big data de pull imagens de contêiner, repetindo o comando a seguir. Substitua `<SOURCE_IMAGE_NAME>` com cada [nome da imagem](#images). Substitua `<SOURCE_DOCKER_TAG>` com a marca para big data de cluster versão, como **ctp3.0**.  
 
    ```PowerShell
    docker pull private-repo.microsoft.com/mssql-private-preview/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -174,16 +174,17 @@ Para instalar **kubectl** para um computador offline, use as etapas a seguir.
 
 1. Copie a pasta para a máquina de destino.
 
-## <a name="deploy-with-from-repository"></a>Implantar com do repositório
+## <a name="deploy-from-private-repository"></a>Implantar a partir do repositório privado
 
-Para implantar a partir do repositório privado, use as etapas descritas na [guia de implantação](deployment-guidance.md), mas personalizar as seguintes variáveis de ambiente para corresponder ao seu repositório particular do Docker.
+Para implantar a partir do repositório privado, use as etapas descritas na [guia de implantação](deployment-guidance.md), mas usar um arquivo de configuração de implantação personalizado que especifica as informações de repositório do Docker particulares. O seguinte **mssqlctl** comandos demonstram como alterar as configurações do Docker em um arquivo de configuração de implantação personalizada denominada **custom.json**:
 
-- **DOCKER_REGISTRY**  
-- **DOCKER_REPOSITORY**
-- **DOCKER_USERNAME**
-- **DOCKER_PASSWORD**  
-- **DOCKER_EMAIL**
-- **DOCKER_IMAGE_TAG**
+```bash
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
+```
+
+A implantação solicita o nome de usuário do docker e a senha, ou você pode especificá-los de **DOCKER_USERNAME** e **DOCKER_PASSWORD** variáveis de ambiente.
 
 ## <a name="next-steps"></a>Próximas etapas
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ddf14cf97fc72acb4a7c44bbc123f171e31c20a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 562bdce8144707b9e5ee62dfe77ae0091efd1f98
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62911121"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994010"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurar o serviço Kubernetes do Azure para implantações de cluster de big data do SQL Server
 
@@ -86,7 +86,7 @@ Um grupo de recursos do Azure é um grupo lógico no qual Azure recursos são im
     --generate-ssh-keys \
     --node-vm-size Standard_L8s \
     --node-count 1 \
-    --kubernetes-version 1.12.6
+    --kubernetes-version 1.12.8
     ```
 
    Você pode aumentar ou diminuir o número de nós de agente do Kubernetes, alterando a `--node-count <n>` onde `<n>` é o número de nós de agente que você deseja usar. Isso não inclui o nó mestre do Kubernetes, que é gerenciado pelo AKS em segundo plano. O exemplo anterior usa apenas um único nó para fins de avaliação.

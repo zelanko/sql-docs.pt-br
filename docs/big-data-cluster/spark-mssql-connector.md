@@ -5,22 +5,22 @@ description: Saiba como usar o conector do Spark MSSQL no Spark para leitura e g
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 54361f9a061169d51f11ccb130e78ba67c0a9a67
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 12343c2000bca3ae90e62c8702636859a808a580
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759213"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994184"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Como ler e gravar para o SQL Server no Spark usando o conector do Spark MSSQL
 
 Um padrão de uso de chave de dados grandes é alto volume de processamento de dados no Spark, seguido de gravar os dados no SQL Server para acesso a aplicativos de linha de negócios. Esses padrões de uso se beneficiar de um conector que utiliza otimizações importantes de SQL e fornece um mecanismo de gravação eficiente.
 
-Com Clusters de dados grande CTP2.5 fornece um novo conector de MSSQL Spark que usa o SQL Server em massa gravar APIs para um Spark com bom desempenho para gravação SQL. Este artigo fornece um exemplo de como ler e gravar para o SQL Server do Spark usando o conector do Spark MSSQL. Neste exemplo, os dados são lidos do HDFS em um cluster de big data, processados pelo Spark e, em seguida, são gravados para a instância mestre do SQL Server no cluster usando o novo conector do Spark MSSQL.
+Clusters de big Data fornece um novo conector de MSSQL Spark que usa o SQL Server em massa gravar APIs para um Spark com bom desempenho para gravação SQL. Este artigo fornece um exemplo de como ler e gravar para o SQL Server do Spark usando o conector do Spark MSSQL. Neste exemplo, os dados são lidos do HDFS em um cluster de big data, processados pelo Spark e, em seguida, são gravados para a instância mestre do SQL Server no cluster usando o novo conector do Spark MSSQL.
 
 ## <a name="mssql-spark-connector-interface"></a>Interface de conector do Spark MSSQL
 

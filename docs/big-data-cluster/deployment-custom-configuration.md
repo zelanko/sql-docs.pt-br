@@ -5,16 +5,16 @@ description: Saiba como personalizar uma implantação de cluster de big data co
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7dd774d390587d0c2c0248ab9b419ad40f8f212b
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: ed86e7d293ba72eb178c65b53865b62ca419a6d2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759163"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993995"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>Definir as configurações de implantação para clusters de big data
 
@@ -46,7 +46,7 @@ O nome do cluster é o nome do cluster de big data e o namespace do Kubernetes q
 O comando a seguir envia um par chave-valor para o **-- json-values** parâmetro para alterar o nome do cluster de big data para **test-cluster**:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j ".metadata.name=test-cluster"
+mssqlctl cluster config section set -c custom.json -j ".metadata.name=test-cluster"
 ```
 
 > [!IMPORTANT]
@@ -84,7 +84,7 @@ Pontos de extremidade são definidos para o plano de controle, bem como para poo
 O exemplo a seguir usa embutido JSON para alterar a porta para o **controlador** ponto de extremidade:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
 ## <a id="replicas"></a> Configurar réplicas de pool
@@ -102,11 +102,17 @@ As características de cada pool, como o pool de armazenamento, é definido no a
             "type": "Storage",
             "replicas": 2,
             "storage": {
-                "usePersistentVolume": true,
-                "className": "managed-premium",
-                "accessMode": "ReadWriteOnce",
-                "size": "10Gi"
-            }
+               "data": {
+                  "className": "default",
+                  "accessMode": "ReadWriteOnce",
+                  "size": "15Gi"
+               },
+               "logs": {
+                  "className": "default",
+                  "accessMode": "ReadWriteOnce",
+                  "size": "10Gi"
+               }
+           },
         }
     }
 ]
@@ -115,31 +121,17 @@ As características de cada pool, como o pool de armazenamento, é definido no a
 Você pode configurar o número de instâncias em um pool, modificando o **réplicas** valor para cada pool. O exemplo a seguir usa embutido JSON para alterar esses valores para os pools de armazenamento e dados `10` e `4` , respectivamente:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4'
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4'
 ```
-
-> [!IMPORTANT]
-> Nesta versão, você não pode alterar o número de instâncias no pool de computação.
 
 ## <a id="storage"></a> Configurar o armazenamento
 
-Você também pode alterar a classe de armazenamento e as características que são usadas para cada pool. O exemplo a seguir atribui uma classe de armazenamento personalizado para o pool de armazenamento:
+Você também pode alterar a classe de armazenamento e as características que são usadas para cada pool. O exemplo a seguir atribui uma classe de armazenamento personalizado para o pool de armazenamento e atualiza o tamanho da declaração de volume persistente para armazenar dados de 100 GB. Você deve ter esta seção no arquivo de configuração para atualizar as configurações usando o *conjunto de configuração de cluster mssqlctl* de comando, consulte abaixo mostra como usar um arquivo de patch para adicionar esta seção:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec={""replicas"": 2,""storage"": {""className"": ""newStorageClass"",""size"": ""20Gi"",""accessMode"": ""ReadWriteOnce"",""usePersistentVolume"": true},""type"": ""Storage""}"
-```
-
-O exemplo a seguir atualiza apenas o tamanho do pool de armazenamento para `32Gi`:
-
-```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.size=32Gi"
-```
-
-O exemplo a seguir atualiza o tamanho de todos os pools de `32Gi`:
-
-```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
 ```
 
 > [!NOTE]
@@ -170,7 +162,7 @@ Crie um arquivo chamado **patch.json** no seu diretório atual com o seguinte co
 ```
 
 ```bash
-mssqlctl cluster config section set -f custom.json -p ./patch.json
+mssqlctl cluster config section set -c custom.json -p ./patch.json
 ```
 
 ## <a id="jsonpatch"></a> Arquivos de patch JSON
@@ -181,10 +173,10 @@ O seguinte **patch.json** arquivo executa as seguintes alterações:
 
 - Atualiza a porta do ponto de extremidade única.
 - Atualiza todos os pontos de extremidade (**porta** e **serviceType**).
-- Atualiza o armazenamento de plano de controle.
+- Atualiza o armazenamento de plano de controle. Essas configurações são aplicáveis a todos os componentes de cluster, a menos que substituída no nível do pool.
 - Atualiza o nome de classe de armazenamento no armazenamento de plano de controle.
-- Atualizações de pool de armazenamento, incluindo réplicas (pool de armazenamento).
-- Atualiza as configurações do Spark para um pool específico (pool de armazenamento).
+- Atualiza as configurações do pool de armazenamento para o pool de armazenamento.
+- Atualiza as configurações do Spark para o pool de armazenamento.
 
 ```json
 {
@@ -222,30 +214,39 @@ O seguinte **patch.json** arquivo executa as seguintes alterações:
     },
     {
       "op": "replace",
-      "path": "spec.controlPlane.spec.storage",
+      "path": "spec.controlPlane.spec.controlPlane",
       "value": {
-        "usePersistentVolume":true,
-        "accessMode":"ReadWriteMany",
-        "className":"managed-premium",
-        "size":"10Gi"
-      }
+          "data": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "100Gi"
+          },
+          "logs": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "32Gi"
+          }
+        }
     },
     {
       "op": "replace",
-      "path": "spec.controlPlane.spec.storage.className",
-      "value": "default"
+      "path": "spec.controlPlane.spec.storage.data.className",
+      "value": "managed-premium"
     },
     {
-      "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "op": "add",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage",
       "value": {
-        "replicas": 2,
-        "type": "Storage",
-        "storage": {
-          "usePersistentVolume": true,
-          "accessMode": "ReadWriteOnce",
-          "className": "managed-premium",
-          "size": "10Gi"
+          "data": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "100Gi"
+          },
+          "logs": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "32Gi"
+          }
         }
       }
     },
@@ -270,7 +271,7 @@ O seguinte **patch.json** arquivo executa as seguintes alterações:
 Use **conjunto de seção de configuração de cluster mssqlctl** para aplicar as alterações no arquivo de patch JSON. O exemplo a seguir aplica-se a **patch.json** arquivo para um arquivo de configuração de implantação de destino **custom.json**.
 
 ```bash
-mssqlctl cluster config section set -f custom.json -p ./patch.json
+mssqlctl cluster config section set -c custom.json -p ./patch.json
 ```
 
 ## <a name="next-steps"></a>Próximas etapas

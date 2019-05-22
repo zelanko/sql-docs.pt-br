@@ -5,30 +5,22 @@ description: Saiba como se conectar a instância mestre do SQL Server e o gatewa
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8291f2a192868544fb34da95d537f7a8a6b0f004
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 3305990935c5d4c6077caa062184b0150aa83d6b
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774661"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994060"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Conectar a um cluster de big data do SQL Server com o Studio de dados do Azure
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este artigo descreve como se conectar a um cluster de big data de 2019 do SQL Server (versão prévia) no Studio de dados do Azure. Há dois pontos de extremidade principais são usados para interagir com um cluster de big data:
-
-| Ponto de extremidade | Descrição |
-|---|---|
-| Instância mestre do SQL Server | A instância mestre do SQL Server no cluster que contém os bancos de dados relacionais do SQL Server. |
-| Gateway HDFS/Spark | Acesso ao armazenamento do HDFS no cluster e a capacidade de executar trabalhos do Spark. |
-
-> [!TIP]
-> Com a versão de fevereiro de 2019 do estúdio de dados do Azure, conectar-se automaticamente a instância mestre do SQL Server fornece acesso de interface do usuário para o gateway HDFS/Spark.
+Este artigo descreve como se conectar a um cluster de big data de 2019 do SQL Server (versão prévia) no Studio de dados do Azure.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -72,37 +64,6 @@ Com a versão de fevereiro de 2019 do estúdio de dados do Azure, conectar-se a 
 - O **painel do servidor** para a conexão também contém guias para **cluster de big data do SQL Server** e **2019 do SQL Server (versão prévia)** quando a extensão está instalada.
 
    ![Nó de serviços de dados do Azure Data Studio](./media/connect-to-big-data-cluster/connect-data-services-node.png)
-
-> [!IMPORTANT]
-> Se você vir **erro desconhecido** na interface do usuário, talvez você precise [conectar-se diretamente ao gateway de HDFS/Spark](#hdfs). Uma causa desse erro são senhas diferentes para a instância mestre do SQL Server e o gateway HDFS/Spark. O estúdio de dados do Azure pressupõe que a mesma senha é usada para ambos.
-  
-## <a id="hdfs"></a> Conectar ao gateway de HDFS/Spark
-
-Na maioria dos casos, conectando-se a instância mestre do SQL Server fornece acesso para o HDFS e o Spark também por meio de **serviços de dados** nó. No entanto, você ainda pode criar uma conexão dedicada para o **gateway HDFS/Spark** se necessário. As etapas a seguir descrevem como conectar-se com o Studio de dados do Azure.
-
-1. Na linha de comando, localize o endereço IP do seu gateway HDFS/Spark com um dos comandos a seguir.
-
-   ```
-   kubectl get svc gateway-svc-external -n <your-cluster-name>
-   ```
- 
-1. No Azure Data Studio, pressione **F1** > **nova Conexão**.
-
-1. Na **tipo de Conexão**, selecione **cluster de big data do SQL Server**.
-
-   > [!TIP]
-   > Se você não vir as **cluster de big data do SQL Server** conexão de tipo, certifique-se de ter instalado o [extensão do SQL Server 2019](../azure-data-studio/sql-server-2019-extension.md) e que você reiniciou o estúdio de dados do Azure após a conclusão de extensão instalando.
-
-1. Digite o endereço IP do cluster de big data no **nome do servidor** (não especificar uma porta).
-
-1. Insira `root` para o **usuário** e especifique o **senha** para seu cluster de big data.
-
-   ![Conectar-se ao gateway HDFS/Spark](./media/connect-to-big-data-cluster/connect-to-cluster-hdfs-spark.png)
-
-   > [!TIP]
-   > Por padrão, é o nome de usuário **raiz** e a senha corresponde à **KNOX_PASSWORD** variável de ambiente usada durante a implantação.
-
-1. Pressione **Connect**e o **painel Server** deve aparecer.
 
 ## <a name="next-steps"></a>Próximas etapas
 

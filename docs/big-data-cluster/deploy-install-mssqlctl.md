@@ -5,16 +5,16 @@ description: Saiba como instalar a ferramenta mssqlctl para instalar e gerenciar
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0d260ae91a5890938949525f34dfae20a81a8fea
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 32beeaf5ee7dd12b4efb4792ab5e1c489868705e
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776096"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994023"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-big-data-clusters"></a>Instalar mssqlctl para gerenciar clusters de grandes dados do SQL Server
 
@@ -44,16 +44,16 @@ Este artigo descreve como instalar o **mssqlctl** ferramenta no Windows ou Linux
    pip3 uninstall mssqlctl
    ```
 
-   Para o CTP 2.3 ou superior, execute o comando a seguir. Substitua `ctp-2.3` no comando com a versão do **mssqlctl** que você está desinstalando:
+   Para o CTP 2.3 ou superior, execute o comando a seguir. Substitua `ctp-2.5` no comando com a versão do **mssqlctl** que você está desinstalando:
 
    ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
    ```
 
 1. Instale **mssqlctl** com o seguinte comando:
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
    ```
 
 ## <a id="linux"></a> Instalação do Linux mssqlctl
@@ -82,16 +82,16 @@ No Linux, você deve instalar o Python 3.5 e, em seguida, atualizar o pip. O exe
    pip3 uninstall mssqlctl
    ```
 
-   Para o CTP 2.3 ou superior, execute o comando a seguir. Substitua `ctp-2.3` no comando com a versão do **mssqlctl** que você está desinstalando:
+   Para o CTP 2.3 ou superior, execute o comando a seguir. Substitua `ctp-2.5` no comando com a versão do **mssqlctl** que você está desinstalando:
 
    ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
    ```
 
 1. Instale **mssqlctl** com o seguinte comando:
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt --user
    ```
 
    > [!NOTE]
