@@ -1,22 +1,22 @@
 ---
 title: Referência de parâmetro de acesso à URL | Microsoft Docs
-ms.date: 09/09/2015
+ms.date: 05/10/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e0848c1574a5ca46c1db922be72b0dceedf091ed
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515118"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620590"
 ---
 # <a name="url-access-parameter-reference"></a>Referência de parâmetro de acesso de URL
   Você pode usar os parâmetros a seguir como parte de uma URL para configurar a aparência de seus relatórios do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Os parâmetros mais comuns estão listados nesta seção. Os parâmetros não diferenciam maiúsculas de minúsculas e começam com o prefixo de parâmetro *rs:* quando direcionados ao servidor de relatório e com *rc:* quando direcionados a um Visualizador de HTML. Você também pode especificar parâmetros que são específicos de dispositivos ou extensões de renderização. Para obter mais informações sobre parâmetros específicos do dispositivo, consulte [Especificar as configurações de informações sobre o dispositivo em uma URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "52515118"
 -   [Comandos da Web Part do Visualizador de Relatórios (rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> Comandos do Visualizador HTML (rc:)  
- Os comandos do Visualizador de HTML são usados para destinar-se ao Visualizador de HTML (por exemplo, do Gerenciador de Relatórios) e são prefixados com *rc:*:  
+ - Os comandos do Visualizador de HTML são usados para destinar-se ao Visualizador de HTML e são prefixados com *rc:*:
   
 -   *Toolbar* :  
                   Mostra ou oculta a barra de ferramentas. Se o valor desse parâmetro for **false**, todas as demais opções serão ignoradas. Se você omitir esse parâmetro, a barra de ferramentas será exibida automaticamente para renderizar formatos que dão suporte a ele. O padrão desse parâmetro é **true**.  
@@ -267,7 +267,7 @@ ms.locfileid: "52515118"
      Você pode especificar a ID da sessão como um cookie ou como parte da URL. Quando o servidor de relatório tiver sido configurado para não usar cookies de sessão, a primeira solicitação sem uma ID de sessão especificada resultará no redirecionamento com uma ID de sessão. Para obter mais informações sobre as sessões do servidor de relatório, consulte [Identificando o estado de execução](../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).  
   
 -   *ClearSession*:  
-                  Um valor **true** direciona o servidor de relatório a remover um relatório da sessão de relatório. Todas as instâncias de relatório associadas a um usuário autenticado são removidas da sessão de relatório. (Uma instância de relatório será definida já que o mesmo relatório é executado várias vezes com valores de parâmetro de relatório diferentes). O valor padrão é **false**.  
+                  Um valor **true** direciona o servidor de relatório a remover um relatório da sessão de relatório. Todas as instâncias de relatório associadas a um usuário autenticado são removidas da sessão de relatório. (Uma instância de relatório será definida já que o mesmo relatório é executado várias vezes com valores de parâmetro de relatório diferentes.) O valor padrão é **false**.  
   
 -   *ResetSession*:  
                   Um valor **true** direciona o servidor de relatório a redefinir a sessão de relatório removendo a associação da sessão de relatório a todos os instantâneos de relatório. O valor padrão é **false**.  

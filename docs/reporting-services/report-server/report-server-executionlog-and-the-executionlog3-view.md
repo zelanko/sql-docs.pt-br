@@ -2,21 +2,21 @@
 title: ExecutionLog do servidor de relatório e exibição do ExecutionLog3 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 17819ebf76409602108fe6eaa656a44190a12ab0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414094"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619694"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>ExecutionLog do servidor de relatório e exibição do ExecutionLog3
   O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o log de execução do servidor de relatório contém informações sobre os relatórios executados no servidor ou em vários servidores em uma implantação em expansão no modo nativo ou no farm do SharePoint. É possível usar o log de execução de relatório para descobrir a frequência na qual um relatório é solicitado, quais são os formatos de saída mais usados e qual é o tempo de processamento em milissegundos em cada fase do processamento. O log contém informações sobre o período de tempo gasto na execução da consulta do conjunto de dados de um relatório e a hora gasta no processamento dos dados. Se você for um administrador de servidor de relatório, poderá revisar as informações de log, identificar tarefas demoradas e dar sugestões aos autores de relatório sobre as áreas do relatório (conjunto de dados ou processamento) que eles podem melhorar.  
@@ -260,8 +260,6 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 -   **ExternalImages**  
   
-     Adicionado [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
      O valor está em milissegundos. Esses dados podem ser usados para diagnosticar problemas de desempenho. A hora necessária para recuperar imagens de um servidor Web externo pode tornar lenta a execução de relatório geral.  
   
     ```  
@@ -273,8 +271,6 @@ select * from ExecutionLog3 order by TimeStart DESC
     ```  
   
 -   **Conexões**  
-  
-     Adicionado [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
      Uma estrutura em vários níveis  
   
@@ -322,9 +318,9 @@ select * from ExecutionLog2 order by TimeStart DESC
  A tabela a seguir descreve os dados capturados no log de execução de relatório  
   
 |coluna|Descrição|  
-|------------|-----------------|  
+|------------|------------------------------------------------------------|  
 |InstanceName|Nome da instância de servidor de relatório que manipulou a solicitação.|  
-|ReportPath|A estrutura de caminho para o relatório.  Por exemplo, um relatório chamado "test", que está na pasta raiz do Gerenciador de Relatórios, teria um ReportPath "/test".<br /><br /> Um relatório chamado "test", salvo na pasta "samples" do Gerenciador de Relatórios, terá o ReportPath "/Samples/test/"|  
+|ReportPath|A estrutura de caminho para o relatório. Um relatório salvo na pasta raiz como "teste" tem um ReportPath "/teste".<br /><br /> Um relatório chamado "teste", salvo na pasta "amostras" terá o ReportPath "/Amostras/teste/"|  
 |UserName|Identificador do usuário.|  
 |ExecutionID||  
 |RequestType|Tipo de solicitação (usuário ou sistema).|  

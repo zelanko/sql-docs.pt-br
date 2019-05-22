@@ -1,5 +1,5 @@
 ---
-title: ssbdiagnose (Service Broker) do utilitário | Microsoft Docs
+title: Utilitário ssbdiagnose (Service Broker) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,17 +26,21 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc67193013c0ea546f69aaa87fb1fb0aa0ad7cac
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: bae9ec6ddd1d3098c04dc1afaaebc189ae079959
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590540"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821091"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilitário ssbdiagnose (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  O utilitário **ssbdiagnose** relata problemas em conversas do [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou na configuração de serviços do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . É possível fazer verificações de configuração para dois serviços ou um único serviço. Os problemas são reportados na janela de prompt de comando como texto legível ou XML formatado que pode ser redirecionado para um arquivo ou outro programa.  
-  
+  O utilitário **ssbdiagnose** relata problemas em conversas do [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou na configuração de serviços do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . É possível fazer verificações de configuração para dois serviços ou um único serviço. Os problemas são reportados na janela de prompt de comando como texto legível ou XML formatado que pode ser redirecionado para um arquivo ou outro programa.
+
+> [!NOTE]
+> O utilitário ssbdiagnose não é mais instalado com a versão mais recente do SSMS (SQL Server Management Studio) 18.0. Para instalar a versão mais recente do ssbdiagnose, instale o [SSMS 17.9.1](../../ssms/release-notes-ssms.md#download-ssms-1791).
+> A necessidade de instalar uma versão anterior do SSMS para obter o ssbdiagnose mais recente será ser corrigida em uma versão futura. O SSMS 18.x é executado lado a lado com versões 17.x para que ambos possam ser instalados no mesmo computador.
+
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
@@ -158,11 +162,11 @@ WHERE database_id = DB_ID();
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
  Solicita verificação se o diálogo está configurado corretamente para o nível especificado de criptografia:  
   
- **LIGADO**: configuração padrão. A segurança de diálogo total está configurada. Certificados foram implantados nos dois lados do diálogo, uma associação de serviço remoto está presente e a instrução GRANT SEND do serviço de destino especificou o usuário iniciador.  
+ **ON**: sem configuração padrão. A segurança de diálogo total está configurada. Certificados foram implantados nos dois lados do diálogo, uma associação de serviço remoto está presente e a instrução GRANT SEND do serviço de destino especificou o usuário iniciador.  
   
- **DESLIGADO**: nenhuma segurança de diálogo está configurada. Nenhum certificado foi implantado, nenhuma associação de serviço remoto foi criada e a instrução GRANT SEND do serviço iniciador especificou a função **public** .  
+ **OFF**: nenhuma segurança de diálogo está configurada. Nenhum certificado foi implantado, nenhuma associação de serviço remoto foi criada e a instrução GRANT SEND do serviço iniciador especificou a função **public** .  
   
- **ANÔNIMO**: a segurança de diálogo anônima está configurada. Um certificado foi implantado, a associação de serviço remoto especificou a cláusula anônima e a instrução GRANT SEND do serviço de destino especificou a função **public** .  
+ **ANONYMOUS**: a segurança de diálogo anônima está configurada. Um certificado foi implantado, a associação de serviço remoto especificou a cláusula anônima e a instrução GRANT SEND do serviço de destino especificou a função **public** .  
   
  **RUNTIME**  
  Solicita um relatório de problemas que causam erros de tempo de execução para uma conversa do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Se nem **-NEW** ou **-ID** forem especificadas, o **ssbdiagnose** monitorará todas as conversas em todos os bancos de dados especificados nas opções de conexão. Se **-NEW** ou **-ID** forem especificadas, o **ssbdiagnose** criará uma lista de IDs especificadas nos parâmetros.  
@@ -331,7 +335,7 @@ WHERE database_id = DB_ID();
 ssbdiagnose -E -d MyDatabase CONFIGURATION FROM SERVICE /test/initiator TO SERVICE /test/target  
 ```  
   
-### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>b. Verificando a configuração de dois serviços em computadores separados que não usam logon  
+### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>B. Verificando a configuração de dois serviços em computadores separados que não usam logon  
  O exemplo a seguir mostra como solicitar um relatório de configuração quando os serviços iniciador e de destino estão em computadores separados, mas podem ser acessados com o uso do mesmo logon de Autenticação do Windows.  
   
 ```  

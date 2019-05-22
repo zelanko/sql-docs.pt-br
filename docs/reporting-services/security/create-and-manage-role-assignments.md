@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 815822c983154d55cf67ec02475e81f33008d42e
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
-ms.translationtype: HT
+ms.openlocfilehash: 863904e2d82fc97045305dd2430241a91e333f11
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449675"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619597"
 ---
 # <a name="create-and-manage-role-assignments"></a>Criar e gerenciar atribuições de função
 
-Um *atribuição de função* é uma política de segurança que determina as permissões do usuário ou do grupo. As permissões decidem se o usuário ou grupo pode acessar um item de servidor de relatório específico ou executar uma tarefa. Uma atribuição de função consiste em um único nome de conta de usuário ou grupo e em uma ou mais definições de função.
+Um *atribuição de função* é uma política de segurança que determina as permissões do usuário ou do grupo. As permissões decidem se o usuário ou grupo pode acessar ou modificar um item de servidor de relatório específico ou executar uma tarefa. Uma atribuição de função consiste em um único nome de conta de usuário ou grupo e em uma ou mais definições de função.
 
 As atribuições de função podem afetar o *nível do item* ou o *nível do sistema*.
 
-- Uma atribuição de função em nível de item é criada no contexto de um item ou ramificação específica na hierarquia de pastas no servidor de relatório. Navegue até uma pasta específica ou item para criar uma atribuição de função.
+- Uma atribuição de função em nível de item é criada para um item ou ramificação específica na hierarquia de pastas no servidor de relatório. Navegue até uma pasta específica ou item para criar uma atribuição de função.
 
 - As atribuições de função no nível do sistema fornecem aos usuários selecionados a possibilidade de realizar tarefas que afetam o site de servidor de relatório como um todo. Essas tarefas incluem:
   - Criar agendas compartilhadas
@@ -39,27 +39,23 @@ A segurança no nível do sistema não permite o acesso a itens na hierarquia de
 
 ## <a name="creating-an-item-level-role-assignment"></a>Criando uma atribuição de função em nível de item
 
-Para criar ou gerenciar as atribuições de função, acesse o portal da web. Abra a página **Propriedade de segurança** do item que você deseja proteger.
-
-Você pode criar uma atribuição de função separada para cada conta de usuário ou grupo que requer acesso ao servidor de relatório. Se a conta estiver em um domínio diferente do domínio que contém o servidor de relatório, inclua o nome de domínio. Depois de especificar uma conta, você escolhe uma ou mais definições de função. As definições de função são aditivas. O conjunto combinado de todas as tarefas de todas as definições é suportado na atribuição para um grupo ou usuário específico.
+A partir desse ponto, você poderá criar uma atribuição de função separada para cada conta de usuário ou grupo que requer acesso ao servidor de relatório. Se a conta estiver em um domínio diferente do domínio que contém o servidor de relatório, inclua o nome de domínio. Depois de especificar uma conta, você escolhe uma ou mais definições de função. As definições de função são aditivas. O conjunto combinado de todas as tarefas de todas as definições é suportado na atribuição para um grupo ou usuário específico.
 
 Para permitir o acesso completo, escolha um item que esteja no nível superior da hierarquia de pastas (por exemplo, o pasta raiz Início). Depois você pode criar atribuições de função para bloquear áreas específicas de nível inferior da hierarquia de pastas.
 
 Você deve ser membro do grupo de Administradores local no computador do servidor de relatório para criar uma atribuição de função. Você pode delegar essa responsabilidade atribuindo outros usuários à função **Gerenciador de Conteúdo** .
 
-Para obter mais informações, consulte [Conceder acesso ao usuário a um servidor de relatório](../../reporting-services/security/grant-user-access-to-a-report-server.md)
+Para criar ou gerenciar atribuições de função ou para saber mais, confira [Conceder acesso ao usuário a um servidor de relatório](../../reporting-services/security/grant-user-access-to-a-report-server.md)
   
 ## <a name="creating-a-system-level-role-assignment"></a>Criando uma atribuição de função no nível do sistema
 
-Para criar ou gerenciar uma atribuição de função no nível do sistema, acesse o portal da Web e abra a página Configurações de Site.
+As atribuições de função em nível de sistema e de item são criadas juntas. Crie uma atribuição de função em nível de sistema para cada usuário ou grupo que tem uma atribuição de função em nível de item.
 
-As atribuições de função em nível de sistema e de item são criadas juntas. Você deve criar uma atribuição de função em nível de sistema para cada usuário ou grupo que tem uma atribuição de função em nível de item.
+As atribuições de função em nível de sistema incluem uma ampla variedade de permissões, mas não incluem permissões que fazem parte de uma atribuição de função em nível de item.
 
-As atribuições de função em nível de sistema incluem uma ampla variedade de permissões, mas não incluem permissões que fazem parte de uma atribuição de função em nível de item. 
+Em contraste com as permissões de sistema em um computador, as funções de sistema no servidor de relatório não concedem permissões de longo alcance que incluem todas as tarefas possíveis. Em vez disso, as atribuições de função no nível do sistema simplesmente são um conjunto de tarefas que afetam o site do servidor de relatório. Atribuições de função de sistema determinam se os usuários podem exibir propriedades de aplicativo (como a imagem ou o título da página inicial), exibir ou gerenciar agendas compartilhadas ou usar o Construtor de Relatórios.
 
-Em contraste com as permissões de sistema em um computador, as funções de sistema no servidor de relatório não concedem permissões de longo alcance que incluem o conjunto completo de todas as tarefas possíveis. Em vez disso, as atribuições de função no nível do sistema simplesmente são um conjunto de tarefas que afetam o site do servidor de relatório. Atribuições de função de sistema determinam se os usuários podem exibir propriedades de aplicativo (como a imagem ou o título da página inicial), exibir ou gerenciar agendas compartilhadas ou usar o Construtor de Relatórios.
-
-Para obter mais informações, confira [Conceder acesso ao usuário a um Servidor de relatório](../../reporting-services/security/grant-user-access-to-a-report-server.md) e [Funções predefinidas](../../reporting-services/security/role-definitions-predefined-roles.md).  
+Para criar ou gerenciar uma atribuição de função em nível de sistema ou para saber mais, confira [Conceder acesso ao usuário a um servidor de relatório](../../reporting-services/security/grant-user-access-to-a-report-server.md) e [Funções Predefinidas](../../reporting-services/security/role-definitions-predefined-roles.md).  
 
 ## <a name="modifying-a-role-assignment"></a>Modificando atribuições de função
 

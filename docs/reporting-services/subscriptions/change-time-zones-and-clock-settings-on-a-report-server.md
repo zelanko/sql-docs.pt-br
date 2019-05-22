@@ -2,7 +2,7 @@
 title: Alterar as configurações de fuso horário e relógio em um servidor de relatório | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - schedules [Reporting Services], clock settings
 - schedules [Reporting Services], time zones
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bb822890e3a54be5c221c41a0c1489a4e2b252b5
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5c1e3a2b4fe468f3565dbf7ad47295ab8836315b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973463"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578362"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>Alterar configurações de fuso horário e relógio em um servidor de relatório
   Um servidor de relatório sempre usa a hora local do computador no qual é instalado. Você não pode configurá-lo para usar um fuso horário diferente. Se um aplicativo cliente apontar para um servidor de relatório em um fuso horário diferente, o fuso horário do servidor de relatório será usado para executar uma operação agendada. No Gerenciador de Relatórios e nas páginas de gerenciamento do SharePoint, o fuso horário é indicado em cada página de agendamento para que você saiba exatamente quando uma operação agendada ocorrerá. Por exemplo, a página para criar agendas personalizadas informará "O horário será expresso em (UTC-08:00) hora do Pacífico (EUA e Canadá)".
-O servidor de relatório cria um trabalho do SQL Server Agent usado para disparar a agenda. Quando o servidor de relatório e o SQL Server Agent estão localizados em servidores separados, o fuso horário deve ser a mesma em todos os servidores.
+O servidor de relatório cria um trabalho do SQL Server Agent usado para disparar a agenda. Quando o Servidor de Relatório e o SQL Server Agent estão localizados em servidores separados, o fuso horário deve ser o mesmo em todos os servidores.
   
 ## <a name="changing-the-time-zone-native-mode"></a>Alterando o fuso horário (modo nativo)  
  Se o fuso horário for alterado em um computador que hospeda um servidor de relatório, reinicie o serviço Servidor de Relatório para validar a alteração.  

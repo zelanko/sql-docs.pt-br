@@ -37,7 +37,7 @@ ms.locfileid: "62999548"
  **Inserir o nome do objeto**  
  Contém o nome do objeto que não foi encontrado. Corrija o nome do objeto ou digite um nome de objeto novo.  
   
- **Remova***\<nome do objeto >***da seleção**  
+ **Remova** *\<nome do objeto >* **da seleção**  
  Selecione para fechar a caixa de diálogo **Nome Não Encontrado** e remover o item da caixa de diálogo **Selecionar Objetos** .  
   
   

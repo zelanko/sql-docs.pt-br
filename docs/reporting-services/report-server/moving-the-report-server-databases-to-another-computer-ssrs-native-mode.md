@@ -2,18 +2,18 @@
 title: Movendo os bancos de dados do servidor de relatório para outro computador (modo nativo do SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 94cdbe6358bd0361addd70d682a3d0d41e70bbba
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100217"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619687"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Movendo os bancos de dados do servidor de relatório para outro computador (modo nativo do SSRS)
 
@@ -27,14 +27,14 @@ ms.locfileid: "50100217"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que são usados para acionar uma agenda serão recriados na nova instância do banco de dados. Não é necessário mover os trabalhos para o novo computador, mas você pode excluir os trabalhos que não serão mais usados.  
   
--   Assinaturas, relatórios em cache e instantâneos são preservados no banco de dados movido. Se um instantâneo não estiver capturando dados atualizados depois que o banco de dados for movido, desmarque as opções de instantâneo no Gerenciador de Relatórios, clique em **Aplicar** para salvar as alterações, recrie o agendamento e clique em **Aplicar** novamente para salvar as alterações.  
+-   Assinaturas, relatórios em cache e instantâneos são preservados no banco de dados movido. Se um instantâneo não estiver capturando dados atualizados depois que o banco de dados for movido, desmarque as opções de instantâneo e selecione **Aplicar** para salvar as alterações, recrie o agendamento e selecione **Aplicar** novamente para salvar as alterações.  
   
 -   Os dados do relatório temporário e da sessão de usuário que são armazenados em reportservertempdb são mantidos quando o banco de dados é movido.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece várias abordagens para mover bancos de dados, inclusive backup e restauração, anexação e desanexação e cópia. Nem todas as abordagens são apropriadas para realocar um banco de dados existente em uma nova instância do servidor. A abordagem que deve ser usada para mover o banco de dados do servidor de relatório varia dependendo dos requisitos de disponibilidade do sistema. O modo mais fácil para mover os bancos de dados do servidor de relatório é anexá-los e desanexá-los. No entanto, esta abordagem requer que o servidor de relatório fique offline enquanto o banco de dados é desanexado. O backup e a restauração são a melhor opção se você desejar minimizar as interrupções de serviço, mas é necessário executar os comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] para efetuar as operações. A cópia do banco de dados não é recomendada (principalmente se o Assistente para Copiar Banco de Dados for utilizado); as configurações de permissão não são preservadas no banco de dados.  
   
 > [!IMPORTANT]  
->  As etapas descritas neste tópico são recomendadas quando a realocação do banco de dados do servidor de relatório for a única alteração feita na instalação existente. A migração de uma instalação inteira do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (ou seja, a movimentação do banco de dados e a alteração da identidade do serviço Windows do Servidor de Relatório que usa o banco de dados) exige a reconfiguração da conexão e a redefinição de uma chave de criptografia.  
+>  As etapas descritas neste artigo são recomendadas quando a realocação do banco de dados do servidor de relatório é a única alteração feita na instalação existente. A migração de uma instalação inteira do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (ou seja, a movimentação do banco de dados e a alteração da identidade do serviço Windows do Servidor de Relatório que usa o banco de dados) exige a reconfiguração da conexão e a redefinição de uma chave de criptografia.  
   
 ## <a name="detaching-and-attaching-the-report-server-databases"></a>Desanexando e anexando os bancos de dados do servidor de relatório  
  Se conseguir colocar o servidor de relatório offline, você poderá desanexar os bancos de dados para movê-los para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usada. Esta abordagem preserva as permissões nos bancos de dados. Se estiver usando um banco de dados do SQL Server, mova-o para outra instância do SQL Server. Depois de mover os bancos de dados, reconfigure a conexão do servidor de relatório com o banco de dados. Se você estiver executando uma implantação de expansão, deverá reconfigurar a conexão do banco de dados do servidor de relatório para cada servidor de relatório da implantação.  

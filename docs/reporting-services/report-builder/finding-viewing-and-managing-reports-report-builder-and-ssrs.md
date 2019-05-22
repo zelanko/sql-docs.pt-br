@@ -2,18 +2,18 @@
 title: Localizando, exibindo e gerenciando relatórios (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8e19127cd13ddb5e71ce245b4e0a832c63ecad76
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0dad0840c216bd8aca67acfedb9de6e6aa15c117
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711007"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581240"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Localizando, exibindo e gerenciando relatórios (Construtor de Relatórios e SSRS)
   No Construtor de Relatórios, você pode procurar pastas em um servidor de relatório ou site do SharePoint para encontrar relatórios, fontes de dados compartilhadas, modelos e outros itens de relatório relacionados e navegar no computador para localizar relatórios locais. Para facilitar a localização de relatórios, o Construtor de Relatórios mantém uma lista de servidores e sites usados recentemente e fornece acesso direto às pastas Área de Trabalho, Meus Documentos e Meu Computador no sistema de arquivos do computador.  
@@ -67,7 +67,7 @@ ms.locfileid: "52711007"
   
  Algumas dessas tarefas talvez sejam executadas para você pelo administrador do servidor de relatório. Para saber mais sobre as tarefas executadas em um servidor de relatório, consulte [Servidor de Relatório do Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
- Em geral, o Gerenciador de Relatórios contém pastas, relatórios, fontes de dados e modelos de relatório, bem como a pasta Meus Relatórios. A pasta Meus Relatórios é um workspace pessoal que pode ser usado para armazenar e trabalhar com seus relatórios e para exibi-los. Outras pastas do servidor de relatórios são públicas e geralmente exigem que os usuários tenham permissões avançadas para adicionar ou modificar o conteúdo de pasta. Você pode criar pastas em Meus Relatórios para organizar ainda mais seus relatórios.  
+ Em geral, o Gerenciador de Relatórios contém pastas, relatórios e fontes de dados, bem como a pasta Meus Relatórios. A pasta Meus Relatórios é um workspace pessoal que pode ser usado para armazenar e trabalhar com seus relatórios e para exibi-los. Outras pastas do servidor de relatórios são públicas e geralmente exigem que os usuários tenham permissões avançadas para adicionar ou modificar o conteúdo de pasta. Você pode criar pastas em Meus Relatórios para organizar ainda mais seus relatórios.  
   
  O Gerenciador de Relatórios exibe relatórios no Visualizador de HTML do Reporting Services. O Visualizador de HTML fornece uma estrutura para a exibição de relatórios em HTML e inclui uma barra de ferramentas de relatório, uma seção de parâmetro, uma seção de credenciais e um mapa do documento. A barra de ferramentas de relatório fornece as funcionalidades de navegação de página, zoom, atualização, pesquisa, exportação, impressão e feed de dados. A barra de ferramentas do relatório também é exibida em uma janela do navegador na parte superior de um relatório quando você acessa relatórios por uma URL. A funcionalidade de impressão é opcional e deve ser ativada pelo administrador. Quando disponível, um ícone Impressora é exibido na barra de ferramentas de relatório. As ilustrações a seguir mostram a barra de ferramentas de relatório em uma janela do Gerenciador de Relatórios e um close-up dos recursos da barra de ferramentas de relatório.  
   
@@ -105,9 +105,9 @@ Barra de ferramentas do relatório
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>Localizando itens de servidor de relatório em um site do SharePoint  
  Antes de poder definir as propriedades, primeiro você deve localizar o item. Os itens do servidor de relatório são sempre armazenados em bibliotecas ou em uma pasta de uma biblioteca.  
   
- Ao acessar o site do SharePoint, você verá a página Procurar e a guia de Ferramentas de Biblioteca. A página Procurar relaciona as bibliotecas e o conteúdo da biblioteca selecionada. É possível exibir o relatório, modelos de relatório e outros itens na biblioteca, explorar pastas e pesquisar o site para localizar itens.  
+ Ao acessar o site do SharePoint, você verá a página Procurar e a guia de Ferramentas de Biblioteca. A página Procurar relaciona as bibliotecas e o conteúdo da biblioteca selecionada. É possível exibir o relatório e outros itens na biblioteca, explorar pastas e pesquisar o site para localizar itens.  
   
- Para distinguir os itens do servidor de relatório de outros itens em um site do SharePoint, você pode usar o ícone para identificar visualmente um item ou colocar pausar cursor do mouse sobre o tipo e ler a extensão do arquivo. A imagem a seguir mostra pastas, um modelo de relatório e uma definição de relatório na biblioteca **Relatórios** :  
+ Para distinguir os itens do servidor de relatório de outros itens em um site do SharePoint, você pode usar o ícone para identificar visualmente um item ou colocar pausar cursor do mouse sobre o tipo e ler a extensão do arquivo. A imagem a seguir mostra pastas e uma definição de relatório na biblioteca **Relatórios**:  
   
  ![Biblioteca do SharePoint com itens do servidor de relatório](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "Biblioteca do SharePoint com itens do servidor de relatório")  
   

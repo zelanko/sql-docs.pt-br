@@ -1,8 +1,8 @@
 ---
 title: Construtor de Relatórios no SQL Server | Microsoft Docs
-ms.date: 11/29/2018
+ms.date: 05/10/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 f1_keywords:
@@ -11,17 +11,20 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f37319c07856f0e31abcb2afb047bdea2904063a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d77b35851144967c9cfed408617fe5551debf37f
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290294"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620603"
 ---
 # <a name="report-builder-in-sql-server"></a>Construtor de Relatórios no SQL Server
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] é uma ferramenta para criação de relatórios paginados para usuários comerciais que preferem trabalhar em um ambiente autônomo em vez de usar o Designer de Relatórios no Visual Studio.  Quando você cria um relatório paginado, você está criando uma definição de relatório que especifica onde obter os dados, que dados obter e como exibir os dados. Ao executar o relatório, o processador de relatório obtém todas as informações especificadas, recupera os dados e combina-os ao layout de relatório para gerar este relatório. Você pode visualizar o relatório no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Em seguida, publicar seu relatório em um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo nativo ou no modo integrado do SharePoint (2016 e anterior). Você também pode publicar um relatório paginado no serviço do Power BI. Leia mais sobre [relatórios paginados no Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (Versão prévia).
+
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] é uma ferramenta para criação de relatórios paginados para usuários comerciais que preferem trabalhar em um ambiente autônomo em vez de usar o Designer de Relatórios no Visual Studio/SSDT.  Quando você cria um relatório paginado, está criando uma definição de relatório que especifica quais dados recuperar, onde obtê-los e como exibi-los. Ao executar o relatório, o processador de relatório obtém todas as informações especificadas, recupera os dados e combina-os ao layout de relatório para gerar este relatório. Você pode visualizar o relatório no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Em seguida, publicar seu relatório em um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo nativo ou no modo integrado do SharePoint (2016 e anterior). 
+
+Você também pode publicar um relatório paginado no serviço do Power BI. Leia mais sobre [relatórios paginados no Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (Versão prévia).
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -46,7 +49,6 @@ ms.locfileid: "56290294"
 -   **Modifique relatórios existentes.** Com o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], você pode personalizar e atualizar relatórios criados no Designer de Relatórios do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 -   **Modifique seus dados** filtrando, agrupando e classificando dados ou adicionando fórmulas ou expressões.  
-  
 -   **Adicione gráficos, medidores, minigráficos e indicadores** para resumir dados em um formato visual e apresentar grandes volumes de informações agregadas de forma concisa.  
   
 -   **Adicione recursos interativos** , como mapas de documento, botões para mostrar/ocultar e links de detalhamento, a sub-relatórios e relatórios de detalhamento. Use parâmetros e filtros para filtrar dados para exibições personalizadas.  
@@ -73,7 +75,7 @@ ms.locfileid: "56290294"
 
   [Novidades no SQL Server Reporting Services e no Construtor de Relatórios](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   Descreve os novos recursos nesta versão do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].   
-  [Tutorial: Criar um relatório de gráficos rápido offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [Tutorial: Criando um relatório de gráfico rápido offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Apresenta o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] e os assistentes disponíveis para ajudá-lo a criar relatórios. O tutorial fornece um conjunto de dados com o qual trabalhar, de modo que você não precise se conectar a uma fonte de dados para começar.  
   
  [Planejando um relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  

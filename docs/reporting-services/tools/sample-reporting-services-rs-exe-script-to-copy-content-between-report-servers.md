@@ -2,18 +2,18 @@
 title: Script rs.exe de exemplo do Reporting Services para cópia de conteúdo entre servidores de relatório | Microsoft Docs
 ms.date: 03/26/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 62048b27a917684188c8d8c47cfc67817ed63efa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ac4cd0cda54e3bb6c0f6723155f7be22b544a5a5
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528577"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571444"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Script rs.exe do Reporting Services de exemplo para copiar conteúdo entre Servidores de Relatório
 
@@ -62,7 +62,7 @@ O script pode ser usado para copiar o conteúdo entre servidores de relatório d
 |Assinaturas|Sim|Sim||  
 |Configurações de histórico|Sim|Sim|As configurações de histórico são migradas, mas os detalhes do histórico NÃO.|  
 |opções de processamento|Sim|Sim||  
-|opções de atualização de cache|Sim|Sim|As configurações dependentes são migradas como parte de um item de catálogo. O exemplo a seguir está fora do script, pois migra um relatório (.rdl) e as configurações relacionadas como opções de atualização de cache:<br /><br /> -   Migrando parâmetros para o relatório TitleOnly.rdl 0 itens encontrados.<br />-   Migrando assinaturas para o relatório TitleOnly.rdl 1 item encontrado.<br />-   Migrando assinaturas Salvar em \\\server\public\savedreports como TitleOnly... SUCCESS<br />-   Migrando configurações do histórico para o relatório TitleOnly.rdl... SUCCESS<br />-   Migrando opções de processamento para o relatório TitleOnly.rdl... 0 items found.<br />-   Migrando opções de atualização do cache para o relatório TitleOnly.rdl... SUCCESS<br />-   Migrando planos de atualização de cache para o relatório TitleOnly.rdl: 1 item encontrado.<br />-   Migrando plano de atualização do cache titleonly_refresh735amM2F... SUCCESS|  
+|opções de atualização de cache|Sim|Sim|As configurações dependentes são migradas como parte de um item de catálogo. O exemplo a seguir está fora do script, pois migra um relatório (.rdl) e as configurações relacionadas como opções de atualização de cache:<br /><br /> -   Migrando parâmetros para o relatório TitleOnly.rdl 0 itens encontrados.<br />-   Migrando assinaturas para o relatório TitleOnly.rdl 1 item encontrado.<br />-   Migrando assinaturas Salvar em \\\server\public\savedreports como TitleOnly... SUCCESS<br />-   Migrando configurações do histórico para o relatório TitleOnly.rdl... SUCCESS<br />-   Migrando opções de processamento para o relatório TitleOnly.rdl... Nenhum item encontrado.<br />-   Migrando opções de atualização do cache para o relatório TitleOnly.rdl... SUCCESS<br />-   Migrando planos de atualização de cache para o relatório TitleOnly.rdl: 1 item encontrado.<br />-   Migrando plano de atualização do cache titleonly_refresh735amM2F... SUCCESS|  
 |Planos de atualização de cache|Sim|Sim||  
 |Imagens|Sim|Sim||  
 |Partes de relatório|Sim|Sim||  

@@ -1,47 +1,43 @@
 ---
-title: Log de rastreamento de serviço do servidor de relatório | Microsoft Docs
-ms.date: 03/16/2017
+title: Log de rastreamento do serviço Servidor de Relatório
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-helpviewer_keywords:
-- logs [Reporting Services], trace
-- traces [Reporting Services]
-- system information [Reporting Services]
-- versions [Reporting Services]
-ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ad166eb92770d133137296d31262d202a540d94f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/23/2019
+ms.openlocfilehash: d1efc5b57191ec17f610206115743b656d58d4b3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813789"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581383"
 ---
 # <a name="report-server-service-trace-log"></a>Log de rastreamento do serviço Servidor de Relatório
-  O log de rastreamento do servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é um arquivo de texto ASCII que contém informações detalhadas de operações do serviço Servidor de Relatório.  As informações nos arquivos incluem operações executadas pelo serviço Web Servidor de Relatórios, portal da Web e processamento em segundo plano. O arquivo de log de rastreamento inclui informações redundantes que estão registradas em outros arquivos de log, além de informações adicionais que, de outro modo, não seriam disponibilizadas. As informações do log de rastreamento serão úteis se você estiver depurando um aplicativo que inclui um servidor de relatório ou investigando um problema específico que foi gravado no log de evento ou de execução. Por exemplo, ao solucionar problemas com assinaturas.  
- 
-##  <a name="bkmk_view_log"></a> Onde estão os arquivos de log do Servidor de Relatório?  
- Os arquivos de log de rastreamento são `ReportServerService_<timestamp>.log` e `Microsoft.ReportingServices.Portal.WebHost_<timestamp>.log` e estão localizados na seguinte pasta:  
-  
- `C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`  
-  
- Os logs de rastreamento são criados diariamente, começando na primeira entrada que ocorre após a meia-noite (horário local) e sempre que o serviço é reiniciado. O carimbo de data e hora é baseado em UTC (Tempo Universal Coordenado). O arquivo está em formato pt-BR. Por padrão, os logs de rastreamento são limitados a 32 megabytes e, por padrão, excluídos depois de 14 dias.  
-  
- Exibir um breve vídeo que demonstra o uso do Microsoft Power Query para exibir arquivos de log [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
-  
-[![Veja um vídeo demonstrando arquivos de log do ssrs e do power query](../../reporting-services/report-server/media/generic-video-thumbnail.png)](https://technet.microsoft.com/library/sql-server-reporting-services-log-files-and-microsoft-power-query.aspx)  [Usar o Microsoft Power Query para exibir arquivos de log do Reporting Services](https://technet.microsoft.com/library/sql-server-reporting-services-log-files-and-microsoft-power-query.aspx)
-  
-##  <a name="bkmk_trace_configuration_settings"></a> Configurações de rastreamento  
- O comportamento do log de rastreamento é gerenciado no arquivo de configuração **ReportingServicesService.exe.config**. O arquivo de configuração está localizado no caminho de pasta a seguir:  
+
+Os logs de rastreamento do servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são um arquivo de texto ASCII que contém informações detalhadas de operações do serviço Servidor de Relatório.  As informações nos arquivos incluem operações executadas pelo serviço Web do servidor de relatório, o portal da Web e o processamento em segundo plano. O arquivo de log de rastreamento inclui informações redundantes que estão registradas em outros arquivos de log, além de informações adicionais que, de outro modo, não seriam disponibilizadas. As informações do log de rastreamento serão úteis se você estiver depurando um aplicativo que inclui um servidor de relatório ou investigando um problema específico que foi gravado no log de evento ou de execução. Por exemplo, ao solucionar problemas com assinaturas.  
+
+## <a name="bkmk_view_log"></a> Onde estão os arquivos de log do Servidor de Relatório?
+
+Os arquivos de log de rastreamento são `ReportServerService_<timestamp>.log` e `Microsoft.ReportingServices.Portal.WebHost_<timestamp>.log` e estão localizados na seguinte pasta:
+
+`C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles` 
+
+Os logs de rastreamento são criados diariamente, começando na primeira entrada que ocorre após a meia-noite (horário local) e sempre que o serviço é reiniciado. O carimbo de data e hora é baseado em UTC (Tempo Universal Coordenado). O arquivo está em formato pt-BR. Por padrão, os logs de rastreamento são limitados a 32 megabytes e, por padrão, excluídos depois de 14 dias.  
+
+## <a name="bkmk_trace_configuration_settings"></a> Configurações de rastreamento
+
+O comportamento do log de rastreamento é gerenciado no arquivo de configuração **ReportingServicesService.exe.config**. O arquivo de configuração está localizado no caminho de pasta a seguir:  
   
  `\Program Files\Microsoft SQL Server\MSRS13.<instance name>\Reporting Services\ReportServer\bin`.  
   
  O exemplo a seguir ilustra a estrutura XML das configurações **RStrace** . O valor de **DefaultTraceSwitch** determina o tipo de informações que são adicionadas ao log. Exceto para o atributo **Components** , os valores de **RStrace** são iguais em todos os arquivos de configuração.  
   
-```  
+```
   \<system.diagnostics>
     <switches>
       <add name="DefaultTraceSwitch" value="3" />
@@ -71,44 +67,47 @@ ms.locfileid: "51813789"
 |**TraceListeners**|Especifica um destino para a saída do conteúdo do log de rastreamento. Você pode especificar vários destinos usando uma vírgula para separar cada um.|Os valores válidos são:<br /><br /> <br /><br /> DebugWindow<br /><br /> File (padrão)<br /><br /> StdOut|  
 |**TraceFileMode**|Especifica se os logs de rastreamento contêm dados para um período de 24 horas. Um log de rastreamento exclusivo deve existir para cada componente em cada dia.|Esse valor é definido como "Unique (default)". Não modifique esse valor.|  
 |**Categoria do componente**|Especifica os componentes para os quais as informações do log de rastreamento são geradas e o nível de rastreamento neste formato:<br /><br /> \<component category>:\<tracelevel><br /><br /> Você pode especificar todos ou alguns componentes (**all**, **RunningJobs**, **SemanticQueryEngine**, **SemanticModelGenerator**). Se não desejar gerar informações para um componente específico, desabilite o rastreamento desse componente (por exemplo, "SemanticModelGenerator:0"). Não desabilite o rastreamento para **all**.<br /><br /> Defina "SemanticQueryEngine:4" se desejar exibir as instruções Transact-SQL geradas para cada consulta semântica. As instruções Transact-SQL são registradas no log de rastreamento. O exemplo a seguir ilustra a configuração que adiciona instruções Transact-SQL ao log:<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|As categorias de componente podem ser definidas como:<br /><br /> <br /><br /> **All** é usado para rastrear atividades gerais dos servidor de relatório para todos os processos que não estão incluídos em categorias específicas.<br /><br /> **RunningJobs** é usado para rastrear uma operação de relatório ou de assinatura em andamento.<br /><br /> **SemanticQueryEngine** é usado para rastrear uma consulta semântica que é processada quando um usuário executa uma exploração de dados ad hoc em um relatório baseado em modelos.<br /><br /> **SemanticModelGenerator** é usado para rastrear a geração do modelo.<br /><br /> **http** é usado para habilitar o arquivo de log HTTP do servidor de relatório. Para obter mais informações, consulte [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md).|  
-|Valor**tracelevel** para categorias de componentes|\<component category>:\<tracelevel><br /><br /> <br /><br /> Se você não adicionar um nível de rastreamento ao componente, o valor especificado para **DefaultTraceSwitch** será usado. Por exemplo, se você especificar "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator", todos os componentes utilizarão o nível de rastreamento padrão.|Os valores válidos de nível de rastreamento são:<br /><br /> <br /><br /> 0 = Desabilita o rastreamento<br /><br /> 1 = Exceções e reinicializações<br /><br /> 2 = Exceções, reinicializações, avisos<br /><br /> 3 = Exceções, reinicializações, avisos, mensagens de status (padrão)<br /><br /> 4 = Modo detalhado<br /><br /> O valor padrão do servidor de relatório é: "all:3".|  
+|Valor de **tracelevel** para categorias de componentes|\<component category>:\<tracelevel><br /><br /> <br /><br /> Se você não adicionar um nível de rastreamento ao componente, o valor especificado para **DefaultTraceSwitch** será usado. Por exemplo, se você especificar "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator", todos os componentes utilizarão o nível de rastreamento padrão.|Os valores válidos de nível de rastreamento são:<br /><br /> <br /><br /> 0 = Desabilita o rastreamento<br /><br /> 1 = Exceções e reinicializações<br /><br /> 2 = Exceções, reinicializações, avisos<br /><br /> 3 = Exceções, reinicializações, avisos, mensagens de status (padrão)<br /><br /> 4 = Modo detalhado<br /><br /> O valor padrão do servidor de relatório é: "all:3".|  
   
-##  <a name="bkmk_add_custom"></a> Adicionando configurações personalizadas para especificar um local de arquivo de despejo  
- Você pode adicionar uma configuração personalizada para definir o local usado pela ferramenta Dr. Watson para Windows usa para armazenar arquivos de despejo. A configuração personalizada é **Directory**. O exemplo a seguir fornece uma ilustração de como esta configuração é especificada na seção **RStrace** :  
-  
-```  
+## <a name="bkmk_add_custom"></a> Adicionando configurações personalizadas para especificar um local de arquivo de despejo  
+Você pode adicionar uma configuração personalizada para definir o local usado pela ferramenta Dr. Watson para Windows usa para armazenar arquivos de despejo. A configuração personalizada é **Directory**. O exemplo a seguir fornece uma ilustração de como esta configuração é especificada na seção **RStrace** :  
+
+```
 <add name="Directory" value="U:\logs\" />  
 ```  
   
- Para obter mais informações, consulte o [Artigo 913046 da Base de Dados de Conhecimento](https://support.microsoft.com/?kbid=913046) no site do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+Para obter mais informações, consulte o [Artigo 913046 da Base de Dados de Conhecimento](https://support.microsoft.com/?kbid=913046) no site do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-##  <a name="bkmk_log_file_fields"></a> Campos do arquivo de log  
- Os campos a seguir podem ser localizados em um log de rastreamento:  
+##  <a name="bkmk_log_file_fields"></a> Campos do arquivo de log
+
+Os campos a seguir podem ser localizados em um log de rastreamento:  
   
--   Informações de sistema, incluindo o sistema operacional, a versão, o número de processadores e a memória.  
+- Informações de sistema, incluindo o sistema operacional, a versão, o número de processadores e a memória.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e informações de versão.  
+- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e informações de versão.  
   
--   Eventos registrados no log de aplicativo.  
+- Eventos registrados no log de aplicativo.  
   
--   Exceções geradas pelo servidor de relatório.  
+- Exceções geradas pelo servidor de relatório.  
   
--   Avisos sobre poucos recursos registrados por um servidor de relatório.  
+- Avisos sobre poucos recursos registrados por um servidor de relatório.  
   
--   Envelopes SOAP de entrada e envelopes SOAP de saída resumidos.  
+- Envelopes SOAP de entrada e envelopes SOAP de saída resumidos.  
   
--   Cabeçalho HTTP, rastreamento de pilha e informações de rastreamento de depuração.  
+- Cabeçalho HTTP, rastreamento de pilha e informações de rastreamento de depuração.  
   
  Você pode revisar as informações do log de rastreamento para determinar se uma entrega de relatório ocorreu, quem recebeu o relatório e quantas tentativas de entrega foram feitas. Os logs de rastreamento também registram atividades de execução de relatório e as variáveis de ambiente que estão habilitadas durante o processamento do relatório. Erros e exceções também são incluídos em logs de rastreamento. Por exemplo, você pode localizar erros de tempo limite de relatório (indicados como uma entrada **ThreadAbortExceptions** ).  
 
 ## <a name="previous-versions"></a>Versões anteriores
+
 Em versões anteriores do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], havia vários arquivos de log de rastreamento, um para cada aplicativo. Os arquivos a seguir estão obsoletos e não são mais criados no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e em versões mais recentes:
 + ReportServerWebApp_*\<timestamp>*.log
 + ReportServer_*\<timestamp>*.log
 + ReportServerService_main_*\<timestamp>*.log
   
-## <a name="see-also"></a>Consulte Também  
- [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Referência de erros e eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
- Ainda tem dúvidas? [Experimente o fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
-  
+## <a name="see-also"></a>Confira também
+
+- [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+- [Referência de erros e eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+
+Ainda tem dúvidas? [Experimente o fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

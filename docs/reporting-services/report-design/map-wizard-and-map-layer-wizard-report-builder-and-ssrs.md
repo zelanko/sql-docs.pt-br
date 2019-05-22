@@ -2,7 +2,7 @@
 title: Assistente de Mapa e Assistente de Camada do Mapa (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: reference
 f1_keywords:
@@ -10,14 +10,14 @@ f1_keywords:
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6c624ba5df22bdd519b464677c154c1718beab3c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8587cedde63352f7027e573092c6e8ae02dc218d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294931"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580121"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistente de Mapa e Assistente de Camada do Mapa (Construtor de Relatórios e SSRS)
  Nos relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , o Assistente de Mapa e o Assistente de Camada do Mapa automatizam a tarefa de criar um mapa, adicionar uma camada a um mapa ou alterar as opções de camada do mapa em uma camada existente.  
@@ -26,7 +26,7 @@ ms.locfileid: "56294931"
   
 -   **Fonte de dados espaciais.** O local ou a conexão com uma fonte que fornece dados espaciais, por exemplo, o nome de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um banco de dados que contém dados espaciais ou o nome de um arquivo de forma ESRI (Environmental Systems Research Institute, Inc.).  
   
--   **Spatial data.** Um campo que contém conjuntos de coordenadas que especificam locais da fonte de dados espaciais.  
+-   **.** Um campo que contém conjuntos de coordenadas que especificam locais da fonte de dados espaciais.  
   
 -   **Dados analíticos.** Dados analíticos a serem usados para variar a exibição do mapa, por exemplo, vendas anuais da loja.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "56294931"
   
  Clique no título da página do assistente para obter o respectivo conteúdo de ajuda. As páginas exibidas variarão de acordo com as suas escolhas de tipo de mapa, a fonte de dados espaciais e a fonte de dados analíticos.  
   
-1.  [Escolha uma fonte de dados espaciais](#SpatialDataSource). Os dados espaciais podem vir da galeria de mapas, de um Arquivo de Forma ESRI ou de dados espaciais em um banco de dados relacional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  [Escolha uma fonte de dados espaciais](#SpatialDataSource). Os dados espaciais podem vir da galeria de mapas, de um Arquivo de Forma ESRI ou de dados espaciais em um banco de dados relacional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     -   [O que são dados espaciais?](#SpatialData)  
   
@@ -70,11 +70,11 @@ ms.locfileid: "56294931"
   
     -   [Qual é a diferença entre um Mapa Básico, um Mapa de Bolha e um Mapa Analítico?](#MapType)  
   
-    -   Escolher a visualização do mapa: Polígonos  
+    -   Escolher visualização de mapa: Polígonos  
   
-    -   Escolher a visualização do mapa: Linhas  
+    -   Escolher visualização de mapa: Linhas  
   
-    -   Escolher a visualização do mapa: Pontos  
+    -   Escolher visualização de mapa: Pontos  
   
 4.  Escolher uma conexão com uma fonte de dados, escolher visualização de mapa: Pontos. Escolha uma conexão de fonte de dados ou crie uma com uma fonte de dados externa que contenha dados analíticos a serem exibidos no mapa.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "56294931"
   
  Depois que adicionar um mapa ou camada do mapa e visualizar o relatório, você poderá alterar as opções do mapa e da camada do mapa que definir nos assistentes. Para obter mais informações, consulte [Personalizar os dados e a exibição de um mapa ou de uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Para obter mais informações sobre mapas, consulte [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md). Confira instruções passo a passo sobre como adicionar um mapa a um relatório no [Tutorial: Relatório de Mapa &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-map-report-report-builder.md).  
+ Para obter mais informações sobre mapas, consulte [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md). Para obter instruções passo a passo sobre como adicionar um mapa a um relatório, consulte [Tutorial: relatório de mapa &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-map-report-report-builder.md).  
   
 ##  <a name="SpatialDataSource"></a> Escolha uma fonte de dados espaciais  
  Nesta página, especifique a fonte de dados espaciais e quais dados espaciais deverão ser incluídos. Os dados espaciais podem vir da galeria de mapas, de um Arquivo de Forma ESRI ou de uma consulta de conjunto de dados que especifique dados espaciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um banco de dados do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou de uma versão posterior.  
@@ -185,7 +185,7 @@ ms.locfileid: "56294931"
   
  Para obter mais informações sobre peças, consulte [Sistema de Peças do Bing Maps](https://go.microsoft.com/fwlink/?LinkId=147315). Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
- Para visualizar um plano de fundo de peça no modo Design, você deve ter acesso à Internet. Para visualizar o plano de fundo de peça na visualização de um relatório em um servidor de relatório, esse servidor deve ser configurado para dar suporte a peças de mapa do Bing. Confira mais informações em [Solucionar problemas de relatórios: Mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) e [Planejar um Relatório de Mapa](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
+ Para visualizar um plano de fundo de peça no modo Design, você deve ter acesso à Internet. Para visualizar o plano de fundo de peça na visualização de um relatório em um servidor de relatório, esse servidor deve ser configurado para dar suporte a peças de mapa do Bing. Para obter mais informações, consulte [Solução de problemas de relatórios: relatórios de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) e [Planejar um relatório de mapa](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
  Para obter mais informações sobre outras maneiras de personalizar uma camada lado a lado, consulte [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
@@ -248,7 +248,7 @@ ms.locfileid: "56294931"
  O processador de relatório aplica as regras que você define e determina automaticamente a lista de itens a serem exibidos em uma legenda. Por padrão, os resultados de todas regras para todas as camadas exibidas na primeira legenda. Você poderá ajustar isso depois que concluir o assistente. Para obter mais informações, consulte [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Solucionar problemas de relatórios: Mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Solução de problemas de relatórios: relatórios de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Planejar um relatório de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
