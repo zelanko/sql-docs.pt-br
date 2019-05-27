@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10426"
@@ -18,12 +17,12 @@ ms.assetid: 2da24891-0b6d-4d3c-8b18-81b98752642f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 77b6eb7d3e82e2741c87612265ca69a75e369204
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d3f9f6fa990aa3c976565968ccb69bb3d18c25f6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62657360"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107955"
 ---
 # <a name="report-builder-help-for-dialog-boxes-panes-and-wizards"></a>Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes
   Esta seção contém Ajuda para muitos dos assistentes, exibições, painéis e caixas de diálogo do Construtor de Relatórios. De modo alternativo, você pode abrir a Ajuda pressionando F1 ou clicando no botão Ajuda exibido na caixa de diálogo.  

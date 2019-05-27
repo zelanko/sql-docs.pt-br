@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b43d901205e13f4e0e728705e3764512dc26647
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fb3e97175b1580b7f149fd3ba0e97584e281ec04
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143676"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090405"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
   Os editores no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oferecem suporte a opções do [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense que reduzem a digitação, fornecem acesso rápido a informações de sintaxe ou facilitam a exibição dos delimitadores de expressões complexas.  

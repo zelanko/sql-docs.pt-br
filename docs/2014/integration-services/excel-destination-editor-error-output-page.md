@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldestadapter.erroroutput.f1
@@ -15,12 +14,12 @@ ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 32b587a81fbafd583e82a8f4af98f4b58077807d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7eb1fa72d3ee607405a3ddc1dadafdac5d3e0088
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769594"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059194"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Editor de Destino do Excel (página Saída de Erro)
   Use a página **Avançado** da caixa de diálogo **Editor de Destinos do Excel** para especificar opções de tratamento de erro.  

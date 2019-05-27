@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.patheditor.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 72a9ff1d-3748-41d1-a9b2-63f4a77bba24
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3268aa2ffcb69ccde4ae08513ff17a4c9572b10e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828364"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059961"
 ---
 # <a name="data-flow-path-editor-general-page"></a>Editor de Caminho do Fluxo de Dados (página Geral)
   Use a caixa de diálogo **Editor de Caminho de Fluxo de Dados** para definir propriedades de caminho, visualizar metadados de colunas e gerenciar os visualizadores de dados que estão anexados ao caminho.  

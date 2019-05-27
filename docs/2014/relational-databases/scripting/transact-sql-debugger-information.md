@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -18,12 +17,12 @@ ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf132c55677580a22e57e52a106e3e7c639c3cef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 354b3fa047fb1fd0effc4f92f18c011d85fcb1e2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147436"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063428"
 ---
 # <a name="transact-sql-debugger-information"></a>Informações do depurador Transact-SQL
   Toda vez que o depurador pausa a execução em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, você pode usar as várias janelas do depurador para exibir o estado de execução atual.  
@@ -41,7 +40,7 @@ ms.locfileid: "48147436"
 -   Na barra de ferramentas de **Depurar** , clique em **Pontos de Interrupção**e selecione a janela desejada.  
   
 ## <a name="transact-sql-expressions"></a>Expressões Transact-SQL  
- Expressões são cláusulas [!INCLUDE[tsql](../../includes/tsql-md.md)] que são avaliadas como um valor escalar simples, como, por exemplo, variáveis ou parâmetros. A janela esquerda do depurador pode exibir os valores dos dados que são atribuídos no momento a expressões em até cinco guias ou janelas: **Locais, Inspecionar 1**, **Inspecionar 2**, **Inspecionar 3**e **Inspecionar 4**.  
+ Expressões são cláusulas [!INCLUDE[tsql](../../includes/tsql-md.md)] que são avaliadas como um valor escalar simples, como, por exemplo, variáveis ou parâmetros. A janela esquerda do depurador pode exibir os valores dos dados que são atribuídos no momento a expressões em até cinco guias ou janelas: **Locais, Inspecionar 1**, **Inspecionar 2**, **Inspecionar 3** e **Inspecionar 4**.  
   
  A janela **Locais** exibe informações sobre os variáveis locais no escopo atual do depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] . O conjunto de expressões listadas na janela **Locais** é alterado à medida que o depurador é executado por meio de partes diferentes do código.  
   

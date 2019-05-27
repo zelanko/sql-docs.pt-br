@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], properties
@@ -13,12 +12,12 @@ ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 341ada76e65676050f9034df65f7a5f28284a3a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 05e98e0a735cc54e129b82c65841c6db688953de
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62878285"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055666"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>Definir as propriedades de uma tarefa ou de um contêiner
   Você pode definir a maioria das propriedades de tarefas e contêineres usando a janela **Propriedades** . As exceções são as propriedades de coleções de tarefas e as propriedades que são muito complexas para se definir usando a janela **Propriedades** . Por exemplo, você não pode configurar o enumerador que o contêiner Loop Foreach usa na janela **Propriedades** . Você deve usar um editor de tarefa ou de contêiner para definir essas propriedades complexas. A maioria dos editores de tarefas e contêineres possui vários nós, e cada nó contém propriedades relacionadas. O nome do nó indica o assunto das propriedades contidas no nó.  

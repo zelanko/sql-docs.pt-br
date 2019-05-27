@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -16,12 +15,12 @@ ms.assetid: 3c7e9ebb-d0c9-498e-a9ba-cc13eaa43520
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 572c331cb5f9a88ee78cb26544772b126405c02c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 06c466eb5e3275818a710a9f9d90c705ed93c957
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732209"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081862"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>Detectar Categorias (Ferramentas de Análise de Tabela para Excel)
   ![Botão de categorias de detectar na faixa de opções](media/tat-detectcat.gif "botão detectar categorias na faixa de opções")  

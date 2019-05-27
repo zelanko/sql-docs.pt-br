@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4c6114fac83862198b37647f6350d657df878ca5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767268"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057754"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Mapear conjuntos de resultados para variáveis em uma tarefa Executar SQL
   Este tópico descreve como criar um mapeamento entre um conjunto de resultados e uma variável em uma tarefa Executar SQL. O mapeamento de um conjunto de resultados para uma variável disponibiliza o conjunto de resultados para outros elementos no pacote. Por exemplo, um script em uma tarefa Script pode ler a variável e usar os valores do conjunto de resultados; ou uma origem XML pode consumir o conjunto de resultados armazenado em uma variável. Se o conjunto de resultados for gerado por um pacote pai, ele poderá ser disponibilizado para um pacote filho chamado por uma tarefa Executar Pacote, mapeando o conjunto de resultados para uma variável no pacote pai e, em seguida, criando uma configuração de variável de pacote pai no pacote filho para armazenar o valor da variável pai.  

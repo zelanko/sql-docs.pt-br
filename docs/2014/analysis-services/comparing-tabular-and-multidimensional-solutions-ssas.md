@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 498cba5d7ccb4e97de13d9cb46e58351547d9b75
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680816"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087768"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Comparando soluções tabulares e multidimensionais (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece dois métodos distintos para modelagem de dados: tabela e multidimensionais. Embora haja sobreposição significativa entre eles, também há diferenças importantes que informarão a sua decisão sobre como seguir em frente. Neste tópico, podemos oferecer comparações de recurso e explicar como cada abordagem trata os requisitos comuns de projeto. Por exemplo, se o suporte de uma fonte de dados específica é uma consideração importante, a seção sobre fontes de dados pode ajudar a orientar sua decisão sobre qual abordagem de modelagem utilizar.  
@@ -98,24 +97,24 @@ ms.locfileid: "62680816"
 ||||  
 |-|-|-|  
 ||**Multidimensional**|**Tabular**|  
-|Ações|[Sim](multidimensional-models/actions-in-multidimensional-models.md)|Não|  
-|Objetos de agregação|[Sim](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|Não|  
+|Ações|[Sim](multidimensional-models/actions-in-multidimensional-models.md)|Não |  
+|Objetos de agregação|[Sim](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|Não |  
 |Medidas calculadas|[Sim](multidimensional-models/create-calculated-members.md)|Sim|  
-|Assemblies personalizados|[Sim](multidimensional-models/multidimensional-model-assemblies-management.md)|Não|  
-|Rollups personalizados|Sim|Não|  
+|Assemblies personalizados|[Sim](multidimensional-models/multidimensional-model-assemblies-management.md)|Não |  
+|Rollups personalizados|Sim|Não |  
 |Contagem Distinta|[Sim](multidimensional-models/use-aggregate-functions.md)|Sim (via DAX) *|  
 |Detalhamento|[Sim](multidimensional-models/actions-in-multidimensional-models.md)|Sim|  
 |Hierarquias|[Sim](multidimensional-models/user-defined-hierarchies-create.md)|Sim|  
 |KPIs|[Sim](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|Sim|  
 |Grupos de medidas vinculados|[Sim](multidimensional-models/linked-measure-groups.md)|Não|  
-|Relações muitos para muitos|[Sim](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|Não|  
+|Relações muitos para muitos|[Sim](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|Não |  
 |Hierarquias pai-filho|[Sim](multidimensional-models/parent-child-dimension.md)|Sim (por DAX)|  
 |Partições|[Sim](tabular-models/partitions-ssas-tabular.md)|  
 |perspectivas|[Sim](multidimensional-models/perspectives-in-multidimensional-models.md)|[Sim](tabular-models/partitions-ssas-tabular.md)|  
 |Medidas semiaditivas|[Sim](multidimensional-models/define-semiadditive-behavior.md)|Sim (por DAX)|  
-|Translations|[Sim](multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Não|  
+|Translations|[Sim](multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Não |  
 |Hierarquias definidas pelo usuário|[Sim](multidimensional-models/user-defined-hierarchies-create.md)|Sim|  
-|Write-back|[Sim](multidimensional-models/set-partition-writeback.md)|Não|  
+|Write-back|[Sim](multidimensional-models/set-partition-writeback.md)|Não |  
   
  * Se sua solução deve dar suporte a um número muito grande de contagens distintas (como muitos milhões de IDs de cliente), considere a tabela primeiro. Ela costuma ser mais funcional nesse cenário. Consulte a seção sobre contagens distintas no white paper, [estudo de caso do Analysis Services: Usando modelos de tabela em soluções comerciais de larga escala](https://msdn.microsoft.com/library/dn751533.aspx).  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 436b4c3d-3f2f-464a-be7e-5c051d9ffb8f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 27e6b4a1fb9726496ac4ae99a08b2e47a9136562
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 66c366bfe8dbf79d2f392627ad018747357e7da4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63195210"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095677"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>Lista de verificação de implantação: Instalar o Reporting Services em um farm existente do SharePoint
   Os servidores de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint podem ser instalados em um novo farm do SharePoint ou em um farm existente do SharePoint. Este tópico descreve os cenários possíveis e as práticas recomendadas para a instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um farm existente do SharePoint.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.DatabaseProperties.f1
@@ -13,12 +12,12 @@ ms.assetid: 0f0ec02f-7b55-40ea-8a04-ed0deb1efd7a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f8204913babd9b52caf2edcaa2de8feae76c70d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8361508d678e407be9bed6eb18e8c221364daf61
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732298"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082358"
 ---
 # <a name="database-properties-dialog-box-ssas---tabular"></a>Caixa de diálogo Propriedades de Banco de Dados (SSAS - Tabela)
   Esta caixa de diálogo fornece carimbos de data/hora e outras informações descritivas, mais propriedades personalizáveis que determinam se o banco de dados usa dados armazenados em cache. Outras propriedades personalizáveis incluem a alteração do nome do banco de dados e a especificação das opções de representação.  

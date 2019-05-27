@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f7cc154a79a329bc18d02535e3f3332aa7e8b61
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 288f9e0d5a86e34db2fdd81163f229eff5275606
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62655813"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064342"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>Alterações no comportamento de recursos do Analysis Services no SQL Server 2014
   Este tópico descreve as alterações de comportamento do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para implementações multidimensionais, tabulares, de mineração de dados e [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] . As alterações de comportamento afetam a maneira como os recursos funcionam ou interagem na versão atual em comparação com as versões anteriores do SQL Server.  

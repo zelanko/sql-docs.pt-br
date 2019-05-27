@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.columns.f1
@@ -13,12 +12,12 @@ ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8a5fbff347c6b06d500f3baebe3dd980000f0bd2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1eba4cb2f1f5c8825e9cae5751fe230fbe45a835
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62836987"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061698"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>Editor de Origem ADO NET (Página Colunas)
   Use a página **Colunas** da caixa de diálogo do **Editor de Origem ADO NET** para mapear uma coluna de saída em cada coluna externa (origem).  

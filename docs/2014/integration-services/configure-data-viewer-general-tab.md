@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc1fc6573b977a0f959aef51c960182904f660d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a482a4d615c12023cceb6995eb9f261b6dd86a98
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834348"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060665"
 ---
 # <a name="configure-data-viewer-general-tab"></a>Configurar Visualizador de Dados (guia Geral)
   Um visualizador de dados exibe os dados conforme eles migram pelo caminho que conecta dois componentes de fluxo de dados durante uma execução de pacote.  

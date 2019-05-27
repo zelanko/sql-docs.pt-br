@@ -1,7 +1,7 @@
 ---
 title: Conectar-se ao Mecanismo de Banco de Dados usando a Proteção Estendida | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/21/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d04f5e640f7622b5eab6106da29366f164fb6878
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7728a43645b2cd177bcc572a392481a7c5aa9510
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774541"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015006"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar-se ao mecanismo de banco de dados usando proteção estendida
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,13 +81,13 @@ ms.locfileid: "59774541"
      A variável **SPNs NTLM Aceitos** é necessária quando um servidor é conhecido por mais de um SPN. Quando um cliente tentar se conectar ao servidor usando um SPN válido que o servidor não conhece, a associação de serviço falhará. Para evitar esse problema, os usuários poderão especificar vários SPNs que representam o servidor usando **SPNs NTLM Aceitos**. A opção**SPNs NTLM Aceitos** corresponde a uma série de SPNs separados por ponto-e-vírgulas. Por exemplo, para permitir os SPNs **MSSQLSvc/ HostName1.Contoso.com** e **MSSQLSvc/ HostName2.Contoso.com**, digite **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** na caixa **SPNs NTLM Aceitos** . Essa variável tem um tamanho máximo de 2.048 caracteres. A opção**SPNs NTLM Aceitos** está localizada em **Protocolos para Propriedades MSSQLSERVER (Guia Avançado)** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>Habilitando a Proteção Estendida para o mecanismo de banco de dados  
- Para usar a **Proteção Estendida**, o servidor e o cliente devem ter um sistema operacional com suporte para **Proteção Estendida**e a **Proteção Estendida** deve estar habilitada no sistema operacional. Para obter mais informações sobre como habilitar a **Proteção Estendida** para o sistema operacional, consulte [Proteção Estendida para Autenticação](https://support.microsoft.com/kb/968389).  
+ Para usar a **Proteção Estendida**, o servidor e o cliente devem ter um sistema operacional com suporte para **Proteção Estendida**e a **Proteção Estendida** deve estar habilitada no sistema operacional. Para obter mais informações sobre como habilitar a **Proteção Estendida** para o sistema operacional, consulte [Proteção Estendida para Autenticação](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte para a **Proteção Estendida** desde o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. A**Proteção Estendida** para algumas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será disponibilizada em atualizações futuras. Depois de habilitar a **Proteção Estendida** no computador servidor, siga estas etapas para habilitar a **Proteção Estendida**:  
   
 1.  No menu **Iniciar** , escolha **Todos os Programas**, aponte para **Microsoft SQL Server** e clique em **SQL Server Configuration Manager**.  
   
-2.  Expanda **Configuração de Rede do SQL Server** e clique com o botão direito do mouse em **Protocolos para** _\<_NomeDaInstância*>* e em **Propriedades**.  
+2.  Expanda **Configuração de Rede do SQL Server** e clique com o botão direito do mouse em **Protocolos para** _\<_NomeDaInstância *>* e em **Propriedades**.  
   
 3.  Para associação de canal e associação de serviço, na guia **Avançado** , defina a **Proteção Estendida** com a configuração apropriada.  
   

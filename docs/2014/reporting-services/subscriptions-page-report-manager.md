@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: efa4c0758ed85008ccb04b30a8dcd8e24ed54208
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eec92d7c58b68b14374666f65489f145fa863422
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62511361"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101084"
 ---
 # <a name="subscriptions-page-report-manager"></a>Página Assinaturas (Gerenciador de Relatórios)
   Use a página Assinaturas para listar todas as assinaturas para o relatório atual ou fonte de dados compartilhada. Se você tiver permissão adequada (como a contida na tarefa "Gerenciar todas as assinaturas"), você poderá exibir as assinaturas de todos os usuários. Caso contrário, essa página só mostrará as assinaturas que você possui.  

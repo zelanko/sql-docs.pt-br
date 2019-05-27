@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilderview.f1
@@ -13,12 +12,12 @@ ms.assetid: 00f0b605-5352-4b42-84f5-bd6c3e42d3d1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ef8764f2fa5e0cf135c6e3b4156964e6f904f8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d4a60b80b19bd8c04964e30c035cf2330605fc25
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679681"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086575"
 ---
 # <a name="cube-structure-cube-designer-analysis-services---multidimensional-data"></a>Estrutura do Cubo (Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use a guia **Estrutura do Cubo** no **Designer de Cubo** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar e modificar medidas e grupos de medidas, adicionar dimensões de cubos e exibir os objetos incluídos no cubo a partir da exibição da fonte de dados associada.  

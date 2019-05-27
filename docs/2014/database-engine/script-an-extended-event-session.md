@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 80f9fdde-1f13-4292-a4fc-55da826be3b4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8b790bfcc57341e9ad13d29df9e982a524526aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 072a3220ba5c6997c463031733bbbe0ce2587fe1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62843578"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088911"
 ---
 # <a name="script-an-extended-event-session"></a>Criar script de uma sessão de evento estendido
   Este tópico descreve como criar o script de uma sessão de evento. Você pode exportar, alterar ou remover a sessão de evento, ou remover e criar a sessão de evento para o seguinte:  

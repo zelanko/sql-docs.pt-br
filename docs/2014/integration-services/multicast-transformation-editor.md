@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multicasttransformation.f1
@@ -15,12 +14,12 @@ ms.assetid: 96155ed9-6597-4fe1-8f9f-b741b18ba2c1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6d104be53fa742494a3f7dca759df4105e32874
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c4013483838f81e9147eb45c84598c9cc73016fd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767190"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057617"
 ---
 # <a name="multicast-transformation-editor"></a>Editor de Transformação Difusão Seletiva
   Use a caixa de diálogo **Editor de Transformação Difusão Seletiva** para exibir e definir as propriedades de cada saída de transformação.  

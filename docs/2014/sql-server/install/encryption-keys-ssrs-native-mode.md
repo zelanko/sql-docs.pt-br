@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.encryptionkeypanel.F1
@@ -13,12 +12,12 @@ ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aa9460222d756c76e1ed6489688315ea8b7b0f18
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 16ac264f89c541f0a864f8b47ed008fa254f181c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63223252"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095422"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>Chaves de Criptografia (modo nativo do SSRS)
   Use a página Chaves de Criptografia para gerenciar a chave simétrica usada para criptografar e descriptografar dados em um servidor de relatório. O gerenciamento das chaves de criptografia é uma parte importante da configuração do servidor de relatório. A chave simétrica é criada e aplicada automaticamente quando você cria o banco de dados do servidor de relatórios. Crie uma cópia de backup da chave simétrica de modo que você possa executar operações de manutenção rotineiras. As seguintes tarefas de manutenção requerem que você tenha uma cópia válida da chave simétrica:  

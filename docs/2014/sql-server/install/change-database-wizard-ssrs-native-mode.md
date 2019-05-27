@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.changedatabase.F1
@@ -16,12 +15,12 @@ ms.assetid: 1a2e8d18-5997-482f-a9c1-87d99f7407b8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 50870072259f89af43fc14ee23465f282f4c3e9d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bc07e94db985ce156fdd5cd59620c2e7fddc2d73
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215116"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096665"
 ---
 # <a name="change-database-wizard-ssrs-native-mode"></a>Assistente para Alterar Banco de Dados (modo nativo do SSRS)
   O Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece o Assistente para Alterar Banco de Dados que orienta o usuário nas etapas de criação de um novo banco de dados do servidor de relatório ou de seleção de um banco de dados do servidor de relatório existente a ser usado com a instância do servidor de relatório atual.  

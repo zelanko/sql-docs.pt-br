@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsourceadapter.errorhandling.f1
@@ -15,12 +14,12 @@ ms.assetid: 7737c6ae-c16b-4856-aa6e-5882640093b7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: df4932604a6de27c2205ad0f619939587d02b916
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ddadfc3ab85afbecdff9b9969f7835c749a92bf7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767048"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057009"
 ---
 # <a name="ole-db-source-editor-error-output-page"></a>Editor de Origem de OLE DB (página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo do **Editor de Origem OLE DB** para selecionar opções de tratamento de erro e definir propriedades em colunas de saída de erros.  

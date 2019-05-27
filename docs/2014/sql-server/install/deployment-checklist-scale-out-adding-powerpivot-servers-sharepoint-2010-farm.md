@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 2dbddcc7-427a-4537-a8e2-56d99b9d967d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7bef5104038dad251927c6afff613f248f4a6a47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 300337a2cd4d3275a4fe6b9d8ebfc7a133a3a224
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025699"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095557"
 ---
 # <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>Lista de verificação de implantação: Expandir adicionando servidores do PowerPivot a um farm do SharePoint 2010
   Se você antecipar um alto volume de solicitações para o processamento de consultas PowerPivot em um farm do SharePoint, poderá adicionar uma instância extra do PowerPivot para SharePoint para adicionar diretamente o suporte para a nova consulta e o processamento de dados.  

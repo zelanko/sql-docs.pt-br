@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server Agent]
@@ -13,12 +12,12 @@ ms.assetid: cd2d08c3-4e56-4034-8b68-0c78df8b5471
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e08ed37f94a60e1727dfcd006de7faff0545a23
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a82cbcc9ef1ab57279b44cc83509cb1efad855ca
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62473158"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091397"
 ---
 # <a name="upgrading-will-change-the-sql-server-agent-user-proxy-account-to-the-temporary-upgradedproxyaccount"></a>Atualização mudará a Conta Proxy do Usuário do SQL Server Agent para o UpgradedProxyAccount temporário
   Planos de manutenção de banco de dados que têm envio de log habilitado não serão ativados após a atualização.  
