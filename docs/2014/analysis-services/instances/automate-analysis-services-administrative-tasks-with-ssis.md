@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Execute DDL Task [Analysis Services]
@@ -14,12 +13,12 @@ ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d5d1b3d68038843e15717564e25cb88c181c2bda
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 23efdeddd568c815ad22ce6cf0b5d2026bab813e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729961"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080331"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Automatizar tarefas administrativas do Analysis Services com SSIS
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite que você automatize a execução de scripts de DDL, tarefas de processamento de cubo e de modelo de mineração e tarefas de consulta de mineração de dados. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode ser considerado como uma coleção de tarefas de manutenção e de fluxo de controle, que podem ser vinculadas para formar trabalhos de processamento de dados sequenciais e paralelos.  

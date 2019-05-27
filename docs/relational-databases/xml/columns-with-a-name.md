@@ -1,7 +1,7 @@
 ---
 title: Colunas com um nome | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,16 +13,18 @@ ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bb286cf87f2e0534a1e7df9d988e001fec8a5ee2
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: bb5e1789416ee134ce59fbc3ef107f1165ce76ad
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510013"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175701"
 ---
 # <a name="columns-with-a-name"></a>Colunas com um nome
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  As seguintes são as condições específicas nas quais colunas de conjunto de linhas com um nome são mapeadas, diferenciando maiúsculas e minúsculas, para o XML resultante:  
+
+As seguintes são as condições específicas nas quais colunas de conjunto de linhas com um nome são mapeadas, diferenciando maiúsculas e minúsculas, para o XML resultante:  
   
 -   O nome da coluna começa com uma arroba (\@).  
   
@@ -37,20 +39,17 @@ ms.locfileid: "58510013"
 ## <a name="column-name-starts-with-an-at-sign-"></a>O nome da coluna começa com uma arroba (\@)  
  Se o nome da coluna começar com uma arroba (\@) e não contiver uma barra (/), um atributo do elemento `row` que tem o valor da coluna correspondente será criado. Por exemplo, a consulta a seguir retorna um conjunto de linhas de duas colunas (\@PmId, Name). No XML resultante, um atributo **PmId** é adicionado ao elemento `row` correspondente e um valor de ProductModelID é atribuído a ele.  
   
-```  
-  
+```sql
 SELECT ProductModelID as "@PmId",  
        Name  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
-FOR XML PATH   
-go  
-  
+FOR XML PATH;
 ```  
   
  Este é o resultado:  
   
-```  
+```xml
 <row PmId="7">  
   <Name>HL Touring Frame</Name>  
 </row>  
@@ -58,13 +57,12 @@ go
   
  Observe que os atributos devem vir antes de quaisquer outros tipos de nós, como nós de elemento e nós de texto, no mesmo nível. A consulta a seguir retornará um erro:  
   
-```  
+```sql
 SELECT Name,  
        ProductModelID as "@PmId"  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
-FOR XML PATH   
-go  
+FOR XML PATH;
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>O nome da coluna não começa com uma arroba (\@)  
@@ -72,14 +70,14 @@ go
   
  A consulta a seguir especifica o nome da coluna, o resultado. Portanto, um filho do elemento `result` é adicionado ao elemento `row`.  
   
-```  
+```sql
 SELECT 2+2 as result  
-for xml PATH  
+for xml PATH;
 ```  
   
  Este é o resultado:  
   
-```  
+```xml
 <row>  
   <result>4</result>  
 </row>  
@@ -87,22 +85,22 @@ for xml PATH
   
  O exemplo a seguir especifica o nome da coluna, ManuWorkCenterInformation, para o XML retornado pelo XQuery especificado em relação à coluna Instructions de tipo **xml**. Portanto, um elemento `ManuWorkCenterInformation` é adicionado como um filho do elemento `row`.  
   
-```  
-SELECT   
-       ProductModelID,  
-       Name,  
-       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
-                /MI:root/MI:Location   
-              ') as ManuWorkCenterInformation  
+```sql
+SELECT
+  ProductModelID,  
+  Name,  
+  Instructions.query(
+    'declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";
+     /MI:root/MI:Location
+    ') as ManuWorkCenterInformation  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
-FOR XML PATH   
-go  
+FOR XML PATH;
 ```  
   
  Este é o resultado:  
   
-```  
+```xml
 <row>  
   <ProductModelID>7</ProductModelID>  
   <Name>HL Touring Frame</Name>  
@@ -119,20 +117,20 @@ go
   
  Por exemplo, a consulta a seguir retorna a ID e o nome de um funcionário que são representados como um elemento complexo EmpName que contém um Nome, Segundo nome e Sobrenome.  
   
-```  
+```sql
 SELECT EmployeeID "@EmpID",   
        FirstName  "EmpName/First",   
        MiddleName "EmpName/Middle",   
        LastName   "EmpName/Last"  
 FROM   HumanResources.Employee E, Person.Contact C  
-WHERE  E.EmployeeID = C.ContactID  
-AND    E.EmployeeID=1  
-FOR XML PATH  
+WHERE  E.EmployeeID = C.ContactID  AND
+       E.EmployeeID=1  
+FOR XML PATH;
 ```  
   
  Os nomes de colunas são usados como um caminho para construir XML no modo PATH. O nome da coluna que contém valores de ID de funcionário, começa com “\@”. Portanto, um atributo **EmpID** é adicionado ao elemento `row`. Todas as outras colunas incluem uma barra ('/') no nome da coluna que indica hierarquia. O XML resultante terá o filho `EmpName` sob o elemento `row` e o filho `EmpName` terá os filhos dos elementos `First`, `Middle` e `Last`.  
   
-```  
+```xml
 <row EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
@@ -143,21 +141,21 @@ FOR XML PATH
   
  O segundo nome do funcionário é nulo e, por padrão, o valor nulo é mapeado para a ausência do elemento ou atributo. Se você quiser elementos gerados para os valores NULL, poderá especificar a diretiva ELEMENTS com XSINIL conforme mostrado nesta consulta.  
   
-```  
+```sql
 SELECT EmployeeID "@EmpID",   
        FirstName  "EmpName/First",   
        MiddleName "EmpName/Middle",   
        LastName   "EmpName/Last"  
 FROM   HumanResources.Employee E, Person.Contact C  
-WHERE  E.EmployeeID = C.ContactID  
-AND    E.EmployeeID=1  
-FOR XML PATH, ELEMENTS XSINIL  
+WHERE  E.EmployeeID = C.ContactID  AND
+       E.EmployeeID=1  
+FOR XML PATH, ELEMENTS XSINIL;
 ```  
   
  Este é o resultado:  
   
-```  
-<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+```xml
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
@@ -171,7 +169,7 @@ FOR XML PATH, ELEMENTS XSINIL
   
  Além da ID e do nome, a consulta a seguir recupera um endereço de funcionário. De acordo com o caminho nos nomes das colunas de endereço, um filho do elemento `Address` é adicionado ao elemento `row` e os detalhes do endereço são adicionados como filhos do elemento `Address`.  
   
-```  
+```sql
 SELECT EmployeeID   "@EmpID",   
        FirstName    "EmpName/First",   
        MiddleName   "EmpName/Middle",   
@@ -179,16 +177,18 @@ SELECT EmployeeID   "@EmpID",
        AddressLine1 "Address/AddrLine1",  
        AddressLine2 "Address/AddrLIne2",  
        City         "Address/City"  
-FROM   HumanResources.Employee E, Person.Contact C, Person.Address A  
+FROM   HumanResources.Employee E,
+       Person.Contact C,
+       Person.Address A  
 WHERE  E.EmployeeID = C.ContactID  
 AND    E.AddressID = A.AddressID  
 AND    E.EmployeeID=1  
-FOR XML PATH  
+FOR XML PATH;
 ```  
   
  Este é o resultado:  
   
-```  
+```xml
 <row EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
@@ -207,7 +207,7 @@ FOR XML PATH
 ## <a name="one-column-has-a-different-name"></a>Uma coluna tem um nome diferente  
  Se uma coluna com um nome diferente aparecer no meio, ela quebrará o agrupamento, conforme mostrado na seguinte consulta modificada. A consulta quebra o agrupamento de FirstName, MiddleName e LastName, conforme especificado na consulta anterior, adicionando colunas de endereço no meio das colunas FirstName e MiddleName.  
   
-```  
+```sql
 SELECT EmployeeID "@EmpID",   
        FirstName "EmpName/First",   
        AddressLine1 "Address/AddrLine1",  
@@ -215,18 +215,20 @@ SELECT EmployeeID "@EmpID",
        City "Address/City",  
        MiddleName "EmpName/Middle",   
        LastName "EmpName/Last"  
-FROM   HumanResources.EmployeeAddress E, Person.Contact C, Person.Address A  
+FROM   HumanResources.EmployeeAddress E,
+       Person.Contact C,
+       Person.Address A  
 WHERE  E.EmployeeID = C.ContactID  
 AND    E.AddressID = A.AddressID  
 AND    E.EmployeeID=1  
-FOR XML PATH  
+FOR XML PATH;
 ```  
   
  Como resultado, a consulta cria dois elementos `EmpName`. O primeiro elemento `EmpName` tem o filho do elemento `FirstName` e o segundo elemento `EmpName` tem os filhos dos elementos `MiddleName` e `LastName`.  
   
  Este é o resultado:  
   
-```  
+```xml
 <row EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  

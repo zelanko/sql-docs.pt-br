@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0613234749c2bf419f3013226b3935782833e65e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e061ea2394c2fdad1e7d37f56016c73d7787eda0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237762"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109948"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Aplicativos de serviço Sharepoint de backup e restauração do Reporting Services
   Este tópico descreve como fazer backup de um aplicativo de serviços [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e restaurá-lo usando a Administração Central do SharePoint ou o PowerShell. O tópico contém:  

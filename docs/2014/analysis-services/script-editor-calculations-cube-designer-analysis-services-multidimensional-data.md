@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.freeform.f1
@@ -13,12 +12,12 @@ ms.assetid: e8a7fa59-bd94-4dab-8c7f-dca6669e97b3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c7e1e411b8a4bb6b8b6d70bbacd783933958c70e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8d1546f9f708a32f6467b0f01c8b0644b610505e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747820"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069972"
 ---
 # <a name="script-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Scripts (guia Cálculos, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Editor de Scripts** na guia **Cálculos** do Designer de Cubo para modificar a expressão de um comando de script (na exibição de formulário) ou para modificar todo o script do cubo (na exibição de script).  

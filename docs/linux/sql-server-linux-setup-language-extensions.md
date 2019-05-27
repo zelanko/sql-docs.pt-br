@@ -1,5 +1,5 @@
 ---
-title: Instalar extensões de linguagem de máquina do SQL Server (Java) no Linux | Microsoft Docs
+title: Instalar extensões de linguagem (Java) do SQL Server no Linux | Microsoft Docs
 description: Saiba como instalar extensões de linguagem (Java) do SQL Server no Red Hat, Ubuntu e SUSE.
 author: dphansen
 ms.author: davidph
@@ -10,20 +10,20 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6d25739fb4f2ef104ba86c8e9124162e67fd8553
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: b694cde8784a1607c85ed9ab7dfcc4d770a6d938
+ms.sourcegitcommit: 3b266dc0fdf1431fdca6b2ad34ae5fd38abe9f69
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65995074"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186809"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Instalar extensões de linguagem do SQL Server de 2019 (Java) no Linux
 
-[Serviços do SQL Server Machine Learning](../advanced-analytics/what-is-sql-server-machine-learning.md) é executado em sistemas operacionais Linux nesta versão de visualização do SQL Server 2019. Siga as etapas neste artigo para instalar a extensão da linguagem Java. 
-
 Extensões de linguagem são um complemento para o mecanismo de banco de dados. Embora você possa [instalar o mecanismo de banco de dados e extensões de linguagem simultaneamente](#install-all), ele é uma prática recomendada para instalar e configurar o mecanismo de banco de dados do SQL Server pela primeira vez, para que você possa resolver quaisquer problemas antes de adicionar mais componentes. 
 
-Local do pacote para as extensões Java estão em repositórios de código-fonte do SQL Server Linux. Se você já configurou os repositórios de código-fonte para a instalação do mecanismo de banco de dados, você pode executar o **mssql-server-extensibilidade-java** comandos de instalação usando o mesmo registro do repositório do pacote.
+Siga as etapas neste artigo para instalar a extensão da linguagem Java.
+
+Local do pacote para as extensões Java está em repositórios de código-fonte do SQL Server Linux. Se você já configurou os repositórios de código-fonte para a instalação do mecanismo de banco de dados, você pode executar o **mssql-server-extensibilidade-java** comandos de instalação usando o mesmo registro do repositório do pacote.
 
 Também há suporte para extensões de linguagem em contêineres do Linux. Nós não oferecemos contêineres de criado previamente com extensões de linguagem, mas você pode criar um dos contêineres do SQL Server usando o [um modelo de exemplo disponível no GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
@@ -185,6 +185,8 @@ sudo zypper install mssql-server-extensibility-java
 
 6. Reinicie o `mssql-launchpadd` de serviço novamente.
 
+7. Para cada banco de dados que você deseja usar extensões de linguagem no, você precisa registrar a linguagem externa com [IDIOMAS EXTERNOS criar](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+
 ## <a name="verify-installation"></a>Verifique a instalação
 
 Integração de recursos do Java não inclui bibliotecas, mas você pode executar `grep -r JRE_HOME /etc` para confirmar a criação da variável de ambiente JAVA_HOME.
@@ -195,7 +197,7 @@ Para validar a instalação, execute um script T-SQL que executa um sistema Java
 
 ## <a name="full-install-of-sql-server-and-language-extensions"></a>Instalação completa do SQL Server e extensões de linguagem
 
-Você pode instalar e configurar o mecanismo de banco de dados e os serviços de Machine Learning em um procedimento acrescentando pacotes Java e parâmetros em um comando que instala o mecanismo de banco de dados.
+Você pode instalar e configurar o mecanismo de banco de dados e extensões de linguagem em um procedimento acrescentando pacotes Java e parâmetros em um comando que instala o mecanismo de banco de dados.
 
 1. Forneça uma linha de comando que inclui o mecanismo de banco de dados, além de recursos de extensão da linguagem.
 
@@ -235,7 +237,7 @@ Siga as [instalação Offline](sql-server-linux-setup.md#offline) instruções p
 
 #### <a name="download-site"></a>Site de download
 
-Você pode baixar os pacotes a partir [ https://packages.microsoft.com/ ](https://packages.microsoft.com/). Todos os pacotes para Java estão colocalizados com o pacote do mecanismo de banco de dados. 
+Você pode baixar os pacotes a partir [ https://packages.microsoft.com/ ](https://packages.microsoft.com/). Todos os pacotes para Java são colocados com o pacote do mecanismo de banco de dados. 
 
 #### <a name="redhat7-paths"></a>RedHat/7 caminhos
 

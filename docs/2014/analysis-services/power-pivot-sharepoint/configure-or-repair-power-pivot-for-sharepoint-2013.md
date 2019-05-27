@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 616877e3-464a-4c97-bc74-1fa6f4faa756
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ff7c6dba835d12ed8b05500f037ee0d4ed1361c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 808543b2a9e0f770eaf47966bb8d6a08fecabcc8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749934"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071778"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>Configurar ou reparar o PowerPivot para SharePoint 2013 (Ferramenta de Configuração do PowerPivot)
   Para configurar ou reparar uma instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013, use a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. A ferramenta de configuração começa examinando o sistema e retorna uma lista de ações necessárias para concluir ou reparar uma instalação. O Assistente de Configuração do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2010, bem como a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013. Este tópico descreve a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013. Para obter mais informações sobre o SharePoint 2010, consulte [configurar ou reparar o PowerPivot para SharePoint 2010 &#40;ferramenta de configuração do PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
@@ -108,7 +107,7 @@ ms.locfileid: "62749934"
   
  A tabela a seguir descreve os valores que são usados para configurar o servidor.  
   
-|Página|Valor de entrada|Source|Descrição|  
+|Página|Valor de entrada|`Source`|Descrição|  
 |----------|-----------------|------------|-----------------|  
 |**Configurar ou Reparar o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint**|Conta padrão|Usuário atual|A conta padrão é uma conta de usuário de domínio do Windows usada para provisionar serviços compartilhados no farm. Ela é usada para provisionar o seguinte:<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Padrão<br />Serviço de Repositório Seguro<br />Serviços do Excel<br />A identidade do pool de aplicativos Web<br />O administrador de conjunto de sites<br />A conta autônoma de atualização de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Por padrão, ele usa a conta de domínio do usuário atual. É recomendável substituir o valor padrão, a menos que você esteja configurando um servidor para fins de avaliação e de não produção. Posteriormente, é possível alterar as identidades do serviço, usando a Administração Central. Opcionalmente, na ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , especifique contas dedicadas para o seguinte:<br /><br /> Aplicativo Web, usando o **criar aplicativo Web padrão** página (supondo que a ferramenta esteja criando um aplicativo web para o farm).<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , usando a página **Criar Conta Autônoma para Atualização de Dados** nesta ferramenta.|  
 ||Servidor de Banco de Dados|Instância nomeada local do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , se estiver disponível.|Se uma instância de mecanismo de banco de dados for instalada como uma instância nomeada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , a ferramenta populará o campo de servidor de banco de dados com este nome de instância. Se você não instalou o mecanismo de banco de dados, este campo estará vazio.<br /><br /> O**Servidor de Banco de Dados**  é um parâmetro obrigatório. Pode ser qualquer versão ou edição de SQL Server que tenha suporte para farms do SharePoint.|  

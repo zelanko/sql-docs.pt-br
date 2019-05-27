@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Windows service, virtual directories
@@ -16,12 +15,12 @@ ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7f52194bca9b91e387f49e4fa082feb9fad2c68c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b086d067241606b61d733fc58c358195966a1345
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63144552"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108844"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurar as URLs do servidor de relatório (Configuration Manager do SSRS)
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], as URLs são usadas para acessar o serviço Web Servidor de Relatório e o Gerenciador de Relatórios. Antes de usar qualquer um dos aplicativos, você deve configurar pelo menos uma URL para o serviço Web e o Gerenciador de Relatórios. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece valores padrão para as URLs de ambos os aplicativos que funcionam bem na maioria dos cenários de implantação, incluindo implantações lado a lado com outros serviços Web e aplicativos.  
@@ -36,7 +35,7 @@ ms.locfileid: "63144552"
 |Parte|Descrição|  
 |----------|-----------------|  
 |Nome do host|Uma rede TCP/IP usa um endereço IP para identificar exclusivamente um dispositivo na rede. Há um endereço IP físico para cada placa de adaptador de rede instalada em um computador. Se o endereço IP for resolvido para um cabeçalho de host, você poderá especificar esse cabeçalho. Se estiver implantando o servidor de relatório em uma rede corporativa, você poderá usar o nome de rede do computador.|  
-|Porta|Uma porta TCP é um ponto de extremidade no dispositivo. O servidor de relatório escutará solicitações em uma porta designada.|  
+|Port|Uma porta TCP é um ponto de extremidade no dispositivo. O servidor de relatório escutará solicitações em uma porta designada.|  
 |Diretório virtual|Uma porta normalmente é compartilhada por vários serviços Web ou aplicativos. Por esse motivo, uma URL de servidor de relatório sempre inclui um diretório virtual que corresponde ao aplicativo que obtém a solicitação. Você deve especificar nomes de diretórios virtuais exclusivos para cada aplicativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que escute no mesmo endereço IP e porta.|  
 |Configurações SSL|As URLs no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem ser configuradas para usar um certificado SSL existente que você instalou anteriormente no computador. Para obter mais informações, veja [Configurar conexões SSL em um Servidor de Relatórios do Modo Nativo](../security/configure-ssl-connections-on-a-native-mode-report-server.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
@@ -52,7 +51,7 @@ ms.locfileid: "63144552"
 |Parte|Valor|Explicação|  
 |----------|-----------|-----------------|  
 |Endereço IP|Todos Atribuídos|O serviço de nome de domínio em sua rede resolve o nome do host na URL para o endereço IP do computador. Desde que o endereço IP seja especificado na URL que você definir, uma solicitação enviada para um host específico alcançará seu destino pretendido.|  
-|Porta|80|A porta 80 é a padrão para conexões TCP/IP em um computador. Como o servidor de relatório está escutando na porta 80, você pode omitir o número da porta da URL. Se você especificar outra porta, deverá especificá-la na URL.|  
+|Port|80|A porta 80 é a padrão para conexões TCP/IP em um computador. Como o servidor de relatório está escutando na porta 80, você pode omitir o número da porta da URL. Se você especificar outra porta, deverá especificá-la na URL.|  
 |Diretório virtual|ReportServer|Note que ambos os exemplos de URLs incluem o nome do diretório virtual. A menos que você personalize a definição da URL, sempre deverá especificar o nome do diretório virtual do aplicativo na URL.|  
   
 > [!NOTE]  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.associationrules.rules.f1
@@ -13,12 +12,12 @@ ms.assetid: 705d5492-b58f-45d9-94d7-ed57b7025823
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 999ea0b432733fc3458cb6f50e964209c1313b54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748008"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070097"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>Guia Regras (Visualizador do Modelo de Mineração)
   Use o painel **Regras** em um modelo de associação para exibir as regras que o algoritmo extraiu dos dados. As regras descrevem como os itens estão relacionados uns com os outros e podem ser usados para criar recomendações.  

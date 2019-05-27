@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1f753856fbec3fe521cf23e6506c3b43e5dec481
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b1a7cc26edb726952e71e25deb271ef1dd997d18
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749597"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071532"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Criar e personalizar uma galeria do PowerPivot
   A Galeria PowerPivot é um tipo especial de biblioteca de documentos do SharePoint que fornece visualização avançada e gerenciamento de documentos das pastas de trabalho do Excel publicadas e relatórios dos Reporting Services que contêm dados PowerPivot.  

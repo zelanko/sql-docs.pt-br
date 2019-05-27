@@ -1,6 +1,6 @@
 ---
 title: Nível de compatibilidade para modelos tabulares no Analysis Services | Microsoft Docs
-ms.date: 05/14/2019
+ms.date: 05/23/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 45ea2e048a7ea7ae7d041614d62a280ee3698131
-ms.sourcegitcommit: 4cb96c291529e9bdf0a95fb3610b350583eb36d1
+ms.openlocfilehash: d2176b88f01808e1b84f409cb1f1c117774a220c
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65709122"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175129"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Nível de compatibilidade para modelos tabulares do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -60,8 +60,11 @@ Os principais recursos no nível de compatibilidade 1400 incluem:
   
 ## <a name="check-supported-compatibility-level-for-a-server-in-ssms"></a>Verificar o nível de compatibilidade com suporte para um servidor no SSMS  
  No SSMS, clique com o botão direito do mouse no nome do servidor > **Propriedades** > **Nível de Compatibilidade com Suporte**.  
-  
- Esta propriedade especifica o nível de compatibilidade mais alto de um banco de dados que serão executados no servidor. O nível de compatibilidade com suporte é somente leitura e não pode ser alterado.  
+
+ Esta propriedade especifica o nível de compatibilidade mais alto de um banco de dados que serão executados no servidor. O nível de compatibilidade com suporte é somente leitura e não pode ser alterado.
+ 
+> [!NOTE]  
+>  No SSMS, quando conectado a um servidor SQL Server Analysis Services, o servidor Azure Analysis Services ou o espaço de trabalho do Power BI Premium, a propriedade de nível de compatibilidade com suporte mostrará 1200. Isso é um problema conhecido e será resolvido no SSMS futuro atualização. Quando resolvido, essa propriedade será mostrada o mais alto nível de compatibilidade com suporte. 
   
 ## <a name="see-also"></a>Confira também  
  [Nível de compatibilidade de um banco de dados multidimensional](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   

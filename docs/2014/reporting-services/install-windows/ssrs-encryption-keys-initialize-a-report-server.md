@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], initializing
@@ -18,12 +17,12 @@ ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 38aed7f227c4720f334f6a4791a6f2c61583c0d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f9bcb5e7818c4125b81d715d7e74f120a07449d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63144541"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108735"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>Inicializar um servidor de relatório (Gerenciador de configurações do SSRS)
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], um servidor inicializado é aquele que pode criptografar e descriptografar dados em um banco de dados de servidor de relatório. A inicialização é um requisito para a operação do servidor de relatório. A inicialização ocorre quando o serviço Servidor de Relatório é iniciado pela primeira vez. Também ocorre quando você associa o servidor de relatório à implantação existente ou quando recria manualmente as chaves como parte do processo de recuperação. Para obter mais informações sobre como e por que as chaves de criptografia são usadas, veja [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md) e [Armazenar dados criptografados do servidor de relatório &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md).  

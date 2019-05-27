@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - workloads [SQL Server], tuning
@@ -13,12 +12,12 @@ ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 82d3b33b8c41885d3fa92d1363af6c98443c9deb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3dd87c1e2bd08ce5bb1d05e9d51d92e3f62bcc7a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073776"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110192"
 ---
 # <a name="tuning-a-workload"></a>Ajustando uma carga de trabalho
   O Orientador de Otimização do Mecanismo de Banco de Dados pode ser usado para achar o melhor design de banco de dados físico para desempenho de consulta nos bancos de dados e tabelas que você seleciona para ajustar.  

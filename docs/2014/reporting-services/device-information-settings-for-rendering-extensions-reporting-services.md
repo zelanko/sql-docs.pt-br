@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 336eae5accaf5fabed542012bbb4e5b6145a02c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8866b6b8193ec61e08d20868ed88a21211fa2a32
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164666"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109262"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Configurações de informações de dispositivos para extensões de renderização (Reporting Services)
   No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], as configurações de informações de dispositivo são usadas para passar parâmetros de renderização para uma extensão de renderização. Cada extensão de renderização aceita um conjunto específico de configurações.  

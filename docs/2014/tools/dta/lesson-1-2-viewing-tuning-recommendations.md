@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e70d5088b4b17eb037317b9eccf6afba53e5b5f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe8d52d898db35698155518646f074e7167687a0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052487"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110174"
 ---
 # <a name="viewing-tuning-recommendations"></a>Exibindo recomendações de ajuste
   Esta tarefa usa a sessão de ajuste criada no [Tuning a Workload](lesson-1-1-tuning-a-workload.md). Depois que você ajusta o banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] usando o script MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] , o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] exibe os resultados na guia **Recomendações** . A tarefa a seguir apresenta a guia **Recomendações** da GUI (interface gráfica do usuário) do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e explica como explorar as informações fornecidas sobre os resultados da sessão de ajuste.  

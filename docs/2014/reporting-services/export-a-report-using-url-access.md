@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - formats [Reporting Services], URL rendering
@@ -14,12 +13,12 @@ ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 80238e8edb5b84bc353eca63d63491a8ee74c8ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 69f340855e37ffde49aec0af096c094a142659d1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164006"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109193"
 ---
 # <a name="export-a-report-using-url-access"></a>Exportar um relatório com acesso à URL
   Opcionalmente, você pode especificar o formato no qual renderizar um relatório usando o *rs: Format* parâmetro. Por exemplo, para obter uma cópia em PDF de um relatório diretamente de um servidor de relatório de modo nativo:  

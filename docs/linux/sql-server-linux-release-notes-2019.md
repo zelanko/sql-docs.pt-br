@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45fad1a973c06fd487dc3b2a92b7c45679f8bc93
-ms.sourcegitcommit: 8aa51bc0bc54b266145c96f6451b59f369822160
-ms.translationtype: HT
+ms.openlocfilehash: 8d041e9554b976f46b121f2c39d8170183b85c6e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66036927"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110217"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Notas de versão para versão prévia de 2019 do SQL Server no Linux
 
@@ -48,7 +48,7 @@ A tabela a seguir lista o histórico de versão de visualização do SQL Server 
 
 | Versão               | Versão       | Data de liberação |
 |-----------------------|---------------|--------------|
-| [CTP 3.0](#CTP30)     | 15.0.1500.28  | 2019-5-22    |
+| [CTP 3.0](#CTP30)     | 15.0.1600.8  | 2019-5-22    |
 | [CTP 2.5](#CTP25)     | 15.0.1500.28  | 2019-4-24    |
 | [CTP 2.4](#CTP24)     | 15.0.1400.75  | 2019-3-27    |
 | [CTP 2.3](#CTP23)     | 15.0.1300.359 | 2019-3-01    |

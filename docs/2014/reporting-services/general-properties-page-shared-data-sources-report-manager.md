@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a50b1b947ce82eb38ef7c7f6fd026bc9f83376f4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1de9a0091fa072fccea4825d31deb50463f6cd8c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63261095"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109083"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>Página Propriedades Gerais, fontes de dados compartilhadas (Gerenciador de Relatórios)
   Use a página Propriedades Gerais para exibir ou modificar propriedades de um item de fonte de dados compartilhada. Quaisquer alterações feitas nas propriedades serão efetivadas em todos os relatórios que referenciarem o item quando você clicar em **Aplicar**.  

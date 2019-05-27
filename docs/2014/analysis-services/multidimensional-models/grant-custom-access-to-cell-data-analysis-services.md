@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.celldata.f1
@@ -20,12 +19,12 @@ ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc9d003fc4c1f3b3cd32e8f23fe635d56e48555e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5db12886384089afe87ffb5fa659c34b09a9fe23
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726693"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074979"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Conceder acesso personalizado a dados de célula (Analysis Services)
   A segurança da célula é usada para permitir ou negar acesso a dados de medida de um cubo. A ilustração a seguir mostra uma combinação de medidas permitidas e negadas em uma Tabela Dinâmica quando conectada por um usuário cuja função permite acessar apenas algumas medidas. Neste exemplo, **Valor de Vendas do Revendedor** e **Custo Total do Produto do Revendedor** são as únicas medidas disponíveis por meio dessa função. Todas as outras medidas são negadas implicitamente (as etapas usadas para obter esse resultado são fornecidas abaixo, na seção Permitir acesso a medidas específicas).  

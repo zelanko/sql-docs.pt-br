@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b88fcbd191317259c1d2d2c1facfb6e6b1ade1c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6d64754328954becb328a70a09fca8d2a6472050
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63265982"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109732"
 ---
 # <a name="contents-page-report-manager"></a>Página Conteúdo (Gerenciador de Relatórios)
   Use a página Conteúdo para exibir o conteúdo da pasta atual, selecionar os itens a serem exibidos ou navegar para outras pastas. Essa página abre quando você seleciona uma pasta. Ela é também a home page do Gerenciador de Relatórios.  

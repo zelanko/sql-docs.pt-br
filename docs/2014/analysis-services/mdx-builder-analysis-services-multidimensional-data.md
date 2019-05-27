@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.mdxbuilderdialof.f1
@@ -15,12 +14,12 @@ ms.assetid: fecbf093-65ea-4e1b-b637-f04876f1cb0f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b3121646cbcfee823be71b575349b814fbf36c1a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d13675196f3e6cf755033e85213b20220b20918d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728022"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078023"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>Construtor MDX (Analysis Services – Dados Multidimensionais)
   Use a caixa de diálogo **Construtor MDX** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ou no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para criar uma expressão em linguagem MDX. Você pode exibir o **construtor MDX** caixa de diálogo clicando o **editar MDX** botão de reticências (**...** ) para o **Permitir leitura do conteúdo do cubo** opção, o **Permitir leitura do conteúdo da célula contingente na segurança da célula** opção, ou o **Permitir leitura e gravação do conteúdo do cubo** opção de **dados da célula** página de **Designer de função**.  

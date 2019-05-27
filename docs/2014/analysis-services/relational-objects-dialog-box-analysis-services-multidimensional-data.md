@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.relationalobjectsdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: 662ff835-2132-4171-b0d4-649d5873d052
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fbb162851b1906ffaf42d5fdda943fea4fc6133f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0571271f347c2aebcc2a0e0e25f2fff09b98fa89
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748358"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070351"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Objetos Relacionais (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Objetos Relacionais** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para selecionar tabelas, exibições ou outros objetos de uma fonte de dados na qual você queira definir cache pró-ativo. É possível exibir esta caixa de diálogo no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] clicando no botão de reticências (**...**) em qualquer uma das opções de **Especificar tabelas de acompanhamento** na guia **Notificações** da caixa de diálogo **Opções de Armazenamento** .  

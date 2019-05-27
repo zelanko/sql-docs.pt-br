@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Filter Web Part [Reporting Services]
@@ -16,12 +15,12 @@ ms.assetid: 6a303135-c0ef-44cd-a423-1cea8df3dcf3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d1d249662ef306e2b1608582b5b61271098ccf42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 062733f1ee68cd90ccc1b9a15d0cadc06b7e6f89
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266436"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109722"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>Conectar Web Part de filtro ou de documentos (Reporting Services no modo integrado do SharePoint)
   Se estiver usando um produto do SharePoint, você poderá criar um painel ou Página de Web Part que inclua uma Web Part de filtro ou de documentos e uma Web Part do Visualizador de Relatórios. As versões com suporte são [!INCLUDE[SPF2010](../includes/spf2010-md.md)] ou [!INCLUDE[SPS2010](../includes/sps2010-md.md)]. Também há suporte para [!INCLUDE[winSPServ3](../includes/winspserv3-md.md)] ou [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007. Ao conectarem uma Web Part de filtro, os usuários que selecionam valores de filtro em uma Web Part de filtro podem enviar o valor para um relatório parametrizado na mesma página. Ao conectarem uma Web Part de documento, os usuários que clicarem na biblioteca de Documentos podem exibir o relatório em uma Web Part do Visualizador de Relatórios adjacente.  

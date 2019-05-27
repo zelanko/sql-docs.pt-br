@@ -1,23 +1,26 @@
 ---
 title: Definir uma relação referenciada e propriedades de relação referenciada | Microsoft Docs
-ms.date: 05/02/2018
-ms.prod: sql
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
 ms.technology: analysis-services
-ms.custom: multidimensional-models
 ms.topic: conceptual
-ms.author: owend
-ms.reviewer: owend
+helpviewer_keywords:
+- referenced dimension relationship
+- relationships [Analysis Services], referenced dimensions
+ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0b173aa62dfe5656bfc784c766791c294453596c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 00305d00bb3a11cc4237e005a057c70d4c5f3397
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700107"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075757"
 ---
 # <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>Definir uma relação referenciada e as propriedades da relação referenciada
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Uma relação de dimensão de referência é definida na guia **Uso da Dimensão** do Designer de Cubo. A relação de dimensão de referência é definida especificando-se o seguinte:  
   
 -   A dimensão intermediária à qual se unir. Pode ser uma dimensão regular ou outra dimensão de referência.  

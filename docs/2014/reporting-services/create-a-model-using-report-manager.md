@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report models [Reporting Services], creating
@@ -14,12 +13,12 @@ ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 07865f96b0e4086af346ffc076b1df6d07cda6cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7b67e2a7048520d8a411789e501dbbe545d3cc02
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63265964"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109668"
 ---
 # <a name="create-a-model-using-report-manager"></a>Criar um modelo com o Gerenciador de Relatórios
   Você pode gerar modelos de um cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , um banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou um banco de dados Oracle usando o Gerenciador de Relatórios. Os modelos de relatório são gerados a partir de fontes de dados compartilhadas que são publicadas no servidor de relatório. Se você ainda não tiver uma fonte de dados compartilhada, é preciso criar uma.  

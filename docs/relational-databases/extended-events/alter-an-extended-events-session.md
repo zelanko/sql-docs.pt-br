@@ -1,7 +1,7 @@
 ---
 title: Alterar uma sessão eventos estendidos | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 07f79ea126998f5949d47dd8fb111d32b72841c6
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: cedb0addec5d6164b418b6bec0458de429dd6a82
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478021"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198208"
 ---
 # <a name="alter-an-extended-events-session"></a>Alterar uma sessão de Eventos Estendidos
 
@@ -55,6 +55,6 @@ ms.locfileid: "58478021"
   
 ## <a name="see-also"></a>Consulte Também  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
- [Criar uma sessão de Eventos Estendidos usando o Editor de Consultas](https://msdn.microsoft.com/library/cba0e02b-b201-4863-bf1b-9164e68e5fa8)  
+ [Criar uma sessão de Eventos Estendidos usando o Editor de Consultas](quick-start-extended-events-in-sql-server.md)  
   
   

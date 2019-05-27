@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], syntax
@@ -13,12 +12,12 @@ ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e3b78aa3226f2424a2dea0f60d8b0bfd84a01d29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 617a4e01b3fd4f8dcbc6d929c2a26d483f2fa1ec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260964"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108857"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar uma URL (Gerenciador de Configurações do SSRS)
   Antes de usar o Gerenciador de Relatórios ou o serviço Web Servidor de Relatório, você deve configurar pelo menos uma URL para cada aplicativo. A configuração das URLs será obrigatória se você instalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo "somente arquivos" (isto é, selecionando a opção **Instalar, mas não configurar o servidor** na página Opções de Instalação do Servidor de Relatório do Assistente de Instalação). Se você instalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na configuração padrão, as URLs já estarão configuradas para cada aplicativo. Caso você tenha um servidor de relatório configurado para usar o modo Integrado do SharePoint e atualize a URL do Serviço Web Servidor de Relatórios usando a ferramenta de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , também deverá atualizar a URL na Administração Central do SharePoint.  

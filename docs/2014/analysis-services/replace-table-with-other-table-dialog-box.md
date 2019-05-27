@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.replacetable.f1
@@ -15,12 +14,12 @@ ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17f87d063fd23ecc9ead9bfe097f21e74e011953
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b1ab26f596a669a5a0d13b6bb0c283a55851bd58
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748298"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070266"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Caixa de diálogo Substituir Tabela por Outra
   Use a caixa de diálogo **Substituir Tabela por Outra** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para substituir uma tabela existente em uma exibição de fonte de dados por uma tabela na fonte de dados subjacente que ainda não esteja incluída na exibição de fonte de dados. É possível exibir a caixa de diálogo **Substituir Tabela por Outra** clicando com o botão direito do mouse no nome de uma tabela no painel **Diagrama** ou no painel **Tabelas** do **Designer de Exibição da Fonte de Dados** e selecionando **Por Outra Tabela** em **Substituir Tabela**.  

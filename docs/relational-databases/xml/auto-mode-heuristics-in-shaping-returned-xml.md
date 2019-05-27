@@ -1,7 +1,7 @@
 ---
 title: Heurística do modo AUTO na formação do XML retornado | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,25 +13,28 @@ ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed0035473bf90e2457aa0384b06da5569e2964db
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
+ms.openlocfilehash: b0b366e4b154daa8d1422e25c6abb170323bfb58
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512973"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175380"
 ---
 # <a name="auto-mode-heuristics-in-shaping-returned-xml"></a>Heurística de modo AUTO na formação do XML retornado
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  O modo AUTO determina a forma do  XML retornado com base na consulta. Para determinar como os elementos devem ser aninhados, a heurística do modo AUTO compara valores da coluna em linhas adjacentes. São comparadas colunas de todos os tipos, menos **ntext**, **text**, **image**e **xml**. São comparadas colunas do tipo **(n)varchar(max)** e **varbinary(max)** .  
+
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+O modo AUTO determina a forma do  XML retornado com base na consulta. Para determinar como os elementos devem ser aninhados, a heurística do modo AUTO compara valores da coluna em linhas adjacentes. São comparadas colunas de todos os tipos, menos **ntext**, **text**, **image**e **xml**. São comparadas colunas do tipo **(n)varchar(max)** e **varbinary(max)** .  
   
  O exemplo seguinte ilustra a heurística do modo AUTO que determina a forma do XML resultante:  
   
-```  
+```sql
 SELECT T1.Id, T2.Id, T1.Name  
 FROM   T1, T2  
 WHERE ...  
-FOR XML AUTO  
-ORDER BY T1.Id  
+ORDER BY T1.Id
+FOR XML AUTO;
 ```  
   
  Para determinar o local em que um novo elemento <`T1`> começa, todos os valores de T1 da coluna, exceto **ntext**, **text**, **image** r **xml**, serão comparados se a chave na tabela T1 não for especificada. Em seguida, assuma que a coluna **Name** é **nvarchar(40)** e a instrução SELECT retornará este conjunto de linhas:  
@@ -48,7 +51,7 @@ T1.Id  T1.Name  T2.Id
   
  O XML retornado é o seguinte:  
   
-```  
+```xml
 <T1 Id="1" Name="Andrew">  
     <T2 Id="2" />  
     <T2 Id="3" />  
@@ -60,7 +63,7 @@ T1.Id  T1.Name  T2.Id
   
  Agora assuma que a coluna Name é de tipo **text** . A heurística de modo AUTO não compara valores desse tipo. Em vez disso, ela assume que os valores não são os mesmos. Isso resulta em geração de XML conforme mostrado a seguir:  
   
-```  
+```xml
 <T1 Id="1" Name="Andrew" >  
   <T2 Id="2" />  
 </T1>  

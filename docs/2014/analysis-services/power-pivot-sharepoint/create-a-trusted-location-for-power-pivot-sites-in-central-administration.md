@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e73468de8edd2497409c37acb2c00bfaf79ebd2c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b54c06d86490c92936d147f2876d663f43d99fac
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749411"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071584"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Create a trusted location for PowerPivot sites in Central Administration
   Os Serviços do Excel permitem especificar quais locais são repositórios válidos para pastas de trabalho que você abrir em um servidor do SharePoint. Esses locais são chamados de "locais confiáveis" e você pode usar diferentes definições de configuração para cada local confiável que você criar. Para uma implantação do PowerPivot para SharePoint, você pode considerar criar um local confiável para sites que tenham pastas de trabalho PowerPivot, de forma que você possa aplicar as configurações que funcionam melhor para acesso a dados PowerPivot, enquanto preserva valores padrão para o resto do farm.  
