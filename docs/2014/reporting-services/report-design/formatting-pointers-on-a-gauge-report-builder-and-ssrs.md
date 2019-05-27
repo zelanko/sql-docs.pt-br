@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3254f7bbe4cfdd826b24c003b5b472535534dd54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 294586f0d48ca96ca12d3e9eac70f5d2d288654f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654463"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105831"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formatando ponteiros de um medidor (Construtor de Relatórios e SSRS)
   Um ponteiro do medidor indica o valor atual do medidor. Por padrão, quando um campo for adicionado, os valores contidos nele serão agregados a um valor mostrado pelo ponteiro do medidor. É possível adicionar vários ponteiros ao medidor para mostrar vários valores na mesma escala, ou adicionar várias escalas e um ponteiro para todas as escalas adicionadas. Depois de adicionar um campo a um medidor, defina os valores mínimo e máximo da escala correspondente para oferecer contexto ao valor do ponteiro. Outra opção é definir os valores mínimo e máximo em um intervalo, que mostra uma área crítica na escala.  

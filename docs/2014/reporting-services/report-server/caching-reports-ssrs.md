@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report execution properties [Reporting Services]
@@ -23,12 +22,12 @@ ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ce09e2c607600273f5b5778251c3c58fdf57f9dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 58785d54954278d2dcb839ef3e707859682a9d37
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63016934"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104107"
 ---
 # <a name="caching-reports-ssrs"></a>Armazenando relatórios em cache (SSRS)
   Um servidor de relatório pode armazenar em cache uma cópia de um relatório processado e devolvê-la quando um usuário abrir o relatório. Para o usuário, a única evidência disponível indicativa de que o relatório é uma cópia armazenada em cache são os dados de data e hora de processamento do relatório. Se a data ou a hora não for atual e o relatório não for um instantâneo, ele terá sido recuperado do cache.  

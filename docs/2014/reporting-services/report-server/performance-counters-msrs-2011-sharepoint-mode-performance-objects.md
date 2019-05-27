@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
@@ -18,12 +17,12 @@ ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 77ce77a2c42944a881942d4ee953183a68f5bbd6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d994fa563870f01f4a9ca8824b5372587eca804b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191188"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103702"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>Contadores de desempenho para os objetos de desempenho do serviço Windows MSRS 2014 e do serviço Web MSRS 2014 (modo do SharePoint)
   Este tópico descreve os contadores de desempenho dos objetos de desempenho `MSRS 2014 Web Service SharePoint Mode` e `MSRS 2014 Windows Service SharePoint Mode` que fazem parte de uma implantação do modo do SharePoint do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].  

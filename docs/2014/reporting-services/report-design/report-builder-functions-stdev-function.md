@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: cb51e96e-a828-42f0-b67c-cee3f4d221e7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0dbcb90248761961deb5c932af952a53e3dcbbcf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1763b417f381293eb9f9535cc5ef317cff268588
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63216112"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105151"
 ---
 # <a name="stdev-function-report-builder-and-ssrs"></a>Função StDev (Construtor de Relatórios e SSRS)
   Retorna o desvio padrão de todos os valores numéricos não nulos especificados pela expressão, avaliados no escopo fornecido.  

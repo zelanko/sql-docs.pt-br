@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
@@ -17,12 +16,12 @@ ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1f39b4295aceadc7c738ade04379d85d39377d9b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e83f539e1ffad77a337fc3e0142379da2ff0f703
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63011566"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104099"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurar um servidor de relatório para administração remota
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você pode configurar instâncias de servidor de relatório local ou remotamente. Para configurar uma instância remota do servidor de relatório, é possível usar a ferramenta Configuração do Reporting Services ou gravar código personalizado que use o provedor WMI (Instrumentação de Gerenciamento do Windows) do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . A ferramenta Configuração do Reporting Services fornece uma interface gráfica para o provedor WMI, de maneira que você possa configurar um servidor de relatório sem precisar gravar código. Ao iniciar a ferramenta, você pode especificar um servidor remoto para se conectar.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6a586659-5c2b-453b-8f40-a3a469277b17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 552cfab65e4951bf451e931effd1b2662e144c53
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 76746ade9222257bcea6962c180ea12a01ff8afa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156338"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107649"
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>Pesquisando relatórios e outros itens (Construtor de Relatórios e SSRS)
   Você pode usar o Gerenciador de Relatórios para pesquisar um servidor de relatório à procura de itens específicos por nome ou descrição. Você pode procurar por relatórios publicados, modelos de relatório, pastas, fontes de dados compartilhadas e recursos. Você não pode procurar por agendas, proprietários, atribuições de função, instantâneos específicos no histórico de relatório ou assinaturas. A pesquisa é executada no banco de dados do servidor de relatórios no qual os itens estão armazenados.  

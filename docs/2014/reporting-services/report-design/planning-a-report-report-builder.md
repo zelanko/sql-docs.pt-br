@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - getting started
@@ -14,12 +13,12 @@ ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c13019d5845e0c580b28fef750683044d344a9ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9c659362e7b5ddba500c2e48df1b11a27a4bf0a5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215737"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105458"
 ---
 # <a name="planning-a-report-report-builder"></a>Planejando um relatório (Construtor de Relatórios)
   O Construtor de Relatórios permite que você crie muitos tipos de relatórios. Por exemplo, você pode criar relatórios que mostram dados de vendas resumidos ou detalhados, tendências de marketing e vendas, relatórios operacionais ou painéis. Você também pode criar relatórios que aproveitam texto ricamente formatado, tais como pedidos de vendas, catálogos de produtos ou letras de formulário. Todos esses relatórios são criados usando combinações diferentes dos mesmos blocos de construção básicos no Construtor de Relatórios. Para criar um relatório útil, de fácil compreensão, convém primeiro fazer um planejamento. Antes de começar, considere algumas questões como:  
@@ -36,7 +35,7 @@ ms.locfileid: "63215737"
   
      O Construtor de Relatórios fornece muitos itens de relatório que você pode adicionar ao relatório para tornar sua leitura mais fácil, realçar informações-chave, ajudar o público a navegar no relatório e assim por diante. Saber a aparência desejada para o relatório pode determinar se são necessários itens de relatório tais como caixas de texto, retângulos, imagens e linhas. Talvez você também queira mostrar ou ocultar itens, adicionar um mapa do documento, incluir relatórios detalhados ou sub-relatórios ou vincular a outros relatórios. Para obter mais informações, consulte [Imagens, caixas de texto, retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md) e [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
--   **Quais dados você deseja que seus leitores vejam? Os dados ou o formato devem ser filtrados para públicos diferentes?**  
+-   **Que dados você deseja que seus leitores vejam? Os dados ou o formato devem ser filtrados para públicos diferentes?**  
   
      Talvez você queira limitar o escopo do relatório a usuários ou locais específicos, ou a um período de tempo específico. Para filtrar os dados de relatório, use parâmetros para recuperar e exibir somente os dados desejados. Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-parameters-report-builder-and-report-designer.md).  
   

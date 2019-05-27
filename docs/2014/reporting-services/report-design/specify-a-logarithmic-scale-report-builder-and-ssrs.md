@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f3092c1c-b128-433d-9a95-983508b2a8d4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dee4f84615d3cff90cdd8bef20cb77be7bf40879
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0910888603528d899f0180bf96c66cfbea045aa4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720287"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104952"
 ---
 # <a name="specify-a-logarithmic-scale-report-builder-and-ssrs"></a>Especificar uma escala logarítmica (Construtor de Relatórios e SSRS)
   Se você tiver dados que sejam logaritmicamente proporcionais, é recomendável usar uma escala logarítmica no gráfico. Isso ajuda a melhorar a aparência do gráfico tornando seus dados mais gerenciáveis. A maioria das escalas logarítmicas usa uma base de 10.  

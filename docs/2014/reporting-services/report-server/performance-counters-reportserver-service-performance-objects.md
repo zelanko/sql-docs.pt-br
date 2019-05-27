@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
@@ -13,12 +12,12 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7fb15529a9547edc64ffe1a0a53d69e16a0618f4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 001e62869146a7090fe4598650c763a690809cfb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191322"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103635"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects
   Este tópico descreve os contadores de desempenho dos seguintes objetos de desempenho do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :  

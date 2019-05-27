@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: daf92c429e8d223f29a0d0d27f4ba6afca66d905
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2c77ae94a7b8c5760d14dcb3fed2af40573549d4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191149"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103756"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena configurações de aplicativo em um conjunto de arquivos de configuração. A instalação cria os arquivos de configuração para cada instância instalada do servidor de relatório. Em cada arquivo, os valores são definidos durante a instalação ou quando você usa ferramentas e aplicativos para configurar um servidor para operação. Em alguns casos, é necessário modificar um arquivo diretamente para adicionar ou definir configurações avançadas. As configurações são especificadas como elementos ou atributos XML. Se você entender de XML e arquivos de configuração, use um editor de texto ou de código para modificar configurações definidas pelo usuário.  

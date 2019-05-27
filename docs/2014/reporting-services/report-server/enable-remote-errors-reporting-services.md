@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - remote data source [Reporting Services]
@@ -14,12 +13,12 @@ ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 75e62ab8ae3953524d41a85512d4d95ead968ecf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e2d239dfc3d094f72d40ce6d020610fe1c0eabbc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63010872"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103805"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Habilitar erros remotos (Reporting Services)
   É possível configurar propriedades do servidor de relatório em um [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para retornar informações adicionais sobre as condições de erro que ocorrem em servidores remotos. Se uma mensagem de erro contiver o texto "Para obter mais informações sobre este erro, navegue até o servidor de relatório na máquina de servidor local ou habilite erros remotos", você poderá configurar a propriedade `EnableRemoteErrors` para acessar informações adicionais que podem ajudá-lo a resolver o problema. Para obter mais informações, consulte [Propriedades de sistema do servidor de relatório](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

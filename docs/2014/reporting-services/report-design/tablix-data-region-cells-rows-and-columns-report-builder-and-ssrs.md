@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10058"
@@ -16,12 +15,12 @@ ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f55324123716289fec88b9d9bc531dccb22848d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720463"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104644"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Células, linhas e colunas da região de dados Tablix (Construtor de Relatórios) e SSRS
   Para controlar como as linhas e colunas de uma região de dados tablix exibem dados em um relatório, você deve compreender como especificá-las para dados detalhados, dados de grupo, além de rótulos e totais. Em muitos casos, é possível usar as estruturas padrão em uma tabela, matriz ou lista para exibir os dados. Para obter mais informações, consulte [tabelas &#40;construtor de relatórios e SSRS&#41;](tables-report-builder-and-ssrs.md), [matrizes &#40;construtor de relatórios e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), ou [lista &#40;construtor de relatórios e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report execution properties [Reporting Services]
@@ -17,12 +16,12 @@ ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 085294763f9e950070ebe1468f3af1b4b9049aad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ec41aae3ada2281fab9b75517ecf75def517e1be
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63010703"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104235"
 ---
 # <a name="cache-a-report-report-manager"></a>Armazenar um relatório em cache (Gerenciador de Relatórios)
   Um modo de melhorar o desempenho é configurar propriedades de cache para um relatório. Quando um relatório é armazenado em cache, uma cópia do relatório renderizado é salva por um curto período de tempo. O primeiro usuário que solicita o relatório deve aguardar a conclusão do processamento antes de exibir o relatório. Usuários subsequentes que solicitam o relatório dentro do período de cache podem exibi-lo imediatamente porque o processamento já ocorreu.  
@@ -43,7 +42,7 @@ ms.locfileid: "63010703"
   
 6.  Selecione um das duas opções de cache a seguir e configure a validade do seguinte modo:  
   
-    -   Para configurar uma cópia armazenada em cache para expirar após um período de tempo específico, clique em **armazenar uma cópia temporária do relatório. Expirar cópia de relatório após alguns minutos**. Digite o número de minutos para a validade do relatório.  
+    -   Para configurar uma cópia armazenada em cache para expirar depois de um período de tempo específico, clique em **Armazenar uma cópia temporária do relatório em cache. Expirar cópia de relatório após alguns minutos**. Digite o número de minutos para a validade do relatório.  
   
     -   Para configurar uma cópia armazenada em cache para expirar com base em um agendamento, clique em **Armazenar uma cópia temporária do relatório em cache. Expirar cópia de relatório no próximo agendamento.** Clique em **Configurar**ou selecione uma agenda compartilhada para controlar a validade do relatório  
   

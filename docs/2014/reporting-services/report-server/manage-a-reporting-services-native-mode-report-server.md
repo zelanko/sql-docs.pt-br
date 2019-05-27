@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
@@ -15,12 +14,12 @@ ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3147829241ee3b964eb584746f7f7082aec40b7a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: da2eb97e5ce57a2e6a82dda3e264b33e1e3a3b11
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191078"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103787"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Gerenciar um servidor de relatório de modo nativo do Reporting Services
   Esta seção contém procedimentos para a configuração de uma instância do servidor de relatório de modo nativo usando o Gerenciador de Configurações do Reporting Services.  

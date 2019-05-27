@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - reports, creating
@@ -15,12 +14,12 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fd22b4419b8300fdaf8db6e98a3eab9683fd226e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f345eaa2a51b5e6789f2a03968f8a1e68b12519a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62698429"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107568"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Criar um relatório de gráficos rápido offline (Construtor de Relatórios)
   Neste tutorial, você criará um gráfico de pizza usando um assistente e o modificará um pouco, apenas para ter uma ideia do que é possível. É possível executar este tutorial de duas formas. Os dois métodos têm o mesmo resultado: um gráfico de pizza como o mostrado na ilustração a seguir:  

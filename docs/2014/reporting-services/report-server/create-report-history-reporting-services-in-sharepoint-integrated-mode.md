@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report history [Reporting Services], SharePoint
@@ -13,12 +12,12 @@ ms.assetid: e57ec746-05ae-4ff6-8e39-6cde87310daa
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d839fab6479fd35fe01e3db1b4802fa3e3d83642
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f9018ebb8225ee1d8f313474e82ac521b2646e7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63010661"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103902"
 ---
 # <a name="create-report-history-reporting-services-in-sharepoint-integrated-mode"></a>Criar histórico de relatório (Reporting Services no modo integrado do SharePoint)
   O histórico de relatórios é uma coleção de instantâneos de relatórios que você cria. Cada instantâneo é uma cópia do relatório como existia quando criado. Ele inclui o layout e os dados que eram atuais para o relatório quando o instantâneo foi criado. Informações de renderização não são armazenadas com o instantâneo. Ao abrir um instantâneo no histórico de relatórios, ele é aberto em um novo HTML na Web Part do Visualizador de Relatórios. Depois de processado, você pode exportá-lo para outros formatos de aplicativo.  

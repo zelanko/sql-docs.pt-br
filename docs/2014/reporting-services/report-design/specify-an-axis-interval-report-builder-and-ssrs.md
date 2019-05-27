@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 46984681329be6e236cac6271d3768705a26dd7b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9d862ac509af3936a9f09cadd01667cbe81a679c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720277"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104844"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Especificar um intervalo do eixo (Construtor de Relatórios e SSRS)
   O intervalo do eixo define o número de rótulos e as marcas de escala associadas em um eixo. No eixo de valor, os intervalos do eixo fornecem uma medida consistente dos pontos de dados no gráfico. No entanto, no eixo de categoria, esta funcionalidade pode fazer com que as categorias sejam exibidas sem os rótulos do eixo. Você pode especificar o número de intervalos que deseja na propriedade Intervalo do eixo. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calcula o número de intervalos no tempo de execução, com base nos dados do conjunto de resultados. Para obter mais informações sobre como os intervalos de eixo são calculados, consulte [Formatação de rótulos de eixo de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
@@ -16,12 +15,12 @@ ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 566ae0a91dd36d71ab6690e8910f1dd1cfe50043
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 468acea55c334ffda169daff2b5da4c417348a3e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63306376"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104287"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>Adicionar a Web Part do Visualizador de Relatórios a uma página da Web (Reporting Services no modo integrado do SharePoint)
   É possível usar a Web Part do Visualizador de Relatórios para exibir relatórios executados no servidor de relatório configurado para execução no modo integrado do SharePoint. Você pode usar a Web Part para exibir arquivos de definição de relatório (.rdl) criados no Construtor de Relatórios ou Designer de Relatórios e carregados em uma biblioteca.  

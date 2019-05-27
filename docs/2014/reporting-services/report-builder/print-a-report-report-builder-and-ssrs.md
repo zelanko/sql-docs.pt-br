@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 312fdd9defc0cbc0f19c312e32e0eb8038cbc918
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 737e8ebfd96d98bff9ed144db33189e141dc0cfd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63021257"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107765"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Imprimir um relatório (Construtor de Relatórios e SSRS)
   Depois de salvar um relatório em um servidor de relatório, você pode exibir e imprimir o relatório de um navegador, do Gerenciador de Relatórios ou qualquer aplicativo usado para exibir um relatório exportado. Antes de salvar um relatório, você pode imprimi-lo quando o visualiza.  

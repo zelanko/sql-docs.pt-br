@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - code [Reporting Services]
@@ -17,12 +16,12 @@ ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f117c8ba2bc933747c725662100cf438dcd67a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e8109678c3e9695b842eb57b976da9e653afd737
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185943"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106655"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>Adicionar código a um relatório (SSRS)
   Em qualquer expressão, você pode chamar seu próprio código personalizado. Você pode fornecer código das duas maneiras a seguir:  

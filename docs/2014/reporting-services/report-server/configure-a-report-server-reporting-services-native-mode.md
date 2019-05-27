@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report server configuration
@@ -14,12 +13,12 @@ ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 12695fbbaf796097f7273134dbc5db4e294ce508
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 10e4a4befd8300863d8637a87e8c9bd03622d0af
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63010664"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104064"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurar um servidor de relatórios (modo nativo do Reporting Services)
   Dependendo das opções selecionadas durante a instalação, o Servidor de Relatórios possivelmente exigir uma configuração adicional para que você possa usá-lo. A configuração de um servidor de relatório é formada no mínimo por estes itens:  

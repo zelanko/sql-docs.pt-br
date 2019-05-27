@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - deactivated My Reports folder
@@ -17,12 +16,12 @@ ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 08230bedfa4c9e62a890a34db9ac12d99cae589a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eba2db61acb691732f81dcd0fa98b0ba48cf921e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63011935"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103845"
 ---
 # <a name="enable-and-disable-my-reports"></a>Habilitar e desabilitar Meus Relatórios
   O recurso Meus Relatórios aloca armazenamento pessoal no banco de dados do servidor de relatório, para que os usuários possam salvar seus relatórios em uma pasta particular. Como um administrador do servidor de relatório, você pode habilitar ou desabilitar esse recurso ou alterar a maneira como ele funciona, por meio das configurações de segurança que controlam o que os usuários podem fazer com esse workspace.  

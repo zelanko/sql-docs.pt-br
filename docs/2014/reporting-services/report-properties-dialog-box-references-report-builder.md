@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10082"
@@ -13,12 +12,12 @@ ms.assetid: 3414c857-8ea6-4fc4-a6d5-b4883c039efa
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ef34d756629b2e281d02ff4c808b1a7862624886
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 99fe80a22f380bbe1406d357846c4103eeb0083e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967942"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104387"
 ---
 # <a name="report-properties-dialog-box-references-report-builder"></a>Caixa de diálogo Propriedades do Relatório, Referências (Construtor de Relatórios)
   Selecione **Referências** na caixa de diálogo **Propriedades do Relatório** para adicionar ou remover as referências para assemblies personalizados ou outros assemblies externos e instâncias de classe personalizada usadas pelas expressões na definição do relatório. Assemblies personalizados não têm suporte no modo local no Construtor de Relatórios. Para criar relatórios que usem assemblies personalizados, use o Designer de relatórios no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

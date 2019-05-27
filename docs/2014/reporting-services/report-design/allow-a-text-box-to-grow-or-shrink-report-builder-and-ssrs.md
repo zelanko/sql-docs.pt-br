@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: dbc01e78-5993-47e5-af04-34f9e3bbcee1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 75998722f773685e419f0618dc75864ae5fece16
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b3aad6f25496384026e2550862b5babaf95bfd39
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206329"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106472"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>Permitir que uma caixa de texto seja ampliada ou reduzida (Construtor de Relatórios e SSRS)
   Por padrão, as caixas de texto apresentam um tamanho fixo. Você pode definir opções que permitem a expansão ou redução da caixa de texto com base em seu conteúdo. Essas opções correspondem à propriedade `CanGrow` ou `CanShrink` no painel Propriedades.  

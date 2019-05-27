@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 827221a60598a6a9f4179a86783c05512072f5b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 66883f42947ba54205a5f272bb6bbfd5a90376f9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63020759"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106569"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>Adicionar ou excluir um grupo em uma região de dados (Construtor de Relatórios e SSRS)
   Adicione um grupo a uma região de dados quando quiser organizar os dados por um valor ou conjunto de expressões específico para exibição e cálculos. Um grupo tem um nome e uma expressão que identificam quais dados de um conjunto de dados pertencem ao grupo. Para obter mais informações sobre grupos, consulte [Noções básicas sobre grupos &#40;Construtor de Relatórios e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.serieslabelproperties.general.f1
@@ -14,12 +13,12 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c85c464c6ebf32d81c08c319999aa2c6d8b1514c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d9c0b0a2c6ca3c12ca020dcc79b5aa4cad46c825
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654660"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105814"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatando pontos de dados em um gráfico (Construtor de Relatórios e SSRS)
   Ponto de dados é a menor entidade individual no gráfico. Em gráficos sem-forma, os pontos de dados são representados de acordo com seu tipo de gráfico. Por exemplo, uma série de linhas consiste em um ou mais pontos de dados conectados. Em gráficos com forma, os pontos de dados são representados por fatias individuais ou segmentos acrescidos a todo o gráfico. Por exemplo, em um gráfico de pizza, cada pedaço é um ponto de dados. Para obter mais informações, consulte [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](chart-types-report-builder-and-ssrs.md).  

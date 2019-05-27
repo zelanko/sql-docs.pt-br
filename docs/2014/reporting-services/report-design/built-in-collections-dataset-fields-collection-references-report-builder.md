@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 906cda310ff4478854d2b308332571fa6dbdd155
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 659fade9e10edc32c2444bf024fd475ea78a5d1d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185817"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106447"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>Referências de coleções de campos de conjuntos de dados (Construtor de Relatórios e SSRS)
   Cada conjunto de dados de um relatório contém uma coleção Fields. A coleção Fields é o conjunto de campos especificado pela consulta do conjunto de dados, além de qualquer campo calculado adicional que você criar. Assim que você criar um conjunto de dados, a coleção de campos aparecerá no painel **Dados do Relatório** .  

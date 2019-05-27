@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 21b92fe6ab723b9e519b8828f9adcd4e67dad2e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0f3fb342593e24ce97a550186065a22ec3ee2498
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720257"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104719"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Áreas da região de dados Tablix (Construtor de Relatórios e SSRS)
   Uma região de dados tablix tem quatro áreas que contêm células tablix: o canto, a área de grupo de linhas, a área de grupo de colunas e o corpo. As células de cada área têm uma função distinta. Você adiciona células à área de corpo de Tablix para exibir detalhes e dados agrupados. O Construtor de Relatórios e o Designer de Relatórios adicionam células à área do grupo de linhas ou grupo de colunas quando você cria um grupo para exibir valores de instância de grupo. O Construtor de Relatórios e o Designer de Relatórios criam células de canto de tablix quando existem grupos de linhas e de colunas.  

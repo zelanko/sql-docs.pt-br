@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5122fe6ddecacb492539573aa769e34164e699f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 33904b979bca1162b8f30009dcde3ac8ce5fd006
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63216099"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105303"
 ---
 # <a name="countdistinct-function-report-builder-and-ssrs"></a>Função CountDistinct (Construtor de Relatórios e SSRS)
   Retorna uma contagem de todos os valores não nulos distintos especificados pela expressão, avaliados no contexto do escopo fornecido.  

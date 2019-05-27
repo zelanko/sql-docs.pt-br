@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [Reporting Services], log files
@@ -18,12 +17,12 @@ ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 417c0aa5a444c6d73c76b11aa21756400ac891c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2c0e935cc3d5264a1d2f5569b62db416d85b0427
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190934"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103377"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Fontes e arquivos de log do Reporting Services
   Um servidor de relatório [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e um ambiente de servidor de relatório dão suporte a uma variedade de destinos de log para registrar informações sobre operações e status do servidor. Há duas categorias básicas de registro em log, log de execução e log de rastreamento. O log de execução inclui informações sobre estatística de execução de relatório, auditoria, diagnóstico de desempenho e otimização. O log de rastreamento são informações sobre mensagens de erro e diagnóstico em geral.  

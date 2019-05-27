@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10530"
@@ -14,12 +13,12 @@ ms.assetid: 4639d368-9918-4bb1-9953-7a724ca78dea
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3c6d90ae9945e7014158916df0ec5e04f03a6541
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e57e0eb15c8c0ae7e326927ab14493f21c52cc14
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63306615"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104302"
 ---
 # <a name="report-properties-dialog-box-references"></a>Caixa de diálogo Propriedades do Relatório, Referências
   Selecione **Referências** na caixa de diálogo **Propriedades do Relatório** para adicionar ou remover as referências para assemblies personalizados ou outros assemblies externos e instâncias de classe personalizada usadas pelas expressões na definição do relatório.  

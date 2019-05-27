@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 61c4d6ff-6435-456a-9cbd-5113d2113e8a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 78a9aa951b96354f628a8aa6fd180fbc01b186a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 91dea7b15b00d9ebc08b97f3dd8e7a8f512ae097
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215393"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105187"
 ---
 # <a name="max-function-report-builder-and-ssrs"></a>Função Max (Construtor de Relatórios e SSRS)
   Retorna o valor máximo de todos os valores numéricos não nulos especificados pela expressão, no contexto do escopo fornecido.  

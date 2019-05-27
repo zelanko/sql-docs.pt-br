@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapproperties.general.f1
@@ -18,12 +17,12 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 90a8f755b49e0b4f931325de25abea3654cc7d1f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f784da5b506930bd3a28366c4610c79e73b14c77
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209244"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105547"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mapas (Construtor de Relatórios e SSRS)
   Para visualizar dados comerciais em um plano de fundo geográfico, você pode acrescentar um mapa a seu relatório. O tipo de mapa selecionado depende de qual informação você deseja comunicar no seu relatório. Você pode adicionar um mapa que só exibe locais ou um mapa de bolhas que varia o tamanho da bolha com base no número de residências em uma área, ou um mapa de marcador que varia o estilo de marcador com base no produto mais lucrativo para cada loja, ou um mapa de linha que exibe rotas entre lojas.  
@@ -81,7 +80,7 @@ ms.locfileid: "63209244"
 -   **Relatórios da galeria de mapas.** Os dados espaciais são inseridos em relatórios localizados na galeria de mapas. Por padrão, a Galeria de Mapas está instalada em *\<drive>*:\Program Files\Microsoft SQL Server\Report Builder \MapGallery.  
   
     > [!NOTE]  
-    >  Esse recurso de mapeamento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa dados de arquivos de forma TIGER/Line fornecidos pela Agência de Recenseamento norte-americana ([http://www.census.gov/](http://www.census.gov/)). Os arquivos de forma TIGER/Line são um extrato das informações geográficas e cartográficas selecionadas do banco de dados Census MAF/TIGER. Arquivos de forma TIGER/Line estão disponíveis sem custos adicionais dos Estados Unidos Agência de Recenseamento norte-americana. Para saber mais sobre os arquivos de forma TIGER/Line, visite [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). As informações de limites nos arquivos de forma Tiger/Line destinam-se apenas a fins de coleta de dados estatísticos e tabulação; a representação e a designação dessas informações para propósitos estatísticos não constituem uma determinação de autoridade de jurisdição ou direitos de propriedade ou qualificação e elas não são descrições de terra legais. Census TIGER e TIGER/Line são marcas registradas dos EUA Agência de Recenseamento norte-americana.  
+    >  Esse recurso de mapeamento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa dados de arquivos de forma TIGER/Line fornecidos pela Agência de Recenseamento norte-americana ([http://www.census.gov/](http://www.census.gov/)). Os arquivos de forma TIGER/Line são um extrato das informações geográficas e cartográficas selecionadas do banco de dados Census MAF/TIGER. Esses arquivos de forma podem ser obtidos sem encargos com a Agência de Recenseamento norte-americana. Para saber mais sobre os arquivos de forma TIGER/Line, visite [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). As informações de limites nos arquivos de forma Tiger/Line destinam-se apenas a fins de coleta de dados estatísticos e tabulação; a representação e a designação dessas informações para propósitos estatísticos não constituem uma determinação de autoridade de jurisdição ou direitos de propriedade ou qualificação e elas não são descrições de terra legais. Census TIGER e TIGER/Line são marcas registradas da Agência de Recenseamento norte-americana.  
   
 -   **Arquivos de forma ESRI.** Os arquivos de forma ESRI contêm dados compatíveis com o Environmental Systems Research Institute, Inc. (ESRI) Formato de dados espaciais de arquivo de forma. Os arquivos de forma ESRI referem-se a um conjunto de arquivos. Dados no arquivo .shp especificam as formas geográficas ou geométricas. Os dados no arquivo .dbf fornecem atributos para as formas. Para exibir um mapa em modo design ou executar um mapa do servidor de relatório, ambos os arquivos devem estar na mesma pasta. Quando você adicionar dados espaciais de um arquivo .shp em seu sistema de arquivos local, os dados espaciais serão incorporados em seu relatório. Para recuperar dados espaciais dinamicamente em tempo de execução, carregue os arquivos de forma no servidor de relatório e especifique-os como a fonte de dados espaciais. Para obter mais informações, consulte [Localizando arquivos de forma ESRI para um mapa](https://go.microsoft.com/fwlink/?linkid=178814).  
   

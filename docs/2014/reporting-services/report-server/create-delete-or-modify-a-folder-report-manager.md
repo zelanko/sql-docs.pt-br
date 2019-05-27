@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - removing folders
@@ -18,12 +17,12 @@ ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b5db8ffafa6697f085d9594939d80140865efe5a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ef4aa341c8f89afbd099cd26fc8352425e6ac8ba
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63010735"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103923"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Criar, excluir ou modificar uma pasta (Gerenciador de Relatórios)
   É possível criar pastas para organizar e administrar os itens publicados em um servidor de relatório. Criar pastas pode ajudar os usuários a localizar relatórios de seu interesse. Para gerenciadores de conteúdo, pastas fornecem uma estrutura para a aplicação de permissões. É possível criar atribuições de função em pastas específicas para restringir o acesso a relatórios em desenvolvimento ou que não devem ser distribuídos amplamente.  
