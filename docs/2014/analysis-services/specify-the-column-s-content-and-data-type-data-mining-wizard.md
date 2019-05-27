@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifycontentdatatype.f1
@@ -13,12 +12,12 @@ ms.assetid: 7061f674-e806-46f2-8c15-e260a3c69a17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc0fa58c45a49c6a2f09ca3e42df395cbaf20660
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 00113df9f330a2edfce0c75f69d45c1fcd9274ee
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745826"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068159"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>Especifique a coluna&#39;s conteúdo e tipo de dados (Assistente de mineração de dados)
   Use a página **Especificar o Tipo de Conteúdo e de Dados da Coluna** para modificar a coluna e os tipos de conteúdo que já foram definidos pelo assistente. O assistente usa os tipos de dados das colunas de origem e os recursos do algoritmo selecionado para determinar os tipos de dados e de conteúdo padrão de cada coluna.  

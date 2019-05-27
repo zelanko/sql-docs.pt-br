@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - snippets [Transact-SQL], surround with
@@ -15,12 +14,12 @@ ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80018ea80f80f7c17412572005b8e8fb43004285
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2afb9294fa75926b6f6a78ec8b889a2e38a851a4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143646"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090335"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Inserir snippets Transact-SQL com Surround
   Um snippet com surround é um modelo que você pode usar como ponto de partida ao colocar um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um bloco BEGIN, IF ou WHILE.  

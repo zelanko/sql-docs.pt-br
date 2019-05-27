@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Upgrade Advisor, components
@@ -22,12 +21,12 @@ ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 546a9908791972564cd5cf749eb9e189753602c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52045095714bfc2be7e929ed27a26a800c860fe6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098646"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092087"
 ---
 # <a name="sql-server-components"></a>Componentes do SQL Server
   Você pode executar o Assistente de análise do Supervisor de atualização em um computador local ou remoto que tenha [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instalado. A primeira etapa da análise de pré-atualização é identificar o computador e os componentes que serão analisados.  
@@ -51,7 +50,7 @@ ms.locfileid: "48098646"
   
  Se for verificar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você deve especificar o nome do computador local. O Supervisor de Atualização verifica somente os servidores de relatório locais.  
   
- **detectar**  
+ **Detect**  
  O **detectar** botão acessa o computador especificado e detecta os componentes para analisar:  
   
 -   Se você estiver analisando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um computador remoto, deverá habilitar os serviços de Registro remoto no computador remoto.  

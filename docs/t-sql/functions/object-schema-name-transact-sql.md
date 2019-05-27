@@ -19,15 +19,15 @@ helpviewer_keywords:
 - database objects [SQL Server], names
 - OBJECT_SCHEMA_NAME function
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd30ff2c40271028a742e0dcab575e4ff3c99159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f46e00be95d751629325a6b7c54160bf00e44be
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722584"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948962"
 ---
 # <a name="objectschemaname-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -64,7 +64,7 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
 ## <a name="remarks"></a>Remarks  
  As funções de sistema podem ser usadas na lista de seleção, na cláusula WHERE e em qualquer local onde uma expressão for permitida. Para obter mais informações, consulte [Expressões](../../t-sql/language-elements/expressions-transact-sql.md) e [WHERE](../../t-sql/queries/where-transact-sql.md).  
   
- O conjunto de resultados retornado por esta função de sistema usa o agrupamento do banco de dados atual.  
+ O conjunto de resultados retornado por esta função de sistema usa a ordenação do banco de dados atual.  
   
  Se *database_id* não for especificado, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] presumirá que *object_id* está no contexto do banco de dados atual. Uma consulta que faz referência a um *object_id* em outro banco de dados retorna NULL ou resultados incorretos. Por exemplo, na consulta a seguir o contexto do banco de dados atual é [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenta retornar um nome de esquema de objeto para a identificação do objeto especificado naquele banco de dados, em lugar do banco de dados especificado na cláusula FROM da consulta. Portanto, informações incorretas são retornadas.  
   

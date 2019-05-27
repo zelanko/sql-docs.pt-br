@@ -22,15 +22,15 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - SUSER_SID function
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0d4a3d885eb4f0d40d95f937ba252625e9e07de5
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 0b8c2dbe2b9129ae52432de1b70079a53a963c27
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979882"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948383"
 ---
 # <a name="susersid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 SELECT SUSER_SID();  
 ```  
   
-### <a name="b-using-susersid-with-a-specific-login"></a>b. Usando SUSER_SID com um logon específico  
+### <a name="b-using-susersid-with-a-specific-login"></a>B. Usando SUSER_SID com um logon específico  
  O exemplo a seguir retorna o número de identificação de segurança para o logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa`.  
   
 **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.tools.generaloptions.f1
@@ -15,12 +14,12 @@ ms.assetid: a888246d-ccfe-415f-bbdc-d6adafac250a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0dbabfc0564d1338fb4eec8b9688acd99538576
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c9da36f49927acd2a313bcb9f8647655731006d2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844923"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089617"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler - Ferramentas-Opções (página de opções geral)
   Use a caixa de diálogo **Opções Gerais** para exibir ou especificar as opções a seguir.  

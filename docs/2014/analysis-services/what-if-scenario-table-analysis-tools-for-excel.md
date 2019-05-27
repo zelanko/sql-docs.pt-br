@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -15,12 +14,12 @@ ms.assetid: 4df5a5c5-1983-4009-a7c5-cd340649fd2f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8355c828cdc3479b108a693b07b3dfb5a92a289
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fef8ca20bd3e137d21b5121f42a0d7fee82ae4a7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793218"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065386"
 ---
 # <a name="what-if-scenario-table-analysis-tools-for-excel"></a>Cenário E-Se (Ferramentas de Análise de Tabela para Excel)
   ![Que botão cenário se nas ferramentas de análise de tabela](media/tat-whatif.gif "botão cenário e se nas ferramentas de análise de tabela")  

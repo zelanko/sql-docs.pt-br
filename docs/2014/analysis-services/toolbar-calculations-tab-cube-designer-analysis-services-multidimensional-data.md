@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 74b1d8b1-6bf4-490a-a181-03cc52348952
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: deae929c1e01939d6caeb4d9fa49b3c7fe73fd0d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 658d47908929720e51f7c87418f6892ce8148df0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756476"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066081"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Cálculo, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel da **Barra de Ferramentas** para executar operações comuns na guia **Cálculos** do Designer de Cubo.  

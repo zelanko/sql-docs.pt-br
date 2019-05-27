@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - service account configuration, SQL Server
@@ -13,12 +12,12 @@ ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f642458f8d30fab0d20eeaad427831c5dece964
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8435b0c677f80bf4f26acd4411d90ab63c7473d1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62659845"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092266"
 ---
 # <a name="server-configuration---service-accounts"></a>Configuração do servidor - Contas de serviço
   Use a página Configuração do Servidor do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atribuir contas de logon aos serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os serviços reais configurados nessa página dependem dos recursos que você selecionou para instalação.  

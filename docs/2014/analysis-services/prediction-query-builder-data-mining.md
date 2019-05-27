@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 12900d49-db88-48bb-a5f4-0a9a172bc126
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c5e697003246ec00121c203a6b77fe68fed378fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 61f0f7c62c6c3f245a87e7e8ce37153f08226a7b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748678"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070777"
 ---
 # <a name="prediction-query-builder-data-mining"></a>Construtor de consulta de previsão (Mineração de Dados)
   Utilize a exibição **Previsão do Modelo de Mineração** para criar previsões baseadas em modelos de mineração que uma estrutura de mineração contém.  

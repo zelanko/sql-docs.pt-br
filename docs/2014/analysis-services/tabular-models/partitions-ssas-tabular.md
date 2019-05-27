@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8126278319caff77a3d4ff6a334ed985c190288e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5dd80a1f6645e7d1c766e88de653fa1e8f1f4cc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795493"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066897"
 ---
 # <a name="partitions-ssas-tabular"></a>Partições (SSAS tabular)
   As partições dividem uma tabela em partes lógicas. Cada partição pode ser processada (Atualizada) independentemente de outras partições. As partições criadas usando a caixa de diálogo Partições no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] durante a criação do modelo aplicam-se ao banco de dados de workspace modelo. Quando o modelo é implantado, as partições definidas para o banco de dados de workspace modelo são duplicadas no banco de dados modelo implantado. Você ainda pode criar e gerenciar partições para um banco de dados modelo implantado usando a caixa de diálogo Partições no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  As informações fornecidas neste tópico descrevem partições criadas durante a criação modelo usando a caixa de diálogo Gerenciador de Partições no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obter informações sobre como criar e gerenciar partições para um modelo implantado, consulte [Criar e gerenciar partições de modelos tabulares &#40;SSAS de Tabela&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md).  

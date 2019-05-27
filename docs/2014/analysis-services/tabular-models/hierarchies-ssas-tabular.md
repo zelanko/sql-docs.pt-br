@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2301f57d97c42ef2887824d2acd092e2a78aee7a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8ed315372dce4b6de69da389e88bbcb95166e6e1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757072"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067077"
 ---
 # <a name="hierarchies-ssas-tabular"></a>Hierarquias (SSAS tabular)
   Hierarquias, em modelos de tabela, são metadados que definem relações entre duas ou mais colunas em uma tabela. As hierarquias podem parecer separadas de outras colunas em uma lista de campo de cliente de relatório, facilitando para usuários clientes navegarem e incluírem em um relatório.  

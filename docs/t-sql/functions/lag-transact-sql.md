@@ -16,16 +16,16 @@ helpviewer_keywords:
 - LAG function
 - analytic functions, LAG
 ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4552a70620ca14fb3ee11d9dbdced9d934d1c348
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: d2a31e3566c8ce27b010109b658573bf571148b3
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572809"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946987"
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -51,7 +51,7 @@ LAG (scalar_expression [,offset] [,default])
  *default*  
  O valor a ser retornado quando *offset* estiver além do escopo da partição. Se um valor padrão não for especificado, NULL será retornado. *default* pode ser uma coluna, subconsulta ou outra expressão, mas não pode ser uma função analítica. *default* deve ter o tipo compatível com *scalar_expression*.  
   
- OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem dos dados antes de a função ser aplicada. Se *partition_by_clause* for especificado, ela determinará a ordem dos dados na partição. *order_by_clause* é obrigatória. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -88,7 +88,7 @@ BusinessEntityID SalesYear   CurrentQuota          PreviousQuota
   
 ```  
   
-### <a name="b-compare-values-within-partitions"></a>b. Comparar valores dentro de partições  
+### <a name="b-compare-values-within-partitions"></a>B. Comparar valores dentro de partições  
  O exemplo a seguir usa a função LAG para comparar as vendas no ano até o momento entre funcionários. A cláusula PARTITION BY é especificada para dividir as linhas no conjunto de resultados por território de vendas. A função LAG é aplicada separadamente a cada partição e a computação é reiniciada para cada partição. A cláusula ORDER BY na cláusula OVER ordena as linhas em cada partição. A cláusula ORDER BY na instrução SELECT classifica as linhas em todo o conjunto de resultados. Observe que, como não há um valor de retardo disponível para a primeira linha de cada partição, o padrão de zero (0) é retornado.  
   
 ```sql   

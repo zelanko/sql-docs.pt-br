@@ -17,15 +17,15 @@ helpviewer_keywords:
 - KEY_GUID function
 - GUIDs [SQL Server]
 ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 06ffb5927414cc169863dbe2435fe4221618e5cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b39f2b1898678b06d77c89eed513927d6dfc92b3
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799954"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949231"
 ---
 # <a name="keyguid-transact-sql"></a>KEY_GUID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

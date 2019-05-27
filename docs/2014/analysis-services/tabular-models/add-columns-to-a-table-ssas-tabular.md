@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 63d2958e8c0dec7213bfed0a054787cda5f0c853
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7a62460a63bab15499f9aeb4c6510c0e4a9652a7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795323"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067764"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>Adicionar colunas a uma tabela (SSAS tabular)
   Este tópico descreve como adicionar colunas a uma tabela existente.  

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 653b15db-a984-4b4b-b224-81b0285b099b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 998ff700a63274c2a57f7e3dc9d6981b2e43bb53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3399c6e8c73916e613197aec2ee0499098a8fa86
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193098"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095385"
 ---
 # <a name="feature-rules-upgrade"></a>Regras de recurso (atualizar)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instalação valida a configuração do computador antes da operação de instalação ser concluída. Durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o sistema verifica o computador onde o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será instalado e verifica as condições que impedem uma operação bem-sucedida de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Antes que a Instalação inicie o assistente de atualização, ele recupera o status de cada item. Em seguida, compara o resultado com condições necessárias e fornece orientação para a remoção de problemas de bloqueio.  
+  A Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valida a configuração do computador antes da conclusão da operação de Instalação. Durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o sistema verifica o computador onde o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será instalado e verifica as condições que impedem uma operação bem-sucedida de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Antes que a Instalação inicie o assistente de atualização, ele recupera o status de cada item. Em seguida, compara o resultado com condições necessárias e fornece orientação para a remoção de problemas de bloqueio.  
   
  A verificação da configuração do sistema gera um relatório que contém uma breve descrição de cada regra executada, bem como o status de execução. O relatório de verificação de configuração do sistema está localizado em % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< YYYYMMDD_HHMM >\\.  
   

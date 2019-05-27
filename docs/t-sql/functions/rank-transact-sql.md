@@ -18,16 +18,16 @@ helpviewer_keywords:
 - ranking rows
 - RANK function [Transact-SQL]
 ms.assetid: 2d96f6d2-5db7-4b3c-a63e-213c58e4af55
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa7bd2ea2812df56e1f4b2f642c3abca3102a8d9
-ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
+ms.openlocfilehash: e6ef9e31744be1cbb6a5f1ac84fdf4d8c315f97e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57756751"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943309"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. _order\_by\_clause_ determina a ordem dos dados antes de a função ser aplicada. *order_by_clause* é obrigatória. A \<cláusula rows ou range/> da cláusula OVER não pode ser especificada para a função RANK. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -99,7 +99,7 @@ ProductID   Name                   LocationID   Quantity Rank
  (10 row(s) affected)  
 ```  
   
-### <a name="b-ranking-all-rows-in-a-result-set"></a>b. Classificando todas as linhas em um conjunto de resultados  
+### <a name="b-ranking-all-rows-in-a-result-set"></a>B. Classificando todas as linhas em um conjunto de resultados  
  O exemplo a seguir retorna os dez primeiros funcionários classificados pelo salário. Como uma cláusula de PARTITION BY não foi especificada, a função RANK foi aplicada a todas as linhas no conjunto de resultados.  
   
 ```sql  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.warnings.f1
@@ -13,12 +12,12 @@ ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d83620c0c6463bd6e752f65a97b2fb14e1d1c03f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 90eeca203c672c21551b8aff2e24feb164d8fda5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756008"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065434"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>Avisos (Designer de Banco de Dados) (Analysis Services - Dados multidimensionais)
   Use a guia **Avisos** para exibir e ignorar regras globalmente e para exibir e reabilitar instâncias específicas de avisos ignorados. O **avisos** guia exibe duas grades: **Regras de aviso de design** e **avisos ignorados**.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d2d29838c371559c54163eb8e5488d198cf28345
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188548"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108186"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Página Minhas Assinaturas (Gerenciador de Relatórios)
   Use a página Minhas Assinaturas para exibir todas as suas assinaturas em um lugar. Desta página, você pode acessar e modificar ou excluir qualquer assinatura que possui. Você só possui as assinaturas que cria. Você não pode acessar as de outros usuários nem pode acessar assinaturas que você usa, mas não possui (por exemplo, se seu nome foi adicionado a uma assinatura existente definida por outro usuário). Você não pode criar assinaturas nesta página. Para obter mais informações sobre como criar assinaturas, consulte o [página nova assinatura ou Editar assinatura &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  

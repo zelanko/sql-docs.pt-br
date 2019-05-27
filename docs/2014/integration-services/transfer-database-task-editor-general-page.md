@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 0f65927a-5835-45ee-9c19-e33f00d0755c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f57f1630744a879c51cfbac37870fa0712e22ec5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a78fb3dd052a7e275b91073ccf2089510b97e44
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766309"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055102"
 ---
 # <a name="transfer-database-task-editor-general-page"></a>Editor da Tarefa Transferir Banco de Dados (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Transferir Banco de Dados** para nomear e descrever a tarefa Transferir Banco de Dados. A tarefa Transferir Banco de Dados copia ou move um bancos de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre duas instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Essa tarefa também pode ser usada para copiar um banco de dados dentro do mesmo servidor. Para obter mais informações sobre essa tarefa, consulte [Tarefa Transferir Banco de Dados](control-flow/transfer-database-task.md).  

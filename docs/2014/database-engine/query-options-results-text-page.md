@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
@@ -13,12 +12,12 @@ ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 8136f43214ef966c7beb05501ca0b27d451f0451
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8d96384a4a4f4adbb52855a45f1bc00d3aadd85d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62773654"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088980"
 ---
 # <a name="query-options-results-text-page"></a>Resultados das opções de consulta (página de texto)
   Use esta página para especificar as opções de exibição de um conjunto de resultados da consulta em formato de texto. As configurações desta página também se aplicam quando **Resultados em Arquivo** é selecionado.  

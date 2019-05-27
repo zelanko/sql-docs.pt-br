@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtsserver.importpackage.f1
@@ -15,12 +14,12 @@ ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2631235c2ed0011aca4e734c7a61093203518636
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3e36fae15f6f4220565bcc3d14c0e125ca6818f0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767909"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058077"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Importar Pacote
   Use a caixa de diálogo **Importar Pacote**, disponível no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], para importar um pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e para definir ou modificar o nível de proteção do pacote.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - redeploying packages [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: 86806efb-8cf4-4f9d-9824-1152cb4c495c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 15d41b9c0e31fe4bfd86349888071721b7493661
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 14edf3c34278ce89686a390c5b69662753ae653d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766838"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056474"
 ---
 # <a name="redeployment-of-packages"></a>Reimplantação de pacotes
   Após a implantação de um projeto, talvez seja necessário atualizar ou estender a funcionalidade de pacotes e reimplantar o projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contém os pacotes atualizados. Como parte do processo de reimplantação dos pacotes, você deve revisar as propriedades de configuração incluídas no utilitário de implantação. Por exemplo, você pode desejar não permitir mudanças de configuração depois que o pacote for reimplantado.  

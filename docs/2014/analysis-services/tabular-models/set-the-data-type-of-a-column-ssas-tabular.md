@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 82b2d4a687c490ed1909a27fc55fdece9cc3662c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794356"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066606"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Definir o tipo de dados de uma coluna (SSAS tabular)
   Quando você importa ou cola dados em um modelo, o designer de modelo detectará automaticamente e aplicará os tipos dos dados. Depois que adicionar dados ao modelo, você poderá modificar manualmente o tipo de dados de uma coluna para alterar o modo como os dados são armazenados. Se você deseja apenas alterar o formato de exibição dos dados sem alterar o modo como são armazenados, faça isso.  
@@ -51,7 +50,7 @@ ms.locfileid: "62794356"
   
 |Tipos de dados do modelo|  
 |----------------------|  
-|Texto<br /><br /> Número Decimal<br /><br /> Número Inteiro<br /><br /> CURRENCY<br /><br /> TRUE/FALSE<br /><br /> data|  
+|Texto<br /><br /> Número Decimal<br /><br /> Número Inteiro<br /><br /> Currency<br /><br /> TRUE/FALSE<br /><br /> Date|  
   
  Caso descubra que seus dados têm um tipo de dados errado ou, pelo menos, um tipo diferente do desejado, você terá várias opções:  
   

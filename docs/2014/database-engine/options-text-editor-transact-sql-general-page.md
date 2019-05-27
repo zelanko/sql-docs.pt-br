@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.General
@@ -15,12 +14,12 @@ ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 28559b6037fa6b0e95bb6748f85d3d0cecd2df8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774124"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089165"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>Opções (Editor de texto - página de Transact-SQL – geral)
   Use a caixa de diálogo de opções **Geral** para alterar o comportamento de edição geral do Editor de Consultas do [!INCLUDE[ssDE](../includes/ssde-md.md)] , que é usado para editar scripts [!INCLUDE[tsql](../includes/tsql-md.md)] . Para exibir essas configurações, clique em **Opções** , no menu **Ferramentas** , expanda a subpasta **Transact-SQL** e clique em **Geral**.  

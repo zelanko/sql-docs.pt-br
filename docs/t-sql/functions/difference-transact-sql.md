@@ -17,16 +17,16 @@ helpviewer_keywords:
 - comparing SOUNDEX values
 - SOUNDEX values
 ms.assetid: c58ca25d-d6ea-48fa-93bb-c9374b0b2a2b
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 851ee650ba9647035be491762fa29eb100ffbe92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f337707509f3a62a60903a5a97c42bebc7754468
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772084"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947070"
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,10 +51,10 @@ Uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) alfa
 ## <a name="remarks"></a>Remarks  
 `DIFFERENCE` compara dois diferentes valores `SOUNDEX` e retorna um valor inteiro. Esse valor mede o grau de correspondência entre os valores de `SOUNDEX`, em uma escala de 0 a 4. Um valor de 0 indica pouca ou nenhuma semelhança entre os valores SOUNDEX; 4 indica valores SOUNDEX com forte semelhança ou até mesmo idênticos, apresentando correspondência total.  
   
-`DIFFERENCE` e `SOUNDEX` têm sensibilidade de agrupamento.  
+`DIFFERENCE` e `SOUNDEX` têm sensibilidade de ordenação.  
   
 ## <a name="examples"></a>Exemplos  
-A primeira parte deste exemplo compara os valores `SOUNDEX` de duas cadeias de caracteres muito similares. Para um agrupamento Latin1_General, `DIFFERENCE` retorna um valor `4`. A segunda parte do exemplo compara os valores `SOUNDEX` de duas cadeias de caracteres muito diferentes e, para um agrupamento Latin1_General, `DIFFERENCE` retorna um valor `0`.  
+A primeira parte deste exemplo compara os valores `SOUNDEX` de duas cadeias de caracteres muito similares. Para uma ordenação Latin1_General, `DIFFERENCE` retorna um valor `4`. A segunda parte do exemplo compara os valores `SOUNDEX` de duas cadeias de caracteres muito diferentes e, para uma ordenação Latin1_General, `DIFFERENCE` retorna um valor `0`.  
   
 ```  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  

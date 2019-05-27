@@ -5,25 +5,25 @@ ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 00211061180339a1c537fba2101caf323758dd8d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: f62f7f5536fb2a1ec716971e6c24d88e47cc04aa
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65718565"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66009824"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Alterar a conta para registro em log do Scale Out
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-Quando você executa pacotes do SSIS no Scale Out, as mensagens de evento são registradas no banco de dados SSISDB com uma conta de usuário criada automaticamente chamada **##MS_SSISLogDBWorkerAgentLogin##**. O logon desse usuário usa a autenticação do SQL Server.
+Quando você executa pacotes do SSIS no Scale Out, as mensagens de evento são registradas no banco de dados SSISDB com uma conta de usuário criada automaticamente chamada **##MS_SSISLogDBWorkerAgentLogin##** . O logon desse usuário usa a autenticação do SQL Server.
 
 Se desejar alterar a conta usada para o log do Scale Out, siga estas etapas:
 

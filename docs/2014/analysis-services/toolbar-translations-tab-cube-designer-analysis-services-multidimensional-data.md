@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 22a4ca7a-0d43-47eb-8078-eb4b167b6e72
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 60d17dba32b5787b6dbb4b1c1a8fa47a5b27b2c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 316263c823c371d4c90415d694adcadef26f2030
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756279"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065937"
 ---
 # <a name="toolbar-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Traduções, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Barra de Ferramentas** para executar operações comuns na guia **Traduções** do Designer de Cubo.  

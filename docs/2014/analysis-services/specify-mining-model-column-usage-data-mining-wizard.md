@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifycolumnusage.f1
@@ -13,12 +12,12 @@ ms.assetid: 41a9867e-e055-495b-ba40-0a7ffaf57604
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6761a6c8e028ed5c589608886f763aed6455c520
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fb9f57e7918e7ef283255bf8ff947cc4493e9a87
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746229"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068358"
 ---
 # <a name="specify-mining-model-column-usage-data-mining-wizard"></a>Especificar uso de colunas do modelo de mineração (Assistente de Mineração de Dados)
   Use a página **Especificar Uso de Colunas do Modelo de Mineração** para especificar como as colunas do modelo de mineração serão usadas e para adicionar tabelas aninhadas.  

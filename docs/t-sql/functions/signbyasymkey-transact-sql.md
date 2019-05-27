@@ -21,15 +21,15 @@ helpviewer_keywords:
 - cryptography [SQL Server], asymmetric keys
 - clear text signing
 ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 76e23056ebb838febcb9f23dd849c0e1666108cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71d0710d479c4654549b6ec579102891c94f900e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772114"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947840"
 ---
 # <a name="signbyasymkey-transact-sql"></a>SIGNBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
  É uma variável do tipo **nvarchar**, **char**, **varchar** ou **nchar** que contém os dados que serão assinados com a chave assimétrica.  
   
  *password*  
- É a senha com a qual a chave privada é protegida. A *password* é **nvarchar(128)**.  
+ É a senha com a qual a chave privada é protegida. A *password* é **nvarchar(128)** .  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **varbinary** com um tamanho máximo de 8.000 bytes.  

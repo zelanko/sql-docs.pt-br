@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - MIN_ACTIVE_ROWVERSION function [Transact-SQL]
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 965a6508eb23cf26cc83be5a08d88b39db3d0068
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4f21916de6c03c8e592702e58af481ef64cbb6d
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670704"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944220"
 ---
 # <a name="minactiverowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ MIN_ACTIVE_ROWVERSION
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- Retorna um valor **binary(8)**.  
+ Retorna um valor **binary(8)** .  
   
 ## <a name="remarks"></a>Remarks  
  MIN_ACTIVE_ROWVERSION é uma função não determinística que retorna o valor de **rowversion** ativo mais baixo no banco de dados atual. Um novo valor **rowversion** normalmente é gerado quando uma inserção ou atualização é executada em uma tabela que contém uma coluna do tipo **rowversion**. Se não houver nenhum valor ativo no banco de dados, MIN_ACTIVE_ROWVERSION retornará o mesmo valor como @@DBTS + 1.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3d389cce-05af-4e1d-b684-7bbff413c806
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f2e9e395ec0c8703edaf7c398e22b352251302c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 55b872b46b5e0007d0651e190f6698ff0cfb50ec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766858"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056226"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>Agendar um pacote usando o SQL Server Agent
   O procedimento a seguir fornece as etapas para automatizar a execução do pacote usando uma etapa de trabalho do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent para executar o pacote.  
@@ -56,7 +55,7 @@ ms.locfileid: "62766858"
     |--------------------|-----------------|  
     |**Catálogo do SSIS**|Os pacotes armazenados no banco de dados SSISDB. Os pacotes são contidos em projetos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que são implantados no servidor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
     |**SQL Server**|Os pacotes armazenados no banco de dados MSDB. Use o serviço de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para gerenciar esses pacotes.|  
-    |**Armazenamento de Pacotes SSIS**|Pacotes que estão armazenados na pasta padrão no computador. A pasta padrão é *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Packages. Use o serviço de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para gerenciar esses pacotes.<br /><br /> Observação: Você pode especificar uma pasta diferente ou especificar pastas adicionais no sistema de arquivos a serem gerenciados pelo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] modificando o arquivo de configuração do serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para obter mais informações, consulte [Configurando o Serviço Integration Services &#40;Serviço SSIS#41;](service/integration-services-service-ssis-service.md).|  
+    |**Armazenamento de Pacotes SSIS**|Pacotes que estão armazenados na pasta padrão no computador. A pasta padrão é *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Packages. Use o serviço de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para gerenciar esses pacotes.<br /><br /> Observação: Você pode especificar uma pasta diferente ou pastas adicionais no sistema de arquivos a ser gerenciado pelo serviço de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] modificando o arquivo de configuração para [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para obter mais informações, consulte [Configurando o Serviço Integration Services &#40;Serviço SSIS#41;](service/integration-services-service-ssis-service.md).|  
     |**Sistema de Arquivos**|Pacotes que estão armazenados em qualquer pasta em sua máquina local.|  
   
      **As tabelas seguintes descrevem as opções de configuração que estão disponíveis para a etapa de trabalho segundo a origem do pacote que você selecionou.**  
@@ -77,7 +76,7 @@ ms.locfileid: "62766858"
     ||**Despejar quando ocorrerem erros**: Especifique se os arquivos de despejo de depuração são gerados quando ocorre um erro durante a execução do pacote.<br /><br /> O arquivo contém informações sobre a execução do pacote que pode ajudar a solucionar problemas de execução.<br /><br /> Quando você seleciona essa opção e ocorre um erro durante a execução, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] cria um arquivo .mdmp (arquivo binário) e um arquivo .tmp (arquivo de texto). Por padrão, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] armazena os arquivos na pasta *\<drive>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.|  
     ||**Tempo de execução de 32 bits** Indique se o pacote será executado use doo a versão de 32 bits do utilitário dtexec em um computador de 64 bits que tenha a versão de 64 bits do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent instalada.<br /><br /> Você pode precisar executar o pacote usando uma versão de 32 bits do dtexec, por exemplo, se o pacote usar um provedor OLE DB nativo que não esteja disponível em uma versão de 64 bits. Para obter mais informações, consulte [Considerações do Integration Services sobre versões de 64 bits](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx).<br /><br /> Por padrão, quando você seleciona o tipo de etapa de trabalho **Pacote do SQL Server Integration Services** , o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent executa o pacote usando a versão do utilitário dtexec invocada automaticamente pelo sistema. O sistema invoca a versão de 32 bits ou de 64 bits do utilitário, dependendo do processador do computador, e a versão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent que está sendo executada no computador.|  
   
-     **Origem do pacote**:  SQL Server, Store de pacote do SSIS ou sistema de arquivos  
+     **Origem do pacote**:  SQL Server, Repositório de Pacotes SSIS ou Sistema de Arquivos  
   
      Muitas das opções que você pode definir para pacotes armazenados no SQL Server, no Armazenamento de Pacotes SSIS ou no sistema de arquivos correspondem às opções de linha de comando para o utilitário de prompt de comando `dtexec`. Para obter mais informações sobre as opções de linha de comando e utilitário, consulte [Utilitário dtexec](packages/dtexec-utility.md).  
   

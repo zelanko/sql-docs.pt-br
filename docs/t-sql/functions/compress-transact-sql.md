@@ -13,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - COMPRESS function
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8c2169a32c9d82cd32491b1dabe5a87436623c80
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 898a7e4cea01b37bcb45334a3fc669cb63357d9d
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991839"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943906"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-Esta função compacta a expressão de entrada usando o algoritmo GZIP. A função retorna uma matriz de bytes do tipo **varbinary(max)**.
+Esta função compacta a expressão de entrada usando o algoritmo GZIP. A função retorna uma matriz de bytes do tipo **varbinary(max)** .
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -77,7 +77,7 @@ INSERT INTO player (name, surname, info )
 VALUES (N'Michael', N'Raheem', compress(@info));  
 ```  
   
-### <a name="b-archive-compressed-version-of-deleted-rows"></a>b. Arquivar a versão compactada de linhas excluídas  
+### <a name="b-archive-compressed-version-of-deleted-rows"></a>B. Arquivar a versão compactada de linhas excluídas  
 Primeiro, essa instrução exclui registros antigos do player da tabela `player`. Para economizar espaço, em seguida, armazena os registros na tabela `inactivePlayer`, em um formato compactado.
   
 ```sql

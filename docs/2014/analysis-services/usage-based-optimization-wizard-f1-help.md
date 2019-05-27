@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.usagebasedoptimizationwizard.f1
@@ -15,12 +14,12 @@ ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e5e94818245ba1e87d90f87539ae07e9531e5450
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756145"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065567"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Ajuda F1 do Assistente de Otimização com Base no Uso
   O Assistente de Otimização com Base no Uso tem saída semelhante ao Assistente de Design de Agregação e é usado para criar agregações para uma partição. No entanto o Assistente de Otimização com Base no Uso cria agregações com base em padrões específicos de uso de consultas registradas no log de consultas para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . As agregações fornecem melhorias de desempenho permitindo que o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] recupere totais pré-calculados diretamente do armazenamento de cubo em vez de precisar recalcular dados de uma fonte de dados subjacente para cada consulta.  

@@ -17,20 +17,20 @@ helpviewer_keywords:
 - IDENT_INCR function
 - identity columns [SQL Server], IDENT_INCR function
 ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4dc06419f478af56648e312d8ea7bac7481787fa
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e359073f2672f0fd68461398b78dc93b38ed39ec
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290984"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946439"
 ---
 # <a name="identincr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna o valor de incremento (como **numérico** (**@@** MAXPRECISION, 0)) especificado durante a criação de uma tabela ou coluna de identidade de exibição.  
+  Retorna o valor de incremento (como **numérico** ( **@@** MAXPRECISION, 0)) especificado durante a criação de uma tabela ou coluna de identidade de exibição.  
   
  ![Ícone do link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone do link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,7 +65,7 @@ SELECT IDENT_INCR('Person.Address') AS Identity_Increment;
 GO  
 ```  
   
-### <a name="b-returning-the-increment-value-from-multiple-tables"></a>b. Retornando o valor de incremento de várias tabelas  
+### <a name="b-returning-the-increment-value-from-multiple-tables"></a>B. Retornando o valor de incremento de várias tabelas  
  O exemplo a seguir retorna as tabelas no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que incluem uma coluna de identidade com um valor de incremento.  
   
 ```  

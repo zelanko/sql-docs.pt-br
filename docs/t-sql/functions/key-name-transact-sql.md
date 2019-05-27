@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - KEY_NAME function
 ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 59b69687434a1432f087da75d77d93907c02edee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed2b88a38075fe5951340bcc72eb636cab3e251e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745444"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949198"
 ---
 # <a name="keyname-transact-sql"></a>KEY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ KEY_NAME ( ciphertext | key_guid )
   
 ## <a name="arguments"></a>Argumentos  
  *ciphertext*  
- É o texto criptografado pela chave simétrica. *cyphertext* é do tipo **varbinary(8000)**.  
+ É o texto criptografado pela chave simétrica. *cyphertext* é do tipo **varbinary(8000)** .  
   
  *key_guid*  
  É o GUID da chave simétrica. *key_guid* é do tipo **uniqueidentifier**.  

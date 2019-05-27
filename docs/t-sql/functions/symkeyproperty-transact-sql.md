@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - SYMKEYPROPERTY
 ms.assetid: 3d1f7075-3a3c-4660-8cd0-ed938b86fecd
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 36e608b8167a5cd42a0f7c32035ad822eab461d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e300fe8e5ff6e0818396d0764ff33172df55354d
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681784"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948688"
 ---
 # <a name="symkeyproperty-transact-sql"></a>SYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

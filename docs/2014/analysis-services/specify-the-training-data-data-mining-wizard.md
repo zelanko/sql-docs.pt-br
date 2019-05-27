@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytrainingdata.f1
@@ -13,12 +12,12 @@ ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c06fb99f8e2104e17d9f6d5f8016b3149ab62c76
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745846"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068072"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>Especificar os dados de treinamento (Assistente de Mineração de Dados)
   Use a página **Especificar os Dados de Treinamento** para identificar quais as colunas a incluir na estrutura de mineração. Você pode selecionar colunas a serem incluídas na estrutura mesmo se não usá-las em todos os modelos. Por exemplo, para detalhar até as colunas a partir do modelo de mineração, você pode incluí-las na estrutura, mas não no modelo.  

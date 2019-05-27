@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced
@@ -13,12 +12,12 @@ ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2b2268b945b6b4eb2f82ed3d517be01bb2ec750c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5323054b77ed26a3ada816f44c1bf6764ded931d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774378"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089369"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>Opções (página Execução da consulta/SQL Server/Avançado)
   Várias opções estão disponíveis usando o comando SET. Use essa página para especificar uma opção **set** para executar consultas do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no Editor de Consultas do SQL Server. Elas não têm nenhum efeito em outros editores de códigos. As alterações feitas nessas opções são aplicadas apenas a novas consultas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para alterar as opções para as consultas atuais, clique em **Opções de Consulta** no menu **Consulta** ou no menu de atalho da janela de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Em **Execução**, clique em **Avançado**. Para obter informações sobre cada um, consulte os Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

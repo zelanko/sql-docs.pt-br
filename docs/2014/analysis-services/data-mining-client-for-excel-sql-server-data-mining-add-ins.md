@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Mining Client
@@ -15,12 +14,12 @@ ms.assetid: e075e2de-11cc-4f71-9603-0b161bca8a24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e61ae53ee78574351545109f75cebd88827c404b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9c2f11ecbdf90aeeb5e0e5a3ef097152898042d6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62692016"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086425"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Cliente de Mineração de Dados para Excel (Suplementos de Mineração de Dados do SQL Server)
   O Cliente de Mineração de Dados para Excel é um conjunto de ferramentas que permite realizar tarefas comuns de mineração de dados, desde a limpeza de dados até a criação de modelos e de consultas de previsão. Você pode usar dados nas tabelas ou nos intervalos do Excel, ou acessar fontes de dados externas.  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], IDs
 - IDs [SQL Server], symmetric keys
 ms.assetid: d7309542-dbbe-41dc-b42e-5d9a1c8b4838
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1ffafacce7d82645d0f1e8c0335637d26d850798
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56683b05b940ce9c11ba41d05659fb94bf26a921
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604754"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949203"
 ---
 # <a name="keyid-transact-sql"></a>KEY_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

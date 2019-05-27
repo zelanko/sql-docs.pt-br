@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.bidimensionproperties.f1
@@ -13,12 +12,12 @@ ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 36e74f875b8306a8678e0197d95f1fe18c5ea7f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6de1b056942673d358cec4768c6854a6966d139e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746728"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068371"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Especificar Tipo de Dimensão (Assistente para Dimensões)
   Use a página **Especificar Tipo de Dimensão** para definir o tipo de dimensão e adicionar tipos especiais de atributo associados com o tipo de dimensão selecionado para a dimensão.  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - IDs [SQL Server], asymmetric keys
 - cryptography [SQL Server], asymmetric keys
 ms.assetid: d697daf8-2106-4ebb-b09a-ca0be465d747
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1ae017411f8f988186eb6e0ca7273531e2dcefb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48bb97bdf073026ffdc7cde48eac1b295a06bd75
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809204"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944971"
 ---
 # <a name="asymkeyid-transact-sql"></a>ASYMKEY_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

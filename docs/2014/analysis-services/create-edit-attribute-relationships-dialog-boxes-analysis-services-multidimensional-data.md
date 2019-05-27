@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.createrelationshipdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: cb3bc7d8-9d4d-4da9-979d-bdad5e27e526
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 936862a702d7ca6f82dab5104c5354105443c3be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 544fc09037c0670c7ba44adf7b270e46899621a8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679754"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086937"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Caixas de diálogo Criar Relação de Atributo e Editar Relação de Atributo (guia Designer de Relação de Atributo, Designer de Dimensão) (Analysis Services - Dados multidimensionais)
   Use a caixa de diálogo **Criar Relação de Atributo** para definir novas relações de atributo e a caixa de diálogo **Editar Relação de Atributo** para alterar uma relação de atributo. Para obter mais informações, consulte [Definir Relações de Atributos](multidimensional-models/attribute-relationships-define.md).  

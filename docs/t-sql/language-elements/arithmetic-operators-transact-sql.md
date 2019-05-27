@@ -14,16 +14,16 @@ helpviewer_keywords:
 - arithmetic operators
 - math operations [Transact-SQL]
 ms.assetid: a41b92a5-1061-4e4d-bb3b-a180b73c88fa
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80574014aa381744177369fbac9dd4f6b39fb44f
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 6ea94ccc6b92155d67fc5cb1f47594332a2feb19
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154771"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980617"
 ---
 # <a name="arithmetic-operators-transact-sql"></a>Operadores aritméticos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -32,7 +32,7 @@ Os operadores aritméticos executam operações matemáticas em duas expressões
   
 |Operador|Significado|  
 |--------------|-------------|  
-|[+ (Somar)](../../t-sql/language-elements/add-transact-sql.md)|Addition|  
+|[+ (Somar)](../../t-sql/language-elements/add-transact-sql.md)|Adição|  
 |[- (Subtrair)](../../t-sql/language-elements/subtract-transact-sql.md)|Subtração|  
 |[* (Multiplicar)](../../t-sql/language-elements/multiply-transact-sql.md)|Multiplicação|  
 |[/ (dividir)](../../t-sql/language-elements/divide-transact-sql.md)|Divisão|  

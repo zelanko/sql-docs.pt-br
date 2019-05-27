@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10131"
@@ -14,12 +13,12 @@ ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5485a0b5ff39f8517ff6e73113f7405cab0a923c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6512f2523b1dc64c1f9505c59b727aad0f15ad2e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188202"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108095"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades do Espaço Reservado, Geral (Construtor de Relatórios e SSRS)
   Use a caixa de diálogo **Propriedades do Espaço Reservado** para alterar o valor, a Dica de Ferramenta e as opções de marcação de um espaço reservado em uma caixa de texto.  

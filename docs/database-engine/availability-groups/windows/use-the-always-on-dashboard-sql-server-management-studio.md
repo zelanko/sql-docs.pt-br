@@ -15,12 +15,12 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d70825317f2dbc7a59857bebf533d4b617b97e0
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: f1a82b21716db66c4eb2676ed51160519f99afd7
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120193"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982797"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Usar o painel do grupo de disponibilidade Always On (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,12 @@ ms.locfileid: "49120193"
 -   Modo e estado da sincronização    
 -   Tempo para restauração do log  
   
-##  <a name="before-you-begin"></a>Antes de começar  
   
-### <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisites  
  Conecte-se à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instância de servidor) que hospeda a réplica primária ou secundária de um grupo de disponibilidade.  
   
-### <a name="security"></a>Segurança  
-  
-#### <a name="permissions"></a>Permissões  
+ 
+### <a name="permissions"></a>Permissões  
  Requer as permissões CONNECT, VIEW SERVER STATE e VIEW ANY DEFINITION.  
   
 ##  <a name="to-start-the-always-on-dashboard"></a>Para iniciar o painel Always On  
@@ -56,7 +54,7 @@ ms.locfileid: "49120193"
   
 2.  Expanda o nó **Alta Disponibilidade AlwaysOn** , clique com o botão direito do mouse em **Grupos de Disponibilidade** e clique em **Mostrar Painel**.  
   
-###  <a name="change-always-on-dashboard-options"></a>Alterar as opções do Painel Always On  
+##  <a name="change-always-on-dashboard-options"></a>Alterar as opções do Painel Always On  
  Você pode usar a caixa de diálogo [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**Opções** para configurar o comportamento do Painel AlwaysOn do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para atualização e habilitação automática de uma política de AlwaysOn definida automaticamente.  
   
 1.  No menu **Ferramentas** , clique em **Opções**.  
@@ -216,8 +214,7 @@ O painel **Réplica de Disponibilidade** exibe as seguintes colunas:
     -   Para um banco de dados secundário, indica que o banco de dados não iniciou a sincronização de log devido a um problema de conexão, está sendo suspenso ou está passando por estados de transição durante a inicialização ou uma troca de função.  
   
 -   **Sincronizando**:
--   
-     Em uma réplica primária:   
+- Em uma réplica primária:   
     - Em um banco de dados primário, indica que este banco de dados está pronto para aceitar uma solicitação de exame de um banco de dados secundário.  
     - Em uma réplica secundária, indica que há movimentação de dados ativa em andamento para este banco de dados secundário. 
   
