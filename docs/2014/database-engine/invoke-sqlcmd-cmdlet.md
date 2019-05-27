@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], Invoke-Sqlcmd
@@ -16,12 +15,12 @@ ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7a76646d1f80e388737f520d497db4d6697a543
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0079ca11eb6400b2bce524fd909acbaafd112323
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774590"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064706"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>cmdlet Invoke-Sqlcmd
   **Invoke-Sqlcmd** é um cmdlet do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que executa scripts que contêm instruções de linguagem ([!INCLUDE[tsql](../includes/tsql-md.md)] e XQuery) e de comandos que têm suporte do utilitário **sqlcmd**.  
@@ -64,7 +63,7 @@ Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyI
 ## <a name="path-context-in-invoke-sqlcmd"></a>Contexto de caminho em Invoke-Sqlcmd  
  Se você não usar o parâmetro -Database, o contexto do banco de dados para Invoke-Sqlcmd será definido pelo caminho que estiver ativo quando o cmdlet for chamado.  
   
-|Caminho|Contexto do Banco de Dados|  
+|`Path`|Contexto do Banco de Dados|  
 |----------|----------------------|  
 |Inicia com uma unidade diferente de SQLSERVER:|O banco de dados padrão para a identificação de logon na instância padrão no computador local.|  
 |SQLSERVER:\SQL|O banco de dados padrão para a identificação de logon na instância padrão no computador local.|  
@@ -96,7 +95,7 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
   
  **Invoke-Sqlcmd** não inicializa o ambiente **sqlcmd** ou variáveis de scripts como SQLCMDDBNAME ou SQLCMDWORKSTATION.  
   
- **Invoke-Sqlcmd** não exibe mensagens, como a saída de instruções PRINT, a menos que você especifique o parâmetro comum **-Verbose** do Windows PowerShell. Por exemplo:  
+ **Invoke-Sqlcmd** não exibe mensagens, como a saída de instruções PRINT, a menos que você especifique o parâmetro comum **-Verbose** do Windows PowerShell. Por exemplo:   
   
 ```  
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  

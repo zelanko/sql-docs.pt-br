@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e0841c3473baf73033f298cfd3c8402ffc3aa19
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7da373509d875057f4d1ff50884ec446feb6cd2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743335"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090706"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>Lição 8: Restaurar um banco de dados para o Armazenamento do Windows Azure
   Nesta lição, você aprenderá a criar localmente um arquivo de backup e restaurá-lo para o Armazenamento do Windows Azure. Observe que você pode ter o banco de dados no local ou em uma máquina virtual no Windows Azure. Para acompanhar esta lição, você não precisará concluir as lições 4, 5, 6 e 7.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.findtabledialog.f1
@@ -15,12 +14,12 @@ ms.assetid: 133d28e8-55eb-4783-bb8b-d3776a95ebda
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc73bc6fbdbcbeb350bc32681bfd8dae3e01a642
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2730d14bb0ffc0bab6c0f6dc8a331bae62644da0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731199"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081077"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Localizar Tabela (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Localizar Tabela** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para localizar uma tabela na exibição da fonte de dados associada a uma dimensão, cubo ou estrutura de mineração. É possível exibir esta caixa de diálogo no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] das seguintes maneiras:  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.addnestedtable.selectnestedtablekey.f1
@@ -13,12 +12,12 @@ ms.assetid: c715ac28-3c5d-4e4b-8104-f97b79150654
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 72ab1727fc20f5eb47df7d933e9c7c42e598423b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cd6af62200b5d640c67321165eae941986e18892
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747158"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069346"
 ---
 # <a name="select-nested-table-key-add-new-nested-table-wizard"></a>Selecionar chave de tabela aninhada (Assistente para Adicionar Nova Tabela Aninhada)
   Use a página **Selecionar Chave de Tabela Aninhada** para selecionar o atributo que será a chave da tabela aninhada.  

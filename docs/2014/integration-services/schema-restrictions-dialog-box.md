@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.schemarestrictions.f1
@@ -15,12 +14,12 @@ ms.assetid: 92e5fd32-4944-4f7c-a448-b458df93d0d5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1cb955fe2779681f33cb1c4a7fc365b5249b5f39
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3da112ff268e824792bdd29160ec97331e5b0f7e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766662"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056145"
 ---
 # <a name="schema-restrictions-dialog-box"></a>Caixa de diálogo Restrições de Esquemas
   Use a caixa de diálogo **Restrições de Esquemas** para definir as restrições de esquema a aplicar ao Enumerador de Conjunto de Linhas de Esquemas ADO.NET Foreach.  

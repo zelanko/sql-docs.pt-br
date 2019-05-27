@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.AFPADLSCM.F1
@@ -14,12 +13,12 @@ ms.assetid: 7f1323f9-9dc3-4378-9c70-bbc65bfeabfd
 author: yualan
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dc1918bec6dc8f0cfa242341b59fefd477854887
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 01096d84c831a374cb2dd087a4fdf1b4d4d29a5c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62836886"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061442"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Gerenciador de conexões do Azure Data Lake Store
   O **Gerenciador de conexão do Azure Data Lake Store** permite que um pacote do SSIS para se conectar a um serviço do Azure Data Lake Store por meio de dois tipos de autenticação: Identidade de usuário do Azure AD e a identidade de serviço do Azure AD.  

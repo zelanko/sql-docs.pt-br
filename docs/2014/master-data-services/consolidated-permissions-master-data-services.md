@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], consolidated member attribute permissions
@@ -16,12 +15,12 @@ ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 86b20b7bbe0e9cf95805dd859c3c85bab60b61a9
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 66224262c88176fe0d0ddd1f4291b12213aed928
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65483504"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054105"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>Permissões consolidadas (Serviços de Dados Mestre)
   Permissões consolidadas se aplicam aos valores de atributos para todos os membros consolidados de uma entidade.  

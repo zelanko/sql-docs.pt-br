@@ -23,16 +23,16 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - names [SQL Server], logins
 ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5333687cfd9a8e7c59d8a1c695af2e8015ce2a7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80defa93fb82a5a6b451acd00c8336a74a06ba34
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658324"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948193"
 ---
 # <a name="susersname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ SUSER_SNAME ( [ server_user_sid ] )
  *server_user_sid*  
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- É o número opcional de identificação de segurança do logon. *server_user_sid* é **varbinary(85)**. *server_user_sid* pode ser o número de identificação de segurança de qualquer logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou usuário ou grupo do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Se o *server_user_sid* não for especificado, serão retornadas informações sobre o usuário atual. Se o parâmetro contiver a palavra NULL, retornará NULL.  
+ É o número opcional de identificação de segurança do logon. *server_user_sid* é **varbinary(85)** . *server_user_sid* pode ser o número de identificação de segurança de qualquer logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou usuário ou grupo do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Se o *server_user_sid* não for especificado, serão retornadas informações sobre o usuário atual. Se o parâmetro contiver a palavra NULL, retornará NULL.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **nvarchar(128)**  

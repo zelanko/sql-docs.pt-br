@@ -1,11 +1,10 @@
 ---
-title: 'Como: Execute o Assistente para análise do Supervisor de atualização | Microsoft Docs'
+title: 'Como fazer: Execute o Assistente para análise do Supervisor de atualização | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Analysis Wizard
@@ -13,14 +12,14 @@ ms.assetid: d7d2a1e2-1179-4c05-9b0f-555b04dd1199
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49c8cd84ada68d4ac00b13567528abff72d13847
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1464b55724e4305f2833ddce34e27170c7afd484
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207645"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094825"
 ---
-# <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>Como: Execute o Assistente para análise do Supervisor de atualização
+# <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>Como fazer: Para executar o Assistente para Análise do Supervisor de Atualização
   Você inicia o Assistente para Análise do Supervisor de Atualização na página inicial do Supervisor de Atualização. Este tópico descreve como executar o Assistente para Análise do Supervisor de Atualização.  
   
 > [!IMPORTANT]

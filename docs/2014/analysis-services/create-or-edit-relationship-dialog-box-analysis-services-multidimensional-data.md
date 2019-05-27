@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.createrelationship.f1
@@ -15,12 +14,12 @@ ms.assetid: da3c7074-623e-4ddf-a707-d3276a47cf1c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: abcfea8c23806de0e784b8784064d77195ad5cf1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: de19592ec5a94e99cc87c40dac476e75546c7968
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679774"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086782"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Criar ou Editar Relação (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Criar/Editar Relação** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir ou modificar uma relação em uma exibição da fonte de dados. É possível exibir a caixa de diálogo **Criar/Editar Relação** das seguintes maneiras:  

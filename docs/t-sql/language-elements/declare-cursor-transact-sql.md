@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b12e453dcabb88363cf78e86a33bc4773b3c9a52
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 46623d2a2a92c719b783241f8bbafdbdff8b4bba
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801630"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982534"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  READ ONLY  
  Previne atualizações feitas por este cursor. O cursor não pode ser referenciado em uma cláusula `WHERE CURRENT OF` em um instrução `UPDATE` ou `DELETE`. Essa opção anula a funcionalidade padrão de um cursor para ser atualizado.  
   
- UPDATE [OF *column_name* [**,**...*n*]]  
+ UPDATE [OF *column_name* [ **,** ...*n*]]  
  Define colunas atualizáveis em um cursor. Se OF <column_name> [, <... n>] for especificada, somente as colunas listadas permitirão modificações. Se `UPDATE` for especificada sem uma lista de colunas, todas as colunas poderão ser atualizadas.  
   
 *cursor_name*  
@@ -135,7 +135,7 @@ Especifica que as atualizações posicionadas e exclusões realizadas pelo curso
   
 O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte o cursor implicitamente em outro tipo se as cláusulas em *select_statement* entram em conflito com a funcionalidade do tipo de cursor solicitado. Para obter mais informações, consulte Conversões implícitas de cursor  
   
-FOR UPDATE [OF *column_name* [**,**...*n*]]  
+FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
 Define colunas atualizáveis em um cursor. Se `OF <column_name> [, <... n>]` for fornecido, somente as colunas listadas permitirão modificações. Se `UPDATE` for especificado sem uma lista de colunas, todas as colunas poderão ser atualizadas, a não ser que a opção de simultaneidade `READ_ONLY` seja especificada.  
   
 ## <a name="remarks"></a>Remarks  
@@ -186,7 +186,7 @@ OPEN vend_cursor
 FETCH NEXT FROM vend_cursor;  
 ```  
   
-### <a name="b-using-nested-cursors-to-produce-report-output"></a>b. Usando cursores aninhados para produzir saída de relatório  
+### <a name="b-using-nested-cursors-to-produce-report-output"></a>B. Usando cursores aninhados para produzir saída de relatório  
  O exemplo a seguir mostra como cursores podem ser aninhados para produzir relatórios complexos. O cursor interno é declarado para cada vendedor.  
   
 ```sql  

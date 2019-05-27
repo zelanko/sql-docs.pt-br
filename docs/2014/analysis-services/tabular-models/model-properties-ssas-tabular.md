@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.fileprop.f1
@@ -14,12 +13,12 @@ ms.assetid: 8ab04656-75a5-485c-9687-7b1ca49f7f80
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d87af32662b9b971d3ba983d38f3df39b5a3202c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 47ca12ee0118e0c2b63da05cf2d508ec0c2f5f92
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795333"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066963"
 ---
 # <a name="model-properties-ssas-tabular"></a>Model Properties (SSAS Tabular)
   Este tópico descreve as propriedades do modelo tabular. Cada projeto de modelo tabular no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] tem propriedades modelo que afetam o modo como o modelo que você está criando é criado, como o backup é feito e como o banco de dados de workspace é armazenado. As propriedades do modelo descritas aqui não se aplicam a modelos que já foram implantados.  

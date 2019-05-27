@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: d28a5ca8-ea9f-443f-af4f-b7e77987f8f0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18a88e4c6029705e5587dffce1803208186dfcd0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bd865b3bf80c930fe2bb8e23f5ea807717f2b1d5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63137616"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092045"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>Supervisor de Atualização do SQL Server 2014
   O Supervisor de Atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] analisa a configuração dos componentes instalados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e gera um relatório de problemas que devem ser solucionados para uma atualização bem-sucedida.  

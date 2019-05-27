@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 679658c7ffdc00a90cb485bb9f1892ddffde7775
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a62a05c8908391b9ce925ecfe08ae30540b8fa29
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731662"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081646"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>Cenários de implantação do DirectQuery (SSAS tabular)
   Este tópico fornece um passo a passo do processo de design e implantação para modelos DirectQuery. Você pode configurar o DirectQuery para usar somente dados relacionais (somente DirectQuery) ou pode configurar o modelo para alternar entre usar somente dados armazenados em cache ou somente dados relacionais (modo híbrido). Este tópico explica o processo de implementação para ambos os modos e descreve possíveis diferenças em resultados da consulta dependendo do modo e da configuração de segurança.  

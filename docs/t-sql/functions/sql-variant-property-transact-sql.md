@@ -16,16 +16,16 @@ helpviewer_keywords:
 - SQL_VARIANT_PROPERTY function
 - sql_variant data type
 ms.assetid: 50e5c1d9-4e95-4ed0-9c92-435c872a399e
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc50bcf8c4170372b49d3a448526e9a64f7ac3b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a9f7c245f08ffcd3211277a4d201ed884d66caa
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595404"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947657"
 ---
 # <a name="sqlvariantproperty-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
 |**Precisão**|Número de dígitos do tipo de dados base numérico:<br /><br /> **datetime** = 23<br /><br /> **smalldatetime** = 16<br /><br /> **float** = 53<br /><br /> **real** = 24<br /><br /> **decimal** (p,s) e **numeric** (p,s) = p<br /><br /> **money** = 19<br /><br /> **smallmoney** = 10<br /><br /> **bigint** = 19<br /><br /> **int** = 10<br /><br /> **smallint** = 5<br /><br /> **tinyint** = 3<br /><br /> **bit** = 1<br /><br /> Todos os outros tipos = 0|**int**<br /><br /> NULL = A entrada não é válida.|  
 |**Escala**|Número de dígitos à direita do ponto decimal do tipo de dados base numérico:<br /><br /> **decimal** (p,s) e **numeric** (p,s) = s<br /><br /> **money** e **smallmoney** = 4<br /><br /> **datetime** = 3<br /><br /> todos os outros tipos = 0|**int**<br /><br /> NULL = A entrada não é válida.|  
 |**TotalBytes**|Número de bytes necessários para manter os metadados e os dados do valor. Essas informações serão úteis na verificação do tamanho máximo dos dados em uma coluna **sql_variant**. Se o valor for maior que 900, a criação do índice falhará.|**int**<br /><br /> NULL = A entrada não é válida.|  
-|**Agrupamento**|Representa o agrupamento do valor **sql_variant** específico.|**sysname**<br /><br /> NULL = A entrada não é válida.|  
+|**Ordenação**|Representa a ordenação do valor **sql_variant** específico.|**sysname**<br /><br /> NULL = A entrada não é válida.|  
 |**MaxLength**|Comprimento máximo do tipo de dados, em bytes. Por exemplo, **MaxLength** de **nvarchar(** 50 **)** é 100 e **MaxLength** de **int** é 4.|**int**<br /><br /> NULL = A entrada não é válida.|  
   
 ## <a name="return-types"></a>Tipos de retorno  

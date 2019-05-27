@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], upgrade issues
@@ -16,12 +15,12 @@ ms.assetid: d9663f25-98d7-4508-ae3c-55a7277211bd
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ed4ae6c15a16c3db009145f7daa995988ac04fbf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: de69a25d1689883fdcbce8796d3cdcd30374a8f3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62753678"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092575"
 ---
 # <a name="reporting-services-upgrade-issues-upgrade-advisor"></a>Problemas de atualização do Reporting Services (supervisor de atualização)
   Os tópicos a seguir descrevem os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] problemas que podem afetar sua atualização para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Eles descrevem ações que podem ser tomadas para diminuir o efeito dessas alterações em seu ambiente.  

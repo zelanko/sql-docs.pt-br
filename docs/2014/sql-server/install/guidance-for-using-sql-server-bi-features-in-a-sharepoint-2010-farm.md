@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9470cc5f4a0567d211e0678b32aec05d12b5b239
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ae552c12c3d4773d6a05a6d61c7644eb245b68ed
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374838"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095002"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>Orientação para usar os recursos de BI do SQL Server em um farm do SharePoint 2010
   Este tópico resume a disponibilidade de recursos com base nas versões e nas edições do software que você está usando. Também explica os requisitos de instalação do SharePoint 2010 para o uso de recursos específicos do SQL Server. Para obter informações relacionadas ao SharePoint 2013, consulte [topologias de implantação para recursos de BI do SQL Server no SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
@@ -66,7 +65,7 @@ ms.locfileid: "53374838"
 > [!NOTE]  
 >  Em um farm existente, você precisará usar um dos seguintes **adicionais** atualizam etapas para concluir o SharePoint SP1. Para obter mais informações, consulte [problemas conhecidos quando você instala o Office 2010 SP1 e o SharePoint 2010 SP1](https://support.microsoft.com/kb/2532126) e [descrição do SharePoint Server 2010 SP1](https://support.microsoft.com/kb/2460045):  
   
--   **Assistente de configuração de produtos do SharePoint:** Execute o assistente para concluir a atualização e configuração do SP1.  
+-   **Assistente de configuração de produtos do SharePoint:** Execute o Assistente para concluir a atualização do SP1 e a configuração.  
   
 -   **Conclua a atualização com psconfig:** Execute o comando `psconfig -upgrade` para concluir a atualização do SP1  
   

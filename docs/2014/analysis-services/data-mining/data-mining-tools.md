@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70669026a7953ba1c2818ebc35b3d8fa7cb55427
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dd0e6b696e692a9e88edd234d22f41983acbe961
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722878"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084832"
 ---
 # <a name="data-mining-tools"></a>Ferramentas de mineração de dados
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece as seguintes ferramentas que podem ser usadas para criar soluções de mineração de dados:  
@@ -72,7 +71,7 @@ ms.locfileid: "62722878"
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Tarefas e transformações de serviços de mineração de dados de integração  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece muitos componentes que dão suporte à mineração de dados.  
   
- Algumas ferramentas no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] são criadas para ajudar a automatizar tarefas comuns de mineração de dados, incluindo previsão, criação de modelo e processamento. Por exemplo:  
+ Algumas ferramentas no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] são criadas para ajudar a automatizar tarefas comuns de mineração de dados, incluindo previsão, criação de modelo e processamento. Por exemplo:   
   
 -   Crie um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que automaticamente atualiza o modelo toda vez que o conjunto de dados é atualizado com novos clientes  
   
@@ -80,7 +79,7 @@ ms.locfileid: "62722878"
   
 -   Automaticamente gere modelos passados em parâmetros.  
   
- Porém, você também pode usar a mineração de dados em um fluxo de trabalho de pacote, como uma entrada para outros processos. Por exemplo:  
+ Porém, você também pode usar a mineração de dados em um fluxo de trabalho de pacote, como uma entrada para outros processos. Por exemplo:   
   
 -   Use valores de probabilidade gerados pelo modelo para pesar pontuações para mineração de texto ou outras tarefas de classificação.  
   

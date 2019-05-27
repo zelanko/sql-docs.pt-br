@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dataminingeditor.f1
@@ -15,12 +14,12 @@ ms.assetid: a7ad4cef-4567-4b84-8b70-0bd81e7b2e1e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d132d007b54e1677b2300ad3cc285c038b982209
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4af526dd7ced7a5116e6727ffd2b5ebd3b998bcb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689579"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086407"
 ---
 # <a name="data-mining-model-designer-analysis-services---data-mining"></a>Designer do Modelo de Mineração de Dados (Analysis Services – Mineração de Dados)
   Esta seção contém os tópicos de Ajuda F1 para o Designer do Modelo de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Você utilizará este espaço de design para criar, gerenciar e trabalhar com modelos de mineração de dados.  

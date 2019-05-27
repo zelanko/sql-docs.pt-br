@@ -25,16 +25,16 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0580ed82ca6ab5d94b1411ba70ce1b0d2f3ff770
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: edc4bd43b27235a35b6c8ed213e2925523015fde
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154711"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981457"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenções da sintaxe Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ A tabela a seguir lista e descreve as convenções usadas nos diagramas de sinta
 |&#124; (barra vertical)|Separa itens de sintaxe que se encontram entre colchetes ou entre chaves. Você pode usar só um dos itens.|  
 |`[ ]` (colchetes)|Itens de sintaxe opcionais. Não digite os colchetes.|  
 |{ } (chaves)|Itens de sintaxe exigidos. Não digite os colchetes.|  
-|[**,**..._n_]|Indica que o item precedente pode ser repetido _n_ vezes. As ocorrências são separadas por vírgulas.|  
+|[ **,** ..._n_]|Indica que o item precedente pode ser repetido _n_ vezes. As ocorrências são separadas por vírgulas.|  
 |[..._n_]|Indica que o item precedente pode ser repetido _n_ vezes. As ocorrências são separadas por espaços em branco.|  
 |;|Terminador de instrução do [!INCLUDE[tsql](../../includes/tsql-md.md)]. Embora o ponto e vírgula não seja necessário para a maioria das instruções nesta versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele será necessário em uma versão futura.|  
 |\<label> ::=|O nome de um bloco de sintaxe. Use essa convenção para agrupar e rotular seções de sintaxe extensa ou uma unidade de sintaxe que pode ser usada em mais de um local dentro de uma instrução. Cada local no qual o bloco de sintaxe pode ser usado é indicado com o rótulo entre divisas: \<label>.<br /><br /> Um conjunto é uma coleção de expressões, por exemplo, \<grouping set>, e uma lista é uma coleção de conjuntos, por exemplo, \<composite element list>.|  
