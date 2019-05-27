@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectcasekey.f1
@@ -13,12 +12,12 @@ ms.assetid: 75755ee7-65b7-4d61-b1e8-3566199430d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c2b5fbc89b6852d178ae4afc5c8cab67259ee89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9d005ef9666d9bac5355b7419cf2a9cbb9040e6f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747134"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069259"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>Selecionar a chave do caso (Assistente de Mineração de Dados)
   Use a página **Selecionar a Chave do Caso** para selecionar o atributo da dimensão do cubo de origem que será a chave da estrutura de mineração. Esse atributo deve estar em uma hierarquia ou ter sua hierarquia de atributo habilitada.  

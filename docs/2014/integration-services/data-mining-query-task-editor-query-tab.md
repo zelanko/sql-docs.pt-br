@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytask.query.f1
@@ -15,12 +14,12 @@ ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 361c1c06afb8c599e983751ea7d7deef656631e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ec0c3e2187bc0fb97af733021e39b405470fc373
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62899810"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059843"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Editor da Tarefa Consulta de Mineração de Dados (guia Consulta)
   Use a guia **Consulta** da caixa de diálogo **Tarefa Consulta de Mineração de Dados** para criar consultas de previsão baseadas em um modelo de mineração. Nessa caixa de diálogo, você também pode associar parâmetros e conjuntos de resultados a variáveis.  

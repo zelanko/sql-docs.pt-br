@@ -21,16 +21,16 @@ helpviewer_keywords:
 - database objects [SQL Server]
 - names [SQL Server], database objects
 ms.assetid: 7d5b923f-0c3e-4af9-b39b-132807a6d5b3
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1226ac3a530dbd4df3ce213a34f302c227fade21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f27628a944c8df1d27bf05f9eb5fbade28aa30b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782454"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948988"
 ---
 # <a name="objectname-transact-sql"></a>OBJECT_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ OBJECT_NAME ( object_id [, database_id ] )
 ## <a name="remarks"></a>Remarks  
  As funções de sistema podem ser usadas na lista de seleção, na cláusula WHERE e em qualquer local onde uma expressão for permitida. Para obter mais informações, consulte [Expressões](../../t-sql/language-elements/expressions-transact-sql.md) e [WHERE](../../t-sql/queries/where-transact-sql.md).  
   
- O valor retornado por esta função de sistema usa o agrupamento do banco de dados atual.  
+ O valor retornado por esta função de sistema usa a ordenação do banco de dados atual.  
   
  Por padrão, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] considera que *object_id* está no contexto do banco de dados atual. Uma consulta que faz referência a um *object_id* em outro banco de dados retorna NULL ou resultados incorretos. Por exemplo, na consulta a seguir o contexto do banco de dados atual é [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenta retornar um nome de objeto para a identificação do objeto especificado naquele banco de dados em vez do banco de dados especificado na cláusula FROM da consulta. Portanto, informações incorretas são retornadas.  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7bb13932-350d-4c6c-96f7-893d6cbdf449
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b392293114979b5732bb0857fa5873b1375972c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7d44311bc2622bbf93a8bb42afbc05f740ac36e9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794191"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066025"
 ---
 # <a name="toolbar-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Estrutura do Cubo, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Barra de Ferramentas** para executar ações comuns, como processar ou criar novos grupos de medidas na guia **Estrutura do Cubo** no Designer de Cubo.  

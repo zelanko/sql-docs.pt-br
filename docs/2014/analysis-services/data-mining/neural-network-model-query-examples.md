@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - neural network algorithms [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7627a52322563a03881d138f6d3244d97cb8ca29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3a249a83aba62c7881be024caa3931cb5ad07204
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733161"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083290"
 ---
 # <a name="neural-network-model-query-examples"></a>Neural Network Model Query Examples
   Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo que fornece detalhes de padrões encontrados em análises ou uma consulta de previsão que usa os padrões no modelo para fazer previsões para novos dados. Por exemplo, uma consulta de conteúdo para um modelo de rede neural pode recuperar metadados de modelo, como o número de camadas ocultas. Alternativamente, uma consulta de previsão pode sugerir classificações com base em uma entrada e opcionalmente fornecer as probabilidades de cada classificação.  

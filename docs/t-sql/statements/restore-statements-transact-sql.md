@@ -37,16 +37,16 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e1e25d8d5709f409f504d85f7917b85c1e6f3886
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: b673b21eca837e9ccaacd3a47c819287a854e6f8
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828166"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947047"
 ---
 # <a name="restore-statements-transact-sql"></a>Instruções RESTORE (Transact-SQL)
 
@@ -448,7 +448,7 @@ Todos os exemplos presumem que um backup de banco de dados completo foi executad
 Os exemplos de RESTORE incluem o seguinte:
 
 - A. [Restaurando um banco de dados completo](#restoring_full_db)
-- b. [Restaurando backups de banco de dados diferenciais e completos](#restoring_full_n_differential_db_backups)
+- B. [Restaurando backups de banco de dados diferenciais e completos](#restoring_full_n_differential_db_backups)
 - C. [Restaurando um banco de dados usando a sintaxe RESTART](#restoring_db_using_RESTART)
 - D. [Restaurando um banco de dados e movendo arquivos](#restoring_db_n_move_files)
 - E. [Copiando um banco de dados usando BACKUP e RESTORE](#copying_db_using_bnr)
@@ -998,7 +998,7 @@ RESTORE DATABASE SalesInvoices2013
 FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
 ```
 
-### <a name="b-restore-a-full-and-differential-backup"></a>b. Restaurar um backup completo e diferencial
+### <a name="b-restore-a-full-and-differential-backup"></a>B. Restaurar um backup completo e diferencial
 
 O exemplo a seguir restaura um backup completo e, em seguida, um backup diferencial para o banco de dados SalesInvoices2013
 

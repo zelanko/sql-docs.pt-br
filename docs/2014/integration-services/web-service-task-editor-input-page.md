@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.input.f1
@@ -15,12 +14,12 @@ ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 29ca581697231a3aa70aa6f4342fcea3408d6c99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62926248"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054522"
 ---
 # <a name="web-service-task-editor-input-page"></a>Editor da Tarefa Serviço da Web (página Entrada)
   Use a página **Entrada** da caixa de diálogo do **Editor da Tarefa Serviço da Web** para especificar o Serviço da Web, o método Web e os valores a serem fornecidos ao método Web como entrada. Os valores podem ser fornecidos digitando cadeias de caracteres diretamente na coluna Valor ou selecionando variáveis na coluna Valor.  

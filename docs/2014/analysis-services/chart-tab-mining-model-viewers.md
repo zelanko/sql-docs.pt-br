@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.chart.f1
@@ -13,12 +12,12 @@ ms.assetid: 8803cdbb-f1b3-436c-994d-ee662ecf64dd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5d4fd0da06ec6e0cbdc578fe55e2549cefdc2794
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62681173"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088183"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Guia Gráficos (Visualizadores do Modelo de Mineração)
   Use o painel **Gráfico** para exibir os dados históricos usados ao treinar um modelo de série temporal, junto com os valores previstos. O eixo vertical do gráfico representa o valor da série e o eixo horizontal representa o tempo. Previsões futuras serão representadas por uma linha pontilhada.  

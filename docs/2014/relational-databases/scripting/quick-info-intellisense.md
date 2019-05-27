@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Quick Info option [IntelliSense]
@@ -16,12 +15,12 @@ ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ceb49f9226a5354ab1b26511ce14efab04c7b95a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 614f0f347327171c8ac4fbcb20f9a3d670255488
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188566"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090253"
 ---
 # <a name="quick-info-intellisense"></a>Informações rápidas (IntelliSense)
   A opção [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense **Informações Rápidas** exibe a declaração completa de qualquer identificador em seu código. Quando você move o ponteiro do mouse sobre um identificador, sua declaração é exibida em uma janela pop-up amarela. No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], as **Informações Rápidas** estão disponíveis nos Editores do Mecanismo de Banco de Dados e de Consulta XML.  

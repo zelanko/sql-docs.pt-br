@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssdqs.designer.cleansing.f1
@@ -14,12 +13,12 @@ ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6367e846f3b542101db5c4328cd99e1a16f0416
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62898864"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059414"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Caixa de diálogo Editor de Transformação de Limpeza DQS
   Use a caixa de diálogo **Editor de Transformação de Limpeza DQS** para corrigir os dados usando Data Quality Services (DQS). Para obter mais informações, consulte [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md).  

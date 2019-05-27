@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
@@ -13,12 +12,12 @@ ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1f0761f0485cea055e2317ca24b2931302431e5c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62893195"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058216"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implementar uma política de assinatura por meio da configuração de um valor do Registro
   Você pode usar um valor opcional do Registro para gerenciar uma política da organização para carregar pacotes assinados ou não assinados. Se você usar o valor do Registro, será preciso criar esse valor em cada computador em que os pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] serão executados e no qual deseja aplicar a política. Depois que o valor do Registro tiver sido definido, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verificará as assinaturas antes de carregar pacotes.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMSIMBI.SERVERPROPERTIES.F1
@@ -16,12 +15,12 @@ ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b32b0fa678df98494f91c1026adebe701d807342
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62636775"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062618"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Caixa de diálogo Propriedades do Analysis Server (Analysis Services)
   Use a caixa de diálogo **Propriedades do Analysis Server** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para definir configurações gerais, de linguagem/agrupamento e segurança para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. É possível exibir a caixa de diálogo **Propriedades do Analysis Server** clicando com o botão direito do mouse em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no **Explorador de Objetos** e selecionando **Propriedades** no menu de contexto. A caixa de diálogo **Propriedades do Analysis Server** contém as propriedades a seguir.  
@@ -84,7 +83,7 @@ ms.locfileid: "62636775"
   
      Se esta opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará que as versões acentuadas e não acentuadas de letras são iguais.  
   
--   **Distinguir caracteres kana** é usado para e comparar dados com base nas regras do dicionário fornecidas para o idioma ou alfabeto associado e para distinguir entre os dois tipos de caracteres kana japoneses: Hiragana e Katakana.  
+-   **Distinguir caracteres kana** é usado para e comparar dados com base nas regras do dicionário fornecidas para o idioma ou alfabeto associado e para distinguir entre os dois tipos de caracteres kana japoneses: hiragana e katakana.  
   
      Se esta opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará que caracteres Hiragana e Katakana são iguais.  
   
@@ -100,6 +99,6 @@ ms.locfileid: "62636775"
  [Configurar propriedades de servidor no Analysis Services](server-properties/server-properties-in-analysis-services.md)   
  [Metodologias de autenticação com suporte no Analysis Services](instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Funções e permissões &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   
- [Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](languages-and-collations-analysis-services.md)  
+ [Idiomas e ordenações &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)  
   
   

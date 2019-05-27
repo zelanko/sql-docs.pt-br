@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment [Reporting Services]
@@ -13,12 +12,12 @@ ms.assetid: 699d24eb-7756-4b41-9294-ef1a94b2f267
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a26f748a5dd8e291587b4e35e0f0677d9da415cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f379675a4d7b37b9eab69598f7c04bc57306d46
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172286"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092105"
 ---
 # <a name="sql-server-2005-report-server-web-service-group-detected-upgrade-advisor"></a>Grupo do serviço Web do servidor de relatório do SQL Server 2005 foi detectado (Supervisor de Atualização)
   O Supervisor de atualização detectou que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância está associada um [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] grupo do serviço Web servidor de relatório.  
@@ -30,7 +29,7 @@ ms.locfileid: "48172286"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não usa o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] grupo do serviço Web servidor de relatório. Quando você fizer a atualização do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], esse grupo de serviço será excluído e as listas de controle de acesso (ACLs) personalizadas desse grupo ou de usuários que pertencem a ele não serão mantidas durante a atualização.  
   
 ## <a name="corrective-action"></a>Ação corretiva  

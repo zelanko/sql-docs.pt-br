@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: e5cac4a24abcca8c6ae17b598ed3eba5ec9c1f4e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fd68ebe406fc7168746c804e585fa7465ee8c527
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774749"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089275"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Options (Text Editor - Plain Text - General Page)
   Use essa caixa de diálogo para alterar o comportamento de edição geral do Editor de Texto, que é usado para editar um documento não associado a um idioma de desenvolvimento específico. Para exibir essas configurações, clique em **Opções** , no menu **Ferramentas** , expanda **Editor de Texto**, expanda **Texto Sem-Formatação** e clique em **Geral**.  

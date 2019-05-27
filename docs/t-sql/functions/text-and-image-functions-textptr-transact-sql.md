@@ -18,15 +18,15 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 890819799317034e4f89b372a0af742afa3422e5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: dfca4f9367a15cf5c418b8d671ae968260323898
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699768"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948499"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Funções Text e Image – TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,10 +63,10 @@ TEXTPTR ( column )
   
 |Função ou instrução|Descrição|  
 |---------------------------|-----------------|  
-|PATINDEX<b>('</b>_%pattern%_**' ,** _expression_**)**|Retorna a posição de caracteres de uma cadeia de caracteres especificada nas colunas **text** ou **ntext**.|  
-|DATALENGTH<b>(</b>_expression_**)**|Retorna o comprimento dos dados nas colunas **text**, **ntext** e **image**.|  
+|PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|Retorna a posição de caracteres de uma cadeia de caracteres especificada nas colunas **text** ou **ntext**.|  
+|DATALENGTH<b>(</b>_expression_ **)**|Retorna o comprimento dos dados nas colunas **text**, **ntext** e **image**.|  
 |SET TEXTSIZE|Retorna o limite, em bytes, dos dados **text**, **ntext** ou **image** a serem retornados com uma instrução SELECT.|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_**)**|Retorna uma cadeia de caracteres **varchar** especificada pelo deslocamento *start* e o *length* especificados. O comprimento deve ser menor que 8 KB.|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|Retorna uma cadeia de caracteres **varchar** especificada pelo deslocamento *start* e o *length* especificados. O comprimento deve ser menor que 8 KB.|  
   
 ## <a name="examples"></a>Exemplos  
   

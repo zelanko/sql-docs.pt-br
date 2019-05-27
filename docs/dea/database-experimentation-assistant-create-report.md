@@ -11,14 +11,14 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
-ms.reviewer: douglasl
+ms.reviewer: mathoma
 manager: craigg
-ms.openlocfilehash: 901d410fc7aa954dcd39a852f240168f2a690e3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2d0e07e069754e961b290b33d77cb30b522c367f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294515"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015149"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>Criar relatórios de análise no Assistente de experimentação do banco de dados
 

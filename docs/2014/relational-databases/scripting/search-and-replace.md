@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - match case [SQL Server]
@@ -29,15 +28,15 @@ ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 299cb79646ff7d0955ca25343fbe2a7d9c0b1140
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cce96567d465c4b0c10741ac8a10b08902405368
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63135140"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090198"
 ---
 # <a name="search-and-replace"></a>Pesquisar e substituir
-  Há vários modos diferentes de localizar e substituir texto. Sobre o **edite** menu **localizar e substituir** oferece quatro opções: **Localização rápida**, **rápida substituição**, **localizar nos arquivos**, ou **substituir nos arquivos**. Cada uma dessas opções abre versões da caixa de diálogo **Localizar e Substituir** . Você também pode pesquisar sem uma caixa de diálogo usando teclas de atalho de teclado de pesquisa incremental. Essas técnicas permitem que você controle o escopo de localização e substituição, e escolha o método de revisão de correspondências e substituições.  
+  Há vários modos diferentes de localizar e substituir texto. No menu **Editar**, **Localizar e substituir** oferece quatro opções: **Localização rápida**, **Substituição rápida**, **Localizar nos arquivos** ou **Substituir nos arquivos**. Cada uma dessas opções abre versões da caixa de diálogo **Localizar e Substituir** . Você também pode pesquisar sem uma caixa de diálogo usando teclas de atalho de teclado de pesquisa incremental. Essas técnicas permitem que você controle o escopo de localização e substituição, e escolha o método de revisão de correspondências e substituições.  
   
  Você deve considerar os itens a seguir ao localizar e substituir texto:  
   

@@ -18,16 +18,16 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - starting point of expression in character string
 ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88f57c22df5b6a621b5133f56f79a16ede550d77
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: adfc98d7502f41b2408117ff0482e208d27834a8
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802283"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947077"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ Uma expressão de caractere a ser pesquisada.
 Uma expressão **integer** ou **bigint** em que a pesquisa inicia. Se *start_location* não for especificado, tiver um valor negativo ou for um valor zero (0), a pesquisa começará no início de *expressionToSearch*.
   
 ## <a name="return-types"></a>Tipos de retorno
-**bigint** se *expressionToSearch* tiver um tipo de dados **nvarchar (max)**, **varbinary (max)** ou **varchar (max)**; **int** caso contrário.
+**bigint** se *expressionToSearch* tiver um tipo de dados **nvarchar (max)** , **varbinary (max)** ou **varchar (max)** ; **int** caso contrário.
   
 ## <a name="remarks"></a>Remarks  
 Se a expressão *expressionToFind* ou *expressionToSearch* tiver um tipo de dados Unicode (**nchar** ou **nvarchar**) e o outra expressão não, a função CHARINDEX converterá essa outra expressão em um tipo de dados Unicode. CHARINDEX não pode ser usado com os tipos de dados **image**, **ntext** ou **text**.
@@ -66,7 +66,7 @@ CHARINDEX efetua comparações com base na ordenação de entrada. Para fazer um
   
 A posição inicial retornada é com base em 1, não com base em 0.
   
-0x0000 (**char(0)**) é um caractere indefinido em ordenações do Windows e não pode ser incluído em CHARINDEX.
+0x0000 (**char(0)** ) é um caractere indefinido em ordenações do Windows e não pode ser incluído em CHARINDEX.
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
 Ao usar ordenações de SC, *start_location* e o valor retornado contam pares substitutos como um caractere, e não dois. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
@@ -91,7 +91,7 @@ GO
 48            
 ```  
   
-### <a name="b-searching-from-a-specific-position"></a>b. Pesquisando em uma posição específica  
+### <a name="b-searching-from-a-specific-position"></a>B. Pesquisando em uma posição específica  
 Este exemplo usa o parâmetro *start_location* opcional para iniciar a pesquisa para `vital` no quinto caractere da variável de valor de cadeia de caracteres pesquisada `@document`.
   
 ```sql

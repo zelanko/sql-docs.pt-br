@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 1c220dcc-4014-4bfd-b997-6685902e6f67
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a677729f5c0f7a5ee1b6d10bbb3491937255b555
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a5056eda52064120164a25b270a5292951f71fa0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190605"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096508"
 ---
 # <a name="checklists-for-installing-bi-features-with-sharepoint"></a>Listas de verificação para instalar recursos com SharePoint.
   Esta seção fornece listas de verificação para instalar os recursos de BI do SQL Server em combinações diferentes ou em topologias em expansão. Se você já souber como executar um programa de Instalação para instalar um recurso de BI, uma lista de verificação será a próxima etapa para entender a ordem de instalação recomendada e se alterações de configuração adicionais serão necessárias para habilitar cenários de integração de recursos.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices analyzer
@@ -19,12 +18,12 @@ ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 72d4d0863c516fed3a318aca45e8ec478af46a58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c41edcfc545e69e6e8174003ca765a4c2f1d551b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62956140"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064427"
 ---
 # <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Tutorial: Como avaliar práticas recomendadas usando o Gerenciamento Baseado em Políticas
   Bem-vindo ao tutorial Avaliando práticas recomendadas usando o Gerenciamento Baseado em Políticas. O tutorial é destinado a usuários familiarizados com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mas que não conhecem o Gerenciamento Baseado em Políticas. O gerenciamento baseado em políticas é um sistema que define as políticas que podem ser usadas para impor padrões de administração de sites. O gerenciamento baseado em políticas inclui um conjunto de práticas recomendadas que você pode usar para analisar uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e determinar se a instância atende às diretrizes de práticas recomendadas e recomendações.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01f4bcc06ca7bf8bcee3cf581ad0c2bec3ba4f9f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0126337fb1f871a4d89354bd65cbfd11932bf5c0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794581"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066372"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>Implantação de uma solução de modelo tabular (SSAS tabular)
   Depois de criar um projeto de modelo de tabela, você deve implantá-lo para que os usuários procurem o modelo usando um aplicativo cliente de relatório. Este tópico descreve as várias propriedades e os vários métodos que você pode usar ao implantar soluções de modelo de tabela em seu ambiente.  

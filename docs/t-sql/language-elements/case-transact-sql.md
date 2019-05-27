@@ -18,16 +18,16 @@ helpviewer_keywords:
 - comparing expressions
 - searched CASE expression
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7dbd603e92911d073cac24f8504d72d2742822d6
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: b7f9207027f8d5b94c631b4406903dae77694371
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802305"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982697"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -159,7 +159,7 @@ GO
   
 ```  
   
-### <a name="b-using-a-select-statement-with-a-searched-case-expression"></a>b. Usando uma instrução SELECT com uma expressão CASE pesquisada  
+### <a name="b-using-a-select-statement-with-a-searched-case-expression"></a>B. Usando uma instrução SELECT com uma expressão CASE pesquisada  
  Dentro de uma instrução `SELECT`, a expressão `CASE` pesquisada é permitida para valores a serem substituídos no conjunto de resultados com base nos valores de comparação. O exemplo a seguir exibe o preço da lista como um comentário de texto com base na faixa de preços de um produto.  
   
 ```  

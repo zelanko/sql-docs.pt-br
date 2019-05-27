@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - AUTO_DETECT_PERIODICITY parameter
@@ -15,12 +14,12 @@ ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a4bd34c0ce6a84ca4f9050f4c4b428123c379dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62721898"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084058"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Referência Técnica do Algoritmo de Regressão Linear da Microsoft
   O algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma versão especial do algoritmo Árvores de decisão da Microsoft, otimizada para modelagem de pares de atributos contínuos. Este tópico explica a implementação do algoritmo, descreve como personalizar o comportamento do algoritmo e fornece links para informações adicionais sobre como consultar modelos.  

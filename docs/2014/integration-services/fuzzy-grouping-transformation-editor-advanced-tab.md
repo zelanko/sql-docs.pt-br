@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtransformation.advanced.f1
@@ -15,12 +14,12 @@ ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 074a3d460a04180a5cfce1406b546fb6a3a3986a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dcebe499eb80fbe01b9aa36a4e07785846eaf621
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62893374"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058365"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>Editor de Transformação Agrupamento Difuso (guia Avançado)
   Use a guia **Avançado** da caixa de diálogo **Editor de Transformação Agrupamento Difuso** para especificar colunas de entrada e saída, definir limites de similaridade e definir delimitadores.  

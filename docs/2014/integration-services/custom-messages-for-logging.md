@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], custom
@@ -16,12 +15,12 @@ ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c479c8e7026e549c33b838c39017c9063894b607
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 47a14ad3baf1660b2b60cd6b96f2ef51f1e5d727
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828773"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060084"
 ---
 # <a name="custom-messages-for-logging"></a>Mensagens personalizadas para log
   O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece um rico conjunto de eventos personalizados para gravação de entradas de log para pacotes e diversas tarefas. Você pode usar essas entradas para salvar informações detalhadas sobre progresso de execução, resultados e problemas registrando eventos predefinidos ou mensagens definidas pelo usuário para análise posterior. Por exemplo, você pode registrar quando uma inserção em massa é iniciada ou finalizada para identificar problemas de desempenho na execução do pacote.  
@@ -116,7 +115,7 @@ ms.locfileid: "62828773"
 |Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`ExecuteDTS80PackageTaskBegin`|Indica que a tarefa começou a ser executada em um pacote DTS 2000.|  
-|`ExecuteDTS80PackageTaskEnd`|Indica que a tarefa foi concluída.<br /><br /> Observação: O pacote DTS 2000 pode continuar a executar após a conclusão da tarefa.|  
+|`ExecuteDTS80PackageTaskEnd`|Indica que a tarefa foi concluída.<br /><br /> Observação: o pacote DTS 2000 pode continuar a ser executado após a conclusão da tarefa.|  
 |`ExecuteDTS80PackageTaskTaskInfo`|Fornece informações descritivas sobre a tarefa.|  
 |`ExecuteDTS80PackageTaskTaskResult`|Informa o resultado de execução do pacote DTS 2000 executado pela tarefa.|  
   

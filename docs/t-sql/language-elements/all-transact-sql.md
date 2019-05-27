@@ -16,15 +16,15 @@ helpviewer_keywords:
 - single-column set of values [SQL Server]
 - ALL (Transact-SQL)
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ff274ae7251fdf60d6f92680f076d2e60f9eb37b
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 6901a6eb93ad2374eaf6d613e9eada21dea3cc55
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305484"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983230"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Booliano**  
   
 ## <a name="result-value"></a>Valor do resultado  
- Retornará TRUE quando a comparação especificada for TRUE para todos os pares (_scalar_expression_**,**_x)_ e quando *x* for um valor no conjunto de uma única coluna. Caso contrário, retornará FALSE.  
+ Retornará TRUE quando a comparação especificada for TRUE para todos os pares (_scalar_expression_ **,** _x)_ e quando *x* for um valor no conjunto de uma única coluna. Caso contrário, retornará FALSE.  
   
 ## <a name="remarks"></a>Remarks  
  ALL requer que a *scalar_expression* seja comparada positivamente com todos os valores retornados pela subconsulta. Por exemplo, se a subconsulta retornar os valores 2 e 3, *scalar_expression* <= ALL (a subconsulta) será avaliada como TRUE para uma *scalar_expression* igual a 2. Se a consulta aninhada retornar os valores 2 e 3, *scalar_expression* = ALL (consulta aninhada) será avaliada como FALSE, porque alguns dos valores da consulta aninhada (o valor 3) não atenderão aos critérios da expressão.  

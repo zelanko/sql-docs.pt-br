@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - CUSTOMERID_TSQL
@@ -17,12 +16,12 @@ ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 32c476b904e52229a48b20c1a0ebc599d49a93b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 48261d5ff0290dd5042b6604d9e492871bf6da38
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62775016"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089333"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>Opções (página gerais do servidor SQL de resultados da consulta)
   Use esta página para determinar o comportamento padrão do painel Resultados da consulta. Para exibir essas configurações, no menu **Ferramentas**, clique em **Opções**, expanda a pasta **Resultados da Consulta**, selecione **SQL Server** e clique em **Geral**. As alterações feitas nessas opções são aplicadas apenas a novas consultas do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para alterar as opções das consultas atuais, clique em **Opções de Consulta** no menu **Consulta** ou, em uma janela de consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], clique com o botão direito do mouse e selecione **Opções de Consulta**.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connaccessdb.f1
@@ -13,12 +12,12 @@ ms.assetid: 9fa81839-dd8b-41d3-915e-c774a707ed53
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 36c3f4a6219e615fe2cf11e718bd1ef47869f85a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 95d40cc0a6da642fe92f46a86308da348d5cc040
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680131"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087294"
 ---
 # <a name="connect-to-a-microsoft-access-database-ssas"></a>Conectar a um banco de dados Microsoft Access (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a especificar as configurações de conexão para um banco de dados do Microsoft Access. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  

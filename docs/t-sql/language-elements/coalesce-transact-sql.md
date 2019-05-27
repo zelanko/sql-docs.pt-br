@@ -18,16 +18,16 @@ helpviewer_keywords:
 - first nonnull expressions [SQL Server]
 - nonnull expressions
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab19d51f1032ad251cb1867cbe2326652d174f29
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: b44f7d9d37efaac80f018ce2b1c1497230e66e3c
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802193"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982681"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ Retorna o tipo de dados de _expressão_ com a maior precedência de tipo de dado
 Se todos os argumentos forem `NULL`, `COALESCE` retornará `NULL`. Pelo menos um dos valores nulos precisa ser do tipo `NULL`.  
   
 ## <a name="comparing-coalesce-and-case"></a>Comparando COALESCE e CASE  
-A expressão `COALESCE` é um atalho sintático para a expressão `CASE`.  Ou seja, o código `COALESCE`(_expression1_,_...n_) é reescrito pelo otimizador de consulta como a seguinte expressão `CASE`:  
+A expressão `COALESCE` é um atalho sintático para a expressão `CASE`.  Ou seja, o código `COALESCE`(_expression1_, _...n_) é reescrito pelo otimizador de consulta como a seguinte expressão `CASE`:  
   
 ```sql  
 CASE  
@@ -125,7 +125,7 @@ COALESCE(Class, Color, ProductNumber) AS FirstNotNull
 FROM Production.Product;  
 ```  
   
-### <a name="b-running-a-complex-example"></a>b. Executando um exemplo complexo  
+### <a name="b-running-a-complex-example"></a>B. Executando um exemplo complexo  
 No exemplo a seguir, a tabela `wages` inclui três colunas que contêm informações sobre o salário anual dos funcionários: valor por hora, salário e comissão. No entanto, um funcionário recebe apenas um tipo de pagamento. Para determinar o valor total pago a todos os funcionários, use a função `COALESCE` para receber apenas o valor não nulo encontrado em `hourly_wage`, `salary` e `commission`.  
   
 ```sql  

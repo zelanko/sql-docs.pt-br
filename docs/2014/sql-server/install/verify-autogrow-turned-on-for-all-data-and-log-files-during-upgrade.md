@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], size
@@ -16,12 +15,12 @@ ms.assetid: a5860904-e2be-4224-8a51-df18a10d3fb9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab29cc94071b95f6ff8cffb95902851d1796ed80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0217d959759a59e49ce76e4a841c5d52e958e9ce
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62985864"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091216"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>Verificar se o crescimento automático está ativado em todos os arquivos de dados e de log durante o processo de atualização
   O Supervisor de Atualização detectou arquivos de dados ou de log que não estão com a opção de crescimento automático ativada. Recursos novos e aprimorados exigem espaço em disco adicional para bancos de dados de usuário e o **tempdb** banco de dados do sistema. Para garantir que os recursos possam acomodar esse crescimento durante as operações de atualização e produção subsequente, recomendamos definir o crescimento automático como ON para todos os arquivos de log e dados de usuário e o **tempdb** dados e arquivos de log antes de atualizar.  

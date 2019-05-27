@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - ConnectionPoolSize
@@ -19,12 +18,12 @@ ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fbb896569a75b3fb2e7fee079efb1e56dfb3c65f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 24a180fde90ff406d40a0f0c89bf82dfe5138b88
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62647177"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097868"
 ---
 # <a name="connectionpoolsize-property-wmi-msreportserverconfigurationsetting"></a>Propriedade ConnectionPoolSize (WMI MSReportServer_ConfigurationSetting)
   O tamanho do pool de conexão usado pelo servidor de relatório para se comunicar com a instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados do servidor de relatório. Somente leitura.  

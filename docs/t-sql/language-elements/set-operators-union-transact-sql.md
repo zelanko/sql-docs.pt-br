@@ -17,16 +17,16 @@ helpviewer_keywords:
 - combining query results
 - UNION operator [SQL Server]
 ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c5d6dc066db8eb24a95172b69868237517ef7be
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: a1b55e49768509a5294e30a511f09ec8b91984ab
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852891"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981734"
 ---
 # <a name="set-operators---union-transact-sql"></a>Set Operators – UNION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -92,7 +92,7 @@ ORDER BY Name;
 GO  
 ```  
   
-### <a name="b-using-select-into-with-union"></a>b. Usando SELECT INTO com UNION  
+### <a name="b-using-select-into-with-union"></a>B. Usando SELECT INTO com UNION  
 No exemplo a seguir, a cláusula `INTO` da segunda instrução `SELECT` especifica que a tabela denominada `ProductResults` mantém o conjunto de resultados final da união das colunas selecionadas das tabelas `ProductModel` e `Gloves`. A tabela `Gloves` é criada na primeira instrução `SELECT`.  
   
 ```  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - IsWebServiceEnabled
@@ -19,12 +18,12 @@ ms.assetid: e37eecf6-bf83-4015-be76-bac2ae9d344d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 099af3115af33301277ca2cac153578978af8a37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8e8894f24743fd08b1b16dd97c238c2dcc0cbfa7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646134"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097646"
 ---
 # <a name="iswebserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>Propriedade IsWebServiceEnabled (WMI MSReportServer_ConfigurationSetting)
   Indica se o serviço Web Servidor de Relatórios está habilitado. Somente leitura.  

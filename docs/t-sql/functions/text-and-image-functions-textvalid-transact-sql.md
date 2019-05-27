@@ -20,15 +20,15 @@ helpviewer_keywords:
 - text-pointer values
 - verifying text pointers
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 840b1ae9924e2b582ee726f917e31a2922d84c18
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1ad4bc199c923c488e968740324c5f4d47766b96
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702564"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948439"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>Funções de texto e imagem – TEXTVALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,8 +67,8 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
 |Função ou instrução|Descrição|  
 |---------------------------|-----------------|  
-|PATINDEX **(**'_%pattern%_'**,** _expression_**)**|Retorna a posição de caractere de uma cadeia de caracteres especificada nas colunas **text** e **ntext**.|  
-|DATALENGTH **(**_expression_**)**|Retorna o comprimento dos dados nas colunas **text**, **ntext** e **image**.|  
+|PATINDEX **(** ' _%pattern%_ ' **,** _expression_ **)**|Retorna a posição de caractere de uma cadeia de caracteres especificada nas colunas **text** e **ntext**.|  
+|DATALENGTH **(** _expression_ **)**|Retorna o comprimento dos dados nas colunas **text**, **ntext** e **image**.|  
 |SET TEXTSIZE|Retorna o limite, em bytes, dos dados **text**, **ntext** ou **image** a serem retornados com uma instrução SELECT.|  
   
 ## <a name="examples"></a>Exemplos  
