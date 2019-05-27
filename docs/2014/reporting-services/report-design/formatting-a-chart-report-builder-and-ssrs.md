@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10214"
@@ -52,12 +51,12 @@ ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cea1d745b677bfa67f6847f2b42ed3701914f1e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: af164d4db9b6439f0634d113652b95939827b0f5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654594"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105855"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>Formatando um gráfico (Construtor de Relatórios e SSRS)
   Quando você tiver definido os dados do gráfico e estiver satisfeito com a sua aparência, poderá adicionar a formatação para melhorá-lo em geral e realçar os principais pontos de dados. As opções de formatação mais comuns podem ser modificadas na caixa de diálogo Propriedades que são encontradas quando você clica com o botão direito do mouse em um elemento do gráfico para exibir o menu de atalho correspondente. Cada elemento do gráfico possui sua própria caixa de diálogo. Para obter mais informações sobre elementos de gráfico, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md).  

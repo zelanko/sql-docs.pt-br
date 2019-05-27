@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b0af16c21cb9fdf2c8ab41a931f955b46c29352
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 5db09273a26bd8dd596a6ae576b2f8f0cc414190
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956102"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106072"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipos de dados em expressões (Construtor de Relatórios e SSRS)
   Os tipos de dados representam tipos diferentes de dados de forma que eles possam ser armazenados e processados com eficiência. Tipos de dados comuns incluem texto (também conhecido como cadeias de caracteres) com e sem casas decimais, datas e horas e imagens. Os valores em um relatório devem ser um tipo de dados RDL. Você pode formatar um valor de acordo com sua preferência ao exibi-lo em um relatório. Por exemplo, um campo que representa moeda pode ser armazenado na definição de relatório como um número de ponto flutuante, mas pode ser exibido em uma variedade de formatos, dependendo da propriedade de formato escolhida.  
@@ -34,7 +33,7 @@ ms.locfileid: "59956102"
 |Cadeia de caracteres|Padrão: Cadeia de caracteres<br /><br /> Chart, GUID, Timespan|  
 |Booliano|Padrão: Booliano|  
 |Integer|Padrão: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|Datetime|Padrão: Datetime<br /><br /> DateTimeOffset|  
+|DateTime|Padrão: DateTime<br /><br /> DateTimeOffset|  
 |float|Padrão: Double<br /><br /> Single, Decimal|  
 |Binary|Padrão: Byte[]|  
 |Variante|Qualquer um dos itens acima, exceto Byte[]|  
