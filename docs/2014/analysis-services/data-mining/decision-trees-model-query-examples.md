@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1627a0058336be654dbd18c52e27cdbae614c686
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 009e8d203d9262ee14702b99ad7d0e31d8a16dbb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722518"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084763"
 ---
 # <a name="decision-trees-model-query-examples"></a>Exemplos de consulta de modelo de árvores de decisão
   Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo que fornece detalhes de padrões encontrados em análises ou uma consulta de previsão que usa os padrões no modelo para fazer previsões para novos dados. Por exemplo, uma consulta de conteúdo para um modelo de árvores de decisão pode fornecer estatísticas sobre o número de casos de cada nível da árvore ou as regras que diferenciam os casos. Como alternativa, uma consulta de previsão mapeia o modelo para novos dados para gerar recomendações, classificações e assim sucessivamente. Você também pode recuperar metadados sobre o modelo usando uma consulta.  

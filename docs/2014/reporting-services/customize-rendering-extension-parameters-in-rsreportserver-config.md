@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - configuration options [Reporting Services]
@@ -18,12 +17,12 @@ ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f8bfc14257fcab8dd6c140f823ca34831c541c9f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: efdea595034f91497befdc7f7b12adacef8d73ff
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63264692"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109549"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personalizar parâmetros de extensão de renderização em RSReportServer.config
   Você pode especificar parâmetros de extensão de renderização no arquivo de configuração RSReportServer para substituir o comportamento de renderização de relatório padrão para os relatórios executados em um servidor de relatórios do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Os parâmetros de extensão de renderização podem ser modificados com os seguintes objetivos:  

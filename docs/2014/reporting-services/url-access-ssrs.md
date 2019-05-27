@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services]
@@ -18,12 +17,12 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 42f35641d8a346b5f4574953e4c5786618407620
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0cc753f16ca9b70523fe6cb858fd167ef044087b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62647612"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098726"
 ---
 # <a name="url-access-ssrs"></a>Acesso à URL (SSRS)
   O acesso à URL do servidor de relatório do SQL Server Reporting Services (SSRS) permite enviar comandos a um servidor de relatório por meio de uma solicitação de URL. Por exemplo, você pode personalizar a renderização de um relatório em um servidor de relatório em modo nativo ou em uma biblioteca do SharePoint. Você pode exibir o relatório usando um conjunto específico de valores de parâmetros de relatório ou exibir uma página específica de interesse do relatório. Você pode encapsular essas informações na URL usando parâmetros de acesso à URL predefinidos. Você pode personalizar ainda mais como o servidor de relatório processa o relatório inserindo parâmetros de renderização de formatos ou de aparência do visualizador de relatórios. Você pode colar essa URL diretamente em um email ou página da Web para permitir que outros acessem seu relatório da mesma maneira no navegador.  
@@ -66,7 +65,7 @@ http://myrshost/reportserver
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
- No modo integrado do SharePoint, é a URL do proxy do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em um site do SharePoint integrado ao [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Por exemplo:   
+ No modo integrado do SharePoint, é a URL do proxy do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em um site do SharePoint integrado ao [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Por exemplo:  
   
 ```  
 http://myspsite/subsite/_vti_bin/reportserver  
@@ -84,7 +83,7 @@ http://myspsite/subsite/_vti_bin/reportserver
 /AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  
 ```  
   
- No modo integrado do SharePoint, é a URL totalmente qualificada do item na biblioteca do SharePoint, incluindo a extensão do item. Por exemplo:   
+ No modo integrado do SharePoint, é a URL totalmente qualificada do item na biblioteca do SharePoint, incluindo a extensão do item. Por exemplo:  
   
 ```  
 http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  

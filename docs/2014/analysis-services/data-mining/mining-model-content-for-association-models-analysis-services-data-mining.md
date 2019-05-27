@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
@@ -17,12 +16,12 @@ ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4cdbacc27816464440fe57db7c7d727026754220
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9a1e525d7b42d058343e41ea154f0687fb969839
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733559"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083685"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de associação (Analysis Services – Mineração de Dados)
   Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter uma explicação sobre a terminologia geral e estatística relacionada ao conteúdo do modelo de mineração que se aplica a todos os tipos de modelo, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  

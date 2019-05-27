@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2962cd27e00ddc5dcf2f4b1cc83432fed49ffca4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 493e042e58c5a13bc94f299197ac8a75972f7ed6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190222"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102305"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Salvar relatórios no computador (Construtor de Relatórios)
   No Construtor de Relatórios, você pode salvar definições de relatório no seu computador. No entanto, quando são salvas no computador, outros usuários não podem exibir os relatórios e os relatórios que referenciam fontes de dados compartilhadas ou armazenam itens de relatório, como imagens e sub-relatórios externamente, talvez não sejam executados. É recomendável salvar relatórios em um servidor de relatório ou site do SharePoint.  

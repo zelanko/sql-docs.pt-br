@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d70cf1724eb67dbf8f1a75989df5f4021b5512d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8708bd3f4375179638ce5e86a0619a1e1ccf4d77
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794590"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066256"
 ---
 # <a name="workspace-database-ssas-tabular"></a>Banco de dados do workspace (SSAS tabular)
   O banco de dados de workspace modelo de tabela, usado durante a criação de modelos, é criado quando você cria um novo projeto de modelo de tabela no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. O banco de dados de workspace reside na memória em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que é executada em modo Tabela; em geral no mesmo computador que o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10428"
@@ -16,12 +15,12 @@ ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3f03f0f4c210408324ee4a2cae255ba805e0377a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156614"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107706"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>Construtor de Relatórios no SQL Server 2014
   O Construtor de Relatórios é um ambiente de criação de relatório para usuários comerciais que preferem trabalhar no ambiente do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office. Quando você cria um relatório, especifica onde obter os dados, que dados obter e como exibir os dados. Ao executar o relatório, o processador de relatório obtém todas as informações especificadas, recupera os dados e os combina ao layout de relatório para gerar o relatório. Você pode visualizar os relatórios no Construtor de Relatórios ou publicá-los em um servidor de relatório ou em um servidor de relatório no modo integrado do SharePoint, onde outras pessoas poderão executá-lo.  

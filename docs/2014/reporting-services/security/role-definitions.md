@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -16,12 +15,12 @@ ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ac879ad519b08ae272c8ac30dd37021123570cca
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 6518a46c44a97fbb386b4479454e89a0eccb1a39
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950842"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101746"
 ---
 # <a name="role-definitions"></a>Definições de função
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], uma *definição de**função* é uma coleção nomeada de tarefas que definem as operações disponíveis em um servidor de relatório. As definições de função fornecem as regras usadas pelo servidor de relatório para impor a segurança. Quando um usuário tenta executar uma tarefa, como publicar um relatório, o servidor de relatório verifica a atribuição de função de relatório do usuário para determinar se a tarefa está incluída em sua definição de função. Se a tarefa estiver incluída na definição de função, a solicitação será enviada.  

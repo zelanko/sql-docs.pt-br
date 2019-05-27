@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
@@ -22,12 +21,12 @@ ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 490857f9a8c95853d3f89bc8b0cfb85a165f1fd1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 082241af377c8817c3adbc394a46f1ebc7d6a4e3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722816"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085137"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Algoritmos de mineração de dados (Analysis Services – Mineração de Dados)
   Um *algoritmo de mineração de dados* é um conjunto de heurística e cálculos que cria um modelo de mineração de dados. Para criar um modelo, o algoritmo primeiro analisa os dados que você fornece, procurando tipos de padrões ou tendências específicos. O algoritmo usa os resultados dessa análise para definir os parâmetros ideais para criar o modelo de mineração. Esses parâmetros são aplicados pelo conjunto de dados inteiro para extrair padrões acionáveis e estatísticas detalhadas.  

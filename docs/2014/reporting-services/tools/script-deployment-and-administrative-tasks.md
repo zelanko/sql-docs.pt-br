@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
@@ -23,12 +22,12 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 033e1852f076dde631a3ea1e9be1c8918eab042a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d37a00e0a4fb71672f3bedcfc0e1651a7c42ce71
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63158311"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099708"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Implantação de script e tarefas administrativas
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte ao uso de scripts para automatizar a instalação, a implantação e as tarefas administrativas de rotina. A implantação de um servidor de relatórios é um processo de várias etapas. É preciso usar diversos processos e ferramentas para configurar uma implantação. Não existe nenhum programa ou abordagem que possa ser usado para automatizar todas as tarefas.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsveditor.createnamedcalculation.f1
@@ -15,12 +14,12 @@ ms.assetid: 66fb30ae-f5c5-4bfc-80ca-8c8a3a9bb30d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 31c0444930e15d933d75dd72554c3232871cd59e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a53db9413ce7877182ca5f9c768bb1e1ef71e383
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679933"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086848"
 ---
 # <a name="create-edit-named-calculation-dialog-box-analysis-services"></a>Create-Edit Named Calculation Dialog Box (Analysis Services)
   Use a caixa de diálogo **Criar/Editar Cálculo Nomeado** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir ou modificar um cálculo nomeado para uma tabela em uma exibição de fonte de dados. É possível exibir a caixa de diálogo **Criar/Editar Cálculo Nomeado** da seguinte maneira:  

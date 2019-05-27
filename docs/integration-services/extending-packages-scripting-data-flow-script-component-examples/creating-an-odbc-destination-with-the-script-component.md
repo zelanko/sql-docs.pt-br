@@ -16,14 +16,18 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7b698e0e3aaafbe3e05b8fb9d100872af1f5c3e0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 812915337b03927af5b23a66a0452d0d6a875112
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275485"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724484"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Criando um destino ODBC com o componente Script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você normalmente salva os dados em um destino ODBC usando um destino [!INCLUDE[vstecado](../../includes/vstecado-md.md)] e o Provedor de Dados [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para ODBC. Porém, você também pode criar um destino ODBC ad hoc para uso em um único pacote. Para criar esse destino ODBC ad hoc, use o componente Script conforme demonstrado no exemplo seguinte.  
   
 > [!NOTE]  

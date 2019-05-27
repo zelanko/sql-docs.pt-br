@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - time zones [Reporting Services]
@@ -16,12 +15,12 @@ ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f8eee5dfea43865ad51580cbcdb105299f8edc37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 566e421cd120010ea32f6936853e4319ec2efa11
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62511231"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101003"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>Alterar configurações de fuso horário e relógio em um servidor de relatório
   Um servidor de relatório sempre usa a hora local do computador no qual é instalado. Você não pode configurá-lo para usar um fuso horário diferente. Se um aplicativo cliente apontar para um servidor de relatório em um fuso horário diferente, o fuso horário do servidor de relatório será usado para executar uma operação agendada. No Gerenciador de Relatórios e nas páginas de gerenciamento do SharePoint, o fuso horário é indicado em cada página de agendamento para que você saiba exatamente quando uma operação agendada ocorrerá. Por exemplo, a página para criar agendas personalizadas informará "O horário será expresso em (UTC-08:00) hora do Pacífico (EUA e Canadá)".  

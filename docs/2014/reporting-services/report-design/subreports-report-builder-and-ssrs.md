@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b73227ae13d9534a98e4fc68030f5447f8db9cf7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d454f84295d86b373c3b5462580641a719435a17
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720199"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104794"
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>Sub-relatórios (Construtor de Relatórios e SSRS)
   Um sub-relatório é um item de relatório que exibe outro relatório dentro do principal corpo de conteúdo de um relatório. Conceitualmente, um sub-relatório em um relatório é semelhante a um quadro em uma página da Web. É usado para inserir um relatório dentro de um relatório. Qualquer relatório pode ser usado como um sub-relatório. O relatório exibido pelo sub-relatório é armazenado em um servidor de relatório, normalmente na mesma pasta do relatório pai. Você pode designar o relatório pai para transmitir parâmetros ao sub-relatório. Um sub-relatório pode ser repetido em regiões de dados, usando um parâmetro para filtrar dados em cada instância do sub-relatório.  

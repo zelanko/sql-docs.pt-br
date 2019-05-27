@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d1d495f8da0d05286a80ff8bdcf2e1c10da9b909
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c759eaf0fd18709e09eb64da6bfeb2d66a69f595
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63016889"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104255"
 ---
 # <a name="cache-a-shared-dataset"></a>Armazenar em cache um conjunto de dados compartilhado
   Um modo de melhorar o desempenho é configurar propriedades de cache para um conjunto de dados compartilhado. Quando um conjunto de dados compartilhado é armazenado em cache, uma cópia dos resultados da consulta é salva por um período de tempo específico. O primeiro usuário que solicita um relatório que usa o conjunto de dados compartilhado deve aguardar os resultados da consulta e a conclusão de todo o processamento antes de exibir o relatório. Os usuários subsequentes que solicitarem o relatório dentro do período de cache terão um desempenho melhor porque a consulta e o processamento já ocorreram. Também é possível especificar um plano de atualização de cache para executar a consulta e armazenar os resultados em cache até a expiração de cache especificada.  

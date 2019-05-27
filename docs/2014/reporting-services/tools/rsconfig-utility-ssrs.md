@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -17,12 +16,12 @@ ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9a22983a23e9bd1801de849774836a0a0acd2927
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b78691b0300b6098dfa88c35b4b61c7aa63fed4a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63201044"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099817"
 ---
 # <a name="rsconfig-utility-ssrs"></a>Utilitário rsconfig (SSRS)
   O utilitário **rsconfig.exe** criptografa e armazena conexão e valores de conta no arquivo RSReportServer.config. Valores criptografados incluem informações de conexão de banco de dados do servidor de relatório e valores de conta usados para processamento de relatório autônomo.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9d73b3c3-a068-4868-a2be-0cd261b6e92b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0bc4168d6e6cf786b3137713d44441be0bd3a13f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7a57987a5d1cd0ac7984db3b716521d9c7a09af
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62511384"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101152"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>Especificar uma imagem como um ponteiro em um medidor (Construtor de Relatórios e SSRS)
   O medidor contém três estilos internos que podem ser usados para personalizar a aparência do ponteiro. Para um medidor radial, os estilos internos são: Agulha, marcador e barra. Para um medidor linear, os estilos internos são: Marcador, Barra e Termômetro. Se um único ponteiro for necessário, o usuário poderá criar e especificar uma imagem que pode ser usada como um ponteiro totalmente funcional.  
