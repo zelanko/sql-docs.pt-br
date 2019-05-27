@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/12/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], extensions
@@ -25,12 +24,12 @@ ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ea53907b9561a92ef46056fad145f5d0236048cb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: f7a16507855e5f17674fc76f7238e3e6b32a6d16
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963382"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102822"
 ---
 # <a name="reporting-services-report-server"></a>Servidor de Relatório do Reporting Services
   Este tópico é uma visão geral do servidor de relatório [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , o componente central da instalação de um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Ele consiste em um par de mecanismos de processamento mais uma coleção de extensões de propósitos especiais que manipulam autenticação, processamento de dados, renderização e operações de entrega. Um servidor de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é executado em um destes dois modos de implantação: modo nativo ou modo do SharePoint. Consulte a seção [Comparação de recursos do SharePoint e do modo nativo](#bkmk_featuresupport) para obter uma comparação entre os recursos.  
@@ -90,17 +89,17 @@ ms.locfileid: "59963382"
 |**Extensões de segurança personalizadas**|Sim|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] não podem ser implantadas nem usadas no servidor de relatório. O servidor de relatório inclui uma extensão de segurança para fins especiais que é usada sempre que você configura um servidor de relatório para ser executado no modo integrado do SharePoint. Essa extensão de segurança é um componente interno e é necessário para operações integradas.|  
 |**Configuration Manager**|Sim|**\*\* Importante \*\*** O Configuration Manager não pode ser usado para gerenciar servidor de relatório do modo do SharePoint. Em vez disso, use a administração central do SharePoint.|  
 |**Gerenciador de Relatórios**|Sim|O Gerenciador de Relatórios não pode ser usado para gerenciar o modo do SharePoint. Use as páginas do aplicativo do SharePoint. Para obter mais informações, consulte [Serviço SharePoint do Reporting Services e aplicativos de serviço](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).|  
-|**Relatórios vinculados**|Sim|Nenhum.|  
+|**Relatórios vinculados**|Sim|Não.|  
 |**Meus Relatórios**|Sim|Não|  
-|**Minhas Assinaturas** e métodos de envio em lote.|Sim|Não|  
-|**Alertas de dados**|Não|Sim|  
+|**Minhas Assinaturas** e métodos de envio em lote.|Sim|Não |  
+|**Alertas de dados**|Não |Sim|  
 |**Power View**|Não|Sim<br /><br /> Exige o Silverlight no navegador do cliente. Para obter mais informações sobre requisitos de navegador, consulte [Planning for Reporting Services e o suporte a navegador Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**Relatórios .RDL**|Sim|Sim<br /><br /> Relatórios .RDL podem ser executados em servidores de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo nativo ou no modo do SharePoint.|  
 |**Relatórios .RDLX**|Não|Sim<br /><br /> Relatórios .RDLX do Power View só podem ser executados em servidores de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint.|  
-|**Credenciais do token do usuário do SharePoint para a extensão de lista do SharePoint**|Não|Sim|  
+|**Credenciais do token do usuário do SharePoint para a extensão de lista do SharePoint**|Não |Sim|  
 |**As zonas do AAM para implantações voltadas para a Internet**|Não|Sim|  
 |**Backup e recuperação do SharePoint**|Não|Sim|  
-|**Suporte de log ULS**|Não|Sim|  
+|**Suporte de log ULS**|Não |Sim|  
   
 ##  <a name="bkmk_nativemode"></a> Modo nativo  
  No modo nativo, um servidor de relatório é um servidor de aplicativo autônomo que fornece todas as exibições, gerenciamento, processamento e entrega de relatórios e modelos de relatório. Este é o modo padrão para instâncias do servidor de relatório. Você pode instalar um servidor de relatório no modo nativo que seja configurado durante a instalação ou pode configurá-lo para operações do modo nativo quando a instalação for concluída.  

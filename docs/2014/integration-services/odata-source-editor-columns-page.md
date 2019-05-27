@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.columns.f1
@@ -13,12 +12,12 @@ ms.assetid: d640e9e4-86c3-4cb7-a6c2-e82624303696
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4c3b66b5b2a9595deffce79ed0e23e03a65fdeaf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6677fad3df1d1f99e2f78257ea85551f8ae8db3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890500"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057336"
 ---
 # <a name="odata-source-editor-columns-page"></a>Editor de Origem do OData (página Colunas)
   Use a página **Colunas** da caixa de diálogo **Editor de Origem OData** para selecionar as colunas externas (origem) a serem incluídas na saída e para mapeá-las para as colunas de saída.  

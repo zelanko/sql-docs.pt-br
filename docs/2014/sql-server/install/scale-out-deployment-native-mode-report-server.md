@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
@@ -13,12 +12,12 @@ ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c091c115f9e03fbc0f1243e1c2fcf3a075f3586f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f26787441fb93253b9ca944c479f9cf480ba0745
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62753298"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092427"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Implantação de expansão (modo nativo do Servidor de Relatório)
   Use a página **Implantação de Expansão** no Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para exibir o status de inicialização de uma implantação de expansão ou para unir um servidor de relatório a uma implantação de expansão. Uma *implantação de expansão* se refere a duas ou mais instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório.  

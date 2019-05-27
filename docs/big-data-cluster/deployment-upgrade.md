@@ -9,12 +9,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1f8291eeb292226b3dfcb2bd1a89816926c53d88
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 45c489d7bb2dc6f0fea5815dce4b2f0ef11ae5ad
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993973"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015192"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>Como atualizar clusters de grandes dados do SQL Server
 
@@ -45,10 +45,10 @@ Atualmente, a única maneira de atualizar um cluster de big data para uma nova v
    pip3 uninstall mssqlctl
    ```
 
-   Para o CTP 2.3 ou superior, execute o comando a seguir. Substitua `ctp-2.4` no comando com a versão do **mssqlctl** que você está desinstalando:
+   Para o CTP 2.3 ou superior, execute o comando a seguir. Substitua `ctp-2.5` no comando com a versão do **mssqlctl** que você está desinstalando:
 
    ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
    ```
 
 1. Instale a versão mais recente do **mssqlctl**. Os seguintes comandos instalam **mssqlctl** para o CTP 3.0:
@@ -56,13 +56,13 @@ Atualmente, a única maneira de atualizar um cluster de big data para uma nova v
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
    ```
 
    **Linux:**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

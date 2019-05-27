@@ -21,12 +21,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0cdd3d2a7a64ddc701a73a3b6c978bd9f0264e20
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.openlocfilehash: 6b17e6b799bf3ff35b441286fd1205ca5382b207
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877581"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836186"
 ---
 # <a name="sql-server-documentation"></a>Documentação do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,6 +38,8 @@ O SQL Server é uma parte central da plataforma de dados Microsoft. O SQL Server
 ::: moniker range="= sql-server-2016"
 O SQL Server é uma parte central da plataforma de dados Microsoft. O SQL Server é líder do setor em ODBMS (sistemas de gerenciamento de bancos de dados operacionais). Esta documentação ajuda você a instalar, configurar e usar o SQL Server no Windows. O conteúdo inclui exemplos de ponta a ponta, exemplos de código e vídeos. Para tópicos de linguagem do SQL Server, consulte a [Referência de linguagem](../t-sql/language-reference.md).
 ::: moniker-end
+
+O SQL Server 2014 e versões mais antigas, incluindo o SQL Server 2005, tem a documentação disponível [aqui](#previous-versions-gm66).
 
 <!-- Moniker assignments nicely designed so that exactly 1 of these next 3 little WhatsNew tables will be displayed
  at any one time, regardless of user's moniker choice.
@@ -137,6 +139,10 @@ O SQL Server é uma parte central da plataforma de dados Microsoft. O SQL Server
 - [Banco de dados de exemplo do Wide World Importers](https://docs.microsoft.com/sql/samples/wide-world-importers-what-is)
 - [Bancos de dados e scripts de exemplo do AdventureWorks para SQL Server 2016](https://docs.microsoft.com/sql/samples/sql-samples-where-are) 
 - [Exemplos de SQL Server no GitHub](https://github.com/Microsoft/sql-server-samples)
+
+## <a name="previous-versions-gm66"></a> SQL Server 2014, 2012, 2008, 2005
+
+[!INCLUDE[previous-versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

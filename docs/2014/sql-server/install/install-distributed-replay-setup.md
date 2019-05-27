@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f83e13aa6ed85293bf20b006ad6c5c8e9a9a62f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545377"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094624"
 ---
 # <a name="install-distributed-replay-setup"></a>Instalar o Distributed Replay (instalação)
   Instale os recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay com o Assistente de Instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Ao planejar onde instalar os recursos, considere o seguinte:  
@@ -59,7 +58,7 @@ ms.locfileid: "52545377"
   
 -   Em um sistema de 64 bits:  
   
-     C:\Program Files\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86) \120\Tools  
+     C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86) \120\Tools  
   
      \- OU –  
   
@@ -87,7 +86,7 @@ ms.locfileid: "52545377"
   
     -   Para instalar o serviço do cliente, selecione **Distributed Replay Client**.  
   
-     **Importante**: Quando você configura o controlador Distributed Replay, pode especificar uma ou mais contas de usuário que serão usadas para executar os serviços de cliente do Distributed Replay. Esta é a lista das contas com suporte:  
+     **Importante**: Quando você configura o controlador do Distributed Replay, você pode especificar uma ou mais contas de usuário que serão usadas para executar os serviços Distributed Replay client. Esta é a lista das contas com suporte:  
   
     -   Conta de usuário do domínio  
   

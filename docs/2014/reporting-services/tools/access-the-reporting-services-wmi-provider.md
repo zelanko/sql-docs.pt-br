@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - Reporting Services WMI Provider
@@ -20,12 +19,12 @@ ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d2b162dca8b51a21be0d7757c5cd2b952bb3ff70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: deeba8dd32d50b2bb31da49e798cd867d5913fa6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63217840"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100486"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Acessar o provedor WMI do Reporting Services
   O provedor WMI do Reporting Services expõe duas classes WMI para administração de instâncias de servidor de relatório do modo nativo através de scripts:  
@@ -71,7 +70,7 @@ PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\Repor
 ```  
   
 ## <a name="query-the-available-methods-and-properties"></a>Consultar os métodos e as propriedades disponíveis  
- Para consultar que métodos e propriedades estão disponíveis em uma das classes WMI do Reporting Services, canalize os resultados de Get-WmiObject para o comando Get-Member. Por exemplo:  
+ Para consultar que métodos e propriedades estão disponíveis em uma das classes WMI do Reporting Services, canalize os resultados de Get-WmiObject para o comando Get-Member. Por exemplo:   
   
 ```  
 PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost | Get-Member  

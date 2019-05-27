@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], display options
@@ -14,12 +13,12 @@ ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d57d3a1b50b88bfd2ec27641cca4f7058f9639f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b5607f9105ec7197ebc96afc91f189ac19969be8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62652391"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098716"
 ---
 # <a name="url-access-parameter-reference"></a>Referência de parâmetro de acesso de URL
   Você pode usar os parâmetros a seguir como parte de uma URL para configurar a aparência de seus relatórios. Os parâmetros mais comuns estão listados nesta seção. Os parâmetros não diferenciam maiúsculas de minúsculas e começam com o prefixo de parâmetro *rs:* quando direcionados ao servidor de relatório e com *rc:* quando direcionados a um Visualizador de HTML. Você também pode especificar parâmetros que são específicos de dispositivos ou extensões de renderização. Para obter mais informações sobre parâmetros específicos do dispositivo, consulte [Especificar as configurações de informações sobre o dispositivo em uma URL](specify-device-information-settings-in-a-url.md).  
@@ -64,7 +63,7 @@ ms.locfileid: "62652391"
 |*PersistStreams*|Renderiza um relatório em um único fluxo persistido. Esse parâmetro é usado pelo renderizador de imagem para transmitir uma parte de cada vez do relatório renderizado. depois de usar esse parâmetro em uma cadeia de caracteres de acesso à URL, use a mesma cadeia de caracteres de acesso à URL com o parâmetro *GetNextStream* em vez do parâmetro *PersistStreams* para obter a próxima parte do fluxo persistido. Esse comando URL retornará eventualmente um fluxo de 0 byte para indicar o fim do fluxo persistido. O valor padrão é `false`.|  
 |*GetNextStream*|obtém a próxima parte de dados em um fluxo persistido acessado com o parâmetro *PersistStreams* . Para obter mais informações, consulte a descrição de *PersistStreams*. O valor padrão é `false`.|  
 |*SessionID*|Especifica uma sessão de relatório ativa estabelecida entre o aplicativo cliente e o servidor de relatório. O valor desse parâmetro é definido como o identificador de sessão.<br /><br /> Você pode especificar a ID da sessão como um cookie ou como parte da URL. Quando o servidor de relatório tiver sido configurado para não usar cookies de sessão, a primeira solicitação sem uma ID de sessão especificada resultará no redirecionamento com uma ID de sessão. Para obter mais informações sobre as sessões do servidor de relatório, consulte [Identificando o estado de execução](report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).|  
-|*ClearSession*|Um valor igual a `true` direciona o servidor de relatório para remover um relatório da sessão de relatório. Todas as instâncias de relatório associadas a um usuário autenticado são removidas da sessão de relatório. (Uma instância de relatório é definida como o mesmo relatório executado várias vezes com valores de parâmetro de relatório diferentes). O valor padrão é `false`.|  
+|*ClearSession*|Um valor igual a `true` direciona o servidor de relatório para remover um relatório da sessão de relatório. Todas as instâncias de relatório associadas a um usuário autenticado são removidas da sessão de relatório. (Uma instância de relatório será definida já que o mesmo relatório é executado várias vezes com valores de parâmetro de relatório diferentes.) O valor padrão é `false`.|  
 |*ResetSession*|Um valor igual a `true` direciona o servidor de relatório a redefinir a sessão de relatório com a remoção da associação da sessão de relatório a todos os instantâneos de relatório. O valor padrão é `false`.|  
 |*ShowHideToggle*|Alterna o estado de mostrar e ocultar de uma seção do relatório. Especifique um número inteiro positivo para representar a seção a ser alternada.|  
   

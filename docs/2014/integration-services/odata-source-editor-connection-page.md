@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
@@ -13,12 +12,12 @@ ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 85ac46b918918f7e9dac715e11909ffeb9c46a29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767138"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057322"
 ---
 # <a name="odata-source-editor-connection-page"></a>Editor de Origem do OData (página Conexão)
   Use a página **Conexão** da caixa de diálogo **Editor de Origem do OData** para selecionar o gerenciador de conexões do OData para a origem do OData. Essa página também permite que você especifique uma coleção ou um caminho de recurso e qualquer opção de consulta para indicar quais dados precisam ser recuperados da origem do OData. Para obter mais informações sobre origem do OData, consulte [OData Source](data-flow/odata-source.md).  
@@ -55,7 +54,7 @@ ms.locfileid: "62767138"
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>Use o caminho da coleção ou do recurso = Caminho do recurso  
  **Resource path**  
- Digite um caminho de recurso. Por exemplo: Funcionários  
+ Digite um caminho de recurso. Por exemplo: funcionários  
   
 ## <a name="see-also"></a>Consulte também  
  [Editor de Fonte OData &#40;Página Colunas&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   

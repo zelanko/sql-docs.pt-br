@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 13275d0a3a2070c7fd57d65a67d083af06c00af3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 74bb1b6e8178f104c3987cedba1986c599e6d42b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63216162"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105315"
 ---
 # <a name="avg-function-report-builder-and-ssrs"></a>Função Avg (Construtor de Relatórios e SSRS)
   Retorna a média de todos os valores numéricos não nulos especificados pela expressão, avaliados no escopo fornecido.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriber data sources [Reporting Services]
@@ -18,12 +17,12 @@ ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8314a1d0bdf16a7a320c8a5a7e06558a2bec62c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8c8dfb41890049918799bb3638f52dc222fc5dcf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62631839"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100636"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Usar uma fonte de dados externa para obter dados de assinante (assinatura controlada por dados)
   Em uma assinatura controlada por dados, os dados de assinatura dinâmicos são fornecidos por uma consulta ou um comando que recupera dados de uma fonte de dados externa. Os dados de assinatura podem ser recuperados de qualquer fonte de dados com suporte que satisfaça os requisitos para o processamento de assinaturas controladas por dados. A sintaxe da consulta ou do comando deve ser válida para uma extensão de processamento de dados instalada com seu servidor de relatório.  

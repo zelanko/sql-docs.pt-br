@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfererrormessagestask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 67b21f48-4795-4128-81dc-743f7a95ef74
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 648b389adf8af04e0a59365efe8be7108a265435
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c901c3f10198a1516279b9e93d9c5ddb6a9c49ea
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62927191"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055078"
 ---
 # <a name="transfer-error-messages-task-editor-general-page"></a>Editor da Tarefa Transferir Mensagens de Erro (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Transferir Mensagens de Erro** para nomear e descrever a tarefa Transferir Mensagens de Erro. A tarefa Transferir Mensagens de Erro transfere uma ou mais mensagens de erro do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] definidas pelo usuário entre instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações sobre essa tarefa, consulte [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  

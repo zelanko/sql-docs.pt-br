@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 43864fb135faf61a2a0205199d7717d7b5c04026
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cfa09322af5b4838ccdc2bb9dc85d13a412bc359
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720610"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107074"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Conexões de conexão de lista do SharePoint (SSRS)
   Para incluir dados de uma lista do Microsoft SharePoint no relatório, você deve adicionar ou criar um conjunto de dados baseado em uma fonte de dados de relatório do tipo Lista do Microsoft SharePoint. Esse é um tipo de fonte de dados interna baseado na extensão de dados Lista do SharePoint do Microsoft SQL Server Reporting Services. Use esse tipo de fonte de dados para se conectar e recuperar dados de lista dos sites do [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], do [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 e do [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
@@ -51,9 +50,9 @@ ms.locfileid: "62720610"
 ||Credenciais com suporte|Modo clássico de Autenticação do Windows|<sup>3</sup> autenticação de declarações|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |Lista de farm local do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|Sim|  
-||Armazenado, Prompt, Nenhum (com credenciais do Windows<sup>1</sup>)|Não|Não|  
+||Armazenado, Prompt, Nenhum (com credenciais do Windows<sup>1</sup>)|Não |Não |  
 |Lista remota do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|Não<sup>2</sup>|  
-||Armazenado, Prompt, Nenhum (com credenciais do Windows<sup>1</sup>)|Não|Não<sup>2</sup>|  
+||Armazenado, Prompt, Nenhum (com credenciais do Windows<sup>1</sup>)|Não |Não<sup>2</sup>|  
   
  <sup>1</sup> não há suporte para credenciais armazenadas e prompt com credenciais de não-Windows.  
   

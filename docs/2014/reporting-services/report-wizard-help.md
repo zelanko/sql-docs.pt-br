@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.rptwizardhelp.f1
@@ -16,12 +15,12 @@ ms.assetid: 68287bcf-f91a-429f-bb7c-48c029b041fa
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 869286901a428cf2b327fe65ba8c46877df092d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d21fb2c577e6419668a619466dd0d2c94b4a3da2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255117"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102984"
 ---
 # <a name="report-wizard-help"></a>Ajuda do Assistente de Relatório
   Esta seção fornece Ajuda por meio da tecla F1 para o Assistente de Relatório. O Assistente de Relatório automatiza o processo de criação de relatórios tabulares e de matriz. A tabela a seguir descreve os tópicos dessa seção.  

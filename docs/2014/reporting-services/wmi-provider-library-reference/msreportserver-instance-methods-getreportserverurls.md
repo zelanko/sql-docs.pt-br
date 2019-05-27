@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - GetReportServerUrls method
@@ -13,12 +12,12 @@ ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2580538f24fe220369f0f6ea807e6caa8dd822a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f600d7bf2515cb77c587e5c9c3d5f8d1db1e343f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63020533"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097184"
 ---
 # <a name="getreportserverurls-method-wmi-msreportserverinstance"></a>Método GetReportServerUrls (WMI MSReportServer_Instance)
   Retorna uma lista de URLs que os usuários podem usar para acessar o servidor de relatório e o gerenciador de relatórios.  
