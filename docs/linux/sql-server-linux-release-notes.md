@@ -4,18 +4,18 @@ description: Este artigo contém as notas de versão e recursos com suporte para
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/18/2018
+ms.date: 03/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: e13ee9f8046eb53db8e59ee33b3039757bbc4aa4
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: e272187ae3e634246f9f32323438d81d633c3fbc
+ms.sourcegitcommit: 8aa51bc0bc54b266145c96f6451b59f369822160
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776176"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66036912"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de versão do SQL Server 2017 no Linux
 

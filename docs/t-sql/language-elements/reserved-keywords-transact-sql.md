@@ -19,19 +19,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eec630d490ee4bbd31b77b294e18cae1e72f530
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11ed3624f1a8ac74f650bd1468750452580fb911
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853556"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626684"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Palavras-chave reservadas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa palavras-chave reservadas para definir, manipular e acessar bancos de dados. As palavras-chave reservadas fazem parte da gramática da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)] usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para analisar e compreender as instruções e os lotes [!INCLUDE[tsql](../../includes/tsql-md.md)]. Embora seja sintaticamente possível usar as palavras-chave reservadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como identificadores e nomes de objeto em scripts [!INCLUDE[tsql](../../includes/tsql-md.md)], você só pode fazer isso usando identificadores delimitados.  
   
- A tabela abaixo lista [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e palavras-chave reservadas ao SQL Data Warehouse.  
+ A tabela abaixo lista [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e palavras-chave reservadas ao SQL Data Warehouse do Azure.  
   
 ||||  
 |-|-|-|  
@@ -98,11 +98,11 @@ ms.locfileid: "47853556"
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||
   
-A tabela abaixo lista as palavras-chave reservadas que são exclusivas do **SQL Data Warehouse**.
+A tabela abaixo lista as palavras-chave reservadas que são exclusivas do **SQL Data Warehouse do Azure**.
 
 |||
 |-|-|
-|**Label**||
+|**LABEL**||
   
  Adicionalmente, o padrão ISO define uma lista de palavras-chave reservadas. Evite usar palavras-chave reservadas ISO em nomes de objeto e identificadores. A lista de palavras-chave reservadas de ODBC, mostrada na tabela seguinte, é a mesma do ISO.  
   
@@ -285,7 +285,7 @@ A tabela abaixo lista as palavras-chave reservadas que são exclusivas do **SQL 
 |FIRST|RECURSIVE|XMLFOREST|  
 |FLOAT|REF|XMLITERATE|  
 |FOUND|REFERENCING|XMLNAMESPACES|  
-|GRATUITO|REGR_AVGX|XMLPARSE|  
+|FREE|REGR_AVGX|XMLPARSE|  
 |FULLTEXTTABLE|REGR_AVGY|XMLPI|  
 |FUSION|REGR_COUNT|XMLQUERY|  
 |GENERAL|REGR_INTERCEPT|XMLSERIALIZE|  

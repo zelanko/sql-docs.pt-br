@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionexpression.reportaction.f1
@@ -13,12 +12,12 @@ ms.assetid: cebfdd07-e376-46d6-86ef-b6f816a2f360
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb8659f916fa32c7b5c944bb525e64cf0551b0d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eeb3df670097c0d511a9f5b779b6705f40a5e897
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748378"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070295"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulário de Ação de Relatório (guia Ações, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Editor de Formulário de Ação de Relatório** na guia **Ações** do Designer de Cubo para modificar a ação de relatório selecionada no painel **Organizador de Ações**.  

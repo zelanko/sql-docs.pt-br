@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
@@ -14,12 +13,12 @@ ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6db15f08718ef1636dcb617c95994d644582d45f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8382bfd231c87c1a0c1ea1d2f326cffaf327b202
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165067"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109518"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Gerenciador de Alertas de Dados para Usuários do SharePoint
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece o Gerenciador de Alertas de Dados para operadores de informações do SharePoint para gerenciar os alertas de dados. Eles podem exibir informações sobre os alertas que criaram, excluir alertas, abrir definições de alertas para edição e executar alertas sob demanda. Eles podem optar por exibir os alertas para um único relatório apenas ou os alertas de todos os relatórios. A imagem a seguir mostra os recursos disponíveis para os operadores de informações no Gerenciador de Alertas de Dados.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - rankings [full-text search]
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 914a1f0eb36ad0da4076f487d1771a8dfd23bfb1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807248"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011153"
 ---
 # <a name="limit-search-results-with-rank"></a>Limite resultados de pesquisa com RANK
   As funções [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) e [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) retornam uma coluna denominada RANK que contém valores ordinais de 0 a 1000 (valores de classificação). Esses valores são usados para classificar as linhas retornadas de acordo com o grau de correspondência com os critérios de seleção. Os valores de classificação indicam apenas uma ordem relativa de relevância das linhas no conjunto de resultados, sendo que um valor inferior indica menor relevância. Os valores reais não são importantes e geralmente são diferentes em cada execução da consulta.  
@@ -37,7 +37,7 @@ ms.locfileid: "52807248"
   
 ##  <a name="examples"></a> Exemplos do uso de RANK para limitar os resultados da pesquisa  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>Exemplo A: Pesquisando apenas as três primeiras correspondências  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Exemplo a: pesquisando apenas as três primeiras correspondências  
  O exemplo a seguir usa CONTAINSTABLE para retornar apenas as três primeiras correspondências.  
   
 ```  
@@ -68,7 +68,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>Exemplo B: Procurando as dez primeiras correspondências  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Exemplo b: pesquisando as dez primeiras correspondências  
  O exemplo a seguir usa CONTAINSTABLE para retornar a descrição dos 5 produtos principais onde a coluna `Description` contém a palavra "aluminum" próxima à palavra "light" ou "lightweight".  
   
 ```  
@@ -143,7 +143,7 @@ GO
   
  Estatísticas como `IndexRowCount` podem variar muito. Por exemplo, se um catálogo tem 2 bilhões de linhas no índice mestre, um novo documento será indexado no índice intermediário da memória, e a classificação daquele documento será com base no número de documentos no índice da memória que poderão ser inclinados quando comparados às classificações dos documentos do índice mestre. Por esta razão, recomenda-se que, após qualquer população que resulte em um grande número de linhas, os índices indexados ou reindexados sejam mesclados em um índice mestre usando a função ALTER FULLTEXT CATALOG... Instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] REORGANIZE. O Mecanismo de Texto Completo também mesclará automaticamente os índices com base em parâmetros como o número e o tamanho dos índices intermediários.  
   
- Os valores `MaxOccurrence` são normalizados em 1 de 32 intervalos. Isto significa, por exemplo, que um documento de 50 palavras é tratado da mesma forma que um documento de 100 palavras. Abaixo está a tabela usada para normalização. Como os tamanhos dos documentos estão no intervalo entre os valores 32 e 128 da tabela adjacente, eles são tratados como se tivessem o mesmo tamanho, 128 (32 < `docLength` <= 128).  
+ Os valores `MaxOccurrence` são normalizados em 1 de 32 intervalos. Isto significa, por exemplo, que um documento de 50 palavras é tratado da mesma forma que um documento de 100 palavras. Abaixo está a tabela usada para normalização. Como os tamanhos dos documentos estão no intervalo entre valores de tabela adjacentes 32 e 128, eles são tratados como tendo o mesmo tamanho, 128 (32 < `docLength` < = 128).  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   

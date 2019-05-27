@@ -11,15 +11,15 @@ helpviewer_keywords:
 - cache [SQLXML]
 - templates [SQLXML], caching
 ms.assetid: 73e151c6-b24e-4422-a116-51e0846bc6f5
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d38459f470bf75d12d9fcd69da96a4d772776c01
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0024066a5a687828cc59d5053d62e891bbf198d5
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63015388"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013206"
 ---
 # <a name="template-caching-sqlxml-40"></a>Cache de modelos (SQLXML 4.0)
   O armazenamento de modelos em cache aprimora o desempenho significativamente. Se o armazenamento de modelos em cache estiver definido, o modelo permanecerá na memória até sua primeira execução. Isto melhora o desempenho das execuções subsequentes do modelo.  

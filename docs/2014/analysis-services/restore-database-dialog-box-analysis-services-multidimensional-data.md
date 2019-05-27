@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.Restore.f1
@@ -13,12 +12,12 @@ ms.assetid: a3990d47-55e2-424e-8eac-87edc937e806
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9231189bb3bf127c7413a0b5d55ae286a32f42cc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 42649fd9fe8284e89aebd37c2d9b668a3ac34a2f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748408"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070259"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Restaurar Banco de Dados (Analysis Services - Dados multidimensionais)
   Use a caixa de diálogo **Restaurar Banco de Dados** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para restaurar um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de um arquivo de backup utilizando o formato [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Backup File (.abf).  

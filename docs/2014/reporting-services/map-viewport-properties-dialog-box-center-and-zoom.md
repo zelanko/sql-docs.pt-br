@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.centerandzoom.f1
@@ -14,12 +13,12 @@ ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0e345ca44b152986e0e8c7eae87d8a2a50481c8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a5c71344fe45df4265db72e9fd6dc41ac13bd98
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278984"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108287"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>Caixa de diálogo Propriedades do Visor do Mapa, Centro e Zoom
   Selecione **Centralizar e Aplicar Zoom** para a caixa de diálogo **Propriedades do Visor do Mapa** para definir a exibição central e o fator de zoom de um mapa. Depois que você especificar uma fonte de dados do mapa e os limites do mapa a serem incluídos em seu relatório, poderá especificar o centro de exibição e o fator de zoom para controlar ainda mais a exibição do mapa. As opções são alteradas de acordo com o método usado para especificar os valores de centro e zoom. Clique no botão **Expressão** (*fx*) para editar uma expressão que define o valor da opção.  

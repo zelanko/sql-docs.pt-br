@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 560761383a06bf9e3b319546011d58c7c1bdecb4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6d56a6e32818296343b711769ad594bf7cadce57
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62473602"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011239"
 ---
 # <a name="full-text-search"></a>Pesquisa de Texto Completo
   A Pesquisa de Texto Completo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permite que usuários e aplicativos executem consultas de texto completo em dados baseados em caracteres nas tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para que você possa executar consultas de texto completo em uma tabela, o administrador de banco de dados deve criar um índice de texto completo na tabela. O índice de texto completo inclui uma ou mais colunas baseadas em caractere da tabela. Essas colunas podem ter qualquer um destes tipos de dados: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml` ou `varbinary(max)` e FILESTREAM. Cada índice de texto completo indexa uma ou mais colunas da tabela base, e cada coluna pode usar um idioma específico.  

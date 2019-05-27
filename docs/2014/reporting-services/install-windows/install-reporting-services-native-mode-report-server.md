@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - default configuration [Reporting Services]
@@ -15,12 +14,12 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9d4ed9d30be850df2ad18374790a91fd72f5e50a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f3a54650403458eec09826b51f1528a844e48791
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63262347"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108805"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Instalar o servidor de relatórios de modo nativo do Reporting Services
   Um servidor de relatório do modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pode ser instalado do assistente de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou da linha de comando. No assistente de instalação, você pode selecionar para 1) instalar arquivos e configurar o servidor com as configurações padrão ou 1) somente instalar os arquivos e o servidor não é configurado pelo assistente de instalação. Esse tópico analisa a *Configuração padrão para o modo nativo* em que a Instalação instala e configura uma instância do servidor de relatório. Depois que a Instalação for concluída, o servidor de relatório estará em execução e pronto para uso. Um servidor de relatório no modo nativo é executado como um servidor de aplicativo autônomo. O modo nativo é o padrão de servidor.  
@@ -99,7 +98,7 @@ ms.locfileid: "63262347"
 |----------|-----------------|  
 |Prefixo|O prefixo padrão é HTTP. Se você instalou anteriormente um certificado de protocolo SSL, a Instalação tentará criar reservas de URL que usem o prefixo HTTPS.|  
 |Nome do host|O nome de host padrão é um curinga forte (+). Especifica que o servidor de relatório aceitará qualquer solicitação HTTP na porta designada para qualquer nome de host é resolvido para o computador, incluindo http://\<computername > / reportserver, http://localhost/reportserver, ou http://\<IPAddress > / ReportServer.|  
-|Porta|A porta padrão é 80. Observe que, se você usar qualquer porta que não seja a 80, precisará adicioná-la explicitamente à URL quando abrir um aplicativo Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em uma janela do navegador.|  
+|Port|A porta padrão é 80. Observe que, se você usar qualquer porta que não seja a 80, precisará adicioná-la explicitamente à URL quando abrir um aplicativo Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em uma janela do navegador.|  
 |Diretório virtual|Por padrão, os diretórios virtuais são criados no formato de ReportServer_\<*nome_instância*> para o serviço Web servidor de relatórios e Reports_\<*nome_instância*> Gerenciador de relatórios. Para o serviço Web Servidor de Relatórios, o diretório virtual padrão é **reportserver**. Para o Gerenciador de Relatórios, o diretório virtual padrão é **reports**.|  
   
  Um exemplo de cadeia de caracteres de URL completa poderia ser como segue:  

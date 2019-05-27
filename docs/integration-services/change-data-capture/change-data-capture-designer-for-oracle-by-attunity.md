@@ -13,14 +13,18 @@ ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bb127d4c413a4b08927b0dca57dbea3b62039b2a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 070d0e47ae356e479c227e04fa2d4478788fa1bf
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280850"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729061"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer para Oracle da Attunity
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O CDC Designer Console é usado para desenvolver e manter Instâncias Oracle CDC. O CDC Designer Console é um snap-in do Console de Gerenciamento Microsoft que contém os seguintes elementos:  
   
 -   Assistente de Nova Instância: este assistente cria uma nova Instância Oracle CDC. Para obter informações sobre o uso do New Instance Wizard, consulte [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  

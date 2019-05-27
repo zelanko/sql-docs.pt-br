@@ -11,14 +11,18 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 13978fee9b5dca8c7e946d4b7b01f52db37612e0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 72bdab9edf0dc920ed5e8b5801cbdec4868a047a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282980"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720143"
 ---
 # <a name="dtexec-utility"></a>Utilitário dtexec
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O utilitário de prompt de comando **dtexec** é usado para configurar e executar pacotes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O utilitário **dtexec** fornece acesso a toda a configuração e recursos de execução de pacotes, como parâmetros, conexões, propriedades, variáveis, logs e indicadores de progresso. O utilitário **dtexec** permite carregar pacotes destas origens: do servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , de um arquivo de projeto .ispac, de um banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , do Armazenamento de Pacotes do [!INCLUDE[ssIS](../../includes/ssis-md.md)] e do sistema de arquivos.  
   
 > **OBSERVAÇÃO:** Quando você usa a versão atual do utilitário **dtexec** para executar um pacote criado por uma versão anterior do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o utilitário atualiza o pacote temporariamente para o formato do pacote atual. No entanto, você não pode usar o utilitário **dtexec** para salvar o pacote atualizado. Para saber mais sobre como atualizar permanentemente um pacote para o a versão atual, confira [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
@@ -85,11 +89,11 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="phases"></a> Fases de execução  
  O utilitário passa por quatro fases à medida que é executado. As fases são as seguintes:  
   
-1.  Fase de fornecimento de comando: O prompt de comando lê a lista de opções e argumentos que foram especificados. Todas as fases subsequentes serão ignoradas se uma opção **/?** ou **/HELP** for encontrada.  
+1.  Fase de fornecimento de comando: o prompt de comando lê a lista de opções e argumentos que foram especificados. Todas as fases subsequentes serão ignoradas se uma opção **/?** ou **/HELP** for encontrada.  
   
 2.  Fase de carga do pacote: o pacote especificado pela opção **/SQL**, **/FILE**ou **/DTS** é carregado.  
   
-3.  Fase de configuração: As opções são processadas nesta ordem:  
+3.  Fase de configuração: as opções são processadas nesta ordem:  
   
     -   Opções que definem sinalizadores, variáveis e propriedades do pacote.  
   
@@ -250,7 +254,7 @@ dtexec /option [value] [/option [value]]...
   
      Para obter mais informações sobre os arquivos de despejo de depuração, consulte [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
   
--   **/DumpOnError**: (Opcional) Cria os arquivos de despejo de depuração, .mdmp e .tmp, quando ocorre um erro enquanto o pacote está em execução.  
+-   **/DumpOnError**: (opcional) cria os arquivos de despejo de depuração, .mdmp e .tmp, quando ocorre um erro enquanto o pacote está em execução.  
   
      Por padrão, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena os arquivos de despejo de depuração na pasta *\<drive>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   

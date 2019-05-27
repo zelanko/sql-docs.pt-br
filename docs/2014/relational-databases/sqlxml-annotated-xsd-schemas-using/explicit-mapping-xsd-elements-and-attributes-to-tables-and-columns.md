@@ -25,15 +25,15 @@ helpviewer_keywords:
 - table mapping [SQLXML], explicit mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4f6244ee58619e48a1fb17b9eb803f013e2120b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 72dfbcbd1ff264e596eecfecb5ebf759c2cbf5e9
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63228937"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013840"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mapeamento explícito de atributos e elementos XSD em tabelas e colunas (SQLXML 4.0)
   Ao usar um esquema XSD para fornecer uma exibição XML do banco de dados relacional, os elementos e atributos do esquema devem ser mapeados em tabelas e colunas do banco de dados. As linhas na tabela/exibição do banco de dados serão mapeadas em elementos no documento XML. Os valores de coluna no banco de dados são mapeados em atributos ou elementos.  

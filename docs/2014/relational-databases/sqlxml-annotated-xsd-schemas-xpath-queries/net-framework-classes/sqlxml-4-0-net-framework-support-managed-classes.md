@@ -19,15 +19,15 @@ helpviewer_keywords:
 - data providers [SQLXML], SQLXML Managed Classes
 - SQLXML, Managed Classes
 ms.assetid: 73a5faeb-dabf-4895-acb5-a9651b646065
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42614f20d8c37695af441b01c6134ec7cf1905e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 677d769f54dab338e65b171bed50b6abb69e356a
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740713"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010792"
 ---
 # <a name="sqlxml-managed-classes"></a>Classes gerenciadas SQLXML
   As classes gerenciadas [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML expõem a funcionalidade do SQLXML 4.0 dentro do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Com as classes gerenciadas SQLXML, você pode escrever um aplicativo C# para acessar dados XML de uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], trazer os dados para o ambiente .NET Framework, processar os dados e enviar as atualizações de volta para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como um DiffGram para aplicar as atualizações. Use um esquema de mapeamento ao aplicar atualizações a um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando classes gerenciadas SQLXML. Para obter um exemplo funcional, consulte [acessando a funcionalidade SQLXML no ambiente .NET](accessing-sqlxml-functionality-in-the-net-environment.md).  

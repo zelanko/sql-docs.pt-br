@@ -7,16 +7,16 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e2d05ae0034f7826044f2ae2f29a8d6ca2a07df
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 60bcbca88f2d75e062a45fc21103ece8631f9503
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508727"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821358"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Abrir um editor (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "52508727"
 ## <a name="before-you-begin"></a>Antes de começar  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dá suporte a quatro editores: o Editor de Consulta do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para editar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , os editores DMX e MDX para editar scripts que usam essas linguagens e o editor XML/A para editar scripts XML/A ou arquivos XML. Quaisquer dos editores também podem ser usados para editar arquivos de texto.  
   
-### <a name="limitations-and-restrictions"></a>Limitações e restrições  
+### <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Se você compartilhar arquivos com usuários em outros locais que usam páginas de código distintas, salve o arquivo com a página de código Unicode apropriada para evitar erros na leitura do arquivo. Além disso, ao salvar arquivos para UNIX ou Macintosh, verifique se salvou seus arquivos no formato de documento apropriado. No menu **Arquivo** , clique em **Salvar Como**, **Salvar com Codificação** na seta para baixo próxima ao botão **Salvar** e escolha **Unix** ou **Macintosh** em **Terminações de Linha**.  
   
 ### <a name="permissions"></a>Permissões  
  Operações que você executa em um editor de códigos estão sujeitas às permissões concedidas à conta de autenticação usada no logon. Por exemplo, se você abrir uma janela Editor de Consulta [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do Windows, não poderá executar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que referenciam objetos os quais sua conta de logon do Windows não tem permissões para acessar.  
   
-## <a name="how-to-open-editors"></a>Como abrir editores  
+## <a name="how-to-open-editors"></a>Como fazer: Abrir Editores  
  Esta seção explica como abrir os vários editores no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>Usando o menu Arquivo/novo  

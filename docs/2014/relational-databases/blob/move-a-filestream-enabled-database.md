@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], moving a FILESTREAM-enabled database
 ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1e0638477dd826f2023c3728bedb2a6f846ef305
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aaf6dffd3d8424f5582a43d327ce6f2b3e26af4b
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62920663"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66009963"
 ---
 # <a name="move-a-filestream-enabled-database"></a>Mover um banco de dados habilitado para FILESTREAM
   Este tópico mostra como mover um banco de dados habilitado para FILESTREAM.  

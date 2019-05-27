@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 830854a26d3f9b05465ee37aac6a9b7584750fe2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c60455bf38fc0cb8efb3ce44e4121adfe099a393
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063437"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108788"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Instalar a versão autônoma do Construtor de Relatórios (Construtor de Relatórios)
   Você pode instalar o construtor de relatórios no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pacote de recursos a [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=168472) ou em um local como pasta pública para o qual o ReportBuilder3_x86.msi, o pacote do instalador do Windows para o construtor de relatórios, tem foi baixado.  

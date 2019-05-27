@@ -14,15 +14,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], SQLXMLOLEDB Provider
 - namespaces [SQLXML], XPath queries
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3408a729c21f9e420d90e5e38a41b09b766b6b81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f72c5841989eb12f89eda34fbfb310e125612d1d
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62856548"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013075"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Executando consultas XPath com namespaces (provedor SQLXMLOLEDB)
   As consultas XPath podem incluir namespaces. Se os elementos de esquema forem qualificados por namespace (ou seja, se incluírem um namespace de destino), as consultas XPath com relação ao esquema precisarão especificar esse namespace.  

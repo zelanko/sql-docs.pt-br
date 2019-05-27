@@ -11,14 +11,18 @@ ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3e24cb57b7bc9e0a5addbde4c0249448bb84e905
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: aa46bcdb1a5136864b2633ae3be732a4cbc45d9f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290652"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729007"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Serviço Change Data Capture para Oracle da Attunity
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O Serviço CDC para Oracle é um Serviço do Windows que examina os logs de transação do Oracle e capturam alterações a tabelas de interesse do Oracle em tabelas de alteração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . As tabelas de alteração do SQL onde as alterações capturadas do Oracle são armazenadas são do mesmo tipo das tabelas de alteração usadas no recurso Change Data Capture nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Isto faz o consumo destas alterações tão fácil quanto consumir alterações feitas a bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="installation"></a>Instalação  

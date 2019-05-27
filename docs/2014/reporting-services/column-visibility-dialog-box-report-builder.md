@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10127"
@@ -13,12 +12,12 @@ ms.assetid: 0c030cab-6087-45a5-99f0-c7bd693f20a1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8aa1315ca0f4a69e234d627a415ba088bd45742b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 58381a9e56ed6ace1f8ff18109d9746072f76774
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266081"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109804"
 ---
 # <a name="column-visibility-dialog-box-report-builder"></a>Caixa de diálogo Visibilidade da Coluna (Construtor de Relatórios)
   Use a caixa de diálogo **Visibilidade da Coluna** para mostrar ou ocultar a coluna selecionada quando o relatório for executado pela primeira vez ou para usar outro item de relatório para alternar a visibilidade da coluna.  

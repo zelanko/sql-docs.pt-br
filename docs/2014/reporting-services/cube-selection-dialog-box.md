@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rpt.rptdesigner.cubeselection.f1
@@ -14,12 +13,12 @@ ms.assetid: 03584db6-9bc0-4866-9f6d-18895322ea87
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb98b145eafb8d8955702938e314812501006cf5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fa45de225ac1de636bc9e9b14cec9d1ab4512316
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63265403"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109572"
 ---
 # <a name="cube-selection-dialog-box"></a>Caixa de diálogo Seleção de Cubo
   Use a caixa de diálogo **Seleção de Cubo** para selecionar um cubo diferente como uma fonte de dados para seu relatório. Selecionando um cubo diferente, sua consulta talvez não seja mais válida.  

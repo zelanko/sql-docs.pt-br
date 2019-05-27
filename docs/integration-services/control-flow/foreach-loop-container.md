@@ -31,14 +31,18 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 981d659d05517b1e1b54244cbea22d52ccf964f2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 79afc8387a98df72ca2e60d1f97703097fba90e5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271323"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727715"
 ---
 # <a name="foreach-loop-container"></a>Contêiner Loop Foreach
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O contêiner Loop Foreach define um fluxo de controle repetitivo em um pacote. A implementação de loop é semelhante à estrutura de loop **Foreach** em linguagens de programação. Em um pacote, o looping é habilitado por um enumerador Foreach.  O contêiner Loop Foreach repete o fluxo de controle para cada membro de um enumerador especificado.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece os seguintes tipos de enumerador:  

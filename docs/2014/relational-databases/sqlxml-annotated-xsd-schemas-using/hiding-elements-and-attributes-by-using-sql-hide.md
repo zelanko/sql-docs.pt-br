@@ -21,15 +21,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], hiding attributes and elements
 - attribute hiding [SQLXML]
 ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 541f5ccff727552730e4648552ad5126fdfd4858
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6ce8daf2badb855cbf855031d93e38fb689eab54
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63228470"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013832"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Ocultando elementos e atributos usando sql:hide
   Quando uma consulta XPath é executada em um esquema XSD, o documento XML resultante tem elementos e atributos especificados no esquema. É possível especificar que alguns elementos e atributos permaneçam ocultos no esquema usando a anotação `sql:hide`. Isso é útil quando os critérios de seleção da consulta exigem a presença de elementos ou atributos específicos no esquema, mas você não deseja que eles retornem no documento XML gerado.  

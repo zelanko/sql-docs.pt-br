@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e98be6ed17cebe6c06033b7230fbbdcdde18dd66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 36f489f25adc9746f844a6289ca8a2849ad83870
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63233526"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109993"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>Formas alternativas de obter uma conexão de dados (Construtor de Relatórios)
   Uma conexão de dados contém as informações para estabelecer conexões com uma fonte de dados externa, como um banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Geralmente, você obtém as informações sobre a conexão e o tipo de credenciais a ser usado do proprietário da fonte de dados.  

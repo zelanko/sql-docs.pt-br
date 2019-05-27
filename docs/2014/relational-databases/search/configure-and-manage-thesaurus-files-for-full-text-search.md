@@ -11,15 +11,15 @@ helpviewer_keywords:
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5089aaa229f77c6f0012f4ceae0d5d1b17a9c11a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792258"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011483"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar e gerenciar arquivos de dicionário de sinônimos para Pesquisa de texto completo
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as consultas de texto completo podem procurar sinônimos de termos especificados pelo usuário através do uso de um dicionário de sinônimos. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *dicionário de sinônimos* define um conjunto de sinônimos para um idioma específico. Os administradores de sistema podem definir duas formas de sinônimos: conjuntos de expansão e conjuntos de substituição. Ao desenvolver um dicionário de sinônimos personalizado para seus dados de texto completo, você pode efetivamente ampliar o escopo de consultas de texto completo baseadas nesses dados. A correspondência com o dicionário de sinônimos ocorre para todas as consultas [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) e [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) , e para quaisquer consultas [CONTAINS](/sql/t-sql/queries/contains-transact-sql) e [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) que especifiquem a cláusula FORMSOF THESAURUS.  
@@ -77,7 +77,7 @@ ms.locfileid: "52792258"
 ##  <a name="location"></a> Local dos arquivos de dicionário de sinônimos  
  A localização padrão dos arquivos de dicionário de sinônimos é esta:  
   
- *< SQL_Server_data_files_path >* \MSSQL12. MSSQLSERVER\MSSQL\FTDATA\  
+ *<SQL_Server_data_files_path>* \MSSQL12.MSSQLSERVER\MSSQL\FTDATA\  
   
  Esse local padrão contém os seguintes arquivos:  
   

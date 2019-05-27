@@ -12,15 +12,15 @@ helpviewer_keywords:
 - security [SQLXML], XML Bulk Load
 - XML Bulk Load [SQLXML], security
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3c304302f17c360dd9bb3a0ac51c7ea50bce40d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 559c54c263f685350badc5d7e0232d0d0354443a
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63268654"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010562"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Considerações sobre segurança de carregamento em massa (SQLXML 4.0)
   Estas são as diretrizes de segurança para o uso do carregamento em massa XML:  

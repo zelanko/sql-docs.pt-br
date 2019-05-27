@@ -16,15 +16,15 @@ helpviewer_keywords:
 - annotated XSD schemas, CDATA sections
 - sql:use-cdata
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca93ec5a3ef85cfef1b20f1266c00700cd027352
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cddde2ed1e40b2ea21cf4ebff75bea3beed8f2ce
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823280"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014007"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>Criando seções CDATA usando sql:use-cdata (SQLXML 4.0)
   Em XML, as seções CDATA são usadas para sair de blocos de texto que contenham caracteres que seriam reconhecidos como caracteres de marcação.  

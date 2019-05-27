@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.addnestedtable.f1
@@ -15,12 +14,12 @@ ms.assetid: f68b89a7-17df-45f8-ba7f-b458cd9b1ec3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7eaccd916ee401ad1b6b82a155e50688b2ff57a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8edfea95968bee0dc1103f8069ecfe9e0d08e3ed
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747708"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069768"
 ---
 # <a name="select-a-nested-table-key-column-dialog-box-mining-structure-view"></a>Selecione uma caixa de diálogo de coluna de chave de tabela aninhada (exibição de estrutura de mineração)
   Use a caixa de diálogo **Selecionar uma Coluna de Chave de Tabela Aninhada** para designar uma coluna que funcionará como chave da nova tabela aninhada. Quando você sair da caixa de diálogo, uma nova tabela será adicionada para a estrutura de mineração que contém a coluna de chave. Você pode adicionar colunas à tabela aninhada clicando com o botão direito na estrutura e selecionando **Adicionar uma Coluna**. A caixa de diálogo contém diferentes opções dependendo se você esta trabalhando com um modelo de mineração OLAP ou um modelo de mineração relacional.  

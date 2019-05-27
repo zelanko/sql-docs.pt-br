@@ -14,15 +14,15 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], restoring
 - restore operations [full-text search]
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 932263934fe7ce93a50caec468d7f1444ccae181
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 28ab36c2f9f500df89b1d936ec60871c0904bc1a
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372488"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012817"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Fazer backup e restaurar índices e catálogos de texto completo
   Este tópico explica como fazer backup e restauração de índices de texto completo criados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o catálogo de texto completo é um conceito lógico e não reside em um grupo de arquivos. Por isso, para fazer backup de um catálogo de texto completo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é necessário identificar cada grupo de arquivos que contém um índice de texto completo do catálogo e fazer backup de cada um deles. Depois, faça backup desses grupos de arquivos, um por um.  

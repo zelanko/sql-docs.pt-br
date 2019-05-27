@@ -1,9 +1,8 @@
 ---
 title: Executando consultas XPath (Classes gerenciadas SQLXML) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
@@ -17,16 +16,14 @@ ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fee2ef2f2af40d3d053fb632dd0e4625fc35aefe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1175b26436e3af9794057ec14eba35675209cf84
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63127658"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010872"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>Executando consultas XPath (classes gerenciadas por SQLXML)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Este exemplo ilustra como consultas de XPath são executadas em relação a um esquema de mapeamento.  
   
  Considere este esquema:  

@@ -1,8 +1,7 @@
 ---
 title: Onde encontrar o suplemento Reporting Services para produtos do SharePoint | Microsoft Docs
 ms.prod: sql-server-2014
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - rsSharePoint
@@ -12,12 +11,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/16/2015
-ms.openlocfilehash: d566f711c177cb62b79099c71c716d66eb214203
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8f5b935636c4d00f39324e4a343419e3da68284b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225207"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108575"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Onde encontrar o suplemento Reporting Services para produtos do SharePoint
 

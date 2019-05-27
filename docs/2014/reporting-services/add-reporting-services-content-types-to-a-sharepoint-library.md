@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 74fdfc58d2988ec9d07343e2ebe1651479514e6f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6ef4049f10363eca45615db234e3ed63687caf8a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63231783"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110005"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>Adicionar tipos de conteúdo do servidor de relatório a uma biblioteca (Reporting Services no modo integrado do SharePoint)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece tipos de conteúdo predefinidos do SharePoint usados para gerenciar arquivos de fonte de dados compartilhada (.rsds), modelos de relatórios (.smdl) e arquivos de definição de relatório (.rdl) do Construtor de Relatórios. A adição de um tipo de conteúdo do **Construtor de Relatórios**, do **Modelo de Relatório**ou da **Fonte de Dados de Relatório** a uma biblioteca ativa o comando **Novo** para que você possa criar novos documentos desse tipo.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4195e8f17f822bc84bf72bb41420a477ab683017
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f8090c75108f7a384019030082699917fca915b6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795461"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067685"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>Analisar no Excel (SSAS tabular)
   O recurso Analisar no Excel, no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], fornece a autores de modelos de tabela um modo de analisar projetos de modelo rapidamente durante o desenvolvimento. O recurso Analisar no Excel abre o Microsoft Excel, cria uma conexão da fonte de dados para o banco de dados de workspace modelo e automaticamente adiciona uma Tabela Dinâmica à planilha. Os objetos de banco de dados de workspace (tabelas, colunas e medidas) são incluídos como campos na Lista de campos da Tabela Dinâmica. Os objetos e os dados podem então ser exibidos dentro do contexto do usuário efetivo ou função e perspectiva.  

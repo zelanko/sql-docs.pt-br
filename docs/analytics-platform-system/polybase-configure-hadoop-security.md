@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c916fef2b70333c2d5bc89fec5c86d61482cdba7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cef02b909d533d8cf0e5bc870c524c204885a6eb
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62678604"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175324"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Configuração e segurança do PolyBase para Hadoop
 
@@ -42,113 +42,7 @@ Uma maneira comum de proteger a comunicação em um cluster Hadoop é alterando 
    </property> 
 ```
 
-## <a name="example-xml-files-for-cdh-5x-cluster"></a>Arquivos XML de exemplo para cluster do CDH 5.X
-
-Configuração de yarn-site.xml com yarn.application.classpath e mapreduce.application.classpath.
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-<!-- Put site-specific property overrides in this file. -->
- <configuration>
-   <property>
-      <name>yarn.resourcemanager.connect.max-wait.ms</name>
-      <value>40000</value>
-   </property>
-   <property>
-      <name>yarn.resourcemanager.connect.retry-interval.ms</name>
-      <value>30000</value>
-   </property>
-<!-- Applications' Configuration-->
-   <property>
-     <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
-      <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
-      <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
-      <name>yarn.application.classpath</name>
-      <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/,$HADOOP_MAPRED_HOME/*,$HADOOP_MAPRED_HOME/lib/*,$MR2_CLASSPATH*</value>
-   </property>
-
-<!-- kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
-   <property>
-      <name>yarn.resourcemanager.principal</name>
-      <value></value>
-   </property>
--->
-</configuration>
-```
-
-Se você optar por dividir as duas configurações em mapred-site. XML e o yarn-site. XML, os arquivos seria o seguinte:
-
-**yarn-site.xml**
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-<!-- Put site-specific property overrides in this file. -->
- <configuration>
-   <property>
-      <name>yarn.resourcemanager.connect.max-wait.ms</name>
-      <value>40000</value>
-   </property>
-   <property>
-      <name>yarn.resourcemanager.connect.retry-interval.ms</name>
-      <value>30000</value>
-   </property>
-<!-- Applications' Configuration-->
-   <property>
-     <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
-      <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
-      <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
-      <name>yarn.application.classpath</name>
-      <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/*</value>
-   </property>
-
-<!-- kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
-   <property>
-      <name>yarn.resourcemanager.principal</name>
-      <value></value>
-   </property>
--->
-</configuration>
-```
-
-**mapred-site.xml**
-
-Observe que adicionamos a propriedade mapreduce.application.classpath. No CDH 5.x, você encontrará os valores de configuração com a mesma convenção de nomenclatura no Ambari.
-
-```xml
-<?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-<!-- Put site-specific property overrides in this file. -->
-<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
-   <property>
-     <name>mapred.min.split.size</name>
-       <value>1073741824</value>
-   </property>
-   <property>
-     <name>mapreduce.app-submission.cross-platform</name>
-     <value>true</value>
-   </property>
-<property>
-     <name>mapreduce.application.classpath</name>
-     <value>$HADOOP_MAPRED_HOME/*,$HADOOP_MAPRED_HOME/lib/*,$MR2_CLASSPATH</value>
-   </property>
-
-
-<!--kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
-   <property>
-     <name>mapreduce.jobhistory.principal</name>
-     <value></value>
-   </property>
-   <property>
-     <name>mapreduce.jobhistory.address</name>
-     <value></value>
-   </property>
--->
-</configuration>
-```
-
-## <a name="kerberos-configuration"></a>Configuração do Kerberos  
+## <a id="kerberossettings"></a> Configuração do Kerberos  
 
 Observe que, quando o PolyBase é autenticado em um cluster protegido pelo Kerberos, ele espera que a configuração de hadoop.rpc.protection seja 'Autenticar' por padrão. Isso faz com que a comunicação de dados entre os nós do Hadoop não seja criptografada. Para usar as configurações de 'Privacidade' ou 'Integridade' para o hadoop.rpc.protection, atualize o arquivo core-site.xml no servidor do PolyBase. Para obter mais informações, confira a seção anterior [Conectando-se ao cluster Hadoop com a configuração Hadoop.rpc.protection](#rpcprotection).
 

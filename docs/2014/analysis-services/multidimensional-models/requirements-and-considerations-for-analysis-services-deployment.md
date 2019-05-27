@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [Analysis Services]
@@ -22,12 +21,12 @@ ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6759c38aa519979bdf05ba8848aaccbb89f37a94
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62736724"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073169"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Requisitos e considerações sobre a implantação do Analysis Services
   O desempenho e disponibilidade de uma solução dependem de muitos fatores, inclusive os recursos do hardware subjacente, a topologia de sua implantação de servidor, as características de sua solução (por exemplo, tendo partições distribuídas por vários servidores ou usando armazenamento de ROLAP que requer acesso direto ao mecanismo relacional), acordos de nível de serviço e a complexidade de seu modelo de dados.  

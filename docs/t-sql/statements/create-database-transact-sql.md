@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d63faad8a29853354e6187d963dc23ccd78b0252
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: dcf9d83589b94846778e65392dd2483593f5d3ad
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222140"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65771476"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -554,7 +554,7 @@ WHERE name = N'mytest';
 GO
 ```
 
-### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>b. Criando um banco de dados que especifica os arquivos de dados e de log de transações
+### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. Criando um banco de dados que especifica os arquivos de dados e de log de transações
 O exemplo a seguir cria o banco de dados `Sales`. Como a palavra-chave PRIMARY não é usada, o primeiro arquivo (`Sales_dat`) torna-se o arquivo primário. Como nem MB nem KB é especificado no parâmetro SIZE do arquivo `Sales_dat` , ele usa MB e é alocado em megabytes. O backup do banco de dados `Sales_log` é alocado em megabytes porque o sufixo `MB` é explicitamente declarado no parâmetro `SIZE` .
 
 ```sql
@@ -1042,7 +1042,7 @@ Se nenhum `MAXSIZE`valor for definido ao usar o modelo vCore, o padrão será de
 
 As regras a seguir se aplicam aos argumentos MAXSIZE e EDITION:
 
-- Se EDITION for especificado, mas MAXSIZE não for especificado, o valor padrão da edição será usado. Por exemplo, se EDITION for definido como Standard e MAXSIZE não for especificado, MAXSIZE será automaticamente definido como 500 MB.
+- Se EDITION for especificado, mas MAXSIZE não for especificado, o valor padrão da edição será usado. Por exemplo, se EDITION for definido como Standard e MAXSIZE não for especificado, MAXSIZE será automaticamente definido como 250 MB.
 - Se nem MAXSIZE nem EDITION forem especificados, EDITION será definido como Standard (S0) e MAXZISE será definido como 250 GB.
 
 SERVICE_OBJECTIVE     
@@ -1354,7 +1354,7 @@ CREATE DATABASE TestDW
 (EDITION = 'datawarehouse', SERVICE_OBJECTIVE='DW100');
 ```
 
-### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>b. Criar um banco de dados de data warehouse com todas as opções
+### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>B. Criar um banco de dados de data warehouse com todas as opções
 Um exemplo da criação de um data warehouse de 10 terabytes que usa todas as opções.
 
 ```sql
@@ -1487,7 +1487,7 @@ CREATE DATABASE mytest
     LOG_SIZE = 100 GB);
 ```
 
-### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>b. Criando um banco de dados com tamanhos de gigabyte parcial
+### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>B. Criando um banco de dados com tamanhos de gigabyte parcial
 O exemplo a seguir cria o banco de dados `mytest`, com AUTOGROW desativado, uma alocação de armazenamento de 1,5 GB por nó de Computação para tabelas replicadas, 5,25 GB por dispositivo para tabelas distribuídas e 10 GB por dispositivo para o log de transações.
 
 ```sql

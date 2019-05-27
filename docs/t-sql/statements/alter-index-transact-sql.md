@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a103a0a8681d5128b021783a5e5509c46c9fad32
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: d29b524a3b4615bb6fa02ba6cdf889379b46a22f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65502874"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580130"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -173,8 +173,10 @@ ALTER INDEX { index_name | ALL }
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }  
 }  
   
-```    
-## <a name="arguments"></a>Argumentos  
+```
+
+## <a name="arguments"></a>Argumentos
+
  *index_name*  
  É o nome do índice. Os nomes de índice devem ser exclusivos em uma tabela ou exibição, mas não precisam ser exclusivos no banco de dados. Os nomes de índice precisam seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
@@ -653,23 +655,28 @@ No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posteriores, ainda é p
   
 Para recompilar um índice columnstore clusterizado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-1.  Obtenha um bloqueio exclusivo na tabela ou na partição durante a recompilação. Os dados ficam "offline" e não disponíveis enquanto você recompila.  
+1. Obtenha um bloqueio exclusivo na tabela ou na partição durante a recompilação. Os dados ficam "offline" e não disponíveis enquanto você recompila.  
   
-2.  Desfragmenta o columnstore excluindo fisicamente as linhas que foram excluídas logicamente da tabela; os bytes excluídos são recuperados na mídia física.  
+1. Desfragmenta o columnstore excluindo fisicamente as linhas que foram excluídas logicamente da tabela; os bytes excluídos são recuperados na mídia física.  
   
-3.  Lê todos os dados do índice columnstore original, incluindo o deltastore. Combina os dados em novos rowgroups e compacta os rowgroups em columnstore.  
+1. Lê todos os dados do índice columnstore original, incluindo o deltastore. Combina os dados em novos rowgroups e compacta os rowgroups em columnstore.  
   
-4.  Requer espaço no meio físico para armazenar duas cópias do índice columnstore durante a recriação. Quando a recompilação é concluída, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exclui o índice columnstore clusterizado original.  
+1. Requer espaço no meio físico para armazenar duas cópias do índice columnstore durante a recriação. Quando a recompilação é concluída, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exclui o índice columnstore clusterizado original.
+
+1. Para uma tabela do SQL Data Warehouse do Azure com um índice columnstore clusterizado ordenado, o ALTER INDEX REBUILD reclassificará os dados.  
   
-## <a name="reorganizing-indexes"></a> Reorganizando índices  
+## <a name="reorganizing-indexes"></a> Reorganizando índices
 A reorganização de um índice utiliza recursos mínimos do sistema. Ela desfragmenta o nível folha de índices clusterizados e não clusterizados em tabelas e exibições, reordenando fisicamente as páginas de nível folha para que correspondam à ordem lógica, da esquerda para a direita, dos nós folha. A reorganização também compacta as páginas de índice. A compactação baseia-se no valor do fator de preenchimento existente. Para exibir a configuração do fator de preenchimento, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
 Quando ALL for especificado, os índices relacionais, clusterizados e não clusterizados e os índices XML da tabela serão reorganizados. Algumas restrições se aplicam quando ALL é especificado; veja a definição de ALL na seção Argumentos deste artigo.  
   
 Para obter mais informações, veja [Reorganizar e recriar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
- 
+
 > [!IMPORTANT]
 > Quando um índice é reorganizado em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as estatísticas não são atualizadas.
+
+>[!IMPORTANT]
+> Para uma tabela do SQL Data Warehouse do Azure com um índice columnstore clusterizado ordenado, o `ALTER INDEX REORGANIZE` não reclassificará os dados. Para reclassificar os dados, use `ALTER INDEX REBUILD`.
   
 ## <a name="disabling-indexes"></a> Desabilitando índices  
 A desabilitação de um índice impede o acesso do usuário ao índice, e, para índices clusterizados, aos dados da tabela subjacente. A definição de índice permanece no catálogo do sistema. A desabilitação de um índice não clusterizado ou clusterizado em uma exibição exclui fisicamente os dados do índice. A desabilitação de um índice clusterizado impede o acesso aos dados, mas eles permanecem inalterados na árvore B até que o índice seja descartado ou recriado. Para exibir o status de um índice habilitado ou desabilitado, consulte a coluna **is_disabled** na exibição do catálogo **sys.indexes**.  
@@ -1151,7 +1158,7 @@ Para obter exemplos de compactação de dados adicionais, consulte [Compactaçã
    ```sql
    ALTER INDEX test_idx on test_table RESUME WITH (MAXDOP=4) ;
    ```
-6. Retome uma operação de recompilação de índice online para uma recompilação de índice online executada como retomável. Defina MAXDOP como 2, defina o tempo de execução para o índice que está sendo executando como retomável para 240 minutos e, no caso de um índice que está sendo bloqueado no bloqueio, aguarde 10 minutos e depois encerre todos os bloqueadores. 
+6. Retome uma operação de recompilação de índice online para uma recompilação de índice online executada como retomável. Defina MAXDOP como 2, defina o tempo de execução do índice que está sendo executando como retomável como 240 minutos e, no caso de um índice que está sendo bloqueado no bloqueio, aguarde 10 minutos e depois encerre todos os bloqueadores. 
 
    ```sql
       ALTER INDEX test_idx on test_table  

@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: SSMS (SQL Server Management Studio) | Microsoft Docs'
-ms.custom: ''
-ms.date: 08/30/2017
+ms.custom: sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
@@ -23,17 +23,17 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d262e2d2a4c79a44f0b5a5245991f32b3676487
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: bf2776df77af8f4ba5fec9595d6ba9cddf927f7a
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56800970"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620516"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Tutoriais do SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-O tutorial SQL Server Management Studio (SSMS) apresenta o ambiente integrado para gerenciar a infraestrutura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] apresenta uma interface gráfica para configurar, monitorar e administrar as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele também permite que você implante, monitore e atualize os componentes de camada de dados usados pelos aplicativos, como bancos de dados. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] também fornece editores da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX e XML para editar e depurar scripts.  
+Os tutoriais do SQL Server Management Studio (SSMS) apresentam o ambiente integrado para gerenciar a infraestrutura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] apresenta uma interface gráfica para configurar, monitorar e administrar o Banco de Dados SQL do Azure, as instâncias gerenciadas do Banco de Dados SQL do Azure, o SQL Data Warehouse do Azure e as instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele também permite que você implante, monitore e atualize os componentes de camada de dados usados pelos aplicativos, como bancos de dados. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] também fornece editores da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX e XML para editar e depurar scripts.  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
 
@@ -41,9 +41,9 @@ Estes tutoriais ajudarão a compreender a apresentação das informações no SS
   
 O melhor modo de se familiarizar com o SSMS é praticando. Esses tutoriais ajudarão você a se familiarizar com os diversos recursos disponíveis no SSMS.  Este tutorial ensinará como administrar os componentes do SSMS e encontrar os recursos que você usa regularmente.  
 
-Os tutoriais abordarão o seguinte: 
+Os tutoriais abordarão o seguinte:
 
-  
+
 - [Tutorial: Conectar-se ao SQL Server e consultá-lo usando SSMS](connect-query-sql-server.md)
 
     Neste tutorial, você aprenderá como se conectar à Instância do SQL Server. Você também aprenderá alguns comandos básicos do T-SQL (Transact-SQL) para criar e consultar um novo banco de dados. 
@@ -63,7 +63,7 @@ Os tutoriais abordarão o seguinte:
 
 - [Tutorial: Mais dicas e truques para usar o SSMS](ssms-tricks.md)
 
-    Neste tutorial, você aprenderá mais dicas e truques para usar o SSMS. Este tutorial inclui o seguinte:
+    Neste tutorial, você aprende mais dicas e truques para usar o SSMS. Este tutorial inclui o seguinte:
     - Comentar e remover marca de comentário do texto
     - Recuando texto
     - Filtrando objetos no Pesquisador de Objetos

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], managing
@@ -13,12 +12,12 @@ ms.assetid: 7f46cbdb-5102-4941-bca2-5e0ff9012c6b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f93148eed4b059a3c7f9a591b08b885c948ffd4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d6f18ff05cf6283e4358e8f8afd76a5858b0b41a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63265437"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109595"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crie e gerencie assinaturas de servidores de relatório no modo Nativo
   Esta seção contém tópicos sobre processamento, omissão e controle de assinaturas. O gerenciamento de assinaturas varia para assinaturas padrão e assinaturas controladas por dados. As assinaturas padrão normalmente são de propriedade e gerenciadas pelo usuário. Por outro lado, as assinaturas controladas por dados normalmente são criadas e mantidas por um administrador de servidor de relatório.  

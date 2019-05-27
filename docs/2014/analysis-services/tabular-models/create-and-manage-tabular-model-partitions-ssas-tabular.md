@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a2e06d49f22180ae99bf5f41bb4007fda1e03f84
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 72c5b69aee10d8ac1342b3f037d76ab6ef5fc36c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795368"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067398"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>Criar e Gerenciar partições de modelos tabulares (SSAS tabular)
   As partições dividem uma tabela em partes lógicas. Cada partição pode ser processada (Atualizada) independentemente de outras partições. As partições definidas para um modelo durante a criação de modelo são duplicadas em um modelo implantado. Uma vez implantado, você pode gerenciar essas partições usando a caixa de diálogo **Partições** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou usando um script. As tarefas fornecidas neste tópico descrevem como criar e gerenciar partições para um modelo implantado.  

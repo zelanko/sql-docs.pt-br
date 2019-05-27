@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3ecdc453b6498463e431cbad555af738fde2da1d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725430"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074394"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>LANGUAGE e FORMAT_STRING em FORMATED_VALUE
   A propriedade FORMATTED_VALUE é criada com base nas interações das propriedades VALUE, FORMAT_STRING e LANGUAGE da célula. Este tópico explica como essas propriedades interagem para criar a propriedade FORMATTED_VALUE.  
@@ -86,7 +85,7 @@ ms.locfileid: "62725430"
 |E|5,04E+03|FORMAT_STRING é definido como `Scientific` e LANGUAGE é definido explicitamente como `1034,` , por isso a `,` (vírgula) é o separador decimal.|  
 |F|50,40%|FORMAT_STRING é definido como `Percent` e LANGUAGE é definido como `1033`, herdados do valor de localidade do sistema, por isso o `.` (ponto) é o separador decimal.<br /><br /> Observe que VALUE foi alterado de 5040 para 0.5040|  
 |G|50,40%|FORMAT_STRING é definido como `Percent`, herdado de F, e LANGUAGE é definido explicitamente como `1034` , por isso a `,` (vírgula) é o separador decimal.<br /><br /> Observe que VALUE foi herdado do valor F.|  
-|H|Não|FORMAT_STRING é definido como `YES/NO`, VALUE é definido como 0 e LANGUAGE é definido explicitamente como `1034`; como não há nenhuma diferença entre English NO e Spanish NO, o usuário não vê diferença em FORMATTED_VALUE.|  
+|H|Não |FORMAT_STRING é definido como `YES/NO`, VALUE é definido como 0 e LANGUAGE é definido explicitamente como `1034`; como não há nenhuma diferença entre English NO e Spanish NO, o usuário não vê diferença em FORMATTED_VALUE.|  
 |I|SI|FORMAT_STRING é definido como `YES/NO`, VALUE é definido como 59 e LANGUAGE é definido explicitamente como `1034`; conforme definido para a formatação YES/NO, qualquer valor diferente de zero (0) é um YES e como o idioma é definido como Spanish, FORMATTED_VALUE é SI.|  
 |J|Desativado|FORMAT_STRING é definido como `ON/OFF`, VALUE é definido como 0 e LANGUAGE é definido explicitamente como `1034`; conforme definido para a formatação ON/OFF, qualquer valor equivalente a zero (0) é um OFF e, como o idioma está definido para Spanish, FORMATTED_VALUE é Desativado.|  
 |K|Ativado|FORMAT_STRING é definido como `ON/OFF`, VALUE é definido como -312 e LANGUAGE é definido explicitamente como `1034`; conforme definido para a formatação ON/OFF, qualquer valor diferente de zero (0) é um ON e como o idioma é definido como Spanish, FORMATTED_VALUE é Ativado.|  

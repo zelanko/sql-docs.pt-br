@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10040"
@@ -16,12 +15,12 @@ ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 074932c980ab047d734c21dfe8ba03bdb4b12393
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 905aa453c8a6cac78e8423d071672d6431e3c3c3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63181466"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109194"
 ---
 # <a name="expression-dialog-box"></a>Caixa de diálogo Expressão
   Use a caixa de diálogo **Expressão** para escrever expressões do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] para propriedades de itens de relatório. É possível usar expressões para definir muitas propriedades, incluindo cor, fonte e bordas. Em tempo de execução, o processador de relatório avalia as expressões e substitui o resultado do valor da propriedade.  

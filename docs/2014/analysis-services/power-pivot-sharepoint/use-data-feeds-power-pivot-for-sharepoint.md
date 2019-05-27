@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 354e1dce8bfb11f7eefc0f90df0868ebc01757e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748988"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070912"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Usar feeds de dados (PowerPivot para SharePoint)
   Feeds de dados são um ou mais fluxos de dados gerados de uma fonte de dados online e transmitidos para um documento ou aplicativo de destino. Se você está usando o PowerPivot para Excel, os feeds de dados podem ajudá-lo a obter dados corporativos ou de negócios existentes de fontes de dados arbitrárias dentro da janela do PowerPivot na pasta de trabalho do Excel 2010. Depois de importar um feed de dados para uma pasta de trabalho, você poderá referenciá-lo posteriormente em qualquer operação de atualização de dados agendada em um servidor do SharePoint.  

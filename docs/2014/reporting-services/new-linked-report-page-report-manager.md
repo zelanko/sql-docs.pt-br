@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: fefb46e8-6901-4d50-a3f8-7c49ad72e7b1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9f55c1fb1b90f676f3e1867c6aefdd13889c2cce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b6aab8fc0c8e083181779c13654b0d7d42531e50
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188383"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108165"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Página Novo Relatório Vinculado (Gerenciador de Relatórios)
   Use a página Novo Relatório Vinculado para criar um relatório vinculado. Um relatório vinculado é um relatório com configurações e propriedades próprias, mas vincula à definição de relatório de outro relatório. Relatórios vinculados são úteis quando você tem um relatório padrão que deseja variar para grupos ou usuários específicos; por exemplo, um relatório regional que retorna dados diferentes com base em um código regional especificado como parâmetro. Geralmente, um relatório vinculado é criado a partir um relatório com parâmetros quando você deseja variar e salvar valores de parâmetro diferentes com cada instância de relatório. Porém, você pode criar um relatório vinculado de qualquer relatório ao qual tenha acesso.  

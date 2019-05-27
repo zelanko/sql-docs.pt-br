@@ -15,15 +15,15 @@ helpviewer_keywords:
 - hidden characters
 - OPENROWSET function, BCP guidelines
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0e6d619a4922b58a99bc8cb45c952123bbae44d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 95deda34b673161bf63c29a912564f39425583a9
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62712733"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011853"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Preparar para importar dados em massa (SQL Server)
   Você pode usar o comando **bcp** , a instrução BULK INSERT ou a função OPENROWSET(BULK) para a importação de dados em massa somente de um arquivo de dados.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 18adcf15f92ded91a4bacc5342162b82b4aec375
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 661ae0cafe5b484839bbee2531f82f3b62f72c75
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188410"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108126"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Novas Atribuições de Função do Sistema: Editar página de atribuições de função do sistema (Gerenciador de relatórios)
   Use a página Atribuição de Nova Função do Sistema ou Editar Atribuições de Função do Sistema para definir a segurança do servidor de relatório. Toda a segurança é definida por atribuições de função que mapeiam usuários específicos ou grupos até as tarefas que eles podem executar. A lista de tarefas é representada como uma definição de função que você seleciona ao fazer a atribuição da função.  

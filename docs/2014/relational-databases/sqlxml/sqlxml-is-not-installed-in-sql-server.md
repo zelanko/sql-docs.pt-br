@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: 3dbb4f65-41de-48b8-ad62-47c9d7932de3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7561d2d22439112ea084f1f8a62c32aeb5591cfc
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 8fe1d4b937e5972eb90e567ded91f7a23af577d0
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240754"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012156"
 ---
 # <a name="sqlxml-is-not-installed-in-sql-server"></a>O SQLXML não é instalado no SQL Server
   Antes do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], o SQLXML 4.0 era lançado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fazia parte da instalação padrão de todas as versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], com exceção da [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], a última versão do SQLXML (SQLXML 4.0 SP1) não está mais incluída no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para instalar o SQLXML 4.0 SP1 quando ele estiver disponível, baixe-o do [local de instalação do SQLXML SP1](https://www.microsoft.com/download/details.aspx?id=16978).  

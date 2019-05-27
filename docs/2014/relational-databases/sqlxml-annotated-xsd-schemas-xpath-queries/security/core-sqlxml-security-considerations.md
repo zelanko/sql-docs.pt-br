@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - security [SQLXML], about security
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aad98cdb0dea6c9b136ae197171b923d417a2762
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cc25af8e18e826ce6b8323d714f090ac3d571a97
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812248"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010551"
 ---
 # <a name="core-sqlxml-security-considerations"></a>Principais considerações de segurança do SQLXML
   A seguir, encontram-se diretrizes de segurança para o uso do SQLXML para acessar dados.  

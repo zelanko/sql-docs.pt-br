@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cfb635287a0baa2d3a9e8f59d9590c278cbf28b2
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239370"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010945"
 ---
 # <a name="integrated-terminal"></a>Terminal integrado
 
@@ -94,17 +94,17 @@ O **exibição: Ativar/desativar o Terminal integrado** comando é associado ao 
 
 Abaixo estão os atalhos de teclado para navegar rapidamente no terminal integrado:
 
-Chave|Comando
----|---
-**CTRL +'**| Mostrar o terminal integrado
-**Ctrl + Shift +'**| Criar um novo terminal
-**CTRL + seta para cima**|Role para cima
-**Ctrl+Down**|Role para baixo
-**Ctrl+PageUp**|Rola página para cima
-**Ctrl+PageDown**|Rolar página para baixo
-**CTRL + Home**|Role para cima
-**Ctrl+End**|Role para baixo
-**Ctrl+K**|Limpar o terminal
+|Chave|Comando|  
+|---|---|  
+|**Ctrl+\`**|Mostrar o terminal integrado|  
+|**Ctrl+Shift+\`**|Criar um novo terminal|  
+|**CTRL + seta para cima**|Role para cima|  
+|**Ctrl+Down**|Role para baixo|  
+|**Ctrl+PageUp**|Rola página para cima|  
+|**Ctrl+PageDown**|Rolar página para baixo|  
+|**CTRL + Home**|Role para cima|  
+|**Ctrl+End**|Role para baixo|  
+|**Ctrl+K**|Limpar o terminal|  
 
 Outros comandos de terminal estão disponíveis e podem ser associados a seus atalhos de teclado preferencial.
 

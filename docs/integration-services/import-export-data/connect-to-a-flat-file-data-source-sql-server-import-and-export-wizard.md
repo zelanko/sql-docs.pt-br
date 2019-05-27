@@ -10,14 +10,18 @@ ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a071c773077832c15d41f73764b56c3bac9e5cf0
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: e1c2789d8d10928bcbe576fc57f630675fdbd405
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222130"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723903"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados de arquivo simples (Assistente de Importação e Exportação do SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Este tópico mostra como se conectar a uma fonte de dados de **arquivo simples** (arquivo de texto) por meio da página **Escolher uma Fonte de Dados** ou **Escolher um Destino** do Assistente de Importação e Exportação do SQL Server. Para arquivos simples, essas duas páginas do assistente apresentam conjuntos diferentes de opções e, portanto, este tópico descreve a origem de arquivo simples e o destino de arquivo simples separadamente.
 
 ## <a name="an-alternative-for-simple-text-import"></a>Uma alternativa para a importação de texto simples
@@ -211,7 +215,7 @@ Na captura de tela, observe que a coluna **id**, que contém números, inicialme
 |**DataScale**|Especifica a escala de dados numéricos. A escala se refere ao número de casas decimais.|
 |**DataType**|Seleciona na lista de tipos de dados disponíveis.<br/>Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|
 |**OutputColumnWidth**|Especifique um valor a ser armazenado como contagem de bytes; para arquivos Unicode, esse valor corresponde a uma contagem de caracteres. Na tarefa Fluxo de Dados, esse valor é usado para definir a largura de coluna de saída para a fonte de Arquivo Simples. No modelo de objeto, o nome desta propriedade é MaximumWidth.|  
-|**TextQualified**|Indique se os dados de texto são delimitados por caracteres qualificadores de texto, como aspas.<br /><br /> True: Os dados de texto no arquivo simples são qualificados. False: Os dados de texto no arquivo simples NÃO são qualificados.|  
+|**TextQualified**|Indique se os dados de texto são delimitados por caracteres qualificadores de texto, como aspas.<br /><br /> True: os dados de texto no arquivo simples são qualificados. False: Os dados de texto no arquivo simples NÃO são qualificados.|  
   
 **Nova**  
  Adicione uma nova coluna, clicando em **Nova**. Por padrão, o botão **Nova** adiciona uma nova coluna ao final da lista. O botão também tem as opções a seguir, disponíveis na lista suspensa.  

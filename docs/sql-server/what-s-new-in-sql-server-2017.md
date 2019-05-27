@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d2881dfbb1e8b764c28e0ee9e5cd35ab6ba2087
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 42358e9e43e12a13c5b9e03b58df349b8f7a4231
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306044"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729446"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novidades no SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 O SQL Server 2017 é uma etapa importante para transformar o SQL Server em uma plataforma que oferece opções de linguagens de desenvolvimento, tipos de dados, locais ou nuvens e sistemas operacionais, utilizando a capacidade do SQL Server no Linux, em contêineres do Docker baseados em Linux e no Windows. Este tópico resume o que há de novo para áreas de recurso específico e inclui links para obter detalhes adicionais. Para obter mais informações relacionadas ao SQL Server no Linux, consulte [Documentação do SQL Server no Linux](https://docs.microsoft.com/sql/linux/)
 
-[![Baixe do Centro de Avaliação](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Experimente:** [Baixe o SQL Server 2017 – versão de outubro de 2017:](https://go.microsoft.com/fwlink/?LinkID=829477).
+[![Baixe do Centro de Avaliação](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Experimente:** [Baixe o SQL Server 2017 – versão de outubro de 2017](https://go.microsoft.com/fwlink/?LinkID=829477).
 
 > [!NOTE]
 > Além das alterações abaixo, atualizações cumulativas são liberadas em intervalos regulares após a versão GA. Essas atualizações cumulativas fornecem várias melhorias e correções. Para obter informações sobre a última versão da atualização cumulativa, consulte [Atualizações cumulativas do SQL Server 2017](https://aka.ms/sql2017cu).

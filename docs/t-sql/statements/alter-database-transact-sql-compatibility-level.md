@@ -1,7 +1,7 @@
 ---
 title: Nível de compatibilidade de ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/15/2019
+ms.date: 05/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d535d50bde7c05629d23be85c2c64083dd455965
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: baa6f443215d5d1f221462e1d20d4bf1498ca899
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583369"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626686"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nível de compatibilidade de ALTER DATABASE (Transact-SQL)
 
@@ -237,9 +237,9 @@ Esta seção descreve os novos comportamentos apresentados com o nível de compa
 |Quando a contenção do banco de dados é definida como parcial, a validação do campo `$action` na cláusula `OUTPUT` de uma instrução `MERGE` pode retornar um erro de ordenação.|A ordenação dos valores retornados pela cláusula `$action` de uma instrução `MERGE` é a ordenação de banco de dados, em vez da ordenação do servidor, e um erro de conflito de ordenação não é retornado.|
 |Uma instrução `SELECT INTO` sempre criará uma operação de inserção de thread único.|Uma instrução `SELECT INTO` pode criar uma operação de inserção paralela. Ao inserir um número grande de linhas, a operação paralela pode melhorar o desempenho.|
 
-## <a name="differences-between-lower-compatibility-levels-and-levels-110-and-120"></a>Diferenças entre níveis de compatibilidade inferiores e os níveis 110 e 120
+## <a name="differences-between-lower-compatibility-levels-and-levels-100-and-110"></a>Diferenças entre níveis de compatibilidade inferiores e os níveis 100 e 110
 
-Esta seção descreve os novos comportamentos apresentados com o nível de compatibilidade 110. Esta seção também se aplica ao nível 120.
+Esta seção descreve os novos comportamentos apresentados com o nível de compatibilidade 110. Esta seção também se aplica aos níveis de compatibilidade acima de 110.
 
 |Configuração de nível de compatibilidade 100 ou inferior|Configuração de nível de compatibilidade 110, no mínimo|
 |--------------------------------------------------|--------------------------------------------------|

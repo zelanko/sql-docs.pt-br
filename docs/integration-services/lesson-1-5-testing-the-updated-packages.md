@@ -11,14 +11,18 @@ ms.assetid: 683e52e5-1c7e-49ab-9ffe-6a450a1c5776
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea0050beae23d2178d08037b026a3d9ad8676b26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 40884a52395aee9bb45338f5c56d2709f3d4d956
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277545"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722964"
 ---
 # <a name="lesson-1-5---testing-the-updated-packages"></a>Lição 1-5 – testar os pacotes atualizados
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Antes de ir para a próxima lição, na qual você criará o pacote de implantação a ser usado para instalar os pacotes de tutorial no computador de destino, você deverá testar os pacotes. Nesta tarefa, você executará os pacotes, DataTransfer.dtsx e LoadXMLData que você adicionou ao projeto Tutorial de Implantação e então estendeu com configurações.  
   
 Quando os pacotes são executados, cada executável do pacote fica com uma cor verde quando concluído com sucesso. Quando todos os executáveis estão verdes, o pacote foi concluído com sucesso. Você também pode visualizar o progresso da execução do pacote na guia **Progresso** .  

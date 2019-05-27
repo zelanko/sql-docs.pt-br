@@ -16,14 +16,18 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5c7e17cd8d09e85395eaaa5d32f2ceb979a984d1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 253625d364bb8ae918ee9bdd2402e3cf249b26ce
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282491"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719872"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Trabalhos do SQL Server Agent para pacotes
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Você pode automatizar e agendar a execução de pacotes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Você pode agendar pacotes que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e está armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o Armazenamento de Pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] e o sistema de arquivos.  
  
 > [!NOTE]
@@ -141,7 +145,7 @@ A falha em incluir os itens de segurança resultará na falha do trabalho e em u
     |--------------------|-----------------|  
     |**Catálogo do SSIS**|Os pacotes armazenados no banco de dados SSISDB. Os pacotes são contidos em projetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que são implantados no servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
     |**SQL Server**|Os pacotes armazenados no banco de dados MSDB. Use o serviço de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para gerenciar esses pacotes.|  
-    |**Armazenamento de Pacotes SSIS**|Pacotes que estão armazenados na pasta padrão no computador. A pasta padrão é *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Packages. Use o serviço de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para gerenciar esses pacotes.<br /><br /> Observação: Você pode especificar uma pasta diferente ou especificar pastas adicionais no sistema de arquivos a ser gerenciado pelo serviço de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] modificando o arquivo de configuração para [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para obter mais informações, veja [Serviço Integration Services &#40;Serviço SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).|  
+    |**Armazenamento de Pacotes SSIS**|Pacotes que estão armazenados na pasta padrão no computador. A pasta padrão é *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Packages. Use o serviço de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para gerenciar esses pacotes.<br /><br /> Observação: Você pode especificar uma pasta diferente ou pastas adicionais no sistema de arquivos a ser gerenciado pelo serviço de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] modificando o arquivo de configuração para [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para obter mais informações, veja [Serviço Integration Services &#40;Serviço SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).|  
     |**Sistema de Arquivos**|Pacotes que estão armazenados em qualquer pasta em sua máquina local.|  
   
      **As tabelas seguintes descrevem as opções de configuração que estão disponíveis para a etapa de trabalho segundo a origem do pacote que você selecionou.**  
@@ -162,7 +166,7 @@ A falha em incluir os itens de segurança resultará na falha do trabalho e em u
     ||**Despejar quando ocorrerem erros**<br /><br /> Especifique se os arquivos de despejo de depuração são gerados quando ocorre um erro durante a execução do pacote. O arquivo contém informações sobre a execução do pacote que pode ajudar a solucionar problemas de execução. Quando você seleciona essa opção e ocorre um erro durante a execução, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria um arquivo .mdmp (arquivo binário) e um arquivo .tmp (arquivo de texto). Por padrão, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena os arquivos na pasta *\<drive>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.|  
     ||**Tempo de execução de 32 bits**<br /><br /> Indique se o pacote será executado usando a versão de 32 bits do utilitário dtexec em um computador de 64 bits que tenha a versão de 64 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent instalada.<br /><br /> Você pode precisar executar o pacote usando uma versão de 32 bits do dtexec, por exemplo, se o pacote usar um provedor OLE DB nativo que não esteja disponível em uma versão de 64 bits. Para obter mais informações, consulte [Considerações do Integration Services sobre versões de 64 bits](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx).<br /><br /> Por padrão, quando você seleciona o tipo de etapa de trabalho **Pacote do SQL Server Integration Services** , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent executa o pacote usando a versão do utilitário dtexec invocada automaticamente pelo sistema. O sistema invoca a versão de 32 bits ou de 64 bits do utilitário, dependendo do processador do computador, e a versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que está sendo executada no computador.|  
   
-     **Origem do pacote**:  SQL Server, armazenamento de pacotes SSIS ou sistema de arquivos  
+     **Origem do pacote**:  SQL Server, Repositório de Pacotes SSIS ou Sistema de Arquivos  
   
      Muitas das opções que você pode definir para pacotes armazenados no SQL Server, no Repositório de Pacotes SSIS ou no sistema de arquivos correspondem às opções de linha de comando para o utilitário de prompt de comando **dtexec** . Para obter mais informações sobre as opções de linha de comando e utilitário, consulte [Utilitário dtexec](../../integration-services/packages/dtexec-utility.md).  
   

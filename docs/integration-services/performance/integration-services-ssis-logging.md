@@ -30,14 +30,18 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6ce4c2955896be6fc90063c220d2a33bd78901ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eca7e157593ff4ea9d40528b592f71227cc8cb0d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277500"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719588"
 ---
 # <a name="integration-services-ssis-logging"></a>Log do SSIS (Integration Services)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui provedores de log que você pode usar para implementar log em pacotes, contêineres e tarefas. Com o log, você pode capturar informações de tempo de execução sobre um pacote, que o ajudem a auditar e solucionar problemas de um pacote sempre que ele for executado. Por exemplo, um log pode capturar o nome do operador que executou o pacote e a hora em que o pacote começou e foi concluído.  
   
  Você pode configurar o escopo de log que ocorre durante a execução de um pacote no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para saber mais, veja [Habilitar o log para a execução do pacote no servidor SSIS](#server_logging).  
@@ -528,7 +532,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 |Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**ExecuteDTS80PackageTaskBegin**|Indica que a tarefa começou a ser executada em um pacote DTS 2000.|  
-|**ExecuteDTS80PackageTaskEnd**|Indica que a tarefa foi concluída.<br /><br /> Observação: O pacote DTS 2000 pode continuar sendo executado após a conclusão da tarefa.|  
+|**ExecuteDTS80PackageTaskEnd**|Indica que a tarefa foi concluída.<br /><br /> Observação: o pacote DTS 2000 pode continuar a ser executado após a conclusão da tarefa.|  
 |**ExecuteDTS80PackageTaskTaskInfo**|Fornece informações descritivas sobre a tarefa.|  
 |**ExecuteDTS80PackageTaskTaskResult**|Informa o resultado de execução do pacote DTS 2000 executado pela tarefa.|  
   

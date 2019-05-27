@@ -18,15 +18,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - Transact-SQL bulk export/import operations
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e8bbc4289a31d39c6e2801b39ec24039a69973d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e8b09ee01da2dde8e8bf50fbda21c1c8bca1689d
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63151636"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011943"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importar Dados em Massa Usando BULK INSERT ou OPENROWSET(BULK...) (SQL Server)
   Este tópico fornece uma visão geral de como usar a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT e a instrução INSERT...SELECT * FROM OPENROWSET(BULK...) para importação em massa de dados de um arquivo de dados em uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este tópico também descreve considerações de segurança sobre o uso de BULK INSERT e OPENROWSET(BULK...) e o uso desses métodos para importação em massa de uma fonte de dados remotos.  
@@ -71,7 +71,7 @@ ms.locfileid: "63151636"
   
  INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
- Quando usada em uma instrução INSERT, OPENROWSET(BULK...) dá suporte a dicas de tabela. Além das dicas de tabela comum, como TABLOCK, a cláusula BULK pode aceitar as seguintes dicas de tabela especializadas: IGNORE_CONSTRAINTS (ignora somente as restrições CHECK), IGNORE_TRIGGERS, KEEPDEFAULTS e KEEPIDENTITY. Para obter mais informações, consulte [Dicas de tabela &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table).  
+ Quando usada em uma instrução INSERT, OPENROWSET(BULK...) dá suporte a dicas de tabela. Além das dicas de tabela comum, como TABLOCK, a cláusula BULK pode aceitar as seguintes dicas de tabela especializadas: IGNORE_CONSTRAINTS (ignora apenas as restrições CHECK), IGNORE_TRIGGERS, KEEPDEFAULTS e KEEPIDENTITY. Para obter mais informações, consulte [Dicas de tabela &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table).  
   
  Para obter informações sobre usos adicionais da opção de BULK, consulte [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - mapping-schema attribute
 - record deletions [SQLXML]
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 808cac0491d7a62ef6a7616745dfb56874299f6a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 444ef7d8c95b0cbd41ba3fbb55a6fbeb30870462
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294345"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014864"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>Excluindo dados usando diagramas de atualização XML (SQLXML 4.0)
   Um diagrama de atualização indica uma operação de exclusão quando uma instância de registro aparece na  **\<antes de >** bloco sem registros correspondentes no  **\<depois >** bloco. Nesse caso, o diagrama de atualização exclui o registro na  **\<antes de >** bloco do banco de dados.  

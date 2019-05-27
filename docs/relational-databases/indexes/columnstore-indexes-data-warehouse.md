@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cfd16b46ddf4c06c283009ecfa836780c1c2444
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8ceade7d44b5ec708db5355853065ebb1f253166
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412063"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581311"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Índices columnstore – Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,14 +64,14 @@ GO
 CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);  
 ```  
   
-### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>Exemplo: use um índice não clusterizado para impor uma restrição de chave primária em um tabela columnstore.  
+### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>Exemplo: use um índice não clusterizado para impor uma restrição de chave primária em um tabela columnstore  
  Por padrão, uma tabela columnstore não permite uma restrição de chave primária. Agora você pode usar um índice não clusterizado em uma tabela columnstore para impor uma restrição de chave primária. Uma chave primária é equivalente a uma restrição UNIQUE em uma coluna não NULL e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa uma restrição UNIQUE como um índice não clusterizado. Combinando esses fatos, o exemplo a seguir define uma restrição UNIQUE na accountkey da coluna não NULL. O resultado é um índice não clusterizado que impõe uma restrição de chave primária como uma restrição UNIQUE em uma coluna não NULL.  
   
  Em seguida, a tabela é convertida em um índice columnstore clusterizado. Durante a conversão, o índice não clusterizado persiste. O resultado é um índice columnstore clusterizado com um índice não clusterizado que impõe a restrição de chave primária. Uma vez que qualquer atualização ou inserção na tabela columnstore também afetará o índice não clusterizado, todas as operações que violarem a restrição exclusiva e o não NULL causarão a falha de toda a operação.  
   
  O resultado é um índice columnstore com um índice não clusterizado que impõe uma restrição de chave primária nos dois índices.  
   
-```sql 
+```sql
 --EXAMPLE: Enforce a primary key constraint on a columnstore table.   
   
 --Create a rowstore table with a unique constraint.  

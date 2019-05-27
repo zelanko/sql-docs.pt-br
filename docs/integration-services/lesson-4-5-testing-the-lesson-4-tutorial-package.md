@@ -11,14 +11,18 @@ ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 041cf825d92c53afcf138e060cb9cbd335c9f6a1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f1c7ec3026050181ae31150c4b5e190a65d889d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280950"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721508"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>Lição 4-5: Testar o pacote da Lição 4
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 No tempo de execução, o arquivo corrompido, **Currency_BAD.txt**, não gera uma correspondência dentro da transformação Pesquisa de Códigos de Moeda. Como você configurou a saída de erro de Pesquisa de Códigos de Moeda para redirecionar linhas com falhas para o novo destino de linhas com falha, o componente não falha e o pacote é executado com êxito. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] grava todas as linhas de erro com falha em **ErrorOutput.txt**.  
   

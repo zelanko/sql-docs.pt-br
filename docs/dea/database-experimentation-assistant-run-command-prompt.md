@@ -11,14 +11,14 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
-ms.reviewer: douglasl
+ms.reviewer: mathoma
 manager: craigg
-ms.openlocfilehash: e98863dcdd7f0cac2534f73c8c99b1d38e7b81b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e18cbe09ec9394ffb3c57c5ffcffc788278cc374
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63273927"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011590"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Executar o Assistente de experimentação do banco de dados em um prompt de comando
 

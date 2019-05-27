@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: adf261e9abf18bce685a98a55c1128c1a121eba4
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: eda7c83e982bbf6c006ac9a6c470b116009420ea
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642778"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821559"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editor XML (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,10 +83,10 @@ ms.locfileid: "51642778"
 ## <a name="data-view"></a>Exibição de dados  
  Exibição de dados fornece uma grade de dados que pode ser usada para modificar arquivos .xml. Somente o conteúdo (mas não as marcas e estrutura) em um arquivo XML pode ser editado em exibição de dados.  
   
- Há duas áreas separadas na Exibição de Dados: **Tabelas de Dados** e **Dados**. A área **Tabela de Dados** é uma lista de relações definidas no arquivo XML, na ordem de seu aninhamento (do mais externo para o mais interno). A área **Dados** é uma grade de dados que exibe dados com base na seleção na área tabela de dados.  
+ Há duas áreas separadas na exibição de dados: **Tabelas de Dados** e **Dados**. A área **Tabela de Dados** é uma lista de relações definidas no arquivo XML, na ordem de seu aninhamento (do mais externo para o mais interno). A área **Dados** é uma grade de dados que exibe dados com base na seleção na área tabela de dados.  
   
 > [!NOTE]  
->  Arquivos XML recentemente criados não contêm nenhum dado e, assim, não podem ser exibidos na exibição de Dados. Há também algumas instâncias de documentos XML nas quais a exibição de dados não pode ser invocada. Embora o XML seja considerado bem formado, se não for estruturado dados tentando mudar para exibição de dados irão gerar a seguinte mensagem: "Embora esse documento seja bem formado, ele contém estrutura que a exibição de dados não pode exibir".  
+>  Arquivos XML recentemente criados não contêm nenhum dado e, assim, não podem ser exibidos na exibição de Dados. Há também algumas instâncias de documentos XML nas quais a exibição de dados não pode ser invocada. Embora o XML seja considerado bem formado, se ele não estiver estruturado, os dados que tentarem alternar para a exibição de dados gerarão a seguinte mensagem: "Embora esse documento seja bem formado, ele contém uma estrutura que não é possível exibir na exibição de dados."  
   
  Na exibição de Dados você pode:  
   

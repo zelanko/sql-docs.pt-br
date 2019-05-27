@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - default MDX scripts
@@ -16,12 +15,12 @@ ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e557807f2371b933896a7855c92ef0241ef3af37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8793fe2e63d6867e8e5c12fef6ec73a6f7a27882
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725360"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073806"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>O script básico de MDX (MDX)
   Um script MDX define o processo de cálculo para um cubo no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Existem dois tipos de scripts MDX:  

@@ -15,14 +15,18 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1c338ab2dbbaa5437ef4650f79598b68069317f9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1f673ea96167b05326519bb9fe04345a87c81fd3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283200"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729169"
 ---
 # <a name="ssis-catalog"></a>Catálogo do SSIS
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   O catálogo do **SSISDB** é o ponto central para trabalhar com os projetos do SSIS ([!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]) que você implantou no servidor [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Por exemplo, você define parâmetros de projeto e pacote, configura ambientes para especificar valores de tempo de execução para pacotes, executa e soluciona problemas de pacotes, e gerencia as operações de servidor do [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
  
 > [!NOTE]
@@ -172,7 +176,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
 |Nome da Propriedade (caixa de diálogo**Propriedades do Catálogo** )|Nome da Propriedade (exibição de banco de dados)|  
 |---------------------------------------------------------|-------------------------------------|  
 |Nome do Algoritmo de Criptografia|ENCRYPTION_ALGORITHM|  
-|Limpar Logs Periodicamente|OPERATION_CLEANUP_ENABLED|  
+|Limpar Logs Periodicamente|OPERATION_CLEANUP_ENABLEDâ€‹|  
 |Período de Retenção (dias)|RETENTION_WINDOW|  
 |Remover Periodicamente Versões Antigas|VERSION_CLEANUP_ENABLED|  
 |Número Máximo de Versões por Projeto|MAX_PROJECT_VERSIONS|  

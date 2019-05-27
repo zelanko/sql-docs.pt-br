@@ -30,19 +30,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 829459fadb58ff24093d422c365089639e7b76b9
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: 7a6414ca219cbc2ca871a1100c4ff82570409873
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503818"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580635"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 Converta uma tabela rowstore em um índice columnstore clusterizado ou crie um índice columnstore não clusterizado. Use um índice columnstore para executar análise operacional em tempo real com eficiência em uma carga de trabalho OLTP ou para melhorar o desempenho da consulta e a compactação de dados em cargas de trabalho de data warehouse.  
   
-> [!NOTE]  
+> [!NOTE]
 > Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode criar a tabela como um índice columnstore clusterizado.   Não é mais necessário criar uma tabela rowstore primeiro e, em seguida, convertê-la em um índice columnstore clusterizado.  
 
 > [!TIP]
@@ -64,14 +64,15 @@ Saiba mais:
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Create a clustered columnstore index on disk-based table.  
 CREATE CLUSTERED COLUMNSTORE INDEX index_name  
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( < with_option> [ ,...n ] ) ]  
-    [ ON <on_option> ]  
+    [ ON <on_option> ] 
+    [ORDER (column [,…n])]  --(Preview) 
 [ ; ]  
   
 --Create a non-clustered columnstore index on a disk-based table.  
@@ -80,7 +81,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
         ( column  [ ,...n ] )  
     [ WHERE <filter_expression> [ AND <filter_expression> ] ]
     [ WITH ( < with_option> [ ,...n ] ) ]  
-    [ ON <on_option> ]   
+    [ ON <on_option> ]
 [ ; ]  
   
 <with_option> ::=  
@@ -92,9 +93,9 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
       [ ON PARTITIONS ( { partition_number_expression | range } [ ,...n ] ) ]  
   
 <on_option>::=  
-      partition_scheme_name ( column_name )   
-    | filegroup_name   
-    | "default"   
+      partition_scheme_name ( column_name )
+    | filegroup_name
+    | "default"
   
 <filter_expression> ::=  
       column_name IN ( constant [ ,...n ]  
@@ -102,14 +103,14 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
   
 ```  
   
-```  
+```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name   
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
-```  
+```
   
 ## <a name="arguments"></a>Argumentos  
 
@@ -124,7 +125,8 @@ Algumas das opções não estão disponíveis em todas as versões de mecanismo 
 
 Todas as opções estão disponíveis no Banco de Dados SQL do Azure.
 
-### <a name="create-clustered-columnstore-index"></a>CREATE CLUSTERED COLUMNSTORE INDEX  
+### <a name="create-clustered-columnstore-index"></a>CREATE CLUSTERED COLUMNSTORE INDEX
+
 Crie um índice columnstore clusterizado no qual todos os dados serão compactados e armazenados por coluna. O índice inclui todas as colunas na tabela e armazena toda a tabela. Se a tabela existente for um índice de heap ou clusterizado, a tabela será convertida em um índice columnstore clusterizado. Se a tabela já estiver armazenada como um índice columnstore clusterizado, o índice existente será descartado e recriado.  
   
 *index_name*  
@@ -132,11 +134,14 @@ Especifica o nome do novo índice.
   
 Se a tabela já tiver um índice columnstore clusterizado, você poderá especificar o mesmo nome que o do índice existente ou usar a opção DROP EXISTING para especificar um novo nome.  
   
-ON [*database_name*. [*schema_name* ]. | *schema_name*. ] *table_name*  
-   Especifica o nome de uma, duas ou três partes da tabela a ser armazenada como um índice columnstore clusterizado. Se a tabela for um índice de heap ou clusterizado, ela será convertida de rowstore para columnstore. Se a tabela já for um columnstore, essa instrução recompilará o índice columnstore clusterizado.  
+ON [*database_name*. [*schema_name* ]. | *schema_name*. ] *table_name*
+
+Especifica o nome de uma, duas ou três partes da tabela a ser armazenada como um índice columnstore clusterizado. Se a tabela for um índice de heap ou clusterizado, ela será convertida de rowstore para columnstore. Se a tabela já for um columnstore, essa instrução recompilará o índice columnstore clusterizado. Para converter em um índice de repositório de coluna clusterizado ordenado, o índice existente deve ser um índice columnstore clusterizado.
   
-#### <a name="with-options"></a>Opções WITH  
-##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON  
+#### <a name="with-options"></a>Opções WITH
+
+##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON
+
    `DROP_EXISTING = ON` especifica o descarte do índice existente e a criação de um novo índice columnstore.  
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
@@ -156,6 +161,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
        WITH (MAXDOP = 2);
 ```
+
    Para obter mais informações, confira [Configurar a opção max degree of parallelism de configuração do servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), e [Configurar operações de índice paralelas](../../relational-databases/indexes/configure-parallel-index-operations.md).  
  
 ###### <a name="compressiondelay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
@@ -742,3 +748,11 @@ WITH ( DROP_EXISTING = ON);
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  
 
+### <a name="f-create-an-ordered-clustered-columnstore-index"></a>F. Criar um índice columnstore clusterizado ordenado
+
+Crie um índice columnstore clusterizado ordenado com ordenação em SHIPDATE.
+
+```sql 
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+ORDER ( SHIPDATE );
+```

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.queryparameters.mdx.f1
@@ -13,12 +12,12 @@ ms.assetid: e69b9542-7b54-42bf-b2de-c091e81af7ee
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a1d9e03f71f1dbcf2f00cce5185ec0e2b237b4b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7ad326f5205aa7efc3be9aee79af3671d892130
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748500"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070524"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>Caixa de diálogo Parâmetros de Consulta (MDX)
   Use a caixa de diálogo **Parâmetros de Consulta** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para adicionar parâmetros às consultas MDX que são usadas para definir conjuntos, dimensões e subcubos. Você pode acessar a caixa de diálogo **Parâmetros de Consulta** clicando no ícone **Parâmetros** na caixa de diálogo **Construtor de consulta MDX** .  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: da65bc5c3879a20ff178e27747a9bf5b267ff2c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5f07428a87b7a10640c50c73fc2b551fef66c70f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62631934"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011331"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa
   Este tópico discute como obter os valores que são necessários antes de adicionar uma propriedade a uma lista de propriedades de pesquisa, tornando-a pesquisável através de pesquisa de texto completo. Estes valores incluem o GUID do conjunto de propriedades e o identificador de inteiro de propriedade de uma propriedade de documento.  
@@ -41,7 +41,7 @@ ms.locfileid: "62631934"
 |Nome conhecido|Nome canônico no Windows.|GUID do conjunto de propriedades|ID de inteiro|Descrição|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Autores|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Autor ou autores de um determinado item.|  
-|Marcas|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Conjunto de palavras-chave (também conhecidas como marcas) atribuído ao item.|  
+|tags|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Conjunto de palavras-chave (também conhecidas como marcas) atribuído ao item.|  
 |Tipo|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Tipo de arquivo percebido com base em seu tipo canônico.|  
 |Title|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Título do item. Por exemplo, o título de um documento, o assunto de uma mensagem, a legenda de uma fotografia ou o nome de uma música.|  
   

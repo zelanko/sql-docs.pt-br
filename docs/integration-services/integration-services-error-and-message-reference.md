@@ -15,14 +15,18 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9f1e05ab7d98bdbcfdb33a3feb82e84498bb4eaf
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 67b6514534083c05f40b40adcda2bae5c30a4591
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290882"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723641"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referência de mensagens e erros do Integration Services
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   As tabelas a seguir listam erros, advertências e mensagens informativas do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , em ordem numérica crescente, dentro de cada categoria, acompanhados de seus códigos numéricos e nomes simbólicos. Cada um desses erros está definido como um campo da classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> no namespace <xref:Microsoft.SqlServer.Dts.Runtime> .  
   
  Esta lista pode ser útil quando você encontrar um código de erro sem descrição. No momento, a lista não inclui informações para solução de problemas.  

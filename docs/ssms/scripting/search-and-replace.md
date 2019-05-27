@@ -25,20 +25,20 @@ helpviewer_keywords:
 - match whole word [SQL Server]
 - searches [SQL Server Management Studio], replacing
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d84304f1ba307a55273ddd24aa11686cbd9743e1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 869262f20b50e23a8e59f4a318fd70d73c339db9
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642572"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821953"
 ---
 # <a name="search-and-replace"></a>Pesquisar e substituir
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Há vários modos diferentes de localizar e substituir texto. No menu **Editar** , **Localizar e Substituir** oferece quatro opções: **Localização Rápida**, **Substituição Rápida**, **Localizar nos Arquivos**ou **Substituir nos Arquivos**. Cada uma dessas opções abre versões da caixa de diálogo **Localizar e Substituir** . Você também pode pesquisar sem uma caixa de diálogo usando teclas de atalho de teclado de pesquisa incremental. Essas técnicas permitem que você controle o escopo de localização e substituição, e escolha o método de revisão de correspondências e substituições.  
+  Há vários modos diferentes de localizar e substituir texto. No menu **Editar**, **Localizar e substituir** oferece quatro opções: **Localização rápida**, **Substituição rápida**, **Localizar nos arquivos** ou **Substituir nos arquivos**. Cada uma dessas opções abre versões da caixa de diálogo **Localizar e Substituir** . Você também pode pesquisar sem uma caixa de diálogo usando teclas de atalho de teclado de pesquisa incremental. Essas técnicas permitem que você controle o escopo de localização e substituição, e escolha o método de revisão de correspondências e substituições.  
   
  Você deve considerar os itens a seguir ao localizar e substituir texto:  
   

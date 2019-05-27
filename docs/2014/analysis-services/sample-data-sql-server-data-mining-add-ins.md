@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, validating
@@ -18,12 +17,12 @@ ms.assetid: 35907ae6-887f-4cb3-a750-cff3d7683d90
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 72579d679b0ced1fd3c260098bc68237f2980a3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9a69b2286abbc1ba4289fd482b1bbf5a2dfb3e7b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748038"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070035"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>Dados de Amostra (Suplementos de Mineração de Dados do SQL Server)
   ![Assistente de partição de dados na faixa de opções mineração de dados](media/dmc-partition.gif "Assistente particionar os dados na faixa de opções mineração de dados")  

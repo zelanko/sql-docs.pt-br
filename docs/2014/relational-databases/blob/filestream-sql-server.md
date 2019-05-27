@@ -11,15 +11,15 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], about
 - FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1db3c3efe332eb65504c9476a569ec54b49cc1a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9c4d9b65fed30d09bf739271131d3b83afcd0902
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62874825"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010137"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
   O FILESTREAM permite que aplicativos baseados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazenem dados não estruturados, como documentos e imagens, no sistema de arquivos. Os aplicativos podem utilizar as APIs de streaming avançado e o desempenho do sistema de arquivos e, ao mesmo tempo, manter consistência transacional entre os dados não estruturados e os dados estruturados correspondentes.  

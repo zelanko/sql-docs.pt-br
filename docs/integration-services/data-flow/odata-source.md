@@ -16,14 +16,18 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f5ba8afdf4acadd114363280501f29e1616349ae
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b1c9e39e4ccec7ab54229a8bbd0bf51b1d751207
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290612"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726675"
 ---
 # <a name="odata-source"></a>Origem do OData
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Use o componente OData Source em um pacote do SSIS para consumir os dados do serviço do OData (Protocolo Open Data).
 
 ## <a name="supported-protocols-and-data-formats"></a>Formatos de dados e protocolos com suporte
@@ -102,7 +106,7 @@ Para descobrir os tipos de dados das colunas em sua fonte de dados, verifique a 
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Use o caminho da coleção ou do recurso = Caminho do recurso  
  **Resource path**  
- Digite um caminho de recurso. Por exemplo: Employees  
+ Digite um caminho de recurso. Por exemplo: funcionários  
   
 ## <a name="odata-source-editor-columns-page"></a>Editor de Origem do OData (página Colunas)
   Use a página **Colunas** da caixa de diálogo **Editor de Origem OData** para selecionar as colunas externas (origem) a serem incluídas na saída e para mapeá-las para as colunas de saída.  

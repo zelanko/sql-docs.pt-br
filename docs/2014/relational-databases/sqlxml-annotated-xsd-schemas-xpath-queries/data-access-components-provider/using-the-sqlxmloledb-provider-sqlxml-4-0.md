@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SQLXMLOLEDB Provider, samples
 - ClientSideXML property
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: abf009296c72c298b77e563f5de5482d298ac2df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 67a5486816f5af652e111372c9cb492ba3cdb3c4
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63127759"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012946"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>Usando o provedor SQLXMLOLEDB (SQLXML 4.0)
   Os tópicos desta seção fornecem aplicativos de exemplo de ADO que ilustram o uso de propriedades específicas do provedor SQLXMLOLEDB.  

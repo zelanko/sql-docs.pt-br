@@ -13,14 +13,18 @@ ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: abe1a05a159c7cadb9407ae20cd696ccd9bb9c4c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5032c7f48bdafdab0430357c01698f5672b2f830
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277425"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727499"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Configuração da tarefa Criação de Perfil de Dados
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Antes de rever um perfil dos dados de origem, a primeira etapa é configurar e executar a tarefa Criação de Perfil de Dados. Você cria esta tarefa dentro de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para configurar a tarefa Criação de Perfil de Dados, use o Editor da Tarefa Criação de Perfil de Dados. Este editor permite selecionar onde produzir os perfis e quais perfis devem ser calculados. Depois de configurar a tarefa, você executa o pacote para calcular os perfis de dados.  
   
 ## <a name="requirements-and-limitations"></a>Requisitos e limitações  

@@ -3,17 +3,17 @@ title: Como criar consultas MDX em R usando olapR - serviços do SQL Server Mach
 description: Use a biblioteca de pacote olapR no SQL Server para gravar consultas MDX no script de idioma do R.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c0b9cb6e9b52ff1823a613c7e81f7b026c22948f
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.openlocfilehash: dfae657f6ab7d8f0cefbdec729e6e836c4f7e4d8
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65357522"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175281"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Como criar consultas MDX em R usando olapR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -97,7 +97,7 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>Para criar essa consulta usando as funções fornecidas em olapR
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ocs <- OlapConnection(cnnstr)
 
 qry <- Query()
@@ -113,13 +113,13 @@ result1 <- executeMD(ocs, qry)
 Para uma instância nomeada, certifique-se de escape de caracteres que poderia ser considerados caracteres de controle em R.  Por exemplo, a seguinte cadeia de conexão faz referência a uma instância OLAP01, em um servidor chamado ContosoHQ:
 
 ```R
-cnnstr <- "Data Source=ContosoHQ\\OLAP01; Provider=MSOLAP;"
+cnnstr <- "Data Source=ContosoHQ\\OLAP01; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ```
 
 #### <a name="to-run-this-query-as-a-predefined-mdx-string"></a>Para executar essa consulta como uma cadeia de caracteres MDX predefinida
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ocs <- OlapConnection(cnnstr)
 
 mdx <- "SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sales Amount]} ON COLUMNS, {[Product].[Product Line].[Product Line].MEMBERS} ON ROWS FROM [Analysis Services Tutorial] WHERE [Sales Territory].[Sales Territory Country].[Australia]"
@@ -150,7 +150,7 @@ Para exibir todos os cubos ou perspectivas na instância que você tem permissã
 > O resultado final é **não** um cubo; TRUE indica apenas que a operação de metadados foi bem-sucedida. Um erro será gerado se os argumentos forem inválidos.
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ocs <- OlapConnection(cnnstr)
 explore(ocs)
 ```
@@ -168,7 +168,7 @@ explore(ocs)
 Para exibir todas as dimensões no cubo ou perspectiva, especifique o nome do cubo ou da perspectiva.
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Sales")
 ```
@@ -185,8 +185,8 @@ explore(ocs, "Sales")
 Depois de definir a fonte e criar o identificador, especifique o cubo, a dimensão e a hierarquia a serem retornados. Nos resultados de retorno, os itens que são prefixados com **->** representam os filhos do membro anterior.
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
-ocs \<- OlapConnection(cnnstr)
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
+ocs <- OlapConnection(cnnstr)
 explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Category")
 ```
 

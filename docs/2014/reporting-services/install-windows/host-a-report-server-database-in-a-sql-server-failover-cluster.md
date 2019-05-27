@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 7bd5f019-2857-452f-a023-cc3b9e93aec4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a0187e58076110644928e9b06c99cb33ea73c2f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 921ce03fd08e7820266b828d5848f64db1e257ee
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63064459"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108826"
 ---
 # <a name="host-a-report-server-database-in-a-sql-server-failover-cluster"></a>Hospedar um banco de dados do servidor de relatório em um cluster de failover do SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte de clustering de failover, permitindo o uso de vários discos para uma ou mais instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O clustering de failover tem suporte somente para o banco de dados do servidor de relatório; não é possível executar o serviço Servidor de Relatório como parte de um cluster de failover.  

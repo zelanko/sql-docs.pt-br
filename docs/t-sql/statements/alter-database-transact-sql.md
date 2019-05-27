@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fb07dfb65055ff622e0142381743a15a8d29ad9d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f26a39ab9264fa41ff4e558970a459987bf27ae
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63203074"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560149"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -725,13 +725,12 @@ ALTER DATABASE { database_name | CURRENT }
 }  
 
 ```
+
 ## <a name="arguments"></a>Argumentos
 
-*database_name*      
-É o nome do banco de dados a ser modificado.
+*database_name* É o nome do banco de dados a ser modificado.
 
-CURRENT     
-Designa que o banco de dados em uso deve ser alterado.
+CURRENT Designa que o banco de dados em uso deve ser alterado.
 
 ## <a name="remarks"></a>Remarks
 Para remover um banco de dados, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
@@ -791,16 +790,23 @@ ALTER DATABASE WideWorldImporters
 
 ## <a name="overview-azure-sql-data-warehouse"></a>Visão geral: Azure SQL Data Warehouse
 
-Modifica o nome, o tamanho máximo ou o objetivo de serviço de um banco de dados.
+No SQL Data Warehouse do Azure, 'ALTER DATABASE' modifica o nome, o tamanho máximo ou o objetivo de serviço de um banco de dados.
+
+Devido à sua extensão, a sintaxe ALTER DATABASE está separada em vários artigos.
+
+[Opções ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) Fornece a sintaxe e informações relacionadas para alterar os atributos de um banco de dados usando as opções SET de ALTER DATABASE.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-ALTER DATABASE database_name
-
+```console
+ALTER DATABASE { database_name | CURRENT }
+{
   MODIFY NAME = new_database_name
 | MODIFY ( <edition_option> [, ... n] )
-  
+| SET <option_spec> [ ,...n ] [ WITH <termination> ]
+}
+[;]
+
 <edition_option> ::=
       MAXSIZE = {
             250 | 500 | 750 | 1024 | 5120 | 10240 | 20480
@@ -818,14 +824,11 @@ ALTER DATABASE database_name
 
 ## <a name="arguments"></a>Argumentos
 
-*database_name*     
-Especifica o nome do banco de dados a ser modificado.
+*database_name* Especifica o nome do banco de dados a ser modificado.
 
-MODIFY NAME = *new_database_name*    
-Renomeia o banco de dados com o nome especificado como *novo_nome_do_banco_de_dados*.
+MODIFY NAME = *new_database_name* Renomeia o banco de dados com o nome especificado como *new_database_name*.
 
-MAXSIZE    
-O padrão é 245.760 GB (240 TB).
+MAXSIZE O padrão é 245.760 GB (240 TB).
 
 **Aplica-se a:** Otimizado para Computação Gen1
 
@@ -835,8 +838,7 @@ O tamanho máximo permitido para o banco de dados. O banco de dados não pode ul
 
 O tamanho máximo permitido para dados de rowstore no banco de dados. Os dados armazenados em tabelas rowstore, um deltastore de um índice columstore ou um índice não clusterizado em um índice columnstore clusterizado não podem exceder o MAXSIZE. Os dados compactados no formato columnstore não têm um limite de tamanho e não estão restritos pelo MAXSIZE.
 
-SERVICE_OBJECTIVE      
-Especifica o nível de desempenho. Para obter mais informações sobre os objetivos de serviço para o SQL Data Warehouse, confira [Unidades de Data Warehouse (DWUs)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
+SERVICE_OBJECTIVE Especifica o nível de desempenho. Para obter mais informações sobre os objetivos de serviço para o SQL Data Warehouse, confira [Unidades de Data Warehouse (DWUs)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## <a name="permissions"></a>Permissões
 

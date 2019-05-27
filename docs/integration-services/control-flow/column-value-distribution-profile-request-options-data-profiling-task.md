@@ -13,14 +13,18 @@ ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d10496080bd9103bb3814ec0abe97f3e690982e9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9251b25d0f4f353312a56a2117d1388f813d839f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281900"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727843"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Opções de solicitação do perfil Distribuição de Valor de Coluna (tarefa Criação de Perfil de Dados)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Perfil de Distribuição de Valor de Coluna** selecionada no painel de solicitações. Um Perfil de Distribuição de Valor de Coluna reporta todos os valores distintos na coluna selecionada e a porcentagem de linhas na tabela que cada valor representa. O perfil também pode informar valores que representam mais que uma porcentagem especificada de linhas na tabela. O perfil também pode ajudar a identificar problemas em seus dados, como um número incorreto de valores distintos em uma coluna. Por exemplo, você cria um perfil para uma coluna Estado dos Estados Unidos da América e descobre mais de 50 valores distintos.  
   
 > [!NOTE]  
@@ -82,7 +86,7 @@ ms.locfileid: "58281900"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreCase**|Especifica se a comparação faz distinção entre letras maiúsculas e minúsculas. Se esta opção for definida, a comparação de cadeia de caracteres ignorará a distinção entre letras maiúsculas e minúsculas. Por exemplo, "ABC" torna-se igual a "abc".|  
-|**IgnoreNonSpace**|Especifica se a comparação distingue entre caracteres de espaço e sinais diacríticos. Se esta opção for definida, a comparação ignorará os sinais diacríticos. Por exemplo, "å" é igual a "a".|  
+|**IgnoreNonSpace**|Especifica se a comparação distingue entre caracteres de espaço e sinais diacríticos. Se esta opção for definida, a comparação ignorará os sinais diacríticos. Por exemplo, "Ã¥" é igual a "a".|  
 |**IgnoreKanaType**|Especifica se a comparação distingue os dois tipos de caracteres de kana japoneses: hiragana e katakana. Se esta opção for definida, a comparação de cadeia de caracteres ignorará o tipo de kana usado.|  
 |**IgnoreWidth**|Especifica se a comparação faz distinção entre um caractere de byte único e o mesmo caractere representado como um caractere de byte duplo. Se esta opção for definida, a comparação de cadeia de caracteres tratará representações de byte único e representações de byte duplo do mesmo caractere como idênticas.|  
   

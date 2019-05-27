@@ -30,15 +30,15 @@ helpviewer_keywords:
 - at-identity attribute
 - xml data type [SQL Server], SQLXML
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c890bb596c83c75330165ae1105f97df83ef69b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fb8058eacc2958327f1aa5649ed2dcfefe173b37
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63060273"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014813"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Inserindo dados usando diagramas de atualização XML (SQLXML 4.0)
   Um diagrama de atualização indica uma operação de inserção quando uma instância de registro aparece na  **\<depois >** bloco, mas não em correspondente  **\<antes >** bloco. Nesse caso, o diagrama de atualização insere o registro na  **\<depois >** bloco no banco de dados.  

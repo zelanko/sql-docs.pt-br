@@ -10,15 +10,15 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2347c97b41852b44ec651ee10300e607755757f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145976"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011465"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Criar e gerenciar catálogos de texto completo
   Um catálogo de texto completo é um objeto virtual que não pertence a nenhum grupo de arquivos; trata-se de um conceito lógico que faz referência a um grupo de índices de texto completo.  
@@ -43,11 +43,11 @@ ms.locfileid: "48145976"
   
   
 ##  <a name="props"></a> Exibindo as propriedades de um catálogo de texto completo  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] funções, como FULLTEXTCATALOGPROPERTY podem ser usadas para obter o valor de diversas propriedades relacionada à indexação de texto completo. Essas informações são úteis para administrar e solucionar problemas de pesquisa de texto completo.  
+ Funções [!INCLUDE[tsql](../../includes/tsql-md.md)], como FULLTEXTCATALOGPROPERTY, podem ser usadas para obter o valor de diversas propriedades relativas à indexação de texto completo. Essas informações são úteis para administrar e solucionar problemas de pesquisa de texto completo.  
   
  A tabela a seguir lista as propriedades relacionadas a catálogos de texto completo.  
   
-|Propriedade|Description|Função|  
+|Propriedade|Descrição|Função|  
 |--------------|-----------------|--------------|  
 |`AccentSensitivity`|Configuração da diferenciação de caracteres com/sem acento.|[FULLTEXTCATALOGPROPERTY](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql)|  
 |`ImportStatus`|Se o catálogo de texto completo está sendo importado.|FULLTEXTCATALOGPROPERTY|  

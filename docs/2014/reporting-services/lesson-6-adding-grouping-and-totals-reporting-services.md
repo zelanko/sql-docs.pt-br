@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7a3b0bbb6f3220c554675d7fab028db46d2588c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278789"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108408"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lição 6: Adicionando agrupamentos e totais (Reporting Services)
   Adicione agrupamento e totais ao relatório para organizar e resumir os dados.  
@@ -41,13 +40,13 @@ ms.locfileid: "63278789"
   
 2.  Se você não vir as **grupos de linhas** painel, clique com botão direito na superfície de design e clique em **exibição** e, em seguida, clique em **agrupamento**.  
   
-3.  Dos **dados do relatório** painel, arraste o `Date` campo para o **grupos de linhas** painel. Coloque-o acima da linha chamada **(Detalhes)**.  
+3.  No painel **Dados do Relatório**, arraste o campo `Date` para o painel **Grupos de Linhas**. Coloque-o acima da linha chamada **(Detalhes)**.  
   
      Observe que a alça de linha agora exibe um colchete para mostrar um grupo. A tabela também tem duas colunas Data – uma em cada lado de uma linha pontilhada vertical.  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  Dos **dados do relatório** painel, arraste o `Order` campo para o **grupos de linhas** painel. Coloque-o abaixo de Data e acima de **(Detalhes)**.  
+4.  No painel **Dados do Relatório**, arraste o campo `Order` para o painel **Grupos de Linhas**. Coloque-o abaixo de Data e acima de **(Detalhes)**.  
   
      Observe que a alça de linha agora exibe dois colchetes para mostrar dois grupos. A tabela tem agora duas `Order` colunas, muito.  
   

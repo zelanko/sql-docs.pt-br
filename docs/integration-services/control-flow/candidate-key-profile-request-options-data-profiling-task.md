@@ -13,14 +13,18 @@ ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db7471411d629dfb55de9f074a31e68d34e52bd3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e8ed8f3cdd8232cdf8fd66be1dce021f84d2e492
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276178"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727939"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Chave de Candidato (tarefa Criação de Perfil de Dados)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Perfil de Chave de Candidato** selecionada no painel de solicitações. Um perfil Chave de Candidato informa se uma coluna ou conjunto de colunas é uma chave, ou uma chave aproximada, para a tabela selecionada. Esse perfil também pode ajudar a identificar problemas em seus dados, como valores em duplicata em uma possível coluna de chave.  
   
 > [!NOTE]  
@@ -104,7 +108,7 @@ ms.locfileid: "58276178"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreCase**|Especifica se a comparação faz distinção entre letras maiúsculas e minúsculas. Se esta opção for definida, a comparação de cadeia de caracteres ignorará a distinção entre letras maiúsculas e minúsculas. Por exemplo, "ABC" torna-se igual a "abc".|  
-|**IgnoreNonSpace**|Especifica se a comparação distingue entre caracteres de espaço e sinais diacríticos. Se esta opção for definida, a comparação ignorará os sinais diacríticos. Por exemplo, "å" é igual a "a".|  
+|**IgnoreNonSpace**|Especifica se a comparação distingue entre caracteres de espaço e sinais diacríticos. Se esta opção for definida, a comparação ignorará os sinais diacríticos. Por exemplo, "Ã¥" é igual a "a".|  
 |**IgnoreKanaType**|Especifica se a comparação distingue os dois tipos de caracteres de kana japoneses: hiragana e katakana. Se esta opção for definida, a comparação de cadeia de caracteres ignorará o tipo de kana usado.|  
 |**IgnoreWidth**|Especifica se a comparação faz distinção entre um caractere de byte único e o mesmo caractere representado como um caractere de byte duplo. Se esta opção for definida, a comparação de cadeia de caracteres tratará representações de byte único e representações de byte duplo do mesmo caractere como idênticas.|  
   

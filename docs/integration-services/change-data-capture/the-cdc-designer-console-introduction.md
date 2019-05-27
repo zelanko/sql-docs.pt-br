@@ -11,20 +11,24 @@ ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f5b02db809cf8bb0d7d9b049cfec9fe895a3af3d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1dcacaf20a5216754992b28ab2e29460437fc0f2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276694"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728498"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>A introdução do CDC Designer Console
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A seção descreve os procedimentos de instalação para o Change Data Capture Designer para Oracle da Attunity.  
   
 ## <a name="installation"></a>Instalação  
  A seção descreve os procedimentos de instalação para o Change Data Capture Designer para Oracle da Attunity.  
   
- O Microsoft® Change Data Capture Designer e o Service para Oracle da Attunity para o Microsoft SQL Server® 2016 são parte do SQL Server 2016 Feature Pack. Baixe componentes do Feature Pack da [página da Web do SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).  
+ O Microsoft® Change Data Capture Designer e Service para Oracle da Attunity para o Microsoft SQL Server® 2016 são parte do SQL Server 2016 Feature Pack. Baixe componentes do Feature Pack da [página da Web do SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).  
   
 ## <a name="supported-windows-environments"></a>Ambientes de Windows com suporte  
  O CDC Designer Console pode ser executado nos ambientes Windows a seguir:  

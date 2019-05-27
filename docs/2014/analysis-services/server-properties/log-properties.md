@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - QueryLogFileSize property
@@ -54,12 +53,12 @@ ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5ade1c582956548a62f36d79f0e1b8fbd03525a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 81653d9b93a7dc8ec71a88e70cee8b2d68f33a8e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746868"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068914"
 ---
 # <a name="log-properties"></a>Propriedades do log
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor de log listadas nas tabelas a seguir. Para obter mais informações sobre as propriedades de servidor adicionais e como defini-las, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  

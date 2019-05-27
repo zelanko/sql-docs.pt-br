@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
@@ -13,12 +12,12 @@ ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce20cc81961c70984eb36ad39e8aa0b06fab0e08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62760838"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110173"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>Populando uma tabela com dados hierárquicos existentes
   Essa tarefa cria uma tabela nova e a popula com os dados da tabela **EmployeeDemo**. Essa tarefa tem as seguintes etapas:  

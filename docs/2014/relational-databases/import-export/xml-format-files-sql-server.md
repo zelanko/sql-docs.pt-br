@@ -11,15 +11,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 29da5204dc5bd88ed2c92b93347358b9860fc5c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7e323d686d739f832a6ae70707e4393a22a78b27
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065785"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011562"
 ---
 # <a name="xml-format-files-sql-server"></a>Arquivos de formato XML (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornece um esquema XML que define a sintaxe para escrever *arquivos de formato XML* a serem usados para importar dados em massa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Arquivos no formato XML devem aderir a este esquema que está definido no Schema Definition Language XML (XSDL). Os arquivos de formato XML só têm suporte quando as ferramentas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são instaladas junto com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

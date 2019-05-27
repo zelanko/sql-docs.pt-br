@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Income property
@@ -25,12 +24,12 @@ ms.assetid: 580cf0aa-7425-4d48-aa8d-128f5b488fcd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 00f0a142c623535d07592de8992ede24ff1caa6d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fe11b7a9cda6b3e75cb97faa17a381e2b0ea1afe
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746848"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069092"
 ---
 # <a name="filestore-properties"></a>Propriedades FileStore
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor de armazenamento de arquivos listadas nas tabelas a seguir. Estas são todas as propriedades avançadas que não devem ser alteradas, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter mais informações sobre as propriedades de servidor adicionais e como defini-las, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  

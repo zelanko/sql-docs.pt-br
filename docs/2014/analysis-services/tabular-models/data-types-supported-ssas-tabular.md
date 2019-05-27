@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ed99b26641b6d87fa6fe3bf07f47c21eacb96d89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 585ce68402e8922f6c9629d8f4e8cd517218106f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795313"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067281"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>Tipos de dados com suporte (SSAS tabular)
   Este artigo descreve os tipos de dados que podem ser usados em modelos tabulares e discute a conversão implícita de tipos de dados quando dados são calculados ou usados em uma fórmula DAX (Data Analysis Expressions).  
@@ -43,8 +42,8 @@ ms.locfileid: "62795313"
 |Número Decimal|Um número real de 64 bits (oito bytes) <sup>1, 2</sup>|Números reais são números que podem ter casas decimais. Os números reais abrangem uma grande variedade de valores:<br /><br /> Valores negativos de -1,79E +308 a -2,23E -308<br /><br /> Zero<br /><br /> Valores positivos de 2,23E -308 a 1,79E + 308<br /><br /> No entanto, o número de dígitos significativos está limitado a 17 dígitos decimais.|  
 |Booliano|Booliano|Um valor True ou False.|  
 |Text|Cadeia de caracteres|Uma cadeia de caracteres de dados de caractere Unicode. Podem ser cadeias de caracteres, números ou datas representados em um formato de texto.|  
-|data|Data/hora|Datas e horas em uma representação de data-hora aceita.<br /><br /> As datas válidas são todas as datas depois de 1º de março de 1900.|  
-|CURRENCY|CURRENCY|O tipo de dados de moeda permite valores entre -922.337.203.685.477,5808 e 922.337.203.685.477,5807 com quatro dígitos decimais de precisão fixa.|  
+|Date|Data/hora|Datas e horas em uma representação de data-hora aceita.<br /><br /> As datas válidas são todas as datas depois de 1º de março de 1900.|  
+|Currency|Currency|O tipo de dados de moeda permite valores entre -922.337.203.685.477,5808 e 922.337.203.685.477,5807 com quatro dígitos decimais de precisão fixa.|  
 |N/D|Em branco|Um espaço em branco é um tipo de dados no DAX que representa e substitui nulos SQL. É possível criar um espaço em branco usando a função BLANK e testar se há espaços em branco usando a função lógica, ISBLANK.|  
   
  <sup>1</sup> fórmulas DAX não dão suporte para tipos de dados que são menores do que aqueles listados na tabela.  

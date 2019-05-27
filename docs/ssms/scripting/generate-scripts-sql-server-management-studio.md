@@ -8,22 +8,22 @@ ms.technology: scripting
 ms.reviewer: mathoma
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 242e0e0c39ce381a492e1072dcb6934cf5f3e29f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 63c772e9957a180b76949ecc95a95661a4632aff
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642640"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65820874"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Gerar scripts (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece dois mecanismos para gerar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Crie scripts para vários objetos usando o **Assistente para Gerar e Publicar Scripts**. É possível gerar um script para objetos individuais ou para vários objetos usando o menu **Gerar script como** no **Pesquisador de Objetos**.  
 
-Para obter um Tutorial detalhado sobre a criação de script de vários objetos usando o SSMS (SQL Server Management Studio), consulte [Tutorial: criando scripts no SSMS](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
+Para obter um Tutorial detalhado sobre a criação de script de vários objetos usando o SSMS (SQL Server Management Studio), consulte o [Tutorial: criando scripts no SSMS](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
 
   
 ## <a name="before-you-begin"></a>Antes de começar  

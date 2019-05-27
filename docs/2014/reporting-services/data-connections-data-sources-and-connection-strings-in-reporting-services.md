@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], data sources
@@ -20,12 +19,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a89cb1d06b60d086c139b4d618b7bd716c04616e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: c5a73be18977d78be89a45200f7f5ebe621bbf94
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775081"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109494"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   Para incluir dados em um relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , primeiro você deve criar *fontes de dados* e *conjuntos de dados*. Este tópico explica o tipo de fontes de dados, como criar fontes de dados e informações importantes relacionadas às credenciais de fontes de dados. Uma fonte de dados inclui o tipo da fonte de dados, informações da conexão e o tipo de credenciais a serem usadas. Há dois tipos de fontes de dados: inserida ou compartilhada. Um fonte de dados inserida é definida no relatório e usada apenas por esse relatório. Uma fonte de dados compartilhada é definida independentemente de um relatório e pode ser usada por vários relatórios. Para obter mais informações, consulte [Conexões de dados ou fontes de dados inseridas e compartilhadas &#40;Construtor de Relatórios e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) e [Conjuntos de dados inseridos e compartilhados &#40;Construtor de Relatórios e SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -129,7 +128,7 @@ ms.locfileid: "64775081"
 |---------------------|-----------------|---------------------|  
 |Banco de dados do SQL Server no servidor local|`data source="(local)";initial catalog=AdventureWorks`|Defina o tipo da fonte de dados como `Microsoft SQL Server`. Para obter mais informações, consulte [Tipo de conexão do SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md).|  
 |Banco de dados do SQL Server no servidor local|`data source="(local)";initial catalog=AdventureWorks`|Defina o tipo da fonte de dados como `Microsoft SQL Server`.|  
-|Instância do SQL Server<br /><br /> Banco de Dados|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|Defina o tipo da fonte de dados como `Microsoft SQL Server`.|  
+|Instância do SQL Server<br /><br /> database|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|Defina o tipo da fonte de dados como `Microsoft SQL Server`.|  
 |Banco de dados do SQL Server Express|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|Defina o tipo da fonte de dados como `Microsoft SQL Server`.|  
 |[!INCLUDE[ssSDS](../includes/sssds-md.md)] na nuvem|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Defina o tipo da fonte de dados como `Windows Azure SQL Database`. Para obter mais informações, consulte [Tipo de conexão do SQL Azure &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
 |SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Defina o tipo da fonte de dados como `Microsoft SQL Server Parallel Data Warehouse`. Para obter mais informações, consulte [Tipo de conexão do SQL Server Parallel Data Warehouse &#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  

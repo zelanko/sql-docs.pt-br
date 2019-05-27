@@ -24,14 +24,18 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 045053757464667c4455a652e1eb2081ab63d7b8
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 1ca89542cfdeebd9993b86a049c0190e12d16887
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657880"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727111"
 ---
 # <a name="data-flow-performance-features"></a>Recursos de desempenho de fluxo de dados
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Este tópico fornece sugestões sobre como projetar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas comuns de desempenho. Este tópico também provê informações sobre recursos e ferramentas que podem ser usados para diagnosticar o desempenho de pacotes.  
   
 ## <a name="configuring-the-data-flow"></a>Configurando o Fluxo de Dados  
@@ -77,7 +81,7 @@ ms.locfileid: "58657880"
  Não aumente o tamanho do buffer para o ponto em que a paginação para o disco começa a acontecer. A paginação para o disco impede mais o desempenho do que o tamanho do buffer não otimizado. Para determinar se a paginação está ocorrendo, monitore o contador de desempenho "Buffers em spool" no snap-in Desempenho do MMC (Console de Gerenciamento [!INCLUDE[msCoName](../../includes/msconame-md.md)] ).  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>Configurar o pacote para execução paralela  
- A execução paralela melhora desempenho em computadores com vários processadores lógicos ou físicos. Para oferecer suporte à execução paralela de diferentes tarefas no pacote, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa duas propriedades: **MaxConcurrentExecutables** e **EngineThreads**.  
+ A execução paralela melhora desempenho em computadores com vários processadores lógicos ou físicos. Para dar suporte à execução paralela de diferentes tarefas no pacote, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa duas propriedades: **MaxConcurrentExecutables** e **EngineThreads**.  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>Propriedade MaxConcurrentExcecutables  
  A propriedade **MaxConcurrentExecutables** é uma propriedade do próprio pacote. Esta propriedade define quantas tarefas podem ser executadas simultaneamente. O valor padrão é -1, que significa o número de processadores físicos ou lógicos mais 2.  

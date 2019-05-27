@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10021"
@@ -13,12 +12,12 @@ ms.assetid: 75c7e54a-3d20-4c9a-88da-ab36dce2ce42
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a5c8e5f256ae762989d6112cb09f846febecc4dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 375d8eda6f0863dbe3852f1a88ea2e58ecc85b80
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164717"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109429"
 ---
 # <a name="dataset-properties-dialog-box-fields-report-builder"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Campos (Construtor de Relatórios)
   Selecione **Campos** na caixa de diálogo **Propriedades do Conjunto de Dados** para alterar a coleção de campos para o conjunto de dados de relatório. A lista de campos é preenchida automaticamente, mas você pode usar os **Campos** para adicionar, editar e excluir campos calculados e consultas.  

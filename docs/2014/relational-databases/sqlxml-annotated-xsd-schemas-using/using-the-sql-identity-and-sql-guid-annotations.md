@@ -20,15 +20,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], IDENTITY-type columns
 - updategrams [SQLXML], GUID values
 ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bb953042707054a7dbfdee697b986e7e65f7059b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c6135f1b46e9b2312f01b9ff7a7ebdd08d2d34a8
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62718003"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013634"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Usando as anotações sql:identity e sql:guid
   Você pode especificar o `sql:identity` e `sql:guid` anotações em um esquema XSD em qualquer nó que mapeia para uma coluna de banco de dados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Enquanto o formato de diagrama de atualização dá suporte aos atributos `updg:at-identity` e `updg:guid`, isso não ocorre com o formato DiffGram. O atributo `updg:at-identity` define o comportamento ao atualizar uma coluna do tipo IDENTITY. O atributo `updg:guid` permite obter um valor de GUID do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o utilizar no diagrama de atualização. Para obter mais informações e exemplos de funcionamento, consulte [inserindo dados usando diagramas de atualização XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  

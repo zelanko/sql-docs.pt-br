@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.profiles.f1
@@ -13,12 +12,12 @@ ms.assetid: 44230895-0a42-4032-8d6c-0cdb8a2dbb8c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc1fd3f1b73d8b738f1ad8e38bc2be19e36b6fd1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746808"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069103"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>Guia Perfis de Cluster do clustering de sequências (Visualizador do Modelo de Mineração)
   A guia **Perfis de Cluster** no **Visualizador MSC** fornece uma exibição codificada por cores das sequências que são incluídas em cada cluster.  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ba10d54fb2c18e29a6cc41d74e8d79bc6355e63e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62712793"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011852"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo e linha (SQL Server)
   Para campos de dados de caracteres, caracteres de terminação opcionais permitem marcar o término de cada campo em um arquivo de dados com um *terminador de campo* e o término de cada linha com um *terminador de linha*. Os caracteres terminadores são um modo de indicar aos programas que leem o arquivo de dados onde um campo ou uma linha termina, e onde outro campo ou outra linha começa.  
@@ -82,7 +82,7 @@ ms.locfileid: "62712793"
         >  Depois que você especificar interativamente todos os campos em um comando **bcp**, o comando solicitará que salve suas respostas para cada campo em um arquivo de formato não XML. Para obter mais informações sobre arquivos de formato não XML, veja [Arquivos de formato não XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ### <a name="guidelines-for-using-terminators"></a>Diretrizes para uso de terminadores  
- Em algumas situações, um terminador é útil para um campo de dados `char` ou `nchar`. Por exemplo:  
+ Em algumas situações, um terminador é útil para um campo de dados `char` ou `nchar`. Por exemplo:   
   
 -   Para uma coluna de dados que contém um valor nulo em um arquivo de dados que será importado em um programa que não entende as informações de comprimento de prefixo.  
   

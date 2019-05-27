@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4d83e53e-04f1-417d-9039-d9e81ae0483d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d3e0cdae7e9f57a7bfd62a3a0e947c43ced0b8c2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1b57ea1f69933d4d2c73ec12cc4cc18ff86d112d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749450"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071298"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>Configuração do PowerPivot usando o Windows PowerShell
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] inclui cmdlets do Windows PowerShell que você pode usar para configurar uma instalação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. A configuração completa de uma instalação com o PowerShell exige o uso de cmdlets do SharePoint e do PowerPivot para SharePoint. A maior parte da configuração pode ser concluída usando uma das ferramentas do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para obter mais informações sobre as ferramentas, consulte [PowerPivot Configuration Tools](power-pivot-configuration-tools.md).  

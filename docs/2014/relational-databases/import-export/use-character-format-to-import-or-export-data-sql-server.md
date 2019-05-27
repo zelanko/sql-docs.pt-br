@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data formats [SQL Server], character
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e25c975dca01ee2787a598afbe1a67f09fbab0ce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065754"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011664"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Usar o formato de caractere para importar ou exportar dados (SQL Server)
   Formato de caractere é recomendado quando você exporta dados em massa para um arquivo de texto que será usado em outro programa ou quando você importa dados em massa de um arquivo de texto que é gerado por outro programa.  

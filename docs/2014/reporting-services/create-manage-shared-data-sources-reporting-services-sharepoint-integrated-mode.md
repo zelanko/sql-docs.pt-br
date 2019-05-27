@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
@@ -14,12 +13,12 @@ ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f4920a345d3be827f369257be231654cf193fd04
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5eedb74dd5a24f40469b3ee6a4a24e97e6e59174
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63265639"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109628"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>Criar e gerenciar fontes de dados compartilhadas (Reporting Services no modo integrado do SharePoint)
   Ao executar um relatório a partir de uma biblioteca do SharePoint, as informações de conexão podem ser definidas no relatório ou em um arquivo externo vinculado ao relatório. Se as informações de conexão estiverem inseridas no relatório, ele será denominado uma fonte de dados personalizada. Se as informações de conexão estiverem definidas em um arquivo externo, ele será denominado uma fonte de dados compartilhados. O arquivo externo pode ser um arquivo de fonte de dados do servidor de relatório (.rsds) ou um arquivo de conexão de dados do Office (.odc).  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: fbfc160f495f9717645c8417f11f67f572271d9b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63157623"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175040"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Carregador de linha de comando para Parallel Data Warehouse de dwloader
 **dwloader** é uma ferramenta de linha de comando do Parallel Data Warehouse (PDW) que carrega linhas da tabela em massa em uma tabela existente. Quando o carregamento de linhas, você pode adicionar todas as linhas ao final da tabela (*modo de acréscimo* ou *modo fastappend*), acrescentar novas linhas e atualizar as linhas existentes (*modo upsert*), ou excluir todos linhas antes do carregamento de existente e, em seguida, inserir todas as linhas em uma tabela vazia (*recarregar modo*).  
@@ -43,7 +43,7 @@ ms.locfileid: "63157623"
   
 5.  Execute **dwloader**.  
   
-    Faça logon no servidor de carregamento e execute o executável **dwloader.exe** com as opções de linha de comando apropriadas.  
+    Entre servidor de carregamento e execute o executável **dwloader.exe** com as opções de linha de comando apropriadas.  
   
 6.  Verifique se os resultados.  
   
@@ -111,7 +111,8 @@ dwloader.exe
     [ -E ]  
     [ -m ]  
     [ -N ]  
-    [ -se ]   
+    [ -se ]
+    [ -l ]   
 }  
 ```  
   
@@ -156,7 +157,7 @@ Se omitido, dwloader padrão será o valor que foi especificado quando dwloader 
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.*[*schema*].*table_name*  
+**-T** *target_database_name.* [*schema*].*table_name*  
 O nome de três partes para a tabela de destino.  
   
 * *-I***source_data_location*  
@@ -174,7 +175,7 @@ Para especificar o local de dados de origem:
   
 -   O local de dados de origem pode ser um caminho de rede ou um caminho local para um diretório no servidor de carregamento.  
   
--   Para especificar todos os arquivos em um diretório, digite o caminho do diretório seguido de * caractere curinga.  O carregador não carregar arquivos de todos os subdiretórios que estão no local de dados de origem... Os erros de carregador quando existe um diretório em um arquivo gzip.  
+-   Para especificar todos os arquivos em um diretório, digite o caminho do diretório seguido de * caractere curinga.  O carregador não carrega arquivos de todos os subdiretórios que estão no local de dados de origem. Os erros de carregador quando existe um diretório em um arquivo gzip.  
   
 -   Para especificar alguns dos arquivos em um diretório, use uma combinação de caracteres e o * curinga.  
   
@@ -219,7 +220,7 @@ Para arquivos ASCII, valores nulos são representados por colocar delimitadores 
 Especifica um tipo de codificação de caracteres para os dados a serem carregadas do arquivo de dados. As opções são ASCII (padrão), UTF8, UTF16 ou UTF16BE, onde UTF16 é pouco endian e UTF16BE for big endian. Essas opções diferenciam maiusculas de minúsculas.  
   
 **-t** *field_delimiter*  
-O delimitador para cada campo (coluna) na linha. O delimitador de campo é um ou mais desses caracteres de escape de ASCII ou valores de hex ASCII...  
+O delimitador para cada campo (coluna) na linha. O delimitador de campo é um ou mais desses caracteres de escape de ASCII ou valores de hex ASCII.  
   
 |Nome|Caractere de escape|Caractere hexadecimal|  
 |--------|--------------------|-----------------|  
@@ -368,9 +369,9 @@ dam
 Exemplos de arquivo de entrada para 04 de março de 2010: 04-2010-03, 4/2010/3  
   
 *custom_date_format*  
-*custom_date_format* é um formato de data personalizada (por exemplo, MM/dd/aaaa) e incluído para compatibilidade com versões anteriores. dwloader faz não enfoce o formato de data personalizado. Em vez disso, quando você especifica um formato de data personalizado **dwloader** irá convertê-lo para a configuração correspondente de ymd, ydm, mdy, myd, dym ou dmy.  
+*custom_date_format* é um formato de data personalizada (por exemplo, MM/dd/aaaa) e incluído para compatibilidade com versões anteriores. dwloader não impõe o formato de data personalizado. Em vez disso, quando você especifica um formato de data personalizado **dwloader** irá convertê-lo para a configuração correspondente de ymd, ydm, mdy, myd, dym ou dmy.  
   
-Por exemplo, se você especificar -D MM/dd/aaaa, dwloader espera que todas as data de entrada para serem ordenados em primeiro lugar, com mês e em seguida, dia e ano (DMA). Ele não impõe 2 meses de caractere, 2 dias de dígito e anos de 4 dígitos conforme especificado pelo formato de data personalizada. Aqui estão alguns exemplos de como as datas podem ser formatadas no arquivo de entrada quando o formato de data for -D MM/dd/aaaa: 02/01/2013, Jan.02.2013, 2/1/2013  
+Por exemplo, se você especificar -D MM/dd/aaaa, dwloader espera que todas as data de entrada para serem ordenados em primeiro lugar, com mês e em seguida, dia e ano (DMA). Ele não impõe caracteres de 2 meses, dias de 2 dígitos e anos de 4 dígitos conforme especificado pelo formato de data personalizada. Aqui estão alguns exemplos de como as datas podem ser formatadas no arquivo de entrada quando o formato de data for -D MM/dd/aaaa: 02/01/2013, Jan.02.2013, 2/1/2013  
   
 Para obter informações de formatação mais abrangentes, consulte [tipo de dados de regras de conversão para dwloader](dwloader-data-type-conversion-rules.md).  
   
@@ -481,12 +482,15 @@ Não há nenhuma reversão com o modo de várias transações, o que significa q
 Verifique se que o dispositivo de destino tem um certificado válido do SQL Server PDW de uma autoridade confiável. Use isso para ajudar a garantir que os dados não estão sendo roubados por um invasor e enviados para um local não autorizado. O certificado já deve estar instalado no dispositivo. A única maneira com suporte para instalar o certificado é para o administrador do dispositivo para instalá-lo usando a ferramenta Configuration Manager. Peça ao seu administrador do dispositivo se você não estiver certo se o dispositivo tem um certificado confiável instalado.  
   
 **-se**  
-Ignorar carregamento de arquivos vazios. Isso também ignora descompactando arquivos gzip vazio.  
+Ignorar carregamento de arquivos vazios. Isso também ignora descompactando arquivos gzip vazio.
+
+**-l**  
+Disponível com a atualização CU7.4, especifica o comprimento máximo da linha (em bytes) que pode ser carregado. Os valores válidos são números inteiros entre 32768 e 33554432. Use somente quando necessário para carregar linhas grandes (maiores que 32KB), pois isso será alocar mais memória no cliente e servidor.
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
 0 (êxito) ou outro valor de inteiro (falha)  
   
-Em um arquivo de lote ou de janela de comando, use `errorlevel` para exibir o código de retorno. Por exemplo:   
+Em um arquivo de lote ou de janela de comando, use `errorlevel` para exibir o código de retorno. Por exemplo:  
   
 ```  
 dwloader  
@@ -542,7 +546,7 @@ A cadeia de caracteres vazia não deve ser usada como um delimitador. Quando uma
 -   **upsert** -Upsert carrega dados em uma tabela de preparo e, em seguida, executa uma operação de mesclagem da tabela de preparo para a tabela final. Upsert não exige um bloqueio exclusivo na tabela final. O desempenho pode variar ao usar upsert. Teste o comportamento em seu ambiente.  
   
 ### <a name="locking-behavior"></a>Comportamento de bloqueio  
-**Um bloqueio de modo de acréscimo**  
+**Bloqueio de modo de acréscimo**  
   
 Acrescentar pode ser executado no modo multi-transacional (usando o argumento -m), mas não é seguro de transação. Acrescentar, portanto, deve ser usado como uma operação transacional (sem usar o argumento -m). Infelizmente, durante a operação INSERT-SELECT final, modo transacional é atualmente aproximadamente seis vezes mais lento do que o modo de vários transacional.  
   
@@ -551,13 +555,13 @@ O modo de acréscimo carrega dados em duas fases. A fase um carrega dados do arq
 |Tipo de tabela|Transações múltiplas<br />Modo (-m)|Tabela está vazia|Simultaneidade com suporte|Registrando em log|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |Pilha|Sim|Sim|Sim|Mínimo|  
-|Pilha|Sim|Não|Sim|Mínimo|  
-|Pilha|Não|Sim|Não|Mínimo|  
-|Pilha|Não|Não|Não|Mínimo|  
+|Pilha|Sim|Não |Sim|Mínimo|  
+|Pilha|Não |Sim|Não |Mínimo|  
+|Pilha|Não|Não |Não |Mínimo|  
 |Cl|Sim|Sim|Não|Mínimo|  
 |Cl|Sim|Não|Sim|Completo|  
-|Cl|Não|Sim|Não|Mínimo|  
-|Cl|Não|Não|Sim|Completo|  
+|Cl|Não |Sim|Não |Mínimo|  
+|Cl|Não |Não |Sim|Completo|  
   
 Mostra a tabela acima **dwloader** usando o modo de acréscimo carregar em um heap ou uma tabela de índice clusterizado (CI), com ou sem o sinalizador de multi-transacional e carregar em uma tabela vazia ou uma tabela não vazia. O bloqueio e registro em log o comportamento de cada tal combinação de carga é exibido na tabela. Por exemplo, carregando fase (2ª) com o modo de acréscimo em um índice clusterizado sem modo multi-transacional e em um vazio tabela terá PDW criar um bloqueio exclusivo na tabela e registro em log é mínimo. Isso significa que um cliente não poderão carregar (2ª) fase e consulta simultaneamente em uma tabela vazia. No entanto, ao carregar com a mesma configuração em uma tabela não vazia, o PDW não emitirá um bloqueio exclusivo na tabela e a simultaneidade é possível. Infelizmente, registro em log completo ocorre, reduzindo o processo.  
   
@@ -600,7 +604,7 @@ O exemplo a seguir é parte de um script em lotes que carrega dados em **Adventu
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-O trecho de script a seguir usa dwloader para carregar dados nas tabelas DimAccount e DimCurrency. Esse script está usando um endereço de Ethernet. Se ele estava usando InfiniBand, servidor seria *< appliance_name >*`-SQLCTL01`.  
+O trecho de script a seguir usa dwloader para carregar dados nas tabelas DimAccount e DimCurrency. Esse script está usando um endereço de Ethernet. Se ele estava usando InfiniBand, servidor seria *< appliance_name >* `-SQLCTL01`.  
   
 ```  
 set server=10.193.63.134  

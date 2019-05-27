@@ -21,14 +21,18 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e6238c07e4da7aa9b19a5264282a1c7c2733ecad
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a6be73e7253bc0be8d8dde9766f9fcb8be0a2dfa
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277275"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725746"
 ---
 # <a name="deploy-packages-with-ssis"></a>Implantar pacotes com o SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece ferramentas que facilitam a implantação de pacotes em outro computador. As ferramentas de implantação também gerenciam qualquer dependência, como configurações e arquivos que o pacote precisa. Neste tutorial, você aprenderá a usar essas ferramentas para instalar pacotes e suas dependências em um computador de destino.    
     
 Primeiro, você executará as tarefas para preparar a implantação. Você criará um novo projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e adicionará pacotes e arquivos de dados existentes ao projeto. Você não criará nenhum pacote a partir do zero; em vez disso, apenas trabalhará com pacotes concluídos criados apenas para este tutorial. Você não modificará a funcionalidade dos pacotes neste tutorial; porém, após adicionar os pacotes ao projeto, poderá achar útil abrir os pacotes no Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] e revisar o conteúdo de cada pacote. Ao examinar os pacotes, aprenderá sobre as dependências dos pacotes, como arquivos de log, e sobre outros recursos interessantes dos pacotes.    
@@ -49,7 +53,7 @@ O objetivo deste tutorial é simular a complexidade dos problemas reais de impla
 O melhor modo de se familiarizar com as novas ferramentas, controles e recursos disponíveis no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é utilizando-os. Este tutorial guia você através das etapas para criar um projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e adicionar pacotes e outros arquivos necessários ao projeto. Após a conclusão do projeto, você criará um grupo de implantação, copiará o grupo para o computador de destino e instalará os pacotes no computador de destino.    
     
 ## <a name="prerequisites"></a>Prerequisites    
-Este tutorial destina-se a usuários que já estão familiarizados com as operações básicas do sistema de arquivos, mas que tiveram pouca exposição aos novos recursos disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para entender melhor os conceitos básicos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que serão usados neste tutorial, talvez seja útil completar primeiro o seguinte tutorial do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]: [SSIS: Como criar um pacote ETL[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].    
+Este tutorial destina-se a usuários que já estão familiarizados com as operações básicas do sistema de arquivos, mas que tiveram pouca exposição aos novos recursos disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para entender melhor os conceitos básicos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que serão usados neste tutorial, talvez seja útil completar primeiro o seguinte tutorial do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]: [SSIS: Como criar um pacote ETL](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
 ### <a name="on-the-source-computer"></a>No computador de origem
 

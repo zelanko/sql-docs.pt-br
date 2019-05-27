@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: add30d400db0a4ce73313ac5b7c4637bff8adfd9
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: d5e5a00bbe461062412882124a6419cc804c5721
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658290"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713314"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "58658290"
   
 -   Você pode executar operações de manutenção mais rapidamente em uma ou mais partições. As operações são mais eficientes porque elas visam apenas estes subconjuntos de dados, e não a tabela inteira. Por exemplo, você pode optar por compactar dados em uma ou mais partições ou recriar uma ou mais partições de um índice.  
   
--   Você pode aprimorar o desempenho de consultas com base nos tipos de consultas executadas com frequência e em sua configuração de hardware. Por exemplo, o otimizador de consulta pode processar consultas de junção de igualdade entre duas ou mais tabelas particionadas mais rápido quando as colunas de particionamento nas tabelas são iguais, porque as próprias partições podem ser unidas.  
+-   Você pode aprimorar o desempenho de consultas com base nos tipos de consultas executadas com frequência e em sua configuração de hardware. Por exemplo, o otimizador de consulta pode processar consultas de junção de igualdade entre duas ou mais tabelas particionadas mais rápido, quando as colunas de particionamento são iguais às colunas nas quais as tabelas são unidas. Confira [Consultas](#queries) abaixo para obter mais informações.
   
 Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa classificação de dados para operações de E/S, ele classifica os dados primeiro pela partição. O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acessa uma unidade de cada vez e isso pode reduzir o desempenho. Para melhorar o desempenho da classificação de dados, distribua os arquivos de dados de suas partições em mais de um disco configurando um RAID. Dessa maneira, embora o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda classifique os dados por partição, ele pode acessar todas as unidades de cada partição ao mesmo tempo.  
   

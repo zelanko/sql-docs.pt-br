@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.specifydsvandfacttables.f1
@@ -13,12 +12,12 @@ ms.assetid: b6c13587-c690-45d9-af90-b3d652afc55b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ef93edfe6e78dd86963c7e810d33ec413194746a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aca14c9462d847d91ae2b51dfdf179650ee06732
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746120"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068166"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Especificar Informações sobre a Origem (Assistente para Partições)
   Use a página **Especificar Informações sobre a Origem** para selecionar o grupo de medidas no qual criar a partição e também a exibição da fonte de dados e as tabelas de filtro da partição.  

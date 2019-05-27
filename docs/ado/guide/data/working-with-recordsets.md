@@ -54,16 +54,16 @@ O **Recordset** objeto possui recursos internos que permitem a você reorganizar
   
  Somente um nome de coluna única pode ser especificado para o critério. Em outras palavras, esse método não dá suporte a pesquisas de várias colunas.  
   
- O operador de comparação para o critério pode ser"**>**"(maior que),"**\<**" (menor que), "=" (igual), "> =" (maior que ou igual), "< =" (menor ou igual), " <> "(não igual), ou"Como"(correspondência de padrões).  
+ O operador de comparação para o critério pode ser" **>** "(maior que)," **\<** " (menor que), "=" (igual), "> =" (maior que ou igual), "< =" (menor ou igual), " <> "(não igual), ou"Como"(correspondência de padrões).  
   
- O valor de critério pode ser uma cadeia de caracteres, número de ponto flutuante ou data. Os valores de cadeia de caracteres são delimitados com aspas simples ou marcas de "#" (sinal numérico) (por exemplo, "estado = 'WA'" ou "estado = WA # #"). Valores de data são delimitados com marcas de "#" (sinal numérico) (por exemplo, "start_date > # 97 / #7/22").  
+ O valor de critério pode ser uma cadeia de caracteres, número de ponto flutuante ou data. Os valores de cadeia de caracteres são delimitados com aspas simples ou marcas de "#" (sinal numérico) (por exemplo, "estado = 'WA'" ou "estado = WA # #"). Valores de data são delimitados com marcas de "#" (sinal numérico) (por exemplo, "start_date > #7/22/97#").  
   
  Se o operador de comparação é "como", o valor de cadeia de caracteres pode conter um asterisco (*) para localizar uma ou mais ocorrências de qualquer caractere ou subcadeia de caracteres. Por exemplo, "estado, como estou\*'" corresponde a Maine e Massachusetts. Você também pode usar asteriscos à esquerda e à direita para localizar uma subcadeia de caracteres que está contida dentro dos valores. Por exemplo, "estado como '\*como\*'" corresponde a Alaska, Arkansas e Massachusetts.  
   
  Os asteriscos podem ser usados somente no final de uma cadeia de caracteres de critérios ou em conjunto no início e no final de uma cadeia de caracteres de critérios, como mostrado anteriormente. Você não pode usar o asterisco como curinga à esquerda ('* str') ou incorporados curinga ('s\*r'). Isso causará um erro.  
   
 ### <a name="seek-and-index"></a>Buscar e de índice  
- Use o **Seek** método junto com o **índice** propriedade se o provedor subjacente que dá suporte a índices no **Recordset** objeto. Use o [dá suporte a](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** método para determinar se o provedor subjacente dá suporte à **busca**e o **Supports(adIndex)** método para determinar se o provedor dá suporte a índices. (Por exemplo, o [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) dá suporte a **busca** e **índice**.)  
+ Use o **Seek** método junto com o **índice** propriedade se o provedor subjacente que dá suporte a índices no **Recordset** objeto. Use o [dá suporte a](../../../ado/reference/ado-api/supports-method.md) **(adSeek)** método para determinar se o provedor subjacente dá suporte à **busca**e o **Supports(adIndex)** método para determinar se o provedor dá suporte a índices. (Por exemplo, o [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) dá suporte a **busca** e **índice**.)  
   
  Se **Seek** não localizar a linha desejada, nenhum erro ocorre e a linha é posicionado no final o **conjunto de registros**. Defina as **índice** propriedade para o índice desejada antes de executar esse método.  
   
@@ -93,7 +93,7 @@ O **Recordset** objeto possui recursos internos que permitem a você reorganizar
 -   *Valor* é o valor com o qual você irá comparar os valores de campo (por exemplo, `'Smith'`, `#8/24/95#`, `12.345`, ou `$50.00`). Use aspas simples (') com cadeias de caracteres e sinais numéricos (`#`) com datas. Para números, você pode usar a notação científica, cifrões e pontos decimais. Se *operador* é **como**, *valor* pode usar caracteres curinga. Somente o asterisco (\*) e o sinal de porcentagem (%) caracteres curinga são permitidos, e eles devem ser o último caractere na cadeia de caracteres. *Valor* não pode ser nulo.  
   
     > [!NOTE]
-    >  Para incluir aspas simples (') no filtro *valor*, use duas aspas simples para representar um. Por exemplo, para filtrar por *o ' Malley*, a cadeia de caracteres de critérios deve ser `"col1 = 'O''Malley'"`. Para incluir aspas no início e final do valor do filtro, coloque a cadeia de caracteres entre sinais de sustenido (#). Por exemplo, para filtrar por *'1'*, a cadeia de caracteres de critérios deve ser `"col1 = #'1'#"`.  
+    >  Para incluir aspas simples (') no filtro *valor*, use duas aspas simples para representar um. Por exemplo, para filtrar por *o ' Malley*, a cadeia de caracteres de critérios deve ser `"col1 = 'O''Malley'"`. Para incluir aspas no início e final do valor do filtro, coloque a cadeia de caracteres entre sinais de sustenido (#). Por exemplo, para filtrar por *'1'* , a cadeia de caracteres de critérios deve ser `"col1 = #'1'#"`.  
   
  Não há nenhum precedência entre **AND** e **ou**. As cláusulas podem ser agrupadas dentro dos parênteses. No entanto, você não pode agrupar cláusulas unidas por uma **ou** e, em seguida, ingresse no grupo para outra cláusula com um AND, da seguinte maneira.  
   

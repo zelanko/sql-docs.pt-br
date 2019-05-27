@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7ed5b54ea07249a69e6f599e53658e8aba10d656
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bf433f27a5d8dc7f5e0efcf6f5774ed292d1e1a1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260754"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109073"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>Página Propriedades Gerais, conjuntos de dados compartilhados (Gerenciador de Relatórios)
   Use a página Conjunto de dados Compartilhado para exibir e gerenciar propriedades para um item de conjunto de dados compartilhado.  

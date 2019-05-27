@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - embedded data sources
@@ -15,12 +14,12 @@ ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bf9b9bfd500c5ddb9e10fb1e2320bf0287114808
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b987dd46f6a60a0d0cadc95cf187566eafa4f527
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164810"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109267"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>Conexões de dados ou fontes de dados compartilhadas e inseridas (Construtor de Relatórios e SSRS)
   Os relatórios usam conexões de dados para recuperar dados de um relatório quando uma consulta é executada ou o relatório é processado. Você escolhe em uma lista de tipos de conexões de dados internos a serem conectados a um banco de dados relacional, a um banco de dados multidimensional, a um serviço Web ou a alguma outra fonte de dados. Os termos a seguir são usados para descrever conexões de dados.  

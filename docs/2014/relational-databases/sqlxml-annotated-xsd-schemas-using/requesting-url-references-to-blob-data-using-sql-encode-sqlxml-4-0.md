@@ -16,15 +16,15 @@ helpviewer_keywords:
 - BLOBs, URL references
 - Base 64-encoded format
 ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b33588c55b22e044260aedc1b0809d24c4f1eb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 153a88bcb31f65d4e6aff007cfbee7d1f7afc6df
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63228901"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013727"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Solicitando referências URL a dados BLOB usando sql:encode (SQLXML 4.0)
   Em um esquema XSD anotado, quando um atributo (ou elemento) é mapeado para uma coluna BLOB no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os dados são retornados no formato codificado na base 64 no XML.  

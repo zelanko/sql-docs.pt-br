@@ -16,12 +16,12 @@ ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2ada1011096eb8275f9059e531cfc0fcc1af58c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: de862ffdc0ca3e1c975fd386ba3da464219ead50
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63232645"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015026"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Funções de API de nível do núcleo (Driver ODBC para Oracle)
 > [!IMPORTANT]  
@@ -41,7 +41,7 @@ ms.locfileid: "63232645"
 |**SQLDescribeCol**|Retorna o nome, tipo, precisão, escala e nulidade da coluna de resultados fornecido. **Observação:  SQLDescribeCol** relata colunas calculadas como SQL_VARCHAR.|  
 |**SQLDisconnect**|Fecha uma conexão. Se o pool de conexão está habilitado para um ambiente compartilhado e um aplicativo chama **SQLDisconnect** em uma conexão nesse ambiente, a conexão é retornada ao pool de conexão e ainda está disponível para outros componentes usando o mesmo ambiente compartilhado.|  
 |**SQLError**|Retorna informações de erro ou de status sobre o último erro. O driver mantém uma pilha ou a lista de erros que podem ser retornadas para o *hstmt*, *hdbc*, e *henv* argumentos, dependendo de como a chamada para **SQLError**  é feita. A fila de erros é liberada após cada instrução. Normalmente, recupera uma mensagem de erro do Oracle e, caso contrário, está vazia.|  
-|**SQLExecDirect**|Executa uma instrução SQL nova e não preparada. O driver usa os valores atuais das variáveis de marcador de parâmetro se há quaisquer parâmetros na instrução. Se sua tabela, exibição ou nomes de campo contiverem espaços, coloque os nomes de aspas em volta marcas. Por exemplo, se seu banco de dados contém uma tabela chamada *My Table* e o campo *Meu campo*, coloque cada elemento do identificador da seguinte forma:<br /><br /> Selecione \`minha tabela\`. \`Meu campo1\`, \`Minha tabela\`.\` Meu Field2\` FROM \`minha tabela '|  
+|**SQLExecDirect**|Executa uma instrução SQL nova e não preparada. O driver usa os valores atuais das variáveis de marcador de parâmetro se há quaisquer parâmetros na instrução. Se sua tabela, exibição ou nomes de campo contiverem espaços, coloque os nomes de aspas em volta marcas. Por exemplo, se seu banco de dados contém uma tabela chamada *My Table* e o campo *Meu campo*, coloque cada elemento do identificador da seguinte forma:<br /><br /> Selecione \`minha tabela\`. \`Meu campo1\`, \`Minha tabela\`.\` Meu Field2\` FROM \`minha tabela ' \|  
 |**SQLExecute**|Executa uma instrução SQL preparada (uma instrução já foi preparada pela **SQLPrepare**). O driver usa os valores atuais das variáveis de marcador de parâmetro se há quaisquer parâmetros na instrução.|  
 |**SQLFetch**|Recupera uma linha de um conjunto de resultados em locais especificados pelas chamadas anteriores ao **SQLBindCol**. Prepara o driver para uma chamada para **SQLGetData** para as colunas não associadas.|  
 |**SQLFreeConnect**|Libera um identificador de conexão e libera toda a memória alocada para o identificador.|  
@@ -49,7 +49,7 @@ ms.locfileid: "63232645"
 |**SQLFreeStmt**|Interrompe o processamento associado a um hstmt específico, fechará quaisquer cursores abertos associados a hstmt, descartará resultados pendentes e, opcionalmente, libera todos os recursos associados com o identificador de instrução.|  
 |**SQLGetCursorName**|Retorna o nome do cursor associado a determinado hstmt.|  
 |**SQLNumResultCols**|Retorna o número de colunas em um cursor de conjunto de resultados.|  
-|**SQLPrepare**|Prepara uma instrução SQL, como planejar a otimizar e execute a instrução. A instrução SQL é compilada para execução pelo **SQLExecDirect**.<br /><br /> Se sua tabela, exibição ou nomes de campo contiverem espaços, coloque os nomes de aspas em volta marcas. Por exemplo, se seu banco de dados contém uma tabela chamada *My Table* e o campo *Meu campo*, coloque cada elemento do identificador da seguinte maneira:<br /><br /> Selecione \`minha tabela\`.\` Meu campo\` FROM \`minha tabela '<br /><br /> Para obter informações sobre como usar conjuntos de resultados que contêm matrizes como parâmetros formais, consulte [retornando parâmetros da matriz de procedimentos armazenados](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md).|  
+|**SQLPrepare**|Prepara uma instrução SQL, como planejar a otimizar e execute a instrução. A instrução SQL é compilada para execução pelo **SQLExecDirect**.<br /><br /> Se sua tabela, exibição ou nomes de campo contiverem espaços, coloque os nomes de aspas em volta marcas. Por exemplo, se seu banco de dados contém uma tabela chamada *My Table* e o campo *Meu campo*, coloque cada elemento do identificador da seguinte maneira:<br /><br /> Selecione \`minha tabela\`.\` Meu campo\` FROM \`minha tabela '<br /><br /> Para obter informações sobre como usar conjuntos de resultados que contêm matrizes como parâmetros formais, consulte [retornando parâmetros da matriz de procedimentos armazenados](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md). \|  
 |**SQLRowCount**|Oracle não fornece uma maneira de determinar o número de linhas em um resultado definido até depois de você busca a última linha, portanto, ele retornará -1.|  
 |**SQLSetCursorName**|Associa um nome de cursor com um identificador de instrução ativa *hstmt*.|  
 |**SQLSetParam**|Substituído por SQLBindParameter no ODBC 2. *x*.|  

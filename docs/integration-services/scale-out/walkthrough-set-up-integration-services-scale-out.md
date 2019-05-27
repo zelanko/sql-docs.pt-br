@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 4f68e562884073761303b2450956ae4ebaca66ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eb9f4bbf5a5c20d713b6d2e255900a88137b79c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620564"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718491"
 ---
-# <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Passo a passo: Configurar o SSIS (Integration Services) Scale Out
+# <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Passo a passo: Configurar o Integration Services (SSIS) Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Configure o SSIS ([!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]) Scale Out concluindo as tarefas a seguir. 
 
 > [!TIP]
@@ -69,7 +73,7 @@ Para instalar o recurso Mestre do Scale Out, use o assistente de instalação do
 
     ![Configuração do Mestre 2](media/master-config-2.PNG "Master Config 2")
   
-5.  Conclua o assistente de instalação [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
+5.  Conclua o assistente de instalação [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] .
 
 ### <a name="install-scale-out-master-from-the-command-prompt"></a>Instalar o Mestre do Scale Out por meio do prompt de comando
 
@@ -124,7 +128,7 @@ Para instalar o recurso Trabalho do Scale Out, use o assistente de instalação 
     > [!NOTE]
     > Quando o certificado SSL usado pelo Mestre do Scale Out for autoassinado, um certificado SSL do cliente correspondente precisará ser instalado no computador com o Trabalho do Scale Out. Se você fornecer o caminho do arquivo para o Certificado SSL do cliente na página **Configuração de Trabalho do Integration Services Scale Out**, o certificado será instalado automaticamente; caso contrário, você precisará instalá-lo manualmente mais tarde. 
      
-5. Conclua o assistente de instalação [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
+5. Conclua o assistente de instalação [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] .
 
 ### <a name="install-scale-out-worker-from-the-command-prompt"></a>Instalar o Trabalho do Scale Out por meio do prompt de comando
 

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8c12736694451d1a6fd1dff34c4f883cb45694e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cd43f430f43f31435df6fff71687136f4bd5f9e7
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62876908"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010355"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Acessar FileTables com APIs de entrada e saída de arquivo
   Descreve como a E/S do sistema de arquivos funciona em uma FileTable.  
@@ -105,22 +105,22 @@ ms.locfileid: "62876908"
 |Recurso|Supported|Comentários|  
 |----------------|---------------|--------------|  
 |**Oplocks**|Sim|Há suporte para oplocks de Nível 2, Nível 1, Lote e Filtro.|  
-|**Atributos estendidos**|Não||  
-|**Pontos de reanálise**|Não||  
-|**ACLs persistentes**|Não||  
-|**Fluxos nomeados**|Não||  
+|**Atributos estendidos**|Não ||  
+|**Pontos de reanálise**|Não ||  
+|**ACLs persistentes**|Não ||  
+|**Fluxos nomeados**|Não ||  
 |**Arquivos esparsos**|Sim|A dispersão pode ser definida somente em arquivos e afeta o armazenamento do fluxo de dados. Como os dados FILESTREAM são armazenados em volumes NTFS, o recurso FileTable oferece suporte a arquivos esparsos encaminhando as solicitações ao sistema de arquivos NTFS.|  
 |**Compactação**|Sim||  
 |**Criptografia**|Sim||  
-|**TxF**|Não||  
-|**Ids de arquivo**|Não||  
-|**Ids de objeto**|Não||  
-|**Links simbólicos**|Não||  
-|**Links físicos**|Não||  
-|**Nomes curtos**|Não||  
+|**TxF**|Não ||  
+|**Ids de arquivo**|Não ||  
+|**Ids de objeto**|Não ||  
+|**Links simbólicos**|Não ||  
+|**Links físicos**|Não ||  
+|**Nomes curtos**|Não ||  
 |**Notificações de alteração de diretório**|Não||  
 |**Bloqueio de intervalo de bytes**|Sim|As solicitações de bloqueio de intervalo de bytes são passadas ao sistema de arquivos NTFS.|  
-|**Arquivos mapeados na memória**|Não||  
+|**Arquivos mapeados na memória**|Não ||  
 |**Cancelar E/S**|Sim||  
 |**Segurança**|Não|A segurança em nível de compartilhamento do Windows e a segurança em nível de tabela e coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são impostas.|  
 |**Diário USN**|Não|As alterações de metadados em arquivos e diretórios de uma FileTable são operações DML em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Portanto, elas são registradas em log no arquivo de log de banco de dados correspondente. Entretanto, não são registradas no diário NTFS USN (com exceção de alterações de tamanho).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser usados para capturar informações semelhantes.|  

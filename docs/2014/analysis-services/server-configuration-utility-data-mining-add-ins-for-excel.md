@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e7a40b0cbcab787b6aa29abaa828aedcce8f5c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bdc8434673d9220f22d31f1736bd67012653dc88
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746798"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069066"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Utilitário de Configuração de Servidor (Suplementos de Mineração de Dados para Excel)
   Quando você instala os suplementos de mineração de dados para Excel, um utilitário de configuração do servidor também é instalado e será executado na primeira vez que você abra os suplementos. Este tópico descreve como usar o utilitário para se conectar a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e configurar um banco de dados para trabalhar com modelos de mineração de dados.  

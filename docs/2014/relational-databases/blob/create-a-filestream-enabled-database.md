@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], FILESTREAM-enabled databases
 ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 65de151b2ea2bb59330bae0fa94c9e15d67e4a47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 810b1d36eefb99d6e1bcf855dc7710495429751a
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62875059"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010322"
 ---
 # <a name="create-a-filestream-enabled-database"></a>Criar um banco de dados habilitado para FILESTREAM
   Este tópico mostra como criar um banco de dados que oferece suporte a FILESTREAM. Como o FILESTREAM usa um tipo especial de grupo de arquivos, ao criar o banco de dados, será preciso especificar a cláusula CONTAINS FILESTREAM para pelo menos um grupo de arquivos.  

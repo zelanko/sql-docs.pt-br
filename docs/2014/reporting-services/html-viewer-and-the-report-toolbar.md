@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
@@ -14,12 +13,12 @@ ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 86ac5b6da861477bfd5b8e92feac97068ca5adc9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b8043bb8f95ea67dbc3dceedc9cfd0154b033d51
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63261233"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109048"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visualizador de HTML e a barra de ferramentas de relatório
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece um Visualizador de HTML que é usado para exibir relatórios sob demanda à medida que são solicitados no servidor de relatório. O Visualizador de HTML fornece uma estrutura para exibir relatórios em HTML. Ele inclui uma barra de ferramentas de relatório, uma seção de parâmetros, uma seção de credenciais e um mapa do documento. A barra de ferramentas de relatório no Visualizador de HTML inclui recursos que você pode usar para trabalhar com seu relatório, incluindo opções de exportação para que seja possível exibir seu relatório em formatos diferentes de HTML. A seção de parâmetros e o mapa do documento aparecem somente quando você abre relatórios configurados para usar parâmetros e um controle do mapa do documento.  

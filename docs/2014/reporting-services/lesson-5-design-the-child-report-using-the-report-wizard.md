@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fd86b5b8b6466f6075f2b3c8814fb13a8ec62d9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 661b4f3cc63eb0c19fddb53f872e940d1f9976e2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63224856"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108435"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Lição 5: Criar o relatório filho usando o Assistente de Relatório
   Após criar uma conexão de dados e uma tabela de dados para o relatório filho, a próxima etapa será criar o relatório filho usando o Assistente de Relatório no Designer de Relatórios. Para obter mais informações sobre o Designer de Relatórios, consulte [Criar relatórios com o Designer de Relatórios &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  

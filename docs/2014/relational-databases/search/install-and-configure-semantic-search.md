@@ -10,22 +10,22 @@ helpviewer_keywords:
 - semantic search [SQL Server], installing
 - semantic search [SQL Server], configuring
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 80a7b0dd13688dca542587fbebd20c5b1818972a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7ac7238d643165bc093a8a1cabd5d1dac662dfc
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63273499"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011138"
 ---
 # <a name="install-and-configure-semantic-search"></a>Instalar e configurar a pesquisa semântica
   Descreve os pré-requisitos para a pesquisa semântica estatística e como instalá-los ou verificá-los.  
   
 ## <a name="installing-semantic-search"></a>Instalando a pesquisa semântica  
   
-###  <a name="HowToCheckInstalled"></a> Como: Verificar se a pesquisa semântica está instalada  
+###  <a name="HowToCheckInstalled"></a> Como Verificar se a pesquisa semântica está instalada  
  Consulte a propriedade **IsFullTextInstalled** da função de metadados [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql).  
   
  Um valor de retorno 1 indica que a pesquisa de texto completo e a pesquisa semântica estão instaladas; um valor de retorno 0 indica que não estão instaladas.  
@@ -35,7 +35,7 @@ SELECT SERVERPROPERTY('IsFullTextInstalled');
 GO  
 ```  
   
-###  <a name="BasicsSemanticSearch"></a> Como: Instalar a pesquisa semântica  
+###  <a name="BasicsSemanticSearch"></a> Como Instalar a pesquisa semântica  
  Para instalar a Pesquisa Semântica, selecione **Extrações Semânticas e de Texto Completo para Pesquisa** na página **Features to Install (Recursos a serem instalados)** durante a instalação.  
   
  A pesquisa semântica estatística depende da pesquisa de texto completo. Esses dois recursos opcionais do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] são instalados juntos.  
@@ -43,7 +43,7 @@ GO
 ## <a name="installing-or-removing-the-semantic-language-statistics-database"></a>Instalando ou removendo o banco de dados de estatísticas semânticas de idioma  
  A Pesquisa Semântica tem uma dependência externa adicional denominada banco de dados de estatísticas semânticas de idioma. Esse banco de dados contém os modelos de idioma estatísticos requeridos pela pesquisa semântica. Um único banco de dados de estatísticas semânticas de idioma contém os modelos para todos os idiomas com suporte na indexação semântica.  
   
-###  <a name="HowToCheckDatabase"></a> Como: Verificar se o banco de dados de estatísticas semânticas de idioma está instalado  
+###  <a name="HowToCheckDatabase"></a> Como Verificar se o banco de dados de estatísticas semânticas de idioma está instalado  
  Consulte a exibição de catálogo [sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql).  
   
  Se o banco de dados de estatísticas semânticas de idioma for instalado e registrado para a instância, os resultados da consulta conterão uma única linha de informações sobre o banco de dados.  
@@ -53,7 +53,7 @@ SELECT * FROM sys.fulltext_semantic_language_statistics_database;
 GO  
 ```  
   
-###  <a name="HowToInstallModel"></a> Como: Instalar, anexar e registrar o banco de dados de estatísticas semânticas de idioma  
+###  <a name="HowToInstallModel"></a> Como Instalar, anexar e registrar o banco de dados de estatísticas semânticas de idioma  
  O banco de dados de estatísticas semânticas de idioma não é instalado pelo programa de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para configurar o banco de dados de estatísticas semânticas de idioma como um pré-requisito para a indexação semântica, execute estas tarefas:  
   
  **1. Instale o banco de dados de estatísticas semânticas de idioma.**  
@@ -97,7 +97,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsd
 GO  
 ```  
   
-###  <a name="HowToUnregister"></a> Como: Cancelar o registro, desanexar e remover o banco de dados de estatísticas semânticas de idioma  
+###  <a name="HowToUnregister"></a> Como Cancelar o registro, desanexar e remover o banco de dados de estatísticas semânticas de idioma  
  **Cancelar o registro do banco de dados de estatísticas semânticas de idioma.**  
  Chame o procedimento armazenado [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql). Você não precisa fornecer o nome do banco de dados, já que uma instância pode ter somente um banco de dados de estatísticas semânticas de idioma.  
   
@@ -134,7 +134,7 @@ GO
   
 ## <a name="installing-optional-support-for-newer-document-types"></a>Instalando suporte opcional para tipos de documento mais novos  
   
-###  <a name="office"></a> Como: Instalar os filtros mais recentes do Microsoft Office e outros tipos de documento da Microsoft  
+###  <a name="office"></a> Como Instalar os filtros mais recentes do Microsoft Office e outros tipos de documento da Microsoft  
  Esta versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala os separadores de palavras e lematizadores mais recentes do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] , mas não instala os últimos filtros de documentos do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office e outros tipos de documento [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Esses filtros são necessários para indexação de documentos criados com versões recentes do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office e outros aplicativos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Para baixar os filtros mais recentes, consulte [Microsoft Office 2010 Filter Packs](https://go.microsoft.com/fwlink/?LinkId=218293).  
   
   

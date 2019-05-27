@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - semiadditive
@@ -15,12 +14,12 @@ ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84b5d71a14c08c47d630ed834ef0a6e436b52edd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726283"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075535"
 ---
 # <a name="define-semiadditive-behavior"></a>Definir um comportamento semiaditivo
   Medidas semiaditivas, que não agregam uniformemente todas as dimensões, são muito comuns em muitos cenários empresariais. Todo cubo que se baseia em instantâneos de balanços, com o decorrer do tempo, apresenta esse problema. Você encontra esses instantâneos em aplicativos que cuidam de títulos, saldos de contas, orçamentos, recursos humanos, apólices de seguros e sinistros e em vários outros domínios empresariais.  

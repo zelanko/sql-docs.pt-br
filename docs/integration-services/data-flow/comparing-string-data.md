@@ -17,14 +17,18 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8de2ce3e407de132869138a54d5a17559b6308bc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 578ff14516eb40aa32e401f06bad9c747e1f24bd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270703"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727133"
 ---
 # <a name="comparing-string-data"></a>comparando dados de cadeia de caracteres
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Comparações de cadeia de caracteres são uma parte importante de muitas das transformações realizadas pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e as comparações de cadeia de caracteres também são usadas na avaliação de expressões em variáveis e expressões de propriedade. Por exemplo, a transformação de Classificação compara valores em um conjunto de dados para classificar dados em ordem crescente ou decrescente.  
   
 ## <a name="configuring-transformations-for-string-comparisons"></a>Configurando transformações para comparações de cadeias de caracteres  
@@ -64,7 +68,7 @@ ms.locfileid: "58270703"
  Também é possível especificar uma localidade para o gerenciamento de conexões de Arquivo Simples e um gerenciador de conexões de Vários Arquivos Simples.  
   
 ## <a name="setting-comparison-options"></a>Definindo opções de comparação  
- A localidade fornece as regras básicas para comparar dados de cadeia de caracteres. Por exemplo, a localidade especifica a posição de classificação de cada letra no alfabeto. No entanto, essas regras podem não ser suficientes para as comparações que algumas transformações realizam e o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oferece suporte a um conjunto de opções de comparação avançadas que vão além das regras de comparação de uma localidade. Estas opções de comparação são definidas no nível da coluna. Por exemplo, um das opções de comparação permite que você ignore caracteres de não espaçamento. O efeito dessa opção é ignorar diacríticos como o acento, que torna "a" e "á" idênticos para fins de comparação.  
+ A localidade fornece as regras básicas para comparar dados de cadeia de caracteres. Por exemplo, a localidade especifica a posição de classificação de cada letra no alfabeto. No entanto, essas regras podem não ser suficientes para as comparações que algumas transformações realizam e o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oferece suporte a um conjunto de opções de comparação avançadas que vão além das regras de comparação de uma localidade. Estas opções de comparação são definidas no nível da coluna. Por exemplo, um das opções de comparação permite que você ignore caracteres de não espaçamento. O efeito dessa opção é ignorar diacríticos como o acento, que torna "a" e "Ã¡" idênticos para fins de comparação.  
   
  A seguinte tabela descreve as opções de comparação e um estilo de classificação.  
   
@@ -73,7 +77,7 @@ ms.locfileid: "58270703"
 |Ignora maiúsculas e minúsculas|Especifica se a comparação faz distinção entre letras maiúsculas e minúsculas. Se esta opção for definida, a comparação de cadeia de caracteres ignorará a distinção entre letras maiúsculas e minúsculas. Por exemplo, "ABC" torna-se igual a "abc".|  
 |Ignora o tipo kana|Especifica se a comparação distingue os dois tipos de caracteres de kana japoneses: hiragana e katakana. Se esta opção for definida, a comparação de cadeia de caracteres ignorará o tipo de kana usado.|  
 |Ignora largura do caractere|Especifica se a comparação faz distinção entre um caractere de byte único e o mesmo caractere representado como um caractere de byte duplo. Se esta opção for definida, a comparação de cadeia de caracteres tratará representações de byte único e representações de byte duplo do mesmo caractere como idênticas.|  
-|Ignora caracteres de não espaçamento|Especifica se a comparação distingue entre caracteres de espaço e sinais diacríticos. Se esta opção for definida, a comparação ignorará os sinais diacríticos. Por exemplo, "å" é igual a "a".|  
+|Ignora caracteres de não espaçamento|Especifica se a comparação distingue entre caracteres de espaço e sinais diacríticos. Se esta opção for definida, a comparação ignorará os sinais diacríticos. Por exemplo, "Ã¥" é igual a "a".|  
 |Ignora símbolos|Especifica se a comparação faz distinção entre caracteres de letra e símbolos como caracteres de espaço em branco, pontuação, símbolos monetários e matemáticos. Se esta opção estiver definida, a comparação de cadeia de caracteres ignorará símbolos. Por exemplo, " Nova Iorque" se torna igual a "Nova Iorque" e "* ABC" é o mesmo que "ABC" '.|  
 |Classificar pontuação como símbolos|Especifica se a comparação classifica todos os símbolos de pontuação, menos o hífen e o apóstrofo, antes dos caracteres alfanuméricos. Por exemplo, se esta opção for definida, ".ABC" será classificada antes de "ABC."|  
   

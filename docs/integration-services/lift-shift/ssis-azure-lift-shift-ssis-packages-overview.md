@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: bd2d91d38c964bc2795294a1ca4a4617fe2a0a48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c9c881cbbefc5fa8fb9f0810a5c8ea26f375a56
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829658"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721473"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migrar cargas de trabalho do SQL Server Integration Services por lift-and-shift para a nuvem
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Agora você pode mover suas cargas de trabalho, pacotes e projetos do SSIS (SQL Server Integration Services) para a nuvem do Microsoft Azure. Implante, execute e gerencie projetos do SSIS e pacotes no Catálogo SSIS (SSISDB) no Banco de Dados SQL do Azure ou na Instância Gerenciada do Banco de Dados SQL com ferramentas familiares, como o SSMS (SQL Server Management Studio).
 
 ## <a name="benefits"></a>Benefícios
@@ -42,9 +46,9 @@ A diferença mais importante é a separação do armazenamento do tempo de execu
 
 **Provisione**. Antes de implantar e executar os pacotes SSIS no Azure, é necessário provisionar o SSISDB (Catálogo do SSIS) e o Azure-SSIS Integration Runtime.
 
--   Para provisionar o SSIS no Azure no portal do Azure, siga as etapas de provisionamento neste artigo: [Provisionar o Azure-SSIS Integration Runtime no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure). 
+-   Para provisionar o SSIS no Azure, usando o portal do Azure, siga as etapas de provisionamento deste artigo: [Provisionar o Azure-SSIS Integration Runtime no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure). 
 
--   Para provisionar o SSIS no Azure com o PowerShell, siga as etapas de provisionamento neste artigo: [Provisionar o Azure-SSIS Integration Runtime no Azure Data Factory com o PowerShell](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell).
+-   Para provisionar o SSIS no Azure, usando o PowerShell, siga as etapas de provisionamento neste artigo: [Provisionar o Azure-SSIS Integration Runtime no Azure Data Factory com o PowerShell](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell).
 
 Você só precisa provisionar o IR do Azure-SSIS uma vez. Depois disso, você pode usar ferramentas familiares, como SSDT (SQL Server Data Tools) e o SSMS (SQL Server Management Studio) para implantar, configurar, executar, monitorar, agendar e gerenciar pacotes.
 
@@ -88,7 +92,7 @@ Com o Banco de Dados SQL do Azure, você só pode usar transações elásticas. 
 
 ## <a name="deploy-and-run-packages"></a>Implantar e executar pacotes
 
-Para começar, confira [Tutorial: Implantar e executar um pacote SSIS (SQL Server Integration Services) no Azure](ssis-azure-deploy-run-monitor-tutorial.md).
+Para começar, confira [Tutorial: implantar e executar um pacote SSIS (SQL Server Integration Services) no Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
 ### <a name="prerequisites"></a>Prerequisites
 
@@ -112,7 +116,7 @@ Para implantar projetos no Azure, é possível usar uma das diversas ferramentas
 
 O processo de implantação valida os pacotes para garantir que eles possam ser executados no Integration Runtime do SSIS-Azure. Para saber mais, confira [Validar pacotes SSIS (SQL Server Integration Services) implantados no Azure](ssis-azure-validate-packages.md).
 
-Para obter um exemplo de implantação que usa o SSMS e o Assistente de Implantação do Integration Services, confira [Tutorial: Implantar e executar um pacote do SQL Server Integration Services (SSIS) no Azure](ssis-azure-deploy-run-monitor-tutorial.md).
+Confira um exemplo de implantação que usa o SSMS e o Assistente de implantação do Integration Services no [Tutorial: implantar e executar um pacote SSIS (SQL Server Integration Services) no Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
 ### <a name="version-support"></a>Suporte à versão
 
@@ -141,5 +145,5 @@ Para agendar a execução de pacotes implantados no Azure, você pode usar uma v
 
 ## <a name="next-steps"></a>Próximas etapas
 Para uma introdução às cargas de trabalho de SSIS no Azure, consulte os seguintes artigos:
--   [Tutorial: Implantar e executar um pacote SSIS (SQL Server Integration Services) no Azure](ssis-azure-deploy-run-monitor-tutorial.md)
+-   [Tutorial: implantar e executar um pacote SSIS (SQL Server Integration Services) no Azure](ssis-azure-deploy-run-monitor-tutorial.md)
 -   [Provisionar o Azure-SSIS Integration Runtime no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)

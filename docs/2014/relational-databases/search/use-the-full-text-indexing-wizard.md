@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Full-Text Indexing Wizard
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 767c83b5eb6483ca4804e8602886932ff8e40793
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7bab4ee8f03eb666e1a8396fbf8957b1e42f2c7
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237819"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010896"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar o Assistente para Indexação de Texto Completo
   O Assistente para Indexação de Texto Completo guia você por uma série de etapas planejadas para ajudá-lo a criar um índice de texto completo.  

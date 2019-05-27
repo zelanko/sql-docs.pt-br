@@ -1,8 +1,7 @@
 ---
 title: Compare os recursos de Business Intelligence em diferentes ambientes Microsoft | Microsoft Docs
 ms.prod: sql-server-2014
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -10,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
-ms.openlocfilehash: 13ae9380cc3f034ace5f43d83640eea665cb3b02
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 00eb4dc7d90226f7d5c944ea3b878aefb4c8a105
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63267269"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109758"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Comparar recursos de Business Intelligence em diferentes ambientes Microsoft
 
@@ -27,16 +26,16 @@ Para obter mais informações comparando o SharePoint Server e o SharePoint Onli
   
 ||SQL Server 2014 & SharePoint Server 2013|SharePoint Online plano 2|Power BI para Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
-|Sites BI|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Galeria|Não|Site do Power BI|  
-|Gerenciamento e compartilhamento de consulta e administração de dados|Não|Não|Sim **<sup>1</sup>**|  
-|Integração com o Master Data Services (MDS) e Data Quality Services (DQS)|Sim|Não|Não|  
-|Agendar atualização de dados|Sim, mas não aceita as pastas de trabalho que contêm dados Power Query|Não|Sim|  
-|Consulta em idioma natural (Q & A)|Não|Não|Sim **<sup>2</sup>**|  
-|Previsão de previsão|Não|Não|Sim **<sup>3</sup>**|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] integração|Sim|Não|Não|  
-|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] integração (Multidimensional e Tabular)|Sim|Não|Não|  
+|Sites BI|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Galeria|Não |Site do Power BI|  
+|Gerenciamento e compartilhamento de consulta e administração de dados|Não |Não|Sim **<sup>1</sup>**|  
+|Integração com o Master Data Services (MDS) e Data Quality Services (DQS)|Sim|Não |Não|  
+|Agendar atualização de dados|Sim, mas não aceita as pastas de trabalho que contêm dados Power Query|Não |Sim|  
+|Consulta em idioma natural (Q & A)|Não |Não |Sim **<sup>2</sup>**|  
+|Previsão de previsão|Não |Não |Sim **<sup>3</sup>**|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] integração|Sim|Não |Não |  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] integração (Multidimensional e Tabular)|Sim|Não|Não |  
 |Exportar painel interativo do Power View para apresentação do PowerPoint|Sim|Não|Não|  
-|Criação de painel no navegador|Sim|Não|Não|  
+|Criação de painel no navegador|Sim|Não|Não |  
 |Monitoramento de uso|Sim|Não|Sim|  
 |Aproveitar segurança de baseada em linha de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubos|Sim|Não|Não|  
   
@@ -51,9 +50,9 @@ Para obter mais informações comparando o SharePoint Server e o SharePoint Onli
 ||SQL Server 2014 & SharePoint Server 2013|SharePoint Online plano 2|Power BI para Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
 |Exibir pastas de trabalho do Microsoft Excel em um navegador|Sim, se a pasta de trabalho tiver menos de 2 GB de tamanho|Sim, se a pasta de trabalho tiver menos de 10 MB de tamanho|Sim, se a pasta de trabalho tiver menos de 250 MB de tamanho|  
-|Exploração de dados no navegador em HTML5|Não|Não|Sim|  
-|Aplicativo Mobile BI para acessar relatórios e painéis remotamente|Não|Não|Sim **<sup>1</sup>**|  
-|Pasta de trabalho do Excel com [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] como uma fonte de dados **<sup>2</sup>**|Sim|Não|Não|  
+|Exploração de dados no navegador em HTML5|Não |Não |Sim|  
+|Aplicativo Mobile BI para acessar relatórios e painéis remotamente|Não|Não |Sim **<sup>1</sup>**|  
+|Pasta de trabalho do Excel com [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] como uma fonte de dados **<sup>2</sup>**|Sim|Não |Não |  
 |Capacidade de usar os recursos em diferentes navegadores e versões|Sim, para visualizações não Power View **<sup>3</sup>**|Sim, para tamanhos de arquivo de pasta de trabalho menores que 10 MB **<sup>3</sup>**|Sim **<sup>3</sup>**|  
   
  **<sup>1</sup>**  [Microsoft Power BI](http://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba).  

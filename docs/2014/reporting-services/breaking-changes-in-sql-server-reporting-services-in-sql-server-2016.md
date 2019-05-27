@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Me.Value references
@@ -15,12 +14,12 @@ ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e779a88940db2883846168535e7823c1723f4b4e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0d86c9bb07a52aba0cd93b006fc33edf4d1aa885
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266722"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109926"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>Alterações recentes no SQL Server Reporting Services do SQL Server 2014
   Este tópico descreve as alterações recentes no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Você pode encontrar esses problemas durante a atualização ou em scripts ou relatórios personalizados. Para obter mais informações, consulte [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  

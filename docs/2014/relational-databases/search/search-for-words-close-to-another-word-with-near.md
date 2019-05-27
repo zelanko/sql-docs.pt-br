@@ -17,15 +17,15 @@ helpviewer_keywords:
 - full-text queries [SQL Server], proximity
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3493657fb537057f7c0ff8e126582ceb6faccc11
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238398"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011073"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Procurar palavras perto de outra palavra com NEAR
   Você pode usar uma condição de proximidade (NEAR) em um predicado [CONTAINS](/sql/t-sql/queries/contains-transact-sql) ou uma função [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) para procurar palavras ou frases próximas umas das outras. Você também pode especificar o número máximo de condições não relacionadas à pesquisa que separam a primeira e a última condição da pesquisa. Além disso, você pode pesquisar palavras ou frases em qualquer ordem, ou pode pesquisar palavras ou frases na ordem em que especificá-las. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte a ambos cedo [de proximidade genérica](#Generic_NEAR), que agora está obsoleto e o [de proximidade personalizada](#Custom_NEAR), que é nova no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  

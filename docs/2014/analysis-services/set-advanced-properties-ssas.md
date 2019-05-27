@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.setadvancedprop.f1
@@ -13,12 +12,12 @@ ms.assetid: 69928b3e-53c8-4e6c-83a5-3dd3cf7ece7c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 68a3a90500149e982cc45ad417f3dd68ef524140
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5afadecc745057344fd86df21b4479dabc1f7685
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746678"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068833"
 ---
 # <a name="set-advanced-properties-ssas"></a>Definir propriedades avançadas (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a especificar configurações de propriedades adicionais para uma conexão de fonte de dados. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  

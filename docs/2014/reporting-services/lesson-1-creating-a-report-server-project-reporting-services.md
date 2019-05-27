@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 52050b9513de2638cacc394309f7e87d6ba77709
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3f97834b5df61df836b7cfd4cc4d890877f8855a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143266"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108527"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lição 1: Criar um projeto do servidor de relatórios (Reporting Services)
   Para criar um relatório no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], primeiro crie um projeto de servidor de relatório em que o arquivo de definição de relatório (.rdl) e qualquer outro arquivo de recursos que seja necessário sejam salvos para o relatório. Em seguida, você criará o arquivo de definição do relatório real, definirá uma fonte de dados para o relatório, um conjunto de dados e o layout do relatório. Quando você executar o relatório, os dados reais serão recuperados e combinados com o layout e renderizados na tela, de onde ele poderá ser exportado, impresso ou salvo.  

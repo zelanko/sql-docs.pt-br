@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data formats [SQL Server], field length
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f5ed900eae974eb768223d534e6ac43025e9718c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: abb451611f7e102e9167561ef2c3a4b64e00fb12
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63154861"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011837"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Especificar tamanho do campo usando bcp (SQL Server)
   O tamanho do campo indica o número máximo de caracteres que são exigidos para representar dados em formato de caractere. O tamanho do campo já será conhecido se os dados forem armazenados no formato nativo; por exemplo, o tipo de dados `int` usa 4 bytes. Se você indicou 0 para o comprimento do prefixo, o **bcp** comando solicitará o comprimento de campo, os tamanhos de campo padrão e o impacto do tamanho do campo no armazenamento de dados em arquivos de dados que contêm `char` dados.  

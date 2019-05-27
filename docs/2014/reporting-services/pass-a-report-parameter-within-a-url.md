@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], passing parameters
@@ -14,12 +13,12 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f05aaedf8e3b8bb15d5d15d47823752832e659a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97fa6d01fc4a06825814c8494268ecb668f1da7d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188266"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108107"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pass a Report Parameter Within a URL
   Você pode transmitir parâmetros de relatório a um relatório incluindo-os em uma URL de relatório. Esses parâmetros de URL não são prefixados, pois eles são transmitidos diretamente para o mecanismo de processamento de relatório.  

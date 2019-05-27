@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8fe60270cd3737e3c372fbf92ccb906beb8d06cb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 282c5753b0e1e966d1041944e936d341ed46a30f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63182921"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108492"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Lição 3: Criar o relatório pai usando o Assistente de Relatório
   Após criar uma conexão de dados e uma tabela de dados para o relatório pai, a próxima etapa será criar o relatório pai usando o Assistente de Relatório no Designer de Relatórios. Para obter mais informações sobre o Designer de Relatórios, consulte [Criar relatórios com o Designer de Relatórios &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  

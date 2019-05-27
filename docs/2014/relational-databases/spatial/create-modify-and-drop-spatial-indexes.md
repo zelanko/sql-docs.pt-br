@@ -13,15 +13,15 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 485b9bd38754309602df8002bf651188d322d6d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62524584"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014268"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Criar, modificar e remover índices espaciais
   Um índice espacial pode executar com mais eficiência de determinadas operações em uma coluna do `geometry` ou `geography` tipo de dados (um *coluna espacial*). Mais de um índice espacial pode ser especificado em uma coluna espacial. Por exemplo, isto é útil para indexar diferentes parâmetros de mosaico em uma única coluna.  

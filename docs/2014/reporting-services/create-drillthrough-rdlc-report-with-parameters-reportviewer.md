@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 79e43f273183d531a8fbc61fd71315a971213773
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7efb713b5dbf9a3f19118bb3572ccd35778aad19
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63265387"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109645"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>Criar um relatório detalhado (RDLC) com parâmetros usando o Visualizador de Relatórios (Tutorial do SSRS)
   Um relatório de [detalhamento](https://technet.microsoft.com/library/ff519554.aspx) é um relatório que pode ser aberto pelo usuário quando ele clica em um link dentro de outro relatório. Os relatórios detalhados normalmente contêm detalhes sobre um item que está em um relatório de resumo original. Este tutorial apresentará as lições a seguir sobre como criar um relatório de detalhamento com parâmetros e uma consulta, no [relatório de modo local](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md).  

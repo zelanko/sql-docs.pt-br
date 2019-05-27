@@ -20,14 +20,18 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7b29fcfbe2219c1cf519c75e3aef605fce7c3fc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c0439c5230d39ae9dc856c9e1c5c5553e250c42
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271204"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723667"
 ---
 # <a name="install-integration-services"></a>Instalar o Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um único programa de Instalação para instalar qualquer ou todos os seus componentes, incluindo o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Use a Instalação para instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] com ou sem outros componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um único computador.    
     
@@ -119,6 +123,6 @@ Para uma instalação completa do [!INCLUDE[ssISnoversion](../../includes/ssisno
 
 -   **Componentes adicionais opcionais**. Opcionalmente, você pode baixar os componentes de terceiros adicionais do SQL Server Feature Package.
 
-    -   Microsoft® Connector para SAP BW para Microsoft SQL Server®. Para obter esses componentes, veja o [Feature Pack do Microsoft® SQL Server® 2017](https://www.microsoft.com/download/details.aspx?id=55992).
+    -   Microsoft® Connector para SAP BW para Microsoft SQL Server®. Para obter esses componentes, veja o [Feature Pack do Microsoft® SQL ServerÂ® 2017](https://www.microsoft.com/download/details.aspx?id=55992).
 
     -   Microsoft Connector versão 5.0 para Oracle da Attunity e Microsoft Connector versão 5.0 para Teradata da Attunity. Para obter esses componentes, veja [Microsoft Connectors v5.0 para Oracle e Teradata](https://www.microsoft.com/download/details.aspx?id=55179).

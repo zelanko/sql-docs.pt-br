@@ -19,15 +19,15 @@ helpviewer_keywords:
 - annotated XSD schemas, IDREF type attribute
 - ID relationships [SQLXML]
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba60e3b8c871f885c2cd7d4115c0ae7dc2c40433
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 48ae7034ec0c133c1140e4c581794302ca8bad77
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650433"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013917"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Criando atributos de tipo ID, IDREF e IDREFS válidos usando sql:prefix (SQLXML 4.0)
   Um atributo pode ser especificado como um atributo de tipo ID. Atributos especificados como IDREF ou IDREFS poderão, então, ser usados para fazer referência aos atributos de tipo ID, permitindo vínculos entre documentos.  

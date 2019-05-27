@@ -11,15 +11,15 @@ helpviewer_keywords:
 - key ordering rules [SQLXML]
 - relationship annotation
 ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 71eef27236a42f7e1869cb619b7ba557785ba4e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 521614f8755261d0348ab95132c527c736c96311
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62717733"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013506"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship e a Regra de Ordenação de Chaves (SQLXML 4.0)
   Como o XML Bulk Load gera registro à medida que seus nós entram no escopo e envia esses registros para o Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à medida que seus nós saem do escopo, os dados do registro devem estar presentes no escopo do nó.  

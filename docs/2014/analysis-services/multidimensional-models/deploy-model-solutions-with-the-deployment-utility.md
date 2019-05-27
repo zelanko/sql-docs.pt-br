@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Analysis Services], command prompt
@@ -16,12 +15,12 @@ ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b84aae1c024be9a7d5da02dce0e69d2040266fed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0c17ef5426703a666f3d6763f878da3cb129e75c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726350"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075362"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Implantar soluções modelo com o Utilitário de Implantação
   O utilitário **Microsoft.AnalysisServices.Deployment** permite iniciar o mecanismo de implantação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no prompt de comando. Como arquivo de entrada, o utilitário usa os arquivos de saída XML gerados pela construção de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Os arquivos de entrada são facilmente modificáveis para personalizar a implantação de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . O script de implantação gerado pode ser executado imediatamente ou pode ser salvo para implantação posterior.  

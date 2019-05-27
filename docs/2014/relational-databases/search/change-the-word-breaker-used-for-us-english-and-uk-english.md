@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 66515d57cada938abe9241d89116cb16beaf431e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0067b0e13e724948e53a2eb291c9a1da6315011
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192256"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012751"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Alterar o separador de palavras usado para inglês (EUA) e inglês (Reino Unido)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala uma nova versão (versão 14.0.4999.1038) do separador de palavras e lematizador para o idioma inglês, substituindo a versão anterior desses componentes (versão 12.0.6828.0). Para obter informações sobre o comportamento alterado dos novos componentes, veja [Alterações de comportamento na pesquisa de texto completo](full-text-search.md). Este tópico descreve como alternar da nova versão desses componentes para a versão anterior, ou alternar da versão anterior para a nova versão. Para instalações em cluster, essas alterações devem ser feitas em todos os nós primários e passivos.  
@@ -35,7 +35,7 @@ ms.locfileid: "48192256"
   
 #### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>Para alternar da versão atual do separador de palavras em inglês dos EUA para a versão anterior  
   
-1.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Use as etapas a seguir para adicionar novas chaves para as ClassIDs COM para o separador de palavras em inglês dos EUA anterior e interfaces de lematizador para LCID 1033:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48192256"
   
 #### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>Para alternar da versão atual do separador de palavras em inglês do Reino Unido para a versão anterior  
   
-1.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Use as etapas a seguir para adicionar uma nova chave para as ClassIDs COM para o separador de palavras em inglês do Reino Unido anterior e interfaces de lematizador para LCID 2057:  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48192256"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>Para alternar da versão anterior do separador de palavras em inglês dos EUA para a versão atual  
   
-1.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Se as chaves a seguir não existirem, use as etapas a seguir para adicionar uma nova chave para as ClassIDs COM para o separador de palavras em inglês dos EUA atual e interfaces de lematizador para LCID 1033:  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48192256"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>Para alternar da versão anterior do separador de palavras em inglês do Reino Unido para a versão atual  
   
-1.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Se as chaves a seguir não existirem, use as etapas a seguir para adicionar uma nova chave para as ClassIDs COM para o separador de palavras em inglês do Reino Unido atual e interfaces de lematizador para LCID 2057:  
   

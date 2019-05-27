@@ -11,15 +11,15 @@ helpviewer_keywords:
 - updategrams [SQLXML], ADO
 - executing updategrams [SQLXML]
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1575853338483132a5e2060ba7d0985e1211e05c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 54ee962310cb1ac41e442155a146afec8758c64f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63268571"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014842"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Executando um diagrama de atualização usando o ADO (SQLXML 4.0)
   Este aplicativo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic usa o ADO para estabelecer uma conexão com uma instância do Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e executar um diagrama de atualização. O diagrama de atualização atualiza o sobrenome de um funcionário específico. Este exemplo usa o banco de dados AdventureWorks de exemplo.  

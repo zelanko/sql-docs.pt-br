@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 434fb03bdb2d93fd5695576ad864df2259a5c972
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9aae0735f4dec61ebafa991afb579c32ee560260
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767744"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720282"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Validar pacotes SSIS (SQL Server Integration Services) implantados no Azure
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Quando você implanta um projeto do SSIS (SQL Server Integration Services) no SSISDB (Catálogo do SSIS) em um servidor do Azure, o assistente de implantação do pacote adiciona uma etapa de validação adicional após a página **Análise**. Essa etapa de validação verifica se há problemas conhecidos nos pacotes do projeto que possam impedir que os pacotes sejam executados conforme o esperado no Azure SSIS Integration Runtime. Em seguida, o assistente exibe avisos aplicáveis na página **Validar**.
 
@@ -40,23 +44,23 @@ O assistente faz as seguintes verificações de validação nos gerenciadores de
 
 | Gerenciador de Conexões | Autenticação do Windows | Caminho do arquivo | Caminho UNC | Nome do host | Provedor ou driver |
 |--------------------|----------|-----------|-----|-----------|-------------------|
-| Ado                | ✓        |           |     | ✓         | ✓                 |
-| AdoNet             | ✓        |           |     | ✓         | ✓                 |
-| Cache              |          | ✓         | ✓   |           |                   |
-| Excel              |          | ✓         | ✓   |           |                   |
-| Arquivo               |          | ✓         | ✓   |           |                   |
-| FlatFile           |          | ✓         | ✓   |           |                   |
-| Ftp                |          |           |     | ✓         |                   |
-| MsOLAP100          |          |           |     | ✓         | ✓                 |
-| MultiFile          |          | ✓         | ✓   |           |                   |
-| MultiFlatFile      |          | ✓         | ✓   |           |                   |
-| OData              | ✓        |           |     | ✓         |                   |
-| Odbc               | ✓        |           |     | ✓         | ✓                 |
-| OleDb              | ✓        |           |     | ✓         | ✓                 |
-| SmoServer          | ✓        |           |     | ✓         |                   |
-| Smtp               | ✓        |           |     | ✓         |                   |
-| SqlMobile          |          | ✓         | ✓   |           |                   |
-| Wmi                | ✓        |           |     |           |                   |
+| Ado                | âœ“        |           |     | âœ“         | âœ“                 |
+| AdoNet             | âœ“        |           |     | âœ“         | âœ“                 |
+| Cache              |          | âœ“         | âœ“   |           |                   |
+| Excel              |          | âœ“         | âœ“   |           |                   |
+| Arquivo               |          | âœ“         | âœ“   |           |                   |
+| FlatFile           |          | âœ“         | âœ“   |           |                   |
+| Ftp                |          |           |     | âœ“         |                   |
+| MsOLAP100          |          |           |     | âœ“         | âœ“                 |
+| MultiFile          |          | âœ“         | âœ“   |           |                   |
+| MultiFlatFile      |          | âœ“         | âœ“   |           |                   |
+| OData              | âœ“        |           |     | âœ“         |                   |
+| Odbc               | âœ“        |           |     | âœ“         | âœ“                 |
+| OleDb              | âœ“        |           |     | âœ“         | âœ“                 |
+| SmoServer          | âœ“        |           |     | âœ“         |                   |
+| Smtp               | âœ“        |           |     | âœ“         |                   |
+| SqlMobile          |          | âœ“         | âœ“   |           |                   |
+| Wmi                | âœ“        |           |     |           |                   |
 |||||||
 
 ## <a name="validate-sources-and-destinations"></a>Validar origens e destinos

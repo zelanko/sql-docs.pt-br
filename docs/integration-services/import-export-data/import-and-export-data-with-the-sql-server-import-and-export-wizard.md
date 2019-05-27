@@ -23,14 +23,18 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8159be3478fbf4d3e83de6a066a07104997c4ade
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: c540acdbda08d79f89b6bba3a016314609e6607f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222080"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723814"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importar e exportar dados com o Assistente de Importação e Exportação do SQL Server
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Assistente de Importação e Exportação é uma maneira simples de copiar dados de uma origem para um destino. Esta visão geral descreve as fontes de dados que o assistente pode usar como origens e destinos, bem como as permissões necessárias para executar o assistente.
 

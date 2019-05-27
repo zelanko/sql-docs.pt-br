@@ -29,17 +29,17 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b93af690fb15c7ab62084d7175612508b5a22445
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
+ms.openlocfilehash: 9fe393ecdbef5a515d0850b7d859c1c2a7e670a2
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63202448"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560177"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL)
 
-Define opções em banco de dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no Banco de Dados SQL do Azure. Para obter outras opções de ALTER DATABASE, confira [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
+Defina as opções do banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no Banco de Dados SQL do Azure e no SQL Data Warehouse do Azure. Para obter outras opções de ALTER DATABASE, confira [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
 
 Clique em uma das guias a seguir para ver sintaxe, argumentos, comentários, permissões e exemplos de uma versão específica do SQL com a qual você está trabalhando.
 
@@ -51,9 +51,9 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> |||
-> |---|---|
-> |**_\* SQL Server \*_** &nbsp;|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||
+> |||||
+> |---|---|---|---|
+> |**_\* SQL Server \*_** &nbsp;|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 
@@ -1148,9 +1148,9 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> |||
-> |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* Banco de dados individual/pool elástico<br />do Banco de Dados SQL \*_** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
+> ||||
+> |---|---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* Banco de dados individual/pool elástico<br />do Banco de Dados SQL \*_** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -1834,9 +1834,9 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> |||
-> |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* Instância gerenciada<br />do Banco de Dados SQL \*_** &nbsp;|
+> ||||
+> |---|---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* Instância gerenciada<br />do Banco de Dados SQL \*_** &nbsp;||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -2442,5 +2442,137 @@ SET QUERY_STORE = ON
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
 - [Melhor prática com o Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)
+
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> ||||
+> |---|---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;||||
+
+&nbsp;
+
+## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse
+
+> [!NOTE]
+> Muitas opções de definição de banco de dados podem ser configuradas para a sessão atual usando [Instruções SET](../../t-sql/statements/set-statements-transact-sql.md) e são configuradas com frequência por aplicativos quando eles são conectados. As opções definidas no nível de sessão substituem os valores de **ALTER DATABASE SET** . As opções de banco de dados descritas abaixo são os valores que podem ser definidos para as sessões que não fornecem explicitamente outros valores de definição de conjunto.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+ALTER DATABASE { database_name | Current }
+SET
+{
+    <optionspec> [ ,...n ]
+}
+;
+
+<auto_option> ::=
+{}
+RESULT_SET_CACHING { ON | OFF}
+}
+```
+
+## <a name="arguments"></a>Argumentos
+
+*database_name* É o nome do banco de dados a ser modificado.
+
+**\<auto_option> ::=**
+
+Controla opções automáticas.
+
+**Permissões**: Requer estas permissões:
+
+- Logon da entidade de segurança no nível do servidor (aquele criado pelo processo de provisionamento), ou
+- Membro da função de banco de dados dbmanager.
+
+O proprietário do banco de dados não pode alterar o banco de dados, a menos que ele seja membro da função dbmanager.
+
+<a name="result_set_caching"></a> RESULT_SET_CACHING {ON | OFF} (versão prévia para Gen2) - Esse comando deve ser executado enquanto estiver conectado ao banco de dados mestre.  A alteração dessa configuração de banco de dados entra em vigor imediatamente.  Os custos de armazenamento são incorridos pelo armazenamento em cache dos conjuntos de resultados da consulta. Depois de desabilitar o armazenamento em cache de resultados de um banco de dados, o cache de resultados anteriormente persistente será excluído imediatamente do armazenamento do SQL Data Warehouse do Azure. Uma nova coluna chamada is_result_set_caching_on é introduzida no sys.databases para mostrar a configuração de armazenamento em cache de resultados de um banco de dados.  
+
+ON Especifica que os conjuntos de resultados de consulta retornados desse banco de dados serão armazenados em cache no armazenamento do SQL Data Warehouse do Azure.
+
+OFF Especifica que os conjuntos de resultados de consulta retornados desse banco de dados não serão armazenados em cache no armazenamento do SQL Data Warehouse do Azure.
+Os usuários podem determinar se uma consulta foi executada com um acerto ou erro do cache de resultados, consultando sys.pdw_request_steps com um request_id específico.   Se houver um acerto de cache, o resultado da consulta terá uma única etapa com os seguintes detalhes:
+
+|**Nome da coluna** |**Operador** |**Value** |
+|----|----|----|
+| operation_type|=|ReturnOperation|
+|step_index|=|0|
+|location_type|=|Control|
+command|Como|%DWResultCacheDb%|
+| | |
+
+## <a name="examples"></a>Exemplos
+
+### <a name="enable-result-set-caching-for-a-database"></a>Habilitar o armazenamento em cache do conjunto de resultados de um banco de dados
+
+```sql
+ALTER DATABASE myTestDW  
+SET RESULT_SET_CACHING ON;
+```
+
+### <a name="disable-result-set-caching-for-a-database"></a>Desabilitar o armazenamento em cache do conjunto de resultados de um banco de dados
+
+```sql
+ALTER DATABASE myTestDW  
+SET RESULT_SET_CACHING OFF;
+```
+
+### <a name="check-result-set-caching-setting-for-a-database"></a>Verificar a configuração do armazenamento em cache do conjunto de resultados para um banco de dados
+
+```sql
+SELECT name, is_result_set_caching  
+FROM sys.databases;
+```
+
+### <a name="check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>Verificar o número de consultas com acerto e erro de cache do conjunto de resultados
+
+```sql
+SELECT  
+Queries=CacheHits+CacheMisses,
+CacheHits,
+CacheMisses 
+CacheHitPct=CacheHits*1.0/(CacheHits+CacheMisses)
+FROM  
+(SELECT  
+CacheHits=count(distinct case when s.command like '%DWResultCacheDb%' and
+r.resource_class IS NULL and s.operation_type = 'ReturnOperation' and  
+s.step_index = 0 then s.request_id else null end) , 
+CacheMisses=count(distinct case when r.resource_class IS NOT NULL then  
+s.request_id else null end) 
+     FROM sys.dm_pdw_request_steps s  
+     JOIN sys.dm_pdw_exec_requests r  
+     ON s.request_id = r.request_id) A;
+```
+
+### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>Verificar se há acerto ou erro de cache do conjunto de resultados para uma consulta
+
+```sql
+If
+(SELECT step_index  
+FROM sys.dm_pdw_request_steps  
+WHERE request_id = 'QID58286' and operation_type = 'ReturnOperation' and command like '%DWResultCacheDb%') = 0
+SELECT 1 as is_cache_hit  
+ELSE 
+SELECT 0 as is_cache_hit;
+```
+
+### <a name="check-for-all-queries-with-result-set-cache-hits"></a>Verificar todas as consultas com acertos de cache do conjunto de resultados
+
+```sql
+SELECT *  
+FROM sys.dm_pdw_request_steps  
+WHERE command like '%DWResultCacheDb%' and step_index = 0;
+```
+
+## <a name="see-also"></a>Consulte Também
+
+- [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
+- [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
+- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
+- [Melhores práticas para o SQL Data Warehouse do Azure](/azure/sql-data-warehouse/sql-data-warehouse-best-practices#maintain-statistics)
+- [Criação de tabelas no SQL Data Warehouse do Azure](/azure/sql-data-warehouse/sql-data-warehouse-tables-overview#statistics)
+- [Elementos de linguagem do SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end

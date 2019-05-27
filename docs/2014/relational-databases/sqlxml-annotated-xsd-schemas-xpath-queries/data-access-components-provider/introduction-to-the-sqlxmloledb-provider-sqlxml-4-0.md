@@ -11,15 +11,15 @@ helpviewer_keywords:
 - adExecuteStream flag
 - SQLXMLOLEDB Provider, about SQLXMLOLEDB Provider
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ec13acbaa0025b871475675140e83363eb64b81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9826143c68b8c1bd3edc6472156d140a6141968b
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62865040"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014383"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Introdução ao provedor SQLXMLOLEDB (SQLXML 4.0)
   O provedor SQLXMLOLEDB é um provedor OLE DB que expõe a funcionalidade SQLXML [!INCLUDE[msCoName](../../../includes/msconame-md.md)] através do ADO (ActiveX Data Objects). No entanto, o provedor só pode executar comandos no modo "write to an output stream" do ADO. SQLXMLOLEDB não é um provedor de conjunto de linhas. Quando você executar um comando, você deve especificar o sinalizador adExecuteStream, que direciona o ADO para usar o fluxo de saída que você especificou.  

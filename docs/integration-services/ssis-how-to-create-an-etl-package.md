@@ -18,14 +18,18 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a603dc915f05f55db4eac3c3ed0347dc2d5eaf32
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 53979c1f02b5e1a2331072199b32bbf47affa0e9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271132"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717931"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS: Como criar um pacote ETL
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Neste tutorial, você aprenderá a usar o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer para criar um pacote simples do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. O pacote que você cria conduz dados de um arquivo simples, formata esses dados e insere os dados formatados em uma tabela de fatos. Nas lições a seguir, o pacote é expandido para demonstrar looping, configurações de pacote, registro de log e fluxo de erros.  
   

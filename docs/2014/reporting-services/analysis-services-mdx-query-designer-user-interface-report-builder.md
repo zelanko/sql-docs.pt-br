@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -15,12 +14,12 @@ ms.assetid: 7e288eee-2d37-485e-a6a0-dbba5e041e26
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bca4cac495ab8076c46d1dc2b7da411e46eae5db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 456989b83877b0c94c07f9074719666ebac3a873
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63193209"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110002"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface-report-builder"></a>Interface de usuário do Designer de Consulta MDX do Analysis Services (Construtor de Relatórios)
   O Construtor de Relatórios fornece um designer de consultas gráficas para criar consultas de expressão MDX para uma fonte de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . O designer de consultas gráficas MDX tem dois modos: Design e Consulta. Cada modo contém um painel Metadados, do qual é possível arrastar membros dos cubos selecionados para criar uma consulta MDX que recupere dados quando o relatório for processado.  

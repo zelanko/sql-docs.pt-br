@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748907"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071117"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Painel de Gerenciamento PowerPivot e dados de uso
   O Painel de Gerenciamento PowerPivot é uma coleção de web parts e relatórios predefinidos na Administração Central do SharePoint que ajuda a administrar uma implantação do SQL Server PowerPivot para SharePoint. O Painel de Gerenciamento fornece informações sobre a integridade do servidor, a atividade da pasta de trabalho e a atualização de dados. O painel usa dados da coleta de dados de uso do SharePoint.  

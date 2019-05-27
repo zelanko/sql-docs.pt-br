@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - tuning reports [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94222a351343c4558614098dd2a317fdbb9a5396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173636"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110151"
 ---
 # <a name="viewing-tuning-reports"></a>Exibindo relatórios de ajuste
   Na prática anterior desta lição, você exibiu os scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] que criam ou cancelam objetos de banco de dados nas recomendações do Orientador de Otimização do Mecanismo de Banco de Dados que foram geradas como resultado da sessão de ajuste MySession. A sessão de ajuste MySession foi criada no [Tuning a Workload](lesson-1-1-tuning-a-workload.md).  
@@ -47,6 +46,6 @@ ms.locfileid: "48173636"
  Você explorou a guia **Relatórios** da sessão de ajuste MySession na interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados. Você pode usar esses mesmos passos para explorar os relatórios que foram gerados para a sessão de ajuste EvaluateMySession. Clique duas vezes em **EvaluateMySession** no painel **Monitor de Sessão** para começar.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 3: usar o utilitário de prompt de comando DTA](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [Lição 3: Usando o utilitário de Prompt de comando dta](lesson-3-using-the-dta-command-prompt-utility.md)  
   
   

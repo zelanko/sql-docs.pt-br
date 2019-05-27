@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectdatasource.f1
@@ -13,12 +12,12 @@ ms.assetid: ee6c283d-60a2-4f51-9406-483cd1df2d7d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7f1272a654749f1fa6c3b4f8cafdada26ad56a56
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5126ab2c44dbd5045af86cda54068b9ec8ed2f03
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747698"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069678"
 ---
 # <a name="select-data-source-view-data-mining-wizard"></a>Selecionar exibição da fonte de dados (Assistente de Mineração de Dados)
   Use a página **Selecionar Exibição da Fonte de Dados** para identificar a exibição da fonte de dados para a estrutura de mineração.  

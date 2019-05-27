@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 738816e3-0e1d-44a5-8d1b-81068dce8ac0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b19dce00f95559aec77c8d02c86631faadc466b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 75121c5a38994afe1326b26bf31f78d11a80cfa8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757574"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067716"
 ---
 # <a name="calculations-ssas-tabular"></a>Cálculos (SSAS tabular)
   Depois de importar dados para o modelo, será possível adicionar cálculos para agregar, filtrar, estender, combinar e proteger esses dados. Os modelos tabulares usam o DAX (Data Analysis Expressions), uma linguagem de fórmula para criar cálculos personalizados. Nos modelos de tabela, os cálculos que você cria usando fórmulas DAX são usados em *Colunas Calculadas*, *Medidas*e *Filtros de Linha*.  

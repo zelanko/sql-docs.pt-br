@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d5e8b6e3bc008263c83a9bdf5b36b4235897921
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a63bf2bcad0c5d20f0d37727796746f68708d16f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140601"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012054"
 ---
 # <a name="create-a-format-file-sql-server"></a>Criar um formato de arquivo (SQL Server)
   Quando você importa em massa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou exporta em massa dados de uma tabela, pode usar um arquivo de formato para um sistema flexível para gravar arquivos de dados que exigem pouca ou nenhuma edição para ficar em conformidade com outros formatos de dados ou para ler arquivos de dados de outros programas de software.  

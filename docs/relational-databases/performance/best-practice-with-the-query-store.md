@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e83756e4520cf191f0e15750308ef58e3aa38dd
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 84a69542e43f108b1a1aa91bde8fb168ecb6a362
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542236"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65779248"
 ---
 # <a name="best-practice-with-the-query-store"></a>Melhor prática com o Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -247,7 +247,7 @@ FROM sys.database_query_store_options;
   
  Se o problema persistir, isso indicará corrupção dos dados do Repositório de Consultas que estão persistidos no disco.
  
- O Repositório de Consultas poderia ser recuperado executando o procedimento armazenado **sp_query_store_consistency_check** no banco de dados afetado.
+ Para o SQL 2017 e posteriores, é possível recuperar o Repositório de Consultas executando o procedimento armazenado **sp_query_store_consistency_check** no banco de dados afetado. Para o 2016, você precisará limpar os dados do Repositório de Consultas, como mostrado abaixo.
  
  Se isso não ajudar, você poderá tentar limpar o Repositório de Consultas antes de solicitar o modo de leitura/gravação.  
   
@@ -339,7 +339,7 @@ Os sinalizadores de rastreamento globais 7745 e 7752 podem ser usados para melho
   
 -  O sinalizador de rastreamento 7745 impedirá o comportamento padrão em que o Repositório de Consultas grava dados em disco antes que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possa ser desligado. Isso significa que os dados de Repositório de Consultas que foram coletados, mas ainda não foram mantidos no disco serão perdidos. 
   
--  O sinalizador de rastreamento 7752 permite o carregamento assíncrono do Repositório de Consultas. Isso permite que um banco de dados seja colocado online e que consultas a sejam executadas antes do Repositório de Consultas ser totalmente recuperado. O comportamento padrão é fazer o carregamento assíncrono do Repositório de Consultas. O comportamento padrão impede a execução de consultas antes da recuperação do Repositório de Consultas, mas também impede que consultas sejam perdidas na coleta de dados.
+-  O sinalizador de rastreamento 7752 permite o carregamento assíncrono do Repositório de Consultas. Isso permite que um banco de dados seja colocado online e que consultas a sejam executadas antes do Repositório de Consultas ser totalmente recuperado. O comportamento padrão é fazer um carregamento assíncrono do Repositório de Consultas. O comportamento padrão impede a execução de consultas antes da recuperação do Repositório de Consultas, mas também impede que consultas sejam perdidas na coleta de dados.
 
 > [!IMPORTANT]
 > Se você estiver usando o Repositório de Consultas para obter informações de carga de trabalho em tempo real no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], planeje instalar as correções de escalabilidade de desempenho na [KB 4340759](https://support.microsoft.com/help/4340759) assim que possível. 

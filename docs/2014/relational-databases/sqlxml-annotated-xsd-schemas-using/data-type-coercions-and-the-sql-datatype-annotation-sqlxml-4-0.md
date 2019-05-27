@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data types [SQLXML], mapping data types
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7662587e1cffad5b111c747c0af2116991743296
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d2c4d515540f144052214627b3d6b08211358bb3
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63228918"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013949"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Coerções de tipo de dados e a anotação de sql:datatype (SQLXML 4.0)
   Em um esquema XSD, o atributo `xsd:type` especifica o tipo de dados XSD de um elemento ou atributo. Quando um esquema XSD é usado para extrair dados do banco de dados, o tipo de dados especificado é usado para formatar os dados.  
@@ -41,11 +41,11 @@ ms.locfileid: "63228918"
 |Tipo de dados XSD|Conversão do SQL Server|  
 |-------------------|---------------------------|  
 |Booliano|CONVERT(bit, COLUMN)|  
-|data|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
+|Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |Decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Hora|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |Todos os outros|Nenhuma conversão adicional|  
   
 > [!NOTE]  

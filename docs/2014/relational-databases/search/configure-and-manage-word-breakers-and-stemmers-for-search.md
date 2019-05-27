@@ -17,15 +17,15 @@ helpviewer_keywords:
 - conjugating verbs [full-text search]
 - word breakers [full-text search]
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8be3cc7da791b9ea5f950d83bd0f570ca42e686f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eaa80c71dcc58cbd780a664d2466a3bf3cec2a4c
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140057"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011537"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurar e gerenciar separadores de palavras e lematizadores de pesquisa
   Os separadores de palavras e os lematizadores executam a análise linguística em todos os dados indexados de texto completo. A análise linguística envolve a localização dos limites das palavras (separação de palavras) e a conjugação de verbos (lematização). Os separadores de palavras e os lematizadores são específicos de idioma, e as regras de análise linguística diferem conforme o idioma. Para um idioma específico, um *separador de palavras* identifica palavras individuais determinando em que existem limites de palavra com base nas regras lexicais do idioma. Cada palavra (também conhecida como *token*) é inserida no índice de texto completo usando uma representação compactada para reduzir seu tamanho. O *lematizador* gera formas flexionadas de uma palavra específica com base nas regras do idioma (por exemplo, “executando”, “executou” e “executor” são várias formas da palavra “executar”).  

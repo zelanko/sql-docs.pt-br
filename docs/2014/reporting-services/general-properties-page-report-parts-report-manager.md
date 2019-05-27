@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 25dc3a8eb075f212728796465fe2d95c460cbebf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aa3f8b6ec0cd81f1a29ea3262bd3ec52dd8158ae
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260697"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109095"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>Página Propriedades Gerais, Partes do Relatório (Gerenciador de Relatórios)
   Use a página Propriedades para exibir e gerenciar as propriedades gerais de uma parte de relatório.  

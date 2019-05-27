@@ -19,19 +19,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d0fa6a0ee5b63d098e0feb4a6ace368e145dd57
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 3195259f2ea4c709b0e01011264dedfc88e538af
+ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801430"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875194"
 ---
 # <a name="aggregate-functions-transact-sql"></a>Funções de agregação (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Uma função de agregação executa um cálculo em um conjunto de valores e retorna um único valor. Com exceção de `COUNT`, as funções de agregação ignoram valores nulos. As funções de agregação frequentemente são usadas com a cláusula GROUP BY da instrução SELECT.
   
-Todas as funções de agregação são determinísticas. Em outras palavras, as funções de agregação retornam o mesmo valor sempre que são chamadas, quando chamadas com um conjunto específico de valores de entrada. Veja [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) para obter mais informações sobre determinismo de funções. A [cláusula OVER](../../t-sql/queries/select-over-clause-transact-sql.md) pode seguir todas as funções de agregação, exceto as funções GROUPING ou GROUPING_ID.
+Todas as funções de agregação são determinísticas. Em outras palavras, as funções de agregação retornam o mesmo valor sempre que são chamadas, quando chamadas com um conjunto específico de valores de entrada. Veja [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) para obter mais informações sobre determinismo de funções. A [cláusula OVER](../../t-sql/queries/select-over-clause-transact-sql.md) pode seguir todas as funções de agregação, exceto as funções STRING_AGG, GROUPING ou GROUPING_ID.
   
 Use as funções de agregação como expressões apenas nas seguintes situações:
 -   A lista de seleção de uma instrução SELECT (uma subconsulta ou uma consulta externa).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensionmaintable.f1
@@ -13,12 +12,12 @@ ms.assetid: 0538b490-5185-49e1-a783-4ce3539a0de5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01ce74621f22da45807112a63f7f85d5849a620f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 30234275a724dddce95cdad66e5e37a382a25e62
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746160"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068176"
 ---
 # <a name="specify-source-information-dimension-wizard"></a>Especificar Informações sobre a Origem (Assistente de Dimensão)
   Use a página **Selecionar a Tabela de Dimensões Principal** para selecionar a exibição da fonte de dados, a tabela de dimensões principal, as colunas de chave e a coluna de nome de membro para a dimensão a ser criada.  
