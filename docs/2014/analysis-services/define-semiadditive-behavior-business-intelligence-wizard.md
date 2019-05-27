@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.semiadditivememberdetection.f1
@@ -13,12 +12,12 @@ ms.assetid: e57080ba-ce96-40f8-bca7-6701d1725b3c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 436610a4c52d213a2d5b80c4277988b615f81449
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 161e2cb9dd9eeae4f2ed369b77ab0799ae12a33a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732152"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081998"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>Definir Comportamento Semiaditivo (Assistente de Business Intelligence)
   Use a página **Definir Comportamento Semiaditivo** para habilitar ou desabilitar comportamento semiaditivo em medidas. O comportamento semiaditivo determina como medidas que são contidas por um cubo são agregadas sobre uma dimensão de tempo.  

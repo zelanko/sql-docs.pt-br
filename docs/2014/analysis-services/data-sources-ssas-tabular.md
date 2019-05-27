@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6908998b-9302-4a90-976e-770106b48d18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28ac0283148f328d75bb341ce7841f5e5da42ee2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 94718b35efdcf31a0c9de19930cc765f7d9db5d1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732319"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082326"
 ---
 # <a name="data-sources-ssas-tabular"></a>Fontes de Dados (SSAS tabular)
   Fontes de dados fornecem os dados a serem incluídos em uma solução modelo tabular. Você pode importar dados em seu modelo de uma ampla variedade de origens como bancos de dados relacionais, feeds de dados, fontes de dados multidimensionais como um cubo do Analysis Services, e de arquivos de texto como uma pasta de trabalho do Microsoft Excel. Os tópicos nesta seção fornecem informações sobre os tipos de fontes de dados de que você pode importar, os vários tipos de dados que você pode importar e tarefas que descrevem como importar dados dessas fontes.  

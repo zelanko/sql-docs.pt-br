@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], report delivery
@@ -15,12 +14,12 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dc84660b7ceea31aa7bebc774a07de7103e3dd9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 93a62ec076b9dc61cd01d18796f04bbaa04eb93b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654192"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100703"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Entrega de biblioteca do SharePoint no Reporting Services
   Um servidor de relatório configurado para integração com o SharePoint inclui uma extensão de entrega que você pode usar para enviar um relatório a uma biblioteca do SharePoint.  
@@ -74,7 +73,7 @@ ms.locfileid: "62654192"
  Title  
  Especifica uma propriedade `Title` opcional para o relatório na biblioteca de destino. Essa é uma propriedade padrão para todos os itens armazenados em uma biblioteca. Os usuários podem especificar se mostram ou ocultam essa propriedade ao exibir conteúdos de biblioteca em um site do SharePoint.  
   
- Caminho  
+ `Path`  
  Especifica uma URL completamente qualificada para a biblioteca do SharePoint, inclusive o aplicativo Web e o site do SharePoint. Por exemplo: <http://mySharePointWeb/MySite/MyDocLib>; onde "<http://mySharePointWeb>" indica o aplicativo Web, "MySite" é o site do SharePoint, e "MyDocLib" é a biblioteca do SharePoint em que o relatório será entregue.  
   
  Você não pode especificar uma página, um site nem uma lista. O contêiner de destino deve ser uma biblioteca no mesmo site ou farm.  

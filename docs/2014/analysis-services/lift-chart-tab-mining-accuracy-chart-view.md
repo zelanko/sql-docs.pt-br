@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.liftchart.f1
@@ -13,12 +12,12 @@ ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0cbd4465152e3f862d53dec66bd7888c70b393a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728082"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078097"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Guia do gráfico de comparação de precisão (Exibição de gráfico de precisão de mineração)
   Use o painel **Gráfico de Comparação de Precisão** para exibir um gráfico que compara todos os modelos de mineração selecionados na estrutura de mineração selecionada.  

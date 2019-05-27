@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6196466246529521f356c193c3e8cc0ee688c197
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743372"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071851"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Configurar e exibir arquivos de log do SharePoint e log de diagnóstico (PowerPivot para SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são registrados em arquivos de log do SharePoint. Use as informações deste tópico para configurar informações de níveis de log e do arquivo de log de exibição. Você pode controlar quais eventos de servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são registrados em log no arquivo. Você também pode controlar a severidade de mensagens que são registradas em log. Para obter mais informações, consulte [configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
@@ -117,7 +116,7 @@ ms.locfileid: "62743372"
 #### <a name="entries-for-powerpivot-services"></a>Entradas para serviços do PowerPivot  
  A tabela seguinte descreve entradas para operações de servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] mais prováveis de serem localizadas em um arquivo de log do SharePoint.  
   
-|Processar|Área|Category|Nível|Mensagem|Detalhes|  
+|Process|Área|Category|Nível|Message|Detalhes|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|Serviço PowerPivot|Uso|Detalhado|Não há nenhuma estatística de solicitação atual, nada para registrar em log.|A intervalos predefinidos, o serviço reporta estatísticas de resposta de consulta como um evento de uso para o sistema de coleta de dados de uso. Esta mensagem indica que não havia nenhuma estatística de consulta para reportar.|  
 |w3wp.exe|Serviço PowerPivot|Front-end da Web|Detalhado|Começando a localizar um servidor de aplicativos para fonte de dados =\<*caminho*>|Quando ele receber uma solicitação de conexão, o serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] identifica um [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] disponível para gerenciar a solicitação. Se houver somente um servidor no farm, o servidor local aceitará a solicitação em todos os casos.|  

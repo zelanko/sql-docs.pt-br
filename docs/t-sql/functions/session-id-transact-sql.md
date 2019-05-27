@@ -9,16 +9,16 @@ ms.technology: t-sql
 ms.topic: language-reference
 dev_langs:
 - TSQL
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9feb899a0a46a04ad52ef15fb801e2eb4866e478
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 117e5a08730aae4381f10fc8a8a2ab0ed2fa875f
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698564"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945227"
 ---
 # <a name="sessionid-transact-sql"></a>SESSION_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ SESSION_ID ( )
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Retorna um valor de **nvarchar(32)**.  
+ Retorna um valor de **nvarchar(32)** .  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  A ID de sessão é atribuída a cada conexão de usuário quando esta é estabelecida. Ela é persistente durante a conexão. Quando a conexão é encerrada, a ID de sessão é liberada.  

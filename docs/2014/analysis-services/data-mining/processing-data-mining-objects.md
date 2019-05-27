@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - processing objects [Analysis Services]
@@ -18,12 +17,12 @@ ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aa4a536a142ae63dd2b028d983f083609ea2e717
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65c61f6e4b571880b6607bb647d2629a3b6864f7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732921"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083146"
 ---
 # <a name="processing-data-mining-objects"></a>Processando objetos de mineração de dados
   Um objeto de mineração de dados é apenas um contêiner vazio até que seja processado. O*processamento* de um modelo de mineração de dados também é chamado de *treinamento*.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - ReencryptSecureInformation (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,12 +18,12 @@ ms.assetid: 8a487497-c207-45b2-8c92-87c58cc68716
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: faf998f4d9d3cbd3c45de4c1a0b214ba1de2152e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ef1a23d21e5945e15d497bab3480b48f8cf3fe6d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646824"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098206"
 ---
 # <a name="reencryptsecureinformation-method-wmi-msreportserverconfigurationsetting"></a>Método ReencryptSecureInformation (WMI MSReportServer_ConfigurationSetting)
   Gera uma nova chave de criptografia e criptografa novamente todas as informações seguras no catálogo usando essa nova chave.  

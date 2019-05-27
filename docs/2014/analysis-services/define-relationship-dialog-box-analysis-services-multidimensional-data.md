@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusage.definerelationship.f1
@@ -15,12 +14,12 @@ ms.assetid: 0fcee7f1-f138-4c2e-ae8c-245395ee0fe8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2bc1ab86373fc7c3b4b32cdfdbc87f5d5dd4acf8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d80be1c4898ae00dfdbb88e22771c071636cf73c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732082"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082096"
 ---
 # <a name="define-relationship-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Definir Relação (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Definir Relação** para definir uma relação entre uma dimensão de cubo e um grupo de medidas no Designer de Cubo. É possível exibir a caixa de diálogo **Definir Relação** clicando em **...** em uma célula no painel **Grade** na guia **Uso da Dimensão** no Designer de Cubo.  

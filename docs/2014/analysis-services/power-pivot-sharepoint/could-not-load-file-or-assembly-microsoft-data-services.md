@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6e350b67-5e18-4b90-8fb7-a0109cbb27b7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b8328c060d7096cb43edcbc31206a8b55e82e7e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 42c7b7e876f244831920be390d97c88412eed63f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749527"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071671"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>Não foi possível carregar arquivo ou assembly &#39;Microsoft.AnalysisServices.SharePoint.Integration&#39;
   Em ambientes do SharePoint 2010 com o PowerPivot para SharePoint, este erro ocorrerá se a solução no nível de aplicativo para o PowerPivot não tiver sido implantada corretamente.  
