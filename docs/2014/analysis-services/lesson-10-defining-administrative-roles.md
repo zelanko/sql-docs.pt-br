@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f588e5266b3707ac012d6e18e062d01d23fca56d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 28697c46e2e72ae4bfff95155f6646d1a5d076c4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729492"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079163"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>Lição 10: Como definir funções administrativas
   Nesta lição, você aprenderá a definir funções de segurança para tarefas administrativas.  

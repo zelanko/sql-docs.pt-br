@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 29f5e6952c733ac56671e48fd1ec809b3f0ab329
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7fd9d9b293287d76b50c351b29b74df509793168
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700923"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076539"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurar o armazenamento de cadeia de caracteres para dimensões e partições
   Você pode reconfigurar o armazenamento de cadeia de caracteres para acomodar cadeias de caracteres muito grandes em atributos de dimensão ou partições que excedem o limite de tamanho de arquivo do 4 GB para repositórios de cadeias de caracteres. Se suas dimensões ou partições incluírem repositórios de cadeias de caracteres desse tamanho, você poderá contornar a restrição de tamanho do arquivo alterando a propriedade **StringStoresCompatibilityLevel** em nível de dimensão ou de partição para objetos locais e vinculados (locais ou remotos).  

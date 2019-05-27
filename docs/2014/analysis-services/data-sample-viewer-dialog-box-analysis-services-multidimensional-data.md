@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasampleviewerdialog.f1
@@ -15,12 +14,12 @@ ms.assetid: 590383cd-30b3-4e3f-a1cf-3f9ec7ba48e3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ccd8ad508cf0f1bc56997a4d88927bff85065023
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f406885d607827c4ed29102164c6fe89ea621508
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732847"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082616"
 ---
 # <a name="data-sample-viewer-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Visualizador de Exemplos de Dados (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Visualizador de Exemplos de Dados** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para exibir os primeiros 1000 registros de uma tabela de fatos que será utilizada para fornecer medidas para um novo cubo.  

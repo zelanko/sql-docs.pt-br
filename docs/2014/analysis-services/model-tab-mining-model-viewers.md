@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.decisiontree.f1
@@ -13,12 +12,12 @@ ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 173dd379ac2857cef0faafda27aa74d7026b791a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727832"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077616"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Guia Modelos (Visualizadores do Modelo de Mineração)
   A guia **Modelo** no Visualizador MTS exibe uma representação de uma série temporal como um nó em um gráfico, semelhante aos usados em modelos de árvore de decisão.  

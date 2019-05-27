@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 509df042-fdb3-4e2c-a6b8-86943ce1b0fc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 47efdd38b14a22f28026f98d2289c1c67fc65b9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2839ecff951a9f1547a05b60f6957ed5976bee9a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699022"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073487"
 ---
 # <a name="multidimensional-modeling-ssas"></a>Modelagem multidimensional (SSAS)
   Uma solução multidimensional do Analysis Services usa estruturas de cubo para analisar dados comerciais em várias dimensões. O modo multidimensional é o modo de servidor padrão do Analysis Services. Ele inclui um mecanismo de consulta e de cálculo para dados OLAP, com modos de armazenamento MOLAP, ROLAP e HOLAP para equilibrar o desempenho com requisitos de dados escalonáveis. O mecanismo OLAP do Analysis Services é um servidor OLAP líder da indústria que funciona bem com um intervalo amplo de ferramentas de BI. A maioria das implantações do Analysis Services são instaladas como servidores OLAP clássicos.  

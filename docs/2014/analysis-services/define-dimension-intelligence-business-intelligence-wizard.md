@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.dimensionintelligence.adddimensionintelligence.f1
@@ -13,12 +12,12 @@ ms.assetid: 1089a788-763f-4c3e-80e3-b625e0728343
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2aaef74d9e94446022b8c0585749a4eb0bf05cd2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a66a940e916cc05bb3fe502cb6f4d10a9c2fae6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732112"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082138"
 ---
 # <a name="define-dimension-intelligence-business-intelligence-wizard"></a>Definir Inteligência de Dimensão (Assistente de Business Intelligence)
   Use a página **Definir Inteligência de Dimensão** para mapear atributos de dimensão existentes para tipos de atributos para o tipo de dimensão especificado.  

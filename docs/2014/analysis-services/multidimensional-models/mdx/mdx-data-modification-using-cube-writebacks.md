@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - writeback [Analysis Services], cubes
@@ -17,12 +16,12 @@ ms.assetid: ae2385fc-7fa0-4f8e-98d7-dcb0a5f0eeea
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f471800a72bdbec154fe7bedb89d9b5a10593132
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a79e98375c27c6a3570b2fafcf424965d7a97c8d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699752"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074215"
 ---
 # <a name="using-cube-writebacks-mdx"></a>Usando Cube Writebacks (MDX)
   Você atualiza um cubo usando a instrução [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube). Essa instrução permite que você atualize uma tupla com um valor específico. Para usar a instrução UPDATE CUBE de forma eficiente para atualizar um cubo, você precisa entender a sintaxe da instrução, as condições de erro que podem acontecer, e como as atualizações podem afetar um cubo.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data sources
@@ -17,12 +16,12 @@ ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a88d312d2764d04d1766371463a1735737973164
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740895"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072856"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Fontes de dados com suporte (SSAS Multidimensional)
   Este tópico descreve os tipos de fonte de dados que você pode usar em um modelo multidimensional.  
@@ -35,7 +34,7 @@ ms.locfileid: "62740895"
   
 |||||  
 |-|-|-|-|  
-|Source|Versões|Tipo de arquivo|Provedores <sup>1</sup>|  
+|`Source`|Versões|Tipo de arquivo|Provedores <sup>1</sup>|  
 |Bancos de dados do Access|Microsoft Access 2007, 2010, 2013.|.accdb ou .mdb|Provedor OLE DB do Microsoft Jet 4.0|  
 |Bancos de dados relacionais do SQL Server <sup>5</sup>|Microsoft SQL Server 2005, 2008, 2008 R2, 2012, 2014 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] <sup>2</sup>, SQL Server Parallel Data Warehouse (PDW) <sup>3</sup>|(não se aplica)|Provedor OLE DB para SQL Server<br /><br /> Provedor OLE DB do SQL Server Native Client<br /><br /> Provedor OLE DB do SQL Server Native 11.0 Client<br /><br /> Provedor de dados .NET Framework para SQL Client|  
 |Bancos de dados relacionais da Oracle|Oracle 9i, 10g, 11g.|(não se aplica)|Provedor OLE DB Oracle<br /><br /> Provedor de Dados .NET Framework para Cliente Oracle<br /><br /> Provedor de dados do .NET Framework para SQL Server<br /><br /> Provedor OLE DB MSDAORA <sup>4</sup><br /><br /> OraOLEDB<br /><br /> MSDASQL|  

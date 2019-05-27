@@ -9,20 +9,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ca25b7c537c333d6bc9eb7745ea2ec6ad6055c4b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 52e486dc6cb6c3da45d590d4ba2e557c87c1a556
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62920022"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66009879"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Trabalhar com diretórios e caminhos em FileTables
   Descreve a estrutura de diretórios na qual os arquivos são armazenados em FileTables.  
   
-##  <a name="HowToDirectories"></a> Como: Trabalhar com diretórios e caminhos em FileTables  
+##  <a name="HowToDirectories"></a> Como Trabalhar com diretórios e caminhos em FileTables  
  É possível usar as 3 funções a seguir para trabalhar com diretórios FileTable no [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
 |Para obter este resultado|Use esta função|  
@@ -31,7 +31,7 @@ ms.locfileid: "62920022"
 |Obtém um caminho UNC absoluto ou relativo de um arquivo ou diretório em uma FileTable.|[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|  
 |Obtém a ID do localizador do caminho do arquivo ou diretório especificado em uma FileTable, fornecendo o caminho.|[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|  
   
-##  <a name="BestPracticeRelativePaths"></a> Como: Usar caminhos relativos para código portátil  
+##  <a name="BestPracticeRelativePaths"></a> Como usar caminhos relativos para código portátil  
  Para manter código e aplicativos independentes do computador e do banco de dados atuais, evite escrever código baseado em caminhos de arquivo absolutos. Em vez disso, obtenha o caminho completo para um arquivo em tempo de execução usando as funções [FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) e [GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) juntas, conforme mostrado no exemplo a seguir. Por padrão, a função `GetFileNamespacePath` retorna o caminho relativo do arquivo sob o caminho raiz do banco de dados.  
   
 ```sql  

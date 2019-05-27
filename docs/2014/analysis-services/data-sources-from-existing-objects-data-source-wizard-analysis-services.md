@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.specifyobject.f1
@@ -13,12 +12,12 @@ ms.assetid: e6ef6dea-9db8-45c4-8959-f9febd7caf7b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90773f9a7ccf7e1e34cc81f761b7a9849144d4a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5576e997023e5a00cdecc3c2079ce387c7062ebb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732769"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082375"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>Fontes de dados de objetos existentes (Assistente para Fonte de Dados) (Analysis Services)
   Use a página **Fontes de dados de objetos existentes** para especificar uma fonte de dados ou projeto existente no qual basear a nova fonte de dados.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - multiple language support [Analysis Services]
@@ -19,12 +18,12 @@ ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b12c2f4a95b2fc295aa1a3524def774e74a5ed32
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eb6f1072396b957dc9d4b1e9b7d1089e30c739c4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730609"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080885"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Cenários de globalização para Analysis Services Multidimensional
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] armazena e manipula dados multilíngues e metadados em ambos os modelos de dados tabulares e multidimensionais. O armazenamento de dados é Unicode (UTF-16), em conjuntos de caracteres que usam a codificação Unicode. Se você carregar dados ANSI em um modelo de dados, os caracteres são armazenados usando pontos de código equivalentes a Unicode.  
@@ -53,7 +52,7 @@ ms.locfileid: "62730609"
   
 -   Um modelo de dados fornece várias legendas traduzidas para que os valores e nomes de campos sejam exibidos no idioma de escolha do usuário. Para empresas que operam em países bilíngues como Suíça, Bélgica ou no Canadá, o suporte a vários idiomas em aplicativos cliente e servidor é um requisito padrão de codificação. Este cenário é habilitado por meio de traduções e conversões de moeda. Consulte [Recursos](#bkmk_features) abaixo para obter detalhes e links.  
   
--   Ambientes de desenvolvimento e produção estão localizados geograficamente em diferentes países. É cada vez mais comum desenvolver uma solução em um país e, em seguida, implantá-la em outro. Saber como definir as propriedades de ordenação e idioma é essencial se você ficar encarregado de preparar uma solução desenvolvida em um idioma para implantação em um servidor que usa um pacote de idiomas diferente. A configuração dessas propriedades permite substituir os padrões herdados que você obtém do sistema host original. Consulte [Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](languages-and-collations-analysis-services.md) para obter detalhes sobre como definir propriedades.  
+-   Ambientes de desenvolvimento e produção estão localizados geograficamente em diferentes países. É cada vez mais comum desenvolver uma solução em um país e, em seguida, implantá-la em outro. Saber como definir as propriedades de ordenação e idioma é essencial se você ficar encarregado de preparar uma solução desenvolvida em um idioma para implantação em um servidor que usa um pacote de idiomas diferente. A configuração dessas propriedades permite substituir os padrões herdados que você obtém do sistema host original. Consulte [Idiomas e ordenações &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) para obter detalhes sobre como definir propriedades.  
   
 ##  <a name="bkmk_features"></a> Recursos para a criação de uma solução multidimensional globalizada  
  [!INCLUDE[applies](../includes/applies-md.md)] Somente modelos de dados multidimensionais  
@@ -70,7 +69,7 @@ ms.locfileid: "62730609"
   
 |Tópico|Descrição|  
 |-----------|-----------------|  
-|[Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](languages-and-collations-analysis-services.md)|Especifique o idioma padrão e ordenação do Windows para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Suas escolhas afetam dados e metadados gerenciados pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|[Idiomas e ordenações &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|Especifique o idioma padrão e ordenação do Windows para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Suas escolhas afetam dados e metadados gerenciados pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |[Traduções &#40;Analysis Services&#41;](translations-analysis-services.md)|Definir traduções para um banco de dados e objetos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contidos no banco de dados. Este tópico explica como o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] resolve solicitações de dados traduzidos e metadados de aplicativos clientes.|  
 |[Conversões de moeda &#40;Analysis Services&#41;](currency-conversions-analysis-services.md)|Definir uma conversão de moeda usando o Assistente de Business Intelligence.|  
 |[Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|Examina várias práticas de design e codificação que podem ajudá-lo a evitar problemas relacionados a dados em vários idiomas.|  

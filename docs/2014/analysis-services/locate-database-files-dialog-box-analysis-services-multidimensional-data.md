@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.localdbfilesdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: b38aa670-b8a4-4abb-8b32-c29dc52362f5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bf59757e72b8892e0b32202d9e7f5dc9a3d66be3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1a013ed1ca80e17f89baba65b89c460b6ee68691
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728153"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078025"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Localizar Arquivos de Banco de Dados (Analysis Services - Dados Multidimensionais)
   A caixa de diálogo **Localizar Arquivos de Banco de Dados** exibe uma lista de arquivos disponíveis em pastas de dados e de log definidas para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Você pode selecionar um arquivo listado ou especificar uma pasta e arquivo diferentes se necessário. A caixa de diálogo **Localizar Arquivos de Banco de Dados** é exibida das seguintes maneiras:  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.databaseproperties.f1
@@ -13,12 +12,12 @@ ms.assetid: 70f000b7-917f-4699-b142-7a0d13ff767c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a18669d646dcf6e46f609faeb0861e5fa9732850
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: be4133aa143ecf0e1fb9b50c40a38a73b4207f30
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732539"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082317"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>Caixa de diálogo Propriedades do Banco de Dados (SSAS – Multidimensional)
   Use a caixa de diálogo **Propriedades do Banco de Dados** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para definir as propriedades de uma base de dados em um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Você pode exibir a caixa de diálogo **Propriedades do Banco de Dados** clicando com o botão direito do mouse em um banco de dados no Pesquisador de Objetos e selecionando **Propriedades**.  

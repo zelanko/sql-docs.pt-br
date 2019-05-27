@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services dialog boxes
@@ -14,12 +13,12 @@ ms.assetid: a2c60d98-c15f-4f0d-ba95-7ee2def4277e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f42a30372d3f12e767a1cc64a4e77f5bfe8d1b42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e2d8784c79ed4bbce63d8f9a18dce6b1b12f33f0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689636"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086470"
 ---
 # <a name="data-mining-designers-and-dialog-boxes"></a>Designers de Mineração de Dados e Caixas de Diálogo
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece ferramentas de design que você pode usar para criar, exibir, testar e criar previsões de modelos de mineração de dados.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.setdimensionwritebackcapability.f1
@@ -13,12 +12,12 @@ ms.assetid: b01aa630-0b70-42a5-a743-f45a030cf26b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5ea5615fcc88e81be11fb833761bb67537b0acd1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a79df6d154b5b5f2363eb14af0a4ffae5c9cb618
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731458"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081362"
 ---
 # <a name="enable-dimension-writeback-business-intelligence-wizard"></a>Habilitar Write-back de Dimensão (Assistente de Business Intelligence)
   Use a página **Habilitar Write-back de Dimensão** para habilitar ou desabilitar a funcionalidade de write-back para a dimensão selecionada.  

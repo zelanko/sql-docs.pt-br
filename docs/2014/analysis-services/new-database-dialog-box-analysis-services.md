@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.newdatabase.f1
@@ -13,12 +12,12 @@ ms.assetid: ddc7804b-acb0-4ae4-a88f-e8cdf704c341
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1bef5adba44a5202e3cc0fc7f2eb48fae08a0e3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ed652c47be4bfbe2783f5138bb80f8ed9c37dd32
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743712"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072311"
 ---
 # <a name="new-database-dialog-box-analysis-services"></a>Caixa de diálogo Novo Banco de Dados (Analysis Services)
   Use a caixa de diálogo **Novo Banco de Dados** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para criar um novo banco de dados vazio do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . É possível exibir a caixa de diálogo **Novo Banco de Dados** clicando com o botão direito do mouse na pasta **Bancos de Dados** de uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no **Explorador de Objetos** e selecionando **Novo Banco de Dados**.  

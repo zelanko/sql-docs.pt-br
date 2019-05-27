@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 775706be-41a7-4ae7-bad6-349f5ebd9e4d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb40a0e2a41e638c4e7058f296badc4feeb9aa60
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e1da03094a3c01d3d0c3c7aab3a277be8ae83a6d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63306688"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104587"
 ---
 # <a name="report-f1-help"></a>Ajuda F1 de relatório
   Os tópicos desta seção fornecem informações sobre as opções que você pode definir no relatório na caixa de diálogo **Propriedades do Relatório** . Para abrir a caixa de diálogo **Propriedades do Relatório** , clique com o botão direito do mouse no plano de fundo do Designer de Relatórios e clique em **Propriedades do Relatório**.  

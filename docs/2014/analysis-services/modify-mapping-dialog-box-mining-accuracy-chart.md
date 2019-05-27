@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeldesigner.modifyconnections.f1
@@ -13,12 +12,12 @@ ms.assetid: a99f5330-efe0-47c7-8393-8dfd9bb2d490
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 81a5b8439de7ac3af004846448767d5ca5cfe9ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a4a4a6362d76afc39234acccc6366c7169244663
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703191"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077678"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>Caixa de diálogo modificar mapeamento (Gráfico de precisão de mineração)
   Use a caixa de diálogo **Modificar Mapeamento** para alterar como as colunas de entrada são unidas às colunas no modelo de mineração. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] mapeará as colunas automaticamente com base no tipo de dados e o nome de coluna, mas você pode usar essa caixa de diálogo para alterar os mapeamentos de coluna. Ao fazer modificações, certifique-se de que as colunas da fonte de dados externos tem tipos de dados e tipos de conteúdo que correspondam com as colunas no modelo de mineração que você está testando.  

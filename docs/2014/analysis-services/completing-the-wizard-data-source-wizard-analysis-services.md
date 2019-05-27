@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.completion.f1
@@ -13,12 +12,12 @@ ms.assetid: fa04d602-d12e-425a-971d-68bf1500152a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e6099fdba06e03c178f2673c66e49e71564a0d5f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 489c0aaa7a25c10e024c63a11c2bf98fdf46917a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680579"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087664"
 ---
 # <a name="completing-the-wizard-data-source-wizard-analysis-services"></a>Concluindo o Assistente (Assistente para Fonte de Dados) (Analysis Services)
   Use a página **Concluindo o Assistente** do assistente para analisar a cadeia de conexão e especificar um nome para a nova fonte de dados.  
