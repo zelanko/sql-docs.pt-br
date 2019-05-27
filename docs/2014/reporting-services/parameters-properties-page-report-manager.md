@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f83e66d238aa67b28bf547540c5a6b5dfcc9c92d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 866fe023ff6ca2fe83264d65319618c5def0749a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188291"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108116"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Página Propriedades de Parâmetro (Gerenciador de Relatórios)
   Use página Propriedades de Parâmetro para exibir ou modificar configurações de parâmetro para um relatório com parâmetros.  

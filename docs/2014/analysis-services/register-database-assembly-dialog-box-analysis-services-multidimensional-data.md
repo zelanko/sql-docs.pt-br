@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidevstudio.assembly.registerassembly.f1
@@ -13,12 +12,12 @@ ms.assetid: 0c07cc87-fc94-456f-b878-7b23e39772b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aad57083bdcd8337e9320e81a662bef12888011e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 06647219ca5768495620bb1db60cf34910844f25
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748510"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070466"
 ---
 # <a name="register-database-assembly-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Registrar Assembly de Banco de Dados (Analysis Services – Dados Multidimensionais)
   Use a caixa de diálogo **Registrar Assembly de Servidor** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para definir as propriedades de uma referência de assembly em um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . É possível exibir a caixa de diálogo **Registrar Assembly de Servidor** clicando com o botão direito do mouse na pasta Assemblies de uma instância ou banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no **Pesquisador de Objetos** e selecionando **Novo assembly**.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.reportservervirtualdirectory.F1
@@ -15,12 +14,12 @@ ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5371060acadc0def9a8105616b36d8687eb5a87e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2ab81c33b3aea946fe85c94139acc891aa05a083
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131186"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090986"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>URL do serviço Web (modo nativo do SSRS)
   Use a página URL do Serviço Web para configurar ou modificar a URL usada para acessar o servidor de relatório. Uma *reserva de URL* será criada com base na URL que você especificar. A reserva de URL define a sintaxe e as regras para todas as URLs que podem ser subsequentemente usadas para acessar o serviço Web Servidor de Relatório. Ela especifica o prefixo, o host, a porta e o diretório virtual do serviço Web Servidor de Relatório. Dependendo de como você especifica o host, várias URLs poderiam ser possíveis para uma única reserva. O valor padrão do host especifica um curinga forte. Um curinga forte permite especificar em uma URL qualquer nome de host que possa ser resolvido para o computador que hospeda o servidor de relatório. Para obter mais informações sobre reservas e a configuração de URL, consulte [configurar uma URL &#40;Configuration Manager do SSRS&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) e [configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  

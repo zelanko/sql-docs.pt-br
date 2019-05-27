@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: cd2af1f3-cd8b-4651-9e4d-7c4c94353d7e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bed90099c42383ea45ba6ad17459c7e0f6048b8a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f049e8a91b072bc49c3c555101fdf9fb1398944c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62638461"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062566"
 ---
 # <a name="analysis-services-designers-and-dialog-boxes-tabular"></a>Designers e caixas de diálogo do Analysis Services (Tabela)
   O ambiente de criação de projeto de tabela no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e as ferramentas de gerenciamento do modelo de tabela no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] incluem várias caixas de diálogo, páginas de propriedades e páginas de assistente. Você pode clicar no botão Ajuda ou pressionar F1 para saber mais.  

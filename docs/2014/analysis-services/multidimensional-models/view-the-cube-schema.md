@@ -1,23 +1,23 @@
 ---
 title: Exibir o esquema do cubo | Microsoft Docs
-ms.date: 05/02/2018
-ms.prod: sql
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
 ms.technology: analysis-services
-ms.custom: multidimensional-models
 ms.topic: conceptual
-ms.author: owend
-ms.reviewer: owend
+ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 93898e6ed8dc26e3b06fd6a583bfa4084dd4c5f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b094e27a8b7c51afec21fcc4807d3ee6e8b22c37
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740686"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072511"
 ---
 # <a name="view-the-cube-schema"></a>Exibir o esquema do cubo
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   O painel **Exibição da Fonte de Dados** da guia **Estrutura do Cubo** no **Designer do Cubo** exibe o esquema do cubo. O esquema é o conjunto de tabelas das quais são derivadas as medidas e as dimensões para um cubo. Todo esquema de cubo consiste em uma ou mais tabelas de fato e uma ou mais tabelas de dimensão nas quais são baseadas as medidas e as dimensões no cubo.  
   
  O painel **Exibição da Fonte de Dados** da guia **Estrutura do Cubo** exibe um diagrama da exibição da fonte de dados na qual o cubo está baseado. Este diagrama é um subconjunto do diagrama principal da exibição da fonte de dados. Você pode ocultar e mostrar tabelas no painel **Exibição da Fonte de Dados** e exibir qualquer diagrama existente. Porém, você não pode fazer alterações (como adicionar novas relações ou consultas nomeadas) ao esquema subjacente. Para fazer alterações ao esquema, use o Designer de Exibição da Fonte de Dados.  

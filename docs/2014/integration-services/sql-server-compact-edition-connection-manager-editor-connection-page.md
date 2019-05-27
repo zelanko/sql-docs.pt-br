@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlmobileconnection.connection.f1
@@ -15,12 +14,12 @@ ms.assetid: b72584b8-4289-41d3-bed8-5e5393adc356
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7a31fb2b1b4e158773e2f286ed5a3530d90c201c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6e78e65bbc3f7503dbe4c49b2e45dc07e870e6bf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766409"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055433"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>Editor do Gerenciador de Conexões do SQL Server Compact Edition (página de Conexão)
   Use a caixa de diálogo **Gerenciador de Conexões do SQL Server Compact Edition** para especificar as propriedades de conexão com um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.preview.f1
@@ -15,12 +14,12 @@ ms.assetid: de47ea98-135e-4730-900e-dac629848798
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5069000307f1cc677437cd1313e493015a774664
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 233bc63102243c60c7ed74b5beeadd2c921f399a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768302"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058734"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>Editor do Gerenciador de Conexões de Arquivos Simples (página Visualização)
   Use o nó **Visualização** da caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos Simples** para exibir os conteúdos do arquivo de origem em um formato tabular.  

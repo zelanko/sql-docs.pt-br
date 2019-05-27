@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.fill.f1
@@ -24,12 +23,12 @@ ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9dfeb15d58f34759da6c340f66ce5935c0b71e41
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7b746f27653f5e8d1c24a584ac19c8fbac05a57c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63208950"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105526"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Cabeçalhos e rodapés de página (Construtor de Relatórios e SSRS)
   Um relatório pode conter um cabeçalho e um rodapé nas partes superior e inferior de cada página, respectivamente. Os cabeçalhos e rodapés podem conter texto estático, imagens, linhas, retângulos, bordas, cor e imagens de plano de fundo e expressões. Expressões incluem referências a campos de conjunto de dados de relatórios com exatamente um conjunto de dados e chamadas de função de agregação que incluem o conjunto de dados como um escopo.  
@@ -58,9 +57,9 @@ ms.locfileid: "63208950"
   
 |Suportado na expressão|Agregações de ReportItems|Agregações de conjunto de dados (o escopo deve ser o nome do conjunto de dados)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|Caixas de texto no corpo do relatório|Sim|Não|  
-|&PageNumber|Sim|Não|  
-|&TotalPages|Sim|Não|  
+|Caixas de texto no corpo do relatório|Sim|Não |  
+|&PageNumber|Sim|Não |  
+|&TotalPages|Sim|Não |  
 |Função de agregação|Sim. Por exemplo,<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Sim. Por exemplo,<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |Coleção de campos para itens da página|Indiretamente. Por exemplo,<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Sim. Por exemplo,<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |Imagem vinculada a dados|Indiretamente. Por exemplo, `=ReportItems!TXT_Photo.Value`|Sim. Por exemplo,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  

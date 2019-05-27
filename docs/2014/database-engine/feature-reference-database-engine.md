@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], getting assistance
@@ -14,12 +13,12 @@ ms.assetid: 2ed7a37f-4640-4379-84a1-e4e97335ef33
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: be016421136f10f7f78bdebffd8c524e4bee72e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 408b6b605e14fd5e7aa52cd0df7fba13b225c20c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62779736"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064826"
 ---
 # <a name="feature-reference-database-engine"></a>Referência de recursos (Mecanismo de Banco de Dados)
   O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] inclui várias ferramentas e aplicativos que podem ser usados para criar, gerenciar e exibir objetos e dados de bancos de dados. Além disso, há ferramentas para monitorar e solucionar problemas de desempenho do servidor e do banco de dados e habilitar e desabilitar recursos, serviços e protocolos de rede. Esta seção fornece tópicos específicos que descrevem as caixas de diálogo dessas ferramentas e aplicativos.  

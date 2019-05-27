@@ -15,14 +15,18 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2dea9e83bcfeff2c3b5c208cc947f48f21b9f4a7
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.openlocfilehash: 659059130d63dd2f320dcbd9ec0364b249f0889b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877727"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713856"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novidades do Integration Services no SQL Server 2016
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Este tópico descreve os recursos adicionados ou atualizados no SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Ele também inclui recursos adicionados ou atualizados no [Azure Feature Pack para o SSIS &#40;Integration Services&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) durante o período de tempo do SQL Server 2016.  
 
@@ -284,7 +288,7 @@ O recurso de implantação de pacotes incremental permite que você implante um 
  O Gerenciador de Conexões do Excel, a Origem do Excel e o Destino do Excel agora fornecem suporte explícito para fontes de dados do Excel 2016.  
 
 ####  <a name="SAPBW"></a> Conector para SAP BW para SQL Server 2016 liberado  
- O Microsoft® Connector para SAP BW para Microsoft SQL Server® 2016 foi lançado como parte do SQL Server 2016 Feature Pack. Para baixar os componentes do Feature Pack, consulte [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).
+ O Microsoft® Connector para SAP BW para Microsoft SQL Server® 2016 foi lançado como parte do SQL Server 2016 Feature Pack. Para baixar os componentes do Feature Pack, confira [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).
  
 #### <a name="oracleteradata"></a> Conectores v4.0 para Oracle e Teradata liberados
 O Conectores v4.0 da Microsoft para Oracle e Teradata foram lançados. Para baixar os conectores, consulte [Conectores v4.0 da Microsoft para Oracle e Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
@@ -345,7 +349,7 @@ A versão mais recente do Feature Pack do Azure inclui a tarefa de Upload do Azu
  O Assistente de Importação e Exportação do SQL Server agora pode importar dados de e salvar dados no Armazenamento de Blobs do Azure. Para obter mais informações, consulte [Escolha uma fonte de dados &#40;Assistente de Importação e Exportação do SQL Server&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) e [Escolha um destino &#40;Assistente de Importação e Exportação do SQL Server&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md). 
 
 ####  <a name="CDCOracle"></a> Change Data Capture Designer e Service para Oracle para Microsoft SQL Server 2016 liberados  
- Microsoft® Change Data Capture Designer e Service for Oracle da Attunity para Microsoft SQL Server® 2016 foram lançados como parte do SQL Server 2016 Feature Pack.  Esses componentes agora dão suporte a Oracle 12c na instalação clássica. (Não há suporte para instalação multilocatário) Para baixar os componentes do Feature Pack, consulte [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).  
+ O Microsoft® Change Data Capture Designer e o Service for Oracle da Attunity para Microsoft SQL Server® 2016 foram lançados como parte do SQL Server 2016 Feature Pack.  Esses componentes agora dão suporte a Oracle 12c na instalação clássica. (Não há suporte para instalação multilocatário) Para baixar os componentes do Feature Pack, confira [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).  
   
 ####  <a name="cdc2016"></a> Componentes CDC atualizados para o SQL Server 2016  
  Os componentes Control Task, Source e Splitter Transformation do CDC (Change Data Capture) foram atualizados para fornecer compatibilidade total com o SQL Server 2016. Não há nenhuma nova funcionalidade e não há alterações no comportamento.  

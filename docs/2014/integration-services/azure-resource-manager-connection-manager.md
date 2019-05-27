@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 02/28/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.AFPARMCM.F1
@@ -14,12 +13,12 @@ ms.assetid: a2380258-0418-4a8c-a731-5071a44ddf1e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 55f7aaaa80992240468f3a94d6fd3b9a0f8807b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 49225fac4cc54548b31e262a7ed6899ed4d00e31
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62836317"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061355"
 ---
 # <a name="azure-resource-manager-connection-manager"></a>Gerenciador de Conexões do Azure Resource Manager
 O **Gerenciador de Conexões do Azure Resource Manager** permite que um pacote do SSIS gerencie recursos do Azure usando uma [entidade de serviço](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).

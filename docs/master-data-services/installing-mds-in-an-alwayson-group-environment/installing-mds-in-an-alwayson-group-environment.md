@@ -11,12 +11,12 @@ ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a77a3b1f6836af7ec639834326fc7fd802ba983f
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: f7716b7e41e739a100c16e34560e737d2350e122
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65982112"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015097"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidade e recuperação de desastres para Master Data Services
 
@@ -304,15 +304,15 @@ O AG pode ser criado apenas em bancos de dados existentes. Portanto, você cria 
 
     Para cada réplica, defina as seguintes configurações **Confirmação Síncrona**, **Failover Automático** e **Secundária Legível**. Consulte a Figura 17.
 
-    **Confirmação síncrona**: garante que se uma transação for confirmada na réplica primária de um banco de dados, ela também seja confirmada em todas as outras réplicas síncronas. A confirmação assíncrona não garante isso e pode atrasar a réplica primária.
+**Confirmação síncrona**: garante que se uma transação for confirmada na réplica primária de um banco de dados, ela também seja confirmada em todas as outras réplicas síncronas. A confirmação assíncrona não garante isso e pode atrasar a réplica primária.
 
-    Normalmente, você deve habilitar confirmação síncrona apenas quando os dois nós estão no mesmo data center. Se eles estiverem em data centers diferentes, a confirmação síncrona poderá prejudicar o desempenho de banco de dados.
+Normalmente, você deve habilitar confirmação síncrona apenas quando os dois nós estão no mesmo data center. Se eles estiverem em data centers diferentes, a confirmação síncrona poderá prejudicar o desempenho de banco de dados.
 
-    Se essa caixa de seleção não estiver marcada, a confirmação assíncrona será usada.
+Se essa caixa de seleção não estiver marcada, a confirmação assíncrona será usada.
 
-    **Failover automático:** quando a réplica primária estiver inativa, o AG fará failover automaticamente para sua réplica secundária quando o failover automático estiver selecionado. Isso só pode ser habilitado nas réplicas com confirmação síncrona.
+**Failover automático:** quando a réplica primária estiver inativa, o AG fará failover automaticamente para sua réplica secundária quando o failover automático estiver selecionado. Isso só pode ser habilitado nas réplicas com confirmação síncrona.
 
-    **Secundária legível:** por padrão, os usuários não podem se conectar a nenhuma réplica secundária. Isso permitirá que os usuários se conectem à réplica secundária com acesso somente leitura.
+**Secundária legível:** por padrão, os usuários não podem se conectar a nenhuma réplica secundária. Isso permitirá que os usuários se conectem à réplica secundária com acesso somente leitura.
 
 8.  Na página **Especificar Réplicas**, clique na guia **Ouvinte** e faça o seguinte. Consulte a Figura 18.
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.conninformixdb.f1
@@ -13,12 +12,12 @@ ms.assetid: b01d537c-1c04-4d7d-9146-051c249b08e4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca54a226097860e563fd439261e8ce1f2690cacd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 88849f85a5f2614961cb67db070f508c2c0718d0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680207"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087154"
 ---
 # <a name="connect-to-an-informix-database-ssas"></a>Conectar a um banco de dados Informix (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a especificar as configurações de conexão a um banco de dados Informix. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
