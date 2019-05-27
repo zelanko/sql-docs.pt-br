@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fileextractortransformation.errorhandling.f1
@@ -15,12 +14,12 @@ ms.assetid: 260be463-01a9-460c-9c98-e5265cb2b1e9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 292d872d294f81c6dac19e64af9d6a08710230b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 43eeb6984a0e7ef15b52fd349bccdf3c1bf78f15
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769562"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058934"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>Exportar Editor de Transformação Colunas (página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo do **Editor de Transformação Exportar Colunas** para especificar como manipular os erros.  

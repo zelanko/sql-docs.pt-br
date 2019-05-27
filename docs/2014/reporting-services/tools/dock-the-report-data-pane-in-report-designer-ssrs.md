@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Data pane, docking
@@ -13,12 +12,12 @@ ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aa9537784b4e7118567ddc262aecac3e722432ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 669983c17792d555a1310e2248c4fb98cee16f9b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62711253"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100337"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Encaixar o painel de dados do relatório no Designer de Relatórios (SSRS)
   No Designer de Relatórios, no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o painel de dados do relatório apresenta uma exibição hierárquica de objetos de dados que você pode usar em um relatório, incluindo fontes de dados, conjuntos de dados, campos, parâmetros e imagens. As fontes de dados dessa exibição podem ser inseridas em fontes de dados compartilhadas exibidas no Gerenciador de Soluções ou referenciadas por elas.  

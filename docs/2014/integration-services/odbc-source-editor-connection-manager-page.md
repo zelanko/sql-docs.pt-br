@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.connection.f1
@@ -13,12 +12,12 @@ ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aaf49a9894e5b2f3f35687b8575c35b5f19ebe81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bea70ca9d5d511660ff19a84165a7fc7921b6de1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767173"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057217"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>Editor de Origem ODBC (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem ODBC** para selecionar o gerenciador de conexões ODBC para a origem. Essa página também permite que você selecione uma tabela ou exibição a partir do banco de dados.  

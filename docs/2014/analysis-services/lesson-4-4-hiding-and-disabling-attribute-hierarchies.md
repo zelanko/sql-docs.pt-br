@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c3dbf70fe7a50caaaa1a3e80cd5fe7699c7287a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b662b537913847ee2858f933a54f37739d1c5c34
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728684"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078617"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Ocultando e desabilitando as hierarquias de atributo
   Por padrão, uma hierarquia de atributo é criada para cada atributo em uma dimensão e cada hierarquia é disponibilizada para o dimensionamento de dados de fatos. Essa hierarquia é composta por um nível "Todos" e um nível de detalhe que contém todos os membros da hierarquia. Como você já aprendeu, é possível organizar atributos em hierarquias definidas pelo usuário para fornecer caminhos de navegação em um cubo. Sob certas circunstâncias, talvez você queira desativar ou ocultar alguns atributos e suas hierarquias. Por exemplo, determinados atributos como um número de previdência social ou números de identificação nacional, taxas de pagamentos, datas de aniversário e informações de logon não são atributos pelos quais os usuários poderão dimensionar as informações do cubo. Em vez disso, geralmente essas informações são exibidas apenas como detalhes de um membro de atributo específico. É possível ocultar essas hierarquias de atributos, deixando os atributos visíveis apenas como propriedades de membro de um determinado atributo. Você também pode criar membros de outros atributos, como nomes de cliente ou CEPs, visíveis somente quando eles são exibidos através de uma hierarquia de usuário em vez de serem exibidos de forma independente através de uma hierarquia de atributo. Uma razão para seguir esse procedimento pode ser o número absoluto de membros distintos na hierarquia de atributo. Por fim, para melhorar o desempenho do processamento, será preciso desativar as hierarquias de atributo que não serão usadas pelos usuários na navegação.  

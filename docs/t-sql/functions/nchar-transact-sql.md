@@ -16,16 +16,16 @@ helpviewer_keywords:
 - NCHAR function
 - Unicode [SQL Server], NCHAR function
 ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 256ec0931c0abb3b15947a9f04892c35a5066862
-ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
+ms.openlocfilehash: 65ad272ed3b5b3bc83e9d6035d693342482dcf05
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49636435"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944189"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

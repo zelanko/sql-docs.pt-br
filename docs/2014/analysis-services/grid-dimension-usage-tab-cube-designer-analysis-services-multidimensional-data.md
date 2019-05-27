@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04ba5a515c83bc17b858d463cd6718db47b07a24
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 294b40d07731f588267e94ff748adaf871a8ac3b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730779"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080805"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Grade (guia Uso da Dimensão, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Grade** da guia **Uso da Dimensão** do Designer de Cubo para exibir e editar relações entre dimensões e grupos de medidas do cubo. Cada relação de dimensão é representada como uma célula em uma grade na qual grupos de medidas são exibidos como colunas e dimensões são exibidas como linhas.  

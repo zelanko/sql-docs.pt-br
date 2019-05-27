@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ddd97483-a76d-43c1-8b40-fc7cc57fb0c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 82f448c652bfb36f0f09eba975e3fecd8915afab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729539"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079227"
 ---
 # <a name="modifying-default-table-names"></a>Modificando nomes de tabela padrão
   Você pode alterar o valor da propriedade **FriendlyName** para objetos na exibição da fonte de dados para facilitar sua observação e uso.  

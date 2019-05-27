@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 33cc1b337666e1d628ae285a7df0ba43cc4fe140
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b1cf8c6f8442fc69669c10106f671040733e48ef
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352839"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092229"
 ---
 # <a name="setup-role"></a>Função de instalação
   Use esta página para especificar se deseja usar a página de Seleção de Recursos para selecionar recursos individuais ou se deseja instalar usando uma função de instalação.  

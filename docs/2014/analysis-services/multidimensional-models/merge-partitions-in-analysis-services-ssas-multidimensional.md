@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - partitions [Analysis Services], merging
@@ -14,12 +13,12 @@ ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 11f6267cb8546ac21dedeae0c802cbbb9af9ce6b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699081"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073644"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Mesclar partições no Analysis Services (SSAS - Multidimensional)
   É possível mesclar partições em um banco de dados existente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para consolidar dados de fatos de várias partições do mesmo grupo de medidas.  

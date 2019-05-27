@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.datasourceproperties.f1
@@ -15,12 +14,12 @@ ms.assetid: bf8b600f-5b99-4f7d-908b-8a391721e9dd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 42a1ace1db816760fc6c889491fa264ec2a55008
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 76d25aabd5b24cdbcc72d3c356168a040a83081a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62737055"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073046"
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>Definir propriedades da fonte de dados (SSAS multidimensional)
   No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], um objeto de fonte de dados especifica uma conexão com um data warehouse externo ou um banco de dados relacional que fornece dados a um modelo multidimensional. As propriedades na fonte de dados determinam a cadeia de conexão, um intervalo de tempo limite, o número máximo de conexões e o nível de isolamento da transação.  

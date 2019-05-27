@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.metadatapane.f1
@@ -13,12 +12,12 @@ ms.assetid: a1ace545-488d-4645-8330-56408a5e8abd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 31c14a039d22238450023c4a7f9b7b099e9a2a53
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3e4aade575cdcb8260865d4a1fe9ab6f4b7941fe
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727942"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077853"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Metadados (guia Navegador, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Metadados** na guia **Navegador** no Designer de Cubo para navegar na estrutura do cubo, para visualizar medidas relacionadas e exibir e criar dimensões. Você executar uma busca detalhada em hierarquias, exibir uma lista de medidas disponíveis e KPIs e copiar os nomes totalmente qualificados de objetos.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing data sources [Reporting Services]
@@ -15,12 +14,12 @@ ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7ef2839bd49e48615ed77ab917a90169ac20bca3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bf5b7cd9ea96adf4dc2bab781b087f7c5a117ccb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188161"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102506"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Publicando fontes de dados e relatórios
   Antes de publicar o relatório, é preciso visualizá-lo para ver qual será sua aparência quando ele for executado. Você pode continuar refinando o projeto até ficar satisfeito com os resultados.  

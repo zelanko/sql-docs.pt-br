@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.diagramorganizerpane.f1
@@ -18,12 +17,12 @@ ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0b127b3dac76663e77b7ce0fa4faa76a91628ccc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1aa03174d82c7319ce0c7b1cf455916e37a1b117
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743652"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072376"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Trabalhar com diagramas em um Designer de exibição da fonte de dados (Analysis Services)
   Um diagrama DSV (exibição de fonte de dados) é uma representação visual dos objetos em um DSV. Você pode trabalhar com o diagrama interativamente para adicionar, ocultar, excluir ou modificar objetos específicos. Você também pode criar vários diagramas no mesmo DSV para concentrar a atenção em um subconjunto dos objetos.  

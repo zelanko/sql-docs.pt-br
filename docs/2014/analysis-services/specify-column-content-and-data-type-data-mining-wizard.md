@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0634be64-4c38-4381-9b19-fe9a5889306c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a5625919d0a7b8cbc729a001caa649604de7b16e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d224a321ed78f89a798966bd28c0ff7f16d55134
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746279"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068465"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>Especificar tipo de conteúdo e de dados da coluna (Assistente de Mineração de Dados)
   Use a página **Especificar Tipo de Conteúdo e de Dados da Coluna** para especificar o uso e o tipo de dados de cada coluna selecionada na página anterior do assistente. Se desejar ignorar a coluna, clique em **Voltar** para voltar à página **Especificar os Dados de Treinamento**e desmarque todas as caixas de seleção.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.selectsmoenumeration.f1
@@ -15,12 +14,12 @@ ms.assetid: 64ada1fe-21a2-4675-98fc-d5c803aa32f0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 274a56641ae4f452b8eda8bca00663b1a9e83380
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3b9166e26129710a342411ab1da71b1c44c76239
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889286"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055946"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>Caixa de diálogo Selecionar Enumeração SMO
   Use a caixa de diálogo **Selecionar Enumeração SMO** para especificar o objeto do SMO (Objetos de Gerenciamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]) na instância especificada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para enumerar e selecionar o tipo de enumeração.  

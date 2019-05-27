@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 056f386db58f01f663cc04e82ce04e0c6c6597a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748238"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070315"
 ---
 # <a name="lesson-3-rename-columns"></a>Lição 3: Renomear colunas
   Nesta lição, você renomeará muitas das colunas em cada tabela que você importou. A renomeação torna as colunas mais identificáveis e fáceis de navegar em ambos os designers de modelos, e também pelos usuários que selecionam campos em um aplicativo cliente. Para obter mais informações, consulte [Renomear uma tabela ou coluna &#40;SSAS Tabular&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md).  
@@ -74,7 +73,7 @@ ms.locfileid: "62748238"
   
     |Nome de origem|Nome amigável|  
     |-----------------|-------------------|  
-    |FullDateAlternateKey|data|  
+    |FullDateAlternateKey|Date|  
     |DayNumberOfWeek|Day Number of Week|  
     |EnglishDayNameOfWeek|Day Name|  
     |DayNumberOfMonth|Day of Month|  

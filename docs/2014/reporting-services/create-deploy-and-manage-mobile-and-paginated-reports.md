@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services]
@@ -17,12 +16,12 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a4ae0bcfaeda7b494ae07bee53980dfdbff7a12e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 03a2965c837cc8842843c53b127323a1551ee08c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266173"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109636"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Fornece uma ampla gama de ferramentas prontas para usar e serviços para ajudá-lo a criar, implantar e gerenciar relatórios para sua organização. O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclui recursos de programação que permitem estender e personalizar a sua funcionalidade de relatório.  

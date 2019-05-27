@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
@@ -16,12 +15,12 @@ ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 462dd89e60ef2e997ad35ec07fad4a5b767f5944
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3efe11a733408124490ece2e85c9bd40db34f3fb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749013"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070914"
 ---
 # <a name="view-data-refresh-history-powerpivot-for-sharepoint"></a>Exibir histórico de atualização de dados (PowerPivot para SharePoint)
   O histórico de atualização de dados é um registro de todas as atividades de atualização de dados PowerPivot em uma pasta de trabalho do Excel. As operações da atualização de dados são executadas em uma instância de servidor do Analysis Services em um farm do SharePoint em uma agenda fornecida por você. Por padrão, o histórico de atualização de dados é mantido durante um ano. No entanto, um administrador de farm pode especificar uma política de retenção diferente para o histórico de uso e de eventos que determine por quanto tempo os registros de atualização de dados são mantidos.  
@@ -69,7 +68,7 @@ ms.locfileid: "62749013"
 |Próxima atualização agendada|Especifica a data na qual a próxima atualização de dados está agendada.<br /><br /> O link **Configurar agendamento** leva à página de definição da agenda. Se você tiver permissões de colaboração na pasta de trabalho, poderá clicar no link para exibir e modificar as informações de agenda que controlam a atualização de dados PowerPivot na pasta de trabalho.|  
 |Started (iniciado)|Dentro da seção de detalhes do histórico, **Iniciado** indica a hora de processamento real. A hora de processamento real pode ser diferente da que foi agendada. O processamento será iniciado quando houver memória suficiente disponível no servidor. Se o servidor estiver muito ocupado, o processamento talvez seja iniciado várias horas depois da hora de início especificada.|  
 |Concluído|Na seção de detalhes do histórico, **Concluído** indica quando a operação de atualização de dados foi concluída. A data e a hora indicam quando a pasta de trabalho for verificada na biblioteca.<br /><br /> Se houve falha na atualização de dados, uma ou mais mensagens de erro explicam a causa da falha. Você pode expandir cada registro para exibir o status detalhado. Cada fonte de dados é listada individualmente, junto com as mensagens de êxito ou de falha que explicam por que a atualização de dados não foi concluída.|  
-|Hora|Fornece o tempo cumulativo entre o início e a conclusão da atualização de dados.|  
+|Time|Fornece o tempo cumulativo entre o início e a conclusão da atualização de dados.|  
 |Status|Fornece um registro histórico da falha ou do êxito de uma operação de atualização.|  
   
 ## <a name="see-also"></a>Consulte também  

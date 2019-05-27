@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.newrole.f1
@@ -13,12 +12,12 @@ ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ca926ca10a391983900402d776e075ac321dea48
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b40fa294cb682746fe1b69a5fb03bf841d8e334
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63201123"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100128"
 ---
 # <a name="new-user-role-management-studio"></a>Nova função do usuário (Management Studio)
   Use essa página para criar uma definição de função de nível de item. Uma definição de função de nível é uma coleção nomeada de tarefas que enumera as tarefas que um usuário pode executar em relação a pastas, relatórios, modelos, recursos e fontes de dados compartilhadas. Um exemplo de uma definição de função de nível de item é uma função de navegador predefinida que identifica os tipos de ações que um usuário final de relatório pode necessitar para navegar pelas pastas e exibir relatórios.  
