@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - standard parse [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: dfe835b1-ea52-4e18-a23a-5188c5b6f013
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a6d0b88805c1e6fb86e7656d96cc0be7fa045f8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9837eb1c58facb76eef5885012920b294674f7fc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766299"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055293"
 ---
 # <a name="standard-parse"></a>Standard Parse
   A análise padrão é um conjunto de rotinas de análise com diferenciação de localidade que oferece suporte a todas as conversões de tipos de dados fornecidas pelas APIs de conversão de tipos de dados de Automação disponíveis no Oleaut32.dll e Ole2dsip.dll. A análise padrão é equivalente às APIs de análise de OLE DB.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
@@ -16,12 +15,12 @@ ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bbe16cf43b546c0b4eb0c6f0c59c695dff6c7ad8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d69b2a3eeb28d5fe23eb6674c8a0ca0ee7628a75
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190957"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103406"
 ---
 # <a name="report-server-service-trace-log"></a>Log de rastreamento do serviço Servidor de Relatório
   O log de rastreamento do servidor de relatório do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] é um arquivo de texto ASCII que contém informações detalhadas sobre as operações do serviço Servidor de Relatórios, incluindo as operações executadas pelo serviço Web Servidor de Relatórios, pelo Gerenciador de Relatório e pelo processamento em segundo plano. O arquivo de log de rastreamento inclui informações redundantes que estão registradas em outros arquivos de log, além de informações adicionais que, de outro modo, não seriam disponibilizadas. As informações do log de rastreamento podem ser úteis se você estiver depurando um aplicativo que inclui um servidor de relatório ou investigando um problema específico que foi gravado no log de evento ou de execução.  
@@ -89,7 +88,7 @@ ms.locfileid: "63190957"
 |`Components`|Especifica os componentes para os quais as informações do log de rastreamento são geradas e o nível de rastreamento neste formato:<br /><br /> \<component category>:\<tracelevel><br /><br /> As categorias de componente podem ser definidas como:<br />`All` é usado para rastrear atividades gerais dos servidor de relatório para todos os processos que não estão incluídos em categorias específicas.<br />`RunningJobs` é usado para rastrear uma operação de relatório ou de assinatura em andamento.<br />`SemanticQueryEngine` é usado para rastrear uma consulta semântica que é processada quando um usuário executa a exploração de dados ad hoc em um relatório baseado em modelos. <br />`SemanticModelGenerator` é usado para rastrear a geração do modelo.<br />`http` é usado para habilitar o arquivo de log HTTP do servidor de relatório. Para obter mais informações, consulte [Report Server HTTP Log](report-server-http-log.md).<br /><br /> <br /><br /> Os valores válidos de nível de rastreamento são:<br /><br /> 0 = Desabilita o rastreamento<br /><br /> 1 = Exceções e reinicializações<br /><br /> 2 = Exceções, reinicializações, avisos<br /><br /> 3 = Exceções, reinicializações, avisos, mensagens de status (padrão)<br /><br /> 4 = Modo detalhado<br /><br /> O valor padrão do servidor de relatório é: "all:3".<br /><br /> Você pode especificar todos ou alguns componentes (`all`, `RunningJobs`, `SemanticQueryEngine`, `SemanticModelGenerator`). Se não desejar gerar informações para um componente específico, desabilite o rastreamento desse componente (por exemplo, "SemanticModelGenerator:0"). Não desabilite o rastreamento para `all`.<br /><br /> Se você não adicionar um nível de rastreamento ao componente, o valor especificado para `DefaultTraceSwitch` será usado. Por exemplo, se você especificar "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator", todos os componentes utilizarão o nível de rastreamento padrão.<br /><br /> Defina "SemanticQueryEngine:4" se desejar exibir as instruções Transact-SQL geradas para cada consulta semântica. As instruções Transact-SQL são registradas no log de rastreamento. O exemplo a seguir ilustra a configuração que adiciona instruções Transact-SQL ao log:<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|  
   
 ##  <a name="bkmk_add_custom"></a> Adicionando configurações personalizadas para especificar um local de arquivo de despejo  
- Você pode adicionar uma configuração personalizada para definir o local usado pela Ferramenta do Watson para Windows usa para armazenar arquivos de despejo. A configuração personalizada é `Directory`. O exemplo a seguir fornece uma ilustração de como esta configuração é especificada na seção `RStrace`:  
+ Você pode adicionar uma configuração personalizada para definir o local usado pela ferramenta Dr. Watson para Windows usa para armazenar arquivos de despejo. A configuração personalizada é `Directory`. O exemplo a seguir fornece uma ilustração de como esta configuração é especificada na seção `RStrace`:  
   
 ```  
 <add name="Directory" value="U:\logs\" />  

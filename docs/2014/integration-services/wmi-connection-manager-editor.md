@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmiconnection.f1
@@ -15,12 +14,12 @@ ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4851e8b989a161cef6cbb673a9c76a32f8afdeb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 918c0ecd3a1ac1d0f1821ee8f19df291f9a5fa33
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62926208"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054477"
 ---
 # <a name="wmi-connection-manager-editor"></a>Editor do Gerenciador de Conexões WMI
   Use a caixa de diálogo **Gerenciador de Conexões WMI** para especificar uma conexão WMI (Instrumentação de Gerenciamento do Windows) da Microsoft com um servidor.  

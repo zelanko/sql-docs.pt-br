@@ -21,16 +21,16 @@ helpviewer_keywords:
 - characters [SQL Server], replacing
 - inserting data
 ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8e57db7a35640a71f4fc737ffb33bc37d1fdea8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88745cf6d143436dcce84d20a4253266843d6c8e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667295"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947468"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
 Um erro será gerado se o valor resultante for maior que o máximo suportado pelo tipo de retorno.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
- Ao usar agrupamentos SC, *character_expression* e *replaceWith_expression* podem incluir pares alternativos. O parâmetro de comprimento contará cada par alternativo na *character_expression* como um único caractere.  
+ Ao usar ordenações SC, *character_expression* e *replaceWith_expression* podem incluir pares alternativos. O parâmetro de comprimento contará cada par alternativo na *character_expression* como um único caractere.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna uma cadeia de caracteres criada ao excluir três caracteres da primeira cadeia, `abcdef`, começando na posição `2`, em `b`, e ao inserir a segunda cadeia de caracteres no ponto de exclusão.  

@@ -4,28 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11b55e2faeb251f8c3a7ab5220d9716476e66639
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 31d482f5972358900da30816f88d7225c863c15c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62667582"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063633"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barra de status (Editor de Consultas do Mecanismo de Banco de Dados)
   A barra de status das janelas do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] podem ser codificadas por cor para indicar a qual instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] cada janela está conectada.  
   
-1.  **Antes de começar:**  [Cores da barra de status](#StatusBarColors)  
+1.  **Antes de começar:**  [Cores da Barra de Status](#StatusBarColors)  
   
-2.  **Para definir uma cor de status em:**  [Pesquisador de objetos](#SetOEServerColor), [servidor registrado](#SetRegServerColor)  
+2.  **Para definir uma cor de status do servidor em:**  [Pesquisador de Objetos](#SetOEServerColor), [Servidor Registrado](#SetRegServerColor)  
   
-3.  **Para usar uma cor de status:**  [Abra o Editor de consulta usando uma cor de servidor](#OpenServerColor), [abrir um Editor de consultas especificando uma cor de Status](#OpenSpecColor)  
+3.  **Para usar uma cor de status:**  [Abrir o Editor de Consultas, usando uma cor de servidor](#OpenServerColor), [Abrir o Editor de Consultas, especificando uma cor de status](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> Cores da barra de status  
  Você pode associar uma cor de barra de status a um nó de servidor específico em **Pesquisador de Objetos** ou **Servidores Registrados**. As cores podem ser especificadas somente para nós de servidor conectados a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], e não para nós de servidor de outras tecnologias do SQL Server. Você também pode especificar uma cor de barra de status personalizada sempre que você conecta uma nova janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Em seguida, você pode abrir uma janela do Editor de Consultas usando a cor de status definida para o nó do servidor ou especificar uma cor exclusiva para essa janela do editor.  

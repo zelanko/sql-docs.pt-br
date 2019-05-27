@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - OGC Static Geometry Methods [SQL Server]
 ms.assetid: 74960d25-83c2-4ad6-9318-098c348ea977
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 39c21f0591b6777afac7c06df03525ccd24c3cbb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b6f5a055861ea2d3f0a7cab91fbab3e01832ffba
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520909"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937471"
 ---
 # <a name="ogc-static-geometry-methods"></a>Métodos de geometria estática do OGC 
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52520909"
   
  [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
- [Especificações do OGC, Simple Feature Access – Part 2: SQL Option (Acesso de recurso simples parte 2 – opções de SQL)](https://go.microsoft.com/fwlink/?LinkId=93628)  
+ [Especificações do OGC, Simple Feature Access Part 2 – SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628) (Acesso de recurso simples Parte 2 – opções de SQL)  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

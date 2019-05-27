@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_STATES
@@ -48,12 +47,12 @@ ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 555a92bf4131ee821fa70065cf02cada87f671ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62635497"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062595"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>Parâmetros do Algoritmo (Suplementos de Mineração de Dados do SQL Server)
   Quando você executa mineração de dados usando as Ferramentas de Análise de Tabela para Excel, não precisa configurar o algoritmo ou os parâmetros de mineração de dados; cada ferramenta analisa os dados e seleciona automaticamente os parâmetros ideais. No entanto, se desejar modificar o modelo, ou criar um modelo de mineração do zero, o Cliente de Mineração de Dados para Excel oferece várias opções de personalização.  

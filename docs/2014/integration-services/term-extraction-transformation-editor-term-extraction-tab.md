@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextraction.termextraction.f1
@@ -15,12 +14,12 @@ ms.assetid: 4c305b7d-a231-4d03-a09f-8e2d6564fa76
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 07fa6e1b9523026af31138efc6f0e71ee0895936
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 37d09aa75c3f6c5dd61b257056127ca76b410487
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62926636"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055143"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Editor de Transformação Extração de Termos (guia Extração de Termos)
   Use a guia **Extração de Termos** da caixa de diálogo **Editor de Transformação Extração de Termos** para especificar uma coluna de texto que contém texto a ser extraído.  

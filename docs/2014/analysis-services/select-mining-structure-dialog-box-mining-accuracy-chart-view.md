@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.selectminingstructure.f1
@@ -15,12 +14,12 @@ ms.assetid: ce5af79f-a1f8-47f3-acb9-769022285a69
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 067f76f0f48c11b3946476e6386788dd7b812760
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 833410b6daa15924f0875cee77ad432aa9fac369
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747448"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069487"
 ---
 # <a name="select-mining-structure-dialog-box-mining-accuracy-chart-view"></a>Caixa de diálogo Selecionar Estrutura de Mineração (Exibição do Gráfico de Precisão de Mineração)
   Utilize a caixa de diálogo **Selecionar Estrutura de Mineração** para selecionar uma estrutura de mineração que contenha os modelos de mineração que você deseja comparar ou testar a precisão.  

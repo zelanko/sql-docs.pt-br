@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - THROW statement
 ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6146c25c64acce0688221df63039b17bff358971
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: e3838b8144baaaa21d1ae5d9d813bded8a161bd6
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361556"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981502"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,7 +47,7 @@ THROW [ { error_number | @local_variable },
  É uma constante ou uma variável que representa a exceção. *error_number* é **int** e precisa ser maior ou igual a 50000 e menor ou igual a 2147483647.  
   
  *message*  
- É uma cadeia de caracteres ou variável que descreve a exceção. *message* é **nvarchar(2048)**.  
+ É uma cadeia de caracteres ou variável que descreve a exceção. *message* é **nvarchar(2048)** .  
   
  *state*  
  É uma constante ou variável entre 0 e 255 que indica o estado a ser associado à mensagem. *state* é **tinyint**.  
@@ -87,7 +87,7 @@ THROW 51000, 'The record does not exist.', 1;
  The record does not exist.
  ```  
   
-### <a name="b-using-throw-to-raise-an-exception-again"></a>b. Usando THROW para gerar uma exceção novamente  
+### <a name="b-using-throw-to-raise-an-exception-again"></a>B. Usando THROW para gerar uma exceção novamente  
  O exemplo a seguir mostra como usar a instrução `THROW` para gerar a última exceção lançada novamente.  
   
 ```sql  

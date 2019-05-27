@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 65cc22ce-53e9-49dc-8f40-cbf0159c9e54
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a87118acbfa2b4dc38fc8ba50fecc56e8c22b656
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d1dcc44c8d9892bb6dee31b5cebd4be73037cf0b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240174"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093297"
 ---
 # <a name="ready-to-repair"></a>Pronto para Reparar
   A página Pronto para Reparar fornece um resumo do processo de reparo através da Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

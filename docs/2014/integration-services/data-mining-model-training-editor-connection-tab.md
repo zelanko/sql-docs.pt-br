@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmmtrainingtransformation.connection.f1
@@ -15,12 +14,12 @@ ms.assetid: 098fbb1a-2a26-4288-9f68-d6233cb388ad
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b88616b096557f0c27255669d4f5fab1f646f5f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 64b31656796c1875d11c6ab1aa9524f4b149d7ee
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62899919"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059875"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>Editor de Treinamento de Modelo de Mineração de Dados (guia Conexão)
   Use a página **Conexão** da caixa de diálogo **Editor de Treinamento do Modelo de Mineração de Dados** para selecionar um modelo de mineração para treinar.  
