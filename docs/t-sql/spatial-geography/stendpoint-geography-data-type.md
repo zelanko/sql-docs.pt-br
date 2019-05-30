@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STEndpoint method
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: cbb7249cba8ca5700fdddf0ab8d3bb2f6b7d82ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5202c1c61b7d7531737de828de935a14289a902d
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782774"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936989"
 ---
 # <a name="stendpoint-geography-data-type"></a>STEpoint (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "47782774"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno do CLR: **SqlGeography**  
+ Tipo de retorno CLR: **SqlGeography**  
   
- Tipo do OGC (Open Geospatial Consortium): **Point**  
+ Tipo OGC (Open Geospatial Consortium): **Ponto**  
   
 ## <a name="remarks"></a>Remarks  
  STEndPoint() é o equivalente a [STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md)`(x.STNumPoints``())`.  

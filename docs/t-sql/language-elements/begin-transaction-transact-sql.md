@@ -27,16 +27,16 @@ helpviewer_keywords:
 - starting point marked for transactions
 - starting transactions
 ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edcf0a919c0bcf5dbcbd1490b016c49ab7e46d8a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 9c9a6c4debdb401524d4a06828b05e8909ddde51
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802243"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981127"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -157,7 +157,7 @@ DELETE FROM HumanResources.JobCandidate
 COMMIT;  
 ```
 
-### <a name="b-rolling-back-a-transaction"></a>b. Revertendo uma transação
+### <a name="b-rolling-back-a-transaction"></a>B. Revertendo uma transação
 **APLICA-SE A:** SQL Server (começando com o 2008), Banco de Dados SQL do Azure, SQL Data Warehouse do Azure, Parallel Data Warehouse
 
 O exemplo a seguir mostra o efeito da reversão de uma transação. Neste exemplo, a instrução ROLLBACK reverterá a instrução INSERT, mas a tabela criada ainda continuará a existir.

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STIntersection (geometry Data Type)
 ms.assetid: 354843f5-cc14-478c-974a-04f363f9530f
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f556697457ba8baa649458f7a7c46b02e4682d4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19765373e48ea01c780cc9771c6e55b70333b3c8
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759664"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938853"
 ---
 # <a name="stintersection-geometry-data-type"></a>STIntersection (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Retorna um objeto que representa os pontos em que uma instância de **geometry**
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno do CLR: **SqlGeometry**  
+ Tipo de retorno CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  `STIntersection()` sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geometry** não forem correspondentes. O resultado poderá conter segmentos de arco circulares apenas se as instâncias de entrada os contiverem.  

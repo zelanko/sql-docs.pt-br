@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Filter method
 ms.assetid: 82a8f54a-3a47-4e20-b13a-b148029c5448
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: abfa42998353d4561ee91cb9104d93dc1cef815b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cf00adcfb11249dc2465d2afd7532dc4d4dc093
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714954"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937840"
 ---
 # <a name="filter-geography-data-type"></a>Filter (tipo de dados de geografia)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47714954"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno do CLR: **SqlBoolean**  
+ Tipo de retorno CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  Esse método não é determinista e não é preciso.  

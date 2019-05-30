@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - Long method
 ms.assetid: bedbeced-70b8-4569-84f3-f86bfb04ce50
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 782017610fbb5f7062db434216b034e699c5277a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2287205c91f2ceaef44af7bf8322d3c31e201c0c
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599954"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937661"
 ---
 # <a name="long-geography-data-type"></a>Long (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47599954"
 ## <a name="return-value"></a>Valor retornado  
  Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo do CLR: **SqlDouble**  
+ Tipo CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  No modelo OpenGIS, Long é definido apenas em instâncias de **geography** compostas por um único ponto. Essa propriedade retornará NULL se instâncias de **geography** contiverem mais de um ponto. Essa propriedade é exata e somente leitura.  

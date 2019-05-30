@@ -19,16 +19,16 @@ helpviewer_keywords:
 - file restores [SQL Server], RESTORE statement
 - transaction log backups [SQL Server], RESTORE statement
 ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 476d6d4ca92b806f0973983de5815f57782076e8
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: d094b8540609810d134c52fb5755b21db4fc0f6b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242177"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947120"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>instruções RESTORE para restaurar, recuperar e gerenciar backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
@@ -43,7 +43,7 @@ ms.locfileid: "54242177"
 |de|Descrição|  
 |---------------|-----------------|  
 |[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|Descreve as instruções de Transact-SQL RESTORE DATABASE e RESTORE LOG usadas para restaurar e recuperar um banco de dados de backups obtidos por meio do comando BACKUP. RESTORE DATABASE é usado para bancos de dados sob modelos de recuperação. RESTORE LOG é usado apenas sob os modelos de recuperação completa e com log de operações em massa. RESTORE DATABASE também pode ser usado para reverter um banco de dados a um instantâneo do banco de dados.|  
-|[Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|Documenta os argumentos descritos nas seções "Syntax" da instrução RESTORE e do conjunto associado de instruções auxiliares: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY e RESTORE VERIFYONLY. Há suporte para a maioria dos argumentos apenas por um subconjunto dessas seis instruções. O suporte a cada argumento é indicado na descrição do argumento.|  
+|[Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|Documenta os argumentos descritos nas seções "Sintaxe" da instrução RESTORE e do conjunto associado de instruções auxiliares: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY e RESTORE VERIFYONLY. Há suporte para a maioria dos argumentos apenas por um subconjunto dessas seis instruções. O suporte a cada argumento é indicado na descrição do argumento.|  
 |[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|Descreve a instrução de Transact-SQL RESTORE FILELISTONLY, que é usada para retornar um conjunto de resultados contendo uma lista dos bancos de dados e arquivos de log contidas no conjunto de backups.|  
 |[RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|Descreve a instrução de Transact-SQL RESTORE HEADERONLY, que é usada para retornar um conjunto de resultados que contém todas as informações de cabeçalho de backup de todos os conjuntos de backups em um dispositivo de backup em particular.|  
 |[RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|Descreve a instrução de Transact-SQL RESTORE LABELONLY, que é usada para retornar um conjunto de resultados contendo informações sobre a mídia de backup identificada pelo dispositivo de backup determinado.|  

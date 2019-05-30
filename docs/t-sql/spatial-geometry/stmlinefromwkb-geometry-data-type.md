@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMLineFromWKB (geometry Data Type)
 ms.assetid: 00a8a8e7-11d6-47a0-b971-00e60f7877ce
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 378b47226af215bab95df34afac6bbb22cd536e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 767ab0db9ac92816cfb4c97df0b4ce97efa1ba30
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846974"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938596"
 ---
 # <a name="stmlinefromwkb-geometry-data-type"></a>STMLineFromWKB (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_multilinestring*  
- É a representação WKB da instância de **geometryMultiLineString** a ser retornada. *WKB_multilinestring* é uma expressão **varbinary(max)**.  
+ É a representação WKB da instância de **geometryMultiLineString** a ser retornada. *WKB_multilinestring* é uma expressão **varbinary(max)** .  
   
  *SRID*  
  É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geometryMultiLineString** a ser retornada.  
@@ -47,9 +47,9 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno do CLR: **SqlGeometry**  
+ Tipo de retorno CLR: **SqlGeometry**  
   
- Tipo do OGC: **MultiLineString**  
+ Tipo OGC: **MultiLineString**  
   
 ## <a name="remarks"></a>Remarks  
  Esse método gerará uma **FormatException** se a entrada não for bem formatada.  

@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f5cda166fdd343392f85f5537877cbc7da3e05ae
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: bf05845ce09fab783692d6b5c63f60fd91a98997
+ms.sourcegitcommit: 8aa51bc0bc54b266145c96f6451b59f369822160
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503733"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66036898"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -368,7 +368,7 @@ As colunas computadas podem ser usadas em listas de seleção, cláusulas WHERE,
 -  As colunas computadas devem ser marcadas como PERSISTED para participar de uma restrição FOREIGN KEY ou CHECK.
 -  Uma coluna computada poderá ser usada como uma coluna de chave em um índice ou como parte de uma restrição PRIMARY KEY ou UNIQUE, se o valor for definido por uma expressão determinística e o tipo de dados do resultado for permitido nas colunas de índice.
 
-   Por exemplo, se a tabela tiver as colunas de inteiros **a** e **b**, a coluna computada **a+b** poderá ser indexada, mas não a coluna computada **a+DATEPART(dd, GETDATE())**, pois o valor poderá ser alterado em chamadas subsequentes.
+   Por exemplo, se a tabela tiver as colunas de inteiros **a** e **b**, a coluna computada **a+b** poderá ser indexada, mas não a coluna computada **a+DATEPART(dd, GETDATE())** , pois o valor poderá ser alterado em chamadas subsequentes.
 
 -  Uma coluna computada não pode ser o destino de uma instrução INSERT ou UPDATE.
 
@@ -380,23 +380,23 @@ Com base nas expressões usadas, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] d
 PERSISTED    
 Especifica que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] armazenará fisicamente os valores computados na tabela e atualizará os valores quando for atualizada qualquer outra coluna da qual a coluna computada depende. A marcação de uma coluna computada como `PERSISTED` permite a criação de um índice em uma coluna computada que seja determinística, mas não precisa. Para obter mais informações, consulte [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). As colunas computadas usadas como colunas de particionamento de uma tabela particionada precisam ser explicitamente marcadas como `PERSISTED`. *computed_column_expression* precisa ser determinística quando `PERSISTED` é especificado.
 
-ON { *partition_scheme* | *filegroup* | **"default"** }     
+ON { *partition_scheme* | *filegroup* |  **"default"** }     
 Especifica o esquema de partição ou grupo de arquivos no qual a tabela é armazenada. Se *partition_scheme* for especificado, a tabela será uma tabela particionada cujas partições são armazenadas em um conjunto de um ou mais grupos de arquivos especificados em *partition_scheme*. Se *filegroup* for especificado, a tabela será criada no grupo de arquivos nomeado. O grupo de arquivos deve existir no banco de dados. Se **"default"** for especificado ou se ON não for especificado, a tabela será armazenada no grupo de arquivos padrão. O mecanismo de armazenamento de uma tabela como especificado em CREATE TABLE não pode ser alterado posteriormente.
 
-ON {*partition_scheme* | *filegroup* | **"default"**} também pode ser especificado em uma restrição PRIMARY KEY ou UNIQUE. Essas restrições criam índices. Se *filegroup* for especificado, o índice será armazenado no grupo de arquivos nomeado. Se **"default"** for especificado ou se ON não for especificado, o índice será armazenado no mesmo grupo de arquivos da tabela. Se a restrição `PRIMARY KEY` ou `UNIQUE` criar um índice clusterizado, as páginas de dados da tabela serão armazenadas no mesmo grupo de arquivos do índice. Se `CLUSTERED` for especificado ou se a restrição de outra forma criar um índice clusterizado e for especificado um *partition_scheme* diferente do *partition_scheme* ou do *filegroup* da definição da tabela ou vice-versa, somente a definição da restrição será respeitada e as demais serão ignoradas.
+ON {*partition_scheme* | *filegroup* |  **"default"** } também pode ser especificado em uma restrição PRIMARY KEY ou UNIQUE. Essas restrições criam índices. Se *filegroup* for especificado, o índice será armazenado no grupo de arquivos nomeado. Se **"default"** for especificado ou se ON não for especificado, o índice será armazenado no mesmo grupo de arquivos da tabela. Se a restrição `PRIMARY KEY` ou `UNIQUE` criar um índice clusterizado, as páginas de dados da tabela serão armazenadas no mesmo grupo de arquivos do índice. Se `CLUSTERED` for especificado ou se a restrição de outra forma criar um índice clusterizado e for especificado um *partition_scheme* diferente do *partition_scheme* ou do *filegroup* da definição da tabela ou vice-versa, somente a definição da restrição será respeitada e as demais serão ignoradas.
 
 > [!NOTE]
-> Nesse contexto, *default* não é uma palavra-chave. É um identificador para o grupo de arquivos padrão e precisa ser delimitado, como em ON **"default"** ou ON **[** default **]**. Se **"default"** é especificado, a opção `QUOTED_IDENTIFIER` deve ser definida como ON na sessão atual. Essa é a configuração padrão. Para saber mais, confira [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+> Nesse contexto, *default* não é uma palavra-chave. É um identificador para o grupo de arquivos padrão e precisa ser delimitado, como em ON **"default"** ou ON **[** default **]** . Se **"default"** é especificado, a opção `QUOTED_IDENTIFIER` deve ser definida como ON na sessão atual. Essa é a configuração padrão. Para saber mais, confira [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 >
 > Depois de criar uma tabela particionada, considere a configuração da opção `LOCK_ESCALATION` da tabela como `AUTO`. Isso pode melhorar a simultaneidade ao permitir que os bloqueios escalem para o nível da partição (HoBT) em vez da tabela. Para obter mais informações, consulte [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).
 
-TEXTIMAGE_ON { *filegroup*| **"default"** }    
-Indica que **text**, **ntext**, **image**, **xml**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** e as colunas de tipo definido pelo usuário CLR (incluindo geometria e geografia) são armazenadas no grupo de arquivos especificado.
+TEXTIMAGE_ON { *filegroup*|  **"default"** }    
+Indica que **text**, **ntext**, **image**, **xml**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** e as colunas de tipo definido pelo usuário CLR (incluindo geometria e geografia) são armazenadas no grupo de arquivos especificado.
 
 `TEXTIMAGE_ON` não será permitido se não houver colunas de valor grande na tabela. `TEXTIMAGE_ON` não poderá ser especificado se *partition_scheme* for especificado. Se **"default"** for especificado ou se `TEXTIMAGE_ON` não for especificado, as colunas de valores grandes serão armazenadas no grupo de arquivos padrão. O armazenamento de qualquer dado de coluna de valor grande especificado em `CREATE TABLE` não poderá ser alterado posteriormente.
 
 > [!NOTE]
-> Varchar(max), nvarchar(max), varbinary(max), xml e valores UDT grandes são armazenados diretamente na linha de dados, até um limite de 8.000 bytes, desde que o valor caiba no registro. Se o valor não se ajustar ao registro, um ponteiro será armazenado na linha e o restante será armazenado fora da linha no espaço de armazenamento de LOB. O valor padrão é 0.
+> Varchar(max), nvarchar(max), varbinary(max), xml e valores UDT grandes são armazenados diretamente na linha de dados, até um limite de 8.000 bytes, desde que o valor caiba no registro. Se o valor não se ajustar ao registro, um ponteiro será armazenado na linha e o restante será armazenado fora da linha no espaço de armazenamento de LOB. 0 é o valor padrão, que indica que todos os valores são armazenados diretamente na linha de dados.
 >
 > `TEXTIMAGE_ON` somente altera o local do "espaço de armazenamento LOB", não afetando o momento em que os dados são armazenados na linha. Use tipos de valor grande sem a opção de linha de sp_tableoption para armazenar todo o valor LOB fora da linha.
 >
@@ -422,7 +422,7 @@ O grupo de arquivos da cláusula `FILESTREAM_ON <filegroup>`, ou cada grupo de a
 
 Para tópicos sobre FILESTREAM relacionados, veja [Objeto Binário Grande – Dados de Blob](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).
 
-[ _type\_schema\_name_**.** ] *type_name*     
+[ _type\_schema\_name_ **.** ] *type_name*     
 Especifica o tipo de dados da coluna e o esquema ao qual ele pertence. Para tabelas com base em disco, o tipo de dados pode ser um dos seguintes:
 
 - Um tipo de dados do sistema
@@ -465,7 +465,7 @@ Especifica o valor fornecido para a coluna quando um valor não for fornecido ex
 É uma constante, NULL, ou uma função de sistema com suporte usada como o valor padrão da coluna. Deve haver suporte nos procedimentos armazenados compilados de modo nativo. Para obter mais informações sobre as funções integradas em procedimentos armazenados compilados nativamente, veja [Recursos compatíveis em módulos T-SQL compilados nativamente](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).
 
 IDENTITY    
-Indica que a nova coluna é uma coluna de identidade. Quando uma nova linha é adicionada à tabela, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] fornece um valor incremental exclusivo para a coluna. Geralmente, as colunas de identidade são usadas com restrições PRIMARY KEY para servir como o identificador exclusivo de linha para a tabela. A propriedade `IDENTITY` pode ser atribuída às colunas **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** ou **numeric(p,0)**. Apenas uma coluna de identidade pode ser criada por tabela. Padrões associados e restrições DEFAULT não podem ser usados com uma coluna de identidade. Devem ser especificados tanto o valor de semente como o de incremento ou nenhum dos dois. Se nenhum for especificado, o padrão será (1,1).
+Indica que a nova coluna é uma coluna de identidade. Quando uma nova linha é adicionada à tabela, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] fornece um valor incremental exclusivo para a coluna. Geralmente, as colunas de identidade são usadas com restrições PRIMARY KEY para servir como o identificador exclusivo de linha para a tabela. A propriedade `IDENTITY` pode ser atribuída às colunas **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** ou **numeric(p,0)** . Apenas uma coluna de identidade pode ser criada por tabela. Padrões associados e restrições DEFAULT não podem ser usados com uma coluna de identidade. Devem ser especificados tanto o valor de semente como o de incremento ou nenhum dos dois. Se nenhum for especificado, o padrão será (1,1).
 
 *seed*    
 É o valor usado para a primeira linha carregada na tabela.
@@ -481,7 +481,7 @@ GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ]
 
 Especifica que uma coluna `datetime2` especificada será usada pelo sistema para registrar a hora de início na qual um registro é válido ou a hora de término na qual um registro é válido. A coluna precisa ser definida como `NOT NULL`. Se você tentar especificá-las como `NULL`, o sistema gerará um erro. Se você não especificar explicitamente NOT NULL para uma coluna de período, o sistema definirá a coluna como `NOT NULL` por padrão. Use esse argumento junto com os argumentos `PERIOD FOR SYSTEM_TIME` e `WITH SYSTEM_VERSIONING = ON` para habilitar o controle de versão do sistema em uma tabela. Para saber mais, veja [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
-Você pode marcar uma ou ambas as colunas de período com o sinalizador **HIDDEN** para implicitamente ocultar essas colunas, de modo que **SELECT \* FROM**_`<table>`_ não retorne um valor para essas colunas. Por padrão, as colunas de período não ficam ocultas. Para serem usadas, colunas ocultas devem ser explicitamente incluídas em todas as consultas que fazem referência direta à tabela temporal. Para alterar o atributo **HIDDEN** para uma coluna de período existente, **PERIOD** deve ser descartado e recriado com um sinalizador oculto diferente.
+Você pode marcar uma ou ambas as colunas de período com o sinalizador **HIDDEN** para implicitamente ocultar essas colunas, de modo que **SELECT \* FROM** _`<table>`_ não retorne um valor para essas colunas. Por padrão, as colunas de período não ficam ocultas. Para serem usadas, colunas ocultas devem ser explicitamente incluídas em todas as consultas que fazem referência direta à tabela temporal. Para alterar o atributo **HIDDEN** para uma coluna de período existente, **PERIOD** deve ser descartado e recriado com um sinalizador oculto diferente.
 
 INDEX *nome_do_índice* [ CLUSTERED | NONCLUSTERED ] (*nome_da_coluna* [ ASC | DESC ] [ ,... *n* ] )     
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -500,7 +500,7 @@ Especifica a criação de um índice não clusterizado columnstore na tabela. A 
 
 O índice columnstore não clusterizado é armazenado e gerenciado como um índice columnstore clusterizado. Isso é chamado de índice columnstore não clusterizado porque as colunas podem ser limitadas e existem como um índice secundário em uma tabela.
 
-ON _partition\_scheme\_name_**(**_column\_name_**)**    
+ON _partition\_scheme\_name_ **(** _column\_name_ **)**     
 Especifica o esquema de partição que define os grupos de arquivos nos quais as partições de um índice particionado serão mapeadas. O esquema de partição deve existir no banco de dados com a execução de [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) ou [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* especifica a coluna com relação à qual um índice particionado será particionado. Essa coluna precisa corresponder ao tipo de dados, ao comprimento e à precisão do argumento da função de partição que *partition_scheme_name* está usando. *column_name* não é restrito às colunas na definição de índice. Qualquer coluna da tabela base pode ser especificada, exceto que, ao particionar um índice UNIQUE, *column_name* deve ser escolhido entre aqueles usados como chave exclusiva. Essa restrição permite ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] verificar a exclusividade de valores de chave em uma única partição apenas.
 
 > [!NOTE]
@@ -516,10 +516,10 @@ Para obter mais informações sobre particionamento de índices, consulte [Tabel
 ON *filegroup_name*    
 Cria o índice especificado no grupo de arquivos especificado. Se nenhum local for especificado e a tabela ou exibição não for particionada, o índice usará o mesmo grupo de arquivos que a tabela ou exibição subjacente. O grupo de arquivos já deve existir.
 
-ON **"default"**    
+ON **"default"**     
 Cria o índice especificado no grupo de arquivos padrão.
 
-Nesse contexto, default não é uma palavra-chave. É um identificador para o grupo de arquivos padrão e precisa ser delimitado, como em ON **"default"** ou ON **[default]**. Se "default" é especificado, a opção `QUOTED_IDENTIFIER` deve ser definida como ON na sessão atual. Essa é a configuração padrão. Para saber mais, confira [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+Nesse contexto, default não é uma palavra-chave. É um identificador para o grupo de arquivos padrão e precisa ser delimitado, como em ON **"default"** ou ON **[default]** . Se "default" é especificado, a opção `QUOTED_IDENTIFIER` deve ser definida como ON na sessão atual. Essa é a configuração padrão. Para saber mais, confira [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]     
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
@@ -561,7 +561,7 @@ As colunas devem ser de um tipo de dados qualificado.
 ALGORITHM    
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
-Deve ser **'AEAD_AES_256_CBC_HMAC_SHA_256'**.
+Deve ser **'AEAD_AES_256_CBC_HMAC_SHA_256'** .
 
 Para mais informações, incluindo restrições de recursos, veja [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
@@ -583,7 +583,7 @@ Para parâmetros de função, consulte [Máscara de Dados Dinâmicos](../../rela
 FILESTREAM     
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (do [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
-Válido somente para colunas **varbinary(max)**. Especifica o armazenamento FILESTREAM para dados de BLOB **varbinary(max)**.
+Válido somente para colunas **varbinary(max)** . Especifica o armazenamento FILESTREAM para dados de BLOB **varbinary(max)** .
 
 A tabela também deve ter uma coluna do tipo de dados **uniqueidentifier** com o atributo ROWGUIDCOL. Essa coluna não deve permitir valores nulos e deve ter uma restrição de coluna única UNIQUE ou PRIMARY KEY. O valor de GUID da coluna deve ser fornecido por um aplicativo ao inserir dados ou por uma restrição DEFAULT que usa a função NEWID ().
 
@@ -621,10 +621,10 @@ Em uma instrução `CREATE TABLE`, CLUSTERED pode ser especificado apenas para u
 FOREIGN KEY REFERENCES       
 É uma restrição que fornece integridade referencial para os dados na coluna ou colunas. As restrições FOREIGN KEY requerem que cada valor na coluna exista na coluna ou colunas referenciadas correspondentes na tabela referenciada. As restrições FOREIGN KEY podem fazer referência somente a colunas que sejam restrições PRIMARY KEY ou UNIQUE na tabela ou colunas referenciadas em um UNIQUE INDEX na tabela referenciada. As chaves estrangeiras em colunas computadas também devem ser marcadas como PERSISTED.
 
-[ _schema\_name_**.**] *referenced_table_name*]      
+[ _schema\_name_ **.** ] *referenced_table_name*]      
 É o nome da tabela referenciada pela restrição FOREIGN KEY e o esquema ao qual ela pertence.
 
-**(** *ref_column* [ **,**... *n* ] **)** É uma coluna, ou lista de colunas, da tabela referenciadas pela restrição FOREIGN KEY.
+**(** *ref_column* [ **,** ... *n* ] **)** É uma coluna, ou lista de colunas, da tabela referenciadas pela restrição FOREIGN KEY.
 
 ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }         
 Especifica qual ação ocorrerá nas linhas da tabela criada se essas linhas tiverem uma relação referencial e a linha referenciada for excluída da tabela pai. O padrão é NO ACTION.
@@ -691,13 +691,13 @@ Especifica a ordem na qual a coluna ou colunas que participam de restrições de
 *partition_scheme_name*     
 É o nome do esquema de partição que define os grupos de arquivos sobre os quais as partições de uma tabela particionada serão mapeadas. O esquema de partição deve existir no banco de dados.
 
-[ _partition\_column\_name_**.** ]      
+[ _partition\_column\_name_ **.** ]      
 Especifica a coluna que servirá de base para o particionamento de uma tabela particionada. A coluna deve corresponder àquela especificada na função de partição que *partition_scheme_name* está usando em termos de tipo de dados, comprimento e precisão. Uma coluna computada que participa de uma função de partição deve ser marcada explicitamente como PERSISTED.
 
 > [!IMPORTANT]
 > Recomendamos a especificação de NOT NULL na coluna de particionamento das tabelas particionadas e também de tabelas não particionadas que servem de origem e destino para as operações ALTER TABLE...SWITCH. Isso garante que toda restrição CHECK de colunas de particionamento não terão que verificar se existem valores nulos.
 
-WITH FILLFACTOR **=**_fillfactor_     
+WITH FILLFACTOR **=** _fillfactor_     
 Especifica o quanto o [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve preencher cada página de índice usada para armazenar os dados de índice. Os valores de *fillfactor* especificados pelo usuário podem ser de 1 a 100. Se um valor não for especificado, o padrão será 0. Os valores de fator de preenchimento 0 e 100 são iguais em todos os aspectos.
 
 > [!IMPORTANT]
@@ -750,7 +750,7 @@ Aplica-se somente a índices columnstore, incluindo índices columnstore não cl
 
 Para saber mais, veja [Data Compression](../../relational-databases/data-compression/data-compression.md).
 
-ON PARTITIONS **(** { `<partition_number_expression>` | [ **,**...*n* ] **)**      
+ON PARTITIONS **(** { `<partition_number_expression>` | [ **,** ...*n* ] **)**       
 Especifica as partições às quais se aplica a configuração DATA_COMPRESSION. Se a tabela não for particionada, o argumento `ON PARTITIONS` ON PARTITIONS gerará um erro. Se a cláusula `ON PARTITIONS` não for fornecida, a opção `DATA_COMPRESSION` será aplicada a todas as partições de uma tabela particionada.
 
 *partition_number_expression* pode ser especificado das seguintes maneiras:
@@ -778,7 +778,7 @@ Especifica uma ou mais opções de índice. Para obter uma descrição completa 
 PAD_INDEX = { ON | **OFF** }     
 Quando ON, o percentual de espaço livre especificado por FILLFACTOR será aplicado às páginas de nível intermediário do índice. Quando OFF ou se o valor de FILLFACTOR não foi especificado, as páginas de nível intermediário são preenchidas até próximo de sua capacidade, deixando espaço suficiente para pelo menos uma linha do tamanho máximo que o índice pode ter, considerando o conjunto de chaves em páginas intermediárias. O padrão é OFF.
 
-FILLFACTOR **=**_fillfactor_     
+FILLFACTOR **=** _fillfactor_     
 Especifica uma porcentagem que indica quanto [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve preencher o nível folha de cada página de índice durante a criação ou alteração do índice. *fillfactor* deve ser um valor inteiro de 1 a 100. O padrão é 0. Os valores de fator de preenchimento 0 e 100 são iguais em todos os aspectos.
 
 IGNORE_DUP_KEY = { ON | **OFF** }    
@@ -1287,7 +1287,7 @@ CREATE TABLE dbo.mytable
 ```
 
 ### <a name="k-creating-a-computed-column-based-on-a-user-defined-type-column"></a>K. Criando uma coluna computada com base em uma coluna de tipo de dados definido pelo usuário
-O exemplo a seguir cria uma tabela com uma coluna definida como tipo de dados definido pelo usuário `utf8string`, supondo que o assembly do tipo, e o próprio tipo, já foram criados no banco de dados atual. Uma segunda coluna é definida com base em `utf8string` e usa o método `ToString()` de **type(class)**`utf8string` para computar um valor para a coluna.
+O exemplo a seguir cria uma tabela com uma coluna definida como tipo de dados definido pelo usuário `utf8string`, supondo que o assembly do tipo, e o próprio tipo, já foram criados no banco de dados atual. Uma segunda coluna é definida com base em `utf8string` e usa o método `ToString()` de **type(class)** `utf8string` para computar um valor para a coluna.
 
 ```sql
 CREATE TABLE UDTypeTable

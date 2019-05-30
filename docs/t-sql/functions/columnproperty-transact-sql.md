@@ -17,15 +17,15 @@ helpviewer_keywords:
 - parameters [SQL Server], properties
 - COLUMNPROPERTY function
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 451b92b502a22d8cefc32e8ea82570cd1e0187e1
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 6211f2b47aebc2c4087cc2ed4fe5b068a8686292
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980542"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943977"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ Para o argumento *id*, o argumento *propriedade* especifica o tipo de informaç�
 |Valor|Descrição|Valor retornado|  
 |---|---|---|
 |**AllowsNull**|Permite valores nulos.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
-|**ColumnId**|Valor de ID da coluna que corresponde a **sys.columns.column_id**.|ID da coluna<br /><br /> **Observação:** Ao consultar várias colunas, podem aparecer intervalos na sequência de valores de ID da coluna.|  
+|**ColumnId**|Valor de ID da coluna que corresponde a **sys.columns.column_id**.|ID da coluna<br /><br /> **Observação:** Ao consultar várias colunas, podem aparecer lacunas na sequência de valores de ID da Coluna.|  
 |**FullTextTypeColumn**|A TYPE COLUMN na tabela contendo as informações de tipo de documento da *coluna*.|ID de TYPE COLUMN de texto completo da expressão de nome de coluna passada como segundo parâmetro dessa função.|  
 |**GeneratedAlwaysType**|O valor da coluna é gerado pelo sistema. Corresponde a **sys.columns.generated_always_type**|**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: não é gerado sempre<br /><br /> 1: gerado sempre no início da linha<br /><br /> 2: gerado sempre no fim da linha|  
 |**IsColumnSet**|A coluna é um conjunto de colunas. Para obter mais informações, veja [Usar conjuntos de colunas](../../relational-databases/tables/use-column-sets.md).|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  

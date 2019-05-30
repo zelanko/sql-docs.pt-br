@@ -18,16 +18,16 @@ helpviewer_keywords:
 - RESTORE LABELONLY statement
 - backup media [SQL Server], content information
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9b6b7ba063a25df92335b5727c7c29fcb69a7221
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a4d9aee8f248dfdf9ce259442ae34a5107750610
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241557"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947093"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>Instruções RESTORE – LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -90,7 +90,7 @@ FROM <backup_device>
 |**SoftwareName**|**nvarchar(128)**|Nome do software de backup que gravou o rótulo.|  
 |**SoftwareVendorId**|**int**|Número exclusivo de identificação do fornecedor do software que gravou o backup.|  
 |**MediaDate**|**datetime**|Data e hora em que o rótulo foi gravado.|  
-|**Mirror_Count**|**int**|Número de espelhos no conjunto (1-4).<br /><br /> Observação: Os rótulos gravados para espelhos diferentes em um conjunto são idênticos.|  
+|**Mirror_Count**|**int**|Número de espelhos no conjunto (1-4).<br /><br /> Observação: Os rótulos escritos para espelhos diferentes em um conjunto são idênticos.|  
 |**IsCompressed**|**bit**|Se o backup é compactado:<br /><br /> 0 = não compactado<br /><br /> 1 = compactado|  
   
 > [!NOTE]  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STWithin (geometry Data Type)
 ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f06651b5f1da33a9756e46cd438e39541b212ad6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 579f2fd2e4e662bf5f8a060c93f7370af4edb7e7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660244"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935637"
 ---
 # <a name="stwithin-geometry-data-type"></a>STWithin (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Retorna 1 se uma instância de **geometry** está completamente dentro de outra 
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno do CLR: **SqlBoolean**  
+ Tipo de retorno CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  Esse método sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geometry** não forem correspondentes.

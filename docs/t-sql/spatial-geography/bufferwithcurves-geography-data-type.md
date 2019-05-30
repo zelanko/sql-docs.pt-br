@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geography)
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: afcd0b1256b42f6f89d979de1e2178d566981a7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81222e73df527d5d51a592dd2cabe62384b5f936
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695794"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937323"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47695794"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno do CLR: **SqlGeography**  
+ Tipo de retorno CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Exceções  
  Os critérios a seguir gerarão uma **ArgumentException**.  
@@ -61,7 +61,7 @@ ms.locfileid: "47695794"
 |Valor de distância|Dimensões do tipo|Tipo espacial retornado|  
 |--------------------|---------------------|---------------------------|  
 |distância < 0|Zero ou um|Instância de **GeometryCollection** vazia|  
-|distância \< 0|Dois ou mais|Uma instância de **CurvePolygon** ou **GeometryCollection** com um buffer negativo.<br /><br /> Observação: um buffer negativo pode criar uma **GeometryCollection** vazia|
+|distância \< 0|Dois ou mais|Uma instância de **CurvePolygon** ou **GeometryCollection** com um buffer negativo.<br /><br /> Observação: Um buffer negativo pode criar uma **GeometryCollection** vazia|
 |distância = 0|Todas as dimensões|Cópia da instância de **geography** de invocação|  
 |distância > 0|Todas as dimensões|Instância de **CurvePolygon** ou **GeometryCollection**|  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47695794"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geography-instance"></a>A. Chamando BufferWithCurves() com um valor de parâmetro < 0 em instância de geografia unidimensional  
+### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geography-instance"></a>A. Como chamar BufferWithCurves() com um valor de parâmetro < 0 em instância de geografia unidimensional  
  O exemplo a seguir retorna uma instância `GeometryCollection` vazia:  
   
  ```sql
@@ -80,7 +80,7 @@ ms.locfileid: "47695794"
  SELECT @g.BufferWithCurves(-1).ToString();
 ``` 
   
-### <a name="b-calling-bufferwithcurves-with-a-parameter-value--0-on-a-two-dimensional-geography-instance"></a>B. Chamando BufferWithCurves() com um valor de parâmetro < 0 em instância de geografia bidimensional  
+### <a name="b-calling-bufferwithcurves-with-a-parameter-value--0-on-a-two-dimensional-geography-instance"></a>B. Como chamar BufferWithCurves() com um valor de parâmetro < 0 em uma instância de geografia bidimensional  
  O exemplo a seguir retorna uma instância `CurvePolygon` com um buffer negativo:  
   
  ```sql
@@ -88,7 +88,7 @@ ms.locfileid: "47695794"
  SELECT @g.BufferWithCurves(-1).ToString()
  ```  
   
-### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. Chamando BufferWithCurves() com um valor de parâmetro < 0 que retorna uma GeometryCollection vazia  
+### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. Como chamar BufferWithCurves() com um valor de parâmetro < 0 que retorna uma GeometryCollection vazia  
  O seguinte exemplo mostra o que ocorre quando o parâmetro *distance* é igual a -2:  
   
  ```sql
@@ -115,7 +115,7 @@ ms.locfileid: "47695794"
  SELECT @g.BufferWithCurves(@distance).ToString();
  ```  
   
-### <a name="f-calling-bufferwithcurves-with-a-parameter-value--0"></a>F. Chamando BufferWithCurves() com um valor de parâmetro > 0  
+### <a name="f-calling-bufferwithcurves-with-a-parameter-value--0"></a>F. Como chamar BufferWithCurves() com um valor de parâmetro > 0  
  O exemplo a seguir retorna uma instância `CurvePolygon`:  
 
  ```sql

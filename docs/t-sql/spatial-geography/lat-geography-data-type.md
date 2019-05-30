@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - Lat method
 ms.assetid: 051d66bc-04de-4c58-861c-760dc5b859b5
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: fda04401334546cde33ca14034d344c8b444e138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03e9aa242fd76579f17090c17257a865ebb927ef
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804304"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937666"
 ---
 # <a name="lat-geography-data-type"></a>Lat (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47804304"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo do CLR: **SqlDouble**  
+ Tipo CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  No modelo OpenGIS, Lat só é definida nas instâncias de **geografia** compostas por um único ponto. Essa propriedade retornará NULL se instâncias de **geography** contiverem mais de um ponto. Essa propriedade é exata e somente leitura.  

@@ -19,17 +19,17 @@ helpviewer_keywords:
 - '!> (not greater than)'
 - not greater than operator (!>)
 ms.assetid: 71a413ed-64f1-4ab9-9c52-c5959a77d00f
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 26baf53b4c5c3bddd768b2382f82583eae477605
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.openlocfilehash: a16bc57713ef1a9acda4b83f5a80b85818ceb325
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331576"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981921"
 ---
-# <a name="gt-not-greater-than-transact-sql"></a>!&gt; (não é maior que) (Transact-SQL)
+# <a name="gt-not-greater-than-transact-sql"></a>!&gt; (Não é maior que) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Compara duas expressões (um operador de comparação). Ao comparar expressões não nulas, o resultado será TRUE se o operando da esquerda não tiver um valor maior que o operando da direita. Caso contrário, o resultado será FALSE. Diferentemente do operador de comparação = (igualdade), o resultado da comparação !> de dois valores NULL não depende da configuração de ANSI_NULLS.  

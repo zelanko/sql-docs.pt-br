@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STDimension (geometry Data Type)
 ms.assetid: 4fbd27dd-317b-4916-a8ae-4df1b8a6f27c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: e1815200bd64ce225ce9100b66efc1340f877174
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f84bd8cd53f68bd45cf91307968b45923e53280
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710824"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938994"
 ---
 # <a name="stdimension-geometry-data-type"></a>STDimension (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Retorna a dimensão máxima de uma instância de **geometry**.
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo de retorno do CLR: **SqlInt32**  
+ Tipo de retorno CLR: **SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
  `STDimension()` retornará -1 se a instância de **geometry** estiver vazia.  

@@ -21,16 +21,16 @@ helpviewer_keywords:
 - greater than or equal to operator (>=)
 - '>= (greater than or equal to operator)'
 ms.assetid: 641ee28d-7536-46dd-a48a-6c63c2d59278
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f946a30bf575ab9217a1f97f07d2b8c21580d63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 721a7795f027e3641e3a8f5ab2c740e17c9cff57
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618544"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982280"
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;= (maior ou igual a) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,11 +55,11 @@ expression >= expression
 ## <a name="remarks"></a>Remarks  
  Ao comparar expressões não nulas, o resultado será TRUE se o operando da esquerda tiver um valor maior ou igual ao do operando da direita; caso contrário, o resultado será FALSE.  
   
- Diferentemente do operador de comparação = (igualdade), o resultado da comparação >= de dois valores NULL não depende da configuração de ANSI_NULLS.  
+ Ao contrário do operador de comparação = (igualdade), o resultado da comparação >= de dois valores NULL não depende da configuração de ANSI_NULLS.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using--in-a-simple-query"></a>A. Usando >= em uma consulta simples  
+### <a name="a-using--in-a-simple-query"></a>A. Como usar >= em uma consulta simples  
  O exemplo a seguir retorna todas as linhas da tabela `HumanResources.Department` contendo um valor em `DepartmentID` que seja superior ou igual ao valor 13.  
   
 ```  

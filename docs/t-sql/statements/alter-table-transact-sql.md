@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2019
+ms.date: 05/17/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6222daffd3f008486f8c2be59f74a8c605caa2f7
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: c15cff20feb4fd3f9ef5057babaad884de022975
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65502858"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943299"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -450,8 +450,8 @@ A coluna modificada não pode ser:
 
 O tipo de dados das colunas **text**, **ntext** e **image** pode ser alterado somente das seguintes maneiras:
 
-- **text** a **varchar(max)**, **nvarchar(max)** ou **xml**
-- **ntext** a **varchar(max)**, **nvarchar(max)** ou **xml**
+- **text** a **varchar(max)** , **nvarchar(max)** ou **xml**
+- **ntext** a **varchar(max)** , **nvarchar(max)** ou **xml**
 - **image** a **varbinary(max)**
 
 Algumas alterações de tipo de dados podem causar uma alteração nos dados. Por exemplo, alterar uma coluna **nchar** ou **nvarchar** para **char** ou **varchar** pode levar à conversão de caracteres estendidos. Para obter mais informações, veja [CAST e CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). Reduzir a precisão ou escala de uma coluna pode causar o truncamento de dados.
@@ -469,7 +469,7 @@ Ao usar o Always Encrypted com enclaves seguros, você poderá alterar qualquer 
 
 *nome_da_coluna* O nome da coluna a ser alterada, adicionada ou removida. O máximo para *nome_da_coluna* é 128 caracteres. Para novas colunas, é possível omitir *nome_da_coluna* para colunas criadas com um tipo de dados **timestamp**. O nome **timestamp** será usado se nenhum *nome_da_coluna* for especificado para uma coluna de tipo de dados **timestamp**.
 
-[ _type\_schema\_name_**.** ] _type\_name_ O novo tipo de dados da coluna alterada ou o tipo de dados da coluna adicionada. Não é possível especificar *type_name* para colunas de tabelas particionadas existentes. *type_name* pode ser qualquer um dos seguintes tipos:
+[ _type\_schema\_name_ **.** ] _type\_name_ O novo tipo de dados da coluna alterada ou o tipo de dados da coluna adicionada. Não é possível especificar *type_name* para colunas de tabelas particionadas existentes. *type_name* pode ser qualquer um dos seguintes tipos:
 
 - Um tipo de dados de sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 - Um tipo de dados do alias com base em um tipo de dados de sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Crie tipos de dados do alias com a instrução CREATE TYPE antes que possam ser usados em uma definição de tabela.
@@ -673,12 +673,12 @@ Para obter mais informações, consulte [Como funcionam as operações de índic
 > [!NOTE]
 > As operações de índice online não estão disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais, confira [Edições e recursos com suporte para o SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) e [Edições e recursos com suporte para o SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
-MOVER PARA { _partition\_scheme\_name_**(**_column\_name_ [ 1 **,** … *n*] **)** | *filegroup* | **"** default **"** } **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+MOVER PARA { _partition\_scheme\_name_ **(** _column\_name_ [ 1 **,** … *n*] **)**  | *filegroup* |  **"** default **"** } **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica o local para onde mover as linhas de dados atualmente no nível folha do índice clusterizado. A tabela é movida para o novo local. Esta opção se aplica apenas a restrições que criam um índice clusterizado.
 
 > [!NOTE]
-> Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e deve ser delimitado, como em MOVE TO **"** default **"** ou MOVE TO **[** default **]**. Se **"** default **"** for especificado, a opção QUOTED_IDENTIFIER deverá ser ON para a sessão atual. Essa é a configuração padrão. Para saber mais, confira [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+> Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e deve ser delimitado, como em MOVE TO **"** default **"** ou MOVE TO **[** default **]** . Se **"** default **"** for especificado, a opção QUOTED_IDENTIFIER deverá ser ON para a sessão atual. Essa é a configuração padrão. Para saber mais, confira [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 { CHECK | NOCHECK } CONSTRAINT Especifica que *constraint_name* está habilitado ou desabilitado. Essa opção só pode ser usada com restrições FOREIGN KEY e CHECK. Quando NOCHECK é especificado, a restrição é desabilitada e futuras inserções ou atualizações da coluna não são validadas com relação às condições de restrição. As restrições DEFAULT, PRIMARY KEY e UNIQUE não podem ser desabilitadas.
 
@@ -698,12 +698,12 @@ Essa opção só estará disponível quando o controle de alterações estiver h
 
 Para habilitar o controle de alterações, a tabela deve ter uma chave primária.
 
-COM o **(** TRACK_COLUMNS_UPDATED **=** {ON | **OFF** } **)**
+COM o **(** TRACK_COLUMNS_UPDATED **=** {ON | **OFF** } **)** 
 **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] controla quais colunas com alteração controlada foram atualizadas. O valor padrão é OFF.
 
-SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ] **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_ **.** ] *target_table* [ PARTITION *target_partition_number_expression* ] **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Alterna um bloco de dados em um dos seguintes modos:
 
@@ -727,7 +727,7 @@ Para a restrição **SWITCH** ao usar replicação, consulte [Replicar tabelas e
 
 Índices columnstore não clusterizados criados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 e para o Banco de Dados SQL antes da versão V12 estavam em um formato somente leitura. É preciso recompilar índices columnstore não clusterizado para o formato atual (que é atualizável) antes de quaisquer operações de partição serem executadas.
 
-SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** | **"** NULL **"** }**)**
+SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"**  |  **"** NULL **"** } **)** 
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] não dá suporte a `FILESTREAM`.
 
 Especifica onde os dados FILESTREAM são armazenados.
@@ -746,11 +746,11 @@ SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name. hi
 
 Desabilita ou habilita o controle de versão do sistema de uma tabela. Para habilitar o controle de versão do sistema de uma tabela, o sistema verifica se o tipo de dados, a restrição de nulidade e requisitos de restrição de chave primária para o controle de versão do sistema são atendidos. Se você não usar o argumento HISTORY_TABLE, o sistema gerará uma nova tabela de histórico correspondendo ao esquema da tabela atual, criando um link entre as duas tabelas e permitindo que o sistema registre o histórico de cada registro na tabela atual na tabela de histórico. O nome desta tabela de histórico será `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Se o argumento HISTORY_TABLE for usado para criar um vínculo e usar a tabela de histórico existente, o sistema criará um vínculo entre a tabela atual e a tabela especificada. Ao criar um link para uma tabela de histórico existente, você pode optar por executar uma verificação de consistência de dados. Essa verificação de consistência de dados garante que os registros existentes não se sobreponham. A execução da verificação de consistência dos dados é o padrão. Para saber mais, veja [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
-HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS} } **Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS} } **Aplica-se a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica a retenção finita ou infinita para dados históricos em tabela temporais. Se omitido, será presumida retenção infinita.
 
-SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)**
+SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)** 
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica os métodos permitidos de escalonamento de bloqueios para uma tabela.
@@ -929,7 +929,7 @@ Começando com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Ed
 
 Enquanto as linhas existentes referenciam o valor armazenado nos metadados, o valor padrão é armazenado na linha para qualquer nova linha inserida e não especifica outro valor para a coluna. O valor padrão armazenado nos metadados é movido para uma linha existente quando a linha é atualizada (mesmo que a coluna real não seja especificada na instrução UPDATE) ou quando a tabela ou o índice clusterizado é recompilado.
 
-Colunas do tipo **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **text**, **ntext**, **image**, **hierarchyid**, **geometry**, **geography** ou CLR UDTS não podem ser adicionadas a uma operação online. Não será possível adicionar uma coluna online se isso fizer o tamanho máximo de linha possível exceder o limite de 8.060 bytes. Nesse caso, a coluna é adicionada como uma operação offline.
+Colunas do tipo **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, **text**, **ntext**, **image**, **hierarchyid**, **geometry**, **geography** ou CLR UDTS não podem ser adicionadas a uma operação online. Não será possível adicionar uma coluna online se isso fizer o tamanho máximo de linha possível exceder o limite de 8.060 bytes. Nesse caso, a coluna é adicionada como uma operação offline.
 
 ## <a name="parallel-plan-execution"></a>Execução de plano paralelo
 

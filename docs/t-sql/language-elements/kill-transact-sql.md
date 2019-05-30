@@ -31,16 +31,16 @@ helpviewer_keywords:
 - KILL statement
 - terminating process
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fd08c2afb3e89fa065570206f4dbfcf4237d0ea
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: f808d73ca9dfd169a69bf399990965039a10c602
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265263"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982142"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -124,7 +124,7 @@ Esse erro também ocorrerá se nenhuma ID de sessão ou UOW estiver sendo revert
 O mesmo relatório de status pode ser obtido pela repetição da mesma instrução KILL _session ID_|_UOW_ sem usar a opção WITH STATUSONLY. No entanto, não é recomendável repetir a opção dessa maneira. Se você repetir a instrução KILL _session ID_, o novo processo poderá ser interrompido se a reversão for concluída e a ID de sessão for reatribuída a uma nova tarefa antes que a nova instrução KILL seja executada. Evite que o novo processo seja interrompido especificando WITH STATUSONLY.  
   
 ## <a name="permissions"></a>Permissões  
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Requer a permissão ALTER ANY CONNECTION. ALTER ANY CONNECTION é incluída com associação nas funções de servidor fixas sysadmin ou processadmin.  
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Exige a permissão ALTER ANY CONNECTION. ALTER ANY CONNECTION é incluída com associação nas funções de servidor fixas sysadmin ou processadmin.  
   
 **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** Exige a permissão KILL DATABASE CONNECTION. O logon da entidade de segurança no nível do servidor tem a permissão KILL DATABASE CONNECTION.  
   
@@ -138,7 +138,7 @@ KILL 53;
 GO  
 ```  
   
-### <a name="b-using-kill-session-id-with-statusonly-to-obtain-a-progress-report"></a>b. Usando ID de sessão KILL WITH STATUSONLY para obter um relatório de andamento  
+### <a name="b-using-kill-session-id-with-statusonly-to-obtain-a-progress-report"></a>B. Usando ID de sessão KILL WITH STATUSONLY para obter um relatório de andamento  
 O exemplo a seguir gera um status do processo de reversão para o ID de sessão específico.  
   
 ```sql  

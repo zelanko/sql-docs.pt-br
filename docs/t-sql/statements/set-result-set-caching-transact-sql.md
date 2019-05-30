@@ -15,12 +15,12 @@ author: XiaoyuL-Preview
 ms.author: xiaoyul
 manager: craigg
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: cd0141a6fbd21c11f7401fa2c45dae0cc75b983d
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 0b932c1fa3aa8575f8f12ef5f164841788f74c1a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65561489"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948751"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL)
 
@@ -37,9 +37,11 @@ SET RESULT_SET_CACHING { ON | OFF };
 ```  
   
 ## <a name="remarks"></a>Remarks  
+
+> [!Note]
+> Embora esse recurso esteja sendo distribuído para todas as regiões, verifique a versão implantada em sua instância e as [notas sobre a versão mais recente do SQL DW do Azure](/azure/sql-data-warehouse/release-notes-10-0-10106-0) para obter a disponibilidade de recursos.
   
-Este comando deve ser executado enquanto estiver conectado ao banco de dados mestre.  A alteração dessa configuração de banco de dados entra em vigor imediatamente.  Os custos de armazenamento são incorridos pelo armazenamento em cache dos conjuntos de resultados da consulta. Depois de desabilitar o armazenamento em cache de resultados de um banco de dados, o cache de resultados anteriormente persistente será excluído imediatamente do armazenamento do SQL Data Warehouse do Azure. Uma nova coluna chamada is_result_set_caching_on é introduzida no [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=azure-sqldw-latest
-) para mostrar a configuração de armazenamento em cache de resultados de um banco de dados.  
+Este comando deve ser executado enquanto estiver conectado ao banco de dados mestre.  A alteração dessa configuração de banco de dados entra em vigor imediatamente.  Os custos de armazenamento são incorridos pelo armazenamento em cache dos conjuntos de resultados da consulta. Depois de desabilitar o armazenamento em cache de resultados de um banco de dados, o cache de resultados anteriormente persistente será excluído imediatamente do armazenamento do SQL Data Warehouse do Azure. Uma nova coluna chamada is_result_set_caching_on é introduzida no [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=azure-sqldw-latest) para mostrar a configuração de armazenamento em cache de resultados de um banco de dados.  
 
 **ON** Especifica que os conjuntos de resultados de consulta retornados desse banco de dados serão armazenados em cache no armazenamento do SQL Data Warehouse do Azure.
 

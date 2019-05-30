@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STGeometryN (geometry Data Type)
 ms.assetid: 348c7047-3442-4590-8879-fe841e79058c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 05980c75165ef648f55a9e3b040d7f12b3685aa7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e494349d40f78d1f6886e3091c3399b3f25e55d
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807884"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938916"
 ---
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Retorna uma geometria especificada em uma **coleção de geometrias**.
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno do CLR: **SqlGeometry**  
+ Tipo de retorno CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  Esse método retornará **nulo** se o parâmetro for maior que o resultado de `STNumGeometries()` e gerará uma **ArgumentOutOfRangeException** se o parâmetro *expression* for menor que 1.  

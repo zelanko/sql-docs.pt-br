@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - STCurveN method (geometry)
 ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 634b91d114753355e765c6e6da96bfc20618e969
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b496ecde35917702f1bb976df390c8f5832ac77
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630134"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939013"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN (Tipo de Dados de geometria)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Retorna a curva especificada de uma instância de **geometry** que é uma **Line
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno do CLR: **SqlGeometry**  
+ Tipo de retorno CLR: **SqlGeometry**  
   
 ## <a name="exceptions"></a>Exceções  
  Se *curve_index* < 1, uma `ArgumentOutOfRangeException` será gerada.  

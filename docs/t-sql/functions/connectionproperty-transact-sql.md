@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CONNECTIONPROPERTY statement
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 36dc548ba4fe951920289a9362a92747ca478fd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35d066a88955d3d47bb8e9e552dde689bee3ae47
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782374"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948123"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ A propriedade da conexão. *property* pode ser um destes valores:
   
 |Valor|Tipo de dados|Descrição|  
 |---|---|---|
-|net_transport|**nvarchar(40)**|Retorna o protocolo de transporte físico usado por essa conexão. Esse valor não é anulável. Os valores de retorno possíveis:<br /><br /> **HTTP**<br /> **Pipe nomeado**<br /> **Session**<br /> **Memória compartilhada**<br /> **SSL**<br /> **TCP**<br /><br /> e<br /><br /> **VIA**<br /><br /> Observação: sempre retorna **Session** quando uma conexão tem o MARS (conjunto de resultados ativos múltiplos) habilitado e o pooling de conexões está habilitado.|  
+|net_transport|**nvarchar(40)**|Retorna o protocolo de transporte físico usado por essa conexão. Esse valor não é anulável. Os valores de retorno possíveis:<br /><br /> **HTTP**<br /> **Pipe nomeado**<br /> **Session**<br /> **Memória compartilhada**<br /> **SSL**<br /> **TCP**<br /><br /> e<br /><br /> **VIA**<br /><br /> Observação: Sempre retorna **Session** quando uma conexão tem o MARS (conjunto de resultados ativos múltiplos) habilitado e o pooling de conexões está habilitado.|  
 |protocol_type|**nvarchar(40)**|Retorna o tipo de protocolo da carga. Atualmente faz distinção entre TDS (TSQL) e SOAP. Permite valor nulo.|  
 |auth_scheme|**nvarchar(40)**|Retorna o esquema de autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da conexão. O esquema de autenticação é a Autenticação do Windows (NTLM, KERBEROS, DIGEST, BASIC, NEGOTIATE) ou a autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não permite valor nulo.|  
 |local_net_address|**varchar(48)**|Retorna o endereço IP no servidor a que se destina esta conexão específica. Disponível apenas para conexões que usam o provedor de transporte TCP. Permite valor nulo.|  

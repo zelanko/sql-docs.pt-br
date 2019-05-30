@@ -20,16 +20,16 @@ helpviewer_keywords:
 - BETWEEN operator
 - range to test [SQL Server]
 ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e384d2835bcb28487757384543298d5a20144cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ff89056c2e96a815312314e84b5118b7b48726f
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768460"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980088"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -113,7 +113,7 @@ principal_id    name
 16390           db_datareader
 ```  
   
-### <a name="b-using--and--instead-of-between"></a>B. Usando > e < em vez de BETWEEN  
+### <a name="b-using--and--instead-of-between"></a>B. Como usar > e < em vez de BETWEEN  
  O exemplo a seguir usa os operadores maior que (`>`) e menor que (`<`) e, como esses operadores não são inclusivos, retorna nove linhas em vez das dez retornadas no exemplo anterior.  
   
 ```sql  

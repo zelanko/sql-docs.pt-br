@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SESSIONPROPERTY function
 - sessions [SQL Server], SET options settings
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 36fb5844c7255aff7b8527ff5cc462ec5a573977
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba08b2273102d43eed26d7b383a285d6568a63d2
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642900"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942889"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ SESSIONPROPERTY (option)
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|ANSI_NULLS|Especifica se o comportamento de ISO de igual a (=) e não igual a (<>) em relação a valores nulos se aplica.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
+|ANSI_NULLS|Especifica se o comportamento da ISO de igual a (=) e não igual a (<>) em relação a valores nulos se aplica.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |ANSI_PADDING|Controla como a coluna armazena valores menores que o tamanho definido da coluna e o modo como a coluna armazena valores com espaços em branco à direita em caracteres e dados binários.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |ANSI_WARNINGS|Especifica se o comportamento padrão de ISO de gerar mensagens de erro ou avisos para determinadas condições, inclusive divisão por zero e estouro aritmético, aplica-se.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |ARITHABORT|Determina se uma consulta será finalizada quando um erro de estouro ou divisão por zero ocorrer durante a execução da consulta.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  

@@ -23,16 +23,16 @@ helpviewer_keywords:
 - system usernames [SQL Server]
 - users [SQL Server], names
 ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aba7d702a9e7a6e89bb76c23fd570efee1b4e470
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 211d229c767d2c4dbf21d9d813f4a825316efa34
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705934"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948551"
 ---
 # <a name="systemuser-transact-sql"></a>SYSTEM_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ SYSTEM_USER
   
  Se o nome de usuário e o nome de logon forem diferentes, SYSTEM_USER retornará o nome de logon.  
   
- Se o usuário atual tiver feito logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a Autenticação do Windows, SYSTEM_USER retornará o nome de identificação de logon do Windows no formato: *DOMAIN*\\*user_login_name*. Entretanto, se o usuário atual tiver feito logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a Autenticação do SQL Server, SYSTEM_USER retornará o nome de identificação de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como `WillisJo` para um usuário conectado como `WillisJo`.  
+ Se o usuário atual estiver conectado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a Autenticação do Windows, SYSTEM_USER retornará o nome de identificação de logon do Windows no formato: *DOMAIN*\\*user_login_name*. Entretanto, se o usuário atual tiver feito logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a Autenticação do SQL Server, SYSTEM_USER retornará o nome de identificação de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como `WillisJo` para um usuário conectado como `WillisJo`.  
   
  SYSTEM_USER retorna o nome do contexto em execução no momento. Se a instrução EXECUTE AS tiver sido usada para alternar o contexto, SYSTEM_USER retornará o nome do contexto representado.  
   
@@ -130,7 +130,7 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>C. Usando SYSTEM_USER para retornar o nome de usuário do sistema atual  
+### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>C: Usando SYSTEM_USER para retornar o nome de usuário do sistema atual  
  O exemplo a seguir retorna o valor atual de `SYSTEM_USER`.  
   
 ```  

@@ -18,16 +18,16 @@ helpviewer_keywords:
 - DECLARE statement
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01de83dc56a14fca265bd73b5d5df357f869a50a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 9191be9659f2cbdb42d0b92adef23972292070ed
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801860"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980183"
 ---
 # <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -119,7 +119,7 @@ Define o tipo de dados **table**. A declaração de tabela inclui definições d
  Especifica que a coluna é um tipo de dados escalar.  
   
  *computed_column_expression*  
- É uma expressão que define o valor de uma coluna computada. Essa coluna é computada a partir de uma expressão que usa outras colunas na mesma tabela. Por exemplo, uma coluna computada pode ter a definição **cost** AS **price \* qty**. A expressão pode ser o nome de uma coluna não computada, constante, função interna, variável ou qualquer combinação dessas, conectada por um ou mais operadores. A expressão não pode ser uma subconsulta ou uma função definida pelo usuário. A expressão não pode fazer referência a um tipo de dados CLR definido pelo usuário.  
+ É uma expressão que define o valor de uma coluna computada. Essa coluna é computada a partir de uma expressão que usa outras colunas na mesma tabela. Por exemplo, uma coluna computada pode ter a definição **cost** AS **price \* qty**. A expressão pode ser o nome de uma coluna não computada, uma constante, uma função interna, uma variável ou qualquer combinação dessas conectada por um ou mais operadores. A expressão não pode ser uma subconsulta ou uma função definida pelo usuário. A expressão não pode fazer referência a um tipo de dados CLR definido pelo usuário.  
   
  [ COLLATE *collation_name*]  
  Especifica a ordenação da coluna. *collation_name* pode ser um nome de ordenação do Windows ou um nome de ordenação SQL e é aplicável somente a colunas dos tipos de dados **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext**. Se não for especificado, à coluna será atribuída a ordenação do tipo de dados definido pelo usuário (se a coluna for de um tipo de dados definido pelo usuário) ou a ordenação do banco de dados atual.  
@@ -133,7 +133,7 @@ Define o tipo de dados **table**. A declaração de tabela inclui definições d
  É uma constante, um NULL ou uma função de sistema usada como valor de coluna padrão.  
   
  IDENTITY  
- Indica que a nova coluna é uma coluna de identidade. Quando uma nova linha é adicionada à tabela, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um valor incremental exclusivo para a coluna. As colunas de identidade, em geral, são usadas juntamente com restrições PRIMARY KEY para servir de identificador exclusivo de linha para a tabela. A propriedade IDENTITY pode ser atribuída às colunas **tinyint**, **smallint**, **int**, **decimal(p,0)** ou **numeric(p,0)**. Apenas uma coluna de identidade pode ser criada por tabela. Padrões associados e restrições DEFAULT não podem ser usados com uma coluna de identidade. Você deve especificar a semente e o incremento, ou nenhum dos dois. Se nenhum for especificado, o padrão será (1,1).  
+ Indica que a nova coluna é uma coluna de identidade. Quando uma nova linha é adicionada à tabela, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um valor incremental exclusivo para a coluna. As colunas de identidade, em geral, são usadas juntamente com restrições PRIMARY KEY para servir de identificador exclusivo de linha para a tabela. A propriedade IDENTITY pode ser atribuída às colunas **tinyint**, **smallint**, **int**, **decimal(p,0)** ou **numeric(p,0)** . Apenas uma coluna de identidade pode ser criada por tabela. Padrões associados e restrições DEFAULT não podem ser usados com uma coluna de identidade. Você deve especificar a semente e o incremento, ou nenhum dos dois. Se nenhum for especificado, o padrão será (1,1).  
   
  *seed*  
  É o valor usado para a primeira linha carregada na tabela.  
@@ -224,7 +224,7 @@ Manzanares          Tomas                   1 (11) 500 555-0178
 (3 row(s) affected)
 ```  
   
-### <a name="b-using-declare-with-two-variables"></a>b. Usando DECLARE com duas variáveis  
+### <a name="b-using-declare-with-two-variables"></a>B. Usando DECLARE com duas variáveis  
  O exemplo a seguir recupera os nomes de representantes de vendas do [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] localizados no território de vendas norte-americano que venderam pelo menos US$ 2.000.000 durante o ano.  
   
 ```  

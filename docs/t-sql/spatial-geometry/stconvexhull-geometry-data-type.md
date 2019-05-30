@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STConvexHull (geometry Data Type)
 ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: a97b0f6fc8ad1264c146efd3dd0de9751788093e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d022e7710c41797edb7bfaef7442610e0724b68
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690244"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939073"
 ---
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Retorna um objeto que representa a envoltória convexa de uma instância de **ge
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno do CLR: **SqlGeometry**  
+ Tipo de retorno CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  `STConvexHull()` retorna o polígono convexo menor que contém a instância de **geometry** especificada. As instâncias de **Points** ou **LineString** colineares gerarão uma instância do mesmo tipo da entrada.  

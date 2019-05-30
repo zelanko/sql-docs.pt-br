@@ -17,16 +17,16 @@ helpviewer_keywords:
 - expressions [SQL Server], statistical variance
 - VARP function [Transact-SQL]
 ms.assetid: ce5d2e32-01da-4e18-b8ed-a08b61d84456
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baba76098349cecb4d33e50b4b6b25c4599df235
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc8f0325fdf5eef51a9c9e1a7c929c6f0b535784
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839584"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946300"
 ---
 # <a name="varp-transact-sql"></a>VARP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  *expressão*  
  É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) da categoria de tipo de dados numéricos exatos ou aproximados, com exceção do tipo de dados **bit**. Funções de agregação e subconsultas não são permitidas.  
   
- OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  _partition\_by\_clause_ divide o conjunto de resultados produzidos pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. _order\_by\_clause_ determina a ordem lógica na qual a operação é executada. _order\_by\_clause_ é necessário. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -68,7 +68,7 @@ VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-varp"></a>A: Usando VARP  
+### <a name="a-using-varp"></a>A: Como usar VARP  
  O exemplo a seguir retorna a variância padrão para a população de todos os valores de gratificação da tabela `SalesPerson` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -79,7 +79,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-using-varp"></a>B: Usando VARP  
+### <a name="b-using-varp"></a>B: Como usar VARP  
  O exemplo a seguir retorna o `VARP` dos valores de cota de vendas na tabela `dbo.FactSalesQuota`. A primeira coluna contém a variação de todos os valores distintos e a segunda coluna contém a variação de todos os valores, incluindo valores duplicados.  
   
 ```  

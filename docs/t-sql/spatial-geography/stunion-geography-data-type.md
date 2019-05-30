@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STUnion method
 ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 3e5021b710d780c5f6f35221099f41fc993c492c
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: d47e5a70a784ba7946b7f6548dee1e8a6ccfff26
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979752"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935759"
 ---
 # <a name="stunion-geography-data-type"></a>STUnion (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ SET @h = geography::STGeomFromText('POLYGON((-122.351 47.656, -122.341 47.656, -
 SELECT @g.STUnion(@h).ToString();  
 ```  
   
-### <a name="b-producing-a-fullglobe-result"></a>b. Produzindo um resultado de FullGlobe  
+### <a name="b-producing-a-fullglobe-result"></a>B. Produzindo um resultado de FullGlobe  
  O exemplo a seguir gera um `FullGlobe` quando `STUnion()` combina duas instâncias de `Polygon`.  
   
 ```

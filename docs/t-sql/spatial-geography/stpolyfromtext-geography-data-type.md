@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPolyFromText method
 ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 02232606ccfba5c03793dd6a3bff515efd0c8e6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 347411d840e2019a2a0553340ebf5b821455deea
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744504"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936081"
 ---
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *polygon_tagged_text*  
- É a representação WKT da instância de **geographyPolygon** que você deseja retornar. *polygon_tagged_text* é uma expressão **nvarchar(max)**.  
+ É a representação WKT da instância de **geographyPolygon** que você deseja retornar. *polygon_tagged_text* é uma expressão **nvarchar(max)** .  
   
  *SRID*  
  É uma expressão **int** que representa o SRID (ID de referência espacial) da instância de **geographyPolygon** que você deseja retornar.  
@@ -47,9 +47,9 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno do CLR: **SqlGeography**  
+ Tipo de retorno CLR: **SqlGeography**  
   
- Tipo do OGC: **Polygon**  
+ Tipo OGC: **Polígono**  
   
 ## <a name="remarks"></a>Remarks  
  Esse método gera uma **FormatException** se a entrada não está bem formatada.  

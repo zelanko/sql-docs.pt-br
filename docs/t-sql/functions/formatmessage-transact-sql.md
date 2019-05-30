@@ -19,15 +19,15 @@ helpviewer_keywords:
 - messages [SQL Server], formats
 - errors [SQL Server], formats
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e727fa9d1042fc40b70872b948f1723c7eaaddcf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 29c669ec831ffefe3aebe463fa7819e4e16d276a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212365"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948997"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
   
  FORMATMESSAGE pesquisa a mensagem no idioma atual do usuário. Se não houver nenhuma versão localizada da mensagem, a versão em inglês dos EUA será usada.  
   
- Para mensagens localizadas, os valores dos parâmetros fornecidos devem corresponder aos espaços reservados dos parâmetros na versão em inglês dos EUA. Isto é, o parâmetro 1 na versão localizada deve corresponder ao parâmetro 1 na versão em inglês dos EUA, o parâmetro 2 deve corresponder ao parâmetro 2 e assim por diante.  
+ Para mensagens localizadas, os valores dos parâmetros fornecidos precisam corresponder aos espaços reservados dos parâmetros na versão em inglês dos EUA. Ou seja, o parâmetro 1 na versão localizada precisa corresponder ao parâmetro 1 na versão em inglês dos EUA, o parâmetro 2 precisa corresponder ao parâmetro 2 e assim por diante.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -76,7 +76,7 @@ SELECT @var1 = FORMATMESSAGE(20009, 'First Variable', 'Second Variable');
 SELECT @var1;  
 ```  
   
-### <a name="b-example-with-a-message-string"></a>b. Exemplo com uma cadeia de caracteres de mensagem  
+### <a name="b-example-with-a-message-string"></a>B. Exemplo com uma cadeia de caracteres de mensagem  
   
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   

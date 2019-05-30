@@ -16,15 +16,15 @@ helpviewer_keywords:
 - full globe
 - STGeomFromText method
 ms.assetid: 3717987b-77d8-4ccf-a1db-5a8016ac1083
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 40044ced21eec81e90f9d479a217782a95cfc225
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fc2c33daffe05ad996f62f07ae05dd098980e59
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753404"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936847"
 ---
 # <a name="stgeomfromtext-geography-data-type"></a>STGeomFromText (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *geography_tagged_text*  
- É a representação WKT da instância de **geography** a ser retornada. *geography_tagged_text* é uma expressão **nvarchar(max)**.  
+ É a representação WKT da instância de **geography** a ser retornada. *geography_tagged_text* é uma expressão **nvarchar(max)** .  
   
  *SRID*  
  É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geography** que você deseja retornar.  
@@ -50,7 +50,7 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno do CLR: **SqlGeography**  
+ Tipo de retorno CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  O tipo do OGC da instância de **geography** retornado por STGeomFromText() é definido como a entrada de WKT correspondente.  

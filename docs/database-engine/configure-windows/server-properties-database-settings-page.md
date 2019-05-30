@@ -1,7 +1,5 @@
 ---
 title: Propriedades do servidor (página Configurações do Banco de Dados) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -13,68 +11,87 @@ ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4703e861683f9447ecd44490ccd5dba06cb6ce44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.custom: ''
+ms.date: 05/23/2019
+ms.openlocfilehash: 13d4bb3e4e61d195d4997f46bb1d343b02c36efc
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632894"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198301"
 ---
 # <a name="server-properties---database-settings-page"></a>Propriedades do servidor – página Configurações do Banco de Dados
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use esta página para exibir ou modificar suas configurações de banco de dados.  
   
-## <a name="options"></a>Opções  
- **Fator de preenchimento padrão do índice**  
- Especifica o quanto o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve preencher cada página ao criar um índice novo usando dados existentes. O fator de preenchimento afeta o desempenho porque o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisa de tempo para dividir páginas quando elas está cheias.  
+## <a name="options"></a>Opções
+
+### <a name="default-index-fill-factor"></a>Fator de preenchimento padrão do índice
+
+Especifica o quanto o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve preencher cada página ao criar um índice novo usando dados existentes. O fator de preenchimento afeta o desempenho porque o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisa de tempo para dividir páginas quando elas está cheias.
   
- O valor padrão é 0; os valores válidos variam de 0 a 100. Um fator de preenchimento de 0 ou 100 cria índices clusterizados com páginas inteiras de dados e índices não clusterizados com páginas inteiras de folhas, mas deixa algum espaço no nível superior da árvore de índice. Os valores 0 e 100 do fator de preenchimento são idênticos em todos os aspectos.  
+O valor padrão é 0; os valores válidos variam de 0 a 100. Um fator de preenchimento de 0 ou 100 cria índices clusterizados com páginas inteiras de dados e índices não clusterizados com páginas inteiras de folhas, mas deixa algum espaço no nível superior da árvore de índice. Os valores 0 e 100 do fator de preenchimento são idênticos em todos os aspectos.
   
- Os valores pequenos do fator de preenchimento levam [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para criar índices com páginas que não estão cheias. Cada índice ocupa mais espaço de armazenamento, mas há mais espaço para inserções subsequentes sem exigência de divisões de página.  
+Os valores pequenos do fator de preenchimento levam [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para criar índices com páginas que não estão cheias. Cada índice ocupa mais espaço de armazenamento, mas há mais espaço para inserções subsequentes sem exigência de divisões de página.
   
- **Esperar indefinidamente**  
- Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não terá limite de tempo ao esperar uma nova fita de backup.  
+### <a name="wait-indefinitely"></a>Esperar indefinidamente
+
+Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não terá limite de tempo ao esperar uma nova fita de backup.  
+
+### <a name="try-once"></a>Tentar uma vez
+
+Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] terá limite de tempo se uma fita de backup não estiver disponível quando necessário.
+
+### <a name="try-for-minutes"></a>Tentar durante minuto(s)
+
+Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] terá limite de tempo se uma fita de backup não estiver disponível dentro do tempo especificado.  
+
+### <a name="default-backup-media-retention-in-days"></a>Retenção de mídia de backup padrão (em dias)
+
+Fornece um padrão de função de sistema durante a retenção de cada meio de backup depois que ele tenha sido usado para um backup de banco de dados ou backup de log de transações. Essa opção ajuda a proteger os backups para que não sejam substituídos até que o número especificado de dias tenha se passado.  
+
+#### <a name="compress-backup"></a>Compactar backup
+
+No [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou versões posteriores), indica a configuração atual da opção **padrão de compactação de backup** . Essa opção determina o padrão do nível de servidor para backups compactados, como segue:
+
+- Se a caixa **Compactar backup** estiver em branco, novos backups são descompactados por padrão.
+
+- Se a caixa **Compactar backup** estiver marcada, novos backups serão compactados por padrão.
   
- **Tentar uma vez**  
- Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] terá limite de tempo se uma fita de backup não estiver disponível quando necessário.  
+    > [!IMPORTANT]
+    >  Por padrão, a compactação aumenta consideravelmente o uso da CPU, e o consumo adicional da CPU por parte do processo de compactação pode afetar negativamente as operações simultâneas. Portanto, é recomendável criar backups compactados de baixa prioridade em uma sessão cujo uso da CPU é limitado pelo [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md). Para obter mais informações, consulte [Usar o Resource Governor para limitar o uso de CPU por meio de compactação de backup &#40;Transact-SQL&#41;](../.. relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).
   
- **Tentar durante minuto(s)**  
- Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] terá limite de tempo se uma fita de backup não estiver disponível dentro do tempo especificado.  
+Se você for membro da função de servidor fixa **sysadmin** ou **serveradmin** , será possível alterar a configuração clicando na caixa **Compactar backup** .  
   
- **Retenção de mídia de backup padrão (em dias)**  
- Fornece um padrão de função de sistema durante a retenção de cada meio de backup depois que ele tenha sido usado para um backup de banco de dados ou backup de log de transações. Essa opção ajuda a proteger os backups para que não sejam substituídos até que o número especificado de dias tenha se passado.  
+Para obter mais informações, consulte [Exibir ou configurar a opção de configuração de servidor backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) e [Compactação de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
+
+#### <a name="backup-checksum"></a>Soma de verificação de backup
+
+Essa opção permite ativar/desativar a configuração sp_configure para o *padrão de soma de verificação de backup*. Esse recurso facilita a habilitação do padrão de soma de verificação de backup.
+
+### <a name="recovery-interval-minutes"></a>Intervalo de recuperação (minutos)
+
+Define o número máximo de minutos por banco de dados para a recuperação de bancos de dados. O padrão é 0, que indica configuração automática pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Na prática, essa opção significa um tempo de recuperação inferior a um minuto e um ponto de verificação com um intervalo de aproximadamente um minuto para bancos de dados ativos. Para obter mais informações, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).  
   
- **Compactar backup**  
- No [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou versões posteriores), indica a configuração atual da opção **padrão de compactação de backup** . Essa opção determina o padrão do nível de servidor para backups compactados, como segue:  
+### <a name="data"></a>data
+
+Especifica o local padrão para arquivos de dados. Clique no botão Procurar para navegar para um novo local padrão. As alterações não entram em vigor enquanto o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não é reinicializado.  
   
--   Se a caixa **Compactar backup** estiver em branco, novos backups são descompactados por padrão.  
+### <a name="log"></a>Log
   
--   Se a caixa **Compactar backup** estiver marcada, novos backups serão compactados por padrão.  
+Especifica o local padrão para arquivos de log. Clique no botão Procurar para navegar para um novo local padrão. As alterações não entram em vigor enquanto o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não é reinicializado.  
   
-    > [!IMPORTANT]  
-    >  Por padrão, a compactação aumenta consideravelmente o uso da CPU, e o consumo adicional da CPU por parte do processo de compactação pode afetar negativamente as operações simultâneas. Portanto, é recomendável criar backups compactados de baixa prioridade em uma sessão cujo uso da CPU é limitado pelo [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md). Para obter mais informações, consulte [Usar o Resource Governor para limitar o uso de CPU por meio de compactação de backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
+### <a name="configured-values"></a>Valores configurados
+
+Exibe os valores configurados para as opções nesse painel. Se você alterar esses valores, clique em **Executando Valores** para verificar se as alterações entraram em vigor. Caso contrário, a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisará primeiro ser declarada novamente.  
   
- Se você for membro da função de servidor fixa **sysadmin** ou **serveradmin** , será possível alterar a configuração clicando na caixa **Compactar backup** .  
+### <a name="running-values"></a>Como executar valores
+
+Exiba os valores que estão sendo executados para as opções neste painel. Esses valores são somente leitura.  
   
- Para obter mais informações, consulte [Exibir ou configurar a opção de configuração de servidor backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) e [Compactação de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
-  
- **Intervalo de recuperação (minutos)**  
- Define o número máximo de minutos por banco de dados para a recuperação de bancos de dados. O padrão é 0, que indica configuração automática pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Na prática, isso significa um tempo de recuperação inferior a um minuto e um ponto de verificação a cada um minuto aproximadamente para bancos de dados ativos. Para obter mais informações, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).  
-  
- **Data**  
- Especifica o local padrão para arquivos de dados. Clique no botão Procurar para navegar para um novo local padrão. As alterações não entrarão em vigor até que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja reinicializado.  
-  
- **Log**  
- Especifica o local padrão para arquivos de log. Clique no botão Procurar para navegar para um novo local padrão. As alterações não entrarão em vigor até que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja reinicializado.  
-  
- **Valores Configurados**  
- Exibe os valores configurados para as opções nesse painel. Se você alterar esses valores, clique em **Executando Valores** para verificar se as alterações entraram em vigor. Se não tiverem, a instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser redeclarada primeiro.  
-  
- **Executando Valores**  
- Exiba os valores que estão sendo executados para as opções neste painel. Esses valores são somente leitura.  
-  
-## <a name="see-also"></a>Consulte Também  
- [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [Especificar o fator de preenchimento para um índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
-  
-  
+## <a name="see-also"></a>Consulte Também
+
+- [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
+
+- [Especificar o fator de preenchimento para um índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)

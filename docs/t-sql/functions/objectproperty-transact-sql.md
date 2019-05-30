@@ -19,16 +19,16 @@ helpviewer_keywords:
 - schema-scoped objects [SQL Server]
 - objects [SQL Server], schema-scoped
 ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 157d307187333cdde730bfb6657ae9927db060c1
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 763ca67ef43b9e154f7a595c7b2b4c8bfcbe5ece
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100891"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948960"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -117,7 +117,7 @@ OBJECTPROPERTY ( id , property )
 |IsView|Exibição|Exibição.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |OwnerId|Qualquer objeto no escopo do esquema|Proprietário do objeto.<br /><br /> **Observação:**  O proprietário do esquema não é necessariamente o proprietário do objeto. Por exemplo, objetos filho (aqueles em que *parent_object_id* é nonnull) sempre retornarão a mesma ID do proprietário como o pai.<br /><br /> Não nula = A ID de usuário do banco de dados do proprietário do objeto.|  
 |TableDeleteTrigger|Table|A tabela tem um gatilho DELETE.<br /><br /> >1 = ID do primeiro gatilho com o tipo especificado.|  
-|TableDeleteTriggerCount|Table|A tabela tem o número especificado de gatilhos DELETE.<br /><br /> >0 = O número de gatilhos DELETE.|  
+|TableDeleteTriggerCount|Table|A tabela tem o número especificado de gatilhos DELETE.<br /><br /> > 0 = o número de gatilhos DELETE.|  
 |TableFullTextMergeStatus|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Se uma tabela que tem um índice de texto completo está atualmente em mesclagem.<br /><br /> 0 = A tabela não tem um índice de texto completo ou o índice de texto completo não está sendo mesclado.<br /><br /> 1 = O índice de texto completo está em mesclagem.|  
 |TableFullTextBackgroundUpdateIndexOn|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> A tabela tem índice de atualização em segundo plano de texto completo (controle de alteração automática) habilitado.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
 |TableFulltextCatalogId|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID do catálogo de texto completo no qual residem os dados do índice de texto completo para a tabela.<br /><br /> Diferente de zero = ID de catálogo de texto completo associado ao índice exclusivo que identifica as linhas em uma tabela indexada de texto completo.<br /><br /> 0 = A tabela não tem um índice de texto completo.|  
@@ -147,14 +147,14 @@ OBJECTPROPERTY ( id , property )
 |TableHasUpdateTrigger|Table|O objeto tem um gatilho UPDATE.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasVarDecimalStorageFormat|Table|A tabela é habilitada para o formato de armazenamento **vardecimal**.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableInsertTrigger|Table|A tabela tem um gatilho INSERT.<br /><br /> >1 = ID do primeiro gatilho com o tipo especificado.|  
-|TableInsertTriggerCount|Table|A tabela tem o número especificado de gatilhos INSERT.<br /><br /> >0 = O número de gatilhos INSERT.|  
+|TableInsertTriggerCount|Table|A tabela tem o número especificado de gatilhos INSERT.<br /><br /> > 0 = o número de gatilhos INSERT.|  
 |TableIsFake|Table|A tabela não é real. Ela é materializada internamente sob demanda pelo [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableIsLockedOnBulkLoad|Table|A tabela está bloqueada devido a um trabalho de **bcp** ou BULK INSERT.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableIsMemoryOptimized|Table|**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> A tabela tem otimização de memória<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Tipo de dados base: **int**<br /><br /> Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).|  
 |TableIsPinned|Table|A tabela está fixada para ser mantida no cache de dados.<br /><br /> 0 = False<br /><br /> Esse recurso não tem suporte no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores.|  
 |TableTextInRowLimit|Table|Máximo de bytes permitidos para text in row.<br /><br /> 0 se a opção text in row não estiver definida.|  
 |TableUpdateTrigger|Table|A tabela tem um gatilho UPDATE.<br /><br /> > 1 = ID do primeiro gatilho com o tipo especificado.|  
-|TableUpdateTriggerCount|Table|A tabela tem o número especificado de gatilhos UPDATE.<br /><br /> > 0 = O número de gatilhos UPDATE.|  
+|TableUpdateTriggerCount|Table|A tabela tem o número especificado de gatilhos UPDATE.<br /><br /> > 0 = o número de gatilhos UPDATE.|  
 |TableHasColumnSet|Table|A tabela tem um conjunto de colunas.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> Para obter mais informações, veja [Usar conjuntos de colunas](../../relational-databases/tables/use-column-sets.md).|  
 |TableTemporalType|Table|**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Especifica o tipo de tabela.<br /><br /> 0 = tabela não temporal<br /><br /> 1 = tabela de histórico para tabela com controle de versão do sistema<br /><br /> 2 = tabela temporal com controle de versão do sistema|  
   
@@ -200,7 +200,7 @@ GO
   
 ```  
   
-### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>b. Verificando se uma função definida pelo usuário de valor escalar é determinística  
+### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. Verificando se uma função definida pelo usuário de valor escalar é determinística  
  O exemplo a seguir testa se a função `ufnGetProductDealerPrice` de valor escalar definida pelo usuário, que retorna um valor de **money** é determinística.  
   
 ```  

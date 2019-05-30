@@ -1,7 +1,7 @@
 ---
 title: Instalar o Mecanismo de Banco de Dados do SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -13,26 +13,26 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 30d657ed93a0ff272370f340dbba59c9e72c0079
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 80de284e9ac06e7481848325db7c1557524dc166
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65484331"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994193"
 ---
 # <a name="install-sql-server-database-engine"></a>Instalar o Mecanismo de Banco de Dados do SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+## <a name="overview"></a>Visão geral
 O componente [!INCLUDE[ssDE](../../includes/ssde-md.md)] do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é o principal serviço para armazenamento, processamento e proteção de dados. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] fornece acesso controlado e processamento rápido de transações para atender aos requisitos dos mais exigentes aplicativos de consumo de dados em sua empresa.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a até 50 instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em um único computador. Para criar uma instalação típica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Instalar o SQL Server por meio do Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 >[!IMPORTANT]
 >Para instalações locais, você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e de execução no compartilhamento remoto.  
-  
-## <a name="related-features"></a>Recursos relacionados
 
+## <a name="features"></a>Recursos
 Os seguintes recursos são instalados quando você seleciona o **Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** na página Componentes a Serem Instalados do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
@@ -48,27 +48,23 @@ Os seguintes recursos são instalados quando você seleciona o **Mecanismo de Ba
     > [!NOTE]  
     >  Nesta versão, se você marcar a caixa de seleção **Data Quality Services** na instalação, o servidor DQS (Data Quality Services) não será instalado. Será necessário executar etapas adicionais pós-instalação para instalar o servidor DQS. Para obter mais informações, consulte [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
     
-- [Serviço de Consulta Polybase para Dados Externos](../../relational-databases/polybase/polybase-guide.md) – é um componente opcional 
+- [Serviço de Consulta PolyBase para Dados Externos](../../relational-databases/polybase/polybase-guide.md) – é um componente opcional. No SQL Server 2019 em diante, o conector do Java para fontes de dados HDFS também está disponível.
 
   
  Os seguintes recursos adicionais são opções para muitos cenários de usuário típicos:  
   
--   Cliente Data Quality  
-  
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
-  
--   Componentes de conectividade  
-  
--   Modelos de programação  
-  
--   Ferramentas de gerenciamento  
-  
--   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
-  
+-   Cliente Data Quality
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]
+-   Componentes de conectividade
+-   Modelos de programação
+-   Ferramentas de gerenciamento
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 -   Componentes de documentação  
   
+
 > [!NOTE]  
 >  Por padrão, os bancos de dados de exemplo e o código de exemplo não são instalados como parte da instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para instalar bancos de dados de exemplo e o código de exemplo, consulte [Exemplos do Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md). Consulte exemplos mais antigos no [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
+
   
 ## <a name="see-also"></a>Confira também  
  [Edições e recursos com suporte do SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md)   

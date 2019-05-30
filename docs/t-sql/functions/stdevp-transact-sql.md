@@ -17,16 +17,16 @@ helpviewer_keywords:
 - expressions [SQL Server], statistical standard deviation
 - statistical standard deviation
 ms.assetid: 29f2a906-d084-4464-abc3-4b275ed19442
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5abf73c1229b2148c2683e140f3e51bc3d1d4f42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8abb6c22fc45cb57183816027d4e735c4df52c5
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080957"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947583"
 ---
 # <a name="stdevp-transact-sql"></a>STDEVP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +56,7 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  *expressão*  
  É uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) numérica. Funções de agregação e subconsultas não são permitidas. *expression* é uma expressão da categoria de tipo de dados numérico exato ou numérico aproximado, com exceção do tipo de dados **bit**.  
   
- OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem lógica na qual a operação é executada. *order_by_clause* é obrigatório. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -69,7 +69,7 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-stdevp"></a>A: Usando STDEVP  
+### <a name="a-using-stdevp"></a>A: como usar STDEVP  
  O exemplo a seguir retorna o desvio padrão para a população de todos os valores de gratificação da tabela `SalesPerson` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -80,7 +80,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-using-stdevp"></a>B: Usando STDEVP  
+### <a name="b-using-stdevp"></a>B: como usar STDEVP  
  O exemplo a seguir retorna o `STDEVP` dos valores de cota de vendas na tabela `dbo.FactSalesQuota`. A primeira coluna contém o desvio padrão de todos os valores distintos e a segunda coluna contém o desvio padrão de todos os valores, incluindo valores duplicados.  
   
 ```  

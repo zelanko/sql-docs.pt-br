@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STDistance (geometry Data Type)
 ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 6a983ca188da201bf18e407eaf3a84328a7abf29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47caf3acbbdfd663dcfc507279a4b41ce134ad01
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596038"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938975"
 ---
 # <a name="stdistance-geometry-data-type"></a>STDistance (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47596038"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo de retorno do CLR: **SqlDouble**  
+ Tipo de retorno CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  `STDistance()` sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geometry** não forem correspondentes.  

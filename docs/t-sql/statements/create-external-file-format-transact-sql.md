@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9759e2d623e2d9eca94ba7b5d17b7990c96366b
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 4018857b93a828e5ed756a80ba23f425a26790c8
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161633"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175031"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -244,7 +244,7 @@ Observações sobre a tabela:
  Armazene todos os valores ausentes como NULL. Todos os valores NULL que estão armazenados usando a palavra NULL no arquivo de texto delimitado são importados como a cadeia de caracteres 'NULL'.
   
    Codificação = {'UTF8' | 'UTF16'}  
- No SQL Data Warehouse do Azure, o PolyBase pode ler arquivos de texto delimitados codificados em UTF8 e em UTF16-LE. No SQL Server e no PDW, o PolyBase não é compatível com a leitura de arquivos codificados em UTF16.
+ No SQL Data Warehouse do Azure e o PDW (APS CU7.4), o PolyBase pode ler arquivos de texto delimitados codificados em UTF8 e UTF16-LE. No SQL Server, o PolyBase não dá suporte à leitura de arquivos codificados em UTF16.
   
  DATA_COMPRESSION = *data_compression_method*  
  Especifica o método de compactação de dados para os dados externos. Quando DATA_COMPRESSION não for especificado, o padrão será dados não compactados.
@@ -320,7 +320,7 @@ WITH (
 );  
 ```  
   
-### <a name="b-create-an-rcfile-external-file-format"></a>b. Criar um formato de arquivo externo RCFile  
+### <a name="b-create-an-rcfile-external-file-format"></a>B. Criar um formato de arquivo externo RCFile  
  Este exemplo cria um formato de arquivo externo para um RCFile que usa o método de serialização/desserialização org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe. Ela também especifica o uso do Codec padrão para o método de compactação de dados. Se DATA_COMPRESSION não for especificado, o padrão será sem compactação.
   
 ```  

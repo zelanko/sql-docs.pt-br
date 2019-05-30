@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geometry)
 ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9adca69b9f275fae20eef2b5bb9f619c034556c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d199d2a6171cdb865dc617501a50ceff18563600
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654214"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936165"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (tipo de dados geometria)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47654214"
 ## <a name="return-types"></a>Tipos de retorno  
 Tipo de retorno do SQL Server: **geometry**  
   
- Tipo de retorno do CLR: **SqlGeometry**  
+ Tipo de retorno CLR: **SqlGeometry**  
   
 ## <a name="exceptions"></a>Exceções  
  Os critérios a seguir gerarão uma **ArgumentException**.  
@@ -63,7 +63,7 @@ Tipo de retorno do SQL Server: **geometry**
 |Valor de distância|Dimensões do tipo|Tipo espacial retornado|  
 |--------------------|---------------------|---------------------------|  
 |distância < 0|Zero ou um|Instância de **GeometryCollection** vazia|  
-|distância < 0|Dois ou mais|Uma instância de **CurvePolygon** ou **GeometryCollection** com um buffer negativo. **Observação:** um buffer negativo pode criar uma **GeometryCollection** vazia|  
+|distância < 0|Dois ou mais|Uma instância de **CurvePolygon** ou **GeometryCollection** com um buffer negativo. **Observação:** Um buffer negativo pode criar uma **GeometryCollection** vazia|  
 |distância = 0|Todas as dimensões|Cópia da instância de **geometry** de invocação|  
 |distância > 0|Todas as dimensões|Instância de **CurvePolygon** ou **GeometryCollection**|  
   
@@ -76,7 +76,7 @@ Tipo de retorno do SQL Server: **geometry**
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geometry-instance"></a>A. Chamando BufferWithCurves() com um valor de parâmetro < 0 em instância de geometria unidimensional  
+### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geometry-instance"></a>A. Como chamar BufferWithCurves() com um valor de parâmetro < 0 em uma instância de geometria unidimensional  
  O exemplo a seguir retorna uma instância `GeometryCollection` vazia:  
   
 ```
@@ -84,7 +84,7 @@ Tipo de retorno do SQL Server: **geometry**
  SELECT @g.BufferWithCurves(-1).ToString(); 
  ```
   
-### <a name="b-calling-bufferwithcurves-with-a-parameter-value--0-on-a-two-dimensional-geometry-instance"></a>B. Chamando BufferWithCurves() com um valor de parâmetro < 0 em instância de geometria bidimensional  
+### <a name="b-calling-bufferwithcurves-with-a-parameter-value--0-on-a-two-dimensional-geometry-instance"></a>B. Como chamar BufferWithCurves() com um valor de parâmetro < 0 em uma instância de geometria bidimensional  
  O exemplo a seguir retorna uma instância `CurvePolygon` com um buffer negativo:  
   
 ```
@@ -92,7 +92,7 @@ Tipo de retorno do SQL Server: **geometry**
  SELECT @g.BufferWithCurves(-1).ToString()
  ```  
   
-### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. Chamando BufferWithCurves() com um valor de parâmetro < 0 que retorna uma GeometryCollection vazia  
+### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. Como chamar BufferWithCurves() com um valor de parâmetro < 0 que retorna uma GeometryCollection vazia  
  O seguinte exemplo mostra o que ocorre quando o parâmetro *distance* é igual a -2:  
   
 ```
@@ -119,7 +119,7 @@ Tipo de retorno do SQL Server: **geometry**
  SELECT @g.BufferWithCurves(@distance).ToString();
  ```  
   
-### <a name="f-calling-bufferwithcurves-with-a-parameter-value--0"></a>F. Chamando BufferWithCurves() com um valor de parâmetro > 0  
+### <a name="f-calling-bufferwithcurves-with-a-parameter-value--0"></a>F. Como chamar BufferWithCurves() com um valor de parâmetro > 0  
  O exemplo a seguir retorna uma instância `CurvePolygon`:  
   
 ```

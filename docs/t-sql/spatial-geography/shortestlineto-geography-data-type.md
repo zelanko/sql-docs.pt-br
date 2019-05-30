@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - ShortestLineTo method (geography)
 ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: c495bd27ef5464b0fa56b94513c24eeb4641240e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c136de737c3cd3eec886ff2e5ce470ab4d67296e
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689204"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936273"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47689204"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno do CLR: **SqlGeography**  
+ Tipo de retorno CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  O método retorna uma instância de **LineString** com pontos de extremidade nas bordas das duas instâncias de **geografia** sem intersecção que estão sendo comparadas. O comprimento de **LineString** retornado é igual à distância mais curta entre as duas instâncias de **geografia**. Uma instância de **LineString** vazia é retornada quando as duas instâncias de **geografia** se interseccionam.  

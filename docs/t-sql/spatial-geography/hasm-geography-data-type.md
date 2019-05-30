@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - HasM geography
 ms.assetid: e752e97f-1619-437d-b962-48c188b4e94c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9ece3c57981f52b1359f40d59487c464b6c5a230
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 038610db98b647aa48b633ccd90fc6a2310c06b6
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852851"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937753"
 ---
 # <a name="hasm-geography-data-type"></a>HasM (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STIsClosed method
 ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 7e9fd864ae5688e1d3540f54db54454ec1ff41db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a283ce663ce8aa68418169a8cb3bbb310c3b766c
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663464"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936805"
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47663464"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno do CLR: **SqlBoolean**  
+ Tipo de retorno CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  Esse método retornará 0 se alguma figura de uma instância de **geography** for um ponto ou se a instância estiver vazia.  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - testing permissions
 - PERMISSIONS function
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 28078c267d7d4a6ec1b5601c5982b20db006e56c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62b1c5c80e48ad4633b8ce1a5affb43bd36a6257
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641504"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943433"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

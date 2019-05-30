@@ -17,15 +17,15 @@ helpviewer_keywords:
 - FULLTEXTCATALOGPROPERTY function
 - status information [SQL Server], full-text catalogs
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e9b590e2a1ba1c3362b86b195c4b1a5fcb7d63bd
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: d337e1eb7d67da892d3588d6ffafd28205565b19
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662790"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948977"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
 ## <a name="arguments"></a>Argumentos  
   
 > [!NOTE]  
->  Essa coluna será removida em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **LogSize** e **PopulateStatus**. Evite usá-las em um novo projeto de desenvolvimento e planeje a modificação dos aplicativos que as utilizam atualmente.  
+>  As seguintes propriedades serão removidas em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **LogSize** e **PopulateStatus**. Evite usá-las em um novo projeto de desenvolvimento e planeje a modificação dos aplicativos que as utilizam atualmente.  
   
 _catalog\_name_  
 É uma expressão que contém o nome do catálogo de texto completo.  

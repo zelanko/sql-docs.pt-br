@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STLength method
 ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: a07da59b2ed5d6da4ee6cf6180cfb65470ee5793
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56a0c72b86e6dcb671b0f18197e7d0046cb2f36e
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764754"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936744"
 ---
 # <a name="stlength-geography-data-type"></a>STLength (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47764754"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo de retorno do CLR: **SqlDouble**  
+ Tipo de retorno CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  Se uma instância de **geography** for fechada, seu comprimento será calculado como o comprimento total em torno da instância. O comprimento de qualquer polígono é seu perímetro, e o comprimento de um ponto é 0. O comprimento de uma **GeometryCollection** é encontrado calculando a soma dos comprimentos de todas as instâncias de **geografia** contidas dentro da coleção.  

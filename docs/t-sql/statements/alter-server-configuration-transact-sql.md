@@ -1,7 +1,7 @@
 ---
 title: ALTER SERVER CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: aad389a5b54918a65b7eedab225c35425e404bf8
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 2de44a8eec9b2cf4428cb40db79f0c08f9a1afbf
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570789"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993466"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,6 +50,7 @@ SET <optionspec>
    | <hadr_cluster_context>  
    | <buffer_pool_extension>  
    | <soft_numa>  
+   | <memory_optimized>
 }  
   
 <process_affinity> ::=   
@@ -98,8 +99,17 @@ SET <optionspec>
         { size [ KB | MB | GB ] }  
   
 <soft_numa> ::=  
-    SET SOFTNUMA  
+    SOFTNUMA  
     { ON | OFF }  
+
+<memory-optimized> ::=   
+   MEMORY_OPTIMIZED   
+   {   
+     ON 
+   | OFF
+   | [ TEMPDB_METADATA = { ON [(RESOURCE_POOL='resource_pool_name')] | OFF }
+   | [ HYBRID_BUFFER_POOL = { ON | OFF }
+   }  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -186,7 +196,7 @@ O valor do tempo limite de quanto tempo a DLL de recursos do Mecanismo de Banco 
   
 **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-HADR CLUSTER CONTEXT **=** { **'**_remote\_windows\_cluster_**'** | LOCAL }  
+HADR CLUSTER CONTEXT **=** { **'** _remote\_windows\_cluster_ **'** | LOCAL }  
 Alterna o contexto do cluster HADR da instância de servidor para o cluster especificado do Windows Server Failover Cluster (WSFC). O *contexto do cluster HADR* determina qual cluster WSFC gerencia os metadados das réplicas de disponibilidade hospedadas pela instância de servidor. Use a opção SET HADR CLUSTER CONTEXT somente durante uma migração entre clusters de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] para uma instância do [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou versão posterior em um novo WSFC.  
   
 Só é possível alternar o contexto do cluster HADR do WSFC local para um WSFC remoto. Então, você pode optar por voltar do WSFC remoto para o WSFC local. O contexto do cluster HADR pode ser alternado para um cluster remoto somente quando a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não está hospedando réplicas de disponibilidade.  
@@ -245,7 +255,28 @@ Desabilita o particionamento automático de software de nós de hardware NUMA gr
 > 4) Inicie a instância do SQL Server Agent.  
   
 **Mais Informações:** se você executar o comando ALTER SERVER CONFIGURATION com SET SOFTNUMA antes de reiniciar o serviço do SQL Server, quando o serviço SQL Server Agent for interrompido, ele executará um comando T-SQL RECONFIGURE que reverterá as configurações do SOFTNUMA para o que era antes do ALTER SERVER CONFIGURATION. 
-  
+
+**\<memory_optimized> ::=**
+
+**Aplica-se a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e posterior
+
+ON <br>
+Habilita todos os recursos no nível da instância que fazem parte da família de recursos do [Banco de Dados em Memória](../../relational-databases/in-memory-database.md). Atualmente, isso inclui os [metadados do tempdb com otimização de memória](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) e o [pool de buffers híbrido](../../database-engine/configure-windows/hybrid-buffer-pool.md). Exige uma reinicialização para entrar em vigor.
+
+OFF <br>
+Desabilita todos os recursos no nível da instância que fazem parte da família de recursos do Banco de Dados em Memória. Exige uma reinicialização para entrar em vigor.
+
+TEMPDB_METADATA = ON | OFF <br>
+Habilita ou desabilita somente os metadados do tempdb com otimização de memória. Exige uma reinicialização para entrar em vigor. 
+
+RESOURCE_POOL='resource_pool_name' <br>
+Quando combinado com TEMPDB_METADATA = ON, especifica o pool de recursos definido pelo usuário que deve ser usado para o tempdb. Se ele não for especificado, o tempdb usará o pool padrão. O pool já precisa existir. Se o pool não estiver disponível quando o serviço for reiniciado, o tempdb usará o pool padrão.
+
+
+HYBRID_BUFFER_POOL = ON | OFF <br>
+Habilita ou desabilita o pool de buffers híbrido no nível da instância. Exige uma reinicialização para entrar em vigor.
+
+
 ## <a name="general-remarks"></a>Comentários gerais  
 Esta instrução não requer uma reinicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a menos que explicitamente indicado de outra forma. No caso de uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma reinicialização do recurso de cluster do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não é necessária.  
   
@@ -267,7 +298,9 @@ A DLL de recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!I
 |[Configurando as opções do log de diagnóstico](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  
 |[Configurando as propriedades do cluster de failover](#Failover)|HealthCheckTimeout|  
 |[Como alterar o contexto do cluster de uma réplica de disponibilidade](#ChangeClusterContextExample)|**'** *windows_cluster* **'**|  
-|[Configurando a extensão do pool de buffers](#BufferPoolExtension)|BUFFER POOL EXTENSION|  
+|[Configurando a extensão do pool de buffers](#BufferPoolExtension)|BUFFER POOL EXTENSION| 
+|[Como definir opções do Banco de Dados em Memória](#MemoryOptimized)|MEMORY_OPTIMIZED|
+
   
 ###  <a name="Affinity"></a> Configurando a afinidade do processo  
 Os exemplos desta seção mostram como definir a afinidade do processo para CPUs e nós NUMA. Os exemplos presumem que o servidor contém 256 CPUs que são organizadas em quatro grupos de 16 nós NUMA cada um. Não são atribuídos threads a nenhum nó NUMA ou CPU.  
@@ -285,7 +318,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=0 TO 63, 128 TO 191;  
 ```  
   
-#### <a name="b-setting-affinity-to-all-cpus-in-numa-nodes-0-and-7"></a>b. Configurando a afinidade para todas as CPUs nos nós NUMA 0 e 7  
+#### <a name="b-setting-affinity-to-all-cpus-in-numa-nodes-0-and-7"></a>B. Configurando a afinidade para todas as CPUs nos nós NUMA 0 e 7  
 O exemplo a seguir define a afinidade de CPU para nós `0` e `7`.  
   
 ```  
@@ -329,7 +362,7 @@ O exemplo a seguir inicia o log de dados de diagnóstico.
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;  
 ```  
   
-#### <a name="b-stopping-diagnostic-logging"></a>b. Interrompendo o log de diagnóstico  
+#### <a name="b-stopping-diagnostic-logging"></a>B. Interrompendo o log de diagnóstico  
 O exemplo a seguir interrompe o log de dados de diagnóstico.  
   
 ```  
@@ -387,7 +420,7 @@ SET BUFFER POOL EXTENSION ON
     (FILENAME = 'F:\SSDCACHE\Example.BPE', SIZE = 50 GB);  
 ```  
   
-#### <a name="b-modifying-buffer-pool-extension-parameters"></a>b. Modificando parâmetros da extensão do pool de buffers  
+#### <a name="b-modifying-buffer-pool-extension-parameters"></a>B. Modificando parâmetros da extensão do pool de buffers  
 O exemplo a seguir modifica o tamanho de um arquivo de extensão do pool de buffers. A opção de extensão do pool de buffers deve ser desabilitada antes que qualquer parâmetro seja modificado.  
   
 ```  
@@ -404,7 +437,37 @@ SET BUFFER POOL EXTENSION ON
 GO  
   
 ```  
-  
+
+### <a name="MemoryOptimized"></a> Como definir opções do Banco de Dados em Memória
+
+**Aplica-se a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e posterior
+
+#### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>A. Habilitar todos os recursos do Banco de Dados em Memória com as opções padrão
+
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED ON;
+GO
+```
+
+#### <a name="b-enable-memory-optimized-tempdb-metadata-using-the-default-resource-pool"></a>B. Habilitar os metadados do tempdb com otimização de memória usando o pool de recursos padrão
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON;
+GO
+```
+
+#### <a name="c-enable-memory-optimized-tempdb-metadata-with-a-user-defined-resource-pool"></a>C. Habilitar os metadados do tempdb com otimização de memória com um pool de recursos definido pelo usuário
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
+GO
+```
+
+#### <a name="d-enable-hybrid-buffer-pool"></a>D. Habilitar o pool de buffers híbrido
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = ON;
+GO
+```
+
+
 ## <a name="see-also"></a>Consulte Também  
 [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)   
 [Alterar o contexto do cluster HADR da instância de servidor &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)   

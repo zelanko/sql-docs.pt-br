@@ -1,7 +1,7 @@
 ---
 title: Gerenciador de conexões OLE DB | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ee9368848e7c939bbc8d4bb14eb49014ef5efb48
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: c455e449ff59296848c7e3f15d07aaee80d415c7
+ms.sourcegitcommit: e92ce0f59345fe61c0dd3bfe495ef4b1de469d4b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65728169"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66221153"
 ---
 # <a name="ole-db-connection-manager"></a>gerenciador de conexões OLE DB
 
@@ -91,6 +91,85 @@ ms.locfileid: "65728169"
  **Delete (excluir)**  
  Selecione uma conexão de dados e a exclua usando o botão **Excluir** .  
   
+### <a name="managed-identities-for-azure-resources-authentication"></a>Identidades gerenciadas para autenticação de recursos do Azure
+Ao executar pacotes SSIS no [Azure-SSIS Integration Runtime no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), você pode usar a [identidade gerenciada](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) associada ao data factory para a autenticação do Banco de Dados SQL do Azure (ou da Instância Gerenciada). O factory designado pode acessar dados do banco de dados e copiá-los para o banco de dados usando essa identidade.
+
+Para usar a autenticação de identidade gerenciada para o Banco de Dados SQL do Azure, siga estas etapas para configurar seu banco de dados:
+
+1. **Crie um grupo no Azure AD.** Torne a identidade gerenciada um membro do grupo.
+    
+   1. [Encontre a identidade gerenciada do data factory no portal do Azure](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity). Acesse as **Propriedades** do data factory. Copie a **ID de Objeto da Identidade Gerenciada**.
+    
+   1. Instale o módulo do [PowerShell do Azure AD](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2). Entre usando o comando `Connect-AzureAD`. Execute os comandos a seguir para criar um grupo e adicionar a identidade gerenciada como um membro.
+      ```powershell
+      $Group = New-AzureADGroup -DisplayName "<your group name>" -MailEnabled $false -SecurityEnabled $true -MailNickName "NotSet"
+      Add-AzureAdGroupMember -ObjectId $Group.ObjectId -RefObjectId "<your data factory managed identity object ID>"
+      ```
+    
+1. **[Provisione um administrador do Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server)** para o servidor do SQL Azure no portal do Azure, caso ainda não tenha feito isso. O administrador do Azure AD pode ser um usuário ou um grupo do Azure AD. Se você conceder uma função de administrador ao grupo com a identidade gerenciada, ignore as etapas 3 e 4. O administrador terá acesso completo ao banco de dados.
+
+1. **[Crie usuários de banco de dados independente](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)** para o grupo do Azure AD. Conecte-se ao banco de dados do qual ou para o qual deseja copiar dados usando ferramentas como o SSMS, com uma identidade do Azure AD que tenha, pelo menos, a permissão ALTER ANY USER. Execute o seguinte T-SQL: 
+    
+    ```sql
+    CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
+    ```
+
+1. **Conceda as permissões necessárias ao grupo do Azure AD** como faria normalmente para usuários do SQL e outros. Por exemplo, execute o seguinte código:
+
+    ```sql
+    ALTER ROLE [role name] ADD MEMBER [your AAD group name];
+    ```
+
+Para usar a autenticação de identidade gerenciada para a Instância Gerenciada do Banco de Dados SQL do Azure, siga estas etapas para configurar seu banco de dados:
+    
+1. **[Provisione um administrador do Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)** para a instância gerenciada no portal do Azure, caso ainda não tenha feito isso. O administrador do Azure AD pode ser um usuário ou um grupo do Azure AD. Se você conceder uma função de administrador ao grupo com a identidade gerenciada, ignore as etapas 2 a 5. O administrador terá acesso completo ao banco de dados.
+
+1. **[Encontre a identidade gerenciada do data factory no portal do Azure](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)** . Acesse as **Propriedades** do data factory. Copie a **ID do Aplicativo da Identidade Gerenciada** (NÃO a **ID de Objeto da Identidade Gerenciada**).
+
+1. **Converter a identidade gerenciada do data factory em tipo binário**. Conecte-se ao banco de dados **mestre** na instância gerenciada usando ferramentas como o SSMS com sua conta de administrador do SQL/do Active Directory. Execute o seguinte T-SQL no banco de dados **mestre** para obter a ID do aplicativo de identidade gerenciada como binário:
+    
+    ```sql
+    DECLARE @applicationId uniqueidentifier = '{your managed identity application ID}'
+    select CAST(@applicationId AS varbinary)
+    ```
+
+1. **Adicione a identidade gerenciada do data factory como um usuário** à Instância Gerenciada do Banco de Dados SQL do Azure. Execute o seguinte T-SQL no banco de dados **mestre**:
+    
+    ```sql
+    CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
+    ```
+
+1. **Conceda as permissões necessárias da identidade gerenciada do data factory**. Execute o seguinte T-SQL no banco de dados do qual ou para o qual deseja copiar os dados:
+
+    ```sql
+    CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
+    ALTER ROLE db_owner ADD MEMBER [{the managed identity name}]
+    ```
+
+Em seguida, **configure o provedor OLE DB** para o gerenciador de conexões OLE DB. Há duas opções para fazer isso.
+    
+1. Configurar em tempo de design. No Designer do SSIS, clique duas vezes no gerenciador de conexões OLE DB para abrir a janela **Gerenciador de Conexões**. Na lista suspensa **Provedor**, selecione [**Microsoft OLE DB Driver for SQL Server**](https://go.microsoft.com/fwlink/?linkid=871294).
+    > [!NOTE]
+    >  Outros provedores na lista suspensa PODEM NÃO dar suporte à autenticação da identidade gerenciada.
+    
+1. Configurar em tempo de execução. Quando você executar o pacote por meio do [SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) ou da [atividade Executar Pacote SSIS do Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity), localize a propriedade do gerenciador de conexões **ConnectionString** do gerenciador de conexões OLE DB e atualize a propriedade de conexão **Provider** para **MSOLEDBSQL** (ou seja, Microsoft OLE DB Driver for SQL Server).
+    ```vb
+    Data Source=serverName;Initial Catalog=databaseName;Provider=MSOLEDBSQL;...
+    ```
+
+Por fim, **configure a autenticação da identidade gerenciada** para o gerenciador de conexões OLE DB. Há duas opções para fazer isso.
+    
+1. Configurar em tempo de design. No Designer do SSIS, clique com o botão direito do mouse no gerenciador de conexões OLE DB e clique em **Propriedades** para abrir a **janela Propriedades**. Atualize a propriedade **ConnectUsingManagedIdentity** para **True**.
+    > [!NOTE]
+    >  Atualmente, a propriedade **ConnectUsingManagedIdentity** do gerenciador de conexões NÃO entra em vigor (indicando que a autenticação de identidade gerenciada não funciona) quando você executa o pacote SSIS no Designer do SSIS ou no [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server.
+
+1. Configurar em tempo de execução. Quando você executar o pacote por meio do SSMS ou da atividade Executar Pacote do SQL, localize o gerenciador de conexões OLE DB e atualize sua propriedade **ConnectUsingManagedIdentity** como **True**.
+    > [!NOTE]
+    >  No Azure-SSIS Integration Runtime, todos os outros métodos de autenticação (por exemplo, segurança integrada, senha) pré-configurados no gerenciador de conexões OLE DB serão **substituídos** quando a autenticação de identidade gerenciada for usada para estabelecer a conexão de banco de dados.
+
+> [!NOTE]
+>  Para configurar a autenticação de identidade gerenciada em pacotes existentes, recompile o projeto do SSIS com o [Designer do SSIS mais recente](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) pelo menos uma vez e reimplante esse projeto do SSIS no Azure-SSIS Integration Runtime, de modo que a nova propriedade do gerenciador de conexões **ConnectUsingManagedIdentity** seja adicionada automaticamente a todos os gerenciadores de conexões OLE DB no projeto do SSIS.
+
 ## <a name="see-also"></a>Consulte Também    
  [Origem de OLE DB](../../integration-services/data-flow/ole-db-source.md)     
  [Destino OLE DB](../../integration-services/data-flow/ole-db-destination.md)     

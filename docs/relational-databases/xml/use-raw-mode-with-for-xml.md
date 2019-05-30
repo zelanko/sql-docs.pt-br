@@ -19,16 +19,18 @@ ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 961f1e06cb7ba194612cf4e87f40d356096149bb
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 40d39287c4dfbbe4fdc70ea7f15ea429a98113b7
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510173"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175014"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Usar modo RAW com FOR XML
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  O modo RAW transforma cada linha no conjunto de resultados da consulta em um elemento XML que tem o identificador genérico \<row> ou o nome do elemento fornecido opcionalmente. Por padrão, cada valor de coluna no conjunto de linhas que não é NULL é mapeado para um atributo do elemento \<row>. Se a diretiva ELEMENTS for adicionada à cláusula FOR XML, cada valor de coluna será mapeado para um subelemento do elemento \<row>. Em conjunto com a diretiva ELEMENTS, é possível especificar opcionalmente a opção XSINIL para mapear valores de coluna NULL no conjunto de resultados para um elemento que tem o atributo xsi:nil=`"`true`"`.  
+
+O modo RAW transforma cada linha no conjunto de resultados da consulta em um elemento XML que tem o identificador genérico \<row> ou o nome do elemento fornecido opcionalmente. Por padrão, cada valor de coluna no conjunto de linhas que não é NULL é mapeado para um atributo do elemento \<row>. Se a diretiva ELEMENTS for adicionada à cláusula FOR XML, cada valor de coluna será mapeado para um subelemento do elemento \<row>. Em conjunto com a diretiva ELEMENTS, você pode especificar opcionalmente a opção XSINIL para mapear valores de coluna NULL no conjunto de resultados para um elemento que tem o atributo `xsi:nil="true"`.
   
  É possível solicitar um esquema para o XML resultante. A especificação da opção XMLDATA retorna um esquema XDR embutido. A especificação da opção XMLSCHEMA retorna um esquema XSD embutido. O esquema aparece no início dos dados. No resultado, a referência ao namespace do esquema é repetida para cada elemento de alto nível.  
   
@@ -55,8 +57,8 @@ ms.locfileid: "58510173"
  [Adicionar namespaces a consultas com WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Usar o modo AUTO com FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [Usar o modo EXPLICIT com FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)   
- [Usar modo PATH com FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)   
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
+ [Usar o modo PATH com FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)   
+ [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
+ [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)
   
   

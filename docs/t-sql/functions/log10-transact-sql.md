@@ -18,16 +18,16 @@ helpviewer_keywords:
 - base-10 logarithms
 - logarithm of expression
 ms.assetid: 1eb7fb34-1937-4a39-a936-f5c0c7c7e06f
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4acc465deb385ba0061a2d2a1e1307b4fe1e59e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a1ebb2b6a5c7fe2d6f71ce73e5e6b9af0924fc0
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594307"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949183"
 ---
 # <a name="log10-transact-sql"></a>LOG10 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -90,7 +90,7 @@ SELECT POWER (10, LOG10(5));
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C: Calculando um logaritmo na base 10 para um valor.  
+### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C: como calcular o logaritmo de base 10 para um valor.  
  O exemplo a seguir calcula o `LOG10` do valor especificado.  
   
 ```  

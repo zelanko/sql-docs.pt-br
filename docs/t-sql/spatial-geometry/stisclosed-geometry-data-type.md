@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STIsClosed (geometry Data Type)
 ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 5be28fe6b1533c6920c83171130a2d4104784fe2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1212beb7f65789ec986c45af1d1a2b2c3eb8d83f
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779135"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938826"
 ---
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Retornará 1 se os pontos inicial e final da instância de **geometry** fornecid
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno do CLR: **SqlBoolean**  
+ Tipo de retorno CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  Esse método retornará 0 se alguma figura de uma instância de **geometry** for um ponto ou se a instância estiver vazia.  

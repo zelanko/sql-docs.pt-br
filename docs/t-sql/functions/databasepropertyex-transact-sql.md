@@ -17,16 +17,16 @@ helpviewer_keywords:
 - displaying database properties
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b502e1d930f8cfdd118e12f74921347c342601e
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 690ed4abb406abc63be259241ba8c1c346bcf512
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55045005"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943763"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ DATABASEPROPERTYEX ( database , property )
   
 ## <a name="arguments"></a>Argumentos  
 *banco de dados*  
-É uma expressão que especifica o nome do banco de dados para o qual `DATABASEPROPERTYEX` retorna as informações da propriedade nomeada. *database* tem um tipo de dados **nvarchar (128)**.  
+É uma expressão que especifica o nome do banco de dados para o qual `DATABASEPROPERTYEX` retorna as informações da propriedade nomeada. *database* tem um tipo de dados **nvarchar (128)** .  
 
 Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], `DATABASEPROPERTYEX` requer o nome do banco de dados atual. Retornará NULL para todas as propriedades se for fornecido um nome de banco de dados diferente.
   
@@ -130,7 +130,7 @@ SELECT DATABASEPROPERTYEX('AdventureWorks2014', 'IsAutoShrink');
 0  
 ```  
   
-### <a name="b-retrieving-the-default-collation-for-a-database"></a>b. Recuperando a ordenação padrão de um banco de dados  
+### <a name="b-retrieving-the-default-collation-for-a-database"></a>B. Recuperando a ordenação padrão de um banco de dados  
 Este exemplo retorna vários atributos do banco de dados `AdventureWorks`.
   
 ```sql

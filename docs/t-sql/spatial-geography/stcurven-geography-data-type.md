@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STCurveN method (geography)
 ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: c9807fd2d9a447ba9d791b590eed6daf0cde60b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56adf5a1cfb41b3a8efb10e278109a6d10659e7d
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747664"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937087"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47747664"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno do CLR: **SqlGeography**  
+ Tipo de retorno CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Exceções  
  Se n < 1, uma **ArgumentOutOfRangeException** será gerada.  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMPointFromWKB (geometry Data Type)
 ms.assetid: 01d4117f-01a0-4bc3-8762-7382a1cdbd6c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9b14ba9d9110add0e9ffd6c9ba3ecb64239b1c4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5446bbd0857fb60ca0523a873c2d7abc03914a2
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626915"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938582"
 ---
 # <a name="stmpointfromwkb-geometry-data-type"></a>STMPointFromWKB (tipo de dados de geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_multipoint*  
- É a representação WKB da instância de **geometryMultiPoint** que você deseja retornar. *WKB_multipoint* é uma expressão **varbinary(max)**.  
+ É a representação WKB da instância de **geometryMultiPoint** que você deseja retornar. *WKB_multipoint* é uma expressão **varbinary(max)** .  
   
  *SRID*  
  É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geometryMultiPoint** que você deseja retornar.  
@@ -47,9 +47,9 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno do CLR: **SqlGeometry**  
+ Tipo de retorno CLR: **SqlGeometry**  
   
- Tipo do OGC: **MultiPoint**  
+ Tipo OGC: **MultiPoint**  
   
 ## <a name="remarks"></a>Remarks  
  Esse método gerará uma **FormatException** se a entrada não for bem formatada.  

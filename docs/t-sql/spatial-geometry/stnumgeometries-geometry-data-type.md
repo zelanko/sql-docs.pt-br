@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STNumGeometries (geometry Data Type)
 ms.assetid: 9402b03d-3039-42ca-ac59-f96b7f1a48de
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 1c48a3560f960c90e8426a67e5b1b85af933d2ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99e8dd51d546a7f65771a23fd8748d9d0b17d6fb
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804685"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938525"
 ---
 # <a name="stnumgeometries-geometry-data-type"></a>STNumGeometries  (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Retorna o número de geometrias que compõem uma instância de **geometry**.
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo de retorno do CLR: **SqlInt32**  
+ Tipo de retorno CLR: **SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
  Esse método retornará 1 se a instância de **geometry** não for uma instância de **MultiPoint**, **MultiLineString**, **MultiPolygon** ou **GeometryCollection** e retornará 0 se a instância de **geometry** estiver vazia.  

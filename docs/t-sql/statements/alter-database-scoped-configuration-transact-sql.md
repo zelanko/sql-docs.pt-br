@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 31750fffc81fba1b22377578bddc09e1994e9b29
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: c8be3a1568e45f62e393ce07f5fd174d5e3949ef
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64568344"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064467"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -71,8 +71,8 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
-    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
-    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | INTERLEAVED_EXECUTION_TVF = { ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
     | TSQL_SCALAR_UDF_INLINING = { ON | OFF }
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
@@ -173,6 +173,8 @@ Permite habilitar ou desabilitar a execução Intercalada para funções com val
 
 > [!NOTE]
 > Para o nível de compatibilidade do banco de dados 130 ou menor, esta configuração com escopo de banco de dados não tem nenhum efeito.
+>
+> Somente no SQL Server 2017 (14.x), a opção INTERLEAVED_EXECUTION_TVF tinha o nome mais antigo **DISABLE**_INTERLEAVED_EXECUTION_TVF.
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}    
 

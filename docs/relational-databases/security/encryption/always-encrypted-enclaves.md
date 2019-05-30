@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9dfc5e2cf7bab164d650f2da1767b2a0e7c399aa
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 377c2d95564e7348bdfb5de9480c7c7f5004c7f7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711177"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938163"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted com enclaves seguros
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -55,7 +55,7 @@ Com enclaves seguros, o Always Encrypted protege a confidencialidade dos dados c
 > [!IMPORTANT]
 > Em [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], os cálculos avançados estão aguardando várias otimizações de desempenho, incluindo a funcionalidade limitada (sem indexação etc) e estão desabilitados por padrão no momento. Para habilitar cálculos avançados, consulte [Habilitar cálculos avançados](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-Em [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], o Always Encrypted com enclaves seguros usa enclaves de memória seguros com [VBS (Segurança baseada em Virtualização)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (também conhecido como enclaves VSM ou Modo Seguro Virtual) no Windows.
+Em [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], o Always Encrypted com enclaves seguros usa enclaves de memória seguros com [VBS (Segurança baseada em Virtualização)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (também conhecido como enclaves VSM ou Modo Seguro Virtual) no Windows.
 
 ## <a name="secure-enclave-attestation"></a>Atestado de enclave seguro
 
@@ -143,4 +143,4 @@ As seguintes limitações se aplicam à Versão prévia atual, mas estão em nos
 
 ## <a name="next-steps"></a>Next Steps
 
-- Configure seu ambiente de teste e experimente a funcionalidade do Always Encrypted com enclaves seguros no SSMS – confira [Tutorial: introdução ao Always Encrypted com enclaves seguros usando o SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
+- Configure o ambiente de teste e experimente a funcionalidade do Always Encrypted com enclaves seguras no SSMS – confira [Tutorial: Introdução ao Always Encrypted com enclaves seguros usando o SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).

@@ -17,16 +17,16 @@ helpviewer_keywords:
 - data types [SQL Server], status information
 - TYPEPROPERTY function
 ms.assetid: bc311c80-bac5-46ab-a5c8-68b1c6bbf24a
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bfd001d10f7f0fd165bd797e84af9a57034676a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 796de66b6fdce95be5fe235219208a504cc8095e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799414"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946830"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ TYPEPROPERTY (type , property)
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *tipo*  
+ *type*  
  É o nome do tipo de dados.  
   
  *property*  
@@ -51,7 +51,7 @@ TYPEPROPERTY (type , property)
 |Propriedade|Descrição|Valor retornado|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|Tipo de dados permite valores nulos.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Tipo de dados não localizado.|  
-|**OwnerId**|Proprietário do tipo.<br /><br /> Observação: o proprietário do esquema não é necessariamente o proprietário do tipo.|Nonnull = A ID de usuário de banco de dados do proprietário do tipo.<br /><br /> NULL = Tipo sem-suporte ou ID de tipo inválida.|  
+|**OwnerId**|Proprietário do tipo.<br /><br /> Observação: O proprietário do esquema não é necessariamente o proprietário do tipo.|Nonnull = A ID de usuário de banco de dados do proprietário do tipo.<br /><br /> NULL = Tipo sem-suporte ou ID de tipo inválida.|  
 |**Precisão**|Precisão para o tipo de dados.|O número de dígitos ou caracteres.<br /><br /> -1 = **xml** ou um tipo de dados de valor grande<br /><br /> NULL = Tipo de dados não localizado.|  
 |**Escala**|Escala para o tipo de dados.|O número de lugares decimais para o tipo de dados.<br /><br /> NULL = o tipo de dados não é **numeric** ou não foi encontrado.|  
 |**UsesAnsiTrim**|Configuração de preenchimento ANSI era ON quando o tipo de dados foi criado.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Tipo de dados não localizado ou não é um tipo de dados binário ou de cadeia de caracteres.|  

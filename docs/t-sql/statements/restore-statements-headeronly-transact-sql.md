@@ -20,16 +20,16 @@ helpviewer_keywords:
 - RESTORE HEADERONLY statement
 - backup header information [SQL Server]
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 818bd4150965f0a1e36c942f21d9446759c4ec04
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: c8296ca538f9daac6b0e05aae6f8124bfe2abb62
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242239"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947053"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instruções RESTORE – HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -147,10 +147,10 @@ FROM <backup_device>
 |**containment**|**tinyint** não NULL|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica o status de contenção do banco de dados.<br /><br /> 0 = a contenção do banco de dados está desativada<br /><br /> 1 = o banco de dados está em contenção parcial|  
 |**KeyAlgorithm**|**nvarchar(32)**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) até a versão atual.<br /><br /> O algoritmo de criptografia usado para criptografar o backup. NO_Encryption indica que o backup não foi criptografado. Quando não for possível determinar o valor correto, o valor deve ser NULL.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) até a versão atual.<br /><br /> A impressão digital do criptografador que pode ser usada para localizar o certificado ou chave assimétrica no banco de dados. Quando o backup não tiver sido criptografado, esse valor é NULL.|  
-|**EncryptorType**|**nvarchar(32)**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) até a versão atual.<br /><br /> Tipo de criptografador usado: Certificate ou Asymmetric Key. Quando o backup não tiver sido criptografado, esse valor é NULL.|  
+|**EncryptorType**|**nvarchar(32)**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) até a versão atual.<br /><br /> O tipo de criptografador usado: Certificado ou Chave Assimétrica. Quando o backup não tiver sido criptografado, esse valor é NULL.|  
   
 > [!NOTE]  
->  Se as senhas forem definidas para os conjuntos de backup, RESTORE HEADERONLY mostrará informações completas apenas para o conjunto de backup cuja senha corresponda à opção PASSWORD especificada do comando. RESTORE HEADERONLY também mostra informações completas de conjuntos de backup desprotegidos. A coluna **BackupName** dos outros conjuntos de backup protegidos por senha na mídia é definida como "**_Protegida por Senha_**", e todas as outras colunas são NULL.  
+>  Se as senhas forem definidas para os conjuntos de backup, RESTORE HEADERONLY mostrará informações completas apenas para o conjunto de backup cuja senha corresponda à opção PASSWORD especificada do comando. RESTORE HEADERONLY também mostra informações completas de conjuntos de backup desprotegidos. A coluna **BackupName** dos outros conjuntos de backup protegidos por senha na mídia é definida como " **_Protegida por Senha_** ", e todas as outras colunas são NULL.  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Um cliente pode usar RESTORE HEADERONLY para recuperar todas as informações do cabeçalho de todos os backups em um dispositivo de backup particular. Para cada backup no dispositivo de backup, o servidor envia as informações de cabeçalho como uma linha.  

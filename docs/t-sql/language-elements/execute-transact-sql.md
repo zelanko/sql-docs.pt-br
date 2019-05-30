@@ -28,16 +28,16 @@ helpviewer_keywords:
 - switching execution context
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a729dac9bba3f8ace1f117b6317d24ec541fcc19
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 558dbcfa3556099877406d8082f3cb909d6a22a1
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641017"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982351"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -259,7 +259,7 @@ Se você passar uma única palavra que não começa com `@` e que não está ent
  Fornece o valor padrão do parâmetro como definido no módulo. Quando o módulo esperar um valor para um parâmetro que não tem um padrão definido e houver um parâmetro ausente ou a palavra-chave DEFAULT estiver especificada, ocorrerá um erro.  
   
  @*string_variable*  
- É o nome de uma variável local. @*string_variable* pode ser qualquer tipo de dados **char**, **varchar**, **nchar** ou **nvarchar**. Incluem os tipos de dados **(max)**.  
+ É o nome de uma variável local. @*string_variable* pode ser qualquer tipo de dados **char**, **varchar**, **nchar** ou **nvarchar**. Incluem os tipos de dados **(max)** .  
   
  [N] '*tsql_string*'  
  É uma cadeia de caracteres constante. *tsql_string* pode ser qualquer tipo de dados **nvarchar** ou **varchar**. Se N for incluído, a cadeia de caracteres será interpretada como o tipo de dados **nvarchar**.  
@@ -301,7 +301,7 @@ Se você passar uma única palavra que não começa com `@` e que não está ent
   
 |Termo|Definição|  
 |----------|----------------|  
-|RECOMPILE|Força a compilação, a utilização e o descarte de um novo plano após a execução do módulo. Se houver um plano de consulta existente para o módulo, esse plano permanecerá no cache.<br /><br /> Use essa opção se o parâmetro sendo fornecido for atípico ou se os dados tiverem sido alterados significativamente. Ela não é usada para procedimentos armazenados estendidos. É aconselhável usar essa opção se realmente for necessário porque ela é expansiva.<br /><br /> **Observação:** não é possível usar WITH RECOMPILE ao chamar um procedimento armazenado que usa a sintaxe OPENDATASOURCE. A opção WITH RECOMPILE será ignorada quando um nome de objeto de quatro partes for especificado.<br /><br /> **Observação:** RECOMPILE não é compatível com funções escalares definidas pelo usuário compiladas nativamente. Se precisar recompilar, use [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
+|RECOMPILE|Força a compilação, a utilização e o descarte de um novo plano após a execução do módulo. Se houver um plano de consulta existente para o módulo, esse plano permanecerá no cache.<br /><br /> Use essa opção se o parâmetro sendo fornecido for atípico ou se os dados tiverem sido alterados significativamente. Ela não é usada para procedimentos armazenados estendidos. É aconselhável usar essa opção se realmente for necessário porque ela é expansiva.<br /><br /> **Observação:** Não é possível usar WITH RECOMPILE ao chamar um procedimento armazenado que usa a sintaxe OPENDATASOURCE. A opção WITH RECOMPILE será ignorada quando um nome de objeto de quatro partes for especificado.<br /><br /> **Observação:** RECOMPILE não é compatível com funções escalares definidas pelo usuário compiladas nativamente. Se precisar recompilar, use [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
 |**RESULT SETS UNDEFINED**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Esta opção não fornece nenhuma garantia de quais resultados, se houver, serão retornados. Além disso, não é fornecida nenhuma definição. A instrução é executada sem erro se algum resultado for retornado ou se nenhum resultado for retornado. RESULT SETS UNDEFINED será o comportamento padrão se não for fornecido result_sets_option.<br /><br /> Para funções escalares interpretadas definidas pelo usuário e funções escalares compiladas nativamente definidas pelo usuário, essa opção não funciona porque as funções nunca retornam um conjunto de resultados.|  
 |RESULT SETS NONE|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Garante que a instrução execute não retornará nenhum resultado. Se algum resultado for retornado, o lote será anulado.<br /><br /> Para funções escalares interpretadas definidas pelo usuário e funções escalares compiladas nativamente definidas pelo usuário, essa opção não funciona porque as funções nunca retornam um conjunto de resultados.|  
 |*\<result_sets_definition>*|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Fornece uma garantia de que o resultado voltará como especificado em result_sets_definition. Para instruções que retornam vários conjuntos de resultados, forneça várias seções de *result_sets_definition*. Coloque cada *result_sets_definition* entre parênteses, separada por vírgulas. Para obter mais informações, consulte \<result_sets_definition > mais adiante neste tópico.<br /><br /> Essa opção sempre resulta em um erro para funções escalares definidas pelo usuário compiladas nativamente, porque as funções não retornam um conjunto de resultados.|
@@ -661,7 +661,7 @@ WITH RESULT SETS
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="example-o-basic-procedure-execution"></a>Exemplo O: execução de procedimento básico  
+### <a name="example-o-basic-procedure-execution"></a>Exemplo O: Execução de procedimento armazenado  
  Executando um procedimento armazenado:  
   
 ```  
@@ -680,7 +680,7 @@ EXEC ('EXEC ' + @var);
 CREATE sp_first AS EXEC sp_second; EXEC sp_third;  
 ```  
   
-### <a name="example-p-executing-strings"></a>Exemplo P: executando cadeias de caracteres  
+### <a name="example-p-executing-strings"></a>Exemplo P: Como executar cadeias de caracteres  
  Executando uma cadeia de caracteres SQL:  
   
 ```  
@@ -701,7 +701,7 @@ SET @stringVar = N'SELECT name FROM' + ' sys.sql_logins';
 EXEC (@stringVar);  
 ```  
   
-### <a name="example-q-procedures-with-parameters"></a>Exemplo Q: procedimentos com parâmetros  
+### <a name="example-q-procedures-with-parameters"></a>Exemplo Q: Procedimentos com parâmetros  
  O seguinte exemplo cria um procedimento com parâmetros e demonstra três maneiras de executar o procedimento:  
   
 ```  

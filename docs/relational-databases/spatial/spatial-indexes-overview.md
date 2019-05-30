@@ -9,16 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 619f32c1a12e5a00a553cb41434dcf4802020c1c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6cad42165bfb79e411a6e1fe6edef0c1b2ef9caa
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659750"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939210"
 ---
 # <a name="spatial-indexes-overview"></a>Visão geral de índices espaciais
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "51659750"
   
  Por exemplo, considere a ilustração anterior que mostra um octógono que se ajusta completamente à célula 15 da grade de nível 1. Na figura, a célula 15 foi incluída no mosaico, dissecando o octógono em nove células de nível 2. Esta ilustração pressupõe que o limite de células por objeto é 9 ou maior. No entanto, se o limite de células por objeto fosse 8 ou menor, a célula 15 não seria incluída no mosaico e a apenas a célula 15 seria contada para o objeto.  
   
- Por padrão, o limite de células por objeto é de 16, o que fornece uma troca satisfatória entre espaço e precisão para a maior parte dos índices espaciais. No entanto a instrução [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] dá suporte a uma cláusula CELLS_PER_OBJECT**=**_n_ que permite especificar um limite de células por objeto entre 1 e 8192, inclusive.  
+ Por padrão, o limite de células por objeto é de 16, o que fornece uma troca satisfatória entre espaço e precisão para a maior parte dos índices espaciais. No entanto a instrução [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] dá suporte a uma cláusula CELLS_PER_OBJECT **=** _n_ que permite especificar um limite de células por objeto entre 1 e 8192, inclusive.  
   
 > [!NOTE]  
 >  A configuração **cells_per_object** de um índice espacial é visível na exibição de catálogo [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) .  
@@ -109,7 +109,7 @@ ms.locfileid: "51659750"
 #### <a name="deepest-cell-rule"></a>Regra de célula mais profunda  
  A regra da célula mais profunda explora o fato de que cada célula de nível inferior pertence à célula acima dela: uma célula de nível 4 pertence a uma célula de nível 3, uma célula de nível 3 pertence a uma célula de nível 2 e uma célula de nível 2 pertence a uma célula de nível 1. Por exemplo, um objeto que pertence à célula 1.1.1.1 também pertence à célula 1.1.1, à célula 1.1 e à célula 1. O conhecimento de tais relações da hierarquia de células é incorporado ao processador de consultas. Portanto apenas as células de nível mais profundo precisam ser registradas no índice minimizando as informações que o índice precisa armazenar.  
   
- Na ilustração seguinte, um polígono em forma de diamante relativamente pequeno é incluído no mosaico. O índice usa o limite de células por objeto padrão de 16 que não é atingido para esse objeto pequeno. Portanto, o mosaico continua descendo até o nível 4. O polígono reside nas células de nível 1 até as células de nível 3: 4, 4.4 e 4.4.10 e 4.4.14. Entretanto, usando a regra da célula mais profunda, o mosaico conta apenas doze células de nível 4: 4.4.10.13-15 e 4.4.14.1-3, 4.4.14.5-7 e 4.4.14.9-11.  
+ Na ilustração seguinte, um polígono em forma de diamante relativamente pequeno é incluído no mosaico. O índice usa o limite de células por objeto padrão de 16 que não é atingido para esse objeto pequeno. Portanto, o mosaico continua descendo até o nível 4. O polígono reside nas células de nível 1 até as células de nível 3: 4, 4.4, 4.4.10 e 4.4.14. Entretanto, usando a regra da célula mais profunda, o mosaico conta apenas as doze células de nível 4: 4.4.10.13-15, 4.4.14.1-3, 4.4.14.5-7 e 4.4.14.9-11.  
   
  ![Otimização de célula mais profunda](../../relational-databases/spatial/media/spndx-opt-deepest-cell.gif "Otimização de célula mais profunda")  
   
@@ -130,7 +130,7 @@ ms.locfileid: "51659750"
 >  É possível especificar explicitamente esse esquema de mosaico usando a cláusula USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) da instrução [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ##### <a name="the-bounding-box"></a>A caixa delimitadora  
- Dados geométricos ocupam um plano que pode ser infinito. Porém, no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um índice espacial requer um espaço finito. Para estabelecer um espaço finito para decomposição, o esquema de mosaico de grade geométrica requer uma *caixa delimitadora*retangular. A caixa delimitadora é definida por quatro coordenadas, **(**_x-min_**,**_y-min_**)** e **(**_x-max_**,**_y-max_**)** que são armazenadas como propriedades do índice espacial. Essas coordenadas representam o seguinte:  
+ Dados geométricos ocupam um plano que pode ser infinito. Porém, no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um índice espacial requer um espaço finito. Para estabelecer um espaço finito para decomposição, o esquema de mosaico de grade geométrica requer uma *caixa delimitadora*retangular. A caixa delimitadora é definida por quatro coordenadas, **(** _x-min_ **,** _y-min_ **)** e **(** _x-max_ **,** _y-max_ **)** que são armazenadas como propriedades do índice espacial. Essas coordenadas representam o seguinte:  
   
 -   *x-min* é a coordenada X do canto inferior esquerdo da caixa delimitadora.  
   
@@ -143,11 +143,11 @@ ms.locfileid: "51659750"
 > [!NOTE]  
 >  Essas coordenadas são especificadas pela cláusula BOUNDING_BOX da instrução [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
- As coordenadas **(**_x-min_**,**_y-min_**)** e **(**_x-max_**,**_y-max_**)** determinam o posicionamento e as dimensões da caixa delimitadora. O espaço fora da caixa delimitadora é tratado como uma única célula numerada como 0.  
+ As coordenadas **(** _x-min_ **,** _y-min_ **)** e **(** _x-max_ **,** _y-max_ **)** determinam o posicionamento e as dimensões da caixa delimitadora. O espaço fora da caixa delimitadora é tratado como uma única célula numerada como 0.  
   
  O índice espacial decompõe o espaço dentro da caixa delimitadora. A grade de nível 1 da hierarquia de grade preenche a caixa delimitadora. Para colocar um objeto geométrico na hierarquia da grade, o índice espacial compara as coordenadas do objeto com as coordenadas da caixa delimitadora.  
   
- A ilustração a seguir mostra os pontos definidos pelas coordenadas **(**_x-min_**,**_y-min_**)** e **(**_x-max_**,**_y-max_**)** da caixa delimitadora. O nível superior da hierarquia da grade é mostrado como uma grade de 4x4. Para fins ilustrativos, os níveis inferiores são omitidos. O espaço fora da caixa delimitadora é indicado por um zero (0). Observe que o objeto 'A' se estende parcialmente além da caixa e o objeto 'B' está completamente fora da caixa na célula 0.  
+ A ilustração a seguir mostra os pontos definidos pelas coordenadas **(** _x-min_ **,** _y-min_ **)** e **(** _x-max_ **,** _y-max_ **)** da caixa delimitadora. O nível superior da hierarquia da grade é mostrado como uma grade de 4x4. Para fins ilustrativos, os níveis inferiores são omitidos. O espaço fora da caixa delimitadora é indicado por um zero (0). Observe que o objeto 'A' se estende parcialmente além da caixa e o objeto 'B' está completamente fora da caixa na célula 0.  
   
  ![Caixa delimitadora que mostra as coordenadas e a célula 0.](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "Caixa delimitadora que mostra as coordenadas e a célula 0.")  
   
@@ -182,7 +182,7 @@ ms.locfileid: "51659750"
 ##  <a name="methods"></a> Métodos com suporte de índices espaciais  
   
 ###  <a name="geometry"></a> Métodos de geometria com suporte de índices espaciais  
- Índices espaciais dão suporte aos seguintes métodos geometry orientados por conjunto em determinadas condições: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() e STWithin(). Para que tenham suporte em um índice espacial, esses métodos devem ser usados dentro da cláusula WHERE ou JOIN ON de uma consulta e ocorrer dentro de um predicado com o seguinte formato geral:  
+ Os índices espaciais dão suporte aos seguintes métodos de geometria orientados a conjunto em determinadas condições: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() e STWithin(). Para que tenham suporte em um índice espacial, esses métodos devem ser usados dentro da cláusula WHERE ou JOIN ON de uma consulta e ocorrer dentro de um predicado com o seguinte formato geral:  
   
  *geometry1*.*method_name*(*geometry2*)*comparison_operator**valid_number*  
   
@@ -207,7 +207,7 @@ ms.locfileid: "51659750"
 -   *geometry1*.[STWithin](../../t-sql/spatial-geometry/stwithin-geometry-data-type.md)(*geometry2*)= 1  
   
 ###  <a name="geography"></a> Métodos de geografia com suporte de índices espaciais  
- Em determinadas condições, índices espaciais dão suporte aos seguintes métodos de geografia orientados a conjunto: STIntersects(), STEquals() e STDistance(). Para que tenham suporte de um índice espacial, esses métodos devem ser usados dentro da cláusula WHERE de uma consulta e ocorrer dentro de um predicado do seguinte formulário geral:  
+ Em determinadas condições, os índices espaciais dão suporte aos seguintes métodos de geografia orientados a conjunto: STIntersects(), STEquals() e STDistance(). Para que tenham suporte de um índice espacial, esses métodos devem ser usados dentro da cláusula WHERE de uma consulta e ocorrer dentro de um predicado do seguinte formulário geral:  
   
  *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*  
   

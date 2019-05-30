@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STGeomCollFromWKB (geometry Data Type)
 ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 5693d4673cc589507e7dde73dbdf68198a03cf0e
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 4177e4b5d41352d511743c422864454a889771b4
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56230933"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938907"
 ---
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_geometrycollection*  
- É a representação WKB da instância de **geometrycollection** que você deseja retornar. *WKB_geometrycollection* é uma expressão **varbinary(max)**.  
+ É a representação WKB da instância de **geometrycollection** que você deseja retornar. *WKB_geometrycollection* é uma expressão **varbinary(max)** .  
   
  *SRID*  
  É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geometry** que você deseja retornar.  

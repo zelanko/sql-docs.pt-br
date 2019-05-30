@@ -15,16 +15,16 @@ helpviewer_keywords:
 - SET statement, @local_variable
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27fbb65a3fcdcdfd78fd825dc767e5f31590c0fb
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: 20febb0b33e0da08d8620232195e183c7c5162f3
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572819"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981764"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +68,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
 ## <a name="arguments"></a>Argumentos  
 **@** _local_variable_  
-O nome de uma variável de qualquer tipo, exceto **cursor**, **text**, **ntext**, **image** ou **table**. Os nomes de variável devem começar com um sinal de arroba (**@**). Os nomes de variável precisam seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
+O nome de uma variável de qualquer tipo, exceto **cursor**, **text**, **ntext**, **image** ou **table**. Os nomes de variável devem começar com um sinal de arroba ( **@** ). Os nomes de variável precisam seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
 *property_name*  
 Uma propriedade de um tipo definido pelo usuário.  
@@ -80,9 +80,9 @@ Um campo público de um tipo definido pelo usuário.
 O nome de um tipo de dados CLR (Common Language Runtime) definido pelo usuário.  
   
 `{ . | :: }`  
-Especifica um método de um tipo de dados CLR definido pelo usuário. Para um método de instância (não estático), use um ponto (**.**). Para um método estático, use dois sinais de dois-pontos (**::**). Para invocar um método, uma propriedade ou um campo de um tipo de dados CLR definido pelo usuário, você deve ter a permissão EXECUTE no tipo.  
+Especifica um método de um tipo de dados CLR definido pelo usuário. Para um método de instância (não estático), use um ponto ( **.** ). Para um método estático, use dois sinais de dois-pontos ( **::** ). Para invocar um método, uma propriedade ou um campo de um tipo de dados CLR definido pelo usuário, você deve ter a permissão EXECUTE no tipo.  
   
-_method_name_ **(** _argument_ [ **,**... *n* ] **)**  
+_method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
 Um método de um tipo definido pelo usuário que obtém um ou mais argumentos para modificar o estado de uma instância de um tipo. Os métodos estáticos devem ser públicos.  
   
 **@** _SQLCLR_local_variable_  
@@ -123,7 +123,7 @@ CURSOR
 Especifica que a instrução SET contém uma declaração de um cursor.  
   
 SCROLL  
-Especifica que o cursor oferece suporte a todas as opções de busca: FIRST, LAST, NEXT, PRIOR, RELATIVE e ABSOLUTE. Não é possível especificar SCROLL quando também tiver especificado FAST_FORWARD.  
+Especifica que o cursor dá suporte a todas as opções de fetch: FIRST, LAST, NEXT, PRIOR, RELATIVE e ABSOLUTE. Não é possível especificar SCROLL quando também tiver especificado FAST_FORWARD.  
   
 FORWARD_ONLY  
 Especifica que o cursor oferece suporte somente para a opção FETCH NEXT. O cursor é recuperado somente em uma direção, da primeira para a última linha. Quando FORWARD_ONLY é especificado sem as palavras-chave STATIC, KEYSET ou DYNAMIC, o cursor é implementado como DYNAMIC. Se FORWARD_ONLY ou SCROLL não forem especificados, FORWARD_ONLY será o padrão, a não ser que as palavras-chave STATIC, KEYSET ou DYNAMIC sejam especificadas. Para os cursores STATIC, KEYSET e DYNAMIC, SCROLL é o padrão.  
@@ -167,14 +167,14 @@ READ ONLY
 Impede que esse cursor faça atualizações. O cursor não pode ser referenciado em uma cláusula WHERE CURRENT OF em uma instrução UPDATE ou DELETE. Essa opção anula a funcionalidade padrão de um cursor para ser atualizado. Essa palavra-chave é diferente do READ_ONLY anterior, pois tem um espaço em vez de um sublinhado entre READ e ONLY.  
   
 `UPDATE [OF column_name[ ,... n ] ]`  
-Define colunas atualizáveis em um cursor. Se OF *column_name* [**,**...*n*] for fornecido, somente as colunas listadas permitirão modificações. Quando nenhuma lista for fornecida, todas as colunas poderão ser atualizadas, a menos que o cursor tenha sido definido como READ_ONLY.  
+Define colunas atualizáveis em um cursor. Se OF *column_name* [ **,** ...*n*] for fornecido, somente as colunas listadas permitirão modificações. Quando nenhuma lista for fornecida, todas as colunas poderão ser atualizadas, a menos que o cursor tenha sido definido como READ_ONLY.  
   
 ## <a name="remarks"></a>Remarks  
 Depois de uma variável ser declarada, ela é inicializada como NULL. Use a instrução SET para atribuir um valor que não é NULL a uma variável declarada. A instrução SET que atribui um valor à variável retorna um único valor. Ao inicializar várias variáveis, use uma instrução SET separada para cada variável local.  
   
 As variáveis podem ser usadas somente em expressões, não em nomes de objeto ou palavras-chave. Para construir instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] dinâmicas, use EXECUTE.  
   
-As regras de sintaxe para SET **@**_cursor_variable_ não incluem as palavras-chave LOCAL e GLOBAL. Quando a sintaxe SET **@**_cursor_variable_ = CURSOR... é usada, o cursor é criado como GLOBAL ou LOCAL, dependendo da configuração padrão da opção de banco de dados do cursor local.  
+As regras de sintaxe para SET **@** _cursor_variable_ não incluem as palavras-chave LOCAL e GLOBAL. Quando a sintaxe SET **@** _cursor_variable_ = CURSOR... é usada, o cursor é criado como GLOBAL ou LOCAL, dependendo da configuração padrão da opção de banco de dados do cursor local.  
   
 As variáveis de cursor sempre são locais, mesmo se fizerem referência a um cursor global. Quando uma variável de cursor faz referência a um cursor global, o cursor tem as duas referências, uma global e uma local. Para obter mais informações, veja o Exemplo C.  
   
@@ -185,7 +185,7 @@ O operador de atribuição composto pode ser usado em qualquer lugar em que haja
 Não use uma variável em uma instrução SELECT para concatenar valores (ou seja, para computar valores agregados). Resultados inesperados de consulta podem ocorrer. Porque todas as expressões na lista SELECT (incluindo atribuições) não são necessariamente executadas exatamente uma vez para cada linha de saída. Para obter mais informações, consulte o [este artigo da base de dados](https://support.microsoft.com/kb/287515).  
   
 ## <a name="permissions"></a>Permissões  
-Requer associação à função public. Todos os usuários podem usar SET **@**_local_variable_.  
+Requer associação à função public. Todos os usuários podem usar SET **@** _local_variable_.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -199,7 +199,7 @@ SELECT @myvar;
 GO  
 ```  
   
-### <a name="b-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>b. Usando uma variável local que atribuiu um valor usando a instrução SET em uma instrução SELECT  
+### <a name="b-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>B. Usando uma variável local que atribuiu um valor usando a instrução SET em uma instrução SELECT  
 O exemplo a seguir cria uma variável local chamada `@state` e usa essa variável local em uma instrução `SELECT` para localizar o nome e o sobrenome de todos os funcionários que moram no estado de `Oregon`.  
   
 ```  

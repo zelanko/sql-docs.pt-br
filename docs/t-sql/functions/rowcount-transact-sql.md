@@ -19,15 +19,15 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - counting rows
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3f3919729fc29933d348f8ef0e10d697c5e00646
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
+ms.openlocfilehash: e00d4a4c91aeda1cb53731f9e3808a895d79194c
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805702"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945390"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "54805702"
   
 -   Redefina @@ROWCOUNT como 0, mas não retorne o valor ao cliente.  
   
- Instruções que fazem uma atribuição simples sempre definem o valor de @@ROWCOUNT como 1. Nenhuma linha é enviada ao cliente. São exemplos dessas instruções: SET @*local_variable*, RETURN, READTEXT e selecione sem instruções de consulta, como SELECT GETDATE() ou SELECT **'***Generic Text***'**.  
+ Instruções que fazem uma atribuição simples sempre definem o valor de @@ROWCOUNT como 1. Nenhuma linha é enviada ao cliente. Alguns exemplos dessas instruções são: SET @*local_variable*, RETURN, READTEXT e selecione sem instruções de consulta, como SELECT GETDATE() ou SELECT **'***Generic Text***'** .  
   
  As instruções que fazem uma atribuição em uma consulta ou usam RETURN em uma consulta definem o valor de @@ROWCOUNT para o número de linhas afetadas ou lidas pela consulta, por exemplo: SELECT @*local_variable* = c1 FROM t1.  
   

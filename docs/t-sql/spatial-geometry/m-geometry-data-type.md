@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - M (geometry Data Type)
 ms.assetid: 443ae2ea-739b-41ef-96cc-ac5dfd65e10b
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: eb518b1ce37d035278c885ed0f55a9aa46c17d60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c15802d4cf60f507b02733d9b85684576c38774f
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660554"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937543"
 ---
 # <a name="m-geometry-data-type"></a>M (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47660554"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo do CLR: **SqlDouble**  
+ Tipo CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  O valor dessa propriedade será nulo se a instância de **geometry** não for um **Point**, bem como para qualquer instância de **Point** para a qual ele não foi definido.  

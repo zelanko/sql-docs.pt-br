@@ -1,7 +1,7 @@
 ---
 title: FOR XML (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/03/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -21,18 +21,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: d21557ca1157c8331ce9a5175619097b962d13f2
-ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
+ms.openlocfilehash: f0cc7033845f55a6df33a58d7b100c8a59926821
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59429322"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175102"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Uma consulta SELECT retorna resultados como um conjunto de linhas. Opcionalmente, é possível recuperar resultados formais de uma consulta SQL como XML com a especificação da cláusula FOR XML na consulta. É possível usar a cláusula FOR XML em consultas de nível superior e em subconsultas. A cláusula FOR XML de nível superior pode ser usada apenas na instrução SELECT. Em subconsultas, FOR XML pode ser usado nas instruções INSERT, UPDATE e DELETE. Ele também pode ser usado em instruções de atribuição.
+Uma consulta SELECT retorna resultados como um conjunto de linhas. Opcionalmente, é possível recuperar resultados formais de uma consulta SQL como XML com a especificação da cláusula FOR XML na consulta. A cláusula FOR XML pode ser usada em consultas de nível superior e em subconsultas. A cláusula FOR XML de nível superior pode ser usada apenas na instrução SELECT. Em subconsultas, FOR XML pode ser usado nas instruções INSERT, UPDATE e DELETE. FOR XML também pode ser usado em instruções de atribuição.
 
 Em uma cláusula FOR XML, você especifica um destes modos:
 
@@ -69,7 +69,7 @@ SELECT Cust.CustomerID,
 FROM Sales.Customer Cust 
 INNER JOIN Sales.SalesOrderHeader OrderHeader
 ON Cust.CustomerID = OrderHeader.CustomerID
-FOR XML AUTO
+FOR XML AUTO;
 ```
 
 ## <a name="the-for-xml-clause-and-server-names"></a>Cláusula FOR XML e nomes de servidores
@@ -88,7 +88,7 @@ SELECT TOP 1 LastName
 
 **Servidor local:** &nbsp; Quando `ServerName` for um servidor local, a consulta retornará o seguinte texto:
 
-```console
+```xml
 <AdventureWorks2012.Person.Person LastName="Achong" />  
 ```
 
@@ -96,7 +96,7 @@ SELECT TOP 1 LastName
 
 **Servidor de rede**: &nbsp; Quando `ServerName` for um servidor de rede, a consulta retornará o seguinte texto:
 
-```console
+```xml
 <ServerName.AdventureWorks2012.Person.Person LastName="Achong" />
 ```
 
@@ -112,16 +112,16 @@ SELECT TOP 1 LastName
 
 Agora, a consulta não ambígua retorna o seguinte texto:
 
-```console
+```xml
 <x LastName="Achong"/>
 ```
 
 ## <a name="see-also"></a>Consulte Também
 
 [Sintaxe básica da cláusula FOR XML](../../relational-databases/xml/basic-syntax-of-the-for-xml-clause.md)  
-[Usar modo RAW com FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
-[Usar modo AUTO com FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)  
-[Usar modo EXPLICIT com FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
+[Usar o modo RAW com FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
+[Usar o modo AUTO com FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)  
+[Usar o modo EXPLICIT com FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
 [Usar o modo PATH com FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
 [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)  
 [Adicionar namespaces a consultas com WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STNumPoints method
 ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: aaa1556f32bf7b04040327df178da9b7e7a9d2f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92fa22099ef88861986be34832d3bde1165d2d77
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762644"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935739"
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47762644"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo de retorno do CLR: **SqlInt32**  
+ Tipo de retorno CLR: **SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
  Esse método conta os pontos na descrição de uma instância de **geography**. Pontos duplicados são contados. No entanto, os pontos de conexão entre segmentos são contados apenas uma vez. Se a instância for uma coleção, esse método retornará o número total de pontos na coleção.  

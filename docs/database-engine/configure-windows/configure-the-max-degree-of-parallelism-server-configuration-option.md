@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5e2261b8bf307d7d735957d52006b5b0f75ae0cc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 00f2dd9628419bf517c683358bfae89d8625c702
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65570807"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936363"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Configurar a opção de configuração de servidor max degree of parallelism
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

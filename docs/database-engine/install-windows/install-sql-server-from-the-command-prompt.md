@@ -1,7 +1,7 @@
 ---
 title: Instalar o SQL Server por meio do prompt de comando | Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: bc2d05b54added3ac8ce57746eb89cbd9d1efd8d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 26c2c1c06da727a063d25520497c4b352ea3837e
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537418"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993696"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Instalar o SQL Server do prompt de comando
 
@@ -261,6 +261,7 @@ Use as diretrizes a seguir para desenvolver comandos de instalação com a sinta
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de dados de bancos de dados do usuário.<br /><br /> Valor padrão: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCINSTANTFILEINIT<br /><br /> **Opcional**|Permite a inicialização instantânea de arquivo para a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter considerações sobre segurança e desempenho, consulte [Inicialização imediata de arquivo do banco de dados](../../relational-databases/databases/database-instant-file-initialization.md).<br /><br /> Valor padrão: "False"<br /><br /> Valor opcional: "True"|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de log de bancos de dados do usuário.<br /><br /> Valor padrão: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMAXDOP=parameter <br /><br /> **Opcional** Se for omitida em instalações autônomas (silenciosas), a opção MAXDOP será alinhada com as [diretrizes de grau máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines). |Especifica o grau máximo de paralelismo, que determina quantos processadores uma única instrução pode utilizar durante a execução. Somente disponível do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante. <br /><br /> O valor padrão será alinhado com as [diretrizes de grau máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **Opcional**|Especifica o nível de acesso para o recurso FILESTREAM. Valores com suporte:<br /><br /> 0 =Desabilitar o suporte ao FILESTREAM desta instância. (Valor padrão)<br /><br /> 1=Habilitar FILESTREAM para o acesso de [!INCLUDE[tsql](../../includes/tsql-md.md)] .<br /><br /> 2=Habilitar FILESTREAM para o acesso de [!INCLUDE[tsql](../../includes/tsql-md.md)] e o acesso de fluxo de E/S de arquivo. (Inválido para cenários de cluster)<br /><br /> 3=Permitir que clientes remotos tenham acesso de streaming a dados FILESTREAM.|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **Opcional**<br /><br /> **Necessário quando FILESTREAMLEVEL for maior do que 1.**|Especifica o nome do compartilhamento do Windows no qual os dados FILESTREAM serão armazenados.|  
 |Texto completo do SQL Server|/FTSVCACCOUNT<br /><br /> **Opcional**|Especifica a conta do serviço iniciador de filtro de texto completo.<br /><br /> Esse parâmetro é ignorado no [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] ou posterior. ServiceSID é usado para ajudar a proteger a comunicação entre o SQL Server e o Daemon de Filtro de Texto Completo. Se os valores não forem fornecidos, o Serviço Iniciador de Filtro de Texto Completo será desabilitado. É necessário usar o Gerenciador de Controle do SQL Server para alterar a conta do serviço e habilitar a funcionalidade de texto completo.<br /><br /> Valor padrão: Conta Serviço Local|  

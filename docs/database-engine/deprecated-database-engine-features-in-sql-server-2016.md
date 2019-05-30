@@ -15,12 +15,12 @@ ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7db5c3542186c81d33678b9e458495232e9622d5
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 3db06df1676a82e65375483c914671384dd2d3c1
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570819"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981198"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,11 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 |Categoria|Recurso substituído|Substituição|Nome do recurso|ID do Recurso|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|Backup e restauração|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continua sendo uma opção preterida. As opções BACKUP { DATABASE &#124; LOG } WITH PASSWORD e BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD serão descontinuadas.|Nenhum.|BACKUP DATABASE ou LOG WITH PASSWORD<br /><br /> BACKUP DATABASE ou LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
+|Backup e restauração|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continua sendo uma opção preterida. As opções BACKUP { DATABASE &#124; LOG } WITH PASSWORD e BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD serão descontinuadas.|None|BACKUP DATABASE ou LOG WITH PASSWORD<br /><br /> BACKUP DATABASE ou LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
 |Níveis de compatibilidade|Atualização da versão 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Quando uma versão [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fica sem [suporte](https://aka.ms/sqllifecycle), o nível de compatibilidade do banco de dados associado será marcado como preterido. No entanto, continuaremos a dar suporte a aplicativos certificados em qualquer nível de compatibilidade do banco de dados com suporte, contanto que possível, para facilitar as atualizações. Para obter mais informações sobre níveis de compatibilidade, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Nível de compatibilidade do banco de dados 100|108|  
 |Objetos de banco de dados|Capacidade de retornar conjuntos de resultados de gatilhos|None|Retornando resultados de gatilho|12|  
 |Criptografia|A criptografia que usa o RC4 ou RC4_128 foi substituída e está programada para ser removida na próxima versão. A descriptografia do RC4 e RC4_128 não será substituída.|Usar outro algoritmo de criptografia, como AES.|Algoritmo de criptografia substituído|253|  
+|Algoritmos de hash|O uso de MD2, MD4, MD5, SHA e SHA1 foi preterido.|Use SHA2_256 ou SHA2_512. Os algoritmos mais antigos continuarão funcionando, mas acionarão um evento de reprovação.|Algoritmo de hash preterido|None|  
 |Servidores remotos|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Substitua servidores remotos usando servidores vinculados. sp_addserver só pode ser usado com a opção local.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
 |Servidores remotos|\@\@remserver|Substitua servidores remotos usando servidores vinculados.|None|None|  
 |Servidores remotos|SET REMOTE_PROC_TRANSACTIONS|Substitua servidores remotos usando servidores vinculados.|SET REMOTE_PROC_TRANSACTIONS|110|  
@@ -75,8 +76,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Tipos de dados|sp_addtype<br /><br /> sp_droptype|CREATE TYPE<br /><br /> DROP TYPE|sp_addtype<br /><br /> sp_droptype|62<br /><br /> 63|  
 |Tipos de dados|Sintaxe de**timestamp** para o tipo de dados **rowversion** |Sintaxe do tipo de dados**rowversion** |timestamp|158|  
 |Tipos de dados|Capacidade para inserir valores nulos em colunas **timestamp** .|Em vez disso, use um DEFAULT.|INSERT NULL em colunas TIMESTAMP|179|  
-|Tipos de dados|Opção de tabela 'text in row'|Use os tipos de dados **varchar(max)**, **nvarchar(max)** e **varbinary(max)**. Para obter mais informações, veja [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Opção de tabela 'text in row'|9|  
-|Tipos de dados|Tipos de dados:<br /><br /> **texto**<br /><br /> **ntext**<br /><br /> **imagem**|Use os tipos de dados **varchar(max)**, **nvarchar(max)** e **varbinary(max)** .|Tipos de dados: **text** **ntext** ou **image**|4|  
+|Tipos de dados|Opção de tabela 'text in row'|Use os tipos de dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** . Para obter mais informações, veja [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Opção de tabela 'text in row'|9|  
+|Tipos de dados|Tipos de dados:<br /><br /> **texto**<br /><br /> **ntext**<br /><br /> **imagem**|Use os tipos de dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** .|Tipos de dados: **text** **ntext** ou **image**|4|  
 |Gerenciamento de banco de dados|sp_attach_db<br /><br /> sp_attach_single_file_db|Instrução CREATE DATABASE com a opção FOR ATTACH. Para recriar vários arquivos de log quando um ou mais tiver um novo local, use a opção FOR ATTACH_REBUILD_LOG.|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |Objetos de banco de dados|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|Palavra-chave DEFAULT em CREATE TABLE e ALTER TABLE|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |Objetos de banco de dados|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|Palavra-chave CHECK em CREATE TABLE e ALTER TABLE|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
@@ -96,7 +97,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Programação de procedimento armazenado estendido|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|Em vez disso, use a Integração CLR.|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|94<br /><br /> 95<br /><br /> 96|  
 |Procedimentos armazenados estendidos|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|Use CREATE LOGIN<br /><br /> Use o argumento DROP LOGIN IsIntegratedSecurityOnly de SERVERPROPERTY|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|44<br /><br /> 45<br /><br /> 59|  
 |Funções|fn_get_sql|sys.dm_exec_sql_text|fn_get_sql|151|  
-|Algoritmos de hash|Os algoritmos MD2, MD4, MD5, SHA e SHA1 não estão disponíveis no nível de compatibilidade 130.|Use SHA2_256 ou SHA2_512.|Algoritmo de hash preterido||  
 |Alta disponibilidade|espelhamento de banco de dados|[!INCLUDE[ssHADR](../includes/sshadr-md.md)]<br /><br /> Se sua edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não der suporte a [!INCLUDE[ssHADR](../includes/sshadr-md.md)], use envio de logs.|DATABASE_MIRRORING|267|  
 |Opções de índice|sp_indexoption|ALTER INDEX|sp_indexoption|78|  
 |Opções de índice|Sintaxe de CREATE TABLE, ALTER TABLE ou CREATE INDEX sem parênteses delimitando as opções.|Reescreva a instrução para usar a sintaxe atual.|INDEX_OPTION|33|  
@@ -170,7 +170,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
   
 > [!NOTE]  
-> O parâmetro **OUTPUT** de cookie para **sp_setapprole** está documentado atualmente como **varbinary(8000)** , que tem o tamanho máximo correto. No entanto, a implementação atual retorna **varbinary(50)**. Se os desenvolvedores alocaram **varbinary(50)** , o aplicativo poderá exigir alterações se o cookie retornar aumentos de tamanho em uma versão futura. Embora não seja um problema de substituição, isto é mencionado neste tópico porque os ajustes de aplicativo são semelhantes. Para obter mais informações, veja [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
+> O parâmetro **OUTPUT** de cookie para **sp_setapprole** está documentado atualmente como **varbinary(8000)** , que tem o tamanho máximo correto. No entanto, a implementação atual retorna **varbinary(50)** . Se os desenvolvedores alocaram **varbinary(50)** , o aplicativo poderá exigir alterações se o cookie retornar aumentos de tamanho em uma versão futura. Embora não seja um problema de substituição, isto é mencionado neste tópico porque os ajustes de aplicativo são semelhantes. Para obter mais informações, veja [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)     

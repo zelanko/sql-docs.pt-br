@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - ToString (geometry Data Type)
 ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: eeced3c31c813eff21d7e9189e87fd51a8b2691d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a73ce5417b61ced97ee3aad555d56257c99ad763
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629295"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935564"
 ---
 # <a name="tostring-geometry-data-type"></a>ToString (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Retorna a representação WKT (Well-Known Text) do OGC (Open Geospatial Consorti
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(max)**  
   
- Tipo de retorno do CLR: **SqlString**  
+ Tipo de retorno CLR: **SqlString**  
   
 ## <a name="remarks"></a>Remarks  
  Esse método retornará a cadeia de caracteres "Nulo" quando chamado em instâncias nulas.  

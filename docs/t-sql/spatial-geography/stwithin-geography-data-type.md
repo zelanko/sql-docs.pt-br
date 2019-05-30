@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - STWithin method (geography)
 ms.assetid: 6fc745cc-7976-418a-a89a-c267e64ab3a2
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 93715075a2313a53c6b7221deb6a10758e35cf8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b689378475572589558dba1f595c9c3888dc62c
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712454"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939139"
 ---
 # <a name="stwithin-geography-data-type"></a>STWithin (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47712454"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno do CLR: **SqlBoolean**  
+ Tipo de retorno CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  Esse método sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geography** não forem correspondentes.  

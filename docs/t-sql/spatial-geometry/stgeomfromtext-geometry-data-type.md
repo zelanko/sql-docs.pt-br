@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STGeomFromText (geometry Data Type)
 ms.assetid: 20cace39-02e5-46c1-a9a5-841d04d0da16
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 1a3e5ac533e7f207b9f7d1079a37baa3ef351104
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 3fe31cbf2e68d291edefcfbec013ecf9d73c99af
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979225"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938888"
 ---
 # <a name="stgeomfromtext-geometry-data-type"></a>STGeomFromText (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STGeomFromText ( 'geometry_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *geometry_tagged_text*  
- É a representação WKT da instância de **geometry** que você deseja retornar. *geometry_tagged_text* é uma expressão **nvarchar(max)**.  
+ É a representação WKT da instância de **geometry** que você deseja retornar. *geometry_tagged_text* é uma expressão **nvarchar(max)** .  
   
  *SRID*  
  É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geometry** que você deseja retornar.  

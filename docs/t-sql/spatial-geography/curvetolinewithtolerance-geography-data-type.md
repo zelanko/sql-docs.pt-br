@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CurveToLineWithTolerance method (geography)
 ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 34cb0cbe98bd0afd9eb1e3183839984799df7718
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: b8fb77ad04ee14db19ffde93a6c92cca938115a5
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154831"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937886"
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (tipo de dados de geografia)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ SET @g = geography::Parse('CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122
 SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();
 ```  
   
-### <a name="b-using-the-method-on-a-multilinestring-instance-containing-one-linestring"></a>b. Usando o método em uma instância de MultiLineString que contém uma LineString  
+### <a name="b-using-the-method-on-a-multilinestring-instance-containing-one-linestring"></a>B. Usando o método em uma instância de MultiLineString que contém uma LineString  
 O exemplo a seguir mostra o que é retornado de uma instância de `MultiLineString` que só contém uma instância de `LineString`:  
   
 ```

@@ -1,7 +1,7 @@
 ---
 title: Permissões GRANT do banco de dados (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27e9827672947572d05bfea4ed09c1712e7b079d
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: c6db8e7818cbcbba732828f0efd5177b8ab84870
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828396"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993480"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>Permissões de banco de dados GRANT (Transact-SQL)
 
@@ -104,7 +104,7 @@ Especifica um usuário do banco de dados mapeado para uma chave assimétrica.
 ## <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
-> Uma combinação das permissões ALTER e REFERENCE em alguns casos pode permitir ao usuário autorizado exibir dados ou executar funções não autorizadas. Por exemplo: um usuário com permissão ALTER em uma tabela e permissão REFERENCE em uma função pode criar uma coluna computada em uma função e fazer com que seja executada. Nesse caso, o usuário também precisará da permissão SELECT na coluna computada.
+> Uma combinação das permissões ALTER e REFERENCE em alguns casos pode permitir ao usuário autorizado exibir dados ou executar funções não autorizadas. Por exemplo: Um usuário com a permissão ALTER em uma tabela e a permissão REFERENCE em uma função pode criar uma coluna computada em uma função e fazer com que ela seja executada. Nesse caso, o usuário também precisará da permissão SELECT na coluna computada.
 
 Um banco de dados é um protegível contido no servidor pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser concedidas em um banco de dados são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.
 
@@ -175,6 +175,7 @@ Um banco de dados é um protegível contido no servidor pai na hierarquia de per
 |Delete (excluir)|CONTROL|CONTROL SERVER|
 |Execute|CONTROL|CONTROL SERVER|
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].|CONTROL|CONTROL SERVER|
+|EXECUTE EXTERNAL SCRIPT <br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)].|EXECUTE ANY EXTERNAL SCRIPT|CONTROL SERVER|
 |INSERT|CONTROL|CONTROL SERVER|
 |KILL DATABASE CONNECTION<br />**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|ALTER ANY CONNECTION|
 |REFERENCES|CONTROL|CONTROL SERVER|
@@ -222,7 +223,7 @@ GRANT CREATE TABLE TO MelanieK;
 GO
 ```
 
-### <a name="b-granting-showplan-permission-to-an-application-role"></a>b. Concedendo a permissão SHOWPLAN a uma função de aplicativo
+### <a name="b-granting-showplan-permission-to-an-application-role"></a>B. Concedendo a permissão SHOWPLAN a uma função de aplicativo
 
  O exemplo a seguir concede a permissão `SHOWPLAN` no banco de dados `AdventureWorks2012` à função de aplicativo `AuditMonitor`.
 

@@ -20,16 +20,16 @@ helpviewer_keywords:
 - instances of SQL Server, property information
 - server properties [SQL Server]
 ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 397922e30eee608cc3fc32a841d204bab3d45e2f
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 2af7316e8c2530c627e93f07a5cbd05ba9bd55ab
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421343"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945278"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

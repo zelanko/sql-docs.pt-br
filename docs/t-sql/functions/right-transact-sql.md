@@ -17,16 +17,16 @@ helpviewer_keywords:
 - RIGHT function
 - character strings [SQL Server], RIGHT
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 071cca59b0c0decd9dddceb26c7c1bf8ee944489
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 045f9af1cd88c83f4591e4c02f476712eebf234e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670234"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944719"
 ---
 # <a name="right-transact-sql"></a>RIGHT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ RIGHT ( character_expression , integer_expression )
  É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) de dados binários ou de caracteres. *character_expression* pode ser uma constante, variável ou coluna. *character_expression* pode ser de qualquer tipo de dados, exceto **text** ou **ntext**, que pode ser convertido implicitamente em **varchar** ou **nvarchar** . Caso contrário, use a função [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) para converter explicitamente *character_expression*.  
   
  *integer_expression*  
- É um inteiro positivo que especifica quantos caracteres da *character_expression* serão retornados. Se *integer_expression* for negativa, um erro será retornado. Se *integer_expression* for do tipo **bigint** e contiver um valor grande, *character_expression* deverá ser de um tipo de dados grandes, como **varchar(max)**.  
+ É um inteiro positivo que especifica quantos caracteres da *character_expression* serão retornados. Se *integer_expression* for negativa, um erro será retornado. Se *integer_expression* for do tipo **bigint** e contiver um valor grande, *character_expression* deverá ser de um tipo de dados grandes, como **varchar(max)** .  
   
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna **varchar** quando *character_expression* é um tipo de dados de caractere não Unicode.  
@@ -54,7 +54,7 @@ RIGHT ( character_expression , integer_expression )
  Retorna **nvarchar** quando *character_expression* é um tipo de dados de caractere Unicode.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
- Ao usar agrupamentos SC, a função RIGHT conta cada par substituto UTF-16 como um caractere único. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Ao usar ordenações SC, a função RIGHT conta cada par substituto UTF-16 como um caractere único. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Exemplos  
   

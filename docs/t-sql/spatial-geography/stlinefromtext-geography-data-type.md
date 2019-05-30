@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STLineFromText method
 ms.assetid: e0c05bde-077d-4ce2-b4ec-8861db9b996d
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 2cf74f1bcb275b932965812d90222b505f6abaa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a35f92c3565ea63c115a4d1ecfd0f09c19fe86a2
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642104"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936687"
 ---
 # <a name="stlinefromtext-geography-data-type"></a>STLineFromText (tipo de dados de geografia)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *linestring_tagged_text*  
- É a representação WKT da instância de **geographyLineString** que você deseja retornar. *linestring_tagged_text* é uma expressão **nvarchar(max)**.  
+ É a representação WKT da instância de **geographyLineString** que você deseja retornar. *linestring_tagged_text* é uma expressão **nvarchar(max)** .  
   
  *SRID*  
  É uma expressão **int** que representa o SRID (ID de referência espacial) da instância de **geographyLineString** que você deseja retornar.  
@@ -47,9 +47,9 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno do CLR: **SqlGeography**  
+ Tipo de retorno CLR: **SqlGeography**  
   
- Tipo do OGC: **LineString**  
+ Tipo OGC: **LineString**  
   
 ## <a name="remarks"></a>Remarks  
  Esse método gera uma **FormatException** se a entrada não está bem formatada.  

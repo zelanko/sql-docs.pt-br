@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STY (geometry Data Type)
 ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: b4c8b0a123f2c4151a55813f0fd1025421e3eda3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6744060b9ef3a6500c68d772645f12ecf8f2909
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755290"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935593"
 ---
 # <a name="sty-geometry-data-type"></a>STY (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ A propriedade de coordenada Y de uma instância de **Point**.
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo do CLR: **SqlDouble**  
+ Tipo CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  O valor dessa propriedade será nulo se a instância de **geometry** for um ponto. Esta propriedade é somente leitura.  

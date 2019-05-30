@@ -22,16 +22,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7cbf93440d9b164adef0f87c5af88da02d0f9b50
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.openlocfilehash: 3a6e2d51b9a2926f6d542ce3da5fc1c916881918
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531091"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944810"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -192,19 +192,19 @@ Começando pelo [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], o `error
   
  Se as linhas reais do arquivo de dados não estiverem classificadas na ordem especificada, ou se a dica UNIQUE tiver sido especificada e houver chaves duplicadas, será retornado um erro.  
   
- Aliases de coluna são necessários quando se usa ORDER. A lista de aliases de coluna deve referenciar a tabela derivada que está sendo acessada pela cláusula BULK. Os nomes de coluna especificados na cláusula ORDER se referem a essa lista de aliases de coluna. Tipos de valor grande (**varchar(max)**, **nvarchar(max)**, **varbinary(max)** e **xml**) e colunas de tipos LOB (objeto grande) (**text**, **ntext** e **image**) não podem ser especificados.  
+ Aliases de coluna são necessários quando se usa ORDER. A lista de aliases de coluna deve referenciar a tabela derivada que está sendo acessada pela cláusula BULK. Os nomes de coluna especificados na cláusula ORDER se referem a essa lista de aliases de coluna. Tipos de valor grande (**varchar(max)** , **nvarchar(max)** , **varbinary(max)** e **xml**) e colunas de tipos LOB (objeto grande) (**text**, **ntext** e **image**) não podem ser especificados.  
   
  SINGLE_BLOB  
- Retorna o conteúdo de *data_file* como um conjunto de linhas de linha e coluna únicas do tipo **varbinary(max)**.  
+ Retorna o conteúdo de *data_file* como um conjunto de linhas de linha e coluna únicas do tipo **varbinary(max)** .  
   
 > [!IMPORTANT]  
 > Recomendamos importar apenas os dados XML que usam a opção SINGLE_BLOB, em vez de SINGLE_CLOB e SINGLE_NCLOB, porque só SINGLE_BLOB oferece suporte a todas as conversões de codificação do Windows.  
   
  SINGLE_CLOB  
- A leitura de *data_file* como ASCII retorna o conteúdo como um conjunto de linhas de linha e coluna únicas do tipo **varchar(max)**, usando a ordenação do banco de dados atual.  
+ A leitura de *data_file* como ASCII retorna o conteúdo como um conjunto de linhas de linha e coluna únicas do tipo **varchar(max)** , usando a ordenação do banco de dados atual.  
   
  SINGLE_NCLOB  
- A leitura de *data_file* como UNICODE retorna o conteúdo como um conjunto de linhas de linha e coluna únicas do tipo **nvarchar(max)**, usando a ordenação do banco de dados atual.  
+ A leitura de *data_file* como UNICODE retorna o conteúdo como um conjunto de linhas de linha e coluna únicas do tipo **nvarchar(max)** , usando a ordenação do banco de dados atual.  
 
 ### <a name="input-file-format-options"></a>Opções de formato de arquivo de entrada
   
@@ -232,7 +232,7 @@ Especifica um caractere que será usado como o caractere de aspas no arquivo CSV
   
  No acesso a fontes de dados OLE DB remotas, a identidade de logon das conexões confiáveis não são delegadas automaticamente do servidor no qual o cliente é conectado ao servidor que está sendo consultado. A delegação de autenticação deve ser configurada.  
   
- Serão necessários os nomes de catálogo e de esquema, se o provedor OLE DB oferecer suporte a vários catálogos e esquemas na fonte de dados especificada. Os valores de _catalog_ e )_schema_ poderão ser omitidos quando o provedor OLE DB não for compatível com eles. Se o provedor for compatível apenas com nomes de esquema, um nome de duas partes no formato _schema_**.**_object_ deverá ser especificado. Se o provedor for compatível apenas com nomes de catálogo, um nome de três partes no formato _catalog_**.**_schema_**.**_object_ deverá ser especificado. Devem ser especificados nomes de três partes para consultas de passagem que usam o Provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Para obter mais informações, consulte [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ Serão necessários os nomes de catálogo e de esquema, se o provedor OLE DB oferecer suporte a vários catálogos e esquemas na fonte de dados especificada. Os valores de _catalog_ e )_schema_ poderão ser omitidos quando o provedor OLE DB não for compatível com eles. Se o provedor for compatível apenas com nomes de esquema, um nome de duas partes no formato _schema_ **.** _object_ deverá ser especificado. Se o provedor for compatível apenas com nomes de catálogo, um nome de três partes no formato _catalog_ **.** _schema_ **.** _object_ deverá ser especificado. Devem ser especificados nomes de três partes para consultas de passagem que usam o Provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Para obter mais informações, consulte [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  `OPENROWSET` não aceita variáveis para seus argumentos.  
   
@@ -265,7 +265,7 @@ Especifica um caractere que será usado como o caractere de aspas no arquivo CSV
 > Ao usar `OPENROWSET`, é importante entender como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuida da representação. Para obter informações sobre considerações sobre segurança, consulte [Importação em massa de dados usando BULK INSERT ou OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="bulk-importing-sqlchar-sqlnchar-or-sqlbinary-data"></a>Importação em massa de dados SQLCHAR, SQLNCHAR ou SQLBINARY  
- OPENROWSET(BULK...) pressupõe que, se não especificado, o comprimento máximo de dados SQLCHAR, SQLNCHAR ou SQLBINARY não excede 8000 bytes. Se os dados importados estiverem em um campo de dados LOB que contém objetos **varchar(max)**, **nvarchar(max)** ou **varbinary(max)** que excedem 8.000 bytes, será necessário usar um arquivo de formato XML que define o tamanho máximo para o campo de dados. Para especificar o comprimento máximo, edite o arquivo de formato e declare o atributo MAX_LENGTH.  
+ OPENROWSET(BULK...) pressupõe que, se não especificado, o comprimento máximo de dados SQLCHAR, SQLNCHAR ou SQLBINARY não excede 8000 bytes. Se os dados importados estiverem em um campo de dados LOB que contém objetos **varchar(max)** , **nvarchar(max)** ou **varbinary(max)** que excedem 8.000 bytes, será necessário usar um arquivo de formato XML que define o tamanho máximo para o campo de dados. Para especificar o comprimento máximo, edite o arquivo de formato e declare o atributo MAX_LENGTH.  
   
 > [!NOTE]  
 > Um arquivo de formato gerado automaticamente não especifica o comprimento ou o comprimento máximo para um campo de LOB. No entanto, você pode editar um arquivo de formato e especificar o comprimento ou o comprimento máximo manualmente.  
@@ -295,7 +295,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
       ORDER BY GroupName, Name') AS a;  
 ```  
   
-### <a name="b-using-the-microsoft-ole-db-provider-for-jet"></a>b. Usando o Microsoft OLE DB Provider for Jet  
+### <a name="b-using-the-microsoft-ole-db-provider-for-jet"></a>B. Usando o Microsoft OLE DB Provider for Jet  
  O exemplo a seguir acessa a tabela `Customers` no banco de dados [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access `Northwind` via [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet.  
   
 > [!NOTE]  

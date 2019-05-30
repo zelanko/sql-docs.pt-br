@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STSrid method
 ms.assetid: 6b04f5a7-2e69-4d34-901e-b61ba6ca9c14
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 20c59a05c19d55406e27043602d979b2db681729
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96a8577d621b9cc8b22e0f3b334b1d9831fdcad7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712134"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939156"
 ---
 # <a name="stsrid-geography-data-type"></a>STSrid (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47712134"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo do CLR: **SqlInt32**  
+ Tipo CLR: **SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
  Essa propriedade pode ser modificada.  

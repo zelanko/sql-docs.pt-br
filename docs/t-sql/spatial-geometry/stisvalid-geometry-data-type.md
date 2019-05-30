@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STIsValid (geometry Data Type)
 ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: b3d22ecff8c4cc4598f6c991a3c695c5d098bff6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd15742428c99db099878a800c8d2bd178fd5411
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700904"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938780"
 ---
 # <a name="stisvalid-geometry-data-type"></a>STIsValid (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Retornará true se uma instância de **geometry** estiver bem formada, com base 
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno do CLR: **SqlBoolean**  
+ Tipo de retorno CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  O tipo do OGC de uma instância de **geometry** pode ser determinado com a invocação de [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md).  

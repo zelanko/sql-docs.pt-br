@@ -1,7 +1,7 @@
 ---
 title: Visão geral de eventos estendidos - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 12/17/2018
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df39a9a3992fb424bf0f50b2d60548ce0e55ade7
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 01ec6f0f6a48fd0d19b6bda98b42afe57abd0a07
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477661"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175671"
 ---
 # <a name="extended-events-overview"></a>Visão geral de eventos estendidos
 
@@ -111,5 +111,4 @@ Usando o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou [!INCLUDE[
  [Monitorar aplicativos da camada de dados](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
  [Exibições de gerenciamento dinâmico de eventos estendidos](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [Exibições de catálogo de eventos estendidos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
-  
-  
+ [XELite: Biblioteca multiplataforma para ler XEvents de arquivos XEL ou fluxos ao vivo do SQL](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), lançado em maio de 2019.  

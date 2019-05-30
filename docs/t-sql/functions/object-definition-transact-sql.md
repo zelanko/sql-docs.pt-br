@@ -18,15 +18,15 @@ helpviewer_keywords:
 - displaying source text
 - OBJECT_DEFINITION function
 ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5cf2cd082156f5f4a889a2912efcceaa9d5f7692
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a681af6603cdb7c69f91222e03b8a5c326ea2ffe
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640058"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944058"
 ---
 # <a name="objectdefinition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ OBJECT_DEFINITION ( object_id )
  Um usuário só pode exibir metadados de protegíveis de sua propriedade ou para os quais recebeu permissão. Isso significa que as funções internas emissoras de metadados, como OBJECT_DEFINITION, podem retornar NULL se o usuário não tiver permissão no objeto. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="remarks"></a>Remarks  
- O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] supõe que *object_id* esteja no contexto do banco de dados atual. O agrupamento da definição de objeto sempre corresponde ao do contexto de banco de dados que está fazendo a chamada.  
+ O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] supõe que *object_id* esteja no contexto do banco de dados atual. A ordenação da definição de objeto sempre corresponde ao do contexto de banco de dados que está fazendo a chamada.  
   
  OBJECT_DEFINITION se aplica aos tipos de objeto seguintes:  
   
@@ -80,7 +80,7 @@ OBJECT_DEFINITION ( object_id )
 -   V = Exibição  
   
 ## <a name="permissions"></a>Permissões  
- Definições de objeto de sistema são publicamente visíveis. A definição de objetos de usuário é visível ao proprietário do objeto e aos que possuírem qualquer uma das seguintes permissões: ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Estas permissões são mantidas implicitamente por membros das funções fixas de banco de dados **db_owner**, **db_ddladmin**e **db_securityadmin** .  
+ Definições de objeto de sistema são publicamente visíveis. A definição de objetos de usuário é visível ao proprietário do objeto e às entidades autorizadas que têm uma das seguintes permissões: ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Estas permissões são mantidas implicitamente por membros das funções fixas de banco de dados **db_owner**, **db_ddladmin**e **db_securityadmin** .  
   
 ## <a name="examples"></a>Exemplos  
   

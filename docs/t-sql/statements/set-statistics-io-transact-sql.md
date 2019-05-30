@@ -26,12 +26,12 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f734607cffa14f9714a7c165add067600cfa3447
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: f530f609c4c5ebc83d74d2e8ea376efe978dea89
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760119"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983083"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,15 +61,15 @@ SET STATISTICS IO { ON | OFF }
 |**leituras lógicas**|Número de páginas lidas do cache de dados.|  
 |**physical reads**|Número de páginas lidas do disco.|  
 |**leituras antecipadas**|Número de páginas colocadas no cache para a consulta.|  
-|**leituras lógicas lob**|Número de páginas **text**, **ntext**, **image** ou de tipo de valor grande (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**) lidas do cache de dados.|  
-|**leituras físicas lob**|Número de páginas de tipo **text**, **ntext**, **image** ou de valor grande lidas do disco.|  
-|**leituras antecipadas lob**|Número de páginas de tipo **text**, **ntext**, **image** ou de valor grande colocadas no cache para a consulta.|  
-  
- A configuração de SET STATISTICS IO é definida no momento da execução e não no momento da análise.  
-  
+|**leituras lógicas lob**|Número de páginas lidas do cache de dados. Inclui **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** ou páginas de índice columnstore.|  
+|**leituras físicas lob**|Número de páginas lidas do disco. Inclui **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** ou páginas de índice columnstore.|  
+|**leituras antecipadas lob**|Número de páginas colocadas no cache para a consulta. Inclui **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** ou páginas de índice columnstore.|
+
+ A configuração de SET STATISTICS IO é definida no momento da execução e não no momento da análise.
+
 > [!NOTE]  
->  Quando instruções Transact-SQL recuperam colunas LOB, algumas operações de recuperação de LOB podem requerer cruzamento de árvore de LOB várias vezes. Isso pode fazer com que SET STATISTICS IO informe um número maior de leituras lógicas do que o esperado.  
-  
+> Quando instruções Transact-SQL recuperam colunas LOB, algumas operações de recuperação de LOB podem requerer cruzamento de árvore de LOB várias vezes. Isso pode fazer com que SET STATISTICS IO informe um número maior de leituras lógicas do que o esperado.
+
 ## <a name="permissions"></a>Permissões  
  Para usar SET STATISTICS IO, os usuários devem ter as permissões apropriadas para executar a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. A permissão SHOWPLAN não é exigida.  
   

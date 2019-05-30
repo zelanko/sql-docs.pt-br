@@ -20,15 +20,15 @@ helpviewer_keywords:
 - testing permissions
 - HAS_PERMS_BY_NAME function
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0227ad3719b7b3ca02fa8595ed8cccf6ff8705f6
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e1bc60e0d3f171e57eeb202c022378b4b7f7bde1
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169206"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947961"
 ---
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  É o nome do protegível. Se o protegível for o próprio servidor, esse valor deverá ser definido como NULL. *securable* é uma expressão escalar do tipo **sysname**. Não há nenhum padrão.  
   
  *securable_class*  
- É o nome da classe do protegível na qual a permissão é testada. *securable_class* é uma expressão escalar do tipo **nvarchar(60)**.  
+ É o nome da classe do protegível na qual a permissão é testada. *securable_class* é uma expressão escalar do tipo **nvarchar(60)** .  
   
- No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], o argumento securable_class deve ser definido com um dos seguintes valores: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** ou **USER**.  
+ No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], o argumento securable_class precisa ser definido com uma das seguintes opções: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** ou **USER**.  
   
  *permission*  
  Uma expressão escalar não nula do tipo **sysname** que representa o nome da permissão a ser verificado. Não há nenhum padrão. O nome da permissão ANY é um curinga.  
@@ -61,7 +61,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Uma expressão escalar opcional do tipo **sysname** que representa o nome da subentidade protegível na qual a permissão é testada. O padrão é NULO.  
   
 > [!NOTE]  
->  Nas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], os subprotegíveis não podem usar colchetes no formato **'[**_sub name_**]'**. Em vez disso, use **'**_sub name_**'**.  
+>  Nas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], os subprotegíveis não podem usar colchetes no formato **'[** _sub name_ **]'** . Em vez disso, use **'** _sub name_ **'** .  
   
  *sub-securable_class*  
  Uma expressão escalar opcional do tipo **nvarchar(60)** que representa a classe da subentidade protegível na qual a permissão é testada. O padrão é NULO.  
@@ -96,9 +96,9 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
  As ordenações a seguir são usadas:  
   
--   Ordenação do banco de dados atual: protegíveis em nível de banco de dados, incluindo protegíveis não contidos por um esquema, protegíveis com escopo no esquema de uma ou duas partes; banco de dados de destino quando um nome de três partes é usado.  
+-   Ordenação do banco de dados atual: Os protegíveis no nível de banco de dados que incluem os protegíveis não contidos por um esquema, os protegíveis no escopo do esquema de uma ou duas partes e o banco de dados de destino quando um nome de três partes é usado.  
   
--   Ordenação do banco de dadosmaster: itens protegíveis do nível de servidor.  
+-   ordenação do banco de dados mestre: Protegíveis em nível de servidor.  
   
 -   Não há suporte para ‘ANY’ em verificações em nível de coluna. Você deve especificar a permissão apropriada.  
   

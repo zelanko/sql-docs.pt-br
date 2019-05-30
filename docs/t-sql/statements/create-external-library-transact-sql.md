@@ -1,7 +1,7 @@
 ---
-title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
+title: CREATE EXTERNAL LIBRARY (Transact-SQL) – SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d4c78e14dbf3c594541a1166264cb911a59467d
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 6bfaeb323e940ca2d289ddae58aaf679bed9fffa
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582925"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993713"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -33,7 +33,7 @@ ms.locfileid: "59582925"
 Carrega os arquivos de pacotes do R, Python ou Java em um banco de dados do caminho de arquivo ou fluxo de bytes especificado. Essa instrução funciona como um mecanismo genérico para que o administrador de banco de dados carregue os artefatos necessários para novos tempos de execução de idiomas externos e plataformas de sistema operacional compatíveis com o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]
-> No SQL Server 2017, há compatibilidade apenas com a linguagem R e a plataforma Windows. Há suporte para R, Python e Java nas plataformas Windows e Linux no SQL Server 2019 CTP 2.4.
+> No SQL Server 2017, há compatibilidade apenas com a linguagem R e a plataforma Windows. Há suporte para as linguagens R, Python e externas nas plataformas Windows e Linux no SQL Server 2019 CTP 3.0.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>Sintaxe do SQL Server 2019
@@ -53,9 +53,7 @@ WITH ( LANGUAGE = <language> )
 
 <client_library_specifier> :: = 
 {
-      '[\\computer_name\]share_name\[path\]manifest_file_name'  
-    | '[local_path\]manifest_file_name'  
-    | '<relative_path_in_external_data_source>'  
+    '[file_path\]manifest_file_name'  
 } 
 
 <library_bits> :: =  
@@ -74,7 +72,7 @@ WITH ( LANGUAGE = <language> )
 {
       'R'
     | 'Python'
-    | 'Java'
+    | <external_language>
 }
 
 ```
@@ -97,9 +95,7 @@ WITH ( LANGUAGE = 'R' )
 
 <client_library_specifier> :: = 
 {
-      '[\\computer_name\]share_name\[path\]manifest_file_name'  
-    | '[local_path\]manifest_file_name'  
-    | '<relative_path_in_external_data_source>'  
+    '[file_path\]manifest_file_name'
 } 
 
 <library_bits> :: =  
@@ -156,14 +152,15 @@ No SQL Server 2019, o Windows e o Linux são as plataformas compatíveis.
 
 **language**
 
-Especifica a linguagem do pacote. O valor pode ser `R`, `Python` ou `Java`.
+Especifica a linguagem do pacote. O valor pode ser `R`, `Python` ou o nome de uma [linguagem externa criada](create-external-language-transact-sql.md).
 ::: moniker-end
 
 ## <a name="remarks"></a>Remarks
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
-Para a linguagem R, ao usar um arquivo, os pacotes precisam ser preparados no formato de arquivos mortos compactados com a extensão .ZIP para o Windows. No SQL Server 2017, apenas a plataforma Windows é compatível. 
+Para a linguagem R, ao usar um arquivo, os pacotes precisam ser preparados no formato de arquivos mortos compactados com a extensão .ZIP para o Windows. No SQL Server 2017, apenas a plataforma Windows é compatível.
 ::: moniker-end
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Para a linguagem R, ao usar um arquivo, os pacotes precisam ser preparados no formato de arquivos mortos compactados com a extensão .zip.  
 
@@ -178,7 +175,17 @@ As bibliotecas carregadas na instância podem ser públicas ou particulares. Se 
 
 Requer a permissão `CREATE EXTERNAL LIBRARY`. Por padrão, todos os usuários que tenham o **dbo** ou que sejam membros da função **db_owner** têm permissões para criar uma biblioteca externa. Para todos os outros usuários, você deve conceder permissão explicitamente com uma instrução [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql), especificando CREATE EXTERNAL LIBRARY como privilégio.
 
-Para modificar uma biblioteca, é necessário ter a permissão separada, `ALTER ANY EXTERNAL LIBRARY`.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+No SQL Server 2019, além da permissão 'CREATE EXTERNAL LIBRARY', o usuário também precisa referenciar a permissão em uma linguagem externa para criar bibliotecas externas para essa linguagem externa.
+
+```sql
+GRANT REFERENCES ON EXTERNAL LANGUAGE::Java to user
+GRANT CREATE EXTERNAL LIBRARY to user
+```
+
+::: moniker-end
+
+Para modificar uma biblioteca, é necessário ter a permissão separada `ALTER ANY EXTERNAL LIBRARY`.
 
 Para criar uma biblioteca externa usando um caminho de arquivo, o usuário precisa ter um logon autenticado pelo Windows ou ser membro da função de servidor fixa sysadmin.
 
@@ -267,7 +274,7 @@ CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE =
 ```
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-Para a linguagem Python no SQL Server 2019, o exemplo também funciona, substituindo **'R'** com **'Python'**.
+Para a linguagem Python no SQL Server 2019, o exemplo também funciona, substituindo **'R'** com **'Python'** .
 ::: moniker-end
 
 > [!NOTE]

@@ -21,12 +21,12 @@ ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4baff479bdd7145cc2fd65f07fd2c476a20311a5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d809a311458cb1fbd3a92243f5daeabd34ebc99b
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013497"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982075"
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,9 @@ A tabela a seguir lista os tipos de valores que não podem ser armazenados usand
 |**imagem**|**rowversion** (**timestamp**)|  
 |**sql_variant**|**geografia**|  
 |**hierarchyid**|**geometria**|  
-|Tipos definidos pelo usuário|**datetimeoffset**|  
+|Tipos definidos pelo usuário|**datetimeoffset**<sup>1</sup>| 
+
+<sup>1</sup> O SQL Server 2012 e posterior não restringem **datetimeoffset**.
 
 ## <a name="examples"></a>Exemplos  
 
@@ -136,7 +138,7 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-a-sqlvariant-as-a-variable"></a>b. Usando uma sql_variant como uma variável   
+### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. Usando uma sql_variant como uma variável   
  O exemplo a seguir, cria uma variável usando o tipo de dados sql_variant e, em seguida, recupera informações `SQL_VARIANT_PROPERTY` sobre uma variável chamada @v1.  
   
 ```sql    
