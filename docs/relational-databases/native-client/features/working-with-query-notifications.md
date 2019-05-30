@@ -1,7 +1,7 @@
 ---
 title: Trabalhando com notificações de consulta | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: native-client
@@ -21,16 +21,16 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 889f791f74d7f28496b763eb942907ab8227ef4d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 23aadd055049052e3302e61e1303ccc5fa4cc62f
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670735"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265457"
 ---
 # <a name="working-with-query-notifications"></a>Trabalhando com notificações de consulta
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   As notificações de consulta foram introduzidas no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Baseadas na infraestrutura do Service Broker, introduzida no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], as notificações de consulta permitem que os aplicativos sejam notificados em caso de alteração nos dados. Esse recurso é particularmente útil para aplicativos que fornecem um cache de informações de um banco de dados, como um aplicativo da Web, e precisam ser notificados quando os dados de origem são alterados.  
@@ -41,7 +41,7 @@ ms.locfileid: "51670735"
   
  `service=<service-name>[;(local database=<database> | broker instance=<broker instance>)]`  
   
- Por exemplo:  
+ Por exemplo:   
   
  `service=mySSBService;local database=mydb`  
   
@@ -77,7 +77,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>O conjunto de propriedades DBPROPSET_SQLSERVERROWSET  
  Para dar suporte a notificações de consulta através do OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adiciona as novas propriedades a seguir ao conjunto de propriedades DBPROPSET_SQLSERVERROWSET.  
   
-|Nome|Tipo|Description|  
+|Nome|Tipo|Descrição|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|O número de segundos que a notificação de consulta permanece ativa.<br /><br /> O padrão é 432000 segundos (5 dias). O valor mínimo é 1 segundo e o valor máximo é 2^31-1 segundos.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|O texto da mensagem da notificação. É definido pelo usuário e não tem um formato predefinido.<br /><br /> Por padrão, a cadeia de caracteres fica vazia. Você pode especificar uma mensagem que contenha entre 1-2000 caracteres.|  
@@ -85,7 +85,7 @@ CREATE SERVICE myService ON QUEUE myQueue
   
  A assinatura de notificação é sempre confirmada, independentemente do fato de a instrução ter sido executada em uma transação de usuário ou em uma confirmação automática ou se a transação na qual a instrução foi executada tiver sido confirmada ou revertida. A notificação do servidor é acionada mediante uma das seguintes condições inválidas de notificação: alteração dos dados subjacentes ou do esquema ou quando o tempo limite expira; a que ocorrer primeiro. Os registros de notificação são excluídos assim que são disparados. Consequentemente, em caso de recebimento de notificações, o aplicativo deve realizar uma nova assinatura caso queira obter mais atualizações.  
   
- Outra conexão ou thread pode verificar se há notificações na fila de destino. Por exemplo:  
+ Outra conexão ou thread pode verificar se há notificações na fila de destino. Por exemplo:   
   
 ```  
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   
@@ -135,7 +135,7 @@ RECEIVE * FROM MyQueue
   
  Se uma solicitação de assinatura for feita para um lote ou procedimento armazenado, outra solicitação de assinatura será feita para cada instrução executada no lote ou procedimento armazenado. As instruções EXECUTE não registrarão notificações, mas enviarão a solicitação de notificação para o comando executado. Se for um lote, o contexto será aplicado às instruções executadas e as mesmas regras descritas anteriormente serão aplicadas.  
   
- O envio de uma consulta para notificação que foi enviada pelo mesmo usuário no mesmo contexto de banco de dados e que tem o mesmo modelo, os mesmos valores de parâmetros, a mesma ID de notificação e o mesmo local de entrega de uma assinatura ativa existente, renovará a assinatura existente, redefinindo o novo tempo limite especificado. Isso significa que, se for solicitada uma notificação para consultas idênticas, apenas uma notificação será enviada. Isso se aplica a uma consulta duplicada em um lote ou a uma consulta em um procedimento armazenado chamada várias vezes.  
+ Envio de uma consulta de notificação que foi enviada pelo mesmo usuário sob o mesmo contexto de banco de dados e tem o mesmo modelo, mesmos valores de parâmetro, mesma ID de notificação e mesmo local de entrega de uma assinatura ativa existente, renovará existente assinatura, redefinir o novo especificado de tempo limite. Isso significa que, se a notificação for solicitada para consultas idênticas, apenas uma notificação será enviada. Isso se aplica a uma consulta duplicada em um lote ou a uma consulta em um procedimento armazenado chamada várias vezes.  
   
 ## <a name="see-also"></a>Consulte também  
  [Recursos do SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

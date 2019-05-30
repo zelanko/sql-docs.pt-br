@@ -227,6 +227,12 @@
               href: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
             - name: Armazenamento de blobs do Azure
               href: ../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
+        - name: Guias de início rápido
+          items:
+            - name: Backup e restauração
+              href: ../relational-databases/backup-restore/quickstart-backup-restore-database.md
+            - name: Para o Armazenamento de Blobs do Azure
+              href: ../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
         - name: Como fazer
           items:
             - name: Backup para o Azure
@@ -10125,8 +10131,6 @@
               href: ../relational-databases/lesson-1-connecting-to-the-database-engine.md
             - name: 'Lição 2: conexão usando outro computador'
               href: ../relational-databases/lesson-2-connecting-from-another-computer.md
-        - name: Backup e restauração do Serviço de Armazenamento de Blobs do Azure
-          href: ../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
         - name: Assinando procedimentos armazenados com um certificado
           href: ../relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
         - name: Cadeias de Propriedade e Comutação de Contexto
@@ -16504,8 +16508,6 @@
                   href: ../t-sql/queries/table-value-constructor-transact-sql.md
                 - name: INÍCIO
                   href: ../t-sql/queries/top-transact-sql.md
-                - name: UPDATE
-                  href: ../t-sql/queries/update-transact-sql.md
                 - name: UPDATETEXT
                   href: ../t-sql/queries/updatetext-transact-sql.md
                 - name: WITH common_table_expression
@@ -16578,6 +16580,8 @@
                   href: ../t-sql/statements/insert-transact-sql.md
                 - name: INSERT (SQL Graph)
                   href: ../t-sql/statements/insert-sql-graph.md
+                - name: UPDATE
+                  href: ../t-sql/queries/update-transact-sql.md
                 - name: MERGE
                   href: ../t-sql/statements/merge-transact-sql.md
                 - name: RENAME

@@ -1,19 +1,19 @@
 ---
 title: Integrando o Reporting Services em aplicativos | Microsoft Docs
-ms.date: 09/18/2018
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bce7e59a66701e519a4f2bc5706bfbec5f88eba2
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
-ms.translationtype: HT
+ms.openlocfilehash: 64f4e77a943f1d71fc7655a4a1d36dffafe7afcf
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331466"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175139"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>Integrando o Reporting Services em aplicativos
 
@@ -28,7 +28,7 @@ ms.locfileid: "56331466"
   
 ## <a name="report-server-web-service"></a>Serviço Web de servidor de relatório
 
- O serviço Web Servidor de Relatórios é a principal interface de desenvolvimento no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Esteja você desenvolvendo código para gerenciar o seu catálogo de relatórios ou desenvolvendo código para renderizar relatórios em um formato suportado, o serviço Web exibe todos os métodos necessários para a integração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aos seus aplicativos. Um exemplo desse aplicativo é o Gerenciador de Relatórios, incluído no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]; ele usa o serviço Web para gerenciar o banco de dados do servidor de relatório.  
+ O serviço Web Servidor de Relatórios é a principal interface de desenvolvimento no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Esteja você desenvolvendo código para gerenciar o seu catálogo de relatórios ou desenvolvendo código para renderizar relatórios em um formato suportado, o serviço Web exibe todos os métodos necessários para a integração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aos seus aplicativos. Um exemplo desse aplicativo é o portal da Web, incluído no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]; ele usa o serviço Web para gerenciar o banco de dados do servidor de relatório.  
   
 ## <a name="report-viewer-controls-for-visual-studio"></a>Controles do Visualizador de Relatórios para Visual Studio
 

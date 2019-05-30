@@ -1,6 +1,6 @@
 ---
 title: Armazenando relatórios em cache (SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c1e6ec452c20aea2df0eb99e4bf0123331d7192
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: ba54a5c29245a178fb1b50139d64f1e05bfd92f1
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580448"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175584"
 ---
 # <a name="caching-reports-ssrs"></a>Armazenando relatórios em cache (SSRS)
   Um servidor de relatório pode armazenar em cache uma cópia de um relatório processado e devolvê-la quando um usuário abrir o relatório. Para o usuário, a única evidência disponível indicativa de que o relatório é uma cópia armazenada em cache são os dados de data e hora de processamento do relatório. Se a data ou a hora não for atual e o relatório não for um instantâneo, ele terá sido recuperado do cache.  
@@ -67,13 +67,12 @@ ms.locfileid: "65580448"
   
  Se um relatório não puder ser processado a partir de uma instância armazenada em cache por qualquer motivo (por exemplo, se os valores de parâmetro que um usuário especifica forem diferentes daqueles usados para produzir o relatório armazenado em cache), o servidor de relatório executará novamente o relatório.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [Definir opções de processamento &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Definir as propriedades do processamento de relatórios](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Conceitos do Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Pré-carregar o cache &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
- [Agendamentos](../../reporting-services/subscriptions/schedules.md)   
+ [Pré-carregar o cache](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
+ [Agendas](../../reporting-services/subscriptions/schedules.md)   
  [Conjuntos de dados compartilhados em cache &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [Opções de atualização do cache &#40;Gerenciador de Relatórios&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   

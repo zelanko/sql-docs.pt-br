@@ -1,6 +1,6 @@
 ---
 title: Concedendo permissões em um servidor de relatório no modo nativo | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d38bcdb965bc08aa4eb7cad1401bd9d77f42b4ed
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 26175cfea8af6686f8c15840c7e44a5bde191df5
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65579831"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175639"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Concedendo permissões em um servidor de relatório no modo nativo
   O SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa autorização com base em funções e um subsistema de autenticação para determinar quem pode executar operações e acessar itens em um servidor de relatório. A autorização com base em funções é categorizada nas funções do conjunto de ações que um usuário ou grupo pode executar. A autenticação se baseia na Autenticação interna do Windows ou em um módulo de autenticação personalizado fornecido por você. É possível utilizar funções predefinidas ou personalizadas com qualquer tipo de autenticação.  
@@ -41,9 +41,9 @@ ms.locfileid: "65579831"
   
 2.  Identifique quais usuários e grupos requerem acesso ao servidor de relatório, e em que nível. A maioria dos usuários deve ser atribuída à função **Navegador** ou à função **Construtor de Relatórios** . Um número menor de usuários deve ser atribuído à função **Publicador** . Pouquíssimos usuários devem receber a função **Gerenciador de Conteúdo**.  
   
-3.  Use o Gerenciador de Relatórios para atribuir funções na pasta Base (essa é a pasta de nível superior da pasta de servidor de relatório hierarquicamente) para cada usuário ou grupo que requeira acesso.  
+3.  Use o portal da Web para atribuir funções na pasta Base (essa é a pasta de nível superior da pasta de servidor de relatório hierarquicamente) para cada usuário ou grupo que requeira acesso.  
   
-4.  No nível do site, na página Configurações de Site no Gerenciador de Relatórios, crie uma atribuição de função no nível do sistema para cada usuário e grupo usando as funções predefinidas **Usuário do Sistema** e **Administrador do Sistema**.  
+4.  No nível do site, na página Configurações de Site no portal da Web, crie uma atribuição de função no nível do sistema para cada usuário e grupo, usando as funções predefinidas **Usuário do Sistema** e **Administrador do Sistema**.  
   
 5.  Crie atribuições de funções adicionais conforme o necessário para pastas, relatórios e outros itens específicos. Evite criar um número grande de atribuições de funções. Se você criar atribuições demais, será difícil controlar os diferentes níveis de permissão de cada usuário.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "65579831"
 |Ferramenta|Tarefas|  
 |----------|-----------|  
 |Management Studio – Usado para exibir, modificar, criar e excluir definições de funções.|[Criar, excluir ou modificar uma função &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
-|Gerenciador de Relatórios - Usado para atribuir usuários e grupos a funções.|[Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [Modificar ou excluir uma atribuição de função &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
+|Portal da Web - Usado para atribuir usuários e grupos a funções.|[Conceder acesso ao usuário a um servidor de relatório](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> [Modificar ou excluir uma atribuição de função](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [funções predefinidas](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Autenticação com o servidor de relatório](../../reporting-services/security/authentication-with-the-report-server.md)   

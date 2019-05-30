@@ -12,34 +12,34 @@ helpviewer_keywords:
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
-ms.openlocfilehash: da8637e83aa7e91e2a6fbebc845872190968ed80
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.date: 05/15/2019
+ms.openlocfilehash: 9106c4c45845d1e31d65180c8f0fd979e7e3e14c
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65579383"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175333"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Definir propriedades de implantação (Reporting Services)
 
-  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você deve especificar o servidor de relatório e opcionalmente as pastas para os relatórios e fontes de dados compartilhados, de forma a poder publicar os itens no projeto do Servidor de Relatório para um servidor de relatório. As propriedades e os valores que o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] precisa para compilar, visualizar e implantar relatórios são armazenados em configurações de projeto do Servidor de Relatório. Você pode criar vários conjuntos nomeados para essas propriedades de projetos, para que você possa alternar de maneira conveniente entre os conjuntos de propriedades. Cada conjunto de propriedades é uma configuração. Por exemplo, você pode ter uma configuração para publicar relatórios em um servidor de teste e uma configuração diferente para publicar relatórios para um servidor de produção.  
+  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou no Visual Studio, você deve especificar o servidor de relatório e opcionalmente as pastas dos relatórios e fontes de dados compartilhados, de forma a poder publicar os itens no projeto de Servidor de Relatório em um servidor de relatório. As propriedades e os valores que o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou o Visual Studio precisa para compilar, visualizar e implantar relatórios são armazenados em configurações de projeto do Servidor de Relatório. Você pode criar vários conjuntos nomeados para essas propriedades de projetos, para que você possa alternar de maneira conveniente entre os conjuntos de propriedades. Cada conjunto de propriedades é uma configuração. Por exemplo, você pode ter uma configuração para publicar relatórios em um servidor de teste e uma configuração diferente para publicar relatórios para um servidor de produção.  
   
  Use o Gerenciador de Configuração para criar e gerenciar conjuntos de propriedades de projeto em configurações de projeto. O Gerenciador de Configurações é um recurso suportado pelo [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], no qual o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] se baseia.  
   
 > [!NOTE]  
->  Não confunda esse recurso com o Gerenciador de Configuração do Reporting Services, usado para configurar os Reporting Services depois da instalação. Para obter mais informações, consulte [Configurar e administrar um servidor de relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
-  
+> Não confunda esse recurso com o Gerenciador de Configuração do Reporting Services, usado para configurar os Reporting Services depois da instalação. Para obter mais informações, consulte [Configurar e administrar um servidor de relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
+>
 > [!NOTE]  
->  No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], a ação de publicar relatórios de um projeto ou solução do Servidor de Relatório é conhecida como *implantar relatórios*.  
+> No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], a ação de publicar relatórios de um projeto ou solução do Servidor de Relatório é conhecida como *implantar relatórios*.  
   
-### <a name="to-set-deployment-properties"></a>Para definir as propriedades de implantação
+## <a name="to-set-deployment-properties"></a>Para definir as propriedades de implantação
   
 1. Clique com o botão direito do mouse no projeto de relatório e clique em **Propriedades**.  
   
 2. Na caixa de diálogo **Páginas de Propriedades** do projeto, selecione uma configuração a ser editada da lista **Configuração** . As configurações comuns são **DebugLocal**, **Debug**e **Release**.  
   
     > [!NOTE]  
-    >  Você pode usar várias configurações para alternar rapidamente entre diferentes servidores de relatório ou configurações.  
+    > Você pode usar várias configurações para alternar rapidamente entre diferentes servidores de relatório ou configurações.  
   
 3. Na caixa de texto **OutputPath**  , digite ou cole o caminho no sistema de arquivos local para armazenar a definição de relatório usada na verificação de build, implantação e visualização de relatórios. O caminho deve ser diferente do caminho que você usa para o projeto e um caminho relativo que é uma pasta filho sob o caminho do projeto.  
   
@@ -60,13 +60,13 @@ ms.locfileid: "65579383"
 9. Na caixa de texto **TargetReportFolder** , digite a pasta no servidor de relatórios no qual os relatórios publicados devem ser posicionados. O valor padrão para **TargetReportFolder**  é o nome do projeto de relatório.  
   
     > [!NOTE]  
-    >  Para um servidor de relatórios executado no modo nativo, você deverá ter permissões de **Publicação** na pasta de destino para publicar relatórios nessa pasta. As permissões de publicação são fornecidas por meio de uma atribuição de função que mapeia sua conta de usuário para uma função que inclui operações de publicação. Para obter mais informações, consulte [Criar e gerenciar atribuições](../../reporting-services/security/create-and-manage-role-assignments.md). Para um servidor de relatórios executado no modo integrado do SharePoint, você deve ter permissão de **Membro** ou **Proprietário** no site do SharePoint. Para obter mais informações, consulte [Referência à permissão de listas e sites do SharePoint para itens do Servidor de Relatório](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
+    > Para um servidor de relatórios executado no modo nativo, você deverá ter permissões de **Publicação** na pasta de destino para publicar relatórios nessa pasta. As permissões de publicação são fornecidas por meio de uma atribuição de função que mapeia sua conta de usuário para uma função que inclui operações de publicação. Para obter mais informações, consulte [Criar e gerenciar atribuições](../../reporting-services/security/create-and-manage-role-assignments.md). Para um servidor de relatórios executado no modo integrado do SharePoint, você deve ter permissão de **Membro** ou **Proprietário** no site do SharePoint. Para obter mais informações, consulte [Referência à permissão de listas e sites do SharePoint para itens do Servidor de Relatório](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
-10. Na caixa de texto **TargetServerURL** , digite a URL do servidor de relatórios de destino. Antes de publicar um relatório, defina essa propriedade com uma URL de servidor de relatório válida. Ao publicar em um servidor de relatório executado no modo nativo, use a URL do diretório virtual do servidor de relatório (por exemplo, http:*//server/reportserver* ou https:*//server/reportserver)*. Este é o diretório virtual do servidor de relatório e não o Gerenciador de Relatórios.  
+10. Na caixa de texto **TargetServerURL** , digite a URL do servidor de relatórios de destino. Antes de publicar um relatório, defina essa propriedade com uma URL de servidor de relatório válida. Ao publicar em um servidor de relatório executado no modo nativo, use a URL do diretório virtual do servidor de relatório (por exemplo, http:*//server/reportserver* ou https:*//server/reportserver)*. Este é o diretório virtual do servidor de relatório, e não o portal da Web.  
   
-     Quando publicar em um servidor de relatório executado no modo integrado do SharePoint, use uma URL de um site de nível superior ou subsite do SharePoint. Se você não especificar um site, o site de nível superior padrão será usado (por exemplo, https://*nomedoservidor*, https://*nomedoservidor*/*site* ou https://*nomedoservidor*/*site*/*subsite*).  
+     Quando publicar em um servidor de relatório executado no modo integrado do SharePoint, use uma URL de um site de nível superior ou subsite do SharePoint. Se você não especificar um site, o site de nível superior padrão será usado (por exemplo, <https://*servername*>, <https://*servername*/*site*>ou <https://*servername*/*site*/*subsite*>).  
   
-### <a name="to-set-configuration-manager-properties"></a>Para definir as propriedades do Gerenciador de Configuração  
+## <a name="to-set-configuration-manager-properties"></a>Para definir as propriedades do Gerenciador de Configuração  
   
 1. Clique com o botão direito do mouse no projeto de relatório e clique em **Propriedades**.  
   
@@ -77,7 +77,13 @@ ms.locfileid: "65579383"
 4. Em **Contextos do Projeto**, para cada projeto na solução, selecione ou desmarque **Build** ou **Deploy**.  
   
     > [!NOTE]  
-    >  Se **Build** estiver selecionado, o Designer de Relatórios cria o projeto de relatórios e procura erros antes de exibir ou publicar em um servidor de relatórios. Se **Deploy** estiver selecionado, o Designer de Relatórios publicará os relatórios no servidor de relatórios conforme definido nas propriedades de implantação. Se **Deploy** não estiver selecionado, o Designer de Relatórios exibirá o relatório especificado na propriedade **StartItem** em uma janela de visualização local.  
+    > Se **Build** estiver selecionado, o Designer de Relatórios cria o projeto de relatórios e procura erros antes de exibir ou publicar em um servidor de relatórios. Se **Deploy** estiver selecionado, o Designer de Relatórios publicará os relatórios no servidor de relatórios conforme definido nas propriedades de implantação. Se **Deploy** não estiver selecionado, o Designer de Relatórios exibirá o relatório especificado na propriedade **StartItem** em uma janela de visualização local.  
   
-## <a name="see-also"></a>Consulte Também  
- [Publicando fontes de dados e relatórios](../../reporting-services/reports/publishing-data-sources-and-reports.md) [Visualizando relatórios](../../reporting-services/reports/previewing-reports.md) [Ajuda F1 do Designer de Relatórios](../../reporting-services/tools/report-designer-f1-help.md) [Exemplos de URL para itens de relatório publicados em um servidor de relatório no SharePoint &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md) [Caixa de diálogo Páginas de Propriedades do Projeto](../../reporting-services/tools/project-property-pages-dialog-box.md) [Publicando relatórios em um servidor de relatório](../../reporting-services/reports/publishing-reports-to-a-report-server.md)
+## <a name="see-also"></a>Confira também  
+
+- [Publicar fontes de dados e relatórios](../../reporting-services/reports/publishing-data-sources-and-reports.md)
+- [Visualizar relatórios](../../reporting-services/reports/previewing-reports.md)
+- [Ajuda F1 do Designer de Relatórios](../../reporting-services/tools/report-designer-f1-help.md)
+- [Exemplos de URL para itens de relatório publicados em um Servidor de Relatório no modo do SharePoint &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)
+- [Caixa de diálogo Páginas de Propriedades do Projeto](../../reporting-services/tools/project-property-pages-dialog-box.md)
+- [Publicar relatórios em um servidor de relatórios](../../reporting-services/reports/publishing-reports-to-a-report-server.md)

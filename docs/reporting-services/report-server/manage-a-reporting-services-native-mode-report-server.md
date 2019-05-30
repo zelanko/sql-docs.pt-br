@@ -1,6 +1,6 @@
 ---
 title: Gerenciar um servidor de relatório no modo nativo do Reporting Services | Microsoft Docs
-ms.date: 03/17/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27588665db387c7812b1779fd71e3002b1b80e36
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: a516be313ddca5edd5d899ca05eeab6b1818b972
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581093"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175199"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Gerenciar um servidor de relatório de modo nativo do Reporting Services
   Esta seção contém procedimentos para a configuração de uma instância do servidor de relatório de modo nativo usando o Gerenciador de Configurações do Reporting Services.  
@@ -36,7 +36,7 @@ ms.locfileid: "65581093"
  Explica como registrar manualmente um SPN para um servidor de relatório executado em uma conta de usuário de domínio em uma rede que use autenticação Kerberos.  
   
  [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
- Explica como estabelecer uma ou mais URLs usadas para acessar o serviço Web Servidor de Relatórios e o Gerenciador de Relatórios.  
+ Explica como estabelecer uma ou mais URLs usadas para acessar o serviço Web Servidor de Relatórios e o portal da Web.  
   
  [Criar um banco de dados de servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
  Fornece etapas para a criação de um banco de dados do servidor de relatório. Essa etapa é necessária para a implantação de uma instalação do Reporting Services.  
@@ -52,7 +52,7 @@ ms.locfileid: "65581093"
  Explica como abrir as portas usadas para solicitações de entrada e respostas de saída de um servidor de relatório.  
   
  [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- Descreve as etapas adicionais necessárias para conexão com o Gerenciador de Relatórios ou com um servidor de relatório usando `https://localhost`.  
+ Descreve as etapas adicionais necessárias para conectar-se ao portal da Web ou a um servidor de relatório, usando `https://localhost`.  
   
  [Configurar um servidor de relatório para administração remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  Explica como configurar uma instância do servidor de relatório remoto para que seja possível conectar e configurá-la a partir de um computador diferente.  

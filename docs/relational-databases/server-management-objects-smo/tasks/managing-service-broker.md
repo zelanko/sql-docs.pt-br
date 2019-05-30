@@ -1,7 +1,7 @@
 ---
 title: Gerenciando o Service Broker | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,20 +13,21 @@ ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5f300776f7dfdaa09eaae6bda301d707816155
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a1854d91b2438cad44535ae3efded150a7cc189e
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814684"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265460"
 ---
 # <a name="managing-service-broker"></a>Gerenciando o Service Broker
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  No SMO, o [!INCLUDE[ssSB](../../../includes/sssb-md.md)] objetos estão localizados na **Microsoft** namespace, que requer uma referência ao SQLServer. Uma referência ao Microsoft.SqlServer.ServiceBrokerEnum.dll também é necessária para suportar informações de classe.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+  No SMO, os objetos do [!INCLUDE[ssSB](../../../includes/sssb-md.md)] são localizados no namespace **Microsoft.SqlServer.Management.Smo.Broker** , que requer uma referência ao Microsoft.SqlServer.Smo.dll. Uma referência ao Microsoft.SqlServer.ServiceBrokerEnum.dll também é necessária para suportar informações de classe.  
   
- O SMO fornece um conjunto de objetos do [!INCLUDE[ssSB](../../../includes/sssb-md.md)] que permitem gerenciamento programático (DDL) da implementação do [!INCLUDE[ssSB](../../../includes/sssb-md.md)]. Isso inclui a definição de tipos de mensagem, contratos, filas e serviços. Como o SMO é uma ferramenta de gerenciamento não voltada à manipulação de dados, o envio e recebimento de mensagens do [!INCLUDE[ssSB](../../../includes/sssb-md.md)] não são suportados pelo SMO.  
+ O SMO fornece um conjunto de objetos do [!INCLUDE[ssSB](../../../includes/sssb-md.md)] que permitem gerenciamento programático (DDL) da implementação do [!INCLUDE[ssSB](../../../includes/sssb-md.md)] . Isso inclui a definição de tipos de mensagem, contratos, filas e serviços. Como o SMO é uma ferramenta de gerenciamento não voltada à manipulação de dados, o envio e recebimento de mensagens do [!INCLUDE[ssSB](../../../includes/sssb-md.md)] não são suportados pelo SMO.  
   
  No SMO, o objeto <xref:Microsoft.SqlServer.Management.Smo.Database.ServiceBroker%2A> é a classe de nível superior na qual reside toda a funcionalidade do [!INCLUDE[ssSB](../../../includes/sssb-md.md)]. É necessária uma implementação do [!INCLUDE[ssSB](../../../includes/sssb-md.md)] para cada banco de dados que está participando do aplicativo de mensagens distribuído. Portanto, o objeto <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceBroker> é filho do objeto <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   

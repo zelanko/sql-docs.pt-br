@@ -1,6 +1,6 @@
 ---
 title: Armazenar conjuntos de dados compartilhados em cache (SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 428cb9e75e7023b8abee13927435b74e166baa07
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 097955ece70dfa411c12d1ee5d69af0de14831e6
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582213"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175594"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Conjuntos de dados compartilhado em cache (SSRS)
   Os resultados de consultas de um conjunto de dados compartilhado podem ser copiados para um cache para fornecer dados consistentes para vários relatórios e melhorar o tempo de resposta da consulta do conjunto de dados. Como relatórios, você pode configurar um conjunto de dados compartilhado para ser armazenado em cache no primeiro uso ou especificando uma agenda.  
@@ -51,7 +51,7 @@ ms.locfileid: "65582213"
   
  Enquanto os resultados da consulta para uma combinação de parâmetros específica estão no cache, cada relatório iniciado para processamento e que inclui uma referência ao conjunto de dados compartilhado com esses valores de parâmetros usará os dados armazenados em cache.  
   
- Você pode especificar por quanto tempo os dados devem ser mantidos no cache antes de expirarem. Para obter mais informações, consulte [Página cache, conjuntos de dados compartilhados &#40;Gerenciador de relatórios&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea).  
+ Você pode especificar por quanto tempo os dados devem ser mantidos no cache antes de expirarem. Para saber mais, confira [Trabalhando com conjuntos de dados compartilhados](../../reporting-services/work-with-shared-datasets-web-portal.md).  
   
 ## <a name="preloading-the-cache"></a>Pré-carregando o cache  
  Você pode pré-carregar o cache criando um plano de atualização de cache. Com um plano de atualização, você pode especificar com que frequência atualizar o cache usando uma agenda específica de item ou uma agenda compartilhada. Para evitar várias entradas no cache para o mesmo item, a agenda especificada deve permitir tempo de processamento suficiente para o processamento da consulta na fonte de dados externa. Por exemplo, se a consulta levar 20 minutos para ser executada, a agenda de atualização deverá ser maior que 20 minutos. Para obter mais informações, consulte [Schedules](../../reporting-services/subscriptions/schedules.md).  
@@ -68,7 +68,7 @@ ms.locfileid: "65582213"
   
 -   Você deve ter as permissões ReadPolicy e UpdatePolicy no conjunto de dados compartilhado.  
   
- Os planos de atualização do cache se aplicam a conjuntos de dados compartilhados e relatórios. Para obter mais informações, consulte [Opções de atualização do cache &#40;Gerenciador de Relatórios&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
+ Os planos de atualização do cache se aplicam a conjuntos de dados compartilhados e relatórios. Para obter mais informações, consulte [Armazenando relatórios em cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>Condições que provocam a expiração do cache  
  As condições a seguir podem fazer com que um cache de conjunto de dados compartilhado se torne inválido.  
@@ -93,7 +93,7 @@ ms.locfileid: "65582213"
   
  As atualizações nos planos de atualização do cache de conjuntos de dados compartilhados não afetam os relatórios que já estão sendo processados. A atualização de um plano de atualização do cache afeta apenas inicializações futuras de relatórios que fazem referência ao conjunto de dados compartilhado.  
   
-## <a name="see-also"></a>Consulte Também  
- [Gerenciar conjuntos de dados compartilhados](../../reporting-services/report-data/manage-shared-datasets.md)  
+## <a name="see-also"></a>Confira também
   
+ [Gerenciar conjuntos de dados compartilhados](../../reporting-services/report-data/manage-shared-datasets.md)  
   

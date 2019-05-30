@@ -16,17 +16,17 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfc49e712e75a862c9c43ce99cc35b56c014cebc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d9b6f9426d4381f33d529e1efefa8afd6a1fc44b
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534648"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270162"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Usado durante a solução de problemas para especificar o LSN (número de sequência de log) da próxima transação a ser aplicada pelo Agente de Distribuição no Assinante, o que permite que o agente ignore uma transação com falha. Esse procedimento armazenado é executado no assinante, no banco de dados de assinatura. Sem suporte para Assinantes não SQLServer.  
+  Usado durante a solução de problemas para especificar a última transação entregue usando o número de sequência de log (LSN), permitindo que o Distribution Agent começar a entrega na próxima transação. Após a reinicialização, o agente de distribuição retorna transações maior do que essa marca d'água (LSN) do cache de banco de dados de distribuição (msrepl_commands). Esse procedimento armazenado é executado no assinante, no banco de dados de assinatura. Sem suporte para Assinantes não SQLServer.  
   
 > [!CAUTION]  
 >  O uso incorreto desse procedimento armazenado ou a especificação incorreta de um valor LSN pode fazer com que o Agente de Distribuição reverta as alterações que já tinham sido aplicadas no Assinante ou ignore todas as alterações restantes.  
@@ -79,4 +79,6 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permissões  
  Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_setsubscriptionxactseqno**.  
   
-  
+## <a name="see-more"></a>Ver mais
+
+[Blog: Como ignorar uma transação](https://repltalk.com/2019/05/28/how-to-skip-a-transaction/)  
