@@ -3,17 +3,17 @@ title: Downloads do CAB para atualizações cumulativas do SQL Server - aprendiz
 description: R e Python CAB e o pacote baixa para serviços de aprendizado de máquina do SQL Server 2017 e o SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/01/2019
+ms.date: 05/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: db03da02344301043e144cdd5e1638c09000bb08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3c5c27186969db01cc90fa43a6cf4ec2774ab051
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745347"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403234"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>Downloads do CAB para atualizações cumulativas de análise do SQL Server no banco de dados de instâncias
 
@@ -36,7 +36,7 @@ Arquivos CAB são listados em ordem cronológica inversa. Quando você baixar os
 
 |Versão  |Componente | Link de download  | Problemas resolvidos | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)** |  |  |  |
+|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| Binários de dentro do pacote agora estão conectados. |
 | | R Server      |[SRS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2069739&clcid=1033)| Binários de dentro do pacote agora estão conectados. |
 | | Microsoft Python Open     | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033)| Binários de dentro do pacote agora estão conectados. |

@@ -17,12 +17,12 @@ ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bbeceddb135649223be29956d0796e76fd5d57f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 36188b0cb646106d2b54ea8bcec8e417aa05c659
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62816595"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403230"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>Valores retornados SQLGetInfo para Arquivos de texto
 A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os valores correspondentes retornados pelo **SQLGetInfo**. Essas informações podem ser recuperadas, passando a linguagem listada C# defines **SQLGetInfo** na *fInfoType* argumento. Para obter mais informações sobre os valores retornados pelo **SQLGetInfo**, consulte o [referência do programador de ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
@@ -112,7 +112,7 @@ A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os
 |SQL_GETDATA_EXTENSIONS|Vários valores|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"'" (aspas simples de backup)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (aspas simples de backup)|  
 |SQL_KEYWORDS|Vários valores|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -157,7 +157,7 @@ A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os
 |SQL_SCROLL_OPTIONS|Vários valores|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|"TEXTO"|  
-|SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|"~\`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|Vários valores|  
 |SQL_SUBQUERIES|Vários valores|  
 |SQL_SYSTEM_FUNCTIONS|0|  

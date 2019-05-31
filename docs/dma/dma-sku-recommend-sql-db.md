@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 1ea0afb015bb457b067f1011bd3b602bf4142e09
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: c67eca111ecd0a51bc8e70d747cb7b713fe54ca8
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65106113"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413635"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificar o direito de SKU de instância de banco de dados/gerenciado do Azure SQL para seu banco de dados local
 
@@ -41,7 +41,7 @@ A seguir estão as instruções para ajudá-lo a determinar as recomendações d
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- Baixe e instale a versão mais recente do [DMA](https://aka.sm/get-dma). Se você já tiver uma versão anterior da ferramenta, abri-lo, e você será solicitado a atualizar o DMA.
+- Baixe e instale a versão mais recente do [DMA](https://aka.ms/get-dma). Se você já tiver uma versão anterior da ferramenta, abri-lo, e você será solicitado a atualizar o DMA.
 - Certifique-se de que o computador tenha [PowerShell versão 5.1](https://www.microsoft.com/download/details.aspx?id=54616) ou posterior, que é necessário para executar todos os scripts. Para obter informações sobre findoug qual versão do PowerShell é instalada em seu computador, consulte o artigo [Baixe e instale o Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
 - Certifique-se de que o computador tenha o módulo do Powershell do Azure instalado. Para obter mais informações, consulte o artigo [instalar o módulo Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
 - Verificar se o arquivo do PowerShell **SkuRecommendationDataCollectionScript.ps1**, que é necessário para coletar os contadores de desempenho, é instalado na pasta DMA.
