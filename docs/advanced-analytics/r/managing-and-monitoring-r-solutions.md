@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c9b1b4eca18a9d4d8d1819eee399676046cc9d78
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a53056f1f169224b222a07a062f6ddd88cb24b81
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62503836"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454679"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Gerenciar e integrar cargas de trabalho de aprendizado de máquina no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,7 +59,7 @@ Contas de usuário sem privilégios administrativos são criadas durante a insta
 Como um DBA, você pode usar a segurança de dados do SQL Server para especificar quem tem permissão para executar scripts e que os dados usados em trabalhos sejam gerenciados sob as mesmas funções de segurança que controlam o acesso por meio de consultas T-SQL. Como um administrador do sistema, você pode negar explicitamente **SQLRUserGroup** acesso a dados confidenciais no servidor local com a criação de ACLs.
 
 >[!NOTE]
-> Por padrão, o **SQLRUserGroup** não tem um logon ou permissões no próprio SQL Server. Contas de trabalho devem exigir um logon para acesso a dados, você deve criá-lo. Um cenário que chama especificamente para a criação de um logon é dar suporte a solicitações de um script em execução, para dados ou operações na instância do mecanismo de banco de dados, quando a identidade do usuário é um usuário do Windows e a cadeia de caracteres de conexão Especifica um usuário confiável. Para obter mais informações, consulte [adicionar SQLRUserGroup como um usuário de banco de dados](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
+> Por padrão, o **SQLRUserGroup** não tem um logon ou permissões no próprio SQL Server. Contas de trabalho devem exigir um logon para acesso a dados, você deve criá-lo. Um cenário que chama especificamente para a criação de um logon é dar suporte a solicitações de um script em execução, para dados ou operações na instância do mecanismo de banco de dados, quando a identidade do usuário é um usuário do Windows e a cadeia de caracteres de conexão Especifica um usuário confiável. Para obter mais informações, consulte [adicionar SQLRUserGroup como um usuário de banco de dados](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
 
 ## <a name="disable-script-execution"></a>Desabilitar a execução de script
 

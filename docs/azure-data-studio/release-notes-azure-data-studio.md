@@ -11,12 +11,12 @@ manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 05/08/2019
-ms.openlocfilehash: ee445dcf1a427adc23c38c40430965712c52d4e9
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.openlocfilehash: d3451fcc6ca506e038ab614183007aad81880231
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65450031"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454730"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de versão do estúdio de dados do Azure
 
@@ -101,7 +101,7 @@ ms.locfileid: "65450031"
 
 | Alterar | Detalhes |
 | :----- | :------ |
-| Adicionado **Admin pack para SQL Server** pacote de extensão. | Isso torna mais fácil de instalar as extensões relacionadas à administração do SQL Server. Isso inclui:<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
+| Adicionado **Admin pack para SQL Server** pacote de extensão. | Isso torna mais fácil de instalar as extensões relacionadas à administração do SQL Server. Isso inclui:<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
 | Suporte de evento na extensão do Profiler estendido de filtragem adicional. | &nbsp; |
 | Salvar adicionado como recurso de XML que pode salvar os resultados do T-SQL como XML. | &nbsp; |
 | Foram incluídos aperfeiçoamentos de Data-Tier Application Wizard. | &bull; &nbsp; Botão de script gerar adicionado<br/>&bull; &nbsp; Modo de exibição adicional para dar avisos de possível perda de dados durante a implantação. |

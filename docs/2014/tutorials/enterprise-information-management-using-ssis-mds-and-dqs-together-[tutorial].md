@@ -10,12 +10,12 @@ ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8a9b7c9f241bdf63679db85d7408e696c6f55599
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 61773674412a8b4bdd8b5fa2f8b207de66254dcc
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489721"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429039"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Gerenciamento de informações da empresa usando o SSIS, o MDS e o DQS em conjunto [Tutorial]
   O gerenciamento de informações em uma empresa normalmente envolve a integração dos dados na empresa e fora dela, a limpeza dos dados, a correspondência dos dados para remover qualquer duplicata, a padronização dos dados, o enriquecimento dos dados, a adequação dos dados com os requisitos legais e de conformidade e o armazenamento do dados em um local centralizado com todas as configurações de segurança necessárias.  
@@ -62,9 +62,9 @@ ms.locfileid: "65489721"
   
 5.  Instale **suplemento Master Data Services para Excel** (32 bits ou 64 bits com base na versão do Excel que você tem em seu computador) de [aqui](https://www.microsoft.com/download/details.aspx?id=29064). Para localizar a versão do Excel instalado em seu computador, execute **Excel**, clique em **arquivo** na barra de menus e clique em **ajuda** para ver a versão no painel direito. Observe que você precisa instalar o Visual Studio 2010 Tools for Office Runtime antes de instalar o suplemento do Excel.  
   
-6.  (Opcional) Crie uma conta com [Windows Azure Marketplace](https://datamarket.azure.com/). Uma das tarefas no tutorial exige que você tenha um **do Azure Marketplace** (originalmente denominado **Data Market**) conta. Você poderá ignorar essa tarefa se desejar e passar para a próxima tarefa.  
+6.  (Opcional) Crie uma conta com [Windows Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/). Uma das tarefas no tutorial exige que você tenha um **do Azure Marketplace** (originalmente denominado **Data Market**) conta. Você poderá ignorar essa tarefa se desejar e passar para a próxima tarefa.  
   
-7.  Baixe o arquivo Suppliers. xls do [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=271504).  
+7.  Baixe o arquivo Suppliers. xls do [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=50426).  
   
 8.  O DQS não permite a exportação de limpeza ou correspondência de resultados para um arquivo do Excel se você estiver usando **versão de 64 bits do Excel**. Esse é um problema conhecido. Para resolvê-lo, faça o seguinte:  
   

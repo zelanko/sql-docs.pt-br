@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/18/2018
+ms.date: 05/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04d221372a0d91ed45ba339c1077ea1be68542df
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 821eaa4b7c54d8d2f449b2b071582480ac806378
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072350"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429021"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -118,7 +118,10 @@ Retorna estatísticas de desempenho de agregação de planos de consulta em cach
 |**min_spills**|**bigint**|O número mínimo de páginas que essa consulta nunca vazou durante uma única execução.<br /><br /> **Aplica-se ao**: Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|O número máximo de páginas que essa consulta nunca vazou durante uma única execução.<br /><br /> **Aplica-se ao**: Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|O identificador para o nó que essa distribuição é no.<br /><br /> **Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
-
+|**total_page_server_reads**|**bigint**|Número total de leituras de servidor remoto página efetuadas por execuções deste plano desde sua compilação.<br /><br /> **Aplica-se a:** Em hiperescala do banco de dados SQL do Azure |  
+|**last_page_server_reads**|**bigint**|Número de leituras de servidor remoto página efetuadas na última vez em que o plano foi executado.<br /><br /> **Aplica-se a:** Em hiperescala do banco de dados SQL do Azure |  
+|**min_page_server_reads**|**bigint**|Número mínimo de servidor remoto página lê que este plano efetuou durante uma única execução.<br /><br /> **Aplica-se a:** Em hiperescala do banco de dados SQL do Azure |  
+|**max_page_server_reads**|**bigint**|Número máximo de servidor remoto página lê que este plano efetuou durante uma única execução.<br /><br /> **Aplica-se a:** Em hiperescala do banco de dados SQL do Azure |  
 > [!NOTE]
 > <sup>1</sup> para procedimentos armazenados compilados nativamente quando a coleta de estatísticas é habilitada, tempo de trabalho será coletado em milissegundos. Se a consulta é executada em menos de um milissegundo, o valor será 0.  
   
@@ -152,7 +155,7 @@ GROUP BY query_stats.query_hash
 ORDER BY 2 DESC;  
 ```  
   
-### <a name="b-returning-row-count-aggregates-for-a-query"></a>b. Retornando agregações de contagem de linhas para uma consulta  
+### <a name="b-returning-row-count-aggregates-for-a-query"></a>B. Retornando agregações de contagem de linhas para uma consulta  
  O exemplo a seguir retorna informações de agregações de contagem de linhas (total de linhas, mínimo de linhas, máximo de linhas e últimas linhas) para consultas.  
   
 ```sql  
