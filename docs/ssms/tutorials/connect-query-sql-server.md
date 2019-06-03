@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio'
+Title: 'Tutorial: conectar-se a uma instância do SQL Server e consultá-la usando o SQL Server Management Studio'
 description: Um tutorial para conectar-se a uma instância do SQL Server usando o SQL Server Management Studio e executando consultas T-SQL básicas.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -11,12 +11,12 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 21f6d4c689a30dc60fc103f7e881ae5499baafa8
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 034e0663065003a47245ad71b602ec8bfb256df3
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802492"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454462"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutorial: conectar-se a uma instância do SQL Server e consultá-la usando o SQL Server Management Studio
 
@@ -68,7 +68,7 @@ Para verificar se a conexão do SQL Server foi bem-sucedida, expanda e explore o
 - Conectando-se ao banco de dados SQL do Azure – neste caso, ao msftestserver.database.windows.net: ![Conectando-se a um banco de dados SQL do Azure](media/connect-query-sql-server/connect-sql-azure.png)
 
   >[!NOTE]
-  > Neste tutorial, você já usou a *Autenticação do Windows* para conectar-se ao SQL Server local, mas esse método não é compatível com o banco de dados SQL do Azure. Como tal, essa imagem mostra o uso da autenticação do SQL para se conectar ao banco de dados SQL do Azure. Para obter mais informações, confira [Autenticação local do SQL](../../relational-databases/security/choose-an-authentication-mode.md) e [Autenticação do SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access). 
+  > Neste tutorial, você já usou a *Autenticação do Windows* para conectar-se ao SQL Server local, mas esse método não é compatível com o banco de dados SQL do Azure. Como tal, essa imagem mostra o uso da autenticação do SQL para se conectar ao banco de dados SQL do Azure. Para obter mais informações, confira [Autenticação local do SQL](../../relational-databases/security/choose-an-authentication-mode.md) e [Autenticação do SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management). 
 
 ## <a name="create-a-database"></a>Criar um banco de dados
 Crie um banco de dados chamado TutorialDB fazendo o seguinte: 

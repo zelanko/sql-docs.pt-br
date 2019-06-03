@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f3dd35c6630c825e5341246170f6e96d61a47de4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 1cf0134d4c71111537a9d7c020c03f77d9377fd1
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65577896"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413436"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Tipo de conexão Oracle (SSRS)
 Para usar dados de um banco de dados Oracle em seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo Oracle. Esse tipo de fonte de dados interno usa o Provedor de Dados Oracle diretamente e exige um componente do software cliente Oracle.
 
 Para instalar as ferramentas de Cliente da Oracle, siga o procedimento a seguir.
  
-1.  Acesse o [site de download da Oracle](https://www.oracle.com/us/products/tools/index-090165.html)
+1.  Acesse o [site de download da Oracle](https://www.oracle.com/downloads/)
 2.  Baixe o ODAC 12c Versão 4 (12.1.0.2.4) para Windows (64 bits para o servidor, 32 bits para as ferramentas)
 3.  Instale o Provedor de Dados para o .NET 4
   

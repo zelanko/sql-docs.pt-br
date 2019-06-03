@@ -17,15 +17,15 @@ helpviewer_keywords:
 - extended events [SQL Server], Transact-SQL
 - ALTER EVENT SESSION statement
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
-author: CarlRabeler
-ms.author: carlrab
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f55b028c8fa1506bd6076bf5bdad2f90e074727
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5ae1d8f24be52ed89e762f7a1a8963ba766b1cb5
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392849"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270149"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -123,14 +123,14 @@ ON SERVER
 |*event_session_name*|É o nome de uma sessão de evento existente.|  
 |STATE = START &#124; STOP|Inicia ou para a sessão de evento. Este argumento é válido somente quando ALTER EVENT SESSION é aplicado a um objeto de sessão de evento.|  
 |ADD EVENT \<event_specifier>|Associa o evento identificado por \<event_specifier> à sessão de evento.|
-|[*event_module_guid*]*.event_package_name.event_name*|É o nome de um evento em um pacote de evento, onde:<br /><br /> -   *event_module_guid* é o GUID do módulo que contém o evento.<br />-   *event_package_name* é o pacote que contém o objeto de ação.<br />-   *event_name* é o objeto de evento.<br /><br /> Eventos aparecem na exibição sys.dm_xe_objects como object_type “evento”.|  
+|[*event_module_guid*] *.event_package_name.event_name*|É o nome de um evento em um pacote de evento, onde:<br /><br /> -   *event_module_guid* é o GUID do módulo que contém o evento.<br />-   *event_package_name* é o pacote que contém o objeto de ação.<br />-   *event_name* é o objeto de evento.<br /><br /> Eventos aparecem na exibição sys.dm_xe_objects como object_type “evento”.|  
 |SET { *event_customizable_attribute*= \<value> [ ,...*n*] }|Especifica atributos personalizáveis do evento. Os atributos personalizáveis são mostrados na exibição sys.dm_xe_object_columns como column_type 'personalizável' e object_name = *event_name*.|  
-|ACTION ( { [*event_module_guid*]*.event_package_name.action_name* [ **,**...*n*] } )|É a ação a ser associada à sessão de evento, onde:<br /><br /> -   *event_module_guid* é o GUID do módulo que contém o evento.<br />-   *event_package_name* é o pacote que contém o objeto de ação.<br />-   *action_name* é o objeto de ação.<br /><br /> Ações aparecem na exibição sys.dm_xe_objects como object_type “ação”.|  
+|ACTION ( { [*event_module_guid*] *.event_package_name.action_name* [ **,** ...*n*] } )|É a ação a ser associada à sessão de evento, onde:<br /><br /> -   *event_module_guid* é o GUID do módulo que contém o evento.<br />-   *event_package_name* é o pacote que contém o objeto de ação.<br />-   *action_name* é o objeto de ação.<br /><br /> Ações aparecem na exibição sys.dm_xe_objects como object_type “ação”.|  
 |WHERE \<predicate_expression>|Especifica a expressão de predicado usada para determinar se um evento deve ser processado. Se \<predicate_expression> for verdadeira, o evento será processado mais detalhadamente pelas ações e pelos destinos da sessão. Se \<predicate_expression> for falsa, o evento será removido pela sessão antes de ser processado pelas ações e pelos destinos da sessão. As expressões de predicado são limitadas a 3.000 caracteres, o que limita os argumentos de cadeia de caracteres.|
 |*event_field_name*|É o nome do campo de evento que identifica a origem do predicado.|  
 |[event_module_guid].event_package_name.predicate_source_name|É o nome da origem do predicado global onde:<br /><br /> -   *event_module_guid* é o GUID do módulo que contém o evento.<br />-   *event_package_name* é o pacote que contém o objeto de predicado.<br />-   *predicate_source_name* é definido na exibição sys.dm_xe_objects como object_type 'pred_source'.|  
 |[*event_module_guid*].*event_package_name*.*predicate_compare_name*|É o nome do objeto de predicado a ser associado à sessão de evento, onde:<br /><br /> -   *event_module_guid* é o GUID do módulo que contém o evento.<br />-   *event_package_name* é o pacote que contém o objeto de predicado.<br />-   *predicate_compare_name* é uma origem global definida na exibição sys.dm_xe_objects como object_type 'pred_compare'.|  
-|DROP EVENT \<event_specifier>|Remove o evento identificado por *\<event_specifier>*. \<event_specifier> deve ser válido na sessão do evento.|  
+|DROP EVENT \<event_specifier>|Remove o evento identificado por *\<event_specifier>* . \<event_specifier> deve ser válido na sessão do evento.|  
 |ADD TARGET \<event_target_specifier>|Associa o destino identificado por \<event_target_specifier> à sessão de evento.|
 |[*event_module_guid*].*event_package_name*.*target_name*|É o nome do destino na sessão de evento, onde:<br /><br /> -   *event_module_guid* é o GUID do módulo que contém o evento.<br />-   *event_package_name* é o pacote que contém o objeto de ação.<br />-   *target_name* é a ação. As ações aparecem na exibição sys.dm_xe_objects como object_type “destino”.|  
 |SET { *target_parameter_name*= \<value> [, ...*n*] }|Define um parâmetro de destino. Os parâmetros de destino são mostrados na exibição sys.dm_xe_object_columns como column_type 'personalizável' e object_name = *target_name*.<br /><br /> **OBSERVAÇÃO!** Se você estiver usando o destino de buffer de anel, recomendamos definir o parâmetro de destino max_memory como 2.048 KB (kilobytes) para ajudar a evitar um possível truncamento de dados da saída XML. Para obter mais informações sobre como usar os diferentes tipos de destino, consulte [Destinos de eventos estendidos do SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  

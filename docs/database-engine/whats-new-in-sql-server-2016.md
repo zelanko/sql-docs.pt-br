@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ad8f8aca9577023d3170fc0c1b6e7e4099129a90
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 850f0bac65f0c8955c50514145fb0d2998d6139a
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872306"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413617"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novidades no mecanismo de banco de dados – SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Para examinar quais são as novidades em outros componentes do SQL Server, veja 
 
 #### <a name="try-it-out"></a>Experimente
 
-- Para baixar o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], acesse  **[Centro de Avaliação](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**![baixar](../analysis-services/media/download.png "download").
+- Para baixar o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], acesse  **[Centro de Avaliação](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** ![baixar](../analysis-services/media/download.png "download").
 
 - Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/services/virtual-machines/sql-server/)** para criar uma Máquina Virtual com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] já instalado.
 
@@ -444,7 +444,7 @@ Baixar o [SSMS (SQL Server Management Studio) mais recente](../ssms/download-sql
 ### <a name="upgrade-advisor"></a>Supervisor de Atualização
 O Supervisor de Atualização do SQL Server 2016 Preview é uma ferramenta autônoma que permite aos usuários de versões anteriores executar um conjunto de regras de atualização em seu banco de dados do SQL Server para identificar alterações de comportamento, alterações mais recentes e recursos preteridos, bem como fornecer ajuda com a adoção de novos recursos, como o Stretch Database.
 
- Você pode baixar o Supervisor de Atualização Preview [aqui](https://www.microsoft.com/download/details.aspx?id=48119) ou instalá-lo usando o Web Platform Installer.
+ Você pode baixar o Supervisor de Atualização Preview [aqui](https://docs.microsoft.com/sql/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades#how-to-install-and-run-upgrade-advisor) ou instalá-lo usando o Web Platform Installer.
 
 ## <a name="see-also"></a>Consulte Também
 [Novidades no SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)

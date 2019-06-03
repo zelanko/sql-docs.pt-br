@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 24768e1b230631009d94a1c449f08164157ed481
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 72f31c6f27590a9b44c0766c5379e90f9666d1a0
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65718420"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454584"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Suporte do Scale Out para alta disponibilidade
 
@@ -68,11 +68,11 @@ Siga as instruções para configurar o suporte ao SSISDB para Always On em [Alwa
 Além disso, é necessário criar um ouvinte do grupo de disponibilidade para o grupo de disponibilidade ao qual o SSISDB será adicionado. Consulte [Criar ou configurar um ouvinte de grupo de disponibilidade](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 
 ## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5. Atualizar o arquivo de configuração de serviço do Mestre do Scale Out
-Atualize o arquivo de configuração de serviço do Mestre do Scale Out, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`, nos nós primários e secundários. Atualize **SqlServerName** para *[Nome DNS do Ouvinte do Grupo de Disponibilidade],[Porta]*.
+Atualize o arquivo de configuração de serviço do Mestre do Scale Out, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`, nos nós primários e secundários. Atualize **SqlServerName** para *[Nome DNS do Ouvinte do Grupo de Disponibilidade],[Porta]* .
 
 ## <a name="6-enable-package-execution-logging"></a>6. Habilitar log de execução de pacote
 
-O log no SSISDB é feito pelo logon **##MS_SSISLogDBWorkerAgentLogin##**, cuja senha é gerada automaticamente. Para fazer com que o log funcione em todas as réplicas do SSISDB, faça o seguinte
+O log no SSISDB é feito pelo logon **##MS_SSISLogDBWorkerAgentLogin##** , cuja senha é gerada automaticamente. Para fazer com que o log funcione em todas as réplicas do SSISDB, faça o seguinte
 
 ### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 Altere a senha de **##MS_SSISLogDBWorkerAgentLogin##** no SQL Server primário
 
@@ -99,7 +99,7 @@ Chame o procedimento armazenado `[catalog].[update_logdb_info]` com os seguintes
 
 Em máquinas virtuais do Azure, essa etapa de configuração requer etapas adicionais. Uma explicação completa desses conceitos e dessas etapas está fora do escopo deste artigo.
 
-1.  É necessário configurar um domínio do Azure. O Clustering de failover do Windows Server requer que todos os computadores no cluster sejam membros do mesmo domínio. Para obter mais informações, consulte [Enable Azure Active Directory Domain Services using the Azure portal](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started) (Habilitar o Azure Active Directory Domain Services usando o portal do Azure).
+1.  É necessário configurar um domínio do Azure. O Clustering de failover do Windows Server requer que todos os computadores no cluster sejam membros do mesmo domínio. Para obter mais informações, consulte [Enable Azure Active Directory Domain Services using the Azure portal](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-instance) (Habilitar o Azure Active Directory Domain Services usando o portal do Azure).
 
 2. É necessário configurar um balanceador de carga do Azure. Esse é um requisito para o ouvinte do grupo de disponibilidade. Para obter mais informações, confira [Tutorial: balancear o tráfego interno de carga com o balanceador de carga básico para VMs usando o portal do Azure](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 

@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a6414ca219cbc2ca871a1100c4ff82570409873
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: dd507c2369eeca5ff8779781ec8e6b44a5c91687
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580635"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413535"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -106,8 +106,9 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
 ```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-CREATE CLUSTERED COLUMNSTORE INDEX index_name   
-    ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
+CREATE CLUSTERED COLUMNSTORE INDEX index_name
+    ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
+    [ORDER (column [,...n] ) ]
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
 ```
@@ -217,7 +218,7 @@ Criar um índice columnstore não clusterizado na memória em uma tabela rowstor
 *index_name*  
    Especifica o nome do índice. O *index_name* precisa ser exclusivo na tabela, mas não precisa ser exclusivo no banco de dados. Os nomes de índice precisam seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- **(** _column_  [ **,**...*n* ] **)**  
+ **(** _column_  [ **,** ...*n* ] **)**  
     Especifica as colunas a serem armazenadas. Um índice columnstore não clusterizado é limitado a 1024 colunas.  
    Cada coluna deve ser de um tipo de dados com suporte para índices columnstore. Confira [Limitações e restrições](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) para obter uma lista dos tipos de dados compatíveis.  
 
@@ -291,7 +292,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 **"** default **"**  
 Cria o índice especificado no grupo de arquivos padrão.  
   
-Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e precisa ser delimitado, como em ON **"** default **"** ou ON **[** default **]**. Se "padrão" for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e precisa ser delimitado, como em ON **"** default **"** ou ON **[** default **]** . Se "padrão" for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 ##  <a name="Permissions"></a> Permissões  
  Exige a permissão ALTER na tabela.  
@@ -752,7 +753,7 @@ DROP INDEX cci_xdimProduct ON xdimProduct;
 
 Crie um índice columnstore clusterizado ordenado com ordenação em SHIPDATE.
 
-```sql 
+```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ORDER ( SHIPDATE );
 ```

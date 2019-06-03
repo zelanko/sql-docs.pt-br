@@ -1,7 +1,7 @@
 ---
 title: Classe de evento Broker:Conversation | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,17 +12,19 @@ ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39e0ca2394c76d955fa480d17ed5369217ac8f69
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f2a1f6e0cd0bc9cdf90f8acd31f61172d7dc85c4
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636204"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265559"
 ---
 # <a name="brokerconversation-event-class"></a>Classe de evento Broker:Conversation
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera uma classe de evento **Broker:Conversa** para relatar o progresso de uma conversa do Agente de Serviços.  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera uma classe de evento **Broker:Conversa** para relatar o progresso de uma conversa do Agente de Serviços.  
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Colunas de dados da classe de evento Broker:Conversation  
   
@@ -31,21 +33,21 @@ ms.locfileid: "47636204"
 |**ApplicationName**|**nvarchar**|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores transmitidos pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**int**|A ID atribuída pelo computador host ao processo em que está sendo executado o aplicativo cliente. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
 |**DatabaseID**|**int**|A ID do banco de dados que é especificada pela instrução de *banco de dados* USE. A ID do banco de dados padrão, se nenhuma instrução de *banco de dados*USE tiver sido emitida. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor de um banco de dados usando a função **DB_ID** .|3|Sim|  
-|**EventClass**|**int**|O tipo de classe de evento capturado. Sempre **124** para **Broker:Conversa**.|27|não|  
-|**EventSequence**|**int**|Número de sequência para esse evento.|51|não|  
+|**EventClass**|**int**|O tipo de classe de evento capturado. Sempre **124** para **Broker:Conversa**.|27|Não|  
+|**EventSequence**|**int**|Número de sequência para esse evento.|51|Não|  
 |**EventSubClass**|**nvarchar**|O tipo de subclasse de evento. Esse tipo fornece mais informações sobre cada classe de evento.|21|Sim|  
-|**GUID**|**uniqueidentifier**|A identificação de conversa do diálogo. Esse identificador é transmitido como parte da mensagem e é compartilhado por ambos os lados da conversa.|54|não|  
+|**GUID**|**uniqueidentifier**|A identificação de conversa do diálogo. Esse identificador é transmitido como parte da mensagem e é compartilhado por ambos os lados da conversa.|54|Não|  
 |**HostName**|**nvarchar**|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função **HOST_NAME** .|8|Sim|  
-|**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário.<br /><br /> 0 = usuário<br /><br /> 1 = sistema|60|não|  
+|**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário.<br /><br /> 0 = usuário<br /><br /> 1 = sistema|60|Não|  
 |**LoginSid**|**imagem**|Número SID (identificação de segurança) do usuário que fez logon. Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
-|**MethodName**|**nvarchar**|O grupo de conversa ao qual a conversa pertence.|47|não|  
+|**MethodName**|**nvarchar**|O grupo de conversa ao qual a conversa pertence.|47|Não|  
 |**NTDomainName**|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |**NTUserName**|**nvarchar**|O nome do usuário proprietário da conexão que gerou este evento.|6|Sim|  
-|**ObjectName**|**nvarchar**|O identificador de conversa do diálogo.|34|não|  
+|**ObjectName**|**nvarchar**|O identificador de conversa do diálogo.|34|Não|  
 |**Prioridade**|**int**|O nível de prioridade da conversa.|5|Sim|  
-|**RoleName**|**nvarchar**|A função do identificador de conversa. É **initiator** (iniciador) ou **target**(destino).|38|não|  
-|**ServerName**|**nvarchar**|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
-|**Severity**|**int**|A severidade do erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se esse evento informar um erro.|29|não|  
+|**RoleName**|**nvarchar**|A função do identificador de conversa. É **initiator** (iniciador) ou **target**(destino).|38|Não|  
+|**ServerName**|**nvarchar**|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
+|**Severity**|**int**|A severidade do erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se esse evento informar um erro.|29|Não|  
 |**SPID**|**int**|A identificação de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |**StartTime**|**datetime**|Horário de início do evento, quando disponível.|14|Sim|  
 |**TextData**|**ntext**|O estado atual da conversa. Pode ter um dos seguintes valores:|1|Sim|  
@@ -56,7 +58,7 @@ ms.locfileid: "47636204"
 |||**DO**. Saída desconectada. O lado local da conversa emitiu uma instrução END CONVERSATION. A conversa permanecerá neste estado até o lado remoto da conversa reconhecer a instrução END CONVERSATION. Um aplicativo não pode enviar ou receber mensagens para a conversa. Quando o lado remoto da conversa reconhece a instrução END CONVERSATION, a conversa passa para o estado fechado (CD).|||  
 |||**ER**. Erro. Ocorreu um erro neste ponto de extremidade. As colunas de erro, severidade e estado contêm informações sobre o erro específico que ocorreu.|||  
 |||**CD**. Fechado. O ponto de extremidade da conversa não está mais em uso.|||  
-|**ID da transação**|**bigint**|ID da transação atribuída pelo sistema.|4|não|  
+|**ID da transação**|**bigint**|ID da transação atribuída pelo sistema.|4|Não|  
   
  A tabela a seguir lista os valores de subclasse para essa classe de evento.  
   

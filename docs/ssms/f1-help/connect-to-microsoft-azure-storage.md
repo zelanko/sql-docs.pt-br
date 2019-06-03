@@ -14,12 +14,12 @@ ms.assetid: ''
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2bcacf7ab799ef36ab0f28bcc78ad27be2afe67c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 2c4381ddbbe0a218b6fc53d8e054017b66068b59
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65102708"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454548"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Conectar ao Armazenamento do Microsoft Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ Especifique as informações a seguir sobre sua conta do Windows Azure e clique 
 1.  **Conta de Armazenamento** – Especifique o nome da conta de armazenamento.
 
    >[!NOTE]
-   > Você só pode se conectar a [Contas de Armazenamento de Uso Geral](https://docs.microsoft.com/azure/storage/storage-introduction#introducing-the-azure-storage-services). Conectar-se a outros tipos de contas de armazenamento pode gerar um erro similar ao seguinte:
+   > Você só pode se conectar a [Contas de Armazenamento de Uso Geral](https://docs.microsoft.com/azure/storage/storage-introduction#azure-storage-services). Conectar-se a outros tipos de contas de armazenamento pode gerar um erro similar ao seguinte:
    >
    >  O valor de um dos cabeçalhos HTTP não está no formato correto. (Microsoft.SqlServer.StorageClient).
    >

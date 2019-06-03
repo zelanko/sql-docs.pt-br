@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 04c7d8564b739bd593b84c3925e3d7491a1bbca8
-ms.sourcegitcommit: 1d66761e54490267be4d0a94efc0ad6790051ef2
+ms.openlocfilehash: 3139f841d1ef7c75decbc5a3dbab34fb333d289c
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65198078"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428990"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notas sobre a versão do SQL Server Management Studio (SSMS)
 
@@ -100,7 +100,7 @@ A versão de GA (disponibilidade geral) do SSMS 18.0 está disponível. Se você
 |Classificação de dados|Adicionado o novo recurso 'Classificação de dados' para o SMO. O objeto Column expõe novas propriedades: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId e IsClassified (somente leitura). Para obter mais informações, veja [ADICIONAR CLASSIFICAÇÃO DE SENSIBILIDADE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql) |
 |Classificação de dados|Adicionado o item de menu "Relatório de Classificação" ao menu "Classificação de Dados".|
 |Classificação de dados| Recomendações atualizadas.|
-|Atualização do modo de compatibilidade do banco de dados|Uma nova opção foi adicionada em **<Database name>** > **Tarefas** > **Atualização do Banco de Dados**. Isso inicia o novo **QTA (Assistente de Ajuste de Consulta)** para orientar o usuário no processo de:<br>Coleta de uma linha de base de desempenho antes de atualizar o nível de compatibilidade do banco de dados.<br>Atualização para o nível de compatibilidade do banco de dados desejado.<br>Coleta de uma segunda passagem de dados de desempenho sobre a mesma carga de trabalho.<br>Detectar regressões de carga de trabalho e fornecer recomendações testadas para melhorar o desempenho da carga de trabalho.<br>Isso está perto do processo de atualização de banco de dados documentado em [cenários de uso do repositório de consultas](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade), exceto pela última etapa, em que o QTA não se baseia em um estado anterior sabidamente válido para gerar recomendações.|
+|Atualização do modo de compatibilidade do banco de dados|Uma nova opção foi adicionada em **<Database name>**  > **Tarefas** > **Atualização do Banco de Dados**. Isso inicia o novo **QTA (Assistente de Ajuste de Consulta)** para orientar o usuário no processo de:<br>Coleta de uma linha de base de desempenho antes de atualizar o nível de compatibilidade do banco de dados.<br>Atualização para o nível de compatibilidade do banco de dados desejado.<br>Coleta de uma segunda passagem de dados de desempenho sobre a mesma carga de trabalho.<br>Detectar regressões de carga de trabalho e fornecer recomendações testadas para melhorar o desempenho da carga de trabalho.<br>Isso está perto do processo de atualização de banco de dados documentado em [cenários de uso do repositório de consultas](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade), exceto pela última etapa, em que o QTA não se baseia em um estado anterior sabidamente válido para gerar recomendações.|
 |Assistente de Aplicativo da Camada de Dados|Adicionado suporte para importar/exportar aplicativo da camada de dados com tabelas de grafo.|
 |Assistente de Importação de Arquivo Simples|Adicionada lógica para notificar o usuário de que uma importação pode ter resultado em uma renomeação das colunas.|
 |Integration Services (SSIS)|Suporte adicionado para permitir aos clientes agendar pacotes do SSIS nos Azure-SSIS IRs que estão na nuvem do Azure Governamental.|
@@ -231,7 +231,7 @@ A versão de GA (disponibilidade geral) do SSMS 18.0 está disponível. Se você
 |Pesquisador de Objetos|A lógica foi estendida para solicitar confirmação ao renomear um banco de dados para todos os objetos de esquema (a configuração pode ser definida).|
 |Pesquisador de Objetos|Adicionado o escape adequado na filtragem do Pesquisador de Objetos. Para obter detalhes, consulte https://feedback.azure.com/forums/908035/suggestions/36678803. |
 |Pesquisador de Objetos|Corrigido/aprimorado o modo de exibição Detalhes do Pesquisador de Objetos para mostrar os números com os separadores adequados. Para obter detalhes, consulte https://feedback.azure.com/forums/908035/suggestions/32900944. |
-|Pesquisador de Objetos|Corrigido o menu de contexto no nó "Tabelas" quando conectado ao SQL Express, em que o submenu "Novo" estava ausente, tabelas de grafo eram listadas incorretamente e a tabela com a Versão do Sistema estava ausente. Para obter detalhes, consulte https://feedback.azure.com/forums/908035/suggestions/37245529.|
+|Pesquisador de Objetos|Corrigido o menu de contexto no nó "Tabelas" quando conectado ao SQL Express, em que o submenu "Novo" estava ausente, tabelas de grafo eram listadas incorretamente e a tabela com a Versão do Sistema estava ausente. Para obter detalhes, consulte https://feedback.azure.com/forums/908035/suggestions/37245529. |
 |Script de Objeto|Em geral, melhorias de desempenho – gerar scripts de WideWorldImporters leva metade do tempo em comparação com o SSMS 17.7.|
 |Script de Objeto|Ao executar o script de objetos, a configuração no escopo do banco de dados que tem valores padrão é omitida.|
 |Script de Objeto|Não gere o T-SQL dinâmico ao executar o script. Consulte https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391. |
@@ -475,7 +475,7 @@ Always Encrypted:
 
 ### <a name="known-issues"></a>Problemas conhecidos
 
-- Clicar no botão *Script* após modificar qualquer propriedade do grupo de arquivos na janela *Propriedades* gera dois scripts: um script com uma instrução *USE <database>* e um segundo script com uma instrução *USE master*.  O script com *USE master* é gerado com erro e deve ser descartado. Execute o script que contém a instrução *USE <database>*.
+- Clicar no botão *Script* após modificar qualquer propriedade do grupo de arquivos na janela *Propriedades* gera dois scripts: um script com uma instrução *USE <database>* e um segundo script com uma instrução *USE master*.  O script com *USE master* é gerado com erro e deve ser descartado. Execute o script que contém a instrução *USE <database>* .
 - Algumas caixas de diálogo exibem um erro de edição inválida ao trabalhar com novas edições *Uso Geral* ou *Comercialmente Crítico* do Banco de Dados SQL do Azure.
 - Pode ser observada alguma latência no visualizador XEvents. Este é um [problema conhecido no .NET Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Considere a possibilidade de atualizar para o NetFx 4.7.2.
 
@@ -954,7 +954,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - O designer **Nova tabela/exibição** mostra o prompt de logon de estilo antigo e não funciona para a autenticação do Azure AD.
   - O recurso **Editar 200 linhas superiores** não dá suporte à autenticação do Azure AD.
   - O componente **Servidor Registrado** não dá suporte à autenticação do Azure AD.
-  - Não há suporte para o **Orientador de Otimização do Mecanismo de Banco de Dados** para autenticação do Azure AD. Há um problema conhecido em que a mensagem de erro apresentada ao usuário não é útil: *Não foi possível carregar arquivo ou assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,...* em vez do esperado *Orientador de Otimização do Mecanismo de Banco de Dados não tem suporte para o Banco de Dados SQL do Microsoft Azure. (DTAClient)*.
+  - Não há suporte para o **Orientador de Otimização do Mecanismo de Banco de Dados** para autenticação do Azure AD. Há um problema conhecido em que a mensagem de erro apresentada ao usuário não é útil: *Não foi possível carregar arquivo ou assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,...* em vez do esperado *Orientador de Otimização do Mecanismo de Banco de Dados não tem suporte para o Banco de Dados SQL do Microsoft Azure. (DTAClient)* .
 
 **AS (Analysis Services)**
 
