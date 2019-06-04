@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f8305dbb894ff679d26702ddd877add9eeb4f76
-ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
+ms.openlocfilehash: 935b63a38cbef585c33d2241652f4951189b61b4
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66428957"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462551"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -68,10 +68,10 @@ ms.locfileid: "66428957"
 |**last_elapsed_time**|**bigint**|Tempo decorrido, em microssegundos, para a execução concluída mais recente dessa função.|  
 |**min_elapsed_time**|**bigint**|Tempo mínimo decorrido, em microssegundos, de qualquer execução concluída dessa função.|  
 |**max_elapsed_time**|**bigint**|Tempo máximo decorrido, em microssegundos, de qualquer execução concluída dessa função.|  
-|**total_page_server_reads**|**bigint**|Número total de leituras de servidor remoto página efetuadas por execuções dessa função, pois ele foi compilado.<br /><br /> **Aplica-se a:** Em hiperescala do banco de dados SQL do Azure.|  
-|**last_physical_reads**|**bigint**|Número de leituras de servidor remoto página efetuadas na última vez em que a função foi executada.<br /><br /> **Aplica-se a:** Em hiperescala do banco de dados SQL do Azure.|  
-|**min_physical_reads**|**bigint**|Número mínimo de servidor remoto página lê que essa função efetuou durante uma única execução.<br /><br /> **Aplica-se a:** Em hiperescala do banco de dados SQL do Azure.|  
-|**max_physical_reads**|**bigint**|Número máximo de servidor remoto página lê que essa função efetuou durante uma única execução.<br /><br /> **Aplica-se a:** Em hiperescala do banco de dados SQL do Azure.|
+|**total_page_server_reads**|**bigint**|Número total de leituras de página de servidor efetuadas por execuções dessa função, pois ele foi compilado.<br /><br /> **Aplica-se a:** Em hiperescala do banco de dados SQL do Azure.|  
+|**last_page_server_reads**|**bigint**|Número de leituras de página de servidor efetuadas na última vez em que a função foi executada.<br /><br /> **Aplica-se a:** Em hiperescala do banco de dados SQL do Azure.|  
+|**min_page_server_reads**|**bigint**|Número mínimo de servidor de páginas lê que essa função efetuou durante uma única execução.<br /><br /> **Aplica-se a:** Em hiperescala do banco de dados SQL do Azure.|  
+|**max_page_server_reads**|**bigint**|Número máximo de servidor de páginas lê que essa função efetuou durante uma única execução.<br /><br /> **Aplica-se a:** Em hiperescala do banco de dados SQL do Azure.|
   
 ## <a name="permissions"></a>Permissões  
 

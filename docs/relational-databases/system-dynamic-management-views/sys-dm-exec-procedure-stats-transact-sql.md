@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_procedure_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e472d6f8b7b18bb7e73613a8c60a27461bb49b43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7f4622eec6b7c5d3a3cc206b43cd31253fe7ee2
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013411"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462669"
 ---
 # <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,6 +77,10 @@ ms.locfileid: "63013411"
 |**min_spills**|**bigint**|O número mínimo de páginas que este procedimento armazenado já foram liberados durante uma única execução.<br /><br /> **Aplica-se ao**: Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|O número máximo de páginas que este procedimento armazenado já foram liberados durante uma única execução.<br /><br /> **Aplica-se ao**: Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|O identificador para o nó que essa distribuição é no.<br /><br />**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**total_page_server_reads**|**bigint**|O número total de leituras de página de servidor efetuadas por execuções deste procedimento armazenado desde sua compilação.<br /><br /> **Aplica-se ao**: Em hiperescala do banco de dados SQL do Azure|  
+|**last_page_server_reads**|**bigint**|O número de leituras de página de servidor efetuadas na última vez em que o procedimento armazenado foi executado.<br /><br /> **Aplica-se ao**: Em hiperescala do banco de dados SQL do Azure|  
+|**min_page_server_reads**|**bigint**|O número mínimo de servidor de páginas lê que esse procedimento armazenado efetuou durante uma única execução.<br /><br /> **Aplica-se ao**: Em hiperescala do banco de dados SQL do Azure|  
+|**max_page_server_reads**|**bigint**|O número máximo de servidor de páginas lê que esse procedimento armazenado efetuou durante uma única execução.<br /><br /> **Aplica-se ao**: Em hiperescala do banco de dados SQL do Azure|  
   
  <sup>1</sup> para procedimentos armazenados compilados nativamente quando a coleta de estatísticas é habilitada, tempo de trabalho será coletado em milissegundos. Se a consulta for executada em menos de um milissegundo, o valor será 0.  
   

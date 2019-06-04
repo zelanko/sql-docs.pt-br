@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_trigger_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfd6485955cbdee7bece7ae8ab18c5138a5529f3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 42fc6848b89c57e6bfab40f1af96013fc73271f6
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403531"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462708"
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,6 +68,11 @@ ms.locfileid: "52403531"
 |**last_spills**|**bigint**|O número de páginas despejadas a última vez em que o gatilho foi executado.<br /><br /> **Aplica-se ao**: Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|O número mínimo de páginas que esse gatilho já foram liberados durante uma única execução.<br /><br /> **Aplica-se ao**: Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|O número máximo de páginas que esse gatilho já foram liberados durante uma única execução.<br /><br /> **Aplica-se ao**: Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_page_server_reads**|**bigint**|O número total de leituras de página de servidor efetuadas por execuções deste gatilho desde sua compilação.<br /><br /> **Aplica-se ao**: Em hiperescala do banco de dados SQL do Azure|  
+|**last_page_server_reads**|**bigint**|O número de leituras de página de servidor efetuadas na última vez em que o gatilho foi executado.<br /><br /> **Aplica-se ao**: Em hiperescala do banco de dados SQL do Azure|  
+|**min_page_server_reads**|**bigint**|O número mínimo de servidor de páginas lê que este gatilho efetuou durante uma única execução.<br /><br /> **Aplica-se ao**: Em hiperescala do banco de dados SQL do Azure|  
+|**max_page_server_reads**|**bigint**|O número máximo de servidor de páginas lê que este gatilho efetuou durante uma única execução.<br /><br /> **Aplica-se ao**: Em hiperescala do banco de dados SQL do Azure|  
+
   
 ## <a name="remarks"></a>Comentários  
  No [!INCLUDE[ssSDS](../../includes/sssds-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, cada linha que contém dados que não pertencem ao locatário conectado será filtrada.  

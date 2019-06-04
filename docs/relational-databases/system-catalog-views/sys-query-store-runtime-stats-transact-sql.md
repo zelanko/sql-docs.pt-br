@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_runtime_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/23/2019
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9df0a31b6a15bfedd02e281b6e9bc5367144e9a9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: dd25f70c7cf3d34a4411cc15802437d97f5f8190
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65980053"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462728"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -93,7 +93,12 @@ ms.locfileid: "65980053"
 |**last_log_bytes_used**|**bigint**|Número de bytes no log do banco de dados usado pela última execução do plano de consulta, dentro do intervalo de agregação.<br/>**Observação:** SQL Data Warehouse do Azure sempre retornará zero (0).|
 |**min_log_bytes_used**|**bigint**|Número mínimo de bytes no log do banco de dados usadas pelo plano de consulta dentro do intervalo de agregação.<br/>**Observação:** SQL Data Warehouse do Azure sempre retornará zero (0).|
 |**max_log_bytes_used**|**bigint**|Número máximo de bytes no log do banco de dados usadas pelo plano de consulta dentro do intervalo de agregação.<br/>**Observação:** SQL Data Warehouse do Azure sempre retornará zero (0).|
-|**stdev_log_bytes_used**|**float**|Desvio padrão do número de bytes no log do banco de dados usado por um plano de consulta, dentro do intervalo de agregação.<br/>**Observação:** SQL Data Warehouse do Azure sempre retornará zero (0).|
+|**stdev_log_bytes_used**|**float**|Desvio padrão do número de bytes no log do banco de dados usado por um plano de consulta, dentro do intervalo de agregação.<br/>**Observação:** SQL Data Warehouse do Azure sempre retornará zero (0).|  
+|**avg_page_server_io_reads**|**float**|Número médio de página lê da e/s do servidor para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8KB de leitura).<br><br/>**Observação:** Aplica-se a: Em hiperescala do banco de dados SQL do Azure</br> Azure SQL Data Warehouse, Azure SQL DB, MI (não hiperescala) sempre retornará zero (0).|
+|**last_page_server_io_reads**|**bigint**|Lê do último número de e/s de servidor de páginas para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8KB de leitura).<br><br/>**Observação:** Aplica-se a: Em hiperescala do banco de dados SQL do Azure </br> Azure SQL Data Warehouse, Azure SQL DB, MI (não hiperescala) sempre retornará zero (0).|
+|**min_page_server_io_reads**|**bigint**|Número mínimo de página lê da e/s do servidor para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8KB de leitura).<br><br/>**Observação:** Aplica-se a: Em hiperescala do banco de dados SQL do Azure </br> Azure SQL Data Warehouse, Azure SQL DB, MI (não hiperescala) sempre retornará zero (0).|
+|**max_page_server_io_reads**|**bigint**|Número máximo de página lê da e/s do servidor para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8KB de leitura).<br><br/>**Observação:** Aplica-se a: Em hiperescala do banco de dados SQL do Azure </br> Azure SQL Data Warehouse, Azure SQL DB, MI (não hiperescala) sempre retornará zero (0).|
+|**stdev_page_server_io_reads**|**float**|Número do servidor de página e/s de leituras de desvio padrão para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8KB de leitura).<br><br/>**Observação:** Aplica-se a: Em hiperescala do banco de dados SQL do Azure </br> Azure SQL Data Warehouse, Azure SQL DB, MI (não hiperescala) sempre retornará zero (0).|
   
 ## <a name="permissions"></a>Permissões  
  Requer o **VIEW DATABASE STATE** permissão.  

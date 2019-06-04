@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 65c6afcf3f74e320237c1f345ad643752fde6ae0
-ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.openlocfilehash: 01fb7962a5be08f40fe1c790b335c24d34979a2a
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454764"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462555"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Instalar serviços do SQL Server Machine Learning com R e Python em uma máquina virtual do Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ Você pode instalar a integração de R e Python com os serviços de aprendizado
  
 Para obter instruções passo a passo, consulte [como provisionar uma máquina de virtual do Windows SQL Server no portal do Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision).
 
-O [configurações de configurar o SQL server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#4-configure-sql-server-settings) etapa é onde adicionar o aprendizado de máquina para sua instância.
+O [configurações de configurar o SQL server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) etapa é onde adicionar o aprendizado de máquina para sua instância.
 
 <a name="firewall"></a>
 
