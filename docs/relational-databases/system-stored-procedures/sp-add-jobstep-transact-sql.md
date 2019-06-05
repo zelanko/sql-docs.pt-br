@@ -1,7 +1,7 @@
 ---
 title: sp_add_jobstep (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,15 +18,16 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: afa9128537cf699277385de3b7dce6aabd900191
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 112afe8f7a8eaea87c860264c820c874788cbc7f
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494408"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500365"
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Adiciona uma etapa (operação) a um trabalho.  
   
@@ -34,8 +35,7 @@ ms.locfileid: "58494408"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```
 sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'   
      [ , [ @step_id = ] step_id ]   
      { , [ @step_name = ] 'step_name' }   
@@ -67,11 +67,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
-`[ @step_id = ] step_id` O número de identificação de sequência para a etapa de trabalho. Etapa inicial de números de identificação no **1** e incrementados sem intervalos. Se uma etapa for inserida na sequência existente, os números da sequência serão ajustados automaticamente. Um valor for fornecido, se *step_id* não for especificado. *step_id*está **int**, com um padrão NULL.  
+`[ @step_id = ] step_id` O número de identificação de sequência para a etapa de trabalho. Etapa inicial de números de identificação no **1** e incrementados sem intervalos. Se uma etapa for inserida na sequência existente, os números da sequência serão ajustados automaticamente. Um valor for fornecido, se *step_id* não for especificado. *step_id* está **int**, com um padrão NULL.  
   
-`[ @step_name = ] 'step_name'` O nome da etapa. *step_name*está **sysname**, sem padrão.  
+`[ @step_name = ] 'step_name'` O nome da etapa. *step_name* está **sysname**, sem padrão.  
   
-`[ @subsystem = ] 'subsystem'` O subsistema usado pelas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço de agente para executar *comando*. *subsistema* está **nvarchar(40)**, e pode ser um destes valores.  
+`[ @subsystem = ] 'subsystem'` O subsistema usado pelas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço de agente para executar *comando*. *subsistema* está **nvarchar(40)** , e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -88,7 +88,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**PowerShell**'|Scripts PowerShell|  
 |'**TSQL**' (padrão)|Instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]|  
   
-`[ @command = ] 'command'` Os comandos a serem executados pelo **SQLServerAgent** serviço por meio de *subsistema*. *comando* está **nvarchar (max)**, com um padrão NULL. O SQL Server Agent fornece uma substituição de token que propicia a mesma flexibilidade que as variáveis ao escrever programas de software.  
+`[ @command = ] 'command'` Os comandos a serem executados pelo **SQLServerAgent** serviço por meio de *subsistema*. *comando* está **nvarchar (max)** , com um padrão NULL. O SQL Server Agent fornece uma substituição de token que propicia a mesma flexibilidade que as variáveis ao escrever programas de software.  
   
 > [!IMPORTANT]  
 >  Uma macro de fuga agora deve acompanhar todos os tokens utilizados em etapas de trabalho ou elas falharão. Além disso, deve-se colocar os nomes de token entre parênteses e um sinal de cifrão (`$`) no início da sintaxe do token. Por exemplo:  
@@ -98,15 +98,15 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  Para obter mais informações sobre esses tokens e atualizar suas etapas de trabalho para usar a nova sintaxe de token, consulte [usar Tokens em etapas de trabalho](../../ssms/agent/use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
->  Qualquer usuário Windows com permissões de gravação no Log de Eventos do Windows pode acessar etapas de trabalho ativadas pelos alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou alertas do WMI. Para evitar riscos de segurança, os tokens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que podem ser usados em trabalhos ativados por alertas encontram-se desabilitados por padrão. Esses tokens são: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** e **WMI(**_propriedade_**)**. Observe que nesta versão, o uso de tokens foi estendido a todos os alertas.  
+>  Qualquer usuário Windows com permissões de gravação no Log de Eventos do Windows pode acessar etapas de trabalho ativadas pelos alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou alertas do WMI. Para evitar riscos de segurança, os tokens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que podem ser usados em trabalhos ativados por alertas encontram-se desabilitados por padrão. Esses tokens são: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** e **WMI(** _propriedade_ **)** . Observe que nesta versão, o uso de tokens foi estendido a todos os alertas.  
 >   
 >  Se tiver que usar esses tokens, garanta, primeiro, que apenas membros dos grupos de segurança confiáveis do Windows, como o grupo Administradores, tenham permissões de gravação no Log de Eventos do computador em que reside o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Depois, clique com o botão direito do mouse em **SQL Server Agent** no Pesquisador de Objetos, selecione **Propriedades**e, na página **Sistema de Alerta** , selecione **Substituir tokens de todas as respostas de trabalho aos alertas** para habilitar esses tokens.  
   
 `[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *parâmetros* está **ntext**, com um padrão NULL.  
   
-`[ @cmdexec_success_code = ] code` O valor retornado por uma **CmdExec** comando de subsistema para indicar que *comando* foi executada com êxito. *código*está **int**, com um padrão de **0**.  
+`[ @cmdexec_success_code = ] code` O valor retornado por uma **CmdExec** comando de subsistema para indicar que *comando* foi executada com êxito. *código* está **int**, com um padrão de **0**.  
   
-`[ @on_success_action = ] success_action` A ação a ser executada se a etapa tiver êxito. *success_action*está **tinyint**, e pode ser um destes valores.  
+`[ @on_success_action = ] success_action` A ação a ser executada se a etapa tiver êxito. *success_action* está **tinyint**, e pode ser um destes valores.  
   
 |Valor|Descrição (ação)|  
 |-----------|----------------------------|  
@@ -115,9 +115,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**3**|Ir para a próxima etapa|  
 |**4**|Vá para a etapa *on_success_step_id*|  
   
-`[ @on_success_step_id = ] success_step_id` A ID da etapa neste trabalho a ser executada se a etapa tiver êxito e *success_action*é **4**. *success_step_id*está **int**, com um padrão de **0**.  
+`[ @on_success_step_id = ] success_step_id` A ID da etapa neste trabalho a ser executada se a etapa tiver êxito e *success_action* é **4**. *success_step_id* está **int**, com um padrão de **0**.  
   
-`[ @on_fail_action = ] fail_action` A ação a ser executada se a etapa falhar. *fail_action*está **tinyint**, e pode ser um destes valores.  
+`[ @on_fail_action = ] fail_action` A ação a ser executada se a etapa falhar. *fail_action* está **tinyint**, e pode ser um destes valores.  
   
 |Valor|Descrição (ação)|  
 |-----------|----------------------------|  
@@ -126,21 +126,21 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**3**|Ir para a próxima etapa|  
 |**4**|Vá para a etapa *on_fail_step_id*|  
   
-`[ @on_fail_step_id = ] fail_step_id` A ID da etapa neste trabalho a ser executada se a etapa falhar e *fail_action*é **4**. *fail_step_id*está **int**, com um padrão de **0**.  
+`[ @on_fail_step_id = ] fail_step_id` A ID da etapa neste trabalho a ser executada se a etapa falhar e *fail_action* é **4**. *fail_step_id* está **int**, com um padrão de **0**.  
   
-`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *servidor*está **nvarchar (30)**, com um padrão NULL.  
+`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *servidor* está **nvarchar (30)** , com um padrão NULL.  
   
 `[ @database_name = ] 'database'` O nome do banco de dados no qual executar um [!INCLUDE[tsql](../../includes/tsql-md.md)] etapa. *banco de dados* está **sysname**, com um padrão de NULL, caso em que o **mestre** banco de dados é usado. Os nomes entre colchetes ([ ]) não são permitidos. Para uma etapa do ActiveX, o *banco de dados* é o nome da linguagem de script que usa a etapa.  
   
 `[ @database_user_name = ] 'user'` O nome da conta de usuário para usar ao executar um [!INCLUDE[tsql](../../includes/tsql-md.md)] etapa. *usuário* está **sysname**, com um padrão NULL. Quando *usuário* for NULL, a etapa é executada no contexto do usuário do proprietário do trabalho na *banco de dados*.  O SQL Server Agent só incluirá esse parâmetro se o proprietário do trabalho for um sysadmin de SQL Server. Assim, a determinada etapa de Transact-SQL será executada no contexto do determinado nome de usuário do SQL Server. Se o proprietário do trabalho não for um sysadmin do SQL Server, a etapa de Transact-SQL sempre será executada no contexto do logon que possua esse trabalho, e o @database_user_name parâmetro será ignorado.  
   
-`[ @retry_attempts = ] retry_attempts` O número de novas tentativas a ser usado se a etapa atual falhar. *retry_attempts*está **int**, com um padrão de **0**, que não indica nenhuma repetição de tentativas.  
+`[ @retry_attempts = ] retry_attempts` O número de novas tentativas a ser usado se a etapa atual falhar. *retry_attempts* está **int**, com um padrão de **0**, que não indica nenhuma repetição de tentativas.  
   
-`[ @retry_interval = ] retry_interval` A quantidade de tempo em minutos entre as tentativas de repetição. *intervalo_de_repetição*está **int**, com um padrão de **0**, que indica uma **0**-um intervalo de minutos.  
+`[ @retry_interval = ] retry_interval` A quantidade de tempo em minutos entre as tentativas de repetição. *intervalo_de_repetição* está **int**, com um padrão de **0**, que indica uma **0**-um intervalo de minutos.  
   
 `[ @os_run_priority = ] run_priority` Reservado.  
   
-`[ @output_file_name = ] 'file_name'` O nome do arquivo no qual a saída desta etapa é salvo. *file_name*está **nvarchar(200)**, com um padrão NULL. *file_name*pode incluir um ou mais dos tokens listado em *comando*. Esse parâmetro é válido somente com comandos executados [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] subsistemas.  
+`[ @output_file_name = ] 'file_name'` O nome do arquivo no qual a saída desta etapa é salvo. *file_name* está **nvarchar(200)** , com um padrão NULL. *file_name* pode incluir um ou mais dos tokens listado em *comando*. Esse parâmetro é válido somente com comandos executados [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] subsistemas.  
   
 `[ @flags = ] flags` É uma opção que controla comportamento. *sinalizadores* está **int**, e pode ser um destes valores.  
   
@@ -192,14 +192,14 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  Este exemplo supõe que o `Weekly Sales Data Backup` trabalho já existe.  
   
-```  
+```sql
 USE msdb;  
 GO  
 EXEC sp_add_jobstep  
     @job_name = N'Weekly Sales Data Backup',  
     @step_name = N'Set database to read only',  
     @subsystem = N'TSQL',  
-    @command = N'ALTER DATABASE SALES SET READ_ONLY',   
+    @command = N'ALTER DATABASE SALES SET READ_ONLY',
     @retry_attempts = 5,  
     @retry_interval = 5 ;  
 GO  
