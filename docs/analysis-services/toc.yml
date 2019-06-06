@@ -382,6 +382,8 @@
               items:
                 - name: Criar e gerenciar medidas
                   href: ../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md
+            - name: Grupos de cálculo
+              href: ../analysis-services/tabular-models/calculation-groups.md
             - name: KPIs
               href: ../analysis-services/tabular-models/kpis-ssas-tabular.md
               items:
