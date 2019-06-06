@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: bf53939f-5543-40ac-a707-aa35e9bde1dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44559731867f2c2c1cd4ba397e5558c540e65f48
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 31b4edac079f8b05868b1ed7b16a7c71fa7aa39c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63033223"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708751"
 ---
 # <a name="schemaobjecttypeenum"></a>SchemaObjectTypeEnum
 Especifica o tipo de objeto a ser recuperado o [GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md) método.  

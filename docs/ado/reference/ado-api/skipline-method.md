@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 0abc00fe-ee09-4c8e-b1f2-48ee9c5f3329
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0e96900fdac55e97e3481ba5198e0f51d659877
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 39f17727973a5ada4f28c8ff4b50d13bb5e991e7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63192761"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711225"
 ---
 # <a name="skipline-method"></a>Método SkipLine
 Ignora uma linha inteira durante a leitura de um texto [Stream](../../../ado/reference/ado-api/stream-object-ado.md).  

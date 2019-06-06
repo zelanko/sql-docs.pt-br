@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.custom: sql-linux
-ms.openlocfilehash: 5de8172a38cfb547315c2cf65c470b019b7227eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38f0f3a03e6de4cec622ffe03f9dbdc47a7ccb73
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723194"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713160"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Use o SQL Server Management Studio no Windows para gerenciar o SQL Server no Linux
 
@@ -57,7 +56,7 @@ Use as seguintes etapas básicas para se conectar:
 
 1. No **conectar ao servidor** janela, insira as informações a seguir (se o SSMS já está em execução, clique em **conectar > mecanismo de banco de dados** para abrir o **conectar ao servidor** janela):
 
-   | Configuração | Description |
+   | Configuração | Descrição |
    |-----|-----|
    | **Tipo de servidor** | O padrão é o mecanismo de banco de dados; Não altere esse valor. |
    | **Nome do servidor** | Insira o nome do computador do Linux do SQL Server de destino ou seu endereço IP. |
@@ -93,7 +92,7 @@ Depois de se conectar ao seu servidor, você pode se conectar a um banco de dado
 
 1. Clique o **Execute** botão para executar a consulta e ver os resultados.
 
-   ![Sucesso. Conectar-se ao servidor de banco de dados SQL: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+   ![Sucesso. Conecte-se ao servidor de banco de dados SQL: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
 Embora seja possível fazer quase qualquer tarefa de gerenciamento com consultas Transact-SQL, o SSMS é uma ferramenta gráfica que faz é mais fácil de gerenciar o SQL Server. As seções a seguir fornecem alguns exemplos de como usar a interface gráfica do usuário.
 

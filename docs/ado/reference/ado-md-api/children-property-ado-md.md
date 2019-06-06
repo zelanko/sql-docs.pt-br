@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f489a87573dabbd091f5d2dce8a084b53cc5771e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 219aeba8cfc7e913a2febdd031c844aed922832e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62653532"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709666"
 ---
 # <a name="children-property-ado-md"></a>Propriedade Children (ADO MD)
 Retorna um [membros](../../../ado/reference/ado-md-api/members-collection-ado-md.md) coleção para a qual atual [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) é o pai na hierarquia.  

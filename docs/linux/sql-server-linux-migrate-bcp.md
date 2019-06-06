@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 01/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: 506d98acd28b38d0ce8867f96229632a306ae680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bda200cccdaadb4db30b95289c2e16982a4e1f4b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812144"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713141"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Dados de cópia em massa com bcp para o SQL Server no Linux
 
@@ -81,7 +80,7 @@ Isso deve exibir o seguinte na janela do terminal:
 ```
 
 ### <a name="import-data-from-the-source-data-file"></a>Importar dados do arquivo de dados de origem
-Copie e cole os comandos a seguir na janela de terminal. Esse comando usa `bcp` para se conectar à instância do SQL Server local (**localhost**) e importar os dados do arquivo de dados (**~/test_data.txt**) na tabela (**TestEmployees** ) no banco de dados (**BcpSampleDB**). Lembre-se de substituir o nome de usuário e `<your_password>` conforme necessário antes de executar os comandos.
+Copie e cole os comandos a seguir na janela de terminal. Esse comando usa `bcp` para se conectar à instância do SQL Server local (**localhost**) e importar os dados do arquivo de dados ( **~/test_data.txt**) na tabela (**TestEmployees** ) no banco de dados (**BcpSampleDB**). Lembre-se de substituir o nome de usuário e `<your_password>` conforme necessário antes de executar os comandos.
 
 ```bash 
 bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t  ','
@@ -140,4 +139,4 @@ Isso deve exibir o seguinte na janela do terminal:
 - [utilitário bcp](../tools/bcp-utility.md)
 - [Formatos de dados para compatibilidade usando bcp](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
 - [Importar dados em massa usando BULK INSERT](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
-- [INSERÇÃO em MASSA (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)
+- [BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)

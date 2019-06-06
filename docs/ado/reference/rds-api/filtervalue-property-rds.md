@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a30e3058c86c3250942238b3cd98a0cfd6e0a6de
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1e45986cdd44d0ab9bffc1ea11fe1a9ced350e3c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63273748"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712618"
 ---
 # <a name="filtervalue-property-rds"></a>Propriedade FilterValue (RDS)
 Indica o valor com o qual filtrar registros.  

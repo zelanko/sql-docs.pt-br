@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: faa4d4887079064ac6ccbe9536ac6c36fe8b9f79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4001ac5b449609683293cd3174dc4410cabf4c4b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302348"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701867"
 ---
 # <a name="operation-of-parameterized-commands"></a>Operação de comandos parametrizados
 Se você estiver trabalhando com um grande filho **conjunto de registros**, especialmente se comparado ao tamanho do pai **conjunto de registros**, mas que precisam acessar apenas poucos capítulos de filho, você talvez ache mais eficiente usar um comando parametrizado.  
@@ -75,7 +75,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  Usando uma hierarquia sem parâmetros, há nenhuma maneira para relacionar as tabelas de jogos e equipes de tal forma que o filho **Recordset** para cada equipe contém sua agenda completa. Você pode criar capítulos que contêm a agenda inicial ou a agenda de estrada, mas não ambos. Isso ocorre porque a cláusula RELATE limita você a relações pai-filho do formulário (pc1 = cc1) AND (pc2 = pc2). Portanto, se o comando inclui "Relacionar team_id TO home_team, team_id TO visiting_team", você obteria apenas jogos onde uma equipe estava jogando em si. O que você deseja é "(team_id=home_team) ou (team_id = visiting_team)", mas o provedor de forma não oferece suporte a cláusula OR.  
   
- Para obter o resultado desejado, você pode usar um comando com parâmetros. Por exemplo:   
+ Para obter o resultado desejado, você pode usar um comando com parâmetros. Por exemplo:  
   
 ```  
 SHAPE {SELECT * FROM teams}   

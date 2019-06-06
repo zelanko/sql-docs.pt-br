@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f05af48f2edcdcf2c6adc6e3617860fdad38bde7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a5c1c3869b144bb770ca893595986288b07aa596
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63314745"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711448"
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
 Especifica a direção de uma pesquisa de registro dentro de uma [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  

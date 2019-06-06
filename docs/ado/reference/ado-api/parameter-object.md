@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4a39f93e6b98595270e46d5a6f9b54b35098cb1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 152186c0bb1c2fb75197a920e06e0b6bb96dadd0
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62710348"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703321"
 ---
 # <a name="parameter-object"></a>Objeto Parameter
 Representa um parâmetro ou um argumento associado a um [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto com base em uma consulta parametrizada ou procedimento armazenado.  

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63407f75c5bee03d24b5b3f69c2ef94cb38e177e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 89a4597cc846db1bb3bb2fac0a79ec8c2090d9d3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63315166"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711151"
 ---
 # <a name="source-property-ado-error"></a>Propriedade Source (Erro ADO)
 Indica o nome do objeto ou aplicativo que originalmente gerou um erro.  

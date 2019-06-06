@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 01044c3a-ed38-4144-bc43-fe38a6d22d04
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7341f69d500274367c5c0a853d3fadf1261b9ee4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3a479604c52579fe3ad367993158767bbe4d1778
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63315855"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712529"
 ---
 # <a name="irdsservice-interface-rds"></a>Interface IRDSService (RDS)
 Expõe o [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) método, que é usado para retornar um ponteiro para a interface solicitada em uma versão mais robustos do objeto.  

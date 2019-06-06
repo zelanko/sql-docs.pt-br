@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a13adf7aa1a769f6e63f9686938cb801cd6383fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4d9b2e581bfbce225bd34e78761b9e8ade621172
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249058"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696728"
 ---
 # <a name="ado-enumerated-constants"></a>Constantes enumeradas do ADO
 Para ajudar na depuração, as enumerações de ADO listam um valor para cada constante. No entanto, esse valor é puramente comunicado e pode mudar de uma versão do ADO para outro. Seu código deve depender somente o nome, não o valor real de cada constante enumerada.  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5feb29337ccd0ee79cd1b6f98187cc6fdb52a942
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e38b253cdebcc5ab976de8c8eb355f7f6fb03aec
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214773"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699537"
 ---
 # <a name="customization-file-userlist-section"></a>Seção UserList do arquivo de personalização
 O **userlist** seção se refere à **connect** seção com a mesma seção *identificador* parâmetro.  
@@ -32,7 +32,7 @@ O **userlist** seção se refere à **connect** seção com a mesma seção *ide
 ## <a name="syntax"></a>Sintaxe  
  Uma entrada de acesso do usuário está no formato:  
   
- _userName_ **=**   
+ _userName_ **=**    
  **_accessRights_**  
   
 |Parte|Descrição|  

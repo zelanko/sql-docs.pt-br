@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4e2f08868aa581136bc155011671e0b8b1c55e68
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1ba7fe546f7ac8e1a036fc8fe7e5f523ebf09d4c
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028153"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719212"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 Especifica o [status](../../../ado/reference/ado-api/status-property-ado-field.md) de uma [objeto Field](../../../ado/reference/ado-api/field-object.md).  
