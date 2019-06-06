@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1fb066b2d75efd1ea1d5974c92ea5c524165f2e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 99ced09e841e4a778b9920ced4023336a1668d2d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472672"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701149"
 ---
 # <a name="connecting-to-data-sources"></a>Conectando-se a fontes de dados
 ADO **Conexão** objeto representa uma sessão exclusiva com uma fonte de dados, incluindo um arquivo de texto delimitado por vírgula, um armazenamento de arquivos ou um DBMS. No caso de um sistema de banco de dados cliente/servidor, a conexão ADO pode ser uma conexão de rede reais para o servidor.  

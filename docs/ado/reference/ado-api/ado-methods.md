@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 494de627d6e76ba59f1bfb0684c31afe4bf07e68
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 67b428a06679bdb0cade14314195d576a1ccc596
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248890"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696861"
 ---
 # <a name="ado-methods"></a>Métodos ADO
 

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2378d438c575ad54a89f09c4c9ddcb157c246ffd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8e3c3c7ff7d623d3bec0adf60773266bb6e53571
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184830"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704436"
 ---
 # <a name="working-with-recordsets"></a>Trabalhar com conjuntos de registros
 O **Recordset** objeto possui recursos internos que permitem a você reorganizar a ordem dos dados no conjunto de resultados, para procurar um registro específico com base em critérios fornecidos por você e até mesmo para otimizar as operações de pesquisa usando índices. Se esses recursos estão disponíveis para uso depende do provedor e em alguns casos – como do [índice](../../../ado/reference/ado-api/index-property.md) propriedade – a estrutura da fonte de dados em si.  
@@ -88,7 +88,7 @@ O **Recordset** objeto possui recursos internos que permitem a você reorganizar
   
 -   *FieldName* deve ser um nome de campo válido do **conjunto de registros**. Se o nome do campo contiver espaços, você deverá colocar o nome entre colchetes.  
   
--   *Operador* deve ser um dos seguintes: **\<**, **>**, **\< =**, **>=** , **<>**, **=**, ou **como**.  
+-   *Operador* deve ser um dos seguintes: **\<** , **>** , **\< =** , **>=** , **<>** , **=** , ou **como**.  
   
 -   *Valor* é o valor com o qual você irá comparar os valores de campo (por exemplo, `'Smith'`, `#8/24/95#`, `12.345`, ou `$50.00`). Use aspas simples (') com cadeias de caracteres e sinais numéricos (`#`) com datas. Para números, você pode usar a notação científica, cifrões e pontos decimais. Se *operador* é **como**, *valor* pode usar caracteres curinga. Somente o asterisco (\*) e o sinal de porcentagem (%) caracteres curinga são permitidos, e eles devem ser o último caractere na cadeia de caracteres. *Valor* não pode ser nulo.  
   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 95e09a0b3618d88929a0474e7a611d4ea1680793
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8caf11b72de62c62484f7548a9f73f33b70795bb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239933"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707131"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>Exemplo de OriginalValue e UnderlyingValue exemplo das propriedades (VB)
 Este exemplo demonstra a [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) e [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) propriedades exibindo uma mensagem se um registro de dados subjacentes foi alterada durante uma [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) atualização em lotes.  

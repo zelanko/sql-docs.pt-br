@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e4df670c5fe6ca42015e7e85445dafde47738f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c8cad8d669452fb5d3bdff154cd7c07239f25044
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63042620"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710882"
 ---
 # <a name="type-property-ado-stream"></a>Propriedade Type (Fluxo ADO)
 Indica o tipo de dados contidos na [Stream](../../../ado/reference/ado-api/stream-object-ado.md) (binários ou texto).  

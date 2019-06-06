@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ac5097a8692ed7a9e6566707354112547c5a619c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 130a67f10e8b7deaf8f48e94f949b43682f61ca1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62864007"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707624"
 ---
 # <a name="maxrecords-property-ado"></a>Propriedade MaxRecords (ADO)
 Indica o número máximo de registros a serem retornados para um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) de uma consulta.  

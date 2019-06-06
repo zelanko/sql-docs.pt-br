@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cede9be7c484d40c2220fc891779f7dfb6e5a8df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5d68f0e74e4bbfb275cbe23641c72eca4c941559
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028143"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697969"
 ---
 # <a name="filter-property"></a>Propriedade Filter
 Indica um filtro para os dados em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  

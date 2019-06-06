@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: bfb52e8c-cb06-47a0-931c-03b8bdb1a05a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f2860db43c5b336ce0259d721e4adccfb8ad17d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9b50581b2c6c5d1be1223599bef65bf9fbe99bb6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206310"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710189"
 ---
 # <a name="ado-md-code-examples-in-visual-basic"></a>Exemplos de código do ADO MD no Visual Basic
 Os exemplos a seguir exigem o Microsoft Visual Basic version 5.0 com Service Pack 3 ou o Visual Basic versão 6.0.  

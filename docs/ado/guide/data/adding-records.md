@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a17e09df7c7235e1361aae79bd89152c290b1bdb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 87d8358344d75cd6995d43d081abbec7aeaabe1c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294401"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701053"
 ---
 # <a name="adding-records-to-a-recordset"></a>Adicionar registros a um conjunto de registros
 Use o **AddNew** método para criar e inicializar um novo registro em um existente **conjunto de registros**. Você pode usar o **dá suporte a** método com um **CursorOptionEnum** valor de **adAddNew** para verificar se você pode adicionar registros a atual **doconjuntoderegistros** objeto.

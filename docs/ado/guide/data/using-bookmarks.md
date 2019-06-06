@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a083f9d411474769335fdfae32bd59dfe455a9f8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c7e14e063d1aabcfce6391a85c0fcddbf0ff4e9f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184927"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704621"
 ---
 # <a name="using-bookmarks"></a>Usar indicadores
 Geralmente é útil retornar diretamente a um registro específico após ter movidos a **Recordset** sem precisar rolar por todos os registros e comparar valores. Por exemplo, se você tentar procurar um registro usando o **encontrar** método, mas a pesquisa não retornar nenhum registro, são colocados automaticamente no final o **conjunto de registros**. Se seu provedor oferecer suporte a eles, os indicadores podem ser usados para marcar seu lugar antes de usar o **localizar** método para que você possa retornar para seu local. Um indicador é um **Variant** tipo de valor que identifica exclusivamente um registro em um **Recordset** objeto.  

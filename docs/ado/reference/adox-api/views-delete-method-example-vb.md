@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 17df2a83-4166-4df8-8c17-0a33aaac8582
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aa9b979ed90ffcc5df73968fd784b31bc044282a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 15070d0d89e63bc84e4a4a9ca0ed9091d9f0878e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281205"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697054"
 ---
 # <a name="views-delete-method-example-vb"></a>Exemplo do método Delete de exibições (VB)
 O código a seguir mostra como usar o [excluir](../../../ado/reference/adox-api/delete-method-adox-collections.md) método para excluir um modo de exibição do catálogo.  

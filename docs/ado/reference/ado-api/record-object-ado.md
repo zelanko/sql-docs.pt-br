@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d719ebf47757a48b034d2a0cadd0ed68f51f0ee5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 859bf3f53051a500e86742cb681885b8067f6a0c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62661627"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712221"
 ---
 # <a name="record-object-ado"></a>Objeto Record (ADO)
 Representa uma linha de uma [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou o provedor de dados ou um objeto retornado por um provedor de dados semiestruturados, como um arquivo ou diretório.  

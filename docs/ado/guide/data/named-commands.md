@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a9d38f80dcc44afa0d399885559b10f20027f906
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2604fdc39789be2e0c86cc7d2cbc6491d55ba1ff
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161650"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701953"
 ---
 # <a name="named-commands"></a>Comandos nomeados
 [Criar e executar um comando simples](../../../ado/guide/data/creating-and-executing-a-simple-command.md) mostra uma maneira de executar um comando. Há outra maneira: você pode torná-lo em um comando nomeado e, em seguida, chame este comando diretamente no chamado a **Conexão** objeto (atribuído à **ActiveConnection** propriedade do **comando** objeto). Nomear um comando significa que a atribuição de um nome para o **nome** propriedade de uma **comando** objeto. Por exemplo,  

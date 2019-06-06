@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a45eafed2c0e673820a5b93eaa13438ac7898988
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 75c75540433e077cc5d96bb9b2f0c88c05a62bd6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156437"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704038"
 ---
 # <a name="activecommand-property-example-vb"></a>Exemplo da propriedade ActiveCommand (VB)
 Este exemplo demonstra a [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) propriedade.  
@@ -93,7 +93,7 @@ End Sub
   
  O **ActiveCommandXprint** rotina é fornecida somente uma **conjunto de registros** do objeto, mas ele deve imprimir o texto do comando e parâmetro que criou o **conjunto de registros**. Isso pode ser feito porque o **conjunto de registros** do objeto **ActiveCommand** propriedade produz associado [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
   
- O **comando** do objeto [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriedade produz o comando com parâmetros que criou o **conjunto de registros**. O **comando** do objeto [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção produz o valor que foi substituído por espaço reservado de parâmetro do comando ("**?**").  
+ O **comando** do objeto [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriedade produz o comando com parâmetros que criou o **conjunto de registros**. O **comando** do objeto [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção produz o valor que foi substituído por espaço reservado de parâmetro do comando (" **?** ").  
   
  Por fim, uma mensagem de erro ou o nome do autor e ID são impressos.  
   

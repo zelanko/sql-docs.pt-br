@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 80f81dcff4f6220257e1210f5bc9dad7baca0b03
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 246d894ff38cc0dd74e96bb0fcbdb7b170b51d53
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062624"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700497"
 ---
 # <a name="streams-and-persistence"></a>Fluxos e persistência
 O [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto [salve](../../../ado/reference/ado-api/save-method.md) armazenamentos de método, ou *persistir*, um **Recordset** em um arquivo e o [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)restaurações de método de **Recordset** desse arquivo.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: sql-linux
-ms.openlocfilehash: c3d3c4a6ac5d5d49e880fc2af1546bdcf9a73779
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 655aebb0c07c812a7aa6c81e7c7033d85e8b7ce2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211735"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705210"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Instruções passo a passo para os recursos de segurança do SQL Server no Linux
 
@@ -138,9 +137,9 @@ Create a security policy adding the function as both a filter and a block predic
 
 ```
 Criar SalesFilter de política de segurança   
-Adicionar Security.fn_securitypredicate(SalesPersonID) de PREDICADO de filtro    
+ADD FILTER PREDICATE Security.fn_securitypredicate(SalesPersonID)    
   EM Sales. SalesOrderHeader,   
-Adicionar Security.fn_securitypredicate(SalesPersonID) de PREDICADO de bloco    
+ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)    
   EM Sales. SalesOrderHeader   
 WITH (STATE = ON);   
 ```
@@ -149,11 +148,11 @@ Execute the following to query the `SalesOrderHeader` table as each user. Verify
 
 ```    
 Executar como usuário = 'SalesPerson280';   
-Selecione * de Sales. SalesOrderHeader;    
+SELECT * FROM Sales.SalesOrderHeader;    
 REVERTER; 
  
 Executar como usuário = 'Gerenciador';   
-Selecione * de Sales. SalesOrderHeader;   
+SELECT * FROM Sales.SalesOrderHeader;   
 REVERTER;   
 ```
  
@@ -172,7 +171,7 @@ COM (ESTADO = OFF);
 Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
  
 ```
-USE AdventureWorks2014; VÁ ALTER tabela Person.EmailAddress     ALTER coluna EmailAddress    
+USE AdventureWorks2014; GO ALTER TABLE Person.EmailAddress     ALTER COLUMN EmailAddress    
 Adicionar MASCARADOS com (função = ' email()');
 ``` 
  
@@ -182,8 +181,8 @@ Create a new user `TestUser` with `SELECT` permission on the table, then execute
 Criar usuário TestUser sem logon;   
 GRANT SELECT ON Person.EmailAddress para TestUser;    
  
-Executar como usuário = "TestUser";   
-Selecione EmailAddressID, EmailAddress do Person.EmailAddress;       
+EXECUTE AS USER = 'TestUser';   
+SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
 REVERTER;    
 ```
  
@@ -224,20 +223,20 @@ The following example illustrates encrypting and decrypting the `AdventureWorks2
 USE master;  
 GO  
 
-CRIAR CHAVE MESTRA DE CRIPTOGRAFIA POR SENHA = ' * ';  
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
 GO  
 
 Criar certificado MyServerCert com o assunto = 'Meu banco de dados chave certificado de criptografia';  
 GO  
 
-USE AdventureWorks2014;   Ir
+USE AdventureWorks2014;   GO
   
 CREATE DATABASE ENCRYPTION KEY  
-COM O ALGORITMO = AES_256  
+WITH ALGORITHM = AES_256  
 CRIPTOGRAFIA MyServerCert de certificado do servidor;  
 GO
   
-Alterar banco de dados AdventureWorks2014  
+ALTER DATABASE AdventureWorks2014  
 DEFINIR CRIPTOGRAFIA;   
 ```
 
@@ -265,10 +264,10 @@ com
   COMPACTAÇÃO,  
   ENCRYPTION   
    (  
-   ALGORITMO = AES_256,  
+   ALGORITHM = AES_256,  
    CERTIFICADO do servidor = BackupEncryptCert  
    ),  
-  ESTATÍSTICAS = 10  
+  STATS = 10  
 GO  
 ```
 

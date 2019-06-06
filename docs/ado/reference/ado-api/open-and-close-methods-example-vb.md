@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b3c094abbe0f67e3670fc0a1f89ee00b527893ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a96f0fabdc4a9d725b78f4cffb78c563ab238a20
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62657170"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707167"
 ---
 # <a name="open-and-close-methods-example-vb"></a>Exemplo dos métodos Open e Close (VB)
 Este exemplo usa o **aberto** e [Close](../../../ado/reference/ado-api/close-method-ado.md) métodos em ambos [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) e [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objetos que foram abertos.  

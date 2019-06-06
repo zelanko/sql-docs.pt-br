@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c579c824d65d50dfd1b222615f247d97209db37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 092eb49216874a59e4bcba09431fcc01dc3679a4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63314675"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711153"
 ---
 # <a name="sort-property"></a>Propriedade Sort
 Indica um ou mais nomes de campo no qual o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) é classificada, e se cada campo é classificado em ordem crescente ou decrescente.  

@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 11/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 9f9175d82102e5c0dbbae2fbc7054459a0710e6e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4d3ef46dfbacb1c4cbfe67df555b79fb10ade86d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670876"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705820"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Como começar a desenvolver aplicativos para o SQL Server no Linux
 
@@ -55,7 +54,7 @@ Consulte os tópicos a seguir para obter mais informações:
 
 - [SSMS (SQL Server Management Studio)](sql-server-linux-manage-ssms.md)
 - [SSDT (SQL Server Data Tools)](sql-server-linux-develop-use-ssdt.md)
-- [PowerShell do SQL](sql-server-linux-manage-powershell.md)
+- [SQL PowerShell](sql-server-linux-manage-powershell.md)
 
 > [!Note]
 > Certifique-se de que você está usando as versões mais recentes dessas ferramentas para a melhor experiência.

@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
-ms.openlocfilehash: cbbd10ce9bc41ef7149f319077030e982ae6fcc0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1f0274a8eb84f9700378d266729afbdc91aebaf1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664595"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713210"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Estruturas e bibliotecas de conectividade para Microsoft SQL Server
 
@@ -25,7 +24,7 @@ Confira a [tutoriais de Introdução](https://aka.ms/sqldev) para rapidamente co
 
 A tabela a seguir lista as bibliotecas de conectividade ou *drivers* que aplicativos cliente podem usar de uma variedade de idiomas para conectar e usar o Microsoft SQL Server em execução localmente ou na nuvem, no Linux, Windows ou Docker e também ao Azure SQL Database e Azure SQL Data Warehouse. 
 
-| Linguagem | Plataforma | Recursos adicionais | Download | Introdução |
+| Idioma | Plataforma | Recursos adicionais | Download | Introdução |
 | :-- | :-- | :-- | :-- | :-- |
 | C# | Windows, Linux, macOS | [Microsoft ADO.NET for SQL Server](https://msdn.microsoft.com/library/mt657768.aspx) | [Download](https://msdn.microsoft.com/vstudio/aa496123.aspx) | [Introdução](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu)
 | Java | Windows, Linux, macOS | [Microsoft JDBC Driver para SQL Server](https://msdn.microsoft.com/library/mt484311.aspx) | [Download](https://go.microsoft.com/fwlink/?LinkId=245496) |  [Introdução](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu)
@@ -37,7 +36,7 @@ A tabela a seguir lista as bibliotecas de conectividade ou *drivers* que aplicat
 
 A tabela a seguir lista alguns exemplos de estruturas de objeto ORM (mapeamento relacional) e frameworks da web que aplicativos cliente podem usar com o Microsoft SQL Server em execução localmente ou na nuvem, no Linux, Windows ou Docker e também para o banco de dados SQL e Azure SQL Data Warehouse. 
 
-| Linguagem | Plataforma | ORM(s) |
+| Idioma | Plataforma | ORM(s) |
 | :-- | :-- | :-- |
 | C# | Windows, Linux, macOS | [Entity Framework](https://docs.microsoft.com/ef)<br>[Entity Framework Core](https://docs.microsoft.com/ef/core/index) |
 | Java | Windows, Linux, macOS |[Hibernar ORM](https://hibernate.org/orm)|

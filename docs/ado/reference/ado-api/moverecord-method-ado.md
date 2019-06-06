@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a2deba8c745b29b5bd69432060debad2c585e31b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fe9dc770f537b9b9f8b53461c30b890a4144a821
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242746"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707351"
 ---
 # <a name="moverecord-method-ado"></a>Método MoveRecord (ADO)
 Move a entidade representada por uma [registro](../../../ado/reference/ado-api/record-object-ado.md) para outro local.  

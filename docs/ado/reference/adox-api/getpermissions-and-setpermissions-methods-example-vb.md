@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad89f93569a9df0c14630506a3cea3d9091e8bf7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5934837db5b3027ee86dcdd81e4e8229869aa149
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63298016"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712121"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>Exemplo dos métodos GetPermissions e SetPermissions (VB)
 Este exemplo demonstra a [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) e [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) métodos. O código a seguir fornece acesso completo para a tabela de pedidos para o usuário administrador.  

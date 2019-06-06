@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 060de551afa266dae4d5384fe765e16b997bcccd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8a2d19ed59aa10ad75843df03d626f5f880462ca
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062644"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718709"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>Etapa 4: Preencher a caixa de texto de detalhes
 Para preencher a caixa de texto de detalhes, criar uma nova sub-rotina denominada **recFields** e insira o seguinte código:  

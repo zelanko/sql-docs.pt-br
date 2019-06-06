@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98d3e61b37eb22ebaf793252f49b2b11621abd80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e8a46dd9358b085fb6079f03df88474b72440068
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027665"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711261"
 ---
 # <a name="state-property-ado"></a>Propriedade State (ADO)
 Indica para todos os objetos aplicáveis se o estado do objeto é aberto ou fechado. Se o objeto está em execução a um método assíncrono, indica se o estado atual do objeto é conectar-se, em execução ou recuperar.  

@@ -7,17 +7,16 @@ ms.author: vinsonyu
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 9506c8c27e17f59c95a1cfeff5cd3885d1657b79
-ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
+ms.openlocfilehash: 97714d09839c873c96684579e70e3269f96b0e31
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52826081"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705664"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Criptografar conexões ao SQL Server no Linux
 
@@ -135,5 +134,5 @@ TLS é usado para criptografar conexões a partir de um aplicativo cliente para 
 |--- |--- |
 |A cadeia de certificado foi emitida por uma autoridade que não é confiável.  |Esse erro ocorre quando os clientes não conseguem verificar a assinatura no certificado apresentado pelo SQL Server durante o handshake TLS. Verifique se o cliente confia em qualquer um de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] certificado diretamente, ou a autoridade de certificação que assinou o certificado do SQL Server. |
 |O nome da entidade de destino está incorreto.  |Certifique-se de que o campo de nome comum no certificado do SQL Server corresponde ao nome de servidor especificado na cadeia de conexão do cliente. |  
-|Uma conexão existente foi fechada forçadamente pelo host remoto. |Esse erro pode ocorrer quando o cliente não dá suporte para a versão do protocolo TLS requerida pelo SQL Server. Por exemplo, se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está configurado para exigir o TLS 1.2, verifique se os clientes também suportam o protocolo TLS 1.2. |
+|uma conexão existente foi fechada forçadamente pelo host remoto. |Esse erro pode ocorrer quando o cliente não dá suporte para a versão do protocolo TLS requerida pelo SQL Server. Por exemplo, se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está configurado para exigir o TLS 1.2, verifique se os clientes também suportam o protocolo TLS 1.2. |
 | | |   

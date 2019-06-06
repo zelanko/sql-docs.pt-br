@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 14194998e699fa3d16ab50ab488c8d1577660dcc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3f31e5522fdac506e31ffe0bbaa5ad76e3fae87b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719913"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701553"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Apêndice A: Provedores de serviços e dados
 Esta seção aborda os três tipos de provedores: provedores de dados, provedores de serviços e componentes de serviço. Provedores se enquadram em duas categorias: àqueles que fornecem dados e aqueles fornecendo serviços. Um *provedor de dados* possui seus próprios dados e o expõe em formato de tabela para seu aplicativo. Um *provedor de serviços* encapsula um serviço, produzindo e consumindo dados, aumentando os recursos em seus aplicativos do ADO. Um provedor de serviços também pode ser ainda mais definido como um *componente de serviço*, que devem trabalhar junto com outros provedores de serviços ou componentes.

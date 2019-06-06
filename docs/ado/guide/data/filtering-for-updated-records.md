@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 74ea4a208cad079933b27a7305a5ce0462e08515
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 70f74c9c3782cb8da5a12f5b785e410356a2c088
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161408"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700713"
 ---
 # <a name="filtering-for-updated-records"></a>Filtrar os registros atualizados
 Antes de chamar UpdateBatch, você pode usar a propriedade de filtro de conjunto de registros para exibir somente os registros que foram alterados desde que o conjunto de registros foi aberto ou a última chamada para UpdateBatch. Para fazer isso, defina filtro igual a adFilterPendingRecords para determinar quantos registros serão atualizados, conforme mostrado no exemplo de código na próxima seção.  

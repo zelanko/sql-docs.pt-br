@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 49456201-b085-4851-9686-e814136b07be
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 885d201736adb3cd16efbea4f3907cd0aa324128
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 659701a984a675418b8654e9f747efe5d9e07762
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062822"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700329"
 ---
 # <a name="specifying-connection-properties"></a>Especificar propriedades de conexão
 Você pode fornecer muitas das informações especificadas por um [cadeia de caracteres de conexão](../../../ado/guide/data/creating-a-connection-string.md) definindo propriedades da **Conexão** objeto antes de abrir a conexão. Por exemplo, você pode obter o mesmo efeito como a cadeia de caracteres de conexão é discutido em [criando uma cadeia de Conexão](../../../ado/guide/data/creating-a-connection-string.md) usando o código a seguir.  

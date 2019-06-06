@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad42ea14e58e28bf5eee0e5aac66c5a8fc309f2f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f913d6ef342a110d6484e05a2f1925e47d5abdac
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140128"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718489"
 ---
 # <a name="datasource-property-ado"></a>Propriedade DataSource (ADO)
 Indica um objeto que contém dados a ser representado como uma [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0bf43d2a0c2a2c8006df0513d4643fb4c0363506
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5b6fbb2dd87568f0d40705b6ab76e83cd825afbf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63213282"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706611"
 ---
 # <a name="indexnulls-property-adox"></a>Propriedade IndexNulls (ADOX)
 Indica se os registros que têm valores nulos em seus campos de índice têm entradas de índice.  

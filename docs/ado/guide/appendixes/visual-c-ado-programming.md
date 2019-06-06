@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c8145b4000a621ecb09abff074e4b5e06aea7c80
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142965"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702613"
 ---
 # <a name="visual-c-ado-programming"></a>Programação ADO do Visual C++
 A referência de API ADO descreve a funcionalidade do ADO API (API) usando uma sintaxe semelhante para o Microsoft Visual Basic. Embora o público-alvo é todos os usuários, programadores ADO empregam diversas linguagens como Visual Basic, Visual C++ (com e sem o **#import** diretiva) e Visual J++ (com o pacote de classe do ADO/WFC).  
@@ -65,7 +65,7 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- O compilador irá gerar apropriado **Obtenha**_-_, **colocar**-, ou **PutRef**_propriedade_ chamada com base no qual sintaxe alternativa é declarado e se a propriedade está sendo lidos ou gravados.  
+ O compilador irá gerar apropriado **Obtenha** _-_ , **colocar**-, ou **PutRef**_propriedade_ chamada com base no qual sintaxe alternativa é declarado e se a propriedade está sendo lidos ou gravados.  
   
  O **__declspec(property...)**  diretiva de compilador só pode declarar **Obtenha**, **colocar**, ou **obter** e **colocar** sintaxe alternativa para uma função. Operações somente leitura só tem uma **obter** declaração; operações de somente gravação tiver apenas um **colocar** declaração; operações que são leitura e gravação tiver ambos **obter** e **colocar** declarações.  
   
@@ -85,7 +85,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- Por exemplo, atribuir um valor a um campo de um **conjunto de registros** objeto, chamado  **_rs_**, derivado do **autores** tabela das **pubs** banco de dados. Use o **Item()** propriedade para acessar o terceiro **campo** dos **conjunto de registros** objeto **campos** coleção (o coleções são indexadas da zero; Suponha que o terceiro campo é chamado  **_au\_fname_**). Em seguida, chame o **Value ()** método na **campo** objeto para atribuir um valor de cadeia de caracteres.  
+ Por exemplo, atribuir um valor a um campo de um **conjunto de registros** objeto, chamado  **_rs_** , derivado do **autores** tabela das **pubs** banco de dados. Use o **Item()** propriedade para acessar o terceiro **campo** dos **conjunto de registros** objeto **campos** coleção (o coleções são indexadas da zero; Suponha que o terceiro campo é chamado  **_au\_fname_** ). Em seguida, chame o **Value ()** método na **campo** objeto para atribuir um valor de cadeia de caracteres.  
   
  Isso pode ser expresso no Visual Basic a seguir quatro maneiras (os últimos dois formulários são exclusivos para o Visual Basic; outros idiomas não têm equivalentes):  
   

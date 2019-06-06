@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b19a138e9e4d479e7fb9cb3f8b4e140838b43e8a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 434c27f5e2da0208ba5141664ccc69accfc2fbb2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188529"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704241"
 ---
 # <a name="rds-object-model-summary"></a>Resumo do modelo de objeto RDS
 > [!IMPORTANT]

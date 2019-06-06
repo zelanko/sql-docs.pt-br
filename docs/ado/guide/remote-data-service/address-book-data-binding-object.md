@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: da63965c867c56572956ca5400a4b9dcc1281abf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 31efe56dcb5ae926d5da08aa00a1005597b17b91
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214835"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718623"
 ---
 # <a name="address-book-data-binding-object"></a>Objeto de associação de dados do catálogo de endereço
 O aplicativo de catálogo de endereços usa o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto ao qual associar dados do banco de dados do SQL Server a um objeto visual (no caso, uma tabela DHTML) na página de cliente HTML do aplicativo. A lógica do programa de VBScript controlada por evento usa o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) para:  

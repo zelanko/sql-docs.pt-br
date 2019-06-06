@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5efa6587ade3a15ce4b45b7247da1c3a896f69ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ba0d8c7ab1294400c19456abf164c6ad6be0dd2e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214761"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704311"
 ---
 # <a name="customization-file-sql-section"></a>Seção SQL do arquivo de personalização
 O **sql** seção pode conter uma nova cadeia de caracteres SQL que substitui a cadeia de caracteres de comando do cliente. Se não houver nenhuma cadeia de caracteres SQL na seção, a seção será ignorada.  
@@ -43,7 +43,7 @@ SQL = " "
 ## <a name="syntax"></a>Sintaxe  
  É uma substituição de entrada de cadeia de caracteres SQL da forma:  
   
- **SQL=**   
+ **SQL=**    
  ***sqlString***  
   
 |Parte|Descrição|  

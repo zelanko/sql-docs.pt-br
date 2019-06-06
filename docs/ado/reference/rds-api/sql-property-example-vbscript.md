@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fcfc53b0882702e5efbb53b8f88bdfb184f86df6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1a985d3cf47c6032b494d448a82d7cdd99394e5c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065079"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697720"
 ---
 # <a name="sql-property-example-vbscript"></a>Exemplo da propriedade SQL (VBScript)
 > [!IMPORTANT]

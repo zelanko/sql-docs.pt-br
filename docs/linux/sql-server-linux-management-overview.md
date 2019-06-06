@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.custom: sql-linux
-ms.openlocfilehash: d20799a6a6c9872d56bebd6a3c38d76916fb7ba9
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: f1f949db84689fae7e362f81cb686824f249c564
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874292"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705230"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Escolha a ferramenta certa para gerenciar o SQL Server no Linux
 
@@ -39,7 +38,7 @@ O novo Studio dados do Azure é uma ferramenta de plataforma cruzada para o gere
 
 SQL Server Management Studio (SSMS) é um aplicativo do Windows que fornece uma interface gráfica do usuário para gerenciar o SQL Server. Embora atualmente seja executado somente no Windows, você pode usá-lo para se conectar remotamente para suas instâncias do SQL Server do Linux. Para obter mais informações sobre como usar o SSMS para gerenciar o SQL Server, consulte [usar o SSMS para gerenciar o SQL Server no Linux](sql-server-linux-manage-ssms.md).
 
-## <a name="mssql-cli-preview"></a>MSSQL-cli (versão prévia)
+## <a name="mssql-cli-preview"></a>mssql-cli (preview)
 
 A Microsoft lançou uma nova ferramenta de script de plataforma cruzada para o SQL Server [mssql-cli](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/). Essa ferramenta está atualmente em visualização.
 

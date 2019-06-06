@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15ac62cd4c379d51bc537f0cdf83942bc334fdbb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ada9b4c6b1e22769e15714f4da8c81ce5e1f48ad
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184888"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699711"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Funções do Visual Basic for Applications
 Visual Basic a seguir para as funções de aplicativos podem ser usado em expressões de CÁLCULO de modelagem de dados:  
@@ -31,7 +31,7 @@ Visual Basic a seguir para as funções de aplicativos podem ser usado em expres
 |Abs|Asc|Atn|CBool|CByte|CCur|  
 |CDate|CDbl|Chr|ChrB|ChrW|Chr$|  
 |ChrB$|CInt|CLng|Cos|CSng|CStr|  
-|Cvar|CVDate|CVErr|data|Date$|DateAdd|  
+|Cvar|CVDate|CVErr|Date|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|Day|DDB|  
 |Erro|Error$|Exp|Fix|Formatar|Format$|  
 |FV|Hex|Hex$|Hora|IIF|InStr|  
@@ -44,7 +44,7 @@ Visual Basic a seguir para as funções de aplicativos podem ser usado em expres
 |RightB|Right$|RightB$|Rnd|RTrim|RTrim$|  
 |Segundo|Sgn|Sin|SLN|Space|Space$|  
 |Sqr|Str|Str$|StrComp|StrConv|Cadeia de caracteres|  
-|String$|SYD|Tan|Hora|Time$|Timer|  
+|String$|SYD|Tan|Time|Time$|Timer|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|Dia de semana|Year||  
   

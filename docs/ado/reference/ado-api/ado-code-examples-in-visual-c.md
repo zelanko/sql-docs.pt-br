@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1f03d615bf17cf4086482d02dfca001230276b1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5a727eaf511e65d46fb5c297c65bb1517cfb72c5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249019"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696889"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Exemplos do código ADO em Visual C++
 Use os exemplos de código a seguir para aprender a usar os métodos, propriedades e eventos durante a gravação no Microsoft Visual C++ do ADO.  

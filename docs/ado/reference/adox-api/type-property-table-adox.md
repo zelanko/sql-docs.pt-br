@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6ab64be1e48790bdb03a805c5cb4e81f74ab3fc1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3f72b31ce4e6c43abf1f5e717f1f4a3c0c5c3e3f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281335"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705687"
 ---
 # <a name="type-property-table-adox"></a>Propriedade Type (Table) (ADOX)
 Indica o tipo de uma tabela.  

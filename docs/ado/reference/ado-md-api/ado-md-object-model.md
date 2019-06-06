@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e1c5cfeece57c200763402a1300a0f00afb92aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: abe24492388b832d3e6e27ea33f36c47fc79a97f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062685"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709859"
 ---
 # <a name="ado-md-object-model"></a>Modelo de objeto ADO MD
 Este tópico descreve como os objetos são representados e relacionados na MD ADO.  

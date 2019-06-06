@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 28f03940214817a4f578e76e1d56f2b9a99c1482
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e774d1a5534d3c35c51c4c3ac248e894ecf8bfd5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62957548"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704128"
 ---
 # <a name="using-related-technologies-with-rds"></a>Usar tecnologias relacionadas com RDS
 Esta seção contém os tópicos a seguir.  

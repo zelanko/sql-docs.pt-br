@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6a06b2291d07378b63907b4a195fa3902930078
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 76cd14b8ee1c5a55e0312993090bfaf098c7e219
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472543"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702141"
 ---
 # <a name="data-section"></a>Seção de dados
 A seção de dados define os dados do conjunto de linhas, juntamente com qualquer pendente atualizações, inserções ou exclusões. A seção de dados pode conter zero ou mais linhas. Ele pode conter apenas dados de um conjunto de linhas em que a linha é definida pelo esquema. Além disso, conforme observado anteriormente, as colunas, sem nenhum dado podem ser omitidas. Se um atributo ou o subelemento for usado na seção de dados e essa construção não foi definida na seção de esquema, ele será ignorado silenciosamente.  
@@ -35,7 +35,7 @@ A seção de dados define os dados do conjunto de linhas, juntamente com qualque
 ## <a name="binary"></a>Binary  
  Dados binários são codificados hex (ou seja, os mapas de um byte em dois caracteres, um caractere por nibble).  
   
-## <a name="datetime"></a>Datetime  
+## <a name="datetime"></a>DateTime  
  O formato VT_DATE variant não é diretamente suportado pelos tipos de dados XML-Data. O formato correto para datas com o componente de uma data e a hora é aaaa-mm-ddTHH.  
   
  Para obter mais informações sobre formatos de data especificada por XML, consulte a [especificação W3C XML-Data](https://go.microsoft.com/fwlink/?LinkId=5692).  

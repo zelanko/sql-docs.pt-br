@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6508e4e9-e33a-4dad-b340-5d632fd78a91
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d593bd3ad745f316b833b375ceaae8b764d21ec2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8ea95b7d34f1395f6322d9a6ad6a0229bb8c7e45
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184987"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704571"
 ---
 # <a name="updating-data"></a>Atualizando dados
 Comportamento de atualização e a funcionalidade depende praticamente atualizar modo (tipo de bloqueio), o tipo de cursor e o local do cursor.  

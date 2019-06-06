@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a924314c4de47a62e835708478e093a72f3b3c57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 450a3f88b58048bf3167997fffec242f9a3b9351
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308707"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695669"
 ---
 # <a name="createrecordset-method-example-vb"></a>Exemplo do método CreateRecordset (VB)
 Você pode criar uma [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto e especifique as informações de coluna. Em seguida, você pode inserir dados na **Recordset** objeto; os buffers de conjunto de linhas subjacente as inserções.  

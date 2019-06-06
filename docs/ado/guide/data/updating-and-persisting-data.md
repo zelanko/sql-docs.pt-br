@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d53891b4e82b3ae391d095e8cbca2189fb201d29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b251da97fe14abb8b10abe974c40b9adf0b37898
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142955"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699890"
 ---
 # <a name="updating-and-persisting-data"></a>Atualização e persistência de dados
 Os capítulos anteriores discutiram como usar o ADO para acessar dados em uma fonte de dados, como mover-se nos dados e até mesmo como editar os dados. É claro que, se a meta do seu aplicativo é permitir que os usuários façam alterações aos dados, você precisará entender como salvar essas alterações. Você pode manter ou o **conjunto de registros** muda para um arquivo usando o **salvar** método, ou você pode enviar as alterações de volta para a fonte de dados para armazenamento usando o **atualização** ou  **UpdateBatch** métodos.  

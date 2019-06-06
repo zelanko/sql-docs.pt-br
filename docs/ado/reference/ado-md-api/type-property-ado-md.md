@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 34698910-64b9-41d8-8531-9de12f2b1e32
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b1b88a0128af77a046f7c5c2352c709da30bd623
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ec8cd49556462091f38b32c80c2202459fece75b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63287189"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708648"
 ---
 # <a name="type-property-ado-md"></a>Propriedade Type (ADO MD)
 Indica o tipo do atual [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md).  

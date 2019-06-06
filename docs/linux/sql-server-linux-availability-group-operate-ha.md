@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a33c18175a03b589f7b431655ff4704356f5eeaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98493c945f4f43e45b1f314f1500eb50a04c8e5a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795994"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713415"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Sempre operam em grupos de disponibilidade no Linux
 
@@ -77,13 +76,13 @@ Antes de começar, faça backup de cada banco de dados.
 
    Se o tipo de cluster do grupo de disponibilidade está `NONE`, manualmente o failover. Conclua as seguintes etapas nesta ordem:
 
-      A. O comando a seguir define a réplica primária para o secundário. Substitua `AG1` com o nome do seu grupo de disponibilidade. Execute o comando Transact-SQL na instância do SQL Server que hospeda a réplica primária.
+      a. O comando a seguir define a réplica primária para o secundário. Substitua `AG1` com o nome do seu grupo de disponibilidade. Execute o comando Transact-SQL na instância do SQL Server que hospeda a réplica primária.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      B. O comando a seguir define uma réplica secundária síncrona para o primário. Execute o seguinte comando do Transact-SQL na instância de destino do SQL Server - a instância que hospeda a réplica secundária síncrona.
+      b. O comando a seguir define uma réplica secundária síncrona para o primário. Execute o seguinte comando do Transact-SQL na instância de destino do SQL Server - a instância que hospeda a réplica secundária síncrona.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;

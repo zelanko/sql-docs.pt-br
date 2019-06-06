@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3a50b9d8c1f22f23f3533240b2543ef981fef8e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5384bfc186427231ed34e855e2fedc845aca6a66
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62931386"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699648"
 ---
 # <a name="rds-tutorial-vbscript"></a>Tutorial RDS (VBScript)
 Este é o Tutorial RDS, escritos em Microsoft Visual Basic Scripting Edition. Para obter uma descrição da finalidade deste tutorial, consulte o [Tutorial RDS](../../../ado/guide/remote-data-service/rds-tutorial.md).  

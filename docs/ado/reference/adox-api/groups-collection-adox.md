@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6b8aea077af67c882830220da9ce24b802e25e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5e0fe23c41f6a22a05e6a4c1d61f94a357f3c28c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63288294"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706673"
 ---
 # <a name="groups-collection-adox"></a>Coleção Groups (ADOX)
 Contém todos os armazenados [grupo](../../../ado/reference/adox-api/group-object-adox.md) objetos de um catálogo ou do usuário.  

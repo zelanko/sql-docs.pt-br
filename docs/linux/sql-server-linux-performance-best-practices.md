@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 7819d3dffbcfaef8a94a1644db1694d1f80ae060
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 8dc3cafb54fe91709bd3ee078dfeeb1dc5e3d649
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65106259"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705163"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Práticas recomendadas de desempenho e diretrizes de configuração do SQL Server no Linux
 

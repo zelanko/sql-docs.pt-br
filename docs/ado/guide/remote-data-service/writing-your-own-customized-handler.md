@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: daddb9057775e1f098754dd2a331c1dc77194d10
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 58a380336d3b1abc99e00f1f4052cd24a8cc5988
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155917"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699406"
 ---
 # <a name="writing-your-own-customized-handler"></a>Escrever seu próprio manipulador personalizado
 Talvez você queira escrever seu próprio manipulador se você for um administrador de servidor IIS que queiram padrão dão suporte a RDS, mas mais controle sobre as solicitações do usuário e direitos de acesso.  
@@ -32,7 +32,7 @@ Talvez você queira escrever seu próprio manipulador se você for um administra
 ## <a name="idatafactoryhandler-interface"></a>Interface IDataFactoryHandler  
  Essa interface tem dois métodos, **GetRecordset** e **reconectar**. Ambos os métodos requerem que o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade ser definida como **adUseClient**.  
   
- Ambos os métodos usam argumentos que apareçam depois da primeira vírgula no "**manipulador =**" palavra-chave. Por exemplo, `"Handler=progid,arg1,arg2;"` irá passar uma cadeia de caracteres do argumento `"arg1,arg2"`, e `"Handler=progid"` irá passar um argumento nulo.  
+ Ambos os métodos usam argumentos que apareçam depois da primeira vírgula no "**manipulador =** " palavra-chave. Por exemplo, `"Handler=progid,arg1,arg2;"` irá passar uma cadeia de caracteres do argumento `"arg1,arg2"`, e `"Handler=progid"` irá passar um argumento nulo.  
   
 ## <a name="getrecordset-method"></a>Método GetRecordset  
  Este método consulta a fonte de dados e cria um novo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto usando os argumentos fornecidos. O **conjunto de registros** deve ser aberto com **adLockBatchOptimistic** e não deve ser aberto de forma assíncrona.  

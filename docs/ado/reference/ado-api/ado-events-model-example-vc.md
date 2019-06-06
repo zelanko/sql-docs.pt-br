@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8a79d6e39cb71c7dd7c5e055d9aa71cba23bc9c1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248977"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718560"
 ---
 # <a name="ado-events-model-example-vc"></a>Exemplo do modelo de eventos ADO (VC++)
 A seção do Visual C++ [instanciação de evento ADO por linguagem](../../../ado/guide/data/ado-event-instantiation-by-language.md) fornece uma descrição geral de como criar uma instância do modelo de evento ADO. A seguir está um exemplo específico de instanciar o modelo de evento dentro do ambiente criado pela **#import** diretiva.  
@@ -29,7 +29,7 @@ A seção do Visual C++ [instanciação de evento ADO por linguagem](../../../ad
   
 -   O **#import** diretiva resolve **typedef**do, tipos de dados de assinatura de método e modificadores de suas formas fundamentais.  
   
--   Os métodos puros virtuais que devem ser substituídos são prefixados por "**RAW _**".  
+-   Os métodos puros virtuais que devem ser substituídos são prefixados por "**RAW _** ".  
   
  Parte do código simplesmente reflete o estilo de codificação.  
   

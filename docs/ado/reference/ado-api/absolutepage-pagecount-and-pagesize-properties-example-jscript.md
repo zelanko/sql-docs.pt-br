@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e9ad6da47838b28583bcec3d5c6501d60d317f74
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b9778802fc45bd650ce0cc7f3e340fddbef6ab43
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156306"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704088"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage, PageCount, PageSize exemplo das propriedades e (JScript)
 Este exemplo demonstra as propriedades de AbsolutePage, PageCount e PageSize. Recortar e colar o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **AbsolutePageJS.asp**.  

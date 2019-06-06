@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c9e05a45b5f035a500e210c991a33216be318ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 967ccb49cd2bbaa805420e7c982cc11721931022
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472820"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702351"
 ---
 # <a name="boundaries-of-a-recordset"></a>Limites de um conjunto de registros
 **Conjunto de registros** oferece suporte a **BOF** e **EOF** propriedades para delimitar o início e no final, respectivamente, do conjunto de dados. Você pode pensar **BOF** e **EOF** como "fantasmas" registros que são posicionados no início e no final do **conjunto de registros**. Contando **BOF** e **EOF**, em nosso exemplo **Recordset** agora ficaria assim:  

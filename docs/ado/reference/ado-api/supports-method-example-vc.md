@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98ccc6dfdc904c2789f1ee8a68c0097d5ec6f817
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 25c6a4de3de053400a8891ff53e04314211a7f31
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910856"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710698"
 ---
 # <a name="supports-method-example-vc"></a>Exemplo do método Supports (VC++)
 Este exemplo usa o [dá suporte a](../../../ado/reference/ado-api/supports-method.md) método para exibir as opções compatíveis com um conjunto de registros aberto com tipos diferentes de cursor. A função DisplaySupport é necessária para executar este exemplo.  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c79a5e36-71fd-44c4-948d-d6a7a89bb3b5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab6e6e79f155ec5c88a093c5b379b7132dbbb5a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 398575df52eb113a76407757c75097648dc97ac5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63226114"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709370"
 ---
 # <a name="cubedefs-collection-ado-md"></a>Coleção CubeDefs (ADO MD)
 Contém o [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) objetos que representam um cubo de um catálogo multidimensional.  

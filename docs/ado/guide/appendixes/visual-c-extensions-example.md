@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 809a6706ccf75a66ec7b6bf7eefed969221b9624
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 76be5e7c1dd88cb15c9f32db818aa63606f0ba7e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62802884"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701359"
 ---
 # <a name="visual-c-extensions-example"></a>Exemplo de extensões do Visual C++
 Esse programa mostra como os valores são recuperados de campos e convertidos em variáveis de C/C++.  

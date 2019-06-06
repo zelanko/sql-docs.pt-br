@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c6579b5b-a93e-48c5-8847-743fc4590cd2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 765ba0ec23dae20cd55ac54f14391e43725c2312
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bc7964f67b2b02e0eb31156a294e87901ab7ecb4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184798"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718333"
 ---
 # <a name="ado-extensions-for-data-definition-language-and-security-adox"></a>Extensões ADO para segurança e linguagem de definição de dados (ADOX)
 Esta seção contém os tópicos a seguir.  

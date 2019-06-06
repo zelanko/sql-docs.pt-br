@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 426fd1fdcd3931981037b346b048de816e8596d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e88823d01e34a18bebe209f3939f8cb3532530f4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63280881"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712310"
 ---
 # <a name="converttostring-method-rds"></a>Método ConvertToString (RDS)
 Converte um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) para uma cadeia de caracteres MIME que representa os dados do conjunto de registros.  

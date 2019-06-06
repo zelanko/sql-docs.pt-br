@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec656a49963eb02cb204d5be96d403726bba8c56
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: df6437e80ab746a7d6aa219fb3299cb54712b5c3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63301325"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697909"
 ---
 # <a name="executecomplete-event-ado"></a>Evento ExecuteComplete (ADO)
 O **ExecuteComplete** evento é chamado depois que um comando tiver concluído a execução.  

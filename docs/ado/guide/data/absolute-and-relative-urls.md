@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c67a58b1299a002428c3a72b9df23892c76cd81c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62802935"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702658"
 ---
 # <a name="absolute-and-relative-urls"></a>URLs absolutas e relativas
 Uma URL especifica o local de um destino armazenado em um computador local ou em rede. O destino pode ser um arquivo, diretório, página HTML, imagem, programa e assim por diante *.*  
@@ -53,7 +53,7 @@ Uma URL especifica o local de um destino armazenado em um computador local ou em
   
  Com o ADO 2.7 ou posterior, uma URL absoluta também pode definir um contexto. Por exemplo, quando um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto é aberto com uma URL absoluta, um **Conexão** objeto é criado implicitamente para representar o recurso especificado pela URL.  
   
- Uma URL absoluta que define um contexto pode ser especificada na *ActiveConnection* parâmetro do **registro** objeto [abrir](../../../ado/reference/ado-api/open-method-ado-record.md) método. Uma URL absoluta também pode ser especificada como o valor da "URL**=**" palavra-chave no **Conexão** objeto [abertos](../../../ado/reference/ado-api/open-method-ado-connection.md) método  *ConnectionString* parâmetro e o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto [abra](../../../ado/reference/ado-api/open-method-ado-recordset.md) método *ActiveConnection* parâmetro.  
+ Uma URL absoluta que define um contexto pode ser especificada na *ActiveConnection* parâmetro do **registro** objeto [abrir](../../../ado/reference/ado-api/open-method-ado-record.md) método. Uma URL absoluta também pode ser especificada como o valor da "URL **=** " palavra-chave no **Conexão** objeto [abertos](../../../ado/reference/ado-api/open-method-ado-connection.md) método  *ConnectionString* parâmetro e o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto [abra](../../../ado/reference/ado-api/open-method-ado-recordset.md) método *ActiveConnection* parâmetro.  
   
  Contexto também pode ser definido abrindo uma **registro** ou **conjunto de registros** objeto que representa um diretório, porque esses objetos já tem um implicitamente ou explicitamente declarado **Conexão**  objeto que especifica o contexto.  
   
@@ -86,7 +86,7 @@ recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect
 ## <a name="ole-db-provider-supplied-url-schemes"></a>Esquemas de URL fornecido pelo provedor do OLE DB  
  É a parte à esquerda de uma URL totalmente qualificada a *esquema* que é usado para acessar o recurso identificado pelo restante da URL. Os exemplos são HTTP (Hypertext Transfer Protocol) e FTP (File Transfer Protocol).  
   
- ADO dá suporte a provedores OLE DB que reconhecem a seus próprios esquemas de URL. Por exemplo, o [Microsoft OLE DB Provider para publicação na Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*,* que acessa arquivos "publicados" do Windows 2000, reconhece o esquema HTTP existente.  
+ ADO dá suporte a provedores OLE DB que reconhecem a seus próprios esquemas de URL. Por exemplo, o [Microsoft OLE DB Provider para publicação na Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) *,* que acessa arquivos "publicados" do Windows 2000, reconhece o esquema HTTP existente.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

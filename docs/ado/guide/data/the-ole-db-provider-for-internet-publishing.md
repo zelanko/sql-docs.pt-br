@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3acf5ed94993d50c3c81813cd9ea09db2c231a08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 62fce79d6ee223ee5b039fe914685fdf3bd33c98
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472205"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704811"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>O Provedor OLE DB para publicação na Internet
 O ADO [registro](../../../ado/reference/ado-api/record-object-ado.md) e [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objetos podem ser usados com o provedor Microsoft OLE DB para publicação na Internet (provedor de publicação da Internet) para acessar e manipular os recursos, como arquivos ou pastas da Web atendido pelo Microsoft FrontPage. Com o ADO, você pode especificar a origem de um **registro**, **Stream**, ou [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ser uma URL. Você pode, em seguida, carregar, baixar, mover, copiar e excluir recursos ou manipular diretamente as propriedades do recurso.  
@@ -39,7 +39,7 @@ O ADO [registro](../../../ado/reference/ado-api/record-object-ado.md) e [Stream]
     objConn.Open "URL=https://servername"  
     ```  
   
--   Especifique Msdaipp.dso para o *provedor* palavra-chave da cadeia de caracteres de conexão. Por exemplo:   
+-   Especifique Msdaipp.dso para o *provedor* palavra-chave da cadeia de caracteres de conexão. Por exemplo:  
   
     ```  
     objConn.Open "provider=MSDAIPP.DSO;data source=https://servername"  

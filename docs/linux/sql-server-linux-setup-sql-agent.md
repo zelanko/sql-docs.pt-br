@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 72a4242373af16ffcdc8f749b899747801d2002c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cb2a630dab67875db8a9731fe98895599f3290a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819510"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705053"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Instalar o SQL Server Agent no Linux
 
@@ -67,7 +66,7 @@ sudo yum update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Se você precisar de uma instalação offline, localize o download do pacote do SQL Server Agent na [notas de versão](sql-server-linux-release-notes.md). Em seguida, use as mesmas etapas de instalação offline, descritas no artigo [instalar o SQL Server](sql-server-linux-setup.md#offline).
+Se você precisar de uma instalação offline, localize o download do pacote do SQL Server Agent na [notas de versão](sql-server-linux-release-notes.md). Em seguida, use as mesmas etapas de instalação offline descritas no artigo [Instalar o SQL Server](sql-server-linux-setup.md#offline).
 
 ### <a name="ubuntu">Instalar no Ubuntu</a>
 
@@ -87,13 +86,13 @@ sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Se você precisar de uma instalação offline, localize o download do pacote do SQL Server Agent na [notas de versão](sql-server-linux-release-notes.md). Em seguida, use as mesmas etapas de instalação offline, descritas no artigo [instalar o SQL Server](sql-server-linux-setup.md#offline).
+Se você precisar de uma instalação offline, localize o download do pacote do SQL Server Agent na [notas de versão](sql-server-linux-release-notes.md). Em seguida, use as mesmas etapas de instalação offline descritas no artigo [Instalar o SQL Server](sql-server-linux-setup.md#offline).
 
-### <a name="SLES">Instalar em SLES</a>
+### <a name="SLES">Instalar no SLES</a>
 
 Use as etapas a seguir para instalar o **mssql-server-agent** no SUSE Linux Enterprise Server. 
 
-Instalar **mssql-server-agent** 
+Install **mssql-server-agent** 
 
 ```bash
 sudo zypper install mssql-server-agent
@@ -108,7 +107,7 @@ sudo zypper update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Se você precisar de uma instalação offline, localize o download do pacote do SQL Server Agent na [notas de versão](sql-server-linux-release-notes.md). Em seguida, use as mesmas etapas de instalação offline, descritas no artigo [instalar o SQL Server](sql-server-linux-setup.md#offline).
+Se você precisar de uma instalação offline, localize o download do pacote do SQL Server Agent na [notas de versão](sql-server-linux-release-notes.md). Em seguida, use as mesmas etapas de instalação offline descritas no artigo [Instalar o SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="next-steps"></a>Próximas etapas
 Para obter mais informações sobre como usar o SQL Server Agent para criar, agendar e executar trabalhos, consulte [executar um trabalho do SQL Server Agent no Linux](sql-server-linux-run-sql-server-agent-job.md).

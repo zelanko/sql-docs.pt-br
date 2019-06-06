@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 89b82d6efe87cec6643d68837447ed64a6f69059
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 21cb7f8773c0663d584f62bcaaaeab15c7eac108
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63314705"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711428"
 ---
 # <a name="seek-method"></a>Método Seek
 Pesquisa o índice de um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) para localizar rapidamente a linha que corresponde aos valores especificados e altera a posição da linha atual para aquela linha.  
@@ -42,7 +42,7 @@ recordset.Seek KeyValues, SeekOption
  Um [SeekEnum](../../../ado/reference/ado-api/seekenum.md) valor que especifica o tipo de comparação a ser feita entre as colunas do índice e correspondente *KeyValues*.  
   
 ## <a name="remarks"></a>Comentários  
- Use o **Seek** método junto com o [índice](../../../ado/reference/ado-api/index-property.md) propriedade se o provedor subjacente que dá suporte a índices no **Recordset** objeto. Use o [dá suporte a](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** método para determinar se o provedor subjacente dá suporte à **busca**e o **Supports(adIndex)** método para determinar se o provedor dá suporte a índices. (Por exemplo, o [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) dá suporte a **busca** e **índice**.)  
+ Use o **Seek** método junto com o [índice](../../../ado/reference/ado-api/index-property.md) propriedade se o provedor subjacente que dá suporte a índices no **Recordset** objeto. Use o [dá suporte a](../../../ado/reference/ado-api/supports-method.md) **(adSeek)** método para determinar se o provedor subjacente dá suporte à **busca**e o **Supports(adIndex)** método para determinar se o provedor dá suporte a índices. (Por exemplo, o [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) dá suporte a **busca** e **índice**.)  
   
  Se **Seek** não localizar a linha desejada, nenhum erro ocorre e a linha é posicionado no final o **conjunto de registros**. Defina as **índice** propriedade para o índice desejada antes de executar esse método.  
   

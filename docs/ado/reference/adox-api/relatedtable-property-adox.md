@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: cb54c6bc-2be2-40b1-bc11-90c10651b878
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31dba996b302f94a629956c20b50832c85c7909a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7a5300a2d8ced92d3cff9c4cfe96cc05b1fd108c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281675"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706078"
 ---
 # <a name="relatedtable-property-adox"></a>Propriedade RelatedTable (ADOX)
 Indica o nome da tabela relacionada.  

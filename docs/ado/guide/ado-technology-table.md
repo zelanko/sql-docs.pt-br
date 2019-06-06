@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d6042e4559ce37c33568f84b7819b672add07c72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8403af8dec6e3d96f955b6b4523662a164931be3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302548"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702829"
 ---
 # <a name="products-and-technologies-table"></a>Produtos e tecnologias de tabela
 A tabela a seguir lista os produtos Microsoft, ferramentas e tecnologias abordadas no guia do programador do ADO. Ele fornece links, sempre que possível, para tópicos relevantes no guia.
