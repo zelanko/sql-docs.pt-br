@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d409f874e9fcec059c01ddef91d83d8a70fdeb47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: abbdbeec81a029716ac6516f9436373e91365a23
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62864512"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702779"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Usando o ADO com o Microsoft Visual Basic e Visual Basic for Applications
 Configurando um projeto do ADO e escrever código em ADO são semelhante se você usar o Visual Basic ou Visual Basic for Applications. Este tópico aborda usando o ADO com o Visual Basic e Visual Basic for Applications e observa as diferenças.
@@ -99,7 +99,7 @@ Dim conn1
 Set conn1 = CreateObject("ADODB.Connection") As Object
 ```
 
- Com os objetos instanciados **CreateObject** são com associação tardia, que significa que eles não são fortemente tipados e preenchimento de linha de comando está desabilitado. No entanto, permitir que você ignore a referência à biblioteca do ADO do seu projeto e permite que você crie uma instância versões específicas de objetos. Por exemplo: 
+ Com os objetos instanciados **CreateObject** são com associação tardia, que significa que eles não são fortemente tipados e preenchimento de linha de comando está desabilitado. No entanto, permitir que você ignore a referência à biblioteca do ADO do seu projeto e permite que você crie uma instância versões específicas de objetos. Por exemplo:
 
 ```
 Set conn1 = CreateObject("ADODB.Connection.2.0") As Object

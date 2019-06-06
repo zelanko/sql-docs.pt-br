@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b4768c0f01c38ef72735f3577c4d581c019b4595
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fbeedf9e56c1f0606a7c8f842baedc9d11ad3929
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239734"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698801"
 ---
 # <a name="clone-method-ado"></a>Método Clone (ADO)
 Cria uma duplicata [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto de uma já existente **Recordset** objeto. Opcionalmente, especifica que o clone ser somente leitura.  
