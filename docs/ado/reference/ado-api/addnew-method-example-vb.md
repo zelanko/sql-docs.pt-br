@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d439e097-65f3-471d-8799-5a1263beb3c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ce53a2ef95631ee27f7691cb9193424980b2956
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8b3e56f2e78b8557785917f8f60b3f837f3079b9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065253"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703963"
 ---
 # <a name="addnew-method-example-vb"></a>Exemplo do método AddNew (VB)
 Este exemplo usa o [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) método para criar um novo registro com o nome especificado.  

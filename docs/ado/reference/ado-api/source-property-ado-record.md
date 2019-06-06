@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4b053fdeae5016d7a1b489133b3a26067da7eab2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9217658a645d731645b0c85a419ecf759b1fd3bb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740396"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711111"
 ---
 # <a name="source-property-ado-record"></a>Propriedade Source (Registro ADO)
 Indica a fonte de dados ou o objeto representado pelo [registro](../../../ado/reference/ado-api/record-object-ado.md).  

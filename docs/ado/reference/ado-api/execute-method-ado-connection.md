@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a52ca419f3f06e4156c278cb0ba8999c24e09ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0489bb43ee3b41ebf4334da0d6b8045e117acc39
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63071132"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695381"
 ---
 # <a name="execute-method-ado-connection"></a>Método Execute (conexão ADO)
 Executa a consulta especificada, instrução SQL, procedimento armazenado ou texto específico do provedor.  
@@ -40,7 +40,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
 #### <a name="parameters"></a>Parâmetros  
  *CommandText*  
- Um **cadeia de caracteres** valor que contém a instrução SQL, procedimento armazenado, uma URL ou texto específico do provedor para executar. **Opcionalmente,**, nomes de tabela podem ser usados, mas somente se o provedor estiver ciente de SQL. Por exemplo, se um nome de tabela "Clientes" for usado, ADO será automaticamente preceda a sintaxe SQL Select padrão para formar e passar "SELECT * FROM Customers" como um [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrução para o provedor.  
+ Um **cadeia de caracteres** valor que contém a instrução SQL, procedimento armazenado, uma URL ou texto específico do provedor para executar. **Opcionalmente,** , nomes de tabela podem ser usados, mas somente se o provedor estiver ciente de SQL. Por exemplo, se um nome de tabela "Clientes" for usado, ADO será automaticamente preceda a sintaxe SQL Select padrão para formar e passar "SELECT * FROM Customers" como um [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrução para o provedor.  
   
  *RecordsAffected*  
  Opcional. Um **longo** variável na qual o provedor retorna o número de registros afetada da operação.  

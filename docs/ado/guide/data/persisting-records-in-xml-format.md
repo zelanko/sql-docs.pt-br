@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c15f4be9d452580cebd6b530f0703f249af17b36
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 783dfb43f1eaebcc823f49000f589542465b1735
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62913291"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701939"
 ---
 # <a name="persisting-records-in-xml-format"></a>Persistência de registros em formato XML
 Como o formato ADTG **Recordset** persistência em formato XML é implementada com o Microsoft OLE DB provedor de persistência. Esse provedor gera um conjunto de linhas de somente avanço, somente leitura de um fluxo que contém as informações de esquema geradas por ADO ou arquivo XML salvo. Da mesma forma, pode levar a um ADO **conjunto de registros**, gerar o XML e salvá-lo em um arquivo ou qualquer objeto que implementa o COM **IStream** interface. (Na verdade, um arquivo é somente outro exemplo de um objeto que dá suporte a **IStream**.) Para as versões 2.5 e posteriores, o ADO baseia-se no Microsoft XML Parser (MSXML) para carregar o XML para o **conjunto de registros**; portanto, o MSXML. dll é necessária.  

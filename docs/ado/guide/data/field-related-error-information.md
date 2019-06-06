@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ba956d2e442c914ddc50f2f023f225252fb1295
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e18698d7fba50ce6a63938df574408367b8b20cf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161560"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702012"
 ---
 # <a name="field-related-error-information"></a>Informações de erro relacionadas ao campo
 Se um erro está diretamente relacionado a um campo - por exemplo, se os dados estão ausentes ou se ele é do tipo incorreto para o campo - você pode recuperar mais informações sobre a causa do problema examinando os **campo** do objeto **Status**  propriedade. Essa propriedade foi aprimorada para fornecer informações específicas sobre o problema. Portanto, por exemplo, quando uma chamada para **UpdateBatch** falhar, a causa do problema pode ser determinado examinando a **Status** propriedade do **campos** em cada uma da afetados registros. A propriedade conterá um dos valores de **FieldStatusEnum** constante. A tabela a seguir inclui os valores que são de especial interesse quando ocorre um erro.  

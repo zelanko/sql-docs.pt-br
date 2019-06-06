@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3b93ee4ab5b57414d8c8d640bc12a5ebbff882c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1af86e92d689f262833e1bc00d8caf0fb0c78b39
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206363"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709976"
 ---
 # <a name="ado-glossary"></a>Glossário ADO
 Este tópico define termos relevantes à ADO.  
@@ -264,7 +264,7 @@ Este tópico define termos relevantes à ADO.
  Um conjunto de linhas de uma fonte de dados, tudo que tem o mesmo esquema de campo. Um conjunto de linhas pode representar alguns ou todos os campos de uma tabela. Um conjunto de linhas também pode representar uma tabela virtual, criada por uma consulta ou uma junção de duas ou mais tabelas. No ADO, conjuntos de linhas são representados por **Recordset** objetos.  
   
 ## <a name="s"></a>P  
- Escopo  
+ Scope  
  O intervalo de referência para um objeto ou variável ou um intervalo de registros em uma tabela ou exibição. Por exemplo, variáveis locais podem ser referenciadas apenas dentro do procedimento no qual eles foram definidos. Variáveis públicas são acessíveis de qualquer lugar no aplicativo. Objetos, como o banco de dados atual, estão no escopo se eles estão no caminho de pesquisa definido. Intervalos de registro podem ser especificados com uma cláusula de escopo em muitos comandos.  
   
  provedor de serviços  

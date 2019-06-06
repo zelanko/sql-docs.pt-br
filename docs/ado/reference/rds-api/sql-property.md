@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9b3222c39515bad505d24b10e31b36a9c1c61965
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ba032adaa8b6412b9390de644504cae6c55c74f9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63315836"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697707"
 ---
 # <a name="sql-property"></a>Propriedade SQL
 Indica a cadeia de caracteres de consulta usada para recuperar o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  

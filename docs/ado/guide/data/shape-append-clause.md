@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 13a91d6b8512b2c1287c3cc8e36e43a1317022d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5cc89f54dd030604e5d5d842aabb68713e46fd4c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062852"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718669"
 ---
 # <a name="shape-append-clause"></a>Cláusula APPEND de forma
 A cláusula de ACRÉSCIMO do comando de forma acrescenta uma coluna ou colunas para um **conjunto de registros**. Com frequência, essas colunas são colunas de capítulo que se referem a um filho **conjunto de registros**.  

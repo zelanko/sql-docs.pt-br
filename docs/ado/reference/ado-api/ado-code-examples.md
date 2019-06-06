@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: eb16724f-6fca-4873-b005-68626a8999b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7105160c7008d6f36d1c4e01faf8b1631080b8d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bcf97f42e88cbbba98456efa1cacc60f26b22e2e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248986"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696821"
 ---
 # <a name="ado-code-examples"></a>Exemplos de código ADO
 Use os exemplos de código a seguir para saber como usar os objetos do ADO, métodos, propriedades e eventos.  

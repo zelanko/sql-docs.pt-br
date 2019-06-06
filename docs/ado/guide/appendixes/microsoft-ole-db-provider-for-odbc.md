@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fd8374eaa97ffc08528c245569ec7bff8499747a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62853327"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701322"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Provedor Microsoft OLE DB para visão geral do ODBC
 Para um programador do ADO ou RDS, um mundo ideal seria um no qual todos os dados fonte expõe uma interface OLE DB, para que o ADO pode chamar diretamente na fonte de dados. Embora cada vez mais fornecedores de banco de dados estiver implementando interfaces OLE DB, algumas fontes de dados não são ainda expostos dessa maneira. No entanto, a maioria dos sistemas DBMS em uso atualmente podem ser acessados por meio de ODBC.
@@ -65,7 +65,7 @@ MSDASQL
 
  O provedor não dá suporte a parâmetros específicos de conexão, além daqueles definidos pelo ADO. No entanto, o provedor passará quaisquer parâmetros de conexão não ADO para o Gerenciador de driver ODBC.
 
- Porque você pode omitir as **provedor** parâmetro, portanto você pode compor uma cadeia de caracteres de conexão ADO que é idêntica de uma cadeia de caracteres de conexão ODBC para a mesma fonte de dados. Use os mesmos nomes de parâmetro (**DRIVER =**, **banco de dados =**, **DSN =** e assim por diante), valores e a sintaxe de como você faria ao compor uma cadeia de caracteres de conexão do ODBC. Você pode se conectar com ou sem um nome de fonte de dados predefinidos (DSN) ou FileDSN.
+ Porque você pode omitir as **provedor** parâmetro, portanto você pode compor uma cadeia de caracteres de conexão ADO que é idêntica de uma cadeia de caracteres de conexão ODBC para a mesma fonte de dados. Use os mesmos nomes de parâmetro (**DRIVER =** , **banco de dados =** , **DSN =** e assim por diante), valores e a sintaxe de como você faria ao compor uma cadeia de caracteres de conexão do ODBC. Você pode se conectar com ou sem um nome de fonte de dados predefinidos (DSN) ou FileDSN.
 
 ## <a name="syntax-with-a-dsn-or-filedsn"></a>Sintaxe com um DSN ou FileDSN:
 
@@ -84,9 +84,9 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="remarks"></a>Comentários
  Se você usar um **DSN** ou **FileDSN**, ela deve ser definida por meio do administrador de fonte de dados do ODBC no painel de controle do Windows. No Microsoft Windows 2000, o administrador de ODBC está localizado em Ferramentas administrativas. Em versões anteriores do Windows, o ícone de administrador de ODBC é denominado **ODBC de 32 bits** ou apenas **ODBC**.
 
- Como uma alternativa à configuração de um **DSN**, você pode especificar o driver ODBC (**DRIVER =**), como "SQL Server"; o nome do servidor (**SERVER =**); e o nome do banco de dados (**Banco de dados =**).
+ Como uma alternativa à configuração de um **DSN**, você pode especificar o driver ODBC (**DRIVER =** ), como "SQL Server"; o nome do servidor (**SERVER =** ); e o nome do banco de dados (**Banco de dados =** ).
 
- Você também pode especificar um nome de conta de usuário (**UID =**) e a senha da conta de usuário (**PWD =**) nos parâmetros de ODBC específico ou no padrão definido pelo ADO *usuário* e *senha* parâmetros.
+ Você também pode especificar um nome de conta de usuário (**UID =** ) e a senha da conta de usuário (**PWD =** ) nos parâmetros de ODBC específico ou no padrão definido pelo ADO *usuário* e *senha* parâmetros.
 
  Embora uma **DSN** definição já especifica um banco de dados, você pode especificar *um* *banco de dados* parâmetro além uma **DSN** para se conectar para um banco de dados diferente. É uma boa ideia sempre inclua *as* *banco de dados* parâmetro quando você usa um **DSN**. Isso garantirá que você se conectar ao banco de dados correto se outro usuário alterou o parâmetro de banco de dados padrão, uma vez que você verificou se o **DSN** definição.
 

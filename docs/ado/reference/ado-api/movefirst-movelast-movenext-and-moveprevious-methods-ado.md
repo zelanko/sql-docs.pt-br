@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 905fc532057a827f30735efe067464f488f51dc0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 83e216f15da49150481af18ee98aac1f604b2394
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242910"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707476"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>MoveFirst, MoveLast, MoveNext e MovePrevious métodos (ADO)
 Move para a primeira, última, registro anterior ou seguinte em um especificado [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto e torna esse registro o registro atual.  

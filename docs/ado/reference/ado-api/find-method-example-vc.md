@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 448768620100ac444fefe030e2ef42812e2eb03c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 860b64a924762e68e7405ae02b6d909cc807b368
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028173"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694968"
 ---
 # <a name="find-method-example-vc"></a>Exemplo do método Find (VC++)
 Este exemplo usa o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto [localizar](../../../ado/reference/ado-api/find-method-ado.md) método para localizar e contar o número de cargos na **Pubs** banco de dados. O exemplo supõe que o provedor subjacente não oferece suporte a uma funcionalidade semelhante.  

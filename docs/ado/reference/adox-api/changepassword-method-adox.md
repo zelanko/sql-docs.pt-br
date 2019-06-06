@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 96268fac4b81230fcb63db6b48ef4ef794abb9c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 981f2e5b801cd35b0aedb04e5f1aa11b741e4535
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184147"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708009"
 ---
 # <a name="changepassword-method-adox"></a>Método ChangePassword (ADOX)
 Altera a senha para um [usuário](../../../ado/reference/adox-api/user-object-adox.md) conta.  

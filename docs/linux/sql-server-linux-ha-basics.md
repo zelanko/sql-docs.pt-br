@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b93e48c20645da68ed53d98775a4cc57760abc77
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 4e42088227e22f6368426b9c4e8dc8134dbb49d7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658400"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719364"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Noções básicas de disponibilidade do SQL Server para implantações do Linux
 
@@ -164,7 +163,7 @@ Esta seção documenta os conceitos e terminologia para uma implementação do P
 #### <a name="node"></a>Nó
 Um nó é um servidor que participam no cluster. Um cluster Pacemaker nativamente dá suporte a até 16 nós. Esse número pode ser excedido se Corosync não está em execução em nós adicionais, mas Corosync é necessária para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Portanto, o número máximo de nós de um cluster pode ter qualquer [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-com base de configuração é 16; esse é o limite do Pacemaker e não tem nada a ver com as limitações máximas para grupos de disponibilidade ou FCIs impostas pelo [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. 
 
-#### <a name="resource"></a>Recurso
+#### <a name="resource"></a>Resource
 Um WSFC e um cluster Pacemaker tem o conceito de um recurso. Um recurso é uma funcionalidade específica que é executado no contexto do cluster, como um disco ou um endereço IP. Por exemplo, sob o Pacemaker FCI e o grupo de disponibilidade de recursos podem ser criados. Isso não é parecido com o que é feito em um WSFC, onde você vê uma [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] recursos para a uma FCI ou em um recurso de grupo de disponibilidade ao configurar um grupo de disponibilidade, mas é não exatamente o mesmo devido a diferenças subjacente como [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] integra-se com o Pacemaker.
 
 Pacemaker tem recursos standard e clone. Recursos de clonagem são aqueles que são executados simultaneamente em todos os nós. Um exemplo seria um endereço IP que é executado em vários nós para fins de balanceamento de carga. Qualquer recurso que é criado sobre as FCIs usa um recurso padrão, uma vez que apenas um nó pode hospedar uma FCI a qualquer momento.

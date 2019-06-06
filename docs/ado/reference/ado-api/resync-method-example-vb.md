@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0ddcc484c389025a8c4a22ef43d0a46c4f53cdba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d5886c692bd42d4d5c8021a5953de02003044175
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062344"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719109"
 ---
 # <a name="resync-method-example-vb"></a>Exemplo do método Resync (VB)
 Este exemplo demonstra como usar o [ressincronizar](../../../ado/reference/ado-api/resync-method.md) método para atualizar os dados em um conjunto de registros estático.  

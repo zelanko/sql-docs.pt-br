@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a3b13402f20c149c438aa5a2c678afb068fb0f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 701ced4f5e0ad511f4a1c5b39c9775e285d1f751
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140221"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695784"
 ---
 # <a name="connection-object-ado"></a>Objeto Connection (ADO)
 Representa uma conexão aberta com uma fonte de dados.  
@@ -64,7 +64,7 @@ Representa uma conexão aberta com uma fonte de dados.
 >  Não use esse recurso (chamando um procedimento armazenado ou um comando nomeado como se fosse um método nativo na **Conexão** objeto) em um aplicativo do Microsoft® .NET Framework, porque a implementação subjacente dos conflitos de recurso com a maneira como o .NET Framework interopera com COM.  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>Executar um comando como um método nativo de um objeto de Conexão  
- Para executar um comando, dê o comando a um nome usando o **comando** objeto [nome](../../../ado/reference/ado-api/name-property-ado.md) propriedade. Defina as **ActiveConnection** propriedade da **comando** objeto para a conexão. Em seguida, emitir uma instrução em que o nome do comando é usado como se fosse um método na **Conexão** objeto, seguido por quaisquer parâmetros e um **Recordset** se todas as linhas serão retornadas do objeto. Defina as **conjunto de registros** propriedades para personalizar resultante **conjunto de registros**. Por exemplo:   
+ Para executar um comando, dê o comando a um nome usando o **comando** objeto [nome](../../../ado/reference/ado-api/name-property-ado.md) propriedade. Defina as **ActiveConnection** propriedade da **comando** objeto para a conexão. Em seguida, emitir uma instrução em que o nome do comando é usado como se fosse um método na **Conexão** objeto, seguido por quaisquer parâmetros e um **Recordset** se todas as linhas serão retornadas do objeto. Defina as **conjunto de registros** propriedades para personalizar resultante **conjunto de registros**. Por exemplo:  
   
 ```  
 Dim cnn As New ADODB.Connection  

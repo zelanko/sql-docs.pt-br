@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a5ab00cc6e01b97639ae3f7d353fa2462ef3fd0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3528034b4a87115d704e7cbbc1f9d98a36e11794
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309166"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695673"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 Especifica as permissões disponíveis para modificar dados em um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md), abrindo uma [registro](../../../ado/reference/ado-api/record-object-ado.md), ou especificando valores para o [modo](../../../ado/reference/ado-api/mode-property-ado.md) propriedade do  **Registro** e [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objetos.  

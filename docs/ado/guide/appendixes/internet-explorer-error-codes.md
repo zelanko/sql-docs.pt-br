@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddbb675214f537054e608e10854cedf74e0f39be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 75f2784c9d144cdb33bb4062d08c3a855413e0ad
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719873"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701470"
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>Códigos de erro do Internet Explorer para o serviço de dados remotos
 A tabela a seguir lista os códigos de erro do Microsoft® Internet Explorer relacionados ao uso do serviço de dados remoto. A conversão decimal positiva de dois bytes baixa, a conversão decimal negativa do código de erro completa e os valores hexadecimais são mostrados.
 
-|Erros do Internet Explorer (Wininet)|Número|Descrição|
+|Erros do Internet Explorer (Wininet)|Number|Descrição|
 |------------------------------------------|------------|-----------------|
 |**IDS_WinInet_CantConnect**|8195 -2146820093 0x800A2003|Erro de cliente da Internet: Não é possível se conectar ao servidor.|
 |**IDS_WinInet_ ConnectionReset**|12031 -2146816257 0x800A2EFF|Erro de cliente da Internet: Redefinição da Conexão.|

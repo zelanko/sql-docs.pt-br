@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 510842e0-e8dc-4b33-9517-bd1c6df0cf3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e971e3c50cbda2253529b67c3e7b59ee4e5155a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fd1a5bb85a77d55354b39a318290a64d2c1b0a30
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63033348"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708726"
 ---
 # <a name="parentsameasprev-property-ado-md"></a>Propriedade ParentSameAsPrev (ADO MD)
 Indica se o pai nessa posição [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) é o mesmo que o pai do membro imediatamente anterior.  

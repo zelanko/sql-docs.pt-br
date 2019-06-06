@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9a158f5f31239a9e8c3dc791a86e4fdacceb8c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b920b343b9269ae32547edbf5533f651ac1aa785
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242890"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707491"
 ---
 # <a name="move-method-example-vc"></a>Exemplo do método Move (VC++)
 Este exemplo usa o [mover](../../../ado/reference/ado-api/move-method-ado.md) método para posicionar o ponteiro de registro com base na entrada do usuário.  
