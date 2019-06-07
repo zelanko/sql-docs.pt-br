@@ -19,14 +19,14 @@ helpviewer_keywords:
 author: joesackmsft
 ms.author: josack
 manager: craigg
-ms.openlocfilehash: a177d3bcb81e17bb3a3accf6e1fade02132a58fa
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: 1a2123c3da5945fb42184631e43fe27d83972375
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66213757"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744021"
 ---
-# <a name="sysdmresourcegovernorworkloadgroupshistoryex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (banco de dados SQL)
+# <a name="sysdmresourcegovernorworkloadgroupshistoryex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Os pools de instantâneo retorna no intervalo de 15 segundos para os últimos 30 minutos do recurso de estatísticas para um banco de dados do SQL Azure.
@@ -78,7 +78,7 @@ Os pools de instantâneo retorna no intervalo de 15 segundos para os últimos 30
 
 ## <a name="permissions"></a>Permissões
 
-Essa exibição exige a permissão VIEW DATABASE STATE.
+Este modo de exibição requer a permissão VIEW SERVER STATE.
 
 ## <a name="remarks"></a>Comentários
 

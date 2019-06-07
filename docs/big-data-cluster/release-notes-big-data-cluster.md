@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a2f7f6c2929f1b16d0e845bc72a50cc50f3d8812
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: f4520fe88844fcece48ca397041e0e1b8845519c
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66014986"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744155"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notas de versão para clusters de grandes dados no SQL Server
 
@@ -33,11 +33,11 @@ As seções a seguir descrevem os novos recursos e problemas conhecidos para clu
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---|
-| **mssqlctl** atualizações | Vários **mssqlctl** [atualizações de comando e parâmetro](../big-data-cluster/reference-mssqlctl.md). Isso inclui uma atualização para o **mssqlctl logon** comando, que agora tem como alvo o nome de usuário do controlador e o ponto de extremidade. |
-| Aprimoramentos no armazenamento | Suporte para diferentes configurações de armazenamento para logs e dados. Além disso, o número de declarações de volume persistente para um cluster de big data foi reduzido. |
-| Várias instâncias de pool de computação | Suporte para várias instâncias do pool de computação. |
-| Recursos e o comportamento do novo pool | O pool de computação agora é usado por padrão para operações de pool de dados e o pool de armazenamento em um **ROUND_ROBIN** apenas para distribuição. O pool de dados agora pode mais usar um novo novos **REPLICADO** tipo de distribuição, o que significa que os mesmos dados estão presentes em todas as instâncias de pool de dados. |
-| Aprimoramentos da tabela externa | Tipo de tabelas externas de fonte de dados do HADOOP agora dá suporte à leitura linhas até 1 MB de tamanho. Linhas de suporte agora tabelas externas (ODBC, pool de armazenamento, pool de dados) tão largos quanto uma tabela do SQL Server. |
+| Atualizações de **mssqlctl** | Várias [atualizações de comando e parâmetro](../big-data-cluster/reference-mssqlctl.md) do **mssqlctl**. Isso inclui uma atualização do comando **mssqlctl login**, que agora direciona o nome de usuário do controlador e o ponto de extremidade. |
+| Melhorias no armazenamento | Suporte para diferentes configurações de armazenamento para logs e dados. Além disso, o número de declarações de volume persistente para um cluster de Big Data foi reduzido. |
+| Várias instâncias do pool de computação | Suporte para várias instâncias do pool de computação. |
+| Novas funcionalidades e novo comportamento do pool | O pool de computação agora é usado por padrão em operações do pool de dados e do pool de armazenamento apenas em uma distribuição **ROUND_ROBIN**. O pool de dados agora pode usar um novo tipo de distribuição **REPLICATED**, o que significa que os mesmos dados estão presentes em todas as instâncias do pool de dados. |
+| Melhorias na tabela externa | As tabelas externas do tipo de fonte de dados HADOOP agora dão suporte à leitura de linhas com até 1 MB. As tabelas externas (ODBC, pool de armazenamento, pool de dados) agora dão suporte a linhas da mesma largura de uma tabela do SQL Server. |
 
 ### <a name="known-issues"></a>Problemas conhecidos
 
@@ -497,7 +497,7 @@ As seções a seguir descrevem os problemas conhecidos e as limitações desta v
 O portal de administração de cluster não exibe o ponto de extremidade para a instância mestre do SQL Server. Para localizar o endereço IP e porta para a instância mestre, use o seguinte **kubectl** comando:
 
 ```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
+kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 ```
 
 #### <a name="external-tables"></a>Tabelas externas

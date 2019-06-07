@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d40123d97b0a2305494a0cfe23dd2221993d14d3
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: c4c6cb2032949131277d5baa126f2895255fd18b
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994044"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743948"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Use o curl para carregar dados no HDFS em clusters de grandes dados do SQL Server
 
@@ -25,14 +25,14 @@ Este artigo explica como usar **curl** para carregar dados no HDFS em clusters d
 
 ## <a name="obtain-the-service-external-ip"></a>Obter o IP externo do serviço
 
-WebHDFS é iniciado quando a implantação for concluída, e seu acesso passa pelo Knox. O ponto de extremidade do Knox é exposto por meio de um serviço de Kubernetes chamado **gateway-svc-externo**.  Para criar a URL de WebHDFS necessário para carregar/baixar arquivos, é necessário o **gateway-svc-externo** endereço IP externo e o nome do seu cluster do serviço. Você pode obter o **gateway-svc-externo** endereço IP externo do serviço, executando o seguinte comando:
+WebHDFS é iniciado quando a implantação for concluída, e seu acesso passa pelo Knox. O ponto de extremidade do Knox é exposto por meio de um serviço de Kubernetes chamado **gateway-svc-externo**.  Para criar a URL de WebHDFS necessário para carregar/baixar arquivos, é necessário o **gateway-svc-externo** endereço IP externo e o nome do seu cluster de big data de serviço. Você pode obter o **gateway-svc-externo** endereço IP externo do serviço, executando o seguinte comando:
 
 ```bash
-kubectl get service gateway-svc-external -n <cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
+kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
 ```
 
 > [!NOTE]
-> O `<cluster name>` aqui é o nome do cluster que você especificou no arquivo de configuração de implantação. O nome padrão é `mssql-cluster`.
+> O `<big data cluster name>` aqui é o nome do cluster que você especificou no arquivo de configuração de implantação. O nome padrão é `mssql-cluster`.
 
 ## <a name="construct-the-url-to-access-webhdfs"></a>Construir a URL para acessar o WebHDFS
 
@@ -40,7 +40,7 @@ Agora, você pode construir a URL para acessar o WebHDFS da seguinte maneira:
 
 `https://<gateway-svc-external service external IP address>:30443/gateway/default/webhdfs/v1/`
 
-Por exemplo: 
+Por exemplo:
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 

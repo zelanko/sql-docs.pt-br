@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5725b00d3925a9b2589884e1e2bf8e7200844e1d
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.openlocfilehash: a385a2691d37bf31186a3530e91bdf937ac4dc05
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66462799"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744207"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Início Rápido: Implantar um cluster de big data do SQL Server no serviço de Kubernetes do Azure (AKS)
 
@@ -82,7 +82,7 @@ Use as etapas a seguir para executar o script de implantação. Esse script cria
    | **Região do Azure** | A região do Azure para o novo cluster do AKS (padrão **westus**). |
    | **Tamanho da máquina** | O [tamanho de máquina](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) a ser usado para nós no cluster do AKS (padrão **Standard_L8s**). |
    | **Nós de trabalho** | O número de nós de trabalho no cluster do AKS (padrão **1**). |
-   | **Nome do cluster** | O nome do cluster do AKS e o cluster de big data. O nome do cluster deve ser apenas caracteres alfanuméricos em letras minúsculas e sem espaços. (padrão **sqlbigdata**). |
+   | **Nome do cluster** | O nome do cluster do AKS e o cluster de big data. O nome do seu cluster de big data deve ser apenas caracteres alfanuméricos em letras minúsculas e sem espaços. (padrão **sqlbigdata**). |
    | **Senha** | Senha para o controlador, o gateway HDFS/Spark e a instância mestre (padrão **MySQLBigData2019**). |
    | **Usuário do controlador** | Nome de usuário para o usuário controlador (padrão: **admin**). |
 
@@ -118,7 +118,7 @@ Depois de 10 a 20 minutos, você deve ser notificado se o pod de controlador est
 
 ## <a name="inspect-the-cluster"></a>Inspecione o cluster
 
-A qualquer momento durante a implantação, você pode usar o kubectl ou o Portal de administração de Cluster para inspecionar o status e detalhes sobre o cluster de execução big data.
+A qualquer momento durante a implantação, você pode usar **kubectl** ou **mssqlctl** para inspecionar o status e detalhes sobre o cluster de execução big data.
 
 ### <a name="use-kubectl"></a>Usar o kubectl
 
@@ -127,42 +127,32 @@ Abra uma nova janela de comando para usar **kubectl** durante o processo de impl
 1. Execute o seguinte comando para obter um resumo do status de todo o cluster:
 
    ```
-   kubectl get all -n <your-cluster-name>
+   kubectl get all -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > Se você não alterou o nome do cluster de big data, o script assume como padrão **sqlbigdata**.
 
 1. Inspecione os serviços do kubernetes e seus pontos de extremidade internos e externos com os seguintes **kubectl** comando:
 
    ```
-   kubectl get svc -n <your-cluster-name>
+   kubectl get svc -n <your-big-data-cluster-name>
    ```
 
 1. Você também pode inspecionar o status dos pods kubernetes com o seguinte comando:
 
    ```
-   kubectl get pods -n <your-cluster-name>
+   kubectl get pods -n <your-big-data-cluster-name>
    ```
 
 1. Encontre mais informações sobre um pod específico com o seguinte comando:
 
    ```
-   kubectl describe pod <pod name> -n <your-cluster-name>
+   kubectl describe pod <pod name> -n <your-big-data-cluster-name>
    ```
 
 > [!TIP]
 > Para obter mais detalhes sobre como monitorar e solucionar problemas de uma implantação, consulte [monitoramento e solução de problemas de clusters de grandes dados do SQL Server](cluster-troubleshooting-commands.md).
-
-### <a name="use-the-cluster-administration-portal"></a>Usar o Portal de administração de Cluster
-
-Quando o pod de controlador estiver em execução, você também pode usar o Portal de administração de Cluster para monitorar a implantação. Você pode acessar o portal usando o IP endereço e porta número externa para o `mgmtproxy-svc-external` (por exemplo: **https://\<endereço ip\>: 30777/portal**). As credenciais usadas para logon no portal correspondem aos valores para **usuário Controller** e **senha** que você especificou no script de implantação.
-
-Você pode obter o endereço IP do **mgmtproxy-svc-externo** serviço executando este comando em uma janela de bash ou cmd:
-
-```bash
-kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
-```
-
-> [!NOTE]
-> No CTP 3.0, você verá um aviso de segurança ao acessar a página da web, porque os clusters de big data está usando certificados gerados automaticamente SSL.
 
 ## <a name="connect-to-the-cluster"></a>Conectar-se ao cluster
 

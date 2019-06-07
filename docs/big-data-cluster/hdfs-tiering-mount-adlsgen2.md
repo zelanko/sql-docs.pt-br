@@ -10,12 +10,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9f5d1ce4724f95b511272bb4df8d41ee0df75d90
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: a2a00c248b75612525194ffd4074f1c176eefbee
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993966"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743892"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Como Gen2 ADLS de montagem para o HDFS disposição em camadas em um cluster de big data
 
@@ -103,7 +103,7 @@ Agora que você preparou um arquivo de credencial com chaves de acesso ou usando
 1. Use **kubectl** para localizar o endereço IP para o ponto de extremidade **controlador-svc-externo** serviço em seu cluster de big data. Procure os **External-IP**.
 
    ```bash
-   kubectl get svc controller-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
 1. Faça logon com **mssqlctl** usando o endereço IP externo do ponto de extremidade de controlador com seu nome de usuário do cluster e a senha:

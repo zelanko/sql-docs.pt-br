@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 924d026c61275d5bc957ce1157e30381f27ef2d0
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 34290ebdb92468687ae5f252c0ebdfef05dd11ff
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993982"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743936"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Como implantar clusters de grandes dados do SQL Server no Kubernetes
 
@@ -92,8 +92,10 @@ Você pode implantar um cluster de big data, executando **criar cluster mssqlctl
 mssqlctl cluster create
 ```
 
-> [!TIP]
-> Neste exemplo, você será solicitado para todas as configurações que não fazem parte da configuração padrão, como senhas. Observe que as informações do Docker são fornecidas a você pela Microsoft como parte do SQL Server 2019 [programa de adoção antecipada](https://aka.ms/eapsignup).
+Nesse cenário, você será solicitado para todas as configurações que não fazem parte da configuração padrão, como senhas. Observe que as informações do Docker são fornecidas a você pela Microsoft como parte do SQL Server 2019 [programa de adoção antecipada](https://aka.ms/eapsignup).
+
+> [!IMPORTANT]
+> É o nome padrão do cluster de big data **mssql-cluster**. Isso é importante saber para executar qualquer um dos **kubectl** comandos que especifica o namespace do Kubernetes com o `-n` parâmetro.
 
 ## <a id="customconfig"></a> Configurações personalizadas
 
@@ -220,8 +222,11 @@ Depois que o script de implantação foi concluída com êxito, você pode obter
 1. Após a implantação, localize o endereço IP do ponto de extremidade controlador examinando a saída EXTERNAL-IP das seguintes **kubectl** comando:
 
    ```bash
-   kubectl get svc controller-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > Se você não alterou o nome padrão durante a implantação, use `-n mssql-cluster` no comando anterior. **MSSQL-cluster** é o nome padrão para o cluster de big data.
 
 1. Faça logon no cluster de big data com **mssqlctl logon**. Defina a **– controlador de ponto de extremidade** parâmetro para o endereço IP externo do ponto de extremidade de controlador.
 
@@ -267,7 +272,7 @@ minikube ip
 Independentemente da plataforma você está executando o cluster Kubernetes, para obter todos os pontos de serviço implantados para o cluster, execute o comando a seguir:
 
 ```bash
-kubectl get svc -n <your-cluster-name>
+kubectl get svc -n <your-big-data-cluster-name>
 ```
 
 ## <a id="connect"></a> Conectar-se ao cluster

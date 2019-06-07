@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a270274d252a657d5eac8935b6f5d1b2e8b7f71e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: e84b43b4aeeaff97d5b625eed0f4e30a0e6907f0
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63473520"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743835"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutorial: Carregar dados de exemplo em um cluster de big data do SQL Server
 
@@ -71,7 +71,7 @@ As etapas a seguir descrevem como usar um cliente do Windows para carregar os da
    | <KNOX_PASSWORD> | A senha para o Gateway HDFS/Spark. |
 
    > [!TIP]
-   > Use [kubectl](cluster-troubleshooting-commands.md) para localizar os endereços IP para a instância mestre do SQL Server e o Knox. Execute `kubectl get svc -n <your-cluster-name>` e examine os endereços de IP externo para a instância mestre (**master-svc-externo**) e Knox (**gateway-svc-externo**).
+   > Use [kubectl](cluster-troubleshooting-commands.md) para localizar os endereços IP para a instância mestre do SQL Server e o Knox. Execute `kubectl get svc -n <your-big-data-cluster-name>` e examine os endereços de IP externo para a instância mestre (**master-svc-externo**) e Knox (**gateway-svc-externo**). É o nome padrão de um cluster **mssql-cluster**.
 
 1. Execute o script de inicialização.
 
@@ -107,7 +107,7 @@ As etapas a seguir descrevem como usar um cliente Linux para carregar os dados d
    | <KNOX_PASSWORD> | A senha para o Gateway HDFS/Spark. |
 
    > [!TIP]
-   > Use [kubectl](cluster-troubleshooting-commands.md) para localizar os endereços IP para a instância mestre do SQL Server e o Knox. Execute `kubectl get svc -n <your-cluster-name>` e examine os endereços de IP externo para a instância mestre (**master-svc-externo**) e Knox (**gateway-svc-externo**).
+   > Use [kubectl](cluster-troubleshooting-commands.md) para localizar os endereços IP para a instância mestre do SQL Server e o Knox. Execute `kubectl get svc -n <your-big-data-cluster-name>` e examine os endereços de IP externo para a instância mestre (**master-svc-externo**) e Knox (**gateway-svc-externo**). É o nome padrão de um cluster **mssql-cluster**.
 
 1. Execute o script de inicialização.
 
