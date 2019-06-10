@@ -14,13 +14,13 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 995679ad24d1be79849b6b586964a206d4c70d7d
-ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
+manager: jroth
+ms.openlocfilehash: 1809a5304f9311cb9039b255162a772413f16b23
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55807404"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795004"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Alterar o nível de compatibilidade do banco de dados e usar o Repositório de Consultas
 
