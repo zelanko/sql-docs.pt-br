@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Este tutorial demonstra como ingestão de dados para o pool de dados de um cluster de big data de 2019 do SQL Server (versão prévia) usando trabalhos do Spark no estúdio de dados do Azure.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: dcdbee449f15e070920660d5470135f4f8ae93a0
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: aa38de6e488c71109758d26481a8487f574f6451
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994163"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770891"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Ingestão de dados para um pool de dados do SQL Server com trabalhos do Spark
 
@@ -108,14 +108,14 @@ A próxima etapa é criar um trabalho que carrega dados de sequência de cliques
    |---|---|
    | nome do servidor | Uso do SQL Server para ler o esquema da tabela |
    | Número da porta | Porta SQL Server está escutando (padrão 1433) |
-   | username | Nome de usuário de logon do SQL Server |
+   | Nome de Usuário | Nome de usuário de logon do SQL Server |
    | password | Senha de logon do SQL Server |
    | nome do banco de dados | Banco de dados de destino |
    | nome da tabela externa | Tabela a ser usada para obter os resultados |
    | Diretório de origem de streaming | Isso deve ser um URI completo, como "hdfs: / / / clickstream_data" |
    | formato de entrada | Isso pode ser "csv", "parquet" ou "json" |
    | Habilitar o ponto de verificação | true ou false |
-   | tempo limite | tempo para executar o trabalho para em milissegundos antes de sair |
+   | timeout | tempo para executar o trabalho para em milissegundos antes de sair |
 
 1. Pressione **enviar** para enviar o trabalho.
 

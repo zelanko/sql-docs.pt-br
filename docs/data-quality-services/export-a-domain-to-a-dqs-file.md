@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fa750d7cba97b0b81f74232c7d617846d62951cb
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 76c3cc2b3165ce1d607fa3896c187ebd5ec1e87b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487363"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769018"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>Exportar um domínio para um arquivo .dqs
 
