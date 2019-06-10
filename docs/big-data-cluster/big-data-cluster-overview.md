@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Saiba mais sobre clusters de big data de 2019 do SQL Server (visualização) que são executados no Kubernetes e fornecem opções de escalabilidade horizontal para relacionais e dados do HDFS.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/07/2018
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e9e9cdcd63873ade4d9d828309f8b2d4b5b874e0
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: fed82f9bda8f72d92157de726eb6ae3c6ed1c0c0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860248"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801885"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>O que são os clusters de Big Data do SQL Server?
 

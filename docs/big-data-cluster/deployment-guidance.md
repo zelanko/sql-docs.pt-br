@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Aprenda a implantar clusters de big data de 2019 do SQL Server (versão prévia) no Kubernetes.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 34290ebdb92468687ae5f252c0ebdfef05dd11ff
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.openlocfilehash: 15cd412de1dda9d1245859c27d35a7c7f9f52710
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66743936"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782244"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Como implantar clusters de grandes dados do SQL Server no Kubernetes
 

@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: Referência para um arquivo de configuração de implantação de cluster de big data.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 831d9229d706a9edfea3cd92e2ea562c81460715
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 59b7de44af6873e18dbc1292bd5eccd6f33b637f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759123"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798726"
 ---
 # <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>Referência de arquivo de configuração de implantação para clusters de big data
 

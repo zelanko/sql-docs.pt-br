@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 8612109661ee5b4cd81aefc60c381021fc6fcd98
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: 8efef6f081395265f641197058b7920162cdde46
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015162"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794488"
 ---
 # <a name="configure-replay-in-database-experimentation-assistant"></a>Configurar a reprodução no Assistente de experimentação do banco de dados
 

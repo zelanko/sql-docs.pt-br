@@ -10,13 +10,13 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: acca24570cf1c5052d92378b0dd5aa44d978aab6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5866e70945e7a507c0a8887abf006858d37c2bf0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309368"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798008"
 ---
 # <a name="sql-server-import-extension-preview"></a>Extensão de importação do SQL Server (versão prévia)
 
