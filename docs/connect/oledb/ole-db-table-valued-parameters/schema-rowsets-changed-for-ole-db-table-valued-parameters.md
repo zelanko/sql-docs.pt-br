@@ -13,13 +13,13 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB), schema rowsets changed for (OLE DB)
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 3ebfae0c3b4753e35e02df570ebc170a7c37a686
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e51fe46871555f01d2dda238515f8f1200b2fa27
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726554"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801123"
 ---
 # <a name="schema-rowsets-changed-for-ole-db-table-valued-parameters"></a>Conjuntos de linhas de esquema alterados para parâmetros com valor de tabela de OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

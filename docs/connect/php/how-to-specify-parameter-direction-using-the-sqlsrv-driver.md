@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 64c73b14f0195441979891f626976648b56d583d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 33613a90ee21069b2ef7d2f9908ed13bd4f040e1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642364"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799674"
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>Como especificar a direção do parâmetro com o driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -86,5 +86,5 @@ Este tópico descreve como usar o driver SQLSRV para especificar a direção do 
 ## <a name="see-also"></a>Consulte Também  
 [Como recuperar parâmetros de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
-[How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
+[Como recuperar parâmetros de entrada e de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

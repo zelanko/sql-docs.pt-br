@@ -7,14 +7,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-manager: craigg
+manager: jroth
 author: MightyPen
-ms.openlocfilehash: ab53bcc4885ab91c3c9d022ffc3ba3bd72e2c5be
-ms.sourcegitcommit: 1d66761e54490267be4d0a94efc0ad6790051ef2
+ms.openlocfilehash: aff69606c81a1ee93a01a8467299ba2155da770d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65198033"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801740"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Como usar o recurso Always Encrypted com o ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -557,7 +557,7 @@ A tabela a seguir fornece um resumo das ações ao operar em uma coluna criptogr
 
 |`ColumnEncryption`|Direção BCP|Descrição|
 |----------------|-------------|-----------|
-|`Disabled`|OUT (para o cliente)|Recupera o texto cifrado. O tipo de dados observado é **varbinary(max)**.|
+|`Disabled`|OUT (para o cliente)|Recupera o texto cifrado. O tipo de dados observado é **varbinary(max)** .|
 |`Enabled`|OUT (para o cliente)|Recupera texto não criptografado. O driver descriptografará os dados da coluna.|
 |`Disabled`|IN (para servidor)|Insere o texto cifrado. Destina-se a mover os dados criptografados discretamente sem a necessidade de serem descriptografados. A operação falhará se a opção `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` não estiver definida no usuário ou se BCPMODIFYENCRYPTED não estiver definido no identificador de conexão. Veja a seguir para obter mais informações.|
 |`Enabled`|IN (para servidor)|Insere texto não criptografado. O driver descriptografará os dados da coluna.|
