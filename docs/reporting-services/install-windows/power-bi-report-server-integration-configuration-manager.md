@@ -1,18 +1,18 @@
 ---
 title: Integração do Servidor de Relatórios do Power BI (Gerenciador de Configurações) | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 61f72b2676e2c3c92dd82febc70d2e00d3363baf
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: c99eb7091cd72be40f2acb45e5e7bebf8a71526e
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59506553"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499615"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integração de servidor de relatório do Power BI (Configuration Manager)
 
@@ -113,7 +113,7 @@ Esta seção resume as etapas básicas e as tecnologias envolvidas ao integrar s
 
 1. Os usuários visualizam relatórios no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] e na primeira vez que clicarem para fixar um item de relatório do [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
-2. Eles serão redirecionados para a página de logon do Azure AD. Eles também podem entrar por meio da página [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Quando os usuários entram no locatário gerenciado do Azure, uma relação é estabelecida entre a sua conta do Azure e as permissões do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Para saber mais, confira [Minhas Configurações para integração do Power BI &#40;portal Web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
+2. Eles serão redirecionados para a página de logon do Azure AD. Eles também podem entrar por meio da página [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Quando os usuários entram no locatário gerenciado do Azure, uma relação é estabelecida entre a sua conta do Azure e as permissões do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Para saber mais, confira [Minhas Configurações para integração do Power BI &#40;portal Web&#41;](../my-settings-for-power-bi-integration-web-portal.md).
 
 3. Um token de segurança do usuário é retornado para o servidor de relatório.
 
@@ -125,7 +125,7 @@ Esta seção resume as etapas básicas e as tecnologias envolvidas ao integrar s
 
 7. Uma assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é criada para gerenciar a atualização agendada do item de relatório para o bloco do painel. A assinatura usa o token de segurança que foi criado quando o usuário se conectou.
 
-     O token é válido por **90 dias** e, após esse período, os usuários precisam fazer logon novamente para criar um novo token de usuário. Quando o token tiver expirado, os blocos fixos ainda estarão exibidos no painel, mas os dados não serão atualizados.  As assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usadas para os itens fixados gerarão um erro até que um novo token de usuário seja criado. Veja [Minhas Configurações para integração do Power BI &#40;portal Web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). para obter mais informações.
+     O token é válido por **90 dias** e, após esse período, os usuários precisam fazer logon novamente para criar um novo token de usuário. Quando o token tiver expirado, os blocos fixos ainda estarão exibidos no painel, mas os dados não serão atualizados.  As assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usadas para os itens fixados gerarão um erro até que um novo token de usuário seja criado. Veja [Minhas Configurações para integração do Power BI &#40;portal Web&#41;](../my-settings-for-power-bi-integration-web-portal.md). para obter mais informações.
 
 Na segunda vez que um usuário fixar um item, as etapas de 1 a 4 são ignoradas e, em vez disso, a ID do aplicativo e as URLS serão recuperadas do banco de dados ReportServer e o fluxo continuará com a etapa 5.
 
@@ -153,7 +153,7 @@ Na segunda vez que um usuário fixar um item, as etapas de 1 a 4 são ignoradas 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Minhas Configurações para integração do Power BI](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[Minhas configurações para integração do &#40;portal Web&#41; do Power BI](../my-settings-for-power-bi-integration-web-portal.md)  
 [Fixar itens do Reporting Services nos painéis do Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
 [Painéis no Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 

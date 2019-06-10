@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1f9b0a0bed30c936065cb262e34db4764345e846
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: c00b9536ad5a97e5e0d3d302e2960bc1b1a9f077
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65573135"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500461"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Fontes de dados com suporte no Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera dados de relatório de fontes de dados por meio de uma camada de dados modular e extensível que usa extensões de processamento de dados. Para recuperar dados de relatório de uma fonte de dados, você deve selecionar uma extensão de processamento de dados que dá suporte ao tipo de fonte de dados, à versão do software em execução na fonte de dados e à plataforma da fonte de dados ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]de 32 bits ou 64 bits).  
@@ -132,7 +132,7 @@ ms.locfileid: "65573135"
 > [!NOTE]
 >  A extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não tem suporte no momento.  
   
- Para obter mais informações sobre extensões de processamento de dados com suporte do Construtor de Relatórios, consulte [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios] na [documentação do Construtor de Relatórios](https://go.microsoft.com/fwlink/?LinkId=154494) no msdn.microsoft.com.  
+ Para obter mais informações sobre extensões de processamento de dados com suporte do Construtor de Relatórios, consulte [Data Connections, Data Sources, and Connection Strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios] na [documentação do Construtor de Relatórios](https://go.microsoft.com/fwlink/?LinkId=154494) no msdn.microsoft.com.  
   
 ###  <a name="MicrosoftSQLServer"></a> Extensão de processamento de dados do Microsoft SQL Server  
  O tipo de fonte de dados **Microsoft SQL Server** encapsula e estende o Provedor de Dados [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa extensão de processamento de dados é compilada de maneira nativa e se destina à execução nas plataformas baseadas em x86 e em [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)].  
