@@ -4,18 +4,18 @@ titleSuffix: Azure Data Studio
 description: Este artigo descreve como usar o Acelerador de código PROSA no estúdio de dados do Azure para gerar automaticamente o código para tarefas de wrangling de dados comuns.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 705d3b5230faf69ca9eb9de2f7f0cc21b42a8955
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: f5406ce0e67322a8f7148fc83b83d0789f27e1ae
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935332"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770780"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Wrangling de dados usando o Acelerador de código PROSA
 
