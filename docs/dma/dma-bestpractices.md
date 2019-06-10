@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: cb355cbe1e32c97e59d61eb55ca70023b03acd6b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b122c8dbd5e087ab8b871eb7a29e3bb2b330acaa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63154625"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794413"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Práticas recomendadas para executar o Assistente de migração de dados
 Este artigo fornece algumas informações de prática recomendadas para instalação, avaliação e migração.

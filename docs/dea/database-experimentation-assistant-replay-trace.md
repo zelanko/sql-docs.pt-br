@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 4430352babb69c58930755cf4ddae0e70b9d5a02
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: 7db0e6a83997a3be7b204f780f3c0a7ad856b0d8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015116"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794450"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Repetir um rastreamento no Assistente de experimentação do banco de dados
 
@@ -65,7 +65,7 @@ No DEA, selecione o ícone de menu. No menu expandido, selecione **reproduzir ra
 ### <a name="replay-a-trace"></a>Repetir um rastreamento
 
 1.  **Nome do arquivo de rastreamento**: Insira um nome de arquivo de rastreamento.
-1.  **Tamanho máximo do arquivo (MB)**: Insira um valor de tamanho de substituição de arquivo de rastreamento. O padrão é de 200 MB. Você pode inserir um valor personalizado.
+1.  **Tamanho máximo do arquivo (MB)** : Insira um valor de tamanho de substituição de arquivo de rastreamento. O padrão é de 200 MB. Você pode inserir um valor personalizado.
 1.  **Caminho para armazenar a saída de rastreamento de reprodução**: Insira o caminho do arquivo de saída. TRC.
 1.  **Nome da instância do SQL Server**:  Insira o nome da instância do SQL Server na qual reproduzir rastreamentos.
 1.  Selecione **iniciar**.
