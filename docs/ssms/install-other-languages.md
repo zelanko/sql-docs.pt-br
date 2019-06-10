@@ -1,8 +1,6 @@
 ---
 title: Instalar versões de idioma do SSMS (SQL Server Management Studio) que não estão em inglês | Microsoft Docs
 description: Instalar versões de idioma do SSMS (SQL Server Management Studio) que não estão em inglês
-ms.custom: ''
-ms.date: 04/25/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssms
@@ -10,14 +8,16 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6bcc4080d3ee25f22f0bd574258f3be26c331c11
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.custom: ''
+ms.date: 04/25/2019
+ms.openlocfilehash: 43b7135881d6c4b7917725771426a1180e5ab7e1
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65093767"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500272"
 ---
-# <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>Instalar versões de idioma do SSMS (SQL Server Management Studio) que não estão em inglês 
+# <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>Instalar versões de idioma do SSMS (SQL Server Management Studio) que não estão em inglês
 
 O SSMS está disponível em vários idiomas, mas o instalador do SSMS bloqueia a instalação em computadores em que a localidade do sistema não corresponde ao idioma do SSMS.
 

@@ -15,13 +15,13 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 0a2942ac69ba5ed6d381c6377b08b551be94f589
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 879d98b00c4728d9a93ea34e08e2fd98964f4e13
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711564"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794798"
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>Upgrades de versão e edição com suporte do SQL Server 2017
 
@@ -168,7 +168,7 @@ Para obter instruções passo a passo sobre como fazer um upgrade de edição, c
   
  \* Também se aplica ao [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Express with Tools e ao [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Express with Advanced Services.  
   
- ** A alteração da edição de um cluster de failover do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] é limitada. Os cenários a seguir não têm suporte para clusters de failover do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]:  
+ ** A alteração da edição de um cluster de failover do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] é limitada. Os cenários a seguir não têm suporte para clusters de failover do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] :  
   
 -   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise para [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer, Standard ou Evaluation.  
   

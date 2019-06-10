@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 28a2c9bd527fb4996730630a6121d205fbaebf04
-ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
+manager: jroth
+ms.openlocfilehash: 210572e30dc1115fa52cfab4da293533a051d634
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59429342"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767432"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitar conexões criptografadas com o Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "59429342"
  O cliente deve poder verificar a propriedade do certificado usado pelo servidor. Se o cliente tiver o certificado de chave pública da autoridade de certificação que assinou o certificado de servidor, nenhuma outra configuração será necessária. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows inclui os certificados de chave pública de muitas autoridades de certificação. Se o certificado do servidor foi assinado por uma autoridade de certificação pública ou privada para a qual o cliente não tem o certificado de chave pública, será necessário instalar o certificado de chave pública da autoridade de certificação que assinou o certificado do servidor.  
   
 > [!NOTE]  
-> Para usar critografia com um cluster de failover, você deve instalar o certificado de servidor com o nome DNS completamente qualificado do servidor virtual em todos os nós no cluster de failover. Por exemplo, se você tiver um cluster de dois nós, com os nós chamados test1.*\<your company>*.com e test2.*\<your company>*.com e um servidor virtual chamado virtsql, precisará instalar um certificado para virtsql.*\<your company>*.com em ambos os nós. É possível definir o valor da opção **ForceEncryption** como **Sim**.
+> Para usar critografia com um cluster de failover, você deve instalar o certificado de servidor com o nome DNS completamente qualificado do servidor virtual em todos os nós no cluster de failover. Por exemplo, se você tiver um cluster de dois nós, com os nós chamados test1. *\<your company>* .com e test2. *\<your company>* .com e um servidor virtual chamado virtsql, precisará instalar um certificado para virtsql. *\<your company>* .com em ambos os nós. É possível definir o valor da opção **ForceEncryption** como **Sim**.
 
 > [!NOTE]
 > Ao criar conexões criptografadas para um indexador do Azure Search para o SQL Server em uma VM do Azure, consulte [Configurar uma conexão de um indexador do Azure Search para SQL Server em uma VM do Azure](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/). 
@@ -52,7 +52,7 @@ Para que o SQL Server carregue um certificado SSL, o certificado deve atender à
 - O certificado deve estar no repositório de certificado do computador local ou no armazenamento de certificado do usuário atual.
 - A Conta de Serviço do SQL Server deve ter a permissão necessária para acessar o certificado SSL.
 - A hora do sistema atual deve ser posterior à propriedade **Válido de** do certificado e anterior à propriedade Válido para do certificado.
-- O certificado deve ser significativo para a autenticação do servidor. Isso exige a propriedade **Uso Avançado de Chave** do certificado para especificar a **Autenticação do Servidor (1.3.6.1.5.5.7.3.1)**.
+- O certificado deve ser significativo para a autenticação do servidor. Isso exige a propriedade **Uso Avançado de Chave** do certificado para especificar a **Autenticação do Servidor (1.3.6.1.5.5.7.3.1)** .
 - O certificado deve ser criado usando a opção **KeySpec** de **AT_KEYEXCHANGE**. Normalmente, a propriedade de uso de chave do certificado (**KEY_USAGE**) também incluirá a codificação de chaves (**CERT_KEY_ENCIPHERMENT_KEY_USAGE**).
 - A propriedade **Assunto** do certificado deve indicar que o nome comum (CN) é igual ao nome do host ou ao nome de domínio totalmente qualificado (FQDN) do computador servidor. Se o SQL Server estiver em execução em um cluster de failover, o nome comum deverá corresponder ao nome do host ou ao FQDN do servidor virtual e os certificados deverão ser fornecidos em todos os nós no cluster de failover.
 - O SQL Server 2008 R2 e o SQL Server 2008 R2 Native Client são compatíveis com os certificados curinga. Outros clientes podem não dar suporte a certificados curinga. Para obter mais informações, confira a documentação do cliente e o [KB258858](http://support.microsoft.com/kb/258858).
@@ -97,7 +97,7 @@ Para que o SQL Server carregue um certificado SSL, o certificado deve atender à
   
 1. No **SQL Server Configuration Manager**, expanda **Configuração de Rede do SQL Server**, clique com o botão direito do mouse em **Protocolos de** _\<server instance>_ e, depois, selecione **Propriedades**.  
   
-2. Na caixa de diálogo **Propriedades** de **Protocolos de**  _\<instance name>_, na guia **Certificado**, selecione o certificado desejado na lista suspensa da caixa **Certificado** e, depois, clique em **OK**.  
+2. Na caixa de diálogo **Propriedades** de **Protocolos de**  _\<instance name>_ , na guia **Certificado**, selecione o certificado desejado na lista suspensa da caixa **Certificado** e, depois, clique em **OK**.  
   
 3. Na guia **Sinalizadores** , na caixa **ForceEncryption** , selecione **Sim**e clique em **OK** para fechar a caixa de diálogo.  
   

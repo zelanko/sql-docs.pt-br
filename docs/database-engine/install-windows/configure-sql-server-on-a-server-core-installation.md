@@ -13,13 +13,13 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 15dd8854a12f5cfc12a4bca095742f2095c44724
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 9aa75a4d0ca9b66c37cb57ee603d513c6912b751
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209060"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794966"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurar o SQL Server em uma instalação do Server Core
 
@@ -102,7 +102,7 @@ Estas etapas devem ser realizadas em um computador que executa a edição de cli
   
 1. Abra **Gerenciamento de Computador**. Para abrir o **Gerenciamento de Computador**, clique em **Iniciar**, digite `compmgmt.msc` e, em seguida, clique em **OK**.    
   
-2. Na árvore de console, clique com o botão direito do mouse em **Gerenciamento de Computador** e, depois, clique em **Conectar a outro computador...**.  
+2. Na árvore de console, clique com o botão direito do mouse em **Gerenciamento de Computador** e, depois, clique em **Conectar a outro computador...** .  
   
 3. Na caixa de diálogo **Selecionar Computador**, digite o nome do computador Server Core a ser gerenciado ou clique em **Procurar** para localizá-lo e, depois, clique em **OK**.  
   
@@ -110,7 +110,7 @@ Estas etapas devem ser realizadas em um computador que executa a edição de cli
   
 5. Clique duas vezes em **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**.  
   
-6. No **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, clique em **Serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, clique com o botão direito do mouse em **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<instance name>), em que \<instance name> é o nome de uma instância de servidor local na qual você deseja habilitar os Grupos de Disponibilidade AlwaysOn e clique em Propriedades.  
+6. No **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, clique em **Serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , clique com o botão direito do mouse em **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<instance name>), em que \<instance name> é o nome de uma instância de servidor local na qual você deseja habilitar os Grupos de Disponibilidade AlwaysOn e clique em Propriedades.  
   
 7. Selecione a guia **Alta Disponibilidade AlwaysOn** .  
   

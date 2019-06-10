@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a09468a52948090561ac85293c8ef95fc173f59f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c8c39b760c422efc2172eb4b6f3211722c22729c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655580"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771704"
 ---
 # <a name="server-properties---general-page"></a>Propriedades do servidor – página Geral
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,8 +56,8 @@ ms.locfileid: "47655580"
  **Diretório Raiz**  
  Exibe o caminho para o local da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , normalmente C:\Arquivos de Programas\Microsoft SQL Server\\.  
   
- **Agrupamento do Servidor**  
- Exibe o agrupamento que tem o suporte do servidor. Um agrupamento especifica a página de código e ordem de classificação específicas a serem usadas para dados Unicode e não Unicode.  
+ **Ordenação do Servidor**  
+ Exibe a ordenação que tem o suporte do servidor. Uma ordenação especifica a página de código e ordem de classificação específicas a serem usadas para dados Unicode e não Unicode.  
   
  **É clusterizado**  
  Exibirá **True** se a instância de servidor estiver configurada em um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou **False** se a instância de servidor não estiver clusterizada.  

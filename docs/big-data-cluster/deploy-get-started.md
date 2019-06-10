@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: Aprenda as etapas e os recursos de implantação de clusters de big data de 2019 do SQL Server (visualização).
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48ba1bfe2a90fdb1ea2464d404ba851a8ca30992
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.openlocfilehash: 31f8b94693ad7c6d242249300a21d051a7afe859
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66743979"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797905"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>Introdução aos clusters de grandes dados do SQL Server
 

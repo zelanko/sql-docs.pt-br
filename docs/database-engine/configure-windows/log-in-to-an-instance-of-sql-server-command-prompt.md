@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f67c11e3-c519-40c9-82c1-07efa9d9985e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3436c35fc7f8c11fc15beaf4891582296750d8ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 080c90dca2ff47c4ef217beda703615b59996112
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646764"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785231"
 ---
 # <a name="log-in-to-an-instance-of-sql-server-command-prompt"></a>Fazer logon em uma instância do SQL Server (prompt de comando)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

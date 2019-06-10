@@ -4,18 +4,18 @@ description: Configure o Grupo de Disponibilidade AlwaysOn para cargas de trabal
 ms.custom: seodec18
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 ms.reviewer: ''
 ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 4338f5fc90012fd5fb0882575032eb375c206c1d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9f1fd75977e36407cdc70a0cb72cfcf48e36e523
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207725"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793641"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Configurar a escala de leitura para um Grupo de Disponibilidade AlwaysOn
 

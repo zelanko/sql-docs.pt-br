@@ -5,18 +5,18 @@ description: Saiba como exportar modelos com MLeap de aprendizado de máquina do
 author: lgongmsft
 ms.author: shivprashant
 ms.reviewer: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a2a834ff8b841c515b9d3481a961306b721f194d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7d62cc32be569bec6e1560b4b712ff0ac9cba553
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860135"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803061"
 ---
 # <a name="export-spark-machine-learning-models-with-mleap"></a>Exportar modelos com MLeap de aprendizado de máquina do Spark
 

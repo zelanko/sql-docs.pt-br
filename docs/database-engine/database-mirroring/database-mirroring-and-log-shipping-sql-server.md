@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 63215e0746f5f2cea679213ba275d40d6102c930
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ef39e9a8b86d348383537ec6786c08361b60df59
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623684"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774779"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Espelhamento de banco de dados e envio de logs (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47623684"
   
  ![Envio de logs e espelhamento de banco de dados](../../database-engine/database-mirroring/media/logshipping-and-dbm-automatic-failover.gif "Log shipping and database mirroring")  
   
- Depois de um failover de espelhamento, o nome do servidor primário definido no servidor secundário permanece inalterado. para obter informações sobre a ferramenta de configuração e recursos adicionais.  
+ Depois de um failover de espelhamento, o nome do servidor primário definido no servidor secundário permanece inalterado. .  
   
 ## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>O impacto do espelhamento de banco de dados em uma instância de monitoramento remoto  
  Quando o envio de logs é usado com uma instância de monitoramento remoto, a combinação da sessão de envio de logs e de espelhamento de banco de dados afeta as informações nas tabelas de monitor. As informações sobre o primário formam uma combinação de um configurado no principal/primário e o monitor configurado em cada secundário.  

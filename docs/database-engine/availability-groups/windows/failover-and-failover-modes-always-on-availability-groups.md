@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e20ad7cab67a87dd7bb76be0117ee87752e3e66f
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+manager: jroth
+ms.openlocfilehash: 88ead09e44eec80ae387ad65b721b2fa62227c02
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226663"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765785"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover e modos de failover (Grupos de Disponibilidade AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

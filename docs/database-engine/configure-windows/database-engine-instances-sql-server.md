@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8e983bc2bbf7efe42d479dea90e8cf1f212adc15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bc07937bb9e554d2e052fd12cf0c157519c02368
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807934"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799081"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instâncias do mecanismo de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47807934"
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Descreve como configurar as propriedades de uma instância. Configure padrões como locais de arquivo e formatos de data, ou como a instância usa recursos de sistema operacional, como memória ou threads.|[Configurar instâncias do mecanismo de banco de dados &#40;SQL Server&#41;](../../database-engine/configure-windows/configure-database-engine-instances-sql-server.md)|  
-|Descreve como gerenciar o agrupamento de uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Os agrupamentos definem os padrões de bit usados para representar caracteres, comportamentos associados como classificação, e diferenciação entre maiúsculas e minúsculas ou a diferenciação de acentos em operações de comparação.|[Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)|  
+|Descreve como gerenciar a ordenação de uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. As ordenações definem os padrões de bit usados para representar caracteres, comportamentos associados como classificação, e diferenciação entre maiúsculas e minúsculas ou a diferenciação de acentos em operações de comparação.|[Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)|  
 |Descreve como configurar definições de servidor vinculado, que permitem a execução de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em uma instância para trabalhar com dados armazenados em fontes de dados OLE DB separadas.|[Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)|  
 |Descreve como criar um gatilho de logon, que especifica ações a serem adotadas depois que uma tentativa de logon é validada, mas antes do início do trabalho com recursos na instância. O logon dispara ações de suporte como registrar em log as atividades de conexão ou restringir logons com base em lógica além da autenticação de credencial executada pelo Windows e pelo SQL Server.|[Gatilhos de logon](../../relational-databases/triggers/logon-triggers.md)|  
 |Descreve como gerenciar o serviço associado a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Isso inclui ações como iniciar e parar o serviço ou configurando opções de inicialização.|[Gerenciar os serviços do Mecanismo de Banco de Dados](../../database-engine/configure-windows/manage-the-database-engine-services.md)|  
@@ -47,7 +47,7 @@ ms.locfileid: "47807934"
 |Descreve como usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler para capturar rastreamentos de solicitações de aplicativo recebidas por uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Estes rastreamentos podem ser reproduzidos posteriormente para atividades como teste de desempenho ou diagnóstico de problemas.|[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)|  
 |Descreve os recursos CDC (Change Data Capture) e Controle de Alterações e descreve como usá-los para controlar as alterações de dados em um banco de dados.|[Controle de alterações de dados &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)|  
 |Descreve como usar o visualizador de Arquivo de Log para localizar e exibir erros e mensagens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em vários logs, como o histórico de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , logs do SQL Server e logs de evento do Windows.|[Visualizador do Arquivo de Log](../../relational-databases/logs/log-file-viewer.md)|  
-|Descreve como usar o Orientador de Otimização [!INCLUDE[ssDE](../../includes/ssde-md.md)] para analisar bancos de dados e fazer recomendações para tratar de problemas de desempenho em potencial.|[Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
+|Descreve como usar o Orientador de Otimização [!INCLUDE[ssDE](../../includes/ssde-md.md)] para analisar bancos de dados e fazer recomendações para tratar de problemas de desempenho em potencial.|[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
 |Descreve como os administradores de banco de dados de produção podem fazer uma conexão de diagnóstico com instâncias quando conexões padrão não estão sendo aceitas.|[Conexão de diagnóstico para administradores de banco de dados](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)|  
 |Descreve como usar o recurso de servidores remotos substituídos para habilitar o acesso de uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para outra. O mecanismo preferido para esta funcionalidade é um servidor vinculado.|[Servidores remotos](../../database-engine/configure-windows/remote-servers.md)|  
 |Descreve os recursos do Service Broker para mensagens e enfileiramento de aplicativos e fornece ponteiros à documentação do Service Broker.|[Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)|  

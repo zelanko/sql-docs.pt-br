@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Este artigo descreve a instância mestre do SQL Server em um cluster de big data do SQL Server 2019 (visualização).
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 68d412e3d4b8147a2e451ff2932aa79e6dbeca5e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 6c3a9a425d5de55e7018c9e33b37a8e3d1a8e1c5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860677"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783079"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>O que é a instância mestre em um cluster de big data do SQL Server?
 
