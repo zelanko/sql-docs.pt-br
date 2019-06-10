@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Saiba como configurar o Kubernetes no Ubuntu 16.04 várias ou 18.04 computadores (físicos ou virtuais) para implantações de cluster (versão prévia) do SQL Server 2019 big data.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4e79c74851dae2d86b74064799b053d57b1a17db
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: c48a8a8ad84a1378eed09727a3e51a51252b88c6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488272"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803068"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Configurar o Kubernetes em vários computadores para implantações de cluster de big data do SQL Server
 

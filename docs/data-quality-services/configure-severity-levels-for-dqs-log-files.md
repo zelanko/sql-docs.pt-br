@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8a6b2b6313a0e4292d1860e8102218d2cc8b24e0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: f929c973a400b600a220a920b944d7a9d46df6a6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486451"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802141"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurar níveis de severidade para arquivos de log do DQS
 
@@ -58,7 +58,7 @@ ms.locfileid: "65486451"
   
 2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , clique em **Configuração**.  
   
-3.  Em seguida, clique na guia **Configurações de Log** . As seguintes atividades do DQS são listadas, para as quais você pode selecionar um nível de gravidade: **Gerenciamento de Domínio**, **Descoberta de Conhecimento**, **Limpeza de Projeto (por ex.: RDS)**, **Política de Conciliação e Projeto de Correspondência** e **RDS**.  
+3.  Em seguida, clique na guia **Configurações de Log** . As seguintes atividades do DQS são listadas, para as quais você pode selecionar um nível de gravidade: **Gerenciamento de Domínio**, **Descoberta de Conhecimento**, **Limpeza de Projeto (por ex.: RDS)** , **Política de Conciliação e Projeto de Correspondência** e **RDS**.  
   
 4.  Para obter uma atividade do DQS, selecione o nível de severidade a ser registrado. Selecione uma opção entre as seguintes: **Fatal**, **Erro**, **Aviso**, **Informações** e **Depuração**. Por exemplo, se você deseja que apenas mensagens fatais sejam gravadas nos arquivos de log do DQS para a atividade de descoberta de base de dados de conhecimento, selecione **Fatal** na lista suspensa na atividade **Descoberta da Base de Dados de Conhecimento** .  
   
