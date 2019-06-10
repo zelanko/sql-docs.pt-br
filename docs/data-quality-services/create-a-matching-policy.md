@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 98557d690edfcb3148dbc0b876e7ff26804de7db
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: d6c7188eeb8155629d40bf09565fb59e0adca4de
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480463"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800770"
 ---
 # <a name="create-a-matching-policy"></a>Criar uma política de correspondência
 
