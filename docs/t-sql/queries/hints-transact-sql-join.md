@@ -23,20 +23,20 @@ ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c4c1cf9d7174736325e7308ac8609c403581f53d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: f1c99da1106f366e50d7c02bcc666a4e0c167bb6
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334453"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719435"
 ---
 # <a name="hints-transact-sql---join"></a>Dicas (Transact-SQL) – junção
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Dicas de junção especificam que o otimizador de consulta força uma estratégia de junção entre duas tabelas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter informações gerais sobre junções e a sintaxe de junção, confira [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
-> [!IMPORTANT]  
->  Como o otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] costuma selecionar o melhor plano de execução para uma consulta, é recomendável que as dicas, como \<join_hint>, sejam usadas apenas como um último recurso por desenvolvedores e administradores de banco de dados experientes.
+> [!CAUTION]  
+>  Como o otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente seleciona o melhor plano de execução para uma consulta, é recomendável que desenvolvedores e administradores de banco de dados experientes usem as dicas apenas como um último recurso.
   
  **Aplica-se a:**  
   
@@ -85,7 +85,7 @@ ON p.ProductID = pr.ProductID
 ORDER BY ProductReviewID DESC;  
 ```  
   
-### <a name="b-using-loop"></a>b. Usando LOOP  
+### <a name="b-using-loop"></a>B. Usando LOOP  
  O exemplo a seguir especifica que a operação `JOIN` na consulta é executada por uma junção `LOOP`. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
