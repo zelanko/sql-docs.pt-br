@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 15635f99ee6ecc20fd0341f04f6cf5caaac74914
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f8e46d571c5379255b138f0555f1e907f98aca73
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676774"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772203"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Abrir o Administrador de Fonte de Dados ODBC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "47676774"
   
 2.  No **Painel de Controle**, clique em **Ferramentas Administrativas**.  
   
-3.  Em **Ferramentas Administrativas**, clique em **Fontes de Dados (ODBC)**.  
+3.  Em **Ferramentas Administrativas**, clique em **Fontes de Dados (ODBC)** .  
 
 
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-server-2008"></a>Abrir o Administrador de Fonte de Dados ODBC no Windows Server 2008  
   
-1.  No menu **Iniciar** , aponte para **Ferramentas Administrativas**e clique em **Fontes de Dados (ODBC)**.  
+1.  No menu **Iniciar** , aponte para **Ferramentas Administrativas**e clique em **Fontes de Dados (ODBC)** .  
 
 
 > [!NOTE]  

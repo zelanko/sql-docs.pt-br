@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9f6cc5a6ba2c63add3742602b89bbb627677286
-ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
+manager: jroth
+ms.openlocfilehash: cd2f8de0af5078816d4034dc9ba23bcc7ab647b8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832078"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799255"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Preparar um banco de dados secundário manualmente para um Grupo de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ Este tópico descreve como preparar um banco de dados para um grupo de disponibi
   
 3.  Na instância do servidor que hospeda a réplica secundária, restaure o backup completo do banco de dados primário (e opcionalmente um backup diferencial) seguido por quaisquer backups de log subsequentes.  
   
-     Na página **Opções de RESTORE DATABASE**, selecione **Deixar o banco de dados não operacional e não reverter as transações não confirmadas. Os logs de transações adicionais podem ser restaurados. (RESTAURAR COM NORECOVERY)**.  
+     Na página **Opções de RESTORE DATABASE**, selecione **Deixar o banco de dados não operacional e não reverter as transações não confirmadas. Os logs de transações adicionais podem ser restaurados. (RESTAURAR COM NORECOVERY)** .  
   
      Se os caminhos de arquivo dos bancos de dados primário e secundário forem diferentes, por exemplo, se o banco de dados primário estiver na unidade 'F:', mas a instância do servidor que hospeda a réplica secundária não tiver uma unidade F:, inclua a opção MOVE na cláusula WITH.  
   
@@ -110,7 +110,7 @@ Este tópico descreve como preparar um banco de dados para um grupo de disponibi
   
 -   [Restaurar um banco de dados em um novo local &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para preparar um banco de dados secundário**  
   
 > [!NOTE]  
