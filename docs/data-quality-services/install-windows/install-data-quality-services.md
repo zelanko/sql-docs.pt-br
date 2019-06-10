@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6834e3dd223f8b27a8c038e58f0e4121a670b9c3
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: f709a2a58b6dd6f18c992a79c94ad63bdd8f0ef6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487447"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776469"
 ---
 # <a name="install-data-quality-services"></a>Instalar o Data Quality Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) contém os dois componentes a seguir: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** e **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**.  
+  [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) contém os dois componentes a seguir: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** e **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** .  
   
 |Componente DQS|Descrição|  
 |-------------------|-----------------|  
@@ -85,7 +85,7 @@ ms.locfileid: "65487447"
   
     -   O procedimento armazenado DQInitDQS_MAIN é criado no banco de dados mestre.  
   
-    -   O arquivo DQS_install.log é geralmente criado na pasta C:\Arquivos de Programas\Microsoft SQL Server\MSSQL13.*<instance_name>* \MSSQL\Log. O arquivo contém informações sobre as ações necessárias para executar o arquivo DQSInstaller.exe.  
+    -   O arquivo DQS_install.log é geralmente criado na pasta C:\Arquivos de Programas\Microsoft SQL Server\MSSQL13. *<instance_name>* \MSSQL\Log. O arquivo contém informações sobre as ações necessárias para executar o arquivo DQSInstaller.exe.  
   
     -   Se um banco de dados do Master Data Services estiver presente na mesma instância do SQL Server que o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], um usuário mapeado para o logon de Master Data Services será criado e receberá a função dqs_administrator no banco de dados DQS_MAIN.  
   
