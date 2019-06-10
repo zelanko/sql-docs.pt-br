@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8df64b4dc6f703751ef68ea72a8bcf9238a365fc
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: b34e3fa7ba8bafd88ed9da4a237d624ebc45cad1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487868"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801422"
 ---
 # <a name="run-the-data-quality-client-application"></a>Executar o aplicativo do cliente do Data Quality
 
@@ -40,7 +40,7 @@ ms.locfileid: "65487868"
 ##  <a name="Run"></a> Executar o cliente Data Quality  
  Para executar o [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] no computador em que ele foi instalado:  
   
-1.  Clique em **Iniciar**, aponte para **Todos os Programas**, clique em **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**, clique em **Data Quality Services**e clique em **Cliente Data Quality**.  
+1.  Clique em **Iniciar**, aponte para **Todos os Programas**, clique em **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]** , clique em **Data Quality Services**e clique em **Cliente Data Quality**.  
   
 2.  Na caixa de diálogo **Conectar ao Servidor** :  
   
