@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 822f8d02a9bcaa27a405acdc351646fd63560880
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: dc53a9e1d151e07ce7e2eebf1444fd0d0065f8be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015167"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794495"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturar um rastreamento no Assistente de experimentação do banco de dados
 
@@ -39,8 +39,8 @@ Cache de consulta no SQL Server pode afetar os resultados da avaliação. É rec
     - **Nome da instância do SQL Server**: Insira um nome para o computador executando o SQL Server no qual você deseja capturar um rastreamento de servidor.
     - **Nome do banco de dados**: Insira um nome para um banco de dados no qual iniciar um rastreamento de banco de dados. Se você não especificar um banco de dados, o rastreamento é capturado em todos os bancos de dados no servidor.
     - **Nome do arquivo de rastreamento**: Insira um nome para o arquivo de rastreamento para a captura.
-    - **Tamanho máximo do arquivo (MB)**: Selecione o tamanho de substituição para arquivos. Um novo arquivo é criado, conforme necessário em que o tamanho do arquivo que você selecionar. O tamanho recomendado de substituição é de 200 MB.
-    - **Duração (em min)**: Selecione o período de tempo (em minutos) que você deseja que a captura de rastreamento seja executada.
+    - **Tamanho máximo do arquivo (MB)** : Selecione o tamanho de substituição para arquivos. Um novo arquivo é criado, conforme necessário em que o tamanho do arquivo que você selecionar. O tamanho recomendado de substituição é de 200 MB.
+    - **Duração (em min)** : Selecione o período de tempo (em minutos) que você deseja que a captura de rastreamento seja executada.
     - **Caminho para armazenar o arquivo de saída de rastreamento**: Selecione o caminho de destino para o arquivo de rastreamento. 
 
     > [!NOTE]

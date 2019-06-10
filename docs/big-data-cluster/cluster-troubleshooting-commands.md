@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Este artigo fornece comandos úteis para monitorar e solucionar problemas de um cluster de big data do SQL Server 2019 (visualização).
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3914bc088ab8974c92a24131d69590b4353f068e
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 232c39e6a98f7f55fa3a653735f39c9607fbcbf4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994089"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800743"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Monitorar e solucionar problemas de clusters de grandes dados do SQL Server
 
@@ -242,9 +242,9 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 
 > [!Note]
-> Se você receber o erro a seguir: *Não é possível escutar na porta 8001: Todos os ouvintes Falha ao criar com os seguintes erros: Não é possível criar o ouvinte: Erro escutar tcp4 127.0.0.1:8001: > associar: Normalmente, o uso de apenas um de cada endereço de soquete (endereço de rede/protocolo/porta) é permitido. Não é possível criar o ouvinte: Erro escutar tcp6: endereço [[:: 1]]: 8001: faltando porta no > erro de endereço: Não é possível escutar em qualquer uma das portas solicitadas: [{8001 9090}]*, verifique se você não iniciou o painel já em outra janela.
+> Se você receber o erro a seguir: *Não é possível escutar na porta 8001: Todos os ouvintes Falha ao criar com os seguintes erros: Não é possível criar o ouvinte: Erro escutar tcp4 127.0.0.1:8001: > associar: Normalmente, o uso de apenas um de cada endereço de soquete (endereço de rede/protocolo/porta) é permitido. Não é possível criar o ouvinte: Erro escutar tcp6: endereço [[:: 1]]: 8001: faltando porta no > erro de endereço: Não é possível escutar em qualquer uma das portas solicitadas: [{8001 9090}]* , verifique se você não iniciou o painel já em outra janela.
 
-Quando você inicia o painel do navegador, você poderá receber avisos de permissão devido a RBAC que está sendo habilitada por padrão em clusters AKS e a conta de serviço usada pelo painel não tem permissões suficientes para acessar todos os recursos (por exemplo,  *é proibido pods: Usuário "system: serviceaccount:kube-sistema: kubernetes-painel de controle" não é possível listar os pods no namespace "default"*). Execute o seguinte comando para conceder as permissões necessárias para `kubernetes-dashboard`e, em seguida, reinicie o painel:
+Quando você inicia o painel do navegador, você poderá receber avisos de permissão devido a RBAC que está sendo habilitada por padrão em clusters AKS e a conta de serviço usada pelo painel não tem permissões suficientes para acessar todos os recursos (por exemplo,  *é proibido pods: Usuário "system: serviceaccount:kube-sistema: kubernetes-painel de controle" não é possível listar os pods no namespace "default"* ). Execute o seguinte comando para conceder as permissões necessárias para `kubernetes-dashboard`e, em seguida, reinicie o painel:
 
 ```bash
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard

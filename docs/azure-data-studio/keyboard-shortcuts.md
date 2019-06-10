@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 9ce8b817a704e6bae6d56a47b49f78fd1c17a2d3
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: b5a07ce70b57f5d62d53bf8ae9b570edcc78d7e6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65104749"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800240"
 ---
 # <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>Atalhos de teclado no [!INCLUDE[name-sos](../includes/name-sos.md)]
 
@@ -29,7 +29,7 @@ Porque [!INCLUDE[name-sos](../includes/name-sos-short.md)] herda sua funcionalid
 
 Para exibir todos os atalhos de teclado definidas no momento:
 
-Abra o **atalhos de teclado** editor das **arquivo** menu: **Arquivo** > **preferências** > **atalhos de teclado** (**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >   **Preferências** > **atalhos de teclado** no Mac).
+Abra o **atalhos de teclado** editor das **arquivo** menu: **Arquivo** > **preferências** > **atalhos de teclado** ( **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >   **Preferências** > **atalhos de teclado** no Mac).
 
 Além de exibir associações de teclas atuais, o **atalhos de teclado** editor lista os comandos disponíveis que não têm atalhos de teclado definidos. O **atalhos de teclado** editor permite que você facilmente alterar, remover, redefinir e definir novas associações de teclas.  
 

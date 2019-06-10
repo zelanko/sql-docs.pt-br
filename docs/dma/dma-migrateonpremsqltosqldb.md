@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: d807396f7c8bd334de38cdc1744f6bee90d619e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 592b581ae4981e42bea2f6bf6f9135018917b002
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63152638"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794362"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migrar SQL Server no local ou o SQL Server em VMs do Azure para banco de dados do SQL Azure usando o Assistente de migração de dados
 

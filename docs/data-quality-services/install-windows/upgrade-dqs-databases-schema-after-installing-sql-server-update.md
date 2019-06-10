@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 96f3d36c77e12f69184a3f5644b6bbc3d52ac394
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 1ab01928d2e5f4364afe74d9c5e2b6a0a1079e1e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487441"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776325"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Atualize o esquema de bancos de dados DQS depois de instalar a atualização do SQL Server
 
