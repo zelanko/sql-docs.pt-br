@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3671c2b89c60a48431d52e631c11e9f06971a55
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 2dd71a010353c019acb2784456b66427e8559bff
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421183"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462508"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planejar a adoção de recursos de OLTP in-memory no SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Uma tabela com otimização de memória que contém 200 GB de dados requer mais 
 
 Para um banco de dados hospedado no serviço de nuvem do Banco de Dados SQL do Azure, a camada de serviço escolhida afeta a quantidade de memória ativa que o banco de dados pode consumir. Você deve se planejar para monitorar o uso de memória do banco de dados usando um alerta. Para obter detalhes, confira:
 
-- Examine os limites de armazenamento de OLTP in-memory para seu [Tipo de preço](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#standalone-database-service-tiers-and-performance-levels)
+- Examine os limites de armazenamento de OLTP in-memory para seu [Tipo de preço](https://docs.microsoft.com/azure/sql-database/sql-database-purchase-models)
 - [Monitorar o armazenamento no OLTP in-memory](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>Variáveis de tabela com otimização de memória
@@ -118,7 +118,7 @@ Para obter diretrizes sobre se os recursos de OLTP in-memory podem melhorar o de
 
 
 
-## <a name="b-unsupported-features"></a>b. Recursos sem suporte
+## <a name="b-unsupported-features"></a>B. Recursos sem suporte
 
 Os recursos não compatíveis com certos cenários de OLTP in-memory são descritos em:
 
@@ -214,9 +214,9 @@ Para ter uma visão geral dos índices em tabelas com otimização de memória, 
 
 #### <a name="hash-indexes"></a>Índices de hash
 
-Índices de hash podem ser a forma mais rápida de acessar uma linha específica pelo valor exato de sua chave primária usando o operador "**=**".
+Índices de hash podem ser a forma mais rápida de acessar uma linha específica pelo valor exato de sua chave primária usando o operador " **=** ".
 
-- Operadores inexatos como ‘**! =**’, ‘**>**’ ou ‘**BETWEEN**’ prejudicariam o desempenho se usados com um índice de hash.
+- Operadores inexatos como ‘ **! =** ’, ‘ **>** ’ ou ‘**BETWEEN**’ prejudicariam o desempenho se usados com um índice de hash.
 
 - Um índice de hash poderá não ser a melhor opção se a taxa de duplicação do valor da chave se tornar muito alta.
 

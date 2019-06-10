@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b369247fccdac3407670b5edc63c0f5490fac23e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+manager: jroth
+ms.openlocfilehash: da54f2ab1795fabf8e6df5504ee89f74d6a17252
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775548"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796968"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Grupos de disponibilidade Always On: uma solução de alta disponibilidade e recuperação de desastre
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

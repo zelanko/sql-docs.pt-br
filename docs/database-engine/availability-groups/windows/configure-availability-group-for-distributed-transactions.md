@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f5b8e4848f42cbca03bb47c6cac2400068e54765
-ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
+manager: jroth
+ms.openlocfilehash: 7f0f2c7bf602e0280f7d38147d3d7924712d90eb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832108"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772627"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configurar transações distribuídas para um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
