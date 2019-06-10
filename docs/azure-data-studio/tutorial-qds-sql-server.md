@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dfd48e17e4d9216d0b0bd23c3395acfd69516c67
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 10795ae2e1836e018e103a51cb7bea718ec9299f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089682"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797926"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutorial: Adicione a *cinco consultas mais lentas* widget de exemplo para o painel de banco de dados
 
@@ -129,7 +129,7 @@ Para adicionar o *lento o widget de consultas* ao seu painel, edite o *dashboard
 
 ## <a name="view-insight-details-for-more-information"></a>Exibir detalhes de informações para obter mais informações
 
-1. Para exibir informações adicionais sobre um widget de insight, clique nas reticências (**...** ) no canto superior direito e selecione **Mostrar detalhes**.
+1. Para exibir informações adicionais sobre um widget de insight, clique nas reticências ( **...** ) no canto superior direito e selecione **Mostrar detalhes**.
 2. Para mostrar mais detalhes para um item, selecione qualquer item na **dados do gráfico** lista.
 
    ![Caixa de diálogo de detalhe de Insight](./media/tutorial-qds-sql-server/insight-details-dialog.png)

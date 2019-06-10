@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 3d227d308ba05a4c9336e2f5dcb728e85c18d7ed
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 2a158ecd0223f7483494e4b28068c4634874e11d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089702"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797936"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: Use o editor Transact-SQL para criar objetos de banco de dados- [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -55,7 +55,7 @@ Este tutorial requer o SQL Server ou banco de dados SQL *TutorialDB*. Para criar
 
    ![widget de pesquisa rápida](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Editar o **E-mail** coluna na primeira linha, digite *orlando0@adventure-works.com*e pressione **Enter** para salvar a alteração.
+1. Editar o **E-mail** coluna na primeira linha, digite *orlando0@adventure-works.com* e pressione **Enter** para salvar a alteração.
 
    ![Editar dados](./media/tutorial-sql-editor/edit-data.png)
 
