@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3481d9f8460182d58e11c0910c1c86bd10563459
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: ccf4e15657c3fd19e42c5a3fd0ae61ec63973173
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487561"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776428"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Acessar dados para as operações do DQS
 
