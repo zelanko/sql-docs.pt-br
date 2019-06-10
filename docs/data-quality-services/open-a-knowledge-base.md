@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 166367941aceee3c06edd9df1300ea7b9182290b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 9644bf7d055bef0f087562ff75591fbc90ddf486
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488251"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776056"
 ---
 # <a name="open-a-knowledge-base"></a>Abrir uma base de dados de conhecimento
 
@@ -81,7 +81,7 @@ ms.locfileid: "65488251"
 ##  <a name="State"></a> Estado de uma base de dados de conhecimento  
  O campo Estado indica em qual estágio de uma atividade a base de dados de conhecimento está. Se você abrir a base de dados de conhecimento, ela será aberta nesse estágio.  
   
--   **\<Vazio>**: o campo Estado estará vazio para uma base de dados de conhecimento se ela tiver sido publicada com um clique em **Publicar** na atividade Gerenciamento de Domínio e com um clique em **Sim – Publique a base de dados de conhecimento e saia**.  
+-   **\<Vazio>** : o campo Estado estará vazio para uma base de dados de conhecimento se ela tiver sido publicada com um clique em **Publicar** na atividade Gerenciamento de Domínio e com um clique em **Sim – Publique a base de dados de conhecimento e saia**.  
   
 -   **Em Serviço**: o trabalho na base de dados de conhecimento foi salvo com um clique em **Publicar** na atividade Gerenciamento de Domínio e com um clique em **Não – Salve o trabalho na base de dados de conhecimento e saia**.  
   
