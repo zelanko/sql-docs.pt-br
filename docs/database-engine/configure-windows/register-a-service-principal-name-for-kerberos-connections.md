@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b6d10f1d16c31ad3af67e193a8bc684be0c66c1f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: b36c25969ac053bad4e626b110c314c28dff6b08
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395470"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772163"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar um nome de entidade de serviço para conexões de Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 **Instância nomeada**  
   
--   **MSSQLSvc/\<FQDN>:[\<port> | \<instancename>]**, em que:  
+-   **MSSQLSvc/\<FQDN>:[\<port> | \<instancename>]** , em que:  
   
     -   **MSSQLSvc** é o serviço que está sendo registrado.  
   
@@ -85,7 +85,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 **Instância padrão**  
   
--   **MSSQLSvc/\<FQDN>:\<port>** | **MSSQLSvc/\<FQDN>**, em que:  
+-   **MSSQLSvc/\<FQDN>:\<port>**  | **MSSQLSvc/\<FQDN>** , em que:  
   
     -   **MSSQLSvc** é o serviço que está sendo registrado.  
   
@@ -106,9 +106,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > No caso de uma conexão TCP/IP, na qual a porta TCP é incluída no SPN, é necessário que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilite o protocolo TCP a um usuário para que ele se conecte usando a autenticação Kerberos. 
 
 ##  <a name="Auto"></a> Registro automático de SPN  
- Quando uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] é iniciada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta registrar o SPN para o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando a instância é interrompida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta cancelar o SPN. Para uma conexão TCP/IP, o SPN é registrado no formato *MSSQLSvc/\<FQDN>*:*\<tcpport>*. Tanto as instâncias nomeadas quanto as instâncias padrão são registradas como *MSSQLSvc*, dependendo do valor *\<tcpport>* para fazer a diferenciação entre as instâncias.  
+ Quando uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] é iniciada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta registrar o SPN para o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando a instância é interrompida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta cancelar o SPN. Para uma conexão TCP/IP, o SPN é registrado no formato *MSSQLSvc/\<FQDN>* : *\<tcpport>* . Tanto as instâncias nomeadas quanto as instâncias padrão são registradas como *MSSQLSvc*, dependendo do valor *\<tcpport>* para fazer a diferenciação entre as instâncias.  
   
- Para outras conexões que dão suporte ao Kerberos, o SPN é registrado no formato *MSSQLSvc/\<FQDN>*/*\<instancename>* para uma instância nomeada. O formato para registrar uma instância padrão é *MSSQLSvc/\<FQDN>*.  
+ Para outras conexões que dão suporte ao Kerberos, o SPN é registrado no formato *MSSQLSvc/\<FQDN>* / *\<instancename>* para uma instância nomeada. O formato para registrar uma instância padrão é *MSSQLSvc/\<FQDN>* .  
   
  Talvez seja necessária a intervenção manual para registrar ou cancelar o SPN se a conta do serviço não tiver as permissões necessárias para essas ações.  
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cc62539432599cf6273772d5db9fca0a296b5980
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: acd91330934f2d9bc87064d593202ef1b58814ee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669854"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795292"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Pré-requisitos, restrições e recomendações para espelhamento de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47669854"
     > [!IMPORTANT]  
     >  Se você mover os arquivos de banco de dados quando estiver criando o banco de dados espelho, é possível que não consiga adicionar arquivos ao banco de dados posteriormente, sem suspender o espelhamento.  
   
--   Todas as instâncias de servidor em uma sessão de espelhamento devem usar a mesma página de código mestre e agrupamento. Diferenças podem causar um problema durante a sessão de espelhamento.  
+-   Todas as instâncias de servidor em uma sessão de espelhamento devem usar a mesma página de código mestre e ordenação. Diferenças podem causar um problema durante a sessão de espelhamento.  
   
 -   Opcionalmente, calcule a hora de parar um banco de dados, para garantir que a configuração do sistema fornecerá o desempenho solicitado. Para obter mais informações, veja [Estime a interrupção do serviço durante troca de função &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
   

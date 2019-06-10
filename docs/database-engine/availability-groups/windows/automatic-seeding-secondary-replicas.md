@@ -13,29 +13,28 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b903c4e55940f4c941564f4f0d180f4f94d1ad58
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+manager: jroth
+ms.openlocfilehash: 510331bd244ced57494566c9508485d5dd4c90e3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306163"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789453"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Usar a propagação automática para inicializar uma réplica secundária para um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 No SQL Server 2012 e 2014, a única maneira de inicializar uma réplica secundária em um grupo de disponibilidade do SQL Server Always On é usar o backup, a cópia e a restauração. O SQL Server 2016 apresenta um novo recurso para inicializar uma réplica secundária – a *propagação automática*. A propagação automática usa o transporte de fluxo de log para transmitir o backup usando a VDI para a réplica secundária de cada banco de dados do grupo de disponibilidade, usando os pontos de extremidade configurados. Esse novo recurso pode ser usado durante a criação inicial de um grupo de disponibilidade ou quando um banco de dados é adicionado a um. A propagação automática é encontrada em todas as edições do SQL Server que dão suporte a grupos de disponibilidade AlwaysOn e pode ser usada com grupos de disponibilidade tradicionais e [grupos de disponibilidade distribuídos](distributed-availability-groups.md).
 
-## <a name="considerations"></a>Considerações
+## <a name="security"></a>Segurança
 
-As considerações para o uso da propagação automática incluem:
+As permissões de segurança variam de acordo com o tipo de réplica que está sendo inicializado:
 
-* [Impacto do log de transações e de desempenho sobre a réplica primária](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [Layout de disco](#disklayout)
-* [Segurança](#security)
+* Para um grupo de disponibilidade tradicional, devem ser concedidas permissões ao grupo de disponibilidade na réplica secundária quando ele é ingressado no grupo de disponibilidade. No Transact-SQL, use o comando `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`.
+* Para um grupo de disponibilidade distribuído em que os bancos de dados da réplica que estão sendo criados estão na réplica primária do segundo grupo de disponibilidade, não é necessária nenhuma permissão extra porque essa réplica já é primária.
+* Em uma réplica secundária no segundo grupo de disponibilidade de um grupo de disponibilidade distribuído, você deve usar o comando `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`. Essa réplica secundária é propagada da réplica primária do segundo grupo de disponibilidade.
 
-
-### <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>Impacto do log de transações e de desempenho sobre a réplica primária
+## <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>Impacto do log de transações e de desempenho sobre a réplica primária
 
 A propagação automática pode ou não ser prática para inicializar uma réplica secundária, dependendo do tamanho do banco de dados, da velocidade da rede e da distância entre as réplicas primária e secundária. Por exemplo, considerando que:
 
@@ -49,7 +48,7 @@ A propagação automática é um processo single-threaded que pode manipular at�
 
 A compactação pode ser usada para a propagação automática, mas ela está desabilitada por padrão. A ativação da compactação reduz a largura de banda de rede e, possivelmente, acelera o processo, mas a desvantagem é a sobrecarga adicional do processador. Para usar a compactação durante a propagação automática, habilite o sinalizador de rastreamento 9567 – consulte [Ajustar a compactação do grupo de disponibilidade](tune-compression-for-availability-group.md).
 
-### <a name = "disklayout"></a> Layout de disco
+## <a name = "disklayout"></a> Layout de disco
 
 No SQL Server 2016 e nas versões anteriores, a pasta na qual o banco de dados é criado pela propagação automática já deve existir e ser a mesma que a do caminho da réplica primária. 
 
@@ -81,13 +80,6 @@ Se você mesclar os caminhos que estiverem dentro e fora do padrão nas réplica
 
 Para reverter para o comportamento do SQL Server 2016 e anteriores, habilite o sinalizador de rastreamento 9571. Para obter informações sobre como habilitar o sinalizador de rastreamento, consulte [DBCC TRACEON (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md).
 
-### <a name="security"></a>Segurança
-
-As permissões de segurança variam de acordo com o tipo de réplica que está sendo inicializado:
-
-* Para um grupo de disponibilidade tradicional, devem ser concedidas permissões ao grupo de disponibilidade na réplica secundária quando ele é ingressado no grupo de disponibilidade. No Transact-SQL, use o comando `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`.
-* Para um grupo de disponibilidade distribuído em que os bancos de dados da réplica que estão sendo criados estão na réplica primária do segundo grupo de disponibilidade, não é necessária nenhuma permissão extra porque essa réplica já é primária.
-* Em uma réplica secundária no segundo grupo de disponibilidade de um grupo de disponibilidade distribuído, você deve usar o comando `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`. Essa réplica secundária é propagada da réplica primária do segundo grupo de disponibilidade.
 
 ## <a name="create-an-availability-group-with-automatic-seeding"></a>Criar um grupo de disponibilidade com propagação automática
 

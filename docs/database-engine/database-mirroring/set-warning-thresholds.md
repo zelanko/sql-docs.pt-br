@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2883f607a56da0e30067180854c289625ae11dd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bfebc4164264e2deeb02ab5f8e9f8b8b6ef64655
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753904"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795211"
 ---
 # <a name="set-warning-thresholds"></a>Configurar limites de aviso
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47753904"
 -   **Conectado a**  *server_instance_name*  
   
     > [!NOTE]  
-    >  Se você não for um membro da função de servidor fixa **sysadmin** , esse status será **Conectado a** *server_instance_name* **(Permissões limitadas)**.  
+    >  Se você não for um membro da função de servidor fixa **sysadmin** , esse status será **Conectado a** *server_instance_name* **(Permissões limitadas)** .  
   
  O nome de cada uma das instâncias de servidor de parceiro é exibido em um campo separado de *Instância de servidor e status de conexão* . O campo superior relacionará o servidor principal quando o monitor começar a ser executado.  
   

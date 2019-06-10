@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1591a4d23221526159a5ff9577997b199fd7f99c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bd28758b2f5cb0c5e98ea8b24784369386e7bdce
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597714"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799539"
 ---
 # <a name="client-network-configuration"></a>Configuração de rede de cliente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

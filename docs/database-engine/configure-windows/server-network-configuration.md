@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ed07e09663aa19ead617ce1c6ae63762fff0d67b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 2166549274f323894e7ba36b9495c56184745557
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600276"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771894"
 ---
 # <a name="server-network-configuration"></a>Configuração de rede do servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "51600276"
  Quando configurado para portas dinâmicas, a porta usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá ser alterada sempre que o programa for iniciado. Ao conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por um firewall, é necessário abrir a porta usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Configure o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usar uma porta específica, assim você pode configurar o firewall para permitir a comunicação com o servidor. Para obter mais informações, veja [Configurar um servidor para escuta em uma porta TCP específica &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 ### <a name="changing-a-named-pipe"></a>Alterando um pipe nomeado  
- É possível configurar o protocolo de pipe nomeado para escutar em um pipe nomeado designado. Por padrão, a instância padrão do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escuta no pipe \\\\.\pipe\sql\query da instância padrão e \\\\.\pipe\MSSQL$*\<instancename>* \sql\query de uma instância nomeada. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode escutar somente em um pipe nomeado, mas, se desejar, é possível alterar o pipe para outro nome. O serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajuda os clientes a identificar o pipe no momento da conexão. Para obter mais informações, veja [Como configurar um servidor para escuta em um pipe alternativo &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md).  
+ É possível configurar o protocolo de pipe nomeado para escutar em um pipe nomeado designado. Por padrão, a instância padrão do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escuta no pipe \\\\.\pipe\sql\query da instância padrão e \\\\.\pipe\MSSQL$ *\<instancename>* \sql\query de uma instância nomeada. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode escutar somente em um pipe nomeado, mas, se desejar, é possível alterar o pipe para outro nome. O serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajuda os clientes a identificar o pipe no momento da conexão. Para obter mais informações, veja [Como configurar um servidor para escuta em um pipe alternativo &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md).  
   
 ## <a name="force-encryption"></a>Forçar criptografia  
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode ser configurado para exigir criptografia ao comunicar-se com aplicativos cliente. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  

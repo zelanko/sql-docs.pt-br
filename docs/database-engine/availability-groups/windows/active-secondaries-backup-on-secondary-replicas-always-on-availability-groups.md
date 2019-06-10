@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 40fa3d6f3464c92a16e27a2a8bdddbf664909504
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 5b74fc36a3a6e53e0b7f00438f013218b0d76344
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209435"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801353"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>Descarregar backups com suporte nas réplicas secundárias de um grupo de disponibilidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +34,7 @@ ms.locfileid: "53209435"
 > [!NOTE]  
 >  As instruções RESTORE não são permitidas em nenhum dos bancos de dados primários ou secundários de um grupo de disponibilidade.  
   
--   [Tipos de backup com suporte](#SupportedBuTypes)  
-  
--   [Configurando onde os trabalhos de backup são executados](#WhereBuJobsRun)  
-  
--   [Tarefas relacionadas](#RelatedTasks)  
-  
+ 
 ##  <a name="SupportedBuTypes"></a> Tipos de backup com suporte nas réplicas secundárias  
   
 -   **BACKUP DATABASE** dá suporte apenas a backups completos somente cópia de bancos de dados, arquivos ou grupos de arquivos quando executado nas réplicas secundárias. Observe que os backups somente cópia não afetam a cadeia de logs nem limpam o bitmap diferencial.  

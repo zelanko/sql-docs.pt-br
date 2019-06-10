@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 8983e874e9f1a7a5dc875774304c87ad23fa60ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 883c0c98531311d77754fcbcdd86615283aecdc7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63312836"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798067"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Modificar configurações de espaço de trabalho e de usuário
 
@@ -31,7 +31,7 @@ ms.locfileid: "63312836"
 
 O comando de menu **arquivo** > **preferências** > **configurações** (**código**  >  **Preferências** > **configurações** em Mac) fornece o ponto de entrada para definir as configurações de usuário e o espaço de trabalho. Você receberá uma lista de configurações padrão. Copie qualquer configuração que você deseja alterar para apropriado `settings.json` arquivo. As guias à direita permitem que você alternar rapidamente entre os arquivos de configurações do usuário e o espaço de trabalho.
 
-Você também pode abrir as configurações de usuário e o espaço de trabalho do **paleta de comandos** (**Ctrl + Shift + P**) com **preferências: Abrir configurações de usuário** e **preferências: Abra as configurações de espaço de trabalho** ou use o atalho de teclado (**Ctrl +,**).
+Você também pode abrir as configurações de usuário e o espaço de trabalho do **paleta de comandos** (**Ctrl + Shift + P**) com **preferências: Abrir configurações de usuário** e **preferências: Abra as configurações de espaço de trabalho** ou use o atalho de teclado (**Ctrl +,** ).
 
 O exemplo a seguir desabilita os números de linha no editor e configura as linhas de código a ser recuado automaticamente.
 
