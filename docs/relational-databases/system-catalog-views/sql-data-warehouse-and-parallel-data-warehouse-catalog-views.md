@@ -8,18 +8,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ef6f58e2-0162-4bb2-951a-a786da7453e4
-aauthor: ronortloff
-ms.author: rortloff
-manager: craigg
+aauthor: julieMSFT
+ms.author: jrasnick
+manager: jroth
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e4e84dc262cd03de74433c2e713b3a7b4cda0faa
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: ef736003be3c07fb1e48520fbaf2186181735427
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583280"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822354"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse e Parallel Data Warehouse exibições do catálogo
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
  Este tópico lista os [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] exibições do catálogo.  
@@ -66,7 +67,7 @@ ms.locfileid: "59583280"
 [sys.workload_management_workload_classifiers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md) (Preview)
 
 > [!Note]
-> Classificação de carga de trabalho está disponível para visualização no SQL Data Warehouse Gen2. Visualização de classificação de gerenciamento de carga de trabalho e a importância é para compilações com uma data de lançamento do dia 9 de abril de 2019 ou posterior.  Os usuários devem evitar usando builds anteriores a essa data para gerenciamento de carga de trabalho de teste.  Para determinar se a compilação for com capacidade de gerenciamento de carga de trabalho, execute select @@version quando conectado à instância do SQL Data Warehouse.
+> A classificação da carga de trabalho está disponível em versão prévia no SQL Data Warehouse Gen2. A versão prévia da Classificação e Importância do Gerenciamento de Carga de Trabalho destina-se a builds com datas de lançamento de 9 de abril de 2019 ou posterior.  Os usuários devem evitar usar builds anteriores a essa data no teste de gerenciamento de carga de trabalho.  Para determinar se o build é capaz de gerenciar a carga de trabalho, execute select @@version quando estiver conectado à instância do SQL Data Warehouse.
  
 ## <a name="includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Exibições do catálogo  
  As exibições de catálogo a seguir se aplicam a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] somente:

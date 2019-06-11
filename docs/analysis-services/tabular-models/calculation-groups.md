@@ -1,6 +1,6 @@
 ---
 title: Grupos de cálculos em modelos de tabela do Analysis Services | Microsoft Docs
-ms.date: 06/05/2019
+ms.date: 06/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 58e845965bb9cd4eeba46ad30193c79b436da569
-ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
+ms.openlocfilehash: abc1f51d21613676fd94271f931e1a7692cc1efc
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66719859"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822696"
 ---
 # <a name="calculation-groups-preview"></a>Grupos de cálculo (visualização)
  
-[!INCLUDE[ssas-appliesto-sql2019](../../includes/ssas-appliesto-sql2019.md)]
+[!INCLUDE[ssas-appliesto-sql2019-aas](../../includes/ssas-appliesto-sql2019-aas.md)]
 
-Grupos de cálculo podem reduzir significativamente o número de medidas com redundância de expressões de medida comum como de agrupamento *itens de cálculo*. Grupos de cálculo têm suporte em modelos de tabela do SQL Server Analysis Services 2019 no 1470 e superior [nível de compatibilidade](compatibility-level-for-tabular-models-in-analysis-services.md). Modelos de nível de compatibilidade 1470 estão atualmente em **visualização**.  
+Grupos de cálculo podem reduzir significativamente o número de medidas com redundância de expressões de medida comum como de agrupamento *itens de cálculo*. Grupos de cálculo têm suporte no Azure Analysis Services e SQL Server Analysis Services 2019 tabulares de modelos no 1470 e acima [nível de compatibilidade](compatibility-level-for-tabular-models-in-analysis-services.md). Modelos de nível de compatibilidade 1470 estão atualmente em **visualização**.  
 
 Este artigo descreve: 
 

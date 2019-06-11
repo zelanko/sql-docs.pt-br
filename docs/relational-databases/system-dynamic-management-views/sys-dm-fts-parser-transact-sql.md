@@ -16,18 +16,19 @@ helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-auauthor: pmasl
+author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 3e20fc07e286fb4fd22596f32f0abd90e5533979
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 16df7ce483209be058d44448e9071406f897b41a
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65944237"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822360"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna o resultado final da geração de tokens após a aplicação de um determinado [separador de palavras](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md), [dicionário de sinônimos](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md), e [lista de palavras irrelevantes](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) combinação para uma cadeia de caracteres de consulta de entrada. O resultado da geração de tokens é equivalente à saída do Mecanismo de Texto Completo para a cadeia de caracteres de consulta especificada.  
@@ -37,7 +38,6 @@ ms.locfileid: "65944237"
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)  
 ```  
   
@@ -136,7 +136,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
  A distinção de acentos foi desabilitada.  
   
-```  
+```sql
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0, 0);  
 ```  
   
@@ -147,7 +147,7 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0,
   
  A distinção de acentos foi desabilitada.  
   
-```  
+```sql
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS revenue" ', 1033, 77, 0);  
 ```  
   
@@ -158,7 +158,7 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS re
   
  O exemplo especifica o LCID do idioma francês `1036` e a ID de uma lista de palavras irrelevantes definida pelo usuário `5`. A distinção de acentos está habilitada.  
   
-```  
+```sql
 SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);  
 ```  
   

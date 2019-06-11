@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_column_store_row_group_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/04/2017
+ms.date: 05/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,14 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f725ca776fcc65828c7f72b4e3c2b042d0203b71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1460ef53098a9cdd7cf8bb1672c45cfd27adff57
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62742042"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822739"
 ---
 # <a name="sysdmdbcolumnstorerowgroupphysicalstats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Fornece informações de nível de grupo de linhas atuais sobre todos os índices columnstore no banco de dados atual.  
@@ -43,7 +44,7 @@ ms.locfileid: "62742042"
 |**row_group_id**|**int**|ID nesse grupo de linhas. Tabelas particionadas, isso é exclusivo dentro da partição.<br /><br /> -1 para um final na memória.|  
 |**delta_store_hobt_id**|**bigint**|O hobt_id para um grupo de linhas no repositório delta.<br /><br /> NULL se o grupo de linhas não está no repositório delta.<br /><br /> NULL para o final de uma tabela na memória.|  
 |**state**|**tinyint**|Número de identificação associado *state_description*.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = DA MARCA PARA EXCLUSÃO<br /><br /> COMPRESSED é o único estado que se aplica a tabelas na memória.|  
-|**state_desc**|**nvarchar(60)**|Descrição do estado do grupo de linhas:<br /><br /> INVISÍVEL - um grupo de linhas que está sendo criado. Por exemplo:  <br />Um grupo de linhas no columnstore é INVISÍVEL, enquanto os dados estão sendo compactados. Quando a compactação é concluída em um comutador de metadados é alterado o estado da linha columnstore grupo da INVISÍVEL compactada e o estado do grupo de linhas deltastore de fechado para marca de exclusão.<br /><br /> Abra - um grupo de linhas do deltastore que está aceitando novas linhas. Um grupo de linhas aberto ainda está no formato rowstore e não foi compactado para o formato columnstore.<br /><br /> FECHADO – um grupo de linhas no repositório delta que contém o número máximo de linhas e está aguardando o processo de motor de tupla para compactá-lo no columnstore.<br /><br /> COMPACTADOS - um grupo de linhas que é compactado com compactação columnstore e armazenado no columnstore.<br /><br /> Marca para exclusão – um grupo de linhas que estava anteriormente no deltastore e não é mais usado.|  
+|**state_desc**|**nvarchar(60)**|Descrição do estado do grupo de linhas:<br /><br /> INVISÍVEL - um grupo de linhas que está sendo criado. Por exemplo: <br />Um grupo de linhas no columnstore é INVISÍVEL, enquanto os dados estão sendo compactados. Quando a compactação é concluída em um comutador de metadados é alterado o estado da linha columnstore grupo da INVISÍVEL compactada e o estado do grupo de linhas deltastore de fechado para marca de exclusão.<br /><br /> Abra - um grupo de linhas do deltastore que está aceitando novas linhas. Um grupo de linhas aberto ainda está no formato rowstore e não foi compactado para o formato columnstore.<br /><br /> FECHADO – um grupo de linhas no repositório delta que contém o número máximo de linhas e está aguardando o processo de motor de tupla para compactá-lo no columnstore.<br /><br /> COMPACTADOS - um grupo de linhas que é compactado com compactação columnstore e armazenado no columnstore.<br /><br /> Marca para exclusão – um grupo de linhas que estava anteriormente no deltastore e não é mais usado.|  
 |**total_rows**|**bigint**|Número de linhas físicas armazenado no grupo de linhas. Para grupos de linhas compactados, isso inclui as linhas que são marcados como excluídas.|  
 |**deleted_rows**|**bigint**|Número de linhas fisicamente armazenados em um grupo de linhas compactados que são marcados para exclusão.<br /><br /> 0 para grupos de linhas que estão no repositório delta.|  
 |**size_in_bytes**|**bigint**|Tamanho combinado, em bytes, de todas as páginas nesse grupo de linhas. Esse tamanho não inclui o tamanho necessário para armazenar metadados ou dicionários compartilhados.|  
@@ -55,7 +56,8 @@ ms.locfileid: "62742042"
 |**generation**|BIGINT|Geração de grupo de linha associada a este grupo de linhas.|  
 |**created_time**|datetime2|Hora em que esse grupo de linhas foi criado.<br /><br /> NULO - para um índice columnstore em uma tabela na memória.|  
 |**closed_time**|datetime2|Hora em que esse grupo de linhas foi fechado.<br /><br /> NULO - para um índice columnstore em uma tabela na memória.|  
-  
+| &nbsp; | &nbsp; | &nbsp; |
+
 ## <a name="results"></a>Resultados  
  Retorna uma linha para cada grupo de linhas no banco de dados atual.  
   
@@ -80,7 +82,7 @@ SELECT i.object_id,
     i.index_id,   
     i.type_desc,   
     CSRowGroups.*,  
-    100*(ISNULL(deleted_rows,0))/total_rows AS 'Fragmentation'  
+    100*(ISNULL(deleted_rows,0))/NULLIF(total_rows,0) AS 'Fragmentation'
 FROM sys.indexes AS i  
 JOIN sys.dm_db_column_store_row_group_physical_stats AS CSRowGroups  
     ON i.object_id = CSRowGroups.object_id AND i.index_id = CSRowGroups.index_id   

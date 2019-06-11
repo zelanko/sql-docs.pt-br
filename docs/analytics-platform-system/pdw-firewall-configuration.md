@@ -1,7 +1,7 @@
 ---
 title: Configuração do firewall do PDW - Analytics Platform System | Microsoft Docs
 description: A página de firewall do SQL Server PDW Configuration Manager permite que você habilitar ou desabilitar regras de firewall para permitem ou impedir o acesso a portas específicas no dispositivo do Analytics Platform System.
-aauthor: mzaman1
+author: mzaman1
 manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,14 +9,15 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3195007b4346c6010b416fae833643f3a80136fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d92d92752b4de105857f5611fbe95262476a4e13
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62639541"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822436"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Configuração de firewall Parallel Data Warehouse no Analytics Platform System
+
 O **Firewall** página do SQL Server PDW Configuration Manager permite habilitar ou desabilitar regras de firewall para permitem ou impedir o acesso a portas específicas no dispositivo do Analytics Platform System.  
   
 ## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>Para gerenciar as portas e regras de firewall para nós de dispositivo  
@@ -45,6 +46,7 @@ As seguintes portas estão abertas para conexões de cliente provenientes de for
 |Fluxo de controle de carregamento do SQL Server PDW - credenciais do Windows|8002|CTL|  
 |_Kerberos|88|AD01 e AD02,|  
 |_ldap|389|AD01 e AD02|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="internal-ports"></a>Portas internas  
 As seguintes portas são usadas pelo PDW para a comunicação interna, mas não estiverem abertas para conexões provenientes de fora o dispositivo de PDW.  
@@ -58,10 +60,12 @@ As seguintes portas são usadas pelo PDW para a comunicação interna, mas não 
 |Status do failover (mecanismo de)|15001|CMP|  
 |Intervalo de portas dinâmicas de (efêmero)|20000-65535|CTL, CMP|  
 |Intervalos de porta do SQL Server (TDS)|1433, 1500-1508|CTL, CMP|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 > [!NOTE]  
 > Criando tabelas externas ou fontes de dados externa usa a porta TCP 8020 por padrão. Essas instruções podem ser configuradas para usar outras portas em vez disso. A porta padrão Hortonworks JOB_TRACKER_LOCATION é 50300. A integração com outros sistemas e ferramentas pode exigir portas adicionais.  
   
 <!-- MISSING LINKS ## See Also  
-[HDInsight Firewall Configuration &#40;Analytics Platform System&#41;](hdinsight-firewall-configuration.md)  -->  
+[HDInsight Firewall Configuration &#40;Analytics Platform System&#41;](hdinsight-firewall-configuration.md)
+-->
   

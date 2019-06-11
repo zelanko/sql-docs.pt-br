@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_enum_proxy_for_subsystems
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
+author: VanMSFT
 manager: craigg
-ms.openlocfilehash: 5beab3dc255e5679191dd6ea5d05bfdd98bef6ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d521a16fa7c18e67e1929cb0e38aecf862d6c18a
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62723806"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822644"
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Lista as permissões para que os proxies do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent acessem subsistemas.  
@@ -34,7 +36,6 @@ ms.locfileid: "62723806"
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 sp_enum_proxy_for_subsystem  
     [ @proxy_id = ] proxy_id,  
     [ @proxy_name = ] 'proxy_name',  
@@ -62,6 +63,7 @@ sp_enum_proxy_for_subsystem
 |**subsystem_name**|**sysname**|O nome do subsistema.|  
 |**proxy_id**|**int**|Número de identificação de proxy.|  
 |**proxy_name**|**sysname**|O nome do proxy.|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Comentários  
  Quando nenhum parâmetro for fornecido, **sp_enum_proxy_for_subsystem** lista informações sobre todos os proxies na instância para cada subsistema.  
@@ -80,7 +82,7 @@ sp_enum_proxy_for_subsystem
 ### <a name="a-listing-all-associations"></a>A. Listando todas as associações  
  O exemplo a seguir lista todas as permissões estabelecidas entre proxies e subsistemas para a instância atual.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -91,7 +93,7 @@ GO
 ### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>B. Determinando se um proxy tem acesso a um subsistema específico  
  O exemplo a seguir retornará uma linha se o proxy `Catalog application proxy` tiver acesso ao subsistema `ActiveScripting`. Caso contrário, o exemplo retorna um conjunto de resultados vazio.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

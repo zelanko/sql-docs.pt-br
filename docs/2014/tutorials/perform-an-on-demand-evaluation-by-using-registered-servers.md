@@ -4,20 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: security"
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 31282041abe538bd51ba4b1367f70cd3c5fa3d5b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030787"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822375"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>Realize uma avaliação sob demanda usando servidores registrados
+
   Você pode realizar uma avaliação sob demanda de políticas de práticas recomendadas em relação a uma ou mais instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando Servidores Registrados. Você pode usar grupos de servidores locais ou um servidor de gerenciamento central.  
   
 > [!NOTE]  
@@ -47,13 +48,13 @@ ms.locfileid: "56030787"
   
     -   Para avaliar as políticas em relação a um servidor específico ou um grupo de servidores, expanda **grupos de servidores locais** ou o servidor de gerenciamento central de nome, clique com botão direito do servidor ou grupo que você deseja avaliar políticas em relação a e, em seguida, clique em **Avaliar políticas**.  
   
-4.  No **avaliar políticas** caixa de diálogo, em seguida o **fonte** , clique no botão de reticências (**...** ) botão.  
+4.  No **avaliar políticas** caixa de diálogo, em seguida o **fonte** , clique no botão de reticências ( **...** ) botão.  
   
 5.  No **Selecionar origem** caixa de diálogo, você pode selecionar um **arquivos** ou **Server** como a origem dos arquivos de política para avaliar. Se você clicar **Server**, você pode realizar uma avaliação sob demanda de quaisquer políticas de práticas recomendadas que foram importados anteriormente para o gerenciamento baseado em políticas em um servidor local ou remoto. Neste tutorial, você clicará **arquivos**e, em seguida, selecione os arquivos de política individuais que você deseja avaliar. Para fazer isso, siga estas etapas:  
   
     1.  Clique em **arquivos**.  
   
-    2.  Lado **arquivos**, clique no botão de reticências (**...** ) botão.  
+    2.  Lado **arquivos**, clique no botão de reticências ( **...** ) botão.  
   
     3.  Selecione um ou mais arquivos de política. XML para avaliar e, em seguida, clique em **aberto**.  
   

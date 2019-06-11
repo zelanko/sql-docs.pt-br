@@ -3,7 +3,7 @@ title: Modelos de ML Train/criar com o Spark
 titleSuffix: SQL Server big data clusters
 description: Use o PySpark para treinar e criar modelos de aprendizado de máquina com o Spark em clusters de grandes dados do SQL Server (versão prévia).
 author: lgongmsft
-ms.author: shivprashant
+ms.author: lgong
 ms.manager: craigg
 ms.reviewer: jroth
 ms.date: 12/06/2018
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b9217b56da2e00ba50288f1643df809f482c2517
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 348749b038b97138c4a6c85fd2f56b45b85c5d60
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860557"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822925"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>Treinar e criar modelos de aprendizado de máquina com o Spark
 

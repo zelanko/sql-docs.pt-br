@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_dropapprole
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5cc9f79ab588a042894c199564820d06d9585bf1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+manager: jroth
+ms.openlocfilehash: 0928137201d9a731051ab95e603744f60c3a52e1
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533378"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822826"
 ---
 # <a name="spdropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Remove uma função de aplicativo do banco de dados atual.  
@@ -37,7 +39,6 @@ ms.locfileid: "58533378"
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 sp_dropapprole [@rolename = ] 'role'  
 ```  
   
@@ -58,7 +59,7 @@ sp_dropapprole [@rolename = ] 'role'
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir remove a função de aplicativo `SalesApp` do banco de dados atual.  
   
-```  
+```sql
 EXEC sp_dropapprole 'SalesApp';  
 ```  
   
