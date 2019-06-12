@@ -1,6 +1,6 @@
 ---
 title: Definindo valores de tempo limite para processamento de relatório e conjuntos de dados compartilhados (SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a0a28974b50d5230c962a19bc19630a55dbef48
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580955"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506445"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Definindo valores de tempo limite para processamento de relatório e conjuntos de dados compartilhados (SSRS)
   Você pode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] especificar valores de tempo limite para definir limites para o uso dos recursos do sistema. O servidor de relatório dá suporte a dois valores de tempo limite:  
   
--   Um valor de tempo limite de consulta de conjunto de dados inserido é o número de segundos durante os quais o servidor de relatório aguarda uma resposta do banco de dados. Esse valor é definido em um relatório.  
+- Um valor de tempo limite de consulta de conjunto de dados inserido é o número de segundos durante os quais o servidor de relatório aguarda uma resposta do banco de dados. Esse valor é definido em um relatório.  
   
--   Um valor de tempo limite de consulta de conjunto de dados compartilhado é o número de segundos durante os quais o servidor de relatório aguarda uma resposta do banco de dados. Esse valor faz parte da definição do conjunto de dados compartilhado e pode ser alterado quando você gerencia o conjunto de dados compartilhado no servidor de relatório.  
+- Um valor de tempo limite de consulta de conjunto de dados compartilhado é o número de segundos durante os quais o servidor de relatório aguarda uma resposta do banco de dados. Esse valor faz parte da definição do conjunto de dados compartilhado e pode ser alterado quando você gerencia o conjunto de dados compartilhado no servidor de relatório.  
   
--   Um valor de tempo limite de execução de relatório é o número máximo de segundos durante os quais o processamento de um relatório pode prosseguir até sua interrupção. Esse valor é definido no nível de sistema. Você pode variar essa configuração para relatórios individuais.  
+- Um valor de tempo limite de execução de relatório é o número máximo de segundos durante os quais o processamento de um relatório pode prosseguir até sua interrupção. Esse valor é definido no nível de sistema. Você pode variar essa configuração para relatórios individuais.  
   
  A maior parte dos erros de tempo limite ocorre durante o processamento de consultas. Caso você esteja encontrando erros de tempo limite, experimente aumentar o valor de tempo limite de consulta. Não deixe de ajustar o valor de tempo limite de execução de relatório de modo que ele seja superior ao tempo limite de consulta. O período deve ser suficiente para a conclusão do processamento da consulta e do relatório.  
   
@@ -50,12 +50,11 @@ ms.locfileid: "65580955"
  Observe que se você especificar um valor de tempo limite inferior a 60 segundos, o relatório poderá ser executado totalmente se o processamento for iniciado e concluído durante a parte silenciosa do ciclo quando o servidor de relatório não estiver avaliando os trabalhos em execução. Por exemplo, se você definir um valor de tempo limite de 10 segundos para um relatório que leva 20 segundos para ser executado, ele será processado totalmente se a execução do relatório for iniciada antecipadamente no ciclo de 60 segundos.  
   
 > [!NOTE]  
->  Você pode definira configuração **RunningRequestsDbCycle** no arquivo RSReportServer.config para alterar a frequência de avaliação dos trabalhos em execução.  
+> Você pode definira configuração **RunningRequestsDbCycle** no arquivo RSReportServer.config para alterar a frequência de avaliação dos trabalhos em execução.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [Definir opções de processamento &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md)   
- [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
-  
+ [O portal da Web de um servidor de relatório (modo nativo do SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'PDO:: Query | Microsoft Docs'
+title: PDO::query | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2018
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 928c1ad5a9b181e791d30332bc7af9d6ed47a0aa
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 68f06811c0c56fa46f1e3769c794d48ad0e43488
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600506"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761975"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +33,7 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 #### <a name="parameters"></a>Parâmetros  
 *$statement*: a instrução SQL que você quer executar.  
   
-*$fetch_style*: as instruções opcionais sobre como executar a consulta. Para obter mais detalhes, consulte a seção Comentários.  $*fetch_style* em PDO::query pode ser substituído por *$fetch_style* em PDO::fetch.  
+*$fetch_style*: as instruções opcionais sobre como executar a consulta. Para obter mais detalhes, consulte a seção Comentários. $*fetch_style* em PDO::query pode ser substituído por *$fetch_style* em PDO::fetch.  
   
 ## <a name="return-value"></a>Valor retornado  
 Se a chamada for bem-sucedida, o PDO::query retornará um objeto PDOStatement. Se a chamada falhar, PDO::query gerará um objeto PDOException ou retornará false, dependendo da configuração de PDO::ATTR_ERRMODE.  
@@ -52,7 +52,7 @@ Você pode especificar as seguintes opções para $*fetch_style*.
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|Consultas de dados na coluna especificada. A primeira coluna na tabela é a coluna 0.|  
 |PDO::FETCH_CLASS, '*classname*', array( *arglist* )|Cria uma instância de uma classe e atribui nomes de coluna a propriedades da classe. Se o construtor de classe aceitar um ou mais parâmetros, você poderá passar também uma *arglist*.|  
-|Fetch_class, '*classname*'|Atribui nomes de coluna a propriedades de uma classe existente.|  
+|PDO::FETCH_CLASS, '*classname*'|Atribui nomes de coluna a propriedades de uma classe existente.|  
   
 Chame PDOStatement::closeCursor para liberar os recursos de banco de dados associados ao objeto PDOStatement antes de chamar PDO::query novamente.  
   
@@ -119,7 +119,7 @@ $stmt = null;
 ```
 
 ## <a name="example"></a>Exemplo
-Este exemplo de código mostra como criar uma tabela de [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) tipos e buscar os dados inseridos.
+Este exemplo de código mostra como criar uma tabela de tipos [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) tipos e buscar os dados inseridos.
 
 ```
 <?php
