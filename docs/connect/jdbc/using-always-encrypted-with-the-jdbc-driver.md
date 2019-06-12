@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4659c6571f8afbcdb757141e03df51ac54d0835e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 860014601394e4e39436e3aa10de8ebcff55ddd6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510707"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790285"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Como usar o Always Encrypted com o driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ O Microsoft JDBC Driver para SQL Server vem com os seguintes provedores de repos
 
 | Classe                                                 | Descrição                                        | Nome (de pesquisa) do provedor  | Pré-registrados? |
 | :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
-| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Um provedor para um repositório de chaves para o Azure Key Vault. | AZURE_KEY_VAULT         | não                 |
+| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Um provedor para um repositório de chaves para o Azure Key Vault. | AZURE_KEY_VAULT         | Não                 |
 | **SQLServerColumnEncryptionCertificateStoreProvider** | Um provedor para o Repositório de Certificados do Windows.      | MSSQL_CERTIFICATE_STORE | Sim                |
 | **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Um provedor do repositório de chaves Java                   | MSSQL_JAVA_KEYSTORE     | Sim                |
 
@@ -99,9 +99,9 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > [!IMPORTANT]
 >  Se você usar o provedor de repositório de chaves do Azure Key Vault, a implementação do Azure Key Vault do driver JDBC tem dependências nessas bibliotecas (do GitHub) que deve ser incluído no seu aplicativo:
 >
->  [Azure sdk para java](https://github.com/Azure/azure-sdk-for-java)
+>  [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)
 >
->  [bibliotecas do Azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java)
+>  [azure-activedirectory-library-for-java libraries](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 >
 > Para obter um exemplo de como incluir essas dependências em um projeto Maven, consulte [baixar ADAL4J AKV dependências e com o Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
@@ -360,7 +360,7 @@ ds.setColumnEncryptionSetting("Enabled");
 SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 ```
 
-O Sempre Criptografado também pode ser habilitado para consultas individuais. Para obter mais informações, consulte [controlando o impacto no desempenho do Always Encrypted](#controlling-the-performance-impact-of-always-encrypted). Habilitar Always Encrypted não é suficiente para o êxito da criptografia ou descriptografia. Você também precisa garantir que:
+O Sempre Criptografado também pode ser habilitado para consultas individuais. Confira [Controle do impacto sobre o desempenho do Always Encrypted](#controlling-the-performance-impact-of-always-encrypted) abaixo para saber mais. Habilitar Always Encrypted não é suficiente para o êxito da criptografia ou descriptografia. Você também precisa garantir que:
 - O aplicativo tem as permissões de banco de dados *VIEW ANY COLUMN MASTER KEY DEFINITION* e *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* , necessárias para acessar os metadados sobre as chaves do Always Encrypted no banco de dados. Para obter detalhes, veja [Permissões em Always Encrypted (Mecanismo de Banco de Dados)](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
 - O aplicativo pode acessar a chave mestra de coluna que protege as chaves de criptografia de coluna, o que criptografa as colunas de banco de dados consultadas. Para usar o provedor de Store de chave do Java, você precisa fornecer credenciais adicionais na cadeia de conexão. Para obter mais informações, consulte [provedor de Store de chave do Java usando](#using-java-key-store-provider).
 

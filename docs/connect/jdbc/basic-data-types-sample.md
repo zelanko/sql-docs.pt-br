@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ccbdfe1afb590e3585415b83177098d3ec4d4ac8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1fc817ba5964ab1278a329520fc895ec06815baf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619077"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770328"
 ---
 # <a name="basic-data-types-sample"></a>Exemplo de tipos de dados básicos
 
@@ -37,7 +37,7 @@ Para executar este aplicativo de exemplo, é necessário definir o classpath par
 O exemplo criará a tabela necessária e inserir dados de exemplo no [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] banco de dados de exemplo:
 
 > [!NOTE]  
-> O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece os arquivos de biblioteca de classes mssql-jdbc a serem usados de acordo com suas configurações preferenciais do JRE (Java Runtime Environment). Para obter mais informações sobre qual arquivo JAR escolher, consulte [requisitos do sistema para o Driver JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+> O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece os arquivos de biblioteca de classes mssql-jdbc a serem usados de acordo com suas configurações preferenciais do JRE (Java Runtime Environment). Para saber mais sobre qual arquivo JAR escolher, confira os [requisitos do sistema para o JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
 
 ## <a name="example"></a>Exemplo
 

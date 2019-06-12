@@ -1,5 +1,5 @@
 ---
-title: Método supportsGroupByUnrelated (SQLServerDatabaseMetaData) | Microsoft Docs
+title: supportsGroupByUnrelated Method (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 455fe02e-3877-409b-8281-8e0491acd3e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7c92adb93062c0e48d7f96bdb807019570c68117
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6e8cf15dc9151de38d37ce22e4794b9fb8e14300
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696871"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764303"
 ---
 # <a name="supportsgroupbyunrelated-method-sqlserverdatabasemetadata"></a>Método supportsGroupByUnrelated (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

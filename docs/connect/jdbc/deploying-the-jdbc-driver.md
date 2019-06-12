@@ -1,5 +1,5 @@
 ---
-title: Implantando o JDBC Driver | Microsoft Docs
+title: Usando o JDBC Driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c677cd46b4d3366b997e4d1effe5c056ec62a158
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: b688e5b014915578df5c56ec5e6af2fc8fe26b16
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529599"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781975"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Implantando o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -1,18 +1,18 @@
 ---
 title: c2WTS (Declarações para Serviço de Token do Windows) e Reporting Services | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: d5a771bc28d4c6a6f248925d329fa708c4135f8d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 8d53445544c360250ed35c322e2fc4078559bbbe
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397149"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454565"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) e Reporting Services
 
@@ -50,7 +50,7 @@ Se seu ambiente usar a delegação restrita de Kerberos, o serviço do SharePoin
 
     **Como melhor prática, o C2WTS deve ser executado com sua própria identidade de domínio.**
 
-    * Crie uma conta do Active Directory e registre a conta como uma conta gerenciada no SharePoint Server. Para saber mais sobre contas gerenciadas, consulte [Contas gerenciadas no Sharepoint](https://blogs.technet.microsoft.com/wbaer/2010/04/11/managed-accounts-in-sharepoint-2010/)
+    * Crie uma conta do Active Directory e registre a conta como uma conta gerenciada no SharePoint Server. Para saber mais sobre contas gerenciadas, consulte [Contas gerenciadas no Sharepoint](https://blog.wbaer.net/2010/04/11/managed-accounts-in-sharepoint-2010/)
    
     * Configure o serviço do C2WTS para usar a conta gerenciada em Administração Central do SharePoint > Segurança > Configurar Contas de Serviço > Serviço Windows – Declarações do Serviço de Token do Windows
 
@@ -84,7 +84,7 @@ Se seu ambiente usar a delegação restrita de Kerberos, o serviço do SharePoin
     * Selecione **Usuários ou Computadores...&#42;** e insira a conta que hospeda o serviço. Por exemplo, se um SQL Server for executado em uma conta chamada *sqlservice*, insira `sqlservice`. 
       Para a **Web part do Visualizador de Relatórios**, essa será a conta de serviço da Instância do Reporting Services (Modo Nativo).
 
-    * Selecione a lista de serviços. Isso mostrará os SPNs que estão disponíveis nessa conta. Se você não vir o serviço listado nessa conta, ele pode estar ausente ou colocado em uma conta diferente. Você pode usar o utilitário SetSPN para ajustar os SPNs. Para a **Web part do Visualizador de Relatórios**, você verá o SPN HTTP configurado em [Configuração de Web part do Visualizador de Relatórios](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration).
+    * Selecione a lista de serviços. Isso mostrará os SPNs que estão disponíveis nessa conta. Se você não vir o serviço listado nessa conta, ele pode estar ausente ou colocado em uma conta diferente. Você pode usar o utilitário SetSPN para ajustar os SPNs. Para a **Web part do Visualizador de Relatórios**, você verá o SPN HTTP configurado em [Configuração de Web part do Visualizador de Relatórios](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-native-mode-web-part-configuration).
 
     * Selecione OK para sair das caixas de diálogo.
 

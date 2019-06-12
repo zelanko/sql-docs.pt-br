@@ -32,12 +32,12 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 41b6c0009c2cfc3c83a4326875c13083875166b3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: fc582f9328196233768e1fd7e7bd2bb81688c81d
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124576"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413446"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "54124576"
   
      Nessa parte, você define a carga útil que tem suporte no ponto de extremidade. A carga útil pode ser uma de vários tipos com suporte: [!INCLUDE[tsql](../../includes/tsql-md.md)], agente de serviços, espelhamento de banco de dados. Nesta parte, você inclui também informações específicas de linguagem.  
   
-> **OBSERVAÇÃO:** Serviços Web XML nativos (pontos de extremidade SOAP/HTTP) foram removidos do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+> **OBSERVAÇÃO:** Os Serviços Web XML nativos (pontos de extremidade SOAP/HTTP) foram removidos do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -73,7 +73,7 @@ FOR { TSQL | SERVICE_BROKER | DATABASE_MIRRORING } (
 <AS TCP_protocol_specific_arguments> ::=  
 AS TCP (  
   LISTENER_PORT = listenerPort  
-  [ [ , ] LISTENER_IP = ALL | ( 4-part-ip ) | ( "ip_address_v6" ) ]  
+  [ [ , ] LISTENER_IP = ALL | ( xx.xx.xx.xx IPv4 address ) | ( '__:__1' IPv6 address ) ]  
   
 )  
   
@@ -145,10 +145,10 @@ FOR DATABASE_MIRRORING (
   
  Os argumentos a seguir se aplicam apenas à opção protocolo TCP.  
   
- LISTENER_PORT **=**_listenerPort_  
+ LISTENER_PORT **=** _listenerPort_  
  Especifica o número da porta de escuta para conexões pelo protocolo TCP/IP service broker. Por convenção, 4022 é usado, mas qualquer número entre 1024 e 32767 é válido.  
   
- LISTENER_IP **=** ALL | **(**_4-part-ip_ **)** | **(** "*ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(** _4-part-ip_ **)**  |  **(** "*ip_address_v6*" **)**  
  Especifica o endereço IP de escuta do ponto de extremidade. O padrão é ALL. Isso significa que o ouvinte aceitará uma conexão em qualquer endereço IP válido.  
   
  Se você configurar o espelhamento de banco de dados com um endereço IP, em vez de um nome de domínio totalmente qualificado (`ALTER DATABASE SET PARTNER = partner_IP_address` ou `ALTER DATABASE SET WITNESS = witness_IP_address`), especifique `LISTENER_IP =IP_address`, em vez de `LISTENER_IP=ALL`, ao criar pontos de extremidade de espelhamento.  
@@ -230,7 +230,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  Descarta mensagens para serviços localizados em outro lugar. Esse é o padrão.  
   
- MESSAGE_FORWARD_SIZE **=**_forward_size_  
+ MESSAGE_FORWARD_SIZE **=** _forward_size_  
  Especifica a quantidade máxima de armazenamento em megabytes a ser alocada para ser usada no ponto de extremidade ao armazenar mensagens a serem encaminhadas.  
   
  **Opções de DATABASE_MIRRORING**  
@@ -276,7 +276,7 @@ FOR DATABASE_MIRRORING (
 ### <a name="creating-a-database-mirroring-endpoint"></a>Criando um ponto de extremidade de espelhamento de banco de dados  
  O exemplo a seguir cria um ponto de extremidade de espelhamento de banco de dados. O ponto de extremidade usa número de porta `7022`, embora nenhum número da porta disponível funcione. O ponto de extremidade é configurado para usar Autenticação do Windows que só usa Kerberos. A opção `ENCRYPTION` é configurada ao valor não padrão de `SUPPORTED` para oferecer suporte a dados criptografados ou não criptografados. O ponto de extremidade está sendo configurado para oferecer suporte às funções de parceiro e testemunha.  
   
-```  
+```sql  
 CREATE ENDPOINT endpoint_mirroring  
     STATE = STARTED  
     AS TCP ( LISTENER_PORT = 7022 )  
@@ -286,6 +286,36 @@ CREATE ENDPOINT endpoint_mirroring
        ROLE=ALL);  
 GO  
 ```  
+
+### <a name="create-a-new-endpoint-pointing-to-a-specific-ipv4-address-and-port"></a>Criar um novo ponto de extremidade que aponta para uma porta e um endereço IPv4 específicos
+
+```sql
+CREATE ENDPOINT ipv4_endpoint_special
+STATE = STARTED
+AS TCP (
+    LISTENER_PORT = 55555, LISTENER_IP = (10.0.75.1)
+)
+FOR TSQL ();
+
+GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] TO public; -- Keep existing public permission on default endpoint for demo purpose
+GRANT CONNECT ON ENDPOINT::ipv4_endpoint_special
+TO login_name;
+```
+
+### <a name="create-a-new-endpoint-pointing-to-a-specific-ipv6-address-and-port"></a>Criar um novo ponto de extremidade que aponta para uma porta e um endereço IPv6 específicos
+
+```sql
+CREATE ENDPOINT ipv6_endpoint_special
+STATE = STARTED
+AS TCP (
+    LISTENER_PORT = 55555, LISTENER_IP = ('::1')
+)
+FOR TSQL ();
+
+GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] TO public;
+GRANT CONNECT ON ENDPOINT::ipv6_endpoint_special
+
+```
   
 ## <a name="see-also"></a>Confira também  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 21b727f60c0c60495c50e2e583b4cd776fd2e997
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: adf098f6a855a3db241f33b81b060c654ae47d6d
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571283"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499601"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Tipo de conexão Power Pivot (SSRS)
   É possível usar a extensão de processamento de dados do SQL Server Analysis Services para recuperar dados de uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicada em uma Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] do SharePoint.  
@@ -32,7 +32,7 @@ ms.locfileid: "65571283"
  A cadeia de conexão é a URL para a pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicada no SharePoint na Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou em outra biblioteca, por exemplo, `https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## <a name="credentials"></a>Credenciais  
- Especifique as credenciais que você precisa para acessar a pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e o site do SharePoint, por exemplo, Autenticação do Windows (Segurança Integrada). Para obter mais informações, consulte [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Especificar as credenciais no Construtor de Relatórios](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Especifique as credenciais que você precisa para acessar a pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e o site do SharePoint, por exemplo, Autenticação do Windows (Segurança Integrada). Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão &#40;construtor de relatórios e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [especificar credenciais e informações de Conexão para fontes de dados de relatório](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="queries"></a>Consultas  
  Depois de se conectar à fonte de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , use a consulta gráfica MDX para criar uma consulta por meio de procura e seleção nas estruturas de dados subjacentes. Depois de criar uma consulta, execute-a para ver os dados de exemplo no painel de resultados.  

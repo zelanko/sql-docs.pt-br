@@ -18,13 +18,13 @@ helpviewer_keywords:
 - CLSID
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8c838857b09d0eb0279b2732e86602b0938a7fd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 45a09a47f3ee1b633ccde0276977db56e0ead711
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726894"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768597"
 ---
 # <a name="data-source-objects-ole-db"></a>Objetos de fonte de dados (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47726894"
 
   O OLE DB Driver for SQL Server usa o termo fonte de dados para o conjunto de interfaces OLE DB usadas para estabelecer um vínculo com um armazenamento de dados, como o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Criar uma instância do objeto de fonte de dados do provedor é a primeira tarefa de um Driver OLE DB para o consumidor do SQL Server.  
   
- Todo provedor do OLE DB declara um identificador de classe (CLSID) para si mesmo. O CLSID para o Driver do OLE DB para SQL Server é o C/C++ GUID CLSID_MSOLEDBSQL (o símbolo MSOLEDBSQL_CLSID será resolvido para o correto progid no arquivo msoledbsql.h que você faz referência). Com o CLSID, o consumidor usa a função **CoCreateInstance** do OLE para produzir uma instância do objeto de fonte de dados.  
+ Todo provedor do OLE DB declara um identificador de classe (CLSID) para si mesmo. O CLSID para o Driver do OLE DB para SQL Server é o C /C++ GUID CLSID_MSOLEDBSQL (o símbolo MSOLEDBSQL_CLSID será resolvido para o correto progid no arquivo msoledbsql.h que você faz referência). Com o CLSID, o consumidor usa a função **CoCreateInstance** do OLE para produzir uma instância do objeto de fonte de dados.  
   
  Driver do OLE DB para SQL Server é um servidor em processo. As instâncias dos objetos do OLE DB Driver for SQL Server são criadas usando a macro CLSCTX_INPROC_SERVER para indicar o contexto executável.  
   

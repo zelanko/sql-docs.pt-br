@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7967740fc56efab93129aa6846d70f7eb55c7de
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 08bdce27a5894cdbdba0122ec33a98c94f244ea3
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017912"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454724"
 ---
 # <a name="temporal-tables"></a>Tabelas temporais
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "57017912"
   
 -   Coluna de início do período: O sistema registra a hora de início da linha na coluna, normalmente denotada como a coluna **SysStartTime**.  
   
--   Coluna de término do período: O sistema registra a hora de término da linha na coluna, normalmente denotada como a coluna **SysEndTime**.  
+-   Coluna de término do período: O sistema registra a hora de término da linha na coluna, normalmente indicada como a coluna **SysEndTime**.  
   
  A tabela atual contém o valor atual para cada linha. A tabela de histórico contém cada valor anterior para cada linha, se houver, e a hora de início e término do período para o qual ela era válida.  
   
@@ -119,7 +119,7 @@ CREATE TABLE dbo.Employee
 >  As horas registradas nas colunas datetime2 do sistema baseiam-se na hora de início da própria transação. Por exemplo, todas as linhas inseridas em uma única transação terão o mesmo horário UTC registrado na coluna correspondente ao início do período **SYSTEM_TIME** .  
   
 ## <a name="how-do-i-query-temporal-data"></a>Como faço para consultar dados temporais?  
- A cláusula **FROM**_\<table\>_ da instrução **SELECT** tem uma nova cláusula **FOR SYSTEM_TIME** com cinco subcláusulas temporais específicas para consultar dados das tabelas atual e histórica. Essa nova sintaxe de instrução **SELECT** é suportada diretamente em uma única tabela, propagada por meio de várias associações e exibições em várias tabelas temporais.  
+ A cláusula **FROM** _\<table\>_ da instrução **SELECT** tem uma nova cláusula **FOR SYSTEM_TIME** com cinco subcláusulas temporais específicas para consultar dados das tabelas atual e histórica. Essa nova sintaxe de instrução **SELECT** é suportada diretamente em uma única tabela, propagada por meio de várias associações e exibições em várias tabelas temporais.  
   
  ![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")  
   
@@ -142,14 +142,14 @@ SELECT * FROM Employee
   
 |Expression|Linhas de qualificação|Descrição|  
 |----------------|---------------------|-----------------|  
-|**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|Retorna uma tabela com uma linha que contém os valores que foram reais (atuais) no momento especificado no passado. Internamente, uma união é executada entre a tabela temporal e sua tabela de histórico e os resultados são filtrados para retornar os valores na linha que era válida no ponto no tempo especificado pelo parâmetro *<date_time>*. O valor de uma linha é considerado válido se o valor de *system_start_time_column_name* é menor ou igual ao valor do parâmetro *<date_time>* e o valor de *system_end_time_column_name* é maior que o valor do parâmetro *<date_time>*.|  
+|**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|Retorna uma tabela com uma linha que contém os valores que foram reais (atuais) no momento especificado no passado. Internamente, uma união é executada entre a tabela temporal e sua tabela de histórico e os resultados são filtrados para retornar os valores na linha que era válida no ponto no tempo especificado pelo parâmetro *<date_time>* . O valor de uma linha é considerado válido se o valor de *system_start_time_column_name* é menor ou igual ao valor do parâmetro *<date_time>* e o valor de *system_end_time_column_name* é maior que o valor do parâmetro *<date_time>* .|  
 |**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|Retorna uma tabela com os valores para todas as versões de linha que estavam ativas no intervalo de tempo especificado, não importando se eles começaram a ser ativos antes do valor de parâmetro *<start_date_time>* para o argumento FROM ou deixaram de ser ativos após o valor de parâmetro *<end_date_time>* para o argumento TO. Internamente, uma união é executada entre a tabela temporal e sua tabela de histórico e os resultados são filtrados para retornar os valores para todas as versões de linha que estavam ativas a qualquer momento durante o intervalo de tempo especificado. As linhas que deixaram de ser ativas exatamente no limite inferior definido pelo ponto de extremidade FROM não são incluídas e os registros que se tornaram ativos exatamente no limite superior definido pelo ponto de extremidade TO também não são incluídos.|  
 |**BETWEEN**<start_date_time>**AND**<end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|A mesma descrição acima para **FOR SYSTEM_TIME FROM** <start_date_time>**TO** <end_date_time> é válida, exceto que a tabela de linhas retornada inclui linhas que se tornaram ativas no limite superior definido pelo ponto de extremidade <end_date_time>.|  
 |**CONTAINED IN** (<start_date_time> , <end_date_time>)|SysStartTime >= start_date_time AND SysEndTime \<= end_date_time|Retorna uma tabela com os valores para todas as versões de linha que foram abertas e fechadas dentro do intervalo de tempo especificado definido por dois valores de data e hora para o argumento CONTAINED IN. As linhas que se tornaram ativas exatamente no limite inferior ou que deixaram de ser ativas exatamente no limite superior são incluídas.|  
 |**ALL**|Todas as linhas|Retorna a união de linhas que pertencem às tabelas atual e de histórico.|  
   
 > [!NOTE]  
->  Opcionalmente, é possível optar por ocultar essas colunas de período, de modo que as consultas que referenciam explicitamente essas colunas não as retornarão (o cenário **SELECT \* FROM**_\<table\>_). Para retornar uma coluna oculta, basta fazer referência explícita à coluna oculta na consulta. Da mesma forma, as instruções **INSERT** e **BULK INSERT** continuarão como se as novas colunas de período não estivessem presentes (e os valores da coluna serão populados automaticamente). Para obter detalhes sobre como usar a cláusula **HIDDEN** , veja [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) e [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
+>  Opcionalmente, é possível optar por ocultar essas colunas de período, de modo que as consultas que referenciam explicitamente essas colunas não as retornarão (o cenário **SELECT \* FROM** _\<table\>_ ). Para retornar uma coluna oculta, basta fazer referência explícita à coluna oculta na consulta. Da mesma forma, as instruções **INSERT** e **BULK INSERT** continuarão como se as novas colunas de período não estivessem presentes (e os valores da coluna serão populados automaticamente). Para obter detalhes sobre como usar a cláusula **HIDDEN** , veja [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) e [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Introdução a Tabelas Temporais com Controle da Versão do Sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

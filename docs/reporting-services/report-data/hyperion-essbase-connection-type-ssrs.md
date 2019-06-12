@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd2395d063b8e4b5f9f237d49f5011e8630124d9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 1906db6af5e73905b26d5e62394221ce790ec47b
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65572312"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500419"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Tipo de conexão Hyperion Essbase (SSRS)
   Para incluir dados de uma fonte de dados externa do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] no relatório, você deve ter um conjunto de dados baseado em uma fonte de dados do relatório do tipo [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Esse tipo de fonte de dados interna se baseia na extensão de dados do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], que permite recuperar dados multidimensionais de uma fonte de dados externa do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -27,7 +27,7 @@ ms.locfileid: "65572312"
 Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
- Para obter mais informações sobre exemplos de cadeias de conexão, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Para obter mais informações sobre exemplos de cadeias de conexão, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Credentials"></a> Credenciais  
@@ -35,7 +35,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  Após a publicação do relatório, talvez seja necessário alterar as credenciais da fonte de dados para que, quando o relatório for executado no servidor de relatório, as permissões recuperadas sejam válidas.  
   
- Para obter mais informações, consulte [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Especificar as credenciais no Construtor de Relatórios](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão &#40;construtor de relatórios e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [especificar credenciais e informações de Conexão para fontes de dados de relatório](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Consultas  
@@ -73,7 +73,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>Propriedades de campo predefinidas  
- Propriedades de campo predefinidas para as quais normalmente existe suporte de vários provedores de dados e que aparecem na consulta MDX subjacente a um conjunto de dados de relatório. Por exemplo, a propriedade de dimensão MDX MEMBER_UNIQUE_NAME é mapeada para a propriedade de campo predefinida do conjunto de dados de relatório **UniqueName**. Para incluir o valor de nome exclusivo em uma caixa de texto, use a expressão `=Fields!`*\<FieldName>*`.UniqueName`.  
+ Propriedades de campo predefinidas para as quais normalmente existe suporte de vários provedores de dados e que aparecem na consulta MDX subjacente a um conjunto de dados de relatório. Por exemplo, a propriedade de dimensão MDX MEMBER_UNIQUE_NAME é mapeada para a propriedade de campo predefinida do conjunto de dados de relatório **UniqueName**. Para incluir o valor de nome exclusivo em uma caixa de texto, use a expressão `=Fields!` *\<FieldName>* `.UniqueName`.  
   
  A tabela a seguir fornece uma lista das propriedades de campo predefinidas que você pode usar para a fonte de dados do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
   
@@ -90,7 +90,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="custom-properties"></a>Propriedades personalizadas  
- Propriedades de campo personalizadas para as quais existe suporte de um provedor de dados e que aparecem na consulta MDX subjacente a um conjunto de dados de relatório, mas não aparecem no painel Conjuntos de Dados de relatório como campos daquele conjunto de dados. Por exemplo, **Nomes Longos** é uma propriedade do membro definida para um nível de dimensão. Para incluir o valor em uma caixa de texto, use a expressão `=Fields!`*\<FieldName>*`("Long Names")`. Os nomes de campo na expressão fazem distinção de maiúsculas e minúsculas.  
+ Propriedades de campo personalizadas para as quais existe suporte de um provedor de dados e que aparecem na consulta MDX subjacente a um conjunto de dados de relatório, mas não aparecem no painel Conjuntos de Dados de relatório como campos daquele conjunto de dados. Por exemplo, **Nomes Longos** é uma propriedade do membro definida para um nível de dimensão. Para incluir o valor em uma caixa de texto, use a expressão `=Fields!` *\<FieldName>* `("Long Names")`. Os nomes de campo na expressão fazem distinção de maiúsculas e minúsculas.  
   
  Use a sintaxe a seguir para consultar as propriedades estendidas personalizadas em uma expressão:  
   
@@ -125,7 +125,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Fornece uma visão geral de como acessar dados de seu relatório.  
   
- [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Fornece informações sobre conexões de dados e fontes de dados.  
   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

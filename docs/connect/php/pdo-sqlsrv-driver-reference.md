@@ -1,5 +1,5 @@
 ---
-title: Referência do Driver PDO_SQLSRV | Microsoft Docs
+title: PDO_SQLSRV Driver Reference | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a618a360-d4aa-475b-97d0-81979ebad444
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 427b51ef5eb23bf051d76e8c310849284dd856e5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 8edc7a19526a0a1e2f8d57e12de505be774c66de
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607196"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761851"
 ---
 # <a name="pdosqlsrv-driver-reference"></a>Referência do driver PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,5 +38,5 @@ O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../.
 
 [Guia de programação para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
-[Guia de Introdução com os Drivers da Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Introdução aos Drivers da Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 

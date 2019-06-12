@@ -10,12 +10,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
-ms.openlocfilehash: ad914ce3b446ce9c660f96caa1c0548b7ed2944d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 8592d3dfc16f0dd9d13a6445f0d8290f9ad507e4
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65576685"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499624"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parâmetros de relatório (Construtor de Relatórios e Designer de Relatórios)
 
@@ -168,7 +168,7 @@ Crie um parâmetro manualmente a partir do painel de Dados do Relatório. É pos
   
 -   Em consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] , diferentes fontes de dados dão suporte a diferentes sintaxes para parâmetros. O suporte abrange parâmetros que são identificados na consulta por posição ou por nome. Para obter mais informações, consulte os tópicos sobre tipos de fontes de dados externos específicos em [Conjuntos de dados de relatórios &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md). No designer de consulta relacional, você deve selecionar a opção de parâmetro para um filtro para poder criar uma consulta parametrizada. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas Relacionais &#40;Construtor de Relatórios&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
--   Para consultas baseadas em uma fonte de dados multidimensional como o Microsoft SQL Server Analysis Services, SAP NetWeaver BI ou Hyperion Essbase, você poderá especificar se um parâmetro será criado com base em um filtro que você definir no criador de consultas. Para obter mais informações, consulte o tópico sobre o designer de consultas em [Designers de Consultas &#40;Construtor de Relatórios&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) que corresponda à extensão de dados.  
+-   Para consultas baseadas em uma fonte de dados multidimensional como o Microsoft SQL Server Analysis Services, SAP NetWeaver BI ou Hyperion Essbase, você poderá especificar se um parâmetro será criado com base em um filtro que você definir no criador de consultas. Para obter mais informações, consulte o tópico sobre o designer de consultas em [Designers de Consultas &#40;Construtor de Relatórios&#41;](../report-data/query-design-tools-ssrs.md) que corresponda à extensão de dados.  
   
 ##  <a name="bkmk_Manage_Parameters"></a> Gerenciamento de parâmetros para um relatório publicado  
  Quando você cria um relatório, os parâmetros de relatório são salvos na definição de relatório. Quando você publica um relatório, os parâmetros de relatório são salvos e gerenciados separadamente da definição de relatório.  

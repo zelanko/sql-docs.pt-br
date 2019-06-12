@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7934276d-5ac9-4cbc-a2a0-2c65c93733ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 629c92aaf5ffb23976ad2e4ff2377cc53f87120d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c48aabcb618ba16c0769210903318b0d386d941d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842554"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767846"
 ---
 # <a name="setselectmethod-method-sqlserverdatasource"></a>Método setSelectMethod (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

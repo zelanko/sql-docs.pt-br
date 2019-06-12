@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3a6e2d51b9a2926f6d542ce3da5fc1c916881918
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: d29e39a10b71a58878a7a8bcb00ffd274f253b50
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65944810"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413574"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -413,8 +413,17 @@ SELECT * FROM OPENROWSET(
    SINGLE_CLOB) AS DATA;
 ```
 
+```sql
+select *
+from openrowset('MSDASQL'
+                ,'Driver={Microsoft Access Text Driver (*.txt, *.csv)}'
+                ,'select * from E:\Tlog\TerritoryData.csv') 
+;
+```
+
 > [!IMPORTANT]
-> O Banco de Dados SQL do Azure não oferece suporte à leitura de arquivos do Windows.
+> - O driver ODBC deve ser de 64 bits. Abra a guia **Drivers** do aplicativo [Fontes de Dados OBDC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) no Windows para verificar isso. Há um `Microsoft Text Driver (*.txt, *.csv)` de 32 bits que não funcionará com uma versão de 64 bits do sqlservr.exe. 
+> - O Banco de Dados SQL do Azure não oferece suporte à leitura de arquivos do Windows.
 
 
 ### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>I. Acessando dados de um arquivo armazenado no Armazenamento de Blobs do Azure   

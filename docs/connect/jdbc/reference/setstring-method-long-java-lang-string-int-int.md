@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 9fb59b09-e825-46a6-ba5d-85d4a8dc143a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba5046a2036b88c3ec55499a6e86609d8b050f7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 604e39fcf2d8bd6bfb218fe33fda391c2b53403a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611054"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762236"
 ---
 # <a name="setstring-method-long-javalangstring-int-int"></a>Método setString (long, java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public int setString(long pos,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *POS*  
+ *pos*  
   
  A posição em que a gravação deve ser iniciada no CLOB.  
   
@@ -62,7 +62,7 @@ public int setString(long pos,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setString é especificado pelo método setString na interface do CLOB.  
+ Esse método setString é especificado pelo método setString na interface java.sql.CallableStatement.  
   
  Os dados de caractere são substituídos iniciando na posição especificada e podem substituir o comprimento inicial do CLOB. A especificação de um valor posição +1 acrescentará a cadeia de caracteres. A especificação de um valor posição +2 ou maior (ou zero ou menos) lançará um erro de posição.  
   

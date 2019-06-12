@@ -1,6 +1,6 @@
 ---
 title: Script rs.exe de exemplo do Reporting Services para cópia de conteúdo entre servidores de relatório | Microsoft Docs
-ms.date: 03/26/2018
+ms.date: 05/23/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ac4cd0cda54e3bb6c0f6723155f7be22b544a5a5
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: b9fe3c95d268291ea06bb7471c8dad627aa89028
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571444"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403006"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Script rs.exe do Reporting Services de exemplo para copiar conteúdo entre Servidores de Relatório
 
@@ -49,26 +49,26 @@ O script pode ser usado para copiar o conteúdo entre servidores de relatório d
 |Item|Migrado|SharePoint|Descrição|  
 |----------|--------------|----------------|-----------------|  
 |Senhas|**Não**|**Não**|As senhas **NÃO** são migradas. Depois que os itens de conteúdo forem migrados, atualize as informações de credenciais no servidor de destino. Por exemplo, fontes de dados com credenciais armazenadas.|  
-|Meus Relatórios|**Não**|**Não**|O recurso "Meus Relatórios" no modo Nativo se baseia em logons de usuário individuais, portanto, o serviço de scripts não tem acesso ao conteúdo nas pastas "Meus Relatórios" para outros usuários, sem ser o parâmetro **-u** usado para execução do script rss. Além disso, "Meus Relatórios" não é um recurso do modo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint e os itens nas pastas não podem ser copiados para um ambiente do SharePoint. Em virtude disso, o script não copia os itens de relatório que estão na pasta "Meus Relatórios" em um servidor de relatório de modo nativo de origem<br /><br /> Para migrar p conteúdo de em pastas "Meus Relatórios" com esse script, siga estas etapas:<br /><br /> 1.  Crie novas pastas no Gerenciador de Relatórios. Opcionalmente, você pode criar pastas ou subpastas para cada usuário.<br />2.  Faça logon como um dos usuários com o conteúdo "Meus relatórios".<br />3.  No Gerenciador de Relatórios, clique na pasta **Meus Relatórios**.<br />4.  Clique na exibição **Detalhes** da pasta.<br />5.  Selecione cada relatório que você quer copiar.<br />6.  Clique em **Mover** na barra de ferramentas do Gerenciador de Relatórios.<br />7.  Selecione a pasta de destino desejada.<br />8.  Repita as etapas 2-7 para cada usuário.<br />9. Execute o script.|  
+|Meus Relatórios|**Não**|**Não**|O recurso "Meus Relatórios" no modo Nativo se baseia em credenciais de usuário individuais, portanto, o serviço de scripts não tem acesso ao conteúdo nas pastas "Meus Relatórios" para outros usuários, sem ser o parâmetro **-u** usado para execução do script rss. Além disso, "Meus Relatórios" não é um recurso do modo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint e os itens nas pastas não podem ser copiados para um ambiente do SharePoint. Em virtude disso, o script não copia os itens de relatório que estão na pasta "Meus Relatórios" em um servidor de relatório de modo nativo de origem<br /><br /> Para migrar p conteúdo de em pastas "Meus Relatórios" com esse script, siga estas etapas:<br /><br /> 1.  Crie novas pastas no portal da web. Opcionalmente, você pode criar pastas ou subpastas para cada usuário.<br />2.  Entre como um dos usuários com o conteúdo "Meus Relatórios".<br />3.  No portal da Web, selecione a pasta **Meus Relatórios**.<br />4.  Selecione a exibição **Detalhes** da pasta.<br />5.  Selecione cada relatório que você quer copiar.<br />6.  Selecione **Mover** na barra de ferramentas do portal da Web.<br />7.  Selecione a pasta de destino desejada.<br />8.  Repita as etapas 2-7 para cada usuário.<br />9. Execute o script.|  
 |Histórico|**Não**|**Não**||  
 |Configurações de histórico|Sim|Sim|As configurações de histórico são migradas, mas os detalhes do histórico NÃO.|  
-|Agendamentos|sim|sim|Para migrar agendamentos, é necessário que o SQL Server Agent esteja em execução no servidor de destino. Se o SQL Server Agent não estiver em execução no destino, você verá uma mensagem de erro semelhante à seguinte:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  
-|Funções e políticas do sistema|Sim|Sim|Por padrão, o script não copiará o esquema de permissão personalizado entre servidores. O comportamento padrão é que os itens sejam copiados para o servidor de destino com o sinalizador 'herdar permissões pai' definido como TRUE. Se você quiser que o script copie permissões para itens individuais, use a opção SECURITY.<br /><br /> Se os servidores de origem e destino **não estiverem no mesmo modo de servidor de relatório**, por exemplo, do modo nativo para o modo do SharePoint e você usar a opção SECURITY, o script tentará mapear as funções e os grupos padrão com base na comparação no artigo [Comparar funções e tarefas no Reporting Services com grupos e permissões do SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md). As funções e os grupos personalizados não são copiados para o servidor de destino.<br /><br /> Quando o script estiver sendo copiado entre servidores **que estejam no mesmo modo**e você usar a opção SECURITY, o script criará novas funções (modo nativo) ou grupos (modo do SharePoint) no servidor de destino.<br /><br /> Se uma função já existir no servidor de destino, o script criará uma mensagem de "Falha" semelhante à seguinte e continuará a migração de outros itens. Depois que o script for concluído, verifique se as funções no servidor de destino estão configuradas para atender às suas necessidades. as funções de Migração: 8 itens encontrados.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> Para obter mais informações, consulte [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> **Observação:** se um usuário existente no servidor de origem não existir no servidor de destino, o script não poderá aplicar atribuições de função no servidor de destino, o script não poderá aplicar atribuições de função, mesmo que a opção SECURITY seja usada.|  
+|Agendamentos|Sim|Sim|Para migrar agendamentos, é necessário que o SQL Server Agent esteja em execução no servidor de destino. Se o SQL Server Agent não estiver em execução no destino, você verá uma mensagem de erro semelhante à seguinte:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  
+|Funções e políticas do sistema|Sim|Sim|Por padrão, o script não copiará o esquema de permissão personalizado entre servidores. O comportamento padrão é que os itens sejam copiados para o servidor de destino com o sinalizador 'herdar permissões pai' definido como TRUE. Se você quiser que o script copie permissões para itens individuais, use a opção SECURITY.<br /><br /> Se os servidores de origem e destino **não estiverem no mesmo modo de servidor de relatório**, por exemplo, do modo nativo para o modo do SharePoint e você usar a opção SECURITY, o script tentará mapear as funções e os grupos padrão com base na comparação no artigo [Comparar funções e tarefas no Reporting Services com grupos e permissões do SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md). As funções e os grupos personalizados não são copiados para o servidor de destino.<br /><br /> Quando o script estiver sendo copiado entre servidores **que estejam no mesmo modo**e você usar a opção SECURITY, o script criará novas funções (modo nativo) ou grupos (modo do SharePoint) no servidor de destino.<br /><br /> Se uma função já existir no servidor de destino, o script criará uma mensagem de "Falha" semelhante à seguinte e continuará a migração de outros itens. Depois que o script for concluído, verifique se as funções no servidor de destino estão configuradas para atender às suas necessidades. as funções de Migração: 8 itens encontrados.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> Para obter mais informações, consulte [Conceder acesso ao usuário a um servidor de relatório](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> **Observação:** se um usuário existente no servidor de origem não existir no servidor de destino, o script não poderá aplicar atribuições de função no servidor de destino, o script não poderá aplicar atribuições de função, mesmo que a opção SECURITY seja usada.|  
 |Fonte de dados compartilhada|Sim|Sim|O script não substituirá itens existentes no servidor de destino. Se um item no servidor de destino já existir com o mesmo nome, você verá uma mensagem de erro semelhante a esta:<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> Credenciais **NÃO** são copiadas como parte da fonte de dados. Depois que os itens de conteúdo forem migrados, atualize as informações de credenciais no servidor de destino.|  
-|Conjunto de dados compartilhado|Sim|Sim||  
+|Conjunto de dados compartilhado|Sim|Sim|| 
 |Pasta|Sim|Sim|O script não substituirá itens existentes no servidor de destino. Se um item no servidor de destino já existir com o mesmo nome, você verá uma mensagem de erro semelhante a esta:<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
 |Relatório|Sim|Sim|O script não substituirá itens existentes no servidor de destino. Se um item no servidor de destino já existir com o mesmo nome, você verá uma mensagem de erro semelhante a esta:<br /><br /> `Migrating Report: /Reports/testThe item '/Reports/test' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports/test' already exists.`|  
 |Parâmetros|Sim|Sim||  
 |Assinaturas|Sim|Sim||  
 |Configurações de histórico|Sim|Sim|As configurações de histórico são migradas, mas os detalhes do histórico NÃO.|  
-|opções de processamento|Sim|Sim||  
-|opções de atualização de cache|Sim|Sim|As configurações dependentes são migradas como parte de um item de catálogo. O exemplo a seguir está fora do script, pois migra um relatório (.rdl) e as configurações relacionadas como opções de atualização de cache:<br /><br /> -   Migrando parâmetros para o relatório TitleOnly.rdl 0 itens encontrados.<br />-   Migrando assinaturas para o relatório TitleOnly.rdl 1 item encontrado.<br />-   Migrando assinaturas Salvar em \\\server\public\savedreports como TitleOnly... SUCCESS<br />-   Migrando configurações do histórico para o relatório TitleOnly.rdl... SUCCESS<br />-   Migrando opções de processamento para o relatório TitleOnly.rdl... Nenhum item encontrado.<br />-   Migrando opções de atualização do cache para o relatório TitleOnly.rdl... SUCCESS<br />-   Migrando planos de atualização de cache para o relatório TitleOnly.rdl: 1 item encontrado.<br />-   Migrando plano de atualização do cache titleonly_refresh735amM2F... SUCCESS|  
+|Opções de processamento|Sim|Sim||  
+|Opções de atualização de cache|Sim|Sim|As configurações dependentes são migradas como parte de um item de catálogo. O exemplo a seguir está fora do script, pois migra um relatório (.rdl) e as configurações relacionadas como opções de atualização de cache:<br /><br /> -   Migrando parâmetros para o relatório TitleOnly.rdl 0 itens encontrados.<br />-   Migrando assinaturas para o relatório TitleOnly.rdl 1 item encontrado.<br />-   Migrando assinaturas Salvar em \\\server\public\savedreports como TitleOnly... SUCCESS<br />-   Migrando configurações do histórico para o relatório TitleOnly.rdl... SUCCESS<br />-   Migrando opções de processamento para o relatório TitleOnly.rdl... Nenhum item encontrado.<br />-   Migrando opções de atualização do cache para o relatório TitleOnly.rdl... SUCCESS<br />-   Migrando planos de atualização de cache para o relatório TitleOnly.rdl: 1 item encontrado.<br />-   Migrando plano de atualização do cache titleonly_refresh735amM2F... SUCCESS|  
 |Planos de atualização de cache|Sim|Sim||  
 |Imagens|Sim|Sim||  
 |Partes de relatório|Sim|Sim||  
   
 ##  <a name="bkmk_required_permissions"></a> Permissões necessárias  
- As permissões necessárias para ler ou gravar itens e recursos não são as mesmas para todos os métodos usados no script. A tabela a seguir resume os métodos usados para cada item ou recurso e vincula ao conteúdo relacionado. Navegue até o tópico individual para ver as permissões necessárias. Por exemplo, o tópico do método de ListChildren indica as permissões necessárias de:  
+ As permissões necessárias para ler ou gravar itens e recursos não são as mesmas para todos os métodos usados no script. A tabela a seguir resume os métodos usados para cada item ou recurso e vincula ao conteúdo relacionado. Navegue até o artigo individual para ver as permissões necessárias. Por exemplo, o tópico do método de ListChildren indica as permissões necessárias de:  
   
 -   **Permissões necessárias de modo nativo:** ReadProperties no item  
   
@@ -115,7 +115,7 @@ O script pode ser usado para copiar o conteúdo entre servidores de relatório d
      Você poderá **cancelar o script após a etapa** 1 se você só quiser ver a lista possível de migração ou caso você queira alterar os parâmetros. As configurações dependentes não estão listadas na etapa um. Por exemplo, as opções de cache de um relatório não são listadas, mas o relatório em si, sim.  
   
     > [!TIP]  
-    >  Se você deseja auditar um único servidor, use o mesmo servidor como origem e destino, e cancele depois da etapa 1.  
+    > Se você deseja auditar um único servidor, use o mesmo servidor como origem e destino, e cancele depois da etapa 1.  
   
      Um bom uso das informações de auditoria da etapa 1 é verificar funções existentes no servidor de modo nativo de origem e destino. O item a seguir é um exemplo da lista de auditoria da etapa um. Observe que a lista inclui uma seção "funções" porque a opção -v security="True" foi usada:  
   
@@ -227,7 +227,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 ```  
   
 ###  <a name="bkmk_native_2_sharepoint_root"></a> Modo nativo para modo do SharePoint – site raiz  
- O exemplo a seguir migra o conteúdo de um modo nativo **SourceServer** para o "site raiz" em um servidor do modo do SharePoint **TargetServer**. As pastas "Reports" e "Data Sources" no servidor no modo nativo conforme migradas como novas bibliotecas na implantação do SharePoint.  
+ O exemplo a seguir migra o conteúdo de um modo nativo **SourceServer** para o "site raiz" em um servidor do modo do SharePoint **TargetServer**. As pastas "Reports" e "Data Sources" no servidor no modo nativo são migradas como novas bibliotecas na implantação do SharePoint.  
   
  ![ssrs_rss_migrate_root_site](../../reporting-services/tools/media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
   
@@ -253,7 +253,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_to_native_Azure_vm"></a> Modo nativo para o modo nativo – Máquina Virtual do Microsoft Azure  
+###  <a name="bkmk_native_to_native_Azure_vm"></a> Modo nativo para o modo nativo – máquina virtual do Microsoft Azure  
  O exemplo a seguir migra conteúdo:  
   
 -   De um servidor de relatório do modo nativo **SourceServer**.  
@@ -265,9 +265,9 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 ```  
   
 > [!TIP]  
->  Para obter informações sobre como usar o Windows PowerShell para criar servidores de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nas máquinas virtuais do Microsoft Azure virtual, consulte [Usar PowerShell para criar uma máquina virtual do Microsoft Azure com um servidor de relatório do modo nativo](https://msdn.microsoft.com/library/dn449661.aspx).  
+> Para obter informações sobre como usar o Windows PowerShell para criar servidores de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nas máquinas virtuais do Microsoft Azure virtual, consulte [Usar PowerShell para criar uma máquina virtual do Microsoft Azure com um servidor de relatório do modo nativo](https://docs.microsoft.com/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report).  
   
-##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> Modo do SharePoint – conjunto de sites 'bi' para o servidor de modo nativo na Máquina Virtual do Microsoft Azure  
+##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> Modo do SharePoint – conjunto de sites 'bi' para o servidor de modo nativo na máquina virtual do Microsoft Azure. 
  O exemplo a seguir migra conteúdo:  
   
 -   De um servidor de relatório do modo do SharePoint **SourceServer** que contém um conjunto de sites "sites/bi" e uma biblioteca de documentos compartilhados.  
@@ -286,13 +286,13 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
   
  **Native Mode**  
   
-1.  Navegue até o Gerenciador de Relatórios no servidor de destino.  
+1.  Abra o portal da Web no servidor de destino.  
   
-2.  Clique em **Configurações de Site** no menu inicial.  
+2.  Selecione **Configurações do Site** no menu superior.  
   
-3.  Clique em **Agendamentos** no painel esquerdo.  
+3.  Selecione **Agendamentos** no painel esquerdo.  
   
- **Modo do SharePoint:**  
+ **Modo SharePoint:**  
   
 1.  Navegue para **Configurações de site**.  
   
@@ -316,7 +316,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
   
 -   System.Exception: não foi possível conectar ao servidor: https://\<nomedoservidor>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **a solicitação falhou com o status HTTP 401: não autorizado**.   no System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage mensagem, resposta WebResponse, fluxo responseStream, Boolean asyncCall) em System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (cadeia de caracteres methodName, parâmetros de objeto de []) no Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() em Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (url de cadeia de caracteres, cadeia de caracteres de nome de usuário, senha de cadeia de caracteres Domínio de cadeia de caracteres, o tempo limite de Int32) em Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()---fim do rastreamento de pilha de exceção interna--  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [Utilitário RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
  [Comparar funções e tarefas no Reporting Services com grupos e permissões do SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   

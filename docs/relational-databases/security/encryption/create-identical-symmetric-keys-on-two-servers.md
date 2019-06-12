@@ -1,7 +1,7 @@
 ---
 title: Criar chaves simétricas idênticas em dois servidores | Microsoft Docs
 ms.custom: ''
-ms.date: 01/02/2019
+ms.date: 05/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2f8de3783e7d169e1458170d10db61ad9ac680a
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 7158694719e11cca4ea355c5fe3b94359e00b952
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997558"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428826"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>Criar chaves simétricas idênticas em dois servidores
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,9 +90,23 @@ ms.locfileid: "53997558"
     CLOSE SYMMETRIC KEY [key_DataShare];  
     GO  
     ```  
-  
- Para obter mais informações, consulte o seguinte:  
-  
+
+### <a name="encryption-changes-in-sql-server-2017-cu2"></a>Alterações de criptografia no SQL Server 2017 CU2
+
+O SQL Server 2016 usa o algoritmo de hash SHA1 em seu trabalho de criptografia. O SHA2 é usado desde o SQL Server 2017. Dessa maneira, talvez você precise de mais etapas para que a instalação do SQL Server 2017 descriptografe itens que eram criptografados pelo SQL Server 2016. Confira as etapas adicionais:
+
+- Verifique se o SQL Server 2017 está atualizado ao menos para CU2 (Atualização Cumulativa 2).
+  - Confira [CU2 (Atualização Cumulativa 2) para SQL Server 2017](https://support.microsoft.com/help/4052574) para ver detalhes importantes.
+- Após a instalação da CU2, ative o sinalizador de rastreamento 4631 no SQL Server 2017: `DBCC TRACEON(4631, -1);`
+  - O sinalizador de rastreamento 4631 é novo no SQL Server 2017. O sinalizador de rastreamento 4631 precisa estar `ON` globalmente antes da criação da chave mestra, do certificado ou da chave simétrica no SQL Server 2017. Dessa maneira, os itens criados poderão interoperar com o SQL Server 2016 e as versões anteriores.
+
+Para ver mais diretrizes, confira:
+
+- [CORREÇÃO: O SQL Server 2017 não pode descriptografar dados criptografados por versões anteriores do SQL Server usando a mesma chave simétrica](https://support.microsoft.com/help/4053407/sql-server-2017-cannot-decrypt-data-encrypted-by-earlier-versions)
+- [Chaves simétricas idênticas não funcionam entre o SQL Server 2017 e outra versão do SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/33116269-identical-symmetric-keys-do-not-work-between-sql-s) <!-- Issue 2225. Thank you Stephen W and Sam Rueby. -->
+
+## <a name="for-more-information"></a>Para obter mais informações
+
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)  
   
 -   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)  

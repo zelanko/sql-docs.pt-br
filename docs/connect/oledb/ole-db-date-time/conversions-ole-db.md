@@ -14,13 +14,13 @@ helpviewer_keywords:
 - OLE DB, bindings and conversions
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9eca16e0908bac5134d459414cbd43ee19a4665a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 19c732a38c5237811f4f2219292ab4589018f4e8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724954"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769419"
 ---
 # <a name="conversions-ole-db"></a>Conversões (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47724954"
   
 -   O formato do **datetime** e **datetimeoffset** cadeias de caracteres é:  
   
-     *aaaa*-*mm*-*dd*[ *hh*:*mm*:*ss*[. *9999999*] [± *hh*:*mm*]]  
+     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
 -   O formato de cadeias de caracteres **time** é:  
   

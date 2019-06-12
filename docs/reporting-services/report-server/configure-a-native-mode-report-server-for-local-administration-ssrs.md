@@ -1,6 +1,6 @@
 ---
 title: Configurar um servidor de relatório no modo nativo para a Administração Local (SSRS) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c0c170a76ee14b609ebc98fdc2232b611a11749e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 35355b32c8e4b59618cf146d9de04f3242ec6e6a
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580431"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403271"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurar um servidor de relatório no modo nativo para a Administração Local (SSRS)
   A implantação de um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um dos seguintes sistemas operacionais exigirá mais etapas de configuração se você desejar administrar localmente a instância do servidor de relatório. Este tópico explica como configurar o servidor de relatório para administração local. Se você ainda não tiver instalado ou configurado o servidor de relatório, confira [Instalar o SQL Server por meio do Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) e [Gerenciar um servidor de relatório no modo nativo do Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "65580431"
   
 -   [Visão geral de alterações de configuração](#bkmk_configuraiton_overview)  
   
--   [Para configurar um Servidor de Relatório Local e uma Administração do Gerenciador de Relatórios](#bkmk_configure_local_server)  
+-   [Para configurar um Servidor de Relatório Local e uma Administração do portal da Web](#bkmk_configure_local_server)  
   
 -   [Para configurar o SQL Server Management Studio (SSMS) para a administração de servidor de relatórios local](#bkmk_configure_ssms)  
   
@@ -64,18 +64,18 @@ ms.locfileid: "65580431"
   
 -   Crie atribuições de função que concedam a você, o administrador do servidor de relatório, permissão para gerenciar o conteúdo e as operações, sem precisar usar o recurso **Executar como administrador** no Internet Explorer. Ao criar atribuições de funções para sua conta de usuário do Windows, você obtém acesso a um servidor de relatório com permissões de Gerenciador de Conteúdo e Administrador do Sistema por meio de atribuições explícitas de funções que substituem as atribuições de funções internas predefinidas que o Reporting Services cria.  
   
-##  <a name="bkmk_configure_local_server"></a> Para configurar um Servidor de Relatório Local e uma Administração do Gerenciador de Relatórios  
+##  <a name="bkmk_configure_local_server"></a> Para configurar um Servidor de Relatório local e uma administração do portal da Web  
  Conclua as etapas de configuração nessa seção se você estiver navegando para um servidor de relatórios local e vir erros semelhantes ao seguinte:  
   
 -   O usuário `'Domain\[user name]`' não tem as permissões necessárias. Verifique se as permissões suficientes foram concedidas e as restrições do UAC (Controle da conta de usuário) do Windows foram resolvidas.  
   
 ###  <a name="bkmk_site_settings"></a> Configurações de site confiável no navegador  
   
-1.  Abra uma janela do navegador com permissões Executar como administrador. No menu **Iniciar** , clique em **Todos os Programas**, clique com o botão direito do mouse em **Internet Explorer**e selecione **Executar como administrador**.  
+1.  Abra uma janela do navegador com permissões Executar como administrador. No menu **Iniciar**, clique com o botão direito do mouse em **Internet Explorer** e selecione **Executar como administrador**.  
   
-2.  Clique em **Permitir** para continuar.  
+2.  Selecione **Sim** quando solicitado para continuar.  
   
-3.  No endereço da URL, insira a URL do Gerenciador de Relatórios. Para obter instruções, consulte [Gerenciador de Relatórios &#40;modo nativo do SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) em Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  No endereço de URL, insira a URL no portal da Web. Para obter instruções, acesse [O portal da Web de um servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
 4.  Clique em **Ferramentas**.  
   
@@ -93,51 +93,48 @@ ms.locfileid: "65580431"
   
 11. Clique em **Adicionar**.  
   
-12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+12. Escolha **OK**.  
   
-###  <a name="bkmk_configure_folder_settings"></a> Configurações da pasta do Gerenciador de Relatórios  
+###  <a name="bkmk_configure_folder_settings"></a> Configurações de pasta do portal da Web  
   
-1.  No Gerenciador de Relatórios, na página inicial, clique em **Configurações de Pasta**.  
+1.  No portal da Web, na página inicial, clique em **Gerenciar pasta**.  
   
-2.  Na página Configurações de Pasta, clique em **Segurança**.  
+2.  Na página da pasta **Gerenciar**, clique em **Segurança** e, em seguida, selecione **Adicionar grupo ou usuário**.  
   
-3.  Clique em **Atribuição de Nova Função**.  
-  
-4.  No campo **Nome do grupo ou do usuário** , conta de usuário do Windows neste formato: `<domain>\<user>`.  
+3.  Na página **Atribuição de Nova Função**, no campo **Grupo ou usuário**, digite a conta de usuário do Windows neste formato: `<domain>\<user>`.  
   
 5.  Selecione **Gerenciador de Conteúdo**.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Escolha **OK**.  
   
-###  <a name="bkmk_configure_site_settings"></a> Configurações do Site do Gerenciador de Relatórios  
+###  <a name="bkmk_configure_site_settings"></a> Configurações de site do portal da Web  
   
-1.  Abra seu navegador com privilégios administrativos e navegue até o gerenciador de relatórios, `https://<server name>/reports`.  
+1.  Abra seu navegador com privilégios administrativos e navegue até o portal da Web, `https://<server name>/reports`.  
   
-2.  Clique em **Configurações de Site** no canto superior da Página Inicial.  
+2.  Selecione o ícone de engrenagem na linha superior da Página inicial e, em seguida **Configurações do Site** no menu suspenso. 
   
-    > [!TIP]  
-    >  **Observação:** se a opção **Configurações de Site** não for exibida, feche e reabra o navegador, e navegue até o gerenciador de relatórios com privilégios administrativos.  
+    ![Ícone de engrenagem](../media/ssrsgearmenu.png).
+    >[!TIP]  
+    >**Observação:** se a opção **Configurações do Site** não for exibida, feche e reabra o navegador, e navegue até o portal da Web com privilégios administrativos.  
   
-3.  Clique em **segurança**.  
+3.  Na página Configurações do site, selecione **Segurança** e, em seguida, selecione **Adicionar grupo ou usuário**.  
   
-4.  Clique em **Atribuição de Nova Função**.  
+4.  No campo **Nome do grupo ou do usuário** , conta de usuário do Windows neste formato: `<domain>\<user>`.  
+
+5.  Selecione **Administrador do Sistema**.  
   
-5.  No campo **Nome do grupo ou do usuário** , conta de usuário do Windows neste formato: `<domain>\<user>`.  
+6.  Escolha **OK**.  
   
-6.  Selecione **Administrador do Sistema**.  
+7.  Fechar portal da Web.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
-8.  Feche o Gerenciador de Relatórios.  
-  
-9. Abra novamente o Gerenciador de Relatórios no Internet Explorer sem usar **Executar como administrador**.  
+8. Abra novamente o portal da Web no Internet Explorer sem usar **Executar como administrador**.  
   
 ##  <a name="bkmk_configure_ssms"></a> Para configurar o SQL Server Management Studio (SSMS) para a administração de servidor de relatórios local  
  Por padrão, você não pode acessar todas as propriedades do servidor de relatório disponíveis no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] a menos que inicie o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] com privilégios administrativos.  
   
  **Para configurar as atribuições de função do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** , você não precisa iniciar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] com permissões elevadas a cada vez:  
   
--   No menu **Iniciar** , clique em **Todos os Programas**, clique em **SQL Server 2014**, clique com o botão direito do mouse em **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]** e clique em **Executar como administrador**.  
+-   No menu **Iniciar**, clique com botão direito em **Microsoft SQL Server [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]** e, em seguida, clique em **Executar como administrador**.  
   
 -   Conecte-se ao servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] local.  
   
@@ -151,11 +148,11 @@ ms.locfileid: "65580431"
   
 -   Feche o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
--   Para adicionar um usuário à função do sistema "administrador do sistema", consulte a seção [Configurações do Site do Gerenciador de Relatórios](#bkmk_configure_site_settings) anteriormente neste tópico.  
+-   Para adicionar um usuário à função do sistema "administrador do sistema", confira a seção [Configurações do Site do portal da Web](#bkmk_configure_site_settings) anteriormente neste artigo.  
   
  Agora, quando você abre o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e não seleciona explicitamente **Executar como administrador** , tem acesso às propriedades do servidor de relatório.  
   
-##  <a name="bkmk_configure_ssdt"></a> Para configurar o SQL Server Data Tools (SSDT) para publicar um Servidor de Relatórios Local  
+##  <a name="bkmk_configure_ssdt"></a> Para configurar o SSDT (SQL Server Data Tools) para publicar em um servidor de relatório local  
  Se você instalou o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] em um dos sistemas operacionais listados na primeira seção desse tópico, e quiser que o SSDT interaja com um servidor de relatório de modo Nativo local, receberá erros de permissão a menos que abra o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] com permissões elevadas ou configure as funções de serviços de relatório. Por exemplo, se você não tiver permissões adequadas, terá problemas semelhantes aos seguintes:  
   
 -   Quando você tentar implantar itens de relatório no servidor de relatório local, verá uma mensagem de erro semelhante à seguinte na janela **Lista de Erros** :  
@@ -164,22 +161,20 @@ ms.locfileid: "65580431"
   
  **Para executar com permissões elevadas a cada vez que você abrir o SSDT:**  
   
-1.  Na tela de início, digite **sql server** e clique com o botão direito do mouse em **SQL Server Data Tools**. Clique em **Executar como administrador**  
+1.  No menu Iniciar, selecione **Microsoft SQL Server** e, em seguida, clique com o botão direito em **SQL Server Data Tools**. Clique em **Executar como administrador**  
   
-2.  Clique em **Continuar**.  
+2.  Selecione **Sim** quando solicitado para continuar.  
   
-3.  Clique em **Executar Programa**.  
-  
- Agora você deve poder implantar relatórios e outros itens em um servidor de relatório local.  
+Agora você deve poder implantar relatórios e outros itens em um servidor de relatório local.  
   
  **Para configurar as atribuições de função do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , você não precisa iniciar o SSDT com permissões elevadas a cada vez:**  
   
--   Consulte as seções [Configurações da pasta do Gerenciador de Relatórios](#bkmk_configure_folder_settings) e [Configurações do Site do Gerenciador de Relatórios](#bkmk_configure_site_settings) anteriormente neste tópico.  
+-   Confira as seções [Configurações da pasta do portal da Web](#bkmk_configure_folder_settings) e [Configurações do Site do portal da Web](#bkmk_configure_site_settings) anteriores neste tópico.  
   
 ##  <a name="bkmk_addiitonal_informaiton"></a> Informações adicionais  
  Uma etapa de configuração adicional e comum relacionada à administração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é abrir a porta 80 no Windows Firewall para permitir o acesso ao computador do servidor de relatório. Para obter instruções, consulte [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
-## <a name="see-also"></a>Consulte Também  
- [Gerenciar um servidor de relatório de modo nativo do Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+## <a name="see-also"></a>Confira também  
+ [Gerenciar um servidor de relatórios de Modo Nativo do Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

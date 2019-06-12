@@ -13,14 +13,14 @@ helpviewer_keywords:
 - powerbi
 - power bi integration
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0df8dab5bb48afbade1526a7ab02f4b5a30258d2
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ad7e73839a988e057f57b9a294e795f65e41f9fb
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210985"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500027"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Fixar itens de relatório paginado do Reporting Services em dashboards no Power BI
 
@@ -40,7 +40,7 @@ Fixe um item de relatório paginado local do [!INCLUDE[ssRSnoversion](../include
   
 -   Você precisará configurar os relatórios para as credenciais armazenadas, caso deseje que o item fixado seja atualizado.  Quando você fixa um item, uma assinatura do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é criada automaticamente para gerenciar a atualização de dados do item no painel.  Se o relatório não usar credenciais armazenadas, quando a assinatura for executada, você verá uma mensagem semelhante a que se segue na página **Minhas assinaturas**.  
   
-    "Erro de Entrega do Power BI: dashboard: Amostra de Análise de Gastos de TI, visual: Chart2, erro: A ação atual não pode ser concluída. As credenciais da fonte de dados do usuário não atendem aos requisitos para executar esse relatório ou conjunto de dados compartilhado. A credencial da fonte de dados do usuário."
+    PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: A ação atual não pode ser concluída. As credenciais da fonte de dados do usuário não atendem aos requisitos para executar esse relatório ou conjunto de dados compartilhado. A credencial da fonte de dados do usuário."
  
     Consulte a seção “Configurar credenciais armazenadas para uma fonte de dados específica do relatório (Modo nativo)” em [Armazenar credenciais em uma fonte de dados do Reporting Services](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
@@ -56,7 +56,7 @@ Fixe um item de relatório paginado local do [!INCLUDE[ssRSnoversion](../include
   
 ##  <a name="bkmk_to_pin"></a> Para fixar um item de relatório  
   
-1. Verifique se você está conectado ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], selecione o item de menu **Minhas Configurações** e conecte-se. Confira [Minhas configurações para integração do &#40;portal Web&#41; do Power BI](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5) para saber mais.
+1. Verifique se você está conectado ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], selecione o item de menu **Minhas Configurações** e conecte-se. Confira [Minhas configurações para integração do &#40;portal Web&#41; do Power BI](my-settings-for-power-bi-integration-web-portal.md) para saber mais.
 
     ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -96,30 +96,30 @@ No painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , o item de rela
   
 ##  <a name="bkmk-troubleshoot"></a> Solucionar problemas  
   
--   **O botão do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] não é exibido na barra de ferramentas do Visualizador de Relatórios:**  Essa mensagem indica que o servidor de relatório não foi integrado ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Para obter mais informações, consulte [Integração do servidor de relatório do Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
+-   **O botão [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] não está visível na barra de ferramentas do visualizador de relatórios:** isso indica que o servidor de relatório não foi integrado ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Para obter mais informações, consulte [Integração do servidor de relatório do Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
-- **A anexação não é possível**: Quando você tenta fixar um item, a seguinte mensagem de erro é exibida: Confira a seção [Itens que podem ser fixados](#bkmk_supported_items).  
+- **Não é possível fixar**: ao tentar fixar um item, você verá a seguinte mensagem de erro: Consulte a seção [Itens que podem ser fixados](#bkmk_supported_items).  
   
       Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
--   **Itens fixados mostram dados obsoletos** em um painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] e ele foi atualizado por um período.  O token de credenciais do usuário expirou e você precisa se conectar novamente.  O registro da credencial do usuário no Azure e no [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] é válido por 90 dias. No [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], clique em **Minhas Configurações**. Para obter mais informações, consulte [Minhas Configurações para integração do Power BI &#40;portal da Web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
+-   **Itens fixados mostram dados obsoletos** em um painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] e ele foi atualizado por um período.  O token de credenciais do usuário expirou e você precisa se conectar novamente.  O registro da credencial do usuário no Azure e no [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] é válido por 90 dias. No [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], clique em **Minhas Configurações**. Para obter mais informações, consulte [Minhas Configurações para integração do Power BI &#40;portal da Web&#41;](my-settings-for-power-bi-integration-web-portal.md).  
   
 -   **Itens fixados mostram dados obsoletos** em um painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] e ele não foi atualizado nem mesmo uma vez.  O problema é que o relatório não foi configurado para usar credenciais armazenadas. Um relatório precisa usar as credenciais armazenadas porque a ação de fixar um item de relatório cria uma assinatura do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para gerenciar o agendamento de atualização dos blocos. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] exigem credenciais armazenadas. Se você examinar a página **Minhas Assinaturas**, verá uma mensagem de erro semelhante à seguinte:  
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
--   **Credenciais do Power BI expiradas:**  Você tenta fixar um item e a mensagem de erro a seguir é exibida. No [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], clique em **Minhas Configurações** e, na página Minhas Configurações, clique em **Entrar**. Confira [Minhas configurações para integração do &#40;portal Web&#41; do Power BI](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5) para saber mais.  
+-   **As credenciais do Power BI expiraram:**  você tenta fixar um item e vê a mensagem de erro a seguir. No [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], clique em **Minhas Configurações** e, na página Minhas Configurações, clique em **Entrar**. Confira [Minhas configurações para integração do &#40;portal Web&#41; do Power BI](my-settings-for-power-bi-integration-web-portal.md) para saber mais.  
   
         Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   
--   **A anexação não é possível**: Se você tentar fixar um item em um dashboard que está em um estado somente leitura, verá uma mensagem de erro semelhante a esta:  
+-   **Não é possível fixar**: se você tentar fixar um item em um painel que já está em um estado somente leitura, você verá uma mensagem de erro semelhante à seguinte:  
   
         Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)  
   
 ##  <a name="bkmk_subscription_management"></a> Gerenciamento de assinatura  
  Além dos problemas relacionados à assinatura descritos na seção de solução de problemas, as informações a seguir ajudarão você a manter as assinaturas relacionadas ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].
   
--   **Nome do item alterado:** Se um item de relatório fixado for renomeado ou excluído, o bloco do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] não será mais atualizado e você verá uma mensagem de erro semelhante a que se segue.  Se você renomear o item de volta para o nome original, a assinatura começará a funcionar novamente e o bloco será atualizado no agendamento das assinaturas.  
+-   **Nome do item alterado:** se um item de relatório fixado for renomeado ou excluído, o bloco do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] não será mais atualizado e você verá uma mensagem de erro semelhante a que se segue.  Se você renomear o item de volta para o nome original, a assinatura começará a funcionar novamente e o bloco será atualizado no agendamento das assinaturas.  
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image1, error: Error: Report item 'Image1' cannot be found.  
   
@@ -135,7 +135,7 @@ No painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , o item de rela
 
 ## <a name="see-also"></a>Consulte Também  
  [Integração do servidor de relatório do Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
- [Minhas Configurações para integração do Power BI &#40;portal Web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+ [Minhas Configurações para integração do Power BI &#40;portal Web&#41;](my-settings-for-power-bi-integration-web-portal.md)  
  [Painéis no Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
   
   

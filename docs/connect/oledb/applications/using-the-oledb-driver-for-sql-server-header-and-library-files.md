@@ -20,13 +20,13 @@ helpviewer_keywords:
 - MSOLEDBSQL, library files
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 528f55ba4a95da2f7e68de47ad25f88eae3af668
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: b188649e138dddfc7dd4fd9fe974d6ccf28cc904
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744416"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777962"
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Usando os arquivos de biblioteca e de cabeçalho do OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

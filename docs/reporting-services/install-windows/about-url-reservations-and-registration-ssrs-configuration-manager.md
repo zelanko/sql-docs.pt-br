@@ -9,14 +9,14 @@ helpviewer_keywords:
 - URL registration
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0e835d14bfb2684685f95f65dd1a16e7e4edb55e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 640407e68b146e399dc478b17a91c351b23fe306
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814109"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454510"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Sobre reservas e registro de URL (Gerenciador de configurações do SSRS)
   As URLs para aplicativos do Reporting Services são definidas como reservas de URL em HTTP.SYS. Uma reserva de URL define a sintaxe de um ponto de extremidade de URL para um aplicativo Web. As reservas de URL são definidas para o serviço Web Servidor de Relatório e o Gerenciador de Relatórios quando você configura os aplicativos no servidor de relatório. As reservas de URL são criadas automaticamente quando você configura URLs através da instalação ou da ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -64,7 +64,7 @@ ms.locfileid: "51814109"
  Se você instalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na configuração padrão, a instalação reservará URLs para o serviço Web Servidor de Relatório e o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Você também pode aceitar esses valores padrão ao definir reservas de URL na ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As URLs padrão incluirão um nome de instância se você instalar o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] ou se instalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] como uma instância nomeada.  
   
 > [!IMPORTANT]  
->  O caractere de instância é um caractere de sublinhado (**_**).  
+>  O caractere de instância é um caractere de sublinhado ( **_** ).  
   
  As reservas de URL incluem um número de porta. Os sistemas operacionais a seguir permitirão que vários aplicativos Web compartilhem uma porta:  
   
@@ -90,10 +90,9 @@ ms.locfileid: "51814109"
 |SQL Server Express|Portal da Web|`https://<servername>/reports_SQLExpress`|`https://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Autenticação e identidade de serviço para URLs do Reporting Services  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] especificam a conta de serviço do Servidor de Relatório. A conta com a qual o serviço é executado é usada para todas as URLs criadas para os aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] executados na mesma instância. A identidade de serviço da instância do servidor de relatório é armazenada no arquivo RSReportServer.config.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] As reservas de URL exibem a conta de reserva de URL. A conta do serviço virtual é usada para todas as URLs criadas para os aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] executados na mesma instância.
   
- A conta de serviço não tem valor padrão. Entretanto, é necessário especificar uma conta de serviço durante a instalação em **URLReservation** no arquivo RSReportServer.config, mesmo que você instale o servidor no modo somente arquivos. Os valores válidos para a conta de serviço incluem uma conta de usuário de domínio, **LocalSystem**ou **NetworkService**.  
-  
+ 
  O acesso anônimo é desabilitado porque a segurança padrão é **RSWindowsNegotiate**. Para acesso de intranet, as URLs do servidor de relatório usam nomes de computadores da rede. Para configurar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para conexões com a Internet, você deve usar configurações diferentes. Para obter mais informações sobre autenticação, veja [Autenticação com o Servidor de Relatório](../../reporting-services/security/authentication-with-the-report-server.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="URLlocalAdmin"></a> URLs para administração local  

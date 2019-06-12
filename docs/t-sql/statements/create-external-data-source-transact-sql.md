@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ae91678807351dfa53b92a63c9dcd1514974de3
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.openlocfilehash: 864c7b2da5b6b04f1c017997c3d1ecba31375b43
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65536245"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265164"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -70,20 +70,20 @@ Especifica o nome da fonte de dados definido pelo usuário. O nome precisa ser e
 
 Fornece o protocolo de conectividade e o caminho para a fonte de dados externa.
 
-| Fonte de dados externa        | Prefixo de local | Caminho de local                                         | Locais com suporte por produto/serviço    |
-| --------------------------- | --------------- | ----------------------------------------------------- | ------------------------------------------- |
-| Cloudera ou Hortonworks     | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server (2016+), PDW                     |
-| Armazenamento de blobs do Azure          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016+), PDW, SQL DW             |
-| Azure Data Lake Storage Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 | SQL DW                                      |
-| Azure Data Lake Storage Gen 2 | `abfss`          | `<container>@<storage_account>.dfs.core.windows.net`  | SQL DW                                      |
-| SQL Server                  | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019+)                          |
-| Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| MongoDB ou CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| ODBC                        | `odbc`          | `<server_name>{:port]`                                | SQL Server (2019+) – somente Windows           |
-| Operações em Massa             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+), SQL DB                  |
-| Consulta Elástica (fragmento)       | Não obrigatório    | `<shard_map_server_name>.database.windows.net`        | BD SQL                                      |
-| Consulta Elástica (remota)      | Não obrigatório    | `<remote_server_name>.database.windows.net`           | BD SQL                                      |
+| Fonte de dados externa        | Prefixo de local | Caminho de local                                         | Locais com suporte por produto/serviço |
+| --------------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
+| Cloudera ou Hortonworks     | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server (2016+), PDW                  |
+| Armazenamento de blobs do Azure          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016+), PDW, SQL DW          |
+| Azure Data Lake Storage Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 | SQL DW                                   |
+| Azure Data Lake Storage Gen 2 | `abfss`         | `<container>@<storage_account>.dfs.core.windows.net`  | SQL DW                                   |
+| SQL Server                  | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019+)                       |
+| Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                       |
+| Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                       |
+| MongoDB ou CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                       |
+| ODBC                        | `odbc`          | `<server_name>{:port]`                                | SQL Server (2019+) – somente Windows        |
+| Operações em Massa             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+), SQL DB               |
+| Consulta Elástica (fragmento)       | Não obrigatório    | `<shard_map_server_name>.database.windows.net`        | BD SQL                                   |
+| Consulta Elástica (remota)      | Não obrigatório    | `<remote_server_name>.database.windows.net`           | BD SQL                                   |
 
 Caminho de local:
 
@@ -134,7 +134,7 @@ Observações e orientações adicionais ao criar uma credencial:
   - Ter pelo menos permissão de leitura no arquivo que deve ser carregado (por exemplo `srt=o&sp=r`)
   - Use um período de término válido (todas as datas estão no horário UTC).
 
-Para obter um exemplo de como usar um `CREDENTIAL` com `SHARED ACCESS SIGNATURE` e `TYPE` = `BLOB_STORAGE`, veja [Criar uma fonte de dados externa para executar operações em massa e recuperar dados do Armazenamento de Blobs do Azure no Banco de Dados SQL](#j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+Para obter um exemplo de como usar um `CREDENTIAL` com `SHARED ACCESS SIGNATURE` e `TYPE` = `BLOB_STORAGE`, veja [Criar uma fonte de dados externa para executar operações em massa e recuperar dados do Armazenamento de Blobs do Azure no Banco de Dados SQL](#k-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
 
 Para criar uma credencial no escopo do banco de dados, veja [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -173,7 +173,7 @@ Se a porta não for especificada, o valor padrão será escolhido usando a defin
 | 7                   | 8050                          |
 
 Para obter uma lista completa de versões do Hadoop compatíveis, veja [Configuração de conectividade do PolyBase (Transact-SQL)][connectivity_pb].
-  
+
 > [!IMPORTANT]  
 > O valor de RESOURCE_MANAGER_LOCATION e não é validado quando você cria a fonte de dados externa. Inserir um valor incorreto pode causar falha de consulta em tempo de execução sempre que for feita uma tentativa de aplicação, uma vez que o valor fornecido não poderá ser resolvido.
 
@@ -183,10 +183,10 @@ Para obter uma lista completa de versões do Hadoop compatíveis, veja [Configur
 
 Configure esse argumento quando o `TYPE` estiver definido como `RDBMS` ou `SHARD_MAP_MANAGER`.
 
-| TYPE              | Valor de DATABASE_NAME                                                  |
-| ----------------- | ----------------------------------------------------------------------- |
+| TYPE              | Valor de DATABASE_NAME                                       |
+| ----------------- | ------------------------------------------------------------ |
 | RDBMS             | O nome do banco de dados remoto no servidor fornecido usando `LOCATION` |
-| SHARD_MAP_MANAGER | Nome do banco de dados operacional, como o gerenciador de mapa de fragmentos                 |
+| SHARD_MAP_MANAGER | Nome do banco de dados operacional, como o gerenciador de mapa de fragmentos      |
 
 Para obter um exemplo que mostra como criar uma fonte de dados externa em que `TYPE` = `RDBMS`, veja [Criar uma fonte de dados externa do RDBMS](#g-create-an-rdbms-external-data-source)
 
@@ -248,7 +248,7 @@ Para obter exemplos adicionais para outras fontes de dados, como o MongoDB, veja
 ### <a name="b-create-external-data-source-to-reference-hadoop"></a>B. Criar uma fonte de dados externa para referenciar o Hadoop
 
 Para criar uma fonte de dados externa para referenciar o cluster do Hadoop do Hortonworks ou do Cloudera, especifique o nome do computador ou o endereço IP do `Namenode` do Hadoop e a porta. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -261,7 +261,7 @@ WITH
 ### <a name="c-create-external-data-source-to-reference-hadoop-with-push-down-enabled"></a>C. Criar uma fonte de dados externa para referenciar o Hadoop com aplicação habilitada
 
 Especifique a opção `RESOURCE_MANAGER_LOCATION` para habilitar a computação de aplicação para Hadoop em consultas do PolyBase. Uma vez habilitado, o PolyBase toma uma decisão baseada em custo para determinar se a computação de consulta deve ser enviada por push para o Hadoop.
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -275,7 +275,7 @@ WITH
 ### <a name="d-create-external-data-source-to-reference-kerberos-secured-hadoop"></a>D. Criar uma fonte de dados externa para referenciar o Hadoop protegido pelo Kerberos
 
 Para verificar se o cluster do Hadoop está protegido pelo Kerberos, verifique o valor da propriedade hadoop.security.authentication no core-site.xml do Hadoop. Para referenciar um cluster do Hadoop protegido pelo Kerberos, você precisa especificar uma credencial no escopo do banco de dados contendo o nome de usuário e a senha do Kerberos. A chave mestra do banco de dados é usada para criptografar o segredo da credencial no escopo do banco de dados.
-  
+
 ```sql  
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'
@@ -439,12 +439,36 @@ WITH
 [;]
 ```
 
+### <a name="j-create-external-data-source-to-reference-azure-data-lake-store-adls-gen-2-or-azure-blob-storage-with-managed-identities"></a>J. Criar uma fonte de dados externa para referenciar o ADLS (Azure Data Lake Storage) Gen 2 ou o Armazenamento de Blobs do Azure com Identidades Gerenciadas
+
+Siga as [instruções](https://docs.microsoft.com/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) de registro e configuração do acesso RBAC ao SQL Server antes de criar sua credencial no escopo do banco de dados.  
+
+```sql
+-- If you do not have a Master Key on your DW you will need to create one.
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
+;
+
+-- There is no need to specify SECRET because this mechanism uses Managed Identity under the covers.
+CREATE DATABASE SCOPED CREDENTIAL ADLS_credential
+WITH
+     IDENTITY   = 'Managed Service Identity'
+;
+
+CREATE EXTERNAL DATA SOURCE <data_source_name>
+WITH
+(    LOCATION   = 'abfss://2013@newyorktaxidataset.dfs.core.windows.net'
+,    CREDENTIAL = ADLS_credential
+,    TYPE       = HADOOP
+)
+[;]
+```
+
 ## <a name="examples-bulk-operations"></a>Exemplos: Operações em Massa
 
 > [!NOTE]
 > Não coloque parâmetros de assinatura de acesso compartilhado, nome de arquivo ou **/** à direita no fim da URL `LOCATION` ao configurar uma fonte de dados externa para operações em massa.
 
-### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. Criar uma fonte de dados externa para operações em massa recuperando dados do Armazenamento de Blobs do Azure
+### <a name="k-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>K. Criar uma fonte de dados externa para operações em massa recuperando dados do Armazenamento de Blobs do Azure
 
 **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 Use a seguinte fonte de dados para operações em massa usando [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset]. A credencial deve ser definida como `SHARED ACCESS SIGNATURE` como a identidade, não deve ter o `?` à esquerda no token SAS, deve ter pelo menos permissão de leitura no arquivo que deve ser carregado (por exemplo `srt=o&sp=r`), e o período de término deve ser válido (todas as datas estão no horário UTC). Para mais informações sobre assinaturas de acesso compartilhado, veja [Usando SAS (Assinatura de Acesso Compartilhado)][sas_token].

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e120762a84929ed58d163efb26faa6f28eb50dc3
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+manager: jroth
+ms.openlocfilehash: 2eef48c472ee9b23d941be88ae76cb0349067739
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306124"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789343"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Conectando-se a um banco de dados SQL do Azure
 
@@ -81,7 +81,7 @@ Antes da versão 4.0 do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Uso de criptografia requer a configuração de hostNameInCertificate
 
-Antes da versão 7.2 do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], ao se conectar a um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], você deve especificar **hostNameInCertificate** se você especificar **encrypt=true** (se o nome do servidor em que a conexão cadeia de caracteres é *shortName*. *domainName*, defina a **hostNameInCertificate** propriedade \*. *domainName*.). Essa propriedade é opcional a partir da versão 7.2 do driver.
+Antes da versão 7.2 do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], ao se conectar a um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], você deve especificar **hostNameInCertificate** se você especificar **criptografar = true** (se o nome do servidor em que a conexão cadeia de caracteres é *shortName*. *domainName*, defina a **hostNameInCertificate** propriedade \*. *domainName*.). Essa propriedade é opcional a partir da versão 7.2 do driver.
 
 Por exemplo:
 

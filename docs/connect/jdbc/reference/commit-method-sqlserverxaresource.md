@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1d0f8612-fb4a-4eca-bc37-8342e1419fd4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a292014314ac5864857f7aa02ead90ffd9f2b238
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0ec1307adb0c2eab58c73a7978c93d366f0209bf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692299"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777413"
 ---
 # <a name="commit-method-sqlserverxaresource"></a>Método commit (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void commit(javax.transaction.xa.Xid xid,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *XID*  
+ *xid*  
   
  Um objeto Xid.  
   

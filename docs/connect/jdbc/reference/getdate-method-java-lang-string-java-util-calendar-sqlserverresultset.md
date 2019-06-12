@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 3fa2a72a-7499-44ec-8f76-a8e646e0190c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 74a8e70878dd3a265a18132333574c18db137c57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 13104a29fe8568ade732faf9ed05a05a42b4d093
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811185"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785594"
 ---
 # <a name="getdate-method-javalangstring-javautilcalendar-sqlserverresultset"></a>Método getDate (java.lang.String, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public java.sql.Date getDate(java.lang.String colName,
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  
   
- *CAL*  
+ *cal*  
   
  Um objeto de calendário.  
   
@@ -57,7 +57,7 @@ public java.sql.Date getDate(java.lang.String colName,
  Esse método retorna uma parte de data válida de um tipo de dados datetime ou smalldatetime do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], com a parte de hora definida como a linha de base da hora do Java de 00:00 (meia-noite) no fuso horário do Calendário fornecido.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método getDate &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)   
+ [Método getByte &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)   
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

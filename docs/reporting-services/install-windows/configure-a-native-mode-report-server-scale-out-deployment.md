@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1b1ca1f19741002cee1ca9025582c6436f1522a5
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: 65182936a6ea686b7b0089827ce1fb2f26e86b98
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503040"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500577"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurar uma implantação em expansão do servidor de relatório em modo nativo.
 
@@ -146,8 +146,8 @@ O problema será intermitente, ou seja, apenas o servidor que criou a tarefa do 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Configurar uma conta de serviço](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
-[Configurar uma URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+[Configurar uma conta de serviço](configure-the-report-server-service-account-ssrs-configuration-manager.md)
+[configurar uma URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Criar um banco de dados do servidor de relatório no modo nativo](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [Configurar as URLs do Servidor de Relatório](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [Configurar uma conexão de banco de dados do Servidor de Relatório](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   

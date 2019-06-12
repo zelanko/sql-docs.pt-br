@@ -14,13 +14,13 @@ helpviewer_keywords:
 - GetColumns method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 79aa1dcfd924dbe3e63989587afd6d706b1834de
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 61a913586bbba7dc9fc1d7d997ba33a9eddc8e0f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213526"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785944"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Buscar colunas usando IRow::GetColumns (ou IRow::Open) e ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "53213526"
   
 2.  Execute o comando (neste exemplo, **ICommandExecute::Execute()** é chamado com IID_IRow).  
   
-3.  Buscar os dados de coluna usando **IRow::Open()** ou **IRow::GetColumns()**.  
+3.  Buscar os dados de coluna usando **IRow::Open()** ou **IRow::GetColumns()** .  
   
     -   **IRow::Open()** pode ser usado para abrir uma **ISequentialStream** na linha. Especifique DBGUID_STREAM para indicar que uma coluna contém um fluxo de dados binários (**IStream** ou **ISequentialStream** que pode então ser usada para ler os dados da coluna).  
   

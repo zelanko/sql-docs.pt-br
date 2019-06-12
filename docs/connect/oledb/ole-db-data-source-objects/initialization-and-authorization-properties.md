@@ -16,13 +16,13 @@ helpviewer_keywords:
 - initialization properties [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: a2477e18f1ae9aa78d195a45f28494b4b909934d
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 6778b08e106416a009e854c3b88c3f7a13efc88a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744516"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768577"
 ---
 # <a name="initialization-and-authorization-properties"></a>Propriedades de inicialização e autorização
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

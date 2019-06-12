@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 70a19f97f3949fd43b0fba86b876f0da606a114b
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+manager: jroth
+ms.openlocfilehash: c0d9d79d6462300df8b96fa3ec58349c39e751cf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52159104"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770266"
 ---
 # <a name="building-the-connection-url"></a>Construindo a URL de conexão
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

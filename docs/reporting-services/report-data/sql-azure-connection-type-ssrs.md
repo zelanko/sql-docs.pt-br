@@ -1,8 +1,8 @@
 ---
 title: Tipo de conexão do SQL do Azure (SSRS) | Microsoft Docs
 description: A extensão de dados para conexão do SQL Azure dá suporte a parâmetros com vários valores, agregações de servidor e credenciais gerenciadas separadamente da cadeia de conexão.
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
@@ -10,12 +10,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c096ce1edd6069cfa27185ee3146444a6a9872b
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
-ms.translationtype: HT
+ms.openlocfilehash: 02c3f95e00243a78fe2db70c587625e5a14d570d
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331516"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500185"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Tipo de conexão do SQL Azure (SSRS)
 
@@ -44,7 +44,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 Além disso, você usa a caixa de diálogo **Propriedades de Fontes de Dados** para fornecer credenciais como nome de usuário e senha. As opções `User Id` e `Password` são acrescentadas automaticamente à cadeia de conexão; você não precisa digitá-las como parte da cadeia de conexão.  
   
-Para obter mais informações e exemplos de cadeias de conexão, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+Para obter mais informações e exemplos de cadeias de conexão, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ## <a name="Credentials"></a> Credenciais
 
@@ -58,7 +58,7 @@ Em um cliente de criação de relatório, as seguintes opções estão disponív
   
 - Nenhuma credencial é necessária. Para usar essa opção, você deve ter a conta de execução autônoma configurada no servidor de relatório. Para obter mais informações, consulte [Configurar a conta de execução autônoma &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) na [documentação do Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) em msdn.microsoft.com.  
   
-Para obter mais informações, consulte [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Especificar as credenciais no Construtor de Relatórios](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão &#40;construtor de relatórios e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [especificar credenciais e informações de Conexão para fontes de dados de relatório](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="Query"></a> Consultas
 
@@ -99,7 +99,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```
 
-Clique no botão **Executar** (**!**) na barra de ferramentas para executar a consulta e exibir um conjunto de resultados.  
+Clique no botão **Executar** ( **!** ) na barra de ferramentas para executar a consulta e exibir um conjunto de resultados.  
   
 Para parametrizar essa consulta, adicione um parâmetro de consulta. Por exemplo, altere a cláusula WHERE para o seguinte:  
 
@@ -185,7 +185,7 @@ Estas seções da documentação especificam informações conceituais detalhada
 [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
 Fornece uma visão geral de como acessar dados de seu relatório.  
   
-[Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+[Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
 Fornece informações sobre conexões de dados e fontes de dados.  
   
 [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

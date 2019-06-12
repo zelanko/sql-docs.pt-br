@@ -6,16 +6,16 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 78f733d5f34c1c0bf6f89b40ef0346c85f1638b5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294974"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499558"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Criando um Relatório de Formato Livre (Construtor de Relatórios)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: criando um relatório de formato livre (Construtor de Relatórios)
 Neste tutorial, você cria um relatório paginado que atua como um boletim informativo. Cada página exibe um texto estático, visuais de resumo e dados de vendas de exemplo detalhados.
 
 ![report-builder-free-form-report-complete](../reporting-services/media/report-builder-free-form-report-complete.png)
@@ -48,13 +48,13 @@ Para obter mais informações sobre os requisitos, consulte [Pré-requisitos par
   
 1.  No painel Dados do Relatório, clique em **Nova** > **Fonte de Dados**.  
   
-2.  Na caixa **Nome**, digite: **ListDataSource**  
+2.  Na caixa **Nome** , digite: **ListDataSource**  
   
 3.  Clique em **Usar uma conexão inserida no meu relatório**.  
   
-4.  Verifique se o tipo de conexão é Microsoft SQL Server e, na caixa **Cadeia de conexão** , digite: **Fonte de Dados = \<nomedoservidor>**  
+4.  Verifique se o tipo de conexão é Microsoft SQL Server e, em seguida, na caixa **Cadeia de conexão**, digite: **Fonte de Dados = \<servername>**  
   
-    **\<servername>**, por exemplo, Report001, especifica um computador no qual há uma instância do Mecanismo de Banco de Dados do SQL Server instalada. Como os dados deste relatório não são extraídos de um banco de dados SQL Server, você não precisa incluir o nome de um banco de dados. O banco de dados padrão no servidor especificado é usado apenas para analisar a consulta.  
+    **\<servername>** , por exemplo, Report001, especifica um computador no qual há uma instância do Mecanismo de Banco de Dados do SQL Server instalada. Como os dados deste relatório não são extraídos de um banco de dados SQL Server, você não precisa incluir o nome de um banco de dados. O banco de dados padrão no servidor especificado é usado apenas para analisar a consulta.  
   
 5.  Clique em **Credenciais**e insira as credenciais necessárias para conexão à instância do Mecanismo de Banco de Dados do SQL Server.  
   
@@ -64,7 +64,7 @@ Para obter mais informações sobre os requisitos, consulte [Pré-requisitos par
   
 1.  No painel Dados do Relatório, clique em **Novo** > **Conjunto de Dados**.  
   
-2.  Na caixa **Nome**, digite: **ListDataset**.  
+2.  Na caixa **Nome** , digite: **ListDataset**.  
   
 3.  Clique em **Usar um conjunto de dados inserido em meu relatório**e verifique se a fonte de dados é **ListDataSource**.  
   
@@ -199,7 +199,7 @@ Você pode adicionar caixas de texto para exibir um texto estático que é repet
   
 2.  Na guia **Inserir** > **Caixa de Texto**. Clique no canto superior esquerdo da lista, dentro do retângulo que você adicionou anteriormente, e arraste para criar a caixa de texto com 9,76 centímetros de largura e 12,70 centímetros de altura.  
   
-3.  Com o cursor na caixa de texto e digite: **Boletim informativo para** . Inclua um espaço após a palavra “para”, para separar o texto do campo que será adicionado na próxima etapa.   
+3.  Com o cursor na caixa de texto, digite: **Boletim informativo para** . Inclua um espaço após a palavra “para”, para separar o texto do campo que será adicionado na próxima etapa.   
   
     ![Adicionar texto do cabeçalho do boletim informativo](../reporting-services/media/tutorial-newsletterfor.png "Adicionar texto do cabeçalho do boletim informativo")  
   
@@ -215,7 +215,7 @@ Você pode adicionar caixas de texto para exibir um texto estático que é repet
     *  **20 pt**.
     *  **Tomate**.  
   
-9. Posicione o cursor abaixo do texto que você digitou na etapa 3 e digite: **Olá** com um espaço após a palavra para separar o texto e o campo que você adicionará na próxima etapa.  
+9. Coloque o cursor abaixo do texto que você digitou na etapa 3 e digite: **Hello** com um espaço após a palavra para separar o texto e o campo que será adicionado na próxima etapa.  
  
 10. Arraste o campo `[FullName]` de ListDataSet no painel Dados do Relatório até a caixa de texto, coloque-o após “Hello”, e digite uma vírgula (,).  
    
@@ -244,7 +244,7 @@ Você pode adicionar caixas de texto para exibir um texto estático que é repet
       *  **10 pt**.
       *  **Black**.  
  
-20. Coloque o cursor dentro da caixa de texto, abaixo do texto sem sentido, e digite: **Parabéns pelo seu total de vendas de**, com um espaço após a palavra para separar o texto e o campo que será adicionado na próxima etapa. 
+20. Coloque o cursor dentro da caixa de texto, abaixo do texto sem sentido e digite: **Parabéns pelo seu total de vendas de**, com um espaço após a palavra para separar o texto e o campo que será adicionado na próxima etapa. 
   
 21. Arraste o campo Sales até a caixa de texto, coloque-o depois do texto que você digitou na etapa anterior e digite um ponto de exclamação (!).  
 
@@ -405,7 +405,7 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
   
 9. Arraste o gráfico para dentro do retângulo.  
    
-10. Selecione o título e o tipo do gráfico: **Quantidades Vendidas do Produto**.  
+10. Selecione o título do gráfico e digite: **Quantidades Vendidas do Produto**.  
   
 12. Na guia **Início** > **Fonte**, crie o título:
     * **Fonte** **Interface do usuário do Sego Seminegrito**.
@@ -444,7 +444,7 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
   
 9. Arraste o gráfico para dentro do retângulo, abaixo do gráfico de pizza.  
    
-10. Selecione o título e o tipo do gráfico: **Vendas do Produto**.  
+10. Selecione o título do gráfico e digite: **Vendas de Produtos**.  
   
 12. Na guia **Início** > **Fonte**, crie o título:
     * **Fonte** **Interface do usuário do Sego Seminegrito**.
@@ -505,7 +505,7 @@ Para obter mais informações sobre listas, consulte:
 * [Criar faturas e formulários com listas](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Células, linhas e colunas da região de dados Tablix &#40;Construtor de Relatórios&#41; e SSRS](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-Para obter mais informações sobre designers de consultas, consulte [Designers de Consultas &#40;Construtor de Relatórios&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) e [Interface do usuário do Designer de Consultas Baseadas em Texto &#40;Construtor de Relatórios&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+Para obter mais informações sobre designers de consultas, consulte [Designers de Consultas &#40;Construtor de Relatórios&#41;](report-data/query-design-tools-ssrs.md) e [Interface do usuário do Designer de Consultas Baseadas em Texto &#40;Construtor de Relatórios&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md) 

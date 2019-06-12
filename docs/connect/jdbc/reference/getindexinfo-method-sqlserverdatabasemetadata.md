@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d7d66a175522cd89cf4bd0aca567779244b0a385
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 22414058b0763f32c2b991487e006b8de8e50611
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789804"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774346"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>Método getIndexInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -82,7 +82,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 |TYPE|**short**|O tipo do índice. Pode ser um dos seguintes valores:<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
 |ORDINAL_POSITION|**short**|A posição ordinal da coluna no índice. A primeira coluna no índice é 1.|  
 |COLUMN_NAME|**String**|O nome da coluna.|  
-|ASC_OR_DESC|**String**|A ordem usada no agrupamento do índice. Pode ser um dos seguintes valores:<br /><br /> A (crescente)<br /><br /> D (decrescente)<br /><br /> NULL (não aplicável)<br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sempre retorna "A".|  
+|ASC_OR_DESC|**String**|A ordem usada na ordenação do índice. Pode ser um dos seguintes valores:<br /><br /> A (crescente)<br /><br /> D (decrescente)<br /><br /> NULL (não aplicável)<br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sempre retorna "A".|  
 |CARDINALITY|**int**|O número de linhas na tabela ou os valores exclusivos no índice.|  
 |PAGES|**int**|O número de páginas usadas para armazenar o índice ou a tabela.|  
 |FILTER_CONDITION|**String**|A condição do filtro.<br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sempre retorna nulo.|  

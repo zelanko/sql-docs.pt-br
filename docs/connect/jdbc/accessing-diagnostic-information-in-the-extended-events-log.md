@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef5c7aee0daef073ff22494162d8024201b2f97c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 0b13f081338e26aaa33306998d3e562088609a6a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600816"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770517"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Acessar informações de diagnóstico nos logs de eventos estendidos
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6c986144-3854-4352-8331-e79eccbefc28
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0b2e91f5587751ca7a6d6bb7e91ab3509152b1d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8fe0e62d12f9bb7f4336e338c4d6594d9a94268e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645394"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770021"
 ---
 # <a name="reading-large-data-sample"></a>Lendo exemplo de dados grande
 
@@ -35,7 +35,7 @@ O arquivo de código desta amostra chama-se ReadLargeData.java e pode ser encont
 Para executar este aplicativo de exemplo, você precisará ter acesso ao banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Defina também o classpath para incluir o arquivo mssql-jdbc.jar. Para obter mais informações sobre como definir o classpath, consulte [usando o Driver JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
-> O [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fornece os arquivos de biblioteca de classes mssql-jdbc a serem usados de acordo com suas configurações preferenciais do JRE (Java Runtime Environment). Para obter mais informações sobre qual arquivo JAR escolher, consulte [requisitos do sistema para o Driver JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+> O [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fornece os arquivos de biblioteca de classes mssql-jdbc a serem usados de acordo com suas configurações preferenciais do JRE (Java Runtime Environment). Para saber mais sobre qual arquivo JAR escolher, confira os [requisitos do sistema para o JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
 
 ## <a name="example"></a>Exemplo
 

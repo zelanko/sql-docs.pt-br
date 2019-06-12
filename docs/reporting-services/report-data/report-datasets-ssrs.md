@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f8be8ed5a1718e33b9e0c2c04caf75967f7067ea
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 666623579f6cd195908318c194ec4c0036493edf
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571381"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500305"
 ---
 # <a name="report-datasets-ssrs"></a>Conjuntos de dados de relatório (SSRS)
   Para adicionar dados a um relatório, você cria conjuntos de dados. Cada conjunto de dados representa o conjunto de resultados gerado pela execução de um comando de consulta em uma fonte dados. As colunas do conjunto de resultados são a coleção de campos. As linhas do conjunto de resultados são os dados. O conjunto de resultados não contêm os dados reais. Um conjunto de dados contém as informações necessárias para recuperar um conjunto específico de dados de uma fonte de dados.  
@@ -92,9 +92,9 @@ ms.locfileid: "65571381"
   
  No designer de consulta, você pode executar a consulta para exibir dados de exemplo e validar a sintaxe do comando de consulta. Os nomes de coluna no conjunto de resultados tornam-se os nomes de campo que você vê no painel Dados do Relatório. O conjunto de resultados deve ser um único conjunto de linhas e colunas em que o mesmo número de valores existe para cada linha de dados. Não há suporte para vários conjuntos de resultados a partir de uma única consulta. Não há suporte para hierarquias imperfeitas, que não têm um número constante de colunas e podem gerar um número diferente de valores de dados para cada linha.  
   
- Para executar uma consulta, é necessário ter credenciais de tempo de design. Para obter mais informações, consulte [Especificar as credenciais no Construtor de Relatórios](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) e [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Para executar uma consulta, é necessário ter credenciais de tempo de design. Para obter mais informações, consulte [especificar credenciais e informações de Conexão para fontes de dados do relatório](specify-credential-and-connection-information-for-report-data-sources.md) e [conexões de dados, fontes de dados e cadeias de caracteres de Conexão &#40;construtor de relatórios e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
- A comunicação entre uma extensão de dados e a fonte de dados externa é gerenciada pelos provedores de dados. O suporte para sintaxe do comando de consulta, parâmetros de consulta e tipos de dados para obter valores no conjunto de resultados é determinado por cada provedor de dados. Para obter mais informações, consulte o tópico para o tipo específico de extensão de dados e [Designers de Consulta &#40;Construtor de Relatórios&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
+ A comunicação entre uma extensão de dados e a fonte de dados externa é gerenciada pelos provedores de dados. O suporte para sintaxe do comando de consulta, parâmetros de consulta e tipos de dados para obter valores no conjunto de resultados é determinado por cada provedor de dados. Para obter mais informações, consulte o tópico para o tipo específico de extensão de dados e [Designers de Consulta &#40;Construtor de Relatórios&#41;](query-design-tools-ssrs.md).  
   
   
 ##  <a name="HowTo"></a> Tópicos de instruções  
@@ -120,9 +120,9 @@ ms.locfileid: "65571381"
 ##  <a name="Section"></a> Nesta seção  
  [Partes de relatório e conjuntos de dados no Construtor de Relatórios](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
- [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
- [Especificar as credenciais no Construtor de Relatórios](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
+ [Especificar informações de credenciais e de conexão para fontes de dados de relatório](specify-credential-and-connection-information-for-report-data-sources.md)  
   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

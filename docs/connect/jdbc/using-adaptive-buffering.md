@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16ac54c78839df4c5ce911a1258dfa052ac1666c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 160300be692ff21af1cc33c1fd6fc49d415b22e5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624995"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790322"
 ---
 # <a name="using-adaptive-buffering"></a>Usando buffer adaptável
 
@@ -33,7 +33,7 @@ Para permitir que aplicativos administrem resultados muito grandes, o [!INCLUDE[
 - **A consulta gera colunas muito grandes** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **colunas ou** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **os valores de parâmetro:** O aplicativo pode recuperar um valor único (coluna ou parâmetro OUT) que é muito grande para caber inteiramente na memória do aplicativo. Buffer adaptável permite que o aplicativo cliente recupere esse valor como um fluxo, usando o getAsciiStream, o getBinaryStream ou os métodos getCharacterStream. O aplicativo recupera o valor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à medida que o lê o fluxo.
 
 > [!NOTE]  
-> Com buffer adaptável, o JDBC Driver armazena em buffer somente a quantidade de dados que precisa. O driver não fornece nenhum método público para controlar ou limitar o tamanho do buffer.
+> Com buffer adaptável, o driver JDBC armazena em buffer somente a quantidade de dados necessária. O driver não fornece nenhum método público para controlar ou limitar o tamanho do buffer.
 
 ## <a name="setting-adaptive-buffering"></a>Definindo buffer adaptável
 

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fca58e2d7e99f368e48b19bfdc0d5fb0e10c94bc
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 6106d830a48b4ef89d85b88e7264e08209947ecc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601366"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762009"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

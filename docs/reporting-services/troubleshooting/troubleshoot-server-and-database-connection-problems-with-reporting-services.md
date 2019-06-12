@@ -1,6 +1,6 @@
 ---
 title: Solução de problemas de conexão de banco de dados e de servidor com o Reporting Services | Microsoft Docs
-ms.date: 02/28/2016
+ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e44d8dde3f93a946a25cc8fe269a26f70a7432a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: eda9f349cf53d77af14df10c842c9619fb6d370a
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574112"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403169"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Solucionar problemas de conexão de banco de dados e servidor com o Reporting Services
 Use este tópico para solucionar problemas de conexão com um servidor de relatório. Este tópico também fornece informações sobre mensagens de "erro inesperado". Para saber mais sobre configuração de fonte de dados e como configurar a conexão do servidor de relatório, confira [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) e [Configurar uma conexão de banco de dados do servidor de relatório (Gerenciador de configurações do SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
@@ -31,7 +31,7 @@ Este erro ocorre quando as credenciais são transmitidas em várias conexões de
 Ao conectar-se ao SQL Server, essa falha pode ser provocada porque, sob as configurações padrão, o SQL Server não permite conexões remotas. (provedor: Provedor de Pipes Nomeados, erro: 40 - não foi possível abrir uma conexão com o SQL Server). Esse erro é retornado pela instância do Mecanismo de Banco de Dados que hospeda o banco de dados do servidor de relatório. Na maioria das vezes, esse erro ocorre porque o serviço SQL Server é interrompido. Ou, se você estiver usando o SQL Server Express com Advanced Services ou uma instância nomeada, esse erro ocorrerá caso a URL do servidor de relatório ou a cadeia de conexão do banco de dados de tal servidor não esteja correta. Para resolver esses problemas, siga este procedimento:  
   
 * Verifique se o serviço SQL Server (**MSSQLSERVER**) foi iniciado. No computador que hospeda a instância do Mecanismo de Banco de Dados, clique em Iniciar, em Ferramentas Administrativas, em Serviços e role até o SQL Server (**MSSQLSERVER**). Se ele ainda não tiver sido iniciado, clique com o botão direito do mouse no serviço, selecione Propriedades, em Tipo de Inicialização, escolha Automático e clique consecutivamente em Aplicar, Iniciar e OK.   
-* Verifique se a URL do servidor de relatório e a cadeia de conexão do banco de dados de tal servidor estão corretas. Se o Reporting Services ou o Mecanismo de Banco de Dados tiver sido instalado como uma instância nomeada, a cadeia de conexão padrão criada durante a Instalação incluirá o nome da instância. Por exemplo, se você instalou uma instância padrão do SQL Server Express com Advanced Services em um servidor denominado DEVSRV01, a URL do Gerenciador de Relatórios será DEVSRV01\Reports$SQLEXPRESS. Além disso, o nome de servidor de banco de dados na cadeia de conexão será semelhante a DEVSRV01\SQLEXPRESS. Para saber mais sobre URLs e cadeias de conexão de fonte de dados para SQL Server Express, confira [Reporting Services no SQL Server Express com Advanced Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx). Para verificar a cadeia de conexão do banco de dados do servidor de relatório, inicie a ferramenta Configuração do Reporting Services e exiba a página Configuração do Banco de Dados.  
+* Verifique se a URL do servidor de relatório e a cadeia de conexão do banco de dados de tal servidor estão corretas. Se o Reporting Services ou o Mecanismo de Banco de Dados tiver sido instalado como uma instância nomeada, a cadeia de conexão padrão criada durante a Instalação incluirá o nome da instância. Por exemplo, se você instalou uma instância padrão do SQL Server Express com Advanced Services em um servidor denominado DEVSRV01, a URL do portal da Web será DEVSRV01\Reports$SQLEXPRESS. Além disso, o nome de servidor de banco de dados na cadeia de conexão será semelhante a DEVSRV01\SQLEXPRESS. Para saber mais sobre URLs e cadeias de conexão de fonte de dados para SQL Server Express, confira [Reporting Services no SQL Server Express com Advanced Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx). Para verificar a cadeia de conexão do banco de dados do servidor de relatório, inicie a ferramenta Configuração do Reporting Services e exiba a página Configuração do Banco de Dados.  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>Uma conexão não pode ser feita. Verifique se o servidor está em execução.  
 Este erro é retornado pelo provedor ADOMD.NET. Há várias razões para a ocorrência desse erro. Se você tiver especificado o servidor como “localhost”, tente especificar o nome do servidor. Esse erro também poderá ocorrer se não for possível alocar a memória na nova conexão. Para saber mais, confira [o artigo 912017 da Base de Dados de Conhecimento — Mensagem de erro quando você se conectar a uma instância do SQL Server 2005 Analysis Services:](https://support.microsoft.com/kb/912017).  
@@ -76,7 +76,7 @@ Esse erro ocorre quando o servidor de relatório não consegue se conectar ao ba
   
 Esse erro também poderá ocorrer se a instância do Mecanismo de Banco de Dados que hospeda o banco de dados do servidor de relatório não estiver configurada para conexões remotas. A conexão remota é habilitada, por padrão, em algumas edições do SQL Server. Para verificar se ela está habilitada na instância do Mecanismo de Banco de Dados do SQL Server que você está usando, execute a ferramenta SQL Server Configuration Manager. Você deve habilitar TCP/IP e pipes nomeados. Um servidor de relatório usa os dois protocolos. Para obter instruções sobre como habilitar conexões remotas, confira a seção "Como configurar conexões remotas com o banco de dados do servidor de relatório" em [Configurar um servidor de relatório para administração remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
   
-Se o erro incluir o texto adicional a seguir, a senha expirou na conta usada para executar a instância do Mecanismo de Banco de Dados: "Erro ao estabelecer uma conexão com o servidor. Ao conectar-se ao SQL Server, essa falha pode ser provocada porque, sob as configurações padrão, o SQL Server não permite conexões remotas. (**provedor: Interfaces de Rede do SQL Server, erro: 26 — erro ao localizar servidor/instância especificada)**". Para resolver esse erro, redefina a senha.   
+Se o erro incluir o texto adicional a seguir, a senha expirou na conta usada para executar a instância do Mecanismo de Banco de Dados: "Erro ao estabelecer uma conexão com o servidor. Ao conectar-se ao SQL Server, essa falha pode ser provocada porque, sob as configurações padrão, o SQL Server não permite conexões remotas. (**provedor: Interfaces de Rede do SQL Server, erro: 26 — erro ao localizar servidor/instância especificada)** ". Para resolver esse erro, redefina a senha.   
   
 ## <a name="rpc-server-is-not-listening"></a>“O servidor RPC não está escutando”  
 O serviço Servidor de Relatório usa o servidor RPC (Chamada de Procedimento Remoto) para algumas operações. Se o erro “O servidor RPC não está escutando” for exibido, verifique se o serviço Servidor de Relatório está em execução.  

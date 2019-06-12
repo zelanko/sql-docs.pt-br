@@ -8,13 +8,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
-manager: craigg
-ms.openlocfilehash: e6656b2df8eb635686dd5702d9b60a644a04e29b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
-ms.translationtype: MTE75
+manager: jroth
+ms.openlocfilehash: 5c312421c7934690c947dbe0bf23b6404afaf56f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511613"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770509"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Histórico de driver do Microsoft SQL Server
 
@@ -22,7 +22,7 @@ Esta página descreve as tecnologias de conexão de dados históricos da Microso
 
 ## <a name="odbc"></a>ODBC
 
-Há três gerações distintas dos drivers ODBC da Microsoft para SQL Server. O primeiro driver ODBC do "SQL Server" ainda é fornecido como parte da [Windows Data Access Components](#microsoft-or-windows-data-access-components). Não é recomendável usar esse driver para novo desenvolvimento. A partir do SQL Server 2005, o [SQL Server Native Client](#sql-server-native-client) inclui uma interface do ODBC e o driver ODBC fornecido com o SQL Server 2005 por meio do SQL Server 2012. Não é recomendável usar esse driver para novo desenvolvimento. Após o SQL Server 2012, o [Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server) é o driver é atualizado com os mais recentes recursos de servidor no futuro.
+Há três gerações distintas de provedores Microsoft OLE DB para SQL Server. O primeiro driver ODBC do "SQL Server" ainda é fornecido como parte da [Windows Data Access Components](#microsoft-or-windows-data-access-components). Não é recomendável usar esse driver para novo desenvolvimento. A partir do SQL Server 2005, o [SQL Server Native Client](#sql-server-native-client) inclui uma interface do ODBC e o driver ODBC fornecido com o SQL Server 2005 por meio do SQL Server 2012. Não é recomendável usar esse driver para novo desenvolvimento. Após o SQL Server 2012, o [Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server) é o driver é atualizado com os mais recentes recursos de servidor no futuro.
 
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
 
@@ -36,7 +36,7 @@ Após o SQL Server 2012, o driver ODBC principal para o SQL Server foi desenvolv
 
 ## <a name="ole-db"></a>OLE DB
 
-Há três gerações distintas do provedor Microsoft OLE DB para SQL Server. O primeiro "Microsoft OLE DB Provider para SQL Server" (SQLOLEDB) ainda é fornecido como parte da [Windows Data Access Components](#microsoft-or-windows-data-access-components). Este provedor não será atualizado com novos recursos e não é recomendável usar esse driver para novo desenvolvimento. A partir do SQL Server 2005, o [SQL Server Native Client](#sql-server-native-client) inclui uma interface de provedor do OLE DB (SQLNCLI) e é o provedor OLE DB que acompanha o SQL Server 2005 por meio do SQL Server 2017. Ele foi [anunciados como substituídos em 2011](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/) e não é recomendável usar esse driver para novo desenvolvimento. Em 2017, a tecnologia de acesso de dados OLE DB foi subsequentemente [undeprecated e uma nova versão planejada foi anunciada](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/) para 2018. O novo provedor de OLE DB é chamado de "Microsoft OLE DB Driver para SQL Server" (MSOLEDBSQL) e atualmente é mantido e tem suporte.
+Há três gerações distintas de provedores Microsoft OLE DB para SQL Server. O [Microsoft OLE DB Provider para SQL Server](#microsoft-or-windows-data-access-components) (SQLOLEDB) ainda é fornecido como parte do Windows Data Access Components. Este provedor não será atualizado com novos recursos e não é recomendável usar esse driver para novo desenvolvimento. A partir do SQL Server 2005, o [SQL Server Native Client](#sql-server-native-client) inclui uma interface de provedor do OLE DB (SQLNCLI) e é o provedor OLE DB que acompanha o SQL Server 2005 por meio do SQL Server 2017. Foi [anunciado como preterido em 2011](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/) e não é mais mantido, não sendo recomendável usar esse driver para um novo desenvolvimento. Em 2017, a tecnologia de acesso de dados OLE DB foi subsequentemente [undeprecated e uma nova versão planejada foi anunciada](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/) para 2018. O novo provedor de OLE DB é chamado de "Microsoft OLE DB Driver para SQL Server" (MSOLEDBSQL) e atualmente é mantido e tem suporte.
 
 ## <a name="adonet"></a>ADO.NET
 
@@ -109,7 +109,7 @@ Esses componentes ainda têm suporte na versão atual do MDAC/WDAC, mas eles pod
 * **MSDADS:** com o Microsoft OLE DB Provider para Data Shaping (MSDADS), você pode criar relações hierárquicas entre chaves, campos ou conjuntos de linhas em um aplicativo. Não há aprimoramentos de recursos principais foram feitos desde o MDAC 2.1. Este provedor foi preterido. A Microsoft recomenda que você use o XML, em vez de MSDADS.
 * **Oracle, ODBC e OLE DB Oracle:** o Microsoft Driver ODBC do Oracle (Oracle ODBC) e o Microsoft OLE DB Provider for Oracle (Oracle OLE DB) fornecem acesso a servidores de banco de dados Oracle. Eles são criados usando o Oracle Call Interface (OCI) versão 7 e oferecem suporte completo para Oracle 7. Além disso, ele usa emulação de Oracle 7 para fornecer suporte limitado para bancos de dados Oracle 8. Oracle não oferece suporte a aplicativos que usam o OCI versão 7 chamadas. Essas tecnologias são preteridas. Se você estiver usando fontes de dados Oracle, você deve migrar para o provedor e o driver fornecido pelo Oracle.
 * **RDS:** serviços de dados remota (RDS) é um mecanismo Microsoft proprietário para acessar objetos de conjunto de registros ADO remotos pela Internet ou Intranet. RDS é preterido; Não há aprimoramentos de recursos principais foram feitos ao RDS desde MDAC 2.1. A Microsoft lançou o .NET Framework, que tem recursos abrangentes de SOAP e substitui os componentes RDS. Todos os componentes de servidor RDS serão removidos do sistema operacional após o Windows 7.
-* **JRO:** objetos de replicação de Jet (JRO) foi preterido. JRO é usado dentro do ADO com o Jet (*. mdb) bancos de dados para criar e compactar os bancos de dados Jet (do. mdb) e executar o gerenciamento de replicação do Jet. MDAC 2.7 será sua última versão. JRO não estará disponível no sistema de operacional Windows de 64 bits. Não há suporte para JRO no formato de arquivo do Microsoft Access 2007 (*. accdb).
+* **JRO:** objetos de replicação de Jet (JRO) foi preterido. JRO é usado dentro do ADO com o Jet ( *. mdb) bancos de dados para criar e compactar os bancos de dados Jet (do. mdb) e executar o gerenciamento de replicação do Jet. MDAC 2.7 será sua última versão. JRO não estará disponível no sistema de operacional Windows de 64 bits. Não há suporte para JRO no formato de arquivo do Microsoft Access 2007 (* . accdb).
 * **Suporte de ODBC de 16 bits:** se você estiver usando aplicativos de 16 bits, você deve migrar para um aplicativo de 32 bits. funcionalidade de 16 bits foi preterida e está sendo removida do sistemas operacionais de 64 bits. Para saber mais, consulte o [artigo 896458 da base de dados de conhecimento](https://support.microsoft.com/kb/896458).
 * **Provedor de OLE DB simples (MSDAOSP):** provedor simples do OLEDB oferece uma estrutura para construir rapidamente os provedores OLE DB em dados simples. MSDAOSP foi preterido.
 * **Biblioteca de cursores ODBC:** biblioteca de cursores ODBC (ODBCCR32.dll) fornece os cursores de dados limitado do lado do cliente. Biblioteca de cursores ODBC foi preterida; seu aplicativo pode usar implementações de cursor do lado do servidor como uma substituição.

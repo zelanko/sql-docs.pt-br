@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4d00692b0b5872b1020f900587a24a3116aee9be
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: ce3df0755799e907bb286e10f5711a58a48135bb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737007"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782472"
 ---
 # <a name="using-spatial-datatypes"></a>Usando tipos de dados espaciais
 
@@ -102,7 +102,7 @@ Essas são as novas APIs públicas que foram introduzidas com esse acréscimo, n
 |Geografia getGeography (colunIndex int)| Retorna o valor da coluna designada na linha atual deste objeto de conjunto de resultados como um objeto de com.microsoft.sqlserver.jdbc.Geography na linguagem de programação Java.
 |Geografia getGeography (columnName de cadeia de caracteres)| Retorna o valor da coluna designada na linha atual deste objeto de conjunto de resultados como um objeto de com.microsoft.sqlserver.jdbc.Geography na linguagem de programação Java.
 
-### <a name="geometry"></a>Geometria
+### <a name="geometry"></a>Geometry
 
 |Método|Descrição|
 |:------|:----------|

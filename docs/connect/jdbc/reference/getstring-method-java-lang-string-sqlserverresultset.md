@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8a98c8a8-61d0-40c9-9335-25a87b732dc3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a153811c723875da51e747a4d9cff24a57ace75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 13dd4f2bd18ef3bde6b920be0e5e562dc9aef956
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642884"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66773806"
 ---
 # <a name="getstring-method-javalangstring-sqlserverresultset"></a>Método getString (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public java.lang.String getString(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getString é especificado pelo método getString na interface do resultset.  
+ Esse método getLong é especificado pelo método getLong na interface java.sql.ResultSet.  
   
  Todas as colunas no SQL Server podem ser retornadas como uma String. Isso significa que uma representação da **String** de todos os tipos baseados em número e em caractere, e uma representação da cadeia de caracteres hexadecimais de colunas binárias, como binary, varbinary, varbinary(max), image, timestamp e uniqueidentifier, podem ser retornadas.  
   

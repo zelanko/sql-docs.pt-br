@@ -15,13 +15,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, transactions
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: c5f6d9f56b4485c2aa5aa8383a425bedb85a38a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0a7e06fe0888767d653f40148efb324f89456460
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674914"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766215"
 ---
 # <a name="isolation-levels-ole-db"></a>Níveis de isolamento (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,6 +44,6 @@ ms.locfileid: "47674914"
 >  O [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduziu o nível de isolamento do instantâneo. Para obter mais informações, confira [Trabalhando com o isolamento de instantâneos](../../oledb/features/working-with-snapshot-isolation.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Transações](../../oledb/ole-db-transactions/transactions.md)  
+ [Transactions](../../oledb/ole-db-transactions/transactions.md)  
   
   

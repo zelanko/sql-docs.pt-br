@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 62892cebe5c3c709cedee94b620b2c0e4cfeb258
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 802172caef018224403544aad5c3c4fd53778305
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737027"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775964"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Conectando-se usando a Autenticação do Azure Active Directory
 
@@ -27,7 +27,7 @@ Este artigo fornece informações sobre como desenvolver aplicativos Java para u
 Você pode usar a autenticação do Azure Active Directory (AAD), que é um mecanismo para se conectar ao banco de dados SQL v12 usando identidades no Azure Active Directory. Use a autenticação do Azure Active Directory para gerenciar centralmente as identidades de usuários do banco de dados e como uma alternativa à autenticação do SQL Server. O Driver JDBC permite que você especifique suas credenciais do Active Directory do Azure na cadeia de caracteres de conexão JDBC para se conectar ao BD SQL do Azure. Para obter informações sobre como configurar a autenticação do Active Directory do Azure, visite [conectar-se ao SQL banco de dados usando Azure Active Directory a autenticação](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
 
 Propriedades de Conexão para dar suporte à autenticação do Azure Active Directory no Microsoft JDBC Driver para SQL Server são:
-*   Autenticação  Use essa propriedade para indicar qual método de autenticação do SQL a ser usado para a conexão. Os valores possíveis são: 
+*   **autenticação**: Use essa propriedade para indicar qual método de autenticação do SQL a ser usado para a conexão. Os valores possíveis são: 
     * **ActiveDirectoryMSI**
         * Suporte desde a versão do driver **v7.2**, `authentication=ActiveDirectoryMSI` pode ser usado para se conectar a um Warehouse banco de dados de SQL do Azure de dentro de um recurso do Azure com suporte "Identity" habilitado. Opcionalmente, **msiClientId** também pode ser especificado nas propriedades de Conexão/fonte de dados, juntamente com esse modo de autenticação, que deve conter a ID do cliente de uma identidade de serviço gerenciado a ser usado para adquirir o  **accessToken** para estabelecer a conexão.
     * **ActiveDirectoryIntegrated**
@@ -39,7 +39,7 @@ Propriedades de Conexão para dar suporte à autenticação do Azure Active Dire
     * **NotSpecified**
         * Use `authentication=NotSpecified` ou deixá-lo como o padrão quando nenhum desses métodos de autenticação são necessárias.
 
-*   **accessToken**: Use essa propriedade de conexão para se conectar ao banco de dados SQL usando um token de acesso. accessToken só pode ser definida usando o parâmetro de propriedades do método getConnection () na classe de Gerenciador de driver. Ele não pode ser usado na URL de conexão.  
+*   **accessToken**: Use essa propriedade de conexão para se conectar a um banco de dados SQL usando um token de acesso. accessToken só pode ser definida usando o parâmetro de propriedades do método getConnection () na classe de Gerenciador de driver. Ele não pode ser usado na URL de conexão.  
 
 Para obter mais informações, consulte a propriedade de autenticação sobre o [definindo as propriedades de Conexão](../../connect/jdbc/setting-the-connection-properties.md) página.  
 
@@ -179,7 +179,7 @@ JDK vem com `kinit`, que pode ser usado para obter um TGT do Centro de distribui
 Acesso a um computador ingressado no domínio do Windows para consultar seu controlador de domínio do Kerberos.
 
 ##### <a name="step-1-find-kerberos-kdc"></a>Etapa 1: Localizar o KDC do Kerberos
-- Executar em Linha de comando do Windows
+- **Executar em**: linha de comando do Windows
 - **Ação**: `nltest /dsgetdc:DOMAIN.COMPANY.COM` (onde "DOMAIN.COMPANY.COM" é mapeada para o nome do seu domínio)
 - **Saída de exemplo**
   ```
@@ -192,7 +192,7 @@ Acesso a um computador ingressado no domínio do Windows para consultar seu cont
 
 ##### <a name="step-2-configuring-kdc-in-krb5conf"></a>Etapa 2: Configurando o KDC no krb5
 - **Executar em**: Linux/Mac
-- **Ação**: Edite o /etc/krb5.conf em um editor de sua escolha. Configure as seguintes chaves
+- **Ação**: editar o /etc/krb5.conf em um editor de sua escolha. Configure as seguintes chaves
   ```
   [libdefaults]
     default_realm = DOMAIN.COMPANY.COM
@@ -207,7 +207,7 @@ Acesso a um computador ingressado no domínio do Windows para consultar seu cont
 > [!NOTE]
 >  Domínio deve estar em letras maiusculas.
 
-##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Etapa 3: Teste a recuperação de tíquete de concessão de tíquete
+##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Etapa 3: Testar a recuperação de tíquete de concessão de tíquete
 - **Executar em**: Linux/Mac
 - **Ação**:
   - Use o comando `kinit username@DOMAIN.COMPANY.COM` para obter um TGT do KDC, em seguida, ele solicitará sua senha do domínio.

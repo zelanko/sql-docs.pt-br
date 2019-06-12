@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a4b2cdefeecc56c331224cd7453e861defafb8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d4e49d0ee7ccc62ab9e253436b5763ac4bdd1763
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687946"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761626"
 ---
 # <a name="working-with-a-connection"></a>Trabalhando com uma conexão
 

@@ -1,7 +1,7 @@
 ---
 title: Feature Pack do Azure para o SSIS (Integration Services) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/09/2018
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 003cfeefbea35d635264793555d771c5fddcead0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 29e30a8a7da41bcb7c75c61ef5ed78d0e3096536
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65729408"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403162"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Feature Pack do Azure para o Integration Services (SSIS)
 
@@ -72,6 +72,8 @@ As páginas de download também incluem informações sobre pré-requisitos. Cer
 
     -   [Tarefa de Upload do DW no SQL Azure](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
+    -   [Tarefa Arquivo Flexível](../integration-services/control-flow/flexible-file-task.md)
+
 -   Componentes de fluxo de dados
 
     -   [Fonte de Blobs do Azure](../integration-services/data-flow/azure-blob-source.md)
@@ -82,7 +84,11 @@ As páginas de download também incluem informações sobre pré-requisitos. Cer
     
     -   [Destino do Azure Data Lake Store](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Enumerador de Arquivos do Azure Data Lake Store e de Blobs do Azure. Consulte [Contêiner do Loop Foreach](https://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
+    -   [Origem de Arquivo Flexível](../integration-services/data-flow/flexible-file-source.md)
+
+    -   [Destino de Arquivo Flexível](../integration-services/data-flow/flexible-file-destination.md)
+
+-   Enumerador de Arquivos do Blob do Azure, Azure Data Lake Storage e Data Lake Storage Gen2. Consulte [Contêiner do Loop Foreach](../integration-services/control-flow/foreach-loop-container.md)
 
 ## <a name="scenario-processing-big-data"></a>Cenário: Processamento de Big Data
  Use o Conector do Azure para concluir o seguinte trabalho de processamento de Big Data:

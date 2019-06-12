@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d29b524a3b4615bb6fa02ba6cdf889379b46a22f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: abffa2d7bebfcf6defab15cf058c4fdf50b359c2
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580130"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413647"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -209,7 +209,7 @@ ALTER INDEX { index_name | ALL }
   
  O [!INCLUDE[ssSDS](../../includes/sssds-md.md)] é compatível ao formato de nome de três partes database_name.[schema_name].table_or_view_name quando database_name é o banco de dados atual ou database_name é tempdb e table_or_view_name começa com #.  
   
- REBUILD [ WITH **(**\<rebuild_index_option> [ **,**... *n*]**)** ]  
+ REBUILD [ WITH **(** \<rebuild_index_option> [ **,** ... *n*] **)** ]  
  Especifica que o índice será recriado usando as mesmas colunas, tipo de índice, atributo de exclusividade e ordem de classificação. Essa cláusula é equivalente a [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md). REBUILD habilita um índice desabilitado. A recriação de um índice clusterizado não recriará os índices não clusterizados associados, a menos que a palavra-chave ALL seja especificada. Se as opções de índice não forem especificadas, os valores de opção de índice existentes armazenados em [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) serão aplicados. Para qualquer opção de índice cujo valor não seja armazenado em **sys.indexes**, o padrão indicado na definição de argumento da opção será aplicado.  
   
  Se ALL for especificado e a tabela subjacente for um heap, a operação de recriação não terá efeito na tabela. Quaisquer índices não clusterizados associados à tabela serão recriados.  
@@ -248,7 +248,7 @@ PARTITION
   
  É o número de partição de um índice particionado que será reconstruído ou reorganizado. *partition_number* é uma expressão de constante que pode fazer referência a variáveis. Isso inclui variáveis de tipo definido pelo usuário ou funções e funções definidas pelo usuário, mas não é possível fazer referência a uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. *partition_number* deve existir ou a instrução falhará.  
   
- WITH **(**\<single_partition_rebuild_index_option>**)**  
+ WITH **(** \<single_partition_rebuild_index_option> **)**  
    
 **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -309,7 +309,7 @@ COMPRESS_ALL_ROW_GROUPS fornece uma maneira de forçar os rowgroups delta OPEN o
   
 -   OFF força todos os rowgroups CLOSED para o columnstore.  
   
-SET **(** \<set_index option> [ **,**... *n*] **)**  
+SET **(** \<set_index option> [ **,** ... *n*] **)**  
  Especifica opções de índice sem recriar ou reorganizar o índice. SET não pode ser especificado para um índice desabilitado.  
   
 PAD_INDEX = { ON | OFF }  
@@ -423,7 +423,7 @@ FILLFACTOR = *fillfactor*
   
 -   Um subconjunto de um índice particionado (é possível recriar online um índice particionado inteiro.)  
 
--  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] anterior à V12 e do SQL Server anterior à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], não permita a opção `ONLINE` para compilação de índice clusterizado nem operações de recompilação quando a tabela base contiver colunas **varchar(max)** ou **varbinary(max)**.
+-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] anterior à V12 e do SQL Server anterior à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], não permita a opção `ONLINE` para compilação de índice clusterizado nem operações de recompilação quando a tabela base contiver colunas **varchar(max)** ou **varbinary(max)** .
 
 RESUMABLE **=** { ON | **OFF**}
 
@@ -529,7 +529,7 @@ O padrão é 0 minuto.
   
  Para obter mais informações sobre compactação, consulte [Compactação de dados](../../relational-databases/data-compression/data-compression.md).  
   
- ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [**,**...n] **)**  
+ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...n] **)**  
     
 **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. 
   
@@ -663,7 +663,7 @@ Para recompilar um índice columnstore clusterizado, [!INCLUDE[ssNoVersion](../.
   
 1. Requer espaço no meio físico para armazenar duas cópias do índice columnstore durante a recriação. Quando a recompilação é concluída, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exclui o índice columnstore clusterizado original.
 
-1. Para uma tabela do SQL Data Warehouse do Azure com um índice columnstore clusterizado ordenado, o ALTER INDEX REBUILD reclassificará os dados.  
+1. Para uma tabela do SQL Data Warehouse do Azure com um índice columnstore clusterizado ordenado, o ALTER INDEX REBUILD reclassificará os dados. Monitore o tempdb durante operações de recompilação. Se você precisar de mais espaço de tempdb, poderá aumentar o data warehouse. Diminua quando a recompilação do índice for concluída.
   
 ## <a name="reorganizing-indexes"></a> Reorganizando índices
 A reorganização de um índice utiliza recursos mínimos do sistema. Ela desfragmenta o nível folha de índices clusterizados e não clusterizados em tabelas e exibições, reordenando fisicamente as páginas de nível folha para que correspondam à ordem lógica, da esquerda para a direita, dos nós folha. A reorganização também compacta as páginas de índice. A compactação baseia-se no valor do fator de preenchimento existente. Para exibir a configuração do fator de preenchimento, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  

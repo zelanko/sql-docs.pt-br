@@ -12,13 +12,13 @@ helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 625b8c6503378341596523d7f1887129c38d6a19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 49d474e1fcaca6c90cdec5bdfcb0a8194ce7d23f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827007"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769306"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversões executadas do cliente para o servidor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,9 +74,9 @@ ms.locfileid: "47827007"
 ||||  
 |-|-|-|  
 |Tipo|Comprimento (em caracteres)|Escala|  
-|DBTIME2|8, 10..18|0, 1..9|  
-|DBTIMESTAMP|19, 21..29|0, 1..9|  
-|DBTIMESTAMPOFFSET|26, 28..36|0, 1..9|  
+|DBTIME2|8, 10..18|0,1..9|  
+|DBTIMESTAMP|19, 21..29|0,1..9|  
+|DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Associações e conversões &#40;OLE DB&#41;](../../oledb/ole-db-date-time/conversions-ole-db.md)  

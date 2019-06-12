@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 2f44a689-65c8-4c94-9574-e9c08ea7918e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 83e035d659fd7b6b59c7b8d8a0799415bef5c112
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 11cbfbbe9e703867c2030c902ace6eedab38d77d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611702"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786673"
 ---
 # <a name="executeupdate-method-javalangstring-javalangstring"></a>Método executeUpdate (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ public final int executeUpdate(java.lang.String sql,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método executeUpdate é especificado pelo método executeUpdate na interface Statement.  
+ Esse método executeUpdate é especificado pelo método executeUpdate na interface java.sql.PreparedStatement.  
   
  Se a execução de um procedimento armazenado resultar em uma contagem de atualização maior que um, ou que gere mais de um conjunto de resultados, use o método [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) para executar o procedimento armazenado.  
   

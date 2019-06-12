@@ -1,7 +1,7 @@
 ---
 title: Tarefa de Download do Blob do Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 07/25/2016
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dfde0bdb50c5f8fbb81a5eb7d9b88067999f1de4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: ec05684572563228ec3bce88ebb5c5ca32a86bc2
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65728045"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403204"
 ---
 # <a name="azure-blob-download-task"></a>Tarefa de Download do Blob do Azure
 
@@ -33,15 +33,13 @@ Para adicionar uma **Tarefa de Download de Blobs do Azure**, arraste-a e solte-a
  A **Tarefa de Download do Blob do Azure** é um componente do [Feature Pack do SSIS (SQL Server Integration Services) para o Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
  A tabela a seguir fornece uma descrição para os campos nessa caixa de diálogo.  
-  
-|||  
-|-|-|  
+
 |**Campo**|**Descrição**|  
+|---|---|
 |AzureStorageConnection|Especifique um Gerenciador de Conexão de Armazenamento do Azure existente ou crie um novo referindo-se a uma Conta de Armazenamento do Azure, que aponta para onde os arquivos de blob estão hospedados.|  
 |BlobContainer|Especifica o nome do contêiner de Blob que contém os arquivos de Blob a serem baixados.|  
 |BlobDirectory|Especifica o diretório de Blob que contém os arquivos de Blob a serem baixados. O diretório de Blob é uma estrutura hierárquica virtual.|  
+|SearchRecursively|Especifica se é necessário pesquisar recursivamente dentro dos subdiretórios.|  
 |LocalDirectory|Especifica o diretório local em que os arquivos de blob baixados são armazenados.|  
 |FileName|Especifica um filtro de nome para selecionar arquivos com o padrão de nome especificado. Por exemplo, `MySheet*.xls\*` inclui arquivos como `MySheet001.xls` e `MySheetABC.xlsx`.|  
 |TimeRangeFrom/TimeRangeTo|Especifica um filtro de intervalo de tempo. Arquivos modificados após **TimeRangeFrom** e antes de **TimeRangeTo** são incluídos.|  
-  
-  

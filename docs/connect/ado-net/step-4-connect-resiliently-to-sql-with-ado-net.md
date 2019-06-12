@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fceeefd7c9dd0d3bd7df761273f69355c4e6024a
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+manager: jroth
+ms.openlocfilehash: b3f7fc6d2d7ab6872bd7100fa51f05a9d9b957c8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342871"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770597"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Etapa 4: Conectar-se de forma resiliente ao SQL com ADO.NET
 
@@ -65,7 +65,7 @@ Cole este código em seu **Program.cs** arquivo.
   
 Em seguida, você deve editar as cadeias de caracteres para nome do servidor, senha e assim por diante. Você pode encontrar essas cadeias de caracteres no método chamado **GetSqlConnectionStringBuilder**.  
   
-Observação: A cadeia de caracteres de conexão para o nome do servidor é voltada para o banco de dados SQL Azure, porque ele inclui o prefixo de quatro caracteres da **tcp:**. Mas você pode ajustar a cadeia de caracteres do servidor para se conectar ao Microsoft SQL Server.  
+Observação: A cadeia de caracteres de conexão para o nome do servidor é voltada para o banco de dados SQL Azure, porque ele inclui o prefixo de quatro caracteres da **tcp:** . Mas você pode ajustar a cadeia de caracteres do servidor para se conectar ao Microsoft SQL Server.  
   
   
 ```csharp

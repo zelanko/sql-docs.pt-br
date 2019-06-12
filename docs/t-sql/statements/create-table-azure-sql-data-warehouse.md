@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4a048347773b5bf9cba7288e482ed08ea3f4757c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 328a0aaeed34bd03e33f480ea0b0ea6afc7e940d
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574885"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413333"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (SQL Data Warehouse do Azure)
 
@@ -36,7 +36,7 @@ Para entender as tabelas e como usá-las, confira [Tabelas no SQL Data Warehouse
 
 ## <a name="syntax"></a>Sintaxe
   
-```  
+```
 -- Create a new table.
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
@@ -166,12 +166,12 @@ Cria uma ou mais partições da tabela. Essas partições são fatias horizontai
 
 ### <a name="ordered-clustered-columnstore-index-option-preview"></a>Opção de índice columnstore clusterizado ordenado (versão prévia)
 
-O índice columnstore clusterizado é o padrão para a criação de tabelas no SQL Data Warehouse do Azure.  A especificação ORDER é padronizada para as teclas COMPOUND.  A classificação será sempre em ordem crescente. Se nenhuma cláusula ORDER for especificada, a columnstore não será classificada.
+O índice columnstore clusterizado é o padrão para a criação de tabelas no SQL Data Warehouse do Azure.  A especificação ORDER é padronizada para as teclas COMPOUND.  A classificação será sempre em ordem crescente. Se nenhuma cláusula ORDER for especificada, a columnstore não será classificada. Devido ao processo de ordenação, uma tabela com índice columnstore clusterizado e ordenado pode ter tempos de carregamento de dados maiores que os índices columnstore clusterizados e não ordenados. Se você precisar de mais espaço de tempdb ao carregar dados, poderá diminuir a quantidade de dados por inserção.
 
 Durante a visualização, você pode executar essa consulta para verificar as colunas com ORDER habilitado.  Uma exibição de catálogo será fornecida posteriormente para entregar essas informações e o ordinal da coluna, se várias colunas forem especificadas em ORDER.
 
 ```sql
-SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.* 
+SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.*
 FROM sys.objects o 
 INNER JOIN sys.columns c ON o.object_id = c.object_id 
 INNER JOIN sys.partitions p ON o.object_id = p.object_id   

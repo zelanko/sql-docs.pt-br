@@ -1,7 +1,7 @@
 ---
 title: Contêiner do Loop Foreach | Microsoft Docs
 ms.custom: ''
-ms.date: 08/22/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -31,12 +31,12 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79afc8387a98df72ca2e60d1f97703097fba90e5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 504e17e0cb7d377f4b5567d705b9efb4647091aa
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65727715"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403046"
 ---
 # <a name="foreach-loop-container"></a>Contêiner Loop Foreach
 
@@ -68,6 +68,8 @@ ms.locfileid: "65727715"
 -   Enumerador de Blob do Azure Foreach para enumerar blobs em um contêiner de blob no Armazenamento do Azure.  
 
 -   Enumerador de arquivo do ADLS Foreach para enumerar arquivos em um diretório no Azure Data Lake Store.
+
+-   Enumerador de Arquivos Foreach do Data Lake Storage Gen2 para enumerar arquivos em um diretório no Azure Data Lake Storage Gen2.
   
  O diagrama a seguir mostra um contêiner Loop Foreach que tem uma tarefa Sistema de Arquivos. O loop Foreach usa o enumerador de Arquivo Foreach e a tarefa Sistema de Arquivos é configurada para copiar um arquivo. Se a pasta que o enumerador especifica contiver quatro arquivos, o loop repetirá quatro vezes e copiará quatro arquivos.  
   
@@ -98,6 +100,7 @@ ms.locfileid: "65727715"
 |Enumerador de Arquivos Foreach HDFS|Especifique uma pasta e os arquivos a serem enumerados, o formato do nome de arquivo dos arquivos recuperados, e se as subpastas devem ser desviadas.|  
 |Blob do Azure Foreach|Especifica o contêiner de Blob do Azure em que os blobs de contêineres serão enumerados.|  
 |Arquivo ADLS Foreach|Especifique o diretório do Azure Data Lake Store que contém os arquivos a serem enumerados.|
+|Arquivo Foreach Data Lake Storage Gen2|Especifique o diretório do Azure Data Lake Storage Gen2 que contém os arquivos a serem enumerados, junto com outras opções.|
 
 ## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>Adicionar enumeração a um fluxo de controle com um contêiner do Loop Foreach
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui o contêiner do Loop Foreach, um elemento de fluxo de controle que torna simples a inclusão de um constructo de loop que enumera arquivos e objetos no fluxo de controle de um pacote. Para obter mais informações, consulte [Contêiner Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -215,6 +218,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
 |**Enumerador de Arquivos Foreach HDFS**|Enumere arquivos HDFS no local de HDFS especificado. Se esse valor for selecionado, serão exibidas as opções dinâmicas na seção **Enumerador de Arquivos Foreach HDFS**.|  
 |**Enumerador de Blob do Azure Foreach**|Arquivos de Blob enumeráveis no local de Blob especificado. A seleção desse valor exibe as opções dinâmicas na seção **Enumerador de Blob do Azure Foreach**.|  
 |**Enumerador de Arquivos ADLS Foreach**|Enumere arquivos no diretório especificado do Data Lake Store. Se esse valor for selecionado, serão exibidas as opções dinâmicas na seção **Enumerador de Arquivos ADLS Foreach**.|
+|**Enumerador de Arquivos Foreach Data Lake Storage Gen2**|Enumere arquivos no diretório especificado do Data Lake Storage Gen2. Se esse valor for selecionado, serão exibidas as opções dinâmicas na seção **Enumerador de Arquivos Foreach Data Lake Storage Gen2**.|
   
  **Expressões**  
  Clique ou expanda **Expressões** para exibir a lista de expressões de propriedade existentes. Clique no botão de reticências **(...)** para adicionar uma expressão de propriedade para uma propriedade de enumerador ou edite e avalie uma expressão de propriedade existente.  
@@ -291,7 +295,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  Use o enumerador ADO Foreach para enumerar linhas ou tabelas em um objeto ADO ou ADO.NET armazenado em uma variável. Por exemplo, se o Loop Foreach incluir uma tarefa de Script que grava um conjunto de dados em uma variável, você poderá usar o enumerador ADO Foreach para enumerar linhas no conjunto de dados. Se a variável contiver um conjunto de dados ADO.NET, o enumerador poderá ser configurado para enumerar linhas em várias tabelas ou para enumerar tabelas.  
   
  **Variável de origem de um objeto ADO**  
- Selecione uma variável definida pelo usuário na lista ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Selecione uma variável definida pelo usuário na lista ou clique em \<**Nova variável...** > para criar uma nova variável.  
   
 > [!NOTE]  
 >  A variável deve ter o tipo de dados do Objeto, caso contrário ocorrerá um erro.  
@@ -311,7 +315,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  Use o Enumerador de Conjunto de Linhas de Esquema ADO.NET Foreach para enumerar um esquema para uma fonte de dados específica. Por exemplo, se o Loop Foreach incluir uma tarefa Execute SQL, você poderá usar o Enumerador de Conjunto de Linhas de Esquema ADO.NET Foreach para enumerar esquemas como as colunas no banco de dados **AdventureWorks** e a tarefa Execute SQL para obter as permissões do esquema.  
   
  **Conexão**  
- Selecione um gerenciador de conexões ADO.NET na lista ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões ADO.NET.  
+ Selecione um gerenciador de conexões ADO.NET na lista ou clique em \<**Nova conexão...** > para criar um novo gerenciador de conexões ADO.NET.  
   
 > [!IMPORTANT]  
 >  O gerenciador de conexões ADO.NET deve usar um provedor .NET para OLE DB. Se você estiver se conectando com o SQL Server, o provedor indicado é o Cliente Nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , listado na seção **Provedores de .Net para OleDb** da caixa de diálogo **Gerenciador de conexões** .  
@@ -330,7 +334,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  Você usa o Enumerador Foreach de Variável para enumerar os objetos enumeráveis na variável especificada. Por exemplo, se o Loop Foreach incluir uma tarefa Execute SQL que executa uma consulta e armazena o resultado em uma variável, você poderá usar o Enumerador Foreach de Variável para enumerar os resultados da consulta.  
   
  **Variável**  
- Selecione uma variável na lista ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Selecione uma variável na lista ou clique em \<**Nova variável...** > para criar uma nova variável.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -353,11 +357,11 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **DocumentSource**  
  Se **DocumentSourceType** estiver definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências (...) para fornecer o XML usando a caixa de diálogo **Editor de Origem de Documento**.  
   
- Se **DocumentSourceType** for definido como **Conexão do arquivo**, selecione um Gerenciador de conexões do arquivo ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
+ Se **DocumentSourceType** for definido como **Conexão do arquivo**, selecione um Gerenciador de conexões do arquivo ou clique em \<**Nova conexão...** > para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **DocumentSourceType** for definido como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Se **DocumentSourceType** for definido como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...** > para criar uma nova variável.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -383,11 +387,11 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **OuterXPathString**  
  Se **OuterXPathStringSourceType** for definido como **Entrada direta**, forneça a cadeia de caracteres XPath.  
   
- Se **OuterXPathStringSourceType** for definido como **Conexão do arquivo**, selecione um Gerenciador de conexões do arquivo ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
+ Se **OuterXPathStringSourceType** for definido como **Conexão do arquivo**, selecione um Gerenciador de conexões do arquivo ou clique em \<**Nova conexão...** > para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **OuterXPathStringSourceType** for definido como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Se **OuterXPathStringSourceType** for definido como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...** > para criar uma nova variável.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -406,11 +410,11 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **InnerXPathString**  
  Se **InnerXPathStringSourceType** for definido como **Entrada direta**, forneça a cadeia de caracteres XPath.  
   
- Se **InnerXPathStringSourceType** for definido como **Conexão do arquivo**, selecione um Gerenciador de conexões do arquivo ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
+ Se **InnerXPathStringSourceType** for definido como **Conexão do arquivo**, selecione um Gerenciador de conexões do arquivo ou clique em \<**Nova conexão...** > para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **InnerXPathStringSourceType** for definido como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Se **InnerXPathStringSourceType** for definido como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...** > para criar uma nova variável.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -418,7 +422,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  Use o enumerador SMO Foreach para enumerar objetos SMO (SQL Server Management Object). Por exemplo, se o Loop Foreach incluir uma tarefa Execute SQL, você poderá usar o enumerador SMO Foreach para enumerar as tabelas no banco de dados **AdventureWorks** e executar consultas que contam o número de linhas em cada tabela.  
   
  **Conexão**  
- Selecione um gerenciador de conexões ADO.NET existente ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões ADO.NET existente ou clique em \<**Nova conexão...** > para criar um novo gerenciador de conexões.  
   
  Tópicos relacionados: [Gerenciador de conexões ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configurar Gerenciador de conexões ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
@@ -470,6 +474,9 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **Diretório de blob**  
  Especifique o diretório de blob que contém os arquivos de blob a serem enumerados. O diretório de Blob é uma estrutura hierárquica virtual.  
   
+ **Pesquisar recursivamente**  
+ Especifica se é necessário pesquisar recursivamente nos subdiretórios.
+
  **Filtro de nome de Blob**  
  Especifique um filtro de nome para enumerar arquivos com determinado padrão de nome. Por exemplo, `MySheet*.xls\*` inclui arquivos como MySheet001.xls e MySheetABC.xlsx.  
   
@@ -490,6 +497,18 @@ Especifica um filtro de nome de arquivo. Somente os arquivos cujo nome correspon
   
 **SearchRecursively**  
 Especifica se deve-se pesquisar recursivamente dentro do diretório especificado.  
+
+####  <a name="ForeachBlobFsFile"></a> Enumerador = Enumerador de Arquivos Foreach Data Lake Storage Gen2 
+O **Enumerador de Arquivos Foreach Data Lake Storage Gen2** permite que um pacote do SSIS enumere arquivos no Azure Data Lake Storage Gen2.
+
+**AzureStorageConnection**  
+Especifica um Gerenciador de Conexões do Armazenamento do Azure ou cria um novo que faz referência ao serviço do Data Lake Storage Gen2.
+
+**FolderPath**  
+Especifica o caminho da pasta em que os arquivos serão enumerados.
+
+**SearchRecursively**  
+Especifica se é necessário pesquisar recursivamente na pasta especificada.  
 
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>Página Mapeamentos de Variáveis – Editor de Loop Foreach
  Use a página **Mapeamentos de Variáveis** da caixa de diálogo **Editor de Loop Foreach** para mapear variáveis para o valor da coleção. O valor da variável é atualizado com os valores da coleção em cada iteração do loop.  

@@ -10,28 +10,28 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45ad47f53b36a54843aacb985e3d9c3db3d55d01
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: b555568ae93936c1f8659b52ba6bb731e8398e0f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398329"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781660"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Recursos internacionais do JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Os recursos de internacionalização de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] incluem o seguinte:  
+  Os recursos de internacionalização do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] incluem o seguinte:  
   
 -   Suporte para uma experiência completamente localizada nos mesmos idiomas que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   Suporte para as conversões de linguagem Java para os dados confidenciais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locais  
+-   Suporte para as conversões da linguagem Java para dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com distinção de localidade  
   
 -   Suporte a idiomas internacionais, independentemente do sistema operacional  
   
 -   Suporte para nomes de domínio internacionais (começando com o Microsoft JDBC Driver 6.0 para o SQL Server)  
   
-## <a name="handling-of-character-data"></a>Manipulação de dados de caractere  
+## <a name="handling-of-character-data"></a>Tratando de dados de caractere  
  Dados de caractere no Java são tratados por padrão como Unicode; o objeto de Java **String** representa dados de caracteres Unicode. No driver JDBC, a única exceção a esta regra são os métodos getter e setter de fluxo ASCII que são casos especiais porque usam fluxos de byte com a pressuposição implícita de páginas de código simples e conhecidas (ASCII).  
   
  Além disso, o driver JDBC fornece o **sendStringParametersAsUnicode** propriedade de cadeia de caracteres de conexão. Essa propriedade pode ser usada para especificar que os parâmetros preparados para dados de caracteres sejam enviados como ASCII ou conjunto de caracteres multibyte (MBCS) em vez de Unicode. Para obter mais informações sobre o **sendStringParametersAsUnicode** propriedade de cadeia de caracteres de conexão, consulte [definindo as propriedades de Conexão](../../connect/jdbc/setting-the-connection-properties.md).  

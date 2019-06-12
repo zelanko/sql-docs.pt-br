@@ -1,6 +1,6 @@
 ---
 title: Arquivo de configuração ReportingServicesService | Microsoft Docs
-ms.date: 03/15/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c78156832d2e66d95e4a9868bef2336c4769d9bc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581324"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506628"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>arquivo de configuração ReportingServicesService
 
@@ -26,8 +26,13 @@ ms.locfileid: "65581324"
 O arquivo ReportingServicesService.exe.config inclui configurações de rastreamento.  
   
 ## <a name="file-location"></a>Local do arquivo  
- Este arquivo está localizado na pasta \Reporting Services\Report Server\Bin.  
-  
+Esse arquivo pode estar localizado em qualquer um dos caminhos abaixo:  
+
+``` Paths  
+\Reporting Services\Report Server\Bin  
+\Program Files\Microsoft SQL Server Reporting Services\SSRS\ReportServer\bin  
+```  
+ 
 ## <a name="editing-guidelines"></a>Editando diretrizes  
  Você pode modificar este arquivo para renomear o arquivo de log ou aumentar ou diminuir níveis de rastreamento. Não modifique nenhuma outra configuração. Para obter instruções, consulte [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Para obter mais informações sobre logs de rastreamento, consulte [Log de rastreamento do serviço Servidor de Relatório](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
@@ -85,8 +90,7 @@ O arquivo ReportingServicesService.exe.config inclui configurações de rastream
 |**Componentes**|Especifica os componentes para os quais são criados logs de rastreamento. O valor padrão é **all**. Outros valores válidos para esta configuração incluem os nomes de componentes internos. Não modifique esse valor.|  
 |**Tempo de execução**|Especifica configurações que oferecem suporte para a compatibilidade com versões anteriores. As configurações de tempo de execução são usadas para redirecionar solicitações relacionadas à versão anterior de Microsoft.ReportingServices.Interfaces para a nova versão.<br /><br /> Todas as configurações desta seção são descritas na documentação do produto [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para obter mais informações, procure “Configurações de esquema de tempo de execução” no site do MSDN ou na documentação do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .|  
   
-## <a name="see-also"></a>Consulte Também  
- [Arquivos de configuração do Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Log de rastreamento do serviço Servidor de Relatório](../../reporting-services/report-server/report-server-service-trace-log.md)  
-  
+## <a name="see-also"></a>Confira também  
+[Arquivos de configuração do Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)  
+[Log de rastreamento do serviço Servidor de Relatório](../../reporting-services/report-server/report-server-service-trace-log.md)  
   

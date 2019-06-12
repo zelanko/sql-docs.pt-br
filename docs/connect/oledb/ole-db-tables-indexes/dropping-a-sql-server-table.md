@@ -16,13 +16,13 @@ helpviewer_keywords:
 - dropping tables
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 467c465af5cc7c095feace48b0c3bc5c8feaae2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f743194d0036d338ad39594d7c7f00665d83a224
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695884"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766238"
 ---
 # <a name="dropping-a-sql-server-table"></a>Descartando uma tabela do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

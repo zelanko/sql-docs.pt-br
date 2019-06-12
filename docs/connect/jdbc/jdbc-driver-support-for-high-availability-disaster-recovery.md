@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e2df0607162f5f2cb90ff6b0525fdc530b7be66
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 6e760523026251463f80d7f7e3e14b7e52b36ab2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211816"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781541"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Suporte a JDBC driver para alta disponibilidade e recuperação de desastre
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -70,7 +70,7 @@ Observe que:
   
 -   Conectar-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurada com mais de 64 endereços IP causará uma falha de conexão.  
   
--   O comportamento de um aplicativo que usa a propriedade de conexão do **multiSubnetFailover** não é afetado com base no tipo de autenticação: Autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Autenticação Kerberos ou Autenticação do Windows.  
+-   O comportamento de um aplicativo que usa a propriedade de conexão **multiSubnetFailover** não é afetado com base no tipo de autenticação: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticação, Autenticação Kerberos ou Autenticação do Windows.  
   
 -   Aumente o valor de **loginTimeout** para acomodar o tempo de failover e reduzir as tentativas de repetição de conexão do aplicativo.  
   
