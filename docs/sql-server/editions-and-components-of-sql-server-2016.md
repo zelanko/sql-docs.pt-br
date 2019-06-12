@@ -1,7 +1,7 @@
 ---
 title: Edições e recursos com suporte do SQL Server 2016 | Microsoft Docs
-ms.custom: ''
-ms.date: 05/24/2017
+ms.custom: sqlfreshmay19
+ms.date: 05/29/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -29,21 +29,22 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
+- CPSA
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12b7a440b8f100ff383deda7ad5c1dbc4c8a4578
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: cb908e8ff5af27e58fa97da1ce6b6626c8ed91db
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658430"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701616"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Edições e recursos com suporte do SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Este tópico fornece detalhes dos recursos compatíveis com as edições do SQL Server.  No momento, não há nenhuma alteração nos recursos compatíveis com as edições do SQL Server 2017.  
+Este tópico fornece detalhes dos recursos compatíveis com as edições do SQL Server. No momento, não há nenhuma alteração nos recursos compatíveis com as edições do SQL Server 2017.  
   
 Os requisitos de instalação variam de acordo com as necessidades do aplicativo. As diferentes edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acomodam desempenho, tempo de execução e requisitos de preço exclusivos para organizações e indivíduos. Os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que você instala dependem também dos seus requisitos específicos. As seções a seguir ajudarão você a entender como fazer a melhor escolha entre as edições e os componentes disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
@@ -66,16 +67,17 @@ Para notas de versão mais recentes e informações sobre novidades, consulte o 
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edição|Definição|  
 |---------------------------------------|----------------|  
-|Enterprise|A oferta premium, a edição [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise fornece recursos de datacenter abrangentes de alta tecnologia com desempenho incrivelmente rápido, virtualização ilimitada e business intelligence de ponta a ponta – oferecendo altos níveis de serviço para cargas de trabalho críticas e acesso a visões de dados para usuários finais.|  
+|Enterprise|A oferta Premium, edição [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise, fornece recursos de datacenter abrangentes de alta tecnologia com desempenho incrivelmente rápido, virtualização ilimitada e business intelligence de ponta a ponta – oferecendo altos níveis de serviço para cargas de trabalho críticas e acesso a insights de dados para usuários finais.|  
 |Standard|A edição [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard fornece gerenciamento de dados básicos e bancos de dados de business intelligence para departamentos e pequenas empresas executarem seus aplicativos e dá suporte a ferramentas de desenvolvimento comuns para rede local e em nuvem – permitindo o gerenciamento eficiente de bancos de dados com mínimos recursos de TI.|  
-|Web|A edição[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web é uma opção de baixo custo total de propriedade para hospedagem de sites e VAPs da Web que fornece recursos de escalabilidade, economia e capacidade de gerenciamento para propriedades da Web de pequeno a grande porte.|  
+|Web|O [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition é uma opção de baixo custo total de propriedade para hospedagem de sites e VAPs da Web que fornece recursos de escalabilidade, economia e capacidade de gerenciamento para propriedades da Web de pequeno a grande porte.|  
 |Desenvolvedor|A edição[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer permite que os desenvolvedores criem qualquer tipo de aplicativo com base no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ele inclui todas as funcionalidades da edição Enterprise, mas é licenciado para ser usado como um sistema de teste e desenvolvimento, e não como um servidor de produção. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer é uma opção ideal para pessoas que criam [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] e testam aplicativos.|  
-|Edições Express|A edição Express é o banco de dados gratuito de nível de entrada, ideal para conhecer e criar aplicativos de área de trabalho e aplicativos controlados por dados de pequenos servidores. É a melhor escolha para fornecedores de software independente, desenvolvedores e interessados que criam aplicativos cliente. Se precisar de recursos mais avançados de banco de dados, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express pode ser perfeitamente atualizado para versões mais sofisticadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB, uma versão leve do Express que tem todos os seus recursos de programação, embora seja executado no modo de usuário, e tenha uma instalação rápida e sem nenhuma configuração e uma lista curta de pré-requisitos.|  
+|Edições Express|A edição Express é o banco de dados gratuito de nível de entrada, ideal para conhecer e criar aplicativos de área de trabalho e aplicativos controlados por dados de pequenos servidores. É a melhor escolha para fornecedores de software independente, desenvolvedores e interessados que criam aplicativos cliente. Se precisar de recursos mais avançados de banco de dados, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express pode ser perfeitamente atualizado para versões mais sofisticadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB é uma versão leve do Express que tem todos os seus recursos de programação, embora seja executado no modo de usuário, além de contar com uma instalação rápida e sem nenhuma configuração e uma lista curta de pré-requisitos.|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>Usando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com um servidor de Internet  
  Em um servidor de Internet, como um servidor que executa o IIS (Serviços de Informações da Internet), você instalará normalmente as ferramentas cliente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Essas ferramentas incluem os componentes cliente de conectividade usados por um aplicativo que se conecta a uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-> **OBSERVAÇÃO:**  Apesar de ser possível instalar uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em um computador que executa o IIS, isso é feito normalmente apenas para pequenos sites da Web que possuem um único computador servidor. A maioria dos sites da Web possui sistemas IIS de camada intermediária em um servidor ou em clusters de servidores e bancos de dados em um servidor diferente ou em uma federação de servidores.  
+> [!NOTE]
+> Apesar de ser possível instalar uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em um computador que executa o IIS, isso é feito normalmente apenas para pequenos sites da Web que possuem um único computador servidor. A maioria dos sites da Web possui sistemas IIS de camada intermediária em um servidor ou em clusters de servidores e bancos de dados em um servidor diferente ou em uma federação de servidores.  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>Usando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com aplicativos cliente/servidor  
  Você pode instalar apenas os componentes cliente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em um computador que esteja executando aplicativos cliente/servidor que se conectam diretamente a uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. A instalação dos componentes cliente é também uma boa opção se você administra uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em um servidor de banco de dados ou se planeja desenvolver aplicativos no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -99,7 +101,7 @@ Para notas de versão mais recentes e informações sobre novidades, consulte o 
 |Ferramentas de gerenciamento|Descrição|  
 |----------------------|-----------------|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|O[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] é um ambiente integrado para acessar, configurar, gerenciar, administrar e desenvolver os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] permite que os desenvolvedores e administradores de todos os níveis utilizem o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> Baixe e instale o <br />                [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] de  [Baixar o SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager|O[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager fornece gerenciamento básico de configuração para serviços, protocolos do servidor, protocolos do cliente e aliases do cliente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager|O[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager fornece gerenciamento básico de configuração para serviços, protocolos do servidor, protocolos do cliente e aliases do cliente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
 |[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] fornece uma interface gráfica do usuário para monitorar uma instância do [!INCLUDE[ssDE](../includes/ssde-md.md)] ou do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |[!INCLUDE[ssDE](../includes/ssde-md.md)] Orientador de Otimização|O Orientador de Otimização do[!INCLUDE[ssDE](../includes/ssde-md.md)] ajuda a criar conjuntos de índices, exibições indexadas e partições ideais.|  
 |Cliente Data Quality|Fornece uma interface gráfica do usuário altamente simples e intuitiva para se conectar ao servidor DQS e executar operações de limpeza de dados. Ele também permite monitorar centralmente várias atividades executadas durante a operação de limpeza de dados.|  
@@ -112,7 +114,7 @@ Para notas de versão mais recentes e informações sobre novidades, consulte o 
 
 **Edições Developer e Evaluation**  
 Para saber quais os recursos com suporte nas edições Developer e Evaluation, consulte os recursos listados para o SQL Server Enterprise Edition nas tabelas abaixo.
-Para obter uma lista de recursos que foram adicionados à edição Developer para o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, consulte [Edições do SQL Server 2016 SP1](https://aka.ms/uw6cw4).  
+
 
 A Developer edition continua a dar suporte a apenas um cliente para o [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
@@ -131,7 +133,7 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
   
 <sup>1</sup> O Enterprise Edition com Servidor + licenciamento baseado em CAL (Licença de Acesso para Cliente) (não disponível para novos contratos) é limitado ao máximo de 20 núcleos por instância do SQL Server. Não há limites no modelo de Licenciamento de Servidor Baseado em Núcleo. Para saber mais, confira [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
-<sup>2</sup> Aplica-se a [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. 
+<sup>2</sup> Aplica-se ao [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 como parte da criação de uma CPSA (área de superfície de programação comum) em todas as edições. 
 
 ##  <a name="RDBMSHA"></a> RDBMS High Availability  
   
@@ -159,7 +161,7 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
 
 <sup>2</sup> Para obter mais informações sobre Grupos de disponibilidade básicos, consulte [Grupos de disponibilidade básicos](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
 
-<sup>3</sup> Aplica-se a [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1.
+<sup>3</sup> Aplica-se ao [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1 como parte da criação de uma CPSA (área de superfície de programação comum) em todas as edições. 
   
 ##  <a name="RDBMSSP"></a> RDBMS Scalability and Performance  
   
@@ -177,14 +179,14 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |Contêineres de vários fluxos de arquivos|Sim|Sim <sup>2</sup>|Sim <sup>2</sup>|Sim <sup>2</sup>|Sim <sup>2</sup>|
 |Memória de página grande com reconhecimento para NUMA e alocação de matriz de buffer|Sim|Não <sup>4</sup>|Não|Não|Não|
 |Buffer Pool Extension|Sim|Sim|Não|Não|Não|
-|Administração do recurso de E/S|Sim|Não|Não|Não|Não|
+|Governança de recursos de E/S|Sim|Não|Não|Não|Não|
 |Read-Ahead|Sim|Não|Não|Não|Não|
 |Exame avançado|Sim|Não|Não|Não|Não|
 |Durabilidade atrasada|Sim|Sim|Sim|Sim|Sim|
 
 <sup>1</sup> Tamanho de dados de OLTP na memória e cache do segmento Columnstore são limitados a quantidade de memória especificada por edição na seção limites de escala. Os graus de máximos de paralelismo é limitado. Os graus de paralelismo do processo (DOP) de criação de um índice é limitado a 2 DOP para a Standard Edition e 1 DOP para a Web e a Express Editions. Refere-se a índices de columnstore criados em tabelas baseadas em disco e tabelas com otimização de memória.
 
-<sup>2</sup> Aplica-se a [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. 
+<sup>2</sup> Aplica-se ao [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 como parte da criação de uma CPSA (área de superfície de programação comum) em todas as edições.  
 
 <sup>3</sup> Esse recurso não está incluído na opção de instalação LocalDB.
 
@@ -204,7 +206,8 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |Bancos de dados independentes|Sim|Sim|Sim|Sim|Sim| 
 |Criptografia para backups|Sim|Sim|Não|Não|Não|  
 
-<sup>1</sup> Aplica-se a [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1.  
+<sup>1</sup> Aplica-se ao [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 como parte da criação de uma CPSA (área de superfície de programação comum) em todas as edições.      
+
 ##  <a name="Replication"></a> Replication  
   
 |Recurso|Enterprise|Standard|Web|Express with Advanced Services|Express|   
@@ -264,7 +267,7 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
   
  <sup>1</sup> Para obter mais informações, veja [Considerações para instalação do SQL Server usando SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
  
-<sup>2</sup> Aplica-se a [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1. 
+<sup>2</sup> Aplica-se ao [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 como parte da criação de uma CPSA (área de superfície de programação comum) em todas as edições.      
   
 ##  <a name="DevTools"></a> Development Tools  
   
@@ -302,7 +305,7 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
 
 <sup>1</sup> Expansão com vários nós de computação requer um nó de cabeçalho.
 
-<sup>2</sup> Aplica-se a [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1.
+<sup>2</sup> Aplica-se ao [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 como parte da criação de uma CPSA (área de superfície de programação comum) em todas as edições.     
   
 ## <a name="IS"></a> Integration Services
 
@@ -317,14 +320,15 @@ Para obter informações sobre os recursos do SSIS (Integration Services) com su
 |Recurso|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Criar cubos sem um banco de dados|Sim|Sim|Não|Não|Não |   
-|Gerar automaticamente esquema e data warehouse de preparo|Sim|Sim|Não|Não|Não| 
+|Gerar automaticamente esquema de preparo e data warehouse|Sim|Sim|Não|Não|Não| 
 |captura de dados de alterações|Sim|Sim <sup>1</sup>|Não|Não|Não| 
 |Otimizações de consulta de junção em estrela|Sim|Não|Não|Não|Não| 
 |Configuração escalonável somente leitura do Analysis Services|Sim|Não|Não|Não|Não| 
 |Processamento paralelo de consultas em tabelas e índices particionados|Sim|Não|Não|Não|Não|   
 |Agregação em lote global|Sim|Não|Não|Não|Não| 
 
-<sup>1</sup> Aplica-se a [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] SP1.  
+<sup>1</sup> Aplica-se ao [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 como parte da criação de uma CPSA (área de superfície de programação comum) em todas as edições.     
+
 ##  <a name="SSAS"></a> Analysis Services  
   
 Para obter informações sobre os recursos do Analysis Services compatíveis com as edições do [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], consulte [Recursos do Analysis Services compatíveis com as edições do SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md). 
@@ -379,7 +383,6 @@ Para obter informações sobre os recursos do Business Intelligence Client compa
 > [![Download SSMS](../analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**      
   
 ## <a name="see-also"></a>Consulte Também  
- [Especificações de produto para o SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [Instalação do SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  
   

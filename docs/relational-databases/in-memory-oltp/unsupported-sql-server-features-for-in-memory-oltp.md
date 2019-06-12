@@ -1,7 +1,7 @@
 ---
 title: Recursos do SQL Server sem suporte para OLTP in-memory | Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2017
+ms.date: 05/29/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba432d722bcd6f9df6c797d361a53e0b6dc6dff9
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: cfb3e978c407ecdd3394c2d6ca90df9d5b1f8885
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254952"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506587"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Recursos do SQL Server sem suporte para OLTP na Memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ Os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a segui
 |Servidor vinculado|Você não pode acessar servidores vinculados na mesma consulta ou transação como tabelas com otimização de memória. Para obter mais informações, veja [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).|  
 |Registro em massa|Independentemente do modelo de recuperação do banco de dados, todas as operações nas tabelas duráveis com otimização de memória sempre são completamente registradas.|  
 |Log mínimo|O log mínimo não tem suporte para tabelas com otimização de memória. Para obter mais informações sobre log mínimo, veja [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) e [Pré-requisitos para log mínimo na importação em massa](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
-|controle de alterações|O controle de alterações pode ser habilitado em um banco de dados com objetos OLTP na memória. No entanto, as alterações em tabelas com otimização de memória não são rastreadas.|  
+|controle de alterações|O controle de alterações não pode ser habilitado em um banco de dados com objetos OLTP in-memory. |
 | gatilhos DDL | Os gatilhos DDL no nível de servidor e de banco de dados não têm suporte com tabelas OLTP in-memory e módulos compilados nativamente. |  
-| Change Data Capture (CDC) | O CDC não pode ser usado com um banco de dados que tenha tabelas com otimização de memória, pois ele usa um gatilho DDL para DROP TABLE internamente. |  
+| Change Data Capture (CDC) | O SQL Server 2017 CU15 e o suporte superior habilitam o CDC em um banco de dados com tabelas otimizadas para memória. Isso só é aplicável ao banco de dados e a todas as tabelas em disco no banco de dados. Nas versões anteriores do SQL Server, o CDC não pode ser usado com um banco de dados com tabelas com otimização de memória, pois o CDC usa internamente um gatilho DDL para DROP TABLE. |  
 | Modo fibra | O modo fibra não tem suporte em tabelas com otimização de memória:<br /><br />Se o modo fibra estiver ativo, não será possível criar bancos de dados com grupos de arquivos com otimização de memória ou adicionar grupos de arquivos com otimização de memória a bancos de dados existentes.<br /><br />Você pode habilitar o modo fibra se houver bancos de dados com grupos de arquivos com otimização de memória. No entanto, habilitar o modo fibra exige a reinicialização do servidor. Nessa situação, haverá falha na recuperação dos bancos de dados com grupos de arquivos com otimização de memória. Em seguida, uma mensagem de erro sugerirá que você desabilite o modo fibra para usar bancos de dados com grupos de arquivos com otimização de memória.<br /><br />Haverá falha ao anexar e restaurar bancos de dados com grupos de arquivos com otimização de memória se o modo fibra estiver ativo. Os bancos de dados será marcado como suspeito.<br /><br />Para saber mais, veja [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md). |  
 |Limitação do Service Broker|Não é possível acessar uma fila de um procedimento armazenado originalmente compilado.<br /><br /> Não é possível acessar uma fila em um banco de dados remoto em uma transação que acessa tabelas com otimização de memória.|  
 |Replicação em assinantes|Há suporte para a replicação transacional para tabelas com otimização de memória em assinantes, mas com algumas restrições. Para obter mais informações, veja [Replicação para assinantes de tabela com otimização de memória](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)|  

@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1a13bc9ae6b49d4623c405a2501f2e7574f79aba
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: bee1497ec928f1ac3abcd39ca052301ad5b6bfc9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198326"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785116"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL)
 
@@ -210,7 +210,7 @@ SET
     | MAX_STORAGE_SIZE_MB = number
     | INTERVAL_LENGTH_MINUTES = number
     | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
-    | QUERY_CAPTURE_MODE = { ALL | AUTO | NONE }
+    | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
     | MAX_PLANS_PER_QUERY = number
     | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
     | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
@@ -218,10 +218,10 @@ SET
 
 <query_capture_policy_option_list> :: =
 {
-    EXECUTION_COUNT = number
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
     | TOTAL_COMPILE_CPU_TIME_MS = number
-    | TOTAL_EXECUTION_CPU_TIME_MS = number
-    | STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | TOTAL_EXECUTION_CPU_TIME_MS = number      
 }
 
 <recovery_option> ::=
@@ -540,7 +540,7 @@ EMERGENCY
 O banco de dados está marcado como READ_ONLY, o log está desabilitado e o acesso é limitado aos membros da função de servidor fixa sysadmin. EMERGENCY é usado principalmente para a solução de problemas. Por exemplo, um banco de dados marcado como suspeito devido a um arquivo de log corrompido pode ser definido com o estado EMERGENCY. Essa configuração permite habilitar o acesso somente leitura do administrador do sistema ao banco de dados. Apenas membros da função de servidor fixa sysadmin podem definir um banco de dados com o estado EMERGENCY.
 
 > [!NOTE]
-> **Permissões:** A permissão ALTER DATABASE para o banco de dados de assunto é necessária para alterar um banco de dados para o estado offline ou de emergência. A permissão ALTER ANY DATABASE no nível do servidor é necessária para mover um banco de dados de offline para online.
+> **Permissões:** a permissão `ALTER DATABASE` do banco de dados de assunto é necessária para alterar um banco de dados para o estado offline ou de emergência. A permissão `ALTER ANY DATABASE` no nível do servidor é necessária para mover um banco de dados de offline para online.
 
 Você pode determinar o status dessa opção examinando as colunas state e state_desc na exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Você também pode determinar o status examinando a propriedade Status da função [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md). Para obter mais informações, consulte [Database States](../../relational-databases/databases/database-states.md).
 
@@ -1367,8 +1367,9 @@ SET QUERY_STORE = ON
       WAIT_STATS_CAPTURE_MODE = ON,
       QUERY_CAPTURE_MODE = CUSTOM,
       QUERY_CAPTURE_POLICY = (
-        EXECUTION_COUNT = 30
-        TOTAL_COMPILE_CPU_TIME_MS = 1000
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
         TOTAL_EXECUTION_CPU_TIME_MS = 100 
       )
     );
@@ -1540,44 +1541,55 @@ SET
 
 ## <a name="arguments"></a>Argumentos
 
-*database_name* É o nome do banco de dados a ser modificado.
+*database_name*         
+É o nome do banco de dados a ser modificado.
 
-CURRENT `CURRENT` executa a ação no banco de dados atual. `CURRENT` não é compatível com todas as opções em todos os contextos. Se `CURRENT` falhar, forneça o nome do banco de dados.
+CURRENT         
+`CURRENT` executa a ação no banco de dados atual. `CURRENT` não é compatível com todas as opções em todos os contextos. Se `CURRENT` falhar, forneça o nome do banco de dados.
 
 **\<auto_option> ::=**
 
 Controla opções automáticas.
-<a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF } ON O otimizador de consulta cria estatísticas em colunas únicas em predicados de consulta, conforme necessário, para melhorar planos e desempenho de consulta. Estas estatísticas de coluna única são criadas quando o otimizador de consulta compila consultas. As estatísticas de coluna única só são criadas em colunas que ainda não são a primeira de um objeto de estatísticas existente.
+<a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }         
+ON         
+O otimizador de consulta cria estatísticas em colunas únicas em predicados de consulta, conforme necessário, para melhorar planos e desempenho de consulta. Estas estatísticas de coluna única são criadas quando o otimizador de consulta compila consultas. As estatísticas de coluna única só são criadas em colunas que ainda não são a primeira de um objeto de estatísticas existente.
 
 O padrão é ON. Nós recomendamos que você use a configuração padrão para a maioria dos bancos de dados.
 
-OFF O otimizador de consulta não cria estatísticas em colunas únicas em predicados de consulta quando estiver compilando consultas. Definir essa opção como OFF pode acarretar planos de consulta de qualidade inferior e menor desempenho de consulta.
+OFF         
+O otimizador de consulta não cria estatísticas em colunas únicas em predicados de consulta quando está compilando as consultas. Definir essa opção como OFF pode acarretar planos de consulta de qualidade inferior e menor desempenho de consulta.
 
 Você pode determinar o status dessa opção examinando a coluna is_create_stats_on na exibição do catálogo sys.databases. Você também pode determinar o status examinando a propriedade IsAutoCreateStatistics da função DATABASEPROPERTYEX.
 
 Para obter mais informações, veja a seção “Usando as opções de estatísticas em todo o banco de dados” em [Estatística](../../relational-databases/statistics/statistics.md).
 
-INCREMENTAL = ON | OFF Defina AUTO_CREATE_STATISTICS como ON e defina INCREMENTAL como ON. Essa configuração cria estatísticas criadas automaticamente como incrementais sempre que há suporte para estatísticas incrementais. O valor padrão é OFF. Para saber mais, veja [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
+INCREMENTAL = ON | OFF         
+Defina AUTO_CREATE_STATISTICS como ON e INCREMENTAL como ON. Essa configuração cria estatísticas criadas automaticamente como incrementais sempre que há suporte para estatísticas incrementais. O valor padrão é OFF. Para saber mais, veja [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
 
-<a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF } ON Ao ser definida como ON, os arquivos do banco de dados serão candidatos à redução periódica.
+<a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF }         
+ON         
+Os arquivos de banco de dados são candidatos à redução periódica.
 
 Arquivos de dados e arquivos de log podem ser reduzidos automaticamente. AUTO_SHRINK reduzirá o tamanho do log de transações somente se o banco de dados estiver definido como modelo de recuperação SIMPLE ou se o log tiver sido submetido a backup. Quando definido como OFF, os arquivos de banco de dados não são reduzidos automaticamente durante as verificações periódicas de espaço não utilizado.
 
 A opção AUTO_SHRINK faz com que os arquivos sejam reduzidos quando mais que 25% do arquivo contém espaço não utilizado. A opção faz com que o arquivo diminua em um dos dois tamanhos. Ele reduz o que for maior:
 
-- o tamanho em que 25 por cento do arquivo é o espaço não utilizado
+- o tamanho em que 25% do arquivo é o espaço não utilizado
 - o tamanho do arquivo quando ele foi criado
 
 Não é possível reduzir um banco de dados somente leitura.
 
-OFF Os arquivos de banco de dados não são reduzidos automaticamente durante as verificações periódicas de espaço não utilizado.
+OFF         
+Os arquivos de banco de dados não são reduzidos automaticamente durante as verificações periódicas de espaço não utilizado.
 
 Você pode determinar o status dessa opção examinando a coluna is_auto_shrink_on na exibição do catálogo sys.databases. Você também pode determinar o status examinando a propriedade IsAutoShrink da função DATABASEPROPERTYEX.
 
 > [!NOTE]
 > A opção AUTO_SHRINK não está disponível em um banco de dados independente.
 
-<a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF } ON Especifica que o otimizador de consulta atualiza as estatísticas quando elas são usadas por uma consulta e quando possivelmente estão desatualizadas. As estatísticas ficam desatualizadas depois que operações de inserção, atualização, exclusão ou mesclagem alteram a distribuição de dados na tabela ou na exibição indexada. O otimizador de consulta determina quando estatísticas podem estar desatualizadas contando o número de modificações de dados desde a última atualização das estatísticas e comparando o número de modificações a um limite. O limite se baseia no número de linhas na tabela ou na exibição indexada.
+<a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }         
+ON         
+Especifica que o otimizador de consulta atualiza as estatísticas quando elas são usadas por uma consulta e quando podem estar desatualizadas. As estatísticas ficam desatualizadas depois que operações de inserção, atualização, exclusão ou mesclagem alteram a distribuição de dados na tabela ou na exibição indexada. O otimizador de consulta determina quando estatísticas podem estar desatualizadas contando o número de modificações de dados desde a última atualização das estatísticas e comparando o número de modificações a um limite. O limite se baseia no número de linhas na tabela ou na exibição indexada.
 
 O otimizador de consulta verifica se há estatísticas desatualizadas antes de compilar uma consulta e executa um plano de consulta em cache. O otimizador de consulta usa as colunas, as tabelas e as exibições indexadas no predicado de consulta para determinar quais estatísticas podem estar desatualizadas. O otimizador de consulta determina essas informações antes de compilar uma consulta. Antes de executar um plano de consulta em cache, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica se o plano de consulta faz referência a estatísticas atualizadas.
 
@@ -1587,19 +1599,23 @@ O padrão é ON. Nós recomendamos que você use a configuração padrão para a
 
 Use a opção AUTO_UPDATE_STATISTICS_ASYNC para especificar se as estatísticas são atualizadas de forma síncrona ou assíncrona.
 
-OFF Especifica que o otimizador de consulta não atualiza estatísticas quando elas são usadas por uma consulta. O otimizador de consulta também não atualiza estatísticas quando elas podem estar desatualizadas. Definir essa opção como OFF pode acarretar planos de consulta de qualidade inferior e menor desempenho de consulta.
+OFF         
+Especifica que o otimizador de consulta não atualiza as estatísticas quando elas são usadas por uma consulta. O otimizador de consulta também não atualiza estatísticas quando elas podem estar desatualizadas. Definir essa opção como OFF pode acarretar planos de consulta de qualidade inferior e menor desempenho de consulta.
 
 Você pode determinar o status dessa opção examinando a coluna is_auto_update_stats_on na exibição do catálogo sys.databases. Você também pode determinar o status examinando a propriedade IsAutoUpdateStatistics da função DATABASEPROPERTYEX.
 
 Para obter mais informações, veja a seção “Usando as opções de estatísticas em todo o banco de dados” em [Estatística](../../relational-databases/statistics/statistics.md).
 
-<a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } ON Especifica que atualizações de estatísticas para a opção AUTO_UPDATE_STATISTICS são assíncronas. O otimizador de consulta não aguarda a conclusão das atualizações de estatísticas para compilar consultas.
+<a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }         
+ON         
+Especifica que as atualizações de estatísticas para a opção AUTO_UPDATE_STATISTICS são assíncronas. O otimizador de consulta não aguarda a conclusão das atualizações de estatísticas para compilar consultas.
 
 Definir essa opção como ON não tem nenhum efeito, a menos que AUTO_UPDATE_STATISTICS seja definida como ON.
 
 Por padrão, a opção AUTO_UPDATE_STATISTICS_ASYNC é definida como OFF e o otimizador de consulta atualiza estatísticas de forma síncrona.
 
-OFF Especifica que atualizações de estatísticas para a opção AUTO_UPDATE_STATISTICS são síncronas. O otimizador de consulta aguarda a conclusão das atualizações de estatísticas para compilar consultas.
+OFF         
+Especifica que as atualizações de estatísticas para a opção AUTO_UPDATE_STATISTICS são síncronas. O otimizador de consulta aguarda a conclusão das atualizações de estatísticas para compilar consultas.
 
 Definir essa opção como OFF não tem nenhum efeito, a menos que AUTO_UPDATE_STATISTICS seja definida como ON.
 
@@ -1607,50 +1623,70 @@ Você pode determinar o status dessa opção examinando a coluna is_auto_update_
 
 Para obter mais informações que descrevem quando usar atualizações de estatísticas síncronas ou assíncronas, veja a seção que "Usando as opções de estatísticas em todo o banco de dados" em [Estatísticas](../../relational-databases/statistics/statistics.md).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=** 
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**          
 **Aplica-se a**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
 
 Controla opções automáticas para [ajuste automático](../../relational-databases/automatic-tuning/automatic-tuning.md).
 
-AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } AUTO Configurar o valor de ajuste automático como AUTO aplicará a configuração padrão do Azure ao ajuste automático.
+AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM }         
+AUTO         
+Configurar o valor de ajuste automático como AUTO aplicará a configuração padrão do Azure ao ajuste automático.
 
-INHERIT Ao usar o valor INHERIT, você herdará a configuração padrão do servidor pai. Isso será útil principalmente se você quiser personalizar a configuração de ajuste automático em um servidor pai e fazer com que todos os bancos de dados deste servidor herdem (INHERIT) essas configurações personalizadas. Observe que para a herança funcionar, as três opções de ajuste individuais, FORCE_LAST_GOOD_PLAN, CREATE_INDEX e DROP_INDEX, precisam ser configuradas como DEFAULT nos bancos de dados.
+INHERIT         
+Ao usar o valor INHERIT, você herdará a configuração padrão do servidor pai. Isso será útil principalmente se você quiser personalizar a configuração de ajuste automático em um servidor pai e fazer com que todos os bancos de dados deste servidor herdem (INHERIT) essas configurações personalizadas. Observe que para a herança funcionar, as três opções de ajuste individuais, FORCE_LAST_GOOD_PLAN, CREATE_INDEX e DROP_INDEX, precisam ser configuradas como DEFAULT nos bancos de dados.
 
-CUSTOM Ao usar o valor CUSTOM, você precisará personalizar manualmente cada opção de configuração de ajuste automático disponível nos bancos de dados.
+CUSTOM         
+Ao usar o valor CUSTOM, você precisará personalizar manualmente cada opção de configuração de ajuste automático disponível nos bancos de dados.
 
 Habilita ou desabilita a opção `CREATE_INDEX` de [ajuste automático](../../relational-databases/automatic-tuning/automatic-tuning.md) do gerenciamento de índices automático.
 
-CREATE_INDEX = { DEFAULT | ON | OFF } DEFAULT Herda as configurações padrão do servidor. Nesse caso, as opções de habilitar ou desabilitar os recursos individuais de ajuste automático são definidas no nível do servidor.
+CREATE_INDEX = { DEFAULT | ON | OFF }         
+DEFAULT         
+Herda as configurações padrão do servidor. Nesse caso, as opções de habilitar ou desabilitar os recursos individuais de ajuste automático são definidas no nível do servidor.
 
-ON Quando habilitado, os índices ausentes são gerados de forma automática em um banco de dados. Após a criação do índice, os ganhos de desempenho da carga de trabalho são verificados. Quando o índice criado não oferecer mais benefícios para o desempenho da carga de trabalho, será automaticamente revertido. Os índices criados automaticamente são sinalizados como gerados pelo sistema.
+ON         
+Quando habilitado, os índices ausentes são gerados de forma automática em um banco de dados. Após a criação do índice, os ganhos de desempenho da carga de trabalho são verificados. Quando o índice criado não oferecer mais benefícios para o desempenho da carga de trabalho, será automaticamente revertido. Os índices criados automaticamente são sinalizados como gerados pelo sistema.
 
-OFF Não gera índices ausentes de modo automático no banco de dados.
+OFF         
+Não gera índices ausentes de modo automático no banco de dados.
 
 Habilita ou desabilita a opção `DROP_INDEX` de [ajuste automático](../../relational-databases/automatic-tuning/automatic-tuning.md) do gerenciamento de índices automático.
 
-DROP_INDEX = { DEFAULT | ON | OFF } DEFAULT Herda configurações padrão do servidor. Nesse caso, as opções de habilitar ou desabilitar os recursos individuais de ajuste automático são definidas no nível do servidor.
+DROP_INDEX = { DEFAULT | ON | OFF }         
+DEFAULT         
+Herda as configurações padrão do servidor. Nesse caso, as opções de habilitar ou desabilitar os recursos individuais de ajuste automático são definidas no nível do servidor.
 
-ON Remove automaticamente os índices duplicados ou que não são mais úteis da carga de trabalho de desempenho.
+ON         
+Remove automaticamente os índices duplicados ou que não são mais úteis da carga de trabalho de desempenho.
 
-OFF Não remove índices ausentes de modo automático no banco de dados.
+OFF         
+Não remove índices ausentes automaticamente no banco de dados.
 
 Habilita ou desabilita a opção `FORCE_LAST_GOOD_PLAN` de [ajuste automático](../../relational-databases/automatic-tuning/automatic-tuning.md) da correção de plano automática.
 
-FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF } DEFAULT Herda configurações padrão do servidor. Nesse caso, as opções de habilitar ou desabilitar os recursos individuais de ajuste automático são definidas no nível do servidor.
+FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }         
+DEFAULT         
+Herda as configurações padrão do servidor. Nesse caso, as opções de habilitar ou desabilitar os recursos individuais de ajuste automático são definidas no nível do servidor.
 
-ON O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] força automaticamente o último plano sabidamente válido nas consultas [!INCLUDE[tsql-md](../../includes/tsql-md.md)] em que o novo plano SQL provoca regressões de desempenho. O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] monitora continuamente o desempenho de consultas da consulta [!INCLUDE[tsql-md](../../includes/tsql-md.md)] com o plano forçado. Se não houver ganhos de desempenho, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuará usando o último plano válido conhecido. Se os ganhos de desempenho não forem detectados, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] produzirá um novo plano SQL. A instrução falhará se o Repositório de Consultas não estiver habilitado ou não estiver no modo de *Leitura-Gravação*.
+ON         
+O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] força automaticamente o último plano sabidamente válido nas consultas [!INCLUDE[tsql-md](../../includes/tsql-md.md)] em que o novo plano SQL provoca regressões de desempenho. O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] monitora continuamente o desempenho de consultas da consulta [!INCLUDE[tsql-md](../../includes/tsql-md.md)] com o plano forçado. Se não houver ganhos de desempenho, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuará usando o último plano válido conhecido. Se os ganhos de desempenho não forem detectados, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] produzirá um novo plano SQL. A instrução falhará se o Repositório de Consultas não estiver habilitado ou não estiver no modo de *Leitura-Gravação*.
 
-OFF O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] relata possíveis regressões de desempenho de consulta causadas por alterações de plano SQL na exibição [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). No entanto, essas recomendações não são aplicadas automaticamente. Usuário pode monitorar recomendações ativas e corrigir problemas identificados aplicando scripts [!INCLUDE[tsql-md](../../includes/tsql-md.md)] mostrados na exibição. Este é o valor padrão.
+OFF         
+O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] relata possíveis regressões de desempenho de consulta causadas por alterações de plano SQL na exibição [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). No entanto, essas recomendações não são aplicadas automaticamente. Usuário pode monitorar recomendações ativas e corrigir problemas identificados aplicando scripts [!INCLUDE[tsql-md](../../includes/tsql-md.md)] mostrados na exibição. Este é o valor padrão.
 
-**\<change_tracking_option> ::=**
+**\<change_tracking_option> ::=**         
 
 Controla as opções de controle de alterações. É possível habilitar o controle de alterações, definir opções, alterar opções e desabilitar o controle de alterações. Para obter exemplos, confira a seção Exemplos mais adiante neste artigo.
 
-ON Habilita o controle de alterações no banco de dados. Quando você habilita o controle de alterações, também pode definir as opções AUTO CLEANUP e CHANGE RETENTION.
+ON         
+Habilita o controle de alterações no banco de dados. Quando você habilita o controle de alterações, também pode definir as opções AUTO CLEANUP e CHANGE RETENTION.
 
-AUTO_CLEANUP = { ON | OFF } ON Indica se as informações de controle de alterações são automaticamente removidas depois do período de retenção especificado.
+AUTO_CLEANUP = { ON | OFF }         
+ON         
+As informações de controle de alterações são removidas automaticamente após o período de retenção especificado.
 
-OFF Os dados de controle de alterações não são removidos do banco de dados.
+OFF         
+Os dados de controle de alterações não são removidos do banco de dados.
 
 CHANGE_RETENTION =*retention_period* { DAYS | HOURS | MINUTES } Especifica o período mínimo para manter informações no banco de dados de controle de alterações. Os dados serão removidos somente quando o valor AUTO_CLEANUP for ON.
 
@@ -1658,123 +1694,158 @@ CHANGE_RETENTION =*retention_period* { DAYS | HOURS | MINUTES } Especifica o per
 
 O período de retenção padrão é de 2 dias. O período de retenção mínimo é de 1 minuto. O tipo de retenção padrão é DAYS.
 
-OFF Desabilita o controle de alterações no banco de dados. Desabilite o controle de alterações em todas as tabelas antes de desabilitá-lo no banco de dados.
+OFF         
+Desabilita o controle de alterações no banco de dados. Desabilite o controle de alterações em todas as tabelas antes de desabilitá-lo no banco de dados.
 
 **\<cursor_option> ::=**
 
 Controla opções de cursor.
 
-CURSOR_CLOSE_ON_COMMIT { ON | OFF } ON Todos os cursores abertos quando você confirma ou reverte uma transação são fechados.
+CURSOR_CLOSE_ON_COMMIT { ON | OFF }         
+ON         
+Todos os cursores abertos quando você confirma ou reverte uma transação são fechados.
 
-OFF Os cursores permanecem abertos quando uma transação é confirmada; uma transação revertida fechará todos os cursores, exceto aqueles definidos como INSENSITIVE ou STATIC.
+OFF         
+Os cursores permanecem abertos quando uma transação é confirmada; uma transação revertida fecha todos os cursores, exceto aqueles definidos como INSENSITIVE ou STATIC.
 
 As configurações no nível de conexão que são definidas com o uso da instrução SET substituem a configuração de banco de dados padrão por CURSOR_CLOSE_ON_COMMIT. Clientes ODBC e OLE DB emitem uma configuração CURSOR_CLOSE_ON_COMMIT de instrução SET no nível de conexão como desativada para a sessão por padrão. Os clientes executam a instrução, quando você se conecta a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais, confira [SET CURSOR_CLOSE_ON_COMMIT](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md).
 
-É possível determinar o status dessa opção examinando-se a coluna is_cursor_close_on_commit_on na exibição do catálogo sys.databases ou a propriedade IsCloseCursorsOnCommitEnabled da função DATABASEPROPERTYEX. O cursor é implicitamente desalocado somente na desconexão. Para saber mais, confira [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md).
+É possível determinar o status dessa opção examinando a coluna is_cursor_close_on_commit_on na exibição do catálogo sys.databases ou a propriedade `IsCloseCursorsOnCommitEnabled` da função DATABASEPROPERTYEX. O cursor é implicitamente desalocado somente na desconexão. Para saber mais, confira [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md).
 
-**\<db_encryption_option> ::=**
+**\<db_encryption_option> ::=**         
 
 Controla o estado de criptografia do banco de dados.
 
-ENCRYPTION {ON | OFF} Define o banco de dados a ser criptografado (ON) ou não criptografado (OFF). Para saber mais sobre criptografia de banco de dados, confira [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md) e [Transparent Data Encryption com o Banco de Dados SQL do Azure](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
+ENCRYPTION {ON | OFF}         
+Define o banco de dados a ser criptografado (ON) ou não criptografado (OFF). Para saber mais sobre criptografia de banco de dados, confira [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md) e [Transparent Data Encryption com o Banco de Dados SQL do Azure](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
 
 Quando a criptografia estiver habilitada no nível de banco de dados, todos os grupos de arquivos serão criptografados. Qualquer novo grupo de arquivos herdará a propriedade criptografada. Se algum grupo de arquivos do banco de dados for definido como **READ ONLY**, haverá falha na operação de criptografia de banco de dados.
 
 É possível ver o estado da criptografia do banco de dados usando a exibição de gerenciamento dinâmico [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).
 
-**\<db_update_option> ::=**
+**\<db_update_option> ::=**         
 
 Controla se atualizações são permitidas no banco de dados.
 
-READ_ONLY Os usuários podem ler dados do banco de dados, mas não os modificar.
+READ_ONLY         
+Os usuários podem ler dados do banco de dados, mas não os modificar.
 
 > [!NOTE]
 >Para melhorar o desempenho da consulta, atualize as estatísticas antes de configurar um banco de dados como READ_ONLY. Se forem necessárias estatísticas adicionais depois de um banco de dados ser definido como READ_ONLY, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] criará estatísticas no tempdb. Para obter mais informações sobre estatísticas para um banco de dados somente leitura, veja [Estatísticas](../../relational-databases/statistics/statistics.md).
 
-READ_WRITE O banco de dados está disponível para operações de leitura e gravação.
+READ_WRITE         
+O banco de dados está disponível para operações de leitura e gravação.
 
 Para alterar esse estado, é necessário ter acesso exclusivo ao banco de dados. Para obter mais informações, consulte a cláusula SINGLE_USER.
 
 > [!NOTE]
 > Nos bancos de dados federados do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], SET { READ_ONLY | READ_WRITE } é desabilitado.
 
-**\<db_user_access_option> ::=**
+**\<db_user_access_option> ::=**         
 
 Controla o acesso de usuários ao banco de dados.
 
-RESTRICTED_USER RESTRICTED_USER permite que somente os membros da função de banco de dados fixa db_owner e das funções de servidor fixas dbcreator e sysadmin conectem-se ao banco de dados, mas não limita seu número. Todas as conexões com o banco de dados são desconectadas no período especificado pela cláusula de término da instrução ALTER DATABASE. Depois que o banco de dados fizer a transição para o estado RESTRICTED_USER, as tentativas de conexão realizadas por usuários não qualificados serão recusadas. **RESTRICTED_USER** não pode ser modificado com a instância gerenciada do Banco de Dados SQL.
+RESTRICTED_USER         
+RESTRICTED_USER permite que somente os membros da função de banco de dados fixa db_owner e das funções de servidor fixas dbcreator e sysadmin conectem-se ao banco de dados, mas não limita seu número. Todas as conexões com o banco de dados são desconectadas no período especificado pela cláusula de término da instrução ALTER DATABASE. Depois que o banco de dados fizer a transição para o estado RESTRICTED_USER, as tentativas de conexão realizadas por usuários não qualificados serão recusadas. **RESTRICTED_USER** não pode ser modificado com a instância gerenciada do Banco de Dados SQL.
 
-MULTI_USER Todos os usuários com permissões apropriadas para se conectar ao banco de dados são permitidos.
+MULTI_USER         
+Todos os usuários com permissões apropriadas para se conectar ao banco de dados são permitidos.
 
 Você pode determinar o status dessa opção examinando a coluna user_access na exibição do catálogo sys.databases ou a propriedade UserAccess da função DATABASEPROPERTYEX.
 
-**\<delayed_durability_option> ::=**
+**\<delayed_durability_option> ::=**         
 
 Controla se as transações são confirmadas completamente duráveis ou duráveis atrasadas.
 
-DISABLED Todas as transações após SET DISABLED são completamente duráveis. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
+DISABLED         
+Todas as transações após SET DISABLED são completamente duráveis. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
 
-ALLOWED Todas as transações após SET ALLOWED são completamente duráveis ou duráveis atrasadas, dependendo da opção de durabilidade definida no bloco atômico ou instrução de confirmação.
+ALLOWED         
+Todas as transações após SET ALLOWED são completamente duráveis ou duráveis atrasadas, dependendo da opção de durabilidade definida no bloco atômico ou na instrução de confirmação.
 
-FORCED Todas as transações após SET FORCED são duráveis atrasadas. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
+FORCED         
+Todas as transações após SET FORCED são duráveis atrasadas. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
 
-**\<PARAMETERIZATION_option> ::=**
+**\<PARAMETERIZATION_option> ::=**         
 
 Controla a opção de parametrização.
 
-PARAMETERIZATION { SIMPLE | FORCED } SIMPLE As consultas são parametrizadas com base no comportamento padrão do banco de dados.
+PARAMETERIZATION { SIMPLE | FORCED }         
+SIMPLE         
+As consultas são parametrizadas com base no comportamento padrão do banco de dados.
 
-FORCED [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parametriza todas as consultas feitas no banco de dados.
+FORCED         
+O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parametriza todas as consultas no banco de dados.
 
-A configuração atual dessa opção pode ser determinada examinando-se a coluna is_parameterization_forced na exibição do catálogo sys.databases.
+A configuração atual desta opção pode ser determinada por meio do exame da coluna `is_parameterization_forced` na exibição do catálogo `sys.databases`.
 
 **\<query_store_options> ::=**
 
-ON | OFF | CLEAR [ ALL ] Controla se o repositório de consultas está habilitado neste banco de dados, além de controlar a remoção de conteúdo do repositório de consultas.
+ON | OFF | CLEAR [ ALL ]         
+Controla se o repositório de consultas está habilitado nesse banco de dados, além de controlar a remoção do conteúdo do repositório de consultas.
 
-ON Habilita o repositório de consultas.
+ON         
+Habilita o repositório de consultas.
 
-OFF Desabilita o repositório de consultas. Este é o valor padrão.
+OFF         
+Desabilita o repositório de consultas. Este é o valor padrão.
 
-CLEAR Remove o conteúdo do repositório de consultas.
+CLEAR         
+Remove o conteúdo do repositório de consultas.
 
-OPERATION_MODE Descreve o modo de operação do repositório de consultas. Os valores válidos são READ_ONLY e READ_WRITE. No modo READ_WRITE, o repositório de consultas coleta e persiste as informações das estatísticas de execução do plano de consulta e do tempo de execução. No modo READ_ONLY, as informações podem ser lidas do repositório de consultas, mas novas informações não são adicionadas. Se o espaço máximo alocado do repositório de consultas tiver se esgotado, o repositório de consultas alterará o modo de operação para READ_ONLY.
+OPERATION_MODE         
+Descreve o modo de operação do repositório de consultas. Os valores válidos são READ_ONLY e READ_WRITE. No modo READ_WRITE, o repositório de consultas coleta e persiste as informações das estatísticas de execução do plano de consulta e do tempo de execução. No modo READ_ONLY, as informações podem ser lidas do repositório de consultas, mas novas informações não são adicionadas. Se o espaço máximo alocado do repositório de consultas tiver se esgotado, o repositório de consultas alterará o modo de operação para READ_ONLY.
 
-CLEANUP_POLICY Descreve a política de retenção de dados do repositório de consultas. STALE_QUERY_THRESHOLD_DAYS determina o número de dias que as informações de uma consulta são mantidas no repositório de consultas. STALE_QUERY_THRESHOLD_DAYS é do tipo **bigint**.
+CLEANUP_POLICY         
+Descreve a política de retenção de dados do repositório de consultas. STALE_QUERY_THRESHOLD_DAYS determina o número de dias que as informações de uma consulta são mantidas no repositório de consultas. STALE_QUERY_THRESHOLD_DAYS é do tipo **bigint**.
 
-DATA_FLUSH_INTERVAL_SECONDS Determina a frequência na qual os dados gravados no repositório de consultas são persistidos no disco. Para otimizar o desempenho, os dados coletados pelo repositório de consultas são gravados de maneira assíncrona no disco. A frequência em que essa transferência assíncrona ocorre é configurada usando o argumento DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS é do tipo **bigint**.
+DATA_FLUSH_INTERVAL_SECONDS         
+Determina a frequência na qual os dados gravados no repositório de consultas é persistida no disco. Para otimizar o desempenho, os dados coletados pelo repositório de consultas são gravados de maneira assíncrona no disco. A frequência em que essa transferência assíncrona ocorre é configurada usando o argumento DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS é do tipo **bigint**.
 
-MAX_STORAGE_SIZE_MB Determina o espaço alocado ao repositório de consultas. MAX_STORAGE_SIZE_MB é do tipo **bigint**.
+MAX_STORAGE_SIZE_MB         
+Determina o espaço alocado para o repositório de consultas. MAX_STORAGE_SIZE_MB é do tipo **bigint**.
 
-INTERVAL_LENGTH_MINUTES Determina o intervalo de tempo em que os dados de estatísticas de execução do tempo de execução são agregados no repositório de consultas. Para otimizar o uso de espaço, as estatísticas de execução de tempo de execução no repositório de estatísticas de tempo de execução são agregadas em uma janela de tempo fixo. Essa janela de tempo fixo é configurada usando o argumento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES é do tipo **bigint**.
+INTERVAL_LENGTH_MINUTES         
+Determina o intervalo de tempo em que os dados de estatísticas de execução do tempo de execução são agregados no repositório de consultas. Para otimizar o uso de espaço, as estatísticas de execução de tempo de execução no repositório de estatísticas de tempo de execução são agregadas em uma janela de tempo fixo. Essa janela de tempo fixo é configurada usando o argumento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES é do tipo **bigint**.
 
-SIZE_BASED_CLEANUP_MODE Controla se a limpeza será ativada automaticamente quando a quantidade total de dados fica mais próxima do tamanho máximo:
+SIZE_BASED_CLEANUP_MODE         
+Controla se a limpeza será ativada automaticamente quando a quantidade total de dados se aproximar do tamanho máximo:
 
-OFF A limpeza com base no tamanho não será ativada automaticamente.
+OFF         
+A limpeza com base no tamanho não será ativada automaticamente.
 
-AUTO A limpeza com base em tamanho será ativada automaticamente quando o tamanho em disco atingir 90% do **max_storage_size_mb**. Limpeza com base no tamanho remove as consultas menos dispendiosas e mais antigas primeiro. Ele para a aproximadamente 80% do **max_storage_size_mb**. Esse é o valor de configuração padrão.
+AUTO         
+A limpeza com base em tamanho será ativada automaticamente quando o tamanho em disco atingir 90% do **max_storage_size_mb**. Limpeza com base no tamanho remove as consultas menos dispendiosas e mais antigas primeiro. Ele para a aproximadamente 80% do **max_storage_size_mb**. Esse é o valor de configuração padrão.
 
 SIZE_BASED_CLEANUP_MODE é do tipo **nvarchar**.
 
-QUERY_CAPTURE_MODE Designa o modo de captura de consulta ativa no momento:
+QUERY_CAPTURE_MODE         
+Designa o modo de captura de consulta ativo no momento:
 
-ALL Todas as consultas são capturadas. Esse é o valor de configuração padrão.
+ALL         
+Todas as consultas são capturadas. Esse é o valor de configuração padrão.
 
-AUTO Captura consultas de relevantes com base na contagem de execução e no consumo de recursos. Esse é o valor de configuração padrão para [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+AUTO         
+Captura consultas de relevantes com base na contagem de execução e no consumo de recursos. Esse é o valor de configuração padrão para [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
-NONE Parar de capturar novas consultas. O Repositório de Consultas continuará a coletar estatísticas de compilação e tempo de execução para consultas que já foram capturadas. Use essa configuração com cuidado, pois você poderá deixar de capturar consultas importantes.
+Nenhuma         
+Pare de capturar novas consultas. O Repositório de Consultas continuará a coletar estatísticas de compilação e tempo de execução para consultas que já foram capturadas. Use essa configuração com cuidado, pois você poderá deixar de capturar consultas importantes.
 
 QUERY_CAPTURE_MODE é do tipo **nvarchar**.
 
-MAX_PLANS_PER_QUERY Um número inteiro que representa a quantidade máxima de planos de manutenção para cada consulta. O padrão é 200.
+max_plans_per_query         
+Um número inteiro que representa a quantidade máxima de planos de manutenção para cada consulta. O padrão é 200.
 
-**\<snapshot_option> ::=**
+**\<snapshot_option> ::=**         
 
 Determina o nível de isolamento da transação.
 
-ALLOW_SNAPSHOT_ISOLATION { ON | OFF } ON Habilita a opção de Instantâneo no nível do banco de dados. Quando habilitada, as instruções DML começam a gerar versões de linha mesmo quando nenhuma transação usar Isolamento de Instantâneo. Quando essa opção está habilitada, as transações podem especificar o nível de isolamento da transação SNAPSHOT. Ao executar uma transação no nível de isolamento SNAPSHOT, todas as instruções consultam um instantâneo de dados, se houver um no início da instrução. Se uma transação que executa no nível de isolamento SNAPSHOT acessar dados em vários bancos de dados, ALLOW_SNAPSHOT_ISOLATION deverá ser definido como ON em todos os bancos de dados ou cada instrução na transação deverá usar dicas de bloqueio em qualquer referência em uma cláusula FROM para uma tabela em um banco de dados onde ALLOW_SNAPSHOT_ISOLATION seja OFF.
+ALLOW_SNAPSHOT_ISOLATION { ON | OFF }         
+ON         
+Habilita a opção de Instantâneo no nível do banco de dados. Quando habilitada, as instruções DML começam a gerar versões de linha mesmo quando nenhuma transação usar Isolamento de Instantâneo. Quando essa opção está habilitada, as transações podem especificar o nível de isolamento da transação SNAPSHOT. Ao executar uma transação no nível de isolamento SNAPSHOT, todas as instruções consultam um instantâneo de dados, se houver um no início da instrução. Se uma transação que executa no nível de isolamento SNAPSHOT acessar dados em vários bancos de dados, ALLOW_SNAPSHOT_ISOLATION deverá ser definido como ON em todos os bancos de dados ou cada instrução na transação deverá usar dicas de bloqueio em qualquer referência em uma cláusula FROM para uma tabela em um banco de dados onde ALLOW_SNAPSHOT_ISOLATION seja OFF.
 
-OFF Desliga a opção de Instantâneo no nível do banco de dados. As transações não podem especificar o nível de isolamento da transação SNAPSHOT.
+OFF         
+Desliga a opção de Instantâneo no nível do banco de dados. As transações não podem especificar o nível de isolamento da transação SNAPSHOT.
 
 Ao definir ALLOW_SNAPSHOT_ISOLATION para um novo estado (de ON para OFF ou de OFF para ON), ALTER DATABASE não retorna o controle para o chamador até que todas as transações existentes no banco de dados sejam confirmadas. Se o banco de dados já estiver no estado especificado na instrução ALTER DATABASE, o controle será retornado ao chamador imediatamente. Se a instrução ALTER DATABASE não for retornada rapidamente, use [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) para determinar se há transações de longa duração. Se a instrução ALTER DATABASE for cancelada, o banco de dados permanecerá no estado que estava quando ALTER DATABASE foi iniciada. A exibição do catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) indica o estado de transações de isolamento de instantâneo no banco de dados. Se **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON, ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF fará uma pausa de seis segundos e tentará novamente executar a operação.
 
@@ -1788,9 +1859,12 @@ A opção é ON, por padrão, para os bancos de dados mestre e msdb.
 
 A configuração atual dessa opção pode ser determinada examinando-se a coluna snapshot_isolation_state na exibição do catálogo sys.databases.
 
-READ_COMMITTED_SNAPSHOT { ON | OFF } ON Habilita a opção de Instantâneo de Leitura Confirmada no nível do banco de dados. Quando habilitada, as instruções DML começam a gerar versões de linha mesmo quando nenhuma transação usar Isolamento de Instantâneo. Quando essa opção está habilitada, as transações que especificam o nível de isolamento de leitura confirmada usam o controle de versão de linha, em vez de bloqueio. Todas as instruções consultam um instantâneo de dados, se houver um no início da instrução quando uma transação é executada no nível de isolamento de leitura confirmada.
+READ_COMMITTED_SNAPSHOT { ON | OFF }         
+ON         
+Habilita a opção de Instantâneo de Leitura Confirmada no nível do banco de dados. Quando habilitada, as instruções DML começam a gerar versões de linha mesmo quando nenhuma transação usar Isolamento de Instantâneo. Quando essa opção está habilitada, as transações que especificam o nível de isolamento de leitura confirmada usam o controle de versão de linha, em vez de bloqueio. Todas as instruções consultam um instantâneo de dados, se houver um no início da instrução quando uma transação é executada no nível de isolamento de leitura confirmada.
 
-OFF Desabilita a opção de Instantâneo de Leitura Confirmada no nível do banco de dados. As transações que especificam o nível de isolamento READ COMMITTED usam bloqueio.
+OFF         
+Desliga a opção de Instantâneo de Leitura Confirmada no nível do banco de dados. As transações que especificam o nível de isolamento READ COMMITTED usam bloqueio.
 
 Para definir READ_COMMITTED_SNAPSHOT como ON ou OFF, não deve haver nenhuma conexão ativa com o banco de dados exceto para a que está executando o comando ALTER DATABASE. Entretanto, o banco de dados não precisa estar no modo de usuário único. Não é possível alterar o estado dessa opção quando o banco de dados for OFFLINE.
 
@@ -1801,29 +1875,33 @@ READ_COMMITTED_SNAPSHOT não pode ser ativado como ON para os bancos de dados do
 A configuração atual dessa opção pode ser determinada examinando-se a coluna is_read_committed_snapshot_on na exibição do catálogo sys.databases.
 
 > [!WARNING]
->Quando uma tabela for criada com **DURABILITY = SCHEMA_ONLY**, e **READ_COMMITTED_SNAPSHOT** depois forem alterado usando **ALTER DATABASE**, os dados na tabela serão perdidos.
+> Quando uma tabela é criada com `DURABILITY = SCHEMA_ONLY` e **READ_COMMITTED_SNAPSHOT** for subsequentemente alterado usando `ALTER DATABASE`, os dados na tabela serão perdidos.
 
-MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | OFF }
+MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | OFF }         
+ON         
+Quando o nível de isolamento da transação é definido com qualquer nível de isolamento inferior a SNAPSHOT, todas as operações [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretadas em tabelas com otimização de memória são executadas no isolamento de SNAPSHOT. Exemplos de níveis de isolamento inferiores ao snapshot são READ COMMITTED ou READ UNCOMMITTED. Essas operações são executadas não importa se o nível de isolamento da transação é definido explicitamente no nível de sessão ou se a opção é usada implicitamente.
 
-ON Quando o nível de isolamento da transação é definido como qualquer nível de isolamento inferior ao SNAPSHOT, todas as operações [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretadas em tabelas com otimização de memória são executadas em isolamento de instantâneo. Exemplos de níveis de isolamento inferiores ao snapshot são READ COMMITTED ou READ UNCOMMITTED. Essas operações são executadas não importa se o nível de isolamento da transação é definido explicitamente no nível de sessão ou se a opção é usada implicitamente.
-
-OFF Não eleva o nível de isolamento da transação para operações interpretadas do [!INCLUDE[tsql](../../includes/tsql-md.md)] em tabelas com otimização de memória.
+OFF         
+Não eleva o nível de isolamento da transação para operações interpretadas do [!INCLUDE[tsql](../../includes/tsql-md.md)] em tabelas com otimização de memória.
 
 Não será possível alterar o estado de MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT se o banco de dados for OFFLINE.
 
-A opção é OFF, por padrão.
+O valor padrão é OFF.
 
 A configuração atual dessa opção pode ser determinada, examinando a coluna **is_memory_optimized_elevate_to_snapshot_on** na exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-**\<sql_option> ::=**
+**\<sql_option> ::=**         
 
 Controla as opções de conformidade ANSI no nível de banco de dados.
 
-ANSI_NULL_DEFAULT { ON | OFF } Determina o valor padrão, NULL ou NOT NULL, de um [tipo definido pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) CLR ou coluna para o qual a nulidade não é definida explicitamente nas instruções CREATE TABLE ou ALTER TABLE. As colunas definidas com restrições seguem as regras de restrição, qualquer que seja essa configuração.
+ANSI_NULL_DEFAULT { ON | OFF }         
+Determina o valor padrão, NULL ou NOT NULL, de uma coluna ou um [tipo CLR definido pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) para o qual a nulidade não é definida explicitamente nas instruções CREATE TABLE ou ALTER TABLE. As colunas definidas com restrições seguem as regras de restrição, qualquer que seja essa configuração.
 
-ON O valor padrão é NULL.
+ON         
+O valor padrão é NULL.
 
-OFF O valor padrão não é NULL.
+OFF         
+O valor padrão é NOT NULL.
 
 As configurações no nível de conexão que são definidas com o uso de uma instrução SET substituem a configuração no nível de banco de dados padrão para ANSI_NULL_DEFAULT. Clientes ODBC e OLE DB emitem uma instrução SET no nível da configuração de conexão ANSI_NULL_DEFAULT como ON para a sessão por padrão. Os clientes executam a instrução, quando você se conecta a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais, confira [SET ANSI_NULL_DFLT_ON](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md).
 
@@ -1831,9 +1909,12 @@ Para compatibilidade ANSI, definir a opção de banco de dados ANSI_NULL_DEFAULT
 
 Você pode determinar o status dessa opção examinando a coluna is_ansi_null_default_on na exibição do catálogo sys.databases. Você também pode determinar o status examinando a propriedade IsAnsiNullDefault da função DATABASEPROPERTYEX.
 
-ANSI_NULLS { ON | OFF } ON Todas as comparações com um valor nulo são avaliadas como UNKNOWN.
+ANSI_NULLS { ON | OFF }         
+ON         
+Todas as comparações com um valor nulo são avaliadas como UNKNOWN.
 
-OFF As comparações de valores não UNICODE com um valor nulo serão avaliadas como TRUE se ambos os valores forem NULL.
+OFF         
+As comparações de valores não UNICODE com um valor nulo são avaliadas como TRUE se ambos os valores são NULL.
 
 > [!IMPORTANT]
 > Em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_NULLS sempre estará ON e quaisquer aplicativos que definam explicitamente a opção como OFF produzirão um erro. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.
@@ -1844,9 +1925,12 @@ SET ANSI_NULLS também deve ser definido como ON ao criar ou fazer alterações 
 
 Você pode determinar o status dessa opção examinando a coluna is_ansi_nulls_on na exibição do catálogo sys.databases. Você também pode determinar o status examinando a propriedade IsAnsiNullsEnabled da função DATABASEPROPERTYEX.
 
-ANSI_PADDING {ON | Desativar} ON Cadeias de caracteres são preenchidas com o mesmo comprimento antes da conversão. Também são preenchidas com o mesmo comprimento antes de inserir para um tipo de dados **varchar** ou **nvarchar**.
+ANSI_PADDING { ON | OFF }         
+ON         
+As cadeias de caracteres são preenchidas com a mesma largura antes da conversão. Também são preenchidas com o mesmo comprimento antes de inserir para um tipo de dados **varchar** ou **nvarchar**.
 
-OFF Insere espaços em branco à direita em valores de caractere em colunas **varchar** ou **nvarchar**. Também deixa zeros à direita em valores binários inseridos nas colunas **varbinary**. Os valores não são preenchidos com o tamanho da coluna.
+OFF         
+Insere espaços em branco à direita em valores de caractere em colunas **varchar** ou **nvarchar**. Também deixa zeros à direita em valores binários inseridos nas colunas **varbinary**. Os valores não são preenchidos com o tamanho da coluna.
 
 Quando OFF é especificado, essa configuração afeta apenas a definição de novas colunas.
 
@@ -1859,9 +1943,12 @@ Colunas **char(_n_)** e **binary(_n_)** que permitem valores nulos são preenchi
 
 Você pode determinar o status dessa opção examinando a coluna is_ansi_padding_on na exibição do catálogo sys.databases. Você também pode determinar o status examinando a propriedade IsAnsiPaddingEnabled da função DATABASEPROPERTYEX.
 
-ANSI_WARNINGS { ON | OFF } ON Erros ou avisos são emitidos quando condições como dividir por zero ocorrem. Erros e avisos também são emitidos quando valores nulos aparecerem em funções de agregação.
+ANSI_WARNINGS { ON | OFF }         
+ON         
+Erros ou avisos são emitidos quando ocorrem condições como divisão por zero. Erros e avisos também são emitidos quando valores nulos aparecerem em funções de agregação.
 
-OFF Nenhum aviso é emitido e os valores nulos são retornados quando condições como “dividir por zero” ocorrem.
+OFF         
+Nenhum aviso é acionado e os valores nulos são retornados quando ocorrem condições como divisão por zero.
 
 SET ANSI_WARNINGS também deve ser definido como ON ao criar ou fazer alterações em índices em colunas computadas ou exibições indexadas.
 
@@ -1869,19 +1956,26 @@ SET ANSI_WARNINGS também deve ser definido como ON ao criar ou fazer alteraçõ
 
 Você pode determinar o status dessa opção examinando a coluna is_ansi_warnings_on na exibição do catálogo sys.databases. Você também pode determinar o status examinando a propriedade IsAnsiWarningsEnabled da função DATABASEPROPERTYEX.
 
-ARITHABORT { ON | OFF } ON Uma consulta é encerrada quando um estouro ou erro de divisão por zero ocorrer durante a execução da consulta.
+ARITHABORT { ON | OFF }         
+ON         
+Uma consulta é encerrada quando ocorre um estouro ou um erro de divisão por zero durante a execução da consulta.
 
-OFF A mensagem de aviso é exibida quando um desses erros ocorre. A consulta, o lote ou a transação continuará sendo processado como se nenhum erro tivesse ocorrido, mesmo que um aviso seja exibido.
+OFF         
+Uma mensagem de aviso é exibida quando um desses erros ocorre. A consulta, o lote ou a transação continuará sendo processado como se nenhum erro tivesse ocorrido, mesmo que um aviso seja exibido.
 
 SET ARITHABORT também deve ser definido como ON ao criar ou fazer alterações em índices em colunas computadas ou exibições indexadas.
 
-  Você pode determinar o status dessa opção examinando a coluna is_arithabort_on na exibição do catálogo sys.databases. Você também pode determinar o status examinando a propriedade IsArithmeticAbortEnabled da função DATABASEPROPERTYEX.
+  Você pode determinar o status dessa opção examinando a coluna is_arithabort_on na exibição do catálogo sys.databases. Também é possível determinar o status examinando a propriedade `IsArithmeticAbortEnabled` da função DATABASEPROPERTYEX.
 
-COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 } Para mais informações, veja [Nível de compatibilidade ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
+COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }         
+Para saber mais, confira [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
-CONCAT_NULL_YIELDS_NULL { ON | OFF } ON O resultado de uma operação de concatenação é NULL quando qualquer um dos operandos é NULL. Por exemplo, concatenar a cadeia de caracteres "This is" e NULL gera o valor NULL, em vez do valor "This is".
+CONCAT_NULL_YIELDS_NULL { ON | OFF }         
+ON         
+O resultado de uma operação de concatenação será NULL quando qualquer operando for NULL. Por exemplo, concatenar a cadeia de caracteres "This is" e NULL gera o valor NULL, em vez do valor "This is".
 
-OFF O valor nulo é tratado como uma cadeia de caracteres vazia.
+OFF         
+O valor nulo é tratado como uma cadeia de caracteres vazia.
 
 CONCAT_NULL_YIELDS_NULL deve ser definido como ON ao criar ou fazer alterações em índices em colunas computadas ou exibições indexadas.
 
@@ -1892,11 +1986,14 @@ As configurações no nível de conexão que são definidas usando uma instruç�
 
 Você pode determinar o status dessa opção examinando a coluna is_concat_null_yields_null_on na exibição do catálogo sys.databases. Você também pode determinar o status examinando a propriedade IsNullConcat da função DATABASEPROPERTYEX.
 
-QUOTED_IDENTIFIER { ON | OFF } ON Aspas duplas podem ser usadas para incluir identificadores delimitados.
+QUOTED_IDENTIFIER { ON | OFF }         
+ON         
+As aspas duplas podem ser utilizadas para conter identificadores delimitados.
 
 Todas as cadeias de caracteres delimitadas por aspas duplas são interpretadas como identificadores de objeto. Os identificadores entre aspas não precisam seguir as regras [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Eles podem ser palavras-chave e incluir caracteres não permitidos nos identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se o sinal de aspas simples (') fizer parte da cadeia de caracteres literal, ele poderá ser representado por aspas duplas (").
 
-OFF Os identificadores não podem estar entre aspas e devem seguir todas as regras de identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]. Literais podem ser delimitados por aspas simples ou duplas.
+OFF         
+Os identificadores não podem estar entre aspas e precisam seguir todas as regras do [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Literais podem ser delimitados por aspas simples ou duplas.
 
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também permite que os identificadores sejam delimitados por colchetes ([ ]). Identificadores entre colchetes sempre podem ser usados, seja qual for a configuração QUOTED_IDENTIFIER. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).
 
@@ -1906,47 +2003,59 @@ As configurações no nível de conexão que são definidas com o uso de uma ins
 
   Você pode determinar o status dessa opção examinando a coluna is_quoted_identifier_on na exibição do catálogo sys.databases. Você também pode determinar o status, examinando a propriedade IsQuotedIdentifiersEnabled da função DATABASEPROPERTYEX.
 
-NUMERIC_ROUNDABORT { ON | OFF } ON um erro é gerado quando ocorre perda de precisão em uma expressão.
+NUMERIC_ROUNDABORT { ON | OFF }         
+ON         
+Um erro é gerado quando ocorre perda de precisão em uma expressão.
 
-OFF As perdas de precisão não geram mensagens de erro e o resultado é arredondado de acordo com a precisão da coluna ou variável que armazena o resultado.
+OFF         
+As perdas de precisão não geram mensagens de erro e o resultado é arredondado para a precisão da coluna ou da variável que armazena o resultado.
 
 NUMERIC_ROUNDABORT deve ser definido como OFF ao criar ou fazer alterações em índices em colunas computadas ou exibições indexadas.
 
 Você pode determinar o status dessa opção examinando a coluna is_numeric_roundabort_on na exibição do catálogo sys.databases. Você também pode determinar o status, examinando a propriedade IsNumericRoundAbortEnabled da função DATABASEPROPERTYEX.
 
-RECURSIVE_TRIGGERS { ON | OFF } ON Disparo recursivo de gatilhos AFTER é permitido.
+RECURSIVE_TRIGGERS { ON | OFF }         
+ON         
+O disparo recursivo de gatilhos AFTER é permitido.
 
-OFF Você pode determinar o status dessa opção examinando a coluna is_recursive_triggers_on na exibição do catálogo sys.databases. Você também pode determinar o status, examinando a propriedade IsRecursiveTriggersEnabled da função DATABASEPROPERTYEX.
+OFF         
+Você pode determinar o status dessa opção examinando a coluna is_recursive_triggers_on na exibição do catálogo sys.databases. Você também pode determinar o status, examinando a propriedade IsRecursiveTriggersEnabled da função DATABASEPROPERTYEX.
 
 > [!NOTE]
->Somente a recursão direta será evitada quando RECURSIVE_TRIGGERS estiver definido como OFF. Para desabilitar a recursão indireta, é necessário definir também a opção do servidor nested triggers como 0.
+> Somente a recursão direta será evitada quando RECURSIVE_TRIGGERS estiver definido como OFF. Para desabilitar a recursão indireta, é necessário definir também a opção do servidor nested triggers como 0.
 
 Você pode determinar o status dessa opção examinando a coluna is_recursive_triggers_on na exibição do catálogo sys.databases ou a propriedade IsRecursiveTriggersEnabled da função DATABASEPROPERTYEX.
 
-**\<target_recovery_time_option> ::=**
+**\<target_recovery_time_option> ::=**         
 
 Especifica a frequência de pontos de verificação indiretos por banco de dados. Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o valor padrão para novos bancos de dados é de 1 minuto, o que indica que o banco de dados usará pontos de verificação indiretos. Para versões mais antigas, o padrão é 0, o que indica que o banco de dados usará pontos de verificação automáticos cuja frequência depende da configuração do intervalo de recuperação da instância de servidor. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda 1 minuto para a maioria dos sistemas.
 
-TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES } *target_recovery_time* Especifica o salto máximo no tempo para recuperar o banco de dados especificado caso ocorra uma falha.
+TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }         
+*target_recovery_time*         
+Especifica o limite máximo no tempo para recuperar o banco de dados especificado no caso de uma falha.
 
-SECONDS Indica que *target_recovery_time* é expresso como o número de segundos.
+SECONDS         
+Indica que *target_recovery_time* é expresso como o número de segundos.
 
-MINUTES Indica que *target_recovery_time* é expresso como o número de minutos.
+MINUTES         
+Indica que *target_recovery_time* é expresso como o número de minutos.
 
 Para saber mais sobre pontos de verificação indiretos, confira [Pontos de verificação de banco de dados](../../relational-databases/logs/database-checkpoints-sql-server.md).
 
-**WITH \<termination> ::=**
+**WITH \<termination> ::=**         
 
 Especifica quando reverter transações incompletas quando há transição do banco de dados de um estado para outro. Se a cláusula de término for omitida, a instrução ALTER DATABASE aguardará indefinidamente se houver algum bloqueio no banco de dados. Somente uma cláusula de término pode ser especificada e ela sucede as cláusulas SET.
 
 > [!NOTE]
 > Nem todas as opções de banco de dados usam a cláusula WITH \<termination>. Para saber mais, confira a tabela em[Opções de configuração](#SettingOptions) na seção Comentários deste artigo.
 
-ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE Especifica se a reversão deve ser feita após o número especificado de segundos ou imediatamente.
+ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE         
+Especifica se a reversão deve ser feita após o número de segundos especificado ou imediatamente.
 
-NO_WAIT Especifica que a solicitação falhará se a alteração de estado ou a opção de banco de dados solicitado não puder ser concluída imediatamente. Concluir imediatamente significa não esperar a confirmação ou a reversão das transações por conta própria.
+NO_WAIT         
+Especifica que a solicitação falhará se a alteração solicitada do estado ou da opção de banco de dados não puder ser concluída imediatamente. Concluir imediatamente significa não esperar a confirmação ou a reversão das transações por conta própria.
 
-## <a name="SettingOptions"></a> Opções de configuração
+## <a name="SettingOptions"></a> Opções de configuração         
 
 Para recuperar as configurações atuais das opções de banco de dados, use a exibição do catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 
@@ -1976,7 +2085,6 @@ Nem todas as opções de banco de dados usam a cláusula WITH \<termination> ou 
 ## <a name="examples"></a>Exemplos
 
 ### <a name="a-setting-the-database-to-readonly"></a>A. Configurando o banco de dados como READ_ONLY
-
 Alterar o estado de um banco de dados ou grupo de arquivos para READ_ONLY ou READ_WRITE requer acesso exclusivo ao banco de dados. O exemplo a seguir define o banco de dados como o modo `RESTRICTED_USER` para limitar o acesso. Em seguida, o exemplo define o estado do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] como `READ_ONLY` e retorna o acesso ao banco de dados para todos os usuários.
 
 ```sql
@@ -1995,7 +2103,6 @@ GO
 ```
 
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Habilitando o isolamento de instantâneo em um banco de dados
-
 O exemplo a seguir habilita a opção de estrutura de isolamento de instantâneo para o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .
 
 ```sql
@@ -2012,7 +2119,6 @@ SELECT name, snapshot_isolation_state,
 FROM sys.databases
 WHERE name = N'AdventureWorks2012';
 GO
-
 ```
 
 O conjunto de resultados mostra que a estrutura de isolamento de instantâneo está habilitada.
@@ -2208,44 +2314,56 @@ SET
 
 ## <a name="arguments"></a>Argumentos
 
-*database_name* É o nome do banco de dados a ser modificado.
+*database_name*         
+É o nome do banco de dados a ser modificado.
 
-CURRENT `CURRENT` executa a ação no banco de dados atual. `CURRENT` não é compatível com todas as opções em todos os contextos. Se `CURRENT` falhar, forneça o nome do banco de dados.
+CURRENT         
+`CURRENT` executa a ação no banco de dados atual. `CURRENT` não é compatível com todas as opções em todos os contextos. Se `CURRENT` falhar, forneça o nome do banco de dados.
 
-**\<auto_option> ::=**
+**\<auto_option> ::=**         
 
 Controla opções automáticas.
-<a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF } ON O otimizador de consulta cria estatísticas em colunas únicas em predicados de consulta, conforme necessário, para melhorar planos e desempenho de consulta. Estas estatísticas de coluna única são criadas quando o otimizador de consulta compila consultas. As estatísticas de coluna única só são criadas em colunas que ainda não são a primeira de um objeto de estatísticas existente.
+
+<a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }         
+ON         
+O otimizador de consulta cria estatísticas em colunas únicas em predicados de consulta, conforme necessário, para melhorar planos e desempenho de consulta. Estas estatísticas de coluna única são criadas quando o otimizador de consulta compila consultas. As estatísticas de coluna única só são criadas em colunas que ainda não são a primeira de um objeto de estatísticas existente.
 
 O padrão é ON. Nós recomendamos que você use a configuração padrão para a maioria dos bancos de dados.
 
-OFF O otimizador de consulta não cria estatísticas em colunas únicas em predicados de consulta quando estiver compilando consultas. Definir essa opção como OFF pode acarretar planos de consulta de qualidade inferior e menor desempenho de consulta.
+OFF         
+O otimizador de consulta não cria estatísticas em colunas únicas em predicados de consulta quando está compilando as consultas. Definir essa opção como OFF pode acarretar planos de consulta de qualidade inferior e menor desempenho de consulta.
 
 Você pode determinar o status dessa opção examinando a coluna is_create_stats_on na exibição do catálogo sys.databases. Você também pode determinar o status examinando a propriedade IsAutoCreateStatistics da função DATABASEPROPERTYEX.
 
 Para obter mais informações, veja a seção “Usando as opções de estatísticas em todo o banco de dados” em [Estatística](../../relational-databases/statistics/statistics.md).
 
-INCREMENTAL = ON | OFF Defina AUTO_CREATE_STATISTICS como ON e defina INCREMENTAL como ON. Essa configuração cria estatísticas criadas automaticamente como incrementais sempre que há suporte para estatísticas incrementais. O valor padrão é OFF. Para saber mais, veja [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
+INCREMENTAL = ON | OFF         
+Defina AUTO_CREATE_STATISTICS como ON e INCREMENTAL como ON. Essa configuração cria estatísticas criadas automaticamente como incrementais sempre que há suporte para estatísticas incrementais. O valor padrão é OFF. Para saber mais, veja [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
 
-<a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF } ON Ao ser definida como ON, os arquivos do banco de dados serão candidatos à redução periódica.
+<a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF }         
+ON         
+Os arquivos de banco de dados são candidatos à redução periódica.
 
 Arquivos de dados e arquivos de log podem ser reduzidos automaticamente. AUTO_SHRINK reduzirá o tamanho do log de transações somente se o banco de dados estiver definido como modelo de recuperação SIMPLE ou se o log tiver sido submetido a backup. Quando definido como OFF, os arquivos de banco de dados não são reduzidos automaticamente durante as verificações periódicas de espaço não utilizado.
 
 A opção AUTO_SHRINK faz com que os arquivos sejam reduzidos quando mais que 25% do arquivo contém espaço não utilizado. A opção faz com que o arquivo diminua em um dos dois tamanhos. Ele reduz o que for maior:
 
-- o tamanho em que 25 por cento do arquivo é o espaço não utilizado
+- o tamanho em que 25% do arquivo é o espaço não utilizado
 - o tamanho do arquivo quando ele foi criado
 
 Não é possível reduzir um banco de dados somente leitura.
 
-OFF Os arquivos de banco de dados não são reduzidos automaticamente durante as verificações periódicas de espaço não utilizado.
+OFF         
+Os arquivos de banco de dados não são reduzidos automaticamente durante as verificações periódicas de espaço não utilizado.
 
 Você pode determinar o status dessa opção examinando a coluna is_auto_shrink_on na exibição do catálogo sys.databases. Você também pode determinar o status examinando a propriedade IsAutoShrink da função DATABASEPROPERTYEX.
 
 > [!NOTE]
 > A opção AUTO_SHRINK não está disponível em um banco de dados independente.
 
-<a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF } ON Especifica que o otimizador de consulta atualiza as estatísticas quando elas são usadas por uma consulta e quando possivelmente estão desatualizadas. As estatísticas ficam desatualizadas depois que operações de inserção, atualização, exclusão ou mesclagem alteram a distribuição de dados na tabela ou na exibição indexada. O otimizador de consulta determina quando estatísticas podem estar desatualizadas contando o número de modificações de dados desde a última atualização das estatísticas e comparando o número de modificações a um limite. O limite se baseia no número de linhas na tabela ou na exibição indexada.
+<a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }         
+ON         
+Especifica que o otimizador de consulta atualiza as estatísticas quando elas são usadas por uma consulta e quando podem estar desatualizadas. As estatísticas ficam desatualizadas depois que operações de inserção, atualização, exclusão ou mesclagem alteram a distribuição de dados na tabela ou na exibição indexada. O otimizador de consulta determina quando estatísticas podem estar desatualizadas contando o número de modificações de dados desde a última atualização das estatísticas e comparando o número de modificações a um limite. O limite se baseia no número de linhas na tabela ou na exibição indexada.
 
 O otimizador de consulta verifica se há estatísticas desatualizadas antes de compilar uma consulta e executa um plano de consulta em cache. O otimizador de consulta usa as colunas, as tabelas e as exibições indexadas no predicado de consulta para determinar quais estatísticas podem estar desatualizadas. O otimizador de consulta determina essas informações antes de compilar uma consulta. Antes de executar um plano de consulta em cache, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica se o plano de consulta faz referência a estatísticas atualizadas.
 
@@ -2255,19 +2373,23 @@ O padrão é ON. Nós recomendamos que você use a configuração padrão para a
 
 Use a opção AUTO_UPDATE_STATISTICS_ASYNC para especificar se as estatísticas são atualizadas de forma síncrona ou assíncrona.
 
-OFF Especifica que o otimizador de consulta não atualiza estatísticas quando elas são usadas por uma consulta. O otimizador de consulta também não atualiza estatísticas quando elas podem estar desatualizadas. Definir essa opção como OFF pode acarretar planos de consulta de qualidade inferior e menor desempenho de consulta.
+OFF         
+Especifica que o otimizador de consulta não atualiza as estatísticas quando elas são usadas por uma consulta. O otimizador de consulta também não atualiza estatísticas quando elas podem estar desatualizadas. Definir essa opção como OFF pode acarretar planos de consulta de qualidade inferior e menor desempenho de consulta.
 
 Você pode determinar o status dessa opção examinando a coluna is_auto_update_stats_on na exibição do catálogo sys.databases. Você também pode determinar o status examinando a propriedade IsAutoUpdateStatistics da função DATABASEPROPERTYEX.
 
 Para obter mais informações, veja a seção “Usando as opções de estatísticas em todo o banco de dados” em [Estatística](../../relational-databases/statistics/statistics.md).
 
-<a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } ON Especifica que atualizações de estatísticas para a opção AUTO_UPDATE_STATISTICS são assíncronas. O otimizador de consulta não aguarda a conclusão das atualizações de estatísticas para compilar consultas.
+<a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }         
+ON         
+Especifica que as atualizações de estatísticas para a opção AUTO_UPDATE_STATISTICS são assíncronas. O otimizador de consulta não aguarda a conclusão das atualizações de estatísticas para compilar consultas.
 
 Definir essa opção como ON não tem nenhum efeito, a menos que AUTO_UPDATE_STATISTICS seja definida como ON.
 
 Por padrão, a opção AUTO_UPDATE_STATISTICS_ASYNC é definida como OFF e o otimizador de consulta atualiza estatísticas de forma síncrona.
 
-OFF Especifica que atualizações de estatísticas para a opção AUTO_UPDATE_STATISTICS são síncronas. O otimizador de consulta aguarda a conclusão das atualizações de estatísticas para compilar consultas.
+OFF         
+Especifica que as atualizações de estatísticas para a opção AUTO_UPDATE_STATISTICS são síncronas. O otimizador de consulta aguarda a conclusão das atualizações de estatísticas para compilar consultas.
 
 Definir essa opção como OFF não tem nenhum efeito, a menos que AUTO_UPDATE_STATISTICS seja definida como ON.
 
@@ -2275,144 +2397,188 @@ Você pode determinar o status dessa opção examinando a coluna is_auto_update_
 
 Para obter mais informações que descrevem quando usar atualizações de estatísticas síncronas ou assíncronas, veja a seção que "Usando as opções de estatísticas em todo o banco de dados" em [Estatísticas](../../relational-databases/statistics/statistics.md).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=** 
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**          
 **Aplica-se a**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
 
 Habilita ou desabilita a opção de `FORCE_LAST_GOOD_PLAN` [ajuste automático](../../relational-databases/automatic-tuning/automatic-tuning.md).
 
-FORCE_LAST_GOOD_PLAN = { ON | OFF } ON O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] força automaticamente o último plano sabidamente válido nas consultas [!INCLUDE[tsql-md](../../includes/tsql-md.md)] em que o novo plano SQL provoca regressões de desempenho. O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] monitora continuamente o desempenho de consultas da consulta [!INCLUDE[tsql-md](../../includes/tsql-md.md)] com o plano forçado. Se não houver ganhos de desempenho, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuará usando o último plano válido conhecido. Se os ganhos de desempenho não forem detectados, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] produzirá um novo plano SQL. A instrução falhará se o Repositório de Consultas não estiver habilitado ou não estiver no modo de *Leitura-Gravação*.
-OFF O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] relata possíveis regressões de desempenho de consulta causadas por alterações de plano SQL na exibição [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). No entanto, essas recomendações não são aplicadas automaticamente. Usuário pode monitorar recomendações ativas e corrigir problemas identificados aplicando scripts [!INCLUDE[tsql-md](../../includes/tsql-md.md)] mostrados na exibição. Este é o valor padrão.
+FORCE_LAST_GOOD_PLAN = { ON | OFF }         
+ON         
+O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] força automaticamente o último plano sabidamente válido nas consultas [!INCLUDE[tsql-md](../../includes/tsql-md.md)] em que o novo plano SQL provoca regressões de desempenho. O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] monitora continuamente o desempenho de consultas da consulta [!INCLUDE[tsql-md](../../includes/tsql-md.md)] com o plano forçado. Se não houver ganhos de desempenho, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuará usando o último plano válido conhecido. Se os ganhos de desempenho não forem detectados, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] produzirá um novo plano SQL. A instrução falhará se o Repositório de Consultas não estiver habilitado ou não estiver no modo de *Leitura-Gravação*. 
+
+OFF         
+O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] relata possíveis regressões de desempenho de consulta causadas por alterações de plano SQL na exibição [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). No entanto, essas recomendações não são aplicadas automaticamente. Usuário pode monitorar recomendações ativas e corrigir problemas identificados aplicando scripts [!INCLUDE[tsql-md](../../includes/tsql-md.md)] mostrados na exibição. Este é o valor padrão.
 
 **\<change_tracking_option> ::=**
 
 Controla as opções de controle de alterações. É possível habilitar o controle de alterações, definir opções, alterar opções e desabilitar o controle de alterações. Para obter exemplos, confira a seção Exemplos mais adiante neste artigo.
 
-ON Habilita o controle de alterações no banco de dados. Quando você habilita o controle de alterações, também pode definir as opções AUTO CLEANUP e CHANGE RETENTION.
+ON         
+Habilita o controle de alterações no banco de dados. Quando você habilita o controle de alterações, também pode definir as opções AUTO CLEANUP e CHANGE RETENTION.
 
-AUTO_CLEANUP = { ON | OFF } ON Indica se as informações de controle de alterações são automaticamente removidas depois do período de retenção especificado.
+AUTO_CLEANUP = { ON | OFF }         
+ON         
+As informações de controle de alterações são removidas automaticamente após o período de retenção especificado.
 
-OFF Os dados de controle de alterações não são removidos do banco de dados.
+OFF         
+Os dados de controle de alterações não são removidos do banco de dados.
 
-CHANGE_RETENTION =*retention_period* { DAYS | HOURS | MINUTES } Especifica o período mínimo para manter informações no banco de dados de controle de alterações. Os dados serão removidos somente quando o valor AUTO_CLEANUP for ON.
+CHANGE_RETENTION =*retention_period* { DAYS | HOURS | MINUTES }         
+Especifica o período mínimo para manter as informações de controle de alterações no banco de dados. Os dados serão removidos somente quando o valor AUTO_CLEANUP for ON.
 
 *retention_period* é um inteiro que especifica o componente numérico do período de retenção.
 
 O período de retenção padrão é de 2 dias. O período de retenção mínimo é de 1 minuto. O tipo de retenção padrão é DAYS.
 
-OFF Desabilita o controle de alterações no banco de dados. Desabilite o controle de alterações em todas as tabelas antes de desabilitá-lo no banco de dados.
+OFF         
+Desabilita o controle de alterações no banco de dados. Desabilite o controle de alterações em todas as tabelas antes de desabilitá-lo no banco de dados.
 
-**\<cursor_option> ::=**
+**\<cursor_option> ::=**         
 
 Controla opções de cursor.
 
-CURSOR_CLOSE_ON_COMMIT { ON | OFF } ON Todos os cursores abertos quando você confirma ou reverte uma transação são fechados.
+CURSOR_CLOSE_ON_COMMIT { ON | OFF }         
+ON         
+Todos os cursores abertos quando você confirma ou reverte uma transação são fechados.
 
-OFF Os cursores permanecem abertos quando uma transação é confirmada; uma transação revertida fechará todos os cursores, exceto aqueles definidos como INSENSITIVE ou STATIC.
+OFF         
+Os cursores permanecem abertos quando uma transação é confirmada; uma transação revertida fecha todos os cursores, exceto aqueles definidos como INSENSITIVE ou STATIC.
 
 As configurações no nível de conexão que são definidas com o uso da instrução SET substituem a configuração de banco de dados padrão por CURSOR_CLOSE_ON_COMMIT. Clientes ODBC e OLE DB emitem uma configuração CURSOR_CLOSE_ON_COMMIT de instrução SET no nível de conexão como desativada para a sessão por padrão. Os clientes executam a instrução, quando você se conecta a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais, confira [SET CURSOR_CLOSE_ON_COMMIT](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md).
 
 É possível determinar o status dessa opção examinando-se a coluna is_cursor_close_on_commit_on na exibição do catálogo sys.databases ou a propriedade IsCloseCursorsOnCommitEnabled da função DATABASEPROPERTYEX. O cursor é implicitamente desalocado somente na desconexão. Para saber mais, confira [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md).
 
-**\<db_encryption_option> ::=**
+**\<db_encryption_option> ::=**         
 
 Controla o estado de criptografia do banco de dados.
 
-ENCRYPTION {ON | OFF} Define o banco de dados a ser criptografado (ON) ou não criptografado (OFF). Para saber mais sobre criptografia de banco de dados, confira [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md) e [Transparent Data Encryption com o Banco de Dados SQL do Azure](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
+ENCRYPTION { ON | OFF }         
+Define o banco de dados a ser criptografado (ON) ou não criptografado (OFF). Para saber mais sobre criptografia de banco de dados, confira [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md) e [Transparent Data Encryption com o Banco de Dados SQL do Azure](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
 
 Quando a criptografia estiver habilitada no nível de banco de dados, todos os grupos de arquivos serão criptografados. Qualquer novo grupo de arquivos herdará a propriedade criptografada. Se algum grupo de arquivos do banco de dados for definido como **READ ONLY**, haverá falha na operação de criptografia de banco de dados.
 
 É possível ver o estado da criptografia do banco de dados usando a exibição de gerenciamento dinâmico [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).
 
-**\<db_update_option> ::=**
+**\<db_update_option> ::=**         
 
 Controla se atualizações são permitidas no banco de dados.
 
-READ_ONLY Os usuários podem ler dados do banco de dados, mas não os modificar.
+READ_ONLY         
+Os usuários podem ler dados do banco de dados, mas não os modificar.
 
 > [!NOTE]
->Para melhorar o desempenho da consulta, atualize as estatísticas antes de configurar um banco de dados como READ_ONLY. Se forem necessárias estatísticas adicionais depois de um banco de dados ser definido como READ_ONLY, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] criará estatísticas no tempdb. Para obter mais informações sobre estatísticas para um banco de dados somente leitura, veja [Estatísticas](../../relational-databases/statistics/statistics.md).
+> Para melhorar o desempenho da consulta, atualize as estatísticas antes de configurar um banco de dados como READ_ONLY. Se forem necessárias estatísticas adicionais depois de um banco de dados ser definido como READ_ONLY, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] criará estatísticas no tempdb. Para obter mais informações sobre estatísticas para um banco de dados somente leitura, veja [Estatísticas](../../relational-databases/statistics/statistics.md).
 
-READ_WRITE O banco de dados está disponível para operações de leitura e gravação.
+READ_WRITE         
+O banco de dados está disponível para operações de leitura e gravação.
 
 Para alterar esse estado, é necessário ter acesso exclusivo ao banco de dados.
 
-**\<db_user_access_option> ::=**
+**\<db_user_access_option> ::=**         
 
 Controla o acesso de usuários ao banco de dados.
 
-RESTRICTED_USER RESTRICTED_USER permite que somente os membros da função de banco de dados fixa db_owner e das funções de servidor fixas dbcreator e sysadmin conectem-se ao banco de dados, mas não limita seu número. Todas as conexões com o banco de dados são desconectadas no período especificado pela cláusula de término da instrução ALTER DATABASE. Depois que o banco de dados fizer a transição para o estado RESTRICTED_USER, as tentativas de conexão realizadas por usuários não qualificados serão recusadas. **RESTRICTED_USER** não pode ser modificado com a instância gerenciada do Banco de Dados SQL.
+RESTRICTED_USER         
+RESTRICTED_USER permite que somente os membros da função de banco de dados fixa db_owner e das funções de servidor fixas dbcreator e sysadmin conectem-se ao banco de dados, mas não limita seu número. Todas as conexões com o banco de dados são desconectadas no período especificado pela cláusula de término da instrução ALTER DATABASE. Depois que o banco de dados fizer a transição para o estado RESTRICTED_USER, as tentativas de conexão realizadas por usuários não qualificados serão recusadas. **RESTRICTED_USER** não pode ser modificado com a instância gerenciada do Banco de Dados SQL.
 
-MULTI_USER Todos os usuários com permissões apropriadas para se conectar ao banco de dados são permitidos.
+MULTI_USER         
+Todos os usuários com permissões apropriadas para se conectar ao banco de dados são permitidos.
 
 Você pode determinar o status dessa opção examinando a coluna user_access na exibição do catálogo sys.databases ou a propriedade UserAccess da função DATABASEPROPERTYEX.
 
-**\<delayed_durability_option> ::=**
+**\<delayed_durability_option> ::=**         
 
 Controla se as transações são confirmadas completamente duráveis ou duráveis atrasadas.
 
-DISABLED Todas as transações após SET DISABLED são completamente duráveis. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
+DISABLED         
+Todas as transações após SET DISABLED são completamente duráveis. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
 
-ALLOWED Todas as transações após SET ALLOWED são completamente duráveis ou duráveis atrasadas, dependendo da opção de durabilidade definida no bloco atômico ou instrução de confirmação.
+ALLOWED         
+Todas as transações após SET ALLOWED são completamente duráveis ou duráveis atrasadas, dependendo da opção de durabilidade definida no bloco atômico ou na instrução de confirmação.
 
-FORCED Todas as transações após SET FORCED são duráveis atrasadas. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
+FORCED         
+Todas as transações após SET FORCED são duráveis atrasadas. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
 
-**\<PARAMETERIZATION_option> ::=**
+**\<PARAMETERIZATION_option> ::=**         
 
 Controla a opção de parametrização.
 
-PARAMETERIZATION { SIMPLE | FORCED } SIMPLE As consultas são parametrizadas com base no comportamento padrão do banco de dados.
+PARAMETERIZATION { SIMPLE | FORCED }         
+SIMPLE         
+As consultas são parametrizadas com base no comportamento padrão do banco de dados.
 
-FORCED [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parametriza todas as consultas feitas no banco de dados.
+FORCED         
+O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parametriza todas as consultas no banco de dados.
 
 A configuração atual dessa opção pode ser determinada examinando-se a coluna is_parameterization_forced na exibição do catálogo sys.databases.
 
-**\<query_store_options> ::=**
+**\<query_store_options> ::=**         
 
-ON | OFF | CLEAR [ ALL ] Controla se o repositório de consultas está habilitado neste banco de dados, além de controlar a remoção de conteúdo do repositório de consultas.
+ON | OFF | CLEAR [ ALL ]         
+Controla se o repositório de consultas está habilitado nesse banco de dados, além de controlar a remoção do conteúdo do repositório de consultas.
 
-ON Habilita o repositório de consultas.
+ON         
+Habilita o repositório de consultas.
 
-OFF Desabilita o repositório de consultas. Este é o valor padrão.
+OFF         
+Desabilita o repositório de consultas. Este é o valor padrão.
 
-CLEAR Remove o conteúdo do repositório de consultas.
+CLEAR         
+Remove o conteúdo do repositório de consultas.
 
-OPERATION_MODE Descreve o modo de operação do repositório de consultas. Os valores válidos são READ_ONLY e READ_WRITE. No modo READ_WRITE, o repositório de consultas coleta e persiste as informações das estatísticas de execução do plano de consulta e do tempo de execução. No modo READ_ONLY, as informações podem ser lidas do repositório de consultas, mas novas informações não são adicionadas. Se o espaço máximo alocado do repositório de consultas tiver se esgotado, o repositório de consultas alterará o modo de operação para READ_ONLY.
+OPERATION_MODE         
+Descreve o modo de operação do repositório de consultas. Os valores válidos são READ_ONLY e READ_WRITE. No modo READ_WRITE, o repositório de consultas coleta e persiste as informações das estatísticas de execução do plano de consulta e do tempo de execução. No modo READ_ONLY, as informações podem ser lidas do repositório de consultas, mas novas informações não são adicionadas. Se o espaço máximo alocado do repositório de consultas tiver se esgotado, o repositório de consultas alterará o modo de operação para READ_ONLY.
 
-CLEANUP_POLICY Descreve a política de retenção de dados do repositório de consultas. STALE_QUERY_THRESHOLD_DAYS determina o número de dias que as informações de uma consulta são mantidas no repositório de consultas. STALE_QUERY_THRESHOLD_DAYS é do tipo **bigint**.
+CLEANUP_POLICY         
+Descreve a política de retenção de dados do repositório de consultas. STALE_QUERY_THRESHOLD_DAYS determina o número de dias que as informações de uma consulta são mantidas no repositório de consultas. STALE_QUERY_THRESHOLD_DAYS é do tipo **bigint**.
 
-DATA_FLUSH_INTERVAL_SECONDS Determina a frequência na qual os dados gravados no repositório de consultas são persistidos no disco. Para otimizar o desempenho, os dados coletados pelo repositório de consultas são gravados de maneira assíncrona no disco. A frequência em que essa transferência assíncrona ocorre é configurada usando o argumento DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS é do tipo **bigint**.
+DATA_FLUSH_INTERVAL_SECONDS         
+Determina a frequência na qual os dados gravados no repositório de consultas é persistida no disco. Para otimizar o desempenho, os dados coletados pelo repositório de consultas são gravados de maneira assíncrona no disco. A frequência em que essa transferência assíncrona ocorre é configurada usando o argumento DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS é do tipo **bigint**.
 
-MAX_STORAGE_SIZE_MB Determina o espaço alocado ao repositório de consultas. MAX_STORAGE_SIZE_MB é do tipo **bigint**.
+MAX_STORAGE_SIZE_MB         
+Determina o espaço alocado para o repositório de consultas. MAX_STORAGE_SIZE_MB é do tipo **bigint**.
 
-INTERVAL_LENGTH_MINUTES Determina o intervalo de tempo em que os dados de estatísticas de execução do tempo de execução são agregados no repositório de consultas. Para otimizar o uso de espaço, as estatísticas de execução de tempo de execução no repositório de estatísticas de tempo de execução são agregadas em uma janela de tempo fixo. Essa janela de tempo fixo é configurada usando o argumento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES é do tipo **bigint**.
+INTERVAL_LENGTH_MINUTES         
+Determina o intervalo de tempo em que os dados de estatísticas de execução do tempo de execução são agregados no repositório de consultas. Para otimizar o uso de espaço, as estatísticas de execução de tempo de execução no repositório de estatísticas de tempo de execução são agregadas em uma janela de tempo fixo. Essa janela de tempo fixo é configurada usando o argumento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES é do tipo **bigint**.
 
-SIZE_BASED_CLEANUP_MODE Controla se a limpeza será ativada automaticamente quando a quantidade total de dados fica mais próxima do tamanho máximo:
+SIZE_BASED_CLEANUP_MODE         
+Controla se a limpeza será ativada automaticamente quando a quantidade total de dados se aproximar do tamanho máximo:
 
-OFF A limpeza com base no tamanho não será ativada automaticamente.
+OFF         
+A limpeza com base no tamanho não será ativada automaticamente.
 
-AUTO A limpeza com base em tamanho será ativada automaticamente quando o tamanho em disco atingir 90% do **max_storage_size_mb**. Limpeza com base no tamanho remove as consultas menos dispendiosas e mais antigas primeiro. Ele para a aproximadamente 80% do **max_storage_size_mb**. Esse é o valor de configuração padrão.
+AUTO         
+A limpeza com base em tamanho será ativada automaticamente quando o tamanho em disco atingir 90% do **max_storage_size_mb**. Limpeza com base no tamanho remove as consultas menos dispendiosas e mais antigas primeiro. Ele para a aproximadamente 80% do **max_storage_size_mb**. Esse é o valor de configuração padrão.
 
 SIZE_BASED_CLEANUP_MODE é do tipo **nvarchar**.
 
-QUERY_CAPTURE_MODE Designa o modo de captura de consulta ativa no momento.
+QUERY_CAPTURE_MODE         
+Designa o modo de captura da consulta ativa no momento.
 
-ALL Todas as consultas são capturadas. Esse é o valor de configuração padrão.
+ALL         
+Todas as consultas são capturadas. Esse é o valor de configuração padrão.
 
-AUTO Captura consultas de relevantes com base na contagem de execução e no consumo de recursos. Esse é o valor de configuração padrão para [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+AUTO         
+Captura consultas de relevantes com base na contagem de execução e no consumo de recursos. Esse é o valor de configuração padrão para [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
-NONE Parar de capturar novas consultas. O Repositório de Consultas continuará a coletar estatísticas de compilação e tempo de execução para consultas que já foram capturadas. Use essa configuração com cuidado, pois você poderá deixar de capturar consultas importantes.
+Nenhuma         
+Pare de capturar novas consultas. O Repositório de Consultas continuará a coletar estatísticas de compilação e tempo de execução para consultas que já foram capturadas. Use essa configuração com cuidado, pois você poderá deixar de capturar consultas importantes.
 
 QUERY_CAPTURE_MODE é do tipo **nvarchar**.
 
-MAX_PLANS_PER_QUERY Um número inteiro que representa a quantidade máxima de planos de manutenção para cada consulta. O padrão é 200.
+max_plans_per_query         
+Um número inteiro que representa a quantidade máxima de planos de manutenção para cada consulta. O padrão é 200.
 
-**\<snapshot_option> ::=**
+**\<snapshot_option> ::=**         
 
 Determina o nível de isolamento da transação.
 
-ALLOW_SNAPSHOT_ISOLATION { ON | OFF } ON Habilita a opção de Instantâneo no nível do banco de dados. Quando habilitada, as instruções DML começam a gerar versões de linha mesmo quando nenhuma transação usar Isolamento de Instantâneo. Quando essa opção está habilitada, as transações podem especificar o nível de isolamento da transação SNAPSHOT. Ao executar uma transação no nível de isolamento SNAPSHOT, todas as instruções consultam um instantâneo de dados, se houver um no início da instrução. Se uma transação que executa no nível de isolamento SNAPSHOT acessar dados em vários bancos de dados, ALLOW_SNAPSHOT_ISOLATION deverá ser definido como ON em todos os bancos de dados ou cada instrução na transação deverá usar dicas de bloqueio em qualquer referência em uma cláusula FROM para uma tabela em um banco de dados onde ALLOW_SNAPSHOT_ISOLATION seja OFF.
+ALLOW_SNAPSHOT_ISOLATION { ON | OFF }         
+ON         
+Habilita a opção de Instantâneo no nível do banco de dados. Quando habilitada, as instruções DML começam a gerar versões de linha mesmo quando nenhuma transação usar Isolamento de Instantâneo. Quando essa opção está habilitada, as transações podem especificar o nível de isolamento da transação SNAPSHOT. Ao executar uma transação no nível de isolamento SNAPSHOT, todas as instruções consultam um instantâneo de dados, se houver um no início da instrução. Se uma transação que executa no nível de isolamento SNAPSHOT acessar dados em vários bancos de dados, ALLOW_SNAPSHOT_ISOLATION deverá ser definido como ON em todos os bancos de dados ou cada instrução na transação deverá usar dicas de bloqueio em qualquer referência em uma cláusula FROM para uma tabela em um banco de dados onde ALLOW_SNAPSHOT_ISOLATION seja OFF.
 
-OFF Desliga a opção de Instantâneo no nível do banco de dados. As transações não podem especificar o nível de isolamento da transação SNAPSHOT.
+OFF         
+Desliga a opção de Instantâneo no nível do banco de dados. As transações não podem especificar o nível de isolamento da transação SNAPSHOT.
 
 Ao definir ALLOW_SNAPSHOT_ISOLATION para um novo estado (de ON para OFF ou de OFF para ON), ALTER DATABASE não retorna o controle para o chamador até que todas as transações existentes no banco de dados sejam confirmadas. Se o banco de dados já estiver no estado especificado na instrução ALTER DATABASE, o controle será retornado ao chamador imediatamente. Se a instrução ALTER DATABASE não for retornada rapidamente, use [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) para determinar se há transações de longa duração. Se a instrução ALTER DATABASE for cancelada, o banco de dados permanecerá no estado que estava quando ALTER DATABASE foi iniciada. A exibição do catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) indica o estado de transações de isolamento de instantâneo no banco de dados. Se **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON, ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF fará uma pausa de seis segundos e tentará novamente executar a operação.
 
@@ -2426,9 +2592,12 @@ A opção é ON, por padrão, para os bancos de dados mestre e msdb.
 
 A configuração atual dessa opção pode ser determinada examinando-se a coluna snapshot_isolation_state na exibição do catálogo sys.databases.
 
-READ_COMMITTED_SNAPSHOT { ON | OFF } ON Habilita a opção de Instantâneo de Leitura Confirmada no nível do banco de dados. Quando habilitada, as instruções DML começam a gerar versões de linha mesmo quando nenhuma transação usar Isolamento de Instantâneo. Quando essa opção está habilitada, as transações que especificam o nível de isolamento de leitura confirmada usam o controle de versão de linha, em vez de bloqueio. Todas as instruções consultam um instantâneo de dados, se houver um no início da instrução quando uma transação é executada no nível de isolamento de leitura confirmada.
+READ_COMMITTED_SNAPSHOT { ON | OFF }         
+ON         
+Habilita a opção de Instantâneo de Leitura Confirmada no nível do banco de dados. Quando habilitada, as instruções DML começam a gerar versões de linha mesmo quando nenhuma transação usar Isolamento de Instantâneo. Quando essa opção está habilitada, as transações que especificam o nível de isolamento de leitura confirmada usam o controle de versão de linha, em vez de bloqueio. Todas as instruções consultam um instantâneo de dados, se houver um no início da instrução quando uma transação é executada no nível de isolamento de leitura confirmada.
 
-OFF Desabilita a opção de Instantâneo de Leitura Confirmada no nível do banco de dados. As transações que especificam o nível de isolamento READ COMMITTED usam bloqueio.
+OFF         
+Desliga a opção de Instantâneo de Leitura Confirmada no nível do banco de dados. As transações que especificam o nível de isolamento READ COMMITTED usam bloqueio.
 
 Para definir READ_COMMITTED_SNAPSHOT como ON ou OFF, não deve haver nenhuma conexão ativa com o banco de dados exceto para a que está executando o comando ALTER DATABASE. Entretanto, o banco de dados não precisa estar no modo de usuário único. Não é possível alterar o estado dessa opção quando o banco de dados for OFFLINE.
 
@@ -2441,27 +2610,31 @@ A configuração atual dessa opção pode ser determinada examinando-se a coluna
 > [!WARNING]
 >Quando uma tabela for criada com **DURABILITY = SCHEMA_ONLY**, e **READ_COMMITTED_SNAPSHOT** depois forem alterado usando **ALTER DATABASE**, os dados na tabela serão perdidos.
 
-MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | OFF }
+MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | OFF }         
+ON         
+Quando o nível de isolamento da transação é definido com qualquer nível de isolamento inferior a SNAPSHOT, todas as operações [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretadas em tabelas com otimização de memória são executadas no isolamento de SNAPSHOT. Exemplos de níveis de isolamento inferiores ao snapshot são READ COMMITTED ou READ UNCOMMITTED. Essas operações são executadas não importa se o nível de isolamento da transação é definido explicitamente no nível de sessão ou se a opção é usada implicitamente.
 
-ON Quando o nível de isolamento da transação é definido como qualquer nível de isolamento inferior ao SNAPSHOT, todas as operações [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretadas em tabelas com otimização de memória são executadas em isolamento de instantâneo. Exemplos de níveis de isolamento inferiores ao snapshot são READ COMMITTED ou READ UNCOMMITTED. Essas operações são executadas não importa se o nível de isolamento da transação é definido explicitamente no nível de sessão ou se a opção é usada implicitamente.
-
-OFF Não eleva o nível de isolamento da transação para operações interpretadas do [!INCLUDE[tsql](../../includes/tsql-md.md)] em tabelas com otimização de memória.
+OFF         
+Não eleva o nível de isolamento da transação para operações interpretadas do [!INCLUDE[tsql](../../includes/tsql-md.md)] em tabelas com otimização de memória.
 
 Não será possível alterar o estado de MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT se o banco de dados for OFFLINE.
 
-A opção é OFF, por padrão.
+O valor padrão é OFF.
 
 A configuração atual dessa opção pode ser determinada, examinando a coluna **is_memory_optimized_elevate_to_snapshot_on** na exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-**\<sql_option> ::=**
+**\<sql_option> ::=**         
 
 Controla as opções de conformidade ANSI no nível de banco de dados.
 
-ANSI_NULL_DEFAULT { ON | OFF } Determina o valor padrão, NULL ou NOT NULL, de um [tipo definido pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) CLR ou coluna para o qual a nulidade não é definida explicitamente nas instruções CREATE TABLE ou ALTER TABLE. As colunas definidas com restrições seguem as regras de restrição, qualquer que seja essa configuração.
+ANSI_NULL_DEFAULT { ON | OFF }         
+Determina o valor padrão, NULL ou NOT NULL, de uma coluna ou um [tipo CLR definido pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) para o qual a nulidade não é definida explicitamente nas instruções CREATE TABLE ou ALTER TABLE. As colunas definidas com restrições seguem as regras de restrição, qualquer que seja essa configuração.
 
-ON O valor padrão é NULL.
+ON         
+O valor padrão é NULL.
 
-OFF O valor padrão não é NULL.
+OFF         
+O valor padrão é NOT NULL.
 
 As configurações no nível de conexão que são definidas com o uso de uma instrução SET substituem a configuração no nível de banco de dados padrão para ANSI_NULL_DEFAULT. Clientes ODBC e OLE DB emitem uma instrução SET no nível da configuração de conexão ANSI_NULL_DEFAULT como ON para a sessão por padrão. Os clientes executam a instrução, quando você se conecta a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais, confira [SET ANSI_NULL_DFLT_ON](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md).
 
@@ -2469,9 +2642,12 @@ Para compatibilidade ANSI, definir a opção de banco de dados ANSI_NULL_DEFAULT
 
 Você pode determinar o status dessa opção examinando a coluna is_ansi_null_default_on na exibição do catálogo sys.databases. Você também pode determinar o status examinando a propriedade IsAnsiNullDefault da função DATABASEPROPERTYEX.
 
-ANSI_NULLS { ON | OFF } ON Todas as comparações com um valor nulo são avaliadas como UNKNOWN.
+ANSI_NULLS { ON | OFF }         
+ON         
+Todas as comparações com um valor nulo são avaliadas como UNKNOWN.
 
-OFF As comparações de valores não UNICODE com um valor nulo serão avaliadas como TRUE se ambos os valores forem NULL.
+OFF         
+As comparações de valores não UNICODE com um valor nulo são avaliadas como TRUE se ambos os valores são NULL.
 
 > [!IMPORTANT]
 > Em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_NULLS sempre estará ON e quaisquer aplicativos que definam explicitamente a opção como OFF produzirão um erro. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.
@@ -2482,9 +2658,12 @@ SET ANSI_NULLS também deve ser definido como ON ao criar ou fazer alterações 
 
 Você pode determinar o status dessa opção examinando a coluna is_ansi_nulls_on na exibição do catálogo sys.databases. Você também pode determinar o status examinando a propriedade IsAnsiNullsEnabled da função DATABASEPROPERTYEX.
 
-ANSI_PADDING {ON | Desativar} ON Cadeias de caracteres são preenchidas com o mesmo comprimento antes da conversão. Também são preenchidas com o mesmo comprimento antes de inserir para um tipo de dados **varchar** ou **nvarchar**.
+ANSI_PADDING { ON | OFF }         
+ON         
+As cadeias de caracteres são preenchidas com a mesma largura antes da conversão. Também são preenchidas com o mesmo comprimento antes de inserir para um tipo de dados **varchar** ou **nvarchar**.
 
-OFF Insere espaços em branco à direita em valores de caractere em colunas **varchar** ou **nvarchar**. Também deixa zeros à direita em valores binários inseridos nas colunas **varbinary**. Os valores não são preenchidos com o tamanho da coluna.
+OFF         
+Insere espaços em branco à direita em valores de caractere em colunas **varchar** ou **nvarchar**. Também deixa zeros à direita em valores binários inseridos nas colunas **varbinary**. Os valores não são preenchidos com o tamanho da coluna.
 
 Quando OFF é especificado, essa configuração afeta apenas a definição de novas colunas.
 
@@ -2497,9 +2676,12 @@ Colunas **char(_n_)** e **binary(_n_)** que permitem valores nulos são preenchi
 
 Você pode determinar o status dessa opção examinando a coluna is_ansi_padding_on na exibição do catálogo sys.databases. Você também pode determinar o status examinando a propriedade IsAnsiPaddingEnabled da função DATABASEPROPERTYEX.
 
-ANSI_WARNINGS { ON | OFF } ON Erros ou avisos são emitidos quando condições como dividir por zero ocorrem. Erros e avisos também são emitidos quando valores nulos aparecerem em funções de agregação.
+ANSI_WARNINGS { ON | OFF }         
+ON         
+Erros ou avisos são emitidos quando ocorrem condições como divisão por zero. Erros e avisos também são emitidos quando valores nulos aparecerem em funções de agregação.
 
-OFF Nenhum aviso é emitido e os valores nulos são retornados quando condições como “dividir por zero” ocorrem.
+OFF         
+Nenhum aviso é acionado e os valores nulos são retornados quando ocorrem condições como divisão por zero.
 
 SET ANSI_WARNINGS também deve ser definido como ON ao criar ou fazer alterações em índices em colunas computadas ou exibições indexadas.
 
@@ -2507,19 +2689,26 @@ SET ANSI_WARNINGS também deve ser definido como ON ao criar ou fazer alteraçõ
 
 Você pode determinar o status dessa opção examinando a coluna is_ansi_warnings_on na exibição do catálogo sys.databases. Você também pode determinar o status examinando a propriedade IsAnsiWarningsEnabled da função DATABASEPROPERTYEX.
 
-ARITHABORT { ON | OFF } ON Uma consulta é encerrada quando um estouro ou erro de divisão por zero ocorrer durante a execução da consulta.
+ARITHABORT { ON | OFF }         
+ON         
+Uma consulta é encerrada quando ocorre um estouro ou um erro de divisão por zero durante a execução da consulta.
 
-OFF A mensagem de aviso é exibida quando um desses erros ocorre. A consulta, o lote ou a transação continuará sendo processado como se nenhum erro tivesse ocorrido, mesmo que um aviso seja exibido.
+OFF         
+Uma mensagem de aviso é exibida quando um desses erros ocorre. A consulta, o lote ou a transação continuará sendo processado como se nenhum erro tivesse ocorrido, mesmo que um aviso seja exibido.
 
 SET ARITHABORT também deve ser definido como ON ao criar ou fazer alterações em índices em colunas computadas ou exibições indexadas.
 
   Você pode determinar o status dessa opção examinando a coluna is_arithabort_on na exibição do catálogo sys.databases. Você também pode determinar o status examinando a propriedade IsArithmeticAbortEnabled da função DATABASEPROPERTYEX.
 
-COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 } Para mais informações, veja [Nível de compatibilidade ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
+COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }         
+Para saber mais, confira [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
-CONCAT_NULL_YIELDS_NULL { ON | OFF } ON O resultado de uma operação de concatenação é NULL quando qualquer um dos operandos é NULL. Por exemplo, concatenar a cadeia de caracteres "This is" e NULL gera o valor NULL, em vez do valor "This is".
+CONCAT_NULL_YIELDS_NULL { ON | OFF }         
+ON         
+O resultado de uma operação de concatenação será NULL quando qualquer operando for NULL. Por exemplo, concatenar a cadeia de caracteres "This is" e NULL gera o valor NULL, em vez do valor "This is".
 
-OFF O valor nulo é tratado como uma cadeia de caracteres vazia.
+OFF         
+O valor nulo é tratado como uma cadeia de caracteres vazia.
 
 CONCAT_NULL_YIELDS_NULL deve ser definido como ON ao criar ou fazer alterações em índices em colunas computadas ou exibições indexadas.
 
@@ -2530,11 +2719,14 @@ As configurações no nível de conexão que são definidas usando uma instruç�
 
 Você pode determinar o status dessa opção examinando a coluna is_concat_null_yields_null_on na exibição do catálogo sys.databases. Você também pode determinar o status examinando a propriedade IsNullConcat da função DATABASEPROPERTYEX.
 
-QUOTED_IDENTIFIER { ON | OFF } ON Aspas duplas podem ser usadas para incluir identificadores delimitados.
+QUOTED_IDENTIFIER { ON | OFF }         
+ON         
+As aspas duplas podem ser utilizadas para conter identificadores delimitados.
 
 Todas as cadeias de caracteres delimitadas por aspas duplas são interpretadas como identificadores de objeto. Os identificadores entre aspas não precisam seguir as regras [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Eles podem ser palavras-chave e incluir caracteres não permitidos nos identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se o sinal de aspas simples (') fizer parte da cadeia de caracteres literal, ele poderá ser representado por aspas duplas (").
 
-OFF Os identificadores não podem estar entre aspas e devem seguir todas as regras de identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]. Literais podem ser delimitados por aspas simples ou duplas.
+OFF         
+Os identificadores não podem estar entre aspas e precisam seguir todas as regras do [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Literais podem ser delimitados por aspas simples ou duplas.
 
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também permite que os identificadores sejam delimitados por colchetes ([ ]). Identificadores entre colchetes sempre podem ser usados, seja qual for a configuração QUOTED_IDENTIFIER. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).
 
@@ -2544,41 +2736,52 @@ As configurações no nível de conexão que são definidas com o uso de uma ins
 
   Você pode determinar o status dessa opção examinando a coluna is_quoted_identifier_on na exibição do catálogo sys.databases. Você também pode determinar o status, examinando a propriedade IsQuotedIdentifiersEnabled da função DATABASEPROPERTYEX.
 
-NUMERIC_ROUNDABORT { ON | OFF } ON um erro é gerado quando ocorre perda de precisão em uma expressão.
+NUMERIC_ROUNDABORT { ON | OFF }         
+ON         
+Um erro é gerado quando ocorre perda de precisão em uma expressão.
 
-OFF As perdas de precisão não geram mensagens de erro e o resultado é arredondado de acordo com a precisão da coluna ou variável que armazena o resultado.
+OFF         
+As perdas de precisão não geram mensagens de erro e o resultado é arredondado para a precisão da coluna ou da variável que armazena o resultado.
 
 NUMERIC_ROUNDABORT deve ser definido como OFF ao criar ou fazer alterações em índices em colunas computadas ou exibições indexadas.
 
 Você pode determinar o status dessa opção examinando a coluna is_numeric_roundabort_on na exibição do catálogo sys.databases. Você também pode determinar o status, examinando a propriedade IsNumericRoundAbortEnabled da função DATABASEPROPERTYEX.
 
-RECURSIVE_TRIGGERS { ON | OFF } ON Disparo recursivo de gatilhos AFTER é permitido.
+RECURSIVE_TRIGGERS { ON | OFF }         
+ON         
+O disparo recursivo de gatilhos AFTER é permitido.
 
-OFF Você pode determinar o status dessa opção examinando a coluna is_recursive_triggers_on na exibição do catálogo sys.databases. Você também pode determinar o status, examinando a propriedade IsRecursiveTriggersEnabled da função DATABASEPROPERTYEX.
+OFF         
+Você pode determinar o status dessa opção examinando a coluna is_recursive_triggers_on na exibição do catálogo sys.databases. Você também pode determinar o status, examinando a propriedade IsRecursiveTriggersEnabled da função DATABASEPROPERTYEX.
 
 > [!NOTE]
 > Somente a recursão direta será evitada quando RECURSIVE_TRIGGERS estiver definido como OFF. Para desabilitar a recursão indireta, é necessário definir também a opção do servidor nested triggers como 0.
 
 Você pode determinar o status dessa opção examinando a coluna is_recursive_triggers_on na exibição do catálogo sys.databases ou a propriedade IsRecursiveTriggersEnabled da função DATABASEPROPERTYEX.
 
-**\<target_recovery_time_option> ::=**
+**\<target_recovery_time_option> ::=**         
 
 Especifica a frequência de pontos de verificação indiretos por banco de dados. Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o valor padrão para novos bancos de dados é de 1 minuto, o que indica que o banco de dados usará pontos de verificação indiretos. Para versões mais antigas, o padrão é 0, o que indica que o banco de dados usará pontos de verificação automáticos cuja frequência depende da configuração do intervalo de recuperação da instância de servidor. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda 1 minuto para a maioria dos sistemas.
 
-TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES } *target_recovery_time* Especifica o salto máximo no tempo para recuperar o banco de dados especificado caso ocorra uma falha.
+TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }         
+*target_recovery_time*         
+Especifica o limite máximo no tempo para recuperar o banco de dados especificado no caso de uma falha.
 
-SECONDS Indica que *target_recovery_time* é expresso como o número de segundos.
+SECONDS         
+Indica que *target_recovery_time* é expresso como o número de segundos.
 
-MINUTES Indica que *target_recovery_time* é expresso como o número de minutos.
+MINUTES         
+Indica que *target_recovery_time* é expresso como o número de minutos.
 
 Para saber mais sobre pontos de verificação indiretos, confira [Pontos de verificação de banco de dados](../../relational-databases/logs/database-checkpoints-sql-server.md).
 
-ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE Especifica se a reversão deve ser feita após o número especificado de segundos ou imediatamente.
+ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE         
+Especifica se a reversão deve ser feita após o número de segundos especificado ou imediatamente.
 
-NO_WAIT Especifica que a solicitação falhará se a alteração de estado ou a opção de banco de dados solicitado não puder ser concluída imediatamente. Concluir imediatamente significa não esperar a confirmação ou a reversão das transações por conta própria.
+NO_WAIT         
+Especifica que a solicitação falhará se a alteração solicitada do estado ou da opção de banco de dados não puder ser concluída imediatamente. Concluir imediatamente significa não esperar a confirmação ou a reversão das transações por conta própria.
 
-## <a name="SettingOptions"></a> Opções de configuração
-
+## <a name="SettingOptions"></a> Opções de configuração         
 Para recuperar as configurações atuais das opções de banco de dados, use a exibição do catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 
 Depois de definir uma opção de banco de dados, a modificação entra em vigor imediatamente.
@@ -2588,7 +2791,6 @@ Você pode alterar os valores padrão para qualquer uma das opções de banco de
 ## <a name="examples"></a>Exemplos
 
 ### <a name="a-setting-the-database-to-readonly"></a>A. Configurando o banco de dados como READ_ONLY
-
 Alterar o estado de um banco de dados ou grupo de arquivos para READ_ONLY ou READ_WRITE requer acesso exclusivo ao banco de dados. O exemplo a seguir define o banco de dados como o modo `RESTRICTED_USER` para acesso restrito. Em seguida, o exemplo define o estado do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] como `READ_ONLY` e retorna o acesso ao banco de dados para todos os usuários.
 
 ```sql
@@ -2607,7 +2809,6 @@ GO
 ```
 
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Habilitando o isolamento de instantâneo em um banco de dados
-
 O exemplo a seguir habilita a opção de estrutura de isolamento de instantâneo para o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .
 
 ```sql
@@ -2624,7 +2825,6 @@ SELECT name, snapshot_isolation_state,
 FROM sys.databases
 WHERE name = N'AdventureWorks2012';
 GO
-
 ```
 
 O conjunto de resultados mostra que a estrutura de isolamento de instantâneo está habilitada.
@@ -2634,7 +2834,6 @@ O conjunto de resultados mostra que a estrutura de isolamento de instantâneo es
 |AdventureWorks2012 |1| ON |
 
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. Habilitando, modificando e desabilitando o controle de alterações
-
 O exemplo a seguir habilita o controle de alterações no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e define o período de retenção para `2` dias.
 
 ```sql
@@ -2658,7 +2857,6 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="d-enabling-the-query-store"></a>D. Habilitando o repositório de consultas
-
 O exemplo a seguir habilita o repositório de consultas e configura os parâmetros do repositório de consultas.
 
 ```sql
@@ -2726,17 +2924,17 @@ RESULT_SET_CACHING { ON | OFF}
 
 Controla opções automáticas.
 
-**Permissões**: Requer estas permissões:
+**Permissions** Requer estas permissões:
 
 - Logon da entidade de segurança no nível do servidor (aquele criado pelo processo de provisionamento), ou
-- Membro da função de banco de dados dbmanager.
+- Membro da função de banco de dados `dbmanager`.
 
 O proprietário do banco de dados não pode alterar o banco de dados, a menos que ele seja membro da função dbmanager.
 
 > [!Note]
 > Embora esse recurso esteja sendo distribuído para todas as regiões, verifique a versão implantada em sua instância e as [notas sobre a versão mais recente do SQL DW do Azure](/azure/sql-data-warehouse/release-notes-10-0-10106-0) para obter a disponibilidade de recursos.
 
-<a name="result_set_caching"></a> RESULT_SET_CACHING {ON | OFF} (versão prévia para Gen2) - Esse comando deve ser executado enquanto estiver conectado ao banco de dados mestre.  A alteração dessa configuração de banco de dados entra em vigor imediatamente.  Os custos de armazenamento são incorridos pelo armazenamento em cache dos conjuntos de resultados da consulta. Depois de desabilitar o armazenamento em cache de resultados de um banco de dados, o cache de resultados anteriormente persistente será excluído imediatamente do armazenamento do SQL Data Warehouse do Azure. Uma nova coluna chamada is_result_set_caching_on é introduzida no sys.databases para mostrar a configuração de armazenamento em cache de resultados de um banco de dados.  
+<a name="result_set_caching"></a> RESULT_SET_CACHING {ON | OFF} (versão prévia do SQL Data Warehouse do Azure Gen2) – Esse comando deve ser executado enquanto estiver conectado ao banco de dados mestre.  A alteração dessa configuração de banco de dados entra em vigor imediatamente.  Os custos de armazenamento são incorridos pelo armazenamento em cache dos conjuntos de resultados da consulta. Depois de desabilitar o armazenamento em cache de resultados de um banco de dados, o cache de resultados anteriormente persistente será excluído imediatamente do armazenamento do SQL Data Warehouse do Azure. Uma nova coluna chamada is_result_set_caching_on é introduzida no sys.databases para mostrar a configuração de armazenamento em cache de resultados de um banco de dados.  
 
 ON Especifica que os conjuntos de resultados de consulta retornados desse banco de dados serão armazenados em cache no armazenamento do SQL Data Warehouse do Azure.
 
@@ -2770,7 +2968,7 @@ SET RESULT_SET_CACHING OFF;
 ### <a name="check-result-set-caching-setting-for-a-database"></a>Verificar a configuração do armazenamento em cache do conjunto de resultados para um banco de dados
 
 ```sql
-SELECT name, is_result_set_caching  
+SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
@@ -2802,7 +3000,7 @@ If
 FROM sys.dm_pdw_request_steps  
 WHERE request_id = 'QID58286' and operation_type = 'ReturnOperation' and command like '%DWResultCacheDb%') = 0
 SELECT 1 as is_cache_hit  
-ELSE 
+ELSE
 SELECT 0 as is_cache_hit;
 ```
 
@@ -2814,7 +3012,7 @@ FROM sys.dm_pdw_request_steps
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)

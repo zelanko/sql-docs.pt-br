@@ -15,18 +15,20 @@ ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c758edb6bd51ce82affccae78c796437d7a688fc
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 1df493defd8a85c6d360dd224cdcec99b5732150
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559367"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506610"
 ---
 # <a name="database-mail"></a>Database Mail
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Database Mail é uma solução empresarial para envio de mensagens de email do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Com o Database Mail, seus aplicativos de banco de dados podem enviar mensagens de email a usuários. As mensagens podem conter resultados de consulta e incluir, também, arquivos de qualquer recurso de sua rede.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+  O Database Mail é uma solução corporativa para enviar mensagens de email do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou da [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Com o Database Mail, seus aplicativos de banco de dados podem enviar mensagens de email a usuários. As mensagens podem conter resultados de consulta e incluir, também, arquivos de qualquer recurso de sua rede.  
   
-  
+> [!NOTE] 
+> O Database Mail está disponível no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index), mas não nos pools elástico e singleton do Banco de Dados SQL do Azure. 
+
 ##  <a name="Benefits"></a> Benefícios do uso do Database Mail  
  O Database Mail foi projetado de modo a garantir confiança, escalabilidade, segurança e suporte.  
   
@@ -44,19 +46,19 @@ ms.locfileid: "51559367"
   
 -   Entrega em segundo plano: o Database Mail fornece entrega em segundo plano ou assíncrona. Quando **sp_send_dbmail** é chamado para enviar uma mensagem, o Database Mail adiciona uma solicitação a uma fila do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . O procedimento armazenado retorna imediatamente. O componente de email externo recebe a solicitação e entrega o email.  
   
--   Vários perfis: o Database Mail lhe permite criar vários perfis dentro de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Opcionalmente, você pode escolher o perfil a ser utilizado pelo Database Mail para enviar uma mensagem.  
+-   Vários perfis: o Database Mail lhe permite criar vários perfis dentro de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Opcionalmente, você pode escolher o perfil a ser utilizado pelo Database Mail para enviar uma mensagem.  
   
 -   Várias contas: cada perfil pode conter várias contas de failover. Você pode configurar perfis diferentes com contas diferentes para distribuir email por vários servidores de email.  
   
--   Compatibilidade de 64 bits: o Database Mail tem suporte total em instalações de 64 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Compatibilidade de 64 bits: o Database Mail é totalmente compatível em instalações de 64 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="security"></a>Segurança  
   
--   Desativada, por padrão: para reduzir a área da superfície do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os procedimentos armazenados do Database Mail ficam desabilitados por padrão.  
+-   Desativada, por padrão: para reduzir a área da superfície do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os procedimentos armazenados do Database Mail são desabilitados por padrão.  
   
 -   Segurança do email: para enviar o Database Mail, é necessário ser membro da função de banco de dados **DatabaseMailUserRole** no banco de dados **msdb** .  
   
--   Segurança do perfil: o Database Mail impõe a segurança dos perfis de email. Os usuários ou grupos do banco de dados **msdb** que têm acesso a um perfil do Database Mail são escolhidos por você. Você pode conceder acesso a usuários específicos ou a todos os usuários do **msdb**. Os perfis particulares restringem o acesso a uma lista especificada de usuários. Os perfis públicos estão disponível para todos os usuários de um banco de dados.  
+-   Segurança de perfil: o Database Mail reforça a segurança dos perfis de email. Os usuários ou grupos do banco de dados **msdb** que têm acesso a um perfil do Database Mail são escolhidos por você. Você pode conceder acesso a usuários específicos ou a todos os usuários do **msdb**. Os perfis particulares restringem o acesso a uma lista especificada de usuários. Os perfis públicos estão disponível para todos os usuários de um banco de dados.  
   
 -   Administrador de tamanho de anexo: o Database Mail impõe um limite configurável ao tamanho do arquivo de anexo. É possível alterar esse limite usando o procedimento armazenado [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md) .  
   
@@ -66,13 +68,13 @@ ms.locfileid: "51559367"
   
 ### <a name="supportability"></a>Suporte  
   
--   Configuração integrada. O Database Mail mantém as informações das contas de email no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Não há nenhuma necessidade de gerenciar um perfil de email em um aplicativo cliente externo. O Assistente para Configuração do Database Mail é uma interface conveniente para a configuração do Database Mail. Você também pode criar e manter configurações do Database Mail por meio de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+-   Configuração integrada: o Database Mail mantém as informações das contas de email no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Não há nenhuma necessidade de gerenciar um perfil de email em um aplicativo cliente externo. O Assistente para Configuração do Database Mail é uma interface conveniente para a configuração do Database Mail. Você também pode criar e manter configurações do Database Mail por meio de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   Registro em log. O Database Mail registra a atividade de email no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no log de eventos de aplicativos do Microsoft Windows e em tabelas do banco de dados **msdb** .  
   
--   Auditoria: o Database Mail mantém cópias das mensagens e anexos enviados no banco de dados **msdb** . É fácil auditar o uso do Database Mail e examinar as mensagens retidas.  
+-   Auditoria do: o Database Mail mantém cópias das mensagens e dos anexos enviados no banco de dados **msdb**. É fácil auditar o uso do Database Mail e examinar as mensagens retidas.  
   
--   Suporte a HTML. O Database Mail lhe permite enviar email formatado como HTML.  
+-   Suporte a HTML: o Database Mail permite enviar email formatado como HTML.  
   
   
 ##  <a name="VisualElement"></a> Arquitetura do Database Mail  
@@ -114,7 +116,7 @@ ms.locfileid: "51559367"
 -   Uma tarefa agendada, como um backup de banco de dados ou evento de replicação, obtém êxito ou falha. Por exemplo, você pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Mail para notificar operadores se ocorrer um erro durante o processamento do final de um mês.  
   
   
-##  <a name="RelatedContent"></a> Tópicos de componentes do Database Mail  
+##  <a name="RelatedContent"></a> Confira também  
   
 -   [Objetos de configuração do Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)  
   

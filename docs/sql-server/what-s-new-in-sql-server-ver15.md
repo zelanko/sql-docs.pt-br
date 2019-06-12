@@ -1,6 +1,6 @@
 ---
 title: Novidades no SQL Server 2019 | Microsoft Docs
-ms.date: 05/22/2019
+ms.date: 05/28/2019
 ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ad10f03e426298d3785feeba132979e647cb1a98
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: d165900617723fcd91a88c17db630b2d4ac29c1c
+ms.sourcegitcommit: d44fa4170c2f586f264e31906c7916a74d080aef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198186"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810287"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novidades no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -53,12 +53,14 @@ Além disso, os recursos a seguir foram adicionados ou aprimorados para o [!INCL
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---|
+|Extensões de Linguagem do SQL Server – [Extensão da linguagem Java](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)|O [SDK de Extensibilidade da Microsoft para Java para Microsoft SQL Server](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) já é software livre e está [disponível no GitHub](https://github.com/microsoft/sql-server-language-extensions).|
 |Registrar linguagens externas|A nova DDL, `CREATE EXTERNAL LANGUAGE`, registra linguagens externas, como Java, no SQL Server. Confira [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
 |Mais tipos de dados compatíveis para Java|Confira [Tipos de dados Java](../language-extensions/how-to/java-to-sql-data-types.md).|
 |Política de captura personalizada para o Repositório de Consultas|Quando habilitadas, as configurações adicionais do Repositório de Consultas ficam disponíveis em uma nova configuração da Política de Captura do Repositório de Consultas, a fim de ajustar a coleta de dados em um servidor específico. Para obter mais informações, veja [Opções ALTER DATABASE SET (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).|
 |O [banco de dados em memória](../relational-databases/in-memory-database.md) adiciona uma nova sintaxe DDL para controlar o pool de buffers híbrido. <sup>2</sup>|Com o [pool de buffers híbrido](../database-engine/configure-windows/hybrid-buffer-pool.md), as páginas de banco de dados que residem em arquivos de banco de dados colocados em um dispositivo PMEM (memória persistente) serão acessadas diretamente quando necessário.|
 |Adição do novo recurso do banco de dados em memória, metadados do tempdb com otimização de memória.|Confira [Metadados do TempDB com otimização de memória](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)|
 |Os servidores vinculados dão suporte a codificação de caracteres UTF-8. |[Suporte a ordenações e a Unicode](../relational-databases/collations/collation-and-unicode-support.md) |
+|A instalação do SQL Server inclui recomendações do MaxDOP que seguem as diretrizes documentadas. |[Configurar a opção de configuração de servidor max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
 |`sys.dm_exec_query_plan_stats` retorna mais informações sobre o grau de paralelismo e as concessões de memória para planos de consulta. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 | &nbsp; | &nbsp; |
 
@@ -171,7 +173,7 @@ Além disso, os recursos a seguir foram adicionados ou aprimorados para o [!INCL
 |Escalabilidade de ponto de verificação indiretos aprimorada. |[Escalabilidade de ponto de verificação indireto aprimorada](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
 |Adiciona suporte para usar codificação de caracteres UTF-8 com uma ordenação BIN2 (`UTF8_BIN2`). |[Suporte a ordenações e a Unicode](../relational-databases/collations/collation-and-unicode-support.md) |
 |Defina as ações de exclusão em cascata em uma restrição de borda em um banco de dados de grafo. |[Restrições de borda](../relational-databases/tables/graph-edge-constraints.md) |
-|Habilite ou desabilite `LIGHTWEIGHT_QUERY_PROFILING` com a nova configuração no escopo do banco de dados. |[`VERBOSE_TRUNCATION_WARNINGS`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation) |
+|Habilite ou desabilite `LIGHTWEIGHT_QUERY_PROFILING` com a nova configuração no escopo do banco de dados. |[`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp) |
 | &nbsp; | &nbsp; |
 
 ### <a name="tools"></a>Ferramentas
@@ -433,7 +435,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ```
 
 > [!NOTE]
-> Essa sintaxe não é necessária para tirar proveito desse recurso no BD SQL do Azure, em que ele é [ativado por solicitação durante a versão prévia pública](/azure/sql-database/sql-database-accelerated-database-recovery#to-enable-adr-during-this-preview-period). Após sua habilitação, o recurso estará ativado por padrão.
+> Essa sintaxe não é necessária para tirar proveito desse recurso no BD SQL do Azure, em que ele é [ativado por solicitação durante a versão prévia pública](/azure/sql-database/sql-database-accelerated-database-recovery). Após sua habilitação, o recurso estará ativado por padrão.
 
 Se você tiver bancos de dados críticos que estão sujeitos a grandes quantidades de transações, faça experiências com esse recurso durante a versão prévia. Forneça comentários à [equipe do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](<https://aka.ms/sqlfeedback>).
 
