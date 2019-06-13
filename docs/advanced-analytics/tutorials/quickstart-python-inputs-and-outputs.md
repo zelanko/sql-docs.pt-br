@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a778c4a65b9e3f4cbf4ed77cff46e9061d4b6a8a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: fe60197671e40317f56a62ad98ea364a238df174
+ms.sourcegitcommit: c3de32efeee3095fcea0d3faebb8f2ff1b56d229
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583219"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67033398"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>Início Rápido: Lidar com entradas e saídas usando o Python no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,9 +56,9 @@ SELECT * FROM PythonTestData
 
 Vamos dar uma olhada no padrão variáveis de entrada e saídas de sp_execute_external_script: `InputDataSet` e `OutputDataSet`.
 
-1. Você pode obter os dados da tabela como entrada para seu script R. Execute a instrução a seguir. Obtém os dados da tabela, faz uma viagem de ida e por meio de execução R e retornar os valores com o nome da coluna *NewColName*.
+1. Você pode obter os dados da tabela como entrada para o seu script de Python. Execute a instrução a seguir. Obtém os dados da tabela, faz uma viagem de ida e por meio do tempo de execução do Python e retorna os valores com o nome da coluna *NewColName*.
 
-    Os dados retornados pela consulta são passados para o tempo de execução de R, que retorna os dados ao banco de dados SQL como um quadro de dados. A cláusula WITH RESULT SETS define o esquema da tabela de dados retornados para o banco de dados SQL.
+    Os dados retornados pela consulta são passados para o tempo de execução do Python, que retorna os dados para o banco de dados SQL como um DataFrame pandas. A cláusula WITH RESULT SETS define o esquema da tabela de dados retornados para o banco de dados SQL.
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -72,7 +72,7 @@ Vamos dar uma olhada no padrão variáveis de entrada e saídas de sp_execute_ex
 
     ![Saída do script de Python que retorna dados de uma tabela](./media/python-output-pythontestdata.png)
 
-2. Vamos alterar o nome das variáveis de entrada ou saídas. O script acima usado o padrão de entrada e saída de nomes de variáveis _InputDataSet_ e _OutputDataSet_. Para definir os dados de entrada associados _InputDatSet_, você usa o *@input_data_1* variável.
+2. Vamos alterar o nome das variáveis de entrada ou saídas. O script acima usado o padrão de entrada e saída de nomes de variáveis _InputDataSet_ e _OutputDataSet_. Para definir os dados de entrada associados _InputDataSet_, você usa o *@input_data_1* variável.
 
     Nesse script, os nomes das variáveis de entrada e saída para o procedimento armazenado foi alterados para *SQL_out* e *SQL_in*:
 
