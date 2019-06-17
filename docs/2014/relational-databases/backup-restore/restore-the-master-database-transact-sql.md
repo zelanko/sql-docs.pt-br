@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 823a6455616b412a41179d831b565e10b3286fb7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62875140"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Restaurar o banco de dados mestre (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "62875140"
   
 1.  Inicie uma instância de servidor no modo de usuário único.  
   
-     Para obter informações sobre como especificar o parâmetro de inicialização de usuário único (**-m**), veja [Configurar opções de inicialização do servidor &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
+     Para obter informações sobre como especificar o parâmetro de inicialização de usuário único ( **-m**), veja [Configurar opções de inicialização do servidor &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
   
 2.  Para restaurar um backup de banco de dados completo do **master**, use a seguinte instrução [RESTORE DATABASE](/sql/t-sql/statements/restore-statements-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62875140"
  O exemplo a seguir restaura o banco de dados `master` na instância do servidor padrão. O exemplo assume que a instância do servidor já está sendo executada no modo de usuário único. O exemplo inicia o `sqlcmd` e executa uma instrução `RESTORE DATABASE` que restaura um backup de banco de dados completo de `master` de um dispositivo de disco: `Z:\SQLServerBackups\master.bak`.  
   
 > [!NOTE]
->  Para uma instância nomeada, o comando **sqlcmd** deve especificar a opção **-S**_\<ComputerName>_\\*\<InstanceName>*.  
+>  Para uma instância nomeada, o comando **sqlcmd** deve especificar a opção **-S** _\<ComputerName>_ \\ *\<InstanceName>* .  
   
 ```  
   

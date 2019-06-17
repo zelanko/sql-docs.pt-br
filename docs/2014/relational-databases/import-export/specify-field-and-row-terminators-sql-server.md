@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011852"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo e linha (SQL Server)
@@ -67,12 +67,12 @@ ms.locfileid: "66011852"
   
     -   Usar a opção **-t** para especificar o terminador de linha para todos os campos, exceto para o último campo na linha, e usar a opção **-r** para especificar um terminador de linha.  
   
-    -   Usar uma opção de formato de caractere (**-c** ou **-w**) sem a opção **-t**, o que define o terminador de campo como o caractere de tabulação, \t. Isso é o mesmo que especificar **-t**\t.  
+    -   Usar uma opção de formato de caractere ( **-c** ou **-w**) sem a opção **-t**, o que define o terminador de campo como o caractere de tabulação, \t. Isso é o mesmo que especificar **-t**\t.  
   
         > [!NOTE]  
         >  Se você especificar a opção **-n** (dados nativos) ou **-N** (dados nativos Unicode), os terminadores não serão inseridos.  
   
-    -   Se um comando interativo **bcp** contiver a opção **in** ou **out** sem a opção de arquivo de formato (**-f**) ou uma opção de formato de dados (**-n**, **-c**, **-w**ou **-N**) e você tiver escolhido não identificar os tamanhos de prefixo e de campo, o comando solicitará o terminador de campo de cada campo com um padrão nenhum:  
+    -   Se um comando interativo **bcp** contiver a opção **in** ou **out** sem a opção de arquivo de formato ( **-f**) ou uma opção de formato de dados ( **-n**, **-c**, **-w**ou **-N**) e você tiver escolhido não identificar os tamanhos de prefixo e de campo, o comando solicitará o terminador de campo de cada campo com um padrão nenhum:  
   
          `Enter field terminator [none]:`  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66011852"
         >  Depois que você especificar interativamente todos os campos em um comando **bcp**, o comando solicitará que salve suas respostas para cada campo em um arquivo de formato não XML. Para obter mais informações sobre arquivos de formato não XML, veja [Arquivos de formato não XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ### <a name="guidelines-for-using-terminators"></a>Diretrizes para uso de terminadores  
- Em algumas situações, um terminador é útil para um campo de dados `char` ou `nchar`. Por exemplo:   
+ Em algumas situações, um terminador é útil para um campo de dados `char` ou `nchar`. Por exemplo:  
   
 -   Para uma coluna de dados que contém um valor nulo em um arquivo de dados que será importado em um programa que não entende as informações de comprimento de prefixo.  
   
@@ -127,8 +127,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualificador|Descrição|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **='*`field_terminator`*'**|Especifica o terminador de campo a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \t (caractere de tabulação).|  
-    |ROWTERMINATOR **='*`row_terminator`*'**|Especifica o terminador de linha a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \n (caractere de nova linha).|  
+    |FIELDTERMINATOR **=' *`field_terminator`* '**|Especifica o terminador de campo a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \t (caractere de tabulação).|  
+    |ROWTERMINATOR **=' *`row_terminator`* '**|Especifica o terminador de linha a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \n (caractere de nova linha).|  
   
      Para obter mais informações, veja [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
@@ -170,8 +170,8 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 |Opção|attribute|  
 |------------|---------------|  
 |DATAFILETYPE **='`char`'**|Especifica que os campos de dados sejam carregados como dados de caracteres.|  
-|FIELDTERMINATOR **='**`,`**'**|Especifica uma vírgula (`,`) como terminador de campo.|  
-|ROWTERMINATOR **='**`\n`**'**|Especifica o terminador de linha como um caractere de nova linha.|  
+|FIELDTERMINATOR **='** `,` **'**|Especifica uma vírgula (`,`) como terminador de campo.|  
+|ROWTERMINATOR **='** `\n` **'**|Especifica o terminador de linha como um caractere de nova linha.|  
   
  No Editor de Consultas do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , execute o seguinte código:  
   

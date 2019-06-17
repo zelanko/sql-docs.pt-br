@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62660797"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
@@ -43,22 +43,22 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @publication**=** ] **'**_publication_**'**  
- O nome da publicação. *publicação*está **sysname**, com um padrão de **%**, que retorna informações sobre todas as publicações de mesclagem no banco de dados atual.  
+ [ @publication **=** ] **'** _publication_ **'**  
+ O nome da publicação. *publicação*está **sysname**, com um padrão de **%** , que retorna informações sobre todas as publicações de mesclagem no banco de dados atual.  
   
  [ @found **=** ] **'***encontrado***'** saída  
  Um sinalizador para indicar linhas de retorno. *encontrado*está **int** e um parâmetro de saída, com um padrão NULL. **1** indica que a publicação foi localizada. **0** indica a publicação não foi encontrada.  
   
- [ @publication_id**=**] **'***publication_id***'** OUTPUT  
+ [ @publication_id **=** ] **'***publication_id***'** OUTPUT  
  O número de identificação da publicação. *publication_id* está **uniqueidentifier** e um parâmetro de saída, com um padrão NULL.  
   
- [ @reserved **=**] **'***reservado***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *reservado* está **nvarchar (20)**, com um padrão NULL.  
+ [ @reserved **=** ] **'***reservado***'**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *reservado* está **nvarchar (20)** , com um padrão NULL.  
   
- [ @publisher**=** ] **'***publisher***'**  
+ [ @publisher **=** ] **'***publisher***'**  
  O nome do publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
- [@publisher_db**=** ] **'***publisher_db***'**  
+ [@publisher_db **=** ] **'***publisher_db***'**  
  O nome do banco de dados de publicação. *publisher_db* está **sysname**, com um padrão NULL.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  

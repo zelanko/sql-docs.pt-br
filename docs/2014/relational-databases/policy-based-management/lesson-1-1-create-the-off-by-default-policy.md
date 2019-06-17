@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2fb48665fafc9c79856279c7460918b85334bfb8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064301"
 ---
 # <a name="create-the-off-by-default-policy"></a>Criar a política desativada por padrão
@@ -28,7 +28,7 @@ ms.locfileid: "66064301"
   
 3.  Na caixa **Faceta** , confirme se a faceta **Configuração da Área da Superfície** está selecionada.  
   
-4.  Na caixa de diálogo **Expressão** , na caixa **Campo** , selecione **@DatabaseMailEnabled**, na caixa **Operador** , selecione **=** e, em **Valor** , selecione **False**.  
+4.  Na caixa de diálogo **Expressão** , na caixa **Campo** , selecione **@DatabaseMailEnabled** , na caixa **Operador** , selecione **=** e, em **Valor** , selecione **False**.  
   
 5.  Na página **Descrição** , digite uma descrição da condição e clique em **OK** para criar a condição.  
   

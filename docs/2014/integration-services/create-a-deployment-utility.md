@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060226"
 ---
 # <a name="create-a-deployment-utility"></a>Criar um utilitário de implantação
@@ -45,7 +45,7 @@ ms.locfileid: "66060226"
   
 2.  Clique com o botão direito do mouse no projeto e clique em **Propriedades**.  
   
-3.  Na caixa de diálogo **Páginas de Propriedades do \<project name>**, clique em **Utilitário de Implantação**.  
+3.  Na caixa de diálogo **Páginas de Propriedades do \<project name>** , clique em **Utilitário de Implantação**.  
   
 4.  Para atualizar as configurações do pacote quando os pacotes são implantados, defina **AllowConfigurationChanges** para `True`.  
   
