@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 999f58014d661f2eb476cd195e11788b2a565937
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468343"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memória insuficiente
@@ -24,12 +24,12 @@ ms.locfileid: "62468343"
   
 |Tópico|Visão geral|  
 |-----------|--------------|  
-| [Resolver falhas de restauração de banco de dados devido a OOM](#resolve-database-restore-failures-due-to-oom) |O que fazer se você receber a mensagem de erro “Falha na operação de restauração do banco de dados '*\<databaseName>*' devido à memória insuficiente no pool de recursos '*\<resourcePoolName>*'”.|  
+| [Resolver falhas de restauração de banco de dados devido a OOM](#resolve-database-restore-failures-due-to-oom) |O que fazer se você receber a mensagem de erro “Falha na operação de restauração do banco de dados ' *\<databaseName>* ' devido à memória insuficiente no pool de recursos ' *\<resourcePoolName>* '”.|  
 | [Resolver o impacto de pouca memória ou condições de OOM na carga de trabalho](#resolve-impact-of-low-memory-or-oom-conditions-on-the-workload)|O que fazer se você desconfiar que os problemas de pouca memória estão comprometendo o desempenho.|  
-| [Resolver falhas de alocação de página devido à memória insuficiente quando há memória suficiente disponível](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |O que fazer se você receber a mensagem de erro “Desautorizando as alocações de página do banco de dados '*\<databaseName>*' devido à memória insuficiente no pool de recursos '*\<resourcePoolName>*'”. ...” quando a memória disponível é suficiente para a operação.|  
+| [Resolver falhas de alocação de página devido à memória insuficiente quando há memória suficiente disponível](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |O que fazer se você receber a mensagem de erro “Desautorizando as alocações de página do banco de dados ' *\<databaseName>* ' devido à memória insuficiente no pool de recursos ' *\<resourcePoolName>* '”. ...” quando a memória disponível é suficiente para a operação.|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>Resolver falhas de restauração de banco de dados devido a OOM  
- Quando você tenta restaurar um banco de dados, você pode receber a mensagem de erro: "Operação de restauração falhou para o banco de dados '*\<databaseName >*'devido à memória insuficiente no pool de recursos'*\<resourcePoolName >*'." Antes de restaurar com êxito o banco de dados, você deve resolver o problema de memória insuficiente disponibilizando mais memória.  
+ Quando você tenta restaurar um banco de dados, você pode receber a mensagem de erro: "Operação de restauração falhou para o banco de dados ' *\<databaseName >* 'devido à memória insuficiente no pool de recursos' *\<resourcePoolName >* '." Antes de restaurar com êxito o banco de dados, você deve resolver o problema de memória insuficiente disponibilizando mais memória.  
   
  Para resolver a falha de recuperação devido a OOM, aumente a memória disponível usando qualquer ou todos esses meios para aumentar temporariamente a memória disponível para a operação de recuperação.  
   
@@ -135,7 +135,7 @@ GO
 > Consulte o tópico [práticas recomendadas: Usando OLTP na memória em um ambiente de VM](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obter mais informações.  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>Resolver falhas de alocação de página devido à memória insuficiente quando há memória suficiente disponível  
- Se você receber a mensagem de erro "desautorizando as alocações de página do banco de dados '*\<databaseName >*'devido à memória insuficiente no pool de recursos'*\<resourcePoolName >*'. Consulte '<https://go.microsoft.com/fwlink/?LinkId=330673>' para obter mais informações. " No log de erros quando a memória física disponível for suficiente para alocar a página, talvez isso ocorra devido a um Administrador de Recursos desabilitado. Quando o Administrador de Recursos é desabilitado, MEMORYBROKER_FOR_RESERVE induz artificial à pressão de memória artificial.  
+ Se você receber a mensagem de erro "desautorizando as alocações de página do banco de dados ' *\<databaseName >* 'devido à memória insuficiente no pool de recursos' *\<resourcePoolName >* '. Consulte '<https://go.microsoft.com/fwlink/?LinkId=330673>' para obter mais informações. " No log de erros quando a memória física disponível for suficiente para alocar a página, talvez isso ocorra devido a um Administrador de Recursos desabilitado. Quando o Administrador de Recursos é desabilitado, MEMORYBROKER_FOR_RESERVE induz artificial à pressão de memória artificial.  
   
  Para resolver isso, é necessário habilitar o Administrador de Recursos.  
   

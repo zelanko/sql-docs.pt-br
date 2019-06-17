@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 98350d5d68990fdf31d42bacff2fc2ebb77c116b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468260"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscrever uma instância do SQL Server (Utilitário do SQL Server)
@@ -87,12 +87,12 @@ ms.locfileid: "62468260"
 -   [Inscrevendo a instância do SQL Server](#Enrolling)  
   
 ##  <a name="Welcome"></a> Introdução ao Assistente para Inscrever Instância  
- Para iniciar o Assistente, expanda a árvore do Gerenciador do Utilitário em um ponto de controle do utilitário, clique com o botão direito do mouse em **Instâncias Gerenciadas** e selecione **Adicionar Instância Gerenciada...**.  
+ Para iniciar o Assistente, expanda a árvore do Gerenciador do Utilitário em um ponto de controle do utilitário, clique com o botão direito do mouse em **Instâncias Gerenciadas** e selecione **Adicionar Instância Gerenciada...** .  
   
  Para continuar, clique em **Avançar**.  
   
 ##  <a name="Instance_name"></a> Especificar a instância do SQL Server  
- Para selecionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na caixa de diálogo de conexão, clique em **Conectar...**. Forneça o nome do computador e o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato ComputerName\InstanceName. Para obter mais informações, veja [Conectar-se ao servidor &#40;Mecanismo de Banco de Dados&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
+ Para selecionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na caixa de diálogo de conexão, clique em **Conectar...** . Forneça o nome do computador e o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato ComputerName\InstanceName. Para obter mais informações, veja [Conectar-se ao servidor &#40;Mecanismo de Banco de Dados&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
  Para continuar, clique em **Avançar**.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62468260"
 > [!NOTE]  
 >  Se a conexão for criptografada, ela será usada. Se a conexão não for criptografada, o Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conectará novamente usando uma conexão criptografada.  
   
- Para continuar, clique em **Conectar...**.  
+ Para continuar, clique em **Conectar...** .  
   
 ##  <a name="Proxy_configuration"></a> Conta do conjunto de coleta do utilitário  
  Especifique uma conta de domínio do Windows para executar o conjunto de coleta do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa conta é usada como a conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para o conjunto de coleta do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Alternativamente, você pode usar a conta de Serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent existente. Para passar nos requisitos de validação, use as diretrizes a seguir para especificar a conta.  

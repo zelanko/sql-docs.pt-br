@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4959473b120a3a8a0c289ff3cd8f91e89df44b86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62640393"
 ---
 # <a name="partitions---proactive-caching"></a>Partições – Cache proativo
@@ -24,7 +24,7 @@ ms.locfileid: "62640393"
   
  O armazenamento OLAP multidimensional (MOLAP) fornece a melhor resposta de consulta, mas acarreta alguma latência de dados. Os usuários do armazenamento relacional em tempo real OLAP (ROLAP) pesquisam, de forma imediata, as alterações mais recentes em uma fonte de dados mas com um desempenho significativamente mais baixo do que o do armazenamento OLAP multidimensional (MOLAP), que é causado pela ausência de resumos pré-calculados de dados e porque o armazenamento relacional não é otimizado para consultas do tipo OLAP. Se você tem aplicativos nos quais os usuários precisam visualizar dados recentes e deseja também as vantagens de desempenho do armazenamento MOLAP, o SQL Server Analysis Server oferece a opção de cache pró-ativo adequado a esse cenário, particularmente, em combinação com o uso de partições. O cache pró-ativo é definido por partição e por dimensão. As opções de cache pró-ativo fornecem um equilíbrio entre o bom desempenho do armazenamento MOLAP e a instantaneidade do armazenamento ROLAP e fornece processamento de partição automático quando dados subjacentes mudam ou em um cronograma definido.  
   
-## <a name="proactive-caching-configuration-options"></a>Opções de configuração de cache pró-ativo   
+## <a name="proactive-caching-configuration-options"></a>Opções de configuração de cache pró-ativo  
  O SQL Server Analysis Services fornece diversas opções de configuração de cache pró-ativo que permitem que você aumente o desempenho, diminua a latência e programe o processamento. Os recursos de cache pró-ativo simplificam o processo de gerenciar a obsolescência de dados. As configurações de cache pró-ativo determinam com qual frequência a estrutura OLAP multidimensional, também chamada de cache MOLAP, é recriada, se o armazenamento MOLAP desatualizado é consultado enquanto o cache é recriado ou a fonte de dados ROLAP subjacente, e se o cache é recriado sob um cronograma ou tem base em alterações no banco de dados.  
   
 ### <a name="minimizing-latency"></a>Diminuindo a latência  

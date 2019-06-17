@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0dd90613851184ad7fcff16ecf0a89875433dbfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62512378"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Exibir os Eventos Estendidos equivalentes às classes de evento de Rastreamento do SQL

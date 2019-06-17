@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2cb929ffc3506d6dcb4a0745c53b47a45fdb469
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62627797"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
@@ -50,9 +50,9 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 `[ @column = ] 'column'` Identifica as colunas no qual criar a partição vertical. *coluna* está **sysname**, com um padrão NULL. Se NULL e `@operation = N'add'`, todas as colunas da tabela de origem serão adicionadas ao artigo por padrão. *coluna* não pode ser NULL quando *operação* é definido como **drop**. Para excluir colunas de um artigo, execute **sp_mergearticlecolumn** e especifique *coluna* e `@operation = N'drop'` para cada coluna a ser removido especificado *artigo*.  
   
-`[ @operation = ] 'operation'` É o status de replicação. *operação* está **nvarchar(4)**, com um padrão de ADD. **Adicionar** marca a coluna para replicação. **Descartar** limpa a coluna.  
+`[ @operation = ] 'operation'` É o status de replicação. *operação* está **nvarchar(4)** , com um padrão de ADD. **Adicionar** marca a coluna para replicação. **Descartar** limpa a coluna.  
   
-`[ @schema_replication = ] 'schema_replication'` Especifica que uma alteração de esquema será propagada quando Merge Agent é executado. *schema_replication* está **nvarchar (5)**, com um padrão de FALSE.  
+`[ @schema_replication = ] 'schema_replication'` Especifica que uma alteração de esquema será propagada quando Merge Agent é executado. *schema_replication* está **nvarchar (5)** , com um padrão de FALSE.  
   
 > [!NOTE]  
 >  Somente **falsos** tem suporte para *schema_replication*.  

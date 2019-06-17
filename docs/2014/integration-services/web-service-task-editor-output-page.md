@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7924570253bf2f805d91c4dfabc3d5facf44cccc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054467"
 ---
 # <a name="web-service-task-editor-output-page"></a>Editor da Tarefa Serviço da Web (página Saída)
@@ -39,13 +39,13 @@ ms.locfileid: "66054467"
   
 ### <a name="outputtype--file-connection"></a>OutputType = File Connection  
  **File**  
- Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão…** > para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de conexões de arquivos](connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="outputtype--variable"></a>OutputType = Variable  
  **Variável**  
- Selecione uma variável na lista ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Selecione uma variável na lista ou clique em \<**Nova variável...** > para criar uma nova variável.  
   
  **Tópicos relacionados:**  [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   

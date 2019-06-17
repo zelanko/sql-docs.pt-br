@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62657699"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
@@ -36,7 +36,7 @@ ms.locfileid: "62657699"
   
  O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client informa os códigos de função dinâmicos adicionais a seguir que identificam a última instrução do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tentada. O código de função dinâmico é retornado no cabeçalho (record 0) do registro de diagnóstico definido e, portanto, está disponível em cada execução (bem-sucedida ou não).  
   
-|Código de função dinâmico|Source|  
+|Código de função dinâmico|`Source`|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|instrução ALTER DATABASE|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|Instrução CHECKPOINT|  

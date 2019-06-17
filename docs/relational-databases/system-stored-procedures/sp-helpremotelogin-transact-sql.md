@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1181ab030078b0f7ba61a72448991ed677e22d76
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62636154"
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
@@ -57,7 +57,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|servidor|**sysname**|Nome de um servidor remoto definido no servidor local.|  
+|server|**sysname**|Nome de um servidor remoto definido no servidor local.|  
 |local_user_name|**sysname**|Logon no servidor local para os quais os logons remotos do servidor são mapeados.|  
 |remote_user_name|**sysname**|Faça logon no servidor remoto que mapeia para local_user_name.|  
 |opções|**sysname**|Confiável = O logon remoto não precisa fornecer uma senha ao se conectar ao servidor local a partir do servidor remoto.<br /><br /> Não confiável (ou em branco) = O logon remoto é solicitado a fornecer uma senha ao se conectar ao servidor local a partir do servidor remoto.|  

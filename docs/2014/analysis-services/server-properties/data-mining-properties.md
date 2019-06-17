@@ -58,10 +58,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96106fc8bc50a2a1b19c54a6970eeeb72952d82d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069055"
 ---
 # <a name="data-mining-properties"></a>Propriedades de mineração de dados
@@ -86,7 +86,7 @@ ms.locfileid: "66069055"
  `MaxConcurrentPredictionQueries`  
  Uma propriedade de inteiro de 32 bits assinada que define o número máximo de consultas de previsão simultâneas.  
   
-## <a name="algorithms-category"></a>Categoria de algoritmos   
+## <a name="algorithms-category"></a>Categoria de algoritmos  
  `Microsoft_Association_Rules\ Enabled`  
  Uma propriedade Booleana que indica se o algoritmo Microsoft_Association_Rules está habilitado.  
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a9264ed33ffeea224f69b8a880e235753ead1467
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62470741"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
@@ -52,7 +52,7 @@ ms.locfileid: "62470741"
 |**retry_attempts**|**int**|Número de novas tentativas feitas se a etapa apresentar falha.|  
 |**retry_interval**|**int**|Quantidade de tempo a ser aguardada entre as novas tentativas.|  
 |**os_run_priority**|**int**|Reservado.|  
-|**output_file_name**|**nvarchar(200)**|Nome do arquivo no qual a saída da etapa é salvo quando **subsistema** for TSQL, PowerShell, ou **CmdExec**_._|  
+|**output_file_name**|**nvarchar(200)**|Nome do arquivo no qual a saída da etapa é salvo quando **subsistema** for TSQL, PowerShell, ou **CmdExec** _._|  
 |**last_run_outcome**|**int**|Resultado da execução anterior da etapa do trabalho.<br /><br /> **0** = falha<br /><br /> **1** = foi bem-sucedida<br /><br /> **2** = repetir<br /><br /> **3** = cancelada<br /><br /> **5** = desconhecido|  
 |**last_run_duration**|**int**|Duração (hhmmss) da etapa na última vez que foi executada.|  
 |**last_run_retries**|**int**|Número de novas tentativas na última execução da etapa do trabalho.|  

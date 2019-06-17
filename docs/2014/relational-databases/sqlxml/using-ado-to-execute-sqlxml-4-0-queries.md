@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2a8f5cdb74385852a0feef0f9de0d760eb57f13
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012144"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Usando o ADO para executar consultas do SQLXML 4.0
@@ -108,7 +108,7 @@ ms.locfileid: "66012144"
 ## <a name="using-the-sqlxml-40-test-script"></a>Usando o script de teste SQLXML 4.0  
  O procedimento a seguir descreve como usar os arquivos Sqlxml4test.vbs para testar as consultas de exemplo fornecidas nesta documentação.  
   
-#### <a name="to-use-the-sqlxml-40-query-tester"></a>Para usar o testador de consulta do SQLXML 4.0   
+#### <a name="to-use-the-sqlxml-40-query-tester"></a>Para usar o testador de consulta do SQLXML 4.0  
   
 1.  Verifique se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client está instalado, da seguinte maneira:  
   

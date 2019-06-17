@@ -1,5 +1,5 @@
 ---
-title: 'Propriedades da etapa de trabalho: Nova etapa de trabalho (página geral) | Microsoft Docs'
+title: 'Propriedades da Etapa de Trabalho: Nova etapa de trabalho (página geral) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62510950"
 ---
-# <a name="job-step-properties-new-job-step-general-page"></a>Propriedades da etapa de trabalho: Nova etapa de trabalho (página geral)
+# <a name="job-step-properties-new-job-step-general-page"></a>Propriedades da Etapa de Trabalho: Nova Etapa de Trabalho (página Geral)
   Use esta página para exibir e alterar as propriedades de uma etapa de trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou para definir uma nova etapa de trabalho.  
   
  Para navegar até essa página, no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, clique com o botão direito do mouse em **Trabalhos**, clique em **Novos Trabalhos**, selecione a página **Etapas** e clique em **Novo**. Você também pode navegar até essa página. Para isso, clique com o botão direito do mouse em um trabalho no Pesquisador de Objetos, clique em **Propriedades**, selecione a página **Etapas** e clique em **Novo**, **Inserir**ou **Editar**.  

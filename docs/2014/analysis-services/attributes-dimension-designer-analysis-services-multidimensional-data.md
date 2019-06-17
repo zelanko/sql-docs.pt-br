@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9eab7de49abaf06446fbd03f7b80c381d102f20
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064396"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Atributos (guia Estrutura da Dimensão, Designer de Dimensão) (Analysis Services - Dados multidimensionais)
@@ -58,7 +58,7 @@ ms.locfileid: "66064396"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Regular|Identifica um atributo regular.|  
-|Chave|Identifica o atributo de chave para a dimensão. Isto corresponde aos membros folha da dimensão. Pode haver somente um atributo de chave por dimensão. Para modificar, clique no botão de reticências (**...**) próximo à propriedade **KeyColumns** no painel **Propriedades** .|  
+|Chave|Identifica o atributo de chave para a dimensão. Isto corresponde aos membros folha da dimensão. Pode haver somente um atributo de chave por dimensão. Para modificar, clique no botão de reticências ( **...** ) próximo à propriedade **KeyColumns** no painel **Propriedades** .|  
 |Pai|Denota o atributo pai para uma relação pai-filho. O atributo filho nesta relação deve sempre ser o atributo de chave.|  
 |AccountType|Denota um atributo de tipo de conta. Isto é usado pelo servidor ou mecanismo quando a função de agregação para uma medida é definida como "por conta".|  
   

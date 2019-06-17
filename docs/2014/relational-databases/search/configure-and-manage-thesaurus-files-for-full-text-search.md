@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011483"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar e gerenciar arquivos de dicionário de sinônimos para Pesquisa de texto completo
@@ -29,7 +29,7 @@ ms.locfileid: "66011483"
   
 -   Configuração de diacríticos  
   
-     Para um dado dicionário de sinônimos, todos os padrões de pesquisa são diferenciam ou não diferenciam marcas diacríticas, como um til (**~**), a marca de acento agudo (**??** ), ou trema (**??** ) (ou seja, *acentuação* ou *não diferenciam acentos*). Por exemplo, suponha que você especificar o padrão "caf??" a ser substituído por outros padrões em uma consulta de texto completo. Se o dicionário de sinônimos não diferencia caracteres kana, pesquisa de texto completo substituirá o padrões "caf??" e "cafe". Se o dicionário de sinônimos não distingue acentuação, pesquisa de texto completo substituirá somente o padrão "caf??". Por padrão, um dicionário de sinônimos não diferencia acentos.  
+     Para um dado dicionário de sinônimos, todos os padrões de pesquisa são diferenciam ou não diferenciam marcas diacríticas, como um til ( **~** ), a marca de acento agudo ( **??** ), ou trema ( **??** ) (ou seja, *acentuação* ou *não diferenciam acentos*). Por exemplo, suponha que você especificar o padrão "caf??" a ser substituído por outros padrões em uma consulta de texto completo. Se o dicionário de sinônimos não diferencia caracteres kana, pesquisa de texto completo substituirá o padrões "caf??" e "cafe". Se o dicionário de sinônimos não distingue acentuação, pesquisa de texto completo substituirá somente o padrão "caf??". Por padrão, um dicionário de sinônimos não diferencia acentos.  
   
 -   Conjunto de expansão  
   

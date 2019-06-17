@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd6b880fc1908d973b4a78fdc04cb59ed9eca731
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062465"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Designer de Consulta MDX do Analysis Services (PowerPivot)
@@ -36,7 +36,7 @@ ms.locfileid: "66062465"
   
 |Painel|Função|  
 |----------|--------------|  
-|Botão Selecionar Cubo (**...**)|Exibe o cubo selecionado no momento.|  
+|Botão Selecionar Cubo ( **...** )|Exibe o cubo selecionado no momento.|  
 |Painel Metadados|Exibe uma lista hierárquica de medidas, KPIs (Indicadores Chave de Desempenho) e dimensões definidas no cubo selecionado.|  
 |Painel Membros Calculados|Exibe os membros calculados definidos no momento disponíveis para serem usados na consulta.|  
 |Painel Filtro|Use para escolher dimensões e hierarquias relacionadas para filtrar dados na origem e limitar os dados retornados.|  
@@ -88,7 +88,7 @@ ms.locfileid: "66062465"
   
 |Painel|Função|  
 |----------|--------------|  
-|Botão Selecionar Cubo (**...**)|Exibe o cubo selecionado no momento.|  
+|Botão Selecionar Cubo ( **...** )|Exibe o cubo selecionado no momento.|  
 |Painel Metadados/Funções/Modelos|Exibe uma lista hierárquica de medidas, KPIs e dimensões definidas no cubo selecionado.|  
 |Painel Consulta|Exibe o texto da consulta.|  
 |Painel Resultado|Exibe os resultados da execução da consulta.|  

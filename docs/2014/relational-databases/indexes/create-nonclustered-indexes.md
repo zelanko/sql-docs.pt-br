@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3dc7c4b9b32ee872ec48e78ecb05a713f2cf8a12
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62651485"
 ---
 # <a name="create-nonclustered-indexes"></a>Criar índices não clusterizados
@@ -92,11 +92,11 @@ ms.locfileid: "62651485"
   
 3.  Expanda a tabela na qual você deseja criar um índice não clusterizado.  
   
-4.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Não Clusterizado...**.  
+4.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Não Clusterizado...** .  
   
 5.  Na caixa de diálogo **Novo Índice** , na página **Geral** , insira o nome do novo índice na caixa **Nome do índice** .  
   
-6.  Em **Colunas de chave de índice**, clique em **Adicionar...**.  
+6.  Em **Colunas de chave de índice**, clique em **Adicionar...** .  
   
 7.  Na caixa de diálogo **Selecionar Colunas de**_table_name_ , marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice não clusterizado.  
   

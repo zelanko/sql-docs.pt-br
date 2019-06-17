@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f98f62b10b38d726feec2bd427bc7d1fc6dcea9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62635863"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
@@ -48,7 +48,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'object_statement'` É o nome do objeto no banco de dados atual ou uma instrução, que tem as permissões para o relatório. *object_statement* está **nvarchar(776)**, com um padrão NULL, que retorna todas as permissões de objeto e a instrução. Se o valor for um objeto (tabela, exibição, procedimento armazenado ou procedimento armazenado estendido), ele deverá ser um objeto válido no banco de dados atual. O nome do objeto pode incluir um qualificador de proprietário no formato _proprietário_**.** _objeto_.  
+`[ @name = ] 'object_statement'` É o nome do objeto no banco de dados atual ou uma instrução, que tem as permissões para o relatório. *object_statement* está **nvarchar(776)** , com um padrão NULL, que retorna todas as permissões de objeto e a instrução. Se o valor for um objeto (tabela, exibição, procedimento armazenado ou procedimento armazenado estendido), ele deverá ser um objeto válido no banco de dados atual. O nome do objeto pode incluir um qualificador de proprietário no formato _proprietário_ **.** _objeto_.  
   
  Se *object_statement* é uma instrução, ele pode ser uma instrução CREATE.  
   
@@ -56,7 +56,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 `[ @grantorname = ] 'grantor'` É o nome da entidade de segurança que concedeu permissões. *concessor* está **sysname**, com um padrão NULL, que retorna todas as informações de permissões concedidas por qualquer entidade de segurança no banco de dados.  
   
-`[ @permissionarea = ] 'type'` É uma cadeia de caracteres que indica se deve exibir permissões de objeto (cadeia de caracteres **s**), permissões de instrução (cadeia de caracteres **s**), ou ambos (**SO**). *tipo de* está **varchar(10)**, com um padrão de **SO**. *tipo de* pode ser qualquer combinação de **s** e **s**, com ou sem vírgulas ou espaços entre **s** e **s**.  
+`[ @permissionarea = ] 'type'` É uma cadeia de caracteres que indica se deve exibir permissões de objeto (cadeia de caracteres **s**), permissões de instrução (cadeia de caracteres **s**), ou ambos (**SO**). *tipo de* está **varchar(10)** , com um padrão de **SO**. *tipo de* pode ser qualquer combinação de **s** e **s**, com ou sem vírgulas ou espaços entre **s** e **s**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -76,7 +76,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ## <a name="remarks"></a>Comentários  
  Todos os parâmetros no procedimento seguinte são opcionais. Se for executado sem parâmetros, o `sp_helprotect` mostra todas as permissões que tenham sido concedidas ou negadas no banco de dados atual.  
   
- Se alguns, mas não todos os parâmetros forem especificados, use parâmetros nomeados para identificar o parâmetro particular ou `NULL` como um espaço reservado.  Por exemplo, para relatar todas as permissões para o proprietário do banco de dados de concessor (`dbo`), execute o seguinte:  
+ Se alguns, mas não todos os parâmetros forem especificados, use parâmetros nomeados para identificar o parâmetro particular ou `NULL` como um espaço reservado. Por exemplo, para relatar todas as permissões para o proprietário do banco de dados de concessor (`dbo`), execute o seguinte:  
   
 ```  
 EXEC sp_helprotect NULL, NULL, dbo;  

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 905114d0190a7d1e8441e98249664c985a433988
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62473207"
 ---
 # <a name="assign-alerts-to-an-operator"></a>Assign Alerts to an Operator
@@ -70,7 +70,7 @@ ms.locfileid: "62473207"
   
 5.  Na caixa de diálogo _operator_name_**Propriedades** , em **Selecione uma página**, selecione **Notificações**.  
   
-6.  Em **Exibir notificações enviadas a esse usuário por**, selecione **Alertas** , para visualizar uma lista dos alertas enviados ao operador, ou **Trabalhos** , para visualizar uma lista dos trabalhos que enviam notificações ao operador. Selecione uma ou mais das seguintes caixas de seleção para definir o método de notificação para cada notificação, conforme necessário: **E-mail**, **Pager**, ou **Net send**.  
+6.  Em **Exibir notificações enviadas a esse usuário por**, selecione **Alertas** , para visualizar uma lista dos alertas enviados ao operador, ou **Trabalhos** , para visualizar uma lista dos trabalhos que enviam notificações ao operador. Marque uma ou mais das seguintes caixas de seleção para definir o método de cada notificação, conforme a necessidade: **Email**, **Pager** ou **Net send**.  
   
 7.  Quando terminar, clique em **OK**.  
   

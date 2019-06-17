@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e061269ebf864a93d6dde50455627cf8e2ea780
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659195"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
@@ -30,7 +30,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
   
 ## <a name="arguments"></a>Argumentos  
  NORMALIZED  
- O valor de retorno contém a probabilidade do caso com o modelo dividido pela probabilidade do caso sem o modelo.   
+ O valor de retorno contém a probabilidade do caso com o modelo dividido pela probabilidade do caso sem o modelo.  
   
  NONNORMALIZED  
  O valor de retorno contém a probabilidade bruta do caso, que é o produto das probabilidades dos atributos de caso.  

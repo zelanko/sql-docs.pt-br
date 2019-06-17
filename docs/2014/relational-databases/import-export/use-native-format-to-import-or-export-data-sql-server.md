@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2e91899172dfc6d640df0c33c77e32de3c1c21c
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011656"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Usar o formato nativo para importar ou exportar dados (SQL Server)
@@ -80,7 +80,7 @@ ms.locfileid: "66011656"
 |**bcp**|**-n**|Faz com que o **bcp** utilitário para usar os tipos de dados nativos dos dados.<sup> 1</sup>|  
 |BULK INSERT|DATAFILETYPE **='** native **'**|Usa o tipo de dados nativo ou nativo largo. Observe que DATAFILETYPE não será necessário se um arquivo de formato especificar os tipos de dados.|  
   
- <sup>1</sup> carregar nativos (**- n**) dados em um formato compatível com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clientes, use o **-V** alternar. Para obter mais informações, consulte [Importar dados de formato de caractere e nativo de versões anteriores do SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ <sup>1</sup> carregar nativos ( **- n**) dados em um formato compatível com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clientes, use o **-V** alternar. Para obter mais informações, consulte [Importar dados de formato de caractere e nativo de versões anteriores do SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
  Para obter mais informações, consulte [Utilitário bcp](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) ou [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   

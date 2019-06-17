@@ -14,10 +14,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a10f892c8fd635892d76061e9f33649340e69593
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62655449"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Usuários de bancos de dados independentes - Tornando seu banco de dados portátil

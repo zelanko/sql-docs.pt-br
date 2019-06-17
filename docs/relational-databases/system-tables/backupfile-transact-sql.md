@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62645504"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "62645504"
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**backup_set_id**|**int**|Número de identificação exclusivo do arquivo que contém o conjunto de backup. As referências **backupset (backup_set_id)**.|  
+|**backup_set_id**|**int**|Número de identificação exclusivo do arquivo que contém o conjunto de backup. As referências **backupset (backup_set_id)** .|  
 |**first_family_number**|**tinyint**|Número de família da primeira mídia que contém este arquivo de backup. Pode ser NULL.|  
 |**first_media_number**|**smallint**|Número de mídia da primeira mídia que contém este arquivo de backup. Pode ser NULL.|  
 |**filegroup_name**|**nvarchar(128)**|Nome do grupo de arquivos que contém um arquivo de banco de dados do qual foi feito backup. Pode ser NULL.|  

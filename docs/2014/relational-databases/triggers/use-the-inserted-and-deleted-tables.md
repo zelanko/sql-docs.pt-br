@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524372"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Usar as tabelas inseridas e excluídas
@@ -74,7 +74,7 @@ ms.locfileid: "62524372"
   
  Quando uma instrução INSERT, UPDATE ou DELETE faz referência a uma exibição que tenha um gatilho INSTEAD OF, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] chama o gatilho em vez de tomar qualquer ação direta contra qualquer tabela. O gatilho deve usar as informações apresentadas nas tabelas inseridas e excluídas para construir as instruções necessárias para implementar a ação solicitada nas tabelas base, mesmo quando o formato das informações nas tabelas inseridas e excluídas construído para a exibição for diferente do formato dos dados nas tabelas base.  
   
- O formato das tabelas inseridas e excluídas passadas para o gatilho INSTEAD OF definido em uma exibição corresponde à lista de seleção da instrução SELECT definida para exibição. Por exemplo:   
+ O formato das tabelas inseridas e excluídas passadas para o gatilho INSTEAD OF definido em uma exibição corresponde à lista de seleção da instrução SELECT definida para exibição. Por exemplo:  
   
 ```  
 USE AdventureWorks2012;  

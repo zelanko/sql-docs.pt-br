@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 204d312e1350e7284b335806a0286baf9603c9a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62666793"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Selecionar uma conta para o Serviço do SQL Server Agent
@@ -33,7 +33,7 @@ ms.locfileid: "62666793"
   
 -   **Conta interna**. Em uma lista, você pode escolher uma das seguintes contas de serviço Windows internas:  
   
-    -   Conta**Sistema Local** . O nome desta conta é NT AUTHORITY\System. É uma conta poderosa, com acesso irrestrito a todos os recursos do sistema local. Ela é membro do grupo **Administradores** do Windows no computador local e, portanto, é membro da função de servidor fixa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin**   
+    -   Conta**Sistema Local** . O nome desta conta é NT AUTHORITY\System. É uma conta poderosa, com acesso irrestrito a todos os recursos do sistema local. Ela é membro do grupo **Administradores** do Windows no computador local e, portanto, é membro da função de servidor fixa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin**  
   
         > [!IMPORTANT]  
         >  A opção **conta Sistema Local** é fornecida apenas por questão de compatibilidade retroativa. A conta Sistema Local tem permissões de que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não necessita. Evite executar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent como a conta Sistema Local. Para maior segurança, use uma conta de domínio do Windows com as permissões listadas na seção "Permissões de contas de domínio do Windows", a seguir.  
@@ -91,24 +91,24 @@ ms.locfileid: "62666793"
   
  <sup>4</sup> consulte limitação 4 abaixo.  
   
-### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Limitação 1: Usando contas não administrativas para administração multisservidor  
- Inscrevendo servidores de destino em um servidor mestre pode falhar com a seguinte mensagem de erro: "Falha na operação de inscrição".  
+### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Limitação 1: usar contas não administrativas para administração multisservidor  
+ A inscrição de servidores de destino para um servidor mestre pode falhar com a seguinte mensagem de erro: "Falha na operação de inscrição".  
   
  Para resolver esse erro, reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para obter mais informações, consulte [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Limitação 2: Usando a conta Sistema Local para administração multisservidor  
+### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Limitação 2: usar a conta Sistema Local para administração multisservidor  
  Quando o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é executado com a conta Sistema Local, só haverá suporte para administração multisservidor se o servidor mestre e o servidor de destino residirem no mesmo computador. Se você usar essa configuração, será retornada a seguinte mensagem quando você inscrever servidores de destino para o servidor mestre:  
   
  "Verifique se a conta de inicialização de agente de *<target_server_computer_name>* tem direitos para fazer logon como um servidor de destino".  
   
  Você pode ignorar essa mensagem informativa. A operação de inscrição deve ser concluída com êxito. Para obter mais informações, veja [Criar um ambiente multisservidor](create-a-multiserver-environment.md).  
   
-### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>Limitação 3: Usando a conta de serviço de rede quando ele for um usuário do SQL Server  
+### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>Limitação 3: usar a conta de Serviço de Rede, quando ela é um usuário do SQL Server  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent poderá não conseguir iniciar se você executar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent com a conta de Serviço de Rede e esta tiver recebido acesso explicitamente para fazer logon em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Para resolver isso, reinicialize o computador em que está sendo executado o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Isso só precisa ser feito uma vez.  
   
-### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>Limitação 4: Usando a conta de serviço de rede quando o SQL Server Reporting Services está em execução no mesmo computador  
+### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>Limitação 4: usar a conta de Serviço de Rede quando o SQL Server Reporting Services é executado no mesmo computador  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent poderá não conseguir iniciar se você executar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent com a conta do Serviço de Rede e o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] também estiver em execução no mesmo computador.  
   
  Para resolver isso, reinicie o computador em que está sendo executado o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, em seguida, reinicialize os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Isso só precisa ser feito uma vez.  

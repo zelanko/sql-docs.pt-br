@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a61c0386d6e5c5e836a60e5175272d4fdaaa6f15
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014789"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Executando um diagrama de atualização usando OLE DB (SQLXML 4.0)

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f2a0aa29f032dfed7202430aeb44b20e05c78c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676823"
 ---
 # <a name="mssqleng014161"></a>MSSQL_ENG014161
@@ -42,7 +42,7 @@ ms.locfileid: "62676823"
   
  Se o valor do limite for apropriado, mas estiver sendo excedido, será necessário determinar se há algum gargalo no desempenho do sistema. Para obter mais informações sobre como monitorar e solucionar problemas relacionados a desempenho de replicação, consulte os seguintes tópicos:  
   
--   [Medir a latência e validar as conexões para a replicação transacional](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+-   [Medir a latência e validar conexões para replicação transacional](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
 -   [Monitorar o desempenho com o Replication Monitor](monitor/monitor-performance-with-replication-monitor.md)  
   

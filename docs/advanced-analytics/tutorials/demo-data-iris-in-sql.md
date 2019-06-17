@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: f4a57f89a89ed8d5cbf81cc3d63fc1f19b42e51a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641064"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Dados de demonstração de íris para tutoriais do Python e R no SQL Server 
@@ -60,7 +60,7 @@ Tutoriais e guias de início rápido usando esse conjunto de dados incluem o seg
     > [!TIP] 
     > Se você for novo no T-SQL, vale a pena memorizar a `DROP...IF` instrução. Quando você tentar criar uma tabela e já existir, o SQL Server retornará um erro: "Já existe um objeto chamado 'iris_data' no banco de dados." Uma maneira de evitar esses erros é excluir todas as tabelas existentes ou outros objetos como parte do seu código.
 
-4. Execute o seguinte código para criar a tabela usada para armazenar o modelo treinado. Para salvar modelos do Python (ou R) no SQL Server, eles devem ser serializados e armazenados em uma coluna do tipo **varbinary (max)**. 
+4. Execute o seguinte código para criar a tabela usada para armazenar o modelo treinado. Para salvar modelos do Python (ou R) no SQL Server, eles devem ser serializados e armazenados em uma coluna do tipo **varbinary (max)** . 
 
     ```sql
     DROP TABLE IF EXISTS iris_models;

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 355ade7f4c90b595356efc5d39c2fa7cf587b11b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62509928"
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Exibir o Histórico de Atualização de Dados (Power Pivot para SharePoint)
@@ -63,7 +63,7 @@ ms.locfileid: "62509928"
 |Próxima atualização agendada|Especifica a data na qual a próxima atualização de dados está agendada.<br /><br /> O link **Configurar agendamento** leva à página de definição da agenda. Se você tiver permissões de Colaboração na pasta de trabalho, poderá clicar no link para exibir e modificar as informações de agenda que controlam a atualização de dados autônoma para os dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] na pasta de trabalho.|  
 |Started (iniciado)|Dentro da seção de detalhes do histórico, **Iniciado** indica a hora de processamento real. A hora de processamento real pode ser diferente da que foi agendada. O processamento será iniciado quando houver memória suficiente disponível no servidor. Se o servidor estiver muito ocupado, o processamento talvez seja iniciado várias horas depois da hora de início especificada.|  
 |Concluído|Na seção de detalhes do histórico, **Concluído** indica quando a operação de atualização de dados foi concluída. A data e a hora indicam quando a pasta de trabalho for verificada na biblioteca.<br /><br /> Se houve falha na atualização de dados, uma ou mais mensagens de erro explicam a causa da falha. Você pode expandir cada registro para exibir o status detalhado. Cada fonte de dados é listada individualmente, junto com as mensagens de êxito ou de falha que explicam por que a atualização de dados não foi concluída.|  
-|Hora|Fornece o tempo cumulativo entre o início e a conclusão da atualização de dados.|  
+|Time|Fornece o tempo cumulativo entre o início e a conclusão da atualização de dados.|  
 |Status|Fornece um registro histórico da falha ou do êxito de uma operação de atualização.|  
   
 ## <a name="see-also"></a>Consulte também  

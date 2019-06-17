@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06249aa1849a1be9af40e183724e85b0f318f3dc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66093153"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>Remover referências a tabelas do sistema não documentadas
@@ -84,7 +84,7 @@ ms.locfileid: "66093153"
 |----------------|---------|  
 |**sysfulltextnotify**|Propriedade**TableFulltextPendingChanges** da função OBJECTPROPERTYEX.|  
 |**syslocks**|Exibição de gerenciamento dinâmico**sys.dm_tran_locks** , sp_lock ou exibição de compatibilidade **sys.syslockinfo** .|  
-|**sysproperties**|Exibição de catálogo**sys.extended_properties** ou função **fn_listextendedproperty** |  
+|**sysproperties**|Exibição de catálogo**sys.extended_properties** ou função **fn_listextendedproperty**|  
 |**sysxlogins**|Exibição de catálogo**sys.server_principals** ou exibição de compatibilidade **syslogins** .|  
 |Todas as tabelas **spt_** .|Não há substituição disponível.|  
   

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6e7b629b93e0c79a003019a2e024388d54b12b76
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065209"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Alterações no comportamento de recursos do Mecanismo de Banco de Dados no SQL Server 2014
@@ -86,8 +86,8 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
 |-------------------------|--------------------------------------|  
 |byte<br /><br /> short<br /><br /> INT<br /><br /> inteiro<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|TINYINT<br /><br /> SMALLINT<br /><br /> INT<br /><br /> BIGINT<br /><br /> Decimal<br /><br /> numeric|  
 |Decimal|Decimal<br /><br /> numeric|  
-|FLOAT|REAL|  
-|double|FLOAT|  
+|float|REAL|  
+|double|float|  
   
  O novo comportamento melhora o desempenho quando a conversão intermediária pode ser ignorada. Porém, quando as conversões de tipo de dados falharem, você verá mensagens de erro diferentes daquelas geradas na conversão do valor xs:string intermediário. Por exemplo, se o método de valor não convertesse o valor `int` 100000 em `smallint`, a mensagem de erro anterior seria:  
   

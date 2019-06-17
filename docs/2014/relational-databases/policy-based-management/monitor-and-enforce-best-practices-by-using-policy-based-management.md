@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62626043"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas

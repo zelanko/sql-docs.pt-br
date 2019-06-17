@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62633366"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Comandos e funções do Visual FoxPro sem suporte (Driver ODBC do Visual FoxPro)
@@ -186,7 +186,7 @@ A tabela a seguir lista os comandos do FoxPro e funções que não têm suporte 
 |-|-|-|  
 |Função num lock)|||  
   
-## <a name="o"></a>O   
+## <a name="o"></a>O  
   
 ||||  
 |-|-|-|  

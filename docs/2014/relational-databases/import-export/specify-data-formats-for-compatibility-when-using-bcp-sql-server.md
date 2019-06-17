@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fb27a109ec361b0287adfff4ba3e7abcaac062
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011832"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Especificar formatos de dados para compatibilidade usando bcp (SQL Server)
@@ -59,7 +59,7 @@ ms.locfileid: "66011832"
      Para campos de dados de caractere, caracteres terminadores opcionais permitem marcar o término de cada campo em um arquivo de dados (usando um *terminador de campo*) e o término de cada linha (usando um *terminador de linha*). Os caracteres terminadores são um modo de indicar aos programas de leitura o arquivo de dados onde um campo ou uma linha termina, e a outra começa. Para obter mais informações, veja [Especificar terminadores de campo e linha &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
   
 ##  <a name="FieldSpecificPrompts"></a> Visão geral dos prompts de campo específicos  
- Se interativo `bcp` comando contém o **na** ou **out** opção, mas também não contém a opção de arquivo de formato (**-f**) ou um formato de dados mudar ( **- n**, **- c**, **-w**, ou **-N**), cada coluna na tabela de origem ou destino, o comando solicitará cada um dos anteriores atributos, por sua vez. Em cada prompt, o comando `bcp` fornece um valor padrão baseado no tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da coluna de tabela. Aceitar o valor padrão de todos os prompts gera o mesmo resultado de especificar o formato nativo (**-n**) na linha de comando. Cada prompt exibe um valor padrão entre colchetes: [*default*]. Pressionando ENTER aceita o padrão exibido. Para especificar um valor diferente do padrão, insira o valor novo no prompt.  
+ Se interativo `bcp` comando contém o **na** ou **out** opção, mas também não contém a opção de arquivo de formato ( **-f**) ou um formato de dados mudar ( **- n**, **- c**, **-w**, ou **-N**), cada coluna na tabela de origem ou destino, o comando solicitará cada um dos anteriores atributos, por sua vez. Em cada prompt, o comando `bcp` fornece um valor padrão baseado no tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da coluna de tabela. Aceitar o valor padrão de todos os prompts gera o mesmo resultado de especificar o formato nativo ( **-n**) na linha de comando. Cada prompt exibe um valor padrão entre colchetes: [*default*]. Pressionando ENTER aceita o padrão exibido. Para especificar um valor diferente do padrão, insira o valor novo no prompt.  
   
 ### <a name="example"></a>Exemplo  
  Os exemplos a seguir usam o comando `bcp` para exportar em massa dados da tabela `HumanResources.myTeam` para o arquivo `myTeam.txt` interativamente. Antes de executar o exemplo, é necessário criar essa tabela. Para obter informações sobre a tabela e como criá-la, veja [Tabela de exemplo HumanResources.myTeam &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md).  
