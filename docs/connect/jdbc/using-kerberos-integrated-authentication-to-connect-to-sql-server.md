@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d67a368c1c33d9f3c85e36d15ad2b77fe7837c88
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 89c87ecb551e3e75397bc431bdefc47fad18f8d2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736987"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798598"
 ---
-# <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Usando a autenticação integrada do Kerberos para se conectar ao SQL Server
+# <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Usando a autenticação integrada Kerberos para conectar-se ao SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -195,7 +195,7 @@ A propriedade de nome de usuário não requer REALM se o usuário pertence a def
 
 ## <a name="using-kerberos-authentication-from-unix-machines-on-the-same-domain"></a>Usando a autenticação Kerberos de máquinas Unix no mesmo domínio
 
-Este guia pressupõe que um trabalho que já existe uma configuração do Kerberos. Execute o seguinte código em um computador Windows com trabalhando a autenticação Kerberos para verificar se a mencionada anteriormente é true. O código imprimirá "esquema de autenticação: KERBEROS"no console se for bem-sucedido. Não há sinalizadores adicionais de tempo de execução, dependências ou as configurações do driver são necessárias fora dos fornecidos. O mesmo bloco de código pode ser executado no Linux para verificar as conexões bem-sucedidas.
+Este guia pressupõe que um trabalho que já existe uma configuração do Kerberos. Execute o seguinte código em um computador Windows com trabalhando a autenticação Kerberos para verificar se a mencionada anteriormente é true. O código imprimirá "Esquema de autenticação: KERBEROS" no console se for bem-sucedido. Não há sinalizadores adicionais de tempo de execução, dependências ou as configurações do driver são necessárias fora dos fornecidos. O mesmo bloco de código pode ser executado no Linux para verificar as conexões bem-sucedidas.
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();

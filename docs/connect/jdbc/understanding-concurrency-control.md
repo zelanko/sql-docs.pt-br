@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 35d62927e8f7579c207ddaa4cd5c7fe04a4cd3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cf4d64d7a7f02e487c969e80a3a0578498f9b507
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654344"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798273"
 ---
 # <a name="understanding-concurrency-control"></a>Entendendo controle de simultaneidade
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "47654344"
   
 |Tipo de simultaneidade|Características|Bloqueios de linha|Descrição|  
 |----------------------|---------------------|---------------|-----------------|  
-|CONCUR_READ_ONLY|Somente Leitura|não|Não são permitidas atualizações pelo cursor e não é mantido nenhum bloqueio nas linhas que compõem o conjunto de resultados.|  
-|CONCUR_UPDATABLE|Gravação de leitura otimista|não|O banco de dados assumir contenção de linha é improvável, mas possível. A integridade de linha é verificada com uma comparação de carimbo de data e hora.|  
+|CONCUR_READ_ONLY|Somente Leitura|Não|Não são permitidas atualizações pelo cursor e não é mantido nenhum bloqueio nas linhas que compõem o conjunto de resultados.|  
+|CONCUR_UPDATABLE|Gravação de leitura otimista|Não|O banco de dados assumir contenção de linha é improvável, mas possível. A integridade de linha é verificada com uma comparação de carimbo de data e hora.|  
 |CONCUR_SS_SCROLL_LOCKS|Gravação de leitura pessimista|Sim|O banco de dados assumir contenção de linha é provável. A integridade de linha é assegurada com bloqueio de linha.|  
-|CONCUR_SS_OPTIMISTIC_CC|Gravação de leitura otimista|não|O banco de dados assumir contenção de linha é improvável, mas possível. A integridade da linha é verificada com uma comparação de carimbo de data/hora.<br /><br /> Para o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e posterior, o servidor alterará esse tipo para CONCUR_SS_OPTIMISTIC_CCVAL se a tabela não contiver uma coluna de carimbo de data/hora.<br /><br /> Para o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], se a tabela subjacente tiver uma coluna de carimbo de data/hora, OPTIMISTIC WITH ROW VERSIONING será usado mesmo se OPTIMISTIC WITH VALUES for especificado. Se OPTIMISTIC WITH ROW VERSIONING for especificado e a tabela não tiver carimbos de data e hora, OPTIMISTIC WITH VALUES será usado.|  
-|CONCUR_SS_OPTIMISTIC_CCVAL|Gravação de leitura otimista|não|O banco de dados assumir contenção de linha é improvável, mas possível. A integridade de linha é verificada com uma comparação de dados da linha.|  
+|CONCUR_SS_OPTIMISTIC_CC|Gravação de leitura otimista|Não|O banco de dados assumir contenção de linha é improvável, mas possível. A integridade da linha é verificada com uma comparação de carimbo de data/hora.<br /><br /> Para o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e posterior, o servidor alterará esse tipo para CONCUR_SS_OPTIMISTIC_CCVAL se a tabela não contiver uma coluna de carimbo de data/hora.<br /><br /> Para o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], se a tabela subjacente tiver uma coluna de carimbo de data/hora, OPTIMISTIC WITH ROW VERSIONING será usado mesmo se OPTIMISTIC WITH VALUES for especificado. Se OPTIMISTIC WITH ROW VERSIONING for especificado e a tabela não tiver carimbos de data e hora, OPTIMISTIC WITH VALUES será usado.|  
+|CONCUR_SS_OPTIMISTIC_CCVAL|Gravação de leitura otimista|Não|O banco de dados assumir contenção de linha é improvável, mas possível. A integridade de linha é verificada com uma comparação de dados da linha.|  
   
 ## <a name="result-sets-that-are-not-updateable"></a>Conjuntos de resultados que não são atualizáveis  
  Um conjunto de resultados atualizável é um conjunto de resultados no qual linhas podem ser inseridas, atualizadas e excluídas. Nos casos seguintes, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode criar um cursor atualizável. A exceção gerada é "O conjunto de resultados não é atualizável".  

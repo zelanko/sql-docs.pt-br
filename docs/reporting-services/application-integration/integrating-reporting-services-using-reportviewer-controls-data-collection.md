@@ -1,6 +1,7 @@
 ---
 title: Coleta de dados no Controle do ReportViewer 2016
 uthor: markingmyname
+author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.technology: application-integration
 ms.topic: reference
 ms.custom: ''
 ms.date: 09/18/2018
-ms.openlocfilehash: f1d24c2de0b6398b4effb2dcaa6129a7b252d130
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: 69d37c54e49943807c35102362f161e2dbf23068
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65504127"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66823000"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>Integrando o Reporting Services usando os controles ReportViewer – coleta de dados
 
@@ -27,14 +28,14 @@ Uma explicação das práticas de uso e coleta de dados do Microsoft SQL Server 
 
 A coleta de dados de uso pode ser desabilitada por meio da propriedade ```EnableTelemetry```.
 
-```
+```xml
 <rsweb:ReportViewer ID="ReportViewer1" runat="server" EnableTelemetry="false">
 </rsweb:ReportViewer>
 ```
 
 Ou, de forma pragmática, antes que o controle seja renderizado.
     
-```
+```csharp
 protected void Page_Load(object sender, EventArgs e)
 {
     ReportViewer1.EnableTelemetry = false;

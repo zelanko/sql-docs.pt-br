@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 767e3e17b67a36bca93bd8a85704d50338fdfd58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 94c7f34ebf66f4bf33acf51e44397a74de2367e0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610734"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801715"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>Como usar a resolução IP de rede transparente
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ TransparentNetworkIPResolution é uma revisão de recurso MultiSubnetFailover ex
 * 1: todos os IPs são tentadas em paralelo
 * 2: todos os IPs são tentadas após o outro
 
-|transparentNetworkIPResolution|MultiSubnetFailover|Comportamento|
+|TransparentNetworkIPResolution|MultiSubnetFailover|Comportamento|
 |:-:|:-:|:-:|
 |(padrão)|(padrão)|0|
 |(padrão)|Habilitado|1|

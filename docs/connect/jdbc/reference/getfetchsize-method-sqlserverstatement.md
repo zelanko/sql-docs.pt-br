@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: 8115ca58-8ae9-46ce-8515-7905d7bb25fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc43780fc7864614c550a0192f363219823376c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 54869f3c689b0c493cdaf19b86f5d95a43835929
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776254"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802033"
 ---
 # <a name="getfetchsize-method-sqlserverstatement"></a>Método getFetchSize (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o número de linhas do conjunto de resultados que é o tamanho de busca padrão para objetos do conjunto de resultados gerados do objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
+  Recupera o número de linhas do conjunto de resultados que é o tamanho de fetch padrão para objetos do conjunto de resultados gerados do objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   

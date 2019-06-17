@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 546dc71fad06fc69d816d16c1d6c2d67f59f968b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8dcffcb15493c5f7587999a41fc2bdf545b377cd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773196"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801949"
 ---
 # <a name="understanding-data-type-differences"></a>Entendendo diferenças de tipo de dados
 
@@ -32,7 +32,7 @@ Os tipos de dados de cadeia de caracteres do JDBC são **CHAR**, **VARCHAR**, e 
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Comprimento fixo    | O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char** e **nchar** tipos de dados são mapeados diretamente para o JDBC **CHAR** e **NCHAR** tipos. São tipos de comprimentos fixos com preenchimento fornecidos pelo servidor caso a coluna tenha `SET ANSI_PADDING ON`. O preenchimento é sempre ligado para **nchar**, mas para **char**, no caso em que as colunas de char de servidor não são preenchidas, o driver JDBC adiciona o preenchimento.                                                                                                                                                                                                                                                                                                                                                                                      |
 | Comprimento variável | O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **varchar** e **nvarchar** tipos são mapeados diretamente para o JDBC **VARCHAR** e **NVARCHAR** tipos, respectivamente.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Longo            | O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **texto** e **ntext** tipos são mapeados para o JDBC **LONGVARCHAR** e **LONGNVARCHAR** digitar, respectivamente. Estes são tipos substituídos a partir [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], portanto, você deve usar tipos de valor grande **varchar (max)** ou **nvarchar (max)**, em vez disso.<br /><br /> Usando a atualização\<tipo numérico > e [updateObject (int, java.lang.Object)](../../connect/jdbc/reference/updateobject-method-int-java-lang-object.md) métodos não funcionará em **texto** e **ntext** colunas de servidor. Porém, usar o método [setObject](../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) com um tipo de conversão de caractere especificado tem suporte para colunas de servidor de **text** e **ntext**. |
+| Longo            | O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **texto** e **ntext** tipos são mapeados para o JDBC **LONGVARCHAR** e **LONGNVARCHAR** digitar, respectivamente. Estes são tipos substituídos a partir [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], portanto, você deve usar tipos de valor grande **varchar (max)** ou **nvarchar (max)** , em vez disso.<br /><br /> Usando a atualização\<tipo numérico > e [updateObject (int, java.lang.Object)](../../connect/jdbc/reference/updateobject-method-int-java-lang-object.md) métodos não funcionará em **texto** e **ntext** colunas de servidor. Porém, usar o método [setObject](../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) com um tipo de conversão de caractere especificado tem suporte para colunas de servidor de **text** e **ntext**. |
   
 ## <a name="binary-string-types"></a>Tipos de cadeia de caracteres binária
 

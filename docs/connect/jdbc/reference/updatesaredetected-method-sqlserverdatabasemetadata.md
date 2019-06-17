@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: cb541175-d3a5-4bca-b327-64e2270c0df1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00cfc8771668c1c70a5503a2b82da1a9ed32281f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bb0ae2f27ad3f8a575d1f4260496ae12c601b6ba
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698224"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798690"
 ---
 # <a name="updatesaredetected-method-sqlserverdatabasemetadata"></a>Método updatesAreDetected (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public boolean updatesAreDetected(int type)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *tipo*  
+ *type*  
   
  Um **int** que indica o tipo do conjunto de resultados, que pode ser um dos valores a seguir, conforme definido em java.sql.ResultSet ou SQLServerResultSet:  
   

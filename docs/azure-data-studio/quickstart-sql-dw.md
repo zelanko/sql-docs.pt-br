@@ -12,10 +12,10 @@ author: yualan
 ms.author: alayu
 manager: jroth
 ms.openlocfilehash: f98f6be4502254910b5c144f08a95181ccf1b2a7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66800269"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Início Rápido: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar e consultar dados no Azure SQL Data Warehouse
@@ -139,7 +139,7 @@ O editor de consultas ainda está conectado para o *mestre* banco de dados, mas 
    ![Selecione resultados](media/quickstart-sql-dw/select-results.png)
 
 
-## <a name="clean-up-resources"></a>Limpar recursos
+## <a name="clean-up-resources"></a>Limpar os recursos
 
 Outros artigos nesta coleção aproveitam esse início rápido. Se você planeja continuar trabalhando com inícios rápidos subsequentes, não limpe os recursos criados neste início rápido. Se você não planeja continuar, use as etapas a seguir para excluir os recursos criados neste início rápido no portal do Azure.
 Limpe recursos excluindo os grupos de recursos que você não precisa mais. Para obter detalhes, consulte [limpar os recursos](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).

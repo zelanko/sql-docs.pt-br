@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9edd9ae15e66a39abd84a8a6d8e50a83ed4a39ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63259342"
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>Usar SQLConfigDatasource com o driver ODBC para Oracle
@@ -35,7 +35,7 @@ ms.locfileid: "63259342"
   
 |Configuração|máx Len|Valor padrão|Valores válidos|Descrição|  
 |-------------|-------------|-------------------|------------------|-----------------|  
-|BufferSize|7|65535|1.000|Até 65535 bytes de tamanho do buffer de busca mínimo|  
+|BufferSize|7|65535|1\.000|Até 65535 bytes de tamanho do buffer de busca mínimo|  
 |CatalogCap|2|1|0 ou 1|Se for 1, identificadores nonquoted será convertido em letras maiusculas no catálogo de funções.|  
 |ConnectString|128|""|A/N|Cadeia de conexão. Método necessário de especificar o nome do servidor com o driver Msorcl10.dll.|  
 |Descrição|256|""|A/N|Descrição.|  

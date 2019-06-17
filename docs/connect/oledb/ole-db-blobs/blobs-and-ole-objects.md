@@ -16,20 +16,20 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6f65e9b99b01f413c85ed61bbacc7a7aebfdb72a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0cc1f42d438c7216cf9b1f6f9ee9167747447e66
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700344"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800695"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOBs e objetos OLE
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O OLE DB Driver for SQL Server expõe a interface **ISequentialStream** para dar suporte ao acesso do consumidor aos tipos de dados **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)** e **varbinary(max)** do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e xml como BLOBs (objetos binários grandes). O método **Read** em **ISequentialStream** permite que o consumidor recupere muitos dados em partes gerenciáveis.  
+  O OLE DB Driver for SQL Server expõe a interface **ISequentialStream** para dar suporte ao acesso do consumidor aos tipos de dados **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** e **varbinary(max)** do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e xml como BLOBs (objetos binários grandes). O método **Read** em **ISequentialStream** permite que o consumidor recupere muitos dados em partes gerenciáveis.  
   
  Para obter um exemplo que demonstra este recurso, consulte [do conjunto de dados grandes &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47700344"
   
  Para tipos de dados de valor grande, o OLE DB Driver for SQL Server verifica as suposições de tamanho de tipo em interfaces **IRowset** e DDL. As colunas que têm tipos de dados **varchar**, **nvarchar** e **varbinary** e o tamanho máximo definido como ilimitado serão representadas como ISLONG pelos conjuntos de linhas do esquema e pelas interfaces que retornam tipos de dados de coluna.  
   
- O OLE DB Driver for SQL Server expõe os tipos **varchar(max)**, **varbinary(max)** e **nvarchar(max)** como DBTYPE_STR, DBTYPE_BYTES e DBTYPE_WSTR, respectivamente.  
+ O OLE DB Driver for SQL Server expõe os tipos **varchar(max)** , **varbinary(max)** e **nvarchar(max)** como DBTYPE_STR, DBTYPE_BYTES e DBTYPE_WSTR, respectivamente.  
   
  Para trabalhar com esses tipos, um aplicativo tem as seguintes opções:  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42c28c1852c5d9c2e931973413a7671ed77b9e6a
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+manager: jroth
+ms.openlocfilehash: 62b84b7be01389cffd45175003066283ac14a7a8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578286"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800800"
 ---
 # <a name="sql-data-developer"></a>SQL Data Developer
 Use plataforma de dados SQL da Microsoft para criar soluções centralizadas em dados em dispositivos móveis e desktops para servidores web, servidores corporativos e a nuvem.  

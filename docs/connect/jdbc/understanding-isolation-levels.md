@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9341004225f619f4b15aabb1a641a8a39a2329b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 432da51055d0a9f250c342338770103fbe8fe4b0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764854"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800173"
 ---
 # <a name="understanding-isolation-levels"></a>Compreendendo os níveis de isolamento
 
@@ -49,10 +49,10 @@ Um nível de isolamento mais baixo aumenta a capacidade de muitos usuários aces
 | Nível de Isolamento  | Leitura suja | Leitura não repetível | Fantasma |
 | ---------------- | ---------- | ------------------- | ------- |
 | Leitura não confirmada | Sim        | Sim                 | Sim     |
-| Leitura confirmada   | não         | Sim                 | Sim     |
-| Leitura repetida  | não         | não                  | Sim     |
-| Instantâneo         | não         | não                  | não      |
-| Serializável     | não         | não                  | não      |
+| Leitura confirmada   | Não         | Sim                 | Sim     |
+| Leitura repetida  | Não         | Não                  | Sim     |
+| Instantâneo         | Não         | Não                  | Não      |
+| Serializável     | Não         | Não                  | Não      |
   
 As transações devem ser executadas em um nível de isolamento de pelo menos leitura repetível para impedir atualizações perdidas que podem ocorrer quando duas transações recuperam a mesma linha e, em seguida, atualizam a linha com base nos valores originalmente recuperados. Se as duas transações atualizarem as linhas usando uma única instrução UPDATE e não basearem a atualização nos valores previamente recuperados, as atualizações perdidas não poderão ocorrer no nível de isolamento padrão de leitura confirmada.  
 
