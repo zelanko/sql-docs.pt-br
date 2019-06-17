@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff94284ba1f60d40697ad5a1e209b284dfaaefdf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63005862"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
@@ -43,9 +43,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @sp_name = ] 'name'` É o nome do procedimento usado para retornar informações de catálogo. *nome da* está **nvarchar(390)**, com um padrão NULL. Há suporte para a correspondência do padrão curinga.  
+`[ @sp_name = ] 'name'` É o nome do procedimento usado para retornar informações de catálogo. *nome da* está **nvarchar(390)** , com um padrão NULL. Há suporte para a correspondência do padrão curinga.  
   
-`[ @sp_owner = ] 'schema'` É o nome do esquema ao qual pertence o procedimento. *esquema* está **nvarchar(384)**, com um padrão NULL. Há suporte para a correspondência do padrão curinga. Se *proprietário* não é especificado, serão aplicadas as regras de visibilidade de procedimento padrão do DBMS subjacente.  
+`[ @sp_owner = ] 'schema'` É o nome do esquema ao qual pertence o procedimento. *esquema* está **nvarchar(384)** , com um padrão NULL. Há suporte para a correspondência do padrão curinga. Se *proprietário* não é especificado, serão aplicadas as regras de visibilidade de procedimento padrão do DBMS subjacente.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o esquema atual contiver um procedimento com o nome especificado, será retornado esse procedimento. Se um procedimento armazenado não qualificado for especificado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] procurará o procedimento na ordem seguinte:  
   
@@ -55,7 +55,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   O esquema **dbo** no banco de dados atual.  
   
-`[ @qualifier = ] 'qualifier'` É o nome do qualificador de procedimento. *qualificador* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas no formato (_qualificador_**.** _esquema_**.** _nome_. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualificador* representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
+`[ @qualifier = ] 'qualifier'` É o nome do qualificador de procedimento. *qualificador* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas no formato (_qualificador_ **.** _esquema_ **.** _nome_. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualificador* representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
   
 `[ @fUsePattern = ] 'fUsePattern'` Determina se o caractere de sublinhado (_), porcentagem (%)) ou colchetes []) são interpretados como caracteres curinga. *fUsePattern* está **bit**, com um padrão de 1.  
   

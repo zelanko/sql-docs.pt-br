@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059716"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Ajuda de F1 do Visualizador de Perfil de Dados
@@ -31,13 +31,13 @@ ms.locfileid: "66059716"
  **Abrir**  
  Clique para buscar o arquivo salvo que contém a saída da tarefa Criação de Perfil de Dados.  
   
- Painel**Perfis**   
+ Painel**Perfis**  
  Expanda a árvore no painel **Perfis** para ver os perfis incluídos na saída. Selecione um perfil para exibir os seus resultados.  
   
- Painel**Mensagens**   
+ Painel**Mensagens**  
  Exibe mensagens de estado.  
   
- Painel**Busca Detalhada**   
+ Painel**Busca Detalhada**  
  Exibe as linhas de dados que correspondem a um valor na saída, se a fonte de dados usada pela tarefa Criação de Perfil de dados estiver disponível.  
   
  Por exemplo, se estiver exibindo a saída de um perfil Distribuição de Valor de Coluna para uma coluna Estado dos Estados Unidos da América, o painel **Distribuição de Valor Detalhado** pode conter uma linha para "WA". Clique duas vezes na linha do painel **Distribuição de Valor Detalhado** para ver as linhas de dados nas quais o valor da coluna de estado é “WA” no painel de busca detalhada.  
@@ -174,7 +174,7 @@ ms.locfileid: "66059716"
  Exibe o número de linhas nas quais o valor de coluna determinante determina a coluna dependente.  
   
  **Contagem de Violação**  
- Exibe o número de linhas nas quais o valor de coluna determinante não determina a coluna dependente (Essas são as linhas nas quais o valor dependente é o valor exibido na coluna **\<dependent column name>**.)  
+ Exibe o número de linhas nas quais o valor de coluna determinante não determina a coluna dependente (Essas são as linhas nas quais o valor dependente é o valor exibido na coluna **\<dependent column name>** .)  
   
  **Percentual de Suporte**  
  Exibe a porcentagem de linhas nas quais a coluna determinante determina a coluna dependente.  

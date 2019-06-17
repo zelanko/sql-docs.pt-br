@@ -24,10 +24,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 21dc355570d5a2778e553924a189ce985513a7cc
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981035"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Coerções de tipo de dados e a anotação de sql:datatype (SQLXML 4.0)
@@ -89,9 +89,9 @@ ms.locfileid: "65981035"
 ## <a name="sqldatatype-annotation"></a>Anotação sql:datatype  
  O **SQL: DataType** anotação é usada para especificar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados; essa anotação deve ser especificado quando:  
   
--   São o carregamento em massa em uma **dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coluna a partir de um XSD **dateTime**, **data**, ou **tempo** tipo. Nesse caso, você deve identificar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de tipo de dados de coluna usando **SQL: DataType = "dateTime"**. Esta regra também se aplica a diagramas de atualização.  
+-   São o carregamento em massa em uma **dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coluna a partir de um XSD **dateTime**, **data**, ou **tempo** tipo. Nesse caso, você deve identificar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de tipo de dados de coluna usando **SQL: DataType = "dateTime"** . Esta regra também se aplica a diagramas de atualização.  
   
--   Você está carregando em massa em uma coluna de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier** tipo e o valor XSD é um GUID que inclui chaves ({e}). Quando você especifica **SQL: DataType = "uniqueidentifier"**, as chaves são removidas do valor antes que ele é inserido na coluna. Se **SQL: DataType** não for especificado, o valor é enviado com as chaves e a inserção ou atualização falhará.  
+-   Você está carregando em massa em uma coluna de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier** tipo e o valor XSD é um GUID que inclui chaves ({e}). Quando você especifica **SQL: DataType = "uniqueidentifier"** , as chaves são removidas do valor antes que ele é inserido na coluna. Se **SQL: DataType** não for especificado, o valor é enviado com as chaves e a inserção ou atualização falhará.  
   
 -   O tipo de dados XML **base64Binary** é mapeado para vários [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados (**binário**, **imagem**, ou **varbinary**). Para mapear o tipo de dados XML **base64Binary** para um determinado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados, use o **SQL: DataType** anotação. Essa anotação especifica o tipo de dados explícito do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da coluna para a qual o atributo é mapeado. Isto é útil quando os dados estão sendo armazenados nos bancos de dados. Especificando o **SQL: DataType** anotação, você pode identificar explícito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.  
   

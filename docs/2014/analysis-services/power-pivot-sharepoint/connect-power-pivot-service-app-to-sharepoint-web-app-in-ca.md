@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da816635ab978e7baadfb810aed78fa0f3258dd8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071675"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>Conectar um aplicativo de serviço PowerPivot a um aplicativo Web do SharePoint na Administração Central
@@ -51,7 +51,7 @@ ms.locfileid: "66071675"
   
 3.  Em Aplicativos Web, em Gerenciar, clique em **Conexões de Serviço**.  
   
-4.  Em **Editar o seguinte grupo de conexões**, selecione **[personalizado]**.  
+4.  Em **Editar o seguinte grupo de conexões**, selecione **[personalizado]** .  
   
 5.  Marque a caixa de seleção ao lado de cada conexão de aplicativo de serviço a ser usada. Se você tiver vários aplicativos de serviço PowerPivot (indicado por Tipo definido como `PowerPivot Service Application Proxy`), escolha apenas um.  
   

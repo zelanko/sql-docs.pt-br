@@ -48,7 +48,7 @@ Para evitar a remoção de conexões ociosas por um componente de rede, as confi
 |Configuração do Registro|Valor recomendado|  
 |----------------------|-----------------------|  
 |HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1.000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1\.000|  
 |HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 Reinicie o computador para que as configurações do Registro tenham efeito.  

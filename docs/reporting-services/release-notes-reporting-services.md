@@ -1,20 +1,20 @@
 ---
 title: Notas de versão do (SSRS) 2017 e posteriores | Microsoft Docs
-ms.date: 09/01/2018
+ms.date: 02/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-ms.reviewer: maghan
+ms.reviewer: maggies
 author: casualoak
-ms.author: RhysSchmidtke
+ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c85d3811fc467d94dc1841b871964e3bb594e2df
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cd2f9dec39075b332b2ae38c622f3970faf8d331
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283286"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037857"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Notas sobre a versão do SSRS (SQL Server Reporting Services) 2017 e posteriores
 
@@ -86,7 +86,7 @@ Os seguintes problemas foram corrigidos:
 | O tamanho do texto não está se ajustando caso pageHeight seja inferior a 0,5 polegada. | &nbsp; |
 | Deadlock ocorre no banco de dados do catálogo SSRS quando ele é usado com o CRM. | &nbsp; |
 | Os cabeçalhos de coluna alinhados verticalmente são exibidos incorretamente ao se rolar para baixo no relatório. | &nbsp; |
-| Usuários adicionados à Função de Relatórios do SCOM têm o acesso bloqueado no portal da Web do SSRS. | &nbsp; |
+| Os usuários adicionados à função de relatórios do System Center Operations Manager tem acesso bloqueado ao portal da web do SSRS. | &nbsp; |
 | Caracteres tailandês não são exportados corretamente em PDF. | &nbsp; |
 | Alteração de comportamento da função de navegador. | &nbsp; |
 | rc:Toolbar=false não funciona na Express Edition. | &nbsp; |

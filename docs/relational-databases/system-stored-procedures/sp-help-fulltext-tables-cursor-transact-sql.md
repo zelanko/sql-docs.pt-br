@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 042fb188e5a704ed9843bcf98b501a5c315d825f
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980210"
 ---
 # <a name="sphelpfulltexttablescursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
@@ -50,7 +50,7 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
   
 `[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` É o nome do catálogo de texto completo. *fulltext_catalog_name* está **sysname**, com um padrão NULL. Se *fulltext_catalog_name* for omitido ou for NULL, todas as tabelas indexadas de texto completo associadas com o banco de dados são retornadas. Se *fulltext_catalog_name* for especificado, mas *table_name* for omitido ou for NULL, as informações de índice de texto completo são recuperadas para cada tabela indexada de texto completo associada a este catálogo. Se os dois *fulltext_catalog_name* e *table_name* forem especificados, uma linha será retornada se *table_name* associado *fulltext_catalog_name*; Caso contrário, ocorrerá um erro.  
   
-`[ @table_name = ] 'table_name'` É o nome da tabela de uma ou duas partes para o qual os metadados de texto completo são solicitados. *table_name* está **nvarchar(517)**, com um valor padrão de NULL. Se apenas *table_name* for especificado, somente a linha relevante ao *table_name* é retornado.  
+`[ @table_name = ] 'table_name'` É o nome da tabela de uma ou duas partes para o qual os metadados de texto completo são solicitados. *table_name* está **nvarchar(517)** , com um valor padrão de NULL. Se apenas *table_name* for especificado, somente a linha relevante ao *table_name* é retornado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou (1) falha  

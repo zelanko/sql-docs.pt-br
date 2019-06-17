@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7f1bfc868b34ac16e1c38aedc9193002d35d5b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62959616"
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
@@ -43,15 +43,15 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @article_resolver = ] 'article_resolver'` Especifica o nome da lógica de negócios personalizada que está sendo registrada. *article_resolver* está **nvarchar (255)**, sem padrão. Se a lógica corporativa que está sendo removida for um componente COM, então esse parâmetro será o nome amigável do componente. Se a lógica corporativa for um assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework, esse parâmetro será o nome do assembly.  
+`[ @article_resolver = ] 'article_resolver'` Especifica o nome da lógica de negócios personalizada que está sendo registrada. *article_resolver* está **nvarchar (255)** , sem padrão. Se a lógica corporativa que está sendo removida for um componente COM, então esse parâmetro será o nome amigável do componente. Se a lógica corporativa for um assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework, esse parâmetro será o nome do assembly.  
   
-`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` É o valor CLSID do objeto COM associado ao nome da lógica comercial personalizada especificada na *article_resolver* parâmetro. *resolver_clsid* está **nvarchar (50)**, com um padrão NULL.  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` É o valor CLSID do objeto COM associado ao nome da lógica comercial personalizada especificada na *article_resolver* parâmetro. *resolver_clsid* está **nvarchar (50)** , com um padrão NULL.  
   
 `[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` Especifica o tipo de lógica de negócios personalizada que está sendo registrado. *is_dotnet_assembly* está **bit**, com um padrão de 0. **1** indica que a lógica de negócios personalizada que está sendo registrada é um manipulador de lógica de negócios Assembly; **0** indica que ele é um componente COM.  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` É o nome do assembly que implementa o manipulador de lógica de negócios. *dotnet_assembly_name* está **nvarchar (255)**, com um valor padrão de NULL.  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` É o nome do assembly que implementa o manipulador de lógica de negócios. *dotnet_assembly_name* está **nvarchar (255)** , com um valor padrão de NULL.  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` É o nome da classe que substitui <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para implementar o manipulador de lógica de negócios. *dotnet_class_name* está **nvarchar (255)**, com um valor padrão de NULL.  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` É o nome da classe que substitui <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para implementar o manipulador de lógica de negócios. *dotnet_class_name* está **nvarchar (255)** , com um valor padrão de NULL.  
   
 `[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, com um valor padrão de NULL. Use este parâmetro quando o procedimento armazenado não é chamado do Publicador. Se não for especificado, será assumido que o servidor local é o Publicador.  
   

@@ -3,17 +3,17 @@ title: Usar gerenciadores de pacotes de R – serviços do SQL Server Machine Le
 description: Use os comandos de R padrão como Packages para adicionar novos pacotes do R para SQL Server 2016 R Services ou serviços SQL Server 2017 Machine Learning (no banco de dados).
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 6012fb1a3376c00a64239e0fbf10115b8a4367d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2582d519893fac3a49ce997674980d2d58d5cf32
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642264"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140773"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Usar gerenciadores de pacotes de R para instalar pacotes R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,7 @@ Este procedimento usa o RGui, mas você pode usar o RTerm ou qualquer outra R li
 
 ## <a name="install-a-package-using-rgui"></a>Instalar um pacote usando o RGui
 
-1. [Determinar o local da biblioteca de instância](installing-and-managing-r-packages.md). Navegue até a pasta onde as ferramentas do R estão instaladas. Por exemplo, o caminho padrão para uma instância do SQL Server 2017 padrão é da seguinte maneira: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [Determinar o local da biblioteca de instância](../package-management/default-packages.md). Navegue até a pasta onde as ferramentas do R estão instaladas. Por exemplo, o caminho padrão para uma instância do SQL Server 2017 padrão é da seguinte maneira: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
 1. RGui.exe com o botão direito e selecione **executar como administrador**. Se você não tiver as permissões necessárias, contate o administrador de banco de dados e fornecer uma lista de pacotes que você precisa.
 

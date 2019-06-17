@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84bd7e70c5ff3c1ee41bdcc331fefdd2422937ed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62471980"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Ordenação e armazenamento de cadeia de caracteres em modelos tabulares
@@ -70,7 +70,7 @@ ms.locfileid: "62471980"
   
 -   A ordenação define a ordenação dos caracteres e sua equivalência.  
   
- É importante observar que um identificador de idioma não só identifica um idioma, mas também o país ou região onde o idioma é usado. Cada identificador de idioma também tem uma especificação de ordenação padrão. Para obter mais informações sobre identificadores de idioma, consulte [IDs de localidade atribuídas pela Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx). Você pode usar a coluna LCID Dec para obter a ID correta ao inserir um valor manualmente. Para obter mais informações sobre o conceito SQL de ordenações, consulte [COLLATE &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/collations.md). Para obter mais informações sobre os designadores de ordenação e os estilos de comparação para nomes de ordenações do Windows, consulte [Nome de ordenação do Windows &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). O tópico [Nome de ordenação do SQL Server &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md), mapeia os nomes de ordenação do Windows para os nomes usados para SQL.  
+ É importante observar que um identificador de idioma não só identifica um idioma, mas também o país ou região onde o idioma é usado. Cada identificador de idioma também tem uma especificação de ordenação padrão. Para obter mais informações sobre identificadores de idioma, consulte [IDs de localidade atribuídas pela Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx). Você pode usar a coluna LCID Dec para obter a ID correta ao inserir um valor manualmente. Para obter mais informações sobre o conceito SQL de ordenações, consulte [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md). Para obter mais informações sobre os designadores de ordenação e os estilos de comparação para nomes de ordenações do Windows, consulte [Nome de ordenação do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). O tópico [Nome de ordenação do SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md), mapeia os nomes de ordenação do Windows para os nomes usados para SQL.  
   
  Quando seu banco de dados modelo de tabela for criado, todos os novos objetos no modelo herdarão os atributos de idioma e ordenação do banco de dados. Isto vale para todos os objetos. O caminho de herança começa no objeto, observa o pai de quaisquer atributos de idioma e ordenação a serem herdados e, se nenhum é localizado, continua na parte superior e localiza os atributos de idioma e ordenação em nível de banco de dados. Em outras palavras, se você não especificar os atributos de idioma e ordenação para um objeto, por padrão, o objeto herdará os atributos de seu pai mais próximo.  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d88840ef429258ad425e867efc4b744f6a5d3c5
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: e61d9fbb562bda9ea400024598b1c7107ce5542e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736937"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788431"
 ---
 # <a name="understanding-xa-transactions"></a>Compreendendo transações XA
 
@@ -31,7 +31,7 @@ O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] oferece suporte 
 
 As classes para a implementação das transações distribuídas são as seguintes:  
   
-| Classe                                              | Implements                      | Descrição                                       |
+| Classe                                              | Implementa                      | Descrição                                       |
 | -------------------------------------------------- | ------------------------------- | ------------------------------------------------- |
 | com.microsoft.sqlserver.jdbc.SQLServerXADataSource | javax.sql.XADataSource          | A fábrica de classes para conexões distribuídas.    |
 | com.microsoft.sqlserver.jdbc.SQLServerXAResource   | javax.transaction.xa.XAResource | O adaptador de recursos para o gerenciador de transações. |
@@ -118,7 +118,7 @@ Há três maneiras de verificar qual versão do sqljdbc_xa.dll está instalada n
 ### <a name="BKMK_ServerSide"></a> Configurando as definições de tempo limite do servidor para reversão automática de transações não preparadas  
 
 > [!WARNING]  
-> Essa opção do servidor é nova no Microsoft JDBC Driver 4.2 (e superiores) para SQL Server. Para obter o comportamento atualizado, verifique se o sqljdbc_xa.dll no servidor está atualizado. Para saber mais sobre como configurar o tempo limite no cliente, veja [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
+> Essa opção do servidor é nova no Microsoft JDBC Driver 4.2 (e superiores) para SQL Server. Para obter o comportamento atualizado, verifique se o arquivo sqljdbc_xa.dll no servidor foi atualizado. Para saber mais sobre como configurar o tempo limite no cliente, veja [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
 
 Há duas configurações de Registro (valores DWORD) para controlar o comportamento de tempo limite de transações distribuídas:  
   
@@ -160,7 +160,7 @@ Ao instalar uma nova versão do driver JDBC, você também deve usar o arquivo s
 > [!IMPORTANT]  
 > Você deve atualizar o sqljdbc_xa.dll durante a janela de manutenção ou quando não houver nenhuma transação do MS DTC em andamento.
   
-1. Descarregue sqljdbc_xa. dll usando o [!INCLUDE[tsql](../../includes/tsql-md.md)] comando **sqljdbc_xa DBCC (FREE)**.  
+1. Descarregue sqljdbc_xa. dll usando o [!INCLUDE[tsql](../../includes/tsql-md.md)] comando **sqljdbc_xa DBCC (FREE)** .  
   
 2. Copie o novo sqljdbc_xa.dll do diretório de instalação do driver JDBC para o diretório Binn de cada computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que participará de transações distribuídas.  
   

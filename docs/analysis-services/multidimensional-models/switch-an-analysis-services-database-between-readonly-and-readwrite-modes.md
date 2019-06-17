@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e1ae8fc032a1f728372e9b4e764281ea8df8ddaa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63020060"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite
@@ -40,7 +40,7 @@ ms.locfileid: "63020060"
   
 4.  No Pesquisador de objetos, clique com botão direito do **bancos de dados** pasta e selecione **anexar...**  
   
-5.  Na caixa de texto **pasta** , digite o local original da pasta do banco de dados. Como alternativa, você pode usar o botão Procurar (**...** ) para localizar a pasta do banco de dados.  
+5.  Na caixa de texto **pasta** , digite o local original da pasta do banco de dados. Como alternativa, você pode usar o botão Procurar ( **...** ) para localizar a pasta do banco de dados.  
   
 6.  Selecione o modo leitura/gravação do banco de dados.  
   

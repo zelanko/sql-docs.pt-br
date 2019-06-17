@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 076a3df69245cb269593e1a2298f18c9266ab217
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980320"
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
@@ -44,7 +44,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_name = ] 'table\_name'` É o nome da tabela de uma ou duas partes para o qual as informações de índice de texto completo são solicitadas. *table_name* está **nvarchar(517)**, com um valor padrão de NULL. Se *table_name* for omitido, as informações de coluna de índice de texto completo são recuperadas para cada tabela indexada de texto completo.  
+`[ @table_name = ] 'table\_name'` É o nome da tabela de uma ou duas partes para o qual as informações de índice de texto completo são solicitadas. *table_name* está **nvarchar(517)** , com um valor padrão de NULL. Se *table_name* for omitido, as informações de coluna de índice de texto completo são recuperadas para cada tabela indexada de texto completo.  
   
 `[ @column_name = ] 'column\_name'` É o nome da coluna para o qual os metadados de índice de texto completo são solicitados. *column_name* está **sysname**, com um valor padrão de NULL. Se *column_name* for omitido ou for NULL, as informações de coluna de texto completo serão retornadas para cada coluna indexada de texto completo de *table_name*. Se *table_name* também for omitido ou for NULL, as informações de coluna de índice de texto completo serão retornadas para cada coluna indexada de texto completo de todas as tabelas no banco de dados.  
   

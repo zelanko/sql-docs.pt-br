@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9fdbc707a26c9cebae33c0dd432572cde3157c2d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056419"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>Executar um pacote no SQL Server Data Tools
@@ -45,7 +45,7 @@ ms.locfileid: "66056419"
   
 1.  No Gerenciador de Soluções, clique com o botão direito do mouse na pasta de projetos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contém o pacote que você deseja executar e clique em **Propriedades**.  
   
-2.  Na caixa de diálogo **Página de Propriedades do \<project name>**, clique em **Compilar**.  
+2.  Na caixa de diálogo **Página de Propriedades do \<project name>** , clique em **Compilar**.  
   
 3.  Atualize o valor na propriedade OutputPath para especificar a pasta que você deseja usar para a implantação em tempo de design e clique em **OK**.  
   

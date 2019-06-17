@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b7a56afb2ffa11dbe4ec8937efb602c13c9599d
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65450022"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
@@ -41,14 +41,14 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>Argumentos  
  *progid*  
- É o identificador programático (ProgID) do objeto OLE a ser criado. Essa cadeia de caracteres descreve a classe do objeto OLE e tem o formato: **'**_OLEComponent_**.** _Objeto_**'**  
+ É o identificador programático (ProgID) do objeto OLE a ser criado. Essa cadeia de caracteres descreve a classe do objeto OLE e tem o formato: **'** _OLEComponent_ **.** _Objeto_ **'**  
   
  *OLEComponent* é o nome do componente do servidor de automação OLE, e *objeto* é o nome do objeto OLE. O objeto OLE especificado deve ser válido e deve oferecer suporte a **IDispatch** interface.  
   
  Por exemplo, SQLDMO. SQL Server é o ProgID do SQL-DMO **SQLServer** objeto. SQL-DMO tem um nome de componente de SQLDMO, o **SQLServer** objeto é válido e (como o SQL-DMO todos os objetos) a **SQLServer** objeto dá suporte à **IDispatch**.  
   
  *clsid*  
- É o CLSID (identificador de classe) do objeto OLE a ser criado. Essa cadeia de caracteres descreve a classe do objeto OLE e tem o formato: **' {**_nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_**}'**. O objeto OLE especificado deve ser válido e deve oferecer suporte a **IDispatch** interface.  
+ É o CLSID (identificador de classe) do objeto OLE a ser criado. Essa cadeia de caracteres descreve a classe do objeto OLE e tem o formato: **' {** _nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_ **}'** . O objeto OLE especificado deve ser válido e deve oferecer suporte a **IDispatch** interface.  
   
  Por exemplo, {00026ba1-0000-0000-C000-000000000046} é o CLSID do SQL-DMO **SQLServer** objeto.  
   

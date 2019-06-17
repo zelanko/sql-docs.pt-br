@@ -17,13 +17,13 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: b09e62a5057a948e2a12bb6272c9a0e431ba7507
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+manager: jroth
+ms.openlocfilehash: 575ce4f2522299be723be159bb87e19f8fff1a1d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864154"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795957"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Conjuntos de linhas do esquema – suporte à consulta distribuída
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47864154"
 
   Para oferecer suporte a consultas distribuídas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a interface **IDBSchemaRowset** do OLE DB Driver for SQL Server retorna metadados em servidores vinculados.  
   
- Caso a propriedade SSPROP_QUOTEDCATALOGNAMES de DBPROPSET_SQLSERVERSESSION seja VARIANT_TRUE, um identificador citado pode ser especificado para o nome do catálogo (por exemplo "my.catalog"). Durante a restrição da saída do conjunto de linhas do esquema por catálogo, o OLE DB Driver for SQL Server reconhece um nome em duas partes que contém o servidor vinculado e o nome do catálogo. Para os conjuntos de linhas de esquema na tabela abaixo, especificar um nome de catálogo em duas partes como _linked\_server_**.**_catalog_ restringe a saída para o catálogo aplicável do servidor vinculado nomeado.  
+ Caso a propriedade SSPROP_QUOTEDCATALOGNAMES de DBPROPSET_SQLSERVERSESSION seja VARIANT_TRUE, um identificador citado pode ser especificado para o nome do catálogo (por exemplo "my.catalog"). Durante a restrição da saída do conjunto de linhas do esquema por catálogo, o OLE DB Driver for SQL Server reconhece um nome em duas partes que contém o servidor vinculado e o nome do catálogo. Para os conjuntos de linhas de esquema na tabela abaixo, especificar um nome de catálogo em duas partes como _linked\_server_ **.** _catalog_ restringe a saída para o catálogo aplicável do servidor vinculado nomeado.  
   
 |Conjunto de linhas de esquema|Restrição de catálogo|  
 |-------------------|-------------------------|  

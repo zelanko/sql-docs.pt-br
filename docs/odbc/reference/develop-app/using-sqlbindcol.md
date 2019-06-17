@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63208471"
 ---
 # <a name="using-sqlbindcol"></a>Usar SQLBindCol
@@ -35,7 +35,7 @@ O aplicativo associa colunas chamando **SQLBindCol**. Essa função é associado
   
  Por exemplo, o código a seguir associa variáveis para as colunas de vendedor e CustID. Dados para as colunas serão retornados na *vendedor* e *CustID*. Porque *vendedor* é um buffer de caracteres, o aplicativo especifica seu comprimento de byte (11) para que o driver pode determinar se deseja truncar os dados. O comprimento em bytes de retornado do título, ou se ele for NULL, será retornado em *SalesPersonLenOrInd*.  
   
- Porque *CustID* é uma variável de inteiro e tem o comprimento, fixo não é necessário para especificar seu comprimento de bytes; o driver pressupõe que ele é **sizeof (** SQLUINTEGER **)**. O comprimento de bytes do cliente retornado dados da ID, ou se ele for NULL, será retornado em *CustIDInd*. Observe que o aplicativo estiver interessado somente se o salário for NULL, porque o comprimento de bytes é sempre **sizeof (** SQLUINTEGER **)**.  
+ Porque *CustID* é uma variável de inteiro e tem o comprimento, fixo não é necessário para especificar seu comprimento de bytes; o driver pressupõe que ele é **sizeof (** SQLUINTEGER **)** . O comprimento de bytes do cliente retornado dados da ID, ou se ele for NULL, será retornado em *CustIDInd*. Observe que o aplicativo estiver interessado somente se o salário for NULL, porque o comprimento de bytes é sempre **sizeof (** SQLUINTEGER **)** .  
   
 ```  
 SQLCHAR       SalesPerson[11];  

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 06e593c676c206f863bdb110be5c93e5003b4e13
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484095"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>O SQL Server com suporte e tipos de dados do SSIS para domínios do DQS
@@ -28,8 +28,8 @@ ms.locfileid: "65484095"
   
 |Tipo de dados de domínio DQS|Tipo de dados do SQL Server com suporte|  
 |--------------------------|------------------------------------|  
-|data|Data|  
-|Decimal|Decimal<br /><br /> FLOAT<br /><br /> money<br /><br /> numeric<br /><br /> REAL<br /><br /> SMALLMONEY|  
+|Date|Data|  
+|Decimal|Decimal<br /><br /> float<br /><br /> money<br /><br /> numeric<br /><br /> REAL<br /><br /> SMALLMONEY|  
 |Integer|BIGINT<br /><br /> INT<br /><br /> smallint<br /><br /> TINYINT|  
 |Cadeia de caracteres|char<br /><br /> NCHAR<br /><br /> NVARCHAR<br /><br /> varchar|  
   
@@ -40,7 +40,7 @@ ms.locfileid: "65484095"
   
 |Tipo de dados de domínio DQS|Tipo de dados do SSIS com suporte|  
 |--------------------------|------------------------------|  
-|data|DT_DATE|  
+|Date|DT_DATE|  
 |Decimal|DT_DECIMAL<br /><br /> DT_NUMERIC<br /><br /> DT_R4<br /><br /> DT_R8|  
 |Integer|DT_I1<br /><br /> DT_I2<br /><br /> DT_I4<br /><br /> DT_I8<br /><br /> DT_U1<br /><br /> DT_U2<br /><br /> DT_U4<br /><br /> DT_U8|  
 |Cadeia de caracteres|DT_STR<br /><br /> DT_WSTR|  

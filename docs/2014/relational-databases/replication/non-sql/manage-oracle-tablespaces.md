@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a6bf22c7649646506b65628f556b52fead23375
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022294"
 ---
 # <a name="manage-oracle-tablespaces"></a>Gerenciar espaços de tabela Oracle
@@ -31,15 +31,15 @@ ms.locfileid: "63022294"
   
 -   Use [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql). Para usar **sp_changearticle**, especifique o seguinte:  
   
-    -   O nome do Editor Oracle para o parâmetro **@publisher**.  
+    -   O nome do Editor Oracle para o parâmetro **@publisher** .  
   
-    -   O nome da publicação Oracle para o parâmetro **@publication**.  
+    -   O nome da publicação Oracle para o parâmetro **@publication** .  
   
-    -   O nome do artigo para o parâmetro **@article**.  
+    -   O nome do artigo para o parâmetro **@article** .  
   
-    -   Um valor de 'espaço de tabela' para o parâmetro **@property**.  
+    -   Um valor de 'espaço de tabela' para o parâmetro **@property** .  
   
-    -   O nome do espaço de tabela para o parâmetro **@value**.  
+    -   O nome do espaço de tabela para o parâmetro **@value** .  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar um Publicador Oracle](configure-an-oracle-publisher.md)   

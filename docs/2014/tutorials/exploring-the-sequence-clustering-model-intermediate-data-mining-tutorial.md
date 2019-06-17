@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63164058"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Explorando o modelo de clustering de sequências (Tutorial de mineração de dados intermediário)
@@ -159,7 +159,7 @@ ms.locfileid: "63164058"
   
      A probabilidade dessa transição é exibida como uma porcentagem.  
   
-7.  No **Cluster** lista suspensa, selecione **população (tudo)**.  
+7.  No **Cluster** lista suspensa, selecione **população (tudo)** .  
   
      A lista de atributos é atualizada para mostrar as características de todas as ordens usadas na criação do modelo. Nesse modelo de mineração, é a característica mais importante para fazer a distinção entre clusters `Region`, com um valor de **América do Norte**.  
   

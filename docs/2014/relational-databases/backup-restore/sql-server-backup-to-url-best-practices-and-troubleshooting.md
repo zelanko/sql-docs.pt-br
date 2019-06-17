@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7f652d512f27b935b158a71a80b61c43ac6b7183
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65619590"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Práticas recomendadas e solução de problemas de backup do SQL Server para URL
@@ -94,7 +94,7 @@ ms.locfileid: "65619590"
 -   Ao fazer a restauração em um backup compactado, você verá o seguinte erro:  
   
     -   Ocorreu a **SqlException 3284. Gravidade: 16 estado: 5**  
-        **Mensagem de marca de arquivo no dispositivo 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' não está alinhada. Emita novamente a instrução Restore com o mesmo tamanho de bloco usado para criar o conjunto de backup: '65536' parece um valor possível.**  
+        **Mensagem de marca de arquivo no dispositivo 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak ' não está alinhada. Emita novamente a instrução Restore com o mesmo tamanho de bloco usado para criar o conjunto de backup: '65536' parece um valor possível.**  
   
          Para corrigir esse erro, emita novamente a instrução `BACKUP` com `BLOCKSIZE = 65536` especificada.  
   
@@ -117,15 +117,15 @@ ms.locfileid: "65619590"
   
  Os servidores proxy podem ter configurações que limitam o número de conexões por minuto. O processo de Backup para URL é multi-threaded e, portanto, pode ir além desse limite. Se isso acontecer, o servidor proxy elimina a conexão. Para resolver esse problema, altere as configurações de proxy para que o SQL Server não use o proxy.   A seguir estão alguns exemplos dos tipos ou mensagens de erro que você pode ver no log de erros:  
   
--   Gravar em "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" falhou: Backup para URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: Não é possível ler dados de conexão de transporte: A conexão foi fechada.  
+-   Gravar em "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak " falhou: Backup para URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: Não é possível ler dados de conexão de transporte: A conexão foi fechada.  
   
--   Ocorreu um erro de E/S não recuperável no arquivo “http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:” Não foi possível coletar o erro do ponto de extremidade remoto.  
+-   Ocorreu um erro de E/S não recuperável no arquivo “http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: ” Não foi possível coletar o erro do ponto de extremidade remoto.  
   
      Msg 3013, Nível 16, Estado 1, Linha 2  
   
      BACKUP DATABASE está sendo encerrado de forma anormal.  
   
--   Backupiorequest: Reportioerror: Falha na gravação no dispositivo de backup 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Erro de sistema operacional: a opção Backup para URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: Não é possível ler dados de conexão de transporte: A conexão foi fechada.  
+-   Backupiorequest: Reportioerror: Falha na gravação no dispositivo de backup 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak '. Erro de sistema operacional: a opção Backup para URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: Não é possível ler dados de conexão de transporte: A conexão foi fechada.  
   
  Se você ativar o log detalhado usando o sinalizador de rastreamento 3051, também poderá ver a seguinte mensagem nos logs:  
   
@@ -133,7 +133,7 @@ ms.locfileid: "65619590"
   
  **Configurações de proxy padrão não escolhidas:**  
   
- Às vezes as configurações padrão não são selecionadas, causando erros de autenticação de proxy como:*Ocorreu um erro de E/S irrecuperável no arquivo “http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:” O Backup para URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: O servidor remoto retornou um erro: (407)*  **Autenticação de proxy necessária**.  
+ Às vezes as configurações padrão não são selecionadas, causando erros de autenticação de proxy como:*Ocorreu um erro de E/S irrecuperável no arquivo “http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: ” O Backup para URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: O servidor remoto retornou um erro: (407)*  **Autenticação de proxy necessária**.  
   
  Para resolver esse problema, crie um arquivo de configuração que permite que o processo de Backup para URL use as configurações de proxy padrão usando as seguintes etapas:  
   

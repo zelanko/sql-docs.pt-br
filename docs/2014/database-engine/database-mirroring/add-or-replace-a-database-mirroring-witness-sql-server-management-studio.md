@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807430"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Adicionar ou substituir uma testemunha de espelhamento de banco de dados (SQL Server Management Studio)
@@ -64,7 +64,7 @@ ms.locfileid: "62807430"
   
 13. Opcionalmente, na tela de resumo **Concluir o Assistente** , verifique a configuração de testemunha e clique em **Concluir**.  
   
-14. Ao terminar, o assistente o leva de volta para a caixa de diálogo **Propriedades do Banco de Dados** , em que agora o endereço de rede do servidor da testemunha aparece no campo **Testemunha** . Além disso, **High-safety mode with automatic failover (synchronous) (Modo de segurança alta com failover automático (síncrono))**, que é exigido com uma testemunha, é selecionado automaticamente.  
+14. Ao terminar, o assistente o leva de volta para a caixa de diálogo **Propriedades do Banco de Dados** , em que agora o endereço de rede do servidor da testemunha aparece no campo **Testemunha** . Além disso, **High-safety mode with automatic failover (synchronous) (Modo de segurança alta com failover automático (síncrono))** , que é exigido com uma testemunha, é selecionado automaticamente.  
   
      Para habilitar a testemunha e alterar a sessão para o modo de segurança alta com failover automático, clique em **OK**.  
   
