@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce51b3fc6730b984c36aa44e87d3983233a3b006
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960864"
 ---
 # <a name="delete-an-article"></a>Excluir um artigo
@@ -35,13 +35,13 @@ ms.locfileid: "62960864"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>Para excluir um artigo de um instantâneo ou publicação transacional  
   
-1.  Execute [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) para excluir um artigo, especificado por **@article**, de uma publicação, especificado por **@publication**. Especifique um valor de **1** para **@force_invalidate_snapshot**.  
+1.  Execute [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) para excluir um artigo, especificado por **@article** , de uma publicação, especificado por **@publication** . Especifique um valor de **1** para **@force_invalidate_snapshot** .  
   
 2.  (Opcional) Para remover inteiramente o objeto publicado de um banco de dados, execute o comando `DROP <objectname>` no Publicador do banco de dados de publicação.  
   
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>Para excluir um artigo de uma publicação de mesclagem  
   
-1.  Execute [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) para excluir um artigo, especificado por **@article**, de uma publicação, especificado por **@publication**. Se necessário, especifique um valor de **1** para **@force_invalidate_snapshot** e um valor de **1** para **@force_reinit_subscription**.  
+1.  Execute [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) para excluir um artigo, especificado por **@article** , de uma publicação, especificado por **@publication** . Se necessário, especifique um valor de **1** para **@force_invalidate_snapshot** e um valor de **1** para **@force_reinit_subscription** .  
   
 2.  (Opcional) Para remover inteiramente o objeto publicado de um banco de dados, execute o comando `DROP <objectname>` no Publicador do banco de dados de publicação.  
   

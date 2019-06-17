@@ -462,7 +462,7 @@
           href: publisher-properties.md
         - name: Propriedades do assinante
           href: subscriber-properties.md
-        - name: 'Propriedades de publicação '
+        - name: Propriedades de publicação
           href: publication-properties-publication.md
           items:
             - name: Artigos

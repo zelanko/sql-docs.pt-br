@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab9eca571a9cf9381e7c6a18207155ddf86ce272
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035931"
 ---
 # <a name="command-prompt-utility-reference-database-engine"></a>Referência de utilitários de prompt de comando (Mecanismo de Banco de Dados)

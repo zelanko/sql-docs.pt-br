@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011953"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Conceder uma permissão a uma entidade de segurança
@@ -65,7 +65,7 @@ ms.locfileid: "63011953"
   
 4.  Clique com o botão direito do mouse em um procedimento armazenado e selecione **Propriedades**.  
   
-5.  No **propriedades do procedimento armazenado -**_stored_procedure_name_ caixa de diálogo, em selecionar uma página, selecione **permissões**. Use essa página para adicionar usuários ou funções ao procedimento armazenado e especificar as permissões que esses usuários ou funções têm.  
+5.  No **propriedades do procedimento armazenado -** _stored_procedure_name_ caixa de diálogo, em selecionar uma página, selecione **permissões**. Use essa página para adicionar usuários ou funções ao procedimento armazenado e especificar as permissões que esses usuários ou funções têm.  
   
 6.  Quando terminar, clique em **OK**.  
   

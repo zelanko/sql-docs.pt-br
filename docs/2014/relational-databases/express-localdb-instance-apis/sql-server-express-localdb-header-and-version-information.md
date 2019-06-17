@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63128693"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>Cabeçalho e informações de versão de LocalDB do SQL Server Express
@@ -44,7 +44,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- Nesta chave, há uma lista de chaves, uma para cada versão do LocalDB instalada no computador. Cada uma destas chaves é nomeada com o número de versão de LocalDB no formato  *\<major-version >*. *\<versão secundária >* (por exemplo, a chave para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] é nomeada 12.0). Em cada chave de versão há um par de nome-valor `InstanceAPIPath` que define o caminho completo para o arquivo SQLUserInstance.dll instalado com essa versão. O exemplo a seguir mostra as entradas do Registro para um computador que tem as versões 11.0 e 12.0 do LocalDB instaladas:  
+ Nesta chave, há uma lista de chaves, uma para cada versão do LocalDB instalada no computador. Cada uma destas chaves é nomeada com o número de versão de LocalDB no formato  *\<major-version >* . *\<versão secundária >* (por exemplo, a chave para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] é nomeada 12.0). Em cada chave de versão há um par de nome-valor `InstanceAPIPath` que define o caminho completo para o arquivo SQLUserInstance.dll instalado com essa versão. O exemplo a seguir mostra as entradas do Registro para um computador que tem as versões 11.0 e 12.0 do LocalDB instaladas:  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\12.0]  

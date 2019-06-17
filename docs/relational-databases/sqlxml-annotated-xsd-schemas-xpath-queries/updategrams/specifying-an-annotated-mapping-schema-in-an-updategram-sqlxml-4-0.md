@@ -23,10 +23,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e55ec7d8ed06914299f56b3d613186d8c612a05
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025493"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Especificando um esquema de mapeamento anotado em um diagrama de atualização (SQLXML 4.0)
@@ -39,9 +39,9 @@ ms.locfileid: "63025493"
 >  Esta documentação parte do pressuposto de que você esteja familiarizado com suporte a modelos e ao esquema de mapeamento no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Introdução a esquemas de XSD anotados &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para aplicativos herdados que usam XDR, consulte [os esquemas XDR anotados &#40;substituídos no SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Lidando com tipos de dados  
- Se o esquema Especifica a **imagem**, **binário**, ou **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de dados (usando **SQL: DataType**) e não Especifique um tipo de dados XML, o diagrama de atualização assumirá que o tipo de dados XML é **binários na base 64**. Se os dados estiverem **bin.base** tipo, você deve especificar explicitamente o tipo (**dt:type=bin.base** ou **tipo = "xsd:hexBinary"**).  
+ Se o esquema Especifica a **imagem**, **binário**, ou **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de dados (usando **SQL: DataType**) e não Especifique um tipo de dados XML, o diagrama de atualização assumirá que o tipo de dados XML é **binários na base 64**. Se os dados estiverem **bin.base** tipo, você deve especificar explicitamente o tipo (**dt:type=bin.base** ou **tipo = "xsd:hexBinary"** ).  
   
- Se o esquema Especifica a **dateTime**, **data**, ou **tempo** tipo de dados XSD, você também deve especificar correspondente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de dados usando  **SQL: DataType = "dateTime"**.  
+ Se o esquema Especifica a **dateTime**, **data**, ou **tempo** tipo de dados XSD, você também deve especificar correspondente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de dados usando  **SQL: DataType = "dateTime"** .  
   
  Ao lidar com parâmetros de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **dinheiro** tipo, você deve especificar explicitamente **SQL: DataType = "dinheiro"** no nó apropriado no esquema de mapeamento.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63025493"
 </xsd:schema>  
 ```  
   
- O diagrama de atualização a seguir insere um registro na tabela Sales.Customer e usa o esquema de mapeamento anterior para mapear adequadamente esses dados para a tabela. Observe que o diagrama de atualização usa o mesmo nome do elemento  **\<cliente >**, conforme definido no esquema. Isso é obrigatório porque o diagrama especifica um esquema específico.  
+ O diagrama de atualização a seguir insere um registro na tabela Sales.Customer e usa o esquema de mapeamento anterior para mapear adequadamente esses dados para a tabela. Observe que o diagrama de atualização usa o mesmo nome do elemento  **\<cliente >** , conforme definido no esquema. Isso é obrigatório porque o diagrama especifica um esquema específico.  
   
 ##### <a name="to-test-the-updategram"></a>Para testar o diagrama de atualização  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63025493"
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. Inserindo um registro usando a relação pai-filho especificada no esquema de mapeamento  
  Elementos de esquema podem ser relacionados. O  **\<SQL: Relationship >** elemento Especifica a relação de pai-filho entre os elementos do esquema. Essas informações são usadas para atualizar as tabelas correspondentes que têm relação chave primária/chave estrangeira.  
   
- O seguinte esquema de mapeamento (SampleSchema. xml) consiste em dois elementos,  **\<ordem >** e  **\<OD >**:  
+ O seguinte esquema de mapeamento (SampleSchema. xml) consiste em dois elementos,  **\<ordem >** e  **\<OD >** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

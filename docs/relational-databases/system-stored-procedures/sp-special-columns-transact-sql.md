@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d96c8565a8d908518504cf86eb253fc5913f1a85
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004154"
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (Transact-SQL)
@@ -59,16 +59,16 @@ sp_special_columns [ @table_name = ] 'table_name'
  É o nome do qualificador da tabela. *qualificador* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
   
  [ @col_type=] '*col_type*'  
- É o tipo da coluna. *col_type* está **char (** 1 **)**, com um padrão de R. o tipo R retorna a coluna ou conjunto ideal de colunas que, pela recuperação de valores da coluna ou colunas, permite que qualquer linha especificada tabela a ser identificado exclusivamente. A coluna pode ser uma pseudocoluna especificamente projetada para esta finalidade ou a coluna ou colunas de qualquer índice exclusivo da tabela. O tipo V retorna a coluna ou as colunas da tabela especificada, se houver, que são automaticamente atualizadas pela fonte de dados quando qualquer valor na linha é atualizado por qualquer transação.  
+ É o tipo da coluna. *col_type* está **char (** 1 **)** , com um padrão de R. o tipo R retorna a coluna ou conjunto ideal de colunas que, pela recuperação de valores da coluna ou colunas, permite que qualquer linha especificada tabela a ser identificado exclusivamente. A coluna pode ser uma pseudocoluna especificamente projetada para esta finalidade ou a coluna ou colunas de qualquer índice exclusivo da tabela. O tipo V retorna a coluna ou as colunas da tabela especificada, se houver, que são automaticamente atualizadas pela fonte de dados quando qualquer valor na linha é atualizado por qualquer transação.  
   
  [ @scope=] '*scope*'  
- É o escopo mínimo necessário de ROWID. *escopo* está **char (** 1 **)**, com um padrão T. o escopo C Especifica que a ROWID é válida somente quando posicionada nessa linha. O escopo T especifica que a ROWID é válida para a transação.  
+ É o escopo mínimo necessário de ROWID. *escopo* está **char (** 1 **)** , com um padrão T. o escopo C Especifica que a ROWID é válida somente quando posicionada nessa linha. O escopo T especifica que a ROWID é válida para a transação.  
   
  [ @nullable=] '*nullable*'  
- Indica se as colunas especiais podem aceitar um valor nulo. *anulável* está **char (** 1 **)**, com um padrão U. o Especifica colunas especiais que não permitem valores nulos. U especifica colunas que permitem valor parcialmente nulo.  
+ Indica se as colunas especiais podem aceitar um valor nulo. *anulável* está **char (** 1 **)** , com um padrão U. o Especifica colunas especiais que não permitem valores nulos. U especifica colunas que permitem valor parcialmente nulo.  
   
  [ @ODBCVer=] '*ODBCVer*'  
- É a versão do ODBC que está sendo utilizada. *ODBCVer* está **int (** 4 **)**, com um padrão de 2. Isso indica o ODBC versão 2.0. Para obter mais informações sobre a diferença entre ODBC versão 2.0 e ODBC versão 3.0, consulte a especificação de ODBC SQLSpecialColumns para ODBC versão 3.0.  
+ É a versão do ODBC que está sendo utilizada. *ODBCVer* está **int (** 4 **)** , com um padrão de 2. Isso indica o ODBC versão 2.0. Para obter mais informações sobre a diferença entre ODBC versão 2.0 e ODBC versão 3.0, consulte a especificação de ODBC SQLSpecialColumns para ODBC versão 3.0.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  None  
@@ -82,7 +82,7 @@ sp_special_columns [ @table_name = ] 'table_name'
 |DATA_TYPE|**smallint**|Tipo de dados SQL ODBC.|  
 |TYPE_NAME|**sysname**|Nome do tipo de dados dependente da fonte de dados; Por exemplo, **char**, **varchar**, **money**, ou **texto**.|  
 |PRECISION|**Int**|Precisão da coluna na fonte de dados. Esse campo sempre retorna um valor.|  
-|LENGTH|**Int**|Comprimento em bytes, necessário para o tipo de dados em seu formato binário na fonte de dados, por exemplo, 10 para **char (** 10 **)**, 4 para **integer**e 2 para **smallint** .|  
+|LENGTH|**Int**|Comprimento em bytes, necessário para o tipo de dados em seu formato binário na fonte de dados, por exemplo, 10 para **char (** 10 **)** , 4 para **integer**e 2 para **smallint** .|  
 |SCALE|**smallint**|Escala da coluna na fonte de dados. NULL é retornado para os tipos de dados para os quais a escala não é aplicável.|  
 |PSEUDO_COLUMN|**smallint**|Indica se a coluna é uma pseudocoluna. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre retorna 1:<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
