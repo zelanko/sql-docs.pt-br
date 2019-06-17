@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e4b972abd2674d88274545d1ce4394be88f43c65
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983059"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
@@ -48,14 +48,14 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @tabname = ] 'qualified_table_name'` É um nome de tabela de uma ou duas partes. A tabela deve existir no banco de dados atual. A tabela deve ter um índice de texto completo. *qualified_table_name* está **nvarchar(517)**, sem nenhum valor padrão.  
+`[ @tabname = ] 'qualified_table_name'` É um nome de tabela de uma ou duas partes. A tabela deve existir no banco de dados atual. A tabela deve ter um índice de texto completo. *qualified_table_name* está **nvarchar(517)** , sem nenhum valor padrão.  
   
 `[ @colname = ] 'column_name'` É o nome de uma coluna na *qualified_table_name*. A coluna deve ser um caractere, **varbinary (max)** ou **imagem** coluna e não pode ser uma coluna computada. *column_name* está **sysname**, sem padrão.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode criar índices de texto completo de dados de texto armazenados em colunas que são de **varbinary (max)** ou **imagem** tipo de dados. Imagens e figuras não são indexadas.  
   
-`[ @action = ] 'action'` É a ação a ser executada. *ação* está **varchar(20)**, sem nenhum valor padrão e pode ser um dos valores a seguir.  
+`[ @action = ] 'action'` É a ação a ser executada. *ação* está **varchar(20)** , sem nenhum valor padrão e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  

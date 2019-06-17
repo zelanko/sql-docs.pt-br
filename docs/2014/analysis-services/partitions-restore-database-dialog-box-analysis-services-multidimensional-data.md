@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072113"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Partições (caixa de diálogo Restaurar Banco de Dados) (Analysis Services - Dados multidimensionais)
@@ -66,7 +66,7 @@ ms.locfileid: "66072113"
 |**Partição**|Exibe o nome da partição local.|  
 |**Tamanho (MB)**|Exibe o tamanho, em megabytes, da partição local.|  
 |**Original Folder**|Exibe o nome da pasta original na qual a partição local foi armazenada.|  
-|**Pasta de restauração**|Digite o nome da pasta de restauração da partição local ou clique no botão de reticências (**...**) para exibir a caixa de diálogo **Procurar Pasta Remota** e selecione o caminho da pasta a ser usado. Para obter mais informações sobre a caixa de diálogo **Procurar Pasta Remota**, consulte [Caixa de diálogo Procurar Pasta Remota &#40;Analysis Services – Dados Multidimensionais&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Pasta de restauração**|Digite o nome da pasta de restauração da partição local ou clique no botão de reticências ( **...** ) para exibir a caixa de diálogo **Procurar Pasta Remota** e selecione o caminho da pasta a ser usado. Para obter mais informações sobre a caixa de diálogo **Procurar Pasta Remota**, consulte [Caixa de diálogo Procurar Pasta Remota &#40;Analysis Services – Dados Multidimensionais&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
   
  **Restaurar partições remotas**  
  Selecione essa opção para restaurar partições remotas armazenadas em arquivos de backup remotos.  
@@ -80,7 +80,7 @@ ms.locfileid: "66072113"
 |------------|-----------------|  
 |**Servidor**|Exibe o nome da instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que administra a partição remota.|  
 |**Fonte de dados**|Exibe o nome da fonte de dados no arquivo de backup que representa o banco de dados que contém a partição remota.|  
-|**Arquivo de backup**|Digite o caminho completo e o nome de arquivo do arquivo de backup remoto a ser usado ou clique no botão de reticências (**...**) para exibir a caixa de diálogo **Localizar Arquivos de Banco de Dados** e selecione o caminho e o nome do arquivo de backup remoto a serem usados. Para obter mais informações sobre a caixa de diálogo **Localizar Arquivos de Banco de Dados**, consulte [Caixa de diálogo Localizar Arquivos de Banco de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Arquivo de backup**|Digite o caminho completo e o nome de arquivo do arquivo de backup remoto a ser usado ou clique no botão de reticências ( **...** ) para exibir a caixa de diálogo **Localizar Arquivos de Banco de Dados** e selecione o caminho e o nome do arquivo de backup remoto a serem usados. Para obter mais informações sobre a caixa de diálogo **Localizar Arquivos de Banco de Dados**, consulte [Caixa de diálogo Localizar Arquivos de Banco de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md).|  
 |**...**|Clique para exibir a caixa de diálogo **Partições Remotas – Configurações Avançadas** e modificar opções avançadas, como a cadeia de conexão da fonte de dados, para restaurar a partição remota. Para obter mais informações sobre a caixa de diálogo **Partições Remotas – Configurações Avançadas**, consulte [Caixa de diálogo Partições Remotas – Configurações Avançadas &#40;Analysis Services – Dados Multidimensionais&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Consulte também  

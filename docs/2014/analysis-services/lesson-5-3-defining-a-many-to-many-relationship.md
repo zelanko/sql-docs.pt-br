@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef5fd5e081804abf27ede8d0cd7ad65f888b870c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078465"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definindo uma relação muitos para muitos
@@ -49,7 +49,7 @@ ms.locfileid: "66078465"
   
 7.  Na janela Propriedades, altere o **FriendlyName** propriedade do **DimSalesReason** de tabela para `SalesReason`e, em seguida, altere o **FriendlyName** propriedade das **FactInternetSalesReason** tabela `InternetSalesReason`.  
   
-8.  No painel **Tabelas** , expanda **InternetSalesReason (dbo.FactInternetSalesReason)**, clique em **SalesOrderNumber**e examine a propriedade **DataType** desta coluna de dados na janela Propriedades.  
+8.  No painel **Tabelas** , expanda **InternetSalesReason (dbo.FactInternetSalesReason)** , clique em **SalesOrderNumber**e examine a propriedade **DataType** desta coluna de dados na janela Propriedades.  
   
      Observe que o tipo de dados da coluna **SalesOrderNumber** é cadeia de caracteres.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "66078465"
   
      Observe que a dimensão **Motivo de Vendas** tem uma relação regular definida com o grupo de medidas **Motivo de Vendas pela Internet** , mas não tem relação definida com o grupo de medidas **Vendas pela Internet** ou **Vendas do Revendedor** . Observe também que a dimensão **Detalhes do Pedido de Vendas pela Internet** tem uma relação regular definida com a dimensão **Motivo de Vendas pela Internet** que, por sua vez, tem uma **Relação de Fato** com o grupo de medidas **Vendas pela Internet** . Se essa dimensão não existir (ou outra dimensão com uma relação com os grupos de medidas **Motivo de Vendas pela Internet** e **Vendas pela Internet** não existir), você não conseguirá definir a relação muitos-para-muitos.  
   
-2.  Clique na célula na interseção do grupo de medidas **Vendas pela Internet** e da dimensão **Motivo de Vendas** e clique no botão Procurar (**...**).  
+2.  Clique na célula na interseção do grupo de medidas **Vendas pela Internet** e da dimensão **Motivo de Vendas** e clique no botão Procurar ( **...** ).  
   
 3.  Na caixa de diálogo **Definir Relação** , selecione **Muitos-para-Muitos** na lista **Selecionar tipo de relação** .  
   

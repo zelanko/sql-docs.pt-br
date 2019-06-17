@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c3757941531eba0238df03c72b5653147496443b
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983241"
 ---
 # <a name="full-text-search-and-semantic-search-stored-procedures-transact-sql"></a>Procedimentos armazenados de pesquisa de texto completo e pesquisa semântica (Transact-SQL)
