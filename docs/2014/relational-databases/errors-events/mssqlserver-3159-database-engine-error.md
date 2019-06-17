@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0373952a28a901519d1d40e92750af3da72f94e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62868877"
 ---
 # <a name="mssqlserver3159"></a>MSSQLSERVER_3159
@@ -30,7 +30,7 @@ ms.locfileid: "62868877"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|LDDB_LOGNOTBACKEDUP|  
-|Texto da mensagem|Não foi feito backup da parte final do log do banco de dados "%ls".  Use BACKUP LOG WITH NORECOVERY para fazer backup do log se ele contiver um trabalho que você não deseja perder. Use a cláusula WITH REPLACE ou WITH STOPAT da instrução RESTORE para simplesmente substituir o conteúdo do log.|  
+|Texto da mensagem|Não foi feito backup da parte final do log do banco de dados "%ls". Use BACKUP LOG WITH NORECOVERY para fazer backup do log se ele contiver um trabalho que você não deseja perder. Use a cláusula WITH REPLACE ou WITH STOPAT da instrução RESTORE para simplesmente substituir o conteúdo do log.|  
   
 ## <a name="explanation"></a>Explicação  
  Na maioria dos casos, sob os modelos de recuperação bulk-logged ou de operações em massa, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer que você faça backup do final do log para capturar os registros de log que ainda não sofreram backup. Um backup de log realizado no final do log imediatamente antes de uma operação de restauração é chamado de backup de final do log.  

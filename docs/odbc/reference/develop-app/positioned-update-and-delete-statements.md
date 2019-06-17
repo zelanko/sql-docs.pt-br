@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63312485"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Instruções de atualização e exclusão posicionadas
@@ -34,7 +34,7 @@ Aplicativos podem atualizar ou excluir a linha atual em um conjunto de resultado
   
  [**WHERE** *search-condition*]  
   
- **PARA a atualização do** [*nome da coluna* [**,** *nome da coluna*]...]  
+ **PARA a atualização do** [*nome da coluna* [ **,** *nome da coluna*]...]  
   
  O aplicativo, em seguida, posiciona o cursor na linha a ser atualizada ou excluída. Ele pode fazer isso chamando **SQLFetchScroll** para recuperar um conjunto de linhas que contém a linha necessária e chamando **SQLSetPos** para posicionar o cursor de conjunto de linhas nessa linha. O aplicativo, em seguida, executa a instrução delete ou atualização posicionada em uma instrução diferente que a instrução que está sendo usada pelo conjunto de resultados. É a sintaxe dessas instruções:  
   
@@ -42,7 +42,7 @@ Aplicativos podem atualizar ou excluir a linha atual em um conjunto de resultado
   
  **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
- [**,** *identificador de coluna* **=** {*expressão* &#124; **nulo**}]...  
+ [ **,** *identificador de coluna* **=** {*expressão* &#124; **nulo**}]...  
   
  **WHERE CURRENT OF** *nome de cursor*  
   

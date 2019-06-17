@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63155374"
 ---
 # <a name="create-clustered-indexes"></a>Criar índices clusterizados
@@ -80,11 +80,11 @@ ms.locfileid: "63155374"
   
 1.  No Pesquisador de Objetos, expanda a tabela na qual você deseja criar um índice clusterizado.  
   
-2.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Clusterizado...**.  
+2.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Clusterizado...** .  
   
 3.  Na caixa de diálogo **Novo Índice** , na página **Geral** , insira o nome do novo índice na caixa **Nome do índice** .  
   
-4.  Em **Colunas de chave de índice**, clique em **Adicionar...**.  
+4.  Em **Colunas de chave de índice**, clique em **Adicionar...** .  
   
 5.  Na caixa de diálogo **Selecionar Colunas de**_table_name_ , marque a caixa de seleção das colunas de tabela a serem adicionadas ao índice clusterizado.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "63155374"
   
 1.  No Pesquisador de Objetos, expanda o banco de dados na qual você deseja criar uma tabela com um índice clusterizado.  
   
-2.  Clique com o botão direito do mouse na pasta **Tabelas** e clique em **Nova Tabela...**.  
+2.  Clique com o botão direito do mouse na pasta **Tabelas** e clique em **Nova Tabela...** .  
   
 3.  Crie uma tabela como você faria normalmente. Para obter mais informações, veja [Criar tabelas &#40;Mecanismo de Banco de Dados&#41;](../tables/create-tables-database-engine.md).  
   

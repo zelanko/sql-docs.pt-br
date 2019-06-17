@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dac94d8bfb0e2bc0ab91f6a18e6f18606481b112
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198581"
 ---
 # <a name="delete---sql-command"></a>DELETE – comando SQL
@@ -34,7 +34,7 @@ DELETE FROM [DatabaseName!]TableName
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- FROM [ *DatabaseName!*] *TableName*  
+ FROM [ *DatabaseName!* ] *TableName*  
  Especifica a tabela na qual os registros são marcados para exclusão.  
   
  *DatabaseName!* Especifica o nome de um banco de dados que contém a tabela se o banco de dados que contém não for o banco de dados especificado com a fonte de dados. Você deve incluir o nome de um banco de dados que contém a tabela se o banco de dados não for o banco de dados especificado com a fonte de dados. Inclua o delimitador de ponto de exclamação (!) após o nome do banco de dados e antes do nome da tabela.  

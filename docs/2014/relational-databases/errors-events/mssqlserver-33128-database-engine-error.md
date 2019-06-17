@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_33128 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 33128 (Database Engine error)
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a995a68849ed55dbf136191a061ac6f855703a66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62914508"
 ---
 # <a name="mssqlserver33128"></a>MSSQLSERVER_33128
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>Detalhes  
   
 |||  
@@ -34,17 +33,17 @@ ms.locfileid: "62914508"
 |Texto da mensagem|A criptografia falhou. A chave usa um algoritmo substituído '%. * ls' que já não tão mais suporte.|  
   
 ## <a name="explanation"></a>Explicação  
-Essa mensagem ocorre ao referenciar o algoritmo de criptografia RC4 (ou RC4_128). RC4 e RC4_128 são algoritmos fracos e estão obsoletos. Use um algoritmo mais forte; por exemplo, um dos algoritmos AES.  
+ Essa mensagem ocorre ao referenciar o algoritmo de criptografia RC4 (ou RC4_128). RC4 e RC4_128 são algoritmos fracos e estão obsoletos. Use um algoritmo mais forte; por exemplo, um dos algoritmos AES.  
   
-Quando o nível de compatibilidade do banco de dados for 90 ou 100, a operação foi bem-sucedida, o evento de substituição é lançado e a mensagem aparece somente no buffer de anéis.  
+ Quando o nível de compatibilidade do banco de dados for 90 ou 100, a operação foi bem-sucedida, o evento de substituição é lançado e a mensagem aparece somente no buffer de anéis.  
   
-Quando o nível de compatibilidade do banco de dados for 110 ou superior operação foi bem-sucedida, o evento de substituição é lançado e a mensagem aparece somente no buffer de anéis. As operações de criptografia falharão, o evento de substituição será lançado e a mensagem será exibida para o usuário e aparecerá no buffer de anéis.  
+ Quando o nível de compatibilidade do banco de dados for 110 ou superior operação foi bem-sucedida, o evento de substituição é lançado e a mensagem aparece somente no buffer de anéis. As operações de criptografia falharão, o evento de substituição será lançado e a mensagem será exibida para o usuário e aparecerá no buffer de anéis.  
   
 > [!NOTE]  
-> O buffer de anéis é um componente interno que não é totalmente documentado e não deve ser usado por clientes. Mensagens do buffer de anéis são úteis ao entrar em contato com o Suporte ao Cliente do [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Para exibir o buffer de anéis, consulte a exibição de gerenciamento dinâmico sys.dm_os_ring_buffers.  
+>  O buffer de anéis é um componente interno que não é totalmente documentado e não deve ser usado por clientes. Mensagens do buffer de anéis são úteis ao entrar em contato com o Suporte ao Cliente do [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Para exibir o buffer de anéis, consulte a exibição de gerenciamento dinâmico sys.dm_os_ring_buffers.  
   
 |Estado|Descrição|  
-|---------|---------------|  
+|-----------|-----------------|  
 |1|Uma chave RC4 é usada na função encryptbykey() interna. Função interna retorna NULL. Esta mensagem aparece somente no buffer de anéis.|  
 |2|Uma chave RC4 é usada pela função decryptbykey() interna. Esta mensagem aparece somente no buffer de anéis.|  
 |3|Uma chave RC4 key está sendo criptografada por uma chave simétrica. Vista pelos usuários no buffer de anéis. As chaves simétricas RC4 preteridas não podem mais ser alteradas no nível de compatibilidade 110. Tente usar chaves não RC4 para operações de criptografia. Se necessário, defina nível de compatibilidade com versões anteriores a um 90 ou 100.|  
@@ -57,7 +56,8 @@ Quando o nível de compatibilidade do banco de dados for 110 ou superior operaç
 |10|Uma chave RC4 simétrica está sendo descriptografada por uma chave EKM. Esta mensagem aparece somente no buffer de anéis.|  
   
 ## <a name="user-action"></a>Ação do usuário  
-Use um algoritmo mais forte; por exemplo, um dos algoritmos AES. (Recomendado)  
+ Use um algoritmo mais forte; por exemplo, um dos algoritmos AES. (Recomendado)  
   
-Use ALTER DATABASE SET COMPATIBILITY_LEVEL para definir o banco de dados com o nível de compatibilidade 100. (Não recomendável.)  
+ Use ALTER DATABASE SET COMPATIBILITY_LEVEL para definir o banco de dados com o nível de compatibilidade 100. (Não recomendável.)  
+  
   

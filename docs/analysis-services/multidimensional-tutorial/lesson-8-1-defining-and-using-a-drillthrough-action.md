@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc0b42e3d5b74b730a197b4c8cb595e871a247c6
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403508"
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Lição 8-1: definindo e usando uma ação de detalhamento
@@ -107,9 +107,9 @@ Nas tarefas deste tópico, você definirá uma ação de detalhamento para retor
   
 6.  Altere a propriedade **Name** do atributo **Chave de Data do Pedido** para **Data do Pedido** . Em seguida, clique no botão Procurar da propriedade **Name Column** e, na caixa de diálogo **Coluna de Nome** , selecione **Data** como a tabela de origem e SimpleDate como a coluna de origem. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  Altere a propriedade **Name** do atributo **Due Date Key** para **Due Date**. Em seguida, usando o mesmo método do atributo **Order Date Key** , altere a propriedade **Name Column** deste atributo para **Date.SimpleDate (WChar)**.  
+7.  Altere a propriedade **Name** do atributo **Due Date Key** para **Due Date**. Em seguida, usando o mesmo método do atributo **Order Date Key** , altere a propriedade **Name Column** deste atributo para **Date.SimpleDate (WChar)** .  
   
-8.  Altere a propriedade **Name** do atributo **Ship Date Key** para **Ship Date**. Em seguida, altere a propriedade **Name Column** deste atributo para **Date.SimpleDate (WChar)**.  
+8.  Altere a propriedade **Name** do atributo **Ship Date Key** para **Ship Date**. Em seguida, altere a propriedade **Name Column** deste atributo para **Date.SimpleDate (WChar)** .  
   
 9. Mude para a guia **Ações** do Designer do cubo do Tutorial do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   

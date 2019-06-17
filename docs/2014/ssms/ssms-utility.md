@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: edb7ea682ebef5d99cee7a248681be80fc433312
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126999"
 ---
 # <a name="ssms-utility"></a>Utilitário de Ssms
@@ -51,28 +51,28 @@ ms.locfileid: "63126999"
  *solutionfile*  
  Especifica uma solução para ser aberta. O parâmetro deve conter o caminho completo para o arquivo de solução.  
   
- [**-S** _servername_]  
+ [ **-S** _servername_]  
  Nome do servidor  
   
- [**-d** _databasename_]  
+ [ **-d** _databasename_]  
  Nome do banco de dados  
   
- [**-U** _username_]  
+ [ **-U** _username_]  
  Nome de usuário ao conectar com a autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
- [**-P** _password_]  
+ [ **-P** _password_]  
  Senha ao conectar-se com a autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
- [**-E**]  
+ [ **-E**]  
  Conectar usando a Autenticação do Windows  
   
- [**-nosplash**]  
+ [ **-nosplash**]  
  Impede o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] de exibir o gráfico da tela inicial ao abrir. Use essa opção ao conectar-se a um computador que executa o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] por meio de Serviços de Terminal em uma conexão com uma largura da banda limitada. Este argumento não diferencia maiúsculas e minúsculas e pode ser exibido antes ou depois de outros argumentos  
   
- [**-log**_[filename]?_]  
+ [ **-log** _[filename]?_ ]  
  Registra a atividade do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] no arquivo especificado para solucionar problemas  
   
- [**-?**]  
+ [ **-?** ]  
  Exibe a ajuda de linha de comando  
   
 ## <a name="remarks"></a>Comentários  

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48299e2cf318071624c8a7649c52dd9b2f932a77
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62668982"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Visão geral da interface do Replication Monitor
@@ -45,11 +45,11 @@ ms.locfileid: "62668982"
 ## <a name="viewing-information-and-performing-tasks-related-to-distributors"></a>Exibindo informações e executando tarefas relacionadas à distribuidores  
  O Replication Monitor exibe informações sobre Distribuidores em três guias:  
   
--   Guia**Publicações**   
+-   Guia**Publicações**  
   
      Essa guia fornece informações resumidas de todas as publicações de um Distribuidor.  
   
--   Guia**Lista de Observação da Assinatura**   
+-   Guia**Lista de Observação da Assinatura**  
   
      Essa guia fornece informações sobre assinaturas do Distribuidor selecionado. Você pode filtrar a lista de assinaturas para ver erros, avisos e qualquer assinatura de desempenho insatisfatório. A guia também permite executar as seguintes tarefas: acessar propriedades da assinatura, acessar informações detalhadas sobre o agente ou agentes associados à assinatura; reiniciar assinaturas e validar assinaturas.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62668982"
   
      Essa guia não está disponível para Distribuidores que estão executando versões do [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou anteriores.  
   
--   Guia**Agentes**   
+-   Guia**Agentes**  
   
      Essa guia exibe informações detalhadas sobre os agentes e trabalhos usados por todos os tipos de replicação. A guia também permite iniciar e interromper cada agente e trabalho.  
   
@@ -80,11 +80,11 @@ ms.locfileid: "62668982"
 ## <a name="viewing-information-and-performing-tasks-related-to-publishers"></a>Exibindo informações e executando tarefas relacionadas a Publicadores  
  O Replication Monitor exibe informações sobre Publicadores em três guias:  
   
--   Guia**Publicações**   
+-   Guia**Publicações**  
   
      Essa guia fornece informações resumidas de todas as publicações em um Publicador.  
   
--   Guia**Lista de Observação da Assinatura**   
+-   Guia**Lista de Observação da Assinatura**  
   
      O objetivo dessa guia é exibir informações sobre assinaturas de todas as publicações disponíveis no Publicador selecionado. Você pode filtrar a lista de assinaturas para ver erros, avisos e qualquer assinatura de desempenho insatisfatório. A guia também permite: acessar as propriedades da assinatura; acessar informações detalhadas sobre o agente ou agentes associados com uma assinatura; reiniciar assinaturas e validar assinaturas.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62668982"
   
      Essa guia não é exibida para Distribuidores que executam versões anteriores ao [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
--   Guia**Agentes**   
+-   Guia**Agentes**  
   
      Essa guia exibe informações detalhadas sobre os agentes e trabalhos usados por todos os tipos de replicação. A guia também permite que você inicie e interrompa cada agente e trabalho.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "62668982"
 ## <a name="viewing-information-and-performing-tasks-related-to-publications"></a>Exibindo informações e executando tarefas relacionadas a publicações  
  O Replication Monitor exibe informações sobre publicações em três guias e várias janelas de detalhes:  
   
--   Guia**Todas as Assinaturas**   
+-   Guia**Todas as Assinaturas**  
   
      Essa guia exibe informações sobre todas as assinaturas para a publicação selecionada. Por padrão, essa guia é classificada por ordem de prioridade: erros, avisos e, em seguida, em ordem crescente de desempenho, com qualquer assinatura de baixo desempenho na parte superior.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "62668982"
   
          A grade nessa guia exibe ícones de erro e advertência de qualquer assinatura que exija sua atenção.  
   
--   Guia**Agentes**   
+-   Guia**Agentes**  
   
      Essa guia exibe informações sobre os agentes que são usados pela replicação. Essa guia exibe informações sobre os seguintes agentes:  
   
@@ -145,7 +145,7 @@ ms.locfileid: "62668982"
   
      A guia também permite que você execute as seguintes tarefas: acessar informações detalhadas sobre cada agente e iniciar e interromper cada agente. Para obter mais informações sobre os agentes associados a assinaturas (Agente de Distribuição e Agente de Mesclagem), consulte a seção “Exibindo informações e tarefas de desempenho relacionadas a assinaturas”, neste tópico.  
   
--   Guia**Avisos**   
+-   Guia**Avisos**  
   
      Esta guia permite especificar avisos e alertas para agentes. Para obter mais informações, consulte [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
   

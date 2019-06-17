@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2beb1a7890786e31fb525b61963c235033882247
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63161800"
 ---
 # <a name="index-disk-space-example"></a>Exemplo de espaço em disco de índice
@@ -114,7 +114,7 @@ ms.locfileid: "63161800"
 |Operação de índice online com SORT_IN_TEMPDB = ON|Espaço total durante a operação: 1058 MB:<br /><br /> -Tabela e índices existentes: 363 MB\*<br /><br /> -**tempdb** (inclui índice de mapeamento): 242 MB*<br /><br /> -Novos índices: 453 MB<br /><br /> Espaço total necessário após a operação: 453 MB|  
 |Operação de índice online com SORT_IN_TEMPDB = OFF|Espaço total durante a operação: 856 MB:<br /><br /> -Tabela e índices existentes: 363 MB*<br /><br /> -Índice de mapeamento temporário: 40 MB\*<br /><br /> -Novos índices: 453 MB<br /><br /> Espaço total necessário após a operação: 453 MB|  
   
- * Este espaço é desalocado depois que a operação de índice estiver confirmada.  
+ \* Este espaço é desalocado depois que a operação de índice estiver confirmada.  
   
  Este exemplo não considera qualquer espaço em disco temporário adicional necessário em **tempdb** para registros de versão criados por atualização de usuário simultâneos e exclui operações.  
   

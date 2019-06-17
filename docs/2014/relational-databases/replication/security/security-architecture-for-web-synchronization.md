@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc091885b01821aaf8d2d12b9a321c6949d1523c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62959742"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Arquitetura de segurança para sincronização da Web
@@ -34,7 +34,7 @@ ms.locfileid: "62959742"
 |Tipo de conta|Onde a conta é especificada|  
 |---------------------|------------------------------------|  
 |Usuário do Windows|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: os parâmetros **@job_login** e **@job_password** do [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> RMO (Replication Management Objects): as propriedades <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> para <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.|  
-|Conta de serviço do Windows para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent|Gerenciador de Configurações do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |  
+|Conta de serviço do Windows para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent|Gerenciador de Configurações do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |Aplicativo autônomo|O Merge Agent executa sob o contexto do usuário do Windows que estiver executando o aplicativo.|  
   
 ## <a name="b-connection-to-the-subscriber"></a>B. Conexão com o Assinante  
@@ -63,7 +63,7 @@ ms.locfileid: "62959742"
 |A Autenticação Básica será usada se um dos itens a seguir for especificado:<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: um valor de **0** para o **@internet_security_mode** parâmetro [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> RMO: um valor de <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> para <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>.<br /><br /> Linha de comando do agente de mesclagem: um valor de **0** para **- InternetSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: os parâmetros **@internet_login** e **@internet_password** do [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin%2A> e <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetPassword%2A>.<br /><br /> Linha de comando do Merge Agent: **-InternetLogin** e **-InternetPassword**.|  
 |Autenticação integrada\* será usado se um dos seguintes for especificado:<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: um valor de **1** para o **@internet_security_mode** parâmetro [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> RMO: um valor de <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> para <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>.<br /><br /> Linha de comando do agente de mesclagem: um valor de **1** para **- InternetSecurityMode**.|O Merge Agent efetua conexões sob o contexto do usuário do Windows que estiver especificado para o Merge Agent (A).|  
   
- * Autenticação integrada pode ser usada somente se todos os computadores estiverem no mesmo domínio ou em vários domínios que tenham relações de confiança entre si.  
+ \* Autenticação integrada pode ser usada somente se todos os computadores estiverem no mesmo domínio ou em vários domínios que tenham relações de confiança entre si.  
   
 > [!NOTE]  
 >  A delegação é necessária quando se usa a Autenticação integrada. Recomendamos usar a Autenticação Básica e o SSL para conexões do Assinante com o IIS.  

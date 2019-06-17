@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e6eacb453fc2f66f4b87790770fa50916916a27c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724011"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
@@ -42,9 +42,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dsn = ] 'dsn'` É o nome do servidor vinculado ODBC DSN ou OLE DB. *DSN* está **varchar (128)**, sem padrão.  
+`[ @dsn = ] 'dsn'` É o nome do servidor vinculado ODBC DSN ou OLE DB. *DSN* está **varchar (128)** , sem padrão.  
   
-`[ @infotype = ] 'info_type'` É o tipo de informação a ser retornada. Se *tipo_info* não for especificado ou se NULL for especificado, todos os tipos de informações são retornados. *Tipo_info* está **varchar (128)**, com um padrão de NULL, e pode ser um destes valores.  
+`[ @infotype = ] 'info_type'` É o tipo de informação a ser retornada. Se *tipo_info* não for especificado ou se NULL for especificado, todos os tipos de informações são retornados. *Tipo_info* está **varchar (128)** , com um padrão de NULL, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -53,9 +53,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**DATABASE_NAME**|Especifica o nome do banco de dados.|  
 |**SQL_SUBSCRIBER**|Especifica que a fonte de dados pode ser um Assinante.|  
   
-`[ @login = ] 'login'` É o logon da fonte de dados. Se a fonte de dados incluir um logon, especifique NULL ou omita o parâmetro. *login*está **varchar (128)**, com um padrão NULL.  
+`[ @login = ] 'login'` É o logon da fonte de dados. Se a fonte de dados incluir um logon, especifique NULL ou omita o parâmetro. *login*está **varchar (128)** , com um padrão NULL.  
   
-`[ @password = ] 'password'` É a senha para o logon. Se a fonte de dados incluir um logon, especifique NULL ou omita o parâmetro. *senha*está **varchar (128)**, com um padrão NULL.  
+`[ @password = ] 'password'` É a senha para o logon. Se a fonte de dados incluir um logon, especifique NULL ou omita o parâmetro. *senha*está **varchar (128)** , com um padrão NULL.  
   
 `[ @dso_type = ] dso_type` É o tipo de fonte de dados. *dso_type* está **int**, e pode ser um destes valores.  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b1da8384bb51360178e1735d13f6c6b706e8b7ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659053"
 ---
 # <a name="verify-analysis-services-cumulative-update-build-version"></a>Verificar a versão do build da atualização cumulativa do Analysis Services
@@ -27,7 +27,7 @@ Começando com o SQL Server 2017, o número de versão de compilação do Analys
 Para verificar a versão do arquivo de componente, 
 
 1. Vá para [versões de compilação do SQL Server 2017](https://support.microsoft.com/help/4047329). 
-2. Na **compilações do SQL Server 2017 de atualização cumulativa (CU)**, clique no **número da Base de dados de Conhecimento** para a compilação que você deseja verificar.
+2. Na **compilações do SQL Server 2017 de atualização cumulativa (CU)** , clique no **número da Base de dados de Conhecimento** para a compilação que você deseja verificar.
 3. No **atualização cumulativa (#) para o SQL Server 2017** artigo, o **informações do pacote de atualização cumulativa** seção, expanda **informações de arquivo de pacote de atualização cumulativa**.
 4. No **SQL Server 2017 Analysis Services** da tabela, verifique a versão do arquivo para o **msmdsrv.exe** arquivo de componente. Se o valor de CU tiver sido aplicada, o número de versão do arquivo deve corresponder o arquivo msmdsrv.exe instalado em seu computador.
 

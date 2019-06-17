@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b28a0543208ab28414fb93def15adf904e2c078
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261726"
 ---
 # <a name="publishers"></a>Publicadores
@@ -26,7 +26,7 @@ ms.locfileid: "63261726"
   
 ## <a name="options"></a>Opções  
  **Publicadores**  
- Selecione os servidores que têm permissão para usar esse Distribuidor. Clique no botão de propriedades (**...**) próximo ao Publicador para exibir e definir propriedades adicionais.  
+ Selecione os servidores que têm permissão para usar esse Distribuidor. Clique no botão de propriedades ( **...** ) próximo ao Publicador para exibir e definir propriedades adicionais.  
   
  **Adicionar**  
  Se o servidor que você deseja permitir não estiver na lista, clique em **Adicionar** para adicionar um Editor [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um Editor Oracle à lista de Publicadores disponíveis.  

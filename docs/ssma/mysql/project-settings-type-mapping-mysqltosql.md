@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63231826"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Configurações do projeto (mapeamento de tipo) (MySQLToSQL)
@@ -97,7 +97,7 @@ A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem 
 |Double [*... 255] [\*... 30]|numeric[*][\*]|  
 |corrigido|numeric|  
 |fixed[*..65][\*..30]|numeric[*][\*]|  
-|FLOAT|float[24]|  
+|float|float[24]|  
 |float[*..255][\*..30]|numeric[*][\*]|  
 |float [*... 53]|float[53]|  
 |INT|INT|  

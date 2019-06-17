@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 296cdebc8a7a290cf8cdd848359ad776fa290c30
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63057757"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>Caixa de diálogo Criar Nova Condição ou Abrir Condição, Página Geral
@@ -39,7 +39,7 @@ ms.locfileid: "63057757"
  Selecione um operador de comparação para esta expressão. Os operadores são os seguintes: =, !=, >, >=, <, <=, [NOT]LIKE, [NOT]IN. Nem todos os operadores estão disponíveis para algumas propriedades.  
   
  **Value**  
- A configuração de valor dessa expressão. Os valores permitidos dependem da faceta. Os valores podem ser TRUE/FALSE, cadeia de caracteres ou numéricos. Valores de cadeia de caracteres devem ser colocados entre aspas simples, por exemplo: **'AdventureWorks'**. Nem todos os operadores estão disponíveis para algumas propriedades.  
+ A configuração de valor dessa expressão. Os valores permitidos dependem da faceta. Os valores podem ser TRUE/FALSE, cadeia de caracteres ou numéricos. Valores de cadeia de caracteres devem ser colocados entre aspas simples, por exemplo: **'AdventureWorks'** . Nem todos os operadores estão disponíveis para algumas propriedades.  
   
 ## <a name="group-clauses"></a>Agrupar Cláusulas  
  As cláusulas podem ser agrupadas para operar como uma única unidade separada do restante da consulta, assim como se coloca uma expressão entre parênteses em uma equação matemática ou uma instrução lógica. O agrupamento de cláusulas é útil quando você está criando consultas complexas.  

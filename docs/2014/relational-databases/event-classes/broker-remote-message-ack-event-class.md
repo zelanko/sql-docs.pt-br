@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c919eb7c63a241c780d5e56b3e530921c6b51d6d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62663907"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Agente: Classe de evento Remote Message Ack
@@ -50,7 +50,7 @@ ms.locfileid: "62663907"
 |**ServerName**|**nvarchar**|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |**SPID**|**int**|A identificação de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |**StartTime**|**datetime**|O horário no qual o evento foi iniciado, quando disponível.|14|Sim|  
-|**StarvationElevation**|**int**|A mensagem foi enviada com uma prioridade mais alta que a prioridade que foi configurada para a conversa: 0 = false, 1 = true.|33|Sim|  
+|**StarvationElevation**|**int**|A mensagem foi enviada com uma prioridade mais alta que a prioridade configurada para a conversa: 0 = false, 1 = true.|33|Sim|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Não|  
   
   

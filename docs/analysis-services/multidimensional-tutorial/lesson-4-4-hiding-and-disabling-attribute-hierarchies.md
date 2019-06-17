@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 20534c27baab027d354e49be79aebd8e8e2ea057
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404018"
 ---
 # <a name="lesson-4-4---hiding-and-disabling-attribute-hierarchies"></a>Lição 4-4-ocultando e desabilitando as hierarquias de atributo
