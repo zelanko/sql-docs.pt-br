@@ -3,24 +3,24 @@ title: Tutorial de análise no banco de dados usando o R - aprendizagem de máqu
 description: Saiba como incorporar o código de idioma em procedimentos armazenados do SQL Server e funções T-SQL de programação R.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a631339980eae7640617f14b161e024a2f27a769
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4f0930e3f7f9d037ebb3033cc947f243657a1480
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511213"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140757"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutorial: Análise de dados de R para desenvolvedores do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Neste tutorial para programadores SQL, saiba mais sobre a integração do R criando e implantando uma solução usando de aprendizado de máquina baseada em R uma [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) banco de dados no SQL Server. Você usará o T-SQL, SQL Server Management Studio e uma instância do mecanismo de banco de dados com [Serviços de Machine Learning] ([serviços de Machine Learning](../install/sql-machine-learning-services-windows-install.md) e o suporte de linguagem R
 
-Este tutorial apresenta as funções de R usadas em um fluxo de trabalho de modelagem de dados. As etapas incluem a exploração de dados, criar e treinar um modelo de classificação binária e a implantação de modelo. O modelo que você irá criar prevê se uma corrida é provavelmente resultará em uma dica com base na hora do dia, distância percorreu e coleta local. 
+Este tutorial apresenta as funções de R usadas em um fluxo de trabalho de modelagem de dados. As etapas incluem a exploração de dados, criar e treinar um modelo de classificação binária e a implantação de modelo. O modelo que você irá criar prevê se uma corrida é provavelmente resultará em uma dica com base na hora do dia, distância percorrida e coleta local. 
 
 Todo o código R usado neste tutorial é encapsulado em procedimentos armazenados que você criar e executar no Management Studio.
 
@@ -55,7 +55,7 @@ Este tutorial presume familiaridade com operações de banco de dados básico, c
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) ou [serviços SQL Server 2017 Machine Learning com R habilitado](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-+ [Bibliotecas do R](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)
++ [Bibliotecas do R](../package-management/installed-package-information.md)
 
 + [Permissões](../security/user-permission.md)
 

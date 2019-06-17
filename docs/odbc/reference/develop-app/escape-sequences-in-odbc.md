@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62942969"
 ---
 # <a name="escape-sequences-in-odbc"></a>Sequências de escape no ODBC
@@ -47,9 +47,9 @@ Um número de recursos de linguagem, como junções externas e chamadas de funç
  A sequência de escape é reconhecida e analisada por drivers, que substituem as sequências de escape com gramática específica do DBMS. Para obter mais informações sobre a sintaxe de sequência de escape, consulte [sequências de Escape de ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) no Apêndice c: Gramática SQL.  
   
 > [!NOTE]  
->  No ODBC 2. *x*, essa era a sintaxe padrão da sequência de escape: **– (\*fornecedor (**_nome do fornecedor_**), produto (** _nome do produto_**)**_extensão_  **\*) –**  
+>  No ODBC 2. *x*, essa era a sintaxe padrão da sequência de escape: **– (\*fornecedor (** _nome do fornecedor_ **), produto (** _nome do produto_ **)** _extensão_  **\*) –**  
 >   
->  Essa sintaxe, além de uma sintaxe abreviada foi definida no formato: **{**_extensão_**}**  
+>  Essa sintaxe, além de uma sintaxe abreviada foi definida no formato: **{** _extensão_ **}**  
 >   
 >  Em ODBC 3. *x*, a forma longa da sequência de escape foi preterida e a forma abreviada é usada exclusivamente.  
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04dea4a32303e06d7f0e6c015eef38ba6d267a30
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070849"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>Atualização de dados PowerPivot com SharePoint 2010
@@ -204,7 +204,7 @@ ms.locfileid: "66070849"
   
  Se você vir **Integrated Security=SSPI** na cadeia de conexão, não poderá substituir as credenciais nessa cadeia de conexão. A conexão sempre usará o usuário atual. Qualquer credencial fornecida será ignorada.  
   
- Se você vir **Persist Security Info = False, Password =\* \* \* \* \* \* \* \* \* \* \*, UserID =\<userlogin >**, em seguida, você tem uma cadeia de caracteres de conexão que aceita substituições de credenciais. As credenciais que aparecem na cadeia de conexão (como UserID e Password) não são credenciais do Windows, e sim logons de bancos de dados ou outras contas de acesso válidas para a fonte de dados de destino.  
+ Se você vir **Persist Security Info = False, Password =\* \* \* \* \* \* \* \* \* \* \*, UserID =\<userlogin >** , em seguida, você tem uma cadeia de caracteres de conexão que aceita substituições de credenciais. As credenciais que aparecem na cadeia de conexão (como UserID e Password) não são credenciais do Windows, e sim logons de bancos de dados ou outras contas de acesso válidas para a fonte de dados de destino.  
   
  **Como substituir credenciais na cadeia de conexão**  
   

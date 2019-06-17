@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfa09322af5b4838ccdc2bb9dc85d13a412bc359
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107074"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Conexões de conexão de lista do SharePoint (SSRS)
@@ -50,9 +50,9 @@ ms.locfileid: "66107074"
 ||Credenciais com suporte|Modo clássico de Autenticação do Windows|<sup>3</sup> autenticação de declarações|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |Lista de farm local do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|Sim|  
-||Armazenado, Prompt, Nenhum (com credenciais do Windows<sup>1</sup>)|Não |Não |  
+||Armazenado, Prompt, Nenhum (com credenciais do Windows<sup>1</sup>)|Não|Não|  
 |Lista remota do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|Não<sup>2</sup>|  
-||Armazenado, Prompt, Nenhum (com credenciais do Windows<sup>1</sup>)|Não |Não<sup>2</sup>|  
+||Armazenado, Prompt, Nenhum (com credenciais do Windows<sup>1</sup>)|Não|Não<sup>2</sup>|  
   
  <sup>1</sup> não há suporte para credenciais armazenadas e prompt com credenciais de não-Windows.  
   

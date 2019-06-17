@@ -47,7 +47,7 @@ Para obter mais informações, consulte a propriedade de autenticação sobre o 
 ## <a name="client-setup-requirements"></a>Requisitos de instalação do cliente
 Para **ActiveDirectoryMSI** autenticação, o abaixo de componentes deve ser instalado no computador cliente:
 * Java 8 ou superior
-* 7.2 (ou superior) do Microsoft JDBC Driver para SQL Server
+* 7\.2 (ou superior) do Microsoft JDBC Driver para SQL Server
 * Ambiente do cliente deve ser um recurso do Azure e deve ter o suporte ao recurso de "Identidade" habilitada.
 * Um usuário de banco de dados independente que representa o sistema atribuído identidade gerenciada do recurso do Azure ou atribuído gerenciados identidade do usuário ou um dos grupos aos quais que pertence o MSI, deve existir no banco de dados de destino e deve ter a permissão CONNECT.
 

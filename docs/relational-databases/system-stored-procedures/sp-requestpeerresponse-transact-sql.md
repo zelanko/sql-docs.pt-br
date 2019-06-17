@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b639f692da326390808376eadfd0ab74aa706ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047768"
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
@@ -42,7 +42,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ## <a name="arguments"></a>Argumentos  
 `[ @publication = ] 'publication'` É o nome da publicação em uma topologia ponto a ponto para o qual o status está sendo verificado. *publicação* está **sysname**, sem padrão.  
   
-`[ @description = ] 'description'` Informações definidas pelo usuário que podem ser usadas para identificar solicitações de status individuais. *Descrição* está **nvarchar (4000)**, com um padrão NULL.  
+`[ @description = ] 'description'` Informações definidas pelo usuário que podem ser usadas para identificar solicitações de status individuais. *Descrição* está **nvarchar (4000)** , com um padrão NULL.  
   
 `[ @request_id = ] request_id` Retorna a ID da nova solicitação. *request_id* está **int** e é um parâmetro de saída. Esse valor pode ser usado ao executar [sp_helppeerresponses &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) para exibir todas as respostas a uma solicitação de status.  
   

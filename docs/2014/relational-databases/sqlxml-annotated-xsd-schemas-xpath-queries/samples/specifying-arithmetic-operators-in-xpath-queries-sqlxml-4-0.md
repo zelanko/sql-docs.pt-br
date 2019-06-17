@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ca89efb197083b095ee7b1db18d3114525084a5
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012473"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Especificando operadores aritméticos em consultas XPath (SQLXML 4.0)
@@ -34,7 +34,7 @@ ms.locfileid: "66012473"
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- Na consulta, `child` é o eixo e `OrderDetail` é o teste de nó (TRUE se **OrderDetail** é um  **\<nó de elemento >**, porque o  **\< elemento >** nó é o nó principal para o `child` eixo). Para todos os  **\<OrderDetail >** nós de elemento, o teste no predicado é aplicado, e somente os nós que satisfazem a condição são retornados.  
+ Na consulta, `child` é o eixo e `OrderDetail` é o teste de nó (TRUE se **OrderDetail** é um  **\<nó de elemento >** , porque o  **\< elemento >** nó é o nó principal para o `child` eixo). Para todos os  **\<OrderDetail >** nós de elemento, o teste no predicado é aplicado, e somente os nós que satisfazem a condição são retornados.  
   
 > [!NOTE]  
 >  Os números em XPath são números de pontos flutuantes de precisão dupla e a comparação de números de pontos flutuantes como no exemplo provoca arredondamento.  

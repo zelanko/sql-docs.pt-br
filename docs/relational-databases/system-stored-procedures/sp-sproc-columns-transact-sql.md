@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8fd3e7ba4880a5d908991d32faaa9c1a5275976f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032743"
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
@@ -47,15 +47,15 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @procedure_name = ] 'name'` É o nome do procedimento usado para retornar informações de catálogo. *nome da* está **nvarchar (** 390 **)**, com um padrão de %, que significa que todas as tabelas no banco de dados atual. Há suporte para a correspondência do padrão curinga.  
+`[ @procedure_name = ] 'name'` É o nome do procedimento usado para retornar informações de catálogo. *nome da* está **nvarchar (** 390 **)** , com um padrão de %, que significa que todas as tabelas no banco de dados atual. Há suporte para a correspondência do padrão curinga.  
   
-`[ @procedure_owner = ] 'owner'` É o nome do proprietário do procedimento. *proprietário*está **nvarchar (** 384 **)**, com um padrão NULL. Há suporte para a correspondência do padrão curinga. Se *proprietário* não é especificado, serão aplicadas as regras de visibilidade de procedimento padrão do DBMS subjacente.  
+`[ @procedure_owner = ] 'owner'` É o nome do proprietário do procedimento. *proprietário*está **nvarchar (** 384 **)** , com um padrão NULL. Há suporte para a correspondência do padrão curinga. Se *proprietário* não é especificado, serão aplicadas as regras de visibilidade de procedimento padrão do DBMS subjacente.  
   
  Se o usuário atual possuir um procedimento com o nome especificado, serão retornadas informações sobre esse procedimento. Se *proprietário*não for especificado e o usuário atual não possuir um procedimento com o nome especificado, **sp_sproc_columns** procurará um procedimento com o nome especificado que é pertencente ao proprietário do banco de dados. Se o procedimento existir, serão retornadas informações sobre suas colunas.  
   
 `[ @procedure_qualifier = ] 'qualifier'` É o nome do qualificador de procedimento. *qualificador* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse parâmetro representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
   
-`[ @column_name = ] 'column_name'` É uma única coluna e é usada quando somente uma coluna de informações de catálogo é desejada. *column_name* está **nvarchar (** 384 **)**, com um padrão NULL. Se *column_name* é omitido, todas as colunas são retornadas. Há suporte para a correspondência do padrão curinga. Para obter a interoperabilidade máxima, o cliente de gateway deve pressupor correspondência apenas do padrão ISO (curingas com % e _).  
+`[ @column_name = ] 'column_name'` É uma única coluna e é usada quando somente uma coluna de informações de catálogo é desejada. *column_name* está **nvarchar (** 384 **)** , com um padrão NULL. Se *column_name* é omitido, todas as colunas são retornadas. Há suporte para a correspondência do padrão curinga. Para obter a interoperabilidade máxima, o cliente de gateway deve pressupor correspondência apenas do padrão ISO (curingas com % e _).  
   
 `[ @ODBCVer = ] 'ODBCVer'` A versão do ODBC está sendo usada. *ODBCVer* está **int**, com um padrão de 2, que indica ODBC versão 2.0. Para obter mais informações sobre a diferença entre ODBC versão 2.0 e ODBC versão 3.0, consulte a **SQLProcedureColumns** especificação para ODBC versão 3.0  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15e30a28a816b8105762e9f4cbfc4a0892cae1be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960930"
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
@@ -47,9 +47,9 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @IndexNamePattern = ] 'table_or_index_name'` É o nome qualificado ou não qualificado de um índice ou de tabela definido pelo usuário. *table_or_index_name* está **nvarchar(1035)**, sem padrão. As aspas são necessárias somente se um nome de índice ou tabela qualificado for especificado. Se um nome de tabela totalmente qualificado, incluindo um nome de banco de dados, for fornecido, o nome de banco de dados deve ser o nome do banco de dados atual. Se um nome de tabela for especificado sem-índice, o valor de opção especificado será definido para todos os índices nessa tabela e para a própria tabela se não houver um índice clusterizado.  
+`[ @IndexNamePattern = ] 'table_or_index_name'` É o nome qualificado ou não qualificado de um índice ou de tabela definido pelo usuário. *table_or_index_name* está **nvarchar(1035)** , sem padrão. As aspas são necessárias somente se um nome de índice ou tabela qualificado for especificado. Se um nome de tabela totalmente qualificado, incluindo um nome de banco de dados, for fornecido, o nome de banco de dados deve ser o nome do banco de dados atual. Se um nome de tabela for especificado sem-índice, o valor de opção especificado será definido para todos os índices nessa tabela e para a própria tabela se não houver um índice clusterizado.  
   
-`[ @OptionName = ] 'option_name'` É um nome de opção de índice. *option_name* está **varchar(35)**, sem padrão. *option_name* pode ter um dos valores a seguir.  
+`[ @OptionName = ] 'option_name'` É um nome de opção de índice. *option_name* está **varchar(35)** , sem padrão. *option_name* pode ter um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -58,7 +58,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 |**DisAllowRowLocks**|No caso de TRUE, não são usados bloqueios de linha. No caso de FALSE, são permitidos bloqueios de linha ao acessar o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando os bloqueios de linha são usados.|  
 |**DisAllowPageLocks**|No caso de TRUE, não são usados bloqueios de página. No caso de FALSE, são permitidos bloqueios de página ao acessar o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando os bloqueios de página são usados.|  
   
-`[ @OptionValue = ] 'value'` Especifica se o *option_name* configuração está habilitada (TRUE, ON, Sim ou 1) ou desabilitado (FALSE, OFF, não ou 0). *valor* está **varchar(12)**, sem padrão.  
+`[ @OptionValue = ] 'value'` Especifica se o *option_name* configuração está habilitada (TRUE, ON, Sim ou 1) ou desabilitado (FALSE, OFF, não ou 0). *valor* está **varchar(12)** , sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou superior a 0 (falha)  
