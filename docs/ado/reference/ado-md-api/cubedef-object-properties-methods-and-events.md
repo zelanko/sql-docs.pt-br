@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 19ac2cb367e076448e4831a3fd5825dfdf17d65e
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66709398"
 ---
 # <a name="cubedef-object-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto CubeDef
@@ -33,7 +33,7 @@ ms.locfileid: "66709398"
 ## <a name="methods"></a>Métodos  
  [Método GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Nenhum.  
   
 ## <a name="see-also"></a>Consulte também  

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 285eae7ea20d5919fa73bd0d514c755fe73d9de0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484708"
 ---
 # <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Tarefa 17: Revisar o projeto de limpeza do DQS criado pelo pacote SSIS
@@ -38,7 +38,7 @@ ms.locfileid: "65484708"
   
 8.  Na página principal do **cliente DQS**, clique em **Abrir projeto de qualidade de dados** no **projetos de qualidade de dados** painel.  
   
-9. Na lista de projetos, selecione o projeto criado pelo componente Limpeza do DQS do SSIS. O nome do projeto deve estar no formato:  **Cleanseandcurate. Cleanse Supplier Data. GUID (em vermelho)**. Talvez seja necessário classificar a lista com base em **data de criação** coluna e procurar o registro mais recente.  
+9. Na lista de projetos, selecione o projeto criado pelo componente Limpeza do DQS do SSIS. O nome do projeto deve estar no formato:  **Cleanseandcurate. Cleanse Supplier Data. GUID (em vermelho)** . Talvez seja necessário classificar a lista com base em **data de criação** coluna e procurar o registro mais recente.  
   
 10. Clique em **Avançar**.  
   

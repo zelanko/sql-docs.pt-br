@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 521614f8755261d0348ab95132c527c736c96311
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013506"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship e a Regra de Ordenação de Chaves (SQLXML 4.0)
@@ -58,7 +58,7 @@ ms.locfileid: "66013506"
 </xsd:schema>  
 ```  
   
- Como o  **\<cliente >** nó de elemento entra no escopo, o XML Bulk Load gera um registro de cliente. Este registro permanece até que o XML Bulk Load lê  **\</Customer >**. No processamento de  **\<ordem >** nó de elemento, o XML Bulk Load usa `<sql:relationship>` para obter o valor da coluna de chave estrangeira CustomerID da tabela CustOrder do **\<cliente >** pai elemento, pois o  **\<ordem >** elemento não especifica a **CustomerID** atributo. Isso significa que em definir a  **\<cliente >** elemento, você deve especificar o **CustomerID** atributo no esquema antes de especificar `<sql:relationship>`. Caso contrário, quando um  **\<ordem >** elemento entra no escopo, o XML Bulk Load gera um registro para a tabela CustOrder e quando o XML em massa a carga atinge o  **\</Order >** encerrar a marca, ele envia o registro de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sem o valor da coluna de chave estrangeira CustomerID.  
+ Como o  **\<cliente >** nó de elemento entra no escopo, o XML Bulk Load gera um registro de cliente. Este registro permanece até que o XML Bulk Load lê  **\</Customer >** . No processamento de  **\<ordem >** nó de elemento, o XML Bulk Load usa `<sql:relationship>` para obter o valor da coluna de chave estrangeira CustomerID da tabela CustOrder do **\<cliente >** pai elemento, pois o  **\<ordem >** elemento não especifica a **CustomerID** atributo. Isso significa que em definir a  **\<cliente >** elemento, você deve especificar o **CustomerID** atributo no esquema antes de especificar `<sql:relationship>`. Caso contrário, quando um  **\<ordem >** elemento entra no escopo, o XML Bulk Load gera um registro para a tabela CustOrder e quando o XML em massa a carga atinge o  **\</Order >** encerrar a marca, ele envia o registro de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sem o valor da coluna de chave estrangeira CustomerID.  
   
  Salve o esquema fornecido neste exemplo como SampleSchema.xml.  
   

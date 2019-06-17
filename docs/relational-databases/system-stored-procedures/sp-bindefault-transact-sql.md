@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 715387bcb15e27b0d53a7f000b0f97c2be5a4bbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996290"
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
@@ -46,11 +46,11 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @defname = ] 'default'` É o nome do padrão que é criado por CREATE DEFAULT. *padrão* está **nvarchar(776)**, sem padrão.  
+`[ @defname = ] 'default'` É o nome do padrão que é criado por CREATE DEFAULT. *padrão* está **nvarchar(776)** , sem padrão.  
   
-`[ @objname = ] 'object_name'` É o nome da tabela e coluna ou o tipo de dados do alias ao qual o padrão deve ser associado. *object_name* está **nvarchar(776)** sem nenhum padrão. *object_name* não pode ser definido com o **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, ou CLR tipos definidos pelo usuário.  
+`[ @objname = ] 'object_name'` É o nome da tabela e coluna ou o tipo de dados do alias ao qual o padrão deve ser associado. *object_name* está **nvarchar(776)** sem nenhum padrão. *object_name* não pode ser definido com o **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , **xml**, ou CLR tipos definidos pelo usuário.  
   
- Se *object_name* é um nome de uma parte, ele será resolvido como um tipo de dados de alias. Se for um nome de duas ou três partes, primeiro é resolvido como uma tabela e coluna; e se essa resolução falhar, ele será resolvido como um tipo de dados de alias. Por padrão, as colunas existentes do tipo de dados de alias herdam *padrão*, a menos que um padrão foi associado diretamente à coluna. Um padrão não pode ser associado a um **texto**, **ntext**, **imagem**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **timestamp**, ou CLR coluna de tipo definido pelo usuário, uma coluna com a propriedade IDENTITY, uma coluna computada ou uma coluna que já tem uma restrição padrão.  
+ Se *object_name* é um nome de uma parte, ele será resolvido como um tipo de dados de alias. Se for um nome de duas ou três partes, primeiro é resolvido como uma tabela e coluna; e se essa resolução falhar, ele será resolvido como um tipo de dados de alias. Por padrão, as colunas existentes do tipo de dados de alias herdam *padrão*, a menos que um padrão foi associado diretamente à coluna. Um padrão não pode ser associado a um **texto**, **ntext**, **imagem**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , **xml**, **timestamp**, ou CLR coluna de tipo definido pelo usuário, uma coluna com a propriedade IDENTITY, uma coluna computada ou uma coluna que já tem uma restrição padrão.  
   
 > [!NOTE]  
 >  *object_name* pode conter colchetes **[]** como identificadores delimitados. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  

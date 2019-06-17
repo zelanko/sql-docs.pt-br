@@ -15,10 +15,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 334735c2ec9fc0573ed08bcc76b214a093394b6c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62504779"
 ---
 # <a name="glossary"></a>Glossário
@@ -314,7 +314,7 @@ ms.technology:
 |conflito de restrição|Um conflito que viola as restrições dos itens ou das unidades de alteração, como a relação de pastas ou o local dos dados de mesmo nome em um sistema de arquivos.|  
 |violação da restrição|Uma violação que ocorre quando os critérios de restrição não são atendidos.|  
 |banco de dados independente|Um banco de dados do SQL Server que inclui toda a autenticação de usuário, as configurações de banco de dados e os metadados necessários para definir e acessar o banco de dados, e que não tem dependência de configuração na instância do Mecanismo de Banco de Dados do SQL Server onde o banco de dados está instalado.|  
-|contêiner|Um elemento de fluxo de controle que fornece estrutura de pacote.|  
+|container|Um elemento de fluxo de controle que fornece estrutura de pacote.|  
 |formatador de conteúdo|A parte do distribuidor que transforma dados de notificação brutos em mensagens legíveis.|  
 |chave de conteúdo|A chave criptográfica usada para criptografar e descriptografar conteúdo protegido durante a publicação e o consumo.|  
 |contenção|Em uma rede, a competição entre estações para a oportunidade de usar uma linha de comunicação ou um recurso de rede.|  
@@ -466,8 +466,8 @@ ms.technology:
 |remover da fila|Remover de uma fila.|  
 |coluna derivada|Uma transformação que cria novos valores de coluna com a aplicação de expressões às colunas de entrada de transformação.|  
 |desserialização|O processo de converter um objeto de um formato de armazenamento serial para formato binário na forma de um objeto que os aplicativos podem usar. Isto acontece quando o objeto é recuperado do cluster de cache com as APIs de cliente Get.|  
-|destino|O componente de fluxo de dados do SSIS que carrega dados em repositórios de dados ou cria conjuntos de dados na memória.|  
-|destino|Um provedor de sincronização que fornece seu conhecimento atual, aceita uma lista de alterações do provedor de origem, detecta quaisquer conflitos entre aquela lista e seus próprios itens, e aplica as alterações ao seu repositório de dados.|  
+|destination|O componente de fluxo de dados do SSIS que carrega dados em repositórios de dados ou cria conjuntos de dados na memória.|  
+|destination|Um provedor de sincronização que fornece seu conhecimento atual, aceita uma lista de alterações do provedor de origem, detecta quaisquer conflitos entre aquela lista e seus próprios itens, e aplica as alterações ao seu repositório de dados.|  
 |adaptador de destino|Um componente de fluxo de dados que carrega dados em um repositório de dados.|  
 |provedor de destino|Um provedor de sincronização que fornece seu conhecimento atual, aceita uma lista de alterações do provedor de origem, detecta quaisquer conflitos entre aquela lista e seus próprios itens, e aplica as alterações ao seu repositório de dados.|  
 |detectar|Localizar algo.|  
@@ -967,7 +967,7 @@ ms.technology:
 |painel Mensagens|Um das guias que hospeda as mensagens retornadas do SQL Server depois que uma consulta TSQL é executada.|  
 |Messaging Application Programming Interface|Uma arquitetura de transferência de mensagens que habilita vários aplicativos a interagir com vários sistemas de transferência de mensagens em diversas plataformas de hardware. A MAPI é compilada na base COM (Component Object Model).|  
 |metadados|Informações sobre as propriedades ou a estrutura de dados que não fazem parte dos valores que os dados contêm.|  
-|método|Em programação orientada a objeto, um bloco de código nomeado que executa uma tarefa quando chamado.|  
+|method|Em programação orientada a objeto, um bloco de código nomeado que executa uma tarefa quando chamado.|  
 |Enfileiramento de Mensagens da Microsoft|Uma tecnologia da Microsoft que habilita aplicativos executados em horas diferentes a se comunicarem por redes e sistemas heterogêneos que podem ficar temporariamente offline.|  
 |algoritmo MSC|O algoritmo que é uma combinação de análise de sequência e clustering, que identifica clusters de eventos ordenados de forma semelhante em uma sequência. Os clusters podem ser usados para prever a provável ordenação de eventos em uma sequência com base em características conhecidas.|  
 |Importação de Dados de Uso do Microsoft SharePoint Foundation|O trabalho do timer padrão para o SharePoint Foundation que importa arquivos de log de uso para o banco de dados de registro em log.|  
@@ -1343,8 +1343,8 @@ ms.technology:
 |republicador|Um Assinante que publica dados que recebeu de um Publicador.|  
 |caractere reservado|Um caractere de teclado que tem um significado especial para um programa e, como resultado, normalmente não pode ser usado atribuindo nomes a arquivos, documentos e outras ferramentas geradas pelo usuário, como macros. Caracteres comumente reservados para usos especiais incluem o asterisco (*), barra (/), barra invertida (\\), ponto de interrogação (?) e barra vertical (&#124;).|  
 |estratégia de resolução|Um conjunto de critérios avaliados sequencialmente pelo motor do repositório ao selecionar um objeto onde há várias versões e as informações da versão não são especificadas no programa de chamada.|  
-|recurso|Uma variável especial que contém uma referência a uma conexão ou instrução de banco de dados.|  
-|recurso|Qualquer item em um banco de dados de servidor de relatório que não seja um relatório, uma pasta ou um item de fonte de dados compartilhado.|  
+|resource|Uma variável especial que contém uma referência a uma conexão ou instrução de banco de dados.|  
+|resource|Qualquer item em um banco de dados de servidor de relatório que não seja um relatório, uma pasta ou um item de fonte de dados compartilhado.|  
 |dados de recurso|Um tipo de dados que é caracterizado por compartilhado, lido e gravado simultaneamente em operações e acessado por muitas transações. Exemplos de dados do recurso são contas de usuário e itens de leilão.|  
 |administrador de recursos|Um recurso do SQL Server 2008 que permite que o usuário gerencie a carga de trabalho e os recursos do SQL Server especificando limites de consumo de recursos por solicitações de entrada.|  
 |restaurar|Um processo multifase que copia todos as páginas de logs e de dados de um backup especificado para um banco de dados especificado (a fase de cópia de dados) e efetua roll forward de todas as transações registradas no backup (a fase de refazer). Nesse momento, por padrão, uma restauração reverte as transações incompletas (a fase de desfazer), o que conclui a recuperação do banco de dados e o torna disponível aos usuários.|  
@@ -1399,7 +1399,7 @@ ms.technology:
 |instantâneo de esquema|Um instantâneo que inclui esquema para tabelas publicadas e objetos necessários para replicação (gatilhos, tabelas de metadados, etc), mas não dados de usuário.|  
 |sensível a esquema|Pertence a um método de processamento baseado em um esquema que define elementos, atributos e tipos que serão usados para validar documentos de entrada e saída.|  
 |escopo|Até que ponto um identificador, como um objeto ou propriedade, pode ser referenciado em um programa. O escopo pode ser global no aplicativo ou local para o documento ativo.|  
-|escopo|O conjunto de dados que está sendo sincronizado.|  
+|scope|O conjunto de dados que está sendo sincronizado.|  
 |memória de script|A memória local (RAM do cliente) que é usada por um script PHP.|  
 |painel de script|A parte do editor de texto do Designer de Tabela.|  
 |script|Pertence à automação de ações de usuário ou à configuração de um estado padrão em um computador por meio de scripts.|  
@@ -1430,7 +1430,7 @@ ms.technology:
 |relação sequenciada|Uma relação em um repositório que especifica posições explícitas para cada objeto de destino dentro da coleção de objetos de destino.|  
 |número de série|Um número atribuído a um item de inventário específico para identificá-lo e diferenciá-lo de itens semelhantes com o mesmo número de item.|  
 |serialização|O processo de converter as informações do estado de um objeto em um formato que pode ser armazenado ou transportado. Durante a serialização, um objeto grava seu estado atual no armazenamento temporário ou persistente. Posteriormente, o objeto pode ser recriado por meio da leitura ou desserialização, o estado do objeto de armazenamento.|  
-|servidor|Um computador que fornece recursos compartilhados, como arquivos ou impressoras, para usuários da rede.|  
+|server|Um computador que fornece recursos compartilhados, como arquivos ou impressoras, para usuários da rede.|  
 |ordenação do servidor|A ordenação de uma instância do SQL Server.|  
 |cursor de servidor|Um cursor implementado no servidor.|  
 |nome do servidor|Um nome que identifica exclusivamente um computador servidor em uma rede.|  
@@ -1496,8 +1496,8 @@ ms.technology:
 |gerenciador de soluções|Um componente do Microsoft SQL Server Management Studio que permite exibir e administrar itens e executar tarefas de administração de item em uma solução ou um projeto.|  
 |ordem de resolução|A ordem de avaliação (da ordem de resolução mais alta à mais baixa) e de cálculo (da ordem de resolução mais alta à mais baixa) de membros calculados, membros personalizados, fórmulas de rollup personalizado e células calculadas em uma única fase de cálculo de um cubo multidimensional.|  
 |ordem de classificação|Modo de organizar dados com base em tipo de valor ou de dados. Você pode classificar dados em ordem alfabética, numérica ou cronológica. As ordens de classificação usam uma ordem crescente (1 a 9, A a Z) ou decrescente (9 a 1, Z a A).|  
-|origem|Disco, arquivo, documento ou outra coleção de informações da qual os dados são obtidos ou movidos.|  
-|origem|Componente de fluxo de dados do SSIS que disponibiliza os dados de diferentes fontes de dados externas aos outros componentes do fluxo de dados.|  
+|source|Disco, arquivo, documento ou outra coleção de informações da qual os dados são obtidos ou movidos.|  
+|source|Componente de fluxo de dados do SSIS que disponibiliza os dados de diferentes fontes de dados externas aos outros componentes do fluxo de dados.|  
 |origem|Um provedor de sincronização que enumera alterações e as envia ao provedor de destino.|  
 |adaptador de fonte|Um componente de fluxo de dados que extrai dados de um repositório de dados.|  
 |controle do código-fonte|Conjunto de recursos que inclui um mecanismo para fazer o check-in e o check-out do código-fonte em um repositório central. Também implica um sistema de controle de versão que pode gerenciar arquivos pelo ciclo de vida de desenvolvimento, mantendo o controle das alterações efetuadas, de quem as efetuou, quando foram efetuadas e por quê.|  
