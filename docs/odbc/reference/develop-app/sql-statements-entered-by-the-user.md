@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 28256433802d686f4362b2b733fc2d2b13e65302
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63149145"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>Instruções SQL inseridas pelo usuário
-Aplicativos que realizam análises ad hoc normalmente também é permitir que o usuário inserir instruções SQL diretamente. Por exemplo:   
+Aplicativos que realizam análises ad hoc normalmente também é permitir que o usuário inserir instruções SQL diretamente. Por exemplo:  
   
 ```  
 SQLCHAR *     Statement, SqlState[6], Msg[SQL_MAX_MESSAGE_LENGTH];  

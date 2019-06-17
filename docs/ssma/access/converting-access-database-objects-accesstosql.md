@@ -31,10 +31,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63139012"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Convertendo objetos de banco de dados do Access (AccessToSQL)
@@ -58,7 +58,7 @@ A tabela a seguir mostra quais objetos de acesso são convertidos e resultante [
 |-----------------|-------------------------------|  
 |table|table|  
 |column|column|  
-|índice|índice|  
+|index|index|  
 |chave estrangeira|chave estrangeira|  
 |Consulta|exibição<br /><br />Consultas mais SELECT são convertidas em modos de exibição. Outras consultas, como consultas de atualização não são migradas.<br /><br />Consultas SELECT que usam parâmetros não são convertidas, nem são consultas de referência cruzada.|  
 |relatório|não convertido|  
