@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3cda7757d5cf7f62f5946dc69882e5bd8cd5c42
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404048"
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>Lição 6-1 – definição de membros calculados
@@ -43,7 +43,7 @@ Nas tarefas deste tópico, você definirá as medidas calculadas para permitir q
   
     ![Formulário de painel expressões de cálculo](../media/l6-calculatedmembers-02.gif "formulário de painel expressões de cálculo")  
   
-3.  Na caixa **Nome** , altere o nome da medida calculada para **[Valor de Vendas Total]**.  
+3.  Na caixa **Nome** , altere o nome da medida calculada para **[Valor de Vendas Total]** .  
   
     Se o nome de um membro calculado tiver algum espaço, ele deverá ser colocado entre colchetes.  
   
@@ -58,11 +58,11 @@ Nas tarefas deste tópico, você definirá as medidas calculadas para permitir q
   
 5.  Arraste **Vendas pela Internet/Valor das Vendas** da guia **Metadados** no painel **Ferramentas de Cálculo** até a caixa **Expressão** no painel **Expressões de Cálculo** .  
   
-6.  Na caixa **Expressão** , digite um sinal de adição (**+**) depois de **[Medidas].[Vendas pela Internet/Valor das Vendas]**.  
+6.  Na caixa **Expressão** , digite um sinal de adição ( **+** ) depois de **[Medidas].[Vendas pela Internet/Valor das Vendas]** .  
   
 7.  Na guia **Metadados** do painel **Ferramentas de Cálculo** , expanda **Vendas do Revendedor**e arraste **Vendas do Revendedor/Valor das Vendas** até a caixa **Expressão** no painel **Expressões de Cálculos** após o sinal de adição (+).  
   
-8.  Na lista **Cadeia de caracteres de formato** , selecione **"Moeda"**.  
+8.  Na lista **Cadeia de caracteres de formato** , selecione **"Moeda"** .  
   
 9. Na lista **Comportamento Não Vazio** , marque as caixas de seleção **Vendas pela Internet/Valor das Vendas** e **Vendas do Revendedor/Valor das Vendas**e clique em **OK**.  
   
@@ -94,7 +94,7 @@ Nas tarefas deste tópico, você definirá as medidas calculadas para permitir q
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
     ```  
   
-14. Na lista **Cadeia de caracteres de formato** , selecione **"Moeda"**.  
+14. Na lista **Cadeia de caracteres de formato** , selecione **"Moeda"** .  
   
 15. Na lista **Comportamento não vazio** , marque as caixas de seleção **Vendas pela Internet-Custo Total do Produto** e **Vendas do Revendedor-Custo Total do Produto**e clique em **OK**.  
   
@@ -104,7 +104,7 @@ Nas tarefas deste tópico, você definirá as medidas calculadas para permitir q
   
 1.  Verifique se a opção **[Custo Total do Produto]** está selecionada no painel **Organizador de Script** e clique em **Novo Membro Calculado** na barra de ferramentas da guia **Cálculos** .  
   
-2.  Na caixa **Nome** , altere o nome dessa nova medida calculada para **[MLB pela Internet]**.  
+2.  Na caixa **Nome** , altere o nome dessa nova medida calculada para **[MLB pela Internet]** .  
   
 3.  Na caixa **Expressão** , crie a seguinte expressão MDX:  
   
@@ -114,13 +114,13 @@ Nas tarefas deste tópico, você definirá as medidas calculadas para permitir q
     [Measures].[Internet Sales-Sales Amount]  
     ```  
   
-4.  Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"**.  
+4.  Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"** .  
   
 5.  Na lista **Comportamento Não Vazio** , marque a caixa de seleção **Vendas pela Internet/Valor das Vendas**e clique em **OK**.  
   
 6.  Na barra de ferramentas da guia **Cálculos** , clique em **Novo Membro Calculado**.  
   
-7.  Na caixa **Nome** , altere o nome dessa nova medida calculada para **[MLB do Revendedor]**.  
+7.  Na caixa **Nome** , altere o nome dessa nova medida calculada para **[MLB do Revendedor]** .  
   
 8.  Na caixa **Expressão** , crie a seguinte expressão MDX:  
   
@@ -130,13 +130,13 @@ Nas tarefas deste tópico, você definirá as medidas calculadas para permitir q
     [Measures].[Reseller Sales-Sales Amount]  
     ```  
   
-9. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"**.  
+9. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"** .  
   
 10. Na lista **Comportamento Não Vazio** , marque a caixa de seleção **Vendas do Revendedor/Valor das Vendas**e clique em **OK**.  
   
 11. Na barra de ferramentas da guia **Cálculos** , clique em **Novo Membro Calculado**.  
   
-12. Na caixa **Nome** , altere o nome dessa medida calculada para **[MLB Total]**.  
+12. Na caixa **Nome** , altere o nome dessa medida calculada para **[MLB Total]** .  
   
 13. Na caixa **Expressão** , crie a seguinte expressão MDX:  
   
@@ -148,7 +148,7 @@ Nas tarefas deste tópico, você definirá as medidas calculadas para permitir q
   
     Observe que esse membro calculado faz referência a outros membros calculados. Como esse membro calculado será calculado após os membros aos quais ele faz referência, trata-se de um membro calculado válido.  
   
-14. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"**.  
+14. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"** .  
   
 15. Na lista **Comportamento Não Vazio** , marque as caixas de seleção **Vendas pela Internet/Valor das Vendas** e **Vendas do Revendedor/Valor das Vendas**e clique em **OK**.  
   
@@ -172,7 +172,7 @@ Nas tarefas deste tópico, você definirá as medidas calculadas para permitir q
   
     Se você clicar no membro calculado final no painel **Organizador de Script** antes de clicar em **Novo Membro Calculado** , o novo membro calculado será inserido no final do script. Os scripts são executados na ordem em que aparecem no painel **Organizador de Script** .  
   
-3.  Altere o nome desse novo membro calculado para **[Índice de Vendas pela Internet para Todos os Produtos]**.  
+3.  Altere o nome desse novo membro calculado para **[Índice de Vendas pela Internet para Todos os Produtos]** .  
   
 4.  Na caixa **Expressão** , digite o seguinte:  
   
@@ -189,13 +189,13 @@ Nas tarefas deste tópico, você definirá as medidas calculadas para permitir q
   
     Essa expressão MDX calcula a contribuição para totalizar as vendas pela Internet de cada produto. A instrução Case junto com a função IS EMPTY garante que não ocorra um erro de divisão por zero quando um produto não for vendido.  
   
-5.  Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"**.  
+5.  Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"** .  
   
 6.  Na lista **Comportamento Não Vazio** , marque a caixa de seleção **Vendas pela Internet/Valor das Vendas**e clique em **OK**.  
   
 7.  Na barra de ferramentas da guia **Cálculos** , clique em **Novo Membro Calculado**.  
   
-8.  Altere o nome desse membro calculado para **[Índice de Vendas do Revendedor para Todos os Produtos]**.  
+8.  Altere o nome desse membro calculado para **[Índice de Vendas do Revendedor para Todos os Produtos]** .  
   
 9. Na caixa **Expressão** , digite o seguinte:  
   
@@ -210,13 +210,13 @@ Nas tarefas deste tópico, você definirá as medidas calculadas para permitir q
         End  
     ```  
   
-10. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"**.  
+10. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"** .  
   
 11. Na lista **Comportamento Não Vazio** , marque a caixa de seleção **Vendas do Revendedor/Valor das Vendas**e clique em **OK**.  
   
 12. Na barra de ferramentas da guia **Cálculos** , clique em **Novo Membro Calculado**.  
   
-13. Altere o nome desse membro calculado para **[Índice de Vendas Total para Todos os Produtos]**.  
+13. Altere o nome desse membro calculado para **[Índice de Vendas Total para Todos os Produtos]** .  
   
 14. Na caixa **Expressão** , digite o seguinte:  
   
@@ -231,7 +231,7 @@ Nas tarefas deste tópico, você definirá as medidas calculadas para permitir q
         End  
     ```  
   
-15. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"**.  
+15. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"** .  
   
 16. Na lista **Comportamento Não Vazio** , marque as caixas de seleção **Vendas pela Internet/Valor das Vendas** e **Vendas do Revendedor/Valor das Vendas**e clique em **OK**.  
   

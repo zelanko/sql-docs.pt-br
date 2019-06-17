@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6c680dd48f3588b92a2c87d9fa8d3c3a04dde39
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077605"
 ---
 # <a name="move-table-dialog-box-ssas"></a>Caixa de diálogo Mover Tabela (SSAS)
@@ -24,6 +24,6 @@ ms.locfileid: "66077605"
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
  **Mover tabela selecionada antes da tabela**  
- A tabela a ser movida será posicionada antes da tabela que você escolher nesta lista. Se desejar mover uma tabela para o fim do conjunto de tabelas, escolha **(mover para o final)**.  
+ A tabela a ser movida será posicionada antes da tabela que você escolher nesta lista. Se desejar mover uma tabela para o fim do conjunto de tabelas, escolha **(mover para o final)** .  
   
   

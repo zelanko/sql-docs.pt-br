@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b6c9d003d4b70a593631a5b0e25d0d76578d21b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099085"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Adicionar um parâmetro ao relatório (Construtor de Relatórios)
@@ -118,7 +118,7 @@ ms.locfileid: "66099085"
   
      Esta consulta não contém parâmetros de consulta. Você adicionará parâmetros de consulta posteriormente neste tutorial.  
   
-11. Na barra de ferramentas do designer de consultas, clique em **Executar** (**!**). O conjunto de resultados exibe 11 linhas de dados que mostram a quantidade de itens vendidos para cada subcategoria de quatro lojas e inclui as seguintes colunas: StoreID, Subcategory, Quantity.  
+11. Na barra de ferramentas do designer de consultas, clique em **Executar** ( **!** ). O conjunto de resultados exibe 11 linhas de dados que mostram a quantidade de itens vendidos para cada subcategoria de quatro lojas e inclui as seguintes colunas: StoreID, Subcategory, Quantity.  
   
 12. Clique em **Avançar**.  
   
@@ -172,9 +172,9 @@ ms.locfileid: "66099085"
     WHERE StoreID = (@StoreID)  
     ```  
   
-     O `WHERE` cláusula limita os dados recuperados ao identificador de loja especificado pelo parâmetro de consulta *@StoreID*.  
+     O `WHERE` cláusula limita os dados recuperados ao identificador de loja especificado pelo parâmetro de consulta *@StoreID* .  
   
-4.  Na barra de ferramentas do designer de consultas, clique em **Executar** (**!**). A caixa de diálogo **Definir Parâmetros de Consulta** é aberta e solicita um valor para o parâmetro de consulta *@StoreID*.  
+4.  Na barra de ferramentas do designer de consultas, clique em **Executar** ( **!** ). A caixa de diálogo **Definir Parâmetros de Consulta** é aberta e solicita um valor para o parâmetro de consulta *@StoreID* .  
   
 5.  Em **Valor do Parâmetro**, digite **200**.  
   
@@ -186,14 +186,14 @@ ms.locfileid: "66099085"
   
 8.  No painel Dados do Relatório, expanda a pasta **Parâmetros** .  
   
- Observe que agora há um parâmetro de relatório denominado *@StoreID*. Por padrão, o parâmetro tem tipo de dados **texto**. Como o identificador de repositório é um inteiro, você precisará alterar o tipo de dados para Inteiro no próximo procedimento.  
+ Observe que agora há um parâmetro de relatório denominado *@StoreID* . Por padrão, o parâmetro tem tipo de dados **texto**. Como o identificador de repositório é um inteiro, você precisará alterar o tipo de dados para Inteiro no próximo procedimento.  
   
 ##  <a name="ChangeDefaultProperties"></a> 4. Alterar o tipo de dados padrão e outras propriedades de um parâmetro de relatório  
  Depois de criar um parâmetro, você pode ajustar os valores padrão de propriedades.  
   
 #### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>Para alterar o tipo de dados padrão de um parâmetro de relatório  
   
-1.  No painel de dados do relatório na **parâmetros** nó, clique com botão direito *@StoreID*e, em seguida, clique em **propriedades do parâmetro**.  
+1.  No painel de dados do relatório na **parâmetros** nó, clique com botão direito *@StoreID* e, em seguida, clique em **propriedades do parâmetro**.  
   
 2.  No Prompt, digite **identificador Store?** Este texto aparece na barra de ferramentas do visualizador de relatórios quando você executa o relatório.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "66099085"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Visualize o relatório. O Visualizador de relatórios exibe o prompt para *@StoreID*.  
+6.  Visualize o relatório. O Visualizador de relatórios exibe o prompt para *@StoreID* .  
   
 7.  Na barra de ferramentas do visualizador de relatórios, ao lado de ID da Loja, digite **200**e clique em **Exibir Relatório**.  
   
@@ -242,7 +242,7 @@ ms.locfileid: "66099085"
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Para fornecer valores disponíveis para um parâmetro a partir de um conjunto de dados  
   
-1.  No painel de dados do relatório, clique com botão direito o parâmetro *@StoreID*e, em seguida, clique em **as propriedades de parâmetro**.  
+1.  No painel de dados do relatório, clique com botão direito o parâmetro *@StoreID* e, em seguida, clique em **as propriedades de parâmetro**.  
   
 2.  Clique em **Valores Disponíveis**e em **Obter valores de uma consulta**.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "66099085"
   
 9. Visualize o relatório.  
   
-     Na barra de ferramentas do Visualizador de relatórios, a caixa de texto de parâmetro agora é uma lista suspensa que exibe  **\<selecione um valor >**.  
+     Na barra de ferramentas do Visualizador de relatórios, a caixa de texto de parâmetro agora é uma lista suspensa que exibe  **\<selecione um valor >** .  
   
 10. Na lista suspensa, selecione Contoso catálogo Store e, em seguida, clique em **Exibir relatório**.  
   
@@ -275,7 +275,7 @@ ms.locfileid: "66099085"
   
 1.  Alterne para o modo Design.  
   
-2.  No painel Dados do Relatório, clique com o botão direito do mouse em *@StoreID*e clique em **Propriedades do Parâmetro**.  
+2.  No painel Dados do Relatório, clique com o botão direito do mouse em *@StoreID* e clique em **Propriedades do Parâmetro**.  
   
 3.  Clique em **valores padrão**e, em seguida, clique em **obter valores de uma consulta**.  
   
@@ -287,13 +287,13 @@ ms.locfileid: "66099085"
   
 7.  Visualize o relatório.  
   
- Para *@StoreID*, o Visualizador de relatórios exibe o valor "Contoso North America Online Store". Este é o primeiro valor do conjunto de resultados para o conjunto de dados **repositórios**. O relatório exibe a quantidade vendida de Câmeras Digitais do identificador de loja **199**.  
+ Para *@StoreID* , o Visualizador de relatórios exibe o valor "Contoso North America Online Store". Este é o primeiro valor do conjunto de resultados para o conjunto de dados **repositórios**. O relatório exibe a quantidade vendida de Câmeras Digitais do identificador de loja **199**.  
   
 #### <a name="to-specify-a-custom-default-value"></a>Para especificar um valor padrão personalizado  
   
 1.  Alterne para o modo Design.  
   
-2.  No painel Dados do Relatório, clique com o botão direito do mouse em *@StoreID*e clique em **Propriedades do Parâmetro**.  
+2.  No painel Dados do Relatório, clique com o botão direito do mouse em *@StoreID* e clique em **Propriedades do Parâmetro**.  
   
 3.  Clique em **valores padrão**e clique em **especificar valores**e, em seguida, clique em **adicionar**. Uma nova linha de valor é adicionada.  
   
@@ -303,7 +303,7 @@ ms.locfileid: "66099085"
   
 6.  Visualize o relatório.  
   
- Para *@StoreID*, o Visualizador de relatórios exibe o valor "Store de catálogos Contoso". Esse é o nome de exibição para o identificador de repositório **200**. O relatório exibe a quantidade vendida de Acessórios, Filmadoras e Câmeras Digitais SLR para o identificador de repositório **200**.  
+ Para *@StoreID* , o Visualizador de relatórios exibe o valor "Store de catálogos Contoso". Esse é o nome de exibição para o identificador de repositório **200**. O relatório exibe a quantidade vendida de Acessórios, Filmadoras e Câmeras Digitais SLR para o identificador de repositório **200**.  
   
 ##  <a name="NameValue"></a> 4d. Pesquisar um valor em um conjunto de dados com pares de nome/valor  
  Um conjunto de dados pode conter o identificador e o campo de nome correspondente. Quando você só tiver um identificador, poderá pesquisar o nome correspondente em um conjunto de dados criado por você, incluindo pares de nome/valor.  
@@ -326,7 +326,7 @@ ms.locfileid: "66099085"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     O cabeçalho da coluna de repositórios contém o texto de exibição de uma expressão complexa: **<\<Expr>>**.  
+     O cabeçalho da coluna de repositórios contém o texto de exibição de uma expressão complexa: **<\<Expr>>** .  
   
 8.  Visualize o relatório.  
   
@@ -376,7 +376,7 @@ ms.locfileid: "66099085"
   
      A matriz só exibe dados para o "Repositório de Catálogos Contoso".  
   
-9. Na barra de ferramentas do visualizador de relatórios, para **Nome da loja?**, selecione **Loja Online Contoso na Ásia**e clique em **Exibir Relatório**.  
+9. Na barra de ferramentas do visualizador de relatórios, para **Nome da loja?** , selecione **Loja Online Contoso na Ásia**e clique em **Exibir Relatório**.  
   
  A matriz exibe dados correspondentes ao repositório que você selecionou.  
   
@@ -387,7 +387,7 @@ ms.locfileid: "66099085"
   
 1.  Alterne para o modo Design.  
   
-2.  No painel Dados do Relatório, clique com o botão direito do mouse em *@StoreID*e clique em **Propriedades do Parâmetro**.  
+2.  No painel Dados do Relatório, clique com o botão direito do mouse em *@StoreID* e clique em **Propriedades do Parâmetro**.  
   
 3.  Selecione **Permitir vários valores**.  
   
