@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a13356aae88f332132bc6e8f6d6578971d2be99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641029"
 ---
 # <a name="date-time-and-timestamp-literals"></a>Data, hora e literais de carimbo de data/hora
@@ -29,9 +29,9 @@ ms.locfileid: "62641029"
   
 |*literal-type*|Significado|Formato de *valor*|  
 |---------------------|-------------|-----------------------|  
-|**d**|data|*yyyy*-*mm*-*dd*|  
+|**d**|Date|*yyyy*-*mm*-*dd*|  
 |**t**|Hora *|*hh*:*mm*:*ss*[1]|  
-|**ts**|Timestamp|*aaaa*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*] [1]|  
+|**ts**|Timestamp|*aaaa*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...* ] [1]|  
   
  [1] o número de dígitos à direita da vírgula decimal em um intervalo de tempo ou carimbo de hora literal que contém um componente de segundos é dependente de precisão de segundos, conforme contido no campo de descritor SQL_DESC_PRECISION. (Para obter mais informações, consulte [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   

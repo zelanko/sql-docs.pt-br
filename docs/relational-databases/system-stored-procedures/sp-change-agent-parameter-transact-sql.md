@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16de7ceaae80a2aebcf2ed40d2b06b9a6ccf0dc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997031"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
@@ -241,7 +241,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  Para ver quais parâmetros foram definidos para um determinado perfil, execute **sp_help_agent_profile** e observe o *profile_name* associado com o *profile_id*. Com os devidos *profile_id*, em seguida execute **sp_help_agent_parameters** usá-la *profile_id* para ver os parâmetros associados ao perfil. Parâmetros podem ser adicionados a um perfil executando [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
-`[ @parameter_value = ] 'parameter_value'` É o novo valor do parâmetro. *parameter_value* está **nvarchar (255)**, sem padrão.  
+`[ @parameter_value = ] 'parameter_value'` É o novo valor do parâmetro. *parameter_value* está **nvarchar (255)** , sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

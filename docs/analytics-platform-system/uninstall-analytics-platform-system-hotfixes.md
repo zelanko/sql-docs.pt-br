@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 5507eae7bb2f8a5ce138223a031ac4946d9f0030
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62675672"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Desinstalar hotfixes do Analytics Platform System 
@@ -26,13 +26,13 @@ Para executar essas etapas, você precisará de:
   
 -   Um logon do Analytics Platform System com permissões para acessar o Console de administração para monitorar o dispositivo.  
   
--   A conta de administrador de domínio para fazer logon para o <em>< appliance_domain ></em>**-HST01** nó.  
+-   A conta de administrador de domínio para fazer logon para o <em>< appliance_domain ></em> **-HST01** nó.  
   
 -   O número de artigo de conhecimento do hotfix para desinstalar.  
   
 ## <a name="HowToUninstallPDW"></a>Para desinstalar um hotfix do SQL Server PDW  
   
-1.  Faça logon na <em>< appliance_domain ></em>**-HST01** nó como o administrador de domínio do Fabric.  
+1.  Faça logon na <em>< appliance_domain ></em> **-HST01** nó como o administrador de domínio do Fabric.  
   
 2.  Use a execução como opção de administrador para abrir um Prompt de comando.  
   

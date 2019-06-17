@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63190836"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Criando uma estrutura e um modelo de cesta de compras (Tutorial de mineração de dados intermediário)
@@ -31,7 +31,7 @@ ms.locfileid: "63190836"
   
 3.  No **Selecionar método de definição** página, verifique **de warehouse existente de banco de dados ou dados relacional** está selecionado e, em seguida, clique em **próxima**.  
   
-4.  Sobre o **criar a estrutura de mineração de dados** página, em **qual técnica de mineração de dados você deseja usar?**, selecione **regras de associação da Microsoft** na lista e, em seguida, clique **Próxima**. O **Selecionar exibição da fonte de dados** página será exibida.  
+4.  Sobre o **criar a estrutura de mineração de dados** página, em **qual técnica de mineração de dados você deseja usar?** , selecione **regras de associação da Microsoft** na lista e, em seguida, clique **Próxima**. O **Selecionar exibição da fonte de dados** página será exibida.  
   
 5.  Selecione **pedidos**sob **modos de exibição de fonte de dados disponíveis**e, em seguida, clique em **próxima**.  
   

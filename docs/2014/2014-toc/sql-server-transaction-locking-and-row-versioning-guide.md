@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b49007cb51a2990ea90eb67b6e71087f59018d37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62513187"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>Guia de Controle de Versão de Linha e Bloqueio de Transações do SQL Server
@@ -372,7 +372,7 @@ GO
   
  A tabela seguinte mostra os recursos que o [!INCLUDE[ssDE](../includes/ssde-md.md)] pode bloquear.  
   
-|Recurso|Descrição|  
+|Resource|Descrição|  
 |--------------|-----------------|  
 |RID|Um identificador de linha usado para bloquear uma única linha dentro de um heap.|  
 |KEY|Um bloqueio de linha dentro de um índice usado para proteger um intervalo de chaves em transações serializáveis.|  
@@ -496,7 +496,7 @@ GO
   
  O bloqueio de intervalo de chave impede leituras fantasmas. Ao proteger os intervalos de chaves entre as linhas, ele também evita inserções fantasmas em um conjunto de registros acessado por uma transação.  
   
- Um bloqueio de intervalo de chave é colocado em um índice, especificando um valor de chave inicial e final. Esse bloqueio impede quaisquer tentativas de inserção, atualização ou exclusão de qualquer linha de um valor de chave que falhe no intervalo, pois essas operações primeiro teriam que obter um bloqueio no índice. Por exemplo, uma transação serializável pode emitir uma instrução SELECT que leia todas as linhas cujos valores das chaves estejam entre **'** AAA **'** e **'** CZZ **'**. Um bloqueio no intervalo de chave sobre o valor da chave de **'** AAA **'** até **'** CZZ **'** evita que outras transações insiram linhas com valores de chave em qualquer posição daquele intervalo, tais como **'** ADG **'**, **'** BBD **'**, ou **'** CAL **'**.  
+ Um bloqueio de intervalo de chave é colocado em um índice, especificando um valor de chave inicial e final. Esse bloqueio impede quaisquer tentativas de inserção, atualização ou exclusão de qualquer linha de um valor de chave que falhe no intervalo, pois essas operações primeiro teriam que obter um bloqueio no índice. Por exemplo, uma transação serializável pode emitir uma instrução SELECT que leia todas as linhas cujos valores das chaves estejam entre **'** AAA **'** e **'** CZZ **'** . Um bloqueio no intervalo de chave sobre o valor da chave de **'** AAA **'** até **'** CZZ **'** evita que outras transações insiram linhas com valores de chave em qualquer posição daquele intervalo, tais como **'** ADG **'** , **'** BBD **'** , ou **'** CAL **'** .  
   
 #### <a name="key-range-lock-modes"></a>Modos de bloqueio de intervalo de chave  
 
@@ -561,7 +561,7 @@ GO
   
 -   O nível de isolamento da transação deve ser definido como SERIALIZABLE.  
   
--   O processador de consulta deve usar um índice para implementar o predicado de filtro do intervalo. Por exemplo, a cláusula WHERE em uma instrução SELECT poderia estabelecer uma condição de intervalo com esse predicado: ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**. Um bloqueio de intervalo de chave só poderá ser adquirido se a **ColumnX** estiver coberta por uma chave de índice.  
+-   O processador de consulta deve usar um índice para implementar o predicado de filtro do intervalo. Por exemplo, a cláusula WHERE em uma instrução SELECT poderia estabelecer uma condição de intervalo com esse predicado: ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'** . Um bloqueio de intervalo de chave só poderá ser adquirido se a **ColumnX** estiver coberta por uma chave de índice.  
   
 #### <a name="examples"></a>Exemplos  
 
@@ -639,7 +639,7 @@ INSERT mytable VALUES ('Dan');
   
 ### <a name="deadlocking"></a>Deadlock  
 
- Um deadlock acontece quando duas ou mais tarefas bloqueiam permanentemente uma à outra; uma tarefa está bloqueando um recurso que a outra tarefa está tentando bloquear. Por exemplo:   
+ Um deadlock acontece quando duas ou mais tarefas bloqueiam permanentemente uma à outra; uma tarefa está bloqueando um recurso que a outra tarefa está tentando bloquear. Por exemplo:  
   
 -   A transação A adquire um bloqueio compartilhado da linha 1.  
   
@@ -691,7 +691,7 @@ INSERT mytable VALUES ('Dan');
   
 -   **Recursos relacionados à execução de consultas paralelas** Threads de coordenador, produtor ou consumidor associados a uma porta de troca podem bloquear uns aos outros, provocando um deadlock, normalmente ao incluir pelo menos um outro processo que não faz parte da consulta paralela. Além disso, quando uma consulta paralela começa a ser executada, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] determina o grau de paralelismo, ou o número de threads de trabalho, com base na carga de trabalho atual. Se a carga de trabalho do sistema for alterada inesperadamente, por exemplo, quando novas consultas forem executadas no servidor ou o sistema ficar sem threads de trabalho, poderá ocorrer um deadlock.  
   
--   **Recursos MARS (conjunto de resultados ativos múltiplos)**. Esses recursos são usados para controlar a intercalação de várias solicitações ativas em MARS. Para obter mais informações, consulte [Multiple Active Result Sets (MARS) no SQL Server](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
+-   **Recursos MARS (conjunto de resultados ativos múltiplos)** . Esses recursos são usados para controlar a intercalação de várias solicitações ativas em MARS. Para obter mais informações, consulte [Multiple Active Result Sets (MARS) no SQL Server](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
   
     -   **Recurso do usuário**. Quando um thread está esperando por um recurso que é potencialmente controlado por um aplicativo de usuário, o recurso é considerado como externo ou recurso de usuário e é tratado como um bloqueio.  
   
@@ -1267,7 +1267,7 @@ BEGIN TRANSACTION
 
  Os contadores de desempenho do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornecem informações sobre o desempenho do sistema afetado por processos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Os contadores de desempenho a seguir monitoram tempdb e o armazenamento de versão, bem como transações que usam controle de versão de linha. Os contadores de desempenho estão contidos no objeto de desempenho SQLServer:Transactions.  
   
- **Espaço livre em tempdb (KB)**. Monitora a quantidade, em KB (kilobytes), de espaço livre no banco de dados tempdb. Deve haver espaço livre suficiente em tempdb para processar o repositório de versão que dá suporte ao isolamento de instantâneo.  
+ **Espaço livre em tempdb (KB)** . Monitora a quantidade, em KB (kilobytes), de espaço livre no banco de dados tempdb. Deve haver espaço livre suficiente em tempdb para processar o repositório de versão que dá suporte ao isolamento de instantâneo.  
   
  A fórmula a seguir fornece uma estimativa aproximada do tamanho do armazenamento de versão. Para transações de longa execução, pode ser útil monitorar a taxa de geração e limpeza para calcular o tamanho máximo de armazenamento de versão.  
   
@@ -1275,7 +1275,7 @@ BEGIN TRANSACTION
   
  O tempo de execução mais longo das transações não deve incluir as compilações de índices online. Como essas operações podem demorar muito tempo em tabelas muito grandes, as compilações de índices online usam um armazenamento de versão separado. O tamanho aproximado do repositório de versão de compilação de índices online é igual à quantidade de dados modificados na tabela, incluindo todos os índices, enquanto a compilação de índices online estiver ativa.  
   
- **Tamanho do Repositório de Versão (KB)**. Monitora o tamanho em KB de todos os armazenamentos de versão. Essas informações ajudam a determinar a quantidade de espaço necessária no banco de dados tempdb para o armazenamento de versão. O monitoramento desse contador durante um determinado tempo fornece uma estimativa útil do espaço adicional necessário para tempdb.  
+ **Tamanho do Repositório de Versão (KB)** . Monitora o tamanho em KB de todos os armazenamentos de versão. Essas informações ajudam a determinar a quantidade de espaço necessária no banco de dados tempdb para o armazenamento de versão. O monitoramento desse contador durante um determinado tempo fornece uma estimativa útil do espaço adicional necessário para tempdb.  
   
  `Version Generation rate (KB/s)`. Monitora a taxa de geração de versão, em KB por segundo, em todos os repositórios de versão.  
   

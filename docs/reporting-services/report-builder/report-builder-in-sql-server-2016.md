@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d77b35851144967c9cfed408617fe5551debf37f
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: aa1dd3517002405a93185ea55adcdc5ecd808e6f
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620603"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037845"
 ---
 # <a name="report-builder-in-sql-server"></a>Construtor de Relatórios no SQL Server
 
@@ -81,7 +81,7 @@ Você também pode publicar um relatório paginado no serviço do Power BI. Leia
  [Planejando um relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  Fornece informações sobre o que você deve considerar antes de começar a criar seu relatório.  
   
- [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Conceitos do Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md)  
  Define os conceitos-chave usados em toda a documentação do [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] .  
   
  [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  

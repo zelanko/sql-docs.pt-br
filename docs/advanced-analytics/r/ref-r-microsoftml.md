@@ -3,17 +3,17 @@ title: Biblioteca de funções do MicrosoftML R - serviços do SQL Server Machin
 description: Introdução à biblioteca de funções MicrosoftML no SQL Server 2016 R Services e os serviços do SQL Server 2017 Machine Learning com R.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/04/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 73d9dcf56c0eb5e69704adf169946f6aa28a432c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0266f6288e0b28ebd56c2aff634dc27a1ec72b06
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62641818"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140484"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (biblioteca de R no SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -140,7 +140,7 @@ Esta seção lista as funções por categoria para lhe dar uma ideia de como cad
 
 Funções em **MicrosoftML** podem ser chamados no código R encapsulado em procedimentos armazenados. A maioria dos desenvolvedores construir **MicrosoftML** localmente, soluções e, em seguida, migrar código de R concluído para procedimentos armazenados como um exercício de implantação.
 
-O **MicrosoftML** de pacote para o R é instalado "out-of-the-box" no SQL Server 2017. Ele também está disponível para uso com o SQL Server 2016 se você atualizar os componentes do R para a instância: [Atualizar uma instância do SQL Server usando a associação](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+O **MicrosoftML** de pacote para o R é instalado "out-of-the-box" no SQL Server 2017. Ele também está disponível para uso com o SQL Server 2016 se você atualizar os componentes do R para a instância: [Atualizar uma instância do SQL Server usando a associação](../install/upgrade-r-and-python.md)
 
 Não é possível carregar o pacote por padrão. Como uma primeira etapa, carregue o **MicrosoftML** do pacote e, em seguida, carregue **RevoScaleR** se você precisa usar contextos de computação remota ou objetos de fonte de dados ou conectividade relacionados. Em seguida, fazer referência a funções individuais que você precisa.
 

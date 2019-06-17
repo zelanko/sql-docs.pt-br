@@ -43,10 +43,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b3bb00837c4c3e8e6fae187a902d95c54736882
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063989"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistente para Gerar e Publicar Scripts
@@ -101,7 +101,7 @@ ms.locfileid: "66063989"
   
  **Não mostrar esta página novamente** – Ignore esta página na próxima vez que iniciar o **Assistente para Gerar e Publicar Scripts**.  
   
- **Avançar >**: continua para a página **Escolher Método**.  
+ **Avançar >** : continua para a página **Escolher Método**.  
   
  **Cancelar** – Encerra o assistente sem gerar nem publicar um script do banco de dados.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66063989"
   
 -   **Avançado** – Exiba a caixa de diálogo **Opções de Script Avançadas** em que você pode selecionar opções avançadas para gerar scripts.  
   
--   **Salvar em arquivo** – Salve o script em um ou mais arquivos .sql. Clique no botão Procurar (**…**) para especificar um nome e uma localização para o arquivo. Marque a caixa de seleção **Substituir o arquivo existente** para substituir o arquivo se já existir outro com o mesmo nome. Clique em **Arquivo único** ou **Arquivo único por objeto** para especificar como os scripts devem ser gerados. Clique **Texto Unicode** ou **Texto ANSI** para especificar o tipo de texto que deve ser usado no script.  
+-   **Salvar em arquivo** – Salve o script em um ou mais arquivos .sql. Clique no botão Procurar ( **…** ) para especificar um nome e uma localização para o arquivo. Marque a caixa de seleção **Substituir o arquivo existente** para substituir o arquivo se já existir outro com o mesmo nome. Clique em **Arquivo único** ou **Arquivo único por objeto** para especificar como os scripts devem ser gerados. Clique **Texto Unicode** ou **Texto ANSI** para especificar o tipo de texto que deve ser usado no script.  
   
 -   **Salvar na Área de Transferência** – Salve o script Transact-SQL na área de transferência.  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5261e3bd3c114961533b60431b6d0e1b9a313fc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d8220eebb82a5c0e513e14fc9b582b10183d293f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615244"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797777"
 ---
 # <a name="data-source-wizard-screen-3"></a>Tela 3 do Assistente de Fonte de Dados
 
@@ -72,7 +72,7 @@ Se seu aplicativo estiver se conectando a alta disponibilidade, desastres recupe
 
 ### <a name="transparent-network-ip-resolution"></a>Resolução IP de Rede Transparente.
 
-Altera o comportamento da **failover de várias sub-redes** para permitir uma reconexão mais rápida durante o failover. Ver [usando resolução de IP de rede transparente](../../../connect/odbc/using-transparent-network-ip-resolution.md) para obter mais informações.
+Altera o comportamento da **failover de várias sub-redes** para permitir uma reconexão mais rápida durante o failover. Veja [Usando resolução de IP de rede transparente](../../../connect/odbc/using-transparent-network-ip-resolution.md) para obter mais informações.
 
 ### <a name="column-encryption"></a>Criptografia de Coluna.
 

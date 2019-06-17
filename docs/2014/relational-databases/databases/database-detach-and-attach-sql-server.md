@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62762416"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Anexar e desanexar bancos de dados (SQL Server)
@@ -92,7 +92,7 @@ ms.locfileid: "62762416"
 > [!NOTE]  
 >  Se o arquivo de dados primário que está sendo anexado for somente leitura, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] presumirá que o banco de dados é somente leitura.  
   
- Quando um banco de dados criptografado é anexado primeiro a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o proprietário do banco de dados deve abrir a chave mestra do banco de dados, executando a instrução a seguir: DESCRIPTOGRAFIA OPEN MASTER KEY POR SENHA = **'*`password`*'**. É recomendável que você habilite a descriptografia automática da chave mestra executando a seguinte instrução: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Para obter mais informações, veja [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Quando um banco de dados criptografado é anexado primeiro a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o proprietário do banco de dados deve abrir a chave mestra do banco de dados, executando a instrução a seguir: DESCRIPTOGRAFIA OPEN MASTER KEY POR SENHA = **' *`password`* '** . É recomendável que você habilite a descriptografia automática da chave mestra executando a seguinte instrução: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Para obter mais informações, veja [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  O requisito para anexar arquivos de log depende, em parte, de o banco de dados ser de leitura e gravação ou apenas leitura:  
   

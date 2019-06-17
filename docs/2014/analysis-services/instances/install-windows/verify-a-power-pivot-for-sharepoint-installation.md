@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079873"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>Verificar uma instalação do PowerPivot para SharePoint
@@ -86,7 +86,7 @@ ms.locfileid: "66079873"
   
 7.  Em Tipo de Servidor, selecione **Analysis Services**.  
   
-8.  Em nome do servidor, digite  **\<server-name > \powerpivot.**, onde  **\<nome do servidor >** é o nome do computador que tem a instalação do PowerPivot para SharePoint.  
+8.  Em nome do servidor, digite  **\<server-name > \powerpivot.** , onde  **\<nome do servidor >** é o nome do computador que tem a instalação do PowerPivot para SharePoint.  
   
 9. Clique em **Conectar**. Isso verifica se o servidor do Analysis Services está disponível.  
   

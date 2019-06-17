@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667179"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Definir os limites e avisos no Replication Monitor
@@ -75,7 +75,7 @@ ms.locfileid: "62667179"
   
      Essa caixa de diálogo exibe os alertas para todos os tipos de publicação, inclusive alertas que não estão relacionados com o monitoramento de limites. Para obter mais informações, consulte [Usar alertas para eventos do agente de replicação](../agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>**:  
+3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>** :  
   
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "62667179"
   
      Essa caixa de diálogo exibe os alertas para todos os tipos de publicação, inclusive alertas que não estão relacionados com o monitoramento de limites.  
   
-3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>**:  
+3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>** :  
   
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "62667179"
   
      Essa caixa de diálogo exibe os alertas para todos os tipos de publicação, inclusive alertas que não estão relacionados com o monitoramento de limites. Para obter mais informações, consulte [Usar alertas para eventos do agente de replicação](../agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>**:  
+3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>** :  
   
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.  
   

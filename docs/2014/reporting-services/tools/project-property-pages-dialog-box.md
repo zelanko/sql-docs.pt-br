@@ -15,20 +15,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9d66e6e5317bef72be6bba254ccca0cc82aa026
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100037"
 ---
 # <a name="project-property-pages-dialog-box"></a>caixa de diálogo Páginas de Propriedades do Projeto
-  Use as páginas de propriedades do projeto para configurar as propriedades de implantação de um projeto do Servidor de Relatório. Para abrir essa caixa de diálogo, no menu **Projeto**, clique em _\<Report Project Name>_**Propriedades**.  
+  Use as páginas de propriedades do projeto para configurar as propriedades de implantação de um projeto do Servidor de Relatório. Para abrir essa caixa de diálogo, no menu **Projeto**, clique em _\<Report Project Name>_ **Propriedades**.  
   
  Depois que você definir as propriedades de configuração, poderá selecionar uma configuração na lista suspensa **Configurações da Solução** da barra de ferramentas.  
   
 ## <a name="options"></a>Opções  
  **Configuração**  
- Selecione a configuração a ser editada. Inicialmente, estão disponíveis as seguintes configurações: **Depurar**, **DebugLocal**, e **versão**. A configuração ativa aparece primeiro; por exemplo, **Active(Debug)**.  
+ Selecione a configuração a ser editada. Inicialmente, estão disponíveis as seguintes configurações: **Depurar**, **DebugLocal**, e **versão**. A configuração ativa aparece primeiro; por exemplo, **Active(Debug)** .  
   
  Para ver as propriedades de mais de uma configuração ao mesmo tempo, selecione **Todas as Configurações** ou **Várias Configurações**.  
   
@@ -60,21 +60,21 @@ ms.locfileid: "66100037"
   
  Quando publicar em um servidor de relatório executado no modo nativo, especifique o caminho completo da hierarquia de pastas a partir da raiz. Por exemplo, Folder1/Folder2/Folder3.  
   
- Quando publicar em um servidor de relatório executado no modo integrado do SharePoint, use uma URL da biblioteca do SharePoint. Por exemplo, http://*\<servername > /\<site >*  /documentos/MyFolder.  
+ Quando publicar em um servidor de relatório executado no modo integrado do SharePoint, use uma URL da biblioteca do SharePoint. Por exemplo, http:// *\<servername > /\<site >*  /documentos/MyFolder.  
   
  **TargetReportFolder**  
  O nome da pasta em que serão armazenados os relatórios publicados. Por padrão, corresponde ao nome do projeto de relatório. Se a pasta não existir no servidor de relatório, o Designer de Relatórios irá criar a pasta quando os relatórios forem publicados.  
   
  Quando publicar em um servidor de relatório executado no modo nativo, especifique o caminho completo da hierarquia de pastas a partir da raiz. Se uma pasta estiver dentro de outra pasta, inclua um caminho para ela a partir da raiz (por exemplo, Folder1/Folder2/Folder3).  
   
- Quando publicar em um servidor de relatório executado no modo integrado do SharePoint, use uma URL da biblioteca do SharePoint. Por exemplo, http://*\<servername >*/*\<site >*  /documentos/MyFolder.  
+ Quando publicar em um servidor de relatório executado no modo integrado do SharePoint, use uma URL da biblioteca do SharePoint. Por exemplo, http:// *\<servername >* / *\<site >*  /documentos/MyFolder.  
   
  **TargetServerURL**  
  A URL do servidor de relatório de destino. Antes de publicar um relatório, defina essa propriedade com uma URL de servidor de relatório válida.  
   
  Quando publicar em um servidor de relatório executado no modo nativo, use a URL do diretório virtual do servidor de relatório. Por exemplo, http://\<server > / reportserver. Este é o diretório virtual do servidor de relatório e não o Gerenciador de Relatórios. Por padrão, o servidor de relatório é instalado em um diretório virtual denominado "reportserver".  
   
- Quando publicar em um servidor de relatório executado no modo integrado do SharePoint, use uma URL de um site de nível superior ou subsite do SharePoint. Se você não especificar um site, o site padrão de nível superior será usado. Por exemplo, http://\<*servername >*, http://&lt*servername*/\<*site >* ou http://\< *servername >*/\<*site >*/\<*subsite >*.  
+ Quando publicar em um servidor de relatório executado no modo integrado do SharePoint, use uma URL de um site de nível superior ou subsite do SharePoint. Se você não especificar um site, o site padrão de nível superior será usado. Por exemplo, http://\<*servername >* , http://&lt*servername*/\<*site >* ou http://\< *servername >* /\<*site >* /\<*subsite >* .  
   
 ## <a name="see-also"></a>Consulte também  
  [Publicar Relatórios](../publish-reports.md)   

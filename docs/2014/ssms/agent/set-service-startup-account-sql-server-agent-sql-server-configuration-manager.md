@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30c50d1f6efc44c17eac76e0e03432c2461da296
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63033629"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
@@ -65,13 +65,13 @@ ms.locfileid: "63033629"
   
 2.  Clique no sinal de adição para expandir a pasta **Grupos do Servidor Local** .  
   
-3.  Clique com o botão direito do mouse na instância de servidor na qual você deseja definir a Conta de Inicialização de Serviço e selecione **SQL Server Configuration Manager...**.  
+3.  Clique com o botão direito do mouse na instância de servidor na qual você deseja definir a Conta de Inicialização de Serviço e selecione **SQL Server Configuration Manager...** .  
   
 4.  Na caixa de diálogo **Controle de Conta de Usuário** , clique em **Sim**.  
   
 5.  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, no painel de console, selecione **Serviços do SQL Server**.  
   
-6.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server Agent**_(server_name)_, em que *server_name* é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para o qual você deseja alterar a conta de inicialização de serviço e selecione **Propriedades**.  
+6.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server Agent** _(server_name)_ , em que *server_name* é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para o qual você deseja alterar a conta de inicialização de serviço e selecione **Propriedades**.  
   
 7.  Na caixa de diálogo **Propriedades**_do_ **Propriedades** , na guia **Logon** , selecione uma das seguintes opções em **Fazer logon como**:  
   
