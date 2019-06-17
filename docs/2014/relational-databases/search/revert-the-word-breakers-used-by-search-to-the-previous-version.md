@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3e8b4442d8d7f6e8838d9c5bb56e4c545b6f931c
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011085"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Reverter os separadores de palavras usados por pesquisa à versão anterior
@@ -164,7 +164,7 @@ ms.locfileid: "66011085"
   
     4.  Se o idioma selecionado usar um lematizador, atualize os dados (Padrão) desse valor de chave para o nome de arquivo do lematizador anterior da tabela.  
   
-7.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
+7.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
   
 8.  Atualize o valor de chave **WBreakerClass** para o valor da tabela para o separador de palavras atual.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "66011085"
   
     4.  Se o idioma selecionado usar um lematizador, atualize os dados (Padrão) desse valor de chave para o nome de arquivo do lematizador atual da tabela.  
   
-5.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
+5.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
   
 6.  Atualize o valor de chave **WBreakerClass** para o valor da tabela para o separador de palavras anterior.  
   
@@ -285,7 +285,7 @@ ms.locfileid: "66011085"
   
     4.  Se o idioma selecionado usar um lematizador, atualize os dados (Padrão) desse valor de chave para o nome de arquivo do lematizador anterior da tabela.  
   
-4.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
+4.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
   
 5.  Atualize o valor de chave **WBreakerClass** para o valor da tabela para o separador de palavras atual.  
   
@@ -309,7 +309,7 @@ ms.locfileid: "66011085"
   
     4.  Se o idioma selecionado usar um lematizador, atualize os dados (Padrão) desse valor de chave para o nome de arquivo do lematizador atual da tabela.  
   
-4.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
+4.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
   
 5.  Atualize o valor de chave **WBreakerClass** para o valor da tabela para o separador de palavras anterior.  
   

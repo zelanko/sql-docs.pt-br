@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2966a784f647d402b849d5899b76b0614122b932
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997055"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
@@ -51,7 +51,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**min_distretention**|Período mínimo de retenção de distribuição.|  
 |NULL (padrão)|Todos disponíveis *propriedade* valores são impressos.|  
   
-`[ @value = ] 'value'` É o novo valor para a propriedade especificada. *valor* está **nvarchar (255)**, com um padrão NULL.  
+`[ @value = ] 'value'` É o novo valor para a propriedade especificada. *valor* está **nvarchar (255)** , com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

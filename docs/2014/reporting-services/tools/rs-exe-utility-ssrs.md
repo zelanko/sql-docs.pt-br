@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a6c4bf8f67f787214d38148db40ea8122a064a42
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099833"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
@@ -102,9 +102,9 @@ ms.locfileid: "66099833"
   
  `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- Variáveis globais são criadas com os nomes dados e definidos para os valores fornecidos. Por exemplo, **- v um =**"`1`" **- v b =**"`2`" resulta em uma variável chamada `a` com um valor de "`1`" e uma variável **b**com um valor de "`2`".  
+ Variáveis globais são criadas com os nomes dados e definidos para os valores fornecidos. Por exemplo, **- v um =** "`1`" **- v b =** "`2`" resulta em uma variável chamada `a` com um valor de "`1`" e uma variável **b**com um valor de "`2`".  
   
- Variáveis globais estão disponíveis para qualquer função no script. Uma barra invertida e aspas (**\\"**) são interpretadas como aspas duplas. As aspas só serão necessárias se a cadeia de caracteres contiver um espaço. Nomes de variáveis devem ser válidas para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]; eles devem iniciar com um caractere alfabético ou sublinhado e conter caracteres alfabéticos, dígitos ou sublinhados. Palavras reservadas não podem ser usadas como nomes de variável. Para obter mais informações sobre como usar variáveis globais, consulte [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
+ Variáveis globais estão disponíveis para qualquer função no script. Uma barra invertida e aspas ( **\\"** ) são interpretadas como aspas duplas. As aspas só serão necessárias se a cadeia de caracteres contiver um espaço. Nomes de variáveis devem ser válidas para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]; eles devem iniciar com um caractere alfabético ou sublinhado e conter caracteres alfabéticos, dígitos ou sublinhados. Palavras reservadas não podem ser usadas como nomes de variável. Para obter mais informações sobre como usar variáveis globais, consulte [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
  **-t**  
  (Opcional) Produz mensagens de erro para o log de rastreamento. Esse argumento não exige um valor. Para obter mais informações, consulte [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  

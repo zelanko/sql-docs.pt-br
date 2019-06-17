@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 991ee7139ae4a323a1d426d1882e4f6b3a4df871
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049714"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
@@ -44,7 +44,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
   
 `[ @owner_name = ] 'owner_name'` É o nome do proprietário da tabela. *owner_name* está **sysname**, com um padrão NULL.  
   
-`[ @filter_clause = ] 'filter_clause'` Especifica uma cláusula de filtro que controla quais linhas dos dados recém-carregados devem ser adicionadas às tabelas de controle de mesclagem. *filter_clause* está **nvarchar (4000)**, com um valor padrão de NULL. Se *filter_clause* é **nulo**, em massa de todas as linhas carregadas são adicionadas.  
+`[ @filter_clause = ] 'filter_clause'` Especifica uma cláusula de filtro que controla quais linhas dos dados recém-carregados devem ser adicionadas às tabelas de controle de mesclagem. *filter_clause* está **nvarchar (4000)** , com um valor padrão de NULL. Se *filter_clause* é **nulo**, em massa de todas as linhas carregadas são adicionadas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

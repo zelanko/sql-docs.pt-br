@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5ac76e77d1bd5eebd2e796a6a72463564cb3df3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62896182"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Criando um destino ODBC com o componente Script
@@ -52,7 +52,7 @@ ms.locfileid: "62896182"
   
 3.  Adicione um novo componente Script à superfície do designer de Fluxo de Dados e configure-o como um destino.  
   
-4.  Conecte a saída de uma origem ou transformação upstream para o componente de destino no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Você pode conectar uma origem diretamente a um destino sem transformações.) Para que essa amostra funcione, a saída do componente upstream deve incluir pelo menos as colunas **AddressID** e **City** da tabela **Person.Address** do banco de dados de exemplo **AdventureWorks**.  
+4.  Conecte a saída de uma origem ou transformação upstream para o componente de destino no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Você pode conectar uma origem diretamente a um destino, sem transformações.) Para que essa amostra funcione, a saída do componente upstream deve incluir pelo menos as colunas **AddressID** e **City** da tabela **Person.Address** do banco de dados de exemplo **AdventureWorks**.  
   
 5.  Abra o **Editor de Transformação Scripts**. Na página **Colunas de Entrada**, selecione as colunas **AddressID** e **City**.  
   

@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 57b6bd92ded85345dc1b716df2fa395df17fff02
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62690506"
 ---
 # <a name="sysdmpdwerrors-transact-sql"></a>sys.dm_pdw_errors (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "62690506"
 |Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|**nvarchar(36)**|A chave para este modo de exibição.<br /><br /> Id numérico exclusivo associado ao erro.|Exclusivo em todos os erros de consulta no sistema.|  
-|origem|**nvarchar(64)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|source|**nvarchar(64)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |type|**nvarchar(4000)**|Tipo do erro ocorrido.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |create_time|**datetime**|Hora em que o erro ocorreu.|Menor ou igual à hora atual.|  
 |pwd_node_id|**int**|Identificador de nó específico envolvido, se houver. Para obter informações adicionais sobre ids de nó, consulte [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).||  

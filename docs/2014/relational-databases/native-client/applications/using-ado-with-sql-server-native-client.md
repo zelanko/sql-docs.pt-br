@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f862807f0ca273e4058263efee6ac326a74103e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63046333"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>Usando o ADO com SQL Server Native Client
@@ -33,7 +33,7 @@ ms.locfileid: "63046333"
  Para permitir que o ADO use os novos recursos de versões recentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], foram feitas algumas melhorias no provedor de dados OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, que estende os principais recursos do OLE DB. Essas melhorias permitem que os aplicativos ADO usem recursos mais novos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e consumam dois tipos de dados introduzidos no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** e **udt**. Essas melhorias também exploram as melhorias feitas nos tipos de dados **varchar**, **nvarchar** e **varbinary**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adiciona a propriedade de inicialização SSPROP_INIT_DATATYPECOMPATIBILITY ao propriedades DBPROPSET_SQLSERVERDBINIT a ser definido para uso por aplicativos do ADO para que os novos tipos de dados são expostos de maneira compatível com o ADO. Além disso, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client também define uma nova conexão palavra-chave cadeia denominada `DataTypeCompatibility` que é definido na cadeia de conexão.  
   
 > [!NOTE]  
->  Os aplicativos do ADO existentes podem acessar e atualizar valores de XML, UDT, de campo binário e de texto grandes usando o provedor SQLOLEDB. Os novos tipos de dados **varchar(max)**, **nvarchar(max)** e **varbinary(max)** maiores são retornados como tipos do ADO **adLongVarChar**, **adLongVarWChar** e **adLongVarBinary**, respectivamente. As colunas XML são retornadas como **adLongVarChar**, e as colunas UDT, como **adVarBinary**. No entanto, caso use o provedor de dados OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SQLNCLI11) em lugar do SQLOLEDB, você não pode se esquecer de definir a palavra-chave `DataTypeCompatibility` como "80" para que os novos tipos de dados sejam mapeados corretamente para os tipos de dados do ADO.  
+>  Os aplicativos do ADO existentes podem acessar e atualizar valores de XML, UDT, de campo binário e de texto grandes usando o provedor SQLOLEDB. Os novos tipos de dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** maiores são retornados como tipos do ADO **adLongVarChar**, **adLongVarWChar** e **adLongVarBinary**, respectivamente. As colunas XML são retornadas como **adLongVarChar**, e as colunas UDT, como **adVarBinary**. No entanto, caso use o provedor de dados OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SQLNCLI11) em lugar do SQLOLEDB, você não pode se esquecer de definir a palavra-chave `DataTypeCompatibility` como "80" para que os novos tipos de dados sejam mapeados corretamente para os tipos de dados do ADO.  
   
 ## <a name="enabling-sql-server-native-client-from-ado"></a>Habilitando o SQL Server Native Client no ADO  
  Para habilitar o uso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, aplicativos do ADO deverão implementar as seguintes palavras-chave nas cadeias de conexão:  

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 83ac2322d39fba05ce75f50fcd9cf9e5005b72b4
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982983"
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-SQL)
@@ -45,7 +45,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- \@objname = '*\@objname*'  
+ \@objname = ' *\@objname*'  
  O nome da tabela do SQL Server habilitados para Stretch.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

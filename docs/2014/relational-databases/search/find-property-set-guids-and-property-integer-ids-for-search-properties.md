@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f07428a87b7a10640c50c73fc2b551fef66c70f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011331"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa

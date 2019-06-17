@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 336cdd3d1b0de43a08cc4ea69dd072e5d0e09fe5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63058102"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
@@ -131,7 +131,7 @@ ms.locfileid: "63058102"
 ###  <a name="BKMK_ssde"></a> Ports Used By the Database Engine  
  A tabela a seguir lista as portas que são mais usadas pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-|Cenário|Porta|Comentários|  
+|Cenário|Port|Comentários|  
 |--------------|----------|--------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executando sobre TCP|Porta TCP 1433|Esta é a porta mais comum permitida pelo firewall. Ela se aplica a conexões de rotina com a instalação padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)]ou com uma instância nomeada, que é a única em execução no computador. (Existem considerações especiais para instâncias nomeadas. Veja [Portas dinâmicas](#BKMK_dynamic_ports) , mais adiante neste tópico.)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na configuração padrão|A porta TCP é uma porta dinâmica determinada no momento em que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] é iniciado.|Consulte a discussão abaixo, na seção [Portas dinâmicas](#BKMK_dynamic_ports). A porta UDP 1434 pode ser necessária para o Serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando você usa instâncias nomeadas.|  
@@ -168,7 +168,7 @@ ms.locfileid: "63058102"
 ###  <a name="BKMK_ssas"></a> Portas usadas pelo Analysis Services  
  A tabela a seguir lista as portas que são mais usadas pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-|Recurso|Porta|Comentários|  
+|Recurso|Port|Comentários|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Porta TCP 2383 para a instância padrão|A porta padrão para a instância padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Serviço Navegador|A porta TCP 2382 só é necessária para uma instância nomeada do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|As solicitações de conexão de clientes para uma instância nomeada do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que não especificam um número de porta são direcionadas para a 2382, que é a porta em que o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] redireciona a solicitação à porta usada pela instância nomeada.|  
@@ -182,17 +182,17 @@ ms.locfileid: "63058102"
 ###  <a name="BKMK_ssrs"></a> Portas usadas pelo Reporting Services  
  A tabela a seguir lista as portas que são mais usadas pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-|Recurso|Porta|Comentários|  
+|Recurso|Port|Comentários|  
 |-------------|----------|--------------|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Serviços Web|Porta TCP 80|Usada para uma conexão HTTP com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] por meio de uma URL. Não é recomendável usar a regra pré-configurada **Serviços da World Wide Web (HTTP)**. Para obter mais informações, consulte a seção [Interação com outras regras do firewall](#BKMK_other_rules) abaixo.|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurado para uso por HTTPS|Porta TCP 443|Usada para uma conexão HTTPS por meio de uma URL. HTTPS é uma conexão HTTP que usa o protocolo SSL. Não é recomendável usar a regra pré-configurada **Serviços Seguros da World Wide Web (HTTPS)**. Para obter mais informações, consulte a seção [Interação com outras regras do firewall](#BKMK_other_rules) abaixo.|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Serviços Web|Porta TCP 80|Usada para uma conexão HTTP com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] por meio de uma URL. Não é recomendável usar a regra pré-configurada **Serviços da World Wide Web (HTTP)** . Para obter mais informações, consulte a seção [Interação com outras regras do firewall](#BKMK_other_rules) abaixo.|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurado para uso por HTTPS|Porta TCP 443|Usada para uma conexão HTTPS por meio de uma URL. HTTPS é uma conexão HTTP que usa o protocolo SSL. Não é recomendável usar a regra pré-configurada **Serviços Seguros da World Wide Web (HTTPS)** . Para obter mais informações, consulte a seção [Interação com outras regras do firewall](#BKMK_other_rules) abaixo.|  
   
  Quando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se conecta a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você também deve abrir as portas apropriadas para esses serviços. Para obter instruções passo a passo para configurar o Firewall do Windows para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], veja [Configurar um Firewall para acesso ao Servidor de Relatório](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
 ###  <a name="BKMK_ssis"></a> Portas usadas pelo Integration Services  
  A tabela a seguir lista as portas que são usadas pelo serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-|Recurso|Porta|Comentários|  
+|Recurso|Port|Comentários|  
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] chamadas de procedimento remoto (MS RPC)<br /><br /> Usada pelo tempo de execução do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|Porta TCP 135<br /><br /> Consulte [Considerações especiais sobre a porta 135](#BKMK_port_135)|O serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa o DCOM na porta 135. O Gerenciador de Controle de Serviços usa a porta 135 para executa tarefas como iniciar e parar o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e transmitir solicitações de controle ao serviço em execução. O número da porta não pode ser alterado.<br /><br /> Esta porta só precisa ser aberta se você está se conectando a uma instância remota do serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a partir do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou de um aplicativo personalizado.|  
   
@@ -201,9 +201,9 @@ ms.locfileid: "63058102"
 ###  <a name="BKMK_additional_ports"></a> Portas e serviços adicionais  
  A tabela a seguir lista portas e serviços dos quais o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode depender.  
   
-|Cenário|Porta|Comentários|  
+|Cenário|Port|Comentários|  
 |--------------|----------|--------------|  
-|Instrumentação de Gerenciamento do Windows<br /><br /> Para obter mais informações sobre a WMI, consulte [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md).|A WMI é executada como parte de um host de serviço compartilhado com portas atribuídas por DCOM. A WMI pode estar usando a porta TCP 135.<br /><br /> Consulte [Considerações especiais sobre a porta 135](#BKMK_port_135)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager usa a WMI para listar e gerenciar serviços. É recomendável usar o grupo de regras pré-configuradas **WMI (Instrumentação de Gerenciamento do Windows)**. Para obter mais informações, consulte a seção [Interação com outras regras do firewall](#BKMK_other_rules) abaixo.|  
+|Instrumentação de Gerenciamento do Windows<br /><br /> Para obter mais informações sobre a WMI, consulte [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md).|A WMI é executada como parte de um host de serviço compartilhado com portas atribuídas por DCOM. A WMI pode estar usando a porta TCP 135.<br /><br /> Consulte [Considerações especiais sobre a porta 135](#BKMK_port_135)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager usa a WMI para listar e gerenciar serviços. É recomendável usar o grupo de regras pré-configuradas **WMI (Instrumentação de Gerenciamento do Windows)** . Para obter mais informações, consulte a seção [Interação com outras regras do firewall](#BKMK_other_rules) abaixo.|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] MS DTC (Coordenador de Transações Distribuídas)|Porta TCP 135<br /><br /> Consulte [Considerações especiais sobre a porta 135](#BKMK_port_135)|Se o seu aplicativo usa transações distribuídas, talvez seja necessário configurar o firewall para permitir que o tráfego do Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MS DTC) flua entre instâncias separadas do MS DTC e entre o MS DTC e gerenciadores de recursos, como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. É recomendável usar o grupo de regras pré-configuradas **Coordenador de Transações Distribuídas** .<br /><br /> Quando um único MS DTC compartilhado é configurado para o cluster inteiro em um grupo de recursos separado, você deve adicionar sqlservr.exe como uma exceção ao firewall.|  
 |O botão Procurar do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] usa UDP para se conectar ao Serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Serviço SQL Server Browser &#40;Mecanismo de Banco de Dados e SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).|Porta UDP 1434|UDP é um protocolo sem-conexão.<br /><br /> O firewall tem uma configuração, chamada [Propriedade UnicastResponsesToMulticastBroadcastDisabled da Interface INetFwProfile](https://go.microsoft.com/fwlink/?LinkId=118371) , que controla seu comportamento no que diz respeito a respostas unicast para uma solicitação UDP difusão (ou multicast).  Ele tem dois comportamentos:<br /><br /> Se a configuração for TRUE, não serão permitidas respostas unicast para uma difusão. A enumeração de serviços falhará.<br /><br /> Se a configuração for FALSE (padrão), serão permitidas respostas unicast durante 3 segundos. O período de tempo não é configurável. em uma rede congestionada ou de alta latência, ou para servidores com grandes cargas, as tentativas de enumerar instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem retornar uma lista parcial, o que pode enganar os usuários.|  
 |Tráfego IPsec|Portas UDP 500 e 4500|Se a política do domínio exigir que as comunicações de rede sejam feitas por meio de IPsec, você também deverá adicionar as portas UDP 4500 e 500 à lista de exceções. IPsec é uma opção que usa o **Assistente para Nova Regra de Entrada** no snap-in Firewall do Windows. Para obter mais informações, veja [Usando o snap-in Firewall do Windows com Segurança Avançada](#BKMK_WF_msc) abaixo.|  
@@ -274,7 +274,7 @@ ms.locfileid: "63058102"
   
     -   **Lista personalizada:**  
   
-     Somente computadores que têm os endereços IP contidos na lista podem se conectar. Esta configuração pode ser mais segura do que **Somente minha rede (sub-rede)**, mas os computadores cliente que usam DHCP podem alterar o endereço IP ocasionalmente. Por isso o computador desejado não poderá se conectar. Outro computador, que você não pretendia autorizar, pode aceitar o endereço IP listado e se conectar. A opção **Lista personalizada** pode ser apropriada para listar outros servidores configurados para usar um endereço IP fixo, mas os endereços IP podem ser falsificados por um invasor. Restringir regras de firewall é um procedimento apenas tão seguro quanto sua infraestrutura de rede.  
+     Somente computadores que têm os endereços IP contidos na lista podem se conectar. Esta configuração pode ser mais segura do que **Somente minha rede (sub-rede)** , mas os computadores cliente que usam DHCP podem alterar o endereço IP ocasionalmente. Por isso o computador desejado não poderá se conectar. Outro computador, que você não pretendia autorizar, pode aceitar o endereço IP listado e se conectar. A opção **Lista personalizada** pode ser apropriada para listar outros servidores configurados para usar um endereço IP fixo, mas os endereços IP podem ser falsificados por um invasor. Restringir regras de firewall é um procedimento apenas tão seguro quanto sua infraestrutura de rede.  
   
 ##  <a name="BKMK_WF_msc"></a> Usando o snap-in Firewall do Windows com Segurança Avançada  
  Outras configurações avançadas do firewall podem ser definidas usando o snap-in do MMC Firewall do Windows com Segurança Avançada. O snap-in inclui um assistente de regra e expõe configurações adicionais que não estão disponível no item **Firewall do Windows** do Painel de Controle. Essas configurações incluem:  

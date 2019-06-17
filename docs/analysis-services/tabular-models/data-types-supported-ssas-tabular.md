@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62472195"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>Tipos de dados com suporte em modelos de tabela
@@ -35,8 +35,8 @@ Quando você importa dados ou usa um valor em uma fórmula, mesmo quando a fonte
 |Número Decimal|Um número real de 64 bits (oito bytes)*<br /><br /> Observação:<br />         As fórmulas DAX não dão suporte aos tipos de dados que são muito pequenos para conter o valor mínimo relacionado na descrição.|Números reais são números que podem ter casas decimais. Os números reais abrangem uma grande variedade de valores:<br /><br /> Valores negativos de -1,79E +308 a -2,23E -308<br /><br /> Zero<br /><br /> Valores positivos de 2,23E -308 a 1,79E + 308<br /><br /> No entanto, o número de dígitos significativos está limitado a 17 dígitos decimais.|  
 |Booliano|Booliano|Um valor True ou False.|  
 |Text|Cadeia de caracteres|Uma cadeia de caracteres de dados de caractere Unicode. Pode ser cadeias de caracteres, números ou datas representados em um formato de texto.|  
-|data|Data/hora|Datas e horas em uma representação de data-hora aceita.<br /><br /> As datas válidas são todas as datas depois de 1º de março de 1900.|  
-|CURRENCY|CURRENCY|O tipo de dados de moeda permite valores entre -922.337.203.685.477,5808 e 922.337.203.685.477,5807 com quatro dígitos decimais de precisão fixa.|  
+|Date|Data/hora|Datas e horas em uma representação de data-hora aceita.<br /><br /> As datas válidas são todas as datas depois de 1º de março de 1900.|  
+|Currency|Currency|O tipo de dados de moeda permite valores entre -922.337.203.685.477,5808 e 922.337.203.685.477,5807 com quatro dígitos decimais de precisão fixa.|  
 |N/D|Em branco|Um espaço em branco é um tipo de dados no DAX que representa e substitui nulos SQL. É possível criar um espaço em branco usando a função BLANK e testar se há espaços em branco usando a função lógica, ISBLANK.|  
   
  \* Se você tentar importar dados que tenham valores numéricos grandes, pode haver falha na importação com o seguinte erro:  

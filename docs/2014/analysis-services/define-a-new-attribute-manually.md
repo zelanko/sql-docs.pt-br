@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6618a7c5023f140fdaee0b512c797c01586c62ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082334"
 ---
 # <a name="define-a-new-attribute-manually"></a>Definir um novo atributo manualmente
@@ -31,7 +31,7 @@ ms.locfileid: "66082334"
   
      Clique com botão direito do **atributos** painel, aponte para **Mostrar atributos em**e, em seguida, clique em **grade**.  
   
-3.  Role até a última linha da grade e, em seguida, clique em  **\<novo atributo >**.  
+3.  Role até a última linha da grade e, em seguida, clique em  **\<novo atributo >** .  
   
 4.  Digite um nome para o atributo para configurar a propriedade `Name` e pressione Enter.  
   

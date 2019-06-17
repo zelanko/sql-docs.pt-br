@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 95247fbbe7da9ce39acbf6cb709a7400ead770ea
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66703951"
 ---
 # <a name="columns-collection-properties-methods-and-events"></a>Propriedades, Métodos e Eventos da coleção Columns
@@ -33,7 +33,7 @@ ms.locfileid: "66703951"
   
  [Método Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Nenhum.  
   
 ## <a name="see-also"></a>Consulte também  

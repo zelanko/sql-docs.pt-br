@@ -1,8 +1,9 @@
 ---
 title: Executando arquivos de modelo usando a propriedade CommandStream | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
@@ -12,17 +13,19 @@ helpviewer_keywords:
 - templates [SQLXML], SQLXML Managed Classes
 - CommandStream property
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fcb60f197b4b0aa61a4bc0ef4bf99ecf9e883a42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62719443"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Executando os arquivos de modelo usando a propriedade CommandStream
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Este exemplo ilustra como os arquivos de modelo que consistem em consultas SQL ou XPath podem ser especificados usando a propriedade CommandStream do objeto SqlXmlCommand. Neste aplicativo, um FileStreamobject é aberto para um arquivo de comando, e o fluxo de arquivos é atribuído como o CommandStream que é executado.  
   
  No exemplo a seguir, a propriedade CommandType é especificada como SqlXmlCommandType.Template (não como TemplateFile).  
