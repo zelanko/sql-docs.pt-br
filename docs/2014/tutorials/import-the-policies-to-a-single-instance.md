@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 410f3a317a9d3ad2f8cab52d9f57fd4a63c1c36c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62865095"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>Importar as políticas para uma única instância
@@ -31,7 +31,7 @@ ms.locfileid: "62865095"
   
 3.  Clique com o botão direito do mouse em **Políticas**e clique em **Importar Política**.  
   
-4.  No **importação** caixa de diálogo, em seguida o **arquivos a importar** , clique no botão de reticências (**...** ) botão.  
+4.  No **importação** caixa de diálogo, em seguida o **arquivos a importar** , clique no botão de reticências ( **...** ) botão.  
   
 5.  Na lista **Examinar** , navegue até a pasta a seguir, que contém as políticas de práticas recomendadas:  
   

@@ -2,24 +2,24 @@
 title: Como usar funções RevoScaleR para localizar ou instalar pacotes R - serviços do SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/31/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7eed38e54b0c4e77af8f7b3ede0af2d98b9c58b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0d5ba43e913f91ab93f80249cae3d0c8cf8e1740
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642333"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140406"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Como usar funções RevoScaleR para localizar ou instalar pacotes R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 RevoScaleR 9.0.1 e versões posteriores incluem funções para gerenciamento de pacotes de R de um contexto de computação do SQL Server. Essas funções podem ser usadas por não administradores remotos, para instalar pacotes no SQL Server sem acesso direto ao servidor.
 
-Serviços de aprendizado de máquina do SQL Server 2017 já inclui uma versão mais recente do RevoScaleR. Os clientes do SQL Server 2016 R Services devem fazer uma [atualização do componente](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md) obter funções de gerenciamento do pacote RevoScaleR. Para obter instruções sobre como recuperar pacote de versão e o conteúdo, consulte [obter informações do pacote](determine-which-packages-are-installed-on-sql-server.md).
+Serviços de aprendizado de máquina do SQL Server 2017 já inclui uma versão mais recente do RevoScaleR. Os clientes do SQL Server 2016 R Services devem fazer uma [atualização do componente](../install/upgrade-r-and-python.md) obter funções de gerenciamento do pacote RevoScaleR. Para obter instruções sobre como recuperar pacote de versão e o conteúdo, consulte [obter informações do pacote](../package-management/installed-package-information.md).
 
 ## <a name="revoscaler-functions-for-package-management"></a>Funções de RevoScaleR para gerenciamento de pacotes
 
@@ -38,7 +38,7 @@ A tabela a seguir descreve as funções usadas para gerenciamento e instalação
 
 + [Habilitar o gerenciamento remoto de pacote do R no SQL Server](r-package-how-to-enable-or-disable.md)
 
-+ Versões de RevoScaleR devem ser o mesmo em ambientes de cliente e servidor. Para obter mais informações, consulte [obter informações do pacote](determine-which-packages-are-installed-on-sql-server.md).
++ Versões de RevoScaleR devem ser o mesmo em ambientes de cliente e servidor. Para obter mais informações, consulte [obter informações do pacote](../package-management/installed-package-information.md).
 
 + Permissão para se conectar ao servidor e um banco de dados e para executar comandos de R. Você deve ser um membro de uma função de banco de dados que permite que você instale pacotes na instância especificada e ao banco de dados.
 
@@ -97,7 +97,7 @@ connString <- paste("Driver=SQL Server;Server=", instance_name, ";Database=", da
 sqlcc <- RxInSqlServer(connectionString = connString, wait = sqlWait, consoleOutput = sqlConsoleOutput, numTasks = 4);
 ```
 
-Dependendo de onde se encontra o servidor e o modelo de segurança, talvez você precise fornecer uma especificação de domínio e a sub-rede na cadeia de conexão, ou usar um logon do SQL. Por exemplo: 
+Dependendo de onde se encontra o servidor e o modelo de segurança, talvez você precise fornecer uma especificação de domínio e a sub-rede na cadeia de conexão, ou usar um logon do SQL. Por exemplo:
 
 ```R
 connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Finance;Uid=RUser1;Pwd=RUserPassword"
@@ -212,4 +212,4 @@ exec sp_execute_external_script
 + [Habilitar o gerenciamento remoto de pacotes R](r-package-how-to-enable-or-disable.md)
 + [Sincronizar os pacotes R](package-install-uninstall-and-sync.md)
 + [Dicas para a instalação de pacotes de R](packages-installed-in-user-libraries.md)
-+ [Pacotes padrão](installing-and-managing-r-packages.md)
++ [Pacotes padrão](../package-management/default-packages.md)

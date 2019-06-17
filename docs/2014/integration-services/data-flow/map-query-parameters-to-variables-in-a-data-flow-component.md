@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 92caab2b0631c80403c7367aeb98ae001a5e11eb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62901553"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Mapear parâmetros de consulta para variáveis em um componente de fluxo de dados
@@ -43,7 +43,7 @@ ms.locfileid: "62901553"
   
 7.  Clique em **Parâmetros**.  
   
-8.  Na caixa de diálogo **Definir Parâmetros de Consulta**, mapeie cada parâmetro na lista **Parâmetros** para uma variável na lista **Variáveis** ou crie uma nova variável clicando em **\<Nova variável>**. Clique em **OK**.  
+8.  Na caixa de diálogo **Definir Parâmetros de Consulta**, mapeie cada parâmetro na lista **Parâmetros** para uma variável na lista **Variáveis** ou crie uma nova variável clicando em **\<Nova variável>** . Clique em **OK**.  
   
     > [!NOTE]  
     >  Apenas as variáveis do sistema e as variáveis definidas pelo usuário que estão no escopo do pacote, um contêiner pai como Loop Foreach ou a tarefa de Fluxo de Dados que contém o componente de fluxo de dados, estão disponíveis para mapeamento. A variável deve ter um tipo de dados que seja compatível com a coluna na cláusula WHERE, para a qual o parâmetro é designado.  

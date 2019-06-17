@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c027b6648da799be5a2b9381a0f19dc437563242
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806363"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Criar um ponto de controle do Utilitário do SQL Server (Utilitário do SQL Server)
@@ -131,7 +131,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Instance_name"></a> Especificar Instância  
  Especifique as seguintes informações sobre o UCP que você está criando:  
   
--   **Nome da Instância** – para selecionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na caixa de diálogo de conexão, clique em **Conectar...**. Forneça o nome do computador e o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato ComputerName\InstanceName.  
+-   **Nome da Instância** – para selecionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na caixa de diálogo de conexão, clique em **Conectar...** . Forneça o nome do computador e o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato ComputerName\InstanceName.  
   
 -   **Nome do Utilitário** – Especifique um nome que será usado para identificar o Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na rede.  
   
@@ -143,7 +143,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > [!NOTE]  
 >  Se a conexão for criptografada, ela será usada. Se a conexão não for criptografada, o Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conectará novamente usando uma conexão criptografada.  
   
- Para continuar, clique em **Conectar...**.  
+ Para continuar, clique em **Conectar...** .  
   
 ##  <a name="Agent_configuration"></a> Conta do conjunto de coleta do utilitário  
  Especifique uma conta de domínio do Windows para executar o conjunto de coleta do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa conta é usada como a conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para o conjunto de coleta do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Alternativamente, você pode usar a conta de Serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent existente. Para passar nos requisitos de validação, use as diretrizes a seguir para especificar a conta.  

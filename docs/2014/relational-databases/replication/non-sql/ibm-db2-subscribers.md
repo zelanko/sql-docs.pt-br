@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022185"
 ---
 # <a name="ibm-db2-subscribers"></a>Assinantes do IBM DB2
@@ -112,7 +112,7 @@ ms.locfileid: "63022185"
 |`datetimeoffset(0-7)`|VARCHAR(34)|  
 |`decimal(1-31, 0-31)`|DECIMAL(1-31, 0-31)|  
 |`decimal(32-38, 0-38)`|VARCHAR(41)|  
-|`float(53)`|DOUBLE|  
+|`float(53)`|Double|  
 |`float`|FLOAT|  
 |`geography`|IMAGE|  
 |`geometry`|IMAGE|  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 92db49f8f6a112f8466fc81527b214bad7252f82
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107062"
 ---
 # <a name="show-hidden-datasets-for-parameter-values-for-multidimensional-data-report-builder-and-ssrs"></a>Mostrar conjuntos de dados ocultos para obter valores de parâmetros para dados multidimensionais (Construtor de Relatórios e SSRS)

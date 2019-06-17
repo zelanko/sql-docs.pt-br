@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63020007"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizar bancos de dados do Analysis Services
@@ -95,7 +95,7 @@ ms.locfileid: "63020007"
      **Pasta de Destino**  
      Exibe o nome da pasta na instância de destino do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na qual a partição local deve ser sincronizada. Se a coluna contiver o valor "(Padrão)", o local padrão da instância de destino conterá a partição local.  
   
-     Clique no botão de reticências (**...**) para exibir a caixa de diálogo **Procurar Pasta Remota** e especifique uma pasta na instância de destino na qual as partições locais armazenadas no local selecionado devem ser sincronizadas.  
+     Clique no botão de reticências ( **...** ) para exibir a caixa de diálogo **Procurar Pasta Remota** e especifique uma pasta na instância de destino na qual as partições locais armazenadas no local selecionado devem ser sincronizadas.  
   
     > [!NOTE]  
     >  Essa coluna não pode ser alterada para partições locais armazenadas no local padrão da instância de origem.  
@@ -139,12 +139,12 @@ ms.locfileid: "63020007"
      **Servidor de Destino**  
      Exibe o nome da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na qual as partições remotas armazenadas no local especificado em **Servidor de Origem** e **Pasta de Origem** devem ser sincronizadas.  
   
-     Clique no botão de reticências (**...**) para exibir a caixa de diálogo **Gerenciador de Conexões** e especifique uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na qual as partições remotas armazenadas no local selecionado devem ser sincronizadas.  
+     Clique no botão de reticências ( **...** ) para exibir a caixa de diálogo **Gerenciador de Conexões** e especifique uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na qual as partições remotas armazenadas no local selecionado devem ser sincronizadas.  
   
      **Pasta de Destino**  
      Exibe o nome da pasta na instância de destino do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na qual a partição remota deve ser sincronizada. Se a coluna contiver o valor "(Padrão)", o local padrão da instância de destino deverá conter a partição remota.  
   
-     Clique no botão de reticências (**...**) para exibir a caixa de diálogo **Procurar Pasta Remota** e especifique uma pasta na instância de destino na qual as partições remotas armazenadas no local selecionado devem ser sincronizadas.  
+     Clique no botão de reticências ( **...** ) para exibir a caixa de diálogo **Procurar Pasta Remota** e especifique uma pasta na instância de destino na qual as partições remotas armazenadas no local selecionado devem ser sincronizadas.  
   
      **Tamanho**  
      Exibe o tamanho estimado de partições remotas armazenadas no local.  

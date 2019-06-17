@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872251"
 ---
 # <a name="create-a-database"></a>Criar um banco de dados
@@ -77,7 +77,7 @@ ms.locfileid: "62872251"
   
 4.  Para criar o banco de dados aceitando todos os valores padrão, clique em **OK**; do contrário, passe para as etapas opcionais a seguir.  
   
-5.  Para alterar o nome do proprietário, clique em (**...**) para selecionar outro proprietário.  
+5.  Para alterar o nome do proprietário, clique em ( **...** ) para selecionar outro proprietário.  
   
     > [!NOTE]  
     >  A opção **Usar indexação de texto completo** sempre está marcada e esmaecida porque, a partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], todos os bancos de dados de usuários são habilitados para texto completo.  

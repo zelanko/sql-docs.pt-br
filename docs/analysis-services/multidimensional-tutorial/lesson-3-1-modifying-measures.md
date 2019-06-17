@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9a9d0559a0421d8badd5e939a85947a53e0f6e8b
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403948"
 ---
 # <a name="lesson-3-1---modifying-measures"></a>Lição 3-1: modificando medidas
@@ -29,7 +29,7 @@ Você pode usar a propriedade **FormatString** para definir configurações de f
   
     É mais fácil alterar as propriedades de vários itens no cubo quando a janela Propriedades permanece aberta.  
   
-3.  Na janela Propriedades, clique na lista **FormatString** e digite **#,#**.  
+3.  Na janela Propriedades, clique na lista **FormatString** e digite **#,#** .  
   
 4.  Na barra de ferramentas da guia **Estrutura do Cubo** , clique no ícone **Mostrar Grade de Medidas** à esquerda.  
   

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 327b0bdc83588ef988a716ba44e859aa5d3f8659
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487989"
 ---
 # <a name="system-settings-master-data-services"></a>Configurações do sistema (Master Data Services)
@@ -133,7 +133,7 @@ ms.locfileid: "65487989"
 
 |Configuração do Gerenciador de Configuração|Configuração do sistema|Descrição|  
 |-----------------------------------|--------------------|-----------------|  
-|**Habilitar configuração de melhoria de desempenho**|**PerformanceImprovementEnable**|O padrão é habilitar essa configuração (**Definido como 1**), de modo que a página relacionada à permissão de carregar tenha um bom desempenho. Mas, nessa situação, criar/modificar entidades, atributos, usuários ou grupos terá um baixo desempenho. Para evitar isso, você pode desabilitar essa configuração (**Definido como 0**). Depois de alterar essa configuração. Você deve executar o comando "**EXEC [mdm].[udpPerformanceToggleSwitch];**" para que a exibição e os dados estejam corretos.|  
+|**Habilitar configuração de melhoria de desempenho**|**PerformanceImprovementEnable**|O padrão é habilitar essa configuração (**Definido como 1**), de modo que a página relacionada à permissão de carregar tenha um bom desempenho. Mas, nessa situação, criar/modificar entidades, atributos, usuários ou grupos terá um baixo desempenho. Para evitar isso, você pode desabilitar essa configuração (**Definido como 0**). Depois de alterar essa configuração. Você deve executar o comando "**EXEC [mdm].[udpPerformanceToggleSwitch];** " para que a exibição e os dados estejam corretos.|  
   
  Para obter mais informações, consulte [Aplicar permissões de membros imediatamente &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   

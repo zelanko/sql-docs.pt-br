@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 551e5bfdba63ca09388db5260adb5accafe2a78a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62828236"
 ---
 # <a name="cdc-splitter"></a>Separador de CDC

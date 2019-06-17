@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06d17a4feaec0db614f61fb7761b37ea415efc24
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808704"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>Exibir ou alterar os locais padrão de arquivos de log e de dados (SQL Server Management Studio)

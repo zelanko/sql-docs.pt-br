@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 13864dba5cac0274204050a8c78730de29f3321e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62727170"
 ---
 # <a name="write-enabled-partitions"></a>Partições habilitadas para gravação
   Os dados em um cubo geralmente são somente leitura. Porém, em determinados cenários, você pode desejar que uma partição seja gravada. As partições habilitadas para gravação são usadas para permitir que os usuários empresariais explorem cenários alterando valores de célula e analisando os efeitos das mudanças em dados de cubo. Quando você habilita uma partição para gravação, os aplicativos cliente podem registrar mudanças nos dados da partição. Essas mudanças, conhecidas como dados de write-back, são armazenadas em uma tabela separada e não sobrescrevem quaisquer dados existentes em um grupo de medidas. Porém, elas estarão incorporadas nos resultados de consulta como se elas fizessem parte dos dados de cubo.  
   
- Você pode habilitar um cubo inteiro para gravação, ou apenas determinadas partições do cubo. As dimensões habilitadas para gravação são diferentes, mas complementares. Uma partição habilitada para gravação permite aos usuários atualizarem células da partição, enquanto uma dimensão habilitada para gravação permite aos usuários atualizarem membros de dimensão. Você também pode usar esses dois recursos combinados. Por exemplo, um cubo ou uma partição habilitada para gravação não tem que incluir quaisquer dimensões habilitadas para gravação. **Tópico relacionado:**[Write-Enabled dimensões](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
+ Você pode habilitar um cubo inteiro para gravação, ou apenas determinadas partições do cubo. As dimensões habilitadas para gravação são diferentes, mas complementares. Uma partição habilitada para gravação permite aos usuários atualizarem células da partição, enquanto uma dimensão habilitada para gravação permite aos usuários atualizarem membros de dimensão. Você também pode usar esses dois recursos combinados. Por exemplo, um cubo ou uma partição habilitada para gravação não tem que incluir quaisquer dimensões habilitadas para gravação. **Tópico relacionado:** [Write-Enabled dimensões](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 > [!NOTE]  
 >  Para habilitar um cubo para gravação que tem um banco de dados do Microsoft Access como fonte de dados, não use o Microsoft OLE DB Provider for ODBC drivers nas definições de fonte de dados para o cubo, suas partições ou dimensões. Em vez disso, você pode usar o Microsoft Jet 4.0 OLE DB Provider ou qualquer versão do Jet Service Pack que inclua o Jet 4.0 OLE. Para obter mais informações, consulte o artigo da Base de dados de Conhecimento da Microsoft [como obter o service pack mais recente para o mecanismo de banco de dados Microsoft Jet 4.0](https://support.microsoft.com/?kbid=239114).  

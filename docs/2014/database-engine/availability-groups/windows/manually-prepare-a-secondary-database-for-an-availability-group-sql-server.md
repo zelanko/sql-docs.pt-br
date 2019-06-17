@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62792076"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Preparar um banco de dados secundário manualmente para um grupo de disponibilidade (SQL Server)
@@ -94,7 +94,7 @@ ms.locfileid: "62792076"
   
 3.  Na instância do servidor que hospeda a réplica secundária, restaure o backup completo do banco de dados primário (e opcionalmente um backup diferencial) seguido por quaisquer backups de log subsequentes.  
   
-     Na página **Opções de RESTORE DATABASE**, selecione **Deixar o banco de dados não operacional e não reverter as transações não confirmadas. Os logs de transações adicionais podem ser restaurados. (RESTAURAR COM NORECOVERY)**.  
+     Na página **Opções de RESTORE DATABASE**, selecione **Deixar o banco de dados não operacional e não reverter as transações não confirmadas. Os logs de transações adicionais podem ser restaurados. (RESTAURAR COM NORECOVERY)** .  
   
      Se os caminhos de arquivo dos bancos de dados primário e secundário forem diferentes, por exemplo, se o banco de dados primário estiver na unidade 'F:', mas a instância do servidor que hospeda a réplica secundária não tiver uma unidade F:, inclua a opção MOVE na cláusula WITH.  
   

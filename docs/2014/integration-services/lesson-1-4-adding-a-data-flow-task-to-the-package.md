@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 542b7e3ffcc4a1db5b2053c840b785f775384fe1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891790"
 ---
 # <a name="step-4-adding-a-data-flow-task-to-the-package"></a>Etapa 4: Adicionar uma tarefa de fluxo de dados ao pacote
@@ -36,7 +36,7 @@ ms.locfileid: "62891790"
   
      É uma boa ideia fornecer nomes exclusivos a todos os componentes que você adiciona a uma superfície de design. Para facilitar o uso e a sustentabilidade, os nomes devem descrever a função que cada componente executa. Seguir estas diretrizes de nomeação permite que seus pacotes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sejam documentados automaticamente. Outra forma para documentar seus pacotes é usar anotações. Para obter mais informações sobre como usar anotações, consulte [Usar anotações em pacotes](use-annotations-in-packages.md).  
   
-4.  A tarefa de fluxo de dados com o botão direito, clique em **propriedades**e na janela Propriedades, verifique se o `LocaleID` estiver definida como **inglês (Estados Unidos)**.  
+4.  A tarefa de fluxo de dados com o botão direito, clique em **propriedades**e na janela Propriedades, verifique se o `LocaleID` estiver definida como **inglês (Estados Unidos)** .  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Etapa 5: Adicionando e configurando a fonte de arquivo simples](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  

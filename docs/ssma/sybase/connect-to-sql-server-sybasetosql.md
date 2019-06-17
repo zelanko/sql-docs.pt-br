@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1d610ea44ff29056228d6bf788cba1f74a50db58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63061675"
 ---
 # <a name="connect-to-sql-server-sybasetosql"></a>Conectar-se ao SQL Server (SybaseToSQL)
@@ -24,7 +24,7 @@ Use o **conectar-se ao SQL Server** caixa de diálogo para se conectar à instâ
 **Nome do servidor**  
 Insira ou selecione a instância do SQL Server para se conectar ao. Por padrão, a instância que você conectado mais recentemente é exibida.  
   
--   Se você estiver se conectando à instância padrão no computador local, você pode inserir **localhost** ou um ponto (**.**).  
+-   Se você estiver se conectando à instância padrão no computador local, você pode inserir **localhost** ou um ponto ( **.** ).  
   
 -   Se você estiver se conectando à instância padrão em outro computador, digite o nome do computador.  
   

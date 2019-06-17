@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 208b1363de6b1c6892ba8f265365b1d304b6ceab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107148"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrar um provedor de dados padrão do .NET Framework (SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66107148"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-server"></a>Para instalar um assembly do provedor de dados no servidor de relatórios  
   
-1.  Navegue até o local padrão do diretório \bin no servidor de relatórios no qual deseja usar o provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . A localização padrão do diretório bin do servidor de relatório é *\<drive>*:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin.  
+1.  Navegue até o local padrão do diretório \bin no servidor de relatórios no qual deseja usar o provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . A localização padrão do diretório bin do servidor de relatório é *\<drive>* :\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin.  
   
 2.  Copie o assembly de seu local de preparação para o diretório \bin do servidor de relatórios. Como alternativa, você pode carregar seu assembly no cache de assembly global (GAC). Para obter mais informações, consulte [Trabalhando com assemblies e cache de assembly global](https://go.microsoft.com/fwlink/?linkid=63912) na documentação do SDK do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] no MSDN.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66107148"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-designer-client"></a>Para instalar um assembly do provedor de dados no cliente do Designer de Relatórios  
   
-1.  Navegue até o local padrão do diretório PrivateAssemblies no cliente do Designer de Relatórios no qual deseja usar o provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . A localização padrão do diretório PrivateAssemblies é *\<drive>*:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
+1.  Navegue até o local padrão do diretório PrivateAssemblies no cliente do Designer de Relatórios no qual deseja usar o provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . A localização padrão do diretório PrivateAssemblies é *\<drive>* :\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
 2.  Copie o assembly de seu local de preparação para o diretório PrivateAssemblies do cliente do Designer de Relatórios. Como alternativa, você pode carregar seu assembly no cache de assembly global (GAC). Para obter mais informações, consulte [Trabalhando com assemblies e cache de assembly global](https://go.microsoft.com/fwlink/?linkid=63912) na documentação do SDK do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] no MSDN.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "66107148"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     Se você carregar seu assembly no GAC, poderá fornecer as propriedades de nome forte. Por exemplo:   
+     Se você carregar seu assembly no GAC, poderá fornecer as propriedades de nome forte. Por exemplo:  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  

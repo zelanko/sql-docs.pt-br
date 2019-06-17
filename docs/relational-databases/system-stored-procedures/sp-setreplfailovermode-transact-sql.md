@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ae89e606633fc3555745dd56fc7703ef50685468
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63028623"
 ---
 # <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
@@ -48,7 +48,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @publication = ] 'publication'` É o nome da publicação. *publicação*está **sysname**, sem padrão.  
   
- [**@failover_mode=**] **'***failover_mode***'**  
+ [ **@failover_mode=** ] **'***failover_mode***'**  
  É o modo de failover da assinatura. *failover_mode* está **nvarchar (10)** e pode ser um destes valores.  
   
 |Valor|Descrição|  

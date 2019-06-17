@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871133"
 ---
 # <a name="use-the-copy-database-wizard"></a>Usar o Assistente para Copiar Banco de Dados
@@ -112,7 +112,7 @@ ms.locfileid: "62871133"
 2.  Na página **Selecionar um Servidor de Origem** , especifique o servidor com o banco de dados que deseja mover ou copiar e digite as informações de logon. Depois de selecionar o método de autenticação e digitar as informações de logon, clique em **Avançar** para estabelecer conexão com o servidor de origem. Essa conexão permanece aberta durante a sessão.  
   
      **Servidor de origem**  
-     Selecione o nome do servidor no qual o banco de dados ou bancos de dados que você deseja mover ou copiar estão localizados, ou clique no botão Procurar (**...** ) botão para localizar o servidor desejado. O servidor deve ser pelo menos [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+     Selecione o nome do servidor no qual o banco de dados ou bancos de dados que você deseja mover ou copiar estão localizados, ou clique no botão Procurar ( **...** ) botão para localizar o servidor desejado. O servidor deve ser pelo menos [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
      **Usar Autenticação do Windows**  
      Permite que um usuário conecte por meio de uma conta de usuário [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
@@ -132,7 +132,7 @@ ms.locfileid: "62871133"
 3.  Na página **Selecione um Servidor de Destino** , especifique o servidor para o qual o banco de dados será movido ou copiado. Se você definiu os servidores de origem e destino com a mesma instância de servidor, fará uma cópia de um banco de dados. Nesse caso, renomeie o banco de dados em um ponto posterior do assistente. O nome do banco de dados de origem poderá ser usado somente para o banco de dados copiado ou migrado se não houver conflitos de nome no servidor de destino. Se houver conflitos de nome, será preciso resolvê-los manualmente no servidor de destino para poder usar o nome do banco de dados de origem nele.  
   
      **Servidor de destino**  
-     Selecione o nome do servidor ao qual o banco de dados ou bancos de dados serão movidos ou copiado ou clique no botão Procurar (**...** ) botão para localizar um servidor de destino.  
+     Selecione o nome do servidor ao qual o banco de dados ou bancos de dados serão movidos ou copiado ou clique no botão Procurar ( **...** ) botão para localizar um servidor de destino.  
   
     > [!NOTE]  
     >  Você pode usar um destino que está em um servidor clusterizado; o Assistente para Copiar Banco de Dados garantirá que você selecionará somente unidades compartilhadas de um servidor de destino clusterizado.  

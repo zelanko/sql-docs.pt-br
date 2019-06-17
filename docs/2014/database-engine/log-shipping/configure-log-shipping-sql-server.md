@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774580"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurar o envio de logs (SQL Server)
@@ -78,7 +78,7 @@ ms.locfileid: "62774580"
   
 8.  Observe a agenda de backup listada na caixa **Agenda** em **Trabalho de backup**. Se quiser personalizar a agenda para sua instalação, clique em **Agenda** e, em seguida, ajuste a Agenda do agente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , conforme necessário.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte à [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ao criar uma configuração de envio de log, você pode controlar o comportamento de compactação de backup de backups de log, escolhendo uma das seguintes opções: **Use a configuração de servidor padrão**, **compactar backup**, ou **não compactar o backup**. Para obter mais informações, consulte [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte à [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ao criar uma configuração de envio de logs, é possível controlar o comportamento de compactação de backup dos backups de log escolhendo uma das opções a seguir: **Usar a configuração de servidor padrão**, **Compactar backup** ou **Não compactar o backup**. Para obter mais informações, consulte [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Clique em **OK**.  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b0c8ada8e10ef0f1bc47e1655521acced6f0aa41
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106973"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Tipo de conexão do SQL Server Parallel Data Warehouse (SSRS)
@@ -97,7 +97,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```  
   
- Clique no botão **Executar** (**!**) na barra de ferramentas para executar a consulta e exibir um conjunto de resultados.  
+ Clique no botão **Executar** ( **!** ) na barra de ferramentas para executar a consulta e exibir um conjunto de resultados.  
   
  Para parametrizar essa consulta, adicione um parâmetro de consulta. Por exemplo, altere a cláusula WHERE para o seguinte:  
   

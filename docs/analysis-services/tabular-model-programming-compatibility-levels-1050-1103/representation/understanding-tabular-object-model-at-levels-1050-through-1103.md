@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad3963cd7b0b2b40e6b3a08cab68ad809378bff1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025333"
 ---
 # <a name="understanding-tabular-object-model-at-levels-1050-through-1103"></a>Noções básicas sobre o modelo de objeto de tabela em níveis 1050 até 1103

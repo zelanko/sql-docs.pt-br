@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b85a6a5e79c004eb3ed2c7c40c6e3b62d526e95a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721008"
 ---
 # <a name="rename-a-stored-procedure"></a>Renomear um procedimento armazenado

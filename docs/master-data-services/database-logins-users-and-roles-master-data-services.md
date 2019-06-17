@@ -19,10 +19,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dcf080146f8eee0e03d0c7b22c391fd1ace54e85
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487721"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Logons, usuários e funções de banco de dados (Master Data Services)
@@ -35,7 +35,7 @@ ms.locfileid: "65487721"
   
 |Logon|Descrição|  
 |-----------|-----------------|  
-|**mds_dlp_login**|Permite a criação de assemblies UNSAFE. Para obter mais informações, consulte [Criando um assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).<br /><br /> - Logon desabilitado com senha gerada aleatoriamente.<br /><br /> – É mapeado para o dbo do banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> – Para o msdb, mds_clr_user é mapeado para esse logon.|  
+|**mds_dlp_login**|Permite a criação de assemblies UNSAFE. Para obter mais informações, consulte [Criando um assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).<br /><br /> \- Logon desabilitado com senha gerada aleatoriamente.<br /><br /> – É mapeado para o dbo do banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> – Para o msdb, mds_clr_user é mapeado para esse logon.|  
 |**mds_email_login**|Logon habilitado usado para notificações.<br /><br /> No msdb e no banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , mds_email_user é mapeado para esse logon.|  
   
 ## <a name="msdb-users"></a>Usuários de msdb  
@@ -43,7 +43,7 @@ ms.locfileid: "65487721"
 |User|Descrição|  
 |----------|-----------------|  
 |**mds_clr_user**|Não usado. Mapeia para mds_dlp_login.|  
-|**mds_email_user**|Usado para notificações.<br /><br /> – Mapeado para mds_dlp_login.<br /><br /> - É um membro da função: DatabaseMailUserRole.|  
+|**mds_email_user**|Usado para notificações.<br /><br /> – Mapeado para mds_dlp_login.<br /><br /> \- É um membro da função: DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Usuários de banco de dados do Master Data Services  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65487721"
 |----------|-----------------|  
 |**mds_email_user**|Usado para notificações.<br /><br /> – Tem permissão SELECT para o esquema de mdm.<br /><br /> – Tem permissão EXECUTE para o tipo de tabela definida pelo usuário mdm.MemberGetCriteria.<br /><br /> – Tem permissão EXECUTE para o procedimento armazenado mdm.udpNotificationQueueActivate.|  
 |**mds_schema_user**|É proprietário dos esquemas mdm e mdq. O esquema padrão é mdm.<br /><br /> Não está associado a um logon.|  
-|**mds_ssb_user**|Usado para executar tarefas de Service Broker.<br /><br /> - Possui permissão DELETE, INSERT, REFERENCES, SELECT e UPDATE em todos os esquemas.<br /><br /> - Não tem um logon mapeado a ele.|  
+|**mds_ssb_user**|Usado para executar tarefas de Service Broker.<br /><br /> \- Possui permissão DELETE, INSERT, REFERENCES, SELECT e UPDATE em todos os esquemas.<br /><br /> \- Não tem um logon mapeado a ele.|  
   
 ## <a name="master-data-services-database-role"></a>Função de banco de dados do Master Data Services  
   

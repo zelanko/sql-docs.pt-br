@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62927215"
 ---
 # <a name="system-variables"></a>Variáveis do sistema
@@ -34,7 +34,7 @@ ms.locfileid: "62927215"
 |Variável do sistema|Tipo de dados|Descrição|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|O manipulador de um objeto de Evento do Windows que a tarefa pode sinalizar para indicar que a execução da tarefa deve ser interrompida.|  
-|`ContainerStartTime`|Datetime|A hora de início do contêiner.|  
+|`ContainerStartTime`|DateTime|A hora de início do contêiner.|  
 |**CreationDate**|DateTime|A data em que o pacote foi criado.|  
 |`CreatorComputerName`|Cadeia de caracteres|O computador no qual o pacote foi criado.|  
 |**CreatorName**|Cadeia de caracteres|O nome da pessoa que criou o pacote.|  
@@ -47,7 +47,7 @@ ms.locfileid: "62927215"
 |**OfflineMode**|Booliano|Indica se o pacote está no modo offline. O modo offline não obtém conexões com fontes de dados.|  
 |**PackageID**|Cadeia de caracteres|O identificador exclusivo do pacote.|  
 |**PackageName**|Cadeia de caracteres|O nome do pacote.|  
-|**StartTime**|Datetime|A hora de início da execução do pacote.|  
+|**StartTime**|DateTime|A hora de início da execução do pacote.|  
 |`ServerExecutionID`|Int64|A ID da execução para o pacote executado no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .<br /><br /> O valor padrão é zero. O valor só será alterado se o pacote for executado pelo ISServerExec no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Server. Quando houver um pacote filho, o valor será transmitido do pacote pai para o pacote filho.|  
 |**UserName**|Cadeia de caracteres|A conta do usuário que iniciou o pacote. O nome do usuário é qualificado pelo nome do domínio.|  
 |**VersionBuild**|Int32|A versão do pacote.|  

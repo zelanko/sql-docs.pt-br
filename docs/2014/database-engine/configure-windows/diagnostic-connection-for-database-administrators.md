@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810417"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Conexão de diagnóstico para administradores de banco de dados
@@ -43,7 +43,7 @@ ms.locfileid: "62810417"
   
  Apenas membros da função sysadmin do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem se conectar usando o DAC.  
   
- O DAC está disponível e tem suporte através do utilitário de prompt de comando **sqlcmd** que usa uma opção de administrador especial (**-A**). Para obter mais informações sobre como usar **sqlcmd**, veja [Usar sqlcmd com variáveis de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Você também pode se conectar inserindo o prefixo `admin:`para o nome da instância no formato **sqlcmd - Sadmin:**_< nome_da_instância >._ Você também pode iniciar um DAC de um [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas ao se conectar ao `admin:` \< *instance_name*>.  
+ O DAC está disponível e tem suporte através do utilitário de prompt de comando **sqlcmd** que usa uma opção de administrador especial ( **-A**). Para obter mais informações sobre como usar **sqlcmd**, veja [Usar sqlcmd com variáveis de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Você também pode se conectar inserindo o prefixo `admin:`para o nome da instância no formato **sqlcmd - Sadmin:** _< nome_da_instância >._ Você também pode iniciar um DAC de um [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas ao se conectar ao `admin:` \< *instance_name*>.  
   
 ## <a name="restrictions"></a>Restrictions  
  Como o DAC existe somente para diagnosticar problemas do servidor em circunstâncias raras, há algumas restrições na conexão:  
@@ -76,7 +76,7 @@ ms.locfileid: "62810417"
   
 -   Comandos DBCC básicos como DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` e DBCC SQLPERF. Não execute comandos intensivos de recurso, como **DBCC** CHECKDB, DBCC DBREINDEX ou DBCC SHRINKDATABASE.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] Comando KILL*\<spid>*. Dependendo do estado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o comando KILL nem sempre pode ter êxito; assim, a única opção pode ser reiniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A seguir, algumas diretrizes gerais:  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] Comando KILL *\<spid>* . Dependendo do estado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o comando KILL nem sempre pode ter êxito; assim, a única opção pode ser reiniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A seguir, algumas diretrizes gerais:  
   
     -   Verifique se o SPID foi realmente interrompido consultando `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`. Se nenhuma linha for retornada, significa que a sessão foi interrompida.  
   

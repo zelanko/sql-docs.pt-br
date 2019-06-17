@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 39052fc5c90650ec55f3620fe9bfec99151e5539
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483840"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Permissões de pasta e arquivo (Master Data Services)

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8e9e1ebbf8a6ba8186d30063bd377f95b8e286d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62894740"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Configurando a tarefa Script no Editor da Tarefa Script
@@ -51,7 +51,7 @@ ms.locfileid: "62894740"
 > [!NOTE]  
 >  Nomes de variáveis diferenciam maiúsculas e minúsculas.  
   
- Para selecionar as variáveis, clique no botão de reticências (**...**) ao lado do campo de propriedade. Para obter mais informações, consulte [Página Selecionar Variáveis](../../control-flow/select-variables-page.md).  
+ Para selecionar as variáveis, clique no botão de reticências ( **...** ) ao lado do campo de propriedade. Para obter mais informações, consulte [Página Selecionar Variáveis](../../control-flow/select-variables-page.md).  
   
 ### <a name="edit-script-button"></a>Botão Editar Script  
  O botão **Editar Script** inicia o ambiente de desenvolvimento do VSTA no qual você escreve seu script personalizado. Para obter mais informações, consulte [Codificar e depurar a Tarefa Script](coding-and-debugging-the-script-task.md).  

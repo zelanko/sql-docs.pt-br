@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 08623cc2f9bf5d57141644a9f24c01d29d04cbe3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62865009"
 ---
 # <a name="delete-a-publication"></a>Excluir uma publicação
@@ -58,7 +58,7 @@ ms.locfileid: "62865009"
   
     -   Para excluir uma única publicação, execute [sp_droppublication](/sql/relational-databases/system-stored-procedures/sp-droppublication-transact-sql) no Publicador do banco de dados de publicação.  
   
-    -   Para excluir todas as publicações e remover todos os objetos de replicação de um banco de dados publicado, execute [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) no Publicador. Especifique um valor de `tran` para **@type**. (Opcional) Se o Distribuidor não puder ser acessado ou se o status do banco de dados estiver suspeito ou offline, especifique um valor **1** para **@force**. (Opcional) Especifique o nome do banco de dados para **@dbname** se [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) não for executado no banco de dados de publicação.  
+    -   Para excluir todas as publicações e remover todos os objetos de replicação de um banco de dados publicado, execute [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) no Publicador. Especifique um valor de `tran` para **@type** . (Opcional) Se o Distribuidor não puder ser acessado ou se o status do banco de dados estiver suspeito ou offline, especifique um valor **1** para **@force** . (Opcional) Especifique o nome do banco de dados para **@dbname** se [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) não for executado no banco de dados de publicação.  
   
         > [!NOTE]  
         >  Especificar um valor **1** para **@force** pode deixar objetos de publicação relacionados a replicação no banco de dados.  
@@ -73,7 +73,7 @@ ms.locfileid: "62865009"
   
     -   Para excluir uma única publicação, execute [sp_dropmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql) no Publicador do banco de dados de publicação.  
   
-    -   Para excluir todas as publicações e remover todos os objetos de replicação de um banco de dados publicado, execute [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) no Publicador. Especifique um valor de `merge` para **@type**. (Opcional) Se o Distribuidor não puder ser acessado ou se o status do banco de dados estiver suspeito ou offline, especifique um valor **1** para **@force**. (Opcional) Especifique o nome do banco de dados para **@dbname** se [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) não for executado no banco de dados de publicação.  
+    -   Para excluir todas as publicações e remover todos os objetos de replicação de um banco de dados publicado, execute [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) no Publicador. Especifique um valor de `merge` para **@type** . (Opcional) Se o Distribuidor não puder ser acessado ou se o status do banco de dados estiver suspeito ou offline, especifique um valor **1** para **@force** . (Opcional) Especifique o nome do banco de dados para **@dbname** se [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) não for executado no banco de dados de publicação.  
   
         > [!NOTE]  
         >  Especificar um valor **1** para **@force** pode deixar objetos de publicação relacionados a replicação no banco de dados.  

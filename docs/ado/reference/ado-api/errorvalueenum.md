@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 0f9efa743e6e5f9efe99e08001980ab87bf13247
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66695229"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
@@ -32,7 +32,7 @@ Especifica o tipo de erro de tempo de execução do ADO.
   
 -   Negativo decimal: A conversão decimal do número de erro completa.  
   
--   Hexadecimal: A representação hexadecimal do número de erro completa. O código de recurso do Windows está em quarto dígito. É o código de recurso para os números de erro ADO *um*. Por exemplo:  0x800***A***0E7B.  
+-   Hexadecimal: A representação hexadecimal do número de erro completa. O código de recurso do Windows está em quarto dígito. É o código de recurso para os números de erro ADO *um*. Por exemplo: 0x800***A***0E7B.  
   
 > [!NOTE]
 >  Erros de OLE DB podem ser passados para o seu aplicativo do ADO. Normalmente, elas podem ser identificadas por um código de recurso do Windows do *4*. Por exemplo, 0x800***4***.  
