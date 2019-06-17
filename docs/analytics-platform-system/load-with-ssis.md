@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63213378"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Carregar dados com o Integration Services para Parallel Data Warehouse
@@ -77,7 +77,7 @@ Em seguida, os dados são mapeados do Integration Services para tipos de dados d
 |DATETIME|DT_DATE, DT_DBDATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2|  
 |DATETIME2|DT_DATE, DT_DBDATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2|  
 |DATETIMEOFFSET|DT_WSTR|  
-|DECIMAL|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
+|Decimal|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |FLOAT|DT_R4, DT_R8|  
 |INT|DT_I1, DTI2, DT_I4, DT_UI1, DT_UI2|  
 |MONEY|DT_CY|  
@@ -222,11 +222,11 @@ Especifique o destino para o fluxo de dados.
   
     Para conexões de Ethernet **nome do servidor**: Insira o endereço IP do cluster de nó de controle, vírgula, porta 17001. Por exemplo, 10.192.63.134,17001.  
   
-    **Usuário:**`user1`  
+    **Usuário:** `user1`  
   
-    **Senha:**`password1`  
+    **Senha:** `password1`  
   
-    **Banco de dados de destino:**`LoadExampleDB`  
+    **Banco de dados de destino:** `LoadExampleDB`  
   
 6.  Selecione a tabela de destino: `Orders`.  
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8540983b84d4d39fe5a02b92a1e3a3606350d36d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63209993"
 ---
 # <a name="using-16-bit-and-32-bit-applications-with-32-bit-drivers"></a>Using 16-Bit and 32-Bit Applications with 32-Bit Drivers

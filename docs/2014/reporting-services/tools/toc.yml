@@ -86,7 +86,7 @@
       href: delete-an-item-management-studio.md
     - name: Conectar-se a um servidor de relatório no Management Studio
       href: connect-to-a-report-server-in-management-studio.md
-    - name: 'Servidor de Relatório na ajuda F1 do Management Studio '
+    - name: Servidor de Relatório na ajuda F1 do Management Studio
       href: report-server-in-management-studio-f1-help.md
       items:
         - name: Cancelar trabalhos do Servidor de Relatório
