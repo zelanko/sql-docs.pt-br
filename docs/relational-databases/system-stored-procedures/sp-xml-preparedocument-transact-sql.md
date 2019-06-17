@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 50235db46a664d1507823c057dc0cb61eda90974
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980041"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
@@ -72,7 +72,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  Especifica as declarações de namespace usadas em expressões XPATH de linha e coluna em OPENXML. *xpath_namespaces* é um parâmetro de texto: **char**, **nchar**, **varchar**, **nvarchar**, **texto**, **ntext** ou **xml**.  
   
- O valor padrão é  **\<raiz xmlns:mp = "urn: schemas-microsoft-com: XML-metaprop" >**. *xpath_namespaces* fornece o namespace URIs para os prefixos usados em expressões XPath em OPENXML por meio de um documento XML bem formado. *xpath_namespaces* declara o prefixo que deve ser usado para fazer referência ao namespace **urn: schemas-microsoft-com: XML-metaprop**; isso fornece metadados sobre os elementos XML analisados. Embora você possa redefinir o prefixo de namespace para o namespace metaproperty usando essa técnica, esse namespace não será perdido. O prefixo **mp** ainda é válido para **urn: schemas-microsoft-com: XML-metaprop** mesmo *xpath_namespaces* não tiver tal declaração.  
+ O valor padrão é  **\<raiz xmlns:mp = "urn: schemas-microsoft-com: XML-metaprop" >** . *xpath_namespaces* fornece o namespace URIs para os prefixos usados em expressões XPath em OPENXML por meio de um documento XML bem formado. *xpath_namespaces* declara o prefixo que deve ser usado para fazer referência ao namespace **urn: schemas-microsoft-com: XML-metaprop**; isso fornece metadados sobre os elementos XML analisados. Embora você possa redefinir o prefixo de namespace para o namespace metaproperty usando essa técnica, esse namespace não será perdido. O prefixo **mp** ainda é válido para **urn: schemas-microsoft-com: XML-metaprop** mesmo *xpath_namespaces* não tiver tal declaração.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou > 0 (falha)  

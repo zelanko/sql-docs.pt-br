@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 805c89c24b0a16051de1d555b484a0870de0cfde
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62830007"
 ---
 # <a name="transfer-logins-task"></a>Tarefa Transferir Logons
@@ -27,7 +27,7 @@ ms.locfileid: "62830007"
 ## <a name="transfer-logins-between-instances-of-sql-server"></a>Transfer logons entre instâncias do SQL Server  
  A tarefa Transferir Logons dá suporte a uma origem e a um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  A tarefa gera um evento de informação com o número de logons transferidos e um evento de aviso quando um logon é substituído.  
   
  A tarefa Transferir Logons não informa o progresso incremental da transferência de logons; informa só 0% e 100% concluídos.  

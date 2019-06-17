@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ccc7b96f4275b09b90b8120813b93f860ec07b9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871054"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>Exibir ou alterar o nível de compatibilidade de um banco de dados
@@ -59,7 +59,7 @@ ms.locfileid: "62871054"
   
      O nível de compatibilidade atual é exibido na caixa de listagem **Nível de compatibilidade** .  
   
-5.  Para alterar o nível de compatibilidade, selecione uma opção diferente da lista. As escolhas são **SQL Server 2008 (100)**, **SQL Server 2012 (110)** ou **SQL Server 2014 (120)**.  
+5.  Para alterar o nível de compatibilidade, selecione uma opção diferente da lista. As escolhas são **SQL Server 2008 (100)** , **SQL Server 2012 (110)** ou **SQL Server 2014 (120)** .  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

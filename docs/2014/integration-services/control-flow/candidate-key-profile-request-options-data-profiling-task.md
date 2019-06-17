@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d682bacdc2bce10a118190108a2237419d4b9e27
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832951"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Chave de Candidato (tarefa Criação de Perfil de Dados)
@@ -34,7 +34,7 @@ ms.locfileid: "62832951"
   
 -   Ao selecionar várias colunas em **KeyColumns**, a tarefa computa a restrição de chave da chave composta que consiste de todas as colunas selecionadas.  
   
--   Ao selecionar o caractere curinga, **(\*)**, em **KeyColumns**, a tarefa computa a restrição de chave de cada coluna na tabela ou exibição.  
+-   Ao selecionar o caractere curinga, **(\*)** , em **KeyColumns**, a tarefa computa a restrição de chave de cada coluna na tabela ou exibição.  
   
  Por exemplo, considere uma tabela de exemplo com as colunas A, B e C. Sendo assim, as seguintes seleções são feitas para a propriedade **KeyColumns**:  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62832951"
  Exibe o nome da tabela selecionada. Esta opção é somente leitura.  
   
 #### <a name="keycolumns-options"></a>Opções de KeyColumns  
- As opções a seguir são apresentadas para cada coluna selecionada para criação de perfil em **KeyColumns**ou para a opção **(\*)**.  
+ As opções a seguir são apresentadas para cada coluna selecionada para criação de perfil em **KeyColumns**ou para a opção **(\*)** .  
   
  Para obter mais informações, consulte a seção "Compreendendo a seleção de colunas para a propriedade KeyColumns" anteriormente neste tópico.  
   

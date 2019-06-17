@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 548fac7dbc7d1f2750a130da9847be406361d8bf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62843652"
 ---
 # <a name="retrieve-files"></a>Recuperar arquivos
@@ -38,7 +38,7 @@ ms.locfileid: "62843652"
   
 1.  No Gerenciador de Soluções, selecione o projeto.  
   
-2.  Sobre o **arquivo** , aponte para **controle do código-fonte**e, em seguida, clique em **obter versão mais recente (recursivo)**.  
+2.  Sobre o **arquivo** , aponte para **controle do código-fonte**e, em seguida, clique em **obter versão mais recente (recursivo)** .  
   
  As versões mais recentes dos arquivos do projeto são recuperadas no local do projeto no disco local.  
   

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810047"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opções Server Memory de configuração do servidor
@@ -134,9 +134,9 @@ ms.locfileid: "62810047"
 |-|-------------|-------------|  
 |Memória convencional|Limite máximo do espaço de endereço virtual do processo em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 2 GB<br /><br /> 3 GB com **3 gb** inicializa o parâmetro *<br /><br /> 4 GB no WOW64\*\*|Limite máximo do espaço de endereço virtual do processo em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 8 TB na arquitetura x64|  
   
- ***/3gb** é um parâmetro de inicialização do sistema operacional. Para obter mais informações, visite a [Biblioteca MSDN](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ * **/3gb** é um parâmetro de inicialização do sistema operacional. Para obter mais informações, visite a [Biblioteca MSDN](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
- * * WOW64 (Windows on Windows 64) é um modo no qual 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado em um sistema operacional de 64 bits. Para obter mais informações, visite a [Biblioteca MSDN](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ \* * WOW64 (Windows on Windows 64) é um modo no qual 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado em um sistema operacional de 64 bits. Para obter mais informações, visite a [Biblioteca MSDN](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
 ## <a name="examples"></a>Exemplos  
   

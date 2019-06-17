@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62842573"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Solucionar problemas de Backup Gerenciado do SQL Server para Microsoft Azure
@@ -105,8 +105,8 @@ ms.locfileid: "62842573"
   
      Se o SQL Server parar de responder, os eventos serão registrados no canal de administração.  Um exemplo do log de eventos:  
   
-     *Erro de SQL (mecanismo não está respondendo ou obtém sqlException: SqlException:*   
-     *rastreamento de pilha, a mensagem e código de erro serão exibidas em um canal de administração xevent, junto com algumas informações extras, como:*   
+     *Erro de SQL (mecanismo não está respondendo ou obtém sqlException: SqlException:*    
+     *rastreamento de pilha, a mensagem e código de erro serão exibidas em um canal de administração xevent, junto com algumas informações extras, como:*    
     *"Provavelmente tendo problemas de conectividade com o SQL Server. Ignorando o banco de dados na iteração atual"*  
   
 -   **SQL Agent para de responder ou parar de funcionar quando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] está em execução:**  

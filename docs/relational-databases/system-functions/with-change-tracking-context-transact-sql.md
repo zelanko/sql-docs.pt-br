@@ -21,10 +21,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 62042b08d455d77855a58aece480a84bc653f808
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62865616"
 ---
 # <a name="with-changetrackingcontext-transact-sql"></a>WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)
@@ -43,7 +43,7 @@ WITH CHANGE_TRACKING_CONTEXT ( context )
   
 #### <a name="parameters"></a>Parâmetros  
  *context*  
- São as informações contextuais fornecidas pelo aplicativo chamador e armazenadas com as informações de controle de alterações da alteração. *contexto* está **varbinary(128)**.  
+ São as informações contextuais fornecidas pelo aplicativo chamador e armazenadas com as informações de controle de alterações da alteração. *contexto* está **varbinary(128)** .  
   
  O valor pode ser uma constante ou uma variável, mas não pode ser NULL.  
   

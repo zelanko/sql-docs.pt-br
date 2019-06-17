@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b99fd70e0119aa01d384066aaa2f3b91eed152b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026909"
 ---
 # <a name="microsoft-access-data-types"></a>Tipos de dados do Microsoft Access
@@ -41,7 +41,7 @@ A tabela a seguir mostra os tipos de dados do Microsoft Access, os tipos de dado
 |TEXTO LONGO|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
 |MEMORANDO|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
 |NÚMERO (tamanho do campo = SOLTEIRO)|ÚNICO|SQL_REAL|  
-|NÚMERO (tamanho do campo = dupla)|DOUBLE|SQL_DOUBLE|  
+|NÚMERO (tamanho do campo = dupla)|Double|SQL_DOUBLE|  
 |NÚMERO (tamanho do campo = BYTE)|BYTE SEM SINAL|SQL_TINYINT|  
 |NUMBER (FieldSize= INTEGER)|CURTO|SQL_SMALLINT|  
 |NUMBER (FieldSize= LONG INTEGER)|LONG|SQL_INTEGER|  

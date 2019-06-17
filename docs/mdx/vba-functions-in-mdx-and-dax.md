@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63251547"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Funções VBA no MDX e no DAX
@@ -51,7 +51,7 @@ ms.locfileid: "63251547"
 |CurDir|Sem suporte||  
 |CVar|Somente MDX||  
 |CVErr|Sem suporte||  
-|data|Somente MDX|**Aviso** DAX implementa uma função diferente com o mesmo nome; a função Data (ano, mês, dia), usado para gerar um valor de tipo de data dos argumentos determinados|  
+|Date|Somente MDX|**Aviso** DAX implementa uma função diferente com o mesmo nome; a função Data (ano, mês, dia), usado para gerar um valor de tipo de data dos argumentos determinados|  
 |DateAdd|Somente MDX|**Aviso** DAX implementa uma função diferente com o mesmo nome; a DATEADD (\<datas >, < number_of_intervals >\<intervalo >) função, usado para deslocar as datas determinadas por um número de intervalos determinados|  
 |DateDiff]|Somente MDX||  
 |DatePart|Somente MDX||  
@@ -152,7 +152,7 @@ ms.locfileid: "63251547"
 |SYD|Somente MDX||  
 |Tab|Sem suporte||  
 |Tan|Somente MDX||  
-|Hora|Sem suporte||  
+|Time|Sem suporte||  
 |Timer|Somente MDX||  
 |TimeSerial|Somente MDX||  
 |TimeValue|DAX, MDX||  

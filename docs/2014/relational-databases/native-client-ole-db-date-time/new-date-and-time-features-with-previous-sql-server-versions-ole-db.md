@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63233074"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Novos recursos de data e hora com versões anteriores do SQL Server (OLE DB)
@@ -31,7 +31,7 @@ ms.locfileid: "63233074"
   
 |Tipo de cliente OLE DB|Tipo SQL Server 2005|Tipo de 2008 (ou posterior) SQL Server|Conversão de resultado (servidor para cliente)|Conversão de parâmetro (cliente para servidor)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|Datetime|data|OK|OK|  
+|DBTYPE_DBDATE|DateTime|Date|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Campos de hora definidos como zero.|IRowsetChange falhará devido ao truncamento de cadeia de caracteres se o campo de hora for diferente de zero.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Campos de data definidos como a data atual.|IRowsetChange falhará devido ao truncamento de cadeia de caracteres se frações de segundo são diferentes de zero.<br /><br /> A data é ignorada.|  
@@ -39,7 +39,7 @@ ms.locfileid: "63233074"
 |DBTYPE_DBTIMESTAMP|||Falha – literal de hora inválido.|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2(3)|OK|OK|  
 |DBTYPE_DBTIMESTAMP||datetime2(7)|OK|OK|  
-|DBTYPE_DBDATE|Smalldatetime|data|OK|OK|  
+|DBTYPE_DBDATE|Smalldatetime|Date|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Campos de hora definidos como zero.|IRowsetChange falhará devido ao truncamento de cadeia de caracteres se o campo de hora for diferente de zero.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Campos de data definidos como a data atual.|IRowsetChange falhará devido ao truncamento de cadeia de caracteres se frações de segundo são diferentes de zero.<br /><br /> A data é ignorada.|  

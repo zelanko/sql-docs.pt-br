@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 90269bc6fab7cd496561b9dfe5cae6bf0ff36bbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62875038"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>Restaurar arquivos e grupos de arquivos sobre arquivos existentes (SQL Server)
@@ -101,7 +101,7 @@ ms.locfileid: "62875038"
   
 6.  No painel **Selecionar uma página** , clique na página **Opções** .  
   
-7.  No painel **Opções de restauração** , selecione **Substituir o banco de dados existente (WITH REPLACE)**. A operação de restauração substitui os bancos de dados existentes e seus arquivos relacionados, mesmo se já existirem outros bancos de dados ou arquivos com o mesmo nome.  
+7.  No painel **Opções de restauração** , selecione **Substituir o banco de dados existente (WITH REPLACE)** . A operação de restauração substitui os bancos de dados existentes e seus arquivos relacionados, mesmo se já existirem outros bancos de dados ou arquivos com o mesmo nome.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

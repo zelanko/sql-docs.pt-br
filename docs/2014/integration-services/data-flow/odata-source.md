@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b6b4aeb4059ba659a3188712b1ce76f10efd030
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771032"
 ---
 # <a name="odata-source"></a>Origem do OData
@@ -32,7 +32,7 @@ ms.locfileid: "62771032"
 |-|-|-|-|  
 |Linhas|ATOM|JSON|JSON (Light)|  
 |10000|113 segundos|74 segundos|68 segundos|  
-|1.000.000|1.110 segundos|853 segundos|665 segundos|  
+|1\.000.000|1\.110 segundos|853 segundos|665 segundos|  
   
 > [!NOTE]  
 >  A origem OData SSIS usa o ODataLib 5.5.0 para avaliar os feeds do OData e pode ler todos os formatos suportados por essa biblioteca.  

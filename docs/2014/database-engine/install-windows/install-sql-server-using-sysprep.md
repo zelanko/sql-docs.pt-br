@@ -11,14 +11,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775299"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Instalar o SQL Server 2014 usando SysPrep
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser acessadas por meio da Central de Instalação. A página **Avançado** da **Central de Instalação** tem duas opções: **Preparação de imagem de uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e **Conclusão de imagem de uma instância autônoma preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. As seções [Preparar](#prepare) e [Concluir](#complete) descrevem o processo de instalação em detalhes. Para obter mais informações, consulte [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser acessadas por meio da Central de Instalação. A página **Avançado** da **Central de Instalação** tem duas opções: **Preparação de imagem de uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e **Conclusão de imagem de uma instância autônoma preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . As seções [Preparar](#prepare) e [Concluir](#complete) descrevem o processo de instalação em detalhes. Para obter mais informações, consulte [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
   
  Você também pode preparar e concluir uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o prompt de comando ou um arquivo de configuração. Para obter mais informações, consulte:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62775299"
   
 3.  Criar o cluster de failover do Windows.  
   
-4.  Execute setup.exe com todos os nós do `/ACTION=PrepareFailoverCluster`. Por exemplo:   
+4.  Execute setup.exe com todos os nós do `/ACTION=PrepareFailoverCluster`. Por exemplo:  
   
     ```  
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -105,13 +105,13 @@ ms.locfileid: "62775299"
   
 3.  O Verificador de Configuração do Sistema executa uma operação de descoberta no computador. Para continuar, clique em **OK**. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes**ou como um relatório HTML clicando em **Exibir relatório detalhado**.  
   
-4.  Na página Atualizações de Produto, as atualizações mais recentes de produtos disponíveis do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são exibidas. Se você não desejar incluir as atualizações, desmarque a caixa de seleção **Incluir atualizações de produto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Se nenhuma atualização de produto for descoberta, a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não exibirá esta página e avançará automaticamente para a página **Instalar Arquivos de Instalação** .  
+4.  Na página Atualizações de Produto, as atualizações mais recentes de produtos disponíveis do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são exibidas. Se você não desejar incluir as atualizações, desmarque a caixa de seleção **Incluir atualizações de produto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Se nenhuma atualização de produto for descoberta, a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não exibirá esta página e avançará automaticamente para a página **Instalar Arquivos de Instalação** .  
   
 5.  Na página Instalar Arquivos de Instalação, a Instalação apresenta o andamento do download, da extração e da instalação dos arquivos de Instalação. Se uma atualização para a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for localizada, e for especificada para ser incluída, essa atualização também será instalada.  
   
 6.  O Verificador de Configuração do Sistema verifica o estado do sistema do computador antes da continuação da instalação. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes**ou como um relatório HTML clicando em **Exibir relatório detalhado**.  
   
-7.  Na página **Preparar Tipo de Imagem**, selecione **Preparar uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**.  
+7.  Na página **Preparar Tipo de Imagem**, selecione **Preparar uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
   
      A página **Preparar Tipo de Imagem** é exibida apenas quando há uma instância preparada não configurada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador. Você pode querer preparar uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou adicionar os recursos do sys prep a uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na máquina. Para obter mais informações sobre como acrescentar recursos a uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consulte [Adicionar recursos a uma instância preparada](#AddFeatures).  
   
@@ -249,7 +249,7 @@ ms.locfileid: "62775299"
   
 4.  Na página Arquivos de Suporte à Instalação, clique em **Instalar** para instalar os arquivos de suporte à Instalação.  
   
-5.  Na página **Preparar Tipo de Imagem**, selecione a opção **Adicionar recursos a uma instância preparada existente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Selecione a instância preparada específica a que você deseja adicionar recursos da lista suspensa de instâncias preparadas disponíveis.  
+5.  Na página **Preparar Tipo de Imagem**, selecione a opção **Adicionar recursos a uma instância preparada existente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Selecione a instância preparada específica a que você deseja adicionar recursos da lista suspensa de instâncias preparadas disponíveis.  
   
 6.  Na página **Seleção de Recursos** , especifique os recursos que você deseja adicionar à instância preparada específica.  
   

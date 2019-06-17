@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775038"
 ---
 # <a name="manage-full-text-indexes"></a>Gerenciar índices de texto completo
@@ -136,7 +136,7 @@ GO
   
 2.  Expanda **Tabelas**e clique com o botão direito do mouse na tabela que você quer desabilitar ou habilitar novamente para indexação de texto completo.  
   
-3.  Selecione **Índice de Texto Completo**e clique em **Disable Full-Text index (Desabilitar Índice de Texto Completo)** ou **Enable Full-Text index (Habilitar Índice de Texto Completo)**.  
+3.  Selecione **Índice de Texto Completo**e clique em **Disable Full-Text index (Desabilitar Índice de Texto Completo)** ou **Enable Full-Text index (Habilitar Índice de Texto Completo)** .  
   
 ##  <a name="remove"></a> Removendo um índice de texto completo de uma tabela  
   

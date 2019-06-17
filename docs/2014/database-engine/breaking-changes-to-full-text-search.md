@@ -16,10 +16,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62787754"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Alterações recentes na pesquisa de texto completo
@@ -31,14 +31,14 @@ ms.locfileid: "62787754"
 ## <a name="breaking-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Alterações mais recentes na pesquisa de texto completo no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="collation-changed-for-name-column-in-sysfulltextlanguages"></a>Ordenação alterada para o nome Coluna em sys.fulltext_languages  
- A ordenação da coluna **name** do idioma na exibição do catálogo [sys.fulltext_languages &amp;#40;Transact-SQL&amp;#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) foi alterada da ordenação fixa do banco de dados Resource para a ordenação padrão selecionada para a instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Esta alteração possibilitará comparar os valores na coluna **name** quando você unir a exibição [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) com **sys.fulltext_languages**. Por exemplo, você pode consultar todos os bancos de dados onde o idioma de texto completo padrão é diferente do idioma de banco de dados padrão.  
+ A ordenação da coluna **name** do idioma na exibição do catálogo [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) foi alterada da ordenação fixa do banco de dados Resource para a ordenação padrão selecionada para a instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Esta alteração possibilitará comparar os valores na coluna **name** quando você unir a exibição [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) com **sys.fulltext_languages**. Por exemplo, você pode consultar todos os bancos de dados onde o idioma de texto completo padrão é diferente do idioma de banco de dados padrão.  
   
 ## <a name="breaking-changes-in-full-text-search-in-sql-server-2008"></a>Analisando as alterações feitas na pesquisa de texto completo no SQL Server 2008  
  As últimas alterações a seguir aplicam-se à Pesquisar de texto completo entre o [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] e o [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e versões posteriores.  
   
 |Recurso|Cenário|SQL Server 2005|SQL Server 2008 e versões posteriores|  
 |-------------|--------------|---------------------|----------------------------------------|  
-|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) com tipos definidos pelo usuário (UDTs)|A chave de texto completo é um tipo definido pelo usuário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], por exemplo, `MyType = char(1)`.|A chave retornada é do tipo atribuído ao tipo definido pelo usuário.<br /><br /> No exemplo, isso seria **char(1)**.|A chave retornada é do tipo definido pelo usuário. No exemplo, isso seria **MyType**.|  
+|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) com tipos definidos pelo usuário (UDTs)|A chave de texto completo é um tipo definido pelo usuário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], por exemplo, `MyType = char(1)`.|A chave retornada é do tipo atribuído ao tipo definido pelo usuário.<br /><br /> No exemplo, isso seria **char(1)** .|A chave retornada é do tipo definido pelo usuário. No exemplo, isso seria **MyType**.|  
 |*top_n_by_rank* parâmetro (da CONTAINSTABLE e [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)] instruções)|*top_n_by_rank* consultas usando 0 como parâmetro.|Falha com uma mensagem de erro, indicando que você deve usar um valor maior que zero.|Tem êxito, não retornando nenhuma linha.|  
 |CONTAINSTABLE e **ItemCount**|Excluir linhas da tabela base antes do envio por push de alterações para MSSearch.|CONTAINSTABLE retorna registro fantasma. **ItemCount** não é alterado.|CONTAINSTABLE não retorna nenhum registro fantasma.|  
 |**ItemCount**|A tabela contém colunas de tipo ou documentos nulos.|Além de documentos indexados, os documentos que são nulos ou que têm tipos nulos são contados na **ItemCount** valor.|Somente documentos indexados são contados na **ItemCount** valor.|  

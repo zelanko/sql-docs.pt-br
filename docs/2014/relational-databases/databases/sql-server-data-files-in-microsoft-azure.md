@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 588e656ca71bc5843e3483879f5a58951373aff5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916571"
 ---
 # <a name="sql-server-data-files-in-windows-azure"></a>Arquivos de dados do SQL Server no Windows Azure
@@ -99,7 +99,7 @@ ON
   
 -   Na versão atual desse recurso, não há suporte para armazenar dados do `FileStream` no Armazenamento do Windows Azure. Você pode armazenar dados do `Filestream` em um banco de dados local integrado no Armazenamento do Windows Azure, mas não pode mover dados de Filestream entre computadores que usam o Armazenamento do Windows Azure. Para os dados do `FileStream`, recomendamos que você continue usando as técnicas tradicionais para mover os arquivos (.mdf, .ldf) associados ao Filestream entre computadores diferentes.  
   
--   Atualmente, esse novo aprimoramento não aceita mais de uma instância do SQL Server que acessa os mesmos arquivos de banco de dados no Armazenamento do Windows Azure ao mesmo tempo. Se o Servidor A estiver online com um arquivo de banco de dados ativo e o Servidor B for iniciado por acidente, e também tiver um banco de dados que aponta para o mesmo arquivo de dados, o segundo servidor não iniciará o banco de dados com um código de erro **5120 Não é possível abrir o arquivo físico "%.\*ls". Erro no sistema operacional %d: "%ls"**.  
+-   Atualmente, esse novo aprimoramento não aceita mais de uma instância do SQL Server que acessa os mesmos arquivos de banco de dados no Armazenamento do Windows Azure ao mesmo tempo. Se o Servidor A estiver online com um arquivo de banco de dados ativo e o Servidor B for iniciado por acidente, e também tiver um banco de dados que aponta para o mesmo arquivo de dados, o segundo servidor não iniciará o banco de dados com um código de erro **5120 Não é possível abrir o arquivo físico "%.\*ls". Erro no sistema operacional %d: "%ls"** .  
   
 -   Apenas arquivos .mdf, .ldf e .ndf podem ser armazenados no Armazenamento do Microsoft Azure usando o recurso de arquivos de dados do SQL Server no Microsoft Azure.  
   
@@ -142,13 +142,13 @@ ON
   
  **Erros de autenticação**  
   
--   *Não é possível remover a credencial “%.\*ls”, pois ela é usada por um arquivo de banco de dados ativo.*   
+-   *Não é possível remover a credencial “%.\*ls”, pois ela é usada por um arquivo de banco de dados ativo.*    
     Resolução: Você poderá ver esse erro ao tentar descartar uma credencial que ainda está sendo usada por um arquivo de banco de dados ativo no armazenamento do Windows Azure. Para descartar a credencial, primeiro exclua o blob associado que contém esse arquivo de banco de dados. Para excluir um blob que tem uma concessão ativa, primeiro você deve interromper a concessão.  
   
--   *A assinatura de acesso compartilhado não foi criada no contêiner corretamente.*   
+-   *A assinatura de acesso compartilhado não foi criada no contêiner corretamente.*    
      Resolução: Certifique-se de que você tenha criado uma assinatura de acesso compartilhado no contêiner corretamente. Analise as instruções fornecidas na lição 2 em [Tutorial: Arquivos de dados do SQL Server no serviço de armazenamento do Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
--   *A credencial do SQL Server não foi criada corretamente.*   
+-   *A credencial do SQL Server não foi criada corretamente.*    
     Resolução: Verifique se você usou “Assinatura de Acesso Compartilhado” para o campo **Identity** e criou um segredo corretamente. Analise as instruções fornecidas na lição 3 em [Tutorial: Arquivos de dados do SQL Server no serviço de armazenamento do Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
  **Erros de blob de concessão:**  
@@ -163,8 +163,8 @@ ON
 2.  *Erros ao executar a instrução Alter*   
     Resolução: Certifique-se de executar a instrução Alter Database, quando o banco de dados está online. Ao copiar os arquivos de dados para o Armazenamento do Windows Azure, sempre crie um blob de página não um blob do bloco. Caso contrário, ALTER Database falhará. Analise as instruções fornecidas na lição 7 em [Tutorial: Arquivos de dados do SQL Server no serviço de armazenamento do Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Código de erro 5120 Não é possível abrir o arquivo físico “%.\*ls”. Erro no sistema operacional %d: “%ls”*   
-    Resolução: Atualmente, esse novo aprimoramento não aceita mais de uma instância do SQL Server que acessa os mesmos arquivos de banco de dados no Armazenamento do Windows Azure ao mesmo tempo. Se o Servidor A estiver online com um arquivo de banco de dados ativo e o Servidor B for iniciado por acidente, e também tiver um banco de dados que aponta para o mesmo arquivo de dados, o segundo servidor não iniciará o banco de dados com um código de erro *5120 Não é possível abrir o arquivo físico "%.\*ls". Erro no sistema operacional %d: "%ls"*.  
+3.  *Código de erro 5120 Não é possível abrir o arquivo físico “%.\*ls”. Erro no sistema operacional %d: “%ls”*    
+    Resolução: Atualmente, esse novo aprimoramento não aceita mais de uma instância do SQL Server que acessa os mesmos arquivos de banco de dados no Armazenamento do Windows Azure ao mesmo tempo. Se o Servidor A estiver online com um arquivo de banco de dados ativo e o Servidor B for iniciado por acidente, e também tiver um banco de dados que aponta para o mesmo arquivo de dados, o segundo servidor não iniciará o banco de dados com um código de erro *5120 Não é possível abrir o arquivo físico "%.\*ls". Erro no sistema operacional %d: "%ls"* .  
   
      Para resolver esse problema, primeiro determine se você precisa que o Servidor A acesse o arquivo de banco de dados no Armazenamento do Windows Azure ou não. Se não, basta remover as conexões entre o Servidor A e os arquivos de banco de dados no Armazenamento do Windows Azure. Para fazer isso, siga estas etapas:  
   

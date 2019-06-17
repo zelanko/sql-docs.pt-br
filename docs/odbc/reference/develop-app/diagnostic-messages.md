@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 883cd29d8628f1e9270ae95a772c4d116b896710
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63034913"
 ---
 # <a name="diagnostic-messages"></a>Mensagens de diagnóstico
@@ -51,4 +51,4 @@ Uma mensagem de diagnóstico será retornada com cada SQLSTATE. O SQLSTATE mesmo
   
  [1] nesse caso, o driver está atuando como o driver e a fonte de dados.  
   
- Colchetes (**[]**) deve ser incluído na mensagem e não indicam itens opcionais.
+ Colchetes ( **[]** ) deve ser incluído na mensagem e não indicam itens opcionais.

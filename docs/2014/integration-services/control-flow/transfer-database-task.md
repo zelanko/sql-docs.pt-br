@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7ddf838269932c19b0614d5a5219a7f03daed17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62830145"
 ---
 # <a name="transfer-database-task"></a>Tarefa Transferir Banco de Dados
@@ -32,7 +32,7 @@ ms.locfileid: "62830145"
 ## <a name="transfer-of-databases-between-versions-of-sql-server"></a>Transferência de banco de dados entre versões do SQL Server  
  A tarefa Transferir Banco de Dados pode transferir um banco de dados entre instâncias de versões diferentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  A tarefa Transferir Banco de Dados não informa o progresso incremental da transferência de mensagem de erro; informa somente conclusão 0% e 100 %.  
   
 ## <a name="execution-value"></a>Valor de execução  

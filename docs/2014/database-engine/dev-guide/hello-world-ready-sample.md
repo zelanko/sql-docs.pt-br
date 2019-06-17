@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 184e8a987455f181d2fe631abb6189e745bd95e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62781167"
 ---
 # <a name="hello-world-ready-sample"></a>Exemplo pronto do Hello World
@@ -82,7 +82,7 @@ ms.locfileid: "62781167"
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
-    -   Para ler   
+    -   Para ler  
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
@@ -90,7 +90,7 @@ ms.locfileid: "62781167"
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
-    -   Para ler   
+    -   Para ler  
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62781167"
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
-    -   Para ler   
+    -   Para ler  
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62781167"
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
-    -   Para ler   
+    -   Para ler  
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
@@ -114,7 +114,7 @@ ms.locfileid: "62781167"
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
-    -   Para ler   
+    -   Para ler  
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62781167"
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
-    -   Para ler   
+    -   Para ler  
   
     -   `<value xml:space="preserve">` `ã"ã‚"ã«ã¡ã¯</value>`  
   

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f9f9db58c48e74a91ec85972befb206ed3fb07f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773531"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>Backup gerenciado do SQL Server no Windows Azure - Configurações de retenção e armazenamento
@@ -94,7 +94,7 @@ ms.locfileid: "62773531"
   
 -   **Usando Transact-SQL:**  
   
-     Se você estiver habilitando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pela primeira vez, os parâmetros necessários são: *@database_name*, *@credential_name*, *@encryption_algorithm*, *@enable_backup* O *@storage_url* parâmetro é opcional. Se você não fornecer um valor para o @storage_url parâmetro, o valor é derivado usando as informações de conta de armazenamento da credencial do SQL. Se você fornecer a URL de armazenamento, só deverá fornecer a URL da raiz da conta de armazenamento e fazer a correspondência das informações na Credencial SQL que você especificou.  
+     Se você estiver habilitando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pela primeira vez, os parâmetros necessários são: *@database_name* , *@credential_name* , *@encryption_algorithm* , *@enable_backup* O *@storage_url* parâmetro é opcional. Se você não fornecer um valor para o @storage_url parâmetro, o valor é derivado usando as informações de conta de armazenamento da credencial do SQL. Se você fornecer a URL de armazenamento, só deverá fornecer a URL da raiz da conta de armazenamento e fazer a correspondência das informações na Credencial SQL que você especificou.  
   
     1.  Conecte-se ao [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62773531"
 ##  <a name="InstanceConfigure"></a> Habilitar e configurar o padrão [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] as configurações da instância  
  Você pode habilitar e configurar o padrão [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configurações no nível da instância de duas maneiras:  Usando o sistema de procedimento armazenado `smart_backup.set_instance_backup` ou **SQL Server Management Studio**. Os dois métodos são explicados abaixo:  
   
- **smart_backup.set_instance_backup:**. Especificando o valor **1** para *@enable_backup* parâmetro, você pode habilitar o backup e definir as configurações padrão. Após a aplicação no nível de instância, essas configurações padrão serão aplicadas a qualquer novo banco de dados adicionado a essa instância.  Quando o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for habilitado pela primeira vez, as informações a seguir deverão ser fornecidas, além da habilitação de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] na instância:  
+ **smart_backup.set_instance_backup:** . Especificando o valor **1** para *@enable_backup* parâmetro, você pode habilitar o backup e definir as configurações padrão. Após a aplicação no nível de instância, essas configurações padrão serão aplicadas a qualquer novo banco de dados adicionado a essa instância.  Quando o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for habilitado pela primeira vez, as informações a seguir deverão ser fornecidas, além da habilitação de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] na instância:  
   
 -   O período de retenção.  
   

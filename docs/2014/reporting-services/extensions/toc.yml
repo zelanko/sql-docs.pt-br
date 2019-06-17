@@ -82,7 +82,7 @@
       href: secure-development/secure-development-reporting-services.md
     - name: Segurança de acesso do código no Reporting Services
       href: secure-development/code-access-security-in-reporting-services.md
-    - name: 'Compreendendo políticas de segurança '
+    - name: Compreendendo políticas de segurança
       href: secure-development/understanding-security-policies.md
     - name: Usando arquivos de política de segurança do Reporting Services
       href: secure-development/using-reporting-services-security-policy-files.md

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62856160"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>Criando uma estrutura de modelo de mineração de mala direta (Tutorial de mineração de dados básico)
@@ -30,7 +30,7 @@ ms.locfileid: "62856160"
   
 3.  No **Selecionar método de definição** página, verifique **de warehouse existente de banco de dados ou dados relacional** está selecionado e, em seguida, clique em **próxima**.  
   
-4.  Sobre o **criar a estrutura de mineração de dados** página, em **qual técnica de mineração de dados você deseja usar?**, selecione **Microsoft Decision Trees**.  
+4.  Sobre o **criar a estrutura de mineração de dados** página, em **qual técnica de mineração de dados você deseja usar?** , selecione **Microsoft Decision Trees**.  
   
     > [!NOTE]  
     >  Se você receber um aviso de que não é possível encontrar nenhum algoritmo de mineração de dados, as propriedades do projeto talvez não sejam configuradas corretamente. Esse aviso ocorre quando o projeto tenta recuperar uma lista de algoritmos de mineração de dados do servidor do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e não consegue encontrá-lo. Por padrão, [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] usará **localhost** como o servidor. Se você estiver usando uma instância diferente ou uma instância nomeada, altere as propriedades do projeto. Para obter mais informações, consulte [criando um projeto do Analysis Services &#40;Tutorial básico de mineração de dados&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md).  

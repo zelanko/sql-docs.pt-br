@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3cf58665c69c744b35c8703f7f00fc07e0b8aafc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891162"
 ---
 # <a name="step-1-copying-the-lesson-4-package"></a>Etapa 1: Copiar o pacote da Lição 4
@@ -38,7 +38,7 @@ ms.locfileid: "62891162"
   
 7.  Na janela Propriedades, atualize o `Name` propriedade para `Lesson 5`.  
   
-8.  Clique na caixa para o **identificação** propriedade, em seguida, clique na seta suspensa e, em seguida, clique em  **\<gerar nova ID >**.  
+8.  Clique na caixa para o **identificação** propriedade, em seguida, clique na seta suspensa e, em seguida, clique em  **\<gerar nova ID >** .  
   
 ### <a name="to-add-the-completed-lesson-4-package"></a>Para adicionar o pacote concluído da Lição 4  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62891162"
   
 3.  Na caixa de diálogo **Adicionar Cópia do Pacote Existente** , em **Local do pacote**, selecione **Sistema de arquivos**.  
   
-4.  Clique no botão Procurar **(…)**, navegue até **Lesson 4.dtsx** no computador e clique em **Abrir**.  
+4.  Clique no botão Procurar **(…)** , navegue até **Lesson 4.dtsx** no computador e clique em **Abrir**.  
   
      Para baixar todos os pacotes de lição para este tutorial, faça o seguinte.  
   

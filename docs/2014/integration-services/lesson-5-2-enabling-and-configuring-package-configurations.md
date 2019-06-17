@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891052"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Etapa 2: Habilitar e configurar configurações de pacote
@@ -39,7 +39,7 @@ ms.locfileid: "62891052"
   
 7.  Retorne à guia **Fluxo de Controle** e clique duas vezes no contêiner **Arquivo Foreach na Pasta** .  
   
-8.  Na página **Coleção** do **Editor de Loop Foreach**, clique em **Expressões** e, em seguida, clique no botão de reticências **(…)**.  
+8.  Na página **Coleção** do **Editor de Loop Foreach**, clique em **Expressões** e, em seguida, clique no botão de reticências **(…)** .  
   
 9. No **Editor de expressões de propriedade**, clique no **propriedade** relacionar e selecionar `Directory`.  
   
