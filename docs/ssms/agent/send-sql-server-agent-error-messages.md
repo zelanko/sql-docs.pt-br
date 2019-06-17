@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ce854082c87c323af9ad5b4123fd7dcb041cbd49
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104846"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
@@ -73,7 +73,7 @@ Para obter mais informações sobre as permissões do Windows necessárias para 
   
 2.  Clique com o botão direito do mouse em **SQL Server Agent** e selecione **Propriedades**.  
   
-3.  Na caixa de diálogo **Propriedades do SQL Server Agent -**_server\_name_, em **Log de erros** na página **Geral**, digite o nome de usuário ou nome do computador ao qual você deseja enviar mensagens de erro na caixa **Destinatário do net send**.  
+3.  Na caixa de diálogo **Propriedades do SQL Server Agent -** _server\_name_, em **Log de erros** na página **Geral**, digite o nome de usuário ou nome do computador ao qual você deseja enviar mensagens de erro na caixa **Destinatário do net send**.  
   
 4.  Clique em **OK**.  
   

@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c0439c5230d39ae9dc856c9e1c5c5553e250c42
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723667"
 ---
 # <a name="install-integration-services"></a>Instalar o Integration Services
@@ -85,7 +85,7 @@ Por padrão, em uma nova instalação, o [!INCLUDE[ssISnoversion](../../includes
 
 Para uma instalação completa do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], selecione os componentes necessários da lista a seguir:
 
--   **Integration Services (SSIS)**. Instale o SSIS com o Assistente de instalação do SQL Server. Selecionar o SSIS instala os seguintes itens:
+-   **Integration Services (SSIS)** . Instale o SSIS com o Assistente de instalação do SQL Server. Selecionar o SSIS instala os seguintes itens:
 
     -   Suporte para o Catálogo do SSIS no Mecanismo de Banco de Dados do Microsoft SQL Server.
 
@@ -97,7 +97,7 @@ Para uma instalação completa do [!INCLUDE[ssISnoversion](../../includes/ssisno
 
 -   **Mecanismo de banco de dados do SQL Server**. Instale o Mecanismo de Banco de Dados com o Assistente de Instalação do SQL Server. Selecionar o Mecanismo de Banco de Dados permite criar e hospedar o banco de dados do Catálogo do SSIS, `SSISDB`, para armazenar, gerenciar, executar e monitorar pacotes do SSIS.
 
--   **SQL Server Data Tools (SSDT)**. Para baixar e instalar o SSDT, veja [Baixar o SSDT (SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md). Instalar o SSDT permite criar e implantar pacotes do SSIS. O SSDT instala os seguintes itens:
+-   **SQL Server Data Tools (SSDT)** . Para baixar e instalar o SSDT, veja [Baixar o SSDT (SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md). Instalar o SSDT permite criar e implantar pacotes do SSIS. O SSDT instala os seguintes itens:
 
     -   As ferramentas de design e desenvolvimento do pacote do SSIS, incluindo o Designer SSIS.
 

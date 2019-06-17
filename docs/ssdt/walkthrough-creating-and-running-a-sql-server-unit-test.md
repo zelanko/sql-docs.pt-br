@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: f49d7d43e136adaadb2bda5b37fa6f7e8b63f4e7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101935"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Passo a passo: Criar e executar um teste de unidade do SQL Server
@@ -242,7 +242,7 @@ Para concluir esse passo a passo, você precisa se conectar a um servidor de ban
   
 #### <a name="to-import-a-database-schema-from-a-script"></a>Para importar um esquema de banco de dados de um script.  
   
-1.  No menu **Projeto**, clique em **Importar** e, em seguida, em **Script (\*.sql)**.  
+1.  No menu **Projeto**, clique em **Importar** e, em seguida, em **Script (\*.sql)** .  
   
 2.  Clique em **Avançar** após ler a página de boas-vindas.  
   
@@ -276,7 +276,7 @@ Por padrão, quando você pressiona F5, implanta (ou publica) o banco de dados e
   
 3.  Marque as caixas de seleção para todos os cinco procedimentos armazenados: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** e **Sales.uspShowOrderDetails**.  
   
-4.  Na lista suspensa **Projeto**, selecione **Criar um novo projeto de teste do Visual C#**.  
+4.  Na lista suspensa **Projeto**, selecione **Criar um novo projeto de teste do Visual C#** .  
   
 5.  Aceite os nomes padrão do projeto e da classe, e clique em **OK**.  
   
@@ -556,7 +556,7 @@ Os testes presumem que o banco de dados começa em um estado limpo. Você criar�
   
 4.  No painel **Condições de Teste** , clique em **Esquema Esperado** na lista e clique em **Adicionar Condição de Teste**.  
   
-5.  Na janela **Propriedades**, na propriedade **Configuração**, clique no botão Procurar ('**...**').  
+5.  Na janela **Propriedades**, na propriedade **Configuração**, clique no botão Procurar (' **...** ').  
   
 6.  Na caixa de diálogo de **Configuração para expectedSchemaCondition1** , especifique uma conexão com o banco de dados. Por exemplo, se você usou o local de implantação padrão, que é LocalDB, clique em **Nova Conexão** e especifique **(LocalDB)\Projects**. Em seguida, escolha o nome do banco de dados.  
   
@@ -621,7 +621,7 @@ Os testes presumem que o banco de dados começa em um estado limpo. Você criar�
   
 13. No painel **Condições de Teste** , clique em **Soma de Verificação de Dados** na lista e clique em **Adicionar Condição de Teste**.  
   
-14. Na janela **Propriedades**, na propriedade **Configuração**, clique no botão Procurar ('**...**').  
+14. Na janela **Propriedades**, na propriedade **Configuração**, clique no botão Procurar (' **...** ').  
   
 15. Na caixa de diálogo **Configuração para checksumCondition1** , especifique uma conexão com o banco de dados.  
   

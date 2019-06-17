@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f4a1fe05a5662dad7e674831c5e5b76b9c8c8263
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65801358"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Criando um destino com o componente Script
@@ -73,7 +73,7 @@ ms.locfileid: "65801358"
 ### <a name="adding-variables"></a>Adicionando variáveis  
  Se desejar usar variáveis existentes no script, adicione-as aos campos de propriedade **ReadOnlyVariables** e **ReadWriteVariables** na página **Script** do **Editor de Transformação Scripts**.  
   
- Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Outra alternativa é selecionar diversas variáveis clicando no botão de reticências (**...**) ao lado dos campos de propriedade **ReadOnlyVariables** e **ReadWriteVariables** e, em seguida, selecionar as variáveis na caixa de diálogo **Selecionar variáveis**.  
+ Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Outra alternativa é selecionar diversas variáveis clicando no botão de reticências ( **...** ) ao lado dos campos de propriedade **ReadOnlyVariables** e **ReadWriteVariables** e, em seguida, selecionar as variáveis na caixa de diálogo **Selecionar variáveis**.  
   
  Para obter informações gerais sobre como usar variáveis com o componente Script, consulte [Usando variáveis no componente Script](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   

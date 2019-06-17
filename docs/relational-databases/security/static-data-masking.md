@@ -12,10 +12,10 @@ ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1cf3b95ec5836ac86770bd0cd9784f0617b91846
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580975"
 ---
 # <a name="static-data-masking"></a>Máscara de Dados Estáticos
@@ -93,7 +93,7 @@ A substituição é feita no nível do armazenamento. Em decorrência disso, nã
 
 Veja abaixo um guia passo a passo para executar a Máscara de Dados Estáticos. 
  
-1. Inicie o SQL Server Management Studio. Conecte-se ao banco de dados. No painel **Pesquisador de Objetos** do lado esquerdo, expanda a pasta Bancos de dados. Clique com o botão direito do mouse no banco de dados que você deseja mascarar. Clique com o botão esquerdo do mouse em **Tarefas**. Clique com o botão esquerdo do mouse em **Mascarar banco de dados... (versão prévia)**.
+1. Inicie o SQL Server Management Studio. Conecte-se ao banco de dados. No painel **Pesquisador de Objetos** do lado esquerdo, expanda a pasta Bancos de dados. Clique com o botão direito do mouse no banco de dados que você deseja mascarar. Clique com o botão esquerdo do mouse em **Tarefas**. Clique com o botão esquerdo do mouse em **Mascarar banco de dados... (versão prévia)** .
  
  ![Menu de tarefas](../../relational-databases/security/media/sql-static-data-masking/task_data_masking.PNG)
  
@@ -140,7 +140,7 @@ O mascaramento NULL substitui todos os valores na coluna por NULL. Se a coluna n
 
 ### <a name="single-value-masking"></a>Mascaramento de valor único
 
-O Mascaramento de valor único substitui todos os valores na coluna por um único valor fixo; esse valor é especificado pelo usuário. O formato da entrada deve ser conversível independentemente de qual seja o tipo da coluna selecionada. Para especificar o valor, clique em **Configurar...**, forneça um valor e, em seguida, clique em **OK**. 
+O Mascaramento de valor único substitui todos os valores na coluna por um único valor fixo; esse valor é especificado pelo usuário. O formato da entrada deve ser conversível independentemente de qual seja o tipo da coluna selecionada. Para especificar o valor, clique em **Configurar...** , forneça um valor e, em seguida, clique em **OK**. 
 
 ![Parâmetro do mascaramento de valor único](../../relational-databases/security/media/sql-static-data-masking/single_value_parameter.PNG)
 
@@ -167,7 +167,7 @@ Veja abaixo um exemplo do Mascaramento de ordem aleatória com valores NULL não
 | 612-72-1026  | 116-30-8733  | 209-36-1971 |  
 
 ### <a name="group-shuffle-masking"></a>Mascaramento de ordem aleatória de grupo
-A ordem aleatória de grupo associa várias colunas em um grupo de ordem aleatória. As colunas em um grupo de ordem aleatória serão ordenadas aleatoriamente em conjunto. O usuário precisa especificar o nome do grupo de ordem aleatória usando a opção **Configurar...**.
+A ordem aleatória de grupo associa várias colunas em um grupo de ordem aleatória. As colunas em um grupo de ordem aleatória serão ordenadas aleatoriamente em conjunto. O usuário precisa especificar o nome do grupo de ordem aleatória usando a opção **Configurar...** .
 
 ![Parâmetro de mascaramento de ordem aleatória de grupo](../../relational-databases/security/media/sql-static-data-masking/group_shuffle_parameter.PNG)
 

@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 992784658a97e938b7793c612d32dfa7fc2a5574
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696798"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62734707"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transações (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -90,7 +90,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Os modos de transação são gerenciados no nível da sessão. Por exemplo, se uma sessão começar uma transação explícita ou definir AUTOCOMMIT como OFF ou IMPLICIT_TRANSACTIONS como ON, ela não terá efeito nos modos de transação de nenhuma outra sessão.  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Não é possível reverter uma transação depois que uma instrução COMMIT é emitida porque as modificações nos dados tornaram-se permanentes no banco de dados.  
   
  Os comandos [CREATE DATABASE &#40;SQL Data Warehouse do Azure&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) e [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) não podem ser usados dentro de uma transação explícita.  

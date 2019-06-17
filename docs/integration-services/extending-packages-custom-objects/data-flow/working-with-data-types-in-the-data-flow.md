@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0fed13e0b351e53e36d09eb5e2ed2e0e405c18c3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724624"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Trabalhando com tipos de dados no fluxo de dados
@@ -100,7 +100,7 @@ ms.locfileid: "65724624"
 > [!NOTE]  
 >  Os arquivos de mapeamento no formato XML que são instalados por padrão em C:\Arquivos de Programas\Microsoft SQL Server\130\DTS\MappingFiles não são relacionados ao mapeamento de tipos de dados descrito neste tópico. Esses arquivos mapeiam tipos de dados de uma versão do banco de dados ou sistema para outro (por exemplo, do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para o Oracle) e são usados apenas pelo Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações sobre esses arquivos de mapeamento, consulte [Assistente de Importação e Exportação do SQL Server](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).  
   
-### <a name="mapping-between-integration-services-and-managed-data-types"></a>Mapeando entre os tipos de dados gerenciados e do Integration Services   
+### <a name="mapping-between-integration-services-and-managed-data-types"></a>Mapeando entre os tipos de dados gerenciados e do Integration Services  
  O <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> e os métodos <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> mapeiam tipos de dados [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] para tipos de dados gerenciados.  
   
 > [!CAUTION]  

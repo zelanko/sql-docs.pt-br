@@ -18,21 +18,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8382624490df51ce0c44856363247697a546a9b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634354"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661808"
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication"></a>Adicionar e remover artigos de uma publicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Inicialmente, adicione os artigos a uma publicação ao criá-la no Assistente para Nova Publicação. Para obter mais informações sobre como usar esse assistente, consulte [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md).  
   
- Após a criação da publicação, adicione e exclua artigos na página **Artigos** da caixa de diálogo **Propriedades da Publicação – \<Publicação>**. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Para obter informações sobre as considerações para adicionar e remover artigos, consulte [Adicionar e remover artigos de publicações existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+ Após a criação da publicação, adicione e exclua artigos na página **Artigos** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Para obter informações sobre as considerações para adicionar e remover artigos, consulte [Adicionar e remover artigos de publicações existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="to-add-an-article-after-a-publication-is-created"></a>Para adicionar um artigo após a criação de uma publicação  
   
-1.  Na página **Artigos** da caixa de diálogo **Propriedades da Publicação – \<Publicação>**, desmarque a caixa de seleção **Mostrar somente os objetos marcados na lista**. Isso permitirá ver os objetos não publicados, no banco de dados de publicação.  
+1.  Na página **Artigos** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** , desmarque a caixa de seleção **Mostrar somente os objetos marcados na lista**. Isso permitirá ver os objetos não publicados, no banco de dados de publicação.  
   
 2.  Marque a caixa de seleção próxima a cada artigo que você quer adicionar.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47634354"
   
 ### <a name="to-delete-an-article"></a>Para excluir um artigo  
   
-1.  Na página **Artigos** da caixa de diálogo **Propriedades da Publicação – \<Publicação>**, desmarque a caixa de seleção ao lado de cada artigo que deseja excluir.  
+1.  Na página **Artigos** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** , desmarque a caixa de seleção ao lado de cada artigo que deseja excluir.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
