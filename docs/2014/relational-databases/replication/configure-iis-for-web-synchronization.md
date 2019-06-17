@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f361b15458230c62d8710e56164e1c80de5d95a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62722359"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurar IIS para sincronização da Web
@@ -64,7 +64,7 @@ ms.locfileid: "62722359"
   
 1.  Faça logon no computador que está executando IIS como um administrador.  
   
-2.  Inicie o **Gerenciador dos Serviços de Informações da Internet (IIS)**:  
+2.  Inicie o **Gerenciador dos Serviços de Informações da Internet (IIS)** :  
   
     1.  Clique em **Iniciar**e em **Executar**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62722359"
   
 3.  Execute o Assistente de Certificado IIS:  
   
-    1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, expanda o nó **computador local** e depois expanda a pasta **Sites da Web** .  
+    1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)** , expanda o nó **computador local** e depois expanda a pasta **Sites da Web** .  
   
     2.  Clique com o botão direito em **Site Padrão da Web**e depois clique em **Propriedades**.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "62722359"
   
 8.  Na página **Acesso ao Diretório** :  
   
-    1.  Clique na caixa de diálogo **Adicionar**e depois em **Selecionar Usuários ou Grupos** , adicione as contas pelas quais os Assinantes farão conexões ao IIS. These are the accounts that you will specify on the **Web Server Information** page of the New Subscription Wizard or as the value for the [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)*@internet_login* parameter.  
+    1.  Clique na caixa de diálogo **Adicionar**e depois em **Selecionar Usuários ou Grupos** , adicione as contas pelas quais os Assinantes farão conexões ao IIS. These are the accounts that you will specify on the **Web Server Information** page of the New Subscription Wizard or as the value for the [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) *@internet_login* parameter.  
   
 9. Na página **Acesso ao Compartilhamento de Instantâneos** , digite o compartilhamento de instantâneo. As permissões apropriadas são definidas nesse compartilhamento de forma que os Assinantes possam acessar os arquivos de instantâneos. Para obter mais informações sobre permissões para compartilhamento, consulte [Proteger uma pasta de instantâneo](security/secure-the-snapshot-folder.md).  
   
@@ -272,13 +272,13 @@ ms.locfileid: "62722359"
   
     7.  Clique em **OK**.  
   
-4.  Crie um pool de aplicativos no **Gerenciador dos Serviços de Informação de Internet (IIS)**:  
+4.  Crie um pool de aplicativos no **Gerenciador dos Serviços de Informação de Internet (IIS)** :  
   
     1.  Clique em **Iniciar**e em **Executar**.  
   
     2.  No **aberto** , digite `inetmgr`e, em seguida, clique em **Okey**.  
   
-    3.  No **Gerenciador dos Serviços de Informação de Internet (IIS)**, expanda o nó do **computador local** .  
+    3.  No **Gerenciador dos Serviços de Informação de Internet (IIS)** , expanda o nó do **computador local** .  
   
     4.  Clique com o botão direito do mouse em **Pools de Aplicativos**, aponte para **Novo** e clique em **Pool de Aplicativos**.  
   
@@ -286,11 +286,11 @@ ms.locfileid: "62722359"
   
 5.  Associe a conta com o pool de aplicativos:  
   
-    1.  No **Gerenciador dos Serviços de Informação de Internet (IIS)**, expanda o nó do **computador local** e depois expanda **Pools de Aplicativos**.  
+    1.  No **Gerenciador dos Serviços de Informação de Internet (IIS)** , expanda o nó do **computador local** e depois expanda **Pools de Aplicativos**.  
   
     2.  Clique com o botão direito do mouse no pool de aplicativos que você criou e depois clique em **Propriedades**.  
   
-    3.  Na caixa de diálogo **Propriedades de \<ApplicationPoolName>**, na guia **Identidade**, clique em **Configurável**.  
+    3.  Na caixa de diálogo **Propriedades de \<ApplicationPoolName>** , na guia **Identidade**, clique em **Configurável**.  
   
     4.  Nos campos **Nome de usuário** e **senha** , digite a conta e senha que foram criadas na etapa 1.  
   
@@ -298,11 +298,11 @@ ms.locfileid: "62722359"
   
 6.  Associe o pool de aplicativos com o diretório virtual que é usado para a sincronização da Web:  
   
-    1.  No **Gerenciador dos Serviços de Informação de Internet (IIS)**, expanda o nó do **computador local** e depois expanda **Sites da Web**.  
+    1.  No **Gerenciador dos Serviços de Informação de Internet (IIS)** , expanda o nó do **computador local** e depois expanda **Sites da Web**.  
   
     2.  Expanda o site da Web que você está usando para a sincronização da Web, clique com o botão direito do mouse no diretório virtual que você criou para a sincronização da Web e depois clique em **Propriedades**.  
   
-    3.  Na guia **Diretório Virtual** da caixa de diálogo **Propriedades de \<VirtualDirectoryName>**, na lista suspensa **Pool de aplicativos**, selecione o pool de aplicativos criado na etapa 5.  
+    3.  Na guia **Diretório Virtual** da caixa de diálogo **Propriedades de \<VirtualDirectoryName>** , na lista suspensa **Pool de aplicativos**, selecione o pool de aplicativos criado na etapa 5.  
   
     4.  Clique em **OK**.  
   
@@ -347,7 +347,7 @@ ms.locfileid: "62722359"
     > [!NOTE]  
     >  Os certificados serão instalados para os usuários. Esse processo deve ser executado para cada usuário que sincronizará com o IIS.  
   
-4.  Na caixa de diálogo **Conectar a \<ServerName>**, especifique o logon e a senha que o Agente de Mesclagem usará para se conectar ao IIS. Essas credenciais também serão especificadas no Assistente para Nova Assinatura.  
+4.  Na caixa de diálogo **Conectar a \<ServerName>** , especifique o logon e a senha que o Agente de Mesclagem usará para se conectar ao IIS. Essas credenciais também serão especificadas no Assistente para Nova Assinatura.  
   
 5.  Na janela do Internet Explorer chamada **Informação diagnóstica do SQL Websync**, verifique se o valor em cada coluna **Status** na página é **ÊXITO**.  
   

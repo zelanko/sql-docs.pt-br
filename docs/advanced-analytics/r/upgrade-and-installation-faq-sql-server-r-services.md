@@ -3,17 +3,17 @@ title: Atualização e instalação perguntas frequentes (FAQ) - serviços do SQ
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/15/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
 manager: cgronlun
-ms.openlocfilehash: 3a4a0c740268a8e2d6691e3c8a87634cc05f9ab1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8a53069195ee351630f2ef79f56069f013137d9b
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642319"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140364"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>Perguntas frequentes sobre atualização e instalação para o aprendizado de máquina do SQL Server ou Microsoft R Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ Dependendo da compilação do SQL Server que você está instalando, algumas das
 
 - Em versões anteriores do SQL Server 2016 R Services, a notação 8dot3 era necessário na unidade que contém o diretório de trabalho. Se você instalou uma versão de pré-lançamento, a atualização para o SQL Server 2016 Service Pack 1 deve corrigir esse problema. Esse requisito não se aplica às versões após o SP1.
 
-- Atualmente, não é possível instalar [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] em um cluster de failover. No entanto, visualização de 2019 do SQL Server oferece suporte a failover se você quiser avaliar esse capablity em um ambiente de teste. Para obter mais informações, consulte [What's New](../what-s-new-in-sql-server-machine-learning-services.md).
+- Atualmente, não é possível instalar [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] em um cluster de failover. No entanto, visualização de 2019 do SQL Server oferece suporte a failover se você quiser avaliar esse recurso em um ambiente de teste. Para obter mais informações, consulte [What's New](../what-s-new-in-sql-server-machine-learning-services.md).
 
 - Em uma VM do Azure, alguma configuração adicional pode ser necessária. Por exemplo, você talvez precise criar uma exceção de firewall para dar suporte a acesso remoto.
 
@@ -63,7 +63,7 @@ Você pode atualizar sua versão do SQL Server ao executar novamente o Assistent
 + [Atualize o SQL Server usando o Assistente de instalação](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
 Você pode atualizar apenas a componentes usando um processo chamado associação de aprendizado de máquina: 
-+ [Usar o SqlBindR para atualizar os componentes de aprendizado de máquina](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
++ [Usar o SqlBindR para atualizar os componentes de aprendizado de máquina](../install/upgrade-r-and-python.md)
 
 ### <a name="end-of-support-for-in-place-upgrades-from-prerelease-versions"></a>Fim do suporte para atualizações in-loco das versões de pré-lançamento
 
@@ -99,7 +99,7 @@ Se você tiver instalado uma versão de pré-lançamento do Microsoft R Server, 
 
 2.  Na caixa de diálogo com opções para **Adicionar**, **Reparar**ou **Remover** componentes, selecione **Remover**.
   
-3.  Na página **Selecionar Recursos** em **Recursos Compartilhados**, selecione **R Server (Autônomo)**. Clique em **Avançar**e em **Concluir** para desinstalar apenas os componentes selecionados.
+3.  Na página **Selecionar Recursos** em **Recursos Compartilhados**, selecione **R Server (Autônomo)** . Clique em **Avançar**e em **Concluir** para desinstalar apenas os componentes selecionados.
 
 ## <a name="r-services-and-r-server-standalone-side-by-side-errors"></a>Serviços de R e erros de lado a lado do R Server (autônomo) 
 
@@ -123,7 +123,7 @@ Se esse procedimento não conseguir resolver o problema, experimente a seguinte 
 
 3. Reinicie o servidor.
 
-4. Execute a instalação do SQL Server e adicionar somente o recurso R Services (no banco de dados). Não marque **R Server (autônomo)**.
+4. Execute a instalação do SQL Server e adicionar somente o recurso R Services (no banco de dados). Não marque **R Server (autônomo)** .
 
 Em geral, é recomendável que você não instalar o R Services (no banco de dados) e o R Server (autônomo) no mesmo computador. No entanto, supondo que o servidor tem capacidade suficiente, você pode achar que r Server autônomo pode ser útil como uma ferramenta de desenvolvimento. Outro cenário possível é que você precisa usar os recursos de operacionalização do R Server, mas também querem acessar dados do SQL Server sem a movimentação de dados.
 

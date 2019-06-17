@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017760"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
@@ -42,7 +42,7 @@ sp_help [ [ @objname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @objname = ] 'name'` É o nome de qualquer objeto no **sysobjects** ou digite todos os dados definidos pelo usuário a **systypes** tabela. *nome da* está **nvarchar (** 776 **)**, com um padrão NULL. Nomes de banco de dados não são aceitáveis.  Dois ou três nomes de parte devem ser delimitados, como 'Person.AddressType' ou [Person.AddressType].   
+`[ @objname = ] 'name'` É o nome de qualquer objeto no **sysobjects** ou digite todos os dados definidos pelo usuário a **systypes** tabela. *nome da* está **nvarchar (** 776 **)** , com um padrão NULL. Nomes de banco de dados não são aceitáveis.  Dois ou três nomes de parte devem ser delimitados, como 'Person.AddressType' ou [Person.AddressType].   
    
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -93,7 +93,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Column_name**|**nvarchar(** 128 **)**|Nome da coluna.|  
         |**Tipo**|**nvarchar(** 128 **)**|Tipo de dados da coluna.|  
         |**Computado**|**varchar(** 35 **)**|Indica se os valores na coluna são computados: Sim ou não.|  
-        |**Comprimento**|**int**|Comprimento da coluna em bytes.<br /><br /> Observação: Se o tipo de dados é um tipo de valor grande (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**), o valor será Exibir como -1.|  
+        |**Comprimento**|**int**|Comprimento da coluna em bytes.<br /><br /> Observação: Se o tipo de dados é um tipo de valor grande (**varchar (max)** , **nvarchar (max)** , **varbinary (max)** , ou **xml**), o valor será Exibir como -1.|  
         |**prec**|**char(** 5 **)**|Precisão da coluna.|  
         |**Escala**|**char(** 5 **)**|Escala da coluna.|  
         |**Permite valor nulo**|**varchar(** 35 **)**|Indica se valores nulos são permitidos na coluna: Sim ou não.|  

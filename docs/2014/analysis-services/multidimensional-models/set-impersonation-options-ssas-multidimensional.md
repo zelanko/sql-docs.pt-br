@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072956"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Definir opções de representação (SSAS multidimensional)
@@ -37,7 +37,7 @@ ms.locfileid: "66072956"
 3.  Escolha uma opção descrita em [Opções de representação](#bkmk_options) neste tópico.  
   
 ## <a name="set-impersonation-options-in-management-studio"></a>Definir opções de representação no Management Studio  
- No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra a caixa de diálogo **Informações sobre Representação** clicando no botão de reticências (**...**) das seguintes propriedades destas caixas de diálogo:  
+ No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra a caixa de diálogo **Informações sobre Representação** clicando no botão de reticências ( **...** ) das seguintes propriedades destas caixas de diálogo:  
   
 -   Caixa de diálogo**Propriedades de Banco de Dados** , por meio da propriedade Informações sobre Representação de Fonte de Dados.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66072956"
  Todas as opções estão disponíveis na caixa de diálogo, mas nem todas as opções são apropriadas para todos os cenários. Use as informações a seguir para determinar a melhor opção para seu cenário.  
   
  **Usar nome de usuário e senha específicos**  
- Selecione esta opção para fazer o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto usar as credenciais de segurança de uma conta de usuário do Windows especificadas neste formato: *\<Nome de domínio >***\\***\<nome da conta de usuário >*.  
+ Selecione esta opção para fazer o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto usar as credenciais de segurança de uma conta de usuário do Windows especificadas neste formato: *\<Nome de domínio >***\\***\<nome da conta de usuário >* .  
   
  Escolha esta opção para usar uma identidade de usuário dedicada e com privilégios mínimos do Windows que você criou especificamente para finalidade de acesso a dados. Por exemplo, se você periodicamente criar uma conta de finalidade geral para recuperar dados usados em relatórios, poderá especificar essa conta aqui.  
   

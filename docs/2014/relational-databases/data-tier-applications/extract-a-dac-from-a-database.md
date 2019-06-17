@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7fc0aab989eb46b64ef6b9919f999ba13c4ef74f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872849"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extrair um DAC de um banco de dados
@@ -70,14 +70,14 @@ ms.locfileid: "62872849"
   
  **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página no futuro.  
   
- **Avançar >**: continua para a página **Escolher Método**.  
+ **Avançar >** : continua para a página **Escolher Método**.  
   
  **Cancelar** – Encerra o assistente sem extrair um aplicativo da camada de dados do banco de dados.  
   
 ###  <a name="SelectData"></a> Página Selecionar dados  
  Use esta página do assistente para selecionar os dados de referência que você deseja incluir em seu arquivo de pacote de DAC (aplicativo da camada de dados). A inclusão de dados em seu pacote de DAC é opcional. O pacote de DAC já incluirá o esquema de todos os objetos de banco de dados com suporte e objetos de instância relacionados a seu banco de dados.  
   
- Você pode incluir até 10 MB de dados de referência em seu arquivo de pacote de DAC. No entanto, para que tabelas sejam incluídas no DAC, elas não podem conter tipos de dados BLOB (objeto binário grande) como **image** ou **varchar(max)**. Para extrair quantidades maiores de dados para transferência para outro banco de dados, use o SQL Server Integration Services, o utilitário de cópia em massa ou um das muitas outras técnicas de migração de dados.  
+ Você pode incluir até 10 MB de dados de referência em seu arquivo de pacote de DAC. No entanto, para que tabelas sejam incluídas no DAC, elas não podem conter tipos de dados BLOB (objeto binário grande) como **image** ou **varchar(max)** . Para extrair quantidades maiores de dados para transferência para outro banco de dados, use o SQL Server Integration Services, o utilitário de cópia em massa ou um das muitas outras técnicas de migração de dados.  
   
  **Tabela de banco de dados** – Marque a caixa de seleção ao lado das tabelas do banco de dados que contêm os dados que você deseja incluir em seu pacote de DAC. Você pode selecionar até dez tabelas com mais ou menos 10.000 linhas.  
   

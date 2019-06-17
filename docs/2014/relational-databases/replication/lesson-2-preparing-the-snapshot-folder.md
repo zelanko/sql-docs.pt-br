@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721017"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>Lição 2: Preparando a pasta de instantâneo
@@ -36,9 +36,9 @@ ms.locfileid: "62721017"
   
 6.  Na guia **Segurança** , clique em **Editar**.  
   
-7.  Na caixa de diálogo **Permissões** , clique em **Adicionar**. Na caixa de texto **Selecionar Usuário, Computadores, Conta de Serviço ou Grupos**, digite o nome da conta do Snapshot Agent criado na Lição 1, como \<_Machine_Name>_**\repl_snapshot**, em que \<*Machine_Name>* é o nome do Publicador. Clique em **Verificar Nomes**e em **OK**.  
+7.  Na caixa de diálogo **Permissões** , clique em **Adicionar**. Na caixa de texto **Selecionar Usuário, Computadores, Conta de Serviço ou Grupos**, digite o nome da conta do Snapshot Agent criado na Lição 1, como \<_Machine_Name>_ **\repl_snapshot**, em que \<*Machine_Name>* é o nome do Publicador. Clique em **Verificar Nomes**e em **OK**.  
   
-8.  Repita a etapa anterior para adicionar permissões para o Agente de Distribuição, como \<_Machine_Name>_**\repl_distribution** e para o Agente de Mesclagem, como \<_Machine_Name>_**\repl_merge**.  
+8.  Repita a etapa anterior para adicionar permissões para o Agente de Distribuição, como \<_Machine_Name>_ **\repl_distribution** e para o Agente de Mesclagem, como \<_Machine_Name>_ **\repl_merge**.  
   
 9. Verifique se as permissões a seguir são permitidas:  
   
