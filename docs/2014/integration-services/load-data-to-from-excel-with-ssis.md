@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2092ef7f755b9980ee29ee3d7080774d78a0094
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767308"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importar dados do Excel ou exportar dados para o Excel com o SSIS (SQL Server Integration Services)
@@ -49,7 +49,7 @@ Verifique se você baixou o *Redistribuível* de 2016 do Mecanismo de Banco de D
 
 Se o computador já tiver uma versão de 32 bits do Office, então será necessário instalar a versão de 32 bits dos componentes. Também é necessário executar o pacote do SSIS no modo de 32 bits ou executar a versão de 32 bits do Assistente de importação e de exportação.
 
-Se você tiver uma assinatura do Office 365, talvez você veja uma mensagem de erro quando você executar o instalador. O erro indica que não é possível instalar o download lado a lado com os componentes do tipo clicar para executar do Office. Para ignorar essa mensagem de erro, execute a instalação no modo silencioso abrindo uma janela de Prompt de Comando e executando o arquivo .EXE baixado com a opção `/quiet`. Por exemplo: 
+Se você tiver uma assinatura do Office 365, talvez você veja uma mensagem de erro quando você executar o instalador. O erro indica que não é possível instalar o download lado a lado com os componentes do tipo clicar para executar do Office. Para ignorar essa mensagem de erro, execute a instalação no modo silencioso abrindo uma janela de Prompt de Comando e executando o arquivo .EXE baixado com a opção `/quiet`. Por exemplo:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
@@ -110,11 +110,11 @@ Se você estiver exportando dados do Excel e habilitar essa opção, a primeira 
 
 Há três tipos de objetos do Excel que podem ser usados como a origem ou o destino dos seus dados: uma planilha, um intervalo nomeado ou um intervalo de células sem nome que você especifica com seu endereço.
 
--   **Planilha.** Para especificar uma planilha, acrescente o caractere `$` ao final do nome da planilha e adicione delimitadores no começo e no final da cadeia de caracteres, por exemplo, **[Sheet1$]**. Ou procure um nome que termina com o caractere `$` na lista de tabelas e exibições existentes.
+-   **Planilha.** Para especificar uma planilha, acrescente o caractere `$` ao final do nome da planilha e adicione delimitadores no começo e no final da cadeia de caracteres, por exemplo, **[Sheet1$]** . Ou procure um nome que termina com o caractere `$` na lista de tabelas e exibições existentes.
 
 -   **Intervalo nomeado.** Para especificar um intervalo nomeado, forneça o nome do intervalo, por exemplo, **MyDataRange**. Ou procure um nome que não termine com o caractere `$` na lista de tabelas e exibições existentes.
     
--   **Intervalo sem nome.** Para especificar um intervalo de células ainda não nomeado, acrescente o caractere $ ao final do nome da planilha, adicione a especificação do intervalo e adicione delimitadores no começo e no final da cadeia de caracteres, por exemplo, **[Sheet1$A1:B4]**.
+-   **Intervalo sem nome.** Para especificar um intervalo de células ainda não nomeado, acrescente o caractere $ ao final do nome da planilha, adicione a especificação do intervalo e adicione delimitadores no começo e no final da cadeia de caracteres, por exemplo, **[Sheet1$A1:B4]** .
 
 Para selecionar ou especificar o tipo de objeto do Excel que você deseja usar com a origem ou o destino dos seus dados, siga um destes procedimentos:
 

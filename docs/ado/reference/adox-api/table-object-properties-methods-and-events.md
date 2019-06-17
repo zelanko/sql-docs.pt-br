@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 87758093e004a08e4fada0bc9e2f703c34220a35
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66705739"
 ---
 # <a name="table-object-properties-methods-and-events"></a>Propriedades, Métodos e Eventos do objeto Table
@@ -43,7 +43,7 @@ ms.locfileid: "66705739"
 ## <a name="methods"></a>Métodos  
  Nenhum.  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Nenhum.  
   
 ## <a name="see-also"></a>Consulte também  

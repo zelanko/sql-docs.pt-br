@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5870cb445d7afd098aba32ffd9be7a88c048bae5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62735052"
 ---
 # <a name="system-functions"></a>Funções de sistema
@@ -33,5 +33,5 @@ A tabela a seguir lista as funções do sistema que estão incluídas no conjunt
 |Função|Descrição|  
 |--------------|-----------------|  
 |**() DO BANCO DE DADOS** (ODBC 1.0)|Retorna o nome do banco de dados correspondente ao identificador de conexão. (O nome do banco de dados também está disponível por meio da chamada **SQLGetConnectOption** com a opção de conexão SQL_CURRENT_QUALIFIER.)|  
-|**IFNULL (** _exp_,_valor_**)** (ODBC 1.0)|Se *exp* for nulo, *valor* é retornado. Se *exp* não for nulo, *exp* é retornado. O tipo de dados possíveis ou tipos de *valor* deve ser compatível com o tipo de dados *exp*.|  
+|**IFNULL (** _exp_,_valor_ **)** (ODBC 1.0)|Se *exp* for nulo, *valor* é retornado. Se *exp* não for nulo, *exp* é retornado. O tipo de dados possíveis ou tipos de *valor* deve ser compatível com o tipo de dados *exp*.|  
 |**(USUÁRIO)** (ODBC 1.0)|Retorna o nome de usuário no DBMS. (O nome de usuário também está disponível por meio de **SQLGetInfo** , especificando o tipo de informações: SQL_USER_NAME.) Isso pode ser diferente do nome de logon.|

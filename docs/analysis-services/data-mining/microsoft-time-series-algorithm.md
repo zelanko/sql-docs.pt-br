@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 390ff54485e92e28736424048e5aaedbbee31181
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62758072"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo MTS
@@ -94,7 +94,7 @@ ms.locfileid: "62758072"
   
 |TimeID|Produto|Sales|Volume|  
 |------------|-------------|-----------|------------|  
-|1/2001|Um|1.000|600|  
+|1/2001|Um|1\.000|600|  
 |2/2001|Um|1100|500|  
 |1/2001|B|500|900|  
 |2/2001|B|300|890|  
@@ -110,7 +110,7 @@ ms.locfileid: "62758072"
   
 |TimeID|A_Sales|A_Volume|B_Sales|B_Volume|  
 |------------|--------------|---------------|--------------|---------------|  
-|1/2001|1.000|600|500|900|  
+|1/2001|1\.000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
  Nessa tabela, a coluna TimeID ainda contém a série temporal do modelo da série temporal, no qual você designa como a coluna key time. Entretanto, as colunas anteriores de Sales e Volume agora estão divididas em duas colunas e cada uma delas é precedida pelo nome do produto. Como resultado, existe somente uma única entrada para cada dia na coluna TimeID. Isso cria um modelo de série temporal que contém quatro colunas previsíveis: A_Sales, A_Volume, B_Sales e B_Volume.  

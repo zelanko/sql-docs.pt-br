@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62679154"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propriedades do SQL Server (guia Parâmetros de Inicialização)
@@ -51,7 +51,7 @@ ms.locfileid: "62679154"
  Para obter mais informações sobre como mover o banco de dados mestre, consulte o tópico "Movendo bancos de dados do sistema" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="optional-parameters"></a>Parâmetros opcionais  
- Todos os parâmetros de inicialização com suporte são descritos no tópico "Usando as opções de inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ", nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um parâmetro de inicialização -T*trace#* indica que uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser iniciada com um sinalizador de rastreamento (*trace#*) em vigor. São usados sinalizadores de rastreamento para iniciar o servidor com comportamento fora do padrão. Para obter mais informações sobre sinalizadores de rastreamento, consulte o tópico “Sinalizadores de rastreamento ([!INCLUDE[tsql](../../includes/tsql-md.md)])” nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Todos os parâmetros de inicialização com suporte são descritos no tópico "Usando as opções de inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ", nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um parâmetro de inicialização -T*trace#* indica que uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser iniciada com um sinalizador de rastreamento (*trace#* ) em vigor. São usados sinalizadores de rastreamento para iniciar o servidor com comportamento fora do padrão. Para obter mais informações sobre sinalizadores de rastreamento, consulte o tópico “Sinalizadores de rastreamento ([!INCLUDE[tsql](../../includes/tsql-md.md)])” nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!CAUTION]  
 >  Talvez você veja parâmetros de inicialização e sinalizadores de rastreamento adicionais não documentados na Internet. Os parâmetros de inicialização e os indicadores de rastreamento não documentados são criados para resolver problemas ou para forçar determinas condições necessárias para testes. O uso de parâmetros de inicialização não documentados pode ter resultados inesperados. Não use parâmetros não documentados a não ser quando direcionado pelos Serviços de Atendimento ao Cliente da Microsoft.  

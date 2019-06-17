@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 75e5953d8f7ef9af1134db56f7061261eee2c0fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721428"
 ---
 # <a name="delete-a-push-subscription"></a>Excluir uma assinatura push
@@ -65,15 +65,15 @@ ms.locfileid: "62721428"
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Para excluir uma assinatura push de um instantâneo ou publicação transacional  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). Especifique **@publication** e **@subscriber**. Especifique um valor de **all** para **@article**. (Opcional) Se o Distribuidor não puder ser acessado, especifique um valor de **1** para **@ignore_distributor** para excluir a assinatura sem remover objetos relacionados no Distribuidor.  
+1.  No Publicador do banco de dados de publicação, execute [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). Especifique **@publication** e **@subscriber** . Especifique um valor de **all** para **@article** . (Opcional) Se o Distribuidor não puder ser acessado, especifique um valor de **1** para **@ignore_distributor** para excluir a assinatura sem remover objetos relacionados no Distribuidor.  
   
 2.  No Assinante no banco de dados de assinatura, execute [sp_subscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql) para remover metadados de replicação no banco de dados de assinatura.  
   
 #### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>Para excluir uma assinatura push para uma publicação de mesclagem.  
   
-1.  No Publicador, execute [sp_dropmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql), especificando **@publication**, **@subscriber** e **@subscriber_db**. (Opcional) Se o Distribuidor não puder ser acessado, especifique um valor de **1** para **@ignore_distributor** para excluir a assinatura sem remover objetos relacionados no Distribuidor.  
+1.  No Publicador, execute [sp_dropmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql), especificando **@publication** , **@subscriber** e **@subscriber_db** . (Opcional) Se o Distribuidor não puder ser acessado, especifique um valor de **1** para **@ignore_distributor** para excluir a assinatura sem remover objetos relacionados no Distribuidor.  
   
-2.  No Assinante no banco de dados de assinatura, execute [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql). Especifique **@publisher**, o **@publisher_db**, e **@publication**. Isso remove metadados de mesclagem do banco de dados de assinatura.  
+2.  No Assinante no banco de dados de assinatura, execute [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql). Especifique **@publisher** , o **@publisher_db** , e **@publication** . Isso remove metadados de mesclagem do banco de dados de assinatura.  
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  Esse exemplo exclui uma assinatura push para uma publicação transacional.  

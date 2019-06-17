@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721031"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lição 2: Criando uma assinatura para a publicação de mesclagem
@@ -40,7 +40,7 @@ ms.locfileid: "62721031"
   
 7.  Na caixa de diálogo **Novo Banco de Dados** , insira **SalesOrdersReplica** na caixa **Nome do banco de dados** , clique em **OK**e em **Avançar**.  
   
-8.  Na página segurança do Merge Agent, clique no botão de reticências (**...** ) botão, digite \< _Machine_Name >_**\repl_merge** no **conta de processo** caixa, forneça a senha para essa conta, clique em **Okey**, clique em **próxima**e, em seguida, clique em **próxima** novamente.  
+8.  Na página segurança do Merge Agent, clique no botão de reticências ( **...** ) botão, digite \< _Machine_Name >_ **\repl_merge** no **conta de processo** caixa, forneça a senha para essa conta, clique em **Okey**, clique em **próxima**e, em seguida, clique em **próxima** novamente.  
   
 9. Na página Inicializar Assinaturas, selecione **Na primeira sincronização** na lista **Inicializar Quando** , clique em **Avançar**e em **Avançar** novamente.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62721031"
   
 1.  Conecte-se ao Assinante no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Bancos de Dados**, **SalesOrdersReplica**e **Segurança**, clique com o botão direito do mouse em **Usuários**e selecione **Novo Usuário**.  
   
-2.  No **gerais** , insira \< _Machine_Name >_**\repl_merge** no **nome de usuário** , clique no botão reticências ( **...** ), clique em **navegue**, selecione \< _Machine_Name >_**\repl_merge**, clique em **Okey**, clique em **verificar nomes**e, em seguida, clique em **Okey**.  
+2.  No **gerais** , insira \< _Machine_Name >_ **\repl_merge** no **nome de usuário** , clique no botão reticências ( **...** ), clique em **navegue**, selecione \< _Machine_Name >_ **\repl_merge**, clique em **Okey**, clique em **verificar nomes**e, em seguida, clique em **Okey**.  
   
 3.  Em **Associação à função do banco de dados**, selecione **db_owner**e clique em **OK** para criar o usuário.  
   

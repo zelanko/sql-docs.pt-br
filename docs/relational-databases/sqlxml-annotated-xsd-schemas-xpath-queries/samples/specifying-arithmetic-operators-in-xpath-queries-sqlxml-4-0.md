@@ -18,10 +18,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c0d615a1012c976e2ef4a6f195a5808e9a36885
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737522"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Especificando operadores aritméticos em consultas XPath (SQLXML 4.0)
@@ -37,7 +37,7 @@ ms.locfileid: "62737522"
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- Na consulta, `child` é o eixo e `OrderDetail` é o teste de nó (TRUE se **OrderDetail** é um  **\<nó de elemento >**, porque o  **\< elemento >** nó é o nó principal para o **filho** eixo). Para todos os  **\<OrderDetail >** nós de elemento, o teste no predicado é aplicado, e somente os nós que satisfazem a condição são retornados.  
+ Na consulta, `child` é o eixo e `OrderDetail` é o teste de nó (TRUE se **OrderDetail** é um  **\<nó de elemento >** , porque o  **\< elemento >** nó é o nó principal para o **filho** eixo). Para todos os  **\<OrderDetail >** nós de elemento, o teste no predicado é aplicado, e somente os nós que satisfazem a condição são retornados.  
   
 > [!NOTE]  
 >  Os números em XPath são números de pontos flutuantes de precisão dupla e a comparação de números de pontos flutuantes como no exemplo provoca arredondamento.  

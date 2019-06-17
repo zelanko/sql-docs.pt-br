@@ -11,17 +11,17 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678514"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Lição 1: Criar o projeto do Visual Studio de esquema RDL
   Para este tutorial, você criará um aplicativo de console simples. Este tutorial presume que você está desenvolvendo em [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
   
 > [!NOTE]  
->  Ao acessar o serviço Web Servidor de Relatório que está em execução no [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] com Advanced Services, é preciso incluir "_SQLExpress" no caminho do "ReportServer". Por exemplo:   
+>  Ao acessar o serviço Web Servidor de Relatório que está em execução no [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] com Advanced Services, é preciso incluir "_SQLExpress" no caminho do "ReportServer". Por exemplo:  
 >   
 >  `http://myserver/reportserver_sqlexpress/reportservice2010.asmx"`  
   

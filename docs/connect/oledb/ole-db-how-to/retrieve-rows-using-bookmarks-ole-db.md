@@ -13,13 +13,13 @@ helpviewer_keywords:
 - rows [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: dbdff51e888433ed97920198f0fb8c3e8317ad53
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 1ae3556f4e78b71b714ced11ea9e7ee64dda619c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606038"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791193"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Recuperar linhas usando indicadores (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

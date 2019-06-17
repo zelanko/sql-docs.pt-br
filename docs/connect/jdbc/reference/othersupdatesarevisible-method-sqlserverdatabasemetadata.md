@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 3615c01f-ae0b-42a7-92b5-e8770d841c45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1c8c4388d7615c286395d67c0b5f7a9d9ae958bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a6465b3af971cababf5e20adc17d7e74a56e6e5e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635084"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789103"
 ---
 # <a name="othersupdatesarevisible-method-sqlserverdatabasemetadata"></a>Método othersUpdatesAreVisible (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public boolean othersUpdatesAreVisible(int type)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *tipo*  
+ *type*  
   
  Um **int** que indica o tipo do conjunto de resultados, que pode ser um dos valores a seguir, conforme definido em java.sql.ResultSet ou SQLServerResultSet:  
   

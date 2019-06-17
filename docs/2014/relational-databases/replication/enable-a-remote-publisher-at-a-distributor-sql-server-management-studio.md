@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7b554dc39832a834ebe1bc2ac2d4bfefa21721a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721314"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>Habilitar um Publicador remoto em um Distribuidor (SQL Server Management Studio)
-  Habilite um Publicador a usar um Distribuidor remoto na página **Publicadores** . Esta página está disponível no Assistente para Configurar Distribuição e na caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>**. Para mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Configurar publicação e distribuição](configure-publishing-and-distribution.md) e [Exibir e modificar o distribuidor e as propriedades do publicador](view-and-modify-distributor-and-publisher-properties.md).  
+  Habilite um Publicador a usar um Distribuidor remoto na página **Publicadores** . Esta página está disponível no Assistente para Configurar Distribuição e na caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>** . Para mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Configurar publicação e distribuição](configure-publishing-and-distribution.md) e [Exibir e modificar o distribuidor e as propriedades do publicador](view-and-modify-distributor-and-publisher-properties.md).  
   
 ### <a name="to-enable-a-publisher-in-the-configure-distribution-wizard"></a>Para habilitar um Publicador no Assistente para Configurar Distribuição  
   
@@ -33,13 +33,13 @@ ms.locfileid: "62721314"
   
 4.  Na página **Senha do Distribuidor** nas caixas de texto **Senha** e **Confirmar Senha** , especifique uma senha forte para a conta **distributor_admin** , que a replicação usa para conectar-se do Publicador para o Distribuidor para executar tarefas administrativas.  
   
-5.  Para exibir e modificar as configurações para um Publicador, clique no botão de propriedades (**...**).  
+5.  Para exibir e modificar as configurações para um Publicador, clique no botão de propriedades ( **...** ).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ### <a name="to-enable-a-publisher-in-the-distributor-properties-dialog-box"></a>Para habilitar um Publicador na caixa de diálogo Propriedades de Distribuidor  
   
-1.  Na página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>**, clique em **Adicionar**.  
+1.  Na página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>** , clique em **Adicionar**.  
   
 2.  Clique em **Adicionar Editor SQL Server**. Para obter informações sobre como habilitar um Oracle Publisher para usar um Distribuidor, consulte [Create a Publication from an Oracle Database](publish/create-a-publication-from-an-oracle-database.md).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62721314"
   
 4.  Na página **Publicadores** nas caixas de texto **Senha** e **Confirmar Senha** , especifique uma senha forte para a conta **distributor_admin** , que a replicação usará para conectar-se do Publicador para o Distribuidor para executar tarefas administrativas.  
   
-5.  Para exibir e modificar as configurações para um Publicador, clique no botão de propriedades (**...**).  
+5.  Para exibir e modificar as configurações para um Publicador, clique no botão de propriedades ( **...** ).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

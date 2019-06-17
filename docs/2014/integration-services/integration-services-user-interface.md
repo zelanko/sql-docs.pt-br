@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55b09057927fa9c5102b8d816c42e1741bc0883a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767668"
 ---
 # <a name="integration-services-user-interface"></a>Interface do usuário do Integration Services
@@ -47,7 +47,7 @@ ms.locfileid: "62767668"
 |**Assinatura Digital**|Assine um pacote ou remova a assinatura do pacote.|No menu **SSIS** , clique em **Assinatura Digital**.<br /><br /> -ou-<br /><br /> Clique com o botão direito do mouse em qualquer lugar na superfície de design da guia **Fluxo de Controle** e clique em **Assinatura Digital**.|  
 |**Definir Pontos de Interrupção**|Habilite pontos de interrupção em tarefas e defina propriedades do ponto de interrupção.|Na superfície de design da guia **Fluxo de Controle** , clique com o botão direito do mouse em uma tarefa ou um contêiner e clique em **Editar Pontos de Interrupção**. Para definir pontos de interrupção no pacote, clique com o botão direito do mouse em qualquer lugar da superfície de design da guia **Fluxo de Controle** e clique em **Editar Pontos de Interrupção**.|  
   
- A janela **Guia de Introdução** fornece links para exemplos, tutoriais e vídeos. Para adicionar links para conteúdo adicional, modifique o arquivo SamplesSites.xml fornecido com a versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. É recomendável não modificar o valor do elemento \<GettingStartedSamples> que especifica a URL do RSS Feed. O arquivo está localizado na pasta *\<unidade>*:\Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn. Em um computador de 64 bits, o arquivo está localizado na pasta *\<unidade>*:\Arquivos de Programas(x86)\Microsoft SQL Server\110\DTS\Binn  
+ A janela **Guia de Introdução** fornece links para exemplos, tutoriais e vídeos. Para adicionar links para conteúdo adicional, modifique o arquivo SamplesSites.xml fornecido com a versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. É recomendável não modificar o valor do elemento \<GettingStartedSamples> que especifica a URL do RSS Feed. O arquivo está localizado na pasta *\<unidade>* :\Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn. Em um computador de 64 bits, o arquivo está localizado na pasta *\<unidade>* :\Arquivos de Programas(x86)\Microsoft SQL Server\110\DTS\Binn  
   
  Se o arquivo SamplesSites.xml se tornar corrompido, substitua o xml no arquivo pelo seguinte xml padrão.  
   

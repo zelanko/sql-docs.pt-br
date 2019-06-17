@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 340423e23037ae401b1e5749fbed38b1822cfb41
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62677016"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>Exibir ou modificar as propriedades de uma condição de gerenciamento baseado em políticas
@@ -54,7 +54,7 @@ ms.locfileid: "62677016"
   
 4.  Clique no sinal de adição para expandir a pasta **Condições** .  
   
-5.  Clique com o botão direito do mouse na condição que você deseja exibir ou editar e selecione **Propriedades**. Para obter mais informações sobre as opções disponíveis na caixa de diálogo **Abrir Condição -**_nome_da_condição_, confira [Caixa de diálogo Criar Condição ou Abrir Condição, página Geral](../../integration-services/general-page-of-integration-services-designers-options.md), [Caixa de diálogo Abrir Condição, página Políticas Dependentes](open-condition-dialog-box-dependent-policies-page.md), [Caixa de diálogo Criar Condição ou Abrir Condição, página Descrição](create-new-condition-or-open-condition-dialog-box-description-page.md) e [Caixa de diálogo Edição Avançada &#40;Condição&#41;](advanced-edit-condition-dialog-box.md).  
+5.  Clique com o botão direito do mouse na condição que você deseja exibir ou editar e selecione **Propriedades**. Para obter mais informações sobre as opções disponíveis na caixa de diálogo **Abrir Condição -** _nome_da_condição_, confira [Caixa de diálogo Criar Condição ou Abrir Condição, página Geral](../../integration-services/general-page-of-integration-services-designers-options.md), [Caixa de diálogo Abrir Condição, página Políticas Dependentes](open-condition-dialog-box-dependent-policies-page.md), [Caixa de diálogo Criar Condição ou Abrir Condição, página Descrição](create-new-condition-or-open-condition-dialog-box-description-page.md) e [Caixa de diálogo Edição Avançada &#40;Condição&#41;](advanced-edit-condition-dialog-box.md).  
   
 6.  Quando terminar, clique em **OK**.  
   

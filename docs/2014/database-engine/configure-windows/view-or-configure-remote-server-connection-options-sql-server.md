@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5dfc0aa145f106fc57c25a6249b928ee27ab4b87
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62757200"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>Exibir ou configurar opções de conexão de servidor remoto (SQL Server)
@@ -51,7 +51,7 @@ ms.locfileid: "62757200"
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse em um servidor e clique em **Propriedades**.  
   
-2.  Na caixa de diálogo **Propriedades do SQL Server – \<***server_name***>**, clique em **Conexões**.  
+2.  Na caixa de diálogo **Propriedades do SQL Server – \<***server_name***>** , clique em **Conexões**.  
   
 3.  Na página **Conexões** , verifique as configurações de **Conexões de servidor remoto** e as modifique, se necessário.  
   

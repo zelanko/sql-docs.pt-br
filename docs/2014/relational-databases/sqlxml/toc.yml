@@ -198,7 +198,7 @@
       href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md
     - name: Objeto SqlXmlAdapter (classes gerenciadas SQLXML)
       href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md
-    - name: 'Usando as classes gerenciadas do SQLXML '
+    - name: Usando as classes gerenciadas do SQLXML
       href: ../../database-engine/dev-guide/using-the-sqlxml-managed-classes.md
     - name: Executando consultas SQL (classes gerenciadas SQLXML)
       href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md

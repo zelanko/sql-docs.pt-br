@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5fe10a98910f54e4317d0191753d40b9b6b0b94f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62736045"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
@@ -95,12 +95,12 @@ ms.locfileid: "62736045"
 |28|ArimaPeriodicStructure|Uma estrutura periódica em um modelo ARIMA. Aplica-se apenas a modelos de série temporal que usam o algoritmo ARIMA.|  
 |29|ArimaAutoRegressive|Coeficiente de regressão automática para um único termo em um modelo ARIMA.<br /><br /> Aplica-se apenas a modelos de série temporal que usam o algoritmo ARIMA.|  
 |30|ArimaMovingAverage|Coeficiente de média de movimentação para um único termo em um modelo ARIMA. Aplica-se apenas a modelos de série temporal que usam o algoritmo ARIMA.|  
-|1.000|CustomBase|Ponto de partida para tipos de nós personalizados. Os tipos de nós personalizados devem ser inteiros maiores do que esta constante. Aplica-se a modelos criados com algoritmos de plug-in personalizados.|  
+|1\.000|CustomBase|Ponto de partida para tipos de nós personalizados. Os tipos de nós personalizados devem ser inteiros maiores do que esta constante. Aplica-se a modelos criados com algoritmos de plug-in personalizados.|  
   
 ### <a name="node-id-name-caption-and-description"></a>ID, nome, legenda e descrição do nó  
  O nó raiz de qualquer modelo sempre tem a ID exclusiva (**NODE_UNIQUE_NAME**) igual a 0. Todas as IDs de nó são atribuídas automaticamente pelo Analysis Services e não podem ser modificadas.  
   
- O nó raiz de cada modelo também contém alguns metadados básicos sobre o modelo. Estes metadados incluem o banco de dados do Analysis Services em que o modelo é armazenado (**MODEL_CATALOG**), o esquema (**MODEL_SCHEMA)** e o nome do modelo (**MODEL_NAME)**. No entanto, essas informações são repetidas em todos os nós do modelo, de modo que não é necessário consultar o nó raiz para obter esses metadados.  
+ O nó raiz de cada modelo também contém alguns metadados básicos sobre o modelo. Estes metadados incluem o banco de dados do Analysis Services em que o modelo é armazenado (**MODEL_CATALOG**), o esquema (**MODEL_SCHEMA)** e o nome do modelo (**MODEL_NAME)** . No entanto, essas informações são repetidas em todos os nós do modelo, de modo que não é necessário consultar o nó raiz para obter esses metadados.  
   
  Além de um nome usado como o identificador exclusivo, cada nó tem um *nome* (**NODE_NAME**). Este nome é criado automaticamente pelo algoritmo para propósitos de exibição e não pode ser editado.  
   
