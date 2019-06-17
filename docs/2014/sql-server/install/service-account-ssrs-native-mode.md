@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 318e567e32ca66ba2d42e2e6333c8b2e2075f06c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092177"
 ---
 # <a name="service-account-ssrs-native-mode"></a>Conta do Serviço (modo nativo do SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66092177"
  Selecione **Serviço de Rede**, **Sistema Local**ou **Serviço Local** na lista. Somente a opção **Serviço de Rede** é recomendada; porém, você pode configurar a conta para usar qualquer conta disponível.  
   
  **Usar outra conta**  
- Selecione essa opção para especificar uma conta de usuário do Windows. Você pode inserir uma conta de usuário local do Windows ou uma conta de usuário de domínio. Especifique uma conta de domínio neste formato:  *\<domínio >\\< usuário\>*. Especifique uma conta de usuário local do Windows neste formato:  *\<nome do computador >\\< usuário\>*. Só é possível selecionar uma conta existente; você não pode criar novas contas na Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Selecione essa opção para especificar uma conta de usuário do Windows. Você pode inserir uma conta de usuário local do Windows ou uma conta de usuário de domínio. Especifique uma conta de domínio neste formato:  *\<domínio >\\< usuário\>* . Especifique uma conta de usuário local do Windows neste formato:  *\<nome do computador >\\< usuário\>* . Só é possível selecionar uma conta existente; você não pode criar novas contas na Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  O limite máximo de caracteres na conta é 20.  
   

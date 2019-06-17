@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d71a6ddc965b422f0f96f40788352213501b4db2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63042288"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Baixe e aplique as atualizações da Microsoft para o Analytics Platform System
@@ -107,7 +107,7 @@ Antes de executar essas etapas, você precisa:
   
 1.  Antes de começar, abra o [monitorar o dispositivo usando o Console de administração do &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md), clique no **estado de dispositivo** guia e, em seguida, verifique o  **Cluster** e **rede** colunas Mostrar verde (ou NA) para todos os nós. Se todos os alertas existirem em qualquer uma dessas colunas, o dispositivo não poderá instalar atualizações corretamente. Lidar com todos os alertas existentes na **Cluster** e **rede** colunas antes de continuar.  
   
-2.  Faça logon na _< nome_do_domínio >_**-HST01** nó como o administrador de domínio do Fabric.  
+2.  Faça logon na _< nome_do_domínio >_ **-HST01** nó como o administrador de domínio do Fabric.  
   
 3.  Para aplicar todas as atualizações aprovadas para o WSUS, execute o programa de atualização. Ver [execute o programa de atualização](#RunUpdateWizard) abaixo para obter instruções.  
   
@@ -123,7 +123,7 @@ Antes de executar essas etapas, você precisa:
   
 5.  No **Status** menu suspenso, selecione **qualquer** e clique em **atualizar**.  
   
-6.  Expandir **serviços de atualização**, *<appliance name>*- VMM, **atualizações**, **todas as atualizações**, onde *<appliance name>* é o nome do dispositivo.  
+6.  Expandir **serviços de atualização**, *<appliance name>* - VMM, **atualizações**, **todas as atualizações**, onde *<appliance name>* é o nome do dispositivo.  
   
 7.  No **todas as atualizações** janela conjunto **aprovação** para **qualquer exceto recusada**.  
   

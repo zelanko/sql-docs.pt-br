@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 661752a55b808b010f8a111bcc18e47048a3999b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63065103"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Mensagens de erro nativas do Driver ODBC do Visual FoxPro
@@ -296,7 +296,7 @@ As tabelas a seguir listam as mensagens de erro nativas para o Driver de ODBC do
 |901|Valor do argumento de função, o tipo ou a contagem é inválida.|  
 |902|Falha do avaliador de expressão.|  
 |903|Cadeia de caracteres é muito grande para caber.|  
-|904|* * ou ^ erro de domínio.|  
+|904|\* * ou ^ erro de domínio.|  
 |905|LOG (): Zero ou negativo, usado como argumento.|  
 |906|Argumento Sqrt () não pode ser negativo.|  
 |912|Operação é inválida para um campo geral.|  

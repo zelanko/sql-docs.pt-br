@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f293e906d647d318bca5d730d0164b75cc88fc6f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998022"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
@@ -50,11 +50,11 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
-`[ @target_server_groups = ] 'target_server_groups'` Uma lista separada por vírgulas de grupos de servidores de destino ao qual o trabalho especificado deve ser aplicado. *target_server_groups* está **nvarchar(2048)**, com um padrão NULL.  
+`[ @target_server_groups = ] 'target_server_groups'` Uma lista separada por vírgulas de grupos de servidores de destino ao qual o trabalho especificado deve ser aplicado. *target_server_groups* está **nvarchar(2048)** , com um padrão NULL.  
   
-`[ @target_servers = ] 'target_servers'` Uma lista separada por vírgulas de servidores de destino ao qual o trabalho especificado deve ser aplicado. *target_servers*está **nvarchar(2048)**, com um padrão NULL.  
+`[ @target_servers = ] 'target_servers'` Uma lista separada por vírgulas de servidores de destino ao qual o trabalho especificado deve ser aplicado. *target_servers*está **nvarchar(2048)** , com um padrão NULL.  
   
-`[ @operation = ] 'operation'` É se o trabalho especificado deve ser aplicado a ou removido do servidores de destino especificados ou grupos de servidores de destino. *operação*está **varchar(7)**, com um padrão APPLY. As operações válidas são **APPLY** e **remover**.  
+`[ @operation = ] 'operation'` É se o trabalho especificado deve ser aplicado a ou removido do servidores de destino especificados ou grupos de servidores de destino. *operação*está **varchar(7)** , com um padrão APPLY. As operações válidas são **APPLY** e **remover**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

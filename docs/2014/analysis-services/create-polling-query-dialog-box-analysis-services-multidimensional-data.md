@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: faf96ad02005c0385ec56e1f8763da2e82f093ec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086828"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Criar Consulta de Sondagem (Analysis Services - Dados Multidimensionais)
-  Use a caixa de diálogo **Criar Consulta Sondagem** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar uma consulta sondagem na guia **Notificações** da caixa de diálogo **Opções de Armazenamento**. Uma consulta de sondagem é normalmente uma consulta singleton que retorna um valor que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode usar para determinar se foram feitas alterações em uma tabela ou em outro objeto relacional. É possível exibir a caixa de diálogo **Criar Consulta Sondagem** clicando no botão de reticências (**...**) na coluna **Consulta Sondagem** da grade da opção **Sondagem agendada** na guia **Notificações** da caixa de diálogo **Opções de Armazenamento**. Para obter mais informações sobre a guia **Notificações** da caixa de diálogo **Opções de Armazenamento**, consulte [Notificações &#40;Caixa de diálogo Opções de Armazenamento&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  
+  Use a caixa de diálogo **Criar Consulta Sondagem** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar uma consulta sondagem na guia **Notificações** da caixa de diálogo **Opções de Armazenamento**. Uma consulta de sondagem é normalmente uma consulta singleton que retorna um valor que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode usar para determinar se foram feitas alterações em uma tabela ou em outro objeto relacional. É possível exibir a caixa de diálogo **Criar Consulta Sondagem** clicando no botão de reticências ( **...** ) na coluna **Consulta Sondagem** da grade da opção **Sondagem agendada** na guia **Notificações** da caixa de diálogo **Opções de Armazenamento**. Para obter mais informações sobre a guia **Notificações** da caixa de diálogo **Opções de Armazenamento**, consulte [Notificações &#40;Caixa de diálogo Opções de Armazenamento&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  
   
  O tipo de valor que deve ser retornado pela consulta sondagem depende do tipo das atualizações planejadas para o cache MOLAP (OLAP multidimensional) do objeto com base na tabela que está sendo consultada:  
   

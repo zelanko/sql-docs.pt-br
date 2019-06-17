@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 294586f0d48ca96ca12d3e9eac70f5d2d288654f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105831"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formatando ponteiros de um medidor (Construtor de Relatórios e SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "66105831"
 ##  <a name="DisplayingMultiple"></a> Exibindo vários ponteiros no medidor  
  É possível adicionar vários ponteiros ao medidor para apontar para vários valores na mesma escala. Isso pode ser útil para mostrar valores baixo e alto simultaneamente. Para especificar mais de um ponteiro do medidor na mesma escala, clique com o botão direito do mouse em qualquer lugar do medidor e clique em **Adicionar Ponteiro** no menu de atalho. Também é possível adicionar uma escala clicando com o botão direito do mouse em qualquer lugar do medidor e clicando em **Adicionar Escala**. Assim, você pode adicionar um ponteiro e ele será associado automaticamente à última escala.  
   
- Quando os ponteiros se sobrepõem, a ordem de desenho dos ponteiros é determinada pela ordem na qual eles são adicionados ao medidor. Não é possível reorganizar a ordem de desenho dos ponteiros alterando a ordem dos campos no painel de dados. Para alterar a ordem do desenho de vários ponteiros, abra o painel Propriedades e clique em **Ponteiros (…)**. Em seguida, altere a ordem dos ponteiros na coleção Ponteiro.  
+ Quando os ponteiros se sobrepõem, a ordem de desenho dos ponteiros é determinada pela ordem na qual eles são adicionados ao medidor. Não é possível reorganizar a ordem de desenho dos ponteiros alterando a ordem dos campos no painel de dados. Para alterar a ordem do desenho de vários ponteiros, abra o painel Propriedades e clique em **Ponteiros (…)** . Em seguida, altere a ordem dos ponteiros na coleção Ponteiro.  
   
   
 ##  <a name="SettingGradients"></a> Definindo as gradações em uma extremidade de agulha  

@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95692fd0ecf365f1fb54c8c1c3a090227b0d9a38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721748"
 ---
 # <a name="replication-agent-profiles"></a>Perfis do Agente de Replicação
@@ -68,9 +68,9 @@ ms.locfileid: "62721748"
   
 ||padrão|histórico detalhado|Gerenciador de Sincronização do Windows|Continuar em erros de consistência de dados|Perfil de distribuição para fluxo contínuo do banco de dados OLE|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
-|**-BcpBatchSize**|100000|100000|1.000|100000|2147473647|  
+|**-BcpBatchSize**|100000|100000|1\.000|100000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
-|**-CommitBatchThreshold**|1.000|1.000|1.000|1.000|1.000|  
+|**-CommitBatchThreshold**|1\.000|1\.000|1\.000|1\.000|1\.000|  
 |**-HistoryVerboseLevel**|1|2|1|1|1|  
 |**-KeepAliveMessageInterval**|300|300|300|300|300|  
 |**-LoginTimeout**|15|15|15|15|15|  
@@ -89,8 +89,8 @@ ms.locfileid: "62721748"
   
 ||padrão|histórico detalhado|Gerenciador de Sincronização do Windows|validação do número de linhas.|validação do número de linhas e da soma de verificação|vínculo lento|servidor a servidor de alto volume|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
-|**-BcpBatchSize**|100000|100000|1.000|100000|100000|100000|100000|  
-|**-ChangesPerHistory**|100|50|50|100|100|100|1.000|  
+|**-BcpBatchSize**|100000|100000|1\.000|100000|100000|100000|100000|  
+|**-ChangesPerHistory**|100|50|50|100|100|100|1\.000|  
 |**-DestThreads**|2|1|1|1|1|1|4|  
 |**-DownloadGenerationsPerBatch**|50|50|50|50|50|1|500|  
 |**-DownloadReadChangesPerBatch**|100|100|100|100|100|100|100|  

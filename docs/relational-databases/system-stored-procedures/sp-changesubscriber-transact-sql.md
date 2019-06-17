@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1f31a00e0c42bc56dffac191ff9a934bb77b95df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997802"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
@@ -63,7 +63,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @login = ] 'login'` É o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID de logon de autenticação. *login* é **sysname**, com um padrão de NULL.  
   
-`[ @password = ] 'password'` É o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senha de autenticação. *senha* está **sysname**, com um padrão de **%**. **%** indica que nenhuma alteração para a propriedade de senha.  
+`[ @password = ] 'password'` É o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senha de autenticação. *senha* está **sysname**, com um padrão de **%** . **%** indica que nenhuma alteração para a propriedade de senha.  
   
 `[ @commit_batch_size = ] commit_batch_size` Suporte para compatibilidade com versões anteriores.  
   
@@ -117,7 +117,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @active_end_date = ] active_end_date` É a data em que a tarefa de distribuição deixa de ser agendado, formatada como AAAAMMDD. *active_end_date*está **int**, com um padrão NULL.  
   
-`[ @description = ] 'description'` É uma descrição de texto opcional. *Descrição* está **nvarchar (255)**, com um padrão NULL.  
+`[ @description = ] 'description'` É uma descrição de texto opcional. *Descrição* está **nvarchar (255)** , com um padrão NULL.  
   
 `[ @security_mode = ] security_mode` É o modo de segurança implementado. *security_mode* está **int**, e pode ser um destes valores.  
   

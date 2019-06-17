@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62920682"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Backups de log de transações (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62920682"
 ##  <a name="LogBackupSequence"></a> Como funciona uma sequência de Backups de Log  
  A sequência de backups de log de transações *log chain* é independente dos backups de dados. Por exemplo, suponha a sequência de eventos a seguir.  
   
-|Hora|Evento|  
+|Time|Evento|  
 |----------|-----------|  
 |8:00h|Backup do banco de dados.|  
 |Meio-dia|Backup de log de transações.|  

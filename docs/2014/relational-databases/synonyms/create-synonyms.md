@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2a45cf4f34b73996b6ecbd4f9cbb5f5a902e760
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62854963"
 ---
 # <a name="create-synonyms"></a>Criar sinônimos
@@ -50,7 +50,7 @@ ms.locfileid: "62854963"
   
 1.  No **Pesquisador de Objetos**, expanda o banco de dados em que você deseja criar a nova exibição.  
   
-2.  Clique com o botão direito do mouse na pasta **Sinônimos** e clique em **Novo Sinônimo...**.  
+2.  Clique com o botão direito do mouse na pasta **Sinônimos** e clique em **Novo Sinônimo...** .  
   
 3.  Na caixa de diálogo **Adicionar Sinônimo** , insira as informações a seguir.  
   

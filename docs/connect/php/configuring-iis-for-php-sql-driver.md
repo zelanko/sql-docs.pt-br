@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7b550fb7300ffdb2d37ae4407aaeeb43a49c89f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3c4fb297ed31c801c8326307ab5b7dfd4e694e2f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654774"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795791"
 ---
 # <a name="configuring-iis-for-the-microsoft-drivers-for-php-for-sql-server"></a>Configuração do IIS para os drivers da Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,16 +28,16 @@ Este tópico fornece links para recursos do [site do IIS (Serviços de Informaç
 ## <a name="tutorials"></a>Tutoriais  
 Veja a seguir os links para tutoriais sobre a configuração do FastCGI para PHP e a hospedagem de aplicativos PHP no IIS 6.0 e 7.0:  
   
--   [FastCGI com PHP](https://docs.microsoft.com/iis/web-hosting/web-server-for-shared-hosting/fastcgi-with-php)  
+-   [FastCGI with PHP](https://docs.microsoft.com/iis/web-hosting/web-server-for-shared-hosting/fastcgi-with-php)  
 -   [Uso de FastCGI para hospedar aplicativos PHP no IIS 7.0](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis)  
 -   [Uso de FastCGI para hospedar aplicativos PHP no IIS 6.0](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis-60)  
--   [Configuração da Extensão FastCGI para IIS 6.0](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-on-iis/configuring-the-fastcgi-extension-for-iis-60)  
+-   [Configuring FastCGI Extension for IIS 6.0](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-on-iis/configuring-the-fastcgi-extension-for-iis-60)  
   
 ## <a name="video-presentations"></a>Apresentações de vídeo  
 Veja a seguir os links para apresentações de vídeo sobre a configuração do FastCGI para PHP o uso de recursos do IIS 7.0 para hospedar aplicativos PHP:  
   
--   [Configuração do FastCGI para PHP](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/set-up-fastcgi-for-php)  
--   [Celebrando com PHP nos Serviços de Informações da Internet da Microsoft 7](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/mix08-partying-with-php-on-microsoft-internet-information-services-7-and-above)  
+-   [Setting up FastCGI for PHP](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/set-up-fastcgi-for-php)  
+-   [Partying with PHP on Microsoft Internet Information Services 7](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/mix08-partying-with-php-on-microsoft-internet-information-services-7-and-above)  
   
 ## <a name="support-resources"></a>Recursos de suporte  
 Os fóruns a seguir dão suporte da comunidade para o FastCGI no IIS:  
@@ -46,7 +46,7 @@ Os fóruns a seguir dão suporte da comunidade para o FastCGI no IIS:
 -   [IIS 7 – Módulo FastCGI](https://forums.iis.net/1104.aspx)  
   
 ## <a name="see-also"></a>Consulte Também  
-[Guia de Introdução com os Drivers da Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Introdução aos Drivers da Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [Guia de programação para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 

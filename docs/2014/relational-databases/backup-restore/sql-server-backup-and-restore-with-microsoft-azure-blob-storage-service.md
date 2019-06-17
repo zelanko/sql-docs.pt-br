@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52f1bdf9e748625e1310210c98beeb4401a5dd81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62920691"
 ---
 # <a name="sql-server-backup-and-restore-with-windows-azure-blob-storage-service"></a>Backup e restauração do SQL Server com o serviço de armazenamento de Blob do Windows Azure
@@ -27,7 +27,7 @@ ms.locfileid: "62920691"
     > [!NOTE]  
     >  Para as versões do SQL Server anteriores ao SQL Server 2014, você pode usar o suplemento SQL Server Backup to Windows Azure Tool para criar backups no armazenamento do Windows Azure com rapidez e facilidade. Para obter mais informações, consulte [centro de download](https://go.microsoft.com/fwlink/?LinkID=324399).  
   
--   **Deixe o SQL Server gerenciar os backups para o Windows Azure:** Configure o SQL Server para gerenciar os backups de estratégia e agendamento de backup para um banco de dados único ou vários bancos de dados, ou defina valores padrão no nível da instância. Esse recurso é conhecido como **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**. Para obter mais informações, consulte [SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md). Esse recurso está disponível no SQL Server 2014 ou posterior.  
+-   **Deixe o SQL Server gerenciar os backups para o Windows Azure:** Configure o SQL Server para gerenciar os backups de estratégia e agendamento de backup para um banco de dados único ou vários bancos de dados, ou defina valores padrão no nível da instância. Esse recurso é conhecido como **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** . Para obter mais informações, consulte [SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md). Esse recurso está disponível no SQL Server 2014 ou posterior.  
   
 ## <a name="benefits-of-using-the-windows-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>Benefícios do uso do serviço de Blob do Windows Azure para backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   

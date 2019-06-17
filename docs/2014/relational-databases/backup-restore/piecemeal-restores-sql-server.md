@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 55520388424e110420ad96d329081ee7a61fe028
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876073"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restaurações por etapas (SQL Server)
@@ -142,7 +142,7 @@ ms.locfileid: "62876073"
   
      Na edição Enterprise, qualquer grupo de arquivos secundário offline pode ser restaurado e recuperado enquanto o banco de dados permanecer online. Se um arquivo somente leitura específico não for danificado e for consistente com o banco de dados, o arquivo não terá de ser restaurado. Para obter mais informações, veja [Recuperar um banco de dados sem restaurar dados &#40;Transact-SQL&#41;](recover-a-database-without-restoring-data-transact-sql.md).  
   
-### <a name="applying-log-backups"></a>Aplicando backups de log   
+### <a name="applying-log-backups"></a>Aplicando backups de log  
  Se um grupo de arquivos somente leitura era somente leitura desde antes de o backup de arquivo ser criado, aplicar backups de log ao grupo de arquivos será desnecessário e é ignorado pela restauração de arquivo. Se o grupo de arquivos for leitura/gravação, uma cadeia ininterrupta de backups de log deve ser aplicada à última restauração completa ou diferencial, para trazer o grupo de arquivos para o arquivo de log atual.  
   
 ### <a name="examples"></a>Exemplos  
