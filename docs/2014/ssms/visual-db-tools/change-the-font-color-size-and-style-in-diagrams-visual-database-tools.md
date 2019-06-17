@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0945dd4bd2897cd0dba7425f98700b05237c6b96
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63298295"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>Alterar a cor, o tamanho e o estilo da fonte em diagramas (Visual Database Tools)

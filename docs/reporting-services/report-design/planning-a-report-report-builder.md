@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e67d710530da43216873728ff5f1159ce8fa50f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 9c65d1db987f5d317b0719ff101012b4db0a5873
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581472"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67038022"
 ---
 # <a name="planning-a-report-report-builder"></a>Planejando um relatório (Construtor de Relatórios)
   O Construtor de Relatórios permite que você crie muitos tipos de relatórios paginados. Por exemplo, você pode criar relatórios que mostram dados de vendas resumidos ou detalhados, tendências de marketing e vendas, relatórios operacionais ou painéis. Você também pode criar relatórios que aproveitam texto ricamente formatado, tais como pedidos de vendas, catálogos de produtos ou letras de formulário. Todos esses relatórios são criados usando combinações diferentes dos mesmos blocos de construção básicos no Construtor de Relatórios. Para criar um relatório útil, de fácil compreensão, convém primeiro fazer um planejamento. Antes de começar, considere algumas questões como:  
@@ -51,7 +51,6 @@ ms.locfileid: "65581472"
   
 ## <a name="see-also"></a>Consulte Também  
  [Construtor de Relatórios no SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [Tutoriais do Construtor de Relatórios](../../reporting-services/report-builder-tutorials.md)  
+ [Conceitos (SSRS) do Reporting Services](../reporting-services-concepts-ssrs.md) [tutoriais do construtor de relatórios](../../reporting-services/report-builder-tutorials.md)  
   
   

@@ -3,17 +3,17 @@ title: Criar gráficos e plotagens usando o SQL e R - funções SQL Server Machi
 description: Tutorial que mostra como criar gráficos e plotagens usando funções da linguagem R no SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/26/2018
+ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0ed226a4c11c002d048572f58a75c0c04bdf936c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b988105733d8e3a9ee2edae344947cbf9d377e5d
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513163"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140384"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Criar gráficos e plotagens usando o SQL e R (passo a passo)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -101,7 +101,7 @@ Normalmente, os servidores de banco de dados bloqueiam acesso à Internet. Isso 
     + Quando a linha que começa com `plot` é executado, os dados renderizados é serializada de volta para o ambiente local do R para que você pode exibi-lo no seu cliente de R.
 
     > [!NOTE]
-    > Se você estiver usando o SQL Server em uma máquina virtual do Azure, você poderá receber um erro neste momento. Um erro ocorre quando a regra de firewall padrão no Azure bloqueia o acesso à rede pelo código R. Para obter detalhes sobre como corrigir esse erro, consulte [instalando o Machine Learning (R) serviços em uma VM do Azure](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
+    > Se você estiver usando o SQL Server em uma máquina virtual do Azure, você poderá receber um erro neste momento. Um erro ocorre quando a regra de firewall padrão no Azure bloqueia o acesso à rede pelo código R. Para obter detalhes sobre como corrigir esse erro, consulte [instalando o Machine Learning (R) serviços em uma VM do Azure](../install/sql-machine-learning-azure-virtual-machine.md).
 
 4. A imagem a seguir mostra a plotagem de saída. Os locais em que os táxis apanham os clientes são adicionados ao mapa como pontos vermelhos. Sua imagem pode parecer diferente, dependendo de quantos locais estão na fonte de dados que você usou.
 

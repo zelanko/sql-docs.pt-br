@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b15aa278e2fe38afe93f5628433a6c8f4b41cd8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198323"
 ---
 # <a name="driver-specification-subkeys"></a>Subchaves de especificação de driver
@@ -33,7 +33,7 @@ Cada driver listado na subchave de Drivers ODBC tem uma subchave de seu próprio
 |CreateDSN|REG_SZ|*driver-description*|  
 |Driver|REG_SZ|*driver-DLL-path*|  
 |DriverODBCVer|REG_SZ|*nn.nn*|  
-|FileExtns|REG_SZ|**\*.** *file-extension1*[**,\*.** *arquivo extension2*]...|  
+|FileExtns|REG_SZ|**\*.** *file-extension1*[ **,\*.** *arquivo extension2*]...|  
 |FileUsage|REG_SZ|**0** &#124; **1** &#124; **2**|  
 |Configuração|REG_SZ|*setup-DLL-path*|  
 |SQLLevel|REG_SZ|**0** &#124; **1** &#124; **2**|  

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755364"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Monitorando o espelhamento de banco de dados (SQL Server)
@@ -293,11 +293,11 @@ ms.locfileid: "62755364"
   
  Os seguintes eventos estão disponíveis para o espelhamento de banco de dados:  
   
--   Classe de evento**Database Mirroring State Change**   
+-   Classe de evento**Database Mirroring State Change**  
   
      Isso indica quando o estado de espelhamento de um banco de dados espelho muda. Para obter mais informações, consulte [Database Mirroring State Change Event Class](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md).  
   
--   Classe de evento**Audit Database Mirroring Login**   
+-   Classe de evento**Audit Database Mirroring Login**  
   
      Informa mensagens de auditoria relacionadas à segurança de transporte do espelhamento de banco de dados. Para obter mais informações, consulte [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).  
   

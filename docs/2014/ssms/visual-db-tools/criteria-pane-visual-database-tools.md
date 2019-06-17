@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bbfd7e02b11a9f2a5cc0213c31b453eaa28e446
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270600"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Painel de Critérios (Visual Database Tools)
@@ -60,7 +60,7 @@ ms.locfileid: "63270600"
 |coluna|Todos|Exibe o nome de uma coluna de dados utilizada para a consulta ou a expressão para uma coluna computada. Essa coluna está bloqueada, portanto, está sempre visível à medida que você rola horizontalmente.|  
 |Alias|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Especifica um nome alternativo para uma coluna ou o nome que você pode utilizar para uma coluna computada.|  
 |Table|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Especifica o nome da tabela ou objeto estruturado por tabela para a coluna de dados associada. Essa coluna está vazia para colunas computadas.|  
-|Saída|SELECT, INSERT FROM, MAKE TABLE|Especifica se uma coluna de dados é exibida na saída da consulta.<br /><br /> Observação: Se o banco de dados permitir, você pode usar uma coluna de dados para classificar ou pesquisar cláusulas sem exibi-las no conjunto de resultados.|  
+|Saída|SELECT, INSERT FROM, MAKE TABLE|Especifica se uma coluna de dados é exibida na saída da consulta.<br /><br /> Observação: Se o banco de dados permitir, você poderá usar uma coluna de dados para classificar ou pesquisar cláusulas sem exibi-las no conjunto de resultados.|  
 |Tipo de Classificação|SELECT, INSERT FROM|Especifica que a coluna de dados associada é utilizada para classificar os resultados da consulta e se a classificação é crescente ou decrescente.|  
 |Sort Order|SELECT, INSERT FROM|Especifica a prioridade de classificação das colunas de dados utilizadas para classificar o conjunto de resultados. Quando você altera a ordem de classificação de uma coluna de dados, a ordem de classificação de todas as outras colunas também é atualizada.|  
 |Group By|SELECT, INSERT FROM, MAKE TABLE|Especifica que a coluna de dados associada está sendo utilizada para criar uma consulta de agregação. Essa coluna de grade será exibida somente se você tiver escolhido **Group By** no menu **Ferramentas** ou tiver adicionado uma cláusula GROUP BY no painel SQL.<br /><br /> Por padrão, o valor dessa coluna é definido como **Group By**e a coluna se torna parte da cláusula GROUP BY.<br /><br /> Quando você se move para uma célula nessa coluna e seleciona uma função de agregação para ser aplicada à coluna de dados associada, por padrão, a expressão resultante é adicionada como uma coluna de saída para o conjunto de resultados.|  

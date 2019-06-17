@@ -10,13 +10,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64a1423295b8117640de555a7132a44af98b87c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62470097"
 ---
-# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>Estudo de caso: Criando um ecossistema corporativo com o Microsoft Dynamics ERP e replicação do SQL Server 2014 para desempenho e escalabilidade
+# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>Estudo de caso: Criação de um ecossistema corporativo com o Microsoft Dynamics ERP e replicação do SQL Server 2014 para desempenho e escalabilidade
 
   **Resumo:** Este documento aborda os seguintes cenários:  
 Como usar a replicação transacional no SQL Server 2014 para distribuir as transações de clientes do Dynamics AX em vários nós. Como os dados são mantidos em todos os nós em tempo real, a replicação transacional fornece redundância, o que aumenta a disponibilidade e inclui os dados disponíveis para uma análise de desempenho mais eficiente.  

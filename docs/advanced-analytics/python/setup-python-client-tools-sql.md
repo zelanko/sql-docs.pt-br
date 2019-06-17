@@ -3,17 +3,17 @@ title: Configurar um cliente de ciência de dados para o desenvolvimento de Pyth
 description: Configure um ambiente local do Python (bloco de notas Jupyter ou PyCharm) para conexões remotas com serviços do SQL Server Machine Learning com o Python.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/09/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c0ca592d98f9bb69586c537006fd14d4230b661b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 448322fc79f4a85256b1d0b5b682fcc5147263c5
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642805"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140642"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configurar um cliente de ciência de dados para o desenvolvimento de Python em serviços do SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,11 +52,11 @@ Um script de instalação adiciona três bibliotecas específicas da Microsoft p
 
   + [https://aka.ms/mls-py](https://aka.ms/mls-py) instala a versão 9.2.1 dos pacotes Python de Microsoft. Esta versão corresponde a uma instância do SQL Server 2017 padrão. 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) instala a versão 9.3 dos pacotes Python de Microsoft. Esta versão é uma opção melhor se for a instância remota do SQL Server 2017 [associado ao Machine Learning Server 9.3](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) instala a versão 9.3 dos pacotes Python de Microsoft. Esta versão é uma opção melhor se for a instância remota do SQL Server 2017 [associado ao Machine Learning Server 9.3](../install/upgrade-r-and-python.md).
 
 2. Abra uma janela do PowerShell com permissões de administrador com privilégios elevados (clique com botão direito **executar como administrador**).
 
-3. Vá para a pasta na qual você baixou o instalador e execute o script. Adicionar o `-InstallFolder` argumento de linha de comando para especificar um local de pasta para as bibliotecas. Por exemplo:  
+3. Vá para a pasta na qual você baixou o instalador e execute o script. Adicionar o `-InstallFolder` argumento de linha de comando para especificar um local de pasta para as bibliotecas. Por exemplo: 
 
    ```python
    cd {{download-directory}}
@@ -107,7 +107,7 @@ Anaconda inclui blocos de anotações do Jupyter. Como uma próxima etapa, crie 
 
 3. Insira `import revoscalepy` e execute o comando para carregar uma das bibliotecas específicas da Microsoft.
 
-4. Digite e execute `print(revoscalepy.__version__)` para retornar as informações de versão. Você deve ver 9.2.1 ou 9.3.0. Você pode usar qualquer uma dessas versões com [revoscalepy no servidor](../r/determine-which-packages-are-installed-on-sql-server.md#get-package-vers). 
+4. Digite e execute `print(revoscalepy.__version__)` para retornar as informações de versão. Você deve ver 9.2.1 ou 9.3.0. Você pode usar qualquer uma dessas versões com [revoscalepy no servidor](../package-management/installed-package-information.md). 
 
 4. Insira uma série mais complexa de instruções. Este exemplo gera estatísticas de resumo usando [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) sobre um conjunto de dados local. Outras funções de obtém o local dos dados de exemplo e criar um objeto de fonte de dados para um arquivo. xdf local.
 

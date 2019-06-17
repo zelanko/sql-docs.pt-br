@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0e7e62510338b9dd47d59ce50626ecffebfcf85
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060421"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Conectar-se a um servidor remoto do Integration Services (serviço SSIS)

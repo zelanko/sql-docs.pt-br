@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fd21f4b08bf53d4715f2b99eefed523f3853c033
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245441"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
@@ -66,7 +66,7 @@ ms.locfileid: "63245441"
   
 2.  Clique com o botão direito do mouse em **SQL Server Agent** e selecione **Propriedades**.  
   
-3.  No **propriedades do SQL Server Agent -**_nome_do_servidor_ caixa de diálogo **log de erros** no **geral** , selecione o **Incluir mensagens de rastreamento de execução** caixa de seleção.  
+3.  No **propriedades do SQL Server Agent -** _nome_do_servidor_ caixa de diálogo **log de erros** no **geral** , selecione o **Incluir mensagens de rastreamento de execução** caixa de seleção.  
   
 4.  Clique em **OK**.  
   

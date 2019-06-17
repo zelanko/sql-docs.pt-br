@@ -3,17 +3,17 @@ title: Configurar um cliente de ciência de dados para o desenvolvimento de R �
 description: Instale ferramentas e bibliotecas do R locais em uma estação de trabalho de desenvolvimento para conexões remotas ao SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/29/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b46ce112af08fca4c8986be51ba11a15d277fb4f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1b18844e6899615ac978e63cefa6c712f8f194ea
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62641880"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140344"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Configurar um cliente de ciência de dados para o desenvolvimento de R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -199,9 +199,9 @@ Aponte seu IDE para as bibliotecas do R locais: base R, RevoScaleR e assim por d
 
 Ao usar [RStudio](https://www.rstudio.com/), você pode configurar o ambiente para usar as bibliotecas do R e executáveis que correspondem às em um servidor SQL remoto.
 
-1. Verifique as versões do pacote de R instaladas no SQL Server. Para obter mais informações, consulte [informações do pacote de R Obtenha](determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location).
+1. Verifique as versões do pacote de R instaladas no SQL Server. Para obter mais informações, consulte [informações do pacote de R Obtenha](../package-management/installed-package-information.md).
 
-1. Instale o Microsoft R Client ou uma das opções de servidor autônomo para adicionar o RevoScaleR e outros pacotes de R, incluindo a distribuição de R base usada pela instância do SQL Server. Escolha uma versão ao mesmo nível ou abaixo (pacotes são compatíveis com versões anteriores) que fornece as mesmas versões de pacote que no servidor. Para obter informações de versão, consulte a versão mapear neste artigo: [Atualizar os componentes de R e Python](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+1. Instale o Microsoft R Client ou uma das opções de servidor autônomo para adicionar o RevoScaleR e outros pacotes de R, incluindo a distribuição de R base usada pela instância do SQL Server. Escolha uma versão ao mesmo nível ou abaixo (pacotes são compatíveis com versões anteriores) que fornece as mesmas versões de pacote que no servidor. Para obter informações de versão, consulte a versão mapear neste artigo: [Atualizar os componentes de R e Python](../install/upgrade-r-and-python.md).
 
 1. No RStudio, [atualize o caminho de R](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R) para apontar para o ambiente de R fornecendo RevoScaleR, Microsoft R Open e outros pacotes da Microsoft. 
 

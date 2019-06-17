@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b8b6e629e68cf9d0074a7946258466e4de0001fc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 1d0c5a6501caf8d36e75deb1ae0b90d7ff3a7ea0
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65576816"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037885"
 ---
 # <a name="report-parameters-concepts-report-builder-and-ssrs"></a>Conceitos de parâmetros de relatório (Construtor de Relatórios e SSRS)
   Você pode adicionar parâmetros a um relatório para vincular relatórios relacionados, controlar a aparência do relatório, filtrar dados de relatórios ou restringir o escopo de um relatório a usuários ou locais específicos.  
@@ -42,8 +42,7 @@ ms.locfileid: "65576816"
  Se você pretende criar instantâneos de relatório, históricos ou assinaturas para um relatório publicado, precisa compreender como os parâmetros de relatório afetam os requisitos de design para o relatório.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Conceitos (SSRS) do Reporting Services](../reporting-services-concepts-ssrs.md) [conjuntos de dados inseridos e compartilhados de relatório &#40;relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
   

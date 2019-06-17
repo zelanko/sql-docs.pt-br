@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af647a446366ea03063ea0deb84603a3f8f90dd8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62896124"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Gerando e definindo eventos em uma tarefa personalizada
@@ -43,7 +43,7 @@ ms.locfileid: "62896124"
   
  O exemplo de código seguinte mostra o método `InitializeTask` de uma tarefa personalizada, em que são criados dois eventos personalizados e definidas suas propriedades. Os eventos novos são adicionados à coleção <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos>.  
   
- O primeiro evento personalizado tem um *eventName* de "**OnBeforeIncrement**" e *descrição* de "**Aciona depois que o valor inicial é atualizado.**" O próximo parâmetro, o valor `true`, indica que este evento deve permitir que um contêiner de manipulador de eventos seja criado para tratar o evento. O manipulador de eventos é um contêiner que fornece estrutura em um pacote e serviços para tarefas, como outros contêineres, como pacote, Sequência, ForLoop e ForEachLoop. Quando o *allowEventHandlers* parâmetro é `true`, <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> objetos são criados para o evento. Qualquer parâmetro definido para o evento está agora disponível para o <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> na coleção de variáveis do <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
+ O primeiro evento personalizado tem um *eventName* de "**OnBeforeIncrement**" e *descrição* de "**Aciona depois que o valor inicial é atualizado.** " O próximo parâmetro, o valor `true`, indica que este evento deve permitir que um contêiner de manipulador de eventos seja criado para tratar o evento. O manipulador de eventos é um contêiner que fornece estrutura em um pacote e serviços para tarefas, como outros contêineres, como pacote, Sequência, ForLoop e ForEachLoop. Quando o *allowEventHandlers* parâmetro é `true`, <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> objetos são criados para o evento. Qualquer parâmetro definido para o evento está agora disponível para o <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> na coleção de variáveis do <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  

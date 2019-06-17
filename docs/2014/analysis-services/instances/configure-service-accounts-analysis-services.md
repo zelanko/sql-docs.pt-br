@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8dfde906f7cadc01b9c7a4abbe32be1bd0408986
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080185"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurar contas de serviço (Analysis Services)
@@ -38,7 +38,7 @@ ms.locfileid: "66080185"
 ## <a name="logon-account-recommendations"></a>Recomendações de conta de logon  
  Em um cluster de failover, todas as instâncias do Analysis Services devem ser configuradas para usar uma conta de usuário de domínio do Windows. Atribua a mesma conta para todas as instâncias. Consulte [Como realizar cluster no Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx) para obter detalhes.  
   
- Instâncias autônomas devem usar a conta virtual padrão, **NT Service\MSSQLServerOLAPService** para a instância padrão, ou **NT Service\MSOLAP$**_nome de instância_ para uma instância nomeada. Essa recomendação se aplica a instâncias do Analysis Services em todos os modos de servidor, considerando o Windows Server 2008 R2 e posterior para o sistema operacional e o SQL Server 2012 e posterior para o Analysis Services.  
+ Instâncias autônomas devem usar a conta virtual padrão, **NT Service\MSSQLServerOLAPService** para a instância padrão, ou **NT Service\MSOLAP$** _nome de instância_ para uma instância nomeada. Essa recomendação se aplica a instâncias do Analysis Services em todos os modos de servidor, considerando o Windows Server 2008 R2 e posterior para o sistema operacional e o SQL Server 2012 e posterior para o Analysis Services.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Concedendo permissões ao Analysis Services  
  Esta seção explica as permissões exigidas para operações internas e locais do Analysis Services, tais como iniciar o executável, ler o arquivo de configuração e carregar os bancos de dados do diretório de dados. Se você estiver procurando orientação sobre definição de permissões para acesso a dados externos e interoperabilidade com outros serviços e aplicativos, consulte [Concedendo permissões adicionais para operações de servidor específicas](#bkmk_tasks) mais adiante neste tópico.  

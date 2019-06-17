@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127904"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini File (Driver de Arquivo de texto)
@@ -100,7 +100,7 @@ n=ColumnNametype [#]
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*ColumnName*|O nome da coluna de texto. Se o nome da coluna contiver espaços inseridos, você deverá colocá-lo entre aspas duplas.|  
-|*type*|Tipos de dados são da seguinte maneira:<br /><br /> **Tipos de dados Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Longo<br /><br /> CURRENCY<br /><br /> Single<br /><br /> Double<br /><br /> Datetime<br /><br /> Text<br /><br /> Memorando<br /><br /> **Tipos de dados ODBC** Char (mesmo que o texto)<br /><br /> Float (mesmo que Double)<br /><br /> Inteiro (mesmo que Short)<br /><br /> LongChar (mesmo que o memorando)<br /><br /> Data *formato de data*|  
+|*type*|Tipos de dados são da seguinte maneira:<br /><br /> **Tipos de dados Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Longo<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> Text<br /><br /> Memorando<br /><br /> **Tipos de dados ODBC** Char (mesmo que o texto)<br /><br /> Float (mesmo que Double)<br /><br /> Inteiro (mesmo que Short)<br /><br /> LongChar (mesmo que o memorando)<br /><br /> Data *formato de data*|  
 |**Width**|O valor de cadeia de caracteres literal `Width`. Indica que o número a seguir designa a largura da coluna (opcional para arquivos delimitados por caracteres; necessário para arquivos de comprimento fixo).|  
 |*#*|O valor de inteiro que determina a largura da coluna (necessário se **largura** for especificado).|  
   

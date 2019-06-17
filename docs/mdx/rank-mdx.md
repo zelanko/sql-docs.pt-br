@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b1d234f02c8dfcd36073059210c1999cb95f5ab0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63200665"
 ---
 # <a name="rank-mdx"></a>Rank (MDX)
@@ -39,7 +39,7 @@ Rank(Tuple_Expression, Set_Expression [ ,Numeric Expression ] )
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número.  
   
 ## <a name="remarks"></a>Comentários  
- Se uma expressão numérica for especificada, o **classificação** função determina a classificação baseada em um para a tupla especificada, avaliando a expressão numérica especificada em relação a tupla. Se uma expressão numérica for especificada, o **classificação** função atribui a mesma classificação a tuplas com valores duplicados no conjunto. Essa atribuição da mesma classificação para valores duplicados afeta as classificações de tuplas subsequentes no conjunto. Por exemplo, um conjunto é formado pelas seguintes tuplas, `{(a,b), (e,f), (c,d)}`. A tupla `(a,b)` tem o mesmo valor que a tupla `(c,d)`. Se a tupla `(a,b)` tiver uma classificação 1, então tanto `(a,b)` quanto `(c,d)` terão uma classificação 1. No entanto, a tupla `(e,f)` teria uma classificação 3. Não poderia haver uma tupla com classificação 2 nesse conjunto.   
+ Se uma expressão numérica for especificada, o **classificação** função determina a classificação baseada em um para a tupla especificada, avaliando a expressão numérica especificada em relação a tupla. Se uma expressão numérica for especificada, o **classificação** função atribui a mesma classificação a tuplas com valores duplicados no conjunto. Essa atribuição da mesma classificação para valores duplicados afeta as classificações de tuplas subsequentes no conjunto. Por exemplo, um conjunto é formado pelas seguintes tuplas, `{(a,b), (e,f), (c,d)}`. A tupla `(a,b)` tem o mesmo valor que a tupla `(c,d)`. Se a tupla `(a,b)` tiver uma classificação 1, então tanto `(a,b)` quanto `(c,d)` terão uma classificação 1. No entanto, a tupla `(e,f)` teria uma classificação 3. Não poderia haver uma tupla com classificação 2 nesse conjunto.  
   
  Se uma expressão numérica não for especificada, o **classificação** função retorna a posição ordinal baseada em um da tupla especificada.  
   

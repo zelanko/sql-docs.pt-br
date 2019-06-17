@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b4d7b20c690a1f4d7f3b445afb8348549309e5c
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538206"
 ---
 # <a name="odbcconfexe"></a>ODBCCONF.EXE
@@ -58,13 +58,13 @@ ODBCCONF [switches] action
   
 |Ação|Descrição|  
 |------------|-----------------|  
-|CONFIGDRIVER *nome_do_driver * * os parâmetros de configuração específicas do driver*|Carrega a DLL de instalação do driver apropriado e chama o **ConfigDriver** função.<br /><br /> Equivalente a [função SQLConfigDriver](../odbc/reference/syntax/sqlconfigdriver-function.md).<br /><br /> Por exemplo: <br /><br /> /A {CONFIGDRIVER "Nome do Driver" "CPTimeout = 60"}<br /><br /> /A {CONFIGDRIVER "Nome do Driver" "DriverODBCVer = 03.80"}|  
-|CONFIGDSN *driver_name* DSN=*name* &#124; *attributes*|Adiciona ou modifica uma fonte de dados do sistema.<br /><br /> Equivalente a [função SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Por exemplo: <br /><br /> /A {CONFIGDSN "SQL Server" "DSN=name &#124; Server=srv"}|  
+|CONFIGDRIVER *nome_do_driver * * os parâmetros de configuração específicas do driver*|Carrega a DLL de instalação do driver apropriado e chama o **ConfigDriver** função.<br /><br /> Equivalente a [função SQLConfigDriver](../odbc/reference/syntax/sqlconfigdriver-function.md).<br /><br /> Por exemplo:<br /><br /> /A {CONFIGDRIVER "Nome do Driver" "CPTimeout = 60"}<br /><br /> /A {CONFIGDRIVER "Nome do Driver" "DriverODBCVer = 03.80"}|  
+|CONFIGDSN *driver_name* DSN=*name* &#124; *attributes*|Adiciona ou modifica uma fonte de dados do sistema.<br /><br /> Equivalente a [função SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Por exemplo:<br /><br /> /A {CONFIGDSN "SQL Server" "DSN=name &#124; Server=srv"}|  
 |CONFIGSYSDSN *driver_name* DSN=*name* &#124; *attributes*|Adiciona ou modifica uma fonte de dados do sistema.<br /><br /> Equivalente a [função SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Por exemplo:<br /><br /> /A {CONFIGSYSDSN "SQL Server" "DSN=name &#124; Server=srv"}|  
-|/INSTALLDRIVER|Equivalente a [função SQLInstallDriverEx](../odbc/reference/syntax/sqlinstalldriverex-function.md).<br /><br /> Para obter informações sobre a sintaxe de pares de palavra-chave-valor passada para /INSTALLDRIVER, consulte [subchaves de especificação de Driver](../odbc/reference/install/driver-specification-subkeys.md).<br /><br /> Por exemplo: <br /><br /> /A {INSTALLDRIVER  "Your Driver &#124; Driver=c:\your.dll &#124; Setup=c:\your.dll &#124; APILevel=2 &#124; ConnectFunctions=YYY &#124; DriverODBCVer=03.50 &#124; FileUsage=0 &#124; SQLLevel=1"}|  
-|INSTALLTRANSLATOR *configuração translator * * caminho do driver*|Adiciona informações sobre um conversor para o **HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST. Os tradutores INI\ODBC** chave do registro.<br /><br /> Equivalente a [função SQLInstallTranslatorEx](../odbc/reference/syntax/sqlinstalltranslatorex-function.md).<br /><br /> Para obter informações sobre a sintaxe de pares de palavra-chave-valor passada para /INSTALLDRIVER, consulte [subchaves de especificação do conversor](../odbc/reference/install/translator-specification-subkeys.md).<br /><br /> Por exemplo: <br /><br /> /A {INSTALLTRANSLATOR  "My Translator &#124; Translator=c:\my.dll &#124; Setup=c:\my.dll"}|  
-|REGSVR *dll*|Registra uma DLL.<br /><br /> Equivalente ao regsvr32.exe.<br /><br /> Por exemplo: <br /><br /> /A {REGSVR c:\my.dll}|  
-|SETFILEDSNDIR|Quando HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC. INI\ODBC DSN\DefaultDSNDir de arquivo não existir, a ação de SETFILEDSNDIR irá criá-lo e atribua o valor em HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CommonFilesDir, acrescido \ODBC\Data fontes.<br /><br /> O valor no HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC. INI\ODBC arquivo DSN\DefaultDSNDir Especifica o local padrão usado pelo administrador de fonte de dados ODBC durante a criação de uma fonte de dados baseado em arquivo.<br /><br /> Por exemplo: <br /><br /> /A {SETFILEDSNDIR}|  
+|/INSTALLDRIVER|Equivalente a [função SQLInstallDriverEx](../odbc/reference/syntax/sqlinstalldriverex-function.md).<br /><br /> Para obter informações sobre a sintaxe de pares de palavra-chave-valor passada para /INSTALLDRIVER, consulte [subchaves de especificação de Driver](../odbc/reference/install/driver-specification-subkeys.md).<br /><br /> Por exemplo:<br /><br /> /A {INSTALLDRIVER  "Your Driver &#124; Driver=c:\your.dll &#124; Setup=c:\your.dll &#124; APILevel=2 &#124; ConnectFunctions=YYY &#124; DriverODBCVer=03.50 &#124; FileUsage=0 &#124; SQLLevel=1"}|  
+|INSTALLTRANSLATOR *configuração translator * * caminho do driver*|Adiciona informações sobre um conversor para o **HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST. Os tradutores INI\ODBC** chave do registro.<br /><br /> Equivalente a [função SQLInstallTranslatorEx](../odbc/reference/syntax/sqlinstalltranslatorex-function.md).<br /><br /> Para obter informações sobre a sintaxe de pares de palavra-chave-valor passada para /INSTALLDRIVER, consulte [subchaves de especificação do conversor](../odbc/reference/install/translator-specification-subkeys.md).<br /><br /> Por exemplo:<br /><br /> /A {INSTALLTRANSLATOR  "My Translator &#124; Translator=c:\my.dll &#124; Setup=c:\my.dll"}|  
+|REGSVR *dll*|Registra uma DLL.<br /><br /> Equivalente ao regsvr32.exe.<br /><br /> Por exemplo:<br /><br /> /A {REGSVR c:\my.dll}|  
+|SETFILEDSNDIR|Quando HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC. INI\ODBC DSN\DefaultDSNDir de arquivo não existir, a ação de SETFILEDSNDIR irá criá-lo e atribua o valor em HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CommonFilesDir, acrescido \ODBC\Data fontes.<br /><br /> O valor no HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC. INI\ODBC arquivo DSN\DefaultDSNDir Especifica o local padrão usado pelo administrador de fonte de dados ODBC durante a criação de uma fonte de dados baseado em arquivo.<br /><br /> Por exemplo:<br /><br /> /A {SETFILEDSNDIR}|  
   
 ## <a name="see-also"></a>Consulte também  
  [Microsoft ODBC (Open Database Connectivity)](../odbc/microsoft-open-database-connectivity-odbc.md)

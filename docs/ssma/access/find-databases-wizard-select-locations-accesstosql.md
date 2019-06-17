@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 86e9d39e6dd56cb5762933dc5ed37b5740a34ea5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62759585"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Localizar o Assistente de bancos de dados (selecione os locais) (AccessToSQL)

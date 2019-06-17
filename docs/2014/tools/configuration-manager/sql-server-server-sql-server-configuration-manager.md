@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8e80e485e866ee34355bd18bb3f484e75ffcf96a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63249686"
 ---
 # <a name="sql-server-ltservergt-sql-server-configuration-manager"></a>SQL Server &lt;server&gt; (SQL Server Configuration Manager)

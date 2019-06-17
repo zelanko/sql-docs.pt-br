@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4e23849b50e8cfa0a0e8d3ef6def4fbd159381c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770842"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Editor de Destino SAP BW (página Gerenciador de Conexões)

@@ -3,17 +3,17 @@ title: Habilitar ou desabilitar o gerenciamento de pacotes de R remoto - serviç
 description: Habilitar o gerenciamento remoto de pacote do R no SQL Server 2016 R Services ou serviços SQL Server 2017 Machine Learning (no banco de dados)
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/10/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ee52fd9b7a116156f794303b828a83e9b06de6ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4ce25830c3899ca0973fafe30c86489bfcdc949a
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62641814"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140494"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Habilitar ou desabilitar o gerenciamento de pacote remoto para o SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -98,4 +98,4 @@ Depois de habilitar esse recurso, você pode usar a função RevoScaleR para ins
 
 + [Usar o RevoScaleR para instalar novos pacotes de R](use-revoscaler-to-manage-r-packages.md)
 + [Dicas para a instalação de pacotes de R](packages-installed-in-user-libraries.md)
-+ [Pacotes padrão](installing-and-managing-r-packages.md)
++ [Pacotes padrão](../package-management/default-packages.md)

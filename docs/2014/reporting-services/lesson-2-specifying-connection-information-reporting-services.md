@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69d7ad1e3a65f49aa850e016e5e5bd609039ccf3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108516"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lição 2: Especificar informações de conexão (Reporting Services)
@@ -50,7 +50,7 @@ ms.locfileid: "66108516"
     >   
     >  Para obter mais informações sobre cadeias de caracteres de conexão, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md) e [caixa de diálogo de propriedades de fonte de dados, geral](data-source-properties-dialog-box-general.md).  
   
-6.  Clique em **Credenciais** no painel esquerdo e clique em **Usar Autenticação do Windows (segurança integrada)**.  
+6.  Clique em **Credenciais** no painel esquerdo e clique em **Usar Autenticação do Windows (segurança integrada)** .  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] fonte de dados [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] é adicionado para o **dados de relatório** painel.  
   

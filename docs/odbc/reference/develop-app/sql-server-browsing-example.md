@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8dc57d738c1d5726d2208b930c5d4fadcd93b39
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63149314"
 ---
 # <a name="sql-server-browsing-example"></a>Exemplo de navegação do SQL Server
@@ -77,7 +77,7 @@ SQLBrowseConnect(hdbc, "DATABASE=pubs;", SQL_NTS, BrowseResult,
 "DSN=MySQLServer;SERVER=green;UID=Smith;PWD=Sesame;DATABASE=pubs;"  
 ```  
   
- A cadeia de caracteres de final de conexão retornada pelo driver não contém os nomes amigáveis de usuário depois de cada palavra-chave, nem que ele contém palavras-chave opcional não é especificadas pelo aplicativo. O aplicativo pode usar essa cadeia de caracteres com **SQLDriverConnect** para reconectar-se à fonte de dados no identificador da conexão atual (após a desconexão) ou se conectar à fonte de dados em um identificador de conexão diferentes. Por exemplo:   
+ A cadeia de caracteres de final de conexão retornada pelo driver não contém os nomes amigáveis de usuário depois de cada palavra-chave, nem que ele contém palavras-chave opcional não é especificadas pelo aplicativo. O aplicativo pode usar essa cadeia de caracteres com **SQLDriverConnect** para reconectar-se à fonte de dados no identificador da conexão atual (após a desconexão) ou se conectar à fonte de dados em um identificador de conexão diferentes. Por exemplo:  
   
 ```  
 SQLDriverConnect(hdbc, hwnd, BrowseResult, SQL_NTS, ConnStrOut,  

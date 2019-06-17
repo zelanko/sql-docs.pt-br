@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f0067b0e13e724948e53a2eb291c9a1da6315011
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012751"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Alterar o separador de palavras usado para inglês (EUA) e inglês (Reino Unido)
@@ -49,9 +49,9 @@ ms.locfileid: "66012751"
   
 3.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\enu**.  
   
-4.  Atualize o valor de chave **WBreakerClass** para **{188D6CC5-CB03-4C01-912E-47D21295D77E}**.  
+4.  Atualize o valor de chave **WBreakerClass** para **{188D6CC5-CB03-4C01-912E-47D21295D77E}** .  
   
-5.  Atualize o valor de chave **StemmerClass** para **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}**.  
+5.  Atualize o valor de chave **StemmerClass** para **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}** .  
   
 6.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -71,9 +71,9 @@ ms.locfileid: "66012751"
   
 3.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
-4.  Atualize o valor de chave **WBreakerClass** para **{173C97E2-AEBE-437C-9445-01B237ABF2F6}**.  
+4.  Atualize o valor de chave **WBreakerClass** para **{173C97E2-AEBE-437C-9445-01B237ABF2F6}** .  
   
-5.  Atualize o valor de chave **StemmerClass** para **{D99F7670-7F1A-11CE-BE57-00AA0051FE20}**.  
+5.  Atualize o valor de chave **StemmerClass** para **{D99F7670-7F1A-11CE-BE57-00AA0051FE20}** .  
   
 6.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -95,9 +95,9 @@ ms.locfileid: "66012751"
   
 3.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
-4.  Atualize o valor de chave **WBreakerClass** para **{9faed859-0b30-4434-ae65-412e14a16fb8}**.  
+4.  Atualize o valor de chave **WBreakerClass** para **{9faed859-0b30-4434-ae65-412e14a16fb8}** .  
   
-5.  Atualize o valor de chave **StemmerClass** para **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}**.  
+5.  Atualize o valor de chave **StemmerClass** para **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** .  
   
 6.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -117,9 +117,9 @@ ms.locfileid: "66012751"
   
 3.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
-4.  Atualize o valor de chave **WBreakerClass** para **{9faed859-0b30-4434-ae65-412e14a16fb8}**.  
+4.  Atualize o valor de chave **WBreakerClass** para **{9faed859-0b30-4434-ae65-412e14a16fb8}** .  
   
-5.  Atualize o valor de chave **StemmerClass** para **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}**.  
+5.  Atualize o valor de chave **StemmerClass** para **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** .  
   
 6.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
