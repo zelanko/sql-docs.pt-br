@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3ee35ac833a1170a688bb9439ed4dd8f6b6d6716
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403368"
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Complementares lição – configurar propriedades de relatório para relatórios do Power View
@@ -159,7 +159,7 @@ Você somente definirá algumas propriedades de coluna diferentes aqui, mas há 
   
     |coluna|Propriedade|Valor|  
     |----------|------------|---------|  
-    |data|Formato de Dados|Data Abreviada|  
+    |Date|Formato de Dados|Data Abreviada|  
     |Day Number of Week|Hidden|True|  
     |Day Name|Sort By Column|Day Number of Week|  
     |Day Of Week|Hidden|True|  

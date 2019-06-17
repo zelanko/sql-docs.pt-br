@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: adf5d9682ad1b2b9002a69884a183b30b3454c61
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094692"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Configuração inicial (PowerPivot para SharePoint)
@@ -73,7 +73,7 @@ ms.locfileid: "66094692"
   
 4.  Clique em **implantar a solução.**  
   
-5.  Na **implantar em?**, selecione o aplicativo web do SharePoint ao qual você deseja adicionar suporte ao recurso PowerPivot.  
+5.  Na **implantar em?** , selecione o aplicativo web do SharePoint ao qual você deseja adicionar suporte ao recurso PowerPivot.  
   
 6.  Clique em **OK**.  
   
@@ -256,7 +256,7 @@ ms.locfileid: "66094692"
   
 5.  Em Tipo de Servidor, selecione **Analysis Services**.  
   
-6.  Em nome do servidor, digite  **\<server-name > \powerpivot.**, onde  **\<nome do servidor >** é o nome do computador que tem a instalação do PowerPivot para SharePoint.  
+6.  Em nome do servidor, digite  **\<server-name > \powerpivot.** , onde  **\<nome do servidor >** é o nome do computador que tem a instalação do PowerPivot para SharePoint.  
   
 7.  Clique em **Conectar**.  
   

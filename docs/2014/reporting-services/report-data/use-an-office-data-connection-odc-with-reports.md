@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 983f60396f48e488b20e25f18751f615ded799ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106956"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>Usar uma conexão de dados do Office (.odc) com relatórios (Reporting Services no modo integrado do SharePoint)
@@ -92,7 +92,7 @@ ms.locfileid: "66106956"
   
 10. Se o relatório usar informações sobre fontes de dados personalizadas, clique em **Compartilhado**.  
   
-11. Em **Vínculo da Fonte de Dados**, clique no botão Procurar (**...**).  
+11. Em **Vínculo da Fonte de Dados**, clique no botão Procurar ( **...** ).  
   
 12. Selecione o arquivo .odc recém-carregado.  
   

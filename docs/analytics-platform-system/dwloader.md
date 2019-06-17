@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175040"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Carregador de linha de comando para Parallel Data Warehouse de dwloader
@@ -555,13 +555,13 @@ O modo de acréscimo carrega dados em duas fases. A fase um carrega dados do arq
 |Tipo de tabela|Transações múltiplas<br />Modo (-m)|Tabela está vazia|Simultaneidade com suporte|Registrando em log|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |Pilha|Sim|Sim|Sim|Mínimo|  
-|Pilha|Sim|Não |Sim|Mínimo|  
-|Pilha|Não |Sim|Não |Mínimo|  
-|Pilha|Não|Não |Não |Mínimo|  
+|Pilha|Sim|Não|Sim|Mínimo|  
+|Pilha|Não|Sim|Não|Mínimo|  
+|Pilha|Não|Não|Não|Mínimo|  
 |Cl|Sim|Sim|Não|Mínimo|  
 |Cl|Sim|Não|Sim|Completo|  
-|Cl|Não |Sim|Não |Mínimo|  
-|Cl|Não |Não |Sim|Completo|  
+|Cl|Não|Sim|Não|Mínimo|  
+|Cl|Não|Não|Sim|Completo|  
   
 Mostra a tabela acima **dwloader** usando o modo de acréscimo carregar em um heap ou uma tabela de índice clusterizado (CI), com ou sem o sinalizador de multi-transacional e carregar em uma tabela vazia ou uma tabela não vazia. O bloqueio e registro em log o comportamento de cada tal combinação de carga é exibido na tabela. Por exemplo, carregando fase (2ª) com o modo de acréscimo em um índice clusterizado sem modo multi-transacional e em um vazio tabela terá PDW criar um bloqueio exclusivo na tabela e registro em log é mínimo. Isso significa que um cliente não poderão carregar (2ª) fase e consulta simultaneamente em uma tabela vazia. No entanto, ao carregar com a mesma configuração em uma tabela não vazia, o PDW não emitirá um bloqueio exclusivo na tabela e a simultaneidade é possível. Infelizmente, registro em log completo ocorre, reduzindo o processo.  
   

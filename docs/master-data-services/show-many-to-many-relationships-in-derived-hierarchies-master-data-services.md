@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4215753da5ef7f9bce51cd7bea8c87551e369da6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488072"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Mostrar relações muitos para muitos em Hierarquias Derivadas (Master Data Services)
@@ -43,17 +43,17 @@ ms.locfileid: "65488072"
   
  Na captura de tela acima, observe que a entidade **Employee** aparece sob **Níveis Atuais** no meio como o único nível. A Hierarquia Derivada **Visualização** à direita simplesmente mostra uma lista de todos os membros da entidade **Employee** . A seção **Níveis Disponíveis** à esquerda mostra quais níveis podem ser adicionados no nível superior atual (**Funcionário**). A maioria deles são DBAs (atributos baseados em domínio) na entidade **Funcionário** , incluindo o DBA **Departamento** .  
   
- No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] em diante, há um novo tipo de nível que modela as relações M2M, por exemplo: **Classe (mapeada por meio de ClassRegistration.Student)**. O nome do nível é mais detalhado do que os outros de modo a refletir as informações extras necessárias para descrever inequivocamente a relação de mapeamento. Arraste e solte esse nível no nível **Employee** na seção **Níveis Atuais** :  
+ No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] em diante, há um novo tipo de nível que modela as relações M2M, por exemplo: **Classe (mapeada por meio de ClassRegistration.Student)** . O nome do nível é mais detalhado do que os outros de modo a refletir as informações extras necessárias para descrever inequivocamente a relação de mapeamento. Arraste e solte esse nível no nível **Employee** na seção **Níveis Atuais** :  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
- Agora a visualização mostra os funcionários agrupados por classes de treinamento para as quais eles foram registrados. Como essa é uma relação M2M, cada membro filho pode ter vários pais. No exemplo acima, o funcionário **6 {Hillman, Reinout N}** foi registrado como um aluno em duas classes, **1 {Master Data Services 101}** e **4 {Career-Limiting Moves}**.  
+ Agora a visualização mostra os funcionários agrupados por classes de treinamento para as quais eles foram registrados. Como essa é uma relação M2M, cada membro filho pode ter vários pais. No exemplo acima, o funcionário **6 {Hillman, Reinout N}** foi registrado como um aluno em duas classes, **1 {Master Data Services 101}** e **4 {Career-Limiting Moves}** .  
   
  Essa relação de mapeamento também pode ser exibida de forma invertida, agrupando classes por aluno:  
   
  ![mds_hierarchies_available_entities_and_hierarchies](../master-data-services/media/mds-hierarchies-available-entities-and-hierarchies.PNG "mds_hierarchies_available_entities_and_hierarchies")  
   
- Novamente, vemos como um filho pode aparecer em mais de um pai: classe de treinamento **1 {Master Data Services 101}** aparece em **6 {Hillman, Reinout N}** e **40 {Ford, Jeffrey L}**.  
+ Novamente, vemos como um filho pode aparecer em mais de um pai: classe de treinamento **1 {Master Data Services 101}** aparece em **6 {Hillman, Reinout N}** e **40 {Ford, Jeffrey L}** .  
   
  Os membros da entidade de mapeamento **ClassRegistration** não aparecem em qualquer lugar na Hierarquia Derivada. Eles são usados simplesmente para definir as relações entre os membros pai e filho na hierarquia.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "65488072"
 ### <a name="M2MSample"></a> Relação M2M no modelo de exemplo  
 Para obter uma demonstração de uma relação M2M, exiba a hierarquia derivada Clima da Região no modelo de exemplo Cliente incluído no [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].   
   
-Como mostra a imagem a seguir, o nome do nível que modela essa relação é ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (mapeado por meio de RegionClimate.Region)**. O ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** mostra regiões agrupadas pelos tipos de climas aos quais elas estão associadas. Essa é uma relação M2M porque há regiões (membros filho) associadas a vários climas (pais). Por exemplo, ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** está associado a ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** e ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**.  
+Como mostra a imagem a seguir, o nome do nível que modela essa relação é ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (mapeado por meio de RegionClimate.Region)** . O ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** mostra regiões agrupadas pelos tipos de climas aos quais elas estão associadas. Essa é uma relação M2M porque há regiões (membros filho) associadas a vários climas (pais). Por exemplo, ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** está associado a ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** e ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** .  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
@@ -92,7 +92,7 @@ Para obter instruções sobre como implantar o modelo de exemplo Cliente e outro
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a> Segurança do membro  
- Uma hierarquia que permite a duplicação do membro (permite que um membro tenha mais de um pai) não pode ser usada para atribuir permissões de segurança do membro. Por exemplo:   
+ Uma hierarquia que permite a duplicação do membro (permite que um membro tenha mais de um pai) não pode ser usada para atribuir permissões de segurança do membro. Por exemplo:  
   
 -   Uma RDH (Hierarquia Derivada Recursiva) que não ancora recursões nulas (cada membro no nível recursivo aparece sob ROOT e seu pai recursivo).  
   

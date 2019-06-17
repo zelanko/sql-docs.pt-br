@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 723e8fe5f657d3b9eda2d6ab73966830a13a3aac
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099133"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de colunas ao relatório (Construtor de Relatórios)
@@ -108,7 +108,7 @@ ms.locfileid: "66099133"
     UNION SELECT CAST('2009-12-31' AS date) AS SalesDate, CAST(81946. AS money) AS Sales  
     ```  
   
-8.  (Opcional) Clique no botão Executar (**!**) para ver os dados em que o gráfico se baseará.  
+8.  (Opcional) Clique no botão Executar ( **!** ) para ver os dados em que o gráfico se baseará.  
   
 9. Clique em **Avançar**.  
   
@@ -236,7 +236,7 @@ ms.locfileid: "66099133"
   
 9. Clique com botão direito no título do eixo vertical ao longo do lado do gráfico e clique em **propriedades do título do eixo**.  
   
-10. Substitua o texto na **texto do título** campo com o seguinte texto: **Total de vendas (em milhares)**. Também é possível especificar várias opções relacionadas ao modo como o título é formatado.  
+10. Substitua o texto na **texto do título** campo com o seguinte texto: **Total de vendas (em milhares)** . Também é possível especificar várias opções relacionadas ao modo como o título é formatado.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

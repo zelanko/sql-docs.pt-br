@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aff33ad5722ad4b08c1429b795607d1217b95e39
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103943"
 ---
 # <a name="configure-report-manager-native-mode"></a>Configurar o Gerenciador de Relatórios (modo nativo)
@@ -147,7 +147,7 @@ ms.locfileid: "66103943"
   
 2.  Abra o Internet Explorer.  
   
-3.  Insira a URL do Gerenciador de Relatórios. Por padrão, considera-se http://\<**your-server-name**>/reports, mas se você tiver instalado o Reporting Services como uma instância nomeada, a URL padrão será http://\<**your-server-name**>/reports\<**_instancename**>.  
+3.  Insira a URL do Gerenciador de Relatórios. Por padrão, considera-se http://\<**your-server-name**>/reports, mas se você tiver instalado o Reporting Services como uma instância nomeada, a URL padrão será http://\<**your-server-name**>/reports\< **_instancename**>.  
   
 4.  Clique em **Configurações de Site**.  
   

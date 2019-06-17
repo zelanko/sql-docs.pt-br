@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 87b04db9a25df8ddf7329ef3d2f0142875296c63
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 0c763cf3a1822548b1e107ecc7d619d8ef44d0a6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601206"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803915"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>Referência da API do driver JDBC
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -65,5 +65,5 @@ O driver SQLSRV contém as seguintes funções:
 
 [Guia de programação para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
-[Guia de Introdução com os Drivers da Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Introdução aos Drivers da Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
   

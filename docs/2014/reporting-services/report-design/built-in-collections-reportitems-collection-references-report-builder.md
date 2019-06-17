@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60b081b96ae54885a6f1968706903b13fb7505a5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106386"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Referências de coleções ReportItems (Construtor de Relatórios e SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66106386"
 ## <a name="using-the-reportitems-value-property"></a>Usando a propriedade Value de ReportItems  
  Itens dentro de `ReportItems` coleção tem apenas uma propriedade: Value. O valor para um item de `ReportItems` pode ser usado para exibir ou calcular dados de outro campo no relatório. Para acessar o valor da caixa de texto atual, é possível usar o Me.Value ou simplesmente o Value global interno de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Em funções de relatório, como First e funções de agregação, use a sintaxe totalmente qualificada.  
   
- Por exemplo:   
+ Por exemplo:  
   
 -   Esta expressão, colocada em uma caixa de texto, exibe o valor de uma caixa de texto de um `ReportItem` denominado `Textbox1`:  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ee5fe8ac1b56a1ef45a63cac5bf85b43ce75d008
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404128"
 ---
 # <a name="lesson-5-1---defining-a-referenced-relationship"></a>Lição 5-1: definindo uma relação referenciada
@@ -47,7 +47,7 @@ Até este ponto no tutorial, cada dimensão de cubo que você definiu teve como 
   
     Observe que, neste momento, a dimensão de cubo **Geography** não tem uma relação com os grupos de medidas **Vendas pela Internet** e **Vendas do Revendedor** .  
   
-8.  Clique no botão de reticências (**...** ) na **nome completo** célula na interseção dos **cliente** dimensão e o **vendas pela Internet** grupo de medidas.  
+8.  Clique no botão de reticências ( **...** ) na **nome completo** célula na interseção dos **cliente** dimensão e o **vendas pela Internet** grupo de medidas.  
   
     Na caixa de diálogo **Definir Relação** , observe que uma relação **Regular** está definida entre a tabela de dimensões **DimCustomer** e a tabela de grupos de medidas **FactInternetSales** com base na coluna **CustomerKey** de cada uma dessas tabelas. Todas as relações que você definiu dentro deste tutorial até este momento foram relações regulares.  
   
@@ -57,7 +57,7 @@ Até este ponto no tutorial, cada dimensão de cubo que você definiu teve como 
   
 9. Clique em **Cancelar**.  
   
-10. Clique no botão de reticências (**...** ) na célula sem-nome na interseção de **geografia** dimensão e o **vendas do revendedor** grupo de medidas.  
+10. Clique no botão de reticências ( **...** ) na célula sem-nome na interseção de **geografia** dimensão e o **vendas do revendedor** grupo de medidas.  
   
     Na caixa de diálogo **Definir Relação** , observe que não há relações definidas entre a dimensão de cubo Geografia e o grupo de medidas Vendas do Revendedor. Não é possível definir uma relação regular porque não há uma relação direta entre a tabela de dimensões da dimensão Geografia e a tabela de fatos do grupo de medidas Vendas do Revendedor.  
   
@@ -89,7 +89,7 @@ Na próxima tarefa, você solucionará esse problema definindo um atributo que s
   
     O atributo Geografia Principal na dimensão Revendedor será usado apenas para vincular a dimensão Geografia à tabela de fatos Vendas do Revendedor. Como ele não será usado para pesquisa, não há valores ao definir essa hierarquia de atributo como visível. Além disso, ordenar e otimizar a hierarquia de atributo afetará negativamente o desempenho do processamento. Entretanto, o atributo deve estar habilitado para servir como vínculo entre as duas dimensões.  
   
-4.  Alterne para o Designer de cubo para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cubo do Tutorial, clique em de **uso da dimensão** guia e, em seguida, clique no botão de reticências (**...** ) na interseção de **vendas do revendedor** grupo de medidas e a **geografia** dimensão do cubo.  
+4.  Alterne para o Designer de cubo para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cubo do Tutorial, clique em de **uso da dimensão** guia e, em seguida, clique no botão de reticências ( **...** ) na interseção de **vendas do revendedor** grupo de medidas e a **geografia** dimensão do cubo.  
   
 5.  Na lista **Selecionar tipo de relação** , selecione **Referenciada**.  
   

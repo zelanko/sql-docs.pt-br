@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb8d81c9c47f00ed84036accf86768d084072c4d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109490"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios
@@ -59,7 +59,7 @@ ms.locfileid: "66109490"
 |Fonte de dados do SAP NetWeaver BI|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Defina o tipo da fonte de dados como `SAP NetWeaver BI`.|  
 |Fonte de dados do Hyperion Essbase|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Defina o tipo da fonte de dados como `Hyperion Essbase`.|  
 |Fonte de dados do Teradata|`data source=` *\<NN>.\<NNN>.\<NNN>.\<N>* `;`|Defina o tipo da fonte de dados como `Teradata`. A cadeia de conexão é um endereço IP no formulário de quatro campos, em que cada campo pode ter de um a três dígitos.|  
-|Fonte de dados do Teradata|`Database=` *\<database name>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Defina o tipo de fonte de dados como `Teradata`, semelhante ao exemplo anterior. Use apenas o banco de dados padrão especificado na marca Database e não descubra automaticamente relações de dados.|  
+|Fonte de dados do Teradata|`Database=` *\<database name>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN *>* `;Use X Views=False;Restrict to Default Database=True`|Defina o tipo de fonte de dados como `Teradata`, semelhante ao exemplo anterior. Use apenas o banco de dados padrão especificado na marca Database e não descubra automaticamente relações de dados.|  
 |Fonte de dados XML, serviço Web|`data source=http://adventure-works.com/results.aspx`|Defina o tipo da fonte de dados como `XML`. A cadeia de conexão é uma URL para um serviço Web com suporte para WSDL.|  
 |Fonte de dados XML, documento XML|`http://localhost/XML/Customers.xml`|Defina o tipo da fonte de dados como `XML`. A cadeia de conexão é uma URL para o documento XML.|  
 |Fonte de dados XML, documento XML inserido|*Empty (vazio)*|Defina o tipo da fonte de dados como `XML`. Os dados XML são inseridos na definição do relatório.|  

@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 528ba1cb776124c72fcb2d6f1d1e97c0b25ea2f9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983112"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
@@ -48,7 +48,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="arguments"></a>Argumentos  
 `[ @ftcat = ] 'fulltext_catalog_name'` É o nome do catálogo de texto completo. Nomes de catálogo devem ser exclusivos para cada banco de dados. *fulltext_catalog_name* está **sysname**.  
   
-`[ @action = ] 'action'` É a ação a ser executada. *ação* está **varchar(20)**, e pode ser um destes valores.  
+`[ @action = ] 'action'` É a ação a ser executada. *ação* está **varchar(20)** , e pode ser um destes valores.  
   
 > [!NOTE]  
 >  Os catálogos de texto completo podem ser criados, descartados e modificados conforme necessário. Entretanto, evite fazer alterações de esquema em vários catálogos ao mesmo tempo. Essas ações podem ser executadas usando o **sp_fulltext_table** procedimento armazenado, que é a maneira recomendada.  

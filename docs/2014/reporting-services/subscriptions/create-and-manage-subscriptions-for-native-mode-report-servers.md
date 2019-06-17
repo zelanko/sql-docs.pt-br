@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c929fd63cb886eaad301697d4eee245ffb30301c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100986"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Create, Modify, and Delete Standard Subscriptions (Reporting Services in Native Mode)
@@ -79,7 +79,7 @@ ms.locfileid: "66100986"
   
 8.  Em Formato de Processamento, selecione um formato de saída de relatório para entrega de arquivo. Escolha um formato que corresponda ao aplicativo de desktop que será usado para abrir o relatório. Evite formatos que não renderizam um relatório em um único fluxo ou que introduzam interatividade não compatível com um arquivo estático (por exemplo, HTML 4.0).  
   
-9. Nas caixas de texto **Nome de usuário** e **Senha**, especifique as credenciais necessárias para acessar o compartilhamento de arquivos, usando o formato *\<domain>*\\*\<user name>* para o nome de usuário.  
+9. Nas caixas de texto **Nome de usuário** e **Senha**, especifique as credenciais necessárias para acessar o compartilhamento de arquivos, usando o formato *\<domain>* \\ *\<user name>* para o nome de usuário.  
   
 10. Especifique opções de substituição. Se você clicar em **Não substituir o arquivo se existir uma versão anterior**, a entrega não ocorrerá caso um arquivo existente seja detectado. Se você clicar em **Incrementar nomes de arquivos quando versões mais recentes são adicionadas**, o servidor de relatório adicionará um número ao nome do arquivo para diferenciá-lo dos arquivos existentes com o mesmo nome.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66100986"
   
 3.  Na **entregues pelo**, selecione **email**. Se este tipo de entrega não estiver disponível, isso indica que o servidor de relatório não foi configurado para assinatura de email.  
   
-4.  No **To** caixa de texto, o nome do destinatário no campo para: campo é autoendereçado usando sua conta de usuário de domínio. Definições de configuração do servidor de relatório determinam se o **para** campo é autoendereçado com sua conta de usuário. Para obter mais informações sobre como alterar os endereços de email de definições de configuração, consulte [configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
+4.  No **To** caixa de texto, o nome do destinatário no campo para: campo é autoendereçado usando sua conta de usuário de domínio. As configurações do servidor de relatório determinam se o campo **Para** é endereçado a si mesmo com sua conta de usuário. Para obter mais informações sobre como alterar os endereços de email de definições de configuração, consulte [configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
     > [!NOTE]  
     >  Dependendo de suas permissões, você pode digitar o endereço de email no qual deseja entregar o relatório. Para especificar vários endereços de email, separe-os com um ponto-e-vírgula (;). Você também pode digitar endereços de email adicionais nas caixas de texto **Cc**, **Cco**e **Responder** . Você precisa ter permissão para gerenciar todas as assinaturas.  

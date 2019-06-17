@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 501eb13a137b82adad1190f990d29760c43119b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 50c0d6bf2b9c413e6085451383f2ae4a6791442a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622354"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797057"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Considerações de segurança para os Drivers da Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ A Autenticação do Windows deve ser usada para se conectar ao SQL Server sempre
   
 Para obter informações sobre como se conectar a um servidor com a Autenticação do Windows, consulte [How to: Connect using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md).  
   
-Quando você se conecta usando a Autenticação do Windows, é recomendável configurar seu ambiente para que o SQL Server possa usar o protocolo de autenticação Kerberos. Para obter mais informações, veja [Como certificar-se de que você está usando a Autenticação Kerberos ao criar uma conexão remota com uma instância do SQL Server 2005](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c) ou [Autenticação Kerberos e SQL Server](https://msdn.microsoft.com/library/cc280744.aspx).  
+Quando você se conecta usando a Autenticação do Windows, é recomendável configurar seu ambiente para que o SQL Server possa usar o protocolo de autenticação Kerberos. Para obter mais informações, consulte [Como certificar-se de que você está usando a Autenticação Kerberos ao criar uma conexão remota com uma instância do SQL Server 2005](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c) ou [Autenticação Kerberos e SQL Server](https://msdn.microsoft.com/library/cc280744.aspx).  
   
 ## <a name="use-encrypted-connections-when-transferring-sensitive-data"></a>Usar conexões criptografadas ao transferir dados confidenciais  
 Devem-se usar conexões criptografadas sempre que dados confidenciais forem enviados para ou recuperados do SQL Server. Para obter informações sobre como habilitar conexões criptografadas, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados (SQL Server Configuration Manager)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). Para estabelecer uma conexão segura com os [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], use o atributo de conexão Encrypt ao se conectar ao servidor. Para obter mais informações sobre atributos de conexão, consulte [Connection Options](../../connect/php/connection-options.md).  
@@ -42,7 +42,7 @@ Devem-se usar conexões criptografadas sempre que dados confidenciais forem envi
 ## <a name="use-parameterized-queries"></a>Usar consultas parametrizadas  
 Use consultas parametrizadas para reduzir o risco de ataques de injeção de SQL. Para obter exemplos de como executar consultas parametrizadas, consulte [How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md).  
   
-Para obter mais informações sobre ataques de injeção de SQL e as considerações de segurança relacionadas, veja [Injeção SQL](https://msdn.microsoft.com/library/ms161953.aspx).  
+Para obter mais informações sobre ataques de injeção de SQL e as considerações de segurança relacionadas, consulte [Injeção SQL](https://msdn.microsoft.com/library/ms161953.aspx).  
   
 ## <a name="do-not-accept-server-or-connection-string-information-from-end-users"></a>Não aceitar informações de cadeia de conexão de usuários finais ou de servidor  
 Escreva os aplicativos de forma que os usuários finais não possam enviar informações da cadeia de conexão ou do servidor para o aplicativo. Manter controle restrito sobre informações de cadeia de caracteres de conexão e de servidor reduz a área de superfície para atividades mal-intencionadas.  

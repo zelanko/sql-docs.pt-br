@@ -100,7 +100,7 @@
       items:
         - name: Nomes de banco de dados reservados
           href: ../analytics-platform-system/reserved-database-names.md
-        - name: 'banco de dados tempdb '
+        - name: banco de dados tempdb
           href: ../analytics-platform-system/tempdb-database.md
         - name: banco de dados mestre
           href: ../analytics-platform-system/master-database.md

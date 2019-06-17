@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ca534c6b-ef4d-4ae8-8cc3-514728623cff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0839ad771e067552b6c19d3d44c5893189a2c52d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2d949416f96c704cc721e8037bc022bdceac4291
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782924"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799016"
 ---
 # <a name="executeupdate-method-"></a>Método executeUpdate ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

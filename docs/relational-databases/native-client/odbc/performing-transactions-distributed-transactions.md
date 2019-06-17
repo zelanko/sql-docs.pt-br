@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8ea6c4886a3c5397777b7a65afe96ab7e1b422bd
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65620547"
 ---
 # <a name="create-a-distributed-transaction"></a>Criar uma transação distribuída
@@ -53,7 +53,7 @@ MSDTC é chamado pelo driver do SQL Server Native Client para Open Database Conn
 3. O aplicativo atualiza alguns dados no SQL Server Y no computador B.
     - Se uma atualização do SQL Server Y falhar, todas as atualizações não confirmadas em ambas as instâncias do SQL Server são revertidas.
 
-4. Por fim, o aplicativo termina a transação chamando [SQLEndTran _(1)_](../../../relational-databases/native-client-odbc-api/sqlendtran.md), com a opção SQL_COMMIT ou SQL_ROLLBACK.
+4. Por fim, o aplicativo termina a transação chamando [SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md), com a opção SQL_COMMIT ou SQL_ROLLBACK.
 
 _(1)_  MSDTC pode ser invocado sem ODBC. Nesse caso, o MSDTC se torna o Gerenciador de transações e o aplicativo não usa mais **SQLEndTran**.
 

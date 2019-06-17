@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109614"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Página Criar Assinatura Controlada por Dados (Gerenciador de Relatórios)
@@ -151,7 +151,7 @@ ms.locfileid: "66109614"
  Defina uma agenda que executa de hora em hora.  
   
  **Diário**  
- Define uma agenda que executa nos dias que você seleciona, em uma hora e minuto específico. Você pode especificar dias das seguintes maneiras: Cada  *\<dia >*, cada dia da semana e cada  *\<número >* dia. A escolha de uma abordagem invalida as outras, mesmo se os outros dias parecem selecionados.  
+ Define uma agenda que executa nos dias que você seleciona, em uma hora e minuto específico. Você pode especificar dias das seguintes maneiras: Cada  *\<dia >* , cada dia da semana e cada  *\<número >* dia. A escolha de uma abordagem invalida as outras, mesmo se os outros dias parecem selecionados.  
   
  **Semanal**  
  Define uma agenda que executa em intervalos semanais, em uma hora e minuto específicos. O intervalo pode ser em semanas completas (por exemplo, a cada duas semanas) ou dias dentro de uma semana.  

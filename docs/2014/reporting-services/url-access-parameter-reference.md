@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b5607f9105ec7197ebc96afc91f189ac19969be8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098716"
 ---
 # <a name="url-access-parameter-reference"></a>Referência de parâmetro de acesso de URL
@@ -68,7 +68,7 @@ ms.locfileid: "66098716"
 |*ShowHideToggle*|Alterna o estado de mostrar e ocultar de uma seção do relatório. Especifique um número inteiro positivo para representar a seção a ser alternada.|  
   
 ## <a name="report-viewer-web-part-commands-rv"></a>Comandos da Web Part do Visualizador de Relatórios (rv:)  
- A tabela a seguir descreve os nomes de parâmetros de relatório reservados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que são usados para direcionar a Web Part do Visualizador de Relatórios que está integrada com o SharePoint. Esses nomes de parâmetro são prefixados com *rv:*. A Web Part Visualizador de Relatórios também aceita o parâmetro *rs:ParameterLanguage* .  
+ A tabela a seguir descreve os nomes de parâmetros de relatório reservados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que são usados para direcionar a Web Part do Visualizador de Relatórios que está integrada com o SharePoint. Esses nomes de parâmetro são prefixados com *rv:* . A Web Part Visualizador de Relatórios também aceita o parâmetro *rs:ParameterLanguage* .  
   
 |Parâmetro|Ação|  
 |---------------|------------|  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b456d165ef9c4f09bb040cefb63644efb51c112
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098858"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Relatório de mapa (construtor de relatórios)
@@ -191,7 +191,7 @@ ms.locfileid: "66098858"
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. Na barra de ferramentas do designer de consultas, clique em **Executar** (**!**).  
+9. Na barra de ferramentas do designer de consultas, clique em **Executar** ( **!** ).  
   
      O conjunto de resultados exibe sete colunas: StoreKey, StoreName, SellingArea, City, County, Sales e SpatialLocation. Esses dados representam um conjunto de lojas no Estado de Nova York que vendem bens de consumo. Cada linha no conjunto de resultados contém um identificador de loja, o nome da loja, a área disponível para exibição do produto, a cidade e o município no qual a loja está localizada, o total de vendas e o local espacial em longitude e latitude. A área de exibição varia de 455 pés quadrados a 1.125 pés quadrados.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "66098858"
   
 19. Adicione um título à legenda. Clique com o botão direito do mouse no título e clique em **Propriedades do Título da Legenda**.  
   
-20. Exclua o título e digite a **Área de Exibição (Pés Quadrados)**.  
+20. Exclua o título e digite a **Área de Exibição (Pés Quadrados)** .  
   
 21. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -318,7 +318,7 @@ ms.locfileid: "66098858"
   
 4.  Clique em **Visibilidade**.  
   
-5.  Em **Transparência (%)**, digite **30**.  
+5.  Em **Transparência (%)** , digite **30**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

@@ -17,10 +17,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 8843131bfefd3d11e1f3b5509c2375235f8bf2f8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094619"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Instalar o Analysis Services em modo multidimensional e de mineração de dados
@@ -72,7 +72,7 @@ ms.locfileid: "66094619"
   
 ## <a name="see-also"></a>Consulte também  
  [Recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
- [Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](../../../2014/analysis-services/languages-and-collations-analysis-services.md)   
+ [Idiomas e ordenações &#40;Analysis Services&#41;](../../../2014/analysis-services/languages-and-collations-analysis-services.md)   
  [Atualizar o Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
   
   
