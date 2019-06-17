@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 03dae95f44b4166947da4ef7bd88b532db00dd03
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667232"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>Atualizar dados no Replication Monitor
@@ -42,7 +42,7 @@ ms.locfileid: "62667232"
   
     3.  Clique com o botão direito do mouse em uma assinatura e clique em **Exibir Detalhes**.  
   
-2.  Na janela de detalhes **Assinatura \<SubscriptionName>**, clique em **Ação** e, em seguida, em **Atualização Automática**. A taxa de atualização é determinada pela configuração em **Taxa de atualização** , na caixa de diálogo **Configurações do Publicador** .  
+2.  Na janela de detalhes **Assinatura \<SubscriptionName>** , clique em **Ação** e, em seguida, em **Atualização Automática**. A taxa de atualização é determinada pela configuração em **Taxa de atualização** , na caixa de diálogo **Configurações do Publicador** .  
   
 ## <a name="see-also"></a>Consulte também  
  [Monitorando a Replicação](../monitoring-replication.md)  
