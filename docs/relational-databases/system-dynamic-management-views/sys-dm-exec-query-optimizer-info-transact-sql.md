@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ca0db131690b0b734d7e42175f4ccfb4df6a381
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013210"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
@@ -70,7 +70,7 @@ Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STA
 |pesquisar 2 tarefas|Somente interno|Somente interno|  
 |estágio de ganho 0 para estágio 1|Somente interno|Somente interno|  
 |estágio de ganho 1 para estágio 2|Somente interno|Somente interno|  
-|tempo limite|Somente interno|Somente interno|  
+|timeout|Somente interno|Somente interno|  
 |limite de memória excedido|Somente interno|Somente interno|  
 |insert stmt|Número de otimizações existentes para instruções INSERT.|Não aplicável|  
 |delete stmt|Número de otimizações existentes para instruções DELETE.|Não aplicável|  

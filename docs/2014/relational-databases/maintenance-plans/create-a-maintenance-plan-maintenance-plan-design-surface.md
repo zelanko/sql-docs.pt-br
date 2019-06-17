@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144337"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Criar um plano de manutenção (Superfície de Design do Plano de Manutenção)
@@ -107,7 +107,7 @@ ms.locfileid: "63144337"
      **Agenda**  
      Indica em qual agendamento o subplano será executado. Clique em **Agenda do Subplano** para abrir a caixa de diálogo **Nova Agenda de Trabalho** . Clique em **Remover Agenda** para excluir a agenda do subplano.  
   
-     Lista**Executar como**   
+     Lista**Executar como**  
      Selecione a conta a ser usada para executar esta subtarefa.  
   
 6.  Clique no ícone **Agenda do Subplano** para inserir detalhes de agenda na caixa de diálogo **Nova Agenda de Trabalho** .  
@@ -159,10 +159,10 @@ ms.locfileid: "63144337"
          **Opção de restrição**  
          Define como uma restrição funciona entre duas tarefas.  
   
-         Lista**Operação de avaliação**    
+         Lista**Operação de avaliação**  
          Especifica a operação de avaliação usada pela restrição de precedência. As operações são: **Constraint**, **Expression**, **Expression and Constraint** e **Expression or Constraint**.  
   
-         Lista**Valor**   
+         Lista**Valor**  
          Especifique o valor de restrição: **Success**, **Failure** ou **Completion**. **Êxito** é o padrão.  
   
         > [!NOTE]  
@@ -215,7 +215,7 @@ ms.locfileid: "63144337"
   
         1.  Se você selecionar **Gerar um relatório de arquivo de texto**, selecione **Criar um novo arquivo** ou **Acrescentar ao arquivo**.  
   
-        2.  Dependendo da seleção acima, insira o nome e o caminho completo do novo arquivo ou do arquivo a ser adicionado inserindo as informações nas caixas **Pasta** ou **Nome do arquivo** . Como alternativa, clique nas reticências **(...)**  e selecione o caminho para o nome de arquivo ou pasta do **localizar pasta -**_nome_do_servidor_ ou **localizar arquivos de banco de dados -**_nome_do_servidor_  caixas de diálogo.  
+        2.  Dependendo da seleção acima, insira o nome e o caminho completo do novo arquivo ou do arquivo a ser adicionado inserindo as informações nas caixas **Pasta** ou **Nome do arquivo** . Como alternativa, clique nas reticências **(...)**  e selecione o caminho para o nome de arquivo ou pasta do **localizar pasta -** _nome_do_servidor_ ou **localizar arquivos de banco de dados -** _nome_do_servidor_  caixas de diálogo.  
   
         3.  Se você selecionar **Enviar relatório para um destinatário de email**, na lista **Operador do agente** , selecione o destinatário do relatório enviado por e-mail.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "63144337"
   
 12. Para exibir os resultados no visualizador de arquivo de log, no **Pesquisador de Objetos**, clique com o botão direito do mouse na pasta **Planos de Manutenção** ou no plano de manutenção específico e selecione **Exibir Histórico**.  
   
-     As seguintes opções estão disponíveis na **Visualizador do arquivo de Log -**_nome_do_servidor_ caixa de diálogo.  
+     As seguintes opções estão disponíveis na **Visualizador do arquivo de Log -** _nome_do_servidor_ caixa de diálogo.  
   
      **Carregar Log**  
      Abra uma caixa de diálogo onde seja possível especificar um arquivo de log a ser carregado.  

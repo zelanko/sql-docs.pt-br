@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 31981669d5d08e63a853b8daa530b886f9b7dfbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62690761"
 ---
 # <a name="drillupmember-mdx"></a>DrillupMember (MDX)
@@ -36,7 +36,7 @@ DrillupMember(Set_Expression1, Set_Expression2)
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
 ## <a name="remarks"></a>Comentários  
- O **DrillupMember** função retorna um conjunto de membros com base nos membros especificados no primeiro conjunto que são descendentes de membros no segundo conjunto. O primeiro conjunto pode ter qualquer dimensionalidade, mas o segundo deve conter um conjunto unidimensional. A ordem é preservada entre os membros originais no primeiro conjunto. A função constrói o conjunto incluindo apenas aqueles membros do primeiro conjunto que sejam descendentes imediatos de membros do segundo conjunto. Se o ancestral imediato de um membro no primeiro conjunto não estiver presente no segundo conjunto, o membro no primeiro conjunto será incluído no conjunto retornado por essa função.  Descendentes no primeiro conjunto que precedem um membro ancestral no segundo conjunto também são incluídos.  
+ O **DrillupMember** função retorna um conjunto de membros com base nos membros especificados no primeiro conjunto que são descendentes de membros no segundo conjunto. O primeiro conjunto pode ter qualquer dimensionalidade, mas o segundo deve conter um conjunto unidimensional. A ordem é preservada entre os membros originais no primeiro conjunto. A função constrói o conjunto incluindo apenas aqueles membros do primeiro conjunto que sejam descendentes imediatos de membros do segundo conjunto. Se o ancestral imediato de um membro no primeiro conjunto não estiver presente no segundo conjunto, o membro no primeiro conjunto será incluído no conjunto retornado por essa função. Descendentes no primeiro conjunto que precedem um membro ancestral no segundo conjunto também são incluídos.  
   
  O primeiro conjunto pode conter tuplas em vez de membros. Busca detalhada de tupla é uma extensão de OLE DB e retorna um conjunto de tuplas em vez de membros.  
   

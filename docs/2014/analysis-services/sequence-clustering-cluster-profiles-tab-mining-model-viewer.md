@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069103"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>Guia Perfis de Cluster do clustering de sequências (Visualizador do Modelo de Mineração)
@@ -51,7 +51,7 @@ ms.locfileid: "66069103"
   
 -   **\<nome do atributo > Attribute**: Os histogramas nesta linha mostram as sequências de itens que são representativas de cada cluster. Nos termos do DMX, estes são os casos de exemplo para cada cluster.  
   
--   **\<nome do atributo >**: Os histogramas nesta linha descrevem todos os itens contidos no cluster e sua distribuição geral. Clique em um histograma quando **Legenda de Mineração** estiver visível e você puder ver os valores numéricos para cada  
+-   **\<nome do atributo >** : Os histogramas nesta linha descrevem todos os itens contidos no cluster e sua distribuição geral. Clique em um histograma quando **Legenda de Mineração** estiver visível e você puder ver os valores numéricos para cada  
   
  **Estados**  
  Esta coluna no gráfico é opcional e pode ser exibida ou removida selecionando a opção **Mostrar Legenda** . A coluna **Estados** fornece um guia sobre qual estado é representado por qual cor no histograma de clusters correspondente.  

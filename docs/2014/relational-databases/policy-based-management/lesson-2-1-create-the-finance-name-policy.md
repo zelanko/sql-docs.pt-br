@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ec01dd697e04b5d4b5d8d943a855a62adac48f60
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090621"
 ---
 # <a name="create-the-finance-name-policy"></a>Criar a política Nome Financeiro
@@ -39,7 +39,7 @@ ms.locfileid: "66090621"
   
 3.  Na lista **Faceta** , selecione **Nome com Diversas Partes**.  
   
-4.  Na caixa de diálogo **Expressão** , na caixa **Campo** , selecione **@Name**; na caixa **Operador** , selecione **Like**; e na caixa **Valor** , digite **'fintbl%'** para forçar todos os nomes de tabelas a começar com as letras **fintbl**.  
+4.  Na caixa de diálogo **Expressão** , na caixa **Campo** , selecione **@Name** ; na caixa **Operador** , selecione **Like**; e na caixa **Valor** , digite **'fintbl%'** para forçar todos os nomes de tabelas a começar com as letras **fintbl**.  
   
 5.  Na página **Descrição** , digite **Os nomes da tabela de Finanças deve começar com fintbl**e, em seguida, clique em **OK** para criar a condição.  
   

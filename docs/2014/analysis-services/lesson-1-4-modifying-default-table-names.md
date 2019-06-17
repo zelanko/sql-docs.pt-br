@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079227"
 ---
 # <a name="modifying-default-table-names"></a>Modificando nomes de tabela padrão
@@ -33,11 +33,11 @@ ms.locfileid: "66079227"
   
      É mais fácil alterar as propriedades de cada tabela na exibição da fonte de dados quando a janela Propriedades permanece aberta. Caso não configure a janela para permanecer aberta usando o botão **Ocultar Automaticamente** , a janela fechará ao clicar em um objeto diferente no painel **Diagrama** .  
   
-3.  Alterar o **FriendlyName** propriedade para o **FactInternetSales** objeto *`InternetSales`*.  
+3.  Alterar o **FriendlyName** propriedade para o **FactInternetSales** objeto *`InternetSales`* .  
   
      Quando você clicar fora da célula da propriedade **FriendlyName** , a alteração será aplicada. Na próxima lição, você definirá um grupo de medidas com base nessa tabela de fatos. O nome da tabela de fatos será InternetSales em vez de FactInternetSales devido à alteração feita nessa lição.  
   
-4.  Clique em **DimProduct** no painel **Tabelas** . Na janela Propriedades, altere o **FriendlyName** propriedade *`Product`*.  
+4.  Clique em **DimProduct** no painel **Tabelas** . Na janela Propriedades, altere o **FriendlyName** propriedade *`Product`* .  
   
 5.  Altere a propriedade **FriendlyName** de cada tabela restante na exibição da fonte de dados da mesma forma para remover o prefixo "**Dim**".  
   

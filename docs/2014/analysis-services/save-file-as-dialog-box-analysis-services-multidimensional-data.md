@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 007e37c7e093828cb3ea452a2bea5972f9ee5b9a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070048"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Salvar Arquivo como (Analysis Services - Dados Multidimensionais)
@@ -24,7 +24,7 @@ ms.locfileid: "66070048"
   
 -   Clicando em **Procurar** na caixa de diálogo **Banco de Dados de Backup** .  
   
--   Clicando no botão de reticências (**...**) na coluna **Arquivo de backup remoto** da grade da opção **Local de backup da partição remota** na caixa de diálogo **Banco de Dados de Backup** .  
+-   Clicando no botão de reticências ( **...** ) na coluna **Arquivo de backup remoto** da grade da opção **Local de backup da partição remota** na caixa de diálogo **Banco de Dados de Backup** .  
   
 ## <a name="options"></a>Opções  
  **Selecione a pasta**  

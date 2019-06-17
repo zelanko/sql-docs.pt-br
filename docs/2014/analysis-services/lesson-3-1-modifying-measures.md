@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078896"
 ---
 # <a name="modifying-measures"></a>Modificando medidas
@@ -28,7 +28,7 @@ ms.locfileid: "66078896"
   
      É mais fácil alterar as propriedades de vários itens no cubo quando a janela Propriedades permanece aberta.  
   
-3.  Na janela Propriedades, clique na lista **FormatString** e digite **#,#**.  
+3.  Na janela Propriedades, clique na lista **FormatString** e digite **#,#** .  
   
 4.  Na barra de ferramentas da guia **Estrutura do Cubo** , clique no ícone **Mostrar Grade de Medidas** à esquerda.  
   

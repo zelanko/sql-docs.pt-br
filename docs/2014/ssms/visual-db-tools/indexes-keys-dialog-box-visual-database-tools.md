@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63015408"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices e Chaves (Visual Database Tools)
@@ -55,7 +55,7 @@ ms.locfileid: "63015408"
  Mostra o nome da chave ou índice. Quando um novo índice é criado ele recebe um nome padrão com base na tabela da janela ativa no Designer de tabelas. O nome pode ser alterado a qualquer momento.  
   
  **Descrição**  
- Fornece um local para a descrição da chave ou do índice. Para escrever uma descrição mais detalhada, clique em **Descrição** e, em seguida, clique no botão de reticências (**…**) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
+ Fornece um local para a descrição da chave ou do índice. Para escrever uma descrição mais detalhada, clique em **Descrição** e, em seguida, clique no botão de reticências ( **…** ) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
   
  **Categoria do Designer de Tabelas**  
  Quando expandida, mostra as informações para **Criar como Clusterizado**.  
@@ -64,7 +64,7 @@ ms.locfileid: "63015408"
  Faça com que a chave ou índice fiquem clusterizados. Somente um índice clusterizado é permitido em uma tabela. Os dados de uma tabela são armazenados na ordem do índice clusterizado. Para obter mais informações, consulte [Criar índices clusterizados](../../relational-databases/indexes/indexes.md) e [Criar índices não clusterizados](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
  **Especificação de Espaço de Dados**  
- Quando expandida, mostra informações de **(Tipo de Espaço de Dados)**, **Grupo de arquivos ou Nome de esquema de partição**e **Lista de Colunas da Partição**.  
+ Quando expandida, mostra informações de **(Tipo de Espaço de Dados)** , **Grupo de arquivos ou Nome de esquema de partição**e **Lista de Colunas da Partição**.  
   
  **(Tipo de Espaço de Dados)**  
  Indica se o índice ou a chave pertence a um grupo de arquivo ou esquema de partição.  

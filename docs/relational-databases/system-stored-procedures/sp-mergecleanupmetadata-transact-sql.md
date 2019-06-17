@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017846"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
@@ -39,9 +39,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, com um padrão de **%**, que limpa metadados para todas as publicações. A publicação já deve existir se explicitamente especificada.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, com um padrão de **%** , que limpa metadados para todas as publicações. A publicação já deve existir se explicitamente especificada.  
   
-`[ @reinitialize_subscriber = ] 'subscriber'` Especifica se deve reinicializar o assinante. *assinante* está **nvarchar (5)**, pode ser **verdadeira** ou **FALSE**, com um padrão de **TRUE**. Se **verdadeira**, as assinaturas serão marcadas para reinicialização. Se **falsos**, as assinaturas não são marcadas para reinicialização.  
+`[ @reinitialize_subscriber = ] 'subscriber'` Especifica se deve reinicializar o assinante. *assinante* está **nvarchar (5)** , pode ser **verdadeira** ou **FALSE**, com um padrão de **TRUE**. Se **verdadeira**, as assinaturas serão marcadas para reinicialização. Se **falsos**, as assinaturas não são marcadas para reinicialização.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -53,11 +53,11 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 >  Após **sp_mergecleanupmetadata** é executado, por padrão, todas as assinaturas nos assinantes de publicações que têm metadados armazenados no **MSmerge_genhistory**, **MSmerge_contents**  e **MSmerge_tombstone** são marcadas para reinicialização, as alterações pendentes no assinante são perdidas, e o instantâneo atual está marcado como obsoleto.  
 > 
 > [!NOTE]
->  Se houver várias publicações em um banco de dados e uma dessas publicações usar um período de retenção de publicação infinito (**@retention**=**0**), em execução  **sp_mergecleanupmetadata** não limpará a alteração de replicação de mesclagem metadados para o banco de dados de rastreamento. Por esse motivo, use a retenção de publicação infinita com precaução.  
+>  Se houver várias publicações em um banco de dados e uma dessas publicações usar um período de retenção de publicação infinito ( **@retention** =**0**), em execução  **sp_mergecleanupmetadata** não limpará a alteração de replicação de mesclagem metadados para o banco de dados de rastreamento. Por esse motivo, use a retenção de publicação infinita com precaução.  
   
  Ao executar esse procedimento armazenado, você pode optar por reiniciar os assinantes definindo o **@reinitialize_subscriber** parâmetro **verdadeira** (o padrão) ou **FALSE**. Se **sp_mergecleanupmetadata** é executada com o **@reinitialize_subscriber** parâmetro definido como **TRUE**, um instantâneo será reaplicado no assinante, mesmo se a assinatura foi criado sem um instantâneo (por exemplo, se os dados de instantâneo e esquema foram aplicadas manualmente ou já existiam no assinante) inicial. Definindo o parâmetro como **falsos** deve ser usada com cuidado, porque se a publicação não for reiniciada, você deve garantir que os dados no publicador e assinante são sincronizados.  
   
- Independentemente do valor **@reinitialize_subscriber**, **sp_mergecleanupmetadata** processos que estão tentando carregar alterações para um publicador ou assinante de republicação em de mesclagem falhará se não houver em andamento a hora em que o procedimento armazenado é invocado.  
+ Independentemente do valor **@reinitialize_subscriber** , **sp_mergecleanupmetadata** processos que estão tentando carregar alterações para um publicador ou assinante de republicação em de mesclagem falhará se não houver em andamento a hora em que o procedimento armazenado é invocado.  
   
  **Executando sp_mergecleanupmetadata com @reinitialize_subscriber = TRUE:**  
   

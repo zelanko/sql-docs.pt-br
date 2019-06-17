@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a24c219937341b7c1f9d44515bf52c4de220d4c2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996601"
 ---
 # <a name="spbindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
@@ -44,7 +44,7 @@ sp_bindsession { 'bind_token' | NULL }
   
 ## <a name="arguments"></a>Argumentos  
  **'** *bind_token* **'**  
- É o token que identifica a transação originalmente obtida usando **sp_getbindtoken** ou o Open Data Services **srv_getbindtoken** função. *bind_token*is **varchar(255)**.  
+ É o token que identifica a transação originalmente obtida usando **sp_getbindtoken** ou o Open Data Services **srv_getbindtoken** função. *bind_token*is **varchar(255)** .  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73539ddcf9162cbedabfc0bad82da1fd9788d241
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083526"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de série temporal (Analysis Services – Mineração de dados)
@@ -51,7 +51,7 @@ ms.locfileid: "66083526"
  As seções a seguir explicam como os nós são organizados dentro de cada tipo de modelo.  
   
 ### <a name="structure-of-an-artxp-model"></a>Estrutura de um modelo ARTXP  
- O algoritmo ARTXP cria um modelo semelhante a um modelo de árvore de decisão. Ele agrupa atributos previsíveis e os divide sempre que são localizadas diferenças significativas. Consequentemente, cada modelo ARTXP contém uma ramificação separada para cada atributo previsível. Por exemplo, o tutorial Mineração de dados básica cria um modelo que prevê o volume de vendas para várias regiões. Nesse caso, **[Amount]** é o atributo previsível e uma ramificação separada é criada para cada região. Se tivéssemos dois atributos previsíveis, **[Amount]** e **[Quantity]**, seria criada uma ramificação separada para cada combinação de um atributo e uma região.  
+ O algoritmo ARTXP cria um modelo semelhante a um modelo de árvore de decisão. Ele agrupa atributos previsíveis e os divide sempre que são localizadas diferenças significativas. Consequentemente, cada modelo ARTXP contém uma ramificação separada para cada atributo previsível. Por exemplo, o tutorial Mineração de dados básica cria um modelo que prevê o volume de vendas para várias regiões. Nesse caso, **[Amount]** é o atributo previsível e uma ramificação separada é criada para cada região. Se tivéssemos dois atributos previsíveis, **[Amount]** e **[Quantity]** , seria criada uma ramificação separada para cada combinação de um atributo e uma região.  
   
  O nó superior da divisão ARTXP contém a mesma informação presente no nó raiz da árvore de decisão. Isso inclui o número de filhos de cada nó (CHILDREN_CARDINALITY), o número de casos que atendem as condições deste nó (NODE_SUPPORT) e uma variedade de estatísticas descritivas (NODE_DISTRIBUTION).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66083526"
 >  Caso queira exibir as fórmulas, poderá encontrar a fórmula de regressão completa no nível do nó folha, mas não em um nó intermediário ou no nó raiz.  
   
 ### <a name="structure-of-an-arima-model"></a>Estrutura de um modelo ARIMA  
- O algoritmo ARIMA cria uma única informação para cada combinação de uma série de dados (como **[Região]**) e um atributo previsível (como **[Sales Amount]**)-a equação que descreve o alteração do atributo previsível ao longo do tempo.  
+ O algoritmo ARIMA cria uma única informação para cada combinação de uma série de dados (como **[Região]** ) e um atributo previsível (como **[Sales Amount]** )-a equação que descreve o alteração do atributo previsível ao longo do tempo.  
   
  A equação para cada série é derivada de vários componentes, um para cada estrutura periódica que foi encontrada nos dados. Por exemplo, se você tem dados de vendas que são coletados mensalmente, o algoritmo pode detectar estruturas periódicas mensais, trimestrais ou anuais.  
   

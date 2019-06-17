@@ -34,10 +34,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076077"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Fontes de dados e associações (SSAS multidimensional)
@@ -177,7 +177,7 @@ ms.locfileid: "66076077"
  Todos os elementos relacionados a associações incorporadas são opcionais. Para qualquer elemento não especificado, o ASSL usa a especificação contida no DDL do objeto persistido. A especificação de `DataSource` ou `DataSourceView` no comando `Process` é opcional. Se `DataSource` ou `DataSourceView` for especificado, eles não serão instanciados e não persistirão depois que o comando `Process` for concluído.  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>Definição do tipo de associação fora de linha  
- Dentro da coleção fora de linha `Bindings`, o ASSL permite uma coleção de associações de vários objetos, cada um deles uma `Binding`. Cada `Binding` possui uma referência de objeto estendida, que é similar a uma referência de objeto, mas pode se referir aos objetos menores (por exemplo, atributos de dimensão e atributos de grupo de medidas). Esse objeto assume a forma plana típica do `Object` elemento no `Process` comandos, exceto que o \< *objeto*>\<*/objeto*> as marcas não estão presentes.  
+ Dentro da coleção fora de linha `Bindings`, o ASSL permite uma coleção de associações de vários objetos, cada um deles uma `Binding`. Cada `Binding` possui uma referência de objeto estendida, que é similar a uma referência de objeto, mas pode se referir aos objetos menores (por exemplo, atributos de dimensão e atributos de grupo de medidas). Esse objeto assume a forma plana típica do `Object` elemento no `Process` comandos, exceto que o \< *objeto*>\< */objeto*> as marcas não estão presentes.  
   
  Cada objeto para o qual a associação é especificada é identificado por um elemento XML do formulário \< *objeto*> ID (por exemplo, `DimensionID`). Depois de identificar o objeto de maneira mais específica possível com a forma \< *objeto*> ID, identifique o elemento para o qual a associação está sendo especificada, que geralmente é `Source`. Um caso comum a observar é que `Source` é uma propriedade no `DataItem`, que são associações de colunas em um atributo. Nesse caso, você não especifica a marca `DataItem`; em vez disso, você simplesmente especifica a propriedade `Source` como se estivesse diretamente na coluna a ser vinculada.  
   

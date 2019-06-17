@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998304"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
@@ -89,7 +89,7 @@ sp_addsubscription [ @publication = ] 'publication'
  É o nome do banco de dados de destino no qual os dados replicados são colocados. *destination_db* está **sysname**, com um padrão NULL. Quando NULL, *destination_db* é definido como o nome do banco de dados de publicação. For Oracle Publishers *destination_db* deve ser especificado. Para um assinante não SQL Server, especifique um valor de (destino padrão) para *destination_db*.  
   
  [ @sync_type=] '*sync_type*'  
- É o tipo de sincronização da assinatura. *sync_type* está **nvarchar (255)**, e pode ser um dos seguintes valores:  
+ É o tipo de sincronização da assinatura. *sync_type* está **nvarchar (255)** , e pode ser um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -111,13 +111,13 @@ sp_addsubscription [ @publication = ] 'publication'
 |subscribed|A assinatura precisa ser inicializada. Essa opção é definida quando o valor de *sync_type* é automática.|  
   
  [ @subscription_type=] '*subscription_type*'  
- É o tipo de assinatura. *subscription_type* está **nvarchar(4)**, com um padrão push. Pode ser push ou pull. Os Distribution Agents de assinaturas push residem no distribuidor e os Distribution Agents de assinaturas pull residem no assinante. *subscription_type* pode ser pull para criar uma assinatura pull nomeada conhecida do publicador. Para obter mais informações, consulte [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md) (Assinar publicações).  
+ É o tipo de assinatura. *subscription_type* está **nvarchar(4)** , com um padrão push. Pode ser push ou pull. Os Distribution Agents de assinaturas push residem no distribuidor e os Distribution Agents de assinaturas pull residem no assinante. *subscription_type* pode ser pull para criar uma assinatura pull nomeada conhecida do publicador. Para obter mais informações, consulte [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md) (Assinar publicações).  
   
 > [!NOTE]  
 >  Assinaturas anônimas não precisam usar esse procedimento armazenado.  
   
  [ @update_mode=] '*update_mode*'  
- É o tipo de atualização. *update_mode* é **nvarchar (30)**, e pode ser um destes valores.  
+ É o tipo de atualização. *update_mode* é **nvarchar (30)** , e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -130,7 +130,7 @@ sp_addsubscription [ @publication = ] 'publication'
  Observe que os valores synctran e queued tran não permitida se a publicação que está sendo assinada permite DTS.  
   
  [ @loopback_detection=] '*loopback_detection*'  
- Especifica se o Agente de Distribuição envia transações originadas no Assinante de volta ao Assinante. *loopback_detection* está **nvarchar (5)**, e pode ser um destes valores.  
+ Especifica se o Agente de Distribuição envia transações originadas no Assinante de volta ao Assinante. *loopback_detection* está **nvarchar (5)** , e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -197,13 +197,13 @@ sp_addsubscription [ @publication = ] 'publication'
  É a data do último agendamento do Agente de Distribuição, formatada como AAAAMMDD. *active_end_date* está **int**, com um padrão NULL.  
   
  [ @optional_command_line=] '*optional_command_line*'  
- É o prompt de comando opcional a ser executado. *optional_command_line* está **nvarchar (4000)**, com um padrão NULL.  
+ É o prompt de comando opcional a ser executado. *optional_command_line* está **nvarchar (4000)** , com um padrão NULL.  
   
  [ @reserved=] '*reserved*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
- Se a assinatura pode ser sincronizada pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Gerenciador de sincronização do Windows. *enabled_for_syncmgr* está **nvarchar (5)**, com um padrão de FALSE. Se for falso, a assinatura não será registrada com o Gerenciador de Sincronização do Windows. Se for verdadeiro, a assinatura será registrada com o Gerenciador de Sincronização do Windows e será sincronizada sem iniciar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Sem suporte para Publicadores Oracle.  
+ Se a assinatura pode ser sincronizada pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Gerenciador de sincronização do Windows. *enabled_for_syncmgr* está **nvarchar (5)** , com um padrão de FALSE. Se for falso, a assinatura não será registrada com o Gerenciador de Sincronização do Windows. Se for verdadeiro, a assinatura será registrada com o Gerenciador de Sincronização do Windows e será sincronizada sem iniciar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Sem suporte para Publicadores Oracle.  
   
  [ @offloadagent= ] '*remote_agent_activation*'  
  Especifica que o agente pode ser ativado remotamente. *remote_agent_activation* está **bit** com um padrão de 0.  
@@ -236,7 +236,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  *Publisher* não deve ser especificado para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
  [ @backupdevicetype=] '*backupdevicetype*'  
- Especifica o tipo do dispositivo de backup a ser usado ao inicializar um Assinante de um backup. *backupdevicetype* está **nvarchar (20)**, e pode ser um destes valores:  
+ Especifica o tipo do dispositivo de backup a ser usado ao inicializar um Assinante de um backup. *backupdevicetype* está **nvarchar (20)** , e pode ser um destes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -247,7 +247,7 @@ sp_addsubscription [ @publication = ] 'publication'
  *backupdevicetype* é usado apenas quando *sync_method*é definido para initialize_with_backup.  
   
  [ @backupdevicename=] '*backupdevicename*'  
- Especifica o nome do dispositivo usado ao inicializar um Assinante em um backup. *backupdevicename* está **nvarchar (1000)**, com um padrão NULL.  
+ Especifica o nome do dispositivo usado ao inicializar um Assinante em um backup. *backupdevicename* está **nvarchar (1000)** , com um padrão NULL.  
   
  [ @mediapassword=] '*mediapassword*'  
  Especifica uma senha para o conjunto de mídias se uma senha já tiver sido definida quando a mídia foi formatada. *mediapassword* está **sysname**, com um valor padrão de NULL.  
@@ -280,7 +280,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |-----------|-----------------|  
 |0 (padrão)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinante|  
 |1|Servidor de fontes de dados ODBC|  
-|2|Banco de dados [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet |  
+|2|Banco de dados [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet|  
 |3|Provedor OLE DB|  
   
  [ @memory_optimized=] *memory_optimized*  

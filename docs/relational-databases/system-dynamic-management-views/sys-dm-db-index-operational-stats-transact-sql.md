@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62684303"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
@@ -102,11 +102,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|Contagem cumulativa de exames de intervalo e de tabela iniciados no índice ou heap.|    
 |**singleton_lookup_count**|**bigint**|Contagem cumulativa de recuperações de linha única do índice ou heap.|    
 |**forwarded_fetch_count**|**bigint**|Contagem de linhas buscadas por meio de um registro de encaminhamento.<br /><br /> 0 = Índices|    
-|**lob_fetch_in_pages**|**bigint**|Contagem cumulativa de páginas de LOB (objeto grande) recuperadas da unidade de alocação LOB_DATA. Essas páginas contêm dados que são armazenados em colunas do tipo **texto**, **ntext**, **imagem**, **varchar (max)**, **nvarchar ( max)**, **varbinary (max)**, e **xml**. Para obter mais informações, veja [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
+|**lob_fetch_in_pages**|**bigint**|Contagem cumulativa de páginas de LOB (objeto grande) recuperadas da unidade de alocação LOB_DATA. Essas páginas contêm dados que são armazenados em colunas do tipo **texto**, **ntext**, **imagem**, **varchar (max)** , **nvarchar ( max)** , **varbinary (max)** , e **xml**. Para obter mais informações, veja [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
 |**lob_fetch_in_bytes**|**bigint**|Contagem cumulativa de bytes de dados LOB recuperados.|    
 |**lob_orphan_create_count**|**bigint**|Contagem cumulativa de valores LOB órfãos criados para operações em massa.<br /><br /> 0 = Índice não clusterizado|    
 |**lob_orphan_insert_count**|**bigint**|Contagem cumulativa de valores LOB órfãos inseridos durante operações em massa.<br /><br /> 0 = Índice não clusterizado|    
-|**row_overflow_fetch_in_pages**|**bigint**|Contagem cumulativa de páginas de dados de estouro de linha recuperada da unidade de alocação ROW_OVERFLOW_DATA.<br /><br /> Essas páginas contêm dados armazenados em colunas do tipo **varchar (n)**, **nvarchar (n)**, **varbinary (n)**, e **sql_variant** que tenha sido enviado por push fora da linha.|    
+|**row_overflow_fetch_in_pages**|**bigint**|Contagem cumulativa de páginas de dados de estouro de linha recuperada da unidade de alocação ROW_OVERFLOW_DATA.<br /><br /> Essas páginas contêm dados armazenados em colunas do tipo **varchar (n)** , **nvarchar (n)** , **varbinary (n)** , e **sql_variant** que tenha sido enviado por push fora da linha.|    
 |**row_overflow_fetch_in_bytes**|**bigint**|Contagem cumulativa de bytes de dados de estouro de linha recuperados.|    
 |**column_value_push_off_row_count**|**bigint**|Contagem cumulativa de valores de coluna para dados LOB e dados de estouro de linha empurrados para fora da linha para que uma linha atualizada ou inserida coubesse na página.|    
 |**column_value_pull_in_row_count**|**bigint**|Contagem cumulativa de valores de coluna para dados de LOB e dados de estouro de linha puxados para dentro da linha. Isso ocorre quando uma operação de atualização libera espaço em um registro e fornece uma oportunidade de empurrar um ou mais valores para fora da linha das unidades de alocação LOB_DATA ou ROW_OVERFLOW_DATA.|    

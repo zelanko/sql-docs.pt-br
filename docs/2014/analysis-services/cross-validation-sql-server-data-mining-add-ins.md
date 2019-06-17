@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086646"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Validação cruzada (Suplementos de Mineração de Dados do SQL Server)
@@ -75,7 +75,7 @@ ms.locfileid: "66086646"
  Se você escolher uma estrutura com suporte para modelos de clustering e outros tipos de modelos, os modelos de clustering não serão testados.  
   
 ## <a name="understanding-cross-validation-results"></a>Entendendo os resultados de validação cruzada  
- Os resultados da validação cruzada são exibidos em uma nova planilha, denominada **relatório de validação cruzada para \<nome do atributo >**. A nova planilha contém várias seções: a primeira é um resumo que fornece metadados importantes sobre o modelo testado, para que você possa saber para qual modelo ou estrutura os resultados são.  
+ Os resultados da validação cruzada são exibidos em uma nova planilha, denominada **relatório de validação cruzada para \<nome do atributo >** . A nova planilha contém várias seções: a primeira é um resumo que fornece metadados importantes sobre o modelo testado, para que você possa saber para qual modelo ou estrutura os resultados são.  
   
  A segunda seção no relatório fornece um resumo estatístico que indica o quão bom é o modelo original. Resumindo, as diferenças entre os modelos criados para cada partição são analisadas para três medidas principais: *erro de raiz quadrada média*, *erro absoluto médio*, e *log pontuar*. Essas são medidas estatísticas padrão usadas não só na mineração de dados, como também na maioria dos tipos de análise estatística.  
   

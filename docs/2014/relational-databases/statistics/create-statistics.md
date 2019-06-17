@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63033612"
 ---
 # <a name="create-statistics"></a>Criar estatísticas
@@ -67,7 +67,7 @@ ms.locfileid: "63033612"
   
 3.  Clique no sinal de adição ao lado da tabela na qual você deseja criar uma nova estatística.  
   
-4.  Clique com o botão direito do mouse na pasta **Estatísticas** e selecione **Novas Estatísticas...**.  
+4.  Clique com o botão direito do mouse na pasta **Estatísticas** e selecione **Novas Estatísticas...** .  
   
      As propriedades a seguir são mostradas na página **Geral** na caixa de diálogo **Novas Estatísticas na Tabela**_table_name_ .  
   

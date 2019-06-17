@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0079ca11eb6400b2bce524fd909acbaafd112323
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064706"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>cmdlet Invoke-Sqlcmd
@@ -91,11 +91,11 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
 ## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>Comparando o Invoke-Sqlcmd e o utilitário sqlcmd  
  **Invoke-Sqlcmd** pode ser usado para executar muitos dos scripts que podem ser executados com o utilitário **sqlcmd** . Porém, **Invoke-Sqlcmd** executa em um ambiente do Windows PowerShell que é diferente do ambiente de prompt de comando em que **sqlcmd** é executado. O comportamento de **Invoke-Sqlcmd** foi modificado para funcionar em um ambiente do Windows PowerShell.  
   
- Nem todos os comandos **sqlcmd** são implementados no **Invoke-Sqlcmd**. Os comandos que não são implementados incluem o seguinte: **:!!**, **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**e **:serverlist**.  
+ Nem todos os comandos **sqlcmd** são implementados no **Invoke-Sqlcmd**. Os comandos que não são implementados incluem o seguinte: **:!!** , **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**e **:serverlist**.  
   
  **Invoke-Sqlcmd** não inicializa o ambiente **sqlcmd** ou variáveis de scripts como SQLCMDDBNAME ou SQLCMDWORKSTATION.  
   
- **Invoke-Sqlcmd** não exibe mensagens, como a saída de instruções PRINT, a menos que você especifique o parâmetro comum **-Verbose** do Windows PowerShell. Por exemplo:   
+ **Invoke-Sqlcmd** não exibe mensagens, como a saída de instruções PRINT, a menos que você especifique o parâmetro comum **-Verbose** do Windows PowerShell. Por exemplo:  
   
 ```  
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  

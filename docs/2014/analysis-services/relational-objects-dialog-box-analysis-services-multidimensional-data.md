@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0571271f347c2aebcc2a0e0e25f2fff09b98fa89
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070351"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Objetos Relacionais (Analysis Services - Dados Multidimensionais)
-  Use a caixa de diálogo **Objetos Relacionais** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para selecionar tabelas, exibições ou outros objetos de uma fonte de dados na qual você queira definir cache pró-ativo. É possível exibir esta caixa de diálogo no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] clicando no botão de reticências (**...**) em qualquer uma das opções de **Especificar tabelas de acompanhamento** na guia **Notificações** da caixa de diálogo **Opções de Armazenamento** .  
+  Use a caixa de diálogo **Objetos Relacionais** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para selecionar tabelas, exibições ou outros objetos de uma fonte de dados na qual você queira definir cache pró-ativo. É possível exibir esta caixa de diálogo no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] clicando no botão de reticências ( **...** ) em qualquer uma das opções de **Especificar tabelas de acompanhamento** na guia **Notificações** da caixa de diálogo **Opções de Armazenamento** .  
   
 ## <a name="options"></a>Opções  
  **Selecione os objetos relacionais para o qual você deseja definir o cache pró-ativo**  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84e134854770f0096cc99c94698cfd8d7e3e818a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076562"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Criar um cubo usando uma Exibição da Fonte de Dados
@@ -61,7 +61,7 @@ ms.locfileid: "66076562"
 ## <a name="selecting-dimensions"></a>Selecionando dimensões  
  Use a página **Selecionar Dimensões** do assistente para adicionar dimensões ao cubo. Esta página só aparecerá se já houver dimensões compartilhadas correspondentes a tabelas de dimensão no novo cubo.  
   
- Para adicionar dimensões existentes, selecione uma ou mais dimensões na lista **Dimensões compartilhadas** e clique no botão de seta para a direita (**>**) para movê-las para a lista **Dimensões do cubo** . Clique no botão da seta dupla (**>>**) para mover todas as dimensões na lista.  
+ Para adicionar dimensões existentes, selecione uma ou mais dimensões na lista **Dimensões compartilhadas** e clique no botão de seta para a direita ( **>** ) para movê-las para a lista **Dimensões do cubo** . Clique no botão da seta dupla ( **>>** ) para mover todas as dimensões na lista.  
   
  Se uma dimensão existente não aparecer na lista e você achar que deve, clique em **Voltar** e altere as configurações de tipo de tabela para uma ou mais tabelas. Uma dimensão existente também deve estar relacionada a pelo menos uma das tabelas de fato no cubo para aparecer na lista **Dimensões compartilhadas** .  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66076562"
   
  Para remover qualquer objeto na árvore do cubo, desmarque a caixa de seleção ao lado dele. Desmarcar a caixa de seleção ao lado de um objeto também remove todos os objetos debaixo dele. As dependências entre objetos são impostas, de modo que, se você remover um atributo, os níveis de hierarquia dependentes no atributo também serão removidos. Por exemplo, desmarcar uma caixa de seleção ao lado de uma hierarquia desmarca as caixas de seleção ao lado de todos os níveis na hierarquia, e remove os níveis e também as hierarquias. O atributo de chave para uma dimensão não pode ser removido.  
   
- Você pode renomear qualquer dimensão, o atributo, a hierarquia ou o nível de tanto clicando no nome ou clicando com o nome e, em seguida, no menu de atalho clicando em **renomeie \<objeto >**, onde  **\< objeto >** está **dimensão**, **atributo**, ou **nível**.  
+ Você pode renomear qualquer dimensão, o atributo, a hierarquia ou o nível de tanto clicando no nome ou clicando com o nome e, em seguida, no menu de atalho clicando em **renomeie \<objeto >** , onde  **\< objeto >** está **dimensão**, **atributo**, ou **nível**.  
   
  Não há necessariamente uma relação de um para um entre o número de tabelas de dimensão definido na página **Identificar Tabelas de Fatos e Dimensões** do assistente e o número de dimensões listadas nesta página do assistente. Dependendo das relações entre as tabelas na exibição da fonte de dados, o assistente pode usar duas ou mais tabelas para criar uma dimensão (por exemplo, como exigido por um esquema de floco de neve).  
   

@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011968"
 ---
 # <a name="create-a-server-role"></a>Criar uma função de servidor
@@ -67,9 +67,9 @@ ms.locfileid: "63011968"
   
 2.  Expanda a pasta **Segurança** .  
   
-3.  Clique com o botão direito do mouse na pasta **Funções de Servidor** e selecione **Nova Função de Servidor...**.  
+3.  Clique com o botão direito do mouse na pasta **Funções de Servidor** e selecione **Nova Função de Servidor...** .  
   
-4.  No **nova função de servidor -**_server_role_name_ caixa de diálogo de **geral** página, insira um nome para a nova função de servidor no **nome da função de servidor**caixa.  
+4.  No **nova função de servidor -** _server_role_name_ caixa de diálogo de **geral** página, insira um nome para a nova função de servidor no **nome da função de servidor**caixa.  
   
 5.  Na caixa **Proprietário** , digite o nome da entidade de segurança de servidor que será proprietária da nova função. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Logon ou Função de Servidor**.  
   

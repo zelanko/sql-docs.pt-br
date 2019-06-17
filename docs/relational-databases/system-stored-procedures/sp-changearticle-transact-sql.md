@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997946"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
@@ -48,9 +48,9 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 `[ @article = ] 'article'` É o nome do artigo cuja propriedade deve ser alterado. *artigo* está **sysname**, com um padrão NULL.  
   
-`[ @property = ] 'property'` É uma propriedade de artigo a ser alterada. *propriedade* está **nvarchar(100)**.  
+`[ @property = ] 'property'` É uma propriedade de artigo a ser alterada. *propriedade* está **nvarchar(100)** .  
   
-`[ @value = ] 'value'` É o novo valor da propriedade de artigo. *valor* está **nvarchar (255)**.  
+`[ @value = ] 'value'` É o novo valor da propriedade de artigo. *valor* está **nvarchar (255)** .  
   
  Essa tabela descreve as propriedades de artigos e os valores dessas propriedades.  
   
@@ -73,7 +73,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**delete**|Exclui a tabela de destino.|  
 ||**truncate**|Trunca a tabela de destino.|  
 |**pub_identity_range**||Controla o tamanho de intervalos de identidade atribuídos atribuído ao Assinante. Sem suporte para replicação ponto a ponto.|  
-|**schema_option**||Especifica o bitmap da opção de geração de esquema para o artigo determinado. *schema_option* está **binary (8)**. Para obter mais informações, consulte a seção Comentários, mais adiante neste tópico.|  
+|**schema_option**||Especifica o bitmap da opção de geração de esquema para o artigo determinado. *schema_option* está **binary (8)** . Para obter mais informações, consulte a seção Comentários, mais adiante neste tópico.|  
 ||**0x00**|Desabilita execução de script pelo Agente de Instantâneo.|  
 ||**0x01**|Gera a criação do objeto (CREATE TABLE, CREATE PROCEDURE, e assim por diante).|  
 ||**0x02**|Gera os procedimentos armazenados que propagam alterações para o artigo, se definido.|  
@@ -104,7 +104,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x4000000**|Replica índices em **xml** colunas.|  
 ||**0x8000000**|Cria qualquer esquema ainda não presente no assinante.|  
 ||**0x10000000**|Converte **xml** colunas a serem **ntext** no assinante.|  
-||**0x20000000**|Converte tipos de dados objeto grande (**nvarchar (max)**, **varchar (max)**, e **varbinary (max)**) que foram introduzidos no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para tipos de dados com suporte em [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
+||**0x20000000**|Converte tipos de dados objeto grande (**nvarchar (max)** , **varchar (max)** , e **varbinary (max)** ) que foram introduzidos no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para tipos de dados com suporte em [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
 ||**0x40000000**|Replica as permissões.|  
 ||**0x80000000**|Tentativa de remover dependências de todos os objetos que não fazem parte da publicação.|  
 ||**0x100000000**|Use esta opção para replicar o atributo FILESTREAM, se ele for especificado em **varbinary (max)** colunas. Não especifique essa opção se você estiver replicando tabelas para Assinantes [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Replicação de tabelas com colunas FILESTREAM para [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] assinantes não é suportada, independentemente de como essa opção de esquema é definida.<br /><br /> Consulte a opção relacionada **0x800000000**.|  

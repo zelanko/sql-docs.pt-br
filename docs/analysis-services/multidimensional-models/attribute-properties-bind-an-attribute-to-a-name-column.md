@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 95b9ddc6bfee2f33702a77fcfcf85f5dffddab0d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63020440"
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>Propriedades do atributo – Associar um atributo a uma coluna de nome
@@ -26,7 +26,7 @@ ms.locfileid: "63020440"
   
 2.  Na guia **Estrutura da Dimensão** , no painel **Atributos** , clique com o botão direito do mouse no atributo que você quer configurar e clique em **Propriedades**.  
   
-3.  Na janela **Propriedades** , localize a propriedade **NameColumn** e selecione **(novo)**.  
+3.  Na janela **Propriedades** , localize a propriedade **NameColumn** e selecione **(novo)** .  
   
 4.  Na caixa de diálogo **Associação de Objeto** , para **Tipo de associação**, selecione **Associação de Coluna**.  
   

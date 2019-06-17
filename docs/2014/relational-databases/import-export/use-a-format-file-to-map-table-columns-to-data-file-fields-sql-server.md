@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd08aaa50f307d107a55c838395677e5692914ba
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011738"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Usar um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados (SQL Server)
@@ -93,7 +93,7 @@ GO
   
 ```  
   
-## <a name="using-an-xml-format-file"></a>Usando um arquivo de formato XML   
+## <a name="using-an-xml-format-file"></a>Usando um arquivo de formato XML  
  O exemplo de arquivo de formato não XML a seguir apresenta um arquivo de formato, `myTestOrder.xml`, que mapeia os campos no `myTestOrder-c.txt` para as colunas da tabela `myTestOrder`. Para obter informações sobre como criar o arquivo de dados e a tabela, consulte "Tabela e arquivo de dados de exemplo" anteriormente neste tópico.  
   
  O arquivo de formato `myTestOrder.xml` contém as seguintes informações:  

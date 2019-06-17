@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31d482f5972358900da30816f88d7225c863c15c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063633"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barra de status (Editor de Consultas do Mecanismo de Banco de Dados)
@@ -34,13 +34,13 @@ ms.locfileid: "66063633"
 ##  <a name="SetOEServerColor"></a> Definir a cor de status para um servidor no Pesquisador de Objetos  
  **Para definir uma cor de status no Pesquisador de Objetos**  
   
-1.  No **Pesquisador de Objetos**, selecione o botão **Conectar** e depois a opção **Mecanismo de Banco de Dados...**.  
+1.  No **Pesquisador de Objetos**, selecione o botão **Conectar** e depois a opção **Mecanismo de Banco de Dados...** .  
   
-2.  Na caixa de diálogo **Conectar ao Servidor**, selecione **Opções >>**.  
+2.  Na caixa de diálogo **Conectar ao Servidor**, selecione **Opções >>** .  
   
 3.  Marque a caixa de seleção **Usar cor personalizada** .  
   
-4.  Para selecionar a cor, selecione o botão **Selecionar...**.  
+4.  Para selecionar a cor, selecione o botão **Selecionar...** .  
   
 5.  Selecione uma cor básica ou personalizada e clique em OK.  
   
@@ -49,13 +49,13 @@ ms.locfileid: "66063633"
 ##  <a name="SetRegServerColor"></a> Definir a cor de status para um servidor registrado  
  **Par definir uma cor de status para um servidor registrado**  
   
-1.  Em **Servidores Registrados**, clique com o botão direito do mouse no nó de servidor e selecione **Propriedades...**.  
+1.  Em **Servidores Registrados**, clique com o botão direito do mouse no nó de servidor e selecione **Propriedades...** .  
   
 2.  Na caixa de diálogo **Editar Propriedades de Registro do Servidor** , selecione a guia **Propriedades de Conexão** .  
   
 3.  Marque a caixa de seleção **Usar cor personalizada** .  
   
-4.  Para selecionar a cor, selecione o botão **Selecionar...**.  
+4.  Para selecionar a cor, selecione o botão **Selecionar...** .  
   
 5.  Selecione uma cor básica ou personalizada e clique em OK.  
   
@@ -75,11 +75,11 @@ ms.locfileid: "66063633"
   
 -   Abra o menu **Arquivo** , selecione **Novo**e, em seguida, selecione **Consulta do Mecanismo de Banco de Dados**.  
   
--   Na caixa de diálogo **Conectar ao Servidor**, selecione **Opções >>**.  
+-   Na caixa de diálogo **Conectar ao Servidor**, selecione **Opções >>** .  
   
 -   Marque a caixa de seleção **Usar cor personalizada** .  
   
--   Para selecionar a cor, selecione o botão **Selecionar...**.  
+-   Para selecionar a cor, selecione o botão **Selecionar...** .  
   
 -   Selecione uma cor básica ou personalizada e clique em OK.  
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6f9701371b9a6007f831d1e06dd6bbd0605e7dc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063577"
 ---
 # <a name="breakpoints-window"></a>Janela Pontos de Interrupção
@@ -34,7 +34,7 @@ ms.locfileid: "66063577"
  Exibe o nome do ponto de interrupção. Os nomes dos pontos de interrupção são fornecidos pelo depurador. Esse nome inclui o nome da janela do Editor de Consultas do Mecanismo do Banco de Dados que contém o ponto de interrupção e o número da linha do Editor de Consultas onde o ponto de interrupção foi configurado.  
   
  **Condição**  
- Exibe **(nenhuma condição)**. O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] não dá suporte a condições de ponto de interrupção de configuração.  
+ Exibe **(nenhuma condição)** . O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] não dá suporte a condições de ponto de interrupção de configuração.  
   
  **Contagem de Ocorrências**  
  Exibe**sempre é interrompido**.  
@@ -42,7 +42,7 @@ ms.locfileid: "66063577"
  Você pode adicionar e remover as seguintes colunas selecionando-as na lista **Colunas** .  
   
  **Filter**  
- Exibe **(nenhum)**. O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] não dá suporte a filtros de ponto de interrupção de configuração.  
+ Exibe **(nenhum)** . O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] não dá suporte a filtros de ponto de interrupção de configuração.  
   
  **Quando Visitado**  
  Exibe **Interrupção**.  

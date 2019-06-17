@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010944"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Definir a conta de serviço do Iniciador do Daemon de Filtro de Texto Completo
@@ -32,7 +32,7 @@ ms.locfileid: "66010944"
   
 1.  No menu **Iniciar** , aponte para **Todos os Programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
   
-2.  Na **SQL Server Configuration Manager**, clique em **SQL Server Services**, clique com botão direito **iniciador do Daemon de filtro de texto completo SQL (*`instance name`*)** e, em seguida, clique em **propriedades**.  
+2.  Na **SQL Server Configuration Manager**, clique em **SQL Server Services**, clique com botão direito **iniciador do Daemon de filtro de texto completo SQL ( *`instance name`* )** e, em seguida, clique em **propriedades**.  
   
 3.  Clique na guia **Fazer Logon** da caixa de diálogo e selecione ou digite a conta em que será executado cada processo criado pelo serviço Iniciador do Daemon de Filtro de Texto Completo do SQL.  
   
