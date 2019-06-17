@@ -34,10 +34,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62631367"
 ---
 # <a name="xml-indexes-sql-server"></a>Índices XML (SQL Server)
@@ -93,7 +93,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   Chave primária da tabela base. A chave primária da tabela base é duplicada no índice XML primário para uma junção retroativa com a tabela base, e o número máximo de colunas na chave primária da tabela base é limitado a 15.  
   
- Essas informações de nó são usadas para avaliar e construir resultados XML para uma consulta especificada. Para fins de otimização, as informações de nome da marca e de tipo de nó são codificadas como valores inteiros e a coluna Path usa a mesma codificação. Além disso, caminhos são armazenados em ordem inversa para permitir correspondência de caminhos quando apenas o sufixo do caminho é conhecido. Por exemplo:   
+ Essas informações de nó são usadas para avaliar e construir resultados XML para uma consulta especificada. Para fins de otimização, as informações de nome da marca e de tipo de nó são codificadas como valores inteiros e a coluna Path usa a mesma codificação. Além disso, caminhos são armazenados em ordem inversa para permitir correspondência de caminhos quando apenas o sufixo do caminho é conhecido. Por exemplo:  
   
 -   `//ContactRecord/PhoneNumber` em que apenas as duas últimas etapas são conhecidas  
   

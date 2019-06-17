@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0a44320072f11a56b735502be3f1776f29cc1c0
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538015"
 ---
 # <a name="sqlgetfunctions-function"></a>Função SQLGetFunctions
@@ -46,7 +46,7 @@ SQLRETURN SQLGetFunctions(
   
 ## <a name="arguments"></a>Argumentos  
  *ConnectionHandle*  
- [Entrada] Identificador de Conexão.  
+ [Entrada] Identificador de conexão.  
   
  *FunctionId*  
  [Entrada] Um **#define** valor que identifica a função ODBC de interesse; **SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**. **SQL_API_ODBC3_ALL_FUNCTIONS** é usado por um ODBC 3 *. x* aplicativo para determinar o suporte do ODBC 3 *. x* e funções anteriores. **SQL_API_ALL_FUNCTIONS** é usado por um ODBC 2 *. x* aplicativo para determinar o suporte do ODBC 2 *. x* e funções anteriores.  

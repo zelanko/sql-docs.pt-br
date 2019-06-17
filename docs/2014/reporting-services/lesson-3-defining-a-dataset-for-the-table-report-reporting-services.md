@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f4c78328e02215520b8d33213e01871f010f62d6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108455"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lição 3: Definir um conjunto de dados para o relatório de tabela (Reporting Services)
@@ -24,7 +24,7 @@ ms.locfileid: "66108455"
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>Para definir uma consulta Transact-SQL a fim de obter dados de relatório  
   
-1.  No painel **Dados do Relatório**, clique em **Novo** e em **Conjunto de Dados...**. A caixa de diálogo **Propriedades do Conjunto de Dados** é aberta.  
+1.  No painel **Dados do Relatório**, clique em **Novo** e em **Conjunto de Dados...** . A caixa de diálogo **Propriedades do Conjunto de Dados** é aberta.  
   
 2.  Na caixa **Nome** , digite **AdventureWorksDataset**.  
   

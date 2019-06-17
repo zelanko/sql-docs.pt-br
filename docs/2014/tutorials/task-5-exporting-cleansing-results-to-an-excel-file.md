@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489121"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Tarefa 5: Exportar os resultados da limpeza para um arquivo do Excel
@@ -42,7 +42,7 @@ ms.locfileid: "65489121"
   
     3.  Pesquise **Los Angeles** e ver que o **estado** está definido como **CA**.  
   
-    4.  Confirme se não houver nenhum termos **co**, **corp.**, e **Inc.**.  
+    4.  Confirme se não houver nenhum termos **co**, **corp.** , e **Inc.** .  
   
     5.  Excluir o **Address Validation** coluna da planilha e salve o arquivo do excel. Essa coluna adicional corresponde ao domínio composto Address Validation.  
   

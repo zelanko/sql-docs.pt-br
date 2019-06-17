@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63054762"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Instale o Analysis Services no modo do Power Pivot.
@@ -262,7 +262,7 @@ ms.locfileid: "63054762"
  As etapas necessárias para atualizar pastas de trabalho criadas em versões anteriores do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] dependem de qual versão do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] criou a pasta de trabalho. Para obter mais informações, veja [Atualizar pastas de trabalho e a atualização de dados agendada &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="bkmk_multiple_servers"></a> Além da instalação de servidor único – PowerPivot para Microsoft SharePoint  
- **Front-end WFE (Web)** ou **camada intermediária:**: Para usar um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server no modo do SharePoint em um farm do SharePoint maior e instalar adicionais [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] recursos no farm, execute o pacote do instalador **spPowerPivot16.msi (SharePoint 2016) ou sppowerpivot. msi (SharePoint 2013),** em cada um dos servidores do SharePoint. O spPowerPivot16.msi ou o spPowerPivot.msi instala os provedores de dados necessários e a ferramenta de configuração do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016 ou 2013.  
+ **Front-end WFE (Web)** ou **camada intermediária:** : Para usar um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server no modo do SharePoint em um farm do SharePoint maior e instalar adicionais [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] recursos no farm, execute o pacote do instalador **spPowerPivot16.msi (SharePoint 2016) ou sppowerpivot. msi (SharePoint 2013),** em cada um dos servidores do SharePoint. O spPowerPivot16.msi ou o spPowerPivot.msi instala os provedores de dados necessários e a ferramenta de configuração do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016 ou 2013.  
   
  Para obter mais informações sobre como instalar e configurar a camada intermediária, consulte o seguinte:  
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767428"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>Etapa 3: Modificar o gerenciador de conexões de arquivo simples
@@ -26,7 +26,7 @@ ms.locfileid: "62767428"
   
 1.  No painel **Gerenciadores de Conexões** , clique com o botão direito do mouse em **Dados de Origem de Arquivo Simples de Exemplo**e selecione **Propriedades**.  
   
-2.  Na janela Propriedades, em **Expressões**, clique na célula vazia e clique no botão de reticências **(…)**.  
+2.  Na janela Propriedades, em **Expressões**, clique na célula vazia e clique no botão de reticências **(…)** .  
   
 3.  No **Editor de expressões de propriedade** na caixa de **propriedade** coluna, digite ou selecione `ConnectionString`.  
   

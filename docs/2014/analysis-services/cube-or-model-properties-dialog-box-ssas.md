@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6857ece2f81ffdba839ec1a7f0ef420ec5d0acdf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086596"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Caixa de diálogo Propriedades do Cubo ou Modelo (SSAS)
@@ -41,7 +41,7 @@ ms.locfileid: "66086596"
 |**Última Atualização de Esquema**|Exibe a data e a hora em que os metadados do cubo ou modelo foram atualizados pela última vez.|  
 |**Modo de processamento do Cache de script**|Selecione o modo de processamento a ser usado para o cache de script do cubo ou modelo. Para obter mais informações sobre os valores dessa propriedade, consulte <xref:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode%2A>.|  
 |**Modo de processamento**|Selecione o modo de processamento a ser usado para o cubo ou modelo. Para obter mais informações sobre os valores dessa propriedade, consulte <xref:Microsoft.AnalysisServices.Cube.ProcessingMode%2A>.|  
-|**Local de armazenamento**|Digite a pasta a ser usada como a localização de armazenamento padrão para grupos de medidas e partições associadas ao cubo ou ao modelo ou clique no botão de reticências (**...**) para exibir a caixa de diálogo **Procurar Pasta Remota** para selecionar uma pasta. Para obter mais informações sobre a caixa de diálogo **Procurar Pasta Remota**, consulte [Caixa de diálogo Procurar Pasta Remota &#40;Analysis Services – Dados Multidimensionais&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Para obter mais informações sobre os valores dessa propriedade, consulte <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>.|  
+|**Local de armazenamento**|Digite a pasta a ser usada como a localização de armazenamento padrão para grupos de medidas e partições associadas ao cubo ou ao modelo ou clique no botão de reticências ( **...** ) para exibir a caixa de diálogo **Procurar Pasta Remota** para selecionar uma pasta. Para obter mais informações sobre a caixa de diálogo **Procurar Pasta Remota**, consulte [Caixa de diálogo Procurar Pasta Remota &#40;Analysis Services – Dados Multidimensionais&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Para obter mais informações sobre os valores dessa propriedade, consulte <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>.|  
 |**Estado**|Exibe o estado de processamento do cubo ou modelo. Para obter mais informações sobre os valores dessa propriedade, consulte <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**LastProcessed**|Exibe a data e a hora do último processamento do cubo ou modelo.|  
   

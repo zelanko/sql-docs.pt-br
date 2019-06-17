@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62639943"
 ---
 # <a name="password-reset---analytics-platform-system"></a>Redefinição de senha - Analytics Platform System
@@ -40,7 +40,7 @@ O **sa** logon no SQL Server. **SA** é um membro do **sysadmin** função de se
 As credenciais de administrador de domínio e as credenciais de administrador de sistema seguem as políticas de força de senha para cada tipo de credencial. Ao alterar as credenciais de administrador de domínio, a nova senha é atualizada para o domínio onde for necessário em todo o SQL Server PDW.  
   
 > [!IMPORTANT]  
-> SQL Server PDW não suporta o caractere de cifrão (**$**) no administrador de domínio ou senhas de administrador local. Os caracteres **^ % &** são permitidos em senhas, no entanto, PowerShell considera como caracteres especiais. Se qualquer um desses caracteres são usados em senhas para o administrador do sistema ou do SQL Server**sa** contas (o **AdminPassword** e **PdwSAPassword** parâmetros durante a a instalação), em seguida, a instalação, incluindo instalação, atualização, REPLACENODE e a aplicação de patch, falhará. Para garantir uma atualização bem-sucedida quando senhas atuais contêm caracteres sem suporte, altere essas senhas para que eles não contêm esses caracteres antes de executar a atualização. Após a conclusão da atualização, você pode definir essas senhas de volta para seus valores originais. Para obter mais informações sobre os requisitos de senha, consulte [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md).  
+> SQL Server PDW não suporta o caractere de cifrão ( **$** ) no administrador de domínio ou senhas de administrador local. Os caracteres **^ % &** são permitidos em senhas, no entanto, PowerShell considera como caracteres especiais. Se qualquer um desses caracteres são usados em senhas para o administrador do sistema ou do SQL Server**sa** contas (o **AdminPassword** e **PdwSAPassword** parâmetros durante a a instalação), em seguida, a instalação, incluindo instalação, atualização, REPLACENODE e a aplicação de patch, falhará. Para garantir uma atualização bem-sucedida quando senhas atuais contêm caracteres sem suporte, altere essas senhas para que eles não contêm esses caracteres antes de executar a atualização. Após a conclusão da atualização, você pode definir essas senhas de volta para seus valores originais. Para obter mais informações sobre os requisitos de senha, consulte [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md).  
   
 ## <a name="to-reset-a-password"></a>Para redefinir uma senha  
   

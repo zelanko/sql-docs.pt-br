@@ -16,13 +16,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ad1756d3943f6a9db68633c59013bcb85037ffa7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62780325"
 ---
-# <a name="using-the-sqlxml-managed-classes"></a>Usando as classes gerenciadas do SQLXML 
+# <a name="using-the-sqlxml-managed-classes"></a>Usando as classes gerenciadas do SQLXML
   Esta seção fornece aplicativos de exemplo que demonstram como usar as classes gerenciadas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML.  
   
  Para obter informações sobre como acessar e modificar dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework e sobre como usar DiffGrams para atualizar dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelas, consulte [acessando a funcionalidade SQLXML no ambiente .NET](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  

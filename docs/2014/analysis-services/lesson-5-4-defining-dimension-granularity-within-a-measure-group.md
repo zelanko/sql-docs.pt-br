@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 46d69f2bcc82ba1ff4ae49e9bfa5e3aa7a61ad2a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078457"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Definindo a granularidade da dimensão dentro de um grupo de medidas
@@ -126,7 +126,7 @@ ms.locfileid: "66078457"
   
      Observe que o **funcionário** e `Date` dimensões do cubo são vinculadas para o **cotas de vendas de cotas de vendas 1** grupos de medidas através de relações regulares. Observe também que a dimensão do cubo **Região de Vendas** não está vinculada a nenhum desses grupos de medidas.  
   
-4.  Clique na célula na interseção de **território de vendas** dimensão e o `Sales Quotas` grupo de medidas e, em seguida, clique no botão Procurar (**...** ). A caixa de diálogo **Definir Relação** é aberta.  
+4.  Clique na célula na interseção de **território de vendas** dimensão e o `Sales Quotas` grupo de medidas e, em seguida, clique no botão Procurar ( **...** ). A caixa de diálogo **Definir Relação** é aberta.  
   
 5.  Na lista **Selecionar tipo de relação** , selecione **Referenciada**.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66078457"
   
 10. Clique em **OK**.  
   
-11. Clique na célula na interseção de **território de vendas** dimensão e o **cotas de vendas 1** grupo de medidas e, em seguida, clique no botão Procurar (**...** ). A caixa de diálogo **Definir Relação** é aberta.  
+11. Clique na célula na interseção de **território de vendas** dimensão e o **cotas de vendas 1** grupo de medidas e, em seguida, clique no botão Procurar ( **...** ). A caixa de diálogo **Definir Relação** é aberta.  
   
 12. Na lista **Selecionar tipo de relação** , selecione **Referenciada**.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "66078457"
   
      Renomeando a **data do pedido** dimensão de cubo para `Date` torna mais fácil para os usuários entendam como a dimensão de data primária desse cubo.  
   
-20. Clique no botão Procurar (**...** ) na célula na interseção de `Sales Quotas` grupo de medidas e o `Date` dimensão.  
+20. Clique no botão Procurar ( **...** ) na célula na interseção de `Sales Quotas` grupo de medidas e o `Date` dimensão.  
   
 21. Na caixa de diálogo **Definir Relação** , selecione **Regular** na lista **Selecionar tipo de relação** .  
   

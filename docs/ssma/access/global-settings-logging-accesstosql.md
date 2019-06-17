@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2cc49bbd3d2927431da2c16debbe0f35dbf4bb79
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63453556"
 ---
 # <a name="global-settings-logging-accesstosql"></a>Configurações globais (registro em log) (AccessToSQL)
@@ -51,7 +51,7 @@ Para cada opção sob **nível de mensagens**, configure um dos seguintes nívei
 |**Depurador**|Gravar todas as mensagens, incluindo mensagens no log de depuração.|  
   
 **Caminho do arquivo de log**  
-O caminho do arquivo e o nome dos arquivos de log SSMA. Para especificar um nome diferente, clique no caminho atual e, em seguida, clique no botão Procurar (**...** ) botão.  
+O caminho do arquivo e o nome dos arquivos de log SSMA. Para especificar um nome diferente, clique no caminho atual e, em seguida, clique no botão Procurar ( **...** ) botão.  
   
 **Tamanho do arquivo de log**  
 O tamanho máximo do arquivo de log em KB. O tamanho mínimo é de 10 KB. O tamanho padrão é 10240 KB.  

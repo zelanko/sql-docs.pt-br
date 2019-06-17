@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a9957625e09bde8bb733eca6e564dfdcfbb0bd98
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484735"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tarefa 2: Testar e publicar a política de correspondência
@@ -24,7 +24,7 @@ ms.locfileid: "65484735"
   
 2.  Revise todos os registros correspondentes e sua pontuação na caixa de listagem. Um registro que tenha um **verde** ícone associado a ele é uma duplicata de registro dinâmico que o precede. Aqui estão os pares de exemplos:  
   
-    1.  O registro com **ID de registro: 1000005** é uma correspondência do registro com **Id de registro: 1000004** com **pontuação: 100%** porque ambos os registros têm os mesmos valores para **SupplierID (pré-requisito)**, **Supplier Name**, e **ContactEmailAddress colunas**. O DQS escolherá aleatoriamente um registro como registro dinâmico de um cluster.  
+    1.  O registro com **ID de registro: 1000005** é uma correspondência do registro com **Id de registro: 1000004** com **pontuação: 100%** porque ambos os registros têm os mesmos valores para **SupplierID (pré-requisito)** , **Supplier Name**, e **ContactEmailAddress colunas**. O DQS escolherá aleatoriamente um registro como registro dinâmico de um cluster.  
   
     2.  O registro **1000023** é uma correspondência do registro **1000022** com a pontuação de correspondência: 93% porque os dois registros têm os mesmos valores para **SupplierID (pré-requisito)** e **Supplier Name** colunas, mas valores diferentes para o **ContactEmailAddress** coluna.  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d9b6f9426d4381f33d529e1efefa8afd6a1fc44b
-ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66270162"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
@@ -50,7 +50,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 `[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão. Quando o agente de distribuição é compartilhado por mais de uma publicação, você deve especificar um valor de ALL para *publicação*.  
   
-`[ @xact_seqno = ] xact_seqno` É o LSN da próxima transação no distribuidor a ser aplicado no assinante. *xact_seqno* está **varbinary (16)**, sem padrão.  
+`[ @xact_seqno = ] xact_seqno` É o LSN da próxima transação no distribuidor a ser aplicado no assinante. *xact_seqno* está **varbinary (16)** , sem padrão.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
