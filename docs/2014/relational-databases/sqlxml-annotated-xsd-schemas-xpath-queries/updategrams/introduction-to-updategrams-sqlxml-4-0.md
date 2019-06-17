@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 114bc96623b608cfbb520a9d2f35f23a04310a74
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014798"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Introdução aos diagramas de atualização (SQLXML 4.0)
@@ -40,10 +40,10 @@ ms.locfileid: "66014798"
 >  Esta documentação parte do pressuposto de que você esteja familiarizado com suporte a modelos e ao esquema de mapeamento no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Introdução a esquemas de XSD anotados &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para aplicativos herdados que usam XDR, consulte [os esquemas XDR anotados &#40;substituídos no SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="required-namespaces-in-the-updategram"></a>Namespaces necessários no diagrama de atualização  
- As palavras-chave em um diagrama de atualização, como  **\<sincronização >**,  **\<antes >**, e  **\<depois >**, existem no `urn:schemas-microsoft-com:xml-updategram`namespace. O prefixo de namespace utilizado é arbitrário. Nesta documentação, o prefixo `updg` indica o namespace `updategram`.  
+ As palavras-chave em um diagrama de atualização, como  **\<sincronização >** ,  **\<antes >** , e  **\<depois >** , existem no `urn:schemas-microsoft-com:xml-updategram`namespace. O prefixo de namespace utilizado é arbitrário. Nesta documentação, o prefixo `updg` indica o namespace `updategram`.  
   
 ## <a name="reviewing-syntax"></a>Revisando a sintaxe  
- Um diagrama de atualização é um modelo com  **\<sincronização >**,  **\<antes >**, e  **\<depois >** blocos que formam a sua sintaxe de diagrama de atualização. O seguinte código mostra esta sintaxe em sua forma mais simples:  
+ Um diagrama de atualização é um modelo com  **\<sincronização >** ,  **\<antes >** , e  **\<depois >** blocos que formam a sua sintaxe de diagrama de atualização. O seguinte código mostra esta sintaxe em sua forma mais simples:  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

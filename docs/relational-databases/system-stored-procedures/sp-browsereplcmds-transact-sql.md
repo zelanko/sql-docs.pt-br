@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7918e257428fd85ddb54867ee5144f45a3bf89f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996362"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
@@ -45,9 +45,9 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @xact_seqno_start = ] 'xact_seqno_start'` Especifica o número de sequência exato valor mais baixo para retornar. *xact_seqno_start* está **nchar (22)**, com um padrão de 0x00000000000000000000.  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` Especifica o número de sequência exato valor mais baixo para retornar. *xact_seqno_start* está **nchar (22)** , com um padrão de 0x00000000000000000000.  
   
-`[ @xact_seqno_end = ] 'xact_seqno_end'` Especifica o número de sequência exato mais alto para retornar. *xact_seqno_end* está **nchar (22)**, com um padrão de 0xFFFFFFFFFFFFFFFFFFFF.  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` Especifica o número de sequência exato mais alto para retornar. *xact_seqno_end* está **nchar (22)** , com um padrão de 0xFFFFFFFFFFFFFFFFFFFF.  
   
 `[ @originator_id = ] 'originator_id'` Especifica se comandos com a especificada *originator_id* são retornados. *originator_id* está **int**, com um padrão NULL.  
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac7570550cd256a5c65c82c9585b2baf7713c878
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080266"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurar o Firewall do Windows para permitir o acesso ao Analysis Services
@@ -78,7 +78,7 @@ ms.locfileid: "66080266"
 ##  <a name="bkmk_default"></a> Configurar o Firewall do Windows para uma instância padrão do Analysis Services  
  A instância padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escuta na porta TCP 2383. Se você instalou a instância padrão e deseja usar esta porta, basta desbloquear o acesso de entrada à porta TCP 2383 no Firewall do Windows para habilitar o acesso remoto à instância padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Se você instalou a instância padrão mas deseja configurar o serviço para escutar em uma porta fixa, consulte [Usar uma porta fixa para uma instância padrão ou nomeada do Analysis Services](#bkmk_fixed) neste tópico.  
   
- Para verificar se o serviço está sendo executado como a instância padrão (MSSQLServerOLAPService), verifique o nome do serviço no Gerenciador de Configuração do SQL Server. Uma instância padrão do Analysis Services sempre é listada como o **SQL Server Analysis Services (MSSQLSERVER)**.  
+ Para verificar se o serviço está sendo executado como a instância padrão (MSSQLServerOLAPService), verifique o nome do serviço no Gerenciador de Configuração do SQL Server. Uma instância padrão do Analysis Services sempre é listada como o **SQL Server Analysis Services (MSSQLSERVER)** .  
   
 > [!NOTE]  
 >  Diferentes sistemas operacionais Windows oferecem ferramentas alternativas para configurar o Firewall do Windows. A maioria dessas ferramentas permitem optar entre abrir uma porta específica ou o programa executável. A menos que você tenha um motivo para especificar o programa executável, recomendamos que especifique a porta.  

@@ -22,17 +22,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f509b2a2544c67c9113bc700b7d98bfd4a24024
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62753809"
 ---
 # <a name="clr-stored-procedures"></a>Procedimentos armazenados CLR
   Os procedimentos armazenados são rotinas que não podem ser usadas em expressões escalares. Diferentemente das funções escalares, eles podem retornar resultados tabulares e mensagens para o cliente, invocar instruções DDL (linguagem de definição de dados) e DML (linguagem de manipulação de dados) e retornar parâmetros de saída. Para obter informações sobre as vantagens da integração CLR e escolhendo entre o código gerenciado e [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [visão geral da integração CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-stored-procedures"></a>Requisitos dos procedimentos armazenados CLR  
- No common language runtime (CLR), procedimentos armazenados são implementados como métodos estáticos públicos em uma classe em um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. O método estático pode ser declarado como nulo ou retornar um valor inteiro. Se retornar um valor inteiro, o inteiro retornado será tratado como o código de retorno do procedimento. Por exemplo:   
+ No common language runtime (CLR), procedimentos armazenados são implementados como métodos estáticos públicos em uma classe em um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. O método estático pode ser declarado como nulo ou retornar um valor inteiro. Se retornar um valor inteiro, o inteiro retornado será tratado como o código de retorno do procedimento. Por exemplo:  
   
  `EXECUTE @return_status = procedure_name`  
   
@@ -148,7 +148,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
  Use `SqlPipe.Send(string)` para enviar mensagens para o aplicativo cliente. O texto da mensagem é limitado a 8000 caracteres. Se a mensagem ultrapassar os 8000 caracteres, ela será truncada.  
   
 ###### <a name="returning-tabular-results"></a>Retornando resultados tabulares  
- Para enviar os resultados de uma consulta diretamente para o cliente, use uma das sobrecargas do método `Execute` no objeto `SqlPipe`. Essa é a maneira mais eficiente de retornar os resultados para o cliente, porque os dados são transferidos para os buffers de rede sem ser copiados para a memória gerenciada. Por exemplo:   
+ Para enviar os resultados de uma consulta diretamente para o cliente, use uma das sobrecargas do método `Execute` no objeto `SqlPipe`. Essa é a maneira mais eficiente de retornar os resultados para o cliente, porque os dados são transferidos para os buffers de rede sem ser copiados para a memória gerenciada. Por exemplo:  
   
  [C#]  
   

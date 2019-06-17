@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3d042530f69d34fde377ffc7c6e0a9200b9cc48
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100904"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Entrega de compartilhamento de arquivos no Reporting Services
@@ -67,7 +67,7 @@ ms.locfileid: "66100904"
   
  Você pode especificar as opões de substituição para reusar o mesmo nome de arquivo para cada entrega de relatório ou para criar um novo arquivo. Para substituir o arquivo, é necessário usar o mesmo nome e extensão de arquivo.  
   
- Uma abordagem alternativa para criar arquivos exclusivos para cada entrega é incluir um carimbo de hora no nome de arquivo. Para fazer isso, adicione a `@timestamp` variável ao nome do arquivo (por exemplo, *CompanySales@timestamp*). Com essa abordagem, o nome de arquivo será exclusivo por definição, portanto, nunca será substituído.  
+ Uma abordagem alternativa para criar arquivos exclusivos para cada entrega é incluir um carimbo de hora no nome de arquivo. Para fazer isso, adicione a `@timestamp` variável ao nome do arquivo (por exemplo, *CompanySales@timestamp* ). Com essa abordagem, o nome de arquivo será exclusivo por definição, portanto, nunca será substituído.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar, modificar e excluir assinaturas padrão &#40;Reporting Services no modo nativo&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  

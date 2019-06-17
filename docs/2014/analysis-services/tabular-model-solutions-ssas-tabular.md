@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 675d15f2d2c20ecb18b03cd5fa85684befeddff0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067898"
 ---
 # <a name="tabular-model-solutions-ssas-tabular"></a>Soluções de modelo tabular (SSAS tabular)
@@ -23,7 +23,7 @@ ms.locfileid: "66067898"
 ## <a name="in-this-section"></a>Nesta seção  
  [Designer de modelo de tabela &#40;Tabular do SSAS&#41;](tabular-model-designer-ssas-tabular.md)  
   
- [Banco de dados de workspace &amp;#40;SSAS de Tabela&amp;#41;](tabular-models/workspace-database-ssas-tabular.md)  
+ [Banco de dados de workspace &#40;SSAS de Tabela&#41;](tabular-models/workspace-database-ssas-tabular.md)  
   
  [Nível de compatibilidade &#40;SP1 de tabela do SSAS&#41;](tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   

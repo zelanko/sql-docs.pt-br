@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62856328"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Criando uma estrutura e um modelo de rede neural (Tutorial de mineração de dados intermediário)
@@ -52,7 +52,7 @@ ms.locfileid: "62856328"
   
 4.  Sobre o **criar a estrutura de mineração de dados** página, verifique a opção **criar estrutura de mineração com um modelo de mineração** está selecionado.  
   
-5.  Clique na lista suspensa para a opção **qual técnica de mineração de dados você deseja usar?**, em seguida, selecione **redes neurais da Microsoft**.  
+5.  Clique na lista suspensa para a opção **qual técnica de mineração de dados você deseja usar?** , em seguida, selecione **redes neurais da Microsoft**.  
   
      Como os modelos de regressão logística se baseiam em redes neurais, você pode reutilizar a mesma estrutura e adicionar um novo modelo de mineração.  
   

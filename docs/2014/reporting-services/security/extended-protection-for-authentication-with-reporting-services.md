@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1ce348edd9b4d4b6260a0eea56fe28656b03985
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101951"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Proteção Estendida para Autenticação com o Reporting Services
@@ -113,7 +113,7 @@ ms.locfileid: "66101951"
 |Configuração|Descrição|  
 |-------------|-----------------|  
 |`RSWindowsExtendedProtectionLevel`|Especifica o grau de imposição da proteção estendida. Os valores válidos são `Off`, `Allow` e `Require`.<br /><br /> O valor padrão é `Off`.<br /><br /> O valor `Off` especifica que não há nenhuma verificação de associação de canal nem de associação de serviço.<br /><br /> O valor `Allow` suporta a proteção estendida mas não a exige. O valor Permitir especifica.<br /><br /> A proteção estendida será imposta para aplicativos clientes executados em sistemas operacionais que suportam a proteção estendida. A maneira como a proteção é imposta é determinada pelo parâmetro `RsWindowsExtendedProtectionScenario`.<br /><br /> A autenticação será permitida para aplicativos executados em sistemas operacionais que não suportam a proteção estendida.<br /><br /> O valor `Require` especifica:<br /><br /> A proteção estendida será imposta para aplicativos clientes executados em sistemas operacionais que suportam a proteção estendida.<br /><br /> A autenticação **não** será permitida para aplicativos executados em sistemas operacionais que não suportam a proteção estendida.|  
-|`RsWindowsExtendedProtectionScenario`|Especifica que formas de proteção estendida serão validadas: Associação de canal, associação de serviço ou ambos. Os valores válidos são `Any`, `Proxy` e `Direct`.<br /><br /> O valor padrão é `Proxy`.<br /><br /> O valor `Any` especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate e uma associação de canal não são obrigatórias.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> O valor `Proxy` especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate quando um token de associação de canal estiver presente.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> O valor `Direct` especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate quando um CBT estiver presente, uma conexão SSL com o serviço atual estiver presente e quando o CBT da conexão SSL corresponder ao CBT do token NTLM, Kerberos ou Negotiate.<br /><br /> - A Associação de Serviço não é imposta.<br /><br /> <br /><br /> Observação: Essa configuração será ignorada se `RsWindowsExtendedProtectionLevel` é definido como `OFF`.|  
+|`RsWindowsExtendedProtectionScenario`|Especifica que formas de proteção estendida serão validadas: Associação de canal, associação de serviço ou ambos. Os valores válidos são `Any`, `Proxy` e `Direct`.<br /><br /> O valor padrão é `Proxy`.<br /><br /> O valor `Any` especifica:<br /><br /> \- A autenticação Windows NTLM, Kerberos e Negotiate e uma associação de canal não são obrigatórias.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> O valor `Proxy` especifica:<br /><br /> \- A autenticação Windows NTLM, Kerberos e Negotiate quando um token de associação de canal estiver presente.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> O valor `Direct` especifica:<br /><br /> \- A autenticação Windows NTLM, Kerberos e Negotiate quando um CBT estiver presente, uma conexão SSL com o serviço atual estiver presente e quando o CBT da conexão SSL corresponder ao CBT do token NTLM, Kerberos ou Negotiate.<br /><br /> \- A Associação de Serviço não é imposta.<br /><br /> <br /><br /> Observação: Essa configuração será ignorada se `RsWindowsExtendedProtectionLevel` é definido como `OFF`.|  
   
  Entradas de exemplo no arquivo de configuração `rsreportserver.config`:  
   

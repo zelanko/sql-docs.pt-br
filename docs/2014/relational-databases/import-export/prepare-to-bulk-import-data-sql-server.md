@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95deda34b673161bf63c29a912564f39425583a9
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011853"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Preparar para importar dados em massa (SQL Server)
@@ -53,7 +53,7 @@ ms.locfileid: "66011853"
   
      Para um banco de dados que usa o modelo de recuperação simples, recomendamos que você faça um backup diferencial ou completo após a finalização da operação de importação em massa. Para obter mais informações, veja [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../backup-restore/create-a-full-database-backup-sql-server.md) ou [Criar um backup de banco de dados diferencial &#40;SQL Server&#41;](../backup-restore/create-a-differential-database-backup-sql-server.md).  
   
-     Um backup de log é suficiente para o modelo de recuperação completa ou o modelo de recuperação bulk-logged.  Para obter mais informações, veja [Backups de log do transações &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md).  
+     Um backup de log é suficiente para o modelo de recuperação completa ou o modelo de recuperação bulk-logged. Para obter mais informações, veja [Backups de log do transações &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md).  
   
 -   Descarte os índices da tabela para melhorar o desempenho para grandes importações em massa.  
   

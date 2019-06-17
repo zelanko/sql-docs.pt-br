@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089205"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Opções (página Editor de texto – XML – Diversos)
@@ -26,7 +26,7 @@ A caixa de diálogo **Opções** permite alteração das configurações de pree
  O Editor de Texto adiciona marcas íntimas ao criar elementos XML. Se uma marca de início de elemento for selecionada, o editor insere a marca íntima correspondente, incluindo um prefixo de namespace correspondente. Esta caixa de seleção fica marcada por padrão.  
   
  **Aspas de atributo**  
- Ao criar atributos XML, o editor insere os caracteres `="``"` e coloca o sinal de inclusão (**^)** entre aspas. Esta caixa de seleção fica marcada por padrão.  
+ Ao criar atributos XML, o editor insere os caracteres `="``"` e coloca o sinal de inclusão ( **^)** entre aspas. Esta caixa de seleção fica marcada por padrão.  
   
  **Declarações de Namespace**  
  O editor insere declarações de namespace automaticamente onde quer elas sejam necessárias. Esta caixa de seleção fica marcada por padrão.  

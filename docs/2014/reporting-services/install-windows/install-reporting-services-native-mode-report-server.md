@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3a54650403458eec09826b51f1528a844e48791
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108805"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Instalar o servidor de relatórios de modo nativo do Reporting Services
@@ -83,7 +83,7 @@ ms.locfileid: "66108805"
   
 -   A conta de usuário utilizada para executar a instalação deve ser membro do grupo local Administradores e ter permissão para acessar e criar bancos de dados na instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que hospeda os bancos de dados do servidor de relatório.  
   
--   A instalação deve poder usar os valores padrão para reservar as URLs que dão acesso ao servidor de relatório e ao Gerenciador de Relatórios. Esses valores são a porta 80, um curinga forte e os nomes de diretório virtual no formato **ReportServer_\<***instance_name***>** e **Reports_\<***instance_name***>**.  
+-   A instalação deve poder usar os valores padrão para reservar as URLs que dão acesso ao servidor de relatório e ao Gerenciador de Relatórios. Esses valores são a porta 80, um curinga forte e os nomes de diretório virtual no formato **ReportServer_\<***instance_name***>** e **Reports_\<***instance_name***>** .  
   
 -   A Instalação deve poder usar os valores padrão para criar os bancos de dados de servidor de relatório. Esses valores são **ReportServer** e **ReportServerTempDB**. Se você tiver bancos de dados existentes de uma instalação anterior, a instalação será bloqueada porque não poderá configurar o servidor de relatório na configuração padrão para o modo nativo. Você deve renomear, mover ou excluir os bancos de dados para desbloquear a instalação.  
   
@@ -97,15 +97,15 @@ ms.locfileid: "66108805"
 |Parte|Descrição|  
 |----------|-----------------|  
 |Prefixo|O prefixo padrão é HTTP. Se você instalou anteriormente um certificado de protocolo SSL, a Instalação tentará criar reservas de URL que usem o prefixo HTTPS.|  
-|Nome do host|O nome de host padrão é um curinga forte (+). Especifica que o servidor de relatório aceitará qualquer solicitação HTTP na porta designada para qualquer nome de host é resolvido para o computador, incluindo http://\<computername > / reportserver, http://localhost/reportserver, ou http://\<IPAddress > / ReportServer.|  
+|Nome do host|O nome de host padrão é um curinga forte (+). Especifica que o servidor de relatório aceitará qualquer solicitação HTTP na porta designada para qualquer nome de host é resolvido para o computador, incluindo http://\<computername > / reportserver, http://localhost/reportserver , ou http://\< IPAddress > / ReportServer.|  
 |Port|A porta padrão é 80. Observe que, se você usar qualquer porta que não seja a 80, precisará adicioná-la explicitamente à URL quando abrir um aplicativo Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em uma janela do navegador.|  
 |Diretório virtual|Por padrão, os diretórios virtuais são criados no formato de ReportServer_\<*nome_instância*> para o serviço Web servidor de relatórios e Reports_\<*nome_instância*> Gerenciador de relatórios. Para o serviço Web Servidor de Relatórios, o diretório virtual padrão é **reportserver**. Para o Gerenciador de Relatórios, o diretório virtual padrão é **reports**.|  
   
  Um exemplo de cadeia de caracteres de URL completa poderia ser como segue:  
   
--   http://+:80/reportserver, fornece acesso ao servidor de relatório.  
+-   http://+:80/reportserver , fornece acesso ao servidor de relatório.  
   
--   http://+:80/reports, fornece acesso ao Gerenciador de relatórios.  
+-   http://+:80/reports , fornece acesso ao Gerenciador de relatórios.  
   
 ##  <a name="bkmk_installwithwizard"></a> Instalar o modo nativo com o Assistente de instalação do SQL Server  
  A lista a seguir descreve as etapas específicas e as opções do  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que você seleciona no Assistente de Instalação do SQL Server. A lista não descreve cada página que você verá no assistente de instalação, somente as páginas relacionadas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que fazem parte de uma instalação do modo nativo.  
