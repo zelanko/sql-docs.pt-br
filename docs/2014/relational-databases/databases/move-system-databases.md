@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871533"
 ---
 # <a name="move-system-databases"></a>Mover bancos de dados do sistema
@@ -154,9 +154,9 @@ ms.locfileid: "62871533"
   
 1.  Pelo menu **Iniciar** , aponte para **Todos os Programas**, aponte para **Microsoft SQL Server**, aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
   
-2.  No nó **Serviços do SQL Server** , clique com o botão direito do mouse na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, **SQL Server [MSSQLSERVER]**) e escolha **Propriedades**.  
+2.  No nó **Serviços do SQL Server** , clique com o botão direito do mouse na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, **SQL Server [MSSQLSERVER]** ) e escolha **Propriedades**.  
   
-3.  Na caixa de diálogo **Propriedades do SQL Server (***instance_name***)**, clique na guia **Parâmetros de Inicialização**.  
+3.  Na caixa de diálogo **Propriedades do SQL Server (***instance_name***)** , clique na guia **Parâmetros de Inicialização**.  
   
 4.  Na caixa **Parâmetros existentes**, selecione o parâmetro -d para mover o arquivo de dados mestre. Clique em **Atualizar** para salvar a alteração.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "62871533"
   
 2.  Clique com o botão direito do mouse em **Logs de Erros** e clique em **Configurar**.  
   
-3.  Na caixa de diálogo **Configurar Logs de Erros do SQL Server Agent** , especifique o novo local do arquivo SQLAGENT.OUT. O local padrão é C:\Program Files\Microsoft SQL Server\MSSQL12. < nome_da_instância > \mssql\log.\\.  
+3.  Na caixa de diálogo **Configurar Logs de Erros do SQL Server Agent** , especifique o novo local do arquivo SQLAGENT.OUT. O local padrão é C:\Program Files\Microsoft SQL Server\MSSQL12. < nome_da_instância > \mssql\log\\.  
   
 #### <a name="change-the-database-default-location"></a>Altere o local padrão do banco de dados  
   
