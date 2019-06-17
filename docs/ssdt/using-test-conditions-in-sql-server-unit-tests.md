@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 923c6fc93418cf2e46bf3970632ae0454f5a611d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101889"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Usando condições de teste nos testes de unidade do SQL Server
@@ -88,7 +88,7 @@ Depois que você adicionar a condição de teste Soma de Verificação de Dados 
   
 3.  (Opcional) Talvez seja necessário alterar a propriedade **(Nome)** da condição de teste de modo que ela seja mais descritiva.  
   
-4.  Na propriedade **Configuração**, clique no botão Procurar (**…**).  
+4.  Na propriedade **Configuração**, clique no botão Procurar ( **…** ).  
   
     A caixa de diálogo **Configuração de TestConditionName** é exibida.  
   
@@ -118,7 +118,7 @@ Depois que você adicionar a condição de teste Esquema Esperado ao teste de un
   
 3.  (Opcional) Talvez seja necessário alterar a propriedade **(Nome)** da condição de teste de modo que ela seja mais descritiva.  
   
-4.  Na propriedade **Configuração**, clique no botão Procurar (**…**).  
+4.  Na propriedade **Configuração**, clique no botão Procurar ( **…** ).  
   
     A caixa de diálogo **Configuração de TestConditionName** é exibida.  
   

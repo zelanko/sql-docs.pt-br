@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42896ae8b5c10685c14e73c07ab2dcc2441d80b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837064"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63027044"
 ---
 # <a name="scripting-replication"></a>Replicação de script
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "47837064"
   
 3.  Clique com o botão direito do mouse em uma publicação ou assinatura e então clique em **Gerar Scripts**.  
   
-4.  Especifique as opções na caixa de diálogo **Gerar Script SQL – \<ReplicationObject>**.  
+4.  Especifique as opções na caixa de diálogo **Gerar Script SQL – \<ReplicationObject>** .  
   
 5.  Clique em **Script para Arquivo**.  
   

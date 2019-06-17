@@ -13,10 +13,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 80836cb5ab67f221ff3f9965d1980bcbc9c8378d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101908"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Notas sobre a versão para o SSDT (SQL Server Data Tools)
@@ -543,7 +543,7 @@ _SSDT para Visual Studio 2015._
 - Correção de um problema em que as edições feitas na formatação de KPI não persistiam em alguns casos.
 - Correção de um problema com a Interface do usuário do PowerQuery que exibia o estado marcado do menu errado se a barra de fórmulas era exibida.
 - Correção de um problema em projetos de nível de compatibilidade do AS Tabular 1400 com fontes de dados do PowerQuery que podem causar falha no VS ao selecionar o menu Alterar a fonte de dados do Gerenciador de modelos de tabela.
-- Correção de um problema intermitente em que carregar um modelo de tabela do 1400 pode exibir o erro *'Não foi possível carregar arquivo ou assembly 'Microsoft.ProBI.MashupLibrary'*.
+- Correção de um problema intermitente em que carregar um modelo de tabela do 1400 pode exibir o erro *'Não foi possível carregar arquivo ou assembly 'Microsoft.ProBI.MashupLibrary'* .
 
 **Projetos do RS**
 - As preferências do usuário para o estado de seleção das configurações da caixa Parâmetro e Régua de RS são lembradas corretamente entre as sessões.

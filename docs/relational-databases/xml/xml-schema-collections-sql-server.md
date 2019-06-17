@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dab6f53c5b75e1ef78eab346d2b0dd96a42e5861
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510143"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62703966"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Coleções de esquema XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -170,7 +170,7 @@ ms.locfileid: "58510143"
   
 -   Escreva consultas Transact-SQL nas exibições do catálogo apropriadas para coleções de esquema XML.  
   
--   Use a função interna **XML_SCHEMA_NAMESPACE()**. É possível aplicar métodos de tipo de dados **xml** na saída dessa função. No entanto não é possível modificar os esquemas XML subjacentes.  
+-   Use a função interna **XML_SCHEMA_NAMESPACE()** . É possível aplicar métodos de tipo de dados **xml** na saída dessa função. No entanto não é possível modificar os esquemas XML subjacentes.  
   
  Esses são ilustrados nos exemplos a seguir.  
   
@@ -191,7 +191,7 @@ WHERE    XSC.name = 'myCollection'
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- Esquemas XML individuais dentro da coleção podem ser obtidos como instâncias de tipo de dados **xml** especificando o namespace de destino como o terceiro argumento para **XML_SCHEMA_NAMESPACE()**. Isso é mostrado no exemplo a seguir.  
+ Esquemas XML individuais dentro da coleção podem ser obtidos como instâncias de tipo de dados **xml** especificando o namespace de destino como o terceiro argumento para **XML_SCHEMA_NAMESPACE()** . Isso é mostrado no exemplo a seguir.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Exemplo: Gerar um esquema especificado com base em uma coleção de esquemas XML  
  A instrução a seguir produz o esquema XML com o namespace de destino _pretend_ https/\/www.microsoft.com/was-books from the XML schema collection "myCollection" dentro do esquema relacional dbo.  

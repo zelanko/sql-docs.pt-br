@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 32ddb009c4cbeb843e3c2150431a43d86219fc5d
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326067"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62945754"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>Permissões do principal do servidor REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,10 +59,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  Especifica uma permissão que pode ser revogada em um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
  LOGON **::** *SQL_Server_login*  
- Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual a permissão está sendo revogada. O qualificador de escopo (**::**) é obrigatório.  
+ Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual a permissão está sendo revogada. O qualificador de escopo ( **::** ) é obrigatório.  
   
  SERVER ROLE **::** *server_role*  
- Especifica a função de servidor na qual a permissão está sendo revogada. O qualificador de escopo (**::**) é obrigatório.  
+ Especifica a função de servidor na qual a permissão está sendo revogada. O qualificador de escopo ( **::** ) é obrigatório.  
   
  { FROM | TO } \<server_principal> Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou a função de servidor do qual a permissão está sendo revogada.  
   
@@ -122,7 +122,7 @@ REVOKE IMPERSONATE ON LOGIN::WanidaBenshoof FROM [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-revoking-view-definition-permission-with-cascade"></a>b. Revogando a permissão VIEW DEFINITION com CASCADE  
+### <a name="b-revoking-view-definition-permission-with-cascade"></a>B. Revogando a permissão VIEW DEFINITION com CASCADE  
  O exemplo a seguir revoga a permissão `VIEW DEFINITION` do logon `EricKurjan` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir do logon `RMeyyappan` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A opção `CASCADE` indica que a permissão `VIEW DEFINITION` em `EricKurjan` também será revogada a partir dos principais aos quais `RMeyyappan` concedeu essa permissão.  
   
 ```  

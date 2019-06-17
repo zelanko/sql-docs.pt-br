@@ -15,11 +15,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8d1aa3a5156b10050c1b5b977dae40cf0513fbfb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739284"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62927341"
 ---
 # <a name="transact-sql-statements"></a>instruções Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -32,7 +32,7 @@ As instruções de backup e restauração oferecem maneiras de criar backups e f
 ## <a name="data-definition-language"></a>Linguagem de definição de dados
 Instruções DDL (linguagem de definição de dados) definem as estruturas de dados. Use estas instruções para criar, alterar ou remover estruturas de dados em um banco de dados.
 - ALTER
-- Agrupamentos
+- Ordenações
 - CREATE
 - DROP
 - DISABLE TRIGGER

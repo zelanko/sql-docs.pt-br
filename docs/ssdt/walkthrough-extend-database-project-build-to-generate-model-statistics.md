@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e90952527e5510d4a49fa7b7a72843c059686b96
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102035"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Passo a passo: extensão da Compilação do Projeto de Banco de Dados para geração de estatísticas do modelo
@@ -438,7 +438,7 @@ Para criar um colaborador de compilação, você deverá realizar as seguintes t
   
 3.  Clique em **Assinar o assembly**.  
   
-4.  Em **Escolher um arquivo de chave de nome forte**, clique em **<New>**.  
+4.  Em **Escolher um arquivo de chave de nome forte**, clique em **<New>** .  
   
 5.  Na caixa de diálogo **Criar Chave de Nome Forte** , em **Nome de arquivo de chave**, digite **MyRefKey**.  
   
@@ -525,7 +525,7 @@ Depois que você tiver seguido uma destas abordagens, poderá usar MSBuild para 
   
 1.  No Visual Studio, clique com o botão direito do mouse no projeto e selecione "Recompilar". Isso recompilará o projeto e você deverá ver as estatísticas de modelo geradas, com a saída incluída na saída da compilação e salva em ModelStatistics.xml. Observe que você pode precisar escolher "Mostrar todos os arquivos" no Gerenciador de Soluções para ver o arquivo XML.  
   
-2.  Abra um prompt de comando do Visual Studio: no menu **Iniciar**, clique em **Todos os Programas**, clique em **Microsoft Visual Studio <Visual Studio Version>**, clique em **Ferramentas do Visual Studio** e clique em **Prompt de Comando do Visual Studio (<Visual Studio Version>)**.  
+2.  Abra um prompt de comando do Visual Studio: no menu **Iniciar**, clique em **Todos os Programas**, clique em **Microsoft Visual Studio <Visual Studio Version>** , clique em **Ferramentas do Visual Studio** e clique em **Prompt de Comando do Visual Studio (<Visual Studio Version>)** .  
   
 3.  No prompt de comando, navegue até a pasta que contém seu projeto SQL.  
   

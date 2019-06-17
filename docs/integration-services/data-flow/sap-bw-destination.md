@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6ae27f40a1da682ee0254d3605f3f05d47ceba44
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726420"
 ---
 # <a name="sap-bw-destination"></a>Destino SAP BW
@@ -46,9 +46,9 @@ ms.locfileid: "65726420"
   
 1.  Criar um novo sistema de origem:  
   
-    1.  Selecione o tipo, **"Third Party/Staging BAPIs" (Terceiros/BAPIs de preparo)**.  
+    1.  Selecione o tipo, **"Third Party/Staging BAPIs" (Terceiros/BAPIs de preparo)** .  
   
-    2.  Para **Communication Type with Target System (Tipo de Comunicação com o Sistema de Destino)**, selecione **Non-Unicode (Inactive MDMP Settings) (Não Unicode (configurações de MDMP inativo))**.  
+    2.  Para **Communication Type with Target System (Tipo de Comunicação com o Sistema de Destino)** , selecione **Non-Unicode (Inactive MDMP Settings) (Não Unicode (configurações de MDMP inativo))** .  
   
     3.  Atribuir uma ID de programa apropriada  
   

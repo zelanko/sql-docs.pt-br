@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2ae2ace318d49ff524379c3f825d8da272674755
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088839"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>Adicionar colunas a consultas (Visual Database Tools)
@@ -42,7 +42,7 @@ Sempre que você usar uma coluna em uma consulta, você pode também usar uma ex
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>Para adicionar todas as colunas de uma tabela ou objeto avaliado por tabela  
   
--   No **Painel de Diagrama**, marque a caixa de seleção ao lado de **#42;(Todas as Colunas)**.  
+-   No **Painel de Diagrama**, marque a caixa de seleção ao lado de **#42;(Todas as Colunas)** .  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>Para adicionar todas as colunas para todas as tabelas e objetos estruturados por tabela  
   

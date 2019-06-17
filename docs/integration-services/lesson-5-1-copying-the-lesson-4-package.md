@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d97cf4f9f877ad29f1e5b17d9f79df4a8171b8ed
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721749"
 ---
 # <a name="lesson-5-1-copy-the-lesson-4-package"></a>Lição 5-1: Copiar o pacote da Lição 4
@@ -46,7 +46,7 @@ Use este procedimento se você estiver copiando a Lição 4 concluída.  Para co
 
 7.  Na janela **Propriedades**, atualize a propriedade **Nome** para **Lição 5**.
 
-8.  Marque a caixa para a propriedade **ID**, selecione a seta suspensa e, em seguida, selecione **\<Gerar Nova ID>**.
+8.  Marque a caixa para a propriedade **ID**, selecione a seta suspensa e, em seguida, selecione **\<Gerar Nova ID>** .
 
 ## <a name="add-the-completed-lesson-4-package"></a>Adicionar o pacote concluído da Lição 4
 
@@ -56,7 +56,7 @@ Use este procedimento se você estiver copiando a Lição 4 concluída.  Para co
 
 3.  Na caixa de diálogo **Adicionar Cópia do Pacote Existente** , em **Local do pacote**, selecione **Sistema de arquivos**.
 
-4.  Selecione o botão Procurar **(…)**, navegue até **Lesson 4.dtsx** no computador e selecione **Abrir**.
+4.  Selecione o botão Procurar **(…)** , navegue até **Lesson 4.dtsx** no computador e selecione **Abrir**.
 
 5.  Copie e cole o pacote da Lição 4 conforme descrito nas etapas de 3 a 8 da seção anterior.
   

@@ -10,10 +10,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 48055b6713eeab212859afe974df71e51c223010
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717734"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Implantar um projeto do SSIS com o código C# em um aplicativo .NET
@@ -55,7 +55,7 @@ Para implantar o projeto no Banco de Dados SQL do Azure, obtenha as informaçõe
 ## <a name="create-a-new-visual-studio-project"></a>Criar um novo projeto do Visual Studio
 
 1. No Visual Studio, escolha **Arquivo**, **Novo**, **Projeto**. 
-2. Na caixa de diálogo **Novo Projeto**, expanda **Visual C#**.
+2. Na caixa de diálogo **Novo Projeto**, expanda **Visual C#** .
 3. Selecione **Aplicativo de Console** e digite *deploy_ssis_project* para o nome do projeto.
 4. Clique em **OK** para criar e abrir o novo projeto no Visual Studio.
 

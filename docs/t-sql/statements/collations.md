@@ -21,11 +21,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fcdc1c5cdc4dcbb7eb81236a1bb907d929aee5e0
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828096"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051541"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
@@ -151,7 +151,7 @@ Colima
 Chiapas
 ```
 
-### <a name="b-additional-examples"></a>b. Exemplos adicionais
+### <a name="b-additional-examples"></a>B. Exemplos adicionais
 
 Para obter mais exemplos que usam **COLLATE**, confira [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples), exemplo **G. Criando um banco de dados e especificando um nome de ordenação e opções** e [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column), exemplo **V. Alterando uma ordenação de coluna**.
 

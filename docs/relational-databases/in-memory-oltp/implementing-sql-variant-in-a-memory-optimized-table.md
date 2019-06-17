@@ -13,11 +13,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79f6451adf3e91285f1f54beb9018d1758885f9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659534"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047620"
 ---
 # <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>Implementando SQL_VARIANT em uma tabela com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47659534"
 CREATE TABLE [dbo].[T1]([Key] [sql_variant] NOT NULL)  
 ```  
   
- Suponha que a coluna de chave possa ser apenas um **BIGINT** ou **NVARCHAR(300)**. Você pode modelar essa tabela como se segue:  
+ Suponha que a coluna de chave possa ser apenas um **BIGINT** ou **NVARCHAR(300)** . Você pode modelar essa tabela como se segue:  
   
 ```sql  
 -- original disk-based table  

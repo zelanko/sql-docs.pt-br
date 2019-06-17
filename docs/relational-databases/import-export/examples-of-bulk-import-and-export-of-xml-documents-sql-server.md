@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 78d7a7168f37a95cf3aac6446fa5ff9f1e263e0a
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64945996"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemplos de importação e exportação em massa de documentos XML (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "64945996"
   
  Para importar dados em massa de em arquivo de dados para uma tabela ou exibição não particionada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você pode usar o seguinte:  
   
--   utilitário**bcp**   
+-   utilitário**bcp**  
     Você também pode usar o utilitário **bcp** para exportar dados de qualquer lugar de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em que a instrução SELECT funcionar, incluindo exibições particionadas.  
   
 -   BULK INSERT  

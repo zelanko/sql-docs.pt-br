@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 255068b1d20d67b18a9c0a1679b8ee424192045e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716013"
 ---
 # <a name="catalogrenamecustomizedlogginglevel"></a>catalog.rename_customized_logging_level 
@@ -38,12 +38,12 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
  [ @old_name = ] *old_name*  
  O nome do nível de log personalizado existente a ser renomeado.  
   
- O *old_name* é **nvarchar(128)**.  
+ O *old_name* é **nvarchar(128)** .  
   
  [ @new_name = ] *new_name*  
  O novo nome para o nível de log personalizado especificado.  
   
- O *new_name* é **nvarchar(128)**.  
+ O *new_name* é **nvarchar(128)** .  
   
 ## <a name="remarks"></a>Remarks  
   

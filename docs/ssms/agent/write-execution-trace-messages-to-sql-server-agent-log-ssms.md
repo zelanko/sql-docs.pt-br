@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b4e1e38ee7d4cde2c9c68b8b04eaf10c7e10b2a4
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65103207"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
@@ -73,7 +73,7 @@ Para obter mais informações sobre as permissões do Windows necessárias para 
   
 2.  Clique com o botão direito do mouse em **SQL Server Agent** e selecione **Propriedades**.  
   
-3.  Na caixa de diálogo **Propriedades do SQL Server Agent -**_server\_name_, em **Log de erros** na página **Geral**, marque a caixa de seleção **Incluir mensagens de rastreamento de execução**.  
+3.  Na caixa de diálogo **Propriedades do SQL Server Agent -** _server\_name_, em **Log de erros** na página **Geral**, marque a caixa de seleção **Incluir mensagens de rastreamento de execução**.  
   
 4.  Clique em **OK**.  
   

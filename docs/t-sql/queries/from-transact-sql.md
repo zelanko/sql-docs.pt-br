@@ -36,10 +36,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 124e42175f82928fd601a1d8af2833e40a1ff458
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462684"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Cláusula FROM mais JOIN, APPLY, PIVOT (Transact-SQL)
@@ -365,7 +365,7 @@ ON (p.ProductID = v.ProductID);
  É a coluna de valor do operador PIVOT. Quando usado com UNPIVOT, *value_column* não pode ser o nome de uma coluna existente na *table_source* de entrada.  
   
  FOR *pivot_column*  
- É a coluna dinâmica do operador PIVOT. *pivot_column* deve ser de um tipo implícita ou explicitamente conversível em **nvarchar()**. Esta coluna não pode ser **image** ou **rowversion**.  
+ É a coluna dinâmica do operador PIVOT. *pivot_column* deve ser de um tipo implícita ou explicitamente conversível em **nvarchar()** . Esta coluna não pode ser **image** ou **rowversion**.  
   
  Quando UNPIVOT é usado, *pivot_column* é o nome da coluna de saída que é reduzida com base na *table_source*. Não pode haver uma coluna em *table_source* com esse nome.  
   
@@ -385,7 +385,7 @@ ON (p.ProductID = v.ProductID);
 **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Retorna uma tabela com um único registro para cada linha que contém os valores que foram reais (atuais) no momento passado especificado. Internamente, uma união é executada entre a tabela temporal e sua tabela de histórico e os resultados são filtrados para retornar os valores na linha que era válida no ponto no tempo especificado pelo parâmetro *\<date_time>*. O valor de uma linha é considerado válido se o valor de *system_start_time_column_name* é menor ou igual ao valor do parâmetro *\<date_time>* e o valor de *system_end_time_column_name* é maior que o valor do parâmetro *\<date_time>*.   
+ Retorna uma tabela com um único registro para cada linha que contém os valores que foram reais (atuais) no momento passado especificado. Internamente, uma união é executada entre a tabela temporal e sua tabela de histórico e os resultados são filtrados para retornar os valores na linha que era válida no ponto no tempo especificado pelo parâmetro *\<date_time>* . O valor de uma linha é considerado válido se o valor de *system_start_time_column_name* é menor ou igual ao valor do parâmetro *\<date_time>* e o valor de *system_end_time_column_name* é maior que o valor do parâmetro *\<date_time>* .   
   
  FROM \<start_date_time> TO \<end_date_time>
 

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55dc0c5b3cbfb51e15cd0813c87c66e840e592a2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715920"
 ---
 # <a name="catalogsetenvironmentreferencetype-ssisdb-database"></a>catalog.set_environment_reference_type (banco de dados SSISDB)
@@ -40,10 +40,10 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
  O identificador exclusivo da referência de ambiente que deve ser atualizada. O *reference_id* é **bigint**.  
   
  [ @reference_type = ] *reference_type*  
- Indica se o ambiente pode ser localizado na mesma pasta do projeto (referência relativa) ou em uma pasta diferente (referência absoluta). Use o valor `R` para indicar uma referência relativa. Use o valor `A` para indicar uma referência absoluta. O *reference_type* é **char(1)**.  
+ Indica se o ambiente pode ser localizado na mesma pasta do projeto (referência relativa) ou em uma pasta diferente (referência absoluta). Use o valor `R` para indicar uma referência relativa. Use o valor `A` para indicar uma referência absoluta. O *reference_type* é **char(1)** .  
   
  [ @environment_folder_name = ] *environment_folder_name*  
- A pasta na qual o ambiente está localizado. Esse valor é necessário para referências absolutas. O *environment_folder_name* é **nvarchar(128)**.  
+ A pasta na qual o ambiente está localizado. Esse valor é necessário para referências absolutas. O *environment_folder_name* é **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  

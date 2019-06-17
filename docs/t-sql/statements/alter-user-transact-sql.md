@@ -27,11 +27,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 522ff2df33067792979e785b60417c9783d5e46a
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421173"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62648800"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -112,12 +112,12 @@ ALTER USER userName
  *userName*  
  Especifica o nome pelo qual o usuário é identificado nesse banco de dados.  
   
- LOGIN **=**_loginName_  
+ LOGIN **=** _loginName_  
  Mapeia novamente um usuário para outro logon alterando o SID (identificador de segurança) do usuário para corresponder ao SID do logon.  
   
  Se a instrução ALTER USER for a única instrução em um lote SQL, o banco de dados SQL do Windows Azure oferecerá suporte à cláusula WITH LOGIN. Se a instrução ALTER USER não for a única instrução em um lote SQL ou for executada no SQL dinâmico, a cláusula WITH LOGIN não terá suporte.  
   
- NAME **=**_newUserName_  
+ NAME **=** _newUserName_  
  Especifica o novo nome para o usuário. *newUserName* não deve existir no banco de dados atual.  
   
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
@@ -131,7 +131,7 @@ ALTER USER userName
 > [!NOTE]  
 >  Essa opção está disponível apenas para usuários contidos. Veja [bancos de dados independentes](../../relational-databases/databases/contained-databases.md) e [sp_migrate_user_to_contained &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md) para obter mais informações.  
   
- OLD_PASSWORD **=**_'oldpassword'_  
+ OLD_PASSWORD **=** _'oldpassword'_  
  **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  A senha do usuário atual que será substituída por '*password*'. As senhas diferenciam maiúsculas de minúsculas. *OLD_PASSWORD* é necessária para alterar uma senha, a menos que você tenha a permissão **ALTER ANY USER**. Exigir *OLD_PASSWORD* impede que os usuários com a permissão **IMPERSONATION** alterem a senha.  
@@ -139,7 +139,7 @@ ALTER USER userName
 > [!NOTE]  
 >  Essa opção está disponível apenas para usuários contidos.  
   
- DEFAULT_LANGUAGE **=**_{ NONE | \<lcid> | \<language name> | \<language alias> }_  
+ DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<language name> | \<language alias> }_  
  **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica um idioma padrão a ser atribuído ao usuário. Se essa opção não for definida como NONE, o idioma padrão será definido como o idioma padrão do banco de dados. Se o idioma padrão do banco de dados for alterado mais tarde, o idioma padrão do usuário permanecerá inalterado. *DEFAULT_LANGUAGE* pode ser a lcid (ID local), o nome do idioma ou o alias do idioma.  
@@ -214,7 +214,7 @@ ALTER USER Mary5 WITH NAME = Mary51;
 GO  
 ```  
   
-### <a name="b-changing-the-default-schema-of-a-user"></a>b. Alterando o esquema padrão de um usuário  
+### <a name="b-changing-the-default-schema-of-a-user"></a>B. Alterando o esquema padrão de um usuário  
  O exemplo a seguir altera o esquema padrão do usuário `Mary51` para `Purchasing`.  
   
 ```  

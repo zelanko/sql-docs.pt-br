@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 620314ec11154737dc6d35bcf1d3e2587aaab2a1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722990"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Lição 1-7: Adicionar e configurar o destino OLE DB
@@ -42,7 +42,7 @@ Nesta tarefa, você adiciona e configura um destino OLE DB para usar o gerenciad
   
 6.  Na caixa de diálogo **Editor de Destino do OLE DB**, verifique se **localhost.AdventureWorksDW2012** está selecionado na caixa **Gerenciador de Conexões OLE DB**.  
   
-7.  Na caixa **Nome da tabela ou da exibição**, insira ou selecione **[dbo].[FactCurrencyRate]**.  
+7.  Na caixa **Nome da tabela ou da exibição**, insira ou selecione **[dbo].[FactCurrencyRate]** .  
   
 8.  Selecione o botão **Novo** para criar uma nova tabela.  Altere o nome da tabela no script de **Destino OLE DB de Exemplo** para **NewFactCurrencyRate**.  Escolha **OK**.  
   

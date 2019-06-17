@@ -41,11 +41,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c08e29c5d1fba184739e2bb0e33718f766c32655
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334713"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62708177"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT – Cláusula ORDER BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -223,7 +223,7 @@ WHERE Name LIKE 'Lock Washer%'
 ORDER BY ProductID;  
 ```  
   
-#### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>b. Especificando uma única coluna não definida na lista de seleção  
+#### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>B. Especificando uma única coluna não definida na lista de seleção  
  O exemplo a seguir classifica o conjunto de resultados por uma coluna que não está incluída na lista de seleção, mas que foi definida na tabela especificada na cláusula FROM.  
   
 ```sql
@@ -274,7 +274,7 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-an-ascending-order"></a>b. Especificando uma ordem crescente  
+#### <a name="b-specifying-an-ascending-order"></a>B. Especificando uma ordem crescente  
  O exemplo a seguir classifica o conjunto de resultados pela coluna `Name` na ordem crescente. Os caracteres são classificados em ordem alfabética e não em ordem numérica. Ou seja, 10 é tem uma classificação anterior a 2.  
   
 ```sql
@@ -391,7 +391,7 @@ ORDER BY DepartmentID
   
 ```  
   
-#### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>b. Especificando variáveis para valores de OFFSET e FETCH  
+#### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. Especificando variáveis para valores de OFFSET e FETCH  
  O exemplo a seguir declara as variáveis `@StartingRowNumber` e `@FetchRows`, e especifica essas variáveis nas cláusulas OFFSET e FETCH.  
   
 ```sql

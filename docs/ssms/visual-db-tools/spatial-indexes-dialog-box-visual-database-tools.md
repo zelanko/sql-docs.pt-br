@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 3f433c5bfd5f6ee2f3a962b47c3d6a4430083976
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098982"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices Espaciais (Ferramentas de Banco de Dados Visual)
@@ -90,7 +90,7 @@ Quando expandida, mostra os campos de propriedade **Nome** e **Descrição** .
 Mostra o nome do índice espacial. Quando um novo índice é criado, é dado um nome padrão baseado na tabela da janela ativa no Designer de Tabela. O nome pode ser alterado a qualquer momento.  
   
 **Descrição**  
-Descreve o índice. Para escrever uma descrição mais detalhada, clique em **Descrição** e, em seguida, clique no botão de reticências (**…**) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
+Descreve o índice. Para escrever uma descrição mais detalhada, clique em **Descrição** e, em seguida, clique no botão de reticências ( **…** ) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
   
 **Categoria do Designer de Tabelas**  
 Quando expandida, mostra informações sobre as propriedades desse índice espacial.  
