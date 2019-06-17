@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f9e53c4ae42f981b1b579294954a965ef8c376
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63140685"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Alterar os detalhes do agendamento para um trabalho mestre do SQL Server Agent
@@ -56,7 +56,7 @@ ms.locfileid: "63140685"
   
 4.  Clique com o botão direito do mouse no trabalho cujo agendamento você quer editar e selecione **Propriedades**.  
   
-5.  No **propriedades do trabalho –**_job_name_ caixa de diálogo **selecionar uma página**, selecione **agendas**. Para obter mais informações sobre as opções disponíveis nessa página, consulte [propriedades do trabalho: Novo trabalho de &#40;página de agenda&#41;](job-properties-new-job-schedules-page.md).  
+5.  No **propriedades do trabalho –** _job_name_ caixa de diálogo **selecionar uma página**, selecione **agendas**. Para obter mais informações sobre as opções disponíveis nessa página, consulte [propriedades do trabalho: Novo trabalho de &#40;página de agenda&#41;](job-properties-new-job-schedules-page.md).  
   
 6.  Quando terminar, clique em **OK**.  
   

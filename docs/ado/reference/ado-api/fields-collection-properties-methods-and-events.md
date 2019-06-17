@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 959d7c51a636045f806de3f6f58e14e1964a2f71
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66719240"
 ---
 # <a name="fields-collection-properties-methods-and-events"></a>Propriedades de coleção de campos, métodos e eventos
@@ -39,7 +39,7 @@ ms.locfileid: "66719240"
   
  [Método Update](../../../ado/reference/ado-api/update-method.md)  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Nenhum.  
   
 ## <a name="see-also"></a>Consulte também  

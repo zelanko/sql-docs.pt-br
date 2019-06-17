@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63128761"
 ---
 # <a name="permissions-database-engine"></a>Permissões (Mecanismo de Banco de Dados)
@@ -102,15 +102,15 @@ ms.locfileid: "63128761"
 |SELECT|Sinônimos<br /><br /> Tabelas e colunas<br /><br /> Funções com valor de tabela [!INCLUDE[tsql](../../includes/tsql-md.md)] , CLR (common language runtime) e colunas<br /><br /> Exibições e colunas|  
 |VIEW CHANGE TRACKING|Tabelas<br /><br /> Esquemas|  
 |UPDATE|Sinônimos<br /><br /> Tabelas e colunas<br /><br /> Exibições e colunas<br /><br /> Objetos de sequência|  
-|REFERENCES|Funções escalares e de agregação ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Filas do[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Tabelas e colunas<br /><br /> Funções com valor de tabela ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR) e colunas<br /><br /> Types<br /><br /> Exibições e colunas<br /><br /> Objetos de sequência|  
+|REFERENCES|Funções escalares e de agregação ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Filas do[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tabelas e colunas<br /><br /> Funções com valor de tabela ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR) e colunas<br /><br /> Types<br /><br /> Exibições e colunas<br /><br /> Objetos de sequência|  
 |INSERT|Sinônimos<br /><br /> Tabelas e colunas<br /><br /> Exibições e colunas|  
 |DELETE|Sinônimos<br /><br /> Tabelas e colunas<br /><br /> Exibições e colunas|  
 |Execute|Procedimentos ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funções escalares e de agregação ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Sinônimos<br /><br /> Tipos CLR|  
-|RECEIVE|Filas do[!INCLUDE[ssSB](../../includes/sssb-md.md)] |  
-|VIEW DEFINITION|Grupos de disponibilidade<br /><br /> Procedimentos ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Filas do[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Funções escalares e de agregação ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Logons, usuários e funções<br /><br /> Sinônimos<br /><br /> Tabelas<br /><br /> Funções com valor de tabela ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Exibições<br /><br /> Objetos de sequência|  
-|ALTER|Grupos de disponibilidade<br /><br /> Procedimentos ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funções escalares e de agregação ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Objetos de sequência<br /><br /> Logons, usuários e funções<br /><br /> Filas do[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Tabelas<br /><br /> Funções com valor de tabela ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Exibições|  
+|RECEIVE|Filas do[!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
+|VIEW DEFINITION|Grupos de disponibilidade<br /><br /> Procedimentos ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Filas do[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Funções escalares e de agregação ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Logons, usuários e funções<br /><br /> Sinônimos<br /><br /> Tabelas<br /><br /> Funções com valor de tabela ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Exibições<br /><br /> Objetos de sequência|  
+|ALTER|Grupos de disponibilidade<br /><br /> Procedimentos ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funções escalares e de agregação ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Objetos de sequência<br /><br /> Logons, usuários e funções<br /><br /> Filas do[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tabelas<br /><br /> Funções com valor de tabela ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Exibições|  
 |TAKE OWNERSHIP|Grupos de disponibilidade<br /><br /> Funções<br /><br /> Procedimentos ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funções escalares e de agregação ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funções de servidor<br /><br /> Sinônimos<br /><br /> Tabelas<br /><br /> Funções com valor de tabela ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Exibições<br /><br /> Objetos de sequência|  
-|CONTROL|Grupos de disponibilidade<br /><br /> Procedimentos ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funções escalares e de agregação ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Logons, usuários e funções<br /><br /> Filas do[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Sinônimos<br /><br /> Tabelas<br /><br /> Funções com valor de tabela ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Exibições<br /><br /> Objetos de sequência|  
+|CONTROL|Grupos de disponibilidade<br /><br /> Procedimentos ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funções escalares e de agregação ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Logons, usuários e funções<br /><br /> Filas do[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Sinônimos<br /><br /> Tabelas<br /><br /> Funções com valor de tabela ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Exibições<br /><br /> Objetos de sequência|  
 |IMPERSONATE|Logons e usuários|  
   
 > [!CAUTION]  
