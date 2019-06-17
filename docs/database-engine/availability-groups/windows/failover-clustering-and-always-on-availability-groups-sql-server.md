@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7246ad4ef1aae3120b2e01563a8a849f8d421f9f
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: e97881362ed01f08a0c229025c21950cf117835a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974165"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800669"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering de failover e Grupos de Disponibilidade AlwaysOn (SQL Server)
 
@@ -75,7 +75,7 @@ ms.locfileid: "57974165"
  **As configurações de política de failover do grupo de disponibilidade se aplicam a todas as réplicas, sejam elas armazenadas em uma instância autônoma ou em uma instância FCI.  
   
 > [!NOTE]  
->  Para obter mais informações sobre o **Número de nós** em FCIs e nos **Grupos de Disponibilidade Always On** para edições diferentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)).  
+>  Para obter mais informações sobre o **Número de nós** em FCIs e nos **Grupos de Disponibilidade Always On** para edições diferentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) ).  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>Considerações para hospedar uma réplica de disponibilidade em uma FCI  
   

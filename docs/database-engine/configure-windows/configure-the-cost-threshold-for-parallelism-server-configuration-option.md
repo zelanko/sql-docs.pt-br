@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: abc5cb2557c3620ff9088520113a33b4f1a06bcc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 483329a9d948d054600df71710fdd84af57685f7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768574"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803353"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>Configurar a opção cost threshold for parallelism de configuração de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

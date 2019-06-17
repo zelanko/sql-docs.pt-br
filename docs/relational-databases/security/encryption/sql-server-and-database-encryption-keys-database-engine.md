@@ -12,12 +12,12 @@ ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: ac5f345a6ee07abb8ddf5f4dbacff914914da5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4656beba4de77e7d245a025911dfc2f417b8e1c6
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749034"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462676"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Chaves de criptografia do SQL Server e banco de dados (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,13 +26,19 @@ ms.locfileid: "47749034"
  No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], as chaves de criptografia incluem uma combinação de chaves públicas, privadas e assimétricas, usadas para proteger dados confidenciais. A chave simétrica é criada durante a inicialização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando você inicia pela primeira vez a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . A chave é usada pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para criptografar dados confidenciais que são armazenados no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. As chaves públicas e privadas são criadas pelo sistema operacional e são usadas para proteger a chave simétrica. Um par de chaves pública e privada é criado para cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que armazena dados confidenciais em um banco de dados.  
   
 ## <a name="applications-for-sql-server-and-database-keys"></a>Aplicativos para o SQL Server e chaves de banco de dados  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tem dois aplicativos principais para chaves: uma *SMK (chave mestra de serviço)* gerada e para uma instância [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , e uma *DMK (chave mestra de banco de dados)* usada para um banco de dados.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tem dois aplicativos principais para chaves: uma *SMK (chave mestra de serviço)* gerada e para uma instância [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , e uma *DMK (chave mestra de banco de dados)* usada para um banco de dados.
+
+### <a name="service-master-key"></a>Chave mestra de serviço
   
- A SMK é gerada automaticamente na primeira vez que a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é iniciada, e é usada para criptografar a senha, as credenciais e a chave mestra de banco de dados de um servidor vinculado. A SMK é criptografada com a chave do computador local usando a DPAPI (API de proteção de dados do Windows). A DPAPI usa uma chave derivada das credenciais do Windows da conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e das credenciais do computador. A chave mestra de serviço só pode ser descriptografada pela conta de serviço sob a qual foi criada ou por um principal que tenha acesso às credenciais da máquina.  
+ A Chave Mestra de Serviço é a raiz da hierarquia de criptografia do SQL Server. A SMK é gerada automaticamente na primeira vez que a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é iniciada, e é usada para criptografar a senha, as credenciais e a chave mestra de banco de dados de um servidor vinculado. A SMK é criptografada com a chave do computador local usando a DPAPI (API de Proteção de Dados do Windows). A DPAPI usa uma chave derivada das credenciais do Windows da conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e das credenciais do computador. A chave mestra de serviço só pode ser descriptografada pela conta de serviço sob a qual foi criada ou por um principal que tenha acesso às credenciais da máquina.
+
+A chave mestra de serviço só pode ser aberta pela conta de serviço do Windows na qual ela foi criada ou por uma entidade que tenha acesso ao nome e à senha da conta de serviço.
+
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usa o algoritmo de criptografia AES para proteger a SMK (chave mestra de serviço) e a DMK (chave mestra de banco de dados). O AES é um algoritmo de criptografia mais novo que o 3DES usado em versões anteriores. Depois de atualizar uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] para [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , o SMK e o DMK devem ser regenerados para atualizar as chave mestras para AES. Para obter mais informações sobre como regenerar a SMK, veja [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-master-key-transact-sql.md).
+
+### <a name="database-master-key"></a>Chave mestra do banco de dados
   
- A chave mestra de banco de dados é uma chave simétrica usada para proteger as chaves privadas dos certificados e as chaves assimétricas presentes no banco de dados. Ela também pode ser usada para criptografar dados, mas tem limitações de comprimento que a tornam pouco prática para os dados do que usar uma chave simétrica.  
-  
- Quando é criada, a chave mestra é criptografada com o algoritmo DES Triplo e uma senha fornecida pelo usuário. Para habilitar a descriptografia automática da chave mestra, uma cópia da chave é criptografada com o uso da SMK. Ela é armazenada no banco de dados em que é usada e no banco de dados **master** do sistema.  
+ A chave mestra de banco de dados é uma chave simétrica usada para proteger as chaves privadas dos certificados e as chaves assimétricas presentes no banco de dados. Ela também pode ser usada para criptografar dados, mas tem limitações de comprimento que a tornam pouco prática para os dados do que usar uma chave simétrica. Para habilitar a descriptografia automática da chave mestra do banco de dados, uma cópia da chave é criptografada com o uso da SMK. Ela é armazenada no banco de dados em que é usada e no banco de dados **master** do sistema.  
   
  A cópia da DMK armazenada no banco de dados **master** do sistema é silenciosamente atualizada sempre que a DMK é alterada. No entanto, esse padrão pode ser alterado com o uso da opção **DROP ENCRYPTION BY SERVICE MASTER KEY** da instrução **ALTER MASTER KEY** . Uma DMK não criptografada pela chave mestra de serviço deve ser aberta com a instrução **OPEN MASTER KEY** e uma senha.  
   

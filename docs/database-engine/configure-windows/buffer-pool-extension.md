@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43423c8db03d27c26558672d287415fa5e12d638
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: 0f0736e2a0a0824187d3a3ba8bac9573efe6bb9f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255951"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786808"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "54255951"
   
  As páginas de índice e dados são lidas do disco no pool de buffers e as páginas modificadas (também conhecidas como páginas sujas) são gravadas novamente no disco. A demanda de memória nos pontos de verificação de servidor e banco de dados faz com que as páginas sujas dinâmicas (ativas) no cache do buffer sejam removidas do cache e gravadas nos discos mecânicos e, em seguida, lidas novamente no cache. Normalmente, essas operações de E/S são leituras e gravações aleatórias pequenas de 4 a 16 KB de dados. Os padrões de E/S aleatória pequena incorrem em buscas frequentes, competição por braço do disco mecânico, aumento de latência de E/S e redução da taxa de transferência de E/S agregada do sistema.  
   
- A abordagem comum para resolver esses gargalos de E/S é adicionar mais DRAM, ou como alternativa, a adição de eixos SAS de alto desempenho. Embora essas opções sejam úteis, elas apresentam desvantagens significativas: A DRAM é mais cara do que as unidades de armazenamento de dados, e a adição de eixos aumenta as despesas de capital na aquisição de hardware, bem como os custos operacionais com o aumento do consumo de energia e o aumento da probabilidade de falha do componente.  
+ A abordagem comum para resolver esses gargalos de E/S é adicionar mais DRAM, ou como alternativa, a adição de eixos SAS de alto desempenho. Embora essas opções sejam úteis, elas apresentam desvantagens significativas: A DRAM é mais cara do que as unidades de armazenamento de dados. A adição de eixos aumenta as despesas de capital na aquisição de hardware, bem como os custos operacionais com o aumento do consumo de energia e o aumento da probabilidade de falha do componente.  
   
  O recurso de extensão do pool de buffers estende o cache do pool de buffers com o armazenamento não volátil (geralmente, SSD). Graças a essa extensão, o pool de buffers pode acomodar um conjunto de trabalho de banco de dados maior, o que força a paginação de E/Ss entre a RAM e as SSDs. Isso descarrega eficazmente as E/Ss aleatórias pequenas dos discos mecânicos nas SSDs. Devido à latência mais baixa e ao melhor desempenho de E/S aleatória das SSDs, a extensão do pool de buffers melhora significativamente a taxa de transferência de E/S.  
   

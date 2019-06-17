@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 11c66e1ec21787fa263a999e9beaaf0e22646b5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 996def514bc87bde79f85bffbb04056bf487764f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646734"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795460"
 ---
 # <a name="database-mirroring-witness"></a>Testemunha de espelhamento de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47646734"
   
 -   Se o servidor espelho estiver desconectado da testemunha e também do servidor principal, não será possível o failover automático, independentemente do estado do servidor principal.  
   
- O requisito de que pelo menos duas das instâncias de servidor estejam conectadas é conhecido como *quorum*. O quorum assegura que o banco de dados só possa ser atendido por um parceiro de cada vez. Para obter informações sobre como o quorum funciona e seu impacto sobre uma sessão, veja [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ O requisito de que pelo menos duas das instâncias de servidor estejam conectadas é conhecido como *quorum*. O quorum assegura que o banco de dados só possa ser atendido por um parceiro de cada vez. Para obter informações sobre o funcionamento do quorum e seu impacto em uma sessão, veja [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ##  <a name="AddRemoveWitness"></a> Para adicionar ou remover uma testemunha  
  **Para adicionar uma testemunha**  

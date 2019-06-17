@@ -11,23 +11,17 @@ helpviewer_keywords:
 ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2abd3526a0f933708c50d99138f96000283d05c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1f3b3b75b659603499c88ec533c5b1a1b8f5962d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640774"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780120"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>Exibir propriedades do grupo de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como exibir as propriedades de um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)] no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
-  
--   **Para exibir as propriedades do grupo de disponibilidade usando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para exibir e alterar as propriedades de um grupo de disponibilidade**  
@@ -38,7 +32,7 @@ ms.locfileid: "47640774"
   
 3.  Clique com o botão direito do mouse no grupo de disponibilidade cujas propriedades você deseja exibir e selecione o comando **Propriedades** .  
   
-4.  Na caixa de diálogo **Propriedades do Grupo de disponibilidade** , use as páginas **Geral** e **Preferências de Backup** para exibir e, em alguns casos, alterar as propriedades do grupo de disponibilidade selecionado. Para obter mais informações, veja [Propriedades do grupo de disponibilidade: novo grupo de disponibilidade &#40;Página Geral&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-general-page.md) e [Propriedades do grupo de disponibilidade: novo grupo de disponibilidade &#40;Página Preferências de backup&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md).  
+4.  Na caixa de diálogo **Propriedades do Grupo de disponibilidade** , use as páginas **Geral** e **Preferências de Backup** para exibir e, em alguns casos, alterar as propriedades do grupo de disponibilidade selecionado. Para obter mais informações, confira [Propriedades do Grupo de Disponibilidade: novo grupo de disponibilidade &#40;Página Geral&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-general-page.md) e [Propriedades do grupo de disponibilidade: novo grupo de disponibilidade &#40;página Preferências de Backup&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md).  
   
      Use a página **Permissões** para exibir os logons, funções e permissões explícitas atuais associados ao grupo de disponibilidade. Para obter mais informações, consulte [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md).  
   

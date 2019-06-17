@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ae0482258aeb628e608666ee61f796f2a20157a9
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+manager: jroth
+ms.openlocfilehash: 6be7286056ce59e9080e58fa9706370481fb5fce
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616936"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775443"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Serviço SQL Server Browser (Mecanismo de Banco de Dados e SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "52616936"
  As instâncias ocultas são instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dão suporte apenas a conexões de memória compartilhada. Para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], defina o sinalizador de `HideInstance` para indicar que o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não deve responder com informações sobre essa instância de servidor.  
   
 ### <a name="using-a-firewall"></a>Usando um firewall  
- Para comunicar-se com o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um servidor por trás de um firewall, abra a porta UDP 1434, além da porta TCP usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, 1433). Para obter informações sobre como trabalhar com um firewall, consulte "Como configurar um firewall para acessar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Para comunicar-se com o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um servidor por trás de um firewall, abra a porta UDP 1434, além da porta TCP usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, 1433). Para obter informações sobre como trabalhar com um firewall, veja "Como configurar um Firewall para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acesso" em Manuais Online [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  
  [Protocolos de rede e bibliotecas de rede](../../sql-server/install/network-protocols-and-network-libraries.md)  

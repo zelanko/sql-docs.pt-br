@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 409432676e85dd6d6626b3be2ec5aa375c802424
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 86c7677754faca57723e93cccc3e55cf76da7a01
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700934"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803495"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Suspender um banco de dados de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47700934"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Acompanhamento:** [evitando um log de transações cheio](#FollowUp)  
+-   **Acompanhamento:** [evitar um log de transações cheio](#FollowUp)  
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47700934"
  Você deve estar conectado à instância de servidor que hospeda o banco de dados a ser suspenso. Para suspender um banco de dados primários e os bancos de dados secundários correspondentes, conecte-se à instância de servidor que hospeda a réplica primária. Para suspender um banco de dados secundário deixando o banco de dados primário disponível, conecte-se à réplica secundária.  
   
 ###  <a name="Recommendations"></a> Recomendações  
- Durante gargalos, a suspensão de um ou mais bancos de dados secundários brevemente poderá ser útil para melhorar temporariamente o desempenho na réplica primária. Desde que um banco de dados secundário permaneça suspenso, o log de transações do banco de dados primário correspondente não poderá ser truncado. Isso faz com que os registros de log sejam acumulados no banco de dados primário. Portanto, é recomendável retomar ou remover um banco de dados secundário suspenso rapidamente. Para obter mais informações, consulte [Acompanhamento: evitando um log de transações cheio](#FollowUp), posteriormente neste tópico.  
+ Durante gargalos, a suspensão de um ou mais bancos de dados secundários brevemente poderá ser útil para melhorar temporariamente o desempenho na réplica primária. Desde que um banco de dados secundário permaneça suspenso, o log de transações do banco de dados primário correspondente não poderá ser truncado. Isso faz com que os registros de log sejam acumulados no banco de dados primário. Portanto, é recomendável retomar ou remover um banco de dados secundário suspenso rapidamente. Para obter mais informações, veja [Acompanhamento: evitar um log de transações cheio](#FollowUp) mais adiante neste tópico.  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -126,7 +126,7 @@ ms.locfileid: "47700934"
   
 -   [Provedor do SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
+##  <a name="FollowUp"></a> Acompanhamento: evitar um log de transações cheio  
  Normalmente, quando um ponto de verificação automático é executado em um banco de dados, seu log de transações é truncado àquele ponto de verificação após o próximo backup de log. Porém, enquanto um banco de dados secundário está suspenso, todos os registros de log atuais permanecem ativos no banco de dados primário. Se o log de transações ficar cheio (por ter atingido seu tamanho máximo ou porque a instância de servidor ficou sem espaço), o banco de dados não poderá executar mais nenhuma atualização.  
   
  Para evitar esse problema, você deverá proceder da seguinte maneira:  

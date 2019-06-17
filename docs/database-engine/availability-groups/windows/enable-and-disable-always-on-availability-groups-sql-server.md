@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6d416be5087d9aa9c55f069940aecee568442f8
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+manager: jroth
+ms.openlocfilehash: 3f1ea7ec48f702173ad3370b7212b0b0b24260dc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527119"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765800"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Habilitar ou desabilitar o recurso de grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,23 +31,8 @@ ms.locfileid: "57527119"
 > [!IMPORTANT]  
 >  Se você excluir e recriar um cluster WSFC, deverá desabilitar e reabilitar o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedava uma réplica de disponibilidade no cluster WSFC original.  
   
--   **Antes de começar:**  
   
-     [Pré-requisitos](#Prerequisites)  
-  
-     [Segurança](#Security)  
-  
--   **Instruções:**  
-  
-    -   [Determinar se os Grupos de Disponibilidade AlwaysOn estão habilitados](#IsEnabled)  
-  
-    -   [Habilitar Grupos de Disponibilidade AlwaysOn](#EnableAOAG)  
-  
-    -   [Desabilitar Grupos de Disponibilidade AlwaysOn](#DisableAOAG)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de começar  
-  
-###  <a name="Prerequisites"></a> Pré-requisitos para habilitar Grupos de Disponibilidade AlwaysOn  
+##  <a name="Prerequisites"></a> Pré-requisitos para habilitar Grupos de Disponibilidade AlwaysOn  
   
 -   A instância de servidor deve residir em um nó WSFC (Windows Server Failover Clustering).  
   
@@ -57,10 +42,9 @@ ms.locfileid: "57527119"
   
  Para obter informações sobre outros pré-requisitos, restrições e recomendações para criar e configurar grupos de disponibilidade, veja [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> Segurança  
+## <a name="Permissions"></a> Permissões  
  Enquanto os Grupos de Disponibilidade AlwaysOn estiverem habilitados em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a instância de servidor terá total controle no cluster WSFC.  
-  
-####  <a name="Permissions"></a> Permissões  
+
  Requer a associação ao grupo **Administrador** no computador local e o controle total no cluster WSFC. Ao habilitar o AlwaysOn usando o PowerShell, abra a janela Prompt de Comando usando a opção **Executar como administrador** .  
   
  Exige que o Active Directory crie objetos e gerencie permissões de objetos.  
@@ -134,7 +118,7 @@ ms.locfileid: "57527119"
   
 2.  No menu **Iniciar** , aponte para **Todos os Programas**, para [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
   
-3.  Em **SQL Server Configuration Manager**, clique em **Serviços do SQL Server**, clique com o botão direito do mouse em SQL Server (**\<**_instance name_**>)**, em que **\<**_instance name_**>** é o nome de uma instância de servidor local na qual você deseja habilitar Grupos de Disponibilidade AlwaysOn e clique em **Propriedades.**  
+3.  Em **SQL Server Configuration Manager**, clique em **Serviços do SQL Server**, clique com o botão direito do mouse em SQL Server ( **\<** _instance name_ **>)** , em que **\<** _instance name_ **>** é o nome de uma instância de servidor local na qual você deseja habilitar Grupos de Disponibilidade AlwaysOn e clique em **Propriedades.**  
   
 4.  Selecione a guia **Alta Disponibilidade AlwaysOn**.  
   
@@ -198,9 +182,9 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  No menu **Iniciar** , aponte para **Todos os Programas**, para [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
   
-3.  Em **SQL Server Configuration Manager**, clique em **Serviços do SQL Server**, clique com o botão direito do mouse em SQL Server (**\<**_instance name_**>)**, em que **\<**_instance name_**>** é o nome de uma instância de servidor local na qual você deseja desabilitar Grupos de Disponibilidade AlwaysOn, e clique em **Propriedades**.  
+3.  Em **SQL Server Configuration Manager**, clique em **Serviços do SQL Server**, clique com o botão direito do mouse em SQL Server ( **\<** _instance name_ **>)** , em que **\<** _instance name_ **>** é o nome de uma instância de servidor local na qual você deseja desabilitar Grupos de Disponibilidade AlwaysOn, e clique em **Propriedades**.  
   
-4.  Na guia**Alta Disponibilidade AlwaysOn**, desmarque a caixa de seleção **Habilitar Grupos de Disponibilidade AlwaysOn** e clique em **OK**.  
+4.  Na guia **Alta Disponibilidade Always On**, desmarque a caixa de seleção **Habilitar Grupos de Disponibilidade Always On** e clique em **OK**.  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager salvará as alterações e reiniciará o serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Quando o serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for reiniciado, AlwaysOn será desabilitado e a propriedade de servidor **IsHadrEnabled** será definida como 0 para indicar que os Grupos de Disponibilidade AlwaysOn estão desabilitados.  
   

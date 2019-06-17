@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2b31c801d485d4e127993ba7664b5277e5a1e01
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 4f2e86162a7b7fc8dd491241fb598ed8083e2c78
+ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65943688"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469647"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,7 +88,8 @@ Uma expressão que pode resolver um dos seguintes valores:
 Para *date*, `DATEADD` aceitará uma variável de expressão de coluna, de expressão, de literal de cadeia de caracteres ou definida pelo usuário. Um valor literal de cadeia de caracteres deve resolver um **datetime**. Para evitar ambiguidade, use anos de quatro dígitos. Consulte [Configurar a opção two digit year cutoff de configuração de servidor](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) para obter informações sobre anos de dois dígitos.
   
 ## <a name="return-types"></a>Tipos de retorno
-O tipo de dados de argumento *date* torna-se o tipo e dados de valor retornado `DATEADD`, exceto os valores *date* do literal de cadeia de caracteres. Para um literal de cadeia de caracteres, `DATEADD` retorna um valor **datetime**. `DATEADD` gerará um erro se a escala de segundos do literal de cadeia de caracteres exceder três casas decimais (,nnn) ou se o literal de cadeia de caracteres contiver a parte de deslocamento de fuso horário.
+
+O tipo de dados do valor retornado para esse método é dinâmico. O tipo de retorno depende do argumento fornecido para `date`. Se o valor para `date` for uma data literal de cadeia de caracteres, `DATEADD` retornará um valor **datetime**. Se outro tipo de dados de entrada válido for fornecido para `date`, `DATEADD` retornará o mesmo tipo de dados. `DATEADD` gerará um erro se a escala de segundos do literal de cadeia de caracteres exceder três casas decimais (,nnn) ou se o literal de cadeia de caracteres contiver a parte de deslocamento de fuso horário.
   
 ## <a name="return-value"></a>Valor retornado  
   

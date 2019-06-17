@@ -15,43 +15,26 @@ helpviewer_keywords:
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fabec0dd86d8ab648f51ea82bfc1ca83fac79832
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: f466fc76d2b960cd5b27eef70dd8a553833c83af
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212676"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796660"
 ---
 # <a name="change-the-failover-mode-for-a-replica-within-an-always-on-availability-group"></a>Alterar o modo de failover de uma réplica dentro de um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como alterar o modo de failover de uma réplica de disponibilidade em um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell. O modo de failover é uma propriedade de réplica que determina o modo de failover para réplicas que executam sob modo de disponibilidade de confirmação síncrona. Para obter mais informações, veja [Failover e modos de failover &#40;grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) e [Modos de disponibilidade &#40;Grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
--   **Antes de começar:**  
-  
-     [Pré-requisitos e restrições](#Prerequisites)  
-  
-     [Segurança](#Security)  
-  
--   **Para alterar o modo de disponibilidade de uma réplica de disponibilidade usando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de começar  
-  
-###  <a name="Prerequisites"></a> Pré-requisitos e restrições  
+## <a name="Prerequisites"></a> Pré-requisitos e restrições  
   
 -   Esta tarefa tem suporte apenas em réplicas primárias. Você deve estar conectado à instância do servidor que hospeda a réplica primária.  
   
 -   As FCIs (Instâncias de cluster de failover) do SQL Server não dão suporte ao failover automático por grupos de disponibilidade, de modo que qualquer réplica de disponibilidade que esteja hospedado por um FCI só pode ser configurada para failover manual.  
   
-###  <a name="Security"></a> Segurança  
-  
-####  <a name="Permissions"></a> Permissões  
+
+##  <a name="Permissions"></a> Permissões  
  Requer a permissão ALTER AVAILABILITY GROUP no grupo de disponibilidade, a permissão CONTROL AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
@@ -67,7 +50,7 @@ ms.locfileid: "53212676"
   
 5.  Na caixa de diálogo **Propriedades da Réplica de Disponibilidade** , use a lista suspensa **Modo de failover** para alterar o modo de failover desta réplica.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para alterar o modo de failover de uma réplica de disponibilidade**  
   
 1.  Conecte-se à instância de servidor que hospeda a réplica primária.  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3a40d8209fd01c6f5e3c4ec2c3d4344d2b62ee35
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 35ff790595dbcb6a3864b2d1414149374119d907
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125946"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787991"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replicação, controle de alterações e Change Data Capture – grupos de disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -196,7 +196,7 @@ Se o Change Data Capture precisar ser desabilitado em um banco de dados que faz 
   
 -   Ao usar a replicação de mesclagem e o banco de dados de publicação estiver em um grupo de disponibilidade:  
   
-    -   Assinatura por push: o publicador e o distribuidor devem ser executados pelo menos no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+    -   Assinatura push: o publicador e o distribuidor devem ser executados pelo menos no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
     -   Assinatura por pull: os bancos de dados publicador, distribuidor e assinante devem estar pelo menos no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Isso ocorre porque o agente de mesclagem no assinante deve entender como um grupo de disponibilidade pode fazer failover para seu secundário.  
   

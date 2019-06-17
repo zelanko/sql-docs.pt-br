@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2179ae0fd8110f7172ca936b77045f58fb50cd7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d555bc79dffcb750494bd9f1f79622d03fc75eb5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770165"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795324"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Preparar um banco de dados espelho para espelhamento (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

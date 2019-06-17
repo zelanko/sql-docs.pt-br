@@ -10,13 +10,13 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: b287e4f806f02f2b86493813f29776e118017fb8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: dc39108ea476947e95f237bdccf1fb64a70bd36a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405121"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794724"
 ---
 # <a name="upgrade-master-data-services"></a>Atualizar o Master Data Services
 
@@ -113,7 +113,7 @@ ms.locfileid: "52405121"
   
  **Para atualizar com a atualização do Mecanismo de Banco de Dados**  
   
-1.  **Somente para o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]**: abra o **Painel de Controle** > **Programas e Recursos** e desinstale o Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  **Para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] apenas**: abra o **Painel de Controle** > **Programas e Recursos** e desinstale o Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Faça upgrade do mecanismo de banco de dados para o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ou [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]. Para obter mais informações, consulte [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   

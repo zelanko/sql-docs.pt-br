@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4601435dcaf7cbc82cb4fb6e6e00ea911ef12f9f
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 34a8cc218cac621a678ae32ced63166ead9ffef0
+ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044383"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749131"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Índices columnstore – novidades
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "55044383"
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] adiciona esses novos recursos.
 
 ### <a name="functional"></a>Funcional
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] dá suporte a colunas computadas não persistentes em índices columnstore clusterizados. Não há suporte para colunas persistentes em índices columnstore clusterizados. Você não pode criar um índice não clusterizado em um índice columnstore que tenha uma coluna computada. 
+- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] dá suporte a colunas computadas não persistentes em índices columnstore clusterizados. Não há suporte para colunas computadas em índices columnstore clusterizados. Você não pode criar um índice não clusterizado em um índice columnstore que tenha uma coluna computada. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  O[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] adiciona aprimoramentos importantes para melhorar o desempenho e a flexibilidade dos índices columnstore. Esses aprimoramentos melhoram os cenários de data warehouse e habilitam a análise operacional em tempo real.  

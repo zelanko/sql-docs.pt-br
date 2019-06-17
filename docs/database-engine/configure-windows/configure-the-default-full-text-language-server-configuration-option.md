@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1fffafeed8fe36520223aaf5ef900c410244e495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5b7d8a4cb398e984ede05ad411623a9e33653ac1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732204"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803332"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>Configurar opção de configuração de servidor default full-text language
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47732204"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [depois de configurar a opção idioma de texto completo padrão](#FollowUp)  
+-   **Acompanhamento:**  [depois de configurar a opção default full-text language](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   

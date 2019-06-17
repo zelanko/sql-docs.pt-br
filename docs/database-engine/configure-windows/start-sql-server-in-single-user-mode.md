@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9178ee0cbb010f55cf7438c345112c95f3d2b3fb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 34e5533d442dbbc91807a533ba53ebcc8b115d19
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508698"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775336"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Iniciar o SQL Server no modo de usuário único
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Ao usar a opção **-m** com **SQLCMD** ou [!INCLUDE[ssManStudio](../../includes
 > [!NOTE]
 > No Linux, **SQLCMD** deve estar em letras maiúsculas, como mostrado.
 
-Por exemplo, **-m"SQLCMD"** limita as conexões a uma única conexão e essa conexão deve se identificar como o programa cliente **SQLCMD**. Use essa opção quando estiver iniciando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no modo de usuário único e se um aplicativo cliente desconhecido estiver usando a única conexão disponível. Para se conectar por meio do Editor de Consultas no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use **-m"Microsoft SQL Server Management Studio - Query"**.  
+Por exemplo, **-m"SQLCMD"** limita as conexões a uma única conexão e essa conexão deve se identificar como o programa cliente **SQLCMD**. Use essa opção quando estiver iniciando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no modo de usuário único e se um aplicativo cliente desconhecido estiver usando a única conexão disponível. Para se conectar por meio do Editor de Consultas no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use **-m"Microsoft SQL Server Management Studio - Query"** .  
   
 > [!IMPORTANT]  
 >  Não use essa opção como um recurso de segurança. O aplicativo cliente fornece o nome do aplicativo cliente e pode fornecer um nome falso como parte da cadeia de conexão.  

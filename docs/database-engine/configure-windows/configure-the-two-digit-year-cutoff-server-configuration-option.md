@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2d081a9c7969ce20617a5f10850baf9d378a49b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 786c25d8f151b034c51de8c7167fa0c476898ab4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665430"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803311"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>Configurar a opção two digit year cutoff de configuração de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

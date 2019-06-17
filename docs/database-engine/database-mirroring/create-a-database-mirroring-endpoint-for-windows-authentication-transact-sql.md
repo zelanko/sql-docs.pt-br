@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3d1953d29d718edebbdae18677d240395d0b710f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 630dee3126fe6c122f3e2d034252260769e3ed03
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838114"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774950"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47838114"
   
 -   **Antes de começar:**  [Segurança](#Security)  
   
--   **Para criar um ponto de extremidade do espelhamento de banco de dados, usando:**  [Transact-SQL](#TsqlProcedure)  
+-   **Para criar um ponto de extremidade de espelhamento de banco de dados usando:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -139,7 +139,7 @@ ms.locfileid: "47838114"
     > [!NOTE]  
     >  Para alterar um ponto de extremidade existente, use [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
-###  <a name="TsqlExample"></a> Exemplo: criando pontos de extremidade que oferecem suporte ao espelhamento de banco de dados (Transact-SQL)  
+###  <a name="TsqlExample"></a> Exemplo: criar pontos de extremidade compatíveis com espelhamento de banco de dados (Transact-SQL)  
  O seguinte exemplo cria pontos de extremidade do espelhamento de banco de dados para as instâncias de servidor padrão em três sistemas de computador separados:  
   
 |Função da instância de servidor|Nome do computador host|  
@@ -203,7 +203,7 @@ GO
  [Escolher um algoritmo de criptografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [Especificar um endereço de rede do servidor &#40;espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
- [Exemplo: configurando o espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
+ [Exemplo: configurar o espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 85dc2bd0bb86362e71aa99ee277f2edaafbb53fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 574045de5626d3f573988b96dd3c40b3d08df03b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534096"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795469"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Estime a interrupção do serviço durante troca de função (Espelhamento de Banco de Dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "52534096"
  O tempo de failover consiste principalmente no tempo necessário para o servidor espelho anterior efetuar o roll-forward de qualquer log restante na fila de restauração, mais um pequeno tempo adicional (para obter mais informações sobre como o servidor espelho processa registros de log, consulte [Espelhamento de Banco de Dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)). Para obter informações sobre como calcular o tempo de failover, consulte Estimando sua taxa do failover a ser refeito, posteriormente neste tópico.  
   
 > [!IMPORTANT]  
->  Se o failover ocorrer durante uma transação na qual um índice ou uma tabela for criada e, depois, for alterada, o failover pode demorar mais tempo que o habitual.  Por exemplo, o failover durante a série seguinte de operações pode aumentar o tempo de failover: BEGIN TRANSACTION, CREATE INDEX em uma tabela e SELECT INTO tabela. A possibilidade de aumento do tempo de failover durante tal transação permanece até que ele seja concluído com uma instrução COMMIT TRANSACTION ou ROLLBACK TRANSACTION.  
+>  Se o failover ocorrer durante uma transação na qual um índice ou uma tabela for criada e, depois, for alterada, o failover pode demorar mais tempo que o habitual.  Por exemplo, realizar failover durante a seguinte série de operações pode aumentar o tempo de failover:  BEGIN TRANSACTION, CREATE INDEX em uma tabela e SELECT INTO na tabela. A possibilidade de aumento do tempo de failover durante tal transação permanece até que ele seja concluído com uma instrução COMMIT TRANSACTION ou ROLLBACK TRANSACTION.  
   
 ### <a name="the-redo-queue"></a>A Fila de Restauração  
  O avanço do banco de dados envolve a aplicação de quaisquer registros de log que estiverem atualmente na fila de restauração no servidor espelho. A opção *fila de restauração* consiste nos registros de log gravados no disco do servidor espelho, mas que ainda não avançaram para o banco de dados espelho.  

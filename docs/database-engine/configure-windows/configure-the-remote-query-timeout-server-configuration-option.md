@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 888c8448-933b-41e3-8aa1-c206bc0cdb78
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3040815900a2502a6e476472d21ee6c1f4e2019e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a43aff5afdd0d54663aad31e95f0fd528b3b9096
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821214"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802841"
 ---
 # <a name="configure-the-remote-query-timeout-server-configuration-option"></a>Configurar a opção de configuração de servidor remote query timeout
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

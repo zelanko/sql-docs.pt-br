@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e095d56a6b68e581a7d6f9184581575fac9f6c4d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 06d8ddd5710b41a80a41643bc2df194ad9c3981c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542729"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795482"
 ---
-# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemplo: Configurando espelhamento de banco de dados usando certificados (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemplo: configurar espelhamento de banco de dados usando certificados (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este exemplo mostra todos os estágios necessários para criar uma sessão de espelhamento de banco de dados com uma autenticação baseada em certificado. Os exemplos deste tópico usam o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A menos que você possa garantir que sua rede está segura, recomendamos o uso de criptografia para conexões de espelhamento de banco de dados.  
   
@@ -263,7 +263,7 @@ ms.locfileid: "52542729"
     ```  
   
     > [!NOTE]  
-    >  Se pretende executar em modo de alta segurança com failover automático, deixe a segurança da transação configurada como FULL (a configuração padrão) e adicione a testemunha o mais cedo possível após executar a segunda instrução SET PARTNER **'***partner_server***'**. Observe que a testemunha deve ser configurada primeiro para conexões de saída e de entrada.  
+    >  Se pretende executar em modo de alta segurança com failover automático, deixe a segurança da transação configurada como FULL (a configuração padrão) e adicione a testemunha o mais cedo possível após executar a segunda instrução SET PARTNER **'***partner_server***'** . Observe que a testemunha deve ser configurada primeiro para conexões de saída e de entrada.  
   
  [&#91;Início do Exemplo&#93;](#ExampleH2)  
   

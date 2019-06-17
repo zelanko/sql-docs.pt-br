@@ -10,13 +10,13 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: c69d17094d5998c0158aeb56d8c14421f6199a4b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: fdf35fa6ad124784f44391e5ad6b7d42cd1064a4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605978"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794852"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Instalando atualizações no prompt de comando
 
@@ -27,7 +27,7 @@ Teste e modifique os scripts de instalação para atender às necessidades da su
 ## <a name="sample-syntax-for-installation"></a>Sintaxe de exemplo da instalação 
 O nome do pacote de atualização pode variar e incluir um componente de processador, edição e idioma. Aplique uma atualização em um prompt de comando substituindo <nome_do_pacote> pelo nome do seu pacote de atualização: 
  
-- Atualize uma única instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e todos os componentes compartilhados, como o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e Ferramentas de Gerenciamento: você pode especificar a instância usando o parâmetro InstanceName ou o parâmetro InstanceID. Para atualizar uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], especifique o parâmetro InstanceID.
+- Atualize uma única instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e todos os componentes compartilhados, como o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e as Ferramentas de Gerenciamento: Você pode especificar a instância usando o parâmetro InstanceName ou o parâmetro InstanceID. Para atualizar uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], especifique o parâmetro InstanceID.
 
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance
@@ -78,7 +78,7 @@ O nome do pacote de atualização pode variar e incluir um componente de process
 |Opção|Descrição| 
 |------------|-----------------| 
 |**/?**|Exibe a ajuda do prompt de comando da instalação autônoma| 
-|**/action=Patch ou /action=RemovePatch**|Especifica a ação da instalação: Patch ou RemovePatch.| 
+|**/action=Patch ou /action=RemovePatch**|Especifica a ação de instalação: Patch ou RemovePatch.| 
 |**/allinstances**|Aplica a atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a todos os componentes compartilhados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não reconhecem a instância.| 
 |**/instancename=InstanceName***|Aplica a atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada InstanceName e a todos os componentes compartilhados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não reconhecem a instância.| 
 |**/InstanceID=Inst1**|Aplica a atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inst1 e a todos os componentes compartilhados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não reconhecem a instância.| 

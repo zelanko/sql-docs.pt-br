@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 914fb9a73839580ebc96d30f406c3c66442726ba
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3e7c367acff65aa61e43f2ea00cde98a54d5cc94
+ms.sourcegitcommit: acef7bf9f3f4c93920191919992aee2b41c2c8e6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801052"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67131822"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Usar a escala de leitura com Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ No [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] e anteriores, todos o
 Se seus requisitos de negócios estiverem relacionados a conservar recursos para cargas de trabalho críticas executadas na réplica primária, você poderá usar o roteamento somente leitura ou conectar-se diretamente a réplicas secundárias legíveis. Você não precisa depender da integração a nenhuma tecnologia de clustering. Essas novas funcionalidades estão disponíveis para o SQL Server 2017 em execução em plataformas Windows e Linux.
 
 >[!IMPORTANT]
->Essa não é uma configuração de alta disponibilidade. Não há nenhuma infraestrutura para monitorar e coordenar a detecção de falhas e o failover automático. Sem um cluster, o SQL Server não pode fornecer o RTO (objetivo de tempo de recuperação) baixo fornecido por uma solução de alta disponibilidade automatizada. Se você precisar de funcionalidades de alta disponibilidade, use um gerenciador de cluster (clustering de failover do Windows Server failover clustering no Windows ou Pacemaker no Linux).
+>Essa não é uma configuração de alta disponibilidade. Não há nenhuma infraestrutura para monitorar e coordenar a detecção de falhas e o failover automático. Sem um cluster, o SQL Server não pode fornecer o RTO (objetivo de tempo de recuperação) baixo fornecido por uma solução de alta disponibilidade automatizada. Se você precisar de funcionalidades de alta disponibilidade, use um gerenciador de cluster (Cluster de Failover do Windows Server no Windows ou Pacemaker no Linux).
 >
 >O grupo de disponibilidade de escala de leitura pode fornecer a funcionalidade de recuperação de desastre. Quando as réplicas somente leitura estão no modo de confirmação síncrona, elas fornecem um RPO (objetivo de ponto de recuperação) igual a zero. Para fazer failover em um grupo de disponibilidade de escala de leitura, veja [Fazer failover da réplica primária em um grupo de disponibilidade de escala de leitura](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md#ReadScaleOutOnly).
 

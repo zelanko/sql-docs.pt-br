@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4992e50f3daeb7d131e8cfb98be3700366550f3f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: d27099c54497eadecf38af33f8f3b0c12f4ccc7b
+ms.sourcegitcommit: 90b0e0a524df1d1dac18251397973ffd1eb6515f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582829"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046696"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ Quando você faz backup no blob de blocos, o tamanho máximo de bloco que você 
   
 -   Não há suporte para backup em armazenamento premium.  
   
--   O SQL Server limita para 1 TB o tamanho máximo de backup com suporte usando um blob de páginas. O tamanho máximo de backup com suporte usando blobs de blocos é limitado a aproximadamente 200 MB (50.000 blocos * MAXTRANSFERSIZE de 4 MB). Suporte à distribuição de blobs de blocos para dar suporte a tamanhos de backup consideravelmente maiores.  
+-   O SQL Server limita para 1 TB o tamanho máximo de backup com suporte usando um blob de páginas. O tamanho máximo de backup com suporte, usando blobs de blocos, é limitado a aproximadamente 200 GB (50.000 blocos * MAXTRANSFERSIZE de 4 MB). Suporte à distribuição de blobs de blocos para dar suporte a tamanhos de backup consideravelmente maiores.  
   
 -   Você pode emitir as instruções de backup ou restauração usando o TSQL, SMO, cmdlets do PowerShell, assistente de backup ou restauração do SQL Server Management Studio.   
   
@@ -115,7 +115,7 @@ Quando você faz backup no blob de blocos, o tamanho máximo de bloco que você 
   
 -   Não há suporte para a especificação de opções de backupset - **RETAINDAYS** e **EXPIREDATE** .  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem um limite máximo de 259 caracteres em um nome de dispositivo de backup. O BACKUP TO URL consome 36 caracteres para os elementos necessários usados para especificar a URL – 'https://.blob.core.windows.net//.bak', deixando 223 caracteres para os nomes da conta, do contêiner e do blob juntos.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem um limite máximo de 259 caracteres em um nome de dispositivo de backup. O BACKUP TO URL consome 36 caracteres para os elementos necessários usados para especificar a URL – 'https://.blob.core.windows.net//.bak ', deixando 223 caracteres para os nomes da conta, do contêiner e do blob juntos.  
   
 ###  <a name="Support"></a> Suporte a instruções de backup/restauração  
   
@@ -216,7 +216,7 @@ Você pode fazer o backup de um banco de dados para a URL por meio da tarefa de 
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
 
-2.  Expanda **Bancos de Dados**, clique com o botão direito do mouse no banco de dados desejado, aponte para **Tarefas**e clique em **Fazer backup...**.
+2.  Expanda **Bancos de Dados**, clique com o botão direito do mouse no banco de dados desejado, aponte para **Tarefas**e clique em **Fazer backup...** .
   
 3.  Na página **Geral** , na seção **Destino** , a opção **URL** está disponível na lista suspensa **Fazer backup em:** .  A opção **URL** é usada para criar um backup no armazenamento do Microsoft Azure. Clique em **Adicionar** e a caixa de diálogo **Selecionar Destino do Backup** será aberta:
    
@@ -250,7 +250,7 @@ Você pode fazer o backup de um banco de dados para a URL por meio da tarefa de 
 ##  <a name="RestoreSSMS"></a> Restaurando por meio do armazenamento do Microsoft Azure usando o SQL Server Management Studio  
 A tarefa Restaurar Banco de Dados inclui **URL** como um dispositivo do qual restaurar.  As etapas a seguir descrevem como usar a tarefa Restaurar para restaurar do serviço de Armazenamento de Blobs do Microsoft Azure: 
   
-1.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**. 
+1.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...** . 
   
 2.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
   

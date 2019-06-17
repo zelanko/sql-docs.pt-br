@@ -1,7 +1,7 @@
 ---
 title: Dados hierárquicos (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/01/2017
+ms.date: 09/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,15 +19,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cf997219044de427ed968ca39928e1449f73e60
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b4cca30125bd6b8fb69893332924d18fbb461cd9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659475"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706916"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dados hierárquicos (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   O tipo de dados interno **hierarchyid** facilita o armazenamento e a consulta de dados hierárquicos. **hierarchyid** foi otimizado para representar árvores, que são o tipo mais comum de dados hierárquicos.  
   
  Os dados hierárquicos são definidos como um conjunto de itens de dados mutuamente relacionados por relações hierárquicas. As relações hierárquicas existem onde um item de dados é o pai de outro item. Exemplos dos dados hierárquicos que geralmente são armazenados em bancos de dados incluem o seguinte:  
@@ -82,7 +84,7 @@ ms.locfileid: "51659475"
 ### <a name="parentchild"></a>Pai/filho  
  Ao usar a abordagem Pai/Filho, cada linha contém uma referência ao pai. A tabela a seguir define uma tabela típica usada para conter as linhas pai e filho em uma relação Pai/Filho:  
   
-```  
+```sql
 USE AdventureWorks2012 ;  
 GO  
   
@@ -115,7 +117,7 @@ GO
   
      Se as subárvores sem folha mudarem frequentemente e o desempenho for importante, mas a maioria das mudanças estiver em um nível bem definido da hierarquia, considere dividir os níveis superiores e inferiores em duas hierarquias. Isso faz todas as mudanças em níveis de folha da hierarquia mais alta. Por exemplo, considere uma hierarquia de sites hospedados por um serviço. Sites contêm muitas páginas organizadas de uma maneira hierárquica. Sites hospedados poderiam ser movidos a outros locais na hierarquia do site, mas as páginas subordinadas raramente seriam reorganizadas. Isso poderia ser representado por:  
   
-    ```  
+    ```sql
     CREATE TABLE HostedSites   
        (  
         SiteId hierarchyid, PageId hierarchyid  
@@ -137,7 +139,7 @@ GO
   
  Por exemplo, se um aplicativo controla várias organizações, ele sempre armazena e recupera a hierarquia organizacional completa, e não faz a consulta em uma organização única, uma tabela do formulário a seguir faria sentido:  
   
-```  
+```sql
 CREATE TABLE XMLOrg   
     (  
     Orgid int,  
@@ -162,14 +164,14 @@ GO
   
      Em um índice por amplitude todos os filhos diretos de um nós são colocados. Índices por amplitude são, portanto, eficientes para responder consultas sobre filhos diretos, como "Localizar todos os empregados que se reportam diretamente a esse gerente".  
   
- Ter opções por profundidade, por amplitude, ou ambas, e qual delas tornar a chave de clustering (se houver), depende da importância relativa dos tipos de consultas anteriores e da importância relativa de operações SELECT versus DML. Para obter um exemplo detalhado de estratégias de indexação, consulte [Tutorial: Usando o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ Ter opções por profundidade, por amplitude, ou ambas, e qual delas tornar a chave de clustering (se houver), depende da importância relativa dos tipos de consultas anteriores e da importância relativa de operações SELECT versus DML. Para obter um exemplo detalhado de indexação de estratégias, veja [Tutorial: Como usar o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Criando índices  
  O método GetLevel() pode ser usado para criar uma ordem por amplitude. No exemplo seguinte, são criados índices por amplitude e por profundidade:  
   
-```wmimof  
-USE AdventureWorks2012 ;   
+```sql
+USE AdventureWorks2012 ;   -- wmimof
 GO  
   
 CREATE TABLE Organization  
@@ -181,11 +183,11 @@ CREATE TABLE Organization
 GO  
   
 CREATE CLUSTERED INDEX Org_Breadth_First   
-ON Organization(OrgLevel,BusinessEntityID) ;  
+    ON Organization(OrgLevel,BusinessEntityID) ;  
 GO  
   
 CREATE UNIQUE INDEX Org_Depth_First   
-ON Organization(BusinessEntityID) ;  
+    ON Organization(BusinessEntityID) ;  
 GO  
 ```  
   
@@ -195,18 +197,20 @@ GO
 ### <a name="simple-example"></a>Exemplo simples  
  O exemplo a seguir é intencionalmente simplificado para ajudá-lo a começar. Primeiro crie uma tabela para manter alguns dados geográficos.  
   
-```  
+```sql
 CREATE TABLE SimpleDemo  
-(Level hierarchyid NOT NULL,  
-Location nvarchar(30) NOT NULL,  
-LocationType nvarchar(9) NULL);  
+(
+    Level hierarchyid NOT NULL,  
+    Location nvarchar(30) NOT NULL,  
+    LocationType nvarchar(9) NULL
+);
 ```  
   
  Agora insira dados para alguns continentes, países, estados e cidades.  
   
-```  
+```sql
 INSERT SimpleDemo  
-VALUES   
+    VALUES   
 ('/1/', 'Europe', 'Continent'),  
 ('/2/', 'South America', 'Continent'),  
 ('/1/1/', 'France', 'Country'),  
@@ -223,9 +227,9 @@ VALUES
   
  Selecione os dados, adicionando uma coluna que converta os dados de nível em um valor de texto de fácil compreensão. Essa consulta também ordena o resultado pelo tipo de dados **hierarchyid** .  
   
-```  
+```sql
 SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], *   
-FROM SimpleDemo ORDER BY Level;  
+    FROM SimpleDemo ORDER BY Level;  
 ```  
   
  [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
@@ -250,9 +254,9 @@ Converted Level  Level     Location         LocationType
   
  Adicione outra linha e selecione os resultados.  
   
-```  
+```sql
 INSERT SimpleDemo  
-VALUES ('/1/3/1/', 'Kyoto', 'City'), ('/1/3/1/', 'London', 'City');  
+    VALUES ('/1/3/1/', 'Kyoto', 'City'), ('/1/3/1/', 'London', 'City');  
 SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], * FROM SimpleDemo ORDER BY Level;  
 ```  
   
@@ -260,15 +264,15 @@ SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], * FROM SimpleDemo ORDE
   
  Além disso, essa tabela não usou a parte superior da hierarquia `'/'`. Ela foi omitida pois não há um pai comum de todos os continentes. Para adicionar um, adicione o planeta inteiro.  
   
-```  
+```sql
 INSERT SimpleDemo  
-VALUES ('/', 'Earth', 'Planet');  
+    VALUES ('/', 'Earth', 'Planet');  
 ```  
   
 ##  <a name="tasks"></a> Tarefas relacionadas  
   
 ###  <a name="migrating"></a> Migrando de Pai/Filho para hierarchyid  
- A maioria das árvores é representada usando Pai/Filho. O modo mais fácil de migrar de uma estrutura Pai/Filho para uma tabela usando **hierarchyid** é usar uma coluna ou uma tabela temporária para manter o controle do número de nós em cada nível da hierarquia. Para obter um exemplo de migração de uma tabela Pai/Filho, consulte a lição 1 do [Tutorial: Usando o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ A maioria das árvores é representada usando Pai/Filho. O modo mais fácil de migrar de uma estrutura Pai/Filho para uma tabela usando **hierarchyid** é usar uma coluna ou uma tabela temporária para manter o controle do número de nós em cada nível da hierarquia. Para obter um exemplo de migração de uma tabela Pai/Filho, veja a lição 1 do [Tutorial: Como usar o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Gerenciando uma árvore com hierarchyid  
@@ -290,7 +294,7 @@ VALUES ('/', 'Earth', 'Planet');
 #### <a name="example-using-error-detection"></a>Exemplo utilizando detecção de erro  
  No exemplo a seguir, o código de exemplo computa o novo valor filho de **EmployeeId** detectando depois quaisquer violações de chave para retorná-las ao marcador **INS_EMP** para computar novamente o valor de **EmployeeId** na nova linha:  
   
-```  
+```sql
 USE AdventureWorks ;  
 GO  
   
@@ -302,18 +306,18 @@ CREATE TABLE Org_T1
    ) ;  
 GO  
   
-CREATE INDEX Org_BreadthFirst ON Org_T1(OrgLevel, EmployeeId)  
+CREATE INDEX Org_BreadthFirst ON Org_T1(OrgLevel, EmployeeId);
 GO  
   
 CREATE PROCEDURE AddEmp(@mgrid hierarchyid, @EmpName nvarchar(50) )   
 AS  
 BEGIN  
-    DECLARE @last_child hierarchyid  
+    DECLARE @last_child hierarchyid;
 INS_EMP:   
     SELECT @last_child = MAX(EmployeeId) FROM Org_T1   
-    WHERE EmployeeId.GetAncestor(1) = @mgrid  
-INSERT Org_T1 (EmployeeId, EmployeeName)  
-SELECT @mgrid.GetDescendant(@last_child, NULL), @EmpName   
+        WHERE EmployeeId.GetAncestor(1) = @mgrid;
+    INSERT INTO Org_T1 (EmployeeId, EmployeeName)  
+        SELECT @mgrid.GetDescendant(@last_child, NULL), @EmpName;
 -- On error, return to INS_EMP to recompute @last_child  
 IF @@error <> 0 GOTO INS_EMP   
 END ;  
@@ -324,7 +328,7 @@ GO
 #### <a name="example-using-a-serializable-transaction"></a>Exemplo utilizando uma transação serializável  
  O tipo de dados **Org_BreadthFirst** assegura que a determinação de **@last_child** use uma busca de intervalo. Além de outros casos de erro que um aplicativo tente verificar, uma violação da chave duplicada depois da inserção indica uma tentativa de adicionar vários funcionários com a mesma ID e, portanto, **@last_child** deve ser novamente computado. O código a seguir usa uma transação serializável e um índice de primeira amplitude para computar o valor do novo nó:  
   
-```  
+```sql
 CREATE TABLE Org_T2  
     (  
     EmployeeId hierarchyid PRIMARY KEY,  
@@ -351,7 +355,7 @@ END ;
   
  O código a seguir popula a tabela com três linhas e retorna os resultados:  
   
-```  
+```sql
 INSERT Org_T2 (EmployeeId, EmployeeName)   
     VALUES(hierarchyid::GetRoot(), 'David') ;  
 GO  
@@ -376,7 +380,7 @@ EmployeeId LastChild EmployeeName
 ###  <a name="BKMK_EnforcingTrees"></a> Aplicando uma árvore  
  Os exemplos anteriores ilustram como um aplicativo pode assegurar a manutenção de uma árvore. Para impor uma árvore usando restrições, uma coluna computada que define o pai de cada nó pode ser criada com uma restrição de chave estrangeira na ID de chave primária.  
   
-```  
+```sql
 CREATE TABLE Org_T3  
 (  
    EmployeeId hierarchyid PRIMARY KEY,  
@@ -396,17 +400,17 @@ GO
   
  Use o código CLR a seguir para listar os ancestrais e localizar o ancestral comum mais baixo:  
   
-```  
+```csharp
 using System;  
 using System.Collections;  
 using System.Text;  
-using Microsoft.SqlServer.Server;  
-using Microsoft.SqlServer.Types;  
+using Microsoft.SqlServer.Server;  // SqlFunction Attribute
+using Microsoft.SqlServer.Types;   // SqlHierarchyId
   
 public partial class HierarchyId_Operations  
 {  
-    [SqlFunction(FillRowMethodName = "FillRow_ListAncestors")]  
-    public static IEnumerable ListAncestors(SqlHierarchyId h)  
+    [SqlFunction(FillRowMethodName = "FillRow_ListAncestors")]
+    public static IEnumerable ListAncestors(SqlHierarchyId h)
     {  
         while (!h.IsNull)  
         {  
@@ -414,14 +418,20 @@ public partial class HierarchyId_Operations
             h = h.GetAncestor(1);  
         }  
     }  
-    public static void FillRow_ListAncestors(Object obj, out SqlHierarchyId ancestor)  
+    public static void FillRow_ListAncestors(
+        Object obj,
+        out SqlHierarchyId ancestor
+        )
     {  
         ancestor = (SqlHierarchyId)obj;  
     }  
   
-    public static HierarchyId CommonAncestor(SqlHierarchyId h1, HierarchyId h2)  
+    public static HierarchyId CommonAncestor(
+        SqlHierarchyId h1,
+        HierarchyId h2
+        )  
     {  
-        while (!h1.IsDescendant(h2))  
+        while (!h1.IsDescendantOf(h2))  
             h1 = h1.GetAncestor(1);  
   
         return h1;  
@@ -431,9 +441,9 @@ public partial class HierarchyId_Operations
   
  Para usar os métodos **ListAncestor** e **CommonAncestor** nos exemplos [!INCLUDE[tsql](../includes/tsql-md.md)] a seguir, construa a DLL e crie o assembly **HierarchyId_Operations** em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executando um código semelhante ao seguinte:  
   
-```  
+```sql
 CREATE ASSEMBLY HierarchyId_Operations   
-FROM '<path to DLL>\ListAncestors.dll'  
+    FROM '<path to DLL>\ListAncestors.dll';
 GO  
 ```  
   
@@ -443,7 +453,7 @@ GO
   
  Usando [!INCLUDE[tsql](../includes/tsql-md.md)]:  
   
-```  
+```sql
 CREATE FUNCTION ListAncestors (@node hierarchyid)  
 RETURNS TABLE (node hierarchyid)  
 AS  
@@ -453,7 +463,7 @@ GO
   
  Exemplo de uso:  
   
-```  
+```sql
 DECLARE @h hierarchyid  
 SELECT @h = OrgNode   
 FROM HumanResources.EmployeeDemo    
@@ -470,7 +480,7 @@ GO
 ###  <a name="lowestcommon"></a> Localizando o mais baixo ancestral comum  
  Usando a classe **HierarchyId_Operations** definida acima, crie a seguinte função [!INCLUDE[tsql](../includes/tsql-md.md)] para localizar o mais baixo ancestral comum que envolva dois nós em uma hierarquia:  
   
-```  
+```sql
 CREATE FUNCTION CommonAncestor (@node1 hierarchyid, @node2 hierarchyid)  
 RETURNS hierarchyid  
 AS  
@@ -480,16 +490,16 @@ GO
   
  Exemplo de uso:  
   
-```  
-DECLARE @h1 hierarchyid, @h2 hierarchyid  
+```sql
+DECLARE @h1 hierarchyid, @h2 hierarchyid;
   
 SELECT @h1 = OrgNode   
 FROM  HumanResources.EmployeeDemo   
-WHERE LoginID = 'adventure-works\jossef0' -- Node is /1/1/3/  
+WHERE LoginID = 'adventure-works\jossef0'; -- Node is /1/1/3/  
   
 SELECT @h2 = OrgNode   
 FROM HumanResources.EmployeeDemo    
-WHERE LoginID = 'adventure-works\janice0' -- Node is /1/1/5/2/  
+WHERE LoginID = 'adventure-works\janice0'; -- Node is /1/1/5/2/  
   
 SELECT OrgNode.ToString() AS LogicalNode, LoginID   
 FROM HumanResources.EmployeeDemo    
@@ -502,7 +512,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
 ###  <a name="BKMK_MovingSubtrees"></a> Movendo subárvores  
  Outra operação comum é mover subárvores. O procedimento abaixo toma uma subárvore de **@oldMgr** e a transforma em ( **@oldMgr**inclusive) uma subárvore de **@newMgr**.  
   
-```  
+```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  
 AS  
 BEGIN  
@@ -520,7 +530,7 @@ UPDATE HumanResources.EmployeeDemo
 SET OrgNode = OrgNode.GetReparentedValue(@nold, @nnew)  
 WHERE OrgNode.IsDescendantOf(@nold) = 1 ;  
   
-COMMIT TRANSACTION  
+COMMIT TRANSACTION;
 END ;  
 GO  
 ```  
@@ -528,7 +538,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de método de tipo de dados hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [Tutorial: Usando o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Usar o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

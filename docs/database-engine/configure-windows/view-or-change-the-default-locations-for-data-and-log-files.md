@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6d6a6c9db7e024bd2ac1aee30618c83da054e373
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9c0f2f964b926deb799f496d2247ec7480ad641b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684784"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775183"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files"></a>Exibir ou alterar os locais padrão de arquivos de dados e de log
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

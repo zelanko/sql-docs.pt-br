@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ea4a9169218f517aa186e1913bd952c4665a48e
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: 84c23f7518850b25e1216a7e380871fc6cb99888
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198344"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744133"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Exibição avançada de dados de destino dos Eventos Estendidos no SQL Server
 
@@ -321,3 +321,5 @@ O evento **query_post_execution_showplan** permite ver o plano de consulta real 
 ## <a name="see-also"></a>Confira também
 
 [XELite: Biblioteca multiplataforma para ler XEvents de arquivos XEL ou fluxos ao vivo do SQL](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), lançado em maio de 2019.
+
+[Cmdlet do PowerShell de leitura SQLXEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent), lançado em junho de 2019.

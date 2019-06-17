@@ -10,13 +10,13 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: f8a71f5e91fec924a73186211f3296bfc52add8a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 434edd3a2fb48e6566deeac246b941f9ef7f2eb5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872256"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794998"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Escolher um método de upgrade do mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,7 @@ Há várias abordagens a serem consideradas quando você está planejando fazer 
   
  **Download**  
   
--   Para baixar o [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], acesse o  **[Centro de Avaliação](https://www.microsoft.com/evalcenter/evaluate-sql-server)**.  
+-   Para baixar o [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], acesse o  **[Centro de Avaliação](https://www.microsoft.com/evalcenter/evaluate-sql-server)** .  
   
 -   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** para criar uma Máquina Virtual com o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition já instalado.  
   
@@ -45,7 +45,11 @@ Há várias abordagens a serem consideradas quando você está planejando fazer 
 -   Um ambiente de desenvolvimento sem uma configuração de alta disponibilidade (HA).  
   
 -   Um ambiente de produção de missão não crítica que pode tolerar tempo de inatividade e que é executado em hardware e software recentes. O tempo de inatividade depende do tamanho do banco de dados e da velocidade de seu subsistema de E/S. Atualizar o SQL Server 2014 quando as tabelas com otimização de memória estiverem em uso levará um pouco mais de tempo. Para saber mais, confira [Planejar e testar o plano de atualização do mecanismo de banco de dados](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
-  
+
+> [!NOTE]
+> Para obter um exemplo de como a Microsoft já usou essa estratégia, veja a postagem do blog a seguir: [Para atualizar ou não atualizar](https://azure.microsoft.com/blog/azure-sql-server-to-upgrade-or-not-to-upgrade-that-is-the-question/). 
+
+
 > [!WARNING]  
 >  Ao executar o programa de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é interrompida e reiniciada como parte da execução das verificações pré-atualização.  
   

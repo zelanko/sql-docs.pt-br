@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d8681bfa94a859e5ce63a74e26960c64db3b7528
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 06ce19dba1624455bdc470cfeec7b16655ec3d3b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755344"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794184"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>Configurar a opção locks de configuração de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47755344"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [depois de configurar a opção locks](#FollowUp)  
+-   **Acompanhamento:**  [depois de configurar a opção bloqueios](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -100,7 +100,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção locks  
+##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção bloqueios  
  O servidor deve ser reiniciado para que a configuração entre em vigor.  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fc50c8392232f96d1a64af124d2d5a773daf1d4b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 3a80688d458b70f470643830406668ac2a056498
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525396"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795281"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>Remover o espelhamento de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52525396"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [depois de remover o espelhamento do banco de dados](#FollowUp)  
+-   **Acompanhamento:**  [depois de remover o espelhamento de banco de dados](#FollowUp)  
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
@@ -85,7 +85,7 @@ ms.locfileid: "52525396"
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
     ```  
   
-##  <a name="FollowUp"></a> Acompanhamento: removendo o espelhamento de banco de dados  
+##  <a name="FollowUp"></a> Acompanhamento: Removendo o espelhamento de banco de dados  
   
 > [!NOTE]  
 >  Para obter informações sobre o impacto da remoção de espelhamentos, veja [Removendo o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
@@ -115,7 +115,7 @@ ms.locfileid: "52525396"
   
 -   [Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
   
--   [Exemplo: Configurando o espelhamento de banco de dados usando certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+-   [Exemplo: Configurar o espelhamento de banco de dados usando certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 765f1e83-dd52-44fb-b0c8-1078f213607b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cb41c4ec10b78f3457ca5c760a32f1012cdeeba1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5ff522eff5e0f7742515d799303c5a1c28d4ff16
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636934"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799431"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>Configurar a opção de configuração de servidor de aumento de prioridade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47636934"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [depois de configurar a opção de aumento de prioridade](#FollowUp)  
+-   **Acompanhamento:**  [depois de configurar a opção priority boost](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -93,7 +93,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção de aumento de prioridade  
+##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção priority boost  
  O servidor deve ser reiniciado para que a configuração entre em vigor.  
   
 ## <a name="see-also"></a>Consulte Também  

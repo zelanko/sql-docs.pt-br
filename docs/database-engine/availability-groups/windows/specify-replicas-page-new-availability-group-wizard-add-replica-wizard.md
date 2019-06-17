@@ -13,17 +13,17 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9e5f746ed9aeea4356b619cff2439292d73384a7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 9b9bf633e4014197dcf92d730806b669540f6403
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212475"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777632"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar réplicas (Assistente de novo grupo de disponibilidade: assistente para adicionar réplica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tópico descreve as opções da página **Especificar Réplicas** . Essa página aplica-se ao **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** e ao **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**. Use a página **Especificar Réplicas** para especificar e configurar uma ou mais réplicas de disponibilidade para adicionar o grupo de disponibilidade. Essa página contém quatro guias que são apresentadas na tabela a seguir. Clique no nome de uma guia na tabela para ir para a seção correspondente, mais adiante neste tópico.  
+  Este tópico descreve as opções da página **Especificar Réplicas** . Essa página aplica-se ao **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** e ao **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]** . Use a página **Especificar Réplicas** para especificar e configurar uma ou mais réplicas de disponibilidade para adicionar o grupo de disponibilidade. Essa página contém quatro guias que são apresentadas na tabela a seguir. Clique no nome de uma guia na tabela para ir para a seção correspondente, mais adiante neste tópico.  
   
 |Tab|Descrição breve|  
 |---------|-----------------------|  
@@ -123,7 +123,7 @@ ms.locfileid: "53212475"
  Especifica que você prefere que trabalhos de backup ignorem a função das réplicas de disponibilidade ao escolher a réplica para executar backups. Observe que os trabalhos de backup podem avaliar outros fatores, como prioridade de backup de cada réplica de disponibilidade em combinação com seu estado operacional e estado conectado.  
   
 > [!IMPORTANT]  
->  Não há nenhuma imposição da configuração de preferência de backup. A interpretação dessa preferência depende da lógica, se houver, que você usa para o script em trabalhos de backup para os bancos de dados em um determinado grupo de disponibilidade. Para obter mais informações, confira [Ativas secundárias: Backup em réplicas secundárias &#40;Grupos de Disponibilidade Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Não há nenhuma imposição da configuração de preferência de backup. A interpretação dessa preferência depende da lógica, se houver, que você usa para o script em trabalhos de backup para os bancos de dados em um determinado grupo de disponibilidade. Para obter mais informações, confira [Secundárias ativas: Backup em réplicas secundárias &#40;Grupos de Disponibilidade Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 ### <a name="replica-backup-priorities-grid"></a>Grade Prioridades de backup de réplica  
  Use a grade **Prioridades de backup de réplica** para especificar suas prioridades de backup para cada uma das réplicas do grupo de disponibilidade. Essa grade contém as seguintes colunas:  
@@ -147,7 +147,7 @@ ms.locfileid: "53212475"
  Especifique suas preferências de ouvinte para este grupo de disponibilidade, da seguinte maneira:  
   
  **Nome DNS do Ouvinte**  
- Especifique o nome da rede do ouvinte. Esse nome deve ser exclusivo no domínio e pode conter apenas caracteres alfanuméricos, traços (**-**) e hifens (**_**), em qualquer ordem. Quando especificado usando a guia **Ouvinte** , o nome DNS pode ter até 15 caracteres de comprimento.  
+ Especifique o nome da rede do ouvinte. Esse nome deve ser exclusivo no domínio e pode conter apenas caracteres alfanuméricos, traços ( **-** ) e hifens ( **_** ), em qualquer ordem. Quando especificado usando a guia **Ouvinte** , o nome DNS pode ter até 15 caracteres de comprimento.  
   
 > [!IMPORTANT]  
 >  Se você inserir um nome de ouvinte DNS inválido (ou número da porta) na guia **Ouvinte** , o botão **Avançar** será desabilitado na página **Especificar Réplicas** .  
@@ -166,10 +166,10 @@ ms.locfileid: "53212475"
   
  Se **IP Estático** for selecionado como o modo de rede (esta é a seleção padrão), uma grade exibirá as colunas **Sub-rede** e **Endereço IP** e os botões **Adicionar** e **Remover** associados serão exibidos. Observe que a grade estará vazia até que você adicione a primeira sub-rede.  
   
- Coluna**Sub-rede**   
+ Coluna**Sub-rede**  
  Exibe o endereço de sub-rede que você selecionou para cada sub-rede adicionada para o ouvinte.  
   
- Coluna**Endereço IP**   
+ Coluna**Endereço IP**  
  Exibe o endereço IPv4 ou IPv6 que você especificou para uma determinada sub-rede.  
   
  **Adicionar**  

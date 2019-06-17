@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c7dfd6c8dc39e2653a2ddeca3bec07a1270f5cd8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: b596a81bf48a69e9b4c641e878383a4a513c891b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135816"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793670"
 ---
 # <a name="configure-read-only-access-to-a-secondary-replica-of-an-always-on-availability-group"></a>Configurar o acesso somente leitura a uma réplica secundária de um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,35 +30,12 @@ ms.locfileid: "54135816"
   
  Para obter informações sobre as implicações de permitir o acesso somente leitura para uma réplica secundária e uma introdução ao acesso de conexão, confira [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md) e [Secundárias ativas: Réplicas secundárias legíveis &#40;Grupos de Disponibilidade Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
--   **Antes de começar:**  
-  
-     [Pré-requisitos e restrições](#Prerequisites)  
-  
-     [Segurança](#Security)  
-  
--   **Para configurar o acesso em uma réplica de disponibilidade usando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Acompanhamento:**  [depois de configurar o acesso somente leitura para uma réplica de disponibilidade](#FollowUp)  
-  
--   [Tarefas relacionadas](#RelatedTasks)  
-  
--   [Conteúdo relacionado](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de começar  
-  
-###  <a name="Prerequisites"></a> Pré-requisitos e restrições  
+ 
+##  <a name="Prerequisites"></a> Pré-requisitos e restrições  
   
 -   Para configurar um acesso de conexão diferente, deverá estar conectado à instância de servidor que hospeda a réplica primária.  
   
-###  <a name="Security"></a> Segurança  
-  
-####  <a name="Permissions"></a> Permissões  
+##  <a name="Permissions"></a> Permissões  
   
 |Tarefa|Permissões|  
 |----------|-----------------|  
@@ -97,7 +74,7 @@ ms.locfileid: "54135816"
          **Permitir conexões de leitura/gravação**  
          Quando a propriedade Application Intent está definida como **ReadWrite** ou não está definida, a conexão é permitida. Conexões em que a propriedade de conexão Application Intent é definida como **ReadOnly** não são permitidas. Isto pode ajudar a impedir os clientes de conectarem uma carga de trabalho com intenção de leitura à réplica primária por engano. Para obter mais informações sobre a propriedade de conexão Tentativa de Aplicativo, consulte [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para configurar o acesso em uma réplica de disponibilidade**  
   
 > [!NOTE]  
@@ -232,7 +209,7 @@ DATABASEPROPERTYEX([db name],'UpdateAbility') = N'READ_ONLY'
   
 -   [Always On: por que há duas opções para habilitar uma réplica secundária para a carga de trabalho de leitura?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
   
--   [Always On: configurando a réplica secundária legível](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-setting-up-readable-seconary-replica.aspx)  
+-   [Always On: configurar uma réplica secundária legível](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-setting-up-readable-seconary-replica.aspx)  
   
 -   [Always On: acabei de habilitar a réplica secundária legível, mas minha consulta está bloqueada?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
   

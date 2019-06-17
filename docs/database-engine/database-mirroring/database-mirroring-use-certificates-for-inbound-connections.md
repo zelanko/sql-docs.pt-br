@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6057c87d7fb4e1a5f4b29879179efa0ff716275e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 1b6b6a99a9a3fcc382870932978d3b92a5ec0324
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529687"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795490"
 ---
 # <a name="database-mirroring---use-certificates-for-inbound-connections"></a>Espelhamento de Banco de Dados – usar certificados para conexões de entrada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ GO
   
  Para obter informações sobre como criar um banco de dados espelho, incluindo um exemplo de Transact-SQL, veja [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
- Para obter um exemplo do Transact-SQL de estabelecimento uma sessão de modo de alto desempenho, veja [Exemplo: Configurando o espelhamento de banco de dados usando certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
+ Para obter um exemplo de Transact-SQL para estabelecer uma sessão de modo de alto desempenho, confira [Exemplo: Configurar o espelhamento de banco de dados usando certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Ao copiar um certificado para outro sistema, use um método de cópia seguro. Seja extremamente cauteloso para manter todos os seus certificados em segurança.  

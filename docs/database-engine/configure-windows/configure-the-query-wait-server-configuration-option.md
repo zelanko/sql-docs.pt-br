@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6716a2566ad3072a86e1a8d3cd61c81b617dc23a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a0ae01b1bbf0242cc3912d57c50d5e91d2864586
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675884"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799398"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>Configurar a opção de configuração de servidor query wait
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47675884"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [depois de configurar a opção query wait](#FollowUp)  
+-   **Acompanhamento:**  [depois de configurar a opção query wait option](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -91,9 +91,9 @@ GO
   
 ```  
   
- Para obter mais informações, consulte [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção query wait  
+##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção query wait option  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte Também  

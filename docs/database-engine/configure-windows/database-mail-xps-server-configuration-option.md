@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2bd57caf166bc86cbd894d316cb62466f3324750
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: f350a5027957acba7e9e8689b8650bb545368030
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522160"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767923"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Opção de configuração de servidor Database Mail XPs
 

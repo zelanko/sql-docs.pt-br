@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 80c8b1690a4a0e38b591fe0614bb13e4ab028e1a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: ce926bbfbefce529a5d01607408818676f6d46f5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605146"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783818"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>Configurar a opção remote access de configuração de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Este tópico é sobre o recurso "Acesso Remoto". Essa opção de configuração é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] obscuro para o recurso de comunicação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que foi preterido e talvez você não deva usá-lo. Se você chegou a esta página porque está com problemas para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte um dos tópicos a seguir:  
   
--   [Tutorial: introdução ao Mecanismo de Banco de Dados](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+-   [Tutorial: Introdução ao Mecanismo de Banco de Dados](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
 -   [Fazendo o logon no SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md)  
   
@@ -41,11 +41,11 @@ ms.locfileid: "51605146"
   
  Os tópicos a seguir podem interessar programadores:  
   
--   [Como se conectar ao SQL Server usando a Autenticação do SQL no ASP.NET 2.0](https://msdn.microsoft.com/library/ff648340.aspx)  
+-   [Como conectar-se ao SQL Server usando a Autenticação do SQL no ASP.NET 2.0](https://msdn.microsoft.com/library/ff648340.aspx)  
   
 -   [Conectando-se a uma instância do SQL Server](../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)  
   
--   [Como Criar Conexões com Bancos de Dados do SQL Server](https://msdn.microsoft.com/library/s4yys16a.aspx)  
+-   [Como: criar conexões com bancos de dados do SQL Server](https://msdn.microsoft.com/library/s4yys16a.aspx)  
   
  **O corpo principal deste tópico começa aqui.**  
   

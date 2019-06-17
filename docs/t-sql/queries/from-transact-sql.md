@@ -1,7 +1,7 @@
 ---
-title: FROM (Transact-SQL) | Microsoft Docs
+title: 'FROM: JOIN, APPLY, PIVOT (T-SQL) | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/16/2018
+ms.date: 06/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -35,20 +35,33 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85e55be31f3f32316e8d9f841a34a7fcff3a3e97
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 124e42175f82928fd601a1d8af2833e40a1ff458
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334783"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462684"
 ---
-# <a name="from-transact-sql"></a>FROM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Cláusula FROM mais JOIN, APPLY, PIVOT (Transact-SQL)
 
-  Especifica as tabelas, exibições, tabelas derivadas e tabelas unidas usadas em instruções DELETE, SELECT e UPDATE no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Na instrução SELECT, a cláusula FROM é necessária, exceto quando a lista de seleção contém apenas constantes, variáveis e expressões aritméticas (sem nomes de coluna).  
-  
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
+No Transact-SQL, a cláusula FROM está disponível nas seguintes instruções:
+
+- [DELETE](../statements/delete-transact-sql.md)
+- [UPDATE](update-transact-sql.md)
+- [SELECT](select-transact-sql.md)
+
+A cláusula FROM geralmente é necessária na instrução SELECT. A exceção é quando nenhuma coluna de tabela é listada e os únicos itens listados são literais ou variáveis ou expressões aritméticas.
+
+Este artigo também descreve as seguintes palavras-chave que podem ser usadas na cláusula FROM:
+
+- JOIN
+- APPLY
+- PIVOT
+
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
@@ -473,7 +486,7 @@ TerritoryID Name
 (10 row(s) affected)  
 ```  
   
-### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>b. Usando as dicas de otimizador TABLOCK e HOLDLOCK  
+### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>B. Usando as dicas de otimizador TABLOCK e HOLDLOCK  
  A transação parcial a seguir mostra como posicionar um bloqueio de tabela compartilhado explícito em `Employee` e como ler o índice. O bloqueio é mantido ao longo de toda a transação.  
   
 ```sql    
@@ -585,7 +598,7 @@ O seguinte exemplo presume que as seguintes tabelas e função com valor de tabe
 |---|---|   
 |Departamentos|DeptID, DivisionID, DeptName, DeptMgrID|      
 |EmpMgr|MgrID, EmpID|     
-|Employees|EmpID, EmpLastName, EmpFirstName, EmpSalary|  
+|funcionários|EmpID, EmpLastName, EmpFirstName, EmpSalary|  
 |GetReports(MgrID)|EmpID, EmpLastName, EmpSalary|     
   
 A função com valor de tabela `GetReports` retorna a lista de todos os funcionários que se reportam direta ou indiretamente ao `MgrID` especificado.  
@@ -880,11 +893,9 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
 ## <a name="see-also"></a>Consulte Também  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

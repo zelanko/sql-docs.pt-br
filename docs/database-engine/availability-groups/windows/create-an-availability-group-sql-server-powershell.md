@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53f91ef270d9e4ea255a1cf71250dcc21c88346a
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 6bc6fcad5f667b0c1224c4d1e897ae9fc30642d0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974325"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793531"
 ---
 # <a name="create-an-always-on-availability-group-using-powershell"></a>Criar um grupo de disponibilidade Always On usando o PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,39 +27,21 @@ ms.locfileid: "57974325"
 > [!NOTE]  
 >  Para obter uma introdução aos grupos de disponibilidade, confira [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
--   **Antes de começar:**  
-  
-     [Pré-requisitos, restrições e recomendações](#PrerequisitesRestrictions)  
-  
-     [Segurança](#Security)  
-  
-     [Resumo de tarefas e cmdlets de PowerShell correspondentes](#SummaryPSStatements)  
-  
-     [Para configurar e usar o provedor do SQL Server PowerShell](#PsProviderLinks)  
-  
--   **Para criar e configurar um grupo de disponibilidade usando:**  [Usando o PowerShell para criar e configurar um grupo de disponibilidade](#PowerShellProcedure)  
-  
--   **Exemplos:**  [Usando o PowerShell para criar um grupo de disponibilidade](#ExampleConfigureGroup)  
-  
--   [Tarefas relacionadas](#RelatedTasks)  
-  
--   [Conteúdo relacionado](#RelatedContent)  
-  
 > [!NOTE]  
 >  Como alternativa para o uso dos cmdlets do PowerShell, você pode usar o assistente para Criar Grupo de Disponibilidade ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Para obter mais informações, veja [Usar a caixa de diálogo Novo Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) ou [Criar um grupo de disponibilidade &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md).  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
- É recomendável que você leia esta seção antes de tentar criar seu primeiro grupo de disponibilidade.  
   
-###  <a name="PrerequisitesRestrictions"></a> Pré-requisitos, restrições e recomendações  
+##  <a name="PrerequisitesRestrictions"></a> Pré-requisitos, restrições e recomendações  
   
 -   Antes de criar um grupo de disponibilidade, verifique se cada instância de host do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] reside em um nó diferente do WSFC (Windows Server Failover Clustering) de um único cluster de failover do WSFC. Verifique também se suas instâncias de servidor atendem aos outros pré-requisitos de instância de servidor, se todos os outros requisitos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] são atendidos e se você está ciente das recomendações. Para obter mais informações, é altamente recomendável que você leia [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+##  <a name="Permissions"></a> Permissões  
  Requer a associação na função de servidor fixa **sysadmin** e a permissão de servidor CREATE AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.  
   
+  
+##  <a name="PowerShellProcedure"></a> Usando o PowerShell para criar e configurar um grupo de disponibilidade  
+
 ###  <a name="SummaryPSStatements"></a> Resumo de tarefas e cmdlets de PowerShell correspondentes  
  A tabela a seguir lista as tarefas básicas envolvidas na configuração de um grupo de disponibilidade e indica as tarefas com suporte nos cmdlets do PowerShell. As tarefas [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] devem ser executadas na sequência em que são apresentadas na tabela.  
   
@@ -77,9 +59,7 @@ ms.locfileid: "57974325"
   
 -   [Provedor do SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
--   [Obter Ajuda do SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
-  
-##  <a name="PowerShellProcedure"></a> Usando o PowerShell para criar e configurar um grupo de disponibilidade  
+-   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
 > [!NOTE]  
 >  Para exibir a sintaxe e um exemplo de um cmdlet, use o cmdlet **Get-Help** no ambiente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
@@ -106,7 +86,7 @@ ms.locfileid: "57974325"
 > [!NOTE]  
 >  Se as contas de serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] das instâncias do servidor forem executadas em diferentes contas de usuário de domínio, em cada instância do servidor, crie um logon para a outra instância do servidor e conceda a permissão CONNECT a esse logon para o ponto de extremidade de espelhamento do banco de dados local.  
   
-##  <a name="ExampleConfigureGroup"></a> Exemplo: Usando o PowerShell para criar um grupo de disponibilidade  
+##  <a name="ExampleConfigureGroup"></a> Exemplo: Usar o PowerShell para criar um grupo de disponibilidade  
  O exemplo doe PowerShell a seguir cria e configura um grupo de disponibilidade simples denominado `MyAG` com duas réplicas de disponibilidade e um banco de dados de disponibilidade. O exemplo:  
   
 1.  Faz backup do `MyDatabase` e de seu log de transações.  

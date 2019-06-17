@@ -24,15 +24,18 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 manager: craigg
-ms.openlocfilehash: a9fbef681f2b6202c973f31c8c7dd4489133556a
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 41acbbf99bc84f96803a296d19c6f63a32761d8e
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993926"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744196"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Baixar o SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+> [!div class="nextstepaction"]
+> [Compartilhe seus comentários sobre a página do hub do SQL Docs.](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 O SSMS (SQL Server Management Studio) é um ambiente integrado para gerenciar qualquer infraestrutura de SQL, do SQL Server para o Banco de Dados SQL do Azure. O SSMS fornece ferramentas para configurar, monitorar e administrar instâncias do SQL Server e bancos de dados. Use o SSMS para implantar, monitorar e atualizar os componentes da camada de dados usados pelos seus aplicativos, além de construir consultas e scripts.
 

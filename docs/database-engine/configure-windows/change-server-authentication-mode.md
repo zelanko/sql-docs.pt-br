@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b70487d9d9f89defb77eeed4adc9633b734cc40a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a4a038d29aeaacdfd75b71600443df8ea0c3f1db
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733234"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799411"
 ---
 # <a name="change-server-authentication-mode"></a>Alterar modo de autenticação do servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,15 +73,27 @@ ms.locfileid: "47733234"
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. O exemplo a seguir habilita o logon sa e define uma nova senha.  
+3.  Copie e cole um dos exemplos a seguir na janela de consulta e clique em **Executar**. 
+
+
+    -  O exemplo a seguir habilita o logon sa e define uma nova senha.  
   
-    ```  
-    ALTER LOGIN sa ENABLE ;  
-    GO  
-    ALTER LOGIN sa WITH PASSWORD = '<enterStrongPasswordHere>' ;  
-    GO  
-  
-    ```  
+       ```sql  
+       ALTER LOGIN sa ENABLE ;  
+       GO  
+       ALTER LOGIN sa WITH PASSWORD = '<enterStrongPasswordHere>' ;  
+       GO  
+       ```  
+    -  O exemplo a seguir altera a Autenticação do Servidor do modo misto (Windows + SQL) para somente Windows.
+
+       ```sql
+       USE [master]
+       GO
+       EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE', 
+                                 N'Software\Microsoft\MSSQLServer\MSSQLServer',      
+                                 N'LoginMode', REG_DWORD, 1
+       GO
+       ```
   
 ## <a name="see-also"></a>Consulte Também  
  [Senhas fortes](../../relational-databases/security/strong-passwords.md)   

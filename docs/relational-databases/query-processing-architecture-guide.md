@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 08da724047b89ef31c8f9cc06a4a2da36e6b5eaa
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 40dac2df410456b0f3db7aff931e523fe350960b
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161683"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462719"
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -625,7 +625,7 @@ Quando a opção `PARAMETERIZATION` é definida como `FORCED`, qualquer valor li
 * Instruções nos corpos de procedimentos armazenados, gatilhos ou funções definidas pelo usuário. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] já reutiliza os planos de consulta para essas rotinas.
 * Instruções preparadas que já foram parametrizadas no aplicativo cliente.
 * Instruções que contêm chamadas do método XQuery, onde o método é exibido em um contexto em que seus argumentos normalmente seriam parametrizados, como uma cláusula `WHERE` . Se o método for exibido em um contexto em que seus argumentos não serão parametrizados, o restante da instrução será parametrizado.
-* Instruções em um cursor [!INCLUDE[tsql](../includes/tsql-md.md)]. (As instruções`SELECT` são parametrizadas em cursores de API.)
+* Instruções dentro de um cursor [!INCLUDE[tsql](../includes/tsql-md.md)]. (As instruções`SELECT` são parametrizadas em cursores de API.)
 * Construções da consulta preterida.
 * Qualquer instrução executada no contexto de `ANSI_PADDING` ou `ANSI_NULLS` definida como `OFF`.
 * Instruções que contêm mais de 2.097 literais elegíveis para parametrização.
@@ -728,6 +728,8 @@ Valores de parâmetro são detectados durante a compilação ou recompilação p
 -  Procedimentos armazenados
 -  Consultas enviadas por meio de sp_executesql 
 -  Consultas preparadas
+
+Para obter mais informações sobre como solucionar problemas de detecção de parâmetro incorreto, veja [Solucionar problemas de consultas com problemas de plano de execução de consulta sensível a parâmetro](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-issues).
 
 > [!NOTE]
 > Para consultas que utilizam a dica `RECOMPILE`, tanto os valores de parâmetros quanto os valores atuais das variáveis locais são detectados. Os valores detectados (de parâmetros e de variáveis locais) são aqueles que existem no local no lote antes da instrução com a dica `RECOMPILE`. Especificamente para parâmetros, os valores que acompanha a chamada de invocação de lote não são detectados.

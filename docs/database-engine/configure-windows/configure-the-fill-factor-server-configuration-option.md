@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e60756b2b8980825fdd61e0e589f36fc29c0b579
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 46098bd775dba93adf89b1504c582f4aa0233240
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727344"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803846"
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>Configurar a opção fill factor de configuração de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47727344"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [depois de configurar a opção fill factor](#FollowUp)  
+-   **Acompanhamento:**  [depois de configurar a opção fill factor option](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -87,7 +87,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção fill factor  
+##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção fill factor option  
  O servidor deve ser reiniciado para que a configuração entre em vigor.  
   
 ## <a name="see-also"></a>Consulte Também  

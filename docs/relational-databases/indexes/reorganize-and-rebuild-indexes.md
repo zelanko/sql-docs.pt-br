@@ -32,12 +32,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85ccb9573cb1a8a283e6deec7a52b0e9c5857da7
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: c1ff17941e837474d2d27919dcbd821d241d8394
+ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802600"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749188"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Reorganizar e recriar índices
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,7 +76,7 @@ Em geral, níveis muito baixos de fragmentação (menos de 5 por cento) não dev
 > [!NOTE]
 > A recriação ou reorganização de índices pequenos geralmente não reduz a fragmentação. As páginas de índices pequenos às vezes são armazenadas em extensões mistas. Extensões mistas são compartilhadas por até oito objetos, portanto, a fragmentação em um índice pequeno pode não ser reduzida após a reorganização ou recriação.  
   
-### <a name="Restrictions"></a> Limitações e Restrições  
+### <a name="Restrictions"></a> Limitações e restrições  
   
 Índices com mais de 128 extensões são recriados em duas fases separadas: lógica e física. Na fase lógica, as unidades de alocação existentes usadas pelo índice são marcadas para desalocação, as linhas de dados são copiadas, ordenadas e, depois, movidas para novas unidades de alocação criadas para armazenar o índice recriado. Na fase física, as unidades de alocação previamente marcadas para desalocação são fisicamente canceladas em transações curtas que ocorrem em segundo plano e que não exigem muitos bloqueios. Para obter mais informações sobre as extensões, consulte o [Guia de arquitetura de páginas e extensões](../../relational-databases/pages-and-extents-architecture-guide.md). 
   
@@ -94,7 +94,13 @@ Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no q
 ### <a name="Security"></a> Segurança  
   
 #### <a name="Permissions"></a> Permissões  
-Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner** .  
+Requer a permissão ALTER na tabela ou exibição. O usuário deve ser um membro de pelo menos uma das seguintes funções:
+
+* Função de banco de dados **db_ddladmin** <sup>1</sup> 
+* Função de banco de dados **db_owner**
+* função de servidor **sysadmin**  
+
+<sup>1</sup>A função de banco de dados **db_ddladmin** é a [menos privilegiada](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models).
   
 ## <a name="SSMSProcedureFrag"></a> Verificar a fragmentação de índice usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8dbb81d75413909fe8d205d781cef1ec89640044
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 020825afe9abf5abf121f9521668c1edd1670bbd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533377"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795303"
 ---
-# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: como uma testemunha afeta a disponibilidade do banco de dados (Espelhamento de Banco de Dados)
+# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: como uma testemunha afeta a disponibilidade do banco de dados ( Espelhamento de banco de dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Sempre que uma testemunha é definida para uma sessão de espelhamento de banco de dados, é necessário usar o *quorum* . Quorum é a relação criada quando duas ou mais instâncias do servidor na sessão de espelhamento de banco de dados são conectadas entre si. Normalmente, o quorum envolve três instâncias do servidor interconectadas. Quando uma testemunha é definida, o quorum é exigido para tornar o banco de dados disponível. Desenvolvido para o modo de segurança alta com failover automático, o quorum verifica o banco de dados pertence a somente um parceiro por vez.  
   

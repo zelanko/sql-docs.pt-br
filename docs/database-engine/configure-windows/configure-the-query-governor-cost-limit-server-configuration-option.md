@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9deaa92f28e6ca0f0e7c32144a0a42e67234df47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8b72d754299554e44a61a6239b0755e634429de1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642324"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799419"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>Configurar a opção query governor cost limit de configuração de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

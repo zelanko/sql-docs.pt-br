@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f50a0e343ea7ffd934ed0de3384deffa4679ff7c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 9b4ec2994fe8fdc0e444087dadcf7ab57c01c34e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505191"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795537"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Monitor de Espelhamento de Banco de Dados (página Status)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "52505191"
 |-----------------|-----------------|  
 |**Instância do Servidor**|Nome da instância de servidor cujo status é exibido na linha **Status** .|  
 |**Função Atual**|Função atual da instância de servidor, que é **Principal** ou **Espelho**.|  
-|**Estado de Espelhamento**|O estado de espelhamento informado pela instância de servidor e um ícone que indica a severidade do estado. Os possíveis status e seus ícones associados são os seguintes:<br /><br /> Ícone: -, status **Desconhecido**. O monitor não está conectado a nenhum parceiro. As únicas informações disponíveis são aquelas armazenadas em cache pelo monitor.<br /><br /> Ícone: ícone de aviso, status **Sincronizando**. O conteúdo do banco de dados espelho está ficando atrás do conteúdo do banco de dados principal. A instância do servidor principal está enviando registros de log para a instância do servidor espelho, a qual está aplicando as alterações ao banco de dados espelho para rolagem para frente. No início de uma sessão de espelhamento de banco de dados, o banco de dados espelho e principal estão nesse estado.<br /><br /> Ícone: cilindro do banco de dados padrão, o status **Sincronizado**. Quando o servidor espelho torna-se suficientemente atualizado em relação ao servidor principal, o estado do banco de dados é alterado para **Sincronizado**. O banco de dados permanece nesse estado enquanto o servidor principal estiver enviando alterações ao servidor espelho e esse estiver aplicando alterações ao banco de dados espelho.  Para o modo de alta segurança, o failover automático e o failover manual são ambos possíveis, sem perda de dados.  No modo de alto desempenho, alguma perda de dados é sempre possível, mesmo no estado **Sincronizado** .<br /><br /> Ícone: ícone de aviso, status **Suspenso**. <br />                            O banco de dados principal está disponível, mas não está enviando logs para o servidor espelho.<br /><br /> Ícone: ícone de erro, status **Desconectado**. A instância do servidor não pode se conectar ao seu parceiro.|  
+|**Estado de Espelhamento**|O estado de espelhamento informado pela instância de servidor e um ícone que indica a severidade do estado. Os possíveis status e seus ícones associados são os seguintes:<br /><br /> Ícone: -, status **Desconhecido**. O monitor não está conectado a nenhum parceiro. As únicas informações disponíveis são aquelas armazenadas em cache pelo monitor.<br /><br /> Ícone: Ícone de aviso, status **Sincronizando**. O conteúdo do banco de dados espelho está ficando atrás do conteúdo do banco de dados principal. A instância do servidor principal está enviando registros de log para a instância do servidor espelho, a qual está aplicando as alterações ao banco de dados espelho para rolagem para frente. No início de uma sessão de espelhamento de banco de dados, o banco de dados espelho e principal estão nesse estado.<br /><br /> Ícone: cilindro do banco de dados padrão, o status **Sincronizado**. Quando o servidor espelho torna-se suficientemente atualizado em relação ao servidor principal, o estado do banco de dados é alterado para **Sincronizado**. O banco de dados permanece nesse estado enquanto o servidor principal estiver enviando alterações ao servidor espelho e esse estiver aplicando alterações ao banco de dados espelho.  Para o modo de alta segurança, o failover automático e o failover manual são ambos possíveis, sem perda de dados.  No modo de alto desempenho, alguma perda de dados é sempre possível, mesmo no estado **Sincronizado** .<br /><br /> Ícone: ícone de aviso, status **Suspenso**. <br />                            O banco de dados principal está disponível, mas não está enviando logs para o servidor espelho.<br /><br /> Ícone: ícone de erro, status **Desconectado**. A instância do servidor não pode se conectar ao seu parceiro.|  
 |**Conexão de Testemunha**|Status de conexão da testemunha, precedido por um ícone de status, **Desconhecido**, **Conectado**ou **Desconectado**.|  
 |**Histórico**|Clique para exibir o histórico de espelhamento na instância de servidor. Isso abre a caixa de diálogo **Histórico do Espelhamento de Banco de Dados** , que exibe o histórico de status e as estatísticas de espelhamento de um banco de dados espelho em uma determinada instância de servidor.<br /><br /> O botão **Histórico** ficará esmaecido se o monitor não for conectado à instância de servidor.|  
   
  **Log principal (** *\<time>* **)**  
- Status do log na instância do servidor principal a partir da hora local da instância do servidor, indicada por *\<time>*. Os parâmetros seguintes são exibidos:  
+ Status do log na instância do servidor principal a partir da hora local da instância do servidor, indicada por *\<time>* . Os parâmetros seguintes são exibidos:  
   
  **Log não enviado**  
  A quantidade de log em espera na fila de envio (em quilobytes).  
@@ -65,7 +65,7 @@ ms.locfileid: "52505191"
  Taxa em que as transações de entrada estão sendo inseridas no log do servidor principal, em KB por segundo. Para determinar se o espelhamento está atrasado, ativo ou atualizado, compare esse valor ao valor do **Tempo para enviar o log (estimado)** .  
   
  **Log espelhado (** *\<time>* **)**  
- Status do log na instância do servidor espelhado a partir da hora local da instância do servidor, indicada por *\<time>*. Os parâmetros seguintes são exibidos:  
+ Status do log na instância do servidor espelhado a partir da hora local da instância do servidor, indicada por *\<time>* . Os parâmetros seguintes são exibidos:  
   
  **Log não restaurado**  
  A quantidade de log esperando na fila de restauração (em KB).  
@@ -95,7 +95,7 @@ ms.locfileid: "52505191"
 -   **Alta segurança com failover automático (síncrono)**  
   
 ## <a name="remarks"></a>Remarks  
- Membros da função de banco de dados fixa **dbm_monitor** podem exibir o status de espelhamento existente usando o Monitor de Espelhamento de Banco de Dados ou o procedimento armazenado **sp_dbmmonitorresults** . Esses usuários, porém, não podem atualizar a tabela de status. Eles dependem do **Trabalho do Monitor de Espelhamento de Banco de Dados**para atualizar a tabela de status em intervalos regulares. Para saber a idade do status exibido, um usuário pode examinar os horários nos rótulos **Log principal (***\<time>***)** e **Log espelhado (***\<time>***)**.  
+ Membros da função de banco de dados fixa **dbm_monitor** podem exibir o status de espelhamento existente usando o Monitor de Espelhamento de Banco de Dados ou o procedimento armazenado **sp_dbmmonitorresults** . Esses usuários, porém, não podem atualizar a tabela de status. Eles dependem do **Trabalho do Monitor de Espelhamento de Banco de Dados**para atualizar a tabela de status em intervalos regulares. Para saber a idade do status exibido, um usuário pode examinar os horários nos rótulos **Log principal (***\<time>***)** e **Log espelhado (***\<time>***)** .  
   
  Se esse trabalho não existir ou se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent estiver parado, o status se tornará cada vez mais obsoleto e poderá deixar de refletir a configuração da sessão espelhada. Por exemplo, depois de um failover, poderá parecer que os parceiros compartilham a mesma função, principal ou espelhada ou o servidor principal atual poderá ser mostrado como o espelho e o servidor espelhado atual como o principal.  
   

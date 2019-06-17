@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 00f2dd9628419bf517c683358bfae89d8625c702
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+manager: jroth
+ms.openlocfilehash: 0e8faaeb6a809caf5bd8c42ceee94cbbb0702979
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65936363"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794137"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Configurar a opção de configuração de servidor max degree of parallelism
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +54,9 @@ A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], use as seguintes 
 
 ||||
 |----------------|-----------------|-----------------|
-|Servidor com um único nó NUMA|Menos de 16 processadores lógicos|Manter MAXDOP com o mesmo número ou abaixo do número de processadores lógicos|
-|Servidor com um único nó NUMA|Mais de 16 processadores lógicos|Manter MAXDOP em metade do número de processadores lógicos com um valor MAX de 16|
-|Servidor com vários nós NUMA|Menos de 16 processadores lógicos por nó NUMA|Manter MAXDOP com o mesmo número ou abaixo do número de processadores lógicos por nó NUMA|
+|Servidor com um único nó NUMA|Menor ou igual a 8 processadores lógicos|Manter MAXDOP com o mesmo número ou abaixo do número de processadores lógicos|
+|Servidor com um único nó NUMA|Mais de 8 processadores lógicos|Manter MAXDOP em 8|
+|Servidor com vários nós NUMA|Menor ou igual a 16 processadores lógicos por nó NUMA|Manter MAXDOP com o mesmo número ou abaixo do número de processadores lógicos por nó NUMA|
 |Servidor com vários nós NUMA|Mais de 16 processadores lógicos por nó NUMA|Manter MAXDOP em metade do número de processadores lógicos por nó NUMA com um valor MAX de 16|
   
 > [!NOTE]
@@ -67,9 +67,9 @@ Em [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] a [!INCLUDE[ssSQL14](../.
 
 ||||
 |----------------|-----------------|-----------------|
-|Servidor com um único nó NUMA|Menos de 8 processadores lógicos|Manter MAXDOP com o mesmo número ou abaixo do número de processadores lógicos|
+|Servidor com um único nó NUMA|Menor ou igual a 8 processadores lógicos|Manter MAXDOP com o mesmo número ou abaixo do número de processadores lógicos|
 |Servidor com um único nó NUMA|Mais de 8 processadores lógicos|Manter MAXDOP em 8|
-|Servidor com vários nós NUMA|Menos de 8 processadores lógicos por nó NUMA|Manter MAXDOP com o mesmo número ou abaixo do número de processadores lógicos por nó NUMA|
+|Servidor com vários nós NUMA|Menor ou igual a 8 processadores lógicos por nó NUMA|Manter MAXDOP com o mesmo número ou abaixo do número de processadores lógicos por nó NUMA|
 |Servidor com vários nós NUMA|Mais de 8 processadores lógicos por nó NUMA|Manter MAXDOP em 8|
   
 ###  <a name="Security"></a> Segurança  

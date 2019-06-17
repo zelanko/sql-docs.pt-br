@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 00397c644e2e9cffd04026d4cc4beb4ade4b69c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2ce3c4df7141f6bf31c02e4376001a280135db5a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830854"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774732"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Espelhamento de banco de dados e instâncias de cluster de failover do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47830854"
   
  ![Um failover em um cluster](../../database-engine/database-mirroring/media/dbm-and-failover-clustering.gif "A failover on a cluster")  
   
- As três instâncias de servidor na sessão de espelhamento residem em três clusters distintos: **Cluster_A**, **Cluster_B**e **Cluster_C**. Em cada cluster, uma instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada como uma instância clusterizada de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando a sessão de espelhamento é iniciada, a instância clusterizada de failover no **Cluster_A** é o servidor principal, a instância clusterizada de failover no **Cluster_B** é o servidor espelho e a instância clusterizada de failover no **Cluster_C** é a testemunha na sessão de espelhamento. Por fim, o nó ativo no **Cluster_A** falhará, o que fará com que o servidor principal fique indisponível.  
+ As três instâncias de servidor na sessão de espelhamento residem em três clusters distintos: **Cluster_A**, **Cluster_B** e **Cluster_C**. Em cada cluster, uma instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada como uma instância clusterizada de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando a sessão de espelhamento é iniciada, a instância clusterizada de failover no **Cluster_A** é o servidor principal, a instância clusterizada de failover no **Cluster_B** é o servidor espelho e a instância clusterizada de failover no **Cluster_C** é a testemunha na sessão de espelhamento. Por fim, o nó ativo no **Cluster_A** falhará, o que fará com que o servidor principal fique indisponível.  
   
  Antes de o cluster ter tempo para o failover, a perda do servidor principal será detectada pelo servidor espelho, com a ajuda da testemunha. O servidor espelho encaminha seu banco de dados principal e o coloca online como o novo banco de dados de entidade o mais rápido possível. Quando o **Cluster_A** conclui o failover, o servidor principal anterior agora é o servidor espelho e sincroniza seu banco de dados com o banco de dados principal de entidade atual no **Cluster_B**.  
   
@@ -68,6 +68,6 @@ ms.locfileid: "47830854"
 ## <a name="see-also"></a>Consulte Também  
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
- [Instâncias do cluster de failover AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
+ [Instâncias do cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
   

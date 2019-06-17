@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4f4fe56652f71e3c46e93b8115e792154d17a74f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 42f706ed9b7975c73f6c24b3f7e828ab077c8776
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832284"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795428"
 ---
-# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>Exemplo: Configurando o espelhamento de banco de dados usando a Autenticação do Windows (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>Exemplo: configurar o espelhamento de banco de dados usando a autenticação do Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este exemplo mostra todas as fases necessárias para criar uma sessão de espelhamento de banco de dados com uma testemunha, usando a Autenticação do Windows. Os exemplos deste tópico usam o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Note que como uma alternativa para o uso de passos de [!INCLUDE[tsql](../../includes/tsql-md.md)], você pode usar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados para a configuração do espelhamento de banco de dados. Para obter mais informações, veja [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
@@ -157,7 +157,7 @@ GO
   
 -   [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de entrada &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Exemplo: Configurando o espelhamento de banco de dados usando certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+-   [Exemplo: Configurar o espelhamento de banco de dados usando certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

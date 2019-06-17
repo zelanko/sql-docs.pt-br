@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0759d5da7af3cfd50ff32b500050b90affa70c5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 97feadfea27ee4957e71940dbbf773e215e61418
+ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65720047"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469655"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implantar projetos e pacotes do Integration Services (SSIS)
 
@@ -36,7 +36,7 @@ ms.locfileid: "65720047"
 Para obter mais informações sobre o modelo de implantação de pacote herdado, consulte [Implantação de pacote herdado &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  O modelo de implantação do projeto foi introduzido no [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Com esse modelo de implantação, não era possível implantar um ou mais pacotes sem implantar todo o projeto. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduziu o modelo de implantação de pacote, que permite implantar um ou mais pacotes sem implantar todo o projeto.  
+>  O modelo de implantação do projeto foi introduzido no [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Com esse modelo de implantação, não era possível implantar um ou mais pacotes sem implantar todo o projeto. O [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduziu o recurso de Implantação Incremental de Pacotes, que permite implantar um ou mais pacotes, sem implantar o projeto inteiro.  
 
 > [!NOTE]
 > Este artigo descreve como implantar pacotes do SSIS em geral e como implantar pacotes localmente. Também é possível implantar pacotes do SSIS para as seguintes plataformas:

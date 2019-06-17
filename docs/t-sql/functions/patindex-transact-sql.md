@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05612e0b32a336b64614d6072169471fe0450d1b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 0a6f6f8c8699cc911d747d07edd9655fd363d667
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65943496"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696973"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,44 +51,44 @@ PATINDEX ( '%pattern%' , expression )
  É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md), geralmente, uma coluna na qual procurar o padrão especificado. *expression* é uma expressão da categoria de tipo de dados de cadeia de caracteres.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **bigint** se *expression* é dos tipos de dados **varchar(max)** ou **nvarchar(max)** ; caso contrário, **int**.  
+**bigint** se *expression* é dos tipos de dados **varchar(max)** ou **nvarchar(max)**; caso contrário, **int**.  
   
 ## <a name="remarks"></a>Remarks  
- Se *pattern* ou *expression* for NULL, PATINDEX retornará NULL.  
+Se *pattern* ou *expression* for NULL, PATINDEX retornará NULL.  
  
- A posição inicial retornada é com base em 1, não com base em 0.
+A posição inicial para PATINDEX é 1.
  
- PATINDEX executa comparações com base na ordenação da entrada. Para fazer uma comparação em uma ordenação especificada, use COLLATE para aplicar uma ordenação explícita à entrada.  
+PATINDEX executa comparações com base na ordenação da entrada. Para fazer uma comparação em uma ordenação especificada, use COLLATE para aplicar uma ordenação explícita à entrada.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
- Ao usar ordenações SC, o valor retornado contará os pares alternativos UTF-16 no parâmetro *expression* como um caractere único. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+Ao usar ordenações SC, o valor retornado contará os pares alternativos UTF-16 no parâmetro *expression* como um caractere único. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
- 0x0000 (**char(0)** ) é um caractere indefinido em ordenações do Windows e não pode ser incluído em PATINDEX.  
+0x0000 (**char(0)**) é um caractere indefinido em ordenações do Windows e não pode ser incluído em PATINDEX.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-simple-patindex-example"></a>A. Exemplo simples de PATINDEX  
  O exemplo a seguir verifica uma cadeia de caracteres curta (`interesting data`) em busca do local inicial dos caracteres `ter`.  
   
-```  
+```sql  
 SELECT PATINDEX('%ter%', 'interesting data');  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `3`  
+`3`  
   
 ### <a name="b-using-a-pattern-with-patindex"></a>B. Usando um padrão com PATINDEX  
- O exemplo a seguir localiza a posição na qual o padrão `ensure` inicia em uma linha específica da coluna `DocumentSummary` na tabela `Document` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+O exemplo a seguir localiza a posição na qual o padrão `ensure` inicia em uma linha específica da coluna `DocumentSummary` na tabela `Document` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 SELECT PATINDEX('%ensure%',DocumentSummary)  
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 GO   
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
 -----------  
@@ -96,30 +96,30 @@ GO
 (1 row(s) affected)
 ```  
   
- Se você não restringir as linhas a serem pesquisadas usando uma cláusula `WHERE`, a consulta retornará todas as linhas na tabela e registrará valores diferentes de zero para as linhas nas quais o padrão foi localizado e zero para todas as linhas nas quais o padrão não foi localizado.  
+Se você não restringir as linhas a serem pesquisadas usando uma cláusula `WHERE`, a consulta retornará todas as linhas na tabela e registrará valores diferentes de zero para as linhas nas quais o padrão foi localizado e zero para todas as linhas nas quais o padrão não foi localizado.  
   
 ### <a name="c-using-wildcard-characters-with-patindex"></a>C. Usando caracteres curinga com PATINDEX  
  O exemplo a seguir usa os curingas % e _ para localizar a posição na qual o padrão `'en'`, seguido de qualquer outro caractere e `'ure'` é iniciado na cadeia de caracteres especificada (o índice inicia em 1):  
   
-```  
+```sql  
 SELECT PATINDEX('%en_ure%', 'please ensure the door is locked');  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
 -----------  
 8  
 ```  
   
- `PATINDEX` funciona da mesma forma que `LIKE`, então você pode usar qualquer curinga. Não é necessário colocar o padrão entre porcentagens. `PATINDEX('a%', 'abc')` retorna 1 e `PATINDEX('%a', 'cba')` retorna 3.  
+`PATINDEX` funciona da mesma forma que `LIKE`, então você pode usar qualquer curinga. Não é necessário colocar o padrão entre porcentagens. `PATINDEX('a%', 'abc')` retorna 1 e `PATINDEX('%a', 'cba')` retorna 3.  
   
  Diferentemente de `LIKE`, `PATINDEX` retorna uma posição, semelhante ao que `CHARINDEX` faz.  
   
 ### <a name="d-using-collate-with-patindex"></a>D. Usando COLLATE com PATINDEX  
  O exemplo a seguir usa a função `COLLATE` para especificar explicitamente a ordenação da expressão que é pesquisada.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
 SELECT PATINDEX ( '%ein%', 'Das ist ein Test'  COLLATE Latin1_General_BIN) ;  
@@ -127,23 +127,21 @@ GO
 ```  
   
 ### <a name="e-using-a-variable-to-specify-the-pattern"></a>E. Usando uma variável para especificar o padrão  
- O exemplo a seguir usa uma variável para passar um valor para o parâmetro *pattern*. Este exemplo usa o banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+O exemplo a seguir usa uma variável para passar um valor para o parâmetro *pattern*. Este exemplo usa o banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 DECLARE @MyValue varchar(10) = 'safety';   
 SELECT PATINDEX('%' + @MyValue + '%', DocumentSummary)   
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
- ------------  
- 22
- ```  
-  
-
+```
+------------  
+22
+```  
   
 ## <a name="see-also"></a>Consulte Também  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   

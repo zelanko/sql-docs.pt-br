@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e3757c44ada2f4413693d6124e75bb726f63ac7d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: a00716f654263528d0332fb5a71cef6d80f9bc21
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605386"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775466"
 ---
 # <a name="soft-numa-sql-server"></a>soft-NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ Os processadores modernos têm vários núcleos por soquete. Cada soquete é rep
 > O soft-NUMA não dá suporte para processadores incluídos a quente.  
   
 ## <a name="automatic-soft-numa"></a>Soft-NUMA automático  
- Com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], sempre que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] detectar mais de oito núcleos por nó NUMA ou soquete na inicialização, os nós soft-NUMA serão criados automaticamente por padrão. Núcleos de processador Hyper-threaded não são diferenciados na contagem de núcleos físicos em um nó.  Quando o número detectado de núcleos físicos for mais de oito por soquete, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] criará nós soft-NUMA contendo o ideal de 8 núcleos, podendo reduzir para cinco ou aumentar para nove núcleos lógicos por nó. O tamanho do nó de hardware pode limitar-se a uma máscara de afinidade de CPU. O número de nós NUMA nunca excede o número máximo de nós NUMA permitidos.  
+Com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], sempre que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] detectar mais de oito núcleos por nó NUMA ou soquete na inicialização, os nós soft-NUMA serão criados automaticamente por padrão. Núcleos de processador Hyper-threaded não são diferenciados na contagem de núcleos físicos em um nó.  Quando o número detectado de núcleos físicos for mais de oito por soquete, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] criará nós soft-NUMA contendo o ideal de 8 núcleos, podendo reduzir para cinco ou aumentar para nove núcleos lógicos por nó. O tamanho do nó de hardware pode limitar-se a uma máscara de afinidade de CPU. O número de nós NUMA nunca excede o número máximo de nós NUMA permitidos.  
   
- Você pode desabilitar ou reabilitar o soft-NUMA usando a instrução [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) com o argumento `SET SOFTNUMA`. Alterar o valor dessa configuração requer a efetivação da reinicialização do mecanismo de banco de dados.  
+Você pode desabilitar ou reabilitar o soft-NUMA usando a instrução [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) com o argumento `SET SOFTNUMA`. Alterar o valor dessa configuração requer a efetivação da reinicialização do mecanismo de banco de dados.  
   
- A figura a seguir mostra o tipo de informações sobre o soft-NUMA que aparece no log de erros do SQL Server, quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detecta nós NUMA com mais de oito núcleos físicos para cada nó ou soquete.  
+A figura a seguir mostra o tipo de informações sobre o soft-NUMA que aparece no log de erros do SQL Server, quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detecta nós NUMA com mais de oito núcleos físicos para cada nó ou soquete.  
 
 
 ```
@@ -49,6 +49,9 @@ Os processadores modernos têm vários núcleos por soquete. Cada soquete é rep
 2016-11-14 13:39:43.63 Server      Node configuration: node 2: CPU mask: 0x0000555555000000:0 Active CPU mask: 0x0000555555000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.     
 2016-11-14 13:39:43.63 Server      Node configuration: node 3: CPU mask: 0x0000aaaaaa000000:0 Active CPU mask: 0x0000aaaaaa000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.   
 ```   
+
+> [!NOTE]
+> Do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 em diante, use o sinalizador de rastreamento 8079 para permitir que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use Soft-NUMA automático. Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], esse comportamento é controlado pelo mecanismo e o sinalizador de rastreamento 8079 não tem nenhum efeito. Para obter mais informações, veja [DBCC TRACEON – sinalizadores de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 ## <a name="manual-soft-numa"></a>Soft-NUMA manual  
 Para configurar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manualmente para usar o soft-NUMA, desabilite o soft-NUMA automático e edite o Registro para adicionar uma máscara de afinidade de configuração de nó. Ao usar esse método, a máscara do soft-NUMA pode ser declarada como uma entrada de registro binária, DWORD (hexadecimal ou decimal) ou QWORD (hexadecimal ou decimal). Para configurar mais que as primeiras 32 CPUs, use os valores do Registro QWORD ou BINARY (os valores QWORD não podem ser usados antes do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]). Depois de modificar o Registro, você precisará reiniciar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que a configuração do soft-NUMA entre em vigor.  
@@ -70,7 +73,7 @@ A instância A [!INCLUDE[ssDE](../../includes/ssde-md.md)] é configurada para u
   
  A instância A, que apresenta E/S significativa, agora tem dois threads de E/S e um thread de gravador lento. A instância B, que executa operações de processamento intenso, tem apenas um thread de E/S e um thread de gravador lento. Diferentes quantidades de memória podem ser atribuídas às instâncias, mas ao contrário do NUMA de hardware, ambas recebem memória do mesmo bloco de memória do sistema operacional e não há nenhuma afinidade do processador com a memória.  
   
- O thread de gravador lento é vinculado à exibição do SQLOS dos nós de memória NUMA físicos. Por isso, aquilo que o hardware apresentar como os nós NUMA físicos equivalerá ao número de threads de gravador lento criados. Para obter mais informações, consulte [Como funcionam NUMA de software, thread de término de E/S, trabalhadores de gravador lento e nós de memória](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ O thread de gravador lento é vinculado à exibição do SQLOS dos nós de memória NUMA físicos. Por isso, aquilo que o hardware apresentar como os nós NUMA físicos equivalerá ao número de threads de gravador lento criados. Para obter mais informações, confira [Como funciona: Como funcionam o soft NUMA, o thread de término de E/S, os trabalhadores de gravador lento e os nós de memória](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
   
 > [!NOTE]
 > As chaves do Registro **Soft-NUMA** não são copiadas quando você atualiza uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

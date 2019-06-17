@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: ae3cc8d39ec9c181d6e99a41acb3a0590ebc77ee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860627"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789647"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Configurar eventos estendidos para Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,13 +25,7 @@ ms.locfileid: "58860627"
 ```sql  
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
-  
- [Sessão Alwayson_health](always-on-extended-events.md#BKMK_alwayson_health)  
-  
- [Eventos estendidos para depuração](always-on-extended-events.md#BKMK_Debugging)  
-  
- [Referência de eventos estendidos de Grupos de Disponibilidade Always On](always-on-extended-events.md#BKMK_Reference)  
-  
+   
 ##  <a name="BKMK_alwayson_health"></a> Sessão Alwayson_health  
  A sessão de eventos estendidos alwayson_health é criada automaticamente quando você cria o grupo de disponibilidade e captura um subconjunto dos eventos relacionados do grupo de disponibilidade. Esta sessão é pré-configurada como uma ferramenta útil e conveniente para ajudá-lo a começar rapidamente ao solucionar problemas de um grupo de disponibilidade. O assistente Criar grupo de disponibilidade inicia automaticamente a sessão em cada réplica de disponibilidade participante configurada no assistente.  
   
@@ -91,7 +85,7 @@ Para obter informações sobre alguns dos eventos cobertos pelo alwayson_health,
 |coluna|Descrição|  
 |------------|-----------------|  
 |Nome|availability_replica_state_change|  
-|Categoria|alwayson|  
+|Categoria|always on|  
 |Canal|Operacional|  
   
 #### <a name="event-fields"></a>Campos de evento  
@@ -122,7 +116,7 @@ GO
 |coluna|Descrição|  
 |------------|-----------------|  
 |Nome|availability_group_lease_expired|  
-|Categoria|alwayson|  
+|Categoria|always on|  
 |Canal|Operacional|  
   
 #### <a name="event-fields"></a>Campos de evento  
@@ -150,7 +144,7 @@ GO
 |Nome|Descrição|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
-|Categoria|alwayson|  
+|Categoria|always on|  
 |Canal|Analítico|  
   
 #### <a name="event-fields"></a>Campos de evento  
@@ -250,7 +244,7 @@ GO
 |coluna|Descrição|  
 |------------|-----------------|  
 |Nome|data_movement_suspend_resume|  
-|Categoria|Alwayson|  
+|Categoria|Always On|  
 |Canal|Operacional|  
   
 #### <a name="event-fields"></a>Campos de evento  
@@ -293,7 +287,7 @@ GO
 |coluna|Descrição|  
 |------------|-----------------|  
 |Nome|alwayson_ddl_execution|  
-|Categoria|alwayson|  
+|Categoria|always on|  
 |Canal|Analítico|  
   
 #### <a name="event-fields"></a>Campos de evento  
@@ -326,7 +320,7 @@ GO
 |coluna|Descrição|  
 |------------|-----------------|  
 |Nome|availability_replica_manager_state_change|  
-|Categoria|alwayson|  
+|Categoria|always on|  
 |Canal|Operacional|  
   
 #### <a name="event-fields"></a>Campos de evento  

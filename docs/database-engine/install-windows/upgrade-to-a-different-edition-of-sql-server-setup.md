@@ -10,13 +10,13 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: a7bbf62397971834da589d7232070300296f10c4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 51bcd27ee8d2c63103650c8527014716f10bc3f9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601946"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794703"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Fazer upgrade para outra edição do SQL Server (Instalação)
 
@@ -30,7 +30,7 @@ A instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá 
 - [Requisitos de Hardware e Software para a Instalação do SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
-> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância de cluster de failover:** a execução do upgrade da edição em um de nós da instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é suficiente. Esse nó pode ser ativo ou passivo e o mecanismo não coloca os recursos offline durante o upgrade da edição. Após a atualização da edição, será necessário reiniciar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou executar o failover em um nó diferente.  
+> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância de cluster de failover:** executar a atualização da edição em um de nós da instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é suficiente. Esse nó pode ser ativo ou passivo e o mecanismo não coloca os recursos offline durante o upgrade da edição. Após a atualização da edição, será necessário reiniciar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou executar o failover em um nó diferente.  
   
 ## <a name="prerequisites"></a>Prerequisites  
 Para instalações locais, você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura no compartilhamento remoto.  

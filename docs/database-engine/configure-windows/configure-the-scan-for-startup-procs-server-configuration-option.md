@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 779cd10fa83fdc4d1ec44079ca08ee8dd480468c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 55f13de3ecfb6d78219812734d0c559430a914be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647774"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799092"
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>Configurar a opção de configuração de servidor scan for startup procs
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47647774"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [depois de configurar a opção scan for startup procs](#FollowUp)  
+-   **Acompanhamento:**  [depois de configurar a opção verificar processos de inicialização](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -88,7 +88,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção scan for startup procs  
+##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção verificar processos de inicialização  
  O servidor deve ser reiniciado para que a configuração entre em vigor.  
   
 ## <a name="see-also"></a>Consulte Também  

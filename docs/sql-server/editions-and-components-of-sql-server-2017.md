@@ -34,16 +34,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3adc687a30c3f8f7e9f8564bfbbb3fec44ad4a20
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 660b9d8ea0d0ebd0f0ef1ea83c225cd74f71080b
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65560109"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744169"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Edições e recursos com suporte do SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
+> [!div class="nextstepaction"]
+> [Compartilhe seus comentários sobre a página do hub do SQL Docs.](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 Este tópico fornece detalhes de recursos com suporte nas diferentes edições do SQL Server 2017. 
 
@@ -69,7 +71,7 @@ Para notas de versão mais recentes e informações sobre novidades, consulte o 
 > ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**   
 --->
 
-## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Edições do[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]   
+## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Edições do[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]  
  A tabela a seguir descreve essas edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edição|Definição|  
@@ -112,7 +114,7 @@ Para notas de versão mais recentes e informações sobre novidades, consulte o 
 |Ferramentas de gerenciamento|Descrição|  
 |----------------------|-----------------|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|O[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] é um ambiente integrado para acessar, configurar, gerenciar, administrar e desenvolver os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] permite que os desenvolvedores e administradores de todos os níveis utilizem o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> Baixe e instale o <br />                [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] de  [Baixar o SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager|O[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager fornece gerenciamento básico de configuração para serviços, protocolos do servidor, protocolos do cliente e aliases do cliente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager|O[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager fornece gerenciamento básico de configuração para serviços, protocolos do servidor, protocolos do cliente e aliases do cliente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
 |[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] fornece uma interface gráfica do usuário para monitorar uma instância do [!INCLUDE[ssDE](../includes/ssde-md.md)] ou do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |[!INCLUDE[ssDE](../includes/ssde-md.md)] Orientador de Otimização|O Orientador de Otimização do[!INCLUDE[ssDE](../includes/ssde-md.md)] ajuda a criar conjuntos de índices, exibições indexadas e partições ideais.|  
 |Cliente Data Quality|Fornece uma interface gráfica do usuário altamente simples e intuitiva para se conectar ao servidor DQS e executar operações de limpeza de dados. Ele também permite monitorar centralmente várias atividades executadas durante a operação de limpeza de dados.|  
@@ -196,7 +198,7 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |Contêineres de vários fluxos de arquivos|Sim|Sim|Sim|Sim|Sim|
 |Memória de página grande com reconhecimento para NUMA e alocação de matriz de buffer|Sim|Não|Não|Não|Não|
 |Buffer Pool Extension|Sim|Sim|Não|Não|Não|
-|Administração do recurso de E/S|Sim|Não|Não|Não|Não|  
+|Governança de recursos de E/S|Sim|Não|Não|Não|Não|  
 |Read-Ahead|Sim|Não|Não|Não|Não|
 |Exame avançado|Sim|Não|Não|Não|Não|
 |Durabilidade atrasada|Sim|Sim|Sim|Sim|Sim|

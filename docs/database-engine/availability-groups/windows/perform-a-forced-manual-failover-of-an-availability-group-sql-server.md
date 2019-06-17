@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a11d29e7cd8a44f052ad5e0b9ed9278d79174b39
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: e79323684bff589f54d3247d2feb710d97ceebe8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208675"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798209"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Executar um failover manual forçado de um Grupo de Disponibilidade Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,37 +49,8 @@ ms.locfileid: "53208675"
 > [!NOTE]  
 >  Para obter mais informações sobre os pré-requisitos e as recomendações para forçar um failover e para obter um cenário de exemplo que usa um failover forçado para recuperação de uma falha catastrófica, confira [Cenário de exemplo: Usando um failover forçado para recuperação de uma falha catastrófica](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy), mais adiante neste tópico.  
   
--   **Antes de começar:**  
   
-     [Limitações e restrições](#Restrictions)  
-  
-     [Pré-requisitos](#Prerequisites)  
-  
-     [Recomendações](#Recommendations)  
-  
-     [Possíveis maneiras de evitar perda de dados após quorum forçado](#WaysToAvoidDataLoss)  
-  
-     [Segurança](#Security)  
-  
--   **Para forçar o failover (com possível perda de dados) usando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Acompanhamento:** [Tarefas essenciais após um failover forçado](#FollowUp)  
-  
--   **Cenário de exemplo:** [Usando um failover forçado para recuperação de uma falha catastrófica](#ExampleRecoveryFromCatastrophy)  
-  
--   [Tarefas relacionadas](#RelatedTasks)  
-  
--   [Conteúdo relacionado](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de começar  
-  
-###  <a name="Restrictions"></a> Limitações e Restrições  
+##  <a name="Restrictions"></a> Limitações e restrições  
   
 -   A única vez que você não pode executar um failover forçado é quando o cluster WSFC (Windows Server Failover Clustering) não tem quorum.  
   
@@ -94,13 +65,13 @@ ms.locfileid: "53208675"
     > [!NOTE]  
     >  O suporte a transações distribuídas e bancos de dados varia de acordo com o SQL Server e versões do sistema operacional. Para obter mais informações, consulte [Transações entre bancos de dados e transações distribuídas para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+##  <a name="Prerequisites"></a> Pré-requisitos  
   
 -   O cluster WSFC tem quorum. Se o cluster não tiver quórum, consulte [Recuperação de desastres do WSFC por meio de quorum forçado &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
 -   É necessário poder se conectar a uma instância de servidor que hospede uma réplica cuja função esteja no estado SECONDARY ou RESOLVING.  
   
-###  <a name="Recommendations"></a> Recomendações  
+##  <a name="Recommendations"></a> Recomendações  
   
 -   Não force o failover enquanto a réplica primária ainda estiver em execução.  
   
@@ -113,7 +84,7 @@ ms.locfileid: "53208675"
   
 -   Se os clientes puderem conectar-se ao original primário, um failover forçado apresentará certo risco de comportamento de divisão de dados. Antes de forçar um failover, é altamente recomendável evitar que os clientes acessem a réplica primária original. Caso contrário, depois que o failover for forçado, os bancos de dados primários originais e o bancos de dados primários atuais poderão ser atualizados independentemente uns dos outros.  
   
-###  <a name="WaysToAvoidDataLoss"></a> Possíveis maneiras de evitar perda de dados após quorum forçado  
+##  <a name="WaysToAvoidDataLoss"></a> Possíveis maneiras de evitar perda de dados após quorum forçado  
  Em algumas condições de falha depois que o quorum é perdido, é possível evitar a perda de dados, como a seguir:  
   
 -   **Se a réplica primária original ficar online**  
@@ -140,9 +111,8 @@ ms.locfileid: "53208675"
     > [!NOTE]  
     >  Quando você forçar o failover em uma réplica secundária, a quantidade de perda de dados dependerá de quanto é o atraso do destino de failover subjacente à réplica primária. Infelizmente, quando o cluster WSFC não tem quorum ou o quorum foi forçado, não é possível avaliar a quantidade da potencial perda de dados. Entretanto, observe que, quando o cluster WSFC recuperar um quorum íntegro, será possível começar a controlar a potencial perda de dados. Para obter mais informações, consulte “Controlando a potencial perda de dados” em [Failover e modos de failover &#40;grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
-###  <a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+##  <a name="Permissions"></a> Permissões  
  Requer a permissão ALTER AVAILABILITY GROUP no grupo de disponibilidade, a permissão CONTROL AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
@@ -158,7 +128,7 @@ ms.locfileid: "53208675"
   
 5.  Depois de forçar um failover do grupo de disponibilidade, conclua as etapas de acompanhamento necessárias. Para obter mais informações, confira [Acompanhamento: Tarefas essenciais após um failover forçado](#FollowUp), mais adiante neste tópico.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para forçar o failover (com possível perda de dados)**  
   
 1.  Conecte-se a uma instância de servidor que hospede uma réplica cuja função esteja no estado SECONDARY ou RESOLVING no grupo de disponibilidade que precisa passar por failover.  
@@ -297,7 +267,7 @@ ms.locfileid: "53208675"
 ###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
  A figura a seguir ilustra a série de ações realizadas no data center remoto em resposta à falha catastrófica no data center principal.  
   
- ![Etapas para responder à falha do data center principal](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Steps for responding to failure of main data center")  
+ ![Etapas para responder à falha do data center principal](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Etapas para responder à falha do data center principal")  
   
  As etapas nesta figura indicam as etapas a seguir:  
   
@@ -359,7 +329,7 @@ ms.locfileid: "53208675"
   
      [White papers da Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [White papers da equipe de consultoria do cliente do SQL Server](https://sqlcat.com/)  
+     [White papers da equipe de consultoria do cliente do SQL Server](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

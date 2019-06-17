@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9d6d01272a88f4a529e55959e12d87dd33c01cd5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 5401e5b731f09de89dedeef8308b7118299fbc9b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406183"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785271"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>Ocultar uma instância do Mecanismo de Banco de Dados do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "52406183"
  Para obter mais informações, consulte [Criar ou excluir um alias de servidor para ser usado por um cliente &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md).  
   
  Se você ocultar uma instância nomeada clusterizada, o serviço de cluster poderá não se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se a chave do Registro **LastConnect** (**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect**) tiver uma porta diferente da porta de escuta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o serviço de cluster não puder fazer uma conexão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você poderá ver um erro semelhante ao seguinte:  
-**ID do evento: 1001: Nome do evento: deadlock de recursos de clustering de failover.**  
+**ID do evento: 1001: Nome do evento: Deadlock de recursos de clustering de failover.**  
   
 ## <a name="see-also"></a>Consulte Também  
  [Configuração de rede do servidor](../../database-engine/configure-windows/server-network-configuration.md)   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9748ef0f82fc62fd194efa9093f00032fd1d8cdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8e704a75a25849009e51a3e7f2c03fee535b7bbf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789704"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780740"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Configurar a opção min memory per query de configuração de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

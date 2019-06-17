@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 551d71d427b9e7997082a8feda1b766b85bfe659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: be6b135e4e21f7bdcec47c231be6fe872a20ab76
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837265"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795312"
 ---
 # <a name="register-mirrored-database"></a>Registrar banco de dados espelho
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47837265"
   
 |Nome da coluna|Descrição|  
 |-----------------|-----------------|  
-|**Registrar**|Verifique cada um dos bancos de dados que deseja registrar. Se um banco de dados já estiver monitorado, a sua caixa de seleção será marcada e será desabilitada.<br /><br /> Observação: para cancelar o registro do banco de dados, desmarque a caixa de diálogo **Banco de Dados Espelho Registrado** , selecione o banco de dados na árvore de navegação e selecione **Cancelar registro** no menu **Ação** .|  
+|**Registrar**|Verifique cada um dos bancos de dados que deseja registrar. Se um banco de dados já estiver monitorado, a sua caixa de seleção será marcada e será desabilitada.<br /><br /> Observação: Para cancelar o registro do banco de dados, desmarque a caixa de diálogo **Banco de Dados Espelho Registrado**, selecione o banco de dados na árvore de navegação e selecione **Cancelar registro** no menu **Ação**.|  
 |**Backup de banco de dados**|O nome de um banco de dados espelho na instância de servidor selecionada.|  
 |**Função Atual**|A função de espelhamento atual do banco de dados, Principal ou Espelho na instância de servidor selecionada.|  
 |**Parceiro (Conectar como)**|O nome do parceiro de failover do banco de dados. A **Autenticação do Windows do usuário do console** ou a **Autenticação do SQL Server do logon "***\<nome de logon>***"** é exibida entre parênteses. Essas são as informações de autenticação atualmente usadas, se a instância foi adicionada antes, ou que serão usadas, se esta instância não foi acrescentada ao monitor.|  

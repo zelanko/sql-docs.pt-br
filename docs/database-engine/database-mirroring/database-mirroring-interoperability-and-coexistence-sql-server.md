@@ -1,5 +1,5 @@
 ---
-title: 'Espelhamento de Banco de Dados: interoperabilidade e coexistência (SQL Server) | Microsoft Docs'
+title: 'Espelhamento de banco de dados: interoperabilidade e coexistência (SQL Server) | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9af53bac702a7e64e48a24166a549dd97f00197f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d7de380dda9f76f82269177282888038bf73a928
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711214"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801271"
 ---
-# <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Espelhamento de banco de dados: interoperabilidade e coexistência (SQL Server)
+# <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Espelhamento de banco de dados: Interoperabilidade e coexistência (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   O espelhamento de banco de dados pode ser usado com os seguintes recursos ou componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   

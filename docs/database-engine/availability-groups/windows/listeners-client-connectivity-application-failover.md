@@ -17,46 +17,21 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23321c9c8208cf4a78909ab5cedcd921184f7b0b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: d27da0678e993047ffb71a2000a497d282d6dc63
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214697"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799301"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Conectar-se a um ouvinte do grupo de disponibilidade Always On 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tópico contém informações sobre considerações de conectividade de cliente [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e funcionalidade de failover de aplicativo.  
+  Este artigo contém informações sobre considerações para conectividade do cliente [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e funcionalidade de failover de aplicativo.  
   
 > [!NOTE]  
 >  Para a maioria das configurações comuns de ouvinte, você pode criar o primeiro ouvinte de grupo de disponibilidade simplesmente usando instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou cmdlets PowerShell. Para obter mais informações, consulte [Tarefas relacionadas](#RelatedTasks), mais adiante neste tópico.  
   
- **Neste tópico:**  
-  
--   [Ouvintes de grupos de disponibilidade](#AGlisteners)  
-  
--   [Usando um ouvinte para conectar à réplica primária](#ConnectToPrimary)  
-  
--   [Usando um ouvinte para conectar a uma réplica secundária somente leitura (roteamento somente leitura)](#ConnectToSecondary)  
-  
-    -   [Para configurar réplicas de disponibilidade para roteamento somente leitura](#ConfigureARsForROR)  
-  
-    -   [Tentativa do aplicativo somente leitura e roteamento somente leitura](#ReadOnlyAppIntent)  
-  
--   [Ignorando ouvintes de grupo de disponibilidade](#BypassAGl)  
-  
--   [Comportamento de conexões de cliente em failover](#CCBehaviorOnFailover)  
-  
--   [Dando suporte a failovers de várias sub-redes de grupo de disponibilidade](#SupportAgMultiSubnetFailover)  
-  
--   [Ouvintes de grupo de disponibilidade e certificados SSL](#SSLcertificates)  
-  
--   [Ouvintes de grupo de disponibilidade e SPNs (nomes de entidades de segurança de servidor)](#SPNs)  
-  
--   [Tarefas relacionadas](#RelatedTasks)  
-  
--   [Conteúdo relacionado](#RelatedContent)  
   
 ##  <a name="AGlisteners"></a> Ouvintes de grupos de disponibilidade  
  É possível fornecer conectividade de cliente ao banco de dados de um determinado grupo de disponibilidade criando um ouvinte de grupo de disponibilidade. Um ouvinte do grupo de disponibilidade é um VNN (nome de rede virtual) ao qual os clientes podem se conectar para acessar um banco de dados em uma réplica primária ou secundária de um grupo de disponibilidade AlwaysOn. Um ouvinte de grupo de disponibilidade permite que o cliente conecte-se a uma réplica de disponibilidade sem saber o nome da instância física do SQL Server à qual o cliente está se conectando.  A cadeia de conexão de cliente não precisa ser modificada para conectar-se ao local atual de uma réplica primária atual.  
@@ -67,13 +42,8 @@ ms.locfileid: "53214697"
   
  Para obter informações básicas sobre ouvintes do grupo de disponibilidade, veja [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
- **Nesta seção:**  
   
--   [Configuração de ouvinte de grupo de disponibilidade](#AGlConfig)  
-  
--   [Selecionando uma porta de ouvinte de grupo de disponibilidade](#SelectListenerPort)  
-  
-###  <a name="AGlConfig"></a> Configuração de ouvinte de grupo de disponibilidade  
+##  <a name="AGlConfig"></a> Configuração de ouvinte de grupo de disponibilidade  
  Um ouvinte de grupo de disponibilidade é definido pelo seguinte:  
   
  Um nome DNS exclusivo  
@@ -95,7 +65,7 @@ ms.locfileid: "53214697"
   
  Não há suporte para configurações de redes híbridas e DHCP através de sub-redes para ouvintes de grupo de disponibilidade. Isso ocorre porque, quando há um failover, um IP dinâmico pode expirar ou ser liberado, o que coloca a alta disponibilidade geral em risco.  
   
-###  <a name="SelectListenerPort"></a> Selecionando uma porta de ouvinte de grupo de disponibilidade  
+##  <a name="SelectListenerPort"></a> Selecionando uma porta de ouvinte de grupo de disponibilidade  
  Ao configurar um ouvinte de grupo de disponibilidade, você precisa designar uma porta.  Você pode configurar a porta padrão como 1433 para simplicidade das cadeias de conexão de cliente. Ao usar 1433, você não precisa designar um número de porta em uma cadeia de conexão.   Além disso, como cada ouvinte de grupo de disponibilidade terá um nome de rede virtual separado, cada ouvinte de grupo de disponibilidade configurado em um único WSFC poderá ser configurado para fazer referência à mesma porta padrão de 1433.  
   
  Você também pode designar uma porta de ouvinte sem padrão. Porém isso significa que você também precisará especificar uma porta de destino explicitamente em sua cadeia de conexão ao conectar-se ao ouvinte de grupo de disponibilidade.  Você também precisará da permissão de abertura no firewall para a porta sem padrão.  
@@ -122,7 +92,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 
 -   A cadeia de conexão faz referência a um ouvinte de grupo de disponibilidade, e a tentativa do aplicativo da conexão de entrada está definida como somente leitura (por exemplo, usando a palavra-chave **Application Intent=ReadOnly** nas cadeias de conexão ODBC ou OLEDB ou nos atributos ou propriedades da conexão). Para obter informações, veja [Tentativa do aplicativo somente leitura e roteamento somente leitura](#ReadOnlyAppIntent), mais adiante nesta seção.  
   
-###  <a name="ConfigureARsForROR"></a> Para configurar réplicas de disponibilidade para roteamento somente leitura  
+##  <a name="ConfigureARsForROR"></a> Para configurar réplicas de disponibilidade para roteamento somente leitura  
  Um administrador de banco de dados deve configurar as réplicas de disponibilidade como segue:  
   
 1.  Para cada réplica de disponibilidade que você deseja configurar como uma réplica secundária legível, um administrador de banco de dados deve configurar os parâmetros a seguir, que entram em vigor somente na função secundária:  
@@ -139,7 +109,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
   
 -   [Configurar o roteamento somente leitura para um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
-###  <a name="ReadOnlyAppIntent"></a> Tentativa do aplicativo somente leitura e roteamento somente leitura  
+##  <a name="ReadOnlyAppIntent"></a> Tentativa do aplicativo somente leitura e roteamento somente leitura  
  A propriedade da cadeia de conexão da intenção de aplicativo expressa a solicitação do aplicativo cliente de ser direcionada para uma versão de leitura/gravação ou somente leitura de um banco de dados de grupo de disponibilidade. Para usar o roteamento somente leitura, um cliente deve usar uma tentativa de aplicativo somente leitura na cadeia de conexão ao conectar-se ao ouvinte de grupo de disponibilidade. Sem a tentativa de aplicativo somente leitura, as conexões para o ouvinte de grupo de disponibilidade são direcionadas para o banco de dados na réplica primária.  
   
  O atributo de intenção de aplicativo é armazenado na sessão do cliente durante o logon e a instância do SQL Server processará essa intenção e determinará o que fazer de acordo com a configuração do grupo de disponibilidade e o estado de leitura/gravação atual do banco de dados de destino na réplica secundária.  
@@ -167,11 +137,11 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 ##  <a name="BypassAGl"></a> Ignorando ouvintes de grupo de disponibilidade  
  Embora os ouvintes de grupo de disponibilidade permitam suporte para redirecionamento de failover e roteamento somente leitura, as conexões de cliente não precisam usá-los. Uma conexão de cliente também pode fazer referência direta à instância do SQL Server em vez de conectar-se ao ouvinte de grupo de disponibilidade.  
   
- Na instância do SQL Server, é irrelevante se a conexão fizer logon usando o ouvinte de grupo de disponibilidade ou usando outro ponto de extremidade da instância.  A instância do SQL Server verificará o estado do banco de dados de destino e permitirá ou não a conectividade com base na configuração do grupo de disponibilidade e no estado atual do banco de dados na instância.  Por exemplo, se um aplicativo cliente conectar-se diretamente a uma instância de porta do SQL Server e conectar-se a um banco de dados de destino hospedado em um grupo de disponibilidade, e o banco de dados de destino estiver em estado primário e online, a conectividade terá sucesso.  Se o banco de dados de destino estiver offline ou em um estado de transição, haverá falha na conectividade para o banco de dados.  
+ Na instância do SQL Server, é irrelevante se a conexão fizer logon usando o ouvinte de grupo de disponibilidade ou usando outro ponto de extremidade da instância.  A instância do SQL Server verificará o estado do banco de dados de destino e permitirá ou não a conectividade com base na configuração do grupo de disponibilidade e no estado atual do banco de dados na instância.  Por exemplo, se um aplicativo cliente conectar-se diretamente a uma instância de porta do SQL Server e conectar-se a um banco de dados de destino hospedado em um grupo de disponibilidade e o banco de dados de destino estiver em estado primário e online, a conectividade terá sucesso.  Se o banco de dados de destino estiver offline ou em um estado de transição, haverá falha na conectividade para o banco de dados.  
   
  Como alternativa, ao migrar de espelhamento de banco de dados para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], os aplicativos podem especificar a cadeia de conexão do espelhamento do banco de dados desde que exista apenas uma réplica secundária e que as conexões de usuário não sejam permitidas. Para obter mais informações, veja [Usando cadeias de conexão de espelhamento de banco de dados com grupos de disponibilidade](#DbmConnectionString), mais adiante nesta seção.  
   
-###  <a name="DbmConnectionString"></a> Usando cadeias de conexão de espelhamento de banco de dados com grupos de disponibilidade  
+##  <a name="DbmConnectionString"></a> Usando cadeias de conexão de espelhamento de banco de dados com grupos de disponibilidade  
  Se um grupo de disponibilidade tiver apenas uma réplica secundária e não estiver configurado com ALLOW_CONNECTIONS = READ_ONLY ou ALLOW_CONNECTIONS = NONE na réplica secundária, os clientes poderão se conectar à réplica primária usando uma cadeia de conexão de espelhamento de banco de dados. Essa abordagem pode ser útil na migração de um aplicativo existente do espelhamento de banco de dados para um grupo de disponibilidade, contanto que você limite o grupo de disponibilidade a duas réplicas de disponibilidade (uma réplica primária e uma réplica secundária). Se adicionar mais réplicas secundárias, você precisará criar um ouvinte de grupo de disponibilidade para o grupo de disponibilidade e atualizar seus aplicativos para usarem o nome DNS do ouvinte do grupo de disponibilidade.  
   
  Quando cadeias de conexão de espelhamento de banco de dados forem utilizadas, o cliente poderá usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ou o provedor de dados .NET Framework para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A cadeia de conexão oferecida por um cliente deve fornecer, no mínimo, o nome de uma instância de servidor, o *nome de parceiro inicial*, para identificar a instância de servidor que hospeda inicialmente a réplica de disponibilidade à qual você pretende se conectar. Opcionalmente, a cadeia de conexão também pode fornecer o nome de outra instância de servidor, o *nome de parceiro de failover*, para identificar a instância do servidor que hospeda inicialmente a réplica secundária como o nome de parceiro de failover.  
@@ -200,7 +170,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; Mult
  A opção de conexão **MultiSubnetFailover** deve ser definida como **True** mesmo que o grupo de disponibilidade se estenda apenas por uma única sub-rede.  Isso permite pré-configurar novos clientes para dar suporte ao futuro alcance de sub-redes sem necessidade de alterações futuras na cadeia de conexão de cliente e também otimiza o desempenho de failover para failovers de sub-rede única.  Embora a opção de conexão **MultiSubnetFailover** não seja necessária, ela fornece o benefício de um failover de sub-rede mais rápido.  Isso ocorre porque o driver de cliente tentará abrir um soquete TCP para cada endereço IP em paralelo associado ao grupo de disponibilidade.  O driver de cliente esperará que o primeiro IP responda com êxito e quando o fizer, usa-o para a conexão.  
   
 ##  <a name="SSLcertificates"></a> Ouvintes de grupo de disponibilidade e certificados SSL  
- Ao conectar-se a um ouvinte de grupo de disponibilidade, se as instâncias participantes do SQL Server usarem certificados SSL junto com criptografia de sessão, o driver de cliente que está fazendo a conexão precisará dar suporte ao Nome Alternativo da Entidade no certificado SSL para forçar a criptografia.  O suporte ao driver do SQL Server para o Nome Alternativo da Entidade do certificado está planejado para ADO.NET (SqlClient), Microsoft JDBC e SQL Native Client (SNAC).  
+ Ao conectar-se a um ouvinte de grupo de disponibilidade, se as instâncias participantes do SQL Server usarem certificados SSL junto com criptografia de sessão, o driver de cliente que está fazendo a conexão precisará dar suporte ao Nome Alternativo da Entidade no certificado SSL para forçar a criptografia.  O suporte ao driver do SQL Server para o Nome Alternativo da Entidade do certificado está planejado para ADO.NET (SqlClient), Microsoft JDBC e SNAC (SQL Native Client).  
   
  Um certificado X.509 deve ser configurado para cada nó de servidor participante do cluster de failover com uma lista de todos os ouvintes de grupo de disponibilidade definidos no Nome Alternativo da Entidade do certificado.  
   

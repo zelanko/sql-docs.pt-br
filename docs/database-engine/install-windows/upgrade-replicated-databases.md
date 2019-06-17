@@ -1,5 +1,5 @@
 ---
-title: Fazer upgrade de bancos de dados replicados | Microsoft Docs
+title: Atualizar ou aplicar patch a bancos de dados replicados | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 3b311514c90045042dcb6a62f163d5fe08ef9549
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124606"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794721"
 ---
-# <a name="upgrade-replicated-databases"></a>Atualizar bancos de dados replicados
+# <a name="upgrade-or-patch-replicated-databases"></a>Atualizar ou aplicar patches a bancos de dados replicados
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -42,9 +42,7 @@ O caminho de atualização para o SQL Server é diferente dependendo do padrão 
 
 Uma abordagem comum que tem sido adotada para atualizações lado a lado de topologias de replicação é mover os pares publicador-assinante em partes para o novo ambiente lado a lado em vez de uma movimentação de toda a topologia. Essa abordagem em fases ajuda a controlar o tempo de inatividade e a minimizar o impacto a uma determinada medida para o negócio dependente de replicação.  
 
-
-> [!NOTE]  
-> **Para obter informações mais detalhadas com relação à atualização da topologia de replicação para o SQL 2016, confira a postagem no blog [Atualizando uma topologia de replicação para o SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
+A maior parte deste artigo está no escopo para atualizar a versão do SQL Server. No entanto, o processo de atualização in-loco também deve ser usado ao aplicar um patch ao SQL Server com um service pack ou atualização cumulativa também. 
 
  >[!WARNING]
  > A atualização de uma topologia de replicação é um processo de várias etapas. Recomendamos tentar uma atualização de uma réplica de sua topologia de replicação em um ambiente de teste antes de executar a atualização no ambiente de produção real. Isso ajudará a corrigir qualquer documentação operacional necessária para lidar com a atualização facilmente sem incorrer em tempos de inatividade caros e longos durante o processo de atualização real. Vimos clientes reduzirem o tempo de inatividade significativamente com o uso dos Grupos de Disponibilidade Always On e/ou Instâncias do Cluster de Failover do SQL Server para seus ambientes de produção ao atualizar sua topologia de replicação. Além disso, recomendamos fazer backups de todos os bancos de dados, incluindo MSDB, bancos de dados Mestre, de Distribuição e os bancos de dados do usuário que participam da replicação antes de tentar a atualização.

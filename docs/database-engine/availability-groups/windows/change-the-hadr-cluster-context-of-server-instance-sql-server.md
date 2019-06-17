@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: def5873f53093abfc13ed0968229671a012af839
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c4f01db5d1d27c57b863c3421e6abee894975b85
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202125"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796639"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Alterar qual cluster gerencia os metadados das réplicas em um grupo de disponibilidade Always On
 
@@ -30,30 +30,10 @@ ms.locfileid: "53202125"
   
  Alterne o contexto do cluster HADR somente durante uma migração entre clusters de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para uma instância do [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] em um novo cluster WSFC. A migração entre clusters de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] oferece suporte à atualização do sistema operacional para o [!INCLUDE[win8](../../../includes/win8-md.md)] ou o [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] com tempo de inatividade mínimo de grupos de disponibilidade. Para obter mais informações, veja [Migração entre clusters de grupos de disponibilidade AlwaysOn para atualização do sistema operacional](https://msdn.microsoft.com/library/jj873730.aspx).  
   
--   **Antes de começar:**  
-  
-     [Limitações e restrições](#Restrictions)  
-  
-     [Pré-requisitos](#Prerequisites)  
-  
-     [Recomendações](#Recommendations)  
-  
-     [Segurança](#Security)  
-  
--   **Para alternar o contexto do cluster de uma réplica de disponibilidade usando:**  [Transact-SQL](#TsqlProcedure)  
-  
--   **Acompanhamento:**  [Depois de alternar o contexto do cluster de uma réplica de disponibilidade](#FollowUp)  
-  
--   [Tarefas relacionadas](#RelatedTasks)  
-  
--   [Conteúdo relacionado](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de começar  
-  
 > [!CAUTION]  
 >  Alterne o contexto do cluster HADR somente durante a migração entre clusters das implantações de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+##  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Só é possível alternar o contexto do cluster HADR do cluster WSFC local para um cluster remoto e, depois, do cluster remoto para o cluster local. Você não pode alternar o contexto do cluster HADR de um cluster remoto para outro cluster remoto.  
   
@@ -61,7 +41,7 @@ ms.locfileid: "53202125"
   
 -   Um contexto do cluster HADR remoto pode ser alternado novamente para o cluster local a qualquer momento. Entretanto, o contexto não poderá ser alternado novamente enquanto a instância de servidor estiver hospedando réplicas de disponibilidade.  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+##  <a name="Prerequisites"></a> Pré-requisitos  
   
 -   A instância de servidor na qual você altera o contexto do cluster HADR deve executar o [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] ou posterior (edição Enterprise ou superior).  
   
@@ -78,7 +58,7 @@ ms.locfileid: "53202125"
   
 -   Antes de alternar de um cluster remoto para o cluster local, verifique se todas as réplicas de confirmação síncrona foram sincronizadas (SYNCHRONIZED).  
   
-###  <a name="Recommendations"></a> Recomendações  
+##  <a name="Recommendations"></a> Recomendações  
   
 -   É recomendável especificar o nome de domínio completo. Isso é necessário porque, para localizar o endereço IP de destino de um nome curto, ALTER SERVER CONFIGURATION usa a resolução DNS. Em algumas situações, dependendo da ordem de pesquisa de DNS, o uso de um nome curto pode gerar confusão. Por exemplo, considere o comando a seguir, que é executado em um nó no domínio `abc` , (`node1.abc.com`). O cluster de destino pretendido é o cluster `CLUS01` no domínio `xyz` (`clus01.xyz.com`). No entanto, o domínio local também hospeda um cluster denominado `CLUS01` (`clus01.abc.com`).  
   
@@ -88,9 +68,8 @@ ms.locfileid: "53202125"
     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com'  
     ```  
   
-###  <a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+##  <a name="Permissions"></a> Permissões  
   
 -   **logon do SQL Server**  
   
@@ -104,14 +83,14 @@ ms.locfileid: "53202125"
   
     -   Acesso de leitura/gravação no WSFC remoto.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para alterar o contexto do cluster WSFC de uma réplica de disponibilidade**  
   
 1.  Conecte-se à instância de servidor que hospeda a réplica primária ou uma réplica secundária do grupo de disponibilidade.  
   
 2.  Use a cláusula SET HADR CLUSTER CONTEXT da instrução [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md) , da seguinte forma:  
   
-     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'**_windows\_cluster_**'** | LOCAL }  
+     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'** _windows\_cluster_ **'** | LOCAL }  
   
      onde:  
   

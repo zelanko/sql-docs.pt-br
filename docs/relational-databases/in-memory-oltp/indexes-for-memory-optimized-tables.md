@@ -1,7 +1,7 @@
 ---
 title: Índices para tabelas com otimização de memória | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 06/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c0edd8d6ef30db1dbcae561f09b5cb1cf27cee3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c0ed65ac8c7f4824270d84cde95cf5ab84851ece
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673015"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462464"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Índices em tabelas com otimização de memória
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Todas as tabelas com otimização de memória devem ter, pelo menos, um índice, porque são os índices que conectam as linhas. Em uma tabela com otimização de memória, cada índice também tem otimização de memória. Existem várias diferenças entre um índice em um índice com otimização de memória e um índice tradicional em uma tabela baseada em disco:  
@@ -35,7 +36,7 @@ O índice deve ser um dos seguintes:
 - Índice de hash  
 - Índice não clusterizado com otimização de memória (ou seja, a estrutura interna padrão de uma árvore B) 
   
-Os índices de *hash* são abordados mais detalhadamente em [Índices de hash para tabelas com otimização de memória](../../relational-databases/sql-server-index-design-guide.md#hash_index).
+Os índices de *hash* são abordados mais detalhadamente em [Índices de hash para tabelas com otimização de memória](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
 Os índices *não clusterizados* são abordados mais detalhadamente em [Índice não clusterizado para tabelas com otimização de memória](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index).  
 Índices*columnstore* são abordados em [outro artigo](../../relational-databases/indexes/columnstore-indexes-overview.md).  
 
@@ -57,7 +58,7 @@ Para ser declarada com a DURABILITY = SCHEMA\_AND_DATA padrão, a tabela com oti
     )  
         WITH (  
             MEMORY_OPTIMIZED = ON,  
-            DURABILITY = SCHEMA\_AND_DATA);  
+            DURABILITY = SCHEMA_AND_DATA);  
     ```
 > [!NOTE]  
 > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] têm um limite de 8 índices por tabela com otimização de memória ou tipo de tabela. A partir do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], não há mais um limite no número de índices específicos para as tabelas com otimização de memória e os tipos de tabela.
@@ -116,11 +117,30 @@ Esta subseção contém um bloco de códigos Transact-SQL que demonstra a sintax
   
 ## <a name="duplicate-index-key-values"></a>Valores de chave de índice duplicados
 
-Valores de chave de índice duplicados podem afetar o desempenho de operações em tabelas com otimização de memória. Grandes números de duplicatas (por exemplo, mais de 100) tornam ineficiente o trabalho de manutenção de um índice, pois as cadeias duplicadas devem ser percorridas na maioria das operações de índice. O impacto pode ser visto nas operações `INSERT`, `UPDATE` e `DELETE` em tabelas com otimização de memória. 
+Valores duplicados para uma chave de índice podem reduzir o desempenho de tabelas com otimização de memória. Duplicatas para o sistema percorrer as cadeias de entrada para a maioria das operações de leitura e gravação do índice. Quando uma cadeia de entradas duplicadas excede 100 entradas, a degradação do desempenho pode se tornar mensurável.
 
-Esse problema é mais visível no caso de índices de hash, devido ao menor custo por operação de índices de hash e à interferência de cadeias grandes duplicadas com a cadeia de colisão de hash. Para reduzir a duplicação em um índice, use um índice não clusterizado e adicione outras colunas (por exemplo, da chave primária) ao final da chave de índice para reduzir o número de duplicatas. Para obter mais informações sobre colisões de hash, consulte [Índices de hash para tabelas com otimização de memória](../../relational-databases/sql-server-index-design-guide.md#hash_index).
+### <a name="duplicate-hash-values"></a>Valores de hash duplicados
 
-Por exemplo, considere uma tabela `Customers` com uma chave primária em `CustomerId` e um índice na coluna `CustomerCategoryID`. Normalmente, haverá muitos clientes em uma determinada categoria e, portanto, muitos valores duplicados para uma determinada chave no índice em CustomerCategoryID. Nesse cenário, a melhor prática é usar um índice não clusterizado em `(CustomerCategoryID, CustomerId)`. Esse índice pode ser usado para consultas que usam um predicado que envolve `CustomerCategoryID` e não há duplicação e, portanto, não causam ineficiência na manutenção do índice.
+Esse problema é mais visível no caso de índices de hash. Índices de hash sofrem mais devido às considerações a seguir:
+
+- Menor custo por operação de índices de hash.
+- A interferência de grandes cadeias duplicadas na cadeia de colisão de hash.
+
+Para reduzir a duplicação em um índice, tente realizar os seguintes ajustes:
+
+- Usar um índice não clusterizado.
+- Adicionar colunas adicionais ao final da chave de índice para reduzir o número de duplicatas.
+  - Por exemplo, você pode adicionar colunas que também estão na chave primária.
+
+Para obter mais informações sobre colisões de hash, consulte [Índices de hash para tabelas com otimização de memória](../../relational-databases/sql-server-index-design-guide.md#hash_index).
+
+### <a name="example-improvement"></a>Exemplo de aperfeiçoamento
+
+Aqui está um exemplo de como evitar qualquer ineficiência de desempenho em seu índice.
+
+Considere uma tabela `Customers` que tenha uma chave primária em `CustomerId` e um índice na coluna `CustomerCategoryID`. Normalmente, haverá muitos clientes em uma determinada categoria. Portanto, haverá muitos valores duplicados para CustomerCategoryID dentro de uma determinada chave do índice.
+
+Nesse cenário, a melhor prática é usar um índice não clusterizado em `(CustomerCategoryID, CustomerId)`. Esse índice pode ser usado para consultas que usam um predicado que envolve `CustomerCategoryID`, mas a chave de índice não contém duplicação. Portanto, nenhuma ineficiência na manutenção do índice é causada pelos valores CustomerCategoryID duplicados nem pela coluna extra no índice.
 
 A consulta a seguir mostra o número médio de valores de chave de índice duplicado para o índice em `CustomerCategoryID` na tabela `Sales.Customers`, no banco de dados de exemplo [WideWorldImporters](../../sample/world-wide-importers/wide-world-importers-documentation.md).
 
@@ -155,15 +175,11 @@ Em todos os SELECTs a seguir, um índice não clusterizado é preferível em vez
 SELECT CustomerName, Priority, Description 
 FROM SupportEvent  
 WHERE StartDateTime > DateAdd(day, -7, GetUtcDate());  
-    
-SELECT CustomerName, Priority, Description 
-FROM SupportEvent  
-WHERE CustomerName != 'Ben';  
-    
+
 SELECT StartDateTime, CustomerName  
 FROM SupportEvent  
-ORDER BY StartDateTime;  
-    
+ORDER BY StartDateTime DESC; -- ASC would cause a scan.
+
 SELECT CustomerName  
 FROM SupportEvent  
 WHERE StartDateTime = '2016-02-26';  
@@ -195,7 +211,7 @@ O índice de hash precisa da cláusula `WHERE` para especificar um teste de igua
   
 Nenhum tipo de índice é útil se a cláusula `WHERE` especifica somente a segunda coluna na chave de índice.  
 
-### <a name="summary-table-to-compare-index-use-scenarios"></a>Tabela de resumo de comparação dos cenários de uso de índices  
+## <a name="summary-table-to-compare-index-use-scenarios"></a>Tabela de resumo de comparação dos cenários de uso de índices  
   
 A tabela a seguir lista todas as operações com suporte dos diferentes tipos de índice. *Sim* significa que o índice pode atender à solicitação com eficiência e *Não* significa que o índice não pode atender à solicitação com eficiência. 
   
@@ -203,9 +219,10 @@ A tabela a seguir lista todas as operações com suporte dos diferentes tipos de
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
 | Verificação de índice, recuperar todas as linhas da tabela. | Sim | Sim | Sim |  
 | Busca de índice em predicados de igualdade (=). | Sim <br/> (A chave completa é necessária.) | Sim  | Sim |  
-| Busca de índice em predicados de desigualdade e intervalo <br/> (>, <, <=, >=, `BETWEEN`). | não <br/> (Resulta em uma verificação de índice.) | Sim <sup>1</sup> | Sim |  
-| Recuperar linhas em uma ordem de classificação que corresponda à definição do índice. | não | Sim | Sim |  
-| Recuperar linhas em uma ordem de classificação que corresponda ao inverso da definição do índice. | não | não | Sim |  
+| Busca de índice em predicados de desigualdade e intervalo <br/> (>, <, <=, >=, `BETWEEN`). | Não <br/> (Resulta em uma verificação de índice.) | Sim <sup>1</sup> | Sim |  
+| Recuperar linhas em uma ordem de classificação que corresponda à definição do índice. | Não | Sim | Sim |  
+| Recuperar linhas em uma ordem de classificação que corresponda ao inverso da definição do índice. | Não | Não | Sim |  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> Para um índice não clusterizado com otimização de memória, a chave completa não é necessária para a execução de uma busca de índice.  
 

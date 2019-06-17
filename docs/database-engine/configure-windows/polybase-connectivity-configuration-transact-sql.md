@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: aa90cb3f34b3aecd236a832a62144914ac2dd249
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6e09beb701d42562e2134186be6a0ec7c26f5314
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415246"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772231"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configuração de conectividade do PolyBase (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -46,10 +46,10 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@configname=** ] **'**_option\_name_**'**  
- É o nome de uma opção de configuração. *option_name* é **varchar(35)**, com um padrão de NULL. Se não for especificado, a lista completa de opções será retornada.  
+ [ **@configname=** ] **'** _option\_name_ **'**  
+ É o nome de uma opção de configuração. *option_name* é **varchar(35)** , com um padrão de NULL. Se não for especificado, a lista completa de opções será retornada.  
   
- [ **@configvalue=** ] **'**_value_**'**  
+ [ **@configvalue=** ] **'** _value_ **'**  
  É a nova definição de configuração. *value* é **int**, com um padrão NULL. O valor máximo depende da opção individual.  
   
  **'conectividade do hadoop'**  
@@ -61,25 +61,25 @@ RECONFIGURE
   
 -   Opção 1: Hortonworks HDP 1.3 no Windows Server  
   
--   Opção 1: Armazenamento de blobs do Azure (WASB[S])  
+-   Opção 1: Armazenamento de Blobs do Azure (WASB[S])  
   
 -   Opção 2: Hortonworks HDP 1.3 no Linux  
   
--   Opção 3: Cloudera CDH 4.3 no Linux  
+-   Opção 3: Cloudera CDH 4.3 em Linux  
   
 -   Opção 4: Hortonworks HDP 2.0 no Windows Server  
   
--   Opção 4: armazenamento de blobs do Azure (WASB[S])  
+-   Opção 4: Armazenamento de Blobs do Azure (WASB[S])  
   
 -   Opção 5: Hortonworks HDP 2.0 no Linux  
   
--   Opção 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 e 5.13 em Linux  
+-   Opção 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 e 5.13 no Linux  
   
--   Opção 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 em Linux  
+-   Opção 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 no Linux  
   
 -   Opção 7: Hortonworks 2.1, 2.2 e 2.3 no Windows Server  
   
--   Opção 7: armazenamento de blobs do Azure (WASB[S])  
+-   Opção 7: Armazenamento de Blobs do Azure (WASB[S])  
   
  **RECONFIGURE**  
  Atualiza o valor de execução (run_value) para corresponder ao valor de configuração (config_value). Confira [Result Sets](#ResultSets) para obter as definições de run_value e config_value. O novo valor de configuração definido por sp_configure não entra em vigor até que o valor de execução seja definido pela instrução RECONFIGURE.  
@@ -104,7 +104,7 @@ RECONFIGURE
  Após a execução de RECONFIGURE no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], para que o valor de execução de 'conectividade do hadoop' entre em vigor, é necessário reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 Após a execução de RECONFIGURE no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], para que o valor de execução de 'conectividade do hadoop' entre em vigor, é necessário reiniciar a região [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] .  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  RECONFIGURE não é permitido em uma transação explícita ou implícita.  
   
 ## <a name="permissions"></a>Permissões  

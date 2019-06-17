@@ -16,50 +16,29 @@ helpviewer_keywords:
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c56c6586330830c0dbda3ece592db7a3bc71d4f0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 36f74a3e4ca4806260f71353cee4d53bd629526e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213150"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799287"
 ---
 # <a name="join-a-secondary-replica-to-an-always-on-availability-group"></a>Ingressar uma réplica secundária em um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como unir uma réplica secundária a um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Depois que uma réplica secundária é adicionada a um grupo de disponibilidade AlwaysOn, a réplica secundária deve ser unida ao grupo de disponibilidade. A operação para unir réplica deve ser executada na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que está hospedando a réplica secundária.  
+
   
--   **Antes de começar:**  
+##  <a name="Prerequisites"></a> Pré-requisitos  
   
-     [Pré-requisitos](#Prerequisites)  
-  
-     [Segurança](#Security)  
-  
--   **Para preparar um banco de dados secundário, usando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Acompanhamento:** [Configurar bancos de dados secundários](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de começar  
-  
-###  <a name="Prerequisites"></a> Pré-requisitos  
-  
--   A réplica primária do grupo de disponibilidade deve estar online no momento.  
-  
--   Você deve estar conectado à instância de servidor que hospeda uma réplica secundária que ainda não foi unida ao grupo de disponibilidade.  
-  
+-   A réplica primária do grupo de disponibilidade deve estar online no momento.    
+-   Você deve estar conectado à instância de servidor que hospeda uma réplica secundária que ainda não foi unida ao grupo de disponibilidade.    
 -   A instância de servidor local deve ser capaz de se conectar ao ponto de extremidade de espelhamento de banco de dados da instância de servidor que está hospedando a réplica primária.  
   
 > [!IMPORTANT]  
 >  Se qualquer pré-requisito não for atendido, a operação de junção falhará. Após uma tentativa de junção com falha, talvez seja necessário conectar a instância do servidor que hospeda a réplica primária para remover e adicionar novamente a réplica secundária antes que seja possível uni-la ao grupo de disponibilidade. Para obter mais informações, veja [Remover uma réplica secundária de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md) e [Adicionar uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Segurança  
-  
-####  <a name="Permissions"></a> Permissões  
+##  <a name="Permissions"></a> Permissões  
  Requer a permissão ALTER AVAILABILITY GROUP no grupo de disponibilidade, a permissão CONTROL AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
@@ -77,7 +56,7 @@ ms.locfileid: "53213150"
   
 6.  Para unir a réplica secundária ao grupo de disponibilidade, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para unir uma réplica de disponibilidade a um grupo de disponibilidade**  
   
 1.  Conecte-se à instância de servidor que hospeda a réplica secundária.  

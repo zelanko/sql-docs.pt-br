@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8804bc9cc86941acaba7856d3134339abc969059
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bf43dae4f0950d34d9e1c0d4a49faf8656e9af76
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824984"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803440"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Usar os detalhes do Pesquisador de Objetos para monitorar grupos de disponibilidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,21 +30,8 @@ ms.locfileid: "47824984"
 > [!NOTE]  
 >  Para obter informações sobre como usar o painel de detalhes do Pesquisador de objetos, veja [Painel de detalhes do Pesquisador de Objetos](../../../ssms/object/object-explorer-details-pane.md).  
   
--   **Antes de começar:**  [Pré-requisitos](#Prerequisites)  
   
--   **Para monitorar um grupo de disponibilidade usando:**  [SQL Server Management Studio](#SSMSProcedure)  
-  
--   **Detalhes do Pesquisador de Objetos:**  
-  
-     [Detalhes dos grupos de disponibilidade](#AvGroupsDetails)  
-  
-     [Detalhes da réplica de disponibilidade](#AvReplicaDetails)  
-  
-     [Detalhes do banco de dados de disponibilidade](#AvDbDetails)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de começar  
-  
-###  <a name="Prerequisites"></a> Pré-requisitos  
+##  <a name="Prerequisites"></a> Pré-requisitos  
  Conecte-se à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instância de servidor) que hospeda a réplica primária ou uma réplica secundária.  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
@@ -109,7 +96,7 @@ ms.locfileid: "47824984"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**Não Sincronizado**|O banco de dados não está sincronizado ou ainda não foi unido ao grupo de disponibilidade.|  
-|**Sincronizado**|O banco de dados está sincronizado com o banco de dados primário na réplica primária atual, se houver, ou na réplica primária mais recente.<br /><br /> Observação: em modo de desempenho, o banco de dados nunca está no estado Sincronizado.|  
+|**Sincronizado**|O banco de dados está sincronizado com o banco de dados primário na réplica primária atual, se houver, ou na réplica primária mais recente.<br /><br /> Observação: Em modo de desempenho, o banco de dados nunca está no estado Sincronizado.|  
 |**NULL**|Estado desconhecido. Este valor ocorre quando a instância do servidor local não pode se comunicar com o cluster de failover do WSFC (isto é, o nó local não faz parte do quorum do WSFC).|  
   
 > [!NOTE]  
@@ -128,7 +115,7 @@ ms.locfileid: "47824984"
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Sincronizando|O banco de dados secundário recebeu os registros do log de transações do banco de dados primário que ainda não estão gravados no disco (protegidos).<br /><br /> Observação: no modo de confirmação assíncrona, o estado da sincronização é sempre **Sincronizando**.|  
+|Sincronizando|O banco de dados secundário recebeu os registros do log de transações do banco de dados primário que ainda não estão gravados no disco (protegidos).<br /><br /> Observação: Em modo de confirmação assíncrona, o estado da sincronização é sempre **Sincronizando**.|  
 |||  
   
  **Suspenso**  

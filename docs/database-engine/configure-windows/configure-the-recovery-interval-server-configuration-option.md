@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b0604d33ec26d959d4f319f05fa625951e69c4a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: af3854159c60f175ff80b1d0aaf778e5eab53055
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764994"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783787"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>Configurar a opção recovery interval de configuração de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção recovery interval  
+##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção recovery internal  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte Também  

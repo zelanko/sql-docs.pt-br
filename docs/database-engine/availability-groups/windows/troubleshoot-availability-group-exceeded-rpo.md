@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4e1840f9c6d04965ae24d8b9d188b7def303a0b5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 207c4aa417f2063cbdca8fa575b45ea380f1da4b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408763"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780989"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Solução de problemas: o grupo de disponibilidade excedeu o RPO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ Para corrigir esse problema, tente atualizar a largura de banda da sua rede ou r
  A perda de dados é evitada assim que o bloco de log é protegido no arquivo de log. Portanto, é fundamental isolar o arquivo de log do arquivo de dados. Se o arquivo de log e o arquivo de dados forem mapeados para o mesmo disco rígido, a carga de trabalho de relatório, com leituras intensivas no arquivo de dados, consumirá os mesmos recursos de E/S necessários para a operação de proteção de log. A proteção de log lenta pode se transformar em confirmação lenta na réplica primária, o que poderá causar a ativação excessiva do controle de fluxo e de tempos de espera longos de controle de fluxo.  
   
 ### <a name="diagnosis-and-resolution"></a>Diagnóstico e resolução  
- Se você verificou que a rede não está apresentando problemas de alta latência ou de baixa taxa de transferência, será necessário investigar contenções de E/S na réplica secundária. As consultas em [SQL Server: minimizar E/S de disco](https://technet.microsoft.com/magazine/jj643251.aspx) são úteis na identificação de contenções. Os exemplos desse artigo são derivados abaixo para sua conveniência.  
+ Se você verificou que a rede não está apresentando problemas de alta latência ou de baixa taxa de transferência, será necessário investigar contenções de E/S na réplica secundária. As consultas do [SQL Server: Minimizar E/S de Disco](https://technet.microsoft.com/magazine/jj643251.aspx) são úteis na identificação de contenções. Os exemplos desse artigo são derivados abaixo para sua conveniência.  
   
  O script a seguir permite que você veja o número de leituras e gravações em cada arquivo de dados e de log para cada banco de dados de disponibilidade em execução em uma instância do SQL Server. Ele está classificado por tempo médio de parada de E/S, em milissegundos. Observe que os números são cumulativos desde a última vez em que a instância do servidor foi iniciada. Então, você deve calcular a diferença entre as duas medidas após algum tempo decorrido.  
   
@@ -116,13 +116,13 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
 -   **Physical Disk: all counters**  
   
--   **Physical Disk: Avg. Disk sec/Transfer**  
+-   **Disco físico: Média Disk sec/Transfer**  
   
--   **SQL Server: Databases > Log Flush Wait Time**  
+-   **SQL Server: Banco de Dados > Registrar em Log o Tempo de Espera de Liberação**  
   
--   **SQL Server: Databases > Log Flush Waits/sec**  
+-   **SQL Server: Banco de Dados > Registrar em Log Esperas de Liberação/s**  
   
--   **SQL Server: Databases > Log Pool Disk Reads/sec**  
+-   **SQL Server: Bancos de Dados > Registrar em Log Leituras de Disco de Pool/s**  
   
  Se você identificou um gargalo de E/S e colocou o arquivo de log e o arquivo de dados no mesmo disco rígido, a primeira coisa a ser feita é colocar o arquivo de dados e o arquivo de log em discos separados. Essa melhor prática impede que a carga de trabalho de relatório interfira no caminho de transferência de log da réplica primária para o buffer de log e sua capacidade de proteger a transação na réplica secundária.  
   

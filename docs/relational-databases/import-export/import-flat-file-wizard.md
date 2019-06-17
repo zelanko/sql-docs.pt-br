@@ -13,18 +13,18 @@ ms.author: alayu
 ms.reviewer: maghan
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3399262b9ea80c789f81b7b4e745b6c8f32d11f1
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: 9ebb00b758aa3291c453d6c48d548f2047c72530
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66012906"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836388"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistente Importar Arquivo Simples para SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 > Para obter conteúdo relacionado ao Assistente de Importação e de Exportação, consulte [Assistente de Importação e Exportação do SQL Server](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
-O Assistente Importar Arquivo Simples fornece uma maneira simples de copiar dados de um arquivo simples (.csv, .txt) para um destino. Esta visão geral descreve os motivos para usar esse assistente, como encontrá-lo e um exemplo simples as ser seguido.
+O Assistente Importar Arquivo Simples fornece uma maneira simples de copiar dados de um arquivo simples (.csv, .txt) para uma nova tabela no seu banco de dados. Esta visão geral descreve os motivos para usar esse assistente, como encontrá-lo e um exemplo simples as ser seguido.
 
 ## <a name="why-would-i-use-this-wizard"></a>Por que usar esse assistente?
 Esse assistente foi criado para melhorar a experiência de importação atual usando uma estrutura inteligente conhecida como [PROSE](https://microsoft.github.io/prose/) (Program Synthesis using Examples). Para um usuário sem conhecimento especializado de domínio, a importação de dados normalmente pode ser uma tarefa complexa, propensa a erros e entediante. Esse assistente simplifica tanto o processo de importação de modo que é necessário apenas selecionar um arquivo de entrada e o nome exclusivo da tabela, deixando que a estrutura PROSE cuide do restante.
