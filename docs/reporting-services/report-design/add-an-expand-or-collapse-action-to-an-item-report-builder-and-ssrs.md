@@ -9,10 +9,10 @@ ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 23a4cddc93108a3e45828e79822eaf5f76f0fba7
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582131"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Adicionar uma ação de expandir ou recolher a um item (Construtor de Relatórios e SSRS)
@@ -65,7 +65,7 @@ ms.locfileid: "65582131"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>Para adicionar uma ação de expansão e recolhimento a um item de relatório  
   
-1.  No modo de exibição de Design de relatório, clique com o botão direito do mouse no item de relatório a ser mostrado ou ocultado e, em seguida, clique em **Propriedades** de *report item>\<*. A caixa de diálogo **Propriedades** de *report item>\<* do item de relatório é aberta.  
+1.  No modo de exibição de Design de relatório, clique com o botão direito do mouse no item de relatório a ser mostrado ou ocultado e, em seguida, clique em **Propriedades** de *report item>\<* . A caixa de diálogo **Propriedades** de *report item>\<* do item de relatório é aberta.  
   
 2.  Clique em **Visibilidade**.  
   

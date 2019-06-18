@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 6e546244e00b97b3a4f11fa8532860d0372c2b7a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66800826"
 ---
 # <a name="step-2-create-a-sql-database-for-ruby-development"></a>Etapa 2: Criar um banco de dados SQL para o desenvolvimento Ruby

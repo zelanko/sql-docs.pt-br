@@ -32,10 +32,10 @@ ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d8df41eb7c0a0463648898c08091dd8f8c01f29
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581736"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Alterar legendas de mapa, escala de cores e regras associadas (Construtor de Relatórios e SSRS)
@@ -55,7 +55,7 @@ ms.locfileid: "65581736"
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>Para alterar a posição de uma legenda em relação ao visor  
   
-1.  No modo de exibição de Design, clique com o botão direito do mouse na legenda e abra a página _\<item de relatório>_**Propriedades**.  
+1.  No modo de exibição de Design, clique com o botão direito do mouse na legenda e abra a página _\<item de relatório>_ **Propriedades**.  
   
 2.  Em **Posição**, clique no local que especifica onde exibir a legenda em relação ao visor.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_**Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra de Cores**.  
   
 3.  Clique em **Legenda**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_**Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra de Cores**.  
   
 3.  Clique em **Aplicar estilo do modelo**.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_**Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra de Cores**.  
   
 3.  Clique em **Visualizar dados usando a paleta de cores**.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_**Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra de Cores**.  
   
 3.  Clique em **Visualizar dados usando intervalos de cores**.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_**Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra de Cores**.  
   
 3.  Clique em **Visualizar dados usando cores personalizadas**.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_**Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra de Cores**.  
   
 3.  Selecione a opção **Visualizar dados usando** \<tipo de regra>. Para usar as opções de distribuição, você deve criar intervalos na página **Distribuição** com base nos dados analíticos associados à camada.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_**Regra**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra**.  
   
 3.  Verifique se a opção **Visualizar dados usando** \<*tipo de regra*> está selecionada.  
   
@@ -240,7 +240,7 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_**Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra de Cores**.  
   
 3.  Selecione a opção de regra de cor a ser usada. Para exibir itens em uma legenda do mapa ou escala de cores, você deve selecionar uma das opções de **Visualizar dados usando** \<tipo de regra>.  
   
@@ -261,7 +261,7 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_**Regra**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra**.  
   
 3.  Clique em **Legenda**.  
   
@@ -274,7 +274,7 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_**Regra**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra**.  
   
 3.  Clique em **Legenda**.  
   

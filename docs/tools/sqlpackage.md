@@ -10,11 +10,11 @@ author: pensivebrian
 ms.author: broneill
 manager: craigg
 ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527588"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63269914"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -36,7 +36,7 @@ O **SqlPackage.exe** é um utilitário de linha de comando que automatiza as seg
   
 A linha de comando do **SqlPackage.exe** permite que você especifique essas ações junto com parâmetros e propriedades específicos da ação.  
 
-**[Baixe a versão mais recente](sqlpackage-download.md)**. Para obter detalhes sobre a versão mais recente, consulte o [notas de versão](release-notes-sqlpackage.md).
+**[Baixe a versão mais recente](sqlpackage-download.md)** . Para obter detalhes sobre a versão mais recente, confira as [notas sobre a versão](release-notes-sqlpackage.md).
   
 ## <a name="command-line-syntax"></a>Sintaxe da linha de comando
 

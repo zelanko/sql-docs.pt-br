@@ -9,10 +9,10 @@ ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eaa2af570ae363e6a48c8d14e5b73c70e6790b5c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106025"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lição 3: Definindo um conjunto de dados para o relatório de tabela (Reporting Services)
@@ -23,7 +23,7 @@ Use o Designer de Consultas no Designer de Relatórios para criar o conjunto de 
 
 ## <a name="define-a-transact-sql-query-for-report-data"></a>Definir uma consulta Transact-SQL a fim de obter dados de relatório  
 
-1. No painel **Dados do Relatório**, selecione **Nova** > **Conjunto de Dados...**. A caixa de diálogo **Propriedades do Conjunto de Dados** é aberta exibindo a seção **Consulta**.
+1. No painel **Dados do Relatório**, selecione **Nova** > **Conjunto de Dados...** . A caixa de diálogo **Propriedades do Conjunto de Dados** é aberta exibindo a seção **Consulta**.
 
     ![vs-data_set_properties_dialog](media/lesson-3-defining-a-dataset-for-the-table-report-reporting-services/vs-dataset-properties-dialog.png)
 

@@ -15,10 +15,10 @@ ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 41d02ba0cd1dc9067bd6425895e53d9a949fd0d3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573263"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Interface do usuário do Designer de Consulta MDX do Analysis Services
@@ -43,7 +43,7 @@ ms.locfileid: "65573263"
   
 |Painel|Função|  
 |----------|--------------|  
-|Botão Selecionar Cubo (**...**)|Exibe o cubo selecionado no momento.|  
+|Botão Selecionar Cubo ( **...** )|Exibe o cubo selecionado no momento.|  
 |Painel Metadados|Exibe uma lista hierárquica de medidas, KPIs (Indicadores Chave de Desempenho) e dimensões definidas no cubo selecionado.|  
 |Painel Membros Calculados|Exibe os membros calculados definidos no momento disponíveis para serem usados na consulta.|  
 |Painel Filtro|Use para escolher dimensões e hierarquias relacionadas para filtrar dados na origem e limitar os dados retornados ao relatório.|  
@@ -91,7 +91,7 @@ ms.locfileid: "65573263"
   
 |Painel|Função|  
 |----------|--------------|  
-|Botão Selecionar Cubo (**...**)|Exibe o cubo selecionado no momento.|  
+|Botão Selecionar Cubo ( **...** )|Exibe o cubo selecionado no momento.|  
 |Painel Metadados/Funções/Modelos|Exibe uma lista hierárquica de medidas, KPIs e dimensões definidas no cubo selecionado.|  
 |Painel Consulta|Exibe o texto da consulta.|  
 |Painel Resultado|Exibe os resultados da execução da consulta.|  

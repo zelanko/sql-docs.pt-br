@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: e13654a38738c84095cc284a24fb723aa2b05327
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580495"
 ---
 # <a name="reporting-services-site-collection-features"></a>Recursos do conjunto de sites do Reporting Services
@@ -34,7 +34,7 @@ O modo do SharePoint do Reporting Services fornece três recursos do conjunto de
 |-------------|-----------------|  
 |**Recurso Administração Central do Servidor de Relatório**|Habilita os Recursos para o gerenciamento da integração com um servidor de relatório do Reporting Services. Esse recurso somente é instalado e usado na coleção de sites da Administração Central do SharePoint.<br /><br /> O recurso de integração do Servidor de Relatório é ativado automaticamente na coleção de sites da Administração Central do SharePoint depois que você instala o Suplemento [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] para produtos SharePoint. Em algumas situações, você precisa ativar o recurso manualmente. Para ativar o recurso de servidor do relatório, use as páginas do Reporting Services na página Configurações de Site da Administração Central do SharePoint.<br /><br /> A versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e posterior do Reporting Services do Suplemento para produtos do SharePoint ativa o recurso de integração do servidor de relatório em todos os conjuntos de sites existentes quando o Suplemento é instalado. Além disso, o recurso fica ativo automaticamente para novos conjuntos de sites.|  
 |**Recurso de Integração do Servidor de Relatório**|Permite relatórios avançados usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services<br /><br /> Esse recurso está Ativo por padrão.|  
-|**Recurso de Integração do Power View**|Habilita a exploração de dados interativa e a apresentação visual em pastas de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , bem como bancos de dados de tabela do Analysis.Services.<br /><br /> O recurso pode ser acessado pelos menus de contexto das seguintes fontes de dados:<br /><br /> **.rdlx**<br /><br /> **.rsds**<br /><br /> Arquivo de conexão **.bism** <br /><br /> <br /><br /> Se [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] não aparecer nos menus de contexto, verifique se o **Recurso de Integração do Power View** está ativado.<br /><br /> Esse recurso está desativado por padrão.|  
+|**Recurso de Integração do Power View**|Habilita a exploração de dados interativa e a apresentação visual em pastas de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , bem como bancos de dados de tabela do Analysis.Services.<br /><br /> O recurso pode ser acessado pelos menus de contexto das seguintes fontes de dados:<br /><br /> **.rdlx**<br /><br /> **.rsds**<br /><br /> Arquivo de conexão **.bism**<br /><br /> <br /><br /> Se [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] não aparecer nos menus de contexto, verifique se o **Recurso de Integração do Power View** está ativado.<br /><br /> Esse recurso está desativado por padrão.|  
 
 ## <a name="next-steps"></a>Próximas etapas
 

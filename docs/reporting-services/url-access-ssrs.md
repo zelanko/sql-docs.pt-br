@@ -16,10 +16,10 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a18ad4fd1d79bc7eae5f45318cece55037c78010
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574245"
 ---
 # <a name="url-access-ssrs"></a>Acesso à URL (SSRS)
@@ -75,7 +75,7 @@ https://myspsite/subsite/_vti_bin/reportserver
  *pathinfo*  
  O nome do caminho relativo do item no banco de dados do servidor de relatório no modo nativo ou a URL totalmente qualificada do item em um catálogo do SharePoint.  
   
- O caminho do item de catálogo. No modo nativo, é o caminho relativo do item no banco de dados do servidor de relatório, que começa com uma barra (**/**). Por exemplo:  
+ O caminho do item de catálogo. No modo nativo, é o caminho relativo do item no banco de dados do servidor de relatório, que começa com uma barra ( **/** ). Por exemplo:  
   
 ```  
 /AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  

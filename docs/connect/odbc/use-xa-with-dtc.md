@@ -13,11 +13,11 @@ author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: ad963176194300054b97db8b6faa360bce17e558
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663168"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63190550"
 ---
 # <a name="using-xa-transactions"></a>Uso de Transações XA
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

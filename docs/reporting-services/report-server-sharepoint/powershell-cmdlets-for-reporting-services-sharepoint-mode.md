@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 998e0e4b400815767135ee81442c4e210aa3ba47
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580614"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlets do PowerShell para o modo do SharePoint do Reporting Services
@@ -34,7 +34,7 @@ Quando você instala o modo do SharePoint do SQL Server 2016 Reporting Services,
 
 ## <a name="cmdlet-summary"></a>Resumo do cmdlet
 
- Para executar os cmdlets, é necessário abrir o Shell de Gerenciamento do SharePoint. Você também pode usar o editor de interface gráfica do usuário incluído no Microsoft Windows, o **Ambiente de Script Integrado do Windows PowerShell (ISE)**. Para obter mais informações, consulte [Starting Windows PowerShell on Windows Server (Iniciando o Windows PowerShell no Windows Server)](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). Nos resumos de cmdlet a seguir, as referências a ‘bancos de dados’ do aplicativo de serviço referem-se a todos os bancos de dados criados e usados por um aplicativo de serviço do Reporting Services. Isso inclui a os bancos de dados de configuração, alerta e temp.  
+ Para executar os cmdlets, é necessário abrir o Shell de Gerenciamento do SharePoint. Você também pode usar o editor de interface gráfica do usuário incluído no Microsoft Windows, o **Ambiente de Script Integrado do Windows PowerShell (ISE)** . Para obter mais informações, consulte [Starting Windows PowerShell on Windows Server (Iniciando o Windows PowerShell no Windows Server)](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). Nos resumos de cmdlet a seguir, as referências a ‘bancos de dados’ do aplicativo de serviço referem-se a todos os bancos de dados criados e usados por um aplicativo de serviço do Reporting Services. Isso inclui a os bancos de dados de configuração, alerta e temp.  
   
  Se uma mensagem de erro semelhante à seguinte for exibida quando você digitar os exemplos do PowerShell:  
   
@@ -71,7 +71,7 @@ Quando você instala o modo do SharePoint do SQL Server 2016 Reporting Services,
   
 |Cmdlet|Descrição|  
 |------------|-----------------|  
-|Install-SPRSService|Instala e registra, ou desinstala, o serviço compartilhado Reporting Services. Isso só pode ser feito em um computador que tem o SQL Server Reporting Services instalado no modo do SharePoint. Para instalação, há duas operações:<br /><br /> - O serviço Reporting Services é instalado no farm.<br /><br /> - A instância do serviço Reporting Services é instalada no computador atual.<br /><br /> Para desinstalação, há duas operações:<br /><br /> - O serviço Reporting Services é desinstalado do computador atual.<br /><br /> - O serviço Reporting Services é desinstalado do farm.<br /><br /> <br /><br /> Se houver outros computadores no farm que têm o serviço Reporting Services instalado ou, se ainda houver aplicativos de serviço Reporting Services em execução no farm, será exibida uma mensagem de aviso.|  
+|Install-SPRSService|Instala e registra, ou desinstala, o serviço compartilhado Reporting Services. Isso só pode ser feito em um computador que tem o SQL Server Reporting Services instalado no modo do SharePoint. Para instalação, há duas operações:<br /><br /> \- O serviço Reporting Services é instalado no farm.<br /><br /> \- A instância do serviço Reporting Services é instalada no computador atual.<br /><br /> Para desinstalação, há duas operações:<br /><br /> \- O serviço Reporting Services é desinstalado do computador atual.<br /><br /> \- O serviço Reporting Services é desinstalado do farm.<br /><br /> <br /><br /> Se houver outros computadores no farm que têm o serviço Reporting Services instalado ou, se ainda houver aplicativos de serviço Reporting Services em execução no farm, será exibida uma mensagem de aviso.|  
 |Install-SPRSServiceProxy|Instala e registra, ou desinstala, o proxy do serviço Reporting Services no farm do SharePoint.|  
 |Obtém-SPRSProxyUrl|Obtém a(s) URL(s) de acesso ao serviço do Reporting Services.|  
 |Get-SPRSServiceApplicationServers|Acessa todos os servidores no farm local do SharePoint que contém uma instalação do serviço compartilhado Reporting Services. Esse cmdlet é útil para upgrades do Reporting Services, para determinar quais servidores executam o serviço compartilhado e, portanto, quais precisam ser atualizados.|  

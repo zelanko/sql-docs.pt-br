@@ -9,14 +9,14 @@ helpviewer_keywords:
 - IRenderingExtension interface
 - rendering extensions [Reporting Services], IRenderingExtension interface
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 594c1bf8f27e3ff48164368a2827238cad4fdd5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e19691222fd55350bb3f0da7aaf94a983ec620cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803214"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193591"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Implementando a interface IRenderingExtension
   A extensão de renderização obtém os resultados de uma definição de relatório combinada com os dados reais e renderiza os dados resultantes para um formato que seja utilizável. A transformação dos dados combinados e a formatação são feitas usando uma classe CLR (Common Language Runtime) que implementa <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. Isto transforma o modelo de objeto em um formato de saída que é consumível por um visualizador, impressora ou outro destino de saída.  
@@ -70,7 +70,7 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
  O método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.RenderStream%2A> processa um fluxo específico do relatório. Todos os fluxos são criados durante a chamada <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> inicial, mas os fluxos não são retornados ao cliente inicialmente. Esse método é usado para fluxos secundários, como imagens em renderização HTML, ou páginas adicionais de uma extensão de renderização de várias páginas, como Imagem/EMF.  
   
 ## <a name="getrenderingresource-method"></a>Método GetRenderingResource  
- O método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> recupera as informações sem executar toda renderização do relatório. Existem ocasiões em que o relatório necessita de informações que não exigem que o próprio relatório seja renderizado. Por exemplo, se você precisar do ícone associado à extensão de renderização, use o parâmetro *deviceInfo* que contém a marcação única **\<Icon>**. Nesses casos, você pode usar o método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>.  
+ O método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> recupera as informações sem executar toda renderização do relatório. Existem ocasiões em que o relatório necessita de informações que não exigem que o próprio relatório seja renderizado. Por exemplo, se você precisar do ícone associado à extensão de renderização, use o parâmetro *deviceInfo* que contém a marcação única **\<Icon>** . Nesses casos, você pode usar o método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Implementando uma extensão de renderização](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

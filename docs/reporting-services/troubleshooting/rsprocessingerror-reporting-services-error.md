@@ -11,10 +11,10 @@ ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 684f2ec1878e7918f9aa43017feb4b4f8d32cfa1
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573818"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erro do Reporting Services
@@ -96,11 +96,11 @@ ms.locfileid: "65573818"
 ### <a name="cannot-compare-data-types-for-a-filter"></a>Não é possível comparar tipos de dados para um filtro  
  Em uma equação de filtro, a expressão de filtro que define o que filtrar e o valor do filtro devem ser do mesmo tipo de dados a ser comparado. Se ocorrer um dos seguintes erros, modifique a expressão do campo ou o valor do filtro de forma que os tipos de dados se correspondam:  
   
--   O processamento do *\<report item type>* para o *\<report item name>* não pode ser executado. Não é possível comparar dados dos tipos *\<type>* e *\<type>*. Verifique o tipo de dados retornado pelo *\<report item name>*.  
+-   O processamento do *\<report item type>* para o *\<report item name>* não pode ser executado. Não é possível comparar dados dos tipos *\<type>* e *\<type>* . Verifique o tipo de dados retornado pelo *\<report item name>* .  
   
--   Falha ao avaliar o *\<property name>*.  
+-   Falha ao avaliar o *\<property name>* .  
   
--   Falha ao avaliar o *\<property name>*. Isso referencia um campo de conjunto de dados que tem um erro: *\<error string>*.  
+-   Falha ao avaliar o *\<property name>* . Isso referencia um campo de conjunto de dados que tem um erro: *\<error string>* .  
   
  Para obter mais informações, consulte [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
@@ -109,13 +109,13 @@ ms.locfileid: "65573818"
   
  Você também pode passar o nome de um escopo específico para uma função de agregação. O escopo pode se referir ao nome de um conjunto de dados, uma região de dados ou ao nome de um escopo superior na hierarquia de dados. Isso se aplica às seguintes mensagens:  
   
--   O '*\<nome do item de relatório>*' do *\<tipo de item de relatório>* tem um escopo inválido "*\<nome do escopo>*". O escopo deve ser o escopo atual ou estar contido no escopo atual.  
+-   O ' *\<nome do item de relatório>* ' do *\<tipo de item de relatório>* tem um escopo inválido " *\<nome do escopo>* ". O escopo deve ser o escopo atual ou estar contido no escopo atual.  
   
--   A expressão *\<property name>* do '*\<report item name>*' do *\<report item type>* tem um parâmetro de escopo que não é válido para uma função de agregação. O parâmetro de escopo deve ser definido para uma constante de cadeia de caracteres que seja igual ao nome de um grupo que a contenha, ao nome de uma região de dados que a contenha ou ao nome de um conjunto de dados.  
+-   A expressão *\<property name>* do ' *\<report item name>* ' do *\<report item type>* tem um parâmetro de escopo que não é válido para uma função de agregação. O parâmetro de escopo deve ser definido para uma constante de cadeia de caracteres que seja igual ao nome de um grupo que a contenha, ao nome de uma região de dados que a contenha ou ao nome de um conjunto de dados.  
   
  Para funções de agregação que calculam os totais de execução (**Previous**, **RunningValue**ou **RowNumber**), você pode especificar um parâmetro de escopo que seja um nome de grupo de linha ou de coluna, mas não ambos. Isso se aplica à seguinte mensagem de erro:  
   
--   As funções de agregação **Previous**, **RunningValue** ou **RowNumber** usadas nas células de dados do '*\<report item name>*' do *\<report item type>* referenciam escopos de agrupamento nas colunas e linhas do *\<report item type>*. Os parâmetros de escopo de todas as funções de agregação **Previous**, **RunningValue** ou **RowNumber** em um *\<report item type>* podem referenciar agrupamentos de linhas ou agrupamentos de colunas de dados, mas não ambos.  
+-   As funções de agregação **Previous**, **RunningValue** ou **RowNumber** usadas nas células de dados do ' *\<report item name>* ' do *\<report item type>* referenciam escopos de agrupamento nas colunas e linhas do *\<report item type>* . Os parâmetros de escopo de todas as funções de agregação **Previous**, **RunningValue** ou **RowNumber** em um *\<report item type>* podem referenciar agrupamentos de linhas ou agrupamentos de colunas de dados, mas não ambos.  
   
  Para obter mais informações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) e [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   

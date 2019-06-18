@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 73bc8332e4a0c6d86e9ef57b5fc6c94d39cbafae
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 471f9865809c38a2cce3815ef8f04a9cca3965de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021650"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63308193"
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>Criar, excluir ou modificar uma pasta (portal da Web)
   É possível criar pastas para organizar e administrar os itens publicados em um servidor de relatório. Criar pastas pode ajudar os usuários a localizar relatórios de seu interesse. Para gerenciadores de conteúdo, pastas fornecem uma estrutura para a aplicação de permissões. É possível criar atribuições de função em pastas específicas para restringir o acesso a relatórios em desenvolvimento ou que não devem ser distribuídos amplamente.  
