@@ -16,14 +16,14 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], application building
 - Web service [Reporting Services], client creation
 ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 73a2d5ec43cbde8c130b346072774edcf94f44f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f22f1b32318f5f6440b4506adcbb4926224908e3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798144"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284653"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Building Applications Using the Web Service and the .NET Framework
   Com o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], você pode usar constructos de programação conhecidos, como métodos, tipos primitivos e tipos complexos definidos pelo usuário, para trabalhar com serviços Web. O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] contém uma infraestrutura e ferramentas que você poderá usar para criar clientes do serviço Web que pode chamar qualquer serviço Web compatível com os padrões do W3C (World Wide Web Consortium).  

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Extension element
 - deploying [Reporting Services], extensions
 ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e638318b740631a7466f204b1b14fb5ba9e82f2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b3e8c86c1ba590ab574e7afe351b3e29c2c918b7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773344"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194065"
 ---
 # <a name="deploying-a-data-processing-extension"></a>Implantando uma extensão de processamento de dados
   Depois de gravar e compilar a extensão de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] em uma biblioteca do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], você precisa torná-la detectável pelo servidor de relatório e pelo Designer de Relatórios. Isso é tão fácil quanto copiar a extensão para os diretórios adequados e adicionar entradas aos arquivos de configuração do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adequados.  

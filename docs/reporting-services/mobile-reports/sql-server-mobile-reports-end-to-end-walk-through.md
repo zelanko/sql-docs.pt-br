@@ -8,14 +8,14 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c4c1735d7f6e896ecb3a0c29b6266cddc48dffae
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286954"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62502141"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Relatórios móveis do SQL Server: Passo a passo completo
 Realize a criação de relatórios móveis para qualquer tamanho de tela com o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] no portal da Web do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , e exiba-os nos aplicativos móveis do Power BI.
@@ -36,7 +36,7 @@ Para acompanhar, você precisa destes produtos:
 * Para criar conjuntos de dados compartilhados, [instale o Construtor de Relatórios](../install-windows/install-report-builder.md).  
 * Para criar relatórios móveis, [instale o Publicador de Relatórios Móveis do SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Bancos de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
-*  OU: O banco de dados de exemplo da World Wide Importers, disponível na página [Amostras do Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
+*  OU: banco de dados de exemplo do World Wide Importers, disponível na página [Amostras do Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Para exibir o resultado: 
   *   [Inscreva-se no serviço do Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) e
   *  [Baixe o aplicativo móvel do Power BI](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) em seu dispositivo móvel: iOS, telefone com Android ou dispositivo com Windows 10.  
@@ -105,7 +105,7 @@ Crie KPIs direitamente no portal da Web do [!INCLUDE[PRODUCT_NAME](../../include
    
    ![PBI_SSMRP_KPI_DatasetField](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpi-datasetfield.png)  
    
-3. Clique nas reticências (**...**) na caixa **Selecionar campo de conjunto de dados** e selecione um conjunto de dados da etapa anterior.  
+3. Clique nas reticências ( **...** ) na caixa **Selecionar campo de conjunto de dados** e selecione um conjunto de dados da etapa anterior.  
    
    ![PBI_SSMRP_KPIPickDataset](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpipickdataset.png)  
    
@@ -121,7 +121,7 @@ Crie KPIs direitamente no portal da Web do [!INCLUDE[PRODUCT_NAME](../../include
 
 7. Na caixa **Conjunto de tendências** clique em **Tendência de conjunto de dados**.  
   
-6. Na caixa **Selecionar tendência do conjunto de dados** clique no botão de reticências (**...**)  
+6. Na caixa **Selecionar tendência do conjunto de dados** clique no botão de reticências ( **...** )  
    
 7. Selecione um campo e clique em **OK**.  
 

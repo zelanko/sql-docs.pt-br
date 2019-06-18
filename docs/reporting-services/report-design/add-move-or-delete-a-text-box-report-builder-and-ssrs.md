@@ -9,10 +9,10 @@ ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 09a8fd213f8bebd171a9e9fa2427345e677523a5
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581956"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Adicionar, mover ou excluir uma caixa de texto (Construtor de Relatórios e SSRS)

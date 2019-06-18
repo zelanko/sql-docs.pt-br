@@ -12,21 +12,21 @@ helpviewer_keywords:
 - initializing report servers [Reporting Services]
 - verifying report server initializations
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec32fcd9a05fe0123e25570d47f1d613a6c00502
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a1bf17d6635870a171ed1a20a1c659c190077d8e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813306"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513298"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>Chaves de criptografia do SSRS – inicializar um servidor de relatório
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], um servidor inicializado é aquele que pode criptografar e descriptografar dados em um banco de dados de servidor de relatório. A inicialização é um requisito para a operação do servidor de relatório. A inicialização ocorre quando o serviço Servidor de Relatório é iniciado pela primeira vez. Também ocorre quando você associa o servidor de relatório à implantação existente ou quando recria manualmente as chaves como parte do processo de recuperação. Para obter mais informações sobre como e por que as chaves de criptografia são usadas, veja [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) e [Armazenar dados criptografados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
  Em parte, as chaves de criptografia têm como base as informações de perfil do serviço Servidor de Relatório. Se você alterar a identidade de usuário usada para executar o serviço Servidor de Relatório, deverá atualizar as chaves adequadamente. Se você estiver usando a ferramenta Configuração do Reporting Services para alterar a identidade, essa etapa será tratada para você automaticamente.  
   
- Se a inicialização falhar por alguma razão, o servidor de relatório retornará um erro **RSReportServerNotActivated** em resposta a solicitações do usuário e do serviço. Nesse caso, poderá ser necessário solucionar o problema da configuração do sistema ou do servidor. Para saber mais, veja a [SSRS: solução de problemas e erros com o Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx)no TechNet Wiki.  
+ Se a inicialização falhar por alguma razão, o servidor de relatório retornará um erro **RSReportServerNotActivated** em resposta a solicitações do usuário e do serviço. Nesse caso, poderá ser necessário solucionar o problema da configuração do sistema ou do servidor. Para saber mais, veja a [SSRS: solução de problemas e erros com o Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) no TechNet Wiki.  
   
 ## <a name="overview-of-the-initialization-process"></a>Visão geral do processo de inicialização  
  O processo de inicialização cria e armazena uma chave simétrica usada para criptografia. A chave simétrica é criada pelos Serviços de Criptografia do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e subsequentemente usada pelo serviço Servidor de Relatório para criptografar e descriptografar dados. A própria chave simétrica é criptografada com uma chave assimétrica.  

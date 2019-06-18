@@ -9,14 +9,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], virtual directories
 - virtual directories [Reporting Services]
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0aa67d80d18b6f93393cfccac146765a8df536ed
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 25c24bae55bb6d4defb2ef9330b80ddf875723e4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813339"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62514415"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurar as URLs do servidor de relatório (Configuration Manager do SSRS)
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], as URLs são usadas para acessar o serviço Web do Servidor de Relatório e o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Antes de usar qualquer um dos aplicativos, você deve configurar, pelo menos, uma URL para o serviço Web e o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece valores padrão para as URLs de ambos os aplicativos que funcionam bem na maioria dos cenários de implantação, incluindo implantações lado a lado com outros serviços Web e aplicativos.  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - code access security [Reporting Services], about code access security
 - named permission sets [Reporting Services]
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6cbbca3209a8d83d5aebd3cd9b9a3d6e296d30f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5d629f820dfa2efd87e6460c1c85566e7b33cde8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780604"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193824"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Segurança de acesso do código no Reporting Services
   A segurança de acesso do código gira em torno desses conceitos centrais: evidência, grupos de código e conjuntos de permissões nomeadas. No [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], os componentes Gerenciador de Relatórios, Desingner de Relatórios e Servidor de Relatório têm um arquivo de política que configura a segurança de acesso do código para assemblies personalizados, bem como para extensões de dados, entrega, renderização e segurança. As seções a seguir fornecem uma visão geral da segurança de acesso do código. Para obter informações mais detalhadas sobre os tópicos abordados nesta seção, consulte “Modelo de política de segurança” na documentação do SDK do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  

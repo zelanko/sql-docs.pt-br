@@ -11,14 +11,14 @@ helpviewer_keywords:
 - custom DataSet objects [Reporting Services]
 - external DataSet objects [Reporting Services]
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c8a2e36f2a897be3c9ea7f37077ae5e947ace9bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1c3b4ad599864bc2ddb752982ed61bf73684c2f0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685304"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193870"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Usando um conjunto de dados externo com o Reporting Services
   O objeto **DataSet** é central para o suporte a cenários de dados desconectados e distribuídos com o [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. O objeto **DataSet** é uma representação residente na memória dos dados que fornece um modelo de programação relacional consistente, seja qual for a fonte de dados. Pode ser usado com várias fontes de dados diferentes, com dados XML ou para gerenciar dados locais ao aplicativo. O objeto **DataSet** representa um conjunto completo de dados, incluindo tabelas relacionadas, restrições e relacionamentos entre as tabelas. Por causa da versatilidade do objeto **DataSet** em armazenar e expor dados, com frequência, os dados poderão ser processados e transformados em um objeto **DataSet** antes da ocorrência de qualquer relatório sobre os dados.  

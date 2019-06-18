@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: dce33b0f267dadd8454378fccb72112970553a96
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580510"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Ativar o servidor de relatório e os recursos de integração do Power View no SharePoint
@@ -26,7 +26,7 @@ ms.locfileid: "65580510"
 > [!NOTE]
 > A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
 
- Se você instalar o suplemento Reporting Services para Produtos do SharePoint 2010 após a instalação do produto do SharePoint, os recursos de integração do Servidor de Relatório e do Power View só serão ativados para conjuntos de sites raiz. Para outros conjuntos de sites, você precisa ativar os recursos manualmente. Por exemplo, se você tiver um conjunto de sites **https://[nome do meu servidor]/sites/[nome da coleção de sites]**, precisará ativar os recursos do conjunto de sites do Reporting Services manualmente.  
+ Se você instalar o suplemento Reporting Services para Produtos do SharePoint 2010 após a instalação do produto do SharePoint, os recursos de integração do Servidor de Relatório e do Power View só serão ativados para conjuntos de sites raiz. Para outros conjuntos de sites, você precisa ativar os recursos manualmente. Por exemplo, se você tiver um conjunto de sites **https://[nome do meu servidor]/sites/[nome da coleção de sites]** , precisará ativar os recursos do conjunto de sites do Reporting Services manualmente.  
   
  Quando não houver nenhum conjunto de sites raiz, o suplemento Reporting Services registrará uma mensagem semelhante à mostrada a seguir.  
   

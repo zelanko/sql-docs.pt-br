@@ -9,10 +9,10 @@ ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e918a674b48eeb34fad7ea660b7e907fc9dcb44b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577186"
 ---
 # <a name="report-builder-functions---rownumber-function"></a>Funções do Construtor de Relatórios – Função RowNumber

@@ -8,10 +8,10 @@ ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6a36d9acd795bfbcc226d7ffe601fd2b15ee7406
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65502654"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Solucionar um problema da instalação do Reporting Services
@@ -137,7 +137,7 @@ ms.locfileid: "65502654"
  
  - O aplicativo de serviço do SSRS não está mapeado para este aplicativo Web. Use as páginas do aplicativo de serviço do SSRS para associar o proxy do aplicativo de serviço SSRS ao Grupo Proxy de Aplicativo para esse aplicativo web. 
   
- **Solução alternativa:** A mensagem de erro contém três etapas sugeridas para corrigir este problema. A primeira sugestão na mensagem 'Uma URL do servidor de relatório não está configurada.' é relevante ao integrar a versão do servidor de relatório anterior para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. A Configuração do SharePoint para as versões de servidor de relatório anteriores é concluída na página **Configurações Gerais do Aplicativo** , usando **SQL Server Reporting Services (2008 e 2008 R2)**.  
+ **Solução alternativa:** A mensagem de erro contém três etapas sugeridas para corrigir este problema. A primeira sugestão na mensagem 'Uma URL do servidor de relatório não está configurada.' é relevante ao integrar a versão do servidor de relatório anterior para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. A Configuração do SharePoint para as versões de servidor de relatório anteriores é concluída na página **Configurações Gerais do Aplicativo** , usando **SQL Server Reporting Services (2008 e 2008 R2)** .  
   
  **Mais informações:** Você verá esta mensagem de erro ao tentar usar qualquer funcionalidade do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que exige uma conexão com o serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Isso inclui:  
   
@@ -211,7 +211,7 @@ ms.locfileid: "65502654"
     -   **execute \<** *.NET 4.0 Framework directory* **>\InstallUtil.exe \<** *Report Server Bin directory* **>\ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
-        >  Substitua \<*.NET 4.0 Framework directory*> pelo caminho físico dos arquivos do .NET Framework 4.0 e \<*Report Server Bin directory*> pelo caminho físico dos arquivos bin do servidor de relatório.  
+        >  Substitua \< *.NET 4.0 Framework directory*> pelo caminho físico dos arquivos do .NET Framework 4.0 e \<*Report Server Bin directory*> pelo caminho físico dos arquivos bin do servidor de relatório.  
   
 3.  Reinicie o serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   

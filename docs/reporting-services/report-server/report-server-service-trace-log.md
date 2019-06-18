@@ -11,10 +11,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
 ms.openlocfilehash: d1efc5b57191ec17f610206115743b656d58d4b3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581383"
 ---
 # <a name="report-server-service-trace-log"></a>Log de rastreamento do serviço Servidor de Relatório
@@ -101,9 +101,9 @@ Os campos a seguir podem ser localizados em um log de rastreamento:
 ## <a name="previous-versions"></a>Versões anteriores
 
 Em versões anteriores do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], havia vários arquivos de log de rastreamento, um para cada aplicativo. Os arquivos a seguir estão obsoletos e não são mais criados no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e em versões mais recentes:
-+ ReportServerWebApp_*\<timestamp>*.log
-+ ReportServer_*\<timestamp>*.log
-+ ReportServerService_main_*\<timestamp>*.log
++ ReportServerWebApp_ *\<timestamp>* .log
++ ReportServer_ *\<timestamp>* .log
++ ReportServerService_main_ *\<timestamp>* .log
   
 ## <a name="see-also"></a>Confira também
 

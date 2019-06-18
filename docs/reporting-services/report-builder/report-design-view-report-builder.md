@@ -20,10 +20,10 @@ ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3dff76f6293b5f02373234fb2546076f7584f13
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577984"
 ---
 # <a name="report-design-view-report-builder"></a>Exibição do design de relatório (Construtor de Relatórios)

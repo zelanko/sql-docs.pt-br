@@ -8,14 +8,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cf58aa27b8b426dca887d24fbfe15158263c8ae2
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a9789c2d017200650bcae7b5f864da708e5c7453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212696"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194300"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Criando um componente de tempo de design de item de relatório personalizado
   Um componente em tempo de design de item de relatório personalizado é um controle que pode ser usado no ambiente do Designer de Relatórios do Visual Studio. O componente em tempo de design de item de relatório personalizado oferece uma superfície de design ativada que pode aceitar operações de arrastar e soltar, a integração ao pesquisador de propriedade [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e a capacidade de oferecer editores de propriedade personalizados.  
@@ -190,12 +190,12 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   Componentes do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
--   Passo a passo: criando um controle do Windows Forms que aproveita recursos em tempo de design do Visual Studio  
+-   Passo a passo: Criando um controle do Windows Forms que aproveita recursos em tempo de design do Visual Studio  
   
 ## <a name="see-also"></a>Consulte Também  
  [Arquitetura de item de relatório personalizado](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
  [Criando um componente de item de relatório personalizado em tempo de execução](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Bibliotecas de classes de itens de relatório personalizados](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
- [Como implantar um Item de relatório personalizado](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Como implantar um item de relatório personalizado](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

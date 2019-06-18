@@ -15,10 +15,10 @@ ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7973c4ad5483193aa4ed2116b714f6d404c4da1c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570695"
 ---
 # <a name="secure-my-reports"></a>Proteger Meus Relatórios
@@ -32,7 +32,7 @@ ms.locfileid: "65570695"
   
  Uma atribuição de função de **Meus Relatórios** consiste nos seguintes elementos:  
   
--   A pasta Meus Relatórios do usuário, que está localizada na pasta Pastas dos Usuários\\*\<username>* \Meus Relatórios.  
+-   A pasta Meus Relatórios do usuário, que está localizada na pasta Pastas dos Usuários\\ *\<username>* \Meus Relatórios.  
   
 -   A conta de usuário, que é determinada quando a pasta Meus Relatórios é ativada. Uma pasta é ativada quando o usuário clica em uma pasta Meus Relatórios no Gerenciador de Relatórios ou publica um relatório em uma pasta Meus Relatórios a partir do Designer de Relatórios. Essa pasta também é ativada quando o usuário solicita propriedades no link Meus Relatórios.  
   

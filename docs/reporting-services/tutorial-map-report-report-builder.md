@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 25f5dbcee0144b585fc3b328a699332c3346ce36
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298644"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041428"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Relatório de mapa (construtor de relatórios)
 Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , você aprenderá sobre os recursos de mapa que podem ser usados para exibir dados em uma tela de fundo geográfica de um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -27,7 +27,7 @@ Para variar a aparência de elementos de mapas, especifique um campo com valores
 Neste tutorial, você cria um relatório de mapa que exibe a localização de lojas em condados estatais de Nova York.  
    
 > [!NOTE]  
-> Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como navegar até um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, confira o primeiro tutorial desta série: [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, consulte o primeiro tutorial desta série: [Tutorial: Criação de um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 30 minutos.  
   
@@ -166,15 +166,15 @@ Nesta seção, você usa o assistente de camadas do mapa para adicionar uma cama
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. Na barra de ferramentas do designer de consultas, clique em **Executar** (**!**).  
+9. Na barra de ferramentas do designer de consultas, clique em **Executar** ( **!** ).  
   
     O conjunto de resultados contém sete colunas que representam um conjunto de lojas no estado de Nova York que vendem bens de consumo. Aqui está uma lista, com explicações para aquelas que podem não ser óbvias: 
     *   **StoreKey**: um identificador de repositório.  
     *   **StoreName**.
-    *   **SellingArea**: a área disponível para exibição do produto, que varia de 455 pés quadrados a 1125 pés quadrados.
+    *   **SellingArea**: a área disponível para exibição do produto, que varia de 455 pés quadrados a 1.125 pés quadrados.
     *   **City**.
     *   **County**.
-    *   **Sales**: total de vendas. 
+    *   **Sales**: Total de vendas. 
     *   **SpatialLocation**: local em longitude e latitude. 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
@@ -313,7 +313,7 @@ Nesta seção, para permitir que os itens em uma camada sejam exibidos por meio 
   
 3.  Clique na seta ao lado de PolygonLayer1 > **Dados da Camada**. A caixa de diálogo **Mapear Propriedades de Camada do Polígono** aparece.  
   
-4.  Na guia **Visibilidade** , em **Transparência (percentual)**, digite **30**.  
+4.  Na guia **Visibilidade** , em **Transparência (percentual)** , digite **30**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -413,7 +413,7 @@ Por padrão, os dados têm um formato geral. Nesta seção, você aplica formato
   
 1.  Com a escala de cores ainda selecionada, no painel Propriedades, você vê as propriedades de **MapColorScale**. 
   
-2. Expanda a seção Título e, na propriedade Legenda, digite **Vendas (Milhares)**.
+2. Expanda a seção Título e, na propriedade Legenda, digite **Vendas (Milhares)** .
 
 3. Altere a propriedade TextColor para **Branco**.  
 

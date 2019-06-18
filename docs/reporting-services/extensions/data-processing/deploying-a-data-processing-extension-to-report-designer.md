@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], deploying
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a248250c1f5584a12bc40444d27c96ccc7e69416
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b3ff2fbd4cc5b910cdb5191d4fc51941167d8bfb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818684"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194033"
 ---
 # <a name="deploying-a-data-processing-extension-to-report-designer"></a>Implantando uma extensão de processamento de dados no Designer de Relatórios
   O Designer de Relatórios usa extensões de processamento de dados para recuperar e processar dados enquanto você estiver criando relatórios. Você deve implantar o seu assembly de extensão de processamento de dados para o Designer de Relatórios como um assembly privado. Precisa também criar uma uma entrada no arquivo de configuração do Designer de Relatórios, RSReportDesigner.config.  

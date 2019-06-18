@@ -8,10 +8,10 @@ ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/15/2019
 ms.openlocfilehash: 490a21572d1a62bbf90754a8c33e0aa98bac0aea
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571345"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriedades do Servidor (página Avançado) - Reporting Services
@@ -42,7 +42,7 @@ O número de dias para manter informações de execução de relatório no log d
 > [!NOTE]
 > Definir um valor de **0** *exclui* todas as entradas do log de execução. Um valor de **-1** mantém as entradas do log de execução e não as exclui.
 
-**RDLXReportTimetout** Valor padrão de tempo limite de processamento de relatório RDLX *(relatórios do Power View em um servidor SharePoint)*, em segundos, para todos os relatórios gerenciados no namespace do servidor de relatório. Esse valor pode ser substituído no nível do relatório. Se a propriedade estiver definida, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado expirar. Os valores válidos são de **-1** até **2**,**147**,**483**,**647**. Se o valor for **-1**, relatórios no namespace não expirarão durante o processamento. O valor padrão é **1800**.
+**RDLXReportTimetout** Valor padrão de tempo limite de processamento de relatório RDLX *(relatórios do Power View em um servidor SharePoint)* , em segundos, para todos os relatórios gerenciados no namespace do servidor de relatório. Esse valor pode ser substituído no nível do relatório. Se a propriedade estiver definida, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado expirar. Os valores válidos são de **-1** até **2**,**147**,**483**,**647**. Se o valor for **-1**, relatórios no namespace não expirarão durante o processamento. O valor padrão é **1800**.
 
 **SessionTimeout** A quantidade de tempo, em segundos, que uma sessão permanece ativa. O valor padrão é **600**.  
 

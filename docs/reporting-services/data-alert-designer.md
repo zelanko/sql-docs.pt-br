@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571599"
 ---
 # <a name="data-alert-designer"></a>Editar um Alerta de Dados no Designer de Alertas
@@ -170,7 +170,7 @@ Você cria e edita definições de alerta de dados no Designer de Alertas de Dad
 ### <a name="email-settings"></a>Configurações de email  
  Você especifica os endereços de email de destinatários para receber mensagens de alerta de dados por email na opção **Destinatário(s)** . Vários endereços de email são separados por ponto-e-vírgulas, da mesma maneira que você faz com mensagens de email do Microsoft Office Outlook. Você também pode especificar grupos de distribuição como destinatários, o que torna o gerenciamento da lista de destinatários mais fácil e eficiente. Se o SharePoint puder determinar seu endereço de email quando você estiver criando uma definição de alerta, seu endereço de email será adicionado automaticamente à lista de destinatários. Caso contrário, você precisará adicionar-se explicitamente como um destinatário.  
   
- O assunto padrão do email é **Alerta de dados para \<alert name>**. Você pode alterar o assunto para que se ajuste às suas necessidades.  
+ O assunto padrão do email é **Alerta de dados para \<alert name>** . Você pode alterar o assunto para que se ajuste às suas necessidades.  
   
  Você também pode fornecer uma descrição a ser incluída na mensagem de alerta de dados na opção **Descrição** . A inclusão de uma descrição, principalmente se você tiver dados de alerta similares, ajudará você a diferenciar e compreender rapidamente as mensagens de alerta. Além da mensagem de alerta enviada quando os dados de relatório atenderem às regras especificadas, uma mensagem de alerta será enviada a todos os destinatários quando ocorrer um erro. Para obter mais informações, consulte [Data Alert Messages](../reporting-services/data-alert-messages.md).  
   

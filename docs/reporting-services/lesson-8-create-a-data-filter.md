@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2d475716043c14c2dabac3090c58b12c9648b468
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 991610dacf7a13a467a3058f2bdbcfcc454ee71e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700364"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62512388"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lição 8: Criar um filtro de dados
 Após adicionar uma ação de detalhamento no relatório pai, a próxima etapa é criar um filtro de dados para a tabela de dados definida para o relatório filho.  
@@ -39,7 +39,7 @@ Você pode criar um filtro baseado em tabela **ou** um filtro de consulta para o
   
 4.  No campo **Expressão** , clique em **ProductID** na lista suspensa. Esta é a coluna à qual você aplicará o filtro.  
   
-5.  Clique no operador igual (**=**) na lista suspensa **Operador** .  
+5.  Clique no operador igual ( **=** ) na lista suspensa **Operador** .  
   
 6.  Clique no botão de expressão ao lado do campo **Valor** , selecione **Parâmetros** na área **Categoria** e clique duas vezes em **productid** na área **Valores** . O campo **Definir expressão para: Valor** agora deve conter uma expressão semelhante a **=Parameters!productid.Value**.  
   

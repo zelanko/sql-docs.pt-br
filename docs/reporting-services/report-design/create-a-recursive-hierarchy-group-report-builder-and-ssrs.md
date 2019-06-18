@@ -9,10 +9,10 @@ ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8a506442cca08dfa40cb3665571662a477ef5345
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581554"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Criar um grupo de hierarquia recursiva (Construtor de Relatórios e SSRS)
@@ -48,7 +48,7 @@ Nos relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
     > [!NOTE]  
     >  Se o painel Propriedades não for exibido, clique em **Propriedades** na guia **Exibir** .  
   
-2.  No painel Propriedades, expanda o nó **Preenchimento**, clique em **Esquerda** e, na lista suspensa, selecione **\<Expression...>**.  
+2.  No painel Propriedades, expanda o nó **Preenchimento**, clique em **Esquerda** e, na lista suspensa, selecione **\<Expression...>** .  
   
 3.  No painel Expressão, digite a seguinte expressão:  
   

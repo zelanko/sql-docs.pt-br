@@ -11,14 +11,14 @@ helpviewer_keywords:
 - exceptions [Reporting Services], about exception handling
 - SoapException object
 ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b743287ad9056d32c55a7d83189cd7c98fcf9920
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7fbf4c9d89d35f4fbb437a41c691f7f8c6578b9b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257011"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028563"
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>Manipulando exceções no Reporting Services
   Quando uma solicitação de cliente API SOAP do Reporting Services não pode ser concluída, o servidor de relatório retorna um erro em vez dos resultados esperados da chamada. Quando uma chamada não pode ser concluída, é retornado um erro para o serviço Web Servidor de Relatórios como um elemento XML **Falha** de SOAP. O principal elemento descritivo da falha é o elemento **detail**, que inclui todas as informações de erro fornecidas pelo servidor de relatório, além de informações adicionais de erro do serviço Web. A principal informação do elemento **detail** é o código de erro do servidor de relatório. com base na mensagem e no código de erro, você poderá determinar a próxima ação apropriada a ser tomada levar em seus aplicativos. Para saber mais sobre falhas SOAP, veja o site do W3C (World Wide Web Consortium), http://www.w3.org/TR/SOAP.  

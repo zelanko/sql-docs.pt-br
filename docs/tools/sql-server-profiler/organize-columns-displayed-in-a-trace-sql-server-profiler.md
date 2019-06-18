@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7e3f2a66fd4963de77fa3545247f9d81690ddec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734534"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62711910"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organizar colunas exibidas em um rastreamento (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47734534"
 |1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
 |25|12/12/2006 5:24:44 PM|SQL:StmtCompleted|648|  
   
--   Selecione apenas uma coluna para agrupar e agregar os eventos do rastreamento. Quando uma única coluna de dados é selecionada para o agrupamento, a janela de rastreamento exibe os eventos agrupados pelos valores nessa coluna de dados e recolhe todos os eventos debaixo dela. Um sinal de adição (**+**) aparece à esquerda do evento na coluna de dados selecionada para o agrupamento com o número de eventos recolhidos sob ela entre parênteses, à direita do evento. O exemplo a seguir mostra como a grade da janela de rastreamento apareceria se você selecionasse apenas a coluna **EventClass** para agrupamento. Observe que todos os eventos estão organizados sob a coluna de dados **EventClass** . Para visualizar todos os eventos, clique no sinal mais para expandir e exibir todas as classes de evento daquele tipo.  
+-   Selecione apenas uma coluna para agrupar e agregar os eventos do rastreamento. Quando uma única coluna de dados é selecionada para o agrupamento, a janela de rastreamento exibe os eventos agrupados pelos valores nessa coluna de dados e recolhe todos os eventos debaixo dela. Um sinal de adição ( **+** ) aparece à esquerda do evento na coluna de dados selecionada para o agrupamento com o número de eventos recolhidos sob ela entre parênteses, à direita do evento. O exemplo a seguir mostra como a grade da janela de rastreamento apareceria se você selecionasse apenas a coluna **EventClass** para agrupamento. Observe que todos os eventos estão organizados sob a coluna de dados **EventClass** . Para visualizar todos os eventos, clique no sinal mais para expandir e exibir todas as classes de evento daquele tipo.  
   
 |EventClass|StartTime|Duração|ClientProcessID|  
 |----------------|---------------|--------------|---------------------|  
@@ -80,7 +80,7 @@ ms.locfileid: "47734534"
   
 6.  Clique em **OK** na caixa de diálogo **Organizar Colunas** e, em seguida, clique em **OK** na caixa de diálogo **Propriedades da Tabela de Rastreamento** ou **Propriedades do Arquivo de Rastreamento** .  
   
-     Depois do clique em **OK** na caixa de diálogo **Propriedades da Tabela de Rastreamento** ou **Propriedades do Arquivo de Rastreamento** , as colunas de dados são reorganizadas no rastreamento exibido. Todos os outros eventos de coluna de dados são agregados sob a coluna de dados que você moveu para a lista **Grupos** . Clique no sinal de adição (**+**), à esquerda do evento na coluna de dados selecionada para a agregação, para expandi-la e ver todos os eventos daquele tipo. A coluna escolhida para a agregação permanece fixa na exibição, mas é possível rolar para a direita ou para a esquerda e visualizar as outras colunas.  
+     Depois do clique em **OK** na caixa de diálogo **Propriedades da Tabela de Rastreamento** ou **Propriedades do Arquivo de Rastreamento** , as colunas de dados são reorganizadas no rastreamento exibido. Todos os outros eventos de coluna de dados são agregados sob a coluna de dados que você moveu para a lista **Grupos** . Clique no sinal de adição ( **+** ), à esquerda do evento na coluna de dados selecionada para a agregação, para expandi-la e ver todos os eventos daquele tipo. A coluna escolhida para a agregação permanece fixa na exibição, mas é possível rolar para a direita ou para a esquerda e visualizar as outras colunas.  
   
 7.  Para voltar à exibição normal dos dados do rastreamento, clique em **Exibição Agregada** no menu **Exibir** para cancelar a seleção. Se desejar voltar à exibição agregada, clique outra vez em **Exibição Agregada** no menu **Exibir** para selecioná-la novamente. Note que você também pode clicar em **Exibição Agrupada** no menu **Exibir** para exibir os eventos do rastreamento agrupado sem que eles sejam recolhidos.  
   

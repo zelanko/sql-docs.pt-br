@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: 3550e17c8f4d6384ceafabb77aa9ca70cd80c44b
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042325"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63190672"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Instalando o Microsoft ODBC Driver for SQL Server no Linux e no macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

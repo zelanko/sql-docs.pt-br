@@ -19,10 +19,10 @@ ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 840b964a8010ad7682a4d6d4d62a53192da9cfbb
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571214"
 ---
 # <a name="query-design-tools-ssrs"></a>Ferramentas de Design da Consulta (SSRS)

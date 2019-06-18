@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9bf66cdaad2f0ad85ff0213bb0711723e6ed3d05
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4b702c79ad5c80254595ef5c4ff440919a8482e1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291944"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63280720"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Adicionar o detalhamento de um relatório móvel para outros relatórios móveis ou URLs
 Você pode adicionar o detalhamento de qualquer grade de dados, gráfico ou medidor em um relatório móvel do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para outro ou URL personalizada. 

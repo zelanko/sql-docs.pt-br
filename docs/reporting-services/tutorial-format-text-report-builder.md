@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 42d55cf53d282b2c092769cf4435fd240ba0cbce
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579336"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63042929"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatar texto (Construtor de Relatórios)
 
@@ -111,7 +111,7 @@ Para obter informações sobre os requisitos, consulte [Pré-requisitos para tut
     UNION SELECT CAST('2015-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Reporting Services (SSRS)' as Link, 'https://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  Clique em Executar (**!**) para executar a consulta.  
+7.  Clique em Executar ( **!** ) para executar a consulta.  
   
     Os resultados da consulta são os dados disponíveis a serem exibidos no relatório.  
   
@@ -179,7 +179,7 @@ Crie essa tabela para que você tenha um local para colocar os hiperlinks e o te
   
 1.  Na guia **Inserir** > **Tabela** > **Assistente de Tabela**.  
   
-2.  Na página **Escolher um conjunto de dados** do Assistente de Nova Tabela ou Matriz, clique em **Escolher um conjunto de dados existente neste relatório ou em um conjunto de dados compartilhado** > **TextDataset (neste Relatório)** > **Avançar**.  
+2.  Na página **Escolher um conjunto de dados** do Assistente de Nova Tabela ou Matriz, clique em **Escolher um conjunto de dados existente neste relatório ou em um conjunto de dados compartilhado** > **TextDataset (neste Relatório)**  > **Avançar**.  
   
 3.  Na página **Organizar campos** , arraste os campos **Territory**, **LinkText**e **Product** até **Grupos de Linhas**, arraste o campo **Sales** até **Valores**e clique em **Avançar**.  
 
@@ -254,7 +254,7 @@ Nesta seção, você gira um texto na tabela das seções anteriores.
    
 6.  Na guia **Início** > seção **Parágrafo**, selecione **Meio** e **Centro** para localizar o texto no centro da célula vertical e horizontalmente.  
   
-8.  Clique em Executar (**!**).  
+8.  Clique em Executar ( **!** ).  
   
 Agora o texto na célula `[Territory]` é executado verticalmente da parte inferior para a parte superior das células.  
 
@@ -274,7 +274,7 @@ Agora o texto na célula `[Territory]` é executado verticalmente da parte infer
   
 5.  (Opcional) Na guia **Início** , no grupo **Número** , clique no botão **Diminuir Decimais** duas vezes para exibir valores em dólares sem centavos.  
   
-6.  Clique em Executar (**!**) para visualizar o relatório.  
+6.  Clique em Executar ( **!** ) para visualizar o relatório.  
   
 O relatório agora exibe dados formatados e é mais fácil de ler.  
 
@@ -316,7 +316,7 @@ O relatório agora exibe dados formatados e é mais fácil de ler.
   
 7.  Clique em **OK**.  
   
-8.  Clique em Executar (**!**) para visualizar o relatório.  
+8.  Clique em Executar ( **!** ) para visualizar o relatório.  
   
 O texto na caixa de texto é exibido como um título, um parágrafo e uma lista com marcadores.  
   

@@ -6,17 +6,17 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dce9cfd4ae9459ecdb4c2169a5fb6cb638792ab4
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296156"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041173"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de barras ao relatório (Construtor de Relatórios)
-Neste tutorial, você usa um assistente no [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] para criar um gráfico de barras em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. Em seguida, adicione um filtro e aprimore o gráfico. 
+Neste tutorial, você usa um assistente no [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] para criar um gráfico de barras em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Em seguida, adicione um filtro e aprimore o gráfico. 
 
 Um gráfico de barras exibe os dados de categoria horizontalmente. Ele pode ajudar a:  
   
@@ -30,7 +30,7 @@ A ilustração a seguir mostra o gráfico de barras que você criará, com as ve
   
  
 > [!NOTE]  
-> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Confira instruções passo a passo sobre como navegar até um servidor de relatório, como criar um conjunto de dados e escolher uma fonte de dados no primeiro tutorial desta série: [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como procurar um servidor de relatório, criar um conjunto de dados e escolher uma fonte de dados, consulte o primeiro tutorial desta série: [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 15 minutos.  
   
@@ -83,7 +83,7 @@ Em que você cria um conjunto de dados inserido, escolhe uma fonte de dados comp
     UNION SELECT 'Brian' as FirstName, 'Burke' as LastName, CAST(187000. AS money) AS SalesYear2015, CAST(207000. AS money) AS SalesYear2014  
     ```  
   
-8.  (Opcional) Clique no botão Executar (**!**) para ver os dados em que o gráfico se baseará.  
+8.  (Opcional) Clique no botão Executar ( **!** ) para ver os dados em que o gráfico se baseará.  
   
 9. Clique em **Avançar**.  
   
@@ -93,7 +93,7 @@ Em que você cria um conjunto de dados inserido, escolhe uma fonte de dados comp
   
 2.  Clique em **Barra**e em **Avançar**.  
   
-    Na página **Organizar campos de gráfico**, há quatro campos no painel **Campos disponíveis**: FirstName, LastName, SalesYear2015 e SalesYear2014.  
+    Na página **Organizar campos de gráfico** , há quatro campos no painel **Campos disponíveis** : FirstName, LastName, SalesYear2015 e SalesYear2014.  
   
 3.  Arraste LastName para o painel Categorias.  
   
@@ -166,7 +166,7 @@ Quando você classifica dados em um gráfico, está alterando a ordem de valores
   
 4.  Clique em **Classificar**. A página **Alterar opções de classificação** exibe uma lista de expressões de classificação. Por padrão, essa lista contém uma expressão de classificação que é igual à expressão do grupo de categorias original.  
   
-5.  Em **Classificar por**, clique em **[SalesYear2015]**.  
+5.  Em **Classificar por**, clique em **[SalesYear2015]** .  
   
 6.  Na lista **Ordem** , selecione **A a Z** para que os nomes sejam exibidos das maiores para as menores vendas de 2015.
   
@@ -245,7 +245,7 @@ Você pode adicionar um filtro ao gráfico para especificar os dados do conjunto
   
 5.  Clique em **Adicionar**. Um novo filtro em branco é exibido.  
   
-6.  Em **Expressão**, digite **[Sum(SalesYear2015)]**. Esse procedimento cria a expressão subjacente `=Sum(Fields!SalesYear2015.Value)`, que poderá ser vista se você clicar no botão **fx** .  
+6.  Em **Expressão**, digite **[Sum(SalesYear2015)]** . Esse procedimento cria a expressão subjacente `=Sum(Fields!SalesYear2015.Value)`, que poderá ser vista se você clicar no botão **fx** .  
   
 7.  Verifique se o tipo de dados é **Text**.  
   

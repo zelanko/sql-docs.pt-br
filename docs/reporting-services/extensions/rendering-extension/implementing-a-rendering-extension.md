@@ -12,14 +12,14 @@ helpviewer_keywords:
 - extensions [Reporting Services], rendering
 - rendering extensions [Reporting Services], implementing
 ms.assetid: 4a5c64f5-2391-4597-ba3f-81d265b23703
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 56a8294775ccb51cd216c2cd72c955bd9379c004
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a72144df0f560feb6da0b954cbd7053832d46c87
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643744"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193705"
 ---
 # <a name="implementing-a-rendering-extension"></a>Implementando uma extensão de renderização
   Uma extensão de renderização é um componente ou um módulo de um servidor de relatório que transforma dados de relatório e informações de layout para um formato específico do dispositivo. O SQL Server Reporting Services inclui seis extensões de renderização: HTML, Excel, Word, CSV ou Texto, XML, Imagem e PDF. Você pode criar extensões de renderização adicionais para gerar relatórios em outros formatos.  

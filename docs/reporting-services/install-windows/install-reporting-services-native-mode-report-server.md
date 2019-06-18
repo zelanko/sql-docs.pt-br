@@ -9,14 +9,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], default configurations
 - installation options [Reporting Services]
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8598ed98c9a7f8876d210b8b358b66ffb8cbff7c
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d660cc7b3c15706951981540f592589ba92e9df2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712377"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513631"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Instalar o servidor de relatório no modo nativo do Reporting Services 2016
 
@@ -70,7 +70,7 @@ Um servidor de relatório do modo nativo do [!INCLUDE[ssRSnoversion](../../inclu
   
 -   A conta de usuário utilizada para executar a instalação deve ser membro do grupo local Administradores e ter permissão para acessar e criar bancos de dados na instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que hospeda os bancos de dados do servidor de relatório.  
   
--   A instalação deve poder usar os valores padrão para reservar as URLs que dão acesso ao servidor de relatório e ao [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Esses valores são a porta 80, um curinga forte e os nomes de diretório virtual no formato **ReportServer_\<***instance_name***>** e **Reports_\<***instance_name***>**.  
+-   A instalação deve poder usar os valores padrão para reservar as URLs que dão acesso ao servidor de relatório e ao [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Esses valores são a porta 80, um curinga forte e os nomes de diretório virtual no formato **ReportServer_\<***instance_name***>** e **Reports_\<***instance_name***>** .  
   
 -   A Instalação deve poder usar os valores padrão para criar os bancos de dados de servidor de relatório. Esses valores são **ReportServer** e **ReportServerTempDB**. Se você tiver bancos de dados existentes de uma instalação anterior, a instalação será bloqueada porque não poderá configurar o servidor de relatório na configuração padrão para o modo nativo. Você deve renomear, mover ou excluir os bancos de dados para desbloquear a instalação.  
   

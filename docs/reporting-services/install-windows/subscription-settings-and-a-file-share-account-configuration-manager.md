@@ -7,14 +7,14 @@ ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e0dd324cfbe9fbac48c85c31cea20887d650014c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9e8dfea342f4545313035869f8c2e12367e62aed
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402100"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651960"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Configurações de Assinatura e uma Conta de Compartilhamento de Arquivos (Gerenciador de Configurações)
   Use a página **Configurações de Assinatura** do Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar uma conta de compartilhamento de arquivos para servidores de relatório no modo nativo e assinaturas de compartilhamento de arquivos. A conta de compartilhamento de arquivos permite que você use um único conjunto de credenciais em várias assinaturas que enviam relatórios para um compartilhamento de arquivos. Quando for o momento de alterar as credenciais, você configura a alteração da conta de compartilhamento de arquivos e não precisa atualizar cada assinatura individual.  

@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 709ee04eaaf35501cedae0e61d93cfe6e3b55210
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125936"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62468143"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Opção Replay (ferramenta de administração do Distributed Replay)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
  Quando o parâmetro **-o** não é especificado, o arquivo de rastreamento de resultado não é gerado. A saída do console retorna informações resumidas ao término da reprodução, mas nenhuma outra estatística de reprodução está disponível.  
   
  **-s** _target_server_  
- Especifica a instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na qual a carga de trabalho distribuída deve ser reproduzida. Você deve especificar esse parâmetro no formato **server_name[\nome da instância]**.  
+ Especifica a instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na qual a carga de trabalho distribuída deve ser reproduzida. Você deve especificar esse parâmetro no formato **server_name[\nome da instância]** .  
   
  Você não pode usar "`localhost`" ou "`.`" como o servidor de destino.  
   
@@ -91,7 +91,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
 -   O parâmetro **-d** especifica o local do arquivo intermediário no controlador, `c:\WorkingDir`.  
   
--   O parâmetro **-o** especifica que cada cliente especificado captura a atividade de reprodução e salva-a em um arquivo de rastreamento de resultado. Observação: O elemento `<ResultTrace>` no arquivo de configuração pode ser usado para especificar se a contagem de linhas e o conjunto de resultados são registrados.  
+-   O parâmetro **-o** especifica que cada cliente especificado captura a atividade de reprodução e salva-a em um arquivo de rastreamento de resultado. Observação: o elemento `<ResultTrace>` no arquivo de configuração pode ser usado para especificar se a contagem de linhas e o conjunto de resultados são registrados.  
   
 -   O parâmetro **-w** especifica que os computadores `client1` a `client4` participam como clientes na reprodução distribuída.  
   

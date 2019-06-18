@@ -18,10 +18,10 @@ ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1a440ba648fd7ca0c377cc09b8bf67ac799e2e9a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581495"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Referências a código personalizado e assemblies em expressões no Designer de Relatórios (SSRS)
@@ -50,7 +50,7 @@ ms.locfileid: "65581495"
 ##  <a name="Common"></a> Incluindo referências em funções usadas frequentemente  
  Use a caixa de diálogo **Expressão** para exibir uma lista categorizada de funções comuns internas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Quando você expande **Funções Comuns** e clica em uma categoria, o painel **Item** exibe a lista de funções incluídas em uma expressão. As funções comuns incluem classes dos namespaces [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> e <xref:System.Convert> e funções de biblioteca em tempo de execução [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Por conveniência, é possível exibir as funções usadas mais frequentemente na caixa de diálogo **Expressão** , onde elas são listadas por categoria: Texto, Data e Hora, Matemática, Inspeção, Fluxo do Programa, Agregação, Financeira, Conversão e Diversas. As funções usadas com menor frequência não são exibidas na lista, mas ainda podem ser usadas em uma expressão.  
   
- Para usar uma função interna, clique duas vezes no nome da função no painel Item. Uma descrição da função é exibida no painel Descrição e um exemplo de chamada da função é exibido no painel Exemplo. No painel de código, quando você digita o nome da função seguido por um parêntese esquerdo **(**, a ajuda do IntelliSense exibe cada sintaxe válida para a chamada de função. Por exemplo, para calcular o valor máximo de um campo denominado `Quantity` em uma tabela, adicione a expressão simples `=Max(` ao painel Código e use as marcas inteligentes para exibir todas as sintaxes válidas possíveis para a chamada da função. Para concluir este exemplo, digite `=Max(Fields!Quantity.Value)`.  
+ Para usar uma função interna, clique duas vezes no nome da função no painel Item. Uma descrição da função é exibida no painel Descrição e um exemplo de chamada da função é exibido no painel Exemplo. No painel de código, quando você digita o nome da função seguido por um parêntese esquerdo **(** , a ajuda do IntelliSense exibe cada sintaxe válida para a chamada de função. Por exemplo, para calcular o valor máximo de um campo denominado `Quantity` em uma tabela, adicione a expressão simples `=Max(` ao painel Código e use as marcas inteligentes para exibir todas as sintaxes válidas possíveis para a chamada da função. Para concluir este exemplo, digite `=Max(Fields!Quantity.Value)`.  
   
  Para obter mais informações sobre cada função, consulte <xref:System.Math>, <xref:System.Convert>e [Membros da Biblioteca de Tempo de Execução do Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) no MSDN.  
   

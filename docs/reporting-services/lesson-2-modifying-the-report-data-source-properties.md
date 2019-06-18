@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7da1fa318ac1bab2310cb8708215db3456d84d66
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399909"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651697"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 Nesta lição do tutorial do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , você usa o portal da Web para selecionar um relatório que será entregue aos destinatários. A assinatura controlada por dados que será definida distribuirá o relatório **Pedidos de Vendas** criado no tutorial [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  Nas etapas a seguir, você modificará as informações da conexão de fonte de dados usadas pelo relatório para obter dados. Somente relatórios que usam **credenciais armazenadas** para acessar uma fonte de dados de relatório podem ser distribuídos por uma assinatura controlada por dados. Credenciais armazenadas são necessárias para o processamento de relatório autônomo.  
@@ -52,7 +52,7 @@ Você também modificará o conjunto de dados e relatório para usar um parâmet
 10. Clique em **Salvar**.
 11. Clique em **Cancelar**  
   
-11. Exiba o relatório para verificar se o relatório está sendo executado com as credenciais especificadas. para obter informações sobre a ferramenta de configuração e recursos adicionais.  
+11. Exiba o relatório para verificar se o relatório está sendo executado com as credenciais especificadas. .  
   
 ## <a name="bkmk_modify_dataset"></a>Para modificar o AdventureWorksDataset  
  Nas etapas a seguir, você modificará o conjunto de dados para usar um parâmetro a fim de filtrar o conjunto de dados com base em um número de pedido.
@@ -89,7 +89,7 @@ Você também modificará o conjunto de dados e relatório para usar um parâmet
   
 3.  Verifique se o **Prompt** é `OrderNumber`.  
   
-4.  Selecione **Permitir valor em branco ("")**.  
+4.  Selecione **Permitir valor em branco ("")** .  
   
 5.  Selecione **Permitir valor nulo**.  
   

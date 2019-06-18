@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: eef1a8c7ca2d1a7aaff29e04455f17a7cc236b78
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b2f2d3b15021569fe53bfc886f744ed7e53c1444
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291254"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63141230"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Adicionar um mapa personalizado a um relatório móvel do Reporting Services
 Os mapas personalizados exigem dois arquivos:  
@@ -26,7 +26,7 @@ Armazene os dois arquivos na mesma pasta. Os nomes dos dois arquivos devem corre
   
 ## <a name="load-a-custom-map"></a>Carregar um mapa personalizado  
   
-1. Na guia **Layout**, selecione um tipo de mapa: **Mapa de Calor de Gradiente**, **Mapa de Calor de Interrupção de Intervalo**ou **Mapa de Bolhas**, arraste-o para a superfície de design e coloque-o no tamanho desejado.  
+1. Na aba **Layout** , escolha um tipo de mapa: **Mapa de Calor de Gradiente**, **Mapa de Calor de Parada de Intervalo**ou **Mapa de Bolha**, arraste-o para a superfície de design e coloque-o no tamanho desejado.  
   
    ![SSMRP_MapsGallery](../../reporting-services/mobile-reports/media/ssmrp-mapsgallery.png)  
   

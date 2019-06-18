@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cee144e7fed793cf08c246f3a83a4f9e213e80a4
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298414"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63316561"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Adicionar visualizações a relatórios móveis do Reporting Services
 Os gráficos são uma parte essencial da visualização de dados. Saiba mais sobre os gráficos que você pode usar nos relatórios móveis do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para cobrir diversos cenários. 
@@ -143,7 +143,7 @@ Os mapas de árvore exibem métricas aplicando seus valores ao tamanho e à cor 
 
      * Em **O Tamanho Representa** , selecione um campo numérico para o tamanho dos blocos.
      * Em **A Cor Representa** , selecione um campo numérico para a cor dos blocos. 
-     * [opcional] **Valor do Centro Personalizado**: só é possível usar o **Valor do Centro Personalizado** quando o tipo de visualização é HeatMapWithCustomCenterValue.
+     * [opcional] **Valor central personalizado**: só é possível usar o **Valor central personalizado** quando o tipo de visualização é HeatMapWithCustomCenterValue.
      
          O valor central decide a cor de uma caixa. Quanto melhor a métrica comparada ao valor central, mais verde ela ficará. Quanto pior a métrica, mais vermelha ela ficará.
      

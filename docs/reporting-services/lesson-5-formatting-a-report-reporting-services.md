@@ -9,10 +9,10 @@ ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105934"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lição 5: Formatando um relatório (Reporting Services)
@@ -40,7 +40,7 @@ O campo Total da Linha exibe um número geral. É possível formatá-lo para exi
     - **Casas decimais: 2**
     - **Números negativos: (R$ 1.2345,00)**
     - **Símbolo: R$ português (Brasil)**
-4. Selecione **Usar separador de milhar (.)**. Caso o texto de exemplo seja **R$ 12.345,00**, as configurações estão corretas.
+4. Selecione **Usar separador de milhar (.)** . Caso o texto de exemplo seja **R$ 12.345,00**, as configurações estão corretas.
 5. Selecione **OK** para aplicar o formato.
 6. Visualize o relatório para ver a alteração na coluna da expressão `[LineTotal]` e depois retorne para a exibição de design.  
 

@@ -12,11 +12,11 @@ author: yitam
 ms.author: v-yitam
 manager: mbarwin
 ms.openlocfilehash: 35626c192c3d74ad0201cee3c5e97adbce92a3aa
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676510"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669691"
 ---
 # <a name="formatting-decimal-strings-and-money-values-pdosqlsrv-driver"></a>Formatação de cadeias de caracteres decimais e valores monetários (driver PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

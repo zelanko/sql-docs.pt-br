@@ -1,21 +1,21 @@
 ---
-title: 'Tutorial: Criar um relatório de tabela básico (Construtor de Relatórios) | Microsoft Docs'
+title: 'Tutorial: Criação de um relatório de tabela básico (Construtor de Relatórios) | Microsoft Docs'
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3e41b40bceadec4c841aa5b464e2946915003b93
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298374"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041193"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Criar um relatório de tabela básico (Construtor de Relatórios)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: criando um relatório de tabela básico (Construtor de Relatórios)
 Este tutorial ensina a criar um relatório de tabela básico com base em dados de vendas de exemplo. A ilustração a seguir mostra o relatório que você criará.  
   
 ![SSRS_Tutorial_Basic_Table_Report](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
@@ -124,7 +124,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tem u
   
     ```  
   
-3.  Na barra de ferramentas do designer de consultas, clique em **Executar** (**!**).  
+3.  Na barra de ferramentas do designer de consultas, clique em **Executar** ( **!** ).  
   
     A consulta executa e exibe o conjunto de resultados para os campos SalesDate, Subcategory, Product, Sales e Quantity.  
   
@@ -197,7 +197,7 @@ Por padrão, os dados resumidos do campo Sales exibe um número geral. Formate-o
   
 3.  Na guia **Início** , no grupo **Número** , clique no botão **Moeda** . As células são alteradas para mostrar a moeda formatada.  
   
-    Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [**$12,345.00**]. Se um valor de moeda de exemplo não estiver visível, na guia **Início**, no grupo **Número**, clique na seta ao lado do ícone **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
+    Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [ **$12,345.00**]. Se um valor de moeda de exemplo não estiver visível, na guia **Início**, no grupo **Número**, clique na seta ao lado do ícone **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
   
 4.  Clique em **Executar** para visualizar o relatório.  
   
@@ -214,7 +214,7 @@ Por padrão, o campo SalesDate exibe a data e hora. É possível formatá-lo par
   
 3.  Na Faixa de Opções, na guia **Início** , no grupo **Número** , clique na seta e selecione **Data**.  
   
-    A célula exibe a data de exemplo **[1/31/2000]**. Se uma data de exemplo não estiver visível, na guia **Início**, no grupo **Número**, clique na seta ao lado do ícone **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
+    A célula exibe a data de exemplo **[1/31/2000]** . Se uma data de exemplo não estiver visível, na guia **Início**, no grupo **Número**, clique na seta ao lado do ícone **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
   
 4.  Clique em **Executar** para visualizar o relatório.  
   
@@ -236,7 +236,7 @@ Os valores SalesDate são exibidos no formato de data padrão.
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    A célula exibe a data de exemplo **[31 de janeiro de 2000]**.  
+    A célula exibe a data de exemplo **[31 de janeiro de 2000]** .  
   
 7.  Clique em **Executar** para visualizar o relatório.  
   
@@ -262,7 +262,7 @@ Para reduzir a quantidade de espaço vertical que cada linha ocupa, expanda a la
 ## <a name="Title"></a>5. Adicionar um título de relatório  
 Um título é exibido na parte superior do relatório. É possível colocar o título em um cabeçalho do relatório. No entanto, se ele não usar um cabeçalho, será possível colocar o título em uma caixa de texto na parte superior do corpo do relatório. Neste tutorial, você usará a caixa de texto colocada automaticamente na parte superior do corpo do relatório.  
   
-O texto pode ser aprimorado ainda mais aplicando-se estilos, tamanhos e cores de fontes diferentes a frases e caracteres individuais do texto. Para obter mais informações, consulte [Formatar texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+O texto pode ser aprimorado ainda mais aplicando-se estilos, tamanhos e cores de fontes diferentes a frases e caracteres individuais do texto. Para obter mais informações, consulte [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
 ### <a name="to-add-a-report-title"></a>Para adicionar um título de relatório  
   
@@ -340,7 +340,7 @@ Neste tutorial, você exportará o relatório para o Excel e definirá uma propr
   
 4.  Na caixa de texto **Nome do arquivo** , digite **Product_Sales_Excel**.  
   
-5.  Verifique se o tipo de arquivo é **Excel (\*.xlsx)**.  
+5.  Verifique se o tipo de arquivo é **Excel (\*.xlsx)** .  
   
 6.  Clique em **Salvar**.  
   

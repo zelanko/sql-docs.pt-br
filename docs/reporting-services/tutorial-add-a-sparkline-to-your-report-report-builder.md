@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a4ea0601aff712034a58f73953718bcd70514351
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298604"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63043064"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Adicionar um minigráfico ao relatório (Construtor de Relatórios)
 
@@ -118,7 +118,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
        'Slim Digital' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-4.  Na barra de ferramentas do designer de consultas, clique em Executar (**!**).  
+4.  Na barra de ferramentas do designer de consultas, clique em Executar ( **!** ).  
   
     A consulta é executada e exibe o conjunto de resultados dos campos **SalesDate**, **Subcategory**, **Product**, **Sales**e **Quantity**.  
   
@@ -173,7 +173,7 @@ Por padrão, os dados de resumo do campo **Sales** exibem um número geral. Form
 
     ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [**$12,345.00**]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números** , clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
+    Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [ **$12,345.00**]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números** , clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
     
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
    
@@ -184,7 +184,7 @@ Por padrão, o campo **SalesDate** exibe informações de data e hora. É possí
   
 3.  Na guia **Início** > grupo **Número** > **Data**.  
   
-    A célula exibe a data de exemplo **[1/31/2000]**.
+    A célula exibe a data de exemplo **[1/31/2000]** .
      
 4.  Clique em **Executar** para visualizar o relatório.  
   
@@ -269,7 +269,7 @@ Para reduzir a quantidade de espaço vertical que cada linha ocupa, expanda a la
 ## <a name="Title"></a>8. (Opcional) Adicionar um título de relatório  
 Um título é exibido na parte superior do relatório. É possível colocar o título em um cabeçalho do relatório. No entanto, se ele não usar um cabeçalho, será possível colocar o título em uma caixa de texto na parte superior do corpo do relatório. Neste tutorial, você usará a caixa de texto colocada automaticamente na parte superior do corpo do relatório.  
   
-O texto pode ser aprimorado ainda mais aplicando-se estilos, tamanhos e cores de fontes diferentes a frases e caracteres individuais do texto. Para obter mais informações, consulte [Formatar texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+O texto pode ser aprimorado ainda mais aplicando-se estilos, tamanhos e cores de fontes diferentes a frases e caracteres individuais do texto. Para obter mais informações, consulte [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
 ### <a name="to-add-a-report-title"></a>Para adicionar um título de relatório  
   

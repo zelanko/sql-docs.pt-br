@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1437d9394a372ba9a0aa3510db8f903f9b737e16
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: cac1a32b49fde5b41c0a8ef21706d873ce037cd3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298174"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63061108"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Obter dados de conjuntos de dados compartilhados nos relatórios móveis do Reporting Services
 Além do [carregamento de dados de arquivos do Excel](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md), o Publicador de Relatórios Móveis do Microsoft SQL Server também pode acessar dados de praticamente qualquer origem. O acesso aos dados exige uma fonte de dados compartilhada, configurada em um portal da Web do Reporting Services. Leia mais sobre como [criar fontes de dados compartilhadas](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) e [criar conjuntos de dados compartilhados](../../reporting-services/report-data/manage-shared-datasets.md).  

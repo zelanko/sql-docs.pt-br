@@ -10,14 +10,14 @@ helpviewer_keywords:
 - debugging delivery extensions [Reporting Services]
 - troubleshooting [Reporting Services], delivery extensions
 ms.assetid: a7d959da-5005-4a50-aca7-2cef36aa9947
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c6a7bb7b306b3e00d0ed45aa03d42cf4637c4708
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1abe30a462e8bf303b0171dbeeb82c407c80ca2a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709030"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193747"
 ---
 # <a name="debugging-delivery-extension-code"></a>Depurando o código de extensão de entrega
   O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece várias ferramentas de depuração que podem ajudar você a analisar seu código de extensão de entrega e localizar erros nele. A ferramenta mais adequada dependerá do que você está tentando realizar. Este exemplo usa o [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)].  

@@ -9,14 +9,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], properties
 - system-specific properties [Reporting Services]
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b90ac3252dc0ed8072405064d825424b55aeb102
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 30455d77efff3c9a9e4f48b9cbeccfa983001220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808704"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128813"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Propriedades do Reporting Services – propriedades do sistema do servidor de relatório
   Os seguintes nomes da propriedade do sistema estão reservados. Você não pode criar propriedades definidas pelo usuário com o mesmo nome. Você poderá ler ou modificar muitas dessas propriedades usando os métodos de serviço Web.  

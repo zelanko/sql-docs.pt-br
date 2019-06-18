@@ -15,14 +15,14 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], SOAP
 - SOAP [Reporting Services], calls
 ms.assetid: f6f0c6e3-8bb5-4c44-9d19-1872edc72746
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d5c35023512430fd8a9a954a900330e2bb04f325
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 65da2d36c53f5f00851b36f47396b7bcbf6a6092
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660104"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284606"
 ---
 # <a name="calling-web-service-methods"></a>Chamando métodos do serviço Web
   Quando você usa uma classe proxy do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para chamar as operações do serviço Web, você faz isso usando os métodos dessa classe. Esses métodos respondem como qualquer outro método de uma classe da biblioteca de classes [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Todos os métodos do serviço Web têm acesso público e exigem que você forneça o número e tipos de argumentos adequados. Depois de criar uma instância da classe de proxy em seu projeto, você poderá chamar os métodos para realizar operações de relatório por meio do servidor de relatório. O código C# a seguir ilustra o uso do método <xref:ReportService2010.ReportingService2010.ListChildren%2A> da classe proxy <xref:ReportService2010.ReportingService2010>. Esse código é usado para realizar uma chamada recursiva para o serviço Web que retorna uma matriz dos objetos <xref:ReportService2010.CatalogItem> que contém uma lista de todos os itens do banco de dados do servidor de relatório:  

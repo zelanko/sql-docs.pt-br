@@ -10,11 +10,11 @@ ms.reviewer: maghan
 author: RhysSchmidtke
 ms.author: rhys
 ms.openlocfilehash: d6d4da6d5574288fa66ea18a9c63b1488a6abcca
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290938"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63226000"
 ---
 # <a name="release-notes-for-the-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>Notas de versão para os controles de Visualizador de relatórios para WebForms e WinForms do SSRS
 
@@ -27,7 +27,7 @@ Para obter as notas de versão para o SSRS, consulte [notas de versão para o SQ
 | Alterar descrição | Detalhes |
 | :----------------- | :------ |
 | Correção de um bug que impedia que relatórios sem parâmetros fossem carregados por meio de **Server.LoadReportDefinition**. | &nbsp; |
-| O controle WebForms do Visualizador de Relatórios. | Dá suporte à inserção em páginas RTL (páginas que alteram o fluxo de texto usando a propriedade *direction: rtl;*).<br/><br/>Dá suporte à personalização do texto da caixa de diálogo de impressão por meio da interface de localização *IReportViewerMessages5*.<br/><br/>Suporte a acessibilidade aprimorado.<br/><br/>&bull; &nbsp; &nbsp; [Pacote do NuGet para o controle do Visualizador de relatórios de WebForms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Webforms/150.900.148) |
+| O controle WebForms do Visualizador de Relatórios. | Dá suporte à inserção em páginas RTL (páginas que alteram o fluxo de texto usando a propriedade *direction: rtl;* ).<br/><br/>Dá suporte à personalização do texto da caixa de diálogo de impressão por meio da interface de localização *IReportViewerMessages5*.<br/><br/>Suporte a acessibilidade aprimorado.<br/><br/>&bull; &nbsp; &nbsp; [Pacote do NuGet para o controle do Visualizador de relatórios de WebForms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Webforms/150.900.148) |
 | O controle WinForms do Visualizador de Relatórios. | Correção para impressão quando um aplicativo está em execução em um modo de alto DPI.<br/><br/>&bull; &nbsp; &nbsp; [Pacote do NuGet para o controle do Visualizador de relatórios do WinForms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/150.900.148) |
 | &nbsp; | &nbsp; |
 

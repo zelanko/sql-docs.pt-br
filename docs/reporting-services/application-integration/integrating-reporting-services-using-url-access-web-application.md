@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Web applications [Reporting Services]
 - hyperlinks [Reporting Services]
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bf79a9f1c6790abfb1a2435e533aa0847abbd3b6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9f2a3c9db568d6c6cddc71ec221f68306acb7f22
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813979"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62741689"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>Integrando o Reporting Services usando o acesso à URL – aplicativo Web
   O acesso à URL no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] foi especificamente criado para permitir o acesso a relatórios individuais pela rede. Esse tipo de acesso é melhor para a integração da exibição de relatórios e da navegação em um aplicativo Web personalizado. Para usar o acesso à URL em aplicativos Web, você pode:  

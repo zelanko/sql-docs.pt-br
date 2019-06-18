@@ -9,10 +9,10 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b5b9846a20615cf613dd50752ac63f2669b1e399
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089674"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
@@ -23,13 +23,13 @@ Nesta lição final do tutorial, você adicionará agrupamentos e totais ao rela
 
 1. Selecione a guia **Design**.
 2. Se o painel **Grupos de Linhas** não estiver visível, clique com o botão direito do mouse na superfície de design e selecione **Exibir** >**Agrupamento**.
-3. No painel **Dados do Relatório**, arraste o campo `[Date]` para o painel **Grupos de Linhas**. Coloque-o acima da linha exibida como **= (Detalhes)**.
+3. No painel **Dados do Relatório**, arraste o campo `[Date]` para o painel **Grupos de Linhas**. Coloque-o acima da linha exibida como **= (Detalhes)** .
 
     > [!NOTE]
     > Observe que agora a alça de linha exibe um colchete para indicar um grupo. Agora a tabela também tem duas colunas de expressão `[Date]`, uma em cada lado de uma linha pontilhada vertical.
     >
     >![grupo de datas adicionado](media/rs-basictablegroups1design.png "grupo de datas adicionado")
-4. No painel **Dados do Relatório**, arraste o campo `[Order]` para o painel **Grupos de Linhas**. Coloque-o abaixo de **Data** e acima de **= (Detalhes)**.
+4. No painel **Dados do Relatório**, arraste o campo `[Order]` para o painel **Grupos de Linhas**. Coloque-o abaixo de **Data** e acima de **= (Detalhes)** .
 
     ![ssrs_ssdt_addorderfield](media/ssrs-ssdt-addorderfield.png)
 

@@ -8,14 +8,14 @@ ms.topic: reference
 helpviewer_keywords:
 - authorization [Reporting Services]
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d1c0ea21bad3c3b34e6250ad1974a81848392e95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2210d5eb5997ec66e707a90cdc52dc24328e6f6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608904"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193341"
 ---
 # <a name="authorization-in-reporting-services"></a>Autorização no Reporting Services
   Autorização é o processo de determinar se uma identidade deve receber o tipo de acesso solicitado a um determinado recurso no banco de dados de servidor de relatório. O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa uma arquitetura de autorização baseada em função que concede um acesso de usuário a um determinado recurso com base na atribuição de função do usuário para o aplicativo. As extensões de segurança para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contêm uma implementação de um componente de autorização usado para conceder acesso a usuários assim que eles se autenticam no servidor de relatório. A autorização é invocada quando um usuário tenta executar uma operação no sistema ou um item de servidor de relatório por meio da API SOAP e via acesso à URL. Isso é possível por meio da interface de extensão de segurança **IAuthorizationExtension2**. Como foi dito anteriormente, todas as extensões herdam de **IExtension** , a interface base para qualquer extensão que você implanta. **IExtension** e **IAuthorizationExtension2** são membros do namespace **Microsoft.ReportingServices.Interfaces**.  
@@ -66,7 +66,7 @@ public bool CheckAccess(
  Os descritores de segurança são criados por meio do serviço Web <xref:ReportService2010.ReportingService2010.SetPolicies%2A> e dos métodos <xref:ReportService2010.ReportingService2010.SetSystemPolicies%2A>.  
   
 ### <a name="authorization-flow"></a>Fluxo de autorização  
- A autorização do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] é controlada pela extensão de segurança configurada para ser executada atualmente no servidor. A autorização é baseada em função e está limitada às permissões e operações fornecidas pela arquitetura de segurança do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. O diagrama a seguir descreve o processo de autorização de usuários a operar em itens no banco de dados do servidor de relatório:  
+ A autorização do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] é controlada pela extensão de segurança configurada para ser executada atualmente no servidor. A autorização é baseada em função e está limitada às permissões e operações fornecidas pela arquitetura de segurança do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . O diagrama a seguir descreve o processo de autorização de usuários a operar em itens no banco de dados do servidor de relatório:  
   
  ![Fluxo de autorização de segurança do Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Fluxo de autorização de segurança do Reporting Services")  
   

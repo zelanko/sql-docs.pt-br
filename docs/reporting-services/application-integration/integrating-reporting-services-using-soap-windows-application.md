@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Windows Forms [Reporting Services]
 - SOAP [Reporting Services], Windows applications
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ab817b7529bf13e738b3110e5f876b3287f32ec9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d9802e3b2c60a345d789a63ec5f2bc2cc9198ba2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775034"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62741760"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>Integrando o Reporting Services usando o SOAP – Aplicativo do Windows
   Você pode acessar a funcionalidade completa do servidor de relatório por meio da API SOAP do Reporting Services. A API SOAP é um serviço Web e, sendo assim, pode ser acessada facilmente para fornecer os recursos de relatórios corporativos para seus aplicativos comerciais personalizados. Você pode acessar o serviço Web em um aplicativo do Windows simplesmente gravando o código que faz chamadas para o serviço. Usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], é possível gerar uma classe proxy que expõe as propriedades e os métodos do serviço Web e permite que você use uma infraestrutura e ferramentas conhecidas para criar aplicativos de negócios baseados na tecnologia do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

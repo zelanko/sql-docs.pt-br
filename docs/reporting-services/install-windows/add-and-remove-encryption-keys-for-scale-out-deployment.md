@@ -12,20 +12,20 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: be584371ef8cb2e1f8594ee9156ea05b7aee85fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f1f021382556c13a20b0a8988b8b5199c21c9de7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695944"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63225673"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Adicionar e remover chaves de criptografia para implantação em expansão
   É possível executar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um modelo de implantação de expansão com a configuração de vários servidores de relatório para usarem um banco de dados do servidor de relatório compartilhado. A associação em uma implantação de expansão tem como base o fato de o servidor de relatório armazenar uma chave de criptografia no banco de dados do servidor de relatório. Você pode controlar a associação de implantação de expansão pela adição ou remoção de chaves de criptografia para instâncias específicas do servidor de relatório. Se estiver removendo nós da implantação, você poderá os removê-los em qualquer ordem. Se estiver adicionando nós a uma implantação, você deverá unir quaisquer novas instâncias de um servidor de relatório que já faça parte da implantação.  
   
 ## <a name="using-the-reporting-services-configuration-tool-to-configure-scale-out-deployment"></a>Usando a ferramenta Configuração do Reporting Services para configurar a implantação de expansão  
- O modo mais fácil para configurar uma implantação de expansão é usar a ferramenta Configuração do Reporting Services. Para obter mais informações e instruções passo a passo, consulte [Configurar uma implantação escalável do servidor de relatório no modo nativo &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+ O modo mais fácil para configurar uma implantação de expansão é usar a ferramenta Configuração do Reporting Services. Para obter mais informações e instruções passo a passo, consulte [Configurar uma implantação em expansão do servidor de relatório em modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="using-rskeymgmt-to-configure-scale-out-deployment"></a>Usando Rskeymgmt para configurar a implantação de expansão  
  Use o utilitário **rskeymgmt** para inicializar uma instância do servidor de relatório a fim de usar um banco de dados de servidor de relatório compartilhado. A adição de um servidor de relatório para uma implantação de expansão exige que você inicialize o servidor de relatório. A inicialização exige permissões de administrador. Você deve ter credenciais de administrador para o computador remoto que hospeda o servidor de relatório que está sendo associado à implantação.  

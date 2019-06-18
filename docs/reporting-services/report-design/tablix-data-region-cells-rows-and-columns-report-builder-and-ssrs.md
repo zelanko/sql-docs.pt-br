@@ -14,10 +14,10 @@ ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 79cfa786930825e28f41ffe38802f4aa1e0ec6f6
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574712"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Células, linhas e colunas da região de dados Tablix (Construtor de Relatórios) e SSRS
@@ -104,7 +104,7 @@ ms.locfileid: "65574712"
  As células na área do corpo tablix podem exibir dados detalhados quando a célula está em uma linha ou coluna detalhada e dados agregados quando ela se encontra em uma linha ou coluna do grupo. O escopo dos dados de uma célula é a interseção entre os grupos internos de linhas e de colunas aos quais a célula pertence.  
   
 > [!NOTE]  
->  Os dados reais exibidos referentes a cada célula formam a expressão avaliada do item de relatório que ela contém, normalmente uma caixa de texto. Em uma célula pertencente a uma linha ou coluna detalhada, a expressão usa como padrão os dados detalhados (por exemplo, **[LineTotal])**. Em uma célula não pertencente a uma linha ou coluna detalhada, a expressão usa como padrão uma função de agregação (por exemplo, **Sum[LineTotal])**. Caso uma expressão não especifique uma função de agregação mesmo que a célula pertença a uma linha ou coluna do grupo, é exibido o primeiro valor do grupo. Para obter mais informações sobre agregações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+>  Os dados reais exibidos referentes a cada célula formam a expressão avaliada do item de relatório que ela contém, normalmente uma caixa de texto. Em uma célula pertencente a uma linha ou coluna detalhada, a expressão usa como padrão os dados detalhados (por exemplo, **[LineTotal])** . Em uma célula não pertencente a uma linha ou coluna detalhada, a expressão usa como padrão uma função de agregação (por exemplo, **Sum[LineTotal])** . Caso uma expressão não especifique uma função de agregação mesmo que a célula pertença a uma linha ou coluna do grupo, é exibido o primeiro valor do grupo. Para obter mais informações sobre agregações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="merging-and-splitting-cells"></a>Mesclando e dividindo células  
  Em uma área tablix, é possível mesclar várias células adjacentes. Por exemplo, você pode criar células para rótulos que incluam várias colunas ou linhas.  

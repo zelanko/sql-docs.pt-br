@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cf68ea627b69377827cd6e9e33afc70a2c76ef2b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: dc6445b64e323c3e5f8e5b0257d8573ec10d3af8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294925"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63218929"
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Personalizar o painel de parâmetros em um relatório (Construtor de Relatórios)
   Ao criar relatórios paginados com parâmetros no Construtor de Relatórios, você pode personalizar o painel Parâmetros. No modo de exibição de Design de relatório, você pode arrastar um parâmetro para uma coluna e linha específicas no painel Parâmetros. Você pode adicionar e remover colunas para alterar o layout do painel.  

@@ -16,10 +16,10 @@ ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bbce09bb5c76d29bf56defb3c5403665e5226558
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576756"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Acessar o provedor WMI do Reporting Services
@@ -30,8 +30,8 @@ ms.locfileid: "65576756"
   
 |Classe|Namespace|Descrição|  
 |-----------|---------------|-----------------|  
-|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>* \v13|Fornece as informações básicas exigidas para um cliente se conectar a um servidor de relatório instalado.|  
-|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>* \v13\Admin|Representa os parâmetros de instalação e de tempo de execução de uma instância do servidor de relatório. Esses parâmetros são armazenados no arquivo de configuração para o servidor de relatório.<br /><br /> **\*\* Importante \*\*** Esta classe é acessível apenas com privilégios administrativos.|  
+|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v13|Fornece as informações básicas exigidas para um cliente se conectar a um servidor de relatório instalado.|  
+|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v13\Admin|Representa os parâmetros de instalação e de tempo de execução de uma instância do servidor de relatório. Esses parâmetros são armazenados no arquivo de configuração para o servidor de relatório.<br /><br /> **\*\* Importante \*\*** Esta classe é acessível apenas com privilégios administrativos.|  
   
  Uma instância de cada uma das classes anteriores é criada para cada instância de servidor de relatório. Você pode usar qualquer ferramenta Microsoft ou de terceiros para acessar os objetos WMI expostos pelo servidor de relatório, inclusive interfaces de programação de WMI expostas pelo próprio .NET Framework. Este tópico descreve como acessar e usar as instâncias de classe WMI com o comando do PowerShell [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx).  
   

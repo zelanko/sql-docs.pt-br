@@ -12,14 +12,14 @@ helpviewer_keywords:
 - removing encryption keys
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d910518c2811877920c1656b36a771ea6aebc61b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2f2d3a496cbe2b8adda02b5d7425e49c09f44c77
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747194"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513308"
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>Chaves de criptografia do SSRS – Excluir e recriar chaves de criptografia
   A exclusão e a recriação de chaves de criptografia são atividades que estão fora da manutenção rotineira da chave de criptografia. Você executa essas tarefas em resposta a uma ameaça específica ao seu servidor de relatórios ou como um último recurso quando não mais puder acessar um banco de dados de servidor de relatórios.  
@@ -33,7 +33,7 @@ ms.locfileid: "47747194"
   
  Você poderá recriar a chave simétrica somente quando o servidor de relatórios se encontrar em um estado de funcionamento. Recriar as chaves de criptografia e criptografar novamente o conteúdo interrompe as operações do servidor. Você deve colocar o servidor offline enquanto a nova criptografia estiver em andamento. Não deve haver nenhuma solicitação feita ao servidor de relatórios durante a nova criptografia.  
   
- Você pode usar a ferramenta Configuração do Reporting Services ou o utilitário **rskeymgmt** para redefinir a chave simétrica e os dados criptografados. Para obter mais informações sobre como a chave simétrica é criada, consulte [Inicializar um servidor de relatório &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Você pode usar a ferramenta Configuração do Reporting Services ou o utilitário **rskeymgmt** para redefinir a chave simétrica e os dados criptografados. Para obter mais informações sobre como a chave simétrica é criada, consulte [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>Como recriar chaves de criptografia (ferramenta Configuração do Reporting Services)  
   

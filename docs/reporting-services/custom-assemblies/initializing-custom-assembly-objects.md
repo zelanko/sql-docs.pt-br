@@ -10,14 +10,14 @@ helpviewer_keywords:
 - custom assemblies [Reporting Services], initializing
 - OnInit method
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b628a2d2ee2ca21cfb75abadce01293f536b8cbd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8bef8bcf36629b0cb31afef31f4d9a199313f015
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726884"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193959"
 ---
 # <a name="initializing-custom-assembly-objects"></a>Inicializando objetos assembly personalizados
   Em alguns casos, talvez você precise inicializar valores de propriedade e de campo em suas classes assembly personalizadas ao instanciá-las. É mais provável que você tenha de inicializar as suas classes personalizadas com valores disponíveis a partir de coleções de objetos globais do relatório. Faça isso substituindo o método **OnInit** do objeto **Code** de um relatório. Para acessar **OnInit**, use o elemento **Code** da definição de relatório. Existem duas técnicas para a inicialização de valores de propriedade e de campo das classes em um assembly personalizado que você pretende usar em seu relatório: você pode declarar e criar uma nova instância da classe usando **OnInit** ou chamar um método disponível publicamente usando **OnInit**.  

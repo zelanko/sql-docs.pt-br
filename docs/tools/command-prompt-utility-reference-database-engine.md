@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: bf6b699c7ff8830d1f74d14a077a4d0cb4e68116
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291652"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62723471"
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>Utilitários de Prompt de comando do SQL (mecanismo de banco de dados)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

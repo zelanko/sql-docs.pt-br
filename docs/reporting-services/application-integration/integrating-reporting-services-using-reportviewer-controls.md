@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Report Viewer controls
 - integrating reports [Reporting Services]
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b4b7eb42e3254e92b1b9778ac3866178f68e72f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8ffaeb12bc961256959571d18808e2869a1d7485
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786634"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62741869"
 ---
 # <a name="integrating-reporting-services-using-report-viewer-controls"></a>Integrando o Reporting Services usando os controles do Visualizador de Relatórios
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2015 fornece dois controles do Visualizador de Relatórios para integração da funcionalidade de exibição de relatório aos aplicativos. Existe uma versão para aplicativos baseados em Windows Forms e um para aplicativos Web Forms. Cada controle oferece funcionalidade semelhante mas cada é foi criado para ter como destino seus ambientes individuais. Ambos os controles podem processar relatórios que foram implantados em um servidor de relatório (modo de processamento remoto) ou que foram copiados para um computador em que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não foi instalado (modo de processamento local).  

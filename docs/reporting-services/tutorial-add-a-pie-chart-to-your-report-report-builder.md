@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 10d17a596568fd706b696359ef43bc8f257afdf9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293635"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041218"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de pizza ao relatório (Construtor de Relatórios)
 Neste tutorial, você cria um gráfico de pizza em um relatório paginado do Reporting Services. Você adiciona percentuais e combina fatias pequenas em uma única fatia.
@@ -27,7 +27,7 @@ A ilustração a seguir mostra o gráfico de pizza que será criado.
 Se houver muitos pontos de dados em um gráfico de pizza, os rótulos dos pontos de dados podem ficar muito cheios para serem lidos. Nesse caso, considere a combinação de um número de fatias pequenas em uma fatia maior. Gráficos de pizza são mais fáceis de ler quando você agrega os dados em poucos pontos de dados.  
  
 > [!NOTE]  
-> Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos. Confira instruções passo a passo sobre como navegar até um servidor de relatório, como adicionar uma fonte de dados e um conjunto de dados no primeiro tutorial desta série: [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos. Para obter instruções passo a passo sobre como procurar um servidor de relatório, adicionar uma fonte de dados e um conjunto de dados, consulte o primeiro tutorial desta série: [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 10 minutos  
   
@@ -73,7 +73,7 @@ Nesta seção, você usa o Assistente de Gráfico para criar um conjunto de dado
     UNION SELECT 'Full Frame Digital Camera' AS Product, CAST(247250.85 AS money) AS Sales  
     ```  
   
-8.  (Opcional) Clique no botão Executar (**!**) para ver os dados em que o gráfico se baseará.  
+8.  (Opcional) Clique no botão Executar ( **!** ) para ver os dados em que o gráfico se baseará.  
   
 9. Clique em **Avançar**.  
   
@@ -115,7 +115,7 @@ Em cada fatia da pizza, é possível exibir uma porcentagem dessa fatia comparad
   
 4.  Na caixa **Rotular dados**, selecione **#PERCENT**.  
     
-5.  (Opcional) Para especificar quantas casas decimais o rótulo deve mostrar, na caixa **Rotular dados** após **#PERCENT**, digite **{Pn}** , em que *n* é o número de casas decimais a serem exibidas. Por exemplo, para não exibir nenhuma casa decimal, digite **#PERCENT{P0}**.  
+5.  (Opcional) Para especificar quantas casas decimais o rótulo deve mostrar, na caixa **Rotular dados** após **#PERCENT**, digite **{Pn}** , em que *n* é o número de casas decimais a serem exibidas. Por exemplo, para não exibir nenhuma casa decimal, digite **#PERCENT{P0}** .  
 
 6.  Para exibir valores como porcentagens, a propriedade UseValueAsLabel deve ser falsa. Se for solicitado que você defina esse valor na caixa de diálogo **Confirmar Ação** , clique em **Sim**.  
   

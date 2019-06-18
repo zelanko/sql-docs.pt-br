@@ -14,14 +14,14 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1c37cc18d9a15a0f19a30697306ef3165ee9f846
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ae971989342ca6d3fda121b0559bebb681f07fb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735584"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193317"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Usando arquivos de política de segurança do Reporting Services
   O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] armazena informações de política de segurança de componentes em três arquivos de configuração que são copiados no sistema de arquivos durante a instalação. Estes arquivos de configuração podem conter uma combinação de políticas de segurança de uso interno e definidas pelo usuário assemblies de código no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Os três arquivos de configuração correspondem a três componentes de segurança do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: o servidor de relatório e o serviço do Windows, o aplicativo Web do Gerenciador de Relatórios e a janela de exibição do Designer de Relatórios.  

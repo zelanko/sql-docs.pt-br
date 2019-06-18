@@ -11,14 +11,14 @@ helpviewer_keywords:
 - methods [Reporting Services], about methods
 - methods [Reporting Services]
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b09f9e6d9700a56eaa36ddd40ad038fd291c6058
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 678c987e2297c7345dd347957e395b9c4c81544e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848124"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284596"
 ---
 # <a name="report-server-namespace-management-methods"></a>Métodos de gerenciamento de namespace do Servidor de Relatório
   O serviço Web de Gerenciamento do Servidor de Relatório contém métodos que podem ser usados para gerenciar relatórios, pastas e recursos no banco de dados do servidor de relatório.  

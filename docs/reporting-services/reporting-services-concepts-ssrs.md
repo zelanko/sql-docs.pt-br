@@ -9,16 +9,16 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 126819d9adb85fa4cf17af0c6308d56696136988
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570860"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Conceitos do Reporting Services (SSRS)
   Este tópico fornece um resumo breve de conceitos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | Modo do SharePoint do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]    
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | Modo do SharePoint do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]   
   
 ##  <a name="bkmk_ReportServerConcepts"></a> Conceitos do servidor de relatório  
  Um servidor de relatório é um computador que tem uma instância do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instalada. Um servidor de relatório armazena internamente itens como relatórios móveis e paginados, itens e recursos relacionados a relatórios, agendas e assinaturas. Um servidor de relatório pode ser configurado como um único servidor autônomo ou como um farm em expansão ou pode ser integrado ao Servidor do SharePoint. Você interage com itens do servidor de relatório por meio do serviço Web do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , do provedor WMI, de acesso à URL ou programaticamente por meio de scripts. A maneira como você interage com um servidor de relatório depende da topologia de implantação e da configuração.  

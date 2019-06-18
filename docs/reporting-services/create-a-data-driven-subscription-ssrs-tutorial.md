@@ -10,14 +10,14 @@ helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 32e4ca675330278d69994faa81b7bb3e4a13b4b6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: baff01bd8bc02af409a37c5cc1ce193e69663387
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291414"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194824"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Criar uma assinatura controlada por dados (Tutorial do SSRS)
 Este tutorial do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ensina os conceitos de assinaturas controladas por dados, apresentando um exemplo simples que cria uma assinatura controlada por dados para gerar e salvar a saída do relatório filtrado em um compartilhamento de arquivos. 
@@ -71,7 +71,7 @@ Para usar este tutorial, seu computador deve ter os seguintes itens instalados:
   
 -   Uma pasta compartilhada na qual você tenha permissões de gravação. A pasta compartilhada deve ser acessada por uma conexão de rede.  
   
-**Tempo estimado para conclusão do tutorial:** 30 minutos. Mais 30 minutos se você não concluiu o tutorial de relatório básico.  
+**Tempo estimado para concluir o tutorial:** 30 minutos. Mais 30 minutos se você não concluiu o tutorial de relatório básico.  
   
 ## <a name="see-also"></a>Consulte Também  
 [Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  

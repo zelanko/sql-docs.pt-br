@@ -15,10 +15,10 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5c1c2bb116f08dca2df111b6cccd9d6f0bf28160
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503291"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verificar uma instalação do Reporting Services
@@ -86,9 +86,9 @@ ms.locfileid: "65503291"
   
 1.  Execute a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e se conecte à instância do servidor de relatório recém-instalada. A página URL do Serviço Web inclui um link para o serviço Web Servidor de Relatórios. Clique no link para verificar se você pode acessar o servidor. Se o banco de dados do servidor de relatório não estiver configurado, faça isso primeiro antes de clicar no link.  
   
-2.  Abra os aplicativos do console Serviços e verifique se o serviço Servidor de Relatório está em execução. Para exibir o status do serviço Servidor de Relatório, clique em **Iniciar**, aponte para **Painel de Controle**, clique duas vezes em **Ferramentas Administrativas**e clique duas vezes em **Serviços**. Quando a lista de serviços for exibida, role até **Servidor de Relatório (MSSQLSERVER)**. O status deve ser **Iniciado**.  
+2.  Abra os aplicativos do console Serviços e verifique se o serviço Servidor de Relatório está em execução. Para exibir o status do serviço Servidor de Relatório, clique em **Iniciar**, aponte para **Painel de Controle**, clique duas vezes em **Ferramentas Administrativas**e clique duas vezes em **Serviços**. Quando a lista de serviços for exibida, role até **Servidor de Relatório (MSSQLSERVER)** . O status deve ser **Iniciado**.  
   
-3.  Abra um navegador e digite a URL do servidor de relatório na barra de endereço. O endereço consiste no nome do servidor e no nome do diretório virtual especificados para o servidor de relatório durante a instalação. Por padrão, o diretório virtual do servidor de relatório é denominado **ReportServer**. Use a seguinte URL para verificar a instalação do servidor de relatório: https://*\<nome do computador>*/ReportServer*\<_nome da instância>*. A URL será diferente se você tiver instalado o servidor de relatório como uma instância nomeada. Para obter mais informações sobre o formato de URL, veja [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Se você for um administrador local no Windows Vista ou Windows Server 2008, veja [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+3.  Abra um navegador e digite a URL do servidor de relatório na barra de endereço. O endereço consiste no nome do servidor e no nome do diretório virtual especificados para o servidor de relatório durante a instalação. Por padrão, o diretório virtual do servidor de relatório é denominado **ReportServer**. Use a seguinte URL para verificar a instalação do servidor de relatório: https:// *\<nome do computador>* /ReportServer *\<_nome da instância>* . A URL será diferente se você tiver instalado o servidor de relatório como uma instância nomeada. Para obter mais informações sobre o formato de URL, veja [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Se você for um administrador local no Windows Vista ou Windows Server 2008, veja [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 4.  Execute relatórios para testar as operações do servidor de relatório. Para esta etapa, você pode criar um relatório de exemplo de um tutorial. Para obter mais informações, veja [Criar um relatório de tabela básico & &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
@@ -96,7 +96,7 @@ ms.locfileid: "65503291"
   
 1.  Abra um navegador e digite a URL do Portal da Web na barra de endereço. O endereço consiste no nome do servidor e no nome do diretório virtual especificados para o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] durante a instalação ou na página URL do Portal da Web da ferramenta Configuração do Reporting Services. Por padrão, o diretório virtual do [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] é **Relatórios**. Você pode usar a seguinte URL para verificar a instalação do [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] :  
   
-     https://*\<nome do computador>*/Reports*\<_nome da instância>*.  
+     https:// *\<nome do computador>* /Reports *\<_nome da instância>* .  
   
 2.  Use o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] para criar uma nova pasta ou carregar um arquivo a fim de testar se as condições são devolvidas para o banco de dados do servidor de relatório. Se essas operações obtiverem êxito, a conexão estará funcional.  
   

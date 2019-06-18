@@ -16,10 +16,10 @@ ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 603ae515642fa524841c160cafc82c4e8ace3249
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571661"
 ---
 # <a name="configurationsetting-property---databaselogonaccount"></a>Propriedade de ConfigurationSetting – DatabaseLogonAccount
@@ -44,7 +44,7 @@ public string DatabaseLogonAccount;
 ## <a name="remarks"></a>Remarks  
  Valores válidos para esta propriedade variarão dependendo do valor da propriedade [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) .  
   
- Essa propriedade será ignorada se a propriedade [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) for definida como **2 (Service)**.  
+ Essa propriedade será ignorada se a propriedade [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) for definida como **2 (Service)** .  
   
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

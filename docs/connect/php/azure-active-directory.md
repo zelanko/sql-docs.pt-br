@@ -12,11 +12,11 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: mbarwin
 ms.openlocfilehash: 30423cd7c15a920d99fad4c0ea08e074beaece0b
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828046"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62522806"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Conectar usando a Autenticação do Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

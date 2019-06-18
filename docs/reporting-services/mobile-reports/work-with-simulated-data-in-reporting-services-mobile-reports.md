@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e7b776893c15532efc1d2dac54d16a7bc9035991
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295896"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62474847"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Trabalhar com dados simulados em relatórios do Reporting Services móveis
 Quando você coloca um elemento de galeria na superfície do design, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] gera imediatamente dados simulados para esse elemento. Esses dados servem para várias finalidades úteis ao criar relatórios móveis.   
@@ -38,7 +38,7 @@ Conforme mencionado anteriormente, você pode exportar dados simulados para um a
   
 Depois que todos os controles são associados a dados reais, as tabelas simuladas que não estão mais em uso são automaticamente removidas do relatório móvel. Não é possível remover tabelas simuladas ainda referenciadas por elementos na superfície do design.  
   
->**Observação**: os dados simulados não acrescentam à superfície geral móvel do relatório porque não são serializados com o relatório móvel, mas gerados dinamicamente em tempo de execução.  
+>**Observação**: dados simulados não acrescentam à superfície geral móvel do relatório porque não são serializados com o relatório móvel, mas geradas dinamicamente em tempo de execução.  
   
 ### <a name="see-also"></a>Confira também  
 - [Criar e publicar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  

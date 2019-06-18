@@ -11,10 +11,10 @@ ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8c433b8fcc0d768b3db48edf8bc56bed6440839a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574215"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>Cancelar Trabalhos do Servidor de Relatório (Management Studio)
@@ -26,7 +26,7 @@ ms.locfileid: "65574215"
   
 -   Um trabalho do sistema é um trabalho iniciado pelo servidor de relatórios. Trabalhos do sistema incluem processamento de relatório agendado.  
   
- Para abrir essa página, inicie o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se a um servidor de relatório, clique com o botão direito do mouse em **Trabalhos**e clique em **Cancelar Todos os Trabalhos**. Você pode abrir também **Trabalhos**, clicar com o botão direito do mouse em um trabalho em execução no servidor de relatório e selecionar **Cancelar Trabalho(s)**.  
+ Para abrir essa página, inicie o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se a um servidor de relatório, clique com o botão direito do mouse em **Trabalhos**e clique em **Cancelar Todos os Trabalhos**. Você pode abrir também **Trabalhos**, clicar com o botão direito do mouse em um trabalho em execução no servidor de relatório e selecionar **Cancelar Trabalho(s)** .  
   
  Antes de cancelar um trabalho, você pode exibir suas propriedades para determinar quando o trabalho foi iniciado. Para obter mais informações, consulte [Propriedades do Trabalho &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md).  
   

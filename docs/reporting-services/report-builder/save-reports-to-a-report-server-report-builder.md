@@ -9,10 +9,10 @@ ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e5a622aaca18bed1cda8c4ad8a1a1dec8f91849
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580666"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Salvar relatórios em um servidor de relatório (Construtor de Relatórios)
@@ -23,7 +23,7 @@ ms.locfileid: "65580666"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>Para salvar um relatório em um servidor de relatório  
   
-1.  No botão Construtor de Relatórios, clique em **Salvar**. A caixa de diálogo **Salvar Como**_\<Item de Relatório>_ será exibida.  
+1.  No botão Construtor de Relatórios, clique em **Salvar**. A caixa de diálogo **Salvar Como** _\<Item de Relatório>_ será exibida.  
   
     > [!NOTE]  
     >  Se você estiver salvando um relatório de novo, ele será salvo novamente automaticamente em seu local anterior. Use a opção Salvar como para alterar o local.  
@@ -38,7 +38,7 @@ ms.locfileid: "65580666"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Para salvar um relatório com um nome diferente  
   
-1.  No botão Construtor de Relatórios, clique em **Salvar como**. A caixa de diálogo **Salvar Como**_\<Item de Relatório>_ será exibida.  
+1.  No botão Construtor de Relatórios, clique em **Salvar como**. A caixa de diálogo **Salvar Como** _\<Item de Relatório>_ será exibida.  
   
 2.  Vá até o local do servidor de relatório ou o compartilhamento de arquivo em que você deseja salvar o relatório.  
   

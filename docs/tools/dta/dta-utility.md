@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b40e9c05d81f7fb868884ab25e0f317804d162e0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590190"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63001093"
 ---
 # <a name="dta-utility"></a>utilitário dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -227,7 +227,7 @@ dta -d AdventureWorks2012 ...
  Especifica o caminho e o nome do arquivo de carga de trabalho a ser usado como entrada para ajuste. O arquivo deve estar em um destes formatos: .trc (arquivo de rastreamento do SQL Server Profiler), .sql (arquivo SQL) ou .log (arquivo de rastreamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Um arquivo de carga de trabalho ou uma tabela de carga de trabalho deve ser especificada.  
   
  **-it** _workload_trace_table_name_  
- Especifica o nome de uma tabela que contém o rastreamento de carga de trabalho para ajuste. O nome é especificado no formato: [*database_name*]**.**[*owner_name*]**.**_table_name_.  
+ Especifica o nome de uma tabela que contém o rastreamento de carga de trabalho para ajuste. O nome é especificado no formato: [*database_name*] **.** [*owner_name*] **.** _table_name_.  
   
  A tabela a seguir mostra os valores padrão de cada um:  
   
@@ -344,14 +344,14 @@ Nesse caso, DTA usará Store consulta como a origem da carga de trabalho e consi
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- Esse argumento é uma alternativa à inserção de uma lista de tabela no prompt de comando (**-Tl**). Não use um arquivo de lista de tabela (**-Tf**) se você estiver usando **-Tl**. Se ambos os argumentos forem usados, o **dta** falhará e retornará um erro.  
+ Esse argumento é uma alternativa à inserção de uma lista de tabela no prompt de comando ( **-Tl**). Não use um arquivo de lista de tabela ( **-Tf**) se você estiver usando **-Tl**. Se ambos os argumentos forem usados, o **dta** falhará e retornará um erro.  
   
  Se os argumentos **-Tf** e **-Tl** forem omitidos, todas as tabelas de usuário nos bancos de dados especificados serão consideradas para o ajuste.  
   
  **-Tl** _table_list_  
  Especifica ao prompt de comando uma lista de tabelas a serem ajustadas. Coloque vírgulas entre os nomes de tabela para separá-los. Se apenas um banco de dados for especificado com o argumento **-D** , os nomes de tabela não precisarão ser qualificados com um nome de banco de dados. Caso contrário, o nome totalmente qualificado no formato: *database_name.schema_name.table_name* será obrigatório para cada tabela.  
   
- Esse argumento é uma alternativa ao uso de um arquivo de lista de tabela (**-Tf**). Se **-Tl** e **-Tf** forem usados, **dta** falhará e retornará um erro.  
+ Esse argumento é uma alternativa ao uso de um arquivo de lista de tabela ( **-Tf**). Se **-Tl** e **-Tf** forem usados, **dta** falhará e retornará um erro.  
   
  **-U** _login_id_  
  Especifica a ID de logon usada para conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
