@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099546"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Definir propriedades de implantação (Reporting Services)
@@ -63,7 +63,7 @@ ms.locfileid: "66099546"
     > [!NOTE]  
     >  Para um servidor de relatórios executado no modo nativo, você deverá ter permissões de **Publicação** na pasta de destino para publicar relatórios nessa pasta. As permissões de publicação são fornecidas por meio de uma atribuição de função que mapeia sua conta de usuário para uma função que inclui operações de publicação. Para obter mais informações, consulte [Criar e gerenciar atribuições](../security/create-and-manage-role-assignments.md). Para um servidor de relatórios executado no modo integrado do SharePoint, você deve ter permissão de **Membro** ou **Proprietário** no site do SharePoint. Para obter mais informações, consulte [Referência à permissão de listas e sites do SharePoint para itens do Servidor de Relatório](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
-10. Na caixa de texto **TargetServerURL** , digite a URL do servidor de relatórios de destino. Antes de publicar um relatório, defina essa propriedade com uma URL de servidor de relatório válida. Ao publicar em um servidor de relatório executado no modo nativo, use a URL do diretório virtual do servidor de relatório (por exemplo, http:*//server/reportserver* ou https:*//server/reportserver)*. Este é o diretório virtual do servidor de relatório e não o Gerenciador de Relatórios.  
+10. Na caixa de texto **TargetServerURL** , digite a URL do servidor de relatórios de destino. Antes de publicar um relatório, defina essa propriedade com uma URL de servidor de relatório válida. Ao publicar em um servidor de relatório executado no modo nativo, use a URL do diretório virtual do servidor de relatório (por exemplo, http: *//server/reportserver* ou https: *//server/reportserver)* . Este é o diretório virtual do servidor de relatório e não o Gerenciador de Relatórios.  
   
      Quando publicar em um servidor de relatório executado no modo integrado do SharePoint, use uma URL de um site de nível superior ou subsite do SharePoint. Se você não especificar um site, o site de nível superior padrão será usado (por exemplo, http://*servername*, http://*servername*/*site* ou http://*servername*/*site*/*subsite*).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66099546"
   
 2.  Na caixa de diálogo **Páginas de Propriedades** do projeto, clique no **Gerenciador de Configuração**.  
   
-3.  Na caixa de diálogo **Gerenciador de Configuração** , selecione a configuração a ser editado. A configuração ativa no momento é exibida como **Ativa(***\<configuration>***)**.  
+3.  Na caixa de diálogo **Gerenciador de Configuração** , selecione a configuração a ser editado. A configuração ativa no momento é exibida como **Ativa(***\<configuration>***)** .  
   
 4.  Em **Contextos do Projeto**, para cada projeto na solução, selecione ou desmarque **Build** ou **Deploy**.  
   
