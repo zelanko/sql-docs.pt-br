@@ -9,10 +9,10 @@ ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 137eb9b9cf7a5a64843e163ece3b4767dd8e1852
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581801"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>Coleções internas – referências de coleções de parâmetros (Construtor de Relatórios)

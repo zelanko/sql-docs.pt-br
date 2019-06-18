@@ -11,14 +11,14 @@ helpviewer_keywords:
 - shared schedules [Reporting Services], methods
 - methods [Reporting Services], scheduling
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 387be09d03396c0bacb4d282ff2b6abdbaa9c4d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 640564af3d2c46045d328c2d86788e803672512c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856766"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284428"
 ---
 # <a name="scheduling-methods"></a>Métodos de agendamento
   É possível usar esses métodos para criar e gerenciar agendas compartilhadas para execução e entrega de relatório e para planos de atualização do cache utilizados pelo servidor de relatório.  

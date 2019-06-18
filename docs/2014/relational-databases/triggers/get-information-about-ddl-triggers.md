@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8d5e59264036380f6c8b5c9e73df5a6700c4b1ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62698214"
 ---
 # <a name="get-information-about-ddl-triggers"></a>Obter informações sobre gatilhos DDL
@@ -36,7 +36,7 @@ ms.locfileid: "62698214"
   
 -   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)  
   
-## <a name="database-scoped-ddl-triggers"></a> gatilhos DDL no escopo do banco de dados  
+## <a name="database-scoped-ddl-triggers"></a>gatilhos DDL no escopo do banco de dados  
  **Para obter informações sobre gatilhos no escopo do banco de dados**  
   
 -   [sys.triggers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-triggers-transact-sql)  

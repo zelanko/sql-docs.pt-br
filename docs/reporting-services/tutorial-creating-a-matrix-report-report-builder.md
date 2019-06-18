@@ -1,21 +1,21 @@
 ---
-title: 'Tutorial: Criar um relatório de matriz (Construtor de Relatórios) | Microsoft Docs'
+title: 'Tutorial: Criando um relatório de matriz (Construtor de Relatórios) | Microsoft Docs'
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 812885a0638c9acf56cc0fc91f4f47915d6455cb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291674"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63294704"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Criar um relatório de matriz (Construtor de Relatórios)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: criando um relatório de matriz (Construtor de Relatórios)
 Este tutorial ensina a criar um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] com uma matriz de dados de vendas de exemplo em grupos de linhas e colunas aninhados. 
 
 Você também cria um grupo de colunas adjacentes, formata colunas e gira o texto. A ilustração a seguir mostra um relatório semelhante ao que você criará.  
@@ -49,7 +49,7 @@ Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto 
   
 5.  Clique em **Avançar**.  
   
-6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou você não tiver acesso a um servidor de relatório, em vez disso, será possível usar uma fonte de dados inserida. Saiba mais sobre como criar uma fonte de dados inserida no [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou você não tiver acesso a um servidor de relatório, em vez disso, será possível usar uma fonte de dados inserida. Para obter informações sobre como criar uma fonte de dados inserida, consulte [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Clique em **Avançar**.  
   
@@ -133,7 +133,7 @@ Use o assistente para fornecer um design inicial no qual exibir dados. O painel 
   
 13. Clique em **Concluir**.  
   
-    A matriz é adicionada à superfície de design. O painel Grupos de Linhas mostra dois grupos de linhas: Território e SalesDate. O painel Grupos de Colunas mostra dois grupos de colunas: Subcategoria e Produto. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
+    A matriz é adicionada à superfície de design. O painel Grupos de Linhas mostra dois grupos de linhas: Territory e SalesDate. O painel Grupos de Colunas mostra dois grupos de colunas: Subcategory e Product. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
     
     ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
   
@@ -156,7 +156,7 @@ Por padrão, os dados resumidos do campo Sales exibem um número geral e o campo
   
 3.  Na guia **Início** > **Número** > **Moeda**. As células são alteradas para mostrar a moeda formatada.  
   
-    Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [**$12,345.00**]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números** , clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
+    Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [ **$12,345.00**]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números** , clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
     
     ![report-builder-placeholder-value](../reporting-services/media/report-builder-placeholder-value.png)
   
@@ -164,7 +164,7 @@ Por padrão, os dados resumidos do campo Sales exibem um número geral e o campo
   
 5.  No grupo **Número** > **Data**.  
   
-    A célula exibe a data de exemplo **[1/31/2000]**. Se uma data de exemplo não estiver visível, clique em **Estilos de Espaço Reservado** no grupo **Números** e clique em **Valores de Exemplo**.  
+    A célula exibe a data de exemplo **[1/31/2000]** . Se uma data de exemplo não estiver visível, clique em **Estilos de Espaço Reservado** no grupo **Números** e clique em **Valores de Exemplo**.  
   
 6.  Clique em **Executar** para visualizar o relatório.  
   

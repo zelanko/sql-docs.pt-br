@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: aad2da1a-d7b1-4afa-a66a-1ff102e8306f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 56b19095ba0848b579fcea22b5f51a5b64e0609f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ade2bf3463ca2efc139cfea661dba0a83394f804
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702604"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651262"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Lição 7: Adicionar ação de detalhamento ao relatório pai
 Depois que você adicionar um controle ReportViewer para o aplicativo de site, a próxima etapa será adicionar uma ação de detalhamento no relatório pai.  

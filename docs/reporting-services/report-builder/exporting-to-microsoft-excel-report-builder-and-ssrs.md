@@ -9,10 +9,10 @@ ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9973ce2f9c5eac344307258e1c212979146c1695
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580772"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
@@ -168,8 +168,8 @@ ms.locfileid: "65580772"
   
 |Propriedade|Excel 2003|Excel atual|  
 |--------------|----------------|-------------------|  
-|Máximo de colunas por planilha|256|16.384|  
-|Máximo de linhas por planilha|65.536|1.048.576|  
+|Máximo de colunas por planilha|256|16\.384|  
+|Máximo de linhas por planilha|65\.536|1\.048.576|  
 |Número de cores permitido em uma planilha|56 (paleta)<br /><br /> Se mais de 56 cores forem utilizadas no relatório, a extensão de renderização corresponderá à cor necessária de uma das 56 cores já disponíveis na paleta personalizada.|Aproximadamente 16 milhões (cor de 24 bits)|  
 |Arquivos compactados em ZIP|None|compactação em ZIP|  
 |Família de fontes padrão|Arial|Calibri|  

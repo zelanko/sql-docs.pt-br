@@ -9,10 +9,10 @@ ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9848a77ae760fc2c1fa4c4d0ddeaa5b1120ec1ef
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578473"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Especificando caminhos para itens externos (Construtor de Relatórios e SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "65578473"
   
 -   **Um caminho completo para o item.**  
   
-    -   **Em um servidor de relatório:** o caminho começa com **/**, a pasta Base. Por exemplo, ../Reports/AllSubreports/Subreport1.  
+    -   **Em um servidor de relatório:** o caminho começa com **/** , a pasta Base. Por exemplo, ../Reports/AllSubreports/Subreport1.  
   
     -   **Em um site do SharePoint:** você deve especificar o nome do relatório em uma expressão, com a URL completa do item e a extensão de arquivo .rdl. Por exemplo, `="https://server/site/library/folder/Report1.rdl"`.  
   

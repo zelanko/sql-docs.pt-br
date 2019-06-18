@@ -13,10 +13,10 @@ ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e98421a76fda260c71c691551151bd9dad245a5a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579967"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Publicando fontes de dados e relatórios

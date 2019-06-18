@@ -11,10 +11,10 @@ ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e2632e93cf325a560434e0833e3bb5a7288f83ef
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578993"
 ---
 # <a name="set-report-server-properties-management-studio"></a>Definir propriedades do servidor de relatório (Management Studio)

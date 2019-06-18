@@ -13,10 +13,10 @@ ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d57768a580b4343fbe1e6ee2919a8161013371a4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579416"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Usar a segurança interna no Windows SharePoint Services para itens do servidor de relatório

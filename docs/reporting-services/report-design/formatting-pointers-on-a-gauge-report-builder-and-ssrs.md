@@ -9,10 +9,10 @@ ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 780cda075d8280d71f3438c79359c58ad1ac3133
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65575641"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formatando ponteiros de um medidor (Construtor de Relatórios e SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "65575641"
 ##  <a name="DisplayingMultiple"></a> Exibindo vários ponteiros no medidor  
  É possível adicionar vários ponteiros ao medidor para apontar para vários valores na mesma escala. Isso pode ser útil para mostrar valores baixo e alto simultaneamente. Para especificar mais de um ponteiro do medidor na mesma escala, clique com o botão direito do mouse em qualquer lugar do medidor e clique em **Adicionar Ponteiro** no menu de atalho. Também é possível adicionar uma escala clicando com o botão direito do mouse em qualquer lugar do medidor e clicando em **Adicionar Escala**. Assim, você pode adicionar um ponteiro e ele será associado automaticamente à última escala.  
   
- Quando os ponteiros se sobrepõem, a ordem de desenho dos ponteiros é determinada pela ordem na qual eles são adicionados ao medidor. Não é possível reorganizar a ordem de desenho dos ponteiros alterando a ordem dos campos no painel de dados. Para alterar a ordem do desenho de vários ponteiros, abra o painel Propriedades e clique em **Ponteiros (…)**. Em seguida, altere a ordem dos ponteiros na coleção Ponteiro.  
+ Quando os ponteiros se sobrepõem, a ordem de desenho dos ponteiros é determinada pela ordem na qual eles são adicionados ao medidor. Não é possível reorganizar a ordem de desenho dos ponteiros alterando a ordem dos campos no painel de dados. Para alterar a ordem do desenho de vários ponteiros, abra o painel Propriedades e clique em **Ponteiros (…)** . Em seguida, altere a ordem dos ponteiros na coleção Ponteiro.  
   
 ##  <a name="SettingGradients"></a> Definindo as gradações em uma extremidade de agulha  
  Você pode especificar uma extremidade de agulha que possa ser desenhada acima ou abaixo do ponteiro apenas em um ponteiro radial. Todos os estilos de extremidade de agulha são desenhados usando gradações internas que não podem ser modificadas. A exceção é o estilo **RoundedDark** , em que você pode especificar uma cor de gradiente e o estilo de gradiente.  

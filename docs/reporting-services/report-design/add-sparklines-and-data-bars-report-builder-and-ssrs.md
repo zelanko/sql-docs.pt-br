@@ -9,10 +9,10 @@ ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8982b9fb6312f3d3c14b4a4e009a81b51c435914
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581895"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>Adicionar minigráficos e barras de dados (Construtor de Relatórios e SSRS)
@@ -37,9 +37,9 @@ ms.locfileid: "65581895"
   
      O painel **Dados do Gráfico** é aberto.  
   
-6.  Na área **Valores** , em **Adicionar Campos** , clique no sinal de adição (**+**) e clique no campo cujos valores você deseja inserir no gráfico.  
+6.  Na área **Valores** , em **Adicionar Campos** , clique no sinal de adição ( **+** ) e clique no campo cujos valores você deseja inserir no gráfico.  
   
-7.  Na área **Grupos de Categorias** , em **Adicionar Campos** , clique no sinal de adição (**+**) e clique no campo por cujos valores você deseja agrupar.  
+7.  Na área **Grupos de Categorias** , em **Adicionar Campos** , clique no sinal de adição ( **+** ) e clique no campo por cujos valores você deseja agrupar.  
   
      Em geral, para minigráficos e barras de dados, você não adicionará um campo à área **Grupo de Séries** porque somente deseja uma série para cada linha.  
   

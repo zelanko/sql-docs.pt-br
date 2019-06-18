@@ -12,10 +12,10 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 181f349f4dc878f0612cf6635143469c2cbe3f34
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65575995"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Entrega de compartilhamento de arquivos no Reporting Services
@@ -72,7 +72,7 @@ ms.locfileid: "65575995"
   
  **Substituição:** você pode especificar as opões de substituição para reusar o mesmo nome de arquivo para cada entrega de relatório ou para criar um novo arquivo. Para substituir o arquivo, é necessário usar o mesmo nome e extensão de arquivo.  
   
- Uma abordagem alternativa para criar arquivos exclusivos para cada entrega é incluir um carimbo de hora no nome de arquivo. Para fazer isso, adicione a variável **@timestamp** ao nome de arquivo (por exemplo, *CompanySales@timestamp*). Com essa abordagem, o nome de arquivo será exclusivo por definição, portanto, nunca será substituído.  
+ Uma abordagem alternativa para criar arquivos exclusivos para cada entrega é incluir um carimbo de hora no nome de arquivo. Para fazer isso, adicione a variável **@timestamp** ao nome de arquivo (por exemplo, *CompanySales@timestamp* ). Com essa abordagem, o nome de arquivo será exclusivo por definição, portanto, nunca será substituído.  
   
  A imagem a seguir é um exemplo das configurações de um arquivo para uma assinatura configurada para entrega de compartilhamento de arquivos.  
   

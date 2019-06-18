@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 562c762871db5c29476d10a81ac52dad46f65ad5
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579394"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>Adicionar a web part do Visualizador de Relatórios a uma página da Web
@@ -43,7 +43,7 @@ Para adicionar uma web part a uma página da Web, é necessário ter a permissã
   
 6.  No visualizador, clique em **Clique aqui abrir o painel de ferramentas**.  
   
-7.  Selecione um relatório de qualquer biblioteca na coleção de sites atuais clicando no botão Procurar (**...**). Você também pode digitar a URL do relatório. Para determinar a URL de um relatório, clique com o botão direito do mouse no relatório e selecione **Propriedades**. Não clique na seta para baixo ao lado do relatório; a URL do relatório não está indicada na página Exibir Propriedades do item. Se você copiar e colar a URL da caixa de diálogo **Propriedades** , substitua a codificação de URL "%20" por um espaço (por exemplo, "Company%20Sales" deverá ser "Company Sales").  
+7.  Selecione um relatório de qualquer biblioteca na coleção de sites atuais clicando no botão Procurar ( **...** ). Você também pode digitar a URL do relatório. Para determinar a URL de um relatório, clique com o botão direito do mouse no relatório e selecione **Propriedades**. Não clique na seta para baixo ao lado do relatório; a URL do relatório não está indicada na página Exibir Propriedades do item. Se você copiar e colar a URL da caixa de diálogo **Propriedades** , substitua a codificação de URL "%20" por um espaço (por exemplo, "Company%20Sales" deverá ser "Company Sales").  
   
     > [!NOTE]  
     >  Cada web part do Visualizador de Relatórios contém um único relatório. É necessário que a URL seja totalmente qualificada para um relatório que está no site do SharePoint atual ou em um site no mesmo aplicativo ou farm da Web. A URL deve apontar para uma biblioteca de documentos ou para uma pasta em uma biblioteca de documentos que contenha o relatório. A URL do relatório deve incluir a extensão de arquivo .rdl. Se o relatório depender de um arquivo de fonte de dados compartilhados ou de modelo, não será necessário especificar esses arquivos na URL. O relatório contém referências aos arquivos necessários.  

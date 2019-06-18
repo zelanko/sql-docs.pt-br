@@ -1,21 +1,21 @@
 ---
-title: 'Tutorial: Criar relatórios principais e de detalhamento (Construtor de Relatórios) | Microsoft Docs'
+title: 'Tutorial: Criando relatórios principais e de detalhamento (Construtor de Relatórios) | Microsoft Docs'
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4d1c367f530353991fca3f7b8301b8a1691f3833
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286924"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63294727"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Criando relatórios principais e de detalhamento (Construtor de Relatórios)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: criando relatórios principais e de detalhamento (Construtor de Relatórios)
 Este tutorial ensina como criar dois tipos de relatórios paginados do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : um relatório de detalhamento e um relatório principal. Os dados de vendas de exemplo usados nestes relatórios são recuperados de um cubo do Analysis Services. 
 
 A ilustração a seguir mostra os relatórios que serão criados e mostra como o valor de campo, Games and Toys, no relatório principal é exibido no título do relatório de detalhamento. Os dados no relatório de detalhamento pertencem à categoria de produto Games and Toys.  
@@ -63,7 +63,7 @@ Uma conexão de dados contém as informações necessárias para estabelecer con
   
 4.  Em **Selecione um tipo de conexão**, selecione **Microsoft SQL Server Analysis Services**e clique em **Compilar**.  
   
-5.  Em **Fonte de dados**, verifique se a fonte de dados é **Microsoft SQL Server Analysis Services (AdomdClient)**.  
+5.  Em **Fonte de dados**, verifique se a fonte de dados é **Microsoft SQL Server Analysis Services (AdomdClient)** .  
   
 6.  Em **Nome do servidor**, digite o nome de um servidor em que uma instância do Analysis Services está instalada.  
   
@@ -101,7 +101,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
 #### <a name="to-create-query-filters"></a>Para criar filtros de consulta  
   
-1.  Na página **Criar uma consulta**, no painel Metadados, clique no botão **(…)**.  
+1.  Na página **Criar uma consulta**, no painel Metadados, clique no botão **(…)** .  
   
 2.  Na caixa de diálogo **Seleção de Cubo** , clique em Vendas e em **OK**.  
   
@@ -120,7 +120,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
 5.  Na lista de expressões de filtro, expanda **Todo o Canal**, clique em **Online**, em **Revendedor**e em **OK**.  
   
-    A consulta agora inclui um filtro para incluir apenas esses canais: Online e Revendedor.  
+    A consulta agora inclui um filtro para incluir apenas estes canais: Online e Revendedor.  
   
 6.  Expanda a dimensão Região de Vendas e arraste Grupo da Região de Vendas até a coluna **Hierarquia** (abaixo de **Nome do Canal**).  
   
@@ -161,7 +161,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
 5.  Arraste a medida Valor das Vendas até o painel de dados e coloque-a à direita de Nome da Subcategoria do Produto.  
   
-6.  Na barra de ferramentas do designer de consultas, clique em **Executar (!)**.  
+6.  Na barra de ferramentas do designer de consultas, clique em **Executar (!)** .  
   
 7.  Clique em **Avançar**.  
   
@@ -206,7 +206,7 @@ Depois de criar grupos, é possível adicionar e formatar linhas onde os valores
   
     A tabela é adicionada à superfície de design.  
   
-3.  Para visualizar o relatório, clique em **Executar (!)**.  
+3.  Para visualizar o relatório, clique em **Executar (!)** .  
   
 ## <a name="DFormat"></a>2. Formatar dados como moeda  
 Aplique a formatação de moeda aos campos de valor de vendas no relatório detalhado.  
@@ -261,7 +261,7 @@ Um título é exibido na parte superior do relatório. É possível colocar o t�
   
 2.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-3.  Digite **Vendas e Devoluções por Categoria:**.  
+3.  Digite **Vendas e Devoluções por Categoria:** .  
   
 4.  Clique com o botão direito do mouse em **Criar Espaço Reservado**.  
   
@@ -361,7 +361,7 @@ Você adicionará uma fonte de dados inserida ao relatório principal.
   
 4.  Em **Selecione um tipo de conexão**, selecione **Microsoft SQL Server Analysis Services**e clique em **Compilar**.  
   
-5.  Em **Fonte de dados**, verifique se a fonte de dados é **Microsoft SQL Server Analysis Services (AdomdClient)**.  
+5.  Em **Fonte de dados**, verifique se a fonte de dados é **Microsoft SQL Server Analysis Services (AdomdClient)** .  
   
 6.  Em **Nome do servidor**, digite o nome de um servidor em que uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] está instalada.  
   
@@ -392,7 +392,7 @@ Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o 
   
 #### <a name="to-create-query-filters"></a>Para criar filtros de consulta  
   
-1.  Na página **Criar uma consulta**, no painel Metadados, na seção de cubo, clique nas reticências **(…)**.  
+1.  Na página **Criar uma consulta**, no painel Metadados, na seção de cubo, clique nas reticências **(…)** .  
   
 2.  Na caixa de diálogo **Seleção de Cubo** , clique em Vendas e em **OK**.  
   
@@ -411,7 +411,7 @@ Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o 
   
 5.  Na lista de expressões de filtro, expanda **Todo o Canal**, clique em **Online** , em **Revendedor**e em **OK**.  
   
-    A consulta agora inclui um filtro para incluir apenas esses canais: Online e Revendedor.  
+    A consulta agora inclui um filtro para incluir apenas estes canais: Online e Revendedor.  
   
 6.  Expanda a dimensão Região de Vendas e arraste Grupo da Região de Vendas até a coluna **Hierarquia** , abaixo de **Nome do Canal**.  
   
@@ -479,7 +479,7 @@ Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o 
   
 4.  Em Membros Calculados, arraste Vendas Líquidas até o painel de dados e coloque-o à direita de `Net QTY`.  
   
-5.  Na barra de ferramentas do designer de consultas, clique em **Executar (!)**.  
+5.  Na barra de ferramentas do designer de consultas, clique em **Executar (!)** .  
   
     Revise o conjunto de resultados da consulta.  
   
@@ -511,7 +511,7 @@ Você pode mostrar subtotais e totais gerais em relatórios. Os dados no relató
   
 1.  Na página **Escolher o layout** , em **Opções**, verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
   
-    O painel Visualizar do assistente exibe uma matriz com quatro linhas.  Ao executar o relatório, cada linha será exibida da seguinte forma: A primeira linha é o grupo de colunas, a segunda linha contém os títulos das colunas, a terceira linha contém os dados de categorias de produto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`) e a quarta linha contém os totais.  
+    O painel Visualizar do assistente exibe uma matriz com quatro linhas.  Quando você executar o relatório, cada linha será exibida da seguinte maneira: a primeira linha é o grupo de colunas, a segunda linha contém os títulos das colunas, a terceira linha contém os dados da categoria do produto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`) e a quarta linha contém os totais.  
   
 2.  Clique em **Avançar**.  
   
@@ -587,7 +587,7 @@ Use indicadores para mostrar o estado de quantidades e vendas dos canais Online 
   
 4.  Clique no tipo **3 Sinais** e em **OK**.  
   
-5.  Clique com o botão direito do mouse no indicador e, no painel Dados do Medidor, clique na seta para baixo ao lado de **(Não especificado)**. Selecione `Net_QTY`.  
+5.  Clique com o botão direito do mouse no indicador e, no painel Dados do Medidor, clique na seta para baixo ao lado de **(Não especificado)** . Selecione `Net_QTY`.  
   
 6.  Repita as etapas 2 a 5 para a célula `[Sum(Net QTY)]` no grupo de linhas `[Product_Category_Name]` dentro de **Total**.  
   
@@ -599,7 +599,7 @@ Use indicadores para mostrar o estado de quantidades e vendas dos canais Online 
   
 3.  Clique no tipo **3 Sinais** e em **OK**.  
   
-4.  Clique com o botão direito do mouse no indicador e, no painel Dados do Medidor, clique na seta para baixo ao lado de **(Não especificado)**. Selecione `Net_Sales`.  
+4.  Clique com o botão direito do mouse no indicador e, no painel Dados do Medidor, clique na seta para baixo ao lado de **(Não especificado)** . Selecione `Net_Sales`.  
   
 5.  Repita as etapas 1 a 4 para a célula `[Sum(Net_Sales)]` no grupo de linhas `[Product_Category_Name]` dentro de **Total**.  
   
@@ -627,7 +627,7 @@ Adicione um título ao relatório principal.
   
 1.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-2.  Digite **Vendas de 2009 na Categoria de Produto: Categoria Online e Revendedor:**.  
+2.  Digite **Vendas de Categorias de Produtos de 2009: Categoria Online e Revendedor:** .  
   
 3.  Selecione o texto que você digitou.  
   

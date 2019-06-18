@@ -11,14 +11,14 @@ helpviewer_keywords:
 - custom assemblies [Reporting Services], updating
 - updating custom assemblies
 ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: db1749b10100cece54cdf579301d1cf243fa5abb
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: bc0b052bd2d932a54a1a857c7aebfe770395c556
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031516"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194935"
 ---
 # <a name="deploying-a-custom-assembly"></a>Implantando um assembly personalizado
   Para implantar um assembly personalizado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], coloque o assembly nas pastas de aplicativo do Designer de Relatórios e do servidor de relatório. Por padrão, os assemblies personalizados recebem a permissão **Execução** no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para conceder privilégios aos assemblies personalizados além da permissão Executar, você precisará editar o arquivo de configuração rssrvpolicy.config do servidor de relatório e o arquivo de configuração rspreviewpolicy.config da janela de visualização do Designer de Relatórios. Como alternativa, você poderá instalar o seu assembly no GAC (cache de assembly global).  

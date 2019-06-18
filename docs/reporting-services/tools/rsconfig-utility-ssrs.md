@@ -15,10 +15,10 @@ ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 38c2cd6242e9515872ef086ec4851bf6cec103ef
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571525"
 ---
 # <a name="rsconfig-utility-ssrs"></a>Utilitário rsconfig (SSRS)
@@ -46,7 +46,7 @@ rsconfig {-?}
 |Termo|Opcional/Necessário|Definição|  
 |----------|------------------------|----------------|  
 |**-?**|Opcional.|Exibe a sintaxe de argumentos Rsconfig.exe.|  
-|**-c**|Obrigatório se **-e** não for usado.|Especifica a cadeia de conexão, credenciais e valores de fonte de dados usados para conectar um servidor de relatório ao banco de dados do servidor de relatório.<br /><br /> Esse argumento não exige um valor. Porém, devem ser especificados argumentos adicionais com ele para fornecer todos os valores de conexão exigidos.<br /><br /> Os argumentos que você pode especificar com **-c** incluem **-m**, **-s**, **-i**,**-d**,**-a**,**-u**,**-p**e **-t**.|  
+|**-c**|Obrigatório se **-e** não for usado.|Especifica a cadeia de conexão, credenciais e valores de fonte de dados usados para conectar um servidor de relatório ao banco de dados do servidor de relatório.<br /><br /> Esse argumento não exige um valor. Porém, devem ser especificados argumentos adicionais com ele para fornecer todos os valores de conexão exigidos.<br /><br /> Os argumentos que você pode especificar com **-c** incluem **-m**, **-s**, **-i**, **-d**, **-a**, **-u**, **-p**e **-t**.|  
 |**-e**|Obrigatório se o argumento **-c** não for usado.|Especifica a conta de execução autônoma do relatório.<br /><br /> Esse argumento não exige um valor. Porém, você deve incluir argumentos adicionais na linha de comando para especificar os valores criptografados no arquivo de configuração.<br /><br /> Os argumentos que você pode especificar com **-e** incluem **-u** e **-p**. Você também pode definir **-t**.|  
 |**-m**  *computername*|Obrigatório se você estiver configurando uma instância de servidor de relatório remota.|Especifica o nome do computador que está hospedando o servidor de relatório. Se esse argumento for omitido, o padrão será **localhost**.|  
 |**-s**  *servername*|Obrigatórios.|Especifica a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados do servidor de relatório.|  

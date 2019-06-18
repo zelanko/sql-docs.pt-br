@@ -14,10 +14,10 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3fc3cddc10dd53225867b910b8a3b3cb9c73d6ca
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574854"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintaxe de consulta XML para dados de relatório XML (SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "65574854"
  Para um ponto de extremidade de serviço Web apontado por uma URL de cadeia de conexão, a **Query** XML define o método de serviço Web, a ação SOAP ou ambos. O provedor de dados XML cria uma solicitação de serviço Web que recupera dados XML a serem usados no relatório.  
   
 > [!NOTE]  
->  Quando um namespace de serviço Web inclui um caractere de barra (**/)** , inclua o método de serviço Web e a ação SOAP de modo que a extensão de processamento de dados XML possa derivar o namespace corretamente.  
+>  Quando um namespace de serviço Web inclui um caractere de barra ( **/)** , inclua o método de serviço Web e a ação SOAP de modo que a extensão de processamento de dados XML possa derivar o namespace corretamente.  
   
  Para um documento XML inserido, a **Query** XML define os dados XML inseridos a serem usados, inclui espaços para nome opcionais e contém um **ElementPath**XML opcional.  
   

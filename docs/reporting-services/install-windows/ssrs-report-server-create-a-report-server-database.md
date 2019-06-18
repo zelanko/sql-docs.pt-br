@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/15/2018
 ms.openlocfilehash: 7f04bff24ca1472b35b71c5e8f04d017714ddf0f
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65502666"
 ---
 # <a name="create-a-report-server-database"></a>Criar um banco de dados do servidor de relatório 

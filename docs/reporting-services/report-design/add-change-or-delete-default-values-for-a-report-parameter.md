@@ -13,10 +13,10 @@ ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 902d28e7d37524ac0d1649642ca592b20ea5b3cf
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582039"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter"></a>Adicionar, alterar ou excluir valores padrão de um parâmetro de relatório

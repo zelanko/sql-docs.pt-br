@@ -13,10 +13,10 @@ ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fd8444cc0bcdfe29268504cf2441c10d67a9ad0d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577518"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>Publicar uma fonte de dados compartilhada em uma biblioteca do SharePoint
@@ -28,7 +28,7 @@ ms.locfileid: "65577518"
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra um projeto do Servidor de Relatório existente ou novo.  
   
-2.  No menu **Projeto** , clique em **Propriedades**. A caixa de diálogo _\<project>_**Páginas de Propriedades do**  será exibida.  
+2.  No menu **Projeto** , clique em **Propriedades**. A caixa de diálogo _\<project>_ **Páginas de Propriedades do**  será exibida.  
   
 3.  Escolha a **Configuração** que deseja usar para publicar no site do SharePoint.  
   

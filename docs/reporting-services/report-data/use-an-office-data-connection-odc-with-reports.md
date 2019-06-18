@@ -13,10 +13,10 @@ ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a33b5bae668835ca1dbf52b2e7852c3af731ddfe
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574945"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>Usar uma conexão de dados do Office (.odc) com relatórios
@@ -90,7 +90,7 @@ ms.locfileid: "65574945"
   
 10. Se o relatório usar informações sobre fontes de dados personalizadas, clique em **Compartilhado**.  
   
-11. Em **Vínculo da Fonte de Dados**, clique no botão Procurar (**...**).  
+11. Em **Vínculo da Fonte de Dados**, clique no botão Procurar ( **...** ).  
   
 12. Selecione o arquivo .odc recém-carregado.  
   

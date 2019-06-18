@@ -12,10 +12,10 @@ ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65620590"
 ---
 # <a name="url-access-parameter-reference"></a>Referência de parâmetro de acesso de URL
@@ -35,7 +35,7 @@ ms.locfileid: "65620590"
 -   [Comandos da Web Part do Visualizador de Relatórios (rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> Comandos do Visualizador HTML (rc:)  
- - Os comandos do Visualizador de HTML são usados para destinar-se ao Visualizador de HTML e são prefixados com *rc:*:
+ - Os comandos do Visualizador de HTML são usados para destinar-se ao Visualizador de HTML e são prefixados com *rc:* :
   
 -   *Toolbar* :  
                   Mostra ou oculta a barra de ferramentas. Se o valor desse parâmetro for **false**, todas as demais opções serão ignoradas. Se você omitir esse parâmetro, a barra de ferramentas será exibida automaticamente para renderizar formatos que dão suporte a ele. O padrão desse parâmetro é **true**.  
@@ -276,7 +276,7 @@ ms.locfileid: "65620590"
                   Alterna o estado de mostrar e ocultar de uma seção do relatório. Especifique um número inteiro positivo para representar a seção a ser alternada.  
   
 ##  <a name="bkmk_webpart"></a> Comandos da Web Part do Visualizador de Relatórios (rv:)  
- O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a seguir descreve os nomes de parâmetros de relatório reservados que são usados para se destinar à Web Part Visualizador de Relatórios integrada ao SharePoint. Esses nomes de parâmetro são prefixados com *rv:*. A Web Part Visualizador de Relatórios também aceita o parâmetro *rs:ParameterLanguage* .  
+ O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a seguir descreve os nomes de parâmetros de relatório reservados que são usados para se destinar à Web Part Visualizador de Relatórios integrada ao SharePoint. Esses nomes de parâmetro são prefixados com *rv:* . A Web Part Visualizador de Relatórios também aceita o parâmetro *rs:ParameterLanguage* .  
   
 -   *Toolbar*: controla a exibição da barra de ferramentas para a Web Part Visualizador de Relatórios. O valor padrão é **Completo**. Os valores podem ser:  
   

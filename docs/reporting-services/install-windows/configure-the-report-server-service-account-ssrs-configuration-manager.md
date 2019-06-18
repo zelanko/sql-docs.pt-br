@@ -1,19 +1,19 @@
 ---
 title: Configurar a conta de serviço do servidor de relatório (Gerenciador de Configurações do SSRS) | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
-ms.openlocfilehash: 06ac6b8fb0c24751439d955b32eb93d9447bdf7c
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
-ms.translationtype: HT
+ms.openlocfilehash: 81b323f869aa28312911bf744e359def819029fe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328836"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62514405"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurar a conta de serviço do servidor de relatório (Gerenciador de configurações SSRS)
 
@@ -80,7 +80,7 @@ ms.locfileid: "53328836"
   
 ## <a name="localaccounts"></a> Considerações sobre o uso de contas locais
 
- A primeira questão a ser considerada ao usar contas locais é se o servidor de relatório exige acesso aos servidores de banco de dados remotos, aos servidores de email e aos controladores de domínio. Se você configurar o servidor de relatório para ser executado como uma conta de usuário local do Windows, um Serviço Local ou um Sistema Local, surgirão questões que deverão ser consideradas com relação à especificação das demais configurações e à criação e à entrega de assinaturas:  
+ A primeira questão a ser considerada ao usar contas locais é se o servidor de relatório exige acesso aos servidores de banco de dados remotos, aos servidores de email e aos controladores de domínio. Se você configurar o servidor de relatório para ser executado como uma conta de usuário local do Windows, um Serviço Local ou um Sistema Local, surgirão questões que deverão ser consideradas com relação à especificação das demais configurações e à criação e à entrega de assinaturas.  
   
 - A execução do serviço em uma conta local limitará suas opções posteriormente se você configurar uma conexão com um banco de dados do servidor de relatório remoto. Especificamente, se você estiver usando um banco de dados do servidor de relatório remoto, será necessário configurar a conexão para que ela use uma conta de usuário de domínio ou um usuário do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tenha permissão para entrar na instância remota do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

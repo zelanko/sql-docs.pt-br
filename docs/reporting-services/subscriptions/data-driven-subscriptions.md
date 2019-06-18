@@ -12,13 +12,13 @@ ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2791293f805f1e2c0d9bd39822bc3f452777c007
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175605"
 ---
-# <a name="data-driven-subscriptions"></a>Assinaturas controladas por dados
+# <a name="data-driven-subscriptions"></a>assinaturas controladas por dados
   Uma assinatura controlada por dados fornece uma maneira de usar dados dinâmicos de assinatura recuperados de uma fonte de dados externa em tempo de execução. Uma assinatura controlada por dados também pode usar texto estático e valores padrão especificados pelo usuário quando a assinatura é definida. É possível usar assinaturas controladas por dados para fazer o seguinte:  
   
 -    Distribuir um relatório a uma lista flutuante de assinantes. Por exemplo, é possível usar assinaturas controladas por dados para distribuir um relatório em uma grande organização na qual os assinantes variam de um mês para outro ou usar outros critérios que determinam a associação no grupo de um conjunto existente de usuários.  
