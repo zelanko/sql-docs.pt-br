@@ -16,18 +16,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 057d3f820ac0f580a6109d5b5c04ea43e8eabd9c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129706"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62507509"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>Validar informações de partição para um assinante de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Quando você define um filtro de linha com parâmetros para uma publicação de mesclagem, usa uma função que faz referência à informação do Assinante, como o nome de logon do Assinante. Por padrão, a replicação valida a informação do Assinante baseada nessa função, antes de cada sincronização e sempre que um instantâneo é aplicado ao Assinante. O processo de validação assegura que os dados são particionados corretamente para cada Assinante. O comportamento da validação é controlado pela propriedade de publicação **validate_subscriber_info**, que pode ser alterada usando [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) ou na página **Opções de Assinatura** da caixa de diálogo **Propriedades de Publicação**. Para obter mais informações sobre como alterar propriedades de publicação, consulte [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 ## <a name="how-partition-validation-works"></a>Como a validação de partição funciona  
- Quando uma publicação é filtrada, por exemplo, usando a função **SUSER_SNAME()**, o Agente de Mesclagem aplica o instantâneo inicial a cada Assinante baseado nos dados válidos para a expressão **SUSER_SNAME()** .  
+ Quando uma publicação é filtrada, por exemplo, usando a função **SUSER_SNAME()** , o Agente de Mesclagem aplica o instantâneo inicial a cada Assinante baseado nos dados válidos para a expressão **SUSER_SNAME()** .  
   
  Se a validação é ativada, quando o Assinante se conecta novamente ao Publicador para a sincronização seguinte, o Agente de Mesclagem valida a informação do Assinante e assegura que cada partição de assinante seja a mesma que a recebida no instantâneo inicial. Para cada mesclagem subsequente ou aplicativo de instantâneo, o Agente de Mesclagem valida a partição de cada Assinante.  
   

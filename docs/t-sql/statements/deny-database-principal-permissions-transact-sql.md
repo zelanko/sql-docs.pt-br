@@ -28,11 +28,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5bc7c5c22bdad37eee4e5a711b77555088404b0e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327677"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644578"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>Permissões de principal do banco de dados DENY  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,15 +71,15 @@ DENY permission [ ,...n ]
  Especifica uma permissão que pode ser negada no principal de banco de dados. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
  USER ::*database_user*  
- Especifica a classe e o nome do usuário no qual a permissão está sendo negada. O qualificador de escopo (**::**) é obrigatório.  
+ Especifica a classe e o nome do usuário no qual a permissão está sendo negada. O qualificador de escopo ( **::** ) é obrigatório.  
   
  ROLE ::*database_role*  
- Especifica a classe e o nome da função na qual a permissão está sendo negada. O qualificador de escopo (**::**) é obrigatório.  
+ Especifica a classe e o nome da função na qual a permissão está sendo negada. O qualificador de escopo ( **::** ) é obrigatório.  
   
  APPLICATION ROLE ::*application_role*  
  **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Especifica a classe e o nome da função de aplicativo na qual a permissão está sendo negada. O qualificador de escopo (**::**) é obrigatório.  
+ Especifica a classe e o nome da função de aplicativo na qual a permissão está sendo negada. O qualificador de escopo ( **::** ) é obrigatório.  
   
  CASCADE  
  Indica que a permissão que está sendo negada também é negada a outros principais aos quais ela foi concedida por esse principal.  
@@ -160,7 +160,7 @@ DENY CONTROL ON USER::Wanida TO RolandX;
 GO  
 ```  
   
-### <a name="b-denying-view-definition-permission-on-a-role-to-a-user-to-which-it-was-granted-with-grant-option"></a>b. Negando a permissão VIEW DEFINITION em uma função para um usuário para o qual foi concedida a permissão GRANT OPTION  
+### <a name="b-denying-view-definition-permission-on-a-role-to-a-user-to-which-it-was-granted-with-grant-option"></a>B. Negando a permissão VIEW DEFINITION em uma função para um usuário para o qual foi concedida a permissão GRANT OPTION  
  O exemplo a seguir nega a permissão `VIEW DEFINITION` na função [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`SammamishParking` para o usuário de banco de dados `JinghaoLiu`. A opção `CASCADE` é especificada porque ao usuário `JinghaoLiu` foi concedida a permissão VIEW DEFINITION WITH GRANT OPTION.  
   
 ```  
@@ -171,7 +171,7 @@ GO
 ```  
   
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. Negando a permissão IMPERSONATE em um usuário para uma função de aplicativo  
- O exemplo a seguir nega a permissão `IMPERSONATE` para o usuário `HamithaL` na função de aplicativo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`AccountsPayable17`.  
+ O exemplo a seguir nega a permissão `IMPERSONATE` para o usuário `HamithaL` na função de aplicativo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] `AccountsPayable17`.  
   
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   

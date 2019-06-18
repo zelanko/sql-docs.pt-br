@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e8695c847e6c5efce1869d55ec68e17bdee5800
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62683979"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
@@ -72,9 +72,9 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @shutdown_agent = ] shutdown_agent` Se o Distribution Agent estiver executando **sp_table_validation**, especifica se o Distribution Agent deve ser desligado imediatamente após a conclusão da validação. *shutdown_agent* está **bit**, com um padrão de **0**. Se **0**, o agente de replicação não desligará. Se **1**, erro 20578 será gerado e o agente de replicação será sinalizado para desligar. Esse parâmetro é ignorado quando **sp_table_validation** é executado diretamente por um usuário.  
   
-`[ @table_name = ] table_name` É o nome da tabela da exibição usado para mensagens de saída. *table_name* está **sysname**, com um padrão de **@table**.  
+`[ @table_name = ] table_name` É o nome da tabela da exibição usado para mensagens de saída. *table_name* está **sysname**, com um padrão de **@table** .  
   
-`[ @column_list = ] 'column_list'` É a lista de colunas que devem ser usados na função de soma de verificação. *column_list* está **nvarchar (4000)**, com um padrão NULL. Habilita validação de artigos de mesclagem para especificar uma lista de colunas que exclui colunas computadas e colunas de carimbo de data e hora.  
+`[ @column_list = ] 'column_list'` É a lista de colunas que devem ser usados na função de soma de verificação. *column_list* está **nvarchar (4000)** , com um padrão NULL. Habilita validação de artigos de mesclagem para especificar uma lista de colunas que exclui colunas computadas e colunas de carimbo de data e hora.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  Se executar uma validação de soma de verificação e a soma de verificação esperada for igual a soma de verificação na tabela, **sp_table_validation** retorna uma mensagem de que a tabela passou na validação de soma de verificação. Caso contrário, retornará uma mensagem de que a tabela pode estar fora de sincronização e informará a diferença entre o número de linhas esperado e o atual.  

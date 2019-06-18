@@ -23,11 +23,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d9df7c71608bef12b5da2a4be987031900ab8af5
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334463"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62467007"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ FREETEXT ( { column_name | (column_list) | * }
   
 ## <a name="arguments"></a>Argumentos  
  *column_name*  
- É o nome de uma ou mais colunas indexadas de texto completo da tabela especificada na cláusula FROM. As colunas podem ser do tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** ou **varbinary(max)**.  
+ É o nome de uma ou mais colunas indexadas de texto completo da tabela especificada na cláusula FROM. As colunas podem ser do tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** ou **varbinary(max)** .  
   
  *column_list*  
  Indica que várias colunas, separadas por uma vírgula, podem ser especificadas. *column_list* precisa ser colocada entre parênteses. A menos que *language_term* seja especificado, o idioma de todas as colunas da *column_list* precisará ser o mesmo.  
@@ -143,7 +143,7 @@ WHERE FREETEXT (Document, 'vital safety components' );
 GO  
 ```  
   
-### <a name="b-using-freetext-with-variables"></a>b. Usando FREETEXT com variáveis  
+### <a name="b-using-freetext-with-variables"></a>B. Usando FREETEXT com variáveis  
  O exemplo a seguir usa uma variável em vez de um termo de pesquisa específico.  
   
 ```sql  

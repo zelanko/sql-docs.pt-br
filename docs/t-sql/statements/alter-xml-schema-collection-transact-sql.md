@@ -30,11 +30,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c828a7db7a15e9a25073a5c6246a5c354934400
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016467"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664578"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -187,7 +187,7 @@ CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;
   
  A instrução CREATE XML SCHEMA COLLECTION armazena somente os componentes de esquema reconhecidos pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; nem tudo que está contido no esquema XML é armazenado no banco de dados. Portanto, se desejar que a coleção de esquema XML volte a ser exatamente igual a quando for fornecida, recomendamos que você salve os esquemas XML em uma coluna de banco de dados ou em alguma outra pasta do computador.  
   
-### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>b. Especificando vários namespaces de esquema em uma coleção de esquemas  
+### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. Especificando vários namespaces de esquema em uma coleção de esquemas  
  Você pode especificar vários esquemas XML ao criar uma coleção de esquema XML. Por exemplo:  
   
 ```  

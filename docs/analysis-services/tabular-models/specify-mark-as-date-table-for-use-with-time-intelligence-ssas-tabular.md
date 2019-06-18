@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df4afbecebd3c076f80064dbd3d13f35ba2cbcf0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62472076"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>Especifique marcar como tabela de data para uso com inteligência de tempo
@@ -40,7 +40,7 @@ ms.locfileid: "62472076"
   
 3.  Na caixa de diálogo **Marcar como Tabela de Data** , na caixa de listagem **Data** , selecione uma coluna a ser usada como um identificador exclusivo. Esta coluna deve conter valores exclusivos e deve ser do tipo de dados de data. Por exemplo:  
   
-    |data|  
+    |Date|  
     |----------|  
     |7/1/2010 12:00:00 AM|  
     |7/2/2010 12:00:00 AM|  

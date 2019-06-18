@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62637604"
 ---
 # <a name="create-instances-of-xml-data"></a>Criar instâncias de dados XML
@@ -40,7 +40,7 @@ ms.locfileid: "62637604"
 -   Usando carregamento em massa.  
   
 ## <a name="type-casting-string-and-binary-instances"></a>Instâncias de cadeia de caracteres de conversão de tipos e binárias  
- Você pode analisar qualquer um dos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados de cadeia de caracteres como [**n**] [**var**]**char**, **texto de [n]**,  **varbinary**, e **imagem**, para o `xml` tipo de dados, convertendo (CAST) ou convertendo (CONVERT) a cadeia de caracteres para o `xml` tipo de dados. XML sem-tipo é verificado para confirmar se está bem formado. Se não houver um esquema associado a `xml` tipo, validação também é executado. Para obter mais informações, consulte [Comparar XML digitado com XML não digitado](compare-typed-xml-to-untyped-xml.md).  
+ Você pode analisar qualquer um dos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados de cadeia de caracteres como [**n**] [**var**]**char**, **texto de [n]** ,  **varbinary**, e **imagem**, para o `xml` tipo de dados, convertendo (CAST) ou convertendo (CONVERT) a cadeia de caracteres para o `xml` tipo de dados. XML sem-tipo é verificado para confirmar se está bem formado. Se não houver um esquema associado a `xml` tipo, validação também é executado. Para obter mais informações, consulte [Comparar XML digitado com XML não digitado](compare-typed-xml-to-untyped-xml.md).  
   
  Documentos de XML podem ser codificados com diferentes codificações (por exemplo, UTF-8, UTF-16, Windows-1252). O seguinte descreve as regras de como os tipos de origem de cadeia de caracteres e binários interagem com a codificação do documento XML e como o analisador se comporta.  
   
@@ -71,7 +71,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
 -   O atributo `xml:space` em efeito em um elemento ou em um de seus elementos ancestrais tem o valor de padrão.  
   
- Por exemplo:   
+ Por exemplo:  
   
 ```  
 declare @x xml  
@@ -183,7 +183,7 @@ go
 >  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna instâncias de tipo de dados `xml`ao cliente como um resultado das diferentes construções do servidor como consultas FOR XML que usam a diretiva TYPE ou onde o tipo de dados `xml` é usado para retornar XML de colunas, variáveis e parâmetros de saída SQL. No código do aplicativo cliente, o provedor ADO.NET solicita que essas informações de tipo de dados `xml` sejam enviadas em uma codificação binária do servidor. Porém, se você estiver usando FOR XML sem a diretiva TYPE, os dados XML retornarão como um tipo de cadeia de caracteres. De qualquer forma, o provedor cliente sempre poderá controlar qualquer formulário de XML.  
   
 ## <a name="using-constant-assignments"></a>Usando atribuições de constantes  
- Uma constante de cadeia de caracteres pode ser usada onde uma instância das `xml` tipo de dados é esperado. Isso é o mesmo que uma CAST implícita de cadeia de caracteres em XML. Por exemplo:   
+ Uma constante de cadeia de caracteres pode ser usada onde uma instância das `xml` tipo de dados é esperado. Isso é o mesmo que uma CAST implícita de cadeia de caracteres em XML. Por exemplo:  
   
 ```  
 DECLARE @xmlDoc xml  

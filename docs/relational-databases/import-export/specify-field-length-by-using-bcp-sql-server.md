@@ -19,10 +19,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2dc3cd6f52d0c43903cb663ec6e6aa6d8bd60f3
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946148"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Especificar tamanho do campo usando bcp (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "64946148"
   O tamanho do campo indica o número máximo de caracteres que são exigidos para representar dados em formato de caractere. O tamanho do campo já será conhecido se os dados forem armazenados no formato nativo; por exemplo, o tipo de dados **int** usa 4 bytes. Se você especificar 0 para o comprimento do prefixo, o comando **bcp** solicitará o tamanho do campo, os tamanhos de campo padrão e o impacto do tamanho de campo no armazenamento de dados em arquivos de dados que contêm dados **char** .  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>O bcp solicita um tamanho de campo  
- Se um comando **bcp** interativo contiver a opção **in** ou **out** sem a opção do arquivo de formatos (**-f**) ou uma opção do formato de dados (**-n**, **-c**, **-w** ou **-N**), o comando solicitará o comprimento de campo de cada campo de dados, da seguinte maneira:  
+ Se um comando **bcp** interativo contiver a opção **in** ou **out** sem a opção do arquivo de formatos ( **-f**) ou uma opção do formato de dados ( **-n**, **-c**, **-w** ou **-N**), o comando solicitará o comprimento de campo de cada campo de dados, da seguinte maneira:  
   
  `Enter length of field <field_name> [<default>]:`  
   

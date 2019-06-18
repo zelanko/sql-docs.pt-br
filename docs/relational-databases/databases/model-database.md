@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9febf511aef30bde1b01a5cad8eba3e3f8845b2f
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191026"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62640103"
 ---
 # <a name="model-database"></a>Banco de dados modelo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,15 +64,15 @@ Para o SQL Server 2014, confira [modelo de Banco de Dados](https://docs.microsof
 |AUTO_SHRINK|OFF|Sim|  
 |AUTO_UPDATE_STATISTICS|ON|Sim|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sim|  
-|CHANGE_TRACKING|OFF|não|  
+|CHANGE_TRACKING|OFF|Não|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sim|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sim|  
 |CURSOR_DEFAULT|GLOBAL|Sim|  
-|Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|não<br /><br /> Sim<br /><br /> Sim|  
+|Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Não<br /><br /> Sim<br /><br /> Sim|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sim|  
-|DB_CHAINING|OFF|não|  
-|ENCRYPTION|OFF|não|  
-|MIXED_PAGE_ALLOCATION|ON|não|  
+|DB_CHAINING|OFF|Não|  
+|ENCRYPTION|OFF|Não|  
+|MIXED_PAGE_ALLOCATION|ON|Não|  
 |NUMERIC_ROUNDABORT|OFF|Sim|  
 |PAGE_VERIFY|CHECKSUM|Sim|  
 |PARAMETERIZATION|SIMPLE|Sim|  
@@ -80,8 +80,8 @@ Para o SQL Server 2014, confira [modelo de Banco de Dados](https://docs.microsof
 |READ_COMMITTED_SNAPSHOT|OFF|Sim|  
 |RECOVERY|Depende da edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *|Sim|  
 |RECURSIVE_TRIGGERS|OFF|Sim|  
-|Opções do Service Broker|DISABLE_BROKER|não|  
-|TRUSTWORTHY|OFF|não|  
+|Opções do Service Broker|DISABLE_BROKER|Não|  
+|TRUSTWORTHY|OFF|Não|  
   
  *Para confirmar o modelo de recuperação atual do banco de dados, veja [Exibir ou alterar o modelo de recuperação de um banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) ou [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   

@@ -27,11 +27,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8cda2bf030b8e04cf40144c117359d553353ebf6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846754"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62685878"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Considerações sobre segurança para uma instalação do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "47846754"
 ###  <a name="isolated_services"></a> Isolate Services  
  O isolamento de serviços reduz o risco de que um serviço comprometido possa ser usado para comprometer outros. Para isolar serviços, considere as seguintes diretrizes:  
   
--   Execute serviços separados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sob contas separadas do Windows. Sempre que possível, use contas de usuário Local ou do Windows separadas e com poucos direitos para cada serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Execute serviços separados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sob contas separadas do Windows. Sempre que possível, use contas de usuário Local ou do Windows separadas e com poucos direitos para cada serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
  O uso do sistema de arquivos correto aumenta a segurança. Para instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você deve executar as seguintes tarefas:  

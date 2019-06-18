@@ -19,10 +19,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 929a6a40b7203147ed59e045bb359c464c248850
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946165"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Especificar formatos de dados para compatibilidade usando bcp (SQL Server)
@@ -54,7 +54,7 @@ ms.locfileid: "64946165"
   
   
 ##  <a name="FieldSpecificPrompts"></a> Visão geral dos prompts de campo específicos  
- Se um comando **bcp** interativo contiver a opção **in** ou **out** , mas também não contiver a opção de arquivo de formato (**-f**) ou uma opção de formato de dados (**-n**, **-c**, **-w**ou **-N**), cada coluna na tabela de destino ou origem, o comando solicitará cada um dos atributos precedentes, por vez. Em cada prompt, o comando **bcp** fornece um valor padrão baseado no tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da coluna de tabela. Aceitar o valor padrão de todos os prompts gera o mesmo resultado de especificar o formato nativo (**-n**) na linha de comando. Cada prompt exibe um valor padrão entre colchetes: [*default*]. Pressionando ENTER aceita o padrão exibido. Para especificar um valor diferente do padrão, insira o valor novo no prompt.  
+ Se um comando **bcp** interativo contiver a opção **in** ou **out** , mas também não contiver a opção de arquivo de formato ( **-f**) ou uma opção de formato de dados ( **-n**, **-c**, **-w**ou **-N**), cada coluna na tabela de destino ou origem, o comando solicitará cada um dos atributos precedentes, por vez. Em cada prompt, o comando **bcp** fornece um valor padrão baseado no tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da coluna de tabela. Aceitar o valor padrão de todos os prompts gera o mesmo resultado de especificar o formato nativo ( **-n**) na linha de comando. Cada prompt exibe um valor padrão entre colchetes: [*default*]. Pressionando ENTER aceita o padrão exibido. Para especificar um valor diferente do padrão, insira o valor novo no prompt.  
   
 ### <a name="example"></a>Exemplo  
  Os exemplos a seguir usam o comando **bcp** para exportar em massa dados da tabela `HumanResources.myTeam` para o arquivo `myTeam.txt` interativamente. Antes de executar o exemplo, é necessário criar essa tabela. Para obter informações sobre a tabela e como criá-la, veja [Tabela de exemplo HumanResources.myTeam &#40;SQL Server&#41;](../../relational-databases/import-export/humanresources-myteam-sample-table-sql-server.md).  

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468184"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Suporte ao SQL Server Management Studio para OLTP na memória
@@ -136,9 +136,9 @@ ms.locfileid: "62468184"
   
         -   Copie bancos de dados. Para bancos de dados que têm objetos com otimização de memória, a criação do banco de dados no servidor de destino e a transferência de dados não serão executadas em uma transação.  
   
-        -   Importe e exporte dados. Use a opção **Copiar dados de uma ou mais tabelas ou exibições do Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Se a tabela de destino for uma tabela com otimização de memória que não existe no banco de dados de destino:  
+        -   Importe e exporte dados. Use a opção **Copiar dados de uma ou mais tabelas ou exibições do Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Se a tabela de destino for uma tabela com otimização de memória que não existe no banco de dados de destino:  
   
-            1.  No **Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, na tela **Especificar Cópia ou Consulta de Tabela**, selecione **Copiar dados de uma ou mais tabelas ou exibições**. Em seguida, clique em **Avançar**.  
+            1.  No **Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , na tela **Especificar Cópia ou Consulta de Tabela**, selecione **Copiar dados de uma ou mais tabelas ou exibições**. Em seguida, clique em **Avançar**.  
   
             2.  Clique em **Editar Mapeamentos**. Selecione **Criar tabela de destino** e clique **Editar SQL**. Digite a sintaxe CREATE TABLE para criar uma tabela com otimização de memória no banco de dados de destino. Clique em **OK** e conclua as etapas restantes no assistente.  
   

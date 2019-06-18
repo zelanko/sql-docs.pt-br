@@ -20,11 +20,11 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a8c1dbccf3b45896f56aba5c478e1a37954f37f8
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380697"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62645196"
 ---
 # <a name="create-statistics"></a>Criar estatísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "53380697"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Antes de criar estatísticas com a instrução de CREATE STATISTICS, verifique se a opção AUTO_CREATE_STATISTICS está definida no nível do banco de dados. Isso assegurará que o otimizador de consulta continue criando rotineiramente estatísticas de coluna única para colunas de predicado de consulta.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "53380697"
   
 3.  Clique no sinal de adição ao lado da tabela na qual você deseja criar uma nova estatística.  
   
-4.  Clique com o botão direito do mouse na pasta **Estatísticas** e selecione **Novas Estatísticas...**.  
+4.  Clique com o botão direito do mouse na pasta **Estatísticas** e selecione **Novas Estatísticas...** .  
   
      As propriedades a seguir são mostradas na página **Geral** na caixa de diálogo **Novas Estatísticas na Tabela**_table\_name_.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "53380697"
   
 7.  Na caixa de diálogo **Novas Estatísticas na Tabela**_table\_name_, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-statistics"></a>Para criar estatísticas  
   

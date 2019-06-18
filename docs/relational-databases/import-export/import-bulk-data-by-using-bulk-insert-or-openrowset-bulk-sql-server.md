@@ -24,10 +24,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c4fdd3b1512d64cb8c702e00ba89aed02d5abb0a
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946581"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importar Dados em Massa Usando BULK INSERT ou OPENROWSET(BULK...) (SQL Server)
@@ -109,7 +109,7 @@ ms.locfileid: "64946581"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] do Windows podem ser configurados para permitir que uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja conectada a outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remetendo as credenciais de um usuário autenticado do Windows. Esse arranjo é conhecido como *representação* ou *delegação*. Entender como a versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlam a segurança por representação de usuário é importante para usar BULK INSERT ou OPENROWSET. Representação de usuário permite que o arquivo de dados resida em um computador diferente que o processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o usuário. Por exemplo, se um usuário no **Computador_A** tiver acesso a um arquivo de dados no **Computador_B**, e a delegação de credenciais tiver sido definida adequadamente, o usuário poderá se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo executada no **Computador_C**, acessar o arquivo de dados no **Computador_B**e importar dados em massa desse arquivo em uma tabela no **Computador_C**.  
   
 ## <a name="bulk-importing-from-a-remote-data-file"></a>Importação em massa de um arquivo de dados remoto  
- Para usar BULK INSERT ou INSERT...SELECT \* FROM OPENROWSET(BULK...) para importação de dados em massa de outro computador, o arquivo de dados deve ser compartilhado entre os dois computadores. Para especificar um arquivo de dados compartilhado, use sua UNC que utiliza o formato geral **\\\\**_Servername_**\\**_Sharename_**\\**_Path_**\\**_Filename_. Além disso, a conta usada para acessar o arquivo de dados deve ter as permissões necessárias para leitura do arquivo no disco remoto.  
+ Para usar BULK INSERT ou INSERT...SELECT \* FROM OPENROWSET(BULK...) para importação de dados em massa de outro computador, o arquivo de dados deve ser compartilhado entre os dois computadores. Para especificar um arquivo de dados compartilhado, use sua UNC que utiliza o formato geral **\\\\** _Servername_ **\\** _Sharename_ **\\** _Path_ **\\** _Filename_. Além disso, a conta usada para acessar o arquivo de dados deve ter as permissões necessárias para leitura do arquivo no disco remoto.  
   
  Por exemplo, a instrução `BULK INSERT` a seguir importa dados em massa na tabela `SalesOrderDetail` do banco de dados `AdventureWorks` de um arquivo de dados denominado `newdata.txt`. Esse arquivo de dados reside em uma pasta compartilhada denominada `\dailyorders` em um diretório compartilhado de rede denominado `salesforce` em um sistema denominado `computer2`.  
   

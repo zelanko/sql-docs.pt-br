@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a2b86b5f9b08e9915adae27132b6beb5647394f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755874"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639312"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Práticas recomendadas para filtros de linha baseados em tempo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47755874"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- Com um filtro desse tipo, é normalmente presumido que duas coisas sempre ocorram quando o Merge Agent é executado: as linhas que satisfazem esse filtro são replicadas aos Assinantes; e linhas que não mais satisfazem esse filtro, são limpas nos Assinantes. (Para obter mais informações sobre filtragem com **HOST_NAME()**, consulte [Filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).) Entretanto, a replicação de mesclagem apenas replica e limpa os dados que foram alterados desde a última sincronização, independentemente de como você defina o filtro de linha para aqueles dados.  
+ Com um filtro desse tipo, é normalmente presumido que duas coisas sempre ocorram quando o Merge Agent é executado: as linhas que satisfazem esse filtro são replicadas aos Assinantes; e linhas que não mais satisfazem esse filtro, são limpas nos Assinantes. (Para obter mais informações sobre filtragem com **HOST_NAME()** , consulte [Filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).) Entretanto, a replicação de mesclagem apenas replica e limpa os dados que foram alterados desde a última sincronização, independentemente de como você defina o filtro de linha para aqueles dados.  
   
  Para a replicação de mesclagem processar uma linha, os dados na linha devem satisfazer o filtro de linha e devem ter sido alterados desde a última sincronização. No caso da tabela **SalesOrderHeader** , é inserido **OrderDate** quando uma linha é inserida. As linhas são replicadas ao Assinante como esperado porque a inserção é uma alteração de dados. Entretanto, se houver linhas no Assinante que não mais satisfazem o filtro (são para pedidos anteriores a sete dias), elas não serão removidas do Assinante a menos que tenham sido atualizadas por algum outro motivo.  
   

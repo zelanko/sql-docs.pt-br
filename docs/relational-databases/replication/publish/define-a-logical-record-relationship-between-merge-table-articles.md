@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: db6522f15d520a1171665b96b928ae6b3c548939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684544"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661019"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definir uma relação de registro lógico entre artigos da tabela de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,13 +52,13 @@ ms.locfileid: "47684544"
 -   Se você adicionar, modificar ou excluir um registro lógico após a inicialização de assinaturas na publicação, será preciso gerar um novo instantâneo e reinicializar todas as assinaturas depois de fazer a alteração. Para obter mais informações sobre os requisitos para alterações de propriedades, consulte [Alterar propriedades da publicação e do artigo](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Defina registros lógicos na caixa de diálogo **Adicionar Junção**, disponível no Assistente para Nova Publicação e na caixa de diálogo **Propriedades da Publicação – \<Publicação>**. Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md) e [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Defina registros lógicos na caixa de diálogo **Adicionar Junção**, disponível no Assistente para Nova Publicação e na caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md) e [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
  Os registros lógicos podem ser definidos na caixa de diálogo **Adicionar Junção** apenas se aplicados a um filtro de junção em uma publicação de mesclagem, e se a publicação atender os requisitos para uso de partições pré-calculadas. Para definir os registros lógicos que não se aplicam a filtros de junção e para definir a detecção e resolução de conflitos no nível do registro lógico, é preciso usar procedimentos armazenados.  
   
 #### <a name="to-define-a-logical-record-relationship"></a>Para definir uma relação de registro lógico.  
   
-1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** da caixa de diálogo **Propriedades da Publicação – \<Publicação>**, selecione um filtro no painel **Tabelas Filtradas**.  
+1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** , selecione um filtro no painel **Tabelas Filtradas**.  
   
      Uma relação de registro lógico é associada a um filtro de junção que estende um filtro de linha. Por isso, é preciso definir o filtro de linha antes de poder estender o filtro com uma junção e aplicar uma relação de registro lógico. Após definir o filtro de junção é possível estendê-lo com outro filtro de junção. Para obter mais informações sobre como definir filtros de junção, consulte [Definir e modificar um filtro de junção entre artigos de mesclagem](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47684544"
   
 3.  Defina um filtro de junção na caixa de diálogo **Adicionar Junção** , depois marque a caixa de seleção **Registro Lógico**.  
   
-4.  Se você estiver na caixa de diálogo **Propriedades da Publicação – \<Publicação>**, clique em **OK** para salvar e fechar a caixa de diálogo.  
+4.  Se você estiver na caixa de diálogo **Propriedades da Publicação – \<Publicação>** , clique em **OK** para salvar e fechar a caixa de diálogo.  
   
 #### <a name="to-delete-a-logical-record-relationship"></a>Para excluir uma relação de registro lógico  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47684544"
   
      Para excluir apenas a relação de registro lógico:  
   
-    1.  Na página **Filtrar Linhas** do Assistente para Nova Publicação ou na página **Filtrar Linhas** da caixa de diálogo **Propriedades da Publicação – \<Publicação>**, selecione o filtro de junção associado à relação de registo lógico no painel **Tabelas Filtradas** e clique em **Editar**.  
+    1.  Na página **Filtrar Linhas** do Assistente para Nova Publicação ou na página **Filtrar Linhas** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** , selecione o filtro de junção associado à relação de registo lógico no painel **Tabelas Filtradas** e clique em **Editar**.  
   
     2.  Na caixa de diálogo **Editar Junção** , desmarque o caixa de seleção **Registro Lógico**.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "47684544"
   
      Para excluir a relação de registro lógico e o filtro de junção a ela associado:  
   
-    -   Na página **Filtrar Linhas** do Assistente para Nova Publicação ou na caixa de diálogo **Propriedades da Publicação – \<Publicação>**, selecione um filtro no painel **Tabelas Filtradas** e, em seguida, clique em **Excluir**. Caso o próprio filtro excluído seja estendido por outras junções, essas junções também serão excluídas.  
+    -   Na página **Filtrar Linhas** do Assistente para Nova Publicação ou na caixa de diálogo **Propriedades da Publicação – \<Publicação>** , selecione um filtro no painel **Tabelas Filtradas** e, em seguida, clique em **Excluir**. Caso o próprio filtro excluído seja estendido por outras junções, essas junções também serão excluídas.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  É possível especificar relações de registro lógico de forma programática entre artigos que usem procedimentos armazenados de replicação.  
@@ -93,7 +93,7 @@ ms.locfileid: "47684544"
   
     -   Se o valor for **1**, partições pré-computadas já estarão sendo usadas.  
   
-    -   Se o valor for **0**, execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) ao Publicador do banco de dados de publicação. Especifique um valor de **use_partition_groups** para **@property** e um valor de **true** para **@value**.  
+    -   Se o valor for **0**, execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) ao Publicador do banco de dados de publicação. Especifique um valor de **use_partition_groups** para **@property** e um valor de **true** para **@value** .  
   
         > [!NOTE]  
         >  Se a publicação não oferecer suporte a partições pré-computadas, os registros lógicos não poderão ser usados. Para obter mais informações, consulte Requisitos para usar partições pré-computadas no tópico [Otimizar o desempenho de filtro parametrizado com partições pré-computadas](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
@@ -102,13 +102,13 @@ ms.locfileid: "47684544"
   
 2.  Se os artigos que integrarem o registro lógico não existirem, execute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) no Publicador do banco de dados de publicação. Especifique uma das opções de detecção e resolução de conflitos para o registro lógico:  
   
-    -   Para detectar e resolver conflitos que ocorrem dentro das linhas relacionadas no registro lógico, especifique um valor de **true** para **@logical_record_level_conflict_detection** e **@logical_record_level_conflict_resolution**.  
+    -   Para detectar e resolver conflitos que ocorrem dentro das linhas relacionadas no registro lógico, especifique um valor de **true** para **@logical_record_level_conflict_detection** e **@logical_record_level_conflict_resolution** .  
   
-    -   Para usar a detecção e resolução de conflitos padrão de linha ou coluna, especifique o valor de **false** para **@logical_record_level_conflict_detection** e **@logical_record_level_conflict_resolution**, que é o padrão.  
+    -   Para usar a detecção e resolução de conflitos padrão de linha ou coluna, especifique o valor de **false** para **@logical_record_level_conflict_detection** e **@logical_record_level_conflict_resolution** , que é o padrão.  
   
 3.  Repita a Etapa 2 para cada artigo que integrará o registro lógico. É preciso usar a mesma opção de detecção e resolução de conflitos para cada artigo no registro lógico. Para obter mais informações, consulte [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
-4.  No Publicador do banco de dados de publicação, execute [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Especifique **@publication**; o nome do artigo na relação para **@article**; o nome do segundo artigo para **@join_articlename**; o nome da relação para **@filtername**; a cláusula que define a relação entre os dois artigos para **@join_filterclause**; o tipo de junção para **@join_unique_key** e um dos valores a seguir para **@filter_type**:  
+4.  No Publicador do banco de dados de publicação, execute [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Especifique **@publication** ; o nome do artigo na relação para **@article** ; o nome do segundo artigo para **@join_articlename** ; o nome da relação para **@filtername** ; a cláusula que define a relação entre os dois artigos para **@join_filterclause** ; o tipo de junção para **@join_unique_key** e um dos valores a seguir para **@filter_type** :  
   
     -   **2** - Define uma relação lógica.  
   
@@ -123,15 +123,15 @@ ms.locfileid: "47684544"
   
 1.  Para detectar e resolver conflitos que ocorrem dentro de linhas relacionadas no registro lógico:  
   
-    -   No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor de **logical_record_level_conflict_detection** para **@property** e um valor de **true** para **@value**. Especifique um valor de **1** para **@force_invalidate_snapshot** e **@force_reinit_subscription**.  
+    -   No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor de **logical_record_level_conflict_detection** para **@property** e um valor de **true** para **@value** . Especifique um valor de **1** para **@force_invalidate_snapshot** e **@force_reinit_subscription** .  
   
-    -   No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor de **logical_record_level_conflict_resolution** para **@property** e um valor de **true** para **@value**. Especifique um valor de **1** para **@force_invalidate_snapshot** e **@force_reinit_subscription**.  
+    -   No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor de **logical_record_level_conflict_resolution** para **@property** e um valor de **true** para **@value** . Especifique um valor de **1** para **@force_invalidate_snapshot** e **@force_reinit_subscription** .  
   
 2.  Para usar a detecção e resolução de conflitos padrão em nível de linha ou coluna:  
   
-    -   No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor de **logical_record_level_conflict_detection** para **@property** e um valor de **false** para **@value**. Especifique um valor de **1** para **@force_invalidate_snapshot** e **@force_reinit_subscription**.  
+    -   No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor de **logical_record_level_conflict_detection** para **@property** e um valor de **false** para **@value** . Especifique um valor de **1** para **@force_invalidate_snapshot** e **@force_reinit_subscription** .  
   
-    -   No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor de **logical_record_level_conflict_resolution** para **@property** e um valor de **false** para **@value**. Especifique um valor de **1** para **@force_invalidate_snapshot** e **@force_reinit_subscription**.  
+    -   No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor de **logical_record_level_conflict_resolution** para **@property** e um valor de **false** para **@value** . Especifique um valor de **1** para **@force_invalidate_snapshot** e **@force_reinit_subscription** .  
   
 #### <a name="to-remove-a-logical-record-relationship"></a>Para remover uma relação de registro lógico.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "47684544"
     > [!NOTE]  
     >  Essa consulta retorna as mesmas informações de [sp_helpmergefilter](../../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md); no entanto, esse procedimento armazenado de sistema retorna apenas informações sobre relações de registro lógico que são também filtros de junção.  
   
-2.  No Publicador do banco de dados de publicação, execute [sp_dropmergefilter](../../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md). Especifique **@publication**, o nome de um dos artigos da relação para **@article**, e o nome da relação da Etapa 1 para **@filtername**.  
+2.  No Publicador do banco de dados de publicação, execute [sp_dropmergefilter](../../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md). Especifique **@publication** , o nome de um dos artigos da relação para **@article** , e o nome da relação da Etapa 1 para **@filtername** .  
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  Esse exemplo habilita partições pré-computadas em uma publicação existente e cria um registro lógico que inclui os dois novos artigos para as tabelas `SalesOrderHeader` e `SalesOrderDetail` .  

@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 243f8b858798d788b046903ec909d39daab0010c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628434"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62714383"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Restaurar um banco de dados para uma transação marcada (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47628434"
     |------------|-----------|  
     |\<em branco>|Exibe uma caixa de seleção para selecionar a marca.|  
     |**Transaction Mark**|Nome da transação marcada especificado pelo usuário quando a transação foi confirmada.|  
-    |**Date**|Data e hora de confirmação da transação. A data e hora da transação são exibidas como registradas na tabela **msdbgmarkhistory** , não a data e hora do computador cliente.|  
+    |**Data**|Data e hora de confirmação da transação. A data e hora da transação são exibidas como registradas na tabela **msdbgmarkhistory** , não a data e hora do computador cliente.|  
     |**Descrição**|Descrição da transação marcada especificada pelo usuário quando a transação foi confirmada (se houver).|  
     |**LSN**|Número de sequência de log da transação marcada.|  
     |**Backup de banco de dados**|Nome do banco de dados em que a transação marcada foi confirmada.|  

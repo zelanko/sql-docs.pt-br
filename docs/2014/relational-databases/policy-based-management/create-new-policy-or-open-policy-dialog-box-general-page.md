@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 90e7ee3b8c0ac9c77c4ef863367ff46467a35277
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705383"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Caixas de diálogo Criar Nova Política ou Abrir política, Página geral
@@ -43,7 +43,7 @@ ms.locfileid: "62705383"
  Políticas executadas usando o modo de avaliação **Sob Demanda** não usam esta caixa de seleção.  
   
  **Verificar condição**  
- Selecione a condição de Gerenciamento Baseado em Política que esta política usa. Todas as condições no servidor para a faceta de Gerenciamento Baseado em Política associada são listadas. Clique em **Nova condição** para criar uma condição nova. Clique no botão de reticências (**…**) para modificar a condição.  
+ Selecione a condição de Gerenciamento Baseado em Política que esta política usa. Todas as condições no servidor para a faceta de Gerenciamento Baseado em Política associada são listadas. Clique em **Nova condição** para criar uma condição nova. Clique no botão de reticências ( **…** ) para modificar a condição.  
   
  **Em relação aos destinos**  
  Selecione os tipos de destinos que estão disponíveis para essa faceta para completar uma expressão de filtro.  

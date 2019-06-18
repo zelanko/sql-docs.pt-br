@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6a42f77b21e8b06fc9795caac7064368af436bb4
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299703"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62724622"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "54299703"
   
 2.  No menu **Arquivo**, clique em **NewProject.** A caixa de diálogo **Novo Projeto** será exibida.  
   
-3.  Na caixa de diálogo **Tipos de Projeto**, selecione **Projetos do Visual C#**. No painel **Modelos**, selecione **Aplicativos do Windows**.  
+3.  Na caixa de diálogo **Tipos de Projeto**, selecione **Projetos do Visual C#** . No painel **Modelos**, selecione **Aplicativos do Windows**.  
   
 4.  (Opcional) Em **Nome**, digite o nome do novo aplicativo.  
   

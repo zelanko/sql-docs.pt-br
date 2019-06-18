@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89818f172ee9af09a44654dffc800bf6adc35de4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62630375"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Validade e desativação de assinatura
@@ -42,7 +42,7 @@ ms.locfileid: "62630375"
      Se uma assinatura push expirar, ela é completamente removida, mas não as assinaturas pull. Você deve limpar as assinaturas pull no Assinante. Para obter mais informações, consulte [Delete a Pull Subscription](delete-a-pull-subscription.md).  
   
 ## <a name="merge-replication"></a>Replicação de mesclagem  
- A replicação de mesclagem usa o período de retenção da publicação (os parâmetros **@retention** e **@retention_period_unit** do [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)). Quando uma assinatura expira, ela deverá ser reiniciada, pois os metadados da assinatura serão removidos. As assinaturas que não forem reinicializadas serão descartadas pelo trabalho de **Limpeza de assinaturas expiradas** executado no Publicador. Por padrão, este trabalho é executado diariamente, ele remove todas as assinaturas push que não sincronizaram por um período duas vezes maior do período de retenção da publicação. Por exemplo:   
+ A replicação de mesclagem usa o período de retenção da publicação (os parâmetros **@retention** e **@retention_period_unit** do [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)). Quando uma assinatura expira, ela deverá ser reiniciada, pois os metadados da assinatura serão removidos. As assinaturas que não forem reinicializadas serão descartadas pelo trabalho de **Limpeza de assinaturas expiradas** executado no Publicador. Por padrão, este trabalho é executado diariamente, ele remove todas as assinaturas push que não sincronizaram por um período duas vezes maior do período de retenção da publicação. Por exemplo:  
   
 -   Se a publicação tiver um período de retenção de 14 dias, uma assinatura poderá expirar se não sincronizar dentro de 14 dias.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62630375"
   
     -   A replicação não poderá limpar os metadados na publicação e nos bancos de dados de assinatura antes de o período de retenção ser atingido. Cuidado ao especificar um valor alto para o período de retenção, pois poderá impactar negativamente o desempenho da replicação. Recomendamos que use uma definição mais baixa se puder prevenir com certeza que todos os Assinantes sincronizarão normalmente dentro daquele período de tempo.  
   
-    -   É possível especificar para que as assinaturas nunca expirem (um valor de 0 para a **@retention**), mas recomendamos não usar este valor, pois os metadados não poderão ser limpos.  
+    -   É possível especificar para que as assinaturas nunca expirem (um valor de 0 para a **@retention** ), mas recomendamos não usar este valor, pois os metadados não poderão ser limpos.  
   
 -   O período de retenção para qualquer republicador deve ser definido com um valor igual ou inferior ao período de retenção definido no Publicador original. Você também deve usar os mesmos valores de retenção da publicação para todos os Publicadores e seus parceiros de sincronização alternativos. O uso de valores diferentes pode levar a uma não convergência. Se precisar alterar o valor de retenção da publicação, reinicialize o Assinante para evitar a não convergência de dados.  
   

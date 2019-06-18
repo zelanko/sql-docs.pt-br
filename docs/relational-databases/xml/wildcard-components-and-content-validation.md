@@ -15,21 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5a43918612c24a6c2d7a0b39c89dacc3edc4ed6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509633"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704275"
 ---
 # <a name="wildcard-components-and-content-validation"></a>Componentes curinga e validação de conteúdo
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Componentes curinga são usados para aumentar a flexibilidade do que é permitido aparecer em um modelo de conteúdo. Esses componentes têm suporte na linguagem XSD das seguintes maneiras:  
   
--   Componentes curinga de elemento. Eles são representados pelo elemento **\<xsd:any>**.  
+-   Componentes curinga de elemento. Eles são representados pelo elemento **\<xsd:any>** .  
   
--   Componentes curinga de atributo. Eles são representados pelo elemento **\<xsd:anyAttribute>**.  
+-   Componentes curinga de atributo. Eles são representados pelo elemento **\<xsd:anyAttribute>** .  
   
- Ambos os elementos de caractere curinga, **\<xsd:any>** e **\<xsd:anyAttribute>**, dão suporte ao uso de um atributo **processContents**. Isso permite especificar um valor que indica como aplicativos XML tratam a validação do conteúdo do documento associado a esses elementos de caracteres curinga. Estes são os diferentes valores e seus efeitos:  
+ Ambos os elementos de caractere curinga, **\<xsd:any>** e **\<xsd:anyAttribute>** , dão suporte ao uso de um atributo **processContents**. Isso permite especificar um valor que indica como aplicativos XML tratam a validação do conteúdo do documento associado a esses elementos de caracteres curinga. Estes são os diferentes valores e seus efeitos:  
   
 -   O valor **strict** especifica que o conteúdo é completamente validado.  
   

@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57f4fd34cfe3896bb29ed31f02906ce675e4b854
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62640501"
 ---
 # <a name="data-buffer-length"></a>Comprimento do buffer de dados
-O aplicativo passa o comprimento de bytes no buffer de dados para o driver em um argumento nomeado *BufferLength* ou um nome semelhante. Por exemplo, na seguinte chamada para **SQLBindCol**, o aplicativo especifica o comprimento do *ValuePtr* buffer (**sizeof (***ValuePtr***)**):  
+O aplicativo passa o comprimento de bytes no buffer de dados para o driver em um argumento nomeado *BufferLength* ou um nome semelhante. Por exemplo, na seguinte chamada para **SQLBindCol**, o aplicativo especifica o comprimento do *ValuePtr* buffer (**sizeof (***ValuePtr***)** ):  
   
 ```  
 SQLCHAR      ValuePtr[50];  

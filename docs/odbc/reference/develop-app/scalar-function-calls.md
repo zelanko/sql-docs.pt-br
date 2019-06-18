@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24b62c2b5cd449b6e7201d413b315e48fbd570f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468793"
 ---
 # <a name="scalar-function-calls"></a>Chamadas de função escalar
@@ -43,7 +43,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers
   
  Para interoperabilidade máxima, os aplicativos devem usar o **converter** função escalar para certificar-se de que a saída de uma função escalar é o tipo solicitado. O **converter** função converte dados de um tipo de dados SQL para o tipo de dados SQL especificado. A sintaxe do **converter** é de função  
   
- **CONVERT(** _value_exp_ **,** _data_type_**)**  
+ **CONVERT(** _value_exp_ **,** _data_type_ **)**  
   
  em que *value_exp* é um nome de coluna, o resultado de outra função escalar ou um valor literal, e *data_type* é uma palavra-chave que corresponda a **#define** nome que é usado por um Identificador de tipo de dados SQL conforme definido em [apêndice d: Tipos de dados](../../../odbc/reference/appendixes/appendix-d-data-types.md). Por exemplo, a seguinte instrução SQL usa o **converter** função para ter certeza de que a saída da **CURDATE** função for uma data, em vez de um caractere ou carimbo de hora de dados:  
   

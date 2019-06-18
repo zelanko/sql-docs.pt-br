@@ -22,10 +22,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 512994ada852ea7807cc14ecd5b25d9acff56ffc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632672"
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
@@ -59,7 +59,7 @@ ms.locfileid: "62632672"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-listing-all-the-permissions-of-database-principals"></a>R: Listando todas as permissões de entidades de segurança do banco de dados  
+### <a name="a-listing-all-the-permissions-of-database-principals"></a>A: Listando todas as permissões de entidades de segurança do banco de dados  
  A consulta a seguir lista as permissões concedidas ou negadas explicitamente a entidades de segurança do banco de dados.  
   
 > [!IMPORTANT]  

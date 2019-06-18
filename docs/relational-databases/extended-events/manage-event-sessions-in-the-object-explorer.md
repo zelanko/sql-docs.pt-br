@@ -13,11 +13,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 70b2160c9ecaab75670ae1088c556745ed289967
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477991"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62668536"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gerenciar sessões de evento no Pesquisador de Objetos
 
@@ -78,7 +78,7 @@ STATE = STOP
   
 1.  Expanda os nós **Gerenciamento**, **Eventos Estendidos**e **Sessões**  
   
-2.  Clique com o botão direito do mouse na sessão a ser exportada e selecione **Export Session (Exportar Sessão)**.  
+2.  Clique com o botão direito do mouse na sessão a ser exportada e selecione **Export Session (Exportar Sessão)** .  
   
 3.  Na caixa de diálogo **Salvar Como** , selecione um local para salvar o arquivo, digite o nome do arquivo na caixa **Nome de arquivo** e clique em **Salvar**.  
   

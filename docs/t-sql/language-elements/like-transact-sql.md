@@ -33,11 +33,11 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1e26632a80efce073df66f3d4fd564d513e4b28e
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334543"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62758691"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -197,7 +197,7 @@ GO
   
  Se não houver caractere depois de um caractere de escape no padrão de LIKE, o padrão não será válido e LIKE retornará FALSE. Se o caractere após um caractere de escape não for um caractere curinga, o caractere de escape será descartado e o caractere seguinte será tratado como um caractere normal no padrão. Esses caracteres curinga incluem o sinal de percentual (%), sublinhado (_) e colchete esquerdo ([) quando estão entre colchetes duplos ([ ]). Os caracteres de escape podem ser usados em caracteres de colchete duplo ([ ]), inclusive para escape de acento circunflexo (^), hífen (-) ou colchete direito (]).  
   
- 0x0000 (**char(0)**) é um caractere indefinido em ordenações do Windows e não pode ser incluído em LIKE.  
+ 0x0000 (**char(0)** ) é um caractere indefinido em ordenações do Windows e não pode ser incluído em LIKE.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -330,7 +330,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. Usando NOT LIKE com o caractere curinga %  
- O exemplo a seguir localiza todos os números de telefone na tabela `DimEmployee` que não começam com `612`.  para obter informações sobre a ferramenta de configuração e recursos adicionais.  
+ O exemplo a seguir localiza todos os números de telefone na tabela `DimEmployee` que não começam com `612`.  .  
   
 ```sql  
 -- Uses AdventureWorks  

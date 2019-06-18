@@ -15,11 +15,11 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 41eedb9c78254658a87de8531295582448da542e
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380777"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62645040"
 ---
 # <a name="delete-statistics"></a>Excluir estatísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "53380777"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Tenha cuidado ao cancelar estatísticas. Essa ação pode afetar o plano de execução escolhido pelo otimizador de consulta.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "53380777"
   
 6.  Na caixa de diálogo **Excluir Objeto** , verifique se a estatística correta foi selecionada e clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-drop-statistics-from-a-table-or-view"></a>Para remover estatísticas de uma tabela ou exibição  
   
