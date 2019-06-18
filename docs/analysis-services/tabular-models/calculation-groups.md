@@ -1,6 +1,6 @@
 ---
 title: Grupos de cálculos em modelos de tabela do Analysis Services | Microsoft Docs
-ms.date: 06/09/2019
+ms.date: 06/17/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: abc1f51d21613676fd94271f931e1a7692cc1efc
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.openlocfilehash: 6883fac2772e69a0e3939de970f436827f2cdf5d
+ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66822696"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67166355"
 ---
 # <a name="calculation-groups-preview"></a>Grupos de cálculo (visualização)
  
@@ -407,8 +407,6 @@ Grupos de cálculo ainda não têm suporte no SQL Server Data Tools, Visual Stud
 [Segurança em nível de objeto](object-level-security.md) (ferramentas) definidos no cálculo não há suporte para tabelas de grupos. No entanto, as ferramentas podem ser definidas em outras tabelas no mesmo modelo. Se um item de cálculo se refere a um objeto protegido de ferramentas, é retornado um erro genérico.
 
 [Segurança em nível de linha](roles-ssas-tabular.md#bkmk_rowfliters) (RLS) não tem suporte. Você pode definir o RLS em tabelas no mesmo modelo, mas não em grupos de cálculo em si (direta ou indiretamente).
-
-[Expressões de linhas de detalhe](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md) não são compatíveis com grupos de cálculo.
 
 ## <a name="see-also"></a>Confira também  
 

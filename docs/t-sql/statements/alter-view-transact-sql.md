@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 780d2929180657afc705335ff2110b9f3f9cc6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749374"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664673"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -73,7 +73,7 @@ AS select_statement
  Criptografa as entradas em [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) que contêm o texto da instrução ALTER VIEW. O uso de WITH ENCRYPTION impede que a exibição seja publicada como parte da replicação do SQL Server.  
   
  SCHEMABINDING  
- Associa a exibição ao esquema da tabela ou tabelas subjacentes. Quando SCHEMABINDING for especificado, as tabelas base não poderão ser modificadas de um modo que possa afetar a definição da exibição. A própria definição da exibição deve primeiramente ser modificada ou descartada a fim de remover dependências na tabela a ser modificada. Quando você usa SCHEMABINDING, a _select\_statement_ deve incluir os nomes de duas partes (_schema_**.**_object_) de tabelas, exibições ou funções definidas pelo usuário referenciadas. Todos os objetos referenciados devem estar no mesmo banco de dados.  
+ Associa a exibição ao esquema da tabela ou tabelas subjacentes. Quando SCHEMABINDING for especificado, as tabelas base não poderão ser modificadas de um modo que possa afetar a definição da exibição. A própria definição da exibição deve primeiramente ser modificada ou descartada a fim de remover dependências na tabela a ser modificada. Quando você usa SCHEMABINDING, a _select\_statement_ deve incluir os nomes de duas partes (_schema_ **.** _object_) de tabelas, exibições ou funções definidas pelo usuário referenciadas. Todos os objetos referenciados devem estar no mesmo banco de dados.  
   
  As exibições ou tabelas que participam de uma exibição, criadas com a cláusula SCHEMABINDING não podem ser descartadas, a menos que a exibição seja descartada ou alterada, de tal forma que não mais tenha associação de esquema. Caso contrário, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] gera um erro. Além disso, haverá falha na execução de instruções ALTER TABLE nas tabelas que participam de exibições com associação de esquema se essas instruções afetarem a definição da exibição.  
   

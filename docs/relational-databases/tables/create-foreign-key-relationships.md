@@ -15,11 +15,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2fffbb19685087883d9b788e7dc894eb413f4b0b
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802780"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62516088"
 ---
 # <a name="create-foreign-key-relationships"></a>Criar relações de chaves estrangeiras
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "56802780"
     
 -   Se a chave estrangeira for definida em uma coluna de tipo de dados CLR definido pelo usuário, a implementação do tipo deverá oferecer suporte a uma ordenação binária. Para obter mais informações, veja [Tipos CLR definidos pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).    
     
--   Uma coluna do tipo **varchar(max)** poderá participar de uma restrição FOREIGN KEY somente se a chave primária à qual ela fizer referência também estiver definida como tipo **varchar(max)**.    
+-   Uma coluna do tipo **varchar(max)** poderá participar de uma restrição FOREIGN KEY somente se a chave primária à qual ela fizer referência também estiver definida como tipo **varchar(max)** .    
     
 
     
@@ -77,7 +77,7 @@ ms.locfileid: "56802780"
     
 4.  Clique na relação na lista **Relação Selecionada** .    
     
-5.  Clique em **Especificação de Tabelas e Colunas** na grade à direita e clique nas reticências (**...**) à direita da propriedade.    
+5.  Clique em **Especificação de Tabelas e Colunas** na grade à direita e clique nas reticências ( **...** ) à direita da propriedade.    
     
 6.  Na caixa de diálogo **Tabelas e Colunas** , na lista suspensa **Chave Primária** , escolha a tabela que estará ao lado da chave primária da relação.    
     

@@ -1,59 +1,60 @@
 ---
 title: Caixa de diálogo Configurar Página | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 01/19/2017
+ms.prod: sql
+ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.PageSetup
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 00f87815f851a9334f84009af7818bcbfa15370a
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095628"
 ---
 # <a name="page-setup-dialog-box"></a>Caixa de diálogo Configurar Página
-  Você pode personalizar o layout da sua página selecionando opções na caixa de diálogo **Configurar Página** . A disponibilidade de algumas opções depende das linguagens instaladas e habilitadas para edição.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Você pode personalizar o layout da sua página selecionando opções na caixa de diálogo **Configurar Página** . A disponibilidade de algumas opções depende das linguagens instaladas e habilitadas para edição.  
   
 ## <a name="paper"></a>Papel  
- **Tamanho**  
- Selecione um tamanho na lista.  
+**Tamanho**  
+Selecione um tamanho na lista.  
   
- **Origem**  
- Especifica o papel a ser usado. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] lista as origens disponíveis para a impressora selecionada.  
+**Origem**  
+Especifica o papel a ser usado. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] lista as origens disponíveis para a impressora selecionada.  
   
 ## <a name="orientation"></a>Orientação  
- **Retrato**  
- Imprime um documento com a borda menor do papel no topo da página.  
+**Retrato**  
+Imprime um documento com a borda menor do papel no topo da página.  
   
- **Paisagem**  
- Imprime um documento com a borda maior do papel no topo da página.  
+**Paisagem**  
+Imprime um documento com a borda maior do papel no topo da página.  
   
 ## <a name="margins-inches"></a>Margens (polegadas)  
- Left (à esquerda)  
- Define a distância entre a borda esquerda da página e a borda esquerda das linhas sem-recuo alinhadas à esquerda.  
+Left (à esquerda)  
+Define a distância entre a borda esquerda da página e a borda esquerda das linhas sem-recuo alinhadas à esquerda.  
   
- Right (à direita)  
- Define a distância entre a borda direita da página e a borda direita das linhas sem-recuo alinhadas à direita.  
+Right (à direita)  
+Define a distância entre a borda direita da página e a borda direita das linhas sem-recuo alinhadas à direita.  
   
- TOP  
- Define a distância entre a parte superior da página e a parte superior da primeira linha na página.  
+TOP  
+Define a distância entre a parte superior da página e a parte superior da primeira linha na página.  
   
- Inferior  
- Define a distância entre a parte inferior da página e a parte inferior da última linha na página.  
+Inferior  
+Define a distância entre a parte inferior da página e a parte inferior da última linha na página.  
   
 ## <a name="other"></a>Outro  
- **Visualização**  
- O quadro de visualização exibe os efeitos das configurações selecionadas.  
+**Visualização**  
+O quadro de visualização exibe os efeitos das configurações selecionadas.  
   
- **Cabeçalho da página**  
- Imprime o nome e o caminho do arquivo como um cabeçalho da página.  
-  
+**Cabeçalho da página**  
+Imprime o nome e o caminho do arquivo como um cabeçalho da página.  
   

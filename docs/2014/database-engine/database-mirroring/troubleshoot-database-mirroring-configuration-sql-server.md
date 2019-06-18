@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754204"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Solução de problemas de configuração de espelhamento de banco de dados (SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "62754204"
 |[Acesso de rede](#NetworkAccess)|Documenta o requisito de cada instância do servidor para acessar as portas de outra instância do servidor ou instâncias no TCP.|  
 |[Preparação do banco de dados espelho](#MirrorDbPrep)|Resume os requisitos para preparar o banco de dados espelho para habilitar o início do espelhamento.|  
 |[Falha na operação para criar arquivo](#FailedCreateFileOp)|Descreve como responder a uma falha na operação para criar arquivo.|  
-|[Iniciando o espelhamento usando Transact-SQL](#StartDbm)|Descreve a ordem exigida para as instruções ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'**.|  
+|[Iniciando o espelhamento usando Transact-SQL](#StartDbm)|Descreve a ordem exigida para as instruções ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** .|  
 |[Transações envolvendo todos os bancos de dados](#CrossDbTxns)|Um failover automático pode levar a uma resolução automática e possivelmente incorreta de transações duvidosas. Por esta razão, o espelhamento de banco de dados não dá suporte a transações envolvendo todos os bancos de dados.|  
   
 ##  <a name="Accounts"></a> Contas  

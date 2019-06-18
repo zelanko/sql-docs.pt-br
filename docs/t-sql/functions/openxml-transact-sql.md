@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac5e76c2d6e93bb8eb2fe334f38a22325e74d37f
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331586"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62520702"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Pode ser combinado (OR lógico) com XML_ATTRIBUTES ou XML_ELEMENTS. No contexto de recuperação, esse sinalizador indica que os dados consumidos não podem ser copiados para a propriedade de estouro **\@@mp:xmltex**.|  
   
  _SchemaDeclaration_  
- É a definição do esquema do formato: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
+ É a definição do esquema do formato: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
  _ColName_  
  É o nome de coluna no conjunto de linhas.  
@@ -155,7 +155,7 @@ NULL       NULL
 NULL       NULL  
 ```  
   
-### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>b. Especificando ColPattern para mapeamento entre colunas e atributos XML  
+### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>B. Especificando ColPattern para mapeamento entre colunas e atributos XML  
  A consulta a seguir retorna a ID de cliente, a data do pedido, a ID de produto e atributos de quantidade do documento XML. O *rowpattern* identifica os elementos `<OrderDetails>`. `ProductID` e `Quantity` são os atributos do elemento `<OrderDetails>`. Entretanto, `OrderID`, `CustomerID`e `OrderDate` são os atributos do elemento de pai (`<Orders>`).  
   
  O *ColPattern* opcional é especificado para os seguintes mapeamentos:  

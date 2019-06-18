@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49ddbbbff88ca0ae33caf4230954df710f29365
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62665318"
 ---
 # <a name="lockacquired-event-class"></a>Classe de evento Lock:Acquired
@@ -37,7 +37,7 @@ ms.locfileid: "62665318"
 |DatabaseID|`int`|ID do banco de dados no qual foi adquirido o bloqueio. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |Duração|`bigint`|Tempo (em microssegundos) entre a hora em que a solicitação de bloqueio foi emitida e a hora em que ocorreu o bloqueio.|13|Sim|  
 |EndTime|`datetime`|Horário em que o evento foi encerrado.|15|Sim|  
-|EventClass|`int`|Tipo de evento = 24.|27|Não|  
+|EventClass|`int`|Tipo de evento = 24.|27|Não |  
 |EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|Não|  
 |GroupID|`int`|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|`nvarchar`|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
@@ -52,7 +52,7 @@ ms.locfileid: "62665318"
 |ObjectID2|`bigint`|Identificação do objeto ou entidade relacionada, se disponível e aplicável.|56|Sim|  
 |OwnerID|`int`|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE|58|Sim|  
 |RequestID|`int`|ID da solicitação que contém a instrução.|49|Sim|  
-|ServerName|`nvarchar`|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
+|ServerName|`nvarchar`|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não |  
 |SessionLoginName|`nvarchar`|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |SPID|`int`|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |StartTime|`datetime`|Hora de início do evento, se disponível.|14|Sim|  

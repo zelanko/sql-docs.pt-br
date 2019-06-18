@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 184018d0c0973f41e686f9111b9664e12f91cd20
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754487"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Troca de função durante uma sessão de espelhamento de banco de dados (SQL Server)
@@ -83,7 +83,7 @@ ms.locfileid: "62754487"
  O administrador de banco de dados pode usar o failover manual para atualizar o hardware ou o software sem sacrificar a disponibilidade. Para usar o espelhamento de banco de dados para atualizações de software, o servidor e/ou sistema espelho já deverá ter recebido as atualizações.  
   
 > [!NOTE]  
->  O espelhamento de banco de dados deve ser capaz de fazer uma atualização sem-interrupção, mas isso não é garantido, porque as alterações futuras são desconhecidas. Para obter mais informações, consulte [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
+>  O espelhamento de banco de dados deve ser capaz de fazer uma atualização sem-interrupção, mas isso não é garantido, porque as alterações futuras são desconhecidas. Para obter mais informações, consulte [Minimize Downtime for espelhado bancos de dados When Upgrading Server Instances](upgrading-mirrored-instances.md).  
   
  A figura a seguir ilustra uma instância do uso do failover manual para manter a disponibilidade de banco de dados enquanto você atualiza uma instância de servidor de banco de dados. Quando a atualização é concluída, um administrador pode, opcionalmente, fazer failover de volta para a instância de servidor original. Isso é útil quando o administrador deseja interromper a sessão de espelhamento e usar o servidor espelho em outro lugar. Dessa forma, uma única instância de servidor pode ser usada repetidamente ao atualizar uma série de instâncias de servidor de banco de dados.  
   

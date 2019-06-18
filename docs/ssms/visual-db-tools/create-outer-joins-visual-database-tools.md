@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 07f168c018c33d5078dd47b0f8a38d07ddfdcdf5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095649"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Criar junções externas (Visual Database Tools)
@@ -31,7 +31,7 @@ Quando você criar uma junção externa, a ordem em que as tabelas aparecem na i
   
 1.  Crie a junção, automática ou manualmente. Para obter detalhes, consulte [Unir tabelas automaticamente &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md) ou [Unir tabelas manualmente &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-manually-visual-database-tools.md).  
   
-2.  Selecione a linha de junção no painel Diagrama e, depois, no menu **Designer de Consultas**, escolha **Selecionar Todas as Linhas de <tablename>**, selecionando o comando que inclui a tabela com as linhas extras que você deseja incluir.  
+2.  Selecione a linha de junção no painel Diagrama e, depois, no menu **Designer de Consultas**, escolha **Selecionar Todas as Linhas de <tablename>** , selecionando o comando que inclui a tabela com as linhas extras que você deseja incluir.  
   
     -   Escolha a primeira tabela para criar uma junção externa esquerda.  
   

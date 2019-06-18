@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 481146623145c2abc6e3e9c8ed5b971f614979e6
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242047"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62640814"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restaurações por etapas (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,7 +144,7 @@ ms.locfileid: "54242047"
   
      Na edição Enterprise, qualquer grupo de arquivos secundário offline pode ser restaurado e recuperado enquanto o banco de dados permanecer online. Se um arquivo somente leitura específico não for danificado e for consistente com o banco de dados, o arquivo não terá de ser restaurado. Para obter mais informações, veja [Recuperar um banco de dados sem restaurar dados &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
-### <a name="applying-log-backups"></a>Aplicando backups de log   
+### <a name="applying-log-backups"></a>Aplicando backups de log  
  Se um grupo de arquivos somente leitura era somente leitura desde antes de o backup de arquivo ser criado, aplicar backups de log ao grupo de arquivos será desnecessário e é ignorado pela restauração de arquivo. Se o grupo de arquivos for leitura/gravação, uma cadeia ininterrupta de backups de log deve ser aplicada à última restauração completa ou diferencial, para trazer o grupo de arquivos para o arquivo de log atual.  
   
 ### <a name="examples"></a>Exemplos  

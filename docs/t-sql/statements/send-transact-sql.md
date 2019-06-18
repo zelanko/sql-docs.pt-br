@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3ead09886af3ec64c00af06e3919941effd7b234
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590291"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638680"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ MESSAGE TYPE *message_type_name*
 Especifica o tipo da mensagem enviada. Esse tipo de mensagem deve ser incluído nos contratos de serviço usado por essas conversas. Esses contratos devem permitir que o tipo de mensagem seja enviado desse lado da conversa. Por exemplo, os serviços de destino das conversas podem enviar somente mensagens especificadas no contrato como SENT BY TARGET ou SENT BY ANY. Se essa cláusula for omitida, a mensagem será do tipo DEFAULT.  
   
 *message_body_expression*  
-Fornece uma expressão que representa o corpo de mensagem. A *message_body_expression* é opcional. No entanto, se *message_body_expression* estiver presente a expressão deverá ser de um tipo que possa ser convertido em **varbinary(max)**. A expressão não pode ser NULL. Se essa cláusula for omitida, o corpo de mensagem será vazio.  
+Fornece uma expressão que representa o corpo de mensagem. A *message_body_expression* é opcional. No entanto, se *message_body_expression* estiver presente a expressão deverá ser de um tipo que possa ser convertido em **varbinary(max)** . A expressão não pode ser NULL. Se essa cláusula for omitida, o corpo de mensagem será vazio.  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -97,7 +97,7 @@ SEND não é válida em uma função definida pelo usuário.
 Para enviar uma mensagem, o usuário atual deve ter a permissão RECEIVE na fila de cada serviço que envia a mensagem.  
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir abre uma caixa de diálogo e envia uma mensagem XML nela. Para enviar a mensagem, o exemplo converte o objeto xml em **varbinary(max)**.  
+O exemplo a seguir abre uma caixa de diálogo e envia uma mensagem XML nela. Para enviar a mensagem, o exemplo converte o objeto xml em **varbinary(max)** .  
   
 ```sql
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  

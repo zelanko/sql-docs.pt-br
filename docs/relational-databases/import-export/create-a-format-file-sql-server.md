@@ -15,10 +15,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ba776c683ea05665708891dbe734e82591077bf7
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946235"
 ---
 # <a name="create-a-format-file-sql-server"></a>Criar um formato de arquivo (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "64946235"
 > [!NOTE]  
 >  A versão do utilitário **bcp** (Bcp.exe) usada para ler um arquivo de formato deve ser igual ou posterior à versão usada para criar o arquivo de formato. Por exemplo, o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** pode ler um arquivo de formato da versão 10.0, que é gerado pelo [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**, mas o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** não pode ler um arquivo de formato da versão 11.0, que é gerado pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp**.  
   
- Este tópico descreve como usar o [utilitário bcp](../../tools/bcp-utility.md) para criar um arquivo de formato para uma tabela específica. O arquivo de formato se baseia na opção do tipo de dados especificada (**-n**, **-c**, **-w**ou **-N**) e nos delimitadores de exibição ou tabela.  
+ Este tópico descreve como usar o [utilitário bcp](../../tools/bcp-utility.md) para criar um arquivo de formato para uma tabela específica. O arquivo de formato se baseia na opção do tipo de dados especificada ( **-n**, **-c**, **-w**ou **-N**) e nos delimitadores de exibição ou tabela.  
   
 ## <a name="creating-a-non-xml-format-file"></a>Criando um arquivo de formato não XML  
  Para usar um comando **bcp** para criar um arquivo de formato, especifique o argumento **format** e use **nul** em vez de um caminho de arquivo de dados. A opção **format** também exige a opção **-f** , como:  
@@ -197,7 +197,7 @@ A seguir, um exemplo do formato de arquivo sem as informações de ordenação.
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|Especifica o arquivo de formato XML.|  
 |**-c**|Especifica dados de caracteres.|  
-|**-t** `,`|Especifica uma vírgula (**,**) como terminador de campo.<br /><br /> Observação: se o arquivo de dados usar o terminador de campo padrão (`\t`), a opção **-t** será desnecessária.|  
+|**-t** `,`|Especifica uma vírgula ( **,** ) como terminador de campo.<br /><br /> Observação: se o arquivo de dados usar o terminador de campo padrão (`\t`), a opção **-t** será desnecessária.|  
 |**-T**|Especifica que o utilitário **bcp** se conecta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com uma conexão confiável usando segurança integrada. Se **-T** não for especificado, será necessário especificar **-U** e **-P** para o logon ser efetuado com êxito.|  
   
  No prompt de comando do Windows, digite o seguinte comando `bcp` :  

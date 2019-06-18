@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f3d98314bf142340d97d218b93670a14c9f56e3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62923006"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Fazer backup de arquivos e de grupos de arquivos (SQL Server)
@@ -151,20 +151,20 @@ ms.locfileid: "62923006"
   
      BACKUP DATABASE *database*  
   
-     { FILE **=**_logical_file_name_ | FILEGROUP **=**_logical_filegroup_name_ } [ **,**...*f* ]  
+     { FILE **=** _logical_file_name_ | FILEGROUP **=** _logical_filegroup_name_ } [ **,** ...*f* ]  
   
-     TO *backup_device* [ **,**...*n* ]  
+     TO *backup_device* [ **,** ...*n* ]  
   
-     [ WITH *com_opções* [ **,**...*o* ] ] ;  
+     [ WITH *com_opções* [ **,** ...*o* ] ] ;  
   
     |Opção|Descrição|  
     |------------|-----------------|  
     |*database*|É o banco de dados do qual é feito o backup do log de transações, do banco de dados parcial ou do banco de dados completo.|  
-    |FILE **=**_logical_file_name_|Especifica o nome lógico de um arquivo a ser incluído no backup de arquivos.|  
-    |FILEGROUP **=**_logical_filegroup_name_|Especifica o nome lógico de um grupo de arquivos que será incluído no backup de arquivos. No modelo de recuperação simples, um backup de grupo de arquivos é permitido apenas para grupos de arquivos somente leitura.|  
-    |[ **,**...*f* ]|É um espaço reservado que indica que vários arquivos e grupos de arquivos podem ser especificados. O número de arquivos ou grupos de arquivos é ilimitado.|  
-    |*backup_device* [ **,**...*n* ]|Especifica uma lista de 1 a 64 dispositivos de backup a serem usados para a operação de backup. Você pode especificar um dispositivo de backup físico ou pode especificar um dispositivo de backup lógico correspondente, se já definido. Para especificar um dispositivo de backup físico, use a opção DISK ou TAPE:<br /><br /> { DISK &#124; TAPE } **=**_physical_backup_device_name_<br /><br /> Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
-    |WITH *with_options* [ **,**...*o* ]|Opcionalmente, especifica uma ou mais opções adicionais, como DIFFERENTIAL.<br /><br /> Observação: um backup de arquivo diferencial exige um backup de arquivo completo como base. Para obter mais informações, veja [Criar um backup diferencial de banco de dados &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md).|  
+    |FILE **=** _logical_file_name_|Especifica o nome lógico de um arquivo a ser incluído no backup de arquivos.|  
+    |FILEGROUP **=** _logical_filegroup_name_|Especifica o nome lógico de um grupo de arquivos que será incluído no backup de arquivos. No modelo de recuperação simples, um backup de grupo de arquivos é permitido apenas para grupos de arquivos somente leitura.|  
+    |[ **,** ...*f* ]|É um espaço reservado que indica que vários arquivos e grupos de arquivos podem ser especificados. O número de arquivos ou grupos de arquivos é ilimitado.|  
+    |*backup_device* [ **,** ...*n* ]|Especifica uma lista de 1 a 64 dispositivos de backup a serem usados para a operação de backup. Você pode especificar um dispositivo de backup físico ou pode especificar um dispositivo de backup lógico correspondente, se já definido. Para especificar um dispositivo de backup físico, use a opção DISK ou TAPE:<br /><br /> { DISK &#124; TAPE } **=** _physical_backup_device_name_<br /><br /> Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
+    |WITH *with_options* [ **,** ...*o* ]|Opcionalmente, especifica uma ou mais opções adicionais, como DIFFERENTIAL.<br /><br /> Observação: um backup de arquivo diferencial exige um backup de arquivo completo como base. Para obter mais informações, veja [Criar um backup diferencial de banco de dados &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md).|  
   
 2.  No modelo de recuperação completa, você deverá também efetuar backup do log de transações. Para usar um conjunto inteiro de backups de arquivo completos para restaurar um banco de dados, você deverá também ter suficientes backups de log para abranger todos os backups de arquivo, desde o início do primeiro backup de arquivo. Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md).  
   

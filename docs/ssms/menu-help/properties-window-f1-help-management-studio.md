@@ -25,10 +25,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ad01e2691f76fea00a5531834918b7fbe5d2382e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096396"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Ajuda F1 da janela Propriedades (Management Studio)
@@ -42,7 +42,7 @@ A janela **Propriedades** exibe tipos diferentes de campos de edição, dependen
 Relaciona o objeto ou os objetos atuais selecionados. Somente objetos do editor ou designer ativo ficam visíveis.  
   
 **Categorizado**  
-Relaciona todas as propriedades e os valores de propriedade do objeto selecionado, por categoria. Você pode recolher uma categoria para reduzir o número de propriedades visíveis. Ao expandir ou recolher uma categoria, você vê um sinal de mais (**+**) ou de menos (**-**) à esquerda do nome da categoria. As categorias são listadas em ordem alfabética.  
+Relaciona todas as propriedades e os valores de propriedade do objeto selecionado, por categoria. Você pode recolher uma categoria para reduzir o número de propriedades visíveis. Ao expandir ou recolher uma categoria, você vê um sinal de mais ( **+** ) ou de menos ( **-** ) à esquerda do nome da categoria. As categorias são listadas em ordem alfabética.  
   
 **Alfabético**  
 Classifica em ordem alfabética todas as propriedades de hora de criação e eventos dos objetos selecionados.  

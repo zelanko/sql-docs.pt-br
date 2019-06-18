@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc0ab6b4dc44d14b375b13da971c0849eb42b0b3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997059"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
@@ -50,7 +50,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>Argumentos  
 `[ @dbname = ] 'dbnam_ '` É o nome do banco de dados a ser anexado ao servidor. O nome deve ser exclusivo. *DBName* está **sysname**, com um padrão NULL.  
   
-`[ @filename1 = ] 'filename_n'` É o nome físico, incluindo o caminho, de um arquivo de banco de dados. *filename_n* está **nvarchar (260)**, com um padrão NULL. Podem ser especificados até 16 nomes de arquivo. Os nomes de parâmetros começam em **@filename1** e aumente a **@filename16**. A lista de nomes de arquivo deve incluir, pelo menos, o arquivo primário. O arquivo primário contém as tabelas de sistema que apontam para outros arquivos no banco de dados. A lista também deve incluir quaisquer arquivos que tenham sido movidos depois que o banco de dados foi desanexado.  
+`[ @filename1 = ] 'filename_n'` É o nome físico, incluindo o caminho, de um arquivo de banco de dados. *filename_n* está **nvarchar (260)** , com um padrão NULL. Podem ser especificados até 16 nomes de arquivo. Os nomes de parâmetros começam em **@filename1** e aumente a **@filename16** . A lista de nomes de arquivo deve incluir, pelo menos, o arquivo primário. O arquivo primário contém as tabelas de sistema que apontam para outros arquivos no banco de dados. A lista também deve incluir quaisquer arquivos que tenham sido movidos depois que o banco de dados foi desanexado.  
   
 > [!NOTE]  
 >  Este argumento mapeia para o parâmetro FILENAME da instrução CREATE DATABASE. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  

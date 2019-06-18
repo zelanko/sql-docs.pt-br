@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f53f2c30f437eb4fbbdacc454655a55950b40ca5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621834"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665118"
 ---
 # <a name="clean-up-merge-metadata-replication-transact-sql-programming"></a>Limpar metadados de mesclagem (Programação Transact-SQL de replicação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47621834"
   
 1.  No Publicador do banco de dados de publicação, execute [sp_mergemetadataretentioncleanup](../../../relational-databases/system-stored-procedures/sp-mergemetadataretentioncleanup-transact-sql.md).  
   
-2.  (Opcional) Observe o número de linhas removidas na etapa 1 do [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md)e nas tabelas do sistema [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) , retornadas respectivamente nos parâmetros de saída **@num_genhistory_rows**, **@num_contents_rows**e nas tabelas do sistema **@num_tombstone_rows** .  
+2.  (Opcional) Observe o número de linhas removidas na etapa 1 do [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md)e nas tabelas do sistema [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) , retornadas respectivamente nos parâmetros de saída **@num_genhistory_rows** , **@num_contents_rows** e nas tabelas do sistema **@num_tombstone_rows** .  
   
 3.  Repita as etapas 1 e 2 no Assinante para limpar os metadados no banco de dados de assinatura.  
   

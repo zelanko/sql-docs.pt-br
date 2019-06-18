@@ -15,11 +15,11 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f19be799e47d734b2d645bdf5885a234fd6feb3
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973795"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716236"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Definir a conta de serviço do Iniciador do Daemon de Filtro de Texto Completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ O Iniciador do Daemon de Filtro de Texto Completo do SQL é um serviço de recon
   
 1.  No menu **Iniciar**, aponte para **Todos os Programas**, expanda [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] e clique em **SQL Server 2016 Configuration Manager**.  
   
-2.  No **SQL Server Configuration Manager**, clique em **Serviços do SQL Server**, clique com o botão direito do mouse em **Iniciador do Daemon de Filtro de Texto Completo do SQL (**_nome da instância_**)** e clique em **Propriedades**.  
+2.  No **SQL Server Configuration Manager**, clique em **Serviços do SQL Server**, clique com o botão direito do mouse em **Iniciador do Daemon de Filtro de Texto Completo do SQL (** _nome da instância_ **)** e clique em **Propriedades**.  
   
 3.  Clique na guia **Fazer Logon** da caixa de diálogo e selecione ou digite a conta em que será executado os processos iniciados pelo serviço Iniciador do Daemon de Filtro de Texto Completo do SQL.  
   

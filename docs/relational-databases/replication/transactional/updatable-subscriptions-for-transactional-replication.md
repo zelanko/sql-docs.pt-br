@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a8d607e528164e71d1e771d497ff7660cb7ecf66
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132986"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669661"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Assinaturas atualizáveis – para a replicação transacional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "54132986"
   
 -   Assinantes não podem atualizar ou inserir valores **text**, **ntext** ou **image** uma vez que não é possível ler das tabelas inseridas ou excluídas dentro dos gatilhos de replicação de controle de alterações. Da mesma forma, Assinantes não podem atualizar ou inserir valores **text** ou **image** usando **WRITETEXT** ou **UPDATETEXT** , porque os dados são substituídos pelo Publicador. Em vez disso, é possível particionar as colunas **text** e **image** em uma tabela separada e modificar as duas tabelas na transação.  
   
-     Para atualizar objetos grandes em um assinante, use os tipos de dados **varchar(max)**, **nvarchar(max)** e **varbinary(max)** em vez dos tipos de dados **text**, **ntext**e **image** , respectivamente.  
+     Para atualizar objetos grandes em um assinante, use os tipos de dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** em vez dos tipos de dados **text**, **ntext**e **image** , respectivamente.  
   
 -   Atualizações em chaves exclusivas (incluindo chaves primárias) que geram duplicatas (por exemplo, uma atualização do formato `UPDATE <column> SET <column> =<column>+1` ) não são permitidas e serão rejeitadas devido a uma violação de exclusividade. Isso ocorre porque atualizações configuradas feitas no Assinante são propagadas por replicação como instruções **UPDATE** individuais para cada linha afetada.  
   

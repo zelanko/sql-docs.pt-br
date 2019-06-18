@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 223d1f8cab99a75d78bfa75b25a2092e4ba83865
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591570"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62760334"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Logon para Assinaturas Atualizáveis
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "53591570"
   
  Conexões são usadas pelos gatilhos acionados no Assinante e propagam as alterações no Publicador. Essa conta é necessária mesmo que você selecionou **Colocar alterações na fila e confirmar quando possível** na página **Assinaturas Atualizáveis**. Por padrão, o Assistente para Nova Assinatura configura a atualização na fila com a capacidade de alternar para a atualização imediata, se necessário.  
   
-> **IMPORTANTE:** A conta especificada para a conexão só deve receber permissão para inserir, atualizar e excluir dados nas exibições criadas pela replicação no banco de dados de publicação. Ela não deve receber nenhuma permissão adicional. Conceda permissões para Exibições no banco de dados de publicação nomeadas no formato **syncobj_**_\<HexadecimalNumber>_ para a conta configurada em cada Assinante.  
+> **IMPORTANTE:** A conta especificada para a conexão só deve receber permissão para inserir, atualizar e excluir dados nas exibições criadas pela replicação no banco de dados de publicação. Ela não deve receber nenhuma permissão adicional. Conceda permissões para Exibições no banco de dados de publicação nomeadas no formato **syncobj_** _\<HexadecimalNumber>_ para a conta configurada em cada Assinante.  
   
  Há três opções disponíveis para o tipo de conexão:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "53591570"
   
 -   Um servidor vinculado que a replicação cria; a conexão é feita com as credenciais do usuário que faz a alteração no Assinante.  
   
- As duas primeiras opções podem ser especificadas nesse assistente. A última opção só pode ser especificada com o uso de [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md); especifique um valor igual a **1** para o parâmetro **@security_mode**.  
+ As duas primeiras opções podem ser especificadas nesse assistente. A última opção só pode ser especificada com o uso de [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md); especifique um valor igual a **1** para o parâmetro **@security_mode** .  
   
 ## <a name="options"></a>Opções  
  **Criar um servidor vinculado que conecta usando o seguinte logon de Autenticação do SQL Server:**  

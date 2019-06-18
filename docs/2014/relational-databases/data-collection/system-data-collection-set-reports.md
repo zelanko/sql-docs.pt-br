@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873404"
 ---
 # <a name="system-data-collection-set-reports"></a>Relatórios do conjuntos de coleta de dados do sistema
@@ -56,7 +56,7 @@ ms.locfileid: "62873404"
  A tabela abaixo do gráfico lista as horas de coleta de dados e os dados de uso correspondentes.  
   
 #### <a name="disk-usage-for-database-databasename-subreport"></a>Sub-relatório Uso de Disco para o Banco de Dados: <database_name>.  
- O sub-relatório **Uso de disco para o banco de dados:**_<database_name>_ é exibido quando você clica no nome de um banco de dados na tabela de resumo do relatório Conjunto de Coleta de Uso do Disco. Esse relatório fornece uma análise numérica e gráfica do uso do espaço pelos arquivos de dados e log de transação do banco de dados. O uso de espaço para arquivos de dados é categorizado como uma porcentagem alocada a páginas de índice, espaço alocado, páginas de dados e espaço não utilizado. Essas categorias são definidas da seguinte forma:  
+ O sub-relatório **Uso de disco para o banco de dados:** _<database_name>_ é exibido quando você clica no nome de um banco de dados na tabela de resumo do relatório Conjunto de Coleta de Uso do Disco. Esse relatório fornece uma análise numérica e gráfica do uso do espaço pelos arquivos de dados e log de transação do banco de dados. O uso de espaço para arquivos de dados é categorizado como uma porcentagem alocada a páginas de índice, espaço alocado, páginas de dados e espaço não utilizado. Essas categorias são definidas da seguinte forma:  
   
 |Category|Definição|  
 |--------------|----------------|  

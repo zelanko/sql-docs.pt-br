@@ -20,11 +20,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 510025046d0509c1ef074ecafaab0a0c78e2bf81
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136036"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047377"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>Exibir e modificar propriedades de assinatura push
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "54136036"
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Exibir e modificar as propriedades de assinatura push do Publicador em:  
   
--   A caixa de diálogo **Propriedades da Assinatura – \<Editor>: \<PublicationDatabase>**, disponível em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   A caixa de diálogo **Propriedades da Assinatura – \<Editor>: \<PublicationDatabase>** , disponível em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   A guia **Todas as Assinaturas** que está disponível no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
   
@@ -67,20 +67,20 @@ ms.locfileid: "54136036"
   
 4.  Modifique propriedades, se necessário, depois clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  As assinaturas push podem ser modificadas e suas propriedades acessadas programaticamente usando procedimentos armazenados de replicação. Os procedimentos armazenados usados dependem do tipo de publicação ao qual a assinatura pertence.  
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Para exibir as propriedades de uma assinatura push de um instantâneo ou publicação transacional  
   
-1.  No Publicador do banco de dados da publicação, execute [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md). Especifique **@publication**, o **@subscriber**, e o valor **all** para **@article**.  
+1.  No Publicador do banco de dados da publicação, execute [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md). Especifique **@publication** , o **@subscriber** , e o valor **all** para **@article** .  
   
-2.  No Publicador do banco de dados da publicação, execute [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md), especificando **@subscriber**.  
+2.  No Publicador do banco de dados da publicação, execute [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md), especificando **@subscriber** .  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Para alterar as propriedades de uma assinatura push de um instantâneo ou publicação transacional  
   
 1.  No Publicador do banco de dados da publicação, execute [sp_changesubscriber](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md), especificando **@subscriber** e quaisquer parâmetros para as propriedades do Assinante que está sendo alterado.  
   
-2.  No Publicador do banco de dados de publicação, execute [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md). Especifique **@publication**, o **@subscriber**, o **@destination_db**, o valor **all** para **@article**, a propriedade da assinatura sendo alterada para **@property**, e o novo valor para **@value**. Isto altera as configurações de segurança para a assinatura push.  
+2.  No Publicador do banco de dados de publicação, execute [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md). Especifique **@publication** , o **@subscriber** , o **@destination_db** , o valor **all** para **@article** , a propriedade da assinatura sendo alterada para **@property** , e o novo valor para **@value** . Isto altera as configurações de segurança para a assinatura push.  
   
 3.  (Opcional) Para alterar as propriedades do pacote DTS (Data Transformation Services) de uma assinatura, execute [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md) , do Assinante no banco de dados de assinatura. Especifique o ID do trabalho do Distribution Agent para **@jobid** e as seguintes propriedades de pacote DTS:  
   
@@ -97,13 +97,13 @@ ms.locfileid: "54136036"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-merge-publication"></a>Para exibir as propriedades de uma assinatura push de uma publicação de mesclagem  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md). Especifique **@publication** e **@subscriber**.  
+1.  No Publicador do banco de dados de publicação, execute [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md). Especifique **@publication** e **@subscriber** .  
   
-2.  No Publicador, execute [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md), especificando **@subscriber**.  
+2.  No Publicador, execute [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md), especificando **@subscriber** .  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>Para alterar as propriedades de uma assinatura push de uma publicação de mesclagem  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md). Especifique **@publication**, o **@subscriber**, o **@subscriber_db**, a propriedade da assinatura sendo alterada para **@property**, e o novo valor para **@value**.  
+1.  No Publicador do banco de dados de publicação, execute [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md). Especifique **@publication** , o **@subscriber** , o **@subscriber_db** , a propriedade da assinatura sendo alterada para **@property** , e o novo valor para **@value** .  
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
   
