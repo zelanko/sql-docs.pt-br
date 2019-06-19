@@ -1,7 +1,5 @@
 ---
 title: Criar um projeto | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -12,15 +10,18 @@ helpviewer_keywords:
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a2bae29b9292ecd36950c131389a8eb9ecc7253d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+manager: jroth
+ms.custom: ''
+ms.date: 01/19/2017
+ms.openlocfilehash: a70615870126f87c079dffccfe532d796e02f869
+ms.sourcegitcommit: d0d2505d3d517e7b3ea9c4aef4d6fd08aeb28d54
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65104878"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67197603"
 ---
 # <a name="create-a-project"></a>Criar um projeto
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Você pode criar um ou mais projetos dentro de uma solução existente.  
   
