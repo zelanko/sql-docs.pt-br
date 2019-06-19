@@ -33,10 +33,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 558dbcfa3556099877406d8082f3cb909d6a22a1
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982351"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
@@ -259,7 +259,7 @@ Se você passar uma única palavra que não começa com `@` e que não está ent
  Fornece o valor padrão do parâmetro como definido no módulo. Quando o módulo esperar um valor para um parâmetro que não tem um padrão definido e houver um parâmetro ausente ou a palavra-chave DEFAULT estiver especificada, ocorrerá um erro.  
   
  @*string_variable*  
- É o nome de uma variável local. @*string_variable* pode ser qualquer tipo de dados **char**, **varchar**, **nchar** ou **nvarchar**. Incluem os tipos de dados **(max)** .  
+ É o nome de uma variável local. @*string_variable* pode ser qualquer tipo de dados **char**, **varchar**, **nchar** ou **nvarchar**. Incluem os tipos de dados **(max)**.  
   
  [N] '*tsql_string*'  
  É uma cadeia de caracteres constante. *tsql_string* pode ser qualquer tipo de dados **nvarchar** ou **varchar**. Se N for incluído, a cadeia de caracteres será interpretada como o tipo de dados **nvarchar**.  

@@ -20,10 +20,10 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d56d0c69b9e3bae87dda9b55d241a1c040210ca9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62637465"
 ---
 # <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
@@ -44,7 +44,7 @@ O sys.external_libraries do modo de exibição de catálogo lista uma linha para
 |nome |sysname |Nome da biblioteca externa. É exclusivo no banco de dados por proprietário.|
 |principal_id |INT |ID da entidade de segurança que possui essa biblioteca externa. |
 |language | sysname | Nome do idioma ou tempo de execução que dá suporte a biblioteca externa. Valores válidos são 'R', 'Python' e 'Java'. Tempos de execução adicionais podem ser adicionados no futuro.|
-|escopo |INT |0 para um escopo público; 1 para o escopo particular |  
+|scope |INT |0 para um escopo público; 1 para o escopo particular |  
 |scope_desc |varchar(7) |Indica se o pacote é pública ou privada|
 
 ## <a name="see-also"></a>Confira também  

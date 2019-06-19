@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f7716b7e41e739a100c16e34560e737d2350e122
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66015097"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidade e recuperação de desastres para Master Data Services
@@ -233,7 +233,7 @@ A FCI melhora a alta disponibilidade no nível da instância. O serviço do SQL 
 
     Figura 10
 
-2.  Na caixa de diálogo **Propriedades do** **SQL Server (MSSQLSERVER)**, clique na guia **Alta Disponibilidade AlwaysOn** e marque a caixa de seleção **Habilitar Grupos de Disponibilidade AlwaysOn**. Quando um valor for exibido na caixa de texto **Nome do cluster de failover do Windows**, clique em **OK** para continuar. Consulte a Figura 11.
+2.  Na caixa de diálogo **Propriedades do** **SQL Server (MSSQLSERVER)** , clique na guia **Alta Disponibilidade AlwaysOn** e marque a caixa de seleção **Habilitar Grupos de Disponibilidade AlwaysOn**. Quando um valor for exibido na caixa de texto **Nome do cluster de failover do Windows**, clique em **OK** para continuar. Consulte a Figura 11.
 
     ![Opção Habilitar Grupos de Disponibilidade AlwaysOn](media/Fig11_EnableAlwaysOn.png)
 
@@ -248,7 +248,7 @@ A FCI melhora a alta disponibilidade no nível da instância. O serviço do SQL 
 4.  Clique em **Reiniciar** para reiniciar o serviço **SQL Server** e efetive essa alteração. Consulte a Figura 10.
 
 >[!NOTE] 
->Você pode alterar a conta de serviço que executa o serviço SQL Server usando o **SQL Server Configuration Manager**. Clique na guia **Logon** na caixa de diálogo **Propriedades do** **SQL Server (MSSQLSERVER)**. Consulte a Figura 11.
+>Você pode alterar a conta de serviço que executa o serviço SQL Server usando o **SQL Server Configuration Manager**. Clique na guia **Logon** na caixa de diálogo **Propriedades do** **SQL Server (MSSQLSERVER)** . Consulte a Figura 11.
 
 ### <a name="create-an-availability-group"></a>Criar um Grupo de Disponibilidade
 

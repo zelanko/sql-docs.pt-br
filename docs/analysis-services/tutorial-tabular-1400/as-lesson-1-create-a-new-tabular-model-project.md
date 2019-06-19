@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 52e0b3f317044e25b2004512083fdcaff7a77ecf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62467977"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148991"
 ---
 # <a name="create-a-tabular-model-project"></a>Criar um projeto de modelo de tabela
 
@@ -47,7 +47,7 @@ Este artigo é a primeira lição em um tutorial de criação de modelo tabular.
   
     O espaço de trabalho hospeda um banco de dados de modelo de tabela com o mesmo nome que o projeto durante a criação do modelo. Espaço de trabalho integrado significa que o Visual Studio usa uma instância interna, eliminando a necessidade de instalar uma instância de servidor do Analysis Services separada apenas para a criação do modelo.
       
-6.  Na **nível de compatibilidade**, selecione **SQL Server 2017 / Azure Analysis Services (1400)**.   
+6.  Na **nível de compatibilidade**, selecione **SQL Server 2017 / Azure Analysis Services (1400)** .   
  
     ![as-lesson1-tmd](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
       

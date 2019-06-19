@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 493e042e58c5a13bc94f299197ac8a75972f7ed6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102305"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Salvar relatórios no computador (Construtor de Relatórios)
@@ -22,7 +22,7 @@ ms.locfileid: "66102305"
   
 ### <a name="to-save-a-report"></a>Para salvar um relatório  
   
-1.  No botão Construtor de Relatórios, clique em **Salvar**. A caixa de diálogo **Salvar Como**_\<Item de Relatório>_ será exibida.  
+1.  No botão Construtor de Relatórios, clique em **Salvar**. A caixa de diálogo **Salvar Como** _\<Item de Relatório>_ será exibida.  
   
     > [!NOTE]  
     >  Se você estiver salvando um relatório de novo, ele será salvo novamente automaticamente em seu local anterior. Use a opção **Salvar como** para alterar o local.  
@@ -35,7 +35,7 @@ ms.locfileid: "66102305"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Para salvar um relatório com um nome diferente  
   
-1.  No botão Construtor de Relatórios, clique em **Salvar como**. A caixa de diálogo **Salvar Como**_\<Item de Relatório>_ será exibida.  
+1.  No botão Construtor de Relatórios, clique em **Salvar como**. A caixa de diálogo **Salvar Como** _\<Item de Relatório>_ será exibida.  
   
 2.  Vá para a pasta no computador local em que você deseja salvar o relatório.  
   

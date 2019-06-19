@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 65f613ebf1364d7aeaeda77ec244794f983f3fc9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66775227"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Exibir ou alterar propriedades de servidor (SQL Server)
@@ -155,9 +155,9 @@ GO
   
 2.  No **SQL Server Configuration Manager**, clique em **Serviços do SQL Server**.  
   
-3.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server (\<** _instancename_ **>)** e, depois, clique em **Propriedades**.  
+3.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server (\<**_instancename_**>)** e, depois, clique em **Propriedades**.  
   
-4.  Na caixa de diálogo **Propriedades do SQL Server (\<** _instancename_ **>)** , altere as propriedades do servidor na guia **Serviço** ou na guia **Avançado** e, depois, clique em **OK**.  
+4.  Na caixa de diálogo **Propriedades do SQL Server (\<**_instancename_**>)**, altere as propriedades do servidor na guia **Serviço** ou na guia **Avançado** e, depois, clique em **OK**.  
   
 ##  <a name="FollowUp"></a> Acompanhamento: depois que você altera as propriedades de servidor  
  Para algumas propriedades, o servidor terá que ser reiniciado antes de a alteração entrar em vigor.  

@@ -15,10 +15,10 @@ author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
 ms.openlocfilehash: 96be54415e3a2892da2ec892a0e90c02c5365e90
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727929"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tarefa de Upload do SQL DW do Azure
@@ -62,7 +62,7 @@ RetainFiles|Especifica se os arquivos carregados no Armazenamento do Azure serã
 CompressionType|Especifica o formato de compactação a ser usado ao carregar arquivos no Armazenamento do Azure. A origem local não é afetada.
 CompressionLevel|Especifica o nível de compactação a ser usado para o formato de compactação.
 AzureDwConnection|Especifica um Gerenciador de conexões ADO.NET para o SQL DW do Azure.
-TableName|Especifica o nome da tabela de destino. Escolha um nome de tabela existente ou crie uma nova tabela escolhendo **\<Nova Tabela...>**.
+TableName|Especifica o nome da tabela de destino. Escolha um nome de tabela existente ou crie uma nova tabela escolhendo **\<Nova Tabela...>** .
 TableDistribution|Especifica o método de distribuição para a nova tabela. Aplica-se caso um novo nome de tabela para **TableName**seja especificado.
 HashColumnName|Especifica a coluna usada para a distribuição da tabela de hash. Aplica-se caso **HASH** for especificado para **TableDistribution**.
 
@@ -77,7 +77,7 @@ RowDelimiter|Especifica os caracteres que marcam o final de cada linha.
 ColumnDelimiter|Especifica um ou mais caracteres que marcam o final de cada coluna. Por ex.: &#124; (barra vertical) \t (tabulação), ' (aspa simples), "(aspas duplas) e 0x5c (barra invertida).
 CompressionType|Especifica o formato de compactação usado para dados de origem.
 AzureDwConnection|Especifica um Gerenciador de conexões ADO.NET para o SQL DW do Azure.
-TableName|Especifica o nome da tabela de destino. Escolha um nome de tabela existente ou crie uma nova tabela escolhendo **\<Nova Tabela...>**.
+TableName|Especifica o nome da tabela de destino. Escolha um nome de tabela existente ou crie uma nova tabela escolhendo **\<Nova Tabela...>** .
 TableDistribution|Especifica o método de distribuição para a nova tabela. Aplica-se caso um novo nome de tabela para **TableName**seja especificado.
 HashColumnName|Especifica a coluna usada para a distribuição da tabela de hash. Aplica-se caso **HASH** for especificado para **TableDistribution**.
 

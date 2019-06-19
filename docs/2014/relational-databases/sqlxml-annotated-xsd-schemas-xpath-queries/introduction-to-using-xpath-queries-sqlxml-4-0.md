@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ada9351eca0b068838b38e59c8e0833d5a9af61
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012710"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introdução para usar consultas XPath (SQLXML 4.0)
@@ -47,7 +47,7 @@ ms.locfileid: "66012710"
   
  Neste documento  **\<cliente >** é um nó de elemento **cid** é um nó de atributo, e **"Important"** é um nó de texto.  
   
- XPath é uma linguagem de navegação gráfica usada para selecionar um conjunto de nós em um documento XML. Cada operador de XPath seleciona um conjunto de nós com base em um conjunto selecionado por um operador de XPath anterior. Por exemplo, dado um conjunto de  **\<cliente >** nós, XPath podem selecionar tudo  **\<ordem >** nós com o **data** valor de atributo **"14/7/1999"**. O conjunto de nós resultante contém todos os pedidos com a data 14/7/1999.  
+ XPath é uma linguagem de navegação gráfica usada para selecionar um conjunto de nós em um documento XML. Cada operador de XPath seleciona um conjunto de nós com base em um conjunto selecionado por um operador de XPath anterior. Por exemplo, dado um conjunto de  **\<cliente >** nós, XPath podem selecionar tudo  **\<ordem >** nós com o **data** valor de atributo **"14/7/1999"** . O conjunto de nós resultante contém todos os pedidos com a data 14/7/1999.  
   
  XPath é definida pelo W3C como uma linguagem de navegação padrão. O SQLXML 4.0 implementa um subconjunto da especificação W3C XPath, que está localizado em http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   

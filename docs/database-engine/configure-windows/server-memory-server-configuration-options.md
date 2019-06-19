@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: b3fd6813d68dd1562a001206d759ebd09f34ef12
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66771915"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opções Server Memory de configuração do servidor
@@ -39,7 +39,7 @@ A configuração padrão de **min server memory** é 0 e a configuração padrã
 A quantidade mínima de memória permitida para a **memória máxima do servidor** é de 128 MB.
   
 > [!IMPORTANT]  
-> Configurar o valor de **max server memory** como muito alto pode fazer com que uma única instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenha que competir por memória com outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hospedadas no mesmo host. No entanto, configurar este valor como muito baixo pode ocasionar uma pressão de memória significativa e problemas de desempenho. Configurar a opção **max server memory** com o valor mínimo pode até mesmo impedir que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja iniciado. Se você não puder iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] após alterar essa opção, inicie-o usando a opção de inicialização ** _-f_** e redefina a **memória máxima do servidor** para seu valor anterior. Para obter mais informações, consulte [Opções de inicialização do serviço Mecanismo de Banco de Dados](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+> Configurar o valor de **max server memory** como muito alto pode fazer com que uma única instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenha que competir por memória com outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hospedadas no mesmo host. No entanto, configurar este valor como muito baixo pode ocasionar uma pressão de memória significativa e problemas de desempenho. Configurar a opção **max server memory** com o valor mínimo pode até mesmo impedir que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja iniciado. Se você não puder iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] após alterar essa opção, inicie-o usando a opção de inicialização **_-f_** e redefina a **memória máxima do servidor** para seu valor anterior. Para obter mais informações, consulte [Opções de inicialização do serviço Mecanismo de Banco de Dados](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
     
 O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar a memória de modo dinâmico. No entanto, você pode definir as opções de memória manualmente e restringir a quantidade de memória que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode acessar. Antes de definir a quantidade de memória para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], determine a configuração de memória apropriada ao subtrair, da memória física total, a memória necessária para o sistema operacional, as alocações de memória não controladas pela configuração max_server_memory e quaisquer outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (e outros usos do sistema, caso o computador não esteja totalmente dedicado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Essa diferença é a quantidade máxima de memória que você pode atribuir à instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atual.  
  
@@ -56,7 +56,7 @@ As opções **min server memory** e **max server memory** do servidor podem ser 
   
 <a name="max_server_memory"></a> Utilize **max_server_memory** para garantir que o sistema operacional não experimente uma pressão de memória prejudicial. Para definir a configuração max server memory, monitore o consumo geral do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para determinar os requisitos de memória. Para ser mais preciso com esses cálculos para uma única instância:
  -  Da memória total do SO, reserve de 1 GB a 4 GB para o sistema operacional em si.
- -  Em seguida, subtraia o equivalente a possíveis alocações de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fora do controle **memória máxima do servidor**, que é composto pelo **_tamanho da pilha <sup>1</sup> \* máx. de threads de trabalho calculado <sup>2</sup> + o parâmetro de inicialização -g <sup>3</sup>_ ** (ou 256 MB por padrão se *-g* não estiver definido). O que sobrar deve ser a configuração max_server_memory para a instalação de uma instância única.
+ -  Em seguida, subtraia o equivalente a possíveis alocações de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fora do controle **memória máxima do servidor**, que é composto pelo **_tamanho da pilha <sup>1</sup> \* máx. de threads de trabalho calculado <sup>2</sup> + o parâmetro de inicialização -g <sup>3</sup>_** (ou 256 MB por padrão se *-g* não estiver definido). O que sobrar deve ser a configuração max_server_memory para a instalação de uma instância única.
  
 <sup>1</sup> Consulte o [Guia de arquitetura de gerenciamento de memória](../../relational-databases/memory-management-architecture-guide.md#stacksizes) para obter informações sobre os tamanhos de pilha de thread por arquitetura.
 
