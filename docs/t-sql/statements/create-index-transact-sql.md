@@ -56,10 +56,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 825fedb3bfc3262abf4e432075e03f6e0a370eac
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65626696"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
@@ -233,19 +233,19 @@ Se não for especificado de outra forma, o tipo de índice padrão será NONCLUS
 
 Até 32 colunas podem ser combinadas em uma única chave de índice composto. Todas as colunas de uma chave de índice composto devem estar na mesma tabela ou exibição. O tamanho máximo permitido de valores de índice combinados é de 900 bytes para um índice clusterizado ou de 1.700 para um índice não clusterizado. Os limites são 16 colunas e 900 bytespara versões anteriores a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].
 
-Colunas que são dos tipos de dados LOB (Objeto Grande) **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, ou **image** não podem ser especificadas como colunas chave para um índice. Além disso, uma definição de exibição não pode incluir colunas **ntext**, **text** ou **image**, mesmo que elas não sejam referenciadas na instrução CREATE INDEX.
+Colunas que são dos tipos de dados LOB (Objeto Grande) **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, ou **image** não podem ser especificadas como colunas chave para um índice. Além disso, uma definição de exibição não pode incluir colunas **ntext**, **text** ou **image**, mesmo que elas não sejam referenciadas na instrução CREATE INDEX.
 
 É possível criar índices em colunas do tipo CLR definido pelo usuário se o tipo der suporte à ordenação binária. Também é possível criar índices em colunas computadas definidas como invocações de método de uma coluna de tipo definido pelo usuário, desde que os métodos sejam marcados como determinísticos e não executem operações de acesso aos dados. Para obter mais informações sobre como indexar colunas CLR de tipo definido pelo usuário, veja [Tipos CLR definidos pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).
 
 [ **ASC** | DESC ] Determina a direção de classificação crescente ou decrescente da coluna de índice específica. O padrão é ASC.
 
-INCLUDE **(**_column_ [ **,**... *n* ] **)** Especifica as colunas não chave a serem adicionadas ao nível folha do índice não clusterizado. O índice não clusterizado pode ser exclusivo ou não exclusivo.
+INCLUDE **(** _column_ [ **,** ... *n* ] **)** Especifica as colunas não chave a serem adicionadas ao nível folha do índice não clusterizado. O índice não clusterizado pode ser exclusivo ou não exclusivo.
 
 Os nomes de coluna não podem ser repetidos na lista INCLUDE e não podem ser usados simultaneamente como colunas de chave e não chave. Índices não clusterizados sempre conterão as colunas de índice clusterizado se um índice clusterizado for definido na tabela. Para obter mais informações, consulte [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).
 
-São permitidos todos os tipos de dados, exceto **text**, **ntext**e **image**. O índice deverá ser criado ou recriado offline (ONLINE = OFF) se qualquer uma das colunas não chave especificadas for dos tipos de dados **varchar(max)**, **nvarchar(max)** ou **varbinary(max)**.
+São permitidos todos os tipos de dados, exceto **text**, **ntext**e **image**. O índice deverá ser criado ou recriado offline (ONLINE = OFF) se qualquer uma das colunas não chave especificadas for dos tipos de dados **varchar(max)** , **nvarchar(max)** ou **varbinary(max)** .
 
-As colunas computadas que são determinísticas e precisas ou imprecisas podem ser colunas incluídas. Colunas computadas derivadas dos tipos de dados **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** e **xml** podem ser incluídas em colunas não chave, desde que os tipos de dados da coluna computada sejam permitidos como uma coluna incluída. Para obter mais informações, consulte [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).
+As colunas computadas que são determinísticas e precisas ou imprecisas podem ser colunas incluídas. Colunas computadas derivadas dos tipos de dados **image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** e **xml** podem ser incluídas em colunas não chave, desde que os tipos de dados da coluna computada sejam permitidos como uma coluna incluída. Para obter mais informações, consulte [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).
 
 Para obter informações sobre como criar um índice XML, veja [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md).
 
@@ -265,7 +265,7 @@ WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL
 
 Índices filtrados não se aplicam a índices XML e índices de texto completo. Para índices UNIQUE, somente as linhas selecionadas devem ter valores de índice exclusivo. Índices filtrados não permitem a opção IGNORE_DUP_KEY.
 
-ON *partition_scheme_name* **( _column_name_ )**
+ON *partition_scheme_name* **( _column_name_ )** 
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica o esquema de partição que define os grupos de arquivos nos quais as partições de um índice particionado serão mapeadas. O esquema de partição deve existir no banco de dados com a execução de [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) ou [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* especifica a coluna com relação à qual um índice particionado será particionado. Essa coluna precisa corresponder ao tipo de dados, ao comprimento e à precisão do argumento da função de partição que *partition_scheme_name* está usando. *column_name* não é restrito às colunas na definição de índice. Qualquer coluna da tabela base pode ser especificada, exceto que, ao particionar um índice UNIQUE, *column_name* deve ser escolhido entre aqueles usados como chave exclusiva. Essa restrição permite ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] verificar a exclusividade de valores de chave em uma única partição apenas.
@@ -285,12 +285,12 @@ ON _filegroup_name_
 
 Cria o índice especificado no grupo de arquivos especificado. Se nenhum local for especificado e a tabela ou exibição não for particionada, o índice usará o mesmo grupo de arquivos que a tabela ou exibição subjacente. O grupo de arquivos já deve existir.
 
-ON **"** default **"**
+ON **"** default **"** 
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)].
 
 Cria o índice especificado no mesmo esquema de partição ou grupo de arquivos que a tabela ou a exibição.
 
-Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e precisa ser delimitado, como em ON **"** default **"** ou ON **[** default **]**. Se "padrão" for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para saber mais, confira [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e precisa ser delimitado, como em ON **"** default **"** ou ON **[** default **]** . Se "padrão" for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para saber mais, confira [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 > [!NOTE]
 > "default" não indica o grupo de arquivos padrão de banco de dados no contexto de CREATE INDEX. Isso é diferente de CREATE TABLE, em que "default" localiza a tabela no grupo de arquivos de banco de dados padrão.
@@ -341,7 +341,7 @@ A opção PAD_INDEX só é útil quando FILLFACTOR é especificado, porque PAD_I
 
 Na sintaxe compatível com versões anteriores, WITH PAD_INDEX é equivalente a WITH PAD_INDEX = ON.
 
-FILLFACTOR **=**_fillfactor_
+FILLFACTOR **=** _fillfactor_
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica uma porcentagem que indica quanto o [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve preencher o nível folha de cada página de índice durante a criação ou recriação do índice. *fillfactor* deve ser um valor inteiro de 1 a 100. Se *fillfactor* for 100, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] criará índices com páginas de folha preenchidas até a capacidade total.
@@ -456,7 +456,7 @@ Indica o tempo (um valor inteiro especificado em minutos) pelo qual um uma opera
 - Índice clusterizado exclusivo inicial em uma exibição.
 - Índices clusterizados desabilitados.
 - Índice clusterizado se a tabela subjacente contiver tipos de dados LOB: **image**, **ntext**, **text** e tipos espaciais.
-- As colunas **varchar(max)** e **varbinary(max)** não podem fazer parte de um índice. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e em [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], quando uma tabela contém as colunas **varchar(max)** ou **varbinary(max)**, um índice clusterizado contendo outras colunas pode ser criado ou recriado usando a opção **ONLINE**. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] não permite a opção **ONLINE** quando a tabela base contém as colunas **varchar(max)** ou **varbinary(max)**.
+- As colunas **varchar(max)** e **varbinary(max)** não podem fazer parte de um índice. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e em [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], quando uma tabela contém as colunas **varchar(max)** ou **varbinary(max)** , um índice clusterizado contendo outras colunas pode ser criado ou recriado usando a opção **ONLINE**. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] não permite a opção **ONLINE** quando a tabela base contém as colunas **varchar(max)** ou **varbinary(max)** .
 
 Para obter mais informações, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
 
@@ -504,7 +504,7 @@ PAGE O índice ou as partições especificadas são compactados com o uso da com
 
 Para obter mais informações sobre compactação, consulte [Compactação de dados](../../relational-databases/data-compression/data-compression.md).
 
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**..._n_ ] **)**
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ..._n_ ] **)** 
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica as partições às quais se aplica a configuração DATA_COMPRESSION. Se o índice não for particionado, o argumento ON PARTITIONS irá gerar um erro. Se a cláusula ON PARTITIONS não for fornecida, a opção DATA_COMPRESSION será aplicada a todas as partições de um índice particionado.
@@ -631,7 +631,7 @@ As colunas computadas persistentes requerem que as seguintes opções SET sejam 
 
 A restrição UNIQUE ou PRIMARY KEY pode conter uma coluna computada contanto que satisfaça todas as condições para indexação. Especificamente, a coluna computada deve ser determinística e precisa ou determinística e persistente. Para obter mais informações sobre determinismo de funções, veja [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
 
-Colunas computadas derivadas dos tipos de dados **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** e **xml** podem ser indexadas como coluna chave ou não chave incluída, desde que o tipo de dados da coluna computada seja permitido como uma coluna chave ou não chave de índice. Por exemplo, não é possível criar um índice XML primário em uma coluna **xml** computada. Se o tamanho da chave de índice exceder 900 bytes, uma mensagem de aviso será exibida.
+Colunas computadas derivadas dos tipos de dados **image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** e **xml** podem ser indexadas como coluna chave ou não chave incluída, desde que o tipo de dados da coluna computada seja permitido como uma coluna chave ou não chave de índice. Por exemplo, não é possível criar um índice XML primário em uma coluna **xml** computada. Se o tamanho da chave de índice exceder 900 bytes, uma mensagem de aviso será exibida.
 
 Criar um índice em uma coluna computada pode causar a falha de uma operação de inserção ou atualização que tenha funcionado anteriormente. Essa falha pode ocorrer quando a coluna computada resultar em erro aritmético. Por exemplo, na tabela a seguir, embora a coluna computada `c` resulte em um erro aritmético, a instrução INSERT funciona.
 
@@ -656,11 +656,11 @@ As colunas não chave, chamadas de colunas incluídas, podem ser adicionadas ao 
 
 ## <a name="specifying-index-options"></a>Especificando opções de índice
 
-O [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu novas opções de índice e também modifica o modo como as opções são especificadas. Na sintaxe compatível com versões anteriores, WITH *option_name* é equivalente a WITH **(** \<option_name> **= ON )**. Ao definir as opções de índice, aplicam-se as seguintes regras:
+O [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu novas opções de índice e também modifica o modo como as opções são especificadas. Na sintaxe compatível com versões anteriores, WITH *option_name* é equivalente a WITH **(** \<option_name> **= ON )** . Ao definir as opções de índice, aplicam-se as seguintes regras:
 
-- Novas opções de índice só podem ser especificadas usando WITH (**_option\_name_ = ON | OFF**).
+- Novas opções de índice só podem ser especificadas usando WITH ( **_option\_name_ = ON | OFF**).
 - As opções não podem ser especificadas com o uso de sintaxe compatível com versões anteriores e nova sintaxe na mesma instrução. Por exemplo, especificar WITH (**DROP_EXISTING, ONLINE = ON**) faz a instrução falhar.
-- Ao criar um índice XML, as opções devem ser especificadas usando WITH (**_option_name_= ON | OFF**).
+- Ao criar um índice XML, as opções devem ser especificadas usando WITH ( **_option_name_= ON | OFF**).
 
 ## <a name="dropexisting-clause"></a>Cláusula DROP_EXISTING
 

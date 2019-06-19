@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b4b72017bb23ae44da9c5884f0ebf2a8b099fd3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019041"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Aplicar hotfixes do Analytics Platform System
@@ -32,7 +32,7 @@ Para executar essas etapas, você precisará de:
   
 -   Um logon do Analytics Platform System com permissões para acessar o Console de administração para monitorar o estado do dispositivo. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   Dados de Conhecimento da conta de administrador de domínio de malha para conectar-se para o _< nome_do_domínio >_**-HST01** nó.  
+-   Dados de Conhecimento da conta de administrador de domínio de malha para conectar-se para o _< nome_do_domínio >_ **-HST01** nó.  
   
 ## <a name="HowToInstallPDW"></a>Para aplicar um hotfix do Analytics Platform System  
 Ao contrário de atualizações da Microsoft, os hotfixes para o software do Analytics Platform System não são manipulados por meio do WSUS. Eles têm um fluxo de trabalho diferente e são instalados por execução de um pacote de hotfix.  

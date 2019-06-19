@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ba05390afed4b4c2a9f3753523f4afe31bee69c0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725717"
 ---
 # <a name="use-a-recordset-destination"></a>Usar um destino do conjunto de registros
@@ -158,7 +158,7 @@ ms.locfileid: "65725717"
   
     5.  Em **MessageSourceType**, selecione **Entrada Direta**.  
   
-5.  Na página **Expressões** do **Editor da Tarefa Enviar Email**, clique no botão de reticências (**...**) para abrir o **Editor de Expressões de Propriedade**.  
+5.  Na página **Expressões** do **Editor da Tarefa Enviar Email**, clique no botão de reticências ( **...** ) para abrir o **Editor de Expressões de Propriedade**.  
   
 6.  No **Editor de Expressões de Propriedade**, insira as seguintes informações:  
   

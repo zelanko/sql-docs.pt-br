@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0810533a3488043ef4b3d8db9c0de4f3174b4ba8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102610"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>Auditoria local para coleta de dados de diagnóstico e uso do SSMS
@@ -29,7 +29,7 @@ Para ver os dados de uso do recurso que são coletados pelo SSMS, faça o seguin
 
 1.  Inicie o SSMS.
 2.  Clique em **Exibir**, depois clique em **Saída** no menu principal para mostrar a janela **Saída**. 
-3.  Quando a janela **Saída** estiver visível, escolha **Telemetria** no menu **Mostrar saída de:**.
+3.  Quando a janela **Saída** estiver visível, escolha **Telemetria** no menu **Mostrar saída de:** .
 
 Ao usar o SSMS para interagir com bancos de dados, a janela **Saída** mostra os dados coletados.
 

@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 57ab14256d3c1e7c909b125e470fca06ef3e7808
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724460"
 ---
 # <a name="coding-a-custom-task"></a>Codificando uma tarefa personalizada
@@ -38,7 +38,7 @@ ms.locfileid: "65724460"
 ### <a name="validating-the-task"></a>Validando a tarefa  
  Ao projetar um pacote do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], você pode usar a validação para verificar as definições de cada tarefa, de forma a detectar definições incorretas ou inadequadas tão logo sejam definidas, em vez de encontrar todos os erros somente em tempo de execução. O propósito da validação é determinar se a tarefa contém configurações ou conexões inválidas que a impedirão de ser executada com sucesso. Isso garante que o pacote contenha tarefas com boa chance de serem executadas na primeira execução.  
   
- Você pode implementar a validação usando o método **Validate** em código personalizado. O mecanismo de tempo de execução valida uma tarefa chamando o método **Validate** na tarefa. É responsabilidade do desenvolvedor da tarefa definir os critérios que lhe proporcionem uma validação bem sucedida ou malsucedida da tarefa, e notificar o mecanismo de tempo de execução do resultado dessa avaliação.   
+ Você pode implementar a validação usando o método **Validate** em código personalizado. O mecanismo de tempo de execução valida uma tarefa chamando o método **Validate** na tarefa. É responsabilidade do desenvolvedor da tarefa definir os critérios que lhe proporcionem uma validação bem sucedida ou malsucedida da tarefa, e notificar o mecanismo de tempo de execução do resultado dessa avaliação.  
   
 #### <a name="task-abstract-base-class"></a>Classe base abstrata da tarefa  
  A classe base abstrata <xref:Microsoft.SqlServer.Dts.Runtime.Task> fornece o método **Validate** que cada tarefa substitui para definir seus critérios de validação. O [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer chama automaticamente o método **Validate** várias vezes durante o projeto do pacote e fornece indicações visuais ao usuário quando ocorrem avisos ou erros para ajudar a identificar problemas com a configuração da tarefa. As tarefas fornecem resultados de validação retornando um valor da enumeração <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> e gerando eventos de aviso e erro. Esses eventos contêm informações que são exibidas ao usuário no [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer.  

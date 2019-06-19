@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63028403"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Caixa de diálogo Índice de Texto Completo (Visual Database Tools)
@@ -42,7 +42,7 @@ ms.locfileid: "63028403"
  Quando expandida, mostra **Colunas** e o **Nome do Catálogo de Texto Completo**.  
   
  **Colunas**  
- Exibe uma lista de nomes de colunas pesquisável de texto completo separados por vírgula. Para ver a lista completa, clique no botão de reticências (**...**) à esquerda do campo de propriedade.  
+ Exibe uma lista de nomes de colunas pesquisável de texto completo separados por vírgula. Para ver a lista completa, clique no botão de reticências ( **...** ) à esquerda do campo de propriedade.  
   
  **Full-Text Catalog Name**  
  Exibe o nome do catálogo de texto completo no qual este índice de texto completo é armazenado. Para armazenar o índice em um catálogo diferente, clique no nome do catálogo e escolha outro na lista suspensa.  

@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fbd30a8b0e112d74bf9bd0d009592d753688fadd
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099550"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Passo a passo: Estender a implantação do projeto de banco de dados para modificar o plano de implantação
@@ -625,7 +625,7 @@ Em seguida, crie a biblioteca de classe.
   
 3.  Clique em **Assinar o assembly**.  
   
-4.  Em **Escolher um arquivo de chave de nome forte**, clique em **<New>**.  
+4.  Em **Escolher um arquivo de chave de nome forte**, clique em **<New>** .  
   
 5.  Na caixa de diálogo **Criar Chave de Nome Forte** , em **Nome de arquivo de chave**, digite **MyRefKey**.  
   
@@ -707,7 +707,7 @@ Depois que você tiver seguido uma destas abordagens, poderá usar MSBuild para 
   
     1.  Abra o Visual Studio e abra a solução que contém o seu projeto SQL.  
   
-    2.  Clique com o botão direito do mouse no projeto no Gerenciador de Soluções e escolha a opção **Publicar...**.  
+    2.  Clique com o botão direito do mouse no projeto no Gerenciador de Soluções e escolha a opção **Publicar...** .  
   
     3.  Defina o nome do servidor e o nome do banco de dados para publicação.  
   

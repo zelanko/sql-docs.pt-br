@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d08c70c063142ff93e15464a04ddf156f290ea5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854375"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62985957"
 ---
 # <a name="mssqlserver10532"></a>MSSQLSERVER_10532
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "47854375"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|PG_NO_ELIGIBLE_STMT|  
-|Texto da mensagem|Não é possível criar o guia de plano '%.\*ls' porque o lote ou o módulo especificado por **@plan_handle** não contém uma instrução qualificada para um guia de plano. Especifique outro valor para **@plan_handle**.|  
+|Texto da mensagem|Não é possível criar o guia de plano '%.\*ls' porque o lote ou o módulo especificado por **@plan_handle** não contém uma instrução qualificada para um guia de plano. Especifique outro valor para **@plan_handle** .|  
   
 ## <a name="explanation"></a>Explicação  
 O lote ou o módulo especificado por **@plan_handle** não contém uma instrução qualificada para um guia de plano.  
   
 ## <a name="user-action"></a>Ação do usuário  
-Especifique outro valor para **@plan_handle**.  
+Especifique outro valor para **@plan_handle** .  
   
 ## <a name="see-also"></a>Consulte Também  
 [Guias de plano](~/relational-databases/performance/plan-guides.md)  

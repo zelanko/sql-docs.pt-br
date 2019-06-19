@@ -18,10 +18,10 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d5e5a00bbe461062412882124a6419cc804c5721
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713314"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
@@ -54,7 +54,7 @@ Um objeto de banco de dados que define como as linhas de uma tabela ou índice s
 Um objeto de banco de dados que mapeia as partições de uma função de partição para um conjunto de grupos de arquivos. O principal motivo para colocar suas partições em grupos de arquivos separados é para garantir que poderá efetuar operações de backup em partições de forma independente. Isso porque se pode executar backups em grupos de arquivos individuais.  
   
 ### <a name="partitioning-column"></a>Coluna de particionamento  
-A coluna de uma tabela ou índice que uma função de partição usa para particionar a tabela ou índice. Colunas computadas que participam de uma função de partição devem ser marcadas explicitamente como PERSISTED. Todos os tipos de dados que são válidos para uso como colunas de índice podem ser usados como uma coluna de particionamento, exceto **timestamp**. Os tipos de dados **ntext**, **text**, **image**, **xml**, **varchar(max)**, **nvarchar(max)** ou **varbinary(max)** não podem ser especificados. Também, não podem ser especificados o tipo definido pelo usuário do CLR (Common Language Runtime) do Microsoft .NET Framework e colunas de tipo de dados do alias.  
+A coluna de uma tabela ou índice que uma função de partição usa para particionar a tabela ou índice. Colunas computadas que participam de uma função de partição devem ser marcadas explicitamente como PERSISTED. Todos os tipos de dados que são válidos para uso como colunas de índice podem ser usados como uma coluna de particionamento, exceto **timestamp**. Os tipos de dados **ntext**, **text**, **image**, **xml**, **varchar(max)** , **nvarchar(max)** ou **varbinary(max)** não podem ser especificados. Também, não podem ser especificados o tipo definido pelo usuário do CLR (Common Language Runtime) do Microsoft .NET Framework e colunas de tipo de dados do alias.  
   
 ### <a name="aligned-index"></a>Índice alinhado  
 Um índice que é baseado no mesmo esquema de partição que sua tabela correspondente. Quando uma tabela e seus índices estão em alinhamento, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode trocar as partições rápida e eficientemente enquanto, mantém a estrutura de partição em ambos, tabela e seus índices. Um índice não precisa participar na mesma função de partição nomeada para ser alinhado com sua tabela base. No entanto, a função de partição do índice e a tabela base devem ser essencialmente o mesmo, no sentido em que:

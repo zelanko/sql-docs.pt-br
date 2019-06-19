@@ -24,10 +24,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9991405a69aa43a7452d65003e2ef149c8dbc074
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104899"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Selecionar uma conta para o Serviço do SQL Server Agent
@@ -40,7 +40,7 @@ A conta de inicialização do serviço define a conta do [!INCLUDE[msCoName](../
   
 -   **Conta interna**. Em uma lista, você pode escolher uma das seguintes contas de serviço Windows internas:  
   
-    -   Conta**Sistema Local** . O nome desta conta é NT AUTHORITY\System. É uma conta poderosa, com acesso irrestrito a todos os recursos do sistema local. Ela é membro do grupo **Administradores** do Windows no computador local e, portanto, é membro da função de servidor fixa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin**   
+    -   Conta**Sistema Local** . O nome desta conta é NT AUTHORITY\System. É uma conta poderosa, com acesso irrestrito a todos os recursos do sistema local. Ela é membro do grupo **Administradores** do Windows no computador local e, portanto, é membro da função de servidor fixa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin**  
   
         > [!IMPORTANT]  
         > A opção **conta Sistema Local** é fornecida apenas por questão de compatibilidade retroativa. A conta Sistema Local tem permissões de que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não necessita. Evite executar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent como a conta Sistema Local. Para maior segurança, use uma conta de domínio do Windows com as permissões listadas na seção "Permissões de contas de domínio do Windows", a seguir.  

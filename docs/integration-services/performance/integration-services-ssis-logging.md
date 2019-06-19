@@ -31,10 +31,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eca7e157593ff4ea9d40528b592f71227cc8cb0d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65719588"
 ---
 # <a name="integration-services-ssis-logging"></a>Log do SSIS (Integration Services)
@@ -313,7 +313,7 @@ ms.locfileid: "65719588"
  O campo de descrição é editável. Clique e modifique a descrição padrão do log.  
   
  **Configuração**  
- Selecione um gerenciador de conexões existente na lista ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões. Dependendo do tipo de provedor de log, você poderá configurar um gerenciador de conexões OLE DB ou um gerenciador de conexões Arquivo. O provedor de log do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Log de Eventos do Windows não requer conexão.  
+ Selecione um gerenciador de conexões existente na lista ou clique em \<**Nova conexão...** > para criar um novo gerenciador de conexões. Dependendo do tipo de provedor de log, você poderá configurar um gerenciador de conexões OLE DB ou um gerenciador de conexões Arquivo. O provedor de log do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Log de Eventos do Windows não requer conexão.  
   
  Tópicos relacionados: [Gerenciador de conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md) , [Gerenciador de Conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager.md)  
   

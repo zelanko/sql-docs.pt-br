@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 60a704adb2fe1bbdcfd5d78cfd02a7b704745642
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723435"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>Lição 1-2: Adicionar e configurar um gerenciador de conexões de Arquivo Simples
@@ -35,7 +35,7 @@ Nesta lição, você pode configurar as propriedades a seguir no seu gerenciador
 -   **Mapeamentos de dados:** os mapeamentos de tipo de dados especificados no gerenciador de conexões de Arquivo Simples são usados por todos os componentes de fonte de dados de arquivo simples que fazem referência ao gerenciador de conexões. Os tipos de dados podem ser mapeados manualmente usando o gerenciador de conexões de Arquivos Simples ou a caixa de diálogo **Sugerir Tipos de Coluna** . Nesta tarefa, você exibirá os mapeamentos sugeridos na caixa de diálogo **Sugerir Tipos de Coluna** e criará manualmente os mapeamentos necessários na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivo Simples**.  
   
 > [!NOTE]
-> O gerenciador de conexões de Arquivos Simples fornece informações de localidade sobre o arquivo de dados. Se o computador não estiver configurado para usar a opção regional **Inglês (Estados Unidos)**, será preciso definir propriedades adicionais na caixa de diálogo Editor do Gerenciador de Conexões de **Arquivo Simples**.  
+> O gerenciador de conexões de Arquivos Simples fornece informações de localidade sobre o arquivo de dados. Se o computador não estiver configurado para usar a opção regional **Inglês (Estados Unidos)** , será preciso definir propriedades adicionais na caixa de diálogo Editor do Gerenciador de Conexões de **Arquivo Simples**.  
   
 ## <a name="add-a-flat-file-connection-manager-to-the-ssis-package"></a>Adicionar um gerenciador de conexões de Arquivo Simples ao pacote SSIS  
   

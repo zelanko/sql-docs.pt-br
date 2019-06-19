@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c13a761087cb263983a8d99b27514fcb225d93a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721453"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>Lição 4-4: Adicionar um destino de Arquivo Simples
@@ -48,7 +48,7 @@ Nesta tarefa, você salva todas essas informações sobre as linhas com falha em
   
 9. Na caixa de diálogo **Abrir**, para **Nome do arquivo**, insira *ErrorOutput.txt* e selecione **Abrir**.  
   
-10. Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivo Simples**, verifique se **Localidade** é **Inglês (Estados Unidos)** e se **Página de código** é **1252 (ANSI-Latino I)**.  
+10. Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivo Simples**, verifique se **Localidade** é **Inglês (Estados Unidos)** e se **Página de código** é **1252 (ANSI-Latino I)** .  
   
 11. No painel de opções, selecione **Colunas**.  
   

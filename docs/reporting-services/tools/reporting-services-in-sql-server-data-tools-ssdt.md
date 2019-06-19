@@ -11,10 +11,10 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f9e9884a8875d63ba9defcee5fa20dc121d595ca
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581344"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services no SQL Server Data Tools (SSDT)
@@ -93,7 +93,7 @@ ms.locfileid: "65581344"
   
  Use o painel de Propriedades para:  
   
--   Definir propriedades para o item selecionado na superfície de design. Algumas propriedades apresentam uma lista suspensa de valores. Também é possível digitar o valor diretamente na célula. Algumas propriedades contêm uma coleção de valores, indicada pelo valor **(Coleção)**. A maioria das propriedades pode aceitar uma expressão; expressões complexas são indicadas pelo valor **\<Expression>**. Clique em **\<Expression>** para abrir a caixa de diálogo **Expressão**. Para obter mais informações, consulte [Expression Dialog Box](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
+-   Definir propriedades para o item selecionado na superfície de design. Algumas propriedades apresentam uma lista suspensa de valores. Também é possível digitar o valor diretamente na célula. Algumas propriedades contêm uma coleção de valores, indicada pelo valor **(Coleção)** . A maioria das propriedades pode aceitar uma expressão; expressões complexas são indicadas pelo valor **\<Expression>** . Clique em **\<Expression>** para abrir a caixa de diálogo **Expressão**. Para obter mais informações, consulte [Expression Dialog Box](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
   
 -   Use os botões da barra de tarefas do painel Propriedades para alterar a grade de exibição por categoria para exibição alfabética. Na exibição por categoria, pode ser necessário expandir a categoria para ver todas as propriedades que ela contém. Para abrir a caixa de diálogo Propriedades de um item, clique no botão **Páginas de Propriedades** na barra de ferramentas ou clique no item com o botão direito do mouse e clique em **Propriedades**.  
   
@@ -237,7 +237,7 @@ ms.locfileid: "65581344"
   
 
 ##  <a name="bkmk_SourceControl"></a> Controle do código-fonte  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pode ser integrado com plug-ins de origem. Use as páginas de Projetos e Soluções na caixa de diálogo Opções** para especificar o plug-in e configurar as propriedades.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pode ser integrado com plug-ins de origem. Use as páginas de Projetos e Soluções na caixa de diálogo **Opções** para especificar o plug-in e configurar as propriedades.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Modelos de relatório personalizados  
  Para usar relatórios personalizados como modelos de novos relatórios, basta copiá-los na pasta ReportProject no computador em que o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está instalado. Por padrão, esta pasta está no seguinte local: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Quando você adiciona um novo item ao projeto de relatório, o relatório personalizado aparece no painel Modelos.  

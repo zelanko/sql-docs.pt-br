@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8921129e8e5b7afcf3f141749bc31ec857a166e8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098035"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Como fazer: Criar um teste de unidade do SQL Server vazio
@@ -81,7 +81,7 @@ Você tem duas opções para criar um teste de unidade do SQL Server:
   
 1.  Abra uma classe de teste de unidade do SQL Server existente no **Designer de Teste de Unidade do SQL Server**. Você pode acessar o **Designer do Teste de Unidade do SQL Server** clicando duas vezes no arquivo do código de origem do teste de unidade no **Gerenciador de Soluções**.  
   
-2.  Clique no sinal de adição (**+**) na barra de navegação para exibir a caixa de diálogo **Especificar um nome de teste de unidade**.  
+2.  Clique no sinal de adição ( **+** ) na barra de navegação para exibir a caixa de diálogo **Especificar um nome de teste de unidade**.  
   
 3.  Digite um nome e clique em **OK**.  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 86fdc72c811fd82140e9414a3b425a6d8ca6dcb9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724698"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Desenvolvendo uma interface do usuário para um gerenciador de conexões personalizado
@@ -42,7 +42,7 @@ ms.locfileid: "65724698"
 > [!NOTE]  
 >  Talvez não seja necessário gravar nenhum código para o método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Delete%2A>, se nenhuma limpeza for exigida quando o usuário excluir uma instância do gerenciador de conexões.  
   
-### <a name="initializing-the-user-interface"></a>Inicializando a interface do usuário   
+### <a name="initializing-the-user-interface"></a>Inicializando a interface do usuário  
  No método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A>, o designer fornece uma referência para o gerenciador de conexões que está sendo configurado, dessa forma a classe de interface do usuário pode modificar as propriedades do gerenciador de conexões. Conforme mostrado no código a seguir, seu código precisa armazenar em cache a referência ao gerenciador de conexões para uso futuro.  
   
 ```vb  
@@ -164,7 +164,7 @@ public bool Edit(System.Windows.Forms.IWin32Window parentWindow, Microsoft.SqlSe
 ## <a name="coding-the-user-interface-form"></a>Codificando o formulário de interface do usuário  
  Depois de criar a classe de interface do usuário que implementa os métodos da interface <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>, você deverá criar um formulário do Windows onde o usuário possa configurar as propriedades do gerenciador de conexões.  
   
-### <a name="initializing-the-user-interface-form"></a>Inicializando o formulário de interface do usuário   
+### <a name="initializing-the-user-interface-form"></a>Inicializando o formulário de interface do usuário  
  Quando você exibir seu formulário personalizado para editar, poderá transmitir uma referência ao gerenciador de conexões que está sendo editado. Você pode transmitir essa referência utilizando um construtor personalizado para a classe de formulário ou criando seu próprio método **Initialize**, conforme mostrado aqui.  
   
 ```vb  

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891398"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>Etapa 3: Adicionar redirecionamento de fluxo de erro
@@ -48,7 +48,7 @@ ms.locfileid: "62891398"
   
 8.  Na página **Entradas e Saídas** , expanda **Saída 0**, clique em **Colunas de Saída**e clique em **Adicionar Coluna**.  
   
-9. No `Name` propriedade, digite **ErrorDescription** e defina o `DataType` propriedade a ser **cadeia de caracteres Unicode [DT_WSTR]**.  
+9. No `Name` propriedade, digite **ErrorDescription** e defina o `DataType` propriedade a ser **cadeia de caracteres Unicode [DT_WSTR]** .  
   
 10. Sobre o **Script** página, verifique o `LocaleID` estiver definida como **inglês (Estados Unidos.**  
   

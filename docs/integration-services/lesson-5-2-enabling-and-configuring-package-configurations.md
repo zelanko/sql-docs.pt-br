@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee2c54b072cf9cd219bed10b0ade7f59fa8bc354
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721520"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>Lição 5-2: Habilitar e configurar as configurações do pacote
@@ -45,11 +45,11 @@ Nesta tarefa, você converterá o projeto no Modelo de Implantação de Pacote e
   
 7.  Retorne à guia **Fluxo de Controle** e clique duas vezes no contêiner **Arquivo Foreach na Pasta** .  
   
-8.  Na página **Coleção** do **Editor de Loop Foreach**, selecione **Expressões** e, em seguida, selecione o botão de reticências **(…)**.  
+8.  Na página **Coleção** do **Editor de Loop Foreach**, selecione **Expressões** e, em seguida, selecione o botão de reticências **(…)** .  
   
 9. No **Editor de Expressões de Propriedades**, selecione a lista **Propriedade** e selecione **Directory**.  
   
-10. Na caixa **Expressão**, selecione o botão de reticências **(…)**.  
+10. Na caixa **Expressão**, selecione o botão de reticências **(…)** .  
   
 11. No **Construtor de Expressões**, expanda a pasta **Variáveis e Parâmetros** e arraste a variável **User::varFolderName** até a caixa **Expressão**.  
   
@@ -109,7 +109,7 @@ Nesta tarefa, você converterá o projeto no Modelo de Implantação de Pacote e
   
 ## <a name="create-and-populate-a-new-sample-data-folder"></a>Criar e popular uma nova pasta de dados de exemplo  
   
-1.  No Windows Explorer, no nível de raiz da unidade (por exemplo, **C:\\**), crie uma pasta chamada **Novos Dados de Exemplo**.  
+1.  No Windows Explorer, no nível de raiz da unidade (por exemplo, **C:\\** ), crie uma pasta chamada **Novos Dados de Exemplo**.  
   
 2.  Localize os arquivos de exemplo no computador e copie três dos arquivos da pasta.  
   

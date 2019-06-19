@@ -24,11 +24,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 784d3f707bf57338a8385a1c4837e9b77fd43f2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609545"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62942802"
 ---
 # <a name="set-language-transact-sql"></a>SET LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -46,8 +46,8 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**N**]**'**_language_**'** | **@**_language\_var_  
- É o nome do idioma armazenado em [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Este argumento ou pode ser Unicode ou DBCS convertido em Unicode. Para especificar um idioma em Unicode, use **N'**_language_**'**. Se for especificado como uma variável, a variável deverá ser **sysname**.  
+ [**N**] **'** _language_ **'**  |  **@** _language\_var_  
+ É o nome do idioma armazenado em [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Este argumento ou pode ser Unicode ou DBCS convertido em Unicode. Para especificar um idioma em Unicode, use **N'** _language_ **'** . Se for especificado como uma variável, a variável deverá ser **sysname**.  
   
 ## <a name="remarks"></a>Remarks  
  A configuração de SET LANGUAGE é definida no momento da execução e não no momento da análise.  

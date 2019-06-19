@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 253625d364bb8ae918ee9bdd2402e3cf249b26ce
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65719872"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Trabalhos do SQL Server Agent para pacotes
@@ -145,7 +145,7 @@ A falha em incluir os itens de segurança resultará na falha do trabalho e em u
     |--------------------|-----------------|  
     |**Catálogo do SSIS**|Os pacotes armazenados no banco de dados SSISDB. Os pacotes são contidos em projetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que são implantados no servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
     |**SQL Server**|Os pacotes armazenados no banco de dados MSDB. Use o serviço de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para gerenciar esses pacotes.|  
-    |**Armazenamento de Pacotes SSIS**|Pacotes que estão armazenados na pasta padrão no computador. A pasta padrão é *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Packages. Use o serviço de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para gerenciar esses pacotes.<br /><br /> Observação: Você pode especificar uma pasta diferente ou pastas adicionais no sistema de arquivos a ser gerenciado pelo serviço de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] modificando o arquivo de configuração para [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para obter mais informações, veja [Serviço Integration Services &#40;Serviço SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).|  
+    |**Armazenamento de Pacotes SSIS**|Pacotes que estão armazenados na pasta padrão no computador. A pasta padrão é *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Packages. Use o serviço de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para gerenciar esses pacotes.<br /><br /> Observação: Você pode especificar uma pasta diferente ou pastas adicionais no sistema de arquivos a ser gerenciado pelo serviço de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] modificando o arquivo de configuração para [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para obter mais informações, veja [Serviço Integration Services &#40;Serviço SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).|  
     |**Sistema de Arquivos**|Pacotes que estão armazenados em qualquer pasta em sua máquina local.|  
   
      **As tabelas seguintes descrevem as opções de configuração que estão disponíveis para a etapa de trabalho segundo a origem do pacote que você selecionou.**  

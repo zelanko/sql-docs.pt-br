@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921061"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurar um banco de dados do SQL Server até um ponto determinado (modelo de recuperação completa)
@@ -74,7 +74,7 @@ ms.locfileid: "62921061"
   
     -   **Dispositivo**  
   
-         Clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Na caixa **Tipo de mídia de backup** , selecione um dos tipos de dispositivo listados. Para selecionar um ou mais dispositivos da caixa **Mídia de backup** , clique em **Adicionar**.  
+         Clique no botão Procurar ( **...** ) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Na caixa **Tipo de mídia de backup** , selecione um dos tipos de dispositivo listados. Para selecionar um ou mais dispositivos da caixa **Mídia de backup** , clique em **Adicionar**.  
   
          Após adicionar os dispositivos desejados à caixa de listagem **Mídia de backup** , clique em **OK** para voltar à página **Geral** .  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62921061"
   
  **Sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] básica**  
   
- RESTORE LOG *database_name* FROM < backup_device > WITH STOPAT  **= *`time`*,** recuperação...  
+ RESTORE LOG *database_name* FROM < backup_device > WITH STOPAT  **= *`time`* ,** recuperação...  
   
  O ponto de recuperação é a última confirmação de transação ocorrida antes do `datetime` valor que é especificado pela *tempo*.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "62921061"
   
 3.  Restaurar o último backup de banco de dados diferencial e, se houver, sem recuperar o banco de dados (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Aplique cada backup de log de transações na mesma sequência em que eles foram criados, especificando a hora em que você pretende parar o log de restauração (RESTORE DATABASE *database_name* FROM < backup_device > WITH STOPAT **= *`time`*,** Recuperação).  
+4.  Aplique cada backup de log de transações na mesma sequência em que eles foram criados, especificando a hora em que você pretende parar o log de restauração (RESTORE DATABASE *database_name* FROM < backup_device > WITH STOPAT **= *`time`* ,** Recuperação).  
   
     > [!NOTE]  
     >  As opções RECOVERY e STOPAT. Se o backup de log de transações não contiver o tempo solicitado (por exemplo, se o tempo especificado estiver além do tempo coberto pelo log de transações), um aviso será gerado e o banco de dados permanecerá sem-recuperação.  

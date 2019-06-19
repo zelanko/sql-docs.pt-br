@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1879aef282f9e3d8e61767ba2808bf3dd2908b8d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715681"
 ---
 # <a name="catalogvalidateproject-ssisdb-database"></a>catalog.validate_project (Banco de Dados SSISDB)
@@ -41,13 +41,13 @@ catalog.validate_project [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- O nome de uma pasta que contém o projeto. O *folder_name* é **nvarchar(128)**.  
+ O nome de uma pasta que contém o projeto. O *folder_name* é **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- O nome do projeto. O *project_name* é **nvarchar(128)**.  
+ O nome do projeto. O *project_name* é **nvarchar(128)** .  
   
  [ @validate_type = ] *validate_type*  
- Indica o tipo de validação a ser executado. Use o caractere `F` para executar uma validação completa. Esse parâmetro é opcional, o caractere `F` será usado por padrão. O *validate_type* é **char(1)**.  
+ Indica o tipo de validação a ser executado. Use o caractere `F` para executar uma validação completa. Esse parâmetro é opcional, o caractere `F` será usado por padrão. O *validate_type* é **char(1)** .  
   
  [ @validation_id = ] *validation_id*  
  Retorna o ID (identificador exclusivo) da validação. O *validation_id* é **bigint**.  
@@ -56,7 +56,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  Indica se o tempo de execução de 32 bits deve ser usado para executar o pacote em um sistema operacional de 64 bits. Use o valor `1` para executar o pacote com o tempo de execução de 32 bits ao executar em um sistema operacional de 64 bits. Use o valor `0` para executar o pacote com o tempo de execução de 64 bits ao executar em um sistema operacional de 64 bits. Esse parâmetro é opcional. O *use32bitruntime* é **bit**.  
   
  [ @environment_scope = ] *environment_scope*  
- Indica as referências de ambiente que são consideradas pela validação. Quando o valor for `A`, todas as referências de ambiente associadas ao projeto serão incluídas na validação. Quando o valor for `S`, apenas uma única referência de ambiente será incluída. Quando o valor for `D`, nenhuma referência de ambiente será incluída e cada parâmetro deverá ter um valor padrão literal a fim de ser aprovado na validação. Esse parâmetro é opcional, o caractere `D` será usado por padrão. O *environment_scope* é **char(1)**.  
+ Indica as referências de ambiente que são consideradas pela validação. Quando o valor for `A`, todas as referências de ambiente associadas ao projeto serão incluídas na validação. Quando o valor for `S`, apenas uma única referência de ambiente será incluída. Quando o valor for `D`, nenhuma referência de ambiente será incluída e cada parâmetro deverá ter um valor padrão literal a fim de ser aprovado na validação. Esse parâmetro é opcional, o caractere `D` será usado por padrão. O *environment_scope* é **char(1)** .  
   
  [ @reference_id = ] *reference_id*  
  A ID exclusiva da referência do ambiente. Esse parâmetro é necessário apenas quando uma única referência de ambiente é incluída na validação, quando *environment_scope* é `S`. O *reference_id* é **bigint**.  

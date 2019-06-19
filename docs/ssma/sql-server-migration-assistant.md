@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63240223"
 ---
 # <a name="sql-server-migration-assistant"></a>Assistente de Migração do SQL Server
@@ -47,7 +47,7 @@ As seguintes versões de destino têm suporte para o SSMA.
 - Banco de dados SQL do Azure
 - Azure SQL Data Warehouse * *
 
-* * Este destino é compatível apenas com o SSMA para Oracle.
+\* * Este destino é compatível apenas com o SSMA para Oracle.
  
 ## <a name="downloads"></a>Downloads
 - [SSMA para Access](https://aka.ms/ssmaforaccess)

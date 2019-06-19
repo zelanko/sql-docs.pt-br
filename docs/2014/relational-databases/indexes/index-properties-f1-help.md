@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63161908"
 ---
 # <a name="index-properties-f1-help"></a>Ajuda de F1 de Propriedades do Índice
@@ -180,7 +180,7 @@ ms.locfileid: "63161908"
 ### <a name="bounding-box"></a>Caixa delimitadora  
  A *caixa delimitadora* é o perímetro da grade de alto nível de um plano geométrico. Os parâmetros da caixa delimitadora só existem no mosaico de grade geométrica. Esses parâmetros ficarão indisponíveis se o **Esquema de Mosaico** for **Grade geográfica**.  
   
- O painel exibe o **(*`X-min`*,*`Y-min`*)** e **(*`X-max`*,*`Y-max`*)** coordenadas da caixa delimitadora. Não há valores de coordenada padrão. Portanto, ao criar um novo índice espacial em uma `geometry` coluna de tipo, será necessário especificar os valores de coordenada.  
+ O painel exibe o **( *`X-min`* , *`Y-min`* )** e **( *`X-max`* , *`Y-max`* )** coordenadas da caixa delimitadora. Não há valores de coordenada padrão. Portanto, ao criar um novo índice espacial em uma `geometry` coluna de tipo, será necessário especificar os valores de coordenada.  
   
  `X-min`  
  A coordenada X do canto inferior esquerdo da caixa delimitadora.  

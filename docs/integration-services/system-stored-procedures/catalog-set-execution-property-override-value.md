@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4a12576e083a30a939964803687198ae0842fb73
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715846"
 ---
 # <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value 
@@ -41,10 +41,10 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  O identificador exclusivo da instância de execução. O *execution_id* é **bigint**.  
   
  [ @property_path = ] *property_path*  
- O caminho para a propriedade no pacote. O *property_path* é **nvarchar(4000)**.  
+ O caminho para a propriedade no pacote. O *property_path* é **nvarchar(4000)** .  
   
  [ @property_value = ] *property_value*  
- O valor de substituição a ser atribuído à propriedade. O *property_value* é **nvarchar(max)**.  
+ O valor de substituição a ser atribuído à propriedade. O *property_value* é **nvarchar(max)** .  
   
  [ @sensitive = ] *sensitive*  
  Quando o valor for 1, a propriedade será confidencial e criptografada quando for armazenada. Quando o valor for 0, a propriedade não será confidencial e o valor será armazenado em texto não criptografado. O argumento *sensitive* é **bit**.  

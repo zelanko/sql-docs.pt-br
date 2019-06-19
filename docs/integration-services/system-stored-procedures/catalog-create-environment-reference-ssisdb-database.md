@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73871d69a8fbdc56b2359aa888cbc08e572a6107
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716914"
 ---
 # <a name="catalogcreateenvironmentreference-ssisdb-database"></a>catalog.create_environment_reference (Banco de Dados SSISDB)
@@ -40,19 +40,19 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- O nome da pasta do projeto que está referenciando o ambiente. O *folder_name* é **nvarchar(128)**.  
+ O nome da pasta do projeto que está referenciando o ambiente. O *folder_name* é **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- O nome do projeto que está referenciando o ambiente. O *project_name* é **nvarchar(128)**.  
+ O nome do projeto que está referenciando o ambiente. O *project_name* é **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- O nome do ambiente que está sendo referenciado. O *environment_name* é **nvarchar(128)**.  
+ O nome do ambiente que está sendo referenciado. O *environment_name* é **nvarchar(128)** .  
   
  [ @reference_location = ] *reference_location*  
- Indica se o ambiente pode ser localizado na mesma pasta do projeto (referência relativa) ou em uma pasta diferente (referência absoluta). Use o valor `R` para indicar uma referência relativa. Use o valor `A` para indicar uma referência absoluta. O *reference_location* é **char(1)**.  
+ Indica se o ambiente pode ser localizado na mesma pasta do projeto (referência relativa) ou em uma pasta diferente (referência absoluta). Use o valor `R` para indicar uma referência relativa. Use o valor `A` para indicar uma referência absoluta. O *reference_location* é **char(1)** .  
   
  [ @environment_folder_name = ] *environment_folder_name*  
- O nome da pasta na qual o ambiente que está sendo referenciado está localizado. Esse valor é necessário para referências absolutas. O *environment_folder_name* é **nvarchar(128)**.  
+ O nome da pasta na qual o ambiente que está sendo referenciado está localizado. Esse valor é necessário para referências absolutas. O *environment_folder_name* é **nvarchar(128)** .  
   
  [ @reference_id = ] *reference_id*  
  Retorna o identificador exclusivo da nova referência. Esse parâmetro é opcional. O *reference_id* é **bigint**.  

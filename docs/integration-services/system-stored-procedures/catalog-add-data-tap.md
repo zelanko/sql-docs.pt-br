@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a4e4dc5e53f4e45c558b5d709073900b6e724f1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717111"
 ---
 # <a name="catalogadddatatap"></a>catalog.add_data_tap 
@@ -45,21 +45,21 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  [ @task_package_path = ] *task_package_path*  
  O caminho do pacote da tarefa de fluxo de dados. A propriedade **PackagePath** da tarefa de fluxo de dados especifica o caminho. O caminho diferencia maiúsculas de minúsculas. Para localizar o caminho do pacote, no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], clique com o botão direito do mouse na tarefa Fluxo de Dados e, depois, clique em **Propriedades**. A propriedade **PackagePath** aparece na janela **Propriedades**.  
   
- O *task_package_path* é um **nvarchar(max)**.  
+ O *task_package_path* é um **nvarchar(max)** .  
   
  [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
  A cadeia de caracteres de identificação para o caminho de fluxo de dados. Um caminho conecta dois componentes de fluxos de dados. A propriedade **IdentificationString** do caminho especifica a cadeia de caracteres.  
   
  Para localizar a cadeia de caracteres de identificação, no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], clique com o botão direito do mouse no caminho entre dois componentes de fluxo de dados e, depois, clique em **Propriedades**. A propriedade **IdentificationString** aparece na janela **Propriedades**.  
   
- O *dataflow_path_id_string* é um **nvarchar(4000)**.  
+ O *dataflow_path_id_string* é um **nvarchar(4000)** .  
   
  [ @data_filename = ] *data_filename*  
  O nome do arquivo de dados que armazena os dados tocados. Se a tarefa de fluxo de dados for executada dentro de um contêiner de Loop Foreach ou Loop For, arquivos separados armazenarão os dados tocados para cada iteração do loop. Cada arquivo é prefixado com um número que corresponde a uma iteração.  
   
  Por padrão, o arquivo é armazenado na pasta \<*unidade*>:\Arquivos de Programas\Microsoft SQL Server\130\DTS\DataDumps.  
   
- O *data_filename* é um **nvarchar(4000)**.  
+ O *data_filename* é um **nvarchar(4000)** .  
   
  [ @max_rows = ] *max_rows*  
  O número de linhas capturadas durante o toque de dados. Se esse valor não for especificado, todas as linhas serão capturadas. O *max_rows* é um **int**.  
