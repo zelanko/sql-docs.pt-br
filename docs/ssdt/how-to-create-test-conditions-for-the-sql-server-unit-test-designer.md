@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 52975d96b6db206b4cdd2b6b201bc55eb572131c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090263"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Como fazer: Criar condições de teste para o designer de teste de unidade do SQL Server
@@ -179,7 +179,7 @@ A classe para a condição de teste personalizada herda da classe base [TestCond
 |Parâmetro de Atributos|Posição|Descrição|  
 |-----------------------|------------|---------------|  
 |DisplayName|1|Identifica a cadeia de conexão na caixa de combinação "Condições de Teste". Esse nome deve ser exclusivo. Se duas condições tiverem o mesmo nome para exibição, a primeira condição encontrada será mostrada para o usuário e um aviso será mostrado no Gerenciador de Erros do Visual Studio.|  
-|ImplementingType|2|É usado para identificar exclusivamente a extensão. Você precisa alterar isso para corresponder ao tipo no qual você está colocando o atributo. Este exemplo usa o tipo **ResultSetColumnCountCondition**, portanto use **typeof(ResultSetColumnCountCondition)**. Se seu tipo for **NewTestCondition**, use **typeof(NewTestCondition)**.|  
+|ImplementingType|2|É usado para identificar exclusivamente a extensão. Você precisa alterar isso para corresponder ao tipo no qual você está colocando o atributo. Este exemplo usa o tipo **ResultSetColumnCountCondition**, portanto use **typeof(ResultSetColumnCountCondition)** . Se seu tipo for **NewTestCondition**, use **typeof(NewTestCondition)** .|  
   
 Neste exemplo, você adiciona duas propriedades. Os usuários da condição de teste personalizada podem usar a propriedade ResultSet para especificar para qual conjunto de resultados a contagem de coluna deve ser verificada. Em seguida, é possível usar a propriedade Count para especificar a contagem de coluna esperada.  
   

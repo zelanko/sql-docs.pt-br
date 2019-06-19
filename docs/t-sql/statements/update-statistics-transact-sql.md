@@ -23,11 +23,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f91d98f48031f34f4c1c1ef91c86c1cbb60520fd
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531061"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939705"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -242,7 +242,7 @@ UPDATE STATISTICS Sales.SalesOrderDetail;
 GO  
 ```  
   
-### <a name="b-update-the-statistics-for-an-index"></a>b. Atualizar as estatísticas de um índice  
+### <a name="b-update-the-statistics-for-an-index"></a>B. Atualizar as estatísticas de um índice  
  O exemplo a seguir atualiza as estatísticas do índice `AK_SalesOrderDetail_rowguid` da tabela `SalesOrderDetail`.  
   
 ```sql  

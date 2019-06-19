@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 2865144d47dd316204d088cb98c9c0c99b71334e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66767723"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurar a opção max worker threads de configuração de servidor
@@ -64,9 +64,9 @@ ms.locfileid: "66767723"
     |8 processadores|288|576|  
     |16 processadores|352|704|  
     |32 processadores|480|960|  
-    |64 processadores|736|1.472|  
-    |128 processadores|4.224|4.480|  
-    |256 processadores|8.320|8.576| 
+    |64 processadores|736|1\.472|  
+    |128 processadores|4\.224|4\.480|  
+    |256 processadores|8\.320|8\.576| 
     
     Usando a seguinte fórmula:
     

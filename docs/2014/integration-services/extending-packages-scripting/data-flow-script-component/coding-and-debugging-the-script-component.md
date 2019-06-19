@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fd4153aaaf0fdffe32ce48db872a43cb5dbb84c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62894790"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codificando e depurando o componente Script
@@ -170,7 +170,7 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|  
 |Variáveis|Use as propriedades nomeadas e digitadas do acessador na classe de coleção `Variables` no item de projeto `ComponentWrapper`, expostas através da propriedade `Variables` da classe `ScriptMain`.<br /><br /> O método `PreExecute` só pode acessar variáveis somente leitura. O método `PostExecute` pode acessar variáveis somente leitura e de leitura/gravação.|  
 |Conexões|Use as propriedades nomeadas e digitadas do acessador na classe de coleção `Connections` no item de projeto `ComponentWrapper`, expostas através da propriedade `Connections` da classe `ScriptMain`.|  
-|Eventos|Gere eventos usando o <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> propriedade do `ScriptMain` classe e o **incêndio\<X >** métodos do <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interface.|  
+|Events|Gere eventos usando o <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> propriedade do `ScriptMain` classe e o **incêndio\<X >** métodos do <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interface.|  
 |Registrando em log|Execute o registro em log usando o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> da classe `ScriptMain`.|  
   
 ## <a name="debugging-the-script-component"></a>Depurando o componente Script  

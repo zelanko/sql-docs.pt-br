@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1e40954a5a5eb7a69ba4f70b798356f38175fed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768060"
 ---
 # <a name="upgrade-integration-services"></a>Atualização do Integration Services
@@ -50,7 +50,7 @@ ms.locfileid: "62768060"
 ## <a name="upgrading-integration-services"></a>atualizando o Integration Services  
  Você pode fazer a atualização usando um dos seguintes métodos:  
   
--   Execute [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] programa de instalação e selecione a opção de **atualizar do SQL Server 2005, SQL Server 2008 ou SQL Server 2008 R2**, ou **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**.  
+-   Execute [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] programa de instalação e selecione a opção de **atualizar do SQL Server 2005, SQL Server 2008 ou SQL Server 2008 R2**, ou **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]** .  
   
 -   Execute **setup.exe** no prompt de comando e especifique o `/ACTION=upgrade` opção. Para obter mais informações, consulte a seção "Scripts de instalação do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]," na [instalar o SQL Server 2014 do Prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   

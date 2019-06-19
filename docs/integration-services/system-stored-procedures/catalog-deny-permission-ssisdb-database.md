@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a216685a58032534e3f79fb77d895f2664981a51
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716451"
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission (Banco de Dados SSISDB)
@@ -38,7 +38,7 @@ catalog.deny_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>Argumentos  
  [ @object_type = ] *object_type*  
- O tipo de objeto protegível. Os tipos de objetos protegíveis incluem pasta (`1`), projeto (`2`), ambiente (`3`) e operação (`4`). O *object_type* é **smallint**_._  
+ O tipo de objeto protegível. Os tipos de objetos protegíveis incluem pasta (`1`), projeto (`2`), ambiente (`3`) e operação (`4`). O *object_type* é **smallint** _._  
   
  [ @object_id = ] *object_id*  
  A ID (identificador exclusivo) ou a chave primária do objeto protegível. O *object_id* é **bigint**.  

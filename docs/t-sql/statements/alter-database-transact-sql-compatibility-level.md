@@ -26,10 +26,10 @@ ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: baa6f443215d5d1f221462e1d20d4bf1498ca899
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65626686"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nível de compatibilidade de ALTER DATABASE (Transact-SQL)
@@ -295,7 +295,7 @@ Em um determinado nível de compatibilidade, as palavras-chave reservadas inclue
 
 Uma vez introduzida, uma palavra-chave permanece reservada. Por exemplo, a palavra-chave reservada PIVOT, que foi incorporada no nível de compatibilidade 90, também é reservada nos níveis 100, 110 e 120.
 
-Se um aplicativo usar um identificador que é reservado como uma palavra-chave no seu nível de compatibilidade, o aplicativo falhará. Para solucionar esse problema, inclua o identificador entre colchetes (**[]**) ou aspas (**""**); por exemplo, para atualizar um aplicativo que usa o identificador **EXTERNAL** com o nível de compatibilidade 90, você pode alterar o identificador para **[EXTERNAL]** ou **"EXTERNAL"**.
+Se um aplicativo usar um identificador que é reservado como uma palavra-chave no seu nível de compatibilidade, o aplicativo falhará. Para solucionar esse problema, inclua o identificador entre colchetes ( **[]** ) ou aspas ( **""** ); por exemplo, para atualizar um aplicativo que usa o identificador **EXTERNAL** com o nível de compatibilidade 90, você pode alterar o identificador para **[EXTERNAL]** ou **"EXTERNAL"** .
 
 Para obter mais informações, consulte [Palavras-chave reservadas](../../t-sql/language-elements/reserved-keywords-transact-sql.md).
 

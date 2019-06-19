@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: e9067416365e56dccf9c09f2e826c01fb3ecfa3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63156952"
 ---
 # <a name="transparent-data-encryption"></a>Criptografia de Dados Transparente
@@ -244,7 +244,7 @@ Exemplo da ação para substituir uma máquina virtual.
   
 `setup.exe /Action=ReplaceVM ... DMKPassword='**********'`  
   
-Durante a atualização, se um usuário de banco de dados é criptografado e a senha da DMK não for fornecida, a ação de atualização falhará. Durante a substituição, se a senha correta não for fornecida quando existe uma DMK, a operação irá ignorar a etapa de recuperação DMK. Todas as outras etapas serão concluídas no final da operação de substituição VM, no entanto, a ação reportará a falha no final para indicar que são necessárias etapas adicionais. Nos logs de instalação (localizado em **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\\Detail-Setup < carimbo de hora >**), o seguinte aviso será exibido próximo ao final.  
+Durante a atualização, se um usuário de banco de dados é criptografado e a senha da DMK não for fornecida, a ação de atualização falhará. Durante a substituição, se a senha correta não for fornecida quando existe uma DMK, a operação irá ignorar a etapa de recuperação DMK. Todas as outras etapas serão concluídas no final da operação de substituição VM, no entanto, a ação reportará a falha no final para indicar que são necessárias etapas adicionais. Nos logs de instalação (localizado em **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\\Detail-Setup < carimbo de hora >** ), o seguinte aviso será exibido próximo ao final.  
   
 `*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   

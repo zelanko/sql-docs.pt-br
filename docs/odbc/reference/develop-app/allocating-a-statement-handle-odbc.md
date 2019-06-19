@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9524f2e6b01d2a5827dcface3159b7c52a728c59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63287865"
 ---
 # <a name="allocating-a-statement-handle-odbc"></a>Alocar um identificador de instrução ODBC
 Antes do aplicativo pode executar uma instrução, ele deve alocar um identificador de instrução da seguinte maneira:  
   
-1.  O aplicativo declara uma variável do tipo HSTMT. Em seguida, ele chama **SQLAllocHandle** e passa o endereço dessa variável, o identificador da conexão de alocação a instrução e a opção de SQL_HANDLE_STMT. Por exemplo:   
+1.  O aplicativo declara uma variável do tipo HSTMT. Em seguida, ele chama **SQLAllocHandle** e passa o endereço dessa variável, o identificador da conexão de alocação a instrução e a opção de SQL_HANDLE_STMT. Por exemplo:  
   
     ```  
     SQLHSTMT hstmt1;  

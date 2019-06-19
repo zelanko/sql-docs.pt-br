@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 86100d0a94030cc7db8f7a5b9574c22cec58903e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726586"
 ---
 # <a name="parsing-data"></a>Análise de dados
@@ -45,7 +45,7 @@ A análise rápida fornece um conjunto de rotinas simples e rápidas para analis
   
  Se o fluxo de dados no pacote requer análise sensível a localidade, a análise padrão é recomendada em lugar da análise rápida. Por exemplo, a análise rápida não reconhece dados sensíveis ao local, que incluem símbolos decimais como a vírgula, formatos de data que não sejam ano-mês-dia e símbolos de moeda.  
   
- Representações truncadas que implicam em uma ou mais partes da data, como um século, um ano ou um mês, não são reconhecidas pela análise rápida. Por exemplo, a análise rápida não reconhece o formato '**-YYMM**', que especifica um ano e um mês em um século implícito, nem '**--MM**', que especifica um mês em um ano implícito. Porém, algumas representações com precisão reduzida são reconhecidas. Por exemplo, a análise rápida reconhece o formato 'hhmm;', que indica somente hora e minuto e '**YYYY**', que indica somente o ano.  
+ Representações truncadas que implicam em uma ou mais partes da data, como um século, um ano ou um mês, não são reconhecidas pela análise rápida. Por exemplo, a análise rápida não reconhece o formato ' **-YYMM**', que especifica um ano e um mês em um século implícito, nem ' **--MM**', que especifica um mês em um ano implícito. Porém, algumas representações com precisão reduzida são reconhecidas. Por exemplo, a análise rápida reconhece o formato 'hhmm;', que indica somente hora e minuto e '**YYYY**', que indica somente o ano.  
   
  A análise rápida é especificada ao nível de coluna. Na fonte Flat File e na transformação de Conversão de Dados, você pode especificar a Análise rápida nas colunas de saída. Entradas e saídas podem incluir colunas sensíveis a local e colunas não sensíveis a local.  
  

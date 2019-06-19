@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 592af27fb460f748dcf11b1463583a5d221402d9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715809"
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (Banco de dados SSISDB)
@@ -44,22 +44,22 @@ catalog.set_object_parameter_value [@object_type =] object_type
  O tipo do parâmetro. Use o valor `20` para indicar um parâmetro de projeto ou o valor `30` para indicar um parâmetro de pacote. O *object_type* é **smallInt**.  
   
  [@folder_name =] *folder_name*  
- O nome da pasta que contém o parâmetro. O *folder_name* é **nvarchar(128)**.  
+ O nome da pasta que contém o parâmetro. O *folder_name* é **nvarchar(128)** .  
   
  [@project_name =] *project_name*  
- O nome do projeto que contém o parâmetro. O *project_name* é **nvarchar(128)**.  
+ O nome do projeto que contém o parâmetro. O *project_name* é **nvarchar(128)** .  
   
  [@parameter_name =] *parameter_name*  
- O nome do parâmetro. O *parameter_name* é **nvarchar(128)**.  
+ O nome do parâmetro. O *parameter_name* é **nvarchar(128)** .  
   
  [@parameter_value =] *parameter_value*  
  O valor do parâmetro. O *parameter_value* é **sql_variant**.  
   
  [@object_name =] *object_name*  
- O nome do pacote. Esse argumento será exigido quando o parâmetro for um parâmetro de pacote. O *object_name* é **nvarchar(260)**.  
+ O nome do pacote. Esse argumento será exigido quando o parâmetro for um parâmetro de pacote. O *object_name* é **nvarchar(260)** .  
   
  [@value_type =] *value_type*  
- O tipo de valor do parâmetro. Use o caractere `V` para indicar que *parameter_value* é um valor literal que é usado por padrão quando nenhum outro valor é atribuído antes da execução. Use o caractere `R` para indicar que *parameter_value* é um valor referenciado e foi definido para o nome de uma variável de ambiente. Esse argumento é opcional, o caractere `V` é usado por padrão. O *value_type* é **char (1)**.  
+ O tipo de valor do parâmetro. Use o caractere `V` para indicar que *parameter_value* é um valor literal que é usado por padrão quando nenhum outro valor é atribuído antes da execução. Use o caractere `R` para indicar que *parameter_value* é um valor referenciado e foi definido para o nome de uma variável de ambiente. Esse argumento é opcional, o caractere `V` é usado por padrão. O *value_type* é **char (1)** .  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  

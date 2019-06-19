@@ -20,11 +20,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: afb12785dd744ddfd938fd2ddfd02e058f2e4034
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327392"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033829"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>Permissões de principal do banco de dados REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,15 +63,15 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Especifica uma permissão que pode ser revogada no principal de banco de dados. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
  USER ::*database_user*  
- Especifica a classe e o nome do usuário no qual a permissão está sendo revogada. O qualificador de escopo (**::**) é obrigatório.  
+ Especifica a classe e o nome do usuário no qual a permissão está sendo revogada. O qualificador de escopo ( **::** ) é obrigatório.  
   
  ROLE ::*database_role*  
- Especifica a classe e o nome da função na qual a permissão está sendo revogada. O qualificador de escopo (**::**) é obrigatório.  
+ Especifica a classe e o nome da função na qual a permissão está sendo revogada. O qualificador de escopo ( **::** ) é obrigatório.  
   
  APPLICATION ROLE ::*application_role*  
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
- Especifica a classe e o nome da função de aplicativo na qual a permissão está sendo revogada. O qualificador de escopo (**::**) é obrigatório.  
+ Especifica a classe e o nome da função de aplicativo na qual a permissão está sendo revogada. O qualificador de escopo ( **::** ) é obrigatório.  
   
  GRANT OPTION  
  Indica que o direito de conceder a permissão especificada a outros principais será revogado. A permissão em si não será revogada.  
@@ -160,7 +160,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>A. Revogando a permissão CONTROL em um usuário a partir de outro usuário  
- O exemplo a seguir revoga a permissão `CONTROL` no usuário [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] do `Wanida` a partir do usuário `RolandX`.  
+ O exemplo a seguir revoga a permissão `CONTROL` no usuário `Wanida` do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] a partir do usuário `RolandX`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -168,7 +168,7 @@ REVOKE CONTROL ON USER::Wanida FROM RolandX;
 GO  
 ```  
   
-### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>b. Revogando a permissão VIEW DEFINITION em uma função de um usuário para o qual foi concedida a permissão WITH GRANT OPTION  
+### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>B. Revogando a permissão VIEW DEFINITION em uma função de um usuário para o qual foi concedida a permissão WITH GRANT OPTION  
  O exemplo a seguir revoga a permissão `VIEW DEFINITION` na função [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] do `SammamishParking` a partir do usuário de banco de dados `JinghaoLiu`. A opção `CASCADE` é especificada porque ao usuário `JinghaoLiu` foi concedida a permissão `VIEW DEFINITION``WITH GRANT OPTION`.  
   
 ```  
@@ -179,7 +179,7 @@ GO
 ```  
   
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. Revogando a permissão PERSONATE em um usuário de uma função de aplicativo  
- O exemplo a seguir revoga a permissão `IMPERSONATE` no usuário `HamithaL` da função de aplicativo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] do `AccountsPayable17`.  
+ O exemplo a seguir revoga a permissão `IMPERSONATE` no usuário `HamithaL` da função de aplicativo `AccountsPayable17` do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
