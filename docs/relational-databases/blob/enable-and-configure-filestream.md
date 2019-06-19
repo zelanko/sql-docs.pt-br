@@ -9,15 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-manager: craigg
-ms.openlocfilehash: 6c01393866ae90c800afbbc7f55e5cb63bfb7554
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jroth
+ms.openlocfilehash: 9c2b248e89b3aa822de79dd26970931fea4aaebd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65094287"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822815"
 ---
 # <a name="enable-and-configure-filestream"></a>Habilitar e configurar o FILESTREAM
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Antes de começar a usar FILESTREAM, é necessário habilitá-lo na instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Este tópico descreve como habilitar o FILESTREAM usando o SQL Server Configuration Manager.  
   
@@ -80,6 +83,7 @@ ms.locfileid: "65094287"
 |RAID 5|Normal|Normal|Excelente|O desempenho é melhor do que o de um disco ou JBOD; e menor do que o do RAID 0 ou do RAID 5 com distribuição.|  
 |RAID 0|Excelente|Excelente|None||  
 |RAID 5 + distribuição|Excelente|Excelente|Excelente|A opção mais cara.|  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
 ###  <a name="database"></a> Design físico do banco de dados  

@@ -1,5 +1,5 @@
 ---
-title: Remover uma instalação do SQL Server 2014 | Microsoft Docs
+title: Reparar uma instalação do SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cea01c7e32248354cf745ed56186d246636d5b28
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0d9486134e0a9103239853d8378e29aea688c7fb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774940"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046660"
 ---
 # <a name="drop-a-sql-server-2014-installation"></a>Descartar uma instalação do SQL Server 2014
   A operação de reparo pode ser usada nos seguintes cenários:  

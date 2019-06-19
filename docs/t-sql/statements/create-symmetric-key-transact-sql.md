@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 56be2b8913002d681a4478eff80448acd2e71089
-ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66836346"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
@@ -82,13 +82,13 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
- KEY_SOURCE **='** _pass\_phrase_ **'**  
+ KEY_SOURCE **='**_pass\_phrase_**'**  
  Especifica uma frase secreta da qual a chave deve derivar.  
   
- IDENTITY_VALUE **='** _identity\_phrase_ **'**  
+ IDENTITY_VALUE **='**_identity\_phrase_**'**  
  Especifica uma frase de identidade a partir da qual deve ser gerado um GUID para marcar dados criptografados com uma chave temporária.  
   
- PROVIDER_KEY_NAME **='** _key\_name\_in\_provider_ **'**  
+ PROVIDER_KEY_NAME **='**_key\_name\_in\_provider_**'**  
  Especifica o nome mencionado no provedor de Gerenciamento Extensível de Chaves.  
   
 > [!NOTE]  

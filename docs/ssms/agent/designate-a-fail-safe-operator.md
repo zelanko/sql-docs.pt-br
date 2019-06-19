@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5ea7a499e2d0577b8ac0d57cbb0f530958af9ff8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096527"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Designar um operador à prova de falhas
@@ -67,7 +67,7 @@ Somente membros da função de servidor fixa **sysadmin** podem designar operado
   
 2.  Clique com o botão direito do mouse em **SQL Server Agent** e selecione **Propriedades**.  
   
-3.  Na caixa de diálogo **Propriedades do SQL Server Agent –**_server\_name_, em **Selecionar uma página**, selecione **Sistema de Alerta**.  
+3.  Na caixa de diálogo **Propriedades do SQL Server Agent –** _server\_name_, em **Selecionar uma página**, selecione **Sistema de Alerta**.  
   
 4.  Em **Operador à prova de falhas**, selecione **Habilitar operador à prova de falhas**.  
   

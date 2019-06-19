@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: Configurando o banco de dados de espelhamento usando certificados (Transact-SQL) | Microsoft Docs'
+title: 'Exemplo: configurar o espelhamento de banco de dados usando certificados (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806747"
 ---
-# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemplo: Configuração do banco de dados de espelhamento usando certificados (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemplo: configurar espelhamento de banco de dados usando certificados (Transact-SQL)
   Este exemplo mostra todos os estágios necessários para criar uma sessão de espelhamento de banco de dados com uma autenticação baseada em certificado. Os exemplos deste tópico usam o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A menos que você possa garantir que sua rede está segura, recomendamos o uso de criptografia para conexões de espelhamento de banco de dados.  
   
  Ao copiar um certificado para outro sistema, use um método de cópia seguro. Seja extremamente cauteloso para manter todos os seus certificados em segurança.  
@@ -257,7 +257,7 @@ ms.locfileid: "62806747"
     ```  
   
     > [!NOTE]  
-    >  Se você pretende executar em modo de alta segurança com failover automático, deixe a segurança da transação configurada como FULL (a configuração padrão) e adicione a testemunha o mais rápido possível após executar o segundo SET PARTNER **'*`partner_server`*'** instrução. Observe que a testemunha deve ser configurada primeiro para conexões de saída e de entrada.  
+    >  Se você pretende executar em modo de alta segurança com failover automático, deixe a segurança da transação configurada como FULL (a configuração padrão) e adicione a testemunha o mais rápido possível após executar o segundo SET PARTNER **' *`partner_server`* '** instrução. Observe que a testemunha deve ser configurada primeiro para conexões de saída e de entrada.  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   

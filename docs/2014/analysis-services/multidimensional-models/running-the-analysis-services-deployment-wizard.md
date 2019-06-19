@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8fd34a7e614c1c1bb247f84846e090d22ea053e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073034"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Executando o Assistente para Implantação do Analysis Services
@@ -40,10 +40,10 @@ ms.locfileid: "66073034"
   
      -ou-  
   
--   No **projetos** pasta da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] do projeto, clique duas vezes o  *\<nome do projeto >*. asdatabase.  
+-   No **projetos** pasta da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] do projeto, clique duas vezes o  *\<nome do projeto >* . asdatabase.  
   
     > [!NOTE]  
-    >  Se você não encontrar o  *\<nome do projeto >*. asdatabase, use Pesquisar e especifique asdatabase.  
+    >  Se você não encontrar o  *\<nome do projeto >* . asdatabase, use Pesquisar e especifique asdatabase.  
   
 ## <a name="running-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>Executando o Assistente para Implantação do Analysis Services no prompt de comando  
  O Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também pode ser executado no prompt de comando. Quando você executa o assistente no prompt de comando, você fornece o caminho completo para o arquivo .asdatabase e executa o assistente em um dos seguintes modos:  

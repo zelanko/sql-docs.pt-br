@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f57b07be679195794df5f0f9fe2329417a0b30f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591760"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62860662"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimar o tamanho de um heap
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "53591760"
   
 3.  Parte da linha, conhecida como bitmap nulo, é reservada para gerenciar a nulabilidade da coluna. Calcule seu tamanho:  
   
-     **_Null_Bitmap_** = 2 + ((**_Num_Cols_** + 7) / 8)  
+     **_Null_Bitmap_** = 2 + (( **_Num_Cols_** + 7) / 8)  
   
      Somente a parte do inteiro dessa expressão deve ser usada. Descarte todo o restante.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "53591760"
   
      Se houver colunas de comprimento variável na tabela, determine quanto espaço será usado para armazenar as colunas dentro da linha:  
   
-     **_Variable_Data_Size_** = 2 + (**_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
+     **_Variable_Data_Size_** = 2 + ( **_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
   
      Os bytes adicionados a **_Max_Var_Size_** servem para acompanhar cada coluna de tamanho variável. Essa fórmula presume que todas as colunas de comprimento variável estão 100% completas. Se você prevê que um percentual menor do espaço de armazenamento da coluna de tamanho variável será usado, pode ajustar o valor **_Max_Var_Size_** de acordo com esse percentual para obter uma estimativa mais precisa do tamanho geral da tabela.  
   
@@ -66,19 +66,19 @@ ms.locfileid: "53591760"
   
 5.  Calcule o tamanho total da linha:  
   
-     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
+     **_Row_Size_**   =  **_Fixed_Data_Size_**  +  **_Variable_Data_Size_**  +  **_Null_Bitmap_** + 4  
   
      O valor 4 na fórmula é a sobrecarga do cabeçalho da linha de dados.  
   
 6.  Calcule o número de linhas por página (8.096 bytes livres por página):  
   
-     **_Rows_Per_Page_** = 8096 / (**_Row_Size_** + 2)  
+     **_Rows_Per_Page_** = 8096 / ( **_Row_Size_** + 2)  
   
      Como as linhas não se estendem por mais de uma página, o número de linhas por página deve ser arredondado para baixo, para a linha inteira mais próxima. O valor 2 na fórmula é para a entrada da linha na matriz de slot da página.  
   
 7.  Calcule o número de páginas necessário para armazenar todas as linhas:  
   
-     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
+     **_Num_Pages_**   =  **_Num_Rows_**  /  **_Rows_Per_Page_**  
   
      O número de páginas estimado deve ser arredondado para cima, até a página inteira mais próxima.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "53591760"
   
 -   Valores de LOB (Objeto Grande)  
   
-     O algoritmo para determinar exatamente quanto espaço será usado para armazenar os tipos de dados LOB **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**e **ntextxml**e valores **image** é complexo. É suficiente apenas para adicionar o tamanho médio dos valores de LOB esperados e adicioná-lo ao tamanho do heap.  
+     O algoritmo para determinar exatamente quanto espaço será usado para armazenar os tipos de dados LOB **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**e **ntextxml**e valores **image** é complexo. É suficiente apenas para adicionar o tamanho médio dos valores de LOB esperados e adicioná-lo ao tamanho do heap.  
   
 -   Compactação  
   

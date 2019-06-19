@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a8eb921f8993b4ad689f266b6d9c45c9d7d42720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812604"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62859963"
 ---
 # <a name="mssqlserver12329"></a>MSSQLSERVER_12329
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,10 +31,10 @@ ms.locfileid: "47812604"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|HK_UNSUPPORTED_NON_LATIN_CODEPAGE|  
-|Texto da mensagem|Não há suporte para os tipos de dados char(n) e varchar(n) que usam um agrupamento com uma página de código diferente de 1252 com *construct*.|  
+|Texto da mensagem|Não há suporte para os tipos de dados char(n) e varchar(n) que usam uma ordenação com uma página de código diferente de 1252 com *construct*.|  
   
 ## <a name="explanation"></a>Explicação  
-Não use os tipos de dados char(n) e varchar(n) que empreguem um agrupamento com uma página de código diferente de 1252.  
+Não use os tipos de dados char(n) e varchar(n) que empreguem uma ordenação com uma página de código diferente de 1252.  
   
 ## <a name="user-action"></a>Ação do usuário  
 Uma situação inesperada que pode gerar esse erro é:  
