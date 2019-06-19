@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cce0b8606b398d1c72b70c161bb8ccdf0d779167
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728061"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Tarefa Executar DDL do Analysis Services
@@ -254,7 +254,7 @@ ms.locfileid: "65728061"
   
 ### <a name="static-options"></a>Opções estáticas  
  **Conexão**  
- Selecione um projeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou um gerenciador de conexões [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na lista ou clique em \<**Nova conexão...**> e use a caixa de diálogo **Adicionar Gerenciador de Conexões do Analysis Services** para criar uma nova conexão.  
+ Selecione um projeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou um gerenciador de conexões [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na lista ou clique em \<**Nova conexão...** > e use a caixa de diálogo **Adicionar Gerenciador de Conexões do Analysis Services** para criar uma nova conexão.  
   
  **Tópicos relacionados:** [Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Gerenciador de Conexão do Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
@@ -275,13 +275,13 @@ ms.locfileid: "65728061"
   
 #### <a name="sourcetype--file-connection"></a>SourceType = File Connection  
  **Origem**  
- Selecione uma conexão de Arquivo na lista ou clique em \<**Nova conexão...**> e use a caixa de diálogo **Adicionar Gerenciador de Conexões de Arquivos** para criar uma nova conexão.  
+ Selecione uma conexão de Arquivo na lista ou clique em \<**Nova conexão...** > e use a caixa de diálogo **Adicionar Gerenciador de Conexões de Arquivos** para criar uma nova conexão.  
   
  **Tópicos relacionados:** [Gerenciador de Conexão de Arquivo](../../integration-services/connection-manager/file-connection-manager.md)  
   
 #### <a name="sourcetype--variable"></a>SourceType = Variable  
  **Origem**  
- Selecione uma variável na lista ou clique em \<**Nova variável...**> e use a caixa de diálogo **Adicionar Variável** para criar uma nova variável.  
+ Selecione uma variável na lista ou clique em \<**Nova variável...** > e use a caixa de diálogo **Adicionar Variável** para criar uma nova variável.  
   
  **Tópicos relacionados:** [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md)  
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d5d690eeaa3d6af5efa06f1e3e439aa4ba7692a6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728940"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Criar e editar um Serviço Oracle CDC
@@ -61,7 +61,7 @@ ms.locfileid: "65728940"
   
      Você pode usar uma conta do Windows local ou de domínio para a conta de serviço. Neste caso, você deve inserir a **Senha** para essa conta. Esta conta pode ser para o host local ou uma conta de domínio. Atualize a senha quando ela for alterada usando os Serviços Locais no Painel de Controle do Windows.  
   
- **Nome do servidor**: selecione a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino para se conectar (por exemplo, **\\\\<nome_do_computador>\\<nome_da_instância>**). Por padrão, é exibida a instância de servidor usada na última conexão.  
+ **Nome do servidor**: selecione a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino para se conectar (por exemplo, **\\\\<nome_do_computador>\\<nome_da_instância>** ). Por padrão, é exibida a instância de servidor usada na última conexão.  
   
  **Autenticação**  
  Selecione uma destas opções:  

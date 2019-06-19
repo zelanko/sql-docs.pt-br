@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eda7c83e982bbf6c006ac9a6c470b116009420ea
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821559"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editor XML (SQL Server Management Studio)
@@ -97,7 +97,7 @@ ms.locfileid: "65821559"
 -   Gerar um esquema XML a partir de um documento XML  
   
 ## <a name="xml-view"></a>Exibição XML  
- A exibição XML fornece um editor para edição de XML bruto e, ainda, codificação IntelliSense e de cores. A conclusão de instrução está disponível ao se trabalhar em arquivos .xsd e arquivos .xml que tenham um esquema associado. Digite < para iniciar uma marca e você terá uma lista de elementos válidos naquele local. Depois de digitar o nome do elemento e pressionar SPACEBAR, você terá uma lista de atributos para os quais os elementos oferecem suporte.   
+ A exibição XML fornece um editor para edição de XML bruto e, ainda, codificação IntelliSense e de cores. A conclusão de instrução está disponível ao se trabalhar em arquivos .xsd e arquivos .xml que tenham um esquema associado. Digite < para iniciar uma marca e você terá uma lista de elementos válidos naquele local. Depois de digitar o nome do elemento e pressionar SPACEBAR, você terá uma lista de atributos para os quais os elementos oferecem suporte.  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense não estão disponíveis na barra de ferramentas. Quando estiver no Editor de XML, clique em **IntelliSense** no menu **Editar**para acessar as opções.  

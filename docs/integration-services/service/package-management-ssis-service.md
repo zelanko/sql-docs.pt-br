@@ -29,10 +29,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d4d453c1e5c6de342ac81fdd828a570bdc33e5a
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805265"
 ---
 # <a name="package-management-ssis-service"></a>Gerenciamento de pacotes (serviço SSIS)
@@ -143,15 +143,15 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
   
     -   Para importar de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selecione a opção **SQL Server** e depois especifique o servidor e selecione o modo de autenticação. Se você selecionar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , forneça um nome de usuário e uma senha.  
   
-         Clique no botão Procurar **(...)**, selecione o pacote para importar e clique em **OK.**  
+         Clique no botão Procurar **(...)** , selecione o pacote para importar e clique em **OK.**  
   
     -   Para importar do sistema de arquivos, selecione a opção **Sistema de arquivos** .  
   
-         Clique no botão Procurar **(...)**, selecione o pacote para importar e então clique em **Abrir.**  
+         Clique no botão Procurar **(...)** , selecione o pacote para importar e então clique em **Abrir.**  
   
     -   Para importar usando o Repositório de Pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] , selecione a opção **Repositório de Pacotes SSIS** e especifique o servidor.  
   
-         Clique no botão Procurar **(...)**, selecione o pacote para importar e clique em **OK.**  
+         Clique no botão Procurar **(...)** , selecione o pacote para importar e clique em **OK.**  
   
 7.  Opcionalmente, atualize o nome de pacote.  
   
@@ -187,7 +187,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
   
     -   Para exportar para o repositório de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] , selecione a opção **Repositório de Pacotes SISS** e especifique o servidor.  
   
-         Clique no botão Procurar **(...)**, expanda a pasta dos **Pacotes SSIS** e selecione a pasta na qual deseja salvar o pacote. Opcionalmente, digite um novo nome para o pacote na caixa de texto **Nome do Pacote** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+         Clique no botão Procurar **(...)** , expanda a pasta dos **Pacotes SSIS** e selecione a pasta na qual deseja salvar o pacote. Opcionalmente, digite um novo nome para o pacote na caixa de texto **Nome do Pacote** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 7.  Para atualizar o nível de proteção do pacote, clique no botão Procurar **(...)** e, na caixa de diálogo **Nível de Proteção do Pacote**, escolha um nível de proteção diferente. Se a opção **Criptografar dados confidenciais com senhas** ou **Criptografar todos os dados com senhas** for selecionada, digite e confirme uma senha.  
   

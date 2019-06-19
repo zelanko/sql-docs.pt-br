@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5e88421b166b79f49d87d04a058e09b97bd7033f
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403788"
 ---
 # <a name="lesson-4-2---defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Lição 4-2: definindo propriedades de atributo pai em uma hierarquia pai-filho
@@ -70,11 +70,11 @@ Nas tarefas deste tópico, você criará um modelo de nomeação que definirá o
   
     Observe que ícone é exclusivo para esse atributo. Esse ícone indica que o atributo é a chave pai em uma hierarquia pai-filho. Observe também, na janela Propriedades, que a propriedade **Usage** do atributo é definida como **Pai**. Essa propriedade foi definida pelo Assistente para Dimensões no momento em que a dimensão foi criada. O assistente detectou a relação pai-filho automaticamente.  
   
-3.  Na janela Propriedades, clique no botão Procurar (**...**) na célula da propriedade **NamingTemplate** .  
+3.  Na janela Propriedades, clique no botão Procurar ( **...** ) na célula da propriedade **NamingTemplate** .  
   
     Na caixa de diálogo **Modelo de Nomeação de Nível**, você define o modelo de nomeação de nível que determina os nomes de nível na hierarquia pai-filho exibidos aos usuários à medida que eles procuram os cubos.  
   
-4.  Na segunda linha, na linha **\***, digite **Nível do Funcionário \*** na coluna **Nome** e clique na terceira linha.  
+4.  Na segunda linha, na linha **\*** , digite **Nível do Funcionário \*** na coluna **Nome** e clique na terceira linha.  
   
     Observe agora que, abaixo de **Resultado**, cada nível é exibido nomeado como “Nível do Funcionário” seguido de números crescentes e consecutivos.  
   

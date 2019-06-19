@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64ee2c630d026870e8133377d34610d831ccc360
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727716"
 ---
 # <a name="execute-sql-task"></a>Tarefa Executar SQL
@@ -149,7 +149,7 @@ Para saber mais sobre a linguagem de consulta Transact-SQL, consulte [Referênci
  **Tópicos relacionados:** [Gerenciador de conexões do OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)e [Gerenciador de conexões ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)e [Gerenciador de conexões ADO](../../integration-services/connection-manager/ado-connection-manager.md)e [Gerenciador de conexões ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)e [Gerenciador de conexões do SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Conexão**  
- Escolha a conexão a partir de uma lista definida de gerenciadores de conexões. Para criar uma nova conexão, selecione \<**Nova conexão…**>.  
+ Escolha a conexão a partir de uma lista definida de gerenciadores de conexões. Para criar uma nova conexão, selecione \<**Nova conexão…** >.  
   
  **SQLSourceType**  
  Selecione o tipo de origem da instrução SQL que a tarefa executa.  
@@ -191,13 +191,13 @@ Para saber mais sobre a linguagem de consulta Transact-SQL, consulte [Referênci
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Conexão do Arquivo  
  **FileConnection**  
- Selecione um gerenciador de conexões de arquivos existente ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões de arquivos existente ou clique em \<**Nova conexão...** > para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variável  
  **SourceVariable**  
- Selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Selecione uma variável existente ou clique em \<**Nova variável...** > para criar uma nova variável.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
@@ -206,7 +206,7 @@ Use a página **Mapeamento de Parâmetros** da caixa de diálogo **Editor da Tar
   
 ### <a name="options"></a>Opções  
  **Nome da Variável**  
- Depois de adicionar um mapeamento de parâmetros clicando em **Adicionar**, selecione uma variável de sistema ou definida pelo usuário na lista ou clique em \<**Nova variável...**> para adicionar uma nova variável usando a caixa de diálogo **Adicionar Variável**.  
+ Depois de adicionar um mapeamento de parâmetros clicando em **Adicionar**, selecione uma variável de sistema ou definida pelo usuário na lista ou clique em \<**Nova variável...** > para adicionar uma nova variável usando a caixa de diálogo **Adicionar Variável**.  
   
  **Tópicos relacionados:** [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md)  
   
@@ -245,7 +245,7 @@ Use a página **Conjunto de Resultados** da caixa de diálogo **Editor da Tarefa
  
   
  **Nome da Variável**  
- Mapeie o conjunto de resultados para uma variável selecionando uma variável ou clique em \<**Nova variável...**> para adicionar uma nova variável usando a caixa de diálogo **Adicionar Variável**.  
+ Mapeie o conjunto de resultados para uma variável selecionando uma variável ou clique em \<**Nova variável...** > para adicionar uma nova variável usando a caixa de diálogo **Adicionar Variável**.  
   
  **Adicionar**  
  Clique para adicionar um mapeamento de conjunto de resultados.  
@@ -348,7 +348,7 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
   
 -   Um parâmetro **output** com o tipo de dados apropriado, como listado na tabela a seguir.  
   
-    |Tipo de parâmetro**Output** |Tipo de dados de data|  
+    |Tipo de parâmetro**Output**|Tipo de dados de data|  
     |-------------------------------|--------------------|  
     |SQL_DATE|**date**|  
     |SQL_SS_TIME2|**time**|  

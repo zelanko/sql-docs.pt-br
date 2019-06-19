@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 79756562767943d89efd199007941cf9bf29b702
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716168"
 ---
 # <a name="cataloggetproject-ssisdb-database"></a>catalog.get_project (Banco de Dados SSISDB)
@@ -35,16 +35,16 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- O nome da pasta que contém o projeto. *folder_name* é **nvarchar(128)**.  
+ O nome da pasta que contém o projeto. *folder_name* é **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- O nome do projeto. *project_name* é **nvarchar(128)**.  
+ O nome do projeto. *project_name* é **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- O fluxo binário do projeto é retornado como **varbinary(MAX)**. Nenhum resultado será retornado se a pasta ou o projeto não for localizado.  
+ O fluxo binário do projeto é retornado como **varbinary(MAX)** . Nenhum resultado será retornado se a pasta ou o projeto não for localizado.  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  

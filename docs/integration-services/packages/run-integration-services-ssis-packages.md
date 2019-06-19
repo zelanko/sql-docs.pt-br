@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fb256646e7bf71a2829cfa35ef70184d0b267748
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805256"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Executar pacotes do SSIS (Integration Services)
@@ -86,7 +86,7 @@ ms.locfileid: "65805256"
   
 1.  No Gerenciador de Soluções, clique com o botão direito do mouse na pasta de projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o pacote que você deseja executar e clique em **Propriedades**.  
   
-2.  Na caixa de diálogo **Página de Propriedades do \<project name>**, clique em **Compilar**.  
+2.  Na caixa de diálogo **Página de Propriedades do \<project name>** , clique em **Compilar**.  
   
 3.  Atualize o valor na propriedade OutputPath para especificar a pasta que você deseja usar para a implantação em tempo de design e clique em **OK**.  
 

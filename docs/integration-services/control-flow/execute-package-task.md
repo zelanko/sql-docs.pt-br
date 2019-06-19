@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47e228c3494c03e86ffa7208f7caf5c1fe150a95
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727739"
 ---
 # <a name="execute-package-task"></a>Tarefa Executar Pacote
@@ -192,7 +192,7 @@ ms.locfileid: "65727739"
   
 ##### <a name="location--sql-server"></a>Local = SQL Server  
  **Conexão**  
- Selecione um gerenciador de conexões do OLE DB na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões do OLE DB na lista ou clique em \<**Nova conexão…** > para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -201,7 +201,7 @@ ms.locfileid: "65727739"
   
 ##### <a name="location--file-system"></a>Local = Sistema de arquivos  
  **Conexão**  
- Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão…** > para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de Conexão de Arquivo](../../integration-services/connection-manager/file-connection-manager.md)  
   

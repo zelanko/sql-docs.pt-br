@@ -20,10 +20,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4947751be0d3ed2c0d10cfce774f1fa9cec35a38
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097557"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Atribuir um trabalho a uma categoria de trabalho
@@ -67,7 +67,7 @@ Para obter informações detalhadas, consulte [Implementar a segurança do SQL S
   
 4.  Clique com o botão direito do mouse no trabalho que deseja editar e selecione **Propriedades**.  
   
-5.  Na caixa de diálogo **Propriedades do Trabalho –**_job\_name_, na lista **Categoria**, selecione a categoria de trabalho à qual você deseja atribuí-lo.  
+5.  Na caixa de diálogo **Propriedades do Trabalho –** _job\_name_, na lista **Categoria**, selecione a categoria de trabalho à qual você deseja atribuí-lo.  
   
 6.  Clique em **OK**.  
   

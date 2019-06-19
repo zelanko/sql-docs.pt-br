@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 34f07a3b0518e202cbbcba0f15d7782da56921d4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728587"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Processar inserções, atualizações e exclusões
@@ -34,7 +34,7 @@ ms.locfileid: "65728587"
  Na consulta de exemplo que recupera dados de alteração, a função **cdc.fn_cdc_get_net_changes_<capture_instance>** retorna somente a coluna de metadados chamada **__$operation**. Esta coluna de metadados contém um valor ordinal que indica qual operação causou a alteração.  
   
 > [!NOTE]  
->  Para obter mais informações sobre a consulta que usa chamadas da função **cdc.fn_cdc_get_net_changes_<capture_instance>**, consulte [Criar a função para recuperar os dados de alteração](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md).  
+>  Para obter mais informações sobre a consulta que usa chamadas da função **cdc.fn_cdc_get_net_changes_<capture_instance>** , consulte [Criar a função para recuperar os dados de alteração](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md).  
   
  Corresponder um valor ordinal a sua operação correspondente não é tão fácil quanto usar um mnemônico da operação. Por exemplo, 'D' pode representar facilmente uma operação de exclusão e 'I' representar uma operação de inserção. A consulta de exemplo criada no tópico, [Criando a função para recuperar os dados de alteração](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md), faz essa conversão de um valor ordinal para um valor de cadeia de caracteres amigável que retorna uma nova coluna. O seguinte segmento de código mostra esta conversão:  
   

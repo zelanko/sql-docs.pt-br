@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 11414e0a669ea3169a610c98740b3fd35ff4e751
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727662"
 ---
 # <a name="ftp-task"></a>Tarefa FTP
@@ -86,7 +86,7 @@ ms.locfileid: "65727662"
   
 ### <a name="options"></a>Opções  
  **FtpConnection**  
- Selecione um gerenciador de conexões FTP existente ou clique em \<**Nova conexão…**> para criar um gerenciador de conexões.  
+ Selecione um gerenciador de conexões FTP existente ou clique em \<**Nova conexão…** > para criar um gerenciador de conexões.  
   
 > [!IMPORTANT]  
 >  O gerenciador de conexões de FTP dá suporte apenas para autenticação anônima e autenticação básica. Ele não suporta a Autenticação do Windows.  
@@ -149,13 +149,13 @@ ms.locfileid: "65727662"
   
 #### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **RemoteVariable**  
- Selecione uma variável definida pelo usuário existente ou clique em \<**Nova variável...**> para criar uma variável definida pelo usuário.  
+ Selecione uma variável definida pelo usuário existente ou clique em \<**Nova variável...** > para criar uma variável definida pelo usuário.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Adicionar variável  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- Selecione um gerenciador de conexões FTP existente ou clique em \<**Nova conexão…**> para criar um gerenciador de conexões.  
+ Selecione um gerenciador de conexões FTP existente ou clique em \<**Nova conexão…** > para criar um gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de Conexões de FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Editor do Gerenciador de Conexões de FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
@@ -163,13 +163,13 @@ ms.locfileid: "65727662"
   
 #### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **LocalVariable**  
- Selecione uma variável definida pelo usuário existente ou clique em \<**Nova variável...**> para criar uma variável.  
+ Selecione uma variável definida pelo usuário existente ou clique em \<**Nova variável...** > para criar uma variável.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Adicionar variável  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- Selecione um gerenciador de conexões de arquivos existente ou clique em \<**Nova conexão…**> para criar um gerenciador de conexões.  
+ Selecione um gerenciador de conexões de arquivos existente ou clique em \<**Nova conexão…** > para criar um gerenciador de conexões.  
   
  **Tópicos relacionados**: [Gerenciador de Conexões de Arquivos Simples](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   

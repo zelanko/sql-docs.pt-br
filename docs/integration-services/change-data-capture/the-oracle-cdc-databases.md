@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a4743cd96f3075915bb2ed1071f781e1787cf9b6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728512"
 ---
 # <a name="the-oracle-cdc-databases"></a>Os bancos de dados Oracle CDC
@@ -116,18 +116,18 @@ ms.locfileid: "65728512"
 |----------|-------------|---------|---------|------------|-----------------|  
 |rastreamento|Falso|-|-|Falso|Os valores disponíveis são:<br /><br /> True<br /><br /> Falso<br /><br /> on<br /><br /> off|  
 |cdc_update_state_interval|10|1|120|Falso|O tamanho (em Kbytes) de partes de memória alocadas para uma transação (uma transação pode alocar mais de uma parte). Consulte a coluna memory_limit na tabela [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) .|  
-|target_max_batched_transactions|100|1|1.000|True|O número máximo de transações do Oracle que podem ser processadas como uma transação na atualização de tabelas do SQL Server CT.|  
+|target_max_batched_transactions|100|1|1\.000|True|O número máximo de transações do Oracle que podem ser processadas como uma transação na atualização de tabelas do SQL Server CT.|  
 |target_idle_lsn_update_interval|10|0|1|Falso|O intervalo (em segundos) para atualizar a tabela **lsn_time_mapping** quando as tabelas capturadas não têm nenhuma atividade.|  
 |trace_retention_period|24|1|24*31|Falso|A quantidade de tempo (em horas para manter mensagens na tabela de rastreamento).|  
 |sql_reconnect_interval|2|2|3600|Falso|A quantidade de tempo (em segundos) a esperar antes de reconectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este intervalo é usado além do tempo limite de conexão do cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |sql_reconnect_limit|-1|-1|-1|Falso|O número máximo de reconexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O padrão -1 significa que o processo tenta se reconectar até parar.|  
 |cdc_restart_limit|6|-1|3600|Falso|Na maioria dos casos, o serviço CDC reinicia automaticamente uma instância CDC terminada de maneira anormal. Esta propriedade define depois de quantas falhas por hora o serviço para reiniciar a instância. O valor -1 significa que a instância sempre deve ser reiniciada.<br /><br /> O Serviço retorna para reiniciar a instância depois de qualquer atualização da tabela de configuração.|  
-|cdc_memory_report|0|0|1.000|Falso|Se o valor do parâmetro foi alterado, a Instância CDC imprimirá seu relatório de memória na tabela de rastreamento.|  
+|cdc_memory_report|0|0|1\.000|Falso|Se o valor do parâmetro foi alterado, a Instância CDC imprimirá seu relatório de memória na tabela de rastreamento.|  
 |target_command_timeout|600|1|3600|Falso|O tempo limite de comando ao trabalhar com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |source_character_set|-|-|-|True|Pode ser definido como uma codificação de Oracle específica a ser usada em vez da página de código de banco de dados Oracle. Isto pode ser útil quando a codificação real que os dados de caractere estão usando é diferente de uma expressa pela página de código de banco de dados Oracle.|  
 |source_error_retry_interval|30|1|3600|Falso|Usado antes de tentar novamente vários erros como erro de conexão ou falta temporária de sincronização entre tabelas do sistema.|  
-|source_prefetch_size|100|1|10.000|True|Tamanho do lote de pré-busca.|  
-|source_max_tables_in_query|100|1|10.000|True|Número máximo de tabelas na cláusula WHERE antes de alternar para a leitura do log do Oracle sem filtragem de tabela.|  
+|source_prefetch_size|100|1|10\.000|True|Tamanho do lote de pré-busca.|  
+|source_max_tables_in_query|100|1|10\.000|True|Número máximo de tabelas na cláusula WHERE antes de alternar para a leitura do log do Oracle sem filtragem de tabela.|  
 |source_read_retry_interval|2|1|3600|Falso|A quantidade de tempo que a origem aguarda antes de tentar ler os logs de transação do Oracle no EOF novamente.|  
 |source_reconnect_interval|30|1|3600|Falso|Quanto tempo aguardar (em segundos) antes de tentar reconectar-se ao banco de dados de origem.|  
 |source_reconnect_limit|-1|-1||Falso|O número máximo de reconexões do banco de dados de origem. O padrão -1 significa que o processo tenta se reconectar até ser parado.|  

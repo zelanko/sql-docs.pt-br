@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f673ea96167b05326519bb9fe04345a87c81fd3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729169"
 ---
 # <a name="ssis-catalog"></a>Catálogo do SSIS
@@ -126,7 +126,7 @@ ms.locfileid: "65729169"
   
  Você pode atualizar ou reimplantar um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] implantando-o com o mesmo nome na mesma pasta do catálogo. Por padrão, cada vez que você reimplanta um projeto, o catálogo **SSISDB** retém a versão anterior do projeto. Para manter o tamanho dos dados de operações, o **Trabalho de Manutenção do Servidor SSIS** é usado para remover versões antigas de projetos.  
  
-Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o logon do SQL Server **##MS_SSISServerCleanupJobLogin##**. Esse logon é apenas para uso interno do SSIS.
+Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o logon do SQL Server **##MS_SSISServerCleanupJobLogin##** . Esse logon é apenas para uso interno do SSIS.
   
  As propriedades de catálogo **SSISDB** a seguir definem como este trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent se comporta. Você pode exibir e modificar as propriedades usando a caixa de diálogo **Propriedades do Catálogo** ou usando [catalog.catalog_properties &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) e [catalog.configure_catalog &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15b9f9203075734dd84d7b601574f66bc401e700
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066794"
 ---
 # <a name="process-partitions-in-the-workspace-database-ssas-tabular"></a>Processar partições no banco de dados de espaço de trabalho (SSAS Tabular)
@@ -40,6 +40,6 @@ ms.locfileid: "66066794"
   
 ## <a name="see-also"></a>Consulte também  
  [Partições &#40;SSAS de Tabela&#41;](partitions-ssas-tabular.md)   
- [Criar e gerenciar partições no banco de dados de workspace &amp;#40;SSAS de Tabela&amp;#41;](workspace-database-ssas-tabular.md)  
+ [Criar e gerenciar partições no banco de dados de workspace &#40;SSAS de Tabela&#41;](workspace-database-ssas-tabular.md)  
   
   

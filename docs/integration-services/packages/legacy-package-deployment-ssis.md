@@ -33,10 +33,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5a9b49b743ed95766bfbd8d310bba40c6bfe396
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65719972"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Implantação de pacote herdado (SSIS)
@@ -499,7 +499,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  Clique com o botão direito do mouse no projeto e clique em **Propriedades**.  
   
-3.  Na caixa de diálogo **Páginas de Propriedades do \<project name>**, clique em **Utilitário de Implantação**.  
+3.  Na caixa de diálogo **Páginas de Propriedades do \<project name>** , clique em **Utilitário de Implantação**.  
   
 4.  Para atualizar as configurações do pacote quando os pacotes são implantados, defina **AllowConfigurationChanges** como **True**.  
   

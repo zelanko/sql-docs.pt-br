@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2ba2ae5f22967530a93def3d888b35cc5847ddb7
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946538"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Quais são as funções do banco de dados SQL?
@@ -77,7 +77,7 @@ Funcionam em um valor único e retornam um valor único. As funções escalares 
   
  As funções que usam entradas de não caracteres e retornam uma cadeia de caracteres usam a ordenação padrão do banco de dados atual para a saída.  
   
- As funções que usam várias entradas de cadeia de caracteres e retornam uma cadeia de caracteres usam as regras de precedência de ordenação para definir a ordenação da cadeia de caracteres de saída. Para obter mais informações, consulte [Precedência de ordenação &#40;Transact-SQL &#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
+ As funções que usam várias entradas de cadeia de caracteres e retornam uma cadeia de caracteres usam as regras de precedência de ordenação para definir a ordenação da cadeia de caracteres de saída. Para obter mais informações, consulte [Precedência de ordenação &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   

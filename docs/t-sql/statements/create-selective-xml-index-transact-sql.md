@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d24a66ce59b3908a04e3ab7719265fbef3c96f58
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503215"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
@@ -112,9 +112,9 @@ identifier
  *xml_column_name*  
  Nome da coluna XML que contém os caminhos a serem indexados.  
   
- [WITH XMLNAMESPACES **(**\<xmlnamespace_list>**)**] É a lista de namespaces usados pelos caminhos a serem indexados. Para obter informações sobre a sintaxe da cláusula WITH XMLNAMESPACES, veja [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)** ] É a lista de namespaces usados pelos caminhos a serem indexados. Para obter informações sobre a sintaxe da cláusula WITH XMLNAMESPACES, veja [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
   
- FOR **(**\<promoted_node_path_list>**)** É a lista de caminhos a serem indexados com dicas de otimização opcionais. Para obter informações sobre os caminhos e as dicas de otimização que você pode especificar na instrução CREATE ou ALTER, consulte [Especificar caminhos e dicas de otimização para índices XML seletivos](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
+ FOR **(** \<promoted_node_path_list> **)** É a lista de caminhos a serem indexados com dicas de otimização opcionais. Para obter informações sobre os caminhos e as dicas de otimização que você pode especificar na instrução CREATE ou ALTER, consulte [Especificar caminhos e dicas de otimização para índices XML seletivos](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
   
  WITH *\<index_options>* Para obter informações sobre as opções de índice, confira [CREATE XML INDEX &#40;índices XML seletivos&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   

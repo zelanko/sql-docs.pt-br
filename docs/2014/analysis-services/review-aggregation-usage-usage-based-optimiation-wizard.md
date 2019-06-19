@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a58f7f8620924d4f707fe61c45ae87e19737471f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070165"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>Verificar Uso de Agregação (Assistente de Otimização com Base no Uso)

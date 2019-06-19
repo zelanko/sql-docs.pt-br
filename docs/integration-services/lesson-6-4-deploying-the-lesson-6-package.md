@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4c843fa7af8e3390e820714886b7988edab878d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65720822"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Lição 6-4: Implantar o pacote da Lição 6
@@ -39,7 +39,7 @@ Nesta tarefa, você:
   
 1.  Selecione **Iniciar** > **Todos os Programas** > **Microsoft SQL Server 2017** e, em seguida, selecione **SQL Management Studio**.  
   
-2.  Na caixa de diálogo **Conectar-se ao Servidor**, verifique as configurações padrão e selecione **Conectar**. Para se conectar, o nome do **Servidor** deve ser o nome do computador em que o SQL Server está instalado. Se o **Mecanismo de Banco de Dados** for uma instância nomeada, o nome do **Servidor** deverá ser o nome da instância no formato *\<nome_do_computador>\\\<nome_da_instância>*. 
+2.  Na caixa de diálogo **Conectar-se ao Servidor**, verifique as configurações padrão e selecione **Conectar**. Para se conectar, o nome do **Servidor** deve ser o nome do computador em que o SQL Server está instalado. Se o **Mecanismo de Banco de Dados** for uma instância nomeada, o nome do **Servidor** deverá ser o nome da instância no formato *\<nome_do_computador>\\\<nome_da_instância>* . 
   
 3.  No **Pesquisador de Objetos**, expanda **Catálogos dos Integration Services**.  
   
@@ -97,7 +97,7 @@ Quando você fecha o Assistente de conversão de projeto do Integration Services
   
 ## <a name="create-and-populate-a-new-sample-data-folder"></a>Criar e popular uma nova pasta de dados de exemplo  
   
-1.  No **Windows Explorer**, no nível da raiz da unidade (por exemplo, **C:\\**), crie uma pasta chamada **Dados de Exemplo Dois**.  
+1.  No **Windows Explorer**, no nível da raiz da unidade (por exemplo, **C:\\** ), crie uma pasta chamada **Dados de Exemplo Dois**.  
   
 2.  Abra a pasta **Dados de Exemplo** em [Pré-requisitos da Lição 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites) e copie qualquer um dos três dos arquivos de exemplo.  
   

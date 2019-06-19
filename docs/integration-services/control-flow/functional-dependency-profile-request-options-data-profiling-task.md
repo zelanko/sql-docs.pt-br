@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b75355aec1c0461f1f0b5b5938ec931de4820c2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727648"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Dependência Funcional (tarefa Criação de Perfil de Dados)
@@ -37,14 +37,14 @@ ms.locfileid: "65727648"
   
  Para o lado determinante, é possível especificar uma coluna ou um conjunto de colunas na propriedade **DeterminantColumns** . Por exemplo, considere uma tabela de amostra com as colunas A, B e C. Sendo assim, as seguintes seleções são feitas para a propriedade **DeterminantColumns** :  
   
--   Ao selecionar o curinga **(\*)**, a tarefa Criação de Perfil de Dados testa cada coluna como lado determinante da dependência.  
+-   Ao selecionar o curinga **(\*)** , a tarefa Criação de Perfil de Dados testa cada coluna como lado determinante da dependência.  
   
 -   Ao selecionar o curinga **(\*)** e outra(s) coluna(s), a tarefa Criação de Perfil de Dados testa cada combinação de colunas como lado determinante da dependência. Por exemplo, considere uma tabela de exemplo com as colunas A, B e C. Se forem especificados **(\*)** e a coluna C como valor da propriedade **DeterminantColumns**, a tarefa Criação de Perfil de Dados testará as combinações (A, C) e (B, C) como lado determinante da dependência.  
   
- Para o lado dependente, é possível especificar uma única coluna ou o curinga **(\*)** na propriedade **DependentColumn**. Quando você seleciona o curinga **(\*)**, a tarefa Criação de Perfil de Dados testa a coluna lateral ou conjunto de colunas determinante com relação a cada coluna.  
+ Para o lado dependente, é possível especificar uma única coluna ou o curinga **(\*)** na propriedade **DependentColumn**. Quando você seleciona o curinga **(\*)** , a tarefa Criação de Perfil de Dados testa a coluna lateral ou conjunto de colunas determinante com relação a cada coluna.  
   
 > [!NOTE]  
->  Se selecionar **(\*)**, essa opção poderá resultar em um grande número de computações e diminuir o desempenho da tarefa. Entretanto, se a tarefa encontrar um subconjunto que atenda ao limite de uma dependência funcional, a tarefa não analisará combinações adicionais. Por exemplo, na tabela de exemplo descrita acima, se a tarefa determinar que a coluna C é uma coluna determinante, a tarefa não continuará analisando os candidatos compostos.  
+>  Se selecionar **(\*)** , essa opção poderá resultar em um grande número de computações e diminuir o desempenho da tarefa. Entretanto, se a tarefa encontrar um subconjunto que atenda ao limite de uma dependência funcional, a tarefa não analisará combinações adicionais. Por exemplo, na tabela de exemplo descrita acima, se a tarefa determinar que a coluna C é uma coluna determinante, a tarefa não continuará analisando os candidatos compostos.  
   
 ## <a name="request-properties-options"></a>Opções de Propriedades da Solicitação  
  Para uma **Solicitação de Perfil de Dependência Funcional**, o painel **Propriedades da Solicitação** exibe os seguintes grupos de opções:  

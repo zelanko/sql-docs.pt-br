@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 3f4dc9a023b74c104e232546ec6c4f8c2bd93919
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65103253"
 ---
 # <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Como fazer: Adicionar condições de teste a testes de unidade do SQL Server

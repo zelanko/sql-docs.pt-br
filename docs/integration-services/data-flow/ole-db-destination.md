@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dc2b3a1f77c7d0f2f00c1a08f27c27887cc4b73f
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65802351"
 ---
 # <a name="ole-db-destination"></a>Destino OLE DB
@@ -96,7 +96,7 @@ ms.locfileid: "65802351"
   
 |Opção de carregamento rápido|Descrição|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Especifica o tamanho em quilobytes a ser inserido. Esta opção tem o formato **KILOBYTES_PER_BATCH** = \<valor inteiro positivo**>**.|  
+|KILOBYTES_PER_BATCH|Especifica o tamanho em quilobytes a ser inserido. Esta opção tem o formato **KILOBYTES_PER_BATCH** = \<valor inteiro positivo **>** .|  
 |FIRE_TRIGGERS|Especifica se os gatilhos devem ser disparados na tabela de inserção. A opção tem o formato **FIRE_TRIGGERS**. A presença da opção indica que os gatilhos irão disparar.|  
 |ORDER|Especifica como os dados de entrada são classificados. A opção tem o formato ORDER \<nome da coluna> ASC&#124;DESC. Qualquer número de colunas pode ser listado e a inclusão da ordem de classificação é opcional. Se a ordem de classificação for omitida, a operação de inserção assumirá que os dados não estão classificados.<br /><br /> Observação: o desempenho pode ser otimizado se você usar a opção ORDER para classificar os dados de entrada de acordo com o índice clusterizado da tabela.|  
   

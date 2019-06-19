@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64e04754fd4bc4a404854eb5260daddf543e3c2c
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65979966"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regras de nomenclatura de objeto (Analysis Services)
@@ -82,7 +82,7 @@ ms.locfileid: "65979966"
 |--------------------------------------------------|----------------------------------|  
 |MOLAP (todas as versões)|Não|  
 |Tabela - 1050|Não|  
-|Tabela - 1100|Não |  
+|Tabela - 1100|Não|  
 |Tabela – 1130 e superior|Sim|  
   
  Bancos de dados podem ter um ModelType padrão. O padrão é equivalente a multidimensional e, portanto, não dá suporte ao uso de caracteres reservados em nomes de colunas.  

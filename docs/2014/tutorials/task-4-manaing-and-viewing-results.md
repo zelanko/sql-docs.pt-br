@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2df7517a8043269efe40d21b112100edaf9e847f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489452"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Tarefa 4: Gerenciando e exibindo resultados
@@ -72,7 +72,7 @@ ms.locfileid: "65489452"
   
 20. Alterne para o **corrigido** guia.  
   
-21. Observe que **estado** para o registro que tem **City** como **Los Angeles** é definido como **CA** agora. Observe a **motivo** campo é que **corrigido pela regra 'City-State Rule'**.  
+21. Observe que **estado** para o registro que tem **City** como **Los Angeles** é definido como **CA** agora. Observe a **motivo** campo é que **corrigido pela regra 'City-State Rule'** .  
   
      ![Correção de regra City-State](../../2014/tutorials/media/et-managingandviewingresults-04.jpg "City-State correção de regra")  
   
