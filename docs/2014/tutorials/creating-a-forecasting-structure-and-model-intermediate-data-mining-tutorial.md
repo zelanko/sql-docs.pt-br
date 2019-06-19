@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204814"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>Criando uma estrutura e um modelo de previsão (Tutorial de mineração de dados intermediário)
@@ -28,7 +28,7 @@ ms.locfileid: "63204814"
   
 3.  No **Selecionar método de definição** página, verifique **de warehouse existente de banco de dados ou dados relacional** está selecionado e, em seguida, clique em **próxima**.  
   
-4.  Sobre o **criar a estrutura de mineração de dados** página, em **qual técnica de mineração de dados você deseja usar?**, selecione **Microsoft Time Series**e, em seguida, clique em  **Próxima**.  
+4.  Sobre o **criar a estrutura de mineração de dados** página, em **qual técnica de mineração de dados você deseja usar?** , selecione **Microsoft Time Series**e, em seguida, clique em  **Próxima**.  
   
 5.  Sobre o **Selecionar exibição da fonte de dados** página, em **modos de exibição de fonte de dados disponíveis**, selecione **SalesByRegion**.  
   

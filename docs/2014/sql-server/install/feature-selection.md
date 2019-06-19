@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b516d76c1c814cb70215bfe37f3cddb60e614d5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095217"
 ---
 # <a name="feature-selection"></a>Seleção de recursos
@@ -89,7 +89,7 @@ ms.locfileid: "66095217"
 ## <a name="installing-adventureworks-sample-databases"></a>Instalando bancos de dados de exemplo AdventureWorks  
  Por padrão, os bancos de dados de exemplo e o código de exemplo não são instalados como parte da instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre como instalar bancos de dados de exemplo e código de exemplo, consulte o [Microsoft SQL Server Community Projects & Samples](https://go.microsoft.com/fwlink/?LinkId=87843) (https://go.microsoft.com/fwlink/?LinkId=87843).  
   
- Informações adicionais sobre exemplos estarão disponíveis depois que o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for instalado. Dos **inicie** menu, clique em **todos os programas**, clique em **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, clique em **documentação e tutoriais** e, em seguida, clique em  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visão geral dos exemplos**.  
+ Informações adicionais sobre exemplos estarão disponíveis depois que o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for instalado. Dos **inicie** menu, clique em **todos os programas**, clique em **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** , clique em **documentação e tutoriais** e, em seguida, clique em  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visão geral dos exemplos**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Edições e componentes do SQL Server 2014](../editions-and-components-of-sql-server-2016.md)  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a249a83aba62c7881be024caa3931cb5ad07204
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083290"
 ---
 # <a name="neural-network-model-query-examples"></a>Neural Network Model Query Examples
@@ -181,7 +181,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ###  <a name="bkmk_Query5"></a> Consulta de exemplo 5: Criando uma previsão singleton  
  A maneira mais fácil de criar uma consulta de previsão em um modelo de rede neural é usar o Construtor de Consultas de Previsão, disponível na guia **Previsão de Mineração** do Designer de Mineração de Dados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Procure o modelo no Visualizador de Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] para filtrar atributos de interesse e exibir novas tendências e, em seguida, alterne para a guia **Previsão de Mineração** para criar uma consulta e prever novos valores para essas tendências.  
   
- Por exemplo, você pode procurar o modelo de call center para exibir as correlações entre os volumes de pedidos e outros atributos. Para fazer isso, abra o modelo no visualizador e, para **entrada**, selecione  **\<todos os >**.  Em seguida, para **Saída**, selecione **Número de Pedidos**. Para **Valor 1**, selecione o intervalo que representa a maioria dos pedidos e, para **Valor 2**, selecione o intervalo que representa menos pedidos. Você poderá ver rapidamente todos os atributos que o modelo correlaciona com o volume de pedidos.  
+ Por exemplo, você pode procurar o modelo de call center para exibir as correlações entre os volumes de pedidos e outros atributos. Para fazer isso, abra o modelo no visualizador e, para **entrada**, selecione  **\<todos os >** .  Em seguida, para **Saída**, selecione **Número de Pedidos**. Para **Valor 1**, selecione o intervalo que representa a maioria dos pedidos e, para **Valor 2**, selecione o intervalo que representa menos pedidos. Você poderá ver rapidamente todos os atributos que o modelo correlaciona com o volume de pedidos.  
   
  Ao procurar os resultados no visualizador, você descobre que certos dias da semana tem baixos volumes de pedidos e que um aumento no número de operadores parece estar correlacionado às vendas mais altas. Você poderia usar uma consulta de previsão no modelo para testar uma hipótese "e se" e perguntar se o aumento do número de operadores de nível 2 em um dia de baixo volume aumentaria os pedidos. Para fazer isso, crie uma consulta como a seguinte:  
   

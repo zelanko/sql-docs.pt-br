@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4a29245c790f97d92529ff2bf1e100675b3c9530
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726690"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>Fornecer uma consulta de OData Source em tempo de execução
@@ -32,7 +32,7 @@ ms.locfileid: "65726690"
 ## <a name="provide-the-query-as-a-parameter"></a>Fornecer a consulta como um parâmetro  
  O procedimento a seguir mostra como expor a consulta usada por um componente de OData Source como um parâmetro do pacote.  
   
-1.  Clique com o botão direito do mouse em **Tarefa de Fluxo de Dados** e selecione a opção **Parametrizar...**.  
+1.  Clique com o botão direito do mouse em **Tarefa de Fluxo de Dados** e selecione a opção **Parametrizar...** .  
   
 2.  No diálogo **Parametrizar**, selecione **[\<Nome do Componente de OData Source].[Consulta]** para **Propriedade**.  
   
