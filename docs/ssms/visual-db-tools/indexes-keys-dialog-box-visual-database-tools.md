@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fb350568200226585f4c3138224e65816e617780
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096667"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices – Chaves (Visual Database Tools)
@@ -57,7 +57,7 @@ Quando expandida, mostra os campos de propriedade de **Nome** e **Descrição**.
 Mostra o nome da chave ou índice. Quando um novo índice é criado ele recebe um nome padrão com base na tabela da janela ativa no Designer de tabelas. O nome pode ser alterado a qualquer momento.  
   
 **Descrição**  
-Fornece um local para a descrição da chave ou do índice. Para escrever uma descrição mais detalhada, clique em **Descrição** e, em seguida, clique no botão de reticências (**…**) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
+Fornece um local para a descrição da chave ou do índice. Para escrever uma descrição mais detalhada, clique em **Descrição** e, em seguida, clique no botão de reticências ( **…** ) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
   
 **Categoria do Designer de Tabelas**  
 Quando expandida, mostra as informações para **Criar como Clusterizado**.  
@@ -66,7 +66,7 @@ Quando expandida, mostra as informações para **Criar como Clusterizado**.
 Faça com que a chave ou índice fiquem clusterizados. Somente um índice clusterizado é permitido em uma tabela. Os dados de uma tabela são armazenados na ordem do índice clusterizado. Para obter mais informações, consulte [Criar índices clusterizados](../../relational-databases/indexes/create-clustered-indexes.md) e [Criar índices não clusterizados](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
 **Especificação de Espaço de Dados**  
-Quando expandida, mostra informações de **(Tipo de Espaço de Dados)**, **Grupo de arquivos ou Nome de esquema de partição**e **Lista de Colunas da Partição**.  
+Quando expandida, mostra informações de **(Tipo de Espaço de Dados)** , **Grupo de arquivos ou Nome de esquema de partição**e **Lista de Colunas da Partição**.  
   
 **(Tipo de Espaço de Dados)**  
 Indica se o índice ou a chave pertence a um grupo de arquivo ou esquema de partição.  

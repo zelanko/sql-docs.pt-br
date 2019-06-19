@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5eecc52bb683f19582a539992b0668d3fe6e175
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014515"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>Esquemas XSD anotados em SQLXML 4.0
@@ -46,9 +46,9 @@ ms.locfileid: "66014515"
 ## <a name="other-resources"></a>Outros recursos  
  Você pode encontrar mais informações sobre as linguagens XSD (XML Schema Definition), XPath (XML Path) e XSLT (Linguagem XSL Transformations) nos seguintes sites:  
   
--   Esquema XML parte 0: Instruções elementares, W3C (recomendação http://www.w3.org/TR/xmlschema-0/)  
+-   Esquema XML parte 0: Instruções elementares, W3C (recomendaçãohttp://www.w3.org/TR/xmlschema-0/)  
   
--   Esquema XML parte 1: Estruturas, W3C (recomendação http://www.w3.org/TR/xmlschema-1/)  
+-   Esquema XML parte 1: Estruturas, W3C (recomendaçãohttp://www.w3.org/TR/xmlschema-1/)  
   
 -   Esquema XML parte 2: Datatypes, W3C recomendação (http://www.w3.org/TR/xmlschema-2/)  
   

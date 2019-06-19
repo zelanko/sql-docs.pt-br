@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068219"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>Especificar Critérios de Consulta (Assistente de Otimização com Base no Uso)
@@ -49,7 +49,7 @@ ms.locfileid: "66068219"
 >  Se a **Data de início** não for selecionada, todas as consultas no log de consultas antes ou na data e hora especificadas para essa opção serão consideradas.  
   
  **Usuários**  
- Filtra consultas no log de consultas com base em um conjunto de usuários especificado. Clique no botão de reticências (**...**) para exibir a caixa de diálogo **Seleção de Usuários** e escolher os usuários nos quais filtrar consultas. Para obter mais informações sobre a caixa de diálogo **Seleção de Usuários**, consulte [Caixa de diálogo Seleção de Usuários &#40;Analysis Services – Dados Multidimensionais&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md).  
+ Filtra consultas no log de consultas com base em um conjunto de usuários especificado. Clique no botão de reticências ( **...** ) para exibir a caixa de diálogo **Seleção de Usuários** e escolher os usuários nos quais filtrar consultas. Para obter mais informações sobre a caixa de diálogo **Seleção de Usuários**, consulte [Caixa de diálogo Seleção de Usuários &#40;Analysis Services – Dados Multidimensionais&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Consultas mais frequentes**  
  Filtra consultas no log de consultas com base na porcentagem mais alta de consultas distintas executadas com maior frequência para as partições selecionadas. Escolha ou digite um valor percentual na caixa de texto.  

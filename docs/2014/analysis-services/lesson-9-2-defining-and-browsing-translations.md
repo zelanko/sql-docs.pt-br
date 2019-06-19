@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a685158e83569cd7d53e4b7da9edf3fa38436109
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078206"
 ---
 # <a name="defining-and-browsing-translations"></a>Definindo e procurando traduções
@@ -44,9 +44,9 @@ ms.locfileid: "66078206"
   
 6.  Na linha para o **legenda** de objeto para o **nome do mês** de atributo, digite `Mes del Año` no **Espanhol (Espanha)** coluna de tradução e `Mois d'Année` no **Francês (França)** coluna de tradução.  
   
-     Observe que, quando você insere essas traduções, um sinal de reticências (**...** ) é exibida. Ao clicar nas reticências, você pode especificar uma coluna na tabela subjacente que fornece as traduções para cada membro da hierarquia do atributo.  
+     Observe que, quando você insere essas traduções, um sinal de reticências ( **...** ) é exibida. Ao clicar nas reticências, você pode especificar uma coluna na tabela subjacente que fornece as traduções para cada membro da hierarquia do atributo.  
   
-7.  Clique no botão de reticências (**...** ) para o **Espanhol (Espanha)** tradução para o **nome do mês** atributo.  
+7.  Clique no botão de reticências ( **...** ) para o **Espanhol (Espanha)** tradução para o **nome do mês** atributo.  
   
      A caixa de diálogo **Tradução de Dados de Atributo** é exibida.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66078206"
   
      ![Caixa de diálogo de tradução de dados do atributo](../../2014/tutorials/media/l9-translations-4.gif "caixa de diálogo tradução de dados de atributo")  
   
-9. Clique em **Okey**e, em seguida, clique no botão de reticências (**...** ) para o **francês (França)** tradução para o **nome do mês** atributo.  
+9. Clique em **Okey**e, em seguida, clique no botão de reticências ( **...** ) para o **francês (França)** tradução para o **nome do mês** atributo.  
   
 10. Na lista **Colunas de tradução** , selecione **FrenchMonthName**e clique em **OK**.  
   

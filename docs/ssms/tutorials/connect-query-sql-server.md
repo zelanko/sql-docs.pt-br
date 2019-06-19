@@ -1,5 +1,5 @@
 ---
-Title: conectar-se a uma instância do SQL Server e consultá-la usando o SSMS (SQL Server Management Studio)
+title: conectar-se a uma instância do SQL Server e consultá-la usando o SSMS (SQL Server Management Studio)
 description: Um tutorial de início rápido para conectar-se a uma instância do SQL Server usando o SQL Server Management Studio e executando consultas T-SQL básicas.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -12,12 +12,12 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 0300594d64bd1bc973cc5f1a0376ab8a325521ce
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 2cd8f0ad109f7ad780c78a8ee98afe40d14fba4c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66499429"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822805"
 ---
 # <a name="quickstart-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Início Rápido: conectar-se a uma instância do SQL Server e consultá-la usando o SSMS (SQL Server Management Studio)
 

@@ -17,10 +17,10 @@ ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 manager: craigg
 ms.openlocfilehash: 178068ee909369fa8559bdce284364630b7763f2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65094337"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
@@ -46,9 +46,9 @@ Para objetos menores, o armazenamento de BLOBs **varbinary(max)** no banco de da
 
 ## <a name="filestream-storage"></a>Armazenamento de FILESTREAM
 
-O armazenamento de FILESTREAM é implementado como uma coluna **varbinary(max)**, na qual os dados são armazenados como BLOBs no sistema de arquivos. Os tamanhos dos BLOBs são limitados apenas pelo tamanho do volume do sistema de arquivos. A limitação padrão de **varbinary(max)** de tamanhos de arquivos de 2 GB não se aplica a BLOBs que são armazenados no sistema de arquivos.  
+O armazenamento de FILESTREAM é implementado como uma coluna **varbinary(max)** , na qual os dados são armazenados como BLOBs no sistema de arquivos. Os tamanhos dos BLOBs são limitados apenas pelo tamanho do volume do sistema de arquivos. A limitação padrão de **varbinary(max)** de tamanhos de arquivos de 2 GB não se aplica a BLOBs que são armazenados no sistema de arquivos.  
   
-Para determinar que uma coluna deve armazenar dados no sistema de arquivos, especifique o atributo FILESTREAM em uma coluna **varbinary(max)**. Isso faz com que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazene todos os dados dessa coluna no sistema de arquivos, mas não no arquivo do banco de dados.  
+Para determinar que uma coluna deve armazenar dados no sistema de arquivos, especifique o atributo FILESTREAM em uma coluna **varbinary(max)** . Isso faz com que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazene todos os dados dessa coluna no sistema de arquivos, mas não no arquivo do banco de dados.  
   
 Os dados FILESTREAM devem ser armazenados em grupos de arquivos FILESTREAM. Um grupo de arquivos FILESTREAM é um grupo de arquivos especial que contém diretórios do sistema de arquivos em vez dos próprios arquivos. Esses diretórios do sistema de arquivos são chamados de *contêineres de dados*. Os contêineres de dados são a interface entre armazenamento [!INCLUDE[ssDE](../../includes/ssde-md.md)] e armazenamento de sistema de arquivos. 
 

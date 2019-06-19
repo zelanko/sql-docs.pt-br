@@ -13,10 +13,10 @@ ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 3a6e9206bb252d90a9bca498ffdc27ce507556c9
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64776006"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solucionar problemas de conectividade do PolyBase Kerberos
@@ -40,7 +40,7 @@ Primeiramente, é necessário entender o protocolo Kerberos em um alto nível. H
 1. O recurso protegido (HDFS, MR2, YARN, histórico de trabalhos etc.)
 1. Centro de distribuição de chaves (conhecido como um controlador de domínio no Active Directory)
 
-Cada recurso protegido do Hadoop é registrado no **KDC (Centro de Distribuição de Chaves)** com um único **SPN (Nome da Entidade de Serviço)** quando o Kerberos é configurado no cluster Hadoop. A meta é que o cliente obtenha um tíquete de usuário temporário, chamado **Tíquete de Concessão de Tíquete (TGT)**, para solicitar outro tíquete temporário, chamado **Tíquete de Serviço (ST)** ao KDC no SPN específico que se deseja acessar.  
+Cada recurso protegido do Hadoop é registrado no **KDC (Centro de Distribuição de Chaves)** com um único **SPN (Nome da Entidade de Serviço)** quando o Kerberos é configurado no cluster Hadoop. A meta é que o cliente obtenha um tíquete de usuário temporário, chamado **Tíquete de Concessão de Tíquete (TGT)** , para solicitar outro tíquete temporário, chamado **Tíquete de Serviço (ST)** ao KDC no SPN específico que se deseja acessar.  
 
 No PolyBase, quando uma autenticação é solicitada em qualquer recurso protegido por Kerberos, o handshake com quatro viagens de ida e volta a seguir ocorre:
 

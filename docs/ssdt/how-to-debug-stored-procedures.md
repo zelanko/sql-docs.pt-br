@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 727117a31fd1a2fc5f5a807de824a8ff61ebb5bd
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090203"
 ---
 # <a name="how-to-debug-stored-procedures"></a>Como fazer: Depurar Procedimentos Armazenados
@@ -57,7 +57,7 @@ Este exemplo mostra como criar e depurar um procedimento armazenado Transact\-SQ
   
 7.  Pressione a seta suspensa no botão de seta verde na barra de ferramentas do editor Transact\-SQL e selecione **Executar com Depurador** para executar a consulta com a depuração ativada.  
   
-8.  Como alternativa, você pode iniciar a depuração do Pesquisador de Objetos do SQL Server. Clique com o botão direito do mouse no procedimento armazenado **AddProduct** (localizado em **Local** -> **banco de dados TradeDev** -> **Programação** -> **Procedimentos Armazenados**). Selecione **Depurar Procedimento...**. Se o objeto exigir parâmetros, a caixa de diálogo **Depurar Procedimento** será exibida, com uma tabela contendo uma linha para cada parâmetro. Cada linha na tabela contém uma coluna para o nome do parâmetro e uma para o valor desse parâmetro. Insira valores para cada parâmetro e clique em OK.  
+8.  Como alternativa, você pode iniciar a depuração do Pesquisador de Objetos do SQL Server. Clique com o botão direito do mouse no procedimento armazenado **AddProduct** (localizado em **Local** -> **banco de dados TradeDev** -> **Programação** -> **Procedimentos Armazenados**). Selecione **Depurar Procedimento...** . Se o objeto exigir parâmetros, a caixa de diálogo **Depurar Procedimento** será exibida, com uma tabela contendo uma linha para cada parâmetro. Cada linha na tabela contém uma coluna para o nome do parâmetro e uma para o valor desse parâmetro. Insira valores para cada parâmetro e clique em OK.  
   
 9. Verifique se a janela **Locais** está aberta. Se não estiver, clique no menu **Depurar**, selecione **Janelas** e **Local**.  
   
