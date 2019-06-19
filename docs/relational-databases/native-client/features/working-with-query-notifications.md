@@ -23,10 +23,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23aadd055049052e3302e61e1303ccc5fa4cc62f
-ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66265457"
 ---
 # <a name="working-with-query-notifications"></a>Trabalhando com notificações de consulta
@@ -41,7 +41,7 @@ ms.locfileid: "66265457"
   
  `service=<service-name>[;(local database=<database> | broker instance=<broker instance>)]`  
   
- Por exemplo:   
+ Por exemplo:  
   
  `service=mySSBService;local database=mydb`  
   
@@ -85,7 +85,7 @@ CREATE SERVICE myService ON QUEUE myQueue
   
  A assinatura de notificação é sempre confirmada, independentemente do fato de a instrução ter sido executada em uma transação de usuário ou em uma confirmação automática ou se a transação na qual a instrução foi executada tiver sido confirmada ou revertida. A notificação do servidor é acionada mediante uma das seguintes condições inválidas de notificação: alteração dos dados subjacentes ou do esquema ou quando o tempo limite expira; a que ocorrer primeiro. Os registros de notificação são excluídos assim que são disparados. Consequentemente, em caso de recebimento de notificações, o aplicativo deve realizar uma nova assinatura caso queira obter mais atualizações.  
   
- Outra conexão ou thread pode verificar se há notificações na fila de destino. Por exemplo:   
+ Outra conexão ou thread pode verificar se há notificações na fila de destino. Por exemplo:  
   
 ```  
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   

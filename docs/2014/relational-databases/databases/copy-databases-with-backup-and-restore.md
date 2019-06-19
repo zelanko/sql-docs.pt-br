@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917463"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiar bancos de dados com backup e restauração
@@ -62,7 +62,7 @@ ms.locfileid: "62917463"
  Para evitar erros e consequências não intencionais, antes da operação de restauração, você pode usar o [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) tabela de histórico para descobrir os arquivos de log e banco de dados no backup que você planeja restaurar.  
   
 ## <a name="moving-the-database-files"></a>Movendo os arquivos do banco de dados  
- Se os arquivos que estão no backup do banco de dados não puderem ser restaurados no computador de destino pelas razões mencionadas anteriormente, será necessário mover os arquivos para um novo local enquanto estiverem sendo restaurados. Por exemplo:   
+ Se os arquivos que estão no backup do banco de dados não puderem ser restaurados no computador de destino pelas razões mencionadas anteriormente, será necessário mover os arquivos para um novo local enquanto estiverem sendo restaurados. Por exemplo:  
   
 -   Você deseja restaurar um banco de dados de backups criado no local padrão da versão anterior.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62917463"
  O nome de banco de dados que é fornecido explicitamente ao restaurar um banco de dados é usado, automaticamente, como o nome do novo banco de dados. Como o nome do banco de dados ainda não existe, é criado um novo usando os arquivos no backup.  
   
 ## <a name="when-upgrading-a-database-by-using-restore"></a>Ao atualizar um banco de dados usando a restauração  
- Ao restaurar backups de uma versão anterior, é útil saber com antecedência se o caminho (unidade e diretório) de cada catálogo de texto completo em um backup existe no computador de destino. Para listar os nomes lógicos e nomes físicos, caminho e nome de arquivo, de todos os arquivos de um backup, inclusive os arquivos de catálogo, use uma instrução RESTORE FILELISTONLY FROM *<backup_device>*. Para obter mais informações, veja [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).  
+ Ao restaurar backups de uma versão anterior, é útil saber com antecedência se o caminho (unidade e diretório) de cada catálogo de texto completo em um backup existe no computador de destino. Para listar os nomes lógicos e nomes físicos, caminho e nome de arquivo, de todos os arquivos de um backup, inclusive os arquivos de catálogo, use uma instrução RESTORE FILELISTONLY FROM *<backup_device>* . Para obter mais informações, veja [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).  
   
  Se o mesmo caminho não existir no computador de destino, você terá duas alternativas:  
   

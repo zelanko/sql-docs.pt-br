@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019227"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilidade de fórmula do DAX no modo DirectQuery 
@@ -107,7 +107,7 @@ Não há nenhuma função de conversão como na DAX, mas conversões implícitas
 -   Valores boolianos sempre são tratados como valores lógicos em comparações e quando usados com EXACT, AND, OR, &amp;&amp;ou ||.  
   
 **Conversão de cadeia de caracteres em booliano**  
-Na memória e modelos do DirectQuery, são permitidas conversões em valores boolianos destas cadeias de caracteres apenas: **""** (cadeia de caracteres vazia), **"true"**, **"false"**; onde uma cadeia de caracteres vazia conversões de valor falso.  
+Na memória e modelos do DirectQuery, são permitidas conversões em valores boolianos destas cadeias de caracteres apenas: **""** (cadeia de caracteres vazia), **"true"** , **"false"** ; onde uma cadeia de caracteres vazia conversões de valor falso.  
   
 As conversões no tipo de dados Boolean de qualquer outra cadeia de caracteres resultam em um erro.  
   

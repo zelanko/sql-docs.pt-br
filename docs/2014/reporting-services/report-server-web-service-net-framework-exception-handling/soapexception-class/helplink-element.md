@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bdd18641663003a1878fe0af0ac1d39a16eda1f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63046018"
 ---
 # <a name="helplink-element"></a>Elemento HelpLink
   O elemento **HelpLink** da propriedade **Detail** é uma cadeia de caracteres de URL gerada pelo servidor de relatório. A URL tem como destino uma página da Web gerenciada pela Ajuda e Suporte do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] e fornece ajuda adicional e artigos da base de dados de conhecimento sobre erros específicos ocorridos no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. A URL tem a seguinte sintaxe:  
   
- **http://** www.microsoft.com**/** produtos**/** ee**/** Transform. aspx **? EvtSrc**=_valor_**& EvtID**=_valor_**& ProdName** = _valor_**& ProdVer**=_valor_  
+ **http://** www.microsoft.com **/** produtos **/** ee **/** Transform. aspx **? EvtSrc**=_valor_ **& EvtID**=_valor_ **& ProdName** = _valor_ **& ProdVer**=_valor_  
   
  A tabela a seguir lista os argumentos da URL **HelpLink**.  
   

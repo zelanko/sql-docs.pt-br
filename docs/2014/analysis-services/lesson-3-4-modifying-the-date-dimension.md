@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 826d5b1079e9fcfd0d2ec7a9abd55937f2da1a22
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078796"
 ---
 # <a name="modifying-the-date-dimension"></a>Modificando a dimensão de data
@@ -64,7 +64,7 @@ ms.locfileid: "66078796"
   
 3.  Se a janela Propriedades não estiver aberta, abra-a e clique no botão **Ocultar Automaticamente** na barra de título para que ela permaneça aberta.  
   
-4.  Clique o **NameColumn** propriedade de campo na parte inferior da janela e, em seguida, clique no botão Procurar (**...** ) para abrir o **nome da coluna** caixa de diálogo.  
+4.  Clique o **NameColumn** propriedade de campo na parte inferior da janela e, em seguida, clique no botão Procurar ( **...** ) para abrir o **nome da coluna** caixa de diálogo.  
   
 5.  Selecione `SimpleDate` na parte inferior a **coluna de origem** e, em seguida, clique **Okey**.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "66078796"
   
 2.  No painel **Atributos** , clique no atributo **English Month Name** .  
   
-3.  Na janela **Propriedades** , clique no campo **KeyColumns** e clique no botão Procurar (**...**).  
+3.  Na janela **Propriedades** , clique no campo **KeyColumns** e clique no botão Procurar ( **...** ).  
   
 4.  Na caixa de diálogo **Colunas de Chaves** , na lista **Colunas Disponíveis** , selecione a coluna **CalendarYear**e clique no botão **>** .  
   
@@ -196,7 +196,7 @@ ms.locfileid: "66078796"
   
 6.  Clique em **OK**.  
   
-7.  Para definir a propriedade **NameColumn** do atributo **EnglishMonthName** , clique no campo **NameColumn** na janela Propriedades e clique no botão Procurar (**...**).  
+7.  Para definir a propriedade **NameColumn** do atributo **EnglishMonthName** , clique no campo **NameColumn** na janela Propriedades e clique no botão Procurar ( **...** ).  
   
 8.  No **nome da coluna** na caixa de **coluna de origem** lista, selecione `MonthName`e, em seguida, clique em **Okey**.  
   
@@ -206,15 +206,15 @@ ms.locfileid: "66078796"
   
 1.  No painel **Atributos** , clique no atributo **Calendar Quarter** .  
   
-2.  Na janela **Propriedades** , clique no campo **KeyColumns** e clique no botão Procurar (**...**).  
+2.  Na janela **Propriedades** , clique no campo **KeyColumns** e clique no botão Procurar ( **...** ).  
   
-3.  Na caixa de diálogo **Colunas de Chaves**, na lista **Colunas Disponíveis**, selecione a coluna **CalendarYear** e clique no botão **>**.  
+3.  Na caixa de diálogo **Colunas de Chaves**, na lista **Colunas Disponíveis**, selecione a coluna **CalendarYear** e clique no botão **>** .  
   
      Agora, as colunas **CalendarQuarter** e **CalendarYear** são exibidas na lista **Colunas de Chave** .  
   
 4.  Clique em **OK**.  
   
-5.  Para definir a propriedade **NameColumn** do atributo **Calendar Quarter** , clique no campo **NameColumn** na janela Propriedades e clique no botão Procurar (**...**).  
+5.  Para definir a propriedade **NameColumn** do atributo **Calendar Quarter** , clique no campo **NameColumn** na janela Propriedades e clique no botão Procurar ( **...** ).  
   
 6.  No **nome da coluna** na caixa de **coluna de origem** lista, selecione `CalendarQuarterDesc`e, em seguida, clique em **Okey**.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "66078796"
   
 1.  No painel **Atributos** , clique no atributo **Calendar Semester** .  
   
-2.  Na janela **Propriedades** , clique no campo **KeyColumns** e clique no botão Procurar (**...**).  
+2.  Na janela **Propriedades** , clique no campo **KeyColumns** e clique no botão Procurar ( **...** ).  
   
 3.  Na caixa de diálogo **Colunas de Chave** , na lista **Colunas Disponíveis** , selecione a coluna **CalendarYear**e clique no botão **>** .  
   
@@ -232,7 +232,7 @@ ms.locfileid: "66078796"
   
 4.  Clique em **OK**.  
   
-5.  Para definir a propriedade **NameColumn** do atributo **Calendar Semester** , clique no campo **NameColumn** na janela Propriedades e clique no botão Procurar (**...**).  
+5.  Para definir a propriedade **NameColumn** do atributo **Calendar Semester** , clique no campo **NameColumn** na janela Propriedades e clique no botão Procurar ( **...** ).  
   
 6.  No **nome da coluna** na caixa de **coluna de origem** lista, selecione `CalendarSemesterDesc`e, em seguida, clique em **Okey**.  
   
@@ -266,19 +266,19 @@ ms.locfileid: "66078796"
   
      Os membros da hierarquia de atributo **Calendar Semester** são classificados por seus valores chave. Em uma chave composta, a ordem das chaves de membro baseia-se primeiro no valor da primeira chave de membro e, depois, no valor da segunda chave de membro. Em outras palavras, os membros da hierarquia de atributo **Calendar Semester** são classificados primeiro por semestre e depois por ano.  
   
-3.  Na janela Propriedades, clique no botão Procurar (**...**) para alterar o valor da propriedade **KeyColumns** .  
+3.  Na janela Propriedades, clique no botão Procurar ( **...** ) para alterar o valor da propriedade **KeyColumns** .  
   
 4.  Na lista **Colunas de Chave** da caixa de diálogo **Colunas de Chave** , verifique se a opção **CalendarSemester** está selecionada e clique na seta para baixo para inverter a ordem dos membros dessa chave composta. Clique em **OK**.  
   
      Agora, os membros da hierarquia de atributo são classificados primeiro por ano e, depois, por semestre.  
   
-5.  Selecione **Calendar Quarter** no painel **Atributos** e clique no botão Procurar (**...**) da propriedade **KeyColumns** na janela Propriedades.  
+5.  Selecione **Calendar Quarter** no painel **Atributos** e clique no botão Procurar ( **...** ) da propriedade **KeyColumns** na janela Propriedades.  
   
 6.  Na lista **Colunas de Chave** da caixa de diálogo **Colunas de Chave** , verifique se o atributo **CalendarQuarter** está selecionado e clique na seta para baixo para inverter a ordem dos membros desta chave composta. Clique em **OK**.  
   
      Agora, os membros da hierarquia de atributo são classificados primeiro por ano e, depois, por trimestre.  
   
-7.  Selecione **English Month Name** no painel **Atributos** e clique no botão Procurar (**...**) da propriedade **KeyColumns** na janela Propriedades.  
+7.  Selecione **English Month Name** no painel **Atributos** e clique no botão Procurar ( **...** ) da propriedade **KeyColumns** na janela Propriedades.  
   
 8.  Na lista **Colunas de Chave** da caixa de diálogo **Colunas de Chave** , verifique se o atributo **EnglishMonthName** está selecionado e clique na seta para baixo para inverter a ordem dos membros dessa chave composta. Clique em **OK**.  
   

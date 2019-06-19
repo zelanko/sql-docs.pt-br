@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96e21edc6c7207c2325ee1a6a3385ef92cad42e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921170"
 ---
 # <a name="restore-database-general-page"></a>Restaurar banco de dados (página Geral)
@@ -40,7 +40,7 @@ ms.locfileid: "62921170"
   
 ## <a name="options"></a>Opções  
   
-### <a name="source"></a>Source  
+### <a name="source"></a>`Source`  
  As opções do painel **Restaurar de**identificam o local dos conjuntos de backup no banco de dados e os conjuntos de backups que você deseja restaurar.  
   
 |Termo|Definição|  

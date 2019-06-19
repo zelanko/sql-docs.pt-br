@@ -14,11 +14,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ce55668552be49eb708b02d79233c2888e2cf57e
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51511951"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63010161"
 ---
 # <a name="create-a-policy-based-management-policy"></a>Criar uma política do Gerenciamento Baseado em Políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "51511951"
   
 6.  Se você quiser habilitar a política assim que seja criado, marque a caixa de seleção **Habilitado** . Se o modo de avaliação for **Sob Demanda**, a caixa de seleção **Habilitado** não estará disponível.  
   
-7.  Na lista **Verificar condição** , selecione um das condições existentes ou selecione **Nova Condição**. Para editar uma condição, selecione a condição e clique nas reticências (**...**). Para obter mais informações, veja [Criar uma nova condição de Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) ou [Exibir ou modificar as propriedades de uma condição de Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md).  
+7.  Na lista **Verificar condição** , selecione um das condições existentes ou selecione **Nova Condição**. Para editar uma condição, selecione a condição e clique nas reticências ( **...** ). Para obter mais informações, veja [Criar uma nova condição de Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) ou [Exibir ou modificar as propriedades de uma condição de Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md).  
   
 8.  Na caixa **Em relação aos destinos** , selecione um ou mais tipos de destino para essa política. Só podem ser se aplicadas algumas condições e facetas a certos tipos de destinos. Os conjuntos de destino disponíveis aparecem na caixa associada. Expanda **Todo** para selecionar uma condição de filtragem para alguns tipos de destinos. Se nenhum destino for exibido nesta caixa, o escopo da condição de verificação será no nível de servidor.  
   

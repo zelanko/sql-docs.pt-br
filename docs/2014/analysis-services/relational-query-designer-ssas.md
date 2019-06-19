@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8063df9c748ca6838cd21b0a5daa249fdc49134c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070458"
 ---
 # <a name="relational-query-designer-ssas"></a>Designer de consulta relacional (SSAS)
@@ -247,7 +247,7 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- Clique no botão **Executar** (**!**). A tabela a seguir fornece um exemplo de `uspGetWhereUsedProductID` para os quais você fornece valores de parâmetros a **definir parâmetro de consulta** caixa de diálogo.  
+ Clique no botão **Executar** ( **!** ). A tabela a seguir fornece um exemplo de `uspGetWhereUsedProductID` para os quais você fornece valores de parâmetros a **definir parâmetro de consulta** caixa de diálogo.  
   
 |||  
 |-|-|  

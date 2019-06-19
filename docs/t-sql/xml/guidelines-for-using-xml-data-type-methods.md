@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 890e5d02f72f9af0d0609602e3815b872d870b45
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578126"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62928974"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Diretrizes para usar métodos de tipo de dados xml
 
@@ -70,11 +70,11 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 
 ## <a name="singleton-checks"></a>Verificações de singleton
 
-As etapas de local, os parâmetros de função e os operadores que exigem singletons retornarão um erro se o compilador não puder determinar se um singleton está garantido no momento da execução. Este problema costuma acontecer com dados não digitados. Por exemplo, a pesquisa de um atributo requer um elemento pai de singleton. Um ordinal que selecione um único nó pai é suficiente. A avaliação de uma combinação **node()**-**value()** para extrair valores de atributo pode não exigir a especificação ordinal. Isso é demonstrado no próximo exemplo.
+As etapas de local, os parâmetros de função e os operadores que exigem singletons retornarão um erro se o compilador não puder determinar se um singleton está garantido no momento da execução. Este problema costuma acontecer com dados não digitados. Por exemplo, a pesquisa de um atributo requer um elemento pai de singleton. Um ordinal que selecione um único nó pai é suficiente. A avaliação de uma combinação **node()** -**value()** para extrair valores de atributo pode não exigir a especificação ordinal. Isso é demonstrado no próximo exemplo.
 
 ### <a name="example-known-singleton"></a>Exemplo: singleton conhecido
 
-Neste exemplo, o método **nodes()** gera uma linha separada para cada elemento `<book>`. O método **value()**, avaliado em um nó `<book>`, extrai o valor de `@genre` e, sendo um atributo, é um singleton.
+Neste exemplo, o método **nodes()** gera uma linha separada para cada elemento `<book>`. O método **value()** , avaliado em um nó `<book>`, extrai o valor de `@genre` e, sendo um atributo, é um singleton.
 
 ```sql
 SELECT nref.value('@genre', 'varchar(max)') LastName

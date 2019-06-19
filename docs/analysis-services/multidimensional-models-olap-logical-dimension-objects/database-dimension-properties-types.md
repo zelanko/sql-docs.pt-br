@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 663c26ac169c11e5ab2d9b90285419cf4145368c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025775"
 ---
 # <a name="database-dimension-properties---types"></a>Propriedades de dimensão do banco de dados – Tipos
@@ -28,7 +28,7 @@ ms.locfileid: "63025775"
 |Tipo de dimensão|Descrição|  
 |--------------------|-----------------|  
 |Regular|Uma dimensão cujo tipo não foi definido como um tipo de dimensão especial.|  
-|Hora|Uma dimensão cujos atributos representam períodos, como anos, semestres, trimestres, meses e dias.|  
+|Time|Uma dimensão cujos atributos representam períodos, como anos, semestres, trimestres, meses e dias.|  
 |Organização|Uma dimensão cujos atributos representam informações organizacionais, como funcionários ou subsidiárias.|  
 |Geografia|Uma dimensão cujos atributos representam informações geográficas, como cidades ou códigos postais.|  
 |BillOfMaterials|Uma dimensão cujos atributos representam informações de estoque ou manufatura, como listas de peças para produtos.|  
@@ -38,7 +38,7 @@ ms.locfileid: "63025775"
 |Cenário|Uma dimensão cujos atributos representam informações de planejamento ou de análise estratégica.|  
 |Quantitative|Uma dimensão cujos atributos representam informações quantitativas.|  
 |Utilitário|Uma dimensão cujos atributos representam informações diversas.|  
-|CURRENCY|Este tipo de dimensão contém dados e metadados de moeda.|  
+|Currency|Este tipo de dimensão contém dados e metadados de moeda.|  
 |Rates|Uma dimensão cujos atributos representam informações de taxa de moeda.|  
 |Canal|Uma dimensão cujos atributos representam informações de canal.|  
 |Promoção|Uma dimensão cujos atributos representam informações de promoções de marketing.|  
