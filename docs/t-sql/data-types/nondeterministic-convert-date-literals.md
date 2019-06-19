@@ -14,11 +14,11 @@ ms.reviewer: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ca2837780145af3c7f4428c446215ed3510bc50
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783358"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63214254"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Conversão não determinística de cadeias de caracteres literais de data em valores de DATA
 
@@ -82,7 +82,7 @@ The preceding claim of "no guarantee" might be incorrect, in the minds of the SQ
 
 No Japão e na China, DATEFORMAT de **amd** é usado. As partes do formato estão em uma sequência lógica da maior unidade para a menor. Assim, esse formato é bem classificado. Esse formato é considerado o formato _internacional_. É internacional porque os quatro dígitos do ano são não ambíguos e nenhum país na Terra usa o formato arcaico do **adm**.
 
-Em outros países, como Alemanha e França, DATEFORMAT é **dma**, que significa **'dd-mm-aaaa'**. O formato **dma** não é bem classificado, mas é uma sequência lógica da menor unidade para a maior.
+Em outros países, como Alemanha e França, DATEFORMAT é **dma**, que significa **'dd-mm-aaaa'** . O formato **dma** não é bem classificado, mas é uma sequência lógica da menor unidade para a maior.
 
 Os Estados Unidos e os Estados Federados da Micronésia, são os únicos países que usam **mda**, que não é classificado. A sequência mista de formato corresponde ao padrão de discurso verbal em datas faladas.
 

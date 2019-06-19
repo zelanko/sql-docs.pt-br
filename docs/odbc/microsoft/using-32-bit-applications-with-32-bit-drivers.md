@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c4f0b21bba9e56cad076ae08f5a561cc972d2ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63213472"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>Usar aplicativos de 32 bits com drivers de 32 bits
@@ -33,7 +33,7 @@ Você pode executar aplicativos de 32 bits com drivers de 32 bits. Os aplicativo
 >  Não use a DLL do instalador conversão de 32 bits no Windows NT/Windows 2000. Embora ele tenha o mesmo nome de arquivo que o DLL do instalador de 32 bits, ele é uma DLL diferente.  
   
 ## <a name="administration"></a>Administração  
- Você pode gerenciar fontes de dados para drivers de 32 bits usando o administrador de fonte de dados ODBC. Para abrir o administrador ODBC em computadores que executam o Windows 2000, abra o painel de controle do Windows, clique duas vezes **ferramentas administrativas**e, em seguida, clique duas vezes em **fontes de dados (ODBC)**. Em computadores que executam versões anteriores do Microsoft Windows, o ícone é denominado **ODBC de 32 bits** ou simplesmente **ODBC**.  
+ Você pode gerenciar fontes de dados para drivers de 32 bits usando o administrador de fonte de dados ODBC. Para abrir o administrador ODBC em computadores que executam o Windows 2000, abra o painel de controle do Windows, clique duas vezes **ferramentas administrativas**e, em seguida, clique duas vezes em **fontes de dados (ODBC)** . Em computadores que executam versões anteriores do Microsoft Windows, o ícone é denominado **ODBC de 32 bits** ou simplesmente **ODBC**.  
   
 ## <a name="components"></a>Componentes  
  O componente ODBC inclui os seguintes arquivos para a execução de aplicativos de 32 bits com drivers de 32 bits. Esses componentes estão na pasta \Redist.  

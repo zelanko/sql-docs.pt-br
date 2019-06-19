@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63287804"
 ---
 # <a name="examples-using-auto-mode"></a>Exemplos: uso do modo AUTO
@@ -203,7 +203,7 @@ FOR XML AUTO, BINARY BASE64;
   
  Por padrão, quando o modo AUTO é usado para recuperar dados binários, em vez dos dados binários, é retornada uma referência a uma URL relativa à raiz virtual do banco de dados onde a consulta foi executada. Isso acontecerá se a opção BINARY BASE64 não estiver especificada.  
   
- Quando o modo AUTO retorna uma referência de URL aos dados binários em bancos de dados que não diferenciam maiúsculas de minúsculas, a consulta é executada quando um nome de tabela ou coluna especificado na consulta não corresponde ao nome da tabela ou coluna do banco de dados. Porém, as maiúsculas e minúsculas retornadas na referência não são consistentes. Por exemplo:   
+ Quando o modo AUTO retorna uma referência de URL aos dados binários em bancos de dados que não diferenciam maiúsculas de minúsculas, a consulta é executada quando um nome de tabela ou coluna especificado na consulta não corresponde ao nome da tabela ou coluna do banco de dados. Porém, as maiúsculas e minúsculas retornadas na referência não são consistentes. Por exemplo:  
   
 ```  
 SELECT ProductPhotoID, ThumbnailPhoto  

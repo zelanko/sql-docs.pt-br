@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1c0b3c7332fdb2583800f3aa600175f06f8928f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591340"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999596"
 ---
 # <a name="delete-a-data-tier-application"></a>Excluir um Aplicativo da Camada de Dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "53591340"
 |Desanexar banco de dados|O banco de dados associado é desanexado. A instância do Mecanismo de Banco de Dados não pode fazer referência ao banco de dados, mas os dados e os arquivos de log estão intatos.|  
 |Excluir banco de dados|O banco de dados associado é removido. Os dados e os arquivos de log são excluídos.|  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
  Não há nenhum mecanismo automático para restaurar os metadados da definição do DAC ou o banco de dados depois que um DAC é excluído. A maneira como a instância do DAC pode ser recriada manualmente depende da opção de exclusão.  
   
 |Opção|Como recriar a instância do DAC|  
@@ -84,7 +84,7 @@ ms.locfileid: "53591340"
   
  **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página no futuro.  
   
- **Avançar >**: continua para a página **Escolher Método**.  
+ **Avançar >** : continua para a página **Escolher Método**.  
   
  **Cancelar** : finaliza o assistente sem excluir um aplicativo da camada de dados ou banco de dados.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "53591340"
   
  **< Anterior** – Retorna à página **Introdução**.  
   
- **Avançar >**: continua para a página **Resumo**.  
+ **Avançar >** : continua para a página **Resumo**.  
   
  **Cancelar** : finaliza o assistente sem excluir o DAC ou o banco de dados.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "53591340"
   
  **< Anterior**: retorna para a página **Escolher Método** para escolher um método de exclusão diferente.  
   
- **Avançar >**: exclui a instância de DAC usando o método escolhido na página anterior e continua para a página **Excluir Aplicativo da Camada de Dados**.  
+ **Avançar >** : exclui a instância de DAC usando o método escolhido na página anterior e continua para a página **Excluir Aplicativo da Camada de Dados**.  
   
  **Cancelar** : finaliza o assistente sem excluir a instância de DAC.  
   

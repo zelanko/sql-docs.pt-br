@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c449e323c87f55d1cbc334d41916a26863cfccd1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078215"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definindo e procurando perspectivas
@@ -54,35 +54,35 @@ ms.locfileid: "66078215"
   
     -   `Reseller Sales` grupo de medidas  
   
-    -   Grupo de medidas**Cotas de Vendas**   
+    -   Grupo de medidas**Cotas de Vendas**  
   
-    -   Grupo de medidas**Cotas de Vendas 1**   
+    -   Grupo de medidas**Cotas de Vendas 1**  
   
-    -   Dimensão de cubo**Revendedor**   
+    -   Dimensão de cubo**Revendedor**  
   
-    -   Dimensão de cubo**Geografia do Revendedor**   
+    -   Dimensão de cubo**Geografia do Revendedor**  
   
-    -   Dimensão de cubo**Região de Vendas**   
+    -   Dimensão de cubo**Região de Vendas**  
   
-    -   Dimensão de cubo**Funcionário**   
+    -   Dimensão de cubo**Funcionário**  
   
-    -   Dimensão de cubo**Promoção**   
+    -   Dimensão de cubo**Promoção**  
   
-    -   **Receita do Revendedor**   
+    -   **Receita do Revendedor**  
   
-    -   Conjunto nomeado**Grandes Revendedores**   
+    -   Conjunto nomeado**Grandes Revendedores**  
   
-    -   Membro calculado**Valor Total das Vendas**   
+    -   Membro calculado**Valor Total das Vendas**  
   
-    -   Membro calculado**Custo Total do Produto**   
+    -   Membro calculado**Custo Total do Produto**  
   
-    -   Membro calculado**MLB do Revendedor**   
+    -   Membro calculado**MLB do Revendedor**  
   
-    -   Membro calculado**MLB Total**   
+    -   Membro calculado**MLB Total**  
   
-    -   Membro calculado**Índice de Vendas do Revendedor para Todos os Produtos**   
+    -   Membro calculado**Índice de Vendas do Revendedor para Todos os Produtos**  
   
-    -   Membro calculado**Índice Total de Vendas para Todos os Produtos**   
+    -   Membro calculado**Índice Total de Vendas para Todos os Produtos**  
   
      Esses objetos não estão relacionados às vendas pela Internet.  
   
@@ -103,27 +103,27 @@ ms.locfileid: "66078215"
   
     -   `Internet Sales` grupo de medidas  
   
-    -   Grupo de medidas**Motivo de Vendas pela Internet**   
+    -   Grupo de medidas**Motivo de Vendas pela Internet**  
   
-    -   Dimensão de cubo**Cliente**   
+    -   Dimensão de cubo**Cliente**  
   
-    -   Dimensão de cubo**Detalhes do Pedido de Vendas pela Internet**   
+    -   Dimensão de cubo**Detalhes do Pedido de Vendas pela Internet**  
   
-    -   Dimensão de cubo**Motivo de Vendas**   
+    -   Dimensão de cubo**Motivo de Vendas**  
   
-    -   Ação de detalhamento**Ação de Detalhamento Detalhes de Vendas pela Internet**   
+    -   Ação de detalhamento**Ação de Detalhamento Detalhes de Vendas pela Internet**  
   
-    -   Membro calculado**Valor Total das Vendas**   
+    -   Membro calculado**Valor Total das Vendas**  
   
-    -   Membro calculado**Custo Total do Produto**   
+    -   Membro calculado**Custo Total do Produto**  
   
-    -   Membro calculado**MLB pela Internet**   
+    -   Membro calculado**MLB pela Internet**  
   
-    -   Membro calculado**MLB Total**   
+    -   Membro calculado**MLB Total**  
   
-    -   Membro calculado**Índice de Vendas pela Internet para Todos os Produtos**   
+    -   Membro calculado**Índice de Vendas pela Internet para Todos os Produtos**  
   
-    -   Membro calculado**Índice Total de Vendas para Todos os Produtos**   
+    -   Membro calculado**Índice Total de Vendas para Todos os Produtos**  
   
      Esses objetos não estão relacionados às vendas do revendedor.  
   
@@ -142,23 +142,23 @@ ms.locfileid: "66078215"
   
     -   `Reseller Sales` grupo de medidas  
   
-    -   Grupo de medidas**Motivo de Vendas pela Internet**   
+    -   Grupo de medidas**Motivo de Vendas pela Internet**  
   
-    -   Grupo de medidas**Cotas de Vendas**   
+    -   Grupo de medidas**Cotas de Vendas**  
   
-    -   Grupo de medidas**Cotas de Vendas1**   
+    -   Grupo de medidas**Cotas de Vendas1**  
   
-    -   Dimensão de cubo**Detalhes do Pedido de Vendas pela Internet**   
+    -   Dimensão de cubo**Detalhes do Pedido de Vendas pela Internet**  
   
-    -   Dimensão de cubo**Motivo de Vendas**   
+    -   Dimensão de cubo**Motivo de Vendas**  
   
-    -   Ação de detalhamento**Ação de Detalhamento Detalhes de Vendas pela Internet**   
+    -   Ação de detalhamento**Ação de Detalhamento Detalhes de Vendas pela Internet**  
   
 4.  Selecione a caixa de seleção dos seguintes objetos:  
   
-    -   Medida**Contagem das Vendas pela Internet**   
+    -   Medida**Contagem das Vendas pela Internet**  
   
-    -   Medida**Contagem das Vendas do Revendedor**   
+    -   Medida**Contagem das Vendas do Revendedor**  
   
 ## <a name="browsing-the-cube-through-each-perspective"></a>Navegando no cubo usando cada perspectiva  
   

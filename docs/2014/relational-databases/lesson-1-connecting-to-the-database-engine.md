@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63145475"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conexão ao mecanismo de banco de dados
@@ -85,7 +85,7 @@ ms.locfileid: "63145475"
   
      A caixa de diálogo **Logon – Novo** é exibida.  
   
-2.  No **gerais** página, o **nome de logon** , digite um logon do Windows no formato  *\<domínio >\\< login\>*.  
+2.  No **gerais** página, o **nome de logon** , digite um logon do Windows no formato  *\<domínio >\\< login\>* .  
   
 3.  Na caixa **Banco de dados padrão** , selecione [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , caso esteja disponível. Caso contrário, selecione **mestre**.  
   

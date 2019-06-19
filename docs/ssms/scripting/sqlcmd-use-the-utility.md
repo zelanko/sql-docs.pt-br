@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4a237f0b4d4f1d65e471be065cf13fa985de4cff
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821870"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd – Usar o utilitário
@@ -41,13 +41,13 @@ ms.locfileid: "65821870"
   
 ## <a name="typically-used-sqlcmd-options"></a>Opções sqlcmd normalmente usadas  
   
--   A opção de servidor (**-S**) identifica a instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com a qual o **sqlcmd** se conecta.  
+-   A opção de servidor ( **-S**) identifica a instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com a qual o **sqlcmd** se conecta.  
   
--   As opções de autenticação (**-E**, **-U**e **-P**) especificam as credenciais que o **sqlcmd** usa para se conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **OBSERVAÇÃO:** a opção **-E** é o padrão e não precisa ser especificada.  
+-   As opções de autenticação ( **-E**, **-U**e **-P**) especificam as credenciais que o **sqlcmd** usa para se conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **OBSERVAÇÃO:** a opção **-E** é o padrão e não precisa ser especificada.  
   
--   As opções de entrada (**-Q**, **-q**e **-i**) identificam o local da entrada para **sqlcmd**.  
+-   As opções de entrada ( **-Q**, **-q**e **-i**) identificam o local da entrada para **sqlcmd**.  
   
--   A opção de saída (**-o**) especifica o arquivo no qual o **sqlcmd** deve colocar a saída.  
+-   A opção de saída ( **-o**) especifica o arquivo no qual o **sqlcmd** deve colocar a saída.  
   
 ## <a name="connect-to-the-sqlcmd-utility"></a>Conectar ao utilitário sqlcmd  
   

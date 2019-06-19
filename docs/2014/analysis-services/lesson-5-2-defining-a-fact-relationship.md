@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 726b5fa4295d68c5b74d4fb3cac711126a8e570b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078569"
 ---
 # <a name="defining-a-fact-relationship"></a>Definindo uma relação de fatos
@@ -87,7 +87,7 @@ ms.locfileid: "66078569"
   
      Observe que a dimensão de cubo **Detalhes do Pedido de Vendas pela Internet** é configurada automaticamente como tendo uma relação de fatos, como mostra o ícone exclusivo.  
   
-2.  Clique no botão Procurar (**...** ) na **descrição do Item** célula na interseção da **vendas pela Internet** grupo de medidas e o **Internet Sales Order Details** de dimensões, como Examine as propriedades de relação de fatos.  
+2.  Clique no botão Procurar ( **...** ) na **descrição do Item** célula na interseção da **vendas pela Internet** grupo de medidas e o **Internet Sales Order Details** de dimensões, como Examine as propriedades de relação de fatos.  
   
      A caixa de diálogo **Definir Relação** é aberta. Observe que nenhuma das propriedades pode ser configurada.  
   
