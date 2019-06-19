@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49e86c8b47a3a0de48a0138d96cec22d585901c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62711441"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificações de capacidade máxima do SQL Server
@@ -44,7 +44,7 @@ ms.locfileid: "62711441"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] objeto|Tamanho máximo/números [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (32 bits)|Tamanho máximo/números [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 bits)|  
 |---------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|  
-|Tamanho do lote<br /><br /> Observação: Tamanho do pacote de rede é o tamanho dos pacotes do protocolo TDS usados para comunicação entre aplicativos e o [!INCLUDE[ssDE](../includes/ssde-md.md)]relacional. O tamanho de pacote padrão é 4 KB e é controlado pela opção de configuração tamanho do pacote de rede.|65.536 * Tamanho do pacote de rede|65.536 * Tamanho do pacote de rede|  
+|Tamanho do lote<br /><br /> Observação: Tamanho do pacote de rede é o tamanho dos pacotes do protocolo TDS usados para comunicação entre aplicativos e o [!INCLUDE[ssDE](../includes/ssde-md.md)]relacional. O tamanho de pacote padrão é 4 KB e é controlado pela opção de configuração tamanho do pacote de rede.|65\.536 * Tamanho do pacote de rede|65\.536 * Tamanho do pacote de rede|  
 |Bytes por coluna de cadeia de caracteres curta|8,000|8,000|  
 |Bytes por GROUP BY, ORDER BY|8,060|8,060|  
 |Bytes por chave de índice<br /><br /> Observação: O número máximo de bytes em qualquer chave de índice não pode exceder 900 no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Você pode definir uma chave usando colunas de comprimento variável cujos tamanhos máximos somem mais de 900, desde que nenhuma linha jamais seja inserida com mais de 900 bytes de dados nessas colunas. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você pode incluir colunas não chave em um índice não clusterizado para evitar o tamanho máximo de chave de índice de 900 bytes.|900|900|  
@@ -66,7 +66,7 @@ ms.locfileid: "62711441"
 |Colunas por instrução SELECT|4,096|4,096|  
 |Colunas por instrução INSERT|4096|4096|  
 |Conexões por cliente|Valor máximo de conexões configuradas|Valor máximo de conexões configuradas|  
-|Tamanho do banco de dados|524.272 terabytes|524.272 terabytes|  
+|Tamanho do banco de dados|524\.272 terabytes|524\.272 terabytes|  
 |Bancos de dados por instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|32,767|32,767|  
 |Grupos de arquivos por banco de dados|32,767|32,767|  
 |Grupos de arquivo por banco de dados para dados com otimização de memória.|Sem suporte|1|  
@@ -79,7 +79,7 @@ ms.locfileid: "62711441"
 |Comprimento de identificador (em caracteres)|128|128|  
 |Instâncias por computador|50 instâncias em um servidor autônomo para todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte a 25 instâncias em um failover de cluster ao usar um disco de cluster compartilhado como a opção armazenada, instalação de cluster [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte a 50 instâncias em um failover de cluster se você escolher SMB a compartilhamentos de arquivos como a opção de armazenamento para sua instalação de cluster Para obter mais informações, consulte [Hardware and Software Requirements for Installing SQL Server 2014](install/hardware-and-software-requirements-for-installing-sql-server.md).|50 instâncias em um servidor autônomo.<br /><br /> 25 instâncias em um cluster de failover ao usar um disco de cluster compartilhado como a opção de armazenamento para sua instalação de cluster. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dará suporte a 50 instâncias de um cluster de failover se você escolher compartilhamentos de arquivos SMB como a opção de armazenamento para seu cluster de failover.|  
 |Índices por tabela com otimização de memória|Sem suporte|8|  
-|Comprimento de uma cadeia de caracteres que contém instruções SQL (tamanho do lote)<br /><br /> Observação: Tamanho do pacote de rede é o tamanho dos pacotes do protocolo TDS usados para comunicação entre aplicativos e o [!INCLUDE[ssDE](../includes/ssde-md.md)]relacional. O tamanho de pacote padrão é 4 KB e é controlado pela opção de configuração tamanho do pacote de rede.|65.536 * Tamanho do pacote de rede|65.536 * Tamanho do pacote de rede|  
+|Comprimento de uma cadeia de caracteres que contém instruções SQL (tamanho do lote)<br /><br /> Observação: Tamanho do pacote de rede é o tamanho dos pacotes do protocolo TDS usados para comunicação entre aplicativos e o [!INCLUDE[ssDE](../includes/ssde-md.md)]relacional. O tamanho de pacote padrão é 4 KB e é controlado pela opção de configuração tamanho do pacote de rede.|65\.536 * Tamanho do pacote de rede|65\.536 * Tamanho do pacote de rede|  
 |Bloqueios por conexão|Máximo de bloqueios por servidor|Máximo de bloqueios por servidor|  
 |Bloqueios por instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]<br /><br /> Observação: Esse valor é para alocação de bloqueio estático. Os bloqueios dinâmicos são limitados somente por memória.|Até 2.147.483.647|Limitado somente por memória|  
 |Níveis aninhados de procedimento armazenado<br /><br /> Observação: Se um procedimento armazenado acessar mais de 64 bancos de dados ou mais de 2 bancos de dados em intercalação, você receberá um erro.|32|32|  
@@ -116,7 +116,7 @@ ms.locfileid: "62711441"
 |Arquivos de log por banco de dados|1|1|  
 |Volumes por computador|3|3|  
   
- * O número máximo de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com suporte pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilitário pode variar com base na configuração de hardware do servidor. Para obter informações de introdução, consulte [Recursos e tarefas do utilitário do SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ponto de controle do utilitário não está disponível em todas as edições de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [Features Supported by the Editions of SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ \* O número máximo de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com suporte pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilitário pode variar com base na configuração de hardware do servidor. Para obter informações de introdução, consulte [Recursos e tarefas do utilitário do SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ponto de controle do utilitário não está disponível em todas as edições de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [Features Supported by the Editions of SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objetos de aplicativo da camada de dados  
  A tabela a seguir especifica os tamanhos e números máximos de vários objetos que foram testados nos DACs (aplicativos da camada de dados) do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
