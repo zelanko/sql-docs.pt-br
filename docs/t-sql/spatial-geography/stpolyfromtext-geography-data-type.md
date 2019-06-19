@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 347411d840e2019a2a0553340ebf5b821455deea
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65936081"
 ---
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText (tipo de dados geography)
@@ -39,7 +39,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *polygon_tagged_text*  
- É a representação WKT da instância de **geographyPolygon** que você deseja retornar. *polygon_tagged_text* é uma expressão **nvarchar(max)** .  
+ É a representação WKT da instância de **geographyPolygon** que você deseja retornar. *polygon_tagged_text* é uma expressão **nvarchar(max)**.  
   
  *SRID*  
  É uma expressão **int** que representa o SRID (ID de referência espacial) da instância de **geographyPolygon** que você deseja retornar.  

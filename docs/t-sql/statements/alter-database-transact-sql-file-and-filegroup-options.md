@@ -44,11 +44,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 47dca205ad7ac3dd2a82ce404bc2e7fb20938346
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828376"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63201721"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opções de arquivo e grupos de arquivos de ALTER DATABASE (Transact-SQL)
 
@@ -397,7 +397,7 @@ ADD FILE
 GO
 ```
 
-### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>b. Adicionando um grupo de arquivos com dois arquivos a um banco de dados
+### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Adicionando um grupo de arquivos com dois arquivos a um banco de dados
 
 O exemplo a seguir cria o grupo de arquivos `Test1FG1` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] e adiciona dois arquivos de 5 MB ao grupo de arquivos.
 
@@ -878,7 +878,7 @@ ADD FILE
 GO
 ```
 
-### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>b. Adicionando um grupo de arquivos com dois arquivos a um banco de dados
+### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Adicionando um grupo de arquivos com dois arquivos a um banco de dados
 
 O exemplo a seguir cria o grupo de arquivos `Test1FG1` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] e adiciona dois arquivos de 5 MB ao grupo de arquivos.
 

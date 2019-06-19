@@ -12,10 +12,10 @@ ms.author: janinez
 author: janinezhang
 manager: craigg
 ms.openlocfilehash: 8a2d8444e0b19ed4672e9582ef9802d0cd6f6fe7
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65720738"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Carregar dados no SQL Data Warehouse do Azure com o SSIS (SQL Server Integration Services)
@@ -52,7 +52,7 @@ O SSIS (SQL Server Integration Services) é um conjunto flexível de ferramentas
 ## <a name="prerequisites"></a>Prerequisites
 Para realizar este tutorial, você precisa do seguinte:
 
-1. **Do SSIS (SQL Server Integration Services)**. O SSIS é um componente do SQL Server e requer uma versão licenciada, ou uma versão de avaliação ou do desenvolvedor, do SQL Server. Para obter uma versão de avaliação do SQL Server, consulte [Avaliar SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
+1. **Do SSIS (SQL Server Integration Services)** . O SSIS é um componente do SQL Server e requer uma versão licenciada, ou uma versão de avaliação ou do desenvolvedor, do SQL Server. Para obter uma versão de avaliação do SQL Server, consulte [Avaliar SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
 2. **Visual Studio** (opcional). Para obter o Visual Studio Community Edition gratuito, veja [Visual Studio Community][Visual Studio Community]. Se não quiser instalar o Visual Studio, você poderá instalar apenas o SSDT (SQL Server Data Tools). O SSDT instala uma versão do Visual Studio com funcionalidade limitada.
 3. **Do SSDT (SQL Server Data Tools) para Visual Studio**. Para obter o SQL Server Data Tools para Visual Studio, veja [Baixar o SSDT (SQL Server Data Tools)][Download SQL Server Data Tools (SSDT)].
 4. **Um banco de dados do SQL Data Warehouse do Azure e permissões**. Este tutorial se conecta a uma instância do SQL Data Warehouse e carrega dados nela. Você precisa das permissões para se conectar, criar uma tabela e carregar dados.

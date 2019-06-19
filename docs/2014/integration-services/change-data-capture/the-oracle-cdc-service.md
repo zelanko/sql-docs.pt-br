@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3f3967b31331471d1ad0a886cc9eda853a25931
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771072"
 ---
 # <a name="the-oracle-cdc-service"></a>O Serviço Oracle CDC
@@ -71,7 +71,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
  Se um algoritmo diferente for usado, esta chave poderá ser removida e uma nova de mesmo nome e criptografada pela mesma senha poderá ser criada.  
   
- A senha da chave assimétrica é a senha mestra salva no Registro no caminho **HKLM\Software\Microsoft\XDBCDCSVC\\<service-name>**. Essa chave só está acessível para administradores locais e para a conta de serviço do Windows do Oracle CDC. A chave contém um valor binário **AsymmetricKeyPassword** criptografado que armazenou a senha da chave assimétrica. O acesso a esta chave do Registro é necessário para poder acessar as credenciais de mineração de logs do Oracle.  
+ A senha da chave assimétrica é a senha mestra salva no Registro no caminho **HKLM\Software\Microsoft\XDBCDCSVC\\<service-name>** . Essa chave só está acessível para administradores locais e para a conta de serviço do Windows do Oracle CDC. A chave contém um valor binário **AsymmetricKeyPassword** criptografado que armazenou a senha da chave assimétrica. O acesso a esta chave do Registro é necessário para poder acessar as credenciais de mineração de logs do Oracle.  
   
  Para usar a cláusula ENCRYPTION BY PASSWORD, a senha deverá atender os requisitos de política de senha do Windows para o computador que está executando a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Isto é feito selecionando a senha da chave assimétrica de acordo com essa política.  
   

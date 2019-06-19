@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891574"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>Etapa 2: Executar o Assistente de Instalação de Pacotes
@@ -36,7 +36,7 @@ ms.locfileid: "62891574"
   
 4.  Na página Implantar Pacotes SSIS, selecione a opção **Implantação no SQL Server** , marque a caixa de seleção **Validar pacotes após instalação** e clique em **Avançar**.  
   
-5.  Na página Especificar SQL Server de Destino, especifique o **(local)**, na caixa **Nome do servidor** .  
+5.  Na página Especificar SQL Server de Destino, especifique o **(local)** , na caixa **Nome do servidor** .  
   
 6.  Se a instância do SQL Server der suporte à Autenticação do Windows, selecione **Usar Autenticação do Windows**; caso contrário, selecione **Usar Autenticação do SQL Server** e forneça um nome de usuário e uma senha.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62891574"
   
 9. Na página Selecionar Pasta de Instalação, clique em **Procurar**.  
   
-10. Na caixa de diálogo **Procurar Pasta** , expanda **Meu Computador** e clique em **Disco Local (C:)**.  
+10. Na caixa de diálogo **Procurar Pasta** , expanda **Meu Computador** e clique em **Disco Local (C:)** .  
   
 11. Clique em **Criar Nova Pasta** e substitua o nome padrão da pasta criada, **Nova Pasta**, por **DeploymentTutorialInstall**.  
   

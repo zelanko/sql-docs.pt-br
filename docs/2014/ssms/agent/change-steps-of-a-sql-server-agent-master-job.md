@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1a60d9e5d8569324cc3f68200d4a5a232b930d8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017585"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
@@ -58,11 +58,11 @@ ms.locfileid: "63017585"
   
 5.  Na caixa de diálogo **Propriedades do Trabalho –** _job_name_, em **Selecionar uma página**, selecione **Etapas**.  
   
-6.  Clique em **edite** para abrir o **propriedades da etapa de trabalho –**_job_step_name_ caixa de diálogo. Para obter mais informações sobre as opções disponíveis nessa caixa de diálogo, consulte [propriedades da etapa de trabalho: Nova etapa de trabalho &#40;página geral&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) e [propriedades da etapa de trabalho: Nova etapa de trabalho &#40;página Avançado&#41;](job-step-properties-new-job-step-advanced-page.md).  
+6.  Clique em **edite** para abrir o **propriedades da etapa de trabalho –** _job_step_name_ caixa de diálogo. Para obter mais informações sobre as opções disponíveis nessa caixa de diálogo, consulte [propriedades da etapa de trabalho: Nova etapa de trabalho &#40;página geral&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) e [propriedades da etapa de trabalho: Nova etapa de trabalho &#40;página Avançado&#41;](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Quando terminar, clique em **OK**.  
   
-8.  No **propriedades do trabalho –**_job_name_ caixa de diálogo, clique em **Okey**.  
+8.  No **propriedades do trabalho –** _job_name_ caixa de diálogo, clique em **Okey**.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

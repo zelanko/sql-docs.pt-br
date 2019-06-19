@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62635883"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
@@ -44,7 +44,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ## <a name="arguments"></a>Argumentos  
 `[ @server = ] 'server'` É o servidor sobre quais informações são relatadas. Quando *server* não for especificado, relatórios sobre todos os servidores no **Servers**. *servidor* está **sysname**, com um padrão NULL.  
   
-`[ @optname = ] 'option'` A opção que descreve o servidor. *opção* está **varchar (** 35 **)**, com um padrão de NULL, e deve ser um destes valores.  
+`[ @optname = ] 'option'` A opção que descreve o servidor. *opção* está **varchar (** 35 **)** , com um padrão de NULL, e deve ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -60,7 +60,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**usar agrupamento remoto**|Usa a ordenação de uma coluna remota em vez do servidor local.|  
   
-`[ @show_topology = ] 'show_topology'` É a relação do servidor especificado a outros servidores. *show_topology* está **varchar (** 1 **)**, com um padrão NULL. Se *show_topology* não é igual a **t** ou for NULL, **sp_helpserver** retornará as colunas listadas na seção conjuntos de resultados. Se *show_topology* é igual a **t**, além das colunas listadas nos conjuntos de resultados, **sp_helpserver** também retorna **topx** e **topy** informações.  
+`[ @show_topology = ] 'show_topology'` É a relação do servidor especificado a outros servidores. *show_topology* está **varchar (** 1 **)** , com um padrão NULL. Se *show_topology* não é igual a **t** ou for NULL, **sp_helpserver** retornará as colunas listadas na seção conjuntos de resultados. Se *show_topology* é igual a **t**, além das colunas listadas nos conjuntos de resultados, **sp_helpserver** também retorna **topx** e **topy** informações.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha).  

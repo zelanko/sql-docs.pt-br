@@ -19,11 +19,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 0e9ac1c3e0ff2298acf3b155d5b99189a80e30f5
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326727"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62719400"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +74,7 @@ ALTER DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'RettigB',
 GO  
 ```  
   
-### <a name="b-removing-the-password-from-a-credential"></a>b. Removendo a senha de uma credencial  
+### <a name="b-removing-the-password-from-a-credential"></a>B. Removendo a senha de uma credencial  
  O exemplo a seguir remove a senha de uma credencial no escopo do banco de dados chamada `Frames`. A credencial no escopo do banco de dados contém o logon do Windows `Aboulrus8` e uma senha. Depois que a instrução for executada, a credencial no escopo do banco de dados terá uma senha NULL porque a opção SECRET não é especificada.  
   
 ```  
