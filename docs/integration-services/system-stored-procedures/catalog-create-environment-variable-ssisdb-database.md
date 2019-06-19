@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e6ae0fc2e0f9949bfac6b4043c581dd0921efb
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716946"
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (Banco de Dados SSISDB)
@@ -41,16 +41,16 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [@folder_name =] *folder_name*  
- O nome da pasta que contém o ambiente. O *folder_name* é **nvarchar(128)**.  
+ O nome da pasta que contém o ambiente. O *folder_name* é **nvarchar(128)** .  
   
  [@environment_name =] *environment_name*  
- O nome do ambiente. O *environment_name* é **nvarchar(128)**.  
+ O nome do ambiente. O *environment_name* é **nvarchar(128)** .  
   
  [@variable_name =] *variable_name*  
- O nome da variável de ambiente. O *variable_name* é **nvarchar(128)**.  
+ O nome da variável de ambiente. O *variable_name* é **nvarchar(128)** .  
   
  [@data_type =] *data_type*  
- O tipo de dados da variável. Os tipos de dados de variável de ambiente com suporte incluem **booliano**, **Byte**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **Single**, **String**, **UInt32** e **UInt64**. Os tipos de dados de variável de ambiente sem suporte incluem **Char**, **DBNull**, **Object** e **Sbyte**. O tipo de dados do parâmetro *data_type* é **nvarchar(128)**.  
+ O tipo de dados da variável. Os tipos de dados de variável de ambiente com suporte incluem **booliano**, **Byte**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **Single**, **String**, **UInt32** e **UInt64**. Os tipos de dados de variável de ambiente sem suporte incluem **Char**, **DBNull**, **Object** e **Sbyte**. O tipo de dados do parâmetro *data_type* é **nvarchar(128)** .  
   
  [@sensitive =] *sensitive*  
  Indica se a variável contém um valor confidencial ou não. Use um valor de `1` para indicar que o valor da variável de ambiente é confidencial ou um valor de `0` para indicar que não é. Um valor confidencial é criptografado quando é armazenado. Um valor que não é confidencial é armazenado em texto não criptografado. *Sensitive* é **bit**.  
@@ -59,7 +59,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
  O valor da variável de ambiente. O *value* é **sql_variant**.  
   
  [@description =] *description*  
- A descrição da variável do ambiente. O *value* é **nvarchar(1024)**.  
+ A descrição da variável do ambiente. O *value* é **nvarchar(1024)** .  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  

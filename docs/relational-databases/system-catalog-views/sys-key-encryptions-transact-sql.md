@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8a8fb9b2103316219bcdac74c1b861ac0a2668cb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63003552"
 ---
 # <a name="syskeyencryptions-transact-sql"></a>sys.key_encryptions (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "63003552"
 |Nomes de coluna|Tipos de dados|Descrição|  
 |------------------|----------------|-----------------|  
 |**key_id**|**int**|ID da chave criptografada.|  
-|**thumbprint**|**varbinary(32)**|O hash SHA-1 do certificado com o qual a chave é criptografada, ou o GUID da chave simétrica com a qual a chave é criptografada. |  
+|**thumbprint**|**varbinary(32)**|O hash SHA-1 do certificado com o qual a chave é criptografada, ou o GUID da chave simétrica com a qual a chave é criptografada.|  
 |**crypt_type**|**char(4)**|Tipo de criptografia:<br /><br /> ESKS = Criptografado com chave simétrica<br /><br /> ESP3, ESP2 ou ESKP = criptografado com senha<br /><br /> EPUC = Criptografado com certificado<br /><br /> EPUA = Criptografado com chave assimétrica<br /><br /> ESKM = Criptografado com chave mestra|  
 |**crypt_type_desc**|**nvarchar(60)**|Descrição do tipo de criptografia:<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br />(Começando com [!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)], inclui um número de versão para ser usado por CSS.)<br /><br /> ENCRYPTION BY CERTIFICATE<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> Observação: Windows DPAPI é usado para proteger a chave mestra de serviço.|  
 |**crypt_property**|**varbinary(max)**|Bits assinados ou criptografados.|  

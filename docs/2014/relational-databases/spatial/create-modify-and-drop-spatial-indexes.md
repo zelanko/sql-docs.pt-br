@@ -17,10 +17,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014268"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Criar, modificar e remover índices espaciais
@@ -62,7 +62,7 @@ ms.locfileid: "66014268"
   
 11. Na página **Espacial** , especifique os valores que você deseja usar para as propriedades espaciais do índice.  
   
-     Ao criar um índice em uma `geometry` coluna de tipo, você deve especificar o **(*`X-min`*,*`Y-min`*)** e **(*`X-max`*,*`Y-max`*)** coordenadas da caixa delimitadora. Para um índice em uma `geography` coluna de tipo, os campos da caixa delimitadora se tornam somente leitura depois de especificar o **grade geográfica** esquema de mosaico, porque o mosaico de grade geográfica não usa uma caixa delimitadora.  
+     Ao criar um índice em uma `geometry` coluna de tipo, você deve especificar o **( *`X-min`* , *`Y-min`* )** e **( *`X-max`* , *`Y-max`* )** coordenadas da caixa delimitadora. Para um índice em uma `geography` coluna de tipo, os campos da caixa delimitadora se tornam somente leitura depois de especificar o **grade geográfica** esquema de mosaico, porque o mosaico de grade geográfica não usa uma caixa delimitadora.  
   
      Opcionalmente, é possível especificar valores não padrão para o campo **Células por Objeto** e para a densidade da grade em qualquer nível do esquema de mosaico. O número padrão de células por objeto é 16 para o [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou 8 para o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ou versão superior, e a densidade padrão da grade é **Média** para o [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   

@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 04124a936e333c4821f0e84dcbdae3d1658addc4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727525"
 ---
 # <a name="script-task"></a>Tarefa Script
@@ -131,13 +131,13 @@ ms.locfileid: "65727525"
  Caso altere o nome do método no projeto do VSTA, será preciso alterar o valor da propriedade **EntryPoint** .  
   
  **ReadOnlyVariables**  
- Digite uma lista, separada por vírgulas, de variáveis somente leitura disponíveis para o script ou clique no botão de reticências (**...**) e selecione as variáveis na caixa de diálogo **Selecionar variáveis**.  
+ Digite uma lista, separada por vírgulas, de variáveis somente leitura disponíveis para o script ou clique no botão de reticências ( **...** ) e selecione as variáveis na caixa de diálogo **Selecionar variáveis**.  
   
 > [!NOTE]  
 >  Nomes de variáveis fazem diferenciação de maiúsculas e minúsculas.  
   
  **ReadWriteVariables**  
- Digite uma lista, separada por vírgulas, de variáveis de leitura/gravação disponíveis para o script ou clique no botão de reticências (**…**) e selecione as variáveis na caixa de diálogo **Selecionar variáveis**.  
+ Digite uma lista, separada por vírgulas, de variáveis de leitura/gravação disponíveis para o script ou clique no botão de reticências ( **…** ) e selecione as variáveis na caixa de diálogo **Selecionar variáveis**.  
   
 > [!NOTE]  
 >  Nomes de variáveis fazem diferenciação de maiúsculas e minúsculas.  

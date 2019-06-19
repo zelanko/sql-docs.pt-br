@@ -26,11 +26,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed0dd384b3ca1a90b1a40bbb23d63feabf2ae85d
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143286"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638410"
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ SET ANSI_PADDING ON
   
 |Configuração|char(*n*) NOT NULL ou binary(*n*) NOT NULL|char(*n*) NULL ou binary(*n*) NULL|varchar(*n*) ou varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|Valor original de preenchimento (com espaços em branco à direita para colunas **char** e com zeros à direita para colunas **binary**) até o comprimento da coluna.|Siga as mesmas regras de **char(**_n_**)** ou **binary(**_n_**)** NOT NULL quando SET ANSI_PADDING for ON.|Os espaços em branco à direita em valores de caractere inseridos em colunas **varchar** não são cortados. Os zeros à direita em valores binários inseridos em colunas **varbinary** não são cortados. Os valores não são preenchidos com o tamanho da coluna.|  
+|ON|Valor original de preenchimento (com espaços em branco à direita para colunas **char** e com zeros à direita para colunas **binary**) até o comprimento da coluna.|Siga as mesmas regras de **char(** _n_ **)** ou **binary(** _n_ **)** NOT NULL quando SET ANSI_PADDING for ON.|Os espaços em branco à direita em valores de caractere inseridos em colunas **varchar** não são cortados. Os zeros à direita em valores binários inseridos em colunas **varbinary** não são cortados. Os valores não são preenchidos com o tamanho da coluna.|  
 |OFF|Valor original de preenchimento (com espaços em branco à direita para colunas **char** e com zeros à direita para colunas **binary**) até o comprimento da coluna.|Segue as mesmas regras para **varchar** ou **varbinary** quando SET ANSI_PADDING está OFF.|Os espaços em branco à direita em valores de caractere inseridos em uma coluna **varchar** são cortados. Os zeros à direita em valores binários inseridos em uma coluna **varbinary** são cortados.|  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ ANSI_PADDING deve ser ON ao criar ou alterar índices em colunas computadas ou e
   
 O padrão para SET ANSI_PADDING é ON. O driver do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC e o Provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definem automaticamente ANSI_PADDING como ON ao conectar. Isso pode ser configurado nas fontes de dados ODBC, nos atributos de conexão ODBC ou nas propriedades de conexão OLE DB definidos no aplicativo antes de conectar. O padrão para SET ANSI_PADDING é OFF para conexões de aplicativos DB-Library.  
   
- A configuração de SET ANSI_PADDING não afeta os tipos de dados **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)**, **varchar(max)** e **nvarchar(max)**. Eles sempre apresentam o comportamento SET ANSI_PADDING ON. Isso significa que os espaços e zeros à direita não são cortados.  
+ A configuração de SET ANSI_PADDING não afeta os tipos de dados **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)** , **varchar(max)** e **nvarchar(max)** . Eles sempre apresentam o comportamento SET ANSI_PADDING ON. Isso significa que os espaços e zeros à direita não são cortados.  
   
 Quando ANSI_DEFAULTS é ON, ANSI_PADDING está habilitado.  
   
