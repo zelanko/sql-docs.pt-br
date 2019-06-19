@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5032c7f48bdafdab0430357c01698f5672b2f830
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727499"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Configuração da tarefa Criação de Perfil de Dados
@@ -71,7 +71,7 @@ ms.locfileid: "65727499"
   
  Na página **Solicitação de Perfil** , você especifica também a origem de dados e configura os perfis de dados. Ao configurar a tarefa, pense nas seguintes informações:  
   
--   Para simplificar a configuração e facilitar o descobrimento das características de dados pouco conhecidos, você pode usar o curinga, **(\*)**, no lugar do nome de uma coluna específica. Se você usar este curinga, a tarefa criará o perfil de todas as colunas que tiverem um tipo de dados apropriado, o que por sua vez poderá tornar o processamento mais lento.  
+-   Para simplificar a configuração e facilitar o descobrimento das características de dados pouco conhecidos, você pode usar o curinga, **(\*)** , no lugar do nome de uma coluna específica. Se você usar este curinga, a tarefa criará o perfil de todas as colunas que tiverem um tipo de dados apropriado, o que por sua vez poderá tornar o processamento mais lento.  
   
 -   Quando a tabela ou exibição selecionada estiver vazia, a tarefa de Criação de perfis de dados não computará nenhum perfil.  
   

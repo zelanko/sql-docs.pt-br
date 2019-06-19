@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
 ms.openlocfilehash: 00eb4dc7d90226f7d5c944ea3b878aefb4c8a105
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109758"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Comparar recursos de Business Intelligence em diferentes ambientes Microsoft
@@ -26,22 +26,22 @@ Para obter mais informações comparando o SharePoint Server e o SharePoint Onli
   
 ||SQL Server 2014 & SharePoint Server 2013|SharePoint Online plano 2|Power BI para Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
-|Sites BI|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Galeria|Não |Site do Power BI|  
-|Gerenciamento e compartilhamento de consulta e administração de dados|Não |Não|Sim **<sup>1</sup>**|  
-|Integração com o Master Data Services (MDS) e Data Quality Services (DQS)|Sim|Não |Não|  
-|Agendar atualização de dados|Sim, mas não aceita as pastas de trabalho que contêm dados Power Query|Não |Sim|  
-|Consulta em idioma natural (Q & A)|Não |Não |Sim **<sup>2</sup>**|  
-|Previsão de previsão|Não |Não |Sim **<sup>3</sup>**|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] integração|Sim|Não |Não |  
-|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] integração (Multidimensional e Tabular)|Sim|Não|Não |  
+|Sites BI|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Galeria|Não|Site do Power BI|  
+|Gerenciamento e compartilhamento de consulta e administração de dados|Não|Não|Sim **<sup>1</sup>**|  
+|Integração com o Master Data Services (MDS) e Data Quality Services (DQS)|Sim|Não|Não|  
+|Agendar atualização de dados|Sim, mas não aceita as pastas de trabalho que contêm dados Power Query|Não|Sim|  
+|Consulta em idioma natural (Q & A)|Não|Não|Sim **<sup>2</sup>**|  
+|Previsão de previsão|Não|Não|Sim **<sup>3</sup>**|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] integração|Sim|Não|Não|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] integração (Multidimensional e Tabular)|Sim|Não|Não|  
 |Exportar painel interativo do Power View para apresentação do PowerPoint|Sim|Não|Não|  
-|Criação de painel no navegador|Sim|Não|Não |  
+|Criação de painel no navegador|Sim|Não|Não|  
 |Monitoramento de uso|Sim|Não|Sim|  
 |Aproveitar segurança de baseada em linha de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubos|Sim|Não|Não|  
   
- **<sup>1</sup>**[Noções básicas sobre a função de administradores de dados no gerenciamento de dados](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) e [vídeo: Administração de dados e gerenciamento de informações de BI do Power](https://www.youtube.com/watch?v=8dHOj68ts7c).  
+ **<sup>1</sup>** [Noções básicas sobre a função de administradores de dados no gerenciamento de dados](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) e [vídeo: Administração de dados e gerenciamento de informações de BI do Power](https://www.youtube.com/watch?v=8dHOj68ts7c).  
   
- **<sup>2</sup>**[do power BI Q & a: Otimizar uma pasta de trabalho do Power BI (modelagem em nuvem)](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/).  
+ **<sup>2</sup>** [do power BI Q & a: Otimizar uma pasta de trabalho do Power BI (modelagem em nuvem)](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/).  
   
  **<sup>3</sup>**  [Introdução aos novos recursos de previsão no Power View para o Office 365](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx).  
   
@@ -50,9 +50,9 @@ Para obter mais informações comparando o SharePoint Server e o SharePoint Onli
 ||SQL Server 2014 & SharePoint Server 2013|SharePoint Online plano 2|Power BI para Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
 |Exibir pastas de trabalho do Microsoft Excel em um navegador|Sim, se a pasta de trabalho tiver menos de 2 GB de tamanho|Sim, se a pasta de trabalho tiver menos de 10 MB de tamanho|Sim, se a pasta de trabalho tiver menos de 250 MB de tamanho|  
-|Exploração de dados no navegador em HTML5|Não |Não |Sim|  
-|Aplicativo Mobile BI para acessar relatórios e painéis remotamente|Não|Não |Sim **<sup>1</sup>**|  
-|Pasta de trabalho do Excel com [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] como uma fonte de dados **<sup>2</sup>**|Sim|Não |Não |  
+|Exploração de dados no navegador em HTML5|Não|Não|Sim|  
+|Aplicativo Mobile BI para acessar relatórios e painéis remotamente|Não|Não|Sim **<sup>1</sup>**|  
+|Pasta de trabalho do Excel com [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] como uma fonte de dados **<sup>2</sup>**|Sim|Não|Não|  
 |Capacidade de usar os recursos em diferentes navegadores e versões|Sim, para visualizações não Power View **<sup>3</sup>**|Sim, para tamanhos de arquivo de pasta de trabalho menores que 10 MB **<sup>3</sup>**|Sim **<sup>3</sup>**|  
   
  **<sup>1</sup>**  [Microsoft Power BI](http://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba).  

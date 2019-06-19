@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9b414c8f47cbe8942f4448d0f071b125a7d6518
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726474"
 ---
 # <a name="resolve-column-reference-editor"></a>Resolver editor de referência de coluna
@@ -34,16 +34,16 @@ ms.locfileid: "65726474"
  Depois que todas as referências a coluna foram resolvidas, se não houver erros de caminho de dados, nenhum ícone de erro será exibido ao lado dos caminhos de dados.  
   
 ## <a name="options"></a>Opções  
- **Colunas de Saída Não Mapeadas (Origem)**    
+ **Colunas de Saída Não Mapeadas (Origem)**     
  Colunas do caminho upstream que não estão mapeadas no momento  
   
-**Colunas Mapeadas (Origem)**    
+**Colunas Mapeadas (Origem)**     
  Colunas do caminho upstream que estão mapeadas para colunas do caminho downstream  
   
-**Colunas Mapeadas (Destino)**    
+**Colunas Mapeadas (Destino)**     
  Colunas do caminho upstream que estão mapeadas para colunas do caminho downstream  
   
-**Colunas de Entrada Não Mapeadas (Destino)**    
+**Colunas de Entrada Não Mapeadas (Destino)**     
  Colunas do caminho downstream que não estão mapeadas no momento  
   
 **Excluir Colunas de Entrada Não Mapeadas**  

@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9a262107294988e0d624e4b423147b5e5183a629
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097435"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Passo a passo: Usar uma condição de teste personalizada para verificar os resultados de um procedimento armazenado
@@ -54,7 +54,7 @@ Em seguida, assine o projeto.
   
 2.  Na guia **Assinatura**, marque a caixa de seleção **Assinar o assembly**.  
   
-3.  Na caixa de diálogo **Escolher um arquivo de chave de nome forte**, clique em **\<Novo...>**.  
+3.  Na caixa de diálogo **Escolher um arquivo de chave de nome forte**, clique em **\<Novo...>** .  
   
     A caixa de diálogo **Criar Chave de Nome Forte** é aberta.  
   
@@ -375,7 +375,7 @@ Em seguida, precisamos criar um teste de unidade. Para criar um teste de unidade
   
 3.  Em **Nome do Teste**, digite **SampleUnitTest**.  
   
-4.  Em **Adicionar ao Projeto de Teste**, clique em **Criar um novo projeto de teste do Visual C\#**. Em seguida, clique em **OK** para exibir a caixa de diálogo **Novo Projeto de Teste**.  
+4.  Em **Adicionar ao Projeto de Teste**, clique em **Criar um novo projeto de teste do Visual C\#** . Em seguida, clique em **OK** para exibir a caixa de diálogo **Novo Projeto de Teste**.  
   
 5.  Digite **SampleUnitTest** para o nome do projeto.  
   

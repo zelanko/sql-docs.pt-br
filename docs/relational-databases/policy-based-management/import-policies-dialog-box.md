@@ -14,11 +14,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: cca73d0d0ad9574f592f529a26518c18a6332c77
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512481"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63006153"
 ---
 # <a name="import-policies-dialog-box"></a>Caixa de diálogo Importar Políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51512481"
   
 ## <a name="options"></a>Opções  
  **Arquivos a importar**  
- Para importar uma política de um arquivo XML, digite o caminho e o nome do arquivo ou use o botão Procurar (**...**).  
+ Para importar uma política de um arquivo XML, digite o caminho e o nome do arquivo ou use o botão Procurar ( **...** ).  
   
  **Substituir duplicatas por itens importados**  
  Selecione para substituir as políticas ou condições existentes com o mesmo nome, caso elas já existam nessa instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Uma condição com uma política dependente não pode ser substituída, a menos que a política dependente também esteja sendo substituída. Se esta opção não estiver selecionada uma condição existente que esteja usando a mesma expressão de condição não causará um erro.  

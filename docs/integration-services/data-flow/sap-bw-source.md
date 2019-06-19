@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c2489e492674a37a63e84b409e60dd40247800e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726369"
 ---
 # <a name="sap-bw-source"></a>Origem SAP BW
@@ -53,7 +53,7 @@ ms.locfileid: "65726369"
   
     2.  Para **Tipo de Ativação**, selecione **Programa de Servidor Registrado**.  
   
-    3.  Para **Communication Type with Target System (Tipo de Comunicação com o Sistema de Destino)**, selecione **Non-Unicode (Inactive MDMP Settings) (Não Unicode (configurações de MDMP inativo))**.  
+    3.  Para **Communication Type with Target System (Tipo de Comunicação com o Sistema de Destino)** , selecione **Non-Unicode (Inactive MDMP Settings) (Não Unicode (configurações de MDMP inativo))** .  
   
     4.  Atribuir uma ID de programa apropriada  
   
@@ -61,7 +61,7 @@ ms.locfileid: "65726369"
   
     1.  Vá para o Administrator Workbench (código de transação RSA1) e, no painel esquerdo, selecione **Destino do Open Hub**.  
   
-    2.  No painel central, clique com o botão direito do mouse em uma InfoArea e selecione **“Criar o destino do Open Hub”**.  
+    2.  No painel central, clique com o botão direito do mouse em uma InfoArea e selecione **“Criar o destino do Open Hub”** .  
   
     3.  Para **Tipo de Destino**, selecione **“Ferramenta de Terceiros”** e insira o destino de RFC criado anteriormente.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65726369"
   
 3.  Crie um processo de transferência de dados (DTP):  
   
-    1.  No painel central da InfoArea, clique com o botão direito do mouse no destino criado anteriormente e selecione **“Criar o processo de transferência de dados”**.  
+    1.  No painel central da InfoArea, clique com o botão direito do mouse no destino criado anteriormente e selecione **“Criar o processo de transferência de dados”** .  
   
     2.  Configurar, salvar e ativar o DTP.  
   

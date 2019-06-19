@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 432b41216418cd1ad1bae70557c95a589f5e78dc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101140"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Especificar as credenciais no Construtor de Relatórios
@@ -62,7 +62,7 @@ ms.locfileid: "66101140"
 -   Nenhuma credencial é necessária.  
   
 ### <a name="windows-integrated-security"></a>Segurança integrada do Windows  
- Quando você seleciona **Usar a autenticação do Windows (segurança integrada)**, o token de segurança do usuário atual é passado para a fonte de dados. Nesse caso, não é solicitado que o usuário digite um nome de usuário ou senha. Essa opção normalmente requer que os recursos de delegação estejam habilitados. Se os recursos não estiverem habilitados, você só poderá usar essa opção para acessar uma fonte de dados que esteja localizada no mesmo computador.  
+ Quando você seleciona **Usar a autenticação do Windows (segurança integrada)** , o token de segurança do usuário atual é passado para a fonte de dados. Nesse caso, não é solicitado que o usuário digite um nome de usuário ou senha. Essa opção normalmente requer que os recursos de delegação estejam habilitados. Se os recursos não estiverem habilitados, você só poderá usar essa opção para acessar uma fonte de dados que esteja localizada no mesmo computador.  
   
 ### <a name="user-name-and-password-login"></a>Logon de nome de usuário e senha  
  Quando você seleciona **Usar este nome de usuário e senha**, um nome de usuário e senha devem ser fornecidos para acessar a fonte de dados. Para um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , as credenciais talvez sejam de um logon de banco de dados. As credenciais são passadas para a fonte de dados para autenticação.  

@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98ddc4f21807b9ac5185ad5e510cd83e35bbc93b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521661"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62652600"
 ---
 # <a name="create-check-constraints"></a>Criar restrições de verificação
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52521661"
   
 1.  No **Pesquisador de Objetos**, expanda a tabela à qual você deseja adicionar uma restrição de verificação, clique com o botão direito do mouse em **Restrições** e clique em **Nova Restrição**.  
   
-2.  Na caixa de diálogo **Restrições de Verificação**, clique no campo **Expressão** e clique nas reticências **(…)**.  
+2.  Na caixa de diálogo **Restrições de Verificação**, clique no campo **Expressão** e clique nas reticências **(…)** .  
   
 3.  Na caixa de diálogo **Expressão de Restrição de Verificação** , digite as expressões SQL da restrição de verificação. Por exemplo, para limitar as entradas na coluna `SellEndDate` da tabela `Product` a um valor maior ou igual à data na coluna `SellStartDate` ou a um valor NULL, digite:  
   

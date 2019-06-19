@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a584311061a24d674eed114f37d9cbbbda43909
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064696"
 ---
 # <a name="histogram-target"></a>Destino do histograma
@@ -31,7 +31,7 @@ ms.locfileid: "66064696"
 |slots|Qualquer valor inteiro. Esse valor é opcional.|Um valor especificado pelo usuário que indica o número máximo de agrupamentos a serem retidos. Quando esse valor é atingido, novos eventos que não pertencem aos grupos existentes são ignorados.<br /><br /> Observe que para aprimorar o desempenho, o número de slot é arredondado para a próxima potência de 2.|  
 |filtering_event_name|Qualquer evento presente na sessão de Eventos Estendidos. Esse valor é opcional.|Um valor especificado pelo usuário usado para identificar uma classe de eventos. Apenas instâncias do evento especificado são particionadas. Todos os outros eventos são ignorados.<br /><br /> Se você especificar esse valor, deverá usar o formato: *package_name*.*event_name*, por exemplo, `'sqlserver.checkpoint_end'`. Você pode identificar o nome do pacote usando a seguinte consulta:<br /><br /> Selecione p.name, se.event_name<br />DO sys.dm_xe_session_events se<br />Junte-se p DM xe_packages<br />ON se_event_package_guid = p.guid<br />ORDER BY p.name, se.event_name<br /><br /> <br /><br /> Se você não especificar o valor filtering_event_name, source_type deverá ser definido como 1 (o padrão).|  
 |source_type|O tipo de objeto no qual o bucket é baseado. Esse valor é opcional e, se não for especificado, terá 1 como valor padrão.|Pode ter um dos seguintes valores:<br /><br /> 0 para um evento<br /><br /> 1 para uma ação|  
-|origem|Coluna do evento ou nome da ação.|A coluna do evento ou o nome da ação usado como a fonte de dados.<br /><br /> Quando especificar uma coluna de evento para origem, você deverá especificar uma coluna a partir do evento usado para o valor filtering_event_name. Para identificar as colunas potenciais, use a consulta a seguir:<br /><br /> SELECT name FROM sys.dm_xe_object_columns<br />WHERE object_name = '\<eventname>'<br />AND column_type != 'readonly'<br /><br /> Quando você especificar uma coluna de evento para origem, não será necessário incluir o nome do pacote no valor da origem.<br /><br /> Quando especificar um nome de ação para origem, você deverá usar uma das ações configuradas para coleta na sessão do evento para a qual esse destino está sendo usado. Para localizar valores potenciais para o nome de ação, você pode consultar a coluna action_name da exibição sys.dm_xe_sesssion_event_actions.<br /><br /> Se estiver usando um nome de ação como a fonte de dados, você deverá especificar o valor de origem usando o formato: *package_name*.*action_name*.|  
+|source|Coluna do evento ou nome da ação.|A coluna do evento ou o nome da ação usado como a fonte de dados.<br /><br /> Quando especificar uma coluna de evento para origem, você deverá especificar uma coluna a partir do evento usado para o valor filtering_event_name. Para identificar as colunas potenciais, use a consulta a seguir:<br /><br /> SELECT name FROM sys.dm_xe_object_columns<br />WHERE object_name = '\<eventname>'<br />AND column_type != 'readonly'<br /><br /> Quando você especificar uma coluna de evento para origem, não será necessário incluir o nome do pacote no valor da origem.<br /><br /> Quando especificar um nome de ação para origem, você deverá usar uma das ações configuradas para coleta na sessão do evento para a qual esse destino está sendo usado. Para localizar valores potenciais para o nome de ação, você pode consultar a coluna action_name da exibição sys.dm_xe_sesssion_event_actions.<br /><br /> Se estiver usando um nome de ação como a fonte de dados, você deverá especificar o valor de origem usando o formato: *package_name*.*action_name*.|  
   
  O exemplo a seguir demonstra, em um nível alto, como o destino do histograma coleta dados. Neste exemplo, você deseja usar o destino do histograma para contar quantas esperas de cada tipo ocorreram. Para fazer isso, você deve especificar as seguintes opções ao definir o destino do histograma:  
   

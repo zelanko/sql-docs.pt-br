@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773729"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Usando índices columnstore clusterizados
@@ -84,7 +84,7 @@ GO
 |-----------------------|-----------------------------------|----------------------------------|  
 |102.000|0|102.000|  
 |145.000|145.000<br /><br /> Tamanho do rowgroup: 145.000|0|  
-|1,048,577|1.048.576<br /><br /> Tamanho do rowgroup: 1.048.576.|1|  
+|1,048,577|1\.048.576<br /><br /> Tamanho do rowgroup: 1.048.576.|1|  
 |2,252,152|2,252,152<br /><br /> Tamanhos dos rowgroups: 1.048.576, 1.048.576, 155.000.|0|  
   
  O exemplo a seguir mostra os resultados do carregamento de 1.048.577 linhas em uma partição. Os resultados mostram um rowgroup COMPRESSED no columnstore (como segmentos de coluna compactados) e 1 linha no deltastore.  

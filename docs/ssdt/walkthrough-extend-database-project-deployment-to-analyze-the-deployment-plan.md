@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 13e2b010a193e8c610c54a5b619d8a67c9b4d2d3
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097454"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Passo a passo: Estender a implantação do projeto de banco de dados para analisar o plano de implantação
@@ -540,7 +540,7 @@ Para criar um colaborador de implantação, você deverá realizar as seguintes 
   
 3.  Clique em **Assinar o assembly**.  
   
-4.  Em **Escolher um arquivo de chave de nome forte**, clique em **<New>**.  
+4.  Em **Escolher um arquivo de chave de nome forte**, clique em **<New>** .  
   
 5.  Na caixa de diálogo **Criar Chave de Nome Forte** , em **Nome de arquivo de chave**, digite **MyRefKey**.  
   

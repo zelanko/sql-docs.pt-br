@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085578"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Criar uma consulta de conteúdo em um modelo de mineração
@@ -40,11 +40,11 @@ ms.locfileid: "66085578"
   
      O modelo **Consulta de Conteúdo** é aberto no editor de códigos apropriado. O painel de metadados lista os modelos que estão disponíveis no banco de dados atual. Para alterar o banco de dados, selecione outro banco de dados na lista **Bancos de Dados Disponíveis** .  
   
-5.  Insira o nome de um modelo de mineração na linha `FROM` [*\<modelo de mineração, nome, MyModel >*]`.CONTENT`. Se o nome do modelo de mineração contiver espaços, coloque o nome entre parênteses.  
+5.  Insira o nome de um modelo de mineração na linha `FROM` [ *\<modelo de mineração, nome, MyModel >* ]`.CONTENT`. Se o nome do modelo de mineração contiver espaços, coloque o nome entre parênteses.  
   
      Se não quiser digitar o nome, você poderá selecionar um modelo de mineração no **Pesquisador de Objetos** e arrastá-lo para o modelo.  
   
-6.  Na linha `SELECT` *\<lista de seleção, lista de expr \* >*, digite os nomes das colunas no conjunto de linhas do esquema de conteúdo modelo de mineração.  
+6.  Na linha `SELECT` *\<lista de seleção, lista de expr \* >* , digite os nomes das colunas no conjunto de linhas do esquema de conteúdo modelo de mineração.  
   
      Para ver uma lista das colunas que podem ser retornadas em consultas ao conteúdo do modelo de mineração, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   

@@ -23,11 +23,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 999e8cc5e66e8e809b2c716c77b0c0fba8ae95ba
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361356"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051436"
 ---
 # <a name="close-symmetric-key-transact-sql"></a>CLOSE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ CLOSE SYMMETRIC KEY ShippingSymKey04;
 GO  
 ```  
   
-### <a name="b-closing-all-symmetric-keys"></a>b. Fechando todas as chaves simétricas  
+### <a name="b-closing-all-symmetric-keys"></a>B. Fechando todas as chaves simétricas  
  O exemplo a seguir fecha todas as chaves simétricas que estiverem abertas na sessão atual, bem como a chave mestra do banco de dados aberta explicitamente.  
   
 ```  

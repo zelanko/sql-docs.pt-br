@@ -18,11 +18,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: eebc9f2cdc059bb8d90c290981da0560a15ab5dc
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590471"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716074"
 ---
 # <a name="sql-server-audit-database-engine"></a>Auditoria do SQL Server (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "56590471"
 > [!IMPORTANT]  
 >  Qualquer usuário autenticado pode fazer a leitura ou gravação no log de eventos de Aplicativo do Windows. O log de eventos de Aplicativo requer menos permissões que o log de eventos de Segurança do Windows e é menos seguro.  
   
- Gravar no log de Segurança do Windows exige que a conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seja adicionada à política **Gerar auditorias de segurança** . Por padrão, Sistema Local, Serviço Local e Serviço de Rede fazem parte dessa política. Esta configuração pode ser definida com o uso do snap-in de política de segurança (secpol.msc). Além disso, é necessário habilitar a política de segurança **Auditar acesso ao objeto** para **Êxito** e **Falha**. Esta configuração pode ser definida com o uso do snap-in de política de segurança (secpol.msc). No [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] ou no Windows Server 2008, é possível definir a política mais detalhada de **aplicativo gerado** na linha de comando usando o programa de política de auditoria (**AuditPol.exe)**. Para obter mais informações sobre as etapas para habilitar a gravação no log de Segurança do Windows, consulte [Gravar eventos de auditoria do SQL Server no log de segurança](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md). Para obter mais informações sobre o programa Auditpol.exe, consulte o artigo 921469 [How to use Group Policy to configure detailed security auditing](https://support.microsoft.com/kb/921469/)da Base de Dados de Conhecimento. Os logs de eventos do Windows são globais ao sistema operacional Windows. Para obter mais informações sobre os logs de eventos do Windows, consulte [Event Viewer Overview](https://go.microsoft.com/fwlink/?LinkId=101455). Se você precisar de permissões mais exatas na auditoria, use o destino de arquivo binário.  
+ Gravar no log de Segurança do Windows exige que a conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seja adicionada à política **Gerar auditorias de segurança** . Por padrão, Sistema Local, Serviço Local e Serviço de Rede fazem parte dessa política. Esta configuração pode ser definida com o uso do snap-in de política de segurança (secpol.msc). Além disso, é necessário habilitar a política de segurança **Auditar acesso ao objeto** para **Êxito** e **Falha**. Esta configuração pode ser definida com o uso do snap-in de política de segurança (secpol.msc). No [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] ou no Windows Server 2008, é possível definir a política mais detalhada de **aplicativo gerado** na linha de comando usando o programa de política de auditoria (**AuditPol.exe)** . Para obter mais informações sobre as etapas para habilitar a gravação no log de Segurança do Windows, consulte [Gravar eventos de auditoria do SQL Server no log de segurança](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md). Para obter mais informações sobre o programa Auditpol.exe, consulte o artigo 921469 [How to use Group Policy to configure detailed security auditing](https://support.microsoft.com/kb/921469/)da Base de Dados de Conhecimento. Os logs de eventos do Windows são globais ao sistema operacional Windows. Para obter mais informações sobre os logs de eventos do Windows, consulte [Event Viewer Overview](https://go.microsoft.com/fwlink/?LinkId=101455). Se você precisar de permissões mais exatas na auditoria, use o destino de arquivo binário.  
   
  Quando você está salvando informações de auditoria em um arquivo, para ajudar a impedir falsificação, você pode restringir o acesso ao local do arquivo das seguintes maneiras:  
   
@@ -128,7 +128,7 @@ ms.locfileid: "56590471"
 ### <a name="database-mirroring-and-sql-server-audit"></a>Espelhamento de Banco de Dados e o SQL Server Audit  
  Um banco de dados com uma especificação de auditoria de banco de dados definida e que usa espelhamento de banco de dados incluirá a especificação de auditoria de banco de dados. Para funcionar corretamente na instância de SQL espelhada, é necessário configurar os seguintes itens:  
   
--   É necessário que o servidor espelho tenha uma auditoria com o mesmo GUID para habilitar a especificação de auditoria de banco de dados para gravar registros de auditoria. Isso pode ser configurado usando o comando CREATE AUDIT WITH GUID **=**_\<GUID da Auditoria de Servidor de origem_>.  
+-   É necessário que o servidor espelho tenha uma auditoria com o mesmo GUID para habilitar a especificação de auditoria de banco de dados para gravar registros de auditoria. Isso pode ser configurado usando o comando CREATE AUDIT WITH GUID **=** _\<GUID da Auditoria de Servidor de origem_>.  
   
 -   Para destinos de arquivos binários, é necessário que a conta do serviço de servidor espelho tenha as permissões apropriadas onde a trilha de auditoria começou a ser gravada.  
   

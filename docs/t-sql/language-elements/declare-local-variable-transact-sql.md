@@ -23,10 +23,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9191be9659f2cbdb42d0b92adef23972292070ed
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980183"
 ---
 # <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
@@ -124,7 +124,7 @@ Define o tipo de dados **table**. A declaração de tabela inclui definições d
  [ COLLATE *collation_name*]  
  Especifica a ordenação da coluna. *collation_name* pode ser um nome de ordenação do Windows ou um nome de ordenação SQL e é aplicável somente a colunas dos tipos de dados **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext**. Se não for especificado, à coluna será atribuída a ordenação do tipo de dados definido pelo usuário (se a coluna for de um tipo de dados definido pelo usuário) ou a ordenação do banco de dados atual.  
   
- Para obter mais informações sobre os nomes de ordenação do Windows e do SQL, veja [COLLATE &#40;Transact-SQL &#41;](~/t-sql/statements/collations.md).  
+ Para obter mais informações sobre os nomes de ordenação do Windows e do SQL, veja [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
  DEFAULT  
  Especifica o valor fornecido para a coluna quando um valor não for fornecido explicitamente durante uma inserção. As definições de DEFAULT podem ser aplicadas a qualquer coluna, com exceção das definidas como **timestamp** ou das colunas com a propriedade IDENTITY. As definições DEFAULT serão removidas quando a tabela for descartada. Somente um valor constante, como uma cadeia de caracteres, uma função de sistema, como SYSTEM_USER() ou NULL pode ser usado como padrão. Para manter a compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um nome de restrição pode ser atribuído a um DEFAULT.  

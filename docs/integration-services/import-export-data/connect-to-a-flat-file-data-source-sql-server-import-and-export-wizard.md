@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1c2789d8d10928bcbe576fc57f630675fdbd405
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723903"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados de arquivo simples (Assistente de Importação e Exportação do SQL Server)
@@ -208,7 +208,7 @@ Na captura de tela, observe que a coluna **id**, que contém números, inicialme
 |Propriedade|Descrição|  
 |--------------|-----------------|  
 |**Nome**|Forneça um nome de coluna descritivo. Se você não inserir um nome, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] criará um nome automaticamente no formato Coluna 0, Coluna 1 e assim por diante.|
-|**ColumnDelimiter**|Seleciona na lista de delimitadores de coluna disponíveis. Escolha delimitadores com pouca probabilidade de ocorrer no texto. Esse valor é ignorado para colunas de largura fixa.<br /><br /> **{CR}{LF}**. As colunas são delimitadas por uma combinação de retorno de carro e alimentação de linha.<br /><br /> **{CR}**. As colunas são delimitadas por um retorno de carro.<br /><br /> **{LF}**. As colunas são delimitadas por uma alimentação de linha.<br /><br /> **Porto e vírgula {;}**. As colunas são delimitadas por um ponto-e-vírgula.<br /><br /> **Dois pontos {:}**. As colunas são delimitadas por dois-pontos.<br /><br /> **Vírgula {,}**. As colunas são delimitadas por uma vírgula.<br /><br /> **Tabulação {t}**. As colunas são delimitadas por uma tabulação.<br /><br /> **Barra vertical {&#124;}**. As colunas são delimitadas por uma barra vertical.|
+|**ColumnDelimiter**|Seleciona na lista de delimitadores de coluna disponíveis. Escolha delimitadores com pouca probabilidade de ocorrer no texto. Esse valor é ignorado para colunas de largura fixa.<br /><br /> **{CR}{LF}** . As colunas são delimitadas por uma combinação de retorno de carro e alimentação de linha.<br /><br /> **{CR}** . As colunas são delimitadas por um retorno de carro.<br /><br /> **{LF}** . As colunas são delimitadas por uma alimentação de linha.<br /><br /> **Porto e vírgula {;}** . As colunas são delimitadas por um ponto-e-vírgula.<br /><br /> **Dois pontos {:}** . As colunas são delimitadas por dois-pontos.<br /><br /> **Vírgula {,}** . As colunas são delimitadas por uma vírgula.<br /><br /> **Tabulação {t}** . As colunas são delimitadas por uma tabulação.<br /><br /> **Barra vertical {&#124;}** . As colunas são delimitadas por uma barra vertical.|
 |**ColumnType**|Denota se a coluna é delimitada, de largura fixa ou com imperfeição à direita. Esta propriedade é somente leitura. Arquivos irregulares à direita são arquivos em que toda coluna tem uma largura fixa, à exceção da última coluna. Ela é delimitada pelo delimitador de linha.|  
 |**InputColumnWidth**|Especifique um valor a ser armazenado como uma contagem de bytes; para arquivos Unicode, esse valor é uma contagem de caracteres. Este valor é ignorado nas colunas delimitadas.<br /><br /> **Observação** No modelo de objeto, o nome desta propriedade é ColumnWidth.|
 |**DataPrecision**|Especifica a precisão de dados numéricos. A precisão se refere ao número de dígitos.|

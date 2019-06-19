@@ -42,10 +42,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 9325820ea71c94bb1e43828998ebbf810fb11c10
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66775265"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server

@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e0c0dbcb9f1cfea08ca1713f7ec46a698944255
-ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65836154"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Tipos e colunas de dados XML (SQL Server)
@@ -55,12 +55,12 @@ ms.locfileid: "65836154"
   
 -   Você deseja usar a funcionalidade administrativa do servidor de banco de dados para gerenciar dados XML. Por exemplo, backup, recuperação e replicação.  
   
- Se nenhuma dessas condições for atendida, talvez seja melhor armazenar os dados como um tipo de objeto grande não XML, como **[n]varchar(max)** ou **varbinary(max)**.  
+ Se nenhuma dessas condições for atendida, talvez seja melhor armazenar os dados como um tipo de objeto grande não XML, como **[n]varchar(max)** ou **varbinary(max)** .  
   
 ## <a name="xml-storage-options"></a>Opções de armazenamento XML  
  As opções de armazenamento de XML no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluem o seguinte:  
   
--   Armazenamento nativo como tipo de dados **xml**   
+-   Armazenamento nativo como tipo de dados **xml**  
   
      Os dados são armazenados em uma representação interna que preserva o conteúdo XML dos dados. Essa representação interna inclui informações sobre a hierarquia de confinamento, a ordem dos documentos e os valores do elemento e do atributo. Especificamente, o conteúdo de InfoSet dos dados XML é preservado. Para obter mais informações sobre InfoSet, visite [http://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843). O conteúdo de InfoSet não pode ser uma cópia idêntica do XML de texto porque as seguintes informações não são mantidas: espaços em branco insuficientes, ordem dos atributos, prefixos de namespace e declaração XML.  
   

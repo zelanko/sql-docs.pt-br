@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85f3fe4115f770f45df6dc226eac81e798514f08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788457"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>Especifique a URL do Ponto de Extremidade Ao Adicionar ou Modificando uma Réplica de disponibilidade (SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "62788457"
 ##  <a name="SyntaxOfURL"></a> Sintaxe para uma URL de ponto de extremidade  
  A sintaxe para uma URL de ponto de extremidade é do seguinte formato:  
   
- TCP<strong>://</strong>*\<system-address>*<strong>:<strong>*\<port>*  
+ TCP<strong>://</strong> *\<system-address>* <strong>:<strong> *\<port>*  
   
  onde  
   
@@ -47,15 +47,15 @@ ms.locfileid: "62788457"
   
     -   Como os nós do cluster WSFC (Windows Server Failover Clustering) são do mesmo domínio, você pode usar o nome do sistema de computador; por exemplo, `SYSTEM46`.  
   
-    -   Para usar um endereço IP, ele deve ser exclusivo em seu ambiente. Recomendamos que você use um endereço IP somente se ele for estático. O endereço IP pode ser o IP Versão 4 (IPv4) ou IP Versão 6 (IPv6). Um endereço IPv6 deve estar entre colchetes. Por exemplo: **[**_<IPv6_address>_**]**.  
+    -   Para usar um endereço IP, ele deve ser exclusivo em seu ambiente. Recomendamos que você use um endereço IP somente se ele for estático. O endereço IP pode ser o IP Versão 4 (IPv4) ou IP Versão 6 (IPv6). Um endereço IPv6 deve estar entre colchetes. Por exemplo: **[** _<IPv6_address>_ **]** .  
   
          Para saber o endereço IP de um sistema, no prompt de comando do Windows, digite no comando **ipconfig** .  
   
     -   O nome de domínio completamente qualificado tem seu funcionamento garantido. Esta é uma cadeia de caracteres de endereço definida localmente de formatos diferentes em lugares diferentes. Frequentemente, mas não sempre, um nome de domínio completamente qualificado é um nome composto que inclui o nome do computador e uma série de segmentos de domínio separados por pontos no formato:  
   
-         _computer_name_ **.** _domain_segment_[...**.**_domain_segment_]  
+         _computer_name_ **.** _domain_segment_[... **.** _domain_segment_]  
   
-         em que *computer_name i*é o nome de rede do computador que executa a instância de servidor e *domain_segment*[...**.**_domain_segment_] são as informações restantes de domínio do servidor; por exemplo: `localinfo.corp.Adventure-Works.com`.  
+         em que *computer_name i*é o nome de rede do computador que executa a instância de servidor e *domain_segment*[... **.** _domain_segment_] são as informações restantes de domínio do servidor; por exemplo: `localinfo.corp.Adventure-Works.com`.  
   
          O conteúdo e número de segmentos de domínio são determinados dentro da companhia ou organização. Para obter mais informações, consulte [Encontrando o nome de domínio completamente qualificado](#Finding_FQDN), posteriormente neste tópico.  
   

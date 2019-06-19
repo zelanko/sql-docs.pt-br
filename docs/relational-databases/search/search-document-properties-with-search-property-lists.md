@@ -20,11 +20,11 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 26f5f87c1df8ade01b7e2f24890990f19ee6ab52
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306204"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716195"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Pesquisar propriedades de documento com listas de propriedades de pesquisa
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -199,7 +199,7 @@ GO
   
     1.  Para remover uma propriedade de documento, clique no cabeçalho da linha à esquerda da propriedade e pressione DEL.  
   
-    2.  Para adicionar uma propriedade de documento, clique na linha vazia na parte inferior da lista, à direita do **\***, e insira os valores para a nova propriedade.  
+    2.  Para adicionar uma propriedade de documento, clique na linha vazia na parte inferior da lista, à direita do **\*** , e insira os valores para a nova propriedade.  
   
          Para obter informações sobre esses valores, veja [Editor da Lista de Pesquisa de Propriedades](/sql/database-engine/search-property-list-editor). Para obter informações sobre como obter esses valores de propriedades definidos pela Microsoft, veja [Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). Para obter informações sobre propriedades definidas por um ISV (fornecedor independente de software), consulte a documentação daquele fornecedor.  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef4d185b143e0a89781e6fbf0c9efe874f7f0ec5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087002"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>Criar uma Fórmula de Membro Personalizado (Assistente de Business Intelligence)
@@ -27,7 +27,7 @@ ms.locfileid: "66087002"
  Selecione o atributo a ser associado a uma fórmula de membro personalizado.  
   
  **Coluna de Origem**  
- Clique no botão Procurar (**...** ) para abrir o **selecionar uma coluna** caixa de diálogo e selecione a coluna de fórmula de membro personalizado a ser associado com o atributo.  
+ Clique no botão Procurar ( **...** ) para abrir o **selecionar uma coluna** caixa de diálogo e selecione a coluna de fórmula de membro personalizado a ser associado com o atributo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   

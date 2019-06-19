@@ -1,5 +1,5 @@
 ---
-title: 'Backup e restauração: Interoperabilidade e coexistência (SQL Server) | Microsoft Docs'
+title: 'Backup e restauração: interoperabilidade e coexistência (SQL Server) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922431"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e restauração: Interoperabilidade e coexistência (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "62922431"
   
  Se um problema for encontrado durante a inicialização do banco de dados, a recuperação falhará, e o banco de dados será marcado como SUSPECT. Se o problema puder ser isolado a um arquivo ou arquivos, o administrador do banco de dados poderá colocar os arquivos offline e tentar reinicializar o banco de dados. Para colocar um arquivo offline, você pode usar a seguinte instrução [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) :  
   
- ALTER DATABASE *database_name* MODIFY FILE (NAME **='*`filename`*'**, OFFLINE)  
+ ALTER DATABASE *database_name* MODIFY FILE (NAME **=' *`filename`* '** , OFFLINE)  
   
  Se a inicialização tiver êxito, qualquer grupo de arquivos que contiver um arquivo offline permanecerá offline.  
   

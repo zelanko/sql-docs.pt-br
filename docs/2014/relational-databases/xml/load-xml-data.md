@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb3365195e3a64353fb0cbd45e832cd0206f678e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63241312"
 ---
 # <a name="load-xml-data"></a>Carregar dados XML
@@ -62,7 +62,7 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
 ```  
   
 ### <a name="string-encoding-incompatibilities"></a>Incompatibilidades de codificação de cadeia de caracteres  
- Se você copiar e analisar XML como uma cadeia de caracteres literal na janela Editor de Consultas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], poderá experimentar incompatibilidades de codificação de cadeia de caracteres [N]VARCHAR. Isso dependerá da codificação de sua instância XML. Em muitas casos, você poderá desejar remover a declaração XML. Por exemplo:   
+ Se você copiar e analisar XML como uma cadeia de caracteres literal na janela Editor de Consultas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], poderá experimentar incompatibilidades de codificação de cadeia de caracteres [N]VARCHAR. Isso dependerá da codificação de sua instância XML. Em muitas casos, você poderá desejar remover a declaração XML. Por exemplo:  
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  

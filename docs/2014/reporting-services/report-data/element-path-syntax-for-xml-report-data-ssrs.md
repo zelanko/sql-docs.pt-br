@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9981a3ebeb1b67bda67509e2a08995fadb195abb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107296"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxe do caminho do elemento para dados de relatório XML (SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66107296"
 |&#124; (barra vertical)|Separa itens de sintaxe. Somente um desses itens poderá ser selecionado.|  
 |`[ ] (brackets)`|Itens de sintaxe opcionais. Não digite os colchetes.|  
 |**{ }** (chaves)|Delimita parâmetros de itens de sintaxe.|  
-|[**,**...*n*]|Indica que o item precedente pode ser repetido *n* vezes. As ocorrências são separadas por vírgulas.|  
+|[ **,** ...*n*]|Indica que o item precedente pode ser repetido *n* vezes. As ocorrências são separadas por vírgulas.|  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -78,7 +78,7 @@ XMLLocalName :: =
 |`ElementNode`|O nó XML no documento XML. Os nós são designados por marcas e existem em uma relação hierárquica com outros nós. Por exemplo, \<Clientes> é o nó do elemento raiz. \<Cliente> é um subelemento de \<Clientes>.|  
 |`XMLName`|O nome do nó. Por exemplo, o nome do nó Clientes é Clientes. Um `XMLName` pode ser prefixado com um identificador de namespace para nomear exclusivamente cada nó.|  
 |`Encoding`|Indica que o `Value` deste elemento é XML codificado e precisa ser decodificado e incluído como um subelemento desse elemento.|  
-|`FieldList`|Define o conjunto de elementos e atributos a serem usados para recuperar dados.<br /><br /> Se não estiverem especificados, todos os atributos e subelementos serão usados como campos. Se a lista de campos vazia for especificada (**{}**), nenhum campo deste nó será usado.<br /><br /> Uma `FieldList` pode não conter um `Value` e um `Element` ou `ElementNode`.|  
+|`FieldList`|Define o conjunto de elementos e atributos a serem usados para recuperar dados.<br /><br /> Se não estiverem especificados, todos os atributos e subelementos serão usados como campos. Se a lista de campos vazia for especificada ( **{}** ), nenhum campo deste nó será usado.<br /><br /> Uma `FieldList` pode não conter um `Value` e um `Element` ou `ElementNode`.|  
 |`Field`|Especifica os dados recuperados como um campo do conjunto de dados.|  
 |`Attribute`|Um par de nome-valor dentro do `ElementNode`. Por exemplo, no nó do elemento \<Customer ID = "1" >, `ID` é um atributo e `@ID(Integer)` retorna "1" com um tipo inteiro no campo de dados correspondente `ID`.|  
 |`Value`|O valor do elemento. `Value` pode ser usado apenas no último `ElementNode` no caminho do elemento. Por exemplo, porque \<retornar > é um nó folha, se ele for incluído no final de um caminho de elemento, o valor da `Return {@}` é `Chair`.|  

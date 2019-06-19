@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ab0560e0df37c80a82017e5f076af969931a79e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63012002"
 ---
 # <a name="create-a-credential"></a>Create a Credential
@@ -61,7 +61,7 @@ ms.locfileid: "63012002"
   
 1.  No Pesquisador de Objetos, expanda a pasta **Segurança** .  
   
-2.  Clique com o botão direito do mouse na pasta **Credenciais** e selecione **Nova Credencial...**.  
+2.  Clique com o botão direito do mouse na pasta **Credenciais** e selecione **Nova Credencial...** .  
   
 3.  Na caixa de diálogo **Nova Credencial** , na caixa **Nome da Credencial** , digite um nome para a credencial.  
   

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 04ced3ce325755f465aaf203f08ed08e38d99f62
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716162"
 ---
 # <a name="catalogmoveenvironment-ssisdb-database"></a>catalog.move_environment (Banco de Dados SSISDB)
@@ -37,13 +37,13 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>Argumentos  
  [ @source_folder = ] *source_folder*  
- O nome da pasta de origem onde o ambiente reside antes da movimentação. O *source_folder* é **nvarchar(128)**.  
+ O nome da pasta de origem onde o ambiente reside antes da movimentação. O *source_folder* é **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- O nome do ambiente que deve ser movido. O *environment_name* é **nvarchar(128)**.  
+ O nome do ambiente que deve ser movido. O *environment_name* é **nvarchar(128)** .  
   
  [ @destination_folder = ] *destination_folder*  
- O nome da pasta de destino onde o ambiente reside após a movimentação. O *destination_folder* é **nvarchar(128)**.  
+ O nome da pasta de destino onde o ambiente reside após a movimentação. O *destination_folder* é **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  

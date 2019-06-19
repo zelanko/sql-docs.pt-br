@@ -31,11 +31,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4246ac153e28393db2bfaefd443f85235e8cf6db
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334533"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62705664"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT – Cláusula INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ SELECT…INTO cria uma tabela no grupo de arquivos padrão e insere nela as linh
  **Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="data-types"></a>Tipos de dados  
- O atributo FILESTREAM não é transferido para a nova tabela. Os BLOBs do FILESTREAM são copiados e armazenados na nova tabela como BLOBs **varbinary(max)**. Sem o atributo FILESTREAM, o tipo de dados **varbinary(max)** tem uma limitação de 2 GB. Se um FILESTREAM BLOB exceder esse valor, ocorrerá o erro 7119, e a instrução será interrompida.  
+ O atributo FILESTREAM não é transferido para a nova tabela. Os BLOBs do FILESTREAM são copiados e armazenados na nova tabela como BLOBs **varbinary(max)** . Sem o atributo FILESTREAM, o tipo de dados **varbinary(max)** tem uma limitação de 2 GB. Se um FILESTREAM BLOB exceder esse valor, ocorrerá o erro 7119, e a instrução será interrompida.  
   
  Quando uma coluna de identidade existente é seleciona para uma nova tabela, a nova coluna herda a propriedade IDENTITY, a menos que uma das seguintes condições seja verdadeira:  
   
@@ -126,7 +126,7 @@ FROM Person.Person AS c
 GO  
 ```  
   
-### <a name="b-inserting-rows-using-minimal-logging"></a>b. Inserindo linhas usando log mínimo  
+### <a name="b-inserting-rows-using-minimal-logging"></a>B. Inserindo linhas usando log mínimo  
  O exemplo a seguir cria a tabela `dbo.NewProducts` e insere linhas da tabela `Production.Product`. O exemplo pressupõe que o modelo de recuperação do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] esteja definido como FULL. Para assegurar um log mínimo, o modelo de recuperação do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] é definido como BULK_LOGGED antes da inserção das linhas e redefinido como FULL após a instrução SELECT...INTO. Esse processo garante que a instrução SELECT... INTO use um espaço mínimo no log de transações e seja executada de forma eficiente.  
   
 ```sql  

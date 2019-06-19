@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9f36faf136a97d185cf1461f7affc414370b813f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102621"
 ---
 # <a name="ssms-utility"></a>Utilitário de Ssms
@@ -53,35 +53,35 @@ Ssms
  *solutionfile*  
  Especifica uma solução para ser aberta. O parâmetro deve conter o caminho completo para o arquivo de solução.  
   
- [**-S** _servername_]  
+ [ **-S** _servername_]  
   Nome do servidor  
   
- [**-d** _databasename_]  
+ [ **-d** _databasename_]  
   Nome do banco de dados  
 
- [**-G**] Conecte-se usando a Autenticação do Active Directory. O tipo de conexão é determinado se **-P** e/ou **-U** está incluído.
+ [ **-G**] Conecte-se usando a Autenticação do Active Directory. O tipo de conexão é determinado se **-P** e/ou **-U** está incluído.
  - Se **-U** e **-P** *não* estiverem incluídos, então, o **Active Directory – Integrado** será usado e nenhuma caixa de diálogo será exibida.
  - Se ambos os **-U** e **-P** estiverem incluídos, então, o **Active Directory – Senha** será usado. O uso dessa opção **não é recomendado** porque você precisa especificar uma senha de texto não criptografado na linha de comando, o que não é recomendado.
  - Se **-U** estiver incluído, mas **-P** estiver ausente, então, a caixa de diálogo de autenticação será exibida, mas todas as tentativas de logon falharão. 
 
   Observe que o **Active Directory – Universal com suporte do MFA** não tem suporte atualmente. 
   
-[**-U** _username_]  
+[ **-U** _username_]  
  Nome de usuário ao se conectar com a “Autenticação do SQL” ou “Active Directory – Senha”  
   
-[**-P** _password_]  
+[ **-P** _password_]  
  Senha ao se conectar com a “Autenticação do SQL” ou “Active Directory – Senha”
   
-[**-E**]  
+[ **-E**]  
  Conectar usando a Autenticação do Windows  
   
-[**-nosplash**]  
+[ **-nosplash**]  
  Impede o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] de exibir o gráfico da tela inicial ao abrir. Use essa opção ao conectar-se a um computador que executa o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] por meio de Serviços de Terminal em uma conexão com uma largura da banda limitada. Este argumento não diferencia maiúsculas e minúsculas e pode ser exibido antes ou depois de outros argumentos  
   
-[**-log**_[filename]?_]  
+[ **-log** _[filename]?_ ]  
  Registra a atividade do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] no arquivo especificado para solucionar problemas  
   
-[**-?**]  
+[ **-?** ]  
  Exibe a ajuda de linha de comando  
   
 ## <a name="remarks"></a>Remarks  

@@ -14,11 +14,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5689c86e530fd7bf7f78cb58f3e1e53f9b731bc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690624"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686829"
 ---
 # <a name="background-job-error-event-class"></a>classe de evento Background Job Error
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,8 +31,8 @@ ms.locfileid: "47690624"
 |**DatabaseID**|**int**|ID do banco de dados especificado pelo trabalho. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**DatabaseName**|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |**Erro**|**int**|Número de erro da última tentativa (**EventSubClass** 1, apenas).|31|Sim|  
-|**EventClass**|**int**|Tipo de evento = 193.|27|não|  
-|**EventSequence**|**int**|A sequência de determinado evento dentro da solicitação.|51|não|  
+|**EventClass**|**int**|Tipo de evento = 193.|27|Não|  
+|**EventSequence**|**int**|A sequência de determinado evento dentro da solicitação.|51|Não|  
 |**EventSubClass**|**int**|Tipo de subclasse de evento.<br /><br /> 1 = Trabalho em segundo plano encerrado após falha.<br /><br /> 2 = Trabalho em segundo plano descartado — a fila está cheia.<br /><br /> 3 = Trabalho em segundo plano retornou erro.|21|Sim|  
 |**IndexID**|**int**|ID do índice no objeto afetado pelo evento. Para determinar a ID do índice de um objeto, use a coluna **indid** da tabela do sistema **sysindexes** .|24|Sim|  
 |**IntegerData**|**int**|Número de tentativas feitas pelo trabalho (**EventSubClass** 1, apenas).|25|Sim|  

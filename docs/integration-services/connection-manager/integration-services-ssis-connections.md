@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd0a6810290d3f7becd6e03cb061b5052b544d17
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728242"
 ---
 # <a name="integration-services-ssis-connections"></a>Conexões do SSIS (Integration Services)
@@ -147,7 +147,7 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
 ## <a name="add-a-connection-manager"></a>Adicionar um gerenciador de conexão
 ###  <a name="wizard"></a> Adicionar um gerenciador de conexões ao criar um pacote  
   
--   Usar o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]   
+-   Usar o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
      Além de criar e configurar um gerenciador de conexões, o assistente também ajuda a criar e configurar origens e destinos que usam o gerenciador de conexões. Para obter mais informações, consulte [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md).  
   

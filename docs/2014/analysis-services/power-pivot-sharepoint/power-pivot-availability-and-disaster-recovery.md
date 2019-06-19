@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1f975fe18b76c4e748d7d2969d20c53b5818f0c3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071326"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>Disponibilidade do PowerPivot e recuperação de desastres (SQL Server 2014)
@@ -47,7 +47,7 @@ ms.locfileid: "66071326"
   
 -   **(3)** Os serviços de cálculo do Excel são executados um em cada servidor de aplicativos e permitem que o aplicativo de serviço seja executado em servidores de aplicativos. Portanto, se um único servidor de aplicativos ficar offline, os serviços de cálculo do Excel ainda estarão disponíveis.  
   
--   **(4)**  e **(6)** instâncias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ins modo do SharePoint é executado em servidores fora do farm do SharePoint, isso inclui o serviço do Windows **SQL Server Analysis Services (POWERPIVOT)**. Cada uma dessas instâncias é registrada nos serviços do Excel **(3)**. Os Serviços do Excel gerenciam o balanceamento de carga de solicitações para os servidores [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . A arquitetura do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 permite que você tenha vários servidores para [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] para que você possa adicionar facilmente mais instâncias, conforme necessário. Para obter mais informações, consulte [Gerenciar as configurações do modelo de dados dos serviços do Excel (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).  
+-   **(4)**  e **(6)** instâncias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ins modo do SharePoint é executado em servidores fora do farm do SharePoint, isso inclui o serviço do Windows **SQL Server Analysis Services (POWERPIVOT)** . Cada uma dessas instâncias é registrada nos serviços do Excel **(3)** . Os Serviços do Excel gerenciam o balanceamento de carga de solicitações para os servidores [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . A arquitetura do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 permite que você tenha vários servidores para [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] para que você possa adicionar facilmente mais instâncias, conforme necessário. Para obter mais informações, consulte [Gerenciar as configurações do modelo de dados dos serviços do Excel (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).  
   
 -   **(5)** Os bancos de dados do SQL Server usados para o conteúdo, a configuração e os bancos de dados do aplicativo. Isso inclui o banco de dados de aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . O seu plano de recuperação de desastres deve incluir a camada de banco de dados. Nesse design, os bancos de dados são executados no mesmo servidor como **(4)** uma das instâncias [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . **(4)** e **(5)** também poderiam estar em servidores diferentes.  
   

@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 77828ab512373c93313c8b0602423a9eaa38a426
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827946"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939785"
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
@@ -59,7 +59,7 @@ SET QUOTED_IDENTIFIER ON
 
 Quando SET QUOTED_IDENTIFIER está ON, os identificadores podem ser delimitados por aspas duplas e literais devem ser delimitadas por aspas simples. Quando SET QUOTED_IDENTIFIER está OFF, os identificadores não podem estar entre aspas e devem seguir todas as regras [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md). Literais podem ser delimitados por aspas simples ou duplas.
 
-Quando SET QUOTED_IDENTIFIER está ON (padrão), todas as cadeias de caracteres delimitadas por aspas duplas são interpretadas como identificadores de objetos. Portanto identificadores entre aspas não precisam seguir as regras [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Elas podem ser palavras-chave reservadas e incluir caracteres geralmente não permitidos nos identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]. Aspas duplas não podem ser usadas para delimitar expressões de cadeias de caracteres literais. Aspas simples devem ser usadas para delimitar cadeias de caracteres literais. Se um sinal de aspas simples (**'**) fizer parte da cadeia de caracteres literal, ele poderá ser representado por duas aspas simples (**''**). SET QUOTED_IDENTIFIER deve estar ON quando palavras-chave reservadas são usadas para nomes de objetos do banco de dados.
+Quando SET QUOTED_IDENTIFIER está ON (padrão), todas as cadeias de caracteres delimitadas por aspas duplas são interpretadas como identificadores de objetos. Portanto identificadores entre aspas não precisam seguir as regras [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Elas podem ser palavras-chave reservadas e incluir caracteres geralmente não permitidos nos identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]. Aspas duplas não podem ser usadas para delimitar expressões de cadeias de caracteres literais. Aspas simples devem ser usadas para delimitar cadeias de caracteres literais. Se um sinal de aspas simples ( **'** ) fizer parte da cadeia de caracteres literal, ele poderá ser representado por duas aspas simples ( **''** ). SET QUOTED_IDENTIFIER deve estar ON quando palavras-chave reservadas são usadas para nomes de objetos do banco de dados.
 
 Quando SET QUOTED_IDENTIFIER está OFF, cadeias de caracteres literais em expressões podem ser delimitadas por aspas simples ou duplas. Se uma cadeia de caracteres literal estiver delimitada por aspas duplas, a cadeia de caracteres poderá conter aspas simples inseridas, como apóstrofos.
 
@@ -89,7 +89,7 @@ SQL estático em um procedimento armazenado é analisado usando a configuração
 
 Para um lote aninhado usando sp_executesql ou EXEC(), a análise inicia usando a configuração de QUOTED_IDENTIFIER da sessão. Se o lote aninhado dentro de um procedimento armazenado a análise começará a usar a configuração QUOTED_IDENTIFIER do procedimento armazenado. Conforme o lote aninhado é analisado, qualquer ocorrência de SET QUOTED_IDENTIFIER mudará o comportamento de análise desse ponto em diante, mas a configuração QUOTED_IDENTIFIER da sessão não será atualizada.
 
-O uso de colchetes, **[** e **]**, para delimitar identificadores não é afetado pela configuração QUOTED_IDENTIFIER.
+O uso de colchetes, **[** e **]** , para delimitar identificadores não é afetado pela configuração QUOTED_IDENTIFIER.
 
 Para exibir a configuração atual dessa configuração, execute a consulta a seguir.
 
@@ -137,7 +137,7 @@ SET QUOTED_IDENTIFIER OFF;
 GO
 ```
 
-### <a name="b-using-the-quoted-identifier-setting-with-single-and-double-quotation-marks"></a>b. Usando uma configuração de identificador entre aspas simples e duplas
+### <a name="b-using-the-quoted-identifier-setting-with-single-and-double-quotation-marks"></a>B. Usando uma configuração de identificador entre aspas simples e duplas
 
  O exemplo a seguir mostra a maneira como aspas simples e duplas são usadas em expressões de cadeias de caracteres com `SET QUOTED_IDENTIFIER` dedinido como `ON` e `OFF`.
 

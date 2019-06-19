@@ -16,11 +16,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 95748a37b656c1ab203ed0cff354c5a641a9c7ed
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974365"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63027001"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guia de arquitetura de página e extensões
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -109,10 +109,10 @@ As estruturas de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa dois tipos de mapas de alocação para registrar a alocação de extensões: 
 
-- **GAM (Global Allocation Map)**   
+- **GAM (Global Allocation Map)**    
   As páginas GAM registram quais extensões foram alocadas. Cada GAM cobre 64.000 extensões ou quase 4 GB (gigabytes) de dados. O GAM tem 1 bit para cada extensão no intervalo que cobre. Se o bit for 1, a extensão será livre; se o bit for 0, a extensão será alocada. 
 
-- **SGAM (Shared Global Allocation Map)**   
+- **SGAM (Shared Global Allocation Map)**    
   As páginas SGAM registram quais extensões estão sendo usadas atualmente como extensões mistas e também têm pelo menos uma página não usada. Cada SGAM cobre 64.000 extensões ou quase 4 GB de dados. O GAM 1 um bit para cada extensão no intervalo que cobre. Se o bit for 1, a extensão será usada como uma extensão mista e terá uma página livre. Se o bit for 0, a extensão não será usada como uma extensão mista, ou será uma extensão mista e todas as suas páginas estarão sendo usadas. 
 
 Cada extensão tem os padrões de bit a seguir configurados no GAM e no SGAM, com base em seu uso atual. 
@@ -177,10 +177,10 @@ O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] só alocará uma ex
 
 O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa duas estruturas de dados internas para acompanhar extensões modificadas por operações de cópia em massa e extensões modificadas desde o último backup completo. Essas estruturas de dados aceleram consideravelmente os backups diferenciais. Elas também aceleram o registro de operações de cópia em massa quando um banco de dados está usando o modelo de recuperação bulk logged. Como as páginas GAM (Global Alocação Map) e SGAM (Shared Global Allocation Map), essas estruturas são bitmaps em que cada bit representa uma única extensão. 
 
-- **DCM (Differential Changed Map)**   
+- **DCM (Differential Changed Map)**    
    Acompanha as extensões que foram alteradas desde a última instrução `BACKUP DATABASE`. Se o bit de uma extensão for 1, isso significa que a extensão foi modificada desde a última instrução `BACKUP DATABASE`. Se o bit for 0, a extensão não foi modificada. Os backups diferenciais leem apenas as páginas DCM para determinar quais extensões foram modificadas. Isso reduz significativamente o número de páginas que um backup diferencial deve examinar. O tempo de execução de um backup diferencial é proporcional ao número de extensões modificadas desde a última instrução BACKUP DATABASE, e não ao tamanho geral do banco de dados. 
 
-- **BCM (Bulk Changed Map)**   
+- **BCM (Bulk Changed Map)**    
    Acompanha as extensões modificadas pelas operações registradas em log em massa desde a última instrução `BACKUP LOG`. Se o bit de uma extensão for 1, isso significará que a extensão foi modificada por uma operação registrada em log em massa após a última instrução `BACKUP LOG`. Se o bit for 0, a extensão não foi modificada pelas operações registradas em massa. Embora as páginas BCM sejam exibidas em todos os bancos de dados, elas serão relevantes apenas quando o banco de dados estiver usando o modelo de recuperação bulk-logged. Nesse modelo de recuperação, quando um `BACKUP LOG` é executado, o processo de backup examina os BCMs em busca das extensões que foram modificadas. Depois, inclui essas extensões no backup de log. Isso permite que as operações registradas em massa sejam recuperadas se o banco de dados for restaurado de um backup de banco de dados e uma sequência de backups de log de transações. As páginas BCM não são relevantes em um banco de dados que usa o modelo de recuperação simples, porque nenhuma operação registrada em massa está registrada. Elas não são relevantes em um banco de dados que usa o modelo de recuperação completo, porque o modelo de recuperação trata as operações com log em massa como operações registradas completas. 
 
 O intervalo entre as páginas DCM e BCM é o mesmo que o intervalo entre as páginas GAM e SGAM, 64.000 extensões. As páginas DCM e BCM estão localizadas atrás das páginas GAM e SGAM em um arquivo físico:
