@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c455e449ff59296848c7e3f15d07aaee80d415c7
-ms.sourcegitcommit: e92ce0f59345fe61c0dd3bfe495ef4b1de469d4b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66221153"
 ---
 # <a name="ole-db-connection-manager"></a>gerenciador de conexões OLE DB
@@ -124,7 +124,7 @@ Para usar a autenticação de identidade gerenciada para a Instância Gerenciada
     
 1. **[Provisione um administrador do Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)** para a instância gerenciada no portal do Azure, caso ainda não tenha feito isso. O administrador do Azure AD pode ser um usuário ou um grupo do Azure AD. Se você conceder uma função de administrador ao grupo com a identidade gerenciada, ignore as etapas 2 a 5. O administrador terá acesso completo ao banco de dados.
 
-1. **[Encontre a identidade gerenciada do data factory no portal do Azure](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)** . Acesse as **Propriedades** do data factory. Copie a **ID do Aplicativo da Identidade Gerenciada** (NÃO a **ID de Objeto da Identidade Gerenciada**).
+1. **[Encontre a identidade gerenciada do data factory no portal do Azure](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)**. Acesse as **Propriedades** do data factory. Copie a **ID do Aplicativo da Identidade Gerenciada** (NÃO a **ID de Objeto da Identidade Gerenciada**).
 
 1. **Converter a identidade gerenciada do data factory em tipo binário**. Conecte-se ao banco de dados **mestre** na instância gerenciada usando ferramentas como o SSMS com sua conta de administrador do SQL/do Active Directory. Execute o seguinte T-SQL no banco de dados **mestre** para obter a ID do aplicativo de identidade gerenciada como binário:
     

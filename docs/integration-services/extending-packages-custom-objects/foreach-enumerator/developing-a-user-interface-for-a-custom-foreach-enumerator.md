@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d72d8fba0d9fbe68b14ebc06cbb8d171ef08ddd3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724552"
 ---
 # <a name="developing-a-user-interface-for-a-custom-foreach-enumerator"></a>Desenvolvendo uma interface do usuário para um enumerador ForEach personalizado
@@ -35,7 +35,7 @@ ms.locfileid: "65724552"
   
 ## <a name="coding-the-user-interface-control-class"></a>Codificando a classe de controle de interface do usuário  
   
-### <a name="initializing-the-user-interface"></a>Inicializando a interface do usuário   
+### <a name="initializing-the-user-interface"></a>Inicializando a interface do usuário  
  Você substitui o método <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI.Initialize%2A> para referências de cache ao objeto de host e às coleções de gerenciadores de conexões e variáveis definidas no pacote.  
   
 ### <a name="setting-properties-on-the-user-interface-control"></a>Definindo propriedades no controle de interface do usuário  

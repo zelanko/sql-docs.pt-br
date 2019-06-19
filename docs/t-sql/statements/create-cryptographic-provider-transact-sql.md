@@ -24,11 +24,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8ec316925fcd21a80561750665386a72f096060d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815882"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62993776"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
 ## <a name="remarks"></a>Remarks  
  Todas as chaves criadas por um provedor farão referência ao provedor por meio de seu GUID. O GUID é retido em todas as versões da DLL.  
   
- A DLL que implementa a interface SQLEKM deve ser assinada digitalmente usando qualquer certificado. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verificará a assinatura. Isso inclui sua cadeia de certificados, que deve ter sua raiz instalada no local  **	Autoridades de Certificação Raiz Confiáveis** em um sistema Windows. Se a assinatura não for verificada corretamente, a instrução CREATE CRYPTOGRAPHIC PROVIDER falhará. Para obter mais informações sobre certificados e cadeias de certificados, consulte [Certificados e chaves assimétricas do SQL Server](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
+ A DLL que implementa a interface SQLEKM deve ser assinada digitalmente usando qualquer certificado. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verificará a assinatura. Isso inclui sua cadeia de certificados, que deve ter sua raiz instalada no local **	Autoridades de Certificação Raiz Confiáveis** em um sistema Windows. Se a assinatura não for verificada corretamente, a instrução CREATE CRYPTOGRAPHIC PROVIDER falhará. Para obter mais informações sobre certificados e cadeias de certificados, consulte [Certificados e chaves assimétricas do SQL Server](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
  Quando uma dll de provedor EKM não implementar todos os métodos necessários, CREATE CRYPTOGRAPHIC PROVIDER poderá retornar o erro 33085:  
   

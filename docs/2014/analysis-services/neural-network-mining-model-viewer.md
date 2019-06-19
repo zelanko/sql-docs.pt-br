@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05654d9206f09d151abd5557d0aa6aae90b1b9ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072315"
 ---
 # <a name="neural-network-mining-model-viewer"></a>Rede Neural (Visualizador do Modelo de Mineração)
@@ -39,7 +39,7 @@ ms.locfileid: "66072315"
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Atributo**|Escolha um atributo de entrada na lista. Se você deixar a seleção padrão,  **\<todos os >**, o gráfico mostra uma lista de entrada de todos os atributos, classificados pelo impacto no atributo previsível.|  
+|**Atributo**|Escolha um atributo de entrada na lista. Se você deixar a seleção padrão,  **\<todos os >** , o gráfico mostra uma lista de entrada de todos os atributos, classificados pelo impacto no atributo previsível.|  
 |**Value**|Escolha um valor para o atributo de entrada.|  
   
  **Saída**  

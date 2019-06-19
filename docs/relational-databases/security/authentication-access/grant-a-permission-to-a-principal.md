@@ -15,11 +15,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb89c5bd1d3c1f40e03de60041dc3d22cc56f661
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540406"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62645451"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Conceder uma permissão a uma entidade de segurança
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "52540406"
   
 4.  Clique com o botão direito do mouse em um procedimento armazenado e selecione **Propriedades**.  
   
-5.  Na caixa de diálogo **Propriedades do Procedimento Armazenado –**_stored\_procedure\_name_, em selecionar uma página, selecione **Permissões**. Use essa página para adicionar usuários ou funções ao procedimento armazenado e especificar as permissões que esses usuários ou funções têm.  
+5.  Na caixa de diálogo **Propriedades do Procedimento Armazenado –** _stored\_procedure\_name_, em selecionar uma página, selecione **Permissões**. Use essa página para adicionar usuários ou funções ao procedimento armazenado e especificar as permissões que esses usuários ou funções têm.  
   
 6.  Quando terminar, clique em **OK**.  
   

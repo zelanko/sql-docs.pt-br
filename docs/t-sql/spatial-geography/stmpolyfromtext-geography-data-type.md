@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 318f58fb2bde2d60c1937191a54fec49caabf4c6
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65936573"
 ---
 # <a name="stmpolyfromtext-geography-data-type"></a>STMPolyFromText (tipo de dados geography)
@@ -39,7 +39,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *multipolygon_tagged_text*  
- É a representação WKT da instância de **geographyMultiPolygon** que você deseja retornar. *multipolygon_tagged_text* é uma expressão **nvarchar(max)** .  
+ É a representação WKT da instância de **geographyMultiPolygon** que você deseja retornar. *multipolygon_tagged_text* é uma expressão **nvarchar(max)**.  
   
  *SRID*  
  É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geographyMultiPolygon** que você deseja retornar.  

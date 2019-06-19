@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 623e39aed2471f765755bd46f737967c43f4c1cb
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65938402"
 ---
 # <a name="stpointfromwkb-geometry-data-type"></a>STPointFromWKB (tipo de dados geometry)
@@ -39,7 +39,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_point*  
- É a representação WKB da instância de **geometryPoint** que você deseja retornar. *WKB_point* é uma expressão **varbinary(max)** .  
+ É a representação WKB da instância de **geometryPoint** que você deseja retornar. *WKB_point* é uma expressão **varbinary(max)**.  
   
  *SRID*  
  É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geometryPoint** que você deseja retornar.  

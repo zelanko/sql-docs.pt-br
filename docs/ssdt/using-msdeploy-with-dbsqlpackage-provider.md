@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6e58a1f5e36ea4c8f9412c06ad08729716d02eef
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101965"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Usando MSDeploy com o provedor do dbSqlPackage
@@ -47,15 +47,15 @@ Você especifica verbos do MS-Deploy usando a opção **-verb** na linha de coma
   
 |Verbo|Descrição|  
 |--------|---------------|  
-|dump|Fornece informações, que incluem o nome, o número da versão e a descrição, sobre um banco de dados de origem contido em um arquivo .dacpac. Especifique o banco de dados de origem usando o seguinte formato na linha de comando:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="**_.dacpac-file-path_**"**|  
-|sync|Especifica as ações do dbSqlPackage usando o seguinte formato na linha de comando:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_**dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />Consulte as seções abaixo para obter os parâmetros válidos de origem e destino para o verbo de sincronização.|  
+|dump|Fornece informações, que incluem o nome, o número da versão e a descrição, sobre um banco de dados de origem contido em um arquivo .dacpac. Especifique o banco de dados de origem usando o seguinte formato na linha de comando:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="** _.dacpac-file-path_ **"**|  
+|sync|Especifica as ações do dbSqlPackage usando o seguinte formato na linha de comando:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_ **dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />Consulte as seções abaixo para obter os parâmetros válidos de origem e destino para o verbo de sincronização.|  
   
 ## <a name="dbsqlpackage-source"></a>Origem do dbSqlPackage  
 O provedor **dbSqlPackage** usa uma entrada que é uma cadeia de conexão válida do SQL Server/SQL Azure ou um caminho para um arquivo .dacpac no disco.  A sintaxe para especificar a fonte de entrada para o provedor é a seguinte:  
   
 |Entrada|Padrão|Descrição|  
 |---------|-----------|---------------|  
-|**-source:dbSqlPackage=**{*input*}|**N/A**|*input* é uma cadeia de conexão válida do SQL Server ou do SQL Azure ou um caminho para um arquivo .dacpac no disco.<br /><br />**OBSERVAÇÃO:** as únicas propriedades de cadeia de conexão com suporte ao usar uma cadeia de conexão como fonte de entrada são *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* e *ConnectionTimeout*.|  
+|**-source:dbSqlPackage=** {*input*}|**N/A**|*input* é uma cadeia de conexão válida do SQL Server ou do SQL Azure ou um caminho para um arquivo .dacpac no disco.<br /><br />**OBSERVAÇÃO:** as únicas propriedades de cadeia de conexão com suporte ao usar uma cadeia de conexão como fonte de entrada são *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* e *ConnectionTimeout*.|  
   
 Se sua fonte de entrada for uma cadeia de conexão para um banco de dados SQL Server/SQL Azure ativo, o **dbSqlPackage** extrairá um instantâneo de banco de dados (na forma de um arquivo .dacpac) em um banco de dados SQL Server/SQL Azure ativo.  
   

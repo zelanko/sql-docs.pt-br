@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86f54b00e530e70d1952461ce7b98b9238e4c3f3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109154"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Caixa de diálogo Preenchimento (Construtor de Relatórios e SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66109154"
   
  Se estiver inserindo a imagem, na lista suspensa, escolha a imagem a ser adicionada ao relatório. Clique em **Importar** para adicionar a imagem à lista suspensa. Se você adicionou uma imagem ao painel **Dados** , poderá selecioná-la escolhendo a opção **Inserido** e, em seguida, selecionar a imagem na lista suspensa.  
   
- Se você selecionar a opção **Externo** , digite a URL da imagem. Para um relatório publicado em um servidor de relatório configurado para o modo nativo, use um caminho completo ou relativo (por exemplo, http://*\<servername >*  /images/Image1.jpg). Para um relatório publicado em um servidor de relatório configurado no modo integrado do SharePoint, use uma URL totalmente qualificada (por exemplo, http://*\<SharePointservername > /\<site >*  /documentos/imagens / Image1.jpg).  
+ Se você selecionar a opção **Externo** , digite a URL da imagem. Para um relatório publicado em um servidor de relatório configurado para o modo nativo, use um caminho completo ou relativo (por exemplo, http:// *\<servername >*  /images/Image1.jpg). Para um relatório publicado em um servidor de relatório configurado no modo integrado do SharePoint, use uma URL totalmente qualificada (por exemplo, http:// *\<SharePointservername > /\<site >*  /documentos/imagens / Image1.jpg).  
   
  **Importar**  
  Disponível quando você seleciona **Inserido**. Clique para adicionar uma imagem à lista suspensa **Usar esta imagem** .  

@@ -28,10 +28,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 691f88eab85d4a9adda1cb44d5d234eb1f6360fd
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503129"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
@@ -168,7 +168,7 @@ CREATE STATISTICS statistics_name
  
  **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).    
   
- STATS_STREAM **=**_stats_stream_  
+ STATS_STREAM **=** _stats_stream_  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  NORECOMPUTE  

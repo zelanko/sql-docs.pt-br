@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18150e08b06e1b8f919df98e8e10b4eb43cc4b64
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727466"
 ---
 # <a name="send-mail-task"></a>Tarefa Enviar Email
@@ -154,13 +154,13 @@ ms.locfileid: "65727466"
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Conexão do arquivo  
  **MessageSource**  
- Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão...** > para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = Variável  
  **MessageSource**  
- Selecione uma variável na lista ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Selecione uma variável na lista ou clique em \<**Nova variável...** > para criar uma nova variável.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

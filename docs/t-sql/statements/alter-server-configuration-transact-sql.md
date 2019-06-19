@@ -22,10 +22,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2de44a8eec9b2cf4428cb40db79f0c08f9a1afbf
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65993466"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
@@ -196,7 +196,7 @@ O valor do tempo limite de quanto tempo a DLL de recursos do Mecanismo de Banco 
   
 **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-HADR CLUSTER CONTEXT **=** { **'** _remote\_windows\_cluster_ **'** | LOCAL }  
+HADR CLUSTER CONTEXT **=** { **'**_remote\_windows\_cluster_**'** | LOCAL }  
 Alterna o contexto do cluster HADR da instância de servidor para o cluster especificado do Windows Server Failover Cluster (WSFC). O *contexto do cluster HADR* determina qual cluster WSFC gerencia os metadados das réplicas de disponibilidade hospedadas pela instância de servidor. Use a opção SET HADR CLUSTER CONTEXT somente durante uma migração entre clusters de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] para uma instância do [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou versão posterior em um novo WSFC.  
   
 Só é possível alternar o contexto do cluster HADR do WSFC local para um WSFC remoto. Então, você pode optar por voltar do WSFC remoto para o WSFC local. O contexto do cluster HADR pode ser alternado para um cluster remoto somente quando a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não está hospedando réplicas de disponibilidade.  

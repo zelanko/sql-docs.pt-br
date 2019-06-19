@@ -16,15 +16,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 186a78bbd2b887875bf6f5fc8594ffb714fb3ec7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088821"
 ---
 # <a name="advanced-save-options"></a>Opções Avançadas de Salvamento
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Use essa caixa de diálogo selecionar um esquema de codificação de linguagem e para especificar os caracteres a serem inseridos no final de cada linha. Para acessar a caixa de diálogo **Opções Avançadas de Salvamento** no menu **Arquivo** , clique em **Salvar** <query name>**.sql como** para abrir a caixa de diálogo **Salvar Arquivo As** , clique na seta para baixo no botão **Salvar** e, em seguida, clique **Salvar with Encoding**.  
+Use essa caixa de diálogo selecionar um esquema de codificação de linguagem e para especificar os caracteres a serem inseridos no final de cada linha. Para acessar a caixa de diálogo **Opções Avançadas de Salvamento** no menu **Arquivo** , clique em **Salvar** <query name> **.sql como** para abrir a caixa de diálogo **Salvar Arquivo As** , clique na seta para baixo no botão **Salvar** e, em seguida, clique **Salvar with Encoding**.  
   
 ## <a name="options"></a>Opções  
 **Codificação**  

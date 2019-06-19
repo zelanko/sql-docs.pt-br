@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72bdab9edf0dc920ed5e8b5801cbdec4868a047a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65720143"
 ---
 # <a name="dtexec-utility"></a>Utilitário dtexec
@@ -69,22 +69,22 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="bit"></a> Considerações sobre a instalação em computadores de 64 bits  
  Em um computador de 64 bits, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala a versão de 64 bits do utilitário **dtexec** (dtexec.exe). Se for necessário executar alguns pacotes no modo de 32 bits, você precisará instalar a versão de 32 bits do utilitário **dtexec** . Para instalar a versão de 32 bits do utilitário **dtexec** , você deve selecionar Ferramentas de Cliente ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] durante a instalação.  
   
- Por padrão, um computador de 64 bits que tem as versões de 64 e de 32 bits de um prompt de comando do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instaladas executará a versão de 32 bits no prompt de comando. A versão de 32 bits é executada porque o caminho do diretório da versão de 32 bits aparece na variável de ambiente PATH antes do caminho do diretório da versão de 64 bits. (Normalmente, o caminho do diretório de 32 bits é *\<drive>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn, enquanto o caminho do diretório de 64 bits é *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Binn.)  
+ Por padrão, um computador de 64 bits que tem as versões de 64 e de 32 bits de um prompt de comando do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instaladas executará a versão de 32 bits no prompt de comando. A versão de 32 bits é executada porque o caminho do diretório da versão de 32 bits aparece na variável de ambiente PATH antes do caminho do diretório da versão de 64 bits. (Normalmente, o caminho do diretório de 32 bits é *\<drive>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn, enquanto o caminho do diretório de 64 bits é *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn.)  
   
 > **OBSERVAÇÃO:** Se você usar o SQL Server Agent para executar o utilitário, o SQL Server Agent usará automaticamente a versão de 64 bits do utilitário. O SQL Server Agent usa o Registro, não a variável de ambiente PATH, para localizar o executável correto do utilitário.  
   
  Para garantir que a versão de 64 bits do utilitário no prompt de comando seja executada, execute uma das seguintes ações:  
   
--   Abra uma janela do Prompt de Comando, altere para o diretório que contém a versão de 64 bits do utilitário (*\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Binn) e execute o utilitário nesse local.  
+-   Abra uma janela do Prompt de Comando, altere para o diretório que contém a versão de 64 bits do utilitário ( *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) e execute o utilitário nesse local.  
   
--   No prompt de comando, execute o utilitário inserindo o caminho completo (*\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Binn) para a versão de 64 bits do utilitário.  
+-   No prompt de comando, execute o utilitário inserindo o caminho completo ( *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) para a versão de 64 bits do utilitário.  
   
--   Altere permanentemente a ordem dos caminhos na variável de ambiente PATH colocando o caminho de 64 bits (*\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Binn) antes do caminho de 32 bits (*\<drive>*:\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) na variável.  
+-   Altere permanentemente a ordem dos caminhos na variável de ambiente PATH colocando o caminho de 64 bits ( *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) antes do caminho de 32 bits ( *\<drive>* :\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) na variável.  
   
 ##  <a name="side"></a> Considerações em computadores com instalações lado a lado  
  Quando o [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] é instalado em um computadou o com o [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] instalado, várias versões do utilitário **dtexec** são instaladas.  
   
- Para garantir a execução da versão correta do utilitário, no prompt de comando, execute o utilitário inserindo o caminho completo (*\<drive>*:\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn).  
+ Para garantir a execução da versão correta do utilitário, no prompt de comando, execute o utilitário inserindo o caminho completo ( *\<drive>* :\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn).  
   
 ##  <a name="phases"></a> Fases de execução  
  O utilitário passa por quatro fases à medida que é executado. As fases são as seguintes:  
@@ -166,7 +166,7 @@ dtexec /option [value] [/option [value]]...
   
      Se você especificar um argumento *option_name* , o **dtexec** iniciará os Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exibirá o tópico do utilitário dtexec.  
   
--   **/Ca[llerInfo]**: (Opcional). Especifica informações adicionais para uma execução de pacote. Quando você executa um pacote usando o SQL Server Agent, o agente define este argumento para indicar que a execução de pacote é chamada pelo SQL Server Agent. Este parâmetro é ignorado quando o utilitário **dtexec** é executado da linha de comando.  
+-   **/Ca[llerInfo]** : (Opcional). Especifica informações adicionais para uma execução de pacote. Quando você executa um pacote usando o SQL Server Agent, o agente define este argumento para indicar que a execução de pacote é chamada pelo SQL Server Agent. Este parâmetro é ignorado quando o utilitário **dtexec** é executado da linha de comando.  
   
 -   **/CheckF[ile]** _filespec_: (Opcional). Define a propriedade **CheckpointFileName** no pacote como o caminho e arquivo especificados em *filespec*. Esse arquivo é usado quando o pacote é reiniciado. Se esta opção for especificada e nenhum valor for fornecido para o nome de arquivo, o **CheckpointFileName** do pacote será definido como uma cadeia de caracteres vazia. Se esta opção não for especificada, os valores no pacote serão retidos.  
   
@@ -182,7 +182,7 @@ dtexec /option [value] [/option [value]]...
   
      Você pode usar a opção **/ConfigFile** para carregar configurações adicionais em tempo de execução que você não especificou em tempo de design. Porém, você não pode usar a opção **/ConfigFile** para substituir valores configurados que você também especificou em tempo de design. Para compreender como são aplicadas as configurações de pacote, consulte [Package Configurations](../../integration-services/packages/package-configurations.md).  
   
--   **/Conn[ection]** _id_or_name;connection_string [[;id_or_name;connection_string]...]_: (Opcional). Especifica que o gerenciador de conexões com o nome ou o GUID especificado está localizado no pacote e especifica uma cadeia de conexão.  
+-   **/Conn[ection]** _id_or_name;connection_string [[;id_or_name;connection_string]...]_ : (Opcional). Especifica que o gerenciador de conexões com o nome ou o GUID especificado está localizado no pacote e especifica uma cadeia de conexão.  
   
      Essa opção requer que ambos os parâmetros sejam especificados: o nome ou o GUID do gerenciador de conexões deve ser fornecido no argumento *id_or_name*, e uma cadeia de conexão válida deve ser especificada no argumento *connection_string*. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Conexões](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
@@ -244,7 +244,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/Dump** _error code_: Por padrão, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena os arquivos de despejo de depuração na pasta *\<unidade>*:\Arquivos de Programas\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     **/Dump** _error code_: Por padrão, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena os arquivos de despejo de depuração na pasta *\<unidade>* :\Arquivos de Programas\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **OBSERVAÇÃO:** Os arquivos de despejo de depuração podem conter informações confidenciais. Use uma ACL (lista de controle de acesso) para restringir o acesso aos arquivos ou copie os arquivos em uma pasta que tenha acesso restrito. Por exemplo, antes de enviar os arquivos de depuração para o serviço de suporte da Microsoft, recomendamos que você remova todas as informações confidenciais.  
   
@@ -256,7 +256,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**: (opcional) cria os arquivos de despejo de depuração, .mdmp e .tmp, quando ocorre um erro enquanto o pacote está em execução.  
   
-     Por padrão, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena os arquivos de despejo de depuração na pasta *\<drive>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     Por padrão, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena os arquivos de despejo de depuração na pasta *\<drive>* :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **OBSERVAÇÃO:** Os arquivos de despejo de depuração podem conter informações confidenciais. Use uma ACL (lista de controle de acesso) para restringir o acesso aos arquivos ou copie os arquivos em uma pasta que tenha acesso restrito. Por exemplo, antes de enviar os arquivos de depuração para o serviço de suporte da Microsoft, recomendamos que você remova todas as informações confidenciais.  
   
@@ -273,7 +273,7 @@ dtexec /option [value] [/option [value]]...
      Use a opção **/Env [Reference]** com as opções **/ISServer** e **/Server** .  
   
      Este parâmetro é usado pelo SQL Server Agent.  
-  --   **/F[ile]** _filespec_: (Opcional). Carrega um pacote que é salvo no sistema de arquivos. Os pacotes que estão salvos no sistema de arquivos são implantados usando o modelo de implantação de pacote herdado. Para executar pacotes que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando o modelo de implantação de projeto, use a opção **/ISServer** . Para obter mais informações sobre os modelos de implantação de pacote e projeto, consulte [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)  
+  --    **/F[ile]** _filespec_: (Opcional). Carrega um pacote que é salvo no sistema de arquivos. Os pacotes que estão salvos no sistema de arquivos são implantados usando o modelo de implantação de pacote herdado. Para executar pacotes que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando o modelo de implantação de projeto, use a opção **/ISServer** . Para obter mais informações sobre os modelos de implantação de pacote e projeto, consulte [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)  
 
   O argumento *filespec* especifica o caminho e nome de arquivo do pacote. Você pode especificar o caminho como local ou de UNC (Convenção Universal de Nomenclatura). Se o caminho ou o nome do arquivo especificado no argumento *filespec* contiver um espaço, você deverá colocar o argumento *filespec* entre aspas.  
   
@@ -367,7 +367,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Rem** _comment_: (Opcional). Inclui comentários no prompt de comando ou nos arquivos de comando. O argumento é opcional. O valor de *comment* é uma cadeia de caracteres que deve ser colocada entre aspas ou não conter nenhum espaço em branco. Se nenhum argumento for especificado, uma linha em branco será inserida. Os valores de*comment* serão descartados durante a fase de fornecimento.  
   
--   **/Rep[orting]** _level_ [*;event_guid_or_name*[*;event_guid_or_name*[...]]: (Opcional). Especifica que tipos de mensagens devem ser relatadas. As opções de relatório disponíveis para *level* são as seguintes:  
+-   **/Rep[orting]** _level_ [ *;event_guid_or_name*[ *;event_guid_or_name*[...]]: (Opcional). Especifica que tipos de mensagens devem ser relatadas. As opções de relatório disponíveis para *level* são as seguintes:  
   
      **N** Sem geração de relatórios.  
   
@@ -439,15 +439,15 @@ dtexec /option [value] [/option [value]]...
   
      A opção **/SQL** não pode ser usada junto com a opção **/DTS** ou a opção **/File** . Se várias opções forem especificadas, o **dtexec** falhará.  
   
--   **/Su[m]**: (Opcional). Mostra um contador incremental que contém o número de linhas que serão recebidas pelo próximo componente.  
+-   **/Su[m]** : (Opcional). Mostra um contador incremental que contém o número de linhas que serão recebidas pelo próximo componente.  
   
 -   **/U[ser]** _user_name_: (Opcional). Permite a recuperação de um pacote que está protegido pela Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa opção é usada apenas quando a opção **/SQL** é especificada. O valor *user_name* pode estar entre aspas.  
   
     > **IMPORTANTE:**  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
--   **/Va[lidate]**: (Opcional). Interrompe a execução do pacote depois da fase de validação, sem executar realmente o pacote. Durante a validação, o uso da opção **/WarnAsError** faz com que o **dtexec** trate um aviso como um erro, portanto, haverá falha no pacote se ocorrer um aviso durante a validação.  
+-   **/Va[lidate]** : (Opcional). Interrompe a execução do pacote depois da fase de validação, sem executar realmente o pacote. Durante a validação, o uso da opção **/WarnAsError** faz com que o **dtexec** trate um aviso como um erro, portanto, haverá falha no pacote se ocorrer um aviso durante a validação.  
   
--   **/VerifyB[uild]** _major_[*;minor*[*;build*]]: (Opcional). Verifica o número da compilação de um pacote contra os números de compilação especificados durante a fase de verificação no *major*, *minor*e nos argumentos *build* . Se uma ocorrer um erro de correspondência, o pacote não será executado.  
+-   **/VerifyB[uild]** _major_[ *;minor*[ *;build*]]: (Opcional). Verifica o número da compilação de um pacote contra os números de compilação especificados durante a fase de verificação no *major*, *minor*e nos argumentos *build* . Se uma ocorrer um erro de correspondência, o pacote não será executado.  
   
      Os valores são inteiros longos. O argumento pode ter um dentre três formulários, sendo sempre obrigatório um valor para *major* :  
   
@@ -459,7 +459,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/VerifyP[ackageID]** _packageID_: (Opcional). Verifica o GUID do pacote a ser executado, comparando-o ao valor especificado no argumento *package_id* .  
   
--   **/VerifyS[igned]**: (Opcional). Faz com que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verifique a assinatura digital do pacote. Se o pacote não for assinado ou a assinatura não for válida, o pacote falhará. Para obter mais informações, consulte [Identificar a origem de pacotes com assinaturas digitais](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).  
+-   **/VerifyS[igned]** : (Opcional). Faz com que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verifique a assinatura digital do pacote. Se o pacote não for assinado ou a assinatura não for válida, o pacote falhará. Para obter mais informações, consulte [Identificar a origem de pacotes com assinaturas digitais](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).  
   
     > **IMPORTANTE:** Quando configurado para verificar a assinatura do pacote, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] apenas verifica se a assinatura digital está presente, se é válida e se provém de uma origem confiável. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não verifica se o pacote foi alterado.  
   
@@ -467,11 +467,11 @@ dtexec /option [value] [/option [value]]...
   
 -   **/VerifyV[ersionID]** _versionID_: (Opcional). Verifica o GUID de versão do pacote a ser executado, comparando-o ao valor especificado no argumento *version_id* durante a fase de validação do pacote.  
   
--   **/VLog** _[Filespec]_: (Opcional). Grava todos os eventos de pacote do Integration Services nos provedores de log que foram habilitados quando o pacote foi projetado. Para que o Integration Services habilite um provedor de log para arquivos de texto e grave eventos de log em um arquivo de texto especificado, inclua um caminho e nome de arquivo como o parâmetro *Filespec* .  
+-   **/VLog** _[Filespec]_ : (Opcional). Grava todos os eventos de pacote do Integration Services nos provedores de log que foram habilitados quando o pacote foi projetado. Para que o Integration Services habilite um provedor de log para arquivos de texto e grave eventos de log em um arquivo de texto especificado, inclua um caminho e nome de arquivo como o parâmetro *Filespec* .  
   
      Se você não incluir o parâmetro *Filespec* , o Integration Services não habilitará um provedor de log para arquivos de texto. O Integration Services vai gravar eventos de log somente nos provedores de log que foram habilitados quando o pacote foi projetado.  
   
--   **/W[arnAsError]**: (Opcional). Faz com que o pacote considere avisos como erro; portanto, o pacote falhará se ocorrer um aviso durante a validação. Se não ocorrer qualquer aviso durante a validação e a opção **/Validate** não estiver especificada, o pacote será executado.  
+-   **/W[arnAsError]** : (Opcional). Faz com que o pacote considere avisos como erro; portanto, o pacote falhará se ocorrer um aviso durante a validação. Se não ocorrer qualquer aviso durante a validação e a opção **/Validate** não estiver especificada, o pacote será executado.  
   
 -   **/X86**: (Opcional). Faz com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent execute o pacote no modo de 32 bits em um computador de 64 bits. Esta opção é definida pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent quando as seguintes condições são verdadeiras:  
   

@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 57be9c0aabc429e1c9a6d3e148ab5a11461f2d32
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943243"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
@@ -48,7 +48,7 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  É uma cadeia de caracteres de dados de caracteres Unicode. *character_string* é **sysname** e está limitado a 128 caracteres. Entradas maiores que 128 caracteres retornam NULL.  
   
  '*quote_character*'  
- É uma cadeia de um caractere a ser usada como o delimitador. É possível usar aspas simples ( **'** ), um colchete esquerdo ou direito ( **[]** ), aspas duplas ( **"** ), um parêntese esquerdo ou direito ( **()** ), um sinal de menor que ou maior que ( **><** ), uma chave esquerda ou direita ( **{}** ) ou um acento grave ( **\`**). NULL será retornado se um caractere inaceitável for fornecido. Se *quote_character* não for especificado, serão usados colchetes.  
+ É uma cadeia de um caractere a ser usada como o delimitador. É possível usar aspas simples (**'**), um colchete esquerdo ou direito (**[]**), aspas duplas (**"**), um parêntese esquerdo ou direito (**()**), um sinal de menor que ou maior que (**><**), uma chave esquerda ou direita (**{}**) ou um acento grave (**\`**). NULL será retornado se um caractere inaceitável for fornecido. Se *quote_character* não for especificado, serão usados colchetes.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **nvarchar(258)**  

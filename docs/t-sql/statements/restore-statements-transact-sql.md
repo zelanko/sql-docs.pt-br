@@ -42,10 +42,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: b673b21eca837e9ccaacd3a47c819287a854e6f8
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947047"
 ---
 # <a name="restore-statements-transact-sql"></a>Instruções RESTORE (Transact-SQL)

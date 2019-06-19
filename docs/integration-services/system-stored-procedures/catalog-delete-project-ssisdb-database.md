@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 096e0b12aea8376ee27b7d22cceaae94a0746f99
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716351"
 ---
 # <a name="catalogdeleteproject-ssisdb-database"></a>catalog.delete_project (Banco de Dados SSISDB)
@@ -35,10 +35,10 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- O nome da pasta que contém o projeto. *folder_name* é **nvarchar(128)**.  
+ O nome da pasta que contém o projeto. *folder_name* é **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- O nome do projeto a ser excluído. *project_name* é **nvarchar(128)**.  
+ O nome do projeto a ser excluído. *project_name* é **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  

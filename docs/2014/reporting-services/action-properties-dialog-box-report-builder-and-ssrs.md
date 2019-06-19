@@ -34,10 +34,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d6069d5720121b02c627528ec772cb61ddb0a10
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66110079"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades de Ação (Construtor de Relatórios e SSRS)
@@ -58,7 +58,7 @@ ms.locfileid: "66110079"
   
  Em um relatório publicado em um servidor de relatório configurado para o modo nativo, use um caminho completo ou relativo sem a extensão do nome de arquivo. Se o relatório estiver na mesma pasta do relatório atual, use apenas o nome do relatório. Se o relatório estiver em outra pasta no mesmo servidor de relatório, use um caminho relativo ou um caminho completo. Um caminho relativo inicia na pasta atual e é movido para cima na hierarquia de pastas, por exemplo,../Folder2/Report1. Um caminho completo inicia em /, a pasta base. Por exemplo, /Reports/Report1.  
   
- Para um relatório publicado em um servidor de relatórios configurado para o modo integrado do SharePoint, use uma URL totalmente qualificada incluindo a extensão do nome de arquivo (.rdl). Por exemplo, http://*\<SharePointservername > /\<site >* Relatório1. Não há suporte para caminhos relativos.  
+ Para um relatório publicado em um servidor de relatórios configurado para o modo integrado do SharePoint, use uma URL totalmente qualificada incluindo a extensão do nome de arquivo (.rdl). Por exemplo, http:// *\<SharePointservername > /\<site >* Relatório1. Não há suporte para caminhos relativos.  
   
  Para obter mais informações, consulte [Como especificar caminhos para itens externos &#40;Construtor de Relatórios e SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) na [documentação do Construtor de Relatórios](https://go.microsoft.com/fwlink/?LinkId=154494) em msdn.microsoft.com.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66110079"
  Escolha esta opção para definir um vínculo para uma página da Web. Digite ou selecione a URL de uma página da Web ou uma expressão que seja avaliada por uma URL de uma página da Web. Clique no botão **Expressão** (*fx*) para alterar a expressão. Essa expressão pode conter um campo com uma URL. A opção adicional a seguir aparece quando você seleciona **Ir para a URL**.  
   
  **Selecione a URL**  
- Digite ou insira a URL do item. Para um item publicado em um servidor de relatórios configurado para o modo nativo, use um caminho completo ou relativo. Por exemplo, http://*\<servername >*  /images/Image1.jpg. Para um item publicado em um servidor de relatório configurado no modo integrado do SharePoint, use uma URL totalmente qualificada (por exemplo, http://*\<SharePointservername > /\<site >*  /documentos/imagens / Image1.jpg).  
+ Digite ou insira a URL do item. Para um item publicado em um servidor de relatórios configurado para o modo nativo, use um caminho completo ou relativo. Por exemplo, http:// *\<servername >*  /images/Image1.jpg. Para um item publicado em um servidor de relatório configurado no modo integrado do SharePoint, use uma URL totalmente qualificada (por exemplo, http:// *\<SharePointservername > /\<site >*  /documentos/imagens / Image1.jpg).  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   

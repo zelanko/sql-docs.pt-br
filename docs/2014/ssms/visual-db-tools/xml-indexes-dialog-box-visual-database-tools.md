@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a0c946e0e195937dd2e722ac3f092a57e40427b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63228368"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices XML (Visual Database Tools)
@@ -57,7 +57,7 @@ ms.locfileid: "63228368"
  Mostra o nome do índice XML. Quando um novo índice é criado ele recebe um nome padrão com base na tabela da janela ativa no Designer de tabelas. O nome pode ser alterado a qualquer momento.  
   
  **Descrição**  
- Descreve o índice. Para escrever uma descrição mais detalhada, clique em **Descrição** e, em seguida, clique no botão de reticências (**…**) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
+ Descreve o índice. Para escrever uma descrição mais detalhada, clique em **Descrição** e, em seguida, clique no botão de reticências ( **…** ) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
   
  **Categoria do Designer de Tabelas**  
  Quando expandida, mostra informações sobre as propriedades desse índice XML.  

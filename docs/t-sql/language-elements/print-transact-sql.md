@@ -25,10 +25,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 549e5cf693aa72f891fa286fc2ba24ee3c952577
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980422"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
@@ -49,13 +49,13 @@ PRINT msg_str | @local_variable | string_expr
  É uma cadeia de caracteres ou uma constante de cadeia de caracteres Unicode. Para obter mais informações, consulte [Constantes &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).  
   
  **@** *local_variable*  
- É uma variável de qualquer tipo de dados de caractere válido. **@** _local\_variable_ deve ser **char**, **nchar**, **varchar** ou **nvarchar** ou deve poder ser convertido implicitamente nesses tipos de dados.  
+ É uma variável de qualquer tipo de dados de caractere válido. **@**_local\_variable_ deve ser **char**, **nchar**, **varchar** ou **nvarchar** ou deve poder ser convertido implicitamente nesses tipos de dados.  
   
  *string_expr*  
  É uma expressão que retorna uma cadeia de caracteres. Pode incluir valores literais, funções e variáveis concatenadas. Para obter mais informações, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="remarks"></a>Remarks  
- Uma cadeia de caracteres de mensagem pode ter até 8.000 caracteres se for uma cadeia de caracteres não Unicode e 4.000 caracteres se for uma cadeia de caracteres Unicode. Cadeias de caracteres mais longas são truncadas. Os tipos de dados **varchar(max)** e **nvarchar(max)** são truncados para tipos de dados que não são maiores que **varchar(8000)** e **nvarchar(4000)** .  
+ Uma cadeia de caracteres de mensagem pode ter até 8.000 caracteres se for uma cadeia de caracteres não Unicode e 4.000 caracteres se for uma cadeia de caracteres Unicode. Cadeias de caracteres mais longas são truncadas. Os tipos de dados **varchar(max)** e **nvarchar(max)** são truncados para tipos de dados que não são maiores que **varchar(8000)** e **nvarchar(4000)**.  
   
  RAISERROR também pode ser usado para retornar mensagens. RAISERROR tem estas vantagens sobre PRINT:  
   

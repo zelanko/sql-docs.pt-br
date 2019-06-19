@@ -21,16 +21,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e359073f2672f0fd68461398b78dc93b38ed39ec
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946439"
 ---
 # <a name="identincr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna o valor de incremento (como **numérico** ( **@@** MAXPRECISION, 0)) especificado durante a criação de uma tabela ou coluna de identidade de exibição.  
+  Retorna o valor de incremento (como **numérico** (**@@** MAXPRECISION, 0)) especificado durante a criação de uma tabela ou coluna de identidade de exibição.  
   
  ![Ícone do link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone do link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

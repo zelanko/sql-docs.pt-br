@@ -31,10 +31,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 837f3a8760611ced15c5face56080031cd5d911f
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948630"
 ---
 # <a name="sysdatetime-transact-sql"></a>SYSDATETIME (Transact-SQL)
@@ -59,7 +59,7 @@ SYSDATETIME ( )
  **datetime2(7)**  
   
 ## <a name="remarks"></a>Remarks  
- As instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] podem referenciar SYSDATETIME em qualquer lugar no qual eles possam referenciar uma expressão **datetime2(7)** .  
+ As instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] podem referenciar SYSDATETIME em qualquer lugar no qual eles possam referenciar uma expressão **datetime2(7)**.  
   
  SYSDATETIMET é uma função não determinística. Exibições e expressões que fazem referência a essa função em uma coluna não podem ser indexadas.  
   
