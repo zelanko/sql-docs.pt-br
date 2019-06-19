@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083572"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de clustering de sequências (Analysis Services – Mineração de Dados)
   Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo MSC (Microsoft Sequence Clustering). Para obter uma explicação sobre a terminologia geral e estatística relacionada ao conteúdo do modelo de mineração que se aplica a todos os tipos de modelo, consulte [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-sequence-clustering-model"></a>Entendendo a estrutura de um modelo de clustering de sequência  
- Um modelo de clustering de sequência tem um único nó pai (NODE_TYPE = 1) que representa o modelo e seus metadados. O nó pai, que recebe o rótulo **(All)**, tem um nó de sequência relacionado (NODE_TYPE = 13) que lista todas as dimensões detectadas nos dados de treinamento.  
+ Um modelo de clustering de sequência tem um único nó pai (NODE_TYPE = 1) que representa o modelo e seus metadados. O nó pai, que recebe o rótulo **(All)** , tem um nó de sequência relacionado (NODE_TYPE = 13) que lista todas as dimensões detectadas nos dados de treinamento.  
   
  ![Estrutura do modelo de clustering de sequências](../media/modelcontent-seqclust.gif "estrutura do modelo de clustering de sequências")  
   

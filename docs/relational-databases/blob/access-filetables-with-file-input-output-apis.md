@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3005ff6aa1311b22eea25e2daa14c1d4110da32c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089038"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Acessar FileTables com APIs de entrada e saída de arquivo
@@ -94,7 +94,7 @@ ms.locfileid: "65089038"
   
 -   Essas alterações não podem ser revertidas.  
   
- Entretanto, a coluna FILESTREAM em uma FileTable também pode ser acessada com por acesso transacional ao FILESTREAM com uma chamada a **OpenSqlFileStream()**. Esse tipo de acesso pode ser totalmente transacional e respeitará todos os níveis de transacionais consistentemente com suporte atualmente.  
+ Entretanto, a coluna FILESTREAM em uma FileTable também pode ser acessada com por acesso transacional ao FILESTREAM com uma chamada a **OpenSqlFileStream()** . Esse tipo de acesso pode ser totalmente transacional e respeitará todos os níveis de transacionais consistentemente com suporte atualmente.  
   
 ###  <a name="concurrency"></a> Controle de simultaneidade  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impõe o controle de simultaneidade para o acesso à FileTable entre aplicativos do sistema de arquivos, e entre aplicativos do sistema de arquivos e aplicativos [!INCLUDE[tsql](../../includes/tsql-md.md)] . Esse controle de simultaneidade é obtido aplicando-se os bloqueios apropriados nas linhas da FileTable.  

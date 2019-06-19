@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: 8de649eb8f6311270c64969981e78315cee29450
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718281"
 ---
 # <a name="troubleshoot-scale-out"></a>Solução de problemas do Scale Out
@@ -66,7 +66,7 @@ Verifique as mensagens de erro no log do serviço do Trabalho do Scale Out em `\
 
 ### <a name="symptoms"></a>Sintomas
 
-*"System.ServiceModel.EndpointNotFoundException: Não havia nenhum ponto de extremidade escutando em https://*[NomeDoComputador]:[Porta]*/ClusterManagement/ que pudesse aceitar a mensagem. "*
+*"System.ServiceModel.EndpointNotFoundException: Não havia nenhum ponto de extremidade escutando em https://* [NomeDoComputador]:[Porta] */ClusterManagement/ que pudesse aceitar a mensagem. "*
 
 ### <a name="solution"></a>Solução
 
@@ -214,7 +214,7 @@ As mensagens de erro do relatório de execução de pacote não são suficientes
 ### <a name="solution"></a>Solução
 Mais logs de execução podem ser encontrados na `TasksRootFolder` configurada em `WorkerSettings.config`. Por padrão, essa pasta é `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`. A *[account]* é a conta que executa o serviço Trabalho do Scale Out, com o valor padrão `SSISScaleOutWorker140`.
 
-Para localizar o log para a execução de pacote com a *[execution ID]*, execute o comando T-SQL a seguir para obter a *[task ID]*. Em seguida, encontre o nome da subpasta que contém a *[task ID]* em `TasksRootFolder`.
+Para localizar o log para a execução de pacote com a *[execution ID]* , execute o comando T-SQL a seguir para obter a *[task ID]* . Em seguida, encontre o nome da subpasta que contém a *[task ID]* em `TasksRootFolder`.
 
 ```sql
 SELECT [TaskId]

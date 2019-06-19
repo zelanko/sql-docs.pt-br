@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 32b95a5d156ae52394b7128b024c86b9a7e308b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891534"
 ---
 # <a name="step-5-adding-and-configuring-the-flat-file-source"></a>Etapa 5: Adicionar e configurar a fonte de arquivo simples
@@ -40,7 +40,7 @@ ms.locfileid: "62891534"
   
 8.  Clique com o botão direito do mouse na fonte de Arquivo Simples e clique em **Propriedades**.  
   
-9. Na janela Propriedades, verifique se o `LocaleID` estiver definida como **inglês (Estados Unidos)**.  
+9. Na janela Propriedades, verifique se o `LocaleID` estiver definida como **inglês (Estados Unidos)** .  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Etapa 6: Adicionando e configurando a transformação pesquisa](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebffc2246f0940c4643af2267086e727882a0633
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63031961"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Criar consultas Inserir Resultados (Visual Database Tools)
@@ -76,7 +76,7 @@ WHERE (pub_id = '0766')
     > [!NOTE]  
     >  O Designer de Consulta e Exibição não pode determinar antecipadamente quais tabelas e exibições podem ser atualizadas. Portanto, a lista **Nome de Tabela** na caixa de diálogo **Escolher Tabela para Inserir a Partir da Consulta** mostra todas as tabelas e exibições disponíveis na conexão de dados que você estiver consultando, mesmo aquelas para as quais não é possível copiar linhas.  
   
-4.  No retângulo que representa a tabela ou o objeto com valor de tabela, escolha os nomes das colunas cujo conteúdo você quer copiar. Para copiar linhas inteiras, escolha  **\* (todas as colunas)**.  
+4.  No retângulo que representa a tabela ou o objeto com valor de tabela, escolha os nomes das colunas cujo conteúdo você quer copiar. Para copiar linhas inteiras, escolha  **\* (todas as colunas)** .  
   
      O Designer de Consulta e Exibição adiciona as colunas escolhidas à coluna **Coluna** do painel Critérios.  
   

@@ -32,11 +32,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 212a13b10fcc43eb8113da3b418bdf57c53ae19a
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334423"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62671341"
 ---
 # <a name="select-examples-transact-sql"></a>Exemplos de SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "57334423"
   
  [!code-sql[Select#SelectExamples3](../../t-sql/queries/codesnippet/tsql/select-examples-transact_3.sql)]  
   
-## <a name="b-using-select-with-column-headings-and-calculations"></a>b. Usando SELECT com títulos de coluna e cálculos  
+## <a name="b-using-select-with-column-headings-and-calculations"></a>B. Usando SELECT com títulos de coluna e cálculos  
  Os exemplos a seguir retornam todas as linhas da tabela `Product`. O primeiro exemplo retorna o total de vendas e os descontos para cada produto. No segundo exemplo, a receita total é calculada para cada produto.  
   
  [!code-sql[Select#SelectExamples4](../../t-sql/queries/codesnippet/tsql/select-examples-transact_4.sql)]  

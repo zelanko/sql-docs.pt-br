@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 482d6fd7062dfb0b733e3a3d50bae82f2f754f72
-ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66354511"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
@@ -123,7 +123,7 @@ ON SERVER
  SET { *event_customizable_attribute*= \<value> [ ,...*n*] }  
  Permite atributos personalizáveis para o evento a ser definido. Os atributos personalizáveis são mostrados na exibição sys.dm_xe_object_columns como column_type 'personalizável' e object_name = *event_name*.  
   
- ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*n*] })  
+ ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,**...*n*] })  
  É a ação a ser associada à sessão de evento, onde:  
   
 -   *event_module_guid* é o GUID do módulo que contém o evento.  

@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd97b67974f248d002255c1977feebe4551e691f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013675"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Especificando um namespace de destino usando o atributo targetNamespace (SQLXML 4.0)
@@ -35,7 +35,7 @@ ms.locfileid: "66013675"
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [requisitos para executar exemplos do SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-a-target-namespace"></a>A. Especificando um namespace de destino  
- O seguinte esquema XSD Especifica um namespace de destino usando o **xsd: targetNamespace** atributo. O esquema também define o **elementFormDefault** e **attributeFormDefault** valores de atributo **"unqualified"** (o valor padrão para esses atributos). Essa é uma declaração global e afeta todos os elementos locais (**\<ordem >** no esquema) e atributos (**CustomerID**, **ContactName**e  **OrderID** no esquema).  
+ O seguinte esquema XSD Especifica um namespace de destino usando o **xsd: targetNamespace** atributo. O esquema também define o **elementFormDefault** e **attributeFormDefault** valores de atributo **"unqualified"** (o valor padrão para esses atributos). Essa é uma declaração global e afeta todos os elementos locais ( **\<ordem >** no esquema) e atributos (**CustomerID**, **ContactName**e  **OrderID** no esquema).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -129,7 +129,7 @@ ms.locfileid: "66013675"
   
      Para obter mais informações, consulte [usando o ADO para executar consultas SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Se o esquema especifica **elementFormDefault** e **attributeFormDefault** atributos com o valor **"qualificado"**, o documento de instância terá todos os locais elementos e atributos qualificados. Você pode alterar o esquema anterior para incluir esses atributos na  **\<XSD >** elemento e executar o modelo novamente. Como os atributos agora são qualificados também na instância, a consulta XPath será alterada para incluir o prefixo de namespace.  
+ Se o esquema especifica **elementFormDefault** e **attributeFormDefault** atributos com o valor **"qualificado"** , o documento de instância terá todos os locais elementos e atributos qualificados. Você pode alterar o esquema anterior para incluir esses atributos na  **\<XSD >** elemento e executar o modelo novamente. Como os atributos agora são qualificados também na instância, a consulta XPath será alterada para incluir o prefixo de namespace.  
   
  Esta é a consulta XPath revisada:  
   

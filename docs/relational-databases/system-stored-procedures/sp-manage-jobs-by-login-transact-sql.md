@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0cd3573c108cdd5a57bbb2cf6d542415710f24c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62957146"
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
@@ -43,7 +43,7 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @action = ] 'action'` A ação a ser tomada para o logon especificado. *ação* está **varchar(10)**, sem padrão. Quando *ação*é **excluir**, **sp_manage_jobs_by_login** exclui todos os trabalhos pertencentes a *current_owner_login_name*. Quando *ação* é **REATRIBUIR**, todos os trabalhos são atribuídos a *new_owner_login_name*.  
+`[ @action = ] 'action'` A ação a ser tomada para o logon especificado. *ação* está **varchar(10)** , sem padrão. Quando *ação*é **excluir**, **sp_manage_jobs_by_login** exclui todos os trabalhos pertencentes a *current_owner_login_name*. Quando *ação* é **REATRIBUIR**, todos os trabalhos são atribuídos a *new_owner_login_name*.  
   
 `[ @current_owner_login_name = ] 'current_owner_login_name'` O nome de logon do proprietário do trabalho atual. *current_owner_login_name* está **sysname**, sem padrão.  
   

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eed92adad122587a031a3126322e4156a05bde58
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722552"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>Lição 2-3: Modificar o gerenciador de conexões de Arquivo Simples
@@ -34,7 +34,7 @@ Ao modificar o gerenciador de conexão para usar o valor da variável definida p
 
 2.  Na janela **Propriedades**, verifique se **PackagePath** começa com **\Package.Connections**. Se não, no painel **Gerenciadores de Conexões**, clique com o botão direito do mouse em **Dados de Origem de Arquivo Simples de Exemplo**e selecione **Converter em Conexão do Pacote**.
   
-3.  Na janela **Propriedades**, para **Expressões**, selecione a célula vazia e selecione o botão de reticências **(…)**.  
+3.  Na janela **Propriedades**, para **Expressões**, selecione a célula vazia e selecione o botão de reticências **(…)** .  
   
 4.  Na caixa de diálogo **Editor de Expressões de Propriedades**, na coluna **Propriedade**, selecione ou selecione **ConnectionString**.  
   

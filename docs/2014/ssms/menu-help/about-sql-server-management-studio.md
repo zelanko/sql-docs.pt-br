@@ -1,14 +1,13 @@
 ---
 title: Sobre o SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- sql13.swb.aboutsqlserverworkbench.f1
+- sql12.swb.aboutsqlserverworkbench.f1
 helpviewer_keywords:
 - SQL Server Management Studio dialog box
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
@@ -16,19 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5e48a38ba97feaf03a9ed14f3668ac4b98095a92
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62679117"
 ---
 # <a name="about-sql-server-management-studio"></a>Sobre o SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Use esta caixa de diálogo para exibir ou copiar informações sobre sua instalação do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. As edições do Evaluation listam o número de dias que restam até que o produto expire.  
+  Use esta caixa de diálogo para exibir ou copiar informações sobre sua instalação do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. As edições do Evaluation listam o número de dias que restam até que o produto expire.  
   
 ## <a name="options"></a>Opções  
-**Nome do Componente**  
-Exibe uma grade que lista os nomes dos componentes do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e do sistema operacional instalados:  
+ **Nome do Componente**  
+ Exibe uma grade que lista os nomes dos componentes do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e do sistema operacional instalados:  
   
 -   **Microsoft SQL Server Management Studio**  
   
@@ -44,9 +42,10 @@ Exibe uma grade que lista os nomes dos componentes do [!INCLUDE[ssManStudioFull]
   
 -   **Sistema operacional**  
   
-**Versões**  
-Exibe uma grade que lista as versões dos componentes instalados que são listados por nome de componente.  
+ **Versões**  
+ Exibe uma grade que lista as versões dos componentes instalados que são listados por nome de componente.  
   
-**Copiar Informações**  
-Copiar as informações na grade para a área de transferência.  
+ **Copiar Informações**  
+ Copiar as informações na grade para a área de transferência.  
+  
   
