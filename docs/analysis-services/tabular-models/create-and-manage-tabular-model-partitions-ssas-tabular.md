@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7067449c0de9958e98a7a9dc5cc09c7f89f33fa9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9a23d2753f6fe1d94fcccab648766c3471581906
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472288"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263387"
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>Criar e gerenciar partições de modelo de tabela
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "62472288"
   As partições dividem uma tabela em partes lógicas. Cada partição pode ser processada (Atualizada) independentemente de outras partições. As partições definidas para um modelo durante a criação de modelo são duplicadas em um modelo implantado. Uma vez implantado, você pode gerenciar essas partições usando a caixa de diálogo **Partições** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou usando um script. As tarefas fornecidas neste tópico descrevem como criar e gerenciar partições para um modelo implantado.  
   
   > [!NOTE]  
->  Partições em modelos de tabela criados no nível de compatibilidade 1400 são definidas usando uma instrução de consulta M. Para obter mais informações, consulte [M referência](https://msdn.microsoft.com/library/mt211003.aspx). 
+>  Partições em modelos de tabela criados no nível de compatibilidade 1400 são definidas usando uma instrução de consulta M. Para obter mais informações, consulte [M referência](/powerquery-m/power-query-m-reference). 
 >
   
 ## <a name="tasks"></a>Tarefas  

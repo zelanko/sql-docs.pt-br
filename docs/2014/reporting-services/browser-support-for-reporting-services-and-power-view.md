@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63266818"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planejando o suporte ao navegador do Reporting Services e do Power View (Reporting Services 2014)
@@ -146,7 +146,7 @@ ms.locfileid: "63266818"
   
  Se os scripts não estiverem habilitados, você verá uma mensagem de erro semelhante à seguinte ao abrir um relatório:  
   
-- **Seu navegador não dá suporte a scripts ou foi configurado para não permitir a execução de scripts. Clique aqui para exibir este relatório sem scripts**.  
+- **Seu navegador não oferece suporte para scripts ou foi configurado para não permitir que sejam executados. Clique aqui para exibir este relatório sem scripts**.  
   
  Se você optar por exibir o relatório sem o suporte de scripts, o relatório será renderizado em HTML sem os recursos de visualizador de relatório, como a barra de ferramentas de relatório e o mapa do documento.  
   
