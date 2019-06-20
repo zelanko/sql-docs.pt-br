@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721080"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Lição 2: Criando uma assinatura na publicação transacional
@@ -40,7 +40,7 @@ ms.locfileid: "62721080"
   
 7.  Na caixa de diálogo **Novo Banco de Dados** , digite **ProductReplica** na caixa **Nome do Banco de Dados** , clique em **OK**e clique em **Avançar**.  
   
-8.  No **segurança do Distribution Agent** caixa de diálogo, clique no botão de reticências (**...** ) botão, digite \< _Machine_Name >_**\repl_distribution** no **conta de processo** , digite a senha para este conta, clique em **Okey**e, em seguida, clique em **próxima**.  
+8.  No **segurança do Distribution Agent** caixa de diálogo, clique no botão de reticências ( **...** ) botão, digite \< _Machine_Name >_ **\repl_distribution** no **conta de processo** , digite a senha para este conta, clique em **Okey**e, em seguida, clique em **próxima**.  
   
 9. Clique em **Concluir** para aceitar os valores padrão nas páginas remanescentes e concluir o assistente.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62721080"
   
 2.  Na página **Geral** , na lista **Tipo de usuário** , selecione **Usuário do Windows**.  
   
-3.  Selecione o **nome de usuário** caixa e clique no botão de reticências (...), na **insira o nome do objeto para selecionar** caixa, digite < nome_do_computador >**\repl_distribution**, clique em  **Verificar nomes**e, em seguida, clique em **Okey**.  
+3.  Selecione o **nome de usuário** caixa e clique no botão de reticências (...), na **insira o nome do objeto para selecionar** caixa, digite < nome_do_computador > **\repl_distribution**, clique em  **Verificar nomes**e, em seguida, clique em **Okey**.  
   
 4.  Na página **Associação** , na área **Associação à função do banco de dados** , selecione **db_owner**e clique em **OK** para criar o usuário.  
   

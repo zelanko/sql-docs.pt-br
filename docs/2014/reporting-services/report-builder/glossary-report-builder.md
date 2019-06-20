@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0eb37b891afc31b56d0e518ba7aa73190491e5ea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107813"
 ---
 # <a name="glossary-report-builder"></a>Glossário (Construtor de Relatórios)
@@ -38,7 +38,7 @@ ms.locfileid: "66107813"
 |argumento|Um valor que fornece informações para uma ação, um evento, um método, uma propriedade, uma função ou um procedimento.|  
 |assembly|Um módulo de aplicativo gerenciado que contém metadados de classe e código gerenciado como um objeto no SQL Server, em relação ao qual as funções CLR, procedimentos armazenados, gatilhos, agregações definidas pelo usuário e tipos definidos pelo usuário podem ser criados no SQL Server.|  
 |autenticação|O processo de verificar a identidade de um usuário, computador, processo ou outra entidade validando as credenciais fornecidas pela entidade. Formas comuns de credenciais são assinaturas digitais, cartões inteligentes, dados biométricos e uma combinação de nomes e senhas de usuários.|  
-|autorização|1. A operação que verifica as permissões e os direitos de acesso que foram concedidos a um usuário. 2. O processo de conceder a uma pessoa, um processo de computador ou um dispositivo acesso a certas informações, serviços ou funcionalidade.|  
+|authorization|1. A operação que verifica as permissões e os direitos de acesso que foram concedidos a um usuário. 2. O processo de conceder a uma pessoa, um processo de computador ou um dispositivo acesso a certas informações, serviços ou funcionalidade.|  
 |eixo|As linhas horizontal e vertical em um gráfico usadas para mostrar a posição de um ponto.|  
 |intervalo de eixo|O número de unidades entre marcas de escala principais em um eixo de gráfico. O intervalo é calculado automaticamente, mas pode ser definido manualmente.|  
 |fazer backup|Para fazer uma cópia duplicada de um programa, um disco ou dados.|  
@@ -78,7 +78,7 @@ ms.locfileid: "66107813"
 |common language runtime|O mecanismo no núcleo da execução do código gerenciado. O tempo de execução fornece código gerenciado com serviços, como integração entre linguagens, segurança de acesso do código, gerenciamento do tempo de vida de objetos e suporte à depuração e à criação de perfis.|  
 |expressão complexa|Uma expressão que não pode ser representada como uma única referência de campo interno e que é exibida na área de design como <\<Expr>>.|  
 |concatenação|A combinação de duas ou mais cadeias de caracteres ou expressões em uma única cadeia de caracteres ou expressão, ou para combinar duas ou mais cadeias binárias ou expressões binárias em uma única cadeia ou expressão binária.|  
-|simultaneidade|Um processo que permite que vários usuários acessem e alterem dados compartilhados ao mesmo tempo. O SQL Server usa bloqueio para permitir que vários usuários acessem e alterem dados compartilhados ao mesmo tempo sem entrar em conflito.|  
+|concurrency|Um processo que permite que vários usuários acessem e alterem dados compartilhados ao mesmo tempo. O SQL Server usa bloqueio para permitir que vários usuários acessem e alterem dados compartilhados ao mesmo tempo sem entrar em conflito.|  
 |arquivo config|Consulte outro termo: arquivo de configuração|  
 |configuração|Em referência a um único microcomputador, a soma de componentes internos e externos de um sistema, incluindo memória, unidades de disco, teclado, vídeo e geralmente hardware complementar menos crítico, como mouse, modem ou impressora.|  
 |arquivo de configuração|Um arquivo que contém especificações operacionais legíveis por máquina para uma parte do hardware ou software, ou que contém informações sobre outro arquivo ou sobre um usuário específico.|  
@@ -215,7 +215,7 @@ ms.locfileid: "66107813"
 |MDX|Confira outro termo: Linguagem MDX|  
 |projeção Mercador|Em um item de relatório de mapa, uma projeção de mapa cilíndrica criada por Gerardus Mercator em 1569.|  
 |metadados|Informações sobre as propriedades de dados, como o tipo de dados em uma coluna (numeric, text etc.) ou o comprimento de uma coluna; informações sobre um arquivo, como seu título, descrição, data de criação e data da última modificação; ou informações sobre a estrutura de dados ou informações que especificam o design de objetos, como cubos ou dimensões.|  
-|método|Uma função que executa uma ação por meio de um objeto COM, como no SQL-DMO, no OLE DB e no ActiveX Data Objects (ADO).|  
+|method|Uma função que executa uma ação por meio de um objeto COM, como no SQL-DMO, no OLE DB e no ActiveX Data Objects (ADO).|  
 |tipo MIME|O formato de arquivo de uma imagem, como .bmp, .gif ou .jpeg.|  
 |dependência de modelos|Uma relação entre dois ou mais modelos, em que um modelo é dependente das informações de outro modelo.|  
 |Linguagem MDX|Uma sintaxe usada para definir objetos multidimensionais e consultar e manipular dados multidimensionais.|  
@@ -302,7 +302,7 @@ ms.locfileid: "66107813"
 |controles ReportViewer|Um controle de servidor Web e do Windows Form que fornece processamento de relatório inserido em aplicativos do ASP.NET e do Windows Form.|  
 |recurso|Qualquer item em um banco de dados de servidor de relatório que não seja um relatório, uma pasta ou um item de fonte de dados compartilhado.|  
 |conjunto de resultados|O conjunto de linhas retornado de uma instrução SELECT.|  
-|função|1. Um usuário ou grupo ao qual um conjunto de permissões específicas é concedido.  <br />2. No Analysis Services, uma função usa contas de segurança do Windows para limitar o escopo de acesso e permissões quando os usuários acessam bancos de dados, cubos, dimensões e modelos de mineração de dados.  <br />3. Em uma sessão de espelhamento de banco de dados, o servidor principal e o servidor espelho executam funções espelho e principais complementares. Opcionalmente, a função de testemunha é executada por uma terceira instância de servidor.|  
+|role|1. Um usuário ou grupo ao qual um conjunto de permissões específicas é concedido.  <br />2. No Analysis Services, uma função usa contas de segurança do Windows para limitar o escopo de acesso e permissões quando os usuários acessam bancos de dados, cubos, dimensões e modelos de mineração de dados.  <br />3. Em uma sessão de espelhamento de banco de dados, o servidor principal e o servidor espelho executam funções espelho e principais complementares. Opcionalmente, a função de testemunha é executada por uma terceira instância de servidor.|  
 |atribuição de função|Uma política de segurança que define usuários e grupos que podem acessar itens específicos e executar determinadas operações.|  
 |definição de função|Uma coleção nomeada de tarefas que define as operações que podem ser executadas por um usuário em um servidor de relatório.|  
 |linha|Em uma tabela SQL, uma única ocorrência do objeto modelado pela tabela.|  
@@ -312,7 +312,7 @@ ms.locfileid: "66107813"
 |escalar|Um campo de valor único, em vez de uma agregação.|  
 |agregação escalar|Uma função de agregação, como MIN(), MAX() ou AVG(), que é especificada em uma lista de colunas da instrução SELECT que contém somente funções de agregação.|  
 |esquema|No padrão do SQL-92, uma coleção de objetos de banco de dados que são se propriedade de um único usuário e formam um único namespace. Um namespace é um conjunto de objetos que não podem ter nomes duplicados.|  
-|escopo|Usado em vários contextos. O escopo pode especificar os dados a serem usados para avaliar uma expressão, o conjunto de caixas de texto em uma página renderizada ou o conjunto de itens de relatório que podem ser mostrados ou ocultados com base em uma alternância.|  
+|scope|Usado em vários contextos. O escopo pode especificar os dados a serem usados para avaliar uma expressão, o conjunto de caixas de texto em uma página renderizada ou o conjunto de itens de relatório que podem ser mostrados ou ocultados com base em uma alternância.|  
 |script|Uma coleção de instruções Transact-SQL usada para executar uma operação.|  
 |protegível|Entidades que podem ser protegidas com permissões.|  
 |protocolo SSL|Um padrão aberto proposto para estabelecer um canal de comunicação seguro para impedir a interceptação de informações críticas, como números de cartão de crédito. Primeiramente, ele habilita transações financeiras eletrônicas seguras na World Wide Web, embora também seja criado para funcionar em outros serviços de Internet.|  

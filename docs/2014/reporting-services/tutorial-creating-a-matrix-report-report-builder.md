@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f87c1188b0abd1b576da63412829464368275b0f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098916"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Criar um relatório de matriz (Construtor de Relatórios)
@@ -176,13 +176,13 @@ ms.locfileid: "66098916"
   
 3.  Na guia **Início** , no grupo **Número** , clique em **Moeda**. As células são alteradas para mostrar a moeda formatada.  
   
-     Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [**$12,345.00**]. Se você não vir um valor de moeda de exemplo, clique em **estilos de espaço reservado** na **números** agrupar e, em seguida, clique em **valores de exemplo**.  
+     Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [ **$12,345.00**]. Se você não vir um valor de moeda de exemplo, clique em **estilos de espaço reservado** na **números** agrupar e, em seguida, clique em **valores de exemplo**.  
   
 4.  Clique na célula que contém `[SalesDate]`.  
   
 5.  No **número** grupo, na lista suspensa, selecione **data**.  
   
-     A célula exibe a data de exemplo **[1/31/2000]**. Se uma data de exemplo não estiver visível, clique em **Estilos de Espaço Reservado** no grupo **Números** e clique em **Valores de Exemplo**.  
+     A célula exibe a data de exemplo **[1/31/2000]** . Se uma data de exemplo não estiver visível, clique em **Estilos de Espaço Reservado** no grupo **Números** e clique em **Valores de Exemplo**.  
   
 6.  Clique em **Executar** para visualizar o relatório.  
   

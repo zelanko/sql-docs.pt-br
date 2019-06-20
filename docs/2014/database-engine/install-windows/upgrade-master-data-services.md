@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774650"
 ---
 # <a name="upgrade-master-data-services"></a>Atualizar o Master Data Services
@@ -105,7 +105,7 @@ ms.locfileid: "62774650"
   
  Para executar esta tarefa, conclua as etapas a seguir.  
   
-1.  **Para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] apenas**: Abra **painel de controle** > **programas e recursos** e desinstale o Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  **Para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] apenas**: abra o **Painel de Controle** > **Programas e Recursos** e desinstale o Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Atualizar o mecanismo de banco de dados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -127,7 +127,7 @@ ms.locfileid: "62774650"
   
     4.  Sobre o **tipo de instalação** página do assistente, selecione a **adicionar recursos a uma instância existente** opção e, em seguida, escolha a instância onde o banco de dados MDS está instalado.  
   
-    5.  Sobre o **seleção de recursos** página, em **recursos compartilhados**, selecione **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]**.  
+    5.  Sobre o **seleção de recursos** página, em **recursos compartilhados**, selecione **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** .  
   
     6.  Conclua o assistente.  
   

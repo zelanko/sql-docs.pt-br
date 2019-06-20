@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6dab6158ba2d0854868bf60f2a73efce594b2cc9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101437"
 ---
 # <a name="select-the-data-source"></a>Selecionar a fonte de dados
@@ -40,7 +40,7 @@ ms.locfileid: "66101437"
   
  Clique em **Editar** para especificar o servidor da fonte de dados na caixa de diálogo **Propriedades de Conexão** . Você pode especificar uma fonte de dados locais ou remotos.  
   
- Clique em **Credenciais** para fornecer credenciais de banco de dados. A um mínimo, os credenciais que você especifica devem ser suficientes para você se conectar à fonte de dados para propósitos de design de relatório. Quando o relatório é implantado em um servidor de relatório, os credenciais de banco de dados devem acomodar todos os usuários do relatório. Por exemplo, se você desejar que todos os usuários de relatório se conectem à fonte de dados usando seus credenciais, escolha **Usar Autenticação do Windows (Segurança Integrada)**. Os credenciais que você especifica devem ser válidos para a fonte de dados; portanto, se você escolher Autenticação do Windows, verifique se a fonte de dados aceita conexões de todas as contas de usuário que executarão o relatório. Os credenciais de bancos de dados podem ser gerenciados separadamente do relatório. Para obter mais informações, consulte [Gerenciar uma fonte de dados de relatório](report-data/manage-report-data-sources.md).  
+ Clique em **Credenciais** para fornecer credenciais de banco de dados. A um mínimo, os credenciais que você especifica devem ser suficientes para você se conectar à fonte de dados para propósitos de design de relatório. Quando o relatório é implantado em um servidor de relatório, os credenciais de banco de dados devem acomodar todos os usuários do relatório. Por exemplo, se você desejar que todos os usuários de relatório se conectem à fonte de dados usando seus credenciais, escolha **Usar Autenticação do Windows (Segurança Integrada)** . Os credenciais que você especifica devem ser válidos para a fonte de dados; portanto, se você escolher Autenticação do Windows, verifique se a fonte de dados aceita conexões de todas as contas de usuário que executarão o relatório. Os credenciais de bancos de dados podem ser gerenciados separadamente do relatório. Para obter mais informações, consulte [Gerenciar uma fonte de dados de relatório](report-data/manage-report-data-sources.md).  
   
  **Tornar esta fonte de dados compartilhados**  
  Selecione esta opção para armazenar a fonte de dados no projeto como uma fonte de dados compartilhada, em vez de armazenar no relatório. Dessa maneira, você pode usá-la como a fonte de dados para outros relatórios no projeto.  

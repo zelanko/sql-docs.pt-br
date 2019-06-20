@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 38428e0a95dcce39589310ee91be2a7d396c2f1e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088502"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
@@ -43,9 +43,9 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ \@tsql = ] 'Transact-SQL\_batch'` Um ou mais [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções. *SQL_batch Transact* pode ser **nvarchar (**_n_**)** ou **nvarchar (max)**.  
+`[ \@tsql = ] 'Transact-SQL\_batch'` Um ou mais [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções. *SQL_batch Transact* pode ser **nvarchar (** _n_ **)** ou **nvarchar (max)** .  
   
-`[ \@params = ] N'parameters'` \@params fornece uma cadeia de caracteres de declaração de parâmetros para o [!INCLUDE[tsql](../../includes/tsql-md.md)] funciona em lotes, da mesma forma que a forma de sp_executesql. *Parâmetros* pode ser **nvarchar (**_n_**)** ou **nvarchar (max)**.  
+`[ \@params = ] N'parameters'` \@params fornece uma cadeia de caracteres de declaração de parâmetros para o [!INCLUDE[tsql](../../includes/tsql-md.md)] funciona em lotes, da mesma forma que a forma de sp_executesql. *Parâmetros* pode ser **nvarchar (** _n_ **)** ou **nvarchar (max)** .  
   
  É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos em *SQL_batch Transact*. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. n é um espaço reservado que indica definições de parâmetro adicionais. Se a instrução Transact-SQL ou lote na instrução não contiver parâmetros, \@params não é necessária. O valor padrão para este parâmetro é NULL.  
   
@@ -167,7 +167,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   Dedução simples  
   
-     Se E (\@p) = \@p e TT (\@p) existe, ou seja, se \@p for diretamente um argumento para uma das expressões listadas no início da etapa 2, o algoritmo de dedução de tipo deduz o tipo de dados de \@p para ser (TT \@p). Por exemplo:   
+     Se E (\@p) = \@p e TT (\@p) existe, ou seja, se \@p for diretamente um argumento para uma das expressões listadas no início da etapa 2, o algoritmo de dedução de tipo deduz o tipo de dados de \@p para ser (TT \@p). Por exemplo:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -196,11 +196,11 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **numérico (38, 19)** -outros tipos de dados numéricos ou decimais não são considerados.  
   
-    -   **varchar(8000)**, **varchar (max)**, **nvarchar (4000)**, e **nvarchar (max)** - outros tipos de dados de cadeia de caracteres (como **texto**, **char(8000)**, **nvarchar (30)**, etc.) não são considerados.  
+    -   **varchar(8000)** , **varchar (max)** , **nvarchar (4000)** , e **nvarchar (max)** - outros tipos de dados de cadeia de caracteres (como **texto**, **char(8000)** , **nvarchar (30)** , etc.) não são considerados.  
   
-    -   **varbinary(8000)** e **varbinary (max)** -outros tipos de dados binários não são considerados (como **imagem**, **binary(8000)**, **varbinary (30)** , etc.).  
+    -   **varbinary(8000)** e **varbinary (max)** -outros tipos de dados binários não são considerados (como **imagem**, **binary(8000)** , **varbinary (30)** , etc.).  
   
-    -   **data**, **time(7)**, **smalldatetime**, **datetime**, **datetime2(7)**, **datetimeoffset(7)**  - Outros de data e hora de tipos, como **time(4)**, não são considerados.  
+    -   **data**, **time(7)** , **smalldatetime**, **datetime**, **datetime2(7)** , **datetimeoffset(7)**  - Outros de data e hora de tipos, como **time(4)** , não são considerados.  
   
     -   **sql_variant**  
   
@@ -215,7 +215,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  O tipo de dados que produza o menor número de conversões implícitas em E (\@p) é selecionado. Se um determinado tipo de dados produz um tipo de dados para E (\@p) que é diferente de TT (\@p), o algoritmo de dedução de tipo considerará isso uma conversão implícita extra do tipo de dados de E (\@p) para TT (\@p).  
   
-     Por exemplo:   
+     Por exemplo:  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
@@ -233,7 +233,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      Essa regra somente se aplicará se houver uma conversão implícita entre cada tipo de dados ligado de acordo com regra 1 e o tipo de dados com a precedência mais alta. Se não houver nenhuma conversão implícita, a dedução de tipo de dados falhará com um erro. Por exemplo, na consulta `SELECT @p FROM t`, falha de dedução de tipo de dados porque qualquer tipo de dados para \@p seria igualmente bom. Por exemplo, não há nenhuma conversão implícita de **int** à **xml**.  
   
-3.  Se dois tipos de dados semelhantes ligados de acordo com regra 1, por exemplo **varchar(8000)** e **varchar (max)**, o menor tipo de dados (**varchar(8000)**) é escolhido. O mesmo princípio se aplica ao **nvarchar** e **varbinary** tipos de dados.  
+3.  Se dois tipos de dados semelhantes ligados de acordo com regra 1, por exemplo **varchar(8000)** e **varchar (max)** , o menor tipo de dados (**varchar(8000)** ) é escolhido. O mesmo princípio se aplica ao **nvarchar** e **varbinary** tipos de dados.  
   
 4.  Para os propósitos da regra 1, o algoritmo de dedução de tipo considera certas conversões melhores que outras. As conversões, na ordem da melhor para a pior são:  
   
@@ -245,7 +245,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     4.  Qualquer outra conversão.  
   
- Por exemplo, para a consulta `SELECT * FROM t WHERE [Col_varchar(30)] > @p`, **varchar(8000)** é escolhido como conversão (a) é melhor. Para a consulta `SELECT * FROM t WHERE [Col_char(30)] > @p`, **varchar(8000)** ainda será escolhido porque causa uma conversão de tipo (b) e porque outra escolha (como **varchar(4000)**) causaria uma conversão de tipo (d).  
+ Por exemplo, para a consulta `SELECT * FROM t WHERE [Col_varchar(30)] > @p`, **varchar(8000)** é escolhido como conversão (a) é melhor. Para a consulta `SELECT * FROM t WHERE [Col_char(30)] > @p`, **varchar(8000)** ainda será escolhido porque causa uma conversão de tipo (b) e porque outra escolha (como **varchar(4000)** ) causaria uma conversão de tipo (d).  
   
  Como um exemplo final, dada uma consulta `SELECT NULL + @p`, **int** é escolhido para \@p porque resulta em uma conversão de tipo (c).  
   

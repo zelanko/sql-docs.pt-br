@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc207c4c1bc7ddc2c7c4f590622e04a0f7739375
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62698739"
 ---
 # <a name="get-information-about-dml-triggers"></a>Obter informações sobre gatilhos DML
@@ -48,7 +48,7 @@ ms.locfileid: "62698739"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- Requer associação à função **pública** . A definição de objetos de usuário é visível para o proprietário do objeto ou aos que possuírem qualquer uma das seguintes permissões: ALTER, controle, TAKE OWNERSHIP ou VIEW DEFINITION. Estas permissões são mantidas implicitamente por membros das funções fixas de banco de dados **db_owner**, **db_ddladmin**e **db_securityadmin** .  
+ Requer associação à função **pública** . A definição de objetos de usuário é visível ao proprietário do objeto e às entidades autorizadas que têm uma das seguintes permissões: ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Estas permissões são mantidas implicitamente por membros das funções fixas de banco de dados **db_owner**, **db_ddladmin**e **db_securityadmin** .  
   
  **sys.sql_expression_dependencies**  
  Requer permissão VIEW DEFINITION no banco de dados e permissão SELECT em **sys.sql_expression_dependencies** para o banco de dados. Por padrão, a permissão SELECT é concedida somente a membros da função de banco de dados fixa **db_owner** . Quando são concedidas permissões SELECT e VIEW DEFINITION a outro usuário, o usuário autorizado pode exibir todas as dependências no banco de dados.  
@@ -71,9 +71,9 @@ ms.locfileid: "62698739"
   
 3.  Expanda **Gatilhos**, clique com o botão direito do mouse no gatilho desejado e clique em **Exibir Dependências**.  
   
-4.  Na janela **Dependências de objeto**, para exibir os objetos que dependem do gatilho DML, selecione **Objetos que dependem de \<nome do gatilho DML>**. Os objetos aparecem na área **Dependências** .  
+4.  Na janela **Dependências de objeto**, para exibir os objetos que dependem do gatilho DML, selecione **Objetos que dependem de \<nome do gatilho DML>** . Os objetos aparecem na área **Dependências** .  
   
-     Para exibir os objetos dos quais o DML depende, selecione **Objetos que dependem de \<nome do gatilho DML>**. Os objetos aparecem na área **Dependências** . Expanda cada nó para ver todos os objetos.  
+     Para exibir os objetos dos quais o DML depende, selecione **Objetos que dependem de \<nome do gatilho DML>** . Os objetos aparecem na área **Dependências** . Expanda cada nó para ver todos os objetos.  
   
 5.  Para obter informações sobre um objeto que aparece na área **Dependências** , clique no objeto. No campo **Objeto selecionado** , as informações são fornecidas nas caixas **Nome**, **Tipo**e **Tipo de dependência** .  
   

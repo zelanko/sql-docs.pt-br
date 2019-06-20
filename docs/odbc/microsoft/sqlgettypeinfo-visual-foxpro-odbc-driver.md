@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181417"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (Driver ODBC do Visual FoxPro)
@@ -35,7 +35,7 @@ ms.locfileid: "63181417"
 |SQL_BIGINT|Sem suporte. Não há nenhum tipo de 64 bits do Visual FoxPro.|  
 |SQL_BIT|Logical|  
 |SQL_CHAR|Caractere|  
-|SQL_DATE|data|  
+|SQL_DATE|Date|  
 |SQL_DECIMAL|Numeric|  
 |SQL_DOUBLE|Double|  
 |SQL_FLOAT|Double|  
@@ -46,7 +46,7 @@ ms.locfileid: "63181417"
 |SQL_REAL|Double|  
 |SQL_SMALLINT|Integer|  
 |SQL_TIME|Sem suporte. Não há nenhum Visual FoxPro *tempo* tipo.|  
-|SQL_TIMESTAMP|Datetime|  
+|SQL_TIMESTAMP|DateTime|  
 |SQL_TINYINT|Integer|  
 |SQL_VARBINARY|Memorando (binário) *, geral|  
 |SQL_VARCHAR|Caractere|  

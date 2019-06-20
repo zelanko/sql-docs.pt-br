@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 21f8ec6ea0ed9cd1af8257dcd10b18f59903c929
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66694798"
 ---
 # <a name="index-property"></a>Propriedade Index
@@ -46,7 +46,7 @@ Indica o nome do índice atualmente em vigor para um [Recordset](../../../ado/re
   
  Se o índice pode ser definido e o [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) é de propriedade **adLockPessimistic** ou **adLockOptimistic**, em seguida, implícito [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) operação é executada. Isso libera os grupos afetados e atuais. Qualquer filtro existente é liberado, e a posição da linha atual é alterada para a primeira linha da reordenados **conjunto de registros**.  
   
- O **índice** propriedade é usada em conjunto com o [busca](../../../ado/reference/ado-api/seek-method.md) método. Se o provedor subjacente não dá suporte a **índice** propriedade e, portanto, o **busca** método, considere o uso a [localizar](../../../ado/reference/ado-api/find-method-ado.md) método em vez disso. Determinar se o **conjunto de registros** objeto dá suporte a índices com o [suporta](../../../ado/reference/ado-api/supports-method.md) **(adIndex)** método.  
+ O **índice** propriedade é usada em conjunto com o [busca](../../../ado/reference/ado-api/seek-method.md) método. Se o provedor subjacente não dá suporte a **índice** propriedade e, portanto, o **busca** método, considere o uso a [localizar](../../../ado/reference/ado-api/find-method-ado.md) método em vez disso. Determinar se o **conjunto de registros** objeto dá suporte a índices com o [suporta](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** método.  
   
  Interna **índice** propriedade não está relacionada a dinâmica [otimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriedade, embora ambos lidam com índices.  
   

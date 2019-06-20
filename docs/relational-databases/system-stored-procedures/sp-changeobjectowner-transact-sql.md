@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8980ab1f968bcc842fdd17a6095a9945fcc26b42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997077"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
@@ -46,7 +46,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @objname = ] 'object'` É o nome de uma tabela existente, exibição, função definida pelo usuário ou procedimento armazenado no banco de dados atual. *objeto* é um **nvarchar(776)**, sem padrão. *objeto* pode ser qualificado com o proprietário do objeto existente, na forma _existing_owner_**.** _objeto_ se o esquema e seu proprietário tiverem o mesmo nome.  
+`[ @objname = ] 'object'` É o nome de uma tabela existente, exibição, função definida pelo usuário ou procedimento armazenado no banco de dados atual. *objeto* é um **nvarchar(776)** , sem padrão. *objeto* pode ser qualificado com o proprietário do objeto existente, na forma _existing_owner_ **.** _objeto_ se o esquema e seu proprietário tiverem o mesmo nome.  
   
 `[ @newowner = ] 'owner_ '` É o nome da conta de segurança que será o novo proprietário do objeto. *proprietário* está **sysname**, sem padrão. *proprietário* deve ser um usuário de banco de dados válido, a função de servidor [!INCLUDE[msCoName](../../includes/msconame-md.md)] logon do Windows ou grupo do Windows com acesso ao banco de dados atual. Se o novo proprietário for um usuário ou grupo do Windows para o qual não há uma entidade correspondente no nível de banco de dados, será criado um usuário de banco de dados.  
   

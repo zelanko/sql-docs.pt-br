@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 280e8fa3702868ff36c799443b87b0827a962a89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676079"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Procurar um modelo usando o Visualizador de Rede Neural da Microsoft
@@ -62,7 +62,7 @@ ms.locfileid: "62676079"
  [Voltar ao Início](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Characteristics"></a> Variáveis  
- A grade na **variáveis** guia contém as seguintes colunas: **Atributo**, **valor**, **preferências [valor 1]**, e **preferências [valor 2]**. Por padrão, as colunas são classificadas pela força de **Preferências [valor 1]**. Clicar no cabeçalho de uma coluna altera a ordem de classificação para a coluna selecionada.  
+ A grade na **variáveis** guia contém as seguintes colunas: **Atributo**, **valor**, **preferências [valor 1]** , e **preferências [valor 2]** . Por padrão, as colunas são classificadas pela força de **Preferências [valor 1]** . Clicar no cabeçalho de uma coluna altera a ordem de classificação para a coluna selecionada.  
   
  Uma barra à direita do atributo mostra qual estado do atributo de saída o estado atributo de entrada especificado prefere. O tamanho da barra mostra como o estado de saída favorece significativamente o estado de entrada.  
   

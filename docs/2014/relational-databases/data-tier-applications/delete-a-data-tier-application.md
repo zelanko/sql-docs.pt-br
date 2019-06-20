@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b8b6b1d5975ff94fda98784449330571cc93cec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872715"
 ---
 # <a name="delete-a-data-tier-application"></a>Excluir um Aplicativo da Camada de Dados
@@ -84,7 +84,7 @@ ms.locfileid: "62872715"
   
  **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página no futuro.  
   
- **Avançar >**: continua para a página **Escolher Método**.  
+ **Avançar >** : continua para a página **Escolher Método**.  
   
  **Cancelar** : finaliza o assistente sem excluir um aplicativo da camada de dados ou banco de dados.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62872715"
   
  **\< Anterior** – Retorna à página **Introdução** .  
   
- **Avançar >**: continua para a página **Resumo**.  
+ **Avançar >** : continua para a página **Resumo**.  
   
  **Cancelar** : finaliza o assistente sem excluir o DAC ou o banco de dados.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "62872715"
   
  **\< Anterior** – Retorna à página **Escolher método** para escolher um método de exclusão diferente.  
   
- **Avançar >**: exclui a instância de DAC usando o método escolhido na página anterior e continua para a página **Excluir Aplicativo da Camada de Dados**.  
+ **Avançar >** : exclui a instância de DAC usando o método escolhido na página anterior e continua para a página **Excluir Aplicativo da Camada de Dados**.  
   
  **Cancelar** : finaliza o assistente sem excluir a instância de DAC.  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c4b427047aeba970ad65a6bd2ac31a219978ea71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63046761"
 ---
 # <a name="rpccompleted-event-class"></a>classe de evento RPC:Completed
@@ -37,7 +37,7 @@ ms.locfileid: "63046761"
 |Duração|`bigint`|Tempo de CPU usado pelo evento. Em microssegundos, começando com [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Em milissegundos em versões anteriores.|13|Sim|  
 |EndTime|`datetime`|Hora de término da chamada de procedimento remoto.|15|Sim|  
 |Erro|`int`|Número de erro de um determinado evento.<br /><br /> 0=OK<br /><br /> 1=Erro<br /><br /> 2=Anular<br /><br /> 3=Ignorar|31|Sim|  
-|EventClass|`int`|Tipo de evento = 10.|27|Não|  
+|EventClass|`int`|Tipo de evento = 10.|27|Não |  
 |EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|Não|  
 |GroupID|`int`|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|`nvarchar`|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  

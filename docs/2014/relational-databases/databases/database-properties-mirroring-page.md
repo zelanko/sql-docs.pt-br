@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cf17ecc4219ed0ee0b917bdecb94f936246f225
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871941"
 ---
 # <a name="database-properties-mirroring-page"></a>Propriedades do banco de dados (página Espelhamento)
@@ -47,7 +47,7 @@ ms.locfileid: "62871941"
   
  O endereço de rede do servidor tem a seguinte sintaxe básica:  
   
- TCP **://**_nome_domínio_totalmente_qualificado_**:**_porta_  
+ TCP **://** _nome_domínio_totalmente_qualificado_ **:** _porta_  
   
  onde  
   
@@ -104,7 +104,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  Clique para fazer failover do banco de dados principal para o banco de dados espelho manualmente.  
   
 > [!NOTE]  
->  Se a sessão de espelhamento estiver sendo executada em modo de alto desempenho, o failover manual não será possível. Para executar failover manualmente, é necessário alterar o modo de operação para **Alta segurança sem failover automático (síncrono)**. Após a conclusão do failover, você poderá alterar o modo de volta para **Alto desempenho (assíncrono)** na instância do novo servidor principal.  
+>  Se a sessão de espelhamento estiver sendo executada em modo de alto desempenho, o failover manual não será possível. Para executar failover manualmente, é necessário alterar o modo de operação para **Alta segurança sem failover automático (síncrono)** . Após a conclusão do failover, você poderá alterar o modo de volta para **Alto desempenho (assíncrono)** na instância do novo servidor principal.  
   
  Um prompt solicita confirmação. Se você clicar em **Sim**, haverá uma tentativa de failover. O servidor principal começa tentando conectar-se ao servidor espelho usando a Autenticação do Windows. Se a Autenticação do Windows não funcionar, o servidor principal exibirá a caixa de diálogo **Conectar-se ao Servidor** . Se o servidor espelho usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selecione **Autenticação do SQL Server** na caixa **Autenticação** . Na caixa de texto **Logon** , especifique a conta de logon com a qual você se conectará no servidor espelho e, na caixa de texto **Senha** , especifique a senha da conta.  
   

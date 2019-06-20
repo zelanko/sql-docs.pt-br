@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62805572"
 ---
 # <a name="create-custom-templates"></a>Criar modelos personalizados
@@ -67,7 +67,7 @@ ms.locfileid: "62805572"
   
 10. No Editor de Consultas, digite **EXECUTE dbo.WorkOrdersForBlade**e pressione F5 para executar a consulta. Confirme se o painel **Resultados** retorna uma lista dos pedidos de trabalho nas folhas.  
   
-11. Edite o script de modelo (o script na etapa 7), substituindo o nome de produto folha pelo parâmetro  <strong>*<* product_name</strong>, `nvarchar(50)`, <strong>nome*>*</strong> , em quatro lugares.  
+11. Edite o script de modelo (o script na etapa 7), substituindo o nome de produto folha pelo parâmetro  <strong> *<* product_name</strong>, `nvarchar(50)`, <strong>nome *>* </strong> , em quatro lugares.  
   
     > [!NOTE]  
     >  Parâmetros requerem três elementos: o nome do parâmetro que você deseja substituir, o tipo de dados do parâmetro e um valor padrão do parâmetro.  

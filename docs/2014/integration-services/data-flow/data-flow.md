@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62827998"
 ---
 # <a name="data-flow"></a>Fluxo de Dados
@@ -97,7 +97,7 @@ ms.locfileid: "62827998"
 ### <a name="sources-available-for-download"></a>Fontes disponíveis para download  
  A tabela a seguir lista mais tipos de fontes que podem ser baixadas do site da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
-|Source|Descrição|  
+|`Source`|Descrição|  
 |------------|-----------------|  
 |Fonte Oracle|A fonte Oracle é o componente de fonte do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui um gerenciador de conexões e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
 |Fonte SAP BI|A fonte SAP BI é o componente de fonte do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI também inclui um gerenciador de conexões e um destino. Para obter mais informações, consulte a página de download [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978).|  
@@ -158,7 +158,7 @@ ms.locfileid: "62827998"
 ### <a name="destinations-available-for-download"></a>Destinos disponíveis para download  
  A tabela a seguir lista mais tipos de destinos que podem ser baixados do site da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
-|Source|Descrição|  
+|`Source`|Descrição|  
 |------------|-----------------|  
 |Destino Oracle|O destino Oracle é o componente de destino do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui um gerenciador de conexões e uma fonte. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
 |Destino SAP BI|O destino SAP BI é o componente de destino do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI também inclui um gerenciador de conexões e uma fonte. Para obter mais informações, consulte a página de download [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=110393).|  

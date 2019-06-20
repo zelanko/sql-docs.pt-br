@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dc58232ed3025063fb329392b58895ed667465f4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098897"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatar texto (Construtor de Relatórios)
@@ -128,7 +128,7 @@ ms.locfileid: "66098897"
     UNION SELECT CAST('2009-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Report Builder' as Link, 'https://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  Clique em Executar (**!**) para executar a consulta.  
+7.  Clique em Executar ( **!** ) para executar a consulta.  
   
      Os resultados da consulta são os dados disponíveis a serem exibidos no relatório.  
   
@@ -269,7 +269,7 @@ ms.locfileid: "66098897"
   
 7.  No **Home** guia o **parágrafo** seção, clique no **intermediária** e **Center** botões para localizar o texto no centro da célula vertical e horizontalmente.  
   
-8.  Clique em Executar (**!**).  
+8.  Clique em Executar ( **!** ).  
   
  Agora o texto na célula `[Territory]` é executado verticalmente da parte inferior para a parte superior das células.  
   
@@ -309,7 +309,7 @@ ms.locfileid: "66098897"
   
 7.  Clique em **OK**.  
   
-8.  Clique em Executar (**!**) para visualizar o relatório.  
+8.  Clique em Executar ( **!** ) para visualizar o relatório.  
   
  O texto na caixa de texto é exibido como um título, um parágrafo e uma lista com marcadores.  
   
@@ -327,7 +327,7 @@ ms.locfileid: "66098897"
   
 5.  (Opcional) Na guia **Início** , no grupo **Número** , clique no botão **Diminuir Decimais** duas vezes para exibir valores em dólares sem centavos.  
   
-6.  Clique em Executar (**!**) para visualizar o relatório.  
+6.  Clique em Executar ( **!** ) para visualizar o relatório.  
   
  O relatório agora exibe dados formatados e é mais fácil de ler.  
   

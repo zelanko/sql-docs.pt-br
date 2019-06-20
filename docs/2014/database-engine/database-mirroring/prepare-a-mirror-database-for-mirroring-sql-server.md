@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 844879c0e1b02bc9b6fd88ab153cb2a5dbd6ebe6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754781"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Preparar um banco de dados espelho para espelhamento (SQL Server)
@@ -112,7 +112,7 @@ ms.locfileid: "62754781"
   
     -   [Restaurar um Backup de banco de dados &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
-    -   [RESTORE &amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/restore-statements-transact-sql) e [RESTORE Arguments &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
+    -   [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) e [RESTORE Arguments &amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
   
 7.  Usando RESTORE WITH NORECOVERY, aplique quaisquer backups de log pendentes ou backups ao banco de dados espelho.  
   
@@ -218,7 +218,7 @@ ms.locfileid: "62754781"
   
  Para obter um exemplo completo de configuração de espelhamento de banco de dados, exibição da configuração de segurança, preparo do banco de dados espelho, configuração de parceiros e adição de uma testemunha, veja [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: Depois de preparar um banco de dados espelho  
+##  <a name="FollowUp"></a> Acompanhamento: depois de preparar um banco de dados espelho  
   
 1.  Se algum backup de log adicional tiver sido realizado desde sua operação RESTORE LOG mais recente, você deverá aplicar manualmente todos os backups de log adicionais, usando RESTORE WITH NORECOVERY.  
   

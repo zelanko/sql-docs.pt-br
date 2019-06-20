@@ -25,10 +25,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f7a16507855e5f17674fc76f7238e3e6b32a6d16
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102822"
 ---
 # <a name="reporting-services-report-server"></a>Servidor de Relatório do Reporting Services
@@ -90,15 +90,15 @@ ms.locfileid: "66102822"
 |**Configuration Manager**|Sim|**\*\* Importante \*\*** O Configuration Manager não pode ser usado para gerenciar servidor de relatório do modo do SharePoint. Em vez disso, use a administração central do SharePoint.|  
 |**Gerenciador de Relatórios**|Sim|O Gerenciador de Relatórios não pode ser usado para gerenciar o modo do SharePoint. Use as páginas do aplicativo do SharePoint. Para obter mais informações, consulte [Serviço SharePoint do Reporting Services e aplicativos de serviço](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Relatórios vinculados**|Sim|Não.|  
-|**Meus Relatórios**|Sim|Não|  
+|**Meus Relatórios**|Sim|Não |  
 |**Minhas Assinaturas** e métodos de envio em lote.|Sim|Não |  
 |**Alertas de dados**|Não |Sim|  
-|**Power View**|Não|Sim<br /><br /> Exige o Silverlight no navegador do cliente. Para obter mais informações sobre requisitos de navegador, consulte [Planning for Reporting Services e o suporte a navegador Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**Power View**|Não |Sim<br /><br /> Exige o Silverlight no navegador do cliente. Para obter mais informações sobre requisitos de navegador, consulte [Planning for Reporting Services e o suporte a navegador Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**Relatórios .RDL**|Sim|Sim<br /><br /> Relatórios .RDL podem ser executados em servidores de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo nativo ou no modo do SharePoint.|  
 |**Relatórios .RDLX**|Não|Sim<br /><br /> Relatórios .RDLX do Power View só podem ser executados em servidores de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint.|  
 |**Credenciais do token do usuário do SharePoint para a extensão de lista do SharePoint**|Não |Sim|  
-|**As zonas do AAM para implantações voltadas para a Internet**|Não|Sim|  
-|**Backup e recuperação do SharePoint**|Não|Sim|  
+|**As zonas do AAM para implantações voltadas para a Internet**|Não |Sim|  
+|**Backup e recuperação do SharePoint**|Não |Sim|  
 |**Suporte de log ULS**|Não |Sim|  
   
 ##  <a name="bkmk_nativemode"></a> Modo nativo  

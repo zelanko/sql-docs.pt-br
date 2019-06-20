@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 206a91032b0eb2e1928846ebcdbfcb97f04ba12c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768952"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Criando um destino com o componente Script
@@ -68,7 +68,7 @@ ms.locfileid: "62768952"
 ### <a name="adding-variables"></a>Adicionando variáveis  
  Se você quiser usar variáveis existentes em seu script, você pode adicioná-las a `ReadOnlyVariables` e `ReadWriteVariables` campos de propriedade a **Script** página da **Editor de transformação scripts**.  
   
- Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Você também pode selecionar diversas variáveis clicando no botão de reticências (**...** ) botão ao lado de `ReadOnlyVariables` e `ReadWriteVariables` campos de propriedade e, em seguida, selecionar as variáveis na **selecionar variáveis** caixa de diálogo.  
+ Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Você também pode selecionar diversas variáveis clicando no botão de reticências ( **...** ) botão ao lado de `ReadOnlyVariables` e `ReadWriteVariables` campos de propriedade e, em seguida, selecionar as variáveis na **selecionar variáveis** caixa de diálogo.  
   
  Para obter informações gerais sobre como usar variáveis com o componente Script, consulte [Usando variáveis no componente Script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -119,7 +119,7 @@ ms.locfileid: "62768952"
   
 3.  Adicione um novo componente Script à superfície do designer de Fluxo de Dados e configure-o como um destino.  
   
-4.  Conecte a saída de uma origem ou transformação upstream para o componente de destino no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Você pode conectar uma origem diretamente a um destino sem transformações.) Essa saída deve fornecer dados a partir o **Person. address** tabela da `AdventureWorks` banco de dados de exemplo que contém pelo menos as **AddressID** e **Cidade** colunas.  
+4.  Conecte a saída de uma origem ou transformação upstream para o componente de destino no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Você pode conectar uma origem diretamente a um destino, sem transformações.) Essa saída deve fornecer dados a partir o **Person. address** tabela da `AdventureWorks` banco de dados de exemplo que contém pelo menos as **AddressID** e **Cidade** colunas.  
   
 5.  Abra o **Editor de Transformação Scripts**. Na página **Colunas de Entrada**, selecione as colunas de entrada **AddressID** e **City**.  
   
@@ -236,7 +236,7 @@ public class ScriptMain:
   
 2.  Adicione um novo componente Script à superfície do designer de Fluxo de Dados e configure-o como um destino.  
   
-3.  Conecte a saída de uma origem ou transformação upstream para o componente de destino no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Você pode conectar uma origem diretamente a um destino sem transformações.) Essa saída deve fornecer dados a partir o **Person. address** tabela da `AdventureWorks` banco de dados de exemplo e deve conter pelo menos as **AddressID** e **Cidade** colunas.  
+3.  Conecte a saída de uma origem ou transformação upstream para o componente de destino no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Você pode conectar uma origem diretamente a um destino, sem transformações.) Essa saída deve fornecer dados a partir o **Person. address** tabela da `AdventureWorks` banco de dados de exemplo e deve conter pelo menos as **AddressID** e **Cidade** colunas.  
   
 4.  Abra o **Editor de Transformação Scripts**. Na página **Colunas de Entrada**, selecione as colunas **AddressID** e **City**.  
   

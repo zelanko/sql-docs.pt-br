@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 384b5cc158600848dbca6528a4c8c39250a23908
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62629169"
 ---
 # <a name="clean-up-merge-metadata-replication-transact-sql-programming"></a>Limpar metadados de mesclagem (Programação Transact-SQL de replicação)
@@ -29,7 +29,7 @@ ms.locfileid: "62629169"
   
 1.  No Publicador do banco de dados de publicação, execute [sp_mergemetadataretentioncleanup](/sql/relational-databases/system-stored-procedures/sp-mergemetadataretentioncleanup-transact-sql).  
   
-2.  (Opcional) Observe o número de linhas removidas na etapa 1 do [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql), [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql)e nas tabelas do sistema [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql) , retornadas respectivamente nos parâmetros de saída **@num_genhistory_rows**, **@num_contents_rows**e nas tabelas do sistema **@num_tombstone_rows** .  
+2.  (Opcional) Observe o número de linhas removidas na etapa 1 do [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql), [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql)e nas tabelas do sistema [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql) , retornadas respectivamente nos parâmetros de saída **@num_genhistory_rows** , **@num_contents_rows** e nas tabelas do sistema **@num_tombstone_rows** .  
   
 3.  Repita as etapas 1 e 2 no Assinante para limpar os metadados no banco de dados de assinatura.  
   

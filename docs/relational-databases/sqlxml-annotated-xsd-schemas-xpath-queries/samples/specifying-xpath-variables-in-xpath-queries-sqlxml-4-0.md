@@ -16,10 +16,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9f6d8bb97da7bd678f23c13f48c6a4c973071b43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737475"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>Especificando variáveis XPath em consultas XPath (SQLXML 4.0)
@@ -29,7 +29,7 @@ ms.locfileid: "62737475"
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-use-the-xpath-variables"></a>A. Usar as variáveis XPath  
- Um modelo de exemplo consiste em duas consultas XPath. Cada uma das consultas XPath assume um parâmetro. O modelo também especifica valores padrão para esses parâmetros. Serão usados os valores padrão se não forem especificados valores dos parâmetros. Dois parâmetros com valores padrão são especificados em  **\<sql:header >**.  
+ Um modelo de exemplo consiste em duas consultas XPath. Cada uma das consultas XPath assume um parâmetro. O modelo também especifica valores padrão para esses parâmetros. Serão usados os valores padrão se não forem especificados valores dos parâmetros. Dois parâmetros com valores padrão são especificados em  **\<sql:header >** .  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
