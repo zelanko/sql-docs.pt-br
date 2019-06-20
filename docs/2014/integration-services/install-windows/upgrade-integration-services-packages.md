@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a1ff35cfc7d5e8611c06981b2e3a9fe9dd6e82fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768992"
 ---
 # <a name="upgrade-integration-services-packages"></a>Atualizar pacotes do Integration Services
@@ -81,14 +81,14 @@ ms.locfileid: "62768992"
   
 -   DTExecUI.exe.config  
   
- Para usar [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para criar pacotes que incluam [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] componentes personalizados, você precisa modificar o arquivo devenv que está localizado em  *\<unidade >*: \Program Files\ Microsoft Visual Studio 10.0\Common7\IDE.  
+ Para usar [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para criar pacotes que incluam [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] componentes personalizados, você precisa modificar o arquivo devenv que está localizado em  *\<unidade >* : \Program Files\ Microsoft Visual Studio 10.0\Common7\IDE.  
   
  Para usar esses pacotes com aplicativos de clientes compilados com o tempo de execução de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], inclua as regras de redirecionamento da seção de configuração do arquivo *.exe.config do executável. As regras redirecionam os assemblies de tempo de execução para a versão 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Para obter mais informações sobre o redirecionamento de versão do assembly, veja [Elemento \<assemblyBinding> para \<runtime>](https://msdn.microsoft.com/library/twy1dw1e.aspx).  
   
 ### <a name="locating-the-assemblies"></a>Localizando os assemblies  
- No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], os assemblies do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] foram atualizados para o .NET 4.0. Há um cache de assembly global separado para o .NET 4, localizado em  *\<drive >*: \windows\microsoft.net\assembly. Você pode localizar todos os assemblies do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nesse caminho, normalmente na pasta GAC_MSIL.  
+ No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], os assemblies do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] foram atualizados para o .NET 4.0. Há um cache de assembly global separado para o .NET 4, localizado em  *\<drive >* : \windows\microsoft.net\assembly. Você pode localizar todos os assemblies do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nesse caminho, normalmente na pasta GAC_MSIL.  
   
- Assim como nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os principais arquivos .dll de extensibilidade do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] também estão localizados em *\<unidade>*:\Arquivos de Programas\Microsoft SQL Server\100\SDK\Assemblies.  
+ Assim como nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os principais arquivos .dll de extensibilidade do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] também estão localizados em *\<unidade>* :\Arquivos de Programas\Microsoft SQL Server\100\SDK\Assemblies.  
   
 ## <a name="understanding-sql-server-package-upgrade-results"></a>Entendendo os resultados da atualização de pacote do SQL Server  
  No processo de atualização de pacotes, a maioria dos componentes e recursos dos pacotes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] são convertidos diretamente em seus respectivos equivalentes na versão atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No entanto, há vários componentes e recursos que não serão atualizados ou têm resultados de atualização dos quais você deve estar ciente. A tabela a seguir identifica esses componentes e recursos.  

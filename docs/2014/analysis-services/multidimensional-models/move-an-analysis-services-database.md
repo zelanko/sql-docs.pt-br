@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073595"
 ---
 # <a name="move-an-analysis-services-database"></a>Mover um Banco de Dados do Analysis Services
@@ -53,7 +53,7 @@ ms.locfileid: "66073595"
   
 6.  Clique com botão direito no **bancos de dados** pasta e selecione **anexar...**  
   
-7.  Na caixa de texto **pasta** , digite o novo local da pasta do banco de dados. Como alternativa, você pode usar o botão Procurar (**...** ) para localizar a pasta do banco de dados.  
+7.  Na caixa de texto **pasta** , digite o novo local da pasta do banco de dados. Como alternativa, você pode usar o botão Procurar ( **...** ) para localizar a pasta do banco de dados.  
   
 8.  Selecione o `ReadWrite` modo para o banco de dados.  
   

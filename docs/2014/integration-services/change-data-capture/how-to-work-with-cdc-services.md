@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d047d1c584e176f5446361dd29821eb4ff18aa74
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771205"
 ---
 # <a name="how-to-work-with-cdc-services"></a>Como trabalhar com os serviços CDC
@@ -32,7 +32,7 @@ ms.locfileid: "62771205"
   
          Selecione esta opção no painel **Ações** no lado direito do Console de Configuração do Serviço CDC.  
   
-         Você também pode clicar com o botão direito do mouse em **Local CDC Services (Serviços Locais de CDC)** e selecionar **Prepare SQL Server (Preparar SQL Server)**.  
+         Você também pode clicar com o botão direito do mouse em **Local CDC Services (Serviços Locais de CDC)** e selecionar **Prepare SQL Server (Preparar SQL Server)** .  
   
          A caixa de diálogo Preparando a Instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Oracle CDC é aberta.  
   

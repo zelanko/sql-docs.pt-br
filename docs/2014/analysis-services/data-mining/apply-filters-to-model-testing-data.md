@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16c5a556159caa1227268bc3488a19d25fa9e296
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086145"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Aplicar filtros a dados de testes de modelo
@@ -61,7 +61,7 @@ ms.locfileid: "66086145"
   
 3.  Na guia **Seleção de Entrada** , em **Selecionar conjunto de dados a ser usado para Gráfico de Precisão**, selecione a opção **Especificar um conjunto de dados diferente**.  
   
-4.  Clique no botão Procurar **(...)**  para abrir uma caixa de diálogo e escolha o conjunto de dados externo.  
+4.  Clique no botão Procurar **(...)** para abrir uma caixa de diálogo e escolha o conjunto de dados externo.  
   
 5.  Escolha a tabela de caso e adicione uma tabela aninhada, caso necessário. Mapeie colunas no modelo para colunas no conjunto de dados externo, caso necessário. Feche a caixa de diálogo **Especificar Mapeamento de Coluna** para salvar a definição de tabela de origem.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66086145"
   
 9. Clique na caixa de texto **E/Ou** e selecione um operador lógico para definir como combinar várias condições.  
   
-10. Opcionalmente, clique no botão Procurar **(...)**  à direita do **valor** caixa de texto para abrir o **filtro** caixa de diálogo caixa e defina as condições na tabela aninhada ou nas colunas da tabela de casos individual.  
+10. Opcionalmente, clique no botão Procurar **(...)** à direita do **valor** caixa de texto para abrir o **filtro** caixa de diálogo caixa e defina as condições na tabela aninhada ou nas colunas da tabela de casos individual.  
   
 11. Verifique se as condições de filtro atendidas estão corretas exibindo o texto no painel **Expressão** .  
   

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17a2c847e906616c4555d37e641f76eeb73391ab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065255"
 ---
 # <a name="assembly-load-event-class"></a>Classe de evento Assembly Load
@@ -44,7 +44,7 @@ ms.locfileid: "66065255"
 |**ObjectID**|**int**|ID do assembly.|22|Sim|  
 |**ObjectName**|**nvarchar**|Nome completamente qualificado do assembly.|34|Sim|  
 |**RequestID**|**int**|ID da solicitação que contém a instrução.|49|Sim|  
-|**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
+|**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não |  
 |**SessionLoginName**|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |**SPID**|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
