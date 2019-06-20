@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721668"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Criar uma assinatura para um Assinante não SQL Server
@@ -45,7 +45,7 @@ ms.locfileid: "62721668"
   
          Você cria o instantâneo após a publicação estar habilitada para Assinantes não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para garantir que o Snapshot Agent gere scripts de instantâneo e de inicialização adequados para os Assinantes não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  Habilite a publicação para Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a caixa de diálogo **Propriedades da Publicação – \<PublicationName>**. Consulte [Publication Properties, Subscription Options](publication-properties-subscription-options.md) para obter mais informações sobre essa etapa.  
+3.  Habilite a publicação para Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a caixa de diálogo **Propriedades da Publicação – \<PublicationName>** . Consulte [Publication Properties, Subscription Options](publication-properties-subscription-options.md) para obter mais informações sobre essa etapa.  
   
 4.  Crie uma assinatura usando o Assistente para Nova Assinatura. Esse tópico proporciona mais informações sobre essa etapa.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "62721668"
   
     -   Para a IBM DB2, o banco de dados é especificado na propriedade **Catálogo Inicial** da cadeia de caracteres da conexão DB2, que pode ser digitada no campo **Opções de conexões adicionais** descrito mais adiante neste processo.  
   
-8.  Na página **Segurança do Agente de Distribuição**, clique no botão de propriedades (**...**) próximo ao Assinante para acessar a caixa de diálogo **Segurança do Agente de Distribuição**.  
+8.  Na página **Segurança do Agente de Distribuição**, clique no botão de propriedades ( **...** ) próximo ao Assinante para acessar a caixa de diálogo **Segurança do Agente de Distribuição**.  
   
 9. Na caixa de diálogo **Segurança do Distribution Agent** :  
   
@@ -137,7 +137,7 @@ ms.locfileid: "62721668"
   
 2.  Clique com o botão direito do mouse em uma publicação e clique em **Exibir Status do Snapshot Agent**.  
   
-3.  Na caixa de diálogo **Exibir Status do Snapshot Agent – \<Publicação>**, clique em **Iniciar**.  
+3.  Na caixa de diálogo **Exibir Status do Snapshot Agent – \<Publicação>** , clique em **Iniciar**.  
   
  Quando o Agente de Instantâneo terminar de gerar o instantâneo, uma mensagem será exibida, como "[100%] Um instantâneo de 17 artigos foi gerado".  
   
@@ -155,27 +155,27 @@ ms.locfileid: "62721668"
   
     -   Se o valor de `enabled_for_het_sub` for 1, os Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] terão suporte.  
   
-    -   Se o valor de `enabled_for_het_sub` é 0, execute [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), especificando `enabled_for_het_sub` para **@property** e `true` para  **@value**.  
+    -   Se o valor de `enabled_for_het_sub` é 0, execute [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), especificando `enabled_for_het_sub` para **@property** e `true` para  **@value** .  
   
         > [!NOTE]  
         >  Antes de alterar `enabled_for_het_sub` para `true`, é preciso ignorar todas as assinaturas existentes para a publicação. Não é possível definir  `enabled_for_het_sub` como `true` quando a publicação oferecer suporte também a assinaturas de atualização. Alterar `enabled_for_het_sub` afetará outras propriedades de publicação. Para obter mais informações, consulte [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
-3.  No Publicador do banco de dados de publicação, execute [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique **@publication**, **@subscriber**; um valor de **(destino padrão)** para **@destination_db**; um valor de **push** para **@subscription_type**, e um valor de 3 para **@subscriber_type** (especifica um provedor OLE DB).  
+3.  No Publicador do banco de dados de publicação, execute [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique **@publication** , **@subscriber** ; um valor de **(destino padrão)** para **@destination_db** ; um valor de **push** para **@subscription_type** , e um valor de 3 para **@subscriber_type** (especifica um provedor OLE DB).  
   
 4.  No Publicador do banco de dados de publicação, execute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Especifique o seguinte:  
   
-    -   Os parâmetros **@subscriber**e **@publication** .  
+    -   Os parâmetros **@subscriber** e **@publication** .  
   
-    -   Um valor de **(destino padrão)** para **@subscriber_db**,  
+    -   Um valor de **(destino padrão)** para **@subscriber_db** ,  
   
-    -   As propriedades de fonte de dados não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@subscriber_provider**, **@subscriber_datasrc**, **@subscriber_location**, **@subscriber_provider_string**e **@subscriber_catalog**.  
+    -   As propriedades de fonte de dados não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@subscriber_provider** , **@subscriber_datasrc** , **@subscriber_location** , **@subscriber_provider_string** e **@subscriber_catalog** .  
   
-    -   Os parâmetros [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows com as quais o Distribution Agent do Distribuidor é executado para **@job_login** e **@job_password**.  
+    -   Os parâmetros [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows com as quais o Distribution Agent do Distribuidor é executado para **@job_login** e **@job_password** .  
   
         > [!NOTE]  
-        >  As conexões realizadas com Autenticação Integrada do Windows sempre usam as credenciais do Windows especificadas por **@job_login** e **@job_password**. O Distribution Agent sempre faz a conexão local com o Distribuidor usando a Autenticação Integrada do Windows. Por padrão, o agente se conecta ao Assinante usando a Autenticação Integrada do Windows.  
+        >  As conexões realizadas com Autenticação Integrada do Windows sempre usam as credenciais do Windows especificadas por **@job_login** e **@job_password** . O Distribution Agent sempre faz a conexão local com o Distribuidor usando a Autenticação Integrada do Windows. Por padrão, o agente se conecta ao Assinante usando a Autenticação Integrada do Windows.  
   
-    -   Um valor de **0** para **@subscriber_security_mode** e informações de logon do provedor OLE DB para **@subscriber_login** e **@subscriber_password**.  
+    -   Um valor de **0** para **@subscriber_security_mode** e informações de logon do provedor OLE DB para **@subscriber_login** e **@subscriber_password** .  
   
     -   Agenda para o trabalho do Distribution Agent para essa assinatura. Para obter mais informações, consulte [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   

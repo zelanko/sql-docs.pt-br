@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20a1580503ad141817edcf8e01772dfcc8dc39a3
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537356"
 ---
 # <a name="sqlfetchscroll-function"></a>Função SQLFetchScroll
@@ -165,7 +165,7 @@ SQLRETURN SQLFetchScroll(
 |---------------|-----------------------------|  
 |*Antes de iniciar*|1|  
 |*CurrRowsetStart + RowsetSize*[1] *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
-|*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*Após o fim*|  
+|*CurrRowsetStart + RowsetSize*[1] *> LastResultRow*|*Após o fim*|  
 |*Após o fim*|*Após o fim*|  
   
  [1] se o tamanho do conjunto de linhas tiver sido alterado desde a chamada anterior para buscar linhas, esse é o tamanho do conjunto de linhas que foi usado com a chamada anterior.  
@@ -257,7 +257,7 @@ SQLRETURN SQLFetchScroll(
   
  Se o cursor detecta linhas adicionadas ao conjunto de resultados ou remove linhas excluídas do conjunto de resultados, ele aparece como se ele detecta essas alterações somente quando ele busca dados. Isso inclui o caso quando **SQLFetchScroll** é chamado com FetchOrientation definido como SQL_FETCH_RELATIVE e FetchOffset definido como 0 para buscar novamente o mesmo conjunto de linhas, mas não inclui o caso quando SQLSetPos é chamado com fOption definido como SQL _ ATUALIZAÇÃO. No último caso, os dados nos buffers de conjunto de linhas são atualizados, mas não refetched e as linhas excluídas não são removidas do conjunto de resultados. Assim, quando uma linha é excluída do ou inserida no conjunto de linhas atual, o cursor não modifica os buffers de conjunto de linhas. Em vez disso, ele detecta a alteração quando ele busca qualquer conjunto de linhas que incluídas anteriormente a linha excluída ou agora inclui a linha inserida.  
   
- Por exemplo:   
+ Por exemplo:  
   
 ```cpp  
 // Fetch the next rowset.  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d8d2ad4c7df20b2b9649b1ad780dd40353a7796e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996809"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
@@ -49,7 +49,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>Argumentos  
 `[ @dbname = ] 'dbname'` É o nome do banco de dados a ser anexado ao servidor. O nome deve ser exclusivo. *DBName* está **sysname**, com um padrão NULL.  
   
-`[ @physname = ] 'physical_name'` É o nome físico, incluindo o caminho, do arquivo de banco de dados. *physical_name* está **nvarchar (260)**, com um padrão NULL.  
+`[ @physname = ] 'physical_name'` É o nome físico, incluindo o caminho, do arquivo de banco de dados. *physical_name* está **nvarchar (260)** , com um padrão NULL.  
   
 > [!NOTE]  
 >  Este argumento mapeia para o parâmetro FILENAME da instrução CREATE DATABASE. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  

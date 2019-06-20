@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0805246d5b88138cfa97019d1e0cd524c82456c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63060999"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Conectar-se ao Sybase (SybaseToSQL)
@@ -53,7 +53,7 @@ Cadeias de caracteres de Conexão consistem em pares de nome e valor do parâmet
     |Configuração|Parâmetro Sybase 12,5|Parâmetro Sybase 15|  
     |-----------|-------------------------|-----------------------|  
     |Nome do servidor|Nome do servidor|Servidor|  
-    |Porta|Endereço da porta do servidor|Porta|  
+    |Port|Endereço da porta do servidor|Port|  
     |Nome de usuário|ID de usuário|ID de usuário|  
     |Senha|Senha|Senha|  
     |Provedor|Provedor|Provedor|  
@@ -74,7 +74,7 @@ Cadeias de caracteres de Conexão consistem em pares de nome e valor do parâmet
     |Nome do servidor|Servidor|  
     |Nome do Usuário|UID|  
     |Senha|pwd|  
-    |Número da Porta|Porta|  
+    |Número da Porta|Port|  
   
     Para Sybase ASE 12,5 ou 15, um exemplo de cadeia de conexão é da seguinte maneira:  
   
@@ -87,7 +87,7 @@ Cadeias de caracteres de Conexão consistem em pares de nome e valor do parâmet
     |Nome do servidor|Servidor|  
     |Nome do Usuário|UID|  
     |Senha|pwd|  
-    |Número da Porta|Porta|  
+    |Número da Porta|Port|  
   
     Um exemplo da cadeia de Conexão de provedor do ADO.NET é como segue:  
   

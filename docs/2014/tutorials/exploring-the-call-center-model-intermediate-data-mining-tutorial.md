@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63315076"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>Explorando o modelo de call center (Tutorial de mineração de dados intermediário)
@@ -105,7 +105,7 @@ ms.locfileid: "63315076"
   
  Com base nessas informações, é possível estabelecer algumas conclusões. O menor tempo de resposta para chamada (o intervalo de 44-70) influencia fortemente a melhor classificação do serviço (o intervalo 0,00-0,07). A pontuação (92,35) informa que essa variável é muito importante.  
   
- Entretanto, à medida que você examina a lista de fatores contribuintes, percebe alguns outros fatores  Por exemplo, o turno parece influenciar o serviço, mas as pontuações de comparação de precisão e as probabilidades relativas indicam que o turno não é um fator preponderante.  
+ Entretanto, à medida que você examina a lista de fatores contribuintes, percebe alguns outros fatores Por exemplo, o turno parece influenciar o serviço, mas as pontuações de comparação de precisão e as probabilidades relativas indicam que o turno não é um fator preponderante.  
   
 |attribute|Valor|Favorece \< 0,07|Favorece > = 0,12|  
 |---------------|-----------|--------------------|----------------------|  

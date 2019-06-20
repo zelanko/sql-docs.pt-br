@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f20945b6c4dc8fc1dda398c3dc9e721ff8b44d07
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047159"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
@@ -56,7 +56,7 @@ sp_depends [ @objname = ] '<object>'
  É o nome do esquema ao qual o objeto pertence.  
   
  *object_name*  
- É o objeto de banco de dados que será examinado para verificar se há dependências. O objeto pode ser uma tabela, exibição, procedimento armazenado, função definida pelo o usuário ou gatilho. s*bject_name* é **nvarchar(776)**, sem padrão.  
+ É o objeto de banco de dados que será examinado para verificar se há dependências. O objeto pode ser uma tabela, exibição, procedimento armazenado, função definida pelo o usuário ou gatilho. s*bject_name* é **nvarchar(776)** , sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -74,7 +74,7 @@ sp_depends [ @objname = ] '<object>'
 |**selected**|**nvarchar(8)**|Se o item é usado em uma instrução SELECT.|  
 |**column**|**sysname**|Coluna ou parâmetro em que a dependência existe.|  
   
- O conjunto de resultados a seguir mostra os objetos que dependem  *\<objeto >*.  
+ O conjunto de resultados a seguir mostra os objetos que dependem  *\<objeto >* .  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  

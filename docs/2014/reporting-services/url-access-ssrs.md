@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0cc753f16ca9b70523fe6cb858fd167ef044087b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098726"
 ---
 # <a name="url-access-ssrs"></a>Acesso à URL (SSRS)
@@ -65,7 +65,7 @@ http://myrshost/reportserver
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
- No modo integrado do SharePoint, é a URL do proxy do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em um site do SharePoint integrado ao [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Por exemplo:  
+ No modo integrado do SharePoint, é a URL do proxy do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em um site do SharePoint integrado ao [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Por exemplo:   
   
 ```  
 http://myspsite/subsite/_vti_bin/reportserver  
@@ -83,7 +83,7 @@ http://myspsite/subsite/_vti_bin/reportserver
 /AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  
 ```  
   
- No modo integrado do SharePoint, é a URL totalmente qualificada do item na biblioteca do SharePoint, incluindo a extensão do item. Por exemplo:  
+ No modo integrado do SharePoint, é a URL totalmente qualificada do item na biblioteca do SharePoint, incluindo a extensão do item. Por exemplo:   
   
 ```  
 http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  

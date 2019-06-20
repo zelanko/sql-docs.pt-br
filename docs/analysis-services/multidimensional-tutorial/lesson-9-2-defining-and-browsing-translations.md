@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dfa0021eb23620c4950949094e661f100aa4ac6f
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403478"
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Lição 9-2: definindo e procurando traduções
@@ -41,13 +41,13 @@ Nas tarefas deste tópico, você define as traduções de metadados para um conj
   
     Outra coluna de idioma será exibida e nela você poderá definir as traduções francesas.  
   
-5.  Na linha do objeto **Legenda** da dimensão **Data**, digite **Fecha** na coluna de tradução para o **Espanhol (Espanha)** e **Temps** na coluna de tradução para o **Francês (França)**.  
+5.  Na linha do objeto **Legenda** da dimensão **Data**, digite **Fecha** na coluna de tradução para o **Espanhol (Espanha)** e **Temps** na coluna de tradução para o **Francês (França)** .  
   
 6.  Na linha do objeto **Legenda** no atributo **Nome do Mês** , digite **Mes del Año** na coluna de tradução para o **Espanhol (Espanha)** e **Mois d'Année** na coluna de tradução para o **Francês (França)** .  
   
-    Observe que, quando você insere essas traduções, um sinal de reticências (**...** ) é exibida. Ao clicar nas reticências, você pode especificar uma coluna na tabela subjacente que fornece as traduções para cada membro da hierarquia do atributo.  
+    Observe que, quando você insere essas traduções, um sinal de reticências ( **...** ) é exibida. Ao clicar nas reticências, você pode especificar uma coluna na tabela subjacente que fornece as traduções para cada membro da hierarquia do atributo.  
   
-7.  Clique no botão de reticências (**...** ) para o **Espanhol (Espanha)** tradução para o **nome do mês** atributo.  
+7.  Clique no botão de reticências ( **...** ) para o **Espanhol (Espanha)** tradução para o **nome do mês** atributo.  
   
     A caixa de diálogo **Tradução de Dados de Atributo** é exibida.  
   
@@ -55,7 +55,7 @@ Nas tarefas deste tópico, você define as traduções de metadados para um conj
   
     ![Caixa de diálogo de tradução de dados do atributo](../media/l9-translations-4.gif "caixa de diálogo tradução de dados de atributo")  
   
-9. Clique em **Okey**e, em seguida, clique no botão de reticências (**...** ) para o **francês (França)** tradução para o **nome do mês** atributo.  
+9. Clique em **Okey**e, em seguida, clique no botão de reticências ( **...** ) para o **francês (França)** tradução para o **nome do mês** atributo.  
   
 10. Na lista **Colunas de tradução** , selecione **FrenchMonthName**e clique em **OK**.  
   

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63313767"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Trabalhar com dados no painel de resultados (Visual Database Tools)
@@ -117,7 +117,7 @@ ms.locfileid: "63313767"
   
 -   Os tipos de dados binários, muitas vezes, não são úteis para pessoas que trabalham no painel Resultados, além de gastar muito tempo para serem baixados. Portanto, eles são representados por  *\<dados binários >* ou *nulo*.  
   
--   A precisão e a escala nem sempre podem ser preservadas. Por exemplo, o painel Resultados dá suporte à precisão de 27. Se dados forem de um tipo de dados com maior precisão, os dados poderão ficar truncados ou poderão ser representados por  *\<não é possível ler dados >*.  
+-   A precisão e a escala nem sempre podem ser preservadas. Por exemplo, o painel Resultados dá suporte à precisão de 27. Se dados forem de um tipo de dados com maior precisão, os dados poderão ficar truncados ou poderão ser representados por  *\<não é possível ler dados >* .  
   
 ## <a name="see-also"></a>Consulte também  
  [Executar operações básicas com consultas &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   

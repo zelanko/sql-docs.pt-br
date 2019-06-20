@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103394"
 ---
 # <a name="report-server-http-log"></a>Log HTTP do Servidor de Relatório
@@ -59,24 +59,24 @@ ms.locfileid: "66103394"
 |Campo|Descrição|Padrão|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Esse valor é opcional. O valor padrão é ReportServerServiceHTTP_. Você pode especificar um valor diferente se desejar usar uma convenção de nomeação de arquivo diferente (por exemplo, para incluir o nome do servidor se estiver salvando arquivos de log em um local central).|Sim|  
-|HTTPTraceSwitches|Esse valor é opcional. Se esse valor for especificado, você poderá configurar os campos usados no arquivo de log em um formato delimitado por vírgula.|Não |  
-|Date|A data em que a atividade ocorreu.|Não |  
-|Time|A hora em que a atividade ocorreu.|Não |  
+|HTTPTraceSwitches|Esse valor é opcional. Se esse valor for especificado, você poderá configurar os campos usados no arquivo de log em um formato delimitado por vírgula.|Não|  
+|Date|A data em que a atividade ocorreu.|Não|  
+|Time|A hora em que a atividade ocorreu.|Não|  
 |ClientIp|O endereço IP do cliente que acessa o servidor de relatório.|Sim|  
 |UserName|O nome do usuário que acessou o servidor de relatório.|Não|  
-|ServerPort|O número da porta usada para a conexão.|Não |  
+|ServerPort|O número da porta usada para a conexão.|Não|  
 |Host|O conteúdo do cabeçalho do host.|Não|  
 |Método|A ação ou método SOAP chamado do cliente.|Sim|  
 |UriStem|O recurso acessado.|Sim|  
 |UriQuery|A consulta usada para acessar o recurso.|Não|  
 |ProtocolStatus|O código de status HTTP.|Sim|  
-|BytesReceived|O número de bytes recebidos pelo servidor.|Não |  
-|TimeTaken|O tempo (em milissegundos) desde o instante em que HTTP.SYS retorna os dados da solicitação até o servidor concluir o último envio, sem contar o tempo de transmissão de rede.|Não |  
+|BytesReceived|O número de bytes recebidos pelo servidor.|Não|  
+|TimeTaken|O tempo (em milissegundos) desde o instante em que HTTP.SYS retorna os dados da solicitação até o servidor concluir o último envio, sem contar o tempo de transmissão de rede.|Não|  
 |ProtocolVersion|A versão de protocolo usada pelo cliente.|Não|  
 |UserAgent|O tipo de navegador usado pelo cliente.|Não|  
-|CookieReceived|O conteúdo do cookie recebido pelo servidor.|Não |  
-|CookieSent|O conteúdo do cookie enviado pelo servidor.|Não |  
-|Referenciador|O site anterior visitado pelo cliente.|Não |  
+|CookieReceived|O conteúdo do cookie recebido pelo servidor.|Não|  
+|CookieSent|O conteúdo do cookie enviado pelo servidor.|Não|  
+|Referenciador|O site anterior visitado pelo cliente.|Não|  
   
 ## <a name="see-also"></a>Consulte também  
  [Log de rastreamento do serviço Servidor de Relatório](report-server-service-trace-log.md)   

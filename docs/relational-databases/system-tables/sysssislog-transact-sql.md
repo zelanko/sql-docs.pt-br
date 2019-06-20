@@ -19,10 +19,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bde0c339b369aaccce107ded51f3b124be3b37f4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489770"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "65489770"
 |event|**sysname**|O nome do evento que gerou a entrada do log.|  
 |computer|**nvarchar**|O computador no qual o pacote foi executado quando a entrada do log foi gerada.|  
 |operador|**nvarchar**|O nome de usuário da pessoa que executou o pacote que gerou a entrada do log.|  
-|origem|**nvarchar**|O nome do executável, no pacote, que gerou a entrada do log.|  
+|source|**nvarchar**|O nome do executável, no pacote, que gerou a entrada do log.|  
 |sourceid|**uniqueidentifier**|O GUID do executável, no pacote, que gerou a entrada do log.|  
 |executionid|**uniqueidentifier**|A GUID da instância de execução do executável que gerou a entrada do log.|  
 |starttime|**datetime**|A hora em que o pacote começou a ser executado.|  

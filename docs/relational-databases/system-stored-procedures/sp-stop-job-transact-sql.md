@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eda439b53c72e41154d4891495470fc271028aee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004259"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
@@ -49,12 +49,12 @@ sp_stop_job
   
 `[ @job_id = ] job_id` O número de identificação do trabalho a ser interrompido. *job_id* está **uniqueidentifier**, com um padrão NULL.  
   
-`[ @originating_server = ] 'master_server'` O nome do servidor mestre. Se for especificado, todos os trabalhos multisservidor serão interrompidos. *master_server* está **nvarchar (128)**, com um padrão NULL. Especifique esse parâmetro somente ao chamar **sp_stop_job** em um servidor de destino.  
+`[ @originating_server = ] 'master_server'` O nome do servidor mestre. Se for especificado, todos os trabalhos multisservidor serão interrompidos. *master_server* está **nvarchar (128)** , com um padrão NULL. Especifique esse parâmetro somente ao chamar **sp_stop_job** em um servidor de destino.  
   
 > [!NOTE]  
 >  Apenas um dos três primeiros parâmetros pode ser especificado.  
   
-`[ @server_name = ] 'target_server'` O nome do servidor de destino específico no qual interromper um trabalho multisservidor. *target_server* está **nvarchar (128)**, com um padrão NULL. Especifique esse parâmetro somente ao chamar **sp_stop_job** em um servidor mestre para um trabalho multisservidor.  
+`[ @server_name = ] 'target_server'` O nome do servidor de destino específico no qual interromper um trabalho multisservidor. *target_server* está **nvarchar (128)** , com um padrão NULL. Especifique esse parâmetro somente ao chamar **sp_stop_job** em um servidor mestre para um trabalho multisservidor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

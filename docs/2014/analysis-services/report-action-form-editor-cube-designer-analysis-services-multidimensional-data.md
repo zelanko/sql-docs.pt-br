@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eeb3df670097c0d511a9f5b779b6705f40a5e897
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070295"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulário de Ação de Relatório (guia Ações, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -76,7 +76,7 @@ ms.locfileid: "66070295"
 |coluna|Descrição|  
 |------------|-----------------|  
 |**Nome do parâmetro**|Digite o nome do parâmetro de relatório a ser passado para o relatório.|  
-|**Valor do Parâmetro**|Digite o valor do parâmetro de relatório a ser passado para o relatório.<br /><br /> Clique no botão de reticências (**...**) para exibir a caixa de diálogo **Construtor MDX** e crie uma expressão MDX que forneça o valor do parâmetro de relatório. Para obter mais informações sobre a caixa de diálogo **Construtor MDX**, consulte [Construtor MDX &#40;Analysis Services – Dados Multidimensionais&#41;](mdx-builder-analysis-services-multidimensional-data.md).<br /><br /> Se o parâmetro estiver definido como uma expressão MDX, a expressão será avaliada quando a ação for executada. Caso contrário ela será passada para o relatório sem modificação.|  
+|**Valor do Parâmetro**|Digite o valor do parâmetro de relatório a ser passado para o relatório.<br /><br /> Clique no botão de reticências ( **...** ) para exibir a caixa de diálogo **Construtor MDX** e crie uma expressão MDX que forneça o valor do parâmetro de relatório. Para obter mais informações sobre a caixa de diálogo **Construtor MDX**, consulte [Construtor MDX &#40;Analysis Services – Dados Multidimensionais&#41;](mdx-builder-analysis-services-multidimensional-data.md).<br /><br /> Se o parâmetro estiver definido como uma expressão MDX, a expressão será avaliada quando a ação for executada. Caso contrário ela será passada para o relatório sem modificação.|  
   
  **Propriedades Adicionais**  
  Expanda para exibir as opções **Invocação**, **Aplicativo**, **Descrição**, **Legenda**e **A legenda é MDX** .  

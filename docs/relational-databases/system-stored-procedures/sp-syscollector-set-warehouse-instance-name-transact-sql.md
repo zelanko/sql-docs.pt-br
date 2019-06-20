@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 11c704413f9668a5da99ded7d269d05b8e3f2c25
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63001569"
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
@@ -44,7 +44,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  [ @instance_name = ] '*instance_name*'  
  É o nome de instância. *nome_da_instância* está **sysname** e padrões para a instância local se for NULL.  
   
-> **Observação:**_nome_instância_ deve ser o nome totalmente qualificado da instância, que consiste o nome do computador e o nome da instância no formato *nome_do_computador* \\ *instanceName*.    
+> **Observação:** _nome_instância_ deve ser o nome totalmente qualificado da instância, que consiste o nome do computador e o nome da instância no formato *nome_do_computador* \\ *instanceName*.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

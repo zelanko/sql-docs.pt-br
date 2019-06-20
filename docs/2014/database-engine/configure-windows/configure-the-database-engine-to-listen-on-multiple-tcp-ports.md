@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62811540"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Configurar o Mecanismo de Banco de Dados para escuta em várias portas TCP
@@ -74,9 +74,9 @@ ms.locfileid: "62811540"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>Configurar o Mecanismo de Banco de Dados do SQL Server para efetuar a escuta em uma porta TCP adicional  
   
-1.  No SQL Server Configuration Manager, expanda **Configuração de Rede do SQL Server** e clique em **Protocolos para**_<instance_name>_.  
+1.  No SQL Server Configuration Manager, expanda **Configuração de Rede do SQL Server** e clique em **Protocolos para** _<instance_name>_ .  
   
-2.  Expanda **Protocolos para**_<instance_name>_ e clique em **TCP/IP**.  
+2.  Expanda **Protocolos para** _<instance_name>_ e clique em **TCP/IP**.  
   
 3.  No painel direito, clique com o botão direito do mouse em cada endereço IP desabilitado que você deseja habilitar e clique em **Habilitar**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62811540"
   
 6.  No painel esquerdo, clique em **Serviços do SQL Server**.  
   
-7.  No painel direito, clique com o botão direito do mouse em **SQL Server**_<instance_name>_ e clique em **Reiniciar**.  
+7.  No painel direito, clique com o botão direito do mouse em **SQL Server** _<instance_name>_ e clique em **Reiniciar**.  
   
      Quando o [!INCLUDE[ssDE](../../includes/ssde-md.md)] reiniciar, o log de erros listará as portas nas quais o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está escutando.  
   

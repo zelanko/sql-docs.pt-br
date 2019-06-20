@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011465"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Criar e gerenciar catálogos de texto completo
@@ -70,7 +70,7 @@ ms.locfileid: "66011465"
   
 3.  Clique com o botão direito do mouse no nome do catálogo de texto completo que deseja recriar e selecione **Recriar**.  
   
-4.  Para a pergunta **Deseja excluir o catálogo de texto completo e recriá-lo?**, clique em **OK**.  
+4.  Para a pergunta **Deseja excluir o catálogo de texto completo e recriá-lo?** , clique em **OK**.  
   
 5.  Na caixa de diálogo **Recriar Catálogo de Texto Completo** , clique em **Fechar**.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66011465"
   
 3.  Selecione **Recriar Tudo**.  
   
-4.  Para a pergunta **Deseja excluir todos os catálogos de texto completo e recriá-los?**, clique em **OK**.  
+4.  Para a pergunta **Deseja excluir todos os catálogos de texto completo e recriá-los?** , clique em **OK**.  
   
 5.  Na caixa de diálogo **Recriar Todos os Catálogos de Texto Completo** , clique em **Fechar**.  
   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ed2bbf40ac333db34d3920b2ed2ec688c344bfe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63189001"
 ---
 # <a name="environment-transitions"></a>Transições de ambiente
@@ -125,7 +125,7 @@ Ambientes de ODBC tem três estados.
   
  [1] o atributo de ambiente SQL_ATTR_ODBC_VERSION tivesse sido definido no ambiente.  
   
- [2] o *atributo* argumento não era SQL_ATTR_ODBC_VERSION e o atributo de ambiente de SQL_ATTR_ODBC_VERSION não tinha sido definido no ambiente.  
+ [2]] o *atributo* argumento não era SQL_ATTR_ODBC_VERSION e o atributo de ambiente de SQL_ATTR_ODBC_VERSION não tinha sido definido no ambiente.  
   
 ## <a name="all-other-odbc-functions"></a>Todas as outras funções ODBC  
   

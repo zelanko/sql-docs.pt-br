@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f27b47ae8216fa64b537d4c8b22b612c535a1869
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013666"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Especificando relações usando sql:relationship (SQLXML 4.0)
@@ -54,7 +54,7 @@ ms.locfileid: "66013666"
  Especifica o nome exclusivo da relação.  
   
  **Parent**  
- Especifica a relação pai (tabela). Este é um atributo opcional. Se o atributo não for especificado, o nome da tabela pai será obtido das informações na hierarquia filha no documento. Se o esquema especificar duas hierarquias pai-filho que usam os mesmos  **\<SQL: Relationship >** mas elementos pai diferente, você não especificar o atributo pai em  **\<sql: relação >**. Essas informações são obtidas da hierarquia no esquema.  
+ Especifica a relação pai (tabela). Este é um atributo opcional. Se o atributo não for especificado, o nome da tabela pai será obtido das informações na hierarquia filha no documento. Se o esquema especificar duas hierarquias pai-filho que usam os mesmos  **\<SQL: Relationship >** mas elementos pai diferente, você não especificar o atributo pai em  **\<sql: relação >** . Essas informações são obtidas da hierarquia no esquema.  
   
  **parent-key**  
  Especifica a chave pai do pai. Se a chave pai for composta por várias colunas, os valores serão especificados com um espaço entre eles. Há um mapeamento posicional entre os valores que são especificados para a chave de várias colunas e para a chave filha correspondente.  
@@ -68,7 +68,7 @@ ms.locfileid: "66013666"
  **Inverso**  
  Este atributo especificado em  **\<SQL: Relationship >** é usado por diagramas de atualização. Para obter mais informações, consulte [especificando o atributo SQL: Inverse em SQL: Relationship](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
- O `sql:key-fields` anotação deve ser especificada em um elemento que contém um elemento filho, que tem um  **\<SQL: Relationship >** definida entre o elemento e o filho, e que não fornece a chave primária do tabela especificada no elemento pai. Mesmo se o esquema não especificar  **\<SQL: Relationship >**, você deve especificar `sql:key-fields` para gerar a hierarquia adequada. Para obter mais informações, consulte [Identificando colunas-chave usando o SQL: Key-campos](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
+ O `sql:key-fields` anotação deve ser especificada em um elemento que contém um elemento filho, que tem um  **\<SQL: Relationship >** definida entre o elemento e o filho, e que não fornece a chave primária do tabela especificada no elemento pai. Mesmo se o esquema não especificar  **\<SQL: Relationship >** , você deve especificar `sql:key-fields` para gerar a hierarquia adequada. Para obter mais informações, consulte [Identificando colunas-chave usando o SQL: Key-campos](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
   
  Para gerar o aninhamento adequado no resultado, recomenda-se que `sql:key-fields` sejam especificados em todos os esquemas.  
   
@@ -238,7 +238,7 @@ ms.locfileid: "66013666"
 </xsd:schema>  
 ```  
   
- Em vez de especificar uma relação nomeada, você pode especificar uma relação anônima. Nesse caso, todo o conteúdo do  **\<anotação >**...  **\</annotation >**, que descreve as duas relações, aparecem como um elemento filho do  **\<produto >**.  
+ Em vez de especificar uma relação nomeada, você pode especificar uma relação anônima. Nesse caso, todo o conteúdo do  **\<anotação >** ...  **\</annotation >** , que descreve as duas relações, aparecem como um elemento filho do  **\<produto >** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -382,9 +382,9 @@ ms.locfileid: "66013666"
 ```  
   
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. Especificando sql:relationship em vários elementos  
- Neste exemplo, o esquema XSD anotado contém o  **\<cliente >**,  **\<Order >**, e  **\<OrderDetail >** elementos.  
+ Neste exemplo, o esquema XSD anotado contém o  **\<cliente >** ,  **\<Order >** , e  **\<OrderDetail >** elementos.  
   
- O  **\<ordem >** é um elemento filho do  **\<cliente >** elemento. **\<SQL: Relationship >** for especificado em de  **\<ordem >** elemento filho; portanto, os pedidos que pertencem a um cliente aparecem como elementos filho do  **\<cliente >**.  
+ O  **\<ordem >** é um elemento filho do  **\<cliente >** elemento. **\<SQL: Relationship >** for especificado em de  **\<ordem >** elemento filho; portanto, os pedidos que pertencem a um cliente aparecem como elementos filho do  **\<cliente >** .  
   
  O  **\<ordem >** elemento inclui o  **\<OrderDetail >** elemento filho. **\<SQL: Relationship >** for especificado em  **\<OrderDetail >** elemento filho, portanto, os detalhes do pedido que pertençam a um pedido apareçam como elementos filho que **\<ordem >** elemento.  
   
@@ -524,7 +524,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- No esquema, tanto a  **\<Emp1 >** elemento e  **\<Emp2 >** elemento são do tipo `EmpType`. O tipo `EmpType` descreve uma  **\<ordem >** elemento filho e correspondente  **\<SQL: Relationship >**. Nesse caso, não há nenhum pai único que pode ser identificado no  **\<SQL: Relationship >** usando o **pai** atributo. Nessa situação, você não especificar o **pai** atributo no  **\<SQL: Relationship >**; o **pai** informações de atributo são obtidas das hierarquia no esquema.  
+ No esquema, tanto a  **\<Emp1 >** elemento e  **\<Emp2 >** elemento são do tipo `EmpType`. O tipo `EmpType` descreve uma  **\<ordem >** elemento filho e correspondente  **\<SQL: Relationship >** . Nesse caso, não há nenhum pai único que pode ser identificado no  **\<SQL: Relationship >** usando o **pai** atributo. Nessa situação, você não especificar o **pai** atributo no  **\<SQL: Relationship >** ; o **pai** informações de atributo são obtidas das hierarquia no esquema.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para testar uma consulta XPath de exemplo com relação ao esquema  
   

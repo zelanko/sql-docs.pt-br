@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0f6bcad3636178fb4aebbcdbeee29ba2542f092e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832355"
 ---
 # <a name="data-profile-viewer"></a>Visualizador de Perfil de Dados
@@ -31,24 +31,24 @@ ms.locfileid: "62832355"
   
 -   Clique com o botão direito do mouse na tarefa **Criação de Perfil de Dados** no Designer de [!INCLUDE[ssIS](../../includes/ssis-md.md)] e clique em **Editar**. Clique em **Abrir o Visualizador de Perfil** na página **Geral** de **Editor da Tarefa Criação de Perfil de Dados**.  
   
--   Na pasta *\<unidade>*:\Arquivos de Programas (x86) | Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn, execute o DataProfileViewer.exe.  
+-   Na pasta *\<unidade>* :\Arquivos de Programas (x86) | Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn, execute o DataProfileViewer.exe.  
   
  O visualizador usa vários painéis para exibir os perfis solicitados e os resultados computados, com detalhes e capacidade de busca opcionais:  
   
- Painel**Perfis**   
+ Painel**Perfis**  
  O painel **Perfis** exibe os perfis que foram solicitados na tarefa Perfil de Dados. Para exibir os resultados computados do perfil, selecione o perfil no painel **Perfis** e os resultados serão exibidos nos outros painéis do visualizador.  
   
- Painel**Resultados**   
+ Painel**Resultados**  
  O painel **Resultados** usa apenas uma linha para resumir os resultados computados do perfil. Por exemplo, ao solicitar um **Perfil de Distribuição de Comprimento de Coluna**, essa linha incluirá os dados de comprimento máximo e mínimo, além da contagem da linha. Em muitos perfis, é possível selecionar essa linha no painel **Resultados** para ver detalhes adicionais no painel **Detalhes** (opcional).  
   
- Painel**Detalhes**   
+ Painel**Detalhes**  
  Para muitos tipos de perfil, o painel **Detalhes** exibe informações adicionais sobre os resultados de perfil selecionados no painel **Resultados** . Por exemplo, se você solicitar um **Perfil de Distribuição de Comprimento de Coluna**, o painel **Detalhes** exibirá todos os comprimentos de coluna encontrados. O painel também exibe o número e a porcentagem de linhas nas quais o valor de coluna tem esse comprimento de coluna.  
   
  Para os três tipos de perfil que são computados em mais de uma coluna (Perfil Chave de Candidato, Dependência Funcional e Inclusão de Valor), o painel **Detalhes** exibe as violações da relação esperada. Por exemplo, se você solicitar um Perfil Chave de Candidato, o painel Detalhes exibirá valores duplicados que violam a exclusividade da chave candidata.  
   
  Se a fonte de dados usada para computar o perfil estiver disponível, você poderá clicar duas vezes em uma linha no painel **Detalhes** para ver as linhas de dados correspondentes no painel **Busca Detalhada** .  
   
- Painel**Busca Detalhada**   
+ Painel**Busca Detalhada**  
  Clique duas vezes em uma linha no painel **Detalhes** para ver as linhas de dados correspondentes no painel **Busca Detalhada** quando as seguintes condições forem verdadeiras:  
   
 -   A fonte de dados usada para computar o perfil está disponível.  

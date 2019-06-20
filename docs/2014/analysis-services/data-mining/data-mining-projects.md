@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3aa9d5ef81c32f7bb1f4235e4362533f3fac656d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085061"
 ---
 # <a name="data-mining-projects"></a>Projetos de mineração de dados
@@ -207,6 +207,6 @@ ms.locfileid: "66085061"
 ## <a name="see-also"></a>Consulte também  
  [Data Mining Designer](data-mining-designer.md)   
  [Criação de modelos multidimensionais usando o SSDT &#40;SQL Server Data Tools&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Banco de dados de workspace &amp;#40;SSAS de Tabela&amp;#41;](../tabular-models/workspace-database-ssas-tabular.md)  
+ [Banco de dados de workspace &#40;SSAS de Tabela&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
   
   
