@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62655671"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Especificar como as alterações são propagadas para artigos transacionais
@@ -37,11 +37,11 @@ ms.locfileid: "62655671"
 ## <a name="default-and-custom-stored-procedures"></a>Procedimentos armazenados padrão e personalizados  
  Os três procedimentos que a replicação cria por padrão para cada artigo de tabela são:  
   
--   **sp_MSins_\<** *tablename* **>**, que manipula inserções.  
+-   **sp_MSins_\<** *tablename* **>** , que manipula inserções.  
   
--   **sp_MSupd_\<** *tablename* **>**, que manipula atualizações.  
+-   **sp_MSupd_\<** *tablename* **>** , que manipula atualizações.  
   
--   **sp_MSdel_\<** *tablename* **>**, que manipula exclusões.  
+-   **sp_MSdel_\<** *tablename* **>** , que manipula exclusões.  
   
  O **\<***tablename***>** usado no procedimento depende de como o artigo foi adicionado à publicação e se o banco de dados de assinatura contém uma tabela de mesmo nome com um proprietário diferente.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62655671"
   
 -   Se você fizer alterações de esquema a uma tabela publicada, os procedimentos personalizados devem ser regenerados. Para obter mais informações, consulte [Regenerar os procedimentos transacionais personalizados para refletir alterações de esquema](transactional-articles-regenerate-to-reflect-schema-changes.md).  
   
--   Se você usar um valor maior do que 1 para o parâmetro **-SubscriptionStreams** do Agente de Distribuição, você deverá se assegurar de que as atualizações nas colunas de chave primária tiveram êxito. Por exemplo:   
+-   Se você usar um valor maior do que 1 para o parâmetro **-SubscriptionStreams** do Agente de Distribuição, você deverá se assegurar de que as atualizações nas colunas de chave primária tiveram êxito. Por exemplo:  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067055"
 ---
 # <a name="impersonation-ssas-tabular"></a>Representação (SSAS tabular)
@@ -67,7 +67,7 @@ ms.locfileid: "66067055"
   
 |Opção|ImpersonationMode<sup>1</sup>|Descrição|  
 |------------|-----------------------------------|-----------------|  
-|**Nome de usuário específicos do Windows e senha** <sup>2</sup>|ImpersonateWindowsUserAccount|Esta opção especifica que o modelo usa uma conta de usuário do Windows para importar ou processar dados da fonte de dados. O domínio e o nome da conta de usuário usa o seguinte formato:**\<nome de domínio >\\< nome da conta de usuário\>**. Ao criar um novo modelo por meio do Assistente de Importação de Tabela, essa é a opção padrão.|  
+|**Nome de usuário específicos do Windows e senha** <sup>2</sup>|ImpersonateWindowsUserAccount|Esta opção especifica que o modelo usa uma conta de usuário do Windows para importar ou processar dados da fonte de dados. O domínio e o nome da conta de usuário usa o seguinte formato: **\<nome de domínio >\\< nome da conta de usuário\>** . Ao criar um novo modelo por meio do Assistente de Importação de Tabela, essa é a opção padrão.|  
 |**Conta de Serviço**|ImpersonateServiceAccount|Esta opção especifica que o modelo usa as credenciais de segurança associadas à instância de serviço do Analysis Services que gerencia o modelo.|  
   
  <sup>1</sup>ImpersonationMode Especifica o valor para o [elemento DataSourceImpersonationInfo &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) propriedade na fonte de dados.  

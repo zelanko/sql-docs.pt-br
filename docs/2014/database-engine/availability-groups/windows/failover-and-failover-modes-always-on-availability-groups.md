@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814473"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Failover e modos de failover (grupos de disponibilidade AlwaysOn)
@@ -64,8 +64,8 @@ ms.locfileid: "62814473"
   
 ||Modo de confirmação assíncrona|Modo de confirmação síncrona com modo de failover manual|Modo de confirmação síncrona com modo de failover automático|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|failover automático|Não|Não|Sim|  
-|Failover manual planejado|Não|Sim|Sim|  
+|failover automático|Não |Não |Sim|  
+|Failover manual planejado|Não |Sim|Sim|  
 |failover forçado|Sim|Sim|Sim**<sup>*</sup>**|  
   
  **<sup>*</sup>**  Se você emitir um comando de failover forçado em uma réplica secundária sincronizada, a réplica secundária se comportará da mesma maneira que um failover manual.  
@@ -216,9 +216,9 @@ ms.locfileid: "62814473"
   
 |Modo de disponibilidade de réplica secundária|O bancos de dados é sincronizado?|É possível haver perda de dados?|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|Synchronous-commit|Sim|Não|  
+|Synchronous-commit|Sim|Não |  
 |Synchronous-commit|Não|Sim|  
-|Asynchronous-commit|Não|Sim|  
+|Asynchronous-commit|Não |Sim|  
 ||||  
   
  Os bancos de dados secundários acompanham apenas duas bifurcações de recuperação, portanto, se você executar vários failovers forçados, nenhum banco de dados secundário que iniciou a sincronização de dados com o failover forçado anterior poderá ser retomado. Se isso ocorrer, qualquer banco de dados secundário que não pode ser retomado precisará ser removido do grupo de disponibilidade e unido novamente depois de ser restaurado para o período correto e reunido para o grupo de disponibilidade. Uma restauração não funcionará em várias bifurcações de recuperação, portanto, certifique-se de executar um backup do log depois de executar mais de um failover forçado.  

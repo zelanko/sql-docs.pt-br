@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 62dc29f8143f92fc9674ed10c092dc6ad08570fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63060325"
 ---
 # <a name="sqlstmtcompleted-event-class"></a>Classe de evento SQL:StmtCompleted
@@ -36,7 +36,7 @@ ms.locfileid: "63060325"
 |Duração|`bigint`|Período de tempo (em microssegundos) utilizado pelo evento.|13|Sim|  
 |EndTime|`datetime`|Horário em que o evento foi encerrado.|15|Sim|  
 |EventClass|`int`|Tipo de evento = 41.|27|Não|  
-|EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|Não|  
+|EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|Não |  
 |GroupID|`int`|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|`nvarchar`|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IntegerData|`int`|Número de linhas retornadas pela instrução.|25|Sim|  

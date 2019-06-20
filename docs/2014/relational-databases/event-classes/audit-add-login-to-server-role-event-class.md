@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f957283f2d667a9e75c30fae9d9b45401f06c499
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62867633"
 ---
 # <a name="audit-add-login-to-server-role-event-class"></a>Classe de evento Audit Add Login to Server Role
@@ -34,7 +34,7 @@ ms.locfileid: "62867633"
 |**DatabaseName**|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |**DBUserName**|**nvarchar**|Nome do usuário do banco de dados que adicionou ou removeu o logon.|40|Sim|  
 |**EventClass**|**int**|Tipo de evento = 108.|27|Não|  
-|**EventSequence**|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
+|**EventSequence**|**int**|Sequência de um determinado evento na solicitação.|51|Não |  
 |**EventSubClass**|**int**|Tipo de subclasse de evento.<br /><br /> 1=Add<br /><br /> 2=Drop|21|Sim|  
 |**HostName**|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  

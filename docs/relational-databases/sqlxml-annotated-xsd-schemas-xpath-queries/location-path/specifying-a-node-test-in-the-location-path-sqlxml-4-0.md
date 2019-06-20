@@ -18,15 +18,15 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 15d5389f9a16d676aa5d644b030455d4c63adf7b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62719996"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Especificando um teste de nó no caminho do local (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Um teste de nó especifica o tipo de nó selecionado pela etapa de local. Todos os eixos (**filho**, **pai**, **atributo**, ou **self**) tem um tipo de nó principal. Para o **atributo** eixo, o tipo de nó principal é  **\<atributo >**. Para o **pai**, **filho**, e **self** eixos, o tipo de nó principal é  **\<elemento >**.  
+  Um teste de nó especifica o tipo de nó selecionado pela etapa de local. Todos os eixos (**filho**, **pai**, **atributo**, ou **self**) tem um tipo de nó principal. Para o **atributo** eixo, o tipo de nó principal é  **\<atributo >** . Para o **pai**, **filho**, e **self** eixos, o tipo de nó principal é  **\<elemento >** .  
   
 > [!NOTE]  
 >  O teste de nó de curinga * (por exemplo, `child::*`) não tem suporte.  
@@ -34,12 +34,12 @@ ms.locfileid: "62719996"
 ## <a name="node-test-example-1"></a>Teste de nó: Exemplo 1  
  O caminho do local `child::Customer` seleciona  **\<cliente >** elementos filhos do nó de contexto.  
   
- Neste exemplo, `child` é o eixo e `Customer` é o teste de nó. O tipo de nó principal para o **filho** eixo é  **\<elemento >**. Portanto, o teste de nó será TRUE se o  **\<cliente >** nó for um  **\<elemento >** nó. Se o nó de contexto não tiver nenhuma  **\<cliente >** filhos, um conjunto de nós vazio será retornado.  
+ Neste exemplo, `child` é o eixo e `Customer` é o teste de nó. O tipo de nó principal para o **filho** eixo é  **\<elemento >** . Portanto, o teste de nó será TRUE se o  **\<cliente >** nó for um  **\<elemento >** nó. Se o nó de contexto não tiver nenhuma  **\<cliente >** filhos, um conjunto de nós vazio será retornado.  
   
 ## <a name="node-test-example-2"></a>Teste de nó: Exemplo 2  
  O caminho do local `attribute::CustomerID` seleciona o **CustomerID** atributo do nó de contexto.  
   
- No exemplo, `attribute` é o eixo e `CustomerID` é o teste de nó. O tipo de nó principal do **atributo** eixo é  **\<atributo >**. Portanto, o teste de nó será TRUE se **CustomerID** é um  **\<atributo >** nó. Se o nó de contexto não tiver nenhuma **CustomerID**, um conjunto de nós vazio será retornado.  
+ No exemplo, `attribute` é o eixo e `CustomerID` é o teste de nó. O tipo de nó principal do **atributo** eixo é  **\<atributo >** . Portanto, o teste de nó será TRUE se **CustomerID** é um  **\<atributo >** nó. Se o nó de contexto não tiver nenhuma **CustomerID**, um conjunto de nós vazio será retornado.  
   
 > [!NOTE]  
 >  Nessa implementação de XPath, se uma etapa de local se refere a um  **\<elemento >** ou uma  **\<atributo >** tipo que não está declarado no esquema, um erro será gerado. Isto é diferente da implementação de XPath em MSXML, que retorna um conjunto de nós vazio.  

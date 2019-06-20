@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270494"
 ---
 # <a name="sql-minimum-grammar"></a>Gramática SQL mínima
@@ -33,7 +33,7 @@ Esta seção descreve a sintaxe SQL mínima que deve dar suporte a um driver ODB
   
  CREATE TABLE *nome da tabela de base*  
   
- (*tipo de dados da coluna identificador* [*, tipo de dados da coluna identificador*]...)  
+ (*tipo de dados da coluna identificador* [ *, tipo de dados da coluna identificador*]...)  
   
 > [!IMPORTANT]  
 >  Como uma *tipo de dados* em um *-instrução create table*, aplicativos devem usar um tipo de dados da coluna de TYPE_NAME do conjunto de resultados retornado pela **SQLGetTypeInfo**.  

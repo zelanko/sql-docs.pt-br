@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebc5ee51dd32cb999f0e6551bb87c36eda8865c7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109232"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Habilitar e desabilitar o RDL Sandboxing
@@ -68,9 +68,9 @@ ms.locfileid: "66109232"
 |**Types**|A lista de membros para permitir dentro de expressões RDL.|  
 |**Allow**|Um tipo ou conjunto de tipos para permitir em expressões RDL.|  
 |**Namespace**|Atributo para **Allow** que é o namespace que contém um ou mais tipos que se aplicam a Valor. Esta propriedade não diferencia maiúsculas e minúsculas.|  
-|`AllowNew`|Atributo booliano para **Allow** que controla se novas instâncias do tipo têm permissão para serem criadas em expressões RDL ou em um elemento RDL **\<Class>**.<br /><br /> Observação: Quando `RDLSandboxing` estiver habilitado, novas matrizes não podem ser criadas em expressões RDL, independentemente da configuração de `AllowNew`.|  
+|`AllowNew`|Atributo booliano para **Allow** que controla se novas instâncias do tipo têm permissão para serem criadas em expressões RDL ou em um elemento RDL **\<Class>** .<br /><br /> Observação: Quando `RDLSandboxing` estiver habilitado, novas matrizes não podem ser criadas em expressões RDL, independentemente da configuração de `AllowNew`.|  
 |**Value**|Valor para **Allow** que é o nome do tipo para permitir em expressões RDL. O valor **\*** indica que todos os tipos no namespace são permitidos. Esta propriedade não diferencia maiúsculas e minúsculas.|  
-|**Membros**|Para a lista de tipos incluídos no elemento **\<Types>**, a lista de nomes de membros que não são permitidos em expressões RDL.|  
+|**Membros**|Para a lista de tipos incluídos no elemento **\<Types>** , a lista de nomes de membros que não são permitidos em expressões RDL.|  
 |**Deny**|O nome de um membro que não é permitido em expressões RDL. Esta propriedade não diferencia maiúsculas e minúsculas.<br /><br /> Observação: Quando **Deny** é especificado para um membro, nenhum membro com esse nome para todos os tipos é permitido.|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Trabalhando com expressões quando o RDL Sandboxing está habilitado  

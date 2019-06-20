@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026868"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Apêndice B: Tabelas de transição de estado ODBC
@@ -47,7 +47,7 @@ As tabelas neste apêndice mostram como funções ODBC causam transições do am
   
 -   **E**  
 
-     **_n_**  , **C_n_**, **S_n_**, ou **D_n_** -o estado do ambiente, conexão, instrução ou descritor se move para o estado especificado.  
+     **_n_**  , **C_n_** , **S_n_** , ou **D_n_** -o estado do ambiente, conexão, instrução ou descritor se move para o estado especificado.  
  
 -   **(IH)**  -Um identificador inválido foi passado para a função. Se o identificador era um identificador nulo ou era um identificador válido do tipo errado - por exemplo, um identificador de conexão foi passado quando um identificador de instrução era necessário – a função retorne SQL_INVALID_HANDLE; Caso contrário, o comportamento é indefinido e provavelmente fatal. Esse erro é mostrado somente quando ele é o resultado só é possível chamar a função no estado especificado. Esse erro não altera o estado e sempre é detectado pelo Gerenciador de Driver, conforme indicado pelos parênteses.  
   

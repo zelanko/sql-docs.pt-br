@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b03dd7f886cee5816d591034d1be63ece45d8d1d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63021332"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>Configurar propriedades de instantâneo (Programação Transact-SQL de replicação)
@@ -26,7 +26,7 @@ ms.locfileid: "63021332"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-snapshot-or-transactional-publication"></a>Para configurar propriedades de instantâneo ao criar uma publicação de instantâneo ou transacional  
   
-1.  No Publicador, execute [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especifique um nome de publicação para **@publication**, um valor de **snapshot** ou **continuous** para **@repl_freq**, e um ou mais dos seguintes parâmetros relacionados a instantâneo.  
+1.  No Publicador, execute [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especifique um nome de publicação para **@publication** , um valor de **snapshot** ou **continuous** para **@repl_freq** , e um ou mais dos seguintes parâmetros relacionados a instantâneo.  
   
     -   **@alt_snapshot_folder** - especifique um caminho se o instantâneo para essa publicação for acessado daquele local em vez de ou além da pasta padrão de instantâneo.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63021332"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-merge-publication"></a>Para configurar propriedades de instantâneo ao criar uma publicação de mesclagem  
   
-1.  No Publicador, execute [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Especifique um nome de publicação para **@publication**, um valor de **snapshot** ou **continuous** para **@repl_freq**, e um ou mais dos seguintes parâmetros relacionados a instantâneo.  
+1.  No Publicador, execute [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Especifique um nome de publicação para **@publication** , um valor de **snapshot** ou **continuous** para **@repl_freq** , e um ou mais dos seguintes parâmetros relacionados a instantâneo.  
   
     -   **@alt_snapshot_folder** - especifique um caminho se o instantâneo para essa publicação for acessado daquele local em vez de ou além da pasta padrão de instantâneo.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "63021332"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-snapshot-or-transactional-publication"></a>Para modificar as propriedades de instantâneo de uma publicação de instantâneo ou transacional existente  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Especifique um valor **1** para **@force_invalidate_snapshot** e um dos valores a seguir para **@property**:  
+1.  No Publicador do banco de dados de publicação, execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Especifique um valor **1** para **@force_invalidate_snapshot** e um dos valores a seguir para **@property** :  
   
-    -   **alt_snapshot_folder** - também especifique um caminho novo para a pasta de instantâneo alternativa para **@value**.  
+    -   **alt_snapshot_folder** - também especifique um caminho novo para a pasta de instantâneo alternativa para **@value** .  
   
     -   **compress_snapshot** - especifique também um valor de **verdadeiro** ou **falso** para **@value** para indicar se arquivos de instantâneo na pasta de instantâneo alternativa são compactados no formato de arquivo CAB.  
   
@@ -79,9 +79,9 @@ ms.locfileid: "63021332"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-merge-publication"></a>Para modificar as propriedades de instantâneo de uma publicação de mesclagem existente  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Especifique um valor **1** para **@force_invalidate_snapshot** e um dos valores a seguir para **@property**:  
+1.  No Publicador do banco de dados de publicação, execute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Especifique um valor **1** para **@force_invalidate_snapshot** e um dos valores a seguir para **@property** :  
   
-    -   **alt_snapshot_folder** - também especifique um caminho novo para a pasta de instantâneo alternativa para **@value**.  
+    -   **alt_snapshot_folder** - também especifique um caminho novo para a pasta de instantâneo alternativa para **@value** .  
   
     -   **compress_snapshot** - especifique também um valor de **verdadeiro** ou **falso** para **@value** para indicar se arquivos de instantâneo na pasta de instantâneo alternativa são compactados no formato de arquivo CAB.  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62827189"
 ---
 # <a name="performance-statistics-event-class"></a>classe de evento Performance Statistics
@@ -77,7 +77,7 @@ ms.locfileid: "62827189"
 |BigintData1|`bigint`|O número cumulativo de vezes que esse plano foi recompilado.|52|Sim|  
 |BinaryData|`image`|O XML binário do plano compilado.|2|Sim|  
 |DatabaseID|`int`|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
-|EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|Não|  
+|EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|Não |  
 |SessionLoginName|`nvarchar`|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |EventSubClass|`int`|Tipo de subclasse de evento.<br /><br /> 2 = Consultas dentro um instrução SQL ad hoc foram compiladas.<br /><br /> Os seguintes tipos de EventSubClass são gerados no rastreamento para lotes ad hoc.<br /><br /> Para lotes ad hoc com *n* número de consultas:<br /><br /> *n* número de tipo 2|21|Sim|  
 |IntegerData2|`int`|Término da instrução dentro do lote.<br /><br /> -1 para o término do lote.|55|Sim|  
@@ -100,7 +100,7 @@ ms.locfileid: "62827189"
 |BigintData1|`bigint`|O número cumulativo de vezes que esse plano foi recompilado.|52|Sim|  
 |BinaryData|`image`|NULL|2|Sim|  
 |DatabaseID|`int`|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
-|EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|Não|  
+|EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|Não |  
 |SessionLoginName|`nvarchar`|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |EventSubClass|`int`|Tipo de subclasse de evento.<br /><br /> 3 = Uma consulta armazenada em cache foi destruída e os dados históricos do desempenho associados ao plano serão destruídos.<br /><br /> Os seguintes tipos de EventSubClass são gerados no rastreamento.<br /><br /> Para lotes ad hoc com *n* número de consultas:<br /><br /> 1 de tipo 3 quando a consulta é liberada do cache<br /><br /> Para procedimentos armazenados com o número de consultas *n* :<br />1 de tipo 3 quando a consulta é liberada do cache.|21|Sim|  
 |IntegerData2|`int`|Fim da instrução no procedimento armazenado ou lote.<br /><br /> -1 para o final do procedimento armazenado ou lote.|55|Sim|  
@@ -120,7 +120,7 @@ ms.locfileid: "62827189"
 |BigintData1|`bigint`|NULL|52|Sim|  
 |BinaryData|`image`|NULL|2|Sim|  
 |DatabaseID|`int`|ID do banco de dados em que o procedimento armazenado específico reside.|3|Sim|  
-|EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|Não|  
+|EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|Não |  
 |SessionLoginName|`nvarchar`|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |EventSubClass|`int`|Tipo de subclasse de evento.<br /><br /> 4 = Um procedimento armazenado em cache foi removido do cache e os dados de histórico de desempenho associados a ele estão prestes a serem destruídos.|21|Sim|  
 |IntegerData2|`int`|NULL|55|Sim|  
@@ -140,7 +140,7 @@ ms.locfileid: "62827189"
 |BigintData1|`bigint`|NULL|52|Sim|  
 |BinaryData|`image`|NULL|2|Sim|  
 |DatabaseID|`int`|Identificação do banco de dados no qual o gatilho específico reside.|3|Sim|  
-|EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|Não|  
+|EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|Não |  
 |SessionLoginName|`nvarchar`|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |EventSubClass|`int`|Tipo de subclasse de evento.<br /><br /> 5 = Um gatilho armazenado em cache foi removido do cache e os dados de histórico de desempenho associados a ele estão prestes a serem destruídos.|21|Sim|  
 |IntegerData2|`int`|NULL|55|Sim|  

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63274374"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
@@ -137,7 +137,7 @@ ms.locfileid: "63274374"
   
 -   O parâmetro Distribution Agent **-SubscriptionStreams** e o parâmetro Log Reader Agent **-MaxCmdsInTran**.  
   
--   As propriedades de artigo **@destination_owner** e **@destination_table**.  
+-   As propriedades de artigo **@destination_owner** e **@destination_table** .  
 
 -   A replicação transacional ponto a ponto não dá suporte à criação de uma assinatura transacional unidirecional em uma publicação ponto a ponto
   
@@ -147,7 +147,7 @@ ms.locfileid: "63274374"
   
 -   A propriedade de artigo **@replicate_ddl** requer um valor de `true`; **@identityrangemanagementoption** requer um valor de `manual`; e **@status** requer que a opção **24** está definido.  
   
--   O valor para propriedades do artigo **@ins_cmd**, **@del_cmd**, e **@upd_cmd** não pode ser definido como `SQL`.  
+-   O valor para propriedades do artigo **@ins_cmd** , **@del_cmd** , e **@upd_cmd** não pode ser definido como `SQL`.  
   
 -   A propriedade de assinatura **@sync_type** requer um valor de `none` ou `automatic`.  
   

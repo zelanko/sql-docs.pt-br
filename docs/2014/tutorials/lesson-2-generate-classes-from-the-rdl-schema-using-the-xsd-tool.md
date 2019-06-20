@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62653740"
 ---
 # <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Lição 2: Gerar classes do esquema RDL usando a ferramenta xsd
@@ -32,7 +32,7 @@ ms.locfileid: "62653740"
   
 3.  Navegue até o local em que você criou o projeto do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] e salve o esquema com o nome de arquivo ReportDefinition.xsd.  
   
-4.  Depois que o arquivo foi salvo, abra uma instância da [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] prompt de comando. Para abrir uma instância do prompt de comando, clique no menu Iniciar, aponte para **todos os programas**, aponte para **Microsoft Visual Studio 2010**, aponte para **ferramentas do Visual Studio** e clique em **Prompt de comando do visual Studio (2010)**.  
+4.  Depois que o arquivo foi salvo, abra uma instância da [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] prompt de comando. Para abrir uma instância do prompt de comando, clique no menu Iniciar, aponte para **todos os programas**, aponte para **Microsoft Visual Studio 2010**, aponte para **ferramentas do Visual Studio** e clique em **Prompt de comando do visual Studio (2010)** .  
   
 5.  Altere o caminho atual para o local em que você salvou o arquivo ReportDefinition.xsd:  
   

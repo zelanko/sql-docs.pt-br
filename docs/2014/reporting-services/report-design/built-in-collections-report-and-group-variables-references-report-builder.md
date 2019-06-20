@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfedde2b9bdeff831029f2f3916f28bec480d659
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106402"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>Referências de coleções de variáveis de grupo e de relatório (Construtor de Relatórios e SSRS)
@@ -57,7 +57,7 @@ ms.locfileid: "66106402"
 ## <a name="group-variables"></a>Variáveis do grupo  
  Use uma variável do grupo para calcular uma expressão complexa uma vez no escopo de um grupo. Uma variável do grupo é válida apenas no escopo do grupo e de seus grupos filho.  
   
- Por exemplo, suponha que uma região de dados exiba dados de inventário para itens que estão em categorias de impostos diferentes e você queira aplicar taxas de impostos distintas a cada categoria. Você agrupa os dados em Categoria e define uma variável *Tax* no grupo pai. Em seguida, você define uma variável de grupo para *ItemTax* para cada categoria de imposto e atribui cada um dos diferentes subgrupos de Categoria à variável do grupo correto. Por exemplo:   
+ Por exemplo, suponha que uma região de dados exiba dados de inventário para itens que estão em categorias de impostos diferentes e você queira aplicar taxas de impostos distintas a cada categoria. Você agrupa os dados em Categoria e define uma variável *Tax* no grupo pai. Em seguida, você define uma variável de grupo para *ItemTax* para cada categoria de imposto e atribui cada um dos diferentes subgrupos de Categoria à variável do grupo correto. Por exemplo:  
   
 -   Para o grupo pai baseado em `[Category]`, defina a variável *Tax* com um valor `[Tax]`. Suponha que os valores da categoria sejam Alimentos e Vestuário.  
   

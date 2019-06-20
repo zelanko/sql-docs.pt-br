@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721086"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lição 1: Publicando dados usando a replicação transacional
@@ -50,7 +50,7 @@ ms.locfileid: "62721086"
   
 10. Na página Segurança do Agente, desmarque a caixa de seleção **Usar as configurações de segurança do Agente de Instantâneo** .  
   
-11. Clique em **Configurações de Segurança** do Snapshot Agent, insira \<_Machine_Name>_**\repl_snapshot** na caixa **Conta de processo**, forneça a senha dessa conta e clique em **OK**.  
+11. Clique em **Configurações de Segurança** do Snapshot Agent, insira \<_Machine_Name>_ **\repl_snapshot** na caixa **Conta de processo**, forneça a senha dessa conta e clique em **OK**.  
   
 12. Repita a etapa anterior para configurar repl_logreader como a conta de processo do Agente de Leitor de Log e clique em **Concluir**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62721086"
   
 3.  Selecione a página **Lista de Acesso à Publicação** e clique em **Adicionar**.  
   
-4.  Na caixa de diálogo **Adicionar Acesso à Publicação**, selecione _<Machine_Name>_**\repl_distribution** e clique em **OK**. Clique em **OK**.  
+4.  Na caixa de diálogo **Adicionar Acesso à Publicação**, selecione _<Machine_Name>_ **\repl_distribution** e clique em **OK**. Clique em **OK**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Você criou a publicação transacional com êxito. A seguir, você assinará essa publicação. Veja a [Lição 2: Criando uma assinatura na publicação transacional](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  

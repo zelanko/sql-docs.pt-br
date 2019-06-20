@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62809754"
 ---
 # <a name="remote-servers"></a>Servidores remotos
@@ -57,7 +57,7 @@ ms.locfileid: "62809754"
 >  Quando possível, use a Autenticação do Windows.  
   
 ### <a name="remote-server-security-example"></a>Exemplo de segurança de servidor remoto  
- Considere estas instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** e **serverReceive**. **serverReceive** está configurado para mapear um logon de entrada de **serverSend**, chamado **Sales_Mary**, para um logon autenticado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no **serverReceive**, chamado **Brenda**. Outro logon de entrada de **serverSend**, chamado **Joe**, está mapeado para um logon autenticado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em **serverReceive**_,_ chamado **Joe**.  
+ Considere estas instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** e **serverReceive**. **serverReceive** está configurado para mapear um logon de entrada de **serverSend**, chamado **Sales_Mary**, para um logon autenticado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no **serverReceive**, chamado **Brenda**. Outro logon de entrada de **serverSend**, chamado **Joe**, está mapeado para um logon autenticado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em **serverReceive** _,_ chamado **Joe**.  
   
  O exemplo de código do Transact-SQL a seguir configura `serverSend` para executar RPCs em `serverReceive`.  
   
