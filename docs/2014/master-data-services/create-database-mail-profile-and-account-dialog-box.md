@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b614422d3670dc30e0714b18bbf42ed87f1886af
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483274"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>Caixa de diálogo Criar perfil e conta do Database Mail (Gerenciador de Configuração do Master Data Services)
@@ -40,7 +40,7 @@ ms.locfileid: "65483274"
 |**Endereço de email**|Digite o nome do endereço de email da conta. Este é o endereço de email por meio do qual o email é enviado e deve estar no formato *email_name*@*domain_name*. Um exemplo de endereço de email é sales@contoso.com.|  
 |**Nome para exibição**|Configuração opcional. Digite o nome que será exibido nas mensagens de email enviadas por essa conta. Um nome para exibição de exemplo é Grupo de Vendas da Contoso.|  
 |**Endereço de email de resposta**|Configuração opcional. Digite o endereço de email a ser usado em respostas a mensagens de email enviadas desta conta. Um exemplo de endereço de email de resposta é admin@contoso.com.|  
-|**Servidor SMTP**|Digite o nome ou o endereço IP do servidor SMTP usado pela conta para enviar email. É um formato de servidor SMTP de exemplo `smtp.` *< company_name >*`.com`. Para obter mais ajuda sobre isso, consulte o administrador de mail.|  
+|**Servidor SMTP**|Digite o nome ou o endereço IP do servidor SMTP usado pela conta para enviar email. É um formato de servidor SMTP de exemplo `smtp.` *< company_name >* `.com`. Para obter mais ajuda sobre isso, consulte o administrador de mail.|  
 |**Número da porta**|Digite o número da porta do servidor SMTP para a conta. A porta SMTP padrão é 25.|  
 |**Esse servidor requer uma conexão segura (SSL)**|Criptografa a comunicação usando o protocolo SSL (Secure Sockets Layer).|  
   

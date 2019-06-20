@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815741"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Políticas AlwaysOn para problemas operacionais com grupos de disponibilidade AlwaysOn (SQL Server)
@@ -46,7 +46,7 @@ ms.locfileid: "62815741"
 ##  <a name="AlwaysOnPBM"></a> Políticas predefinidas e problemas  
  A tabela a seguir resume as políticas predefinidas.  
   
-|Nome de política|Problema|categoria**<sup>*</sup>**|Faceta|  
+|Nome de política|Problema|categoria **<sup>*</sup>**|Faceta|  
 |-----------------|-----------|------------------------------|-----------|  
 |Estado do cluster WSFC|[O serviço de cluster WSFC está offline](wsfc-cluster-service-is-offline.md).|Crítico|Instância do SQL Server|  
 |Estado Online do Grupo de Disponibilidade|[O grupo de disponibilidade está offline](availability-group-is-offline.md).|Crítico|grupo de disponibilidade|  

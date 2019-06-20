@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e4ed017d1b3571405127177bdb45857be7ccbf1b
-ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66354402"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
@@ -125,19 +125,19 @@ sys.dm_sql_referenced_entities (
 |Table|Sim*|Sim|  
 |Exibição|Sim|Sim|  
 |Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sim|Sim|  
-|procedimento armazenado CLR|Não |Sim|  
+|procedimento armazenado CLR|Não|Sim|  
 |Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Sim|Sim|  
 |Função CLR definida pelo usuário|Não|Sim|  
-|Gatilho CLR (DML e DDL)|Não |Não|  
-|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)] |Sim|Não|  
+|Gatilho CLR (DML e DDL)|Não|Não|  
+|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
 |Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
-|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não |  
+|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
 |Procedimentos armazenados estendidos|Não|Sim|  
 |Fila|Não|Sim|  
 |Sinônimo|Não|Sim|  
-|Tipo (tipo de alias e tipo de dados CLR definido pelo usuário)|Não |Sim|  
-|Coleção de esquemas XML|Não |Sim|  
-|Função de partição|Não |Sim|  
+|Tipo (tipo de alias e tipo de dados CLR definido pelo usuário)|Não|Sim|  
+|Coleção de esquemas XML|Não|Sim|  
+|Função de partição|Não|Sim|  
 | &nbsp; | &nbsp; | &nbsp; |
 
  \* Uma tabela é controlada como entidade de referência somente quando ela faz referência a um [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido pelo usuário ou coleção de esquemas XML na definição de uma coluna computada, restrição CHECK ou restrição padrão.  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997119"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
@@ -46,7 +46,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 `[ @property = ] 'property'` A propriedade a ser alterada para a publicação determinada. *propriedade* está **sysname**, e pode ser um dos valores listado na tabela a seguir.  
   
-`[ @value = ] 'value'` O novo valor para a propriedade especificada. *valor* está **nvarchar (255)**, e pode ser um dos valores listado na tabela a seguir.  
+`[ @value = ] 'value'` O novo valor para a propriedade especificada. *valor* está **nvarchar (255)** , e pode ser um dos valores listado na tabela a seguir.  
   
  Essa tabela descreve as propriedades da publicação que podem ser alteradas e as restrições nos valores dessas propriedades.  
   

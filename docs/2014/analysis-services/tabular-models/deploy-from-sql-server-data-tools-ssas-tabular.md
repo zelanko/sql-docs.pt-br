@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6429fb7f30c748c7ac0a8ab69bc16c3d63b4d3ae
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067296"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Implantar das Ferramentas de Dados do SQL Server (SSAS tabular)
@@ -54,7 +54,7 @@ ms.locfileid: "66067296"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>Para implantar uma solução de modelo tabular  
   
--   No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]diante a **Build** menu, clique em **implantar \<nome do projeto >**.  
+-   No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]diante a **Build** menu, clique em **implantar \<nome do projeto >** .  
   
      A caixa de diálogo **Implantação** aparecerá e indicará o status da implantação de metadados e o processamento (a menos que a propriedade Opção de Processamento esteja configurada como Não Processar) de cada tabela incluída no modelo. Depois que o processo de implantação for concluído, use o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para conectar à instância do Analysis Services e verificar se o novo objeto de banco de dados modelo foi criado ou use um aplicativo de relatório cliente para conectar-se ao modelo implantado.  
   

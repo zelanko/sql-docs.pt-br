@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62689070"
 ---
 # <a name="bcpinit"></a>bcp_init
@@ -91,7 +91,7 @@ eDirection
   
 -   Ao copiar para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a posição ordinal de uma coluna no arquivo de dados deve ser idêntica à posição ordinal da coluna na tabela do banco de dados. Ao copiar de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp_exec** coloca dados com base na posição ordinal da coluna na tabela de banco de dados.  
   
--   Se um tipo de dados do banco de dados é de comprimento variável (por exemplo, **varbinary(22)**) ou se uma coluna de banco de dados pode conter valores nulos, os dados no arquivo de dados serão prefixados com um indicador de comprimento/nulo. A largura do indicador varia dependendo do tipo de dados e da versão da cópia em massa.  
+-   Se um tipo de dados do banco de dados é de comprimento variável (por exemplo, **varbinary(22)** ) ou se uma coluna de banco de dados pode conter valores nulos, os dados no arquivo de dados serão prefixados com um indicador de comprimento/nulo. A largura do indicador varia dependendo do tipo de dados e da versão da cópia em massa.  
   
  Para alterar valores de formato de dados especificados para um arquivo de dados, chame [bcp_columns](bcp-columns.md) e [bcp_colfmt](bcp-colfmt.md).  
   

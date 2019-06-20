@@ -39,10 +39,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069027"
 ---
 # <a name="general-properties"></a>Propriedades gerais
@@ -63,7 +63,7 @@ ms.locfileid: "66069027"
  Uma propriedade de cadeia de caracteres que identifica o nome do diretório onde os arquivos de backup são armazenados por padrão, no caso de um caminho não for especificado como parte do comando Backup.  
   
  `CollationName`  
- Uma propriedade de cadeia de caracteres que identifica a ordenação do servidor. Para obter mais informações, consulte [Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](../languages-and-collations-analysis-services.md).  
+ Uma propriedade de cadeia de caracteres que identifica a ordenação do servidor. Para obter mais informações, consulte [Idiomas e ordenações &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md).  
   
  `CommitTimeout`  
  Uma propriedade integer que especifica quanto tempo (em milissegundos) o servidor aguardará para adquirir um bloqueio de gravação visando confirmar uma transação. Um período de espera costuma ser necessário porque o servidor precisa aguardar que outros bloqueios sejam liberados para usar um bloqueio de gravação que confirme a transação.  

@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3c51a9b1364131630daddabec316c01992ffedfd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 045bbc74fcd626059b0442026d13f7d84b53c24f
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62521383"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263322"
 ---
 # <a name="analysis-services-language-reference"></a>Referência de Linguagem do Analysis Services
 
 
-  [Referência de DAX (Data Analysis Expressions)](https://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)  
+  [Referência de DAX (Data Analysis Expressions)](/dax/data-analysis-expressions-dax-reference)  
   
  [Referência de expressões multidimensionais &#40;MDX&#41;](../mdx/multidimensional-expressions-mdx-reference.md)  
   

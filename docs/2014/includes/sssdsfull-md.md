@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 62fee70c03228228181b0450db5467362b9a05b1
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65816842"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67229835"
 ---
 Banco de dados SQL do Azure

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f45169a2fdc8fdc4d56cb27a8bf6348a3c3c1a29
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108226"
 ---
 # <a name="model-item-security-page-report-manager"></a>Página segurança de item de modelo (Gerenciador de Relatórios)
@@ -71,7 +71,7 @@ ms.locfileid: "66108226"
  Clique nessa opção para herdar as configurações de segurança do item pai.  
   
  **Atribuir permissão de leitura aos seguintes usuários e grupos (separados por ponto-e-vírgula)**  
- Clique nessa opção para especificar o usuário ou a conta de grupo para os quais você está definindo acesso. Se você estiver usando segurança padrão, as contas de usuário e grupo serão contas do domínio Windows. Especifique as contas neste formato:  *\<domínio >\\< conta\>*.  
+ Clique nessa opção para especificar o usuário ou a conta de grupo para os quais você está definindo acesso. Se você estiver usando segurança padrão, as contas de usuário e grupo serão contas do domínio Windows. Especifique as contas neste formato:  *\<domínio >\\< conta\>* .  
   
 ## <a name="see-also"></a>Consulte também  
  [Servidor de Relatório na ajuda F1 do Management Studio](tools/report-server-in-management-studio-f1-help.md)  

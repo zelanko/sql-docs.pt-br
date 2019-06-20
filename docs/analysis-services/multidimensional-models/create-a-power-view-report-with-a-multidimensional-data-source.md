@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 48328b57ffd8064f9f7994c9660ceebd8a459eb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62866690"
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>Criar um relatório do Power View com uma fonte de dados multidimensional

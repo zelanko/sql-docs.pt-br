@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d1cd12ff92b45c78eaf3dbe17a08c4e83d0f3b1
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65994113"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalação e configuração do Master Data Services
@@ -35,7 +35,7 @@ Para obter uma visão geral de como organizar dados no [!INCLUDE[ssMDSshort_md](
 Para obter links para vídeos e outros recursos de treinamento para ajudá-lo a saber mais sobre o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consulte [Learn Master Data Services (Saiba mais sobre o Master Data Services)](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Download**  
-> -   Para baixar o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], acesse o  **[Centro de Avaliação](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
+> -   Para baixar o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], acesse o  **[Centro de Avaliação](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** .  
 > -   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** para criar uma Máquina Virtual com o SQL Server já está instalado.  
 > 
 > **Não está conseguindo criar um site do MDS?**
@@ -44,7 +44,7 @@ Para obter links para vídeos e outros recursos de treinamento para ajudá-lo a 
 
 ## <a name="internet-explorer-and-silverlight"></a>Internet Explorer e Silverlight
 - Quando você instala o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] em um computador com Windows Server 2012, pode ser necessário configurar a Segurança Melhorada do Internet Explorer para permitir script para o site do aplicativo Web. Caso contrário, haverá falha ao navegar até o site de no computador de servidor.
-- Para trabalhar no aplicativo Web, o Silverlight 5 deve estar instalado no computador cliente. Se você não tiver a versão exigida do Silverlight, será solicitado a instalá-la quando navegar até uma área do aplicativo Web que a exige. Você pode instalar o Silverlight 5 por **[aqui](https://www.microsoft.com/silverlight/)**.
+- Para trabalhar no aplicativo Web, o Silverlight 5 deve estar instalado no computador cliente. Se você não tiver a versão exigida do Silverlight, será solicitado a instalá-la quando navegar até uma área do aplicativo Web que a exige. Você pode instalar o Silverlight 5 por **[aqui](https://www.microsoft.com/silverlight/)** .
 
 ## <a name="includessmdsshortmdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] em uma máquina virtual do Azure
 Por padrão, quando você cria uma máquina virtual do Azure com [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] já instalado, o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] também é instalado. 

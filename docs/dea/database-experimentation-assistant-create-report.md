@@ -14,10 +14,10 @@ ms.author: ajaykar
 ms.reviewer: mathoma
 manager: jroth
 ms.openlocfilehash: ff0a31fc4d825966fefafc11d8780862634f1937
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794480"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>Criar relatórios de análise no Assistente de experimentação do banco de dados
@@ -36,7 +36,7 @@ Sob **relatórios de análise**, selecione **relatório de análise de novos**.
 
 Insira ou selecione as seguintes informações:
 
-- **Nome do relatório**: Insira um nome para seu relatório. O nome do relatório é usado tanto para A e B bancos de dados. Exemplo: *A (ou B)*  + *nome do relatório* + *identificador exclusivo*. 
+- **Nome do relatório**: Insira um nome para seu relatório. O nome do relatório é usado tanto para A e B bancos de dados. Exemplo: *A (ou B)* + *nome do relatório* + *identificador exclusivo*. 
 - **Nome do servidor**: Insira o nome do computador servidor que você deseja incluir em A, B e bancos de dados de análise.
 - **Nome da instância do SQL Server**: Insira o nome da instância do SQL Server a ser usado para o relatório.
 - **Rastreamento de servidor de origem**: Insira o primeiro arquivo de rastreamento (. TRC) do SQL Server (2008 R2).

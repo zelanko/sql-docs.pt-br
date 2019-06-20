@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48b54c71aff65c72af1f69554a6e049958044c31
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013014"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>Introdução a DiffGrams em SQLXML 4.0
@@ -57,7 +57,7 @@ ms.locfileid: "66013014"
  Este bloco opcional é ignorado lógica de processamento de DiffGram.  
   
 ## <a name="diffgram-annotations"></a>Anotações de DiffGram  
- Essas anotações são definidas no namespace DiffGram **"urn: schemas-microsoft-com: XML-diffgram-01"**:  
+ Essas anotações são definidas no namespace DiffGram **"urn: schemas-microsoft-com: XML-diffgram-01"** :  
   
  **id**  
  Esse atributo é usado para emparelhar os elementos a  **\<antes de >** e o  **\<DataInstance >** blocos.  

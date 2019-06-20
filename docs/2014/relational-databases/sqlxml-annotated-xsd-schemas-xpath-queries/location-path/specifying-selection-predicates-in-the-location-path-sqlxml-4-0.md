@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d35b70c157dc5285355fcd15b38739757f0be9a
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012578"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Especificando predicados de seleção no caminho do local (SQLXML 4.0)
@@ -39,7 +39,7 @@ ms.locfileid: "66012578"
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- Nesta consulta XPath, `child` e `attribute` são nomes de eixo. `Customer` é o teste de nó (TRUE se `Customer` é um  **\<nó de elemento >**, pois  **\<elemento >** é o tipo de nó principal para o `child` eixo). `attribute::CustomerID="ALFKI"` é o predicado. No predicado, `attribute` é o eixo e `CustomerID` é o teste de nó (TRUE se **CustomerID** é um atributo do nó de contexto, pois  **\<atributo >** é a entidade de segurança tipo de nó `attribute` eixo).  
+ Nesta consulta XPath, `child` e `attribute` são nomes de eixo. `Customer` é o teste de nó (TRUE se `Customer` é um  **\<nó de elemento >** , pois  **\<elemento >** é o tipo de nó principal para o `child` eixo). `attribute::CustomerID="ALFKI"` é o predicado. No predicado, `attribute` é o eixo e `CustomerID` é o teste de nó (TRUE se **CustomerID** é um atributo do nó de contexto, pois  **\<atributo >** é a entidade de segurança tipo de nó `attribute` eixo).  
   
  Usando a sintaxe abreviada, a consulta XPath também pode ser especificada como:  
   

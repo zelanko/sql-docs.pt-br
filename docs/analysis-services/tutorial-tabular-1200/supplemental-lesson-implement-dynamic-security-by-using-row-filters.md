@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d84f208fc36c0bb647537aa174b86e06ba70abc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dfc217b3a4e5fa58b171677c2acedc313a090285
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65403378"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263360"
 ---
 # <a name="supplemental-lesson---implement-dynamic-security-by-using-row-filters"></a>Lição suplementar – implementar a segurança dinâmica usando filtros de linha
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,7 +23,7 @@ Nesta lição suplementar, você criará uma função adicional que implementa a
   
 Para implementar a segurança dinâmica, você deverá adicionar uma tabela a seu modelo contendo os nomes de usuários Windows desses usuários que podem criar uma conexão com o modelo como uma fonte de dados e procurar objetos e dados do modelo. O modelo criado usando este tutorial está no contexto da Adventure Works Corp.; entretanto, para concluir esta lição, você deve adicionar uma tabela contendo os usuários de seu próprio domínio. Você não precisará das senhas para os nomes de usuários que serão adicionados. Para criar uma tabela EmployeeSecurity com uma pequena amostra dos usuários de seu próprio domínio, você usará o recurso Colar, colando dados de funcionários de uma planilha do Excel. Em um cenário do mundo real, a tabela que contém nomes de usuários adicionada a um modelo normalmente empregaria uma tabela de um banco de dados real como uma fonte de dados; por exemplo, uma tabela real dimEmployee.  
   
-Para implementar a segurança dinâmica, você usará duas novas funções DAX: [Função USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) e [função LOOKUPVALUE (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab). Estas funções, aplicadas em um fórmula de filtro de linha, são definidas em uma nova função. Usando a função LOOKUPVALUE, a fórmula Especifica um valor da tabela EmployeeSecurity e, em seguida, passa esse valor para a função de nome de usuário, que especifica o nome de usuário do usuário conectado pertence a essa função. O usuário pode procurar apenas os dados especificados pelos filtros de linha da função. Neste cenário, você especificará que os funcionários de vendas só podem procurar dados de vendas pela internet para as regiões de vendas das quais eles são membro.  
+Para implementar a segurança dinâmica, você usará duas novas funções DAX: [Função USERNAME (DAX)](/dax/username-function-dax) e [função LOOKUPVALUE (DAX)](/dax/lookupvalue-function-dax). Estas funções, aplicadas em um fórmula de filtro de linha, são definidas em uma nova função. Usando a função LOOKUPVALUE, a fórmula Especifica um valor da tabela EmployeeSecurity e, em seguida, passa esse valor para a função de nome de usuário, que especifica o nome de usuário do usuário conectado pertence a essa função. O usuário pode procurar apenas os dados especificados pelos filtros de linha da função. Neste cenário, você especificará que os funcionários de vendas só podem procurar dados de vendas pela internet para as regiões de vendas das quais eles são membro.  
   
 Para concluir esta lição suplementar, você executará uma série de tarefas. Essas tarefas que são exclusivas deste cenário de modelo de tabela do Adventure Works, mas não se aplicariam necessariamente a um cenário do mundo real, são identificadas como tal. Cada tarefa inclui informações adicionais que descrevem o propósito da tarefa.  
   
@@ -186,6 +186,6 @@ Nesta tarefa, você usará o analisar no recurso do Excel no SSDT para testar a 
     Este usuário não pode navegar nem consultar dados de vendas pela Internet regiões que não sejam aquela à qual eles pertencem porque o filtro de linha definido para a tabela Sales Territory na função de usuário Sales Employees by Territory efetivamente protege dados para todos os dados relacionados a outras regiões de vendas.  
   
 ## <a name="see-also"></a>Consulte também  
-[Função USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)  
-[Função LOOKUPVALUE (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)  
-[Função CUSTOMDATA (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+[Função USERNAME (DAX)](/dax/username-function-dax)  
+[Função LOOKUPVALUE (DAX)](/dax/lookupvalue-function-dax)  
+[Função CUSTOMDATA (DAX)](/dax/customdata-function-dax)  

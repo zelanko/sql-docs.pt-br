@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c67e606b0f74d3886f0b5890d5061406d0d7f3fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63183551"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Buscando dados de BLOB usando IRow::Open e ISequentialStream

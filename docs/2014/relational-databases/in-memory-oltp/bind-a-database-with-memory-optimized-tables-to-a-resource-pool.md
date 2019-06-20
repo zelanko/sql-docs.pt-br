@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63158806"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Associar um banco de dados com tabelas com otimização de memória a um pool de recursos
@@ -44,7 +44,7 @@ GO
 ### <a name="determine-the-minimum-value-for-minmemorypercent-and-maxmemorypercent"></a>Determine o valor mínimo de MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT  
  Depois que você determinar as necessidades de memória para tabelas com otimização de memória, será necessário determinar o percentual de memória disponível necessário e definir os percentuais de memória com esse valor ou um valor mais alto.  
   
- **Exemplo:**   
+ **Exemplo:**    
 Para este exemplo, vamos pressupor que, com base nos cálculos, você determinou que suas tabelas com otimização de memória e índices precisam de 16 GB de memória. Digamos que você tenha 32 GB de memória confirmada para uso.  
   
  À primeira vista pode parecer que você precisa definir MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT como 50 (16 são de 50% de 32).  No entanto, isso não daria memória suficiente às tabelas com otimização de memória otimizada. Examinando a tabela abaixo ([Percentual de memória disponível de índices e tabelas com otimização de memória](#percent-of-memory-available-for-memory-optimized-tables-and-indexes)), vemos que, se houver 32 GB de memória confirmada, somente 80% dessa quantidade estará disponível para índices e tabelas com otimização de memória.  Consequentemente, calculamos percentuais mínimo e máximo com base na memória disponível, não na memória confirmada.  
