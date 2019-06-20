@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d5ac074bef7570dc49a5597500bd15c8075235ba
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bdcd5b9a30d19fc6fd0018fac1d24a275f236518
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148131"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263163"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usar modelos do Analysis Services no SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "50148131"
  Este exemplo mostra como criar uma consulta MDX no SQL Server Management Studio, usando um banco de dados modelo de tabela como a fonte de dados. Para repetir este exemplo em seu computador, você pode [baixar o projeto de exemplo de modelo de tabela Adventureworks](http://go.microsoft.com/fwlink/?LinkId=231183).  
   
 > [!WARNING]  
->  Você não pode usar consultas MDX em modelos de tabela que foram implantados no modo Consulta Direta. No entanto, você pode enviar consultas equivalentes usando as consultas de tabela DAX com o comando EVALUATE. Para saber mais, confira [Parâmetros de consulta DAX](http://msdn.microsoft.com/c5841b4e-3395-4237-815b-9822a691e544).  
+>  Você não pode usar consultas MDX em modelos de tabela que foram implantados no modo Consulta Direta. No entanto, você pode enviar consultas equivalentes usando as consultas de tabela DAX com o comando EVALUATE. Para saber mais, confira [Parâmetros de consulta DAX](/dax/dax-queries#parameters-in-dax-queries).  
   
 #### <a name="create-an-mdx-query-from-a-template"></a>Criar uma consulta MDX com base em um modelo  
   
@@ -58,15 +58,15 @@ ms.locfileid: "50148131"
   
 3.  Usando o **Gerenciador de Metadados**, arraste os seguintes campos e medidas para o modelo de consulta:  
   
-    1.  Substitua \<row_axis, mdx_set > com **[Product Category]. [ Product Category Name]**.  
+    1.  Substitua \<row_axis, mdx_set > com **[Product Category]. [ Product Category Name]** .  
   
     2.  Substitua \<column_axis, mdx_set > com **[Data]. [ Ano civil]. [Ano civil]** .  
   
-    3.  Substitua \<from_clause, mdx_name > com **[Vendas pela Internet]**.  
+    3.  Substitua \<from_clause, mdx_name > com **[Vendas pela Internet]** .  
   
-    4.  Substitua \<where_clause, mdx_set > com **[Medidas]. [ Internet Total Sales]**.  
+    4.  Substitua \<where_clause, mdx_set > com **[Medidas]. [ Internet Total Sales]** .  
   
-4.  Você pode executar a consulta no estado em que ela se encontra, mas provavelmente vai querer fazer algumas alterações, como adicionar uma função para retornar membros específicos. Por exemplo, digite **.members** depois de **[Product Category].[Product Category Name]**. Para saber mais, confira [Using Member Expressions](../../mdx/using-member-expressions.md).  
+4.  Você pode executar a consulta no estado em que ela se encontra, mas provavelmente vai querer fazer algumas alterações, como adicionar uma função para retornar membros específicos. Por exemplo, digite **.members** depois de **[Product Category].[Product Category Name]** . Para saber mais, confira [Using Member Expressions](../../mdx/using-member-expressions.md).  
   
 ##  <a name="bkmk_backup"></a> Criar um script XMLA com base em um modelo  
  Os modelos de comando XMLA fornecidos no Gerenciador de Modelos podem ser usados para criar scripts para monitoramento e atualização de objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , quer a instância esteja no modo multidimensional e de mineração de dados ou no modo de tabela. Os modelos **XMLA** incluem exemplos dos seguintes tipos de scripts:  
@@ -154,14 +154,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ##  <a name="bkmk_Ref"></a> Referência de modelo do Analysis Services  
  Os seguintes modelos são fornecidos para funcionar com bancos de dados do Analysis Services e os objetos no banco de dados, incluindo estruturas e modelos de mineração, cubos e modelos de tabela:  
   
-|Categoria|Modelo de item|Description|  
+|Category|Modelo de item|Descrição|  
 |--------------|-------------------|-----------------|  
-|DMX\Conteúdo do modelo|Consulta de conteúdo|Demonstra como usar o DMX SELECT FROM  *\<modelo >*. Instrução de conteúdo para recuperar o conteúdo do conjunto de linhas de esquema do modelo de mineração para um modelo de mineração especificado.|  
+|DMX\Conteúdo do modelo|Consulta de conteúdo|Demonstra como usar o DMX SELECT FROM  *\<modelo >* . Instrução de conteúdo para recuperar o conteúdo do conjunto de linhas de esquema do modelo de mineração para um modelo de mineração especificado.|  
 ||Valores de Coluna Contínuos|Demonstra como usar o DMX SELECT DISTINCT FROM  *\<modelo >* instrução com o DMX **RangeMin** e **RangeMax** funções para recuperar um conjunto de valores de um determinado intervalo de colunas contínuas em um modelo de mineração especificado.|  
 ||Valores de Coluna Discretos|Demonstra como usar o DMX SELECT DISTINCT FROM  *\<modelo >* instrução recuperar um conjunto completo de valores de colunas discretas em um modelo de mineração especificado.|  
 ||Consulta de Detalhamento|Demonstra como usar a instrução DMX SELECT * FROM Model.CASES com a função DMX IsInNode para executar uma consulta de análise.|  
 ||Atributos de Modelo|Demonstra como usar a função de DMX System.GetModelAttributes para retornar uma lista de atributos usados por um modelo.|  
-||Conteúdo PMML|Demonstra como usar o DMX SELECT \* FROM  *\<modelo >*. Instrução de PMML para recuperar a representação de marcação idioma PMML (Predictive Model) do modelo de mineração, para os algoritmos que suportam essa funcionalidade.|  
+||Conteúdo PMML|Demonstra como usar o DMX SELECT \* FROM  *\<modelo >* . Instrução de PMML para recuperar a representação de marcação idioma PMML (Predictive Model) do modelo de mineração, para os algoritmos que suportam essa funcionalidade.|  
 |DMX\Gerenciamento de Modelos|Adicionar Modelo|Demonstra como usar a instrução DMX ALTER MINING MODEL STRUCTURE para adicionar um modelo de mineração.|  
 ||Limpar Modelo|Demonstra como usar a instrução DMX DELETE * FROM MINING MODEL para excluir o conteúdo do modelo de mineração especificado.|  
 ||Limpar Casos da Estrutura|Demonstra como usar a instrução DMX DELETE FROM MINING STRUCTURE para limpar os casos de estrutura do modelo de mineração.|  
@@ -211,7 +211,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Contadores de desempenho|Demonstra como usar o método XMLA **Discover** para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_PERFORMANCE_COUNTERS.|  
 ||Sessões|Demonstra como usar o método XMLA **Discover** para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_SESSIONS.|  
 ||Rastreamentos|Demonstra como usar o método XMLA **Discover** para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_TRACES.|  
-||Transactions|Demonstra como usar o método XMLA **Discover** para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_TRANSACTIONS.|  
+||Transações|Demonstra como usar o método XMLA **Discover** para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_TRANSACTIONS.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de expressões multidimensionais &#40;MDX&#41;](../../mdx/multidimensional-expressions-mdx-reference.md)   

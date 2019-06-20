@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.openlocfilehash: fafec68510e2c9214ed77294314b2ff06e456ff2
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66713291"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Use o Visual Studio para criar bancos de dados para o SQL Server no Linux
@@ -108,7 +108,7 @@ Você criou um novo banco de dados na instância do SQL Server no Linux e aprend
 
 Se você for novo no T-SQL, consulte [Tutorial: Gravando instruções Transact-SQL] e o [referência de Transact-SQL (mecanismo de banco de dados)].
 
-Para obter mais informações sobre o desenvolvimento de um banco de dados com ferramentas de dados SQL, consulte [Documentos do SSDT MSDN]
+Para obter mais informações sobre o desenvolvimento de um banco de dados com ferramentas de dados SQL, consulte [documentos SSDT MSDN]
 
 [Baixar e instalar o Visual Studio]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT]:https://aka.ms/ssdt-download

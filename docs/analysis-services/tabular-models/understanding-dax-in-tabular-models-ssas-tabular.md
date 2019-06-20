@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: feb215c24081d8f7c33e63369a24651b4008595c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42800aff7822d7499a753a86765638d517a44cb0
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65356497"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263373"
 ---
 # <a name="dax-in-tabular-models"></a>DAX em modelos de tabela 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "65356497"
   
 -   Operadores lógicos que combinam duas ou mais expressões para retornar um único resultado.  
   
- Para obter informações detalhadas sobre operadores usados em fórmulas DAX, consulte [Referência de operador DAX](http://msdn.microsoft.com/1befbddc-6178-472c-8bc4-05dafd62207e).  
+ Para obter informações detalhadas sobre operadores usados em fórmulas DAX, consulte [Referência de operador DAX](/dax/dax-operator-reference).  
   
 ##  <a name="bkmk_DAX_Formulas"></a> Fórmulas DAX  
  As fórmulas DAX são essenciais para criar cálculos em colunas calculadas e medidas e proteger seus dados usando filtros de nível de linha. Para criar fórmulas para colunas calculadas e medidas, você usará a barra de fórmulas na parte superior da janela do designer de modelo ou o Editor do DAX. Para criar fórmulas para filtros de linha, você usará a caixa de diálogo Gerenciador de Funções. As informações nesta seção têm o objetivo de proporcionar a você o entendimento dos fundamentos das fórmulas DAX.  
@@ -139,7 +139,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 |---------------------|-----------------|  
 |`Days in Current Quarter:=`|O nome da medida.|  
 |`=`|O sinal de igualdade (=) inicia a fórmula.|  
-|`COUNTROWS`|A [função COUNTROWS (DAX)](http://msdn.microsoft.com/830dd659-5405-4e0a-8d26-01ae9d5e5e9a) conta o número de linhas na tabela de Data|  
+|`COUNTROWS`|A [função COUNTROWS (DAX)](/dax/countrows-function-dax) conta o número de linhas na tabela de Data|  
 |`()`|Os parênteses de abertura e fechamento especificam argumentos.|  
 |`DATESBETWEEN`|A função DATESBETWEEN retorna as datas entre a última data de cada valor na coluna Data na tabela de Data.|  
 |`'Date'`|Especifica a tabela de Data. As tabelas estão entre aspas simples.|  
@@ -170,7 +170,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 >  Alguns limites são aplicados dentro de medidas no aninhamento de funções, para garantir que o desempenho não seja afetado pelos diversos cálculos necessários para as dependências entre colunas.  
   
 ##  <a name="bkmk_DAX_functions"></a> Funções DAX  
- Esta seção fornece uma visão geral dos *tipos* de funções que têm o suporte da linguagem DAX. Para obter mais informações, consulte [Referência de Função DAX](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
+ Esta seção fornece uma visão geral dos *tipos* de funções que têm o suporte da linguagem DAX. Para obter mais informações, consulte [Referência de Função DAX](/dax/dax-function-reference).  
   
  O DAX fornece diversas funções que você pode usar para executar cálculos usando datas e horas ou criar valores condicionais, trabalhar com cadeias de caracteres, executar pesquisas com base em relacionamentos e a capacidade de iterar em uma tabela para realizar cálculos recursivos. Se você estiver familiarizado com fórmulas do Excel, muitas dessas funções parecerão muito similares; porém, as fórmulas DAX são diferentes dos seguintes modos importantes:  
   
@@ -183,31 +183,31 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 -   Funções do DAX incluem uma variedade de *inteligência de tempo* funções. Estas funções permitem definir ou selecionar intervalos de datas e executar cálculos dinâmicos com base nestas datas ou intervalos. Por exemplo, você pode comparar somas em períodos paralelos.  
   
 ### <a name="date-and-time-functions"></a>Funções de data e hora  
- As funções de data e hora na DAX são semelhantes às funções de data e hora do Microsoft Excel. No entanto, as funções DAX se baseiam nos tipos de dados **datetime** usados pelo Microsoft SQL Server. Para obter mais informações, consulte [Funções de data e hora (DAX)](http://msdn.microsoft.com/9fc9214a-fcd6-40c0-bf51-0c95637c6ffb).  
+ As funções de data e hora na DAX são semelhantes às funções de data e hora do Microsoft Excel. No entanto, as funções DAX se baseiam nos tipos de dados **datetime** usados pelo Microsoft SQL Server. Para obter mais informações, consulte [Funções de data e hora (DAX)](/dax/date-and-time-functions-dax).  
   
 ### <a name="filter-functions"></a>Funções de filtro  
- As funções de filtro em DAX retornam tipos de dados específicos, pesquisar valores em tabelas relacionadas e filtrar pelos valores relacionados. As funções de pesquisa funcionam com tabelas e relações, assim como um banco de dados. As funções de filtragem permitem manipular o contexto de dados para criar cálculos dinâmicos. Para obter mais informações, consulte [Funções de filtro (DAX)](http://msdn.microsoft.com/b036fd40-4d3b-426d-a0d2-80258b53d8e5).  
+ As funções de filtro em DAX retornam tipos de dados específicos, pesquisar valores em tabelas relacionadas e filtrar pelos valores relacionados. As funções de pesquisa funcionam com tabelas e relações, assim como um banco de dados. As funções de filtragem permitem manipular o contexto de dados para criar cálculos dinâmicos. Para obter mais informações, consulte [Funções de filtro (DAX)](/dax/filter-functions-dax).  
   
 ### <a name="information-functions"></a>Funções informativas  
- Uma função informativa verifica a célula ou linha fornecida como um argumento e indica se o valor corresponde ao tipo esperado. Por exemplo, a função ISERROR retorna TRUE quando o valor referenciado contém um erro. Para obter mais informações, consulte [Funções informativas (DAX)](http://msdn.microsoft.com/6d2bee09-0456-4444-b4d2-c231fd788a2e).  
+ Uma função informativa verifica a célula ou linha fornecida como um argumento e indica se o valor corresponde ao tipo esperado. Por exemplo, a função ISERROR retorna TRUE quando o valor referenciado contém um erro. Para obter mais informações, consulte [Funções informativas (DAX)](/dax/information-functions-dax).  
   
 ### <a name="logical-functions"></a>Funções lógicas  
- As funções lógicas agem sobre uma expressão para retornar informações sobre os valores da expressão. Por exemplo, a função TRUE permite saber se uma expressão que você está avaliando retorna um valor TRUE. Para obter mais informações, consulte [Funções lógicas (DAX)](http://msdn.microsoft.com/2eb33add-60b2-44ab-b761-012a473116a2).  
+ As funções lógicas agem sobre uma expressão para retornar informações sobre os valores da expressão. Por exemplo, a função TRUE permite saber se uma expressão que você está avaliando retorna um valor TRUE. Para obter mais informações, consulte [Funções lógicas (DAX)](/dax/logical-functions-dax).  
   
 ### <a name="mathematical-and-trigonometric-functions"></a>Funções matemáticas e trigonométricas  
- As funções matemáticas em DAX são muito semelhantes às funções matemáticas e trigonométricas do Excel. Existem algumas pequenas diferenças nos tipos de dados numéricos usados por funções DAX. Para obter mais informações, consulte [Funções matemáticas e trigonométricas (DAX)](http://msdn.microsoft.com/1f408ec1-e769-43d6-a68c-567bc30d893f).  
+ As funções matemáticas em DAX são muito semelhantes às funções matemáticas e trigonométricas do Excel. Existem algumas pequenas diferenças nos tipos de dados numéricos usados por funções DAX. Para obter mais informações, consulte [Funções matemáticas e trigonométricas (DAX)](/dax/math-and-trig-functions-dax).  
  
 ### <a name="other-functions"></a>Outras funções  
- Essas funções executam ações exclusivas, que não podem ser definidas por qualquer uma das categorias para a maioria das outras funções pertencem a. Para obter mais informações, consulte [outras funções (DAX)](https://msdn.microsoft.com/mt150101).
+ Essas funções executam ações exclusivas, que não podem ser definidas por qualquer uma das categorias para a maioria das outras funções pertencem a. Para obter mais informações, consulte [outras funções (DAX)](/dax/other-functions-dax).
   
 ### <a name="statistical-functions"></a>Funções estatísticas  
- O DAX fornece funções estatísticas que executam agregações. Além de criar somas e médias, ou localizar os valores mínimo e máximo, na DAX também é possível filtrar uma coluna antes de agregar ou criar agregações com base em tabelas relacionadas. Para obter mais informações, consulte [Funções estatísticas (DAX)](http://msdn.microsoft.com/ba4c1298-57a0-40fc-b6f6-00e187ace559).  
+ O DAX fornece funções estatísticas que executam agregações. Além de criar somas e médias, ou localizar os valores mínimo e máximo, na DAX também é possível filtrar uma coluna antes de agregar ou criar agregações com base em tabelas relacionadas. Para obter mais informações, consulte [Funções estatísticas (DAX)](/dax/statistical-functions-dax).  
   
 ### <a name="text-functions"></a>Funções de texto  
- As funções de texto na DAX são bem semelhantes às suas correspondentes no Excel. Você pode retornar parte de uma cadeia de caracteres, pesquisar texto em uma cadeia de caracteres ou concatenar valores de cadeia de caracteres. A DAX também fornece funções para controlar os formatos de datas, horas e números. Para obter mais informações, consulte [Funções de texto (DAX)](http://msdn.microsoft.com/e4821571-ae55-4df7-ae98-c578200bba5f).  
+ As funções de texto na DAX são bem semelhantes às suas correspondentes no Excel. Você pode retornar parte de uma cadeia de caracteres, pesquisar texto em uma cadeia de caracteres ou concatenar valores de cadeia de caracteres. A DAX também fornece funções para controlar os formatos de datas, horas e números. Para obter mais informações, consulte [Funções de texto (DAX)](/dax/text-functions-dax).  
   
 ### <a name="time-intelligence-functions"></a>Funções de inteligência de tempo  
- As funções de inteligência de tempo fornecidas em DAX permitem criar cálculos que usam o conhecimento interno sobre calendários e datas. Usando intervalos de hora e data em combinação com agregações ou cálculos, você pode criar comparações significativas em períodos de tempo comparáveis para vendas, inventário, e assim por diante. Para obter mais informações, consulte [funções de inteligência de tempo (DAX)](http://msdn.microsoft.com/91df278d-4b28-40c1-a572-cdb91f081517).  
+ As funções de inteligência de tempo fornecidas em DAX permitem criar cálculos que usam o conhecimento interno sobre calendários e datas. Usando intervalos de hora e data em combinação com agregações ou cálculos, você pode criar comparações significativas em períodos de tempo comparáveis para vendas, inventário, e assim por diante. Para obter mais informações, consulte [funções de inteligência de tempo (DAX)](/dax/time-intelligence-functions-dax).  
   
 ###  <a name="bkmk_TableFunc"></a> Funções com valor de tabela  
  Existem funções DAX que produzem tabelas, aceitam tabelas como entrada ou ambas as opções. Como uma tabela pode ter uma única coluna, as funções com valor de tabela também aceitam colunas únicas como entradas. É importante compreender como usar essas funções com valor de tabela para usar completamente as fórmulas DAX. O DAX inclui os seguintes tipos de funções com valor de tabela:  
@@ -257,7 +257,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 =MAXX(FILTER(Sales,[ProdKey]=EARLIER([ProdKey])),Sales[OrderQty])  
 ```  
   
- Para obter um passo a passo detalhado dessa fórmula, consulte a [Função EARLIER (DAX)](http://msdn.microsoft.com/6d126c4d-2315-49ec-899d-cb396eefbae6).  
+ Para obter um passo a passo detalhado dessa fórmula, consulte a [Função EARLIER (DAX)](/dax/earlier-function-dax).  
   
  Em resumo, a função EARLIER armazena o contexto de linha da operação que precedeu a operação atual. O tempo todo, a função armazena na memória dois conjuntos de contexto: um deles representa a linha atual do loop interno da fórmula, e o outro representa a linha atual do loop externo da fórmula. A DAX alimenta automaticamente valores entre os dois loops para que você possa criar agregações complexas.  
   
@@ -282,11 +282,11 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Em modelos de tabela, há muitos modos de criar contexto de filtro. Dentro do contexto de clientes que podem consumir o modelo, como relatórios do Power BI, os usuários podem criar filtros dinamicamente adicionando segmentações de dados ou filtros de relatório nos cabeçalhos de linha e coluna. Você também pode especificar expressões de filtro diretamente dentro da fórmula, para especificar valores relacionados, para filtrar tabelas que são usadas como entradas ou para obter contexto dinamicamente para os valores que são usados em cálculos. Você também pode desmarcar completa ou seletivamente os filtros em colunas específicas. Isto é muito útil ao criar fórmulas que calculam totais principais.  
   
- Para obter mais informações sobre como criar filtros dentro de fórmulas, consulte a [Função FILTER (DAX)](http://msdn.microsoft.com/f1f6bee4-547b-407c-b70b-9216b2f3d3fd).  
+ Para obter mais informações sobre como criar filtros dentro de fórmulas, consulte a [Função FILTER (DAX)](/dax/filter-function-dax).  
   
- Para obter um exemplo de como os filtros são limpos para criar totais gerais, consulte a [Função ALL (DAX)](http://msdn.microsoft.com/a7e0ab71-d83e-4463-bc77-9eb5dd73c6fc).  
+ Para obter um exemplo de como os filtros são limpos para criar totais gerais, consulte a [Função ALL (DAX)](/dax/all-function-dax).  
   
- Para obter exemplos de como limpar e aplicar filtros dentro de fórmulas, consulte a [Função ALLEXCEPT (DAX)](http://msdn.microsoft.com/a6f575a1-9803-4bb2-85b3-c95c060f1fb1).  
+ Para obter exemplos de como limpar e aplicar filtros dentro de fórmulas, consulte a [Função ALLEXCEPT (DAX)](/dax/allexcept-function-dax).  
   
 ####  <a name="bkmk_determine_context"></a> Determinando o contexto em fórmulas  
  Quando você cria uma fórmula do DAX, a fórmula é testada primeiro para sintaxe válida e para ter certeza de que os nomes das colunas e tabelas incluídos na fórmula podem ser localizados no contexto atual. Se qualquer coluna ou tabela especificada pela fórmula não puder ser localizada, um erro será retornado.  
@@ -299,22 +299,22 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ##### <a name="examples-of-context-in-formulas"></a>Exemplos de contexto em fórmulas  
   
-1.  A [Função RELATED (DAX)](http://msdn.microsoft.com/0023fd13-c17a-4243-ab77-3779a4b502b6) expande o contexto da linha atual para incluir valores em uma coluna relacionada. Isso permite a execução de pesquisas. O exemplo neste tópico ilustra a interação entre a filtragem e o contexto de linha.  
+1.  A [Função RELATED (DAX)](/dax/related-function-dax) expande o contexto da linha atual para incluir valores em uma coluna relacionada. Isso permite a execução de pesquisas. O exemplo neste tópico ilustra a interação entre a filtragem e o contexto de linha.  
   
-2.  A [Função FILTER (DAX)](http://msdn.microsoft.com/f1f6bee4-547b-407c-b70b-9216b2f3d3fd) permite especificar as linhas a serem incluídas no contexto atual. Os exemplos neste tópico também ilustram como inserir filtros em outras funções que executam agregações.  
+2.  A [Função FILTER (DAX)](/dax/filter-function-dax) permite especificar as linhas a serem incluídas no contexto atual. Os exemplos neste tópico também ilustram como inserir filtros em outras funções que executam agregações.  
   
-3.  A [Função ALL (DAX)](http://msdn.microsoft.com/a7e0ab71-d83e-4463-bc77-9eb5dd73c6fc) define o contexto dentro de uma fórmula. Você pode usá-la para anular filtros aplicados como resultado do contexto de consulta.  
+3.  A [Função ALL (DAX)](/dax/all-function-dax) define o contexto dentro de uma fórmula. Você pode usá-la para anular filtros aplicados como resultado do contexto de consulta.  
   
-4.  A [Função ALLEXCEPT (DAX)](http://msdn.microsoft.com/a6f575a1-9803-4bb2-85b3-c95c060f1fb1) permite remover todos os filtros, exceto um especificado por você. Os dois tópicos incluem exemplos que orientam você durante a criação de fórmulas e a compreensão dos contextos complexos.  
+4.  A [Função ALLEXCEPT (DAX)](/dax/allexcept-function-dax) permite remover todos os filtros, exceto um especificado por você. Os dois tópicos incluem exemplos que orientam você durante a criação de fórmulas e a compreensão dos contextos complexos.  
   
-5.  A [Função EARLIER (DAX)](http://msdn.microsoft.com/6d126c4d-2315-49ec-899d-cb396eefbae6) e a [Função EARLIEST (DAX)](http://msdn.microsoft.com/9befa04d-78db-492e-a463-80b8b77206d6) permitem executar loop pelas tabelas que executam cálculos referenciando, simultaneamente, um valor de um loop interno. Se você estiver familiarizado com o conceito de recursão e com loops internos e externos, apreciará o poder proporcionado pelas funções EARLIER e EARLIEST. Se você não for experiente com esses conceitos, siga as etapas no exemplo atentamente para ver como os contextos internos e externos são usados ao fazer cálculos.  
+5.  A [Função EARLIER (DAX)](/dax/earlier-function-dax) e a [Função EARLIEST (DAX)](/dax/earliest-function-dax) permitem executar loop pelas tabelas que executam cálculos referenciando, simultaneamente, um valor de um loop interno. Se você estiver familiarizado com o conceito de recursão e com loops internos e externos, apreciará o poder proporcionado pelas funções EARLIER e EARLIEST. Se você não for experiente com esses conceitos, siga as etapas no exemplo atentamente para ver como os contextos internos e externos são usados ao fazer cálculos.  
   
 ##  <a name="bkmk_RelModel"></a> Fórmulas e o modelo de tabela  
  O designer de modelo no SSDT, é uma área onde você pode trabalhar com várias tabelas de dados e conectar as tabelas em um modelo de tabela. Dentro deste modelo, as tabelas são unidas por relações em colunas com valores comuns (chaves). O modelo de tabela permite vincular valores a colunas em outras tabelas e cria mais cálculos interessantes. Da mesma maneira que em um banco de dados relacional, você pode conectar muitos níveis de tabelas relacionadas e usar colunas de qualquer tabela nos resultados.  
   
  Por exemplo, você pode vincular uma tabela de vendas, uma tabela de produtos e uma tabela de categorias de produto e os usuários podem utilizar várias combinações das colunas nas Tabelas Dinâmicas e em relatórios. Os campos relacionados podem ser usados para filtrar tabelas conectadas ou criar cálculos sobre subconjuntos. (Se você não estiver familiarizado com o banco de dados relacional e trabalhar com tabelas e junções, consulte [relações](../../analysis-services/tabular-models/relationships-ssas-tabular.md).)  
   
- Os modelos de tabela dão suporte a várias relações entre tabelas. Para evitar confusão ou resultados errados, somente uma relação é designada de cada vez como a relação ativa, mas você pode alterar a relação ativa como for necessário para atravessar conexões diferentes nos dados nos cálculos. A [Função USERELATIONSHIP (DAX)](http://msdn.microsoft.com/200484ab-9da1-4570-a100-7f9ed20d33af) pode ser usada para especificar uma ou mais relações a serem usadas em um cálculo específico.  
+ Os modelos de tabela dão suporte a várias relações entre tabelas. Para evitar confusão ou resultados errados, somente uma relação é designada de cada vez como a relação ativa, mas você pode alterar a relação ativa como for necessário para atravessar conexões diferentes nos dados nos cálculos. A [Função USERELATIONSHIP (DAX)](/dax/userelationship-function-dax) pode ser usada para especificar uma ou mais relações a serem usadas em um cálculo específico.  
   
  Em um modelo de tabela, você deve observar estas regras de design de fórmula:  
   
@@ -340,7 +340,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 =SUM('New Sales'[Amount]) + SUM('Past Sales'[Amount])  
 ```  
   
- Quando uma fórmula é avaliada, o designer do modelo primeiro verifica a sintaxe geral e, em seguida, os nomes das colunas e tabelas que você fornece em relação a possíveis colunas e tabelas no contexto atual. Se o nome for ambíguo ou se a coluna ou tabela não puder ser encontrada, você obterá um erro na fórmula (uma cadeia de caracteres #ERROR em lugar de um valor de dados em células nas quais o erro ocorre). Para obter mais informações sobre requisitos de nomenclatura para tabelas, colunas e outros objetos, consulte "Requisitos de nomenclatura" em [Referência de Sintaxe DAX](http://msdn.microsoft.com/098630f4-7d1d-467e-976c-99b2279430d5).  
+ Quando uma fórmula é avaliada, o designer do modelo primeiro verifica a sintaxe geral e, em seguida, os nomes das colunas e tabelas que você fornece em relação a possíveis colunas e tabelas no contexto atual. Se o nome for ambíguo ou se a coluna ou tabela não puder ser encontrada, você obterá um erro na fórmula (uma cadeia de caracteres #ERROR em lugar de um valor de dados em células nas quais o erro ocorre). Para obter mais informações sobre requisitos de nomenclatura para tabelas, colunas e outros objetos, consulte "Requisitos de nomenclatura" em [Referência de Sintaxe DAX](/dax/dax-syntax-reference).  
   
 ### <a name="table-relationships"></a>Relações de tabela  
  Ao criar relações entre tabelas, você ganha a capacidade de procurar dados em outra tabela e usar valores relacionados para executar cálculos complexos. Por exemplo, é possível usar uma coluna calculada para procurar todos os registros de envio relacionados ao revendedor atual e, em seguida, à soma dos custos de envio de cada. Em muitos casos, porém, uma relação talvez não seja necessária. Você pode usar a função LOOKUPVALUE em uma fórmula para retornar o valor no *result_columnName* para a linha que atende aos critérios especificados nos parâmetros *search_column* e *search_value* .  
@@ -365,7 +365,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="bkmk_troubleshoot"></a> Solucionando problemas de erros em fórmulas  
  Se você receber um erro ao definir uma fórmula, talvez a fórmula contenha um *erro sintático*, um *erro semântico*ou *erro de cálculo*.  
   
- Erros sintáticos são os mais fáceis de resolver. Em geral, eles envolvem a falta de um parêntese ou de uma vírgula. Para obter ajuda com a sintaxe de funções individuais, consulte [Referência de Função DAX](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
+ Erros sintáticos são os mais fáceis de resolver. Em geral, eles envolvem a falta de um parêntese ou de uma vírgula. Para obter ajuda com a sintaxe de funções individuais, consulte [Referência de Função DAX](/dax/dax-function-reference).  
   
  O outro tipo de erro ocorre quando a sintaxe está correta, mas o valor ou a coluna referenciada não faz sentido no contexto da fórmula. Esses erros semânticos e de cálculo podem ser causados por um dos seguintes problemas:  
   
@@ -389,7 +389,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  O [Central de Recursos do DAX](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) fornece informações internas e externas sobre o DAX, incluindo várias soluções DAX enviadas por profissionais de Business Intelligence líderes.  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de DAX (Data Analysis Expressions)](http://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)   
+ [Referência de DAX (Data Analysis Expressions)](/dax/data-analysis-expressions-dax-reference)   
  [Medidas](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Colunas calculadas](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [Funções](../../analysis-services/tabular-models/roles-ssas-tabular.md)   

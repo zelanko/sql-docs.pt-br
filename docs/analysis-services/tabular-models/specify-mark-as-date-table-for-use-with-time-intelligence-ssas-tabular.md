@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df4afbecebd3c076f80064dbd3d13f35ba2cbcf0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53de714a7db50b653a24fa42662fc7e0aeffa88d
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62472076"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263402"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>Especifique marcar como tabela de data para uso com inteligência de tempo
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "62472076"
   
 2.  Clique no menu **Tabela** , clique em **Data**e em **Mark as Data Tabela**.  
   
-3.  Na caixa de diálogo **Marcar como Tabela de Data** , na caixa de listagem **Data** , selecione uma coluna a ser usada como um identificador exclusivo. Esta coluna deve conter valores exclusivos e deve ser do tipo de dados de data. Por exemplo:  
+3.  Na caixa de diálogo **Marcar como Tabela de Data** , na caixa de listagem **Data** , selecione uma coluna a ser usada como um identificador exclusivo. Esta coluna deve conter valores exclusivos e deve ser do tipo de dados de data. Por exemplo:   
   
     |Date|  
     |----------|  
@@ -52,6 +52,6 @@ ms.locfileid: "62472076"
   
 ## <a name="see-also"></a>Consulte também  
  [Cálculos](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
- [Funções de inteligência de tempo (DAX)](http://msdn.microsoft.com/91df278d-4b28-40c1-a572-cdb91f081517)  
+ [Funções de inteligência de tempo (DAX)](/dax/time-intelligence-functions-dax)  
   
   

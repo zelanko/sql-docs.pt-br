@@ -12,10 +12,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 67f7ac024c2a2b779518a0a775705f17b423ecf5
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014018"
 ---
 # <a name="spatial-indexes-overview"></a>Visão geral de índices espaciais
@@ -106,7 +106,7 @@ ms.locfileid: "66014018"
 #### <a name="deepest-cell-rule"></a>Regra de célula mais profunda  
  A regra da célula mais profunda explora o fato de que cada célula de nível inferior pertence à célula acima dela: uma célula de nível 4 pertence a uma célula de nível 3, uma célula de nível 3 pertence a uma célula de nível 2 e uma célula de nível 2 pertence a uma célula de nível 1. Por exemplo, um objeto que pertence à célula 1.1.1.1 também pertence à célula 1.1.1, à célula 1.1 e à célula 1. O conhecimento de tais relações da hierarquia de células é incorporado ao processador de consultas. Portanto apenas as células de nível mais profundo precisam ser registradas no índice minimizando as informações que o índice precisa armazenar.  
   
- Na ilustração seguinte, um polígono em forma de diamante relativamente pequeno é incluído no mosaico. O índice usa o limite de células por objeto padrão de 16 que não é atingido para esse objeto pequeno. Portanto, o mosaico continua descendo até o nível 4. O polígono reside nas células de nível 1 até as células de nível 3: 4, 4.4 e 4.4.10 e 4.4.14. No entanto, usando a regra de célula mais profunda, o mosaico conta apenas doze a células de nível 4: 4.4.10.13-15 e 4.4.14.1-3, 4.4.14.5-7 e 4.4.14.9-11.  
+ Na ilustração seguinte, um polígono em forma de diamante relativamente pequeno é incluído no mosaico. O índice usa o limite de células por objeto padrão de 16 que não é atingido para esse objeto pequeno. Portanto, o mosaico continua descendo até o nível 4. O polígono reside nas células de nível 1 até as células de nível 3: 4, 4.4, 4.4.10 e 4.4.14. Entretanto, usando a regra da célula mais profunda, o mosaico conta apenas as doze células de nível 4: 4.4.10.13-15, 4.4.14.1-3, 4.4.14.5-7 e 4.4.14.9-11.  
   
  ![Otimização de célula mais profunda](../../database-engine/media/spndx-opt-deepest-cell.gif "Otimização de célula mais profunda")  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66014018"
 >  É possível especificar explicitamente esse esquema de mosaico usando a cláusula USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) da instrução [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
 ##### <a name="the-bounding-box"></a>A caixa delimitadora  
- Dados geométricos ocupam um plano que pode ser infinito. Porém, no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um índice espacial requer um espaço finito. Para estabelecer um espaço finito para decomposição, o esquema de mosaico de grade geométrica requer uma *caixa delimitadora*retangular. A caixa delimitadora é definida por quatro coordenadas, `(` _x mínima_**,**_y-min_ `)` e `(` _xmáxima_ **,**_y-max_`)`, que são armazenadas como propriedades do índice espacial. Essas coordenadas representam o seguinte:  
+ Dados geométricos ocupam um plano que pode ser infinito. Porém, no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um índice espacial requer um espaço finito. Para estabelecer um espaço finito para decomposição, o esquema de mosaico de grade geométrica requer uma *caixa delimitadora*retangular. A caixa delimitadora é definida por quatro coordenadas, `(` _x mínima_ **,** _y-min_ `)` e `(` _xmáxima_ **,** _y-max_`)`, que são armazenadas como propriedades do índice espacial. Essas coordenadas representam o seguinte:  
   
 -   *x-min* é a coordenada X do canto inferior esquerdo da caixa delimitadora.  
   
@@ -140,11 +140,11 @@ ms.locfileid: "66014018"
 > [!NOTE]  
 >  Essas coordenadas são especificadas pela cláusula BOUNDING_BOX da instrução [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
- O `(` _x-min_**,**_y-min_ `)` e `(` _x-max_**,** _y-max_ `)` coordenadas determinam o posicionamento e as dimensões da caixa delimitadora. O espaço fora da caixa delimitadora é tratado como uma única célula numerada como 0.  
+ O `(` _x-min_ **,** _y-min_ `)` e `(` _x-max_ **,** _y-max_ `)` coordenadas determinam o posicionamento e as dimensões da caixa delimitadora. O espaço fora da caixa delimitadora é tratado como uma única célula numerada como 0.  
   
  O índice espacial decompõe o espaço dentro da caixa delimitadora. A grade de nível 1 da hierarquia de grade preenche a caixa delimitadora. Para colocar um objeto geométrico na hierarquia da grade, o índice espacial compara as coordenadas do objeto com as coordenadas da caixa delimitadora.  
   
- A ilustração a seguir mostra os pontos definidos pela `(` _x mínima_**,**_y-min_ `)` e `(` _x máxima_  **,**_y-max_ `)` coordenadas da caixa delimitadora. O nível superior da hierarquia da grade é mostrado como uma grade de 4x4. Para fins ilustrativos, os níveis inferiores são omitidos. O espaço fora da caixa delimitadora é indicado por um zero (0). Observe que o objeto 'A' se estende parcialmente além da caixa e o objeto 'B' está completamente fora da caixa na célula 0.  
+ A ilustração a seguir mostra os pontos definidos pela `(` _x mínima_ **,** _y-min_ `)` e `(` _x máxima_  **,** _y-max_ `)` coordenadas da caixa delimitadora. O nível superior da hierarquia da grade é mostrado como uma grade de 4x4. Para fins ilustrativos, os níveis inferiores são omitidos. O espaço fora da caixa delimitadora é indicado por um zero (0). Observe que o objeto 'A' se estende parcialmente além da caixa e o objeto 'B' está completamente fora da caixa na célula 0.  
   
  ![Caixa delimitadora que mostra as coordenadas e a célula 0.](../../database-engine/media/spndx-bb-4x4-objects.gif "Caixa delimitadora que mostra as coordenadas e a célula 0.")  
   
@@ -179,7 +179,7 @@ ms.locfileid: "66014018"
 ##  <a name="methods"></a> Métodos com suporte de índices espaciais  
   
 ###  <a name="geometry"></a> Métodos de geometria com suporte de índices espaciais  
- Índices espaciais oferecem suporte para os seguintes métodos de geometria orientados a conjunto sob determinadas condições: Stcontains (), stdistance (), stequals (), stintersects (), stoverlaps (), Sttouches e stwithin (). Para que tenham suporte em um índice espacial, esses métodos devem ser usados dentro da cláusula WHERE ou JOIN ON de uma consulta e ocorrer dentro de um predicado com o seguinte formato geral:  
+ Os índices espaciais dão suporte aos seguintes métodos de geometria orientados a conjunto em determinadas condições: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() e STWithin(). Para que tenham suporte em um índice espacial, esses métodos devem ser usados dentro da cláusula WHERE ou JOIN ON de uma consulta e ocorrer dentro de um predicado com o seguinte formato geral:  
   
  *geometry1*.*method_name*(*geometry2*)*comparison_operator**valid_number*  
   
@@ -204,7 +204,7 @@ ms.locfileid: "66014018"
 -   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1  
   
 ###  <a name="geography"></a> Métodos de geografia com suporte de índices espaciais  
- Sob certas condições, índices espaciais oferecem suporte a métodos de Geografia orientados a conjunto a seguir: Stintersects e stdistance (). Para que tenham suporte de um índice espacial, esses métodos devem ser usados dentro da cláusula WHERE de uma consulta e ocorrer dentro de um predicado do seguinte formulário geral:  
+ Em determinadas condições, os índices espaciais dão suporte aos seguintes métodos de geografia orientados a conjunto: STIntersects(), STEquals() e STDistance(). Para que tenham suporte de um índice espacial, esses métodos devem ser usados dentro da cláusula WHERE de uma consulta e ocorrer dentro de um predicado do seguinte formulário geral:  
   
  *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*  
   

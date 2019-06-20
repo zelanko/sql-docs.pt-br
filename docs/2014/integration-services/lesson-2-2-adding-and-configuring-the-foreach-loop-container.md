@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e07d71e77fc3de250ca01bb4e7fb2fb0bf15817
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767518"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Etapa 2: Adicionar e configurar o contêiner Loop Foreach
@@ -45,7 +45,7 @@ ms.locfileid: "62767518"
   
 4.  No **Editor de Loop Foreach** caixa de diálogo a **gerais** página, para **nome**, digite `Foreach File in Folder`. Clique em **OK**.  
   
-5.  O contêiner Foreach Loop com o botão direito, clique em **propriedades**e na janela Propriedades, verifique se o `LocaleID` estiver definida como **inglês (Estados Unidos)**.  
+5.  O contêiner Foreach Loop com o botão direito, clique em **propriedades**e na janela Propriedades, verifique se o `LocaleID` estiver definida como **inglês (Estados Unidos)** .  
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>Para configurar o enumerador para o contêiner Loop Foreach  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62767518"
   
 1.  Clique em **Mapeamentos de Variáveis**.  
   
-2.  Na página **Mapeamentos de Variáveis**, na coluna **Variável**, clique na célula vazia e selecione **\<Nova Variável...>**.  
+2.  Na página **Mapeamentos de Variáveis**, na coluna **Variável**, clique na célula vazia e selecione **\<Nova Variável...>** .  
   
 3.  No **Adicionar variável** caixa de diálogo, para **nome**, tipo `varFileName`.  
   

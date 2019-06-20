@@ -12,10 +12,10 @@ author: stevestein
 ms.author: sstein
 manager: jroth
 ms.openlocfilehash: 1be7f5b9fdc53f013908dc22464c28cbc219bd78
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795582"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gerenciar servidores e bancos de dados com os widgets de Insights em [!INCLUDE[name-sos](../includes/name-sos-short.md)]

@@ -12,13 +12,13 @@ author: yualan
 ms.author: alayu
 manager: jroth
 ms.openlocfilehash: 743bf6f78fa84f628a20bed23af0ace8cf23d06f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798023"
 ---
-# <a name="sql-server-central-management-servers-extension-preview"></a>Extensão de servidores centrais de gerenciamento do SQL Server (versão prévia)
+# <a name="sql-server-central-management-servers-extension-preview"></a>Extensão de Servidores de Gerenciamento Central do SQL Server (versão prévia)
 A extensão de servidores centrais de gerenciamento permite aos usuários armazenar uma lista de instâncias do SQL Server que é organizado em um ou mais grupos. As ações executadas usando um grupo CMS agir em todos os servidores no grupo de servidores.
 
 Essa experiência está atualmente em visualização inicial. Relatar problemas e solicitações de recursos [aqui](https://github.com/microsoft/azuredatastudio/issues).

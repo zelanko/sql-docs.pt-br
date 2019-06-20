@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b43765b03ba42cede8c6879e749f1701f306d1f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013341"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Registrar processo de geração (SQLXML 4.0)
@@ -146,7 +146,7 @@ ms.locfileid: "66013341"
   
  Os dados XML de exemplo e as etapas para criar um exemplo de funcionamento são dados a seguir.  
   
--   Quando um  **\<cliente >** nó de elemento no arquivo de dados XML entra no escopo, o XML Bulk Load gera um registro para a tabela Cust. Carregamento em massa XML, em seguida, copia os valores de coluna necessárias (CustomerID, CompanyName e City) da  **\<CustomerID >**,  **\<CompanyName >** e o  **\<Cidade >** elementos filho como esses elementos entrarem no escopo.  
+-   Quando um  **\<cliente >** nó de elemento no arquivo de dados XML entra no escopo, o XML Bulk Load gera um registro para a tabela Cust. Carregamento em massa XML, em seguida, copia os valores de coluna necessárias (CustomerID, CompanyName e City) da  **\<CustomerID >** ,  **\<CompanyName >** e o  **\<Cidade >** elementos filho como esses elementos entrarem no escopo.  
   
 -   Quando um  **\<ordem >** nó de elemento entra no escopo, o XML Bulk Load gera um registro para a tabela CustOrder. Carregamento em massa XML copia o valor da **OrderID** de atributo para este registro. O valor necessário para a coluna CustomerID é obtida o  **\<CustomerID >** elemento filho do  **\<cliente >** elemento. O XML Bulk Load usa as informações que são especificadas no `<sql:relationship>` para obter o valor da chave estrangeiro CustomerID para este registro, a menos que o **CustomerID** atributo foi especificado no  **\<ordem >** elemento. A regra geral é que, se o elemento filho especifica explicitamente um valor para o atributo de chave estrangeira, o Carregamento em massa XML usará esse valor e não obterá o valor do elemento pai usando o `<sql:relationship>` especificado. Como isso  **\<ordem >** nó de elemento sai do escopo, carregamento em massa XML envia o registro de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, processa todos os próximos  **\<Order >** nós de elemento da mesma maneira.  
   

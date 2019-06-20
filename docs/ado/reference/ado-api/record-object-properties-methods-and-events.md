@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: ecb09e15a0d54573cf921a5b2a7633c9d1e61704
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66712297"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto Record
@@ -53,7 +53,7 @@ ms.locfileid: "66712297"
   
  [Método Open (Registro do ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Nenhum.  
   
 ## <a name="see-also"></a>Consulte também  

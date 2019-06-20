@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678624"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Ativar ou desativar o dispositivo de energia para o Analytics Platform System
@@ -39,7 +39,7 @@ Antes de desligar o dispositivo, você deve encerrar todas as atividades no disp
 > [!WARNING]  
 > Todas as etapas devem ser executadas na ordem exata listada e cada etapa deve ser concluída antes que a próxima etapa é executada, a menos que indicado o contrário. Executando etapas fora de ordem ou sem aguardar concluir cada etapa pode resultar em erros quando o dispositivo é ligado em um momento posterior.  
   
-1.  Conectar-se ao nó de controle do PDW (**_PDW_region_-CTL01** ) e faça logon com a conta de administrador de domínio de dispositivo do Analytics Platform System.  
+1.  Conectar-se ao nó de controle do PDW ( **_PDW_region_-CTL01** ) e faça logon com a conta de administrador de domínio de dispositivo do Analytics Platform System.  
   
 2.  Execute `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` para abrir o **Configuration Manager**.  
   

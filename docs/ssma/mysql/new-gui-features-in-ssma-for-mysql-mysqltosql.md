@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 095f8e45c85a74bae9b15af63454846532bbc8c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63311864"
 ---
 # <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>Novos recursos de GUI no SSMA para MySQL (MySQLToSQL)

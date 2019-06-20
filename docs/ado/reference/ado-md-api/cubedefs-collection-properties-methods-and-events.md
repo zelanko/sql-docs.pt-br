@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: c60d01af54dc19f0b89bbe516c096b89ac55efc5
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66709334"
 ---
 # <a name="cubedefs-collection-properties-methods-and-events"></a>Propriedades, métodos e eventos da coleção CubeDefs
@@ -29,7 +29,7 @@ ms.locfileid: "66709334"
 ## <a name="methods"></a>Métodos  
  [Método Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Nenhum.  
   
 ## <a name="see-also"></a>Consulte também  

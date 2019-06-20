@@ -23,17 +23,17 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1d8a6390ded6250355936dbef29051f76be14266
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980690"
 ---
 # <a name="specifying-the-sqlinverse-attribute-on-sqlrelationship-sqlxml-40"></a>Especificando o atributo sql:inverse em sql:relationship (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   O **SQL: Inverse** atributo é útil somente quando o esquema XSD é usado para o carregamento em massa ou por um diagrama de atualização. O **SQL: Inverse** atributo pode ser especificado na  **\<SQL: Relationship >** elemento. Em diagramas de atualização, a lógica do diagrama de atualização interpreta o esquema ao determinar as tabelas e as colunas atualizadas pela operação do diagrama. As relações de pai/filho especificadas no esquema determinam a ordem na qual os registros são modificados (inseridos ou excluídos).  
   
- Se você tiver um esquema XSD no qual a relação pai/filho é especificada na ordem inversa da relação chave primária/chave estrangeira entre as colunas de banco de dados correspondentes, a operação do diagrama de atualização de inserção ou exclusão falhará por conta da violação da chave primária/chave estrangeira. Nesses casos, o **SQL: Inverse** atributo for especificado (**SQL: Inverse = "true"**) na  **\<SQL: Relationship >** elemento e a lógica do diagrama Inverte sua interpretação da relação pai-filho especificada no esquema.  
+ Se você tiver um esquema XSD no qual a relação pai/filho é especificada na ordem inversa da relação chave primária/chave estrangeira entre as colunas de banco de dados correspondentes, a operação do diagrama de atualização de inserção ou exclusão falhará por conta da violação da chave primária/chave estrangeira. Nesses casos, o **SQL: Inverse** atributo for especificado (**SQL: Inverse = "true"** ) na  **\<SQL: Relationship >** elemento e a lógica do diagrama Inverte sua interpretação da relação pai-filho especificada no esquema.  
   
  O **SQL: Inverse** atributo tem um valor booleano (0 = false, 1 = true). Os valores aceitáveis são 0, 1, true e false.  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e6dadcc53120ce112ad3e9044e38bf14a525fded
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404078"
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lição 5-4: definindo granularidade da dimensão dentro de um grupo de medidas
@@ -127,7 +127,7 @@ Nas tarefas deste tópico, você adicionará um grupo de medidas Cotas de Vendas
   
     Observe que as dimensões do cubo **Funcionário** e **Data** são vinculadas aos grupos de medidas **Cotas de Vendas e Cotas de Vendas 1** por meio de relações regulares. Observe também que a dimensão do cubo **Região de Vendas** não está vinculada a nenhum desses grupos de medidas.  
   
-4.  Clique na célula na interseção de **território de vendas** dimensão e o **cotas de vendas** grupo de medidas e, em seguida, clique no botão Procurar (**...** ). A caixa de diálogo **Definir Relação** é aberta.  
+4.  Clique na célula na interseção de **território de vendas** dimensão e o **cotas de vendas** grupo de medidas e, em seguida, clique no botão Procurar ( **...** ). A caixa de diálogo **Definir Relação** é aberta.  
   
 5.  Na lista **Selecionar tipo de relação** , selecione **Referenciada**.  
   
@@ -141,7 +141,7 @@ Nas tarefas deste tópico, você adicionará um grupo de medidas Cotas de Vendas
   
 10. Clique em **OK**.  
   
-11. Clique na célula na interseção de **território de vendas** dimensão e o **cotas de vendas 1** grupo de medidas e, em seguida, clique no botão Procurar (**...** ). A caixa de diálogo **Definir Relação** é aberta.  
+11. Clique na célula na interseção de **território de vendas** dimensão e o **cotas de vendas 1** grupo de medidas e, em seguida, clique no botão Procurar ( **...** ). A caixa de diálogo **Definir Relação** é aberta.  
   
 12. Na lista **Selecionar tipo de relação** , selecione **Referenciada**.  
   
@@ -163,7 +163,7 @@ Nas tarefas deste tópico, você adicionará um grupo de medidas Cotas de Vendas
   
     Renomear a dimensão do cubo **Order Date** como **Date** faz com que os usuários entendam com mais facilidade que essa é a dimensão de data primária desse cubo.  
   
-20. Clique no botão Procurar (**...** ) na célula na interseção de **cotas de vendas** grupo de medidas e a **data** dimensão.  
+20. Clique no botão Procurar ( **...** ) na célula na interseção de **cotas de vendas** grupo de medidas e a **data** dimensão.  
   
 21. Na caixa de diálogo **Definir Relação** , selecione **Regular** na lista **Selecionar tipo de relação** .  
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 795e27c020c9ea4c80c858da734ebd315d56615c
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012663"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Especificando um caminho para o local (SQLXML 4.0)
@@ -38,7 +38,7 @@ ms.locfileid: "66012663"
      Um caminho de local relativo inicia no nó de contexto no documento. Um caminho de local consiste em uma sequência de uma ou mais etapas de local separada por uma barra (/). Cada etapa seleciona um conjunto de nós relativo ao nó de contexto. A sequência inicial de etapas seleciona um conjunto de nós relativo a um nó de contexto. Cada nó nesse conjunto é usado como um nó de contexto para a etapa seguinte. São unidos os conjuntos de nós identificados por esta etapa. Por exemplo, **Child/child::OrderDetail** seleciona o  **\<OrderDetail >** filhos do elemento a  **\<ordem >** elemento filhos do nó de contexto.  
   
     > [!NOTE]  
-    >  Na implementação de XPath do SQLXML 4.0, todas as consultas XPath começam no contexto raiz, mesmo que o XPath não seja explicitamente absoluto. Por exemplo, uma consulta XPath que comece com "Customer" é tratada como "/Customer". Na consulta XPath **Customer [Order]**, Customer começa no contexto raiz, mas Order começa no contexto de cliente. Para obter mais informações, consulte [Introdução a consultas de XPath usando &#40;SQLXML 4.0&#41;](../introduction-to-using-xpath-queries-sqlxml-4-0.md).  
+    >  Na implementação de XPath do SQLXML 4.0, todas as consultas XPath começam no contexto raiz, mesmo que o XPath não seja explicitamente absoluto. Por exemplo, uma consulta XPath que comece com "Customer" é tratada como "/Customer". Na consulta XPath **Customer [Order]** , Customer começa no contexto raiz, mas Order começa no contexto de cliente. Para obter mais informações, consulte [Introdução a consultas de XPath usando &#40;SQLXML 4.0&#41;](../introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
 ## <a name="location-steps"></a>Etapas de local  
  Um caminho de local (absoluto ou relativo) é composto por etapas de local que contêm três partes:  
@@ -49,7 +49,7 @@ ms.locfileid: "66012663"
   
 -   **teste de nó**  
   
-     Um teste de nó especifica o tipo de nó selecionado pela etapa de local. Todos os eixos (`child`, `parent`, `attribute` e `self`) têm um tipo de nó principal. Para o `attribute` eixo, o tipo de nó principal é  **\<atributo >**. Para o `parent`, `child`, e `self` eixos, o tipo de nó principal é  **\<elemento >**.  
+     Um teste de nó especifica o tipo de nó selecionado pela etapa de local. Todos os eixos (`child`, `parent`, `attribute` e `self`) têm um tipo de nó principal. Para o `attribute` eixo, o tipo de nó principal é  **\<atributo >** . Para o `parent`, `child`, e `self` eixos, o tipo de nó principal é  **\<elemento >** .  
   
      Por exemplo, se o caminho do local especifica **child::Customer**, o  **\<cliente >** elementos filhos do nó de contexto são selecionados. Porque o `child` eixo tiver  **\<elemento >** como seu tipo de nó principal, o teste de nó, o cliente, será TRUE se o cliente é um  **\<elemento >** nó.  
   

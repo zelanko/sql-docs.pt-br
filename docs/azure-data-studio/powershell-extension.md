@@ -12,10 +12,10 @@ author: SQLvariant
 ms.author: aanelson
 manager: matthend
 ms.openlocfilehash: c7a2dbdccf92a52d5733a04915acc3f76dc3f033
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105957"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Suporte ao Editor do PowerShell para o Studio de dados do Azure
