@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 432438fe9a6e1b39c849188050b67f816d895187
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250205"
 ---
 # <a name="mdx-data-definition---create-member"></a>Definição de dados MDX – CREATE MEMBER
@@ -58,7 +58,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
   
  Para obter mais informações sobre propriedades do membro definidas por OLE DB, consulte a documentação OLE DB.  
   
-## <a name="scope"></a>Escopo  
+## <a name="scope"></a>Scope  
  Um membro calculado pode acontecer dentro de um dos escopos listados na tabela a seguir.  
   
  Escopo de consulta  

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c050efd2f309ccec76b80fd24b519e7d2389e4ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126070"
 ---
 # <a name="add-a-data-source-odbc"></a>Adicionar uma fonte de dados (ODBC)
@@ -24,7 +24,7 @@ ms.locfileid: "63126070"
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>Para adicionar uma fonte de dados usando o Administrador ODBC  
   
-1.  Dos **painel de controle**, acesso **ferramentas administrativas** e, em seguida, **fontes de dados (ODBC)**. Como alternativa, você pode invocar odbcad32.exe.  
+1.  Dos **painel de controle**, acesso **ferramentas administrativas** e, em seguida, **fontes de dados (ODBC)** . Como alternativa, você pode invocar odbcad32.exe.  
   
 2.  Clique o **DSN de usuário**, **DSN de sistema**, ou **DSN de arquivo** guia e, em seguida, clique em **adicionar**.  
   

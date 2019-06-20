@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b3a6620b3cfdc5a450f54754b1260abe543e122d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806820"
 ---
 # <a name="toolbox-component-f1-help"></a>Ajuda de F1 do componente Caixa de Ferramentas
@@ -26,7 +26,7 @@ A**Caixa de Ferramentas** exibe uma série de itens para serem usados em projeto
 **Caixa de ferramentas** ícones podem ser arrastados e descartados ou copiados e colados em editores de código ou a exibição de superfícies de design dentro do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="using-the-toolbox"></a>Usando a Caixa de Ferramentas  
- A Caixa de Ferramentas é um controle de árvore deslizante com comportamento parecido com o do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Explorer, mas sem linhas de grade ou de conexão. Vários segmentos da **Caixa de Ferramentas** (chamados de "guias") podem ser expandidos ao mesmo tempo e toda a árvore rola dentro da janela da **Caixa de Ferramentas** . Para expandir qualquer guia da **Caixa de Ferramentas**, clique no sinal de mais (**+**) próximo ao seu nome. Para recolher uma guia expandida, clique no sinal de menos (**-**) próximo a seu nome.  
+ A Caixa de Ferramentas é um controle de árvore deslizante com comportamento parecido com o do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Explorer, mas sem linhas de grade ou de conexão. Vários segmentos da **Caixa de Ferramentas** (chamados de "guias") podem ser expandidos ao mesmo tempo e toda a árvore rola dentro da janela da **Caixa de Ferramentas** . Para expandir qualquer guia da **Caixa de Ferramentas**, clique no sinal de mais ( **+** ) próximo ao seu nome. Para recolher uma guia expandida, clique no sinal de menos ( **-** ) próximo a seu nome.  
   
  Sempre que você retorna para um editor ou designer, a **Caixa de Ferramentas** automaticamente rola para a guia e o item selecionados mais recentemente. À medida que você desloca o foco para um editor ou designer diferente, a seleção atual na **Caixa de Ferramentas** se desloca com você.  
   

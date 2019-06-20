@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010722"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Especificando eixos em consultas XPath (SQLXML 4.0)
@@ -90,7 +90,7 @@ ms.locfileid: "66010722"
 /child::Customer/child::Order  
 ```  
   
- Na consulta, `child` é o eixo e `Customer` e `Order` são os testes de nó (estes testes de nó são TRUE se Customer e Order forem  **\<elemento >** nós, porque o  **\<elemento >** nó é o nó principal para o `child` eixo). Para cada nó que corresponde  **\<cliente >**, os nós que correspondem  **\<pedidos >** são adicionados ao resultado. Somente  **\<ordem >** é retornado no conjunto de resultados.  
+ Na consulta, `child` é o eixo e `Customer` e `Order` são os testes de nó (estes testes de nó são TRUE se Customer e Order forem  **\<elemento >** nós, porque o  **\<elemento >** nó é o nó principal para o `child` eixo). Para cada nó que corresponde  **\<cliente >** , os nós que correspondem  **\<pedidos >** são adicionados ao resultado. Somente  **\<ordem >** é retornado no conjunto de resultados.  
   
  O eixo `child` é o padrão. Assim, a consulta pode ser especificada como:  
   
@@ -159,7 +159,7 @@ ms.locfileid: "66010722"
 </ROOT>  
 ```  
   
- Se a consulta XPath é especificada como `Customer/Order/OrderDetail`, de cada nó que corresponde  **\<cliente >** a consulta navegará para sua  **\<Order >** elementos. E para cada nó que corresponde  **\<ordem >**, a consulta adiciona nós  **\<OrderDetail >** ao resultado. Somente  **\<OrderDetail >** é retornado no conjunto de resultados.  
+ Se a consulta XPath é especificada como `Customer/Order/OrderDetail`, de cada nó que corresponde  **\<cliente >** a consulta navegará para sua  **\<Order >** elementos. E para cada nó que corresponde  **\<ordem >** , a consulta adiciona nós  **\<OrderDetail >** ao resultado. Somente  **\<OrderDetail >** é retornado no conjunto de resultados.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. Usar . para especificar o eixo pai  
  A consulta a seguir recupera todos os  **\<ordem >** elementos com um pai  **\<cliente >** elemento com um **CustomerID** atributo valor de 1. A consulta usa o `child` eixo no predicado para localizar o pai do  **\<ordem >** elemento.  
@@ -181,7 +181,7 @@ ms.locfileid: "66010722"
 ```  
   
 > [!NOTE]  
->  A consulta XPath `/Order[../@CustomerID="1"]` retornará um erro porque não há nenhum pai de  **\<ordem >**. Embora possa haver elementos no esquema de mapeamento que contêm  **\<ordem >**, o XPath não começou em qualquer um deles; Consequentemente,  **\<Order >** é considerado o tipo de elemento de nível superior no documento.  
+>  A consulta XPath `/Order[../@CustomerID="1"]` retornará um erro porque não há nenhum pai de  **\<ordem >** . Embora possa haver elementos no esquema de mapeamento que contêm  **\<ordem >** , o XPath não começou em qualquer um deles; Consequentemente,  **\<Order >** é considerado o tipo de elemento de nível superior no documento.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para testar a consulta XPath com relação ao esquema de mapeamento  
   

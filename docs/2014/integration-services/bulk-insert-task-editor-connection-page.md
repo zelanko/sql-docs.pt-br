@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6834a2a4cd75e70de253419cc42ec5904ce0793
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061217"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>Editor da Tarefa Inserção em Massa (página Conexão)
@@ -28,7 +28,7 @@ ms.locfileid: "66061217"
   
 ## <a name="options"></a>Opções  
  **Conexão**  
- Selecione um gerenciador de conexões do OLE DB na lista ou clique em \<**Nova conexão…**> para criar uma nova conexão.  
+ Selecione um gerenciador de conexões do OLE DB na lista ou clique em \<**Nova conexão…** > para criar uma nova conexão.  
   
  **Tópicos relacionados:** [Gerenciador de Conexão do OLE DB](connection-manager/ole-db-connection-manager.md), [configurar Gerenciador de Conexão do OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66061217"
 |**Especificar**|Especifique o formato. Selecionar esta opção exibe as opções dinâmicas `RowDelimiter` e `ColumnDelimiter`.|  
   
  **File**  
- Selecione um gerenciador de conexões de Arquivo Simples na lista ou clique em \<**Nova conexão…**> para criar uma nova conexão.  
+ Selecione um gerenciador de conexões de Arquivo Simples na lista ou clique em \<**Nova conexão…** > para criar uma nova conexão.  
   
  O local do arquivo está relacionado ao Mecanismo de Banco de Dados do SQL Server especificado no gerenciador de conexões para esta tarefa. O arquivo de texto deve ser acessível pelo Mecanismo de Banco de Dados do SQL Server em um disco rígido local no servidor, por um compartilhamento ou unidade mapeada para o SQL Server. O arquivo não pode ser acessado pelo Tempo de Execução do SSIS.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66061217"
   
 ### <a name="format--specify"></a>Formato = Especificar  
  `RowDelimiter`  
- Especifique o delimitador de linhas no arquivo de origem. O valor padrão é **{CR}{LF}**.  
+ Especifique o delimitador de linhas no arquivo de origem. O valor padrão é **{CR}{LF}** .  
   
  `ColumnDelimiter`  
  Especifique o delimitador de colunas no arquivo de origem. O padrão é **Tab**.  

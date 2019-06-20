@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 24d605c3ca3374a41fa080a861b64001c36f3ef2
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63019227"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263326"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilidade de fórmula do DAX no modo DirectQuery 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,10 +45,10 @@ Essas funções não foram otimizadas para funcionar com DirectQuery. Essas fun�
 
 Os motivos de uma função específica não ser otimizada para DirectQuery é porque o mecanismo relacional subjacente não pode executar cálculos equivalentes àqueles executados pelo mecanismo xVelocity, ou então a fórmula não pode ser convertida em uma expressão SQL equivalente. Em outros casos, o desempenho da expressão convertida e dos cálculos resultantes poderia ser inaceitável.
 
-Para saber mais sobre todas as funções DAX, consulte a [referência de função DAX]. (https://msdn.microsoft.com/library/ee634396.aspx)
+Para saber mais sobre todas as funções DAX, consulte o [referência de função DAX](/dax/dax-function-reference).
 
 ## <a name="dax-operators-in-directquery-mode"></a>Operadores DAX no modo DirectQuery
-Todos os operadores de comparação e de aritmética DAX têm suporte total no modo DirectQuery. Para obter mais informações, consulte [Referência de operador DAX](https://msdn.microsoft.com/library/ee634237.aspx).
+Todos os operadores de comparação e de aritmética DAX têm suporte total no modo DirectQuery. Para obter mais informações, consulte [Referência de operador DAX](/dax/dax-operator-reference).
 
 
  
@@ -160,7 +160,7 @@ O SQL Server trata nulos e espaços em branco de modo diferente do mecanismo xVe
   
 As mesmas limitações se aplicam a outras funções logarítmicas: LOG10 e LN.  
   
-Para obter mais informações sobre o tipo de dados **blank** na DAX, consulte [Referência de sintaxe DAX](https://msdn.microsoft.com/library/ee634217.aspx).  
+Para obter mais informações sobre o tipo de dados **blank** na DAX, consulte [Referência de sintaxe DAX](/dax/dax-syntax-reference).  
   
 **Divisão por 0 e divisão por espaço em branco**  
 No modo DirectQuery, a divisão por zero (0) ou a divisão por BLANK sempre resultará em um erro. O SQL Server não oferece suporte à noção de infinito e, como o resultado natural de qualquer divisão por 0 é infinito, o resultado é um erro. No entanto, o SQL Server oferece suporte à divisão por nulos e o resultado sempre deve ser igual a nulo.  

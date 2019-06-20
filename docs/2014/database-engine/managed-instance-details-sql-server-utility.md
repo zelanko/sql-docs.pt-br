@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774336"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Detalhes de instâncias gerenciadas (Utilitário do SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "62774336"
   
  A sequência de colunas da exibição de lista pode ser alterada arrastando-se as colunas para a esquerda ou para a direita. Para adicionar ou excluir colunas da exibição de lista, clique com o botão direito do mouse nos títulos das colunas e selecione ou desmarque colunas. O menu de atalho também fornece opções de classificação. A classificação também pode ser ativada clicando-se na parte superior do nome de uma coluna.  
   
- Para acessar as opções de filtro da exibição de lista do Utilitário, clique com o botão direito do mouse no nó **Instâncias Gerenciadas** no painel de navegação do Gerenciador do Utilitário e selecione **Filtrar**. Depois que as configurações de filtro forem implementadas, o nó **Instâncias Gerenciadas** no Gerenciador do Utilitário será rotulado **Instâncias Gerenciadas (filtradas)**. Para obter mais informações, consulte [Configurações de filtro &#40;Pesquisador de Objetos e Gerenciador do Utilitário&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
+ Para acessar as opções de filtro da exibição de lista do Utilitário, clique com o botão direito do mouse no nó **Instâncias Gerenciadas** no painel de navegação do Gerenciador do Utilitário e selecione **Filtrar**. Depois que as configurações de filtro forem implementadas, o nó **Instâncias Gerenciadas** no Gerenciador do Utilitário será rotulado **Instâncias Gerenciadas (filtradas)** . Para obter mais informações, consulte [Configurações de filtro &#40;Pesquisador de Objetos e Gerenciador do Utilitário&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
   
  Por padrão, as colunas a seguir exibem informações do estado de integridade de cada instância gerenciada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

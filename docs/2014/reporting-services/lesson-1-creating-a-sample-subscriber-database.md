@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e68650b21ee8cddc6258ab64b874bcf51ec1a83
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108534"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lição 1: Criando um banco de dados do assinante de exemplo
@@ -26,7 +26,7 @@ ms.locfileid: "66108534"
   
 1.  Inicie o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] e abra uma conexão com um [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
-2.  Clique com o botão direito do mouse em Bancos de Dados e selecione **Novo Banco de Dados...**.  
+2.  Clique com o botão direito do mouse em Bancos de Dados e selecione **Novo Banco de Dados...** .  
   
 3.  Na caixa de diálogo novo banco de dados, em nome do banco de dados, digite *assinantes*. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

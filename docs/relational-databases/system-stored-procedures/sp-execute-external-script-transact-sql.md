@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f11b09d93510fe1da89abc1a723e7698f1fdd915
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 77d5386f05e371a2e653f4f6097257e99457e910
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531038"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046717"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -78,9 +78,9 @@ sp_execute_external_script
  **@language** = N'*language*'  
  Indica a linguagem de script. *linguagem* está **sysname**.  Dependendo da sua versão do SQL Server, os valores válidos são R (SQL Server 2016 e posterior), (SQL Server 2017 e posterior) do Python e Java (versão prévia do SQL Server 2019). 
   
- **@script** = N'*script*' especificado como uma entrada de literal ou uma variável de script de linguagem externo. *script* is **nvarchar(max)**.  
+ **@script** = N'*script*' especificado como uma entrada de literal ou uma variável de script de linguagem externo. *script* is **nvarchar(max)** .  
 
-`[ @input_data_1 =  N'input_data_1' ]` Especifica os dados de entrada usados pelo script externo na forma de um [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta. O tipo de dados *input_data_1* é **nvarchar (max)**.
+`[ @input_data_1 =  N'input_data_1' ]` Especifica os dados de entrada usados pelo script externo na forma de um [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta. O tipo de dados *input_data_1* é **nvarchar (max)** .
 
 `[ @input_data_1_name = N'input_data_1_name' ]` Especifica o nome da variável usado para representar a consulta definida pelo @input_data_1. O tipo de dados da variável no script externo depende do idioma. No caso de R, a variável de entrada é um quadro de dados. No caso do Python, a entrada deve ser tabular. *input_data_1_name* está **sysname**.  Valor padrão é *InputDataSet*.  
 
@@ -124,7 +124,7 @@ Execução de script de monitor usando [DM external_script_requests](../../relat
 
  No SQL Server de 2019, atualmente em visualização pública, você pode definir dois parâmetros adicionais que permitem a modelagem de dados particionados, onde as partições são baseadas em um ou mais colunas você fornecer que naturalmente segmentar um conjunto de dados em partições lógicas criadas e usadas somente durante a execução do script. Colunas que contêm valores repetidos para idade, sexo, região geográfica, data ou hora, estão alguns exemplos que servem para conjuntos de dados particionados.
  
- Os dois parâmetros forem **input_data_1_partition_by_columns** e **input_data_1_order_by_columns**, em que o segundo parâmetro é usado para ordenar o conjunto de resultados. Os parâmetros são passados como entradas para `sp_execute_external_script` com o script externo que executa uma vez para cada partição. Para obter mais informações e exemplos, consulte [Tutorial: Criar modelos com base em partição](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).
+ Os dois parâmetros forem **input_data_1_partition_by_columns** e **input_data_1_order_by_columns**, em que o segundo parâmetro é usado para ordenar o conjunto de resultados. Os parâmetros são passados como entradas para `sp_execute_external_script` com o script externo que executa uma vez para cada partição. Para obter mais informações e exemplos, consulte [Tutorial: Criar modelos com base em partição](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition).
 
  Você pode executar o script em paralelo com a especificação de `@parallel=1`. Se a consulta de entrada pode ser paralelizada, defina `@parallel=1` como parte de seus argumentos como `sp_execute_external_script`. Por padrão, o otimizador de consulta opera em `@parallel=1` em tabelas com mais de 256 linhas, mas se você quiser lidar com isso explicitamente, esse script inclui o parâmetro como uma demonstração.
 

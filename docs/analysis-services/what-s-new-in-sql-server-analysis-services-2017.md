@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 711b577b737b48012e1bed0a52ba599cf17b3d8f
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 1f322b395f897780f3693d1186767aeef7dbfd4a
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685753"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263272"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>O que há de novo no SQL Server 2017 Analysis Services
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -38,7 +38,7 @@ No SSDT, é possível selecionar o novo nível de compatibilidade 1400 ao criar 
 ![AS_NewTabular1400Project](../analysis-services/media/as-newtabular1400project.png)
 
 
-Para atualizar um modelo tabular existente no SSDT, no Gerenciador de soluções, clique com botão direito **Model. BIM**e, em seguida, na **Properties**, defina o **nível de compatibilidade** propriedade  **SQL Server 2017 (1400)**. 
+Para atualizar um modelo tabular existente no SSDT, no Gerenciador de soluções, clique com botão direito **Model. BIM**e, em seguida, na **Properties**, defina o **nível de compatibilidade** propriedade  **SQL Server 2017 (1400)** . 
 
 ![AS_Model_Properties](../analysis-services/media/as-model-properties.png)
 
@@ -111,7 +111,7 @@ A propriedade **Expressão de Linhas de Detalhes** para medidas permite que os a
 
 ![AS_Detail_Rows_Expression_Property](../analysis-services/media/as-detail-rows-expression-property.png)
 
-O [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) função DAX é comumente usada em uma expressão de linhas de detalhes. O seguinte exemplo define as colunas a serem retornadas para as linhas na tabela Vendas pela Internet no modelo de tabela de exemplo do Adventure Works:
+O [SELECTCOLUMNS](/dax/selectcolumns-function-dax) função DAX é comumente usada em uma expressão de linhas de detalhes. O seguinte exemplo define as colunas a serem retornadas para as linhas na tabela Vendas pela Internet no modelo de tabela de exemplo do Adventure Works:
 
 ```
 SELECTCOLUMNS(
@@ -179,9 +179,9 @@ Esta versão inclui aprimoramentos [exibições de gerenciamento dinâmico](http
 [MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset) melhorias são incluídas para essa DMV, que é usada por várias ferramentas de cliente para mostrar a dimensionalidade de medida. Por exemplo, o recurso de explorar em tabelas dinâmicas do Excel permite ao usuário para análise entre dimensões relacionadas às medidas selecionadas. Esta versão corrige as colunas de cardinalidade, que anteriormente eram exibidos valores incorretos.
 
 ## <a name="dax-enhancements"></a>Melhorias do DAX
-Esta versão inclui suporte para novas funções de DAX e funcionalidade. Para tirar proveito, você precisa usar a versão mais recente do SSDT. Para obter mais informações, consulte [funções DAX novas](https://msdn.microsoft.com/library/mt704075.aspx).
+Esta versão inclui suporte para novas funções de DAX e funcionalidade. Para tirar proveito, você precisa usar a versão mais recente do SSDT. Para obter mais informações, consulte [funções DAX novas](/dax/new-dax-functions).
 
-Uma das partes mais importantes da nova funcionalidade DAX é a nova [operador IN CONTAINSROW de função](https://msdn.microsoft.com/library/mt842621.aspx) para expressões DAX. Isso é semelhante ao operador [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) geralmente usado para especificar vários valores em uma cláusula `WHERE` .
+Uma das partes mais importantes da nova funcionalidade DAX é a nova [operador IN CONTAINSROW de função](/dax/in-operator-containsrow-function) para expressões DAX. Isso é semelhante ao operador [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) geralmente usado para especificar vários valores em uma cláusula `WHERE` .
 
 Anteriormente, era comum especificar filtros de vários valores usando o operador lógico `OR` , como na seguinte expressão de medida:
 

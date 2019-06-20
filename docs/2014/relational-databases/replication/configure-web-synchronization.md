@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721648"
 ---
 # <a name="configure-web-synchronization"></a>Configurar Sincronização da Web
@@ -88,7 +88,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 #### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>Para aumentar Máximo de Processos do Operador no IIS 7  
   
-1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, expanda o nó do servidor local e clique no nó **Pool de Aplicativos** .  
+1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)** , expanda o nó do servidor local e clique no nó **Pool de Aplicativos** .  
   
 2.  Selecione o pool de aplicativos associado ao site de sincronização da Web e clique em **Configurações Avançadas** no painel **Ações** .  
   

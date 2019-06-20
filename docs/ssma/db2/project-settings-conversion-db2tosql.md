@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273014"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Configurações do projeto (conversão) (DB2ToSQL)
@@ -260,7 +260,7 @@ O SSMA pode converter TO_CHAR(date, format) DB2 em procedimentos do banco de dad
   
 -   Se você selecionar **função TO_CHAR_DATE usando**, SSMA converte o TO_CHAR (data, formato) em TO_CHAR_DATE função usando do idioma inglês para conversão.  
   
--   Se você selecionar **função usando TO_CHAR_DATE_LS (NLS cuidado)**, SSMA converte o TO_CHAR (data, formato) em TO_CHAR_DATE_LS função usando do idioma da sessão para conversão  
+-   Se você selecionar **função usando TO_CHAR_DATE_LS (NLS cuidado)** , SSMA converte o TO_CHAR (data, formato) em TO_CHAR_DATE_LS função usando do idioma da sessão para conversão  
   
 Quando você seleciona um modo de conversão na **modo** caixa, o SSMA aplica-se a configuração a seguir:  
   

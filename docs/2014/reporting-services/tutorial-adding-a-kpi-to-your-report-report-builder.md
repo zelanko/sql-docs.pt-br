@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a1b158b6fc504a0917e0c268846da93be3aa59b9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098982"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Adicionar um KPI ao relatório (Construtor de Relatórios)
@@ -273,7 +273,7 @@ ms.locfileid: "66098982"
   
 9. Clique em **valores e estados**.  
   
-10. Na lista suspensa de valores, selecione **[SUM (Sales)]**, mas não altere nenhuma outra opção.  
+10. Na lista suspensa de valores, selecione **[SUM (Sales)]** , mas não altere nenhuma outra opção.  
   
      Por padrão, a sincronização de dados ocorre na região de dados e o valor **Tablix1**, o nome da região de dados da tabela no relatório, é exibido na caixa **Escopo de sincronização** .  
   

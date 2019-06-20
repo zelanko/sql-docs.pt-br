@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 91dbc92eca754b99a154b062c4f40e5663a4cd9a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078398"
 ---
 # <a name="defining-calculated-members"></a>Definindo membros calculados
@@ -57,11 +57,11 @@ ms.locfileid: "66078398"
   
 5.  Arraste **Vendas pela Internet/Valor das Vendas** da guia **Metadados** no painel **Ferramentas de Cálculo** até a caixa **Expressão** no painel **Expressões de Cálculo** .  
   
-6.  No **expressão** , digite um sinal de adição (`+`) após **[Medidas]. [ Quantidade de vendas pela Internet]**.  
+6.  No **expressão** , digite um sinal de adição (`+`) após **[Medidas]. [ Quantidade de vendas pela Internet]** .  
   
 7.  Na guia **Metadados** do painel **Ferramentas de Cálculo** , expanda **Vendas do Revendedor**e arraste **Vendas do Revendedor/Valor das Vendas** até a caixa **Expressão** no painel **Expressões de Cálculos** após o sinal de adição (+).  
   
-8.  Na lista **Cadeia de caracteres de formato** , selecione **"Moeda"**.  
+8.  Na lista **Cadeia de caracteres de formato** , selecione **"Moeda"** .  
   
 9. Na lista **Comportamento Não Vazio** , marque as caixas de seleção **Vendas pela Internet/Valor das Vendas** e **Vendas do Revendedor/Valor das Vendas**e clique em **OK**.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66078398"
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
     ```  
   
-14. Na lista **Cadeia de caracteres de formato** , selecione **"Moeda"**.  
+14. Na lista **Cadeia de caracteres de formato** , selecione **"Moeda"** .  
   
 15. Na lista **Comportamento não vazio** , marque as caixas de seleção **Vendas pela Internet-Custo Total do Produto** e **Vendas do Revendedor-Custo Total do Produto**e clique em **OK**.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "66078398"
     [Measures].[Internet Sales-Sales Amount]  
     ```  
   
-4.  Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"**.  
+4.  Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"** .  
   
 5.  Na lista **Comportamento Não Vazio** , marque a caixa de seleção **Vendas pela Internet/Valor das Vendas**e clique em **OK**.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66078398"
     [Measures].[Reseller Sales-Sales Amount]  
     ```  
   
-9. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"**.  
+9. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"** .  
   
 10. Na lista **Comportamento Não Vazio** , marque a caixa de seleção **Vendas do Revendedor/Valor das Vendas**e clique em **OK**.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "66078398"
   
      Observe que esse membro calculado faz referência a outros membros calculados. Como esse membro calculado será calculado após os membros aos quais ele faz referência, trata-se de um membro calculado válido.  
   
-14. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"**.  
+14. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"** .  
   
 15. Na lista **Comportamento Não Vazio** , marque as caixas de seleção **Vendas pela Internet/Valor das Vendas** e **Vendas do Revendedor/Valor das Vendas**e clique em **OK**.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "66078398"
   
      Essa expressão MDX calcula a contribuição para totalizar as vendas pela Internet de cada produto. A instrução Case junto com a função IS EMPTY garante que não ocorra um erro de divisão por zero quando um produto não for vendido.  
   
-5.  Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"**.  
+5.  Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"** .  
   
 6.  Na lista **Comportamento Não Vazio** , marque a caixa de seleção **Vendas pela Internet/Valor das Vendas**e clique em **OK**.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "66078398"
         End  
     ```  
   
-10. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"**.  
+10. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"** .  
   
 11. Na lista **Comportamento Não Vazio** , marque a caixa de seleção **Vendas do Revendedor/Valor das Vendas**e clique em **OK**.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "66078398"
         End  
     ```  
   
-15. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"**.  
+15. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"** .  
   
 16. Na lista **Comportamento Não Vazio** , marque as caixas de seleção **Vendas pela Internet/Valor das Vendas** e **Vendas do Revendedor/Valor das Vendas**e clique em **OK**.  
   

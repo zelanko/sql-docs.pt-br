@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767498"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Lição 1: Como criar o projeto e o pacote básico
@@ -62,10 +62,10 @@ ms.locfileid: "62767498"
   
 |Nome da coluna|Tipo de dados|Tabela de pesquisa|Coluna de Pesquisa|  
 |-----------------|---------------|------------------|-------------------|  
-|AverageRate|FLOAT|None|None|  
+|AverageRate|float|None|None|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|FLOAT|None|None|  
+|EndOfDayRate|float|None|None|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>Mapeando fontes de dados compatíveis com o destino  
  Uma análise dos formatos de dados de origem e destino indicam que as pesquisas serão necessárias para os valores **CurrencyKey** e **DateKey** . As transformações que executarão essas pesquisas obterão os valores **CurrencyKey** e **DateKey** usando as chaves alternativas das tabelas de dimensões **DimCurrency** e **DimDate** .  
@@ -75,7 +75,7 @@ ms.locfileid: "62767498"
 |0|FactCurrency|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
 |2|DimDate|FullDateAlternateKey|date|  
-|3|FactCurrency|EndOfDayRate|FLOAT|  
+|3|FactCurrency|EndOfDayRate|float|  
   
 ## <a name="lesson-tasks"></a>Tarefas da lição  
  Esta lição contém as seguintes tarefas:  

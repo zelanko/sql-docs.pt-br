@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ca2bc726b0bf017ec4b3dd0451313d60ef57696
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012137"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>O que&#39;novo no SQLXML 4.0 SP1
@@ -144,7 +144,7 @@ ms.locfileid: "66012137"
   
      Essa chave é introduzida para que você possa escolher manter os caracteres com espaço em branco nos dados. Se você adicionar essa chave de registro e definir seu valor como 0, os caracteres com espaço em branco (LF, CR e tab) no XML serão retornados codificados em caso de valores de atributo. No caso de valores de elemento, somente CR é retornado codificado.  
   
-     Por exemplo:   
+     Por exemplo:  
   
     ```  
     CREATE TABLE T( Col1 int, Col2 nvarchar(100));  

@@ -1,27 +1,27 @@
 ---
 title: Classe de evento Audit Broker Conversation | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: sql
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
 ms.topic: conceptual
+topic_type:
+- apiref
 helpviewer_keywords:
 - Audit Broker Conversation event class
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e92b8dacf3f1d4c9bf4992739acc7592f2135386
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62912180"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Classe de evento Audit Broker Conversation
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um evento **Audit Broker Conversation** para relatar mensagens de auditoria relacionadas à segurança de diálogo do Service Broker.  
   
 ## <a name="audit-broker-conversation-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Broker Conversation  
@@ -48,7 +48,7 @@ ms.locfileid: "62912180"
 |**SPID**|**int**|A ID de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |**StartTime**|**datetime**|O horário no qual o evento foi iniciado, quando disponível.|14|Sim|  
 |**Estado**|**int**|Indica o local, dentro do código-fonte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que produziu o evento. Cada local que pode produzir esse evento tem um código de estado diferente. Um engenheiro de suporte da Microsoft pode usar esse código de estado para descobrir onde o evento foi produzido.|30|Não|  
-|**TextData**|**ntext**|Para erros, contém uma mensagem que descreve a razão da falha. Um dos valores seguintes:<br /><br /> <br /><br /> **Certificado não encontrado**. O usuário especificado para segurança de protocolo do diálogo não tem certificado.<br /><br /> **Não está em um período de tempo válido**. O usuário especificado para segurança de protocolo do diálogo tem um certificado, mas o certificado expirou.<br /><br /> **O certificado é muito grande para a alocação de memória**. O usuário especificado para segurança de protocolo do diálogo tem um certificado, mas o certificado é muito grande. O tamanho máximo de certificado a que Service Broker oferece suporte são 32.768 bytes.<br /><br /> **Chave privada não encontrada**. O usuário especificado para segurança de protocolo do diálogo tem um certificado, mas não existe chave privada associada ao certificado.<br /><br /> **Tamanho da chave privada do certificado incompatível com o provedor de criptografia**. A chave privada para o certificado tem um tamanho de chave que não pode ser processado com êxito. O tamanho da chave privada deve ser um múltiplo de 64 bytes.<br /><br /> **Tamanho da chave pública do certificado incompatível com o provedor de criptografia**. A chave pública para o certificado tem um tamanho de chave que não pode ser processado com êxito. O tamanho da chave pública deve ser um múltiplo de 64 bytes.<br /><br /> **Tamanho da chave privada do certificado incompatível com a chave de troca de chaves criptografada**. O tamanho de chave especificado na chave de troca de chave não corresponde ao tamanho da chave privada para o certificado. Isso geralmente indica que o certificado no computador remoto não corresponde ao certificado no banco de dados.<br /><br /> **Tamanho da chave pública do certificado incompatível com a assinatura do cabeçalho de segurança**. O cabeçalho de segurança contém uma assinatura que não pode ser validada com a chave pública do certificado. Isso geralmente indica que o certificado no computador remoto não corresponde ao certificado no banco de dados.|1|Sim|  
+|**TextData**|**ntext**|Para erros, contém uma mensagem que descreve a razão da falha. Um dos valores seguintes:<br /><br /> **Certificado não encontrado**. O usuário especificado para segurança de protocolo do diálogo não tem certificado.<br /><br /> **Não está em um período de tempo válido**. O usuário especificado para segurança de protocolo do diálogo tem um certificado, mas o certificado expirou.<br /><br /> **O certificado é muito grande para a alocação de memória**. O usuário especificado para segurança de protocolo do diálogo tem um certificado, mas o certificado é muito grande. O tamanho máximo de certificado a que Service Broker oferece suporte são 32.768 bytes.<br /><br /> **Chave privada não encontrada**. O usuário especificado para segurança de protocolo do diálogo tem um certificado, mas não existe chave privada associada ao certificado.<br /><br /> **Tamanho da chave privada do certificado incompatível com o provedor de criptografia**. A chave privada para o certificado tem um tamanho de chave que não pode ser processado com êxito. O tamanho da chave privada deve ser um múltiplo de 64 bytes.<br /><br /> **Tamanho da chave pública do certificado incompatível com o provedor de criptografia**. A chave pública para o certificado tem um tamanho de chave que não pode ser processado com êxito. O tamanho da chave pública deve ser um múltiplo de 64 bytes.<br /><br /> **Tamanho da chave privada do certificado incompatível com a chave de troca de chaves criptografada**. O tamanho de chave especificado na chave de troca de chave não corresponde ao tamanho da chave privada para o certificado. Isso geralmente indica que o certificado no computador remoto não corresponde ao certificado no banco de dados.<br /><br /> **Tamanho da chave pública do certificado incompatível com a assinatura do cabeçalho de segurança**. O cabeçalho de segurança contém uma assinatura que não pode ser validada com a chave pública do certificado. Isso geralmente indica que o certificado no computador remoto não corresponde ao certificado no banco de dados.|1|Sim|  
   
  A tabela abaixo lista os valores de subclasse para essa classe de evento.  
   

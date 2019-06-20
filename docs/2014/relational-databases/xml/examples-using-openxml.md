@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205110"
 ---
 # <a name="examples-using-openxml"></a>Exemplos: uso do OPENXML
@@ -95,7 +95,7 @@ LILAS      Carlos Gonzlez
   
  Como os elementos <`Customer`> não têm nenhum subelemento, se a mesma instrução SELECT for executada com *flags* definido como **2** para indicar mapeamento centrado em elemento, os valores de **CustomerID** e **ContactName** dos dois clientes serão retornados como NULL.  
   
- O @xmlDocument também pode ser do tipo **xml** ou do tipo **(n)varchar(max)**.  
+ O @xmlDocument também pode ser do tipo **xml** ou do tipo **(n)varchar(max)** .  
   
  Se <`CustomerID`> e <`ContactName`> no documento XML forem subelementos, o mapeamento centrado em elemento recuperará os valores.  
   
@@ -294,7 +294,7 @@ LILAS      Carlos Gonzlez
   
 -   O valor do parâmetro *flags* é definido como **1** e indica o mapeamento centrado em atributo. Como resultado, os atributos XML são mapeados para as colunas do conjunto de linhas definidas em *SchemaDeclaration*.  
   
--   Em *SchemaDeclaration* na cláusula WITH, os nomes das colunas do conjunto de linhas **oid** e **amount** coincidem com os nomes dos atributos XML correspondentes. Portanto o parâmetro *ColPattern* não é especificado. Para a coluna **comment** do conjunto de linhas, a função XPath, **text()**, é especificada como *ColPattern*. Isso substitui o mapeamento centrado em atributo especificado em *flags*, e a coluna contém a cadeia de caracteres do valor de folha do conteúdo do elemento.  
+-   Em *SchemaDeclaration* na cláusula WITH, os nomes das colunas do conjunto de linhas **oid** e **amount** coincidem com os nomes dos atributos XML correspondentes. Portanto o parâmetro *ColPattern* não é especificado. Para a coluna **comment** do conjunto de linhas, a função XPath, **text()** , é especificada como *ColPattern*. Isso substitui o mapeamento centrado em atributo especificado em *flags*, e a coluna contém a cadeia de caracteres do valor de folha do conteúdo do elemento.  
   
  Em seguida, a instrução SELECT recupera todas as colunas no conjunto de linhas fornecido pelo OPENXML.  
   
@@ -442,7 +442,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- O resultado é retornado como uma tabela de borda. É possível escrever consultas em relação à tabela de borda para obter informações. Por exemplo:   
+ O resultado é retornado como uma tabela de borda. É possível escrever consultas em relação à tabela de borda para obter informações. Por exemplo:  
   
 -   A consulta a seguir retorna o número de nós **Customer** no documento. Como a cláusula WITH não é especificada, o OPENXML retorna uma tabela de borda. A instrução SELECT consulta a tabela de borda.  
   
@@ -474,7 +474,7 @@ EXEC sp_xml_removedocument @docHandle
   
  Em *SchemaDeclaration* na cláusula WITH, *ColPattern* também é especificado com os parâmetros *ColName* e *ColType* . O *ColPattern* opcional é o padrão XPath especificado para indicar o seguinte:  
   
--   O padrão XPath (**.**) especificado como *ColPattern* para a coluna **ProdID** no conjunto de linhas identifica o nó de contexto, o nó atual. De acordo com o *rowpattern* especificado, ele é o atributo **ProductID** do elemento <`OrderDetail`>.  
+-   O padrão XPath ( **.** ) especificado como *ColPattern* para a coluna **ProdID** no conjunto de linhas identifica o nó de contexto, o nó atual. De acordo com o *rowpattern* especificado, ele é o atributo **ProductID** do elemento <`OrderDetail`>.  
   
 -   O *ColPattern*, **../\@Quantity**, especificado para a coluna **Qty** no conjunto de linhas identifica o atributo **Quantity** do pai, <`OrderDetail`>, nó do nó de contexto, \<ProductID>.  
   
@@ -523,7 +523,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. Especificando um documento XML que tem vários nós de texto  
- Se você tiver vários nós de texto em um documento XML, uma instrução SELECT com um *ColPattern*, **text()**, retornará apenas o primeiro nó de texto, em vez de todos eles. Por exemplo:   
+ Se você tiver vários nós de texto em um documento XML, uma instrução SELECT com um *ColPattern*, **text()** , retornará apenas o primeiro nó de texto, em vez de todos eles. Por exemplo:  
   
 ```  
 DECLARE @h int  
@@ -576,7 +576,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- Especificamente, você está passando uma variável de tipo **xml** (\@x) para a função **sp_xml_preparedocument()**.  
+ Especificamente, você está passando uma variável de tipo **xml** (\@x) para a função **sp_xml_preparedocument()** .  
   
  Esse é o resultado:  
   
@@ -595,7 +595,7 @@ id  lname   xmlname                   OverFlow
   
  Observe o seguinte no resultado:  
   
--   Para a coluna **lname** de tipo **varchar(30)**, o valor é recuperado do elemento <`lname`> correspondente.  
+-   Para a coluna **lname** de tipo **varchar(30)** , o valor é recuperado do elemento <`lname`> correspondente.  
   
 -   Para a coluna **xmlname** de tipo **xml** , o mesmo elemento de nome é retornado como seu valor.  
   
