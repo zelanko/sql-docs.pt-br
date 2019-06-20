@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a1c66c9ab423a6bb722c422450b99c1a47118f7
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537195"
 ---
 # <a name="sqlexecdirect-function"></a>Função SQLExecDirect
@@ -86,7 +86,7 @@ SQLRETURN SQLExecDirect(
 |22015|Estouro no campo de intervalo|*\*StatementText* continha um parâmetro numérico ou de intervalo exato que, quando convertido em um intervalo de tipo de dados SQL, causou uma perda de dígitos significativos.<br /><br /> *\*StatementText* continha um parâmetro de intervalo com mais de um campo que, quando convertido em um tipo de dados numéricos em uma coluna, não teve nenhuma representação no tipo de dados numérico.<br /><br /> *\*StatementText* continha dados de parâmetro que foi atribuídos a um intervalo de tipo SQL, e não havia nenhuma representação do valor do tipo C no intervalo de tipo SQL.<br /><br /> Atribuindo um parâmetro de entrada/saída ou de saída que era um numérico exato ou o intervalo de tipo SQL para um tipo de intervalo C causado uma perda de dígitos significativos.<br /><br /> Quando um parâmetro de entrada/saída ou de saída foi atribuído a uma estrutura de intervalo de C, não havia nenhuma representação dos dados na estrutura de dados de intervalo.|  
 |22018|Valor de caractere inválido para especificação de conversão|*\*StatementText* continha um tipo de C que era um valor numérico exato ou aproximado, uma data e hora ou um tipo de dados de intervalo; o tipo SQL da coluna era um tipo de dados de caractere; e o valor na coluna não era um literal válido do tipo C associado.<br /><br /> Quando um parâmetro de entrada/saída ou de saída foi retornado, o tipo SQL era um valor numérico exato ou aproximado, uma data e hora ou um tipo de dados de intervalo; o tipo C foi SQL_C_CHAR; e o valor na coluna não era um literal válido do tipo SQL associado.|  
 |22019|Caractere de escape inválido|\**StatementText* continha uma instrução SQL que continha uma **, como** predicado com um **ESCAPE** no **onde** cláusula e o comprimento do escape a seguir caractere **ESCAPE** não era igual a 1.|  
-|22025|Sequência de escape inválida|\**StatementText* continha uma instrução SQL que continha "**, como** _valor de padrão_ **ESCAPE** _caractere de escape_ "no **onde** cláusula e o caractere que segue o caractere de escape no valor padrão não era um dos"%"ou"_".|  
+|22025|Sequência de escape inválida|\**StatementText* continha uma instrução SQL que continha " **, como** _valor de padrão_ **ESCAPE** _caractere de escape_ "no **onde** cláusula e o caractere que segue o caractere de escape no valor padrão não era um dos"%"ou"_".|  
 |23000|Violação de restrição de integridade|**StatementText* continha uma instrução SQL que continha um parâmetro ou literal. O valor do parâmetro era nulo para uma coluna definida como NOT NULL na coluna da tabela associada, um valor duplicado foi fornecido para uma coluna restringida para conter apenas valores exclusivos ou alguma outra restrição de integridade foi violada.|  
 |24000|Estado de cursor inválido|Um cursor é posicionado sobre o *StatementHandle* pela **SQLFetch** ou **SQLFetchScroll**. Esse erro é retornado pelo Gerenciador de Driver, se **SQLFetch** ou **SQLFetchScroll** não retornou SQL_NO_DATA e é retornado pelo driver se **SQLFetch** ou **SQLFetchScroll** tem retornar SQL_NO_DATA.<br /><br /> Um cursor foi aberto, mas não está posicionado sobre o *StatementHandle*.<br /><br /> **StatementText* contidos um posicionadas instrução update ou delete, e o cursor é posicionado antes do início do conjunto de resultados ou após o final do conjunto de resultados.|  
 |34000|Nome de cursor inválido|**StatementText* contidos um posicionadas instrução update ou delete, e o cursor referenciado pela instrução sendo executada não foi aberto.|  

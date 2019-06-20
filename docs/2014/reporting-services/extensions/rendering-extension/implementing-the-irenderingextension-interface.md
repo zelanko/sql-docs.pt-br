@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68e965a523df8dadd03d77df8d3d522870f70a93
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62987143"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Implementando a interface IRenderingExtension
@@ -72,7 +72,7 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
  O método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.RenderStream%2A> processa um fluxo específico do relatório. Todos os fluxos são criados durante a chamada <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> inicial, mas os fluxos não são retornados ao cliente inicialmente. Esse método é usado para fluxos secundários, como imagens em renderização HTML, ou páginas adicionais de uma extensão de renderização de várias páginas, como Imagem/EMF.  
   
 ## <a name="getrenderingresource-method"></a>Método GetRenderingResource  
- O método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> recupera as informações sem executar toda renderização do relatório. Existem ocasiões em que o relatório necessita de informações que não exigem que o próprio relatório seja renderizado. Por exemplo, se você precisar do ícone associado à extensão de renderização, use o parâmetro *deviceInfo* que contém a marcação única **\<Icon>**. Nesses casos, você pode usar o método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>.  
+ O método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> recupera as informações sem executar toda renderização do relatório. Existem ocasiões em que o relatório necessita de informações que não exigem que o próprio relatório seja renderizado. Por exemplo, se você precisar do ícone associado à extensão de renderização, use o parâmetro *deviceInfo* que contém a marcação única **\<Icon>** . Nesses casos, você pode usar o método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Implementando uma extensão de renderização](implementing-a-rendering-extension.md)   

@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 635c5c433f583ecad9f8dda1e35e4c981742212e
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010578"
 ---
 # <a name="annotated-schema-security-considerations-sqlxml-40"></a>Considerações sobre a segurança de esquemas anotados (SQLXML 4.0)
@@ -34,7 +34,7 @@ ms.locfileid: "66010578"
   
 -   O mapeamento explícito especificado usando as anotações expõe as informações do banco de dados (como nomes de tabelas e nomes de colunas). Assim, talvez você não queira disponibilizar esses esquemas publicamente.  
   
--   Determinadas consultas, como as especificadas com relação ao esquema de mapeamento com recursão (especificada usando a anotação `max-depth` definida com um valor superior), podem levar mais tempo para serem executadas. Opcionalmente, você pode especificar um tempo limite, definindo a propriedade de tempo limite do comando (em segundos). Por exemplo:   
+-   Determinadas consultas, como as especificadas com relação ao esquema de mapeamento com recursão (especificada usando a anotação `max-depth` definida com um valor superior), podem levar mais tempo para serem executadas. Opcionalmente, você pode especificar um tempo limite, definindo a propriedade de tempo limite do comando (em segundos). Por exemplo:  
   
     ```  
     cn.Open "Provider=SQLOLEDB;Server=localhost;Database=tempdb;Integrated Security=SSPI;Command Properties='Command Time Out=50';"  

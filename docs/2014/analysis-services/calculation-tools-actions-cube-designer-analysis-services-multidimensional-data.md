@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 087f5f5e3383fd66244541fea35160946936bc1c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088342"
 ---
 # <a name="calculation-tools-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Ferramentas de Cálculo (guia Ações, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -26,7 +26,7 @@ ms.locfileid: "66088342"
  **Metadados**  
  Exibe os metadados do cubo selecionado.  
   
- Arraste um elemento selecionado para o painel **Action Form Editor (Editor de Formulário de Ação)**, **Drillthrough Action Form Editor (Editor de Formulário de Ação de Extração de Detalhes)** ou **Report Action Form Editor (Editor de Formulário de Ação de Relatório)** para incluir a sintaxe MDX (Multidimensional Expressions) daquele elemento no local selecionado no painel.  
+ Arraste um elemento selecionado para o painel **Action Form Editor (Editor de Formulário de Ação)** , **Drillthrough Action Form Editor (Editor de Formulário de Ação de Extração de Detalhes)** ou **Report Action Form Editor (Editor de Formulário de Ação de Relatório)** para incluir a sintaxe MDX (Multidimensional Expressions) daquele elemento no local selecionado no painel.  
   
  **Funções**  
  Exibe as funções disponíveis para expressões e condições.  

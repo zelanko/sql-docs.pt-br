@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917588"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Criar um trabalho do SQL Server Agent para arquivar mensagens do Database Mail e logs de eventos
@@ -47,11 +47,11 @@ ms.locfileid: "62917588"
   
 -   O primeiro procedimento cria um trabalho denominado Archive Database Mail com as etapas a seguir.  
   
-    1.  Copie todas as mensagens das tabelas do Database Mail em uma nova tabela nomeada com o mês anterior, no formato **DBMailArchive_**_<year_month>_.  
+    1.  Copie todas as mensagens das tabelas do Database Mail em uma nova tabela nomeada com o mês anterior, no formato **DBMailArchive_** _<year_month>_ .  
   
-    2.  Copie os anexos das mensagens copiadas na primeira etapa, das tabelas do Database Mail em uma nova tabela nomeada com o mês anterior, no formato **DBMailArchive_Attachments_**_<year_month>_.  
+    2.  Copie os anexos das mensagens copiadas na primeira etapa, das tabelas do Database Mail em uma nova tabela nomeada com o mês anterior, no formato **DBMailArchive_Attachments_** _<year_month>_ .  
   
-    3.  Copie os eventos do log de eventos do Database Mail referentes às mensagens copiadas na primeira etapa, das tabelas do Database Mail em uma nova tabela nomeada com o mês anterior, no formato **DBMailArchive_Log_**_<year_month>_.  
+    3.  Copie os eventos do log de eventos do Database Mail referentes às mensagens copiadas na primeira etapa, das tabelas do Database Mail em uma nova tabela nomeada com o mês anterior, no formato **DBMailArchive_Log_** _<year_month>_ .  
   
     4.  Exclua os registros dos itens de correio transferidos das tabelas do Database Mail.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62917588"
   
 2.  Na caixa **Nome da etapa** , digite **Copy Database Mail Items**.  
   
-3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)**.  
+3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)** .  
   
 4.  Na caixa **Banco de dados** , selecione **msdb**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62917588"
   
 2.  Na caixa **Nome da etapa** , digite **Copy Database Mail Attachments**.  
   
-3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)**.  
+3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)** .  
   
 4.  Na caixa **Banco de dados** , selecione **msdb**.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "62917588"
   
 2.  Na caixa **Nome da etapa** , digite **Copy Database Mail Log**.  
   
-3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)**.  
+3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)** .  
   
 4.  Na caixa **Banco de dados** , selecione **msdb**.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "62917588"
   
 2.  Na caixa **Nome da etapa** , digite **Remove rows from Database Mail**.  
   
-3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)**.  
+3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)** .  
   
 4.  Na caixa **Banco de dados** , selecione **msdb**.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "62917588"
   
 2.  Na caixa **Nome da etapa** , digite **Remove rows from Database Mail event log**.  
   
-3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)**.  
+3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)** .  
   
 4.  Na caixa **Comando** , digite a seguinte instrução para remover as linhas anteriores ao mês atual do log de eventos do Database Mail:  
   
@@ -208,7 +208,7 @@ ms.locfileid: "62917588"
   
 5.  Na área **Frequência** , selecione as opções para executar o trabalho periodicamente; por exemplo, uma vez por mês.  
   
-6.  Na área **Frequência diária**, selecione **Ocorre uma vez em \<hora>**.  
+6.  Na área **Frequência diária**, selecione **Ocorre uma vez em \<hora>** .  
   
 7.  Verifique se as outras opções estão configuradas a seu gosto e clique em **OK** para salvar a agenda.  
   

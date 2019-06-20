@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918058"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar um banco de dados como um DAC
@@ -101,7 +101,7 @@ ms.locfileid: "62918058"
  **Cancelar** - Finaliza o assistente sem registrar o DAC.  
   
 ### <a name="validating-objects"></a>Validando objetos  
- **Checking**  _SchemaName_ **.** _ObjectName_ **.** - Exibe uma barra de progresso enquanto o assistente verifica as dependências dos objetos recuperados e se todos eles são objetos válidos para um DAC. _SchemaName_**.**_ObjectName_ identifica qual objeto está sendo verificado no momento.  
+ **Checking**  _SchemaName_ **.** _ObjectName_ **.** - Exibe uma barra de progresso enquanto o assistente verifica as dependências dos objetos recuperados e se todos eles são objetos válidos para um DAC. _SchemaName_ **.** _ObjectName_ identifica qual objeto está sendo verificado no momento.  
   
  **\< Anterior** -retorna para o **propriedades do conjunto de** página para alterar suas entradas.  
   

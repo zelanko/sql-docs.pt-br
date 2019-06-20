@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6883fac2772e69a0e3939de970f436827f2cdf5d
-ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
+ms.openlocfilehash: 6dfe3516a36fa0ee6e8644b46b5caeb2a7cca92b
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67166355"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263442"
 ---
 # <a name="calculation-groups-preview"></a>Grupos de cálculo (visualização)
  
@@ -64,7 +64,7 @@ Antes de entrarmos em detalhes, vamos apresentar algumas novas funções DAX esp
 
 [ISSELECTEDMEASURE](https://docs.microsoft.com/dax/isselectedmeasure-function-dax) - usado pelas expressões para itens de cálculo determinar a medida que está no contexto é especificada em uma lista de medidas.
 
-[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax) - usado pelas expressões para itens de cálculo recuperar a cadeia de caracteres de formato da medida que está no contexto.
+[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) - usado pelas expressões para itens de cálculo recuperar a cadeia de caracteres de formato da medida que está no contexto.
 
 ### <a name="time-intelligence-example"></a>Exemplo de inteligência de tempo
 
@@ -251,7 +251,7 @@ SELECTEDVALUE(
     SELECTEDMEASUREFORMATSTRING()
 )
 ```
-A expressão de cadeia de caracteres de formato deve retornar uma cadeia de caracteres de escalar. Ele usa o novo [SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax) função para reverter para a cadeia de caracteres de formato de medida base, se houver várias moedas no contexto de filtro.
+A expressão de cadeia de caracteres de formato deve retornar uma cadeia de caracteres de escalar. Ele usa o novo [SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) função para reverter para a cadeia de caracteres de formato de medida base, se houver várias moedas no contexto de filtro.
 
 A animação a seguir mostra a conversão de moeda de um formato dinâmico a **vendas** medidas em um relatório.
 

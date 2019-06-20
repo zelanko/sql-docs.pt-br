@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 0a52fcccbe9f1ba3423f39f5ca3be61b09089d42
-ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66718975"
 ---
 # <a name="dimensions-collection-properties-methods-and-events"></a>Propriedades, métodos e eventos da coleção Dimensions
@@ -29,7 +29,7 @@ ms.locfileid: "66718975"
 ## <a name="methods"></a>Métodos  
  [Método Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Nenhum.  
   
 ## <a name="see-also"></a>Consulte também  

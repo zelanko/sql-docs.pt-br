@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 93c4c97699e8b58f8d5576b6edaa41ce8316524f
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66698733"
 ---
 # <a name="connection-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto de Conexão
@@ -61,7 +61,7 @@ ms.locfileid: "66698733"
   
  [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  [BeginTransComplete, CommitTransComplete e RollbackTransComplete eventos](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
  [Eventos ConnectComplete e Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  

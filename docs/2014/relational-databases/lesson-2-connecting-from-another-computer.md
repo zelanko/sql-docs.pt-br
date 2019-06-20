@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144800"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lição 2: conexão usando outro computador
@@ -44,7 +44,7 @@ ms.locfileid: "63144800"
     > [!NOTE]  
     >  Você pode ter opções de 32 bits e de 64 bits disponíveis.  
   
-2.  Na **SQL Server Configuration Manager**, expanda **configuração de rede do SQL Server**e, em seguida, clique em **protocolos para**  _\<InstanceName >_.  
+2.  Na **SQL Server Configuration Manager**, expanda **configuração de rede do SQL Server**e, em seguida, clique em **protocolos para**  _\<InstanceName >_ .  
   
      A instância padrão (uma instância sem nome) é listada como **MSSQLSERVER**. Se você instalou uma instância nomeada, o nome fornecido será listado. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] é instalado como **SQLEXPRESS**, a menos que o nome seja alterado durante a instalação.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "63144800"
   
 2.  Na caixa de diálogo **Conectar ao Servidor** , confirme **Mecanismo de Banco de Dados** na caixa **Tipo de Servidor** .  
   
-3.  Na caixa **Nome do Servidor** , digite **tcp:** para especificar o protocolo, seguido do nome do computador, uma vírgula e o número da porta. Para se conectar à instância padrão, a porta 1433 está implícita e pode ser omitida; portanto, digite **tcp:**_<computer_name>_. Em nosso exemplo de uma instância nomeada, digite **tcp:**_<computer_name>_**,49172**.  
+3.  Na caixa **Nome do Servidor** , digite **tcp:** para especificar o protocolo, seguido do nome do computador, uma vírgula e o número da porta. Para se conectar à instância padrão, a porta 1433 está implícita e pode ser omitida; portanto, digite **tcp:** _<computer_name>_ . Em nosso exemplo de uma instância nomeada, digite **tcp:** _<computer_name>_ **,49172**.  
   
     > [!NOTE]  
     >  Se você omitir **tcp:** da caixa **Nome do servidor** , o cliente tentará todos os protocolos que estiverem habilitados, na ordem especificada na configuração do cliente.  

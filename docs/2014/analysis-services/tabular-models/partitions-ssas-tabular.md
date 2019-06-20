@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5dd80a1f6645e7d1c766e88de653fa1e8f1f4cc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066897"
 ---
 # <a name="partitions-ssas-tabular"></a>Partições (SSAS tabular)
@@ -48,7 +48,7 @@ ms.locfileid: "66066897"
   
 |Tópico|Descrição|  
 |-----------|-----------------|  
-|[Criar e gerenciar partições no banco de dados de workspace &amp;#40;SSAS de Tabela&amp;#41;](workspace-database-ssas-tabular.md)|Descreve como criar e gerenciar partições no banco de dados de workspace modelo usando o Gerenciador de Partições no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
+|[Criar e gerenciar partições no banco de dados de workspace &#40;SSAS de Tabela&#41;](workspace-database-ssas-tabular.md)|Descreve como criar e gerenciar partições no banco de dados de workspace modelo usando o Gerenciador de Partições no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
 |[Processar partições no banco de dados de espaço de trabalho &#40;Tabular do SSAS&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)|Descreve como processar (atualizar) partições no banco de dados de workspace modelo.|  
   
 ## <a name="see-also"></a>Consulte também  

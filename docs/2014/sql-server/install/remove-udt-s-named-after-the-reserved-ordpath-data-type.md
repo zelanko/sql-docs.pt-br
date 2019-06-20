@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3ee155c70a8b10d4437d6b2f374c8b9497bf3faa
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092917"
 ---
 # <a name="remove-udt39s-named-after-the-reserved-ordpath-data-type"></a>Remover a UDT&#39;s nomeada com o tipo de dados ORDPATH reservado

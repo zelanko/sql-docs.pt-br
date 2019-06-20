@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064376"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Banco de Dados de Backup (Analysis Services - Dados multidimensionais)
@@ -92,7 +92,7 @@ ms.locfileid: "66064376"
 |**Servidor**|Exibe a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que administra as partições remotas.|  
 |**Backup de banco de dados**|Exibe o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contém as partições remotas.|  
 |**Lista de partição**|Exibe a lista de partições remotas contidas no banco de dados exibido em **Banco de Dados**.|  
-|**Arquivo de backup remoto**|Digite o caminho completo e o nome de arquivo do arquivo de backup remoto a ser usado, ou clique no botão de reticências (**...**) para exibir a caixa de diálogo **Salvar Arquivo Como** e selecionar o caminho e o nome de arquivo do arquivo de backup remoto a ser usado. Para obter mais informações sobre a caixa de diálogo **Salvar Arquivo Como**, consulte [Caixa de diálogo Salvar Arquivo Como &#40;Analysis Services – Dados Multidimensionais&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Arquivo de backup remoto**|Digite o caminho completo e o nome de arquivo do arquivo de backup remoto a ser usado, ou clique no botão de reticências ( **...** ) para exibir a caixa de diálogo **Salvar Arquivo Como** e selecionar o caminho e o nome de arquivo do arquivo de backup remoto a ser usado. Para obter mais informações sobre a caixa de diálogo **Salvar Arquivo Como**, consulte [Caixa de diálogo Salvar Arquivo Como &#40;Analysis Services – Dados Multidimensionais&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Consulte também  
  [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b90944c3260af69f29fbae8a93f5865c1f3c6d1e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071856"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>Configurar contas de serviço PowerPivot
@@ -44,7 +44,7 @@ ms.locfileid: "66071856"
   
 ##  <a name="bkmk_passwordssas"></a> Atualizar uma senha expirada para instância do SQL Server Analysis Services (PowerPivot)  
   
-1.  Aponte para Iniciar, clique em **Ferramentas Administrativas**e em **Serviços**. Clique duas vezes em **SQL Server Analysis Services (PowerPivot)**. Clique em **Logon**e digite a nova senha da conta.  
+1.  Aponte para Iniciar, clique em **Ferramentas Administrativas**e em **Serviços**. Clique duas vezes em **SQL Server Analysis Services (PowerPivot)** . Clique em **Logon**e digite a nova senha da conta.  
   
 2.  Na Administração Central, na seção Segurança, clique em **Configurar contas gerenciadas**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66071856"
   
 3.  Em **Selecione uma conta para esse serviço**, escolha uma conta gerenciada existente ou crie uma nova. A conta deve ser uma conta de usuário de domínio.  
   
-4.  Selecione **Pool de Aplicativos de Serviço - Sistema de Serviços Web do SharePoint** para alterar a identidade do pool de aplicativos do aplicativo de serviço PowerPivot padrão. Dependendo em como sua instalação foi configurada, o serviço pode estar em execução sob um pool de aplicativos de serviço existente criado para os serviços do SharePoint. Por padrão, a Ferramenta de Configuração do PowerPivot registra o serviço como **Aplicativo de Serviço PowerPivot Padrão (Aplicativo de Serviço PowerPivot)**.  
+4.  Selecione **Pool de Aplicativos de Serviço - Sistema de Serviços Web do SharePoint** para alterar a identidade do pool de aplicativos do aplicativo de serviço PowerPivot padrão. Dependendo em como sua instalação foi configurada, o serviço pode estar em execução sob um pool de aplicativos de serviço existente criado para os serviços do SharePoint. Por padrão, a Ferramenta de Configuração do PowerPivot registra o serviço como **Aplicativo de Serviço PowerPivot Padrão (Aplicativo de Serviço PowerPivot)** .  
   
      Se o serviço tiver sido configurado manualmente por um administrador do SharePoint, ele provavelmente terá seu próprio pool de aplicativos de serviço.  
   

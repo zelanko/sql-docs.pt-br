@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed653b16fe524f364ba89f13e00715b725080033
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62824385"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>Cancelar supressão da execução de avisos de relatório personalizado
@@ -32,7 +32,7 @@ ms.locfileid: "62824385"
   
 2.  Clique com botão direito `reports.xml`e, em seguida, clique em **editar**.  
   
-3.  Alteração**\<SuppressWarning > true\</suppresswarning. > ao \<SuppressWarning > falso\</suppresswarning. >**.  
+3.  Alteração **\<SuppressWarning > true\</suppresswarning. > ao \<SuppressWarning > falso\</suppresswarning. >** .  
   
 4.  Reinicie o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62824385"
   
 2.  Clique com botão direito `reports.xml`e clique em **editar**.  
   
-3.  Alteração  **\<SuppressDrillthroughWarning > true\</SuppressDrillthroughWarning > ao \<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >**.  
+3.  Alteração  **\<SuppressDrillthroughWarning > true\</SuppressDrillthroughWarning > ao \<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >** .  
   
 4.  Reinicie o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

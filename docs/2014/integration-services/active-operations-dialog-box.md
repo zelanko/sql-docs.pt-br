@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062216"
 ---
 # <a name="active-operations-dialog-box"></a>Caixa de diálogo Operações Ativas
@@ -56,7 +56,7 @@ ms.locfileid: "66062216"
 |Parar operação (parando uma validação ou execução|202|  
 |Validar projeto|300|  
 |Validar pacote|301|  
-|Configurar catálogo|1.000|  
+|Configurar catálogo|1\.000|  
   
  **Parar**  
  Clique para parar uma operação em execução no momento.  

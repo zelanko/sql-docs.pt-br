@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7532f2a6f2c50f53e5af01c2cec979170b493147
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922926"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Aplicar backups de log de transações (SQL Server)
@@ -61,7 +61,7 @@ ms.locfileid: "62922926"
 ##  <a name="PITrestore"></a> Usando Backups de Log para restaurar até o ponto de falha  
  Considere a seguinte sequência de eventos.  
   
-|Hora|Evento|  
+|Time|Evento|  
 |----------|-----------|  
 |8:00h|Faça um backup do banco de dados para criar um backup completo do banco de dados.|  
 |Meio-dia|Backup de log de transações.|  
