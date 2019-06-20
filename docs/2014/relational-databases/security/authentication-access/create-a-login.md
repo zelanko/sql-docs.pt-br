@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63012024"
 ---
 # <a name="create-a-login"></a>Crie um logon
@@ -67,17 +67,17 @@ ms.locfileid: "63012024"
   
 1.  No Pesquisador de Objetos, expanda a pasta da instância de servidor no qual deseja criar o novo logon.  
   
-2.  Clique com o botão direito do mouse na pasta **Segurança**, aponte para **Novo** e selecione **Logon...**.  
+2.  Clique com o botão direito do mouse na pasta **Segurança**, aponte para **Novo** e selecione **Logon...** .  
   
 3.  Na caixa de diálogo **Logon – Novo**, na página **Geral**, insira o nome de um usuário na caixa **Nome de logon**. Como alternativa, clique em **Pesquisar...** para abrir a caixa de diálogo **Selecionar Usuário ou Grupo**.  
   
-     Se você clicar em **Pesquisar...**:  
+     Se você clicar em **Pesquisar...** :  
   
     1.  Em **Selecionar este tipo de objeto**, clique em **Tipos de Objeto...** para abrir a caixa de diálogo **Tipos de Objeto** e selecione uma ou todas as seguintes opções: **Entidades de segurança internas**, **Grupos** e **Usuários**. **Entidades de segurança internas** e **Usuários** estão selecionados por padrão. Quando terminar, clique em **OK**.  
   
     2.  Em **Desta localização**, clique em **Localizações...** para abrir a caixa de diálogo **Localizações** e selecione um dos locais de servidor disponíveis. Quando terminar, clique em **OK**.  
   
-    3.  Sob **Inserir os nomes de objeto a serem selecionados (exemplos)**, insira o nome de usuário ou de grupo que você deseja localizar. Para obter mais informações, consulte [Caixa de Diálogo Selecionar Usuários, Computadores ou Grupos](https://technet.microsoft.com/library/cc771712.aspx).  
+    3.  Sob **Inserir os nomes de objeto a serem selecionados (exemplos)** , insira o nome de usuário ou de grupo que você deseja localizar. Para obter mais informações, consulte [Caixa de Diálogo Selecionar Usuários, Computadores ou Grupos](https://technet.microsoft.com/library/cc771712.aspx).  
   
     4.  Clique em **Avançado...** para mais opções de pesquisa avançada. Para obter mais informações, veja [Caixa de Diálogo Selecionar Usuários, Computadores ou Grupos – Página Avançada](https://technet.microsoft.com/library/cc733110.aspx).  
   
@@ -115,31 +115,31 @@ ms.locfileid: "63012024"
 ### <a name="server-roles"></a>Funções de Servidor  
  A página **Funções de Servidor** lista todas as funções possíveis que podem ser atribuídas ao novo logon. As seguintes opções estão disponíveis:  
   
- Caixa de seleção**bulkadmin**   
+ Caixa de seleção**bulkadmin**  
  Os membros da função de servidor fixa **bulkadmin** podem executar a instrução BULK INSERT.  
   
- Caixa de seleção**dbcreator**   
+ Caixa de seleção**dbcreator**  
  Os membros da função de servidor fixa **dbcreator** podem criar, alterar, remover e restaurar qualquer banco de dados.  
   
- Caixa de seleção**diskadmin**   
+ Caixa de seleção**diskadmin**  
  Os membros da função de servidor fixa **diskadmin** podem gerenciar arquivos em disco.  
   
- Caixa de seleção**processadmin**   
+ Caixa de seleção**processadmin**  
  Os membros da função de servidor fixa **processadmin** podem encerrar processos em execução em uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
- Caixa de seleção**public**   
+ Caixa de seleção**public**  
  Todos os usuários, grupos e funções do SQL Server pertencem à função de servidor fixa **public** .  
   
- Caixa de seleção**securityadmin**   
+ Caixa de seleção**securityadmin**  
  Os membros da função de servidor fixa **securityadmin** gerenciam logons e suas propriedades. Eles podem CONCEDER, NEGAR e REVOGAR permissões de nível de servidor. Eles também podem CONCEDER, NEGAR e REVOGAR permissões de nível de banco de dados. Além disso, eles podem redefinir senhas para logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- Caixa de seleção**serveradmin**   
+ Caixa de seleção**serveradmin**  
  Os membros da função de servidor fixa **serveradmin** podem alterar as opções de configuração de todo o servidor e fechar o servidor.  
   
- Caixa de seleção**setupadmin**   
+ Caixa de seleção**setupadmin**  
  Os membros da função de servidor fixa **setupadmin** podem adicionar e remover servidores vinculados e podem executar alguns procedimentos armazenados no sistema.  
   
- Caixa de seleção**sysadmin**   
+ Caixa de seleção**sysadmin**  
  Os membros da função de servidor fixa **sysadmin** podem executar qualquer atividade no [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 ### <a name="user-mapping"></a>Mapeamento de Usuário  
@@ -181,19 +181,19 @@ ms.locfileid: "63012024"
     > [!NOTE]  
     >  A seleção de **O servidor**_server_name_ preenche automaticamente a grade superior com os objetos protegíveis de todos os servidores.  
   
-3.  Se você selecionar **Objetos específicos...**:  
+3.  Se você selecionar **Objetos específicos...** :  
   
-    1.  Na caixa de diálogo **Selecionar Objetos**, em **Selecionar estes tipos de objeto**, clique em **Tipos de Objeto...**.  
+    1.  Na caixa de diálogo **Selecionar Objetos**, em **Selecionar estes tipos de objeto**, clique em **Tipos de Objeto...** .  
   
     2.  Na caixa de diálogo **Selecionar Tipos de Objeto**, selecione um ou todos os seguintes tipos de objeto: **Pontos de extremidade**, **Logons**, **Servidores**, **Grupos de Disponibilidade** e **Funções de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  Em **Inserir os nomes de objeto a serem selecionados (exemplos)**, clique em **Procurar...**.  
+    3.  Em **Inserir os nomes de objeto a serem selecionados (exemplos)** , clique em **Procurar...** .  
   
     4.  Na caixa de diálogo **Procurar por Objetos** , selecione qualquer um dos objetos disponíveis do tipo que você selecionou na caixa de diálogo **Selecionar Tipos de Objeto** e então clique em **OK**.  
   
     5.  Na caixa de diálogo **Selecionar Objetos** , clique em **OK**.  
   
-4.  Se você selecionar **Todos os objetos dos tipos...**, na caixa de diálogo **Selecionar Tipos de Objeto**, selecione um ou todos os seguintes tipos de objeto: **Pontos de extremidade**, **Logons**, **Servidores**, **Grupos de Disponibilidade** e **Funções de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Se você selecionar **Todos os objetos dos tipos...** , na caixa de diálogo **Selecionar Tipos de Objeto**, selecione um ou todos os seguintes tipos de objeto: **Pontos de extremidade**, **Logons**, **Servidores**, **Grupos de Disponibilidade** e **Funções de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Nome**  
  O nome de cada entidade ou protegível que é adicionado à grade.  
@@ -278,7 +278,7 @@ ms.locfileid: "63012024"
   
  Para obter mais informações, veja [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
-##  <a name="FollowUp"></a> Acompanhamento: Etapas a serem executadas após criar um logon  
+##  <a name="FollowUp"></a> Acompanhamento: etapas a serem executadas após criar um logon  
  Após ser criado, o logon pode se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mas não necessariamente tem permissão suficiente para executar qualquer trabalho útil. A lista a seguir fornece links a ações de logon comuns.  
   
 -   Para associar o logon a uma função, veja [Unir uma função](join-a-role.md).  

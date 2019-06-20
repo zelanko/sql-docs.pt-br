@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff434efd0a9f4fcb3316143e598e636bff85f487
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63157841"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introdução às tabelas com otimização de memória
@@ -55,7 +55,7 @@ ms.locfileid: "63157841"
 |Recurso|Acesso através de um procedimento armazenado compilado nativamente|Acesso [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado|Acesso à CLR|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |Tabelas com otimização de memória|Sim|Sim|Não <sup>1</sup>|  
-|[Variáveis de tabela com otimização de memória](../../database-engine/memory-optimized-table-variables.md)|Sim|Sim|Não|  
+|[Variáveis de tabela com otimização de memória](../../database-engine/memory-optimized-table-variables.md)|Sim|Sim|Não |  
 |[Procedimentos armazenados compilados nativamente](https://msdn.microsoft.com/library/dn133184.aspx)|Você não pode usar a instrução EXECUTE para executar nenhum procedimento armazenado em um procedimento armazenado compilado nativamente.|Sim|Não <sup>1</sup>|  
   
  <sup>1</sup> não é possível acessar uma tabela com otimização de memória ou procedimento armazenado compilado nativamente da conexão de contexto (a conexão de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ao executar um módulo CLR). No entanto, é possível criar e abrir outra conexão, da qual você pode acessar tabelas com otimização de memória e procedimentos armazenados compilados nativamente. Para obter mais informações, consulte [vs Regular. Conexões de contexto](../clr-integration/data-access/context-connections-vs-regular-connections.md).  

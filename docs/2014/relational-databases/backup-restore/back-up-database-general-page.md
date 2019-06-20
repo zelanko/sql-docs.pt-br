@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3206052455ff1d1bd5db14f6c53507ec9f00a7eb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62877052"
 ---
 # <a name="back-up-database-general-page"></a>Backup do banco de dados (página Geral)
@@ -42,7 +42,7 @@ ms.locfileid: "62877052"
   
 ## <a name="options"></a>Opções  
   
-### <a name="source"></a>Source  
+### <a name="source"></a>`Source`  
  As opções do painel **Origem** identificam o banco de dados e especificam o tipo de backup e o componente para a operação de backup.  
   
  **Backup de banco de dados**  

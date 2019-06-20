@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b20a0d2f47e89070712a4063acba4da0225b85d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060956"
 ---
 # <a name="common-properties"></a>Propriedades comuns
@@ -158,7 +158,7 @@ ms.locfileid: "66060956"
 |ID|Integer|Valor que identifica a saída com exclusividade.|  
 |IdentificationString|Cadeia de caracteres|Cadeia de caracteres que identifica a saída.|  
 |IsErrorOut|Booliano|Indica se a saída é uma saída de erro.|  
-|IsSorted|Booliano|Indica se a saída está classificada. O valor padrão é `False`.<br /><br /> **\*\* Importante \* \***  definindo o valor da `IsSorted` propriedade `True` não classifica os dados. Esta propriedade apenas fornece uma dica aos componentes downstream de que os dados foram classificados previamente. Para obter mais informações, consulte [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|IsSorted|Booliano|Indica se a saída está classificada. O valor padrão é `False`.<br /><br /> **\*\* Importante \* \* ** definindo o valor da `IsSorted` propriedade `True` não classifica os dados. Esta propriedade apenas fornece uma dica aos componentes downstream de que os dados foram classificados previamente. Para obter mais informações, consulte [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |Nome|Cadeia de caracteres|Nome da saída.|  
 |SynchronousInputID|Integer|ID de uma entrada que é síncrona à saída.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina como o componente manipula os truncamentos que ocorrem no processamento de linhas. Os valores são `Fail component`, `Ignore failure` e `Redirect row`.|  

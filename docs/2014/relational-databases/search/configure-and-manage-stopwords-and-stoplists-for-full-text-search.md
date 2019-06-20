@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fe48b26960db591ce803b1f110e9293fd22d6554
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011523"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes (stoplists) para pesquisa de texto completo
@@ -144,7 +144,7 @@ ms.locfileid: "66011523"
   
 5.  Na caixa de diálogo [Propriedades da lista de palavras irrelevantes de texto completo](../../database-engine/full-text-stoplist-properties.md) :  
   
-    1.  Na caixa de listagem **Ação**, selecione uma das seguintes ações: **Adicionar palavra irrelevante (stop word)**, **Excluir palavra irrelevante (stop word)**, **Excluir todas as palavras irrelevantes** ou **Limpar lista de palavras irrelevantes**.  
+    1.  Na caixa de listagem **Ação**, selecione uma das seguintes ações: **Adicionar palavra irrelevante (stop word)** , **Excluir palavra irrelevante (stop word)** , **Excluir todas as palavras irrelevantes** ou **Limpar lista de palavras irrelevantes**.  
   
     2.  Se a caixa de texto **Palavra irrelevante** estiver habilitada para a ação selecionada, insira uma única palavra irrelevante. Essa palavra irrelevante deve ser exclusiva; ou seja, ainda não deve estar na lista de palavras irrelevantes para o idioma selecionado.  
   

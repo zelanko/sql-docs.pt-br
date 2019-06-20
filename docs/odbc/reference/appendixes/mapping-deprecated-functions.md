@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181311"
 ---
 # <a name="mapping-deprecated-functions"></a>Funções preteridas de mapeamento
@@ -54,7 +54,7 @@ Esta seção descreve as funções como preteridas são mapeados por ODBC 3 *. x
   
  [1], embora essa função não existe no ODBC 2 *. x*, trata-se nos padrões ISO e Open Group.  
   
- [2] Essa é uma função de ODBC 1.0.  
+ [2]] Essa é uma função de ODBC 1.0.  
   
  Esta seção contém os tópicos a seguir.  
   

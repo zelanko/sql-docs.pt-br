@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 6a702f7a78c3377651e544757789e7a7034f2923
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63165189"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>Extensões para o SSRS (SQL Server Reporting Services)
@@ -66,7 +66,7 @@ Algumas extensões também podem executar as seguintes tarefas:
   
 - **Extensão de Renderização XML** A extensão de renderização XML renderiza relatórios em arquivos XML. Esses arquivos XML podem ser armazenados ou lidos por outros programas. Você também pode usar uma transformação XSLT para converter o relatório em outro esquema XML para ser usado por outro aplicativo. O XML gerado pela extensão de renderização XML é codificado como UTF-8. Para obter mais informações, consulte [Exportação para um XML &#40;Construtor de Relatórios e SSRS&#41;](report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
   
--   **Extensão de Renderização de Imagem** A extensão de renderização de Imagem renderiza bitmaps ou metarquivos. A extensão pode renderizar relatórios nos seguintes formatos: BMP, EMF, GIF, JPEG, PNG, TIFF e WMF. Por padrão, a imagem é renderizada no formato TIFF, que pode ser exibido com o visualizador de imagem padrão do sistema operacional (por exemplo, Visualizador de Imagem e Fax do Windows). Você pode enviar a imagem para uma impressora a partir do visualizador. Usar a extensão de renderização de Imagem para renderizar relatórios garante que a aparência do relatório seja a mesma em todos os clientes. (Quando um usuário exibe um relatório em HTML, a aparência deste pode variar dependendo da versão do navegador do usuário, configurações do navegador do usuário e as fontes disponíveis.) A extensão de renderização de imagem renderiza o relatório no servidor, de modo que todos os usuários consultem a mesma imagem. Como o relatório é renderizado no servidor, todas as fontes usadas nele também devem estar instaladas no servidor. Para obter mais informações, consulte [Exportando para um arquivo de imagem &#40;Construtor de Relatórios e SSRS&#41;](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).  
+-   **Extensão de Renderização de Imagem** A extensão de renderização de Imagem renderiza bitmaps ou metarquivos. A extensão pode renderizar relatórios nos seguintes formatos: BMP, EMF, GIF, JPEG, PNG, TIFF e WMF. Por padrão, a imagem é renderizada no formato TIFF, que pode ser exibido com o visualizador de imagem padrão do sistema operacional (por exemplo, Visualizador de Imagem e Fax do Windows). Você pode enviar a imagem para uma impressora a partir do visualizador. Usar a extensão de renderização de Imagem para renderizar relatórios garante que a aparência do relatório seja a mesma em todos os clientes. (Quando um usuário exibe um relatório em HTML, a aparência deste pode variar, dependendo da versão ou das configurações do navegador do usuário, e das fontes disponíveis.) A extensão de renderização de Imagem renderiza o relatório no servidor, assim todos os usuários verão a mesma imagem. Como o relatório é renderizado no servidor, todas as fontes usadas nele também devem estar instaladas no servidor. Para obter mais informações, consulte [Exportando para um arquivo de imagem &#40;Construtor de Relatórios e SSRS&#41;](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).  
   
 - **Extensão de Renderização PDF** A extensão de renderização PDF renderiza relatórios em arquivos PDF que podem ser abertos e exibidos com o Adobe Acrobat 6.0 ou posterior. Para obter mais informações, consulte [Exportar para um arquivo PDF &#40;Construtor de Relatórios e SSRS&#41;](report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md).  
   

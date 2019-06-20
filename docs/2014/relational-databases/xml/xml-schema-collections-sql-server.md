@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63193034"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Coleções de esquema XML (SQL Server)
@@ -111,7 +111,7 @@ ms.locfileid: "63193034"
   
 -   MODELGROUP  
   
- Por exemplo:   
+ Por exemplo:  
   
 -   **SomeAttribute** é um componente de ATTRIBUTE.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "63193034"
   
 -   Escreva consultas Transact-SQL nas exibições do catálogo apropriadas para coleções de esquema XML.  
   
--   Use a função interna **XML_SCHEMA_NAMESPACE()**. Você pode aplicar `xml` métodos de tipo de dados na saída dessa função. No entanto não é possível modificar os esquemas XML subjacentes.  
+-   Use a função interna **XML_SCHEMA_NAMESPACE()** . Você pode aplicar `xml` métodos de tipo de dados na saída dessa função. No entanto não é possível modificar os esquemas XML subjacentes.  
   
  Esses são ilustrados nos exemplos a seguir.  
   
@@ -188,7 +188,7 @@ WHERE    XSC.name = 'myCollection'
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- Esquemas XML individuais dentro da coleção podem ser obtidos como `xml` instâncias de tipo de dados, especificando o namespace de destino como o terceiro argumento para **xml_schema_namespace ()**. Isso é mostrado no exemplo a seguir.  
+ Esquemas XML individuais dentro da coleção podem ser obtidos como `xml` instâncias de tipo de dados, especificando o namespace de destino como o terceiro argumento para **xml_schema_namespace ()** . Isso é mostrado no exemplo a seguir.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Exemplo: Gerar um esquema especificado com base em uma coleção de esquemas XML  
  A instrução a seguir produz o esquema XML com o namespace de destino "<https://www.microsoft.com/books>" da coleção de esquemas XML "myCollection" dentro do esquema relacional dbo.  

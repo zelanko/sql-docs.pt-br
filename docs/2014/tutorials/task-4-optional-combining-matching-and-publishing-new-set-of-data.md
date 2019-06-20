@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489278"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tarefa 4 (opcional): Combinar, corresponder e publicar o novo conjunto de dados
@@ -94,7 +94,7 @@ ms.locfileid: "65489278"
   
      ![Excel - resultados correspondentes](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel - resultados correspondentes")  
   
-27. Selecione o **linha duplicada (laranja)**, clique com botão direito e clique em **excluir** para excluir a linha.  
+27. Selecione o **linha duplicada (laranja)** , clique com botão direito e clique em **excluir** para excluir a linha.  
   
 28. Excluir o **CLUSTER_ID** coluna, pois você não precisa mais.  
   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77cb69877324b36120b3a277688bb1ad737f5c4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63188980"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Função de conversão de tipo de dados explícitos
@@ -57,7 +57,7 @@ Conversão de tipo de dados explícito é especificada em termos de definições
   
  A sintaxe ODBC para a função de conversão de tipo de dados explícito não oferece suporte a especificação de formato de conversão. Se a especificação dos formatos explícitas tem suporte pela fonte de dados subjacente, um driver deve especificar um valor padrão ou implementar a especificação de formato.  
   
- O argumento *value_exp* pode ser um nome de coluna, o resultado de outra função escalar ou um numérico ou cadeia de caracteres literal. Por exemplo:  
+ O argumento *value_exp* pode ser um nome de coluna, o resultado de outra função escalar ou um numérico ou cadeia de caracteres literal. Por exemplo:   
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  

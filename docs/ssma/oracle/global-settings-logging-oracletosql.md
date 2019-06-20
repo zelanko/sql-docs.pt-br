@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: abe73fd789a74d358c0573b6c0778a15612532a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63192395"
 ---
 # <a name="global-settings-logging-oracletosql"></a>Configurações globais (registro em log) (OracleToSQL)
@@ -52,7 +52,7 @@ Para cada opção sob **nível de mensagens**, configure um dos seguintes nívei
 |**Depurador**|Gravar todas as mensagens, incluindo mensagens no log de depuração.|  
   
 **Caminho do arquivo de log**  
-O caminho do arquivo e o nome dos arquivos de log SSMA. Para especificar um nome diferente, clique no caminho atual e, em seguida, clique no botão Procurar (**...** ) botão.  
+O caminho do arquivo e o nome dos arquivos de log SSMA. Para especificar um nome diferente, clique no caminho atual e, em seguida, clique no botão Procurar ( **...** ) botão.  
   
 **Tamanho do arquivo de log**  
 O tamanho máximo do arquivo de log em KB. O tamanho mínimo é de 10 KB. O tamanho padrão é 10240 KB.  

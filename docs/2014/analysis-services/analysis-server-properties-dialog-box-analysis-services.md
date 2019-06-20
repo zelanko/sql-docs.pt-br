@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b32b0fa678df98494f91c1026adebe701d807342
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062618"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Caixa de diálogo Propriedades do Analysis Server (Analysis Services)
@@ -64,7 +64,7 @@ ms.locfileid: "66062618"
 -   [Propriedades de pool de threads](server-properties/thread-pool-properties.md)  
   
 ## <a name="language-collation-properties"></a>Propriedades de Idioma/Ordenação  
- Use essa página para definir opções de ordenação e idioma padrão para um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. A lista a seguir contém breves descrições de cada opção. Consulte [Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](languages-and-collations-analysis-services.md) para obter detalhes.  
+ Use essa página para definir opções de ordenação e idioma padrão para um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. A lista a seguir contém breves descrições de cada opção. Consulte [Idiomas e ordenações &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) para obter detalhes.  
   
 -   **Binário** é usado para classificar e comparar dados com base nos padrões de bit definidos para cada caractere. A ordem de classificação binária diferencia maiúsculas e minúsculas, isto é, minúscula precede maiúscula, e diferencia acento. Essa é a ordem de classificação mais rápida.  
   

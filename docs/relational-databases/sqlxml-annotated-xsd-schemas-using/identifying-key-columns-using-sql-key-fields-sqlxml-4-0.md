@@ -24,10 +24,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c9478f193e3e117abf22da53b225e43adac14c6
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980813"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identificando colunas de chave usando campos sql:key (SQLXML 4.0)
@@ -51,7 +51,7 @@ ms.locfileid: "65980813"
   
  O  **\<SQL: Relationship >** marca é usada para especificar a relação pai-filho. Ela identifica CustomerID na tabela Sales.SalesOrderHeader como a chave pai que faz referência à chave filho CustomerID na tabela Sales.Customer. As informações fornecidas  **\<SQL: Relationship >** não é suficiente para identificar exclusivamente linhas na tabela pai (Sales. SalesOrderHeader). Portanto, sem a **SQL: Key-campos** anotação, a hierarquia gerada é imprecisa.  
   
- Com o **SQL: Key-campos** especificado na  **\<ordem >**, a anotação identifica exclusivamente as linhas no pai (tabela Sales. SalesOrderHeader) e seus elementos filhos aparecem abaixo seu pai.  
+ Com o **SQL: Key-campos** especificado na  **\<ordem >** , a anotação identifica exclusivamente as linhas no pai (tabela Sales. SalesOrderHeader) e seus elementos filhos aparecem abaixo seu pai.  
   
  Este é o esquema:  
   
@@ -128,7 +128,7 @@ ms.locfileid: "65980813"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. Especificar sql:key-fields para produzir o aninhamento adequado no resultado  
- No esquema a seguir, nenhuma hierarquia é especificada usando  **\<SQL: Relationship >**. O esquema ainda requer que o **SQL: Key-campos** anotação para identificar exclusivamente os funcionários na tabela HumanResources. Employee.  
+ No esquema a seguir, nenhuma hierarquia é especificada usando  **\<SQL: Relationship >** . O esquema ainda requer que o **SQL: Key-campos** anotação para identificar exclusivamente os funcionários na tabela HumanResources. Employee.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7700a2d1da4349bd1bc652badc1c2cdd89dc6550
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873260"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Desabilitar a compactação em uma tabela ou índice
@@ -57,7 +57,7 @@ ms.locfileid: "62873260"
   
 1.  No Pesquisador de Objetos, expanda o banco de dados que contém a tabela na qual você deseja desabilitar a compactação e expanda a pasta **Tabelas** .  
   
-2.  Clique com o botão direito do mouse na tabela ou índice no qual você deseja desabilitar a compactação, aponte para **Repositório** e selecione **Gerenciar Compactação...**.  
+2.  Clique com o botão direito do mouse na tabela ou índice no qual você deseja desabilitar a compactação, aponte para **Repositório** e selecione **Gerenciar Compactação...** .  
   
 3.  Para desabilitar a compactação em um índice, expanda a tabela que contém o índice que você deseja expandir e expanda a pasta **Índices** .  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62873260"
   
      As seguintes opções estão disponíveis na página **Selecionar Tipo de Compactação** :  
   
-     Caixa de seleção**Usar o mesmo tipo de compactação para todas as partições**   
+     Caixa de seleção**Usar o mesmo tipo de compactação para todas as partições**  
      Selecione para configurar a mesma configuração de compactação para todas as partições. Isso habilita a caixa de seleção e desabilita a coluna **Tipo de Compactação** na grade. Quando selecionadas, as opções na lista adjacente são **Nenhum**, **Linha**e **Página**.  
   
      **Número da partição**  
@@ -138,7 +138,7 @@ ms.locfileid: "62873260"
   
             -   Se você selecionar **Ocorre uma vez às**, digite a hora específica do dia em que a agenda de trabalho deve ser executada na caixa **Ocorre uma vez às** . Digite a hora, os minutos e os segundos do dia, bem como AM ou PM.  
   
-            -   Se você selecionar **Ocorre a cada**, especifique a frequência com que a agenda de trabalho é executada durante o dia escolhido em **Frequência**. Por exemplo, se você desejar que o agendamento de trabalho se repita a cada 2 horas durante o dia em que é executado, selecione **Ocorre a cada**, digite "2" na primeira caixa e selecione **hora(s)** na lista. Nessa lista, você pode selecionar também **minuto(s)** e **segundo(s)**. Observe que o maior número permitido na primeira caixa é "100".  
+            -   Se você selecionar **Ocorre a cada**, especifique a frequência com que a agenda de trabalho é executada durante o dia escolhido em **Frequência**. Por exemplo, se você desejar que o agendamento de trabalho se repita a cada 2 horas durante o dia em que é executado, selecione **Ocorre a cada**, digite "2" na primeira caixa e selecione **hora(s)** na lista. Nessa lista, você pode selecionar também **minuto(s)** e **segundo(s)** . Observe que o maior número permitido na primeira caixa é "100".  
   
                  Na caixa **Iniciando às** , digite a hora em que a agenda de trabalho deve começar a ser executada. Na caixa **Terminando às** , digite a hora em que a agenda de trabalho deve parar de se repetir. Digite a hora, os minutos e os segundos do dia, bem como AM ou PM.  
   
