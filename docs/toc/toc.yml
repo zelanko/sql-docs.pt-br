@@ -8215,12 +8215,12 @@
               href: ../azure-data-studio/extensibility-apis.md
         - name: Recursos
           items:
+            - name: PERGUNTAS FREQUENTES
+              href: ../azure-data-studio/faq.md
             - name: Repositório GitHub do Azure Data Studio >
               href: 'https://www.github.com/Microsoft/azuredatastudio'
             - name: Blog do SQL Server >
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-            - name: PERGUNTAS FREQUENTES
-              href: ../azure-data-studio/faq.md
             - name: Relatar problemas e fazer sugestões >
               href: 'https://github.com/microsoft/azuredatastudio/issues'
     - name: Utilitários do prompt de comando
