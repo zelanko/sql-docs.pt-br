@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62797821"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
@@ -43,7 +43,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @class = ] 'class'` A classe sobre quais informações são solicitadas. *classe* está **varchar(8)**, com um valor padrão de **trabalho**. *classe* pode ser um destes valores.  
+`[ @class = ] 'class'` A classe sobre quais informações são solicitadas. *classe* está **varchar(8)** , com um valor padrão de **trabalho**. *classe* pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -51,7 +51,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**ALERT**|Fornece informações sobre uma categoria de alerta.|  
 |**OPERADOR**|Fornece informações sobre uma categoria de operador.|  
   
-`[ @type = ] 'type'` O tipo de categoria para a qual as informações são solicitadas. *tipo de* está **varchar(12)**, com um padrão de NULL, e pode ser um destes valores.  
+`[ @type = ] 'type'` O tipo de categoria para a qual as informações são solicitadas. *tipo de* está **varchar(12)** , com um padrão de NULL, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  

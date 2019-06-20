@@ -16,16 +16,16 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 84f6f2bdb4c5c512cb75dfea554b5ae28e3c3f02
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096102"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>Configurar uma conta de serviço (Gerenciador de configurações do SSRS)
   Em uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o serviço Web Servidor de Relatório, o Gerenciador de Relatórios e o aplicativo de processamento em segundo plano são executados em um único serviço. A conta em que o serviço é executado é definida durante a Instalação quando você especifica a conta na página Identidade do Serviço, mas é possível usar a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se desejar usar uma conta diferente ou atualizar a senha.  
   
- Se você tiver um servidor de relatório está configurado para usar o modo integrado do SharePoint e você alterar a conta de serviço usando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ferramenta de configuração, você também deve abrir a Administração Central do SharePoint e usar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  **Conceder acesso ao banco de dados** página para reaplicar as configurações de servidor e instância de relatório. Essa etapa concederá à nova serviço conta acesso aos bancos de dados do SharePoint, que é necessária para integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
+ Se você tiver um servidor de relatório está configurado para usar o modo integrado do SharePoint e você alterar a conta de serviço usando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ferramenta de configuração, você também deve abrir a Administração Central do SharePoint e usar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Conceder acesso ao banco de dados** página para reaplicar as configurações de servidor e instância de relatório. Essa etapa concederá à nova serviço conta acesso aos bancos de dados do SharePoint, que é necessária para integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
   
  Sempre use a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para atualizar a conta de serviço, de forma que outras configurações que dependam da identidade de serviço possam ser atualizadas simultaneamente.  
   

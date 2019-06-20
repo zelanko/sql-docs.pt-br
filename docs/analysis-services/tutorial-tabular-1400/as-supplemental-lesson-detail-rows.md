@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 20f5f32d4cca8b69d94410296e3653a92a1d6d46
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: bad45d18c351e838ec944b1ae67e3ce88c7e1d20
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685234"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263310"
 ---
 # <a name="supplemental-lesson---detail-rows"></a>Lição suplementar – Linhas de detalhes
 
@@ -81,6 +81,6 @@ O que queremos ver aqui é uma tabela contendo colunas e linhas de dados que con
   
 ## <a name="see-also"></a>Confira também  
 
-[Função SELECTCOLUMNS (DAX)](https://msdn.microsoft.com/library/mt761759.aspx)  
+[Função SELECTCOLUMNS (DAX)](/dax/selectcolumns-function-dax)  
 [Lição suplementar - Segurança dinâmica](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)  
 [Lição suplementar - Hierarquias desbalanceadas](../tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)  

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ebd6f25758f73e75fd96abb734bc7b0347d5ee0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63209988"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Usar aplicativos de 16 bits com drivers de 32 bits
@@ -36,7 +36,7 @@ ms.locfileid: "63209988"
 >  Sempre que um aplicativo de 16 bits interage com um driver de 32 bits, o Gerenciador de Driver de 32 bits sempre retorna "2.0" como a versão do ODBC com suporte pelo driver.  
   
 ## <a name="administration"></a>Administração  
- Você pode gerenciar fontes de dados para drivers de 32 bits usando o administrador de fonte de dados ODBC. Para abrir o administrador ODBC em computadores que executam o Microsoft® Windows® 2000, abra o painel de controle do Windows, clique duas vezes **ferramentas administrativas**e, em seguida, clique duas vezes em **fontes de dados (ODBC)**. Em computadores que executam versões anteriores do Microsoft Windows, o ícone é denominado **ODBC de 32 bits** ou simplesmente **ODBC**.  
+ Você pode gerenciar fontes de dados para drivers de 32 bits usando o administrador de fonte de dados ODBC. Para abrir o administrador ODBC em computadores que executam o Microsoft® Windows® 2000, abra o painel de controle do Windows, clique duas vezes **ferramentas administrativas**e, em seguida, clique duas vezes em **fontes de dados (ODBC)** . Em computadores que executam versões anteriores do Microsoft Windows, o ícone é denominado **ODBC de 32 bits** ou simplesmente **ODBC**.  
   
  A ilustração a seguir mostra como um aplicativo de 16 bits chama uma DLL de instalação do driver de 32 bits. Entre a DLL do instalador de 16 bits e o driver de 32 bits a DLL de instalação é uma DLL de conversão genérica que converte as chamadas DLL do instalador de 16 bits para chamadas de DLL do instalador de 32 bits.  
   

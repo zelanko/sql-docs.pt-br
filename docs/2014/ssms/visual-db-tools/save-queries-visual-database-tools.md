@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8245c048d4c1a1314835ad70fc7305c7afabd3f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63284469"
 ---
 # <a name="save-queries-visual-database-tools"></a>Salvar consultas (Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "63284469"
   
 1.  Crie sua consulta.  
   
-2.  No menu **Arquivo**, clique em **Salvar <query_name>**.  
+2.  No menu **Arquivo**, clique em **Salvar <query_name>** .  
   
     > [!NOTE]  
     >  Uma consulta recém-criada receberá um nome de sistema. Para escolher seu próprio nome para a consulta, escolha **Salvar <query_name> As**.  

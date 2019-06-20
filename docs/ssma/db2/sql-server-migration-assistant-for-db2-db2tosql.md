@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 89c8ab8693ae814e9b471fe8212f8a1961d09873
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63267896"
 ---
 # <a name="sql-server-migration-assistant-for-db2-db2tosql"></a>Assistente de migração do SQL Server para DB2 (DB2ToSQL)
@@ -24,7 +24,7 @@ Esta documentação apresenta SSMA para DB2 e fornece instruções passo a passo
   
 ## <a name="contents"></a>Sumário  
   
-|Seção|Descrição|  
+|`Section`|Descrição|  
 |-----------|---------------|  
 |[Novidades do SSMA para DB2](https://msdn.microsoft.com/1cc38f85-3caa-42d0-8c76-a380c1d15c67)|O que há de novo nesta versão do SSMA para DB2|  
 |[Instalar o SSMA para cliente DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)|Contém tópicos que fornecem os pré-requisitos e instruções para instalar o SSMA para cliente DB2 e os componentes necessários no computador que está executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

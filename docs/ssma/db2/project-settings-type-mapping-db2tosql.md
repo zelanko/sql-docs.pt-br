@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 91498db5535c99c7c8afaba85efc35639510a079
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270013"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Configurações do projeto (mapeamento de tipo) (DB2ToSQL)
@@ -74,7 +74,7 @@ A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos 
 |dec|dec[38][0]|  
 |Decimal|float[53]|  
 |precisão dupla|float[53]|  
-|FLOAT|float[53]|  
+|float|float[53]|  
 |INT|INT|  
 |inteiro|INT|  
 |long|varchar(max)|  
@@ -104,7 +104,7 @@ A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos 
 |urowid|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
 |varchar2|varchar(max)|  
-|xmltype|Xml|  
+|xmltype|xml|  
   
 <sup>\*</sup> Aplica-se para retornar o mapeamento de tipo de valor apenas.  
   
@@ -134,7 +134,7 @@ A tabela a seguir contém o mapeamento de tipo padrão para colunas.
 |decimal[\*..\*]|decimal[\*][0]|  
 |decimal[\*..\*][\*..\*]|decimal[\*][\*]|  
 |precisão dupla|float[53]|  
-|FLOAT|float[53]|  
+|float|float[53]|  
 |float[\*..53]|float[\*]|  
 |float[54..\*]|float[53]|  
 |INT|INT|  
@@ -176,7 +176,7 @@ A tabela a seguir contém o mapeamento de tipo padrão para colunas.
 |urowid[\*..\*]|UNIQUEIDENTIFIER|  
 |varchar[\*..\*]|varchar[\*]|  
 |varchar2[\*..\*]|varchar[\*]|  
-|Xmltype|Xml|  
+|Xmltype|xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>Mapeamento de tipo de variável Local padrão  
 A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.  
@@ -234,7 +234,7 @@ A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.
 |nchar variados [\*... 4000]|nvarchar[\*]|  
 |nchar variados [4001...\*]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|Número|float[53]|  
+|Number|float[53]|  
 |número [\*... \*]|numeric[\*]|  
 |number[\*..\*][\*..\*]|numeric[\*][\*]|  
 |Numeric|numeric[38][0]|  
@@ -263,7 +263,7 @@ A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.
 |varchar[8001..\*]|varchar(max)|  
 |varchar2[\*..8000]|varchar[\*]|  
 |varchar2[8001..\*]|varcha(max)|  
-|Xmltype|Xml|  
+|Xmltype|xml|  
   
 ## <a name="see-also"></a>Consulte também  
 [Referência da Interface do usuário &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  

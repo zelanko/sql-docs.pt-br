@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69c9f1258f35a69d6554783f5d1b4ca79be313d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63259255"
 ---
 # <a name="sql-to-c-timestamp"></a>SQL para C: Timestamp
@@ -51,4 +51,4 @@ A tabela a seguir mostra os tipos de dados ao qual o carimbo de hora de dados do
   
  [f] esse é o tamanho do tipo de dados C correspondente.  
 
-Quando dados SQL de carimbo de hora são convertidos em dados de caractere C, a cadeia de caracteres resultante está no "*aaaa*-*mm*-*dd* *hh* :*mm*:*ss*[.*f...*] "formato, onde pode ser usada até nove dígitos para segundos fracionários. Esse formato não é afetado pela configuração de país Windows®. (Exceto para o ponto decimal e frações de segundos, o formato inteiro deve ser usado, independentemente da precisão do tipo de dados SQL timestamp.)
+Quando dados SQL de carimbo de hora são convertidos em dados de caractere C, a cadeia de caracteres resultante está no "*aaaa*-*mm*-*dd* *hh* :*mm*:*ss*[.*f...* ] "formato, onde pode ser usada até nove dígitos para segundos fracionários. Esse formato não é afetado pela configuração de país Windows®. (Exceto para o ponto decimal e frações de segundos, o formato inteiro deve ser usado, independentemente da precisão do tipo de dados SQL timestamp.)

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 79570a1479078234328a17d4de2a12c821c76f3d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62643342"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Mapeamentos de tipo de dados entre R e SQL Server
@@ -158,7 +158,7 @@ A partir disso, você pode ver que as seguintes conversões de tipo de dados for
   
 -   **Coluna C2**. A coluna é representada como **varchar(10)** em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `factor` em R, e **varchar(max)** na saída.  
   
-     Observe como a saída muda; qualquer cadeia de caracteres de R (um fator ou uma cadeia de caracteres regular) será representada como **varchar(max)**, não importa o comprimento das cadeias de caracteres.  
+     Observe como a saída muda; qualquer cadeia de caracteres de R (um fator ou uma cadeia de caracteres regular) será representada como **varchar(max)** , não importa o comprimento das cadeias de caracteres.  
   
 -   **Coluna C3**.  A coluna é representada como **uniqueidentifier** em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `character` em R, e **varchar(max)** na saída.
   

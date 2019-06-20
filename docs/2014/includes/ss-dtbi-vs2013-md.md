@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: effddb2a4c0f54effcaa44213a7abf940e3a1ad9
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65818058"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67224903"
 ---
 SQL Server Data Tools \- Business Intelligence para Visual Studio 2013

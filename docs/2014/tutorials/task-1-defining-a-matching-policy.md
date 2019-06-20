@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481311"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Tarefa 1: Definir uma política de correspondência
-  Nesta tarefa, você criará uma política de correspondência com uma regra nela. A regra terá um pré-requisito: **Supplier ID**, que significa que as IDs de fornecedor deverão corresponder antes do uso de outros domínios na regra. A regra usa dois outros domínios: **Nome do fornecedor** com **similaridade** valor definido como **70%** e **Contact Email** com **similaridade** valor definido como **30%**.  
+  Nesta tarefa, você criará uma política de correspondência com uma regra nela. A regra terá um pré-requisito: **Supplier ID**, que significa que as IDs de fornecedor deverão corresponder antes do uso de outros domínios na regra. A regra usa dois outros domínios: **Nome do fornecedor** com **similaridade** valor definido como **70%** e **Contact Email** com **similaridade** valor definido como **30%** .  
   
 1.  Na página principal do **cliente DQS**, clique em **seta para a direita** lado **fornecedores** knowledge base e selecione **política de correspondência**.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65481311"
   
 12. Repita as duas etapas anteriores para adicionar **Contact Email** domínio com **30** para o **peso**.  
   
-13. Observe que o **min pontuação de correspondência** é definido como **80%**, que é o valor que você vê no **geral** guia do **configuração** página do **Administração do DQS**. Você só poderá aumentar essa pontuação acima desse valor de limite aqui.  
+13. Observe que o **min pontuação de correspondência** é definido como **80%** , que é o valor que você vê no **geral** guia do **configuração** página do **Administração do DQS**. Você só poderá aumentar essa pontuação acima desse valor de limite aqui.  
   
 14. Observe que **Clusters sobrepostos** opção está selecionada. Com essa opção, um registro pode aparecer em vários clusters. Se você alterar a configuração para Clusters Não Sobrepostos, os clusters que tiverem registros comuns serão combinados em um único cluster.  
   

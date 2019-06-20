@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: f4b0393d3e69e6480d90ff57e8c3696fd9ef5438
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65816661"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67231678"
 ---
 SQL Server Web

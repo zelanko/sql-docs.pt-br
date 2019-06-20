@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e49f9b2bcd4784c76f693863c7837dd827ba2924
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806035"
 ---
 # <a name="initialization-and-authorization-properties"></a>Propriedades de inicialização e autorização
@@ -79,7 +79,7 @@ ms.locfileid: "62806035"
  Conjunto de na propriedade específica do provedor DBPROPSET_SQLSERVERDATASOURCEINFO, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB do Native Client define as propriedades adicionais; consulte [propriedades de informações de fonte de dados](../../relational-databases/native-client-ole-db-data-source-objects/data-source-information-properties.md) para obter mais informações.  
   
 ## <a name="the-sql-server-native-client-ole-db-provider-string"></a>A cadeia de caracteres do provedor OLE DB do SQL Server Native Client  
- O provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client reconhece uma sintaxe como ODBC em valores de propriedade da cadeia de caracteres do provedor. A propriedade da cadeia de caracteres do provedor é fornecida como o valor da propriedade de inicialização do OLE DB DBPROP_INIT_PROVIDERSTRING quando uma conexão é estabelecida com a fonte de dados do OLE DB. Essa propriedade especifica os dados de conexão específicos do provedor OLE DB necessários para implementar uma conexão com a fonte de dados do OLE DB. Dentro da cadeia de caracteres, os elementos são delimitados usando um ponto-e-vírgula. O elemento final na cadeia de caracteres deve terminar com um ponto-e-vírgula. Cada elemento consiste em uma palavra-chave, em um caractere de sinal de igual e no valor transmitido na inicialização. Por exemplo:   
+ O provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client reconhece uma sintaxe como ODBC em valores de propriedade da cadeia de caracteres do provedor. A propriedade da cadeia de caracteres do provedor é fornecida como o valor da propriedade de inicialização do OLE DB DBPROP_INIT_PROVIDERSTRING quando uma conexão é estabelecida com a fonte de dados do OLE DB. Essa propriedade especifica os dados de conexão específicos do provedor OLE DB necessários para implementar uma conexão com a fonte de dados do OLE DB. Dentro da cadeia de caracteres, os elementos são delimitados usando um ponto-e-vírgula. O elemento final na cadeia de caracteres deve terminar com um ponto-e-vírgula. Cada elemento consiste em uma palavra-chave, em um caractere de sinal de igual e no valor transmitido na inicialização. Por exemplo:  
   
 ```  
 Server=MyServer;UID=MyUserName;  

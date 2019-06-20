@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7f379b3cbc335da74b4d029d19b8fa3bdab603c9
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403498"
 ---
 # <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Lição 9-1: definindo e procurando perspectivas
@@ -53,37 +53,37 @@ Nas tarefas deste tópico, você definirá várias perspectivas diferentes e dep
   
 5.  Desmarque a caixa de seleção dos seguintes objetos:  
   
-    -   Grupo de medidas**Vendas do Revendedor**   
+    -   Grupo de medidas**Vendas do Revendedor**  
   
-    -   Grupo de medidas**Cotas de Vendas**   
+    -   Grupo de medidas**Cotas de Vendas**  
   
-    -   Grupo de medidas**Cotas de Vendas 1**   
+    -   Grupo de medidas**Cotas de Vendas 1**  
   
-    -   Dimensão de cubo**Revendedor**   
+    -   Dimensão de cubo**Revendedor**  
   
-    -   Dimensão de cubo**Geografia do Revendedor**   
+    -   Dimensão de cubo**Geografia do Revendedor**  
   
-    -   Dimensão de cubo**Região de Vendas**   
+    -   Dimensão de cubo**Região de Vendas**  
   
-    -   Dimensão de cubo**Funcionário**   
+    -   Dimensão de cubo**Funcionário**  
   
-    -   Dimensão de cubo**Promoção**   
+    -   Dimensão de cubo**Promoção**  
   
-    -   **Receita do Revendedor**   
+    -   **Receita do Revendedor**  
   
-    -   Conjunto nomeado**Grandes Revendedores**   
+    -   Conjunto nomeado**Grandes Revendedores**  
   
-    -   Membro calculado**Valor Total das Vendas**   
+    -   Membro calculado**Valor Total das Vendas**  
   
-    -   Membro calculado**Custo Total do Produto**   
+    -   Membro calculado**Custo Total do Produto**  
   
-    -   Membro calculado**MLB do Revendedor**   
+    -   Membro calculado**MLB do Revendedor**  
   
-    -   Membro calculado**MLB Total**   
+    -   Membro calculado**MLB Total**  
   
-    -   Membro calculado**Índice de Vendas do Revendedor para Todos os Produtos**   
+    -   Membro calculado**Índice de Vendas do Revendedor para Todos os Produtos**  
   
-    -   Membro calculado**Índice Total de Vendas para Todos os Produtos**   
+    -   Membro calculado**Índice Total de Vendas para Todos os Produtos**  
   
     Esses objetos não estão relacionados às vendas pela Internet.  
   
@@ -102,29 +102,29 @@ Nas tarefas deste tópico, você definirá várias perspectivas diferentes e dep
   
 4.  Desmarque a caixa de seleção dos seguintes objetos:  
   
-    -   Grupo de medidas**Vendas pela Internet**   
+    -   Grupo de medidas**Vendas pela Internet**  
   
-    -   Grupo de medidas**Motivo de Vendas pela Internet**   
+    -   Grupo de medidas**Motivo de Vendas pela Internet**  
   
-    -   Dimensão de cubo**Cliente**   
+    -   Dimensão de cubo**Cliente**  
   
-    -   Dimensão de cubo**Detalhes do Pedido de Vendas pela Internet**   
+    -   Dimensão de cubo**Detalhes do Pedido de Vendas pela Internet**  
   
-    -   Dimensão de cubo**Motivo de Vendas**   
+    -   Dimensão de cubo**Motivo de Vendas**  
   
-    -   Ação de detalhamento**Ação de Detalhamento Detalhes de Vendas pela Internet**   
+    -   Ação de detalhamento**Ação de Detalhamento Detalhes de Vendas pela Internet**  
   
-    -   Membro calculado**Valor Total das Vendas**   
+    -   Membro calculado**Valor Total das Vendas**  
   
-    -   Membro calculado**Custo Total do Produto**   
+    -   Membro calculado**Custo Total do Produto**  
   
-    -   Membro calculado**MLB pela Internet**   
+    -   Membro calculado**MLB pela Internet**  
   
-    -   Membro calculado**MLB Total**   
+    -   Membro calculado**MLB Total**  
   
-    -   Membro calculado**Índice de Vendas pela Internet para Todos os Produtos**   
+    -   Membro calculado**Índice de Vendas pela Internet para Todos os Produtos**  
   
-    -   Membro calculado**Índice Total de Vendas para Todos os Produtos**   
+    -   Membro calculado**Índice Total de Vendas para Todos os Produtos**  
   
     Esses objetos não estão relacionados às vendas do revendedor.  
   
@@ -139,27 +139,27 @@ Nas tarefas deste tópico, você definirá várias perspectivas diferentes e dep
   
 3.  Desmarque a caixa de seleção dos seguintes objetos:  
   
-    -   Grupo de medidas**Vendas pela Internet**   
+    -   Grupo de medidas**Vendas pela Internet**  
   
-    -   Grupo de medidas**Vendas do Revendedor**   
+    -   Grupo de medidas**Vendas do Revendedor**  
   
-    -   Grupo de medidas**Motivo de Vendas pela Internet**   
+    -   Grupo de medidas**Motivo de Vendas pela Internet**  
   
-    -   Grupo de medidas**Cotas de Vendas**   
+    -   Grupo de medidas**Cotas de Vendas**  
   
-    -   Grupo de medidas**Cotas de Vendas1**   
+    -   Grupo de medidas**Cotas de Vendas1**  
   
-    -   Dimensão de cubo**Detalhes do Pedido de Vendas pela Internet**   
+    -   Dimensão de cubo**Detalhes do Pedido de Vendas pela Internet**  
   
-    -   Dimensão de cubo**Motivo de Vendas**   
+    -   Dimensão de cubo**Motivo de Vendas**  
   
-    -   Ação de detalhamento**Ação de Detalhamento Detalhes de Vendas pela Internet**   
+    -   Ação de detalhamento**Ação de Detalhamento Detalhes de Vendas pela Internet**  
   
 4.  Selecione a caixa de seleção dos seguintes objetos:  
   
-    -   Medida**Contagem das Vendas pela Internet**   
+    -   Medida**Contagem das Vendas pela Internet**  
   
-    -   Medida**Contagem das Vendas do Revendedor**   
+    -   Medida**Contagem das Vendas do Revendedor**  
   
 ## <a name="browsing-the-cube-through-each-perspective"></a>Navegando no cubo usando cada perspectiva  
   

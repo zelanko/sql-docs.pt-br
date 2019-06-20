@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d780010d0cae7dbbe358c9ae5e6430ed0fff4d2d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62727652"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Armazenamento de cubo (Analysis Services – Dados Multidimensional)
@@ -35,7 +35,7 @@ ms.locfileid: "62727652"
   
  O armazenamento é definido em uma base partição por partição e há pelo menos uma partição para cada grupo de medidas em um cubo. Para obter mais informações, consulte [partições &#40;Analysis Services - dados multidimensionais&#41;](partitions-analysis-services-multidimensional-data.md), [modos de armazenamento de partição e processamento](partitions-partition-storage-modes-and-processing.md), [gruposdemedidasemedidas](../multidimensional-models/measures-and-measure-groups.md), e [criar medidas e grupos de medidas em modelos multidimensionais](../multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).  
   
-## <a name="partition-storage"></a>Armazenamento de partição   
+## <a name="partition-storage"></a>Armazenamento de partição  
  O armazenamento de um grupo de medidas pode ser dividido em várias partições. As partições permitem que você distribua um grupo de medidas em segmentos discretos em um único servidor, ou por vários servidores, e para otimizar o desempenho de armazenamento e a consulta. Cada partição em um grupo de medidas pode ser baseada em uma fonte de dados diferente e armazenada usando diferentes configurações de armazenamento.  
   
  Você pode especificar a fonte de dados de uma partição ao criá-la. Você também pode alterar a fonte de dados de qualquer partição existente. Um grupo de medidas pode ser particionado verticalmente ou horizontalmente. Cada partição em um grupo de medidas particionado verticalmente está baseada em uma exibição filtrada de uma única tabela de origem. Por exemplo, se um grupo de medidas estiver baseado em uma única tabela que contiver vários anos de dados, será possível criar uma partição separada para os dados de cada ano. Por outro lado, cada partição em um grupo de medidas particionado horizontalmente será baseado em uma tabela separada. Você pode usar partições horizontais se a fonte de dados armazenar os dados de cada ano em uma tabela separada.  

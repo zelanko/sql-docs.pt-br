@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 1ac058e42b8bad4f499210835a1f85c3cc7a08a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62639505"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Gerenciar permissões no Parallel Data Warehouse
@@ -62,7 +62,7 @@ A lista a seguir descreve as permissões padrão:
   
 -   Quando um logon é criado por usos **CREATE LOGIN** instrução, o logon recebe o **CONNECT SQL** permissão permitindo que o logon para conexão com o SQL Server PDW.  
   
--   Quando um usuário de banco de dados é criado usando o **criar usuário** instrução, o usuário recebe a **CONNECT ON DATABASE::**_< database_name >_ permissão, permitindo que o Faça logon para conectar-se ao banco de dados como um usuário.  
+-   Quando um usuário de banco de dados é criado usando o **criar usuário** instrução, o usuário recebe a **CONNECT ON DATABASE::** _< database_name >_ permissão, permitindo que o Faça logon para conectar-se ao banco de dados como um usuário.  
   
 -   Todas as entidades, incluindo a função pública, não tem nenhuma permissão explícita ou implícita por padrão, como permissões implícitas são herdadas de permissões explícitas. Portanto, quando nenhuma permissão explícita estiverem presente, também não pode haver nenhuma permissão implícita.  
   

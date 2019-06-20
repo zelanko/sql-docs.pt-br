@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63240146"
 ---
 # <a name="open-with-new-file"></a>Abrir com (Novo Arquivo)
@@ -39,7 +39,7 @@ ms.locfileid: "63240146"
  Para especificar um editor padrão (e opções de codificação de linguagem, se aplicável) para o tipo de arquivo selecionado, escolha um programa da lista sob **Selecionar um programa para abrir** e, depois, clique em **Definir como Padrão**. Na próxima vez em que você abrir esse tipo de arquivo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o documento será aberto no novo editor padrão.  
   
 > [!NOTE]  
->  Na lista de programas sob **Selecionar um programa para abrir**, o nome do editor padrão para o tipo de arquivo selecionado é seguido por **(Padrão)**.  
+>  Na lista de programas sob **Selecionar um programa para abrir**, o nome do editor padrão para o tipo de arquivo selecionado é seguido por **(Padrão)** .  
   
 ## <a name="see-also"></a>Consulte também  
  [Associar extensões de arquivo a um Editor de Códigos](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  

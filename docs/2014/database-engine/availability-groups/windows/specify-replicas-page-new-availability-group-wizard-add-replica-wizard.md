@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be6ddc45dd2f37b5a4a29f0e3fee4a9c44f723ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788331"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar réplicas (Assistente de novo grupo de disponibilidade: assistente para adicionar réplica)
@@ -146,7 +146,7 @@ ms.locfileid: "62788331"
  Especifique suas preferências de ouvinte para este grupo de disponibilidade, da seguinte maneira:  
   
  **Nome DNS do Ouvinte**  
- Especifique o nome da rede do ouvinte. Esse nome deve ser exclusivo no domínio e pode conter apenas caracteres alfanuméricos, traços (**-**) e hifens (**_**), em qualquer ordem. Quando especificado usando a guia **Ouvinte** , o nome DNS pode ter até 15 caracteres de comprimento.  
+ Especifique o nome da rede do ouvinte. Esse nome deve ser exclusivo no domínio e pode conter apenas caracteres alfanuméricos, traços ( **-** ) e hifens ( **_** ), em qualquer ordem. Quando especificado usando a guia **Ouvinte** , o nome DNS pode ter até 15 caracteres de comprimento.  
   
 > [!IMPORTANT]  
 >  Se você inserir um nome de ouvinte DNS inválido (ou número da porta) na guia **Ouvinte** , o botão **Avançar** será desabilitado na página **Especificar Réplicas** .  
@@ -165,10 +165,10 @@ ms.locfileid: "62788331"
   
  Se **IP Estático** for selecionado como o modo de rede (esta é a seleção padrão), uma grade exibirá as colunas **Sub-rede** e **Endereço IP** e os botões **Adicionar** e **Remover** associados serão exibidos. Observe que a grade estará vazia até que você adicione a primeira sub-rede.  
   
- Coluna**Sub-rede**   
+ Coluna**Sub-rede**  
  Exibe o endereço de sub-rede que você selecionou para cada sub-rede adicionada para o ouvinte.  
   
- Coluna**Endereço IP**   
+ Coluna**Endereço IP**  
  Exibe o endereço IPv4 ou IPv6 que você especificou para uma determinada sub-rede.  
   
  **Adicionar**  

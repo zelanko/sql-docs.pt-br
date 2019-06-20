@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b385e6b02807ed79e2becb127a16e76d04329764
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62473127"
 ---
 # <a name="alerts"></a>Alertas
@@ -92,7 +92,7 @@ ms.locfileid: "62473127"
   
      O limite do alerta e o comportamento que o alerta produz. O limite é um número. O comportamento é um **dos seguintes: cai abaixo**, **torna-se igual a**ou **sobe acima de um número especificado como Valor**. O **Valor** é um número que descreve o contador de condição de desempenho. Por exemplo, para definir que ocorra um alerta para o objeto de desempenho **SQLServer:Locks** quando **Tempo de Espera de Bloqueio** exceder 30 minutos, você deve escolher **sobe acima** e **especificar 30 como valor**.  
   
-     Outro exemplo: você pode especificar que ocorra um alerta para o objeto de desempenho **SQLServer:Transactions** quando o espaço livre em **tempdb** cair abaixo de 1000 KB. Para definir isso, bastaria escolher o contador **Espaço livre em tempdb (KB)**, **cai abaixo**e um **Valor** de **1000**.  
+     Outro exemplo: você pode especificar que ocorra um alerta para o objeto de desempenho **SQLServer:Transactions** quando o espaço livre em **tempdb** cair abaixo de 1000 KB. Para definir isso, bastaria escolher o contador **Espaço livre em tempdb (KB)** , **cai abaixo**e um **Valor** de **1000**.  
   
     > [!NOTE]  
     >  Os dados de desempenho são amostrados periodicamente, o que pode levar a uma pequena demora (alguns segundos) entre o limite a ser atingido e a ocorrência do alerta de desempenho.  

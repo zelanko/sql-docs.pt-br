@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f6d9ebe43d45ce16ca4889d08656029cad22dcf
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404028"
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>Lição 6-2: definindo conjuntos nomeados
@@ -33,7 +33,7 @@ Nas tarefas deste tópico, você definirá dois conjuntos nomeados: um chamado P
   
     Ao definir um novo cálculo na guia **Cálculos** , lembre-se de que os cálculos são resolvidos na ordem em que eles aparecem no painel **Organizador de Script** . O foco definido dentro desse painel ao criar um novo cálculo determina a ordem de execução do cálculo; um novo cálculo é definido imediatamente após o cálculo no qual você definiu o foco.  
   
-3.  Na caixa **Nome** , altere o nome do novo conjunto nomeado para **[Principais Produtos]**.  
+3.  Na caixa **Nome** , altere o nome do novo conjunto nomeado para **[Principais Produtos]** .  
   
     No painel **Organizador de Script** , observe o único ícone que diferencia a um conjunto nomeado de um comando de script ou um membro calculado.  
   
@@ -50,9 +50,9 @@ Nas tarefas deste tópico, você definirá dois conjuntos nomeados: um chamado P
   
 1.  Clique com o botão direito do mouse em **[Principais Produtos]** no painel **Organizador de Script** e clique em **Novo Conjunto Nomeado**.  
   
-2.  Na caixa **Nome** , altere o nome desse conjunto nomeado para **[Grandes Revendedores]**.  
+2.  Na caixa **Nome** , altere o nome desse conjunto nomeado para **[Grandes Revendedores]** .  
   
-3.  Na caixa **Expressão** , digite **Exists()**.  
+3.  Na caixa **Expressão** , digite **Exists()** .  
   
     Você usará a função Exists para retornar o conjunto de membros da hierarquia de atributo Reseller Name que faz interseção com o conjunto de membros na hierarquia de atributo Number of Employees que contém o maior número de funcionários.  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf882bc731c8e435de808092e990b35ad23ce57e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66110154"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Iniciando o utilitário de prompt de comando dta e ajustando uma carga de trabalho
@@ -53,7 +53,7 @@ ms.locfileid: "66110154"
 3.  Depois que o Orientador de Otimização do Mecanismo de Banco de Dados termina de ajustar a carga de trabalho, exibe uma mensagem que indica que a sessão de ajuste foi concluída com êxito. Você pode exibir os resultados do ajuste, usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para abrir os arquivos MySession2OutputScript.sql e MySession2Output.xml. Como alternativa, você também pode abrir a sessão de ajuste MySession2 na GUI do Orientador de Otimização do Mecanismo de Banco de Dados e exibir suas recomendações e relatórios da mesma forma que fez em [Exibindo recomendações de ajuste](lesson-1-2-viewing-tuning-recommendations.md) e [Exibindo relatórios de ajuste](lesson-1-3-viewing-tuning-reports.md).  
   
 ## <a name="summary"></a>Resumo  
- Você concluiu o ajuste de uma carga de trabalho simples no prompt de comando usando o utilitário **dta** . Essa ferramenta fornece muitas outras opções de ajuste. Veja a Ajuda da ferramenta (**dta -?**) e o tópico de referência [Utilitário dta](dta-utility.md) para obter mais informações.  
+ Você concluiu o ajuste de uma carga de trabalho simples no prompt de comando usando o utilitário **dta** . Essa ferramenta fornece muitas outras opções de ajuste. Veja a Ajuda da ferramenta (**dta -?** ) e o tópico de referência [Utilitário dta](dta-utility.md) para obter mais informações.  
   
 ## <a name="after-you-finish-this-tutorial"></a>Depois de você concluir este tutorial  
  Depois de você terminar as lições deste tutorial, recorra aos tópicos a seguir para obter mais informações sobre o Orientador de Otimização do Mecanismo de Banco de Dados:  

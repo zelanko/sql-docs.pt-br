@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62505161"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
@@ -47,7 +47,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
 ## <a name="remarks"></a>Comentários  
  Se você não especificar **modelo de MINERAÇÃO** ou **estrutura de MINERAÇÃO**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] procura o tipo de objeto com base no nome e processa o objeto correto. Se o servidor contiver uma estrutura de mineração e um modelo de mineração com nomes idênticos, um erro será retornado.  
   
- Usando a segunda forma de sintaxe, INSERT INTO*\<objeto >*. COLUMN_VALUES, você pode inserir dados diretamente nas colunas de modelo, sem treinar o modelo. Esse método fornece dados de coluna para o modelo de forma concisa, ordenada, que é útil quando se trabalha com conjuntos de dados contendo hierarquias ou colunas ordenadas.  
+ Usando a segunda forma de sintaxe, INSERT INTO *\<objeto >* . COLUMN_VALUES, você pode inserir dados diretamente nas colunas de modelo, sem treinar o modelo. Esse método fornece dados de coluna para o modelo de forma concisa, ordenada, que é útil quando se trabalha com conjuntos de dados contendo hierarquias ou colunas ordenadas.  
   
  Se você usar **INSERT INTO** com um modelo de mineração ou uma estrutura de mineração e saia desativar o \<mapear colunas do modelo > e \<consulta de fonte de dados > argumentos, a instrução se comporta como  **ProcessDefault**, usando associações já existentes. Se não houver associações, a instrução retornará um erro. Para obter mais informações sobre **ProcessDefault**, consulte [processando opções e configurações &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md). O exemplo a seguir mostra a sintaxe:  
   
@@ -61,11 +61,11 @@ INSERT INTO [MINING MODEL] <model>
   
 |de|Estado de objetos|Resultado|  
 |---------------|----------------------|------------|  
-|INSERT INTO MINING MODEL*\<modelo >*|A estrutura de mineração é processada.|O modelo de mineração é processado.|  
+|INSERT INTO MINING MODEL *\<modelo >*|A estrutura de mineração é processada.|O modelo de mineração é processado.|  
 ||A estrutura de mineração é não processada.|O modelo de mineração e a estrutura de mineração são processadas.|  
 ||A estrutura de mineração contém modelos de mineração adicionais.|Falha no processo. É preciso reprocessar a estrutura e os modelos de mineração associados.|  
-|INSERT INTO MINING STRUCTURE*\<estrutura >*|A estrutura de mineração é processada ou não processada.|A estrutura de mineração e os modelos de mineração associados são processados.|  
-|INSERT INTO MINING MODEL*\<modelo >* que contém uma consulta de origem<br /><br /> ou em<br /><br /> INSERT INTO MINING STRUCTURE*\<estrutura >* que contém uma consulta de origem|A estrutura ou o modelo já encerram um conteúdo.|Falha no processo. Você deve limpar os objetos antes de executar essa operação, usando [excluir &#40;DMX&#41;](../dmx/delete-dmx.md).|  
+|INSERT INTO MINING STRUCTURE *\<estrutura >*|A estrutura de mineração é processada ou não processada.|A estrutura de mineração e os modelos de mineração associados são processados.|  
+|INSERT INTO MINING MODEL *\<modelo >* que contém uma consulta de origem<br /><br /> ou em<br /><br /> INSERT INTO MINING STRUCTURE *\<estrutura >* que contém uma consulta de origem|A estrutura ou o modelo já encerram um conteúdo.|Falha no processo. Você deve limpar os objetos antes de executar essa operação, usando [excluir &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Colunas de modelo mapeado  
  Usando o \<mapear colunas do modelo > elemento, você pode mapear as colunas da fonte de dados para as colunas no modelo de mineração. O \<mapear colunas do modelo > elemento tem o seguinte formato:  

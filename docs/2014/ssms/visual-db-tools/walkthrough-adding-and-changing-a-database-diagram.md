@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Adicionando e alterando um diagrama de banco de dados | Microsoft Docs'
+title: 'Passo a passo: adicionando e alterando um diagrama de banco de dados | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273741"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Passo a passo: Adicionando e alterando um diagrama de banco de dados
@@ -58,7 +58,7 @@ ms.locfileid: "63273741"
   
 1.  Clique com o botão direito do mouse na tabela `Address` . No menu de atalho, aponte para **Exibição de Tabela**e clique em **Padrão**.  
   
-     A grade da tabela mostra três colunas: **Nome da coluna**, **tipo de dados**, e **permitir nulos**.  
+     A grade da tabela mostra três colunas: **Nome da Coluna**, **Tipo de Dados** e **Permitir Nulos**.  
   
 2.  Clique com o botão direito do mouse na tabela `Address` , clique em **Exibir Tabela** e selecione **Chaves**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "63273741"
   
 2.  No **Escolher nome** caixa de diálogo, clique em **Okey** para aceitar o nome padrão `Table1`.  
   
-     Uma nova grade de tabela aparece com três colunas: **Nome da coluna**, **tipo de dados**, e **permitir nulos**.  
+     Uma nova grade de tabela aparece com três colunas: **Nome da Coluna**, **Tipo de Dados** e **Permitir Nulos**.  
   
 3.  Adicione as seguintes informações para `Table1`:  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63273741"
   
 2.  Arraste `T2col1` para `T1col1`.  
   
-     Duas caixas de diálogo são exibidas: **Relação de chave estrangeira** em segundo plano e **tabelas e colunas** em primeiro plano.  
+     Duas caixas de diálogo são exibidas: **Relação de Chave Estrangeira** na tela de fundo e **Tabelas e Colunas** em primeiro plano.  
   
 3.  Clique em **OK** para salvar a nova relação.  
   

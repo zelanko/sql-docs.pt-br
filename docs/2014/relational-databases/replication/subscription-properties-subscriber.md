@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250267"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>Propriedades de assinatura de replicação do SQL Server 
@@ -39,7 +39,7 @@ Esta seção fornece informações sobre o **propriedades da assinatura** caixa 
   
 ### <a name="options-for-all-subscriptions"></a>Opções para todas as assinaturas  
  **Segurança**  
- Clique na linha **Conta de processo de agente** e, depois, clique no botão de propriedades (**...**) para alterar a conta na qual o Distribution Agent ou Merge Agent são executados no Distribuidor. Para alterar a conta na qual o Distribution Agent ou Merge Agent fazem conexões com o Assinante, clique em **Conexão do Assinante**e, depois, clique no botão de propriedades (**...**).  
+ Clique na linha **Conta de processo de agente** e, depois, clique no botão de propriedades ( **...** ) para alterar a conta na qual o Distribution Agent ou Merge Agent são executados no Distribuidor. Para alterar a conta na qual o Distribution Agent ou Merge Agent fazem conexões com o Assinante, clique em **Conexão do Assinante**e, depois, clique no botão de propriedades ( **...** ).  
   
  Para obter mais informações sobre as permissões exigidas para cada agente, consulte [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
@@ -52,7 +52,7 @@ Esta seção fornece informações sobre o **propriedades da assinatura** caixa 
   
 ### <a name="options-for-merge-subscriptions"></a>Opções para assinaturas de mesclagem  
  **Definição de partição (HOST_NAME)**  
- Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas funções de sistema (ou ambas se as referências de filtro funcionam) durante a sincronização para determinar a data em que um Assinante deve receber: **SUSER_SNAME()** ou **HOST_NAME()**. Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()**, consulte [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas funções de sistema (ou ambas se as referências de filtro funcionam) durante a sincronização para determinar a data em que um Assinante deve receber: **SUSER_SNAME()** ou **HOST_NAME()** . Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()** , consulte [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo de assinatura** e **Prioridade**  
  Exibe se a assinatura é uma assinatura de cliente ou servidor (isso não pode ser alterado depois que a assinatura tiver sido criada). Assinaturas de Servidor podem republicar dados para outros Assinantes e podem ter atribuição de prioridade para resolução de conflito.  
@@ -93,14 +93,14 @@ Esta seção fornece informações sobre o **propriedades da assinatura** caixa 
  Se você selecionar qualquer valor diferente de **Local padrão** para a opção **Local do instantâneo** , terá de especificar um caminho para a pasta de instantâneo.  
   
  **Usar o Gerenciador de Sincronização do Windows**  
- Determina se essa assinatura pode ser sincronizada usando o Gerenciador de Sincronização do Windows da [!INCLUDE[msCoName](../../includes/msconame-md.md)]   
+ Determina se essa assinatura pode ser sincronizada usando o Gerenciador de Sincronização do Windows da [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
  **Segurança**  
- Clique na linha **Conta de processo de agente** e, depois, clique no botão de propriedades (**...**) para alterar a conta na qual o Agente de Distribuição ou Agente de Mesclagem são executados no Assinante. As opções de segurança relacionadas a conexões dependem do tipo de assinatura:  
+ Clique na linha **Conta de processo de agente** e, depois, clique no botão de propriedades ( **...** ) para alterar a conta na qual o Agente de Distribuição ou Agente de Mesclagem são executados no Assinante. As opções de segurança relacionadas a conexões dependem do tipo de assinatura:  
   
--   Para assinaturas de uma publicação transacional: para alterar a conta na qual o Distribution Agent faz conexões com o Distribuidor, clique em **Conexão do Distribuidor**e, depois, clique no botão de propriedades (**...**).    
--   Para assinaturas de atualização imediata de uma publicação transactional, além da conexão do Distribuidor descrita anteriormente, você pode alterar o método usado para propagar alterações do Assinante para o Publicador: clique em **Conexão do Publicador**e, depois, clique no botão de propriedades (**...**).  
--   Para assinaturas de publicações de mesclagem, clique em **Conexão do Publicador**e, depois, clique no botão de propriedades (**...**).  
+-   Para assinaturas de uma publicação transacional: para alterar a conta na qual o Distribution Agent faz conexões com o Distribuidor, clique em **Conexão do Distribuidor**e, depois, clique no botão de propriedades ( **...** ).    
+-   Para assinaturas de atualização imediata de uma publicação transactional, além da conexão do Distribuidor descrita anteriormente, você pode alterar o método usado para propagar alterações do Assinante para o Publicador: clique em **Conexão do Publicador**e, depois, clique no botão de propriedades ( **...** ).  
+-   Para assinaturas de publicações de mesclagem, clique em **Conexão do Publicador**e, depois, clique no botão de propriedades ( **...** ).  
   
  Para obter mais informações sobre as permissões exigidas para cada agente, consulte [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
@@ -110,7 +110,7 @@ Esta seção fornece informações sobre o **propriedades da assinatura** caixa 
   
 ### <a name="options-for-merge-subscriptions"></a>Opções para assinaturas de mesclagem  
  **Definição de partição (HOST_NAME)**  
- Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas funções de sistema (ou ambas se as referências de filtro funcionam) durante a sincronização para determinar a data em que um Assinante deve receber: **SUSER_SNAME()** ou **HOST_NAME()**. Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()**, consulte [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas funções de sistema (ou ambas se as referências de filtro funcionam) durante a sincronização para determinar a data em que um Assinante deve receber: **SUSER_SNAME()** ou **HOST_NAME()** . Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()** , consulte [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo de assinatura** e **Prioridade**  
  Exibe se a assinatura é uma assinatura de cliente ou servidor (isso não pode ser alterado depois que a assinatura tiver sido criada). Assinaturas de Servidor podem republicar dados para outros Assinantes e podem ter atribuição de prioridade para resolução de conflito.  
@@ -126,7 +126,7 @@ Esta seção fornece informações sobre o **propriedades da assinatura** caixa 
  Se você selecionar **Verdadeiro** para **Usar Sincronização da Web**:  
   
 -   Insira o endereço completo do servidor IIS em **Endereço do servidor Web**.   
--   Clique na linha **Conexão do Servidor Web** e, depois, clique no botão de propriedades (**...**) para definir ou alterar a conta na qual o Assinante se conecta ao servidor IIS.   
+-   Clique na linha **Conexão do Servidor Web** e, depois, clique no botão de propriedades ( **...** ) para definir ou alterar a conta na qual o Assinante se conecta ao servidor IIS.   
 -   Altere o **Tempo limite do servidor Web** se necessário. O tempo limite é o período de tempo, em segundos, antes que uma solicitação de sincronização da Web expire.  
   
  Para obter mais informações sobre a configuração, consulte [Configure Web Synchronization](configure-web-synchronization.md).  

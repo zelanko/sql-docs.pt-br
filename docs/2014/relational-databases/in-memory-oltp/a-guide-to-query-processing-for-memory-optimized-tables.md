@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a610c41fd9e3126bb0f5833dcacfe27ce969a72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468042"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Um guia para processamento de consulta de tabelas com otimização de memória
@@ -239,7 +239,7 @@ Execução de procedimentos armazenados compilados nativamente.
  A detecção de parâmetro não é usada para compilar os procedimentos armazenados compilados nativamente. Todos os parâmetros para o procedimento armazenado são considerados como tendo valores UNKNOWN. Como são procedimentos armazenados interpretados, os procedimentos armazenados compilados nativos também dão suporte à dica de `OPTIMIZE FOR`. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Recuperando um plano de execução de consulta para procedimentos armazenados compilados de forma nativa  
- O plano de execução de consulta para um procedimento armazenado compilado nativamente pode ser recuperado usando o **Plano de Execução Estimado** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ou usando a opção SHOWPLAN_XML no [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Por exemplo:   
+ O plano de execução de consulta para um procedimento armazenado compilado nativamente pode ser recuperado usando o **Plano de Execução Estimado** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ou usando a opção SHOWPLAN_XML no [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Por exemplo:  
   
 ```sql  
 SET SHOWPLAN_XML ON  

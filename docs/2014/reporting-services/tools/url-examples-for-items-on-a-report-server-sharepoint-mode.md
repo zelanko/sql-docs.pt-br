@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099446"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Exemplos de URL para itens de relatório publicados em um servidor de relatório em modo de SharePoint (SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66099446"
   
 |Object|Descrição|  
 |------------|-----------------|  
-|Aplicativo Web do SharePoint|Um aplicativo da Web do SharePoint pode ser instalado como um servidor autônomo ou em um farm que tenha uma coleção de servidores virtuais. Um aplicativo Web tem uma URL (por exemplo, http:*//servername*) e pode ter diversos sites.|  
+|Aplicativo Web do SharePoint|Um aplicativo da Web do SharePoint pode ser instalado como um servidor autônomo ou em um farm que tenha uma coleção de servidores virtuais. Um aplicativo Web tem uma URL (por exemplo, http: *//servername*) e pode ter diversos sites.|  
 |Site|Um site é um site pai de um aplicativo da Web ou um subsite.|  
 |Biblioteca do SharePoint|Uma biblioteca contém documentos ou pastas. Uma biblioteca ou pasta em uma biblioteca é o único objeto do site que pode armazenar relatórios, modelos de relatório, fontes de dados compartilhadas e imagens externas.|  
 |Item|Os itens do servidor de relatório que podem ser descritos em uma URL incluem uma definição de relatório para um relatório ou sub-relatório, um modelo de relatório, uma fonte de dados compartilhada ou uma imagem externa.|  
@@ -44,9 +44,9 @@ ms.locfileid: "66099446"
 ### <a name="url-for-a-sharepoint-server"></a>URL para um servidor SharePoint  
  Você deve usar uma URL para o servidor SharePoint ao implantar um Servidor de Relatório ou um projeto de Modelo de Relatório do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] no servidor de relatório.  
   
- Para localizar o nome do servidor a ser usado, abra o navegador e localize a biblioteca do SharePoint onde deseja publicar um relatório. O nome do servidor aparece imediatamente depois do prefixo de protocolo, por exemplo, http:*//servername*.  
+ Para localizar o nome do servidor a ser usado, abra o navegador e localize a biblioteca do SharePoint onde deseja publicar um relatório. O nome do servidor aparece imediatamente depois do prefixo de protocolo, por exemplo, http: *//servername*.  
   
- Usando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , o ponto de extremidade do proxy de URL não tem suporte. Um ponto de extremidade de proxy inclui um número da porta, por exemplo, http:*//servername: 8080/reportserver*.  
+ Usando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , o ponto de extremidade do proxy de URL não tem suporte. Um ponto de extremidade de proxy inclui um número da porta, por exemplo, http: *//servername: 8080/reportserver*.  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL para um site ou subsite de servidor do SharePoint  
  Ao implantar uma fonte de dados de relatório, você deve usar uma URL para um site e subsite do SharePoint, caso haja um. Na URL, o nome de site aparece imediatamente depois do nome do servidor, por exemplo, http://*servername/site* ou http://*servername/site/subsite*.  
