@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a48a5cb8b5fb317c40a2106b4ee433e49188d783
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62786811"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
@@ -25,7 +25,7 @@ ms.locfileid: "62786811"
   
  As páginas de índice e dados são lidas do disco no pool de buffers e as páginas modificadas (também conhecidas como páginas sujas) são gravadas novamente no disco. A demanda de memória nos pontos de verificação de servidor e banco de dados faz com que as páginas sujas dinâmicas (ativas) no cache do buffer sejam removidas do cache e gravadas nos discos mecânicos e, em seguida, lidas novamente no cache. Normalmente, essas operações de E/S são leituras e gravações aleatórias pequenas de 4 a 16 KB de dados. Os padrões de E/S aleatória pequena incorrem em buscas frequentes, competição por braço do disco mecânico, aumento de latência de E/S e redução da taxa de transferência de E/S agregada do sistema.  
   
- A abordagem comum para resolver esses gargalos de E/S é adicionar mais DRAM, ou como alternativa, a adição de eixos SAS de alto desempenho. Embora essas opções sejam úteis, elas apresentam desvantagens significativas: DRAM é mais caro do que as unidades de armazenamento de dados e adição de eixos aumenta as despesas de capital na aquisição de hardware e os custos operacionais com o consumo de energia de aumento e o aumento da probabilidade de falha do componente.  
+ A abordagem comum para resolver esses gargalos de E/S é adicionar mais DRAM, ou como alternativa, a adição de eixos SAS de alto desempenho. Embora essas opções sejam úteis, elas apresentam desvantagens significativas: A DRAM é mais cara do que as unidades de armazenamento de dados. A adição de eixos aumenta as despesas de capital na aquisição de hardware, bem como os custos operacionais com o aumento do consumo de energia e o aumento da probabilidade de falha do componente.  
   
  O recurso de extensão do pool de buffers estende o cache do pool de buffers com o armazenamento não volátil (geralmente, SSD). Graças a essa extensão, o pool de buffers pode acomodar um conjunto de trabalho de banco de dados maior, o que força a paginação de E/Ss entre a RAM e as SSDs. Isso descarrega eficazmente as E/Ss aleatórias pequenas dos discos mecânicos nas SSDs. Devido à latência mais baixa e ao melhor desempenho de E/S aleatória das SSDs, a extensão do pool de buffers melhora significativamente a taxa de transferência de E/S.  
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 9d2b9a08dd6c9951d9603c1c27bc56c6691433cf
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66711940"
 ---
 # <a name="recordset-ado---wfc-syntax"></a>Conjunto de registros (ADO – Sintaxe WFC)
@@ -135,7 +135,7 @@ public com.ms.wfc.data.Fields getFields()
 public AdoProperties getProperties()  
 ```  
   
-### <a name="events"></a>Eventos  
+### <a name="events"></a>Events  
  Para obter mais informações sobre eventos ADO/WFC, consulte [instanciação de evento ADO por linguagem](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
   
 ```  

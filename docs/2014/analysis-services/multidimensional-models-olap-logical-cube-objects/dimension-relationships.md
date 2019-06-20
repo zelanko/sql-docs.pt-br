@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec3b57b08460b834868581ac8872ac3c78a38bbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62727767"
 ---
 # <a name="dimension-relationships"></a>Relações de dimensão
@@ -32,7 +32,7 @@ ms.locfileid: "62727767"
   
  Uma relação entre uma dimensão e um grupo de medidas consiste na dimensão e tabelas de fatos participantes da relação e um atributo de granularidade que especifica a granularidade da dimensão em um determinado grupo de medidas.  
   
-## <a name="regular-dimension-relationships"></a>Relações regulares de dimensão   
+## <a name="regular-dimension-relationships"></a>Relações regulares de dimensão  
  Uma relação regular de dimensão entre uma dimensão de cubo e um grupo de medidas existe quando a coluna de chave da dimensão está associada diretamente à tabela de fatos. Essa relação direta se baseia em uma relação de chave estrangeira de chave primária no banco de dados relacional subjacente, mas também pode se basear em uma relação lógica que é definida na exibição da fonte de dados. Uma relação de dimensão regular representa a relação entre tabelas de dimensão e uma tabela de fatos em um projeto de esquema em estrela tradicional. Para obter mais informações sobre as relações regulares, consulte [definir uma relação Regular e as propriedades da relação](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md).  
   
 ## <a name="reference-dimension-relationships"></a>Relações de dimensão de referência  

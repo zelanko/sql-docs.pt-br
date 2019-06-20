@@ -11,13 +11,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2216674bec52dd4d4800aa1b03aa4a2834667974
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524046"
 ---
-# <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>Tutorial: SQL Server Backup e restauração para o serviço de armazenamento de BLOBs do Azure do Windows
+# <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>Tutorial: Backup e restauração do SQL Server para o serviço de Armazenamento de Blobs do Microsoft Azure
   Bem-vindo ao tutorial Introdução ao Backup e à restauração do SQL Server com o serviço de armazenamento de Blob do Windows Azure. Este tutorial ajuda a compreender como gravar backups e executar restaurações no serviço de armazenamento de Blob do Windows Azure.  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  

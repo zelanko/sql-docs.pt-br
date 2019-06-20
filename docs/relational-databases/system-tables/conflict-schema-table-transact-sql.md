@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62471075"
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "62471075"
 |__$pre_version|**varbinary (32)**|Versão do banco de dados no qual originou-se a alteração conflitante.|  
 |__$reason_code|**int**|Código de resolução para o conflito. Pode ser um dos seguintes valores:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Para obter mais informações, consulte **_ $reason_text**.|  
 |__$reason_text|**nvarchar (720)**|Resolução para o conflito. Pode ser um dos seguintes valores:<br /><br /> Resolvido (1)<br /><br /> Não resolvido (2)<br /><br /> Desconhecido (0)|  
-|__$update_bitmap|**varbinary(** *n* **)**. Tamanho varia de acordo com o conteúdo.|Bitmap que indica quais colunas foram atualizadas na ocorrência de um conflito atualização- atualização.|  
+|__$update_bitmap|**varbinary(** *n* **)** . Tamanho varia de acordo com o conteúdo.|Bitmap que indica quais colunas foram atualizadas na ocorrência de um conflito atualização- atualização.|  
 |__$inserted_date|**datetime**|Dada e hora em que a linha conflitante foi inserida nesta tabela.|  
 |__$row_id|**timestamp**|Versão da linha associada à linha que causou o conflito.|  
 |__$change_id|**binary (8)**|No caso de uma linha local, este valor é igual a __$row_id da linha de entrada que gerou o conflito com a linha local. Esse valor é NULL para uma linha de entrada.|  

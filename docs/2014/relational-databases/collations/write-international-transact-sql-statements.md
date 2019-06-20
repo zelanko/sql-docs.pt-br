@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 64dc9129373a57de2924b2983e14266a67d4915e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873521"
 ---
 # <a name="write-international-transact-sql-statements"></a>Gravar instruções Transact-SQL internacionais
@@ -36,9 +36,9 @@ ms.locfileid: "62873521"
   
     -   Os aplicativos ODBC, ADO e OLE DB devem usar as cláusulas de fuga ODBC timestamp, data e hora para:  
   
-         **{ts'** aaaa**-**_mm_**-**_ddhh_**:**  _mm_**:**_ss_[**.** _fff_] **'}** , como: **{ts'** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **'}**  
+         **{ts'** aaaa **-** _mm_ **-** _ddhh_ **:**  _mm_ **:** _ss_[ **.** _fff_] **'}** , como: **{ts'** 1998 **-** 09 **-** 24 10 **:** 02 **:** 20 **'}**  
   
-         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** como: **{ d'** 1998**-** 09**-** 24 **'}**  
+         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** como: **{ d'** 1998 **-** 09 **-** 24 **'}**  
   
          **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** such as: **{ t'** 10:02:20 **'}**  
   

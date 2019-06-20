@@ -10,12 +10,12 @@ ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d224572ce81bf260134682d86f6f0f2ce4946f55
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66088750"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67131798"
 ---
 # <a name="view-event-session-data"></a>Exibir dados de sessão de evento
   Este tópico descreve o uso da interface do usuário de exibição para ver e analisar dados de evento estendidos:  
@@ -44,23 +44,27 @@ ms.locfileid: "66088750"
   
 -   Para um destino de event_file, exiba os dados de destino de arquivo (arquivo .XEL) usando um dos métodos a seguir:  
   
-    -   Use o arquivo -> Abrir no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
-  
-    -   Arraste e solte o arquivo no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
-  
+    -   Use o arquivo -> Abrir no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
+    
+    -   Arraste e solte o arquivo no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 
+    
     -   Clique duas vezes no arquivo .XEL.  
-  
-    -   No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], clique com o botão direito em uma sessão de Eventos Estendidos em execução e selecione Exibir Dados de Destino.  
-  
-    -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
-  
-    -   Você pode exibir mais de um. Arquivo XEL selecionando **mesclar arquivos de eventos estendidos** do arquivo -> Abrir menu.  
-  
+    
+    -   No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], clique com o botão direito em uma sessão de Eventos Estendidos em execução e selecione Exibir Dados de Destino. 
+    
+    -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).
+    
+    -   Usar o Powershell, leia-SQLXevent no [SQLServer.XEvent módulo](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+    
+    -   Consumir por meio de programação XEvents usando o [XELite NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite).
+    
+    -   Você pode exibir mais de um. Arquivo XEL selecionando **mesclar arquivos de eventos estendidos** do arquivo -> Abrir menu.
+
 ### <a name="watching-live-data"></a>Assistindo dados ao vivo  
  Você pode assistir dados ao vivo à medida que estão sendo capturados.  
   
 -   No Pesquisador de Objetos, expanda os nós **Gerenciamento**, **Eventos Estendidos**e **Sessões** .  
-  
+
 -   Clique com o botão direito do mouse no nome da sessão e clique em **Observar Dados Dinâmicos** para começar a exibir dados de rastreamento.  
   
      As colunas de exibição padrão são **Nome do Evento** e **TimeStamp**.  
@@ -68,7 +72,9 @@ ms.locfileid: "66088750"
      Para adicionar mais colunas à janela de rastreamento, clique no botão **Escolher Colunas** na barra de ferramentas Eventos Estendidos. A guia **Detalhes** mostra todos os detalhes de evento do evento selecionado.  
   
      Em geral, os eventos são exibidos em aproximadamente 30 segundos. Se você quiser alterar o período de latência, poderá alterar a **Latência máxima de expedição** na página **Avançado** da caixa de diálogo **Nova Sessão** .  
-  
+     
+-    Dados dinâmicos podem ser transmitidos pela [módulo do SqlServer.XEvent PowerShell](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+     
 ### <a name="to-refresh-target-data"></a>Para atualizar dados de destino  
  Atualizar dados de destino não tem suporte para destinos de event_files:  
   

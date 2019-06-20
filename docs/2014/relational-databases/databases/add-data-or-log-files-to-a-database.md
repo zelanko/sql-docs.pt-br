@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917696"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Adicionar arquivos de dados ou de log a um banco de dados
@@ -75,7 +75,7 @@ ms.locfileid: "62917696"
   
 8.  Especifique o tamanho inicial do arquivo. Deixe os arquivos de dados tão grandes quanto possível, com base na quantidade máxima de dados que você espera ter no banco de dados.  
   
-9. Para especificar como o arquivo deve se expandir, clique em (**…**) na coluna **Aumento Automático**. Selecione entre as seguintes opções:  
+9. Para especificar como o arquivo deve se expandir, clique em ( **…** ) na coluna **Aumento Automático**. Selecione entre as seguintes opções:  
   
     1.  Para permitir que o arquivo selecionado aumente conforme mais espaço de dados se fizer necessário; marque a caixa de seleção **Habilitar Aumento Automático** e depois selecione entre as seguintes opções:  
   

@@ -33,10 +33,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71a2805eb935088f39c6b4a86714f263dc5ba643
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872425"
 ---
 # <a name="database-mail-configuration-objects"></a>Objetos de configuração do Database Mail

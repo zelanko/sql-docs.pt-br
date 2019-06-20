@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfiles"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6466eca2be66a20dfcab23f2097b71a2d0fc1cec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62467932"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148945"
 ---
 # <a name="create-roles"></a>Criar Funções
 

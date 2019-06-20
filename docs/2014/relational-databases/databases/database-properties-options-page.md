@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917077"
 ---
 # <a name="database-properties-options-page"></a>Propriedades do banco de dados (página Opções)
@@ -30,7 +30,7 @@ ms.locfileid: "62917077"
  Especifique um dos seguintes modelos para recuperar o banco de dados: **Completo**, **Bulk-Logged**ou **Simples**. Para obter mais informações sobre modelos de recuperação, veja [Modelos de recuperação &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md).  
   
  **Nível de compatibilidade**  
- Especifique a última versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aceita pelo banco de dados. Os valores possíveis são  **SQL Server 2014 (120)**,  **SQL Server 2012 (110)** e **SQL Server 2008 (100)**. Quando um banco de dados do SQL Server 2005 é atualizado para o SQL Server 2014, o nível de compatibilidade do banco de dados é alterado de 90 para 100.  O nível de compatibilidade 90 não tem suporte no SQL Server 2014. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
+ Especifique a última versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aceita pelo banco de dados. Os valores possíveis são  **SQL Server 2014 (120)** ,  **SQL Server 2012 (110)** e **SQL Server 2008 (100)** . Quando um banco de dados do SQL Server 2005 é atualizado para o SQL Server 2014, o nível de compatibilidade do banco de dados é alterado de 90 para 100.  O nível de compatibilidade 90 não tem suporte no SQL Server 2014. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
   
  **Tipo de contenção**  
  Não especifique nada ou parcial para designar se este é um banco de dados independente. Para obter mais informações sobre bancos de dados independentes, consulte [Contained Databases](contained-databases.md). A propriedade de servidor **Habilitar Bancos de Dados Independentes** deve ser definida como **TRUE** antes que um banco de dados possa ser configurado como independente.  

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714713"
 ---
 # <a name="filter-a-trace"></a>Filtrar um rastreamento
@@ -137,7 +137,7 @@ ms.locfileid: "62714713"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup> se rastrear eventos do **osql** utilitário ou o **sqlcmd** utility, sempre acrescente **%** aos filtros no **TextData**  coluna de dados.  
+ <sup>1</sup> se rastrear eventos do **osql** utilitário ou o **sqlcmd** utility, sempre acrescente ** % ** aos filtros no **TextData ** coluna de dados.  
   
  Por precaução em razão da segurança, o Rastreamento do SQL omite do rastreamento, automaticamente, toda informação dos procedimentos armazenados relacionados que afetem senhas. Este mecanismo de segurança não é configurável e está sempre em vigor. Ele impede os usuários que detêm permissões para rastrear toda a atividade no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de capturar senhas.  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 873fd4bc1e010b2f7e2795368f8f209dfee23ea0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: de2ac80a10e66ed7673a65428c4bfa011d31b534
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210185"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263276"
 ---
 # <a name="what39s-new-in-analysis-services"></a>O que&#39;novo no Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -133,9 +133,9 @@ refresh|Processa o objeto. O equivalente no ASSL é PROCESS.
 Atualizações para a barra de fórmulas lhe ajudarão a escrever fórmulas com mais facilidade, diferenciando funções, campos e medidas usando cores de sintaxe; ele fornece a função inteligente e sugestões de campo e informa se partes da expressão DAX estão erradas usando *rabiscos*de erro. Ele também permite que você use várias linhas (Alt + Enter) e recuo (Tab). A barra de fórmula agora também permite que você escreva comentários como parte de suas medidas, basta digitar "/ /" e tudo depois desses caracteres na mesma linha serão considerados um comentário.
 
 ### <a name="dax-variables"></a>Variáveis DAX    
-Esta versão agora inclui suporte a variáveis em DAX. As variáveis agora podem armazenar o resultado de uma expressão como uma variável nomeada, que pode ser passada como um argumento para outras expressões de medida. Uma vez que os valores resultantes forem calculados para uma expressão variável, esses valores não serão alterados, mesmo se a variável for referenciada em outra expressão. Para obter mais informações, consulte [Função VAR](http://msdn.microsoft.com/library/mt243785.aspx).    
+Esta versão agora inclui suporte a variáveis em DAX. As variáveis agora podem armazenar o resultado de uma expressão como uma variável nomeada, que pode ser passada como um argumento para outras expressões de medida. Uma vez que os valores resultantes forem calculados para uma expressão variável, esses valores não serão alterados, mesmo se a variável for referenciada em outra expressão. Para obter mais informações, consulte [Função VAR](/dax/var-dax).    
 ### <a name="new-dax-functions"></a>Novas funções DAX
-Nessa versão, o DAX apresenta mais cinquenta novas funções para dar suporte a cálculos mais rápidos e visualizações aprimoradas no Power BI. Para saber mais, consulte [Novas funções DAX](http://msdn.microsoft.com/library/mt704075.aspx).
+Nessa versão, o DAX apresenta mais cinquenta novas funções para dar suporte a cálculos mais rápidos e visualizações aprimoradas no Power BI. Para saber mais, consulte [Novas funções DAX](/dax/new-dax-functions).
 ### <a name="save-incomplete-measures"></a>Salvar medidas incompletas
 Agora você pode salvar medidas DAX incompletas diretamente em um projeto de modelo de tabela 1200 e abri-lo novamente quando você estiver pronto para continuar.
 ### <a name="additional-dax-enhancements"></a>Aprimoramentos DAX adicionais

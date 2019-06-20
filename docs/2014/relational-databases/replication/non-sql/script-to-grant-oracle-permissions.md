@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7c61a21f149a50c4893c9c82d3624e0905a481b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022423"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Script para conceder permissões da Oracle
-  O script fornecido neste tópico é usado durante a configuração de um banco de dados Oracle que publicará dados usando a replicação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Esse script também está disponível no seguinte diretório após a instalação: *\<unidade>*:\\\Arquivos de Programas\Microsoft SQL Server\\*\<InstanceName>* \MSSQL\Install\oracleadmin.sql. Para obter mais informações sobre como configurar o banco de dados Oracle, consulte [Configurar um Publicador Oracle](configure-an-oracle-publisher.md).  
+  O script fornecido neste tópico é usado durante a configuração de um banco de dados Oracle que publicará dados usando a replicação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Esse script também está disponível no seguinte diretório após a instalação: *\<unidade>* :\\\Arquivos de Programas\Microsoft SQL Server\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql. Para obter mais informações sobre como configurar o banco de dados Oracle, consulte [Configurar um Publicador Oracle](configure-an-oracle-publisher.md).  
   
 > [!NOTE]  
 >  Este script inclui a instrução `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`que é necessária para os gatilhos usados pela replicação transacional. Se você usar somente replicação de instantâneos, remova essa linha do script.  

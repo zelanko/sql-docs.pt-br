@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d60d86a333c38b1fe122d72f55ccba25653256c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62702513"
 ---
 # <a name="introduction-to-dimensions-analysis-services---multidimensional-data"></a>Noções básicas sobre dimensões (Analysis Services – Dados Multidimensionais)
@@ -33,7 +33,7 @@ ms.locfileid: "62702513"
   
  ![Esquema lógico para relação de fatos](../../../2014/analysis-services/dev-guide/media/dimfactrelationship.gif "esquema lógico para relação de fatos")  
   
-## <a name="dimension-based-on-a-snowflake-schema-design"></a>Dimensão com base em Design de esquema floco de neve   
+## <a name="dimension-based-on-a-snowflake-schema-design"></a>Dimensão com base em Design de esquema floco de neve  
  Frequentemente, uma estrutura mais complexa é necessária, pois são necessárias informações de várias tabelas para definir a dimensão. Nessa estrutura, chamada de esquema floco de neve, cada dimensão com base em atributos de colunas em várias tabelas vinculadas umas às outras e, finalmente, à tabela de fatos pela relação chave primária-chave estrangeira. Por exemplo, o diagrama a seguir ilustra as tabelas necessárias para descrever completamente a dimensão produto na **AdventureWorksDW** projeto de exemplo:  
   
  ![Tabelas para a dimensão AdventureWorksAS Product](../../../2014/analysis-services/dev-guide/media/dimproduct.gif "tabelas para a dimensão AdventureWorksAS Product")  
@@ -47,7 +47,7 @@ ms.locfileid: "62702513"
   
  No diagrama anterior, o **FactResellerSales** tabela de fatos não tem uma relação de chave estrangeira com a **DimGeography** tabela de dimensões. No entanto, o **FactResellerSales** tabela de fatos têm uma relação de chave estrangeira com a **DimReseller** tabela de dimensão, que por sua vez tem uma relação de chave estrangeira com a  **DimGeography** tabela de dimensões. Para definir a dimensão revendedor que contém as informações geográficas sobre cada revendedor, você precisará recuperar esses atributos do **DimGeography** e o **DimReseller** tabelas de dimensões. No entanto, em [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você obter o mesmo resultado criando duas dimensões separadas e vinculando-as em um grupo de medidas definindo uma relação de dimensão de referência entre as duas dimensões. Para obter mais informações sobre relações de dimensão de referência, consulte [relações de dimensão](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
- Uma vantagem de usar as relações de dimensão de referência nesse cenário é que, você pode criar uma única dimensão geográfica e, depois, criar várias dimensões de cubo com base na dimensão geográfica, sem necessitar de qualquer espaço de armazenamento adicional. Por exemplo, você pode vincular uma das dimensões geográficas do cubo a uma dimensão de revendedor e outra dimensão geográfica do cubo à dimensão de cliente. **Tópicos relacionados:**[relações de dimensão](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md), [definir uma relação referenciada e propriedades da relação referenciada](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
+ Uma vantagem de usar as relações de dimensão de referência nesse cenário é que, você pode criar uma única dimensão geográfica e, depois, criar várias dimensões de cubo com base na dimensão geográfica, sem necessitar de qualquer espaço de armazenamento adicional. Por exemplo, você pode vincular uma das dimensões geográficas do cubo a uma dimensão de revendedor e outra dimensão geográfica do cubo à dimensão de cliente. **Tópicos relacionados:** [relações de dimensão](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md), [definir uma relação referenciada e propriedades da relação referenciada](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
 ## <a name="processing-a-dimension"></a>Processando uma dimensão  
  Depois de criar uma dimensão, você deve processá-la antes de visualizar um os membros de atributos e hierarquias na dimensão. Depois que a estrutura da dimensão mudar ou as informações nas tabelas subjacentes forem atualizadas, você precisará processar a dimensão novamente antes de exibir as alterações. Ao processar uma dimensão após as alterações estruturais, você deve também processar os cubos que incluem a dimensão — ou o cubo não será exibível.  

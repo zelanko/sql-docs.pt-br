@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57b340d4f79ec093f6322687ceca0186931a9dcf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62658839"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
@@ -32,7 +32,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  Uma coluna escalar.  
   
 ## <a name="return-type"></a>Tipo de retorno  
- Um valor escalar do tipo especificado pelo *\<* referência de coluna escalar*>*.  
+ Um valor escalar do tipo especificado pelo *\<* referência de coluna escalar *>* .  
   
 ## <a name="remarks"></a>Comentários  
  Se o estado previsto for omitido, o estado que tiver a mais alta probabilidade previsível será usado, excluindo-se a partição de estados faltantes. Para incluir a partição de estados faltantes, defina as \<estado previsto > para **INCLUDE_NULL**.  

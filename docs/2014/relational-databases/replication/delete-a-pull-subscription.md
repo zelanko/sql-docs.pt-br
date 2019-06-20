@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ac5d4f7d199e3ee3de6ffb43e2c43e232681b0d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721463"
 ---
 # <a name="delete-a-pull-subscription"></a>Excluir uma assinatura pull
@@ -65,15 +65,15 @@ ms.locfileid: "62721463"
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para excluir uma assinatura pull em uma publicação de instantâneo ou transacional  
   
-1.  No Assinante no banco de dados de assinatura, execute [sp_droppullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql). Especifique **@publication**, o **@publisher**, e **@publisher_db**.  
+1.  No Assinante no banco de dados de assinatura, execute [sp_droppullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql). Especifique **@publication** , o **@publisher** , e **@publisher_db** .  
   
-2.  No Publicador do banco de dados de publicação, execute [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). Especifique **@publication** e **@subscriber**. Especifique um valor de **all** para **@article**. (Opcional) Se o Distribuidor não puder ser acessado, especifique um valor de **1** para **@ignore_distributor** para excluir a assinatura sem remover objetos relacionados no Distribuidor.  
+2.  No Publicador do banco de dados de publicação, execute [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). Especifique **@publication** e **@subscriber** . Especifique um valor de **all** para **@article** . (Opcional) Se o Distribuidor não puder ser acessado, especifique um valor de **1** para **@ignore_distributor** para excluir a assinatura sem remover objetos relacionados no Distribuidor.  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>Para excluir uma assinatura pull em uma publicação de mesclagem.  
   
-1.  No Assinante no banco de dados de assinatura, execute [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql). Especifique **@publication**, **@publisher**e **@publisher_db**.  
+1.  No Assinante no banco de dados de assinatura, execute [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql). Especifique **@publication** , **@publisher** e **@publisher_db** .  
   
-2.  No Publicador no banco de dados de publicação, execute [sp_dropmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql). Especifique **@publication**, o **@subscriber**, e **@subscriber_db**. Especifique um valor de **pull** para **@subscription_type**. (Opcional) Se o Distribuidor não puder ser acessado, especifique um valor de **1** para **@ignore_distributor** para excluir a assinatura sem remover objetos relacionados no Distribuidor.  
+2.  No Publicador no banco de dados de publicação, execute [sp_dropmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql). Especifique **@publication** , o **@subscriber** , e **@subscriber_db** . Especifique um valor de **pull** para **@subscription_type** . (Opcional) Se o Distribuidor não puder ser acessado, especifique um valor de **1** para **@ignore_distributor** para excluir a assinatura sem remover objetos relacionados no Distribuidor.  
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  O exemplo a seguir exclui uma nova assinatura pull para uma publicação transacional. O primeiro lote é executado no Assinante e o segundo no Publicador.  

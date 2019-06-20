@@ -30,10 +30,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63269858"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Suporte para regras, gatilhos, valores padrão e procedimentos armazenados (Driver ODBC do Visual FoxPro)
@@ -44,7 +44,7 @@ Você não pode criar regras do Visual FoxPro, gatilhos, valores padrão ou proc
  Se seu aplicativo interage com os dados cujo regras, gatilhos, valores padrão ou procedimentos armazenados chamam outros comandos do Visual FoxPro ou funções, o driver gerará um erro. Ver [funções e não há suporte para comandos do Visual FoxPro](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md) para obter uma lista de comandos e funções não têm suportadas pelo driver.  
   
 > [!TIP]  
->  Se você quiser inserir código condicional em suas regras, gatilhos ou procedimentos armazenados que determina os comandos a executar quando chamado pelo driver, você pode usar o **(versão)** função. O **(versão)** retornos de função "Driver de ODBC do Visual FoxPro  *\<versão >*" quando chamado pelo driver.  
+>  Se você quiser inserir código condicional em suas regras, gatilhos ou procedimentos armazenados que determina os comandos a executar quando chamado pelo driver, você pode usar o **(versão)** função. O **(versão)** retornos de função "Driver de ODBC do Visual FoxPro  *\<versão >* " quando chamado pelo driver.  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Comandos do Visual FoxPro e funções com suporte em procedimentos armazenados, gatilhos, valores padrão e regras  
   
@@ -186,7 +186,7 @@ Você não pode criar regras do Visual FoxPro, gatilhos, valores padrão ou proc
 |Função do NDX)|NORMALIZAR a função)|Operador não|  
 |Comando de Observação|Função do NTOM)|Função do NVL)|  
   
-## <a name="o"></a>O   
+## <a name="o"></a>O  
   
 ||||  
 |-|-|-|  

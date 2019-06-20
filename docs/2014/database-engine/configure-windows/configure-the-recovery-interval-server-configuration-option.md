@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 89449cbc31e1ec36fa37a5bb36b1f505cdd2e14d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62787092"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>Configurar a opção recovery interval de configuração de servidor
@@ -47,7 +47,7 @@ ms.locfileid: "62787092"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [Depois de configurar a opção recovery interval](#FollowUp)  
+-   **Acompanhamento:**  [depois de configurar a opção recovery interval](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -103,7 +103,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: Depois de configurar a opção recovery Interval  
+##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção recovery internal  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte também  

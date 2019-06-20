@@ -22,13 +22,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb69c4b064329b53f9ab3efef62f0d1c54b897a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62990126"
 ---
-# <a name="understanding-security-policies"></a>Compreendendo políticas de segurança 
+# <a name="understanding-security-policies"></a>Compreendendo políticas de segurança
   Qualquer código executado por um servidor de relatório deve fazer parte de uma política de segurança de acesso a códigos específica. Essas políticas de segurança consistem em grupos de códigos que mapeiam evidência para um conjunto de conjuntos de permissões nomeados. Frequentemente, os grupos de códigos estão associados a um conjunto de permissões nomeado que especifica permissões permitidas para código nesse grupo. O tempo de execução usa a evidência fornecida por um host confiável ou pelo carregador para determinar a quais grupos de códigos o código pertence e, portanto, quais permissões conceder ao código. O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] segue esta arquitetura de política de segurança, conforme definido pelo CLR (Common Language Runtime) do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. As seções a seguir descrevem os vários tipos de código em [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e a as regras de política associadas a eles.  
   
 ## <a name="report-server-assemblies"></a>Assemblies do Servidor de Relatório  

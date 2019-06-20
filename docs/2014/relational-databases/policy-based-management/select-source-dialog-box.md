@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49c96ead9463f49ce81133f8d29127aebb211d85
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62691795"
 ---
 # <a name="select-source-dialog-box"></a>Caixa de diálogo Selecionar Origem
@@ -26,11 +26,11 @@ ms.locfileid: "62691795"
   
  **Para abrir essa caixa de diálogo**  
   
--   Em Servidores Registrados, clique com o botão direito do mouse em **Grupos do Servidor Local** ou em qualquer servidor em **Grupos de Servidores Locais**ou em **Servidores de Gerenciamento Central**e selecione **Avaliar Políticas**. Na página **Seleção de Política** da caixa de diálogo **Avaliar Políticas** , clique no botão Procurar (**...**).  
+-   Em Servidores Registrados, clique com o botão direito do mouse em **Grupos do Servidor Local** ou em qualquer servidor em **Grupos de Servidores Locais**ou em **Servidores de Gerenciamento Central**e selecione **Avaliar Políticas**. Na página **Seleção de Política** da caixa de diálogo **Avaliar Políticas** , clique no botão Procurar ( **...** ).  
   
--   No Pesquisador de Objetos, expanda **Gerenciamento**, expanda **Gerenciamento de Políticas**, clique com o botão direito do mouse em **Políticas**e selecione **Importar Política**. Na caixa de diálogo **Importar** , clique no botão Procurar (**...**).  
+-   No Pesquisador de Objetos, expanda **Gerenciamento**, expanda **Gerenciamento de Políticas**, clique com o botão direito do mouse em **Políticas**e selecione **Importar Política**. Na caixa de diálogo **Importar** , clique no botão Procurar ( **...** ).  
   
--   No Pesquisador de Objetos, clique com o botão direito do mouse em um servidor, banco de dados ou objeto de banco de dados, selecione **Políticas**e depois **Avaliar**. Na página **Seleção de Política** da caixa de diálogo **Avaliar Políticas** , clique no botão Procurar (**...**).  
+-   No Pesquisador de Objetos, clique com o botão direito do mouse em um servidor, banco de dados ou objeto de banco de dados, selecione **Políticas**e depois **Avaliar**. Na página **Seleção de Política** da caixa de diálogo **Avaliar Políticas** , clique no botão Procurar ( **...** ).  
   
 ## <a name="options"></a>Opções  
  **Arquivos**  

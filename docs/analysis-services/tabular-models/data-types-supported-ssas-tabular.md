@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22109f1cd7f3ebce652ae4c006473866321f7f0e
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62472195"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263420"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>Tipos de dados com suporte em modelos de tabela
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -59,7 +59,7 @@ Quando você importa dados ou usa um valor em uma fórmula, mesmo quando a fonte
 >  Você não pode importar de uma coluna de **varchar(max)** que contém um comprimento da cadeia de caracteres de mais de 131.072 caracteres.  
   
 ### <a name="table-data-type"></a>Tipo de dados de tabela  
- Além disso, a DAX usa um tipo de dados *table* . Esse tipo de dados é usado pela DAX em muitas funções, como agregações e cálculos de inteligência de hora. Algumas funções exigem uma referência a uma tabela; outras retornam uma tabela que pode ser usada como entrada para outras funções. Em algumas funções que exigem uma tabela como entrada, você pode especificar uma expressão avaliada para uma tabela; para algumas funções, uma referência a uma tabela base é necessária. Para obter informações sobre os requisitos de funções específicas, consulte [Referência de função DAX](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
+ Além disso, a DAX usa um tipo de dados *table* . Esse tipo de dados é usado pela DAX em muitas funções, como agregações e cálculos de inteligência de hora. Algumas funções exigem uma referência a uma tabela; outras retornam uma tabela que pode ser usada como entrada para outras funções. Em algumas funções que exigem uma tabela como entrada, você pode especificar uma expressão avaliada para uma tabela; para algumas funções, uma referência a uma tabela base é necessária. Para obter informações sobre os requisitos de funções específicas, consulte [Referência de função DAX](/dax/dax-function-reference).  
   
 ##  <a name="bkmk_implicit"></a> Conversão de tipo de dados implícitas e explícitas em fórmulas DAX
   
@@ -136,7 +136,7 @@ Quando você importa dados ou usa um valor em uma fórmula, mesmo quando a fonte
  Por exemplo, se um inteiro for combinado com um valor de moeda em uma operação de divisão, os dois valores serão convertidos em números reais, e o resultado também será um número real.  
   
 #### <a name="comparison-operators"></a>Operadores de comparação  
-Há suporte para apenas um conjunto limitado de combinações de tipo de dados mistos para operações de comparação. Para obter mais informações, consulte [Referência de operador DAX](https://msdn.microsoft.com/library/ee634237.aspx).  
+Há suporte para apenas um conjunto limitado de combinações de tipo de dados mistos para operações de comparação. Para obter mais informações, consulte [Referência de operador DAX](/dax/dax-operator-reference).  
   
 ## <a name="bkmk_hand_blanks"></a> Manipulação de espaços em branco, cadeias de caracteres vazias e valores zero  
  A tabela a seguir resume as diferenças entre DAX e no Microsoft Excel, da maneira que os espaços em branco são tratados:  
@@ -157,5 +157,5 @@ Há suporte para apenas um conjunto limitado de combinações de tipo de dados m
 |BLANK OR BLANK|BLANK|Erro|  
 |BLANK AND BLANK|BLANK|Erro|  
   
- Para obter detalhes sobre como uma determinada função ou operador manipula espaços em branco, consulte os tópicos individuais de cada função DAX, na seção, [Referência de função DAX](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
+ Para obter detalhes sobre como uma determinada função ou operador manipula espaços em branco, consulte os tópicos individuais de cada função DAX, na seção, [Referência de função DAX](/dax/dax-function-reference).  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 53455f542e10e816aa55272026a875cf3cf87107
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.openlocfilehash: c7096cac1f4721531f1905b11f2ca3b901661204
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984067"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263432"
 ---
 # <a name="calculations-in-tabular-models"></a>Cálculos em modelos de tabela
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52984067"
 |-----------|-----------------|  
 |[Noções básicas sobre DAX em modelos de tabela](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)|Descreve a linguagem de fórmula DAX usada para criar cálculos para colunas calculadas, medidas e filtros de linha em modelos de tabela.|  
 |[Compatibilidade de fórmula do DAX no modo DirectQuery](http://msdn.microsoft.com/981b6a68-434d-4db6-964e-d92f8eb3ee3e)|Descreve as diferenças, lista as funções que não têm suporte no modo DirectQuery e lista as funções com suporte, mas que poderiam retornar resultados diferentes.|  
-|[Referência de DAX (Data Analysis Expressions)](http://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)|Esta seção fornece descrições detalhadas de sintaxe DAX, operadores e funções.|  
+|[Referência de DAX (Data Analysis Expressions)](/dax/data-analysis-expressions-dax-reference)|Esta seção fornece descrições detalhadas de sintaxe DAX, operadores e funções.|  
   
 > [!NOTE]  
 >  Esta seção não contém tarefas passo a passo para criar cálculos. Como os cálculos são especificados em colunas calculadas, medidas e filtros de linha (em funções), as instruções sobre onde criar fórmulas DAX são fornecidas em tarefas relacionadas a esses recursos. Para obter mais informações, consulte [criar uma coluna calculada](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md), [criar e gerenciar medidas](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md), e [criar e gerenciar funções](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  

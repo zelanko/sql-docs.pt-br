@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63151206"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
@@ -63,7 +63,7 @@ ms.locfileid: "63151206"
  Interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados  
  Uma interface fácil de usar na qual você pode especificar a carga de trabalho e selecionar várias opções de ajuste.  
   
- Utilitário**dta**   
+ Utilitário**dta**  
  A versão do prompt de comando do Orientador de Otimização do Mecanismo de Banco de Dados. O utilitário **dta** foi projetado para permitir o uso da funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em aplicativos e scripts.  
   
  carga de trabalho  

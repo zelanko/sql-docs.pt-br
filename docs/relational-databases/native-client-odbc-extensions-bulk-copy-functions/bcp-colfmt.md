@@ -20,10 +20,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4013dbd3de9b0866aff0dd8d1256be0839299235
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62738819"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
@@ -128,7 +128,7 @@ RETCODE bcp_colfmt (
   
 -   O comprimento da sequência de bytes de encerramento opcional.  
   
- Cada chamada de **bcp_colfmt** especifica o formato de uma coluna do arquivo de usuário. Por exemplo, para alterar as configurações padrão de três colunas em um arquivo de dados de usuário de cinco colunas, primeiro chame [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)** e, em seguida, chame **bcp_colfmt** cinco vezes, sendo três dessas chamadas para definir seu formato personalizado. Para as duas chamadas restantes, defina *eUserDataType* como 0 e defina *cbIndicator*, *cbUserData*e *cbUserDataTerm* respectivamente como 0, SQL_VARLEN_DATA e 0. Esse procedimento copia todas as cinco colunas, três com seu formato personalizado e duas com o formato padrão.  
+ Cada chamada de **bcp_colfmt** especifica o formato de uma coluna do arquivo de usuário. Por exemplo, para alterar as configurações padrão de três colunas em um arquivo de dados de usuário de cinco colunas, primeiro chame [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)** e, em seguida, chame **bcp_colfmt** cinco vezes, sendo três dessas chamadas para definir seu formato personalizado. Para as duas chamadas restantes, defina *eUserDataType* como 0 e defina *cbIndicator*, *cbUserData*e *cbUserDataTerm* respectivamente como 0, SQL_VARLEN_DATA e 0. Esse procedimento copia todas as cinco colunas, três com seu formato personalizado e duas com o formato padrão.  
   
  Para *cbIndicator*, um valor 8 indica que agora um tipo de valor grande é válido. Se o prefixo for especificado para um campo cuja coluna correspondente é um novo tipo max, ele poderá ser definido somente como 8. Para obter detalhes, consulte [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md).  
   

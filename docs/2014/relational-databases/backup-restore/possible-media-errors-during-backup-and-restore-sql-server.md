@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876103"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Erros de mídia possíveis durante backup e restauração (SQL Server)
@@ -58,7 +58,7 @@ ms.locfileid: "62876103"
   
 2.  Independentemente de somas de verificação de página estarem presentes, BACKUP gera uma soma de verificação de backup separada para os fluxos de backup. Operações de restauração podem usar opcionalmente a soma de verificação de backup para validar se o backup não está corrompido. A soma de verificação de backup é armazenada na mídia de backup, não nas páginas do banco de dados. A soma de verificação de backup pode ser usada opcionalmente na hora da restauração.  
   
-3.  O conjunto de backup é sinalizado como contendo somas de verificação de backup (na coluna **has_backup_checksums** de **msdb..backupset)**. Para obter mais informações, veja [conjunto de backup &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql).  
+3.  O conjunto de backup é sinalizado como contendo somas de verificação de backup (na coluna **has_backup_checksums** de **msdb..backupset)** . Para obter mais informações, veja [conjunto de backup &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql).  
   
  Durante a operação de restauração, se as somas de verificação de backup estiverem presentes na mídia de backup, por padrão, ambas as instruções RESTORE e RESTORE VERIFYONLY verificarão as somas de verificação de backup e somas de verificação de página. Se não houver nenhuma soma de verificação de backup, cada operação de restauração prossegue sem qualquer verificação; porque sem uma soma de verificação de backup a restauração não pode verificar somas de verificação da página de modo confiável.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62876103"
   
 2.  Faz o log do erro no log de erros do SQL Server.  
   
-3.  Marca o conjunto de backup como contendo esse tipo de erro (na coluna **is_damaged** de **msdb.backupset)**. Para obter mais informações, veja [conjunto de backup &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql).  
+3.  Marca o conjunto de backup como contendo esse tipo de erro (na coluna **is_damaged** de **msdb.backupset)** . Para obter mais informações, veja [conjunto de backup &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql).  
   
 4.  Emite uma mensagem que o backup foi gerado com sucesso, mas contém erros de página.  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 72fadf42bae238fbc656a120e39317ce5211919e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740306"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Criar uma consulta de previsão singleton a partir de um modelo
@@ -86,7 +86,7 @@ AS [t]
   
 10. No painel de texto de consulta, localize a pequena curva vermelha sob a vírgula e a elipse que indica um erro de sintaxe. Exclua a elipse e adicione qualquer condição de consulta adicional desejada. Se você não quiser adicionar nenhuma outra condição, exclua a vírgula.  
   
-     Para o exemplo de código mostrado no início desse tópico, a condição de consulta adicional foi definida como **'45' como [Idade]**.  
+     Para o exemplo de código mostrado no início desse tópico, a condição de consulta adicional foi definida como **'45' como [Idade]** .  
   
 11. Clique em **Executar**.  
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5fb76e62e1816be53c312cc263053f854ad3b796
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62625921"
 ---
 # <a name="add-or-edit-join"></a>Adicionar ou Editar Junção
@@ -45,7 +45,7 @@ ms.locfileid: "62625921"
   
     -   Se você estiver adicionando uma nova junção, selecione **Usar o construtor para criar a instrução** ou **Gravar a instrução de junção manualmente**. Se você começar a gravar a junção manualmente, não poderá usar o construtor.  
   
-         Se você selecionar para usar o construtor, use as colunas na grade (**Conjunção**, **Coluna da Tabela Filtrada**, **Operador**e **Coluna da Tabela Unida**) para criar uma instrução de junção. Cada coluna na grade contém uma caixa de listagem suspensa, permitindo que você selecione duas colunas e um operador (**=**, **<>**, **<=**, **\<**, **>=**, **>**, **like**). Os resultados são exibidos na área de texto **Visualizar** . Se a junção envolver mais de um par de colunas, selecione uma conjunção (**AND** ou **OR**) na coluna **Conjunção** e insira mais duas colunas e outro operador.  
+         Se você selecionar para usar o construtor, use as colunas na grade (**Conjunção**, **Coluna da Tabela Filtrada**, **Operador**e **Coluna da Tabela Unida**) para criar uma instrução de junção. Cada coluna na grade contém uma caixa de listagem suspensa, permitindo que você selecione duas colunas e um operador ( **=** , **<>** , **<=** , **\<** , **>=** , **>** , **like**). Os resultados são exibidos na área de texto **Visualizar** . Se a junção envolver mais de um par de colunas, selecione uma conjunção (**AND** ou **OR**) na coluna **Conjunção** e insira mais duas colunas e outro operador.  
   
          Se você selecionar para gravar a instrução manualmente, grave a instrução de junção na área de texto **Instrução de Junção** . Use a caixa de listagem **Colunas da Tabela Filtrada** e **Colunas da Tabela Unida** para arrastar e soltar colunas na área de texto **Instrução de Junção** .  
   

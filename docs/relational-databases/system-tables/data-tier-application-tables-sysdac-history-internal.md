@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40696085bc8eb9980d1150feade91a9edd627be0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62471135"
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>Tabelas de aplicativo da camada de dados – sysdac_history_internal
@@ -60,8 +60,8 @@ ms.locfileid: "62471135"
 |**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
 |12|0|criar|dacpac|  
 |12|1|criar|login|  
-|12|2|criar|Banco de Dados|  
-|12|3|renomear|Banco de Dados|  
+|12|2|criar|database|  
+|12|3|renomear|database|  
   
  Operações de DAC, como delete remove linhas de **sysdac_history_internal**. Você pode usar a seguinte consulta para excluir manualmente as linhas dos DACs que não são mais implantados em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
   

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5a05f52eceb554d8f4b023a3136fd4cf8e55d4fc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62791762"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Modos de disponibilidade (grupos de disponibilidade AlwaysOn)
@@ -52,8 +52,8 @@ ms.locfileid: "62791762"
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
 |01|02|02 e 03|04|Sim|  
 |02|01|01 e 03|04|Sim|  
-|03||01 e 02|04|Não|  
-|04|||01, 02 e 03|Não|  
+|03||01 e 02|04|Não |  
+|04|||01, 02 e 03|Não |  
   
  Normalmente, o Nó 04 como uma réplica de confirmação assíncrona é implantado em um site de recuperação de desastre. A permanência dos Nós 01, 02 e 03 no modo de confirmação assíncrona depois do failover no Nó 04 impede a degradação de desempenho potencial em seu grupo de disponibilidade devido à alta latência da rede entre os dois sites.  
   

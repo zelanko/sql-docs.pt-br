@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5510eb58315f70195eb40390edec1766c350fb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468584"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Cursores roláveis e isolamento da transação
@@ -41,17 +41,17 @@ A tabela a seguir lista os fatores que governam a visibilidade das alterações.
 |Cursor type\action|Self|O proprietário<br /><br /> Txn|Outra<br /><br /> Txn<br /><br /> (RU[a])|Outra<br /><br /> Txn<br /><br /> (RC[a])|Outra<br /><br /> Txn<br /><br /> (RR[a])|Outra<br /><br /> Txn<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |Estático|||||||  
-|Insert|Maybe[b]|Não|Não|Não|Não|Não|  
-|Update|Maybe[b]|Não|Não|Não|Não|Não|  
-|DELETE|Maybe[b]|Não|Não|Não|Não|Não|  
+|Insert|Maybe[b]|Não |Não|Não|Não|Não|  
+|Update|Maybe[b]|Não|Não |Não |Não|Não |  
+|DELETE|Maybe[b]|Não |Não |Não |Não|Não|  
 |Controlado por conjunto de chaves|||||||  
-|Insert|Maybe[b]|Não|Não|Não|Não|Não|  
-|Update|Sim|Sim|Sim|Sim|Não|Não|  
-|DELETE|Maybe[b]|Sim|Sim|Sim|Não|Não|  
+|Insert|Maybe[b]|Não|Não |Não |Não |Não|  
+|Update|Sim|Sim|Sim|Sim|Não|Não |  
+|DELETE|Maybe[b]|Sim|Sim|Sim|Não |Não|  
 |Dinâmico|||||||  
-|Insert|Sim|Sim|Sim|Sim|Sim|Não|  
-|Update|Sim|Sim|Sim|Sim|Não|Não|  
-|DELETE|Sim|Sim|Sim|Sim|Não|Não|  
+|Insert|Sim|Sim|Sim|Sim|Sim|Não |  
+|Update|Sim|Sim|Sim|Sim|Não|Não |  
+|DELETE|Sim|Sim|Sim|Sim|Não |Não |  
   
  [a] as letras entre parênteses indicam o nível de isolamento da transação que contém o cursor; o nível de isolamento da transação (no qual a alteração foi feita) é irrelevante.  
   

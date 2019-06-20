@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 29523dba8417a89261fed72da801898513796c17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775758"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>Instalar o SQL Server 2014 no Server Core
@@ -45,9 +45,9 @@ ms.locfileid: "62775758"
 |SSDT ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools)|Não|  
 |Conectividade das ferramentas de cliente|Sim|  
 |Integration Services Server<sup>[1]</sup>|Sim|  
-|Compatibilidade das ferramentas de cliente com versões anteriores|Não|  
-|SDK de Ferramentas de cliente|Não|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online|Não|  
+|Compatibilidade das ferramentas de cliente com versões anteriores|Não |  
+|SDK de Ferramentas de cliente|Não |  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online|Não |  
 |Ferramentas de Gerenciamento - Básicas|Apenas remoto<sup>[2]</sup>|  
 |Ferramentas de Gerenciamento – Completas|Apenas remoto<sup>[2]</sup>|  
 |Distributed Replay Controller|Não|  

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1aa0faafc6fb1cca693fe58665c7344db84c9f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62666783"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
@@ -66,7 +66,7 @@ ms.locfileid: "62666783"
   
 2.  Clique com o botão direito do mouse em **SQL Server Agent** e selecione **Propriedades**.  
   
-3.  No **propriedades do SQL Server Agent -**_nome_do_servidor_ caixa de diálogo **log de erros** no **geral** de página, digite o nome de usuário ou nome do computador ao qual você deseja enviar erro mensagens na **destinatário do Net send** caixa.  
+3.  No **propriedades do SQL Server Agent -** _nome_do_servidor_ caixa de diálogo **log de erros** no **geral** de página, digite o nome de usuário ou nome do computador ao qual você deseja enviar erro mensagens na **destinatário do Net send** caixa.  
   
 4.  Clique em **OK**.  
   

@@ -11,10 +11,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: bc104680f8acad6f54a8a0625257332971f38742
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64775730"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expressões (Construtor de Relatórios e SSRS)
@@ -105,7 +105,7 @@ A seguinte tabela lista os tipos de referências que podem ser incluídos em uma
 
 
 ##  <a name="Valid"></a> Validando expressões  
-Quando você cria uma expressão para uma propriedade de item de relatório específica, as referências que podem ser incluídas em uma expressão dependem dos valores que a propriedade de item de relatório pode aceitar e do escopo em que a propriedade é avaliada. Por exemplo:   
+Quando você cria uma expressão para uma propriedade de item de relatório específica, as referências que podem ser incluídas em uma expressão dependem dos valores que a propriedade de item de relatório pode aceitar e do escopo em que a propriedade é avaliada. Por exemplo:  
 
 -   Por padrão, a expressão [Sum] calcula a soma de dados que estão no escopo quando a expressão é avaliada. Para uma célula de tabela, o escopo depende das associações de grupo de linhas e colunas. Para obter mais informações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
 

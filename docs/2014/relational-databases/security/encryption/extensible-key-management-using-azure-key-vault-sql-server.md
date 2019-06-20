@@ -16,12 +16,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f211a7300dceb542235538e0e7067e8dd989fe6d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63011523"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046754"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Gerenciamento extensível de chaves usando o Azure Key Vault (SQL Server)
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector para [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cofre de chaves do Azure permite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] criptografia Aproveite o serviço Azure Key Vault como um [gerenciamento extensível de chaves &#40;EKM&#41; ](extensible-key-management-ekm.md) provedor para proteger seu chaves de criptografia.  
@@ -52,7 +52,7 @@ ms.locfileid: "63011523"
  ![EKM do SQL Server usando o Azure Key Vault](../../../database-engine/media/ekm-using-azure-key-vault.png "EKM do SQL Server usando o Azure Key Vault")  
   
 ##  <a name="Step1"></a> Etapa 1: Configurar o Key Vault para uso pelo SQL Server  
- Use as seguintes etapas para configurar uma chave de cofre para uso com o [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] para proteção de chave de criptografia. Um cofre já pode estar em uso para a organização. Quando não houver um cofre, o Administrador do Azure de sua organização, designado para gerenciar chaves de criptografia, poderá criar um cofre, gerar uma chave assimétrica no cofre e, então, autorizar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para usar a chave. Familiarize-se com o serviço de cofre de chave consultando [Introdução ao Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)e a referência de [Cmdlets do PowerShell do Azure Key Vault](/powershell/module/azurerm.keyvault/) .  
+ Use as seguintes etapas para configurar uma chave de cofre para uso com o [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] para proteção de chave de criptografia. Um cofre já pode estar em uso para a organização. Quando não houver um cofre, o Administrador do Azure de sua organização, designado para gerenciar chaves de criptografia, poderá criar um cofre, gerar uma chave assimétrica no cofre e, então, autorizar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para usar a chave. Familiarize-se com o serviço de cofre de chave consultando [Introdução ao Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)e a referência de [Cmdlets do PowerShell do Azure Key Vault](https://docs.microsoft.com/powershell/module/azurerm.keyvault) .  
   
 > [!IMPORTANT]  
 >  Se tiver várias assinaturas do Azure, você deve usar a assinatura que contém o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -98,7 +98,7 @@ ms.locfileid: "63011523"
   
     -   [Introdução ao Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)  
   
-    -   Referência dos [Cmdlets do Cofre de Chaves do Azure](https://go.microsoft.com/fwlink/?LinkId=521403) do PowerShell  
+    -   Referência dos [Cmdlets do Cofre de Chaves do Azure](https://docs.microsoft.com/powershell/module/azurerm.keyvault) do PowerShell  
   
 ##  <a name="Step2"></a> Etapa 2: Instalar o conector do SQL Server  
  O Connector [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é baixado e instalado pelo administrador do computador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O Connector [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está disponível para download no [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=521700).  Procure **SQL Server Connector para Microsoft Azure Key Vault**, examine os detalhes, requisitos de sistema e instruções de instalação e escolha baixar o conector e iniciar a instalação usando **Executar**. Examine e aceite a licença e continue.  
