@@ -10,12 +10,12 @@ ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77114194f36ac24ff34e48b580513a939d8a4467
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066624"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284848"
 ---
 # <a name="roles-ssas-tabular"></a>Funções (SSAS tabular)
   Funções, em modelos tabulares, definem permissões de membro para um modelo. Cada função contém membros, por nome de usuário do Windows ou grupo do Windows, e permissões (leitura, processo, administrador). Membros da função podem executar ações no modelo conforme definido pela permissão de função. As funções definidas com permissões de leitura também podem fornecer segurança adicional no nível de linha usando filtros no nível de linha.  
@@ -75,7 +75,7 @@ ms.locfileid: "66066624"
   
  Os filtros de linha podem ser definidos somente para funções com permissões de Leitura e Leitura e Processo. Por padrão, se um filtro de linha não for definido para uma tabela específica, os membros de uma função que têm permissão de Leitura ou Leitura e Processo poderão consultar todas as linhas na tabela a menos que a filtragem cruzada seja aplicada de outra tabela.  
   
- Quando um filtro de linha é definido para uma tabela específica, uma fórmula DAX, que deve ser avaliada como um valor TRUE/FALSE, define as linhas que poderão ser consultadas por membros daquela função específica. As linhas não incluídas na fórmula DAX não poderão ser consultadas. Por exemplo, para membros da função vendas, a tabela Customers com a linha seguinte expressão de filtros, *= Customers [Country] = "USA"* , os membros da função vendas, só poderão consultar clientes nos EUA.  
+ Quando um filtro de linha é definido para uma tabela específica, uma fórmula DAX, que deve ser avaliada como um valor TRUE/FALSE, define as linhas que poderão ser consultadas por membros daquela função específica. As linhas não incluídas na fórmula DAX não poderão ser consultadas. Por exemplo, para membros da função vendas, a tabela Customers com a linha seguinte expressão de filtros, *= Customers [Country] = "USA"*, os membros da função vendas, só poderão consultar clientes nos EUA.  
   
  Os filtros de linha aplicam-se às linhas especificadas e também a linhas relacionadas. Quando uma tabela tiver várias relações, os filtros aplicam segurança para a relação que está ativa. Os filtros de linha serão intersectados com outros filtros de linha definidos para tabelas relacionadas, por exemplo:  
   
@@ -96,8 +96,8 @@ ms.locfileid: "66066624"
   
 |Função|Descrição|  
 |--------------|-----------------|  
-|[Função USERNAME &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)|Retorna o domínio\ nome de usuário do usuário conectado atualmente.|  
-|[Função CUSTOMDATA &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)|Retorna a propriedade CustomData em uma cadeia de conexão.|  
+|[Função USERNAME &#40;DAX&#41;](/dax/username-function-dax)|Retorna o domínio\ nome de usuário do usuário conectado atualmente.|  
+|[Função CUSTOMDATA &#40;DAX&#41;](/dax/customdata-function-dax)|Retorna a propriedade CustomData em uma cadeia de conexão.|  
   
  Você pode usar a função LOOKUPVALUE para retornar valores para uma coluna na qual o nome de usuário do Windows seja igual ao nome de usuário retornado pela função USERNAME ou uma cadeia de caracteres retornada pela função CustomData. As consultas podem ser então restritas onde os valores retornados por LOOKUPVALUE correspondem a valores na mesma tabela ou na tabela relacionada.  
   
@@ -140,8 +140,8 @@ ms.locfileid: "66066624"
 ## <a name="see-also"></a>Consulte também  
  [Perspectivas &#40;SSAS de Tabela&#41;](perspectives-ssas-tabular.md)   
  [Analisar no Excel &#40;SSAS de Tabela&#41;](analyze-in-excel-ssas-tabular.md)   
- [Função USERNAME &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [Função LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
- [Função CUSTOMDATA &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [Função USERNAME &#40;DAX&#41;](/dax/username-function-dax)   
+ [Função LOOKUPVALUE &#40;DAX&#41;](/dax/lookupvalue-function-dax)   
+ [Função CUSTOMDATA &#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

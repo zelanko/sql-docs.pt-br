@@ -12,12 +12,12 @@ ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6555f47c1d390180bbf2d2ccca1f29f07889465d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 514774acc7255f2f499bfe7fdd6e731944ab67fe
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66108797"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285052"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Instalar o Reporting Services e os Serviços de Informações da Internet lado a lado (Modo Nativo do SSRS)
   Você pode instalar e executar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) e o IIS (Serviços de Informações da Internet) no mesmo computador. A versão do IIS utilizada determina os problemas de interoperabilidade a serem resolvidos.  
@@ -43,9 +43,9 @@ ms.locfileid: "66108797"
   
 |Exemplo|Solicitação|  
 |-------------|-------------|  
-|http://123.234.345.456:80/reports|Recebe todas as solicitações são enviadas ao http://123.234.345.456/reports ou http://\< computername > / reports se um serviço de nome de domínio pode resolver o endereço IP para o nome do host.|  
+|http:\//123.234.345.456:80/reports|Recebe todas as solicitações são enviadas para http:\//123.234.345.456/reports ou http://\<computername > / reports se um serviço de nome de domínio pode resolver o endereço IP para o nome do host.|  
 |http://+:80/reports|Recebe todas as solicitações enviadas a qualquer endereço IP ou nome do host válido para esse computador desde que a URL contenha o nome do diretório virtual “reports”.|  
-|http://123.234.345.456:80|Recebe qualquer solicitação que especifica http://123.234.345.456 ou http://\< computername > se um serviço de nome de domínio pode resolver o endereço IP para o nome do host.|  
+|http:\//123.234.345.456:80|Recebe qualquer solicitação que especifique http:\//123.234.345.456 ou http://\<computername > se um serviço de nome de domínio pode resolver o endereço IP para o nome do host.|  
 |http://+:80|Recebe solicitações que ainda não foram recebidas por outros aplicativos, para todos os pontos de extremidade do aplicativo mapeado como **Todos Atribuídos**.|  
 |http://*:80|Recebe solicitações que ainda não foram recebidas por outros aplicativos, para todos os pontos de extremidade do aplicativo mapeado como **Todos Não Atribuídos**.|  
   

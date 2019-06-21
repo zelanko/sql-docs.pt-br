@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5db09273a26bd8dd596a6ae576b2f8f0cc414190
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106072"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipos de dados em expressões (Construtor de Relatórios e SSRS)
@@ -84,7 +84,7 @@ ms.locfileid: "66106072"
 |String para DateTime|`=DateTime.Parse(Fields!DateTimeinStringFormat.Value)`|  
 |String para DateTimeOffset|`=DateTimeOffset.Parse(Fields!DateTimeOffsetinStringFormat.Value)`|  
 |Extraindo o ano|`=Year(Fields!TimeinStringFormat.Value)`<br /><br /> `-- or --`<br /><br /> `=Year(Fields!TimeinDateTimeFormat.Value)`|  
-|Booleano para Integer|`=CInt(Parameters!BooleanField.Value)`<br /><br /> - 1 é verdadeiro e 0 é falso.|  
+|Booleano para Integer|`=CInt(Parameters!BooleanField.Value)`<br /><br /> \- 1 é verdadeiro e 0 é falso.|  
 |Booleano para Integer|`=System.Convert.ToInt32(Fields!BooleanFormat.Value)`<br /><br /> 1 é verdadeiro e 0 é falso.|  
 |Apenas a parte DateTime do valor DateTimeOffset|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |Apenas a parte Offset do valor DateTimeOffset|`=Fields!MyDatetimeOffset.Value.Offset`|  

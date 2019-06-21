@@ -12,12 +12,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ab544235e842e38024ce98763094c300bb06275
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a9c1510030f61896f686b49f4bc134a7dfcb42b
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067229"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284870"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>Modo DirectQuery (SSAS tabular)
   O Analysis Services permite recuperar dados e criar relatórios de um modelo de tabela, recuperando dados e agregações diretamente de um sistema de banco de dados relacional, usando o *modo DirectQuery*. Este tópico apresenta as diferenças entre modelos de tabela padrão que só residem na memória e modelos de tabela que podem consultar uma fonte de dados relacional, e também explica como você pode criar e implantar um modelo para usar no modo DirectQuery.  
@@ -82,7 +82,7 @@ ms.locfileid: "66067229"
   
 -   **Restrições de cliente:** Quando um modelo está no modo DirectQuery, ele só pode ser consultado usando DAX. Você não pode usar MDX para criar consultas. Isso significa que você não pode usar o Cliente Dinâmico do Excel porque o Excel usa MDX.  
   
-     No entanto, você pode criar consultas em um modelo DirectQuery no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se você usar uma consulta de tabela DAX como parte de uma instrução XMLA Execute, para obter mais informações, consulte [referência de sintaxe de consulta DAX](https://msdn.microsoft.com/library/ee634217.aspx).  
+     No entanto, você pode criar consultas em um modelo DirectQuery no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se você usar uma consulta de tabela DAX como parte de uma instrução XMLA Execute, para obter mais informações, consulte [referência de sintaxe de consulta DAX] (/ / dax--referência da sintaxe dax
   
  Quando você tiver resolvido todos os problemas de design e testado seu modelo, estará pronto para a implantação. Neste momento, você pode definir o método preferencial para responder consultas em relação ao modelo. Você deseja que os usuários tenham acesso ao cache ou que sempre usem apenas a fonte de dados relacional?  
   

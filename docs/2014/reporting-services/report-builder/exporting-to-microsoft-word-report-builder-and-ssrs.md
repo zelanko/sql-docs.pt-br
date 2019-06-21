@@ -10,17 +10,17 @@ ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 003b950e908abab7e385836e761b5c230caa7fcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3eaaace0d8ae5924305024e6ee67f7f3fefb415c
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107881"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285031"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
   A extensão de renderização do Word renderiza relatórios para o formato nativo de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. O formato é o Office Open XML.  
   
- O renderizador do Word é compatível com o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010, bem como com o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 com o Pacote de Compatibilidade do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office para Word, Excel e PowerPoint instalado. Para obter mais informações sobre o Pacote de Compatibilidade, consulte o [Pacote de Compatibilidade do Microsoft Office para Word, Excel e PowerPoint](https://go.microsoft.com/fwlink/?LinkID=205622).  
+ O renderizador do Word é compatível com o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010, bem como com o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 com o Pacote de Compatibilidade do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office para Word, Excel e PowerPoint instalado. 
   
  O tipo de conteúdo dos arquivos gerados por este renderizador é **application/vnd.openxmlformats-officedocument.wordprocessingml.document** , e a extensão de arquivo dos arquivos é .docx.  
   

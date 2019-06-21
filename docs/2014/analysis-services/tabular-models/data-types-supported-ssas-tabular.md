@@ -10,12 +10,12 @@ ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 585ce68402e8922f6c9629d8f4e8cd517218106f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c395bb74e8bde83bc2f89fa07f541183297300b
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067281"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284936"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>Tipos de dados com suporte (SSAS tabular)
   Este artigo descreve os tipos de dados que podem ser usados em modelos tabulares e discute a conversão implícita de tipos de dados quando dados são calculados ou usados em uma fórmula DAX (Data Analysis Expressions).  
@@ -68,12 +68,12 @@ ms.locfileid: "66067281"
 >  Você não pode importar de uma coluna de **varchar(max)** que contém um comprimento da cadeia de caracteres de mais de 131.072 caracteres.  
   
 ### <a name="table-data-type"></a>Tipo de dados de tabela  
- Além disso, a DAX usa um tipo de dados *table* . Esse tipo de dados é usado pela DAX em muitas funções, como agregações e cálculos de inteligência de hora. Algumas funções exigem uma referência a uma tabela; outras retornam uma tabela que pode ser usada como entrada para outras funções. Em algumas funções que exigem uma tabela como entrada, você pode especificar uma expressão avaliada para uma tabela; para algumas funções, uma referência a uma tabela base é necessária. Para obter informações sobre os requisitos de funções específicas, consulte [Referência de função DAX](https://msdn.microsoft.com/library/ee634396.aspx).  
+ Além disso, a DAX usa um tipo de dados *table* . Esse tipo de dados é usado pela DAX em muitas funções, como agregações e cálculos de inteligência de hora. Algumas funções exigem uma referência a uma tabela; outras retornam uma tabela que pode ser usada como entrada para outras funções. Em algumas funções que exigem uma tabela como entrada, você pode especificar uma expressão avaliada para uma tabela; para algumas funções, uma referência a uma tabela base é necessária. Para obter informações sobre os requisitos de funções específicas, consulte [Referência de função DAX](/dax/dax-function-reference).  
   
 ##  <a name="bkmk_implicit"></a> Conversão implícita e explícita de tipos de dados em fórmulas DAX  
  Cada função DAX tem requisitos específicos quanto aos tipos de dados que são usados como entradas e saídas. Por exemplo, algumas funções exigem inteiros para alguns argumentos e datas para outros; outras funções exigem texto ou tabelas.  
   
- Se os dados na coluna especificada como um argumento forem incompatíveis com o tipo de dados exigido pela função, em muitos casos DAX retornará um erro. Entretanto, sempre que possível, DAX tentará converter implicitamente os dados no tipo de dados exigido. Por exemplo:  
+ Se os dados na coluna especificada como um argumento forem incompatíveis com o tipo de dados exigido pela função, em muitos casos DAX retornará um erro. Entretanto, sempre que possível, DAX tentará converter implicitamente os dados no tipo de dados exigido. Por exemplo:   
   
 -   Você pode digitar um número, por exemplo "123", como uma cadeia de caracteres. O DAX analisará a cadeia de caracteres e tentará especificá-la como um tipo de dados numérico.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "66067281"
 |BLANK OR BLANK|BLANK|Erro|  
 |BLANK AND BLANK|BLANK|Erro|  
   
- Para obter detalhes sobre como uma determinada função ou operador manipula espaços em branco, consulte os tópicos individuais de cada função DAX, na seção, [Referência de função DAX](https://msdn.microsoft.com/library/ee634396.aspx).  
+ Para obter detalhes sobre como uma determinada função ou operador manipula espaços em branco, consulte os tópicos individuais de cada função DAX, na seção, [Referência de função DAX](/dax/dax-function-reference).  
   
 ## <a name="see-also"></a>Consulte também  
  [Fontes de dados &#40;SSAS de Tabela&#41;](../data-sources-ssas-tabular.md)   

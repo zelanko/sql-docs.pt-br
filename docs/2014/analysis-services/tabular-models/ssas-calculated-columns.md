@@ -10,12 +10,12 @@ ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ad2e89a8862c4b51856d70ddb1dfd3b1e1fdb17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066581"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284890"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>Colunas calculadas (SSAS tabular)
   Colunas calculadas, em modelos tabulares, permitem que você adicione novos dados a seu modelo. Em vez de colar ou importar valores na coluna, você deve criar uma fórmula DAX que define os valores de nível de linha da coluna. A coluna calculada pode então ser usada em um relatório, Tabela Dinâmica ou Gráfico Dinâmico como você faria com qualquer outra coluna.  
@@ -60,7 +60,7 @@ ms.locfileid: "66066581"
   
 -   Quando você renomeia uma coluna calculada, todas as fórmulas que se baseiam na coluna devem ser atualizadas manualmente. A menos que você esteja no modo de atualização manual, a atualização dos resultados das fórmulas acontece automaticamente. No entanto, essa operação pode demorar um pouco.  
   
--   Há alguns caracteres que não podem ser usados nos nomes de colunas. Para obter mais informações, consulte "Requisitos de nomenclatura" em [DAX Syntax Specification for PowerPivot](https://msdn.microsoft.com/library/ee634217(v=sql.120).aspx).  
+-   Há alguns caracteres que não podem ser usados nos nomes de colunas. Para obter mais informações, consulte "Requisitos de nomenclatura" em [DAX Syntax Specification for PowerPivot](/dax/dax-syntax-reference).  
   
 ##  <a name="bkmk_perf"></a> Desempenho de colunas calculadas  
  A fórmula de uma coluna calculada pode consumir mais recursos do que a fórmula usada para uma medida. Um motivo é que o resultado para uma coluna calculada sempre é calculado para cada linha de uma tabela, enquanto uma medida é calculada apenas para as células definidas pelo filtro usado em um relatório, Tabela Dinâmica ou Gráfico Dinâmico. Por exemplo, uma tabela com um milhão de linhas sempre terá uma coluna calculada com um milhão de resultados, e um efeito correspondente em desempenho. No entanto, uma Tabela Dinâmica normalmente filtra os dados, aplicando títulos de linha e coluna; por isso, uma medida só é calculada para o subconjunto de dados em cada célula da Tabela Dinâmica.  

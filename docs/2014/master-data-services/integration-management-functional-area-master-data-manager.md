@@ -10,12 +10,12 @@ ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 063e68b8efad6227643d6309f08bcf3c6bf9c38c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3aec7e136b656b7f33646d50b746e410263059a
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65479323"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284996"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Área funcional Gerenciamento de Integração (Master Data Manager)
   Na área funcional Gerenciamento de Integração, os administradores podem importar dados de tabelas de preparo e criar exibições de assinatura a serem usadas para sistemas de assinatura. Para obter mais informações sobre administradores, consulte [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
@@ -25,7 +25,7 @@ ms.locfileid: "65479323"
   
  [Carregar ou atualizar membros no Master Data Services por meio do processo de preparo](add-update-and-delete-data-master-data-services.md)  
   
- [Mover membros de hierarquia explícita por meio do processo de preparo &#40;Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)  
+ [Mover membros de hierarquia explícita por meio do processo de preparo &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)  
   
  [Exibir erros que ocorrem durante o processo de preparo &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
   

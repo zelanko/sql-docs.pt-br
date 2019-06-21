@@ -16,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831905"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284949"
 ---
 # <a name="execute-package-task"></a>Tarefa Executar Pacote
   A tarefa Executar Pacote estende os recursos empresariais do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ao permitir que pacotes executem outros pacotes como parte de um fluxo de trabalho.  
@@ -112,12 +112,8 @@ ms.locfileid: "62831905"
   
 -   [Definir as propriedades de uma tarefa ou contêiner](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
-  
 ## <a name="related-content"></a>Conteúdo relacionado  
-  
--   Entrada de blog, [SSIS: Você deve executar pacotes filho em processo ou fora de processo? ](https://go.microsoft.com/fwlink/?LinkId=220819), em consultingblogs.emc.com.  
-  
--   Entrada de blog, [SSIS: Acessando variáveis em um pacote pai](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), em andyleonard.blog. 
+
+Entrada de blog, [SSIS: Acessando variáveis em um pacote pai](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), em andyleonard.blog. 
   
   
