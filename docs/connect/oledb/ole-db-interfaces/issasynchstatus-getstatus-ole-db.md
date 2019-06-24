@@ -1,5 +1,5 @@
 ---
-title: 'Issasynchstatus:: getStatus (OLE DB) | Microsoft Docs'
+title: ISSAsynchStatus::GetStatus (OLE DB) | Microsoft Docs
 description: ISSAsynchStatus::GetStatus (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - GetStatus method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 1920ce001879baf01a337898c452493dccd430f3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: d22bc6d19aa4593d400b62c19f72c9fbe3745005
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789745"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +67,7 @@ HRESULT GetStatus(
   
  DBASYNCHPHASE_INITIALIZATION – o objeto está em fase de inicialização. Os argumentos *pulProgress* e *pulProgressMax* indicam uma taxa estimada de conclusão. O objeto ainda não se materializou completamente. As tentativas de chamar qualquer outra interface podem falhar e o conjunto completo de interfaces pode não estar disponível no objeto. Se a operação assíncrona tiver sido resultado de uma chamada de **ICommand::Execute** para um comando que atualiza, exclui ou insere linhas e se *cParamSets* for superior a 1, *pulProgress* e *pulProgressMax* podem indicar o progresso de um único conjunto de parâmetros ou da matriz completa de conjuntos de parâmetros.  
   
- DBASYNCHPHASE_POPULATION – o objeto está em fase de população. Embora o conjunto de linhas esteja totalmente inicializado e a gama completa de interfaces esteja disponível no objeto, talvez ainda haja linhas que não foram populadas no conjunto de linhas. Embora *pulProgress* e *pulProgressMax* possam ser baseados no número de linhas populadas, em geral, eles se baseiam no tempo ou no esforço necessário para popular o conjunto de linhas. Dessa forma, um chamador deveria usar essas informações como uma estimativa aproximada de quanto tempo o processo levaria, não a contagem de linhas eventual. Essa fase só é retornada durante a população de um conjunto de linhas; ela nunca é retornada na inicialização de um objeto de fonte de dados ou pela execução de um comando que atualiza, exclui ou insere linhas.  
+ DBASYNCHPHASE_POPULATION – o objeto está em fase de rastreamento. Embora o conjunto de linhas esteja totalmente inicializado e a gama completa de interfaces esteja disponível no objeto, talvez ainda haja linhas que não foram populadas no conjunto de linhas. Embora *pulProgress* e *pulProgressMax* possam ser baseados no número de linhas populadas, em geral, eles se baseiam no tempo ou no esforço necessário para popular o conjunto de linhas. Dessa forma, um chamador deveria usar essas informações como uma estimativa aproximada de quanto tempo o processo levaria, não a contagem de linhas eventual. Essa fase só é retornada durante a população de um conjunto de linhas; ela nunca é retornada na inicialização de um objeto de fonte de dados ou pela execução de um comando que atualiza, exclui ou insere linhas.  
   
  DBASYNCHPHASE_COMPLETE – todo o processamento assíncrono do objeto foi concluído. O método **ISSAsynchStatus::GetStatus** retorna um HRESULT que indica o resultado da operação. Normalmente, esse é o HRESULT que teria sido retornado se a operação tivesse sido chamada de forma síncrona. Se a operação assíncrona foi resultado de uma chamada a **ICommand::Execute** para um comando que atualiza, exclui ou insere linhas, *pulProgress* e *pulProgressMax* têm o mesmo número total de linhas afetadas pelo comando. Se *cParamSets* for maior que 1, esse será o número total de linhas afetadas por todos os conjuntos de parâmetros especificados na execução. Se *peAsynchPhase* for um ponteiro nulo, nenhum código de status será retornado.  
   

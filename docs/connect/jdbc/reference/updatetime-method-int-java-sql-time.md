@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: fa7a3ca5-1111-4480-97ca-65b632aa1e5b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43256aa2725a56286ce083b613092421bdd15274
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7c5b8d73641e787906c52f32f705dc32ef26d261
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809944"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802691"
 ---
 # <a name="updatetime-method-int-javasqltime"></a>Método updateTime (int, java.sql.Time)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public void updateTime(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método updateTime é especificado pelo método updateTime na interface do resultset.  
+ Esse método updateTime é especificado pelo método updateTime na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método updateTime &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatetime-method-sqlserverresultset.md)   

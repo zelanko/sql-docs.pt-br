@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6081aa34-fc88-4dd0-9a3f-05e8488219dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c17ec2b88d5f86d94c918dc1a02d4cc2c5a0fdc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 935deba631fdebd5d118c399e498a30fe8c64144
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736184"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796579"
 ---
 # <a name="isclosed-method-sqlserverresultset"></a>Método isClosed (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

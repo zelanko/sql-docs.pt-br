@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 903106b5dfc17b98aae0614bd7b168d9b3acdf11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: d4eaf16d364927b8439bcf98e7ac6655d4a2f7bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527533"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789873"
 ---
 # <a name="connecting-with-bcp"></a>Conectando com bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -47,7 +47,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>Opções Disponíveis
 Na versão atual, as seguintes sintaxes e opções estão disponíveis:  
 
-[_banco de dados_**.**] _esquema_**.** _tabela_ **na** _dados\_arquivo_ | **out** _dados\_arquivo_
+[_banco de dados_ **.** ] _esquema_ **.** _tabela_ **na** _dados\_arquivo_ | **out** _dados\_arquivo_
 
 - -a *packet_size*  
 Especifica o número de bytes por pacote de rede enviado de e para o servidor.  
@@ -79,7 +79,7 @@ Especifica o número da primeira linha que deve ser exportada de uma tabela ou i
 Especifica que colunas vazias devem reter um valor nulo durante a operação, em vez de qualquer valor padrão nas colunas inseridas.  
   
 - -l  
-Especifica um tempo limite de logon. A opção –l especifica o número de segundos antes que um logon no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] expire quando você tentar se conectar a um servidor. O tempo de limite de logon padrão é 15 segundos. O tempo limite do logon deve ser um número entre 0 e 65534. O `bcp` irá gerar uma mensagem de erro se o valor fornecido não for numérico ou não estiver nesse intervalo. Um valor de 0 especifica um tempo limite infinito.
+Especifica um tempo limite de logon. A opção -l especifica o número de segundos antes que um logon em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] expire quando você tentar se conectar a um servidor. O tempo de limite de logon padrão é 15 segundos. O tempo limite do logon deve ser um número entre 0 e 65534. O `bcp` irá gerar uma mensagem de erro se o valor fornecido não for numérico ou não estiver nesse intervalo. Um valor de 0 especifica um tempo limite infinito.
   
 - -L *last_row*  
 Especifica o número da última linha a ser exportada de uma tabela ou importada de um arquivo de dados.  

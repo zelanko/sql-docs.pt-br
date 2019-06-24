@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0a208baaf237987c9f3e544da4d02dca72b191f9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021447"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62857312"
 ---
 # <a name="value-method-xml-data-type"></a>Método de valor() (Tipo de dados xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ value (XQuery, SQLType)
  O método **value()** usa o operador [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT implicitamente e tenta converter o resultado da expressão XQuery, a representação serializada de cadeia de caracteres, do tipo XSD para o tipo SQL correspondente especificado pela conversão de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para obter mais informações sobre regras de conversão de tipo para CONVERT, consulte [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 > [!NOTE]  
->  Por motivos de desempenho, em vez de usar o método **value()** em um predicado para comparação com um valor relacional, use **exist()** com **sql:column()**. Isso é demonstrado no exemplo D a seguir.  
+>  Por motivos de desempenho, em vez de usar o método **value()** em um predicado para comparação com um valor relacional, use **exist()** com **sql:column()** . Isso é demonstrado no exemplo D a seguir.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -73,7 +73,7 @@ SELECT @ProdID
   
  Embora exista apenas um atributo `ProductID` na instância XML, as regras de digitação estática exigem que você especifique explicitamente que a expressão de caminho retorne um singleton. Portanto, o `[1]` adicional é especificado ao término da expressão de caminho. Para obter mais informações sobre a tipagem estática, consulte [XQuery e tipagem estática](../../xquery/xquery-and-static-typing.md).  
   
-### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>b. Usando o método de value() para recuperar um valor de uma coluna de tipo xml  
+### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>B. Usando o método de value() para recuperar um valor de uma coluna de tipo xml  
  A consulta a seguir é especificada em uma coluna de tipo **xml** (`CatalogDescription`) no banco de dados `AdventureWorks`. A consulta recupera valores de atributo `ProductModelID` de cada instância de XML armazenada na coluna.  
   
 ```  
@@ -121,7 +121,7 @@ WHERE CatalogDescription.exist('
   
 -   A coluna `CatalogDescription` é uma coluna XML com tipo. Isso significa que ela possui uma coleção de esquema associada ao mesmo. No [Prólogo do XQuery](../../xquery/modules-and-prologs-xquery-prolog.md), a declaração de namespace é usada para definir o prefixo que é usado posteriormente no corpo da consulta.  
   
--   Se o método `exist()` retorna um `1` (True), isso indica que a instância XML inclui o elemento filho <`Warranty`> como um dos recursos.  
+-   Se o método `exist()` retornar um `1` (True), isso indicará que a instância XML inclui o elemento filho <`Warranty`> como um dos recursos.  
   
 -   O método `value()` na cláusula `SELECT` recupera os valores de atributo `ProductModelID` como inteiros.  
   

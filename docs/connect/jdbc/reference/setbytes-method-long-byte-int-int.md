@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7def226c-b211-459e-8c1a-08592d75d4a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 178c41970407e6104181207396a5baefb5ed282e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 271669134e18d3c6040f1e2e10163b5d5e21daab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713424"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797604"
 ---
 # <a name="setbytes-method-long-byte-int-int"></a>Método setBytes (long, byte[], int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public int setBytes(long pos,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *POS*  
+ *pos*  
   
  A posição (baseada em 1) no BLOB em que a gravação de dados é iniciada.  
   

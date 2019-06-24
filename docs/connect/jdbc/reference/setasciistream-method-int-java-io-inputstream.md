@@ -12,16 +12,16 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 71467c99e486e04ea9ba707821ed011ecdd61f13
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66765113"
 ---
 # <a name="setasciistream-method-int-javaioinputstream"></a>Método setAsciiStream (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Define o número do parâmetro designado como o objeto InputStream fornecido.  
+  Define o número do parâmetro designado como o objeto java.io.InputStream fornecido.  
   
 ## <a name="syntax"></a>Sintaxe  
   

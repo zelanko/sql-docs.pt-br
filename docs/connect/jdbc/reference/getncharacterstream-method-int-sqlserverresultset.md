@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 23cd90d0180486f364d4b1018212d5ef4d57de94
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66784700"
 ---
 # <a name="getncharacterstream-method-int-sqlserverresultset"></a>Método getNCharacterStream (int) (SQLServerResultSet)
@@ -44,7 +44,7 @@ public java.io.Reader getNCharacterStream(int columnIndex)
 ## <a name="remarks"></a>Remarks  
  Esse método getNCharacterStream é especificado pelo método getNCharacterStream na interface do resultset.  
   
- Esse método pode ser usado para recuperar o valor de uma **nvarchar**, **nchar**, **nvarchar (max)** , **ntext**, ou **xml** coluna na linha atual deste [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto. Se você tentar usar esse método para recuperar valores de outros tipos de dados, uma exceção será lançada.  
+ Esse método pode ser usado para recuperar o valor de uma coluna **nvarchar**, **nchar**, **nvarchar (max)** , **ntext** ou **xml** na linha atual deste objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md). Se você tentar usar esse método para recuperar valores de outros tipos de dados, uma exceção será lançada.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método getNCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)   

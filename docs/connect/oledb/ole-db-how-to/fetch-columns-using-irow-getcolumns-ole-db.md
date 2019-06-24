@@ -12,13 +12,13 @@ helpviewer_keywords:
 - IRow interface
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: deab7936f6ba3eacb455cc19622d4232ed8617e5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: cbc97de598e05d6045a5f7f142a67b39dcb9dd05
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600076"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66791554"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Buscar colunas usando IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51600076"
   
 -   Como buscar um grupo de colunas (em sequência).  
   
--   Como acessar uma coluna duas vezes. Na primeira vez a largura da coluna real é obtida, e depois os dados reais são acessados. Na estrutura DBCOLUMNACCESS, se **pData** for NULL e **cbMaxLen** for 0, a chamada a **IRow**-**>GetColumns()** retornará somente o tamanho de coluna real. Nesse caso, **IRow->GetColumns()** pode ser chamado novamente na mesma coluna para recuperar os dados reais.  
+-   Como acessar uma coluna duas vezes. Na primeira vez a largura da coluna real é obtida, e depois os dados reais são acessados. Na estrutura DBCOLUMNACCESS, se **pData** for NULL e **cbMaxLen** for 0, a chamada a **IRow**- **>GetColumns()** retornará somente o tamanho de coluna real. Nesse caso, **IRow->GetColumns()** pode ser chamado novamente na mesma coluna para recuperar os dados reais.  
   
 > [!IMPORTANT]  
 >  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  

@@ -11,18 +11,18 @@ manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
-ms.openlocfilehash: 1484d0bf2598cc3db8314c088b081ccd9327f5fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18fbf279a4d32121f552fda345d8024d1d408e31
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801921"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313965"
 ---
 # <a name="what-is-azure-data-studio"></a>O que é o Studio de dados do Azure?
 
 O estúdio de dados do Azure é uma plataforma cruzada ferramenta de banco de dados para os profissionais de dados usando a família Microsoft de locais e na nuvem de plataformas de dados no Windows, MacOS e Linux.
 
-Lançada anteriormente sob o nome de visualização do SQL Operations Studio, Studio do Azure Data oferece uma experiência de editor modernos com o Intellisense, trechos de código, integração de controle do código-fonte e um terminal integrado. Ele foi desenvolvido com o usuário de plataforma de dados em mente, com criado no gráfico de conjuntos de resultados de consulta e painéis personalizáveis.
+Lançada anteriormente sob o nome de visualização do SQL Operations Studio, Studio do Azure Data oferece uma experiência de editor modernos com o IntelliSense, trechos de código, integração de controle do código-fonte e um terminal integrado. Ele foi desenvolvido com o usuário de plataforma de dados em mente, com criado no gráfico de conjuntos de resultados de consulta e painéis personalizáveis.
 
 **[Baixe e instale [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 

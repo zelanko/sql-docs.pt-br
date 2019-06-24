@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a98d159b-1fae-482a-9465-5411ce60f901
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 94e5e3ef55787dffaa433e20d948950febc48e20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6cab84fd4ea0ae1e22ff175da1cd198e45a1b3a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723384"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800082"
 ---
 # <a name="getarray-method-javalangstring-sqlserverresultset"></a>Método getArray (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +41,13 @@ public java.sql.Array getArray(java.lang.String colName)
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um objeto de matriz.  
+ Um objeto Array.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getArray é especificado pelo método getArray na interface do resultset.  
+ Esse método getArray é especificado pelo método getArray na interface  java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método getArray &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getarray-method-sqlserverresultset.md)   

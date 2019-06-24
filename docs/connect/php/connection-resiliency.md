@@ -10,11 +10,11 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
 ms.openlocfilehash: a2361c8a2e8cbc709d50a9139678a08e2e850e2d
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305914"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62522032"
 ---
 # <a name="idle-connection-resiliency"></a>Resiliência da Conexão Ociosa
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,8 +25,8 @@ Resiliência de Conexão é implementada com duas conexão palavras-chave que po
 
 |Palavra-chave|Valores|Padrão|Descrição|
 |-|-|-|-|
-|**ConnectRetryCount**| Número inteiro entre 0 e 255 (inclusive)|1|O número máximo de tentativas para reestabelecer uma conexão interrompida antes de desistir. Por padrão, uma única tentativa é feita para restabelecer uma conexão quando quebrado. Um valor de 0 significa que nenhum reconexão será tentada.|
-|**ConnectRetryInterval**| Número inteiro entre 1 e 60 (inclusive)|1| O tempo, em segundos entre tentativas para reestabelecer uma conexão. O aplicativo tentará reconectar-se imediatamente ao detectar uma conexão interrompida e, em seguida, aguardará **ConnectRetryInterval** segundos antes de tentar novamente. Essa palavra-chave será ignorado se **ConnectRetryCount** é igual a 0.
+|**ConnectRetryCount**| Um inteiro entre 0 e 255 (inclusive)|1|O número máximo de tentativas para reestabelecer uma conexão interrompida antes de desistir. Por padrão, uma única tentativa é feita para restabelecer uma conexão quando quebrado. Um valor de 0 significa que nenhum reconexão será tentada.|
+|**ConnectRetryInterval**| Um inteiro entre 1 e 60 (inclusive)|1| O tempo, em segundos entre tentativas para reestabelecer uma conexão. O aplicativo tentará reconectar-se imediatamente ao detectar uma conexão interrompida e, em seguida, aguardará **ConnectRetryInterval** segundos antes de tentar novamente. Essa palavra-chave será ignorado se **ConnectRetryCount** é igual a 0.
 
 Se o produto dos **ConnectRetryCount** multiplicado por **ConnectRetryInterval** é maior que **LoginTimeout**, em seguida, o cliente deixará de tentar se conectar a vez  **LoginTimeout** for atingido; caso contrário, ele continuará a tentar reconectar-se até **ConnectRetryCount** for atingido.
 

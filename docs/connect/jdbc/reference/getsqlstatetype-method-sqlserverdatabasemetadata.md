@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 55079e30c2f8908153cc708aca699e77aef41261
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66774181"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>Método getSQLStateType (SQLServerDatabaseMetaData)
@@ -38,9 +38,9 @@ public int getSQLStateType()
 ## <a name="return-value"></a>Valor retornado  
  Um **int** que indica o tipo de SQLSTATE que pode ter um dos seguintes valores:  
   
--   Para o Java Runtime Environment versão 5.0: se o **xopenStates** propriedade de conexão é definida como **verdadeiro**, esse método retornará DatabaseMetaData.sqlStateXOpen. Otherwise, DatabaseMetaData.sqlStateSQL99.  
+-   Para o Java Runtime Environment versão 5.0: se o **xopenStates** propriedade de conexão é definida como **verdadeiro**, esse método retornará DatabaseMetaData.sqlStateXOpen. Caso contrário, DatabaseMetaData.sqlStateSQL99.  
   
--   Para o Java Runtime Environment versão 6.0: se o **xopenStates** propriedade de conexão é definida como **verdadeiro**, esse método retornará DatabaseMetaData.sqlStateXOpen. Otherwise, DatabaseMetaData.sqlStateSQL.  
+-   Para o Java Runtime Environment versão 6.0: se o **xopenStates** propriedade de conexão é definida como **verdadeiro**, esse método retornará DatabaseMetaData.sqlStateXOpen. Caso contrário, DatabaseMetaData.sqlStateSQL.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

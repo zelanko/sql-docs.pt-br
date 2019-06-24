@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b1b43a2c739de3ae0f23871c7bc023b3f215b4ce
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 4c436c6c9b0c20d99e5de168aa375f66f2e76999
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126636"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665493"
 ---
 # <a name="replication-distribution-agent"></a>Agente de Distribuição de Replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,14 +92,14 @@ distrib [-?]
  **-?**  
  Imprime todos os parâmetros disponíveis.  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- É o nome do Publicador. Especifica *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ É o nome do Publicador. Especifica *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_ **\\** _instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
  **-PublisherDB** _publisher_database_  
  É o nome do banco de dados Publicador.  
   
- **-Subscriber** _server_name_[**\\**_instance_name_]  
- É o nome do Assinante. Especifica *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ É o nome do Assinante. Especifica *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_ **\\** _instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
  **-SubscriberDB** _subscriber_database_  
  É o nome do banco de dados do Assinante.  
@@ -111,10 +111,10 @@ distrib [-?]
  É o número de linhas a ser enviado em uma operação de cópia em massa. Ao executar uma operação **bcp in** , o tamanho do lote é o número de linhas a ser enviado ao servidor como uma transação, e também o número de linhas que deve ser enviado antes que o Agente de Distribuição registre uma mensagem de progresso **bcp** . Ao executar uma operação **bcp out** , um tamanho fixo de lote **1000** é usado.  
   
  **-CommitBatchSize** _commit_batch_size_  
- É o número de transações a ser emitido para o Assinante antes de uma instrução COMMIT ser emitida. O padrão é 100.  
+ É o número de transações a ser emitido para o Assinante antes de uma instrução COMMIT ser emitida. O padrão é 100 e o máximo é 10000.
   
  **-CommitBatchThreshold**  _commit_batch_threshold_  
- É o número de comandos de replicação a ser emitido para o Assinante antes de uma instrução COMMIT ser emitida. O padrão é 1000.  
+ É o número de comandos de replicação a ser emitido para o Assinante antes de uma instrução COMMIT ser emitida. O padrão é 1000 e o máximo é 10000. 
   
  **-Continuous**  
  Especifica se o agente tenta sondar transações replicadas continuamente. Se especificado, o agente sondará as transações replicadas da origem em intervalos de sondagem, mesmo que não haja transações pendentes.  
@@ -233,7 +233,7 @@ distrib [-?]
  **-QuotedIdentifier** _quoted_identifier_  
  Especifica o identificador entre aspas a ser usado. O primeiro caractere do valor indica o valor que o Agente de Distribuição usa. Se **QuotedIdentifier** for usado sem valor, o Agente de Distribuição usará um espaço. Se **QuotedIdentifier** não for usado, o Agente de Distribuição usará qualquer identificador entre aspas com suporte no Assinante.  
   
- **-SkipErrors** _native_error_id_ [**:**_...n_]  
+ **-SkipErrors** _native_error_id_ [ **:** _...n_]  
  É uma lista separada por dois pontos que especifica o número de erros a ser ignorado por esse agente.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  

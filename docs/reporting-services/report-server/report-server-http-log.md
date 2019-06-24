@@ -1,6 +1,6 @@
 ---
 title: Log HTTP do Servidor de Relatório | Microsoft Docs
-ms.date: 03/02/2018
+ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -10,27 +10,27 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d290d32cbe05a0e378486cad72c5f39a2bc6e58
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 7fb733325b09c189221729a3edc0dd12cf33b283
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581397"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140459"
 ---
 # <a name="report-server-http-log"></a>Log HTTP do Servidor de Relatório
   O log HTTP do servidor de relatório mantém um registro de cada solicitação HTTP e resposta manipuladas pelo servidor de relatório. Como os erros de estouro e tempo limite de solicitação não atingem o servidor de relatório, eles não são registrados no arquivo de log.  
   
  O log HTTP não está habilitado por padrão. É necessário modificar o arquivo de configuração ReportingServicesService.exe para usar esse recurso na sua instalação.  
   
-## <a name="viewing-log-information"></a>Exibindo as informações do log  
+## <a name="viewing-log-information"></a>Exibir informações do log  
  O log é um arquivo de texto ASCII. Você pode usar qualquer editor de texto para exibir o arquivo. O log HTTP do servidor de relatório é equivalente ao arquivo de log estendido W3C em IIS e usa campos similares para que você possa usar os visualizadores do arquivo de log IIS existente para ler o arquivo de log HTTP do servidor de relatório. A tabela a seguir fornece informações adicionais sobre o arquivo de log HTTP:  
   
 |||  
 |-|-|  
 |Nome do arquivo|Por padrão, o nome do arquivo é ReportServerService_HTTP_\<timestamp>.log. Você pode personalizar o prefixo do nome do arquivo modificando o atributo HttpTraceFileName no arquivo ReportingServicesService.exe.config. O carimbo de data e hora é baseado em UTC (Tempo Universal Coordenado).|  
-|Local do arquivo|O arquivo está localizado em \Microsoft SQL Server\\*\<SQL Server Instance>* \Reporting Services\LogFiles.|  
+|Local do arquivo|O arquivo está localizado em \Microsoft SQL Server\\ *\<SQL Server Instance>* \Reporting Services\LogFiles.|  
 |Formato do arquivo|O arquivo está em formato pt-BR. É um arquivo de texto ASCII.|  
-|Criação e retenção do arquivo|O log HTTP é criado quando você o habilita no arquivo de configuração, reinicia o serviço e o servidor de relatório manipula uma solicitação HTTP. Se você definir as configurações, mas o arquivo de log não aparecer, abra um relatório ou inicie um aplicativo do servidor de relatório (como o Gerenciador de Relatórios) para gerar uma solicitação HTTP e criar o arquivo.<br /><br /> Uma nova instância do arquivo de log será criada após cada reinicialização do serviço e o envio subsequente da solicitação HTTP para o servidor de relatório.<br /><br /> Por padrão, os logs de rastreamento são limitados a 32 megabytes e excluídos depois de 14 dias.|  
+|Criação e retenção do arquivo|O log HTTP é criado quando você o habilita no arquivo de configuração, reinicia o serviço e o servidor de relatório manipula uma solicitação HTTP. Se você definir as configurações, mas o arquivo de log não aparecer, abra um relatório ou inicie um aplicativo do servidor de relatório (como o portal da Web) para gerar uma solicitação HTTP e criar o arquivo.<br /><br /> Uma nova instância do arquivo de log será criada após cada reinicialização do serviço e o envio subsequente da solicitação HTTP para o servidor de relatório.<br /><br /> Por padrão, os logs de rastreamento são limitados a 32 megabytes e excluídos depois de 14 dias.|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>Configurações do log HTTP do servidor de relatório  
  Para configurar o log HTTP do Servidor de Relatório, use o Bloco de Notas para modificar o arquivo ReportingServicesService.exe.config. O arquivo de configuração está localizado na pasta \Arquivos de Programas\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
@@ -76,9 +76,8 @@ ms.locfileid: "65581397"
 |CookieSent|O conteúdo do cookie enviado pelo servidor.|Não|  
 |Referenciador|O site anterior visitado pelo cliente.|Não|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [Log de rastreamento do serviço Servidor de Relatório](../../reporting-services/report-server/report-server-service-trace-log.md)   
  [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Referência de erros e eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-  
   

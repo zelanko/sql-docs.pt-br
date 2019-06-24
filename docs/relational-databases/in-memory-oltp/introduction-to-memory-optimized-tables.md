@@ -13,11 +13,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0dc7ab298607964f4b9a6d7c1c7fa74a53c6bc83
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399269"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047471"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introdução às tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ As tabelas com otimização de memória podem ser acessadas com mais eficiência
 |Recurso|Acesso através de um procedimento armazenado compilado nativamente|Acesso [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado|Acesso à CLR|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |Tabela com otimização de memória|Sim|Sim|Não*|  
-|Tipo de tabela com otimização de memória|Sim|Sim|não|  
+|Tipo de tabela com otimização de memória|Sim|Sim|Não|  
 |Procedimento armazenado compilado nativamente|Agora há suporte para o aninhamento de procedimentos armazenados nativamente compilados. Você pode usar a sintaxe EXECUTE dentro dos procedimentos armazenados, desde que o procedimento referenciado também seja nativamente compilado.|Sim|Não*|  
   
  *Não é possível acessar uma tabela com otimização de memória ou um procedimento armazenado compilado de modo nativo por meio da conexão de contexto (a conexão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao executar um módulo CLR). No entanto, é possível criar e abrir outra conexão, da qual você pode acessar tabelas com otimização de memória e procedimentos armazenados compilados nativamente.  
@@ -70,11 +70,11 @@ As tabelas com otimização de memória podem ser acessadas com mais eficiência
 
 Os seguintes fatores afetarão os ganhos de desempenho que podem ser obtidos com o OLTP na memória:  
   
-*Comunicação:* um aplicativo com muitas chamadas para procedimentos armazenados curtos pode ver um ganho de desempenho menor em comparação com um aplicativo com menos chamadas e mais funcionalidade implementada em cada procedimento armazenado.  
+*Comunicação:* Um aplicativo com muitas chamadas para procedimentos armazenados curtos pode ver um ganho de desempenho menor em comparação com um aplicativo com menos chamadas e mais funcionalidade implementada em cada procedimento armazenado.  
   
-*[!INCLUDE[tsql](../../includes/tsql-md.md)] :* o OLTP in-memory atinge o melhor desempenho usando procedimentos armazenados compilados de modo nativo do que usando procedimentos armazenados interpretados ou execução de consulta. Pode ser vantajoso acessar tabelas com otimização de memória de tais procedimentos armazenados.  
+*[!INCLUDE[tsql](../../includes/tsql-md.md)] Execução:* O OLTP na memória atinge o melhor desempenho usando procedimentos armazenados compilados nativamente do que usando procedimentos armazenados interpretados ou execução de consulta. Pode ser vantajoso acessar tabelas com otimização de memória de tais procedimentos armazenados.  
   
-*Varredura de intervalo vs pesquisa de ponto:* os índices não clusterizados com otimização de memória dão suporte a exames de intervalo e exames ordenados. Para pesquisas de ponto, os índices de hash com otimização de memória têm desempenho melhor que os índices não clusterizados com otimização de memória. Os índices não clusterizados com otimização de memória têm desempenho melhor que os índices baseados em disco.
+*Varredura de intervalo x pesquisa de ponto:* Os índices não clusterizados com otimização de memória dão suporte a exames de intervalo e exames ordenados. Para pesquisas de ponto, os índices de hash com otimização de memória têm desempenho melhor que os índices não clusterizados com otimização de memória. Os índices não clusterizados com otimização de memória têm desempenho melhor que os índices baseados em disco.
 
 - A partir do SQL Server 2016, o plano de consulta de uma tabela com otimização de memória pode examinar a tabela em paralelo. Isso melhora o desempenho de consultas analíticas.
   - Índices de hash também se tornaram verificáveis em paralelo no SQL Server 2016.
@@ -83,7 +83,7 @@ Os seguintes fatores afetarão os ganhos de desempenho que podem ser obtidos com
   
 *Operações de índice:* as operações de índice não são registradas e existem apenas na memória.  
   
-*Simultaneidade:* os aplicativos cujo desempenho é afetado pela simultaneidade no nível de mecanismo, como contenção de trava ou bloqueio, melhoram significativamente quando o aplicativo é movido para o OLTP in-memory.  
+*Simultaneidade:* Os aplicativos cujo desempenho é afetado pela simultaneidade no nível de mecanismo, como contenção de trava ou bloqueio, melhoram significativamente quando o aplicativo é movido para OLTP na memória.  
   
 A tabela a seguir lista os problemas de desempenho e escalabilidade que geralmente são encontrados em bancos de dados relacionais e como o OLTP na memória pode melhorar o desempenho.  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4610cbaf-5638-4a66-bd83-70aefca40e58
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eefc1d5c3f71618fc448b27c5c91cdb82b12e7b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 24bb9e5831e3eb79bc5d9fa451ca4e73fcd56fef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778374"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800070"
 ---
 # <a name="getarray-method-javalangstring"></a>Método getArray (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public java.sql.Array getArray(java.lang.String sCol)
  Uma **String** que contém o nome do parâmetro.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um objeto de matriz.  
+ Um objeto Array.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 504d7d06-0227-45e1-8b01-899c3e6006e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5c1b4baeb3fb44c68e0b8a1492b85df62fb1e69b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c7139fbe6caff5e8f30bb93aa6739db0f713a120
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677316"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798435"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader"></a>Método updateNCharacterStream (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public void updateNCharacterStream(java.lang.String columnLabel,
 ## <a name="remarks"></a>Remarks  
  Esse método updateNCharacterStream é especificado pelo método updateNCharacterStream na interface do resultset.  
   
- Esse método passa caracteres Unicode de um objeto Reader selecionado **nchar**, **nvarchar (max)**, **ntext** e **xml** colunas. O uso em outras colunas de tipo de dados lançará uma exceção.  
+ Esse método passa caracteres Unicode de um objeto Reader selecionado **nchar**, **nvarchar (max)** , **ntext** e **xml** colunas. O uso em outras colunas de tipo de dados lançará uma exceção.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método updateNCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   

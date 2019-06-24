@@ -1,6 +1,6 @@
 ---
 title: Servidor de relatório do Reporting Services (modo nativo) | Microsoft Docs
-ms.date: 03/15/2017
+ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 47ac37f217cb49cd676cc822618e5395c029256f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581355"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826895"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   Um servidor de relatório configurado para o modo nativo como um servidor de aplicativo que fornece todos os recursos de processamento e gerenciamento exclusivamente através de componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- É possível usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou o Gerenciador de Relatórios para administrar relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Use o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para gerenciar um servidor de relatório em Modo Nativo.  
+ Você pode usar tanto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou o portal da web para gerenciar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] relatórios. Use o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para gerenciar um servidor de relatório em Modo Nativo.  
   
  Se o servidor de relatório estiver configurado no modo do SharePoint, será necessário usar as páginas de gerenciamento de conteúdo no site do SharePoint para gerenciar relatórios, fontes de dados compartilhadas e outros itens do servidor de relatório.  
   
- Este tópico inclui as informações a seguir:  
+ Este artigo contém as seguintes informações:  
   
 -   [Resumo do modo nativo](#bkmk_sum)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "65581355"
   
 -   [Gerenciamento e segurança de um recurso](#bkmk_manageresources)  
   
--   [Fazendo referência a um recurso de imagem de um relatório](#bkmk_referenceimage)  
+-   [Fazer referência a um recurso de imagem de um relatório](#bkmk_referenceimage)  
   
 ##  <a name="bkmk_sum"></a> Resumo do modo nativo  
  Uma instalação em modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste em vários recursos do servidor que são necessários administrar e manter. Os recursos de servidor são os seguintes:  
@@ -77,7 +77,7 @@ ms.locfileid: "65581355"
   
  A permissão para executar tarefas de gerenciamento é fornecida por duas funções predefinidas: **Administrador do Sistema** e **Gerenciador de Conteúdo**. O gerenciamento eficaz do conteúdo do servidor de relatório requer que você tenha as duas funções. Para obter mais informações sobre essas funções predefinidas, consulte [Funções e permissões &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
- Ferramentas para gerenciar o conteúdo do servidor de relatórios incluem [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou Gerenciador de Relatórios. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] permite definir padrões e habilitar recursos. O Gerenciador de Relatórios é usado para conceder acesso a itens e operações do servidor de relatório, exibir e usar relatórios e outros tipos de conteúdo e exibir e usar todos os itens compartilhados e recursos de distribuição de relatórios.  
+ Ferramentas para gerenciar o conteúdo do servidor de relatórios incluem [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou o portal da Web. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] permite definir padrões e habilitar recursos. O portal da Web é usado para conceder acesso a itens e operações do servidor de relatório, exibir e usar relatórios e outros tipos de conteúdo e exibir e usar todos os itens compartilhados e recursos de distribuição de relatórios.  
   
 ##  <a name="bkmk_manageresources"></a> Gerenciamento e segurança de um recurso  
  Um recurso é um item gerenciado armazenado, mas não processado, em um servidor de relatório. Normalmente, um recurso fornece conteúdo externo para usuários de relatórios. Alguns exemplos incluem uma imagem em um arquivo .jpg ou um arquivo HTML que descreve as regras de negócio usadas em um relatório. O arquivo JPG ou HTML é armazenado no servidor de relatórios, mas este passa o arquivo diretamente para o navegador, em vez de processá-lo antes.  
@@ -86,16 +86,16 @@ ms.locfileid: "65581355"
   
 |Operação|Tipo de arquivo|  
 |---------------|---------------|  
-|Carregar|Todos os arquivos são carregados como recursos, exceto arquivos de definição de relatório (.rdl) e modelo de relatório (.smdl).<br /><br /> Para carregar um recurso, é necessário usar o Gerenciador de Relatórios se o servidor de relatório estiver sendo executado no modo nativo ou por uma página de aplicativo em um site do SharePoint, se servidor for executado no modo integrado do SharePoint. Para obter mais informações, consulte [Carregar um arquivo ou relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) ou [Carregar documentos em uma biblioteca do SharePoint &#40;Reporting Services no modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
+|Carregar|Todos os arquivos são carregados como recursos, exceto arquivos de definição de relatório (.rdl) e modelo de relatório (.smdl).<br /><br /> Para carregar um recurso, é necessário usar o portal da Web se o servidor de relatório estiver sendo executado no modo nativo ou por uma página de aplicativo em um site do SharePoint, se servidor for executado no modo integrado do SharePoint. Para saber mais, confira [Carregar um arquivo ou relatório no Gerenciador de Relatórios](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) ou [Carregar documentos em uma biblioteca do SharePoint &#40;Reporting Services no modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
 |Publicar|Todos os arquivos em um projeto são carregados como recursos, exceto pelos arquivos .rdl, .smdl e .rds da fonte de dados. Para publicar um recurso, adicione um item existente a um projeto no Designer de Relatórios e publique o projeto em um servidor de relatório.|  
   
- Todos os recursos são gerados como arquivos em um sistema de arquivos, que são carregados subsequentemente em um servidor de relatório. Exceto pelas limitações de tamanho de arquivo padrão de 4 megabytes impostas pelo ASP.NET, não há restrições quanto ao tipo de arquivo que pode ser carregado. Entretanto, quando publicados em um servidor de relatório como recursos, tipos de arquivo com tipos MIME equivalentes são melhores que outros. Por exemplo, recursos com base em arquivos HTML e JPG serão abertos em uma janela de navegador quando o usuário clicar no recurso, renderizando o HTML como uma página da Web e o JPG como uma imagem que pode ser visualizada pelo usuário. De outro modo, recursos que não possuem tipos MIME equivalentes, como arquivos de aplicativos de desktop, por exemplo, talvez não sejam renderizados em uma janela do navegador.  
+ Todos os recursos são gerados como arquivos em um sistema de arquivos, que são carregados subsequentemente em um servidor de relatório. Não existem restrições quanto aos tipos de arquivos que você pode carregar, tamanhos de arquivo de até 1 GB. Entretanto, quando publicados em um servidor de relatório como recursos, tipos de arquivo com tipos MIME equivalentes são melhores que outros. Por exemplo, recursos com base em arquivos HTML e JPG serão abertos em uma janela de navegador quando o usuário clicar no recurso, renderizando o HTML como uma página da Web e o JPG como uma imagem que pode ser visualizada pelo usuário. De outro modo, recursos que não possuem tipos MIME equivalentes, como arquivos de aplicativos de desktop, por exemplo, talvez não sejam renderizados em uma janela do navegador.  
   
  Um recurso poder ser visualizado por usuários de relatórios dependendo dos recursos de exibição do navegador. Como recursos não são processados pelo servidor de relatório, é necessário que o navegador forneça o recurso de exibição para renderizar o tipo MIME específico. Se o navegador não for capaz de renderizar o conteúdo, os usuários que visualizam o recurso conseguirão visualizar somente as propriedades gerais do recurso.  
   
  Recursos existem em relatórios, fontes de dados compartilhadas, agendas compartilhadas e pastas como itens nomeados na hierarquia de pasta do servidor de relatório. É possível procurar, exibir, proteger e definir propriedades em recursos assim como acontece com qualquer outro item armazenado em um servidor de relatório. Para visualizar ou gerenciar um recurso, é necessário ter a tarefa Exibir recursos ou a tarefa Gerenciar recursos na sua atribuição de função.  
   
-##  <a name="bkmk_referenceimage"></a> Fazendo referência a um recurso de imagem de um relatório  
+##  <a name="bkmk_referenceimage"></a> Fazer referência a um recurso de imagem de um relatório  
  Recursos podem conter uma imagem à qual você faz referência em um relatório. Se as exigências de relatório incluírem o uso de imagens externas, considere as seguintes vantagens de armazenar a imagem como recurso:  
   
 -   Armazenamento centralizado no banco de dados do servidor de relatório. Se você mover o banco de dados do servidor de relatório e seu conteúdo, a imagem externa permanecerá com o relatório. Não é necessário rastrear os arquivos de imagem armazenados em disco em computadores diferentes.  
@@ -104,7 +104,7 @@ ms.locfileid: "65581355"
   
  Para usar um recurso de imagem em um relatório, adicione o arquivo de imagem ao projeto e publique-o juntamente com o relatório. Quando a imagem for publicada, será possível atualizar a referência da imagem no relatório de modo que aponte para o recurso no servidor de relatório. Sendo assim, somente publique novamente o relatório para salvar as alterações. Você poderá atualizar subsequentemente a imagem, independentemente do relatório, republicando o recurso. O relatório usa a versão mais atual da imagem disponível no servidor de relatórios.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [Configurar e administrar um servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Solucionar um problema da instalação do Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   

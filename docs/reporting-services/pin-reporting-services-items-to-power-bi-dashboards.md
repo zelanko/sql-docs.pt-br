@@ -16,10 +16,10 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ad7e73839a988e057f57b9a294e795f65e41f9fb
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66500027"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Fixar itens de relatório paginado do Reporting Services em dashboards no Power BI
@@ -40,7 +40,7 @@ Fixe um item de relatório paginado local do [!INCLUDE[ssRSnoversion](../include
   
 -   Você precisará configurar os relatórios para as credenciais armazenadas, caso deseje que o item fixado seja atualizado.  Quando você fixa um item, uma assinatura do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é criada automaticamente para gerenciar a atualização de dados do item no painel.  Se o relatório não usar credenciais armazenadas, quando a assinatura for executada, você verá uma mensagem semelhante a que se segue na página **Minhas assinaturas**.  
   
-    PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: A ação atual não pode ser concluída. As credenciais da fonte de dados do usuário não atendem aos requisitos para executar esse relatório ou conjunto de dados compartilhado. A credencial da fonte de dados do usuário."
+    "Erro de Entrega do PowerBI: painel: Amostra de Análise de Gastos de TI, visual: Gráfico2, erro: A ação atual não pode ser concluída. As credenciais da fonte de dados do usuário não atendem aos requisitos para executar esse relatório ou conjunto de dados compartilhado. A credencial da fonte de dados do usuário."
  
     Consulte a seção “Configurar credenciais armazenadas para uma fonte de dados específica do relatório (Modo nativo)” em [Armazenar credenciais em uma fonte de dados do Reporting Services](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
@@ -96,7 +96,7 @@ No painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , o item de rela
   
 ##  <a name="bkmk-troubleshoot"></a> Solucionar problemas  
   
--   **O botão [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] não está visível na barra de ferramentas do visualizador de relatórios:** isso indica que o servidor de relatório não foi integrado ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Para obter mais informações, consulte [Integração do servidor de relatório do Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
+-   **O botão [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] não está visível na barra de ferramentas do visualizador de relatórios:** essa mensagem indica que o servidor de relatório não foi integrado ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Para obter mais informações, consulte [Integração do servidor de relatório do Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
 - **Não é possível fixar**: ao tentar fixar um item, você verá a seguinte mensagem de erro: Consulte a seção [Itens que podem ser fixados](#bkmk_supported_items).  
   

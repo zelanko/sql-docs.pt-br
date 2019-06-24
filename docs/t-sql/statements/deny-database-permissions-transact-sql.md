@@ -20,11 +20,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c18ceba0be4237cc6b4a0ae824af9021631861c1
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828456"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62643749"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>Permissões de banco de dados DENY (Transact-SQL)
 
@@ -188,7 +188,7 @@ DENY CREATE CERTIFICATE TO MelanieK;
 GO
 ```
 
-### <a name="b-denying-references-permission-to-an-application-role"></a>b. Negando a permissão REFERENCES a uma função de aplicativo
+### <a name="b-denying-references-permission-to-an-application-role"></a>B. Negando a permissão REFERENCES a uma função de aplicativo
 
 O exemplo a seguir nega a permissão `REFERENCES` no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] à função de aplicativo `AuditMonitor`.
 

@@ -12,11 +12,11 @@ author: dnethi
 ms.author: dinethi
 manager: craigg
 ms.openlocfilehash: 3fa971160eb4a8d2caa4773c4a9c4ccef1b31027
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524609"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62934986"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>Política de suporte do SSMS (SQL Server Management Studio)
 

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b2677e5614fd8e50c34084624dda19c3ced54d6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 01f611e0c11d6a2f3671c8911d41b4c0cfeef83c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600326"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801478"
 ---
 # <a name="default-php-data-types"></a>Tipos de dados padrão do PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -59,7 +59,7 @@ A tabela a seguir lista o tipo de dados do SQL Server (o tipo de dados que está
 |SMALLINT|Integer|Caractere de 8 bits<sup>1</sup>|  
 |SMALLMONEY|Cadeia de caracteres|Caractere de 8 bits<sup>1</sup>|  
 |sql_variant<sup>7</sup>|Cadeia de caracteres|Caractere de 8 bits<sup>1</sup>|  
-|texto<sup>8</sup>|Fluxo<sup>2</sup>|Caractere de 8 bits<sup>1</sup>|  
+|text<sup>8</sup>|Fluxo<sup>2</sup>|Caractere de 8 bits<sup>1</sup>|  
 |time<sup>4</sup>|DATETIME|Não aplicável|  
 |timestamp|Cadeia de caracteres|Caractere de 8 bits<sup>1</sup>|  
 |TINYINT|Integer|Caractere de 8 bits<sup>1</sup>|  
@@ -90,7 +90,7 @@ A tabela a seguir lista o tipo de dados do SQL Server (o tipo de dados que está
   
 9.  UNIQUEIDENTIFIERs são GUIDs representados pela seguinte expressão regular:  
   
-    [0-9a-fA-F] {8}-[0-9a-fA-F]{4}-[0-9a-fA-f]{4}-[0-9a-fA-f]{4}-[0-9a-fA-F]{12}  
+    [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-f]{4}-[0-9a-fA-f]{4}-[0-9a-fA-F]{12}  
  
  
 ## <a name="other-new-sql-server-2008-data-types-and-features"></a>Outros tipos de dados e recursos novos do SQL Server 2008  
@@ -98,11 +98,11 @@ Os tipos de dados novos do SQL Server 2008 e que existem fora das colunas (como 
   
 |Recurso|Suporte do PHP|  
 |-----------|---------------|  
-|Parâmetro com valor de tabela|não|  
+|Parâmetro com valor de tabela|Não|  
 |Colunas esparsas|Parcial|  
 |Compactação de bit nulo|Sim|  
 |Tipos de dados CLR grande definidos pelo usuário (UDTs)|Sim|  
-|Nome da entidade de serviço|não|  
+|Nome da entidade de serviço|Não|  
 |MERGE|Sim|  
 |FILESTREAM|Parcial|  
   

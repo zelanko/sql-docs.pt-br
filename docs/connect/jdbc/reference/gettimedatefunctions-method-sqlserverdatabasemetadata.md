@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 8b6d796bbcea2cbb7956cc966c9436793b693e92
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66778750"
 ---
 # <a name="gettimedatefunctions-method-sqlserverdatabasemetadata"></a>Método getTimeDateFunctions (SQLServerDatabaseMetaData)
@@ -42,7 +42,7 @@ public java.lang.String getTimeDateFunctions()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getTimeDateFunctions é especificado pelo método getTimeDateFunctions na interface DatabaseMetadata.  
+ Esse método getTimeDateFunctions é especificado pelo método getTimeDateFunctions na interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

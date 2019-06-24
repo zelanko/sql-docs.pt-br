@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e0f5dc57-07b8-4811-ab1a-80a524bfdb42
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ca0e9735935aa0ff4eff38fd076822e7bc01021
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6795a84a042a7abaa52fe83f562911c934709f81
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700076"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66779056"
 ---
 # <a name="gettabletypes-method-sqlserverdatabasemetadata"></a>Método getTableTypes (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public java.sql.ResultSet getTableTypes()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getTableTypes é especificado pelo método getTableTypes na interface DatabaseMetadata.  
+ Esse método getTableTypes é especificado pelo método getTableTypes na interface java.sql.DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getTableTypes conterá as seguintes informações:  
   

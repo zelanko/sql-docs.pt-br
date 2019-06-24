@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: BCPColFmt (OLE DB) | Microsoft Docs'
+title: IBCPSession::BCPColFmt (OLE DB) | Microsoft Docs
 description: IBCPSession::BCPColFmt (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BCPColFmt method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 007a8d7a9a8f7a617445393dfcfb5f5a718b1cf8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: fdb46a6a2391c70f452d2fcf2c49045c59bd1e0a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605636"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66791018"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

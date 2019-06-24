@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 31f365292a58aabc852f28cc1bd4b5cd737d94de
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66773381"
 ---
 # <a name="setstring-method-sqlservernclob"></a>Método setString (SQLServerNClob)
@@ -27,7 +27,7 @@ ms.locfileid: "66773381"
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método setString &#40;long, java.lang.String, int, int&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-sqlservernclob.md)|Grava a especificada **cadeia de caracteres** para o **NCLOB** começando na posição especificada.|  
+|[Método setString &#40;long, java.lang.String&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-sqlservernclob.md)|Grava a especificada **cadeia de caracteres** para o **NCLOB** começando na posição especificada.|  
 |[Método setString &#40;long, java.lang.String, int, int&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-int-int-sqlservernclob.md)|Grava a cadeia de caracteres especificada no NCLOB começando na posição especificada, com base no deslocamento e no tamanho especificados.|  
   
 ## <a name="see-also"></a>Consulte Também  

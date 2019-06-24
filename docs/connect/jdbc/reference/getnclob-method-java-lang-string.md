@@ -1,5 +1,5 @@
 ---
-title: getNClob Method (java.lang.String) | Microsoft Docs
+title: Método getNClob (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: b95a22911f1b7e49f6310e9c06a7ea4ef4a899fa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66784458"
 ---
 # <a name="getnclob-method-javalangstring"></a>Método getNClob (java.lang.String)

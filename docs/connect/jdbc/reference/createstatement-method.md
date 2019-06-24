@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 340c37a2e5e162af3ab2ae80813b14c6bab7a0f9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66772893"
 ---
 # <a name="createstatement-method-"></a>Método createStatement ()
@@ -42,7 +42,7 @@ public java.sql.Statement createStatement()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método prepareStatement é especificado pelo método prepareStatement na interface do Connection.  
+ Esse método createStatement é especificado pelo método createStatement na interface java.sql.Connection.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método createStatement &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   

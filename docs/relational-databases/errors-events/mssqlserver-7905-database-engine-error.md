@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 031ce30ab9eb677c5b9e846d5e7aec76f2a60248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641644"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62694683"
 ---
 # <a name="mssqlserver7905"></a>MSSQLSERVER_7905
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47641644"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_INVALID_ROWSET_DIRECTORY|  
-|Texto da mensagem|Erro de banco de dados: o diretório 'DIRECTORY' não é um diretório válido de Filestream.|  
+|Texto da mensagem|Erro de banco de dados: o diretório 'DIRECTORY' não é um diretório válido de Fluxo de arquivos.|  
   
 ## <a name="explanation"></a>Explicação  
 O nome de um diretório de conjunto de linhas é a ID de partição, exceto para os nomes de diretório de conjunto de linhas especiais, como 'ghost'. Se o nome de um diretório de conjunto de linhas não puder ser convertido em uma ID de partição, o diretório não será um diretório de conjunto de linhas válido.  

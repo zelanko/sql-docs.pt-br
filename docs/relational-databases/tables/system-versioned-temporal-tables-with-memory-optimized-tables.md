@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3bd467691d8b96a823013fa3f9f45655b0857cf0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658066"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62751611"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "51658066"
   
 -   A tabela replica o esquema da tabela temporal atual mais uma coluna BIGINT. Essa coluna adicional garante a exclusividade das linhas movidas para o buffer de histórico interno.  
   
--   A coluna adicional tem o seguinte formato de nome: **Change_ID[_<suffix>]**, em que *_\<sufixo>* é adicionado, opcionalmente, caso a tabela já tenha uma coluna *Change_ID*.  
+-   A coluna adicional tem o seguinte formato de nome: **Change_ID[_<suffix>]** , em que *_\<sufixo>* é adicionado, opcionalmente, caso a tabela já tenha uma coluna *Change_ID*.  
   
 -   O tamanho máximo de linha para uma tabela com otimização de memória com controle da versão do sistema é reduzido em oito bytes, devido à coluna BIGINT adicional na tabela de preparo. O novo valor máximo agora é 8052 bytes.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "51658066"
  A limpeza de dados exclui todos os registros de buffer interno de memória mais antigos do que a transação mais antiga em execução no momento para mover esses registros para a tabela de histórico com base em disco.  
   
  Você pode impor uma limpeza de dados invocando [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) e especificando o nome do esquema e da tabela:   
-**sys.sp_xtp_flush_temporal_history @schema_name, @object_name**. Com este comando executado pelo usuário, o mesmo processo de movimentação de dados é invocado quando a tarefa de limpeza de dados é invocada pelo sistema na agenda interna.  
+**sys.sp_xtp_flush_temporal_history @schema_name, @object_name** . Com este comando executado pelo usuário, o mesmo processo de movimentação de dados é invocado quando a tarefa de limpeza de dados é invocada pelo sistema na agenda interna.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tabelas temporais](../../relational-databases/tables/temporal-tables.md)   

@@ -12,21 +12,21 @@ ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8cf0b0008efb05d15f7e34827ab0f80855fb526d
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506585"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurar memória disponível para aplicativos do Servidor de Relatórios
  Embora o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possa usar toda a memória disponível, você pode substituir o comportamento padrão configurando um limite superior no valor total dos recursos de memória alocados a aplicativos do servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Você também poderá definir limites que façam com que o servidor de relatório altere a maneira de priorizar e processar solicitações se a pressão de memória estiver baixa, média ou alta. Em níveis baixos de pressão de memória, o servidor de relatório responde dando uma prioridade ligeiramente mais alta a um processamento de relatório interativo ou sob demanda. Em níveis altos de pressão de memória, o servidor de relatório usa várias técnicas para permanecer operacional usando os recursos limitados disponíveis.  
   
- Este tópico descreve as definições de configuração que você pode especificar e como o servidor responde quando a pressão de memória torna-se um fator nas solicitações de processamento.  
+ Este artigo descreve as definições de configuração que você pode especificar e como o servidor responde quando a pressão de memória torna-se um fator nas solicitações de processamento.  
   
 ## <a name="memory-management-policies"></a>Políticas de gerenciamento de memória  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] responde às restrições de recurso do sistema ajustando a quantidade de memória alocada a aplicativos e tipos de solicitações de processamentos específicos. Os aplicativos executados no serviço do Servidor de Relatório e sujeitos ao gerenciamento de memória incluem:  
   
--   O Gerenciador de Relatórios, um aplicativo front-end da Web para o servidor de relatório.  
+-   O portal da Web, um aplicativo front-end da Web para o servidor de relatório.  
   
 -   O serviço Web Servidor de Relatórios, usado para processamento de relatório interativo e solicitações sob demanda.  
   

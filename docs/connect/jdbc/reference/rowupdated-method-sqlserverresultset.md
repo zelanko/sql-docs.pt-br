@@ -1,5 +1,5 @@
 ---
-title: rowUpdated Method (SQLServerResultSet) | Microsoft Docs
+title: Método rowUpdated (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: b827ebb9740c9d88017c5d47626b9a1cef493143
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66765271"
 ---
 # <a name="rowupdated-method-sqlserverresultset"></a>Método rowUpdated (SQLServerResultSet)

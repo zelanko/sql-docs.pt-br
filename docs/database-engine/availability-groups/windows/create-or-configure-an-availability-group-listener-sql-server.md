@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: fae8d782dfcc4fd5e3c653cf5ac37f1323ebf59e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b5e4ba32dd96186a05df55ac57cadb31fa522ebe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213585"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62510325"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Configurar um ouvinte para um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,51 +30,9 @@ ms.locfileid: "53213585"
 > [!IMPORTANT]  
 >  Para criar o primeiro ouvinte do grupo de disponibilidade de um grupo de disponibilidade, é altamente recomendável usar o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Evite criar um ouvinte diretamente no cluster WSFC, exceto se necessário, por exemplo, para criar um ouvinte adicional.  
   
--   **Antes de começar:**  
-  
-     [Já existe um ouvinte para esse grupo de disponibilidade?](#DoesListenerExist)  
-  
-     [Limitações e restrições](#Restrictions)  
-  
-     [Recomendações](#Recommendations)  
-  
-     [Pré-requisitos](#Prerequisites)  
-  
-     [Requisitos para o nome DNS de um ouvinte de grupo de disponibilidade](#DNSnameReqs)  
-  
-     [Permissões do Windows](#WinPermissions)  
-  
-     [Permissões do SQL Server](#SqlPermissions)  
-  
--   **Para criar ou configurar um ouvinte de grupo de disponibilidade, usando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Solução de problemas**  
-  
-     [Falha ao criar um ouvinte de grupo de disponibilidade devido a cotas do Active Directory](#ADQuotas)  
-  
--   **Acompanhamento: depois de criar um ouvinte do grupo de disponibilidade**  
-  
-     [Palavra-chave MultiSubnetFailover e recursos associados](#MultiSubnetFailover)  
-  
-     [Configuração RegisterAllProvidersIP](#RegisterAllProvidersIP)  
-  
-     [Configuração HostRecordTTL](#HostRecordTTL)  
-  
-     [Exemplo de script PowerShell para desabilitar RegisterAllProvidersIP e reduzir o TTL](#SampleScript)  
-  
-     [Recomendações de acompanhamento](#FollowUpRecommendations)  
-  
-     [Criar um ouvinte adicional para um grupo de disponibilidade (opcional)](#CreateAdditionalListener)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de começar  
-  
-###  <a name="DoesListenerExist"></a> Já existe um ouvinte para esse grupo de disponibilidade?  
+ 
+##  <a name="DoesListenerExist"></a> Já existe um ouvinte para esse grupo de disponibilidade?  
+
  **Para determinar se um ouvinte já existe para o grupo de disponibilidade**  
   
 -   [Exibir propriedades do ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
@@ -82,14 +40,14 @@ ms.locfileid: "53213585"
 > [!NOTE]  
 >  Se já houver um ouvinte e você desejar criar um ouvinte adicional, consulte [Para criar um ouvinte adicional para um grupo de disponibilidade (opcional)](#CreateAdditionalListener)posteriormente neste tópico.  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+##  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Só é possível criar um ouvinte por grupo de disponibilidade via [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Geralmente, cada grupo de disponibilidade exige somente um ouvinte. No entanto, alguns cenários de cliente exigem vários ouvintes para um grupo de disponibilidade.   Depois de criar um ouvinte pelo SQL Server, você pode usar o Windows PowerShell para clusters de failover ou o Gerenciador de Cluster de Failover do WSFC para criar ouvintes adicionais. Para obter mais informações, consulte [Para criar um ouvinte adicional para um grupo de disponibilidade (opcional)](#CreateAdditionalListener), posteriormente neste tópico.  
   
-###  <a name="Recommendations"></a> Recomendações  
+##  <a name="Recommendations"></a> Recomendações  
  O uso de um endereço IP estático é recomendável, embora não obrigatório, para várias configurações de sub-rede.  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+##  <a name="Prerequisites"></a> Pré-requisitos  
   
 -   Você deve estar conectado à instância do servidor que hospeda a réplica primária.  
   
@@ -106,7 +64,7 @@ ms.locfileid: "53213585"
 > [!IMPORTANT]  
 >  O NetBIOS reconhece somente os primeiros 15 caracteres no dns_name. Se você tiver dois clusters do WSFC que sejam controlados pelo mesmo Active Directory e tentar criar ouvintes de grupo de disponibilidade nos dois clusters usando nomes com mais de 15 caracteres e um prefixo idêntico de 15 caracteres, você obterá um erro relatando que o recurso Nome de Rede virtual não pôde ser colocado online. Para obter informações sobre regras da nomenclatura de prefixos para nomes DNS, consulte [Atribuindo nomes de domínio](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
-###  <a name="WinPermissions"></a> Permissões do Windows  
+##  <a name="WinPermissions"></a> Permissões do Windows  
   
 |Permissões|Link|  
 |-----------------|----------|  
@@ -116,7 +74,7 @@ ms.locfileid: "53213585"
 > [!TIP]  
 >  Geralmente, é mais simples não pré-preparar a conta de computador para um nome de rede virtual de ouvinte. Se possível, deixe a conta ser criada e configurada automaticamente ao executar o Assistente de Alta Disponibilidade do WSFC.  
   
-###  <a name="SqlPermissions"></a> Permissões do SQL Server  
+##  <a name="SqlPermissions"></a> Permissões do SQL Server  
   
 |Tarefa|Permissões|  
 |----------|-----------------|  
@@ -180,7 +138,7 @@ ms.locfileid: "53213585"
  **OK**  
  Clique para criar o ouvinte do grupo de disponibilidade especificado.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para criar ou configurar um ouvinte de grupo de disponibilidade**  
   
 1.  Conecte-se à instância de servidor que hospeda a réplica primária.  
@@ -253,7 +211,7 @@ ms.locfileid: "53213585"
   
 -   [Cotas do Active Directory](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
-##  <a name="FollowUp"></a> Acompanhamento: Depois de criar um ouvinte de grupo de disponibilidade  
+##  <a name="FollowUp"></a> Acompanhamento: depois de criar um ouvinte de grupo de disponibilidade  
   
 ###  <a name="MultiSubnetFailover"></a> Palavra-chave MultiSubnetFailover e recursos associados  
  **MultiSubnetFailover** é uma nova palavra-chave da cadeia de conexão usada para habilitar failover mais rápido com os Grupos de Disponibilidade AlwaysOn e Instâncias de cluster de failover AlwaysOn no SQL Server 2012. Os três sub-recursos a seguir são habilitados quando `MultiSubnetFailover=True` está definido na cadeia de conexão:  
@@ -272,17 +230,17 @@ ms.locfileid: "53213585"
   
  **Problema:** Se seu Grupo de Disponibilidade ou Instância de Cluster de Failover tiver um nome de ouvinte (conhecido como o nome de rede ou o Ponto de Acesso para Cliente no Gerenciador de Cluster WSFC), dependendo dos diversos endereços IP de diferentes sub-redes, e você estiver usando o ADO.NET com .NET Framework 3.5 SP1 ou o SQL Native Client 11.0 OLEDB, possivelmente 50% das suas solicitações de conexão de cliente para o ouvinte de grupo de disponibilidade atingirão um tempo limite de conexão.  
   
- **Soluções alternativas:** É recomendável que você execute uma das tarefas a seguir.  
+ **Soluções alternativas:** é recomendável que você execute uma das tarefas a seguir.  
   
 -   Se você não tiver a permissão para manipular recursos de cluster, altere o tempo limite da conexão para 30 segundos (esse valor resulta em um período de tempo limite TCP de 20 segundos mais um buffer de 10 segundos).  
   
-     **Prós**: Se ocorrer um failover de sub-rede cruzado, o tempo de recuperação do cliente será rápido.  
+     **Prós**: se ocorrer um failover de sub-rede cruzado, o tempo de recuperação do cliente será rápido.  
   
-     **Contras**: Metade das conexões de cliente demorarão mais de 20 segundos  
+     **Contras**: metade das conexões de cliente demorarão mais de 20 segundos  
   
 -   Se você tiver permissão para manipular os recursos de cluster, a abordagem mais recomendada é definir o nome de rede do ouvinte do grupo de disponibilidade como `RegisterAllProvidersIP=0`. Para obter mais informações, confira "Configuração de RegisterAllProvidersIP", mais adiante nesta seção.  
   
-     **Prós:** Você não precisa aumentar o valor de tempo limite de conexão de cliente.  
+     **Prós:** você não precisa aumentar o valor de tempo limite de conexão de cliente.  
   
      **Contras:** Se ocorrer um failover entre sub-redes, o tempo de recuperação do cliente poderá ser de 15 minutos ou mais, dependendo da configuração de **HostRecordTTL** e da configuração da agenda de replicação do DNS/AD entre sites.  
   

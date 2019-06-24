@@ -15,13 +15,13 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8c78c56d08535b5d9947b5bd215afaf2f8e23e44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c3bb95de560e0e4ec6b5e01fda8623858a73aaf4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754824"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803805"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propriedades e comportamentos do conjunto de linhas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "47754824"
 |DBPROP_MAYWRITECOLUMN|Esta propriedade de conjunto de linhas não é implementada pelo Driver do OLE DB para SQL Server. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
 |DBPROP_MEMORYUSAGE|Esta propriedade de conjunto de linhas não é implementada pelo Driver do OLE DB para SQL Server. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
 |DBPROP_NOTIFICATIONGRANULARITY|Esta propriedade de conjunto de linhas não é implementada pelo Driver do OLE DB para SQL Server. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
-|DBPROP_NOTIFICATIONPHASES|Leitura/gravação: somente leitura<br /><br /> Padrão: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124; DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124; DBPROPVAL_NP_DIDEVENT<br /><br /> Descrição: O Driver OLE DB para SQL Server dá suporte a todas as fases de notificação.|  
+|DBPROP_NOTIFICATIONPHASES|Leitura/gravação: somente leitura<br /><br /> Padrão: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> Descrição: O Driver OLE DB para SQL Server dá suporte a todas as fases de notificação.|  
 |DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|Leitura/gravação: somente leitura<br /><br /> Padrão: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO<br /><br /> Descrição: as fases de notificação do OLE DB Driver for SQL Server podem ser canceladas antes de uma tentativa de executar a modificação do conjunto de linhas indicada. O Driver do OLE DB para SQL Server não oferece suporte ao cancelamento de fase após a conclusão da tentativa.|  
 |DBPROP_ORDEREDBOOKMARKS|Esta propriedade de conjunto de linhas não é implementada pelo Driver do OLE DB para SQL Server. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: a definição de propriedades de visibilidade de alterações faz com que o OLE DB Driver for SQL Server use cursores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para dar suporte ao conjunto de linhas. Para obter mais informações, confira [Conjuntos de linha e cursores do SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  

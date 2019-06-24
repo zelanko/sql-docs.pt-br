@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 672dceac-ddfe-43e1-851b-5172b78fed9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3c8a255d93869eb2e1d4a362b37b1d6f567bc239
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8e1ccbb33c1a7fae6128c967b81d181010b46e0c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708494"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799835"
 ---
 # <a name="getbigdecimal-method-sqlserverresultset"></a>Método getBigDecimal (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

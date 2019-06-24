@@ -1,5 +1,5 @@
 ---
-title: Método updateBlob (int, java.io.InputStream, long) | Microsoft Docs
+title: Método updateBlob (int, java.io.InputStream) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 444c7f6c3f1a657ae8b5531f60359078032a7128
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66787253"
 ---
 # <a name="updateblob-method-int-javaioinputstream"></a>Método updateBlob (int, java.io.InputStream)

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 295c16b7-1532-40e1-93ef-64462a2c0ab6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4e70ab409badc3dd41c94070db559d0a5682fb53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f186239dded7e7152437c347e9b218d7dcf46693
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839084"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801610"
 ---
 # <a name="setdouble-method-sqlserverpreparedstatement"></a>Método setDouble (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public final void setDouble(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setDouble é especificado pelo método setDouble na interface do PreparedStatement.  
+ Esse método setDouble é especificado pelo método setDouble na interface java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0aa6dbd766f842b4c923d98702fd2780fc2652fb
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306224"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644370"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +95,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  Também podem ser usadas expressões de tabela comuns com as instruções SELECT, INSERT, UPDATE e CREATE VIEW. Para obter mais informações, confira [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- TOP **(**_expression_**)** [ PERCENT ]  
+ TOP **(** _expression_ **)** [ PERCENT ]  
  Especifica o número ou a porcentagem de linhas aleatórias que serão excluídas. *expression* pode ser um número ou uma porcentagem das linhas. As linhas referenciadas na expressão TOP usada com INSERT, UPDATE ou DELETE não são organizadas em qualquer ordem. Para obter mais informações, confira [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  FROM  
@@ -164,7 +164,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *cursor_variable_name*  
  O nome de uma variável de cursor. A variável de cursor deve fazer referência a um cursor que permite atualizações.  
   
- OPTION **(** \<query_hint> [ **,**... *n*] **)**  
+ OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  Palavras-chave que indicam as dicas de otimização que são usadas para personalizar a forma como o [!INCLUDE[ssDE](../../includes/ssde-md.md)] processa a instrução. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="best-practices"></a>Práticas recomendadas  
@@ -240,7 +240,7 @@ GO
 ###  <a name="LimitRows"></a> Limitando as linhas excluídas  
  Exemplos nesta seção demonstram como limitar o número de linhas que serão excluídas.  
   
-#### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>b. Usando a cláusula WHERE para excluir um conjunto de linhas  
+#### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. Usando a cláusula WHERE para excluir um conjunto de linhas  
  O exemplo a seguir exclui todas as linhas de uma tabela `ProductCostHistory` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] na qual o valor da coluna `StandardCost` é maior que `1000.00`.  
   
 ```sql

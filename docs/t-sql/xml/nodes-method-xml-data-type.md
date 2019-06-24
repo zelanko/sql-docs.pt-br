@@ -15,12 +15,12 @@ ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c80985d6c69cc1f62e82ae26cbf4bc841501e9d
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 4aa32fb8859df9fdc7c6d85cb43e93425dfa895b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590381"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145467"
 ---
 # <a name="nodes-method-xml-data-type"></a>Método de nós() (Tipo de dados xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ Toda instância de tipo de dados **xml** tem um nó de contexto fornecido implic
   
 O resultado do método **nodes()** é um conjunto de linhas que contém cópias lógicas das instâncias de XML originais. Nessas cópias lógicas, o nó de contexto de cada instância de linha é definido como um dos nós identificados com a expressão de consulta. Dessa forma, as consultas posteriores podem navegar em relação a esses nós de contexto.  
   
-Você pode recuperar vários valores do conjunto de linhas. Por exemplo, você pode aplicar o método **value()** ao conjunto de linhas retornado por **nodes()** e recuperar vários valores da instância de XML original. O método **value()**, quando aplicado à instância de XML, retorna somente um valor.  
+Você pode recuperar vários valores do conjunto de linhas. Por exemplo, você pode aplicar o método **value()** ao conjunto de linhas retornado por **nodes()** e recuperar vários valores da instância de XML original. O método **value()** , quando aplicado à instância de XML, retorna somente um valor.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -78,15 +78,15 @@ Uma invocação do método `nodes()` com a expressão de consulta `/root/Locatio
 Product  
 ModelID      Instructions  
 ----------------------------------  
-1       <root>  
+1      <root><Location LocationID="10" ... />  
              <Location LocationID="20" ... />  
              <Location LocationID="30" .../></root>  
 1      <root><Location LocationID="10" ... />  
-  
+             <Location LocationID="20" ... />  
              <Location LocationID="30" .../></root>  
 1      <root><Location LocationID="10" ... />  
              <Location LocationID="20" ... />  
-             </root>  
+             <Location LocationID="30" .../></root>  
 ```  
   
 Você pode fazer consultas nesse conjunto de linhas usando métodos de tipo de dados **xml**. A consulta a seguir extrai a subárvore do item de contexto para cada linha gerada:  
@@ -107,7 +107,7 @@ ProductModelID  Instructions
 1        <Location LocationID="30" .../>  
 ```  
   
-o conjunto de linhas retornado manteve as informações de tipo. Você pode aplicar métodos de tipo de dados **xml**, como **query()**, **value()**, **exist()** e **nodes()**, ao resultado de um método **nodes()**. Entretanto, você não pode aplicar o método **modify()** para modificar a instância de XML.  
+o conjunto de linhas retornado manteve as informações de tipo. Você pode aplicar métodos de tipo de dados **xml**, como **query()** , **value()** , **exist()** e **nodes()** , ao resultado de um método **nodes()** . Entretanto, você não pode aplicar o método **modify()** para modificar a instância de XML.  
   
 Além disso, o nó de contexto no conjunto de linhas não pode ser materializado. Ou seja, você não pode usá-lo em uma instrução SELECT. Entretanto, é possível usá-lo em IS NULL e COUNT(*).  
   
@@ -208,7 +208,7 @@ O método `nodes()` define os elementos <`Location`> como nós de contexto espec
   
 O método `query()` nesse conjunto de linhas solicita `self::node` e retorna o elemento `<Location>` em cada linha.  
   
-Nesse exemplo, a consulta define cada <`Location`> como um nó de contexto no documento de instruções de fabricação de um modelo de produto específico. É possível usar esses nós de contexto para recuperar valores conforme a seguir:  
+Nesse exemplo, a consulta define cada elemento <`Location`> como um nó de contexto no documento de instruções de fabricação de um modelo de produto específico. É possível usar esses nós de contexto para recuperar valores conforme a seguir:  
   
 - Localizar IDs de local em cada <`Location`>  
   

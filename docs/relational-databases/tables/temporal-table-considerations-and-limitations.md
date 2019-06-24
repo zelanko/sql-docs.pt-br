@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f88363967571c2f6401be42659b5b00ec3811b07
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410083"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034973"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considerações e limitações da tabela temporal
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52410083"
   
 -   As tabelas de histórico e temporais não podem ser **FILETABLE** e podem conter colunas de qualquer tipo de dados com suporte além de **FILESTREAM** porque **FILETABLE** e **FILESTREAM** permitem a manipulação de dados fora de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, portanto, o controle de versão do sistema não pode ser garantido.  
   
--   Embora as tabelas temporais deem suporte a tipos de dados de blobs, como **(n)varchar(max)**, **varbinary(max)**, **(n)text** e **image**, elas incorrerão em custos significativos de armazenamento e terão implicações de desempenho devido a seu tamanho. Assim, ao criar seu sistema, tome cuidado ao usar esses tipos de dados.  
+-   Embora as tabelas temporais deem suporte a tipos de dados de blobs, como **(n)varchar(max)** , **varbinary(max)** , **(n)text** e **image**, elas incorrerão em custos significativos de armazenamento e terão implicações de desempenho devido a seu tamanho. Assim, ao criar seu sistema, tome cuidado ao usar esses tipos de dados.  
   
 -   A tabela de histórico deve ser criada no mesmo banco de dados da tabela atual. As consultas temporais no **Linked Server** não têm suporte.  
   
@@ -56,15 +56,15 @@ ms.locfileid: "52410083"
   
 -   O**ON DELETE CASCADE** e o **ON UPDATE CASCADE** não são permitidos na tabela atual. Em outras palavras, quando a tabela temporal estiver referenciando a tabela na relação de chave estrangeira (correspondente a *parent_object_id* em sys.foreign_keys), as opções CASCADE não serão permitidas. Para trabalhar com essa limitação, use a lógica do aplicativo ou gatilhos AFTER para manter a consistência de exclusão na tabela de chave primária (correspondente a  *referenced_object_id* em sys.foreign_keys). Se a tabela de chave primária for temporal e a tabela de referência não for temporal, não haverá essa limitação. 
 
-    **OBSERVAÇÃO:** essa limitação se aplica apenas ao SQL Server 2016. Opções CASCADE têm suporte no [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e no SQL Server 2017 a partir do CTP 2.0.  
+    **OBSERVAÇÃO:** esta limitação se aplica apenas ao SQL Server 2016. Opções CASCADE têm suporte no [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e no SQL Server 2017 a partir do CTP 2.0.  
   
 -   Os gatilhos**INSTEAD OF** não são permitidos na tabela atual ou de histórico para evitar a anulação da lógica de DML. Os gatilhos**AFTER** são permitidos somente na tabela atual. Eles são bloqueados na tabela de histórico para evitar a anulação da lógica de DML.  
   
 -   O uso de tecnologias de replicação é limitado.  
   
-    -   **Sempre ativo:** com suporte total  
+    -   **Always On:** suporte completo  
   
-    -   **Captura de Dados de Alteração e Controle de Dados de Alteração:** com suporte apenas na tabela atual  
+    -   **Captura de dados de alterações e Acompanhamento de dados de alterações:** suporte apenas na tabela atual  
   
     -   **Instantâneo e replicação transacional**: com suporte apenas para um único publicador sem o temporal habilitado e um assinante com o temporal habilitado. Nesse caso, o editor é usado para uma carga de trabalho OLTP, enquanto o assinante serve para o descarregamento de relatórios (incluindo consulta 'AS OF').    
         Não há suporte para o uso de vários assinantes porque esse cenário pode levar a dados temporais inconsistentes e cada um deles depende do relógio do sistema local.  

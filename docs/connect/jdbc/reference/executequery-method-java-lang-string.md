@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 610205c2-6bcd-426c-ad6f-9682551efdec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4d266af1e09c457db4742d6aca06df65acfd505a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3f881493288c385cb490f9d04b22acce03e19f29
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774342"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802306"
 ---
 # <a name="executequery-method-javalangstring"></a>Método executeQuery (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public final java.sql.ResultSet executeQuery(java.lang.String sql)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método executeQuery é especificado pelo método executeQuery na interface Statement.  
+ Esse método executeQuery é especificado pelo método executeQuery na interface java.sql.Statement.  
   
  Esse método substitui o método [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) que é localizado na classe [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
   

@@ -1,6 +1,6 @@
 ---
 title: Ativar ou desativar recursos do Reporting Services | Microsoft Docs
-ms.date: 03/17/2017
+ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -11,41 +11,39 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8bde995a2d4da2950c64ee88bdc4447b1a6d1ce9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 67945db1fd131b27b37a7e34853987c38fad8d84
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580913"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140377"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Ativar e desativar recursos do Reporting Services
   Você pode desativar os recursos do servidor de relatório que não são usados como parte de uma estratégia de bloqueio para reduzir a superfície de ataque de um servidor de relatório de produção. Na maioria dos casos, você deve executar os recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] simultaneamente para usar toda a funcionalidade disponível no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. No entanto, dependendo de seu modelo de implantação, você pode desabilitar os recursos dos quais não precisa. Por exemplo, você pode habilitar apenas o processamento em segundo plano se todo o processamento de relatórios for configurado como operações agendadas. Da mesma maneira, você pode executar somente o serviço Web Servidor de Relatório se quiser apenas relatórios interativos sob demanda.  
   
- Os procedimentos descritos neste tópico mostram como desativar recursos do modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . É possível configurar recursos de maneiras diferentes; por exemplo, editando o arquivo `RsReportServer.config` diretamente ou usando a faceta **Configuração da Área de Superfície do Reporting Services** do Gerenciamento Baseado em Políticas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Use os links para localizar o(s) procedimento(s) que explica(m) como ativar ou desativar um recurso:  
+ Os procedimentos descritos neste artigo mostram como desativar recursos do modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . É possível configurar recursos de maneiras diferentes; por exemplo, editando o arquivo `RsReportServer.config` diretamente ou usando a faceta **Configuração da Área de Superfície do Reporting Services** do Gerenciamento Baseado em Políticas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Use os links para localizar o(s) procedimento(s) que explica(m) como ativar ou desativar um recurso:  
   
--   [serviço Web Servidor de Relatórios](#RSWebSvc)  
+-   [Serviço Web do servidor de relatório](#RSWebSvc)  
   
 -   [Eventos e processamento agendados](#Sched)  
   
 -   [Portal da Web](#WebPortal)  
   
--   [Construtor de Relatórios](#ReportBuilder)  
+-   [Segurança integrada do Windows para fontes de dados de relatório](#WinIntSec)  
   
--   [Segurança Integrada do Windows para fontes de dados de relatório](#WinIntSec)  
+##  <a name="RSWebSvc"></a> Serviço Web Servidor de Relatório  
   
-##  <a name="RSWebSvc"></a> Report Server Web Service  
+### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>Para ativar ou desativar o serviço Web Servidor de Relatório editando a configuração  
   
-#### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>Para ativar ou desativar o serviço Web Servidor de Relatórios editando a configuração  
+1.  Abra o arquivo `RsReportServer.config` em um editor de texto. Para obter mais informações, consulte [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
-1.  Abra o arquivo `RsReportServer.config` em um editor de texto. Para obter mais informações, consulte [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-2.  Para ativar o serviço Web Servidor de Relatórios, defina **IsWebServiceEnabled** como **true**:  
+2.  Para ativar o serviço Web Servidor de Relatório, defina **IsWebServiceEnabled** como **true**:  
   
     ```  
     <IsWebServiceEnabled>true</IsWebServiceEnabled>  
     ```  
   
-3.  Para desativar o serviço Web Servidor de Relatórios, defina **IsWebServiceEnabled** como **false**:  
+3.  Para desativar o serviço Web Servidor de Relatório, defina **IsWebServiceEnabled** como **false**:  
   
     ```  
     <IsWebServiceEnabled>false</IsWebServiceEnabled>  
@@ -53,7 +51,7 @@ ms.locfileid: "65580913"
   
 4.  Salve as alterações e feche o arquivo.  
   
-#### <a name="to-turn-on-or-off-the-report-server-web-service-by-using-sql-server-management-studio"></a>Para ativar ou desativar o serviço Web Servidor de Relatórios usando o SQL Server Management Studio  
+#### <a name="to-turn-on-or-off-the-report-server-web-service-by-using-sql-server-management-studio"></a>Para ativar ou desativar o serviço Web Servidor de Relatório usando o SQL Server Management Studio  
   
 1.  Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e se conecte à instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que você deseja configurar.  
   
@@ -73,7 +71,7 @@ ms.locfileid: "65580913"
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>Para ativar ou desativar eventos e entrega agendados editando a configuração  
   
-1.  Abra o arquivo RsReportServer.config em um editor de texto. Para obter mais informações, consulte [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Abra o arquivo RsReportServer.config em um editor de texto. Para obter mais informações, consulte [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 2.  Para ativar o processamento e a entrega agendados de relatórios, defina **IsSchedulingService**, **IsNotificationService**e **IsEventService** como **true**:  
   
@@ -96,63 +94,28 @@ ms.locfileid: "65580913"
 > [!NOTE]  
 >  Não é possível desativar completamente o processamento em segundo plano porque ele fornece a funcionalidade de manutenção de banco de dados que é necessária para operações de servidor.  
   
-#### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-using-sql-server-management-studio"></a>Para ativar ou desativar eventos e entrega agendados usando o SQL Server Management Studio  
-  
-1.  Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e se conecte à instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que você deseja configurar.  
-  
-2.  No Pesquisador de Objetos, clique com o botão direito do mouse no nó [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , aponte para **Políticas**e clique em **Facetas**.  
-  
-3.  Na lista **Faceta** , selecione **Configuração da Área de Superfície do Reporting Services**.  
-  
-4.  Em **Propriedades da Faceta**:  
-  
-    -   Para ativar eventos e entrega agendados, defina **ScheduleEventsAndReportDeliveryEnabled** como **True**.  
-  
-    -   Para desativar eventos e entrega agendados, defina **ScheduleEventsAndReportDeliveryEnabled** como **False**.  
-  
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
-> [!NOTE]  
->  Não é possível desativar completamente o processamento em segundo plano porque ele fornece a funcionalidade de manutenção de banco de dados que é necessária para operações de servidor.  
-  
 ##  <a name="WebPortal"></a> Portal da Web
   
-Nas versões anteriores, você podia desabilitar o Gerenciador de Relatórios definindo **IsReportManagerEnabled** como falso. **IsReportManagerEnabled** foi preterido a partir do SQL Server 2016 Reporting Services Atualização Cumulativa 2. O portal da Web sempre será habilitado.
-  
-##  <a name="ReportBuilder"></a> Construtor de Relatórios  
-  
-#### <a name="to-turn-on-or-off-report-builder-by-using-sql-server-management-studio"></a>Para ativar ou desativar o Construtor de Relatórios usando o SQL Server Management Studio  
-  
-1.  Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e se conecte à instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que você deseja configurar.  
-  
-2.  No Pesquisador de Objetos, clique com o botão direito do mouse no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e clique em **Propriedades**.  
-  
-3.  Na caixa de diálogo **Propriedades do Servidor** , em **Selecionar uma página**, clique em **Segurança**.  
-  
-    -   Para ativar o Construtor de Relatórios, selecione a opção **Habilitar execuções de relatórios ad hoc** .  
-  
-    -   Para desativar o Construtor de Relatórios, desmarque a opção **Habilitar execuções de relatórios ad hoc** .  
-  
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+A partir do SQL Server 2016 Reporting Services atualização cumulativa 2, o portal da web sempre será habilitado.
   
 ##  <a name="WinIntSec"></a> Segurança integrada do Windows  
   
-#### <a name="to-turn-on-or-off-windows-integrated-security-by-using-sql-server-management-studio"></a>Para ativar ou desativar a segurança Integrada do Windows usando o SQL Server Management Studio  
+### <a name="to-turn-on-or-off-windows-integrated-security-by-using-sql-server-management-studio"></a>Para ativar ou desativar a segurança integrada do Windows usando o SQL Server Management Studio  
   
 1.  Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e se conecte à instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que você deseja configurar.  
   
 2.  No Pesquisador de Objetos, clique com o botão direito do mouse no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e clique em **Propriedades**.  
   
-3.  Na caixa de diálogo **Propriedades do Servidor** , em **Selecionar uma página**, clique em **Segurança**.  
+3.  Na caixa de diálogo **Propriedades do Servidor**, em **Selecionar uma página**, escolha **Segurança**.  
   
-    -   Para ativar a segurança Integrada do Windows, selecione a opção **Habilitar a segurança Integrada do Windows para as fontes de dados do relatório** .  
+    -   Para ativar a segurança integrada do Windows, escolha a opção **Habilitar a segurança integrada do Windows para as fontes de dados do relatório**.  
   
-    -   Para desativar a segurança Integrada do Windows, desmarque a opção **Habilitar a segurança Integrada do Windows para as fontes de dados do relatório** .  
+    -   Para desativar a segurança integrada do Windows, desmarque a opção **Habilitar a segurança integrada do Windows para as fontes de dados do relatório**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Escolha **OK**.  
   
-## <a name="see-also"></a>Consulte Também  
- [Gerenciador de Configurações do Reporting Services (modo nativo do SSRS).](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
+## <a name="see-also"></a>Confira também  
+[Gerenciador de Configurações do Reporting Services (Modo Nativo)](../install-windows/reporting-services-configuration-manager-native-mode.md)
+
  Ainda tem dúvidas? [Experimente o fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
-  
   

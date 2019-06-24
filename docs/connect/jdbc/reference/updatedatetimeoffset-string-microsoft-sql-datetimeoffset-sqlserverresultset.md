@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 952947ce-7c6e-4364-b035-46cb7fe621b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef75855c27190a2b79833a75ef991283f23305be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 86a9572b8b2bc38ed5c199eb6a064a5d0ef8bd3c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617454"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797155"
 ---
 # <a name="updatedatetimeoffsetstring-microsoftsqldatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset(string, microsoft.sql.DateTimeOffset) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

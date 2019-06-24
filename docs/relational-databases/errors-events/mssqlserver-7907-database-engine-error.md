@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a32b7c56eeeef071319e1e08010113e5924ae6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838414"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62694391"
 ---
 # <a name="mssqlserver7907"></a>MSSQLSERVER_7907
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47838414"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_INVALID_COLUMN_DIRECTORY|  
-|Texto da mensagem|Erro de tabela: o diretório 'DIRECTORY' na ID de partição PN_ID não é um diretório de Filestream válido.|  
+|Texto da mensagem|Erro de tabela: o diretório 'DIRECTORY' na ID de partição PN_ID não é um diretório de Fluxo de arquivos válido.|  
   
 ## <a name="explanation"></a>Explicação  
 O nome de um diretório de coluna é a ID de coluna de mecanismo relacional da partição. Se o nome de um diretório de coluna não puder ser convertido em uma ID de coluna, o diretório não será um diretório de coluna válido.  

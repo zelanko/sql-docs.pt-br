@@ -1,6 +1,6 @@
 ---
 title: Processar relatórios grandes | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8100f0e074f407b2733a5ede0fec97497356cfab
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 574fcc9c8e180b75d5d3def6d97798708c40996c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581434"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140258"
 ---
 # <a name="process-large-reports"></a>Processar relatórios grandes
   Relatórios grandes apresentam certos desafios de processamento e requerem certas configurações para que sejam executados corretamente. Relatórios grandes não devem ser executados sob demanda, salvo se estiverem configurados para oferecer suporte à paginação.  
@@ -31,12 +31,12 @@ ms.locfileid: "65581434"
   
  Para relatórios que contêm dados voláteis, o tamanho do relatório pode variar radicalmente de uma execução de relatório para outra. Nesse caso, você deve monitorar a fonte de dados para determinar como a volatilidade dos dados afeta o seu relatório e se é necessário seguir as etapas descritas neste tópico.  
   
- Para obter mais informações sobre como diagnosticar erros de tempo limite e de falta de memória, consulte o artigo [Como diagnosticar problemas ao executar relatórios no servidor de relatório](https://go.microsoft.com/fwlink/?LinkId=85634) em blogs.msdn.com.  
+ Para saber mais sobre como diagnosticar erros de tempo limite e de falta de memória, consulte o artigo [Como diagnosticar problemas ao executar relatórios no servidor de relatório](https://go.microsoft.com/fwlink/?LinkId=85634) em blogs.msdn.microsoft.com.  
   
 ## <a name="configuration-recommendations"></a>Recomendações de configuração  
  As recomendações para execução e renderização de relatório e o acesso a ele incluem os seguintes itens:  
   
--   Projete o relatório para oferecer suporte à paginação. O servidor de relatório envia uma página do relatório por vez. Se o relatório incluir paginação, será possível controlar a quantidade de dados que será transmitida ao navegador. Para obter mais informações, consulte [Pré-carregar o cache &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md).  
+-   Projete o relatório para oferecer suporte à paginação. O servidor de relatório envia uma página do relatório por vez. Se o relatório incluir paginação, será possível controlar a quantidade de dados que será transmitida ao navegador. Para obter mais informações, consulte [pré-carregar o Cache (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md).  
   
 -   Configure o relatório para ser executado como um instantâneo de relatório agendado para evitar que seja executado sob demanda. Não defina um valor de tempo limite para a execução de relatório. Execute o relatório em horários de pouca atividade.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "65581434"
   
 -   Limite o acesso ao relatório. Configure o relatório para usar segurança de nível de item e substitua as atribuições de função padrão por novas atribuições que concedam acesso somente aos usuários que precisam de tal acesso.  
   
-     Por padrão, os usuários podem abrir qualquer relatório que possa ser exibido na hierarquia da pasta. Ainda que você configure um relatório para execução como instantâneo, usuários que podem exibir o item do relatório em uma pasta podem abrir o relatório. Se o relatório for muito grande, pode fazer com que o navegador pare de responder quando um usuário abrir o relatório no Gerenciador de Relatórios.  
+     Por padrão, os usuários podem abrir qualquer relatório que possa ser exibido na hierarquia da pasta. Ainda que você configure um relatório para execução como instantâneo, usuários que podem exibir o item do relatório em uma pasta podem abrir o relatório. Se o relatório for muito grande, pode fazer com que o navegador pare de responder quando um usuário abrir o relatório no portal da Web.  
   
 ## <a name="rendering-recommendations"></a>Recomendações de renderização  
  Antes de configurar a distribuição de relatório, é importante saber quais clientes de renderização podem acomodar documentos grandes. O formato recomendado é a extensão de renderização HTML padrão com pequenas quebras de página flexível, mas é possível escolher qualquer outro formato que ofereça suporte à paginação.  
@@ -54,7 +54,7 @@ ms.locfileid: "65581434"
  O desempenho e o consumo de memória variam de acordo com o formato de renderização. O mesmo relatório será processado a velocidades diferentes e exigirá quantidades diferentes de memória dependendo do formato selecionado. Os formatos mais rápidos e que consomem menos memória são CSV, XML e HTML. PDF e Excel têm o desempenho mais lento, mas por motivos diferentes. O formato PDF usa intensamente a CPU, enquanto o Excel usa a RAM de maneira intensiva. A renderização de imagens recai entre os dois grupos. Você pode especificar o formato ao definir como o relatório será distribuído.  
   
 ## <a name="deployment-and-distribution-recommendations"></a>Recomendações de implantação e distribuição  
- Se você estiver usando quebras de página para controlar a renderização do relatório, poderá implantar um relatório grande do mesmo modo que faria com qualquer outro relatório. É possível conceder acesso ao relatório através do Gerenciador de Relatórios, uma parte do SharePoint Web, ou uma URL adicionada a um portal ou site da Web. Todas essas opções de implantação oferecem suporte a acesso sob demanda, assim como também oferecem suporte a um instantâneo de relatório executado anteriormente.  
+ Se você estiver usando quebras de página para controlar a renderização do relatório, poderá implantar um relatório grande do mesmo modo que faria com qualquer outro relatório. É possível conceder acesso ao relatório através do portal da Web, uma parte do SharePoint Web ou uma URL adicionada a um portal ou site da Web. Todas essas opções de implantação oferecem suporte a acesso sob demanda, assim como também oferecem suporte a um instantâneo de relatório executado anteriormente.  
   
  Uma estratégia de implantação alternativa é distribuir relatórios a usuários individuais. Você poderá distribuir relatórios grandes através de assinaturas se tiver cuidado com a configuração das opções de entrega. Use uma assinatura padrão ou uma assinatura controlada por dados para entregar o relatório. Algumas recomendações para assinatura e entrega:  
   
@@ -66,11 +66,9 @@ ms.locfileid: "65581434"
   
  Se você quiser usar entrega de relatório por email, configure a assinatura para incluir um link. Evite enviar o relatório como anexo.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Definir propriedades de processamento de relatórios](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Pré-carregar o cache &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
-  
-  
+ [Pré-carregar o cache (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)  

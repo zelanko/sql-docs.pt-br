@@ -14,11 +14,11 @@ ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 063c344e36ed4cb4404e2f78ae97a4e118322bb4
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658310"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63002373"
 ---
 # <a name="sql-server-2012-release-notes"></a>Notas de Versão do SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ Você pode instalar o SQL Server no Windows Server 2008 R2 Server Core SP1 com a
   
 **Solução alternativa:** para configurar o banco de dados de estatísticas semânticas de idioma como um pré-requisito para a indexação semântica, realize as seguintes tarefas:  
   
-1.  Localize e execute o pacote do Windows Installer denominado SemanticLanguageDatabase.msi na mídia de instalação do SQL Server para extrair o banco de dados. Para o SQL Server 2012 Express, baixe o banco de dados de estatísticas semânticas de idioma do [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=35582) (https://www.microsoft.com/download/details.aspx?id=35582)) e execute o pacote do Windows Installer.  
+1.  Localize e execute o pacote do Windows Installer denominado SemanticLanguageDatabase.msi na mídia de instalação do SQL Server para extrair o banco de dados. Para o SQL Server 2012 Express, baixe o banco de dados de estatísticas semânticas de idioma do [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=35582) (https://www.microsoft.com/download/details.aspx?id=35582) ) e execute o pacote do Windows Installer.  
   
 2.  Mova o banco de dados para uma pasta de dados apropriada. Se você deixar o banco de dados no local padrão, deverá alterar as permissões antes de anexá-lo com êxito.  
   
@@ -263,7 +263,7 @@ Ao usar o SQL Server Management Studio 2012 (SSMS), se um arquivo .sql estiver a
 -   Desconecte o editor SQL e conecte o editor do MDX/DMX a um servidor do AS.  
   
 ### <a name="22-cannot-create-or-open-tabular-projects-when-builtinadministrators-group-name-cannot-be-resolved"></a>2.2 Não é possível criar ou abrir projetos tabulares quando o nome de grupo BUILTIN\Administrators não pode ser resolvido  
-**Problema:** Você deve ser um administrador em um servidor de banco de dados do workspace antes de poder criar ou abrir projetos tabulares. Um usuário pode ser adicionado ao grupo de administradores de servidor por meio da adição do nome de usuário ou nome do grupo. Se você for membro do grupo BUILTIN\Administrator, não poderá criar ou editar arquivos BIM files, a menos que o servidor de banco de dados do workspace tenha sido unido ao domínio do qual foi originalmente provisionado. Se você abrir ou criar o arquivo BIM, ele falhará com a seguinte mensagem de erro:  
+**Problema:** você deve ser um administrador em um servidor de banco de dados do workspace antes de poder criar ou abrir projetos tabulares. Um usuário pode ser adicionado ao grupo de administradores de servidor por meio da adição do nome de usuário ou nome do grupo. Se você for membro do grupo BUILTIN\Administrator, não poderá criar ou editar arquivos BIM files, a menos que o servidor de banco de dados do workspace tenha sido unido ao domínio do qual foi originalmente provisionado. Se você abrir ou criar o arquivo BIM, ele falhará com a seguinte mensagem de erro:  
   
 `"The BIM file cannot be opened. The server connected to is not valid. Reason: You are not an administrator of server [server name]."`  
   
@@ -276,21 +276,21 @@ Ao usar o SQL Server Management Studio 2012 (SSMS), se um arquivo .sql estiver a
 ### <a name="23-ssis-components-for-as-tabular-models-do-not-work-as-expected"></a>2.3 Os componentes do SSIS para modelos tabulares do AS não funcionam como esperado  
 Os componentes do SSIS (SQL Server Integration Services) para o AS (Analysis Services) não funcionam como esperado para modelos tabulares. Veja a seguir os problemas conhecidos que podem ocorrer quando você tenta gravar um pacote do SSIS para funcionar com modelos tabulares.  
   
-**Problema:** O Gerenciador de Conexões do AS não pode usar um modelo tabular na mesma solução que uma fonte de dados.  
+**Problema:** o Gerenciador de Conexões do AS não pode usar um modelo tabular na mesma solução que uma fonte de dados.  
   
 **Solução alternativa:** você deve se conectar explicitamente ao servidor do AS antes de configurar a Tarefa de Processamento do AS ou a Tarefa Executar DDL do AS.  
   
 Há problemas com a Tarefa de Processamento do AS quando você trabalha com modelos tabulares:  
   
-**Problema:** Em vez de bancos de dados, tabelas e partições, você verá cubos, grupos de medidas e dimensões. Essa é uma limitação da tarefa.  
+**Problema:** em vez de bancos de dados, tabelas e partições, você verá cubos, grupos de medidas e dimensões. Essa é uma limitação da tarefa.  
   
 **Solução alternativa:** você ainda pode processar seu modelo de tabela usando a estrutura de cubo/grupo de medidas/dimensão.  
   
-**Problema:** algumas opções de processamento suportadas pelo AS em execução no modo tabular não são expostas na Tarefa de Processamento do AS, como Processar Desfragmentação.  
+**Problema:** algumas opções de processamento compatíveis com o AS em execução no modo tabular não são expostas na Tarefa de Processamento do AS, como Processar Desfragmentação.  
   
 **Solução alternativa:** use a tarefa Executar DDL do Analysis Services, em vez de executar um script XMLA que contenha o comando ProcessDefrag.  
   
-**Problema:** Algumas opções de configuração na ferramenta não são aplicáveis. Por exemplo, "Objetos relacionados ao processo" não devem ser usados durante o processamento de partições e a opção de configuração "Processamento Paralelo" contém uma mensagem de erro inválido dizendo que não há suporte para o processamento paralelo no SKU padrão.  
+**Problema:** algumas opções de configuração na ferramenta não são aplicáveis. Por exemplo, "Objetos relacionados ao processo" não devem ser usados durante o processamento de partições e a opção de configuração "Processamento Paralelo" contém uma mensagem de erro inválido dizendo que não há suporte para o processamento paralelo no SKU padrão.  
   
 **Solução alternativa:** None  
   
@@ -321,7 +321,7 @@ Há problemas com a Tarefa de Processamento do AS quando você trabalha com mode
 ## <a name="DQS"></a>4.0 Data Quality Services  
   
 ### <a name="41-dqs-not-supported-in-a-cluster"></a>4.1 O DQS não tem suporte em um cluster  
-**Problema:** Não há suporte para o DQS em uma instalação de cluster do SQL Server Se você estiver instalando uma instância de cluster do SQL Server, não deverá marcar as caixas de seleção **Data Quality Services** e **Cliente Data Quality** na página de **Seleção de Recursos** . Se estas caixas de seleção estiverem marcadas durante a instalação da instância de cluster (e você concluir a instalação do Data Quality Server executando o arquivo DQSInstaller.exe), o DQS será instalado neste nó, mas não estará disponível em nós adicionais quando você adicionar mais nós ao cluster e, consequentemente, não funcionará em nós adicionais.  
+**Problema:** não há suporte para o DQS em uma instalação de cluster do SQL Server. Se você estiver instalando uma instância de cluster do SQL Server, não deverá marcar as caixas de seleção **Data Quality Services** e **Cliente Data Quality** na página de **Seleção de Recursos** . Se estas caixas de seleção estiverem marcadas durante a instalação da instância de cluster (e você concluir a instalação do Data Quality Server executando o arquivo DQSInstaller.exe), o DQS será instalado neste nó, mas não estará disponível em nós adicionais quando você adicionar mais nós ao cluster e, consequentemente, não funcionará em nós adicionais.  
   
 **Solução alternativa:** instale a atualização cumulativa 1 do SQL Server 2012 para resolver este problema. Para obter instruções, consulte [https://support.microsoft.com/kb/2674817](https://support.microsoft.com/kb/2674817).  
   
@@ -453,7 +453,7 @@ Vamos ilustrar isso com um exemplo. Considere um usuário, Domínio\usuário1. O
 **Solução alternativa**: instale o Visual Studio 2010 SP1 novamente e reinicie o Management Studio.  
   
 ### <a name="53-x64-operating-systems-require-64-bit-powershell-20"></a>5.3 Os sistemas operacionais x64 exigem o PowerShell 2.0 de 64 bits  
-**Problema:** não há suporte para instalações de 32 bits do Windows PowerShell Extensions para SQL Server para instâncias do SQL Server 2012 em sistemas operacionais de 64 bits.  
+**Problema:** não há suporte para instalações de 32 bits das Extensões do Windows PowerShell para SQL Server para instâncias do SQL Server 2012 em sistemas operacionais de 64 bits.  
   
 **Soluções alternativas:**  
   
@@ -467,7 +467,7 @@ Vamos ilustrar isso com um exemplo. Considere um usuário, Domínio\usuário1. O
 <a name="prean-exception-occurred-while-executing-a-transact-sql-statement-or-batch-microsoftsqlserverconnectioninfo"></a><pre>An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
 INFORMAÇÕES ADICIONAIS:  
-Nome de objeto 'sys.federations' inválido. (Microsoft SQL Server, Erro: 10060) 208)</pre>  
+Nome de objeto 'sys.federations' inválido. (Microsoft SQL Server, Erro: 208)</pre>  
   
 **Solução alternativa:** feche e reabra o Assistente de geração de scripts.  
   
@@ -503,7 +503,7 @@ A tabela a seguir resume o suporte de driver para Grupos de Disponibilidade Alwa
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Sim|Sim|Sim|Sim|Sim|  
 |SQL Native Client 11.0 OLEDB|Não|Sim|Sim|Não|Não|  
-|ADO .NET com .NET Framework 4.0 com patch de conectividade**\&#42;**|Sim|Sim|Sim|Sim|Sim|  
+|ADO .NET com .NET Framework 4.0 com patch de conectividade **\&#42;**|Sim|Sim|Sim|Sim|Sim|  
 |ADO .NET com .NET Framework 3.5 SP1 com patch de conectividade **\&#42;\&#42;**|Sim|Sim|Sim|Sim|Sim|  
 |Microsoft JDBC driver 4.0 para SQL Server|Sim|Sim|Sim|Sim|Sim|  
   
@@ -529,21 +529,21 @@ MultiSubnetFailover é uma nova palavra-chave da cadeia de conexão usada para h
   
 **Não há suporte para MultiSubnetFailover=True pelo .NET Framework 3.5 ou OLEDB**  
   
-**Problema:** Se seu Grupo de Disponibilidade ou Instância de Cluster de Failover tiver um nome de ouvinte (conhecido como o nome de rede ou o Ponto de Acesso para Cliente no Gerenciador de Cluster WSFC) dependendo dos diversos endereços IP de diferentes sub-redes, e você estiver usando o ADO.NET com .NET Framework 3.5SP1 ou o SQL Native Client 11.0 OLEDB, possivelmente 50% das suas solicitações dede conexão de cliente para o ouvinte de grupo de disponibilidade atingirão um tempo limite de conexão.  
+**Problema:** se seu Grupo de Disponibilidade ou Instância de Cluster de Failover tiver um nome de ouvinte (conhecido como o nome de rede ou o Ponto de Acesso para Cliente no Gerenciador de Cluster WSFC) dependendo dos diversos endereços IP de diferentes sub-redes, e você estiver usando o ADO.NET com .NET Framework 3.5SP1 ou o SQL Native Client 11.0 OLEDB, possivelmente 50% das suas solicitações dede conexão de cliente para o ouvinte de grupo de disponibilidade atingirão um tempo limite de conexão.  
   
-**Soluções alternativas:** É recomendável que você execute uma das tarefas a seguir.  
+**Soluções alternativas:** é recomendável que você execute uma das tarefas a seguir.  
   
 -   Se você não tiver a permissão para manipular recursos de cluster, altere o tempo limite da conexão para 30 segundos (esse valor resulta em um período de tempo limite TCP de 20 segundos mais um buffer de 10 segundos).  
   
-    **Prós**: Se ocorrer um failover de sub-rede cruzado, o tempo de recuperação do cliente será rápido.  
+    **Prós**: se ocorrer um failover de sub-rede cruzado, o tempo de recuperação do cliente será rápido.  
   
-    **Contras**: Metade das conexões de cliente demorarão mais de 20 segundos  
+    **Contras**: metade das conexões de cliente demorarão mais de 20 segundos  
   
 -   Se você tiver permissão para manipular os recursos de cluster, a abordagem mais recomendada é definir o nome de rede do ouvinte do grupo de disponibilidade como **RegisterAllProvidersIP**=0. Para obter mais informações, consulte "Exemplo de script PowerShell para desabilitar RegisterAllProvidersIP e reduzir o TTL", posteriormente nesta seção.  
   
-    **Prós:** Você não precisa aumentar o valor de tempo limite de conexão de cliente.  
+    **Prós:** você não precisa aumentar o valor de tempo limite de conexão de cliente.  
   
-    **Contras:** Se um failover entre sub-redes ocorrer, o tempo de recuperação do cliente poderá ser de 15 minutos ou mais, dependendo da sua configuração de HostRecordTTL e da configuração da agenda de replicação DNS/AD entre sites.  
+    **Contras:** se um failover entre sub-redes ocorrer, o tempo de recuperação do cliente poderá ser de 15 minutos ou mais, dependendo da sua configuração de HostRecordTTL e da configuração da agenda de replicação DNS/AD entre sites.  
   
 **Exemplo de script PowerShell para desabilitar RegisterAllProvidersIP e reduzir o TTL**  
   
@@ -629,7 +629,7 @@ O SQL Server 2012 inclui StreamInsight 2.0. O StreamInsight 2.0 exige uma licen�
 ## <a name="UA"></a>10.0 Supervisor de Atualização  
   
 ### <a name="101-link-to-install-upgrade-advisor-is-not-enabled-on-chinese-hk-operating-systems"></a>10.1 O link para instalação do Supervisor de Atualização não está habilitado nos sistemas operacionais em chinês (HK)  
-Problema: Quando você tentar instalar o Supervisor de Atualização em qualquer versão com suporte dos sistemas operacionais Windows em Chinês (Hong Kong), talvez descubra que o link para instalação desse item não está habilitado.  
+Problema: quando você tentar instalar o Supervisor de Atualização em qualquer versão com suporte dos sistemas operacionais Windows em Chinês (Hong Kong), talvez descubra que o link para instalação desse item não está habilitado.  
   
 **Solução alternativa**: Localize o arquivo **SQLUA.msi** na sua mídia do SQL Server 2012 em `\1028_CHT_LP\x64\redist\Upgrade Advisor` ou em `\1028_CHT_LP\x86\redist\Upgrade Advisor`, dependendo da arquitetura do seu sistema operacional.  
   

@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 9681ddf0946627306a64c099d2df1c242d95bcbe
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66762813"
 ---
 # <a name="getnstring-method-javalangstring-sqlserverresultset"></a>Método getNString (java.lang.String) (SQLServerResultSet)
@@ -42,9 +42,9 @@ public java.lang.String getNString(java.lang.String columnLabel)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getNString é especificado pelo método na interface do java.sql.SQLServerResultSet getNString.  
+ Esse método getNString é especificado pelo método getNString na interface do java.sql.SQLServerResultSet.  
   
- Esse método pode ser usado para recuperar o valor de uma **nvarchar**, **nchar**, **nvarchar (max)** , **ntext**, ou **xml** coluna na linha atual deste [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto. Se você tentar usar esse método para recuperar valores de outros tipos de dados, uma exceção será lançada.  
+ Esse método pode ser usado para recuperar o valor de uma coluna **nvarchar**, **nchar**, **nvarchar (max)** , **ntext** ou **xml** na linha atual deste objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md). Se você tentar usar esse método para recuperar valores de outros tipos de dados, uma exceção será lançada.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método getNString &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   

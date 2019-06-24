@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0fd55a9b0b6dd98a00ce7d826611845e8597170c
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960770"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051552"
 ---
 # <a name="collation-precedence"></a>Precedência de ordenação
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ O rótulo de ordenação do resultado final de uma expressão complexa que faça
   
 -   Explícito tem precedência sobre implícito. Implícito tem precedência sobre Padrão coercível:  
   
-     Explícito >Implícito > Padrão coercível  
+     Explícito > Implícito > Padrão coercível  
   
 -   A combinação de duas expressões explícitas que receberam ordenações diferentes gera um erro:  
   

@@ -1,5 +1,5 @@
 ---
-title: getVersionColumns Method (SQLServerDatabaseMetaData) | Microsoft Docs
+title: Método getVersionColumns (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 8c098106fc3961e0248d638356df70527739203b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66779999"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>Método getVersionColumns (SQLServerDatabaseMetaData)
@@ -57,7 +57,7 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getColumns é especificado pelo método getColumns na interface java.sql.DatabaseMetaData.  
+ Esse método getVersionColumns é especificado pelo método getVersionColumns na interface java.sql.DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getVersionColumns conterá as seguintes informações:  
   

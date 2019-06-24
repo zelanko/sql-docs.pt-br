@@ -1,5 +1,5 @@
 ---
-title: TYPE_SS_DIRECT_FORWARD_ONLY Field (SQLServerResultSet) | Microsoft Docs
+title: Campo TYPE_SS_DIRECT_FORWARD_ONLY (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: d57b1066027937450a6c2942a163cc6f1fc25ebf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66784994"
 ---
 # <a name="typessdirectforwardonly-field-sqlserverresultset"></a>Campo TYPE_SS_DIRECT_FORWARD_ONLY (SQLServerResultSet)

@@ -1,5 +1,5 @@
 ---
-title: Método setString (long, java.lang.String, int, int) | Microsoft Docs
+title: Método setString (long, java.lang.String) - NClob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 6f9ca7497c14da33d9e25b1c6a5ed934b7d96181
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66771577"
 ---
 # <a name="setstring-method-long-javalangstring-sqlservernclob"></a>Método setString (long, java.lang.String) (SQLServerNClob)
@@ -47,7 +47,7 @@ public int setString(long pos,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setString é especificado pelo método setString na interface java.sql.CallableStatement.  
+ Esse método setString é especificado pelo método setString na interface java.sql.NClob.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

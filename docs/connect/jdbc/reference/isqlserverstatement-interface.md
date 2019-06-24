@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7f83b514-6e76-4f37-baf3-a10db2010e7c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 41441e49140f914fa5d14562d774a2fccea2696f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7a49ef95ac7e6ee122252577ccff9ec535c912fe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811634"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796419"
 ---
 # <a name="isqlserverstatement-interface"></a>Interface ISQLServerStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

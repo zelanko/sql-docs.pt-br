@@ -28,11 +28,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4960dae2aad32a75f612b1b07e4aacdeb6a3d4d9
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421223"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026096"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -172,7 +172,7 @@ ALTER AUTHORIZATION ON
  Se a entidade de destino não for um banco de dados e estiver sendo transferida a um novo proprietário, todas as permissões no destino serão descartadas.    
     
 > [!CAUTION]    
->  No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o comportamento de esquemas mudou em relação ao comportamento em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O código que pressupõe que esquemas são equivalentes a usuários de banco de dados pode não retornar resultados corretos. Exibições antigas do catálogo, incluindo sysobjects, não devem ser usadas em um banco de dados no qual uma das instruções DDL a seguir já tenha sido utilizada: CRIAR ESQUEMA, ALTERAR ESQUEMA, ABANDONAR ESQUEMA, CRIAR USUÁRIO, ALTERAR USUÁRIO, ABANDONAR USUÁRIO, CRIAR FUNÇÃO, ALTERAR FUNÇÃO, ABANDONAR FUNÇÃO, CRIAR APPROLE, ALTERAR APPROLE, ABANDONAR APPROLE, ALTERAR AUTORIZAÇÃO. Em um banco de dados no qual qualquer uma dessas instruções tenha sido usada alguma vez, você deve usar as novas exibições do catálogo. As novas exibições do catálogo levam em conta a separação de entidades e esquemas introduzida no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para mais informações sobre exibições do catálogo, consulte [Exibições do catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).    
+>  No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o comportamento de esquemas mudou em relação ao comportamento em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O código que pressupõe que esquemas são equivalentes a usuários de banco de dados pode não retornar resultados corretos. Exibições antigas do catálogo, incluindo sysobjects, não devem ser usadas em um banco de dados no qual uma das instruções DDL a seguir já tenha sido utilizada: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. Em um banco de dados no qual qualquer uma dessas instruções tenha sido usada alguma vez, você deve usar as novas exibições do catálogo. As novas exibições do catálogo levam em conta a separação de entidades e esquemas introduzida no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para mais informações sobre exibições do catálogo, consulte [Exibições do catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).    
     
  Além disso, observe o seguinte:    
     
@@ -195,7 +195,7 @@ ALTER AUTHORIZATION ON
 ## <a name="AlterDB"></a> ALTER AUTHORIZATION para bancos de dados  
 **APLICA-SE A**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 ### <a name="for-sql-server"></a>Para SQL Server:  
-**Requisitos para o novo proprietário:**   
+**Requisitos para o novo proprietário:**    
 A nova entidade de segurança do proprietário deve ser uma das seguintes:  
 
 -   Um logon de autenticação do SQL Server.  
@@ -206,7 +206,7 @@ A nova entidade de segurança do proprietário deve ser uma das seguintes:
 Se você não for um membro da função de servidor fixa **sysadmin**, deverá ter pelo menos a permissão TAKE OWNERSHIP no banco de dados e a permissão IMPERSONATE no novo logon do proprietário.   
 
 ### <a name="for-azure-sql-database"></a>Para o Banco de Dados SQL do Azure:  
-**Requisitos para o novo proprietário:**   
+**Requisitos para o novo proprietário:**    
 A nova entidade de segurança do proprietário deve ser uma das seguintes:  
 
 -   Um logon de autenticação do SQL Server.  
@@ -310,7 +310,7 @@ ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
 ```    
     
-### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>b. Transferir a propriedade de uma exibição ao proprietário do esquema    
+### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>B. Transferir a propriedade de uma exibição ao proprietário do esquema    
  O exemplo a seguir transfere a propriedade da exibição `ProductionView06` ao proprietário do esquema que a contém. A exibição está localizada dentro do esquema `Production`.    
     
 ```    

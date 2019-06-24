@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 399100d6e718138012453e47fdfe8d11386f8cbd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c4e8d429490a0dd7fe8f0a259d065f1f4914dd29
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754894"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794044"
 ---
 # <a name="programming-with-sqlxml"></a>Programando com SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47754894"
 |CallableStatement.setSQLXML()|Sem suporte|Tem suporte|  
 |CallableStatement.setObject()|Sem suporte|Tem suporte|  
 |PreparedStatement.setSQLXML()|Sem suporte|Tem suporte|  
-|SetObject|Sem suporte|Tem suporte|  
+|PreparedStatement.setObject()|Sem suporte|Tem suporte|  
 |ResultSet.updateSQLXML()|Sem suporte|Tem suporte|  
 |ResultSet.updateObject()|Sem suporte|Tem suporte|  
 |ResultSet.getSQLXML()|Tem suporte|Sem suporte|  

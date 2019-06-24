@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c02778f2-6681-4a84-a58b-2bcfac4233e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 60bd9b666a6be9baf358ad2358c3ccbab251c675
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8650ffe29710670bae8d3a934cd4caceaf74f723
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650444"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795655"
 ---
 # <a name="setcharacterstream-method-sqlserverclob"></a>Método setCharacterStream (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public java.io.Writer setCharacterStream(long pos)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *POS*  
+ *pos*  
   
  A posição em que a gravação deve ser iniciada no objeto CLOB.  
   

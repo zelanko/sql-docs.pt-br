@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3da1afcd34e530b96a9be091c3f5ffe3aa247f48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9dc380ea7eab9876980dfc9ee1ee050ff77fa237
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783174"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800251"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Drivers da Microsoft para PHP para SQL Server
 
@@ -27,13 +27,13 @@ O Microsoft Drivers for PHP para SQL Server habilitar a integração com o SQL S
 ## <a name="getting-started"></a>Introdução  
 * [Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento de PHP](step-1-configure-development-environment-for-php-development.md)  
 * [Etapa 2: Criar um banco de dados para o desenvolvimento de PHP](step-2-create-a-sql-database-for-php-development.md)  
-* [Etapa 3: Prova de conceito da conexão ao SQL usando PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
+* [Etapa 3: prova de conceito da conexão ao SQL usando PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
 * [Etapa 4: Conectar-se de forma resiliente ao SQL com PHP](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>Documentação  
-* [Introdução](getting-started-with-the-php-sql-driver.md)
+* [Guia de Introdução](getting-started-with-the-php-sql-driver.md)
 * [Visão geral](overview-of-the-php-sql-driver.md)
-* [Guia de programação](programming-guide-for-php-sql-driver.md) 
+* [Guia de Programação](programming-guide-for-php-sql-driver.md) 
 * [Considerações sobre segurança](security-considerations-for-php-sql-driver.md)
   
 ## <a name="community"></a>Comunidade  
@@ -43,7 +43,7 @@ O Microsoft Drivers for PHP para SQL Server habilitar a integração com o SQL S
 * ![Um círculo seta para baixo de download](../../ssdt/media/download.png)[para baixar drivers para PHP para SQL](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>Exemplos  
-* [Exemplos de código para o Microsoft Drivers for PHP para SQL Server](code-samples-for-php-sql-driver.md)
+* [Exemplos de código do Microsoft Drivers para PHP para SQL Server](code-samples-for-php-sql-driver.md)
 * [Introdução ao PHP no Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
 * [Introdução ao PHP no macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
 * [Introdução ao PHP no Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)

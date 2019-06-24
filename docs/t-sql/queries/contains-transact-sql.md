@@ -36,11 +36,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 4afc59a5901497fc3112cff3a06bbe20dd3ce04d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334803"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62466988"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ CONTAINS (
   
 ## <a name="arguments"></a>Argumentos  
  *column_name*  
- É o nome de uma coluna indexada de texto completo da tabela especificada na cláusula FROM. As colunas podem ser do tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** ou **varbinary(max)**.  
+ É o nome de uma coluna indexada de texto completo da tabela especificada na cláusula FROM. As colunas podem ser do tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** ou **varbinary(max)** .  
   
  *column_list*  
  Especifica duas ou mais colunas, separadas por vírgulas. *column_list* precisa ser colocada entre parênteses. A menos que *language_term* seja especificado, o idioma de todas as colunas da *column_list* precisará ser o mesmo.  
@@ -211,7 +211,7 @@ WHERE CONTAINS(Description, @SearchWord);
 >  Alguns idiomas, como aqueles escritos em algumas regiões da Ásia, podem ter frases que consistem em uma ou mais palavras sem espaços entre elas.  
   
 \<simple_term>  
-Especifica uma correspondência para uma palavra ou frase exata. Exemplos de termos simples válidos são "blue berry", "blueberry" e "Microsoft SQL Server." As frases devem estar entre aspas duplas (""). As palavras em uma frase devem aparecer na mesma ordem, conforme especificado em *\<contains_search_condition>*, pois elas aparecem na coluna do banco de dados. A pesquisa de caracteres na palavra ou frase não diferencia maiúsculas e minúsculas. As palavras de ruído (ou [palavras irrelevantes](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) (como um, e ou o) em colunas indexadas de texto completo não são armazenadas no índice de texto completo. Se uma palavra de ruído for usada em uma pesquisa de uma palavra única, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará uma mensagem de erro indicando que a consulta contém apenas palavras de ruído. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui uma lista padrão de palavras de ruído no diretório \Mssql\Binn\FTERef de cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Especifica uma correspondência para uma palavra ou frase exata. Exemplos de termos simples válidos são "blue berry", "blueberry" e "Microsoft SQL Server." As frases devem estar entre aspas duplas (""). As palavras em uma frase devem aparecer na mesma ordem, conforme especificado em *\<contains_search_condition>* , pois elas aparecem na coluna do banco de dados. A pesquisa de caracteres na palavra ou frase não diferencia maiúsculas e minúsculas. As palavras de ruído (ou [palavras irrelevantes](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) (como um, e ou o) em colunas indexadas de texto completo não são armazenadas no índice de texto completo. Se uma palavra de ruído for usada em uma pesquisa de uma palavra única, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará uma mensagem de erro indicando que a consulta contém apenas palavras de ruído. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui uma lista padrão de palavras de ruído no diretório \Mssql\Binn\FTERef de cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  A pontuação é ignorada. Portanto, `CONTAINS(testing, "computer failure")` corresponde a uma linha com o valor: "Onde está meu computador? A falha ao localizá-lo pode ser dispendiosa." Para obter mais informações sobre o comportamento de separadores de palavras, consulte [Configurar e gerenciar separadores de palavras e lematizadores para pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
@@ -313,7 +313,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Especifica que as linhas correspondentes (retornadas pela consulta) correspondem a uma lista de palavras e frases, sendo que cada uma, opcionalmente, recebe um valor de importância.  
   
  ISABOUT  
- Especifica a palavra-chave *\<weighted_term>*.  
+ Especifica a palavra-chave *\<weighted_term>* .  
   
  WEIGHT(*weight_value*)  
  Especifica um valor de importância que é um número de 0,0 a 1,0. Cada componente em *\<weighted_term>* pode incluir um *weight_value*. *weight_value* é uma maneira de alterar a forma como as várias partes de uma consulta afetam o valor de classificação atribuído a cada linha que corresponde à consulta. WEIGHT não afeta os resultados das consultas CONTAINS, mas afeta a classificação nas consultas [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).  
@@ -385,7 +385,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simpleterm"></a>b. Usando CONTAINS e a frase com \<simple_term>  
+### <a name="b-using-contains-and-phrase-with-simpleterm"></a>B. Usando CONTAINS e a frase com \<simple_term>  
  O exemplo a seguir retorna todos os produtos contendo a expressão `Mountain` ou `Road`.  
   
 ```sql  

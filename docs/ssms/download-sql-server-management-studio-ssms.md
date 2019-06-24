@@ -1,7 +1,5 @@
 ---
 title: Baixar o SQL Server Management Studio (SSMS) | Microsoft Docs
-ms.custom: ''
-ms.date: 04/25/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
@@ -24,18 +22,18 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 manager: craigg
-ms.openlocfilehash: 41acbbf99bc84f96803a296d19c6f63a32761d8e
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.custom: ''
+ms.date: 06/12/2019
+ms.openlocfilehash: 7993cfbf21efcbb6f984a91347987e5805741904
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744196"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67033402"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Baixar o SQL Server Management Studio (SSMS)
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-> [!div class="nextstepaction"]
-> [Compartilhe seus comentários sobre a página do hub do SQL Docs.](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 O SSMS (SQL Server Management Studio) é um ambiente integrado para gerenciar qualquer infraestrutura de SQL, do SQL Server para o Banco de Dados SQL do Azure. O SSMS fornece ferramentas para configurar, monitorar e administrar instâncias do SQL Server e bancos de dados. Use o SSMS para implantar, monitorar e atualizar os componentes da camada de dados usados pelos seus aplicativos, além de construir consultas e scripts.
 
@@ -43,52 +41,53 @@ Use o SSMS para consultar, criar e gerenciar seus bancos de dados e data warehou
 
 O SSMS é gratuito!
 
-## <a name="download-ssms-180-ga"></a>Baixar o SSMS 18.0 (GA)
+## <a name="download-ssms-181"></a>Baixar o SSMS 18.1
 
-**O SSMS 18.0 versão GA (Disponibilidade Geral) já está disponível e é a última geração do *SQL Server Management Studio* que dá suporte ao [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
+**O SSMS 18.1 já está disponível e é a última versão de GA (disponibilidade geral) do *SQL Server Management Studio* compatível com o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
 
-**[![baixar](../ssdt/media/download.png) Baixar o SQL Server Management Studio 18.0 (GA)](https://go.microsoft.com/fwlink/?linkid=2088649)**
+**[![baixar](../ssdt/media/download.png) Baixar o SQL Server Management Studio 18.1 ](https://go.microsoft.com/fwlink/?linkid=2094583)**
 
-O SSMS 18.0 não está mais em versão prévia e é a primeira versão GA (disponibilidade geral) do SSMS 18.0. Se você tiver versões prévias anteriores do SSMS 18.0 instaladas, desinstale-as antes de instalar o SSMS 18.0 GA.
+O SSMS 18.1 é a versão mais recente de GA (disponibilidade geral) do SSMS. Se você tiver o SSMS 18.0 (GA) instalado, instalar o SSMS 18.1 fará upgrade para o 18.1. Se você tiver *versões prévias* anteriores do SSMS 18.0 instaladas, desinstale-as antes de instalar o SSMS 18.1.
 
 **Informações da versão**
 
-- Número da versão: 18.0 (GA)<br>
-- Número de build: 15.0.18118.0<br>
-- Data de lançamento: 24 de abril de 2019
+- Número da versão: 18.1<br>
+- Número de build: 15.0.18131.0<br>
+- Data de lançamento: 11 de junho de 2019
 
 Se você tem sugestões ou comentários ou deseja relatar problemas, a melhor maneira de entrar em contato com a equipe do SSMS é usando o [UserVoice](https://aka.ms/sqlfeedback).
 
 A instalação do SSMS 18.x não atualiza nem substitui versões do SSMS 17.x ou anteriores. O SSMS 18.x é instalado lado a lado com versões anteriores para que ambas versões estejam disponíveis para uso.
 
 Se um computador contiver instalações lado a lado do SSMS, verifique se você iniciou a versão correta para suas necessidades específicas. A versão mais recente é rotulada **Microsoft SQL Server Management Studio 18**
- 
-## <a name="available-languages-ssms-180-ga"></a>Idiomas disponíveis (SSMS 18.0 GA)
+
+## <a name="available-languages-ssms-181"></a>Idiomas disponíveis (SSMS 18.1)
 
 Esta versão do SSMS pode ser instalada nos seguintes idiomas:
 
-SQL Server Management Studio 18.0 (GA):<br>
-[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40a)
+SQL Server Management Studio 18.1:<br>
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 
-Pacote de atualização do SQL Server Management Studio 18.0 (atualiza para o 18.0):<br>
-Nenhuma opção de atualização está disponível neste momento. Se você tiver uma versão prévia anterior do SSMS 18.0 instalada, desinstale-a antes de instalar o SSMS 18.0 GA.
 
 > [!NOTE]
 > O módulo do SQL Server PowerShell é uma instalação separada por meio da Galeria do PowerShell. Para obter mais informações, consulte [Baixar o Módulo SQL Server PowerShell](download-sql-server-ps-module.md).
 
-## <a name="new-in-this-release-ssms-180-ga"></a>Novo nesta versão (SSMS 18.0 GA)
+## <a name="new-in-this-release-ssms-181"></a>Novidades desta versão (SSMS 18.1)
 
-O SSMS 18.0 (GA) é a versão mais recente do SQL Server Management Studio. A geração 18.x do SSMS dá suporte a quase todas as áreas de recursos do SQL Server 2008 por meio da versão prévia do SQL Server 2019.
+- **Diagramas de banco de dados** – foram adicionados novamente ao SSMS. Para saber detalhes, confira [Diagramas de banco de dados](https://feedback.azure.com/forums/908035/suggestions/37507828).
+- **SSBDIAGNOSE.EXE** – a ferramenta Diagnóstico da linha de comando do SQL Server foi adicionada novamente ao pacote do SSMS.
+- **SSIS (Integration Services)** – compatibilidade com o agendamento do pacote do SSIS, localizado no Catálogo do SSIS no Azure ou no Sistema de Arquivos no Azure. Existem três entradas para iniciar a caixa de diálogo Agendamento, o item de menu *Nova Agenda…* mostrado ao clicar com o botão direito do mouse no pacote do Catálogo do SSIS no Azure; o item de menu *Agendar Pacote do SSIS no Azure* em *Migrar para o Azure* no item de menu *Ferramentas*; e "Agendar o SSIS no Azure", mostrado ao clicar com o botão direito do mouse na pasta Trabalhos no agente do SQL Server da Instância Gerenciada do Banco de Dados SQL do Azure.
 
 Para obter detalhes sobre as novidades desta versão, confira [notas sobre a versão do SSMS](release-notes-ssms.md).
 
-## <a name="supported-sql-offerings-ssms-180-ga"></a>Ofertas de SQL compatíveis (SSMS 18.0 GA)
+
+## <a name="supported-sql-offerings-ssms-181"></a>Ofertas de SQL compatíveis (SSMS 18.1)
 
 * Esta versão do SSMS funciona com todas as [versões com suporte do SQL Server 2008 – [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) e fornece o maior nível de suporte para trabalhar com os recursos de nuvem mais recentes no Banco de Dados SQL do Azure e SQL Data Warehouse do Azure.
 * Além disso, o SSMS 18.x pode ser instalado lado a lado com o SSMS 17.x, o SSMS 16.x ou o SSMS do SQL Server 2014 e anteriores.
 * SSIS (SQL Server Integration Services) – a versão SSMS 17.x ou posterior não permite a conexão com o serviço herdado do SQL Server Integration Services. Para conectar-se a uma versão anterior do Integration Services herdado, use a versão do SSMS alinhada com a versão do SQL Server. Por exemplo, use o SSMS 16.x para conectar ao serviço herdado do SQL Server Integration Services 2016. O SSMS 17.x e o SSMS 16.x podem ser instalados lado a lado no mesmo computador. Desde o lançamento do SQL Server 2012, o banco de dados de catálogo do SSIS, o SSISDB, é a maneira recomendada para armazenar, gerenciar, executar e monitorar os pacotes do Integration Services. Para obter detalhes, veja o [Catálogo do SSIS](../integration-services/catalog/ssis-catalog.md).
 
-## <a name="supported-operating-systems-ssms-180-ga"></a>Sistemas operacionais compatíveis (SSMS 18.0 GA)
+## <a name="supported-operating-systems-ssms-181"></a>Sistemas operacionais compatíveis (SSMS 18.1)
 
 Esta versão do SSMS é compatível com as seguintes plataformas de 64 bits quando usada com o service pack mais recente disponível:
 
@@ -103,10 +102,12 @@ Esta versão do SSMS é compatível com as seguintes plataformas de 64 bits quan
 
 > [!NOTE]
 > O SSMS é executado somente no Windows. Se você precisar de uma ferramenta que seja executada em plataformas diferentes do Windows, confira o Azure Data Studio. O Azure Data Studio é uma nova ferramenta multiplataforma executada no macOS, no Linux e no Windows. Para obter detalhes, veja [Azure Data Studio](../azure-data-studio/what-is.md).
-  
-## <a name="release-notes-ssms-180-ga"></a>Notas sobre a versão (SSMS 18.0 GA)
 
-- O **Assistente de Criação do SSIS Integration Runtime** mostra apenas os bancos de dados SQL em um locatário quando a conta do cliente pertence a mais de um locatário.
+## <a name="release-notes-ssms-181"></a>Notas sobre a versão (SSMS 18.1)
+
+Não há nenhum problema conhecido nesta versão.
+
+Para saber detalhes sobre esta versão, confira [as notas sobre a versão do SSMS](release-notes-ssms.md).
 
 ## <a name="previous-ssms-releases"></a>Versões anteriores do SSMS
 

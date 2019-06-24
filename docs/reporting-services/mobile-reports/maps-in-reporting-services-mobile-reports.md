@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c1fbb2ad5c2c652f5be04982ffaedb7eadea97be
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294774"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62683744"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Mapas nos relatórios móveis do Reporting Services
 Os mapas são uma ótima maneira de visualizar dados geográficos. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] fornece três tipos diferentes de visualização do mapa e mapas internos para continentes e uma série de países individuais. Você também pode [carregar e usar mapas personalizados](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
@@ -34,7 +34,7 @@ Os relatórios móveis do SQL Server oferecem três tipos diferentes de mapas, o
   
 1. Na guia **Layout** , selecione um tipo de mapa, arraste-o para a superfície de design e ajuste-o para o tamanho desejado.  
   
-2. Na exibição de **Layout** > painel **Propriedades Visuais** > **Mapa**, selecione a região específica do mapa que você precisa.  
+2. Na exibição **Layout** > painel **Propriedades Visuais** > **Mapa**, escolha a região específica do mapa que você precisa.  
   
    ![SSMRP_SelectMap](../../reporting-services/mobile-reports/media/ssmrp-selectmaps.png)  
   
@@ -63,7 +63,7 @@ Para exibir os dados reais no seu mapa, você precisa definir valores para pelo 
 3. Selecione as planilhas que você deseja e selecione **Importar**.  
    Você verá seus dados em [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)].  
   
-4. Nessa exibição de **Dados** > painel **Propriedades de Dados** > em **Chaves**, na caixa à esquerda, selecione a tabela que contém os dados do mapa e, na caixa da direita, selecione o campo-chave que corresponde às regiões do seu mapa.  
+4. Nessa exibição de **Dados** > painel **Propriedades de Dados** > em **Chaves**, na caixa à esquerda, escolha a tabela que contém os dados do mapa e, na caixa da direita, escolha o campo-chave que corresponde às regiões do seu mapa.  
   
 5. Em **Valores**, a mesma tabela já está na caixa à esquerda. Selecione o campo numérico cujos valores você deseja exibir no mapa.   
   

@@ -25,11 +25,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 31eda87e2a1934c5f18d73540a502880590445e8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207655"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051500"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -129,7 +129,7 @@ Ao tentar acessar o assembly especificado em \<client_assembly_specifier>, o [!I
   
 -   O binário de assembly está bem formado com metadados e segmentos de código válidos, e os segmentos de código têm instruções do Microsoft Intermediate Language (MSIL) válidas.  
   
--   O conjunto de assemblies do sistema ao qual ele faz referência é um dos assemblies a seguir, aos quais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte: Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll e System.Xml.Linq.dll. Outros assemblies de sistema podem ser referenciados, mas eles devem ser registrados explicitamente no banco de dados.  
+-   O conjunto de assemblies do sistema ao qual ele faz referência é um dos assemblies compatíveis com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a seguir: Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll e System.Xml.Linq.dll. Outros assemblies de sistema podem ser referenciados, mas eles devem ser registrados explicitamente no banco de dados.  
   
 -   Para assemblies criados usando os conjuntos de permissões SAFE ou EXTERNAL ACCESS:  
   
@@ -168,7 +168,7 @@ As seguintes permissões necessárias para criar um assembly CLR quando o `CLR s
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="example-a-creating-an-assembly-from-a-dll"></a>Exemplo A: Criando um assembly a partir de uma dll  
+### <a name="example-a-creating-an-assembly-from-a-dll"></a>Exemplo A: criar um assembly com base em uma dll  
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -183,7 +183,7 @@ WITH PERMISSION_SET = SAFE;
 > [!IMPORTANT]
 > O Banco de Dados SQL do Azure não é compatível com a criação de um assembly a partir de um arquivo.
   
-### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Exemplo B: Criando um assembly a partir de bits do assembly  
+### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Exemplo B: criar um assembly com base em bits do assembly  
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

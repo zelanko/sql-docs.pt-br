@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 56cb2a6a28e60aa34a2bb74d9d7c506f7d3b9523
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: d920d15bb633828dd2ad614c6789f397e229f0b5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403171"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797798"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Pooling de conexão com reconhecimento de driver no driver ODBC para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -49,8 +49,8 @@ Se uma das IDs de atributo de conexão ou palavras-chave de cadeia de conexão a
     |`AnsiNPW`|Sim|Sim|
     |`App`|Sim|Sim|
     |`ApplicationIntent`|Sim|Sim|  
-    |`Authentication`|Sim|não|
-    |`ColumnEncryption`|Sim|não|
+    |`Authentication`|Sim|Não|
+    |`ColumnEncryption`|Sim|Não|
     |`Database`|Sim|Sim|
     |`Encrypt`|Sim|Sim|  
     |`Failover_Partner`|Sim|Sim|
@@ -73,11 +73,11 @@ Se uma das IDs de atributo de conexão ou palavras-chave de cadeia de conexão a
     |`SQL_ATTR_CURRENT_CATALOG`|Sim|Sim|
     |`SQL_ATTR_PACKET_SIZE`|Sim|Sim|
     |`SQL_COPT_SS_ANSI_NPW`|Sim|Sim|
-    |`SQL_COPT_SS_ACCESS_TOKEN`|Sim|não|
-    |`SQL_COPT_SS_AUTHENTICATION`|Sim|não|
+    |`SQL_COPT_SS_ACCESS_TOKEN`|Sim|Não|
+    |`SQL_COPT_SS_AUTHENTICATION`|Sim|Não|
     |`SQL_COPT_SS_ATTACHDBFILENAME`|Sim|Sim|
     |`SQL_COPT_SS_BCP`|Sim|Sim|
-    |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Sim|não|
+    |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Sim|Não|
     |`SQL_COPT_SS_CONCAT_NULL`|Sim|Sim|
     |`SQL_COPT_SS_ENCRYPT`|Sim|Sim|
     |`SQL_COPT_SS_FAILOVER_PARTNER`|Sim|Sim|
@@ -88,7 +88,7 @@ Se uma das IDs de atributo de conexão ou palavras-chave de cadeia de conexão a
     |`SQL_COPT_SS_SERVER_SPN`|Sim|Sim|
     |`SQL_COPT_SS_TRUST_SERVER_CERTIFICATE`|Sim|Sim|
     |`SSPROP_AUTH_REPL_SERVER_NAME`|Sim|Sim|
-    |`SQL_COPT_SS_TNIR`|Sim|não|
+    |`SQL_COPT_SS_TNIR`|Sim|Não|
  
 -   O driver pode redefinir e ajustar as palavras-chave e os atributos de conexão a seguir sem fazer uma chamada de rede extra. O driver redefine esses parâmetros para garantir que a conexão não contenha informações incorretas.  
   

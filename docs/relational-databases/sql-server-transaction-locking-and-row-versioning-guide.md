@@ -18,11 +18,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6dd3633cfe8b51cebceac01c0a9b0e2f17ee999a
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62663244"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guia de Controle de Versão de Linha e Bloqueio de Transações
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -284,7 +284,7 @@ GO
 |Leitura não confirmada|O nível de isolamento mais baixo, no qual as transações só estão isoladas o bastante para assegurar que dados corrompidos fisicamente não são sejam lidos. Nesse nível, são permitidas leituras sujas, para que uma transação tenha acesso às alterações ainda não confirmadas de outras transações.|  
 |Leitura confirmada|Permite que uma transação leia dados lidos anteriormente (não modificados) por outra transação, sem esperar pela conclusão da primeira transação. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mantém bloqueios de gravação (adquiridos em dados selecionados) até o término da transação, mas os bloqueios de leitura são liberados assim que a operação SELECT é efetuada. Esse é o nível padrão do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].|  
 |Leitura repetida|O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mantém os bloqueios de gravação e leitura adquiridos em dados selecionados até o término da transação. Contudo, poderão ocorrer leituras fantasmas, pois os bloqueios de intervalo não são gerenciados.|  
-|Serializável|O nível mais alto, no qual as transações estão completamente isoladas umas das outras. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mantém os bloqueios de gravação e leitura adquiridos em dados selecionados para que sejam liberados ao final da transação. Os bloqueios de intervalo são adquiridos quando uma operação SELECT usa uma cláusula WHERE em intervalo, sobretudo para evitar leituras fantasmas.<br /><br /> **Observação:** Pode haver falha em operações e transações DDL em tabelas replicadas quando o nível de isolamento serializável é solicitado. Isso ocorre porque as consultas de replicação usam dicas que podem ser incompatíveis com o nível de isolamento serializável.|  
+|Serializável|O nível mais alto, no qual as transações estão completamente isoladas umas das outras. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mantém os bloqueios de gravação e leitura adquiridos em dados selecionados para que sejam liberados ao final da transação. Os bloqueios de intervalo são adquiridos quando uma operação SELECT usa uma cláusula WHERE em intervalo, sobretudo para evitar leituras fantasmas.<br /><br /> **Observação:** oode haver falha em operações e transações DDL em tabelas replicadas quando o nível de isolamento serializável é solicitado. Isso ocorre porque as consultas de replicação usam dicas que podem ser incompatíveis com o nível de isolamento serializável.|  
   
  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] também oferece suporte a dois níveis adicionais de isolamento da transação que usam controle de versão de linha. O primeiro consiste em uma implementação nova de isolamento de leitura confirmada e o segundo consiste em um nível de isolamento da transação novo, instantâneo.  
   
@@ -453,7 +453,7 @@ GO
   
  O bloqueio de intervalo de chave impede leituras fantasmas. Ao proteger os intervalos de chaves entre as linhas, ele também evita inserções fantasmas em um conjunto de registros acessado por uma transação.  
   
- Um bloqueio de intervalo de chave é colocado em um índice, especificando um valor de chave inicial e final. Esse bloqueio impede quaisquer tentativas de inserção, atualização ou exclusão de qualquer linha de um valor de chave que falhe no intervalo, pois essas operações primeiro teriam que obter um bloqueio no índice. Por exemplo, uma transação serializável pode emitir uma instrução SELECT que leia todas as linhas cujos valores das chaves estejam entre **'** AAA **'** e **'** CZZ **'**. Um bloqueio no intervalo de chave sobre o valor da chave de **'** AAA **'** até **'** CZZ **'** evita que outras transações insiram linhas com valores de chave em qualquer posição daquele intervalo, tais como **'** ADG **'**, **'** BBD **'**, ou **'** CAL **'**.  
+ Um bloqueio de intervalo de chave é colocado em um índice, especificando um valor de chave inicial e final. Esse bloqueio impede quaisquer tentativas de inserção, atualização ou exclusão de qualquer linha de um valor de chave que falhe no intervalo, pois essas operações primeiro teriam que obter um bloqueio no índice. Por exemplo, uma transação serializável pode emitir uma instrução SELECT que leia todas as linhas cujos valores das chaves estejam entre **'** AAA **'** e **'** CZZ **'** . Um bloqueio no intervalo de chave sobre o valor da chave de **'** AAA **'** até **'** CZZ **'** evita que outras transações insiram linhas com valores de chave em qualquer posição daquele intervalo, tais como **'** ADG **'** , **'** BBD **'** , ou **'** CAL **'** .  
   
 #### <a name="key_range_modes"></a> Modos de bloqueio de intervalo de chave  
  O bloqueio de intervalo de chave inclui um intervalo e um componente de linha especificados no formato intervalo-linha:  
@@ -509,7 +509,7 @@ GO
  Antes que o bloqueio de intervalo de chave possa ocorrer, as seguintes condições devem ser satisfeitas:  
   
 -   O nível de isolamento da transação deve ser definido como SERIALIZABLE.  
--   O processador de consulta deve usar um índice para implementar o predicado de filtro do intervalo. Por exemplo, a cláusula WHERE em uma instrução SELECT poderia estabelecer uma condição de intervalo com esse predicado: ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**. Um bloqueio de intervalo de chave só poderá ser adquirido se a **ColumnX** estiver coberta por uma chave de índice.  
+-   O processador de consulta deve usar um índice para implementar o predicado de filtro do intervalo. Por exemplo, a cláusula WHERE em uma instrução SELECT poderia estabelecer uma condição de intervalo com esse predicado: ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'** . Um bloqueio de intervalo de chave só poderá ser adquirido se a **ColumnX** estiver coberta por uma chave de índice.  
   
 #### <a name="examples"></a>Exemplos  
  A seguinte tabela e índice são usados como base para os exemplos de intervalo de chave que seguem.  
@@ -623,7 +623,7 @@ INSERT mytable VALUES ('Dan');
   
 -   **Recursos relacionados à execução de consultas paralelas** Threads de coordenador, produtor ou consumidor associados a uma porta de troca podem bloquear uns aos outros, provocando um deadlock, normalmente ao incluir pelo menos um outro processo que não faz parte da consulta paralela. Além disso, quando uma consulta paralela começa a ser executada, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] determina o grau de paralelismo, ou o número de threads de trabalho, com base na carga de trabalho atual. Se a carga de trabalho do sistema for alterada inesperadamente, por exemplo, quando novas consultas forem executadas no servidor ou o sistema ficar sem threads de trabalho, poderá ocorrer um deadlock.  
   
--   **Recursos MARS (conjunto de resultados ativos múltiplos)**. Esses recursos são usados para controlar a intercalação de várias solicitações ativas em MARS. Para obter mais informações, consulte [Usando MARS (vários conjuntos de resultados ativos)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+-   **Recursos MARS (conjunto de resultados ativos múltiplos)** . Esses recursos são usados para controlar a intercalação de várias solicitações ativas em MARS. Para obter mais informações, consulte [Usando MARS (vários conjuntos de resultados ativos)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
     -   **Recurso do usuário**. Quando um thread está esperando por um recurso que é potencialmente controlado por um aplicativo de usuário, o recurso é considerado como externo ou recurso de usuário e é tratado como um bloqueio.  
   
@@ -1236,7 +1236,7 @@ BEGIN TRANSACTION
 ##### <a name="performance-counters"></a>Contadores de desempenho  
  Os contadores de desempenho do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornecem informações sobre o desempenho do sistema afetado por processos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Os contadores de desempenho a seguir monitoram tempdb e o armazenamento de versão, bem como transações que usam controle de versão de linha. Os contadores de desempenho estão contidos no objeto de desempenho SQLServer:Transactions.  
   
- **Espaço livre em tempdb (KB)**. Monitora a quantidade, em KB (kilobytes), de espaço livre no banco de dados tempdb. Deve haver espaço livre suficiente em tempdb para processar o repositório de versão que dá suporte ao isolamento de instantâneo.  
+ **Espaço livre em tempdb (KB)** . Monitora a quantidade, em KB (kilobytes), de espaço livre no banco de dados tempdb. Deve haver espaço livre suficiente em tempdb para processar o repositório de versão que dá suporte ao isolamento de instantâneo.  
   
  A fórmula a seguir fornece uma estimativa aproximada do tamanho do armazenamento de versão. Para transações de longa execução, pode ser útil monitorar a taxa de geração e limpeza para calcular o tamanho máximo de armazenamento de versão.  
   
@@ -1244,7 +1244,7 @@ BEGIN TRANSACTION
   
  O tempo de execução mais longo das transações não deve incluir as compilações de índices online. Como essas operações podem demorar muito tempo em tabelas muito grandes, as compilações de índices online usam um armazenamento de versão separado. O tamanho aproximado do repositório de versão de compilação de índices online é igual à quantidade de dados modificados na tabela, incluindo todos os índices, enquanto a compilação de índices online estiver ativa.  
   
- **Tamanho do Repositório de Versão (KB)**. Monitora o tamanho em KB de todos os armazenamentos de versão. Essas informações ajudam a determinar a quantidade de espaço necessária no banco de dados tempdb para o armazenamento de versão. O monitoramento desse contador durante um determinado tempo fornece uma estimativa útil do espaço adicional necessário para tempdb.  
+ **Tamanho do Repositório de Versão (KB)** . Monitora o tamanho em KB de todos os armazenamentos de versão. Essas informações ajudam a determinar a quantidade de espaço necessária no banco de dados tempdb para o armazenamento de versão. O monitoramento desse contador durante um determinado tempo fornece uma estimativa útil do espaço adicional necessário para tempdb.  
   
  `Version Generation rate (KB/s)`. Monitora a taxa de geração de versão, em KB por segundo, em todos os repositórios de versão.  
   
@@ -1373,7 +1373,7 @@ ROLLBACK TRANSACTION
 GO  
 ```  
   
-#### <a name="b-working-with-read-committed-using-row-versioning"></a>b. Trabalhando com leituras confirmadas com o controle de versão de linha  
+#### <a name="b-working-with-read-committed-using-row-versioning"></a>B. Trabalhando com leituras confirmadas com o controle de versão de linha  
  Neste exemplo, uma transação de leitura confirmada que usa o controle de versão de linha é executada ao mesmo tempo que outra transação. A transação de leitura confirmada se comporta diferentemente de uma transação de instantâneo. Como uma transação de instantâneo, a transação de leitura confirmada lerá controles de versão de linhas, mesmo após a outra transação ter modificado os dados. Entretanto, diferentemente de uma transação de instantâneo, a transação de leitura confirmada:  
   
 -   Lerá os dados modificados depois que a outra transação confirmar as mudanças de dados.  

@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 625eccb976c500dcacaa5612ca41bac8b638fbed
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434438"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62516218"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "58434438"
   
 -   **Backups de instantâneo de arquivo de arquivos de banco de dados no Armazenamento de Blogs do Azure** Com o uso de instantâneos do Azure, os Backups de Instantâneo de Arquivo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornecem backups e restaurações instantâneos de arquivos de banco de dados armazenados por meio do serviço de armazenamento de Blobs do Azure. Essa funcionalidade permite que você simplifique as políticas de backup e restauração, e dá suporte à recuperação pontual. Para obter mais informações, consulte [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Esse recurso está disponível no SQL Server 2016 ou posterior.  
   
--   **Deixe o SQL Server gerenciar backups para o Microsoft Azure:** Configure o SQL Server para gerenciar a estratégia de backup e agende backups para um único banco de dados ou vários bancos de dados, ou defina valores padrão no nível da instância. Esse recurso é conhecido como **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**. Para obter mais informações, veja [Backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md). Esse recurso está disponível no SQL Server 2014 ou posterior.  
+-   **Deixe o SQL Server gerenciar backups para o Microsoft Azure:** Configure o SQL Server para gerenciar a estratégia de backup e agende backups para um banco de dados individual ou vários bancos de dados, ou defina valores padrão no nível da instância. Esse recurso é conhecido como **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** . Para obter mais informações, veja [Backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md). Esse recurso está disponível no SQL Server 2014 ou posterior.  
   
 ## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>Benefícios do uso do serviço Blob do Microsoft Azure para backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -51,14 +51,14 @@ ms.locfileid: "58434438"
   
      Além disso, o arquivo de backup que, agora, é armazenado no serviço de armazenamento de Blobs do Microsoft Azure está diretamente disponível para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] local ou outro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em execução em uma Máquina Virtual do Microsoft Azure, sem que seja necessário anexar/desanexar o banco de dados ou baixar e anexar o VHD.  
   
--   Benefícios de custo: Pague apenas pelo serviço usado. Pode ser tão econômico quanto uma opção de arquivamento externo e de backup. Consulte a seção [Considerações sobre cobrança do Microsoft Azure](#Billing) para obter mais informações e links.  
+-   Benefícios de custo: pague apenas pelo serviço usado. Pode ser tão econômico quanto uma opção de arquivamento externo e de backup. Consulte a seção [Considerações sobre cobrança do Microsoft Azure](#Billing) para obter mais informações e links.  
   
 ##  <a name="Billing"></a> Considerações sobre cobrança do Microsoft Azure:  
  Compreender os custos de armazenamento do Microsoft Azure habilita você a fazer uma previsão do custo da criação e do armazenamento de backups no Microsoft Azure.  
   
  A [calculadora de preços do Microsoft Azure](https://go.microsoft.com/fwlink/?LinkId=277060) pode ajudar a estimar os custos.  
   
- **Armazenamento:** Os encargos baseiam-se no espaço usado, e são calculados em uma escala graduada e no nível de redundância. Para obter mais detalhes e informações atualizadas, confira a seção **Gerenciamento de dados** do artigo [Detalhes de preço](https://go.microsoft.com/fwlink/?LinkId=277059) .  
+ **Armazenamento:** os encargos baseiam-se no espaço usado e são calculados em uma escala graduada e no nível de redundância. Para obter mais detalhes e informações atualizadas, confira a seção **Gerenciamento de dados** do artigo [Detalhes de preço](https://go.microsoft.com/fwlink/?LinkId=277059) .  
   
  **Transferências de dados:** as transferências de dados de entrada para o Microsoft Azure são gratuitas. As transferências de saída são cobradas de acordo com o uso da largura de banda e calculadas com base em uma escala graduada específica de região. Para obter mais detalhes, consulte a seção [Transferências de dados](https://go.microsoft.com/fwlink/?LinkId=277061) do artigo Detalhes do preço.  
   

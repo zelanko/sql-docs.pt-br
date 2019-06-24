@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2b2087165cc406971a6452298b672554a7c7994f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677545"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047867"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demonstração: aprimoramento do desempenho do OLTP na memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Para ver uma demonstração mais abrangente de possíveis aprimoramentos de dese
   
 1.  Use o SQL Server Management Studio (SSMS.exe) para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Qualquer outra ferramenta semelhante a SSMS.exe é aceitável.  
   
-2.  Crie manualmente um diretório chamado **C:\data\\**. O código Transact-SQL de exemplo espera que o diretório já exista.  
+2.  Crie manualmente um diretório chamado **C:\data\\** . O código Transact-SQL de exemplo espera que o diretório já exista.  
   
 3.  Execute o T-SQL curto para criar o banco de dados e seu grupo de arquivos com otimização de memória.  
   

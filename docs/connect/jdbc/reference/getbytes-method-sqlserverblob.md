@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: bea1b810-b5c1-466d-bdc4-561468214632
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 098937df965d9573701657ef6c2ec580de09daf3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9686d29f11f2357b983dce349e8e4dc5d13af664
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729734"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66804010"
 ---
 # <a name="getbytes-method-sqlserverblob"></a>Método getBytes (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public byte[] getBytes(long pos,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *POS*  
+ *pos*  
   
  A posição inicial, iniciando em 1 (não em 0).  
   
@@ -52,7 +52,7 @@ public byte[] getBytes(long pos,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getBytes é especificado pelo método getBytes na interface Java.  
+ Esse método getBytes é especificado pelo método getBytes na interface java.sql.Blob.  
   
  Se você tiver um BLOB de comprimento nulo ou zero e tentar obter exatamente zero bytes na posição 1, uma matriz **byte** vazia será retornada (matriz de bytes de comprimento 0).  
   

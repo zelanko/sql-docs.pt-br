@@ -12,13 +12,13 @@ helpviewer_keywords:
 - table-valued parameters, inserting data into
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: be4ecd3bfdf88029f56e86fb071edc51987a21b2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: c1edbe7d411e06e477db016db62b4245e0893aee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604586"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801160"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Inserindo dados em parâmetros com valor de tabela
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,15 +54,15 @@ ms.locfileid: "51604586"
   
  Para usar o modelo de pull, os consumidores precisam fornecer suas próprias implementações de um objeto do conjunto de linhas. Ao usar o modelo de pull com conjuntos de linhas de parâmetro com valor de tabela (CLSID_ROWSET_TVP), o consumidor é necessário para agregar o objeto de conjunto de linhas de parâmetro com valor de tabela que o provedor expõe por meio de ITableDefinitionWithConstraints:: CreateTableWithConstraints ou o método IOpenRowset:: OPENROWSET. Espera-se que o objeto do consumidor substitua a implementação da interface IRowset. Você deve substituir as seguintes funções:  
   
--   IRowset::  
+-   IRowset::GetNextRows  
   
 -   IRowset::AddRefRows  
   
--   IRowset:: GetData  
+-   IRowset::GetData  
   
--   IRowset:: Releaserows  
+-   IRowset::ReleaseRows  
   
--   :: RestartPosition  
+-   IRowset::RestartPosition  
   
  O OLE DB Driver for SQL Server lerá uma ou mais linhas por vez do objeto de conjunto de linhas do consumidor para dar suporte ao comportamento de streaming em parâmetros com valor de tabela. Por exemplo, o usuário pode ter os dados do conjunto de linhas de parâmetro com valor de tabela no disco (não na memória) e pode implementar a funcionalidade para ler dados do disco em caso de exigência do OLE DB Driver for SQL Server.  
   

@@ -17,10 +17,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 1906ad25e9bb170b8979f44757ec5742ad9ec6c4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66778051"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Usando o ADO com o OLE DB Driver for SQL Server
@@ -42,7 +42,7 @@ ms.locfileid: "66778051"
 
 -   `DataTypeCompatibility=80`  
 
- Para saber mais sobre palavras-chave da cadeia de conexão no OLE DB Driver para SQL Server, confira [Usando palavras-chave da cadeia de conexão com o OLE DB Driver para SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ Para saber mais sobre palavras-chave da cadeia de conexão do ADO com suporte no OLE DB Driver para SQL Server, confira [Usar palavras-chave da cadeia de conexão com o OLE DB Driver para SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
 
  Este é um exemplo do estabelecimento de uma cadeia de conexão ADO totalmente habilitada para funcionar com o OLE DB Driver for SQL Server, incluindo a habilitação do recurso MARS:  
 

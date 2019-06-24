@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1fa6c6e18620c0e80576e864eca246c524eb0c5d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 8aea7a5a74ae85563234c1f40f5faae1213e75de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601036"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789949"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>Baixar o driver ODBC para SQL Server
 
@@ -64,8 +64,8 @@ Consulte também [instalando o Driver](linux-mac/installing-the-microsoft-odbc-d
 - [Pacotes. DEB Debian 8](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
 
 #### <a name="redhat"></a>RedHat
-- [Pacotes do RedHat 7. rpm (msodbcsql-*)](https://packages.microsoft.com/rhel/7/prod/)
-- [Pacotes do RedHat 6. rpm (msodbcsql-*)](https://packages.microsoft.com/rhel/6.8/prod/)
+- [Pacotes do RedHat 7 .rpm (msodbcsql-*)](https://packages.microsoft.com/rhel/7/prod/)
+- [Pacotes do RedHat 6 .rpm (msodbcsql-*)](https://packages.microsoft.com/rhel/6.8/prod/)
 
 #### <a name="suse"></a>Suse
 - [Pacotes do SuSE 12. rpm (msodbcsql-*)](https://packages.microsoft.com/sles/12/prod/)
@@ -102,6 +102,6 @@ Consulte também [instalando o Driver](linux-mac/installing-the-microsoft-odbc-d
 
 ### <a name="linux"></a>Linux
 
-- **Red Hat Enterprise Linux 5 e 6 (64 bits)** - [Baixar o Microsoft ODBC Driver 11 for SQL Server – Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)
+- **Red Hat Enterprise Linux 5 e 6 (64 bits)**  - [Baixar o Microsoft ODBC Driver 11 for SQL Server – Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)
 
-- **SUSE Linux Enterprise 11 Service Pack 2 (64 bits)** - [Baixar a versão prévia do Microsoft ODBC Driver 11 for SQL Server – SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)
+- **SUSE Linux Enterprise 11 Service Pack 2 (64 bits)**  - [Baixar a versão prévia do Microsoft ODBC Driver 11 for SQL Server – SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)

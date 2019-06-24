@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: RowCount | Microsoft Docs'
+title: PDOStatement::rowCount | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0569f26a-2376-4c20-8813-bd3c87d0ae9f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c56756335848acf6daf53b90d083119b191d6c3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 3536458fd56bba8406a9210537f20e31f8718c09
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601976"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799104"
 ---
 # <a name="pdostatementrowcount"></a>PDOStatement::rowCount
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

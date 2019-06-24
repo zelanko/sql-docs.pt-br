@@ -1,5 +1,5 @@
 ---
-title: Tipos de cursor (Driver SQLSRV) | Microsoft Docs
+title: Tipos de cursor (SQLSRV Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f435b3f2308557654259395e296c07956a2c337
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 6452fc506814cdfdeee4f61085ec9a1ee0cededa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676134"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801484"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>Tipos de cursor (driver SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -122,7 +122,7 @@ sqlsrv_close( $conn );
 ## <a name="client-side-cursors-and-the-sqlsrv-driver"></a>Cursores do lado do cliente e o Driver SQLSRV  
 Cursores do lado do cliente são um recurso adicionado na versão 3.0 do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] que lhe permite armazenar em cache um conjunto na memória de resultados inteiro. Contagem de linhas está disponível depois que a consulta é executada ao usar um cursor do lado do cliente.  
   
-Cursores do lado do cliente devem ser usados para conjuntos de resultados pequeno a médio porte. Use cursores do lado do servidor para grandes conjuntos de resultados.  
+Os cursores do lado do cliente devem ser usados para conjuntos de resultados pequeno a médio porte. Use cursores do lado do servidor para grandes conjuntos de resultados.  
   
 Uma consulta retornará false se o buffer não é grande o suficiente para conter o conjunto de resultados inteiro. Você pode aumentar o tamanho do buffer até o limite de memória do PHP.  
   

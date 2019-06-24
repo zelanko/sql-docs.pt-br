@@ -10,11 +10,11 @@ author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
 ms.openlocfilehash: 5c82c32922712b377fd732b6745b1761e9f32a82
-ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55889997"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63126761"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Usando o Always Encrypted com o PHP Drivers for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,16 +24,16 @@ ms.locfileid: "55889997"
  
 ## <a name="introduction"></a>Introdução
 
-Este artigo fornece informações sobre como desenvolver aplicativos PHP usando [Always Encrypted (mecanismo de banco de dados)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) e o [Drivers de PHP para SQL Server](../../connect/php/Microsoft-php-driver-for-sql-server.md).
+Este artigo fornece informações sobre como desenvolver aplicativos PHP usando o [Always Encrypted (mecanismo de banco de dados)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) e o [PHP Drivers para SQL Server](../../connect/php/Microsoft-php-driver-for-sql-server.md).
 
 O Always Encrypted permite que os aplicativos cliente criptografem dados confidenciais e nunca revelem os dados nem as chaves de criptografia para o SQL Server ou o Banco de Dados SQL do Azure. Um driver habilitado para Always Encrypted, como o ODBC Driver for SQL Server, criptografa e descriptografa de modo transparente dados confidenciais no aplicativo cliente. O driver determina automaticamente quais parâmetros de consulta correspondem às colunas de banco de dados confidenciais (protegidas com o Always Encrypted) e criptografa os valores desses parâmetros antes de passar os dados para o SQL Server ou o Banco de Dados SQL do Azure. Da mesma forma, o driver descriptografa de modo transparente os dados recuperados das colunas de banco de dados criptografadas nos resultados da consulta. Para obter mais informações, veja [Always Encrypted (Mecanismo de Banco de Dados)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Os Drivers de PHP para SQL Server utilizam o ODBC Driver for SQL Server criptografar dados confidenciais.
 
 ## <a name="prerequisites"></a>Prerequisites
 
- -   Configure o Sempre Criptografado em seu banco de dados. Essa configuração envolve o provisionamento de chaves do Always Encrypted e a configuração de criptografia de colunas de banco de dados selecionadas. Se você ainda não tiver um banco de dados com o Sempre Criptografado configurado, siga as instruções em [Getting Started with Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)(Introdução ao Sempre Criptografado). Em particular, o banco de dados deve conter as definições de metadados para uma chave mestra de coluna (CMK), uma chave de criptografia de coluna (CEK) e uma tabela contendo uma ou mais colunas criptografadas usando esse CEK.
+ -   Configure o Sempre Criptografado em seu banco de dados. Essa configuração envolve o provisionamento de chaves do Always Encrypted e a configuração de criptografia de colunas de banco de dados selecionadas. Se você ainda não tiver um banco de dados com o Sempre Criptografado configurado, siga as instruções em [Getting Started with Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)(Introdução ao Sempre Criptografado). Em particular, seu banco de dados deve conter as definições de metadados para uma chave mestra de coluna (CMK), uma chave de criptografia de coluna (CEK) e uma tabela contendo uma ou mais colunas criptografadas usando esse CEK.
  -   Verifique se o que driver ODBC para SQL Server versão 17 ou posterior está instalado no computador de desenvolvimento. Para obter detalhes, consulte [ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
 
-## <a name="enabling-always-encrypted-in-a-php-application"></a>Habilitando o Always Encrypted em um aplicativo PHP
+## <a name="enabling-always-encrypted-in-a-php-application"></a>Habilitar o Always Encrypted em um Aplicativo do PHP
 
 A maneira mais fácil para habilitar a criptografia de parâmetros direcionados às colunas criptografadas e a descriptografia dos resultados da consulta é definindo o valor da palavra-chave da cadeia de conexão `ColumnEncryption` como `Enabled`. A seguir estão exemplos de habilitar o Always Encrypted em que os drivers SQLSRV e PDO_SQLSRV:
 
@@ -49,24 +49,24 @@ $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 
-Habilitar o sempre criptografado não é suficiente para a criptografia ou descriptografia seja bem-sucedida; Você também precisará ter certeza de que:
- -   O aplicativo tem as permissões de banco de dados VIEW ANY COLUMN MASTER KEY DEFINITION e VIEW ANY COLUMN ENCRYPTION KEY DEFINITION, necessárias para acessar os metadados sobre as chaves do Always Encrypted no banco de dados. Para obter detalhes, consulte [permissão de banco de dados](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
- -   O aplicativo pode acessar a CMK que protege os CEKs para as colunas criptografadas consultadas. Esse requisito depende do provedor de repositório de chaves que armazena a CMK. Para obter mais informações, consulte [trabalhando com repositórios de chaves mestras de coluna](#working-with-column-master-key-stores).
+Habilitar o Always Encrypted não é suficiente para o êxito da criptografia ou descriptografia. Do mesmo modo, é preciso ter certeza de que:
+ -   O aplicativo tem as permissões de banco de dados VIEW ANY COLUMN MASTER KEY DEFINITION e VIEW ANY COLUMN ENCRYPTION KEY DEFINITION, necessárias para acessar os metadados sobre as chaves do Always Encrypted no banco de dados. Para saber mais, confira [Permissão de banco de dados](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
+ -   O aplicativo pode acessar a CMK que protege as CEKs para as colunas criptografadas consultadas. Esse requisito depende do provedor de repositório de chaves que armazena a CMK. Para saber mais, confira [Como trabalhar com repositórios de chaves mestras de coluna](#working-with-column-master-key-stores).
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Recuperando e modificando dados em colunas criptografadas
 
-Depois de habilitar o Always Encrypted em uma conexão, você pode usar APIs do SQLSRV padrão (consulte [referência da API do Driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)) ou as APIs de PDO_SQLSRV (consulte [referência de API do Driver PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)) para recuperar ou modificar dados nas colunas de banco de dados criptografado. Supondo que seu aplicativo tem as permissões de banco de dados necessários e pode acessar a chave mestra de coluna, o driver criptografa todos os parâmetros que se destinam a colunas criptografadas e descriptografar os dados recuperados de colunas criptografadas, comportando-se de forma transparente para o aplicativo como se as colunas não foram criptografadas.
+Depois de habilitar o Always Encrypted em uma conexão, você pode usar APIs do SQLSRV padrão (consulte [referência da API do Driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)) ou as APIs de PDO_SQLSRV (consulte [referência de API do Driver PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)) para recuperar ou modificar dados nas colunas de banco de dados criptografado. Supondo que seu aplicativo tem as permissões de banco de dados e pode acessar a chave mestra de coluna, o driver criptografa quaisquer parâmetros de consulta que se destinam a colunas criptografadas e descriptografa os dados recuperados de colunas criptografadas, comportando-se de forma transparente para o aplicativo, como se as colunas não fossem criptografadas.
 
-Se o Always Encrypted não estiver habilitado, as consultas com parâmetros que se destinam a colunas criptografadas falharão. Os dados ainda podem ser recuperados de colunas criptografadas, desde que a consulta não tenha parâmetros que se destinem a colunas criptografadas. No entanto, o driver não tentará qualquer descriptografia e o aplicativo recebe os dados binários criptografados (como matrizes de bytes).
+Se o Always Encrypted não estiver habilitado, as consultas com parâmetros que se destinam a colunas criptografadas falharão. Os dados ainda podem ser recuperados de colunas criptografadas, desde que a consulta não tenha parâmetros que se destinem a colunas criptografadas. No entanto, o driver não tenta descriptografar nenhuma criptografia e o aplicativo recebe os dados binários criptografados (como matrizes de bytes).
 
 A tabela abaixo resume o comportamento das consultas dependendo se Always Encrypted está habilitado ou não:
 
 |Característica da consulta|O Sempre Criptografado está habilitado e o aplicativo pode acessar as chaves e os metadados da chave|O Sempre Criptografado está habilitado e o aplicativo não pode acessar as chaves nem os metadados da chave|O Sempre Criptografado está desabilitado|
 |---|---|---|---|
 |Parâmetros que se destinam a colunas criptografadas.|Os valores de parâmetro são criptografados de modo transparente.|Erro|Erro|
-|Recuperando dados de colunas criptografadas, sem parâmetros que se destinam a colunas criptografadas.|Os resultados das colunas criptografadas são descriptografados de modo transparente. O aplicativo recebe valores de coluna de texto sem formatação. |Erro|Os resultados das colunas criptografadas não são descriptografados. O aplicativo recebe valores criptografados como matrizes de bytes.|
+|Recuperando dados de colunas criptografadas, sem parâmetros que se destinam a colunas criptografadas.|Os resultados das colunas criptografadas são descriptografados de modo transparente. O aplicativo recebe valores de coluna de texto não criptografado. |Erro|Os resultados das colunas criptografadas não são descriptografados. O aplicativo recebe valores criptografados como matrizes de bytes.|
  
-Os exemplos a seguir ilustram como recuperar e modificar dados em colunas criptografadas. Os exemplos assumem uma tabela com o esquema a seguir. As colunas SSN e BirthDate estão criptografadas.
+Os exemplos a seguir ilustram como recuperar e modificar dados em colunas criptografadas. Por exemplo, considere uma tabela com o seguinte esquema. As colunas SSN e BirthDate estão criptografadas.
 ```
 CREATE TABLE [dbo].[Patients](
  [PatientId] [int] IDENTITY(1,1),
@@ -87,8 +87,8 @@ CREATE TABLE [dbo].[Patients](
 ### <a name="data-insertion-example"></a>Exemplo de inserção de dados
 
 Os exemplos a seguir demonstram como usar os drivers SQLSRV e PDO_SQLSRV para inserir uma linha na tabela pacientes. Observe os seguintes pontos:
- -   Não há nada específico de criptografia no código de exemplo. O driver detecta automaticamente e criptografa os valores dos parâmetros de SSN e BirthDate, que se destinam a colunas criptografadas. Esse mecanismo torna a criptografia transparente para o aplicativo.
- -   Os valores inseridos nas colunas de banco de dados, incluindo as colunas criptografadas, são passados como parâmetros associados. Embora o uso de parâmetros seja opcional ao enviar valores para colunas não criptografadas (mesmo que seja altamente recomendável, pois ajuda a prevenir a injeção de SQL), ele é necessário para valores que se destinam a colunas criptografadas. Se os valores inseridos nas colunas SSN ou BirthDate fossem passados como literais inseridos na instrução de consulta, a consulta falharia, pois o driver não tentará criptografar ou processar os literais em consultas. Como resultado, o servidor os rejeitaria como incompatíveis com as colunas criptografadas.
+ -   Não há nada específico de criptografia no código de exemplo. O driver detecta e criptografa automaticamente os valores dos parâmetros de SSN e BirthDate que se destinam a colunas criptografadas. Esse mecanismo torna a criptografia transparente para o aplicativo.
+ -   Os valores inseridos nas colunas de banco de dados, incluindo as colunas criptografadas, são passados como parâmetros associados. Embora o uso de parâmetros seja opcional ao enviar valores para colunas não criptografadas (mesmo que seja altamente recomendável, pois ajuda a prevenir a injeção de SQL), ele é necessário para valores que se destinam a colunas criptografadas. Se os valores inseridos nas colunas SSN ou BirthDate foram passados como literais inseridos na instrução de consulta, a consulta falha, pois o driver não tenta criptografar ou processar os literais em consultas. Como resultado, o servidor os rejeitaria como incompatíveis com as colunas criptografadas.
  -   Ao inserir valores usando os parâmetros de ligação, um tipo SQL que é idêntico ao tipo de dados da coluna de destino ou cuja conversão para o tipo de dados da coluna de destino é suportado deve ser passado para o banco de dados. Esse requisito existe porque o Always Encrypted dá suporte a algumas conversões de tipo (para obter detalhes, consulte [Always Encrypted (mecanismo de banco de dados)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)). Os dois drivers PHP, SQLSRV e PDO_SQLSRV, cada um tem um mecanismo para ajudar o usuário a determinar o tipo do valor de SQL. Portanto, o usuário não precisa fornecer o tipo SQL explicitamente.
   -   Para o driver SQLSRV, o usuário tem duas opções:
    -   Contar com o driver do PHP para determinar e definir o tipo correto do SQL. Nesse caso, o usuário deve usar `sqlsrv_prepare` e `sqlsrv_execute` para executar uma consulta parametrizada.
@@ -150,14 +150,14 @@ $stmt->bindParam(4, $birthDate);
 $stmt->execute();
 ```
 
-### <a name="plaintext-data-retrieval-example"></a>Exemplo de recuperação de dados de texto sem formatação
+### <a name="plaintext-data-retrieval-example"></a>Exemplo de recuperação de dados de texto não criptografado
 
 Os exemplos a seguir demonstram a filtragem de dados com base em valores criptografados e recuperando dados de texto sem formatação de colunas criptografadas usando os drivers SQLSRV e PDO_SQLSRV. Observe os seguintes pontos:
  -   O valor usado na cláusula WHERE a ser filtrado na coluna SSN precisa ser passado como um parâmetro using bind para que o driver possa criptografá-lo de modo transparente antes de enviá-lo ao servidor.
  -   Ao executar uma consulta com parâmetros associados, os drivers PHP determina automaticamente o tipo SQL para o usuário, a menos que o usuário especifica explicitamente o tipo SQL usando o driver SQLSRV.
  -   Todos os valores impressos pelo programa estão em texto não criptografado, já que o driver descriptografa de modo transparente os dados recuperados das colunas SSN e BirthDate.
  
-Observação: As consultas podem executar comparações de igualdade em colunas criptografadas somente se a criptografia é determinística. Para obter mais informações, confira [Seleção de criptografia determinística ou aleatória](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
+Observação: as consultas podem executar comparações de igualdade em colunas criptografadas somente se a criptografia for determinística. Para obter mais informações, confira [Seleção de criptografia determinística ou aleatória](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
 SQLSRV:
 ```
@@ -221,14 +221,14 @@ O Always Encrypted dá suporte a algumas conversões de tipos de dados criptogra
  -   Ao usar o driver SQLSRV com `sqlsrv_prepare` e `sqlsrv_execute` o tipo SQL, juntamente com o tamanho da coluna e o número de casas decimais do parâmetro é determinado automaticamente.
  -   Ao usar o driver PDO_SQLSRV para executar uma consulta, o tipo SQL com o tamanho da coluna e o número de casas decimais do parâmetro é determinado automaticamente
  -   Ao usar o driver SQLSRV com `sqlsrv_query` para executar uma consulta:
-  -   O tipo SQL do parâmetro seja exatamente o mesmo que o tipo da coluna de destino ou a conversão de um tipo SQL para o tipo da coluna é suportada.
+  -   O tipo SQL do parâmetro é exatamente o mesmo que o tipo da coluna de destino, ou a conversão de um tipo SQL para o tipo da coluna é suportada.
   -   A precisão e a escala dos parâmetros que se destinam às colunas dos tipos de dados `decimal` e `numeric` do SQL Server são iguais à precisão e à escala configuradas para a coluna de destino.
   -   A precisão dos parâmetros que se destinam às colunas dos tipos de dados `datetime2`, `datetimeoffset` ou `time` do SQL Server não é maior que a precisão da coluna de destino, em consultas que modificam a coluna de destino.
  -   Não use atributos de instrução PDO_SQLSRV `PDO::SQLSRV_ATTR_DIRECT_QUERY` ou `PDO::ATTR_EMULATE_PREPARES` em uma consulta parametrizada
  
 #### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>Erros devido à passagem de texto sem formatação em vez de valores criptografados
 
-Qualquer valor que tem como alvo uma coluna criptografada precisa ser criptografado antes de serem enviados ao servidor. Uma tentativa de inserir, modificar ou filtrar por um valor de texto não criptografado em uma coluna criptografada resulta em um erro. Para evitar esses erros, garanta que:
+Qualquer valor que se destina a uma coluna criptografada precisa ser criptografado antes de ser enviado ao servidor. Uma tentativa de inserir, modificar ou filtrar por um valor de texto não criptografado em uma coluna criptografada resulta em um erro. Para evitar esses erros, garanta que:
  -   Always Encrypted está habilitado (na cadeia de conexão, defina as `ColumnEncryption` palavra-chave para `Enabled`).
  -   Use o parâmetro de associação para enviar dados que se destinam a colunas criptografadas. O exemplo a seguir mostra uma consulta que filtra incorretamente por uma literal ou uma constante em uma coluna criptografada (SSN):
 ```
@@ -243,31 +243,31 @@ Como o Always Encrypted é uma tecnologia de criptografia do lado do cliente, a 
  
 ### <a name="round-trips-to-retrieve-metadata-for-query-parameters"></a>Viagens de ida e volta para recuperar metadados dos parâmetros de consulta
 
-Se o Always Encrypted estiver habilitado para uma conexão, por padrão, o ODBC Driver chamará [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) para cada consulta parametrizada, passando a instrução de consulta (sem nenhum valor de parâmetro) para o SQL Server. Esse procedimento armazenado analisa a instrução de consulta para descobrir se os parâmetros precisam ser criptografados e nesse caso, retorna as informações relacionadas à criptografia para cada parâmetro para permitir que o driver criptografá-los.
+Se o Always Encrypted estiver habilitado para uma conexão, por padrão, o ODBC Driver chamará [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) para cada consulta parametrizada, passando a instrução de consulta (sem nenhum valor de parâmetro) para o SQL Server. Este procedimento armazenado analisa a instrução de consulta para descobrir se os parâmetros precisam ser criptografados e, se for o caso, retorna as informações relacionadas à criptografia para cada parâmetro para permitir ao driver criptografá-los.
 
 Como os drivers PHP permite que o usuário associar um parâmetro em uma instrução preparada, sem fornecer a SQL tipo, ao associar um parâmetro em uma conexão de Always Encrypted habilitado, os Drivers de PHP chamar [SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md) sobre o parâmetro para obter o tipo SQL, o tamanho da coluna e os dígitos decimais. Os metadados, em seguida, é usado para chamar [SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md). Esses extras `SQLDescribeParam` chamadas não exigem extras viagens de ida e volta ao banco de dados como o Driver ODBC já tenha armazenado as informações no lado do cliente quando `sys.sp_describe_parameter_encryption` foi chamado.
 
-Os comportamentos anteriores garantir um alto nível de transparência para o aplicativo cliente (e o desenvolvedor do aplicativo) não precisa estar ciente de quais consultas acessam colunas criptografadas, desde que os valores que se destinam a colunas criptografadas são passados para o driver no parâmetros.
+Os comportamentos anteriores garantem um alto nível de transparência ao aplicativo cliente (e o desenvolvedor do aplicativo) não precisa estar ciente de quais consultas acessam colunas criptografadas, desde que os valores que se destinam às colunas criptografadas sejam passados para o driver nos parâmetros.
 
 Ao contrário do Driver ODBC para SQL Server, habilitando o Always Encrypted no nível de instrução/consulta-ainda não é suportado nos drivers PHP. 
 
 ### <a name="column-encryption-key-caching"></a>Cache de chaves de criptografia de coluna
 
-Para reduzir o número de chamadas para um repositório de chave mestra de coluna para descriptografar as chaves de criptografia de coluna (CEK), o driver armazena em cache o CEKs texto não criptografado na memória. Depois de receber a CEK criptografado (ECEK) dos metadados do banco de dados, o driver ODBC primeiro tenta encontrar a CEK texto sem formatação correspondente ao valor de chave criptografado no cache. O driver chama o repositório de chaves que contém a CMK somente se ele não é possível localizar o CEK de texto sem formatação correspondente no cache.
+Para reduzir o número de chamadas a um repositório de chaves mestras de coluna para descriptografar chaves de criptografia de coluna (CEK), o driver armazena CEKs de texto não criptografado na memória. Depois de receber a CEK criptografada (ECEK) dos metadados do banco de dados, o driver do ODBC primeiro tenta encontrar a CEK de texto não criptografado correspondente ao valor da chave criptografada no cache. O driver chama o repositório de chaves que contém a CMK somente se ele não conseguir localizar a CEK de texto não criptografado correspondente no cache.
 
-Observação: No Driver ODBC para SQL Server, as entradas no cache são removidas após um tempo limite de duas horas. Esse comportamento significa que, para um determinado ECEK, o driver entra em contato com o repositório de chaves apenas uma vez durante o tempo de vida do aplicativo ou a cada duas horas, o que for menor.
+Observação: no ODBC Driver para SQL Server, as entradas no cache são removidas após um tempo limite de duas horas. Esse comportamento significa que, para determinada ECEK, o driver entra em contato com o repositório de chaves apenas uma vez durante o tempo de vida do aplicativo, ou a cada duas horas, o que for menor.
 
 ## <a name="working-with-column-master-key-stores"></a>Trabalhando com repositórios de chaves mestras de coluna
 
-Para criptografar ou descriptografar dados, o driver precisa obter uma CEK que está configurada para a coluna de destino. CEKs são armazenados em formato criptografado (ECEKs) nos metadados do banco de dados. Cada CEK tem uma CMK correspondente que foi usada para criptografá-lo. O [metadados de banco de dados](../../t-sql/statements/create-column-master-key-transact-sql.md) não armazena a CMK em si; ele contém apenas o nome do repositório de chaves e informações que o repositório de chaves pode usar para localizar a CMK.
+Para criptografar ou descriptografar dados, o driver precisa obter uma CEK que é configurada para a coluna de destino. As CEKs são armazenadas em formato criptografado (ECEKs) nos metadados do banco de dados. Cada CEK tem uma CMK correspondente que foi usada para criptografá-la. Os [metadados de banco de dados](../../t-sql/statements/create-column-master-key-transact-sql.md) não armazenam a CMK em si. Eles contêm apenas o nome do repositório de chaves e as informações que o repositório de chaves pode usar para localizar a CMK.
 
-Para obter o valor de texto sem formatação de um ECEK, o driver primeiro obtém os metadados sobre a CEK e seu CMK correspondente e, em seguida, ele usa essas informações, entre em contato com o repositório de chaves que contém a CMK e solicitá-lo para descriptografar o ECEK. O driver se comunica com um repositório de chaves usando um provedor de repositório de chaves.
+Para obter o valor de texto não criptografado de uma ECEK, o driver primeiro obtém os metadados sobre a CEK e sua CMK correspondente e, em seguida, usa essas informações para entrar em contato com o repositório de chaves que contém a CMK e solicitar para descriptografar a ECEK. O driver se comunica com um repositório de chaves usando um provedor de repositório de chaves.
 
 Para o Microsoft Driver 5.3.0 para PHP para SQL Server, somente o Windows Certificate Store Provider e o Azure Key Vault têm suporte. Ainda não há suporte para o provedor de repositório de chaves que têm suporte no Driver ODBC (provedor de repositório de chaves personalizado).
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Uso do Provedor do Repositório de Certificados do Windows
 
-O Driver ODBC para SQL Server no Windows inclui um provedor de repositório de chaves mestras de coluna interna para a Store de certificado do Windows, chamado `MSSQL_CERTIFICATE_STORE`. (Esse provedor não está disponível no macOS ou Linux.) Com esse provedor, a CMK é armazenada localmente no computador cliente e nenhuma configuração adicional pelo aplicativo é necessária usá-lo com o driver. No entanto, o aplicativo deve ter acesso ao certificado e sua chave privada no repositório. Para obter mais informações, consulte [Create and Store Column Master Keys (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)Criar e armazenar chaves mestras de coluna (Always Encrypted).
+O ODBC Driver for SQL Server no Windows inclui um provedor de repositório de chaves mestras de coluna interno para o Repositório de Certificados do Windows chamado `MSSQL_CERTIFICATE_STORE`. (Esse provedor não está disponível no macOS ou no Linux.) Com esse provedor, a CMK é armazenada localmente no computador cliente e nenhuma configuração adicional pelo aplicativo é necessária para usá-la com o driver. No entanto, o aplicativo deve ter acesso ao certificado e sua chave privada no repositório. Para obter mais informações, consulte [Create and Store Column Master Keys (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)Criar e armazenar chaves mestras de coluna (Always Encrypted).
 
 ### <a name="using-azure-key-vault"></a>Como usar o Azure Key Vault
 
@@ -308,7 +308,7 @@ $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStor
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 
-## <a name="limitations-of-the-php-drivers-when-using-always-encrypted"></a>Limitações dos drivers de PHP ao usar o Always Encrypted
+## <a name="limitations-of-the-php-drivers-when-using-always-encrypted"></a>Limitações de drivers PHP ao usar o Always Encrypted
 
 SQLSRV e PDO_SQLSRV:
  -   Linux/macOS não dão suporte a Windows Certificate Store Provider

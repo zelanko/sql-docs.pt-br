@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b0e591b1-73e2-4f90-967f-5555eadfc3f1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 37d08855ff496811c82b39aa19fc05d85864d9b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 53ee00067de656065884f6b7a1da900fc59afeed
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627987"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796291"
 ---
 # <a name="iswrapperfor-method-sqlserverpreparedstatement"></a>Método isWrapperFor (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

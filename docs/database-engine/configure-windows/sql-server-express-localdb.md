@@ -17,12 +17,12 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
-ms.openlocfilehash: 562119dd258c996b070cdd2c16fd60ca27ffc424
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e4375d7b0ce19c5bb0f44a0be3b55e7b105b5a4e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794108"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145425"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -127,7 +127,7 @@ REM Gather information about the instance of LocalDB
 
 ### <a name="connect-to-a-shared-instance-of-localdb"></a>Para conectar-se a uma instância compartilhada do LocalDB
 
-Para conectar-se a uma instância compartilhada do LocalDB, adicione `.\` (ponto + barra invertida) à cadeia de conexão para fazer referência ao namespace reservado para instâncias compartilhadas. Por exemplo, para conectar-se a uma instância compartilhada do LocalDB denominada `AppData`, use uma cadeia de conexão como `(localdb).AppData` parte da cadeia de conexão. Um usuário que se conecta a uma instância compartilhada do LocalDB que não pertence a ele deve ter uma Autenticação do Windows ou um logon de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Para conectar-se a uma instância compartilhada do LocalDB, adicione `\.\` (barra invertida + ponto + barra invertida) à cadeia de conexão para fazer referência ao namespace reservado para instâncias compartilhadas. Por exemplo, para conectar-se a uma instância compartilhada do LocalDB denominada `AppData`, use uma cadeia de conexão como `(localdb)\.\AppData` parte da cadeia de conexão. Um usuário que se conecta a uma instância compartilhada do LocalDB que não pertence a ele deve ter uma Autenticação do Windows ou um logon de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## <a name="troubleshooting"></a>Solução de problemas
 

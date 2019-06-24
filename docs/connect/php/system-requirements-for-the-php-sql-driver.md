@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d53a3233d2e2af6aa9806cdea06b2a203e31bf89
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+manager: jroth
+ms.openlocfilehash: 0cea4c62c7976e1f6d84dc046abc1046179ef125
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658402"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803909"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Requisitos do sistema para os Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,7 +58,7 @@ A versão correta do Microsoft ODBC Driver para SQL Server é necessária no com
 
 Se você estiver baixando a versão do Windows do driver em uma versão de 64 bits do Windows, o instalador de ODBC 64-bit instala drivers ODBC de 32 bits e 64 bits. Se você usar uma versão de 32 bits do Windows, use o ODBC x86 instalador. Em plataformas não Windows, versões de 64 bits somente do driver estão disponíveis.
 
-|PHP para a versão do driver do SQL Server&#8594;<br />&#8595;Versão do Driver ODBC|5.6|5.3|5.2|4.3|4.0|3.2|3.1|
+|PHP para a versão do driver do SQL Server&#8594;<br />&#8595; Versão do ODBC Driver|5.6|5.3|5.2|4.3|4.0|3.2|3.1|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |ODBC Driver 17+ |S|S|S| | | | |
 |ODBC Driver 13.1|S|S|S|S|S| | |
@@ -276,7 +276,7 @@ No Windows, as seguintes versões do driver estão incluídas:
 |php_sqlsrv_55_ts.dll<br />php_pdo_sqlsrv_55_ts.dll|5.5|sim|php5ts.dll|  
 
 ## <a name="see-also"></a>Consulte Também  
-[Guia de Introdução com os Drivers da Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Introdução aos Drivers da Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [Guia de programação para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 

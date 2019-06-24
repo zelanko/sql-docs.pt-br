@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: a38bbf56613f0b06f874b5db4e4de03f0064492f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66783550"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>Método setTrustStore (SQLServerDataSource)
@@ -45,9 +45,9 @@ public void setTrustStore(java.lang.String trustStore)
   
 -   1. Um arquivo especificado pela propriedade do sistema JVM (Máquina Virtual Java) "javax.net.ssl.trustStore".  
   
--   2. Arquivo "\<java-home/lib/security/jssecacerts".  
+-   2. Arquivo "\<java-home>/lib/security/jssecacerts".  
   
--   3. Arquivo "\<java-home/lib/security/cacerts".  
+-   3. Arquivo "\<java-home>/lib/security/cacerts".  
   
  Para obter mais informações, consulte a documentação da interface do SunX509 TrustManager no site da Sun Microsystems.  
   

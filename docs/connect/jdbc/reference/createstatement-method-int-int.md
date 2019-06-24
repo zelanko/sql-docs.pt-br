@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 90dbf639-c3d8-4519-9300-5447c79aec17
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58390bfd2310b1cae9ce7427106c88a8e38915df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: df361da2387a053b9550c4b4e25dc94cced6579b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645364"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800635"
 ---
 # <a name="createstatement-method-int-int"></a>Método createStatement (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ public java.sql.Statement createStatement(int resultSetType,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método createStatement é especificado pelo método createStatement na interface do Connection.  
+ Esse método createStatement é especificado pelo método createStatement na interface java.sql.Connection.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método createStatement &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   

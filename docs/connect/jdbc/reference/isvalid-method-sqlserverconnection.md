@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3b0a8bbf-9369-4456-9ab8-1434ccacdd7e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 855a2fc8c6ff5a1cb9cee1db7504e0dd309113b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2868fb92161b5e3458e5c5e0dc72ebdef074b3e7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727444"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796317"
 ---
 # <a name="isvalid-method-sqlserverconnection"></a>Método isValid (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public boolean isValid(int timeout)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método isValid é especificado pelo método isValid na interface do Connection.  
+ Esse método isValid é especificado pelo método isValid na interface java.sql.Connection.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

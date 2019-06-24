@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42358e9e43e12a13c5b9e03b58df349b8f7a4231
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79be3e174e77648b4cbe908fa7d29f827bf4d3c5
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729446"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263502"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novidades no SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ O SQL Server Analysis Services 2017 apresenta vários aprimoramentos para modelo
 - Há suporte para o **Nível de compatibilidade 1400** para modelos de tabela. Para criar ou atualizar projetos de modelo de tabela novos ou existentes para o nível de compatibilidade 1400, baixe e instale o [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939). (CTP 1.1)
 - Uma experiência moderna do **Get Data** para modelos de tabela no nível de compatibilidade 1400. Consulte o [Blog da equipe do Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/). (CTP 1.1)
 - Propriedade **Ocultar Membros** para ocultar membros em branco em hierarquias desbalanceadas. (CTP 1.1)
-- Nova ação do usuário final **Linhas de Detalhes** para **Mostrar Detalhes** de informações agregadas. Funções [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) e **DETAILROWS** para criar expressões de Linhas de Detalhes. (CTP 1.1)
+- Nova ação do usuário final **Linhas de Detalhes** para **Mostrar Detalhes** de informações agregadas. Funções [SELECTCOLUMNS](/dax/selectcolumns-function-dax) e **DETAILROWS** para criar expressões de Linhas de Detalhes. (CTP 1.1)
 - Operador DAX **IN** para especificar vários valores. (CTP 1.1)
 
 Para obter mais informações, consulte [Novidades do SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).

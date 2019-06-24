@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8b369aafc68c7bf06ca56e325c036ffa0c7e4341
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515138"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639357"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ SET DATEFIRST 7 ;
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *number* | **@**_number_var_  
+ *number* |  **@** _number_var_  
  É um inteiro que indica o primeiro dia da semana. Pode ser um dos seguintes valores.  
   
 |Valor|O primeiro dia da semana é|  
@@ -68,7 +68,7 @@ SET DATEFIRST 7 ;
 |**4**|Quinta-feira|  
 |**5**|Sexta-feira|  
 |**6**|Sábado|  
-|**7** (padrão, EUA Inglês)|Domingo|  
+|**7** (padrão, EUA inglês)|Domingo|  
   
 ## <a name="remarks"></a>Remarks  
  Para visualizar a configuração atual de SET DATEFIRST, use a função [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md).  

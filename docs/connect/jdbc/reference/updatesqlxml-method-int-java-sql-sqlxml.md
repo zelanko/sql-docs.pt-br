@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b5170751-fbe1-433b-96f5-4f237ba55f60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 451e4bbd85e5e3743ac137da3b4a2257e6a8c53c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b7b602b0f23c1791ba76df3846fcc223716a0dd9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643855"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800188"
 ---
 # <a name="updatesqlxml-method-int-javasqlsqlxml"></a>Método updateSQLXML (int, java.sql.SQLXML)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

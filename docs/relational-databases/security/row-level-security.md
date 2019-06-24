@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bf464198a795a2ada5a6cb273754a2fb1945978
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.openlocfilehash: 0ba5cddf682ba9e3f9dfa6e5ef9b44ce7f9e5f4e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59476692"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140597"
 ---
 # <a name="row-level-security"></a>Segurança em nível de linha
 
@@ -250,6 +250,14 @@ ADD FILTER PREDICATE Security.fn_securitypredicate(SalesRep)
 ON dbo.Sales  
 WITH (STATE = ON);  
 ```
+
+Permitir permissões SELECT na função fn_securitypredicate 
+```sql
+GRANT SELECT ON security.fn_securitypredicate TO Manager;  
+GRANT SELECT ON security.fn_securitypredicate TO Sales1;  
+GRANT SELECT ON security.fn_securitypredicate TO Sales2;  
+```
+
 
 Agora teste o predicado de filtragem selecionando-o a partir da tabela Vendas como cada usuário.
 

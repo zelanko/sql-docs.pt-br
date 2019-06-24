@@ -21,11 +21,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d2e5e0cad34fdd9364868e5f9c2e4a02d460dba
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242259"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62506382"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurar páginas (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "54242259"
   
  Além disso, nem todos os erros de página precisam de restauração. Pode ocorrer um problema nos dados armazenados em cache, como um índice secundário, que pode ser resolvido pelo recálculo dos dados. Por exemplo, se o administrador de banco de dados cancela um índice secundário e o recria, os dados corrompidos, embora fixos, não são indicados como tal na tabela [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) .  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   A restauração de página se aplica a bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usam os modelos de recuperação completa ou bulk-logged. Só há suporte para restauração de página para grupos de arquivos de leitura/gravação.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "54242259"
   
 7.  Para restaurar as páginas listadas na grade de páginas, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Para especificar uma página em uma instrução RESTORE DATABASE, você precisará da ID do arquivo que contém a página e da ID da página. A sintaxe necessária é a seguinte:  
   
  `RESTORE DATABASE <database_name>`  

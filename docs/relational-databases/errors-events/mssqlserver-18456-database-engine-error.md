@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 627af74608a462cd336c6bb3775511bd5920eb11
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673585"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028867"
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51673585"
 |Texto da mensagem|Falha no logon do usuário '%.*ls'.%.\*ls|  
   
 ## <a name="explanation"></a>Explicação  
-Quando uma tentativa de conexão é rejeitada por causa de uma falha na autenticação que envolva uma senha ou um número de usuário incorreto, uma mensagem semelhante à seguinte é retornada ao cliente: "Falha no logon do usuário '<nome_do_usuário>'. (Microsoft SQL Server, Erro: 18456)".  
+Quando uma tentativa de conexão é rejeitada por causa de uma falha na autenticação que envolva uma senha ou um nome de usuário incorreto, uma mensagem semelhante à seguinte é retornada ao cliente:  “Falha no logon do usuário '<nome_do_usuário>'. (Microsoft SQL Server, Erro: 18456)".  
   
 Informações adicionais voltadas ao cliente incluem o seguinte:  
   
@@ -44,13 +44,13 @@ Informações adicionais voltadas ao cliente incluem o seguinte:
   
 "Nome do servidor: <nome_do_computador>"  
   
-“Número do erro: 18456”  
+"Número do erro: 18456"  
   
 "Severidade: 14"  
   
-“Estado: 1”  
+"Estado: 1"  
   
-“Número de linha: 65536”  
+"Número de Linha: 65536"  
   
 A mensagem seguinte também poderá ser retornada:  
   
@@ -100,7 +100,7 @@ Neste exemplo, o estado do erro de autenticação é 8. Isso indica que a senha 
 |2007-12-05 20:12:56.34|Logon|Falha no logon do usuário '<nome_do_usuário>'. [CLIENTE: <ip address>]|  
   
 > [!NOTE]  
-> Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado usando o modo de Autenticação do Windows e depois alterado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o modo de Autenticação do Windows, o logon **sa** é inicialmente desabilitado. Isso provoca o erro de estado 7: "Falha no logon do usuário 'sa'". Para habilitar o logon **sa**, consulte [Alterar modo de autenticação do servidor](~/database-engine/configure-windows/change-server-authentication-mode.md).  
+> Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado usando o modo de Autenticação do Windows e depois alterado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o modo de Autenticação do Windows, o logon **sa** é inicialmente desabilitado. Isso causa o erro de estado 7: "Falha no logon do usuário 'sa'." Para habilitar o logon **sa**, consulte [Alterar modo de autenticação do servidor](~/database-engine/configure-windows/change-server-authentication-mode.md).  
   
 ## <a name="user-action"></a>Ação do usuário  
 Se você estiver tentando se conectar usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verifique se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado no Modo de Autenticação Mista.  
@@ -115,5 +115,5 @@ Se você estiver tentando se conectar usando suas credenciais de administrador, 
   
 Se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] oferecer suporte a bancos de dados independentes, confirme que o logon não foi excluído após a migração para um usuário de banco de dados independente.  
   
-Durante a conexão local a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as conexões de serviços executados em **NT AUTHORITY\NETWORK SERVICE** deverão ser autenticadas com o uso do nome de domínio totalmente qualificado dos computadores. Para obter mais informações, consulte [Como usar a conta de serviço de rede para acessar recursos no ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx)  
+Durante a conexão local a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as conexões de serviços executados em **NT AUTHORITY\NETWORK SERVICE** deverão ser autenticadas com o uso do nome de domínio totalmente qualificado dos computadores. Para saber mais, confira [Como usar a conta de serviço de rede para acessar recursos no ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx)  
   

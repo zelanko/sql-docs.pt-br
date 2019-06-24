@@ -1,5 +1,5 @@
 ---
-title: Campo TYPE_SS_SERVER_CURSOR_FORWARD_ONLY (SQLServerResultSet) | Microsoft Docs
+title: TYPE_SS_SERVER_CURSOR_FORWARD_ONLY Field (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 16370bc2-6ec1-402d-83f6-213a6831d2ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9426dcf3f4238c6f72b731e6623bc32c69785887
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1317188674a59097a340e07ac1254d327962aac2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765414"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799060"
 ---
 # <a name="typessservercursorforwardonly-field-sqlserverresultset"></a>Campo TYPE_SS_SERVER_CURSOR_FORWARD_ONLY (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

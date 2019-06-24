@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 0610d667-a16d-4201-a14b-0a40048911e1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bdea6926543bd95fa66c4b73a48736a3b685859e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 26c1630042b4f33230f37ec979de7bfa643b283b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810084"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802606"
 ---
 # <a name="gettableprivileges-method-sqlserverdatabasemetadata"></a>Método getTablePrivileges (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +57,7 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getTablePrivileges é especificado pelo método getTablePrivileges na interface DatabaseMetadata.  
+ Esse método getTablePrivileges é especificado pelo método getTablePrivileges na interface java.sql.DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getTablePrivileges conterá as seguintes informações:  
   

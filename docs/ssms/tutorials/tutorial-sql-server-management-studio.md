@@ -23,12 +23,12 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf2776df77af8f4ba5fec9595d6ba9cddf927f7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7756482734dac8d4d5982b0ab6d5d58942065697
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65620516"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263518"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Tutoriais do SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ Os tutoriais abordarão o seguinte:
 
     Neste tutorial, você aprenderá a gerar scripts de vários objetos no SSMS, incluindo bancos de dados e consultas. 
 
-- [Tutorial: Usar modelos no SSMS](templates-ssms.md)
+- [Tutorial: Usar modelos no SSMS](../template/templates-ssms.md)
    
     Neste tutorial, você aprenderá como trabalhar com os Modelos predefinidos no SSMS. Os modelos são um recurso pouco conhecido que armazenam diversos snippets de código Transact-SQL para várias tarefas de administração de banco de dados. 
 

@@ -11,10 +11,10 @@ ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 77590da41aa09f66d7549a0d7ff615cdb3f63af3
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506639"
 ---
 # <a name="create-a-linked-report"></a>Criar um relatório vinculado
@@ -32,7 +32,7 @@ ms.locfileid: "66506639"
 
 2. Sobre o **Manage <reportname>**  página, selecione **criar relatório vinculado**.  
   
-3. Digite um nome para o novo relatório vinculado. Opcionalmente, insira uma descrição.  
+3. Insira um nome para o novo relatório vinculado. Opcionalmente, insira uma descrição.  
   
 4. Para selecionar uma pasta diferente para o relatório, selecione o botão de reticências (...) à direita da vírgula ***local***.  Navegue até a nova pasta para o relatório e selecione **selecionar**. Se você não selecionar uma pasta diferente, o relatório vinculado é criado na pasta atual.  
   

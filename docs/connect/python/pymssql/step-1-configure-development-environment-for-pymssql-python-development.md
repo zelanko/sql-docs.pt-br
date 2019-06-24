@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 623b4bf9a88031cf891e88f75c30b06716bb27ff
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 9d74e3ce2f7db91aca295dcb7507431a82e49c8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605016"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803871"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Etapa 1: configurar o ambiente de desenvolvimento para o desenvolvimento Python pymssql
 Você precisará configurar seu ambiente de desenvolvimento com os pré-requisitos para desenvolver um aplicativo usando o Driver Python para SQL Server.    

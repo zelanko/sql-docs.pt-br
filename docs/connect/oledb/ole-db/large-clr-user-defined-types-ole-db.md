@@ -12,13 +12,13 @@ helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: b5c071a36cebacc8ce0dea5c1633bf3f92b28599
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 2af61fea9909597736769eb3d28fda43753a800b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409603"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795982"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipos definidos pelo usuário CLR grandes (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,18 +56,18 @@ ms.locfileid: "52409603"
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  As informações retornadas na estrutura DBPARAMINFO por meio de **prgParamInfo** são as seguintes:  
   
-|Tipo de parâmetro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* se DBPARAMFLAGS_ISLONG|  
+|Tipo de parâmetro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|"DBTYPE_UDT"|*n*|não definido|não definido|clear|  
-|DBTYPE_UDT<br /><br /> (comprimento maior que 8.000 bytes)|"DBTYPE_UDT"|~ 0|não definido|não definido|set|  
+|DBTYPE_UDT<br /><br /> (comprimento maior que 8.000 bytes)|"DBTYPE_UDT"|~0|não definido|não definido|set|  
   
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  As informações fornecidas na estrutura DBPARAMBINDINFO devem estar de acordo com o seguinte:  
   
-|Tipo de parâmetro|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* se DBPARAMFLAGS_ISLONG|  
+|Tipo de parâmetro|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|DBTYPE_UDT|*n*|ignorado|ignorado|Deve ser definido se o parâmetro for passado usando DBTYPE_IUNKNOWN.|  
-|DBTYPE_UDT<br /><br /> (comprimento maior que 8.000 bytes)|DBTYPE_UDT|~ 0|ignorado|ignorado|ignorado|  
+|DBTYPE_UDT<br /><br /> (comprimento maior que 8.000 bytes)|DBTYPE_UDT|~0|ignorado|ignorado|ignorado|  
   
 ## <a name="isscommandwithparameters"></a>ISSCommandWithParameters  
  Os aplicativos usam **ISSCommandWithParameters** para obter e definir as propriedades de parâmetro definidas na seção Propriedades de parâmetro.  
@@ -78,7 +78,7 @@ ms.locfileid: "52409603"
 |Tipo de coluna|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
 |DBTYPE_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|DBTYPE_UDT|*n*|NULL|NULL|Liberada|DB_ALL_EXCEPT_LIKE|n|  
-|DBTYPE_UDT<br /><br /> (comprimento maior que 8.000 bytes)|DBTYPE_UDT|~ 0|NULL|NULL|Defina|DB_ALL_EXCEPT_LIKE|0|  
+|DBTYPE_UDT<br /><br /> (comprimento maior que 8.000 bytes)|DBTYPE_UDT|~0|NULL|NULL|Defina|DB_ALL_EXCEPT_LIKE|0|  
   
  As seguintes colunas também são definidas para UDTs:  
   
@@ -94,8 +94,8 @@ ms.locfileid: "52409603"
   
 |Tipo de parâmetro|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
-|DBTYPE_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|DBTYPE_UDT|*n*|~ 0|~ 0|Liberada|  
-|DBTYPE_UDT<br /><br /> (comprimento maior que 8.000 bytes)|DBTYPE_UDT|~ 0|~ 0|~ 0|Defina|  
+|DBTYPE_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|DBTYPE_UDT|*n*|~0|~0|Liberada|  
+|DBTYPE_UDT<br /><br /> (comprimento maior que 8.000 bytes)|DBTYPE_UDT|~0|~0|~0|Defina|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>Conjunto de linhas COLUMNS (conjuntos de linhas de esquema)  
  Os seguintes valores de coluna são retornados para tipos UDT:  

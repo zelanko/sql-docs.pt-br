@@ -12,15 +12,15 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 82125679283a67006ed93bcd0d8355e2aaaf3d07
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66770663"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Para baixar o driver ODBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Para baixar o ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 O ADO.NET é a principal tecnologia de acesso de dados para linguagens .NET. Use o namespace System.Data.SqlClient para acessar o SQL Server ou provedores de outros fornecedores para acessar seus armazenamentos. Use System.Data.Odbc ou System.Data.Oledb em linguagens .NET para acessar dados usando outras tecnologias de acesso a dados. Use System.Data.Dataset quando precisar de um cache de dados offline em aplicativos cliente. Ele também fornece recursos XML e de persistência local que podem ser úteis em serviços Web.  
   

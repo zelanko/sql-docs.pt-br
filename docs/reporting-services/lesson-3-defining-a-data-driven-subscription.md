@@ -1,26 +1,26 @@
 ---
 title: 'Lição 3: Definindo uma assinatura controlada por dados | Microsoft Docs'
-ms.date: 05/26/2016
+ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4de4f510bcb584e0ec409f89eaba8c13ba6d8c6e
-ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54457649"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826861"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lição 3: Definindo uma assinatura controlada por dados
-Nesta lição do tutorial do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , você usa as páginas da assinatura controlada por dados dos portais da Web do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para se conectar a uma fonte de dados de assinatura, criar uma consulta que recupera dados de assinatura e mapear o conjunto de resultados para opções de relatório e entrega.  
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+Nesta lição do tutorial do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)], você usa as páginas da assinatura controlada por dados dos portais da Web do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para se conectar a uma fonte de dados de assinatura, criar uma consulta que recupera dados de assinatura e mapear o conjunto de resultados para opções de relatório e entrega.  
   
 > [!NOTE]  
 > Antes de começar, verifique se o serviço **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent** está em execução. Se não estiver, não será possível salvar a assinatura.  Um método de verificação é abrir o [Gerenciador de Configuração do SQL Server](../relational-databases/sql-server-configuration-manager.md).
-Esta lição pressupõe que você concluiu a Lição 1 e Lição 2, e que a fonte de dados de relatório usa credenciais armazenadas.  Para obter mais informações, veja [Lição 2: Modificar as propriedades de fonte de dados de relatório](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+Esta lição pressupõe que você concluiu a Lição 1 e Lição 2, e que a fonte de dados de relatório usa credenciais armazenadas.  Para obter mais informações, consulte [Lição 2: modificando as propriedades da fonte de dados do relatório](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
 ## <a name="bkmk_startwizard"></a>Iniciar o Assistente de Assinatura Controlada por Dados  
   
@@ -28,7 +28,7 @@ Esta lição pressupõe que você concluiu a Lição 1 e Lição 2, e que a font
   
 2.  No menu de contexto ![ssrs_tutorial_datadriven_reportmenu](../reporting-services/media/ssrs-tutorial-datadriven-reportmenu.png) do relatório, clique em **Gerenciar**e clique em **Assinaturas** no painel esquerdo.  
   
-3.  Clique em **+ Nova Assinatura**. Se este botão não estiver visível, você não tem permissões do Gerenciador de Conteúdo. 
+3. Clique em **+ Nova Assinatura**. Se este botão não estiver visível, você não tem permissões do Gerenciador de Conteúdo.
   
 ## <a name="define-a-description"></a>Definir uma descrição  
 1.  Digite **Entrega de ordem de venda** na descrição.
@@ -39,9 +39,10 @@ Esta lição pressupõe que você concluiu a Lição 1 e Lição 2, e que a font
 ## <a name="schedule"></a>Agenda
 1. Na seção de agendamento, clique em **Agendamento específico do relatório**.
 2. Clique em **Editar agendamento**.
-3.  Em **Detalhes do Agendamento**, clique em **Uma vez**.  
-4.  Especifique uma hora de início que esteja alguns minutos adiantados da hora atual.  
-5.  Clique em **Aplicar**.
+3. Em **Detalhes do Agendamento**, clique em **Uma vez**.  
+4. Especifique uma hora de início que esteja alguns minutos adiantados da hora atual.  
+5. Especifique o **datas de início e término**.
+6. Escolha **Aplicar**.
 
 ## <a name="destination"></a>Destino  
 1.  Na seção Destino, selecione **Compartilhamento de Arquivos do Windows** como o método de entrega.  
@@ -67,7 +68,7 @@ Esta lição pressupõe que você concluiu a Lição 1 e Lição 2, e que a font
 ## <a name="query"></a>Consulta      
 1.  Na caixa de consulta, digite a seguinte consulta:  
   
-    ```sql
+    ```
     Select * from OrderInfo  
     ```  
   
@@ -85,22 +86,24 @@ Parâmetro  |Origem do valor  | Valor/campo
 **Formato de renderização** | Obter valor do conjunto de dados | Formato
 **Modo de gravação**| Inserir valor| Incremento automático    
 **Extensão do arquivo** |Inserir valor |True
-**Nome de Usuário** | Inserir valor | Digite sua conta de usuário de domínio. Insira-o neste formato: \<domain>\\\<account>. A conta de usuário precisa ter permissões para o caminho configurado. 
+**Nome do Usuário** | Inserir valor | Digite sua conta de usuário de domínio. Insira-o neste formato: \<domain>\\\<account>. A conta de usuário precisa ter permissões para o caminho configurado. 
 **Senha** | Inserir valor | Digite sua senha
+**Usar conta de compartilhamento de arquivo** | Inserir valor | Falso
 
 ## <a name="report-parameters"></a>Parâmetros de relatório
  1. No campo **OrderNumber** , selecione **Obter valor do conjunto de dados**. Em Valor, selecione **Pedido**. 
- 2. Clique em **Criar Assinatura**.
+ 2. Escolha **Criar assinatura**.
    
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
 Quando a assinatura é executada, quatro arquivos de relatórios são entregues no compartilhamento de arquivos especificado, um para cada pedido na fonte de dados *Assinantes* . Cada entrega deve ser exclusiva em termos de dados (os dados devem ser específicos do pedido), formato de renderização e formato de arquivo. Você pode abrir cada relatório da pasta compartilhada para verificar se cada versão está personalizada com base nas opções de assinatura definidas.  
   
 ![Lista de arquivos criados pela assinatura](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Lista de arquivos criados pela assinatura")  
   
 A página de assinatura no portal da Web conterá a data da **Última Execução** e o **Status** da assinatura. 
-**Observação:** Atualize a página depois que a assinatura for executada para consultar as informações atualizadas.  
+> [!NOTE]
+> Atualize a página depois que a assinatura for executada para consultar as informações atualizadas.  
     
-![Resultados da assinatura no Gerenciador de Relatórios](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Resultados da assinatura no Gerenciador de Relatórios")  
+![Resultados da assinatura no portal da web](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "resultados da assinatura no portal da web")  
   
 Esta etapa conclui o tutorial “Definir uma assinatura controlada por dados”.   
   
@@ -110,6 +113,3 @@ Esta etapa conclui o tutorial “Definir uma assinatura controlada por dados”.
 [Criar, modificar e excluir assinaturas controladas por dados](../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
 [Usar uma fonte de dados externa para obter dados de assinante &#40;Assinatura controlada por dados&#41;](../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
-  
-  
-

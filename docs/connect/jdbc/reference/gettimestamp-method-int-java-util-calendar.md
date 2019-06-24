@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 161c559a-8651-44ba-a914-15eb6a612417
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fc078598377ec7a866b90d68677cfd9302b6263a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9f48f135f42c0e738f13d4e59f0be49589f32057
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673144"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66778621"
 ---
 # <a name="gettimestamp-method-int-javautilcalendar"></a>Método getTimestamp (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public java.sql.Timestamp getTimestamp(int index,
   
  Um **int** que indica o índice do parâmetro.  
   
- *CAL*  
+ *cal*  
   
  Um objeto de calendário.  
   

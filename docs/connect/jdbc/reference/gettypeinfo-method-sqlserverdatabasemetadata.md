@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40ca58f33dec39a1ec6d39979c7f6f0103acf8b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 246f38d757015dbc2a27bea8f9d783b4fbb1d545
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682714"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66788626"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>Método getTypeInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public java.sql.ResultSet getTypeInfo()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getTypeInfo é especificado pelo método getTypeInfo na interface DatabaseMetadata.  
+ Esse método getTypeInfo é especificado pelo método getTypeInfo na interface java.sql.DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getTypeInfo conterá as seguintes informações:  
   

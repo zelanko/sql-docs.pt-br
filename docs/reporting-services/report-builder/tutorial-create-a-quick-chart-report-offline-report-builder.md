@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 429ee4c7dcd0b6d58b2cbb3e223e8f7407339327
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 72e6846ef10bc86c1711958e144601d8bff5caac
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571767"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67037962"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Criar um relatório de gráfico rápido offline (Construtor de Relatórios)
 
@@ -105,7 +105,7 @@ ms.locfileid: "65571767"
     </Query>  
     ```  
   
-11. (Opcional) Clique no botão **Executar** (**!**) para ver os dados em que o gráfico se baseará.  
+11. (Opcional) Clique no botão **Executar** ( **!** ) para ver os dados em que o gráfico se baseará.  
   
      ![Consulta de design do Construtor de Relatórios](../../reporting-services/report-builder/media/rb-designquery.png "Consulta de design do Construtor de Relatórios")  
   
@@ -169,7 +169,7 @@ ms.locfileid: "65571767"
     UNION SELECT 450 AS Sales, 'Ranjit Varkey' AS FullName   
     ```  
   
-8.  (Opcional) Clique no botão Executar (**!**) para ver os dados em que o gráfico se baseará.  
+8.  (Opcional) Clique no botão Executar ( **!** ) para ver os dados em que o gráfico se baseará.  
   
 9. Clique em **Avançar**.  
   
@@ -207,7 +207,7 @@ Observe que a superfície de design fica maior à medida que você arrasta.
   
 2.  Clique com o botão direito do mouse nos rótulos e selecione **Propriedades do Rótulo de Série**. A caixa de diálogo **Propriedades do Rótulo de Série** é exibida.  
   
-3.  Na caixa **Rotular dados**, digite **#PERCENT{P0}**.  
+3.  Na caixa **Rotular dados**, digite **#PERCENT{P0}** .  
   
      O **{P0}** fornece o percentual sem casas decimais. Se você digitar apenas **#PERCENT**, os números terão duas casas decimais. **#PERCENT** é uma palavra-chave que executa um cálculo ou uma função para você; há muitas outras.  
      
@@ -226,7 +226,7 @@ Observe que a superfície de design fica maior à medida que você arrasta.
   
  Finalmente, para salvar seus relatórios em um servidor de relatório ou site do SharePoint integrado a um servidor de relatório, você precisa da URL e de permissões. Você pode executar qualquer relatório que criar diretamente de seu computador, mas os relatórios têm mais funcionalidade quando executados no servidor de relatório ou site do SharePoint. Você precisa de permissões para executar seus relatórios ou de outras pessoas no servidor de relatório ou site do SharePoint em que eles foram publicados. Fale com o administrador do sistema para obter acesso.  
   
- Talvez seja útil ler sobre alguns dos conceitos e termos antes de começar. Consulte [Conceitos da criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). Além disso, dedique algum tempo ao planejamento, antes de criar seu primeiro relatório. Esse será um tempo bem gasto. Veja [Planejando um relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
+ Talvez seja útil ler sobre alguns dos conceitos e termos antes de começar. Confira [Conceitos do Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md). Além disso, dedique algum tempo ao planejamento, antes de criar seu primeiro relatório. Esse será um tempo bem gasto. Veja [Planejando um relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
 
 ## <a name="next-steps"></a>Próximas etapas
 

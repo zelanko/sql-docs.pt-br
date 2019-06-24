@@ -12,12 +12,12 @@ ms.date: 02/13/2018
 ms.author: giladm
 author: giladm
 manager: shaik
-ms.openlocfilehash: 18495f81289981d4ce5a72ac943150bfea4c4f3d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e3df41240791d01beb1214f3f5b150bdba618420
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539118"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316688"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Descoberta e classificação de dados SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,12 +43,11 @@ A classificação inclui dois atributos de metadados:
 * Rótulos – os atributos de classificação principais, usados para definir o nível de confidencialidade dos dados armazenados na coluna.  
 * Tipos de informações – fornecem uma granularidade adicional para o tipo dos dados armazenados na coluna.
 
-<br>
 **Para classificar o banco de dados do SQL Server:**
 
 1. No SSMS (SQL Server Management Studio), conecte-se ao SQL Server.
 
-2. No Pesquisador de Objetos do SSMS, clique com botão direito do mouse no banco de dados que você deseja classificar e escolha **Tarefas** > **Classificar Dados...**.
+2. No Pesquisador de Objetos do SSMS, clique com botão direito do mouse no banco de dados que você deseja classificar e escolha **Tarefas** > **Classificar Dados...** .
 
     ![Painel de navegação][1]
 

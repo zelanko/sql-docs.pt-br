@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: deed81383c6fc813d971019ee0843b8098f2e400
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66789232"
 ---
 # <a name="getcharacterstream-method-"></a>Método getCharacterStream ()
@@ -36,7 +36,7 @@ public java.io.Reader getCharacterStream()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Um objeto Reader que contém os dados **NCLOB**.  
+ Um objeto Reader que contém os dados **CLOB**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

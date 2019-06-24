@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8418167e-cbd2-464d-b118-73cdd76080ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9a6fac19260ccb09e22e311743ac753937e265dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4c2d9835dd5731ca0464ad81d2384f63571838b2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647604"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802286"
 ---
 # <a name="executebatch-method-sqlserverpreparedstatement"></a>Método executeBatch (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public int[] executeBatch()
  java.sql.BatchUpdateException  
   
 ## <a name="remarks"></a>Remarks  
- Esse método executeBatch é especificado pelo método executeBatch na interface Statement.  
+ Esse método executeBatch é especificado pelo método executeBatch na interface java.sql.Statement.  
     
  Esse método substitui [SQLServerStatement.executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md).  
   

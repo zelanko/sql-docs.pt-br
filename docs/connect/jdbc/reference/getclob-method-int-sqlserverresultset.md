@@ -1,5 +1,5 @@
 ---
-title: getClob Method (int) (SQLServerResultSet) | Microsoft Docs
+title: Método getClob (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: e5650d900cd4cf4bcbb8a33501ad49c3f1a8607c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66763789"
 ---
 # <a name="getclob-method-int-sqlserverresultset"></a>Método getClob (int) (SQLServerResultSet)
@@ -47,7 +47,7 @@ public java.sql.Clob getClob(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getNClob é especificado pelo método getNClob na interface java.sql.ResultSet.  
+ Esse método getClob é especificado pelo método getClob na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método getClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getclob-method-sqlserverresultset.md)   

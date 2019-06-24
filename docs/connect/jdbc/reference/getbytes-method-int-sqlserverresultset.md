@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1385d7d4-9288-4cbd-8606-4b919e9b07b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 631534e2ca1d0fe7a4c127acb277fc9db7208ace
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f3299b061303400f75241e863b8675ad95b3e485
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722284"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66804053"
 ---
 # <a name="getbytes-method-int-sqlserverresultset"></a>Método getBytes (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public byte[] getBytes(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getBytes é especificado pelo método getBytes na interface do resultset.  
+ Esse método getBytes é especificado pelo método getBytes na interface java.sql.ResultSet.  
   
  Esse método oferece suporte à recuperação de todas as colunas como uma leitura bruta de bytes do servidor. Ele retorna uma matriz de bytes diretamente do servidor no formato armazenado no servidor.  
   

@@ -21,12 +21,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ee40f9b7632a388cb9b0889f40ee510c39ba34b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: c96654d1e16a3b730aa3f2a09f14da4c91971b9d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65946490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145505"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -68,6 +68,8 @@ A ordem de expressão afeta o valor `CHECKSUM` computado. A ordem das colunas us
   
 O valor de `CHECKSUM` depende da ordenação. O mesmo valor armazenado com uma ordenação diferente retornará um valor de `CHECKSUM` diferente.
   
+`CHECKSUM ()` não garante resultados exclusivos.
+
 ## <a name="examples"></a>Exemplos  
 Estes exemplos mostram o uso de `CHECKSUM` para criar índices de hash.
   

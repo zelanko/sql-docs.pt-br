@@ -13,11 +13,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: db78cdc744ec73e0f2fb8b465187eaac84a2fae2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526521"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661113"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Desenvolver usando o Always Encrypted com o Provedor de Dados .NET Framework
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ O Always Encrypted permite que os aplicativos cliente criptografem dados confide
 ## <a name="prerequisites"></a>Prerequisites
 
 - Configure o Sempre Criptografado em seu banco de dados. Isso envolve o provisionamento de chaves do Sempre Criptografado e a configuração de criptografia de colunas de banco de dados selecionadas. Se você ainda não tiver um banco de dados com o Sempre Criptografado configurado, siga as instruções em [Getting Started with Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_5)(Introdução ao Sempre Criptografado).
-- Verifique se a versão 4.6 ou posterior do .NET Framework está instalada no computador de desenvolvimento. Para obter detalhes, confira [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx). Você também precisa verificar se a versão 4.6 ou posterior do .NET Framework está configurada como a versão de destino do .NET Framework no ambiente de desenvolvimento. Se estiver usando o Visual Studio, veja [Como transformar uma versão do .NET Framework em uma versão de destino](https://msdn.microsoft.com/library/bb398202.aspx). 
+- Verifique se a versão 4.6 ou posterior do .NET Framework está instalada no computador de desenvolvimento. Para obter detalhes, confira [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx). Você também precisa verificar se a versão 4.6 ou posterior do .NET Framework está configurada como a versão de destino do .NET Framework no ambiente de desenvolvimento. Se estiver usando o Visual Studio, veja [Como: direcionar uma versão do .NET Framework](https://msdn.microsoft.com/library/bb398202.aspx). 
 
 > [!NOTE]
 > O nível de suporte para o Sempre Criptografados varia em versões específicas do .NET Framework. Veja a seção de referência de API do Sempre Criptografado abaixo para obter detalhes. 
@@ -282,7 +282,7 @@ O Provedor de Dados do .NET Framework para SQL Server é fornecido com os proved
 | Classe | Descrição | Nome (de pesquisa) do provedor |
 |:---|:---|:---|
 |Classe SqlColumnEncryptionCertificateStoreProvider| Um provedor do Repositório de Certificados do Windows. | MSSQL_CERTIFICATE_STORE |
-|[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Observação:** esse provedor está disponível no .NET Framework 4.6.1 e versões posteriores. |Um provedor de um repositório de chaves que dá suporte à [API do CNG da Microsoft (Cryptography API: Next Generation)](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). Normalmente, um repositório desse tipo é um módulo de segurança de hardware – um dispositivo físico que protege e gerencia chaves digitais e fornece processamento de criptografia.  | MSSQL_CNG_STORE|
+|[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Observação:** esse provedor está disponível no .NET Framework 4.6.1 e versões posteriores. |Um provedor de um repositório de chaves que dá suporte à [API de Criptografia da Microsoft: API Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). Normalmente, um repositório desse tipo é um módulo de segurança de hardware – um dispositivo físico que protege e gerencia chaves digitais e fornece processamento de criptografia.  | MSSQL_CNG_STORE|
 | [Classe SqlColumnEncryptionCspProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncspprovider.aspx)<br><br>**Observação:** esse provedor está disponível no .NET Framework 4.6.1 ou versões posteriores.| Um provedor de um repositório de chaves que dá suporte à [CAPI (Cryptography API) da Microsoft](https://msdn.microsoft.com/library/aa266944.aspx). Normalmente, um repositório desse tipo é um módulo de segurança de hardware – um dispositivo físico que protege e gerencia chaves digitais e fornece processamento de criptografia.| MSSQL_CSP_PROVIDER |
   
 Não é necessário fazer nenhuma alteração de código do aplicativo para usar esses provedores, mas observe o seguinte:
@@ -378,7 +378,7 @@ Se o Always Encrypted estiver habilitado para uma conexão, por padrão, o Prove
 
 No .NET Framework 4.6.2 e posterior, o Provedor de Dados .NET Framework para SQL Server armazena em cache os resultados de **sys.sp_describe_parameter_encryption** de cada instrução de consulta. Consequentemente, se a mesma instrução de consulta for executada várias vezes, o driver chama **sys.sp_describe_parameter_encryption** apenas uma vez. O caching de metadados de criptografia para instruções de consulta reduz consideravelmente o custo de desempenho da busca de metadados do banco de dados. O caching está habilitado por padrão. É possível desabilitar o caching de metadados do parâmetro definindo a  [Propriedade SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled.aspx) como false, mas isso não é recomendado, exceto em casos raros, como o descrito abaixo:
 
-Considere um banco de dados que tem dois esquemas diferentes: s1 e s2. Cada esquema contém uma tabela com o mesmo nome: t. As definições das tabelas s1.t e s2.t são idênticas, exceto pelas propriedades relacionadas à criptografia: a uma coluna, chamada c, não é criptografada em s1.t, mas é criptografada em s2.t. O banco de dados tem dois usuários: u1 e u2. O esquema padrão para os usuários u1 é s1. O esquema padrão para u2 é s2. Um aplicativo .NET abre duas conexões com o banco de dados, representando o usuário u1 em uma conexão e o usuário u2 em outra. O aplicativo envia uma consulta com um parâmetro que se destina à coluna c pela conexão do usuário u1 (a consulta não especifica o esquema e, portanto, o esquema padrão do usuário é considerado). Em seguida, o aplicativo envia a mesma consulta pela conexão do usuário u2. Se o caching de metadados de consulta estiver habilitado, após a primeira consulta, o cache será populado com metadados indicando que a coluna c, os destinos do parâmetro de consulta, não é criptografada. Como a segunda consulta tem a instrução de consulta idêntica, as informações armazenadas no cache serão usadas. Como resultado, o driver enviará a consulta sem criptografar o parâmetro (o que é incorreto, já que a coluna de destino, s2.t.c, é criptografada), causando a perda do valor de texto sem formatação do parâmetro para o servidor. O servidor detectará a incompatibilidade e forçará o driver a atualizar o cache, para que o aplicativo reenvie a consulta de forma transparente com o valor do parâmetro criptografado corretamente. Nesse caso, o caching deve ser desabilitado para prevenir a perda de valores confidenciais para o servidor. 
+Considere um banco de dados que tem dois esquemas diferentes: s1 e s2. Cada esquema contém uma tabela com o mesmo nome: t. As definições das tabelas s1.t e s2.t são idênticas, exceto pelas propriedades relacionadas à criptografia: uma coluna, chamada c, em s1.t não é criptografada e é criptografada em s2.t. O banco de dados tem dois usuários: u1 e u2. O esquema padrão para os usuários u1 é s1. O esquema padrão para u2 é s2. Um aplicativo .NET abre duas conexões com o banco de dados, representando o usuário u1 em uma conexão e o usuário u2 em outra. O aplicativo envia uma consulta com um parâmetro que se destina à coluna c pela conexão do usuário u1 (a consulta não especifica o esquema e, portanto, o esquema padrão do usuário é considerado). Em seguida, o aplicativo envia a mesma consulta pela conexão do usuário u2. Se o caching de metadados de consulta estiver habilitado, após a primeira consulta, o cache será populado com metadados indicando que a coluna c, os destinos do parâmetro de consulta, não é criptografada. Como a segunda consulta tem a instrução de consulta idêntica, as informações armazenadas no cache serão usadas. Como resultado, o driver enviará a consulta sem criptografar o parâmetro (o que é incorreto, já que a coluna de destino, s2.t.c, é criptografada), causando a perda do valor de texto sem formatação do parâmetro para o servidor. O servidor detectará a incompatibilidade e forçará o driver a atualizar o cache, para que o aplicativo reenvie a consulta de forma transparente com o valor do parâmetro criptografado corretamente. Nesse caso, o caching deve ser desabilitado para prevenir a perda de valores confidenciais para o servidor. 
 
 
 
@@ -552,7 +552,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 |Nome|Descrição|Introduzido na versão do .NET
 |:---|:---|:---
 |[Classe SqlColumnEncryptionCertificateStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Um provedor de repositório de chaves para o Repositório de Certificados do Windows.|  4.6
-|[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Um provedor de repositório de chaves para o Microsoft CNG (Cryptography API: Next Generation).|  4.6.1
+|[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Um provedor de repositório de chaves para A API de Criptografia da Microsoft: Next Generation (CNG).|  4.6.1
 |[Classe SqlColumnEncryptionCspProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncspprovider.aspx)|Um provedor de repositório de chaves para CSPs (Provedores de Serviços Criptográficos) baseados no Microsoft CAPI.|4.6.1  
 |[SqlColumnEncryptionKeyStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx)|Classe base dos provedores de repositório de chaves.|  4.6
 |[Enumeração SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx)|Configurações para habilitar a criptografia e a descriptografia de uma conexão de banco de dados.|4.6  
@@ -571,7 +571,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 - [Sempre Criptografado (Mecanismo de Banco de Dados)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Blog do Always Encrypted](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-- [Tutorial do Banco de Dados SQL: Proteger dados confidenciais com o Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
+- [Tutorial do Banco de Dados SQL: proteger dados confidenciais com Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 
 
 
