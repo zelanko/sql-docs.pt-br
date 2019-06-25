@@ -10,12 +10,12 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2136c162846b31c4d221d7aaad6476ba70508287
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.openlocfilehash: e588630b4bc9b2dd72e1fb54362b9b024c17bdb5
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67284966"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343902"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Compatibilidade de fórmula do DAX no modo DirectQuery (SSAS 2014)
 A linguagem de expressão de análise de dados (DAX) pode ser usada para criar medidas e outras fórmulas personalizadas para uso em modelos de tabela do Analysis Services, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelos de dados em pastas de trabalho do Excel e modelos de dados do Power BI Desktop. Na maioria dos aspectos, os modelos que você cria nesses ambientes são idênticos, e você pode usar o mesmo medidas, relações e KPIs, etc. No entanto, se você cria um modelo de tabela do Analysis Services e implantá-lo no modo DirectQuery, há algumas restrições sobre as fórmulas que você pode usar. Este tópico fornece uma visão geral dessas diferenças, lista as funções que não são suportadas no modelo do SQL Server 2014 Analysis Services tabulars no nível de compatibilidade 1100 ou 1103 e no modo DirectQuery, e lista as funções que têm suporte, mas talvez retorne resultados diferentes.  
@@ -78,14 +78,14 @@ Não há nenhuma função de conversão como na DAX, mas conversões implícitas
 -   Valores boolianos sempre são tratados como valores lógicos em comparações e quando usados com EXACT, AND, OR, &amp;&amp;ou ||.  
   
 **Conversão de cadeia de caracteres em booliano**  
-Na memória e modelos do DirectQuery, são permitidas conversões em valores boolianos destas cadeias de caracteres apenas: **""** (cadeia de caracteres vazia), **"true"**, **"false"**; onde uma cadeia de caracteres vazia conversões de valor falso.  
+Na memória e modelos do DirectQuery, são permitidas conversões em valores boolianos destas cadeias de caracteres apenas: **""** (cadeia de caracteres vazia), **"true"** , **"false"** ; onde uma cadeia de caracteres vazia conversões de valor falso.  
   
 As conversões no tipo de dados Boolean de qualquer outra cadeia de caracteres resultam em um erro.  
   
 **Conversão de cadeia de caracteres em data/hora**  
 No modo DirectQuery, conversões de representações de cadeias de caracteres de datas e horas em valores **datetime** reais apresentam o mesmo comportamento que teriam no SQL Server.  
   
-Para obter informações sobre as regras que controlam conversões de cadeia de caracteres **datetime** tipos de dados em [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelos, consulte a [referência de sintaxe DAX] (/ / dax--referência da sintaxe dax
+Para obter informações sobre as regras que controlam conversões de cadeia de caracteres **datetime** tipos de dados em [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelos, consulte o [referência de sintaxe DAX](/dax/dax-syntax-reference).
   
 Os modelos que usam o repositório de dados na memória oferecem suporte a um intervalo mais limitado de formatos de texto para datas que os formatos de cadeias de caracteres para datas que têm suporte no SQL Server. No entanto, a DAX oferece suporte a formatos de data e hora personalizados.  
   
@@ -133,7 +133,7 @@ O SQL Server trata nulos e espaços em branco de modo diferente do mecanismo xVe
   
 As mesmas limitações se aplicam a outras funções logarítmicas: LOG10 e LN.  
   
-Para obter mais informações sobre o **em branco** tipo de dados no DAX, consulte [referência de sintaxe DAX] (/ / dax--referência da sintaxe dax
+Para obter mais informações sobre o tipo de dados **blank** na DAX, consulte [Referência de sintaxe DAX](/dax/dax-syntax-reference).
   
 **Divisão por 0 e divisão por espaço em branco**  
 No modo DirectQuery, a divisão por zero (0) ou a divisão por BLANK sempre resultará em um erro. O SQL Server não oferece suporte à noção de infinito e, como o resultado natural de qualquer divisão por 0 é infinito, o resultado é um erro. No entanto, o SQL Server oferece suporte à divisão por nulos e o resultado sempre deve ser igual a nulo.  

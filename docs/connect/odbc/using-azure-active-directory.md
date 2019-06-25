@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 789046b7df230b88ca1761d1d89cc147074e12a9
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+manager: jroth
+ms.openlocfilehash: adf71b7f701d96ddf56f5070475fb853f89042ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801728"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Como usar o Azure Active Directory com o Driver ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -34,7 +34,7 @@ O `Authentication` palavra-chave pode ser usado ao conectar-se com uma cadeia de
 
 |Nome|Valores|Padrão|Descrição|
 |-|-|-|-|
-|`Authentication`|(não definido), (cadeia de caracteres vazia), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi` |(não definido)|Controla o modo de autenticação.<table><tr><th>Valor<th>Descrição<tr><td>(não definido)<td>Modo de autenticação determinado por outras palavras-chave (opções de conexão herdado existente).<tr><td>(cadeia de caracteres vazia)<td>Cadeia de Conexão: "{0}" Substituir e desconfigurar um `Authentication` conjunto no DSN de valor.<tr><td>`SqlPassword`<td>Autenticar diretamente a uma instância do SQL Server usando um nome de usuário e senha.<tr><td>`ActiveDirectoryPassword`<td>Autenticar com uma identidade do Active Directory do Azure usando um nome de usuário e senha.<tr><td>`ActiveDirectoryIntegrated`<td>_Somente o driver do Windows_. Autenticar com uma identidade do Active Directory do Azure usando a autenticação integrada.<tr><td>`ActiveDirectoryInteractive`<td>_Somente o driver do Windows_. Autenticar com uma identidade do Active Directory do Azure usando a autenticação interativa.<tr><td>`ActiveDirectoryMsi`<td>Autenticar com a identidade do Active Directory usando a autenticação de identidade de serviço gerenciado. Para identidade atribuída pelo usuário, o UID é definido como a ID de objeto de identidade do usuário.</table>|
+|`Authentication`|(não definido), (cadeia de caracteres vazia), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi` |(não definido)|Controla o modo de autenticação.<table><tr><th>Valor<th>Descrição<tr><td>(não definido)<td>Modo de autenticação determinado por outras palavras-chave (opções de conexão herdado existente).<tr><td>(cadeia de caracteres vazia)<td>Cadeia de Conexão Substituir e desconfigurar um `Authentication` conjunto no DSN de valor.<tr><td>`SqlPassword`<td>Autenticar diretamente a uma instância do SQL Server usando um nome de usuário e senha.<tr><td>`ActiveDirectoryPassword`<td>Autenticar com uma identidade do Active Directory do Azure usando um nome de usuário e senha.<tr><td>`ActiveDirectoryIntegrated`<td>_Somente o driver do Windows_. Autenticar com uma identidade do Active Directory do Azure usando a autenticação integrada.<tr><td>`ActiveDirectoryInteractive`<td>_Somente o driver do Windows_. Autenticar com uma identidade do Active Directory do Azure usando a autenticação interativa.<tr><td>`ActiveDirectoryMsi`<td>Autenticar com a identidade do Active Directory usando a autenticação de identidade de serviço gerenciado. Para identidade atribuída pelo usuário, o UID é definido como a ID de objeto da identidade do usuário.</table>|
 |`Encrypt`|(não definido), `Yes`, `No`|(consulte a descrição)|Controla a criptografia de uma conexão. Se o valor do pré-atributo de a `Authentication` configuração não é _none_ na cadeia de conexão ou de DSN, o padrão é `Yes`. Caso contrário, o padrão é `No`. Se o atributo `SQL_COPT_SS_AUTHENTICATION` substitui o valor do pré-atributo de `Authentication`explicitamente definir o valor de criptografia no DSN ou cadeia de caracteres de conexão ou atributo de conexão. É o valor do atributo de pré-lançamento de criptografia `Yes` se o valor for definido como `Yes` na cadeia de caracteres de conexão ou DSN.|
 
 ## <a name="new-andor-modified-connection-attributes"></a>Atributos de Conexão nova e/ou modificados
@@ -168,7 +168,7 @@ A seguir está um exemplo de cadeia de conexão para uso com autenticação inte
 ~~~
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
 ~~~
-A seguir está um exemplo de cadeia de conexão para uso com o Azure Managed Service Identity autenticação do Active Directory. Observe que o UID é definido como a ID de objeto da identidade do usuário para identidade atribuída pelo usuário.
+A seguir está um exemplo de cadeia de conexão para uso com o Azure Managed Service Identity autenticação do Active Directory. Observe que o UID é definido como a ID de objeto da identidade do usuário para a identidade atribuída pelo usuário.
 ~~~
 // For system-assigned identity,
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};Authentication=ActiveDirectoryMsi"
