@@ -10,53 +10,43 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41b14322d3c895e687add2236c2447d93df62586
-ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
+ms.openlocfilehash: 727186e4c32291a02140c50780986c8b2f60e08a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55771332"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140784"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Ajuda offline do SQL Server e Help Viewer
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Você pode usar o Microsoft Help Viewer para baixar e instalar os pacotes da Ajuda do SQL Server de fontes online ou do disco e exibi-los offline. O Help Viewer é instalado com o SSMS (SQL Server Management Studio) ou o VS (Visual Studio). Este artigo descreve as ferramentas que instalam o Help Viewer, como instalar o conteúdo da Ajuda offline e como exibir a Ajuda para [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 e SQL Server 2017.
+É possível usar o Microsoft Help Viewer para baixar e instalar os pacotes da ajuda do SQL Server de fontes online ou do disco local. Em seguida, você pode exibir o conteúdo offline. O Help Viewer é instalado com várias ferramentas diferentes. Este artigo descreve as ferramentas que instalam o Help Viewer, como instalar o conteúdo de ajuda offline e como exibir a ajuda.
 
 É necessário ter acesso à Internet para baixar o conteúdo do Help Viewer. Você pode então migrar o conteúdo para um computador que não tenha acesso à Internet.
 
-> [!NOTE]
-> A Ajuda do SQL Server 2016 e do SQL Server 2017 é combinada, embora alguns tópicos se apliquem a versões individuais, quando indicado. A maioria dos tópicos se aplica a ambos.
+>[!NOTE]
+> Para receber o conteúdo local das versões atuais do SQL Server, instale a versão atual do SQL Server Management Studio [SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-## <a name="install-the-help-viewer"></a>Instalar o Help Viewer
+## <a name="what-tools-install-the-help-viewer-versions"></a>Quais ferramentas instalam as versões do Help Viewer?
 
-Há duas versões do Help Viewer.  Cada versão dá suporte a versões diferentes do conteúdo do SQL Server.  O formato dos livros offline foi alterado ao longo do tempo e as versões mais antigas do Help Viewer não dão suporte às versões mais recentes dos livros:
-- v2.x dá suporte ao SQL Server 2016 e à ajuda do SQL Server 2017. 
-- v1.x dá suporte à ajuda do [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]. O Help Viewer não dá suporte a configurações de proxy e não dá suporte ao formato ISO.
+Há duas versões principais do Microsoft Help Viewer.  As versões 1.x e 2.x. Cada versão dá suporte a versões diferentes do conteúdo do SQL Server.  O formato dos livros offline foi alterado ao longo do tempo e as versões mais antigas do Help Viewer não são compatíveis com as versões mais recentes dos livros.
 
+|**Conjunto de conteúdo**|**Ferramentas que instalam o Help Viewer**|**Versão do Help Viewer**|
+|-|-|-|
+|Versão prévia do SQL Server 2019 <br> SQL Server 2017<br>SQL Server 2016|[Visual Studio 2019 (1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)<br>[Visual Studio 2017 (1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017)<br>[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)<br>[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/release-notes-ssms?view=sql-server-2017#download-ssms-1791)<br>[SQL Server Data Tools para Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)<br>Visual Studio 2015 | v2.3<br>V2.2|
+|SQL Server 2014<br>SQL Server 2012|Instalação do SQL Server 2016 (2)<br>SQL Server 2014 Management Studio<br>Instalação do SQL Server 2014 (2)<br>SQL Server Management Studio 2012<br>Instalação do SQL Server 2012 (2)| v1. x|
+| | | |
 
-|**Ferramenta**|**Instala a versão do Help Viewer**|
-|---------|---------|
-|[Visual Studio 2017*](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) | v2.3|
-|[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
-|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
-|[SQL Server Data Tools para Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) | v2.2|
-|Visual Studio 2015 | v2.2|
-|SQL Server 2016 | v1. x|
-|SQL Server 2014 Management Studio | v1. x|
-|Versões anteriores do Visual Studio | v1. x|
-| | |
+(1) Para instalar o Help Viewer com o Visual Studio 2019 ou 2017, na guia Componentes Individuais do Instalador do Visual Studio, selecione **Help Viewer** em Ferramentas de Código e clique em **Instalar**.
 
-\* Para instalar o Help Viewer com o Visual Studio 2017, na guia Componentes Individuais do Instalador do Visual Studio, selecione **Help Viewer** em Ferramentas de Código e, em seguida, clique em **Instalar**.
+(2) Indica a opção "Componentes de Documentação" na instalação do SQL Server.
 
 >[!NOTE]
-> - O SQL Server 2016 instala o Help Viewer 1.1, que não dá suporte à Ajuda do SQL Server 2016. 
-> - A instalação do SQL Server 2017 não instala o Help Viewer. O Help Viewer não está mais incluído na instalação do SQL Server.
-> - O Help Viewer v2.x também pode dar suporte à Ajuda do [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], caso o conteúdo seja instalado por meio do disco.
+> - O SQL Server 2016 instala o Help Viewer 1.1, que não é compatível com o conteúdo de ajuda do SQL Server 2016. Para saber mais, confira as [Notas sobre a versão do SQL Server 2016](sql-server-2016-release-notes.md).  Para exibir o conteúdo do SQL Server 2016, você precisa da versão v2.x do Help Viewer. 
+> - No SQL Server 2017, o Help Viewer não pode ser instalado na Instalação do SQL Server.
 
 ## <a name="use-help-viewer-v2x"></a>Usar o Help Viewer v2.x
-
-O SSMS 17.x e o VS 2015 e 2017 usam o Help Viewer 2.x, que dá suporte à Ajuda do SQL Server 2016 e do SQL Server 2017. 
 
 **Para baixar e instalar o conteúdo da Ajuda offline com o Help Viewer v2.x**
 
@@ -74,7 +64,7 @@ O SSMS 17.x e o VS 2015 e 2017 usam o Help Viewer 2.x, que dá suporte à Ajuda 
    > Para instalar por meio do disco (Ajuda do SQL Server 2014), escolha **Disco** em Origem da instalação e especifique o local do disco.
    
    O caminho do repositório Local na guia Gerenciar Conteúdo mostra o local em que o conteúdo será instalado no computador local. Para alterar o local, clique em **Mover**, insira outro caminho de pasta no campo **Para** e, em seguida, clique em **OK**.
-   Se a instalação da Ajuda falhar após a alteração do caminho do repositório Local, feche e reabra o Help Viewer, verifique se o novo local é exibido no caminho do repositório Local e, em seguida, tente executar a instalação novamente.
+   Se a instalação da ajuda falhar após a alteração do caminho do repositório Local, feche e abra novamente o Help Viewer. Verifique se o novo local aparece no caminho do repositório Local e tente instalar novamente.
 
 3. Clique em **Adicionar** ao lado de cada pacote de conteúdo (manual) que você deseja instalar. 
    Para instalar todo o conteúdo da Ajuda do SQL Server, adicione todos os 13 manuais em SQL Server. 
@@ -87,7 +77,7 @@ O SSMS 17.x e o VS 2015 e 2017 usam o Help Viewer 2.x, que dá suporte à Ajuda 
 > [!NOTE]
 > Nem todos os títulos do nó superior no sumário do SQL Server correspondem exatamente aos nomes dos manuais da Ajuda baixáveis correspondentes. Os títulos do sumário são mapeados para os nomes de manuais da seguinte maneira:
 
-(*) indica conteúdo que é da primeira versão de disponibilidade geral do conteúdo do SQL Server 2017, juntamente com conteúdo mais antigo da versão 2016. Esses livros serão removidos, pois livros separados e completos do SQL Server 2016 e 2017 contêm edições de conteúdo desde janeiro de 2019.  
+(*) Conteúdo da primeira versão de disponibilidade geral do conteúdo do SQL Server 2017, juntamente com conteúdo mais antigo da versão 2016. Esses livros serão removidos, pois livros separados e completos do SQL Server 2016 e 2017 contêm edições de conteúdo desde janeiro de 2019.  
 
 | | Painel de conteúdo | Manual do SQL Server |
 |-----|-----|-----|
@@ -116,7 +106,7 @@ Para exibir a Ajuda instalada no SSMS, pressione CTRL + ALT + F1 ou escolha **Ad
 
    ![Adicionar e Remover Conteúdo do HelpViewer2](../sql-server/media/sql-server-help-installation/addremovecontent.png)  
 
-O Help Viewer é aberto na guia Gerenciar Conteúdo, com o sumário da Ajuda instalada no painel esquerdo. Clique em tópicos no sumário para exibi-los no painel direito. 
+O Help Viewer é aberto na guia Gerenciar Conteúdo, com o sumário da Ajuda instalada no painel esquerdo. Clique nos artigos no sumário para exibi-los no painel direito.
 > [!TIP]
 > Se o painel de conteúdo não estiver visível, clique em Conteúdo na margem esquerda. Clique no ícone de pino para manter o painel de conteúdo aberto.  
 
@@ -133,12 +123,11 @@ Para exibir a Ajuda instalada no Visual Studio:
 
    ![Exibir Ajuda](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
-   O sumário da Ajuda é mostrado à esquerda e o tópico da Ajuda selecionado, à direita. 
-
+   O sumário da ajuda é mostrado à esquerda e o artigo de ajuda selecionado, à direita.
   
 ## <a name="use-help-viewer-v1x"></a>Usar o Help Viewer v1.x
 
-As versões anteriores do SSMS e do VS usam o Help Viewer 1.x, que dá suporte à Ajuda do SQL Server 2014. 
+As versões anteriores do SSMS e do VS usam o Help Viewer 1.x, que é compatível com o conteúdo de ajuda do SQL Server 2014 e 2012. 
 
 **Para baixar e instalar o conteúdo da Ajuda offline com o Help Viewer v1.x**
 
@@ -183,7 +172,7 @@ A Ajuda online sempre mostra o conteúdo mais atualizado.
 
 **Para exibir a Ajuda online do SQL Server no SSMS 17.x**
 
-- Clique em **Exibir Ajuda** no menu **Ajuda**. A documentação mais recente do SQL Server 2016/2017 do [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) pode ser exibida em um navegador. 
+- Clique em **Exibir Ajuda** no menu **Ajuda**. A documentação mais recente do SQL Server 2016/2017 do [https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) pode ser exibida em um navegador. 
 
    ![Exibir Ajuda](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -203,16 +192,16 @@ A Ajuda online sempre mostra o conteúdo mais atualizado.
    
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../sql-server/media/sql-server-help-installation/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
 
-4. Abra o Help Viewer para ver o conteúdo, clicando em **Exibir ajuda** no menu **Ajuda**. 
+4. Abra o Help Viewer para ver o conteúdo, clicando em **Exibir ajuda** no menu **Ajuda**.
 
 ## <a name="view-f1-help"></a>Exibir a Ajuda F1
 
-Quando você pressiona F1 ou clica em **Ajuda** ou no ícone **?** em uma caixa de diálogo do SSMS ou do VS, um tópico da Ajuda online contextual é exibido no navegador ou no Help Viewer. 
+Quando você pressiona F1 ou clica em **Ajuda** ou no ícone **?** em uma caixa de diálogo do SSMS ou do VS, um artigo da ajuda online contextual é exibido no navegador ou no Help Viewer.
 
 **Para exibir a Ajuda F1**
 
-1. Aponte para **Definir Preferência da Ajuda** no menu Ajuda e escolha **Iniciar no Navegador** ou **Iniciar no Help Viewer**.
-2. Pressione F1 ou então clique em **Ajuda** ou em **?** nas caixas de diálogo em que essas opções estiverem disponíveis para ver tópicos online contextuais no ambiente escolhido.
+1. No menu Ajuda, clique em **Definir Preferência da Ajuda** e escolha **Iniciar no Navegador** ou **Iniciar no Help Viewer**.
+2. Pressione F1 ou então clique em **Ajuda** ou em **?** nas caixas de diálogo em que essas opções estiverem disponíveis para ver artigos online contextuais no ambiente escolhido.
 
 > [!NOTE]
 > A Ajuda F1 só funciona quando você está online. Não há nenhuma fonte offline para a Ajuda F1.

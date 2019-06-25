@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: genemi
 ms.openlocfilehash: d773e05a3ed953e5210c0ade3226b4a32e82aeab
-ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51289896"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63182236"
 ---
-# <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Home page da programação para Microsoft SQL Server do cliente
+# <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Home page da programação do cliente para Microsoft SQL Server
 
 
 Bem-vindo à nossa home page sobre programação para interagir com o Microsoft SQL Server e banco de dados SQL Azure na nuvem do cliente. Este artigo fornece as seguintes informações:
@@ -54,7 +54,7 @@ Na tabela a seguir, cada imagem de idioma é um link para detalhes sobre como us
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
 | &nbsp; [![Logotipo do c#][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![Estrutura de entidades ORM do .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Logotipo do Java][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp; [![Logotipo do Node. js][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![CPP big plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![Logotipo do PHP][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Logotipo do Node. js][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [ **`ODBC for C++`** ](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![Logotipo do PHP][image-ref-360-php]](#an-170-php-docu) |
 | &nbsp; [![Logotipo do Python][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Logotipo do Ruby][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp;... |
 | &nbsp; | &nbsp; | <br />|
 
@@ -88,7 +88,7 @@ As linguagens do .NET gerenciados, como c# e Visual Basic, são os usuários mai
 |||
 | :-- | :-- |
 | [Em C# usando o ADO.NET](./ado-net/index.md)| Raiz de nossa documentação. |
-| [Namespace: System. Data](https://docs.microsoft.com/dotnet/api/system.data) | Um conjunto de classes usadas para o ADO.NET. |
+| [Namespace: System.Data](https://docs.microsoft.com/dotnet/api/system.data) | Um conjunto de classes usadas para o ADO.NET. |
 | [Namespace: System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.SqlClient) | O conjunto de classes que são mais diretamente o centro do ADO.NET. |
 | &nbsp; | <br /> |
 
@@ -118,8 +118,8 @@ O [página inicial para o Entity Framework](https://docs.microsoft.com/ef/) apre
 
 |     |     |
 | :-- | :-- |
-| [O EF 6.x](https://docs.microsoft.com/ef/ef6/) | Primeiro, a Microsoft lançou o EF em agosto de 2008. Em março de 2015, a Microsoft anunciou que o EF 6.x foi a versão final que a Microsoft desenvolve. A Microsoft lançou o código-fonte para o domínio público.<br /><br />Inicialmente, o EF era parte do .NET Framework. Mas o EF 6.x foi removido do .NET Framework.<br /><br />[Código do EF 6.x-fonte no Github, no repositório *aspnet/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
-| [O EF Core](https://docs.microsoft.com/ef/core/) | A Microsoft lançou o EF Core recém-desenvolvido em junho de 2016. EF Core foi projetado para melhorar a flexibilidade e portabilidade. O EF Core pode executar em sistemas operacionais além de apenas o Microsoft Windows. E o EF Core pode interagir com outros bancos de dados relacionais e bancos de dados além de apenas o Microsoft SQL Server.<br /><br />**C&#x23; exemplos de código:**<br />[Introdução ao Entity Framework Core](https://docs.microsoft.com/ef/core/get-started/index)<br />[Introdução ao EF Core no .NET Framework com um banco de dados existente](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
+| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Primeiro, a Microsoft lançou o EF em agosto de 2008. Em março de 2015, a Microsoft anunciou que o EF 6.x foi a versão final que a Microsoft desenvolve. A Microsoft lançou o código-fonte para o domínio público.<br /><br />Inicialmente, o EF era parte do .NET Framework. Mas o EF 6.x foi removido do .NET Framework.<br /><br />[Código do EF 6.x-fonte no Github, no repositório *aspnet/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
+| [EF Core](https://docs.microsoft.com/ef/core/) | A Microsoft lançou o EF Core recém-desenvolvido em junho de 2016. EF Core foi projetado para melhorar a flexibilidade e portabilidade. O EF Core pode executar em sistemas operacionais além de apenas o Microsoft Windows. E o EF Core pode interagir com outros bancos de dados relacionais e bancos de dados além de apenas o Microsoft SQL Server.<br /><br />**C&#x23; exemplos de código:**<br />[Introdução ao Entity Framework Core](https://docs.microsoft.com/ef/core/get-started/index)<br />[Introdução ao EF Core no .NET Framework com um banco de dados existente](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
 EF e as tecnologias relacionadas são poderosas e são muito a aprender para desenvolvedores que queiram toda a área do mestre.
@@ -181,7 +181,7 @@ O driver de conexão Node. js para SQL Server é implementado em JavaScript. O d
 
 ## <a name="odbc-for-c"></a>ODBC para C++ 
 
-![Logotipo do ODBC][image-ref-350-odbc] ![CPP big plus][image-ref-322-cpp]
+![Logotipo do ODBC][image-ref-350-odbc] ![cpp-big-plus][image-ref-322-cpp]
 
 Conectividade de banco de dados aberto (ODBC) foi desenvolvida na década de 1990, e ele antecede o .NET Framework. ODBC é projetado para ser independente de qualquer sistema de banco de dados específico e independente do sistema operacional.
 
@@ -191,7 +191,7 @@ Alguns outros drivers de conectividade usam ODBC internamente.
 
 #### <a name="code-example"></a>Exemplo de código
 
-- [Exemplo de código C++, usando o ODBC](../odbc/reference/sample-odbc-program.md)
+- [Exemplo de código C++ usando o ODBC](../odbc/reference/sample-odbc-program.md)
 
 #### <a name="documentation-outline"></a>Estrutura de tópicos da documentação
 
@@ -201,14 +201,14 @@ O conteúdo do ODBC nesta seção se concentra em acessar o SQL Server ou banco 
 | Área | Subárea | Descrição |
 | :--- | :------ | :---------- |
 | [ODBC para C++](./odbc/index.md) | Raiz de nossa documentação. |
-| [Mac-Linux](./odbc/linux-mac/index.md) | &nbsp; | Informações sobre como usar o ODBC nos sistemas operacionais Linux ou MacOS. |
+| [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | Informações sobre como usar o ODBC nos sistemas operacionais Linux ou MacOS. |
 | [Windows](./odbc/windows/index.md)     | &nbsp; | Informações sobre como usar o ODBC no sistema operacional Windows. |
 | [Administração](../odbc/admin/index.md) | &nbsp; | A ferramenta administrativa para gerenciar fontes de dados ODBC. |
 | [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | Vários drivers ODBC que são criados e fornecidos pela Microsoft. |
 | [Conceitual e referência](../odbc/reference/index.md) | &nbsp; | Informações conceituais sobre a interface ODBC, além de referência tradicional. |
 | &nbsp; " | [Apêndices](../odbc/reference/appendixes/index.md)    | Tabelas de transição de estado, biblioteca de cursores ODBC e muito mais. |
 | &nbsp; " | [Desenvolver um aplicativo](../odbc/reference/develop-app/index.md)  | Funções, identificadores e muito mais. |
-| &nbsp; " | [Desenvolver um driver](../odbc/reference/develop-driver/index.md) | Como desenvolver seu próprio driver ODBC, se você tiver uma fonte de dados especializados. |
+| &nbsp; " | [Driver do desenvolvedor](../odbc/reference/develop-driver/index.md) | Como desenvolver seu próprio driver ODBC, se você tiver uma fonte de dados especializados. |
 | &nbsp; " | [Instalar](../odbc/reference/install/index.md) | Instalação do ODBC, subchaves e muito mais. |
 | &nbsp; " | [Sintaxe](../odbc/reference/syntax/index.md)   | APIs para acesso a dados, instalador, conversão e a instalação. |
 | &nbsp; | &nbsp; | <br /> |
@@ -254,7 +254,7 @@ Você pode usar o Python para interagir com o SQL Server.
 | Área | Descrição |
 | :--- | :---------- |
 | [Python para o SQL Server](./python/index.md) | Raiz de nossa documentação. |
-| [driver pymssql](./python/pymssql/index.md) | A Microsoft não manter ou teste o driver pymssql.<br /><br />O driver de conexão pymssql é uma interface simples para bancos de dados SQL, para uso em programas do Python. Pymssql se baseia na FreeTDS para fornecer uma interface de DB – API do Python (PEP 249) ao Microsoft SQL Server. |
+| [pymssql driver](./python/pymssql/index.md) | A Microsoft não manter ou teste o driver pymssql.<br /><br />O driver de conexão pymssql é uma interface simples para bancos de dados SQL, para uso em programas do Python. Pymssql se baseia na FreeTDS para fornecer uma interface de DB – API do Python (PEP 249) ao Microsoft SQL Server. |
 | [driver pyodbc](./python/pyodbc/index.md)   | O driver de conexão de pyodbc é um módulo de Python de software livre que simplifica o acesso aos bancos de dados ODBC. Ele implementa a especificação de DB API 2.0, mas é fornecido com a conveniência de Pythonic ainda mais. |
 | &nbsp; | <br /> |
 
@@ -333,7 +333,7 @@ As capturas de tela a seguir lhe dar uma ideia da aparência de nosso site de do
 
 #### <a name="choose-an-operating-system"></a>Escolha um sistema operacional:
 
-![Site de desenvolvimento do SQL, Ubuntu do Java][image-ref-400-aka-ms-sqldev-java-ubuntu]
+![Site SQL Dev, Java Ubuntu][image-ref-400-aka-ms-sqldev-java-ubuntu]
 
 &nbsp;
 
