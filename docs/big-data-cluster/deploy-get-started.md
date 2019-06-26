@@ -5,16 +5,16 @@ description: Aprenda as etapas e os recursos de implantação de clusters de big
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 31f8b94693ad7c6d242249300a21d051a7afe859
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4379e35b4d86ca462ea97b28c37d2f3b56427292
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797905"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388826"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>Introdução aos clusters de grandes dados do SQL Server
 
@@ -47,7 +47,7 @@ Clusters de big data são implantados como uma série de inter-relacionados cont
 
 ## <a name="deploy-a-big-data-cluster"></a>Implantar um cluster de Big Data
 
-Depois de configurar o Kubernetes, você implanta um cluster de big data com o `mssqlctl cluster create` comando. Durante a implantação, você pode aproveitar as várias abordagens diferentes.
+Depois de configurar o Kubernetes, você implanta um cluster de big data com o `mssqlctl bdc create` comando. Durante a implantação, você pode aproveitar as várias abordagens diferentes.
 
 - Se você estiver implantando em um ambiente de desenvolvimento e teste, você pode optar por usar um dos [as configurações padrão](deployment-guidance.md#deploy) fornecidas pelo **mssqlctl**.
 

@@ -5,17 +5,17 @@ description: Este artigo mostra como restaurar um banco de dados para a instânc
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d69476548d405ff9b04a010c76241c1f15934778
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9657e3659c711162a39b1f7dd34fe6d517c2822e
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797946"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388838"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Restaurar um banco de dados para a instância de mestre de cluster de big data do SQL Server
 
@@ -99,12 +99,12 @@ GO
 -- Create the SqlDataPool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
   CREATE EXTERNAL DATA SOURCE SqlDataPool
-  WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+  WITH (LOCATION = 'sqldatapool://controller-svc/default');
 
 -- Create the SqlStoragePool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
    CREATE EXTERNAL DATA SOURCE SqlStoragePool
-   WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+   WITH (LOCATION = 'sqlhdfs://controller-svc/default');
 GO
 ```
 

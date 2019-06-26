@@ -5,16 +5,16 @@ description: Saiba como executar uma implantação offline de um cluster de big 
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fd6a1e1e6f2ad661c8a2316c434854095c7f6da5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f3bfcfba0cfb972c7d02042bc98aa461eb110bb
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797892"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388810"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Executar uma implantação offline de um cluster de big data do SQL Server
 
@@ -42,7 +42,7 @@ As etapas a seguir descrevem como efetuar pull de cluster de big data imagens de
    > [!TIP]
    > Esses comandos usam o PowerShell como um exemplo, mas você pode executá-los de cmd, bash ou qualquer shell de comando que pode executar o docker. No Linux, adicionar `sudo` para cada comando.
 
-1. O cluster de big data de pull imagens de contêiner, repetindo o comando a seguir. Substitua `<SOURCE_IMAGE_NAME>` com cada [nome da imagem](#images). Substitua `<SOURCE_DOCKER_TAG>` com a marca para big data de cluster versão, como **ctp3.0**.  
+1. O cluster de big data de pull imagens de contêiner, repetindo o comando a seguir. Substitua `<SOURCE_IMAGE_NAME>` com cada [nome da imagem](#images). Substitua `<SOURCE_DOCKER_TAG>` com a marca para big data de cluster versão, como **ctp3.1**.  
 
    ```PowerShell
    docker pull private-repo.microsoft.com/mssql-private-preview/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -84,7 +84,6 @@ As seguintes imagens de contêiner de cluster de big data são necessárias para
  - **mssql-mlserver-r-runtime**
  - **mssql-mlserver-py-runtime**
  - **mssql-controller**
- - **mssql-portal**
  - **mssql-server-controller**
  - **mssql-monitor-grafana**
  - **mssql-monitor-kibana**
@@ -92,6 +91,8 @@ As seguintes imagens de contêiner de cluster de big data são necessárias para
  - **mssql-app-service-proxy**
  - **mssql-ssis-app-runtime**
  - **mssql-monitor-telegraf**
+ - **mssql-mleap-serving-runtime**
+  
 
 ## <a id="automated"></a> Script automatizado
 
@@ -179,9 +180,9 @@ Para instalar **kubectl** para um computador offline, use as etapas a seguir.
 Para implantar a partir do repositório privado, use as etapas descritas na [guia de implantação](deployment-guidance.md), mas usar um arquivo de configuração de implantação personalizado que especifica as informações de repositório do Docker particulares. O seguinte **mssqlctl** comandos demonstram como alterar as configurações do Docker em um arquivo de configuração de implantação personalizada denominada **custom.json**:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
 A implantação solicita o nome de usuário do docker e a senha, ou você pode especificá-los de **DOCKER_USERNAME** e **DOCKER_PASSWORD** variáveis de ambiente.

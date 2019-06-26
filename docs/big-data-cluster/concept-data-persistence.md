@@ -5,17 +5,17 @@ description: Saiba mais sobre o funcionamento da persistência de dados em um cl
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 24c90bfb8c99178e8ffa7822fba4bea709c536e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cfba93aaca23ca3303b6d9bd9752c1d458a9a81a
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800721"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388008"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistência de dados com o cluster de big data do SQL Server no Kubernetes
 
@@ -49,7 +49,7 @@ Assim como outras personalizações, você pode especificar as configurações d
 Implantação de cluster de big data usará o armazenamento persistente para armazenar dados, metadados e logs de vários componentes. Você pode personalizar o tamanho das declarações de volume persistente criado como parte da implantação. Como prática recomendada, é recomendável usar as classes de armazenamento com um *Retain* [recuperar política](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy).
 
 > [!NOTE]
-> No CTP 3.0, você não pode modificar o armazenamento configuração configuração após a implantação. Além disso, apenas `ReadWriteOnce` é suporte para o modo de acesso para o cluster inteiro.
+> No CTP 3.1, você não pode modificar o armazenamento configuração configuração após a implantação. Além disso, apenas `ReadWriteOnce` é suporte para o modo de acesso para o cluster inteiro.
 
 > [!WARNING]
 > A execução sem armazenamento persistente pode trabalhar em um ambiente de teste, mas isso poderá resultar em um cluster não funcional. Após a reinicialização de pod, dados de metadados e/ou usuário do cluster serão perdidos permanentemente. Não recomendamos executar nessa configuração. 
@@ -58,7 +58,7 @@ Implantação de cluster de big data usará o armazenamento persistente para arm
 
 ## <a name="aks-storage-classes"></a>Classes de armazenamento do AKS
 
-Acompanha o AKS [duas classes de armazenamento interno](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **padrão** e **premium gerenciados** juntamente com provisionador dinâmico para eles. Você pode especificar qualquer uma dessas ou criar sua própria classe de armazenamento para a implantação de cluster de big data com o armazenamento persistente habilitado. Por padrão, a interna no arquivo de configuração de cluster do aks *aks-dev-test.json* vem com configurações de armazenamento persistente para usar **padrão** classe de armazenamento.
+Acompanha o AKS [duas classes de armazenamento interno](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **padrão** e **premium gerenciados** juntamente com provisionador dinâmico para eles. Você pode especificar qualquer uma dessas ou criar sua própria classe de armazenamento para a implantação de cluster de big data com o armazenamento persistente habilitado. Por padrão, a interna no arquivo de configuração de cluster do aks *aks-dev-test* vem com configurações de armazenamento persistente para usar **padrão** classe de armazenamento.
 
 > [!WARNING]
 > Volumes persistentes criados com as classes de armazenamento interno **padrão** e **premium gerenciados** têm uma política de recuperar de *excluir*. Portanto, no momento você excluir o cluster de big data do SQL Server, declarações de volume persistente obtém também os volumes excluídos e, em seguida, persistentes. Você pode criar classes de armazenamento personalizado usando **disco do azure** privioner com um *reter* recuperar política, conforme mostrado na [isso](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) artigo.
@@ -66,25 +66,25 @@ Acompanha o AKS [duas classes de armazenamento interno](https://docs.microsoft.c
 
 ## <a name="minikube-storage-class"></a>Classe de armazenamento do Minikube
 
-Minikube vem com uma classe de armazenamento interna chamada **standard** junto com um provedor dinâmico para ele. A configuração interna no arquivo para minikube *minikube-dev-test.json* tem as definições de configuração de armazenamento nas especificações do plano de controle. As mesmas configurações serão aplicadas a todas as especificações de pools. Você também pode personalizar uma cópia desse arquivo e usá-lo para sua implantação de cluster de big data no minikube. Manualmente, você pode editar o arquivo personalizado e alterar o tamanho das declarações de volumes persistentes para grupos específicos acomodar as cargas de trabalho que deseja executar. Ou, consulte [configurar o armazenamento](#config-samples) seção para obter exemplos sobre como fazer edições usando *mssqlctl* comandos.
+Minikube vem com uma classe de armazenamento interna chamada **standard** junto com um provedor dinâmico para ele. A configuração interna no arquivo para minikube *minikube-dev-test* tem as definições de configuração de armazenamento nas especificações do plano de controle. As mesmas configurações serão aplicadas a todas as especificações de pools. Você também pode personalizar uma cópia desse arquivo e usá-lo para sua implantação de cluster de big data no minikube. Manualmente, você pode editar o arquivo personalizado e alterar o tamanho das declarações de volumes persistentes para grupos específicos acomodar as cargas de trabalho que deseja executar. Ou, consulte [configurar o armazenamento](#config-samples) seção para obter exemplos sobre como fazer edições usando *mssqlctl* comandos.
 
 ## <a name="kubeadm-storage-classes"></a>Classes de armazenamento Kubeadm
 
 Kubeadm não vem com uma classe de armazenamento interno. Você deve criar suas próprias classes de armazenamento e os volumes persistentes usando o armazenamento local ou o provisionador preferido, como [torre](https://github.com/rook/rook). Nesse caso, você definiria o **className** para a classe de armazenamento que você configurou. 
 
 > [!NOTE]
->  No internos no arquivo de configuração de implantação do *kubeadm kubeadm-dev-test.json* não há nenhum nome de classe de armazenamento especificado para o armazenamento de dados e de log. Antes da implantação, você deve personalizar o arquivo de configuração e defina o valor para className caso contrário, que as validações de pré-implantação falhará. Implantação também tem uma etapa de validação que verifica a existência da classe de armazenamento, mas não para os volumes persistentes necessários. Você deve garantir que você criar suficiente volumes dependendo da escala do seu cluster. No CTP 3.0, para o tamanho padrão do cluster, você deve criar pelo menos 23 volumes. [Aqui](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) é um exemplo sobre como criar volumes persistentes usando provisionador local.
+>  No internos no arquivo de configuração de implantação do *kubeadm kubeadm-dev-test* há nenhum nome de classe de armazenamento especificado para o armazenamento de dados e de log. Antes da implantação, você deve personalizar o arquivo de configuração e defina o valor para className caso contrário, que as validações de pré-implantação falhará. Implantação também tem uma etapa de validação que verifica a existência da classe de armazenamento, mas não para os volumes persistentes necessários. Você deve garantir que você criar suficiente volumes dependendo da escala do seu cluster. No CTP 3.1, para o tamanho padrão do cluster, você deve criar pelo menos 23 volumes. [Aqui](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) é um exemplo sobre como criar volumes persistentes usando provisionador local.
 
 
 ## <a name="customize-storage-configurations-for-each-pool"></a>Personalizar as configurações para cada pool de armazenamento
 
-Para todas as personalizações, você deve primeiro criar uma cópia da compilação no arquivo de configuração que você deseja usar. Por exemplo, o comando a seguir cria uma cópia do *aks-dev-test.json* arquivo de configuração de implantação no diretório atual:
+Para todas as personalizações, você deve primeiro criar uma cópia da compilação no arquivo de configuração que você deseja usar. Por exemplo, o comando a seguir cria uma cópia do *aks-dev-test* arquivo de configuração de implantação em um subdiretório chamado `custom`:
 
 ```bash
-mssqlctl cluster config init --src aks-dev-test.json --target custom.json
+mssqlctl bdc config init --source aks-dev-test --target custom
 ```
 
-Em seguida, você pode personalizar seu arquivo de configuração ao editá-lo manualmente, ou você pode usar *conjunto de seção de configuração de cluster mssqlctl* comando. Esse comando set usa uma combinação de bibliotecas jsonpath e jsonpatch para fornecer maneiras para editar seu arquivo de configuração.
+Em seguida, você pode personalizar seu arquivo de configuração ao editá-lo manualmente, ou você pode usar **conjunto de seção de configuração de bdc mssqlctl** comando. Esse comando set usa uma combinação de bibliotecas jsonpath e jsonpatch para fornecer maneiras para editar seu arquivo de configuração.
 
 ### <a name="configure-size"></a>Configurar o tamanho
 
@@ -93,13 +93,13 @@ Por padrão, o tamanho das declarações de volume persistente provisionados par
 O exemplo a seguir atualiza apenas o tamanho de declarações de volume persistente para dados armazenados no pool de armazenamento para Gi 100. Observe que a seção de armazenamento deve existir no arquivo de configuração para o pool de armazenamento antes de executar este comando:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=100Gi"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=100Gi"
 ```
 
 O exemplo a seguir atualiza o tamanho do volume persistente declarações para todos os pools para 32Gi:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.storage.data.size=32Gi"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.storage.data.size=32Gi"
 ```
 
 ### <a id="config-samples"></a> Configurar classe de armazenamento
@@ -107,7 +107,7 @@ mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.
 Exemplo a seguir mostra como modificar a classe de armazenamento para o plano de controle:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.storage.data.className=<yourStorageClassName>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.storage.data.className=<yourStorageClassName>"
 ```
 
 Outra opção é editar manualmente o arquivo de configuração personalizada ou usar jsonpatch, como no exemplo a seguir que altera a classe de armazenamento para o pool de armazenamento. Criar uma *patch.json* arquivo com este conteúdo:
@@ -135,10 +135,10 @@ Outra opção é editar manualmente o arquivo de configuração personalizada ou
 }
 ```
 
-Aplica o arquivo de patch. Use *conjunto de seção de configuração de cluster mssqlctl* comando para aplicar as alterações no arquivo de patch JSON. O exemplo a seguir aplica o arquivo de patch.json para um custom.json de arquivo de configuração de implantação de destino.
+Aplica o arquivo de patch. Use **conjunto de seção de configuração de bdc mssqlctl** comando para aplicar as alterações no arquivo de patch JSON. O exemplo a seguir aplica o arquivo de patch.json para um custom.json de arquivo de configuração de implantação de destino.
 
 ```bash
-mssqlctl cluster config section set -c custom.json -p ./patch.json
+mssqlctl bdc config section set --config-profile custom -p ./patch.json
 ```
 
 ## <a name="next-steps"></a>Próximas etapas

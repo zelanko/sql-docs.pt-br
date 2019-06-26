@@ -29,12 +29,12 @@ ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c216b41fe7f7c4d9a8b1c5e290b07bc0fec2c3d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b83088e64314c21d8a71deb1da395d40eecfdec
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635514"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351655"
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>Trabalhar com tipos definidos pelo usuário –Manipular dados UDT
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,11 +66,11 @@ FROM dbo.Points;
  Isso gera os resultados a seguir.  
   
 ```  
-IDPointValue  
-----------  
-13,4  
-21,5  
-31,99  
+ID PointValue  
+-- ----------  
+ 1 3,4  
+ 2 1,5  
+ 3 1,99  
 ```  
   
  Você também pode usar as funções [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST e CONVERT para obter os mesmos resultados.  
@@ -93,11 +93,11 @@ FROM dbo.Points;
  As propriedades X e Y retornam um valor inteiro, que é exibido no conjunto de resultados.  
   
 ```  
-IDxValyVal  
-----------  
-134  
-215  
-3199  
+ID xVal yVal  
+-- ---- ----  
+ 1    3    4  
+ 2    1    5  
+ 3    1   99  
 ```  
   
 ## <a name="working-with-variables"></a>Trabalhando com variáveis  
@@ -156,7 +156,7 @@ FROM dbo.Points
 WHERE PointValue = @ComparePoint;  
 ```  
   
-## <a name="invoking-udt-methods"></a>Invocando métodos UDT   
+## <a name="invoking-udt-methods"></a>Invocando métodos UDT  
  Você também pode invocar métodos definidos em seu UDT no [!INCLUDE[tsql](../../includes/tsql-md.md)]. O **ponto** classe contém três métodos, **distância**, **DistanceFrom**, e **DistanceFromXY**. Para as listagens de código definem esses três métodos, consulte [Codificando tipos](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
  O seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução chamadas a **PointValue.Distance** método:  
@@ -171,11 +171,11 @@ FROM dbo.Points;
  Os resultados são exibidos na **distância** coluna:  
   
 ```  
-IDXYDistance  
-------------------------  
-1345  
-2155.09901951359278  
-319999.0050503762308  
+ID X  Y  Distance  
+-- -- -- ----------------  
+ 1  3  4                5  
+ 2  1  5 5.09901951359278  
+ 3  1 99 99.0050503762308  
 ```  
   
  O **DistanceFrom** método usa um argumento de **aponte** tipo de dados e exibe a distância do ponto especificado até o PointValue:  
@@ -189,11 +189,11 @@ FROM dbo.Points;
  Os resultados exibem os resultados do **DistanceFrom** método para cada linha na tabela:  
   
 ```  
-ID PntDistanceFromPoint  
----------------------  
-13,495.0210502993942  
-21,594  
-31,990  
+ID Pnt DistanceFromPoint  
+-- --- -----------------  
+ 1 3,4  95.0210502993942  
+ 2 1,5                94  
+ 3 1,9                90  
 ```  
   
  O **DistanceFromXY** método usa os pontos individualmente como argumentos:  

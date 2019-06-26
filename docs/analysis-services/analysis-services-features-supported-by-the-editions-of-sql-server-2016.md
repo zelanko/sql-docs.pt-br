@@ -1,6 +1,6 @@
 ---
-title: Recursos compatíveis com as edições do SQL Server 2016 do Analysis Services | Microsoft Docs
-ms.date: 05/08/2018
+title: Recursos compatíveis com as edições do SQL Server do Analysis Services | Microsoft Docs
+ms.date: 06/25/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 19618fc0311de28184e3a95c5e57e423d121f085
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9947b10e01864f66bf26d6599e43814ab37dadc6
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015563"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388212"
 ---
-# <a name="analysis-services-features-supported-by-sql-server-editions"></a>Recursos do Analysis Services com suporte nas edições do SQL Server
+# <a name="analysis-services-features-supported-by-sql-server-edition"></a>Edição do SQL Server dá suportados a recursos do Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
-Este tópico fornece detalhes de recursos com suporte nas diferentes edições do SQL Server 2016 Analysis Services. Para os recursos com suporte nas edições Evaluation e Developer, consulte Enterprise edition.
+Este artigo descreve os recursos com suporte nas diferentes edições do SQL Server 2016, 2017, os serviços de análise de 2019. Edição de avaliação oferece suporte a recursos da edição Enterprise.
 
 ## <a name="analysis-services-servers"></a>Analysis Services (servidores)
   
@@ -37,13 +37,14 @@ Este tópico fornece detalhes de recursos com suporte nas diferentes edições d
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Hierarquias|Sim|Sim|||||Sim|  
 |KPIs|Sim|Sim|||||Sim|  
-|Perspectivas|Sim||||||Sim|  
-|Traduções|Sim|Sim|||||Sim|  
+|perspectivas|Sim||||||Sim|  
+|Translations|Sim|Sim|||||Sim|  
 |Cálculos DAX, consultas DAX, consultas MDX|Sim|Sim|||||Sim|  
 |Segurança em nível de linha|Sim|Sim|||||Sim|  
 |Várias partições|Sim||||||Sim|  
+|Grupos de cálculo|Sim (começando com o SQL Server 2019)|Sim (começando com o SQL Server 2019)|||||Sim (começando com o SQL Server 2019)|  
 |Modo de armazenamento na memória|Sim|Sim|||||Sim|  
-|Modo de armazenamento do DirectQuery|Sim||||||Sim|  
+|Modo DirectQuery|Sim|Sim (começando com o SQL Server 2019)|||||Sim|  
 
 ## <a name="multidimensional-models"></a>Modelos multidimensionais 
   
@@ -52,7 +53,7 @@ Este tópico fornece detalhes de recursos com suporte nas diferentes edições d
 |Medidas semiaditivas|Sim|Não <sup>1</sup>|||||Sim|  
 |Hierarquias|Sim|Sim|||||Sim|  
 |KPIs|Sim|Sim|||||Sim|  
-|Perspectivas|Sim||||||Sim|  
+|perspectivas|Sim||||||Sim|  
 |Ações|Sim|Sim|||||Sim|  
 |Inteligência de conta|Sim|Sim|||||Sim|  
 |Inteligência de dados temporais|Sim|Sim|||||Sim|  
@@ -64,7 +65,7 @@ Este tópico fornece detalhes de recursos com suporte nas diferentes edições d
 |Tipos de hierarquia avançados (pai-filho e hierarquias desbalanceadas)|Sim|Sim|||||Sim|  
 |Dimensões avançadas (Dimensões de referência, dimensões muitos-para-muitos)|Sim|Sim|||||Sim|  
 |Medidas e dimensões vinculadas|Sim|Sim  <sup>2</sup> |||||Sim|  
-|Traduções|Sim|Sim|||||Sim|  
+|Translations|Sim|Sim|||||Sim|  
 |Agregações|Sim|Sim|||||Sim|  
 |Várias partições|Sim|Sim, até 3|||||Sim|  
 |Cache pró-ativo|Sim||||||Sim|  
@@ -77,11 +78,10 @@ Este tópico fornece detalhes de recursos com suporte nas diferentes edições d
 |Modelos de armazenamento MOLAP, ROLAP e HOLAP|Sim|Sim|||||Sim|  
 |Transporte de XML binário e compactado|Sim|Sim|||||Sim|  
 |Processamento de modo push|Sim||||||Sim|  
-|Write-back direto|Sim||||||Sim|  
 |Expressões de medida|Sim||||||Sim|  
   
  <sup>1</sup> Há suporte para a medida semiaditiva LastChild na edição Standard, ao contrário de outras medidas semiaditivas, como None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren e ByAccount. Medidas aditivas, como Sum, Count, Min, Max e medidas não aditivas (DistinctCount) têm suporte em todas as edições.  
-  <sup>2</sup> standard edition oferece suporte a vinculação de medidas e dimensões no mesmo banco de dados, mas não de outros bancos de dados ou instâncias.
+  <sup>2</sup> A edição Standard dá suporte à vinculação de medidas e dimensões no mesmo banco de dados, mas não de outros bancos de dados ou instâncias.
   
 ## <a name="power-pivot-for-sharepoint"></a>Power Pivot para SharePoint  
   
@@ -102,8 +102,8 @@ Este tópico fornece detalhes de recursos com suporte nas diferentes edições d
 |Ferramentas de mineração de dados (Assistentes, Editores, Construtores de Consultas)|Sim|Sim|||||Sim|  
 |Validação cruzada|Sim||||||Sim|  
 |Modelos em subconjuntos filtrados de dados da estrutura de mineração|Sim||||||Sim|  
-|Série temporal: combinação personalizada entre métodos ARTXP e ARIMA|Sim||||||Sim|  
-|Série temporal: previsão com novos dados|Sim||||||Sim|  
+|Série temporal: Combinação personalizada entre métodos ARTXP e ARIMA|Sim||||||Sim|  
+|Série temporal: Previsão com novos dados|Sim||||||Sim|  
 |Consultas de DM simultâneas ilimitadas|Sim||||||Sim|  
 |Configuração avançada e opções de ajuste para algoritmos de mineração de dados|Sim||||||Sim|  
 |Suporte para algoritmos de plug-in|Sim||||||Sim|  
@@ -113,8 +113,5 @@ Este tópico fornece detalhes de recursos com suporte nas diferentes edições d
 |Previsão de sequências|Sim||||||Sim|  
 |Destinos de várias previsões para Naïve Bayes, rede neural e regressão logística|Sim||||||Sim|  
   
- ## <a name="see-also"></a>Consulte também  
- [Especificações do produto para SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
- [Instalação do SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
 
 

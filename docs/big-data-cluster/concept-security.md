@@ -6,17 +6,17 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 12/06/2018
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a71c4fb8902bb016de0d5ee607f955db61d94901
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d57fbeee578d2889d330ba19401477a43ab95e60
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783072"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387937"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>Conceitos de segurança para clusters de grandes dados do SQL Server
 
@@ -34,7 +34,7 @@ Há três pontos de entrada para o cluster de big data
 
 * Gateway HDFS/Spark (Knox) – isso é um ponto de extremidade com base em HTTPS. Outros pontos de extremidade são transmitidas por proxy por meio deste. Gateway HDFS/Spark é usado para acessar serviços como o webHDFS e Livy. Sempre que você veja referências a Knox, esse é o ponto de extremidade.
 
-* Ponto de extremidade controlador - serviço de gerenciamento de cluster de big data que expõe as APIs REST para gerenciar o cluster. Algumas ferramentas, como o portal de administração, também são acessadas por meio desse ponto de extremidade.
+* Ponto de extremidade controlador - serviço de gerenciamento de cluster de big data que expõe as APIs REST para gerenciar o cluster. Algumas ferramentas também são acessadas por meio desse ponto de extremidade.
 
 * Instância mestre - ponto de extremidade TDS para ferramentas de banco de dados e aplicativos para se conectar à instância mestre do SQL Server no cluster.
 

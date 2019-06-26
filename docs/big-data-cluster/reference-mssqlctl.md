@@ -5,16 +5,16 @@ description: Artigo de referência para comandos mssqlctl.
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: acc25e6b3deca199ad774378318e17991614dcaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2601d526710e6cf51de089f7879f0f5517bf86aa
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779237"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388670"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -26,9 +26,11 @@ O artigo a seguir fornece referência para o **mssqlctl** ferramenta para [clust
 |     |     |
 | --- | --- |
 |[aplicativo mssqlctl](reference-mssqlctl-app.md) | Criar, excluir, executar e gerenciar aplicativos. |
-|[cluster mssqlctl](reference-mssqlctl-cluster.md) | Selecionar, gerenciar e operar clusters. |
+|[mssqlctl bdc](reference-mssqlctl-bdc.md) | Selecionar, gerenciar e operar Clusters grandes de dados do SQL Server. |
+|[mssqlctl hdfs](reference-mssqlctl-hdfs.md) | O módulo HDFS fornece sistema de arquivos de comandos para acessar um HDFS. |
 [logon de mssqlctl](#mssqlctl-login) | Faça logon no ponto de extremidade de controlador do cluster.
 [mssqlctl logout](#mssqlctl-logout) | Faça logoff do cluster.
+|[mssqlctl sql](reference-mssqlctl-sql.md) | A CLI do banco de dados SQL permite que o usuário interaja com o SQL Server por meio do T-SQL. |
 ## <a name="mssqlctl-login"></a>logon de mssqlctl
 Quando o cluster é implantado, ele listará o ponto de extremidade de controlador durante a implantação, o que você deve usar para fazer logon.  Se você não souber o ponto de extremidade de controlador, você poderá logon fazendo com que a configuração do kube do seu cluster em seu sistema no local padrão de <user home>/.kube/config ou usar o KUBECONFIG env var, ou seja, exportar KUBECONFIG=path/to/.kube/config.
 ```bash

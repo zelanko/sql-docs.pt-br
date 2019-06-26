@@ -5,17 +5,17 @@ description: Aprenda a implantar clusters de big data de 2019 do SQL Server (ver
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 15cd412de1dda9d1245859c27d35a7c7f9f52710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bd6d260d58b837e2df0d216c28149b6e9a3fa51
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782244"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388777"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Como implantar clusters de grandes dados do SQL Server no Kubernetes
 
@@ -82,14 +82,14 @@ As opções são definidas nos arquivos de configuração do JSON de implantaç�
 
 | Perfil de implantação | Ambiente do Kubernetes |
 |---|---|
-| **aks-dev-test.json** | Serviço de Kubernetes do Azure (AKS) |
-| **kubeadm-dev-test.json** | Várias máquinas (kubeadm) |
-| **minikube-dev-test.json** | minikube |
+| **aks-dev-test** | Serviço de Kubernetes do Azure (AKS) |
+| **kubeadm-dev-test** | Várias máquinas (kubeadm) |
+| **minikube-dev-test** | minikube |
 
-Você pode implantar um cluster de big data, executando **criar cluster mssqlctl**. Isso solicitará que você escolha uma das configurações padrão e orientará você durante a implantação.
+Você pode implantar um cluster de big data, executando **mssqlctl bdc criar**. Isso solicitará que você escolha uma das configurações padrão e orientará você durante a implantação.
 
 ```bash
-mssqlctl cluster create
+mssqlctl bdc create
 ```
 
 Nesse cenário, você será solicitado para todas as configurações que não fazem parte da configuração padrão, como senhas. Observe que as informações do Docker são fornecidas a você pela Microsoft como parte do SQL Server 2019 [programa de adoção antecipada](https://aka.ms/eapsignup).
@@ -99,35 +99,38 @@ Nesse cenário, você será solicitado para todas as configurações que não fa
 
 ## <a id="customconfig"></a> Configurações personalizadas
 
-Também é possível personalizar seu próprio arquivo de configuração de implantação. Você pode fazer isso com as seguintes etapas:
+Também é possível personalizar seu próprio perfil de configuração de implantação. Você pode fazer isso com as seguintes etapas:
 
-1. Comece com um dos perfis de implantação padrão que correspondem ao seu ambiente de Kubernetes. Você pode usar o **lista de configuração de cluster mssqlctl** comando para listá-los:
+1. Comece com um dos perfis de implantação padrão que correspondem ao seu ambiente de Kubernetes. Você pode usar o **mssqlctl bdc config lista** comando para listá-los:
 
    ```bash
-   mssqlctl cluster config list
+   mssqlctl bdc config list
    ```
 
-1. Para personalizar sua implantação, crie uma cópia do perfil de implantação com o **mssqlctl cluster config init** comando. Por exemplo, o comando a seguir cria uma cópia do **aks-dev-test.json** arquivo de configuração de implantação no diretório atual:
+1. Para personalizar sua implantação, crie uma cópia do perfil de implantação com o **mssqlctl bdc config init** comando. Por exemplo, o comando a seguir cria uma cópia do **aks-dev-test** arquivo de configuração de implantação em um diretório de destino chamado `custom`:
 
    ```bash
-   mssqlctl cluster config init --src aks-dev-test.json --target custom.json
-   ```
-
-1. Para personalizar configurações no arquivo de configuração de implantação, você pode editá-lo em uma ferramenta que é bom para edição de documentos json como o VS Code. Para a automação com scripts, você pode editar o arquivo de configuração personalizada usando **conjunto de seção de configuração de cluster mssqlctl** comando. Por exemplo, o comando a seguir altera um arquivo de configuração personalizada para alterar o nome do cluster implantado do padrão (**mssql-cluster**) para **test-cluster**:  
-
-   ```bash
-   mssqlctl cluster config section set --config-file custom.json --json-values "metadata.name=test-cluster"
+   mssqlctl bdc config init --source aks-dev-test --target custom
    ```
 
    > [!TIP]
-   > Uma ferramenta útil para encontrar caminhos JSON é o [avaliador on-line de JSONPath](https://jsonpath.com/).
+   > O `--target` Especifica um diretório que contém o arquivo de configuração com base no `--source` parâmetro.
+
+1. Para personalizar as configurações no seu perfil de configuração de implantação, você pode editar o arquivo de configuração de implantação em uma ferramenta que é bom para edição de arquivos JSON, como o VS Code. Para a automação com scripts, você também pode editar o perfil de implantação personalizada usando **conjunto de seção de configuração de bdc mssqlctl** comando. Por exemplo, o comando a seguir altera um perfil de implantação personalizado para alterar o nome do cluster implantado do padrão (**mssql-cluster**) para **test-cluster**:  
+
+   ```bash
+   mssqlctl bdc config section set --config-profile custom --json-values "metadata.name=test-cluster"
+   ```
+
+   > [!TIP]
+   > O `--config-profile` Especifica um nome de diretório para seu perfil de implantação personalizada, mas as modificações reais acontecem no arquivo JSON de configuração de implantação dentro desse diretório. Uma ferramenta útil para encontrar caminhos JSON é o [avaliador on-line de JSONPath](https://jsonpath.com/).
 
    Além de passar pares chave-valor, você pode também fornecer embutido valores JSON ou transmitir arquivos de patch JSON. Para obter mais informações, consulte [definir as configurações de implantação para clusters de big data](deployment-custom-configuration.md).
 
-1. Em seguida, passar o arquivo de configuração personalizada para **criar cluster mssqlctl**. Observe que você deve definir exigida [variáveis de ambiente](#env), caso contrário, você será solicitado para os valores:
+1. Em seguida, passar o arquivo de configuração personalizada para **mssqlctl bdc criar**. Observe que você deve definir exigida [variáveis de ambiente](#env), caso contrário, você será solicitado para os valores:
 
    ```bash
-   mssqlctl cluster create --config-file custom.json --accept-eula yes
+   mssqlctl bdc create --config-profile custom --accept-eula yes
    ```
 
 > [!TIP]
@@ -146,7 +149,7 @@ As seguintes variáveis de ambiente são usadas para configurações de seguran�
 | **KNOX_PASSWORD** | A senha do usuário do Knox. |
 | **MSSQL_SA_PASSWORD** | A senha do usuário de SA para a instância mestre do SQL. |
 
-Essas variáveis de ambiente devem ser definidas antes de chamar **criar cluster mssqlctl**. Se qualquer variável não for definido, você será solicitado para ele.
+Essas variáveis de ambiente devem ser definidas antes de chamar **mssqlctl bdc criar**. Se qualquer variável não for definido, você será solicitado para ele.
 
 O exemplo a seguir mostra como definir as variáveis de ambiente para Linux (bash) e Windows (PowerShell):
 
@@ -168,10 +171,10 @@ SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
 ```
 
-Após definir as variáveis de ambiente, você deve executar `mssqlctl cluster create` para disparar a implantação. Este exemplo usa o arquivo de configuração de cluster criado acima:
+Depois de definir as variáveis de ambiente, você deve executar `mssqlctl bdc create` para disparar a implantação. Este exemplo usa o perfil de configuração de cluster criado acima:
 
 ```
-mssqlctl cluster create --config-file custom.json --accept-eula yes
+mssqlctl bdc create --config-profile custom --accept-eula yes
 ```
 
 Observe as seguintes diretrizes:
@@ -182,7 +185,7 @@ Observe as seguintes diretrizes:
 
 ## <a id="unattended"></a> Instalação autônoma
 
-Para uma implantação autônoma, você deve definir todas as variáveis de ambiente necessárias, use um arquivo de configuração e chamada `mssqlctl cluster create` com o `--accept-eula yes` parâmetro. Os exemplos na seção anterior demonstram a sintaxe para uma instalação autônoma.
+Para uma implantação autônoma, você deve definir todas as variáveis de ambiente necessárias, use um arquivo de configuração e chamada `mssqlctl bdc create` com o `--accept-eula yes` parâmetro. Os exemplos na seção anterior demonstram a sintaxe para uma instalação autônoma.
 
 ## <a id="monitor"></a> Monitore a implantação
 
@@ -195,7 +198,7 @@ Durante a inicialização do cluster, a janela de comando do cliente produzirá 
 Em menos de 15 a 30 minutos, você deve ser notificado se o pod de controlador está em execução:
 
 ```output
-2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Checkthe mssqlctl.log file for more details.
+2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Check the mssqlctl.log file for more details.
 2019-04-12 15:01:40.0861 UTC | INFO | Controller pod is running.
 2019-04-12 15:01:40.0884 UTC | INFO | Controller Endpoint: https://<ip-address>:30080
 ```
@@ -206,11 +209,8 @@ Em menos de 15 a 30 minutos, você deve ser notificado se o pod de controlador e
 Quando a implantação for concluída, a saída notifica você de sucesso:
 
 ```output
-2019-04-12 15:37:18.0271 UTC | INFO | Monitor and track your cluster at the Portal Endpoint: https://<ip-address>:30777/portal/
 2019-04-12 15:37:18.0271 UTC | INFO | Cluster deployed successfully.
 ```
-
-Anote a URL da **ponto de extremidade do Portal** na saída anterior para uso na próxima seção.
 
 > [!TIP]
 > É o nome padrão para o cluster de big data implantados `mssql-cluster` , a menos que modificado por uma configuração personalizada.
@@ -236,10 +236,10 @@ Depois que o script de implantação foi concluída com êxito, você pode obter
 
    Especifique o nome de usuário e a senha que você configurou para o controlador (CONTROLLER_USERNAME e CONTROLLER_PASSWORD) durante a implantação.
 
-1. Execute **lista de ponto de extremidade do cluster mssqlctl** para obter uma lista com uma descrição de cada ponto de extremidade e seus valores correspondentes de porta e endereço IP. 
+1. Execute **lista de ponto de extremidade do bdc mssqlctl** para obter uma lista com uma descrição de cada ponto de extremidade e seus valores correspondentes de porta e endereço IP. 
 
    ```bash
-   mssqlctl cluster endpoint list
+   mssqlctl bdc endpoint list
    ```
 
    A lista a seguir mostra um exemplo de saída deste comando:
@@ -252,7 +252,6 @@ Depois que o script de implantação foi concluída com êxito, você pode obter
    yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
    app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
    management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
-   portal             Management Portal                                       https://11.111.111.111:30777/portal                        11.111.111.111  30777   https
    log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
    metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
    controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https

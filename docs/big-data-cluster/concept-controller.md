@@ -6,17 +6,17 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 115809307b430a9e5079de4db71180cca4766dac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0623a920b060e4d5d1e7724f39e2eadb0bd2475
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783172"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387953"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>O que é o controlador em um cluster de big data do SQL Server?
 
@@ -44,17 +44,13 @@ O fluxo de trabalho buildout definirá o layout na parte superior do Kubernetes 
 
 ## <a name="managing-the-cluster-through-the-controller-service"></a>Gerenciando o cluster por meio do serviço de controlador
 
-Você pode gerenciar o cluster puramente por meio do serviço de controlador usando `mssqlctl` APIs ou o portal de administração de cluster que está hospedado dentro do cluster. Se você implantar objetos Kubernetes adicionais, como os pods no mesmo namespace, eles não são gerenciados ou monitorados pelo serviço do controlador.
+Você pode gerenciar o cluster por meio do serviço de controlador usando um **mssqlctl** comandos. Se você implantar objetos Kubernetes adicionais, como os pods no mesmo namespace, eles não são gerenciados ou monitorados pelo serviço do controlador. Você também pode usar **kubectl** comandos para gerenciar o cluster no nível do Kubernetes. Para obter mais informações, consulte [monitoramento e solução de problemas de clusters de grandes dados do SQL Server](cluster-troubleshooting-commands.md).
 
-O controlador e os objetos de Kubernetes (conjuntos com monitoração de estado, pods, segredos, etc.) criados para um cluster de big data residem em um namespace dedicado do Kubernetes. O serviço do controlador será concedido permissão pelo administrador de cluster do Kubernetes para gerenciar todos os recursos dentro desse namespace.  A política RBAC para esse cenário é configurada automaticamente como parte da implantação de cluster inicial usando `mssqlctl`. 
+O controlador e os objetos de Kubernetes (conjuntos com monitoração de estado, pods, segredos, etc.) criados para um cluster de big data residem em um namespace dedicado do Kubernetes. O serviço do controlador será concedido permissão pelo administrador de cluster do Kubernetes para gerenciar todos os recursos dentro desse namespace.  A política RBAC para esse cenário é configurada automaticamente como parte da implantação de cluster inicial usando **mssqlctl**.
 
 ### <a name="mssqlctl"></a>mssqlctl
 
-`mssqlctl` um utilitário de linha de comando é escrito em Python que permite aos administradores de cluster inicializar e gerenciar clusters de big data por meio das APIs REST expostas pelo serviço do controlador.
-
-### <a name="cluster-administration-portal"></a>Portal de administração de cluster
-
-Depois que o serviço do controlador está em execução, o administrador de cluster pode usar o [Portal de administração de Cluster](cluster-admin-portal.md) para monitorar o progresso da implantação, detectar e solucionar problemas com os serviços dentro do cluster.
+**mssqlctl** é um utilitário de linha de comando escrito em Python que permite que os administradores inicializar e gerenciar clusters de big data por meio das APIs REST expostas pelo serviço de controlador de cluster.
 
 ## <a name="controller-service-security"></a>Segurança do controlador de serviço
 
