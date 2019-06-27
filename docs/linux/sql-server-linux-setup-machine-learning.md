@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a64addb1d9267aadc7e7eb2828e032d67db5d540
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a36ae06f28cb68395fd24b64921575567757a7f
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705099"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399944"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>Instalar o SQL Server de 2019 serviços de Machine Learning (R, Python) no Linux
 
@@ -28,7 +28,7 @@ Serviços de Machine Learning também é compatível com contêineres do Linux. 
 
 ## <a name="uninstall-previous-ctp"></a>Desinstalar o CTP anterior
 
-A lista de pacotes foi alterado pela última várias versões CTP, resultando em menos de pacotes. Recomendamos a desinstalação do CTP 2. x para remover todos os pacotes anteriores antes de instalar o CTP 3.0. Não há suporte para a instalação lado a lado de várias versões.
+A lista de pacotes foi alterado pela última várias versões CTP, resultando em menos de pacotes. Recomendamos a desinstalação do CTP 2. x para remover todos os pacotes anteriores antes de instalar o CTP 3.1. Não há suporte para a instalação lado a lado de várias versões.
 
 ### <a name="1-confirm-package-installation"></a>1. Confirme a instalação do pacote
 
@@ -61,7 +61,7 @@ Comandos para remover os pacotes são exibidos na tabela a seguir.
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-30-install"></a>3. Prosseguir com a instalação do CTP 3.0
+### <a name="3-proceed-with-ctp-31-install"></a>3. Prosseguir com a instalação do CTP 3.1
 
 Instale com o nível mais alto de pacote usando as instruções neste artigo para seu sistema operacional.
 

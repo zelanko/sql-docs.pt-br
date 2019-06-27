@@ -10,12 +10,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b31c47039c79e0b8303f560694e67276dd192b6f
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: f26fcfa24da5b9f22ddab1e76c2f80a0d24fae8d
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388766"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400025"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Como montar S3 para o HDFS disposição em camadas em um cluster de big data
 
@@ -32,12 +32,12 @@ As seções a seguir fornecem um exemplo de como configurar o HDFS disposição 
 
 ## <a name="access-keys"></a>Chaves de acesso
 
-1. Abra um prompt de comando em um computador cliente que possa acessar seu cluster de big data.
+### <a name="set-environment-variable-for-access-key-credentials"></a>Definir variável de ambiente para as credenciais de chave de acesso
 
-1. Crie um arquivo local chamado **filename.creds** que contém suas credenciais de conta S3 usando o seguinte formato:
+Abra um prompt de comando em um computador cliente que possa acessar seu cluster de big data. Defina uma variável de ambiente usando o seguinte formato. Lista separada por Observe que as credenciais precisam estar em uma vírgula. O comando 'set' é usado no Windows. Se você estiver usando o Linux, em seguida, use 'export'.
 
    ```text
-    fs.s3a.access.key=<Access Key ID of the key>
+    set MOUNT_CREDENTIALS=fs.s3a.access.key=<Access Key ID of the key>,
     fs.s3a.secret.key=<Secret Access Key of the key>
    ```
 
@@ -59,11 +59,13 @@ Agora que você preparou um arquivo de credencial com chaves de acesso, você po
    ```bash
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
+   
+1. Defina a variável de ambiente MOUNT_CREDENTIALS seguindo as instruções acima
 
 1. Montar o armazenamento HDFS remoto no Azure usando **montagem de pool de armazenamento do bdc mssqlctl criar**. Substitua os valores de espaço reservado antes de executar o comando a seguir:
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
