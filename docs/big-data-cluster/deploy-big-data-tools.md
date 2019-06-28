@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: cbb4860cd747e454a09f1374d3b166fae466ee33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ffb63e3e7fb2891aeed1b9b26fbc43dddf69c78e
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797914"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412963"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Instalar ferramentas do SQL Server 2019 big data
 
@@ -33,7 +33,7 @@ A tabela a seguir lista as ferramentas de cluster de big data comuns e como inst
 |---|---|---|---|
 | **mssqlctl** | Sim | Ferramenta de linha de comando para instalar e gerenciar um cluster de big data. | [Instalar](deploy-install-mssqlctl.md) |
 | **kubectl**<sup>1</sup> | Sim | Ferramenta de linha de comando para monitorar o cluster Kuberentes subjacente ([saber](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
-| **Azure Data Studio** | Sim | Plataforma cruzada a ferramenta gráfica para consultar o SQL Server ([saber](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Instalar](../azure-data-studio/download.md) |
+| **Estúdio de dados do Azure (insiders)** | Sim | Plataforma cruzada a ferramenta gráfica para consultar o SQL Server ([saber](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Instalar](https://aka.ms/azdata-insiders) |
 | **Extensão do SQL Server de 2019** | Sim | Extensão do Studio de dados do Azure que dá suporte à conexão para o cluster de big data. Também fornece um Assistente de virtualização de dados. | [Instalar](../azure-data-studio/sql-server-2019-extension.md) |
 | **CLI do Azure**<sup>2</sup> | Para o AKS | Interface de linha de comando moderna para gerenciar os serviços do Azure. Usado com implantações de cluster do AKS big data ([saber](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Instalar](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | Opcional | Interface de linha de comando moderna para consultar o SQL Server ([saber](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |

@@ -2,10 +2,10 @@
 title: sys.dm_user_db_resource_governance (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
-ms.prod: ''
+ms.prod: sql
+ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governance
@@ -21,12 +21,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: bb4c43fa4193d9254d7f06f24bd903f974739e87
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: d25c4d3cfe8628c01b44a99c6e26a96adf453050
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58567632"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413067"
 ---
 # <a name="sysdmuserdbresourcegovernance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-SQL)
 
@@ -68,15 +68,15 @@ Retorna as configurações de configuração e a capacidade para um banco de dad
 |**max_transaction_size**|BIGINT|Espaço de log máximo usado por qualquer transação, em KB.|
 |**checkpoint_rate_mbps**|INT|Largura de banda de ponto de verificação, em Mbps.|
 |**checkpoint_rate_io**|INT|Taxa de e/s de ponto de verificação no IOs por segundo.|
-|**last_updated_date_utc**|DATETIME|Data e hora da última alteração de configuração ou reconfiguração.|
+|**last_updated_date_utc**|datetime|Data e hora da última alteração de configuração ou reconfiguração.|
 |**primary_group_id**|INT|ID do grupo de cargas de trabalho do usuário primário.|
 |**primary_group_max_workers**|INT|Limite de trabalho no nível de grupo de carga de trabalho do usuário primário.|
 |**primary_min_log_rate**|BIGINT|Taxa de log mínimo (bytes por segundo) no nível do grupo de carga de trabalho de usuário primário.|
 |**primary_max_log_rate**|BIGINT|Taxa de log máximo (bytes por segundo) no nível do grupo de carga de trabalho de usuário primário.|
 |**primary_group_min_io**|INT|E/s mínima no nível de grupo de carga de trabalho do usuário primário.|
 |**primary_group_max_io**|INT|E/s máxima no nível de grupo de carga de trabalho do usuário primário.|
-|**primary_group_min_cpu**|FLOAT|Limite mínimo de porcentagem da CPU no nível de grupo de carga de trabalho do usuário primário.|
-|**primary_group_max_cpu**|FLOAT|Limite máximo de porcentagem da CPU no nível de grupo de carga de trabalho do usuário primário.|
+|**primary_group_min_cpu**|float|Limite mínimo de porcentagem da CPU no nível de grupo de carga de trabalho do usuário primário.|
+|**primary_group_max_cpu**|float|Limite máximo de porcentagem da CPU no nível de grupo de carga de trabalho do usuário primário.|
 |**primary_log_commit_fee**|INT|Taxa de confirmação log taxa governança no nível de grupo de carga de trabalho do usuário primário.|
 |**primary_pool_max_workers**|INT|Limite de trabalho no nível do pool de usuário primário.
 |**pool_max_io**|INT|Limite máximo de e/s no nível do pool de usuário primário.|

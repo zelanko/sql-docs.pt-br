@@ -1,7 +1,7 @@
 ---
 title: Adicionar dados de fontes de dados externas (SSRS)
-ms.prod: reporting-services
-ms.technology: reporting-services-native
+ms.prod: sql-server-2014
+ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/27/2017
-ms.openlocfilehash: c82d8295ec4a8293abc822900e25e654447a492c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54358529577061ad99c634fa6cc4ce9d98792e0c
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775795"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412687"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Adicionar dados de fontes de dados externas (SSRS)
 

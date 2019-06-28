@@ -1,5 +1,5 @@
 ---
-title: sequences (Transact-SQL) | Microsoft Docs
+title: sys.sequences (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e33dfa78117b68d1cb67baed2aea6bd7f5487e5b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 64532403f495a65cd61fbf6a8bc95369a0a4add3
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398119"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413083"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,13 +43,14 @@ ms.locfileid: "52398119"
 |**maximum_value**|**sql_variant NULL**|O valor máximo que pode ser gerado pelo objeto de sequência. Depois que esse valor for atingido, o objeto de sequência começará a retornar um erro ao tentar gerar mais valores ou reinicializar, se a opção CYCLE tiver sido especificada. Se nenhum MAXVALUE foi especificado, essa coluna retornará o valor máximo que tem suporte do tipo de dados do objeto de sequência.|  
 |**is_cycling**|**bit NOT NULL**|Retornará 0 se Nenhum CYCLE foi especificado para o objeto de sequência, e 1, se CYCLE tiver sido especificado.|  
 |**is_cached**|**bit NOT NULL**|Retornará 0 se NO CACHE foi especificado para o objeto de sequência, e 1, se CACHE tiver sido especificado.|  
-|**Tamanho_do_cache**|**int NULL**|Retorna o tamanho do cache especificado para o objeto de sequência. Essa coluna conterá NULL se a sequência tiver sido criada com a opção NO CACHE ou se CACHE tiver sido especificado sem especificar um tamanho de cache. Se o valor especificado pelo tamanho de cache for maior que o número máximo de valores que podem ser retornados pelo objeto de sequência, esse tamanho de cache que não pode ser obtido ainda será exibido.|  
+|**cache_size**|**int NULL**|Retorna o tamanho do cache especificado para o objeto de sequência. Essa coluna conterá NULL se a sequência tiver sido criada com a opção NO CACHE ou se CACHE tiver sido especificado sem especificar um tamanho de cache. Se o valor especificado pelo tamanho de cache for maior que o número máximo de valores que podem ser retornados pelo objeto de sequência, esse tamanho de cache que não pode ser obtido ainda será exibido.|  
 |**system_type_id**|**tinyint NOT NULL**|ID do tipo de sistema para o tipo de dados do objeto de sequência.|  
 |**user_type_id**|**int NOT NULL**|ID do tipo de dados do objeto de sequência conforme definido pelo usuário.|  
 |**precisão**|**tinyint NOT NULL**|A precisão máxima do tipo de dados.|  
 |**scale**|**tinyint NOT NULL**|A escala máxima do tipo de dados. A escala é retornada junto com a precisão para dar metadados completos aos usuários. A escala é sempre 0 para objetos de sequência porque apenas tipos inteiros são permitidos.|  
-|**Current_value**|**sql_variant NOT NULL**|O último valor forçado. Ou seja, o valor retornado da execução mais recente da função NEXT VALUE FOR ou o último valor da execução de **sp_sequence_get_range** procedimento. Retornará o valor de START WITH se a sequência nunca tiver sido usada.|  
+|**current_value**|**sql_variant NOT NULL**|O último valor forçado. Ou seja, o valor retornado da execução mais recente da função NEXT VALUE FOR ou o último valor da execução de **sp_sequence_get_range** procedimento. Retornará o valor de START WITH se a sequência nunca tiver sido usada.|  
 |**is_exhausted**|**bit NOT NULL**|0 indica que mais valores podem ser gerados a partir da sequência. 1 indica que o objeto de sequência atingiu o parâmetro MAXVALUE e a sequência não está definida como CYCLE. A função NEXT VALUE FOR retornará um erro até que a sequência seja reiniciada com ALTER SEQUENCE.|  
+|**last_used_value**|**sql_variant NULL**|Retorna o último valor gerado pelo [Next Value For](../../t-sql/functions/next-value-for-transact-sql.md) função. Aplica-se ao SQL Server 2017 e posterior.|  
   
 ## <a name="permissions"></a>Permissões  
  No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores, a visibilidade dos metadados em exibições do catálogo é limitada a protegíveis que um usuário possui ou para os quais recebeu alguma permissão. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: sql
 ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 334735c2ec9fc0573ed08bcc76b214a093394b6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b84e54a30afc61169f6db8bf0a71081faeb27f96
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62504779"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412692"
 ---
 # <a name="glossary"></a>Glossário
 
@@ -615,7 +614,7 @@ ms.technology:
 |gráfico de pizza destacada.|Um gráfico de pizza que exibe a contribuição de cada valor para um total enfatizando valores individuais, mostrando cada fatia da pizza como "arrancada" ou separada do todo.|  
 |média móvel exponencial|Uma média móvel de dados que dá mais peso para os dados mais recentes no período e menos peso para os dados mais antigos no período. A fórmula aplica fatores de importância que diminuem exponencialmente. A importância para cada ponto de dados mais antigo diminui exponencialmente, dando muito mais relevância a observações recentes, embora não descartando completamente as observações mais antigas.|  
 |formato de exportação|Texto de interface de usuário para assinaturas e visualizador de HTML. Corresponde a extensões de renderização.|  
-|expressão|Qualquer combinação de operadores, constantes, valores literais, funções e nomes de campos (colunas), controles e propriedades que são avaliadas como um único valor.|  
+|expression|Qualquer combinação de operadores, constantes, valores literais, funções e nomes de campos (colunas), controles e propriedades que são avaliadas como um único valor.|  
 |assembly de host de expressões|Todas as expressões localizadas dentro de um relatório que são compiladas em um assembly. O assembly de host de expressões é armazenado como uma parte do relatório compilado.|  
 |permissão estendida|Uma permissão que é específica a um objeto adicionado ao esquema de objeto padrão do Active Directory.  A permissão associada ao novo objeto estende o conjunto de permissões padrão existente.|  
 |propriedade estendida|Texto definido pelo usuário (descritivo ou instrutivo, incluindo máscaras de entrada e regras de formatação) específico para um banco de dados ou objeto de banco de dados. O texto é armazenado no banco de dados como uma propriedade do banco de dados ou do objeto.|  

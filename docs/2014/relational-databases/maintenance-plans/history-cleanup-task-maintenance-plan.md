@@ -3,25 +3,26 @@ title: Tarefa de limpeza de histórico (plano de manutenção) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology: supportability"
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.historycleanup.f1
 helpviewer_keywords:
 - History Cleanup Task dialog box
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
+ms.reviewer: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a0629aa0787b535f0a577c60751665d7a2dd760e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a2b398a9910926ca2ced339395feaf938c31d519
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806798"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412701"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>Tarefa limpeza de histórico (Plano de manutenção)
+
   Use a caixa de diálogo **Tarefa Limpeza de Histórico** para descartar informações antigas de histórico de tabelas no banco de dados msdb. Essa tarefa oferece suporte a exclusão de backup e restauração de histórico, histórico de trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e histórico do plano de manutenção.  
   
  Essa instrução usa as instruções **sp_purge_jobhistory** e **sp_delete_backuphistory** .  

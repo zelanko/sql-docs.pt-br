@@ -13,12 +13,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cfb905cb56c053d44b93021838915d3a628241a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7b5bf6ff2324c8e63b030d03e36794faf0ec9d4
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62813197"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419041"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Alterações em recursos do Mecanismo de Banco de Dados que causam interrupção no SQL Server 2014
   Este tópico descreve as últimas alterações no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] e versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Talvez você tenha esses problemas ao atualizar. Para obter mais informações, consulte [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -265,9 +265,9 @@ ms.locfileid: "62813197"
 [!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
 ## <a name="see-also"></a>Consulte também  
- [Recursos do mecanismo de banco de dados preteridos no SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)   
- [Alterações no comportamento de recursos do mecanismo de banco de dados no SQL Server 2014](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)   
- [Funcionalidade do mecanismo de banco de dados descontinuada no SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [Recursos do mecanismo de banco de dados preteridos no SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)   
+ [Alterações no comportamento de recursos do mecanismo de banco de dados no SQL Server 2014](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md?view=sql-server-2014)   
+ [Funcionalidade do mecanismo de banco de dados descontinuada no SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md?view=sql-server-2014)   
  [Compatibilidade com versões anteriores do Mecanismo de Banco de Dados do SQL Server](sql-server-database-engine-backward-compatibility.md)   
  [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
  [Alterações de quebra feitas em recursos das Ferramentas de Gerenciamento do SQL Server 2014](breaking-changes-to-management-tools-features-in-sql-server-2014.md?view=sql-server-2014)  

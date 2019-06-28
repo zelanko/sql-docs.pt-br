@@ -1,7 +1,7 @@
 ---
 title: Adicionar um instantâneo ao histórico de relatórios (Gerenciador de Relatórios) | Microsoft Docs
-ms.prod: reporting-services-2014
-ms.technology: reporting-services-native
+ms.prod: sql-server-2014
+ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], adding
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 633ac335067f579459809264fb055ff43481f4e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00b1caa2f68da0a3a38d98cf35f959f83257b99e
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63135080"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413112"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>Adicionar um instantâneo ao histórico de relatório (Gerenciador de Relatórios)
 
@@ -73,7 +73,7 @@ Os instantâneos de relatório não são salvos em um formato de renderização 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Configurar propriedades de execução de um relatório &#40;Gerenciador de relatórios&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)
+- [Configurar propriedades de execução de um relatório &#40;Gerenciador de Relatórios&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Abrir e fechar um relatório &#40;Gerenciador de Relatórios&#41;](../reports/open-and-close-a-report-report-manager.md)
 - [Limitar o histórico de relatórios &#40;Gerenciador de Relatórios&#41;](../reports/limit-report-history-report-manager.md)
 - [Agendas](../subscriptions/schedules.md)   

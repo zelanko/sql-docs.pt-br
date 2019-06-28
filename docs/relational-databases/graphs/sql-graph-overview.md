@@ -1,7 +1,7 @@
 ---
 title: Processamento de grafo com o SQL Server e banco de dados SQL do Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 010d985245052949451a0b519ee4d7b312a97f4a
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502472"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413072"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Processamento de grafo com o SQL Server e banco de dados SQL
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -84,6 +84,9 @@ Para saber mais sobre como criar e usar restrições de borda, consulte [restri�
 O [mesclar](../../t-sql/statements/merge-transact-sql.md) executa a instrução insert, atualizar ou excluir operações em uma tabela de destino com base nos resultados de uma junção com uma tabela de origem. Por exemplo, você pode sincronizar duas tabelas inserindo, atualizando ou excluindo linhas em uma tabela de destino com base nas diferenças entre a tabela de destino e a tabela de origem. Agora há suporte para o uso de predicados de correspondência em uma instrução de mesclagem no banco de dados SQL e SQL Server vNext. Ou seja, agora é possível mesclar seus dados de gráfico atual (tabelas de borda ou nó) com novos dados usando os predicados de correspondência para especificar relações de gráfico em uma única instrução, em vez de instruções de INSERT/UPDATE/DELETE separadas.
 
 Para saber mais sobre como a correspondência pode ser usada em mesclagem DML consulte [instrução MERGE](../../t-sql/statements/merge-transact-sql.md)
+
+## <a name="shortest-path"></a>Caminho mais curto
+O [SHORTEST_PATH](./sql-graph-shortest-path.md) função localiza o caminho mais curto entre 2 nós em um gráfico ou a partir de um determinado nó para todos os outros nós no gráfico. Caminho mais curto também pode ser usado para localizar um fechamento transitivo ou para passagens de comprimento arbitrário no gráfico. 
 
  ## <a name="next-steps"></a>Próximas etapas  
 Leia o [banco de dados de grafos SQL - arquitetura](./sql-graph-architecture.md)
