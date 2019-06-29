@@ -33,24 +33,24 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ebb9b4e3db7cf8f7a19fd582dceb0b19f5c47d0
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62779854"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463464"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2014
   Este tópico descreve os recursos do [!INCLUDE[ssDE](../includes/ssde-md.md)] que não estão mais disponíveis no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>Recursos descontinuados no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="SQL14"></a> Recursos descontinuados no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  A tabela a seguir lista os recursos que foram removidos do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 |Category|Recurso descontinuado|Substituição|  
 |--------------|--------------------------|-----------------|  
 |Nível de Compatibilidade|Nível de compatibilidade 90|Os bancos de dados devem ser definidos com o nível de compatibilidade de pelo menos 100. Quando um banco com um nível de compatibilidade de menos de 100 é atualizado para o [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], o nível de compatibilidade do banco de dados é definido como 100 durante a operação de atualização.|  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>Recursos descontinuados no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="Denali"></a> Recursos descontinuados no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  A tabela a seguir lista os recursos que foram removidos do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 |Category|Recurso descontinuado|Substituição|  
@@ -93,6 +93,6 @@ ms.locfileid: "62779854"
 -   Campos adicionados: target_kb, pages_kb  
   
 ## <a name="see-also"></a>Consulte também  
- [Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)  
+ [Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
   
   

@@ -19,12 +19,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed931a8b1918961b69cc0600f94aff6e4d68b9e1
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: ef8f38acbf621a9c73a0d85bca579c8b7c87aa13
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413983"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463550"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -39,12 +39,12 @@ A função SHORTEST_PATH permite que você encontrar:
 * Única fonte menor caminho (s).
 * Caminho mais curto de vários nós de origem para vários nós de destino.
 
-Ele usa um padrão de comprimento arbitrário, como entrada e retorna um caminho mais curto que existe entre dois nós. Essa função só pode ser usada dentro de MATCH. Ele aceita um padrão de comprimento arbitrário e localiza um caminho mais curto no gráfico, que corresponde a esse padrão. A função retorna apenas um caminho mais curto entre dois nós determinado. Se existe, dois ou mais caminhos mais curtos do mesmo comprimento entre qualquer par de nó (s) de origem e de destino, a função retornará apenas um caminho que foi encontrado primeiro durante a passagem. Observe que, um padrão de comprimento arbitrário só pode ser especificado dentro de uma função SHORTEST_PATH. 
+Ele usa um padrão de comprimento arbitrário, como entrada e retorna um caminho mais curto que existe entre dois nós. Essa função só pode ser usada dentro de MATCH. A função retorna apenas um caminho mais curto entre dois nós determinado. Se existe, dois ou mais caminhos mais curtos do mesmo comprimento entre qualquer par de nós de origem e de destino, o função retorna apenas um caminho que foi encontrado primeiro durante a passagem. Observe que, um padrão de comprimento arbitrário só pode ser especificado dentro de uma função SHORTEST_PATH. 
 
 Consulte a [correspondência (SQL Graph)](../../t-sql/queries/match-sql-graph.md) para obter a sintaxe. 
 
 ## <a name="for-path"></a>PARA O CAMINHO
-PARA o caminho deve ser usado com qualquer nome de tabela de nó ou borda na cláusula FROM, que farão parte de um padrão de comprimento arbitrário. PARA o caminho informa ao mecanismo que a tabela de nó ou borda retornará uma coleção ordenada que representa a lista de nós ou bordas percorridas ao longo do caminho do nó inicial ao nó final. Os atributos dessas tabelas não podem ser projetados diretamente na cláusula SELECT. Para o projeto atributos dessas tabelas, funções de agregação do caminho do graph deve ser usado.  
+PARA o caminho deve ser usado com qualquer nome de tabela de nó ou borda na cláusula FROM, que farão parte de um padrão de comprimento arbitrário. PARA o caminho informa ao mecanismo que a tabela de nó ou borda retornará uma coleção ordenada que representa a lista de nós ou bordas encontradas ao longo do caminho percorrido. Os atributos dessas tabelas não podem ser projetados diretamente na cláusula SELECT. Para o projeto atributos dessas tabelas, funções de agregação do caminho do graph deve ser usado.  
 
 ## <a name="arbitrary-length-pattern"></a>Padrão de comprimento arbitrário
 Esse padrão inclui os nós e bordas que devem ser atravessadas repetidamente até que o nó desejado seja atingido ou até que o número máximo de iterações, conforme especificado no padrão for atendida. Cada vez que a consulta é executada, o resultado da execução desse padrão será uma coleção ordenada de nós e bordas percorridas ao longo do caminho do nó inicial ao nó final. Este é um padrão de sintaxe de estilo de expressão regular e os quantificadores de padrão de dois a seguir têm suporte:

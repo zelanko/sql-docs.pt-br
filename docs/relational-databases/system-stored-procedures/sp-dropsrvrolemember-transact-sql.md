@@ -16,38 +16,39 @@ helpviewer_keywords:
 - sp_dropsrvrolemember
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 9eca631440e92f946513429ddb43d3212a109984
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+author: VanMSFT
+ms.openlocfilehash: 2624ed4800a247b0847adc5839346758aa50f140
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131936"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463570"
 ---
 # <a name="spdropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Remove um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um usuário ou grupo do Windows de uma função de servidor fixa.  
-  
-> [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) em vez disso.  
-  
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Remove um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um usuário ou grupo do Windows de uma função de servidor fixa.
+
+> [!IMPORTANT]
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) em vez disso.
+
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## <a name="syntax"></a>Sintaxe
+
+```
 sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'  
-```  
-  
-## <a name="arguments"></a>Argumentos  
- [ @loginame **=** ] **'**_logon_**'**  
- É o nome de um logon a ser removido da função de servidor fixa. *login* está **sysname**, sem padrão. *logon* deve existir.  
-  
- [ @rolename **=** ] **'**_função_**'**  
- É o nome de uma função de servidor. *função* está **sysname**, com um padrão NULL. *função* deve ser um dos seguintes valores:  
-  
+```
+
+## <a name="arguments"></a>Argumentos
+
+**[ @loginame = ]** '_login_'  
+É o nome de um logon a ser removido da função de servidor fixa. *login* está **sysname**, sem padrão. *logon* deve existir.  
+
+**[ @rolename = ]** '_role_'  
+É o nome de uma função de servidor. *função* está **sysname**, com um padrão NULL. *função* deve ser um dos seguintes valores:  
+
 -   sysadmin  
   
 -   securityadmin  
@@ -80,7 +81,7 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir remove o logon `JackO` da função de servidor fixa `sysadmin`.  
   
-```  
+```sql
 EXEC sp_dropsrvrolemember 'JackO', 'sysadmin';  
 ```  
   
@@ -92,5 +93,3 @@ EXEC sp_dropsrvrolemember 'JackO', 'sysadmin';
  [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Funções de segurança &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
-  
-  

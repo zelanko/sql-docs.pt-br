@@ -5,16 +5,16 @@ description: Saiba como instalar a ferramenta mssqlctl para instalar e gerenciar
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 06/26/2019
+ms.date: 06/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 399f82778f54c96112875c9af389a8b427ad759a
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 31167ae419c98fcd0166b1bd8056ea0d7976b674
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388819"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463445"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-big-data-clusters"></a>Instalar mssqlctl para gerenciar clusters de grandes dados do SQL Server
 
@@ -91,7 +91,7 @@ No Linux, você deve instalar o Python 3.5 e, em seguida, atualizar o pip. O exe
 1. Instale **mssqlctl** com o seguinte comando:
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-3.1/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt --user
    ```
 
    > [!NOTE]
