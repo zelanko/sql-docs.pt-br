@@ -3,7 +3,7 @@ title: Como usar blocos de anotações do SQL no estúdio de dados do Azure
 titleSuffix: Azure Data Studio
 description: Saiba como usar blocos de anotações do SQL no estúdio de dados do Azure
 ms.custom: seodec18
-ms.date: 03/17/2019
+ms.date: 06/28/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: achatter; alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 6ac15dcd6b440a8c3bcca0c468a79548469fe059
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02146596b8c0c21531d269a815f97512b5c955a5
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798034"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469077"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Como usar notebooks no estúdio de dados do Azure
 
@@ -163,14 +163,13 @@ import <package-name>
 
 Quando você executa esse comando, `Module not found` será retornado. Se o pacote existir, em seguida, você não obterá o erro.
 
-Se ele retornar um `Module not Found` erro e, em seguida, clique em **gerenciar pacotes** para iniciar o terminal. Agora você pode instalar os pacotes localmente. Use os seguintes comandos para instalar os pacotes:
+Se ele retornar um `Module not Found` erro e, em seguida, clique em **gerenciar pacotes** para iniciar a experiência do assistente. 
 
-```bash
-./pip install <package-name>
-```
+![image17](media/sql-notebooks/manage-packages.png)
 
-   > [!Tip]
-   > No Mac, siga as instruções na janela do Terminal para instalar pacotes. 
+Neste assistente, você será capaz de ver o **instalado** pacotes. Você pode pesquisar a lista e a versão associada do cada um desses pacotes. Se você precisar **desinstale** qualquer um desses pacotes e em seguida, você pode clicar em um dos pacotes e, em seguida, clique no **desinstalar os pacotes selecionados** opção.
+
+Você também poderá clicar em **adicionar novo** pacotes **pesquisa** para um determinado pacote, escolha a versão relacionada e clique em **instalar**. Por padrão, podemos selecionar a versão mais recente do pacote pesquisada. 
 
 Depois de instalar o pacote, você deve ser capaz de entrar na célula do bloco de anotações e digite o seguinte comando:
 
@@ -178,11 +177,7 @@ Depois de instalar o pacote, você deve ser capaz de entrar na célula do bloco 
 import <package-name>
 ```
 
-Para desinstalar um pacote, use o seguinte comando no seu terminal:
-
-```bash
-./pip uninstall <package-name>
-```
+Se você precisar **desinstale** qualquer um desses pacotes e em seguida, você pode clicar em um ou vários pacotes e, em seguida, clique no **desinstalar os pacotes selecionados** opção.
 
 ## <a name="next-steps"></a>Próximas etapas
 
