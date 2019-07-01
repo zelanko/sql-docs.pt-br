@@ -2,7 +2,7 @@
 title: Tarefa do Azure Data Lake Analytics | Microsoft Docs
 description: Com a tarefa do Azure Data Lake Analytics, é possível enviar trabalhos U-SQL para o serviço Azure Data Lake Analytics.
 ms.custom: ''
-ms.date: 05/18/2018
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: maghan
@@ -14,12 +14,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: f68a57063f0619458d6961308bbaeeee9c22c323
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28c9ed815825dbebd0d7f96b983ee34f1176b48c
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014921"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419155"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Tarefa do Azure Data Lake Analytics
 
@@ -37,7 +37,7 @@ Para adicionar uma tarefa do Azure Data Lake Analytics a um pacote, arraste-a da
 
 ## <a name="general-page-configuration"></a>Configuração de página geral
 
-Use a página **Geral** para configurar a tarefa e fornecer o script U-SQL que a tarefa envia. Para saber mais sobre a linguagem U-SQL, confira [Referência da linguagem U-SQL](https://msdn.microsoft.com/azure/data-lake-analytics/u-sql/u-sql-language-reference).
+Use a página **Geral** para configurar a tarefa e fornecer o script U-SQL que a tarefa envia. Para saber mais sobre a linguagem U-SQL, confira [Referência da linguagem U-SQL](/u-sql/).
 
 ### <a name="basic-configuration"></a>Configuração básica
 
@@ -61,7 +61,7 @@ A configuração do U-SQL tem duas configurações: **SourceType** e opções di
 |-----------|-----------------|  
 |**SourceType = DirectInput**|Digite a consulta U-SQL a ser enviada diretamente na caixa de opção ou selecione o botão Procurar (...) para digitar a consulta U-SQL na caixa de diálogo **Digitar a consulta U-SQL**.|  
 |**SourceType = FileConnection**|Selecione um gerenciador de conexões de arquivo existente ou selecione <**Nova conexão...** > para criar uma nova conexão de arquivo. Para obter informações relacionadas, confira [Gerenciador de Conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager.md) e [Editor do Gerenciador de Conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
-|**SourceType = Variable**|Selecione uma variável existente ou selecione \<**Nova variável...**> para criar uma nova variável. Para saber mais, confira [Variáveis do &#40;SSIS&#41; Integration Services](../../integration-services/integration-services-ssis-variables.md) e [Adicionar Variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
+|**SourceType = Variable**|Selecione uma variável existente ou selecione \<**Nova variável...** > para criar uma nova variável. Para saber mais, confira [Variáveis do &#40;SSIS&#41; Integration Services](../../integration-services/integration-services-ssis-variables.md) e [Adicionar Variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
 
 
 ### <a name="job-configuration"></a>Configuração do trabalho
