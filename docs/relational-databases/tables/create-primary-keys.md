@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae608ebf733857cf086f4953a6d75dd75eadc5ae
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 27d6c9f9545c9c0459af83e574f3a010dcf6c488
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384111"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400034"
 ---
 # <a name="create-primary-keys"></a>Criar chaves primárias
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "49384111"
     (  
        CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),
        TransactionID int IDENTITY (1,1) NOT NULL,  
-       CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY NONCLUSTERED (uniqueidentifier)  
+       CONSTRAINT PK_TransactionHistoryArchive1_CustomerID PRIMARY KEY NONCLUSTERED (CustomerID)  
     );  
     GO  
 

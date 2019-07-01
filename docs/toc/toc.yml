@@ -1,4 +1,4 @@
-- name: Bem-vindo
+- name: Bem-vindo ao SQL Server
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: Versões anteriores 2014-2005
   href: ../toc/previous-versions-sql-server.md
@@ -147,22 +147,18 @@
           items:
             - name: Estruturação de dados usando o Acelerador de Código PROSE
               href: ../big-data-cluster/use-prose-for-big-data-automation.md
-            - name: Treinando e criando modelos de machine learning com o Spark
-              href: ../big-data-cluster/train-and-create-machinelearning-models-with-spark.md
-            - name: Exportando modelos de ML com o Spark/Mleap
-              href: ../big-data-cluster/export-model-with-spark-mleap.md
+            - name: Modelos de machine learning do Spark com MLeap
+              href: ../big-data-cluster/spark-create-machine-learning-model.md
             - name: Usar o Sparklyr do RStudio
               href: ../big-data-cluster/sparklyr-from-RStudio.md
-            - name: Suporte de GPU e TensorFlow
-              href: ../big-data-cluster/spark-gpu-tensorflow.md
             - name: Integrar o Spark com o SQL Server
               href: ../big-data-cluster/spark-mssql-connector.md
         - name: Gerenciar o cluster de Big Data do SQL Server
           items:
             - name: Conectar-se a um cluster de Big Data
               href: ../big-data-cluster/connect-to-big-data-cluster.md
-            - name: Portal de administração de cluster
-              href: ../big-data-cluster/cluster-admin-portal.md
+            - name: Exibir status do cluster
+              href: ../big-data-cluster/view-cluster-status.md
             - name: Solução de problemas para Kubernetes
               href: ../big-data-cluster/cluster-troubleshooting-commands.md
         - name: Notebooks
@@ -193,30 +189,44 @@
               href: ../big-data-cluster/reference-mssqlctl.md
             - name: Implantação de aplicativo
               items:
-                - name: Aplicativo do mssqlctl
+                - name: app
                   href: ../big-data-cluster/reference-mssqlctl-app.md
-                - name: Modelo de aplicativo do mssqlctl
+                - name: app template
                   href: ../big-data-cluster/reference-mssqlctl-app-template.md
             - name: Cluster
               items:
-                - name: Cluster do mssqlctl
-                  href: ../big-data-cluster/reference-mssqlctl-cluster.md
-                - name: Configuração de cluster do mssqlctl
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
-                - name: seção de configuração de cluster do mssqlctl
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-config-section.md
-                - name: Depuração de cluster do mssqlctl
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
-                - name: Ponto de extremidade de cluster do mssqlctl
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-endpoint.md
-                - name: Status de cluster do mssqlctl
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-status.md
+                - name: bdc
+                  href: ../big-data-cluster/reference-mssqlctl-bdc.md
+                - name: bdc config
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-config.md
+                - name: bdc config section
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-config-section.md
+                - name: bdc control
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-control.md
+                - name: bdc control status
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-control-status.md
+                - name: bdc debug
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-debug.md
+                - name: bdc endpoint
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-endpoint.md
+                - name: bdc pool
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-pool.md
+                - name: bdc pool status
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-pool-status.md
+                - name: bdc status
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-status.md
             - name: Armazenamento
               items:
-                - name: Pool de armazenamento de cluster mssqlctl
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool.md
-                - name: Montagem do pool de armazenamento de cluster mssqlctl
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool-mount.md
+                - name: bdc storage
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-storage-pool.md
+                - name: bdc storage mount
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-storage-pool-mount.md
+                - name: hdfs
+                  href: ../big-data-cluster/reference-mssqlctl-hdfs.md
+            - name: SQL
+              items:
+                - name: sql
+                  href: ../big-data-cluster/reference-mssqlctl-sql.md
 - name: Continuidade de negócios
   items:
     - name: Visão geral
@@ -1405,6 +1415,8 @@
           href: ../relational-databases/graphs/sql-graph-architecture.md
         - name: Amostra
           href: ../relational-databases/graphs/sql-graph-sample.md
+        - name: SHORTEST_PATH
+          href: ../relational-databases/graphs/sql-graph-shortest-path.md
     - name: Números de sequência
       href: ../relational-databases/sequence-numbers/sequence-numbers.md
       items:
@@ -1601,6 +1613,8 @@
                   href: ../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md
                 - name: Consultar dados
                   href: ../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md
+                - name: Segurança
+                  href: ../relational-databases/tables/temporal-table-security.md
                 - name: Alterar o esquema
                   href: ../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md
                 - name: Parar controle de versão de sistema
@@ -8116,8 +8130,10 @@
               href: ../relational-databases/security/auditing/sql-server-audit-records.md
     - name: Tutoriais
       items:
-        - name: Always Encrypted com enclaves seguros usando SSMS
+        - name: Introdução ao Always Encrypted com enclaves seguros usando o SSMS
           href: ../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
+        - name: Criar e usar índices no Always Encrypted com colunas de enclaves seguros
+          href: ../relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
     - name: Referência
       items:
         - name: Página Permissões ou Protegíveis
@@ -8747,16 +8763,10 @@
           items:
             - name: SQL Server Management Studio (SSMS)
               href: ../ssms/sql-server-management-studio-ssms.md
-        - name: Guias de início rápido
+        - name: Tutoriais
           items:
             - name: Conectar-se ao SQL Server e consultá-lo
               href: ../ssms/tutorials/connect-query-sql-server.md
-        - name: Tutoriais
-          items:
-            - name: Objetos de script
-              href: ../ssms/tutorials/scripting-ssms.md
-            - name: Configuração do SSMS
-              href: ../ssms/tutorials/ssms-configuration.md
         - name: Conceitos
           items:
             - name: Janelas de Ferramentas no SSMS
@@ -9033,6 +9043,10 @@
               href: ../ssms/install-other-languages.md
             - name: Usar modelos no SSMS
               href: ../ssms/tutorials/templates-ssms.md
+            - name: Objetos de script
+              href: ../ssms/tutorials/scripting-ssms.md
+            - name: Configuração do SSMS
+              href: ../ssms/tutorials/ssms-configuration.md
             - name: Personalizar menus e teclas de atalho
               href: ../ssms/customize-menus-and-shortcut-keys.md
             - name: Configurar o WMI para mostrar o status do servidor nas ferramentas do SQL Server
@@ -12827,6 +12841,8 @@
               href: ../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md
             - name: sys.dm_os_server_diagnostics_log_configurations
               href: ../relational-databases/system-dynamic-management-views/sys-dm-os-server-diagnostics-log-configurations.md
+            - name: sys.dm_os_spinlock_stats
+              href: ../relational-databases/system-dynamic-management-views/sys-dm-os-spinlock-stats-transact-sql.md
             - name: sys.dm_os_stacks
               href: ../relational-databases/system-dynamic-management-views/sys-dm-os-stacks-transact-sql.md
             - name: sys.dm_os_sys_info
@@ -14324,6 +14340,8 @@
               href: ../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md
             - name: sp_dropuser
               href: ../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md
+            - name: sp_enclave_send_keys
+              href: ../relational-databases/system-stored-procedures/sp-enclave-send-keys-sql.md
             - name: sp_grantdbaccess
               href: ../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md
             - name: sp_grantlogin

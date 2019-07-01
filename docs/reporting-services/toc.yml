@@ -1,7 +1,7 @@
-- name: SQL Server >>
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: O que é o SQL Server Reporting Services (SSRS)?
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+- name: Bem-vindo ao SQL Server >>
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: Visão geral
   items:
     - name: Novidades no Reporting Services
@@ -1349,7 +1349,7 @@
           href: ../reporting-services/tools/connect-to-a-report-server-in-management-studio.md
         - name: Excluir um item
           href: ../reporting-services/tools/delete-an-item-management-studio.md
-        - name: 'Servidor de Relatório na ajuda F1 do Management Studio '
+        - name: Servidor de Relatório na ajuda F1 do Management Studio
           href: ../reporting-services/tools/report-server-in-management-studio-f1-help.md
           items:
             - name: Cancelar trabalhos do Servidor de Relatório
@@ -1878,7 +1878,7 @@
       href: ../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md
     - name: Desenvolvimento seguro (Reporting Services)
       href: ../reporting-services/extensions/secure-development/secure-development-reporting-services.md
-    - name: 'Compreendendo políticas de segurança '
+    - name: Compreendendo políticas de segurança
       href: ../reporting-services/extensions/secure-development/understanding-security-policies.md
     - name: Usando arquivos de política de segurança do Reporting Services
       href: ../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md
