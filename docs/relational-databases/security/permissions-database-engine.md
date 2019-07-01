@@ -20,12 +20,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 521b183a1901bac8a5ac982baa65d2d8cbb60264
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8303b8639ff72ad8bf6f9e3ebfc0b2232aae147b
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840053"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412660"
 ---
 # <a name="permissions-database-engine"></a>Permissões (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -108,8 +108,8 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 |Execute|Tipos de CLR, scripts externos, procedimentos ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR), funções escalares e de agregação ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR) e sinônimos|  
 |IMPERSONATE|Logons e usuários|  
 |INSERT|Sinônimos, tabelas e colunas, exibições e colunas. A permissão pode ser concedida em nível de banco de dados, de esquema ou de objeto.|  
-|RECEIVE|Filas do[!INCLUDE[ssSB](../../includes/sssb-md.md)] |  
-|REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />VIEW e<br />XML SCHEMA COLLECTION|  
+|RECEIVE|Filas do[!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
+|REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />TABLE,<br />TYPE,<br />VIEW e<br />XML SCHEMA COLLECTION|  
 |SELECT|Sinônimos, tabelas e colunas, exibições e colunas. A permissão pode ser concedida em nível de banco de dados, de esquema ou de objeto.|  
 |TAKE OWNERSHIP|Todas as classes de objetos, exceto DATABASE SCOPED CONFIGURATION, LOGIN, SERVER e USER.|  
 |UPDATE|Sinônimos, tabelas e colunas, exibições e colunas. A permissão pode ser concedida em nível de banco de dados, de esquema ou de objeto.|  
@@ -259,7 +259,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|Delete (excluir)|  
+|OBJECT|Delete (excluir)|DL|SCHEMA|Delete (excluir)|  
 |OBJECT|Execute|EX|SCHEMA|Execute|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
@@ -418,7 +418,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 
 ## <a name="special-considerations-for-column-level-permissions"></a>Considerações especiais para permissões no nível da coluna
 
-Permissões em nível de coluna são concedidas com a sintaxe *<table_name>(\<column _name>)*. Por exemplo:
+Permissões em nível de coluna são concedidas com a sintaxe *<table_name>(\<column _name>)* . Por exemplo:
 ```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
