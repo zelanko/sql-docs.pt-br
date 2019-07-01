@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/15/2019
-ms.openlocfilehash: 490a21572d1a62bbf90754a8c33e0aa98bac0aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2560c752dd55741e1718ba60f942288093d027bb
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65571345"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463588"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriedades do Servidor (página Avançado) - Reporting Services
 
@@ -93,8 +93,9 @@ Indica se a resposta à solicitação do cliente pode ser exposta quando o sinal
 
 **AccessControlMaxAge** Especifica o número de segundos durante os quais os resultados da solicitação de simulação podem ser armazenados em cache. O valor padrão é 600 (10 minutos).
 
-**AllowedResourceExtensionsForUpload** ***(somente Servidor de Relatórios do Power BI)*** Defina extensões de recursos que podem ser carregados para o servidor de relatório. Extensões para tipos de arquivo internos, como &ast;.rdl e &ast;.pbix não precisam ser incluídos. O padrão é "&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx". 
+**AllowedResourceExtensionsForUpload** conjunto de extensões de recursos que podem ser carregados para o servidor de relatório. Extensões para tipos de arquivo internos, como &ast;.rdl e &ast;.pbix não precisam ser incluídos. O padrão é "&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx".
 
+**RestrictedResourceMimeTypeForUpload** não podem carregar conteúdo com conjunto de usuários de tipos de mime. Todos os recursos que já são armazenados com um tipo de mime restrito somente podem ser baixados como um aplicativo/octet-stream em vez de ser aberto/executada pelo navegador.  Por padrão, não há restritos itens nessa lista, mas é recomendável que as organizações preenchem isso para fornecer a experiência mais segura.
 
 **EditSessionCacheLimit**  
 Especifica o número de entradas de cache de dados que podem estar ativas em uma sessão de edição de relatório. O número padrão é 5.  
