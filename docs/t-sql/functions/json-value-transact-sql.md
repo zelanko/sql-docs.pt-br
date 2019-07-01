@@ -1,7 +1,7 @@
 ---
 title: JSON_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/17/2017
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: genemi
@@ -19,14 +19,15 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: b2e4685c83c1587e43b26363c9a48af5683d33e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4552b026bbff9a7a8036fcd71954e215917b7256
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577445"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343985"
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
  Extrai um valor escalar de uma cadeia de caracteres JSON.  
@@ -37,7 +38,7 @@ ms.locfileid: "65577445"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```sql  
+```
 JSON_VALUE ( expression , path )  
 ```  
   
@@ -101,6 +102,7 @@ SET @jsonInfo=N'{
 |$.info.tags|NULL|Erro|Não é um valor escalar.<br /><br /> Use **JSON_QUERY** nesse caso.|  
 |$.info.type[0]|NULL|Erro|Não é uma matriz.|  
 |$.info.none|NULL|Erro|A propriedade não existe.|  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="examples"></a>Exemplos  
   
@@ -127,7 +129,7 @@ DECLARE @town NVARCHAR(32)
 
 SET @jsonInfo=N'{"info":{"address":[{"town":"Paris"},{"town":"London"}]}';
 
-SET @town=JSON_VALUE(@jsonInfo,'$.info.address[1].town'); -- Paris
+SET @town=JSON_VALUE(@jsonInfo,'$.info.address[0].town'); -- Paris
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address[1].town'); -- London
 ```  
   
