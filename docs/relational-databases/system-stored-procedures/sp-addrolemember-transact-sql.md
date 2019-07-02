@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d7b47670d56ab916a8c2f263f9ddee3dc85c0a6
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: 18680069663b0979662b3288b5d02439fdf55297
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652535"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492742"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
  Uma função não pode ser incluída como um membro. Tais definições "circulares" não são válidas, mesmo quando a associação é implícita apenas indiretamente por uma ou mais associações intermediárias.  
   
- sp_addrolemember não pode adicionar uma função de banco de dados fixa, função de servidor fixa ou dbo a uma função. sp_addrolemember não pode ser executado em uma transação definida pelo usuário.  
+ sp_addrolemember não pode adicionar uma função de banco de dados fixa, função de servidor fixa ou dbo a uma função.
   
  Use somente sp_addrolemember para adicionar um membro a uma função de banco de dados. Para adicionar um membro a uma função de servidor, use [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
@@ -88,7 +88,7 @@ CREATE USER Mary5 FOR LOGIN [Contoso\Mary5] ;
 GO  
 ```  
   
-### <a name="b-adding-a-database-user"></a>b. Adicionando um usuário de banco de dados  
+### <a name="b-adding-a-database-user"></a>B. Adicionando um usuário de banco de dados  
  O exemplo a seguir adiciona o usuário de banco de dados `Mary5` à função de banco de dados `Production` no banco de dados atual.  
   
 ```  

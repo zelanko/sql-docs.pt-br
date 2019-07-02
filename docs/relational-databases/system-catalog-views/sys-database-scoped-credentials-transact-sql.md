@@ -1,5 +1,5 @@
 ---
-title: database_scoped_credentials (Transact-SQL) | Microsoft Docs
+title: sys.database_scoped_credentials (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: sql
@@ -19,22 +19,23 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d3718357b68aa47bbc32e4d975a546f3e86cb73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1deb05541e46ec1007d234dc622b14ea1e20eb3f
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814834"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492573"
 ---
-# <a name="sysdatabasescopedcredentials-transact-sql"></a>database_scoped_credentials (Transact-SQL)
+# <a name="sysdatabasescopedcredentials-transact-sql"></a>sys.database_scoped_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Retorna uma linha para cada banco de dados com escopo de credencial no banco de dados.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|credential_id|**int**|ID da credencial no escopo do banco de dados. É exclusivo no banco de dados.|  
 |nome|**sysname**|Credencial no escopo do nome do banco de dados. É exclusivo no banco de dados.|  
+|credential_id|**int**|ID da credencial no escopo do banco de dados. É exclusivo no banco de dados.|  
+|principal_id|**int**|ID da entidade de banco de dados que possui a chave.|  
 |credential_identity|**nvarchar(4000)**|Nome da identidade a ser usada. Geralmente é um usuário do Windows. Não precisa ser exclusivo.|  
 |create_date|**datetime**|Hora em que a credencial no escopo do banco de dados foi criada.|  
 |modify_date|**datetime**|Hora em que a credencial no escopo do banco de dados foi modificada pela última vez.|  
