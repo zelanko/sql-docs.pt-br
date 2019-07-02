@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 6dfcc00e79febda98ec14f0376395f045ca3ffc3
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 822fdbe60a9fe7740d2b7cb13ed9b8784e88945d
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400064"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500023"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurar imagens de contêiner do SQL Server no Docker
 
@@ -309,7 +309,7 @@ docker ps
 Para iniciar um bash, terminal em que o contêiner seja executado:
 
 ```bash
-docker exec -ti <Container ID> /bin/bash
+docker exec -it <Container ID> /bin/bash
 ```
 
 Agora você pode executar comandos como se você estiver executando-os no terminal dentro do contêiner. Quando terminar, digite `exit`. Isso sai da sessão de comando interativo, mas o contêiner continuará a ser executado.

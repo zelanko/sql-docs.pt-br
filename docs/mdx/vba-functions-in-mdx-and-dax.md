@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f6b6d89ced88a570ce242ae9490d4c6d8bd6ac8
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251547"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500043"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Funções VBA no MDX e no DAX
 
@@ -53,10 +53,10 @@ ms.locfileid: "63251547"
 |CVErr|Sem suporte||  
 |Date|Somente MDX|**Aviso** DAX implementa uma função diferente com o mesmo nome; a função Data (ano, mês, dia), usado para gerar um valor de tipo de data dos argumentos determinados|  
 |DateAdd|Somente MDX|**Aviso** DAX implementa uma função diferente com o mesmo nome; a DATEADD (\<datas >, < number_of_intervals >\<intervalo >) função, usado para deslocar as datas determinadas por um número de intervalos determinados|  
-|DateDiff]|Somente MDX||  
+|DateDiff|Somente MDX||  
 |DatePart|Somente MDX||  
 |DateSerial|Somente MDX||  
-|DateValue]|DAX, MDX||  
+|DateValue|DAX, MDX||  
 |Day|DAX, MDX||  
 |DDB|Somente MDX||  
 |Dir|Sem suporte||  
@@ -118,7 +118,7 @@ ms.locfileid: "63251547"
 |MonthName|Sem suporte||  
 |MsgBox|Sem suporte||  
 |Agora|DAX, MDX||  
-|NPer]|Somente MDX||  
+|NPer|Somente MDX||  
 |NPV|Somente MDX||  
 |Oct|Somente MDX||  
 |Partition|Somente MDX||  
@@ -146,7 +146,7 @@ ms.locfileid: "63251547"
 |Str|Somente MDX||  
 |StrComp|Somente MDX||  
 |StrConv|Somente MDX||  
-|Cadeia de caracteres]|Somente MDX||  
+|Cadeia de caracteres|Somente MDX||  
 |StrReverse|Sem suporte||  
 |Alternar|Somente MDX||  
 |SYD|Somente MDX||  
@@ -156,7 +156,7 @@ ms.locfileid: "63251547"
 |Timer|Somente MDX||  
 |TimeSerial|Somente MDX||  
 |TimeValue|DAX, MDX||  
-|Trim]|DAX, MDX||  
+|Trim|DAX, MDX||  
 |TypeName|Somente MDX||  
 |UBound|Sem suporte||  
 |UCase|Somente MDX||  
