@@ -10,12 +10,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: ee8957385f68b7c719c973a5e4b957d779133258
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: HT
+ms.openlocfilehash: 55246173a23d8bae7fa9aab82a527800eb8bb23a
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140804"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285059"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Referência de erros e eventos (Reporting Services)
 
@@ -45,7 +45,7 @@ Os eventos a seguir do servidor de relatório são registrados no log do aplicat
 |117|Erro|Inicialização/desligamento|Servidor de relatório|O banco de dados do servidor de relatório é uma versão inválida.|  
 |118|Aviso|Log|Servidor de relatório<br /><br /> portal da Web|O arquivo de rastreamento não está mais no local do diretório previsto; um novo arquivo de rastreamento será criado no diretório padrão. Para obter mais informações, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |119|Erro|Ativação|Servidor de relatório<br /><br /> Processador de agendamento e entrega|A *\<Source>* não recebeu acesso ao conteúdo do banco de dados do servidor de relatório.|  
-|120|Erro|Ativação|Servidor de relatório|A chave simétrica não pode ser descriptografada. Provavelmente, houve uma alteração na conta na qual o serviço é executado. Para obter mais informações, consulte [Configurar e gerenciar chaves de criptografia &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|120|Erro|Ativação|Servidor de relatório|A chave simétrica não pode ser descriptografada. Provavelmente houve uma alteração na conta em que o serviço é executado. Para obter mais informações, consulte [Configurar e gerenciar chaves de criptografia &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|Erro|Inicialização/desligamento|Servidor de relatório|Falha ao iniciar o serviço RPC (Chamada de Procedimento Remoto).|  
 |122|Aviso|Entrega|Processador de agendamento e entrega|O Processador de Agendamento e Entrega não pode se conectar ao servidor de SMTP usado para entrega de email. Para obter mais informações sobre conexões de servidor SMTP, consulte [configurações de email – modo nativo do Reporting Services (Configuration Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |123|Aviso|Log|Servidor de relatório<br /><br /> portal da Web|Falha no servidor de relatório ao gravar o log de rastreamento. Para obter mais informações sobre logs de rastreamento, consulte [Log de rastreamento do serviço Servidor de Relatório](../../reporting-services/report-server/report-server-service-trace-log.md).|  

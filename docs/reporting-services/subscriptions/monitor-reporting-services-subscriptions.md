@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 33d865ad28e9d013b97910ff30c4bcf7be760f93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: HT
+ms.openlocfilehash: d1cfa2c5face12eab1677d4a1386511d005aa5dd
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140542"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285042"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Monitorar assinaturas do Reporting Services
   Você pode monitorar assinaturas [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da interface do usuário, do Windows PowerShell ou arquivos de log. As opções disponíveis para monitoramento dependem de qual modo de servidor de relatório está em execução.  
@@ -46,7 +46,7 @@ ms.locfileid: "67140542"
 |Status|Descrição|  
 |------------|-----------------|  
 |Nova assinatura|Aparece quando você cria a assinatura.|  
-|Inativa|Aparece quando uma assinatura não pode ser processada. Para saber mais, confira "Gerenciar assinaturas inativas" posteriormente neste artigo.|  
+|Inativa|É exibida quando uma assinatura não pode ser processada. Para saber mais, confira "Gerenciar assinaturas inativas" posteriormente neste artigo.|  
 |Concluído: \<*number*> processados de um total de \<*number*>; \<*number*> erros.|Mostra o status de uma execução de assinatura controlada por dados; essa mensagem é proveniente do Processador de Agendamento e Entrega.|  
 |\<*number*> processados|O número de notificações que o Processador de Agendamento e Entrega entregou com êxito ou que não está mais tentando entregar. Quando uma entrega controlada por dados for concluída, o número de notificações processadas deve ser igual ao número total de notificações geradas.|  
 |\<*number*> total|O número total de notificações geradas para a última entrega para a assinatura.|  
@@ -76,7 +76,7 @@ ms.locfileid: "67140542"
   
  Esta é uma mensagem de erro de exemplo do arquivo de log de rastreamento, relacionada a assinaturas:  
   
--   library!WindowsService_7!b60!05/20/2019-22:34:36:: i INFO: Inicializando EnableExecutionLogging como 'True' conforme especificado no sistema do Servidor properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41:: e ERROR: **Erro ao enviar email**. Exceção: System.Net.Mail.SmtpException: o servidor SMTP requer uma conexão segura ou o cliente não foi autenticado. A resposta do servidor foi: o cliente 5.7.1 não foi autenticado em System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Inicializando EnableExecutionLogging como “True” conforme especificado no sistema do Servidor properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR: **Erro ao enviar email**. Exceção: System.Net.Mail.SmtpException: o servidor SMTP requer uma conexão segura ou o cliente não foi autenticado. A resposta do servidor foi: o cliente 5.7.1 não foi autenticado em System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  O arquivo de log não informa se o relatório foi aberto ou se a entrega teve êxito realmente. Entrega bem-sucedida significa que não houve erros gerados pelo Processador de Agendamento e Entrega e que o servidor de relatório se conectou ao servidor de email. Se o email resultou em um erro de mensagem que não pode ser entregue na caixa de correio do usuário, essa informação não será incluída no arquivo de log. Para obter mais informações sobre arquivos de log, consulte [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   

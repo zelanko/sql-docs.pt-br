@@ -6,13 +6,13 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/01/2018
-ms.openlocfilehash: b536d94f5dcfb332f39733f8e3a116294a7d40c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.date: 06/20/2019
+ms.openlocfilehash: eca8f43d358ca3869c3812a457b710d64dadeaf5
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936550"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343875"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>Recursos do SQL Server Reporting Services compatíveis com as edições dele
 
@@ -53,7 +53,7 @@ Para saber quais recursos têm suporte nas edições Evaluation e Developer, con
 |Biblioteca de componentes compartilhados|Sim|Sim|||Sim|  
 |Agendamento e assinaturas de email e compartilhamento de arquivos|Sim|Sim|||Sim|  
 |Histórico de relatórios, instantâneos de execução e armazenamento em cache|Sim|Sim|||Sim|  
-|Integração com o SharePoint|Sim|Sim|||Sim|  
+|Integração do SharePoint<sup>2</sup>|Sim|Sim|||Sim|  
 |Suporte de fonte de dados remota e não SQL<sup>1</sup>|Sim|Sim|||Sim|  
 |Extensibilidade de RDCE e fonte de dados, entrega e renderização|Sim|Sim|||Sim|  
 |Identidade visual personalizada|Sim||||Sim|  

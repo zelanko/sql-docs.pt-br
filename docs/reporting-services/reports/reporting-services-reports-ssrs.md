@@ -1,6 +1,6 @@
 ---
 title: Relatórios do Reporting Services (SSRS) | Microsoft Docs
-ms.date: 06/15/2016
+ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reports
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b872952b1e84bfc12722e14234207ff67525699b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f0d3a49ae2fc2b0b5f8ecf8f8a92161f66aa839
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65571025"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314025"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Relatórios do Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Os relatórios paginados são definições de relatório baseadas em XML que incluem dados de relatório e elementos de layout de relatório. Em um sistema de arquivos cliente, as definições de relatório têm a extensão de arquivo .rdl. Depois que você publica um relatório paginado, ele é um item de relatório armazenado no servidor de relatório ou site do SharePoint. Os relatórios paginados são uma parte da plataforma de relatório baseada em servidor fornecida pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Você também pode [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "65571025"
   
 -   Defina expressões que forneçam a capacidade de personalizar como os dados do relatório serão filtrados, agrupados e classificados.  
   
- ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
+    ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
 ##  <a name="bkmk_StagesSummary"></a> Estágios do processamento de relatório  
  Ao criar um relatório, você define um arquivo de definição de relatório (.rdl) em formato XML. Esse arquivo contém todas as informações necessárias para combinar dados e layout de relatório pelo processador de relatório. Ao exibir um relatório, o relatório passa pelas seguintes fases:  
@@ -77,7 +77,7 @@ ms.locfileid: "65571025"
   
     -   **Escolha os dados que serão usados em cada origem.** Para cada fonte de dados, defina conjuntos de dados de relatório. Cada conjunto de dados inclui uma consulta para especificar os dados que serão usados. Se você tiver parâmetros de relatório, defina um conjunto de dados para preencher a lista de valores disponíveis para cada parâmetro. Para obter mais informações, consulte [Conjunto de dados de relatórios &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) e [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-    -   **Escolha uma visualização de dados.** Para cada conjunto de dados, escolha a região de dados que será usada para exibir os dados. Escolha entre lista de tabelas, gráficos, medidores e mapas. Para obter mais informações, consulte os tópicos a seguir:  
+    -   **Escolha uma visualização de dados.** Para cada conjunto de dados, escolha a região de dados que será usada para exibir os dados. Escolha entre lista de tabelas, gráficos, medidores e mapas. Para obter mais informações, consulte os artigos a seguir.  
   
         -   [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
@@ -91,7 +91,7 @@ ms.locfileid: "65571025"
   
         -   [Medidores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
-    -   **Personalize o layout e os dados.** Elabore o layout do relatório. Uma definição de relatório tem um corpo de relatório, fontes de dados, conjuntos de dados, regiões de dados, caixas de texto, linhas e imagens. Retângulos são usados como contêineres para layout e elementos visuais. Personalize cada região de dados gravando expressões para controlar filtro, grupo, classificação, formato e exibição dos dados. Adicione nomes de relatório, locais e outras informações de identificação que ajudam a gerenciar dúzias ou centenas de relatórios. Adicione elementos visuais e contêineres para organizar os elementos de layout na página. Para obter mais informações, consulte os tópicos a seguir:  
+    -   **Personalize o layout e os dados.** Elabore o layout do relatório. Uma definição de relatório tem um corpo de relatório, fontes de dados, conjuntos de dados, regiões de dados, caixas de texto, linhas e imagens. Retângulos são usados como contêineres para layout e elementos visuais. Personalize cada região de dados gravando expressões para controlar filtro, grupo, classificação, formato e exibição dos dados. Adicione nomes de relatório, locais e outras informações de identificação que ajudam a gerenciar dúzias ou centenas de relatórios. Adicione elementos visuais e contêineres para organizar os elementos de layout na página. Para obter mais informações, consulte os artigos a seguir.  
   
         -   [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
@@ -122,7 +122,11 @@ ms.locfileid: "65571025"
 ## <a name="view-reports"></a>Exibir relatórios  
  Além de visualizar um relatório salvo localmente ou publicado em um servidor de relatório, você pode fornecer uma variedade de experiências de exibição para os leitores de seus relatórios. Para exibir um relatório:  
   
--   **Navegador.**  Use o Serviço Web Servidor de Relatórios ou o site do SharePoint para exibir relatórios publicados. Em um site do SharePoint, você também pode configurar uma Web Part para exibir relatórios publicados. Para obter mais informações, consulte [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md), [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896), e [Acesso à URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md).  
+-   **Navegador.**  Use o Serviço Web Servidor de Relatórios ou o site do SharePoint para exibir relatórios publicados. Em um site do SharePoint, você também pode configurar uma Web Part para exibir relatórios publicados. Para obter mais informações, consulte os artigos a seguir.
+
+     - [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
+     - [O portal da Web de um servidor de relatório (modo nativo do SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)
+     - [Acesso à URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)
   
 -   **Entrega.**  Configure uma assinatura para entregar relatórios aos leitores por email ou por uma pasta de arquivos compartilhada.  Para obter mais informações, consulte [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
@@ -130,7 +134,7 @@ ms.locfileid: "65571025"
   
 -   **Imprimir.**  O leitor do relatório pode imprimir um relatório ou páginas do documento dependendo do modo no qual é exibido. Para obter mais informações, consulte [Imprimir Relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md).  
   
--   **Web ou aplicativo Windows Form.**  Use o Visual Studio para desenvolver um aplicativo ASP.NET AJAX ou Windows Form que hospede o controle do Visualizador de Relatórios. O controle pode apontar para relatórios publicados em um servidor de relatório. Para obter mais informações, consulte [Relatórios da Microsoft](https://go.microsoft.com/fwlink/?LinkID=205399).  
+-   **Web ou aplicativo Windows Form.**  Use o Visual Studio para desenvolver um aplicativo que facilita a emissão de relatórios por meio do SSRS. Para obter mais informações, consulte [[a integração do Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md).  
   
 ## <a name="manage-reports"></a>Gerenciar relatórios  
  Para gerenciar um relatório publicado:  
@@ -151,31 +155,30 @@ ms.locfileid: "65571025"
   
  Para obter mais informações sobre o desempenho, consulte [Desempenho, instantâneos, caching &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md).  
   
-##  <a name="bkmk_SecureReportsSummary"></a> Relatórios seguros  
+##  <a name="bkmk_SecureReportsSummary"></a> Proteger relatórios  
  Para proteger um relatório:  
   
--   No administrador do servidor de relatório, identifique a autorização e o sistema de autenticação que são usados em sua instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por padrão, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa a autenticação do Windows, segurança integrada e atribuição de função para ajudar a controlar o acesso aos relatórios publicados. Para obter mais informações, consulte [Funções e permissões &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md) e [Segurança e proteção do Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md).  
+Como administrador do servidor de relatório, identifique a autorização e o sistema de autenticação usados em sua instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Por padrão, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa a autenticação do Windows, segurança integrada e atribuição de função para ajudar a controlar o acesso aos relatórios publicados. Para obter mais informações, consulte [Funções e permissões &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md) e [Segurança e proteção do Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md).  
   
-## <a name="create-notifications-based-on-report-data"></a>Criar notificações com base em dados de relatório  
- Você pode criar alertas de dados para relatórios publicados em um site do SharePoint. Os alertas de dados são baseados em feeds de dados de regiões de dados no relatório. Por padrão, as regiões de dados são nomeadas automaticamente. Os autores de relatório podem facilitar a criação de alertas de dados em seus relatórios nomeando regiões de dados com base no propósito de negócios. Ao criar um alerta de dados, você é notificado por email quando os dados atendem às condições especificadas. Para obter mais informações, consulte [Gerando feeds de dados com base em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Criar um alerta de dados no Designer de Alertas de Dados](../../reporting-services/create-a-data-alert-in-data-alert-designer.md) e [Alertas de dados do Reporting Services](../../reporting-services/reporting-services-data-alerts.md).  
+## <a name="create-notifications-based-on-report-data"></a>Criar notificações com base em dados de relatório 
+Você pode criar alertas de dados para relatórios publicados em um site do SharePoint. Os alertas de dados são baseados em feeds de dados de regiões de dados no relatório. Por padrão, as regiões de dados são nomeadas automaticamente. Os autores de relatório podem facilitar a criação de alertas de dados em seus relatórios nomeando regiões de dados com base no propósito de negócios. Ao criar um alerta de dados, você é notificado por email quando os dados atendem às condições especificadas. Para obter mais informações, consulte [Gerando feeds de dados com base em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Criar um alerta de dados no Designer de Alertas de Dados](../../reporting-services/create-a-data-alert-in-data-alert-designer.md) e [Alertas de dados do Reporting Services](../../reporting-services/reporting-services-data-alerts.md).  
   
-## <a name="upgrade-reports"></a>Upgrade Reports  
+## <a name="upgrade-reports"></a>Atualizar relatórios  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece suporte a várias versões de definições de relatório, servidores de relatório e sites do SharePoint. Para atualizar um relatório:  
   
--   Atualize uma instalação de servidor de relatório. Os relatórios compilados armazenados no servidor de relatório são atualizados automaticamente no primeiro uso. A definição de relatório (.rdl) não é alterada. Para obter mais informações, consulte [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
+- Atualize uma instalação de servidor de relatório. Os relatórios compilados armazenados no servidor de relatório são atualizados automaticamente no primeiro uso. A definição de relatório (.rdl) não é alterada. Para obter mais informações, consulte [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
--   Abra um relatório em um ambiente de criação de relatórios. A definição de relatório é atualizada na maioria das circunstâncias. Para obter mais informações, consulte [Atualizar Relatórios](../../reporting-services/install-windows/upgrade-reports.md) e [Implantação e suporte de versão no SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+- Abra um relatório em um ambiente de criação de relatórios. A definição de relatório é atualizada na maioria das circunstâncias. Para obter mais informações, consulte [Atualizar Relatórios](../../reporting-services/install-windows/upgrade-reports.md) e [Implantação e suporte de versão no SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 ## <a name="troubleshoot-reports"></a>Solucionar problemas de relatórios  
  Para solucionar problemas de um relatório:  
   
--   **Determine onde o problema está ocorrendo.** Revise as informações em [Fases de um relatório](#bkmk_StagesSummary).  
+- **Determine onde o problema está ocorrendo.** Revise as informações em [Fases de um relatório](#bkmk_StagesSummary).  
   
--   **Determine onde você pode encontrar mais informações.** Por exemplo, para design de relatório que inclui expressões, a ferramenta Designer de Relatórios fornece mais informações sobre problemas de avaliação de expressões do que a ferramenta Construtor de Relatórios. Para erros de processamento de relatório, os arquivos de log contêm informações detalhadas.  
+- **Determine onde você pode encontrar mais informações.** Por exemplo, para design de relatório que inclui expressões, a ferramenta Designer de Relatórios fornece mais informações sobre problemas de avaliação de expressões do que a ferramenta Construtor de Relatórios. Para erros de processamento de relatório, os arquivos de log contêm informações detalhadas.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [Ferramentas do Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Extensões &#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)   
- [Servidor de Relatório do Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
-  
+ [Comparando nativo e servidores de relatório do Reporting Services no SharePoint](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
