@@ -14,11 +14,11 @@ ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
 ms.openlocfilehash: 60ebf6e5bf28c9cea19531f5d7b5bc70336402a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813394"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62865958"
 ---
 # <a name="mssqlserver7911"></a>MSSQLSERVER_7911
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47813394"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_REPAIR_PAGE_DEALLOCATED|  
-|Texto da mensagem|Correção: a página P_ID foi desalocada da ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE).|  
+|Texto da mensagem|Reparar: A página P_ID foi desalocada da ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE).|  
   
 ## <a name="explanation"></a>Explicação  
 Essa é uma mensagem informativa da cláusula REPAIR que afirma que uma página foi desalocada da matriz de slot com uma única página de uma página IAM.  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 462b14902e9a0a5e830e3359d3db4474a150fd5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827344"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686850"
 ---
 # <a name="auto-stats-event-class"></a>Classe de evento Auto Stats
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "47827344"
 |**Duration**|**bigint**|Período de tempo (em microssegundos) utilizado pelo evento.|13|Sim|  
 |**EndTime**|**datetime**|Horário em que o evento foi encerrado.|15|Sim|  
 |**Erro**|**int**|Número de erro de um determinado evento. Geralmente é o número do erro armazenado na exibição de catálogo **sys.messages** .|31|Sim|  
-|**EventClass**|**int**|Tipo de evento = 58.|27|não|  
-|**EventSequence**|**int**|Sequência de um determinado evento na solicitação.|51|não|  
-|**EventSubClass**|**int**|Tipo de subclasse de eventos:<br /><br /> 1: estatísticas criadas/atualizadas de forma síncrona; a coluna **TextData** indica as estatísticas e se foram criadas ou atualizadas<br /><br /> 2: atualização de estatísticas assíncronas; trabalho enfileirado.<br /><br /> 3: atualização de estatísticas assíncronas; trabalho iniciando.<br /><br /> 4: atualização de estatísticas assíncronas; trabalho concluído.|21|Sim|  
+|**EventClass**|**int**|Tipo de evento = 58.|27|Não|  
+|**EventSequence**|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
+|**EventSubClass**|**int**|Tipo de subclasse de eventos:<br /><br /> 1: Estatísticas criadas/atualizadas de forma síncrona; a coluna **TextData** indica as estatísticas e se foram criadas ou atualizadas<br /><br /> 2: Atualização de estatísticas assíncronas; trabalho enfileirado.<br /><br /> 3: Atualização de estatísticas assíncronas; trabalho iniciando.<br /><br /> 4: Atualização de estatísticas assíncronas; trabalho concluído.|21|Sim|  
 |**GroupID**|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |**HostName**|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IndexID**|**int**|ID da entrada de índice/estatísticas do objeto afetado pelo evento. Para determinar a ID de índice de um objeto, utilize a coluna **index_id** da exibição do catálogo **sys.indexes** .|24|Sim|  
@@ -49,12 +49,12 @@ ms.locfileid: "47827344"
 |**NTUserName**|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
 |**ObjectID**|**int**|ID de objeto atribuída pelo sistema.|22|Sim|  
 |**RequestID**|**int**|O ID da solicitação que contém a instrução.|49|Sim|  
-|**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
+|**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |**SessionLoginName**|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |**SPID**|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
 |**Êxito**|**int**|0 = erro.<br /><br /> 1 = êxito.<br /><br /> 2 = ignorado devido a estrangulamento do servidor (MSDE).|23|Sim|  
-|**TextData**|**ntext**|O conteúdo dessa coluna depende se as estatísticas são atualizadas de forma síncrona (**EventSubClass** 1) ou assíncrona (**EventSubClass** 2, 3 ou 4):<br /><br /> 1: lista as estatísticas que foram atualizadas/criadas<br /><br /> 2, 3 ou 4: NULL; a coluna **IndexID** é populada com a ID de índice/estatísticas das estatísticas atualizadas.|1|Sim|  
+|**TextData**|**ntext**|O conteúdo dessa coluna depende se as estatísticas são atualizadas de forma síncrona (**EventSubClass** 1) ou assíncrona (**EventSubClass** 2, 3 ou 4):<br /><br /> 1: Lista as estatísticas que foram atualizadas/criadas<br /><br /> 2, 3 ou 4: NULL; a coluna **IndexID** é preenchida com a ID de índice/estatísticas das estatísticas atualizadas.|1|Sim|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |**Tipo**|**int**|Tipo de trabalho.|57|Sim|  
   

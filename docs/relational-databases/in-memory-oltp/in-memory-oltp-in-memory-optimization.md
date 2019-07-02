@@ -1,7 +1,7 @@
 ---
 title: OLTP in-memory (otimização na memória) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/22/2016
+ms.date: 06/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,18 +15,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5d982ba0b7a2ec5b35a6d38da3a5831119c4c1c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8ebb953132e28a3ea0766f7d9d7cd40f3f620659
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506877"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351660"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP na memória (otimização na memória)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  O[!INCLUDE[hek_2](../../includes/hek-2-md.md)] pode melhorar significativamente o desempenho de processamento de transações, inclusão de dados e carregamento de dados, e cenários de dados temporário.  Para ir diretamente para o código básico e o conhecimento necessário para testar rapidamente sua própria tabela com otimização de memória e o procedimento armazenado nativamente, veja
- -  [Início Rápido 1: tecnologias do OLTP in-memory para um desempenho mais rápido do Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md).  
+ -  [Início rápido 1: tecnologias do OLTP in-memory para um desempenho mais rápido do Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md).  
  
 Vídeo de 17 minutos explicando o OLTP in-memory e demonstrando os benefícios de desempenho:
 
@@ -42,7 +43,7 @@ Para obter uma visão geral mais detalhada do OLTP in-memory e uma análise de c
  
  Observe que [!INCLUDE[hek_2](../../includes/hek-2-md.md)] é a tecnologia do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para melhoria de desempenho do processamento de transações. Para obter a tecnologia do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que melhora o desempenho de consulta de relatório e analítica, veja [Guia de índices columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
- Várias melhorias foram feitas no OLTP in-memory do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], bem como do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A área de superfície do Transact-SQL foi aumentada para facilitar a migração de aplicativos de banco de dados. O suporte para operações de ALTER para tabelas com otimização de memória e procedimentos armazenados compilados nativamente foi adicionado para facilitar a manutenção de aplicativos. Para informações sobre os novos recursos em [!INCLUDE[hek_2](../../includes/hek-2-md.md)], consulte [Índices Columnstore – novidades](../../relational-databases/indexes/columnstore-indexes-what-s-new.md).  
+ Várias melhorias foram feitas no OLTP in-memory do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], bem como do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A área de superfície do Transact-SQL foi aumentada para facilitar a migração de aplicativos de banco de dados. O suporte para operações de ALTER para tabelas com otimização de memória e procedimentos armazenados compilados nativamente foi adicionado para facilitar a manutenção de aplicativos.
   
 > [!NOTE]  
 >  **Experimente**  
@@ -55,7 +56,7 @@ Para obter uma visão geral mais detalhada do OLTP in-memory e uma análise de c
   
 |Tópico|Descrição|  
 |-----------|-----------------|  
-|[Início Rápido 1: tecnologias do OLTP in-memory para um desempenho mais rápido do Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|Delve diretamente no OLTP in-memory|
+|[Início rápido 1: tecnologias do OLTP in-memory para um desempenho mais rápido do Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|Delve diretamente no OLTP in-memory|
 |[Visão geral e cenários de uso](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|Visão geral do que é o OLTP in-memory e quais são os cenários que desfrutam dos benefícios de desempenho.|
 |[Requisitos para usar tabelas com otimização de memória](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|Aborda os requisitos de hardware e software, e as diretrizes para usar tabelas com otimização de memória.|  
 |[Exemplos de código do OLTP in-memory](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|Contém exemplos de código que mostram como criar e usar uma tabela com otimização de memória.|  

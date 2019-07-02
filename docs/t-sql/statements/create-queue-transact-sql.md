@@ -26,12 +26,12 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ab7873152b9ae372c3d61d2906d3b52a055d4130
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f7c970293a68e1ecf4df19ac70bb0e7e1ba303a
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503236"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67232553"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -163,32 +163,32 @@ CREATE QUEUE <object>
 |message_id|**uniqueidentifier**|Identificador exclusivo para a mensagem.|  
   
 ## <a name="permissions"></a>Permissões  
- Permissão para criar uma fila usa os membros da função de banco de dados fixa db_ddladmin ou db_owner e a função de servidor fixa sysadmin.  
+ A permissão para criar uma fila usa os membros das funções de banco de dados fixas `db_ddladmin` ou `db_owner`, ou a função de servidor fixa `sysadmin`.  
   
- A permissão para alterar uma rota assume como padrão o proprietário da rota, os membros das funções de banco de dados fixas db_ddladmin ou db_owner e os membros da função de servidor fixa sysadmin.  
+ A permissão `REFERENCES` para uma fila assume como padrão o proprietário da fila, os membros das funções de banco de dados fixas `db_ddladmin` ou `db_owner`, ou os membros da função de servidor fixa `sysadmin`.  
   
- A permissão RECEIVE para uma fila que tem como padrão o proprietário da fila, os membros da função de banco de dados fixa db_owner e os membros da função de servidor fixa sysadmin.  
+ A permissão `RECEIVE` para uma fila assume como padrão o proprietário da fila, os membros da função de banco de dados fixa `db_owner` ou os membros da função de servidor fixa `sysadmin`.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-creating-a-queue-with-no-parameters"></a>A. Criando uma fila sem parâmetros  
  O exemplo seguinte cria uma fila que está disponível para receber mensagens. Nenhum procedimento armazenado de ativação é especificado para a fila.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue ;  
 ```  
   
 ### <a name="b-creating-an-unavailable-queue"></a>B. Criando uma fila indisponível  
  O exemplo seguinte cria uma fila que está indisponível para receber mensagens. Nenhum procedimento armazenado de ativação é especificado para a fila.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue WITH STATUS=OFF ;  
 ```  
   
 ### <a name="c-creating-a-queue-and-specify-internal-activation-information"></a>C. Criando uma fila e especificando informações de ativação internas  
  O exemplo seguinte cria uma fila que está disponível para receber mensagens. A fila inicia o procedimento armazenado `expense_procedure` quando uma mensagem entrar na fila. O procedimento armazenado executa como o usuário `ExpenseUser`. A fila inicia um máximo de `5` instâncias do procedimento armazenado.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS=ON,  
     ACTIVATION (  
@@ -200,7 +200,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="d-creating-a-queue-on-a-specific-filegroup"></a>D. Criando uma fila em um grupo de arquivos específico  
  O exemplo a seguir cria uma fila no grupo de arquivos `ExpenseWorkFileGroup`.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     ON ExpenseWorkFileGroup ;  
 ```  
@@ -208,7 +208,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="e-creating-a-queue-with-multiple-parameters"></a>E. Criando uma fila com vários parâmetros  
  O exemplo a seguir cria uma fila no grupo de arquivos `DEFAULT`. A fila está indisponível. As mensagens são retidas na fila até que a conversa a que elas pertençam termine. Quando a fila for deixada disponível por ALTER QUEUE, a fila inicia o procedimento armazenado `2008R2.dbo.expense_procedure` para processar as mensagens. O procedimento armazenado executa como o usuário que executou a instrução `CREATE QUEUE`. A fila inicia um máximo de `10` instâncias do procedimento armazenado.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS = OFF,  
       RETENTION = ON,  

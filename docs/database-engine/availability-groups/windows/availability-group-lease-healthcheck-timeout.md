@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 63d16dd3856fc680ab580451f769bd29aeabeef4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4093a3629278f6bd733abdd3d14a006d2b73a75
+ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140607"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67166394"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Mecânica e diretrizes para os tempos limite de verificação da concessão, do cluster e da integridade em Grupos de Disponibilidade AlwaysOn 
 
@@ -56,7 +56,7 @@ As configurações padrão são otimizadas para oferecer reação rápida a sint
 
 ### <a name="relationship-between-cluster-timeout-and-lease-timeout"></a>Relação entre o tempo limite do cluster e o tempo limite de concessão 
 
-A função principal do mecanismo de concessão é usar o recurso do SQL Server caso o serviço de cluster não possa se comunicar com a instância ao executar um failover em outro nó. Quando o cluster executa a operação offline no recurso de cluster do grupo de disponibilidade, o serviço de cluster faz uma chamada RPC a rhs.exe para colocar o recurso offline. A DLL de recurso usa procedimentos armazenados para informar o SQL Server para colocar o grupo de disponibilidade offline, mas esse procedimento armazenado pode falhar ou atingir o tempo limite. O host de recurso também interrompe seu próprio thread de renovação de concessão durante a chamada offline. No pior caso, o SQL Server fará a concessão expirar em metade do \* LeaseTimeout e fará a transição da instância para um estado de resolução. Os failovers podem ser iniciados por várias partes diferentes, mas é extremamente importante que a exibição do estado de cluster seja consistente entre o cluster e entre as instâncias do SQL Server. Por exemplo, imagine um cenário em que a instância primária perde a conexão com o restante do cluster. Cada nó no cluster determinará uma falha em momentos semelhantes devido a valores de tempo limite do cluster, mas apenas o nó primário poderá interagir com a instância primária do SQL Server para forçá-lo a desistir da função primária. 
+A função principal do mecanismo de concessão é usar o recurso offline do SQL Server caso o serviço de cluster não possa se comunicar com a instância ao executar um failover em outro nó. Quando o cluster executa a operação offline no recurso de cluster do grupo de disponibilidade, o serviço de cluster faz uma chamada RPC a rhs.exe para colocar o recurso offline. A DLL de recurso usa procedimentos armazenados para informar o SQL Server para colocar o grupo de disponibilidade offline, mas esse procedimento armazenado pode falhar ou atingir o tempo limite. O host de recurso também interrompe seu próprio thread de renovação de concessão durante a chamada offline. No pior caso, o SQL Server fará a concessão expirar em metade do \* LeaseTimeout e fará a transição da instância para um estado de resolução. Os failovers podem ser iniciados por várias partes diferentes, mas é extremamente importante que a exibição do estado de cluster seja consistente entre o cluster e entre as instâncias do SQL Server. Por exemplo, imagine um cenário em que a instância primária perde a conexão com o restante do cluster. Cada nó no cluster determinará uma falha em momentos semelhantes devido a valores de tempo limite do cluster, mas apenas o nó primário poderá interagir com a instância primária do SQL Server para forçá-lo a desistir da função primária. 
 
 Da perspectiva do nó principal, o serviço de cluster perderá o quorum e o serviço começará a ser encerrado sozinho. O serviço de cluster emitirá uma chamada RPC ao host do recurso para encerrar o processo. Essa chamada de encerramento é responsável por colocar o grupo de disponibilidade offline na instância do SQL Server. Essa chamada offline é realizada por meio do T-SQL, mas não pode garantir que a conexão será estabelecida com sucesso entre o SQL e a DLL de recurso. 
 

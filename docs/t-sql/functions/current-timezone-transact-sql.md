@@ -26,17 +26,17 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: dcdae3ff107ad1e1e3a7bc58fde4248bb5330223
-ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59367382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62850381"
 ---
 # <a name="currenttimezone-transact-sql"></a>CURRENT_TIMEZONE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ssver15-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
-Essa função retorna o nome do fuso horário observado por um servidor ou uma instância. Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`CURRENT_TIMEZONE` é derivado o valor do sistema operacional do computador no qual a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executada. Para a Instância Gerenciada do Banco de Dados SQL, o valor retornado se baseia no fuso horário da própria instância, atribuído durante sua criação e não no fuso horário do sistema operacional subjacente.
+Essa função retorna o nome do fuso horário observado por um servidor ou uma instância. Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`CURRENT_TIMEZONE` é derivado o valor retornado do sistema operacional do computador em que a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executada. Para a Instância Gerenciada do Banco de Dados SQL, o valor retornado se baseia no fuso horário da própria instância, atribuído durante sua criação e não no fuso horário do sistema operacional subjacente.
   
 > [!NOTE]  
 > Para os Banco de Dados SQL únicos e em pool, o fuso horário é sempre definido como UTC e `CURRENT_TIMEZONE` retorna o nome do fuso horário UTC.
@@ -72,4 +72,4 @@ SELECT CURRENT_TIMEZONE();
   
 ## <a name="see-also"></a>Confira também
 
-[Fuso Horário de Instância Gerenciada do Banco de Dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+[Fuso Horário da Instância Gerenciada do Banco de Dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)

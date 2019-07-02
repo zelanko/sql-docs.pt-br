@@ -16,11 +16,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ac96a7ea691a02c61aa132ea0efcdf5bc2d68ab1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513756"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62707128"
 ---
 # <a name="control-transaction-durability"></a>Controlar a durabilidade da transação
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ ms.locfileid: "52513756"
     
  Alguns dos casos em que você pode se beneficiar do uso da durabilidade de transação atrasada são:    
     
- **Você pode tolerar alguma perda de dados.**    
+ **Você pode tolerar alguma perda de dados.**     
  Se você puder tolerar alguma perda de dados, por exemplo, nos casos em que os registros individuais não sejam críticos desde que você tenha a maioria dos dados, poderá ser válido considerar a durabilidade atrasada. Se você não puder tolerar perda de dados, não use a durabilidade de transação atrasada.    
     
- **Você está observando um gargalo em gravações de log de transações.**    
+ **Você está observando um gargalo em gravações de log de transações.**     
  Se seus problemas de desempenho forem devido à latência em gravações do log de transações, seu aplicativo provavelmente se beneficiará do uso da durabilidade de transação atrasada.    
     
- **Suas cargas de trabalho têm uma taxa alta de contenção.**    
+ **Suas cargas de trabalho têm uma taxa alta de contenção.**     
  Se o sistema tiver cargas de trabalho com um nível alto de contenção, muito tempo será perdido aguardando que os bloqueios sejam liberados. A durabilidade de transação atrasada reduz o tempo de confirmação e libera os bloqueios mais rapidamente, resultando em uma taxa de transferência mais alta.    
     
  ### <a name="delayed-transaction-durability-guarantees"></a>Garantias de durabilidade de transação atrasada   

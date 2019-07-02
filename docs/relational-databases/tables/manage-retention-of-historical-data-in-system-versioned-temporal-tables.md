@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0b63123e9d48ca7f89d888dca82b6b988942893
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417937"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62466654"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gerenciar a Retenção de Dados Históricos em Tabelas Temporais com Versão do Sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,24 +45,24 @@ ms.locfileid: "52417937"
 
  Com cada uma dessas abordagens, a lógica para a migração ou limpeza de dados históricos baseia-se na coluna que corresponde ao término do período na tabela atual. O final do valor do período para cada linha determina o momento em que a versão de linha se torna "fechada", ou seja, quando ela chega à tabela de histórico. Por exemplo, a condição `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` especifica que dados históricos com mais de um mês precisam ser removidos ou movidos da tabela de histórico.  
   
-> **OBSERVAÇÃO:**  os exemplos deste tópico usam este [exemplo de Tabela Temporal](creating-a-system-versioned-temporal-table.md).  
+> **OBSERVAÇÃO:**  Os exemplos neste tópico usam este [Exemplo de Tabela Temporal](creating-a-system-versioned-temporal-table.md).  
   
 ## <a name="using-stretch-database-approach"></a>Utilização da abordagem do Stretch Database  
   
-> **OBSERVAÇÃO:**  o uso da abordagem do Stretch Database só se aplica ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e não se aplica ao [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+> **OBSERVAÇÃO:**  A utilização da abordagem do Stretch Database só se aplica ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e não se aplica ao [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md) em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migra os dados históricos de forma transparente para o Azure. Para mais segurança, é possível criptografar dados em movimento usando o recurso [Sempre Criptografado](https://msdn.microsoft.com/library/mt163865.aspx) do SQL Server. Além disso, você pode usar a [Segurança em nível de linha](../../relational-databases/security/row-level-security.md) e outros recursos de segurança avançados do SQL Server com o Stretch Database e o Temporal para proteger seus dados.  
   
  Ao utilizar a abordagem do Stretch Database, você pode ampliar algumas ou todas as tabelas de histórico temporal para o Azure e, assim, o SQL Server moverá silenciosamente os dados históricos para o Azure. Habilitar a ampliação de uma tabela de histórico não altera a forma como você interage com a tabela temporal em termos de modificação de dados e consultas temporais.  
   
--   **Ampliar toda a tabela de histórico:** configure o Stretch Database para a tabela de histórico inteira se seu cenário principal for a auditoria de dados no ambiente com alterações frequentes dos dados e consultas relativamente raras em dados históricos.  Em outras palavras, use essa abordagem se o desempenho de consultas temporais não for crítico. Nesse caso, o custo-benefício fornecido pelo Azure pode ser atraente.   
+-   **Ampliar a toda a tabela de histórico:** Configure o Stretch Database para a tabela de histórico inteira se o cenário principal for a auditoria de dados no ambiente com alterações frequentes dos dados e consultas relativamente raras em dados históricos.  Em outras palavras, use essa abordagem se o desempenho de consultas temporais não for crítico. Nesse caso, o custo-benefício fornecido pelo Azure pode ser atraente.   
     Ao ampliar a tabela de histórico inteira, você pode usar o Assistente de Ampliação ou o Transact-SQL. Exemplos de ambos são exibidos abaixo.  
   
--   **Ampliar uma parte da tabela de histórico:** configure o Stretch Database para apenas uma parte de sua tabela de histórico para melhorar o desempenho se o cenário principal envolver principalmente a consulta de dados históricos recentes e você desejar preservar a opção para consultar dados históricos mais antigos, quando necessário, ao armazenar esses dados remotamente a um custo menor. Com o Transact-SQL, você pode fazer isso especificando uma função de predicado para selecionar as linhas que serão migradas da tabela de histórico, em vez de todas as linhas.  Quando você trabalha com tabelas temporais, geralmente faz sentido mover dados com base na condição de tempo (ou seja, com base na idade da versão de linha na tabela de histórico).    
+-   **Ampliar uma parte da tabela de histórico:** Configure o Stretch Database para apenas uma parte da tabela de histórico para melhorar o desempenho se o cenário principal envolver principalmente a consulta de dados históricos recentes e você desejar preservar a opção de consultar dados históricos mais antigos, quando necessário, ao armazenar esses dados remotamente a um custo menor. Com o Transact-SQL, você pode fazer isso especificando uma função de predicado para selecionar as linhas que serão migradas da tabela de histórico, em vez de todas as linhas.  Quando você trabalha com tabelas temporais, geralmente faz sentido mover dados com base na condição de tempo (ou seja, com base na idade da versão de linha na tabela de histórico).    
     Usando uma função de predicado determinística, você pode manter parte do histórico no mesmo banco de dados com os dados atuais, enquanto o restante é migrado para o Azure.    
     Para obter exemplos e limitações, consulte [Selecionar linhas para migração usando uma função de filtro (Stretch Database)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Como as funções não determinísticas não são válidas, se você quiser transferir dados históricos usando o modo de janela deslizante, precisaria alterar regularmente a definição da função de predicado embutido para que a janela de linhas que você mantém localmente fosse constante em termos de idade. A janela deslizante permite mover constantemente dados históricos com mais de um mês para o Azure. Um exemplo dessa abordagem é exibido abaixo.  
   
-> **OBSERVAÇÃO:** o Stretch Database migra dados para o Azure. Portanto, você precisa ter uma conta do Azure e uma assinatura para cobrança. Para obter uma conta de avaliação gratuita do Azure, clique em [Avaliação gratuita de um mês](https://azure.microsoft.com/pricing/free-trial/).  
+> **OBSERVAÇÃO:** O Stretch Database migra dados para o Azure. Portanto, você precisa ter uma conta do Azure e uma assinatura para cobrança. Para obter uma conta de avaliação gratuita do Azure, clique em [Avaliação gratuita de um mês](https://azure.microsoft.com/pricing/free-trial/).  
   
  Você pode configurar uma tabela de histórico temporal para o Stretch usando o Assistente de transferência ou o Transact-SQL e pode habilitar para ampliação uma tabela de histórico temporal enquanto o sistema de controle de versão é definido como **ON**. Não é permitido ampliar a tabela atual porque isso não faz sentido.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "52417937"
   
 6.  Após a conclusão do assistente, verifique se seu banco de dados foi habilitado com êxito para Stretch. Observe os ícones no Pesquisador de Objetos indicando que o banco de dados foi transferido  
   
-> **OBSERVAÇÃO:** se a opção Habilitar Banco de Dados para Stretch falhar, examine o log de erros. Um erro comum é a configuração incorreta da regra de firewall.  
+> **OBSERVAÇÃO:** Se a opção Habilitar Banco de Dados para Stretch falhar, examine o log de erros. Um erro comum é a configuração incorreta da regra de firewall.  
   
  Consulte também:  
   
@@ -166,7 +166,7 @@ COMMIT ;
   
  Com o particionamento de tabela, você pode implementar uma abordagem de janela deslizante para mover a parte mais antiga dos dados históricos da tabela de histórico e manter constante o tamanho da parte retida em termos de idade, mantendo os dados na tabela de histórico iguais ao período de retenção necessário. A operação de extração de dados da tabela de histórico é suportada enquanto SYSTEM_VERSIONING estiver configurado como ATIVO. Isso significa que você pode limpar uma parte dos dados de histórico sem introduzir uma janela de manutenção ou bloquear suas cargas de trabalho regulares.  
   
-> **OBSERVAÇÃO:** para executar a troca de partição, o índice clusterizado na tabela de histórico deve estar alinhado com o esquema de particionamento (ele deve conter SysEndTime). A tabela de histórico padrão criada pelo sistema contém um índice clusterizado que inclui as colunas SysEndTime e SysStartTime, perfeitas para o particionamento, inserindo novos dados históricos e consulta temporal típica. Para obter mais informações, consulte [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
+> **OBSERVAÇÃO:** Para executar a alternância de partição, o índice clusterizado na tabela de histórico deve estar alinhado com o esquema de particionamento (ele deve conter SysEndTime). A tabela de histórico padrão criada pelo sistema contém um índice clusterizado que inclui as colunas SysEndTime e SysStartTime, perfeitas para o particionamento, inserindo novos dados históricos e consulta temporal típica. Para obter mais informações, consulte [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
  Uma abordagem de janela deslizante tem dois conjuntos de tarefas que você precisa executar:  
   
@@ -182,7 +182,7 @@ COMMIT ;
   
  ![Partitioning](../../relational-databases/tables/media/partitioning.png "Partitioning")  
   
-> **OBSERVAÇÃO:** consulte Considerações sobre desempenho com o particionamento de tabela abaixo para saber sobre as implicações de desempenho do uso de RANGE LEFT versus RANGE RIGHT durante a configuração do particionamento.  
+> **OBSERVAÇÃO:** Confira as considerações de desempenho com o particionamento de tabela abaixo para as implicações de desempenho do uso de RANGE LEFT versus RANGE RIGHT durante a configuração de particionamento.  
   
  Observe que a primeira e a última partição são "abertas" em limites superiores e inferiores, respectivamente, para garantir que cada nova linha tenha a partição de destino, independentemente do valor na coluna de particionamento.   
 Com o passar do tempo, as novas linhas na tabela de histórico serão levadas para partições superiores. Quando a 6ª partição ficar preenchida, teremos atingido o período de retenção definido como destino. Este é o momento de iniciar a tarefa de manutenção de partição recorrente pela primeira vez (ela precisa ser agendada para ser executada periodicamente, uma vez por mês neste exemplo).  
@@ -193,7 +193,7 @@ Com o passar do tempo, as novas linhas na tabela de histórico serão levadas pa
   
  As etapas detalhadas para as tarefas de manutenção de partição recorrentes são:  
   
-1.  SWITCH OUT: crie uma tabela temporária e alterne uma partição entre a tabela de histórico e a tabela de preparo usando a instrução [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) com o argumento SWITCH PARTITION (confira o Exemplo C. Mudando de partições entre tabelas).  
+1.  SWITCH OUT: Crie uma tabela de preparo e alterne uma partição entre a tabela de histórico e a tabela de preparo usando a instrução [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) com o argumento SWITCH PARTITION (confira o Exemplo C. Alternando partições entre tabelas).  
   
     ```  
     ALTER TABLE <history table> SWITCH PARTITION 1 TO <staging table>  
@@ -201,9 +201,9 @@ Com o passar do tempo, as novas linhas na tabela de histórico serão levadas pa
   
      Após a alternância de partição, você pode optar por arquivar os dados da tabela de preparo e, em seguida, remover ou truncar a tabela de preparo para já ficar preparada para a próxima vez que você precisar realizar essa tarefa de manutenção de partição recorrente.  
   
-2.  MERGE RANGE: mescle a partição vazia 1 com a partição 2 usando [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md) com MERGE RANGE (veja o exemplo B). Ao remover o limite mais baixo usando essa função, você efetivamente mescla a partição 1 vazia com a partição 2 anterior para formar a nova partição 1. As outras partições também alteraram efetivamente seus números ordinais.  
+2.  MERGE RANGE: Mescle a partição vazia 1 com a partição 2 usando [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md) com MERGE RANGE (veja o exemplo B). Ao remover o limite mais baixo usando essa função, você efetivamente mescla a partição 1 vazia com a partição 2 anterior para formar a nova partição 1. As outras partições também alteraram efetivamente seus números ordinais.  
   
-3.  SPLIT RANGE: crie uma nova partição vazia 7 usando o [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md) com SPLIT RANGE (veja o exemplo A). Ao adicionar um novo limite superior usando essa função, você cria efetivamente uma partição separada para o mês seguinte.  
+3.  SPLIT RANGE: Crie uma nova partição vazia 7 usando [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md) com SPLIT RANGE (veja o exemplo A). Ao adicionar um novo limite superior usando essa função, você cria efetivamente uma partição separada para o mês seguinte.  
   
 ### <a name="use-transact-sql-to-create-partitions-on-history-table"></a>Use o Transact-SQL para criar partições na tabela de histórico  
  Use o script Transact-SQL na janela de código abaixo para criar a função de partição, o esquema de partição e recriar o índice clusterizado para ser alinhado por partição com o esquema de partição, as partições. Para este exemplo, vamos criar uma abordagem de janela deslizante de seis meses com partições mensais começando em setembro de 2015.  
@@ -341,11 +341,11 @@ COMMIT TRANSACTION
   
  No cenário de janela deslizante, sempre removemos o limite mais baixo da partição.  
   
--   Caso RANGE LEFT: no caso RANGE LEFT, o limite da partição menor pertence à partição 1, que está vazia (depois de alternar a partição). Portanto, MERGE RANGE não incorrerá em qualquer movimentação de dados.  
+-   Caso RANGE LEFT: No caso RANGE LEFT, o limite da partição menor pertence à partição 1, que está vazia (depois de alternar a partição). Portanto, MERGE RANGE não incorrerá em qualquer movimentação de dados.  
   
--   Caso RANGE RIGHT: no caso RANGE RIGHT, o limite da partição menor pertence à partição 2, que não está vazia, pois presumimos que a partição 1 foi esvaziada pela alternância. Nesse caso, MERGE RANGE incorrerá na movimentação de dados (dados da partição 2 serão movidos para a partição 1). Para evitar isso, RANGE RIGHT no cenário de janela deslizante deve ter a partição 1, que sempre está vazia. Isso significa que, se usarmos RANGE RIGHT, devemos criar e manter uma partição adicional em comparação ao caso RANGE LEFT.  
+-   Caso RANGE RIGHT: No caso RANGE RIGHT, o limite da partição menor pertence à partição 2, que não está vazia, pois presumimos que a partição 1 foi esvaziada pela alternância. Nesse caso, MERGE RANGE incorrerá na movimentação de dados (dados da partição 2 serão movidos para a partição 1). Para evitar isso, RANGE RIGHT no cenário de janela deslizante deve ter a partição 1, que sempre está vazia. Isso significa que, se usarmos RANGE RIGHT, devemos criar e manter uma partição adicional em comparação ao caso RANGE LEFT.  
   
- Conclusão: usar RANGE LEFT na partição deslizante é muito mais simples para o gerenciamento de partição e evita a movimentação de dados. No entanto, definir limites de partição com RANGE RIGHT é um pouco mais simples já que você não precisa lidar com problemas de escala de tempo de data e hora.  
+ Conclusão: Usar RANGE LEFT na partição deslizante é muito mais simples para o gerenciamento de partição e evita a movimentação de dados. No entanto, definir limites de partição com RANGE RIGHT é um pouco mais simples já que você não precisa lidar com problemas de escala de tempo de data e hora.  
   
 ## <a name="using-custom-cleanup-script-approach"></a>Usando a Abordagem de Script de Limpeza Personalizada  
  Em casos quando o Stretch Database e o particionamento de tabela abordados não são opções viáveis, a terceira abordagem é excluir os dados da tabela de histórico usando o script de limpeza personalizada. Excluir dados da tabela de histórico só é possível quando **SYSTEM_VERSIONING = OFF**. Para evitar a inconsistência de dados, execute a limpeza durante a janela de manutenção (quando as cargas de trabalho que modificam dados não estão ativas) ou dentro de uma transação (bloqueando efetivamente outras cargas de trabalho).  Esta operação requer a permissão **CONTROL** nas tabelas atuais e de histórico.  
@@ -433,7 +433,7 @@ COMMIT;
 ```  
 
 ## <a name="using-temporal-history-retention-policy-approach"></a>Usando a abordagem de política de retenção de histórico temporal
-> **Observação:** “Usando a abordagem de política de retenção de histórico temporal” aplica-se a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e ao SQL Server 2017 partir do CTP 1.3.  
+> **OBSERVAÇÃO:**  “Usando a abordagem de política de retenção de histórico temporal” aplica-se a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e ao SQL Server 2017 partir do CTP 1.3.  
 
 A retenção de histórico temporal pode ser configurado no nível de tabela individual, que permite aos usuários criar políticas de vencimento flexíveis. A aplicação de retenção temporal é simples: requer apenas um parâmetro a ser definido durante a criação da tabela ou alteração do esquema.
 
@@ -473,7 +473,7 @@ CREATE TABLE dbo.WebsiteUserInfo
      )
  );
 ```
-Você pode especificar o período de retenção usando unidades de tempo diferentes: DAYS (dias), WEEKS (semanas), MONTHS (meses) e YEARS (anos). Se HISTORY_RETENTION_PERIOD for omitido, a retenção será considerada INFINITE (infinita). Também é possível usar a palavras-chave INFINITE explicitamente.
+É possível especificar o período de retenção usando unidades de tempo diferentes: DAYS (dias), WEEKS (semanas), MONTHS (meses) e YEARS (anos). Se HISTORY_RETENTION_PERIOD for omitido, a retenção será considerada INFINITE (infinita). Também é possível usar a palavras-chave INFINITE explicitamente.
 Em alguns cenários, pode ser útil configurar a retenção após a criação da tabela ou alterar o valor configurado anteriormente. Neste caso, use a instrução ALTER TABLE:
 ```
 ALTER TABLE dbo.WebsiteUserInfo

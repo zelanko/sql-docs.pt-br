@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 330ea355feb3d200173a727c8308ac66cddb6591
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729324"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797206"
 ---
 # <a name="mssqlserver7931"></a>MSSQLSERVER_7931
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47729324"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_DOUBLE_ROWSET_ACTUAL_FACT|  
-|Texto da mensagem|Erro de banco de dados: a ID de diretório de FILESTREAM F_ID de uma partição foi vista duas vezes.|  
+|Texto da mensagem|Erro de banco de dados: a ID de diretório de FileStream F_ID de uma partição foi vista duas vezes.|  
   
 ## <a name="explanation"></a>Explicação  
 A mesma ID de partição de um diretório de Filestream foi encontrada nos metadados.  

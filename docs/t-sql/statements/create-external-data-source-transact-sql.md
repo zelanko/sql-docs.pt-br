@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2019
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e2bf0ddde51d69567393a77b18a1f72478101b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4aa152883c8d6571f446bee5c783e96b88cbba64
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67145489"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419061"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -52,7 +52,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 
 Cria uma fonte de dados externa para consultas do PolyBase. Fontes de dados externas são usadas para estabelecer a conectividade e dar suporte a estes casos de uso principal:
 
-- Virtualização de dados e carregamento dados usando [PolyBase][intro_pb]
+- Virtualização de dados e carregamento dados usando o [PolyBase][intro_pb]
 - Operações de carregamento em massa usando `BULK INSERT` ou `OPENROWSET`
 
 **APLICA-SE A**: SQL Server 2016 (ou posterior)
@@ -148,7 +148,7 @@ Para criar uma credencial no escopo do banco de dados, veja [CREATE DATABASE SCO
 Especifica o tipo de fonte de dados externa que está sendo configurada. Esse parâmetro não é sempre necessário.
 
 - Use HADOOP quando a fonte de dados externa for Cloudera, Hortonworks ou Armazenamento de Blobs do Azure.
-- Use BLOB_STORAGE ao executar operações em massa com [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset] com [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+- Use BLOB_STORAGE ao executar operações em massa com [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] com [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 
 > [!IMPORTANT]
 > Não defina `TYPE` se estiver usando qualquer outra fonte de dados externa.
@@ -175,7 +175,7 @@ Se a porta não for especificada, o valor padrão será escolhido usando a defin
 | 6                   | 8032                          |
 | 7                   | 8050                          |
 
-Para obter uma lista completa de versões do Hadoop compatíveis, veja [Configuração de conectividade do PolyBase (Transact-SQL)][connectivity_pb].
+Para ver uma lista completa de versões do Hadoop compatíveis, veja [Configuração de conectividade do PolyBase (Transact-SQL)][connectivity_pb].
 
 > [!IMPORTANT]  
 > O valor de RESOURCE_MANAGER_LOCATION e não é validado quando você cria a fonte de dados externa. Inserir um valor incorreto pode causar falha de consulta em tempo de execução sempre que for feita uma tentativa de aplicação, uma vez que o valor fornecido não poderá ser resolvido.
@@ -226,7 +226,7 @@ WITH
 ;
 ```
 
-Para obter exemplos adicionais para outras fontes de dados, como o MongoDB, veja [Configurar o PolyBase para acessar dados externos no MongoDB][mongodb_pb]
+Para ver mais exemplos para outras fontes de dados, como o MongoDB, veja [Configurar o PolyBase para acessar dados externos no MongoDB][mongodb_pb]
 
 ### <a name="b-create-external-data-source-to-reference-hadoop"></a>B. Criar uma fonte de dados externa para referenciar o Hadoop
 
@@ -318,7 +318,7 @@ WITH
 ### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. Criar uma fonte de dados externa para operações em massa recuperando dados do Armazenamento de Blobs do Azure
 
 **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
-Use a seguinte fonte de dados para operações em massa usando [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset]. A credencial deve ser definida como `SHARED ACCESS SIGNATURE` como a identidade, não deve ter o `?` à esquerda no token SAS, deve ter pelo menos permissão de leitura no arquivo que deve ser carregado (por exemplo `srt=o&sp=r`), e o período de término deve ser válido (todas as datas estão no horário UTC). Para mais informações sobre assinaturas de acesso compartilhado, veja [Usando SAS (Assinatura de Acesso Compartilhado)][sas_token].
+Use a seguinte fonte de dados para operações em massa usando [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. A credencial deve ser definida como `SHARED ACCESS SIGNATURE` como a identidade, não deve ter o `?` à esquerda no token SAS, deve ter pelo menos permissão de leitura no arquivo que deve ser carregado (por exemplo `srt=o&sp=r`), e o período de término deve ser válido (todas as datas estão no horário UTC). Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)][sas_token].
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -356,7 +356,7 @@ Para ver esse exemplo em uso, confira [BULK INSERT][bulk_insert_example].
 
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
 [create_eff]: https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql
-[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
+[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-transact-sql
 [create_etb_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azure-sqldw-latest
 [create_tbl_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-table-as-select-azure-sql-data-warehouse?view=azure-sqldw-latest
 
@@ -453,12 +453,10 @@ Especifica o tipo de fonte de dados externa que está sendo configurada. Esse pa
 
 - Use o RDBMS para consultas entre bancos de dados usando a consulta elástica do Banco de Dados SQL.  
 - Use SHARD_MAP_MANAGER ao criar uma fonte de dados externos ao se conectar a um Banco de Dados SQL fragmentado.
-- Use BLOB_STORAGE ao executar operações em massa com [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset].
+- Use BLOB_STORAGE ao executar operações em massa com [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset].
 
 > [!IMPORTANT]
 > Não defina `TYPE` se estiver usando qualquer outra fonte de dados externa.
-
-Para ver um exemplo de como usar `TYPE` = `HADOOP` para carregar dados do Armazenamento de Blobs do Azure, veja [Criar fonte de dados externa para referenciar o Armazenamento de Blobs do Azure](#e-create-external-data-source-to-reference-azure-blob-storage).
 
 ### <a name="databasename--databasename"></a>DATABASE_NAME = *database_name*
 
@@ -547,7 +545,7 @@ Para obter um tutorial passo a passo sobre o RDBMS, confira [Introdução às co
 
 ### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>C. Criar uma fonte de dados externa para operações em massa recuperando dados do Armazenamento de Blobs do Azure
 
-Use a seguinte fonte de dados para operações em massa usando [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset]. A credencial deve ser definida como `SHARED ACCESS SIGNATURE` como a identidade, não deve ter o `?` à esquerda no token SAS, deve ter pelo menos permissão de leitura no arquivo que deve ser carregado (por exemplo `srt=o&sp=r`), e o período de término deve ser válido (todas as datas estão no horário UTC). Para mais informações sobre assinaturas de acesso compartilhado, veja [Usando SAS (Assinatura de Acesso Compartilhado)][sas_token].
+Use a seguinte fonte de dados para operações em massa usando [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. A credencial deve ser definida como `SHARED ACCESS SIGNATURE` como a identidade, não deve ter o `?` à esquerda no token SAS, deve ter pelo menos permissão de leitura no arquivo que deve ser carregado (por exemplo `srt=o&sp=r`), e o período de término deve ser válido (todas as datas estão no horário UTC). Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)][sas_token].
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -614,7 +612,7 @@ Para ver esse exemplo em uso, confira [BULK INSERT][bulk_insert_example].
 
 ## <a name="overview-azure-sql-data-warehouse"></a>Visão geral: Azure SQL Data Warehouse
 
-Cria uma fonte de dados externa para o PolyBase. Fontes de dados externas são usadas para estabelecer a conectividade e a compatibilidade com estes casos de uso principal: Virtualização de dados e carregamento dados usando [PolyBase][intro_pb]
+Cria uma fonte de dados externa para o PolyBase. Fontes de dados externas são usadas para estabelecer a conectividade e a compatibilidade com estes casos de uso principal: Virtualização de dados e carregamento dados usando o [PolyBase][intro_pb]
 
 > [!IMPORTANT]  
 > Para criar uma fonte de dados externa para consultar instâncias do SQL Data Warehouse usando o Banco de Dados SQL com [consulta elástica][remote_eq], confira [Banco de Dados SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current).
@@ -678,7 +676,7 @@ Especifica o tipo de fonte de dados externa que está sendo configurada. Esse pa
 > [!IMPORTANT]
 > Não defina `TYPE` se estiver usando qualquer outra fonte de dados externa.
 
-Para ver um exemplo de como usar `TYPE` = `HADOOP` para carregar dados do Armazenamento de Blobs do Azure, veja [Criar fonte de dados externa para referenciar o Armazenamento de Blobs do Azure](#e-create-external-data-source-to-reference-azure-blob-storage).
+Para ver um exemplo de como usar `TYPE` = `HADOOP` para carregar dados do Armazenamento de Blobs do Azure, veja [Criar fonte de dados externa para referenciar o Armazenamento de Blobs do Azure](#a-create-external-data-source-to-reference-azure-blob-storage).
 
 ## <a name="permissions"></a>Permissões
 
@@ -835,7 +833,7 @@ WITH
 
 ## <a name="overview-analytics-platform-system"></a>Visão geral: Sistema de plataforma de análise
 
-Cria uma fonte de dados externa para consultas do PolyBase. Fontes de dados externas são usadas para estabelecer a conectividade e a compatibilidade com estes casos de uso: Virtualização de dados e carregamento dados usando [PolyBase][intro_pb]
+Cria uma fonte de dados externa para consultas do PolyBase. Fontes de dados externas são usadas para estabelecer a conectividade e a compatibilidade com estes casos de uso: Virtualização de dados e carregamento dados usando o [PolyBase][intro_pb]
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -897,7 +895,7 @@ Especifica o tipo de fonte de dados externa que está sendo configurada. Esse pa
 > [!IMPORTANT]
 > Não defina `TYPE` se estiver usando qualquer outra fonte de dados externa.
 
-Para ver um exemplo de como usar `TYPE` = `HADOOP` para carregar dados do Armazenamento de Blobs do Azure, veja [Criar fonte de dados externa para referenciar o Armazenamento de Blobs do Azure](#e-create-external-data-source-to-reference-azure-blob-storage).
+Para ver um exemplo de como usar `TYPE` = `HADOOP` para carregar dados do Armazenamento de Blobs do Azure, veja [Criar fonte de dados externa para referenciar o Armazenamento de Blobs do Azure](#d-create-external-data-source-to-reference-azure-blob-storage).
 
 ### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -919,12 +917,12 @@ Se a porta não for especificada, o valor padrão será escolhido usando a defin
 | 6                   | 8032                          |
 | 7                   | 8050                          |
 
-Para obter uma lista completa de versões do Hadoop compatíveis, veja [Configuração de conectividade do PolyBase (Transact-SQL)][connectivity_pb].
+Para ver uma lista completa de versões do Hadoop compatíveis, veja [Configuração de conectividade do PolyBase (Transact-SQL)][connectivity_pb].
   
 > [!IMPORTANT]  
 > O valor de RESOURCE_MANAGER_LOCATION e não é validado quando você cria a fonte de dados externa. Inserir um valor incorreto pode causar falha de consulta em tempo de execução sempre que for feita uma tentativa de aplicação, uma vez que o valor fornecido não poderá ser resolvido.
 
-[Criar fonte de dados externa para referenciar o Hadoop com aplicação habilitada](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled) apresenta um exemplo concreto e diretrizes adicionais.
+[Criar fonte de dados externa para referenciar o Hadoop com aplicação habilitada](#b-create-external-data-source-to-reference-hadoop-with-push-down-enabled) apresenta um exemplo concreto e diretrizes adicionais.
 
 ## <a name="permissions"></a>Permissões
 

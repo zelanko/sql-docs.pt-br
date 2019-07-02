@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 992d574aef3b6184bd5311ab38ea21f7305df9e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801074"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62501861"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar um backup de log de transações (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "47801074"
   
     -   **Do arquivo ou fita**  
   
-         Clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Na caixa **Tipo de mídia de backup** , selecione um dos tipos de dispositivo listados. Para selecionar um ou mais dispositivos da caixa **Mídia de backup** , clique em **Adicionar**.  
+         Clique no botão Procurar ( **...** ) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Na caixa **Tipo de mídia de backup** , selecione um dos tipos de dispositivo listados. Para selecionar um ou mais dispositivos da caixa **Mídia de backup** , clique em **Adicionar**.  
   
          Após adicionar os dispositivos desejados à caixa de listagem **Mídia de backup** , clique em **OK** para voltar à página **Geral** .  
   
@@ -103,7 +103,7 @@ ms.locfileid: "47801074"
     |------------|-----------|  
     |**Restaurar**|Caixas de seleção selecionadas indicam os conjuntos de backup a serem restaurados.|  
     |**Nome**|Nome do conjunto de backup.|  
-    |**Componente**|Componente com backup: **Banco de Dados**, **Arquivo** ou \<em branco> (para logs de transações).|  
+    |**Componente**|O componente de backup: **Database**, **File** ou \<blank> (para logs de transações).|  
     |**Backup de banco de dados**|Nome do banco de dados envolvido na operação de backup.|  
     |**Data de Início**|A data e hora do início da operação de backup, apresentadas na configuração regional do cliente.|  
     |**Data de Conclusão**|Data e hora de término da operação de backup, apresentadas na configuração regional do cliente.|  
@@ -135,7 +135,7 @@ ms.locfileid: "47801074"
         |------------|-----------|  
         |\<em branco>|Exibe uma caixa de seleção para selecionar a marca.|  
         |**Transaction Mark**|Nome da transação marcada especificado pelo usuário quando a transação foi confirmada.|  
-        |**Date**|Data e hora de confirmação da transação. A data e hora da transação são exibidas como registradas na tabela **msdbgmarkhistory** , não a data e hora do computador cliente.|  
+        |**Data**|Data e hora de confirmação da transação. A data e hora da transação são exibidas como registradas na tabela **msdbgmarkhistory** , não a data e hora do computador cliente.|  
         |**Descrição**|Descrição da transação marcada especificada pelo usuário quando a transação foi confirmada (se houver).|  
         |**LSN**|Número de sequência de log da transação marcada.|  
         |**Backup de banco de dados**|Nome do banco de dados em que a transação marcada foi confirmada.|  

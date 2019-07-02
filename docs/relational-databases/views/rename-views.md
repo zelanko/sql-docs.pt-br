@@ -16,11 +16,11 @@ ms.author: sstein
 ms.manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fdc46b1d0addad193f5bc09a9bcd60fab9efe027
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418167"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62744001"
 ---
 # <a name="rename-views"></a>Renomear exibições
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52418167"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [After renaming a view](#FollowUp)  
+-   **Acompanhamento:**  [Depois de renomear uma exibição](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52418167"
   
  Para obter mais informações, veja [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md) e [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de renomear uma exibição  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de renomear uma exibição  
  Verifique se todos os objetos, scripts e aplicativos que fazem referência ao nome antigo da exibição agora usam o novo nome.  
   
   

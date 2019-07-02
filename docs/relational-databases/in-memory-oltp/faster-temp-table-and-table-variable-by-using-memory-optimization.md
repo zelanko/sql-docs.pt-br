@@ -13,11 +13,11 @@ ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 96c8f204f1be7775dbf77490e3fd3749c40e6a3d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531626"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047710"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Tabela temporária e variável de tabela mais rápidas usando a otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ OLTP in-memory fornece os seguintes objetos que podem ser usados para tabelas te
     - `DECLARE @mytablevariable my_type;`.  
   
   
-## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. Cenário: substituir tabela tempdb global &#x23;&#x23;  
+## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. Cenário: Substituir a tabela tempdb global &#x23;&#x23;  
   
 Substituir uma tabela temporária global por uma tabela com otimização memória SCHEMA_ONLY é bastante simples. A maior alteração é criar a tabela no momento da implantação, não em tempo de execução. A criação de tabelas com otimização de memória demora mais do que a criação de tabelas tradicionais, devido a otimizações de tempo de compilação. Criar e descartar as tabelas com otimização de memória como parte da carga de trabalho online afetaria o desempenho da carga de trabalho, bem como o desempenho de restauração em secundários do AlwaysOn e recuperação de banco de dados.
 
@@ -125,7 +125,7 @@ CREATE TABLE #tempSessionC
   
   
   
-Primeiro, crie a seguinte função de valor de tabela para filtrar em **@@spid**. A função poderá ser usada por todas as tabelas SCHEMA_ONLY convertidas de tabelas temporárias de sessão.  
+Primeiro, crie a seguinte função de valor de tabela para filtrar em **@@spid** . A função poderá ser usada por todas as tabelas SCHEMA_ONLY convertidas de tabelas temporárias de sessão.  
   
   
   
@@ -191,7 +191,7 @@ Em terceiro lugar, seu código geral T-SQL:
   
   
   
-## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>D. Cenário: uma variável da tabela pode ser MEMORY_OPTIMIZED=ON  
+## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>D. Cenário: Uma variável da tabela pode ter MEMORY_OPTIMIZED=ON  
   
   
 Uma variável de tabela tradicional representa uma tabela no banco de dados tempdb. Para um desempenho muito mais rápido, você pode otimizar a memória da variável de tabela.  
@@ -212,7 +212,7 @@ DECLARE @tvTableD TABLE
   
 A sintaxe anterior deve criar a variável de tabela *embutida*. A sintaxe embutida não dá suporte à otimização da memória. Por isso, vamos converter a sintaxe embutida na sintaxe explícita para o TYPE.  
   
-*Escopo:* a definição TYPE criada pelo primeiro lote delimitada por go persiste mesmo depois que o servidor é desligado e reiniciado. Porém, após o primeiro delimitador go, a tabela declarada @tvTableC persiste somente até o próximo go ser atingido e o lote terminar.  
+*Escopo:* A definição TYPE criada pelo primeiro lote delimitado por go persiste mesmo depois que o servidor é desligado e reiniciado. Porém, após o primeiro delimitador go, a tabela declarada @tvTableC persiste somente até o próximo go ser atingido e o lote terminar.  
   
   
   
@@ -314,7 +314,7 @@ Esta seção fornece código Transact-SQL que você pode executar para testar e 
   
 O teste de comparação dura cerca de 7 segundos. Para executar o exemplo:  
   
-1. *Pré-requisito:* você já deve ter executado o FILEGROUP T-SQL da seção anterior.  
+1. *Pré-requisito:* Você já deve ter executado o FILEGROUP T-SQL da seção anterior.  
 2. Execute o seguinte script T-SQL INSERT-DELETE.  
   - Observe a instrução “Go 5001”, que reenvia os tempos de T-SQL 5001. Você pode ajustar o número e executar novamente.  
   
@@ -421,7 +421,7 @@ Batch execution completed 5001 times.
 Você pode aprender a prever as necessidades de memória ativa de suas tabelas com otimização de memória com os seguintes recursos:  
   
 - [Estimar requisitos de memória para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
-- [Tamanho da tabela e da linha em tabelas com otimização de memória: exemplo de cálculo](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
+- [Tamanho da tabela e da linha em tabelas com otimização de memória: Exemplo de cálculo](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
 Para variáveis de tabela maiores, índices não clusterizados usam mais memória do que para *tabelas*com otimização de memória. Quanto maior a contagem de linhas e a chave de índice, mais a diferença aumenta.  
   

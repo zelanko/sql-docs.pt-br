@@ -1,5 +1,5 @@
 ---
-title: 'Classe de evento TM: Commit Tran Completed | Microsoft Docs'
+title: 'TM: Classe de evento Commit Tran Completed | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a910e2217f94b16e8890467ba75bef83e37a838d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623554"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661326"
 ---
-# <a name="tm-commit-tran-completed-event-class"></a>classe de evento TM: Commit Tran Completed
+# <a name="tm-commit-tran-completed-event-class"></a>TM: Classe de evento Commit Tran Completed
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  A classe de evento TM: Commit Tran Completed indica que uma solicitação COMMIT TRANSACTION foi concluída. A solicitação foi enviada do cliente pela interface de gerenciamento de transações. A coluna EventSubClass indicará se uma transação nova será iniciada depois que a transação atual estiver confirmada.  
+  A classe de evento TM: A classe de evento Commit Tran Completed indica que uma solicitação COMMIT TRANSACTION foi concluída. A solicitação foi enviada do cliente pela interface de gerenciamento de transações. A coluna EventSubClass indicará se uma transação nova será iniciada depois que a transação atual estiver confirmada.  
   
-## <a name="tm-commit-tran-completed-event-class-data-columns"></a>Colunas de dados da classe de evento TM: Commit Tran Completed  
+## <a name="tm-commit-tran-completed-event-class-data-columns"></a>TM: Colunas de dados da classe de evento Commit Tran Completed  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Sim|  
 |----------------------|---------------|-----------------|---------------|---------|  
@@ -33,8 +33,8 @@ ms.locfileid: "47623554"
 |DatabaseID|**int**|ID do banco de dados especificado pela instrução de banco de dados USE ou o banco de dados padrão se nenhuma instrução de banco de dados USE tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |Erro|**int**|Número de erro de um determinado evento. Geralmente é o número do erro armazenado na exibição de catálogo sys.messages.|31|Sim|  
-|EventClass|**int**|Tipo de evento = 186.|27|não|  
-|EventSequence|**int**|A sequência de determinado evento dentro da solicitação.|51|não|  
+|EventClass|**int**|Tipo de evento = 186.|27|Não|  
+|EventSequence|**int**|A sequência de determinado evento dentro da solicitação.|51|Não|  
 |EventSubClass|**int**|Tipo de subclasse de evento.<br /><br /> 1=Confirmar<br /><br /> 2=Confirmar e começar|21|Sim|  
 |GroupID|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
@@ -44,7 +44,7 @@ ms.locfileid: "47623554"
 |NTDomainName|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |NTUserName|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
 |RequestID|**int**|ID da solicitação que contém a instrução.|49|Sim|  
-|ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
+|ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |SessionLoginName|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |SPID|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |StartTime|**datetime**|Hora de início do evento, se disponível.|14|Sim|  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45cde8d0e42c2e85238bf3d42fc8835584083d27
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a64e02ecdb3f8a8321e0a625a3788228df0890fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510973"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64775194"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Usar o Assistente de Tabela Externa com fontes de dados relacionais
 
@@ -23,7 +23,7 @@ Um dos principais cenários para o SQL Server 2019 CTP 2.0 é a capacidade de vi
 
 ## <a name="start-the-external-table-wizard"></a>Inicializar o assistente de Tabela Externa
 
-Conecte-se à instância mestre usando o endereço IP ou número da porta (31433) obtidos no final do script de implantação. Expanda seu nó **Bancos de Dados** no Pesquisador de Objetos. Em seguida, selecione um dos bancos de dados no qual deseja virtualizar os dados de uma instância do SQL Server existente. Clique com o botão direito do mouse no banco de dados e selecione **Criar Tabela Externa** para iniciar o assistente de Virtualização de Dados. Você também pode iniciar o assistente de Virtualização de Dados na paleta de comandos. Use Ctrl + Shift + P no Windows ou use Cmd + Shift + P em um Mac.
+Conecte-se à instância principal usando o endereço IP/número da porta do ponto de extremidade **sql-server-master** obtido por meio do comando [**mssqlctl cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints). Expanda seu nó **Bancos de Dados** no Pesquisador de Objetos. Em seguida, selecione um dos bancos de dados no qual deseja virtualizar os dados de uma instância do SQL Server existente. Clique com o botão direito do mouse no banco de dados e selecione **Criar Tabela Externa** para iniciar o assistente de Virtualização de Dados. Você também pode iniciar o assistente de Virtualização de Dados na paleta de comandos. Use Ctrl + Shift + P no Windows ou use Cmd + Shift + P em um Mac.
 
 ![Assistente de Virtualização de Dados](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>Selecionar uma fonte de dados

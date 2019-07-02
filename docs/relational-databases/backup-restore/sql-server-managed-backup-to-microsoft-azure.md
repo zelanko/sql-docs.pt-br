@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c041ee4a56b2df2190eabb0da0ef472f0b8ee49
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397049"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63008555"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Backup gerenciado do SQL Server no Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52397049"
 |**Conta do Microsoft Azure**|Você pode começar a usar o Azure com uma [avaliação gratuita](https://azure.microsoft.com/pricing/free-trial/) antes de explorar as [opções de compra](https://azure.microsoft.com/pricing/purchase-options/).|  
 |**Conta de Armazenamento do Azure**|Os backups são armazenados no Armazenamento de Blobs do Azure associado a uma conta de armazenamento do Azure. Para obter instruções passo a passo para criar uma conta de armazenamento, confira [Sobre as contas de armazenamento do Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
 |**Contêiner de Blob**|Os blobs são organizados em contêineres. Especifique o contêiner de destino para os arquivos de backup. Você pode criar um contêiner no [Portal de Gerenciamento do Azure](https://manage.windowsazure.com/) ou usar o comando **New-AzureStorageContainer** do [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).|  
-|**SAS (Assinatura de Acesso Compartilhado)**|O acesso ao contêiner de destino é controlado por uma SAS (Assinatura de Acesso Compartilhado). Para ter uma visão geral da SAS, confira [Assinaturas de Acesso Compartilhado, Parte 1: noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). É possível criar um token SAS no código ou com o comando **New-AzureStorageContainerSASToken** do PowerShell. Para obter um script do PowerShell que simplifica esse processo, confira [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Simplificando a criação de credenciais do SQL com tokens SAS [Assinatura de Acesso Compartilhado] no Armazenamento do Azure com o Powershell). O token SAS pode ser armazenado em uma **Credencial do SQL** para uso com o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|**SAS (Assinatura de Acesso Compartilhado)**|O acesso ao contêiner de destino é controlado por uma SAS (Assinatura de Acesso Compartilhado). Para ter uma visão geral da SAS, confira [Assinaturas de Acesso Compartilhado, Parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). É possível criar um token SAS no código ou com o comando **New-AzureStorageContainerSASToken** do PowerShell. Para obter um script do PowerShell que simplifica esse processo, confira [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Simplificando a criação de credenciais do SQL com tokens SAS [Assinatura de Acesso Compartilhado] no Armazenamento do Azure com o Powershell). O token SAS pode ser armazenado em uma **Credencial do SQL** para uso com o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |**SQL Server Agent**|O SQL Server Agent deve estar em execução para que o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] funcione. Considere a configuração da opção de inicialização como automática.|  
   
 ## <a name="components"></a>Componentes  
@@ -75,7 +75,7 @@ ms.locfileid: "52397049"
  Você pode especificar um agendamento de backup personalizado usando o procedimento armazenado do sistema [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md). Se você não especificar uma agenda personalizada, o tipo de backups agendados e a frequência de backup serão determinados com base na carga de trabalho do banco de dados. As configurações de período de retenção são usadas para determinar o tempo durante o qual o arquivo de backup deverá ser mantido no armazenamento e a capacidade de recuperar o banco de dados para um determinado momento no período de retenção.  
   
 ### <a name="backup-file-naming-conventions"></a>Convenções de nomenclatura do arquivo de backup  
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] usa o contêiner que você especificar, para que você tenha controle sobre o nome do contêiner. Para os arquivos de backup, os bancos de dados que não são de disponibilidade são nomeados por meio da seguinte convenção: o nome é criado usando os primeiros 40 caracteres do nome do banco de dados, o GUID do banco de dados sem o '-' e o carimbo de data/hora. O caractere de sublinhado é inserido entre segmentos como separadores. A extensão de arquivo **.bak** é usada no backup completo e a extensão de arquivo **.log** é usada nos backups de log. Para bancos de dados do Grupo de Disponibilidade, além da convenção de nomenclatura de arquivo descrita acima, o GUID do banco de dados do Grupo de Disponibilidade é adicionado após os 40 caracteres do nome do banco de dados. O valor de GUID do banco de dados do Grupo de Disponibilidade é o valor para o group_database_id em sys.databases.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] usa o contêiner que você especificar, para que você tenha controle sobre o nome do contêiner. Os arquivos de backup de bancos de dados não disponíveis são nomeados usando a seguinte convenção: O nome é criado usando os primeiros 40 caracteres do nome do banco de dados, o GUID do banco de dados, sem o '-' e o carimbo de data/hora. O caractere de sublinhado é inserido entre segmentos como separadores. A extensão de arquivo **.bak** é usada no backup completo e a extensão de arquivo **.log** é usada nos backups de log. Para bancos de dados do Grupo de Disponibilidade, além da convenção de nomenclatura de arquivo descrita acima, o GUID do banco de dados do Grupo de Disponibilidade é adicionado após os 40 caracteres do nome do banco de dados. O valor de GUID do banco de dados do Grupo de Disponibilidade é o valor para o group_database_id em sys.databases.  
   
 ### <a name="full-database-backup"></a>Backup de banco de dados Completo  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] programa um backup completo do banco de dados se qualquer uma das seguintes afirmações for verdadeira.  
@@ -100,7 +100,7 @@ ms.locfileid: "52397049"
 -   Quando o backup de log de transações está atrás de um backup completo de banco de dados. A meta é manter a cadeia de logs à frente do backup completo.  
   
 ## <a name="retention-period-settings"></a>Configurações de período de retenção  
- Ao habilitar o backup, você deve definir o período de retenção em dias: o mínimo é 1 dia e o máximo é 30 dias.  
+ Ao habilitar o backup, você deve definir o período de retenção em dias: O valor mínimo é 1 dia e o máximo, 30 dias.  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] , com base nas configurações de período de retenção, avalia a capacidade de recuperação para um momento específico, a fim de determinar quais arquivos de backup serão mantidos e identificar os arquivos de backup a serem excluídos. A backup_finish_date do backup é usada para determinar e associar o tempo especificado pelas configurações de período de retenção.  
   

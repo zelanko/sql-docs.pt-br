@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e6bd546d47bbd78a4b448ed3059605365a9d2d0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699534"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797100"
 ---
 # <a name="mssqlserver7988"></a>MSSQLSERVER_7988
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47699534"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_PRE_CHECKS_CHAIN_LOOP_DETECTED|  
-|Texto da mensagem|Verificações prévias de tabela do sistema: ID de objeto O_ID. Detectado loop na cadeia de dados em P_ID. Instrução de verificação encerrada devido a um erro irreparável.|  
+|Texto da mensagem|Verificações prévias de tabela do sistema: ID do objeto O_ID. Detectado loop na cadeia de dados em P_ID. Instrução de verificação encerrada devido a um erro irreparável.|  
   
 ## <a name="explanation"></a>Explicação  
 A primeira fase de um DBCC CHECKDB envolve a execução de verificações primitivas nas páginas de dados das tabelas de sistema críticas. Se algum erro for encontrado, eles não poderão ser reparados, portanto, o DBCC CHECKDB será encerrado imediatamente. Foi detectado um loop de ligação de página na página *P_ID*. Esse tipo de loop ocorre quando os próximos ponteiros de uma página futuramente retornam a ela.  
