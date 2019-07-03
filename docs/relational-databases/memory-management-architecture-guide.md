@@ -16,11 +16,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e071a15e119e1225698cb2cea3f602d256841e74
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662920"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63015429"
 ---
 # <a name="memory-management-architecture-guide"></a>guia de arquitetura de gerenciamento de memória
 
@@ -76,18 +76,18 @@ Ao usar o AWE e o privilégio Páginas Bloqueadas na Memória, você pode fornec
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Alterações no gerenciamento de memória a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
 Nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), a alocação de memória era feita usando cinco mecanismos diferentes:
--  O **SPA (alocador de página única)**, incluindo somente as alocações de memória que eram menores ou iguais a 8 KB no processo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. As opções de configuração *max server memory (MB)* e *min server memory (MB)* determinavam os limites de memória física que o SPA consumia. O pool de buffers era simultaneamente o mecanismo do SPA e o maior consumidor de alocações de uma página.
--  O **Alocador de várias páginas (MPA)**, para as alocações de memória que solicitam mais de 8 KB.
+-  O **SPA (alocador de página única)** , incluindo somente as alocações de memória que eram menores ou iguais a 8 KB no processo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. As opções de configuração *max server memory (MB)* e *min server memory (MB)* determinavam os limites de memória física que o SPA consumia. O pool de buffers era simultaneamente o mecanismo do SPA e o maior consumidor de alocações de uma página.
+-  O **Alocador de várias páginas (MPA)** , para as alocações de memória que solicitam mais de 8 KB.
 -  O **Alocador de CLR**, incluindo os heaps SQL CLR e suas alocações globais que são criadas durante a inicialização do CLR.
 -  As alocações de memória para as **[pilhas de thread](../relational-databases/memory-management-architecture-guide.md#stacksizes)** no processo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
--  As **DWA (Alocações Diretas do Windows)**, para as solicitações de alocação de memória feitas diretamente no Windows. Elas incluem o uso de heap do Windows e as alocações virtuais diretas feitas pelos módulos que são carregados no processo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Exemplos de tais solicitações de alocação de memória incluem as alocações de DLLs de procedimento armazenado estendido, os objetos que são criados usando procedimentos de automação (chamadas sp_OA) e as alocações de provedores de servidor vinculados.
+-  As **DWA (Alocações Diretas do Windows)** , para as solicitações de alocação de memória feitas diretamente no Windows. Elas incluem o uso de heap do Windows e as alocações virtuais diretas feitas pelos módulos que são carregados no processo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Exemplos de tais solicitações de alocação de memória incluem as alocações de DLLs de procedimento armazenado estendido, os objetos que são criados usando procedimentos de automação (chamadas sp_OA) e as alocações de provedores de servidor vinculados.
 
-A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], as alocações de uma página, as alocações de várias páginas e as alocações de CLR são consolidadas em um **alocador de páginas de “qualquer tamanho”** e ele é incluído nos limites de memória que são controlados pelas opções de configuração *max server memory (MB)* e *min server memory (MB)*. Essa alteração forneceu uma capacidade de dimensionamento mais precisa para todos os requisitos de memória que passam pelo gerenciador de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
+A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], as alocações de uma página, as alocações de várias páginas e as alocações de CLR são consolidadas em um **alocador de páginas de “qualquer tamanho”** e ele é incluído nos limites de memória que são controlados pelas opções de configuração *max server memory (MB)* e *min server memory (MB)* . Essa alteração forneceu uma capacidade de dimensionamento mais precisa para todos os requisitos de memória que passam pelo gerenciador de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
 
 > [!IMPORTANT]
 > Examine com atenção suas configurações *max server memory (MB)* e *min server memory (MB)* atuais depois de fazer upgrade para o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] por meio do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Isso é necessário porque, a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], tais configurações agora incluem e consideram mais alocações de memória em comparação com as versões anteriores. Essas alterações se aplicam às versões de 32 e 64 bits do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] e às versões de 64 bits do [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] por meio do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
 
-A tabela a seguir indica se um tipo específico de alocação de memória é controlado pelas opções de configuração *max server memory (MB)* e *min server memory (MB)*:
+A tabela a seguir indica se um tipo específico de alocação de memória é controlado pelas opções de configuração *max server memory (MB)* e *min server memory (MB)* :
 
 |Tipo de alocação de memória| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
@@ -97,9 +97,9 @@ A tabela a seguir indica se um tipo específico de alocação de memória é con
 |Memória de pilhas de thread|Não|Não|
 |Alocações diretas do Windows|Não|Não|
 
-A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode alocar mais memória do que o valor especificado na configuração max server memory. Esse comportamento pode ocorrer quando o valor de **_Memória Total do Servidor (KB)_** já tiver atingido a configuração da **_Memória do Servidor de Destino (KB)_** (conforme especificado pela memória máxima do servidor). Se houver memória contígua livre insuficiente para atender à demanda de solicitações de memória de várias páginas (mais de 8 KB) devido à fragmentação da memória, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] poderá exceder o uso em vez de rejeitar a solicitação de memória. 
+A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode alocar mais memória do que o valor especificado na configuração max server memory. Esse comportamento pode ocorrer quando o valor de **_Memória Total do Servidor (KB)_ ** já tiver atingido a configuração da **_Memória do Servidor de Destino (KB)_ ** (conforme especificado pela memória máxima do servidor). Se houver memória contígua livre insuficiente para atender à demanda de solicitações de memória de várias páginas (mais de 8 KB) devido à fragmentação da memória, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] poderá exceder o uso em vez de rejeitar a solicitação de memória. 
 
-Assim que essa alocação for executada, a tarefa em segundo plano *Monitor de Recursos* começará a indicar para todos os consumidores de memória liberarem a memória alocada e tentará colocar o valor de *Memória Total do Servidor (KB)* abaixo da especificação da *Memória do Servidor de Destino (KB)*. Portanto, o uso de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode rapidamente exceder a configuração max server memory. Nessa situação, o leitor do contador de desempenho da *Memória Total do Servidor (KB)* excederá as configurações max server memory e *Memória do Servidor de Destino (KB)*.
+Assim que essa alocação for executada, a tarefa em segundo plano *Monitor de Recursos* começará a indicar para todos os consumidores de memória liberarem a memória alocada e tentará colocar o valor de *Memória Total do Servidor (KB)* abaixo da especificação da *Memória do Servidor de Destino (KB)* . Portanto, o uso de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode rapidamente exceder a configuração max server memory. Nessa situação, o leitor do contador de desempenho da *Memória Total do Servidor (KB)* excederá as configurações max server memory e *Memória do Servidor de Destino (KB)* .
 
 Esse comportamento geralmente é observado durante as operações a seguir: 
 -  Consultas grandes do índice columnstore.
@@ -109,9 +109,9 @@ Esse comportamento geralmente é observado durante as operações a seguir:
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>Alterações em “memory_to_reserve” a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-Nas versões anteriores do SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), o gerenciador de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deixava de lado uma parte do VAS (espaço de endereço virtual) do processo usado pelo **MPA (Alocador de Várias Páginas)**, pelo **Alocador de CLR**, pelas alocações de memória das **pilhas de threads** no processo do SQL Server e pelas **DWA (Alocações Diretas do Windows)**. Esta parte do espaço de endereço virtual também é conhecida como região “Mem-To-Leave” ou como “Pool de buffers sem memória”.
+Nas versões anteriores do SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), o gerenciador de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deixava de lado uma parte do VAS (espaço de endereço virtual) do processo usado pelo **MPA (Alocador de Várias Páginas)** , pelo **Alocador de CLR**, pelas alocações de memória das **pilhas de threads** no processo do SQL Server e pelas **DWA (Alocações Diretas do Windows)** . Esta parte do espaço de endereço virtual também é conhecida como região “Mem-To-Leave” ou como “Pool de buffers sem memória”.
 
-O espaço de endereço virtual reservado para essas alocações é determinado pela opção de configuração _**memory\_to\_reserve**_. O valor padrão que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa é 256 MB. Para substituir o valor padrão, use o parâmetro de inicialização [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Consulte a página de documentação em [Opções de inicialização do serviço Mecanismo de Banco de Dados](../database-engine/configure-windows/database-engine-service-startup-options.md) para obter informações sobre o parâmetro de inicialização *-g*.
+O espaço de endereço virtual reservado para essas alocações é determinado pela opção de configuração _**memory\_to\_reserve**_ . O valor padrão que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa é 256 MB. Para substituir o valor padrão, use o parâmetro de inicialização [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Consulte a página de documentação em [Opções de inicialização do serviço Mecanismo de Banco de Dados](../database-engine/configure-windows/database-engine-service-startup-options.md) para obter informações sobre o parâmetro de inicialização *-g*.
 
 Uma vez que o novo alocador de páginas de “qualquer tamanho” também controla as alocações maiores que 8 KB a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o valor de *memory_to_reserve* não inclui as alocações de várias páginas. Exceto por essa alteração, tudo permanece igual com esta opção de configuração.
 
@@ -130,7 +130,7 @@ O comportamento de gerenciamento de memória padrão do [!INCLUDE[ssDEnoversion]
 
 Quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está usando memória dinamicamente, ele consulta o sistema periodicamente para determinar a quantidade de memória livre. Manter essa memória livre impede a paginação do SO (sistema operacional). Se menos memória estiver livre, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] liberará memória para o SO. Se houver mais memória livre, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] poderá alocar mais memória. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adiciona memória apenas quando sua carga de trabalho exige mais. Um servidor em repouso não aumenta o tamanho de seu espaço de endereço virtual.  
   
-A opção **[max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** controla a alocação de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a memória de compilação, todos os caches (incluindo o pool de buffers), as [concessões de memória de execução de consulta](#effects-of-min-memory-per-query), a [memória de gerenciador de bloqueio](#memory-used-by-sql-server-objects-specifications) e a memória do CLR<sup>1</sup> (basicamente qualquer administrador de memória encontrado em **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**). 
+A opção **[max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** controla a alocação de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a memória de compilação, todos os caches (incluindo o pool de buffers), as [concessões de memória de execução de consulta](#effects-of-min-memory-per-query), a [memória de gerenciador de bloqueio](#memory-used-by-sql-server-objects-specifications) e a memória do CLR<sup>1</sup> (basicamente qualquer administrador de memória encontrado em **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** ). 
 
 <sup>1</sup> A memória do CLR é gerenciada em alocações de max_server_memory a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].
 
@@ -236,7 +236,7 @@ Como o gerenciador de buffer usa a maior parte da memória no processo do [!INCL
 ### <a name="supported-features"></a>Recursos com suporte
 O gerenciador de buffer oferece suporte aos seguintes recursos:
 
-* O gerenciador de buffer reconhece o **NUMA (acesso não uniforme à memória por software)**. São distribuídas páginas de cache do buffer em nós NUMA de hardware, que permitem a um thread acessar uma página de buffer alocada no nó NUMA local em vez de memória externa. 
+* O gerenciador de buffer reconhece o **NUMA (acesso não uniforme à memória por software)** . São distribuídas páginas de cache do buffer em nós NUMA de hardware, que permitem a um thread acessar uma página de buffer alocada no nó NUMA local em vez de memória externa. 
 * O gerenciador de buffer é compatível com a **Adição de Memória a Quente**, que permite aos usuários adicionar memória física sem reiniciar o servidor. 
 * O gerenciador de buffer é compatível com **páginas grandes** em plataformas de 64 bits. O tamanho da página é específico para a versão do Windows.
 
