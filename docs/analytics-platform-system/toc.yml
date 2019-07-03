@@ -1,7 +1,7 @@
 - name: Visão geral do APS (PDW)
   href: ../analytics-platform-system/home-analytics-platform-system-aps-pdw.md
 - name: Bem-vindo ao SQL Server >>
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: Novidades no APS
   href: ../analytics-platform-system/whats-new-analytics-platform-system.md
   items:
