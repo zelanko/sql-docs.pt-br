@@ -228,13 +228,13 @@ ms.locfileid: "62510325"
   
  **Não há suporte para MultiSubnetFailover=True pelo .NET Framework 3.5 ou OLEDB**  
   
- **Problema:** Se seu Grupo de Disponibilidade ou Instância de Cluster de Failover tiver um nome de ouvinte (conhecido como o nome de rede ou o Ponto de Acesso para Cliente no Gerenciador de Cluster WSFC), dependendo dos diversos endereços IP de diferentes sub-redes, e você estiver usando o ADO.NET com .NET Framework 3.5 SP1 ou o SQL Native Client 11.0 OLEDB, possivelmente 50% das suas solicitações de conexão de cliente para o ouvinte de grupo de disponibilidade atingirão um tempo limite de conexão.  
+ **Problema:** Quando seu Grupo de Disponibilidade ou sua Instância de Cluster de Failover tem um nome de ouvinte (conhecido como o nome de rede ou o ponto de acesso para cliente no Gerenciador de Cluster WSFC), dependendo dos diversos endereços IP de diferentes sub-redes, e você está usando o ADO.NET com .NET Framework 3.5 SP1 ou o SQL Native Client 11.0 OLEDB, metade das suas solicitações de conexão de cliente para o ouvinte do grupo de disponibilidade pode acabar atingindo o tempo limite de conexão.  
   
  **Soluções alternativas:** é recomendável que você execute uma das tarefas a seguir.  
   
 -   Se você não tiver a permissão para manipular recursos de cluster, altere o tempo limite da conexão para 30 segundos (esse valor resulta em um período de tempo limite TCP de 20 segundos mais um buffer de 10 segundos).  
   
-     **Prós**: se ocorrer um failover de sub-rede cruzado, o tempo de recuperação do cliente será rápido.  
+     **Prós**: se ocorrer um failover entre sub-redes, a recuperação do cliente será rápida.  
   
      **Contras**: metade das conexões de cliente demorarão mais de 20 segundos  
   
