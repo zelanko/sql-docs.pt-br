@@ -42,7 +42,7 @@ Define uma data no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 |Sintaxe|**date**|  
 |Uso|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
 |Formato literal de cadeia de caracteres padrão<br /><br /> (usado para cliente de nível inferior)|AAAA-MM-DD<br /><br /> Para obter mais informações, consulte a seção Compatibilidade com versões anteriores a seguir.|  
-|Intervalo|0001-01-01 a 9999-12-31 (1582-10-15 a 9999-12-31 para o Informatica)<br /><br /> 1 de janeiro de 1 CE (Era Cristã) até 31 de dezembro de 9999 CE (15 de outubro de 1582 CE a 31 de dezembro de 9999 CE para Informática)|  
+|Intervalo|0001-01-01 a 9999-12-31 (1582-10-15 a 9999-12-31 para o Informatica)<br /><br /> 1º de janeiro de 1 EC (Era Comum) até 31 de dezembro de 9999 EC (15 de outubro de 1582 EC a 31 de dezembro de 9999 EC para Informática)|  
 |Intervalos de elementos|AAAA são quatro dígitos de 0001 a 9999 que representam um ano. Para o Informatica, YYYY está limitado ao intervalo de 1582 a 9999.<br /><br /> MM são dois dígitos de 01 a 12 que representam um mês do ano especificado.<br /><br /> DD são dois dígitos de 01 a 31, dependendo do mês, que representam um dia do mês especificado.|  
 |Comprimento de caracteres|10 posições|  
 |Precisão, escala|10, 0|  
@@ -80,7 +80,7 @@ A tabela a seguir mostra os formatos de literais de cadeia de caracteres válido
   
 |Formato W3C XML|Descrição|  
 |--------------------|-----------------|  
-|aaaa-mm-ddTZD|Suporte para o uso do XML/SOAP.<br /><br /> TZD é o designador de fuso horário (Z ou + hh: mm ou -hh:mm):<br /><br /> -   hh:mm representa o deslocamento de fuso horário. hh são dois dígitos, variando de 0 a 14, que representam o número de horas no deslocamento de fuso horário.<br />-   MM são dois dígitos, variando de 0 a 59, que representam o número de minutos adicionais no deslocamento de fuso horário.<br />– + (mais) ou - (menos) é o sinal obrigatório do deslocamento de fuso horário. Esse sinal indica que, para obter o horário local, o deslocamento de fuso horário é adicionado ou subtraído do horário UTC (Tempo Universal Coordenado). O intervalo válido de deslocamento de fuso horário vai de -14: 00 a +14: 00.|  
+|aaaa-mm-ddTZD|Suporte para o uso do XML/SOAP.<br /><br /> TZD é o designador de fuso horário (Z ou + hh: mm ou -hh:mm):<br /><br /> -   hh:mm representa o deslocamento de fuso horário. hh são dois dígitos, variando de 0 a 14, que representam o número de horas no deslocamento de fuso horário.<br />-   MM são dois dígitos, variando de 0 a 59, que representam o número de minutos adicionais no deslocamento de fuso horário.<br />– + (mais) ou - (menos) é o sinal obrigatório do deslocamento de fuso horário. Esse sinal indica que, para o sistema obter o horário local, o deslocamento de fuso horário é adicionado ao horário UTC (Tempo Universal Coordenado) ou subtraído dele. O intervalo válido de deslocamento de fuso horário vai de -14: 00 a +14: 00.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Conformidade com o ANSI e ISO 8601  
 **date** está em conformidade com a definição padrão ANSI SQL do calendário Gregoriano: "NOTA 85 – Tipos de dados date e time aceitarão que datas no formato Gregoriano sejam armazenadas no intervalo de dados 0001-01-01 CE até 9999-12-31 CE".
@@ -101,13 +101,13 @@ Alguns clientes de nível inferior não são compatíveis com os tipos de dados 
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR ou SQL_VARCHAR|DBTYPE_WSTR ou DBTYPE_STR|Java.sql.String|Cadeia de caracteres ou SqString|  
   
 ## <a name="converting-date-and-time-data"></a>Convertendo dados de data e hora
-Ao fazer a conversão em tipos de dados de data e hora, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejeita todos os valores que não pode reconhecer como datas ou horas. Para obter informações sobre como usar as funções CAST e CONVERT com os dados de data e hora, consulte [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+Quando você converte informações em tipos de dados de data e hora, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejeita todos os valores não reconhecidos como datas nem horas. Para obter informações sobre como usar as funções CAST e CONVERT com os dados de data e hora, consulte [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ### <a name="converting-date-to-other-date-and-time-types"></a>Convertendo date em outros tipos de data e hora
 
 A tabela a seguir descreve o que ocorre quando você converte um tipo de dados **date** em outros tipos de dados de data e hora.
   
-Quando a conversão é para **time(n)**, a conversão falha e mensagem de erro 206 é gerada: "Conflito no tipo de operando: a data é incompatível com a hora".
+Quando a conversão é para **time(n)** , a conversão falha e mensagem de erro 206 é gerada: "Conflito no tipo de operando: a data é incompatível com a hora".
   
 Se a conversão é feita em **datetime**, a data é copiada. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `datetime`.
   
@@ -141,7 +141,7 @@ SELECT @date AS '@date', @smalldatetime AS '@smalldatetime';
 --(1 row(s) affected)  
 ```  
   
-Para a conversão em **datetimeoffset(n)**, a data é copiada e a hora é definida como 00:00.0000000 +00:00. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `datetimeoffset(3)`.
+Para a conversão em **datetimeoffset(n)** , a data é copiada e a hora é definida como 00:00.0000000 +00:00. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `datetimeoffset(3)`.
   
 ```sql
 DECLARE @date date = '1912-10-25';  
@@ -157,7 +157,7 @@ SELECT @date AS '@date', @datetimeoffset AS '@datetimeoffset';
 --(1 row(s) affected)  
 ```  
   
-Quando a conversão é feita em **datetime2(n)**, o componente de data é copiado e o componente de hora é definido como 00:00.000000. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `datetime2(3)`.
+Quando a conversão é feita em **datetime2(n)** , o componente de data é copiado e o componente de hora é definido como 00:00.000000. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `datetime2(3)`.
   
 ```sql
 DECLARE @date date = '1912-10-25'  
@@ -174,7 +174,7 @@ SELECT @date AS '@date', @datetime2 AS '@datetime2(3)';
 ```  
   
 ### <a name="converting-string-literals-to-date"></a>Convertendo literais de cadeias de caracteres em data
-Se todas as partes da cadeia de caracteres estiverem em formatos válidos, as conversões de literais de cadeia de caracteres para tipos de data e hora serão permitidas. Caso contrário, será gerado um erro de tempo de execução. As conversões implícitas ou explícitas que não especificam um estilo, de tipos de data e hora em literais de cadeia de caracteres estarão no formato padrão da sessão atual. A tabela a seguir mostra as regras de conversão de uma literal de cadeia de caracteres no tipo de dados **date**.
+Se todas as partes das cadeias de caracteres estiverem em formatos válidos, as conversões de literais de cadeia de caracteres em tipos de data e hora serão permitidas. Caso contrário, será gerado um erro de tempo de execução. As conversões implícitas ou explícitas que não especificam um estilo, mas são de tipos de data e hora em literais de cadeia de caracteres, estarão no formato padrão da sessão atual. A tabela a seguir mostra as regras de conversão de uma literal de cadeia de caracteres no tipo de dados **date**.
   
 |Literal de cadeia de caracteres de entrada|**date**|  
 |---|---|
