@@ -1,9 +1,9 @@
 ---
 title: sp_set_session_context (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/04/2017
+ms.date: 05/14/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
@@ -18,16 +18,16 @@ ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c7c68341338706c59c7ef966bf5abc6110c46e6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 25f9d67ee50f7c33391027d69c7db87aac8d7210
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51811867"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559424"
 ---
 # <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 Define um par chave-valor no contexto da sessão.  
   
@@ -43,10 +43,10 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @key=] N'key'  
+ [ @key= ] N'key'  
  A chave que está sendo definida, do tipo **sysname**. O tamanho de chave máximo é 128 bytes.  
   
- [ @value=] 'value'  
+ [ @value= ] 'value'  
  O valor para a chave especificada, do tipo **sql_variant**. Definir um valor NULL libera a memória. O tamanho máximo é 8.000 bytes.  
   
  [ @read_only= ] { 0 | 1 }  
