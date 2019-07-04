@@ -21,7 +21,7 @@ ms.locfileid: "67140784"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-É possível usar o Microsoft Help Viewer para baixar e instalar os pacotes da ajuda do SQL Server de fontes online ou do disco local. Em seguida, você pode exibir o conteúdo offline. O Help Viewer é instalado com várias ferramentas diferentes. Este artigo descreve as ferramentas que instalam o Help Viewer, como instalar o conteúdo de ajuda offline e como exibir a ajuda.
+É possível usar o Microsoft Help Viewer para baixar e instalar os pacotes da ajuda do SQL Server de fontes online ou do disco local. Depois disso, você poderá ver o conteúdo offline. O Help Viewer é instalado com várias ferramentas diferentes. Este artigo descreve as ferramentas que instalam o Help Viewer, como instalar o conteúdo de ajuda offline e como exibir a ajuda.
 
 É necessário ter acesso à Internet para baixar o conteúdo do Help Viewer. Você pode então migrar o conteúdo para um computador que não tenha acesso à Internet.
 
@@ -40,11 +40,11 @@ Há duas versões principais do Microsoft Help Viewer.  As versões 1.x e 2.x. C
 
 (1) Para instalar o Help Viewer com o Visual Studio 2019 ou 2017, na guia Componentes Individuais do Instalador do Visual Studio, selecione **Help Viewer** em Ferramentas de Código e clique em **Instalar**.
 
-(2) Indica a opção "Componentes de Documentação" na instalação do SQL Server.
+(2) Indica a opção "Componentes da Documentação" na instalação do SQL Server.
 
 >[!NOTE]
 > - O SQL Server 2016 instala o Help Viewer 1.1, que não é compatível com o conteúdo de ajuda do SQL Server 2016. Para saber mais, confira as [Notas sobre a versão do SQL Server 2016](sql-server-2016-release-notes.md).  Para exibir o conteúdo do SQL Server 2016, você precisa da versão v2.x do Help Viewer. 
-> - No SQL Server 2017, o Help Viewer não pode ser instalado na Instalação do SQL Server.
+> - Do SQL Server 2017 em diante, o Help Viewer não pode ser instalado com a Instalação do SQL Server.
 
 ## <a name="use-help-viewer-v2x"></a>Usar o Help Viewer v2.x
 
@@ -64,7 +64,7 @@ Há duas versões principais do Microsoft Help Viewer.  As versões 1.x e 2.x. C
    > Para instalar por meio do disco (Ajuda do SQL Server 2014), escolha **Disco** em Origem da instalação e especifique o local do disco.
    
    O caminho do repositório Local na guia Gerenciar Conteúdo mostra o local em que o conteúdo será instalado no computador local. Para alterar o local, clique em **Mover**, insira outro caminho de pasta no campo **Para** e, em seguida, clique em **OK**.
-   Se a instalação da ajuda falhar após a alteração do caminho do repositório Local, feche e abra novamente o Help Viewer. Verifique se o novo local aparece no caminho do repositório Local e tente instalar novamente.
+   Se a instalação da ajuda falhar após a alteração do caminho do repositório Local, feche e abra novamente o Help Viewer. Verifique se o novo local consta no caminho do repositório Local e tente realizar a instalação novamente.
 
 3. Clique em **Adicionar** ao lado de cada pacote de conteúdo (manual) que você deseja instalar. 
    Para instalar todo o conteúdo da Ajuda do SQL Server, adicione todos os 13 manuais em SQL Server. 
@@ -172,7 +172,7 @@ A Ajuda online sempre mostra o conteúdo mais atualizado.
 
 **Para exibir a Ajuda online do SQL Server no SSMS 17.x**
 
-- Clique em **Exibir Ajuda** no menu **Ajuda**. A documentação mais recente do SQL Server 2016/2017 do [https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) pode ser exibida em um navegador. 
+- Clique em **Exibir Ajuda** no menu **Ajuda**. A documentação mais recente do SQL Server 2016/2017 do [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) pode ser exibida em um navegador. 
 
    ![Exibir Ajuda](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
