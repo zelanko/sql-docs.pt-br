@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: jroth
-ms.openlocfilehash: 4836b22d9903b05d70170aad53fde7ac7101f537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d06af565a581ea8ed9dbbdd6330271ef9f6c7218
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778376"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556897"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Conectar-se [!INCLUDE[name-sos](../includes/name-sos-short.md)] ao SQL Server usando a autenticação do Windows - Kerberos 
 
@@ -160,7 +160,7 @@ Obtenha um tíquete de concessão de tíquete (TGT) do KDC.
 kinit username@DOMAIN.COMPANY.COM
 ```
 
-Exiba os tíquetes disponíveis usando o kinit. Se o kinit foi bem-sucedida, você deverá ver um tíquete. 
+Exiba os tíquetes disponíveis usando klist. Se o kinit foi bem-sucedida, você deverá ver um tíquete. 
 
 ```bash
 klist
