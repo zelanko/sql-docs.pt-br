@@ -1,7 +1,7 @@
 ---
 title: sys.index_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 07/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7ee4944511dca9167c787c529cdebcf33cdc92c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8707cb6cfb4f535a634f501e9113406c26b7e4a8
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004395"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564183"
 ---
 # <a name="sysindexcolumns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,15 +42,18 @@ ms.locfileid: "63004395"
 |**key_ordinal**|**tinyint**|Ordinal (com base em 1) dentro do conjunto de colunas chave.<br /><br /> 0 = Não é uma coluna de chave ou é um índice XML, índice columnstore ou índice espacial.<br /><br /> Observação: Um índice XML ou espacial não pode ser uma chave porque as colunas subjacentes não são comparáveis, que significa que seus valores não podem ser ordenados.|  
 |**partition_ordinal**|**tinyint**|Ordinal (com base em 1) dentro do conjunto de colunas de particionamento. Um índice columnstore clusterizado pode ter, no máximo, uma coluna de particionamento.<br /><br /> 0 = Não é uma coluna de particionamento.|  
 |**is_descending_key**|**bit**|1 = A coluna de chave do índice tem uma classificação decrescente.<br /><br /> 0 = A coluna de chave do índice tem uma classificação crescente, ou a coluna faz parte de um índice de hash.|  
-|**is_included_column**|**bit**|1 = A coluna é uma coluna não chave adicionada ao índice através da cláusula CREATE INDEX INCLUDE, ou a coluna faz parte de um índice columnstore.<br /><br /> 0 = A coluna não é uma coluna incluída.<br /><br /> Colunas adicionadas implicitamente porque fazem parte da chave de clustering não estão listadas na **index_columns**.<br /><br /> Colunas adicionadas implicitamente porque são uma coluna de particionamento são retornadas como 0.|  
+|**is_included_column**|**bit**|1 = A coluna é uma coluna não chave adicionada ao índice através da cláusula CREATE INDEX INCLUDE, ou a coluna faz parte de um índice columnstore.<br /><br /> 0 = A coluna não é uma coluna incluída.<br /><br /> Colunas adicionadas implicitamente porque fazem parte da chave de clustering não estão listadas na **index_columns**.<br /><br /> Colunas adicionadas implicitamente porque são uma coluna de particionamento são retornadas como 0.| 
+|**column_store_order_ordinal**</br> Aplica-se a: SQL Data Warehouse do Azure (visualização)|**tinyint**|Ordinal (base 1) dentro do conjunto de ordem de colunas em um índice columnstore clusterizado ordenada.|
   
-## <a name="permissions"></a>Permissões  
+## <a name="permissions"></a>Permissões
+
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="examples"></a>Exemplos  
+## <a name="examples"></a>Exemplos
+
  O exemplo a seguir retorna todos os índices e colunas de índice para a tabela `Production.BillOfMaterials`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT i.name AS index_name  
@@ -59,7 +62,7 @@ SELECT i.name AS index_name
     ,ic.key_ordinal  
 ,ic.is_included_column  
 FROM sys.indexes AS i  
-INNER JOIN sys.index_columns AS ic   
+INNER JOIN sys.index_columns AS ic
     ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
 WHERE i.object_id = OBJECT_ID('Production.BillOfMaterials');  
   
@@ -67,7 +70,7 @@ WHERE i.object_id = OBJECT_ID('Production.BillOfMaterials');
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
   
 index_name                                                 column_name        index_column_id key_ordinal is_included_column  
 ---------------------------------------------------------- -----------------  --------------- ----------- -------------  
