@@ -18,12 +18,12 @@ ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 136771c5bf691155b4547963fa2b6bd035f3f039
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5af98bd479738785c341b2618561eaab3f43b5d1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62994219"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586015"
 ---
 # <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,9 @@ sp_change_log_shipping_secondary_database
 1.  Altera as configurações na **log_shipping_secondary_database** registra conforme necessário.  
   
 2.  Altera o registro de monitor local na **log_shipping_monitor_secondary** no servidor secundário usando os argumentos fornecidos, se necessário.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="permissions"></a>Permissões  
  Somente os membros dos **sysadmin** função de servidor fixa pode executar esse procedimento.  
   

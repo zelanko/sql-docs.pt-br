@@ -21,12 +21,12 @@ ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5b2cb804718afc2eeed5aa174b2de51a33f5c3ea
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 40bf73a1cdca0bc582ac3e6ed6a977980d2aa24f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409063"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585106"
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 -   @closed_high_end_point = 1  
   
-     Apenas linhas da tabela de alteração cdc.<capture_instance>_CT que têm uma hora de confirmação associada menor ou igual a end_time são incluídas no conjunto de resultados.  
+     Somente as linhas na tabela de alteração de CT cdc. < capture_instance > que têm uma confirmação associada menos tempo do que ou igual a end_time são incluídas no conjunto de resultados...  
   
 -   @closed_high_end_point = 0  
   
@@ -71,7 +71,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  Se um valor NULL for fornecido para este argumento, o ponto de extremidade superior do intervalo da consulta corresponderá ao ponto de extremidade superior de um intervalo válido para a instância de captura.  
   
- <row_filter_option> ::= { all | all update old }  
+ < row_filter_option >:: = {todos | todos os atualização antigo}  
  Um opção que rege o conteúdo das colunas de metadados e as linhas retornadas no conjunto de resultados.  
   
  Pode ser uma das seguintes opções:  
@@ -89,18 +89,20 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |__CDC_STARTLSN|**binary(10)**|O LSN de confirmação da transação que é associado à alteração. Todas as alterações são confirmadas na mesma transação compartilham o mesmo LSN de confirmação.|  
 |__CDC_SEQVAL|**binary(10)**|Valor de sequência usado para organizar as alterações de linha em uma transação.|  
 |\<colunas de @column_list>|**varia de acordo**|As colunas que são identificadas na *column_list* argumento para a sp_cdc_generate_wrapper_function quando ela é chamada para gerar o script que cria a função de wrapper.|  
-|__CDC_OPERATION|**nvarchar(2)**|Um código de operação que indica qual operação é necessária para aplicar a linha ao ambiente de destino. Ele irá variar com base no valor do argumento *row_filter_option* fornecido na chamada:<br /><br /> *row_filter_option* = 'todos'<br /><br /> 'D' – exclui a operação<br /><br /> 'I' – insere a operação<br /><br /> 'UN' – atualiza os novos valores da operação<br /><br /> *row_filter_option* = 'all update old'<br /><br /> 'D' – exclui a operação<br /><br /> 'I' – insere a operação<br /><br /> 'UN' – atualiza os novos valores da operação<br /><br /> 'UO' – atualiza os valores antigos da operação|  
+|__CDC_OPERATION|**nvarchar(2)**|Um código de operação que indica qual operação é necessária para aplicar a linha ao ambiente de destino. Ele irá variar com base no valor do argumento *row_filter_option* fornecido na chamada:<br /><br /> *row_filter_option* = 'all'<br /><br /> 'D' – exclui a operação<br /><br /> 'I' – insere a operação<br /><br /> 'UN' – atualiza os novos valores da operação<br /><br /> *row_filter_option* = 'all update old'<br /><br /> 'D' – exclui a operação<br /><br /> 'I' – insere a operação<br /><br /> 'UN' – atualiza os novos valores da operação<br /><br /> 'UO' – atualiza os valores antigos da operação|  
 |\<colunas de @update_flag_list>|**bit**|Um sinalizador de bit é nomeado acrescentando uflag ao nome da coluna. O sinalizador é sempre definido como NULL quando \__CDC_OPERATION é tinha ', 'I', de 'UO'. Quando \__CDC_OPERATION é un' ', ele é definido como 1 se a atualização produziu uma alteração na coluna correspondente. Caso contrário, será 0.|  
   
 ## <a name="remarks"></a>Comentários  
- A função fn_all_changes_<capture_instance> serve como um wrapper para a função de consulta cdc.fn_cdc_get_all_changes_<capture_instance>. O procedimento armazenado sys.sp_cdc_generate_wrapper é usado para gerar o script para criar o wrapper.  
+ A função de fn_all_changes _ < capture_instance > serve como um wrapper para a função de consulta CDC. fn_cdc_get_all_changes < capture_instance >. O procedimento armazenado sys.sp_cdc_generate_wrapper é usado para gerar o script para criar o wrapper.  
   
  As funções de wrapper não são criadas automaticamente. Há duas coisas que você precisa fazer para criar funções de wrapper:  
   
 1.  Executar o procedimento armazenado para gerar o script para criar o wrapper.  
   
 2.  Executar o script para realmente criar a função de wrapper.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Funções de wrapper permitem que os usuários consultem sistematicamente as alterações que ocorreram dentro de um intervalo limitado por **datetime** valores em vez de por valores LSN. As funções de wrapper executam todas as conversões necessárias entre fornecido **datetime** valores e os valores LSN necessários internamente como argumentos para as funções de consulta. Quando as funções de wrapper são usadas em série para processar um fluxo de dados de alteração, elas garantem que nenhum dado seja perdido ou repetido desde que a seguinte convenção seja seguida: o @end_time valor do intervalo associado a uma chamada é fornecido como o @start_time valor para o intervalo associado à chamada subsequente.  
   
  Usando o parâmetro @closed_high_end_point ao criar o script, você pode gerar wrappers para oferecer suporte a um limite superior fechado ou a um limite superior em aberto na janela de consulta especificada. Ou seja, você pode decidir se as entradas que têm uma hora de confirmação igual ao limite superior do intervalo de extração devem ser incluídas no intervalo. Por padrão, o limite superior é incluído.  

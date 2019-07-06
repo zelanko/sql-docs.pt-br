@@ -1,6 +1,6 @@
 ---
 title: Fontes de dados com suporte em modelos do SQL Server Analysis Services tabulares 1200 | Microsoft Docs
-ms.date: 11/07/2018
+ms.date: 07/02/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 49c63d205d2ce1b900f3b8d4ad9a08e3bf83e2f6
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: a1ef7ae48e3d1500d08c9adba5e39db6214125c5
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269679"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597358"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>Fontes de dados com suporte no SQL Server Analysis Services, modelos de tabela 1200
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -30,7 +30,7 @@ Quando você instalar o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudi
   
 |||||  
 |-|-|-|-|  
-|Origem|Versões|Tipo de arquivo|Provedores|  
+|`Source`|Versões|Tipo de arquivo|Provedores|  
 |Bancos de dados do Access|Microsoft Access 2010 e posterior.|.accdb ou .mdb|Provedor OLE DB ACE 14 <sup> [1](#dnu)</sup>|  
 |Bancos de dados relacionais do SQL Server|SQL Server 2008 e posterior, o depósito de dados do SQL Server 2008 e posterior, o Azure banco de dados SQL do Azure SQL Data Warehouse, Analytics Platform System (APS)<br /><br /> <br /><br /> Analytics Platform System (APS) era anteriormente conhecido como SQL Server Parallel Data Warehouse (PDW). Originalmente, conectar o PDW a partir do Analysis Services exigia um provedor de dados especial. Esse provedor foi substituído no SQL Server 2012. A partir do SQL Server 2012, o cliente nativo do SQL Server é usado para as conexões com o PDW/APS. |(não se aplica)|Provedor OLE DB para SQL Server<br /><br /> Provedor OLE DB do SQL Server Native Client<br /><br /> Provedor OLE DB do SQL Server Native 10.0 Client<br /><br /> Provedor de dados .NET Framework para SQL Client|  
 |Bancos de dados relacionais da Oracle|Oracle 9i e posterior.|(não se aplica)|Provedor OLE DB Oracle<br /><br /> Provedor de Dados .NET Framework para Cliente Oracle<br /><br /> Provedor de dados do .NET Framework para SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
@@ -58,9 +58,20 @@ Microsoft SQL Server    |  2008 e posterior      |       Provedor OLE DB para SQ
 Banco de Dados SQL do Microsoft Azure    |   Todos      |  Provedor OLE DB para SQL Server, Provedor OLE DB para SQL Server Native Client, Provedor de Dados .NET Framework para SQL Client            
 SQL Data Warehouse do Microsoft Azure     |   Todos     |  Provedor OLE DB para SQL Server Native Client, Provedor de Dados .NET Framework para SQL Client       
 Microsoft SQL APS (Analytics Platform System)     |   Todos      |  Provedor OLE DB para SQL Server, Provedor OLE DB para SQL Server Native Client, Provedor de Dados .NET Framework para SQL Client       
+|Microsoft SQL Server Always Encrypted <sup> [2](#ae)</sup> | 2016 e posterior. 2014 e anterior apenas a Enterprise edition. | Provedor de dados .NET Framework para SQL Client
+|Banco de dados SQL do Azure Always Encrypted <sup> [2](#ae)</sup>| Todos | Provedor de dados .NET Framework para SQL Client
 Bancos de dados relacionais da Oracle     |  Oracle 9i e posterior       |  Provedor OLE DB Oracle       
 Bancos de dados relacionais do Teradata    |  Teradata V2R6 e posterior     | Provedor de .NET Data para Teradata    
 
+
+### <a name="using-sql-server-analysis-services-with-always-encrypted"></a>Usando o SQL Server Analysis Services com o Always Encrypted
+
+<a name="ae">[2] </a> SQL Server Analysis Services pode agir como um cliente para um banco de dados usando [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) no SQL Server ou banco de dados SQL Azure nas seguintes condições: 
+
+*  Chaves mestras de coluna protegendo as colunas criptografadas devem ser certificados, armazenados no repositório de certificados do Windows. Não há suporte para chaves mestras de coluna armazenadas no cofre de chaves do Azure.   
+*  O computador do Windows em que o Analysis Services está instalado tem os certificados de chave mestra de coluna necessários instalados. Para obter mais informações, consulte [Criando chaves mestras de coluna na Windows Store de certificado](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-windows-certificate-store).
+*  A fonte de dados do Analysis Services usa para se conectar ao SQL se baseia no .net Framework provider e a configuração de criptografia de coluna de propriedade na fonte de dados deve ser habilitada. .NET framework 4.6.1 ou posterior deve estar presente no servidor do Analysis Services.
+*  A fonte de dados do SQL Server ou banco de dados SQL deve ser um *provedor* tipo de fonte de dados com suporte de nível de compatibilidade 1200. Ele não funcionará com o Power Query *estruturados* fontes de dados, introduzidos no nível de compatibilidade 1400.
   
 ##  <a name="bkmk_tips"></a> Dicas para escolher fontes de dados  
   

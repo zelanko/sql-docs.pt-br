@@ -15,12 +15,12 @@ ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3b32590b47a5fd686b02dfc0a1cd1cd323fc9a70
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3a7446027be3ec8df4d3ff35a2b806ffdda6f8f8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663045"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585692"
 ---
 # <a name="deploying-clr-database-objects"></a>Implantando objetos de banco de dados CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "51663045"
 2.  Resolva todos os erros de compilação e avisos antes de implantar o assembly no servidor de teste.  
   
 3.  Selecione **Deploy** da **Build** menu. O assembly será registrado na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no banco de dados especificado quando o projeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi criado inicialmente no Visual Studio.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-deploy-the-assembly-using-transact-sql"></a>Para implantar o assembly que usa Transact-SQL  
   
 1.  Compile o assembly no arquivo de origem que usa os compiladores de linha de comando incluídos no .NET Framework.  

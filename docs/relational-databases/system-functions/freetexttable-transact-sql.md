@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f61daaedb3aa0157c872e6b1e9441d6523b8601
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42372b9ed94ad941c4a2436a28d0b9eaeb9f3b67
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65097281"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597484"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ GO
 ```  
   
 > [!NOTE]
->  A LINGUAGEM *language_term* parâmet*r* não é necessária para usar o *top_n_by_rank* parâmetro *.*  
+>  A LINGUAGEM *language_term* parâmetro não é necessário usar o *top_n_by_rank* parâmetro.  
   
 ## <a name="see-also"></a>Consulte também  
  [Iniciar a pesquisa de texto completo](../../relational-databases/search/get-started-with-full-text-search.md)   

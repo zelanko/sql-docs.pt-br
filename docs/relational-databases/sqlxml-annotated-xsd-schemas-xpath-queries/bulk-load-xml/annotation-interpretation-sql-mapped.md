@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b33bdeff7f34993681fbdede0200e9bcab8ab96e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aa5370e91aa5a8f5012a9c8f35f3fb98b3b3e726
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040067"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581923"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>Interpretação de anotação – sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML Bulk Load processa as **sql: mapeado** anotação no esquema XSD como esperado que é, se o esquema de mapeamento especifica **sql: mapeado = "false"** para qualquer elemento ou atributo, o XML Bulk Load não faz tentativa de armazenar os dados associados na coluna correspondente.  
   
- O XML Bulk Load ignora elementos e atributos que não estão mapeados (porque eles não são descritos no esquema ou porque eles são anotados no esquema XSD com **sql: mapeado = "false"**). Todos os dados não mapeados entra em coluna de estouro, se uma coluna desse tipo é especificada usando **SQL: overflow-campo**.  
+ O XML Bulk Load ignora elementos e atributos que não estão mapeados (porque eles não são descritos no esquema ou porque eles são anotados no esquema XSD com **sql: mapeado = "false"** ). Todos os dados não mapeados entra em coluna de estouro, se uma coluna desse tipo é especificada usando **SQL: overflow-campo**.  
   
  Por exemplo, considere este esquema XSD:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "56040067"
 </xsd:schema>  
 ```  
   
- Porque o **HomePhone** atributo especifica **sql: mapeado = "false"**, o XML Bulk Load não mapeia esse atributo para a coluna correspondente. O esquema XSD identifica uma coluna de estouro (**OverflowColumn**) no qual o XML Bulk Load armazena estes dados não consumidos.  
+ Porque o **HomePhone** atributo especifica **sql: mapeado = "false"** , o XML Bulk Load não mapeia esse atributo para a coluna correspondente. O esquema XSD identifica uma coluna de estouro (**OverflowColumn**) no qual o XML Bulk Load armazena estes dados não consumidos.  
   
 ### <a name="to-test-a-working-sample"></a>Para testar um exemplo de funcionamento  
   
@@ -86,7 +86,9 @@ ms.locfileid: "56040067"
     ```  
   
 4.  Para executar o XML Bulk Load, salve e execute este exemplo do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) como Sample.vbs:  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=localhost;database=tempdb;integrated security=SSPI"  

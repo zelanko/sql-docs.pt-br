@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3d6fe74ecf361392da9000286427679194e15de9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e73a5b2d7924d67f7c8bc2e41414e158aa0ff6b
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65404038"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597508"
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>Lição 2-5: Implantando um projeto do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ Na tarefa a seguir, você revisará as propriedades de implantação do projeto 
     Revise as propriedades de implantação do projeto. Por padrão, o modelo Projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configura um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para implantar de forma incremental todos os projeto na instância padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em um computador local, criar um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] com o mesmo nome do projeto e processar os objetos depois da implantação usando a opção de processamento padrão. Para obter mais informações, consulte [Configurar propriedades do projeto do Analysis Services &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
     > [!NOTE]  
-    > Se você deseja implantar o projeto em uma instância nomeada do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no computador local, ou a uma instância em um servidor remoto, altere o **Server** nome de propriedade para a instância apropriada, como \<*ServerName **>\\<** InstanceName * * >* .  
+    > Se você deseja implantar o projeto em uma instância nomeada do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no computador local, ou a uma instância em um servidor remoto, altere o **Server** nome de propriedade para a instância apropriada, como \<  **ServerName**>\\\<**InstanceName**>.  
   
 3.  Clique em **OK**.  
   

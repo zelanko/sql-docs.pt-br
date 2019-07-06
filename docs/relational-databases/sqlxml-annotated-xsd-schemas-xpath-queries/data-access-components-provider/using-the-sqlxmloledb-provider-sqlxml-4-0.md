@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9801f34d1128595a2a23004327379cb213e1a0c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa47713fd51de86b2ed547f094ec407e1d7caae9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714108"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584872"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>Usando o provedor SQLXMLOLEDB (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,10 @@ ms.locfileid: "62714108"
     -   Biblioteca do Microsoft ActiveX Data Objects 2.8  
   
 2.  Implante e instale o SQLXML 4.0 e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
-  
-     Para obter mais informações, consulte sobre [conceitos de programação do SQLXML 4.0](../../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) e [instalar o SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information, see on [SQLXML 4.0 Programming Concepts](../../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) and [Installing SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Executando consultas SQL &#40;provedor SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)  

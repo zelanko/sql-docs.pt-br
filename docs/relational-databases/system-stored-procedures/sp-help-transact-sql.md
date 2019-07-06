@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39a1e699b52b29db74209aa5288bb5dc01896a3b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017760"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586247"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_help [ [ @objname = ] 'name' ]
   
     |Nome da coluna|Tipo de dados|Descrição|  
     |-----------------|---------------|-----------------|  
-    |**Nome**|**nvarchar(** 128 **)**|Nome do objeto|  
+    |**Name**|**nvarchar(** 128 **)**|Nome do objeto|  
     |**Proprietário**|**nvarchar(** 128 **)**|Proprietário do objeto (esta é a entidade de segurança do banco de dados que é a proprietária deste objeto. O padrão é o proprietário do esquema que contém o objeto.)|  
     |**Object_type**|**nvarchar(** 31 **)**|Tipo de objeto|  
   
@@ -74,17 +74,19 @@ sp_help [ [ @objname = ] 'name' ]
     |**Ordenação**|**sysname**|Ordenação do tipo de dados. NULL para tipos de dados de não caracteres.|  
   
 3.  Se *nome* é qualquer objeto de banco de dados que não seja um tipo de dados **sp_help** retorna esse resultado conjuntos de resultados de conjunto e também adicionais, com base no tipo de objeto especificado.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     |Nome da coluna|Tipo de dados|Descrição|  
     |-----------------|---------------|-----------------|  
-    |**Nome**|**nvarchar(** 128 **)**|Nome da tabela|  
+    |**Name**|**nvarchar(** 128 **)**|Nome da tabela|  
     |**Proprietário**|**nvarchar(** 128 **)**|Proprietário da tabela|  
     |**Tipo**|**nvarchar(** 31 **)**|Tipo de tabela|  
     |**Created_datetime**|**datetime**|Tabela de data criada|  
   
-     Dependendo do objeto de banco de dados especificado, **sp_help** retorna conjuntos de resultados adicionais.  
+     Depending on the database object specified, **sp_help** returns additional result sets.  
   
-     Se *nome* é uma tabela do sistema, a tabela de usuário ou a exibição, **sp_help** retorna os seguintes conjuntos de resultados. Entretanto, o conjunto de resultados que descreve onde o arquivo de dados está localizado em um grupo de arquivos não é retornado para uma exibição.  
+     If *name* is a system table, user table, or view, **sp_help** returns the following result sets. However, the result set that describes where the data file is located on a file group is not returned for a view.  
   
     -   Conjunto de resultados adicionais retornado em objetos de coluna:  
   

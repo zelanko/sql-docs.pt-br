@@ -14,12 +14,12 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 4001ac5b449609683293cd3174dc4410cabf4c4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c07c42a1f864c3dc6888003cd31b06fce9e6893c
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701867"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597464"
 ---
 # <a name="operation-of-parameterized-commands"></a>Operação de comandos parametrizados
 Se você estiver trabalhando com um grande filho **conjunto de registros**, especialmente se comparado ao tamanho do pai **conjunto de registros**, mas que precisam acessar apenas poucos capítulos de filho, você talvez ache mais eficiente usar um comando parametrizado.  
@@ -36,7 +36,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- As tabelas pai e filho têm um nome de coluna em comum, cust_id *.* O *comando filho* tem um "?" espaço reservado, ao qual se refere a cláusula RELATE (ou seja, "... PARÂMETRO 0").  
+ As tabelas pai e filho têm um nome de coluna em comum *cust_id*. O *comando filho* tem um "?" espaço reservado, ao qual se refere a cláusula RELATE (ou seja, "... PARÂMETRO 0").  
   
 > [!NOTE]
 >  A cláusula de parâmetro está relacionado exclusivamente a sintaxe do comando de forma. Ele não está associado com o ADO [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objeto ou o [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção.  

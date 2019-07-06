@@ -15,15 +15,15 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: c67a58b1299a002428c3a72b9df23892c76cd81c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 207ac319852435d3d0178e4a0dcc78a1cc1a0c8e
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702658"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597498"
 ---
 # <a name="absolute-and-relative-urls"></a>URLs absolutas e relativas
-Uma URL especifica o local de um destino armazenado em um computador local ou em rede. O destino pode ser um arquivo, diretório, página HTML, imagem, programa e assim por diante *.*  
+Uma URL especifica o local de um destino armazenado em um computador local ou em rede. O destino pode ser um arquivo, diretório, página HTML, imagem, programa e assim por diante.  
   
  Uma *URL absoluta* contém todas as informações necessárias para localizar um recurso.  
   
@@ -53,7 +53,7 @@ Uma URL especifica o local de um destino armazenado em um computador local ou em
   
  Com o ADO 2.7 ou posterior, uma URL absoluta também pode definir um contexto. Por exemplo, quando um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto é aberto com uma URL absoluta, um **Conexão** objeto é criado implicitamente para representar o recurso especificado pela URL.  
   
- Uma URL absoluta que define um contexto pode ser especificada na *ActiveConnection* parâmetro do **registro** objeto [abrir](../../../ado/reference/ado-api/open-method-ado-record.md) método. Uma URL absoluta também pode ser especificada como o valor da "URL **=** " palavra-chave no **Conexão** objeto [abertos](../../../ado/reference/ado-api/open-method-ado-connection.md) método  *ConnectionString* parâmetro e o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto [abra](../../../ado/reference/ado-api/open-method-ado-recordset.md) método *ActiveConnection* parâmetro.  
+ Uma URL absoluta que define um contexto pode ser especificada na *ActiveConnection* parâmetro do **registro** objeto [abrir](../../../ado/reference/ado-api/open-method-ado-record.md) método. Uma URL absoluta também pode ser especificada como o valor da "URL =" palavra-chave na **Conexão** objeto [abra](../../../ado/reference/ado-api/open-method-ado-connection.md) método *ConnectionString* parâmetro e o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto [aberto](../../../ado/reference/ado-api/open-method-ado-recordset.md) método *ActiveConnection* parâmetro.  
   
  Contexto também pode ser definido abrindo uma **registro** ou **conjunto de registros** objeto que representa um diretório, porque esses objetos já tem um implicitamente ou explicitamente declarado **Conexão**  objeto que especifica o contexto.  
   

@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e16bbc20d98a313be039f207556b963ac43fa541
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43f213ca1abcbb9b8fae1e20e338b773907a0b38
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035717"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581885"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>Interpretação de anotação – sql:relationship e Regra de ordenação de chave
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "56035717"
 </xsd:schema>  
 ```  
   
- Como o  **\<cliente >** nó de elemento entra no escopo, o XML Bulk Load gera um registro de cliente. Este registro permanece até que o XML Bulk Load lê  **\</Customer >**. No processamento de  **\<ordem >** nó de elemento, o XML Bulk Load usa  **\<SQL: Relationship >** para obter o valor da coluna de chave estrangeira CustomerID da tabela CustOrder dos  **\<cliente >** pai elemento, porque o  **\<ordem >** elemento não especifica o **CustomerID** atributo. Isso significa que em definir a  **\<cliente >** elemento, você deve especificar o **CustomerID** atributo no esquema antes de especificar  **\<sql: relação >**. Caso contrário, quando um  **\<ordem >** elemento entra no escopo, o XML Bulk Load gera um registro para a tabela CustOrder e quando o XML em massa a carga atinge o  **\</Order >** encerrar a marca, ele envia o registro de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sem o valor da coluna de chave estrangeira CustomerID.  
+ Como o  **\<cliente >** nó de elemento entra no escopo, o XML Bulk Load gera um registro de cliente. Este registro permanece até que o XML Bulk Load lê  **\</Customer >** . No processamento de  **\<ordem >** nó de elemento, o XML Bulk Load usa  **\<SQL: Relationship >** para obter o valor da coluna de chave estrangeira CustomerID da tabela CustOrder dos  **\<cliente >** pai elemento, porque o  **\<ordem >** elemento não especifica o **CustomerID** atributo. Isso significa que em definir a  **\<cliente >** elemento, você deve especificar o **CustomerID** atributo no esquema antes de especificar  **\<sql: relação >** . Caso contrário, quando um  **\<ordem >** elemento entra no escopo, o XML Bulk Load gera um registro para a tabela CustOrder e quando o XML em massa a carga atinge o  **\</Order >** encerrar a marca, ele envia o registro de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sem o valor da coluna de chave estrangeira CustomerID.  
   
  Salve o esquema fornecido neste exemplo como SampleSchema.xml.  
   
@@ -107,7 +107,9 @@ ms.locfileid: "56035717"
     ```  
   
 3.  Para executar o XML Bulk Load, salve e execute o seguinte exemplo do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) como MySample.vbs:  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=localhost;database=tempdb;integrated security=SSPI"  
@@ -118,7 +120,7 @@ ms.locfileid: "56035717"
     set objBL=Nothing  
     ```  
   
-     O resultado é que o XML Bulk Load insere um valor NULL na coluna de chave estrangeira CustomerID da tabela CustOrder. Se você revisar os dados de exemplo do XML para que o  **\<CustomerID >** elemento filho seja exibido antes do  **\<Order >** elemento filho, você obterá o resultado esperado: O XML Bulk Load insere o valor de chave estrangeiro especificado na coluna.  
+     The result is that XML Bulk Load inserts a NULL value in the CustomerID foreign key column of the CustOrder table. If you revise the XML sample data so that the **\<CustomerID>** child element appears before the **\<Order>** child element, you get the expected result: XML Bulk Load inserts the specified foreign key value into the column.  
   
  Este é o esquema XDR equivalente:  
   

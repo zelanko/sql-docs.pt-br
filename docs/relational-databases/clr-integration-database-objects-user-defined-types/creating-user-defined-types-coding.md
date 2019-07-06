@@ -31,12 +31,12 @@ ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b3e8921e230f581f60c96e6443d4fa5b71a417b3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dfb90f9e0d1e3910f45a5b283161e9c36da49a71
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661556"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579790"
 ---
 # <a name="creating-user-defined-types---coding"></a>Criar tipos definidos pelo usuário – Codificação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ public static Point Null
 }  
 ```  
   
-### <a name="is-null-vs-isnull"></a>IS NULL e IsNull  
+### <a name="is-null-vs-isnull"></a>IS NULL vs. IsNull  
  Considere uma tabela que contém o esquema Points (id int, location Point), onde **ponto** é um UDT CLR e as consultas a seguir:  
   
 ```  
@@ -494,7 +494,7 @@ public Int32 Y
  Durante a codificação dos métodos de UDT, considere se o algoritmo usado pode ser alterado com o passar do tempo. Em caso positivo, você talvez queira considerar a criação de uma classe separada para os métodos usados pela UDT. Caso o algoritmo seja alterado, é possível recompilar a classe com o novo código e carregar o assembly em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem afetar a UDT. Em muitos casos, as UDTs podem ser recarregadas usando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY, mas isso pode causar problemas nos dados existentes. Por exemplo, o **moeda** UDT incluído com o **AdventureWorks** usos do banco de dados de exemplo uma **ConvertCurrency** de função para converter valores de moeda, que é implementado em uma classe separada. É possível que algoritmos de conversão sejam alterados de maneiras imprevisíveis no futuro, ou que uma nova funcionalidade seja obrigatória. Separando o **ConvertCurrency** função da **moeda** implementação de UDT fornece maior flexibilidade ao planejar alterações futuras.  
   
 ### <a name="example"></a>Exemplo  
- O **ponto** classe contém três métodos simples para calcular a distância: **distância**, **DistanceFrom** e **DistanceFromXY**. Cada um retorna uma **duplas** calcula a distância entre **aponte** a zero, a distância de um ponto especificado para **aponte**, e a distância de especificadas as coordenadas X e Y para **ponto**. **Distância** e **DistanceFrom** cada chamada **DistanceFromXY**e demonstram como usar argumentos diferentes para cada método.  
+ O **ponto** classe contém três métodos simples para calcular a distância: **Distância**, **DistanceFrom** e **DistanceFromXY**. Cada um retorna uma **duplas** calcula a distância entre **aponte** a zero, a distância de um ponto especificado para **aponte**, e a distância de especificadas as coordenadas X e Y para **ponto**. **Distância** e **DistanceFrom** cada chamada **DistanceFromXY**e demonstram como usar argumentos diferentes para cada método.  
   
 ```vb  
 ' Distance from 0 to Point.  
@@ -544,7 +544,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  O **Microsoft.SqlServer.Server.SqlMethodAttribute** classe fornece atributos personalizados que podem ser usados para marcar definições de método, a fim de especificar determinismo, comportamento em chamada nula e para especificar se um método é um modificador. Os valores padrão dessas propriedades são pressupostos, e o atributo personalizado só é usado quando um valor não padrão é necessário.  
   
 > [!NOTE]  
->  O **SqlMethodAttribute** herda o **SqlFunctionAttribute** classe, isso **SqlMethodAttribute** herda o **FillRowMethodName** e **TableDefinition** campos da **SqlFunctionAttribute**. Isso indica que é possível escrever um método com valor de tabela, o que não é o caso. O método compila e o assembly implanta, mas um erro sobre o **IEnumerable** retornar o tipo é gerado em tempo de execução com a seguinte mensagem: "método, propriedade ou campo '\<nome >' em classe\<classe >' no assembly '\<assembly >' tem o tipo de retorno inválido. "  
+>  O **SqlMethodAttribute** herda o **SqlFunctionAttribute** classe, isso **SqlMethodAttribute** herda o **FillRowMethodName** e **TableDefinition** campos da **SqlFunctionAttribute**. Isso indica que é possível escrever um método com valor de tabela, o que não é o caso. O método compila e o assembly implanta, mas um erro sobre o **IEnumerable** retornar o tipo é gerado em tempo de execução com a seguinte mensagem: "Método, propriedade ou campo '\<nome >' em classe\<classe >' no assembly '\<assembly >' tem o tipo de retorno inválido."  
   
  A tabela a seguir descreve algumas das relevante **Microsoft.SqlServer.Server.SqlMethodAttribute** propriedades que podem ser usadas em métodos de UDT e lista seus valores padrão.  
   
@@ -614,7 +614,9 @@ public void Rotate(double anglex, double angley, double anglez)
 2.  Use o **escrever** método para o **moeda** UDT para determinar como a UDT é mantida em disco e, portanto, como os valores de UDT são comparados e ordenados para [!INCLUDE[tsql](../../includes/tsql-md.md)] operações.  
   
 3.  Salvar a **moeda** UDT usando o seguinte formato binário:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  Salve a cultura como uma cadeia de caracteres codificada UTF-16 para bytes de 0 a 19 com preenchimento à direita com caracteres nulos.  
   
     2.  Use bytes 20 e acima para conter o valor decimal da moeda.  

@@ -10,12 +10,12 @@ ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 456aec6c6b9d0d1a5d0ee1d9949507a37577130c
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63285685"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597524"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Criando previsões (Tutorial de mineração de dados básico)
   Depois de testar a precisão dos modelos de mineração e decidir que está satisfeito com os resultados, você pode, em seguida, gerar previsões usando o construtor de consultas de previsão sobre a **previsão do modelo de mineração** guia na mineração de dados Designer.  
@@ -96,7 +96,7 @@ ms.locfileid: "63285685"
   
      Isso especifica a coluna de destino da função `PredictProbability`. Para obter mais informações sobre funções, consulte [extensões de mineração de dados &#40;DMX&#41; referência de função](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
-5.  Clique na próxima linha vazia na **fonte** coluna e o modelo de mineração, em seguida, selecione TM_Decision_Tree **.**  
+5.  Clique na próxima linha vazia na **fonte** coluna e, em seguida, selecione **TM_Decision_Tree** modelo de mineração.  
   
 6.  No `TM_Decision_Tree` linha, o **campo** coluna, selecione `Bike Buyer`.  
   

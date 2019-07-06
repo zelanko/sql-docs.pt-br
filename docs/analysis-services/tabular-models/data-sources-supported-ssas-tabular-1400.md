@@ -1,6 +1,6 @@
 ---
 title: Fontes de dados com suporte em modelos de tabela 1400 do Analysis Services do SQL Server | Microsoft Docs
-ms.date: 02/12/2019
+ms.date: 07/02/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c900c6f1683b9f4c96355a759c604022515d2ce
-ms.sourcegitcommit: 89a7bd9ccbcb19bb92a1f4ba75576243a58584e8
+ms.openlocfilehash: 246375015786cf67685c89f368f83662539da36b
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56159751"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597347"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>Fontes de dados com suporte no SQL Server Analysis Services, modelos de tabela 1400
 
@@ -31,18 +31,20 @@ Para o Azure Analysis Services, consulte [fontes de dados com suporte no Azure A
 
 |Fonte de dados  |Na memória  |DirectQuery  |
 |---------|---------|---------|
-|Banco de dados SQL do Azure     |   Sim      |    Sim      |
+|Banco de dados SQL do Azure <sup> [1](#ae)</sup>    |   Sim      |    Sim      |
 |Azure SQL Data Warehouse     |   Sim      |   Sim       |
 |Armazenamento de blobs do Azure     |   Sim       |    Não      |
 |Armazenamento de tabelas do Azure    |   Sim       |    Não      |
 |Azure Cosmos DB     |  Sim        |  Não        |
-|Azure Data Lake Store (Gen1)<sup>[1](#gen2)</sup>      |   Sim       |    Não      |
+|Azure Data Lake Store (Gen1)<sup>[2](#gen2)</sup>      |   Sim       |    Não      |
 |HDFS do HDInsight do Azure    |     Sim     |   Não       |
-|Azure HDInsight Spark <sup> [2](#databricks)</sup>     |   Sim       |   Não       |
+|Azure HDInsight Spark <sup> [3](#databricks)</sup>     |   Sim       |   Não       |
 ||||
 
-<a name="gen2">1</a> -Gen2 do ADLS não é suportado atualmente.   
-<a name="databricks">2</a> – azure Databricks usando o Spark connector não é suportado atualmente.   
+<a name="ae">1</a> -não há suporte para o azure SQL banco de dados Always Encrypted.   
+<a name="gen2">2</a> -Gen2 do ADLS não é suportado atualmente.   
+<a name="databricks">3</a> – azure Databricks usando o Spark connector não é suportado atualmente.   
+
 
 
 
@@ -55,11 +57,13 @@ Na memória e os modelos DirectQuery se conectar a fontes de dados do Azure usam
 
 |Fonte de dados | Provedor na memória | Provedor do DirectQuery |
 |  --- | --- | --- |
-| SQL Server |SQL Server Native Client 11.0, provedor Microsoft OLE DB para SQL Server, o .NET Framework Data Provider para SQL Server | Provedor de dados do .NET Framework para SQL Server |
+| SQL Server <sup>[4](#aeop)</sup> |SQL Server Native Client 11.0, provedor Microsoft OLE DB para SQL Server, o .NET Framework Data Provider para SQL Server | Provedor de dados do .NET Framework para SQL Server |
 | SQL Server Data Warehouse |SQL Server Native Client 11.0, provedor Microsoft OLE DB para SQL Server, o .NET Framework Data Provider para SQL Server | Provedor de dados do .NET Framework para SQL Server |
 | Oracle |Provedor Microsoft OLE DB para Oracle, o provedor de dados Oracle para .NET |Provedor de dados Oracle para .NET | |
 | Teradata |Provedor OLE DB para Teradata, provedor de dados Teradata para .NET |Provedor de dados Teradata para .NET | |
 | | | |
+
+<a name="aeop">4</a> -banco de dados do banco de dados SQL e SQL Server Always Encrypted tem suporte como um DirectQuery [fonte de dados do cliente](data-sources-supported-ssas-tabular.md#bkmk_supported_ds_dq) em modelos de tabela do SQL Server Analysis Services no nível de compatibilidade 1200 apenas. Não há suporte para o banco de dados do banco de dados SQL do Azure e SQL Server Always Encrypted no Azure Analysis Services.       
 
 > [!NOTE]
 > Para modelos na memória, provedores OLE DB podem fornecer um melhor desempenho para dados em larga escala. Ao escolher entre diferentes provedores para a mesma fonte de dados, tente primeiro o provedor OLE DB.  

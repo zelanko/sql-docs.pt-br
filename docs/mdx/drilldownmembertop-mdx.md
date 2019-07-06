@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3dd1128bfafb052936e742f7ce56529b1222333a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2dde2a96b34485fd6d460699a20055e289f2f1ad
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690852"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597466"
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop (MDX)
 
@@ -55,7 +55,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
   
  Depois da classificação, o **DrilldownMemberTop** função retorna um conjunto que contém os membros pai e o número de membros filho, especificados na *contagem,* com o valor mais alto e que estão contidos nos dois conjuntos .  
   
- Se **RECURSIVA** for especificado, a função classificará o primeiro conjunto, conforme descrito anteriormente e, em seguida, compara recursivamente os membros do primeiro conjunto, conforme organizado em uma hierarquia, em relação ao segundo conjunto *.* A função recupera o número mais alto de filhos para cada membro no primeiro conjunto que também está presente no segundo conjunto.  
+ Se **RECURSIVA** for especificado, a função classificará o primeiro conjunto, conforme descrito anteriormente e, em seguida, compara recursivamente os membros do primeiro conjunto, conforme organizado em uma hierarquia, em relação ao segundo conjunto. A função recupera o número mais alto de filhos para cada membro no primeiro conjunto que também está presente no segundo conjunto.  
   
  O primeiro conjunto pode conter tuplas em vez de membros. Busca detalhada de tupla é uma extensão de OLE DB e retorna um conjunto de tuplas em vez de membros.  
   
