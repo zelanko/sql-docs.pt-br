@@ -15,12 +15,12 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78fc4eff34dd98552924435c3132c1fafb96c746
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668845"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585797"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurar IIS para sincronização da Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,9 @@ ms.locfileid: "62668845"
 4.  Defina as permissões apropriadas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener.  
   
 5.  Execute a sincronização da Web em modo de diagnóstico para testar a conexão com o computador que está executando o IIS e verificar se o certificado SSL está instalado adequadamente.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="configuring-secure-sockets-layer"></a>Configurando o protocolo SSL  
  Para configurar o protocolo SSL, especifique um certificado a ser usado pelo computador que está executando o IIS. A sincronização da Web para replicação de mesclagem oferece suporte ao uso de certificados de servidor, mas não de certificados de cliente. Para configurar o IIS para implantação, você deve obter primeiro um certificado de uma CA (autoridade de certificação). Uma autoridade de certificação é uma entidade responsável por estabelecer e atestar a autenticidade das chaves de criptografia públicas que pertencem a usuários, computadores ou outras autoridades de certificação. Para obter mais informações sobre certificados, consulte a documentação do IIS. Depois de instalar o certificado, você deve associar o certificado ao site da Web que é usado pela sincronização da Web.  
   

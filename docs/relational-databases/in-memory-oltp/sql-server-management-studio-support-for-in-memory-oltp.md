@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3053f1415332ee26017126322ab5cd029f668e32
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6e8472678a0d25c134f99317a2588e329c468e8d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665115"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579432"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Suporte ao SQL Server Management Studio para OLTP na memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,8 +36,10 @@ ms.locfileid: "51665115"
 3.  Para adicionar um novo grupo de arquivos de dados com otimização de memória, clique na página **Grupos de Arquivos** . Em **MEMORY OPTIMIZED DATA**, clique em **Adicionar grupo de arquivos** e insira o nome do grupo de arquivos de dados com otimização de memória.  A coluna rotulada **Arquivos FILESTREAM** representa o número de contêineres no grupo de arquivos. Os contêineres são adicionados na página **Geral** .  
   
 4.  Para adicionar um arquivo (contêiner) ao grupo de arquivos, clique na página **Geral** . Em **Arquivos de Banco de Dados**, clique em **Adicionar**. Selecione **Tipo de Arquivo** como **Dados de FILESTREAM**, especifique o nome lógico do contêiner, selecione o grupo de arquivos com otimização de memória e verifique se **Expansão Automática/Tamanho Máximo** está definido como **Ilimitado**.  
-  
-     Para obter mais informações sobre como criar um novo banco de dados usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], veja [Criar um banco de dados](../../relational-databases/databases/create-a-database.md).  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information on how to create a new database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Create a Database](../../relational-databases/databases/create-a-database.md).  
   
 ### <a name="to-create-a-memory-optimized-table"></a>Para criar uma tabela com otimização de memória  
   
@@ -139,9 +141,9 @@ ms.locfileid: "51665115"
   
         -   Copie bancos de dados. Para bancos de dados que têm objetos com otimização de memória, a criação do banco de dados no servidor de destino e a transferência de dados não serão executadas em uma transação.  
   
-        -   Importe e exporte dados. Use a opção **Copiar dados de uma ou mais tabelas ou exibições do Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Se a tabela de destino for uma tabela com otimização de memória que não existe no banco de dados de destino:  
+        -   Importe e exporte dados. Use a opção **Copiar dados de uma ou mais tabelas ou exibições do Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Se a tabela de destino for uma tabela com otimização de memória que não existe no banco de dados de destino:  
   
-            1.  No **Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, na tela **Especificar Cópia ou Consulta de Tabela**, selecione **Copiar dados de uma ou mais tabelas ou exibições**. Em seguida, clique em **Avançar**.  
+            1.  No **Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , na tela **Especificar Cópia ou Consulta de Tabela**, selecione **Copiar dados de uma ou mais tabelas ou exibições**. Em seguida, clique em **Avançar**.  
   
             2.  Clique em **Editar Mapeamentos**. Selecione **Criar tabela de destino** e clique **Editar SQL**. Digite a sintaxe CREATE TABLE para criar uma tabela com otimização de memória no banco de dados de destino. Clique em **OK** e conclua as etapas restantes no assistente.  
   

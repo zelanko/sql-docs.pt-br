@@ -14,12 +14,12 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b29e94e129cf674beee7d9ca2b784203c753c79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b08178a89f8678b8ad0ac9f9f2f848860bb786c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826394"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584195"
 ---
 # <a name="view-offline-log-files"></a>Exibir arquivos de log offline
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,9 @@ ms.locfileid: "47826394"
 6.  Clique em **Segurança**.  
   
 7.  Verifique se a conta que será usada tem a permissão para **Habilitar Conta** . Esta permissão permite acesso de leitura a objetos WMI.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="view-log-files"></a>Exibir Arquivos de Log  
  O procedimento a seguir mostra como exibir arquivos de log offline através de Servidores Registrados. O procedimento presume o seguinte:  
   

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a34c835fe87edb3acf8e6bb64f262a090cc92806
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 6d9a5221f3386bd96a728bab27db93eca9373054
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478131"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583384"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinos de eventos estendidos no SQL Server
 
@@ -147,7 +147,7 @@ O destino **event_file** grava a saída da sessão de evento do buffer em um arq
 
 
 - O parâmetro *filename=* é especificado na cláusula ADD TARGET.
-    - .**.xel** deve ser a extensão do arquivo.
+    - . **.xel** deve ser a extensão do arquivo.
 
 
 - O nome de arquivo escolhido é usado pelo sistema como um prefixo ao qual é acrescentado um inteiro longo baseado em data e hora, seguido da extensão .xel.
@@ -521,6 +521,7 @@ Para testar a sessão de evento, propositadamente impedimos a liberação dos bl
 3. Só emitimos uma instrução COMMIT TRANSACTION depois de examinarmos os destinos.
 4. Posteriormente, após os testes, emitimos uma instrução COMMIT TRANSACTION.
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 O destino simples **event_counter** forneceu as linhas de saída a seguir. Como 52-50=2, o resultado informa que deveremos ver dois eventos lock_acquired não emparelhados ao examinarmos a saída do destino correspondente ao par.
 

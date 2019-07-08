@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d1d5699a32b62de823846e64757a1842a9337ad
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 38d58dc9156488e9c80e199ba2074b96015df7f7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294444"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583164"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introdução ao Columnstore para análise operacional em tempo real
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,9 @@ ms.locfileid: "56294444"
     ```  
   
 3.  Isso é tudo o que você precisa fazer!  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Agora você está pronto para executar análise operacional em tempo real sem fazer alterações no seu aplicativo.  As consultas analíticas serão executadas no índice columnstore e as operações OLTP continuarão sendo executadas nos índices btree OLTP. As cargas de trabalho OLTP continuarão sendo executadas, mas incorrerão em alguma sobrecarga adicional para manter o índice columnstore. Veja as otimizações de desempenho na próxima seção.  
   
 ## <a name="blog-posts"></a>Postagens de blog  

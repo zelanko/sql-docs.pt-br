@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d27099c54497eadecf38af33f8f3b0c12f4ccc7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ffaaae5e6849db094c4c7ea176118b68a040ad7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67046696"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582758"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ Quando você faz backup no blob de blocos, o tamanho máximo de bloco que você 
 |RESTORE HEADERONLY|S||Exige a definição de uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exige a especificação do argumento WITH CREDENTIAL se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
 |RESTORE LABELONLY|S||Exige a definição de uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exige a especificação do argumento WITH CREDENTIAL se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
 |RESTORE VERIFYONLY|S||Exige a definição de uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exige a especificação do argumento WITH CREDENTIAL se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
-|RESTORE REWINDONLY|−|||  
+|RESTORE REWINDONLY|?|||  
   
  Para obter a sintaxe e informações gerais sobre as instruções de backup, consulte [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
@@ -151,9 +151,9 @@ Quando você faz backup no blob de blocos, o tamanho máximo de bloco que você 
 |COMPRESSION&#124;NO_COMPRESSION|S|Não há suporte para backup de instantâneo de arquivo||  
 |DESCRIPTION|S|||  
 |NAME|S|||  
-|EXPIREDATE &#124; RETAINDAYS|−|||  
-|NOINIT &#124; INIT|−||Não é possível anexar aos blobs. Para substituir um backup, use o argumento **WITH FORMAT** . No entanto, ao usar backups de instantâneo de arquivo (usando o argumento **WITH FILE_SNAPSHOT** ), o argumento **WITH FORMAT** não recebe permissão, a fim de evitar deixar órfãos os instantâneos de arquivos que foram criados com o backup original.|  
-|NOSKIP &#124; SKIP|−|||  
+|EXPIREDATE &#124; RETAINDAYS|?|||  
+|NOINIT &#124; INIT|?||Não é possível anexar aos blobs. Para substituir um backup, use o argumento **WITH FORMAT** . No entanto, ao usar backups de instantâneo de arquivo (usando o argumento **WITH FILE_SNAPSHOT** ), o argumento **WITH FORMAT** não recebe permissão, a fim de evitar deixar órfãos os instantâneos de arquivos que foram criados com o backup original.|  
+|NOSKIP &#124; SKIP|?|||  
 |NOFORMAT &#124; FORMAT|S||Um backup executado em um blob existente falhará, a menos que **WITH FORMAT** seja especificado. O blob existente será substituído quando **WITH FORMAT** for especificado. No entanto, ao usar backups de instantâneo de arquivo (usando o argumento **WITH FILE_SNAPSHOT** ), o argumento FORMAT não recebe permissão, a fim de evitar deixar órfãos os instantâneos de arquivos que foram criados com o backup de instantâneo de arquivo original. No entanto, ao usar backups de instantâneo de arquivo (usando o argumento **WITH FILE_SNAPSHOT** ), o argumento **WITH FORMAT** não recebe permissão, a fim de evitar deixar órfãos os instantâneos de arquivos que foram criados com o backup original.|  
 |MEDIADESCRIPTION|S|||  
 |MEDIANAME|S|||  
@@ -163,8 +163,8 @@ Quando você faz backup no blob de blocos, o tamanho máximo de bloco que você 
 |NO_CHECKSUM &#124; CHECKSUM|S|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|S|||  
 |STATS|S|||  
-|REWIND &#124; NOREWIND|−|||  
-|UNLOAD &#124; NOUNLOAD|−|||  
+|REWIND &#124; NOREWIND|?|||  
+|UNLOAD &#124; NOUNLOAD|?|||  
 |NORECOVERY &#124; STANDBY|S|||  
 |NO_TRUNCATE|S|||  
   
@@ -186,19 +186,19 @@ Quando você faz backup no blob de blocos, o tamanho máximo de bloco que você 
 |REPLACE|S|||  
 |RESTART|S|||  
 |RESTRICTED_USER|S|||  
-|FILE|−|||  
+|FILE|?|||  
 |PASSWORD|S|||  
 |MEDIANAME|S|||  
 |MEDIAPASSWORD|S|||  
 |BLOCKSIZE|S|||  
-|BUFFERCOUNT|−|||  
-|MAXTRANSFERSIZE|−|||  
+|BUFFERCOUNT|?|||  
+|MAXTRANSFERSIZE|?|||  
 |CHECKSUM &#124; NO_CHECKSUM|S|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|S|||  
 |FILESTREAM|S|Não há suporte para backup de instantâneos||  
 |STATS|S|||  
-|REWIND &#124; NOREWIND|−|||  
-|UNLOAD &#124; NOUNLOAD|−|||  
+|REWIND &#124; NOREWIND|?|||  
+|UNLOAD &#124; NOUNLOAD|?|||  
 |KEEP_REPLICATION|S|||  
 |KEEP_CDC|S|||  
 |ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|S|||  
@@ -219,7 +219,9 @@ Você pode fazer o backup de um banco de dados para a URL por meio da tarefa de 
 2.  Expanda **Bancos de Dados**, clique com o botão direito do mouse no banco de dados desejado, aponte para **Tarefas**e clique em **Fazer backup...** .
   
 3.  Na página **Geral** , na seção **Destino** , a opção **URL** está disponível na lista suspensa **Fazer backup em:** .  A opção **URL** é usada para criar um backup no armazenamento do Microsoft Azure. Clique em **Adicionar** e a caixa de diálogo **Selecionar Destino do Backup** será aberta:
-   
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  **Contêiner de armazenamento do Azure:** O nome do contêiner de armazenamento do Microsoft Azure no qual os arquivos de backup serão armazenados.  Selecione um contêiner existente na lista suspensa ou digite manualmente o contêiner. 
   
     2.  **Política de Acesso Compartilhado:** Insira a assinatura de acesso compartilhado de um contêiner inserido manualmente.  Este campo não estará disponível se um contêiner existente tiver sido escolhido. 

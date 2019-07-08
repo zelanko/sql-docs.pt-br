@@ -16,12 +16,12 @@ ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 7f867024e3dbfa005fdf04e7052c4993fa9ce2c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3afa266112b29f75b7a26a0e5cb9093d2776276
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62693785"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583988"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Abrir o Monitor de Atividade (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,9 @@ Conclua a caixa de diálogo **Conectar ao Servidor** se você não ainda estiver
 3.  Na lista suspensa **Na inicialização** , selecione **Abrir Pesquisador de Objetos e Monitor de Atividade**.  
 
 4.  Clique em **OK**.
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ![open_object_explorer](../../relational-databases/performance-monitor/media/open-object-explorer.png)
   
   

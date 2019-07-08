@@ -16,12 +16,12 @@ ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dd24314a8948e5893e4e4625c695485c7611c5bb
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6f9168c32115d3d44c59f8b1292529ad2eb23bfa
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130276"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585282"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Criar um trabalho do SQL Server Agent para arquivar mensagens do Database Mail e logs de eventos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "54130276"
   
 -   O primeiro procedimento cria um trabalho denominado Archive Database Mail com as etapas a seguir.  
   
-    1.  Copie todas as mensagens das tabelas do Database Mail em uma nova tabela nomeada com o mês anterior, no formato **DBMailArchive_**_<year_month>_.  
+    1.  Copie todas as mensagens das tabelas do Database Mail em uma nova tabela nomeada com o mês anterior, no formato **DBMailArchive_** _<year_month>_ .  
   
-    2.  Copie os anexos das mensagens copiadas na primeira etapa, das tabelas do Database Mail em uma nova tabela nomeada com o mês anterior, no formato **DBMailArchive_Attachments_**_<year_month>_.  
+    2.  Copie os anexos das mensagens copiadas na primeira etapa, das tabelas do Database Mail em uma nova tabela nomeada com o mês anterior, no formato **DBMailArchive_Attachments_** _<year_month>_ .  
   
-    3.  Copie os eventos do log de eventos do Database Mail referentes às mensagens copiadas na primeira etapa, das tabelas do Database Mail em uma nova tabela nomeada com o mês anterior, no formato **DBMailArchive_Log_**_<year_month>_.  
+    3.  Copie os eventos do log de eventos do Database Mail referentes às mensagens copiadas na primeira etapa, das tabelas do Database Mail em uma nova tabela nomeada com o mês anterior, no formato **DBMailArchive_Log_** _<year_month>_ .  
   
     4.  Exclua os registros dos itens de correio transferidos das tabelas do Database Mail.  
   
@@ -72,7 +72,9 @@ ms.locfileid: "54130276"
 4.  Na caixa **Categoria** , clique em **Manutenção de Banco de Dados**.  
   
 5.  Na caixa **Descrição** , digite **Archive Database Mail messages**e clique em **Etapas**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  [Visão geral](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-archive-the-database-mail-messages"></a>Para criar uma etapa para arquivar as mensagens do Database Mail  
@@ -81,7 +83,7 @@ ms.locfileid: "54130276"
   
 2.  Na caixa **Nome da etapa** , digite **Copy Database Mail Items**.  
   
-3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)**.  
+3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)** .  
   
 4.  Na caixa **Banco de dados** , selecione **msdb**.  
   
@@ -107,7 +109,7 @@ ms.locfileid: "54130276"
   
 2.  Na caixa **Nome da etapa** , digite **Copy Database Mail Attachments**.  
   
-3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)**.  
+3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)** .  
   
 4.  Na caixa **Banco de dados** , selecione **msdb**.  
   
@@ -134,7 +136,7 @@ ms.locfileid: "54130276"
   
 2.  Na caixa **Nome da etapa** , digite **Copy Database Mail Log**.  
   
-3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)**.  
+3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)** .  
   
 4.  Na caixa **Banco de dados** , selecione **msdb**.  
   
@@ -161,7 +163,7 @@ ms.locfileid: "54130276"
   
 2.  Na caixa **Nome da etapa** , digite **Remove rows from Database Mail**.  
   
-3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)**.  
+3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)** .  
   
 4.  Na caixa **Banco de dados** , selecione **msdb**.  
   
@@ -183,7 +185,7 @@ ms.locfileid: "54130276"
   
 2.  Na caixa **Nome da etapa** , digite **Remove rows from Database Mail event log**.  
   
-3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)**.  
+3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)** .  
   
 4.  Na caixa **Comando** , digite a seguinte instrução para remover as linhas anteriores ao mês atual do log de eventos do Database Mail:  
   
@@ -209,7 +211,7 @@ ms.locfileid: "54130276"
   
 5.  Na área **Frequência** , selecione as opções para executar o trabalho periodicamente; por exemplo, uma vez por mês.  
   
-6.  Na área **Frequência diária**, selecione **Ocorre uma vez em \<hora>**.  
+6.  Na área **Frequência diária**, selecione **Ocorre uma vez em \<hora>** .  
   
 7.  Verifique se as outras opções estão configuradas a seu gosto e clique em **OK** para salvar a agenda.  
   

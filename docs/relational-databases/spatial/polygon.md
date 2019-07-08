@@ -14,12 +14,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bbed0ab919c2eb4258c22bee4545ec8d49a1462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 192b068c8ece6bcfda9aee2899793d7d901dd90a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761447"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581699"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -43,7 +43,9 @@ Conforme mostrado na ilustração:
 2.  A Figura 2 é uma instância **Polygon** cujo limite está definido por um anel exterior e dois anéis interiores. A área interna dos anéis interiores faz parte do exterior da instância **Polygon** .  
   
 3.  A Figura 3 é uma instância **Polygon** válida porque seus anéis interiores cruzam em um único ponto tangente.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="accepted-instances"></a>Instâncias aceitas  
  Instâncias **Polygon** aceitas são instâncias que podem ser armazenadas em uma variável **geometry** ou **geography** sem gerar uma exceção. As seguintes instâncias **Polygon** são aceitas:  
   

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ab8ab5fc572648840e2b4b5919ae0c3417a2a23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 486f361ab7915c0a7be0076a7f90b2359887cabc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047650"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581856"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>Solução de problemas dos índices de hash para tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -117,7 +117,9 @@ O seguinte bloco de código T-SQL fornece uma maneira fácil de testar um `SELEC
     A. Um operador de módulo é usado para configurar a taxa de valores duplicados na coluna StatusCode.  
     B. O loop insere 262.144 linhas em aproximadamente 1 minuto.  
 3. Imprime uma mensagem pedindo para executar o SELECT anterior de **sys.dm_db_xtp_hash_index_stats**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ```sql
 DROP TABLE IF EXISTS SalesOrder_Mem;  
 go  

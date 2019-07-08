@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: b3e6a0fc14137ca13e3539a7046edf576b4719ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb0f511f5b8a470e4f7784d6dff9ce4e46650543
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775047"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581236"
 ---
 # <a name="install-polybase-on-windows"></a>Instalar o PolyBase no Windows
 
@@ -91,6 +91,8 @@ Depois de instalar o PolyBase autônomo ou em um grupo de escala horizontal, voc
      Esta opção também habilita conexões de firewall do MSDTC (Coordenador de Transações Distribuídas da Microsoft) e modifica as configurações de Registro do MSDTC.  
    
 6. Na página de Configuração do PolyBase, especifique um intervalo de portas com pelo menos seis portas. A instalação do SQL Server aloca as primeiras seis portas disponíveis do intervalo.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    >[!IMPORTANT]
    > Após a instalação, é necessário [habilitar o recurso do PolyBase](#enable).

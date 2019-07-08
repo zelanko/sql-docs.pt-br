@@ -13,12 +13,12 @@ ms.assetid: e037bd27-cc87-4ee9-9e5f-83f6d717cfa4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 389df9d30f4a1d1cace4f3943ba6ea22bcc846c9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 444cbddc2129d16bf8486b5c4b76a7b338fde46d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124056"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583603"
 ---
 # <a name="start-the-replication-monitor"></a>Iniciar o Replication Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,9 @@ ms.locfileid: "54124056"
 1.  Conecte a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]e, então, expanda o nó do servidor.  
   
 2.  Clique com o botão direito em na pasta **Replicação** ou quaisquer de suas subpastas e então clique em **Iniciar o Replication Monitor**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-start-replication-monitor-from-the-command-prompt"></a>Para iniciar o Replication Monitor no prompt de comando  
   
 1.  No prompt de comando, navegue até o diretório de instalação de ferramentas. O caminho padrão é [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]Tools\Binn \.  

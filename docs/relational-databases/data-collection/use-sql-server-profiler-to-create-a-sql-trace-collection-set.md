@@ -12,12 +12,12 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37f635820ea402c28cf35338d4575a6e8a2e7376
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90c8629ce6e06b0d2b0c3e4be5f893038dd63a22
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63012977"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582237"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>Usar o SQL Server Profiler para criar um conjunto de coleta do Rastreamento do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,9 @@ ms.locfileid: "63012977"
 1.  Crie e exporte um rastreamento [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
   
 2.  Faça o script de um novo conjunto de coleta baseado em um rastreamento exportado.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  O cenário para os procedimentos a seguir envolve a coleta de dados sobre qualquer procedimento armazenado que exija 80 milissegundos ou mais para ser concluído. Para concluir esses procedimentos você deve ser capaz de:  
   
 -   Usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para criar e configurar um rastreamento.  

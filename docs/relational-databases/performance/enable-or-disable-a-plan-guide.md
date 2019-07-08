@@ -15,12 +15,12 @@ ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 3e102f509d289c4bc0e3a4a4100ec7c091636acd
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 0aef47aa00c52bd5adb0069baf0a1d06a6848d43
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143406"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580765"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>Habilitar ou desabilitar um guia de plano
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "54143406"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   A tentativa de cancelar ou modificar uma função, procedimento armazenado ou gatilho DML referenciado por um guia de plano, habilitado ou desabilitado, provoca um erro. Sempre verifique se há dependências antes de cancelar ou modificar qualquer um dos objetos listados acima.  
   
@@ -64,7 +64,9 @@ ms.locfileid: "54143406"
 3.  Clique com o botão direito do mouse no guia de plano que você deseja habilitar ou desabilitar e selecione **Habilitar** ou **Desabilitar**.  
   
 4.  Na caixa de diálogo **Desabilitar Guia de Plano** ou **Habilitar Guia de Plano** , verifique se a ação escolhida foi bem-sucedida e clique em **Fechar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>Para desabilitar ou habilitar todos os guias de plano de um banco de dados  
   
 1.  Clique no sinal de adição para expandir o banco de dados no qual você deseja desabilitar ou habilitar um guia de plano e clique no sinal de adição para expandir a pasta **Programação** .  
@@ -73,7 +75,7 @@ ms.locfileid: "54143406"
   
 3.  Na caixa de diálogo **Desabilitar Todos os Guias de Plano** ou **Habilitar Todos os Guias de Plano** , verifique se a ação escolhida foi bem-sucedida e clique em **Fechar**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-disable-or-enable-a-plan-guide"></a>Para habilitar ou desabilitar um guia de plano  
   

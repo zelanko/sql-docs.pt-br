@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f57b07be679195794df5f0f9fe2329417a0b30f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d65ccbf6784b7571684624423cc0f7d378c0f2c7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62860662"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585287"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimar o tamanho de um heap
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,8 +83,10 @@ ms.locfileid: "62860662"
      O número de páginas estimado deve ser arredondado para cima, até a página inteira mais próxima.  
   
 8.  Calcule a quantidade de espaço necessária para armazenar os dados no heap (total de 8.192 bytes por página):  
-  
-     Tamanho do heap (bytes) = 8192 x **_Num_Pages_**  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     Heap size (bytes) = 8192 x **_Num_Pages_**  
   
  Esse cálculo não considera o seguinte:  
   
