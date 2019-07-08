@@ -19,12 +19,12 @@ ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d1081ea3a972dea318e7ad7952f313a95f407223
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 053ea3fdc7ad56ef6b6c9c9992506cf07623cb5e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621544"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584015"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>Gerenciar a tabela suspect_pages (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47621544"
   
      A tabela **suspect_pages** contém uma linha por página que falhou com um erro 824 até o limite de 1.000 linhas. A tabela a seguir mostra erros registrados na coluna **event_type** da tabela **suspect_pages** .  
   
-    |Descrição do erro|Valor**event_type** |  
+    |Descrição do erro|Valor**event_type**|  
     |-----------------------|---------------------------|  
     |Erro 823 causado por um erro CRC de sistema operacional ou erro 824 diferente de uma soma de verificação inválida ou uma página danificada (por exemplo, uma ID de página inválida).|1|  
     |Soma de verificação inválida|2|  
@@ -133,7 +133,9 @@ ms.locfileid: "47621544"
 3.  Expanda **dbo.suspect_pages** e clique com o botão direito do mouse em **Editar 200 Primeiras Linhas**.  
   
 4.  Na janela de consulta, edite, atualize ou exclua as linhas desejadas.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-manage-the-suspectpages-table"></a>Para gerenciar a tabela suspect_pages  

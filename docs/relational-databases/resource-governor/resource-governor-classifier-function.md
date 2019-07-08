@@ -15,12 +15,12 @@ ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 0a17a0708621a01c101cb29786d61ceda192b5b8
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 2bbe90a155ee0bf995d0b5f7f21cf0c686275a9f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689789"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584747"
 ---
 # <a name="resource-governor-classifier-function"></a>Função de classificação do Administrador de Recursos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,7 +74,9 @@ ms.locfileid: "55689789"
 2.  Execução de gatilhos LOGON  
   
 3.  Classificação  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Quando a classificação é iniciada, o Administrador de Recursos executa a função de classificação e usa o valor retornado pela função para enviar solicitações ao grupo de cargas de trabalho apropriado.  
   
 > [!NOTE]  

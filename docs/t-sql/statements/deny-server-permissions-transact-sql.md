@@ -18,12 +18,12 @@ ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9f480a406983fa0e4bdce4c100b4ccb4d44c5c3a
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: df064e5ebe9a5a6fabbd1eda16cf29bfa3f58d0e
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361586"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556915"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>Permissões de servidor DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,13 +60,16 @@ DENY permission [ ,...n ]
  Especifica uma permissão que pode ser negada em um servidor. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
  CASCADE  
- Indica que a permissão que está sendo negada também é negada a outros principais aos quais ela foi concedida por esse principal.  
+ Indica que a permissão está sendo negada para o principal especificado e todos os outros principais aos quais o principal concedeu a permissão. Necessário quando o principal tem a permissão com GRANT OPTION. 
   
  TO \<server_principal>  
  Especifica o principal ao qual a permissão é negada.  
   
  AS \<grantor_principal>  
- Especifica o principal do qual o principal que executa esta consulta deriva seu direito de negar a permissão.  
+ Especifica o principal do qual o principal que executa esta consulta deriva seu direito de negar a permissão.
+Use a cláusula de entidade de segurança AS para indicar que a entidade de segurança registrada como o negador da permissão deve ser uma entidade de segurança diferente da pessoa que executa a instrução. Por exemplo, suponha que o usuário Maria seja a principal_id 12 e o usuário Ricardo seja a entidade de segurança 15. Melissa executa `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. Agora a tabela sys.database_permissions indicará que a grantor_principal_id da instrução de negação era 15 (Ricardo), embora na verdade, a instrução tenha sido executada pelo usuário 13 (Melissa).
+  
+O uso de AS nessa instrução não implica a capacidade de representar outro usuário.    
   
  *SQL_Server_login*  
  Especifica um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -156,7 +159,7 @@ DENY CONNECT SQL TO Annika CASCADE;
 GO  
 ```  
   
-### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>b. Negando a permissão CREATE ENDPOINT a um logon do SQL Server usando a opção AS  
+### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>B. Negando a permissão CREATE ENDPOINT a um logon do SQL Server usando a opção AS  
  O exemplo a seguir nega a permissão `CREATE ENDPOINT` ao usuário `ArifS`. O exemplo usa a opção `AS` para especificar `MandarP` como a entidade de segurança da qual a entidade de segurança em execução deriva a autoridade para tanto.  
   
 ```  

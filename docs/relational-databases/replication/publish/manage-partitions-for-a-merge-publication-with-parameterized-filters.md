@@ -15,12 +15,12 @@ ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ec0db9af18be44617103b15c8c66c40ef695f3d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be78157b91a1eebfc207be5f5ec5c28cb7346891
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124506"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585811"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Gerenciar partições para uma publicação de mesclagem com filtros com parâmetros
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ ms.locfileid: "54124506"
 -   Quando uma publicação tiver filtros com parâmetros que geram assinaturas com partições não sobrepostas ou se uma assinatura específica estiver perdida e necessitar de nova criação, faça o seguinte: remova a partição que estava com assinatura, recrie a assinatura e, em seguida, recrie a partição. Para obter mais informações, consulte [Filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md). A replicação gera scripts de criação para as partições de Assinante existentes quando um script de criação de publicação é gerado. Para obter mais informações, consulte [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Gerencie as partições na página **Partições de dados** da caixa de diálogo **Propriedades da Publicação – \<Publicação>**. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Nessa página você pode: criar e excluir partições, permitir que Assinantes iniciem a geração e entrega de instantâneo, gerar instantâneos para uma ou mais partições e limpar instantâneos.  
+ Gerencie as partições na página **Partições de dados** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Nessa página você pode: criar e excluir partições, permitir que Assinantes iniciem a geração e entrega de instantâneo, gerar instantâneos para uma ou mais partições e limpar instantâneos.  
   
 #### <a name="to-create-a-partition"></a>Para criar uma partição  
   
-1.  Na página **Partições de Dados** da caixa de diálogo **Propriedades da Publicação – \<Publication>**, clique em **Adicionar**.  
+1.  Na página **Partições de Dados** da caixa de diálogo **Propriedades da Publicação – \<Publication>** , clique em **Adicionar**.  
   
 2.  Na caixa de diálogo **Adicionar Partição de Dados** coloque o valor para **HOST_NAME()** e/ou o valor **SUSER_SNAME()** associado com a partição que você quer criar.  
   
@@ -64,7 +64,9 @@ ms.locfileid: "54124506"
     2.  Aceite o cronograma padrão para atualizar instantâneos ou clique em **Alterar** para especificar um cronograma diferente.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-delete-a-partition"></a>Para excluir uma partição  
   
 1.  Na página **Partições de Dados** , selecione uma partição na grade.  
@@ -89,7 +91,7 @@ ms.locfileid: "54124506"
   
 2.  Clique em **Limpar os instantâneos existentes**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Para administrar melhor uma publicação com filtros com parâmetros, você pode enumerar programaticamente as partições existentes que usam procedimentos armazenados de replicação. Você também pode criar e excluir partições existentes. Podem ser obtidas as seguintes informações a respeito das partições existentes:  
   
 -   Como uma partição é filtrada (usando [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) ou [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md)).  
@@ -102,11 +104,11 @@ ms.locfileid: "54124506"
   
 #### <a name="to-view-information-on-existing-partitions"></a>Para exibir informações sobre partições existentes  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_helpmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md). Especifique o nome da publicação para **@publication**. (Opcional) Especifique **@suser_sname** ou **@host_name** para retornar somente informações baseadas em um único critério de filtragem.  
+1.  No Publicador do banco de dados de publicação, execute [sp_helpmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md). Especifique o nome da publicação para **@publication** . (Opcional) Especifique **@suser_sname** ou **@host_name** para retornar somente informações baseadas em um único critério de filtragem.  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>Para definir uma partição nova e gerar um instantâneo particionado novo  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_addmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md). Especifique o nome da publicação para **@publication**e o valor com parâmetros que define a partição para um dos seguintes:  
+1.  No Publicador do banco de dados de publicação, execute [sp_addmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md). Especifique o nome da publicação para **@publication** e o valor com parâmetros que define a partição para um dos seguintes:  
   
     -   **@suser_sname** – quando o filtro com parâmetros estiver definido pelo valor retornado por [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md).  
   

@@ -11,14 +11,14 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9414215e82a6828152e1ab84265a5b70b6a2171
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a7f95a4ebc0227a4bb16f256073a3408ae15a1c2
+ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801680"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67517766"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conectando-se ao mecanismo de banco de dados
+# <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conexão ao mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Quando você instala o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], as ferramentas instaladas dependem da edição e de suas opções de instalação. Esta lição analisa as principais ferramentas e mostra como conectar e executar uma função básica (autorizar mais usuários).  
@@ -60,6 +60,8 @@ Os bancos de dados de exemplo e os exemplos não estão incluídos no [!INCLUDE[
 3.  Se Servidores Registrados não aparecer, no menu **Exibir** , clique em **Servidores Registrados**.
 4.  Com **Mecanismo de Banco de Dados** selecionado na barra de ferramentas Servidores Registrados, expanda **Mecanismo do Banco de Dados**, clique com o botão direito do mouse em **Grupos do Servidor Local**, aponte para **Tarefas**e clique em **Registrar Servidores Locais**. São exibidas todas as instâncias do [!INCLUDE[ssDE](../includes/ssde-md.md)] instaladas no computador. A instância padrão é sem-nome e é mostrada como o nome do computador. Uma instância nomeada é exibida como o nome do computador seguido de uma barra invertida (\\) e do nome da instância. Para o [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], a instância é chamada *<computer_name>* \sqlexpress, exceto se o nome for alterado durante a instalação.  
 
+[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>Para verificar se o Mecanismo de Banco de Dados está sendo executado
 
 1.  Em Servidores Registrados, se o nome de sua instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiver um ponto verde, com uma seta branca próximo ao nome, o [!INCLUDE[ssDE](../includes/ssde-md.md)] está sendo executado e nenhuma ação adicional é necessária.  
@@ -77,7 +79,7 @@ Pelo menos uma conta de administrador foi selecionada quando o [!INCLUDE[ssNoVer
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  Na caixa **Nome do servidor** , digite o nome da instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para a instância padrão do SQL Server, o nome do servidor é o nome do computador. Para uma instância nomeada do SQL Server, o nome do servidor é o _\<computer_name\>_**\\**_\<instance_name\>_, como **ACCTG_SRVR\SQLEXPRESS**. A captura de tela a seguir mostra a conexão à instância padrão (sem nome) do [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] em um computador chamado “PracticeComputer”. O usuário conectado no Windows é Marina do domínio Contoso. Ao usar a Autenticação do Windows, não é possível alterar o nome de usuário. 
+3.  Na caixa **Nome do servidor** , digite o nome da instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para a instância padrão do SQL Server, o nome do servidor é o nome do computador. Para uma instância nomeada do SQL Server, o nome do servidor é o _\<computer_name\>_ **\\** _\<instance_name\>_ , como **ACCTG_SRVR\SQLEXPRESS**. A captura de tela a seguir mostra a conexão à instância padrão (sem nome) do [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] em um computador chamado “PracticeComputer”. O usuário conectado no Windows é Marina do domínio Contoso. Ao usar a Autenticação do Windows, não é possível alterar o nome de usuário. 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 

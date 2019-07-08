@@ -16,12 +16,12 @@ ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9237872d09667f0b67dc90b48cc813cb5b3197d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1582c10c8ae3aadf836fae2764988053f90e72b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025596"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580394"
 ---
 # <a name="restore-a-backup-from-a-device-sql-server"></a>Restaurar um backup de um dispositivo (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,9 @@ ms.locfileid: "63025596"
 7.  Na caixa de texto **Mídia de Backup** , selecione **Dispositivo de Backup**e clique no botão **Adicionar** para abrir a caixa de diálogo **Selecionar Dispositivo de Backup** .  
   
 8.  Na caixa de texto **Dispositivo de backup** , selecione o dispositivo a ser usado para restaurar a operação.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-restore-a-backup-from-a-device"></a>Para restaurar um backup de um dispositivo  

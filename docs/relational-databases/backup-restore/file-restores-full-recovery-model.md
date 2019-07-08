@@ -20,12 +20,12 @@ ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85cd45abfbc434ce02d5000d48ed5dacd48ad208
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 0d063f60a959c047385b50b150359c063bfa668c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242117"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579416"
 ---
 # <a name="file-restores-full-recovery-model"></a>Restaurações de arquivo (modelo de recuperação completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,9 @@ ms.locfileid: "54242117"
      Você deve restaurar os backups de log de transações que foram criados após os backups de arquivo para trazer o banco de dados a um estado consistente. Os backups de log de transações podem ser rolados para frente rapidamente, porque somente são aplicadas as mudanças que se aplicam aos arquivos restaurados. Restaurar arquivos individuais pode ser melhor que restaurar todo o banco de dados, porque não são copiados arquivos não danificados e rolados para frente. Porém, a cadeia inteira de backups de log ainda tem que ser lida.  
   
 5.  Recuperar o banco de dados.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
 >  Podem ser usados backups de arquivo para restaurar o banco de dados a um ponto anterior no tempo. Para fazê-lo, você deve restaurar um conjunto completo de backups de arquivo e então restaurar backups de log de transações em sequência para alcançar um ponto de destino que busca o término do backup de arquivo restaurado mais recente. Para obter mais informações sobre a recuperação pontual, veja [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   

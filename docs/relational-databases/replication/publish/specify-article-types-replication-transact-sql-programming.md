@@ -18,12 +18,12 @@ ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b72f1f7b6779819de87bc3aa37f8c9fc06e71fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a5a33cc382fabf5a77c97b0b4d68a34f83cb907
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807684"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582644"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Especificar tipos de artigo (Programação Transact-SQL de replicação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,18 +38,20 @@ ms.locfileid: "47807684"
   
     -   **logbased** - um artigo de tabela baseado em log que é o padrão para replicação transacional e de instantâneo. A replicação gera automaticamente o procedimento armazenado usado para filtragem horizontal e a exibição que define um artigo filtrado verticalmente.  
   
-    -   **logbased manualfilter** - um artigo filtrado horizontalmente, baseado em log, em que o procedimento armazenado usado para filtragem horizontal é criado manualmente, definido pelo usuário e especificado para **@filter**. Para obter mais informações, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
+    -   **logbased manualfilter** - um artigo filtrado horizontalmente, baseado em log, em que o procedimento armazenado usado para filtragem horizontal é criado manualmente, definido pelo usuário e especificado para **@filter** . Para obter mais informações, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
-    -   **logbased manualview** - um artigo filtrado verticalmente, baseado em log, em que a exibição que define o artigo filtrado verticalmente é criada e definida pelo usuário e especificada para **@sync_object**. Para obter mais informações, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+    -   **logbased manualview** - um artigo filtrado verticalmente, baseado em log, em que a exibição que define o artigo filtrado verticalmente é criada e definida pelo usuário e especificada para **@sync_object** . Para obter mais informações, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
-    -   **logbased manualboth** - um artigo filtrado horizontal e verticalmente, baseado em log, em que tanto o procedimento armazenado usado para filtragem horizontal quanto a exibição que define o artigo filtrado verticalmente são criados e definidos pelo usuário e especificados respectivamente para **@filter** e **@sync_object**. Para obter mais informações, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+    -   **logbased manualboth** - um artigo filtrado horizontal e verticalmente, baseado em log, em que tanto o procedimento armazenado usado para filtragem horizontal quanto a exibição que define o artigo filtrado verticalmente são criados e definidos pelo usuário e especificados respectivamente para **@filter** e **@sync_object** . Para obter mais informações, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
      Isso define um novo artigo para a publicação. Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-2.  Para artigos **logbased manualboth** e **logbased manualfilter** , execute [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) para gerar o procedimento armazenado de filtragem para um artigo filtrado horizontalmente. Para obter mais informações, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
+2.  Para artigos **logbased manualboth** e **logbased manualfilter** , execute [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) para gerar o procedimento armazenado de filtragem para um artigo filtrado horizontalmente. Para obter mais informações, consulte [Definir e modificar um filtro de linha estático](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
-3.  Para artigos **logbased manualboth**, **logbased manualview**e **logbased manualfilter** , execute [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) para gerar a exibição que define o artigo filtrado verticalmente. Para obter mais informações, consulte [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
-  
+3.  Para artigos **logbased manualboth**, **logbased manualview**e **logbased manualfilter** , execute [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) para gerar a exibição que define o artigo filtrado verticalmente. Para obter mais informações, consulte [Definir e modificar um filtro de colunas](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-publish-a-view-or-indexed-view-article-in-a-transactional-or-snapshot-publication"></a>Para publicar uma exibição ou artigo de exibição indexada em uma publicação transacional ou de instantâneo  
   
 1.  No Publicador do banco de dados de publicação, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Especifique um dos seguintes valores para **@type** para definir o tipo de artigo:  
@@ -60,15 +62,15 @@ ms.locfileid: "47807684"
   
     -   **indexed view schema only** - um artigo de exibição indexada somente de esquema. A tabela base também deve ser replicada.  
   
-    -   **indexed view logbased manualfilter** - um artigo de exibição indexada, filtrado horizontalmente, baseado em log, em que o procedimento armazenado usado para filtragem horizontal é criado manualmente, definido pelo usuário e especificado para **@filter**. Para obter mais informações, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
+    -   **indexed view logbased manualfilter** - um artigo de exibição indexada, filtrado horizontalmente, baseado em log, em que o procedimento armazenado usado para filtragem horizontal é criado manualmente, definido pelo usuário e especificado para **@filter** . Para obter mais informações, consulte [Definir e modificar um filtro de linha estático](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
-    -   **indexed view logbased manualview** - um artigo de exibição indexada, filtrado, baseado em log, em que a exibição que define um artigo filtrado verticalmente é criada e definida pelo usuário e especificada para **@sync_object**. Para obter mais informações, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+    -   **indexed view logbased manualview** - um artigo de exibição indexada, filtrado, baseado em log, em que a exibição que define um artigo filtrado verticalmente é criada e definida pelo usuário e especificada para **@sync_object** . Para obter mais informações, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
-    -   **indexed view logbased manualboth** - um artigo de exibição indexada, filtrado, baseado em log, em que tanto o procedimento armazenado usado para filtragem horizontal quanto a exibição que define um artigo filtrado verticalmente são criados e definidos pelo usuário e especificados respectivamente para **@filter** e **@sync_object**. Para obter mais informações, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+    -   **indexed view logbased manualboth** - um artigo de exibição indexada, filtrado, baseado em log, em que tanto o procedimento armazenado usado para filtragem horizontal quanto a exibição que define um artigo filtrado verticalmente são criados e definidos pelo usuário e especificados respectivamente para **@filter** e **@sync_object** . Para obter mais informações, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
      Isso define um novo artigo para a publicação. Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-2.  Para artigos **logbased manualboth** e **logbased manualfilter** , execute [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) para gerar o procedimento armazenado de filtragem para um artigo filtrado horizontalmente. Para obter mais informações, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
+2.  Para artigos **logbased manualboth** e **logbased manualfilter** , execute [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) para gerar o procedimento armazenado de filtragem para um artigo filtrado horizontalmente. Para obter mais informações, consulte [Definir e modificar um filtro de linha estático](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
 3.  Para artigos **logbased manualboth**, **logbased manualview**e **logbased manualfilter** , execute [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) para gerar a exibição que define o artigo filtrado verticalmente. Para obter mais informações, consulte [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
@@ -80,7 +82,7 @@ ms.locfileid: "47807684"
   
     -   **proc exec** - replica a execução do procedimento armazenado para todos os Assinantes do artigo. Para obter mais informações, consulte [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
-    -   **serializable proc exec** - replica a execução do procedimento armazenado apenas se for executado no contexto de uma transação serializável. Para saber mais, confira [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+    -   **serializable proc exec** - replica a execução do procedimento armazenado apenas se for executado no contexto de uma transação serializável. Para obter mais informações, consulte [Publicando execução de procedimento armazenado em replicação transacional](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
     -   **func schema only** - um artigo de função definida pelo usuário e somente de esquema.  
   

@@ -20,12 +20,12 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a97bee55c0f23a82470091c1c9ea7b44463221e0
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.openlocfilehash: 81ab0d79b985ee6814de82d1c9c18499ed99761c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317806"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580391"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +66,9 @@ Para obter informações sobre a restauração do serviço de armazenamento de B
     
     -   **Dispositivo**    
     
-         Clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecione dispositivos de backup** . 
+         Clique no botão Procurar ( **...** ) para abrir a caixa de diálogo **Selecione dispositivos de backup** . 
          
-        -   Caixa de diálogo**Selecionar dispositivos de backup**   
+        -   Caixa de diálogo**Selecionar dispositivos de backup**  
         
             **Tipo de mídia de backup**  
          Selecione um tipo de mídia na lista suspensa **Tipo de mídia de backup** .  Observação: A opção **Fita** só aparece se houver uma unidade de fita montada no computador, e a opção **Dispositivo de backup** só aparece se houver, no mínimo, um dispositivo de backup.
@@ -108,7 +108,9 @@ Para obter informações sobre a restauração do serviço de armazenamento de B
 7.  Opcionalmente, clique em **Arquivos** no painel **Selecionar uma página** para acessar a caixa de diálogo **Arquivos de Banco de Dados** . Daqui, você pode restaurar o banco de dados em um novo local, com a especificação de um novo destino de restauração para cada arquivo na grade **Restaurar os arquivos de banco de dados como** . Para obter mais informações sobre essa grade, veja [Restaurar banco de dados &#40;Página Arquivos&#41;](../../relational-databases/backup-restore/restore-database-files-page.md).    
     
 8. Para exibir ou selecionar as opções avançadas, na página **Opções** , no painel **Opções de restauração** , você pode selecionar qualquer uma das seguintes opções, de acordo com sua situação:    
-    
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  Opções**WITH** (não necessárias):    
     
         -   **Substituir o banco de dados existente (WITH REPLACE)**    
@@ -139,10 +141,10 @@ O exemplo a seguir restaura um backup anterior de disco do `Sales` e substitui o
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
 2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**  
 3.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
-4.  Clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Clique em **Adicionar** e navegue até o backup. Clique em **OK** depois de selecionar os arquivos de backup em disco.
+4.  Clique no botão Procurar ( **...** ) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Clique em **Adicionar** e navegue até o backup. Clique em **OK** depois de selecionar os arquivos de backup em disco.
 5.  Clique em **OK** para retornar à página **Geral** .
 6.  Clique em **Opções** no painel **Selecionar uma página** .
-7.  Na seção **Opções de restauração** , marque a opção **Substituir o banco de dados existente (WITH REPLACE)**.
+7.  Na seção **Opções de restauração** , marque a opção **Substituir o banco de dados existente (WITH REPLACE)** .
 
     > [!NOTE]
     > Não marcar essa opção poderá resultar na seguinte mensagem de erro: "System.Data.SqlClient.SqlError: O conjunto de backup contém um backup de um banco de dados diferente do banco de dados "`Sales`" existente. (Microsoft.SqlServer.SmoExtended)”
@@ -167,7 +169,7 @@ O exemplo a seguir restaura um backup anterior de disco do `Sales` e cria um nov
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
 2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**  
 3.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
-4.  Clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Clique em **Adicionar** e navegue até o backup. Clique em **OK** depois de selecionar os arquivos de backup em disco.
+4.  Clique no botão Procurar ( **...** ) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Clique em **Adicionar** e navegue até o backup. Clique em **OK** depois de selecionar os arquivos de backup em disco.
 5.  Clique em **OK** para retornar à página **Geral** .
 6.  Na seção **Destino** , a caixa **Banco de Dados** é preenchida automaticamente com o nome do banco de dados a ser restaurado. Para alterar o nome do banco de dados, digite o novo nome na caixa **Banco de Dados** .
 7.  Clique em **Opções** no painel **Selecionar uma página** .
@@ -189,7 +191,7 @@ O exemplo a seguir restaura um banco de dados para seu estado de `1:23:17 PM` em
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
 2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**  
 3.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
-4.  Clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Clique em **Adicionar** e navegue até o backup completo e todos os backups de log de transações relevantes.  Clique em **OK** depois de selecionar os arquivos de backup em disco.
+4.  Clique no botão Procurar ( **...** ) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Clique em **Adicionar** e navegue até o backup completo e todos os backups de log de transações relevantes.  Clique em **OK** depois de selecionar os arquivos de backup em disco.
 5.  Clique em **OK** para retornar à página **Geral** .
 6.  Na seção **Destino** , clique em **Linha do tempo** para acessar a caixa de diálogo **Linha do Tempo de Backup** para selecionar manualmente um ponto específico para interromper a ação de recuperação.
 7.  Selecione **Data e hora específicas**.  
@@ -203,7 +205,7 @@ O exemplo a seguir restaura um banco de dados para seu estado de `1:23:17 PM` em
 #### <a name="common-steps"></a>Etapas comuns
 Os dois exemplos a seguir executam uma restauração de `Sales` de um backup localizado no serviço de armazenamento do Microsoft Azure.  O nome da Conta de armazenamento é `mystorageaccount`.  O contêiner é chamado `myfirstcontainer`.  Para resumir, as seis primeiras etapas são listadas aqui uma vez e todos os exemplos serão iniciados na **Etapa 7**.
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
-2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**.
+2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...** .
 3.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
 4.  Clique no botão Procurar (...) para abrir a caixa de diálogo **Selecione dispositivos de backup** .    
 5.  Selecione **URL** na lista suspensa **Tipo de mídia de backup:** .
@@ -220,7 +222,7 @@ Uma política de acesso armazenado foi criada com direitos de leitura, gravaçã
 12. Clique em **OK**.
 13. Clique em **OK** para retornar à página **Geral** .
 14. Clique em **Opções** no painel **Selecionar uma página** .
-15. Na seção Opções de **restauração** , marque a opção **Substituir o banco de dados existente (WITH REPLACE)**.
+15. Na seção Opções de **restauração** , marque a opção **Substituir o banco de dados existente (WITH REPLACE)** .
 16. Na seção **Backup da parte final do log** , desmarque a opção **Fazer backup da parte final do log antes da restauração**.
 17. Na seção **Conexões de servidor** , marque a opção **Fechar conexões existentes com o banco de dados de destino**.
 18. Clique em **OK**.
@@ -238,7 +240,7 @@ Neste exemplo, atualmente, o banco de dados `Sales` não existe no servidor.
 #### <a name="f-restore-local-backup-to-microsoft-azure-storage-url"></a>F. Restaurar o backup local no armazenamento do Microsoft Azure (URL)
 O banco de dados `Sales` será restaurado para o contêiner de armazenamento do Microsoft Azure `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` de um backup localizado em `E:\MSSQL\BAK`.  A credencial do SQL Server para o contêiner do Azure já foi criada.  Uma credencial do SQL Server para o contêiner de destino já deve existir, pois não pode ser criada por meio da tarefa **Restaurar** .  Atualmente, o banco de dados `Sales` não existe no servidor.
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
-2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**.
+2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...** .
 3.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
 4.  Clique no botão Procurar (...) para abrir a caixa de diálogo **Selecione dispositivos de backup** .  
 5.  Selecione **Arquivo** na lista suspensa **Tipo de mídia de backup:** .
@@ -247,7 +249,7 @@ O banco de dados `Sales` será restaurado para o contêiner de armazenamento do 
 8.  Clique em **OK** para retornar à página **Geral** .
 9.  Clique em **Arquivos** no painel **Selecionar uma página** .
 10. Marque a caixa de seleção **Relocar todos os arquivos para a pasta**.
-11. Insira o contêiner, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, nas caixas de texto de **Pasta do arquivo de dados:** e **Pasta do arquivo de log:**.
+11. Insira o contêiner, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, nas caixas de texto de **Pasta do arquivo de dados:** e **Pasta do arquivo de log:** .
 12. Clique em **OK**.
 
 ## <a name="see-also"></a>Consulte Também    

@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2f41329c10544686194524327ddb7fd560cb57d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 333e4f7eb3177529f55a9be18aa1e042b10737c8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514151"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584682"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Trabalhar com o controle de alterações (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -207,7 +207,9 @@ ON
 3.  Obtenha as alterações da tabela Sales usando CHANGETABLE(CHANGES ...).  
   
 4.  Obtenha as alterações da tabela SalesOrders usando CHANGETABLE(CHANGES ...).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Dois processos estão ocorrendo no banco de dados que podem afetar os resultados retornados pelas etapas anteriores:  
   
 -   O processo de limpeza é executado em segundo plano e remove as informações de controle de alterações anteriores ao período de retenção especificado.  

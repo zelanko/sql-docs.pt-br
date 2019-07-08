@@ -14,12 +14,12 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ab88dfa27c63607c312b2a3c757b04cd076745a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adeefeec7db61824d05d3f7b3960b3f26984aa12
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65094153"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583241"
 ---
 # <a name="manage-filetables"></a>Gerenciar FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,9 @@ GO
 2.  O acesso não transacional está habilitado no nível de banco de dados.  
   
 3.  Um diretório válido foi especificado ao nível de banco de dados.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="BasicsEnabling"></a> Desabilitando e reabilitando o namespace FileTable no nível de tabela  
  Desabilitar o namespace FileTable desabilita todos os gatilhos e restrições definidos pelo sistema que foram criados com o FileTable. Isso é útil em casos em que um FileTable precisa ser reorganizado em grande escala usando operações [!INCLUDE[tsql](../../includes/tsql-md.md)] sem recorrer à imposição de semântica de FileTable. Entretanto, essas operações podem deixar FileTable em um estado inconsistente e podem impedir a reabilitação do namespace FileTable.  
   

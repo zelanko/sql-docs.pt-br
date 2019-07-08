@@ -22,12 +22,12 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 204aa0ea696e45fa756360df790cdf983066260f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f734365cbfd8ca0b2ac1114853b0b412cb0e6d7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62999650"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580981"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implantar um aplicativo da camada de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,6 +67,9 @@ A implantação de um DAC com logons no [!INCLUDE[ssSDS](../../includes/sssds-md
 2.  Clique com o botão direito do mouse no nó **Bancos de Dados** e selecione **Implantar Aplicativo da Camada de Dados...**  
   
 3.  Conclua as caixas de diálogo do assistente e clique em Concluir.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Mais informações sobre algumas das páginas de assistente abaixo: 
      
 ### <a name="select-dac-package-page"></a>Selecione a página Pacote de DAC  

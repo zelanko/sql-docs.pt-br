@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 597b0e7d39d178eb2ed6f8ede8db5a1852117dcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e299541e48de590474b9f1e13996ab921b9246d2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018651"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580501"
 ---
 # <a name="modify-a-stored-procedure"></a>Modificar um procedimento armazenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +66,9 @@ ms.locfileid: "63018651"
 6.  Para salvar as modificações na definição do procedimento, no menu **Consulta** , clique em **Executar**.  
   
 7.  Para salvar a definição do procedimento atualizada, como um script [!INCLUDE[tsql](../../includes/tsql-md.md)] , no menu **Arquivo** , clique em **Salvar como**. Aceite o nome de arquivo ou substitua-o por um nome novo e, então, clique em **Salvar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!IMPORTANT]  
 >  Valide todas as entradas de usuário. Não concatene a entrada de usuário antes de validá-la. Nunca execute um comando construído por uma entrada de usuário inválida.  
   

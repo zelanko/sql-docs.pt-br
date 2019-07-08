@@ -16,12 +16,12 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e7e22f164ba8da071a93dff1535b777993e76e2
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 40db1a19c2c32db5b75e5715e7a0a051eca53b96
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590467"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580094"
 ---
 # <a name="validate-a-dac-package"></a>Validar um pacote de DAC
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,9 @@ ms.locfileid: "53590467"
 1.  **Antes de começar:**  [Pré-requisitos](#Prerequisites)  
   
 2.  **Para atualizar um DAC, usando:**  [Exibir o Conteúdo de um DAC](#ViewDACContents), [Exibir Alterações no Banco de Dados](#ViewDBChanges), [Exibir Ações de Atualização](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="Prerequisites"></a> Pré-requisitos  
  Recomendamos não implantar um pacote de DAC de origens desconhecidas ou não confiáveis. Como os DACs podem conter código mal-intencionado que pode executar código [!INCLUDE[tsql](../../includes/tsql-md.md)] sem finalidade ou provocar erros modificando o esquema. Antes de usar um DAC de uma origem desconhecida ou não confiável, implante-o em uma instância de teste isolada do [!INCLUDE[ssDE](../../includes/ssde-md.md)], execute [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) no banco de dados. Além disso, examine o código, como procedimentos armazenados ou outro código definido pelo usuário, no banco de dados.  
   
@@ -39,15 +41,15 @@ ms.locfileid: "53590467"
   
  **Exiba um DAC no SQL Server Developer Tools**  
   
-1.  Abra o menu **Arquivo**, selecione **Novo** e, em seguida, selecione **Projeto...**.  
+1.  Abra o menu **Arquivo**, selecione **Novo** e, em seguida, selecione **Projeto...** .  
   
 2.  Selecione o modelo de projeto **SQL Server** e especifique um **Nome**, um **Local**e um **Nome de solução**.  
   
-3.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Propriedades...**.  
+3.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Propriedades...** .  
   
 4.  Na guia **Configurações de Projeto** , na seção **Tipos de Saída** , marque a caixa de seleção **Aplicativo da Camada de Dados (arquivo .dacpac)** e feche a caixa de diálogo de propriedades.  
   
-5.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Importar Aplicativo da Camada de Dados...**.  
+5.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Importar Aplicativo da Camada de Dados...** .  
   
 6.  Use o **Gerenciador de Soluções** para abrir todos os arquivos no DAC, como a política de seleção de servidor e os scripts de pré e pós-implantação.  
   

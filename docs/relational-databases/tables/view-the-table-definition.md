@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18e1db56b747f5932a5fd6ee727cd99864517682
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca55227cadb8516accf623bf18e7f40ebdf14e74
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762014"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584382"
 ---
 # <a name="view-the-table-definition"></a>Exibir a definição da tabela
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -55,7 +55,9 @@ ms.locfileid: "47762014"
 1.  No Pesquisador de Objetos, selecione a tabela da qual deseja exibir as propriedades.  
   
 2.  Clique com o botão direito do mouse na tabela e escolha **Propriedades** no menu de atalho. Para obter mais informações, consulte [Propriedades da tabela – SSMS](../../relational-databases/tables/table-properties-ssms.md).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-show-table-properties"></a>Para exibir as propriedades da tabela  

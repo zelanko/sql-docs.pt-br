@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 10/03/2018
-ms.openlocfilehash: a6c04be1bf56577d0a6d40ccba9f627d319535ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.date: 07/03/2019
+ms.openlocfilehash: cc9e35829be7ea287cebaa99d7f96d10bb0d92d1
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937240"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563989"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurar um servidor de relatório em um cluster com balanceamento de carga de rede
 
@@ -62,16 +62,16 @@ Para executar uma implantação em expansão em um cluster NLB, você deve confi
     O exemplo a seguir mostra uma ilustração do valor a ser obtido. Não copie o exemplo nos seus arquivos de configuração; os valores de chave não são válidos.  
   
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Abra o arquivo Web.config do servidor de relatório e, na seção <`system.web`>, cole o elemento <`machineKey`> gerado por você. Por padrão, o arquivo Web.config do Gerenciador de Relatórios está localizado em \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
+2. Abra o arquivo Web.config do servidor de relatório e, na seção <`system.web`>, cole o elemento <`MachineKey`> gerado por você. Por padrão, o arquivo Web.config do Gerenciador de Relatórios está localizado em \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
   
 3. Salve o arquivo.  
   
 4. Repita a etapa anterior para cada servidor de relatório na implantação em expansão.  
   
-5. Verifique se todos os arquivos Web.config das pastas \Reporting Services\Reportserver contêm elementos <`machineKey`> idênticos na seção <`system.web`>.  
+5. Verifique se todos os arquivos Web.config das pastas \Reporting Services\Reportserver contêm elementos <`MachineKey`> idênticos na seção <`system.web`>.  
 
 ::: moniker-end
 
@@ -82,7 +82,7 @@ Para executar uma implantação em expansão em um cluster NLB, você deve confi
     O exemplo a seguir mostra uma ilustração do valor a ser obtido. Não copie o exemplo nos seus arquivos de configuração; os valores de chave não são válidos. O servidor de relatório requer o uso de maiúsculas e minúsculas correto.
 
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>
     ```
 
 2. Salve o arquivo.

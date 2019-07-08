@@ -18,12 +18,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2aa0eb5794abca24ff3bea6c4242799bf9f8e802
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4e6d654dd50890ee00c19dbc7be57966ad11a0d5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349629"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586277"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Salvar um plano de execução em formato XML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,10 +69,12 @@ ms.locfileid: "53349629"
   
 4.  No painel **Resultados** , clique com o botão direito do mouse em **Plano de execução XML do Microsoft SQL Server** que contém o plano de consulta e clique em **Salvar Resultados Como**.  
   
-5.  Na caixa de diálogo **Salvar** \<Grade ou Texto> **Resultados**, na caixa **Salvar como tipo**, clique em **Todos os arquivos (\*.\*)**.  
+5.  Na caixa de diálogo **Salvar** \<Grade ou Texto> **Resultados**, na caixa **Salvar como tipo**, clique em **Todos os arquivos (\*.\*)** .  
   
 6.  Na caixa **Nome do arquivo**, forneça um nome no formato \<name **>.sqlplan** e clique em **Salvar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Para salvar um plano de execução usando opções do SQL Server Management Studio  
   
 1.  Gere um plano de execução estimado ou um plano de execução atual usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para obter mais informações, consulte [Exibir o plano de execução estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md) e [Exibir um plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md).  
@@ -81,7 +83,7 @@ ms.locfileid: "53349629"
   
      Como alternativa, você também pode escolher **Salvar Plano de Execução Como** no menu **Arquivo** .  
   
-3.  Na caixa de diálogo **Salvar Como**, verifique se a opção **Salvar como tipo** está definida como **Arquivos de Plano de Execução (\*.sqlplan)**.  
+3.  Na caixa de diálogo **Salvar Como**, verifique se a opção **Salvar como tipo** está definida como **Arquivos de Plano de Execução (\*.sqlplan)** .  
   
 4.  Na caixa **Nome do arquivo**, forneça um nome no formato \<name **>.sqlplan** e clique em **Salvar**.  
   

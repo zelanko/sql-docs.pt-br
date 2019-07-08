@@ -16,12 +16,12 @@ ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 292c180b70143826ebdb8ea75b015dcbe6a2011f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c7b7588801419f57d04996d6bd2cad335a9eede
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523921"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583225"
 ---
 # <a name="attach-a-database"></a>Anexar um banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,32 +58,34 @@ Requer permissão `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY DATABAS
 2.  Clique com o botão direito do mouse em **Bancos de dados** e clique em **Anexar**.  
   
 3.  Na caixa de diálogo **Anexar Banco de Dados** , para especificar o banco de dados a ser anexado, clique em **Adicionar**. Na caixa de diálogo **Localizar Arquivos de Banco de Dados** , selecione a unidade de disco onde o banco de dados reside e expanda a árvore de diretório para localizar e selecionar o arquivo .mdf do banco de dados, por exemplo:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\AdventureWorks2012_Data.mdf`  
   
     > [!IMPORTANT]  
-    > Tentar selecionar um banco de dados já anexado gera erro.  
+    > Trying to select a database that is already attached generates an error.  
   
-     **Bancos de dados a serem anexados**  
-     Exibe informações sobre os bancos de dados selecionados.  
+     **Databases to attach**  
+     Displays information about the selected databases.  
   
      \<no column header>  
-     Exibe um ícone que indica o status da operação de anexação. Os possíveis ícones são descritos em **Status** , abaixo).  
+     Displays an icon indicating the status of the attach operation. The possible icons are described in the **Status** description, below).  
   
-     **Local do Arquivo MDF**  
-     Exibe o caminho e o nome de arquivo do arquivo MDF selecionado.  
+     **MDF File Location**  
+     Displays the path and file name of the selected MDF file.  
   
      **Database Name**  
-     Exibe o nome do banco de dados.  
+     Displays the name of the database.  
   
-     **Anexar como**  
-     Opcionalmente, especifique um nome diferente para o banco de dados anexar como.  
+     **Attach As**  
+     Optionally, specifies a different name for the database to attach as.  
   
-     **Proprietário**  
-     Fornece uma lista suspensa de possíveis proprietários de banco de dados dos quais você pode selecionar um proprietário diferente opcionalmente.  
+     **Owner**  
+     Provides a drop-down list of possible database owners from which you can optionally select a different owner.  
   
      **Status**  
-     Exibe o status do banco de dados de acordo com a seguinte tabela.  
+     Displays the status of the database according to the following table.  
   
     |Ícone|Texto de status|Descrição|  
     |----------|-----------------|-----------------|  
@@ -94,32 +96,32 @@ Requer permissão `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY DATABAS
     |Círculo que contém dois quadrantes pretos (à esquerda e à direita) e dois quadrantes brancos (em cima e em baixo)|Stopped (parado)|A operação de anexação não foi completada com êxito porque o usuário interrompeu a operação.|  
     |Círculo que contém uma seta curvada que aponta para o sentido anti-horário|Revertida|A operação de anexação teve êxito, mas foi revertida devido a um erro ao se anexar outro objeto.|  
   
-     **Mensagem**  
-     Exibe uma mensagem em branco ou um hiperlink "Arquivo não encontrado"  
+     **Message**  
+     Displays either a blank message or a "File not found" hyperlink.  
   
-     **Adicionar**  
-     Encontrar os arquivos de banco de dados principais necessários. Quando o usuário selecionar um arquivo .mdf , os respectivos campos são automaticamente preenchidos com informações aplicáveis da grade **Bancos de dados a serem anexados** .  
+     **Add**  
+     Find the necessary main database files. When the user selects an .mdf file, applicable information is automatically filled in the respective fields of the **Databases to attach** grid.  
   
-     **Remover**  
-     Remove o arquivo selecionado da grade **Bancos de dados a serem anexados** .  
+     **Remove**  
+     Removes the selected file from the **Databases to attach** grid.  
   
-     **"** *<database_name>* **" detalhes do banco de dados**  
-     Exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **Procurar** (**...**).  
+     **"** *<database_name>* **" database details**  
+     Displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (**...**).  
   
     > [!NOTE]  
-    > Se um arquivo não existir, a coluna **Mensagem** exibe "Não encontrado." Se um arquivo de log não for encontrado, ele existe em outro diretório ou foi excluído. Você precisa atualizar o caminho do arquivo na grade **detalhes do banco de dados** para indicar o local correto ou remover o arquivo de log da grade. Se um arquivo de dados .ndf não for encontrado, você precisará atualizar seu caminho na grade a fim de indicar o local correto.  
+    > If a file does not exist, the **Message** column displays "Not found." If a log file is not found, it exists in another directory or has been deleted. You need to either update the file path in the **database details** grid to point to the correct location or remove the log file from the grid. If an .ndf data file is not found, you need to update its path in the grid to point to the correct location.  
   
-     **Nome do arquivo original**  
-     Exibe o nome do arquivo anexado que pertence ao banco de dados.  
+     **Original File Name**  
+     Displays the name of the attached file belonging to the database.  
   
-     **Tipo de arquivo**  
-     Indica o tipo de arquivo, **Dados** ou **Log**.  
+     **File Type**  
+     Indicates the type of file, **Data** or **Log**.  
   
-     **Caminho do arquivo atual**  
-     Exibe o caminho para o arquivo de banco de dados selecionado. O caminho pode ser editado manualmente.  
+     **Current File Path**  
+     Displays the path to the selected database file. The path can be edited manually.  
   
-     **Mensagem**  
-     Exibe uma mensagem em branco ou um hiperlink “**Arquivo não encontrado**”.  
+     **Message**  
+     Displays either a blank message or a "**File not found**" hyperlink.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
@@ -143,7 +145,7 @@ Requer permissão `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY DATABAS
     > [!NOTE]  
     > Se desejar, você poderá usar o procedimento armazenado [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) ou [sp_attach_single_file_db](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md) . No entanto, esses procedimentos armazenados estendidos são removidos de uma versão futura do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez dessa função, recomendamos usar `CREATE DATABASE ... FOR ATTACH` .  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de atualizar um banco de dados do SQL Server  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de atualizar um banco de dados do SQL Server  
 Após a atualização de um banco de dados usando o método anexar, o banco de dados se torna logo disponível e é atualizado automaticamente. Se o banco de dados tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices dependendo da configuração da propriedade de servidor **Opção de Atualização de Texto Completo** . Se a opção de atualização for definida como **Importar** ou **Recriar**, os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas, e a recriação pode ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida como **Importar**, se não houver um catálogo de texto completo disponível, os índices de texto completo associados serão recompilados.  
   
 Se o nível de compatibilidade de um banco de dados de usuário for 100 ou mais alto antes da atualização, ele permanecerá o mesmo depois da atualização. Se o nível de compatibilidade for 90 ou inferior antes da atualização, no banco de dados atualizado, o nível de compatibilidade será definido como 100, que é o nível de compatibilidade mais baixo com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  

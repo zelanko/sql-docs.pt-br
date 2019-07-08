@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0aa09ddef11c733abda1a5e706c1b788c3745c8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: be0398f868eaac63ca13aaf8989ad8316ae06476
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511881"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584292"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Criar um alias de tipo de dados definido pelo usuário
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "52511881"
      **Comprimento/Precisão**  
      Exibe o comprimento ou a precisão do tipo de dados, conforme aplicável. **Tamanho** se aplica a tipos de dados definidos pelo usuário com base em caracteres; **Precisão** se aplica apenas a tipos de dados definidos pelo usuário com base numérica. O rótulo se altera dependendo do tipo de dados selecionado anteriormente. Essa caixa não será editável se o comprimento ou a precisão do tipo de dados selecionado for fixo.  
   
-     O tamanho não é exibido para os tipos de dados **nvarchar(max)**, **varchar(max)** ou **varbinary(max)** .  
+     O tamanho não é exibido para os tipos de dados **nvarchar(max)** , **varchar(max)** ou **varbinary(max)** .  
   
      **Nome**  
      Se você estiver criando um novo alias de tipo de dados definido pelo usuário, digite um nome exclusivo a ser usado no banco de dados para representar o tipo de dados definido pelo usuário. O número máximo de caracteres deve corresponder ao tipo de dados **sysname** do sistema. O nome de um alias de tipo de dados definido pelo usuário existente não é editável.  
@@ -97,7 +97,7 @@ ms.locfileid: "52511881"
   
      Para tipos de dados **nchar** e **nvarchar** , o valor de armazenamento sempre é duas vezes o valor de **Comprimento**.  
   
-     O armazenamento não é exibido para os tipos de dados **nvarchar(max)**, **varchar(max)** ou **varbinary(max)** .  
+     O armazenamento não é exibido para os tipos de dados **nvarchar(max)** , **varchar(max)** ou **varbinary(max)** .  
   
 2.  Na caixa de diálogo **Tipo de Dados Definido pelo Usuário** , na caixa **Esquema** , digite o esquema próprio para esse alias de tipo de dados ou use o botão Procurar para selecionar o esquema.  
   
@@ -110,7 +110,9 @@ ms.locfileid: "52511881"
 6.  Marque **Permitir NULLs** , se o novo alias de tipo de dados puder permitir valores NULL.  
   
 7.  Na área **Associação** , preencha a caixa **Padrão** ou **Regra** caso queira associar um padrão ou uma regra ao novo alias de tipo de dados. Padrões e regras não podem ser criados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Use [!INCLUDE[tsql](../../includes/tsql-md.md)]. Código de exemplo para criação de padrões e regras disponíveis no Explorador de Modelos.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-user-defined-data-type-alias"></a>Para criar um alias de tipo de dados definido pelo usuário  

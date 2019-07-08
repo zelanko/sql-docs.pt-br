@@ -17,12 +17,12 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dae7b73c02ce1c9ced01104754dc881bf25893f
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 20cebbb314e2830272e677da2d26bf53668798ab
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571226"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579838"
 ---
 # <a name="filter-a-trace"></a>Filtrar um rastreamento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "51571226"
 2.  Identifique os dados e colunas de dados que contêm as informações de que necessita.  
   
 3.  Identifique o subconjunto dos dados de que necessita e defina filtros de acordo com ele.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Por exemplo, talvez lhe interesse apenas eventos que tenham certa duração ou mais. Você pode criar um rastreamento que inclua eventos em que a coluna de dados **Duration** é maior que 300 milissegundos. Seu rastreamento não incluirá eventos que terminem em menos de 300 milissegundos.  
   
  Você pode criar filtros por meio do SQL Server Profiler ou de procedimentos armazenados de Transact-SQL.  

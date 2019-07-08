@@ -13,12 +13,12 @@ ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 6d6f215127e584b73e28ee30339189ef49fa10d0
-ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
+ms.openlocfilehash: 1332575178ac4ac94802e948b1725164419fa6ad
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59367204"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580763"
 ---
 # <a name="activity-monitor"></a>Monitor de Atividade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,9 @@ Nas colunas incluídas nos painéis **Processos**, **Esperas Recentes**, **E/S d
 2.  Para classificar uma coluna, clique no nome da coluna.  
   
 3.  Para filtrar uma ou mais colunas, clique na seta suspensa no título da coluna e selecione um valor.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="more-information"></a>Mais informações  
    
 |||  

@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fb94ddf437439fe2dcb414fb69f3049d1a4dbd9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ebee4a462cd865ef606d38ecf205bf41065a0d2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513824"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580279"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar um aplicativo da camada de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "52513824"
 1.  A exportação compila uma definição de DAC no arquivo de exportação – BACPAC – do mesmo modo que uma extração de DAC compila uma definição de DAC em um arquivo de pacote de DAC. A definição do DAC exportada inclui todos os objetos no banco de dados atual. Se o processo de exportação for executado em um banco de dados que foi implantado originalmente de um DAC, e tiverem sido feitas alterações diretamente no banco de dados depois da implantação, a definição exportada corresponderá ao objeto definido no banco de dados, e não ao que foi definido no DAC original.  
   
 2.  A exportação em massa copia os dados de todas as tabelas no banco de dados e incorpora os dados no arquivo de exportação.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  O processo de exportação define a versão de DAC como 1.0.0.0 e a descrição de DAC no arquivo de exportação para uma cadeia de caracteres vazia. Se o banco de dados foi implantado de um DAC, a definição do DAC no arquivo de exportação conterá o nome atribuído ao DAC original; caso contrário, o nome do DAC será definido como o nome do banco de dados.  
   
 

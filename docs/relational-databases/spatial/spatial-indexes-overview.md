@@ -13,12 +13,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6cad42165bfb79e411a6e1fe6edef0c1b2ef9caa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 542fd8c891a0efcaf216d9a5d00de69921ae0dd7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939210"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585817"
 ---
 # <a name="spatial-indexes-overview"></a>Visão geral de índices espaciais
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -170,7 +170,9 @@ ms.locfileid: "65939210"
 2.  Achata as duas pirâmides.  
   
 3.  Une as pirâmides achatadas para formar um plano não euclidiano.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  A ilustração a seguir mostra uma exibição esquemática do processo de decomposição de três etapas. Nas pirâmides, as linhas pontilhadas representam os limites das quatro facetas de cada pirâmide. As etapas 1 e 2 ilustram o elipsoide geodésico usando uma linha horizontal verde para representar a longitude equatorial e uma série de linhas verticais verdes para representar várias linhas longitudinais. A etapa 1 mostra as pirâmides sendo projetadas sobre os dois hemisférios. A etapa 2 mostra as pirâmides sendo achatadas. A etapa 3 ilustra as pirâmides achatadas após terem sido combinadas para formar um plano mostrando várias linhas longitudinais projetadas. Observe que essas linhas projetadas se tornam retas e variam em comprimento, dependendo de sua localização nas pirâmides.  
   
  ![Projeção do elipsoide em um plano](../../relational-databases/spatial/media/spndx-geodetic-projection.gif "Projeção do elipsoide em um plano")  

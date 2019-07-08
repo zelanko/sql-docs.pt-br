@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14e32081c9cbe03d7336f4ee973b02737f1cda1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6239c7854a5a63165672dc3a66d5b6ce26dfb3ff
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454586"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579891"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Guia de Introdução às permissões do mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,29 +29,29 @@ ms.locfileid: "66454586"
 ## <a name="security-principals"></a>Entidades de segurança  
  Entidade de segurança é o nome oficial das identidades que usam o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e que podem receber uma permissão para executar ações. Geralmente são pessoas ou grupos de pessoas, mas podem ser outras entidades que fingem ser pessoas. As entidades de segurança podem ser criadas e gerenciadas usando os [!INCLUDE[tsql](../../../includes/tsql-md.md)] listados, ou usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
- Logons  
+##### <a name="logins"></a>Logons  
  Logons são contas de usuário individuais para entrada no [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] oferecem suporte a logons com base na autenticação do Windows e a logons com base na autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para saber mais sobre os dois tipos de logons, confira [Choose an Authentication Mode](../../../relational-databases/security/choose-an-authentication-mode.md).  
   
- Funções de servidor fixas  
+##### <a name="fixed-server-roles"></a>Funções de servidor fixas  
  No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], as funções de servidor fixas são um conjunto de funções pré-configuradas que fornecem um agrupamento conveniente de permissões no nível do servidor. Os logons podem ser adicionados às funções usando a instrução `ALTER SERVER ROLE ... ADD MEMBER` . Para mais informações, consulte [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] não dá suporte a funções de servidor fixas, mas tem duas funções no banco de dados mestre (`dbmanager` e `loginmanager`) que atuam como funções de servidor.  
   
- Funções de servidor definidas pelo usuário  
+##### <a name="user-defined-server-roles"></a>Funções de servidor definidas pelo usuário  
  No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você pode criar suas próprias funções de servidor e atribuir a elas permissões no nível do servidor. Os logons podem ser adicionados às funções de servidor usando a instrução `ALTER SERVER ROLE ... ADD MEMBER` . Para mais informações, consulte [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] não dá suporte às funções de servidor definidas pelo usuário.  
   
- Usuários de banco de dados  
+##### <a name="database-users"></a>Usuários de banco de dados  
  Os logons recebem acesso a um banco de dados por meio da criação de um usuário de banco de dados em um banco de dados, e por meio do mapeamento desse usuário de banco de dados para o logon. Normalmente, o nome de usuário do banco de dados é igual ao nome de logon, mas não precisa ser o mesmo. Cada usuário de banco de dados é mapeado para um logon único. Um logon pode ser mapeado para apenas um usuário em um banco de dados, mas pode ser mapeado como um usuário de banco de dados em vários bancos de dados diferentes.  
   
  Os usuários de banco de dados também podem ser criados em um logon correspondente. Eles são chamados de *usuários de banco de dados independente*. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] incentiva o uso de usuários de banco de dados independente, pois isso facilita a movimentação do banco de dados para um servidor diferente. Como um logon, um usuário de banco de dados independente pode usar a autenticação do Windows ou a autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
  Há 12 tipos de usuários com pequenas diferenças no modo como são autenticados e quem eles representam. Para ver uma lista de usuários, consulte [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md).  
   
- Funções de banco de dados fixas  
+##### <a name="fixed-database-roles"></a>Funções de banco de dados fixas  
  As funções de banco de dados fixas são um conjunto de funções pré-configuradas que fornecem um agrupamento conveniente de permissões no nível do banco de dados. Os usuários de banco de dados e funções de banco de dados definidas pelo usuário podem ser adicionadas às funções de banco de dados fixas usando a instrução `ALTER ROLE ... ADD MEMBER`. Para obter mais informações, veja [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md).  
   
- Funções de banco de dados definidas pelo usuário  
+##### <a name="user-defined-database-roles"></a>Funções de banco de dados definidas pelo usuário  
  Usuários com a permissão `CREATE ROLE` podem criar novas funções de banco de dados definidas pelo usuário para representar grupos de usuários com permissões comuns. Normalmente, as permissões são concedidas ou negadas para toda a função, simplificando o gerenciamento e o monitoramento de permissões. É possível adicionar usuários de banco de dados às funções de banco de dados usando a instrução `ALTER ROLE ... ADD MEMBER` . Para obter mais informações, veja [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md).  
   
- Outras entidades  
+##### <a name="other-principals"></a>Outras entidades  
  Entre as outras entidades de segurança que não são discutidas aqui estão as funções de aplicativo, logons e usuários baseados em certificados ou chaves assimétricas.  
   
  Para ver um gráfico mostrando as relações entre usuários do Windows, grupos do Windows, logons e usuários de banco de dados, confira [Create a Database User](../../../relational-databases/security/authentication-access/create-a-database-user.md).  
@@ -66,7 +66,9 @@ ms.locfileid: "66454586"
 2.  Crie grupos do Windows que representam as unidades de trabalho e as funções de trabalho.  
   
 3.  Adicione usuários do Windows aos grupos do Windows.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="if-the-person-connecting-will-be-connecting-to-many-databases"></a>Se a pessoa que está se conectando for se conectar a muitos bancos de dados  
   
 1.  Crie um logon para os grupos do Windows. (Se você estiver usando a autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ignore as etapas do Active Directory e crie os logons de autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aqui.)  

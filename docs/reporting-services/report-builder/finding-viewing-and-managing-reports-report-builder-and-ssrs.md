@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a93f71f886484d38996a867bebbc6ef32c33c86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2e379d463734b751770a8b9a844ea92b1f328b6
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175627"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492864"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Localizando, exibindo e gerenciando relatórios (Construtor de Relatórios e SSRS)
   No Construtor de Relatórios, você pode procurar pastas em um servidor de relatório ou site do SharePoint para encontrar relatórios, fontes de dados compartilhadas, modelos e outros itens de relatório relacionados e navegar no computador para localizar relatórios locais. Para facilitar a localização de relatórios, o Construtor de Relatórios mantém uma lista de servidores e sites usados recentemente e fornece acesso direto às pastas Área de Trabalho, Meus Documentos e Meu Computador no sistema de arquivos do computador.  
@@ -75,7 +75,7 @@ Em geral, o portal da Web contém pastas, relatórios e fontes de dados, bem com
   
 Após a execução de um relatório, você pode exportá-lo para outro formato, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ou PDF. Também é possível exportar o relatório usando uma extensão de renderização de dados, como CSV, e depois usar o arquivo de dados CSV como entrada para outro aplicativo. Para saber mais sobre os relatórios de exportação, confira [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).
   
- A maneira mais fácil de selecionar e executar um relatório é abrir o portal da Web e procurar ou navegar até o relatório a ser exibido. Para obter instruções passo a passo sobre como abrir relatórios, consulte [Abrir e fechar um relatório](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
+ A maneira mais fácil de selecionar e executar um relatório é abrir o portal da Web e procurar ou navegar até o relatório a ser exibido.  
   
  Depois que executar um relatório, você poderá atualizá-lo para visualizar novos dados.  
   

@@ -10,12 +10,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: e9d3cee432adea10c4a92198a7e8486d2e8ee27f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbd3690bf7ecdf8cb08a641d141825abbf2a01f9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65198058"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585529"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurar o PolyBase para acessar dados externos no Hadoop
 
@@ -61,6 +61,8 @@ Primeiro, configure o PolyBase do SQL Server para usar o provedor específico do
    ```  
 
 2. É necessário reiniciar o SQL Server usando **services.msc**. A reinicialização do o SQL Server reiniciará estes serviços:  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    - Serviço de movimentação de dados de PolyBase do SQL Server  
    - Mecanismo PolyBase do SQL Server  

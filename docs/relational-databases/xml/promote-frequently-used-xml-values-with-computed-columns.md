@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a92ea4fd7b16715cdea3994d8ab68fa0ef047c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 920fe0f3e450448a1d8c9a262d2ae0e372e6769f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62939040"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584442"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover valores XML frequentemente usados com colunas computadas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   Crie gatilhos na coluna XML para manter as tabelas de propriedades. Dentro dos gatilhos, proceda de uma das seguintes maneiras:  
   
-    -   Use métodos de tipo de dados **xml** , como **nodes()** e **value()**, para inserir e excluir linhas das tabelas de propriedades.  
+    -   Use métodos de tipo de dados **xml** , como **nodes()** e **value()** , para inserir e excluir linhas das tabelas de propriedades.  
   
     -   Crie funções com valor de tabela de streaming no CLR (Common Language Runtime) para inserir e excluir linhas das tabelas de propriedades.  
   
@@ -173,7 +173,9 @@ WHERE    tblPropAuthor.propAuthor = 'David'
 2.  Crie um assembly e uma função definida pelo usuário de Transact-SQL para iniciar a classe CLR.  
   
 3.  Defina os gatilhos de inserção, atualização e exclusão usando a função definida pelo usuário para manter uma tabela de propriedades.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Para fazer isso, primeiro crie a função CLR de streaming. O tipo de dados **xml** é exposto como um SqlXml de classe gerenciada no ADO.NET e dá suporte ao método **CreateReader()** que retorna um XmlReader.  
   
 > [!NOTE]  

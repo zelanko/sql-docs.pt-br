@@ -18,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86c030eabfe3b18f544ca43f3e493bcd90f5e5ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a12c6ae385b4fa527251da266f2d0711eb2b9e9c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994235"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583438"
 ---
 # <a name="tempdb-database"></a>Banco de dados tempdb
 
@@ -244,6 +244,8 @@ Existem algumas limitações nessa implementação que são importantes a serem 
     ```
 3. As consultas nas tabelas com otimização de memória não dão suporte a dicas de bloqueio e isolamento; portanto, as consultas nas exibições de catálogo do TempDB com otimização de memória não respeitarão as dicas de bloqueio e isolamento. Como ocorre com outras exibições de catálogo do sistema no SQL Server, todas as transações nas exibições do sistema serão feitas no isolamento READ COMMITTED (ou, neste caso, READ COMMITTED SNAPSHOT).
 4. Poderá haver alguns problemas com índices columnstore em tabelas temporárias quando os metadados do tempdb com otimização de memória forem habilitados. Para esta versão prévia, é melhor evitar índices columnstore em tabelas temporárias ao usar metadados do tempdb com otimização de memória.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE] 
 > Essas limitações se aplicam somente ao referenciar as exibições do sistema do TempDB; você poderá criar uma tabela temporária na mesma transação ao acessar uma tabela com otimização de memória em um banco de dados de usuário, se desejado.

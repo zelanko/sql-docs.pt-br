@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e92e16db5eb7ac6edf03a07c3091edac2c26d144
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f0dae8999d22773a1a76440c439d4682785f684
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581194"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492846"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Localizando e exibindo relatórios no Portal da Web (Construtor de Relatórios e SSRS)
   O Gerenciador de Relatórios é uma ferramenta com base na Web que inclui recursos para exibir e gerenciar relatórios. Faz parte de uma instalação do servidor de relatórios. Para abrir o Gerenciador de Relatórios, digite uma URL do Gerenciador de Relatórios em uma janela do navegador. Para obter mais informações sobre os requisitos de navegador, veja [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). Para obter mais informações sobre como uma URL do Gerenciador de Relatórios deve ser configurada no servidor de relatório, contate o administrador de sistema. Para obter mais informações, consulte [Configurar o Gerenciador de Relatórios &#40;Modo Nativo&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).  
@@ -40,8 +40,8 @@ Faixa de Opções do Gerenciador de Relatórios
 ## <a name="opening-a-report"></a>Abrindo um relatório  
  Depois que localizar um relatório, clique no nome de relatório para abri-lo. O relatório é renderizado em HTML e é exibido na página Conteúdo no Gerenciador de Relatórios. Os relatórios são sempre armazenados em cache pela sessão do navegador para que você possa geralmente retornar a ele, clicando no botão **Voltar** . Isso é verdade mesmo que você tenha que fornecer um nome de usuário e uma senha para executar o relatório. Você não pode totalmente fechar um relatório renderizado até fechar navegador.  
   
- Nem todos os relatórios visíveis na hierarquia de pasta estão imediatamente acessíveis. Alguns relatórios podem solicitar seu nome de usuário e sua senha para determinar se você pode acessar a fonte de dados do relatório. Para obter mais informações sobre como abrir relatórios no Gerenciador de Relatórios, consulte [Abrir e fechar um relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
-  
+ Nem todos os relatórios visíveis na hierarquia de pasta estão imediatamente acessíveis. Alguns relatórios podem solicitar seu nome de usuário e sua senha para determinar se você pode acessar a fonte de dados do relatório. 
+
  Você pode navegar até um relatório e abri-lo diretamente do servidor de relatório do Construtor de Relatórios. 
   
 ## <a name="to-search-for-items"></a>Para pesquisar itens  

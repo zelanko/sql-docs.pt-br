@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3dfb480335b36dde5ce7faece207fb214d1dba5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0454483882af5bcd55b607b63336587590d3ebf8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620675"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580672"
 ---
 # <a name="delete-tables-database-engine"></a>Excluir tabelas (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -74,9 +74,11 @@ ms.locfileid: "47620675"
 2.  Clique com o botão direito do mouse na tabela e escolha **Excluir** no menu de atalho.  
   
 3.  Uma caixa de mensagem solicitará que você confirme a exclusão. Clique em **Sim**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     > [!NOTE]  
-    >  A exclusão de uma tabela automaticamente remove qualquer relação associada a ela.  
+    >  Deleting a table automatically removes any relationships to it.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 4d7b86e88d576d44869dd3a54ddfd6af05770971
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 647630106046345dbe2b3008df020fa1d790d2aa
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369288"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582550"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,9 @@ ms.locfileid: "53369288"
 5.  Desmarque a opção **Mostrar objetos existentes** na parte inferior da página com guias **Recomendações** . Com isso, a grade exibirá somente os objetos de banco de dados indicados na recomendação. Use a barra de rolagem inferior para exibir a coluna mais à direita na grade de recomendações e clique em um item na coluna **Definição** para exibir ou copiar o script [!INCLUDE[tsql](../../includes/tsql-md.md)] que cria aquele objeto em seu banco de dados.  
   
 6.  Para salvar todos os scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] que criam ou descartam todos os objetos de banco de dados nesta recomendação em um arquivo de script, clique em **Salvar Recomendações** , no menu **Ações** .  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>Para exibir o resumo e os relatórios de ajuste com a GUI do Orientador de Otimização do Mecanismo de Banco de Dados  
   
 1.  Ajuste um banco de dados usando a GUI do Orientador de Otimização do Mecanismo de Banco de Dados ou o utilitário de linha de comando **dta** . Para obter mais informações, consulte [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Para usar uma sessão de ajuste existente, ignore esta etapa e passe à Etapa 2.  

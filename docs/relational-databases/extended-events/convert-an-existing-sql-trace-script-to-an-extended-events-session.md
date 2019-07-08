@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c95169a1be08b04be9b7cdb1b90fea243e99cf10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 206749c851423dd7a3b0ea06e1f443732d86b8bd
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62669289"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583845"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Converter um script existente de Rastreamento do SQL em uma sessão de Eventos Estendidos
 
@@ -37,7 +37,9 @@ ms.locfileid: "62669289"
 3.  Use a função fn_trace_getfilterinfo para listar os filtros e as ações equivalentes de Eventos Estendidos a serem usados.  
   
 4.  Crie manualmente uma sessão de Eventos Estendidos, usando os eventos, as ações e os predicados (filtros) equivalentes de Eventos Estendidos.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="to-obtain-the-trace-id"></a>Para obter a ID de rastreamento  
   
 1.  Abra o script de Rastreamento do SQL no Editor de Consultas e execute o script para criar a sessão de rastreamento. Saiba que a sessão de rastreamento não precisa estar em execução para concluir este procedimento.  

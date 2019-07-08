@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e3e437acd6aead42cea4e44f632f40cd69f7ac44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f98eb14dc6187bf26522234aa79704df1e0dc444
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506894"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585556"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Etapas de solução de problemas gerais do Database Mail 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,6 +56,8 @@ Você deve ser membro da função de servidor fixa sysadmin para solucionar prob
     ```
 
 1. Para restaurar o procedimento sp_configure ao seu estado padrão, que não mostra opções avançadas, execute o seguinte código:
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql 
     sp_configure 'show advanced', 0; 

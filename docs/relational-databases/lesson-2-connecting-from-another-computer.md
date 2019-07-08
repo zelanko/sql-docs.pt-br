@@ -11,14 +11,14 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d08fe92b865076a330f0272f8b3fde81f17a8854
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 740a5e5843966a6f4891f195453ffd01ec6ea048
+ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589230"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67517851"
 ---
-# <a name="lesson-2-connecting-from-another-computer"></a>Lição 2: conectando de outro computador
+# <a name="lesson-2-connecting-from-another-computer"></a>Lição 2: conexão usando outro computador
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Para aumentar a segurança, o [!INCLUDE[ssDE](../includes/ssde-md.md)] das edições Developer, Express e Evaluation do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode ser acessado de outro computador quando inicialmente instalado. Esta lição mostra a você como habilitar os protocolos, configurar as portas e configurar o Firewall do Windows para se conectar de outros computadores.  
   
@@ -56,7 +56,7 @@ Se você planejar conectar-se ao [!INCLUDE[ssDE](../includes/ssde-md.md)] de out
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  No **SQL Server Configuration Manager**, expanda **Configuração de Rede do SQL Server**e clique em **Protocolos para** _<InstanceName>_.  
+2.  No **SQL Server Configuration Manager**, expanda **Configuração de Rede do SQL Server**e clique em **Protocolos para** _<InstanceName>_ .  
   
     A instância padrão (uma instância sem nome) é listada como **MSSQLSERVER**. Se você instalou uma instância nomeada, o nome fornecido será listado. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] é instalado como **SQLEXPRESS**, a menos que o nome seja alterado durante a instalação.  
   
@@ -64,7 +64,9 @@ Se você planejar conectar-se ao [!INCLUDE[ssDE](../includes/ssde-md.md)] de out
   
     > [!NOTE]  
     > E necessário reiniciar o serviço [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] após fazer alterações nos protocolos de rede. No entanto, isso é executado na próxima tarefa.  
-  
+
+[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="port"></a>Configurando uma porta fixa  
 Para aprimorar a segurança, o Windows Server 2008, o [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]e o Windows 7 ativam o Firewall do Windows. Para se conectar à esta instância a partir de outro computador, abra uma porta de comunicação no firewall. A instância padrão do [!INCLUDE[ssDE](../includes/ssde-md.md)] escuta na porta 1433; portanto, não é preciso configurar uma porta fixa. No entanto, instâncias nomeadas incluindo [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] escutam em portas dinâmicas. Antes de abrir uma porta no firewall, você deve primeiro configurar o [!INCLUDE[ssDE](../includes/ssde-md.md)] para escutar em uma porta específica conhecida como fixa ou estática; caso contrário, o [!INCLUDE[ssDE](../includes/ssde-md.md)] poderia escutar em uma porta diferente toda vez que fosse iniciado. Para obter mais informações sobre firewalls, as configurações padrão do Firewall do Windows e uma descrição das portas TCP que afetam o Mecanismo de Banco de Dados, o Analysis Services, o Reporting Services e o Integration Services, veja [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
@@ -124,7 +126,7 @@ Quando o serviço [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser
   
 2.  Na caixa de diálogo **Conectar ao Servidor** , confirme **Mecanismo de Banco de Dados** na caixa **Tipo de Servidor** .  
   
-3.  Na caixa **Nome do Servidor** , digite **tcp:** para especificar o protocolo, seguido do nome do computador, uma vírgula e o número da porta. Para se conectar à instância padrão, a porta 1433 está implícita e pode ser omitida; portanto, digite **tcp:**_<computer_name>_. Em nosso exemplo de uma instância nomeada, digite **tcp:**_<computer_name>_**,49172**.  
+3.  Na caixa **Nome do Servidor** , digite **tcp:** para especificar o protocolo, seguido do nome do computador, uma vírgula e o número da porta. Para se conectar à instância padrão, a porta 1433 está implícita e pode ser omitida; portanto, digite **tcp:** _<computer_name>_ . Em nosso exemplo de uma instância nomeada, digite **tcp:** _<computer_name>_ **,49172**.  
   
     > [!NOTE]  
     > Se você omitir **tcp:** da caixa **Nome do servidor**, o cliente tentará todos os protocolos que estiverem habilitados, na ordem especificada na configuração do cliente.  

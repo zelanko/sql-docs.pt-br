@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 807f347bb176f6d8b3191f9f10c8f30448ce9b1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45fd2a7f8281a2b65097c7c0e493cc0a6f60eddc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099965"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584359"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar e monitorar a captura de dados de alteração (SQL Server)
 
@@ -175,7 +175,9 @@ O coletor de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 3. No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Gerenciamento**e, em seguida, **Coleta de Dados**. Clique com o botão direito do mouse em **Coletor de Dados de Desempenho de CDA** e clique em **Iniciar Conjunto de Coleta de Dados**.  
   
 4. No data warehouse configurado na etapa 1, localize a tabela custom_snapshots.cdc_log_scan_data. Essa tabela fornece um instantâneo histórico dos dados das sessões de verificação de log. Esses dados podem ser usados para analisar a latência, a taxa de transferência e outras medidas de desempenho ao longo do tempo.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="ScriptUpgrade"></a> Modo de atualização de script
 
 Quando você aplicar atualizações ou service packs cumulativos a uma instância, na reinicialização, a instância pode entrar no modo de Atualização de Script. Nesse modo, o SQL Server pode executar uma etapa para analisar e atualizar tabelas internas de CDA, o que pode resultar na recriação de objetos como índices em tabelas de captura. Dependendo da quantidade de dados envolvidos, esta etapa pode levar algum tempo ou causar um alto uso de log de transações para bancos de dados do CDA habilitados.

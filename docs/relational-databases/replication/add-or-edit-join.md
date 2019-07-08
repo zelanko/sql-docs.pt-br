@@ -13,12 +13,12 @@ ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d883a137dd182f233bc056b0fca98cf60df4331f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c6e0a2429bfb78f2cee7ae5871cef98660ccce1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665495"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585696"
 ---
 # <a name="add-or-edit-join"></a>Adicionar ou Editar Junção
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,9 @@ ms.locfileid: "62665495"
     -   Se você estiver editando uma junção existente, deverá fazer as edições manualmente.  
   
 3.  **Especificar Opções de Junção**  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   Se a coluna em que você une a tabela filtrada for exclusiva, selecione **Chave Exclusiva**. O processo de mesclagem terá otimizações de desempenho especiais disponíveis se a coluna for exclusiva.  
   
         > [!CAUTION]  

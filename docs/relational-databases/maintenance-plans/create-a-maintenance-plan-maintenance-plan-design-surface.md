@@ -13,12 +13,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 436dfee205c5e200d469741075ac2e61b1e7d875
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78f09611e71c39902e81580d752d302fee604be9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514386"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584137"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Criar um plano de manutenção (Superfície de Design do Plano de Manutenção)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ ms.locfileid: "52514386"
      **Agenda**  
      Indica em qual agendamento o subplano será executado. Clique em **Agenda do Subplano** para abrir a caixa de diálogo **Nova Agenda de Trabalho** . Clique em **Remover Agenda** para excluir a agenda do subplano.  
   
-     Lista**Executar como**   
+     Lista**Executar como**  
      Selecione a conta a ser usada para executar esta subtarefa.  
   
 6.  Clique no ícone **Agenda do Subplano** para inserir detalhes de agenda na caixa de diálogo **Nova Agenda de Trabalho** .  
@@ -161,11 +161,11 @@ ms.locfileid: "52514386"
          **Opção de restrição**  
          Define como uma restrição funciona entre duas tarefas.  
   
-         Lista**Operação de avaliação**    
-         Especifica a operação de avaliação usada pela restrição de precedência. As operações são: **Constraint**, **Expression**, **Expression and Constraint**e **Expression or Constraint**.  
+         Lista**Operação de avaliação**  
+         Especifica a operação de avaliação usada pela restrição de precedência. As operações são: **Constraint**, **Expression**, **Expression and Constraint** e **Expression or Constraint**.  
   
-         Lista**Valor**   
-         Especifique o valor de restrição: **Êxito**, **Falha**ou **Conclusão**. **Êxito** é o padrão.  
+         Lista**Valor**  
+         Especifique o valor de restrição: **Success**, **Failure** ou **Completion**. **Êxito** é o padrão.  
   
         > [!NOTE]  
         >  A linha de restrição de precedência é verde para **Êxito**, vermelha para **Falha**e azul para **Conclusão**.  
@@ -231,49 +231,51 @@ ms.locfileid: "52514386"
     5.  Na caixa de diálogo **Relatório e Registro em Log** , clique em **OK**.  
   
 12. Para exibir os resultados no visualizador de arquivo de log, no **Pesquisador de Objetos**, clique com o botão direito do mouse na pasta **Planos de Manutenção** ou no plano de manutenção específico e selecione **Exibir Histórico**.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following options are available on the **Log File Viewer -**_server\_name_ dialog box.  
   
-     As opções a seguir estão disponíveis na caixa de diálogo **Visualizador do Arquivo de Log –** _server\_name_.  
+     **Load Log**  
+     Open a dialog box where you can specify a log file to load.  
   
-     **Carregar Log**  
-     Abra uma caixa de diálogo onde seja possível especificar um arquivo de log a ser carregado.  
+     **Export**  
+     Open a dialog box that lets you export the information that is shown in the **Log file summary** grid to a text file.  
   
-     **Exportar**  
-     Abra uma caixa de diálogo que permita exportar as informações mostradas na grade **Resumo do arquivo de log** para um arquivo de texto.  
+     **Refresh**  
+     Refresh the view of the selected logs. The **Refresh** button rereads the selected logs from the target server while applying any filter settings.  
   
-     **Atualizar**  
-     Atualize a exibição dos logs selecionados. O botão **Atualizar** relê os logs selecionados do servidor de destino ao aplicar qualquer configuração de filtro.  
+     **Filter**  
+     Open a dialog box that lets you specify settings that are used to filter the log file, such as **Connection**, **Date**, or other **General** filter criteria.  
   
-     **Filtro**  
-     Abra uma caixa de diálogo que permita especificar configurações usadas para filtrar o arquivo de log, como **Conexão**, **Data**ou outros critérios de filtragem **Gerais** .  
+     **Search**  
+     Search the log file for specific text. Searching with wildcard characters is not supported.  
   
-     **Pesquisa**  
-     Pesquise o texto específico no arquivo de log. Não há suporte à pesquisa com caracteres curinga.  
+     **Stop**  
+     Stops loading the log file entries. For example, you can use this option if a remote or offline log file takes a long time to load, and you only want to view the most recent entries.  
   
-     **Parar**  
-     Interrompe o carregamento das entradas do arquivo de log. Por exemplo, você poderá usar essa opção se um arquivo de log remoto ou offline demorar muito tempo para ser carregado e você desejar exibir apenas as entradas mais recentes.  
+     **Log file summary**  
+     This information panel displays a summary of the log file filtering. If the file is not filtered, you will see the following text, **No filter applied**. If a filter is applied to the log, you will see the following text, **Filter log entries where:** \<filter criteria>.  
   
-     **Resumo do arquivo de log**  
-     Esse painel de informações exibe um resumo da filtragem do arquivo de log. Se o arquivo não for filtrado, você verá o seguinte texto, **Nenhum filtro aplicado**. Se um filtro for aplicado ao log, você verá o seguinte texto **Filtrar entradas do log, em que:**  \<filter criteria>.  
+     **Date**  
+     Displays the date of the event.  
   
-     **Data**  
-     Exibe a data do evento.  
+     **Source**  
+     Displays the source feature from which the event is created, such as the name of the service (MSSQLSERVER, for example). This does not appear for all log types.  
   
-     **Origem**  
-     Exibe o recurso de origem do qual o evento é criado, como o nome do serviço (MSSQLSERVER, por exemplo). Isso não é exibido para todos os tipos de log.  
+     **Message**  
+     Displays any messages associated with the event.  
   
-     **Mensagem**  
-     Exibe todas as mensagens associadas ao evento.  
+     **Log Type**  
+     Displays the type of log to which the event belongs. All selected logs appear in the log file summary window.  
   
-     **Tipo de Log**  
-     Exibe o tipo de log ao qual o evento pertence. Todos os logs selecionados são exibidos na janela de resumo de arquivo de log.  
+     **Log Source**  
+     Displays a description of the source log in which the event is captured.  
   
-     **Origem do Log**  
-     Exibe uma descrição do log de origem no qual o evento é capturado.  
+     **Selected row details**  
+     Select a row to display additional details about the selected event row at the bottom of the page. The columns can be reordered by dragging them to new locations in the grid. The columns can be resized by dragging the column separator bars in the grid header to the left or right. Double-click the column separator bars in the grid header to automatically size the column to the content width.  
   
-     **Detalhes da linha selecionada**  
-     Selecione uma linha para exibir detalhes adicionais sobre a linha de evento selecionada na parte inferior da página. As colunas podem ser reordenadas arrastando-as para locais novos na grade. As colunas podem ser redimensionadas arrastando para a esquerda ou direta as barras separadoras de coluna no cabeçalho de grade. Clique duas vezes nas barras separadoras de coluna no cabeçalho da grade para dimensionar automaticamente a coluna para a largura do conteúdo.  
-  
-     **Instância**  
-     O nome da instância do na qual ocorreu o evento. Esse nome é exibido como *nome do computador*\\*nome da instância*.  
+     **Instance**  
+     The name of the instance on which the event occurred. This is displayed as *computer name*\\*instance name*.  
   
   

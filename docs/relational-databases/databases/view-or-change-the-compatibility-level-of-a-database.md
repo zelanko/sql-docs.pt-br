@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b0544c995039c2dda6f20ea86b5893e2938708d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: d0023f2646cadac8b189992f06b695c1779c491d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559909"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583412"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>Exibir ou alterar o nível de compatibilidade de um banco de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -62,8 +62,10 @@ ms.locfileid: "51559909"
   
      O nível de compatibilidade atual é exibido na caixa de listagem **Nível de compatibilidade** .  
   
-5.  Para alterar o nível de compatibilidade, selecione uma opção diferente da lista. As opções são **SQL Server 2008 (100)**, **SQL Server 2012 (110)**, **SQL Server 2014 (120)**, **SQL Server 2016 (130)** e **SQL Server 2017 (140)**.  
-  
+5.  Para alterar o nível de compatibilidade, selecione uma opção diferente da lista. As opções são **SQL Server 2008 (100)** , **SQL Server 2012 (110)** , **SQL Server 2014 (120)** , **SQL Server 2016 (130)** e **SQL Server 2017 (140)** .  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-the-compatibility-level-of-a-database"></a>Para exibir as informações sobre o nível de compatibilidade de um banco de dados  

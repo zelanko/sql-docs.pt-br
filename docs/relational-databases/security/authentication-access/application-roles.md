@@ -22,12 +22,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8346c4f7a5b324c8fb05a46e74aae3bbdd5dab49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 233f794901dd73fd8a6d49a000ebdcccd2e92184
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715810"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581087"
 ---
 # <a name="application-roles"></a>Funções de aplicativo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "62715810"
 4.  Se o nome de função de aplicativo e a senha forem válidos, a função de aplicativo será habilitada.  
   
 5.  Nesse momento, a conexão perde as permissões de usuário e assume as permissões da função de aplicativo.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  As permissões adquiridas pela função de aplicativo permanecem em efeito durante a conexão.  
   
  Em versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a única maneira de um usuário readquirir seu contexto de segurança original depois de iniciar uma função de aplicativo é desconectar e conectar-se novamente com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A partir do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o **sp_setapprole** tem uma opção que cria um cookie. O cookie contém informações de contexto anteriores à habilitação da função de aplicativo. O cookie pode ser usado por **sp_unsetapprole** para reverter a sessão a seu contexto original. Para obter mais informações sobre essa nova opção e um exemplo, consulte [sp_setapprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  

@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a6f4b6283c6e1a29f273eae5c607478166535af
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 1197244abd63560bf6fa9d76401c0836b833c6a5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256021"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581416"
 ---
 # <a name="view-user-defined-functions"></a>Exibir funções definidas pelo usuário
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,49 +70,51 @@ ms.locfileid: "54256021"
     -   Função de agregação  
   
 4.  Clique com o botão direito do mouse na função da qual você deseja ver as propriedades e selecione **Propriedades**.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following properties appear in the **Function Properties -** _function_name_ dialog box.  
   
-     As propriedades a seguir aparecem na caixa de diálogo **Propriedades de Função –** _function_name_.  
+     **Database**  
+     The name of the database containing this function.  
   
-     **Backup de banco de dados**  
-     Nome do banco de dados que contém essa função.  
+     **Server**  
+     The name of the current server instance.  
   
-     **Servidor**  
-     O nome da instância do servidor atual.  
+     **User**  
+     The name of the user of this connection.  
   
-     **Usuário**  
-     Nome do usuário desta conexão.  
+     **Created date**  
+     Displays the date the function was created.  
   
-     **Data da criação**  
-     Exibe a data em que a função foi criada.  
+     **Execute As**  
+     Execution context for the function.  
   
-     **Executar como**  
-     Contexto de execução da função.  
+     **Name**  
+     The name of the current function.  
   
-     **Nome**  
-     Nome da função atual.  
+     **Schema**  
+     Displays the schema that owns the function.  
   
-     **Esquema**  
-     Exibe o esquema que possui a função.  
-  
-     **Objeto do sistema**  
-     Indica se a função é um objeto do sistema. Os valores são True e False.  
+     **System object**  
+     Indicates whether the function is a system object. Values are True and False.  
   
      **ANSI NULLs**  
-     Indica se o objeto foi criado com a opção ANSI NULLs.  
+     Indicates if the object was created with the ANSI NULLs option.  
   
-     **Criptografado**  
-     Indica se a função é criptografada. Os valores são True e False.  
+     **Encrypted**  
+     Indicates whether the function is encrypted. Values are True and False.  
   
-     **Tipo de função**  
-     O tipo de função definido pelo usuário.  
+     **Function Type**  
+     The type of user defined function.  
   
-     **Identificador entre aspas**  
-     Indica se o objeto foi criado com a opção de identificador entre aspas.  
+     **Quoted identifier**  
+     Indicates if the object was created with the quoted identifier option.  
   
-     **Ligado a esquema**  
-     Indica se a função é ligada a esquema. Os valores são True e False. Para obter informações sobre funções associadas ao esquema, veja a seção SCHEMABINDING de [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
+     **Schema bound**  
+     Indicates whether the function is schema-bound. Values are True and False. For information about schema-bound functions, see the SCHEMABINDING section of [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>Para obter a definição e as propriedades de uma função  
   

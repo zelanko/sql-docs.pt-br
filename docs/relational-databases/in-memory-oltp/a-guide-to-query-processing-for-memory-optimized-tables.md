@@ -1,7 +1,7 @@
 ---
 title: Um guia para processamento de consulta de tabelas com otimização de memória | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b69d261470a674ef6a90a5bef9e0db7aebfbb44a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0234a6806e63a7eec6a13d30ceeda55c0ee27a29
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205575"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579586"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Um guia para processamento de consulta de tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  O plano de execução estimado, conforme exibido pelo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é como segue  
   
- ![Plano de consulta para uma junção de tabelas baseadas em disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "Plano de consulta para uma junção de tabelas baseadas em disco.")  
+ ![Plano de consulta para uma junção de tabelas baseadas em disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "Plano de consulta para uma junção de tabelas baseadas em disco.")  
 Plano de consulta para a junção de tabelas com base em disco.  
   
  Sobre esse plano de consulta:  
@@ -93,7 +93,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  O plano estimado para essa consulta é:  
   
- ![Plano de consulta para uma junção hash de tabelas baseadas em disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "Plano de consulta para uma junção hash de tabelas baseadas em disco.")  
+ ![Plano de consulta para uma junção hash de tabelas baseadas em disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "Plano de consulta para uma junção hash de tabelas baseadas em disco.")  
 Plano de consulta para uma junção hash de tabelas com base em disco.  
   
  Nessa consulta, as linhas da tabela Order são recuperadas usando o índice clusterizado. O operador físico **Hash Match** agora é usado para **Inner Join**. O índice clusterizado em Order não é classificado em CustomerID e, portanto, **Merge Join** exigiria um operador de classificação, o que afetaria o desempenho. Observe o custo relativo do operador **Hash Match** (75%) comparado com o custo do operador **Merge Join** no exemplo anterior (46%). O otimizador consideraria o operador **Hash Match** também no exemplo anterior, mas concluiu que o operador **Merge Join** forneceu melhor desempenho.  
@@ -101,7 +101,7 @@ Plano de consulta para uma junção hash de tabelas com base em disco.
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Processamento de consulta para tabelas baseadas em disco  
  O diagrama a seguir descreve o fluxo de processamento de consulta no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para consultas ad hoc:  
   
- ![Pipeline de processamento de consulta do SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "Pipeline de processamento de consulta do SQL Server.")  
+ ![Pipeline de processamento de consulta do SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "Pipeline de processamento de consulta do SQL Server.")  
 Pipeline do processamento de consulta do SQL Server.  
   
  Neste cenário:  
@@ -117,7 +117,9 @@ Pipeline do processamento de consulta do SQL Server.
 5.  Para cada busca de índice, verificação de índice e operador de verificação de tabela, o mecanismo de execução solicita linhas das respectivas estruturas de índice e tabela dos Métodos de Acesso.  
   
 6.  Os Métodos de Acesso recuperam as linhas das páginas de dados e de índice no pool de buffers e carregam as páginas do disco no pool de buffers conforme a necessidade.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Para a primeira consulta de exemplo, o mecanismo de execução solicita dos Métodos de Acesso as linhas no índice clusterizado em Customer e no índice não clusterizado em Order. Os Métodos de Acesso passam pelas estruturas de índice da árvore B para recuperar as linhas solicitadas. Nesse caso, todas as linhas são recuperadas como os planos de chamada para verificações de índice completo.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Acesso do [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a tabelas com otimização de memória  
@@ -125,7 +127,7 @@ Pipeline do processamento de consulta do SQL Server.
   
  O [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado pode ser usado para acessar tabelas com otimização de memória e baseadas em disco. A figura a seguir ilustra o processamento de consulta para acesso do [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a tabelas com otimização de memória:  
   
- ![Pipeline de processamento de consulta para TSQL interpretado.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "Pipeline de processamento de consulta para TSQL interpretado.")  
+ ![Pipeline de processamento de consulta para TSQL interpretado.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.png "Pipeline de processamento de consulta para TSQL interpretado.")  
 Pipeline do processamento de consulta para acesso do Transact-SQL interpretado a tabelas com otimização de memória.  
   
  Conforme ilustrado pela figura, na maioria das vezes, o pipeline do processamento de consulta permanece inalterado:  
@@ -163,7 +165,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  O plano estimado é o seguinte:  
   
- ![Plano de consulta para uma junção de tabelas com otimização de memória.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "Plano de consulta para uma junção de tabelas com otimização de memória.")  
+ ![Plano de consulta para uma junção de tabelas com otimização de memória.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.png "Plano de consulta para uma junção de tabelas com otimização de memória.")  
 Plano de consulta para a junção de tabelas com otimização de memória.  
   
  Observe as seguintes diferenças em relação ao plano para a mesma consulta em tabelas baseadas em disco (figura 1):  
@@ -204,7 +206,7 @@ END
 ### <a name="compilation-and-query-processing"></a>Processamento de compilação e consulta  
  O diagrama a seguir ilustra o processo de compilação para procedimentos armazenados compilados nativamente:  
   
- ![Compilação nativa de procedimentos armazenados.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "Compilação nativa de procedimentos armazenados.")  
+ ![Compilação nativa de procedimentos armazenados.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.png "Compilação nativa de procedimentos armazenados.")  
 Compilação original dos procedimentos armazenados.  
   
  O processo é descrito como:  
@@ -221,7 +223,7 @@ Compilação original dos procedimentos armazenados.
   
  A invocação de um procedimento armazenado originalmente compilado é convertida para chamar uma função na DLL.  
   
- ![Execução de procedimentos armazenados compilados nativamente.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.gif "Execução de procedimentos armazenados compilados nativamente.")  
+ ![Execução de procedimentos armazenados compilados nativamente.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "Execução de procedimentos armazenados compilados nativamente.")  
 Execução de procedimentos armazenados compilados nativamente.  
   
  A invocação de um procedimento armazenado originalmente compilado é descrita a seguir:  
@@ -295,7 +297,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Depois de excluir todas as linhas, menos uma na tabela Customer:  
   
- ![Junções e estatísticas de coluna. ](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.gif "Junções e estatísticas de coluna.")  
+ ![Junções e estatísticas de coluna. ](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Junções e estatísticas de coluna.")  
   
  Em relação a esse plano de consulta:  
   
