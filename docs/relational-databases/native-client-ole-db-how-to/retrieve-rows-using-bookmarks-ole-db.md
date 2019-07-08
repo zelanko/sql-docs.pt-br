@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34be43cc8274f165a85d2ac51ccc2f1ca7939d3d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 863ceaa522e11269f1b2b7fa8ca4549cf0f32295
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673255"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583807"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Recuperar linhas usando indicadores (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "51673255"
 4.  Defina o campo **dwFlag** da estrutura associada como o sinalizador DBCOLUMNSINFO_ISBOOKMARK para a coluna que será usada como indicador.  
   
 5.  Use **IRowsetLocate::GetRowsAt** para buscar linhas, iniciando com a linha especificada por um deslocamento do indicador.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como buscar linhas usando um indicador. Este exemplo não tem suporte em IA64.  
   

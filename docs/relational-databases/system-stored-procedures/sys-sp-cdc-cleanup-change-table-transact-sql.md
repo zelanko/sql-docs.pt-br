@@ -1,5 +1,5 @@
 ---
-title: sys. sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 19fb2cb2fc3b70bb8389a85d661992a5f7a7cb4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bbcc576ab0ff38adde9042a713e0dfd0c7d54be
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700694"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583288"
 ---
 # <a name="sysspcdccleanupchangetable-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sys.sp_cdc_cleanup_change_table
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @capture_instance =] '*capture_instance*'  
+ [ @capture_instance = ] '*capture_instance*'  
  É o nome da instância de captura associada à tabela de alteração. *capture_instance* está **sysname**, sem padrão, e não pode ser NULL.  
   
  *capture_instance* deve nomear uma instância de captura que existe no banco de dados atual.  
   
- [ @low_water_mark =] *low_water_mark*  
- É um número de sequência de log (LSN) que deve ser usado como a nova marca d'água baixa para o *instância de captura*. *low_water_mark* está **binário (10)**, sem padrão.  
+ [ @low_water_mark = ] *low_water_mark*  
+ É um número de sequência de log (LSN) que deve ser usado como a nova marca d'água baixa para o *instância de captura*. *low_water_mark* está **binário (10)** , sem padrão.  
   
  Se o valor for não nulo, ele deve aparecer como o valor start_lsn de uma entrada atual de [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) tabela. Se outras entradas no cdc.lsn_time_mapping compartilharem a mesma hora de confirmação que a entrada identificada pela nova marca d’água baixa, o menor LSN associado àquele grupo de entradas será escolhido como a marca d’água baixa.  
   
@@ -76,7 +76,9 @@ sys.sp_cdc_cleanup_change_table
     >  A nova marca d’água baixa pode não ser a marca d’água baixa especificada na chamada do procedimento armazenado. Se outras entradas na tabela cdc.lsn_time_mapping compartilharem a mesma hora de confirmação, o menor start_1sn representado no grupo de entradas será selecionado como a marca d’água baixa ajustada. Se o @low_water_mark parâmetro for NULL ou a marca d'água baixa atual for superior à nova marca, o valor start_lsn de instância de captura permanecerá inalterado.  
   
 2.  As entradas da tabela de alteração com valores __$start_lsn menores do que a marca d’água baixa são excluídas. O limite de exclusão é usado para limitar o número de linhas excluídas em uma única transação. Uma falha ao excluir as entradas é relatada, mas não afeta nenhuma alteração na marca d’água baixa da instância de captura que pode ter sido feita com base na chamada.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Use sys.sp_cdc_cleanup_change_table nas seguintes circunstâncias:  
   
 -   O trabalho do Agente de limpeza relata falhas de exclusão.  
