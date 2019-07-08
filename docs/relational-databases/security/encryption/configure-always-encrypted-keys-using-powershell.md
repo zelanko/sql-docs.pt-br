@@ -1,7 +1,7 @@
 ---
 title: Configurar as chaves Always Encrypted usando o PowerShell | Microsoft Docs
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 889df15caaba289e5f0fed43727d9358bab3a2e1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 5e8f0eb293390e88f0c7d8f982c0525b5a62f871
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327467"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387998"
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>Configurar chaves do Always Encrypted usando o PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,14 +30,14 @@ Para obter informações sobre como começar a usar o módulo do SqlServer Power
 
 ## <a name="KeyProvisionWithoutRoles"></a> Provisionamento de chave sem separação de funções
 
-O método de provisionamento de chave descrito nesta seção não dá suporte à separação de funções entre os Administradores de Segurança e DBAs. Algumas das etapas a seguir combinam operações em chaves físicas com operações em metadados de chaves. Portanto, esse método de provisionamento as chaves é recomendado para organizações que usam o modelo de DevOps ou se o banco de dados estiver hospedado na nuvem e o principal objetivo for impedir que os administradores de nuvem (mas não os DBAs locais) acessem dados confidenciais. Isso não é recomendável se os adversários em potencial incluem DBAs, ou se os DBAs simplesmente não devem ter acesso a dados confidenciais.
+O método de provisionamento de chave descrito nesta seção não dá suporte à separação de funções entre os Administradores de Segurança e DBAs. Algumas das etapas a seguir combinam operações em chaves físicas com operações em metadados de chaves. Portanto, esse método de provisionamento as chaves é recomendado para organizações que usam o modelo de DevOps ou se o banco de dados estiver hospedado na nuvem e o principal objetivo for impedir que os administradores de nuvem (mas não os DBAs locais) acessem dados confidenciais. Isso não é recomendável se os adversários em potencial incluem DBAs, ou se os DBAs não devem ter acesso a dados confidenciais.
 
 Antes de executar as etapas que envolvem o acesso a chaves de texto não criptografado ou ao repositório de chaves (identificado na coluna **Acessa chaves de texto não criptografado/repositório de chaves** na tabela abaixo), verifique se o ambiente do PowerShell está sendo executado em um computador seguro e diferente do computador que hospeda o banco de dados. Para obter mais informações, consulte ***Considerações de Segurança para o Gerenciamento de Chaves***.
 
 
 Tarefa  |Artigo  |Acessa chaves de texto não criptografado/repositório de chaves  |Acessar banco de dados   
 ---------|---------|---------|---------
-Etapa 1. Crie uma chave mestra de coluna em um repositório de chaves.<br><br>**Observação:** o módulo do SqlServer PowerShell não dá suporte a essa etapa. Para realizar essa tarefa da linha de comando, use ferramentas especificas para o repositório de chaves selecionado. |[Criar e armazenar chaves mestras de coluna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | Sim | Não     
+Etapa 1. Crie uma chave mestra de coluna em um repositório de chaves.<br><br>**Observação:** O módulo do SqlServer PowerShell não dá suporte a essa etapa. Para realizar essa tarefa da linha de comando, use ferramentas especificas para o repositório de chaves selecionado. |[Criar e armazenar chaves mestras de coluna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | Sim | Não     
 Etapa 2.  Inicie um ambiente do PowerShell e importe o módulo do SqlServer PowerShell.  |   [Configurar Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   |    Não    | Não         
 Etapa 3.  Conecte-se ao servidor e banco de dados.     |     [Conectar a um banco de dados](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase)    |    Não     | Sim         
 Etapa 4.  Crie um objeto *SqlColumnMasterKeySettings* contendo informações sobre o local da sua chave mestra de coluna. SqlColumnMasterKeySettings é um objeto que existe na memória (no PowerShell). Use o cmdlet específico para o repositório de chaves.   |     [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)        |   Não      | Não         
@@ -186,12 +186,12 @@ Antes de executar as etapas que envolvem o acesso a chaves de texto não criptog
 1.  O ambiente do PowerShell é executado em um computador seguro diferente daquele que hospeda o banco de dados.
 2.  Os DBAs na sua organização não têm acesso ao computador (isso sabotaria o propósito da separação de funções).
 
-Para obter mais informações, consulte [Considerações de Segurança para o Gerenciamento de Chaves](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
+Para obter mais informações, consulte [Considerações de Segurança para o Gerenciamento de Chaves](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
 
 Tarefa  |Artigo  |Acessa chaves de texto não criptografado/repositório de chaves  |Acessar banco de dados  
 ---------|---------|---------|---------
-Etapa 1. Crie uma chave mestra de coluna em um repositório de chaves.<br><br>**Observação:** o módulo do SqlServer não dá suporte a essa etapa. Para realizar essa tarefa da linha de comando, você precisa usar ferramentas especificas para o tipo do seu repositório de chaves.     | [Criar e armazenar chaves mestras de coluna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    Sim    | Não 
+Etapa 1. Crie uma chave mestra de coluna em um repositório de chaves.<br><br>**Observação:** O módulo do SqlServer não dá suporte a essa etapa. Para realizar essa tarefa da linha de comando, você precisa usar ferramentas especificas para o tipo do seu repositório de chaves.     | [Criar e armazenar chaves mestras de coluna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    Sim    | Não 
 Etapa 2.  Inicie uma sessão do PowerShell e importe o módulo do SqlServer.      |     [Importar o módulo do SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule)     | Não | Não         
 Etapa 3.  Crie um objeto *SqlColumnMasterKeySettings* contendo informações sobre o local da sua chave mestra de coluna. *SqlColumnMasterKeySettings* é um objeto que existe na memória (no PowerShell). Use o cmdlet específico para o repositório de chaves. |      [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)   | Não         | Não         
 Etapa 4.  Autentique no Azure, se a chave mestra de coluna estiver armazenada no Cofre de Chaves do Azure |    [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |Sim|Não         

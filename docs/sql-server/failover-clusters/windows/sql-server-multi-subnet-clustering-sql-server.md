@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: faa34ef2e1b38fe13f487574ba95d0ad015b08a4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b3ebbbcefcd3477af997cea4680ba5ce51621555
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516582"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388031"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Clustering de várias sub-redes do SQL Server (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "59516582"
 ##  <a name="ComponentsAndConcepts"></a> Considerações sobre o recurso de endereço IP  
  Em uma configuração de cluster de failover de várias sub-redes, os endereços IP não pertencem a todos os nós no cluster de failover, e podem não estar todos online durante inicialização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . A partir do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], é possível definir a dependência de recurso de endereço IP como **OR**. Isso habilita o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para ficar online quando há pelo menos um endereço IP válido ao qual ele possa se associar.  
   
-> **OBSERVAÇÃO:** Nas versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], uma tecnologia V-LAN expansível foi usada em configurações de cluster multissite para expor um único endereço IP para failover em sites. Com o novo recurso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para nós de cluster em diferentes sub-redes, você pode configurar clusters de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em vários sites sem implementar a tecnologia V-LAN expansível.  
+  > [!NOTE] 
+  > - Nas versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], uma tecnologia V-LAN expansível foi usada em configurações de cluster multissite para expor um único endereço IP para failover em sites. Com o novo recurso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para nós de cluster em diferentes sub-redes, você pode configurar clusters de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em vários sites sem implementar a tecnologia V-LAN expansível.  
+
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>Considerações sobre a dependência de recurso de endereço IP OR  
  Você poderá considerar o seguinte comportamento de failover se definir a dependência de recurso de endereço IP como **OR**:  
@@ -68,6 +70,9 @@ ms.locfileid: "59516582"
  Com bibliotecas de cliente herdadas ou provedores de dados de terceiros, você não pode usar o parâmetro **MultiSubnetFailover** em sua cadeia de conexão. Para ajudar a assegurar que seu aplicativo cliente funcione de maneira ideal com FCI de várias sub-redes no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], tente ajustar o tempo limite de conexão na cadeia de conexão de cliente antes de 21 segundos para cada endereço IP adicional. Isto assegura que a tentativa de reconexão do cliente não excede o tempo limite antes de ser capaz de realizar um ciclo por todos os endereços IP em seu FCI de várias sub-redes.  
   
  O período de tempo limite da conexão cliente padrão para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio e o **sqlcmd** é de 15 segundos.  
+ 
+ > [!NOTE]
+ > - Se você estiver usando várias sub-redes e tiver um DNS estático, será necessário ter um processo em vigor para atualizar o registro DNS associado ao ouvinte antes de executar um failover. Caso contrário, o nome da rede não ficará online.
   
    
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  

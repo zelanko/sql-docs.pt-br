@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 825fedb3bfc3262abf4e432075e03f6e0a370eac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d5e7b1be70692f29b81f06725adfa326ba77d65
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65626696"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388358"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -134,6 +134,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }
   | ALLOW_PAGE_LOCKS = { ON | OFF }
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
   | MAXDOP = max_degree_of_parallelism
   | DATA_COMPRESSION = { NONE | ROW | PAGE}
      [ ON PARTITIONS ( { <partition_number_expression> | <range> }
@@ -476,6 +477,11 @@ ON Bloqueios de página são permitidos ao acessar o índice. O [!INCLUDE[ssDE](
 
 OFF Bloqueios de página não são usados.
 
+
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **Se aplica ao**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e a versões posteriores.
+
+Especifica se a contenção de inserção de última página será ou não otimizada. O padrão é OFF. Confira a seção sobre [Chaves sequenciais](#sequential-keys) para saber mais.
+
 MAXDOP = _max_degree_of_parallelism_
 **Aplica-se ao**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -732,6 +738,13 @@ A seguinte funcionalidade está desabilitada para operações de criação de í
 Quando ALLOW_ROW_LOCKS = ON e ALLOW_PAGE_LOCK = ON, os bloqueios em nível de linha, página e tabela são permitidos ao acessar o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] escolhe o bloqueio apropriado e pode escalar o bloqueio de uma linha ou página para um bloqueio de tabela.
 
 Quando ALLOW_ROW_LOCKS = OFF e ALLOW_PAGE_LOCK = OFF, somente um bloqueio em nível de tabela é permitido ao acessar o índice.
+
+## <a name="sequential-keys"></a>Chaves sequenciais
+**Aplica-se a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e posterior.
+
+A contenção de inserção de última página é um problema de desempenho comum que ocorre quando um grande número de threads simultâneos tenta inserir linhas em um índice com uma chave sequencial. Um índice é considerado sequencial quando a coluna de chave à esquerda contém valores que sempre aumentam (ou diminuem), como uma coluna de identidade ou uma data que assume como padrão a data/hora atual. Como as chaves que estão sendo inseridas são sequenciais, todas as novas linhas serão inseridas no final da estrutura do índice – em outras palavras, na mesma página. Isso leva à contenção da página na memória que pode ser observada como vários threads aguardando PAGELATCH_EX para a página em questão.
+
+Ativar a opção de índice OPTIMIZE_FOR_SEQUENTIAL_KEY permite uma otimização no mecanismo de banco de dados que ajuda a melhorar a taxa de transferência de inserções de alta simultaneidade em um índice. Ele se destina aos índices que têm uma chave sequencial e, portanto, estão sujeitos à contenção de inserção de última página, mas também pode ajudar com os índices que têm pontos de acesso em outras áreas da estrutura de índice de árvore B.
 
 ## <a name="viewing-index-information"></a>Exibindo informações de índice
 

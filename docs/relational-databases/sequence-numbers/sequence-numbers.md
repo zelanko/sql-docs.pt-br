@@ -18,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f5665e97e09d8bdaad57a328aae31113f42f15b
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: b5198b8919fb41c754d5d94ac45c895dda852e2e
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571135"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343846"
 ---
 # <a name="sequence-numbers"></a>Números de sequência
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,6 +58,8 @@ ms.locfileid: "51571135"
  O objeto de sequência gera números de acordo com sua definição, mas o objeto de sequência não controla como os números são usados. Os números de sequência inseridos em uma tabela podem ter intervalos quando uma transação é revertida, quando um objeto de sequência é compartilhado por várias tabelas ou quando os números de sequência são alocados e não são usados em tabelas. Quando criado com a opção CACHE, um desligamento inesperado, como uma deficiência de energia, pode perder os números de sequência no cache.  
   
  Se houver várias instâncias da função **NEXT VALUE FOR** especificando o mesmo gerador de sequência em uma única instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] , todas as instâncias retornarão o mesmo valor para uma determinada linha processada por essa instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] . Esse comportamento é coerente com o padrão ANSI.  
+ 
+ Os números de sequência são gerados fora do escopo da transação atual. Eles serão consumidos se a transação que usa o número de sequência for confirmada ou revertida. A validação duplicada só ocorre quando o registro está totalmente preenchido. Isso pode resultar em alguns casos em que o mesmo número é usado para mais de um registro durante a criação, mas em seguida é identificado como uma duplicata. Se isso ocorrer e outros valores de numeração automática tiverem sido aplicados a registros subsequentes, o resultado poderá ser um intervalo entre os valores de numeração automática.
   
 ## <a name="typical-use"></a>Usos comum  
  Para criar um número de sequência de inteiros com incrementos de 1 a partir de -2.147,483.648 até 2.147.483.647, use a instrução a seguir.  

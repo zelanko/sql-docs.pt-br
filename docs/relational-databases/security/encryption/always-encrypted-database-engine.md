@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ac5ce3e74713da1b1560d4fd0e1cb86bb4593be
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.openlocfilehash: 0fefd22e080ac0ed4e0646dde1805ce5923b8e3a
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185022"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419162"
 ---
 # <a name="always-encrypted-database-engine"></a>Sempre criptografados (mecanismo de banco de dados)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -181,11 +181,11 @@ As cláusulas a seguir não podem ser usadas para colunas criptografadas:
 Os recursos a seguir não funcionam em colunas criptografadas:
 
 - Replicação transacional ou de mesclagem
-- Consultas distribuídas (servidores vinculados)
+- Consultas distribuídas (servidores vinculados, OPENROWSET(T-SQL), OPENDATASOURCE(T-SQL))
 
 Requisitos da ferramenta
 
-- O SQL Server Management Studio poderá descriptografar os resultados recuperados de colunas criptografadas se você se conectar à *configuração de criptografia de coluna = habilitada* na guia **Propriedades Adicionais** da caixa de diálogo **Conectar ao Servidor** . Requer pelo menos o SQL Server Management Studio versão 17 para inserir, atualizar ou filtrar colunas criptografadas.
+- O SQL Server Management Studio poderá descriptografar os resultados recuperados de colunas criptografadas se você se conectar à *configuração de criptografia de coluna = habilitada* na guia **Propriedades Adicionais** da caixa de diálogo **Conectar ao Servidor** . Requer pelo menos o SQL Server Management Studio versão 17 para inserir, atualizar ou filtrar colunas criptografadas. Para ver as cadeias de conexão a serem usadas nos aplicativos cliente, confira [Always Encrypted (desenvolvimento de cliente)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 
 - As conexões criptografadas do `sqlcmd` exigem, no mínimo, a versão 13.1, disponível no [Centro de Download](https://go.microsoft.com/fwlink/?LinkID=825643).
 

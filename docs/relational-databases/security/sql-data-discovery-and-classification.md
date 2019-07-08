@@ -2,22 +2,22 @@
 title: Descoberta e classificação de dados SQL | Microsoft Docs
 description: Descoberta e classificação de dados SQL
 documentationcenter: ''
-ms.reviewer: carlrab
+ms.reviewer: vanto
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
 ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 02/13/2018
-ms.author: giladm
-author: giladm
-manager: shaik
-ms.openlocfilehash: e3df41240791d01beb1214f3f5b150bdba618420
-ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
+ms.date: 06/25/2019
+ms.author: mibar
+author: barmichal
+manager: craigg
+ms.openlocfilehash: b45f3a081b7be55642e662ed195cfc1377e3659b
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67316688"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351728"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Descoberta e classificação de dados SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ A descoberta e a classificação dos dados mais confidenciais (de negócios, fin
 * Controlar o acesso a e fortalecer a segurança de bancos de dados/colunas que contêm dados altamente confidenciais.
 
 > [!NOTE]
-> O recurso descoberta e classificação de dados é **compatível com o SQL Server 2008 e posteriores**. Para o Banco de Dados SQL do Azure, confira [Descoberta e Classificação de Dados do Banco de Dados SQL do Azure](https://go.microsoft.com/fwlink/?linkid=866265).
+> O recurso de descoberta e classificação de dados é **compatível com o SQL Server 2008 ou versões posteriores e pode ser usado com o SSMS 17.5 ou versões posteriores**. Para o Banco de Dados SQL do Azure, confira [Descoberta e Classificação de Dados do Banco de Dados SQL do Azure](https://go.microsoft.com/fwlink/?linkid=866265).
 
 ## <a id="subheading-1"></a>Visão geral
 O recurso Descoberta e classificação de dados apresenta um conjunto de serviços avançados, formando um novo paradigma de Proteção de Informações do SQL que visa a proteção dos dados, não apenas do banco de dados:

@@ -1,7 +1,7 @@
 ---
 title: MATCH (SQL Graph) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -9,21 +9,23 @@ ms.topic: language-reference
 f1_keywords:
 - MATCH
 - MATCH_TSQL
+- SHORTEST_PATH
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - MATCH statement [SQL Server], SQL graph
 - SQL graph, MATCH statement
+- Shortest Path, shortest_path
 author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0296f915e0731bac9e7a714fa1e307bd2cda86b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d24d4f9e206fb6bd0b57cfcbbae6d1cf724ffa5e
+ms.sourcegitcommit: 60009734e0ce9d9ac655e83b3b04e340b73095f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62504641"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67409993"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -38,20 +40,78 @@ ms.locfileid: "62504641"
 MATCH (<graph_search_pattern>)
 
 <graph_search_pattern>::=
-    {<node_alias> { 
-                     { <-( <edge_alias> )- } 
-                   | { -( <edge_alias> )-> }
-                 <node_alias> 
-                 } 
-     }
-     [ { AND } { ( <graph_search_pattern> ) } ]
-     [ ,...n ]
-  
+  {  
+      <simple_match_pattern> 
+    | <arbitrary_length_match_pattern>  
+    | <arbitrary_length_match_last_node_predicate> 
+  }
+
+<simple_match_pattern>::=
+  {
+      LAST_NODE(<node_alias>) | <node_alias>   { 
+          { <-( <edge_alias> )- } 
+        | { -( <edge_alias> )-> }
+        <node_alias> | LAST(<node_alias>)
+        } 
+  }
+  [ { AND } { ( <simple_match_pattern> ) } ]
+  [ ,...n ]
+
 <node_alias> ::=
-    node_table_name | node_alias 
+  node_table_name | node_table_alias 
 
 <edge_alias> ::=
-    edge_table_name | edge_alias
+  edge_table_name | edge_table_alias
+
+
+<arbitrary_length_match_pattern>  ::=
+  { 
+    SHORTEST_PATH( 
+      <arbitrary_length_pattern> 
+      [ { AND } { <arbitrary_length_pattern> } ] 
+      [ ,…n] 
+    )
+  } 
+
+<arbitrary_length_match_last_node_predicate> ::=
+  {  LAST_NODE( <node_alias> ) = LAST_NODE( <node_alias> ) }
+
+
+<arbitrary_length_pattern> ::=
+    {  LAST_NODE( <node_alias> )   | <node_alias>
+     ( <edge_first_al_pattern> [<edge_first_al_pattern>…,n] )
+     <al_pattern_quantifier> 
+  }
+    |  ( {<node_first_al_pattern> [<node_first_al_pattern> …,n] )
+        <al_pattern_quantifier> 
+        LAST_NODE( <node_alias> ) | <node_alias> 
+ }
+    
+<edge_first_al_pattern> ::=
+  { (  
+        { -( <edge_alias> )->   } 
+      | { <-( <edge_alias> )- } 
+      <node_alias>
+      ) 
+  } 
+
+<node_first_al_pattern> ::=
+  { ( 
+      <node_alias> 
+        { <-( <edge_alias> )- } 
+      | { -( <edge_alias> )-> }
+      ) 
+  } 
+
+
+<al_pattern_quantifier> ::=
+  {
+        +
+      | { 1 , n }
+  }
+
+n -  positive integer only.
+ 
 ```
 
 ## <a name="arguments"></a>Argumentos  
@@ -64,6 +124,16 @@ Nome ou alias de uma tabela de nó fornecida na cláusula FROM.
 *edge_alias*  
 Nome ou alias de uma tabela de borda fornecida na cláusula FROM.
 
+*SHORTEST_PATH*   
+A função de caminho mais curta é usada para localizar o caminho mais curto entre dois nós ou entre um determinado nó e todos os outros nós em um gráfico. Ela usa como entrada um padrão de comprimento arbitrário que é pesquisado repetidamente em um gráfico. 
+
+*arbitrary_length_match_pattern*  
+Especifica os nós e bordas que precisam ser atravessadas repetidamente até atingir o nó desejado ou o número máximo de iterações, conforme especificado no padrão for atendido. 
+
+*al_pattern_quantifier*   
+O padrão de comprimento arbitrário considera quantificadores padrão de estilo de expressão regular para especificar o número de vezes que um padrão de pesquisa fornecido é repetido. Os quantificadores padrão de pesquisa compatíveis são:   
+* **+** : Repete o padrão por 1 ou mais vezes. É encerrado assim que encontra um caminho mais curto.    
+* **{1,n}** : repete o padrão 1 por “n” horas. É encerrado assim que encontra um caminho mais curto.     
 
 ## <a name="remarks"></a>Remarks  
 Os nomes de nó dentro de MATCH podem ser repetidos.  Em outras palavras, um nó pode ser percorrido um número arbitrário de vezes na mesma consulta.  

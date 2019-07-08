@@ -1,7 +1,7 @@
 ---
 title: ALTER INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/03/2018
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abffa2d7bebfcf6defab15cf058c4fdf50b359c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 758c6524e124557083fc61af234283b567633a7b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413647"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388848"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -127,6 +127,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 {  
       ALLOW_ROW_LOCKS = { ON | OFF }  
     | ALLOW_PAGE_LOCKS = { ON | OFF }  
+    | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
     | IGNORE_DUP_KEY = { ON | OFF }  
     | STATISTICS_NORECOMPUTE = { ON | OFF }  
     | COMPRESSION_DELAY= {0 | delay [Minutes]}  
@@ -467,7 +468,13 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
 > [!NOTE]
 >  Um índice não pode ser reorganizado quando ALLOW_PAGE_LOCKS está definido como OFF.  
-  
+
+ OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
+
+**Aplica-se a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e posterior.
+
+Especifica se a contenção de inserção de última página será ou não otimizada. O padrão é OFF. Para saber mais, confira a seção [Chaves sequenciais](./create-index-transact-sql.md#sequential-keys) da página CREATE INDEX.
+
  MAXDOP **=** max_degree_of_parallelism  
  
 **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -686,7 +693,7 @@ Se uma tabela estiver em uma publicação de replicação transacional, não ser
 Use a instrução ALTER INDEX REBUILD ou CREATE INDEX WITH DROP_EXISTING para habilitar o índice. A recriação de um índice clusterizado desabilitado não pode ser executada com a opção ONLINE definida como ON. Para obter mais informações, consulte [Desabilitar índices e restrições](../../relational-databases/indexes/disable-indexes-and-constraints.md).  
   
 ## <a name="setting-options"></a>Opções de configuração  
-É possível definir as opções ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, IGNORE_DUP_KEY e STATISTICS_NORECOMPUTE para um índice especificado sem recriá-lo ou reorganizá-lo. Os valores modificados são aplicados imediatamente ao índice. Para exibir essas configurações, use **sys.indexes**. Para obter mais informações sobre opções de índice, consulte [Definir opções de índice](../../relational-databases/indexes/set-index-options.md).  
+É possível definir as opções ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, OPTIMIZE_FOR_SEQUENTIAL_KEY, IGNORE_DUP_KEY e STATISTICS_NORECOMPUTE para um índice especificado sem recriá-lo ou reorganizá-lo. Os valores modificados são aplicados imediatamente ao índice. Para exibir essas configurações, use **sys.indexes**. Para obter mais informações sobre opções de índice, consulte [Definir opções de índice](../../relational-databases/indexes/set-index-options.md).  
   
 ### <a name="row-and-page-locks-options"></a>Opções de bloqueios de linha e de página  
 Quando ALLOW_ROW_LOCKS = ON e ALLOW_PAGE_LOCK = ON, os bloqueios em nível de linha, página e tabela são permitidos quando você acessa o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] escolhe o bloqueio apropriado e pode escalar o bloqueio de uma linha ou página para um bloqueio de tabela.  

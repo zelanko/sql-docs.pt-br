@@ -32,12 +32,12 @@ author: juliemsft
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e26632a80efce073df66f3d4fd564d513e4b28e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0987f9efdf3e19f3a79d9d39c0ce2661a97fdbe
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62758691"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343960"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -119,20 +119,20 @@ GO
 EXEC FindEmployee @EmpLName = 'Barb';  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+FirstName      LastName            City
+----------     -------------------- --------------- 
+Angela         Barbariol            Snohomish
+David          Barber               Snohomish
+(2 row(s) affected)  
+```
+
+## <a name="pattern-matching-by-using-like"></a>Correspondência de padrão com o uso de LIKE  
+ LIKE dar suporte à correspondência de padrão ASCII e à correspondência de padrão Unicode. Quando todos os argumentos (*match_expression*, *pattern* e *escape_character*, se presente) são tipos de dados de caractere ASCII, a correspondência de padrões ASCII é executada. Se algum dos argumentos for do tipo de dados Unicode, todos os argumentos serão convertidos em Unicode e será executada a correspondência de padrão Unicode. Ao usar dados Unicode (tipos de dados **nchar** ou **nvarchar**) com LIKE, os espaços em branco à direita são significativos; entretanto, para dados não Unicode, os espaços em branco à direita não são significativos. LIKE Unicode é compatível com o padrão ISO. LIKE ASCII é compatível com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ```
- FirstName      LastName            City
- ----------     -------------------- --------------- 
- Angela         Barbariol            Snohomish
- David          Barber               Snohomish
- (2 row(s) affected)  
- ``` 
- 
-## Pattern Matching by Using LIKE  
- LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks aren't significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- The following is a series of examples that show the differences in rows returned between ASCII and Unicode LIKE pattern matching.  
+ A seguir é apresentada uma série de exemplos que mostram as diferenças em linhas retornadas entre a correspondência de padrão LIKE ASCII e Unicode.  
   
 ```sql  
 -- ASCII pattern matching with char column  
@@ -155,7 +155,7 @@ INSERT INTO t VALUES ('Robert King');
 SELECT *   
 FROM t   
 WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row  
-```  
+```
   
 > [!NOTE]  
 >  As comparações de LIKE são afetadas por ordenação. Para obter mais informações, veja [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  

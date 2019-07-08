@@ -1,7 +1,7 @@
 ---
 title: Definir opções de índice | Microsoft Docs
 ms.custom: ''
-ms.date: 02/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
@@ -19,18 +19,19 @@ helpviewer_keywords:
 - MAXDOP index option
 - IGNORE_DUP_KEY option
 - ALLOW_PAGE_LOCKS option
+- OPTIMIZE_FOR_SEQUENTIAL_KEY option
 - ONLINE
 ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f852bcf9a1cf195df6ebf05738cc63536ee4941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9df2387d36f68692a38b71d9bd995997b47f34f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62687106"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579378"
 ---
 # <a name="set-index-options"></a>Opções Set Index
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ ms.locfileid: "62687106"
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
--   As opções a seguir são aplicadas imediatamente ao índice usando a cláusula SET na instrução ALTER INDEX: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY e STATISTICS_NORECOMPUTE.  
+-   As opções a seguir são aplicadas imediatamente ao índice usando a cláusula SET na instrução ALTER INDEX: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, OPTIMIZE_FOR_SEQUENTIAL_KEY, IGNORE_DUP_KEY e STATISTICS_NORECOMPUTE.  
   
 -   As seguintes opções podem ser definidas quando você recompila um índice usando ALTER INDEX REBUILD ou CREATE INDEX WITH DROP_EXISTING: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP e DROP_EXISTING (somente CREATE INDEX).  
   
@@ -83,7 +84,9 @@ ms.locfileid: "62687106"
 7.  Clique em **Fechar**.  
   
 8.  No menu **Arquivo** , selecione **Salvar**_table_name_.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>Para modificar as propriedades de um índice no Pesquisador de Objetos  
   
 1.  No Pesquisador de Objetos, clique no sinal de adição ao lado do banco de dados que contém a tabela na qual você modificar as propriedades de um índice.  

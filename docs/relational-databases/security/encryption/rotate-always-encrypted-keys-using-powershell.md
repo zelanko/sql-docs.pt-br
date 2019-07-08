@@ -1,7 +1,7 @@
 ---
 title: Girar as chaves Always Encrypted usando o PowerShell | Microsoft Docs
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95718cff851a9ec13cda4cfa5d192bd366d7edcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b74fd823b513114e84c5ac22c5d8f8404d352e68
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413470"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387913"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Girar chaves Always Encrypted usando o PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ Always Encrypted usa dois tipos de chaves, portanto, há dois fluxos de trabalho
 * **Rotação de chaves de criptografia da coluna** - envolve descriptografar dados criptografados com a chave atual e criptografá-los novamente usando a nova chave de criptografia de coluna. Como girar uma chave de criptografia de coluna requer acesso ao banco de dados e às chaves, a rotação de chaves de criptografia de coluna só pode ser executada sem a separação de funções.
 * **Rotação de chave mestra de coluna** - envolve a descriptografia de chaves de criptografia de coluna que são protegidas com a chave mestra de coluna atual, criptografando-os novamente usando a nova chave mestra de coluna e atualizando os metadados para os dois tipos de chaves. A rotação de chave mestra de coluna pode ser concluída com ou sem a separação de funções (usando o módulo do SqlServer PowerShell).
 
-
 ## <a name="column-master-key-rotation-without-role-separation"></a>Rotação de chave mestra da coluna sem separação de funções
-O método de girar uma chave mestra de coluna descrito nesta seção não dá suporte à separação de funções entre um Administrador de Segurança e um DBA. Algumas das etapas abaixo combinam operações nas chaves físicas com operações em metadados de chaves, por isso esse fluxo de trabalho é recomendado para organizações que usam o modelo de DevOps ou quando o banco de dados está hospedado na nuvem e o principal objetivo for impedir que os administradores de nuvem (mas não os DBAs locais) acessem dados confidenciais. Isso não é recomendável se os adversários em potencial incluem DBAs, ou se os DBAs simplesmente não devem ter acesso a dados confidenciais.  
+
+O método de girar uma chave mestra de coluna descrito nesta seção não dá suporte à separação de funções entre um Administrador de Segurança e um DBA. Algumas das etapas abaixo combinam operações nas chaves físicas com operações em metadados de chaves, por isso esse fluxo de trabalho é recomendado para organizações que usam o modelo de DevOps ou quando o banco de dados está hospedado na nuvem e o principal objetivo for impedir que os administradores de nuvem (mas não os DBAs locais) acessem dados confidenciais. Isso não é recomendável se os adversários em potencial incluírem DBAs, ou se os DBAs não tiverem acesso a dados confidenciais.  
 
 
 | Tarefa | Artigo | Acessa chaves de texto não criptografado/repositório de chaves| Acessar banco de dados
@@ -96,8 +96,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 O fluxo de trabalho de rotação de chave mestra de coluna descrito nesta seção garante a separação entre um Administrador de Segurança e um DBA.
 
 > [!IMPORTANT]
-> Antes de executar as etapas em que *Acessa chaves de texto não criptografado/repositório de chaves*=**Sim** na tabela a seguir (etapas que acessam chaves de texto não criptografado ou o repositório de chaves), verifique se o ambiente do PowerShell é executado em um computador seguro diferente daquele que hospeda o banco de dados. Para obter mais informações, consulte [Considerações de Segurança para o Gerenciamento de Chaves](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
-
+> Antes de executar as etapas em que *Acessa chaves de texto não criptografado/repositório de chaves*=**Sim** na tabela a seguir (etapas que acessam chaves de texto não criptografado ou o repositório de chaves), verifique se o ambiente do PowerShell é executado em um computador seguro diferente daquele que hospeda o banco de dados. Para obter mais informações, consulte [Considerações de Segurança para o Gerenciamento de Chaves](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
 ### <a name="part-1-dba"></a>Parte 1: DBA
 
@@ -129,7 +128,6 @@ O Administrador de Segurança gera uma nova chave mestra de coluna, criptografa 
 
 > [!NOTE]
 > É altamente recomendável não excluir a chave mestra de coluna antiga permanentemente após a rotação. Em vez disso, você deve manter a chave mestra de coluna antiga em seu repositório de chaves atual ou arquivá-la em outro local seguro. Se você restaurar seu banco de dados de um arquivo de backup para um ponto *anterior à* configuração da nova chave mestra de coluna, precisará da chave antiga para acessar os dados.
-
 
 ### <a name="part-3-dba"></a>Parte 3: DBA
 
@@ -296,12 +294,11 @@ Complete-SqlColumnMasterKeyRotation -SourceColumnMasterKeyName $oldCmkName  -Inp
 Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 ```
 
-
 ## <a name="rotating-a-column-encryption-key"></a>Girando uma chave de criptografia de coluna
 
-Girar uma chave de criptografia da coluna envolve descriptografar os dados criptografados com a chave atual em todas as colunas e criptografá-los novamente usando a nova chave de criptografia de coluna. Esse fluxo de trabalho de rotação requer acesso às chaves e ao banco de dados, não podendo, portanto, ser executado com a separação de funções. Observe que girar uma chave de criptografia de coluna pode demorar muito tempo se as tabelas que contém as colunas criptografadas com a chave que está sendo girada forem grandes. Portanto, sua organização precisa planejar uma rotação de chave de criptografia de coluna com muito cuidado.
+Girar uma chave de criptografia da coluna envolve descriptografar os dados criptografados com a chave atual em todas as colunas e criptografá-los novamente usando a nova chave de criptografia de coluna. Esse fluxo de trabalho de rotação requer acesso às chaves e ao banco de dados, portanto, não pode ser executado com a separação de funções. Girar uma chave de criptografia de coluna pode demorar muito tempo se as tabelas que contêm as colunas criptografadas com a chave que está sendo girada forem grandes. Portanto, sua organização precisa planejar uma rotação de chave de criptografia de coluna com cuidado.
 
-Você pode girar uma chave de criptografia de coluna usando uma abordagem offline ou online. O primeiro método é provavelmente mais rápido, mas não é possível gravar seus aplicativos nas tabelas afetadas. A segunda abordagem provavelmente levará mais tempo, mas você pode limitar o intervalo de tempo durante o qual as tabelas afetadas não estão disponíveis para os aplicativos. Veja [Configurar criptografia de coluna usando o PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) e [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption/) para obter mais detalhes.
+Você pode girar uma chave de criptografia de coluna usando uma abordagem offline ou online. O primeiro método é provavelmente mais rápido, mas seus aplicativos não conseguem gravar nas tabelas afetadas. A segunda abordagem provavelmente levará mais tempo, mas você pode limitar o intervalo de tempo durante o qual as tabelas afetadas não estarão disponíveis para os aplicativos. Confira [Configurar criptografia de coluna usando o PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) e [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption/) para obter mais detalhes.
 
 | Tarefa | Artigo | Acessa chaves de texto não criptografado/repositório de chaves| Acessar banco de dados
 |:---|:---|:---|:---
@@ -311,12 +308,12 @@ Você pode girar uma chave de criptografia de coluna usando uma abordagem offlin
 |Etapa 4. Gere uma nova chave de criptografia de coluna, criptografe-a com a chave mestra de coluna e crie metadados de chave de criptografia de coluna no banco de dados.  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Observação:** use uma variação do cmdlet que gera e criptografa internamente uma chave de criptografia de coluna.<br>Nos bastidores, esse cmdlet emite a instrução [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) para criar metadados de chave. | Sim | Sim
 |Etapa 5. Localize todas as colunas criptografadas com a chave de criptografia de coluna antiga. | [Guia de Programação do SQL Server Management Objects (SMO)](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | Não | Sim
 |Etapa 6. Crie um objeto *SqlColumnEncryptionSettings* para cada coluna afetada.  SqlColumnMasterKeySettings é um objeto que existe na memória (no PowerShell). Especifica o esquema de criptografia de destino para uma coluna. Nesse caso, o objeto deve especificar que a coluna afetada deve ser criptografada usando a nova chave de criptografia de coluna. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | Não | Não
-|Etapa 7. Criptografe novamente as colunas identificadas na etapa 5 usando a nova chave de criptografia de coluna. | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Observação:** esta etapa pode levar muito tempo. Seus aplicativos não poderão acessar as tabelas por meio da operação inteira ou parte dela, dependendo da abordagem (online versus offline) que você seleciona. | Sim | Sim
+|Etapa 7. Criptografe novamente as colunas identificadas na etapa 5 usando a nova chave de criptografia de coluna. | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Observação:** esta etapa pode levar muito tempo. Seus aplicativos não poderão acessar as tabelas durante a operação inteira ou de parte dela, dependendo da abordagem (online versus offline) selecionada. | Sim | Sim
 |Etapa 8. Remova os metadados da chave de criptografia de coluna antiga. | [Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey) | Não | Sim
 
 ### <a name="example---rotating-a-column-encryption-key"></a>Exemplo: girando uma chave de criptografia de coluna
 
-O script abaixo demonstra a rotação de uma chave de criptografia de coluna.  O script supõe que o banco de dados de destino contém algumas colunas criptografadas com uma chave de criptografia de coluna chamada CEK1 (que será girada), a qual é protegida usando uma chave mestra de coluna chamada CMK1 (a chave mestra de coluna não está armazenada no Cofre de Chaves do Azure).
+O script abaixo demonstra a rotação de uma chave de criptografia de coluna.  O script supõe que o banco de dados de destino contém algumas colunas criptografadas com uma chave de criptografia de coluna chamada CEK1 (que será girada), que é protegida usando uma chave mestra de coluna chamada CMK1 (a chave mestra de coluna não está armazenada no Azure Key Vault).
 
 
 ```

@@ -1,7 +1,7 @@
 ---
 title: Restrições de borda de grafo | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,31 +13,22 @@ helpviewer_keywords:
 - edge constraints [Azure SQL Database]
 - graph edge constraints
 - SQL Graph
-ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86544dee5262a1d04c1ff1d8e59f8ddac5e9b5ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
+ms.openlocfilehash: aa73858e6df29c814821ee9e24923cbfc0fbd4a2
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64774650"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343888"
 ---
 # <a name="edge-constraints"></a>Restrições do Microsoft Edge
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-  Restrições de borda podem ser usadas para impor a integridade dos dados e uma semântica específica às tabelas de borda no banco de dados de gráfico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-  
-Este artigo inclui as seções a seguir.  
-  
-[Restrições de borda](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[Restrições de borda](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
-  
-[Tarefas relacionadas](../../relational-databases/tables/graph-edge-constraints.md#Tasks)  
-  
+É possível usar restrições de borda para impor a integridade dos dados e uma semântica específica às tabelas de borda no banco de dados de gráfico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
 ##  <a name="Connection"></a> Restrições de borda
  Na primeira versão dos recursos de gráfico, as tabelas de borda não impunham nada aos pontos de extremidade da borda. Ou seja, uma borda em um banco de dados de gráfico podia conectar qualquer nó a qualquer outro nó, independentemente do tipo. 
 
@@ -66,3 +57,5 @@ Este artigo inclui as seções a seguir.
 |Descreve como excluir uma restrição de borda.|[Excluir restrição de borda](../../relational-databases/tables/delete-edge-constraint.md)|  
 |Descreve como modificar uma restrição de borda.|[Modificar restrição de borda](../../relational-databases/tables/modify-edge-constraint.md)|  
 |Descreve como exibir propriedades de restrição de borda.|[Exibir propriedades de restrição de borda](../../relational-databases/tables/view-edge-constraint-properties.md)|  
+| Visão geral da tecnologia do Graph no SQL Server | [Processamento do Graph com o SQL Server e o Banco de Dados SQL do Azure](../graphs/sql-graph-overview.md) |
+| &nbsp; | &nbsp; |

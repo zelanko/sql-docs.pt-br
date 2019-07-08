@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) – SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: dphansen
 ms.technology: t-sql
@@ -10,20 +10,20 @@ author: nelgson
 ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 223388d4a3c61dfb90ac9fa5434e9149bc25fae3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2185c40562e6ad7102ebde10cacb34c56d36f714
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994974"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399967"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Registra as extensões de linguagem externa no banco de dados com base no fluxo de bytes ou no caminho de arquivo especificado. Essa instrução funciona como um mecanismo genérico para o administrador de banco de dados registrar novas extensões de linguagens externas em qualquer plataforma de sistema operacional compatível com o SQL Server.
+Registra as extensões de linguagem externa no banco de dados com base no fluxo de bytes ou no caminho de arquivo especificado. Essa instrução funciona como um mecanismo genérico para o administrador de banco de dados registrar novas extensões de linguagens externas em qualquer plataforma de sistema operacional compatível com o SQL Server. Para saber mais, confira [Extensões de Linguagem](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 
 > [!NOTE]
-> **R** e **Python** são nomes reservados, e nenhuma linguagem externa pode ser criada com esses nomes específicos.
+> No momento, apenas o **Java** é compatível como linguagem externa. **R** e **Python** são nomes reservados, e nenhuma linguagem externa pode ser criada com esses nomes específicos. Para saber mais sobre como usar **R** e **Python**, confira [Serviços de Machine Learning do SQL Server](https://docs.microsoft.com/sql/advanced-analytics/sql-server-machine-learning-services).
 
 ## <a name="syntax"></a>Sintaxe
 

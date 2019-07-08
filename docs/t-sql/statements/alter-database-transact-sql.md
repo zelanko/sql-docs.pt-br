@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0753f6459ac832bd4b5564e356a62bcc8b54aa30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b05cca816684cbb95c625232883d06706edfe7f6
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944707"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351720"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -50,7 +50,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 
 ||||||
 |---|---|---|---|---|
-|** _\* SQL Server \*_ ** &nbsp;|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|** _\* SQL Server \*_** &nbsp;|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -273,7 +273,7 @@ GO
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|** _\* Banco de dados individual/pool elástico<br />do Banco de Dados SQL \*_ ** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|** _\* Banco de dados individual/pool elástico<br />do Banco de Dados SQL \*_** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -478,8 +478,8 @@ Se nenhum `MAXSIZE`valor for definido ao usar o modelo vCore, o padrão será de
 
 As regras a seguir se aplicam aos argumentos MAXSIZE e EDITION:
 
-- Se EDITION for especificado, mas MAXSIZE não for especificado, o valor padrão da edição será usado. Por exemplo, se EDITION for definido como Standard e MAXSIZE não for especificado, MAXSIZE será automaticamente definido como 500 MB.
-- Se nem MAXSIZE nem EDITION forem especificados, EDITION será definido como Standard (S0) e MAXZISE será definido como 250 GB.
+- Se EDITION for especificado, mas MAXSIZE não for especificado, o valor padrão da edição será usado. Por exemplo, se EDITION for definido como Standard e MAXSIZE não for especificado, MAXSIZE será automaticamente definido como 250 MB.
+- Se nem MAXSIZE nem EDITION forem especificados, EDITION será definido como Uso Geral e MAXSIZE será definido como 32 GB.
 
 MODIFY (SERVICE_OBJECTIVE = \<service-objective>) Especifica o nível de desempenho. A exemplo a seguir altera o objetivo de serviço de um banco de dados Premium para `P6`:
 
@@ -659,7 +659,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-current)|** _\* Instância gerenciada<br />do Banco de Dados SQL \*_ ** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-current)|** _\* Instância gerenciada<br />do Banco de Dados SQL \*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -780,7 +780,7 @@ ALTER DATABASE WideWorldImporters
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|** _\* SQL Data<br />Warehouse \*_ ** &nbsp;|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|** _\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -901,7 +901,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System (PDW) \*_ ** &nbsp;|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;

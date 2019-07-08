@@ -20,12 +20,12 @@ ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae19cf74753b07dba1e6c274f1a102e1fe745f1c
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 209f11341fa8825e7c67281a8a58ccb338a1376b
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58325519"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463572"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Trabalhar com várias versões e instâncias do SQL Server
 
@@ -39,7 +39,7 @@ Os seguintes itens relacionados ao SQL Server são compatíveis com a instalaç�
 
 - Analysis Services
 
-::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - Reporting Services
 ::: moniker-end
 

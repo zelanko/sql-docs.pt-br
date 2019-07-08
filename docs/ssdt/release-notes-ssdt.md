@@ -12,20 +12,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 80836cb5ab67f221ff3f9965d1980bcbc9c8378d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef3cd72348cc93eee37716007c7975731b2da333
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101908"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400089"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Notas sobre a versão para o SSDT (SQL Server Data Tools)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Estas notas sobre a versão dizem respeito ao [SSDT (SQL Server Data Tools)](download-sql-server-data-tools-ssdt.md) para VS (Visual Studio).
-
-Para ver postagens detalhadas sobre as novidades e alterações, visite [o blog da Equipe do SSDT](https://blogs.msdn.microsoft.com/ssdt/)
 
 <!--
 Hello.  We have switched to a newer standardized format for Release Notes articles.
@@ -72,6 +70,7 @@ _SSDT para Visual Studio 2017._
 | :---------- | :------ |
 | A Tarefa Executar Pacote do SSIS não é compatível com a depuração quando ExecuteOutOfProcess está definido como True. | Esse problema aplica-se somente à depuração. O salvamento, a implantação e a execução por meio do DTExec.exe ou do catálogo do SSIS não são afetados. |
 | O SSDT para Visual Studio 2017 superior a 15.8 não dá suporte para a criação de pacotes com origem/destino Teradata. | Use o SSDT para Visual Studio 2017 (15.8). |
+| Não é possível criar ou editar fontes de dados no modelo de implantação de pacote. | Falha ao abrir o Assistente de Fonte de Dados. |
 | O Power Query Source pode não ser compatível com OData v4 quando SSIS e SSAS estiverem instalados na mesma instância do Visual Studio. | &nbsp; |
 | O Power Query Source pode não ser compatível com o uso de ODBC para se conectar ao Oracle quando SSIS e SSAS estiverem instalados na mesma instância do Visual Studio. | &nbsp; |
 | Power Query Source não é localizado. | &nbsp; |

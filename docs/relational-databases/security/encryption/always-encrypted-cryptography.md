@@ -1,7 +1,7 @@
 ---
 title: Criptografia Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 02/29/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,26 +13,26 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cd361a27a07c7b7750046d9664d77fd6d3fdc04
-ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
+ms.openlocfilehash: 6e0ec7ce1a9c3a171ea44b23c5fa4a5897ad7de8
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007579"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388374"
 ---
 # <a name="always-encrypted-cryptography"></a>Criptografia Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Este documento descreve mecanismos e algoritmos de criptografia para derivar o material criptográfico usado no recurso [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)].  
   
-## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Chaves, repositórios de chaves e algoritmos de criptografia de chave  
+## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Chaves, repositórios de chaves e algoritmos de criptografia de chave
  O Always Encrypted usa dois tipos de chaves: Chaves mestras de coluna e chaves de criptografia de coluna.  
   
- Uma CMK (chave mestra de coluna) é uma chave que criptografa uma chave (isto é, uma chave usada para criptografar outras chaves) que está sempre no controle do cliente e é armazenada em um repositório de chaves externas. Um driver de cliente habilitado para Always Encrypted interage com o repositório de chaves por meio de um provedor de repositório CMK, que pode fazer parte da biblioteca de drivers (um provedor do sistema/ [!INCLUDE[msCoName](../../../includes/msconame-md.md)]) ou parte do aplicativo cliente (um provedor personalizado). Atualmente, as bibliotecas de drivers de cliente incluem provedores de repositório de chaves [!INCLUDE[msCoName](../../../includes/msconame-md.md)] para [Repositório de Certificados do Windows](/windows/desktop/SecCrypto/using-certificate-stores) e HSMs (módulos de segurança de hardware).  (Para obter a lista atual de provedores, veja [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) Um desenvolvedor de aplicativos pode fornecer um provedor personalizado para um repositório arbitrário.  
+ Uma CMK (chave mestra de coluna) é uma chave que criptografa uma chave (por exemplo, uma chave usada para criptografar outras chaves) que está sempre no controle do cliente e é armazenada em um repositório de chaves externas. Um driver de cliente habilitado para Always Encrypted interage com o repositório de chaves por meio de um provedor de repositório CMK, que pode fazer parte da biblioteca de drivers (um provedor do sistema/ [!INCLUDE[msCoName](../../../includes/msconame-md.md)]) ou parte do aplicativo cliente (um provedor personalizado). Atualmente, as bibliotecas de drivers de cliente incluem provedores de repositório de chaves [!INCLUDE[msCoName](../../../includes/msconame-md.md)] para [Repositório de Certificados do Windows](/windows/desktop/SecCrypto/using-certificate-stores) e HSMs (módulos de segurança de hardware).  (Para obter a lista atual de provedores, veja [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) Um desenvolvedor de aplicativos pode fornecer um provedor personalizado para um repositório arbitrário.  
   
- Uma CEK (chave de criptografia de coluna) é uma criptografia de conteúdo (isto é, uma chave usada para proteger dados) protegida por uma CMK.  
+ Uma CEK (chave de criptografia de coluna) é uma criptografia de conteúdo (por exemplo, uma chave usada para proteger dados) protegida por uma CMK.  
   
- Todos os provedores de repositórios de CMK [!INCLUDE[msCoName](../../../includes/msconame-md.md)] criptografam CEKs usando RSA-OAEP (RSA com Preenchimento de Criptografia Assimétrica Ideal) com os parâmetros padrão especificados pela RFC 8017 na Seção A.2.1. Esses parâmetros padrão estão usando uma função de hash de SHA-1 e uma função de geração de máscara de MGF1 com SHA-1.  
+ Todos os provedores de repositórios de CMK [!INCLUDE[msCoName](../../../includes/msconame-md.md)] criptografam CEKs usando RSA-OAEP (RSA com Preenchimento de Criptografia Assimétrica Ideal). O provedor de repositório de chaves que dá suporte à API de Criptografia da Microsoft: A próxima geração (CNG) no .NET Framework ([SqlColumnEncryptionCngProvider Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) usa os parâmetros padrão especificados por RFC 8017 na seção A.2.1. Esses parâmetros padrão estão usando uma função de hash de SHA-1 e uma função de geração de máscara de MGF1 com SHA-1. Todos os outros provedores de repositório de chaves usam SHA-256. 
   
 ## <a name="data-encryption-algorithm"></a>Algoritmo de criptografia de dados  
  O Always Encrypted usa o algoritmo **AEAD_AES_256_CBC_HMAC_SHA_256** para criptografar dados no banco de dados.  
@@ -56,7 +56,7 @@ ms.locfileid: "57007579"
 When using randomized encryption: IV = Generate cryptographicaly random 128bits  
 ```  
   
- No caso de criptografia determinística, o IV não é gerado aleatoriamente, mas, em vez disso, ele é derivado do valor de texto não criptografado usando o seguinte algoritmo:  
+ Caso haja criptografia determinística, o IV não é gerado aleatoriamente, mas, em vez disso, ele é derivado do valor de texto não criptografado usando o seguinte algoritmo:  
   
 ```  
 When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) truncated to 128 bits.  
@@ -68,7 +68,7 @@ When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) trun
 iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_length)  
 ```  
   
- O truncamento do valor HMAC é executado para adequação de 1 bloco de dados conforme a necessidade do IV.    
+ O truncamento do valor HMAC é executado para adequação de 1 bloco de dados conforme a necessidade do IV.
 Como resultado, a criptografia determinística sempre produz o mesmo texto cifrado para um determinado valor de texto não criptografado, o que permite inferir se dois valores de texto não criptografado são iguais comparando seus valores de texto cifrado correspondentes. Essa divulgação limitada de informações permite que o sistema de banco de dados ofereça suporte à comparação de igualdade em valores de coluna criptografados.  
   
  A criptografia determinística é mais eficaz em ocultar padrões, em comparação com as alternativas, como usar um valor predefinido de IV.  
@@ -96,12 +96,12 @@ MAC = HMAC-SHA-256(mac_key, versionbyte + IV + Ciphertext + versionbyte_length)
  Onde:  
   
 ```  
-versionbyte = 0x01 and versionbyte_length = 1   
+versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
 ### <a name="step-4-concatenation"></a>Etapa 4: Concatenation  
- Por fim, o valor criptografado é produzido simplesmente com a concatenação do byte da versão do algoritmo, do MAC, do IV e do texto cifrado AES_256_CBC:  
+ Por fim, o valor criptografado é produzido com a concatenação do byte da versão do algoritmo, do MAC, do IV e do texto cifrado AES_256_CBC:  
   
 ```  
 aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext  

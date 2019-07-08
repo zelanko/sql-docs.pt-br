@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c33b07af2ad43f15913580ce55c173d04a876366
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 67131c083966244db252c047b200c2a6d979aadb
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511538"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388144"
 ---
 # <a name="columnstore-indexes---defragmentation"></a>Índices columnstore – desfragmentação
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,6 +55,9 @@ Use o exemplo em [sys.dm_db_column_store_row_group_physical_stats &#40;Transact-
     CREATE DATABASE [columnstore];  
     GO  
   
+    USE columnstore;
+    GO
+
     IF EXISTS (SELECT name FROM sys.tables  
         WHERE name = N'staging'  
         AND object_id = OBJECT_ID (N'staging'))  

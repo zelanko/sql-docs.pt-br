@@ -12,12 +12,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 81fd6e4a9be7b27190491c6a36ef536e3c1ba669
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1d9b9d9ac9c5b1a0eeb7d40640db83ce688ae7e5
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212485"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67396520"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services com grupos de disponibilidade AlwaysOn
 
@@ -27,24 +27,12 @@ ms.locfileid: "53212485"
   
  O processamento e a consulta são cargas de trabalho somente leitura. Você pode melhorar o desempenho descarregando essas cargas de trabalho em uma réplica secundária legível. Este cenário exige configuração adicional. Use a lista de verificação neste tópico para garantir que você siga todas as etapas.  
   
- [Pré-requisitos](#bkmk_prereq)  
-  
- [Lista de verificação: usar uma réplica secundária para operações somente leitura](#bkmk_UseSecondary)  
-  
- [Criar uma fonte de dados do Analysis Services usando um banco de dados de disponibilidade AlwaysOn](#bkmk_ssasAODB)  
-  
- [Testar a configuração](#bkmk_test)  
-  
- [O que acontece depois que um failover ocorre](#bkmk_whathappens)  
-  
- [Write-back ao usar um banco de dados de disponibilidade AlwaysOn](#bkmk_writeback)  
-  
 ##  <a name="bkmk_prereq"></a> Pré-requisitos  
  Você deve ter um logon do SQL Server em todas as réplicas. Você deve ser um **sysadmin** para configurar grupos de disponibilidade, ouvintes e bancos de dados, mas os usuários só precisam de permissões **db_datareader** para acessar o banco de dados de um cliente do Analysis Services.  
   
  Use um provedor de dados que oferece suporte ao protocolo TDS versão 7.4 ou mais recente, como o SQL Server Native Client 11.0 ou o Provedor de Dados para o SQL Server no .NET Framework 4.02.  
   
- **(Para cargas de trabalho somente leitura)**. A função de réplica secundária deve ser configurada para conexões somente leitura; o grupo de disponibilidade deve ter uma lista de roteamento e a conexão na fonte de dados do Analysis Services deve especificar o ouvinte de grupo de disponibilidade. As instruções são fornecidas neste tópico.  
+ **(Para cargas de trabalho somente leitura)** . A função de réplica secundária deve ser configurada para conexões somente leitura; o grupo de disponibilidade deve ter uma lista de roteamento e a conexão na fonte de dados do Analysis Services deve especificar o ouvinte de grupo de disponibilidade. As instruções são fornecidas neste tópico.  
   
 ##  <a name="bkmk_UseSecondary"></a> Lista de verificação: usar uma réplica secundária para operações somente leitura  
  A menos que a solução Analysis Services inclua writeback, você pode configurar uma conexão da fonte de dados para usar uma réplica secundária legível. Se você tiver uma conexão de rede rápida, a réplica secundária terá latência de dados muito baixa, fornecendo dados quase idênticos aos da réplica primária. Usando a réplica secundária em operações do Analysis Services, você pode reduzir a contenção de leitura/gravação na réplica primária e obter uma melhor utilização de réplicas secundárias em seu grupo de disponibilidade.  

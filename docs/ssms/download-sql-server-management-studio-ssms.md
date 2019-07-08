@@ -24,12 +24,12 @@ ms.author: dinethi
 manager: craigg
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 7993cfbf21efcbb6f984a91347987e5805741904
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 403ca9e5132a00f003aa67a2011d98d0044b4807
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67033402"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399660"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Baixar o SQL Server Management Studio (SSMS)
 
@@ -68,7 +68,6 @@ Esta versão do SSMS pode ser instalada nos seguintes idiomas:
 SQL Server Management Studio 18.1:<br>
 [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 
-
 > [!NOTE]
 > O módulo do SQL Server PowerShell é uma instalação separada por meio da Galeria do PowerShell. Para obter mais informações, consulte [Baixar o Módulo SQL Server PowerShell](download-sql-server-ps-module.md).
 
@@ -79,7 +78,6 @@ SQL Server Management Studio 18.1:<br>
 - **SSIS (Integration Services)** – compatibilidade com o agendamento do pacote do SSIS, localizado no Catálogo do SSIS no Azure ou no Sistema de Arquivos no Azure. Existem três entradas para iniciar a caixa de diálogo Agendamento, o item de menu *Nova Agenda…* mostrado ao clicar com o botão direito do mouse no pacote do Catálogo do SSIS no Azure; o item de menu *Agendar Pacote do SSIS no Azure* em *Migrar para o Azure* no item de menu *Ferramentas*; e "Agendar o SSIS no Azure", mostrado ao clicar com o botão direito do mouse na pasta Trabalhos no agente do SQL Server da Instância Gerenciada do Banco de Dados SQL do Azure.
 
 Para obter detalhes sobre as novidades desta versão, confira [notas sobre a versão do SSMS](release-notes-ssms.md).
-
 
 ## <a name="supported-sql-offerings-ssms-181"></a>Ofertas de SQL compatíveis (SSMS 18.1)
 
@@ -93,7 +91,8 @@ Esta versão do SSMS é compatível com as seguintes plataformas de 64 bits quan
 
 - Windows 10 (64-bit) <sup>*</sup>
 - Windows 8.1 (64 bits)
-- Windows Server 2016 <sup>*</sup>
+- Windows Server 2019 (64 bits)
+- Windows Server 2016 (64 bits) <sup>*</sup>
 - Windows Server 2012 R2 (64 bits)
 - Windows Server 2012 (64 bits)
 - Windows Server 2008 R2 (64 bits)
@@ -105,7 +104,7 @@ Esta versão do SSMS é compatível com as seguintes plataformas de 64 bits quan
 
 ## <a name="release-notes-ssms-181"></a>Notas sobre a versão (SSMS 18.1)
 
-Não há nenhum problema conhecido nesta versão.
+Há alguns [problemas conhecidos](release-notes-ssms.md#known-issues-181) nesta versão.
 
 Para saber detalhes sobre esta versão, confira [as notas sobre a versão do SSMS](release-notes-ssms.md).
 

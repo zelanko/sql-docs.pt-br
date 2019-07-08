@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: ad844d0b08ba0323f9930970a3056e592e44c25e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19e64c2fa9f1006e07f6da72d8fdfc146c9faf8b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765719"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388113"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Criar um grupo de disponibilidade independente de domínio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,8 +71,10 @@ Um sufixo DNS comum é necessário para o Cluster de Grupo de Trabalho do Grupo 
 10. Você deverá reiniciar. Se você não desejar reiniciar imediatamente, clique em Reiniciar Depois; caso contrário, clique em Reiniciar Agora.
 11. Depois que o servidor for reinicializado, verifique se o sufixo DNS comum está configurado, examinando o Sistema novamente.
 
-
 ![Configuração bem-sucedida do sufixo DNS][4]
+
+  > [!NOTE]
+  > Se você estiver usando várias sub-redes e tiver um DNS estático, será necessário ter um processo em vigor para atualizar o registro DNS associado ao ouvinte antes de executar um failover. Caso contrário, o nome da rede não ficará online.
 
 ## <a name="create-a-domain-independent-availability-group"></a>Criar um grupo de disponibilidade independente de domínio
 

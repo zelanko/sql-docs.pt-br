@@ -1,7 +1,7 @@
 ---
 title: Visão geral do gerenciamento de chaves do Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 07/20/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9250b8e8ceb392973c5799d8cf473d8b94a267b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 27387a217ccd6c4a48921dae88b56d6ba1832240
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535394"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388756"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Overview of Key Management for Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Ao discutir chaves Always Encrypted e o gerenciamento de chaves, é importante c
 
 - ***Chaves mestras de coluna*** são chaves de proteção usadas para criptografar as chaves de criptografia de coluna. Chaves mestras de coluna devem ser armazenadas em um repositório de chave confiável, como o Repositório de Certificados do Windows, o Cofre de Chaves do Azure ou um módulo de segurança de hardware. O banco de dados só contém metadados sobre chaves mestras de coluna (o tipo e local do repositório de chaves). Os metadados de chave mestra de coluna são armazenados na exibição de catálogo [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) .  
 
-É importante observar que os metadados de chave no sistema de banco de dados não contém chaves mestras de coluna de texto não criptografado ou chaves de criptografia de coluna de texto não criptografado. O banco de dados contém apenas informações sobre o tipo e o local das chaves mestras de coluna e valores criptografados das chaves de criptografia de coluna. Isso significa que chaves com texto não criptografado nunca são expostas no sistema de banco de dados, garantindo que os dados protegidos que usam o Always Encrypted estejam seguros, mesmo se o sistema de banco de dados for comprometido. Para garantir que o sistema de banco de dados não possa obter acesso às chaves de texto não criptografado, execute as ferramentas de gerenciamento de chaves em um computador diferente daquele que hospeda seu banco de dados. Leia a seção [Considerações de segurança para gerenciamento de chaves](#SecurityForKeyManagement) abaixo para ver os detalhes.
+É importante observar que os metadados de chave no sistema de banco de dados não contém chaves mestras de coluna de texto não criptografado ou chaves de criptografia de coluna de texto não criptografado. O banco de dados contém apenas informações sobre o tipo e o local das chaves mestras de coluna e valores criptografados das chaves de criptografia de coluna. Isso significa que chaves com texto não criptografado nunca são expostas no sistema de banco de dados, garantindo que os dados protegidos que usam o Always Encrypted estejam seguros, mesmo se o sistema de banco de dados for comprometido. Para garantir que o sistema de banco de dados não possa obter acesso às chaves de texto não criptografado, execute as ferramentas de gerenciamento de chaves em um computador diferente daquele que hospeda seu banco de dados. Leia a seção [Considerações de segurança para gerenciamento de chaves](#security-considerations-for-key-management) abaixo para ver os detalhes.
 
 Como o banco de dados só contém dados criptografados (em colunas Always Encrypted protegidas) e não pode acessar as chaves de texto não criptografado, ele não pode descriptografar os dados. Isso significa que consultar colunas Always Encrypted simplesmente retornará valores criptografados, por isso aplicativos cliente que precisam criptografar ou descriptografar dados protegidos devem ser capazes de acessar a chave mestra de coluna e as chaves de criptografia de coluna relacionadas. Para ver os detalhes, consulte [Always Encrypted (desenvolvimento de cliente)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
@@ -59,7 +59,7 @@ Considerando as funções acima, há duas maneiras de executar tarefas de gerenc
 ## <a name="managing-keys-with-role-separation"></a>Gerenciamento de chaves com separação de funções
 Quando chaves Always Encrypted forem gerenciadas com separação de funções, pessoas diferentes em uma organização assumem as funções de Administrador de Segurança e de DBA. Um processo de gerenciamento de chaves com separação de funções garante que DBAs não tenham acesso a chaves ou repositórios de chaves que contém chaves reais e os Administradores de Segurança não tenham acesso ao banco de dados que contêm dados confidenciais. É recomendável gerenciar as chaves com separação de funções se sua meta for garantir que os DBAs na sua organização não possam acessar dados confidenciais. 
 
-**Observação:** Administradores de Segurança geram e trabalham com as chaves de texto não criptografado, por isso nunca devem executar suas tarefas nos mesmos computadores que hospedam um sistema de banco de dados ou computadores que podem ser acessados por DBAs ou outras pessoas que podem ser possíveis adversários. 
+**Observação:** Os Administradores de Segurança geram e trabalham com as chaves de texto não criptografado, por isso eles nunca devem executar as respectivas tarefas nos mesmos computadores que hospedam um sistema de banco de dados ou computadores que possam ser acessados por administradores de banco de dados ou por outras pessoas que possam ser potenciais concorrentes. 
 
 ## <a name="managing-keys-without-role-separation"></a>Gerenciamento de chaves sem separação de funções
 Quando chaves Always Encrypted são gerenciadas sem a separação de funções, uma única pessoa pode assumir ambas as funções de Administrador de Segurança e de DBA, o que significa que a pessoa precisa ser capaz de acessar e gerenciar tanto as chaves/repositório de chaves quanto os metadados de chaves. Gerenciar chaves sem separação de funções pode ser recomendado para organizações que usam o modelo de DevOps ou se o banco de dados estiver hospedado na nuvem e o principal objetivo for impedir que os administradores de nuvem (mas não os DBAs locais) acessem dados confidenciais.
@@ -82,7 +82,7 @@ Chaves Always Encrypted podem ser gerenciadas usando o [SSMS (SQL Server Managem
     - [Girar chaves Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
 
-## <a name="SecurityForKeyManagement"></a> Considerações de segurança para gerenciamento de chaves
+## <a name="security-considerations-for-key-management"></a>Considerações de segurança para gerenciamento de chaves
 
 O principal objetivo do Always Encrypted é garantir que os dados confidenciais armazenados em um banco de dados estejam seguros, mesmo se o sistema de banco de dados ou seu ambiente de hospedagem for comprometido. Exemplos de ataques de segurança em que o Always Encrypted pode ajudar a impedir vazamentos de dados confidenciais:
 

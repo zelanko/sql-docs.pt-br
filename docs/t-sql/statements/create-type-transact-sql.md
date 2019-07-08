@@ -27,12 +27,12 @@ ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fba367c376084ff4842ef165382fb5a91f410724
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: 02a84386929f2e62200cc67946be3567c6e02a51
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53265997"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463595"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,13 +52,15 @@ ms.locfileid: "53265997"
 -- User-defined Data Type Syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
-    FROM base_type   
-    [ ( precision [ , scale ] ) ]  
-    [ NULL | NOT NULL ]   
-  | EXTERNAL NAME assembly_name [ .class_name ]   
-AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
-    | [ <table_constraint> ] [ ,... n ]    
-    | [ <table_index> ] [ ,... n ] } )
+    [
+      FROM base_type   
+      [ ( precision [ , scale ] ) ]  
+      [ NULL | NOT NULL ]
+    ]
+    | EXTERNAL NAME assembly_name [ .class_name ]   
+    | AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
+      [ <table_constraint> ] [ ,... n ]    
+      [ <table_index> ] [ ,... n ] } )
  
 } [ ; ]  
   
@@ -206,7 +208,7 @@ column_name <data_type>
  **[.** *class_name* **]**  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica a classe dentro do assembly que implementa o tipo definido pelo usuário. *class_name* deve ser um identificador válido e deve existir como uma classe no assembly com visibilidade do assembly. *class_name* diferencia maiúsculas de minúsculas, independentemente da ordenação de banco de dados, e deve corresponder exatamente ao nome de classe no assembly correspondente. O nome de classe poderá ser um nome qualificado de namespace entre colchetes (**[ ]**) se a linguagem de programação usada para gravar a classe usar o conceito de namespaces, como C#. Se *class_name* não for especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assumirá que ele é o mesmo que *type_name*.  
+ Especifica a classe dentro do assembly que implementa o tipo definido pelo usuário. *class_name* deve ser um identificador válido e deve existir como uma classe no assembly com visibilidade do assembly. *class_name* diferencia maiúsculas de minúsculas, independentemente da ordenação de banco de dados, e deve corresponder exatamente ao nome de classe no assembly correspondente. O nome de classe poderá ser um nome qualificado de namespace entre colchetes ( **[ ]** ) se a linguagem de programação usada para gravar a classe usar o conceito de namespaces, como C#. Se *class_name* não for especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assumirá que ele é o mesmo que *type_name*.  
   
  \<column_definition>  
  Define as colunas para um tipo de tabela definido pelo usuário.  
@@ -293,7 +295,7 @@ CREATE TYPE SSN
 FROM varchar(11) NOT NULL ;  
 ```  
   
-### <a name="b-creating-a-user-defined-type"></a>b. Criando um tipo definido pelo usuário  
+### <a name="b-creating-a-user-defined-type"></a>B. Criando um tipo definido pelo usuário  
  O exemplo a seguir cria um tipo `Utf8String` que referencia a classe `utf8string` no assembly `utf8string`. Antes de criar o tipo, o assembly `utf8string` é registrado no banco de dados local. Substitua a parte binária da instrução CREATE ASSEMBLY por uma descrição válida.  
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -317,6 +319,25 @@ CREATE TYPE LocationTableType AS TABLE
     , CostRate INT );  
 GO  
 ```  
+
+### <a name="d-creating-a-user-defined-table-type-with-primary-key-and-index"></a>D. Como criar um tipo de tabela definido pelo usuário com o índice e a chave primária
+O exemplo a seguir cria um tipo de tabela definido pelo usuário que tem três colunas, uma delas (`Name`) é a chave primária e outra (`Price`) tem um índice não clusterizado.  Para obter mais informações sobre como criar e usar parâmetros com valor de tabela, consulte [Usar parâmetros com valor de tabela &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).
+
+```sql
+CREATE TYPE InventoryItem AS TABLE
+(
+    [Name] NVARCHAR(50) NOT NULL,
+    SupplierId BIGINT NOT NULL,
+    Price DECIMAL (18, 4) NULL,
+    PRIMARY KEY (
+        Name
+    ),
+    INDEX IX_InventoryItem_Price (
+        Price
+    )
+)
+GO
+```
   
 ## <a name="see-also"></a>Consulte Também  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   

@@ -21,18 +21,37 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 31bfc7ef9761ac40b56af9b733a29fbb12bc586e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e366d686bc71d9b4ee391013fedb25e93494c45
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822949"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413154"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON – sinalizadores de rastreamento (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Sinalizadores de rastreamento são usados para definir as características do servidor específico ou para alterar um comportamento em particular. Por exemplo, o sinalizador de rastreamento 3226 é um sinalizador de rastreamento de inicialização que suprime mensagens de backup bem-sucedido no log erros. Sinalizadores de rastreamento são usados com frequência para diagnosticar problemas de desempenho ou depurar procedimentos armazenados ou sistemas de computador complexos, mas também podem ser recomendados pelo Suporte da Microsoft para lidar com comportamento que esteja prejudicando uma carga de trabalho específica.  Todos os sinalizadores de rastreamento documentados e aqueles recomendados pelo Suporte da Microsoft têm suporte total em um ambiente de produção quando usados conforme indicado.  Observe que os sinalizadores de rastreamento nesta lista podem ter considerações adicionais sobre seu uso específico, portanto, é aconselhável examinar cuidadosamente todas as recomendações de apresentadas aqui e/ou por seu engenheiro de suporte. Além disso, assim como acontece com qualquer alteração de configuração no SQL Server, sempre é melhor testar minuciosamente o sinalizador em um ambiente não de produção antes de implantar.
+
+## <a name="remarks"></a>Remarks  
+ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], há três tipos de sinalizadores de rastreamento: consulta, sessão e global. Os sinalizadores de rastreamento de consulta ficam ativos para o contexto de uma consulta específica. Os sinalizadores de rastreamento de sessão ficam ativos para uma conexão e são visíveis apenas para essa conexão. Sinalizadores de rastreamento globais são definidos no nível do servidor e são visíveis em todas as conexões no servidor. Alguns sinalizadores podem ser ativados somente como global e outros podem ser ativados no escopo global ou de sessão.  
+  
+ As seguintes regras se aplicam:  
+-   Um sinalizador de rastreamento global deve ser habilitado globalmente. Caso contrário, ele não terá nenhum efeito. Recomendamos que você habilite os sinalizadores de rastreamento globais na inicialização usando a opção **-T** da linha de comando. Isso garante que o sinalizador de rastreamento permaneça ativo após o reinício do servidor. Reinicie o SQL Server para que o sinalizador de rastreamento entre em vigor. 
+-   Se um sinalizador de rastreamento tiver um escopo global, de sessão ou de consulta, ele poderá ser habilitado com o escopo apropriado. Um sinalizador de rastreamento habilitado no nível de sessão nunca afeta outra sessão, e seu efeito se perde quando a SPID que abriu a sessão faz logoff.  
+  
+Sinalizadores de rastreamento são definidos como on ou off usando qualquer um dos seguintes métodos:
+-   Usando os comandos DBCC TRACEON e DBCC TRACEOFF.  
+     Por exemplo, para habilitar o sinalizador de rastreamento 2528 globalmente, use [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) com o argumento -1: `DBCC TRACEON (2528, -1)`. O efeito de habilitar um sinalizador de rastreamento global com DBCC TRACEON é perdido no reinício do servidor. Para desligar um sinalizador de rastreamento global, use [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) com o argumento -1.  
+-   Usando a opção de inicialização **-T** para especificar que o sinalizador de rastreamento deve ser ativado durante a inicialização.  
+     O **-T** habilita a opção de inicialização de um sinalizador de rastreamento globalmente. Não é possível habilitar um sinalizador de rastreamento no nível de sessão usando uma opção de inicialização. Isso garante que o sinalizador de rastreamento permaneça ativo após o reinício do servidor. Para obter mais informações sobre as opções de inicialização, consulte [Opções de inicialização do serviço Mecanismo de Banco de Dados](../../database-engine/configure-windows/database-engine-service-startup-options.md).
+-   No nível da consulta, usando a [dica de consulta](https://support.microsoft.com/kb/2801413) QUERYTRACEON. A opção QUERYTRACEON só é compatível com os sinalizadores de rastreamento do otimizador de consulta documentados na tabela acima.
+  
+Use o comando `DBCC TRACESTATUS` para determinar quais sinalizadores de rastreamento estão ativos no momento.
+
+## <a name="trace-flags"></a>Sinalizadores de rastreamento
+
   
 A tabela a seguir lista e descreve os sinalizadores de rastreamento disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
@@ -48,7 +67,7 @@ A tabela a seguir lista e descreve os sinalizadores de rastreamento disponíveis
 |**174**|Aumenta o número de buckets do cache de planos do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] de 40.009 para 160.001 em sistemas de 64 bits. Para obter mais informações, confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/kb/3026083).<br /><br />**Observação:** Teste essa opção completamente antes de implantá-la em um ambiente de produção.<br /><br />**Escopo**: apenas global|
 |**176**|Permite que uma correção solucione erros de endereço ao recompilar partições online para tabelas que contenham uma coluna de particionamento computada. Para obter mais informações, confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/kb/3213683).<br /><br />**Escopo**: global ou sessão|
 |**205**|Relata no log de erros quando um procedimento armazenado dependente de estatísticas está sendo recompilado como resultado das estatísticas de atualização automática. Para obter mais informações, confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/kb/195565).<br /><br />**Escopo**: apenas global|
-|**260**|Imprime informações de versão sobre DLLs (bibliotecas de vínculo dinâmico) de procedimento armazenado estendido. Para obter mais informações sobre **GetXpVersion()**, confira [Criando procedimentos armazenados estendidos](../../relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md).<br /><br />**Escopo:** global ou sessão|
+|**260**|Imprime informações de versão sobre DLLs (bibliotecas de vínculo dinâmico) de procedimento armazenado estendido. Para obter mais informações sobre **GetXpVersion()** , confira [Criando procedimentos armazenados estendidos](../../relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md).<br /><br />**Escopo:** global ou sessão|
 |**272**|Desabilita a pré-alocação de identidade para evitar lacunas nos valores de uma coluna de identidade caso o servidor seja reiniciado inesperadamente ou efetue failover para um servidor secundário. Observe que o cache de identidade é usado para melhorar o desempenho de INSERT em tabelas com colunas de identidade.<br /><br />**Observação:** começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], para fazer isso no nível do banco de dados, confira a opção IDENTITY_CACHE em [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).<br /><br />**Escopo**: apenas global|
 |**460**|Substitui a ID de mensagem [8152](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-8000-to-8999) de truncamento de dados pela ID de mensagem [2628](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-2000-to-2999). Para obter mais informações, confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/kb/4468101).<br /><br />No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 em diante, para fazer isso no nível do banco de dados, veja a opção VERBOSE_TRUNCATION_WARNINGS em [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).<br /><br />**Observação:** esse sinalizador de rastreamento se aplica à atualização cumulativa 12 do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e builds posteriores.<br /><br />**Observação:** No nível de compatibilidade do banco de dados 150 em diante, a ID da mensagem 2628 é o padrão e esse sinalizador de rastreamento não tem nenhum efeito.<br /><br />**Escopo**: global ou sessão|
 |**610**|Controla as inserções em tabelas indexadas minimamente registradas. Este sinalizador de rastreamento não é mais necessário começando com o SQL Server 2016, pois o registro mínimo em log é ativado por padrão para tabelas indexadas. No SQL Server 2016, quando a operação de carregamento em massa fizer com que uma nova página seja alocada, todas as linhas que preenchem sequencialmente essa nova página serão registradas minimamente se todos os outros pré-requisitos para o registro em log mínimo forem atendidos. As linhas inseridas em páginas existentes (não em uma nova alocação de página) para manter a ordem de índice ainda são totalmente registradas, como as linhas que são movidas como resultado de divisões de página durante o carregamento. Também é importante que ALLOW_PAGE_LOCKS esteja ON para os índices (que é ON por padrão) para que a operação de registro em log mínimo funcione à medida que os bloqueios de página forem adquiridos durante a alocação e, portanto, somente as alocações de página ou de extensão sejam registradas. Para obter mais informações, confira [Data Loading Performance Guide](https://msdn.microsoft.com/library/dd425070.aspx) (Guia de desempenho de carregamento de dados).<br /><br />**Escopo**: global ou sessão|
@@ -156,21 +175,7 @@ A tabela a seguir lista e descreve os sinalizadores de rastreamento disponíveis
 |**11023**|Desabilita o uso da última taxa de amostra persistente para todas as atualizações de estatísticas subsequentes em que uma taxa de amostra não está especificada explicitamente como parte da instrução [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Para obter mais informações, confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/kb/4039284).<br /><br />**Escopo**: global ou sessão|    
 |**11024**|Permite disparar a atualização automática de estatísticas quando a contagem de modificação de qualquer partição exceder o [limite](../../relational-databases/statistics/statistics.md#AutoUpdateStats) local. Para obter mais informações, confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/kb/4041811).<br /><br />**Observação:** sinalizador de rastreamento se aplica ao [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e a builds superiores.<br /><br />**Escopo**: global ou sessão| 
   
-## <a name="remarks"></a>Remarks  
- No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], há três tipos de sinalizadores de rastreamento: consulta, sessão e global. Os sinalizadores de rastreamento de consulta ficam ativos para o contexto de uma consulta específica. Os sinalizadores de rastreamento de sessão ficam ativos para uma conexão e são visíveis apenas para essa conexão. Sinalizadores de rastreamento globais são definidos no nível do servidor e são visíveis em todas as conexões no servidor. Alguns sinalizadores podem ser ativados somente como global e outros podem ser ativados no escopo global ou de sessão.  
-  
- As seguintes regras se aplicam:  
--   Um sinalizador de rastreamento global deve ser habilitado globalmente. Caso contrário, ele não terá nenhum efeito. Recomendamos que você habilite os sinalizadores de rastreamento globais na inicialização usando a opção **-T** da linha de comando. Isso garante que o sinalizador de rastreamento permaneça ativo após o reinício do servidor.  
--   Se um sinalizador de rastreamento tiver um escopo global, de sessão ou de consulta, ele poderá ser habilitado com o escopo apropriado. Um sinalizador de rastreamento habilitado no nível de sessão nunca afeta outra sessão, e seu efeito se perde quando a SPID que abriu a sessão faz logoff.  
-  
-Sinalizadores de rastreamento são definidos como on ou off usando qualquer um dos seguintes métodos:
--   Usando os comandos DBCC TRACEON e DBCC TRACEOFF.  
-     Por exemplo, para habilitar o sinalizador de rastreamento 2528 globalmente, use [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) com o argumento -1: `DBCC TRACEON (2528, -1)`. O efeito de habilitar um sinalizador de rastreamento global com DBCC TRACEON é perdido no reinício do servidor. Para desligar um sinalizador de rastreamento global, use [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) com o argumento -1.  
--   Usando a opção de inicialização **-T** para especificar que o sinalizador de rastreamento deve ser ativado durante a inicialização.  
-     O **-T** habilita a opção de inicialização de um sinalizador de rastreamento globalmente. Não é possível habilitar um sinalizador de rastreamento no nível de sessão usando uma opção de inicialização. Isso garante que o sinalizador de rastreamento permaneça ativo após o reinício do servidor. Para obter mais informações sobre as opções de inicialização, consulte [Opções de inicialização do serviço Mecanismo de Banco de Dados](../../database-engine/configure-windows/database-engine-service-startup-options.md).
--   No nível da consulta, usando a [dica de consulta](https://support.microsoft.com/kb/2801413) QUERYTRACEON. A opção QUERYTRACEON só é compatível com os sinalizadores de rastreamento do otimizador de consulta documentados na tabela acima.
-  
-Use o comando `DBCC TRACESTATUS` para determinar quais sinalizadores de rastreamento estão ativos no momento.
+
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir ativa o sinalizador de rastreamento 3205 para todas as sessões no nível do servidor usando DBCC TRACEON.  

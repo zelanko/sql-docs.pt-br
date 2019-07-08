@@ -19,26 +19,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8983d2dc82da8d923eb5b29b0626b20aae0eb853
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20e587aeb7c0ed34762bf1f90488a06cafc0ec93
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64776108"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412993"
 ---
 # <a name="write-international-transact-sql-statements"></a>Gravar instruções Transact-SQL internacionais
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Os bancos de dados e aplicativos de bancos de dados que usam instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] serão mais portáteis de um idioma para outro, ou darão suporte a vários idiomas, se as diretrizes a seguir forem cumpridas.  
 
 -   A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], use:
-    -   os tipos de ados **char**, **varchar** e **varchar (max)** com uma [ordenação habilitada para UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf-8-support).
-    -   Os tipos de dados **nchar**, **nvarchar** e **nvarchar (max)** com qualquer ordenação.      
+    -   Os tipos de dados **char**, **varchar** e **varchar (max)** com uma ordenação habilitada para [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8).
+    -   Os tipos de dados **nchar**, **nvarchar** e **nvarchar (max)** com uma ordenação habilitada para [caractere suplementar](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters).      
 
-    Isso evita problemas de conversão de página de código. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+    Isso evita problemas de conversão de página de código. Para acessar outras considerações, confira [Diferenças de armazenamento entre UTF-8 e UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).  
 
--   Até [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], substitua todos os usos dos tipos de dados **char**, **varchar** e **varchar (max)** por **nchar**, **nvarchar** e **nvarchar (max)**. Isso evita problemas de conversão de página de código. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md). 
+-   Até [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], substitua todos os usos dos tipos de dados **char**, **varchar** e **varchar (max)** por **nchar**, **nvarchar** e **nvarchar (max)** . Isso evita problemas de conversão de página de código. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md). 
     > [!IMPORTANT]
-    > O tipo de dados **texto** foi preterido e não deve ser usado em novos trabalhos de desenvolvimento. Planeje converter dados de **texto** em **varchar(max)**.
+    > O tipo de dados **texto** foi preterido e não deve ser usado em novos trabalhos de desenvolvimento. Planeje converter dados de **texto** em **varchar(max)** .
   
 -   Ao realizar comparações e operações de mês e dia da semana, use as partes de data numérica em vez de cadeias de caracteres de nomes. Configurações de linguagem diferentes retornam nomes diferentes para os meses e dias de semana. Por exemplo, `DATENAME(MONTH,GETDATE())` retorna `May` quando o idioma é definido como inglês dos EUA, retorna `Mai` quando o idioma é definido como alemão e retorna `mai` quando o idioma é definido como francês. No lugar, use uma função como [DATEPART](../../t-sql/functions/datepart-transact-sql.md) que usa o número do mês ao invés do nome. Use os nomes DATEPART quando for construir conjuntos de resultados a serem exibidos a um usuário, pois os nomes de datas geralmente são mais significativos que uma representação numérica. Porém, não codifique nenhuma lógica que dependa dos nomes exibidos sendo modificados em um idioma específico.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "64776108"
   
     -   Os aplicativos ODBC, ADO e OLE DB devem usar as cláusulas de fuga ODBC timestamp, data e hora para:  
   
-         **{ ts'** _yyyy_ **-** _mm_ **-** _dd_ _hh_ **:** _mm_ **:** _ss_ [**.**_fff_] **'}** como: **{ ts'1998-09-24 10:02:20'}**  
+         **{ ts'** _yyyy_ **-** _mm_ **-** _dd_ _hh_ **:** _mm_ **:** _ss_ [ **.** _fff_] **'}** como: **{ ts'1998-09-24 10:02:20'}**  
   
          **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** como: **{ d'1998-09-24'}**
   

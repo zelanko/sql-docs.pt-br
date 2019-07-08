@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
-ms.openlocfilehash: 0e8faaeb6a809caf5bd8c42ceee94cbbb0702979
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ef7132e61a646cd0c622a3f15a647cf2430d95c
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794137"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351679"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Configurar a opção de configuração de servidor max degree of parallelism
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], use as seguintes 
 |Servidor com vários nós NUMA|Mais de 16 processadores lógicos por nó NUMA|Manter MAXDOP em metade do número de processadores lógicos por nó NUMA com um valor MAX de 16|
   
 > [!NOTE]
-> O nó NUMA na tabela acima refere-se a nós soft-NUMA criados automaticamente pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versões superiores.   
+> O nó NUMA na tabela acima refere-se a nós soft-NUMA criados automaticamente pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versões superiores ou nós NUMA baseados em hardware caso soft-NUMA tenha sido desabilitado.   
 >  Use essas mesmas diretrizes ao definir a opção grau máximo de paralelismo para os grupos de carga de trabalho Resource Governor. Para obter mais informações, veja [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md).
   
 Em [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], use as seguintes diretrizes ao configurar o valor de configuração de servidor **grau máximo de paralelismo**:
