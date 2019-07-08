@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0fefd22e080ac0ed4e0646dde1805ce5923b8e3a
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: 6a3f6ccaf2da262033a291d300fc66c02ca35e78
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419162"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580706"
 ---
 # <a name="always-encrypted-database-engine"></a>Sempre criptografados (mecanismo de banco de dados)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ O servidor calcula o conjunto de resultados e, para as colunas criptografadas in
 
 Para obter detalhes sobre como desenvolver aplicativos usando Always Encrypted com drivers cliente específicos, consulte [Always Encrypted (desenvolvimento do cliente)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 A descriptografia ocorre por meio do cliente. Isso significa que algumas ações que ocorrem somente no servidor não funcionarão ao usar Always Encrypted. 
 
@@ -84,13 +84,15 @@ Para atualizar com êxito a coluna, faça o seguinte:
 1. SELECIONE os dados fora da coluna SSN e armazene-os como um conjunto de resultados no aplicativo. Isso permitirá que o aplicativo (*driver* do cliente) descriptografe a coluna.
 2. INSIRA os dados do conjunto de resultados no SQL Server. 
 
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  >[!IMPORTANT]
  > Nesse cenário, os dados serão descriptografados quando enviados de volta para o servidor porque a coluna de destino é um varchar regular que não aceita dados criptografados. 
   
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>Seleção de criptografia determinística ou aleatória  
  O Mecanismo de Banco de dados nunca opera em dados de texto não criptografado armazenados em colunas criptografadas, mas ela ainda dá suporte a algumas consultas em dados criptografados, dependendo do tipo de criptografia para a coluna. O Sempre Criptografado dá suporte a dois tipos de criptografia: criptografia aleatória e criptografia determinística.  
   
-- A criptografia determinística sempre gera o mesmo valor criptografado para qualquer valor de texto sem formatação. Usar a criptografia determinística proporciona pesquisas de ponto, junções de igualdade, agrupamento e indexação em colunas criptografadas. No entanto, também pode permitir que usuários não autorizados estimem informações sobre valores criptografados examinando padrões na coluna criptografada, especialmente se houver um pequeno conjunto de valores possíveis criptografados, como True/False ou região Norte/Sul/Leste/Oeste. A criptografia determinística deve usar uma ordenação de colunas com uma ordem de classificação binary2 para as colunas de caracteres.
+- A criptografia determinística sempre gera o mesmo valor criptografado para qualquer valor de texto sem formatação. Usar a criptografia determinística proporciona pesquisas de ponto, junções de igualdade, agrupamento e indexação em colunas criptografadas. No entanto, ela também pode permitir que usuários não autorizados estimem informações sobre os valores criptografados examinando padrões na coluna criptografada, especialmente se há um conjunto pequeno de valores criptografados possíveis, como Verdadeiro/Falso ou região Norte/Sul/Leste/Oeste. A criptografia determinística deve usar uma ordenação de colunas com uma ordem de classificação binary2 para as colunas de caracteres.
 
 - A criptografia aleatória usa um método que criptografa os dados de uma maneira menos previsível. A criptografia aleatória é mais segura, mas impede o uso de pesquisas, agrupamento, indexação e junção em colunas criptografadas.
 
@@ -255,7 +257,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
 [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
 [CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   

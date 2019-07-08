@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b05cca816684cbb95c625232883d06706edfe7f6
-ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
+ms.openlocfilehash: 26db878bee2a786dc52f6046afea617bf7c69c0f
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351720"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500153"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -50,7 +50,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 
 ||||||
 |---|---|---|---|---|
-|** _\* SQL Server \*_** &nbsp;|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|** _\*SQL Server\*_** &nbsp;|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -566,10 +566,7 @@ O cache de procedimento também é liberado no seguinte cenário: Execute divers
 
 ## <a name="permissions"></a>Permissões
 
-Somente o logon de entidade de segurança no nível do servidor (criado pelo processo de provisionamento) ou os membros da função de banco de dados `dbmanager` podem alterar um banco de dados.
-
-> [!IMPORTANT]
-> O proprietário do banco de dados não pode alterar o banco de dados, a menos que seja um membro da função `dbmanager`.
+Para alterar um banco de dados, um logon precisa ser o logon da entidade de segurança no nível do servidor (criado pelo processo de provisionamento), um membro da função de banco de dados `dbmanager` no mestre, um membro da função de banco de dados `db_owner` no banco de dados atual ou `dbo` do banco de dados.
 
 ## <a name="examples"></a>Exemplos
 

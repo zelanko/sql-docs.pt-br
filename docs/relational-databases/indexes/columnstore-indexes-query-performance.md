@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff3494a9983104c958dbd1f3e0ac7b74598f2dcb
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: b8cd9f4e066096bcffa5181e112710fb1c4e2d17
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343924"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583216"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Índices columnstore – desempenho de consultas
 
@@ -57,7 +57,7 @@ ms.locfileid: "67343924"
     
 -   Índices columnstore leem dados compactados do disco, o que significa que menos bytes de dados precisam ser lidos da memória.    
     
--   Índices columnstore armazenam dados em formato compactado na memória, o que reduz a E/S com a redução do número de vezes que os mesmos dados são lidos na memória. Por exemplo, com uma compactação de 10 vezes, os índices columnstore podem manter 10 vezes mais dados na memória do que é possível armazenando os dados em formato descompactado. Com mais dados na memória, é mais provável que o índice columnstore localize os dados de que precisa na memória com a realização de leituras de disco adicionais.    
+-   Índices columnstore armazenam dados em formato compactado na memória, o que reduz a E/S com a redução do número de vezes que os mesmos dados são lidos na memória. Por exemplo, com uma compactação de 10 vezes, os índices columnstore podem manter 10 vezes mais dados na memória do que é possível armazenando os dados em formato descompactado. Com mais dados na memória, é mais provável que o índice columnstore localize os dados de que precisa na memória sem gerar leituras de disco adicionais.    
     
 -   Os índices columnstore compactam dados por colunas em vez de compactá-los por linhas, o que alcança altas taxas de compactação e reduz o tamanho dos dados armazenados no disco. Cada coluna é compactada e armazenada de modo independente.  Dados em uma coluna sempre têm o mesmo tipo de dados e tendem a ter valores semelhantes. Técnicas de compactação de dados são muito boas para alcançar taxas mais altas de compactação quando os valores são semelhantes.    
     
@@ -92,7 +92,7 @@ ms.locfileid: "67343924"
     
  Nem todos os operadores de execução de consulta podem ser executados em modo de lote. Por exemplo, operações DML como Insert, Delete ou Update são executadas em uma linha por vez. O modo de lote destina-se a operadores voltados à aceleração do desempenho de consultas, como Scan, Join, Aggregate, sort e outros mais. Como o índice columnstore foi introduzido no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], há um esforço contínuo para expandir os operadores que podem ser executados no modo de lote. A tabela abaixo mostra os operadores executados no modo de lote, de acordo com a versão do produto.    
     
-|Operadores no modo de lote|Quando isso é usado?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]¹|Comentários|    
+|Operadores no modo de lote|Quando isso é usado?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]?|Comentários|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |Operações DML (insert, delete, update, merge)||não|não|não|DML não é uma operação de modo de lote porque ele não é paralelo. Mesmo quando podemos habilitar o processamento em lotes de modo serial, não vemos ganhos significativos ao permitir que o DML seja processado em modo em lote.|    
 |verificação de índice columnstore|SCAN|NA|sim|sim|Para índices columnstore, podemos enviar por push o predicado por push para o nó SCAN.|    
@@ -111,7 +111,7 @@ ms.locfileid: "67343924"
 |classificação superior||não|não|sim||    
 |agregações de janela||NA|NA|sim|Novo operador do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
- ¹Aplica-se ao [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], camadas Premium e camadas Standard do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], S3 e posterior, e a todas as camadas de vCore, e ao [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+ ?Aplica-se ao [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], às camadas Premium do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], às camadas Standard – S3 e posterior, a todas as camadas do vCore e ao [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
 ### <a name="aggregate-pushdown"></a>Aplicação de agregação    
  Um caminho de execução normal para a computação de agregação para buscar as linhas qualificadas do nó SCAN e agregar os valores no Modo de Lote. Embora isso ofereça bom desempenho, no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a operação de agregação pode ser enviada por push para o nó SCAN para melhorar o desempenho da computação de agregação em ordens de magnitude além da execução do Modo de Lote, desde que as seguintes condições sejam atendidas: 
@@ -146,7 +146,7 @@ Ao criar um esquema de data warehouse, a modelagem de esquema recomendada é usa
     
 Por exemplo, um fato pode ser um registro que representa uma venda de um produto específico em uma região específica, enquanto a dimensão representa um conjunto de regiões, produtos e assim por diante. As tabelas de fatos e dimensões são conectadas por meio de uma relação de chaves primária/estrangeira. As consultas de análise mais comumente usadas unem uma ou mais tabelas de dimensão à tabela de fatos.    
     
-Vamos considerar uma tabela de dimensões `Products`. Uma chave primária típica será `ProductCode`, que normalmente é representada como um tipo de dados String. Para o desempenho de consultas, uma melhor prática é criar uma chave alternativa, normalmente uma coluna de inteiros, para referir-se à linha na tabela de dimensões da tabela de fatos.    
+Vamos considerar uma tabela de dimensões `Products`. Uma chave primária típica será `ProductCode`, que normalmente é representada como um tipo de dados String. Para o desempenho de consultas, uma melhor prática é criar uma chave alternativa, normalmente uma coluna de inteiros, para referir-se à linha na tabela de dimensões da tabela de fatos. ? ?
     
 O índice columnstore executa consultas de análise com junções/predicados que envolvem chaves baseadas em valores numéricos ou inteiros de maneira muito eficiente. No entanto, em muitas cargas de trabalho do cliente, observamos o uso de colunas baseadas em cadeias de caracteres vinculando tabelas de fatos/dimensões e, como resultado, o desempenho de consultas com um índice columnstore não era tão bom. O [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] melhora consideravelmente o desempenho de consultas de análise com colunas baseadas em cadeia de caracteres, ao realizar a aplicação dos predicados com colunas de cadeia de caracteres ao nó SCAN.    
     
@@ -155,6 +155,9 @@ A aplicação de predicado de cadeia de caracteres aproveita o dicionário prim�
 Com a aplicação de predicado de cadeia de caracteres, a execução da consulta calcula o predicado em relação aos valores no dicionário e se ela se qualificar, todas as linhas se referindo ao valor do dicionário são qualificadas automaticamente. Isso melhora o desempenho de duas maneiras:
 1.  Apenas as linhas qualificadas são retornadas, reduzindo o número de linhas que precisam fluir para fora do nó SCAN. 
 2.  O número de comparações de cadeias de caracteres é significativamente reduzido. Neste exemplo, apenas 100 comparações de cadeias de caracteres são necessárias, em vez de 1 milhão de comparações. Existem algumas limitações, conforme descrito abaixo:    
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   Nenhuma aplicação de predicado da cadeia de caracteres para rowgroups delta. Não há nenhum dicionário para colunas em rowgroups delta.    
     -   Não há nenhuma aplicação de predicado de cadeia de caracteres se o dicionário excede 64 KB de entradas.    
     -   Não há suporte para expressões avaliadas como NULLs.    

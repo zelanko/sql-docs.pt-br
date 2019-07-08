@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8cf0b0008efb05d15f7e34827ab0f80855fb526d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7cbcb0b2cd0da8bd13d28620261c2e9894463db
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506585"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564031"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurar memória disponível para aplicativos do Servidor de Relatórios
  Embora o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possa usar toda a memória disponível, você pode substituir o comportamento padrão configurando um limite superior no valor total dos recursos de memória alocados a aplicativos do servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Você também poderá definir limites que façam com que o servidor de relatório altere a maneira de priorizar e processar solicitações se a pressão de memória estiver baixa, média ou alta. Em níveis baixos de pressão de memória, o servidor de relatório responde dando uma prioridade ligeiramente mais alta a um processamento de relatório interativo ou sob demanda. Em níveis altos de pressão de memória, o servidor de relatório usa várias técnicas para permanecer operacional usando os recursos limitados disponíveis.  
@@ -77,17 +77,19 @@ ms.locfileid: "66506585"
 #### <a name="example-of-memory-configuration-settings"></a>Exemplo de definições de configuração de memória  
  O exemplo a seguir mostra as definições de configuração de um computador de servidor de relatório que usa valores de configuração de memória personalizados. Para adicionar **WorkingSetMaximum** ou **WorkingSetMinimum**, digite os elementos e os valores no arquivo RSReportServer.config. Ambos os valores são inteiros que expressam quilobytes de RAM que você está alocando aos aplicativos de servidor. O exemplo a seguir especifica que a alocação de memória total dos aplicativos de servidor de relatório não pode exceder 4 gigabytes. Se o valor padrão para **WorkingSetMinimum** (60% dos **WorkingSetMaximum**) for aceitável, você poderá omiti-lo e especificar apenas **WorkingSetMaximum** no arquivo RSReportServer.config. Este exemplo inclui **WorkingSetMinimum** para mostrar como seria se você quisesse adicioná-lo:  
   
-``` Config files <MemorySafetyMargin>80</MemorySafetyMargin>  
+```
+      Config files 
+      <MemorySafetyMargin>80</MemorySafetyMargin>  
       <MemoryThreshold>90</MemoryThreshold>  
       <WorkingSetMaximum>4000000</WorkingSetMaximum>  
       <WorkingSetMinimum>2400000</WorkingSetMinimum>  
 ```  
   
-#### About ASP.NET memory configuration settings  
- Although the 2016 and later Report Server Web service and web portal are HTML5 applications, previous versions are [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications, neither application responds to memory configuration settings that you specify in the **processModel** section of machine.config for [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications that run in IIS 5.0 and higher compatibility mode. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reads memory configuration settings from the RSReportServer.config file only.  
+#### <a name="about-aspnet-memory-configuration-settings"></a>Sobre definições de configuração de memória do ASP.NET  
+ Embora o 2016 e posterior Web Report Server web e serviço portal são aplicativos HTML5, as versões anteriores são [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] aplicativos, nenhum aplicativo responde às definições de configuração de memória que você especificar na **processModel**  seção Machine. config para [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] aplicativos que são executados no IIS 5.0 e o modo de compatibilidade mais alto. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] lê as definições de configuração de memória somente no arquivo RSReportServer.config.  
   
-## See also  
- [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
- [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
+## <a name="see-also"></a>Confira também  
+ [Arquivo de Configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
+ [Domínios do aplicativo para aplicativos do Servidor de Relatório](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
   

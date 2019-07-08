@@ -9,12 +9,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: cd2f9dec39075b332b2ae38c622f3970faf8d331
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
+ms.openlocfilehash: 8767640e2ad0a7b71bb7977ab6eb997892845403
+ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67037857"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533837"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Notas sobre a versão do SSRS (SQL Server Reporting Services) 2017 e posteriores
 
@@ -50,6 +50,23 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+
+## <a name="1406001274-20190701"></a>14.0.600.1274, 01/07/2019
+
+| Correção do problema | Detalhes |
+| :---------- | :------ |
+| Atualizações de segurança | &nbsp; |
+| Não é possível selecionar os dias da semana ao criar uma agenda semanal compartilhada | &nbsp; |
+| Relatório não exibe os retornos de carro corretamente no formato Word | &nbsp; |
+| Atualizações do System Center Operations Manager(SCOM) 2019 não funciona mais com SSRS 2017 recentes | &nbsp; |
+| Ocorreu um erro ao invocar a extensão de autorização para o conjunto de dados compartilhado | &nbsp; |
+| Lógica alterada no procedimento armazenado GetAllProperties no SSRS 2017 e PBIRS, que faz com que o ponto de extremidade de serviço Web ReportingService2010.GetProperties método não é possível obter todos os dados para o relatório vinculado | &nbsp; |
+| Cabeçalho de linha de grade simples no relatório móvel desaparece quando um Item dentro da grade é clicado | &nbsp; |
+| Não é possível usar o campo de data no parâmetro de assinatura controlada por dados | &nbsp; |
+| Tablix aninhada mostra uma fonte pequena ou fonte parcial no SSRS 2016 e posterior | &nbsp; |
+| Assinaturas com o parâmetro DateTime ocorre um erro depois que o usuário com as edições de localidade diferentes da assinatura | &nbsp; |
+| Criando uma assinatura controlada por dados com a extensão de entrega nulo está falhando com "Ocorreu um erro de entrega" | &nbsp; |
+| Codificação de URL está incorreta ao definir o valor no formato Excel\Word | &nbsp; |
 
 ## <a name="1406001109-20190212"></a>14.0.600.1109, 12/02/2019
 
