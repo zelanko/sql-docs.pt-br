@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7987b0cfb8be268a8e48fd25d7512b4969aea6fb
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 6158df674c90f14a1f77f5e12c18adcb6f8fbc4f
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542176"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652860"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -68,7 +68,7 @@ Primeiro, se o plano contém as seguintes construções:
 * Referência a uma tabela externa
 * Consulta distribuída ou operações de texto completo
 * Uso de consultas globais 
-* Cursores
+* Cursores de conjunto de chaves ou dinâmico (imposição de plano é suportada para Cursores estáticos e de avanço rápido)
 * Especificação de junção em estrela inválida 
 
 Segundo, quando os objetos dos quais o plano depende, não estão mais disponíveis:

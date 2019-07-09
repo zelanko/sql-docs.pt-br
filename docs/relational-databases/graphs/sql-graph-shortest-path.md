@@ -19,12 +19,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ef8f38acbf621a9c73a0d85bca579c8b7c87aa13
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 3ed9fbb373febd803fedfd7519df7656c23181f2
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463550"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652843"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -49,8 +49,8 @@ PARA o caminho deve ser usado com qualquer nome de tabela de nó ou borda na cl�
 ## <a name="arbitrary-length-pattern"></a>Padrão de comprimento arbitrário
 Esse padrão inclui os nós e bordas que devem ser atravessadas repetidamente até que o nó desejado seja atingido ou até que o número máximo de iterações, conforme especificado no padrão for atendida. Cada vez que a consulta é executada, o resultado da execução desse padrão será uma coleção ordenada de nós e bordas percorridas ao longo do caminho do nó inicial ao nó final. Este é um padrão de sintaxe de estilo de expressão regular e os quantificadores de padrão de dois a seguir têm suporte:
 
-* **‘+’** : Repita o padrão de 1 ou mais vezes. Encerrar assim que encontra-se um caminho mais curto.
-* **{1,n}** : Repita o padrão de 1 para ' n'horas. Encerrar assim que uma mais curta for encontrada.
+* **‘+’** : Repete o padrão por 1 ou mais vezes. É encerrado assim que encontra um caminho mais curto.
+* **{1,n}** : repete o padrão 1 por “n” horas. Encerrar assim que uma mais curta for encontrada.
 
 ## <a name="lastnode"></a>LAST_NODE
 Função LAST_NODE() permite o encadeamento de dois padrões de passagem de comprimento arbitrário. Ele pode ser usado em cenários em que:    
@@ -94,7 +94,7 @@ Enquanto o último nó é o último nó enésimo no caminho de gráfico de saíd
 Essa função retorna a soma dos valores de atributo de nó/borda fornecida ou uma expressão que apareceu no caminho percorrido.
 
 ### <a name="count"></a>COUNT
-Essa função retorna o número de valores não nulos do atributo de nó/borda desejado no caminho. A função COUNT dá suporte a ' *' operador com um alias de tabela de nó ou borda. Sem o alias de tabela nó ou borda, o uso de * é ambíguo e resultará em um erro.
+Essa função retorna o número de valores não nulos do atributo de nó/borda desejado no caminho. A função COUNT dá suporte a '\*' operador com um alias de tabela de nó ou borda. Sem o alias de tabela nó ou borda, o uso de \* é ambíguo e resultará em um erro.
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 

@@ -12,12 +12,12 @@ ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84f8612b4d420eed11308472c9c8fabfc56e23c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 482e4ebbd467f3bc8946d90b9ad77bb892e85504
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66069524"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624346"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Selecionar atributos de dimensão (Assistente para Dimensões)
   Use a página **Selecionar Atributos de Dimensão** para selecionar e modificar os atributos para a dimensão a ser criada.  
@@ -53,8 +53,8 @@ ms.locfileid: "66069524"
 |Caso|Configurações|  
 |----------|--------------|  
 |Uma dimensão contém uma hierarquia pai-filho e **Habilitar Navegação** não é selecionado|O assistente deixa a propriedade `AttributeHierarchyEnabled` definida como `True` e define o atributo `AttributeHierarchyVisible` como `False` para o atributo de chave.|  
-|Uma tabela em uma dimensão contém uma chave estrangeira para uma tabela que não está na dimensão|O assistente seleciona a chave estrangeira como um atributo a ser incluído, mas não selecionará **Habilitar Navegação**. Se você mantiver estas configurações, a propriedade `AttributeHiearchyEnabled` do atributo será definida como `True` e a propriedade `AttributeHieararchyVisible` será definida como `False`.|  
-|Uma dimensão contém tabelas floco de neve que são alcançadas por meio de colunas de chave estrangeira anuláveis<br /><br /> \- e -<br /><br /> Habilitar Navegação não está selecionado para o atributo que está baseado na chave da tabela floco de neve|O assistente criará o novo atributo que tem a propriedade `AttributeHiearchyEnabled` definida como `True` e a propriedade `AttributeHieararchyVisible` definida como `False`.|  
+|Uma tabela em uma dimensão contém uma chave estrangeira para uma tabela que não está na dimensão|O assistente seleciona a chave estrangeira como um atributo a ser incluído, mas não selecionará **Habilitar Navegação**. Se você mantiver estas configurações, a propriedade `AttributeHiearchyEnabled` do atributo será definida como `True` e a propriedade `AttributeHierarchyVisible` será definida como `False`.|  
+|Uma dimensão contém tabelas floco de neve que são alcançadas por meio de colunas de chave estrangeira anuláveis<br /><br /> \- e -<br /><br /> Habilitar Navegação não está selecionado para o atributo que está baseado na chave da tabela floco de neve|O assistente criará o novo atributo que tem a propriedade `AttributeHiearchyEnabled` definida como `True` e a propriedade `AttributeHierarchyVisible` definida como `False`.|  
   
  **Tipo de atributo**  
  (Opcional) Defina o tipo para o atributo. O valor padrão é **Regular**. O tipo de atributo fornece orientação a aplicativos clientes quanto a quais informações o atributo poderia conter.  
