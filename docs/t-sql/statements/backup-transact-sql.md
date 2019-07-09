@@ -1,7 +1,7 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -47,12 +47,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 04dc8f227a64e4c21c8104d679086ebe9de57f6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a22f789aa967f7a6dcb9582083bf22c5698e99e7
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175303"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419069"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -70,7 +70,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 
 ||||
 |---|---|---|
-|** _\* SQL Server \*_ ** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|** _\* SQL Server \*_** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -931,7 +931,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\* Instância gerenciada<br />do Banco de Dados SQL \*_ ** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\* Instância gerenciada<br />do Banco de Dados SQL \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
@@ -980,7 +980,7 @@ DATABASE Especifica um backup completo do banco de dados. Durante um backup de b
 > [!IMPORTANT]
 > Um backup de banco de dados criado em uma instância gerenciada só pode ser restaurado em outra instância gerenciada. Ele não pode ser restaurado para uma instância local do SQL Server (semelhante ao modo como um backup de um banco de dados do SQL Server 2016 não pode ser restaurado para uma instância do SQL Server 2012).
 
-Ao restaurar um backup criado por BACKUP DATABASE (um *backup de dados*), o backup inteiro é restaurado. Para restaurar por meio de backups automáticos da instância gerenciada do Banco de Dados SQL do Azure, confira [Restauração do Banco de Dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-restore)
+Ao restaurar um backup criado por BACKUP DATABASE (um *backup de dados*), o backup inteiro é restaurado. Para restaurar por meio de backups automáticos da instância gerenciada do Banco de Dados SQL do Azure, confira [Restaurar banco de dados de uma instância gerenciada](/azure/sql-database/sql-database-managed-instance-get-started-restore).
 
 { *database_name* |  **@** _database\_name\_var_ } É o banco de dados do qual é feito o backup do banco de dados completo. Se for fornecido como uma variável ( **@** _database\_name\_var_), esse nome poderá ser especificado como uma constante de cadeia de caracteres ( **@** _database\_name\_var_ **=** _database name_) ou como uma variável de tipo de dados de cadeia de caracteres, exceto para os tipos de dados **ntext** ou **text**.
 
@@ -1116,7 +1116,7 @@ WITH STATS = 5, COPY_ONLY;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Instância gerenciada<br />do Banco de Dados SQL](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System (PDW) \*_ ** &nbsp;|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Instância gerenciada<br />do Banco de Dados SQL](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 
 &nbsp;
 
