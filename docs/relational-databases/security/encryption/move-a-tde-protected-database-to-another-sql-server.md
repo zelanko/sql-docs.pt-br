@@ -13,18 +13,18 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 6ab4adbe1e4233c5e2189c784f71e8897547ebaf
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c1e9105b104d6fb79c43d23bdda6da4b4603d339
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590260"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585682"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover um banco de dados protegido por TDE para outro SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como proteger um banco de dados usando a TDE (Transparent Data Encryption) e, em seguida, mover o banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de dados e de log. A criptografia usa uma DEK (chave de criptografia do banco de dados), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados **mestre** do servidor ou uma chave assimétrica protegida por um módulo EKM.  
    
-##  <a name="Restrictions"></a> Limitações e Restrições  
+##  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Ao mover um banco de dados protegido por TDE, é necessário também mover o certificado ou a chave assimétrica que é usada para abrir a DEK. O certificado ou a chave assimétrica devem ser instalados no banco de dados **mestre** do servidor de destino, de forma que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possa acessar os arquivos do banco de dados. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
@@ -75,7 +75,9 @@ Os procedimentos a seguir mostram a que você precisa criar um banco de dados pr
      Altera o banco de dados para ativar (marcado) ou desativar (desmarcado) a TDE.  
   
 8.  Quando terminar, clique em **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlCreate"></a> Usando o Transact-SQL  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
@@ -142,7 +144,7 @@ Os procedimentos a seguir mostram a que você precisa mover um banco de dados pr
   
 ###  <a name="SSMSMove"></a> Usando o SQL Server Management Studio  
   
-1.  No Pesquisador de Objetos, clique com o botão direito do mouse no banco de dados que você criptografou acima, aponte para **Tarefas** e selecione **Desanexar...**.  
+1.  No Pesquisador de Objetos, clique com o botão direito do mouse no banco de dados que você criptografou acima, aponte para **Tarefas** e selecione **Desanexar...** .  
   
      As opções a seguir estão disponíveis na caixa de diálogo **Desanexar Banco de Dados** .  
   
@@ -172,7 +174,7 @@ Os procedimentos a seguir mostram a que você precisa mover um banco de dados pr
   
     -   Quando um banco de dados estiver envolvido com replicação, o **Status** será **Não pronto** e a coluna **Mensagem** exibirá **Banco de Dados replicado**.  
   
-    -   Quando um banco de dados tiver uma ou mais conexões ativas, o **Status** será **Não está pronto** e a coluna **Mensagem** exibirá _\<número\_de\_conexões\_ativas\>_**Conexões ativas** – por exemplo: **1 Conexão ativa**. Antes de desanexar o banco de dados, você deverá cancelar qualquer conexão ativa selecionando **Cancelar Conexões**.  
+    -   Quando um banco de dados tiver uma ou mais conexões ativas, o **Status** será **Não está pronto** e a coluna **Mensagem** exibirá _\<número\_de\_conexões\_ativas\>_ **Conexões ativas** – por exemplo: **1 Conexão ativa**. Antes de desanexar o banco de dados, você deverá cancelar qualquer conexão ativa selecionando **Cancelar Conexões**.  
   
      Para obter mais informações sobre a mensagem, clique o texto com hiperlink para abrir o Monitor de atividades.  
   
@@ -186,11 +188,11 @@ Os procedimentos a seguir mostram a que você precisa mover um banco de dados pr
   
 6.  Recrie o certificado do servidor usando o arquivo de backup de certificado do servidor original. Para obter mais informações, veja **Usando o Transact-SQL** abaixo.  
   
-7.  No Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse na pasta **Bancos de Dados** e selecione **Anexar...**.  
+7.  No Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse na pasta **Bancos de Dados** e selecione **Anexar...** .  
   
 8.  Na caixa de diálogo **Anexar Bancos de Dados** , em **Bancos de dados a serem anexados**, clique em **Adicionar**.  
   
-9. Na caixa de diálogo **Localizar Arquivos de Banco de Dados –**_server\_name_, selecione o arquivo de banco de dados a ser anexado ao novo servidor e clique em **OK**.  
+9. Na caixa de diálogo **Localizar Arquivos de Banco de Dados –** _server\_name_, selecione o arquivo de banco de dados a ser anexado ao novo servidor e clique em **OK**.  
   
      As opções a seguir estão disponíveis na caixa de diálogo **Anexar Bancos de Dados** .  
   
@@ -234,7 +236,7 @@ Os procedimentos a seguir mostram a que você precisa mover um banco de dados pr
      Remove o arquivo selecionado da grade **Bancos de dados a serem anexados** .  
   
      **"** _<database_name>_ **" detalhes do banco de dados**  
-     Exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **Procurar** (**...**).  
+     Exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **Procurar** ( **...** ).  
   
     > [!NOTE]  
     >  Se um arquivo não existir, a coluna **Mensagem** exibe "Não encontrado." Se um arquivo de log não for encontrado, ele existe em outro diretório ou foi excluído. Você precisa atualizar o caminho do arquivo na grade **detalhes do banco de dados** para indicar o local correto ou remover o arquivo de log da grade. Se um arquivo de dados .ndf não for encontrado, você precisará atualizar seu caminho na grade a fim de indicar o local correto.  
