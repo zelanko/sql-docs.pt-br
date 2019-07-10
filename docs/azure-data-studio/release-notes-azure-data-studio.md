@@ -11,12 +11,12 @@ manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 453c00715e68a648e9cdfc2010810ce701358cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b06e8476e10abc3a96ab6c6f2304ef81f225f02
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798100"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681607"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de versão do estúdio de dados do Azure
 
@@ -367,7 +367,7 @@ O *julho de visualização pública* se concentra nos seguintes itens:
 ### <a name="github-issues-fixes-june-2018"></a>Correções de problemas do GitHub, junho de 2018
 
 - Solicitação de recurso ([emitir 1204](https://github.com/Microsoft/azuredatastudio/issues/1204)): Verifique os resultados da largura da coluna de ajuste automático de grade para dados e lembre-se de alterações manuais se a mesma consulta for executada novamente.
-- Corrigir [emitir 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): Deve mostrar Adicionar mensagem e adicionar botão de conta da conta quando a conta vinculada está vazia.
+- Corrigir [emitir 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): Deve mostrar adicione mensagem e botão conta quando a conta vinculada está vazia.
 - Corrigir [emitir 1399](https://github.com/Microsoft/azuredatastudio/issues/1399): Guia Conta vinculada é interrompido quando o modo de exibição é recolhido.
 - Corrigir [emitir 1374](https://github.com/Microsoft/azuredatastudio/issues/1374): Serviço de ferramentas do SQL Falha ao abrir o arquivo. SQL no disco.
 - Corrigir [emitir 1372](https://github.com/Microsoft/azuredatastudio/issues/1372): Faltando "BETWEEN" palavra-chave SQL.

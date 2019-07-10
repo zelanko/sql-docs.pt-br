@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0d07288bccc641f67644a37cd027e093fc3967c8
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 8d701d9e8595eee3a583e913baabc2148af214fe
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645545"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681617"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Monitorar serviços do SQL Server Machine Learning usando exibições de gerenciamento dinâmico (DMVs)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ Para obter mais informações sobre DMVs, consulte [exibições de gerenciamento
 
 As seguintes exibições de gerenciamento dinâmico podem ser usadas ao monitorar cargas de trabalho de aprendizado de máquina no SQL Server. Para consultar as DMVs, você precisa `VIEW SERVER STATE` permissão na instância.
 
-| Exibição de gerenciamento dinâmico | Tipo | Descrição |
+| Exibição de gerenciamento dinâmico | type | Descrição |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Execução | Retorna uma linha para cada conta de trabalho ativa que executa um script externo. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Execução | Retorna uma linha para cada tipo de solicitação de script externo. |
@@ -196,7 +196,7 @@ A consulta retorna as colunas a seguir:
 |--------|-------------|
 | physical_memory_kb | A quantidade total de memória física no computador. |
 | committed_kb | A memória confirmada em KB (quilobytes) no Gerenciador de memória. Não inclui a memória reservada no gerenciador de memória. |
-| external_pool_peak_memory_kb | A soma da a quantidade máxima de memória usada, em quilobytes, para todos os pools de recursos externos. |
+| external_pool_peak_memory_kb | A soma da quantidade máxima de memória usada, em quilobytes, para todos os pools de recursos externos. |
 
 ## <a name="memory-configuration"></a>Configuração de memória
 
@@ -305,7 +305,7 @@ As colunas retornadas são:
 |--------|-------------|
 | Pacote | Nome do pacote instalado. |
 | Versão | Versão do pacote. |
-| Local padrão | Diretório onde você pode encontrar o pacote. |
+| Location | Diretório onde você pode encontrar o pacote. |
 
 ## <a name="next-steps"></a>Próximas etapas
 
