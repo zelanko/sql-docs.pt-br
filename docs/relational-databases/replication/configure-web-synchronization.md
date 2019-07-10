@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 144323deee0c84ac1be404869a0ca71197ffcd32
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 674a785d0e5d3dd6b847c8f26701ad0ce48e2d20
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135576"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582519"
 ---
 # <a name="configure-web-synchronization"></a>Configurar Sincronização da Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,11 @@ ms.locfileid: "54135576"
 3.  Configure uma publicação de mesclagem para permitir a sincronização da Web.  
   
 4.  Configure uma ou mais assinaturas para usar a sincronização da Web.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
->  Se você planeja replicar grandes volumes de dados ou usar tipos de dados grandes, como **varchar(max)**, leia a seção "Replicando grandes volumes de dados" neste tópico.  
+>  Se você planeja replicar grandes volumes de dados ou usar tipos de dados grandes, como **varchar(max)** , leia a seção "Replicando grandes volumes de dados" neste tópico.  
   
  Para configurar a sincronização da Web com êxito, você deve decidir como configurará a segurança para atender a seus requisitos e políticas específicos. É melhor tomar essas decisões e criar as contas necessárias antes de tentar configurar o IIS, a publicação e as assinaturas.  
   
@@ -100,7 +102,7 @@ ms.locfileid: "54135576"
   
 #### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>Para aumentar Máximo de Processos do Operador no IIS 7  
   
-1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, expanda o nó do servidor local e clique no nó **Pool de Aplicativos** .  
+1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)** , expanda o nó do servidor local e clique no nó **Pool de Aplicativos** .  
   
 2.  Selecione o pool de aplicativos associado ao site de sincronização da Web e clique em **Configurações Avançadas** no painel **Ações** .  
   
@@ -132,11 +134,11 @@ ms.locfileid: "54135576"
   
  O tamanho máximo do arquivo XML é 4 GB, mas a replicação sincroniza as alterações desse arquivo em lotes. O tamanho de lote máximo de dados e metadados é de 25 MB. Você deve garantir que os dados não excedam a aproximadamente 20 MB em cada lote, o que permite metadados e qualquer outra sobrecarga. Esse limite tem as seguintes implicações:  
   
--   Você não pode reproduzir nenhuma coluna que faça com que os dados e metadados excedam 25 MB. Esse poderia ser um assunto quando você estiver reproduzindo linhas que contenham tipos de dados grandes, como **varchar(max)**.  
+-   Você não pode reproduzir nenhuma coluna que faça com que os dados e metadados excedam 25 MB. Esse poderia ser um assunto quando você estiver reproduzindo linhas que contenham tipos de dados grandes, como **varchar(max)** .  
   
 -   Se você reproduzir grandes volumes de dados, talvez tenha que ajustar o tamanho do lote do Agente de Mesclagem.  
   
- O tamanho do lote para replicação de mesclagem é medido em *gerações*, que são coleções de alterações por artigo. O número de gerações em um lote é especificado usando os parâmetros **DownloadGenerationsPerBatch** e –**UploadGenerationsPerBatch** do Agente de Mesclagem. Para obter mais informações, consulte [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
+ O tamanho do lote para replicação de mesclagem é medido em *gerações*, que são coleções de alterações por artigo. O número de gerações em um lote é especificado usando os parâmetros ?**DownloadGenerationsPerBatch** e ?**UploadGenerationsPerBatch** do Agente de Mesclagem. Para obter mais informações, consulte [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
  Para grandes volumes de dados, especifique um número pequeno para cada um dos parâmetros para envio em lote. É recomendável começar com um valor de 10 e ajustá-lo com base nas necessidades e no desempenho do aplicativo. Normalmente, esses parâmetros são especificados em um perfil de agente. Para obter mais informações sobre perfis, consulte [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

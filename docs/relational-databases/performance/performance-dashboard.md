@@ -14,21 +14,21 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 99ff37b3c974f6ba63515b3b51e87719a1912521
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 4b5e2a9dbb6963b63d6dfac8d76d9c01e839a8fe
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242393"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559482"
 ---
 # <a name="performance-dashboard"></a>Painel de Desempenho
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] versão 17.2 e posteriores incluem o Painel de Desempenho. Este painel foi projetado para fornecer visualmente insights rápidos do estado de desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]). 
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] versão 17.2 e posteriores incluem o Painel de Desempenho. Este painel foi projetado para fornecer visualmente insights rápidos sobre o estado de desempenho de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. 
 
-O Painel de Desempenho ajuda a identificar rapidamente se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sofrendo um gargalo de desempenho. Se for encontrado um gargalo, capture facilmente dados de diagnóstico adicionais que podem ser necessários para resolver o problema. Alguns problemas comuns de desempenho que o Painel de Desempenho pode ajudar a identificar incluem:
+O Painel de Desempenho ajuda a identificar rapidamente se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] está passando por um gargalo de desempenho. Se for encontrado um gargalo, capture facilmente dados de diagnóstico adicionais que podem ser necessários para resolver o problema. Alguns problemas comuns de desempenho que o Painel de Desempenho pode ajudar a identificar incluem:
 -  Gargalos de CPU (e quais consultas estão consumindo a maior parte da CPU)
--  Gargalos de E/S (e quais consultas estão realizando a maior parte da ES)
+-  Gargalos de E/S (e quais consultas estão realizando a maior parte da E/S)
 -  Recomendações de índice geradas pelo Otimizador de Consulta (índices ausentes)
 -  Bloqueio
 -  Contenção de recursos (incluindo a contenção de trava)
@@ -81,7 +81,7 @@ Os relatórios de **Consultas Dispendiosas** são redefinidos quando [!INCLUDE[s
 > O Painel de Desempenho foi inicialmente lançado como um download autônomo para [SQL Server 2005](http://www.microsoft.com/download/details.aspx?id=22602) e depois atualizado para [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
 
 ## <a name="permissions"></a>Permissões  
-Requer permissões `VIEW SERVER STATE` e `ALTER TRACE`. 
+Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requer permissões `VIEW SERVER STATE` e `ALTER TRACE`. Em [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], requer a permissão `VIEW DATABASE STATE` no banco de dados.
 
 ## <a name="see-also"></a>Consulte Também  
  [Monitorar e ajustar o desempenho](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

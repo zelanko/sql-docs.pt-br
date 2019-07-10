@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e071a15e119e1225698cb2cea3f602d256841e74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 945573e16582ba2778ff29e7396a2fb6ea3dedce
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63015429"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556948"
 ---
 # <a name="memory-management-architecture-guide"></a>guia de arquitetura de gerenciamento de memória
 
@@ -82,7 +82,7 @@ Nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 -  As alocações de memória para as **[pilhas de thread](../relational-databases/memory-management-architecture-guide.md#stacksizes)** no processo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 -  As **DWA (Alocações Diretas do Windows)** , para as solicitações de alocação de memória feitas diretamente no Windows. Elas incluem o uso de heap do Windows e as alocações virtuais diretas feitas pelos módulos que são carregados no processo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Exemplos de tais solicitações de alocação de memória incluem as alocações de DLLs de procedimento armazenado estendido, os objetos que são criados usando procedimentos de automação (chamadas sp_OA) e as alocações de provedores de servidor vinculados.
 
-A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], as alocações de uma página, as alocações de várias páginas e as alocações de CLR são consolidadas em um **alocador de páginas de “qualquer tamanho”** e ele é incluído nos limites de memória que são controlados pelas opções de configuração *max server memory (MB)* e *min server memory (MB)* . Essa alteração forneceu uma capacidade de dimensionamento mais precisa para todos os requisitos de memória que passam pelo gerenciador de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
+A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], as alocações de uma página, as alocações de várias páginas e as alocações de CLR são consolidadas em um **alocador de páginas de "qualquer tamanho"** que é incluído nos limites de memória controlados pelas opções de configuração *max server memory (MB)* e *min server memory (MB)* . Essa alteração forneceu uma capacidade de dimensionamento mais precisa para todos os requisitos de memória que passam pelo gerenciador de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
 
 > [!IMPORTANT]
 > Examine com atenção suas configurações *max server memory (MB)* e *min server memory (MB)* atuais depois de fazer upgrade para o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] por meio do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Isso é necessário porque, a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], tais configurações agora incluem e consideram mais alocações de memória em comparação com as versões anteriores. Essas alterações se aplicam às versões de 32 e 64 bits do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] e às versões de 64 bits do [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] por meio do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
@@ -97,7 +97,7 @@ A tabela a seguir indica se um tipo específico de alocação de memória é con
 |Memória de pilhas de thread|Não|Não|
 |Alocações diretas do Windows|Não|Não|
 
-A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode alocar mais memória do que o valor especificado na configuração max server memory. Esse comportamento pode ocorrer quando o valor de **_Memória Total do Servidor (KB)_ ** já tiver atingido a configuração da **_Memória do Servidor de Destino (KB)_ ** (conforme especificado pela memória máxima do servidor). Se houver memória contígua livre insuficiente para atender à demanda de solicitações de memória de várias páginas (mais de 8 KB) devido à fragmentação da memória, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] poderá exceder o uso em vez de rejeitar a solicitação de memória. 
+A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode alocar mais memória do que o valor especificado na configuração max server memory. Esse comportamento pode ocorrer quando o valor de **_Memória Total do Servidor (KB)_** já tiver atingido a configuração da **_Memória do Servidor de Destino (KB)_** (conforme especificado pela memória máxima do servidor). Se houver memória contígua livre insuficiente para atender à demanda de solicitações de memória de várias páginas (mais de 8 KB) devido à fragmentação da memória, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] poderá exceder o uso em vez de rejeitar a solicitação de memória. 
 
 Assim que essa alocação for executada, a tarefa em segundo plano *Monitor de Recursos* começará a indicar para todos os consumidores de memória liberarem a memória alocada e tentará colocar o valor de *Memória Total do Servidor (KB)* abaixo da especificação da *Memória do Servidor de Destino (KB)* . Portanto, o uso de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode rapidamente exceder a configuração max server memory. Nessa situação, o leitor do contador de desempenho da *Memória Total do Servidor (KB)* excederá as configurações max server memory e *Memória do Servidor de Destino (KB)* .
 
@@ -280,7 +280,7 @@ A demanda de memória é uma condição decorrente da falta de memória e pode r
 - Consultas de execução mais longa (se existirem esperas por concessão de memória)
 - Ciclos de CPU adicionais
 
-Essa situação pode ser gerada por causas externas ou internas. As causas externas incluem:
+Essa situação pode ser acionada por causas externas ou internas. As causas externas incluem:
 - A RAM (memória física disponível) é insuficiente. Isso faz com que o sistema corte conjuntos de trabalho de processos atualmente em execução, o que pode resultar em um retardamento geral. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode reduzir o destino de confirmação de pool de buffers e passar a cortar caches internos com mais frequência. 
 - A memória de sistema geral disponível (que inclui o arquivo de paginação do sistema) está baixa. Isso pode causar falha em alocações de memória pelo sistema, já que ele não é capaz de realizar page-out da memória alocada atualmente.
 As causas internas incluem:

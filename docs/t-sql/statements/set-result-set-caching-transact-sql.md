@@ -1,7 +1,7 @@
 ---
-title: SET RESULT SET CACHING (Transact-SQL) | Microsoft Docs
+title: SET RESULT_SET_CACHING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/03/2019
+ms.date: 07/03/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -15,12 +15,12 @@ author: XiaoyuL-Preview
 ms.author: xiaoyul
 manager: craigg
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f9750cdc2dea7049bde77d31c275789691abf1b0
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.openlocfilehash: a9f050fd8e95a7dba255cf7aa164f1d58179182e
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67313819"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564116"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL) 
 
@@ -28,7 +28,7 @@ ms.locfileid: "67313819"
 
 Controla o comportamento de cache do conjunto de resultados da sessão do cliente atual.  
 
-Aplica-se a ao SQL Data Warehouse do Azure (versão prévia) 
+Aplica-se a ao SQL Data Warehouse do Azure (versão prévia)
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,11 +46,23 @@ Habilita o armazenamento em cache do conjunto de resultados da sessão do client
 **Desligado**   
 Desabilita o armazenamento em cache do conjunto de resultados da sessão do cliente atual.
 
+## <a name="examples"></a>Exemplos
+
+Consulte a coluna result_cache_hit em [sys.dm_pdw_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql) com o request_id de uma consulta para ver se essa consulta foi executada com um acerto ou erro do cache de resultados.
+
+```sql
+SELECT result_cache_hit
+FROM sys.dm_pdw_exec_requests
+WHERE request_id = 'QID58286'
+```
+
 ## <a name="permissions"></a>Permissões
 
 Requer associação à função pública
 
 ## <a name="see-also"></a>Confira também
 
-[Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)</br>
-[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)
+[Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
+[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
+[DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-showresultcachespaceused-transact-sql)</br>
+[DBCC DROPRESULTSETCACHE (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-dropresultsetcache-transact-sql)

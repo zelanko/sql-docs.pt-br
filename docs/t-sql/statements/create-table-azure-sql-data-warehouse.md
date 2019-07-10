@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE (SQL Data Warehouse do Azure) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/14/2017
+ms.date: 07/03/2019
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 328a0aaeed34bd03e33f480ea0b0ea6afc7e940d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a137ff26240b23e99f2faeadb367b1379b8c0f8
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413333"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564018"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (SQL Data Warehouse do Azure)
 
@@ -164,21 +164,21 @@ Cria uma ou mais partições da tabela. Essas partições são fatias horizontai
 
  Confira [Criar uma tabela particionada](#PartitionedTable) na seção de exemplos.
 
-### <a name="ordered-clustered-columnstore-index-option-preview"></a>Opção de índice columnstore clusterizado ordenado (versão prévia)
+### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>Opção de índice columnstore clusterizado ordenado (versão prévia do SQL Data Warehouse do Azure)
 
 O índice columnstore clusterizado é o padrão para a criação de tabelas no SQL Data Warehouse do Azure.  A especificação ORDER é padronizada para as teclas COMPOUND.  A classificação será sempre em ordem crescente. Se nenhuma cláusula ORDER for especificada, a columnstore não será classificada. Devido ao processo de ordenação, uma tabela com índice columnstore clusterizado e ordenado pode ter tempos de carregamento de dados maiores que os índices columnstore clusterizados e não ordenados. Se você precisar de mais espaço de tempdb ao carregar dados, poderá diminuir a quantidade de dados por inserção.
 
-Durante a visualização, você pode executar essa consulta para verificar as colunas com ORDER habilitado.  Uma exibição de catálogo será fornecida posteriormente para entregar essas informações e o ordinal da coluna, se várias colunas forem especificadas em ORDER.
+Durante a visualização, você pode executar essa consulta para verificar as colunas com ORDER habilitado.
 
 ```sql
-SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.*
-FROM sys.objects o 
-INNER JOIN sys.columns c ON o.object_id = c.object_id 
-INNER JOIN sys.partitions p ON o.object_id = p.object_id   
-INNER JOIN sys.column_store_segments s 
-    ON p.hobt_id = s.hobt_id AND s.column_id = c.column_id  
-WHERE o.name = 't1' and c.name = 'col1' 
-ORDER BY c.name, s.min_data_id, s.segment_id;
+SELECT i.name AS index_name  
+    ,COL_NAME(ic.object_id,ic.column_id) AS column_name  
+    ,ic.index_column_id  
+    ,ic.key_ordinal  
+,ic.is_included_column  
+FROM sys.indexes AS i  
+INNER JOIN sys.index_columns AS ic
+    ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
 ```
 
 ### <a name="DataTypes"></a> Tipo de dados
@@ -594,7 +594,8 @@ WITH
 <a name="SeeAlso"></a>
 ## <a name="see-also"></a>Confira também
  
- [CREATE TABLE AS SELECT &#40;SQL Data Warehouse do Azure&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
- [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
+[CREATE TABLE AS SELECT &#40;SQL Data Warehouse do Azure&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+[sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql?view=azure-sqldw-latest) 
   

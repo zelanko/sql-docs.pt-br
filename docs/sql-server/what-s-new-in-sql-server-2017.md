@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79be3e174e77648b4cbe908fa7d29f827bf4d3c5
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: d1f75a8c70415fe31419a8f30f80e727226fa879
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263502"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556937"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novidades no SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ O SQL Server 2017 inclui vários novos recursos, aprimoramentos e melhorias de d
 - A coluna **modified_extent_page_count** no [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) controla alterações diferenciais em cada arquivo de banco de dados, habilitando soluções de backup inteligentes que executam backup diferencial ou backup completo com base no percentual de páginas alteradas no banco de dados. (CTP 2.0)
 - A sintaxe T-SQL [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) agora dá suporte ao carregamento de uma tabela em um grupo de arquivos diferente do grupo de arquivos padrão do usuário usando a palavra-chave **ON**. (CTP 2.0)
 - Agora, há suporte para transações de banco de dados em todos os bancos de dados que fazem parte de um **Grupo de Disponibilidade AlwaysOn**, incluindo bancos de dados que fazem parte da mesma instância. Consulte [Transações – Grupos de Disponibilidade Always On e Espelhamento de Banco de Dados](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md) (CTP 2.0)
-- Uma nova função dos **Grupos de Disponibilidade** oferece suporte sem cluster, configuração de Grupos de Disponibilidade de Confirmação de Réplica Mínima e migrações e testes entre os sistemas operacionais Windows e Linux. (CTP 1.3)
+- Uma nova função dos **Grupos de Disponibilidade** dá suporte em escala de leitura sem cluster, configuração de Grupos de Disponibilidade de Confirmação de Réplica Mínima e migrações e testes entre os sistemas operacionais Windows e Linux. (CTP 1.3)
 - Novas exibições de gerenciamento dinâmico:
     - O [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) expõe atributos de nível de resumo e informações sobre arquivos de log de transações, que ajudam a monitorar a integridade do log de transações. (CTP 2.1)
     - O [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) controla o uso do repositório de versão por banco de dados, o que ajuda a planejar de forma proativa o dimensionamento do tempdb com base no uso do repositório de versão por banco de dados. (CTP 2.0)

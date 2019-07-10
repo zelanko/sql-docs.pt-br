@@ -24,12 +24,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 768ffcece8525d36eb7ab3576f28596430941caa
-ms.sourcegitcommit: 3a1e0b92cbe53ccf3b233faf8629d16bbf673b30
+ms.openlocfilehash: a34c21deff4314747f1477efeb3f20991d311fb5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55229037"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585025"
 ---
 # <a name="statistics"></a>Estatísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -112,7 +112,7 @@ ORDER BY s.name;
     * Se a cardinalidade da tabela era de 500 ou menos quando as estatísticas foram avaliadas, é necessário atualizar a cada 500 modificações.
     * Se a cardinalidade da tabela era inferior a 500 quando as estatísticas foram avaliadas, é necessário atualizar a cada 500 + 20% de modificações.
 
-* Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e no [nível de compatibilidade de banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa um limite de atualização de estatística dinâmico e decrescente, ajustado de acordo com o número de linhas da tabela. Isso é calculado como a raiz quadrada do produto de 1000 e da cardinalidade da tabela atual. Por exemplo, se a tabela contiver 2 milhões de linhas, o cálculo será sqrt (1000 * 2000000) = 44721,359. Com essa alteração, as estatísticas em tabelas grandes serão atualizadas com mais frequência. No entanto, quando um banco de dados tem um nível de compatibilidade inferior a 130, aplica-se o limite do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+* Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e no [nível de compatibilidade de banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa um limite de atualização de estatística dinâmico e decrescente, ajustado de acordo com o número de linhas da tabela. Isso é calculado como a raiz quadrada do produto de 1000 e da cardinalidade da tabela atual. Por exemplo, se a tabela contiver 2 milhões de linhas, o cálculo será sqrt (1000 * 2000000) = 44721,359. Com essa alteração, as estatísticas em tabelas grandes serão atualizadas com mais frequência. No entanto, quando um banco de dados tem um nível de compatibilidade inferior a 130, aplica-se o limite do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. ?
 
 > [!IMPORTANT]
 > Começando com o [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] pelo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no [nível de compatibilidade de banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) inferior a 130, use o [sinalizador de rastreamento 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará um limite de atualização de estatística dinâmico e decrescente, ajustado de acordo com o número de linhas da tabela.
@@ -162,7 +162,9 @@ Para saber mais sobre como controlar AUTO_UPDATE_STATISTICS, confira [Controland
 1.  O otimizador de consulta cria estatísticas para índices em tabelas ou exibições quando o índice é criado. Essas estatísticas são criadas nas colunas de chaves do índice. Se o índice for um índice filtrado, o otimizador de consulta criará estatísticas filtradas no mesmo subconjunto de linhas especificado para o índice filtrado. Para obter mais informações sobre índices filtrados, veja [Criar índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md) e [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 2.  O otimizador de consulta cria estatísticas para colunas únicas em predicados de consulta quando [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) estiver ativada.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Para a maioria das consultas, esses dois métodos para criar estatísticas asseguram um plano de consulta de alta qualidade; em alguns casos, você pode aprimorar os planos de consulta criando estatísticas adicionais com a instrução [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) . Essas estatísticas adicionais podem capturar correlações estatísticas que o otimizador de consulta não considera ao criar estatísticas para índices ou colunas únicas. Seu aplicativo pode ter correlações estatísticas adicionais nos dados de tabela que, se calculadas em um objeto de estatísticas, pode permitir que o otimizador de consulta aprimore os planos de consulta. Por exemplo, estatísticas filtradas em um subconjunto de linhas de dados ou estatísticas multicolunas em colunas de predicado de consulta podem aprimorar o plano de consulta.  
   
 Ao criar estatísticas com a instrução CREATE STATISTICS, recomendamos manter a opção AUTO_CREATE_STATISTICS ativada de forma que o otimizador de consulta continue criando estatísticas da coluna única rotineiramente para colunas de predicado de consulta. Para obter mais informações sobre predicados de consulta, veja [Critério de pesquisa &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
@@ -236,7 +238,7 @@ Quando as estatísticas em um banco de dados somente leitura ou um instantâneo 
 Somente o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode criar e atualizar estatísticas temporárias. No entanto, você pode excluir estatísticas temporárias e monitorar as propriedades de estatísticas que usam as mesmas ferramentas que você utiliza para estatísticas permanentes:  
   
 * Exclua estatísticas temporárias usando a instrução [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md).  
-* Para monitorar as estatísticas, use as exibições de catálogo **[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)** e **[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)**. **sys_stats** inclui a coluna, **is_temporary** para indicar quais estatísticas são permanentes e quais são temporárias.  
+* Para monitorar as estatísticas, use as exibições de catálogo **[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)** e **[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)** . **sys_stats** inclui a coluna, **is_temporary** para indicar quais estatísticas são permanentes e quais são temporárias.  
   
  Como as estatísticas temporárias são armazenadas em **tempdb**, uma reinicialização do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] faz com que todas as estatísticas temporárias desapareçam.  
     

@@ -11,12 +11,12 @@ ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 688a61aeecfb729eeee877e0f8d3e463eaff06c8
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: c00b9b2156848e45ce4f73429c8cf397f7d34fc2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52159034"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584902"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lição 2: Criar e aplicar uma política de nomeação de padrões
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,6 +40,7 @@ Para concluir este tutorial, é necessário ter o SQL Server Management Studio e
   
 2.  No Pesquisador de Objetos, clique em **Bancos de Dados**e, em seguida, pressione F5 para atualizar a lista de bancos de dados.  
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="create-the-finance-tables-condition"></a>Criar a condição de tabelas Finance 
 
@@ -49,7 +50,7 @@ Para concluir este tutorial, é necessário ter o SQL Server Management Studio e
   
 2.  Na caixa de diálogo **Criar Nova Condição** , na caixa **Nome** , digite **Tabelas de Finanças**.  
     1. Na lista **Faceta** , selecione **Nome com Diversas Partes**. 
-    1. Na área **Expressão**, na caixa **Campo**, selecione **@Name**; na caixa **Operador**, selecione **Like**; e na caixa **Valor**, digite ```'fintbl%'``` para forçar todos os nomes de tabelas a começar com as letras **fintbl**.
+    1. Na área **Expressão**, na caixa **Campo**, selecione **@Name** ; na caixa **Operador**, selecione **Like**; e na caixa **Valor**, digite ```'fintbl%'``` para forçar todos os nomes de tabelas a começar com as letras **fintbl**.
     1. Na página **Descrição** , digite **Os nomes da tabela de Finanças deve começar com fintbl**e, em seguida, clique em **OK** para criar a condição.  
 
     ![Condição de tabelas Finance](Media/lesson-2-create-and-apply-a-naming-standards-policy/finance-tables-condition.png)
@@ -156,7 +157,7 @@ Para concluir este tutorial, é necessário ter o SQL Server Management Studio e
 Este tutorial mostrou como criar condições do Gerenciamento Baseado em Políticas, políticas e grupos de políticas e como aplicar filtros e verificar a compatibilidade de destinos de Gerenciamento Baseado em Políticas.  
   
 ## <a name="next"></a>Próximo  
-Este tutorial está concluído. Para retornar ao início, visite [Tutorial: Administrando servidores com o Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md).  
+Este tutorial está concluído. Para retornar ao início, visite o [Tutorial: Administração de servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md).  
   
 Para obter uma lista de tutoriais, consulte [Tutoriais do SQL Server 2016](../../sql-server/tutorials-for-sql-server-2016.md).  
   

@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 660b9d8ea0d0ebd0f0ef1ea83c225cd74f71080b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7e831a6c0e5a1d45c8e7ac2c921be3ef120a41f
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66744169"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556949"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Edições e recursos com suporte do SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |Supervisor de recuperação de banco de dados|Sim|Sim|Sim|Sim|Sim|
 |Backup criptografado|Sim|Sim|Não|Não|Não|
 |Backup híbrido para o Microsoft Azure (backup para URL)|Sim|Sim|Não|Não|Não|
-|Grupo de disponibilidade sem cluster|Sim|Sim|Não|Não|Não|Não|
+|Grupos de disponibilidade de escala de leitura|Sim|Sim|Não|Não|Não|Não|
 |Configuração de grupos de disponibilidade de confirmação de réplica mínima|Sim|Sim|Sim|Não|Não|Não|
   
 

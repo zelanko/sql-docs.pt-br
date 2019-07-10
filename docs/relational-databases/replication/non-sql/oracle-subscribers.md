@@ -17,12 +17,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 647828d7e0e78b7faa6abb2ce1a7ca8102490d67
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3c24ad02eb34e06d23ec30f91b3c547f6fbd737e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135896"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585883"
 ---
 # <a name="oracle-subscribers"></a>Assinantes Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,9 @@ ms.locfileid: "54135896"
     |Especificar as informações de host para identificar o ouvinte de banco de dados|O host é o nome ou alias de DNS do computador no qual o ouvinte Oracle está executando, que costuma geralmente ser o mesmo computador no qual o banco de dados reside. Para alguns protocolos, você deve fornecer informações adicionais. Por exemplo, se você selecionar o TCP, deve fornecer a porta na qual o ouvinte está escutando as solicitações de conexão para o banco de dados de destino. A configuração do TCP padrão usa a porta 1521.|  
   
 3.  Crie um instantâneo ou uma publicação transacional, habilite-o para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, crie uma assinatura push para o Assinante. Para obter mais informações, consulte [Criar uma assinatura para um Assinante não SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="setting-directory-permissions"></a>Definindo permissões de diretório  
  A conta sob a qual o serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Distribuidor executa deve receber permissões de gravação e executar para o diretório (e todos os subdiretórios) onde o software de rede cliente Oracle está instalado.  
   
@@ -87,7 +89,7 @@ ms.locfileid: "54135896"
   
     -   Garantir que cadeias de caracteres vazias não estejam inseridas na tabela publicada como valores de colunas.  
   
-    -   Usar o parâmetro **–SkipErrors** para o Agente de Distribuição caso seja aceitável ser notificado das falhas no log do histórico do Agente de Distribuição e continuar com o processamento. Especifique o código de erro Oracle 1400 (**-SkipErrors1400**).  
+    -   Usar o parâmetro **?SkipErrors** para o Agente de Distribuição caso seja aceitável ser notificado das falhas no log do histórico do Agente de Distribuição e continuar com o processamento. Especifique o código de erro Oracle 1400 ( **-SkipErrors1400**).  
   
     -   Modifique o script de criação de tabela gerado, removendo o atributo NOT NULL das colunas de caracteres que talvez tenham cadeias de caracteres vazias associadas e forneça o script modificado como um script de criação personalizado para o artigo usando o parâmetro @creation_script de [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   

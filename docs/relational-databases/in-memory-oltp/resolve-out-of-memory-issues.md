@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dfd06b590ba54efc935bab1bbe8c898101e827ae
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 38ac1dae8a3d679a09ccebaa2aca06b681ac48ff
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518615"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582747"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memória insuficiente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "52518615"
   
 |Tópico|Visão geral|  
 |-----------|--------------|  
-|[Resolver falhas de restauração de banco de dados devido a OOM](#bkmk_resolveRecoveryFailures)|O que fazer se você receber a mensagem de erro “Falha na operação de restauração do banco de dados '*\<databaseName>*' devido à memória insuficiente no pool de recursos '*\<resourcePoolName>*'”.|  
+|[Resolver falhas de restauração de banco de dados devido a OOM](#bkmk_resolveRecoveryFailures)|O que fazer se você receber a mensagem de erro “Falha na operação de restauração do banco de dados ' *\<databaseName>* ' devido à memória insuficiente no pool de recursos ' *\<resourcePoolName>* '”.|  
 |[Resolver o impacto de pouca memória ou condições de OOM na carga de trabalho](#bkmk_recoverFromOOM)|O que fazer se você desconfiar que os problemas de pouca memória estão comprometendo o desempenho.|  
-|[Resolver falhas de alocação de página devido à memória insuficiente quando há memória suficiente disponível](#bkmk_PageAllocFailure)|O que fazer se você receber a mensagem de erro “Desautorizando as alocações de página do banco de dados '*\<databaseName>*' devido à memória insuficiente no pool de recursos '*\<resourcePoolName>*'”. ...” quando a memória disponível é suficiente para a operação.|
+|[Resolver falhas de alocação de página devido à memória insuficiente quando há memória suficiente disponível](#bkmk_PageAllocFailure)|O que fazer se você receber a mensagem de erro “Desautorizando as alocações de página do banco de dados ' *\<databaseName>* ' devido à memória insuficiente no pool de recursos ' *\<resourcePoolName>* '”. ...” quando a memória disponível é suficiente para a operação.|
 |[Práticas recomendadas ao usar o OLTP in-memory em um ambiente de VM](#bkmk_VMs)|O que deve ser levado em consideração ao usar o OLTP in-memory em um ambiente virtualizado.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Resolver falhas de restauração de banco de dados devido a OOM  
- Quando tenta restaurar um banco de dados, você pode receber a mensagem de erro: “Falha na operação de restauração do banco de dados '*\<databaseName>*' devido à memória insuficiente no pool de recursos '*\<resourcePoolName>*'”. Isso indica que o servidor não tem memória suficiente disponível para restaurar o banco de dados. 
+ Ao tentar restaurar um banco de dados, você pode receber a mensagem de erro: "Falha na operação de restauração do banco de dados ' *\<nomedoBancoDeDados>* ' devido à memória insuficiente no pool de recursos ' *\<nomeDoPoolDeRecursos>* '." Isso indica que o servidor não tem memória suficiente disponível para restaurar o banco de dados. 
    
 O servidor restaurado em um banco de dados deve ter memória suficiente disponível para as tabelas com otimização de memória no backup de banco de dados; caso contrário, o banco de dados não será colocado online e será marcado como suspeito.  
   
@@ -77,7 +77,9 @@ Se o servidor tiver memória física suficiente, mas você ainda estiver vendo e
 1.  [Abrir uma DAC (Conexão de Administrador Dedicada)](#bkmk_openDAC)  
   
 2.  [Realizar a ação corretiva](#bkmk_takeCorrectiveAction)  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="bkmk_openDAC"></a> Abrir uma DAC (Conexão de Administrador Dedicada)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma DAC (conexão de administrador dedicada). A DAC permite que um administrador acesse uma instância em execução do Mecanismo de Banco de Dados do SQL Server para solucionar problemas no servidor, mesmo quando o servidor não está respondendo às conexões de outro cliente. O DAC é disponibilizado pelo utilitário `sqlcmd` e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: b1bd2ab7d1ab17ef9d0bc4671054f02808ed230f
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 7703ad7ce46c9dda59dacbc86ebbd9646b1015cf
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439838"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584485"
 ---
 # <a name="compare-execution-plans"></a>Comparar planos de execução
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,11 +69,13 @@ Quando dois planos de execução são comparados, regiões do plano que **fazem 
      > [!TIP]
      > Todas as opções de zoom e navegação disponíveis para planos de execução funcionam no modo de comparação do plano. Para obter mais detalhes, confira [Exibir um plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md).
 
-5.  Também é aberta uma janela Propriedades dupla à direita no escopo da seleção padrão. As propriedades que existem em ambos os operadores comparados, mas que têm diferenças, serão ser precedidas pelo sinal *não igual* (≠) para facilitar a identificação.
+5.  Também é aberta uma janela Propriedades dupla à direita no escopo da seleção padrão. As propriedades que existem em ambos os operadores comparados, mas que têm diferenças, serão ser precedidas pelo sinal *não igual* (?) para facilitar a identificação.
 
     ![Janela Propriedades duplas](../../relational-databases/performance/media/plancomparison-properties.png "Janela Propriedades duplas")  
 
 6.  A janela de navegação de comparação **Análise de Plano de Execução** também abre na parte inferior. Há três guias disponíveis:
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  Na guia **Opções da Instrução**, a seleção padrão é *Realçar operações semelhantes* e o mesmo operador ou nó realçado em planos comparados compartilham o mesmo padrão de cor e linha. Navegue entre áreas semelhantes em planos comparados clicando em um padrão verde-limão. Você também pode optar por realçar as diferenças entre os planos, em vez das semelhanças, selecionando *Realçar operações que não correspondem aos segmentos semelhantes*. 
     

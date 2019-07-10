@@ -14,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 94531ed04a4265a5fa1a9293e191faeb37feab9f
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: d7035a47368ead8af3a20d9ca56f0c5452395516
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973935"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586174"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar e gerenciar arquivos de dicionário de sinônimos para Pesquisa de texto completo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Um dicionário de sinônimos de Pesquisa de Texto Completo é um arquivo de text
 
 -   Configuração de diacríticos  
   
-     Em um determinado dicionário de sinônimos, todos os padrões de pesquisa diferenciam ou não diferenciam marcas diacríticas, como um til (**~**), acento agudo (**´**) ou trema (**¨**), ou seja, eles *diferenciam acentos* ou *não diferenciam acentos*. Por exemplo, vamos supor que você especificou que o padrão "café" deve ser substituído por outros padrões em uma consulta de texto completo. Se o dicionário de sinônimos não diferenciar acentos, a pesquisa de texto completo substituirá os padrões "café" e "cafe". Se o dicionário de sinônimos diferenciar acentos, a pesquisa de texto completo substituirá somente o padrão "café". Por padrão, um dicionário de sinônimos não diferencia acentos.  
+     Em um determinado dicionário de sinônimos, todos os padrões de pesquisa diferenciam ou não as marcas diacríticas, como um til ( **~** ), acento agudo ( **?** ) ou trema ( **?** ), ou seja, eles *diferenciam acentos* ou *não diferenciam acentos*. Por exemplo, vamos supor que você especifique o padrão "caf?" a ser substituído por outros padrões em uma consulta de texto completo. Se o dicionário de sinônimos não diferenciar acentos, a pesquisa de texto completo substituirá os padrões "caf?" e "café". Se o dicionário de sinônimos diferenciar acentos, a pesquisa de texto completo substituirá somente o padrão "caf?". Por padrão, um dicionário de sinônimos não diferencia acentos.  
   
 ##  <a name="initial_thesaurus_files"></a> Arquivos de dicionário de sinônimos padrão
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece um conjunto de arquivos XML de dicionário de sinônimos, um para cada idioma com suporte. Esses arquivos estão basicamente vazios. Eles contêm apenas a estrutura XML de alto nível que é comum a todos os dicionários de sinônimos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um dicionário de sinônimos de exemplo comentado.  
@@ -83,6 +83,8 @@ Você pode alterar a localização e os nomes de um arquivo de dicionário de si
 Uma consulta ao dicionário de sinônimos usa um dicionário de sinônimos específico de um idioma e o dicionário de sinônimos global.
 1.  Primeiro, a consulta pesquisa pelo arquivo específico do idioma e depois o carrega para ser processado (a menos que já esteja carregado). A consulta é expandida para incluir os sinônimos específicos do idioma definidos pelos conjuntos de expansão e regras de substituição no arquivo do dicionário de sinônimos. 
 2.  Essas etapas são repetidas para o dicionário de sinônimos global. Entretanto, se um termo já tiver correspondências no arquivo de dicionário de sinônimos específico do idioma, ele não terá correspondentes no dicionário de sinônimos global.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="structure"></a> Estrutura de um arquivo de dicionário de sinônimos  
  Cada arquivo de dicionário de sinônimos define um contêiner XML cuja ID é `Microsoft Search Thesaurus`, além de um comentário, `<!--` ... `-->`, que contém um dicionário de sinônimos de exemplo. O dicionário de sinônimos é definido em um elemento `<thesaurus>` que contém exemplos dos elementos filho que definem a configuração de diacríticos, os conjuntos de expansão e os conjuntos de substituição.

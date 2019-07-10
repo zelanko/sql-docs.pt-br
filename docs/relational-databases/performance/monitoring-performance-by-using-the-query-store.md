@@ -1,7 +1,7 @@
 ---
 title: Monitorando o desempenho usando o Repositório de Consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92752fa479852c2f0c17ded6fa2a047cfcff5dcb
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: e407b4ae2a9be3b4a2d3c2671c59548db94916de
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356469"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581397"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitorar o desempenho usando o Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,8 +44,10 @@ ms.locfileid: "58356469"
   
 2.  Na caixa de diálogo **Propriedades do Banco de Dados** , selecione a página **Repositório de Consultas** .  
   
-3.  Na caixa **Modo de Operação (Solicitado)**, selecione **Leitura Gravação**.  
-  
+3.  Na caixa **Modo de Operação (Solicitado)** , selecione **Leitura Gravação**.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="use-transact-sql-statements"></a>Usar Instruções Transact-SQL  
   
 Use a instrução **ALTER DATABASE** para habilitar o repositório de consultas. Por exemplo:  
@@ -571,7 +573,7 @@ Para consultas executadas várias vezes, você pode perceber que o [!INCLUDE[ssN
   
 Você também pode identificar desempenho inconsistente de consulta para uma consulta com parâmetros (autoparametrizada ou parametrizada manualmente). Entre diferentes planos, você pode identificar o plano que é rápido e ideal o suficiente para todos ou a maioria dos valores de parâmetro e impor esse plano, mantendo desempenho previsível para o conjunto mais amplo de cenários de usuário.  
   
- ### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>Impor um plano para uma consulta (aplicar política de imposição)
+### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>Impor um plano para uma consulta (aplicar política de imposição)
 
 Quando um plano é imposto em determinada consulta, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta impor o plano no otimizador. Se a imposição do plano falhar, um XEvent será acionado e o otimizador será instruído a otimizar normalmente.
 
@@ -580,7 +582,11 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 ```  
   
 Ao usar **sp_query_store_force_plan** você só pode impor planos registrados pelo repositório de consultas como um plano para essa consulta. Em outras palavras, os únicos planos disponíveis para uma consulta são aqueles que já foram usados para executar essa consulta enquanto o Repositório de Consultas estava ativo.  
+
+#### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> Planejar forçar suporte para cursores estáticos e de avanço rápido
   
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 O Repositório de Consultas dá suporte à capacidade de impor os planos de execução de consulta para cursores estáticos e de avanço rápido de API e T-SQL. Agora há suporte para a imposição por meio de `sp_query_store_force_plan` ou por meio de relatórios do Repositório de Consultas do SQL Server Management Studio.
+
 ### <a name="remove-plan-forcing-for-a-query"></a>Remover a imposição de plano de uma consulta
 
 Para depender novamente no otimizador de consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para calcular o plano de consulta ideal, use **sp_query_store_unforce_plan** para cancelar a imposição do plano selecionado para a consulta.  
@@ -588,7 +594,9 @@ Para depender novamente no otimizador de consultas do [!INCLUDE[ssNoVersion](../
 ```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
-  
+
+
+
 ## <a name="see-also"></a>Consulte Também  
  [Prática recomendada com o Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Usar o Repositório de Consultas com OLTP na memória](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   

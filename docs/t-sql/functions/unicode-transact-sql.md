@@ -21,12 +21,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c3ebe7192142b47011864ab112d514187ead99c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec799438a384ba8bf20e8070b84703e6f1e60e6f
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946792"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500214"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,14 +42,14 @@ UNICODE ( 'ncharacter_expression' )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **'** *ncharacter_expression* **'**  
- É uma expressão **nchar** ou **nvarchar**.  
+**'** *ncharacter_expression* **'**  
+É uma expressão **nchar** ou **nvarchar**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **int**  
+**int**  
   
 ## <a name="remarks"></a>Remarks  
- Nas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], a função UNICODE retorna um ponto de código UCS-2 no intervalo de 0 a 0xFFFF. A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], ao usar ordenações habilitadas por [Caractere Suplementar (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), o UNICODE retorna um ponto de código UTF-16 no intervalo de 0 a 0x10FFFF.  
+Nas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], a função UNICODE retorna um ponto de código UCS-2 no intervalo de 000000 a 00FFFF que pode representar os 65.535 caracteres em BMP (Plano Multilíngue Básico) em Unicode. A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], ao usar ordenações habilitadas por [Caractere Suplementar (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), o UNICODE retorna um ponto de código UTF-16 no intervalo de 000000 a 10FFFF. Para saber mais sobre o suporte a Unicode em [!INCLUDE[ssde_md](../../includes/ssde_md.md)], confira [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn). 
   
 ## <a name="examples"></a>Exemplos  
   

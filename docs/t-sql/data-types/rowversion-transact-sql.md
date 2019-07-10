@@ -27,12 +27,12 @@ ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: da68caa3ac81d25c8a03dfe11c1f75dcee15d40d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 876e498a84ea3b6066647b47ea7ba27b5fc2a91d
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041537"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492582"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;
 > [!NOTE]  
 >  Os valores duplicados de **rowversion** podem ser gerados com a instrução SELECT INTO na qual uma coluna **rowversion** está na lista SELECT. Não recomendamos o uso de **rowversion** desta maneira.  
   
-Uma coluna **rowversion** que não permite valor nulo é semanticamente equivalente a uma coluna **binary(8)**. Uma coluna **rowversion** que permite valor nulo é semanticamente equivalente a uma coluna **varbinary(8)**.
+Uma coluna **rowversion** que não permite valor nulo é semanticamente equivalente a uma coluna **binary(8)** . Uma coluna **rowversion** que permite valor nulo é semanticamente equivalente a uma coluna **varbinary(8)** .
   
 Use a coluna **rowversion** de uma linha para determinar com facilidade se a linha teve uma instrução de atualização executada nela desde a última vez que ela foi lida. Se uma instrução de atualização é executada na linha, o valor de rowversion é atualizado. Se nenhuma instrução de atualização é executada na linha, o valor de rowversion é igual a quando ele foi lido anteriormente. Para retornar o valor de rowversion atual para um banco de dados, use [@@DBTS](../../t-sql/functions/dbts-transact-sql.md).
   
@@ -102,7 +102,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
   
 `myRv` é o valor de coluna **rowversion** da linha que indica a última vez que você a leu. Esse valor deve ser substituído pelo valor de **rowversion** real. Um exemplo do valor de **rowversion** real é 0x00000000000007D3.
   
-Você também pode colocar as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] de amostra em uma transação. Consultando a variável `@t` no escopo da transação, você pode recuperar a coluna `myKey` atualizada da tabela, sem consultar a tabela `MyTes`t.
+Você também pode colocar as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] de amostra em uma transação. Consultando a variável `@t` no escopo da transação, você pode recuperar a coluna `myKey` atualizada da tabela sem consultar a tabela `MyTest`.
   
 Este é o mesmo exemplo usando a sintaxe de **timestamp**:
   

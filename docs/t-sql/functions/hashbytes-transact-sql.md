@@ -20,14 +20,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4364afdd649fe91f5e779170d9f80a4071118ea0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 400078e666f3854383cbd430cf8fd719ea720929
+ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67145414"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533812"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna o hash de MD2, MD4, MD5, SHA, SHA1 ou SHA2 de sua entrada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -43,14 +44,15 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **'** \<algorithm> **'**  
- Identifica o algoritmo de hash a ser usado para aplicar o hash à entrada. Este é um argumento exigido sem padrão. As aspas simples são obrigatórias. Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], todos os algoritmos, exceto SHA2_256 e SHA2_512, foram preteridos.  
+
+`<algorithm>`  
+Identifica o algoritmo de hash a ser usado para aplicar o hash à entrada. Este é um argumento exigido sem padrão. As aspas simples são obrigatórias. Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], todos os algoritmos, exceto SHA2_256 e SHA2_512, foram preteridos.  
   
- **@input**  
- Especifica uma variável que contém os dados a aceitar o hash. **@input** é **varchar**, **nvarchar** ou **varbinary**.  
+`@input`  
+Especifica uma variável que contém os dados a aceitar o hash. `@input` é **varchar**, **nvarchar** ou **varbinary**.  
   
- **'** *input* **'**  
- Especifica uma expressão que é avaliada para uma cadeia de caracteres binária ou um caractere que receberá hash.  
+'*input*'  
+Especifica uma expressão que é avaliada para uma cadeia de caracteres binária ou um caractere que receberá hash.  
   
  A saída segue o padrão do algoritmo: 128 bits (16 bytes) para MD2, MD4 e MD5; 160 bits (20 bytes) para SHA e SHA1; 256 bits (32 bytes) para SHA2_256 e 512 bits (64 bytes) para SHA2_512.  
   
@@ -68,31 +70,30 @@ Os algoritmos MD2, MD4, MD5, SHA e SHA1 começando com [!INCLUDE[ssSQL15](../../
 
 ## <a name="examples"></a>Exemplos  
 ### <a name="return-the-hash-of-a-variable"></a>Retornar o hash de uma variável  
- O exemplo a seguir retorna o hash `SHA1` dos dados **nvarchar** armazenados na variável `@HashThis`.  
+ O exemplo a seguir retorna o hash `SHA2_256` dos dados **nvarchar** armazenados na variável `@HashThis`.  
   
 ```sql  
-DECLARE @HashThis nvarchar(4000);  
-SET @HashThis = CONVERT(nvarchar(4000),'dslfdkjLK85kldhnv$n000#knf');  
-SELECT HASHBYTES('SHA1', @HashThis);  
+DECLARE @HashThis nvarchar(32);  
+SET @HashThis = CONVERT(nvarchar(32),'dslfdkjLK85kldhnv$n000#knf');  
+SELECT HASHBYTES('SHA2_256', @HashThis);  
 ```  
   
 ### <a name="return-the-hash-of-a-table-column"></a>Retornar o hash de uma coluna de tabela  
- O exemplo a seguir retorna o hash SHA1 dos valores na coluna `c1` da tabela `Test1`.  
+ O exemplo a seguir retorna o hash SHA2_256 dos valores na coluna `c1` da tabela `Test1`.  
   
 ```sql  
-CREATE TABLE dbo.Test1 (c1 nvarchar(50));  
+CREATE TABLE dbo.Test1 (c1 nvarchar(32));  
 INSERT dbo.Test1 VALUES ('This is a test.');  
 INSERT dbo.Test1 VALUES ('This is test 2.');  
-SELECT HASHBYTES('SHA1', c1) FROM dbo.Test1;  
+SELECT HASHBYTES('SHA2_256', c1) FROM dbo.Test1;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
 -------------------------------------------  
-0x0E7AAB0B4FF0FD2DFB4F0233E2EE7A26CD08F173  
-0xF643A82F948DEFB922B12E50B950CEE130A934D6  
-  
+0x741238C01D9DB821CF171BF61D72260B998F7C7881D90091099945E0B9E0C2E3 
+0x91DDCC41B761ACA928C62F7B0DA61DC763255E8247E0BD8DCE6B22205197154D  
 (2 row(s) affected)  
 ```  
   

@@ -11,12 +11,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1d6e67ef3810a6da8a58b81f278afafd713e0f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd06ad617f2e74d068209859bde6bcbe95d84b62
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935385"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580543"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,9 @@ ms.locfileid: "65935385"
 1.  Deve conter, pelo menos, uma instância **CircularString** ou **LineString** .  
   
 2.  A sequência das instâncias **CircularString** ou **LineString** deve ser contínua.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Se uma **CompoundCurve** contiver uma sequência de várias instâncias **CircularString** e **LineString** , o ponto de extremidade final de cada instância, exceto a última, deverá ser o ponto de extremidade inicial da próxima instância na sequência. Isso significa que, se o ponto final de uma instância anterior na sequência for (4 3 7 2), o ponto inicial da próxima instância na sequência deverá ser (4 3 7 2). Observe que os valores Z (elevação) e M (medida) do ponto também devem ser iguais. Se houver uma diferença nos dois pontos, será lançada uma `System.FormatException` . Pontos em uma **CircularString** não precisam ter um valor Z ou M. Se não forem fornecidos valores Z ou M para o ponto final da instância anterior, o ponto inicial da próxima instância não poderá incluir valores Z ou M. Se o ponto final da sequência anterior for (4 3), o ponto inicial da próxima sequência deverá ser (4 3); ele não poderá ser (4 3 7 2). Todos os pontos em uma instância **CompoundCurve** não devem ter nenhum valor Z ou devem ter o mesmo valor Z.  
   
 ## <a name="compoundcurve-instances"></a>Instâncias CompoundCurve  
@@ -138,7 +140,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
-Isso produz a saída `12.5663706143592`, que é o equivalente do 4∏. A instância `CompoundCurve` do exemplo armazena um círculo com raio 2. Os dois exemplos de código anteriores não precisavam usar uma `CompoundCurve`. Teria sido mais simples usar uma instância `LineString` no primeiro exemplo e uma instância `CircularString` no segundo exemplo. Porém, o próximo exemplo mostra onde uma `CompoundCurve` oferece uma alternativa melhor.  
+Isso produz a saída `12.5663706143592`, que é o equivalente do 4?. A instância `CompoundCurve` do exemplo armazena um círculo com raio 2. Os dois exemplos de código anteriores não precisavam usar uma `CompoundCurve`. Teria sido mais simples usar uma instância `LineString` no primeiro exemplo e uma instância `CircularString` no segundo exemplo. Porém, o próximo exemplo mostra onde uma `CompoundCurve` oferece uma alternativa melhor.  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. Usando uma CompoundCurve para armazenar um semicírculo  
  O exemplo a seguir usa uma instância `CompoundCurve` para armazenar um semicírculo.  
@@ -184,7 +186,7 @@ Circle One11.940039...
 Circle Two12.566370...  
 ```  
   
-O perímetro de Circle Two é aproximadamente 4∏, que é o valor real do perímetro. Porém, o perímetro de Circle One é significativamente inexato. A instância `CompoundCurve` de Circle One armazena um segmento de arco circular (ABC) e dois segmentos de linha (CD, DA). A instância `CompoundCurve` deve armazenar dois segmentos de arco circular (ABC, CDA) para definir um círculo. Uma instância `LineString` define o segundo conjunto de pontos (4 2, 2 4, 0 2) na instância `CompoundCurve` de Circle One. Você deve declarar uma instância `CircularString` explicitamente dentro de uma `CompoundCurve`.  
+O perímetro de Circle Two é aproximadamente 4?, que é o valor real do perímetro. Porém, o perímetro de Circle One é significativamente inexato. A instância `CompoundCurve` de Circle One armazena um segmento de arco circular (ABC) e dois segmentos de linha (CD, DA). A instância `CompoundCurve` deve armazenar dois segmentos de arco circular (ABC, CDA) para definir um círculo. Uma instância `LineString` define o segundo conjunto de pontos (4 2, 2 4, 0 2) na instância `CompoundCurve` de Circle One. Você deve declarar uma instância `CircularString` explicitamente dentro de uma `CompoundCurve`.  
   
 ## <a name="see-also"></a>Consulte Também  
  [STIsValid &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   

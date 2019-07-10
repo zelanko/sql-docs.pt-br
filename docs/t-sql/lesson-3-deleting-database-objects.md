@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial do T-SQL: excluir objetos de banco de dados | Microsoft Docs'
+title: 'Tutorial de T-SQL: Excluir objetos de banco de dados | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/30/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc4bd0a0d3c70b31f398c791c4e75dbd7ab1403e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b155862bd9983bc8b93b6088bfa6d5df254ffe7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621144"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579392"
 ---
-# <a name="lesson-3-delete-database-objects"></a>Lição 3: excluir objetos de banco de dados
+# <a name="lesson-3-delete-database-objects"></a>Lição 3: Excluir objetos de banco de dados
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 Esta lição curta remove os objetos que você criou nas Lições 1 e 2 e, em seguida, libera o banco de dados.  
   
@@ -44,33 +44,32 @@ Use a instrução `REVOKE` para remover a permissão de execução para `Mary` n
 
 1. Use a instrução `DROP` para remover a permissão de `Mary` para acessar o banco de dados `TestData` :
   
-  ```sql  
-  DROP USER Mary;  
-  GO  
-  ```  
+   ```sql  
+   DROP USER Mary;  
+   GO  
+   ```  
 
 
 2. Use a instrução `DROP` para remover a permissão de `Mary` para acessar esta instância do [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]:
   
-  ```sql  
-    DROP LOGIN [<computer_name>\Mary];  
-    GO   
-  ```  
+   ```sql  
+   DROP LOGIN [<computer_name>\Mary];  
+   GO   
+   ```  
   
-3.   Use a instrução `DROP` para remover ao procedimento armazenado `pr_Names`:  
+3. Use a instrução `DROP` para remover ao procedimento armazenado `pr_Names`:  
   
-    ```sql  
-    DROP PROC pr_Names;  
-    GO  
-    ```  
+   ```sql  
+   DROP PROC pr_Names;  
+   GO   
+   ```  
   
-6.  Use a instrução `DROP` para remover a exibição `vw_Names`:  
+4. Use a instrução `DROP` para remover a exibição `vw_Names`:  
   
-    ```sql  
-    DROP VIEW vw_Names;  
-    GO  
-  
-    ```  
+   ```sql  
+   DROP VIEW vw_Names;  
+   GO  
+   ```  
 
 ## <a name="delete-table"></a>Excluir tabela
   

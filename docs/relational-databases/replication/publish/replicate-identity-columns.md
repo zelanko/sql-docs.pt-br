@@ -18,12 +18,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 091ca8ad9fa80876936dcfdc2c7ed0ca687c6aea
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b2e412e2ef25e9eb48a8068cbe6e75b2c1ec8797
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124336"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579825"
 ---
 # <a name="replicate-identity-columns"></a>Replicar colunas de identidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "54124336"
   
 -   O parâmetro **@threshold** , usado para determinar quando um novo intervalo de identidades é exigido para uma assinatura do [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ou para versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Por exemplo, você poderia especificar 10.000 para **@identity_range** e 500.000 para **@pub_identity_range**. Um intervalo primário de 10.000 é atribuído ao Publicador e a todos os Assinantes que executam o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou uma versão posterior, inclusive ao Assinante com a assinatura do servidor. Ao Assinante com a assinatura do servidor também se atribui um intervalo primário de 500.000, que pode ser usado pelos Assinantes que se sincronizam com o Assinante de republicação (é preciso também especificar **@identity_range**, **@pub_identity_range**e **@threshold** para os artigos da publicação do Assinante de republicação).  
+ Por exemplo, você poderia especificar 10.000 para **@identity_range** e 500.000 para **@pub_identity_range** . Um intervalo primário de 10.000 é atribuído ao Publicador e a todos os Assinantes que executam o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou uma versão posterior, inclusive ao Assinante com a assinatura do servidor. Ao Assinante com a assinatura do servidor também se atribui um intervalo primário de 500.000, que pode ser usado pelos Assinantes que se sincronizam com o Assinante de republicação (é preciso também especificar **@identity_range** , **@pub_identity_range** e **@threshold** para os artigos da publicação do Assinante de republicação).  
   
  Todo Assinante que executa o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou uma versão posterior também recebe um intervalo de identidade secundário. O intervalo secundário é igual em tamanho ao intervalo primário. Quando o intervalo primário se esgota, o intervalo secundário é usado, e o Merge Agent atribui um novo intervalo ao Assinante. O novo intervalo passa a ser o intervalo secundário, e o processo continua à medida que o Assinante utiliza valores de identidade.  
   
@@ -97,10 +97,10 @@ ms.locfileid: "54124336"
   
 -   O parâmetro **@threshold** , que é usado para determinar quando um novo intervalo de identidades é necessário à assinatura.  
   
- Por exemplo, você poderia especificar 10.000 para **@pub_identity_range**; 1.000 para **@identity_range** (assumindo menos atualizações no Assinante), e 80 por cento de **@threshold**. Após 800 inserções em um Assinante (80 por cento de 1.000), um Assinante é atribuído a um novo intervalo. Depois de 8.000 inserções em um Publicador, um novo intervalo é atribuído ao Publicador. Quando o novo intervalo é atribuído, há uma lacuna nos valores de intervalo de identidade da tabela. Especificar um limite superior resulta em lacunas menores, mas o sistema torna-se menos tolerante a falhas. Se o Merge Agent não puder ser executado por algum motivo, um Assinante poderá ficar mais facilmente sem identidades.  
+ Por exemplo, você poderia especificar 10.000 para **@pub_identity_range** ; 1.000 para **@identity_range** (assumindo menos atualizações no Assinante), e 80 por cento de **@threshold** . Após 800 inserções em um Assinante (80 por cento de 1.000), um Assinante é atribuído a um novo intervalo. Depois de 8.000 inserções em um Publicador, um novo intervalo é atribuído ao Publicador. Quando o novo intervalo é atribuído, há uma lacuna nos valores de intervalo de identidade da tabela. Especificar um limite superior resulta em lacunas menores, mas o sistema torna-se menos tolerante a falhas. Se o Merge Agent não puder ser executado por algum motivo, um Assinante poderá ficar mais facilmente sem identidades.  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>Atribuindo intervalos para o gerenciamento manual de intervalo de identidade  
- Caso o gerenciamento manual de identidade seja especificado, será preciso assegurar que o Publicador e cada um dos Assinantes usem intervalos de identidade diferentes. Por exemplo, considere uma tabela do Publicador com coluna de identidade definida como `IDENTITY(1,1)`: a coluna de identidade começa com 1 e é incrementada em 1 toda vez que uma linha é inserida. Se a tabela do Publicador tiver 5.000 linhas, e houver expectativa de algum aumento da tabela durante a vida útil do aplicativo, o Publicador poderá usar o intervalo de 1 a 10.000. Considerando-se dois Assinantes, o Assinante A poderá usar de 10.001 a 20.000, e o Assinante B poderá usar de 20.001 a 30.000.  
+ Caso o gerenciamento manual de identidade seja especificado, será preciso assegurar que o Publicador e cada um dos Assinantes usem intervalos de identidade diferentes. Por exemplo, considere uma tabela do Publicador com coluna de identidade definida como `IDENTITY(1,1)`: a coluna de identidade começa com 1 e é incrementada em 1 toda vez que uma linha é inserida. Se a tabela do Publicador tiver 5.000 linhas, e houver expectativa de algum aumento da tabela durante a vida útil do aplicativo, o Publicador poderá usar o intervalo de 1 a 10.000. Considerando-se dois Assinantes, o Assinante A poderá usar de 10.001 a 20.000 e o Assinante B poderá usar de 20.001 a 30.000.  
   
  Após o Assinante ser iniciado com um instantâneo ou por outros meios, execute DBCC CHECKIDENT para atribuir ao Assinante um ponto inicial para o seu intervalo de identidade. Por exemplo, no Assinante A, `DBCC CHECKIDENT('<TableName>','reseed',10001)`seria executado. No Assinante B, `CHECKIDENT('<TableName>','reseed',20001)`seria executado.  
   
@@ -112,7 +112,9 @@ ms.locfileid: "54124336"
 1.  Pare toda a atividade em todos os Assinantes.  
   
 2.  Para cada tabela publicada que inclua uma coluna de identidade:  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  No banco de dados de assinatura de cada Assinante, execute `IDENT_CURRENT('<TableName>')`.  
   
     2.  Registre o valor mais alto encontrado em todos os Assinantes.  

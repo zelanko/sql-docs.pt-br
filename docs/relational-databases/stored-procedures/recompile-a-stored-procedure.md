@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce984371d1dd618c7a99b081667115208b7afb7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 21298500f7d5bc135b8e9068c97e2928d1853b6f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406463"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583580"
 ---
 # <a name="recompile-a-stored-procedure"></a>Recompilar um procedimento armazenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Este tópico descreve como recompilar um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Há três modos de fazer isso: a opção **WITH RECOMPILE** na definição do procedimento ou quando o procedimento é chamado, a dica de consulta **RECOMPILE** em instruções individuais ou usando o procedimento armazenado do sistema **sp_recompile** . Este tópico descreve como usar a opção WITH RECOMPILE ao criar uma definição de procedimento e executar um procedimento existente. Também descreve como usar o procedimento armazenado do sistema sp_recompile para recompilar um procedimento existente.  
+  Este tópico descreve como recompilar um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Há três modos de fazer isso: a opção **WITH RECOMPILE** na definição do procedimento ou quando o procedimento é chamado, a dica de consulta **RECOMPILE** em instruções individuais ou usando o procedimento armazenado do sistema **sp_recompile**. Este tópico descreve como usar a opção WITH RECOMPILE ao criar uma definição de procedimento e executar um procedimento existente. Também descreve como usar o procedimento armazenado do sistema sp_recompile para recompilar um procedimento existente.  
   
  **Neste tópico**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52406463"
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Opção**WITH RECOMPILE**   
+ Opção**WITH RECOMPILE**  
  Se a opção for usada quando a definição de procedimento for criada, serão necessárias as permissões CREATE PROCEDURE no banco de dados e ALTER no esquema no qual o procedimento está sendo criado.  
   
  Se essa opção for usada em uma instrução EXECUTE, as permissões de EXECUTE serão necessárias no procedimento. As permissões não são necessárias na instrução EXECUTE em si, mas permissões de execução são necessárias no procedimento referenciado na instrução EXECUTE. Para obter mais informações, veja [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "52406463"
  Dica de consulta **RECOMPILE**  
  Esse recurso é usado quando o procedimento é criado e a dica é incluída em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] no procedimento. Portanto, isso requer a permissão CREATE PROCEDURE no banco de dados e a permissão ALTER no esquema no qual o procedimento está sendo criado.  
   
- Procedimento armazenado do sistema**sp_recompile**   
+ Procedimento armazenado do sistema**sp_recompile**  
  Exige a permissão ALTER no procedimento especificado.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
@@ -76,7 +76,9 @@ ms.locfileid: "52406463"
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo cria a definição de procedimento.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ```  
 USE AdventureWorks2012;  
 GO  

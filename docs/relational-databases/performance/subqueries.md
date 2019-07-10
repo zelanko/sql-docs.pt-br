@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9c0d51046b7ac30cbf1f2a608c51c34974b75d9
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 07d8b7936051b202c73b7457c87e7533e1d46192
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579386"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500223"
 ---
 # <a name="subqueries-sql-server"></a>Subconsultas (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -106,7 +106,7 @@ Uma subconsulta está sujeita às seguintes restrições:
 -   A lista de seleção de uma subconsulta introduzida com `EXISTS`, por convenção, tem um asterisco (\*), em vez de um único nome de coluna. As regras para uma subconsulta introduzida com `EXISTS` são iguais àquelas para uma lista de seleção padrão, porque uma subconsulta introduzida com `EXISTS` cria um teste de existência e retorna TRUE ou FALSE, em vez de dados.   
 
 ## <a name="qualifying"></a> Qualificando nomes de coluna em subconsultas
-No exemplo a seguir, a coluna *CustomerID* na cláusula `WHERE` da consulta externa está implicitamente qualificada pelo nome da tabela na cláusula `FROM` da consulta externa (*Sales.Store*). A referência a *CustomerID* na lista de seleção da subconsulta está qualificada pela cláusula `FROM` da subconsulta, ou seja, pela tabela *Sales.Customer*.
+No exemplo a seguir, a coluna *BusinessEntityID* na cláusula `WHERE` da consulta externa está implicitamente qualificada pelo nome da tabela na cláusula `FROM` da consulta externa (*Sales.Store*). A referência a *CustomerID* na lista de seleção da subconsulta está qualificada pela cláusula `FROM` da subconsulta, ou seja, pela tabela *Sales.Customer*.
 
 ```sql
 USE AdventureWorks2016;

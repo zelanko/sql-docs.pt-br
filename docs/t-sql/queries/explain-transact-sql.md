@@ -3,45 +3,50 @@ title: EXPLAIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql
-ms.reviewer: ''
-ms.technology: t-sql
+ms.reviewer: jrasnick
+ms.technology: data-warehouse
 ms.topic: conceptual
 ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
-author: shkale-msft
-ms.author: shkale
+author: XiaoyuL-Preview
+ms.author: xiaoyul
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 99edc393a8d831373fd3b7175af545f00655980c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 310a607e11bbf99437d67b85b6f2e718161b2401
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62465674"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564136"
 ---
-# <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
-  Retorna o plano de consulta de uma instrução [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] sem executar a instrução. Use **EXPLAIN** para visualizar quais operações exigirão a movimentação de dados e para exibir os custos estimados das operações de consulta.  
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+
+  Retorna o plano de consulta de uma instrução [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] sem executar a instrução. Use **EXPLAIN** para visualizar quais operações exigirão a movimentação de dados e para exibir os custos estimados das operações de consulta. `WITH RECOMMENDATIONS` aplica-se ao SQL Data Warehouse do Azure (versão prévia).
   
  Para obter mais informações sobre planos de consulta, confira "Entendendo os planos de consulta" em [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
   
-
-```  
-EXPLAIN SQL_statement  
+```
+EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement  
 [;]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Argumentos
+
  *SQL_statement*  
- A instrução [!INCLUDE[DWsql](../../includes/dwsql-md.md)] na qual **EXPLAIN** será executado. *SQL_statement* pode ser qualquer um destes comandos: **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **CREATE TABLE AS SELECT**, **CREATE REMOTE TABLE**.  
+ A instrução [!INCLUDE[DWsql](../../includes/dwsql-md.md)] na qual **EXPLAIN** será executado. *SQL_statement* pode ser qualquer um destes comandos: **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **CREATE TABLE AS SELECT**, **CREATE REMOTE TABLE**.
+
+*WITH_RECOMMENDATIONS* retorna ao plano de consulta com recomendações para otimizar o desempenho da instrução SQL.  
   
-## <a name="permissions"></a>Permissões  
+## <a name="permissions"></a>Permissões
+
  Requer a permissão **SHOWPLAN** e a permissão para executar *SQL_statement*. Veja [Permissões: GRANT, DENY, REVOKE &#40;SQL Data Warehouse do Azure, Parallel Data Warehouse&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
   
-## <a name="return-value"></a>Valor retornado  
- O valor retornado do comando **EXPLAIN** é um documento XML com a estrutura mostrada abaixo. Este documento XML lista todas as operações no plano de consulta para determinada consulta, cada uma delimitada pela marcação `<dsql_operation>`. O valor retornado é do tipo **nvarchar(max)**.  
+## <a name="return-value"></a>Valor retornado
+
+ O valor retornado do comando **EXPLAIN** é um documento XML com a estrutura mostrada abaixo. Este documento XML lista todas as operações no plano de consulta para determinada consulta, cada uma delimitada pela marcação `<dsql_operation>`. O valor retornado é do tipo **nvarchar(max)** .  
   
  O plano de consulta retornado mostra instruções SQL sequenciais. Quando a consulta é executada, ela pode envolver operações em paralelo, portanto algumas das instruções sequenciais mostradas podem ser executadas ao mesmo tempo.  
   
@@ -65,7 +70,8 @@ EXPLAIN SQL_statement
 |-------------|--------------------------------------|  
 |\<dsql_query>|Elemento de nível superior/documento.|
 |\<sql>|Duplica a *SQL_statement*.|  
-|\<params>|Essa marcação não é usada no momento.|  
+|\<params>|Essa marcação não é usada no momento.|
+|\<materialized_view_candidates > (visualização)|Contém a instrução CREATE da exibição materializada recomendada para melhorar o desempenho da instrução SQL.| 
 |\<dsql_operations>|Resume e contém as etapas de consulta e inclui as informações de custo da consulta. Também contém todos os blocos de `<dsql_operation>`. Essa marcação contém as informações de contagem da consulta inteira:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* é o tempo total estimado para que a consulta seja executada, em ms.<br /><br /> *total_number_operations* é o número total de operações para a consulta. Uma operação que será colocada em paralelo e executada em vários nós é considerada uma única operação.|  
 |\<dsql_operation>|Descreve uma única operação no plano de consulta. A marcação \<dsql_operation> contém o tipo de operação como um atributo:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* é um dos valores encontrados em [sys.dm_pdw_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).<br /><br /> O conteúdo no bloco `\<dsql_operation>` depende do tipo de operação.<br /><br /> Veja a tabela abaixo.|  
   
@@ -276,7 +282,7 @@ GO
   
 ```  
   
- **Significado da saída de EXPLAIN**  
+ **Significado da saída de EXPLAIN**
   
  O resultado acima contém 144 linhas numeradas. A sua saída dessa consulta poderá ser um pouco diferente. A lista a seguir descreve as seções significativas.  
   
@@ -301,6 +307,320 @@ GO
 -   A linha 98 inicia a operação 8. Linhas 99 a 135: retornam resultados para o cliente. Usa a consulta fornecida para obter os resultados.  
   
 -   A linha 136 inicia a operação 9. Linhas 137 a 140: Em todos os nós, removem a tabela temporária **TEMP_ID_16894**.  
-  
-  
 
+**Envio de uma instrução EXPLAIN WITH_RECOMMENDATIONS**
+
+```sql
+-- EXPLAIN WITH_RECOMMENDATIONS
+select count(*)
+from ((select distinct c_last_name, c_first_name, d_date
+       from store_sales, date_dim, customer
+       where store_sales.ss_sold_date_sk = date_dim.d_date_sk
+         and store_sales.ss_customer_sk = customer.c_customer_sk
+         and d_month_seq between 1194 and 1194+11)
+       except
+      (select distinct c_last_name, c_first_name, d_date
+       from catalog_sales, date_dim, customer
+       where catalog_sales.cs_sold_date_sk = date_dim.d_date_sk
+         and catalog_sales.cs_bill_customer_sk = customer.c_customer_sk
+         and d_month_seq between 1194 and 1194+11)
+) top_customers
+```
+
+**Exemplo de saída para EXPLAIN WITH_RECOMMENDATIONS** (visualização)
+
+A saída abaixo inclui a criação da exibição materializada recomendada chamada View1.  
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<dsql_query number_nodes="1" number_distributions="8" number_distributions_per_node="8">
+  <sql>select count(*) 
+from ((select distinct c_last_name, c_first_name, d_date
+       from store_sales, date_dim, customer
+       where store_sales.ss_sold_date_sk = date_dim.d_date_sk
+         and store_sales.ss_customer_sk = customer.c_customer_sk
+         and d_month_seq between 1194 and 1194+11)
+       except
+      (select distinct c_last_name, c_first_name, d_date
+       from catalog_sales, date_dim, customer
+       where catalog_sales.cs_sold_date_sk = date_dim.d_date_sk
+         and catalog_sales.cs_bill_customer_sk = customer.c_customer_sk
+         and d_month_seq between 1194 and 1194+11)
+) top_customers</sql>
+  <materialized_view_candidates>
+    <materialized_view_candidates with_constants="False">CREATE MATERIALIZED VIEW View1 WITH (DISTRIBUTION = HASH([Expr0])) AS
+SELECT [tpcds10].[dbo].[customer].[c_last_name] AS [Expr0],
+       [tpcds10].[dbo].[customer].[c_first_name] AS [Expr1],
+       [tpcds10].[dbo].[date_dim].[d_date] AS [Expr2],
+       [tpcds10].[dbo].[date_dim].[d_month_seq] AS [Expr3]
+FROM [dbo].[store_sales],
+     [dbo].[date_dim],
+     [dbo].[customer]
+WHERE ([tpcds10].[dbo].[store_sales].[ss_customer_sk]=[tpcds10].[dbo].[customer].[c_customer_sk])
+  AND ([tpcds10].[dbo].[store_sales].[ss_sold_date_sk]=[tpcds10].[dbo].[date_dim].[d_date_sk])
+GROUP BY [tpcds10].[dbo].[customer].[c_last_name],
+         [tpcds10].[dbo].[customer].[c_first_name],
+         [tpcds10].[dbo].[date_dim].[d_date],
+         [tpcds10].[dbo].[date_dim].[d_month_seq]</materialized_view_candidates>
+    <materialized_view_candidates with_constants="False">CREATE MATERIALIZED VIEW View2 WITH (DISTRIBUTION = HASH([Expr0])) AS
+SELECT [tpcds10].[dbo].[customer].[c_last_name] AS [Expr0],
+       [tpcds10].[dbo].[customer].[c_first_name] AS [Expr1],
+       [tpcds10].[dbo].[date_dim].[d_date] AS [Expr2],
+       [tpcds10].[dbo].[date_dim].[d_month_seq] AS [Expr3]
+FROM [dbo].[catalog_sales],
+    [dbo].[date_dim],
+     [dbo].[customer]
+WHERE ([tpcds10].[dbo].[catalog_sales].[cs_bill_customer_sk]=[tpcds10].[dbo].[customer].[c_customer_sk])
+  AND ([tpcds10].[dbo].[catalog_sales].[cs_sold_date_sk]=[tpcds10].[dbo].[date_dim].[d_date_sk])
+GROUP BY [tpcds10].[dbo].[customer].[c_last_name],
+         [tpcds10].[dbo].[customer].[c_first_name],
+         [tpcds10].[dbo].[date_dim].[d_date],
+         [tpcds10].[dbo].[date_dim].[d_month_seq]</materialized_view_candidates>
+    <materialized_view_candidates with_constants="True">CREATE MATERIALIZED VIEW View3 WITH (DISTRIBUTION = HASH([Expr0])) AS
+SELECT [tpcds10].[dbo].[customer].[c_last_name] AS [Expr0],
+       [tpcds10].[dbo].[customer].[c_first_name] AS [Expr1],
+       [tpcds10].[dbo].[date_dim].[d_date] AS [Expr2]
+FROM [dbo].[store_sales],
+     [dbo].[date_dim],
+     [dbo].[customer]
+WHERE ([tpcds10].[dbo].[store_sales].[ss_customer_sk]=[tpcds10].[dbo].[customer].[c_customer_sk])
+  AND ([tpcds10].[dbo].[store_sales].[ss_sold_date_sk]=[tpcds10].[dbo].[date_dim].[d_date_sk])
+  AND ([tpcds10].[dbo].[date_dim].[d_month_seq]&gt;=(1194))
+  AND ([tpcds10].[dbo].[date_dim].[d_month_seq]&lt;=(1205))
+GROUP BY [tpcds10].[dbo].[customer].[c_last_name],
+         [tpcds10].[dbo].[customer].[c_first_name],
+         [tpcds10].[dbo].[date_dim].[d_date]</materialized_view_candidates>
+    <materialized_view_candidates with_constants="True">CREATE MATERIALIZED VIEW View4 WITH (DISTRIBUTION = HASH([Expr0])) AS
+SELECT [tpcds10].[dbo].[customer].[c_last_name] AS [Expr0],
+       [tpcds10].[dbo].[customer].[c_first_name] AS [Expr1],
+       [tpcds10].[dbo].[date_dim].[d_date] AS [Expr2]
+FROM [dbo].[catalog_sales],
+     [dbo].[date_dim],
+     [dbo].[customer]
+WHERE ([tpcds10].[dbo].[catalog_sales].[cs_bill_customer_sk]=[tpcds10].[dbo].[customer].[c_customer_sk])
+  AND ([tpcds10].[dbo].[catalog_sales].[cs_sold_date_sk]=[tpcds10].[dbo].[date_dim].[d_date_sk])
+  AND ([tpcds10].[dbo].[date_dim].[d_month_seq]&gt;=(1194))
+  AND ([tpcds10].[dbo].[date_dim].[d_month_seq]&lt;=(1205))
+GROUP BY [tpcds10].[dbo].[customer].[c_last_name],
+         [tpcds10].[dbo].[customer].[c_first_name],
+         [tpcds10].[dbo].[date_dim].[d_date]</materialized_view_candidates>
+  </materialized_view_candidates>
+  <dsql_operations total_cost="3472197.35650704" total_number_operations="28">
+    <dsql_operation operation_type="RND_ID">
+      <identifier>TEMP_ID_1</identifier>
+    </dsql_operation>
+    <dsql_operation operation_type="ON">
+      <location permanent="false" distribution="AllComputeNodes" />
+      <sql_operations>
+        <sql_operation type="statement">CREATE TABLE [tempdb].[dbo].[TEMP_ID_1] ([c_customer_sk] INT NOT NULL, [c_first_name] CHAR(20) COLLATE SQL_Latin1_General_CP1_CI_AS, [c_last_name] CHAR(30) COLLATE SQL_Latin1_General_CP1_CI_AS ) WITH(DATA_COMPRESSION=PAGE);</sql_operation>
+      </sql_operations>
+    </dsql_operation>
+    <dsql_operation operation_type="BROADCAST_MOVE">
+      <operation_cost cost="842400" accumulative_cost="842400" average_rowsize="54" output_rows="65000000" GroupNumber="44" />
+      <source_statement>SELECT [T1_1].[c_customer_sk] AS [c_customer_sk],
+       [T1_1].[c_first_name] AS [c_first_name],
+       [T1_1].[c_last_name] AS [c_last_name]
+FROM   [tpcds10].[dbo].[customer] AS T1_1</source_statement>
+      <destination_table>[TEMP_ID_1]</destination_table>
+    </dsql_operation>
+    <dsql_operation operation_type="RND_ID">
+      <identifier>TEMP_ID_2</identifier>
+    </dsql_operation>
+    <dsql_operation operation_type="ON">
+      <location permanent="false" distribution="AllComputeNodes" />
+      <sql_operations>
+        <sql_operation type="statement">CREATE TABLE [tempdb].[dbo].[TEMP_ID_2] ([d_date_sk] INT NOT NULL, [d_date] DATE ) WITH(DATA_COMPRESSION=PAGE);</sql_operation>
+      </sql_operations>
+    </dsql_operation>
+    <dsql_operation operation_type="BROADCAST_MOVE">
+      <operation_cost cost="0.62729352" accumulative_cost="842400.62729352" average_rowsize="7" output_rows="373.389" GroupNumber="43" />
+      <source_statement>SELECT [T1_1].[d_date_sk] AS [d_date_sk],
+       [T1_1].[d_date] AS [d_date]
+FROM   (SELECT [T2_1].[d_date_sk] AS [d_date_sk],
+               [T2_1].[d_date] AS [d_date]
+        FROM   [tpcds10].[dbo].[date_dim] AS T2_1
+        WHERE  (([T2_1].[d_month_seq] &gt;= CAST ((1194) AS INT))
+                AND ([T2_1].[d_month_seq] &lt;= CAST ((1205) AS INT)))) AS T1_1</source_statement>
+      <destination_table>[TEMP_ID_2]</destination_table>
+    </dsql_operation>
+    <dsql_operation operation_type="RND_ID">
+      <identifier>TEMP_ID_3</identifier>
+    </dsql_operation>
+    <dsql_operation operation_type="ON">
+      <location permanent="false" distribution="AllDistributions" />
+      <sql_operations>
+        <sql_operation type="statement">CREATE TABLE [tempdb].[dbo].[TEMP_ID_3] ([cs_bill_customer_sk] INT, [d_date] DATE ) WITH(DATA_COMPRESSION=PAGE);</sql_operation>
+      </sql_operations>
+    </dsql_operation>
+    <dsql_operation operation_type="SHUFFLE_MOVE">
+      <operation_cost cost="610362.9" accumulative_cost="1452763.52729352" average_rowsize="7" output_rows="2906490000" GroupNumber="57" />
+      <source_statement>SELECT [T1_1].[cs_bill_customer_sk] AS [cs_bill_customer_sk],
+       [T1_1].[d_date] AS [d_date]
+FROM   (SELECT [T2_2].[cs_bill_customer_sk] AS [cs_bill_customer_sk],
+               [T2_1].[d_date] AS [d_date]
+        FROM   [tempdb].[dbo].[TEMP_ID_2] AS T2_1
+               INNER JOIN
+               [tpcds10].[dbo].[catalog_sales] AS T2_2
+               ON ([T2_2].[cs_sold_date_sk] = [T2_1].[d_date_sk])) AS T1_1</source_statement>
+      <destination_table>[TEMP_ID_3]</destination_table>
+      <shuffle_columns>d_date;</shuffle_columns>
+    </dsql_operation>
+    <dsql_operation operation_type="ON">
+      <location permanent="false" distribution="AllComputeNodes" />
+      <sql_operations>
+        <sql_operation type="statement">DROP TABLE [tempdb].[dbo].[TEMP_ID_2]</sql_operation>
+      </sql_operations>
+    </dsql_operation>
+    <dsql_operation operation_type="RND_ID">
+      <identifier>TEMP_ID_4</identifier>
+    </dsql_operation>
+    <dsql_operation operation_type="ON">
+      <location permanent="false" distribution="AllComputeNodes" />
+      <sql_operations>
+        <sql_operation type="statement">CREATE TABLE [tempdb].[dbo].[TEMP_ID_4] ([c_customer_sk] INT NOT NULL, [c_first_name] CHAR(20) COLLATE SQL_Latin1_General_CP1_CI_AS, [c_last_name] CHAR(30) COLLATE SQL_Latin1_General_CP1_CI_AS ) WITH(DATA_COMPRESSION=PAGE);</sql_operation>
+      </sql_operations>
+    </dsql_operation>
+    <dsql_operation operation_type="BROADCAST_MOVE">
+      <operation_cost cost="842400" accumulative_cost="2295163.52729352" average_rowsize="54" output_rows="65000000" GroupNumber="36" />
+      <source_statement>SELECT [T1_1].[c_customer_sk] AS [c_customer_sk],
+       [T1_1].[c_first_name] AS [c_first_name],
+       [T1_1].[c_last_name] AS [c_last_name]
+FROM   [tpcds10].[dbo].[customer] AS T1_1</source_statement>
+      <destination_table>[TEMP_ID_4]</destination_table>
+    </dsql_operation>
+    <dsql_operation operation_type="RND_ID">
+      <identifier>TEMP_ID_5</identifier>
+    </dsql_operation>
+    <dsql_operation operation_type="ON">
+      <location permanent="false" distribution="AllComputeNodes" />
+      <sql_operations>
+        <sql_operation type="statement">CREATE TABLE [tempdb].[dbo].[TEMP_ID_5] ([d_date_sk] INT NOT NULL, [d_date] DATE ) WITH(DATA_COMPRESSION=PAGE);</sql_operation>
+      </sql_operations>
+    </dsql_operation>
+    <dsql_operation operation_type="BROADCAST_MOVE">
+      <operation_cost cost="0.62729352" accumulative_cost="2295164.15458704" average_rowsize="7" output_rows="373.389" GroupNumber="35" />
+      <source_statement>SELECT [T1_1].[d_date_sk] AS [d_date_sk],
+       [T1_1].[d_date] AS [d_date]
+FROM   (SELECT [T2_1].[d_date_sk] AS [d_date_sk],
+               [T2_1].[d_date] AS [d_date]
+        FROM   [tpcds10].[dbo].[date_dim] AS T2_1
+        WHERE  (([T2_1].[d_month_seq] &gt;= CAST ((1194) AS INT))
+                AND ([T2_1].[d_month_seq] &lt;= CAST ((1205) AS INT)))) AS T1_1</source_statement>
+      <destination_table>[TEMP_ID_5]</destination_table>
+    </dsql_operation>
+    <dsql_operation operation_type="RND_ID">
+      <identifier>TEMP_ID_6</identifier>
+    </dsql_operation>
+    <dsql_operation operation_type="ON">
+      <location permanent="false" distribution="AllDistributions" />
+      <sql_operations>
+        <sql_operation type="statement">CREATE TABLE [tempdb].[dbo].[TEMP_ID_6] ([ss_customer_sk] INT, [d_date] DATE ) WITH(DATA_COMPRESSION=PAGE);</sql_operation>
+      </sql_operations>
+    </dsql_operation>
+    <dsql_operation operation_type="SHUFFLE_MOVE">
+      <operation_cost cost="1177033.2" accumulative_cost="3472197.35458704" average_rowsize="7" output_rows="5604920000" GroupNumber="54" />
+      <source_statement>SELECT [T1_1].[ss_customer_sk] AS [ss_customer_sk],
+       [T1_1].[d_date] AS [d_date]
+FROM   (SELECT [T2_2].[ss_customer_sk] AS [ss_customer_sk],
+               [T2_1].[d_date] AS [d_date]
+        FROM   [tempdb].[dbo].[TEMP_ID_5] AS T2_1
+               INNER JOIN
+               [tpcds10].[dbo].[store_sales] AS T2_2
+               ON ([T2_2].[ss_sold_date_sk] = [T2_1].[d_date_sk])) AS T1_1</source_statement>
+      <destination_table>[TEMP_ID_6]</destination_table>
+      <shuffle_columns>d_date;</shuffle_columns>
+    </dsql_operation>
+    <dsql_operation operation_type="ON">
+      <location permanent="false" distribution="AllComputeNodes" />
+      <sql_operations>
+        <sql_operation type="statement">DROP TABLE [tempdb].[dbo].[TEMP_ID_5]</sql_operation>
+      </sql_operations>
+    </dsql_operation>
+    <dsql_operation operation_type="ON">
+      <location permanent="false" distribution="Control" />
+     <sql_operations>
+        <sql_operation type="statement">CREATE TABLE [tempdb].[QTables].[QTable_87367172aa554f06b73cf3ed97e5b985] ([col] BIGINT ) WITH(DATA_COMPRESSION=PAGE);</sql_operation>
+      </sql_operations>
+    </dsql_operation>
+    <dsql_operation operation_type="PARTITION_MOVE">
+      <operation_cost cost="0.00192" accumulative_cost="3472197.35650704" average_rowsize="8" output_rows="1" GroupNumber="66" />
+      <location distribution="AllDistributions" />
+      <source_statement>SELECT [T1_1].[col] AS [col]
+FROM   (SELECT   COUNT_BIG(CAST ((0) AS INT)) AS [col]
+        FROM     (SELECT   0 AS [col]
+                  FROM     [tempdb].[dbo].[TEMP_ID_4] AS T3_1
+                           INNER JOIN
+                           [tempdb].[dbo].[TEMP_ID_6] AS T3_2
+                           ON ([T3_2].[ss_customer_sk] = [T3_1].[c_customer_sk])
+                  GROUP BY [T3_1].[c_last_name], [T3_1].[c_first_name], [T3_2].[d_date]
+                  HAVING   NOT EXISTS (SELECT   1 AS C1
+                                       FROM     [tempdb].[dbo].[TEMP_ID_1] AS T4_1
+                                                INNER JOIN
+                                                [tempdb].[dbo].[TEMP_ID_3] AS T4_2
+                                                ON ([T4_2].[cs_bill_customer_sk] = [T4_1].[c_customer_sk])
+                                       GROUP BY [T4_1].[c_last_name], [T4_1].[c_first_name], [T4_2].[d_date]
+                                       HAVING   (([T3_1].[c_last_name] = [T4_1].[c_last_name]
+                                                  OR ([T3_1].[c_last_name] IS NULL
+                                                      AND [T4_1].[c_last_name] IS NULL))
+                                                 AND ([T3_1].[c_first_name] = [T4_1].[c_first_name]
+                                                      OR ([T3_1].[c_first_name] IS NULL
+                                                          AND [T4_1].[c_first_name] IS NULL))
+                                                     AND ([T3_2].[d_date] = [T4_2].[d_date]
+                                                          OR ([T3_2].[d_date] IS NULL
+                                                              AND [T4_2].[d_date] IS NULL))))) AS T2_1
+        GROUP BY [T2_1].[col]) AS T1_1</source_statement>
+      <destination>Control</destination>
+      <destination_table>[QTable_87367172aa554f06b73cf3ed97e5b985]</destination_table>
+    </dsql_operation>
+    <dsql_operation operation_type="ON">
+      <location permanent="false" distribution="AllDistributions" />
+      <sql_operations>
+        <sql_operation type="statement">DROP TABLE [tempdb].[dbo].[TEMP_ID_6]</sql_operation>
+      </sql_operations>
+    </dsql_operation>
+    <dsql_operation operation_type="ON">
+      <location permanent="false" distribution="AllComputeNodes" />
+      <sql_operations>
+        <sql_operation type="statement">DROP TABLE [tempdb].[dbo].[TEMP_ID_4]</sql_operation>
+      </sql_operations>
+    </dsql_operation>
+    <dsql_operation operation_type="ON">
+      <location permanent="false" distribution="AllDistributions" />
+      <sql_operations>
+        <sql_operation type="statement">DROP TABLE [tempdb].[dbo].[TEMP_ID_3]</sql_operation>
+      </sql_operations>
+    </dsql_operation>
+    <dsql_operation operation_type="ON">
+      <location permanent="false" distribution="AllComputeNodes" />
+      <sql_operations>
+        <sql_operation type="statement">DROP TABLE [tempdb].[dbo].[TEMP_ID_1]</sql_operation>
+      </sql_operations>
+    </dsql_operation>
+    <dsql_operation operation_type="RETURN">
+      <location distribution="Control" />
+      <select>SELECT [T1_1].[col] AS [col]
+FROM   (SELECT CONVERT (INT, [T2_1].[col], 0) AS [col]
+        FROM   (SELECT ISNULL([T3_1].[col], CONVERT (BIGINT, 0, 0)) AS [col]
+                FROM   (SELECT SUM([T4_1].[col]) AS [col]
+                        FROM   [tempdb].[QTables].[QTable_87367172aa554f06b73cf3ed97e5b985] AS T4_1) AS T3_1) AS T2_1) AS T1_1</select>
+    </dsql_operation>
+    <dsql_operation operation_type="ON">
+      <location permanent="false" distribution="Control" />
+      <sql_operations>
+        <sql_operation type="statement">DROP TABLE [tempdb].[QTables].[QTable_87367172aa554f06b73cf3ed97e5b985]</sql_operation>
+      </sql_operations>
+    </dsql_operation>
+  </dsql_operations>
+</dsql_query>
+```
+
+## <a name="see-also"></a>Confira também
+[CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
+[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)   
+[DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql?view=azure-sqldw-latest)   
+[Exibições de Catálogo do SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+[Exibições do sistema com suporte no SQL Data Warehouse do Azure](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
+[Instruções T-SQL com suporte no SQL Data Warehouse do Azure](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: dd767690533365dc51f1ef3e1fb27bcf3659eeb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dba65eb4ca0aa97ca747567a6337e68fb7c2f29
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775137"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581433"
 ---
 # <a name="scalar-udf-inlining"></a>Embutimento de UDF escalar
 
@@ -136,6 +136,8 @@ Como mencionado anteriormente, o plano de consulta não tem mais um operador de 
 2. O SQL Server também inferiu o `GROUP BY O_CUSTKEY on ORDERS` implícito e usou IndexSpool + StreamAggregate implementá-lo.
 3. O SQL Server agora está usando o paralelismo em todos os operadores.
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Dependendo da complexidade da lógica na UDF, o plano de consulta resultante também poderá ficar maior e mais complexo. Como podemos ver, as operações dentro da UDF agora não são mais uma caixa preta e, portanto, o otimizador de consulta é capaz de calcular o custo e otimizar essas operações. Além disso, uma vez que a UDF não está mais no plano, invocação da UDF iterativa é substituída por um plano que evita completamente a sobrecarga de chamada de função.
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>Requisitos de UDFs escalares que podem ser embutidas
@@ -182,7 +184,7 @@ Se todas as pré-condições forem atendidas e o SQL Server decidir executar emb
 
 ## <a name="enabling-scalar-udf-inlining"></a>Como habilitar o embutimento de UDF escalar
 
-Você pode tornar as cargas de trabalho automaticamente qualificadas para embutimento de UDF escalar habilitando o nível de compatibilidade 150 para o banco de dados.  Você pode definir isso usando o Transact-SQL. Por exemplo:  
+Você pode automaticamente qualificar as cargas de trabalho para inlining de UDF escalar habilitando o nível de compatibilidade 150 para o banco de dados.? Você pode definir isso usando o Transact-SQL.?Por exemplo:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;

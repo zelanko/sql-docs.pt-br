@@ -16,12 +16,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2b1729996b53bb3419838c0ce55dc30182c467f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 85125ef01d299c34081578bd38eb6ac3fdb328a4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135436"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582716"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Trabalhar com perfis do agente de replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,8 +69,10 @@ ms.locfileid: "54135436"
   
 ###  <a name="Access_SSMS"></a> Para acessar a caixa de diálogo Perfis do Agente a partir do SQL Server Management Studio  
   
-1.  Na página **Geral** da caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>**, clique em **Padrões de Perfil**.  
-  
+1.  Na página **Geral** da caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>** , clique em **Padrões de Perfil**.  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-access-the-agent-profiles-dialog-box-from-replication-monitor"></a>Para acessar a caixa de diálogo Perfis do Agente a partir do Replication Monitor  
   
 -   Para abrir a caixa de diálogo para todos os agentes, clique com o botão direito em um Publicador e, em seguida, clique em **Perfis do Agente**.  
@@ -93,9 +95,9 @@ ms.locfileid: "54135436"
   
 1.  Se a caixa de diálogo **Perfis do Agente** exibir perfis para mais de um agente, selecione um agente.  
   
-2.  Clique no botão de propriedades (**…**) ao lado do perfil.  
+2.  Clique no botão de propriedades ( **?** ) ao lado de um perfil.  
   
-3.  Exiba os parâmetros e valores na caixa de diálogo **Propriedades do Perfil \<ProfileName>**.  
+3.  Exiba os parâmetros e valores na caixa de diálogo **Propriedades do Perfil \<ProfileName>** .  
   
     -   Os parâmetros em perfis definidos pelo usuário podem ser editados; os parâmetros em perfis de sistema predefinidos não podem.  
   
@@ -134,11 +136,11 @@ ms.locfileid: "54135436"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 ###  <a name="Create_tsql"></a> Para criar um perfil novo de agente  
   
-1.  No Distribuidor, execute [sp_add_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md). Especifique **@name**, um valor **1** para **@profile_type**e um dos seguintes valores para **@agent_type**:  
+1.  No Distribuidor, execute [sp_add_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md). Especifique **@name** , um valor **1** para **@profile_type** e um dos seguintes valores para **@agent_type** :  
   
     -   **1** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -150,13 +152,13 @@ ms.locfileid: "54135436"
   
     -   **9** - [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-     Se esse perfil se tornar o novo perfil padrão para seu tipo de agente de replicação, especifique o valor **1** para **@default**. O identificador para o novo perfil retorna usando o parâmetro de saída **@profile_id** . Isso cria um perfil novo com um conjunto de parâmetros de perfis baseado no perfil padrão para o tipo de agente especificado.  
+     Se esse perfil se tornar o novo perfil padrão para seu tipo de agente de replicação, especifique o valor **1** para **@default** . O identificador para o novo perfil retorna usando o parâmetro de saída **@profile_id** . Isso cria um perfil novo com um conjunto de parâmetros de perfis baseado no perfil padrão para o tipo de agente especificado.  
   
 2.  Depois que o perfil novo for criado, adicione, remova ou modifique os parâmetros padrão para personalizar o perfil.  
   
 ###  <a name="Modify_tsql"></a> Para modificar um perfil de agente existente  
   
-1.  No Distribuidor, execute [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Especifique um dos valores a seguir para **@agent_type**:  
+1.  No Distribuidor, execute [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Especifique um dos valores a seguir para **@agent_type** :  
   
     -   **1** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -170,24 +172,24 @@ ms.locfileid: "54135436"
   
      Isso retorna todos os perfis para o tipo especificado de agente. Observe o valor de **profile_id** no conjunto de resultados para o perfil a ser alterado.  
   
-2.  No Distribuidor, execute [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md). Especifique o identificador de perfil da etapa 1 para **@profile_id**. Isso retorna todos os parâmetros para o perfil. Observe o nome de qualquer parâmetro a modificar ou remover do perfil.  
+2.  No Distribuidor, execute [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md). Especifique o identificador de perfil da etapa 1 para **@profile_id** . Isso retorna todos os parâmetros para o perfil. Observe o nome de qualquer parâmetro a modificar ou remover do perfil.  
   
-3.  Para alterar o valor de um parâmetro em um perfil, execute [sp_change_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md). Especifique o identificador de perfil da etapa 1 para **@profile_id**, o nome do parâmetro a ser mudado de **@parameter_name**e um novo valor de parâmetro para **@parameter_value**.  
+3.  Para alterar o valor de um parâmetro em um perfil, execute [sp_change_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md). Especifique o identificador de perfil da etapa 1 para **@profile_id** , o nome do parâmetro a ser mudado de **@parameter_name** e um novo valor de parâmetro para **@parameter_value** .  
   
     > [!NOTE]  
     >  Você não pode alterar um perfil de agente existente para se tornar o perfil padrão para um agente. Em vez disso, você deve criar um perfil novo como perfil padrão, como mostrado no procedimento anterior.  
   
-4.  Para remover um parâmetro de um perfil, execute [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md). Especifique o identificador de perfil da etapa 1 para **@profile_id** e o nome do parâmetro a remover para **@parameter_name**.  
+4.  Para remover um parâmetro de um perfil, execute [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md). Especifique o identificador de perfil da etapa 1 para **@profile_id** e o nome do parâmetro a remover para **@parameter_name** .  
   
 5.  Para adicionar um parâmetro novo a um perfil, você deve fazer o seguinte:  
   
     -   Examine a tabela do [MSagentparameterlist &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msagentparameterlist-transact-sql.md) no Distribuidor para determinar quais parâmetros de perfil podem ser definidos para cada tipo de agente.  
   
-    -   No Distribuidor, execute [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md). Especifique o identificador de perfil da etapa 1 para **@profile_id**, o nome de um parâmetro válido para adicionar a **@parameter_name**e o valor do parâmetro para **@parameter_value**.  
+    -   No Distribuidor, execute [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md). Especifique o identificador de perfil da etapa 1 para **@profile_id** , o nome de um parâmetro válido para adicionar a **@parameter_name** e o valor do parâmetro para **@parameter_value** .  
   
 ###  <a name="Delete_tsql"></a> Para excluir um perfil de agente  
   
-1.  No Distribuidor, execute [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Especifique um dos valores a seguir para **@agent_type**:  
+1.  No Distribuidor, execute [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Especifique um dos valores a seguir para **@agent_type** :  
   
     -   **1** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -201,11 +203,11 @@ ms.locfileid: "54135436"
   
      Isso retorna todos os perfis para o tipo especificado de agente. Observe o valor de **profile_id** no conjunto de resultados para o perfil a remover.  
   
-2.  No Distribuidor, execute [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md). Especifique o identificador de perfil da etapa 1 para **@profile_id**.  
+2.  No Distribuidor, execute [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md). Especifique o identificador de perfil da etapa 1 para **@profile_id** .  
   
 ###  <a name="Synch_tsql"></a> Para usar perfis de agente durante sincronização  
   
-1.  No Distribuidor, execute [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Especifique um dos valores a seguir para **@agent_type**:  
+1.  No Distribuidor, execute [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Especifique um dos valores a seguir para **@agent_type** :  
   
     -   **1** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   

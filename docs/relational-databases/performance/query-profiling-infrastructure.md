@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: dbf81f0cb1100fdc5663a8c2ff46343d8d9671c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47382961ebb72d3d0b51ae9a72161fb107021f75
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64568274"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559467"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestrutura de Criação de Perfil de Consulta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -171,6 +171,18 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
+
+## <a name="query-profiling-infrastruture-usage-guidance"></a>Diretrizes de uso da infraestrutura de criação de perfil de consulta
+A tabela a seguir resume as ações para habilitar a criação de perfil padrão ou de perfil leve, tanto globalmente (no nível do servidor) como em uma única sessão. Também inclui a versão mais antiga para a qual a ação está disponível. 
+
+|Escopo|Criação de perfil padrão|Criação de perfil leve|
+|---------------|---------------|---------------|
+|Global|Sessão xEvent com o `query_post_execution_showplan` XE; a partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Sinalizador de rastreamento 7412; a partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1|
+|Global|Rastreamento do SQL e SQL Server Profiler com o evento de rastreamento `Showplan XML`; a partir do SQL Server 2000|Sessão xEvent com o `query_thread_profile` XE; a partir do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|
+|Global|-|Sessão xEvent com o `query_post_execution_plan_profile` XE; a partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
+|Session|Use `SET STATISTICS XML ON`; a partir do SQL Server 2000|Use a dica de consulta `QUERY_PLAN_PROFILE` com uma sessão de xEvent com o `query_plan_profile` XE; a partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] CU3 SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11|
+|Session|Use `SET STATISTICS PROFILE ON`; a partir do SQL Server 2000|-|
+|Session|Clique no botão [Estatísticas de consulta dinâmica](../../relational-databases/performance/live-query-statistics.md) no SSMS; a partir do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|-|
 
 ## <a name="remarks"></a>Remarks
 

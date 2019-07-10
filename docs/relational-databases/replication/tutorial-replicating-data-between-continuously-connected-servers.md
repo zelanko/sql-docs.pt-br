@@ -15,12 +15,12 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc911c9a5a3d02e097945ebfe4a74b8ddd9ee285
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f7d40e49816ccec8c84486056a3f5b3bdee759de
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128346"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581333"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Configurar a replicação entre dois servidores totalmente conectados (transacional)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,11 +102,11 @@ Nesta seção, você criará uma publicação transacional usando o [!INCLUDE[ss
   
 10. Na página **Segurança do Agente**, desmarque a caixa de seleção **Usar as configurações de segurança do Agente de Instantâneo**.   
   
-    Selecione **Configurações de segurança** para o Agente de Instantâneo. Insira <*Nome_do_Computador_do_Editor*>**\repl_snapshot** na caixa **Conta de Processo**, forneça a senha para essa conta e selecione **OK**.  
+    Selecione **Configurações de segurança** para o Agente de Instantâneo. Insira <*Nome_do_Computador_do_Editor*> **\repl_snapshot** na caixa **Conta de Processo**, forneça a senha para essa conta e selecione **OK**.  
 
     ![Página "Segurança do Agente" e caixa de diálogo "Segurança do Agente de Instantâneo"](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
   
-12. Repita a etapa anterior para definir <*Nome_do_Computador_do_Editor*>**\repl_logreader** como a conta de processo do Agente de Leitor de Log. Em seguida, selecione **OK**.  
+12. Repita a etapa anterior para definir <*Nome_do_Computador_do_Editor*> **\repl_logreader** como a conta de processo do Agente de Leitor de Log. Em seguida, selecione **OK**.  
 
     ![Caixa de diálogo "Segurança do Agente de Leitor de Log" e página "Segurança do Agente"](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderagentsecurity.png)   
 
@@ -116,6 +116,8 @@ Nesta seção, você criará uma publicação transacional usando o [!INCLUDE[ss
     ![Página "Concluir o Assistente" com o nome da publicação](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
   
 14. Depois que a publicação for criada, selecione **Fechar** para concluir o assistente. 
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Você poderá receber o erro a seguir se o SQL Server Agent não estiver em execução quando você tentar criar a publicação. Esse erro indica que a publicação foi criada com êxito, mas o Agente de Instantâneo não pôde ser iniciado. Se isso acontecer, você precisará iniciar o SQL Server Agent e, em seguida, iniciar o Agente de Instantâneo manualmente. A próxima seção fornece instruções. 
 
@@ -146,7 +148,7 @@ Se encontrar um erro aqui, confira [Solução de problemas de erro com o Agente 
 2. Na pasta **Publicações Locais**, clique com o botão direito do mouse em **AdvWorksProductTrans** e, em seguida, selecione **Propriedades**.  A caixa de diálogo **Propriedades da Publicação** é exibida.    
   
    A. Selecione a página **Lista de Acesso à Publicação** e **Adicionar**.  
-   B. Na caixa de diálogo **Adicionar Acesso à Publicação**, selecione <*Nome_do_Computador_do_Editor*>**\repl_distribution** e selecione **OK**.
+   B. Na caixa de diálogo **Adicionar Acesso à Publicação**, selecione <*Nome_do_Computador_do_Editor*> **\repl_distribution** e selecione **OK**.
    
    ![Seleções para adicionar o logon à lista de acesso à publicação](media/tutorial-replicating-data-between-continuously-connected-servers/tranreplproperties.png)
 
@@ -182,7 +184,7 @@ Nesta seção, você adicionará um assinante à Publicação criada anteriormen
   
    ![Inserindo um nome ao banco de dados de assinatura](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. Na página **Segurança do Agente de Distribuição**, selecione o botão de reticências (**...**). Insira <*Nome_do_Computador_do_Editor*>**\repl_distribution** na caixa **Conta do processo**, insira a senha da conta, selecione **OK** e, em seguida, selecione **Avançar**.
+8. Na página **Segurança do Agente de Distribuição**, selecione o botão de reticências ( **?** ). Insira <*Nome_do_Computador_do_Editor*> **\repl_distribution** na caixa **Conta do processo**, insira a senha da conta, selecione **OK** e, em seguida, selecione **Avançar**.
 
    ![Informações da conta de distribuição na caixa de diálogo "Segurança do Agente de Distribuição"](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   
@@ -192,7 +194,7 @@ Nesta seção, você adicionará um assinante à Publicação criada anteriormen
   
 1. Conecte-se ao assinante no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Expanda **Segurança**, clique com o botão direito do mouse em **Logons** e, em seguida, selecione **Novo Logon**.     
   
-   A. Na página **Geral**, em **Nome de Logon**, selecione **Pesquisar** e adicione o logon a <*Subscriber_Machine_Name*>**\repl_distribution**.
+   A. Na página **Geral**, em **Nome de Logon**, selecione **Pesquisar** e adicione o logon a <*Subscriber_Machine_Name*> **\repl_distribution**.
 
    B. Na página **Mapeamentos de Usuário**, conceda o logon de associação **db_owner** ao banco de dados **ProductReplica**. 
 

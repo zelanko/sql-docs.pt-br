@@ -25,12 +25,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 85db3bb859a84ed9821f81186b311baf591583e0
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 433f0bac60d3643c56b37cdd6d2750952d9836b2
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802670"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492784"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -366,9 +366,9 @@ BEGIN
     ON (target.UnitMeasureCode = source.UnitMeasureCode)  
     WHEN MATCHED THEN   
         UPDATE SET Name = source.Name  
-WHEN NOT MATCHED THEN  
-    INSERT (UnitMeasureCode, Name)  
-    VALUES (source.UnitMeasureCode, source.Name)  
+    WHEN NOT MATCHED THEN  
+        INSERT (UnitMeasureCode, Name)  
+        VALUES (source.UnitMeasureCode, source.Name)  
     OUTPUT deleted.*, $action, inserted.* INTO #MyTempTable;  
 END;  
 GO  
@@ -384,7 +384,7 @@ DROP TABLE #MyTempTable;
 GO  
 ```  
   
-### <a name="b-using-merge-to-do-update-and-delete-operations-on-a-table-in-a-single-statement"></a>b. Usar MERGE para executar as operações UPDATE e DELETE em uma tabela em uma única instrução  
+### <a name="b-using-merge-to-do-update-and-delete-operations-on-a-table-in-a-single-statement"></a>B. Usar MERGE para executar as operações UPDATE e DELETE em uma tabela em uma única instrução  
 O exemplo a seguir usa MERGE para atualizar diariamente a tabela `ProductInventory` no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] com base em pedidos processados na tabela `SalesOrderDetail`. A coluna `Quantity` da tabela `ProductInventory` foi atualizada subtraindo o número de pedidos colocados a cada dia para cada produto na tabela `SalesOrderDetail`. Se o número de pedidos de um produto reduzir o nível de estoque de um produto para 0 ou menos, a linha desse produto será excluída da tabela `ProductInventory`.  
   
 ```sql  
