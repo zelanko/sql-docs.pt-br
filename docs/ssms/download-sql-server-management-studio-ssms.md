@@ -47,7 +47,7 @@ O SSMS é gratuito!
 
 **[![baixar](../ssdt/media/download.png) Baixar o SQL Server Management Studio 18.1 ](https://go.microsoft.com/fwlink/?linkid=2094583)**
 
-O SSMS 18.1 é a versão mais recente de GA (disponibilidade geral) do SSMS. Se você tiver o SSMS 18.0 (GA) instalado, instalar o SSMS 18.1 fará upgrade para o 18.1. Se você tiver *versões prévias* anteriores do SSMS 18.0 instaladas, desinstale-as antes de instalar o SSMS 18.1.
+O SSMS 18.1 é a versão mais recente de GA do SSMS. Se você tiver o SSMS 18.0 (GA) instalado, a instalação do SSMS 18.1 causará a atualização do produto. Se você tiver *versões prévias* anteriores do SSMS 18.0 instaladas, desinstale-as antes de instalar o SSMS 18.1.
 
 **Informações da versão**
 
@@ -74,8 +74,8 @@ SQL Server Management Studio 18.1:<br>
 ## <a name="new-in-this-release-ssms-181"></a>Novidades desta versão (SSMS 18.1)
 
 - **Diagramas de banco de dados** – foram adicionados novamente ao SSMS. Para saber detalhes, confira [Diagramas de banco de dados](https://feedback.azure.com/forums/908035/suggestions/37507828).
-- **SSBDIAGNOSE.EXE** – a ferramenta Diagnóstico da linha de comando do SQL Server foi adicionada novamente ao pacote do SSMS.
-- **SSIS (Integration Services)** – compatibilidade com o agendamento do pacote do SSIS, localizado no Catálogo do SSIS no Azure ou no Sistema de Arquivos no Azure. Existem três entradas para iniciar a caixa de diálogo Agendamento, o item de menu *Nova Agenda…* mostrado ao clicar com o botão direito do mouse no pacote do Catálogo do SSIS no Azure; o item de menu *Agendar Pacote do SSIS no Azure* em *Migrar para o Azure* no item de menu *Ferramentas*; e "Agendar o SSIS no Azure", mostrado ao clicar com o botão direito do mouse na pasta Trabalhos no agente do SQL Server da Instância Gerenciada do Banco de Dados SQL do Azure.
+- **SSBDIAGNOSE.EXE** – a ferramenta de linha de comando Diagnosticar do SQL Server foi adicionada novamente ao pacote do SSMS.
+- **SSIS (Integration Services)** – compatibilidade com o agendamento do pacote do SSIS, localizado no Catálogo do SSIS no Azure ou no Sistema de Arquivos no Azure. Há três entradas para iniciar a caixa de diálogo Novo agendamento, o item de menu *Novo agendamento…* mostrado ao clicar com o botão direito do mouse no pacote do Catálogo do SSIS no Azure; o item de menu *Agendar Pacote do SSIS no Azure* em *Migrar para o Azure* no item de menu *Ferramentas*; e "Agendar o SSIS no Azure", mostrado ao clicar com o botão direito do mouse na pasta Trabalhos no agente do SQL Server da Instância Gerenciada do Banco de Dados SQL do Azure.
 
 Para obter detalhes sobre as novidades desta versão, confira [notas sobre a versão do SSMS](release-notes-ssms.md).
 
