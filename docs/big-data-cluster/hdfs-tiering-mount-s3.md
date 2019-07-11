@@ -4,24 +4,24 @@ titleSuffix: SQL Server big data clusters
 description: Este artigo explica como configurar o HDFS disposição em camadas para montar um sistema de arquivo externo do S3 no HDFS em um cluster de big data do SQL Server 2019 (visualização).
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f26fcfa24da5b9f22ddab1e76c2f80a0d24fae8d
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: d782a2c8727f053b569c77af525795d81afebbc7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400025"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728744"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Como montar S3 para o HDFS disposição em camadas em um cluster de big data
 
 As seções a seguir fornecem um exemplo de como configurar o HDFS disposição em camadas com uma fonte de dados do armazenamento de S3.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Cluster de big data implantados](deployment-guidance.md)
 - [Ferramentas de big data](deploy-big-data-tools.md)

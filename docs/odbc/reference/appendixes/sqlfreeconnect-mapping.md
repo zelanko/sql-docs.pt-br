@@ -14,15 +14,15 @@ ms.assetid: 8a844538-93c0-4709-bab6-35c45e771d80
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef90025a129bc624377bfe7891f122a838180a51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b9a35275d95207fd8ceef296ecda4664a1c4e7f
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199627"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793599"
 ---
 # <a name="sqlfreeconnect-mapping"></a>Mapeamento SQLFreeConnect
-Quando um aplicativo chama **SQLFreeConnect** por meio de um ODBC 3 *. x* driver, a chamada para  
+Quando um aplicativo chama **SQLFreeConnect** por meio de ODBC *3.x* driver, a chamada para  
   
 ```  
 SQLFreeConnect(hdbc)   

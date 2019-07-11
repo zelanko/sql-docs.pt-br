@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03ca95fad4f6e88c22edb612441a9eb4ea986bbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 961878494958f0f7ef5d1814c0836a98f5da5682
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462528"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716582"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -39,7 +39,7 @@ Retorna informações sobre cada solicitação sendo executada no [!INCLUDE[ssNo
 |session_id|**smallint**|ID da sessão a que esta solicitação está relacionada. Não permite valor nulo.|  
 |request_id|**int**|ID da solicitação. Exclusiva no contexto da sessão. Não permite valor nulo.|  
 |start_time|**datetime**|Carimbo de data e hora em que a solicitação chegou. Não permite valor nulo.|  
-|status|**nvarchar(30)**|Status da solicitação. Pode ser um dos seguintes:<br /><br /> Plano de fundo<br />Executando<br />Executável<br />Hibernando<br />Suspenso<br /><br /> Não permite valor nulo.|  
+|status|**nvarchar(30)**|Status da solicitação. Pode ser um dos seguintes:<br /><br /> Informações preliminares<br />Executando<br />Executável<br />Hibernando<br />Suspenso<br /><br /> Não permite valor nulo.|  
 |command|**nvarchar(32)**|Identifica o tipo atual de comando que está sendo processado. Os tipos de comando comuns incluem:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> O texto da solicitação pode ser recuperado usando sys.dm_exec_sql_text com o sql_handle correspondente para a solicitação. Os processos de sistema internos definem o comando com base no tipo de tarefa que eles executam. As tarefas podem incluir o seguinte:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Não permite valor nulo.|  
 |sql_handle|**varbinary(64)**|É um token que identifica exclusivamente o lote ou procedimento armazenado que a consulta faz parte. Permite valor nulo.|  
 |statement_start_offset|**int**|Número de caracteres no procedimento em lote ou armazenado atualmente em execução no qual a instrução atualmente em execução se inicia. Pode ser usado junto com a função de gerenciamento dinâmico sql_handle, statement_end_offset e sys.dm_exec_sql_text para recuperar a instrução atualmente em execução da solicitação. Permite valor nulo.|  
@@ -89,8 +89,8 @@ Retorna informações sobre cada solicitação sendo executada no [!INCLUDE[ssNo
 |group_id|**int**|ID do grupo de carga de trabalho a que pertence esta consulta. Não permite valor nulo.|  
 |query_hash|**binary(8)**|Valor de hash binário calculado na consulta e usado para identificar consultas com lógica semelhante. Você pode usar o hash de consulta para determinar o recurso de agregação usado para consultas que são diferentes apenas nos valores literais.|  
 |query_plan_hash|**binary(8)**|Valor de hash binário calculado no plano de execução de consulta e usado para identificar planos de execução de consulta semelhantes. Você pode usar o hash de plano de consulta para localizar o custo cumulativo de consultas com planos de execução semelhantes.|  
-|statement_sql_handle|**varbinary(64)**|**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Identificador SQL da consulta individual. |  
-|statement_context_id|**bigint**|**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> A chave estrangeira opcional para sys.query_context_settings. |  
+|statement_sql_handle|**varbinary(64)**|**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Identificador SQL da consulta individual.<br /><br />Essa coluna será NULL se a consulta Store não está habilitado para o banco de dados. |  
+|statement_context_id|**bigint**|**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> A chave estrangeira opcional para sys.query_context_settings.<br /><br />Essa coluna será NULL se a consulta Store não está habilitado para o banco de dados. |  
 |dop |**int** |**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> O grau de paralelismo da consulta. |  
 |parallel_worker_count |**int** |**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> O número de trabalhadores paralelos reservados quando se trata de uma consulta paralela.  |  
 |external_script_request_id |**uniqueidentifier** |**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> A ID de solicitação de script externo associada à solicitação atual. |  

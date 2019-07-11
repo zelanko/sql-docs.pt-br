@@ -10,17 +10,37 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 06/06/2019
-ms.openlocfilehash: 2b06e8476e10abc3a96ab6c6f2304ef81f225f02
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.date: 07/10/2019
+ms.openlocfilehash: 5e3aa3f0472b775f1dfbd13634228226e4e7e0c2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681607"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794068"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de versão do estúdio de dados do Azure
 
 **[Baixe e instale a versão mais recente!](download.md)**
+
+## <a name="july-2019"></a>Julho de 2019
+
+10 de julho de 2019 &nbsp;  /  &nbsp; versão: 1.9.0 
+
+&nbsp;
+
+| Alterar | Detalhes |
+| :----- | :------ |
+| Versão da extensão do Gerenciador de plano SentryOne | Nossa parceira importante da Microsoft, SentryOne, enviará suas [extensão SentryOne planejar Explorer para o Azure Data Studio](https://www.sentryone.com/products/sentryone-plan-explorer-extension-azure-data-studio). <br> Isso é uma extensão gratuita, que fornece diagramas de plano aprimorado para consultas é executada no estúdio de dados do Azure, com os algoritmos de layout otimizado e intuitiva codificação por cores para ajudar a identificar rapidamente os operadores mais caros que afetam o desempenho da consulta. Para saber mais sobre a extensão, confira a postagem do blog do SentryOne [aqui](https://sqlperformance.com/2019/07/sentryone/plan-explorer-extension-azure-data-studio). |
+| Novos recursos que virão a comparação de esquemas | &bull; &nbsp; Suporte de arquivo de comparação de esquema (. SCMP) <br/>&bull; &nbsp; Cancelar o suporte a comparação de esquemas <br/>&bull; &nbsp; As alterações completas podem ser encontradas [aqui](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed+)|
+| Aprimoramentos de bloco de anotações | &bull; &nbsp; Suporte do Python plotly <br/>&bull; &nbsp; Abrir o Notebook do navegador <br/> &bull; &nbsp; Caixa de diálogo gerenciamento de pacotes do Python <br/> &bull; &nbsp; Aprimoramentos de desempenho e Markdown <br/> &bull; &nbsp; Atualização de atalhos de teclado <br/>  &bull; &nbsp; Correções de bugs e recursos podem ser encontrados [aqui](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22+) |
+| SQL Server 2019 Support |  Esta versão inclui suporte para recursos de Cluster de Big Data do SQL Server de 2019 adicionais, incluindo: <br/> &bull; &nbsp; Tabela de pontos de extremidade de serviço dentro do painel de gerenciamento do que lista todos os principais serviços no cluster. <br/> &bull; &nbsp; O bloco de anotações do cluster Status mostra como você pode consultar e solucionar problemas de status do cluster em todos os serviços e os pods.| 
+| Pacotes de idiomas atualizado disponível| Agora há 10 pacotes de idiomas disponíveis no marketplace do Gerenciador de extensões. Simplesmente, pesquise o idioma específico usando o marketplace de extensão e instalar. Depois de instalar o idioma selecionado, o Studio de dados do Azure solicitará que você reiniciar com a nova linguagem. |
+| Atualização do SQL Server Profiler | A extensão de perfil do SQL Server foi atualizada para incluir novos recursos, incluindo: <br/> &bull; &nbsp; Filtrando pelo nome do banco de dados <br/> &bull; &nbsp; Copie e cole o suporte <br/> &bull; &nbsp; Salvar/carregar filtro <br/>Encontre uma lista completa das melhorias para a extensão do SQL Server Profiler [aqui](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+SQL+Profiler%22+).  |
+| Código do Visual Studio versão de maio de mesclagem 1.35 | Melhorias mais recentes podem ser encontradas [aqui](https://code.visualstudio.com/updates/v1_35). |
+| Problemas e bugs resolvidos | Em versões anteriores do Studio de dados do Azure, se um banco de dados do usuário foi selecionado ao conectar-se a caixa de diálogo de Conexão, a entrada do Pesquisador de objetos resultante foi no escopo totalmente esse único banco de dados. Começando nesta versão, que o comportamento está sendo alterado para que as propriedades de nível de servidor também são mostradas no Pesquisador de objetos. <br/> Para obter uma lista completa de correções, consulte [Bugs e problemas no GitHub](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1). |
+| &nbsp; | &nbsp; |
+
+
 
 ## <a name="june-2019"></a>Junho de 2019
 
@@ -34,12 +54,12 @@ ms.locfileid: "67681607"
 | Versão das extensões de ferramenta de administração de banco de dados para Windows | Essa extensão inicia duas das experiências mais usadas no SQL Server Management Studio no Studio de dados do Azure. Usuários podem clicar em vários objetos diferentes (como bancos de dados, tabelas, colunas, exibições e muito mais) e selecione Propriedades para exibir a caixa de diálogo de propriedades do SSMS para esse objeto. Além disso, os usuários podem clique com botão direito em um banco de dados e selecione Gerar Scripts para iniciar o Assistente do SSMS gerar Scripts bem conhecido. 
 | Aperfeiçoamentos de comparação de esquema | &bull; &nbsp; Adicionado exclui/inclui opções <br/>&bull; &nbsp; Gerar Script de script é aberto após o que está sendo gerado <br/>&bull; &nbsp; Removidas as barras de rolagem duplas  <br/>&bull; &nbsp; Melhorias de formatação e layout <br/>&bull; &nbsp; As alterações completas podem ser encontradas [aqui](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
 | Seção de mensagens movida para a própria guia | Quando os usuários executar consultas SQL, resultados e mensagens foram nos painéis de gráfico empilhados. Agora eles estão em guias separadas em um painel, como no SSMS. |
-| Aprimoramentos de bloco de anotações do SQL | &bull; &nbsp; Agora, os usuários podem escolher usar suas próprias instalações de Python 3 ou Anaconda em blocos de anotações <br/>&bull; &nbsp; Vários estabilidade + correções de ajuste/término &bull; &nbsp; exibir a lista completa de melhorias [aqui](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
+| Aprimoramentos de bloco de anotações do SQL | &bull; &nbsp; Agora, os usuários podem escolher usar suas próprias instalações de Python 3 ou Anaconda em blocos de anotações <br/>&bull; &nbsp; Vários estabilidade + correções de ajuste/término <br/> &bull; &nbsp; Exibir a lista completa de melhorias [aqui](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
 | Código do Visual Studio versão de maio de mesclagem 1.34 | Melhorias mais recentes podem ser encontradas [aqui](https://code.visualstudio.com/updates/v1_34) |
 | Bugs resolvidos e problemas. | Ver [Bugs e problemas no GitHub](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1). |
 | &nbsp; | &nbsp; |
 
-### <a name="known-issues"></a>Problemas conhecidos
+### <a name="known-issues"></a>Problemas Conhecidos
 - Extensões de ferramentas de administração de banco de dados para Windows
     - Não é possível iniciar as propriedades de nó de servidor desconectada
     - Não é possível inicializar as propriedades para os servidores do Azure
@@ -108,7 +128,7 @@ ms.locfileid: "67681607"
 | Bugs resolvidos e problemas. | Ver [Bugs e problemas no GitHub](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1). |
 | &nbsp; | &nbsp; |
 
-### <a name="known-issues"></a>Problemas conhecidos
+### <a name="known-issues"></a>Problemas Conhecidos
 - [#4427](https://github.com/Microsoft/azuredatastudio/issues/4427): Ao clicar em Run na célula antes de Kernel estiver pronta para resultados de Spark em um Erro Fatal **solução alternativa:** Aguarde até que os kernels são carregados até executar todas as células
 - [#4493](https://github.com/Microsoft/azuredatastudio/issues/4493): ANÚNCIOS iniciados a partir do SSMS usando a autenticação do SQL - prompts de senha do usuário **solução alternativa:** Use a autenticação do Windows por enquanto. 
 - [#4494](https://github.com/Microsoft/azuredatastudio/issues/4494): Não é possível instalar o recurso de bloco de anotações do SQL <br/>

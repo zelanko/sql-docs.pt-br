@@ -2,19 +2,20 @@
 title: Referência do mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Artigo de referência para comandos mssqlctl.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2601d526710e6cf51de089f7879f0f5517bf86aa
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: a30f78b24a85f85b85beb914dc0f26af652242fd
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388670"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728539"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -22,7 +23,7 @@ ms.locfileid: "67388670"
 
 O artigo a seguir fornece referência para o **mssqlctl** ferramenta para [clusters de big data de 2019 do SQL Server (visualização)](big-data-cluster-overview.md). Para obter mais informações sobre como instalar o **mssqlctl** ferramenta, consulte [instalar mssqlctl para gerenciar os clusters do SQL Server 2019 grandes dados](deploy-install-mssqlctl.md).
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 |[aplicativo mssqlctl](reference-mssqlctl-app.md) | Criar, excluir, executar e gerenciar aplicativos. |

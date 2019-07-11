@@ -2,19 +2,20 @@
 title: referência de pool de bdc mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Artigo de referência para comandos de pool de bdc mssqlctl.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 43d2e8e93020bd397a9416efefb9691cf23b7110
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 82d7f9ee32faf5ed9816846bce39380f6b0a3c3c
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394258"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727445"
 ---
 # <a name="mssqlctl-bdc-pool"></a>pool de bdc mssqlctl
 
@@ -22,7 +23,7 @@ ms.locfileid: "67394258"
 
 O artigo a seguir fornece referência para o **bdc pool** comandos na **mssqlctl** ferramenta. Para obter mais informações sobre outros **mssqlctl** comandos, consulte [mssqlctl referência](reference-mssqlctl.md).
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 [status do pool de bdc mssqlctl](reference-mssqlctl-bdc-pool-status.md) | Comandos de status do pool.

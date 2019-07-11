@@ -15,21 +15,21 @@ ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8937c2b9c80209975d03963acb19ab5da9c99e39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1283cd0b41eff971a1014b213bda5e44f1912039
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148910"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792778"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Drivers e aplicativos em conformidade com padrões
 Um aplicativo compatível com os padrões ou o driver é aquele que está em conformidade com as especificações do Open grupo CAE "gerenciamento de dados: Interface de nível de chamada SQL (CLI)"e o ISO/IEC 9075-Interface de nível de chamada 3:1995 (E) (SQL/CLI).  
   
- 3 de ODBC *. x* garante os seguintes recursos:  
+ ODBC *3.x* garante os seguintes recursos:  
   
--   Um aplicativo escrito com as especificações do Open Group e a CLI de ISO funcionará com um ODBC 3 *. x* driver ou um driver compatível com os padrões quando ele é compilado com o ODBC 3 *. x* arquivos de cabeçalho e vinculado com 3 de ODBC *. x* bibliotecas, e quando ele ganha acesso para o driver por meio de ODBC 3 *. x* Gerenciador de Driver.  
+-   Um aplicativo escrito com as especificações do Open Group e a CLI de ISO funcionará com ODBC *3.x* driver ou um driver compatível com os padrões quando ele é compilado com o ODBC *3.x* arquivos de cabeçalho e vinculado com ODBC *3.x* bibliotecas, e quando ele ganha acesso para o driver ODBC por meio do *3.x* Gerenciador de Driver.  
   
--   Um driver escrito com as especificações do Open Group e a CLI de ISO funcionará com um ODBC 3 *. x* aplicativo ou um aplicativo compatível com os padrões quando ele é compilado com o ODBC 3 *. x* arquivos de cabeçalho e vinculado com o ODBC 3 *. x* bibliotecas, e quando o aplicativo obtém acesso ao driver por meio de ODBC 3 *. x* Gerenciador de Driver.  
+-   Um driver escrito com as especificações do Open Group e a CLI de ISO funcionará com ODBC *3.x* aplicativo ou um aplicativo compatível com os padrões quando ele é compilado com o ODBC *3.x* arquivos de cabeçalho e vinculado com o ODBC *3.x* bibliotecas, e quando o aplicativo obtém acesso ao driver por meio de ODBC *3.x* Gerenciador de Driver.  
   
  Drivers e aplicativos compatíveis com os padrões são compilados com o sinalizador de compilação ODBC_STD.  
   
@@ -37,8 +37,8 @@ Um aplicativo compatível com os padrões ou o driver é aquele que está em con
   
 -   Se um aplicativo compatível com os padrões chama **SQLAllocEnv** (que pode ocorrer porque **SQLAllocEnv** é uma função válida no Open Group e ISO CLI), a chamada é mapeada para  **SQLAllocHandleStd** em tempo de compilação. Como resultado, em tempo de execução, o aplicativo chama **SQLAllocHandleStd**. Durante o processamento desta chamada, o Gerenciador de Driver define o atributo de ambiente SQL_ATTR_ODBC_VERSION como SQL_OV_ODBC3. Uma chamada para **SQLAllocHandleStd** é equivalente a uma chamada para **SQLAllocHandle** com um *HandleType* SQL_HANDLE_ENV e uma chamada para **SQLSetEnvAttr** para definir SQL_ATTR_ODBC_VERSION como SQL_OV_ODBC3.  
   
--   Se um aplicativo compatível com os padrões chama **SQLBindParam** (que pode ocorrer porque **SQLBindParam** é uma função válida no Open Group e ISO CLI), o ODBC 3 *. x* Gerenciador de driver mapeia a chamada para a chamada equivalente no **SQLBindParameter**. (Consulte [mapeamento SQLBindParam](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) no Apêndice g: Diretrizes de driver para compatibilidade com versões anteriores.)  
+-   Se um aplicativo compatível com os padrões chama **SQLBindParam** (que pode ocorrer porque **SQLBindParam** é uma função válida no Open Group e ISO CLI), o ODBC *3.x* Gerenciador de driver mapeia a chamada para a chamada equivalente no **SQLBindParameter**. (Consulte [mapeamento SQLBindParam](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) no Apêndice g: Diretrizes de driver para compatibilidade com versões anteriores.)  
   
--   Para alinhar com a CLI do ISO, o ODBC 3 *. x* arquivos de cabeçalho contêm aliases para tipos de informações usados em chamadas aos **SQLGetInfo**. Um aplicativo compatível com os padrões pode usar esses aliases em vez de 3 a ODBC *. x* tipos de informações. Para obter mais informações, consulte o próximo tópico, [arquivos de cabeçalho](../../../odbc/reference/develop-app/header-files.md).  
+-   Para alinhar com a CLI do ISO, o ODBC *3.x* arquivos de cabeçalho contêm aliases para tipos de informações usados em chamadas aos **SQLGetInfo**. Um aplicativo compatível com os padrões pode usar esses aliases em vez de ODBC *3.x* tipos de informações. Para obter mais informações, consulte o próximo tópico, [arquivos de cabeçalho](../../../odbc/reference/develop-app/header-files.md).  
   
--   Um aplicativo compatível com os padrões deve verificar que todos os recursos que ele oferece suporte a têm suporte no driver funcionará com o. Definindo o atributo de instrução SQL_ATTR_CURSOR_SCROLLABLE como SQL_SCROLLABLE e definindo o atributo da instrução SQL_ATTR_CURSOR_SENSITIVITY SQL_INSENSITIVE ou SQL_SENSITIVE são recursos que estão disponíveis como recursos opcionais nos padrões mas não estão incluídos no ODBC 3 *. x* Core nível e, portanto, pode não ter suporte por todos os ODBC 3 *. x* drivers. Se um aplicativo compatível com os padrões usa esses recursos, deve verificar que o driver que ele funcione com dá suporte a eles.
+-   Um aplicativo compatível com os padrões deve verificar que todos os recursos que ele oferece suporte a têm suporte no driver funcionará com o. Definindo o atributo de instrução SQL_ATTR_CURSOR_SCROLLABLE como SQL_SCROLLABLE e definindo o atributo da instrução SQL_ATTR_CURSOR_SENSITIVITY SQL_INSENSITIVE ou SQL_SENSITIVE são recursos que estão disponíveis como recursos opcionais nos padrões mas não estão incluídas no ODBC *3.x* Core nível e, portanto, talvez não tenha suporte pelo ODBC todas as *3.x* drivers. Se um aplicativo compatível com os padrões usa esses recursos, deve verificar que o driver que ele funcione com dá suporte a eles.

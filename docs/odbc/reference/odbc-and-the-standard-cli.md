@@ -17,12 +17,12 @@ ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5485da176b9bd4aa7afca7afa088e6932d6f0d58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adddf32a29d3a891a4a2c6fb2353648e62b0d9c5
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273299"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794097"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC e a CLI padrão
 ODBC alinha-se com as seguintes especificações e padrões que lidam com a Interface de nível de chamada (CLI). (Os recursos de ODBC são um subconjunto de cada um desses padrões.)  
@@ -33,17 +33,17 @@ ODBC alinha-se com as seguintes especificações e padrões que lidam com a Inte
   
  Como resultado, esse alinhamento forem verdadeiras:  
   
--   Um aplicativo escrito para o Open Group e especificações ISO CLI funcionará com um ODBC 3. *x* driver ou um driver compatível com os padrões quando ele é compilado com o ODBC 3. *x* arquivos de cabeçalho e vinculado com o ODBC 3. *x* bibliotecas, e quando ele ganha acesso para o driver por meio de ODBC 3. *x* Gerenciador de Driver.  
+-   Um aplicativo escrito com as especificações do Open Group e a CLI de ISO funcionará com ODBC *3.x* driver ou um driver compatível com os padrões quando ele é compilado com o ODBC *3.x* arquivos de cabeçalho e vinculado com ODBC *3.x* bibliotecas, e quando ele ganha acesso para o driver ODBC por meio do *3.x* Gerenciador de Driver.  
   
--   Um driver escrito com as especificações do Open Group e a CLI de ISO funcionará com um ODBC 3 *. x* aplicativo ou um aplicativo compatível com os padrões quando ele é compilado com o ODBC 3 *. x* arquivos de cabeçalho e vinculado com o ODBC 3 *. x* bibliotecas, e quando o aplicativo obtém acesso ao driver por meio de ODBC 3 *. x* Gerenciador de Driver. (Para obter mais informações, consulte [compatível com os padrões de aplicativos e Drivers](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
+-   Um driver escrito com as especificações do Open Group e a CLI de ISO funcionará com ODBC *3.x* aplicativo ou um aplicativo compatível com os padrões quando ele é compilado com o ODBC *3.x* arquivos de cabeçalho e vinculado com o ODBC *3.x* bibliotecas, e quando o aplicativo obtém acesso ao driver por meio de ODBC *3.x* Gerenciador de Driver. (Para obter mais informações, consulte [compatível com os padrões de aplicativos e Drivers](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
   
- O nível de conformidade de interface Core abrange todos os recursos na CLI do ISO e todos os recursos os na CLI do grupo aberto. Recursos opcionais da CLI do grupo aberto aparecem em níveis mais altos de conformidade de interface. Porque todos os ODBC 3. *x* drivers são necessários para dar suporte os recursos no nível de conformidade de interface de núcleo, as seguintes condições forem verdadeiras:  
+ O nível de conformidade de interface Core abrange todos os recursos na CLI do ISO e todos os recursos os na CLI do grupo aberto. Recursos opcionais da CLI do grupo aberto aparecem em níveis mais altos de conformidade de interface. Porque todos os ODBC *3.x* drivers são necessários para dar suporte os recursos no nível de conformidade de interface de núcleo, as seguintes condições forem verdadeiras:  
   
--   ODBC 3. *x* driver dará suporte a todos os recursos usados por um aplicativo compatível com os padrões.  
+-   ODBC *3.x* driver dará suporte a todos os recursos usados por um aplicativo compatível com os padrões.  
   
--   ODBC 3. *x* aplicativo usando apenas os recursos na CLI do ISO e os recursos da CLI do grupo aberto funcionará com qualquer driver compatível com os padrões.  
+-   ODBC *3.x* aplicativo usando apenas os recursos na CLI do ISO e os recursos da CLI do grupo aberto funcionará com qualquer driver compatível com os padrões.  
   
- Além das especificações de interface de nível de chamada contidas nos padrões ISO/IEC e abrir CLI de grupo, o ODBC implementa os seguintes recursos. (Alguns desses recursos existiam em versões do ODBC anterior à ODBC 3. *x*.)  
+ Além das especificações de interface de nível de chamada contidas nos padrões ISO/IEC e abrir CLI de grupo, o ODBC implementa os seguintes recursos. (Alguns desses recursos existiam em versões do ODBC antes de ODBC *3.x*.)  
   
 -   Multilinha buscas por uma única chamada de função  
   

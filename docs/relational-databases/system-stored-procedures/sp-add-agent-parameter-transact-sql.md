@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_add_agent_parameter
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f72ed9339522d3cce0936ca2f6143fb35ce3252e
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: dcc28a97ab7f01f4e13d3918361506113f0de24b
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494008"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716781"
 ---
 # <a name="spaddagentparameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 -   [Agente de Leitor de Fila de Replicação](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-`[ @parameter_value = ] 'parameter_value'` É o valor a ser atribuído ao parâmetro. *parameter_value* está **nvarchar (255)**, sem padrão.  
+`[ @parameter_value = ] 'parameter_value'` É o valor a ser atribuído ao parâmetro. *parameter_value* está **nvarchar (255)** , sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -2,19 +2,20 @@
 title: referência de status do bdc mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Artigo de referência para comandos de status mssqlctl bdc.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7aa27a10ff74633c976ced3d14b35a0c2e49ae25
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 2f1b7f7c635b621c1c85953e63acc8f80bb52b01
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394268"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728560"
 ---
 # <a name="mssqlctl-bdc-status"></a>status do bdc mssqlctl
 
@@ -22,7 +23,7 @@ ms.locfileid: "67394268"
 
 O artigo a seguir fornece referência para o **status do bdc** comandos na **mssqlctl** ferramenta. Para obter mais informações sobre outros **mssqlctl** comandos, consulte [mssqlctl referência](reference-mssqlctl.md).
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 [Mostrar de status do bdc mssqlctl](#mssqlctl-bdc-status-show) | Mostra o status do Cluster grande de dados.

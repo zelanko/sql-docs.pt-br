@@ -13,19 +13,19 @@ ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e6d0806a7c3eabd1c6f4cd1836308eba99a6d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c706dca3a1479a299841f9d47743785d29689f12
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724361"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792564"
 ---
 # <a name="header-files"></a>Arquivos de cabeçalho
 O arquivo de cabeçalho do SQL contém protótipos para as funções e recursos no nível de conformidade de Interface do núcleo ODBC. O arquivo de cabeçalho sqlext. h contém protótipos para as funções e recursos no nível 1 e níveis de conformidade de nível 2 API. O arquivo de cabeçalho SqlTypes contém definições de tipo e indicadores para os tipos de dados SQL.  
   
  Os arquivos de cabeçalho que contêm uma **#define**, ODBCVER, que pode ser definidas por um aplicativo ou driver a ser compilado para diferentes versões do ODBC.  
   
- Para alinhar com a CLI do ISO e abrir CLI de grupo, os arquivos de cabeçalho contêm aliases para os tipos de informações usados em chamadas para **SQLGetInfo**. Na tabela a seguir, a coluna "Nome do ODBC" indica o nome ODBC para o tipo de informações em [referência da API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md). A coluna "Alias no arquivo de cabeçalho" indica o nome que é usado na CLI ISO e a CLI do grupo aberto. O valor numérico real desses nomes de manifesto é a mesma no ODBC e as CLIs padrão. Esses aliases habilitar um aplicativo compatível com os padrões ou o driver compilar com o ODBC 3 *. x* arquivos de cabeçalho.  
+ Para alinhar com a CLI do ISO e abrir CLI de grupo, os arquivos de cabeçalho contêm aliases para os tipos de informações usados em chamadas para **SQLGetInfo**. Na tabela a seguir, a coluna "Nome do ODBC" indica o nome ODBC para o tipo de informações em [referência da API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md). A coluna "Alias no arquivo de cabeçalho" indica o nome que é usado na CLI ISO e a CLI do grupo aberto. O valor numérico real desses nomes de manifesto é a mesma no ODBC e as CLIs padrão. Esses aliases habilitar um aplicativo compatível com os padrões ou o driver compilar com o ODBC *3.x* arquivos de cabeçalho.  
   
  Esses aliases incluem expansões de abreviações em nomes de ODBC para que os nomes sejam mais compreensíveis. "MAX" é expandido para "Máximo", "LEN" para "Comprimento", "MULT" para "Vários", "OJ" para "OUTER_JOIN" e "TXN" para "Transação".  
   

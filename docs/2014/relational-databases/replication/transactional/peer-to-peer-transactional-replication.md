@@ -16,12 +16,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63274374"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793921"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
   A replicação ponto a ponto fornece uma a solução, expandida e de alta disponibilidade, para manter cópias de dados em várias instâncias de servidor, também denominadas *nós*. Criada na base da replicação transacional, a replicação ponto a ponto se propaga de forma transacional, de acordo com as alterações em tempo real. Ativa aplicativos que requerem operações expandidas de leitura para distribuir as leituras de clientes em vários nós. Como os dados são mantidos em todos os nós em tempo quase real, a replicação ponto a ponto fornece redundância de dados, o que amplia a disponibilidade de dados.  
@@ -137,19 +137,19 @@ ms.locfileid: "63274374"
   
 -   O parâmetro Distribution Agent **-SubscriptionStreams** e o parâmetro Log Reader Agent **-MaxCmdsInTran**.  
   
--   As propriedades de artigo **@destination_owner** e **@destination_table** .  
+-   As propriedades do artigo  **\@destination_owner** e  **\@destination_table**.  
 
 -   A replicação transacional ponto a ponto não dá suporte à criação de uma assinatura transacional unidirecional em uma publicação ponto a ponto
   
  As propriedades a seguir têm considerações especiais:  
   
--   A propriedade de publicação **@allow_initialize_from_backup** requer um valor de `true`.  
+-   A propriedade de publicação  **\@allow_initialize_from_backup** requer um valor de `true`.  
   
--   A propriedade de artigo **@replicate_ddl** requer um valor de `true`; **@identityrangemanagementoption** requer um valor de `manual`; e **@status** requer que a opção **24** está definido.  
+-   A propriedade de artigo  **\@replicate_ddl** requer um valor de `true`;  **\@identityrangemanagementoption** requer um valor de `manual`; e  **\@status** requer que a opção **24** é definido.  
   
--   O valor para propriedades do artigo **@ins_cmd** , **@del_cmd** , e **@upd_cmd** não pode ser definido como `SQL`.  
+-   O valor para propriedades do artigo  **\@ins_cmd**,  **\@del_cmd**, e  **\@upd_cmd** não pode ser definido como `SQL`.  
   
--   A propriedade de assinatura **@sync_type** requer um valor de `none` ou `automatic`.  
+-   A propriedade de assinatura  **\@sync_type** requer um valor de `none` ou `automatic`.  
   
 ### <a name="maintenance-considerations"></a>Considerações sobre manutenção  
  As ações a seguir requerem que o sistema seja confirmado. Isso significa parar as atividades em tabelas publicadas em todos os nós e assegurar que todos os nós tenham recebido todas as alterações de todos os outros nós.  

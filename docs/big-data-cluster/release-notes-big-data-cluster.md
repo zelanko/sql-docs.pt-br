@@ -2,20 +2,20 @@
 title: Notas de versão
 titleSuffix: SQL Server big data clusters
 description: Este artigo descreve as últimas atualizações e problemas conhecidos para clusters de big data de 2019 do SQL Server (versão prévia).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 389a521d256becb431b23ec073cadcde7c116952
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2937734ad4543d9dc59e777ceaddfc597da148d2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681549"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794089"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notas de versão para clusters de grandes dados no SQL Server
 
@@ -29,7 +29,7 @@ Este artigo lista as atualizações e saiba que esses problemas para as versões
 
 As seções a seguir descrevem os novos recursos e problemas conhecidos para clusters de grandes dados no SQL Server de 2019 CTP 3.1.
 
-### <a name="whats-new"></a>What's New
+### <a name="whats-new"></a>O Que Há de Novo
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---|
@@ -114,11 +114,16 @@ As seções a seguir descrevem os problemas conhecidos e as limitações desta v
 
 - Logs AKS podem conter a senha SA para implantações de cluster de big data.
 
+#### <a name="kibana-logs-dashboards"></a>Painéis de logs do Kibana
+
+- Entre Aris CTP 3.0 e 3.1, a versão do Kibana foi atualizada do 6.3.1 para 7.0.1.  Isso fez o navegador Edge incompatível com o Kibana. Os usuários verão uma página em branco ao carregar a versão atual dos painéis do Kibana no Edge. Ver [aqui]( https://www.elastic.co/support/matrix#matrix_browse) para navegadores com suporte para Kibana.rs 
+
+
 ## <a id="ctp30"></a> CTP 3.0 (maio)
 
 As seções a seguir descrevem os novos recursos e problemas conhecidos para clusters de grandes dados no SQL Server de 2019 CTP 3.0.
 
-### <a name="whats-new"></a>What's New
+### <a name="whats-new"></a>O Que Há de Novo
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---|
@@ -217,7 +222,7 @@ As seções a seguir descrevem os problemas conhecidos e as limitações desta v
 
 As seções a seguir descrevem os novos recursos e problemas conhecidos para clusters de grandes dados no SQL Server de 2019 CTP 2.5.
 
-### <a name="whats-new"></a>What's New
+### <a name="whats-new"></a>O Que Há de Novo
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---|
@@ -305,7 +310,7 @@ As seções a seguir descrevem os problemas conhecidos e as limitações desta v
 
 As seções a seguir descrevem os novos recursos e problemas conhecidos para clusters de grandes dados no SQL Server de 2019 CTP 2.4.
 
-### <a name="whats-new"></a>What's New
+### <a name="whats-new"></a>O Que Há de Novo
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---|
@@ -436,7 +441,7 @@ Um novo cliente de Python Kubernetes (versão 9.0.0) alterado os namespaces de e
 
 As seções a seguir descrevem os novos recursos e problemas conhecidos para clusters de grandes dados no SQL Server de 2019 CTP 2.3.
 
-### <a name="whats-new"></a>What's New
+### <a name="whats-new"></a>O Que Há de Novo
 
 | Novo recurso ou atualização | Detalhes |
 | :---------- | :------ |

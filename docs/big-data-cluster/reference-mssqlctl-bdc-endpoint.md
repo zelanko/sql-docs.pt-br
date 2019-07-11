@@ -2,19 +2,20 @@
 title: referência de ponto de extremidade do bdc mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Artigo de referência para comandos de ponto de extremidade do bdc mssqlctl.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bdca9bb137fdaccbfa5e24deca1b22492678c1c9
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 74065a075e4a2a80e3ab5455b7ac99e5a055f66a
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394318"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727460"
 ---
 # <a name="mssqlctl-bdc-endpoint"></a>o ponto de extremidade do mssqlctl bdc
 
@@ -22,7 +23,7 @@ ms.locfileid: "67394318"
 
 O artigo a seguir fornece referência para o **ponto de extremidade do bdc** comandos na **mssqlctl** ferramenta. Para obter mais informações sobre outros **mssqlctl** comandos, consulte [mssqlctl referência](reference-mssqlctl.md).
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 [lista de ponto de extremidade do bdc mssqlctl](#mssqlctl-bdc-endpoint-list) | Lista os pontos de extremidade para o Cluster grande de dados.

@@ -12,12 +12,12 @@ ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec0a5700df76134eab8a4fe2278820691dad509e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62869684"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727734"
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
     
@@ -30,7 +30,7 @@ ms.locfileid: "62869684"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DUP_KEY|  
-|Texto da mensagem|A instrução CREATE UNIQUE INDEX foi encerrada porque foi encontrada uma chave duplicada para o nome de objeto '%.*ls' e para o nome de índice '%.\*ls'.  O valor da chave duplicada é %ls.|  
+|Texto da mensagem|A instrução CREATE UNIQUE INDEX foi encerrada porque foi encontrada uma chave duplicada para o nome de objeto '%.\*ls' e para o nome de índice '%.\*ls'.  O valor da chave duplicada é %ls.|  
   
 ## <a name="explanation"></a>Explicação  
  Esse erro ocorre quando você tenta criar um índice exclusivo e mais de uma linha da tabela contém o valor duplicado especificado. Um índice exclusivo é criado quando você cria um índice e especifica a palavra-chave UNIQUE ou quando cria uma restrição UNIQUE. A tabela não pode conter linhas que tenham valores duplicados nas colunas definidas no índice ou na restrição.  
@@ -50,7 +50,7 @@ ms.locfileid: "62869684"
   
  A mensagem de erro 1505 retorna a primeira linha que viola a restrição de exclusividade. Pode haver outras linhas duplicadas na tabela. Para encontrar todas as linhas duplicadas, consulte a tabela especificada e use as cláusulas GROUP BY e HAVING para reportar essas linhas. Por exemplo, a consulta a seguir retorna as linhas da tabela **Employee** que têm nomes e sobrenomes duplicados.  
   
- SELECT LastName, FirstName, count(*) FROM dbo.Employee GROUP BY LastName, FirstName HAVING count(\*) > 1;  
+ Contagem de LastName, FirstName, selecione (\*) de dbo. Funcionário grupo por LastName, FirstName ter contagem (\*) > 1;  
   
 ## <a name="user-action"></a>Ação do usuário  
  Considere as soluções descritas a seguir.  

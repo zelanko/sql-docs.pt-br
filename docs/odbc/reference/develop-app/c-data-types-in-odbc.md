@@ -15,19 +15,19 @@ ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5472595383c7e4fcf448374c1fd85587246328f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3817b33aa294d6081b9fa2ee240e67ac38dd2a25
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199216"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793977"
 ---
 # <a name="c-data-types-in-odbc"></a>Tipos de dados do C em ODBC
 ODBC define os tipos de dados de C que são usados por variáveis de aplicativo e seus identificadores de tipo correspondente. Eles são usados pelos buffers associados a colunas do conjunto de resultados e parâmetros de instrução. Por exemplo, suponha que um aplicativo quiser recuperar dados de uma coluna do conjunto de resultados em formato de caractere. Ele declara uma variável com o SQLCHAR * tipo de dados e é associado a essa variável para a coluna do conjunto de resultados com um identificador de tipo de SQL_C_CHAR. Para obter uma lista completa de tipos de dados C e identificadores de tipo, consulte [apêndice d: Tipos de dados](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
  O ODBC também define um mapeamento de padrão de cada tipo de dados SQL para um tipo de dados C. Por exemplo, um inteiro de 2 bytes na fonte de dados é mapeado para um inteiro de 2 bytes no aplicativo. Para usar o mapeamento padrão, um aplicativo especifica o identificador de tipo SQL_C_DEFAULT. No entanto, o uso desse identificador é recomendado por motivos de interoperabilidade.  
   
- Todos os tipos de dados de inteiro C definidos em 1 de ODBC *. x* foram assinadas. Tipos de dados sem sinal do C e seus identificadores de tipo correspondente foram adicionadas em ODBC 2.0. Por isso, precisam ter cuidado ao lidar com 1 aplicativos e drivers *. x* versões.  
+ Todos os tipos de dados de inteiro C definidos no ODBC *1.x* foram assinadas. Tipos de dados sem sinal do C e seus identificadores de tipo correspondente foram adicionadas em ODBC 2.0. Por isso, precisam ter cuidado ao lidar com aplicativos e drivers *1.x* versões.  
   
 ## <a name="c-data-type-extensibility"></a>Extensibilidade do tipo de dados C  
  No ODBC 3.8, você pode especificar os tipos de dados C específicos do driver. Isso permite que você associe um tipo SQL como um tipo de C específicos do driver em aplicativos ODBC quando você chama [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md), [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md), ou [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md). Isso pode ser útil para dar suporte a novos tipos de servidor, porque os tipos de dados C existentes podem não representar corretamente os novos tipos de dados do servidor. Usar tipos do C específicos do driver pode aumentar o número de conversões que podem ser executadas por drivers.  

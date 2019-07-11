@@ -13,12 +13,12 @@ ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9e9e1018754977ee73ecdc21db30b3d8c2aae8b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cd98b39421e95254fcb052db67cbc9f9205b668
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199687"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793530"
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (Biblioteca de cursores)
 > [!IMPORTANT]  
@@ -30,8 +30,8 @@ ms.locfileid: "63199687"
   
  Um aplicativo pode chamar **SQLBindCol** associar novamente o resultado, definir colunas depois que ele é chamado **SQLExtendedFetch**, **SQLFetch**, ou **SQLFetchScroll**, desde que o tipo de dados C, tamanho da coluna e dígitos decimais da coluna acoplada permanecem os mesmos. O aplicativo não precisa fechar o cursor para reassociar colunas para endereços diferentes.  
   
- A biblioteca de cursores dá suporte à configuração do atributo de instrução SQL_ATTR_ROW_BIND_OFFSET_PTR para usar os deslocamentos de associação. (**SQLBindCol** não precisa ser chamado para essa nova associação ocorra.) Se a biblioteca de cursores é usada com um ODBC 3 *. x* driver, o deslocamento de associação não é usado quando **SQLFetch** é chamado. O deslocamento de ligação é usado se **SQLFetch** é chamado quando a biblioteca de cursores é usada com um ODBC 2. *x* driver porque **SQLFetch** , em seguida, é mapeado para **SQLExtendedFetch**.  
+ A biblioteca de cursores dá suporte à configuração do atributo de instrução SQL_ATTR_ROW_BIND_OFFSET_PTR para usar os deslocamentos de associação. (**SQLBindCol** não precisa ser chamado para essa nova associação ocorra.) Se a biblioteca de cursores é usada com ODBC *3.x* driver, o deslocamento de associação não é usado quando **SQLFetch** é chamado. O deslocamento de ligação é usado se **SQLFetch** é chamado quando a biblioteca de cursores é usada com ODBC *2.x* driver porque **SQLFetch** , em seguida, é mapeado para  **SQLExtendedFetch**.  
   
  A biblioteca de cursores dá suporte a chamar **SQLBindCol** para associar a coluna de indicador.  
   
- Ao trabalhar com um ODBC 2. *x* driver, a biblioteca de cursores retornará SQLSTATE HY090 (comprimento inválido de buffer ou cadeia de caracteres) quando **SQLBindCol** é chamado para definir o comprimento do buffer para uma coluna de indicador a um valor não é igual a 4. Ao trabalhar com um ODBC 3 *. x* driver, a biblioteca de cursores permite que o buffer para ser de qualquer tamanho.
+ Ao trabalhar com ODBC *2.x* driver, a biblioteca de cursores retornará SQLSTATE HY090 (comprimento inválido de buffer ou cadeia de caracteres) quando **SQLBindCol** é chamado para definir o comprimento do buffer para uma coluna de indicador a um valor não igual a 4. Ao trabalhar com ODBC *3.x* driver, a biblioteca de cursores permite que o buffer para ser de qualquer tamanho.

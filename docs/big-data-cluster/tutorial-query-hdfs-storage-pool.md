@@ -2,20 +2,20 @@
 title: Consultar dados do HDFS no pool de armazenamento
 titleSuffix: SQL Server big data clusters
 description: Este tutorial demonstra como consultar dados do HDFS em um cluster de big data do SQL Server 2019 (visualização). Criar uma tabela externa nos dados no pool de armazenamento e, em seguida, executar uma consulta.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 83a039fcbc335ecbc6057b1c8d7d1a953ba2c364
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: bcb2b036610b1ef62575d9a03043158e1b8af653
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388648"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728337"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: Consulta HDFS em um cluster de big data do SQL Server
 

@@ -16,12 +16,12 @@ ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ba5d3ec6958cf3dbc3cca0497f08feaac094b837
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb9e2ae87a82bf272e84a8d940606879aa3c1e9d
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63265115"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792797"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>Acessando assemblies personalizados por meio de expressões
   Depois de criar um assembly personalizado, disponibilize-o para o Designer de Relatórios ou para o servidor de relatório, de ter adicionado a política de segurança apropriada, e de ter adicionado uma referência ao seu assembly personalizado à sua definição de relatório, você poderá acessar os membros das classes do seu assembly usando expressões de relatório. Para consultar o código personalizado em uma expressão, você deve chamar o membro de uma classe dentro do assembly. A maneira de fazer isso depende do método ser estático ou baseado em instância.  
@@ -43,7 +43,7 @@ ms.locfileid: "63265115"
 ## <a name="calling-instance-members-from-a-report-definition-file"></a>Chamando membros de instância de um arquivo de definição de relatório  
  Se o seu assembly personalizado contém membros de instância que você precisa acessar em uma definição de relatório, adicione um nome de instância para a sua classe ao relatório. Você pode adicionar um nome de instância a uma classe usando a guia **Código** da caixa de diálogo **Propriedades do Relatório**. Para obter mais informações sobre adição de instâncias de classes a um relatório, consulte [Referências a código personalizado e assemblies em expressões no Designer de Relatórios &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
- Para chamar um membro estático, você terá de referenciá-lo como uma expressão com a forma =Code *.InstanceName.Method*.  
+ Para chamar um membro estático, você precisa referenciá-lo como uma expressão que usa a forma = Code *. Method*.  
   
 #### <a name="to-call-instance-members"></a>Para chamar membros de instância  
   

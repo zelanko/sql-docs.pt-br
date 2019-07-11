@@ -2,25 +2,26 @@
 title: Implantar offline
 titleSuffix: SQL Server big data clusters
 description: Saiba como executar uma implantação offline de um cluster de big data do SQL Server.
-author: rothja
-ms.author: jroth
+author: mihaelablendea
+ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0f3bfcfba0cfb972c7d02042bc98aa461eb110bb
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 1300c375903eb8692b8da6dce4e74a41e91d80c0
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388810"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728927"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Executar uma implantação offline de um cluster de big data do SQL Server
 
 Este artigo descreve como executar uma implantação offline de um cluster de big data do SQL Server 2019 (visualização). Clusters de big data devem ter acesso a um repositório do Docker do qual a imagens de contêiner de pull. Uma instalação offline é-um em que as imagens necessárias são colocadas em um repositório privado do Docker. Esse repositório privado, em seguida, é usado como a origem da imagem para uma nova implantação.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - O Docker Engine 1.8 ou superior em qualquer distribuição do Linux ou do Docker para Mac/Windows com suporte. Para obter mais informações, veja [Install Docker](https://docs.docker.com/engine/installation/) (Instalar o Docker).
 

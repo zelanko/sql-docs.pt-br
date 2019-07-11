@@ -12,16 +12,16 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-author: CarlRabeler
-ms.author: carlrab
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a475ba50aa8d3ba140ea551306d8b9f17fe66d22
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 100da3bfaeee1c4b1e4dae00c96bcc08a763f3b3
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035897"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716612"
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  Identifica a fonte de dados externa em que a instrução é executada. See [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md). Fonte de dados externa pode ser do tipo "RDBMS" ou "SHARD_MAP_MANAGER".  
   
  [ \@stmt= ] *statement*  
- É uma cadeia de caracteres Unicode que contém um [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote. \@stmt deve ser uma constante Unicode ou uma variável Unicode. Mais expressões Unicode complexas, como concatenar duas cadeias de caracteres com o operador +, não são permitidas. Constantes de caracteres não são permitidas. Se uma constante Unicode for especificada, ele deve ser prefixado com um **N**. Por exemplo, a constante Unicode **n' sp_who'** for válido, mas a constante de caractere **'sp_who'** não é. O tamanho da cadeia de caracteres é limitado apenas pela memória disponível do servidor de banco de dados. Em servidores de 64 bits, o tamanho da cadeia de caracteres é limitado a 2 GB, o tamanho máximo de **nvarchar (max)**.  
+ É uma cadeia de caracteres Unicode que contém um [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote. \@stmt deve ser uma constante Unicode ou uma variável Unicode. Mais expressões Unicode complexas, como concatenar duas cadeias de caracteres com o operador +, não são permitidas. Constantes de caracteres não são permitidas. Se uma constante Unicode for especificada, ele deve ser prefixado com um **N**. Por exemplo, a constante Unicode **n' sp_who'** for válido, mas a constante de caractere **'sp_who'** não é. O tamanho da cadeia de caracteres é limitado apenas pela memória disponível do servidor de banco de dados. Em servidores de 64 bits, o tamanho da cadeia de caracteres é limitado a 2 GB, o tamanho máximo de **nvarchar (max)** .  
   
 > [!NOTE]  
 >  \@stmt pode conter parâmetros com a mesma forma que um nome de variável, por exemplo: `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  

@@ -20,12 +20,12 @@ ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4277c6606392c91ffb3de40ace658cd68461f01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc0c1d981180c61452f97a01bc0aba6fdc2d81e3
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536265"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793728"
 ---
 # <a name="sqlstatistics-function"></a>Função SQLStatistics
 **Conformidade com**  
@@ -86,7 +86,7 @@ SQLRETURN SQLStatistics(
   
  SQL_ENSURE solicita que o driver recupere as estatísticas incondicionalmente. (Drivers de acordo apenas com o padrão Open Group e não dão suporte a extensões ODBC não será capazes de dar suporte a SQL_ENSURE.)  
   
- SQL_QUICK solicita que o driver recuperar a CARDINALIDADE e as páginas somente se elas estiverem prontamente disponíveis no servidor. Nesse caso, o driver não assegura que os valores são atuais. (Aplicativos que são gravados para o padrão Open Group sempre obterão o comportamento SQL_QUICK do ODBC 3 *. x*-drivers compatíveis.)  
+ SQL_QUICK solicita que o driver recuperar a CARDINALIDADE e as páginas somente se elas estiverem prontamente disponíveis no servidor. Nesse caso, o driver não assegura que os valores são atuais. (Aplicativos que são gravados para o padrão Open Group sempre obterão o comportamento SQL_QUICK de ODBC *3.x*-drivers compatíveis.)  
   
 ## <a name="returns"></a>Retorna  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
@@ -126,9 +126,9 @@ SQLRETURN SQLStatistics(
 > [!NOTE]  
 >  Para obter mais informações sobre o uso geral, os argumentos e os dados retornados de funções de catálogo ODBC, consulte [funções de catálogo](../../../odbc/reference/develop-app/catalog-functions.md).  
   
- As seguintes colunas foram renomeadas para ODBC 3 *. x*. As alterações de nome de coluna não afetam a compatibilidade com versões anteriores, porque aplicativos associar por número de coluna.  
+ As seguintes colunas foram renomeadas para ODBC *3.x*. As alterações de nome de coluna não afetam a compatibilidade com versões anteriores, porque aplicativos associar por número de coluna.  
   
-|Coluna de ODBC 2.0|3 de ODBC *. x* coluna|  
+|Coluna de ODBC 2.0|ODBC *3.x* coluna|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  
@@ -149,8 +149,8 @@ SQLRETURN SQLStatistics(
 |ORDINAL_POSITION (ODBC 1.0)|8|Smallint|Número de sequência de coluna no índice (começando com 1); NULL será retornado se o tipo é SQL_TABLE_STAT.|  
 |COLUMN_NAME (ODBC 1.0)|9|Varchar|Nome da coluna. Se a coluna se baseia em uma expressão, como o SALÁRIO + benefícios, a expressão é retornada; Se a expressão não pode ser determinada, uma cadeia de caracteres vazia será retornada. NULL será retornado se o tipo é SQL_TABLE_STAT.|  
 |ASC_OR_DESC (ODBC 1.0)|10|Char(1)|Sequência de classificação da coluna: "A" para em ordem crescente; "D" para decrescente; NULL será retornado se a sequência de classificação de coluna não é compatível com a fonte de dados ou se o tipo é SQL_TABLE_STAT.|  
-|CARDINALIDADE (ODBC 1.0)|11|Integer|Cardinalidade da tabela ou índice; número de linhas na tabela se o tipo é SQL_TABLE_STAT; número de valores exclusivos no índice se o tipo não é SQL_TABLE_STAT; NULL será retornado se o valor não está disponível da fonte de dados.|  
-|PÁGINAS DE (ODBC 1.0)|12|Integer|Número de páginas usadas para armazenar o índice ou tabela; número de páginas para a tabela se o tipo é SQL_TABLE_STAT; número de páginas para o índice se o tipo não é SQL_TABLE_STAT; NULL será retornado se o valor não está disponível da fonte de dados ou se não for aplicável à fonte de dados.|  
+|CARDINALIDADE (ODBC 1.0)|11|Inteiro|Cardinalidade da tabela ou índice; número de linhas na tabela se o tipo é SQL_TABLE_STAT; número de valores exclusivos no índice se o tipo não é SQL_TABLE_STAT; NULL será retornado se o valor não está disponível da fonte de dados.|  
+|PÁGINAS DE (ODBC 1.0)|12|Inteiro|Número de páginas usadas para armazenar o índice ou tabela; número de páginas para a tabela se o tipo é SQL_TABLE_STAT; número de páginas para o índice se o tipo não é SQL_TABLE_STAT; NULL será retornado se o valor não está disponível da fonte de dados ou se não for aplicável à fonte de dados.|  
 |FILTER_CONDITION (ODBC 2.0)|13|Varchar|Se o índice for um índice filtrado, essa é a condição de filtro, como o SALÁRIO > 30000; Se a condição de filtro não pode ser determinada, isso é uma cadeia de caracteres vazia.<br /><br /> NULO se o índice não é um índice filtrado, ele não pode ser determinado se o índice é um índice filtrado ou o tipo é SQL_TABLE_STAT.|  
   
  Se a linha no conjunto de resultados corresponde a uma tabela, o driver define o tipo para SQL_TABLE_STAT e define NON_UNIQUE, INDEX_QUALIFIER, INDEX_NAME, ORDINAL_POSITION, COLUMN_NAME e ASC_OR_DESC como NULL. Se a CARDINALIDADE ou as páginas não estão disponíveis da fonte de dados, o driver os define como NULL.  

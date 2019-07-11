@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addlogreader_agent
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
-author: stevestein
-ms.author: sstein
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7b3968f7c196c63ed66b98f19acd1dcf4d972336
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 7aa2fc93806bdbce244643d78930c7c9c113bf01
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494337"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716615"
 ---
 # <a name="spaddlogreaderagent-transact-sql"></a>sp_addlogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_login = ] 'job_login'` É o logon para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows da conta na qual o agente é executado. *job_login* está **nvarchar(257)**, com um valor padrão de NULL. Essa conta do Windows sempre é usada para conexões de agente com o Distribuidor.  
+`[ @job_login = ] 'job_login'` É o logon para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows da conta na qual o agente é executado. *job_login* está **nvarchar(257)** , com um valor padrão de NULL. Essa conta do Windows sempre é usada para conexões de agente com o Distribuidor.  
   
 > [!NOTE]
 >  Para não - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores, isso deve ser o mesmo logon especificado em [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  

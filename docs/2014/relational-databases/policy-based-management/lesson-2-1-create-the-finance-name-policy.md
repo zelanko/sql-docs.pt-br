@@ -10,12 +10,12 @@ ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ec01dd697e04b5d4b5d8d943a855a62adac48f60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4484f9ccb76ea31c95a5392570e18df2c4b0ff5
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090621"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792910"
 ---
 # <a name="create-the-finance-name-policy"></a>Criar a política Nome Financeiro
   Nessa tarefa, você criará um banco de dados chamado Finance e uma condição que exige que todas as tabelas comecem com as letras **fintbl**. Em seguida, você criará uma política e uma categoria de políticas para impor um padrão de nomenclatura para as tabelas no banco de dados Finanças.  
@@ -39,7 +39,7 @@ ms.locfileid: "66090621"
   
 3.  Na lista **Faceta** , selecione **Nome com Diversas Partes**.  
   
-4.  Na caixa de diálogo **Expressão** , na caixa **Campo** , selecione **@Name** ; na caixa **Operador** , selecione **Like**; e na caixa **Valor** , digite **'fintbl%'** para forçar todos os nomes de tabelas a começar com as letras **fintbl**.  
+4.  No **expressão** área, no **campo** caixa, selecione  **\@nome**; na **operador** caixa, selecione  **Como o**; e, em de **valor** , digite **'fintbl %'** para forçar todos os nomes de tabela para iniciar com as letras **fintbl**.  
   
 5.  Na página **Descrição** , digite **Os nomes da tabela de Finanças deve começar com fintbl**e, em seguida, clique em **OK** para criar a condição.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66090621"
   
 6.  Na caixa de diálogo **Criar Nova Condição** , na caixa **Nome** , digite **Banco de Dados de Finanças**.  
   
-7.  Na caixa **Expressão**, complete a expressão para incluir **@Name = 'Finance'** e clique em **OK** para fechar a página de condição.  
+7.  No **expressão** caixa, complete a expressão para incluir  **\@nome = 'Finance'** e, em seguida, clique em **Okey** para fechar a página de condição.  
   
     > [!NOTE]  
     >  Você poderia ter a guia fora da caixa **Valor** para habilitar o botão **OK** .  

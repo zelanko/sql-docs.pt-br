@@ -15,12 +15,12 @@ ms.assetid: 337d90ab-68eb-4940-a2f3-f7d5693ee766
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 702e1fe58080cc370ab9a858c985a7744df85050
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ccecc541143e971d82a225e24e1c8caf6a03c32c
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181336"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793188"
 ---
 # <a name="loading-by-ordinal"></a>Carregamento por ordinal
-No ODBC 2. *x*, carregamento por ordinal pôde ser executado para melhorar o desempenho do processo de conexão. ODBC 2. *x* driver exporta uma função fictícia com o ordinal 199; quando o Gerenciador de Driver detecta a ele, ele resolve os endereços das funções ODBC por ordinal, e não por nome. Ainda há suporte para essa funcionalidade para o ODBC 2. *x* drivers, mas não há suporte para ODBC 3 *. x* drivers.
+Em ODBC *2.x*, carregamento por ordinal pôde ser executado para melhorar o desempenho do processo de conexão. ODBC *2.x* driver exporta uma função fictícia com o ordinal 199; quando o Gerenciador de Driver detecta a ele, ele resolve os endereços das funções ODBC por ordinal, e não por nome. Ainda há suporte para essa funcionalidade para ODBC *2.x* drivers, mas não há suporte para ODBC *3.x* drivers.

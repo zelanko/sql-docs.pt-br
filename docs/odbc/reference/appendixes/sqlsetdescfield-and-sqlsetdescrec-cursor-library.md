@@ -14,12 +14,12 @@ ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b390df48e676290696ae8080c8f671fd0e37bad8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cb723e7325454e6ff60e05d28a6321fd4d167e2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298266"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792829"
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField e SQLSetDescRec (Biblioteca de cursores)
 > [!IMPORTANT]  
@@ -55,7 +55,7 @@ ms.locfileid: "63298266"
   
  A biblioteca de cursores executa chamadas para **SQLSetDescRec** para uma coluna de indicador.  
   
- Ao trabalhar com um ODBC 2. *x* driver, a biblioteca de cursores retornará SQLSTATE HY090 (comprimento inválido de buffer ou cadeia de caracteres) quando **SQLSetDescField** ou **SQLSetDescRec** é chamado para definir o SQL_DESC_OCTET_ Campo de comprimento para o registro de indicador de um descartar como um valor não é igual a 4. Ao trabalhar com um ODBC 3 *. x* driver, a biblioteca de cursores permite que o buffer para ser de qualquer tamanho.  
+ Ao trabalhar com ODBC *2.x* driver, a biblioteca de cursores retornará SQLSTATE HY090 (comprimento inválido de buffer ou cadeia de caracteres) quando **SQLSetDescField** ou **SQLSetDescRec** é chamado Para definir o campo SQL_DESC_OCTET_LENGTH para o registro de indicador de um descartar um valor não é igual a 4. Ao trabalhar com ODBC *3.x* driver, a biblioteca de cursores permite que o buffer para ser de qualquer tamanho.  
   
  Executa a biblioteca de cursores **SQLSetDescField** quando ele é chamado para retornar o valor do campo SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE ou SQL_DESC_ROW_STATUS_PTR. Esses campos podem ser retornados para qualquer linha, não apenas a linha do indicador.  
   

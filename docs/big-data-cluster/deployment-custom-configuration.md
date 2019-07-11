@@ -2,19 +2,20 @@
 title: Configurar implantações
 titleSuffix: SQL Server big data clusters
 description: Saiba como personalizar uma implantação de cluster de big data com arquivos de configuração.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba2587c2effdc3242e6032a0137bbf43ac153f1c
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 19654422bcc57f2ad00b9ab8170d163f848f188b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388799"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728884"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>Definir as configurações de implantação para clusters de big data
 
@@ -22,7 +23,7 @@ ms.locfileid: "67388799"
 
 Para personalizar seu arquivo de configuração de implantação de cluster, você pode usar qualquer editor de formato JSON, como o VSCode. Para essas edições para fins de automação de script, use o **seção de configuração do bdc mssqlctl** comando. Este artigo explica como configurar implantações de cluster de big data, modificando arquivos de configuração de implantação. Ele fornece exemplos de como alterar a configuração para cenários diferentes. Para obter mais informações sobre como os arquivos de configuração são usados em implantações, consulte o [diretrizes de implantação](deployment-guidance.md#configfile).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Instalar mssqlctl](deploy-install-mssqlctl.md).
 

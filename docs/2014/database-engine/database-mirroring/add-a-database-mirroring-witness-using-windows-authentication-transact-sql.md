@@ -14,12 +14,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0a03a530c83cdf492eb7c4c0fcc000a6343c9a97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62754918"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792608"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Adicionar uma testemunha de espelhamento de banco de dados usando a Autenticação do Windows (Transact-SQL)
   Para definir uma testemunha para um banco de dados, o proprietário do banco de dados nomeia uma instância do Mecanismo de Banco de Dados para a função de servidor testemunha. A instância do servidor testemunha pode ser executada no mesmo computador que a instância do servidor principal ou espelho, mas isso reduz a robustez de failover automático substancialmente.  
@@ -33,7 +33,7 @@ ms.locfileid: "62754918"
   
 ### <a name="to-establish-a-witness"></a>Para estabelecer uma testemunha  
   
-1.  Na instância do servidor testemunha, verifique se existe um ponto de extremidade para espelhamento de banco de dados. Independentemente do número de sessões de espelhamento com suporte, a instância do servidor só deve ter um ponto de extremidade do espelhamento de banco de dados. Se você pretende usar essa instância de servidor exclusivamente como testemunha nas sessões de espelhamento de banco de dados, atribua a função de testemunha ao ponto de extremidade (ROLE **=** WITNESS). Se você também pretender usar essa instância do servidor como testemunha em uma ou mais sessões de espelhamento de banco de dados, atribua a função do ponto de extremidade como ALL.  
+1.  Na instância do servidor testemunha, verifique se existe um ponto de extremidade para espelhamento de banco de dados. Independentemente do número de sessões de espelhamento com suporte, a instância do servidor só deve ter um ponto de extremidade do espelhamento de banco de dados. Se você pretende usar essa instância de servidor exclusivamente como testemunha nas sessões de espelhamento de banco de dados, atribua a função de testemunha ao ponto de extremidade (função **=** TESTEMUNHA). Se você também pretender usar essa instância do servidor como testemunha em uma ou mais sessões de espelhamento de banco de dados, atribua a função do ponto de extremidade como ALL.  
   
      Para executar uma instrução SET WITNESS, a sessão de espelhamento de banco de dados já deve ter começado (entre parceiros), e o STATE do ponto de extremidade da testemunha deve estar definido como STARTED.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62754918"
   
 3.  Conecte-se ao servidor principal e emita a seguinte instrução:  
   
-     ALTER DATABASE *<database_name>* SET WITNESS **=** _<server_network_address>_  
+     ALTER DATABASE *< database_name >* SET WITNESS **=** _< server_network_address >_  
   
      em que *<database_name>* é o nome do banco de dados a ser espelhado (esse nome é o mesmo em ambos os parceiros), e *<server_network_address>* é o endereço de rede de servidor da instância de servidor testemunha.  
   

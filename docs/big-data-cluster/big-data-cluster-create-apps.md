@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Implante um script Python ou R como um aplicativo no cluster de big data do SQL Server 2019 (visualização).
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 2ace3ee9cd17240890a9da901297c731ced4016c
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2309fd7a318222ef337815ddf511359f5b305e26
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681588"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729282"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Como implantar um aplicativo no cluster de big data do SQL Server (versão prévia)
 
@@ -38,12 +37,12 @@ Há suporte para os seguintes tipos de aplicativos:
 - Fornecimento de MLeap
 - SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Cluster de big data do SQL Server de 2019](deployment-guidance.md)
 - [Utilitário de linha de comando mssqlctl](deploy-install-mssqlctl.md)
 
-## <a name="capabilities"></a>Recursos
+## <a name="capabilities"></a>Capacidades
 
 No SQL Server de 2019 (visualização) você pode criar, excluir, descrevem, inicializar, lista executar e atualizar seu aplicativo. A tabela a seguir descreve os comandos de implantação do aplicativo que você pode usar com **mssqlctl**.
 
@@ -220,7 +219,7 @@ O comando de exemplo a seguir demonstra o comando run:
 mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
 ```
 
-Se a execução foi bem-sucedida, você deverá ver sua saída como especificou quando criou o aplicativo. A seguir, é mostrado um exemplo.
+Se a execução foi bem-sucedida, você deverá ver sua saída como especificou quando criou o aplicativo. Confira o exemplo abaixo.
 
 ```json
 {

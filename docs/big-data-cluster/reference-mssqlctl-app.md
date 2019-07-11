@@ -2,19 +2,20 @@
 title: referência de aplicativo mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Artigo de referência de comandos do aplicativo mssqlctl.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f1dc3830a2bdf9d8a3d4e2d65fcbb556af224d1c
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 1ac884a8d77aa241402cedce3eaedeef9f60512a
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388236"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727540"
 ---
 # <a name="mssqlctl-app"></a>Aplicativo do mssqlctl
 
@@ -22,7 +23,7 @@ ms.locfileid: "67388236"
 
 O artigo a seguir fornece referência para o **app** comandos na **mssqlctl** ferramenta. Para obter mais informações sobre outros **mssqlctl** comandos, consulte [mssqlctl referência](reference-mssqlctl.md).
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 [modelo de aplicativo mssqlctl](reference-mssqlctl-app-template.md) | modelos.

@@ -10,12 +10,12 @@ ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2fb48665fafc9c79856279c7460918b85334bfb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c96443d7f46dee539fd7d39a91a168b3ed5a0d8c
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064301"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792930"
 ---
 # <a name="create-the-off-by-default-policy"></a>Criar a política desativada por padrão
   Esta tarefa cria uma condição chamada Correio Desativado que é baseada na faceta Configuração da Área da Superfície. Então, cria uma política chamada Desativada por Padrão.  
@@ -28,7 +28,7 @@ ms.locfileid: "66064301"
   
 3.  Na caixa **Faceta** , confirme se a faceta **Configuração da Área da Superfície** está selecionada.  
   
-4.  Na caixa de diálogo **Expressão** , na caixa **Campo** , selecione **@DatabaseMailEnabled** , na caixa **Operador** , selecione **=** e, em **Valor** , selecione **False**.  
+4.  No **expressão** área, no **campo** caixa, selecione  **\@DatabaseMailEnabled**, no **operador** marque **=** e, nas **valor** selecionar **False**.  
   
 5.  Na página **Descrição** , digite uma descrição da condição e clique em **OK** para criar a condição.  
   

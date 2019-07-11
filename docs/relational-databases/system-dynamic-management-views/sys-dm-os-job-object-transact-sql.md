@@ -16,16 +16,16 @@ helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 074981f19f0eb74a7e7c7d4e82466957f0ff98b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fdc778a34a513c2aca12da0dd0e1245e50dc5d6a
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047030"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716281"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object (banco de dados SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ Retorna uma única linha descrevendo a configuração do objeto de trabalho que 
 
 Um objeto de trabalho é uma construção Windows que implementa a governança de recursos de CPU, memória e e/s no nível do sistema operacional. Para obter mais informações sobre objetos de trabalho, consulte [objetos de trabalho](/windows/desktop/ProcThread/job-objects). 
   
-|Colunas|Tipo de Dados|Descrição|  
+|Colunas|Tipo de dados|Descrição|  
 |-------------|---------------|-----------------|  
 |cpu_rate|**int**|Especifica a parte de ciclos de processador que os threads do SQL Server podem usar durante cada intervalo de agendamento. O valor é relatado como um percentual de ciclos disponíveis dentro de um intervalo de agendamento do ciclo de 10000. Por exemplo, a valor 100 significa que os threads podem usar núcleos de CPU é sua capacidade total.|
 |cpu_affinity_mask|**bigint**|Uma máscara de bits que descreve quais processadores lógicos o processo do SQL Server pode usar dentro do grupo de processador. Por exemplo, cpu_affinity_mask 255 (1111 1111 em binário) significa que os primeiros oito processadores lógicos podem ser usados.|
@@ -52,7 +52,7 @@ Um objeto de trabalho é uma construção Windows que implementa a governança d
 |peak_job_memory_used_mb|**bigint**|Quantidade máxima de memória em MB, que todos os processos no objeto de trabalho tenham usado cumulativamente desde o objeto de trabalho foi criada.|
   
 ## <a name="permissions"></a>Permissões  
-Na instância de gerenciada de banco de dados de SQL, requer `VIEW SERVER STATE` permissão. No banco de dados SQL requer o `VIEW DATABASE STATE` permissão no banco de dados.  
+Na instância de gerenciada de banco de dados de SQL, requer `VIEW SERVER STATE` permissão. No Banco de Dados SQL, requer a permissão `VIEW DATABASE STATE` no banco de dados.  
  
 ## <a name="see-also"></a>Consulte também  
 

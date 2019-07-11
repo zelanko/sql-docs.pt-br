@@ -14,15 +14,15 @@ ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5520554b509b0c25d62e4a191e16ad3524a02652
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5153980cae143feeb1917c89da640723716c8ef1
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297457"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793010"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>Mapeamento SQLSetScrollOptions
-Quando um aplicativo chama **SQLSetScrollOptions** por meio de um ODBC 3 *. x* driver e o driver não oferece suporte **SQLSetScrollOptions**, a chamada para  
+Quando um aplicativo chama **SQLSetScrollOptions** por meio de ODBC *3.x* driver e o driver não oferece suporte **SQLSetScrollOptions**, a chamada para  
   
 ```  
 SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)  
@@ -100,4 +100,4 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
      com o  *\*ValuePtr* definido como o *RowsetSize* argumento na **SQLSetScrollOptions**.  
   
     > [!NOTE]  
-    >  Quando o Gerenciador de Driver mapeia **SQLSetScrollOptions** para um aplicativo trabalhar com um ODBC 3 *. x* que não oferece suporte a driver **SQLSetScrollOptions**, o Driver Manager define a opção de instrução SQL_ROWSET_SIZE, não o atributo SQL_ATTR_ROW_ARRAY_SIZE instrução para o *RowsetSize* argumento **SQLSetScrollOption**. Como resultado, **SQLSetScrollOptions** não pode ser usado por um aplicativo ao buscar várias linhas por uma chamada para **SQLFetch** ou **SQLFetchScroll**. Ele pode ser usado somente quando ao buscar várias linhas por uma chamada para **SQLExtendedFetch**.
+    >  Quando o Gerenciador de Driver mapeia **SQLSetScrollOptions** para um aplicativo trabalhar com ODBC *3.x* driver não oferece suporte a **SQLSetScrollOptions**, o Driver Manager define a opção de instrução SQL_ROWSET_SIZE, não o atributo SQL_ATTR_ROW_ARRAY_SIZE instrução para o *RowsetSize* argumento **SQLSetScrollOption**. Como resultado, **SQLSetScrollOptions** não pode ser usado por um aplicativo ao buscar várias linhas por uma chamada para **SQLFetch** ou **SQLFetchScroll**. Ele pode ser usado somente quando ao buscar várias linhas por uma chamada para **SQLExtendedFetch**.

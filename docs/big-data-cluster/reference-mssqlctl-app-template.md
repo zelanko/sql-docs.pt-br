@@ -2,19 +2,20 @@
 title: referência de modelo de aplicativo mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Artigo de referência para comandos de modelo de aplicativo mssqlctl.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 20d8b332643c9ef749aae5be0ab9e778a593d6ff
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: c0b9ab4dc278e04b2b112608699b9c60682de769
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388189"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728713"
 ---
 # <a name="mssqlctl-app-template"></a>Modelo de aplicativo do mssqlctl
 
@@ -22,7 +23,7 @@ ms.locfileid: "67388189"
 
 O artigo a seguir fornece referência para o **modelo de aplicativo** comandos na **mssqlctl** ferramenta. Para obter mais informações sobre outros **mssqlctl** comandos, consulte [mssqlctl referência](reference-mssqlctl.md).
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 [lista de modelos de aplicativo mssqlctl](#mssqlctl-app-template-list) | Modelos de Fetch com suporte.

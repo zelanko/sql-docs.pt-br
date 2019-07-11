@@ -20,12 +20,12 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c49e7fd827cfd48df07e5e5a01367977504f4511
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f3fe596428450795426537f5c2f5913a6c83a46
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536256"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793738"
 ---
 # <a name="sqlspecialcolumns-function"></a>Função SQLSpecialColumns
 **Conformidade com**  
@@ -151,9 +151,9 @@ SQLRETURN SQLSpecialColumns(
   
  **SQLSpecialColumns** retorna os resultados como um conjunto de resultados padrão, ordenado por SCOPE.  
   
- As seguintes colunas foram renomeadas para ODBC 3 *. x*. As alterações de nome de coluna não afetam a compatibilidade com versões anteriores, porque aplicativos associar por número de coluna.  
+ As seguintes colunas foram renomeadas para ODBC *3.x*. As alterações de nome de coluna não afetam a compatibilidade com versões anteriores, porque aplicativos associar por número de coluna.  
   
-|Coluna de ODBC 2.0|3 de ODBC *. x* coluna|  
+|Coluna de ODBC 2.0|ODBC *3.x* coluna|  
 |---------------------|-----------------------|  
 |PRECISION|COLUMN_SIZE|  
 |LENGTH|BUFFER_LENGTH|  
@@ -169,8 +169,8 @@ SQLRETURN SQLSpecialColumns(
 |COLUMN_NAME (ODBC 1.0)|2|Varchar não nulo|Nome da coluna. O driver retornará uma cadeia de caracteres vazia para uma coluna que não tem um nome.|  
 |DATA_TYPE (ODBC 1.0)|3|Smallint não NULL|Tipo de dados SQL. Isso pode ser um tipo de dados SQL ODBC ou um tipo de dados SQL específica do driver. Para obter uma lista dos tipos de dados SQL ODBC válidos, consulte [tipos de dados SQL](../../../odbc/reference/appendixes/sql-data-types.md). Para obter informações sobre tipos de dados SQL específico do driver, consulte a documentação do driver.|  
 |TYPE_NAME (ODBC 1.0)|4|Varchar não nulo|Nome do tipo de dados dependente da fonte de dados; Por exemplo, "CHAR", "VARCHAR", "Dinheiro", "VARBINARY longo" ou "CHAR () para dados BIT".|  
-|COLUMN_SIZE (ODBC 1.0)|5|Integer|O tamanho da coluna na fonte de dados. Para obter mais informações sobre o tamanho da coluna, consulte [tamanho da coluna, dígitos decimais, o comprimento do octeto de transferência e o tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
-|BUFFER_LENGTH (ODBC 1.0)|6|Integer|O comprimento em bytes dos dados transferidos em uma **SQLGetData** ou **SQLFetch** operação se SQL_C_DEFAULT for especificado. Para dados numéricos, esse tamanho pode ser diferente do que o tamanho dos dados armazenados na fonte de dados. Esse valor é o mesmo que a coluna COLUMN_SIZE para caracteres ou dados binários. Para obter mais informações, consulte [tamanho da coluna, dígitos decimais, o comprimento do octeto de transferência e o tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
+|COLUMN_SIZE (ODBC 1.0)|5|Inteiro|O tamanho da coluna na fonte de dados. Para obter mais informações sobre o tamanho da coluna, consulte [tamanho da coluna, dígitos decimais, o comprimento do octeto de transferência e o tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
+|BUFFER_LENGTH (ODBC 1.0)|6|Inteiro|O comprimento em bytes dos dados transferidos em uma **SQLGetData** ou **SQLFetch** operação se SQL_C_DEFAULT for especificado. Para dados numéricos, esse tamanho pode ser diferente do que o tamanho dos dados armazenados na fonte de dados. Esse valor é o mesmo que a coluna COLUMN_SIZE para caracteres ou dados binários. Para obter mais informações, consulte [tamanho da coluna, dígitos decimais, o comprimento do octeto de transferência e o tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|Os dígitos decimais da coluna na fonte de dados. NULL é retornado para os tipos de dados em que os dígitos decimais não são aplicáveis. Para obter mais informações sobre os dígitos decimais, consulte [tamanho da coluna, dígitos decimais, o comprimento do octeto de transferência e o tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|Indica se a coluna é uma coluna de pseudo, como Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **Note:**  Para interoperabilidade máxima, pseudo colunas devem não ser colocado entre aspas com o caractere de aspas de identificador retornado por **SQLGetInfo**.|  
   

@@ -2,20 +2,20 @@
 title: Instalar ferramentas de Big Data
 titleSuffix: SQL Server big data clusters
 description: Saiba como instalar as ferramentas usadas com clusters de big data de 2019 do SQL Server (versão prévia).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: ffb63e3e7fb2891aeed1b9b26fbc43dddf69c78e
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 1862c6c16aaecca7888f00cb6ca5deeb7138ea03
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412963"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728973"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Instalar ferramentas do SQL Server 2019 big data
 
@@ -68,7 +68,7 @@ As ferramentas restantes são necessários apenas em determinados cenários. **C
 
 Depois de configurar as ferramentas, implante um cluster de big data do SQL Server 2019 para Kubernetes na nuvem ou local. Para obter mais informações, consulte os seguintes artigos de implantação:
 
-- [Guia de início rápido: Implantar um cluster de big data do SQL Server no serviço de Kubernetes do Azure (AKS)](quickstart-big-data-cluster-deploy.md)
+- [Início Rápido: Implantar um cluster de big data do SQL Server no serviço de Kubernetes do Azure (AKS)](quickstart-big-data-cluster-deploy.md)
 - [Como implantar clusters de grandes dados do SQL Server no Kubernetes](deployment-guidance.md)
 
 Para obter mais informações sobre clusters de big data, consulte [quais são os clusters do SQL Server 2019 big data?](big-data-cluster-overview.md).

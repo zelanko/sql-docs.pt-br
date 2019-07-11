@@ -19,22 +19,22 @@ ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b1d0fc510c7c45dab8fbc79cc8e74001ff1855b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e948b1e2fa5bb0877597e3fc3429f306afe991f2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026573"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793757"
 ---
 # <a name="compatibility-matrix"></a>Matriz de compatibilidade
 A tabela a seguir descreve a compatibilidade dos tipos de aplicativos e drivers definidos anteriormente nesta seção.  
   
-|Tipo de aplicativo<br /><br /> e versão|ODBC de 32 bits<br /><br /> 2.*x* driver|ODBC 3.*x*<br /><br /> Driver|Driver ODBC 3.8|ISO e abra grupo compatível com o driver|  
+|Tipo de aplicativo<br /><br /> e versão|ODBC de 32 bits<br /><br /> *2. x* driver|ODBC *3.x*<br /><br /> Driver|Driver ODBC 3.8|ISO e abra grupo compatível com o driver|  
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
 |aplicativo de 16 bits, qualquer versão|Compatível|Compatível|Compatível|Compatível|  
-|2 puro. *x* aplicativo|Compatível|Compatível|Compatível|Não compatível com [3]|  
-|2 puro. *x* recompilado aplicativo|Compatível|Compatível com [1]|Compatível com [1]|Não compatível com [3]|  
-|2 puro. *x* aplicativo Unicode|Compatível|Compatível com [1]|Compatível com [1]|Não compatível com [3]|  
+|Puro *2.x* aplicativo|Compatível|Compatível|Compatível|Não compatível com [3]|  
+|Puro *2.x* recompilado aplicativo|Compatível|Compatível com [1]|Compatível com [1]|Não compatível com [3]|  
+|Puro *2.x* aplicativo Unicode|Compatível|Compatível com [1]|Compatível com [1]|Não compatível com [3]|  
 |Aplicativo puro Open Group e compatível com ISO|Não é compatível|Compatível com [2]|Compatível com [2]|Compatível com [2]|  
 |Aplicativo 3.0 puro|Não é compatível|Compatível|Compatível|Não compatível com [4]|  
 |Aplicativo de 3,5 puro|Não é compatível|Compatível|Compatível|Não compatível com [4]|  
@@ -45,9 +45,9 @@ A tabela a seguir descreve a compatibilidade dos tipos de aplicativos e drivers 
   
  [2], o aplicativo deve compilar o uso de cabeçalhos ODBC 3.5 (ou superior) e vincular com o Gerenciador de Driver ODBC. Ele também deve definir o sinalizador de cabeçalho ODBC_STD.  
   
- [3] essa configuração potencialmente pode não funcionar porque há recursos do ODBC 2. *x* que não estão com os padrões, como marcadores.  
+ [3] essa configuração potencialmente pode não funcionar porque há recursos do ODBC *2.x* que não estão com os padrões, como marcadores.  
   
- [4] esta configuração potencialmente pode não funcionar porque há recursos no ODBC 3 *. x* que não estão com os padrões, como marcadores.  
+ [4] esta configuração potencialmente pode não funcionar porque há recursos do ODBC *3.x* que não estão com os padrões, como marcadores.  
   
  [5] essa configuração pode potencialmente falhar porque há recursos que não estão no ODBC 2.x ou 3.x drivers, como específicos de driver no ODBC 3.8 [tipos de dados C em ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   

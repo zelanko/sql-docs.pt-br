@@ -2,20 +2,20 @@
 title: Gerenciar notebooks no estúdio de dados do Azure
 titleSuffix: SQL Server big data clusters
 description: Saiba como gerenciar notebooks no estúdio de dados do Azure. Isso inclui a abertura de blocos de anotações, salvando-os e alterar sua conexão de cluster de big data.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 9173c630514465914a31bb5b4c2999145884c78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf0041ee2beecb0864f196c4d13c7be309b40d17
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66790052"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727563"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Como gerenciar notebooks no estúdio de dados do Azure
 
@@ -23,7 +23,7 @@ ms.locfileid: "66790052"
 
 Este artigo mostra como abrir e salvar arquivos de notebook no estúdio de dados do Azure com a visualização do SQL Server de 2019. Ele também demonstra como alterar sua conexão para seu cluster de big data do SQL Server.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Este artigo pressupõe que você já tenha um bloco de anotações que você deseja usar no estúdio de dados do Azure. Se você quiser criar um bloco de anotações, consulte [como usar blocos de anotações na visualização do SQL Server 2019](notebooks-guidance.md). Para usar notebooks no estúdio de dados do Azure, você deve cumprir os seguintes pré-requisitos:
 

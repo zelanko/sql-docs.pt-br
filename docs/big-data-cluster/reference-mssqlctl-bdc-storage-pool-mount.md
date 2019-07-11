@@ -2,19 +2,20 @@
 title: referência de montagem de pool de armazenamento mssqlctl bdc
 titleSuffix: SQL Server big data clusters
 description: Artigo de referência para comandos de montagem de pool de armazenamento mssqlctl bdc.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cf6012b6c700afd6ee0eca763df0961f088a3be4
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 4204e87e96fd0d91a9bfbf64813583ef92d3202b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394238"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727473"
 ---
 # <a name="mssqlctl-bdc-storage-pool-mount"></a>montagem de pool de armazenamento do bdc mssqlctl
 
@@ -22,7 +23,7 @@ ms.locfileid: "67394238"
 
 O artigo a seguir fornece referência para o **montagem de pool de armazenamento do bdc** comandos na **mssqlctl** ferramenta. Para obter mais informações sobre outros **mssqlctl** comandos, consulte [mssqlctl referência](reference-mssqlctl.md).
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 [montagem de pool de armazenamento do bdc mssqlctl criar](#mssqlctl-bdc-storage-pool-mount-create) | Crie repositórios remotos de montagens no HDFS.

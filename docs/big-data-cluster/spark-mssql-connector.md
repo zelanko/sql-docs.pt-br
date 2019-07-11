@@ -2,19 +2,20 @@
 title: Conectar o Spark para o SQL Server
 titleSuffix: SQL Server big data clusters
 description: Saiba como usar o conector do Spark MSSQL no Spark para leitura e gravação para o SQL Server.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: shivsood
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 878e08426fc58d6ad5a921eff4ac33dca18aa03c
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: aaa9cd54c3540c17f9995f985f4537dafe05d5c2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469117"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727468"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Como ler e gravar para o SQL Server no Spark usando o conector do Spark MSSQL
 
@@ -45,7 +46,7 @@ A tabela a seguir descreve os parâmetros de interface que foram alterados ou no
 
 O conector usa em massa do SQL Server gravar APIs. Qualquer gravação em massa parâmetros podem ser passados como parâmetros opcionais pelo usuário e são passados como-está pelo conector para a API subjacente. Para obter mais informações sobre em massa operações de gravação, consulte [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Um [cluster de big data do SQL Server](deploy-get-started.md).
 

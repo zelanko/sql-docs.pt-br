@@ -12,16 +12,16 @@ keywords:
 f1_keywords:
 - DATABASE_SERVICE_OBJECTIVES_TSQL
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-author: CarlRabeler
-ms.author: carlrab
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 889d8d618cf017d27e3b92ce845c8ebfee179048
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: 1bd16b4ac7fb0b27296fb2cc7e47ec683d761ed4
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342913"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716651"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>database_service_objectives (banco de dados SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,7 @@ Retorna a edição (camada de serviço), o objetivo de serviço (tipo de preço)
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|database_id|INT|A ID do banco de dados, exclusivo em uma instância do servidor de banco de dados SQL. Permite junções com [sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|database_id|int|A ID do banco de dados, exclusivo em uma instância do servidor de banco de dados SQL. Permite junções com [sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |edição|sysname|A camada de serviço para o banco de dados ou data warehouse: **Básica**, **padrão**, **Premium** ou **Data Warehouse**.|  
 |service_objective|sysname|O tipo de preço do banco de dados. Se o banco de dados está em um pool Elástico, retornará **ElasticPool**.<br /><br /> Sobre o **básica** tier, retorna **básica**.<br /><br /> **Banco de dados individual em uma camada de serviço standard** retorna um dos seguintes: S0, S1, S2, S3, S4, S6, S7, S9 ou S12.<br /><br /> **Banco de dados individual em uma camada premium** retorna o seguinte: P1, P2, P4, P6, P11 ou P15.<br /><br /> **SQL Data Warehouse** retorna DW100 a DW30000c.|  
 |elastic_pool_name|sysname|O nome da [pool Elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) que o banco de dados pertence. Retorna **nulo** se o banco de dados é um banco de dados ou um warehoue de dados.|  

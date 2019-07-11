@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Este artigo descreve o controlador de um cluster de big data do SQL Server 2019 (visualização).
 author: mihaelablendea
 ms.author: mihaelab
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: a0623a920b060e4d5d1e7724f39e2eadb0bd2475
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 076cc40c09d4b086ae7a416ac1cc5ccbcc16a20a
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67387953"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729177"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>O que é o controlador em um cluster de big data do SQL Server?
 

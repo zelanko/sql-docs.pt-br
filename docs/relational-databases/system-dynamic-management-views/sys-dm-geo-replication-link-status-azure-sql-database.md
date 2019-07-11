@@ -14,16 +14,16 @@ helpviewer_keywords:
 - dm_geo_replication_link_status dynamic management view
 - sys.dm_geo_replication_link_status dynamic management view
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 2c416d0d2a39439e2b6fe79fbe755cdc62a4b8cf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e94406cf30d1a942581f5fcfd30438c84ea2b159
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021749"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716704"
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Banco de Dados SQL do Azure)
 
@@ -40,7 +40,7 @@ ms.locfileid: "56021749"
 |replication_lag_sec|**int**|Diferença de tempo em segundos entre o valor de last_replication e o carimbo de hora da confirmação da transação na réplica primária com base no relógio do banco de dados primário.  Esse valor está disponível no banco de dados primário somente.|  
 |replication_state|**tinyint**|O estado de replicação geográfica para esse banco de dados, um dos:.<br /><br /> 1 = propagação. O destino de replicação geográfica está sendo propagado, mas os dois bancos de dados ainda não estão sincronizados. Até que a propagação seja concluída, você não pode se conectar ao banco de dados secundário. Remover banco de dados secundário do primário cancelará a operação de propagação.<br /><br /> 2 = recuperar o atraso. O banco de dados secundário está em um estado transacionalmente consistente e está sendo constantemente sincronizado com o banco de dados primário.<br /><br /> 4 = Suspended. Isso não é uma relação de cópia contínua ativa. Esse estado geralmente indica que a largura de banda disponível para o interlink é insuficiente para o nível de atividade da transação no banco de dados primário. No entanto, a relação de cópia contínua ainda permanece intacta.|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
-|função|**tinyint**|Função de replicação geográfica, um dos:<br /><br /> 0 = primary. O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.<br /><br /> 1 = secundário.  O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.|  
+|role|**tinyint**|Função de replicação geográfica, um dos:<br /><br /> 0 = primary. O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.<br /><br /> 1 = secundário.  O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|O tipo de secundário, um dos:<br /><br /> 0 não = nenhuma direct conexões são permitidas para o banco de dados secundário e o banco de dados não está disponível para acesso de leitura.<br /><br /> 2 = todas as conexões são permitidas no banco de dados no secundário repl; Autent para acesso somente leitura.|  
 |secondary_allow_connections_desc|**nvarchar(256)**|Não<br /><br /> Todos|  

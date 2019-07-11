@@ -14,15 +14,15 @@ ms.assetid: fa599517-3f3e-4dad-a65a-b8596ae3f330
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2423d41b1e9c549b7202a68fb2a0e085e0a6e11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98bbdcf66ed9ee8f2d716d8953fde8f4a888fca0
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297955"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792846"
 ---
 # <a name="sqlgetstmtoption-mapping"></a>Mapeamento SQLGetStmtOption
-Quando um aplicativo chama **SQLGetStmtOption** para um ODBC 3 *. x* driver que não oferece suporte a ele, a chamada para  
+Quando um aplicativo chama **SQLGetStmtOption** para ODBC *3.x* driver que não oferece suporte a ele, a chamada para  
   
 ```  
 SQLGetStmtOption(hstmt, fOption, pvParam)  
@@ -52,6 +52,6 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
   
  Para obter opções de conexão de cadeia de caracteres definidas pelo ODBC, o Gerenciador de Driver define o *BufferLength* argumento na chamada para **SQLGetConnectAttr** para o tamanho máximo predefinido (SQL_MAX_OPTION_STRING_LENGTH); para uma opção de conexão não cadeia de caracteres, *BufferLength* é definido como 0.  
   
- A opção de instrução SQL_GET_BOOKMARK foi preterida no ODBC 3 *. x*. Para um ODBC 3 *. x* driver para trabalhar com ODBC 2. *x* aplicativos que usam SQL_GET_BOOKMARK, ele deve oferecer suporte a SQL_GET_BOOKMARK. Para um ODBC 3 *. x* driver para trabalhar com ODBC 2. *x* aplicativos, ele deve oferecer suporte a definição de SQL_USE_BOOKMARKS como SQL_UB_ON e deve expor os indicadores de comprimento fixo. Se um ODBC 3 *. x* driver dá suporte a indicadores de comprimento variável apenas, indicadores de não-comprimento fixo, ele deve retornar o SQLSTATE HYC00 (recurso opcional não implementado) se um ODBC 2. *x* aplicativo tenta configurar SQL_USE_BOOKMARKS SQL_UB_ON.  
+ A opção de instrução SQL_GET_BOOKMARK foi preterida no ODBC *3.x*. Para ODBC *3.x* driver para trabalhar com ODBC *2.x* aplicativos que usam SQL_GET_BOOKMARK, ele deve oferecer suporte a SQL_GET_BOOKMARK. Para um ODBC *3.x* driver para trabalhar com ODBC *2.x* aplicativos, ele deve oferecer suporte a definição de SQL_USE_BOOKMARKS como SQL_UB_ON e deve expor os indicadores de comprimento fixo. Se um ODBC *3.x* driver dá suporte a indicadores de comprimento variável apenas, indicadores de não-comprimento fixo, ele deve retornar o SQLSTATE HYC00 (recurso opcional não implementado) se um ODBC *2.x* tentativa de aplicativo Defina SQL_USE_BOOKMARKS como SQL_UB_ON.  
   
- Para um ODBC 3 *. x* driver, o Gerenciador de Driver não verifica para ver se *opção* está entre SQL_STMT_OPT_MIN e SQL_STMT_OPT_MAX ou é maior que SQL_CONNECT_OPT_DRVR_START. O driver deve verificar isso.
+ Para um ODBC *3.x* driver, o Gerenciador de Driver não verifica para ver se *opção* está entre SQL_STMT_OPT_MIN e SQL_STMT_OPT_MAX ou é maior que SQL_CONNECT_OPT_DRVR_START. O driver deve verificar isso.

@@ -14,12 +14,12 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8a1b81d60ef691e02d4b69cc71fa961bbaddf18
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62790655"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793429"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Conectividade de cliente AlwaysOn (SQL Server)
   Este tópico descreve considerações sobre conectividade de clientes para Grupos de Disponibilidade AlwaysOn, inclusive pré-requisitos, restrições e recomendações para configurações e parâmetros de clientes.  
@@ -37,8 +37,8 @@ ms.locfileid: "62790655"
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Sim|Sim|Sim|Sim|Sim|  
 |SQL Native Client 11.0 OLEDB|Não|Sim|Sim|Não|Não|  
-|ADO.NET com .NET Framework 4.0 com patch de conectividade **<sup>*</sup>**|Sim|Sim|Sim|Sim|Sim|  
-|ADO.NET com .NET Framework 3.5 SP1 com patch de conectividade **<sup>** </sup>**|Sim|Sim|Sim|Sim|Sim|  
+|ADO.NET com .NET Framework 4.0 com patch de conectividade **<sup>*</sup>** |Sim|Sim|Sim|Sim|Sim|  
+|ADO.NET com .NET Framework 3.5 SP1 com patch de conectividade **<sup>** </sup>** |Sim|Sim|Sim|Sim|Sim|  
 |Microsoft JDBC driver 4.0 para SQL Server|Sim|Sim|Sim|Sim|Sim|  
   
  **<sup>*</sup>**  Baixe o patch de conectividade para ADO .NET com .NET Framework 4.0: [ https://support.microsoft.com/kb/2600211 ](https://support.microsoft.com/kb/2600211).  

@@ -14,15 +14,15 @@ ms.assetid: 267d95f2-4f0c-47ab-9411-5afe105215a2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1872806265470327f3e7bff468be2ba6d9011421
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b12c5286522bd0f1f8fbb40f101302aaa481cb8
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199426"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792599"
 ---
 # <a name="sqlfreestmt-mapping"></a>Mapeamento SQLFreeStmt
-Quando um aplicativo chama **SQLFreeStmt** com um *opção* argumento de SQL_DROP por meio de um ODBC 3 *. x* driver, a chamada para  
+Quando um aplicativo chama **SQLFreeStmt** com um *opção* argumento de SQL_DROP por meio de ODBC *3.x* driver, a chamada para  
   
 ```  
 SQLFreeStmt(hstmt, SQL_DROP)   

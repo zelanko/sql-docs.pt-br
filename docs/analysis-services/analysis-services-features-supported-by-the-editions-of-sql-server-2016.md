@@ -1,6 +1,6 @@
 ---
-title: Recursos compatíveis com as edições do SQL Server do Analysis Services | Microsoft Docs
-ms.date: 06/25/2019
+title: Recursos do Analysis Services compatíveis com as edições do SQL Server | Microsoft Docs
+ms.date: 07/10/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9947b10e01864f66bf26d6599e43814ab37dadc6
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 6d4f0cc16638963dbbbb091bc19cade36e45fe3b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388212"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792548"
 ---
 # <a name="analysis-services-features-supported-by-sql-server-edition"></a>Edição do SQL Server dá suportados a recursos do Analysis Services
+
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
 Este artigo descreve os recursos com suporte nas diferentes edições do SQL Server 2016, 2017, os serviços de análise de 2019. Edição de avaliação oferece suporte a recursos da edição Enterprise.
@@ -50,7 +51,7 @@ Este artigo descreve os recursos com suporte nas diferentes edições do SQL Ser
   
 |Recurso|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Desenvolvedor|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Medidas semiaditivas|Sim|Não <sup>1</sup>|||||Sim|  
+|Medidas semiaditivas|Sim|Não <sup> [1](#sameas)</sup>|||||Sim|  
 |Hierarquias|Sim|Sim|||||Sim|  
 |KPIs|Sim|Sim|||||Sim|  
 |perspectivas|Sim||||||Sim|  
@@ -59,12 +60,12 @@ Este artigo descreve os recursos com suporte nas diferentes edições do SQL Ser
 |Inteligência de dados temporais|Sim|Sim|||||Sim|  
 |Rollups personalizados|Sim|Sim|||||Sim|  
 |Cubo de write-backs|Sim|Sim|||||Sim|  
-|Dimensões de write-back|Sim||||||Sim|  
+|Dimensões de write-back|Sim <sup>[2](#wb)</sup>||||||Sim <sup>[2](#wb)</sup>|  
 |Células de Writeback|Sim|Sim|||||Sim|  
 |Detalhamento|Sim|Sim|||||Sim|  
 |Tipos de hierarquia avançados (pai-filho e hierarquias desbalanceadas)|Sim|Sim|||||Sim|  
 |Dimensões avançadas (Dimensões de referência, dimensões muitos-para-muitos)|Sim|Sim|||||Sim|  
-|Medidas e dimensões vinculadas|Sim|Sim  <sup>2</sup> |||||Sim|  
+|Medidas e dimensões vinculadas|Sim|Sim <sup> [3](#linkmd)</sup> |||||Sim|  
 |Translations|Sim|Sim|||||Sim|  
 |Agregações|Sim|Sim|||||Sim|  
 |Várias partições|Sim|Sim, até 3|||||Sim|  
@@ -80,8 +81,12 @@ Este artigo descreve os recursos com suporte nas diferentes edições do SQL Ser
 |Processamento de modo push|Sim||||||Sim|  
 |Expressões de medida|Sim||||||Sim|  
   
- <sup>1</sup> Há suporte para a medida semiaditiva LastChild na edição Standard, ao contrário de outras medidas semiaditivas, como None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren e ByAccount. Medidas aditivas, como Sum, Count, Min, Max e medidas não aditivas (DistinctCount) têm suporte em todas as edições.  
-  <sup>2</sup> A edição Standard dá suporte à vinculação de medidas e dimensões no mesmo banco de dados, mas não de outros bancos de dados ou instâncias.
+<a name="sameas">[1] </a> Medida semiaditiva LastChild o tem suporte na edição Standard, mas outras medidas semiaditivas, como None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren e ByAccount, não são. Medidas aditivas, como Sum, Count, Min, Max e medidas não aditivas (DistinctCount) têm suporte em todas as edições. 
+
+<a name="wb">[2] </a> Dimensões de write-back são descontinuadas no SQL Server Analysis Services 2019 e versões posteriores.
+ 
+<a name="linkmd">[3] </a> Standard edition oferece suporte à vinculação de medidas e dimensões no mesmo banco de dados, mas não de outros bancos de dados ou instâncias.
+  
   
 ## <a name="power-pivot-for-sharepoint"></a>Power Pivot para SharePoint  
   
@@ -95,6 +100,9 @@ Este artigo descreve os recursos com suporte nas diferentes edições do SQL Ser
 |Feeds de dados do Power Pivot|Sim||||||Sim|  
   
 ## <a name="data-mining"></a>Mineração de dados  
+
+> [!NOTE]
+> Mineração de dados é [preterido](analysis-services-backward-compatibility-sql2017.md#deprecated-features) no SQL Server Analysis Services 2017.
   
 |Nome do recurso|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Desenvolvedor|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  

@@ -20,12 +20,12 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86386460c3abc9ab7b6463b01ee4388e9186ad2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63bca42adcdfc83d1bdb96361680d0c70c9a031c
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536314"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793135"
 ---
 # <a name="sqlsetpos-function"></a>Função SQLSetPos
 **Conformidade com**  
@@ -60,7 +60,7 @@ SQLRETURN SQLSetPos(
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
 > [!NOTE]
->  O valor SQL_ADD para o *operação* argumento foi preterido para ODBC 3 *. x*. ODBC 3. *x* drivers serão necessário dar suporte a SQL_ADD para compatibilidade com versões anteriores. Essa funcionalidade foi substituída por uma chamada para **SQLBulkOperations** com um *operação* de SQL_ADD. Quando um ODBC 3. *x* aplicativo funciona com um ODBC 2. *x* driver, o Gerenciador de Driver mapeia uma chamada para **SQLBulkOperations** com um *operação* de SQL_ADD para **SQLSetPos** com um  *Operação* de SQL_ADD.  
+>  O valor SQL_ADD para o *operação* argumento foi preterido para ODBC *3.x*. ODBC *3.x* drivers serão necessário dar suporte a SQL_ADD para compatibilidade com versões anteriores. Essa funcionalidade foi substituída por uma chamada para **SQLBulkOperations** com um *operação* de SQL_ADD. Quando um ODBC *3.x* aplicativo funciona com ODBC *2.x* driver, o Gerenciador de Driver mapeia uma chamada para **SQLBulkOperations** com um *operação*de SQL_ADD para **SQLSetPos** com um *operação* de SQL_ADD.  
   
  Para obter mais informações, consulte "Comentários".  
   
@@ -85,7 +85,7 @@ SQLRETURN SQLSetPos(
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01001|Conflito de operação do cursor|O *operação* argumento era SQL_DELETE ou SQL_UPDATE e nenhuma linha ou mais de uma linha foi excluída ou atualizada. (Para obter mais informações sobre atualizações de mais de uma linha, consulte a descrição do SQL_ATTR_SIMULATE_CURSOR *atributo* na **SQLSetStmtAttr**.) (A função retornará SQL_SUCCESS_WITH_INFO.)<br /><br /> O *operação* argumento era SQL_DELETE ou SQL_UPDATE, e a operação falhou devido a simultaneidade otimista. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01004|Truncamento à direita de dados de cadeia de caracteres|O *operação* argumento era SQL_REFRESH e cadeia de caracteres ou dados binários retornados para uma coluna ou colunas com um tipo de dados de SQL_C_CHAR ou SQL_C_BINARY resultaram em truncamento de caractere não vazios ou nulos de dados binários.|  
-|01S01|Erro na linha|O *RowNumber* argumento era 0 e ocorreu um erro em uma ou mais linhas ao executar a operação especificada com o *operação* argumento.<br /><br /> (SQL_SUCCESS_WITH_INFO será retornado se ocorrer um erro em um ou mais, mas nem todas as linhas de uma operação de várias linhas, e SQL_ERROR será retornado se ocorrer um erro em uma operação de uma única linha).<br /><br /> (Esse SQLSTATE é retornado somente quando **SQLSetPos** é chamado após **SQLExtendedFetch**, se o driver é um ODBC 2. *x* driver e a biblioteca de cursores não é usado.)|  
+|01S01|Erro na linha|O *RowNumber* argumento era 0 e ocorreu um erro em uma ou mais linhas ao executar a operação especificada com o *operação* argumento.<br /><br /> (SQL_SUCCESS_WITH_INFO será retornado se ocorrer um erro em um ou mais, mas nem todas as linhas de uma operação de várias linhas, e SQL_ERROR será retornado se ocorrer um erro em uma operação de uma única linha).<br /><br /> (Esse SQLSTATE é retornado somente quando **SQLSetPos** é chamado após **SQLExtendedFetch**, se o driver ODBC *2.x* driver e a biblioteca de cursores não é usado.)|  
 |01S07|Truncamento fracionário|O *operação* argumento era SQL_REFRESH, o tipo de dados do buffer de aplicativo não era SQL_C_CHAR ou SQL_C_BINARY e os dados retornados aos buffers de aplicativo para uma ou mais colunas foi truncados. Para tipos de dados numéricos, a parte fracionária do número foi truncada. Para o tempo, carimbo de hora e tipos de dados de intervalo que contém um componente de tempo, a parte fracionária do tempo foi truncada.<br /><br /> (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |07006|Violação do atributo de tipo de dados restrito|O valor de dados de uma coluna no conjunto de resultados não pôde ser convertido para o tipo de dados especificado por *TargetType* na chamada para **SQLBindCol**.|  
 |07009|Índice de descritor inválido|O argumento *operação* era SQL_REFRESH ou SQL_UPDATE e uma coluna foi associada com um número de coluna maior que o número de colunas no conjunto de resultados.|  
@@ -105,8 +105,8 @@ SQLRETURN SQLSetPos(
 |HY000|Erro geral|Ocorreu um erro para o qual não houve nenhum SQLSTATE específico e para o qual não foi definida nenhuma SQLSTATE específicos de implementação. A mensagem de erro retornada por **SQLGetDiagRec** na  *\*MessageText* buffer descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar a memória necessária para dar suporte à execução ou a conclusão da função.|  
 |HY008|Operação cancelada|O processamento assíncrono foi habilitado para o *StatementHandle*. A função foi chamada e antes ele concluiu a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle*, e, em seguida, a função foi chamada novamente na *StatementHandle*.<br /><br /> A função foi chamada e antes ele concluiu a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle* de um thread diferente em um aplicativos multithread.|  
-|HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado a *StatementHandle*. Essa função assíncrona ainda estava em execução quando a função SQLSetPos foi chamada.<br /><br /> (DM) especificado *StatementHandle* não estava em um estado executado. A função foi chamada sem primeiro chamar **SQLExecDirect**, **SQLExecute**, ou uma função de catálogo.<br /><br /> (DM) uma função de execução assíncrona (não desse último) foi chamada para o *StatementHandle* e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** foi chamado para o  *StatementHandle* e retornados de SQL_NEED_DATA. Essa função foi chamada antes de dados foi enviados para todos os parâmetros de dados em execução ou colunas.<br /><br /> (DM) o driver foi um ODBC 2. *x* driver, e **SQLSetPos** foi chamado para um *StatementHandle* depois **SQLFetch** foi chamado.|  
-|HY011|Atributo não pode ser definido agora|(DM) o driver foi um ODBC 2. *x* driver; o SQL_ATTR_ROW_STATUS_PTR atributo de instrução foi definido; em seguida, **SQLSetPos** foi chamado antes **SQLFetch**, **SQLFetchScroll**, ou **SQLExtendedFetch** foi chamado.|  
+|HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado a *StatementHandle*. Essa função assíncrona ainda estava em execução quando a função SQLSetPos foi chamada.<br /><br /> (DM) especificado *StatementHandle* não estava em um estado executado. A função foi chamada sem primeiro chamar **SQLExecDirect**, **SQLExecute**, ou uma função de catálogo.<br /><br /> (DM) uma função de execução assíncrona (não desse último) foi chamada para o *StatementHandle* e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** foi chamado para o  *StatementHandle* e retornados de SQL_NEED_DATA. Essa função foi chamada antes de dados foi enviados para todos os parâmetros de dados em execução ou colunas.<br /><br /> (DM) o driver foi um ODBC *2.x* driver, e **SQLSetPos** foi chamado para um *StatementHandle* depois **SQLFetch** foi chamado.|  
+|HY011|Atributo não pode ser definido agora|(DM) o driver foi um ODBC *2.x* driver; o SQL_ATTR_ROW_STATUS_PTR atributo de instrução foi definido; em seguida, **SQLSetPos** foi chamado antes **SQLFetch**,  **SQLFetchScroll**, ou **SQLExtendedFetch** foi chamado.|  
 |HY013|Erro de gerenciamento de memória|A chamada de função não pôde ser processada porque os objetos de memória subjacente não pôde ser acessados, possivelmente devido a condições de memória insuficiente.|  
 |HY090|Comprimento de buffer ou cadeia de caracteres inválido|O *operação* argumento era SQL_UPDATE, um valor de dados é um ponteiro nulo e o valor de comprimento de coluna não era 0, SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NULL_DATA, ou menor ou igual a SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> O *operação* argumento era SQL_UPDATE; um valor de dados não é um ponteiro nulo; o tipo de dados C foi SQL_C_BINARY ou SQL_C_CHAR; e o valor de comprimento de coluna era menor que 0 mas não iguais a SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE , SQL_NTS ou SQL_NULL_DATA, ou menor ou igual a SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> O valor em um buffer de comprimento/indicador foi SQL_DATA_AT_EXEC; o tipo de SQL era SQL_LONGVARCHAR, SQL_LONGVARBINARY ou um tipo de dados específicos da fonte de dados long; e o tipo de informação no SQL_NEED_LONG_DATA_LEN **SQLGetInfo** foi "Y".|  
 |HY092|Identificador de atributo inválido|(DM) o valor especificado para o *operação* argumento era inválido.<br /><br /> (DM) o valor especificado para o *LockType* argumento era inválido.<br /><br /> O *operação* argumento era SQL_UPDATE ou SQL_DELETE e o atributo de instrução SQL_ATTR_CONCURRENCY foi SQL_ATTR_CONCUR_READ_ONLY.|  
@@ -123,7 +123,7 @@ SQLRETURN SQLSetPos(
 ## <a name="comments"></a>Comentários  
   
 > [!CAUTION]
->  Para obter informações sobre a instrução declara que **SQLSetPos** pode ser chamada e o que precisa fazer para compatibilidade com o ODBC 2 *. x* aplicativos, consulte [cursores em bloco, cursores roláveis, e Compatibilidade com versões anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md).  
+>  Para obter informações sobre a instrução declara que **SQLSetPos** pode ser chamada e o que ele precisa fazer para compatibilidade com o ODBC *2.x* aplicativos, consulte [cursores em bloco, cursores roláveis, e Compatibilidade com versões anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md).  
   
 ## <a name="rownumber-argument"></a>Argumento RowNumber  
  O *RowNumber* argumento especifica o número da linha no conjunto de linhas nas quais executar a operação especificada pelo *operação* argumento. Se *RowNumber* for 0, a operação se aplica a todas as linhas no conjunto de linhas. *RowNumber* deve ser um valor de 0 ao número de linhas no conjunto de linhas.  

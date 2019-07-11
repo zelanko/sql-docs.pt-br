@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Consuma um aplicativo implantado em um cluster de big data de 2019 do SQL Server usando um serviço web RESTful (visualização).
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: a3894ccbd8ffda7cfe00d61a7a47622f7f481c8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 308bbe40ba49566bf6cbccad13f8edab0db3d363
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801896"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729301"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Consumir um aplicativo implantado no cluster de big data do SQL Server usando um serviço web RESTful
 
@@ -24,13 +23,13 @@ ms.locfileid: "66801896"
 
 Este artigo descreve como consumir um aplicativo implantado em um cluster de big data de 2019 do SQL Server usando um serviço web RESTful (visualização).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Cluster de big data do SQL Server de 2019](deployment-guidance.md)
 - [Utilitário de linha de comando mssqlctl](deploy-install-mssqlctl.md)
 - Um aplicativo implantado usando um [ `mssqlctl` ](big-data-cluster-create-apps.md) ou o [implantar o aplicativo de extensão](app-deployment-extension.md)
 
-## <a name="capabilities"></a>Recursos
+## <a name="capabilities"></a>Capacidades
 
 Depois de ter implantado um aplicativo para seu cluster de big data do SQL Server 2019 (visualização), você pode acessar e consumir um aplicativo usando um serviço web RESTful. Isso permite a integração do aplicativo de outros aplicativos ou serviços (por exemplo, um aplicativo móvel ou site). A tabela a seguir descreve os comandos de implantação do aplicativo que você pode usar com **mssqlctl** para obter informações sobre o serviço web RESTful do seu aplicativo.
 

@@ -2,19 +2,20 @@
 title: referência de hdfs mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Artigo de referência de comandos do hdfs mssqlctl.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9051c3630fce005572bc3b939ebef9ed8d111e07
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 8f211faf827bdf925a8fde938fff8f96998bc359
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394208"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728535"
 ---
 # <a name="mssqlctl-hdfs"></a>mssqlctl hdfs
 
@@ -22,7 +23,7 @@ ms.locfileid: "67394208"
 
 O artigo a seguir fornece referência para o **hdfs** comandos na **mssqlctl** ferramenta. Para obter mais informações sobre outros **mssqlctl** comandos, consulte [mssqlctl referência](reference-mssqlctl.md).
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 [shell do hdfs mssqlctl](#mssqlctl-hdfs-shell) | O shell do HDFS é um shell de comando interativo simples para o sistema de arquivos HDFS.

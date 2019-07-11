@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Use o servidor de histórico do Spark para depurar e diagnosticar aplicativos Spark em execução em clusters de grandes dados do SQL Server 2019.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 6bc310fc856a9f2fe4a100770a5af2eed6a189e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cba788fcb61dddce54d8b0c4ad4f2ca87ea0906d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782103"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728392"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Depurar e diagnosticar aplicativos do Spark em clusters de grandes dados do SQL Server no servidor de histórico do Spark
 

@@ -16,12 +16,12 @@ ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b38446a96f29006356f0ebf083a382fff4fb50f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2201be33df4346ab2afa812828ab9655b0ed2be
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63266575"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793290"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Replicar tabelas e índices particionados
   O particionamento facilita o gerenciamento de grandes tabelas ou índices, permitindo o acesso e o gerenciamento de subconjuntos de dados de forma rápida e eficaz, ao mesmo tempo em que mantém a integridade geral da coleção de dados. Para obter mais informações, consulte [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). A replicação dá suporte ao particionamento fornecendo um conjunto de propriedades que especificam como tabelas e índices particionados devem ser tratados.  
@@ -32,7 +32,7 @@ ms.locfileid: "63266575"
 |Object|Criado com|  
 |------------|----------------------|  
 |Tabela ou índice particionado|CREATE TABLE ou CREATE INDEX|  
-|Função de partição|CREATE PARTITION FUNCTION|  
+|Função Partition|CREATE PARTITION FUNCTION|  
 |Esquema de partição|CREATE PARTITION SCHEME|  
   
  O primeiro conjunto de propriedades relacionadas ao particionamento são as opções de esquema de artigo que determinam se os objetos de particionamento devem ser copiados para o Assinante. Essas opções de esquema podem ser definidas das seguintes formas:  
@@ -70,9 +70,9 @@ ms.locfileid: "63266575"
 ### <a name="enabling-partition-switching"></a>Habilitando a alternância de partição  
  As propriedades a seguir para publicações transacionais permitem que os usuários controlem o comportamento da alternância de partição em um ambiente replicado:  
   
--   **@allow_partition_switch** , quando definido como `true`, SWITCH PARTITION pode ser executado no banco de dados de publicação.  
+-   **\@allow_partition_switch**, quando definido como `true`, SWITCH PARTITION pode ser executado no banco de dados de publicação.  
   
--   **@replicate_partition_switch** determina se a instrução SWITCH PARTITION DDL deve ser replicada para Assinantes. Essa opção é válido somente quando **@allow_partition_switch** é definido como `true`.  
+-   **\@replicate_partition_switch** determina se a instrução SWITCH PARTITION DDL deve ser replicada para assinantes. Essa opção é válido somente quando  **\@allow_partition_switch** é definido como `true`.  
   
  Você pode definir essas propriedades usando [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) quando a publicação é criada ou usando [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) depois da criação da publicação. Como observado anteriormente, a replicação de mesclagem não dá suporte à alternância de partição. Para executar SWITCH PARTITION em uma tabela que é habilitada para replicação de mesclagem, remova a tabela da publicação.  
   

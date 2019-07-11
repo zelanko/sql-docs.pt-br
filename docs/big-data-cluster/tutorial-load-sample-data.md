@@ -2,20 +2,20 @@
 title: Carregar dados de exemplo
 titleSuffix: SQL Server big data clusters
 description: Este tutorial demonstra como carregar dados de exemplo em um cluster de big data do SQL Server. Os dados de exemplo incluem dados relacionais na instância mestre do SQL Server. Ele também inclui dados do HDFS no pool de armazenamento. Esses dados dá suporte a outros tutoriais nesta seção.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d78fd9ecce71e9b7ffb86441fab134b1180d058a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4ea5540c0188ec9a57ad8b6780cf3ab6af5dfc2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770826"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727348"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutorial: Carregar dados de exemplo em um cluster de big data do SQL Server
 
@@ -26,7 +26,7 @@ Este tutorial explica como usar um script para carregar dados de exemplo em um c
 > [!TIP]
 > Você pode encontrar exemplos adicionais para o cluster de big data de 2019 do SQL Server (versão prévia) na [exemplos do sql server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) repositório do GitHub. Eles estão localizados os **sql-server-samples/samples/features/sql-big-data-cluster/** caminho.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Um cluster de big data implantados](deployment-guidance.md)
 - [Ferramentas de big data](deploy-big-data-tools.md)

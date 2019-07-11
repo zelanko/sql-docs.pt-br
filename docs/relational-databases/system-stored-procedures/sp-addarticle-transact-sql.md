@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addarticle
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6f24f7ca51f4836c8b1e446283eabb858eb8d387
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 045b1cb853603a2550110db18f5658453f19e6ce
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493888"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716762"
 ---
 # <a name="spaddarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @destination_table = ] 'destination_table'` É o nome da tabela de destino (assinatura), se for diferente da *source_table*ou o procedimento armazenado. *destination_table* está **sysname**, com um padrão NULL, o que significa que *source_table* é igual a *destination_table * *.*  
   
-`[ @vertical_partition = ] 'vertical_partition'` Habilita e desabilita a filtragem de coluna em um artigo de tabela. *vertical_partition* está **nchar(5)**, com um padrão de FALSE.  
+`[ @vertical_partition = ] 'vertical_partition'` Habilita e desabilita a filtragem de coluna em um artigo de tabela. *vertical_partition* está **nchar(5)** , com um padrão de FALSE.  
   
  **False** indica que não há filtragem vertical e publica todas as colunas.  
   
@@ -105,50 +105,50 @@ sp_addarticle [ @publication = ] 'publication'
 |**Serializable proc exec**|Replica a execução do procedimento armazenado apenas se ele for executado no contexto de uma transação serializável. Sem suporte para Publicadores Oracle.<br /><br /> O procedimento também deve ser executado dentro de uma transação explícita para a execução do procedimento ser replicados.|  
 |**somente esquema de exibição**|Exibição somente com esquema Sem suporte para Publicadores Oracle. Ao usar essa opção, você também deve publicar a tabela base.|  
   
-`[ @filter = ] 'filter'` O procedimento armazenado (criado com FOR REPLICATION) é usado para filtrar a tabela horizontalmente. *filtro* está **nvarchar(386)**, com um padrão NULL. [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) e [sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) devem ser executados manualmente para criar a exibição e o procedimento armazenado de filtro. Se não for NULL, o procedimento de filtro não é criado (supõe que o procedimento armazenado é criado manualmente).  
+`[ @filter = ] 'filter'` O procedimento armazenado (criado com FOR REPLICATION) é usado para filtrar a tabela horizontalmente. *filtro* está **nvarchar(386)** , com um padrão NULL. [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) e [sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) devem ser executados manualmente para criar a exibição e o procedimento armazenado de filtro. Se não for NULL, o procedimento de filtro não é criado (supõe que o procedimento armazenado é criado manualmente).  
   
-`[ @sync_object = ] 'sync_object'` É o nome da tabela ou exibição usada para criar o arquivo de dados usado para representar o instantâneo para este artigo. *sync_object* está **nvarchar(386)**, com um padrão NULL. Se for NULL, [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) é chamado para criar automaticamente a exibição usada para gerar o arquivo de saída. Isso ocorre após a adição de colunas com [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). Se não for NULL, uma exibição não será criada (supõe que a exibição é criada manualmente).  
+`[ @sync_object = ] 'sync_object'` É o nome da tabela ou exibição usada para criar o arquivo de dados usado para representar o instantâneo para este artigo. *sync_object* está **nvarchar(386)** , com um padrão NULL. Se for NULL, [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) é chamado para criar automaticamente a exibição usada para gerar o arquivo de saída. Isso ocorre após a adição de colunas com [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). Se não for NULL, uma exibição não será criada (supõe que a exibição é criada manualmente).  
   
-`[ @ins_cmd = ] 'ins_cmd'` É o tipo de comando de replicação usado ao replicar inserções para este artigo. *ins_cmd* está **nvarchar (255)**, e pode ser um dos valores a seguir.  
+`[ @ins_cmd = ] 'ins_cmd'` É o tipo de comando de replicação usado ao replicar inserções para este artigo. *ins_cmd* está **nvarchar (255)** , e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**NONE**|Nenhuma ação é tomada.|  
-|**CALL sp_MSins_**<br /> **_table_**  (default)<br /><br /> -ou-<br /><br /> **CHAMAR custom_stored_procedure_name**|Chama um procedimento armazenado a ser executado no Assinante. Para usar esse método de replicação, use *schema_option* para especificar a criação automática do procedimento armazenado, ou criar o procedimento armazenado especificado no banco de dados de destino de cada assinante do artigo. *custom_stored_procedure* é o nome de um procedimento armazenado criado pelo usuário. <strong>sp_msins _*tabela*</strong>  contém o nome da tabela de destino em vez da *_table* faz parte do parâmetro. Quando *destination_owner* for especificado, ele é anexado ao nome da tabela de destino. Por exemplo, para o **ProductCategory** pertencentes a tabela a **produção** esquema no assinante, o parâmetro seria `CALL sp_MSins_ProductionProductCategory`. Para um artigo em uma topologia de replicação ponto a ponto *_table* é acrescentado com um valor de GUID. Especificando *custom_stored_procedure* não há suporte para assinantes de atualização.|  
+|**CALL sp_MSins_**<br /> **_table_**  (default)<br /><br /> - ou -<br /><br /> **CHAMAR custom_stored_procedure_name**|Chama um procedimento armazenado a ser executado no Assinante. Para usar esse método de replicação, use *schema_option* para especificar a criação automática do procedimento armazenado, ou criar o procedimento armazenado especificado no banco de dados de destino de cada assinante do artigo. *custom_stored_procedure* é o nome de um procedimento armazenado criado pelo usuário. <strong>sp_msins _*tabela*</strong>  contém o nome da tabela de destino em vez da *_table* faz parte do parâmetro. Quando *destination_owner* for especificado, ele é anexado ao nome da tabela de destino. Por exemplo, para o **ProductCategory** pertencentes a tabela a **produção** esquema no assinante, o parâmetro seria `CALL sp_MSins_ProductionProductCategory`. Para um artigo em uma topologia de replicação ponto a ponto *_table* é acrescentado com um valor de GUID. Especificando *custom_stored_procedure* não há suporte para assinantes de atualização.|  
 |**SQL** ou nulo|Replica uma instrução INSERT. A instrução INSERT fornece valores para todas as colunas publicadas no artigo. Esse comando é replicado em inserções:<br /><br /> `INSERT INTO <table name> VALUES (c1value, c2value, c3value, ..., cnvalue)`|  
   
  Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-`[ @del_cmd = ] 'del_cmd'` É o tipo de comando de replicação usado ao replicar exclusões para este artigo. *del_cmd* está **nvarchar (255)**, e pode ser um dos valores a seguir.  
+`[ @del_cmd = ] 'del_cmd'` É o tipo de comando de replicação usado ao replicar exclusões para este artigo. *del_cmd* está **nvarchar (255)** , e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**NONE**|Nenhuma ação é tomada.|  
-|**CALLsp_MSdel_**<br /> **_table_**  (default)<br /><br /> -ou-<br /><br /> **CHAMAR custom_stored_procedure_name**|Chama um procedimento armazenado a ser executado no Assinante. Para usar esse método de replicação, use *schema_option* para especificar a criação automática do procedimento armazenado, ou criar o procedimento armazenado especificado no banco de dados de destino de cada assinante do artigo. *custom_stored_procedure* é o nome de um procedimento armazenado criado pelo usuário. <strong>sp_msdel _*tabela*</strong>  contém o nome da tabela de destino em vez da *_table* faz parte do parâmetro. Quando *destination_owner* for especificado, ele é anexado ao nome da tabela de destino. Por exemplo, para o **ProductCategory** pertencentes a tabela a **produção** esquema no assinante, o parâmetro seria `CALL sp_MSdel_ProductionProductCategory`. Para um artigo em uma topologia de replicação ponto a ponto *_table* é acrescentado com um valor de GUID. Especificando *custom_stored_procedure* não há suporte para assinantes de atualização.|  
-|**XCALL sp_MSdel_**<br /> **_table_**<br /><br /> -ou-<br /><br /> **XCALL custom_stored_procedure_name**|Chama um procedimento armazenado com o uso de parâmetros no estilo XCALL. Para usar esse método de replicação, use *schema_option* para especificar a criação automática do procedimento armazenado, ou criar o procedimento armazenado especificado no banco de dados de destino de cada assinante do artigo. Não é permitido especificar um procedimento armazenado para atualizar assinantes.|  
+|**CALLsp_MSdel_**<br /> **_table_**  (default)<br /><br /> - ou -<br /><br /> **CHAMAR custom_stored_procedure_name**|Chama um procedimento armazenado a ser executado no Assinante. Para usar esse método de replicação, use *schema_option* para especificar a criação automática do procedimento armazenado, ou criar o procedimento armazenado especificado no banco de dados de destino de cada assinante do artigo. *custom_stored_procedure* é o nome de um procedimento armazenado criado pelo usuário. <strong>sp_msdel _*tabela*</strong>  contém o nome da tabela de destino em vez da *_table* faz parte do parâmetro. Quando *destination_owner* for especificado, ele é anexado ao nome da tabela de destino. Por exemplo, para o **ProductCategory** pertencentes a tabela a **produção** esquema no assinante, o parâmetro seria `CALL sp_MSdel_ProductionProductCategory`. Para um artigo em uma topologia de replicação ponto a ponto *_table* é acrescentado com um valor de GUID. Especificando *custom_stored_procedure* não há suporte para assinantes de atualização.|  
+|**XCALL sp_MSdel_**<br /> **_table_**<br /><br /> - ou -<br /><br /> **XCALL custom_stored_procedure_name**|Chama um procedimento armazenado com o uso de parâmetros no estilo XCALL. Para usar esse método de replicação, use *schema_option* para especificar a criação automática do procedimento armazenado, ou criar o procedimento armazenado especificado no banco de dados de destino de cada assinante do artigo. Não é permitido especificar um procedimento armazenado para atualizar assinantes.|  
 |**SQL** ou nulo|Replica uma instrução DELETE. A instrução DELETE é fornecida em todos os valores de coluna de chave primária. Esse comando é replicado em exclusões:<br /><br /> `DELETE FROM <table name> WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
  Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-`[ @upd_cmd = ] 'upd_cmd'` É o tipo de comando de replicação usado ao replicar atualizações para este artigo. *upd_cmd* está **nvarchar (255)**, e pode ser um dos valores a seguir.  
+`[ @upd_cmd = ] 'upd_cmd'` É o tipo de comando de replicação usado ao replicar atualizações para este artigo. *upd_cmd* está **nvarchar (255)** , e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**NONE**|Nenhuma ação é tomada.|  
-|**CALL sp_MSupd_**<br /> **_table_**<br /><br /> -ou-<br /><br /> **CHAMAR custom_stored_procedure_name**|Chama um procedimento armazenado a ser executado no Assinante. Para usar esse método de replicação, use *schema_option* para especificar a criação automática do procedimento armazenado, ou criar o procedimento armazenado especificado no banco de dados de destino de cada assinante do artigo.|  
-|**MCALL sp_MSupd_**<br /> **_table_**<br /><br /> -ou-<br /><br /> **MCALL custom_stored_procedure_name**|Chama um procedimento armazenado com o uso de parâmetros no estilo MCALL. Para usar esse método de replicação, use *schema_option* para especificar a criação automática do procedimento armazenado, ou criar o procedimento armazenado especificado no banco de dados de destino de cada assinante do artigo. *custom_stored_procedure* é o nome de um procedimento armazenado criado pelo usuário. <strong>sp_msupd _*tabela*</strong>  contém o nome da tabela de destino em vez da *_table* faz parte do parâmetro. Quando *destination_owner* for especificado, ele é anexado ao nome da tabela de destino. Por exemplo, para o **ProductCategory** pertencentes a tabela a **produção** esquema no assinante, o parâmetro seria `MCALL sp_MSupd_ProductionProductCategory`. Para um artigo em uma topologia de replicação ponto a ponto *_table* é acrescentado com um valor de GUID. Não é permitido especificar um procedimento armazenado para atualizar assinantes.|  
-|**SCALL sp_MSupd_**<br /> **_table_**  (default)<br /><br /> -ou-<br /><br /> **SCALL custom_stored_procedure_name**|Chama um procedimento armazenado com o uso de parâmetros no estilo SCALL. Para usar esse método de replicação, use *schema_option* para especificar a criação automática do procedimento armazenado, ou criar o procedimento armazenado especificado no banco de dados de destino de cada assinante do artigo. *custom_stored_procedure* é o nome de um procedimento armazenado criado pelo usuário. <strong>sp_msupd _*tabela*</strong>  contém o nome da tabela de destino em vez da *_table* faz parte do parâmetro. Quando *destination_owner* for especificado, ele é anexado ao nome da tabela de destino. Por exemplo, para o **ProductCategory** pertencentes a tabela a **produção** esquema no assinante, o parâmetro seria `SCALL sp_MSupd_ProductionProductCategory`. Para um artigo em uma topologia de replicação ponto a ponto *_table* é acrescentado com um valor de GUID. Não é permitido especificar um procedimento armazenado para atualizar assinantes.|  
-|**XCALL sp_MSupd_**<br /> **_table_**<br /><br /> -ou-<br /><br /> **XCALL custom_stored_procedure_name**|Chama um procedimento armazenado com o uso de parâmetros no estilo XCALL. Para usar esse método de replicação, use *schema_option* para especificar a criação automática do procedimento armazenado, ou criar o procedimento armazenado especificado no banco de dados de destino de cada assinante do artigo. Não é permitido especificar um procedimento armazenado para atualizar assinantes.|  
+|**CALL sp_MSupd_**<br /> **_table_**<br /><br /> - ou -<br /><br /> **CHAMAR custom_stored_procedure_name**|Chama um procedimento armazenado a ser executado no Assinante. Para usar esse método de replicação, use *schema_option* para especificar a criação automática do procedimento armazenado, ou criar o procedimento armazenado especificado no banco de dados de destino de cada assinante do artigo.|  
+|**MCALL sp_MSupd_**<br /> **_table_**<br /><br /> - ou -<br /><br /> **MCALL custom_stored_procedure_name**|Chama um procedimento armazenado com o uso de parâmetros no estilo MCALL. Para usar esse método de replicação, use *schema_option* para especificar a criação automática do procedimento armazenado, ou criar o procedimento armazenado especificado no banco de dados de destino de cada assinante do artigo. *custom_stored_procedure* é o nome de um procedimento armazenado criado pelo usuário. <strong>sp_msupd _*tabela*</strong>  contém o nome da tabela de destino em vez da *_table* faz parte do parâmetro. Quando *destination_owner* for especificado, ele é anexado ao nome da tabela de destino. Por exemplo, para o **ProductCategory** pertencentes a tabela a **produção** esquema no assinante, o parâmetro seria `MCALL sp_MSupd_ProductionProductCategory`. Para um artigo em uma topologia de replicação ponto a ponto *_table* é acrescentado com um valor de GUID. Não é permitido especificar um procedimento armazenado para atualizar assinantes.|  
+|**SCALL sp_MSupd_**<br /> **_table_**  (default)<br /><br /> - ou -<br /><br /> **SCALL custom_stored_procedure_name**|Chama um procedimento armazenado com o uso de parâmetros no estilo SCALL. Para usar esse método de replicação, use *schema_option* para especificar a criação automática do procedimento armazenado, ou criar o procedimento armazenado especificado no banco de dados de destino de cada assinante do artigo. *custom_stored_procedure* é o nome de um procedimento armazenado criado pelo usuário. <strong>sp_msupd _*tabela*</strong>  contém o nome da tabela de destino em vez da *_table* faz parte do parâmetro. Quando *destination_owner* for especificado, ele é anexado ao nome da tabela de destino. Por exemplo, para o **ProductCategory** pertencentes a tabela a **produção** esquema no assinante, o parâmetro seria `SCALL sp_MSupd_ProductionProductCategory`. Para um artigo em uma topologia de replicação ponto a ponto *_table* é acrescentado com um valor de GUID. Não é permitido especificar um procedimento armazenado para atualizar assinantes.|  
+|**XCALL sp_MSupd_**<br /> **_table_**<br /><br /> - ou -<br /><br /> **XCALL custom_stored_procedure_name**|Chama um procedimento armazenado com o uso de parâmetros no estilo XCALL. Para usar esse método de replicação, use *schema_option* para especificar a criação automática do procedimento armazenado, ou criar o procedimento armazenado especificado no banco de dados de destino de cada assinante do artigo. Não é permitido especificar um procedimento armazenado para atualizar assinantes.|  
 |**SQL** ou nulo|Replica uma instrução UPDATE. A instrução UPDATE é fornecida em todos os valores de coluna e os valores de coluna de chave primária. Esse comando é replicado em atualizações:<br /><br /> `UPDATE <table name> SET c1 = c1value, SET c2 = c2value, SET cn = cnvalue WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
 > [!NOTE]  
 >  A sintaxe de CALL, MCALL, SCALL e XCALL varia a quantidade de dados propagada ao assinante. A sintaxe de CALL passa todos os valores para todas as colunas inseridas e excluídas. A sintaxe de SCALL passa valores apenas para as colunas afetadas. A sintaxe de XCALL passa valores para todas as colunas, alteradas ou não, inclusive o valor anterior da coluna. Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-`[ @creation_script = ] 'creation_script'` É o caminho e nome de um script de esquema de artigo opcional usado para criar o artigo no banco de dados de assinatura. *creation_script* está **nvarchar (255)**, com um padrão NULL.  
+`[ @creation_script = ] 'creation_script'` É o caminho e nome de um script de esquema de artigo opcional usado para criar o artigo no banco de dados de assinatura. *creation_script* está **nvarchar (255)** , com um padrão NULL.  
   
-`[ @description = ] 'description'` É uma entrada descritiva para o artigo. *Descrição* está **nvarchar (255)**, com um padrão NULL.  
+`[ @description = ] 'description'` É uma entrada descritiva para o artigo. *Descrição* está **nvarchar (255)** , com um padrão NULL.  
   
-`[ @pre_creation_cmd = ] 'pre_creation_cmd'` Especifica o sistema deve fazer se detectar um objeto existente de mesmo nome no assinante ao aplicar o instantâneo para este artigo. *pre_creation_cmd* está **nvarchar (10)**, e pode ser um dos valores a seguir.  
+`[ @pre_creation_cmd = ] 'pre_creation_cmd'` Especifica o sistema deve fazer se detectar um objeto existente de mesmo nome no assinante ao aplicar o instantâneo para este artigo. *pre_creation_cmd* está **nvarchar (10)** , e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -179,7 +179,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x200**|Replica restrições de chave estrangeira. Se a tabela referenciada não for parte de uma publicação, todas as restrições de chave estrangeira em uma tabela publicada não serão replicadas. *Não há suportada para Publicadores Oracle*.|  
 |**0x400**|Replica restrições de verificação. *Não há suportada para Publicadores Oracle*.|  
 |**0x800**|Replica padrões. *Não há suportada para Publicadores Oracle*.|  
-|**0x1000**|Replica ordenação em nível de coluna.<br /><br /> **Observação:** Essa opção deve ser definida para Publicadores Oracle para habilitar comparações entre letras maiúsculas e minúsculas.|  
+|**0x1000**|Replica ordenação em nível de coluna.<br /><br /> **Observação:** Essa opção deve ser definida para Publicadores Oracle para habilitar comparações diferenciam maiusculas de minúsculas.|  
 |**0x2000**|Replica propriedades estendidas associadas com o objeto de origem do artigo publicado. *Não há suportada para Publicadores Oracle*.|  
 |**0x4000**|Replica restrições UNIQUE. Quaisquer índices relacionadas à restrição também são replicados, mesmo se as opções **0x10** e **0x40** não estão habilitados.|  
 |**0x8000**|Esta opção não é válida para Publicadores [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
@@ -196,7 +196,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x4000000**|Replica índices em **xml** colunas.|  
 |**0x8000000**|Cria qualquer esquema ainda não presente no assinante.|  
 |**0x10000000**|Converte **xml** colunas a serem **ntext** no assinante.|  
-|**0x20000000**|Converte tipos de dados objeto grande (**nvarchar (max)**, **varchar (max)**, e **varbinary (max)**) introduzidos no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para tipos de dados que têm suporte no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
+|**0x20000000**|Converte tipos de dados objeto grande (**nvarchar (max)** , **varchar (max)** , e **varbinary (max)** ) introduzidos no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para tipos de dados que têm suporte no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
 |**0x40000000**|Replica as permissões.|  
 |**0x80000000**|Tentativa de remover dependências de todos os objetos que não fazem parte da publicação.|  
 |**0x100000000**|Use esta opção para replicar o atributo FILESTREAM, se ele for especificado em **varbinary (max)** colunas. Não especifique essa opção se você estiver replicando tabelas para Assinantes [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Replicação de tabelas com colunas FILESTREAM para [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] assinantes não é suportada, independentemente de como essa opção de esquema é definida.<br /><br /> Consulte a opção relacionada **0x800000000**.|  
@@ -249,7 +249,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @artid = ] _article_ID_ OUTPUT` É a ID do artigo do novo artigo. *article_ID* está **int** com um padrão de NULL e é um parâmetro de saída.  
   
-`[ @auto_identity_range = ] 'auto_identity_range'` Habilita e desabilita o intervalo de identidade automática trabalhando em uma publicação no momento em que ele é criado. *auto_identity_range* está **nvarchar (5)**, e pode ser um dos seguintes valores:  
+`[ @auto_identity_range = ] 'auto_identity_range'` Habilita e desabilita o intervalo de identidade automática trabalhando em uma publicação no momento em que ele é criado. *auto_identity_range* está **nvarchar (5)** , e pode ser um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -283,7 +283,7 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Esse parâmetro só deve ser usado para Publicadores Oracle. Definindo *use_default_datatypes* à **0** para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador gera um erro.  
   
-`[ @identityrangemanagementoption = ] identityrangemanagementoption` Especifica como o gerenciamento de intervalo de identidade é tratado para o artigo. *identityrangemanagementoption* está **nvarchar (10)**, e pode ser um dos valores a seguir.  
+`[ @identityrangemanagementoption = ] identityrangemanagementoption` Especifica como o gerenciamento de intervalo de identidade é tratado para o artigo. *identityrangemanagementoption* está **nvarchar (10)** , e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -301,7 +301,7 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  *Publisher* não deve ser usado ao adicionar um artigo a uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
-`[ @fire_triggers_on_snapshot = ] 'fire_triggers_on_snapshot'` É se replicado gatilhos de usuário são executados quando o instantâneo inicial é aplicado. *fire_triggers_on_snapshot* está **nvarchar (5)**, com um padrão de FALSE. **True** significa que os gatilhos de usuário em uma tabela replicada são executados quando o instantâneo é aplicado. Para gatilhos a serem replicados, o valor de máscara de bits da *schema_option* deve incluir o valor **0x100**.  
+`[ @fire_triggers_on_snapshot = ] 'fire_triggers_on_snapshot'` É se replicado gatilhos de usuário são executados quando o instantâneo inicial é aplicado. *fire_triggers_on_snapshot* está **nvarchar (5)** , com um padrão de FALSE. **True** significa que os gatilhos de usuário em uma tabela replicada são executados quando o instantâneo é aplicado. Para gatilhos a serem replicados, o valor de máscara de bits da *schema_option* deve incluir o valor **0x100**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

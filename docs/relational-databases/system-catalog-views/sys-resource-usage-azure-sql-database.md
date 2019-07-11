@@ -16,16 +16,16 @@ helpviewer_keywords:
 - resource_usage
 - sys.resource_usage
 ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9b0e16279615bf102c916793439d440211939839
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a3a6baec134c715d5f15c0e3e45a19e17d5b5cf
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025401"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716300"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "63025401"
   
  Para cada banco de dados de usuário, há uma linha para cada hora na forma contínua. Mesmo se o banco de dados estiver ocioso durante aquela hora, há uma linha, e o valor de usage_in_seconds para esse banco de dados será 0. O uso de armazenamento e as informações de SKU são acumuladas para a hora adequadamente.  
   
-|Colunas|Tipo de Dados|Descrição|  
+|Colunas|Tipo de dados|Descrição|  
 |-------------|---------------|-----------------|  
 |time|**datetime**|A hora (UTC) em incrementos de hora.|  
 |database_name|**nvarchar**|Nome do banco de dados de usuário.|  

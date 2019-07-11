@@ -14,15 +14,15 @@ ms.assetid: 57ed65f6-9620-4738-b331-19d2a2b5cae4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad5f394eb30e70838bdc0a7b8ae6380c145a1952
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 821af40a9550cc6e5fc038bb8e9a24f9e4323441
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298222"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792821"
 ---
 # <a name="sqlparamoptions-mapping"></a>Mapeamento SQLParamOptions
-Quando um aplicativo chama **SQLParamOptions** por meio de um ODBC 3 *. x* driver, a chamada  
+Quando um aplicativo chama **SQLParamOptions** por meio de ODBC *3.x* driver, a chamada  
   
 ```  
 SQLParamOptions(hstmt, crow, piRow);  

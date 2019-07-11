@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: Envie trabalhos do Spark em clusters de grandes dados do SQL Server no estúdio de dados do Azure.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d5354927ff0c7e1c61bf358ad73312611c18f317
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: db92ab03380bab1d6465fb53821ee6afbb345c54
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860447"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727363"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Enviar trabalhos do Spark em clusters de grandes dados do SQL Server no estúdio de dados do Azure
 
@@ -22,7 +22,7 @@ ms.locfileid: "58860447"
 
 Um dos principais cenários para clusters de big data é a capacidade de enviar trabalhos do Spark para visualização do SQL Server de 2019. O recurso de envio de trabalho do Spark permite que você envie arquivos Jar ou Py locais com referências a cluster de big data do SQL Server de 2019. Ele também permite que você execute um arquivos Jar ou Py, que já estão localizados no sistema de arquivos HDFS. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Ferramentas de big data do SQL Server 2019](deploy-big-data-tools.md):
    - **Azure Data Studio**

@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Este artigo explica como configurar o HDFS disposição em camadas para montar um sistema de arquivo externo do armazenamento do Azure Data Lake no HDFS em um cluster de big data do SQL Server 2019 (visualização).
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a36bd28efd128a76246297995d712b417d7f230d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 823e24b4ec78996140fa3f17cef9c1e56365a3f7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782110"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728739"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Configurar o HDFS disposição em camadas em clusters de grandes dados do SQL Server
 
@@ -35,7 +35,7 @@ Hoje em dia, por padrão, 1% do armazenamento HDFS total será reservado para o 
 
 As seções a seguir fornecem um exemplo de como configurar o HDFS disposição em camadas com uma fonte de dados do armazenamento do Azure Data Lake Gen2.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Cluster de big data implantados](deployment-guidance.md)
 - [Ferramentas de big data](deploy-big-data-tools.md)

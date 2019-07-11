@@ -14,12 +14,12 @@ ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33116adaf74ed2d3fc52fec460859a7672ce2d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6741b5f07f2427ef502f5177bbf01acd56c4d5b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057777"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794175"
 ---
 # <a name="odbc-glossary"></a>Glossário do ODBC
 ## <a name="a"></a>Um  
@@ -55,7 +55,7 @@ ms.locfileid: "63057777"
   
 ## <a name="b"></a>B  
  **alteração de comportamento**  
- Uma alteração em determinada funcionalidade do ODBC 3 *. x* comportamento do ODBC 2. *x* comportamento, ou vice-versa. Causado por alterar o atributo de ambiente SQL_ATTR_ODBC_VERSION.  
+ Uma alteração em determinada funcionalidade do ODBC *3.x* comportamento ao ODBC *2.x* comportamento, ou vice-versa. Causado por alterar o atributo de ambiente SQL_ATTR_ODBC_VERSION.  
   
  **Objeto binário grande (BLOB)**  
  Quaisquer dados binários durante um determinado número de bytes, como 255. Normalmente muito maior. Esses dados geralmente são enviados para e recuperados da fonte de dados em partes. Também conhecido como *dados long*.  

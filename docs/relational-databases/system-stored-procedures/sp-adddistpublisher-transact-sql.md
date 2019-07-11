@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistpublisher
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c01d00362dc55deb1fa9da8df49beebdaf82b170
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: b7f55d89054ff7d950921e0c6762770c6e714500
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492768"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716751"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

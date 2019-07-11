@@ -14,16 +14,16 @@ helpviewer_keywords:
 - sys.dm_geo_replication_links dynamic management view
 - dm_geo_replication_links dynamic management view
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 94ed170ea4aa99d861bea2e087310260982af4d3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cd552d357284ce6fefd85df43baa38ad52ebb310
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031758"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716640"
 ---
 # <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links (Banco de Dados SQL do Azure)
 
@@ -35,13 +35,13 @@ ms.locfileid: "56031758"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID do banco de dados atual no modo de exibição de sys. Databases.|  
 |start_date|**datetimeoffset**|Hora UTC em um datacenter regional do banco de dados SQL quando a replicação de banco de dados foi iniciada|  
-|modify_date|**datetimeoffset**|Hora do UTC no datacenter regional do banco de dados SQL quando a replicação geográfica do banco de dados foi concluída. O novo banco de dados está sincronizado com o banco de dados primário a partir desse momento. para obter informações sobre a ferramenta de configuração e recursos adicionais.|  
+|modify_date|**datetimeoffset**|Hora do UTC no datacenter regional do banco de dados SQL quando a replicação geográfica do banco de dados foi concluída. O novo banco de dados está sincronizado com o banco de dados primário a partir desse momento. .|  
 |link_guid|**uniqueidentifier**|ID exclusiva do link de replicação geográfica.|  
 |partner_server|**sysname**|Nome do servidor de banco de dados SQL que contém o banco de dados replicado geograficamente.|  
 |partner_database|**sysname**|Nome do banco de dados com replicação geográfica no servidor de banco de dados SQL vinculado.|  
 |replication_state|**tinyint**|O estado de replicação geográfica para esse banco de dados, um dos:.<br /><br /> 0 = pendente. A criação do banco de dados secundário ativo está agendada, mas as etapas de preparação necessárias ainda não foram concluídas.<br /><br /> 1 = propagação. O destino de replicação geográfica está sendo propagado, mas os dois bancos de dados ainda não estão sincronizados. Até que a propagação seja concluída, você não pode se conectar ao banco de dados secundário. Remover banco de dados secundário do primário cancelará a operação de propagação.<br /><br /> 2 = recuperar o atraso. O banco de dados secundário está em um estado transacionalmente consistente e está sendo constantemente sincronizado com o banco de dados primário.|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
-|função|**tinyint**|Função de replicação geográfica, um dos:<br /><br /> 0 = primary. O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.<br /><br /> 1 = secundário.  O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.|  
+|role|**tinyint**|Função de replicação geográfica, um dos:<br /><br /> 0 = primary. O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.<br /><br /> 1 = secundário.  O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|O tipo de secundário, um dos:<br /><br /> 0 = Não. O banco de dados secundário não está acessível até que o failover.<br /><br /> 1 = somente leitura. O banco de dados secundário é acessível somente para conexões de cliente com ApplicationIntent = ReadOnly.<br /><br /> 2 = Todos. O banco de dados secundário é acessível a qualquer conexão de cliente.|  
 |secondary_allow_connections _desc|**nvarchar(256)**|Não<br /><br /> Todos<br /><br /> Somente leitura|  

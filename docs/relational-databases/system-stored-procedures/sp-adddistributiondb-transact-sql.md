@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistributiondb
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 61425d2af597299e3f34186c4555d324278d8cbf
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: a6fb689832069ab8be4a260fecaa27b6b29f7ca5
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492549"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716734"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,15 +56,15 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="arguments"></a>Argumentos  
 `[ @database = ] database'` É o nome do banco de dados de distribuição a ser criado. *banco de dados* está **sysname**, sem padrão. Se o banco de dados especificado já existir e não estiver marcado como banco de dados de distribuição, os objetos necessários para habilitar a distribuição serão instalados e o banco de dados será marcado como banco de dados de distribuição. Se o banco de dados especificado já estiver habilitado como um banco de dados de distribuição, um erro será retornado.  
   
-`[ @data_folder = ] 'data_folder'_` É o nome do diretório usado para armazenar o arquivo de dados do banco de dados de distribuição. *data_folder* está **nvarchar (255)**, com um padrão NULL. Se for NULL, o diretório de dados para aquela instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado, por exemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
+`[ @data_folder = ] 'data_folder'_` É o nome do diretório usado para armazenar o arquivo de dados do banco de dados de distribuição. *data_folder* está **nvarchar (255)** , com um padrão NULL. Se for NULL, o diretório de dados para aquela instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado, por exemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
   
-`[ @data_file = ] 'data_file'` É o nome do arquivo de banco de dados. *data_file* está **nvarchar (255)**, com um padrão de **banco de dados**. Se for NULL, o procedimento armazenado cria um nome de arquivo usando o nome de banco de dados.  
+`[ @data_file = ] 'data_file'` É o nome do arquivo de banco de dados. *data_file* está **nvarchar (255)** , com um padrão de **banco de dados**. Se for NULL, o procedimento armazenado cria um nome de arquivo usando o nome de banco de dados.  
   
 `[ @data_file_size = ] data_file_size` É o tamanho do arquivo de dados inicial em megabytes (MB). *data_file_size eu*s **int**, com um padrão de 5 MB.  
   
-`[ @log_folder = ] 'log_folder'` É o nome do diretório para o arquivo de log do banco de dados. *log_folder* está **nvarchar (255)**, com um padrão NULL. Se for NULL, o diretório de dados para aquela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado (por exemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
+`[ @log_folder = ] 'log_folder'` É o nome do diretório para o arquivo de log do banco de dados. *log_folder* está **nvarchar (255)** , com um padrão NULL. Se for NULL, o diretório de dados para aquela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado (por exemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
   
-`[ @log_file = ] 'log_file'` É o nome do arquivo de log. *Arquivo_de_log* está **nvarchar (255)**, com um padrão NULL. Se for NULL, o procedimento armazenado cria um nome de arquivo usando o nome de banco de dados.  
+`[ @log_file = ] 'log_file'` É o nome do arquivo de log. *Arquivo_de_log* está **nvarchar (255)** , com um padrão NULL. Se for NULL, o procedimento armazenado cria um nome de arquivo usando o nome de banco de dados.  
   
 `[ @log_file_size = ] log_file_size` É o tamanho do arquivo de log inicial em megabytes (MB). *log_file_size* está **int**, com um padrão de 0 MB, o que significa que o tamanho do arquivo é criado usando o log de menor arquivo tamanho permitido pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

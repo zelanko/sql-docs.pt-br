@@ -19,12 +19,12 @@ ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8067aaa2133648c1a1ea4fff81db08c139d5278
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245990"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793399"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Funções de banco de dados fixas do SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem as seguintes funções de banco de dados fixas do **msdb** , que propiciam aos administradores um melhor controle do acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. As funções, ordenadas do menor para o maior acesso privilegiado, são:  
@@ -48,7 +48,7 @@ ms.locfileid: "63245990"
   
  A tabela a seguir resume as permissões de **SQLAgentUserRole** em objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-|Ação|Operadores|Trabalhos locais<br /><br /> (apenas trabalhos possuídos)|Agendas de trabalho<br /><br /> (apenas agendas possuídas)|Proxies|  
+|Action|Operadores|Trabalhos locais<br /><br /> (apenas trabalhos possuídos)|Agendas de trabalho<br /><br /> (apenas agendas possuídas)|Proxies|  
 |------------|---------------|----------------------------------------|------------------------------------------------|-------------|  
 |Criar/modificar/excluir|Não|Sim <sup>1</sup>|Sim|Não|  
 |Exibir lista (enumerar)|Sim <sup>2</sup>|Sim|Sim|Sim <sup>3</sup>|  
@@ -75,7 +75,7 @@ ms.locfileid: "63245990"
   
  A tabela a seguir resume as permissões de **SQLAgentReaderRole** em objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-|Ação|Operadores|Trabalhos locais|Trabalhos multisservidor|Agendas de trabalho|Proxies|  
+|Action|Operadores|Trabalhos locais|Trabalhos multisservidor|Agendas de trabalho|Proxies|  
 |------------|---------------|----------------|----------------------|-------------------|-------------|  
 |Criar/modificar/excluir|Não|Sim <sup>1</sup> (apenas trabalhos possuídos)|Não|Sim (somente agendas possuídas)|Não|  
 |Exibir lista (enumerar)|Sim <sup>2</sup>|Sim|Sim|Sim|Sim <sup>3</sup>|  
@@ -98,7 +98,7 @@ ms.locfileid: "63245990"
 ### <a name="sqlagentoperatorrole-permissions"></a>Permissões de SQLAgentOperatorRole  
  A função**SQLAgentOperatorRole** é a mais privilegiada das funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Ela inclui todas as permissões de **SQLAgentUserRole** e **SQLAgentReaderRole**. Os membros desta função também podem exibir propriedades de operadores e proxies, bem como enumerar os proxies e alertas disponíveis no servidor.  
   
- Membros de**SQLAgentOperatorRole** têm permissões adicionais em trabalhos locais e agendas. Podem executar, interromper ou iniciar todos os trabalhos locais, bem como excluir o histórico de trabalhos de qualquer trabalho local no servidor. Também podem habilitar ou desabilitar todos os trabalhos locais e agendas no servidor. Para habilitar ou desabilitar trabalhos locais ou agendas, os membros desta função devem usar os procedimentos armazenados **sp_update_job** e **sp_update_schedule**. Apenas os parâmetros que especificam o nome do trabalho ou da agenda ou o identificador e o parâmetro **@enabled** podem ser especificados por membros de **SQLAgentOperatorRole**. Se especificarem algum outro parâmetro, a execução desses procedimentos armazenados falhará. Membros de**SQLAgentOperatorRole** não podem alterar a propriedade do trabalho para ganhar acesso a trabalhos que ainda não possuem.  
+ Membros de**SQLAgentOperatorRole** têm permissões adicionais em trabalhos locais e agendas. Podem executar, interromper ou iniciar todos os trabalhos locais, bem como excluir o histórico de trabalhos de qualquer trabalho local no servidor. Também podem habilitar ou desabilitar todos os trabalhos locais e agendas no servidor. Para habilitar ou desabilitar trabalhos locais ou agendas, os membros desta função devem usar os procedimentos armazenados **sp_update_job** e **sp_update_schedule**. Apenas os parâmetros que especificam o nome do trabalho ou agenda ou o identificador e o  **\@habilitados** parâmetro pode ser especificado por membros das **SQLAgentOperatorRole**. Se especificarem algum outro parâmetro, a execução desses procedimentos armazenados falhará. Membros de**SQLAgentOperatorRole** não podem alterar a propriedade do trabalho para ganhar acesso a trabalhos que ainda não possuem.  
   
  Os nós **Trabalhos**, **Alertas**, **Operadores**e **Proxies** no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] são visíveis a membros de **SQLAgentOperatorRole**. Somente o nó **Logs de Erros** não é visível a membros desta função.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "63245990"
   
  A tabela a seguir resume as permissões de **SQLAgentOperatorRole** em objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-|Ação|Alertas|Operadores|Trabalhos locais|Trabalhos multisservidor|Agendas de trabalho|Proxies|  
+|Action|Alertas|Operadores|Trabalhos locais|Trabalhos multisservidor|Agendas de trabalho|Proxies|  
 |------------|------------|---------------|----------------|----------------------|-------------------|-------------|  
 |Criar/modificar/excluir|Não|Não|Sim <sup>2</sup> (apenas trabalhos possuídos)|Não|Sim (somente agendas possuídas)|Não|  
 |Exibir lista (enumerar)|Sim|Sim <sup>1</sup>|Sim|Sim|Sim|Sim|  
@@ -123,9 +123,9 @@ ms.locfileid: "63245990"
   
  <sup>2</sup> não é possível alterar a propriedade do trabalho.  
   
- <sup>3</sup> **SQLAgentOperatorRole** podem habilitar ou desabilitar trabalhos locais que não possuem, por meio do procedimento armazenado **sp_update_job** e especificando valores para o **@enabled** e o **@job_id** (ou **@job_name** ) parâmetros. Se um membro desta função especificar algum outro parâmetro para esse procedimento armazenado, a execução do procedimento falhará.  
+ <sup>3</sup> **SQLAgentOperatorRole** podem habilitar ou desabilitar trabalhos locais que não possuem, por meio do procedimento armazenado **sp_update_job** e especificando valores para o  **\@habilitados** e o  **\@job_id** (ou  **\@job_name**) parâmetros. Se um membro desta função especificar algum outro parâmetro para esse procedimento armazenado, a execução do procedimento falhará.  
   
- <sup>4</sup> **SQLAgentOperatorRole** podem habilitar ou desabilitar agendas que não possuem, por meio do procedimento armazenado **sp_update_schedule** e especificando valores para o **@enabled** e o **@schedule_id** (ou **@name** ) parâmetros. Se um membro desta função especificar algum outro parâmetro para esse procedimento armazenado, a execução do procedimento falhará.  
+ <sup>4</sup> **SQLAgentOperatorRole** podem habilitar ou desabilitar agendas que não possuem, por meio do procedimento armazenado **sp_update_schedule** e especificando valores para o  **\@habilitados** e o  **\@schedule_id** (ou  **\@nome**) parâmetros. Se um membro desta função especificar algum outro parâmetro para esse procedimento armazenado, a execução do procedimento falhará.  
   
 ## <a name="assigning-users-multiple-roles"></a>Atribuindo várias funções aos usuários  
  Membros da função de servidor fixa **sysadmin** têm acesso a toda a funcionalidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Caso um usuário não seja membro da função **sysadmin** , mas seja membro de mais de uma função de banco de dados fixa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, é importante ter em mente o modelo de permissões concêntricas dessas funções. Como funções mais privilegiadas sempre detêm todas as permissões das funções menos privilegiadas, o usuário que for membro de mais de uma função terá, automaticamente, as permissões associadas à função mais privilegiada de que é membro.  

@@ -16,23 +16,23 @@ helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3ca0aa09718d8310ccb6ba304d8cc5595d8c5299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22d771f57e5ac0d9035b8c283eb6da69027eadb3
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65993885"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716680"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Retorna o consumo de CPU, E/S e consumo de memória para um banco de dados [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Existe uma linha para cada 15 segundos, mesmo se não houver nenhuma atividade no banco de dados. Dados do histórico são mantidos por uma hora.  
   
-|Colunas|Tipo de Dados|Descrição|  
+|Colunas|Tipo de dados|Descrição|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|Hora UTC que indica o término do intervalo de relatório atual.|  
 |avg_cpu_percent|**decimal (5,2)**|Utilização média de computação, em porcentagem, do limite da camada de serviço.|  

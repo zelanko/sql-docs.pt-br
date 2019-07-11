@@ -1,36 +1,36 @@
 ---
-title: Início rápido da implantação
+title: Script de implantação
 titleSuffix: SQL Server big data clusters
 description: Passo a passo uma implantação de clusters de big data 2019 do SQL Server (versão prévia) no serviço de Kubernetes do Azure (AKS).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 05/22/2019
-ms.topic: quickstart
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d1b8c595512d3268e0e04482d464f6c19ee01234
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0254b76b0845ff5f913d2d0ab69324ddd0072923
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798741"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728776"
 ---
-# <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Início Rápido: Implantar um cluster de big data do SQL Server no serviço de Kubernetes do Azure (AKS)
+# <a name="deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Implantar um cluster de big data do SQL Server no serviço de Kubernetes do Azure (AKS)
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Neste início rápido, você pode usar um exemplo de script de implantação para implantar o cluster de big data de 2019 do SQL Server (versão prévia) para o serviço de Kubernetes do Azure (AKS). 
+Neste tutorial, você pode usar um exemplo de script de implantação para implantar o cluster de big data de 2019 do SQL Server (versão prévia) para o serviço de Kubernetes do Azure (AKS). 
 
 > [!TIP]
 > O AKS é apenas uma opção para hospedagem de Kubernetes para seu cluster de big data. Para saber mais sobre outras opções de implantação, como personalizar a implantação de opções, consulte [clusters de como implantar grandes de dados do SQL Server em Kubernetes](deployment-guidance.md).
 
-A implantação de cluster de big data padrão usada aqui consiste em duas instâncias de pool de armazenamento, computação de uma instância de pool, duas instâncias de pool de dados e uma instância do SQL Master. Os dados persistem usando volumes persistentes Kubernetes que usam as classes de armazenamento de padrão do AKS. A configuração padrão usada neste início rápido é adequada para ambientes de desenvolvimento/teste.
+A implantação de cluster de big data padrão usada aqui consiste em duas instâncias de pool de armazenamento, computação de uma instância de pool, duas instâncias de pool de dados e uma instância do SQL Master. Os dados persistem usando volumes persistentes Kubernetes que usam as classes de armazenamento de padrão do AKS. A configuração padrão usada neste tutorial é adequada para ambientes de desenvolvimento/teste.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Uma assinatura do Azure.
 - [Ferramentas de big data](deploy-big-data-tools.md):
@@ -50,7 +50,7 @@ az login
 
 ## <a name="download-the-deployment-script"></a>Baixe o script de implantação
 
-Neste início rápido automatiza a criação do cluster de big data no AKS usando um script python **implantar-sql-big-data-aks.py**. Se você tiver instalado o python para o **mssqlctl**, você deve ser capaz de executar o script com êxito neste início rápido. 
+Este tutorial automatiza a criação do cluster de big data no AKS usando um script python **implantar-sql-big-data-aks.py**. Se você tiver instalado o python para o **mssqlctl**, você deve ser capaz de executar o script com êxito neste tutorial. 
 
 Em um prompt de bash do Windows PowerShell ou do Linux, execute o seguinte comando para baixar o script de implantação do GitHub.
 

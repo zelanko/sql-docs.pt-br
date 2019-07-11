@@ -20,12 +20,12 @@ ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f76974a17fc12c4a72623c133586690c81269d06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cee1f41c76a79edf1d78d8b94b07107c3c2771e0
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536282"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793158"
 ---
 # <a name="sqlsetdescrec-function"></a>Função SQLSetDescRec
 **Conformidade com**  
@@ -101,7 +101,7 @@ SQLRETURN SQLSetDescRec(
 |HY013|Erro de gerenciamento de memória|A chamada de função não pôde ser processada porque os objetos de memória subjacente não pôde ser acessados, possivelmente devido a condições de memória insuficiente.|  
 |HY016|Não é possível modificar um descritor de linha de implementação|O *DescriptorHandle* argumento foi associado um IRD.|  
 |HY021|Informações do descritor inconsistentes|O *tipo* campo, ou qualquer outro campo associado ao campo SQL_DESC_TYPE no descritor de não era válida ou consistente.<br /><br /> Informações de descritor verificadas durante uma verificação de consistência não eram consistentes. (Consulte "Verificações de consistência" nesta seção.)|  
-|HY090|Comprimento de buffer ou cadeia de caracteres inválido|(DM) o driver foi um ODBC 2 *. x* driver, o descritor foi um descartar o *ColumnNumber* argumento foi definido como 0 e o valor especificado para o argumento *BufferLength* foi não é igual a 4.|  
+|HY090|Comprimento de buffer ou cadeia de caracteres inválido|(DM) o driver foi um ODBC *2.x* driver, o descritor foi um descartar o *ColumnNumber* argumento foi definido como 0 e o valor especificado para o argumento *BufferLength* foi não é igual a 4.|  
 |HY117|Conexão está suspenso devido ao estado de transação desconhecida. Somente se desconectar e funções de somente leitura são permitidas.|(DM) para obter mais informações sobre o estado suspenso, consulte [função SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Tempo limite da Conexão expirado|O período de tempo limite de conexão expirado antes que a fonte de dados respondeu à solicitação. O período de tempo limite de conexão é definido por meio **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Driver não oferece suporte a essa função|O driver em (DM) associado a *DescriptorHandle* não suporta a função.|  

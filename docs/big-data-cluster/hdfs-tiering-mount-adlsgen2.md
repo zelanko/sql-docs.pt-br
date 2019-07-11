@@ -4,24 +4,24 @@ titleSuffix: How to mount ADLS Gen2
 description: Este artigo explica como configurar o HDFS disposição em camadas para montar um sistema de arquivo externo do armazenamento do Azure Data Lake no HDFS em um cluster de big data do SQL Server 2019 (visualização).
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1d06b668a6c8badef75a0e90d3f58b67b1269984
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: 94835b3ae041aa721e915bb5399737b35c52799f
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419042"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728788"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Como Gen2 ADLS de montagem para o HDFS disposição em camadas em um cluster de big data
 
 As seções a seguir fornecem um exemplo de como configurar o HDFS disposição em camadas com uma fonte de dados do armazenamento do Azure Data Lake Gen2.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Cluster de big data implantados](deployment-guidance.md)
 - [Ferramentas de big data](deploy-big-data-tools.md)

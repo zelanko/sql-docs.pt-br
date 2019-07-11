@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: Envie trabalhos do Spark em clusters de grandes dados do SQL Server no Kit de ferramentas do Azure para IntelliJ.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e48aebbb15b9bd684b2ed3f5d4d314191a55ba42
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 5d2bb4b55b578530a29490a0a1a284f338686c38
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932293"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728362"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>Enviar trabalhos do Spark em clusters de grandes dados do SQL Server no IntelliJ
 
@@ -22,7 +22,7 @@ ms.locfileid: "59932293"
 
 Um dos principais cenários para clusters de grandes dados do SQL Server é a capacidade de enviar trabalhos do Spark. O recurso de envio de trabalho do Spark permite que você envie arquivos Jar ou Py locais com referências a clusters de grandes dados do SQL Server. Ele também permite que você execute um arquivos Jar ou Py, que já estão localizados no sistema de arquivos HDFS. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Cluster de big data do SQL Server.
 - Oracle Java Development Kit. Você pode instalá-lo partir o [site da Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
@@ -51,7 +51,7 @@ Um dos principais cenários para clusters de grandes dados do SQL Server é a ca
 
 1. Inicie o IntelliJ IDEA e, em seguida, crie um projeto. No **novo projeto** caixa de diálogo, siga as etapas abaixo: 
 
-   a. Selecione **Spark do Azure/HDInsight** > **Spark projeto com exemplos (Scala)**.
+   a. Selecione **Spark do Azure/HDInsight** > **Spark projeto com exemplos (Scala)** .
 
    b. No **ferramenta de compilação** , selecione qualquer uma das seguintes opções, de acordo com suas necessidades:
 
@@ -78,7 +78,7 @@ Um dos principais cenários para clusters de grandes dados do SQL Server é a ca
 
    b. No **SDK do projeto** lista suspensa, selecione **Java 1.8** para o cluster Spark 2.x ou selecione **Java 1.7** para o cluster Spark 1.x.
 
-   c. No **versão do Spark** lista suspensa, o Assistente de criação de projeto Scala integra a versão apropriada para SDK do Spark e o SDK do Scala. Se a versão de cluster do Spark for inferior a 2.0, selecione **Spark 1.x**. Caso contrário, selecione **Spark2.x**. Este exemplo usa **Spark 2.0.2 (Scala 2.11.8)**.
+   c. No **versão do Spark** lista suspensa, o Assistente de criação de projeto Scala integra a versão apropriada para SDK do Spark e o SDK do Scala. Se a versão de cluster do Spark for inferior a 2.0, selecione **Spark 1.x**. Caso contrário, selecione **Spark2.x**. Este exemplo usa **Spark 2.0.2 (Scala 2.11.8)** .
 
 6. Selecione **Concluir**.
 
@@ -86,7 +86,7 @@ Um dos principais cenários para clusters de grandes dados do SQL Server é a ca
 
    a. Sobre o **arquivo** menu, selecione **estrutura do projeto**.
 
-   b. No **estrutura do projeto** caixa de diálogo, selecione **artefatos** para exibir o artefato padrão criado. Você também pode criar seu próprio artefato selecionando o sinal de adição (**+**).
+   b. No **estrutura do projeto** caixa de diálogo, selecione **artefatos** para exibir o artefato padrão criado. Você também pode criar seu próprio artefato selecionando o sinal de adição ( **+** ).
 
       ![Informações de artefato na caixa de diálogo](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
@@ -104,7 +104,7 @@ Depois de vincular um cluster de big data do SQL Server, você pode enviar o apl
 
     * Selecione um artefato do projeto IntelliJ ou selecionar uma na unidade de disco rígido.
 
-    * **Nome da classe principal** campo: O valor padrão é a classe principal do arquivo selecionado. Você pode alterar a classe selecionando as reticências (**...** ) e escolhendo outra classe.   
+    * **Nome da classe principal** campo: O valor padrão é a classe principal do arquivo selecionado. Você pode alterar a classe selecionando as reticências ( **...** ) e escolhendo outra classe.   
 
     * **As configurações de trabalho** campo:  Os valores padrão são definidos como imagem mostrada acima. Você pode alterar o valor ou adicionar nova chave/valor para o envio do trabalho. Para obter mais informações, consulte: [Apache Livy API REST](http://livy.incubator.apache.org./docs/latest/rest-api.html)
 
@@ -133,7 +133,7 @@ Certifique-se de que você tiver satisfeito a WINUTILS. Pré-requisito EXE.
 
 1. Na barra de menus, navegue até **executados** > **editar configurações...** .
 
-2. Dos **executar/depurar configurações** janela, no painel esquerdo, navegue até **Apache Spark no cluster de big data do SQL Server** > **myApp [Spark no SQL]**.
+2. Dos **executar/depurar configurações** janela, no painel esquerdo, navegue até **Apache Spark no cluster de big data do SQL Server** > **myApp [Spark no SQL]** .
 
 3. Na janela principal, selecione a **executar localmente** guia.
 
@@ -141,7 +141,7 @@ Certifique-se de que você tiver satisfeito a WINUTILS. Pré-requisito EXE.
 
     |Propriedade |Valor |
     |----|----|
-    |Classe principal do trabalho|O valor padrão é a classe principal do arquivo selecionado. Você pode alterar a classe selecionando as reticências (**...** ) e escolhendo outra classe.|
+    |Classe principal do trabalho|O valor padrão é a classe principal do arquivo selecionado. Você pode alterar a classe selecionando as reticências ( **...** ) e escolhendo outra classe.|
     |Variáveis de ambiente|Verifique se que o valor de HADOOP_HOME está correto.|
     |WINUTILS.exe local|Verifique se que o caminho está correto.|
 
@@ -149,7 +149,7 @@ Certifique-se de que você tiver satisfeito a WINUTILS. Pré-requisito EXE.
 
 5. No projeto, navegue até **myApp** > **src** > **principal** > **scala**  >  **myApp**.  
 
-6. Na barra de menus, navegue até **ferramentas** > **Console Spark** > **Spark de execução Local Console(Scala)**.
+6. Na barra de menus, navegue até **ferramentas** > **Console Spark** > **Spark de execução Local Console(Scala)** .
 
 7. Em seguida, duas caixas de diálogo poderão ser exibidas para perguntar se você deseja auto corrigir as dependências. Nesse caso, selecione **correção automática**.
 
@@ -167,7 +167,7 @@ Somente há suporte para Console(Scala) da sessão interativa do Spark Livy no I
 
 1. Na barra de menus, navegue até **executados** > **editar configurações...** .
 
-2. Dos **executar/depurar configurações** janela, no painel esquerdo, navegue até **Apache Spark no cluster de big data do SQL Server** > **myApp [Spark no SQL]**.
+2. Dos **executar/depurar configurações** janela, no painel esquerdo, navegue até **Apache Spark no cluster de big data do SQL Server** > **myApp [Spark no SQL]** .
 
 3. Na janela principal, selecione a **executar remotamente em Cluster** guia.
 
@@ -176,13 +176,13 @@ Somente há suporte para Console(Scala) da sessão interativa do Spark Livy no I
     |Propriedade |Valor |
     |----|----|
     |Clusters Spark (somente Linux)|Selecione o cluster de Big Data do SQL Server no qual você deseja executar o aplicativo.|
-    |Nome da classe principal|O valor padrão é a classe principal do arquivo selecionado. Você pode alterar a classe selecionando as reticências (**...** ) e escolhendo outra classe.|
+    |Nome da classe principal|O valor padrão é a classe principal do arquivo selecionado. Você pode alterar a classe selecionando as reticências ( **...** ) e escolhendo outra classe.|
 
     ![Definir a configuração Console interativo](./media/spark-submit-job-intellij-tool-plugin/interactive-console-configuration.png)
 
 5. No projeto, navegue até **myApp** > **src** > **principal** > **scala**  >  **myApp**.  
 
-6. Na barra de menus, navegue até **ferramentas** > **Console Spark** > **executar Spark Livy interativo sessão Console(Scala)**.
+6. Na barra de menus, navegue até **ferramentas** > **Console Spark** > **executar Spark Livy interativo sessão Console(Scala)** .
 
 7. O console deve ser semelhante à imagem abaixo. Na janela da console, digite `sc.appName`, em seguida, pressione ctrl + Enter.  O resultado será mostrado. Você pode encerrar o console local clicando no botão vermelho.
 

@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Implante um script Python ou R como um aplicativo no cluster de big data do SQL Server 2019 (visualização).
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0b0d76db3813e0a399f1ece841d729711743cbd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba56ebb90d09866b7860c5f29dd2a26cf525fd9b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801910"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729306"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Como usar o VS Code para implantar aplicativos em clusters de grandes dados do SQL Server
 
@@ -23,12 +23,12 @@ ms.locfileid: "66801910"
 
 Este artigo descreve como implantar aplicativos em um cluster de big data do SQL Server usando o Visual Studio Code com a extensão de implantação do aplicativo. Essa funcionalidade foi introduzida no CTP 2.3. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Visual Studio Code](https://code.visualstudio.com/).
 - [Cluster de big data do SQL Server](big-data-cluster-overview.md) CTP 2.3 ou posterior.
 
-## <a name="capabilities"></a>Recursos
+## <a name="capabilities"></a>Capacidades
 
 Essa extensão oferece suporte as seguintes tarefas no Visual Studio Code:
 
@@ -128,7 +128,7 @@ Você pode exibir todos os aplicativos que você implantou na barra lateral com 
 - Parâmetros de saída
 - links
   - swagger
-  - detalhes
+  - details
 
 Se você clicar `Links`, você verá que você pode acessar o `swagger.json` do seu aplicativo implantado, para que você possa escrever seus próprios clientes que chamam o seu aplicativo:
 

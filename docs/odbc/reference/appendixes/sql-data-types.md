@@ -15,12 +15,12 @@ ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 623ac38791eebc6db84380dfadd499651af938af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56caa8131cea834b88eeb338bb05d20c25349ea9
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280918"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794159"
 ---
 # <a name="sql-data-types"></a>Tipos de dados SQL
 Cada DBMS define seus próprios tipos SQL. Cada driver ODBC expõe apenas esses tipos de dados SQL que define o DBMS associado. Informações sobre como um driver mapeia tipos de DBMS SQL para os identificadores de tipo definidas pelo ODBC SQL e como um driver mapeia os tipos de DBMS SQL para seus próprio identificadores de tipo SQL específica do driver é retornado por uma chamada para **SQLGetTypeInfo**. Um driver também retorna os tipos de dados SQL ao descrever os tipos de dados de colunas e parâmetros por meio de chamadas para **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  
@@ -86,7 +86,7 @@ Cada DBMS define seus próprios tipos SQL. Cada driver ODBC expõe apenas esses 
   
  [5] dependendo da implementação, a precisão de SQL_FLOAT pode ser 24 ou 53: se ele for 24, o tipo de dados SQL_FLOAT é o mesmo que SQL_REAL; Se for 53, o tipo de dados SQL_FLOAT é o mesmo que SQL_DOUBLE.  
   
- [6] em ODBC 3 *. x*, os tipos de dados de data, hora e carimbo de hora do SQL são SQL_TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP, respectivamente; no ODBC 2. *x*, os tipos de dados são SQL_DATE, SQL_TIME e SQL_TIMESTAMP.  
+ [6] no ODBC *3.x*, os tipos de dados de data, hora e carimbo de hora do SQL são SQL_TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP, respectivamente; no ODBC *2.x*, os tipos de dados são SQL_DATE, SQL_TIME e SQL _ CARIMBO DE HORA.  
   
  [7] para obter mais informações sobre os tipos de dados SQL de intervalo, consulte o [tipos de dados Interval](../../../odbc/reference/appendixes/interval-data-types.md) seção mais adiante neste apêndice.  
   

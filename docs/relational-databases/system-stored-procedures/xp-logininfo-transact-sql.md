@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 96dc11ebc246e42fb4b01b777b430c6aa9230b5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e48337afee5320355eb71025bffb972b85e3358
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099954"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793613"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 `[ @acctname = ] 'account_name'` É o nome de um usuário do Windows ou grupo acesso concedido ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* está **sysname**, com um padrão NULL. Se *account_name* não for especificado, todos os grupos do Windows e os usuários do Windows que tenham sido explicitamente concedido permissão de logon são relatados. *account_name* deve ser totalmente qualificado. Por exemplo, 'ADVWKS4\macraes' ou 'BUILTIN\Administrators'.  
   
  **'todos'**  |  **'membros'**  
- Especifica se as informações sobre todos os caminhos de permissão para a conta ou sobre os membros do grupo do Windows devem ser relatadas. **@option** está **varchar(10)** , com um padrão NULL. A menos que **todos os** for especificado, somente o primeiro caminho de permissão é exibido.  
+ Especifica se as informações sobre todos os caminhos de permissão para a conta ou sobre os membros do grupo do Windows devem ser relatadas. **\@opção** está **varchar(10)** , com um padrão NULL. A menos que **todos os** for especificado, somente o primeiro caminho de permissão é exibido.  
   
 `[ @privilege = ] variable_name` É um parâmetro de saída que retorna o nível de privilégio da conta do Windows especificada. *variable_name* está **varchar(10)** , com um padrão de 'Not wanted'. O nível de privilégio retornado é **usuário**, **admin**, ou **nulo**.  
   

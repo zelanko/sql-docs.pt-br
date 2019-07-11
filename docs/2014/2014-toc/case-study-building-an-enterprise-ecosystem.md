@@ -9,12 +9,12 @@ ms.assetid: 2b0b5ab7-4e08-431a-bd59-360177c4565c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 64a1423295b8117640de555a7132a44af98b87c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6cc9530b636409864e7e1b72f7417619a0fc8af
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470097"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792474"
 ---
 # <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>Estudo de caso: Criação de um ecossistema corporativo com o Microsoft Dynamics ERP e replicação do SQL Server 2014 para desempenho e escalabilidade
 
@@ -26,11 +26,11 @@ Como compreender as especificações envolvidas e aproveitar a replicação tran
   
  Este conteúdo é adequado para desenvolvedores, arquitetos e administradores de banco de dados. Supõe-se que os leitores deste white paper tenham conhecimento básico do SQL Server 2008, 2012 ou 2014, bem como experiência em administração do SQL Server.  
   
- **Writer:** Prabhakaran Sethuraman (PRAB), Microsoft  
+ **Gravador:** Prabhakaran Sethuraman (PRAB), Microsoft  
   
  **Revisores técnicos:** Prabhakaran Sethuraman (PRAB), Microsoft; Santosh Padhy, Microsoft; Pavel Majstrov, Microsoft; Karthik Sankaranarayanan, Microsoft; Jon Acone, Microsoft; David Stahlkopf, Microsoft; Kent Oldenburger, Microsoft; Mandi Ohlinger, Microsoft; Jason Roth, Microsoft  
   
- **Publicado em:** outubro de 2015  
+ **Publicado em:** Outubro de 2015  
   
  **Aplica-se a:** SQL Server 2008, SQL Server 2012 e SQL Server 2014  
   

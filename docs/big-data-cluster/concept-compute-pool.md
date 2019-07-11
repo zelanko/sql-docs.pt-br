@@ -2,20 +2,20 @@
 title: Quais são os pools de computação?
 titleSuffix: SQL Server big data clusters
 description: Este artigo descreve o pool de computação em um cluster de big data do SQL Server 2019 (visualização).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: ec1223e9255dd4dda40fb26fb9e8306bec57d926
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6da6e2b948027446623e47a58670e44cd99886de
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800724"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729153"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>Quais são os pools de computação em um cluster de big data do SQL Server?
 

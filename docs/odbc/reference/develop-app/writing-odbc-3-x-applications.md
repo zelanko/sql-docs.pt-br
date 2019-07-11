@@ -19,25 +19,25 @@ ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93c8510bb23bb57244590a472073fc882f9fe64f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a51183964fe36d799e0e62243c6a0012da99727
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208463"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793281"
 ---
 # <a name="writing-odbc-3x-applications"></a>Escrever aplicativos ODBC 3.x
-Quando um ODBC 2. *x* aplicativo é atualizado para o ODBC 3. *x*, ele deve ser escrito de forma que ele funciona com os dois ODBC 2. *x* e 3. *x* drivers. O aplicativo deve incorporar o código condicional para aproveitar ao máximo o ODBC 3. *x* recursos.  
+Quando um ODBC *2.x* aplicativo é atualizado para ODBC *3.x*, ele deve ser escrito de forma que ele funciona com ODBC *2.x* e *3.x* drivers . O aplicativo deve incorporar o código condicional para aproveitar ao máximo o ODBC *3.x* recursos.  
   
- O atributo de ambiente SQL_ATTR_ODBC_VERSION deve ser definido como SQL_OV_ODBC2. Isso garantirá que o driver se comporta como um ODBC 2 *. x* driver em relação as alterações descritas na seção [alterações comportamentais](../../../odbc/reference/develop-app/behavioral-changes.md).  
+ O atributo de ambiente SQL_ATTR_ODBC_VERSION deve ser definido como SQL_OV_ODBC2. Isso garantirá que o driver se comporta como um ODBC *2.x* driver em relação as alterações descritas na seção [alterações comportamentais](../../../odbc/reference/develop-app/behavioral-changes.md).  
   
- Se o aplicativo usar qualquer um dos recursos descritos na seção [novos recursos](../../../odbc/reference/develop-app/new-features.md), código condicional deve ser usado para determinar se o driver é um ODBC 3. *x* ou o ODBC 2 *. x* driver. O aplicativo usa **SQLGetDiagField** e **SQLGetDiagRec** para obter o ODBC 3. *x* SQLSTATEs enquanto faz esses fragmentos de código condicional de processamento de erro. Os seguintes pontos sobre a nova funcionalidade devem ser considerados:  
+ Se o aplicativo usar qualquer um dos recursos descritos na seção [novos recursos](../../../odbc/reference/develop-app/new-features.md), código condicional deve ser usado para determinar se o driver é um ODBC *3.x* ou ODBC *2.x* driver. O aplicativo usa **SQLGetDiagField** e **SQLGetDiagRec** obter ODBC *3.x* SQLSTATEs enquanto faz esses fragmentos de código condicional de processamento de erro. Os seguintes pontos sobre a nova funcionalidade devem ser considerados:  
   
--   Um aplicativo afetado pela mudança no comportamento de tamanho do conjunto de linhas deve ter cuidado para não chame **SQLFetch** quando o tamanho da matriz é maior que 1. Esses aplicativos devem substituir chamadas para **SQLExtendedFetch** com chamadas para **SQLSetStmtAttr** para definir o atributo de instrução SQL_ATTR_ARRAY_STATUS_PTR e **SQLFetchScroll**, de modo que eles têm código comum que funciona com os dois ODBC 3. *x* e o ODBC 2. *x* drivers. Porque **SQLSetStmtAttr** com SQL_ATTR_ROW_ARRAY_SIZE será mapeado para **SQLSetStmtAttr** com SQL_ROWSET_SIZE para ODBC 2. *x* drivers, aplicativos podem apenas definir SQL_ATTR_ROW_ARRAY_SIZE para suas operações de busca multilinha.  
+-   Um aplicativo afetado pela mudança no comportamento de tamanho do conjunto de linhas deve ter cuidado para não chame **SQLFetch** quando o tamanho da matriz é maior que 1. Esses aplicativos devem substituir chamadas para **SQLExtendedFetch** com chamadas para **SQLSetStmtAttr** para definir o atributo de instrução SQL_ATTR_ARRAY_STATUS_PTR e **SQLFetchScroll**, de modo que eles têm código comum que funciona com ODBC *3.x* e ODBC *2.x* drivers. Porque **SQLSetStmtAttr** com SQL_ATTR_ROW_ARRAY_SIZE será mapeado para **SQLSetStmtAttr** com SQL_ROWSET_SIZE para ODBC *2.x* drivers, aplicativos podem definir apenas SQL _ATTR_ROW_ARRAY_SIZE para suas operações de busca multilinha.  
   
--   A maioria dos aplicativos que estão sendo atualizados, na verdade, não são afetados pelas alterações nos códigos de SQLSTATE. Para os aplicativos que são afetados, eles podem fazer uma pesquisa mecânica e substituir na maioria dos casos, usando a tabela de conversão de erro na seção "Mapeamento de SQLSTATE" para converter o ODBC 3. *x* códigos de erro para o ODBC 2 *. x* códigos. Desde o ODBC 3 *. x* Gerenciador de Driver realizará o mapeamento do ODBC 2. *x* SQLSTATEs ODBC 3. *x* SQLSTATEs, esses criadores de aplicativo precisam verificação apenas para o ODBC 3. *x* SQLSTATEs e não se preocupe sobre como incluir o ODBC 2. *x* SQLSTATEs no código condicional.  
+-   A maioria dos aplicativos que estão sendo atualizados, na verdade, não são afetados pelas alterações nos códigos de SQLSTATE. Para os aplicativos que são afetados, pode fazer uma pesquisa mecânica e substituir na maioria dos casos, usando a tabela de conversão de erro na seção "Mapeamento de SQLSTATE" Converter ODBC *3.x* códigos de erro ODBC *2.x* códigos. Desde o ODBC *3.x* Gerenciador de Driver executará o mapeamento do ODBC *2.x* SQLSTATEs ODBC *3.x* SQLSTATEs, esses criadores de aplicativo precisam verificação apenas para o ODBC  *3. x* SQLSTATEs e não se preocupe sobre ODBC, inclusive *2.x* SQLSTATEs no código condicional.  
   
--   Se um aplicativo faz muito uso de data, hora e tipos de dados de carimbo de hora, o aplicativo pode declarar propriamente ditos tenham um ODBC 2. *x* aplicativo e como usar as existentes de código em vez de usar código condicionado.  
+-   Se um aplicativo faz muito uso de data, hora e tipos de dados de carimbo de hora, o aplicativo pode declarar propriamente ditos tenham um ODBC *2.x* aplicativo e como usar as existentes de código em vez de usar código condicionado.  
   
  A atualização também deve incluir as seguintes etapas:  
   
@@ -57,7 +57,7 @@ Quando um ODBC 2. *x* aplicativo é atualizado para o ODBC 3. *x*, ele deve ser 
   
 -   Substitua todas as chamadas para **SQLTransact** com chamadas para **SQLEndTran**. Se o identificador válido mais à direita na **SQLTransact** chamada é um identificador de ambiente, um *HandleType* argumento SQL_HANDLE_ENV deve ser usado no **SQLEndTran** chamar com apropriado *manipular* argumento. Se o identificador válido mais à direita em sua **SQLTransact** chamada é um identificador de conexão, um *HandleType* argumento SQL_HANDLE_DBC deve ser usado no **SQLEndTran** chamar com apropriado *manipular* argumento.  
   
--   Substitua todas as chamadas para **SQLColAttributes** com chamadas para **SQLColAttribute**. Se o *FieldIdentifier* argumento é SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE ou SQL_COLUMN_LENGTH, não altere nada diferente do nome da função. Caso contrário, altere *FieldIdentifier* de SQL_COLUMN_XXXX para SQL_DESC_XXXX. Se *FieldIdentifier* é SQL_DESC_CONCISE_TYPE e o tipo de dados é um tipo de dados de data e hora, altere para o ODBC 3 correspondente *. x* tipo de dados.  
+-   Substitua todas as chamadas para **SQLColAttributes** com chamadas para **SQLColAttribute**. Se o *FieldIdentifier* argumento é SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE ou SQL_COLUMN_LENGTH, não altere nada diferente do nome da função. Caso contrário, altere *FieldIdentifier* de SQL_COLUMN_XXXX para SQL_DESC_XXXX. Se *FieldIdentifier* é SQL_DESC_CONCISE_TYPE e o tipo de dados é um tipo de dados de data e hora, altere para o ODBC correspondente *3.x* tipo de dados.  
   
 -   Se usar cursores em bloco, cursores roláveis ou ambos, o aplicativo faz o seguinte:  
   

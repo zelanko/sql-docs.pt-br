@@ -13,12 +13,12 @@ ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4679576a8336d9a35299622b8513b9c8ae855287
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8571f7273cc2667040ffffc8ffbfb0df4e2a6ef6
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267777"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792695"
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>Salvar resultados de rastreamento em uma tabela (SQL Server Profiler)
   Este tópico descreve como salvar resultados de rastreamento em uma tabela do banco de dados, usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -40,9 +40,9 @@ ms.locfileid: "63267777"
   
 5.  Na lista **Proprietário** , selecione o proprietário do rastreamento.  
   
-6.  Na lista **Tabela** , digite ou selecione o nome da tabela a conter os resultados do rastreamento. Clique em **OK.**  
+6.  Na lista **Tabela** , digite ou selecione o nome da tabela a conter os resultados do rastreamento. Clique em **OK**  
   
-7.  Na caixa de diálogo **Propriedades do Rastreamento** , marque a caixa de seleção **Definir máximo de linhas (em milhares)** para especificar o número máximo de linhas a serem salvas.  
+7.  No **propriedades do rastreamento** caixa de diálogo, selecione o **definir máximo de linhas (em milhares)** caixa de seleção para especificar o número máximo de linhas a serem salvas.  
   
 ## <a name="see-also"></a>Consulte também  
  [SQL Server Profiler](sql-server-profiler.md)  

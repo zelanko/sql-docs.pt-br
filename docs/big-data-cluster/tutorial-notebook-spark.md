@@ -2,20 +2,20 @@
 title: Executar um exemplo de notebook | Microsoft Docs
 titleSuffix: SQL Server big data clusters
 description: Este tutorial mostra como você pode carregar uma execução de um exemplo de notebook Spark em um cluster de big data do SQL Server 2019 (visualização).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 91daed271ca8e6a8eb04928a0806b287163143a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b07f552259aad61c03822ab5c9efd859f3244307
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770870"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728349"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Tutorial: Executar um exemplo de notebook em um cluster de big data do SQL Server
 
