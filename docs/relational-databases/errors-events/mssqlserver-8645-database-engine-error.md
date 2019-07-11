@@ -12,12 +12,12 @@ ms.assetid: 63d6d6d7-3850-4061-8e96-b1fa665e3180
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4ecb1732e3717a2145d8902077e638ec0affc11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e28f71fb3f9ec1168a7f89281b188c5fe44eb0f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746804"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585951"
 ---
 # <a name="mssqlserver8645"></a>MSSQLSERVER_8645
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Esta lista descreve etapas gerais que ajudarão a corrigir erros de memória:
   
 1.  Verifique se outros aplicativos ou serviços estão consumindo memória neste servidor. Reconfigure os aplicativos ou serviços menos críticos de maneira que eles consumam menos memória.  
   
-2.  Comece a coletar contadores do monitor de desempenho relativos a **SQL Server: Gerenciador de Buffer**, **SQL Server: Gerenciador de Memória**.  
+2.  Comece a coletar contadores do monitor de desempenho para o **SQL Server: Gerenciador de Buffer**, **SQL Server: Gerenciador de Memória**.  
   
 3.  Verifique os seguintes parâmetros de configuração da memória do SQL Server:  
   
@@ -58,7 +58,9 @@ Esta lista descreve etapas gerais que ajudarão a corrigir erros de memória:
 4.  Observe o resultado do DBCC MEMORYSTATUS e a forma como ele se altera quando você vê essas mensagens de erro.  
   
 5.  Verifique a carga de trabalho (por exemplo, o número de sessões simultâneas e de consultas em execução).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 As seguintes ações podem disponibilizar mais memória para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   Se outros aplicativos além do SQL Server estiverem consumindo recursos, tente parar a execução desses aplicativos ou considere a possibilidade de executá-los em outro servidor. Isso eliminará a pressão de memória externa.  
