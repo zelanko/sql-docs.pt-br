@@ -9056,7 +9056,7 @@
               items:
                 - name: Obtenha despejo de memória completo
                   href: ssms/troubleshoot/get-full-memory-dump.md
-                - name: Falhas e paradas
+                - name: Obter dados de diagnóstico
                   href: ssms/troubleshoot/ssms-troubleshoot.md
             - name: SQL Server Agent
               items:
