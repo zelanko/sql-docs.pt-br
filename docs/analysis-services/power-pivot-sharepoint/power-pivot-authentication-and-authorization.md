@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2f6568e39b364b0e7d486e0d9e0318709141be63
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c4f72522c1803a364d9a309b5fa2d21fd9f2fe18
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402641"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826498"
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Autenticação e autorização do Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "52402641"
 |Administrador de farm ou serviço|Instalar, habilitar e configurar serviços e aplicativos.<br /><br /> Usar o Painel de Gerenciamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e exibir relatórios administrativos.|  
 |Controle total|Ativar a integração de recursos do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no nível de conjunto de sites.<br /><br /> Criar uma biblioteca da Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Criar uma biblioteca de feeds de dados.|  
 |Contribuir|Adicionar, editar, excluir e baixar as pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Configurar a atualização de dados<br /><br /> Criar novas pastas de trabalho e relatórios com base em pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um site do SharePoint.<br /><br /> Criar documentos de serviço de dados em uma biblioteca de feed de dados|  
-|leitura|Acesso [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pastas de trabalho como uma fonte de dados externa, em que a URL da pasta de trabalho é inserida explicitamente em uma caixa de diálogo de conexão (por exemplo, no Assistente de Conexão de dados do Excel).|  
+|Ler|Acesso [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pastas de trabalho como uma fonte de dados externa, em que a URL da pasta de trabalho é inserida explicitamente em uma caixa de diálogo de conexão (por exemplo, no Assistente de Conexão de dados do Excel).|  
 |Exibir Apenas|Exibir pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Exibir o histórico de atualizações de dados.<br /><br /> Conectar uma pasta de trabalho local a uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um site do SharePoint, para adaptar seus dados de outros modos.<br /><br /> Baixar um instantâneo da pasta de trabalho. O instantâneo é uma cópia estática dos dados, sem segmentações de dados, fórmulas ou conexões de dados. O conteúdo do instantâneo é semelhante à cópia de valores de células da janela do navegador.|  
   
 ##  <a name="excel"></a> Considerações de segurança dos Serviços do Excel para pastas de trabalho do Power Pivot  

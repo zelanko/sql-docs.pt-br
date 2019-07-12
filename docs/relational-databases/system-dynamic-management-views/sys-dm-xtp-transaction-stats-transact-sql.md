@@ -19,21 +19,21 @@ ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de6169af7c10972307a154e9830bc8e206854ab5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54bee97607e5fc2e09d7fd06c742760ff87aafe5
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724994"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826324"
 ---
 # <a name="sysdmxtptransactionstats-transact-sql"></a>sys.dm_xtp_transaction_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Relata estatísticas sobre as transações que foram executadas desde que o servidor foi iniciado.  
   
  Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |total_count|**bigint**|O número total de transações que foram executadas no mecanismo de banco de dados OLTP na memória.|  
 |read_only_count|**bigint**|O número de transações somente leitura.|  

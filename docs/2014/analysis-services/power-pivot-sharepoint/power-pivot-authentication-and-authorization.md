@@ -10,12 +10,12 @@ ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2fe19165a8b9e0d419a1cba67eeb4ada6a3ce183
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f567da3318c7b8fff799475c638c1086613f45b
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66071427"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826332"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>Autenticação e autorização PowerPivot
   Uma implantação do PowerPivot para SharePoint, executada dentro de um farm do SharePoint 2010, usa o subsistema de autenticação e o modelo de autorização fornecidos pelos servidores do SharePoint. A infraestrutura de segurança do SharePoint se estende ao conteúdo e operações do PowerPivot porque todo o conteúdo relacionado ao PowerPivot é armazenado nos bancos de dados de conteúdo do SharePoint, e todas as operações relacionadas ao PowerPivot é executado pelos serviços compartilhados PowerPivot no farm. Os usuários que solicitam uma pasta de trabalho que contém dados PowerPivot são autenticados, usando uma identidade de usuário do SharePoint que é baseada na respectiva identidade de usuário do Windows. As permissões de exibição na pasta de trabalho determinam se a solicitação é concedida ou negada.  
@@ -87,7 +87,7 @@ ms.locfileid: "66071427"
 |Administrador de farm ou serviço|Instalar, habilitar e configurar serviços e aplicativos.<br /><br /> usar o Painel de Gerenciamento do PowerPivot e exibir relatórios administrativos.|  
 |Controle total|Ativar a integração de recursos do PowerPivot em nível de conjunto de sites.<br /><br /> Criar uma biblioteca da Galeria do PowerPivot<br /><br /> Criar uma biblioteca de feeds de dados.|  
 |Contribuir|Adicionar, editar, excluir e baixar pastas de trabalho PowerPivot.<br /><br /> Configurar a atualização de dados<br /><br /> Criar novas pastas de trabalho e novos relatórios com base em pastas de trabalho PowerPivot em um site do SharePoint.<br /><br /> Criar documentos de serviço de dados em uma biblioteca de feed de dados|  
-|leitura|Acesse pastas de trabalho PowerPivot como uma fonte de dados externa, em que a URL da pasta de trabalho é inserida explicitamente em uma caixa de diálogo de conexão (por exemplo, no Assistente de Conexão de dados do Excel).|  
+|Ler|Acesse pastas de trabalho PowerPivot como uma fonte de dados externa, em que a URL da pasta de trabalho é inserida explicitamente em uma caixa de diálogo de conexão (por exemplo, no Assistente de Conexão de dados do Excel).|  
 |Exibir Apenas|Exibir pastas de trabalho PowerPivot.<br /><br /> Exibir o histórico de atualizações de dados.<br /><br /> Conectar uma pasta de trabalho local a uma pasta de trabalho PowerPivot em um site do SharePoint, para adaptar seus dados de outros modos.<br /><br /> Baixar um instantâneo da pasta de trabalho. O instantâneo é uma cópia estática dos dados, sem segmentações de dados, fórmulas ou conexões de dados. O conteúdo do instantâneo é semelhante à cópia de valores de células da janela do navegador.|  
   
 ##  <a name="excel"></a> Considerações de segurança de serviços do Excel para pastas de trabalho PowerPivot  

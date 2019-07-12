@@ -19,17 +19,17 @@ ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fbab6be30b0d268c7632180caaf939a54e672fbf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ebc5947611129086952394f157c6173a3b4efcf0
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544028"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826308"
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Relata os consumidores de memória no nível do sistema para [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. A memória desses consumidores vêm do pool padrão (quando a alocação está no contexto de um thread do usuário) ou do pool interno (se a alocação estiver no contexto de um thread do sistema).  
+  Relata os consumidores de memória no nível do sistema para [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. A memória desses consumidores vem do pool padrão (quando a alocação está no contexto de um thread do usuário) ou do pool interno (se a alocação está no contexto de um thread do sistema).  
   
 ```  
 -- system memory consumers @ instance  
@@ -38,12 +38,12 @@ select * from sys.dm_xtp_system_memory_consumers
   
  Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nome da coluna|Tipo|Descrição|  
+|Nome da coluna|type|Descrição|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|ID interna do consumidor de memória.|  
-|memory_consumer_type|**int**|Um inteiro que representa o tipo do consumidor de memória com um dos seguintes valores:<br /><br /> 0 – não deve ser exibido. Agrega o uso de memória de dois ou mais consumidores.<br /><br /> 1 - À PARTE: Rastreia o consumo de memória para a parte de um sistema.<br /><br /> 2 - VARHEAP: Rastreia o consumo de memória para um heap de comprimento variável.<br /><br /> 4 - pool de página de e/s: Rastreia o consumo de memória para um pool da página do sistema usado para operações de E/S.|  
+|memory_consumer_type|**int**|Um inteiro que representa o tipo do consumidor de memória com um dos seguintes valores:<br /><br /> 0 – não deve ser exibido. Agrega o uso de memória de dois ou mais consumidores.<br /><br /> 1 - À PARTE: Rastreia o consumo de memória para a parte de um sistema.<br /><br /> 2 - VARHEAP: Rastreia o consumo de memória para um heap de comprimento variável.<br /><br /> 4 - pool de página de e/s: Rastreia o consumo de memória para um pool de página do sistema usado para operações de e/s.|  
 |memory_consumer_type_desc|**nvarchar(16)**|A descrição do tipo do consumidor de memória:<br /><br /> 0 – não deve ser exibido.<br /><br /> 1 - LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|Descrição da instância do consumidor de memória:<br /><br /> VARHEAP: <br />Heap do sistema. Uso geral. Atualmente usado apenas para alocar itens de trabalho de coleta de lixo.<br />-ou-<br />A parte de heap. Usado por partes quando o número de itens contidos na lista de partes alcançar um valor predeterminado (normalmente em torno de 5.000 itens).<br /><br /> PGPOOL: Para pools do sistema de E/S, há três tamanhos diferentes: pool de página do sistema 4K, pool de página do sistema 64K e pool de página do sistema 256K.|  
+|memory_consumer_desc|**nvarchar(64)**|Descrição da instância do consumidor de memória:<br /><br /> VARHEAP: <br />Heap do sistema. Uso geral. Atualmente usado apenas para alocar itens de trabalho de coleta de lixo.<br />-ou-<br />A parte de heap. Usado por partes quando o número de itens contidos na lista de partes alcançar um valor predeterminado (normalmente em torno de 5.000 itens).<br /><br /> PGPOOL: Para o sistema de e/s pools lá são três tamanhos diferentes: Pool de página do pool de página do sistema 4K, pool de página do sistema de 64 K e sistema 256K.|  
 |lookaside_id|**bigint**|A ID do provedor de memória de direções de local de thread.|  
 |pagepool_id|**bigint**|A ID do provedor de memória do pool de páginas de local de thread.|  
 |allocated_bytes|**bigint**|Número de bytes reservados para o consumidor.|  
