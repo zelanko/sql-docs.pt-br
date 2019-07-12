@@ -1,20 +1,21 @@
 ---
-title: Migrar um banco de dados do SQL Server do Windows para Linux | Microsoft Docs
+title: Migrar um banco de dados do SQL Server do Windows para Linux
 description: Este tutorial mostra como fazer o backup do banco de dados do SQL Server no Windows e restaurá-lo em um computador Linux executando o SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/16/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 7d31490369b1562db91820d0e47f5935b5b42911
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ec273a58c2a907b6059972816736382e10df883
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713130"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834896"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migrar um banco de dados do SQL Server do Windows para Linux usando o backup e restauração
 
@@ -31,7 +32,7 @@ Backup do SQL Server e o recurso de restauração é a maneira recomendada de mi
 
 Você também pode criar um SQL Server sempre no grupo de disponibilidade para migrar um banco de dados do SQL Server do Windows para Linux. Ver [sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Os seguintes pré-requisitos são necessários para concluir este tutorial:
 

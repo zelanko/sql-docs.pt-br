@@ -1,20 +1,21 @@
 ---
-title: Instalar o SQL Server serviços de Machine Learning (R, Python) no Linux | Microsoft Docs
+title: Instalar serviços (R, Python) de aprendizado de máquina do SQL Server no Linux
 description: Saiba como instalar os serviços SQL Server Machine Learning (R, Python) no Red Hat, Ubuntu e SUSE.
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a36ae06f28cb68395fd24b64921575567757a7f
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 5e64f19c7495a58c02852d9c1207b047de669758
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399944"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834682"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>Instalar o SQL Server de 2019 serviços de Machine Learning (R, Python) no Linux
 
@@ -75,7 +76,7 @@ Para cada conjunto de específicas do sistema operacional de instruções de ins
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 + A versão do Linux deve ser [suportados pelo SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), mas não inclui o mecanismo do Docker. As versões com suporte incluem:
 

@@ -1,21 +1,22 @@
 ---
-title: Configurar o SQL Server sempre no grupo de disponibilidade no Windows e Linux | Microsoft Docs
+title: Configurar o SQL Server sempre no grupo de disponibilidade no Windows e Linux
 description: Configurar o grupo de disponibilidade de servidor de SQL com réplicas em Windows e Linux.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 01/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 520866e80cd3526d7c039cd98e08f5cc8fc52798
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08e30f19c210b0edeb8183603b4107a83393aae7
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713389"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834258"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configurar SQL Server sempre no grupo de disponibilidade no Windows e Linux (plataformas)
 

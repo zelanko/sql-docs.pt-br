@@ -1,20 +1,20 @@
 ---
-title: DB Mail e alertas de Email com o SQL Agent no Linux | Microsoft Docs
+title: DB Mail e alertas de Email com o SQL Agent no Linux
 description: Este artigo descreve como usar o DB Mail e alertas de Email com o SQL Server no Linux
-author: meet-bhagdev
-ms.author: meetb
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: tbd
-ms.openlocfilehash: a468fc1b317e906cc27005469ac81cb4eef48045
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 031fdff258e6dba4976fec4e0b1c5ed10aa48f47
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713189"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833840"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB Mail e alertas de Email com o SQL Agent no Linux
 

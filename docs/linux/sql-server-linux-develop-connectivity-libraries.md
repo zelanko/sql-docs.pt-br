@@ -1,20 +1,20 @@
 ---
-title: Estruturas e bibliotecas de conectividade | Microsoft Docs
+title: Estruturas e bibliotecas de conectividade
 description: Lista os drivers de conectividade que aplicativos cliente podem usar vários idiomas para se conectar ao Microsoft SQL Server em execução localmente ou na nuvem, no Linux, Windows ou Docker e também para o banco de dados SQL e Azure SQL Data Warehouse.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
-ms.openlocfilehash: 1f0274a8eb84f9700378d266729afbdc91aebaf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88b212d9a39f990184753382f433f1c002a4634d
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713210"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833848"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Estruturas e bibliotecas de conectividade para Microsoft SQL Server
 

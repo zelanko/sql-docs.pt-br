@@ -1,20 +1,21 @@
 ---
-title: Implantar um contêiner do SQL Server em Kubernetes com serviços de Kubernetes do Azure (AKS) | Microsoft Docs
+title: Implantar um contêiner do SQL Server em Kubernetes com serviços de Kubernetes do Azure (AKS)
 description: Este tutorial mostra como implantar uma solução de alta disponibilidade do SQL Server com o Kubernetes no serviço Kubernetes do Azure.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: 236ae198b77f8fdc63a6c4d5069e3b335a44a472
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76c4003398368a1cdbadb257165dab6b048ebced
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704844"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832994"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Implantar um contêiner do SQL Server em Kubernetes com serviços de Kubernetes do Azure (AKS)
 
@@ -47,7 +48,7 @@ No diagrama a seguir, o nó que hospeda o `mssql-server` contêiner falhou. O or
 
 ![Diagrama de cluster do Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 * **Cluster do Kubernetes**
    - O tutorial requer um cluster Kubernetes. Usam as etapas [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) para gerenciar o cluster. 

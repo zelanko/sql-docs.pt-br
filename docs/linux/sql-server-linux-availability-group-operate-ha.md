@@ -1,20 +1,21 @@
 ---
-title: Operar o grupo de disponibilidade do SQL Server no Linux | Microsoft Docs
+title: Operar o grupo de disponibilidade do SQL Server no Linux
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 98493c945f4f43e45b1f314f1500eb50a04c8e5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1dfdeead4f8eb82dc95882d719ef42f16017bdc
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713415"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834237"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Sempre operam em grupos de disponibilidade no Linux
 

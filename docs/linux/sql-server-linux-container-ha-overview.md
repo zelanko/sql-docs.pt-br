@@ -3,18 +3,19 @@ title: Alta disponibilidade para contêineres do SQL Server
 description: Este artigo apresenta alta disponibilidade para contêineres do SQL Server
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 93e377fc187968b031438ccd896e29b7ebff4144
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da4c702e8ec5e8c1d645af616df53edd287eae5a
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713201"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833921"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>Alta disponibilidade para contêineres do SQL Server
 

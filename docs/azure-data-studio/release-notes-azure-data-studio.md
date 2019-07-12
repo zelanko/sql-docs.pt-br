@@ -10,13 +10,13 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 07/10/2019
-ms.openlocfilehash: 5e3aa3f0472b775f1dfbd13634228226e4e7e0c2
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.date: 07/11/2019
+ms.openlocfilehash: 9b6fa6e7ec82853e05070a1675154f06091e5092
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794068"
+ms.locfileid: "67826511"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de versão do estúdio de dados do Azure
 
@@ -24,7 +24,7 @@ ms.locfileid: "67794068"
 
 ## <a name="july-2019"></a>Julho de 2019
 
-10 de julho de 2019 &nbsp;  /  &nbsp; versão: 1.9.0 
+11 de julho de 2019 &nbsp;  /  &nbsp; versão: 1.9.0 
 
 &nbsp;
 
@@ -39,7 +39,6 @@ ms.locfileid: "67794068"
 | Código do Visual Studio versão de maio de mesclagem 1.35 | Melhorias mais recentes podem ser encontradas [aqui](https://code.visualstudio.com/updates/v1_35). |
 | Problemas e bugs resolvidos | Em versões anteriores do Studio de dados do Azure, se um banco de dados do usuário foi selecionado ao conectar-se a caixa de diálogo de Conexão, a entrada do Pesquisador de objetos resultante foi no escopo totalmente esse único banco de dados. Começando nesta versão, que o comportamento está sendo alterado para que as propriedades de nível de servidor também são mostradas no Pesquisador de objetos. <br/> Para obter uma lista completa de correções, consulte [Bugs e problemas no GitHub](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1). |
 | &nbsp; | &nbsp; |
-
 
 
 ## <a name="june-2019"></a>Junho de 2019

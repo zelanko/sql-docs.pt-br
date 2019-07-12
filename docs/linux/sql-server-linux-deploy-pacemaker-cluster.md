@@ -1,19 +1,20 @@
 ---
-title: Implantar um cluster Pacemaker para o SQL Server no Linux | Microsoft Docs
+title: Implantar um cluster Pacemaker para o SQL Server no Linux
 description: Este tutorial mostra como implantar um cluster Pacemaker para o SQL Server no Linux.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: be1bae381cf9eb07180299130917cb6cbf3bfec3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6fdd3fe9111a20811ecb748a42273deafd2c41e
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705546"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833865"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Implantar um cluster Pacemaker para o SQL Server no Linux
 

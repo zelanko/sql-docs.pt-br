@@ -1,20 +1,20 @@
 ---
-title: Configurar configurações do SQL Server no Linux | Microsoft Docs
+title: Configurar configurações do SQL Server no Linux
 description: Este artigo descreve como usar a ferramenta mssql-conf para definir configurações do SQL Server no Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 9fd4e35a9fbdd7e0cd3c77fb05ef2f7fdde53c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57e43f3afd9c46e3b49e4f1f07ab3038359c8c50
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719396"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834000"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar o SQL Server no Linux com a ferramenta mssql-conf
 
@@ -394,7 +394,7 @@ A primeira captura de fase é controlada pelo **coredump.coredumptype** configur
 
     A tabela a seguir lista os possíveis **coredump.coredumptype** valores.
 
-    | Tipo | Descrição |
+    | type | Descrição |
     |-----|-----|
     | **mini** | Mini é o menor tipo de arquivo de despejo. Ele usa as informações do sistema Linux para determinar os threads e módulos no processo. O despejo contém somente os módulos e pilhas de threads do ambiente de host. Ele não contém referências à memória indireta ou globais. |
     | **miniplus** | MiniPlus é semelhante a mini, mas ele inclui a memória adicional. Ele compreende as partes internas de SQLPAL e o ambiente de host, adicionando as seguintes regiões de memória para o despejo:</br></br> -Várias referências de globais</br> -Toda a memória acima de 64TB</br> -All chamada regions encontrados no **/proc/.$ pid/mapas**</br> -Memória indireta de threads e pilhas</br> -Informações de thread</br> -Do Teb e do Peb associados</br> -Informações module</br> -Árvore VMM e VAD |

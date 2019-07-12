@@ -1,19 +1,20 @@
 ---
-title: Noções básicas de disponibilidade do SQL Server para implantações do Linux | Microsoft Docs
+title: Noções básicas de disponibilidade do SQL Server para implantações do Linux
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4e42088227e22f6368426b9c4e8dc8134dbb49d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 203fad6aa3c39d57446738b9c74631fe114c609e
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719364"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833558"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Noções básicas de disponibilidade do SQL Server para implantações do Linux
 
@@ -83,7 +84,7 @@ Por fim, usar um compartilhamento de NFS (sistema) de arquivos de rede é uma op
 ### <a name="configure-the-firewall"></a>Configurar o firewall
 Semelhante ao Windows, distribuições do Linux tem um firewall interno. Se sua empresa está usando um firewall externo para os servidores, desabilitar os firewalls no Linux pode ser aceitável. No entanto, independentemente de onde o firewall estiver habilitado, portas precisam ser abertas. A tabela a seguir documenta as portas comuns necessárias para altamente disponível [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] implantações no Linux.
 
-| Número da Porta | Tipo     | Descrição                                                                                                                 |
+| Número da Porta | type     | Descrição                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (se usado) - mapeador de ponto de extremidade                                                                                          |

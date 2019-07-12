@@ -1,20 +1,21 @@
 ---
-title: Configurar o cluster de disco compartilhado de SLES para SQL Server | Microsoft Docs
+title: Configurar o cluster de disco compartilhado de SLES para SQL Server
 description: Implementar a alta disponibilidade por meio da configuração de cluster de disco compartilhado do SUSE Linux Enterprise Server (SLES) para o SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: e7f315e65702eab373430ede3adb23199f4edc83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b65c2cca781dc077e72ff06fb7de5ae8ee2e8c5
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712848"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834651"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado de SLES para SQL Server
 
@@ -24,7 +25,7 @@ Este guia fornece instruções para criar um cluster de disco compartilhado de d
 
 Para obter mais informações sobre a configuração de cluster, opções de recurso do agente, gerenciamento, as práticas recomendadas e recomendações, consulte [SUSE Linux Enterprise alta disponibilidade extensão 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para concluir o seguinte cenário de ponta a ponta, você precisa de duas máquinas para implantar o cluster de dois nós e outro servidor para configurar o compartilhamento NFS. As etapas a seguir descrevem como esses servidores serão configurados.
 

@@ -2,20 +2,20 @@
 title: Use a extensão do Visual Studio Code mssql para o SQL Server
 titleSuffix: SQL Server
 description: Use a extensão mssql para Visual Studio Code para editar e executar scripts Transact-SQL para o SQL Server no Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 12/18/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-ms.openlocfilehash: b4d29739748b477adbef79bd1d6cf266aa16d2c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcda7a310e7a9dc77ea9464dd82dbed7260b0b39
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705540"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833784"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Use o Visual Studio Code para criar e executar scripts Transact-SQL
 

@@ -2,20 +2,20 @@
 title: Introdução ao SQL Server no SUSE Linux Enterprise Server
 titleSuffix: SQL Server
 description: Neste início rápido mostra como instalar o SQL Server 2017 ou 2019 do SQL Server no SUSE Linux Enterprise Server e, em seguida, criar e consultar um banco de dados com sqlcmd.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: f5c0bb63ce7d188a2587d1a44d863a14308da273
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19f74067db365fd9bdc867b97cef6ee5aa5162d8
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713581"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833256"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Início Rápido: Instalar o SQL Server e criar um banco de dados no SUSE Linux Enterprise Server
 
@@ -37,7 +37,7 @@ Neste início rápido, você pode instalar visualização de 2019 do SQL Server 
 > [!TIP]
 > Este tutorial requer entrada do usuário e uma conexão de internet. Se você estiver interessado na [autônoma](sql-server-linux-setup.md#unattended) ou [offline](sql-server-linux-setup.md#offline) procedimentos de instalação, consulte [orientação de instalação do SQL Server no Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Você deve ter um computador do SLES v12 SP2 com **pelo menos 2 GB** de memória. O sistema de arquivos deve ser **XFS** ou **EXT4**. Outros sistemas de arquivos, como **BTRFS**, não têm suporte.
 

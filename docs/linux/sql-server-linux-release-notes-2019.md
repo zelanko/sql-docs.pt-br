@@ -1,20 +1,20 @@
 ---
-title: Notas de versão para versão prévia de 2019 do SQL Server no Linux | Microsoft Docs
+title: Notas de versão para versão prévia de 2019 do SQL Server no Linux
 description: Este artigo contém as notas de versão e recursos com suporte para visualização de 2019 do SQL Server em execução no Linux. Notas de versão são incluídas para a versão mais recente e várias versões anteriores.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 07/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f172cf3b4ab72fe413cbc639c3e880edef311e9e
-ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
+ms.openlocfilehash: 88c4ebbd5d2e106dbab2dcb057ef024fe0c7f26c
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67533840"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834821"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Notas de versão para versão prévia de 2019 do SQL Server no Linux
 
@@ -27,7 +27,7 @@ As notas de versão a seguir se aplicam à visualização de 2019 do SQL Server 
 
 ## <a name="supported-platforms"></a>Plataformas com suporte
 
-| Plataforma | Sistema de Arquivos | Guia de Instalação |
+| Plataforma | Sistema de arquivos | Guia de Instalação |
 |-----|-----|-----|
 | Red Hat Enterprise Linux 7.3, 7.4, 7.5 ou 7.6 Server | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-suse.md) |
@@ -45,7 +45,7 @@ A maioria das ferramentas de cliente existentes que o SQL Server de destino dire
 
 A tabela a seguir lista o histórico de versão de visualização do SQL Server 2019 que versões CTP.
 
-| Versão               | Versão       | Data de liberação |
+| Versão               | Version       | Data de liberação |
 |-----------------------|---------------|--------------|
 | [CTP 3.1](#CTP31)     | 15.0.1700.37  | 2019-6-26    |
 | [CTP 3.0](#CTP30)     | 15.0.1600.8   | 2019-5-22    |

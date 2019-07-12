@@ -1,20 +1,20 @@
 ---
-title: Restaurar um banco de dados do SQL Server no Docker | Microsoft Docs
+title: Restaurar um banco de dados do SQL Server no Docker
 description: Este tutorial mostra como restaura um backup de banco de dados do SQL Server em um novo contêiner do Docker do Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 79a480f2bd162e44a622413d091a2bebdaa82c00
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 826d62b3f1aeb75a89aa65be4755839f6601fcf2
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399919"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834559"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurar um banco de dados do SQL Server em um contêiner do Docker do Linux
 
@@ -40,7 +40,7 @@ Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Serve
 > * Execute instruções Transact-SQL para exibir e modificar o banco de dados.
 > * Fazer backup de banco de dados modificado.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 * O Docker Engine 1.8 ou superior em qualquer distribuição do Linux ou do Docker para Mac/Windows com suporte. Para obter mais informações, veja [Install Docker](https://docs.docker.com/engine/installation/) (Instalar o Docker).
 * Mínimo de 2 GB de espaço em disco

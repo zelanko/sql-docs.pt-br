@@ -1,20 +1,20 @@
 ---
-title: Introdução à segurança do SQL Server no Linux | Microsoft Docs
+title: Introdução à segurança do SQL Server no Linux
 description: Este artigo descreve as ações de segurança típica.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 655aebb0c07c812a7aa6c81e7c7033d85e8b7ce2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fe29cadaa14168871e7448350d41bc89afed05b
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705210"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834745"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Instruções passo a passo para os recursos de segurança do SQL Server no Linux
 
@@ -28,7 +28,7 @@ Se você for um usuário do Linux que há de novo para o SQL Server, as seguinte
 
 ## <a name="create-a-login-and-a-database-user"></a>Crie um logon e um usuário de banco de dados 
 
-Conceder acesso a outros para o SQL Server, criando um logon no banco de dados mestre usando o [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) instrução. Por exemplo: 
+Conceder acesso a outros para o SQL Server, criando um logon no banco de dados mestre usando o [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) instrução. Por exemplo:
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
@@ -49,7 +49,7 @@ GO
 - Uma conta de administrador do SQL Server pode se conectar a qualquer banco de dados e pode criar mais logons e usuários em qualquer banco de dados.  
 - Quando alguém cria um banco de dados que eles se tornar o proprietário do banco de dados, o que pode se conectar ao banco de dados. Os proprietários de banco de dados podem criar mais usuários.
 
-Mais tarde você pode autorizar outros logons para criar um mais logons, concedendo a ela o `ALTER ANY LOGIN` permissão. Dentro de um banco de dados, você pode autorizar que outros usuários para criar mais usuários, concedendo a ela o `ALTER ANY USER` permissão. Por exemplo:    
+Mais tarde você pode autorizar outros logons para criar um mais logons, concedendo a ela o `ALTER ANY LOGIN` permissão. Dentro de um banco de dados, você pode autorizar que outros usuários para criar mais usuários, concedendo a ela o `ALTER ANY USER` permissão. Por exemplo:   
 
 ```
 GRANT ALTER ANY LOGIN TO Larry;   

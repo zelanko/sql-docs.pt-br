@@ -2,21 +2,21 @@
 title: Introdução ao SQL Server no Ubuntu
 titleSuffix: SQL Server
 description: Neste início rápido mostra como instalar o SQL Server 2017 ou o SQL Server 2019 no Ubuntu e, em seguida, criar e consultar um banco de dados com sqlcmd.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 93b02908a1341af18044c1c8a86dfd2e6024f8f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9454affd6d6c60efc31e46c575cc575227cf05f3
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66265361"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833648"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Início Rápido: Instalar o SQL Server e criar um banco de dados no Ubuntu
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -38,7 +38,7 @@ Neste início rápido, você instalar o SQL Server 2019 preview no Ubuntu 16.04.
 > [!TIP]
 > Este tutorial requer entrada do usuário e uma conexão de internet. Se você estiver interessado nos procedimentos de instalação autônoma ou offline, consulte [orientação de instalação do SQL Server no Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Você deve ter um computador Ubuntu 16.04 com **pelo menos 2 GB** de memória.
 

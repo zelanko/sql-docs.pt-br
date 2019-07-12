@@ -1,20 +1,20 @@
 ---
-title: Usar o SSMS para gerenciar o SQL Server no Linux | Microsoft Docs
+title: Usar o SSMS para gerenciar o SQL Server no Linux
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 38f0f3a03e6de4cec622ffe03f9dbdc47a7ccb73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8eba01fdd332e86327da627dd934806c1eedc9d5
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713160"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834941"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Use o SQL Server Management Studio no Windows para gerenciar o SQL Server no Linux
 

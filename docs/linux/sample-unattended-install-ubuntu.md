@@ -2,21 +2,21 @@
 title: Instalação autônoma do SQL Server no Ubuntu
 titleSuffix: SQL Server
 description: Exemplo de Script do SQL Server - instalação autônoma no Ubuntu
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: caa08ab4780defb1ddcd6dedd49e261ea9c45625
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3bd5728e8046d7e48945fe815b64735362873ac1
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713543"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834470"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Exemplo: Script de instalação autônoma do SQL Server para Ubuntu
+# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Amostra: Script de instalação autônoma do SQL Server para Ubuntu
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -25,7 +25,7 @@ Esse script de Bash de exemplo instala o SQL Server 2017 no Ubuntu 16.04 sem ent
 > [!TIP]
 > Se você não precisa de um script de instalação autônoma, a maneira mais rápida para instalar o SQL Server é seguir a [guia de início rápido para o Ubuntu](quickstart-install-connect-ubuntu.md). Para outras informações de instalação, consulte [orientação de instalação do SQL Server no Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Você precisa de pelo menos 2 GB de memória para executar o SQL Server no Linux.
 - O sistema de arquivos deve ser **XFS** ou **EXT4**. Outros sistemas de arquivos, como **BTRFS**, não têm suporte.

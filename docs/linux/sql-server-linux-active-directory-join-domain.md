@@ -4,18 +4,18 @@ titleSuffix: SQL Server
 description: ''
 author: Dylan-MSFT
 ms.author: dygray
-ms.reviewer: rothja
+ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: craigg
+manager: jroth
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 50f2685b5b981cddfdba61f91b7ec04e9f6345d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cee4ca0edcc5a49a34b6c352ae0121bed3b40ca
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822519"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834437"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Junte-se do SQL Server em um host Linux em um domínio do Active Directory
 
@@ -23,7 +23,7 @@ ms.locfileid: "66822519"
 
 Este artigo fornece diretrizes gerais sobre como ingressar uma máquina de host do SQL Server Linux em um domínio do Active Directory (AD). Há dois métodos: usar um pacote SSSD internos ou usam provedores de Active Directory de terceiros. São exemplos de produtos de junção de domínio de terceiro [serviços de identidade PowerBroker (PBIS)](https://www.beyondtrust.com/), [uma identidade](https://www.oneidentity.com/products/authentication-services/), e [Centrify](https://www.centrify.com/). Este guia inclui etapas para verificar sua configuração do Active Directory. No entanto, ele não se destina para fornecer instruções sobre como ingressar uma máquina em um domínio ao usar os utilitários de terceiros.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Antes de configurar a autenticação do Active Directory, você precisará configurar um controlador do Active Directory, Windows, em sua rede. Junte-se, em seguida, o SQL Server em um host Linux em um domínio do Active Directory.
 

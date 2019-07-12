@@ -1,20 +1,21 @@
 ---
-title: Instalar extensões de linguagem (Java) do SQL Server no Linux | Microsoft Docs
+title: Instalar extensões de linguagem (Java) do SQL Server no Linux
 description: Saiba como instalar extensões de linguagem (Java) do SQL Server no Red Hat, Ubuntu e SUSE.
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9231828263020c352700fda6a4a0a9953dd70760
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 25aa15f66827aeee7e86e7052febde9c31c7e15a
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399933"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834705"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Instalar extensões de linguagem do SQL Server de 2019 (Java) no Linux
 
@@ -64,7 +65,7 @@ Para cada conjunto de específicas do sistema operacional de instruções de ins
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 + A versão do Linux deve ser [suportados pelo SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), mas não inclui o mecanismo do Docker. As versões com suporte incluem:
 

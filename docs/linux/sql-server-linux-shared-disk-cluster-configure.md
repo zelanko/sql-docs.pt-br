@@ -1,20 +1,21 @@
 ---
-title: Configurar a instância de cluster de failover – SQL Server no Linux (RHEL) | Microsoft Docs
+title: Configurar a instância de cluster de failover – SQL Server no Linux (RHEL)
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 00ae511095e046623df080e7cc6f9704aedc87ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 407e1e11bcaf2c1b7ffe0426c6a3c7493e71bc74
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712925"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833160"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurar a instância de cluster de failover – SQL Server no Linux (RHEL)
 
@@ -34,7 +35,7 @@ Este artigo explica como criar uma instância de cluster de failover (FCI do) di
 
 Para obter informações conceituais, consulte [SQL Server Failover Cluster FCI (instância) no Linux](sql-server-linux-shared-disk-cluster-concepts.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para concluir o seguinte cenário de ponta a ponta, você precisa de duas máquinas para implantar o cluster de dois nós e outro servidor para o armazenamento. As etapas a seguir descrevem como esses servidores serão configurados.
 

@@ -1,20 +1,20 @@
 ---
-title: Limitações e problemas conhecidos do SSIS no Linux | Microsoft Docs
+title: Limitações e problemas conhecidos do SSIS no Linux
 description: Este artigo descreve as limitações e problemas conhecidos para o SQL Server Integration Services (SSIS) em computadores Linux
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
-manager: craigg
+manager: jroth
 ms.date: 06/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: fdf6542f64549233dd5d4ef15dc39a53fefa49a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc4ec7f99a8cbcf5b6bd48924f3eed1e8f10f658
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712841"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833127"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitações e problemas conhecidos do SSIS no Linux
 

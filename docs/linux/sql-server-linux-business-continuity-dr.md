@@ -1,22 +1,22 @@
 ---
-title: Recuperação de desastres para SQL Server no Linux | Microsoft Docs
+title: Recuperação de desastres para SQL Server no Linux
 description: ''
 author: MikeRayMSFT
-ms.author: mihaelab
-ms.reviewer: mikeray
-manager: craigg
+ms.author: mikeray
+ms.reviewer: mihaelab
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e617a4e9040c8c9f23e37ce7094f1f2e456da7a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 745d9bacfb629ef6d671a7b7f88b65914c9e089b
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705844"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834122"
 ---
 # <a name="business-continuity-and-database-recovery---sql-server-on-linux"></a>Recuperação de banco de dados e continuidade dos negócios – SQL Server no Linux
 

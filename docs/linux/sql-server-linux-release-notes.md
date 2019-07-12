@@ -1,20 +1,20 @@
 ---
-title: Notas de versão do SQL Server 2017 no Linux | Microsoft Docs
+title: Notas de versão do SQL Server 2017 no Linux
 description: Este artigo contém as notas de versão e recursos com suporte para SQL Server 2017 em execução no Linux. Notas de versão são incluídas para a versão mais recente e várias versões anteriores.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 06/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: da7d92fd1fa15deb83dbca9a1710b967d660b99f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06c46a54f21c0397f4ee801349acbebafeedf7a1
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705149"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834810"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de versão do SQL Server 2017 no Linux
 
@@ -27,7 +27,7 @@ As notas de versão a seguir se aplicam a [!INCLUDE[ssSQL17](../includes/sssql17
 
 ## <a name="supported-platforms"></a>Plataformas com suporte
 
-| Plataforma | Sistema de Arquivos | Guia de Instalação |
+| Plataforma | Sistema de arquivos | Guia de Instalação |
 |-----|-----|-----|
 | Red Hat Enterprise Linux 7.3, 7.4, 7.5 ou 7.6 Server | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-suse.md) |
@@ -45,7 +45,7 @@ Mais existente das ferramentas de cliente que se destinam [!INCLUDE[ssNoVersion]
 
 A tabela a seguir lista o histórico de lançamento para [!INCLUDE[ssSQL17](../includes/sssql17-md.md)].
 
-| Versão               | Versão       | Data de liberação |
+| Versão               | Version       | Data de liberação |
 |-----------------------|---------------|--------------|
 | [CU15](#CU15)         | 14.0.3162.1   | 2019-05-23   |
 | [CU14](#CU14)         | 14.0.3076.1   | 2019-03-25   |

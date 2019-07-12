@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 22d771f57e5ac0d9035b8c283eb6da69027eadb3
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 1df2ac9979e99a301d416d25d143039bef3ee4ed
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716680"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833038"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67716680"
 |end_time|**datetime**|Hora UTC que indica o término do intervalo de relatório atual.|  
 |avg_cpu_percent|**decimal (5,2)**|Utilização média de computação, em porcentagem, do limite da camada de serviço.|  
 |avg_data_io_percent|**decimal (5,2)**|Média de dados de utilização e/s em percentual do limite da camada de serviço.|  
-|avg_log_write_percent|**decimal (5,2)**|Média de utilização de taxa de transferência de e/s como porcentagem do limite da camada de serviço de gravação.|  
+|avg_log_write_percent|**decimal (5,2)**|Gravações no log de transação médio (em MBps) como um percentual do limite da camada de serviço.|  
 |avg_memory_usage_percent|**decimal (5,2)**|Utilização média de memória, em porcentagem, do limite da camada de serviço.<br /><br /> Isso inclui a memória usada para páginas de pool de buffer e o armazenamento de objetos OLTP na memória.|  
 |xtp_storage_percent|**decimal (5,2)**|Utilização de armazenamento para o OLTP na memória em percentual do limite da camada de serviço (no final do intervalo de emissão de relatórios). Isso inclui a memória usada para armazenamento dos seguintes objetos OLTP na memória: variáveis de tabela, índices e tabelas com otimização de memória. Ele também inclui a memória usada para processar operações ALTER TABLE.<br /><br /> Retorna 0 se não for usado o OLTP in-memory no banco de dados.|  
 |max_worker_percent|**decimal (5,2)**|Máximo de trabalhos simultâneos (solicitações) em porcentagem do limite da camada de serviço do banco de dados.|  

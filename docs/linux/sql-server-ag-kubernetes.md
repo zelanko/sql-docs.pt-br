@@ -4,18 +4,19 @@ titleSuffix: SQL Server
 description: Este artigo apresenta os grupos de disponibilidade nos contêineres do SQL Server
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb9775ad0fce022fb2bd5f8fda02f7e198d1c6fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e778af484881ae26669d2bac952b568532300c93
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713589"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833035"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>Grupos de disponibilidade Always On para contêineres do SQL Server
 

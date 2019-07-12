@@ -1,20 +1,21 @@
 ---
-title: Configurar um cluster compartilhado do Red Hat Enterprise Linux para SQL Server | Microsoft Docs
+title: Configurar um cluster compartilhado do Red Hat Enterprise Linux para SQL Server
 description: Implementar a alta disponibilidade por meio da configuração de cluster de disco compartilhado do Red Hat Enterprise Linux para o SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 73dff2be37cade58991078fec4663a9ac351f49b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2eb3a0a135fc43e3dadb855682cea9f6465d5ca
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712899"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833145"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado do Red Hat Enterprise Linux para SQL Server
 
@@ -38,7 +39,7 @@ Para usar uma cadeia de caracteres de conexão que aponta para um nome de servid
 
 As seções a seguir percorrer as etapas para configurar uma solução de cluster de failover. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para concluir o seguinte cenário de ponta a ponta, você precisa de duas máquinas para implantar o cluster de dois nós e outro servidor para configurar o servidor NFS. As etapas a seguir descrevem como esses servidores serão configurados.
 

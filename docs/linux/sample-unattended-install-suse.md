@@ -2,21 +2,21 @@
 title: Instalação autônoma do SQL Server no SUSE Linux Enterprise Server
 titleSuffix: SQL Server
 description: Exemplo de Script do SQL Server - instalação autônoma no SUSE Linux Enterprise Server
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6216d7b1a241229fabf9ce9d9d2ed3a63658b2a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41f1a996698dbc0d8a08e049e7d8ed7d4e139acb
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713563"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834985"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Exemplo: Script de instalação autônoma do SQL Server para SUSE Linux Enterprise Server
+# <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Amostra: Script de instalação autônoma do SQL Server para SUSE Linux Enterprise Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -25,7 +25,7 @@ Esse script de Bash de exemplo instala o SQL Server 2017 no SUSE Linux Enterpris
 > [!TIP]
 > Se você não precisa de um script de instalação autônoma, a maneira mais rápida para instalar o SQL Server é seguir a [guia de início rápido para o SLES](quickstart-install-connect-suse.md). Para outras informações de instalação, consulte [orientação de instalação do SQL Server no Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Você precisa de pelo menos 2 GB de memória para executar o SQL Server no Linux.
 - O sistema de arquivos deve ser **XFS** ou **EXT4**. Outros sistemas de arquivos, como **BTRFS**, não têm suporte.

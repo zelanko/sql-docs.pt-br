@@ -1,20 +1,21 @@
 ---
-title: Especificação de Backup de VDI – SQL Server no Linux | Microsoft Docs
+title: Especificação de Backup de VDI – SQL Server no Linux
 description: Especificação de Interface de dispositivo Virtual de Backup do SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: b3917f086361128ee0c3e0a73f44f2c7cc4049b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c684170ae6ca6420b6b5ebef91baae208ab0808
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713462"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834190"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server no cliente Linux VDI especificação de SDK
 
@@ -217,7 +218,7 @@ Quando essa rotina deve bloquear a espera para um comando, o thread será deixad
 
 | Parâmetros | Argumento | Explicação
 | ----- | ----- | ------ |
-| |None | Não aplicável
+| |Nenhum | Não aplicável
         
 | Valores de retorno | Argumento | Explicação
 | ----- | ----- | ------ |
@@ -237,7 +238,7 @@ Quando essa rotina deve bloquear a espera para um comando, o thread será deixad
 
 | Parâmetros | Argumento | Explicação
 | ----- | ----- | ------ |
-| |None |Não aplicável
+| |Nenhum |Não aplicável
         
 | Valores de retorno | Argumento | Explicação
 | ----- | ----- | ------ |

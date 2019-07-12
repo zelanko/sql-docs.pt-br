@@ -3,18 +3,19 @@ title: Conectar-se ao SQL Server sempre no grupo de disponibilidade no cluster d
 description: Este artigo explica como se conectar a um grupo de disponibilidade AlwaysOn
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1afe2f33ec49f734e97a24a98d62c17b638e38cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4d56e3d470ca0ba3dbffe6b8cb5ebc64ab48445
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713319"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833580"
 ---
 # <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>Conectar-se a um SQL Server sempre no grupo de disponibilidade no Kubernetes
 
