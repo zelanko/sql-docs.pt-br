@@ -20,15 +20,15 @@ helpviewer_keywords:
 - command prompt [SQL Server], starting instance of SQL Server
 - continuing instance of SQL Server
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7dba9e5498d39c80a5bc5d1c43134242c5715980
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 93a4572b44cf2be6fa8f1c0912fa7e8178e6c9a7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656906"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733360"
 ---
 # <a name="sqlservr-application"></a>Aplicativo sqlservr
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  Inicia uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com configuração mínima. Isso será útil se a definição de um valor de configuração (por exemplo, sobrecarga de confirmação de memória) impediu o servidor de ser iniciado.  
   
  **-e** *error_log_path*  
- Indica o caminho completamente qualificado para o arquivo de log de erros. Se não for especificado, o local padrão será *\<Unidade>*:\Arquivos de Programas\Microsoft SQL Server\MSSQL\Log\Errorlog para a instância padrão e *\<Drive>*:\Arquivos de Programas\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog para uma instância nomeada. Não há espaços entre **-e** e *error_log_path*.  
+ Indica o caminho completamente qualificado para o arquivo de log de erros. Se não for especificado, o local padrão será *\<Unidade>* :\Arquivos de Programas\Microsoft SQL Server\MSSQL\Log\Errorlog para a instância padrão e *\<Drive>* :\Arquivos de Programas\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog para uma instância nomeada. Não há espaços entre **-e** e *error_log_path*.  
   
  **-l** *master_log_path*  
  Indica o caminho totalmente qualificado para o arquivo de log de transações do banco de dados **master** . Não há espaços entre **-l** e *master_log_path*.  
@@ -75,10 +75,10 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  Permite iniciar uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sem o parâmetro **-s** definido, a instância padrão tenta a inicialização. Você deve passar para o diretório BINN apropriado da instância em um prompt de comando antes de iniciar o **sqlservr.exe**. Por exemplo, se Instance1 tiver de usar \mssql$Instance1 para seus binários, o usuário deverá estar no diretório \mssql$Instance1\binn para iniciar **sqlservr.exe -s instance1**. Caso você inicie uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com a opção **-n** , recomendamos usar também a opção **-e** ou os eventos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não serão registrados.  
   
  **-T** *trace#*  
- Indica que uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deve ser iniciada com um sinalizador de rastreamento especificado (*trace#*) em vigor. São usados sinalizadores de rastreamento para iniciar o servidor com comportamento fora do padrão. Para obter mais informações, veja, [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
+ Indica que uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deve ser iniciada com um sinalizador de rastreamento especificado (*trace#* ) em vigor. São usados sinalizadores de rastreamento para iniciar o servidor com comportamento fora do padrão. Para obter mais informações, veja, [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
 > [!IMPORTANT]  
->  Ao especificar um sinalizador de rastreamento, use **-T** para passar o número do sinalizador de rastreamento. Um t minúsculo (**-t**) é aceito por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]; entretanto, **-t** define outros sinalizadores de rastreamento internos que são exigidos pelos engenheiros de suporte do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+>  Ao especificar um sinalizador de rastreamento, use **-T** para passar o número do sinalizador de rastreamento. Um t minúsculo ( **-t**) é aceito por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]; entretanto, **-t** define outros sinalizadores de rastreamento internos que são exigidos pelos engenheiros de suporte do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **-v**  
  Exibe o número de versão do servidor.  

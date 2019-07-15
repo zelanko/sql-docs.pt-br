@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - shared memory [SQL Server]
 ms.assetid: dc1704da-eacd-4d26-b529-c996f958ca4b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4f09f4502f11d49dc9aa54a7f708fda065d23094
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ebcf13f70fd783af3ed49a4f40e29fd0beb8d809
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660404"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733342"
 ---
 # <a name="shared-memory-properties"></a>Propriedades da memória compartilhada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

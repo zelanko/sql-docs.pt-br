@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: d13809c3fa5b100a29df4434da5aec354de0c7c2
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 1ba2746e91c33c49c943a9c100e9ea3bd6d3d9e5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581224"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860496"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Validação pós-migração e guia de otimização
 
@@ -53,7 +53,7 @@ Para obter mais informações sobre este tópico, consulte [Manter a estabilidad
 **Aplica-se a:** migração de plataforma externa (como Oracle, DB2, MySQL e Sybase) para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
-> Para migrações de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se esse problema existir na origem de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], migrar para uma versão mais recente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]? no estado em que se encontra não resolverá esse cenário. 
+> Para migrações de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se esse problema existe na origem de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], migrar para uma versão mais recente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no estado em que se encontra não resolverá esse cenário. 
 
 O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila os planos de consulta em procedimentos armazenados usando a detecção de parâmetros de entrada na primeira compilação, gerando um plano parametrizado, reutilizável e otimizado para distribuição de dados de entrada. Mesmo se não forem procedimentos armazenados, a maioria das instruções que gera planos triviais será parametrizada. Depois que o primeiro plano é armazenado em cache, qualquer execução futura é mapeada para um plano previamente armazenado em cache.
 Um possível problema surge quando essa primeira compilação pode não ter usado os conjuntos de parâmetros mais comuns para a carga de trabalho normal. Para parâmetros diferentes, o mesmo plano de execução se torna ineficaz. Para obter mais informações sobre este tópico, consulte [Detecção de parâmetro](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
