@@ -64,7 +64,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 
 |||
 |-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|** _\* SQL Server \*_** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -179,7 +179,7 @@ NEWNAME *new_logical_file_name* Especifica um novo nome lógico para o arquivo.
 
 *new_logical_file_name* É o nome para substituir o nome de arquivo lógico existente. O nome deve ser exclusivo dentro do banco de dados e obedecer às regras de [identificadores](../../relational-databases/databases/database-identifiers.md). O nome pode ser uma constante de caractere ou Unicode, um identificador comum ou delimitado.
 
-FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** | **'**_memory\_optimized\_data\_path_**'**} Especifica o nome de arquivo (físico) do sistema operacional.
+FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** | **'** _memory\_optimized\_data\_path_ **'** } Especifica o nome de arquivo (físico) do sistema operacional.
 
 ' *os_file_name* ' Para um grupo de arquivos padrão (ROWS), esse é o caminho e o nome do arquivo usado pelo sistema operacional quando você cria o arquivo. O arquivo deve residir no servidor no qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado. O caminho especificado deve existir antes da execução da instrução ALTER DATABASE.
 
@@ -279,7 +279,7 @@ REMOVE FILEGROUP *filegroup_name* Remove um grupo de arquivos do banco de dados.
 > [!NOTE]
 > A menos que o Coletor de Lixo de FILESTREAM tenha removido todos os arquivos de um contêiner FILESTREAM, haverá falha e um erro será retornado na operação `ALTER DATABASE REMOVE FILE` para remover um contêiner FILESTREAM. Veja a seção [Remover um contêiner FILESTREAM](#removing-a-filestream-container) mais adiante neste tópico.
 
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } Modifica o grupo de arquivos definindo o status como READ_ONLY ou READ_WRITE, transformando o grupo de arquivos no grupo de arquivos padrão para o banco de dados ou alterando o nome do grupo de arquivos.
+MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } Modifica o grupo de arquivos definindo o status como READ_ONLY ou READ_WRITE, transformando o grupo de arquivos no grupo de arquivos padrão para o banco de dados ou alterando o nome do grupo de arquivos.
 
 \<filegroup_updatability_option> Define a propriedade somente leitura ou leitura/gravação para o grupo de arquivos.
 
@@ -684,7 +684,7 @@ GO
 
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* Instância gerenciada<br />do Banco de Dados SQL \*_**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|** _\* Instância gerenciada<br />do Banco de Dados SQL \*_**<br />&nbsp;|
 
 &nbsp;
 
@@ -812,7 +812,7 @@ ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_
 
 REMOVE FILEGROUP *filegroup_name* Remove um grupo de arquivos do banco de dados. O grupo de arquivos não pode ser removido, a menos que esteja vazio. Remova todos os arquivos do grupo de arquivos primeiro. Para obter mais informações, consulte "REMOVE FILE *logical_file_name*", anteriormente neste tópico.
 
-MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } Modifica o grupo de arquivos definindo o status como READ_ONLY ou READ_WRITE, transformando o grupo de arquivos no grupo de arquivos padrão para o banco de dados ou alterando o nome do grupo de arquivos.
+MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } Modifica o grupo de arquivos definindo o status como READ_ONLY ou READ_WRITE, transformando o grupo de arquivos no grupo de arquivos padrão para o banco de dados ou alterando o nome do grupo de arquivos.
 
 \<filegroup_updatability_option> Define a propriedade somente leitura ou leitura/gravação para o grupo de arquivos.
 
