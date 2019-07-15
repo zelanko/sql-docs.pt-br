@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], troubleshooting
 - traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c299b42cd29d0e52ba6996e787a9e8ffc0c19718
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a12d2eb4cc55ad815b47442f3bba7840c292b35e
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827884"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729593"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Exibir e analisar rastreamentos com o SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47827884"
  Ao abrir um rastreamento por meio do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], o arquivo de rastreamento não precisa ter a extensão de arquivo .trc, caso tenha sido criado pelo [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou por procedimentos armazenados do sistema do Rastreamento do SQL.  
   
 > [!NOTE]  
->  O [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] também pode ler arquivos .log do Rastreamento do SQL e arquivos de script SQL genéricos. Ao abrir um arquivo .log do Rastreamento do SQL cuja extensão de arquivo não seja .log, como trace.txt, especifique **SQLTrace_Log** como formato de arquivo.  
+>  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] também pode ler arquivos .log do Rastreamento do SQL e arquivos de script SQL genéricos. Ao abrir um arquivo .log do Rastreamento do SQL cuja extensão de arquivo não seja .log, como trace.txt, especifique **SQLTrace_Log** como formato de arquivo.  
   
  Você pode configurar o formato de exibição de data e hora do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] como auxílio para a análise do rastreamento.  
   
