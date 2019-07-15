@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 873604d3a27d4f3f01eb501f76a39fd008248cdd
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: aa4ed7aa2eaf3d10ec2b69860b71b8b612cc9ff8
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584805"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860615"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Exibir e modificar configurações de segurança de replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,9 +146,9 @@ ms.locfileid: "67584805"
   
 1.  Na caixa de diálogo **Propriedades da Assinatura – \<Assinatura>** no Publicador, é possível fazer as seguintes alterações:  
   
-    -   Para alterar a conta na qual o Agente de Distribuição executa e faz conexões com o Distribuidor, clique na linha **Conta de processo de agente** e, depois, clique no botão ( **?** ) de propriedades na linha. Especifique uma conta e uma senha na caixa de diálogo **Segurança do Agente de Distribuição** .  
+    -   Para alterar a conta na qual o Agente de Distribuição executa e faz conexões com o Distribuidor, clique na linha **Conta de processo de agente** e, depois, clique no botão ( **...** ) de propriedades na linha. Especifique uma conta e uma senha na caixa de diálogo **Segurança do Agente de Distribuição** .  
   
-    -   Para alterar o contexto no qual o Agente de Distribuição conecta-se ao Assinante, clique na linha **Conexão do Assinante** e, depois, clique no botão ( **?** ) de propriedades na linha. Especifique o contexto na caixa de diálogo **Inserir Informações de Conexão** .  
+    -   Para alterar o contexto no qual o Agente de Distribuição conecta-se ao Assinante, clique na linha **Conexão do Assinante** e, depois, clique no botão ( **...** ) de propriedades na linha. Especifique o contexto na caixa de diálogo **Inserir Informações de Conexão** .  
   
          Se você usar assinaturas de atualização enfileirada, o Queue Reader Agent também usará o contexto especificado aqui para conexões com o Assinante.  
   
@@ -158,11 +158,11 @@ ms.locfileid: "67584805"
   
 1.  Na caixa de diálogo **Propriedades da Assinatura – \<Assinatura>** no Assinante, é possível fazer as seguintes alterações:  
   
-    -   Para alterar a conta na qual o Agente de Distribuição executa e faz conexões com o Assinante, clique na linha **Conta de processo de agente** e, depois, clique no botão ( **?** ) de propriedades na linha. Especifique uma conta e uma senha na caixa de diálogo **Segurança do Agente de Distribuição** .  
+    -   Para alterar a conta na qual o Agente de Distribuição executa e faz conexões com o Assinante, clique na linha **Conta de processo de agente** e, depois, clique no botão ( **...** ) de propriedades na linha. Especifique uma conta e uma senha na caixa de diálogo **Segurança do Agente de Distribuição** .  
   
          Se você usar assinaturas de atualização enfileirada, o Queue Reader Agent também usará o contexto especificado aqui para conexões com o Assinante.  
   
-    -   Para alterar o contexto no qual o Agente de Distribuição se conecta ao Distribuidor, clique na linha **Conexão do Distribuidor** e, depois, clique no botão ( **?** ) de propriedades na linha. Especifique o contexto na caixa de diálogo **Inserir Informações de Conexão** .  
+    -   Para alterar o contexto no qual o Agente de Distribuição se conecta ao Distribuidor, clique na linha **Conexão do Distribuidor** e, depois, clique no botão ( **...** ) de propriedades na linha. Especifique o contexto na caixa de diálogo **Inserir Informações de Conexão** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -170,9 +170,9 @@ ms.locfileid: "67584805"
   
 1.  Na caixa de diálogo **Propriedades da Assinatura – \<Assinatura>** no Publicador, é possível fazer as seguintes alterações:  
   
-    -   Para alterar a conta na qual o Agente de Mesclagem executa e faz conexões com o Publicador e o Distribuidor, clique na linha **Conta de processo de agente** e, em seguida, clique no botão ( **?** ) de propriedades na linha. Especifique a conta e a senha na caixa de diálogo **Segurança do Agente de Mesclagem** .  
+    -   Para alterar a conta na qual o Agente de Mesclagem executa e faz conexões com o Publicador e o Distribuidor, clique na linha **Conta de processo de agente** e, em seguida, clique no botão ( **...** ) de propriedades na linha. Especifique a conta e a senha na caixa de diálogo **Segurança do Agente de Mesclagem** .  
   
-    -   Para alterar o contexto no qual o Agente de Mesclagem se conecta ao Assinante, clique na linha **Conexão do Assinante** e, depois, clique no botão ( **?** ) de propriedades na linha. Especifique o contexto na caixa de diálogo **Inserir Informações de Conexão** .  
+    -   Para alterar o contexto no qual o Agente de Mesclagem se conecta ao Assinante, clique na linha **Conexão do Assinante** e, depois, clique no botão ( **...** ) de propriedades na linha. Especifique o contexto na caixa de diálogo **Inserir Informações de Conexão** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -180,15 +180,15 @@ ms.locfileid: "67584805"
   
 1.  Na caixa de diálogo **Propriedades da Assinatura – \<Assinatura>** no Assinante, é possível fazer as seguintes alterações:  
   
-    -   Para alterar a conta na qual o Agente de Mesclagem executa e faz conexões com o Assinante, clique na linha **Conta de processo de agente** e, depois, clique no botão ( **?** ) de propriedades na linha. Especifique a conta e a senha na caixa de diálogo **Segurança do Agente de Mesclagem** .  
+    -   Para alterar a conta na qual o Agente de Mesclagem executa e faz conexões com o Assinante, clique na linha **Conta de processo de agente** e, depois, clique no botão ( **...** ) de propriedades na linha. Especifique a conta e a senha na caixa de diálogo **Segurança do Agente de Mesclagem** .  
   
-    -   Para alterar o contexto no qual o Agente de Mesclagem é conectado ao Publicador e ao Distribuidor, clique na linha **Conexão do Publicador** e, em seguida, clique no botão ( **?** ) de propriedades na linha. Especifique o contexto na caixa de diálogo **Inserir Informações de Conexão** .  
+    -   Para alterar o contexto no qual o Agente de Mesclagem é conectado ao Publicador e ao Distribuidor, clique na linha **Conexão do Publicador** e, em seguida, clique no botão ( **...** ) de propriedades na linha. Especifique o contexto na caixa de diálogo **Inserir Informações de Conexão** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>Para alterar a conta sob a qual o Queue Reader Agent é executado  
   
-1.  Na página **Geral** da caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>** , clique no botão de propriedades ( **?** ) próximo ao banco de dados de distribuição.  
+1.  Na página **Geral** da caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>** , clique no botão de propriedades ( **...** ) próximo ao banco de dados de distribuição.  
   
 2.  Na caixa de diálogo **Propriedades do Banco de Dados de Distribuição – \<Banco de Dados>** , clique no botão **Configurações de Segurança** próximo à caixa de texto **Conta de processo de agente**.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "67584805"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>Para alterar as configurações de segurança para uma assinatura pull de atualização imediata  
   
-1.  Na caixa de diálogo **Propriedades da Assinatura – \<Assinatura>** no Assinante, clique na linha **Conexão do Publicador** e depois clique no botão de propriedades ( **?** ) na linha.  
+1.  Na caixa de diálogo **Propriedades da Assinatura – \<Assinatura>** no Assinante, clique na linha **Conexão do Publicador** e depois clique no botão de propriedades ( **…** ) na linha.  
   
 2.  Na caixa de diálogo **Inserir Informações de Conexão** , selecione uma das seguintes opções:  
   

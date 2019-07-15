@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7aef54c119c9941b245068186cc93f66f4e5f135
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b4fab6179453ccd21623a2da5ea0157d235eea40
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677745"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732119"
 ---
 # <a name="distributed-replay-security"></a>Segurança do Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "51677745"
 |Recurso|Conta|Permissões DCOM necessárias no controlador|  
 |-------------|-------------|---------------------------------------------|  
 |Ferramenta de administração Distributed Replay|A conta de usuário interativa|Acesso local<br /><br /> Acesso remoto<br /><br /> Inicialização local<br /><br /> Inicialização remota<br /><br /> Ativação local<br /><br /> Ativação remota|  
-|Cliente Distributed Replay|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Conta de serviço do cliente do Distributed Replay|Acesso local<br /><br /> Acesso remoto<br /><br /> Inicialização local<br /><br /> Inicialização remota<br /><br /> Ativação local<br /><br /> Ativação remota|  
+|Distributed Replay Client|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Conta de serviço do cliente do Distributed Replay|Acesso local<br /><br /> Acesso remoto<br /><br /> Inicialização local<br /><br /> Inicialização remota<br /><br /> Ativação local<br /><br /> Ativação remota|  
   
 > [!IMPORTANT]  
 >  Para ajudar a proteger contra consultas mal-intencionadas ou ataques de negação de serviço, verifique se está usando apenas uma conta de usuário de confiança para a conta de serviço do cliente. Esta conta poderá se conectar e reproduzir cargas de trabalho na instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

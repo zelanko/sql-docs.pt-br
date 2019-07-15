@@ -12,17 +12,17 @@ f1_keywords:
 ms.assetid: a384b583-cec5-4f86-8353-954c989dd94d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 946434a3d49881fc631499656e7462664eb33d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: e866e52cbd74d18065435bc4ddfcf3cb065faff6
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105645"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689799"
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>Caixa de diálogo Comentário do SQL (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Esta caixa de diálogo fornece uma área editável onde você pode escrever uma descrição detalhada da consulta. Para acessar essa caixa de diálogo, abra a consulta ou exibição no Designer de Exibição e de Consulta e na janela **Propriedades**, selecione o **Comentário SQL** e clique nas reticências (**...**) à direita do campo de propriedade.  
+Esta caixa de diálogo fornece uma área editável onde você pode escrever uma descrição detalhada da consulta. Para acessar essa caixa de diálogo, abra a consulta ou exibição no Designer de Exibição e de Consulta e na janela **Propriedades**, selecione o **Comentário SQL** e clique nas reticências ( **...** ) à direita do campo de propriedade.  
   
 ## <a name="see-also"></a>Consulte Também  
 [Mostrar propriedades de consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/show-query-properties-visual-database-tools.md)  

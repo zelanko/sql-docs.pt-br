@@ -16,15 +16,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8f73f17d3224ced3fca052e9b19a7d61cf64548b
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 5b35a8027608cc2b250e37078b9c44971e9bb106
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100431"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728127"
 ---
 # <a name="sqlmaint-utility"></a>utilitário sqlmaint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,8 +81,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  Especifica que o diagrama de sintaxe para o **sqlmaint** seja retornado. Este parâmetro deve ser usado sozinho.  
   
- **-S** _server_name_[ **\\**_instance\_name_]  
- Especifica a instância de destino do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifica _server\_name_ para a conexão com a instância padrão do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] nesse servidor. Especifica _server\_name_**\\**_instance\_name_ para conectar-se a uma instância nomeada do [!INCLUDE[ssDE](../includes/ssde-md.md)] nesse servidor. Se nenhum servidor for especificado, o **sqlmaint** se conecta à instância padrão do [!INCLUDE[ssDE](../includes/ssde-md.md)] no computador local.  
+ **-S** _server_name_[ **\\** _instance\_name_]  
+ Especifica a instância de destino do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifica _server\_name_ para a conexão com a instância padrão do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] nesse servidor. Especifica _server\_name_ **\\** _instance\_name_ para conectar-se a uma instância nomeada do [!INCLUDE[ssDE](../includes/ssde-md.md)] nesse servidor. Se nenhum servidor for especificado, o **sqlmaint** se conecta à instância padrão do [!INCLUDE[ssDE](../includes/ssde-md.md)] no computador local.  
   
  **-U** _login_ID_  
  Especifica a ID de logon a ser usada para se conectar ao servidor. Se não for fornecida, o **sqlmaint** tenta usar a [!INCLUDE[msCoName](../includes/msconame-md.md)] -Windows-Authentication. Se *login_ID* contiver caracteres especiais, ele deverá estar entre aspas duplas ("); caso contrário, as aspas duplas serão opcionais.  
@@ -136,12 +136,12 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-RmUnusedSpace** _threshold_percent free_percent_  
  Especifica que o espaço não usado seja removido do banco de dados especificado em **-D**. Essa opção só é útil para bancos de dados definidos para crescer automaticamente. *Threshold_percent* especifica o tamanho em megabytes que o banco de dados deve atingir, antes que **sqlmaint** tente remover o espaço de dados não utilizado. Se o banco de dados for menor que *threshold_percent*, nenhuma ação será tomada. *Free_percent* especifica quanto espaço não utilizado deve permanecer no banco de dados, especificado como um percentual do tamanho final do banco de dados. Por exemplo, se um banco de dados com 200 MB contiver 100 MB de dados, especificar 10 para *free_percent* resultará em um tamanho final de banco de dados de 110 MB. Observe que um banco de dados não será expandido se for menor do que *free_percent* somado à quantidade de dados no banco de dados. Por exemplo, se um banco de dados de 108 MB tiver 100 MB de dados, especificar 10 para *free_percent* não expandirá o banco de dados para 110 MB; ele permanecerá com 108 MB.  
   
- **-CkDB** | **-CkDBNoIdx**  
+ **-CkDB** |  **-CkDBNoIdx**  
  Especifica que uma instrução DBCC CHECKDB ou DBCC CHECKDB com a opção de NOINDEX seja executada no banco de dados especificado em **-D**. Para obter mais informações, consulte DBCC CHECKDB.  
   
  Um aviso será gravado em *text_file* , se o banco de dados estiver em uso, quando **sqlmaint** for executado.  
   
- **-CkAl** | **-CkAlNoIdx**  
+ **-CkAl** |  **-CkAlNoIdx**  
  Especifica que uma instrução DBCC CHECKALLOC com a opção de NOINDEX seja executada no banco de dados especificado em **-D**. Para obter mais informações, veja [DBCC CHECKALLOC &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md).  
   
  **-CkCat**  
@@ -213,7 +213,7 @@ dbname_log_yyyymmddhhmm.BAK
  Especifica que a mídia de backup é fita.  
   
  **-BkUpOnlyIfClean**  
- Especifica que o backup ocorrerá apenas se nenhuma verificação **-Ck** especificada encontrar problemas nos dados. As ações de manutenção são executadas na mesma sequência em que aparecem no prompt de comando. Especifique o parâmetro **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl**ou **-CkCat** antes de **-BkUpDB**/**-BkUpLog** caso também for especificar **-BkUpOnlyIfClean**, ou o backup ocorrerá independentemente de a verificação relatar problemas ou não.  
+ Especifica que o backup ocorrerá apenas se nenhuma verificação **-Ck** especificada encontrar problemas nos dados. As ações de manutenção são executadas na mesma sequência em que aparecem no prompt de comando. Especifique o parâmetro **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl**ou **-CkCat** antes de **-BkUpDB**/ **-BkUpLog** caso também for especificar **-BkUpOnlyIfClean**, ou o backup ocorrerá independentemente de a verificação relatar problemas ou não.  
   
  **-VrfyBackup**  
  Especifica que o RESTORE VERIFYONLY será executado no backup quando este for concluído.  
@@ -253,7 +253,7 @@ dbname_log_yyyymmddhhmm.BAK
 sqlmaint -S MyServer -D AdventureWorks2012 -CkDB -CkAl -CkCat -Rpt C:\MyReports\AdvWks_chk.rpt  
 ```  
   
-### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>b. Atualização de estatísticas usando uma amostra de 15% em todos os bancos de dados em um plano. Também, reduz qualquer banco de dados que tenha alcançado 110 MB para ter só 10% de espaço livre.  
+### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>B. Atualização de estatísticas usando uma amostra de 15% em todos os bancos de dados em um plano. Também, reduz qualquer banco de dados que tenha alcançado 110 MB para ter só 10% de espaço livre.  
   
 ```  
 sqlmaint -S MyServer -PlanName MyUserDBPlan -UpdOptiStats 15 -RmUnusedSpace 110 10  

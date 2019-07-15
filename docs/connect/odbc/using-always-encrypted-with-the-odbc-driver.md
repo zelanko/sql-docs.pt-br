@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: jroth
 author: MightyPen
-ms.openlocfilehash: aff69606c81a1ee93a01a8467299ba2155da770d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a187f83939ec9758db8ca688a074de530d6cf0d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801740"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680078"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Como usar o recurso Always Encrypted com o ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -58,7 +58,12 @@ Observe que habilitar o Always Encrypted não é suficiente para o êxito da cri
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Recuperando e modificando dados em colunas criptografadas
 
-Depois de habilitar o Always Encrypted em uma conexão, você pode usar APIs de ODBC padrão (confira [Código de exemplo do ODBC](https://code.msdn.microsoft.com/windowsapps/ODBC-sample-191624ae/sourcecode?fileId=51137&pathId=1980325953) ou [Referência do programador de ODBC](https://msdn.microsoft.com/library/ms714177(v=vs.85).aspx)) para recuperar ou modificar dados em colunas de banco de dados criptografadas. Supondo que seu aplicativo tem as permissões de banco de dados e pode acessar a chave mestra de coluna, o driver criptografa quaisquer parâmetros de consulta que se destinam a colunas criptografadas e descriptografa os dados recuperados de colunas criptografadas, comportando-se de forma transparente para o aplicativo, como se as colunas não fossem criptografadas.
+Depois de habilitar o Always Encrypted em uma conexão, você pode usar APIs de ODBC padrão. As APIs ODBC pode recuperar ou modificar dados em colunas de banco de dados criptografado. Os seguintes itens de documentação podem ajudar com isso:
+
+- [Código de exemplo do ODBC](cpp-code-example-app-connect-access-sql-db.md)
+- [Referência do programador ODBC](../../odbc/reference/odbc-programmer-s-reference.md)
+
+Seu aplicativo deve ter as permissões de banco de dados necessário e deve ser capaz de acessar a chave mestra de coluna. Em seguida, o driver criptografa todos os parâmetros que se destinam a colunas criptografadas. O driver também descriptografa os dados recuperados de colunas criptografadas. O driver executa todos os essa criptografando e descriptografando sem nenhuma assistência do seu código-fonte. Para o seu programa, é como se as colunas não são criptografadas.
 
 Se Always Encrypted não estiver habilitado, as consultas com parâmetros que se destinam a colunas criptografadas falharão. Os dados ainda podem ser recuperados de colunas criptografadas, desde que a consulta não tenha parâmetros que se destinem a colunas criptografadas. No entanto, o driver não tenta descriptografar nenhuma criptografia, e o aplicativo recebe os dados binários criptografados (como matrizes de bytes).
 

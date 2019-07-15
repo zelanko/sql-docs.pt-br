@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a18aaf9d8743e5f3d250d04156dd5bab5375625f
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 48a3bfbca1b133be9c8be9b05fef3f4e2dd9ae14
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67579473"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860742"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Criar e aplicar o instantâneo inicial
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Para exibir ou modificar o local padrão de pasta de instantâneo, consulte
   
 ### <a name="modify-the-default-snapshot-location"></a>Modificar a localização do instantâneo padrão  
   
-1.  Na página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>** , clique no botão de propriedades ( **?** ) para o Publicador para o qual você deseja alterar a localização do instantâneo padrão.  
+1.  Na página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>** , clique no botão de propriedades ( **...** ) para o Publicador para o qual você deseja alterar a localização do instantâneo padrão.  
   
 2.  Na caixa de diálogo **Propriedades do Publicador – \<Publisher>** , digite um valor para a propriedade **Pasta de Instantâneo Padrão**.  
   

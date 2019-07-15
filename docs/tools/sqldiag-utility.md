@@ -27,15 +27,15 @@ helpviewer_keywords:
 - automatic diagnostic collection
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 05336c1b9a7f6830b3dd2c6e6f0b794984bda061
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 7c46fbea6a02a089b07ad359bc3c53bc5022f3e3
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100941"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728109"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ sqldiag
   
  1 = usa compactação NTFS  
   
- **/B** [**+**]*start_time*  
+ **/B** [ **+** ]*start_time*  
  Especifica a data e a hora para começar a coletar dados de diagnóstico no seguinte formato:  
   
  AAAAMMDD_HH:MM:SS  
@@ -140,7 +140,7 @@ sqldiag
   
  Observe que o **SQLdiag** usa a hora local no computador no qual o utilitário está sendo executado.  
   
- **/E** [**+**]*stop_time*  
+ **/E** [ **+** ]*stop_time*  
  Especifica a data e a hora para interromper a coleta de dados de diagnóstico no seguinte formato:  
   
  AAAAMMDD_HH:MM:SS  
@@ -310,7 +310,7 @@ sqldiag /B +01:00:00 /E +03:00:00
 sqldiag /B +01:00:00 /E 08:30:00  
 ```  
   
- Se a hora atual for 08:00, a hora de término passará antes da coleta de diagnóstico começar de fato. Como o **SQLdiag** ajusta automaticamente as datas de início e de término para o próximo dia quando ocorrem no passado, nesse exemplo, a coleta de diagnóstico começará às 09:00 de hoje (uma hora de início relativa foi especificada com **+**) e continuará até às 08:30 da manhã seguinte.  
+ Se a hora atual for 08:00, a hora de término passará antes da coleta de diagnóstico começar de fato. Como o **SQLdiag** ajusta automaticamente as datas de início e de término para o próximo dia quando ocorrem no passado, nesse exemplo, a coleta de diagnóstico começará às 09:00 de hoje (uma hora de início relativa foi especificada com **+** ) e continuará até às 08:30 da manhã seguinte.  
   
 ### <a name="stopping-and-restarting-sqldiag-to-collect-daily-diagnostics"></a>Interrompendo e reiniciando o SQLdiag para coletar diagnósticos diários  
  Para coletar um conjunto de diagnósticos especificado diariamente sem ter que iniciar e interromper manualmente o **SQLdiag**, use o argumento **/L** . O argumento **/L** faz com que o **SQLdiag** seja executado continuamente reiniciando-se automaticamente após um desligamento agendado. Quando **/L** é especificado e o **SQLdiag** é interrompido porque atingiu a hora de término com o argumento **/E** ou porque está sendo executado no modo de instantâneo usando o argumento **/X** , o **SQLdiag** reiniciará em vez de fechar.  
