@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d265f405bdebac9a44461ca3b262935eaaba25bd
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: a80d869afe67317476a1d68c28afa5456a4a7366
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077665"
 ---
 # <a name="functions-on-string-values---lower-case"></a>Funções em Valores da Cadeia de Caracteres – lower-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ SELECT @x.value('fn:lower-case(/text()[1])', 'nvarchar(10)');
   
  `abcdef!@4`  
   
-### <a name="b-search-for-a-specific-character-string"></a>b. Pesquisar uma cadeia de caracteres específica  
+### <a name="b-search-for-a-specific-character-string"></a>B. Pesquisar uma cadeia de caracteres específica  
  Este exemplo mostra como usar a função lower-case para executar uma pesquisa sem diferenciação de maiúsculas e minúsculas.  
   
 ```  

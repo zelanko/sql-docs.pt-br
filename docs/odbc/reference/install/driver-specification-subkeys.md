@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: b4d802ef-b199-4e64-b7a5-6f2b3e5e2c80
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b15aa278e2fe38afe93f5628433a6c8f4b41cd8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f5523c54286ed2e7cc554745dc269599115793e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198323"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094175"
 ---
 # <a name="driver-specification-subkeys"></a>Subchaves de especificação de driver
 Cada driver listado na subchave de Drivers ODBC tem uma subchave de seu próprio. Essa subchave tem o mesmo nome que o valor correspondente sob a subchave de Drivers ODBC. Os valores sob essa subchave listam os caminhos completos do driver e DLLs, os valores das palavras-chave driver retornados pela instalação de driver **SQLDrivers**e a contagem de uso. Os formatos de valores são conforme mostrado na tabela a seguir.  
   
-|Nome|Tipo de dados|Dados|  
+|Nome|Tipo de dados|Data|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
 |ConnectFunctions|REG_SZ|{**Y**&#124; **N**} {**Y**&#124; **N**} {**Y**&#124; **N**}|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9fc6737530fdf151573a570eb83f777785ddb679
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7daef4785a77df294a831d69089108cbb1d88489
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061480"
 ---
 # <a name="sqlgetpoolid-function"></a>Função SQLGetPoolID
 **Conformidade com**  

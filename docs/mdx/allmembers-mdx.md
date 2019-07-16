@@ -1,5 +1,5 @@
 ---
-title: AllMembers (MDX) | Microsoft Docs
+title: AllMembers=2==retorna (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 92cde0acf07f62d0678da6dd96efa707dedc1a1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 770d66941af9b42be3c7b26f7e04a60d2a95cac2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63066244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017155"
 ---
 # <a name="allmembers-mdx"></a>AllMembers (MDX)
 
@@ -33,7 +32,7 @@ Level_Expression.AllMembers
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Hierarchy_Expression*  
+ *Expressão_Hierarquia*  
  Uma linguagem MDX válida que retorna uma hierarquia.  
   
  *Level_Expression*  

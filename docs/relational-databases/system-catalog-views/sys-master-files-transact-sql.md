@@ -19,35 +19,34 @@ helpviewer_keywords:
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 30a9d28c1fe7c07a4bcfb642fee2dc318aec6896
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 679a048a40c990c5c86c0c5a24f4f1c53fb9e0b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810294"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102388"
 ---
 # <a name="sysmasterfiles-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Contém uma fila por arquivo de um banco de dados, como armazenado no banco de dados mestre. Essa é uma exibição única que abrange todo o sistema.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID do banco de dados ao qual este arquivo se aplica. O masterdatabase_id é sempre 1.|  
 |file_id|**int**|ID do arquivo no banco de dados. O file_id primário sempre é 1.|  
 |file_guid|**uniqueidentifier**|Identificador exclusivo do arquivo.<br /><br /> NULL = O banco de dados foi atualizado a partir de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|Tipo|**tinyint**|Tipo de arquivo:<br /><br /> 0 = linhas.<br /><br /> 1 = Log<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = texto completo (catálogos de texto completo anteriores ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; catálogos de texto completo atualizados para ou criados no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou superior informarão um tipo de arquivo 0.)|  
+|type|**tinyint**|Tipo de arquivo:<br /><br /> 0 = linhas.<br /><br /> 1 = Log<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = texto completo (catálogos de texto completo anteriores ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; catálogos de texto completo atualizados para ou criados no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou superior informarão um tipo de arquivo 0.)|  
 |type_desc|**nvarchar(60)**|Descrição do tipo de arquivo:<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (catálogos de texto completo anteriores ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].)|  
 |data_space_id|**int**|ID do espaço de dados ao qual pertence o arquivo. Espaço de dados é um grupo de arquivos.<br /><br /> 0 = Arquivos de log|  
-|nome|**sysname**|Nome lógico do arquivo no banco de dados.|  
+|name|**sysname**|Nome lógico do arquivo no banco de dados.|  
 |physical_name|**nvarchar(260)**|Nome de arquivo do sistema operacional.|  
 |state|**tinyint**|Estado do arquivo:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |state_desc|**nvarchar(60)**|Descrição do estado do arquivo:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Para obter mais informações, consulte [Estados de arquivo](../../relational-databases/databases/file-states.md).|  
-|tamanho|**int**|Tamanho de arquivo atual, em páginas de 8 KB. Para um instantâneo do banco de dados, tamanho reflete o espaço máximo que o instantâneo poderá usar para o arquivo.<br /><br /> Observação: Este campo é populado como zero para contêineres FILESTREAM. Consulta de *sys. database_files* exibição para o tamanho real de contêineres FILESTREAM de catálogo.|  
-|max_size|**int**|Tamanho de arquivo máximo, em páginas de 8 KB:<br /><br /> 0 = Crescimento não é permitido.<br /><br /> -1 = Arquivo crescerá até que o disco esteja completo.<br /><br /> 268435456 = Arquivo de log crescerá a um tamanho máximo de 2 TB.<br /><br /> Observação: Os bancos de dados que são atualizados com um tamanho de arquivo de log ilimitado informarão -1 para o tamanho máximo do arquivo de log.|  
-|growth|**int**|0 = Arquivo tem tamanho fixo e não crescerá.<br /><br /> >0 = Arquivo crescerá automaticamente.<br /><br /> Se is_percent_growth = 0, incremento de crescimento está em unidades de páginas de 8 KB, arredondado ao mais próximo de 64 KB.<br /><br /> Se is_percent_growth = 1, o incremento de crescimento será expresso em porcentagem de número inteiro.|  
+|size|**int**|Tamanho de arquivo atual, em páginas de 8 KB. Para um instantâneo do banco de dados, tamanho reflete o espaço máximo que o instantâneo poderá usar para o arquivo.<br /><br /> Observação: Este campo é populado como zero para contêineres FILESTREAM. Consulta de *sys. database_files* exibição para o tamanho real de contêineres FILESTREAM de catálogo.|  
+|max_size|**int**|Tamanho de arquivo máximo, em páginas de 8 KB:<br /><br /> 0 = Crescimento não é permitido.<br /><br /> -1 = Arquivo crescerá até que o disco esteja completo.<br /><br /> 268435456 = Arquivo de log crescerá a um tamanho máximo de 2 TB.<br /><br /> Observação: Bancos de dados que são atualizados com um tamanho de arquivo de log ilimitado informarão -1 para o tamanho máximo do arquivo de log.|  
+|growth|**int**|0 = Arquivo tem tamanho fixo e não crescerá.<br /><br /> > 0 = arquivo crescerá automaticamente.<br /><br /> Se is_percent_growth = 0, incremento de crescimento está em unidades de páginas de 8 KB, arredondado ao mais próximo de 64 KB.<br /><br /> Se is_percent_growth = 1, o incremento de crescimento será expresso em porcentagem de número inteiro.|  
 |is_media_read_onlyF|**bit**|1 = O arquivo está em mídia somente leitura.<br /><br /> 0 = Arquivo está em mídia leitura/gravação.|  
 |is_read_only|**bit**|1 = Arquivo está marcado como somente leitura.<br /><br /> 0 = Arquivo está marcado como leitura/gravação.|  
 |is_sparse|**bit**|1 = O arquivo é um arquivo esparso.<br /><br /> 0 = O arquivo não é um arquivo esparso.<br /><br /> Para obter mais informações, consulte [Exibir o tamanho do arquivo esparso de um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).|  

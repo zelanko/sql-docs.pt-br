@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e6a07dda-a665-4f5b-a8d6-9ff479700513
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce901e6a8639c8a2caea6e55cbaa18fedb56f4a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b36c02d772682088a799cfca66f5bbf3e169a67f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63132727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096539"
 ---
 # <a name="creating-and-opening-tables-text-file-driver"></a>Criar e abrir tabelas (Driver de Arquivo de texto)
 Quando o driver de texto é usado, uma nova tabela é criada usando o formato especificado no Odbcinst. ini. Se não for especificado, as tabelas são criadas no formato CSVDELIMITED. Por padrão, o padrão de colunas de INTEIROS a 11 caracteres e colunas FLOAT padrão 22 caracteres. Colunas de data e usam o formato AAAA-MM-DD. CHAR e colunas LONGCHAR são a largura especificada na instrução CREATE.

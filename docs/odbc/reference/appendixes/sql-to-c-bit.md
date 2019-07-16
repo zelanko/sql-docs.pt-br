@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0eeaab8b-ad82-4a36-b464-9a1211d5f72c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f7ff0bd2988460596623eb47ded276392dc3d443
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d00a3c26d842b196e20861da6d8ae3e818d4cbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056897"
 ---
 # <a name="sql-to-c-bit"></a>SQL para C: bit
 O identificador para o tipo de dados SQL ODBC bit é:  
@@ -31,10 +30,10 @@ O identificador para o tipo de dados SQL ODBC bit é:
   
 |Identificador de tipo C|Teste|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR<br /><br /> SQL_C_WCHAR|*BufferLength* > 1<br /><br /> *BufferLength* <= 1|Dados<br /><br /> Indefinido|1<br /><br /> Indefinido|n/d<br /><br /> 22003|  
-|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE<br /><br /> SQL_C_NUMERIC|None [a]|Dados|Tamanho do tipo de dados C|n/d|  
-|SQL_C_BIT|None [a]|Dados|1[b]|n/d|  
-|SQL_C_BINARY|*BufferLength* > = 1<br /><br /> *BufferLength* < 1|Dados<br /><br /> Indefinido|1<br /><br /> Indefinido|n/d<br /><br /> 22003|  
+|SQL_C_CHAR<br /><br /> SQL_C_WCHAR|*BufferLength* > 1<br /><br /> *BufferLength* < = 1|Data<br /><br /> Indefinido|1<br /><br /> Indefinido|n/d<br /><br /> 22003|  
+|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE<br /><br /> SQL_C_NUMERIC|None [a]|Data|Tamanho do tipo de dados C|n/d|  
+|SQL_C_BIT|None [a]|Data|1[b]|n/d|  
+|SQL_C_BINARY|*BufferLength* > = 1<br /><br /> *BufferLength* < 1|Data<br /><br /> Indefinido|1<br /><br /> Indefinido|n/d<br /><br /> 22003|  
   
  [a] o valor de *BufferLength* é ignorado para essa conversão. O driver pressupõe que o tamanho de **TargetValuePtr* é o tamanho do tipo de dados C.  
   

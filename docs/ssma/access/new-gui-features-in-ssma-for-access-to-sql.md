@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e33c149f270f499921824e70ca18c58118409cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 817fd54e0af1a6cc6b847c796c68ae24f9a495ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453463"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083627"
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>Novos recursos de GUI no SSMA para Access to SQL
 Este capítulo descreve os novos recursos da Interface de usuário do SSMA  
@@ -48,7 +47,7 @@ Para abrir a caixa de diálogo Gerenciar Layouts, no menu Exibir, aponte para La
 ## <a name="bookmarks"></a>Indicadores  
 Esse recurso permite que você defina um ou mais indicadores na fonte ou código de destino, o rápido encontrado um indicador usando atalhos, gerenciar indicadores com uma caixa de diálogo amigável.  
   
-### <a name="toggle-bookmark"></a>Toggle Bookmark  
+### <a name="toggle-bookmark"></a>Ativar/Desativar indicador  
 Você pode definir/remover o indicador das seguintes maneiras:  
   
 -   Use o botão Ativar/Desativar indicador na parte superior da janela SQL de origem ou destino  

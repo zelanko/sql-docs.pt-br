@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6119bc94-0b22-45d4-a34b-967afd810a9d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c23935ef020763bffe80957f054637a96e6785db
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: b4e2a969450c2ec4593c7daec1b9c9b203b18410
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078362"
 ---
 # <a name="views-transact-sql"></a>VIEWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "54254771"
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificador de exibição.|  
 |**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a exibição.<br /><br /> **&#42;&#42;Importante &#42; &#42;**  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|Nome da exibição.|  
-|**VIEW_DEFINITION**|**nvarchar(** 4000 **)**|Se o comprimento da definição for maior que **nvarchar (** 4000 **)**, essa coluna será NULL. Caso contrário, essa coluna será o texto de definição da exibição.|  
+|**VIEW_DEFINITION**|**nvarchar(** 4000 **)**|Se o comprimento da definição for maior que **nvarchar (** 4000 **)** , essa coluna será NULL. Caso contrário, essa coluna será o texto de definição da exibição.|  
 |**CHECK_OPTION**|**varchar(** 7 **)**|Tipo de WITH CHECK OPTION. Será CASCADE se a exibição original tiver sido criada usando WITH CHECK OPTION. Caso contrário, será retornado NONE.|  
 |**IS_UPDATABLE**|**varchar(** 2 **)**|Especifica se a exibição é atualizável. Sempre retorna NO.|  
   

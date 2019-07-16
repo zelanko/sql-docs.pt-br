@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 859580bb-4e69-4517-a4f1-460649dd06ca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0d5e53ac34c6c8224ca312929a7a7556e2507f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e253b3ad8144a75ca3c176c9d9fce94a7e4ec47f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316705"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988034"
 ---
 # <a name="read-only-status-text-file-driver"></a>Status somente leitura (Driver de Arquivo de texto)
 Quando o driver de texto é usado, as tabelas de origem de dados são somente leitura. No entanto, os aplicativos podem executar inserções para tabelas de texto.

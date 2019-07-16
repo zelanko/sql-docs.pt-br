@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a56e8cb4531fbe48e2a66242d23406d6d647573c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe71adc1be14b40d18baf50eecd68c2bef65c836
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997564"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +39,13 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'dbname'` É o nome do banco de dados. *DBName* está **sysname**, com um padrão de **%**. Se **%**, em seguida, o conjunto de resultados contém todos os bancos de dados no publicador, caso contrário, apenas informações sobre o banco de dados especificado serão retornadas. Não são retornadas informações para nenhum banco de dados para o qual o usuário não tenha a permissão apropriada, como descrita abaixo.  
+`[ @dbname = ] 'dbname'` É o nome do banco de dados. *DBName* está **sysname**, com um padrão de **%** . Se **%** , em seguida, o conjunto de resultados contém todos os bancos de dados no publicador, caso contrário, apenas informações sobre o banco de dados especificado serão retornadas. Não são retornadas informações para nenhum banco de dados para o qual o usuário não tenha a permissão apropriada, como descrita abaixo.  
   
 `[ @type = ] 'type'` Restringe o conjunto de resultados para conter apenas bancos de dados no qual a opção de replicação especificada *tipo* valor tiver sido habilitado. *tipo de* está **sysname**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**publish**|Replicação transacional permitida.|  
+|**Publicar**|Replicação transacional permitida.|  
 |**publicação de mesclagem**|Replicação de mesclagem permitida.|  
 |**replicação permitida** (padrão)|Replicação transacional ou replicação de mesclagem permitida.|  
   

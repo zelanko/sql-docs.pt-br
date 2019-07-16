@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 07551472-87ee-4765-951f-1364ed32f0c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30c116878049c4f6a8f36e988731ab641e03c6d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b5cef56cec30e5ad09500135e05884bf55d5dde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076221"
 ---
 # <a name="sql-modules"></a>Módulos SQL
 A segunda técnica para enviar instruções SQL para o DBMS é por meio de módulos. Em resumo, um módulo consiste em um grupo de procedimentos, que são chamados do host de linguagem de programação. Cada procedimento contém uma única instrução SQL e dados são passados de e para o procedimento por meio de parâmetros.  

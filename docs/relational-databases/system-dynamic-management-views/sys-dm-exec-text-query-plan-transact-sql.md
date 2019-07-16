@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4329b8fcbddb0050f529e401da8d6c7c14f065d9
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 5016f6f556967fa45364460280080ca829e521b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936888"
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sys.dm_exec_text_query_plan
   
 ## <a name="arguments"></a>Argumentos  
 *plan_handle*  
-É um token que identifica exclusivamente um plano de execução de consulta para um lote que foi executado e seu plano reside no cache de plano ou em execução no momento. *plan_handle* is **varbinary(64)**.   
+É um token que identifica exclusivamente um plano de execução de consulta para um lote que foi executado e seu plano reside no cache de plano ou em execução no momento. *plan_handle* está **varbinary(64)** .   
 
 O *plan_handle* pode ser obtido dos seguintes objetos de gerenciamento dinâmico: 
   
@@ -68,8 +67,8 @@ O *plan_handle* pode ser obtido dos seguintes objetos de gerenciamento dinâmico
 
 -   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
-*statement_start_offset* | 0 | DEFAULT  
-Indica, em bytes, a posição inicial da consulta que a linha descreve dentro do texto de seu lote ou objeto persistente. *statement_start_offset* está **int**. Um valor de 0 indica o começo do lote. O valor padrão é 0.  
+*statement_start_offset* | 0 | PADRÃO  
+Indica, em bytes, a posição inicial da consulta que a linha descreve dentro do texto de seu lote ou objeto persistente. *statement_start_offset* está **int**. Um valor de 0 indica o início do lote. O valor padrão é 0.  
   
 O deslocamento de início da instrução pode ser obtido dos seguintes objetos de gerenciamento dinâmico:  
   
@@ -91,7 +90,7 @@ Um valor de -1 indica o fim do lote. O valor padrão é -1.
 |**dbid**|**smallint**|A ID do banco de dados de contexto em vigor quando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondente a esse plano foi compilada. Para instruções SQL preparadas e ad hoc, a ID do banco de dados no qual as instruções foram compiladas.<br /><br /> A coluna é anulável.|  
 |**objectid**|**int**|A identificação do objeto (por exemplo, procedimento armazenado ou função definida pelo usuário) para este plano de consulta. Para lotes ad hoc e preparadas, essa coluna é **nulo**.<br /><br /> A coluna é anulável.|  
 |**number**|**smallint**|Inteiro de procedimento armazenado numerado. Por exemplo, um grupo de procedimentos para o **pedidos** aplicativo pode ser nomeado **orderproc; 1**, **orderproc; 2**e assim por diante. Para lotes ad hoc e preparadas, essa coluna é **nulo**.<br /><br /> A coluna é anulável.|  
-|**encrypted**|**bit**|Indica se o procedimento armazenado correspondente está criptografado.<br /><br /> 0 = não criptografado<br /><br /> 1 = criptografado<br /><br /> A coluna não é anulável.|  
+|**Criptografado**|**bit**|Indica se o procedimento armazenado correspondente está criptografado.<br /><br /> 0 = não criptografado<br /><br /> 1 = criptografado<br /><br /> A coluna não é anulável.|  
 |**query_plan**|**nvarchar(max)**|Contém a representação de plano de execução de tempo de compilação do plano de execução de consulta que é especificado com *plan_handle*. O Showplan está em formato de texto. Um plano é gerado para cada lote que contém, por exemplo, instruções ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)], chamadas de procedimento armazenado e chamadas de função definidas pelo usuário.<br /><br /> A coluna é anulável.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -145,7 +144,7 @@ FROM sys.dm_exec_text_query_plan (0x06000100A27E7C1FA821B10600,0,-1);
 GO  
 ```  
   
-### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>b. Recuperando todo o plano de consulta do cache de plano  
+### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. Recuperando todo o plano de consulta do cache de plano  
  Para recuperar um instantâneo de todos os planos de consulta residindo no cache de plano, recupere os identificadores de plano de todas as consultas no cachê, consultando a exibição de gerenciamento dinâmico `sys.dm_exec_cached_plans`. Os identificadores de plano são armazenados na coluna `plan_handle` de `sys.dm_exec_cached_plans`. Em seguida, use o operador CROSS APPLY para transmitir o identificador de plano a `sys.dm_exec_text_query_plan`, como se segue. O plano de execução de saída de cada plano atualmente no cache de plano está na `query_plan` coluna da tabela que é retornada.  
   
 ```sql  

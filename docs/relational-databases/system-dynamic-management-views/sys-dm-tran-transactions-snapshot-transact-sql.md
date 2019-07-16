@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d24ed8e2fdcf3a9475f999bf127eae3e8553dc86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a40ad81505419239d7a09d01a0c27fceff2a24f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090469"
 ---
 # <a name="sysdmtrantransactionssnapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ dm_tran_transactions_snapshot
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|Número de sequência de transação (XSN) de um instantâneo de transação.|  
 |**snapshot_id**|**int**|ID de instantâneo para cada instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] iniciada com leitura confirmada, usando controle de versão de linha. Este valor é usado para gerar uma exibição consistente transacional do banco de dados que oferece suporte para cada consulta sendo executada com leitura confirmada, usando controle de versão de linha.|  
@@ -77,7 +76,7 @@ dm_tran_transactions_snapshot
 ## <a name="permissions"></a>Permissões
 
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
+Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer a permissão `VIEW DATABASE STATE` no banco de dados.   
   
 ## <a name="remarks"></a>Comentários  
  Quando uma transação de instantâneo começa, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] registra todas as transações ativas naquele momento. **tran_transactions_snapshot** reporta essas informações para todas as transações de instantâneo ativas.  

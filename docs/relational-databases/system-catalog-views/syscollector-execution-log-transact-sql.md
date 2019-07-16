@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e982c086bdae807220a2c9cf1c9e3260d0d66a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31270da81f0951702aeef0427e70c6a66db5ff0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060348"
 ---
 # <a name="syscollectorexecutionlog-transact-sql"></a>syscollector_execution_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fornece informações do log de execução para um conjunto de coleta ou pacote.   
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |log_id|**bigint**|Identifica cada execução do conjunto de coleta. Usado para unir essa exibição a outros logs detalhados. Não permite valor nulo.|  
 |parent_log_id|**bigint**|Identifica o pacote pai ou o conjunto de coleta. Não permite valor nulo. As IDs são encadeadas na relação pai-filho, o que permite determinar qual pacote foi iniciado por qual conjunto de coleta. Essa exibição agrupa as entradas de log pela vinculação pai-filho e recua os nomes dos pacotes de forma que o encadeamento de chamada seja claramente visível.|  
@@ -42,7 +41,7 @@ ms.locfileid: "47773485"
 |finish_time|**datetime**|A hora em que a execução de pacotes e de conjuntos de coletas foi concluída. Permite valor nulo.|  
 |runtime_execution_mode|**smallint**|Indica se a atividade do conjunto de coleta estava coletando ou carregando dados. Permite valor nulo.<br /><br /> Os valores são:<br /><br /> 0 = Collection<br /><br /> 1 = Carregar|  
 |status|**smallint**|Indica o status atual do conjunto de coleta ou do pacote. Não permite valor nulo.<br /><br /> Os valores são:<br /><br /> 0 = em execução<br /><br /> 1 = concluído<br /><br /> 2 = Falha|  
-|operador|**nvarchar(128)**|Identifica quem iniciou o conjunto de coleta ou o pacote. Não permite valor nulo.|  
+|operator|**nvarchar(128)**|Identifica quem iniciou o conjunto de coleta ou o pacote. Não permite valor nulo.|  
 |package_id|**uniqueidentifier**|Identifica o conjunto de coleta ou pacote que gerou esse log. Permite valor nulo.|  
 |package_name|**nvarchar(4000)**|O nome do pacote que gerou este log. Permite valor nulo.|  
 |package_execution_id|**uniqueidentifier**|Fornece um link para a tabela de logs [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Permite valor nulo.|  

@@ -8,20 +8,19 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 9f0851d3ec373161c9277013fc746ebda5b91f89
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 68d57ac2db4149178a61424affef5e8948de0063
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070950"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Referência de função de DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oferece suporte a várias funções da linguagem DMX (Data Mining Extensions). As funções expandem os resultados de uma consulta de previsão para incluir informações que descrevem melhor a previsão. As funções também fornecem mais controle sobre como são retornados os resultados da previsão. A tabela a seguir fornece links para recursos para ajudá-lo a entender como usar funções em DMX.  
   
-|Função|Description|  
+|Função|Descrição|  
 |--------------|-----------------|  
 |[Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)|Lista as funções que podem ser usadas com todos os tipos de modelos e fornece links para mais informações sobre como consultar tipos específicos de modelos de mineração.|  
 |[Estrutura e uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|Fornece uma visão geral de como construir uma consulta de previsão usando DMX.|  
@@ -29,7 +28,7 @@ ms.locfileid: "37998418"
   
  A tabela a seguir lista as funções que a DMX suporta.  
   
-|Função|Description|  
+|Função|Descrição|  
 |--------------|-----------------|  
 |[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|Retorna uma tabela que contém as últimas linhas de n-item da expressão de tabela, em ordem crescente, com base em uma expressão de classificação.|  
 |[BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)|Retorna uma tabela que contém o menor número linhas mais baixas, que atendem uma expressão de porcentagem especificada, em ordem crescente de classificação, com base em uma expressão de classificação.|  
@@ -41,7 +40,7 @@ ms.locfileid: "37998418"
 |[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|Indica se o nó especificado contém o caso.|  
 |[IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|Indica se um caso pertence ao conjunto de casos de teste.|  
 |[IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)|Indica se um caso pertence ao conjunto de casos de treinamento.|  
-|[Latência &#40;DMX&#41;](../dmx/lag-dmx.md)|Retorna a fração de tempo entre a data do caso atual e a última data na data.|  
+|[Lag &#40;DMX&#41;](../dmx/lag-dmx.md)|Retorna a fração de tempo entre a data do caso atual e a última data na data.|  
 |[Prever &#40;DMX&#41;](../dmx/predict-dmx.md)|Executa uma previsão em uma coluna especificada.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)|Retorna a probabilidade ajustada da coluna previsível especificada.|  
 |[PredictAssociation &#40;DMX&#41;](../dmx/predictassociation-dmx.md)|Prevê associação de membro em uma coluna.|  

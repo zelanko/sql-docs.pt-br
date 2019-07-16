@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1e155fb51bd5f78a3c4a639e9233746131ddf6f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ba3753a18d8e79848b0674e4738f2d2b811143e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032670"
 ---
 # <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_syscollector_create_collection_item
  [ @collection_set_id = ] *collection_set_id*  
  É o identificador local exclusivo do conjunto de coleta. *collection_set_id* está **int**.  
   
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  É o GUID que identifica o tipo de coletor a ser usado para este item *collector_type_uid* é **uniqueidentifier** sem nenhum valor padrão... Para obter uma lista dos tipos de coletores, consulte a exibição de sistema syscollector_collector_types.  
   
  [ @name = ] '*name*'  
@@ -63,10 +62,10 @@ sp_syscollector_create_collection_item
   
  Se o conjunto de coleta estiver definido para o modo não armazenado em cache, a frequência será ignorada, pois esse modo faz com que a coleta e o carregamento dos dados ocorram conforme a agenda especificada para o conjunto de coleta. Para exibir o modo de coleta do conjunto de coleta, consulte o [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) exibição do sistema.  
   
- [ @parameters = ] '*parameters*'  
+ [ @parameters =] '*parâmetros*'  
  Os parâmetros de entrada do tipo de coletor. *parâmetros* está **xml** com um padrão NULL. O *parâmetros* esquema deve corresponder ao esquema de parâmetros do tipo de coletor.  
   
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  É o identificador exclusivo que identifica o item do conjunto de coleta. *collection_item_id* está **int** e tem OUTPUT.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

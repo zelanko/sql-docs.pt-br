@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a80d54b0-43ff-4dfd-b6cb-f4694a5ed765
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0485ecf720cb84580c17c77b31fc6816de2e679a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef42fe2ab881a7e24d680e0dd941cbea0d95488f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076889"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>Exemplo de diagnóstico de driver baseado em DBMS
 Um driver baseados em DBMS envia solicitações para um DBMS e retorna as informações do aplicativo por meio do Gerenciador de Driver. Como o driver é o componente que faz interface com o Gerenciador de Driver, formata e retorna os argumentos para **SQLGetDiagRec**.  

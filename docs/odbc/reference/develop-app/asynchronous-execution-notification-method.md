@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6aa634f154eb0594c76ae7e65b8d237175a3f92e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66b806b698164b306eee4dc7d4c48fbe7835adae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288514"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077059"
 ---
 # <a name="asynchronous-execution-notification-method"></a>Execução assíncrona (método de notificação)
 ODBC permite que a execução assíncrona da conexão e as operações de instrução. Um thread de aplicativo pode chamar uma função ODBC no modo assíncrono e a função pode retornar antes da operação for concluída, permitindo que o thread do aplicativo realizar outras tarefas. No SDK do Windows 7, para as operações de conexão, ou instrução assíncrona um aplicativo determinado que a operação assíncrona foi concluída usando o método de sondagem. Para obter mais informações, consulte [execução assíncrona (método de sondagem)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). A partir do SDK do Windows 8, você pode determinar que uma operação assíncrona foi concluída usando o método de notificação.  
@@ -44,7 +43,7 @@ ODBC permite que a execução assíncrona da conexão e as operações de instru
 |------------------------------|----------------------------|--------------------|--------------|  
 |Novo aplicativo de qualquer versão do ODBC|ODBC 3.81|ODBC 3,80 Driver|Aplicativo pode usar esse recurso se o driver dá suporte a esse recurso, caso contrário, o Gerenciador de Driver apresentará um erro.|  
 |Novo aplicativo de qualquer versão do ODBC|ODBC 3.81|Driver ODBC 3,80 pré-|O Gerenciador de Driver apresentará um erro se o driver não dá suporte a esse recurso.|  
-|Novo aplicativo de qualquer versão do ODBC|Pré-ODBC 3.81|Any (qualquer)|Quando o aplicativo usa esse recurso, um Gerenciador de Driver antigo classificará os novos atributos como atributos específicos do driver e o driver deve a um erro. Um novo Gerenciador de Driver não passa esses atributos para o driver.|  
+|Novo aplicativo de qualquer versão do ODBC|Pré-ODBC 3.81|Any|Quando o aplicativo usa esse recurso, um Gerenciador de Driver antigo classificará os novos atributos como atributos específicos do driver e o driver deve a um erro. Um novo Gerenciador de Driver não passa esses atributos para o driver.|  
   
  Um aplicativo deve verificar a versão do Gerenciador de Driver antes de usar esse recurso. Caso contrário, se um driver mal escrito não faz erro e a versão do Gerenciador de Driver é pré 3.81 ODBC, o comportamento será indefinido.  
   
@@ -327,9 +326,9 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
   
  Atributos de Conexão SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE e SQL_ATTR_ASYNC_DBC_EVENT determinam se o ODBC é executado no modo assíncrono e se o ODBC habilita o modo de notificação para um identificador de conexão. Atributos de instrução SQL_ATTR_ASYNC_ENABLE e SQL_ATTR_ASYNC_STMT_EVENT determinam se o ODBC é executado no modo assíncrono e se o ODBC habilita o modo de notificação para um identificador de instrução.  
   
-|SQL_ATTR_ASYNC_ENABLE ou SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT or SQL_ATTR_ASYNC_DBC_EVENT|Modo|  
+|SQL_ATTR_ASYNC_ENABLE ou SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT ou SQL_ATTR_ASYNC_DBC_EVENT|Modo|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
-|Habilitar|non-null|Notificação assíncrona|  
+|Habilitar|não nulo|Notificação assíncrona|  
 |Habilitar|nulo|Sondagem assíncrono|  
 |Disable|any|Síncrona|  
   

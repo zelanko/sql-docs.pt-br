@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1c379826b16ef805abfedb0467d3385010ca1b99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd64ba8119db1ecf2d2b621cd202c9f700b53475
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967286"
 ---
 # <a name="append-method-adox-procedures"></a>Método Append (Procedimentos do ADOX)
 Adiciona um novo [procedimento](../../../ado/reference/adox-api/procedure-object-adox.md) do objeto para o [procedimentos](../../../ado/reference/adox-api/procedures-collection-adox.md) coleção.  
@@ -35,7 +34,7 @@ Procedures.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Nome*  
+ *Name*  
  Um **cadeia de caracteres** valor que especifica o nome do procedimento para criar e anexar.  
   
  *Comando*  

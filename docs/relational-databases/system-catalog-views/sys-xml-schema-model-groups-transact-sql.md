@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 566556dc-a8c8-465c-9196-c7e0ae092a8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22e6e8b75dc488a159756cd8d4aa2c47b558b72b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 041b09d544d5301d42d929e29c7f42b3502e294b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060531"
 ---
 # <a name="sysxmlschemamodelgroups-transact-sql"></a>sys.xml_schema_model_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "64945884"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**\<herdado colunas >**||Herda colunas de [xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
-|**compositor**|**char(1)**|Tipo de compositor do grupo:<br /><br /> A = XSD \<all> Group<br /><br /> C = XSD \<choice > grupo<br /><br /> S = XSD \<sequência > grupo|  
+|**compositor**|**char(1)**|Tipo de compositor do grupo:<br /><br /> R = XSD \<todos > grupo<br /><br /> C = XSD \<choice > grupo<br /><br /> S = XSD \<sequência > grupo|  
 |**compositor_desc**|**nvarchar (60)**|Descrição de tipo de compositor do grupo:<br /><br /> XSD_ALL_GROUP<br /><br /> XSD_CHOICE_GROUP<br /><br /> XSD_SEQUENCE_GROUP|  
   
 ## <a name="permissions"></a>Permissões  

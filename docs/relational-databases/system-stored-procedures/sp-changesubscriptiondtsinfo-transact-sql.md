@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f252d55a41def8e816e6e7843fb57574caacf385
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 55f5597af15a264d85cd31175d570cc33ee47f63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081300"
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` É a ID do trabalho do Distribution Agent para a assinatura push. *job_id* está **varbinary (16)**, sem padrão. Para localizar a ID do trabalho de distribuição, execute **sp_helpsubscription** ou **sp_helppullsubscription**.  
+`[ @job_id = ] job_id` É a ID do trabalho do Distribution Agent para a assinatura push. *job_id* está **varbinary (16)** , sem padrão. Para localizar a ID do trabalho de distribuição, execute **sp_helpsubscription** ou **sp_helppullsubscription**.  
   
 `[ @dts_package_name = ] 'dts_package_name'` Especifica o nome do pacote DTS. *dts_package_name* é um **sysname**, com um padrão NULL. Por exemplo, para especificar um pacote chamado **DTSPub_Package**, você especificaria `@dts_package_name = N'DTSPub_Package'`.  
   

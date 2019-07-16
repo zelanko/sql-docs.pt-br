@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c901b60c-9f84-407a-b3d1-b4d301a71370
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c759e530baf792de7e015eac87337f35cf9f5a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73880171493555a7d30e5c0c5419d02338961e9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096522"
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>Criar rótulos de correspondência no Microsoft Word usando dados do Visual FoxPro
 Você pode usar dados do Visual FoxPro em um Microsoft Word para documentos do Windows 95 ou Windows 98. Por exemplo, talvez você queira criar etiquetas de endereçamento a partir das informações de cliente armazenadas em uma tabela do Visual FoxPro.  

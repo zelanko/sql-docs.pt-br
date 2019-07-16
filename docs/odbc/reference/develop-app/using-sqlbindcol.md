@@ -1,5 +1,5 @@
 ---
-title: Using SQLBindCol | Microsoft Docs
+title: Usando SQLBindCol | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f466d98d5d1edec2efa824ac644ad6bb49e990a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022158"
 ---
 # <a name="using-sqlbindcol"></a>Usar SQLBindCol
 O aplicativo associa colunas chamando **SQLBindCol**. Essa função é associado a uma coluna por vez. Com ele, o aplicativo especifica o seguinte:  

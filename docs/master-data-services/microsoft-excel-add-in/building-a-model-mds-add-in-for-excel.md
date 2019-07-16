@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e3a946626223a464b63b2099912c0f89d95ff32b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6f3f669f0f1699618399bbfdccaf33f6e4c13a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092489"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Compilando um modelo (Suplemento do MDS para Excel)
 
@@ -32,7 +31,7 @@ ms.locfileid: "65488921"
   
  Como um administrador, você deve criar o modelo usando o aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ou o serviço Web. EM seguida, você pode usar o [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] para criar entidades e atributos dentro do modelo. Para obter mais informações sobre objetos de modelo, consulte [Modelos &#40;Master Data Services&#41;](../../master-data-services/models-master-data-services.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  A maioria das tarefas administrativas ainda deve ser realizada no aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ou com o uso do serviço Web. A tabela a seguir mostra quais ferramentas os administradores podem usar para concluir tarefas no MDS.  
   
 |Descrição da tarefa|Ferramenta|Tópico|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a24bb05e8f10e2920bd206531723c228d6c1734
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096019"
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ sp_trace_generateevent [ @eventid = ] event_id
 ## <a name="arguments"></a>Argumentos  
 `[ @eventid = ] event_id` É a ID do evento para ativar. *event_id* está **int**, sem padrão. A ID deve ser um dos números de evento de 82 a 91, que representam eventos definidos pelo usuário conforme definido com [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
-`[ @userinfo = ] 'user_info'` A cadeia de caracteres opcional definida pelo usuário é identificar o motivo para o evento. *user_info* está **nvarchar (128)**, com um padrão NULL.  
+`[ @userinfo = ] 'user_info'` A cadeia de caracteres opcional definida pelo usuário é identificar o motivo para o evento. *user_info* está **nvarchar (128)** , com um padrão NULL.  
   
-`[ @userdata = ] user_data` É o dado opcional especificada pelo usuário para o evento. *user_data* está **varbinary(8000)**, com um padrão NULL.  
+`[ @userdata = ] user_data` É o dado opcional especificada pelo usuário para o evento. *user_data* está **varbinary(8000)** , com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  A tabela a seguir descreve os valores de código que os usuários podem obter após a conclusão do procedimento armazenado.  

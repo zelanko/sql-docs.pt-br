@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097679"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -111,9 +110,9 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Arquivos de instantâneo são armazenados no local alternativo especificado por *alt_snapshot_folder*. Essa combinação Especifica que os arquivos de instantâneo são armazenados em locais padrão e alternativo.|  
 |**snapshot_ready**|**true**|Instantâneo disponível para a publicação.|  
 ||**false**|Instantâneo não disponível para a publicação.|  
-|**status**|**active**|Publicação com status ativo.|  
+|**status**|**Active Directory**|Publicação com status ativo.|  
 ||**inactive**|Publicação com status inativo.|  
-|**sync_mode**|**nativo** ou<br /><br /> **bcp native**|Saída de programa de cópia em massa em modo nativo de todas as tabelas é usada para o instantâneo inicial.|  
+|**sync_mode**|**nativo** ou<br /><br /> **BCP nativo**|Saída de programa de cópia em massa em modo nativo de todas as tabelas é usada para o instantâneo inicial.|  
 ||**character**<br /><br /> ou **bcp de caractere**|Saída de programa de cópia em massa em modo de caractere de todas as tabelas é usada para o instantâneo inicial, que é exigido de todos os Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**use_partition_groups**<br /><br /> Observação: Depois de usar partition_groups, se quiser reverter usando **setupbelongs**e defina **use_partition_groups = false** na **changemergearticle**, isso pode não ser corretamente refletida após um instantâneo é tirado. Os gatilhos que são gerados através do instantâneo são compatíveis com grupos de partição.<br /><br /> A solução alternativa para esse cenário é definir o status como Inactive, modificar a **use_partition_groups**e, em seguida, defina o status como Active Directory.|**true**|A publicação usa partições pré-computadas.|  
 ||**false**|A publicação não usa partições pré-computadas.|  

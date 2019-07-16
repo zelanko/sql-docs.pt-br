@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 887380136c96cb9cb1dbcd8d9d04b486daaf6659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a06c23b5e6860886f98c3505f711f76a12cfbb15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102605"
 ---
 # <a name="transactions-master-data-services"></a>Transações (Master Data Services)
 
@@ -87,7 +86,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
  Mais de um usuário pode atualizar os mesmos valores de entidade sem erro apesar das transações habilitadas. Normalmente, a última edição do valor em determinado período terá precedência. O conflito de edição duplicada pode ser observado manualmente no histórico de transação e pode ser revertido manualmente pelo administrador. O histórico de transações mostrará as transações individuais para o **Valor anterior** e o **Novo valor** do atributo em questão de cada sessão, mas não resolverá o conflito automaticamente quando vários **Novos Valores** existirem para o mesmo valor antigo.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

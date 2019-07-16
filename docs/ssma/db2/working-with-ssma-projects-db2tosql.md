@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d3ccc9fe24d770fa64b2bef86feabab0dd2e7fba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2c585764e5bb7fffa55624054aecc7a4c589bbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63244645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086185"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Trabalhando com projetos do SSMA (DB2ToSQL)
 Migrar bancos de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], primeiro você cria um projeto do SSMA. O projeto é um arquivo que contém as seguintes informações:  
@@ -60,9 +59,9 @@ Para migrar dados de bancos de dados do DB2 para [!INCLUDE[ssNoVersion](../../in
   
 **Para criar um projeto**  
   
-1.  Sobre o **arquivo** menu, clique em **novo projeto**.  
+1.  No menu **Arquivo**, clique em **Novo Projeto**.  
   
-    A caixa de diálogo **Novo Projeto** será exibida.  
+    A caixa de diálogo **Novo Projeto** é exibida.  
   
 2.  No **nome** , digite um nome para seu projeto.  
   

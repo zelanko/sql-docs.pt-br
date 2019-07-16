@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ddba17337d8b9ec3cda5e85b9e769ea88915ee91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88a4850c80404ebeb002c5d17af69b0f10dc5bf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488461"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086485"
 ---
 # <a name="edit-an-entity-master-data-services"></a>Editar uma entidade (Master Data Services)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65488461"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode editar uma entidade.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a020dc8b695bbebaef4bc5cc60c956b5a9e4e05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c9acae0a0d3f0b7c89296f795c8fd34929cf72f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825154"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090640"
 ---
 # <a name="sysdmtranactivesnapshotdatabasetransactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +58,7 @@ sys.dm_tran_active_snapshot_database_transactions
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**transaction_id**|**bigint**|Número de identificação exclusivo atribuído à transação. O ID transação é usado principalmente para identificar a transação em operações de bloqueio.|  
 |**transaction_sequence_num**|**bigint**|Número de sequência da transação. Trata-se de um número de sequência exclusivo atribuído a uma transação quando ela se inicia. Transações que não geram registros de versão e não usam verificações de instantâneo não receberão um número de sequência de transação.|  
@@ -75,7 +74,7 @@ sys.dm_tran_active_snapshot_database_transactions
 ## <a name="permissions"></a>Permissões
 
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
+Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer a permissão `VIEW DATABASE STATE` no banco de dados.   
 
 ## <a name="remarks"></a>Comentários  
  **DM tran_active_snapshot_database_transactions** relata as transações que são atribuídas a um número de sequência da transação (XSN). O XSN é atribuído quando a transação acessa o armazenamento de versões pela primeira vez. Em um banco de dados habilitado para isolamento de instantâneo ou isolamento confirmado por leitura utilizando controle de versão de linhas, os exemplos mostram quando um XSN é atribuído a uma transação:  
@@ -146,13 +145,13 @@ elapsed_time_seconds
   
  As informações a seguir avaliam os resultados de **DM tran_active_snapshot_database_transactions**:  
   
--   XSN-57: Como esta transação não está em execução em isolamento de instantâneo, o `is_snapshot` valor e `first_snapshot_sequence_num` são `0`. O `transaction_sequence_num` mostra que um número de sequência de transação foi atribuído a esta transação, pois uma ou ambas as opções de banco de dados ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT são ON.  
+-   XSN-57: Porque esta transação não está em execução em isolamento de instantâneo, o `is_snapshot` valor e `first_snapshot_sequence_num` são `0`. O `transaction_sequence_num` mostra que um número de sequência de transação foi atribuído a esta transação, pois uma ou ambas as opções de banco de dados ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT são ON.  
   
--   XSN-58: Esta transação não está sendo executada em isolamento de instantâneo, aplicando-se as mesma informações do XSN-57.  
+-   XSN-58: Esta transação não está em execução em isolamento de instantâneo e aplicam as mesmas informações do XSN-57.  
   
--   XSN-59: Esta é a primeira transação ativa que está sendo executada em isolamento de instantâneo. Esta transação lê dados confirmados antes de XSN-57, como indicado por `first_snapshot_sequence_num`. A saída desta transação também mostra que a cadeia de versões máxima atravessada para uma linha é `1`, tendo atravessado uma média de `1` versão para cada linha que é acessada. Isso significa que as transações XSN-57, XSN-58 e XSN-60 não modificaram filas e foram confirmadas.  
+-   XSN-59: Isso é a primeira transação ativa que está executando em isolamento de instantâneo. Esta transação lê dados confirmados antes de XSN-57, como indicado por `first_snapshot_sequence_num`. A saída desta transação também mostra que a cadeia de versões máxima atravessada para uma linha é `1`, tendo atravessado uma média de `1` versão para cada linha que é acessada. Isso significa que as transações XSN-57, XSN-58 e XSN-60 não modificaram filas e foram confirmadas.  
   
--   XSN-60: Esta é a segunda transação que está sendo executada em isolamento de instantâneo. A saída mostra as mesmas informações de XSN-59.  
+-   XSN-60: Isso é a segunda transação sendo executada em isolamento de instantâneo. A saída mostra as mesmas informações de XSN-59.  
   
 ## <a name="see-also"></a>Consulte também  
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   

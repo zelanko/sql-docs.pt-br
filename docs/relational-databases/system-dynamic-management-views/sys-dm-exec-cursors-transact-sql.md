@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097838"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ dm_exec_cursors (session_id | 0 )
 |**ansi_position**|**int**|Posição de cursor dentro do buffer de busca.|  
 |**worker_time**|**bigint**|Tempo gasto, em microssegundos, pelos trabalhados que executam este cursor.|  
 |**reads**|**bigint**|Número de leituras executadas pelo cursor.|  
-|**writes**|**bigint**|Número de gravações executadas pelo cursor.|  
+|**gravações**|**bigint**|Número de gravações executadas pelo cursor.|  
 |**dormant_duration**|**bigint**|Milissegundos desde o início da última consulta (aberta ou de busca) neste cursor.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -82,7 +81,7 @@ dm_exec_cursors (session_id | 0 )
   
  A tabela a seguir fornece informações sobre o tipo de cursor e inclui os valores possíveis para a coluna de propriedades.  
   
-|Tipo|Descrição|  
+|type|Descrição|  
 |----------|-----------------|  
 |Keyset|O cursor foi declarado como Keyset (conjunto de chaves).|  
 |Dinâmico|O cursor foi declarado como Dynamic (dinâmico).|  

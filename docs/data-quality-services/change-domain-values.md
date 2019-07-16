@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: b00e90174c865ac06e934cc1a89914ff3deef76c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ebef11839ed14422f624149ffea57308dc9e61a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935625"
 ---
 # <a name="change-domain-values"></a>Alterar valores de domínio
 
@@ -98,7 +97,7 @@ ms.locfileid: "66802199"
   
 9. **Importar valores de domínio do Excel**: Para adicionar novos valores de uma planilha do Excel, clique na seta para baixo do ícone **Importar Valores** e selecione **Importar valores de domínio do Excel**. Insira o nome de arquivo, selecione **Usar primeira linha como cabeçalho** , se apropriado, e clique em **OK**. Para obter mais informações, consulte [Importar valores de um arquivo do Excel para um domínio](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
   
-10. **Importar valores de projeto**: Para adicionar novos valores de um projeto de qualidade de dados, clique na seta para baixo do ícone **Importar Valores** e selecione **Importar valores de projeto**. Insira o nome de arquivo, selecione **Usar primeira linha como cabeçalho** , se apropriado, e clique em **OK**. Selecione o projeto a partir do qual você importará valores e clique em **OK**. Os valores importados serão exibidos. Clique em **Concluir**. Para obter mais informações, consulte Importar valores de projeto para um domínio.  
+10. **Importar valores de projeto**: Para adicionar novos valores de um projeto de qualidade de dados, clique na seta para baixo do ícone **Importar Valores** e selecione **Importar valores de projeto**. Insira o nome de arquivo, selecione **Usar primeira linha como cabeçalho** , se apropriado, e clique em **OK**. Selecione o projeto a partir do qual você importará valores e clique em **OK**. Os valores importados serão exibidos. Clique em **Finalizar**. Para obter mais informações, consulte Importar valores de projeto para um domínio.  
   
 11. **Excluir valores de domínio selecionados**: Para remover um ou mais valores existentes do domínio, selecione os valores na tabela Valor e clique no ícone **Excluir valores de domínio selecionados**. A entrada DQS_NULL não pode ser excluída; portanto, se você escolher diversos valores para serem excluídos, e a entrada DQS_NULL for um deles, a operação falhará.  
   

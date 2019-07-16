@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d509ad58491bca379e3ab86e07aee63e8a5d3946
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a16a28a163acece321cc2229e9988cf7ab01f9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989870"
 ---
-# <a name="converting-db2-schemas-db2tosql"></a>Converting DB2 Schemas (DB2ToSQL)
+# <a name="converting-db2-schemas-db2tosql"></a>Converter esquemas do DB2 (DB2ToSQL)
 Depois de se conectar ao DB2, conectado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e defina o projeto e as opções de mapeamento de dados, você pode converter objetos de banco de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de banco de dados.  
   
 ## <a name="the-conversion-process"></a>O processo de conversão  
@@ -35,7 +34,7 @@ A tabela a seguir mostra quais objetos do DB2 são convertidos e resultante [!IN
 |-----------|----------------------------|  
 |Tipos de dados|**O SSMA mapeia cada tipo, exceto o seguinte listado abaixo:**<br /><br />CLOB: Algumas funções nativas para o trabalho com esse tipo não são suportados (por exemplo, CLOB_EMPTY())<br /><br />BLOB: Algumas funções nativas para o trabalho com esse tipo não são suportados (por exemplo, BLOB_EMPTY())<br /><br />DBLOB: Algumas funções nativas para o trabalho com esse tipo não são suportados (por exemplo, DBLOB_EMPTY())|  
 |Tipos definidos pelo usuário|**O SSMA mapeia a seguir definida pelo usuário:**<br /><br />Tipo distinto<br /><br />Tipo estruturado<br /><br />Tipos de dados SQL PL - Observação: Não há suporte para o tipo de cursor fraco.|  
-|Registradores especiais|**O SSMA mapeia apenas registros listados abaixo:**<br /><br />CARIMBO DE HORA ATUAL<br /><br />DATA ATUAL<br /><br />HORA ATUAL<br /><br />FUSO HORÁRIO ATUAL<br /><br />USUÁRIO ATUAL<br /><br />SESSION_USER e usuário<br /><br />SYSTEM_USER<br /><br />CURRENT CLIENT_APPLNAME<br /><br />CURRENT CLIENT_WRKSTNNAME<br /><br />TEMPO LIMITE DE BLOQUEIO ATUAL<br /><br />ESQUEMA ATUAL<br /><br />SERVIDOR ATUAL<br /><br />ISOLAMENTO ATUAL<br /><br />Outros registra especiais não é mapeado para a semântica do SQL server.|  
+|Registradores especiais|**O SSMA mapeia apenas registros listados abaixo:**<br /><br />CARIMBO DE HORA ATUAL<br /><br />DATA ATUAL<br /><br />HORA ATUAL<br /><br />FUSO HORÁRIO ATUAL<br /><br />USUÁRIO ATUAL<br /><br />SESSION_USER e usuário<br /><br />SYSTEM_USER<br /><br />CLIENT_APPLNAME ATUAL<br /><br />CURRENT CLIENT_WRKSTNNAME<br /><br />TEMPO LIMITE DE BLOQUEIO ATUAL<br /><br />ESQUEMA ATUAL<br /><br />SERVIDOR ATUAL<br /><br />ISOLAMENTO ATUAL<br /><br />Outros registra especiais não é mapeado para a semântica do SQL server.|  
 |CREATE TABLE|**O SSMA mapeia CREATE TABLE com as seguintes exceções:**<br /><br />Tabelas de clustering (MDC) multidimensional<br /><br />Tabelas de intervalo clusterizado (RCT)<br /><br />Tabelas particionadas<br /><br />Tabela desanexada<br /><br />Cláusula de captura de dados<br /><br />Opção IMPLICITLY oculto<br /><br />Opção VOLATILE|  
 |CREATE VIEW|O SSMA mapeia CREATE VIEW com 'Com LOCAL CHECK OPTION', mas outras opções não são mapeadas para a semântica do SQL server|  
 |CREATE INDEX|**O SSMA mapeia CREATE INDEX com as seguintes exceções:**<br /><br />Índice XML<br /><br />Opção BUSINESS_TIME sem SOBREPOSIÇÕES<br /><br />Cláusula PARTICIONADA<br /><br />ESPECIFICAÇÃO apenas de opção<br /><br />Opção usando EXTEND<br /><br />Opção MINPCTUSED<br /><br />Opção de divisão de página|  
@@ -48,7 +47,7 @@ A tabela a seguir mostra quais objetos do DB2 são convertidos e resultante [!IN
 |Instrução MERGE|**O SSMA mapeia direta com as seguintes exceções:**<br /><br />Único versus várias ocorrências de cada cláusula – é mapeado para a semântica do SQL server para as ocorrências de cada cláusula limitadas<br /><br />Cláusula de sinal - não é mapeado para a semântica do SQL Server<br /><br />Misto atualizar e excluir cláusulas - não é mapeado para a semântica do SQL Server<br /><br />Cláusula de período – não é mapeado para a semântica do SQL Server|  
 |Instrução DELETE|**Excluir SSMA mapas com as seguintes exceções:**<br /><br />Cláusula de referência de tabela-somente--referência de tabela não está mapeada para a semântica do SQL server<br /><br />Cláusula Períoda – não é mapeado para a semântica do SQL Server|  
 |Nível de isolamento e o tipo de bloqueio|É mapeado.|  
-|Procedures (SQL)|São mapeados.|  
+|Procedimentos (SQL)|São mapeados.|  
 |Procedimentos (externo)|Exigir atualização manual.|  
 |Procedimentos (originados)|Não mapeie a semântica do SQL Server.|  
 |Instrução de atribuição|É mapeado.|  
@@ -74,7 +73,7 @@ A tabela a seguir mostra quais objetos do DB2 são convertidos e resultante [!IN
 |Apelidos|Mapeamento parcial. Processamento manual é necessário para o objeto subjacente|  
 |Sinônimos|São mapeados.|  
 |Funções padrão no DB2|O SSMA mapeia as funções padrão de DB2 quando uma função equivalente está disponível no SQL Server:|  
-|Autorização|Não mapeado.|  
+|Authorization|Não mapeado.|  
 |Predicados|São mapeados.|  
 |instrução SELECT INTO|Não mapeado.|  
 |Instrução de valores em|Não mapeado.|  

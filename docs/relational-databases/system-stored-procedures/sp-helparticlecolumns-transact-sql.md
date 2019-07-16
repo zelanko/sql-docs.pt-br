@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 34bd2f98c00d6d481662235df9ba26016cc20468
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fd7a493a3126aecbf816d364e5b7497f2bf494d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084960"
 ---
 # <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,9 +55,9 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**column id**|**int**|Identificador para a coluna.|  
+|**id da coluna**|**int**|Identificador para a coluna.|  
 |**column**|**sysname**|Nome da coluna.|  
-|**published**|**bit**|Se a coluna for publicada:<br /><br /> **0** = Não<br /><br /> **1** = Sim|  
+|**Publicado**|**bit**|Se a coluna for publicada:<br /><br /> **0** = Não<br /><br /> **1** = Sim|  
 |**tipo de publicador**|**sysname**|Tipo de dados da coluna no Publicador.|  
 |**tipo de assinante**|**sysname**|Tipo de dados da coluna no Assinante.|  
   

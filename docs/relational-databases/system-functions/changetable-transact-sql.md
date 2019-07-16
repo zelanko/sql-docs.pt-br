@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3a0ad02f508aea78faa8f3da80e68f8ea6b3c7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042905"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,15 +66,15 @@ CHANGETABLE (
  *last_sync_version* devem ser validadas para garantir que ele não é muito antigo, porque algumas ou todas as informações de alteração podem ter sido limpos acordo com o período de retenção configurado para o banco de dados. Para obter mais informações, consulte [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) e [opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  VERSÃO *tabela*, {< primary_key_values >}  
- Retorna as informações de controle de alterações mais recentes de uma linha especificada. Os valores de chave primária devem identificar a linha. <primary_key_values> identifica as colunas de chave primária e especifica os valores. Os nomes de coluna de chave primária podem ser especificados em qualquer ordem.  
+ Retorna as informações de controle de alterações mais recentes de uma linha especificada. Os valores de chave primária devem identificar a linha. < primary_key_values > identifica as colunas de chave primária e especifica os valores. Os nomes de coluna de chave primária podem ser especificados em qualquer ordem.  
   
- *Table*  
+ *Tabela*  
  É a tabela definida pelo usuário na qual devem ser obtidas as informações de controle de alterações. O controle de alterações deve ser ativado na tabela. Um nome de tabela de uma, duas, três ou quatro partes pode ser usado. O nome da tabela pode ser um sinônimo para a tabela.  
   
  *column_name*  
  Especifica o nome de coluna/colunas de chave primária. Podem ser especificados vários nomes de coluna em qualquer ordem.  
   
- *Value*  
+ *Valor*  
  É o valor da chave primária. Se houver várias colunas de chave primária, os valores devem ser especificados na mesma ordem que as colunas aparecem na *column_name* lista.  
   
  [COMO] *table_alias* [(*column_alias* [,... *n* ])]  
@@ -95,7 +94,7 @@ CHANGETABLE (
 ### <a name="changetable-changes"></a>CHANGETABLE CHANGES  
  Quando CHANGES é especificado, são retornadas zero ou mais linhas que têm as colunas a seguir.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valor de versão associado à última alteração efetuada na linha|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|Valores de versão associados à última operação de inserção.|  
@@ -107,7 +106,7 @@ CHANGETABLE (
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  Quando VERSION é especificado, uma linha que tem as seguintes colunas é retornada.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valor de versão de alteração atual associado à linha.<br /><br /> O valor será NULL se uma alteração não tiver sido efetuada por um período maior que o de retenção do controle de alterações ou se a linha não tiver sido alterada desde que o controle de alterações foi habilitado.|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Altere as informações de contexto que podem opcionalmente ser especificadas usando a cláusula WITH como parte de uma instrução INSERT, UPDATE ou DELETE.|  

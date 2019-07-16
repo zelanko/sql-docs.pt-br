@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7402fcc825e6f537703268c1fd3fead9c88b1f5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db259133a2ddd7ebe18b6d198c0f91e8ffc7b8bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62959606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048191"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +48,9 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**lastdate**|**varchar(22)**|Última data de execução do trabalho.|  
 |**thisdate**|**varchar(22)**|Hora da alteração|  
 |**nextdate**|**varchar(22)**|Próxima data de execução do trabalho.|  
-|**broken**|**varchar(1)**|Sinalizador que indica se o trabalho foi interrompido.|  
+|**dividido**|**varchar(1)**|Sinalizador que indica se o trabalho foi interrompido.|  
 |**interval**|**varchar(200)**|Intervalo para o trabalho.|  
-|**failures**|**int**|Número de falhas para o trabalho.|  
+|**falhas**|**int**|Número de falhas para o trabalho.|  
 |**xactsetjobwhat**|**varchar(200)**|Nome do procedimento executado pelo trabalho.|  
 |**xactsetjob**|**varchar(1)**|Status do trabalho, que pode ser um dos seguintes:<br /><br /> **1** -o trabalho está habilitado.<br /><br /> **0** -o trabalho está desabilitado.|  
 |**xactsetlonginterval**|**int**|Intervalo longo para o trabalho.|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f174940b27adbaba75efd6660f09140c403bf8b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d8c931f4ec38fe6099afa6b098445dcdbc52b0be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090006"
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,14 +49,14 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
   
 `[ @tranid = ] 'tranid' ]` É a ID da transação. *tranid*está **sysname**, com um padrão NULL. NULL para todas as transações.  
   
- [**@queuetype=** ] **'***queuetype***'** ]  
+ [ **@queuetype=** ] **'***queuetype***'** ]  
  É o tipo de fila que armazena transações. *queuetype* está **tinyint** com um padrão de **0**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Todos os tipos de filas|  
 |**1**|Enfileiramento de Mensagens|  
-|**2**|Fila do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |  
+|**2**|Fila do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

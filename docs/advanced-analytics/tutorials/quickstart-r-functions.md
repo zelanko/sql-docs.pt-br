@@ -7,22 +7,21 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: d33034a2d18736f47fb32c4d35221bbcd702927d
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: fa2d47729641e8efd13e9e30be7a61186a892b5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046723"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962018"
 ---
-# <a name="quickstart-using-r-functions"></a>Guia de início rápido: Usando funções de R
+# <a name="quickstart-using-r-functions"></a>Início Rápido: Usando funções de R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Se você concluiu os inícios rápidos anteriores, você está familiarizado com operações básicas e pronto para algo mais complexo, como as funções estatísticas. Funções estatísticas avançadas que são complicadas para implementar em T-SQL podem ser feitas em R com apenas uma única linha de código.
 
 Neste início rápido, você inserirá R matemático e procedimento armazenado de funções de utilitário em um SQL Server.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Um início rápido anterior, [R Verifique se existe no SQL Server](quickstart-r-verify.md), fornece informações e links para configurar o ambiente de R necessários para este início rápido.
 
@@ -104,4 +103,4 @@ Para obter um exemplo, consulte este tutorial: [Criar recursos de dados](../tuto
 Em seguida, você criará um modelo de previsão usando R no SQL Server.
 
 > [!div class="nextstepaction"]
-> [Guia de início rápido: Criar um modelo de previsão](quickstart-r-create-predictive-model.md)
+> [Início Rápido: Criar um modelo de previsão](quickstart-r-create-predictive-model.md)

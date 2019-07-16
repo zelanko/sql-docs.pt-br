@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cbd6ddc9-8abd-4fa9-bffd-631e54894ce8
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 34fe42a645965f141a7250ea5f272cfdbabc6bac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb9a324d30790ac8a96b286ec658334d81884cfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127807"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028736"
 ---
 # <a name="project-settings-gui-sybasetosql"></a>Configurações de projeto (GUI) (SybaseToSQL)
 As configurações de projeto GUI permitem que você configure como os dados aparecem na **dados** guia e mostrar o relatório de avaliação após a conversão ou não.  
@@ -40,5 +39,5 @@ Configura o número de linhas de dados exibidos na **dados** guia da tabela de d
 **Mostrar relatório após a conversão**  
 Para exibir um relatório depois de converter esquemas, selecione True. O relatório de conversão resultante contém o mesmo layout e informações que o relatório de avaliação.  
   
-**Default**: Falso  
+**Default**: False  
   

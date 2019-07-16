@@ -1,5 +1,5 @@
 ---
-title: DrilldownLevelTop (MDX) | Microsoft Docs
+title: Drilldownleveltop=1=«conjunto (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8d6532998f65625bf3dacd11de2949a3478ba6ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 461c91d7261b42b5828e2c515a89e8203f40e357
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156419"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049268"
 ---
 # <a name="drilldownleveltop-mdx"></a>DrilldownLevelTop (MDX)
 

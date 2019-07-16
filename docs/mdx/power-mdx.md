@@ -1,5 +1,5 @@
 ---
-title: ^ (Power) (MDX) | Microsoft Docs
+title: ^ (Potência) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 20b197f66a4af496d8235d3b38eb2fa82c1921db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b1ebeaca9e81103d2038d6f7a34fe9221cc68f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63278315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055596"
 ---
 # <a name="-power-mdx"></a>^ (Potência) (MDX)
 

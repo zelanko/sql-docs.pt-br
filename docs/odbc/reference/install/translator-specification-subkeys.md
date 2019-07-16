@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3c0edeee-d43a-4466-a177-bf2d2435707a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3c5ad31437cf2639d6b8478d173c7522fa3e9fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec94f3e02b720617e8f7369b12a916c2bbbe7b16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63272937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093805"
 ---
 # <a name="translator-specification-subkeys"></a>Subchaves de especificação do conversor
 Cada tradução listada na subchave de conversores ODBC tem uma subchave de seu próprio. Essa subchave tem o mesmo nome que o valor correspondente sob a subchave de conversores ODBC. Os valores sob essa subchave listam os caminhos completos do tradutor e DLLs de instalação de tradução e a contagem de uso. Os formatos de valores são conforme mostrado na tabela a seguir.  
   
-|Nome|Tipo de dados|Dados|  
+|Nome|Tipo de dados|Data|  
 |----------|---------------|----------|  
 |Translator|REG_SZ|*translator-DLL-path*|  
 |Configuração|REG_SZ|*setup-DLL-path*|  

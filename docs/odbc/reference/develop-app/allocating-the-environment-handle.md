@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7a8eefe5bc6678462099afda8381d6b16bd076dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 823ea02a2acb6a28f56c58bb40fe684a2589bd24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077178"
 ---
 # <a name="allocating-the-environment-handle"></a>Alocar o identificador de ambiente
 A primeira tarefa para qualquer aplicativo ODBC é carregar o Gerenciador do Driver. como isso é feito depende do sistema operacional. Por exemplo, em um computador executando o Microsoft® Windows NT® Server/Windows 2000 Server, Windows NT da estação de trabalho/Windows 2000 Professional ou Microsoft Windows® 95/98, o aplicativo ou links para a biblioteca do Gerenciador de Driver ou chamadas  **LoadLibrary** carregar a DLL do Gerenciador de Driver.  

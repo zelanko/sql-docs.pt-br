@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cae6c84d0ca85a8cb27d8310bcc3cb02dca47f8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 045f9ab13b701b8dbd5e0895531932c21767853f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62903297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909066"
 ---
 # <a name="msmergereplinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "62903297"
 |**validation_level**|**int**|Tipo de validação para executar na assinatura. O nível de validação especificado pode ser um destes valores:<br /><br /> **0** não = nenhuma validação.<br /><br /> **1** = validação somente do número de linhas.<br /><br /> **2** = número de linhas e soma de verificação de validação.<br /><br /> **3** = número de linhas e soma de verificação binária.|  
 |**resync_gen**|**bigint**|O número de geração usado para nova sincronização da assinatura. Um valor de **-1** indica que a assinatura não está marcada para ressincronização.|  
 |**login_name**|**sysname**|O nome do usuário que criou a assinatura.|  
-|**hostname**|**sysname**|O valor usado pelo filtro de linha com parâmetros ao gerar a partição para a assinatura.|  
+|**nome do host**|**sysname**|O valor usado pelo filtro de linha com parâmetros ao gerar a partição para a assinatura.|  
 |**merge_jobid**|**binary(16)**|A ID do trabalho de mesclagem para esta assinatura.|  
 |**sync_info**|**int**|Interno-somente para uso.|  
   

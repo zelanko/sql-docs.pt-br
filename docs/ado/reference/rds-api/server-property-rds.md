@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7b23466adb660f2aa18cb44a20d189f456c3bb3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d196a60986734c5717be9711af1fa28accee414
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963470"
 ---
 # <a name="server-property-rds"></a>Propriedade Server (RDS)
 Indica o protocolo de comunicação e o nome de serviços de informações da Internet (IIS).  

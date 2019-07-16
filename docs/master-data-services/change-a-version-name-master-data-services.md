@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 93f8af2203496e385ceaede559c99c337cf9651a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20c12d6eceac9c68ad30486f7bb5b7fcf861eb07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047304"
 ---
 # <a name="change-a-version-name-master-data-services"></a>Alterar o nome de uma versão (Master Data Services)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65485302"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], altere o nome da versão para personalizá-la para sua organização.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Gerenciamento de Versões** .  

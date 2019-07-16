@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9b6cf5f7-b267-44fb-aac8-f49c9aa10cc1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f74b6b9fe659f6d2af0f30bd6a2b629939fc5628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca4499645846dacc762d8d3bf130ccc44a7f3155
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097905"
 ---
 # <a name="sysdmexeccachedplandependentobjects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="arguments"></a>Argumentos  
 *plan_handle*  
-É um token que identifica exclusivamente um plano de execução de consulta para um lote que foi executado e seu plano reside no cache de plano. *plan_handle* is **varbinary(64)**.   
+É um token que identifica exclusivamente um plano de execução de consulta para um lote que foi executado e seu plano reside no cache de plano. *plan_handle* está **varbinary(64)** .   
 
 O *plan_handle* pode ser obtido dos seguintes objetos de gerenciamento dinâmico:  
   
@@ -61,7 +60,7 @@ O *plan_handle* pode ser obtido dos seguintes objetos de gerenciamento dinâmico
 |-----------------|---------------|-----------------|  
 |**usecounts**|**int**|Número de vezes em que o contexto de execução ou cursor foi usado.<br /><br /> A coluna não é anulável.|  
 |**memory_object_address**|**varbinary(8)**|Endereço de memória do contexto de execução ou cursor.<br /><br /> A coluna não é anulável.|  
-|**cacheobjtype**|**nvarchar(50)**|O tipo de objeto do cache do plano. A coluna não é anulável. Os valores possíveis são:<br /><br /> Plano executável<br /><br /> Função compilada CLR <br /><br /> Procedimento compilado<br /><br /> Cursor|  
+|**cacheobjtype**|**nvarchar(50)**|O tipo de objeto do cache do plano. A coluna não é anulável. Os valores possíveis são:<br /><br /> Plano executável<br /><br /> Função compilada CLR<br /><br /> Procedimento compilado<br /><br /> Cursor|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão `VIEW SERVER STATE` no servidor.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 529572f02568cb7e13ff8821ab8d48a86d908141
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3a50ce1b42c8963aac0bc152e08c6d39eec73eb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094783"
 ---
 # <a name="syssubscriptions-system-view-transact-sql"></a>syssubscriptions (Exibição de sistema) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

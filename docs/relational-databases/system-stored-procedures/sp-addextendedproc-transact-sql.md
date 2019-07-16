@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b895692bf9ce65d9e063fb1d484cf84734897c86
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0bc8ea22699762927a026ae4cc811500c193555c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072749"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,15 +43,15 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @functname = ] 'procedure'` É o nome da função a ser chamada dentro da biblioteca de vínculo dinâmico (DLL). *procedimento* está **nvarchar(517)**, sem padrão. *procedimento* , opcionalmente, pode incluir o nome do proprietário na forma *owner.function*.  
+`[ @functname = ] 'procedure'` É o nome da função a ser chamada dentro da biblioteca de vínculo dinâmico (DLL). *procedimento* está **nvarchar(517)** , sem padrão. *procedimento* , opcionalmente, pode incluir o nome do proprietário na forma *owner.function*.  
   
-`[ @dllname = ] 'dll'` É o nome da DLL que contém a função. *dll* está **varchar(255)**, sem padrão. É recomendável especificar o caminho completo da DLL.  
+`[ @dllname = ] 'dll'` É o nome da DLL que contém a função. *dll* está **varchar(255)** , sem padrão. É recomendável especificar o caminho completo da DLL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="remarks"></a>Comentários  
  Depois que um procedimento armazenado estendido é criado, ele deve ser adicionado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio **sp_addextendedproc**. Para obter mais informações, consulte [adicionando um procedimento armazenado estendido ao SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  

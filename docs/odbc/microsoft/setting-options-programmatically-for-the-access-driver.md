@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 57bc9dd31299a70c5c8a2272dd49b577f58b7bb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 688716e9b7ba89500a4d2e8a579da42972e43d0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063548"
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>Configurar opções programaticamente para drivers do Access
 

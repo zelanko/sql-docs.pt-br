@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e20d30b63a1cc387c6b997c8a8a11bab835e21f8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fb19fc3dc6b97e6381e9839c22a05ee71a93bfb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078196"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ## <a name="arguments"></a>Argumentos  
 `[ @job_id = ] job_id` Número de identificação do trabalho ao qual a agenda é adicionada. *job_id* está **uniqueidentifier**, sem padrão.  
   
-`[ @job_name = ] 'job_name'` Nome do trabalho ao qual a agenda é adicionada. *job_name* está **nvarchar (128)**, sem padrão.  
+`[ @job_name = ] 'job_name'` Nome do trabalho ao qual a agenda é adicionada. *job_name* está **nvarchar (128)** , sem padrão.  
   
 > [!NOTE]  
 >  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
-`[ @name = ] 'name'` Nome da agenda. *nome da* está **nvarchar (128)**, sem padrão.  
+`[ @name = ] 'name'` Nome da agenda. *nome da* está **nvarchar (128)** , sem padrão.  
   
 `[ @enabled = ] enabled_flag` Indica o status atual da agenda. *enabled_flag* está **tinyint**, com um padrão de **1** (habilitado). Se **0**, o agendamento não está habilitado. Se a agenda estiver desabilitada, o trabalho não será executado.  
   
@@ -131,7 +130,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="remarks"></a>Comentários  
  As agendas de trabalho podem ser gerenciadas independentemente dos trabalhos. Para adicionar uma agenda a um trabalho, use **sp_add_schedule** para criar o agendamento e **sp_attach_schedule** para anexar a agenda a um trabalho.  

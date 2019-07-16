@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c89aab6a-0434-4ce6-af8c-f8a1a3284e38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b36a4c07d37ba55a9cd4e4573d144f19259f2cfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00b425e5efd441868bfa763fe544827bd7279dc2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067796"
 ---
 # <a name="sysdmresourcegovernorconfiguration-transact-sql"></a>sys.dm_resource_governor_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,10 +31,10 @@ ms.locfileid: "47832414"
   Retorna uma linha que contém o estado de configuração na memória atual do Administrador de recursos.  
   
 
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|classifier_function_id|**int**|ID da função de classificador atualmente usado pelo Administrador de recursos. Retornará um valor de 0 se nenhuma função estiver sendo usada. Não permite valor nulo.<br /><br /> **Observação:** essa função é usada para classificar novas solicitações e usa regras para encaminhar essas solicitações para o grupo de carga de trabalho adequado. Para obter mais informações, consulte [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
-|is_reconfiguration_pending|**bit**|Indica se foram ou não feitas alterações em um pool ou em um grupo com a instrução ALTER RESOURCE GOVERNOR RECONFIGURE e se elas não foram aplicadas à configuração na memória. O valor retornado pode ser um dos seguintes:<br /><br /> 0 - Uma instrução de reconfiguração não é necessária.<br /><br /> 1 - Uma instrução de reconfiguração ou reinicialização de servidor é necessária para que as alterações de configuração pendentes sejam aplicadas.<br /><br /> **Observação:** o valor retornado é sempre 0 quando o administrador de recursos está desabilitado.<br /><br /> Não permite valor nulo.|  
+|classifier_function_id|**int**|ID da função de classificador atualmente usado pelo Administrador de recursos. Retornará um valor de 0 se nenhuma função estiver sendo usada. Não permite valor nulo.<br /><br /> **Observação:** Essa função é usada para classificar novas solicitações e usa regras para encaminhar essas solicitações para o grupo de carga de trabalho adequado. Para obter mais informações, consulte [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
+|is_reconfiguration_pending|**bit**|Indica se foram ou não feitas alterações em um pool ou em um grupo com a instrução ALTER RESOURCE GOVERNOR RECONFIGURE e se elas não foram aplicadas à configuração na memória. O valor retornado pode ser um dos seguintes:<br /><br /> 0 - Uma instrução de reconfiguração não é necessária.<br /><br /> 1 - Uma instrução de reconfiguração ou reinicialização de servidor é necessária para que as alterações de configuração pendentes sejam aplicadas.<br /><br /> **Observação:** O valor retornado é sempre 0 quando o administrador de recursos está desabilitado.<br /><br /> Não permite valor nulo.|  
 |max_outstanding_io_per_volume|**int**|**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> O número máximo de E/S pendente por volume.|  
   
 ## <a name="remarks"></a>Comentários  

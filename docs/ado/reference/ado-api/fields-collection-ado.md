@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8483a908e31b9e4554c5594ecc5bbf186bbef88f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c9216ee655e371633837c5653ebac56fac1a782
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918713"
 ---
 # <a name="fields-collection-ado"></a>Coleção Fields (ADO)
 Contém todos os [campo](../../../ado/reference/ado-api/field-object.md) objetos de uma [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) ou [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto.  

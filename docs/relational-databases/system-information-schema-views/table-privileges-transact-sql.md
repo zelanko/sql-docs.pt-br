@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 70269d26-b085-4a98-8a9f-b4742c2848bd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea23e4639cb5dd6872092021f04ab35af28f27d5
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: db49815f367c9fe0100189e418db90e0bcddd9ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078464"
 ---
 # <a name="tableprivileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,8 +40,8 @@ ms.locfileid: "53589247"
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificador da tabela.|  
 |**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a tabela.<br /><br /> <strong>\*\* Importante \* \*</strong>  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela.|  
-|**PRIVILEGE_TYPE**|**varchar (** 10 **)**|Tipo de privilégio.|  
-|**IS_GRANTABLE**|**varchar (** 3 **)**|Especifica se o beneficiado pode conceder permissões a outros.|  
+|**PRIVILEGE_TYPE**|**varchar(** 10 **)**|Tipo de privilégio.|  
+|**IS_GRANTABLE**|**varchar(** 3 **)**|Especifica se o beneficiado pode conceder permissões a outros.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições do sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

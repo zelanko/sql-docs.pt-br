@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4d1e58d016649c3c21a056a82315bd0d0fb3564f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91b040a1c625387ed25855d3c3eb26955088f5c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038336"
 ---
 # <a name="mdx-data-definition---create-set"></a>Definição de dados MDX – CREATE SET
 
@@ -35,7 +34,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  *Cube_Name*  
  Uma expressão de cadeia de caracteres válida que fornece o nome do cubo.  
   
- *Set_Name*  
+ *1&gt;PsFile&lt;1*  
  Uma expressão de cadeia de caracteres válida que fornece o nome para o conjunto nomeado que está sendo criado.  
   
  *Set_Expression*  

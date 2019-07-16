@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bfa4d13e82bd82bd08d2d3338e51feb0382ca094
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57a78efbe6de9a4439846df69ac04e32d073fe3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102550"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>Validar uma versão em relação a regras de negócio (Master Data Services)
 
@@ -34,7 +33,7 @@ ms.locfileid: "65484977"
 > [!NOTE]  
 >  Todos os membros deverão ser validados antes que uma versão possa ser confirmada.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Gerenciamento de Versões** .  

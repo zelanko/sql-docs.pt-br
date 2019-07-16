@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: bdee149e-7556-4fc3-8242-925dd4b7b6ac
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac66d9cd1e7585304aeab182ddf6ccabc8560bc0
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: d5b7eea64a807af96094767ef5aca00167d5946c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542096"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067959"
 ---
 # <a name="sysquerystorequery-transact-sql"></a>sys.query_store_query (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -37,8 +36,8 @@ ms.locfileid: "59542096"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**query_id**|**bigint**|Chave primária.|  
-|**query_text_id**|**bigint**|Chave estrangeira. Joins to [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
-|**context_settings_id**|**bigint**|Chave estrangeira. Joins to [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).<br/>**Observação:** SQL Data Warehouse do Azure sempre retornará zero (0).|  
+|**query_text_id**|**bigint**|Chave estrangeira. Ingressa [query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
+|**context_settings_id**|**bigint**|Chave estrangeira. Ingressa [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).<br/>**Observação:** SQL Data Warehouse do Azure sempre retornará zero (0).|  
 |**object_id**|**bigint**|ID do objeto de banco de dados que a consulta faz parte do (procedimento armazenado, gatilho, UDF do CLR/UDAgg, etc.). 0 se a consulta não é executada como parte de um objeto de banco de dados (consultas ad hoc).<br/>**Observação:** SQL Data Warehouse do Azure sempre retornará zero (0).|  
 |**batch_sql_handle**|**varbinary(64)**|ID do lote de instrução de consulta faz parte. Populado somente se a consulta faz referência a tabelas temporárias ou variáveis de tabela.<br/>**Observação:** SQL Data Warehouse do Azure sempre retornará *nulo*.|  
 |**query_hash**|**binary(8)**|Hash MD5 da consulta individual, com base na árvore de lógica de consulta. Inclui dicas do otimizador.|  

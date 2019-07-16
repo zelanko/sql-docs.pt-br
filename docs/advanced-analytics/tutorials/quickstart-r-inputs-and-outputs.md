@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 4df9e266e16e2cc37ce527c19ba7be483e43d50a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 1672cdeb59dfe35e313c999549e46f3fd76b688e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962009"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>Início Rápido: Lidar com entradas e saídas usando o R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +25,7 @@ Por padrão, [sp_execute_external_script](https://docs.microsoft.com/sql/relatio
 
 O procedimento armazenado retorna um único quadro de dados de R como saída, mas você também pode gerar modelos como variáveis e escalares. Por exemplo, você pode gerar um modelo treinado como uma variável binária e passá-lo para uma instrução T-SQL INSERT, para gravar esse modelo em uma tabela. Você também pode gerar plotagens (em formato binário) ou escalares (valores individuais, como a data e hora, o tempo decorrido para treinar o modelo e assim por diante).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Um início rápido anterior, [R Verifique se existe no SQL Server](quickstart-r-verify.md), fornece informações e links para configurar o ambiente de R necessários para este início rápido.
 
@@ -112,4 +111,4 @@ Vamos dar uma olhada no padrão variáveis de entrada e saídas de sp_execute_ex
 Examine alguns dos problemas que podem ocorrer ao passar dados entre R e SQL Server, como conversões implícitas e diferenças de dados tabulares entre R e SQL.
 
 > [!div class="nextstepaction"]
-> [Guia de início rápido: Lidar com tipos de dados e objetos](quickstart-r-data-types-and-objects.md)
+> [Início Rápido: Lidar com tipos de dados e objetos](quickstart-r-data-types-and-objects.md)

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: jroth
-ms.openlocfilehash: 5effd31d37af5fbe119f1ad23781b994fa89c240
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d87df240d4b83e53ef8f670609d2c896df7fe62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054675"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificar o direito de SKU de instância de banco de dados/gerenciado do Azure SQL para seu banco de dados local
 
@@ -39,7 +38,7 @@ As recomendações de SKU de recurso permite que você identifique o mínimo rec
 
 A seguir estão as instruções para ajudá-lo a determinar as recomendações de SKU de banco de dados SQL do Azure e provisionar bancos de dados únicos correspondentes ou instância (s) gerenciado no Azure usando o DMA.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Baixe e instale a versão mais recente do [DMA](https://aka.ms/get-dma). Se você já tiver uma versão anterior da ferramenta, abri-lo, e você será solicitado a atualizar o DMA.
 - Certifique-se de que o computador tenha [PowerShell versão 5.1](https://www.microsoft.com/download/details.aspx?id=54616) ou posterior, que é necessário para executar todos os scripts. Para obter informações sobre findoug qual versão do PowerShell é instalada em seu computador, consulte o artigo [Baixe e instale o Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
@@ -96,8 +95,8 @@ Além disso, selecione um dos argumentos a seguir:
 - Impedir que a atualização de preço
   - **/SkuRecommendationPreventPriceRefresh**: Se definido como verdadeiro, impede que a atualização de preço ocorra e pressupõe que os preços padrão. Use se executando no modo offline. Se você não usar esse parâmetro, você deve especificar os parâmetros a seguir para obter os preços mais recentes com base em uma região especificada.
 - Obter os preços mais recentes
-  - **/SkuRecommendationCurrencyCode**: A moeda na qual exibir os preços (por exemplo "US").
-  - **/SkuRecommendationOfferName**: A oferta de nome (por exemplo "MS-AZR-0003P"). Para obter mais informações, consulte o [detalhes da oferta do Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) página.
+  - **/ SkuRecommendationCurrencyCode**: A moeda na qual exibir os preços (por exemplo "US").
+  - **/SkuRecommendationOfferName**: A oferta de nome (por exemplo "MS-AZR - 0003P"). Para obter mais informações, consulte o [detalhes da oferta do Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) página.
     - **/SkuRecommendationRegionName**: O nome da região (por exemplo, "Oeste dos EUA").
     - **/SkuRecommendationSubscriptionId**: A ID da assinatura.
     - **/AzureAuthenticationTenantId**: O locatário de autenticação.

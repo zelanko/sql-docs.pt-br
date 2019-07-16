@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5067855-20c9-456f-8d63-f375b4297f2e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f5eab1c3bf6891f10c897966035dced2ffdc10ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db5d2cb8decde9828acd3005551717ac9f6cef32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096591"
 ---
 # <a name="create-table-statement-limitations"></a>Limitações da instrução CREATE TABLE
 Quando o Microsoft Access, Microsoft Excel ou Paradoxdriver é usado e o comprimento de uma coluna de texto ou binário não for especificado (ou é especificado como 0), o comprimento da coluna será definido como 255.  

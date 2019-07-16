@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a4b0ebed6da2ede7455b24bbda2c44d23a462af2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0fd9af62ed825ff97b9d63965386567db9a34a13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079076"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>Propriedade NumberOfProps (classe ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ object.NumberOfProps [= value]
  *object*  
  Um objeto da [classe ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) que representa o protocolo de rede usado pelo cliente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
  Um valor uint32 que especifica o número de propriedades do protocolo de rede do cliente.  
   
 ## <a name="remarks"></a>Comentários  

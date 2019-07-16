@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7e1be086b891d6888c6509b15adc6664b3022978
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb6f035b4d597e2b648134c195b698554dc78e12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072474"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>Trabalhar com projetos do SSMA (SybaseToSQL)
 Migrar bancos de dados do Sybase Adaptive Server Enterprise (ASE) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, você primeiro crie um projeto do SSMA. O projeto é um arquivo que contém metadados sobre os bancos de dados do ASE que você deseja migrar para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure, metadados sobre a instância de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure que receberá os dados, e os objetos migrados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure informações de conexão e configurações do projeto.  
@@ -57,7 +56,7 @@ Para migrar dados de bancos de dados do ASE para [!INCLUDE[ssNoVersion](../../in
   
 1.  No menu **Arquivo**, selecione **Novo Projeto**.  
   
-    A caixa de diálogo **Novo Projeto** será exibida.  
+    A caixa de diálogo **Novo Projeto** é exibida.  
   
 2.  No **nome** , digite um nome para seu projeto.  
   

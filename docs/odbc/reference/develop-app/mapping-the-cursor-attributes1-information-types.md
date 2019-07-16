@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f112449-ca86-45ac-a865-e6174d67f91b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e9549c442e301f3a6ed8d3da9c73d52177adf01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d95d3e67fdcd7159074e2f20ffa558f4c80bbcb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036366"
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>Mapear os tipos de informações dos atributos1 de cursor
 Quando um ODBC 3. *x* aplicativo chamará **SQLGetInfo** em um ODBC 2 *. x* driver com o tipo de informação SQL_XXXX_CURSOR_ATTRIBUTES1 (para dinâmico, somente encaminhamento, cursores controlados, ou Cursores estáticos), a configuração dos bits retornados pelo Gerenciador de Driver depende de que o ODBC 2. *x* driver retorna para o ODBC 2 correspondentes. *x* tipos de informações. Os bits são definidos como mostrado na tabela a seguir.  

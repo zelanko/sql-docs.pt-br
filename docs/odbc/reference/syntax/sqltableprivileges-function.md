@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3581c5ae7b9f4e41d0f8646f4e6e1d2cca1a2ca8
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: e63677180cc86f022550477bd598eaa61013d694
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039526"
 ---
 # <a name="sqltableprivileges-function"></a>Função SQLTablePrivileges
 **Conformidade com**  
@@ -126,7 +125,7 @@ SQLRETURN SQLTablePrivileges(
 |Nome da coluna|Número da coluna|Tipo de dados|Comentários|  
 |-----------------|-------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Nome do catálogo; NULL se não for aplicável à fonte de dados. Se um driver compatível com catálogos para algumas tabelas, mas não para outras pessoas, como quando o driver recupera os dados de diferentes DBMSs, ele retorna uma cadeia de caracteres vazia ("") para as tabelas que não têm catálogos.|  
-|TABLE_SCHEM  (ODBC 1.0)|2|Varchar|Nome do esquema; NULL se não for aplicável à fonte de dados. Se um driver compatível com esquemas para algumas tabelas, mas não para outras pessoas, como quando o driver recupera os dados de diferentes DBMSs, ele retorna uma cadeia de caracteres vazia ("") para as tabelas que não tem esquemas.|  
+|TABLE_SCHEM (ODBC 1.0)|2|Varchar|Nome do esquema; NULL se não for aplicável à fonte de dados. Se um driver compatível com esquemas para algumas tabelas, mas não para outras pessoas, como quando o driver recupera os dados de diferentes DBMSs, ele retorna uma cadeia de caracteres vazia ("") para as tabelas que não tem esquemas.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar não nulo|Nome da tabela.|  
 |CONCESSOR (ODBC 1.0)|4|Varchar|Nome do usuário que recebe o privilégio; NULL se não for aplicável à fonte de dados.<br /><br /> Para todas as linhas em que o valor na coluna usuário autorizado é o proprietário do objeto, a coluna GRANTOR será sistema".|  
 |USUÁRIO AUTORIZADO (ODBC 1.0)|5|Varchar não nulo|Nome do usuário a quem o privilégio foi concedido.|  

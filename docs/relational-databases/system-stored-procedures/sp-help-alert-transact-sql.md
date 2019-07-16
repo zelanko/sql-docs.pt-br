@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39d0c2f6e17f51928de561820f33bc0c34d89a62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62796528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055238"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Número de erro de mensagem que define o alerta. (Normalmente corresponde a um número de erro no **sysmessages** tabela). Se for usada gravidade para definir o alerta **message_id** é **0** ou nulo.|  
 |**severity**|**int**|Nível de gravidade (de **9** por meio **25**, **110**, **120**, **130**, ou **140**) que define o alerta.|  
-|**enabled**|**tinyint**|Status de alerta está habilitado no momento (**1**) ou não (**0**). Um alerta não habilitado não é enviado.|  
+|**habilitado**|**tinyint**|Status de alerta está habilitado no momento (**1**) ou não (**0**). Um alerta não habilitado não é enviado.|  
 |**delay_between_responses**|**int**|Período de espera, em segundos, entre respostas ao alerta.|  
 |**last_occurrence_date**|**int**|Data em que o alerta ocorreu pela última vez.|  
 |**last_occurrence_time**|**int**|Hora em que o alerta ocorreu pela última vez.|  
@@ -103,7 +102,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Número de erro de mensagem que define o alerta. (Normalmente corresponde a um número de erro no **sysmessages** tabela). Se for usada gravidade para definir o alerta **message_id** é **0** ou nulo.|  
 |**severity**|**int**|Nível de gravidade (de **9** por meio **25**, **110**, **120**, **130**, ou 1**40**) que define o alerta.|  
-|**enabled**|**tinyint**|Status de alerta está habilitado no momento (**1**) ou não (**0**). Um alerta não habilitado não é enviado.|  
+|**habilitado**|**tinyint**|Status de alerta está habilitado no momento (**1**) ou não (**0**). Um alerta não habilitado não é enviado.|  
 |**delay_between_responses**|**int**|Período de espera, em segundos, entre respostas ao alerta.|  
 |**last_occurrence_date**|**int**|Data em que o alerta ocorreu pela última vez.|  
 |**last_occurrence_time**|**int**|Hora em que o alerta ocorreu pela última vez.|  

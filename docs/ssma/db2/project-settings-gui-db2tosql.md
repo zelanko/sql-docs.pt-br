@@ -1,5 +1,5 @@
 ---
-title: Project Settings (GUI) (DB2ToSQL) | Microsoft Docs
+title: Configurações (GUI) (DB2ToSQL) do projeto | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: b2cdb71a-f301-45b3-878c-382356c93b4b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 84a8c5aa7fa12ea0763dc47635c4c6fbbf772a42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22825425e7f3eb18994e37efa996fcd784a257f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63272764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084538"
 ---
-# <a name="project-settings-gui-db2tosql"></a>Project Settings (GUI) (DB2ToSQL)
+# <a name="project-settings-gui-db2tosql"></a>Configurações de projeto (GUI) (DB2ToSQL)
 As configurações de projeto GUI permitem que você configure como os dados aparecem na **dados** guia e mostrar o relatório de avaliação após a conversão ou não.  
   
 O painel de interface gráfica do usuário está disponível na **configurações do projeto** e **configurações do projeto padrão** caixas de diálogo.  
@@ -40,5 +39,5 @@ Configura o número de linhas de dados exibidos na **dados** guia da tabela de d
 **Mostrar relatório após a conversão**  
 Para exibir um relatório depois de converter esquemas, selecione True. O relatório de conversão resultante contém o mesmo layout e informações que o relatório de avaliação.  
   
-**Default**: Falso  
+**Default**: False  
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2bfbe04376b71401694eb8bea025b8418cfea643
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 468fa452a5b9015bf5fcc613c040f76160e87210
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046508"
 ---
 # <a name="sysfncdcdecrementlsn-transact-sql"></a>sys.fn_cdc_decrement_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
   
 ## <a name="arguments"></a>Argumentos  
  *lsn_value*  
- Valor do LSN. *lsn_value* está **binário (10)**.  
+ Valor do LSN. *lsn_value* está **binário (10)** .  
   
 ## <a name="return-type"></a>Tipo de retorno  
  **binary(10)**  

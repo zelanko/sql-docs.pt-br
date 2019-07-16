@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098549"
 ---
 # <a name="mdx-data-definition---create-action"></a>Definição de dados MDX – CREATE ACTION
 
@@ -85,10 +84,10 @@ FOR
 |-----------------|-----------------|  
 |**URL**|A cadeia de caracteres de ação retornada é uma URL que deve ser aberto usando um navegador de Internet.<br /><br /> Observação: Se essa ação não começa com `https://` ou `https://`, a ação estará disponível para o navegador, a menos que **SafetyOptions** está definido como **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|A cadeia de caracteres de ação retornada é um script HTML. A cadeia de caracteres deve ser salva em um arquivo e o arquivo deve ser processado com um navegador de Internet. Neste caso, um script inteiro pode ser executado como parte do HTML gerado.|  
-|**STATEMENT**|A cadeia de caracteres de ação retornada é uma instrução que precisa ser executada, definindo o **ICommand::SetText** método de um objeto de comando para a cadeia de caracteres e a chamada a **ICommand:: execute**método. Se o comando não tiver êxito, um erro será retornado.|  
+|**INSTRUÇÃO**|A cadeia de caracteres de ação retornada é uma instrução que precisa ser executada, definindo o **ICommand::SetText** método de um objeto de comando para a cadeia de caracteres e a chamada a **ICommand:: execute**método. Se o comando não tiver êxito, um erro será retornado.|  
 |**CONJUNTO DE DADOS**|A cadeia de caracteres de ação retornada é uma instrução MDX que precisa ser executada, definindo o **ICommand::SetText** método de um objeto de comando para a cadeia de caracteres e a chamada a **ICommand:: execute** método. A interface solicitada IID (ID) deve ser **IDataset**. O comando terá êxito se um conjunto de dados tiver sido criado. O aplicativo cliente deve permitir que o usuário navegue pelo conjunto de dados retornado.|  
 |**CONJUNTO DE LINHAS**|Semelhante ao **DATASET**, mas em vez de solicitar uma IID de **IDataset**, o aplicativo cliente deve solicitar uma IID de **IRowset**. O comando terá êxito se um conjunto de linhas tiver sido criado. O aplicativo cliente deve permitir que o usuário navegue pelo conjunto de linhas retornado.|  
-|**COMMANDLINE**|O aplicativo cliente deve executar a cadeia de caracteres de ação. A cadeia de caracteres é uma linha de comando.|  
+|**LINHA DE COMANDO**|O aplicativo cliente deve executar a cadeia de caracteres de ação. A cadeia de caracteres é uma linha de comando.|  
 |**PROPRIETÁRIOS**|O aplicativo cliente não deve exibir nem executar a ação, a não ser que o aplicativo tenha um conhecimento personalizado e não genérico da ação específica. Ações proprietárias não são retornadas para o aplicativo cliente, a menos que o aplicativo cliente solicite explicitamente essas pela configuração da restrição apropriada na **APPLICATION_NAME**.|  
   
 ## <a name="invocation-types"></a>Tipos de invocação  
@@ -98,7 +97,7 @@ FOR
 |---------------------|-----------------|  
 |**INTERATIVO**|A ação deve ser invocada pelo aplicativo cliente por meio da interação do usuário.|  
 |**ON_OPEN**|A ação deve ser invocada pelo aplicativo cliente quando o objeto de destino é aberto. Esse tipo de invocação não é implementado atualmente.|  
-|**BATCH**|A ação deve ser invocada pelo aplicativo cliente quando o objeto de destino é envolvido em uma operação em lotes, conforme determinado pelo aplicativo cliente. Esse tipo de invocação não é implementado atualmente.|  
+|**LOTE**|A ação deve ser invocada pelo aplicativo cliente quando o objeto de destino é envolvido em uma operação em lotes, conforme determinado pelo aplicativo cliente. Esse tipo de invocação não é implementado atualmente.|  
   
 ### <a name="scope"></a>Scope  
  Cada ação é definida para um cubo específico e tem um nome exclusivo nesse cubo. Uma ação pode ter um dos escopos listados na tabela a seguir.  

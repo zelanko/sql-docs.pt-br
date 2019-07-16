@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ab529cc6-d157-4b35-b6f9-6ffd09af098c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7cb48c5a763162685060a95e8d352ebddd8b0032
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e2d23ddc5fdd00db45aee235e96f13a8cf08082a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080778"
 ---
 # <a name="supported-data-types-visual-foxpro-odbc-driver"></a>Tipos de dados com suporte (Driver ODBC do Visual FoxPro)
 A lista de tipos de dados com suporte pelo driver são apresentados por meio da API do ODBC e no Microsoft Query.  

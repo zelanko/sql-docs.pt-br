@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fc34bb3dc275e325163d8113db1a3b38c954840b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbf97a4095f2295b8851f87ba20ab083938e70ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709789"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947743"
 ---
 # <a name="cell-object-ado-md"></a>Objeto Cell (ADO MD)
 Representa os dados na interseção de coordenadas do eixo contidos em um conjunto de células.  

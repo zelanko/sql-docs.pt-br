@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: f6a0d727f2a862191422d155d0bf1aac04958383
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc5c1c283055655b84a70ec040861fce7fcca182
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935338"
 ---
 # <a name="domain-management-domain-list"></a>Gerenciamento de Domínio: Lista de domínios
 
@@ -30,7 +29,7 @@ ms.locfileid: "66769123"
   
 ### <a name="domains-list"></a>Lista de domínios  
  **Domínio**  
- Esta lista mostra todos os domínios na base de dados de conhecimento. Operações que você executa nas páginas tabuladas no painel direito serão executadas no domínio que é selecionado na lista. Para obter mais informações, consulte  
+ Esta lista mostra todos os domínios na base de dados de conhecimento. Operações que você executa nas páginas tabuladas no painel direito serão executadas no domínio que é selecionado na lista. Para saber mais, veja  
   
  **Criar um domínio composto**  
  Crie um novo domínio composto na base de dados de conhecimento. Este comando exibirá a caixa de diálogo **Criar um domínio composto** . Para disponibilizar este comando, clique com o botão direito do mouse em um domínio ou clique no ícone acima da lista de domínios. Para obter mais informações, consulte [Criar um domínio composto](../data-quality-services/create-a-composite-domain.md).  

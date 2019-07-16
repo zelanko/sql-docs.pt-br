@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f808460a1421a9ab4cb3a76c2810d810b9636b11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00ebbe36f8668e83697ff3a0038fbeb38f23ffd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019193"
 ---
 # <a name="connection-transitions"></a>Transições de conexão
 Conexões ODBC tem os seguintes estados.  
@@ -72,7 +71,7 @@ Conexões ODBC tem os seguintes estados.
   
  [2] a conexão estava no modo de confirmação automática.  
   
-## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges, SQLColumns, SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges, and SQLTables  
+## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges, SQLColumns, SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges e SQLTables  
   
 |C0<br /><br /> Não há Env.|C1<br /><br /> Não alocado|C2<br /><br /> alocado|C3<br /><br /> Precisa de dados|C4<br /><br /> Conectado|C5<br /><br /> de|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  

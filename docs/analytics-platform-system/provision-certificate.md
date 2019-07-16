@@ -2,26 +2,25 @@
 title: Certificado de provisionamento - Analytics Platform System | Microsoft Docs
 description: Certificado de provisionamento no Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 98fffc189aab674f46030086a8277395e84f7f4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0da49afe13ab0f8cc92e8dd58e78f40564ff53c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678585"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960226"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>Certificado de provisionamento no Analytics Platform System
 O **provisionamento de certificado do PDW** página do Analytics Platform System**Configuration Manager** importa ou remove o certificado usado pelo PDW. 
 
 Usando o, um certificado para criptografar conexões pode ajudar a comunicação segura para o nó de controle por meio de clientes do SQL Server, as ferramentas que usam os drivers do SQL Server PDW, o [Console de administração](monitor-the-appliance-by-using-the-admin-console.md), e carrega os serviços de integração. 
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 Antes de instalar o certificado, faça o seguinte:  
   
 1.  Obter um certificado seguro. Se você precisar de mais informações sobre como obter um certificado seguro, entre em contato com o Microsoft Support.  

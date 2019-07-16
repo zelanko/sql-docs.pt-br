@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2bbe1636db483ad24f7744fe4d9902c520e07dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d41fc2f01e2cfbc2b20c58ea9be640f2afd8ea0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006577"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>Editar mapeamento de tipo (AccessToSQL)
 O **editar mapeamento de tipo** caixa de diálogo permite que você especifique como os tipos são mapeados entre os objetos de banco de dados de origem e de destino.  
@@ -34,10 +33,10 @@ Selecione o tipo de dados de origem para mapear para um [!INCLUDE[ssNoVersion](.
   
 Se for o tipo de dados de comprimento variável, os campos a seguir aparecerá sob **tipo de fonte**:  
   
-**De**  
+**From**  
 Especifique o comprimento mínimo para esse mapeamento. Por exemplo, para o **texto** tipo de dados, você pode inserir 10 para especificar que esse mapeamento é para um intervalo começando **text(10)** .  
   
-**Para**  
+**To**  
 Especifique o comprimento máximo para esse mapeamento. Por exemplo, para o **texto** tipo de dados, você pode inserir 20 para especificar que esse mapeamento é para um intervalo terminando às **text(20)** .  
   
 **Tipo de destino**  

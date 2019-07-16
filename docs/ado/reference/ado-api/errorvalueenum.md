@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0f9efa743e6e5f9efe99e08001980ab87bf13247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18117be8dccc64f7ed2583170cf062145836f337
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932871"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Especifica o tipo de erro de tempo de execução do ADO.  
@@ -32,7 +31,7 @@ Especifica o tipo de erro de tempo de execução do ADO.
   
 -   Negativo decimal: A conversão decimal do número de erro completa.  
   
--   Hexadecimal: A representação hexadecimal do número de erro completa. O código de recurso do Windows está em quarto dígito. É o código de recurso para os números de erro ADO *um*. Por exemplo: 0x800***A***0E7B.  
+-   Hexadecimal: A representação hexadecimal do número de erro completa. O código de recurso do Windows está em quarto dígito. É o código de recurso para os números de erro ADO *um*. Por exemplo:  0x800***A***0E7B.  
   
 > [!NOTE]
 >  Erros de OLE DB podem ser passados para o seu aplicativo do ADO. Normalmente, elas podem ser identificadas por um código de recurso do Windows do *4*. Por exemplo, 0x800***4***.  
@@ -47,7 +46,7 @@ Especifica o tipo de erro de tempo de execução do ADO.
 |**adErrCantCreate**|3725 -2146824563 0x800A0E8D|Valor de dados não pode ser definido ou recuperado porque o tipo de dados do campo era desconhecido ou o provedor precisou recursos insuficientes para executar a operação.|  
 |**adErrCatalogNotSet**|3747 -2146824541 0x800A0EA3|Operação requer uma validade **ParentCatalog**.|  
 |**adErrColumnNotOnThisRow**|3726 -2146824562 0x800A0E8E|Registro não contém esse campo.|  
-|**adErrDataConversion**|3421 -2146824867 0x800A0D5D|Aplicativo usa um valor do tipo errado para a operação atual.|  
+|**adErrDataConversion**|3421-2146824867 0x800A0D5D|Aplicativo usa um valor do tipo errado para a operação atual.|  
 |**adErrDataOverflow**|3721 -2146824567 0x800A0E89|Valor de dados é muito grande para ser representado pelo tipo de dados do campo.|  
 |**adErrDelResOutOfScope**|3738 -2146824550 0x800A0E9A|URL do objeto a ser excluído está fora do escopo do registro atual.|  
 |**adErrDenyNotSupported**|3750 -2146824538 0x800A0EA6|Provedor não oferece suporte a restrições de compartilhamento.|  
@@ -95,7 +94,7 @@ Especifica o tipo de erro de tempo de execução do ADO.
 |**adWrnSecurityDialogHeader**|3718 -2146824570 0x800A0E86|Somente para uso interno. Não use.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Package: **com.ms.wfc.data**  
+ Pacote: **com.ms.wfc.data**  
   
  Apenas os seguintes subconjuntos de equivalentes de ADO/WFC são definidos.  
   

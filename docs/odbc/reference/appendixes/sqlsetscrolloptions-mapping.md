@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5153980cae143feeb1917c89da640723716c8ef1
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 06b6b0f982b5c8d864e5024c8544f1f8e9af75ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091701"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>Mapeamento SQLSetScrollOptions
 Quando um aplicativo chama **SQLSetScrollOptions** por meio de ODBC *3.x* driver e o driver não oferece suporte **SQLSetScrollOptions**, a chamada para  

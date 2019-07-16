@@ -21,28 +21,27 @@ helpviewer_keywords:
 ms.assetid: 1954541d-b716-4e03-8fcc-7022f428e01d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27df857e8863272f2b502c4950b4cc36ad936978
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b5c40ce6d1c7b7ef85f24fc8032559e000d89be1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097813"
 ---
 # <a name="sysdmexecdistributedrequeststeps-transact-sql"></a>sys.dm_exec_distributed_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contém informações sobre todas as etapas que compõem uma consulta ou uma determinada solicitação de PolyBase. Ele lista uma linha para cada etapa de consulta.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**int**|execution_id e step_index constituem a chave para esta exibição. Id numérico exclusivo associado com a solicitação.|Consulte a ID na [. DM exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |step_index|**int**|A posição dessa etapa na sequência de etapas que formam a solicitação.|0 (n-1) para uma solicitação de n etapas.|  
 |operation_type|**nvarchar(128)**|Tipo de operação representada por essa etapa.|'MoveOperation', 'OnOperation', 'RandomIDOperation', 'RemoteOperation', 'ReturnOperation', 'ShuffleMoveOperation', 'TempTablePropertiesOperation', 'DropDiagnosticsNotifyOperation', 'HadoopShuffleOperation', 'HadoopBroadCastOperation' 'HadoopRoundRobinOperation'|  
 |distribution_type|**nvarchar(32)**|Em que a etapa está em execução.|'AllComputeNodes ',' AllDistributions', 'ComputeNode', 'Distribution', 'AllNodes', 'SubsetNodes', 'SubsetDistributions',' não especificado'.|  
 |location_type|**nvarchar(32)**|Em que a etapa está em execução.|'Calcular', 'Principal' ou 'DMS'. Todas as etapas de movimentação de dados mostram 'DMS'.|  
-|status|**nvarchar(32)**|Status desta etapa|'Pendente', 'Running', 'Completa', 'Falha', 'UndoFailed', 'PendingCancel', 'Cancelar', 'Desfeita', 'Anulada'|  
+|status|**nvarchar(32)**|Status desta etapa|'Pending', 'Running', 'Complete', 'Failed', 'UndoFailed', 'PendingCancel', 'Cancelled', 'Undone', 'Aborted'|  
 |error_id|**nvarchar(36)**|Id exclusiva do erro associado a esta etapa, se houver|Consulte a id da [sys.dm_exec_compute_node_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md), ele será nulo se nenhum erro ocorreu.|  
 |start_time|**datetime**|Hora em que a etapa começou execução|Menor ou igual à hora atual e maior ou igual a end_compile_time da consulta ao qual pertence essa etapa.|  
 |end_time|**datetime**|Hora em que esta etapa concluiu a execução, foi cancelada ou falhou.|Menor ou igual à hora atual e maior ou igual a start_time, definido como NULL para etapas atualmente em execução ou na fila.|  

@@ -25,14 +25,13 @@ helpviewer_keywords:
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da2dacf6fcb34d5a5caba14ccb60cbb9eec43467
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9ed393edf79c3502bf3e054e23eb459d490ce998
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075800"
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -59,7 +58,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="arguments"></a>Argumentos  
 `[ @name = ] 'module\_name'` É o nome do procedimento armazenado, função definida pelo usuário, exibição, gatilho DML, gatilho DDL no nível de banco de dados ou gatilho DDL no nível do servidor. *module_name* não pode ser um common language runtime (CLR) procedimento armazenado ou uma função CLR. *module_name* não pode ser associada a esquema. *module_name* está **nvarchar**, sem padrão. *module_name* pode ser um identificador de várias partes, mas só pode se referir a objetos no banco de dados atual.  
   
-`[ , @namespace = ] ' \<class> '` É a classe do módulo especificado. Quando *module_name* é um gatilho DDL, \<classe > é necessária. *\<class>* is **nvarchar**(20). As entradas válidas são:  
+`[ , @namespace = ] ' \<class> '` É a classe do módulo especificado. Quando *module_name* é um gatilho DDL, \<classe > é necessária. *\<classe >* está **nvarchar**(20). As entradas válidas são:  
   
 |||  
 |-|-|  

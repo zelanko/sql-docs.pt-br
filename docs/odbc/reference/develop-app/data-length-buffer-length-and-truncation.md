@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ed2e5ca1fdaba97dde64329c5e8e1b692f43158
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8586157237db1158587e3c39f1320b78d8251fb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081474"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>Comprimento de dados, comprimento do buffer e truncamento
 O *comprimento dos dados* é o comprimento de bytes dos dados como seriam armazenado no buffer de dados do aplicativo, não como ele é armazenado na fonte de dados. Essa distinção é importante porque os dados são geralmente armazenados em tipos diferentes no buffer de dados que na fonte de dados. Portanto, para os dados enviados à fonte de dados, esse é o comprimento de bytes dos dados antes da conversão em tipo da fonte de dados. Para os dados recuperados da fonte de dados, esse é o comprimento de bytes dos dados após a conversão para o tipo do buffer de dados e antes de qualquer truncamento é feito.  

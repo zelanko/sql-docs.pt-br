@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 680712fb2ac5b31484fc7650a8a4fab8047fc7af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34473e6eb173a0aabc5c2067e50aeeec27ce5636
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65103269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067744"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,9 +71,9 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>Tabela retornada  
  A tabela a seguir descreve as informações sobre as frases-chave que podem ser retornadas por essa função de conjunto de linhas.  
   
-|Column_name|Tipo|Descrição|  
+|Column_name|type|Descrição|  
 |------------------|----------|-----------------|  
-|**keyphrase**|**NVARCHAR**|A frase chave que contribui com a semelhança entre o documento original e o documento correspondente.|  
+|**frases-chave**|**NVARCHAR**|A frase chave que contribui com a semelhança entre o documento original e o documento correspondente.|  
 |**score**|**REAL**|Um valor relativo para essa frase-chave em sua relação com todas as outras frases-chave que são semelhantes entre os 2 documentos.<br /><br /> O valor é um valor decimal fracionário no intervalo de [0,0, 1,0] onde uma pontuação mais alta representa peso mais alto e 1,0 é a pontuação perfeita.|  
   
 ## <a name="general-remarks"></a>Comentários gerais  

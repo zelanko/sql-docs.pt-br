@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 935b76922ec40b8bdca28a0766e4c5b7c3d8754a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c158533188db7e3d72235a69bff1b14546a1a1a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089246"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -37,14 +36,14 @@ ms.locfileid: "47830024"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome da coluna ou procedimento do parâmetro.|  
 |**id**|**int**|A identificação do objeto da tabela à qual essa coluna pertence ou do procedimento armazenado ao qual esse parâmetro está associado.|  
 |**tipoX**|**tinyint**|Tipo de armazenamento físico de **Types**.|  
 |**typestat**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|ID de tipo de dados estendido definido pelo usuário. Estoura ou retorna NULL se o número de tipos de dados exceder 32.767.|  
-|**Comprimento**|**smallint**|Comprimento máximo de armazenamento físico de **sys**. **tipos de**.|  
+|**length**|**smallint**|Comprimento máximo de armazenamento físico de **sys**. **tipos de**.|  
 |**xprec**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colid**|**smallint**|ID de coluna ou de parâmetro.|  
@@ -58,7 +57,7 @@ ms.locfileid: "47830024"
 |**colorder**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**smallint**|Deslocamento da linha na qual essa coluna aparece.|  
-|**collationid**|**int**|ID do agrupamento da coluna. NULL para colunas não baseadas em caracteres.|  
+|**collationid**|**int**|ID da ordenação da coluna. NULL para colunas não baseadas em caracteres.|  
 |**status**|**tinyint**|Bitmap usado para descrever uma propriedade da coluna ou do parâmetro:<br /><br /> 0x08 = A coluna permite valores nulos.<br /><br /> 0x10 = o preenchimento ANSI estava em vigor quando **varchar** ou **varbinary** colunas foram adicionadas. Espaços em branco são preservados por **varchar** e zeros à direita são preservados por **varbinary** colunas.<br /><br /> 0x40 = O parâmetro é OUTPUT.<br /><br /> 0x80 = A coluna é de identidade.|  
 |**type**|**tinyint**|Tipo de armazenamento físico de **sys**. **tipos de**.|  
 |**usertype**|**smallint**|ID de tipo de dados definido pelo usuário **Types**. Estoura ou retorna NULL se o número de tipos de dados exceder 32.767.|  
@@ -68,7 +67,7 @@ ms.locfileid: "47830024"
 |**iscomputed**|**int**|Sinalizador que indica se a coluna é computada:<br /><br /> 0 = Não computada<br /><br /> 1 = Computada|  
 |**isoutparam**|**int**|Indica se o parâmetro de procedimento é de saída:<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**isnullable**|**int**|Indica se a coluna permite valores nulos:<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**Agrupamento**|**sysname**|Nome do agrupamento da coluna. NULL se não for uma coluna baseada em caracteres.|  
+|**Agrupamento**|**sysname**|Nome da ordenação da coluna. NULL se não for uma coluna baseada em caracteres.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Mapeando tabelas do sistema para exibições do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

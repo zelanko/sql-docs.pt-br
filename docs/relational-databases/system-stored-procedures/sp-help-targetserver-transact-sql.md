@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c809679694811d23b01dee426aa1afdd7d5cf06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eb9a4d1a19f54f9e57e988b350594ce6031b243
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085085"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @server_name = ] 'server_name'` O nome do servidor para o qual retornar informações. *nome_do_servidor* está **nvarchar (30)**, com um padrão NULL.  
+`[ @server_name = ] 'server_name'` O nome do servidor para o qual retornar informações. *nome_do_servidor* está **nvarchar (30)** , com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -53,7 +52,7 @@ sp_help_targetserver
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Número de identificação do servidor.|  
 |**server_name**|**nvarchar(30)**|Nome de servidor.|  
-|**location**|**nvarchar(200)**|Localização do servidor especificado.|  
+|**Local**|**nvarchar(200)**|Localização do servidor especificado.|  
 |**time_zone_adjustment**|**int**|Ajuste de fuso horário, em horas, com base na hora de Greenwich (GMT).|  
 |**enlist_date**|**datetime**|Data do alistamento do servidor especificado.|  
 |**last_poll_date**|**datetime**|Data da última vez em que o servidor foi  sondado para trabalhos.|  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 19024aecd7061b1e1fdb66d766f3dfa704cd245c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e1e0b9a5cea798f9f8b6cc53404378d370276d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718889"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966426"
 ---
 # <a name="deleterule-property-adox"></a>Propriedade DeleteRule (ADOX)
 Indica a ação executada quando uma chave primária é excluída.  

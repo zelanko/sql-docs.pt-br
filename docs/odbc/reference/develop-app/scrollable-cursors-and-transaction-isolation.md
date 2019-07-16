@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e5510eb58315f70195eb40390edec1766c350fb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92e3694690ef1cba210da29766e7528762e691f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468584"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061597"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Cursores roláveis e isolamento da transação
 A tabela a seguir lista os fatores que governam a visibilidade das alterações.  
@@ -41,17 +40,17 @@ A tabela a seguir lista os fatores que governam a visibilidade das alterações.
 |Cursor type\action|Self|O proprietário<br /><br /> Txn|Outra<br /><br /> Txn<br /><br /> (RU[a])|Outra<br /><br /> Txn<br /><br /> (RC[a])|Outra<br /><br /> Txn<br /><br /> (RR[a])|Outra<br /><br /> Txn<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |Estático|||||||  
-|Insert|Maybe[b]|Não |Não|Não|Não|Não|  
-|Update|Maybe[b]|Não|Não |Não |Não|Não |  
-|DELETE|Maybe[b]|Não |Não |Não |Não|Não|  
+|Insert|Talvez [b]|Não|Não|Não|Não|Não|  
+|Atualização|Talvez [b]|Não|Não|Não|Não|Não|  
+|Excluir|Talvez [b]|Não|Não|Não|Não|Não|  
 |Controlado por conjunto de chaves|||||||  
-|Insert|Maybe[b]|Não|Não |Não |Não |Não|  
-|Update|Sim|Sim|Sim|Sim|Não|Não |  
-|DELETE|Maybe[b]|Sim|Sim|Sim|Não |Não|  
+|Insert|Talvez [b]|Não|Não|Não|Não|Não|  
+|Atualização|Sim|Sim|Sim|Sim|Não|Não|  
+|Excluir|Talvez [b]|Sim|Sim|Sim|Não|Não|  
 |Dinâmico|||||||  
-|Insert|Sim|Sim|Sim|Sim|Sim|Não |  
-|Update|Sim|Sim|Sim|Sim|Não|Não |  
-|DELETE|Sim|Sim|Sim|Sim|Não |Não |  
+|Insert|Sim|Sim|Sim|Sim|Sim|Não|  
+|Atualização|Sim|Sim|Sim|Sim|Não|Não|  
+|Excluir|Sim|Sim|Sim|Sim|Não|Não|  
   
  [a] as letras entre parênteses indicam o nível de isolamento da transação que contém o cursor; o nível de isolamento da transação (no qual a alteração foi feita) é irrelevante.  
   

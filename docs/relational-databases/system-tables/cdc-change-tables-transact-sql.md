@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47265c1a4e541481edfef8029faf32e5cee3798a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4432d4c45bdecc6f5e1804427770d005adde0cd5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081285"
 ---
 # <a name="cdcchangetables-transact-sql"></a>cdc.change_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada tabela de alteração do banco de dados. Uma tabela de alteração é criada quando o Change Data Capture é habilitado em uma tabela de origem. É recomendável não consultar diretamente as tabelas do sistema. Em vez disso, execute as [sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) procedimento armazenado.  
-  |Nome da coluna|Tipo de dados|Description|  
+  |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID da tabela de alteração. É exclusivo em um banco de dados.|  
 |**version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Para o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], essa coluna sempre retorna 0.|  

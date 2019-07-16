@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 41877986d5d0e8afdfb30841860df360efd26da0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16f87c52b4149d62a8d57884216890b7421e8ef6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063617"
 ---
 # <a name="set-reprocess-command"></a>Comando SET REPROCESS
 Especifica quantas vezes ou para saber como longo para bloquear um arquivo ou um registro após uma tentativa malsucedida de bloqueio.  

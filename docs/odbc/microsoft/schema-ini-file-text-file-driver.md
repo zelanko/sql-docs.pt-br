@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd95329c91c69af38b1ffc7951191498fcc40479
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987940"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini File (Driver de Arquivo de texto)
 Quando o driver de texto é usado, o formato do arquivo de texto é determinado por meio de um arquivo de informações de esquema. O arquivo de informações de esquema é sempre chamado Schema. ini e sempre é mantido no mesmo diretório que a fonte de dados de texto. O arquivo de informações de esquema fornece o IISAM com informações sobre o formato geral do arquivo, o nome da coluna e informações de tipo de dados e várias outras características de dados. Um arquivo Schema sempre é necessário para acessar dados de comprimento fixo. Você deve usar um arquivo Schema quando sua tabela de texto contém a data e hora, moeda, ou dados Decimal ou a qualquer momento que você quiser mais controle sobre a manipulação dos dados na tabela.  
@@ -55,8 +54,8 @@ Quando o driver de texto é usado, o formato do arquivo de texto é determinado 
 |Especificador de formato|Formato de tabela|Instrução de formato Schema. ini|  
 |----------------------|------------------|---------------------------------|  
 |**Delimitado por tabulação**|Campos no arquivo são delimitados por guias.|Format=TabDelimited|  
-|**Delimitado por vírgula**|Campos no arquivo são delimitados por vírgulas (valores separados por vírgula).|Format=CSVDelimited|  
-|**Personalizado**|Campos no arquivo são delimitados por qualquer caractere que você optar por inserir na caixa de diálogo. Todos, exceto as aspas duplas (") são permitidos, incluindo em branco.|Format=Delimited(*custom character*)<br /><br /> -ou-<br /><br /> Com nenhum delimitador especificado:<br /><br /> Format=Delimited( )|  
+|**Delimitado por vírgula**|Campos no arquivo são delimitados por vírgulas (valores separados por vírgula).|Formato = CSVDelimited|  
+|**Personalizado**|Campos no arquivo são delimitados por qualquer caractere que você optar por inserir na caixa de diálogo. Todos, exceto as aspas duplas (") são permitidos, incluindo em branco.|Format=Delimited(*custom character*)<br /><br /> - ou -<br /><br /> Com nenhum delimitador especificado:<br /><br /> Format=Delimited( )|  
 |**Comprimento fixo**|Campos no arquivo são de comprimento fixo.|Format=FixedLength|  
   
 ## <a name="specifying-the-fields"></a>Especifica os campos  
@@ -100,7 +99,7 @@ n=ColumnNametype [#]
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*ColumnName*|O nome da coluna de texto. Se o nome da coluna contiver espaços inseridos, você deverá colocá-lo entre aspas duplas.|  
-|*type*|Tipos de dados são da seguinte maneira:<br /><br /> **Tipos de dados Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Longo<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> Text<br /><br /> Memorando<br /><br /> **Tipos de dados ODBC** Char (mesmo que o texto)<br /><br /> Float (mesmo que Double)<br /><br /> Inteiro (mesmo que Short)<br /><br /> LongChar (mesmo que o memorando)<br /><br /> Data *formato de data*|  
+|*type*|Tipos de dados são da seguinte maneira:<br /><br /> **Tipos de dados Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Abreviado<br /><br /> Long<br /><br /> Currency<br /><br /> Simples<br /><br /> Double<br /><br /> DateTime<br /><br /> Text<br /><br /> Memorando<br /><br /> **Tipos de dados ODBC** Char (mesmo que o texto)<br /><br /> Float (mesmo que Double)<br /><br /> Inteiro (mesmo que Short)<br /><br /> LongChar (mesmo que o memorando)<br /><br /> Data *formato de data*|  
 |**Width**|O valor de cadeia de caracteres literal `Width`. Indica que o número a seguir designa a largura da coluna (opcional para arquivos delimitados por caracteres; necessário para arquivos de comprimento fixo).|  
 |*#*|O valor de inteiro que determina a largura da coluna (necessário se **largura** for especificado).|  
   
@@ -123,7 +122,7 @@ CharacterSet=ANSI
 |**CurrencySymbol**|Indica o símbolo de moeda que pode ser usado para valores de moeda no arquivo de texto. Exemplos incluem o sinal de cifrão ($) e o Dm.|  
 |**CurrencyPosFormat**|Pode ser definido para qualquer um dos seguintes valores:<br /><br /> -Prefixo do símbolo da moeda sem separação ($1)<br />-Sufixo do símbolo da moeda sem separação (1$)<br />-Prefixo do símbolo da moeda com uma separação de caractere (US $ 1)<br />-Sufixo do símbolo da moeda com uma separação de caractere (1 $)|  
 |**CurrencyDigits**|Especifica o número de dígitos usados para a parte fracionária de um valor de moeda.|  
-|**CurrencyNegFormat**|Pode ser um dos seguintes valores:<br /><br /> -   ($1)<br />-   -$1<br />-   $-1<br />-   $1-<br />-   (1$)<br />-   -1$<br />-   1-$<br />-   1$-<br />-   -1 $<br />-   -$ 1<br />-   1 $-<br />-   $ 1-<br />-   $ -1<br />-   1- $<br />-   ($ 1)<br />-   (1 $)<br /><br /> Este exemplo mostra o símbolo de dólar, mas você deve substituí-lo com os devidos **CurrencySymbol** valor no programa.|  
+|**CurrencyNegFormat**|Pode ser um dos seguintes valores:<br /><br /> -   ($1)<br />--US $1<br />-1 $<br />-US $1 -<br />-   (1$)<br />-   -1$<br />-   1-$<br />-US $- 1<br />--1 $<br />-   -$ 1<br />-US $- 1<br />-US $ 1 -<br />-   $ -1<br />-1-$<br />-   ($ 1)<br />-   (1 $)<br /><br /> Este exemplo mostra o símbolo de dólar, mas você deve substituí-lo com os devidos **CurrencySymbol** valor no programa.|  
 |**CurrencyThousandSymbol**|Indica o símbolo de caractere único que pode ser usado para separar os valores de moeda no arquivo de texto por milhares.|  
 |**CurrencyDecimalSymbol**|Pode ser definido como qualquer caractere único que é usado para separar toda a parte fracionária de um valor de moeda.|  
   

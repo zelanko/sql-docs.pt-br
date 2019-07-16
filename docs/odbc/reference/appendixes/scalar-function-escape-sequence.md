@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: aaf5d516-e090-445f-8839-9e39581c69c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0913458d683d7641145b262552e147033dbfc054
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36e108fcc61b2390d5fd72ac4ad322778ccfb4b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057069"
 ---
 # <a name="scalar-function-escape-sequence"></a>Sequência de escape de função escalar
 ODBC usa sequências de escape para funções escalares. A sintaxe dessa sequência de escape é da seguinte maneira:  

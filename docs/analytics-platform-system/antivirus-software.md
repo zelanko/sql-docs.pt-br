@@ -2,19 +2,18 @@
 title: Software antivírus - Analytics Platform System | Microsoft Docs
 description: Se seu data center exige um software antivírus, use estas diretrizes para instalar o software antivírus no Analytics Platform System. É recomendável não instalar o software antivírus, a menos que ele é um requisito sólido de seu data center.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e52841ebe96d8aab84e4d09c91b590e8e4d7e2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961603"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Software antivírus para o Analytics Platform System
 Se seu data center exige um software antivírus, use estas diretrizes para instalar o software antivírus no Analytics Platform System. É recomendável não instalar o software antivírus, a menos que ele é um requisito sólido de seu data center.  
@@ -31,7 +30,7 @@ Para instalar o software antivírus em hosts físicos, exclua a seguinte lista d
   
 **Exclua esses diretórios:**  
   
--   C:\ProgramData\Microsoft\Windows\Hyper-V - Virtual machine configuration directory  
+-   C:\programdata\microsoft\windows\hyper-v. - diretório de configuração de máquina Virtual  
   
 -   Discos de rígidos C:\Users\Public\Documents\Hyper-V\Virtual - diretório padrão de unidade de disco rígido virtual  
   
@@ -52,7 +51,7 @@ Para instalar o software antivírus em VMs, exclua a seguinte lista de diretóri
   
 -   G:\  
   
-**_appliance_domain_-AD01** e ** _appliance_domain_-AD02**  
+**_appliance_domain_-AD01** e  **_appliance_domain_-AD02**  
   
 -   Sem restrições  
   

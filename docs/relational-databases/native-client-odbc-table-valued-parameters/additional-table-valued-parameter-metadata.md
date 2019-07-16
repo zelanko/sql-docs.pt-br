@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf5de70ab6305f73b70224ae8552a739860b535d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb388b80f3f6edff93eafc2a9fa1b5156091fc79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020307"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>Metadados adicionais de parâmetros com valor de tabela
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,8 +33,8 @@ ms.locfileid: "47723420"
 |-----------------|---------------|---------------------|  
 |DATA_TYPE|Smallint não NULL|SQL_SS_TABLE|  
 |TYPE_NAME|WVarchar(128) não NULL|O nome do tipo do parâmetro com valor de tabela.|  
-|COLUMN_SIZE|Integer|NULL|  
-|BUFFER_LENGTH|Integer|0|  
+|COLUMN_SIZE|Inteiro|NULL|  
+|BUFFER_LENGTH|Inteiro|0|  
 |DECIMAL_DIGITS|Smallint|NULL|  
 |NUM_PREC_RADIX|Smallint|NULL|  
 |NULLABLE|Smallint não NULL|SQL_NULLABLE|  
@@ -43,7 +42,7 @@ ms.locfileid: "47723420"
 |COLUMN_DEF|WVarchar(4000)|NULL|  
 |SQL_DATA_TYPE|Smallint não NULL|SQL_SS_TABLE|  
 |SQL_DATETIME_SUB|Smallint|NULL|  
-|CHAR_OCTET_LENGTH|Integer|NULL|  
+|CHAR_OCTET_LENGTH|Inteiro|NULL|  
 |ORDINAL_POSITION|Integer não NULL|A posição ordinal do parâmetro.|  
 |IS_NULLABLE|Varchar|"YES"|  
 |SS_TYPE_CATALOG_NAME|WVarchar(128) não NULL|O catálogo que contém a definição de tipo do tipo de tabela do parâmetro com valor de tabela.|  

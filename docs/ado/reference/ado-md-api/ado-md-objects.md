@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c06214d23441782cbe5e14433b16928224d5d48c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d568ca20cca6c12a04c0f3d54a2c134d59a0d7fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709844"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930570"
 ---
 # <a name="ado-md-objects"></a>Objetos do ADO MD
 
@@ -27,10 +26,10 @@ ms.locfileid: "66709844"
 |-|-|  
 |[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Representa um posicional ou eixo do filtro de um conjunto de células que contêm membros selecionados de uma ou mais dimensões.|  
 |[Catálogo](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Contém multidimensional informações de esquema (ou seja, cubos e subjacente dimensões, hierarquias, níveis e membros) específicas para um provedor de dados multidimensional (MDP).|  
-|[Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Representa os dados na interseção das coordenadas do eixo, contido em um conjunto de células.|  
+|[célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Representa os dados na interseção das coordenadas do eixo, contido em um conjunto de células.|  
 |[Conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Representa os resultados de uma consulta multidimensional. É uma coleção de células selecionadas de cubos ou outros conjuntos de células.|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Representa um cubo de um esquema multidimensional, que contém um conjunto de dimensões relacionadas.|  
-|[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Representa uma das dimensões de um cubo multidimensional, que contém uma ou mais hierarquias de membros.|  
+|[Dimensão](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Representa uma das dimensões de um cubo multidimensional, que contém uma ou mais hierarquias de membros.|  
 |[Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Representa uma forma em que os membros de uma dimensão podem ser agregados ou "acumulados". Uma dimensão pode ser agregada a uma ou mais hierarquias.|  
 |[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Contém um conjunto de membros, cada um deles tem a mesma classificação dentro de uma hierarquia.|  
 |[Membro](../../../ado/reference/ado-md-api/member-object-ado-md.md)|Representa um membro de um nível em um cubo, os filhos de um membro de um nível ou membro de uma posição ao longo do eixo de um conjunto de células.|  

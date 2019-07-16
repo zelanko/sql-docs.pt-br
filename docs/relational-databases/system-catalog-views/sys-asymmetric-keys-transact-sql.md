@@ -19,28 +19,27 @@ helpviewer_keywords:
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0cc6153993ffd5febbc9fdaa7a06b477ea3aad1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c05aa2d1543cfc3ebd1cbab6c199cd2992febfe2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070470"
 ---
 # <a name="sysasymmetrickeys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada chave assimétrica.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome da chave. É exclusiva no banco de dados.|  
 |**principal_id**|**int**|ID da entidade de banco de dados que possui a chave.|  
 |**asymmetric_key_id**|**int**|ID da chave. É exclusiva no banco de dados.|  
 |**pvt_key_encryption_type**|**char(2)**|Como a chave é criptografada.<br /><br /> NA = Não criptografada<br /><br /> MK = A chave é criptografada pela chave mestra<br /><br /> PW = A chave é criptografada por uma senha definida pelo usuário<br /><br /> SK = A chave é criptografada pela chave mestra de serviço.|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|Descrição de como a chave privada é criptografada.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
-|**impressão digital**|**varbinary(32)**|Hash SHA-1 da chave. O hash é globalmente exclusivo.|  
+|**thumbprint**|**varbinary(32)**|Hash SHA-1 da chave. O hash é globalmente exclusivo.|  
 |**algoritmo**|**char(2)**|Algoritmo usado com a chave.<br /><br /> 1R = RSA de 512 bits<br /><br /> 2R = RSA de 1024 bits<br /><br /> 3R = RSA de 2048 bits|  
 |**algorithm_desc**|**nvarchar(60)**|Descrição do algoritmo usado com a chave.<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**key_length**|**int**|Comprimento de bit da chave.|  

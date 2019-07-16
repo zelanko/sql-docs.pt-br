@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3b1e6f0f767f202ab21048f70915b56d51eb14a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1ec3836db241320beabfbd4672ffad9b22ccaf58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673555"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078520"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "51673555"
 > [!NOTE]  
 >  A coluna ROUTINE_DEFINITION contém as instruções originais que criaram a função ou o procedimento armazenado. Estas instruções originais provavelmente conterão retornos de carro inseridos. Se você estiver retornando esta coluna a um aplicativo que exibe os resultados em formato de texto, os retornos de carro embutidos nos resultados de ROUTINE_DEFINITION poderão afetar a formatação do conjunto de resultados geral. Se você selecionar a coluna de ROUTINE_DEFINITION, deverá ajustar os retornos de carro embutidos, por exemplo, retornando o conjunto de resultados em uma grade ou retornando ROUTINE_DEFINITION em sua própria caixa de texto.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar(** 128 **)**|Nome específico do catálogo. Este nome é igual a ROUTINE_CATALOG.|  
 |SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|Nome específico do esquema.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
@@ -76,7 +75,7 @@ ms.locfileid: "51673555"
 |MAXIMUM_CARDINALITY|**bigint**|NULL. Reservado para uso futuro.|  
 |DTD_IDENTIFIER|**nvarchar(** 128 **)**|NULL. Reservado para uso futuro.|  
 |ROUTINE_BODY|**nvarchar (** 30 **)**|Retorna o SQL para uma função [!INCLUDE[tsql](../../includes/tsql-md.md)] e EXTERNAL para uma função escrita externamente.<br /><br /> Funções sempre serão o SQL.|  
-|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|Retorna os primeiros 4000 caracteres do texto de definição da função ou procedimento armazenado, se a função ou procedimento armazenado não for criptografado. Caso contrário, retorna NULL.<br /><br /> Para garantir que você obtenha a definição completa, consulte o [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) função ou a coluna de definição na [sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) exibição do catálogo.|  
+|ROUTINE_DEFINITION|**nvarchar(** 4000 **)**|Retorna os primeiros 4000 caracteres do texto de definição da função ou procedimento armazenado, se a função ou procedimento armazenado não for criptografado. Caso contrário, retorna NULL.<br /><br /> Para garantir que você obtenha a definição completa, consulte o [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) função ou a coluna de definição na [sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) exibição do catálogo.|  
 |EXTERNAL_NAME|**nvarchar(** 128 **)**|NULL. Reservado para uso futuro.|  
 |EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL. Reservado para uso futuro.|  
 |PARAMETER_STYLE|**nvarchar (** 30 **)**|NULL. Reservado para uso futuro.|  

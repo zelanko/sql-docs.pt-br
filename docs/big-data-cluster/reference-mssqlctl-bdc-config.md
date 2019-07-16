@@ -1,21 +1,20 @@
 ---
-title: mssqlctl bdc config reference
+title: referência de configuração do bdc mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Artigo de referência para comandos de bdc mssqlctl.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5c4182f216b13d4b56d1c37f6d003ad2ea6f5cf6
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: f6aee38bd11d226ba324153b76c750ba57eb9fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958172"
 ---
 # <a name="mssqlctl-bdc-config"></a>configuração do bdc mssqlctl
 
@@ -77,7 +76,7 @@ mssqlctl bdc config init --source aks-dev-test --target custom
 #### `--target -t`
 Caminho do arquivo de onde você deseja que o perfil de config colocado, o padrão é cwd com personalizado-config. JSON.
 #### `--source -s`
-Config profile source: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
+Origem do perfil de configuração: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
 #### `--force -f`
 Força a substituição do arquivo de destino.
 ### <a name="global-arguments"></a>Argumentos globais
@@ -108,7 +107,7 @@ mssqlctl bdc config list --config-profile aks-dev-test
 ```
 ### <a name="optional-parameters"></a>Parâmetros opcionais
 #### `--config-profile -c`
-Default config profile: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
+Perfil de configuração padrão: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
 Aumente o nível de detalhes de registro em log para mostrar que todos os logs de depuração.
