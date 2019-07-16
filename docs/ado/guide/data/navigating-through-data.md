@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 77c9434fd92b8b3c30addce7967c4965d07cbb38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0b58000da5f29824fbfdd134a701088775c90af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924780"
 ---
 # <a name="navigating-through-data"></a>Navegar pelos dados
 **Conjunto de registros** dá suporte a vários métodos e propriedades para navegar pelo conjunto de dados resultante. Examinamos essa funcionalidade por meio de alguns cenários com nossa amostra **Recordset** objetos.  

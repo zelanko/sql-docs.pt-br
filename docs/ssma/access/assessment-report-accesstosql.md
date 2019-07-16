@@ -1,5 +1,5 @@
 ---
-title: Assessment Report (AccessToSQL) | Microsoft Docs
+title: Relatório de avaliação (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1278552f1bfe1ccfb7ab250f843e86c62e63440b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c28fb4cf5d110e01b156fc6ce985b2cb2fb7bfe1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62651076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910681"
 ---
-# <a name="assessment-report-accesstosql"></a>Assessment Report (AccessToSQL)
+# <a name="assessment-report-accesstosql"></a>Relatório de avaliação (AccessToSQL)
 A janela relatório de avaliação mostra os resultados da conversão de objetos de banco de dados para [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxe, e também pode ajudar a estimar a complexidade e custo de seus projetos de migração.  
   
 Para criar um relatório de avaliação, selecionar objetos a ser convertido no Gerenciador de metadados de origem, clique com botão direito **bancos de dados**e, em seguida, selecione **criar relatório**. Também é possível exibir este relatório automaticamente após a conversão de esquemas. No entanto, o nome do relatório será o relatório de conversão. Para obter mais informações, consulte [projeto configurações (GUI) (SSMA comuns)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  

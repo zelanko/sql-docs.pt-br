@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d6ff6704ca12fbb20c93133d7e73f29a5f72c9e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a936eb39583afff34dd317b85bc4198022b15e7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696578"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920753"
 ---
 # <a name="affectenum"></a>AffectEnum
 Especifica quais registros são afetados por uma operação.  
@@ -34,7 +33,7 @@ Especifica quais registros são afetados por uma operação.
 |**adAffectGroup**|2|Afeta somente os registros que satisfazem o atual [filtro](../../../ado/reference/ado-api/filter-property.md) configuração da propriedade. Você deve definir a **filtro** propriedade para um **FilterGroupEnum** valor ou uma matriz de **indicadores** para usar essa opção.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Package: **com.ms.wfc.data**  
+ Pacote: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

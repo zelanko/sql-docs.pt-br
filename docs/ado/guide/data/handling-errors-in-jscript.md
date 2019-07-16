@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d63f01c937f4a690968fe5edb50ac84958e705ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a92077bf72c025fa183292525b3bd756a4bf4b87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925178"
 ---
 # <a name="handling-errors-in-jscript"></a>Tratamento de erro em JScript
 Deve verificar o código do seu Microsoft® JScript® a **contagem** propriedade da **Conexão** do objeto **erros** coleção. Se o valor for maior que 0, iterar na coleção e os valores de impressão, como você faria em qualquer uma das outras linguagens.  

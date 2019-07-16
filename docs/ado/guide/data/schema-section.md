@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bb09e954640554c5375539b4104ab58ae71ddaab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924299"
 ---
 # <a name="schema-section"></a>Seção de esquema
 A seção do esquema é necessária. Como mostra o exemplo anterior, o ADO grava metadados detalhados sobre cada coluna para preservar a semântica dos valores de dados tanto quanto possível para a atualização. No entanto, para carregar no XML, ADO requer apenas os nomes das colunas e o conjunto de linhas aos quais eles pertencem. Aqui está um exemplo de um esquema mínimo:  
@@ -107,7 +106,7 @@ A seção do esquema é necessária. Como mostra o exemplo anterior, o ADO grava
 </s:AttributeType>  
 ```  
   
- é equivalente a  
+ equivale a  
   
 ```  
 <s:AttributeType name="Phone" dt:type="string"/>  

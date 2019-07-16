@@ -11,26 +11,25 @@ dev_langs:
 ms.assetid: 93966909-d758-4d50-950b-f5066d104fa6
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a5df628a6b37c8d89843506c5b7f4c5050157158
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 61593522e09ed86ec10f08a6ad8ff7a941a2e10e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899346"
 ---
 # <a name="sysdmpdwnodes-transact-sql"></a>sys.dm_pdw_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contém informações sobre todos os nós no [!INCLUDE[ssAPS](../../includes/ssaps-md.md)]. Ele lista uma linha por nó no dispositivo.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|Id numérico exclusivo associado ao nó.<br /><br /> A chave para este modo de exibição.|Exclusivo em todo o dispositivo, independentemente do tipo.|  
-|Tipo|**nvarchar(32)**|Tipo de nó.|'GERENCIAMENTO DE COMPUTAÇÃO', 'CONTROL',' '|  
-|nome|**nvarchar(32)**|Nome lógico do nó.|Qualquer cadeia de caracteres de tamanho apropriado.|  
-|address|**nvarchar(32)**|Endereço IP deste nó.|No formato de [0-255]. [0 a 255]. [0 a 255]. [0 a 255].|  
+|type|**nvarchar(32)**|Tipo de nó.|'GERENCIAMENTO DE COMPUTAÇÃO', 'CONTROL',' '|  
+|name|**nvarchar(32)**|Nome lógico do nó.|Qualquer cadeia de caracteres de tamanho apropriado.|  
+|endereço|**nvarchar(32)**|Endereço IP deste nó.|No formato de [0-255]. [0 a 255]. [0 a 255]. [0 a 255].|  
 |is_passive|**int**|Indica se a máquina virtual executando o nó está em execução no servidor atribuído ou realizou o failover para o servidor de reserva.|0 - VM do nó está em execução no servidor original.<br /><br /> 1 - VM do nó está em execução no servidor de reserva.|  
 |região|**nvarchar(32)**|A região onde o nó está em execução.|'PDW', 'HDINSIGHT'|  
   
