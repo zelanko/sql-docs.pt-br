@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 21a62c7c-192e-4718-a16e-aa12b0de4419
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 260767c88fdf980466a21d4cc9658b259b91c854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d123bdf1ea3357a4846a223c41950c952c1af2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915531"
 ---
 # <a name="odbc-driver-architecture"></a>Arquitetura do driver ODBC
 Gravadores de driver devem estar cientes de que a arquitetura do driver pode afetar se um aplicativo pode usar o SQL específicas do DBMS.  

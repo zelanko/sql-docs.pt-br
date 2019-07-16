@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 232b071c11d4a2a0bb2e42b6f9787d07f99e21e2
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 5ad42a174f558202544650fb1580574f290d4466
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946089"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery e digitação estática
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +36,9 @@ ms.locfileid: "54226583"
   
  Para instâncias XML não digitadas, há tipos especiais para indicar que os dados não foram digitados. Essas informações são usadas durante a verificação de tipo estático e para executar determinadas conversões implícitas.  
   
- Para dados digitados, o tipo de entrada é inferido da coleção de esquemas XML que restringe a instância do tipo de dados XML. Por exemplo, se o esquema só permitir elementos do tipo **xs: Integer**, os resultados de uma expressão de caminho usando esse elemento serão zero ou mais elementos do tipo **xs: Integer**. Isso é atualmente expresso usando uma expressão, como `element(age,xs:integer)*` onde o asterisco (\*) indica a cardinalidade do tipo resultante. Neste exemplo, a expressão pode resultar em zero ou mais elementos de nome "age" e digite **xs: Integer**. Outras cardinalidades são exatamente um e são expressos usando o nome de tipo sozinho, zero ou um e expressas usando um ponto de interrogação (**?**) e 1 ou mais e expressas usando um sinal de adição (**+**) .  
+ Para dados digitados, o tipo de entrada é inferido da coleção de esquemas XML que restringe a instância do tipo de dados XML. Por exemplo, se o esquema só permitir elementos do tipo **xs: Integer**, os resultados de uma expressão de caminho usando esse elemento serão zero ou mais elementos do tipo **xs: Integer**. Isso é atualmente expresso usando uma expressão, como `element(age,xs:integer)*` onde o asterisco (\*) indica a cardinalidade do tipo resultante. Neste exemplo, a expressão pode resultar em zero ou mais elementos de nome "age" e digite **xs: Integer**. Outras cardinalidades são exatamente um e são expressos usando o nome de tipo sozinho, zero ou um e expressas usando um ponto de interrogação ( **?** ) e 1 ou mais e expressas usando um sinal de adição ( **+** ) .  
   
- Às vezes, a inferência de tipo estático pode deduzir que uma expressão sempre retornará a sequência vazia. Por exemplo, se uma expressão de caminho em um tipo de dados XML com tipo procura por um \<nome > elemento dentro de uma \<cliente > elemento (/ cliente/nome), mas o esquema não permite uma \<nome > dentro de um \<cliente >, a inferência de tipo estático inferirá que o resultado será vazio. Isso será usado para detectar consultas incorretas e será relatado como um erro estático, a menos que a expressão era () ou **dados (())**.  
+ Às vezes, a inferência de tipo estático pode deduzir que uma expressão sempre retornará a sequência vazia. Por exemplo, se uma expressão de caminho em um tipo de dados XML com tipo procura por um \<nome > elemento dentro de uma \<cliente > elemento (/ cliente/nome), mas o esquema não permite uma \<nome > dentro de um \<cliente >, a inferência de tipo estático inferirá que o resultado será vazio. Isso será usado para detectar consultas incorretas e será relatado como um erro estático, a menos que a expressão era () ou **dados (())** .  
   
  As regras de inferência detalhadas são fornecidas na semântica formal da especificação XQuery. A Microsoft somente as modificou levemente para que funcionem com instâncias do tipo de dados XML digitados. A mudança mais importante do padrão é que o nó de documento implícito sabe sobre o tipo da instância do tipo de dados XML. Consequentemente, uma expressão de caminho da forma /age será digitada precisamente com base nessas informações.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "54226583"
   
  Se for necessário depois de uma conversão implícita, a verificação de tipo estático garantirá que somente valores dos tipos permitidos com a cardinalidade correta serão passados em uma operação. Para "string" + 1, ele reconhece que o tipo estático da "string" está **xs: string**. Como esse não é um tipo permitido para o **+** operação, um erro de tipo é gerada.  
   
- No caso de adicionar o resultado de uma expressão arbitrária E1 a uma expressão arbitrária E2 (E1 + E2), a inferência de tipo estático determina os tipos estáticos de E1 e E2 primeiro e, em seguida, verifica os tipos estáticos com os tipos permitidos para a operação. Por exemplo, se o tipo estático de E1 pode ser um **xs: string** ou um **xs: Integer**, a verificação de tipo estático gera um erro de tipo, mesmo que alguns valores no tempo de execução pode ser números inteiros. O mesmo seria o caso se o tipo estático de E1 fosse **xs: Integer&#42;**. Porque o **+** operação só aceita exatamente um valor inteiro e E1 poderia retornar zero ou mais de 1, a verificação de tipo estático gerará um erro.  
+ No caso de adicionar o resultado de uma expressão arbitrária E1 a uma expressão arbitrária E2 (E1 + E2), a inferência de tipo estático determina os tipos estáticos de E1 e E2 primeiro e, em seguida, verifica os tipos estáticos com os tipos permitidos para a operação. Por exemplo, se o tipo estático de E1 pode ser um **xs: string** ou um **xs: Integer**, a verificação de tipo estático gera um erro de tipo, mesmo que alguns valores no tempo de execução pode ser números inteiros. O mesmo seria o caso se o tipo estático de E1 fosse **xs: Integer&#42;** . Porque o **+** operação só aceita exatamente um valor inteiro e E1 poderia retornar zero ou mais de 1, a verificação de tipo estático gerará um erro.  
   
  Como mencionado anteriormente, a inferência de tipo frequentemente infere um tipo que é mais amplo do que aquilo que o usuário sabe sobre o tipo de dados sendo passados. Nesses casos, o usuário precisa reescrever a consulta. Alguns casos característicos incluem o seguinte:  
   
@@ -84,7 +83,7 @@ ms.locfileid: "54226583"
 </xs:element>  
 ```  
   
- No contexto do XQuery, a função "average" `fn:avg (//r)` retorna um erro estático, pois o compilador do XQuery não é possível adicionar valores de tipos diferentes (**xs: int**, **xs: float** ou **xs: duplo**) para o <`r`> elementos no argumento de **fn:avg()**. Para solucionar isso, reescreva a invocação de função como `fn:avg(for $r in //r return $r cast as xs:double ?)`.  
+ No contexto do XQuery, a função "average" `fn:avg (//r)` retorna um erro estático, pois o compilador do XQuery não é possível adicionar valores de tipos diferentes (**xs: int**, **xs: float** ou **xs: duplo**) para o <`r`> elementos no argumento de **fn:avg()** . Para solucionar isso, reescreva a invocação de função como `fn:avg(for $r in //r return $r cast as xs:double ?)`.  
   
 ### <a name="example-operator-over-union-type"></a>Exemplo: Operador em relação ao tipo de união  
  A operação de adição ('+') requer tipos precisos dos operandos. Como resultado, a expressão `(//r)[1] + 1` retorna um erro estático que tem a definição de tipo previamente descrita para o elemento <`r`>. Uma solução é reescrevê-la como `(//r)[1] cast as xs:int? +1`, onde o “?” " indica 0 ou 1 ocorrência. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exige "cast as" com "?", pois qualquer conversão pode causar a sequência vazia como resultado de erros em tempo de execução.  

@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0b1820e15975ca027af7b51e809ba920af3ffc82
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 45d587b4d62c33e944b15c6b951fa1323620c50e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961709"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Tutorial: Desenvolvimento do SQL para cientistas de dados de R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +25,7 @@ Este exemplo pode ser estendido para todos os tipos de problemas da vida real, c
 
 Porque o passo a passo foi projetada para apresentar os desenvolvedores do R [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], R é usado sempre que possível. No entanto, isso não significa que o R é necessariamente a melhor ferramenta para cada tarefa. Em muitos casos, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá fornecer um desempenho melhor, especialmente para tarefas como agregação de dados e engenharia de recursos.  Essas tarefas podem se beneficiar particularmente dos novos recursos do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], como índices columnstore com otimização de memória. Tentamos para destacar as otimizações possíveis ao longo do caminho.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 + [Serviços do SQL Server 2017 Machine Learning com a integração do R](../install/sql-machine-learning-services-windows-install.md#verify-installation) ou [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 

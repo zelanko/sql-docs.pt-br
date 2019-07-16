@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: acd7c73926e996100511569df3a5693068894b10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926673"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Provedor Microsoft OLE DB para o serviço de diretório Microsoft Active Directory
 O provedor do Active Directory Service Interfaces (ADSI) permite que o ADO conectar-se aos serviços de diretório heterogêneos por meio de ADSI. Isso dá aos aplicativos de ADO acesso somente leitura para os serviços de diretório do Microsoft Windows NT 4.0 e o Microsoft Windows 2000, além de qualquer serviço de diretório compatível com LDAP e serviços de diretório da Novell. ADSI em si é baseado em um modelo de provedor, para que se houver um novo provedor fornecer acesso para outro diretório, o aplicativo ADO poderá acessá-lo diretamente. O provedor ADSI é de thread livre e Unicode habilitado.  
@@ -63,7 +62,7 @@ ADSDSOObject
 |Valor|Descrição|  
 |-----------|-----------------|  
 |*Root*|Indica o **ADsPath** objeto do qual iniciar a pesquisa (ou seja, a raiz da pesquisa).|  
-|*Filter*|Indica o filtro de pesquisa no formato RFC 1960.|  
+|*Filtrar*|Indica o filtro de pesquisa no formato RFC 1960.|  
 |*Atributos*|Indica uma lista delimitada por vírgulas de atributos a serem retornados.|  
 |*Escopo*|Opcional. Um **cadeia de caracteres** que especifica o escopo da pesquisa. Pode ser uma destas opções:<br /><br /> -Base - pesquisa somente o objeto base (raiz da pesquisa).<br />-OneLevel - pesquisar apenas um nível.<br />-Subárvore - pesquisa a subárvore inteira.|  
   
@@ -98,18 +97,18 @@ objectClass='user' AND objectCategory='Person'"
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|somente leitura|  
 |[Indicador](../../../ado/reference/ado-api/bookmark-property-ado.md)|leitura/gravação|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|leitura/gravação|  
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|  
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|sempre **adUseServer**|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|sempre **adOpenStatic**|  
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|  
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|sempre **adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|somente leitura|  
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|leitura/gravação|  
+|[Filtrar](../../../ado/reference/ado-api/filter-property.md)|leitura/gravação|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|leitura/gravação|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|não disponível|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|leitura/gravação|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|somente leitura|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|leitura/gravação|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|somente leitura|  
-|[Origem](../../../ado/reference/ado-api/source-property-ado-recordset.md)|leitura/gravação|  
+|[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|leitura/gravação|  
 |[Estado](../../../ado/reference/ado-api/state-property-ado.md)|somente leitura|  
 |[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|somente leitura|  
   
@@ -123,9 +122,9 @@ objectClass='user' AND objectCategory='Person'"
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Não|  
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Sim|  
 |[Fechar](../../../ado/reference/ado-api/close-method-ado.md)|Sim|  
-|[Delete (excluir)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Não|  
+|[Excluir](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Não|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sim|  
-|[Migrar](../../../ado/reference/ado-api/move-method-ado.md)|Sim|  
+|[Moverr](../../../ado/reference/ado-api/move-method-ado.md)|Sim|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sim|  
 |[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sim|  
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sim|  

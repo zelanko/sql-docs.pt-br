@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 09af9a0190b8ba3b01c72cfa29e0647ad6d6b74d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9ba9e1f0757f23072b5e4f18f73fb5f7c69a005a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528428"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037364"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +56,13 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @account_name = ] 'account_name'` O nome da conta a ser atualizada. *account_name* está **sysname**, com um padrão NULL. Pelo menos um dos *account_id* ou *account_name* deve ser especificado. Se ambos forem especificados, o procedimento alterará o nome da conta.  
   
-`[ @email_address = ] 'email_address'` O novo endereço de email para enviar a mensagem do. Esse endereço deve ser um endereço de email na Internet. O nome do servidor no endereço é o servidor que o Database Mail usa para enviar email dessa conta. *email_address* está **nvarchar (128)**, com um padrão NULL.  
+`[ @email_address = ] 'email_address'` O novo endereço de email para enviar a mensagem do. Esse endereço deve ser um endereço de email na Internet. O nome do servidor no endereço é o servidor que o Database Mail usa para enviar email dessa conta. *email_address* está **nvarchar (128)** , com um padrão NULL.  
   
-`[ @display_name = ] 'display_name'` O novo nome de exibição para ser usado em mensagens de email desta conta. *display_name* está **nvarchar (128)**, sem padrão.  
+`[ @display_name = ] 'display_name'` O novo nome de exibição para ser usado em mensagens de email desta conta. *display_name* está **nvarchar (128)** , sem padrão.  
   
-`[ @replyto_address = ] 'replyto_address'` O novo endereço a ser usado no cabeçalho responder das mensagens de email desta conta. *replyto_address* está **nvarchar (128)**, sem padrão.  
+`[ @replyto_address = ] 'replyto_address'` O novo endereço a ser usado no cabeçalho responder das mensagens de email desta conta. *replyto_address* está **nvarchar (128)** , sem padrão.  
   
-`[ @description = ] 'description'` A nova descrição para a conta. *Descrição* está **nvarchar(256)**, com um padrão NULL.  
+`[ @description = ] 'description'` A nova descrição para a conta. *Descrição* está **nvarchar(256)** , com um padrão NULL.  
   
 `[ @mailserver_name = ] 'server_name'` O novo nome do servidor de email SMTP a ser usado para essa conta. O computador que executa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser capaz de resolver o *server_name* para um endereço IP. *nome_do_servidor* está **sysname**, sem padrão.  
   

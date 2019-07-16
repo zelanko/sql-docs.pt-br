@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b719da971e52928b2d86303509f969445d8878c2
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67222321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68191120"
 ---
 SQL Server 2014 Reporting Services \(SSRS\)

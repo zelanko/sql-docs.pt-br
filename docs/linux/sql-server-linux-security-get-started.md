@@ -3,18 +3,17 @@ title: Introdução à segurança do SQL Server no Linux
 description: Este artigo descreve as ações de segurança típica.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 9fe29cadaa14168871e7448350d41bc89afed05b
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834745"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019503"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Instruções passo a passo para os recursos de segurança do SQL Server no Linux
 
@@ -137,9 +136,9 @@ Create a security policy adding the function as both a filter and a block predic
 
 ```
 Criar SalesFilter de política de segurança   
-ADD FILTER PREDICATE Security.fn_securitypredicate(SalesPersonID)    
+Adicionar Security.fn_securitypredicate(SalesPersonID) de PREDICADO de filtro    
   EM Sales. SalesOrderHeader,   
-ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)    
+Adicionar Security.fn_securitypredicate(SalesPersonID) de PREDICADO de bloco    
   EM Sales. SalesOrderHeader   
 WITH (STATE = ON);   
 ```
@@ -171,7 +170,7 @@ COM (ESTADO = OFF);
 Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
  
 ```
-USE AdventureWorks2014; GO ALTER TABLE Person.EmailAddress     ALTER COLUMN EmailAddress    
+USE AdventureWorks2014; VÁ ALTER tabela Person.EmailAddress     ALTER coluna EmailAddress    
 Adicionar MASCARADOS com (função = ' email()');
 ``` 
  
@@ -181,8 +180,8 @@ Create a new user `TestUser` with `SELECT` permission on the table, then execute
 Criar usuário TestUser sem logon;   
 GRANT SELECT ON Person.EmailAddress para TestUser;    
  
-EXECUTE AS USER = 'TestUser';   
-SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
+Executar como usuário = "TestUser";   
+Selecione EmailAddressID, EmailAddress do Person.EmailAddress;       
 REVERTER;    
 ```
  
@@ -223,7 +222,7 @@ The following example illustrates encrypting and decrypting the `AdventureWorks2
 USE master;  
 GO  
 
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
+CRIAR CHAVE MESTRA DE CRIPTOGRAFIA POR SENHA = ' * ';  
 GO  
 
 Criar certificado MyServerCert com o assunto = 'Meu banco de dados chave certificado de criptografia';  
@@ -236,7 +235,7 @@ WITH ALGORITHM = AES_256
 CRIPTOGRAFIA MyServerCert de certificado do servidor;  
 GO
   
-ALTER DATABASE AdventureWorks2014  
+Alterar banco de dados AdventureWorks2014  
 DEFINIR CRIPTOGRAFIA;   
 ```
 

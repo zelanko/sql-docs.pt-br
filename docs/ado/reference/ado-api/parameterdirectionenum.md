@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3f62d2119764466cabb542d26849712d733453ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68aaa0bfb8aa72c9e94a8b5db65768fe85895f0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917747"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 Especifica se o [parâmetro](../../../ado/reference/ado-api/parameter-object.md) representa um parâmetro de entrada, um parâmetro de saída, uma entrada e um parâmetro de saída, ou o valor de retorno de um procedimento armazenado.  
@@ -35,7 +34,7 @@ Especifica se o [parâmetro](../../../ado/reference/ado-api/parameter-object.md)
 |**adParamUnknown**|0|Indica que a direção do parâmetro é desconhecida.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Package: **com.ms.wfc.data**  
+ Pacote: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

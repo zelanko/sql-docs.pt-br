@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 08e73462f3536f1aff6aecbf44692a7f24f54aa9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbec8d77386985e7f33863793b86eb2db0b8d6bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944899"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Proteger um aplicativo Web Master Data Manager
 
@@ -26,7 +25,7 @@ ms.locfileid: "65480173"
 > [!NOTE]  
 >  O aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] pode usar HTTP ou HTTPS, mas não ambos.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar o procedimento:  
   
 -   Você deve ser um administrador no servidor Web onde o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] é instalado.  
@@ -41,7 +40,7 @@ ms.locfileid: "65480173"
   
 3.  No painel **Ações** , clique em **Associações**.  
   
-4.  Clique em **Adicionar**.  
+4.  Clique em **Adicionar** .  
   
 5.  Na lista, selecione **https**.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "65480173"
 
 12. Alterar `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` para `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">` para evitar problemas que podem aparecer no cliente do Silverlight.
 
-13. Salve o arquivo e feche-o. Se você receber um erro, pode ser porque o UAC está habilitado. Para obter mais informações, consulte [Desativar o controle de conta do usuário](http://technet.microsoft.com/library/cc709691\(WS.10\).aspx). Agora, os usuários devem ser capazes de usar HTTPS para acessar o site.  
+13. Salve e feche o arquivo. Se você receber um erro, pode ser porque o UAC está habilitado. Para obter mais informações, consulte [Desativar o controle de conta do usuário](http://technet.microsoft.com/library/cc709691\(WS.10\).aspx). Agora, os usuários devem ser capazes de usar HTTPS para acessar o site.  
 
   
 ## <a name="see-also"></a>Consulte também  

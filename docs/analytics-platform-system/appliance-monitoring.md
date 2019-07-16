@@ -2,19 +2,18 @@
 title: Monitoramento de dispositivo - Analytics Platform System | Microsoft Docs
 description: Este guia de monitoramento do dispositivo descreve as ferramentas e tarefas para monitorar o dispositivo do Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 100a587814e62a6455d25e78a3defca973f39bf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb25a5eccd1e77f08cedc74ad8042e0dc573605c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961504"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Monitoramento de dispositivo para o Analytics Platform System
 Este guia de monitoramento do dispositivo descreve as ferramentas e tarefas para monitorar o dispositivo do Analytics Platform System.  

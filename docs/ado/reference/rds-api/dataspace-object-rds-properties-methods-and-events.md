@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4a1f2e7-19ff-465e-9d9a-275ac0f4dc6a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bd734f9cc74a00ac3556f142ec5a6922513429da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd5115b4dcf4db7e8f7d5e4c1e2b5d4d4159e8e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964347"
 ---
 # <a name="dataspace-object-rds-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto DataSpace (RDS)
 > [!IMPORTANT]
@@ -32,7 +31,7 @@ ms.locfileid: "66712599"
  [Método CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)  
   
 ## <a name="events"></a>Events  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)

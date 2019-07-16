@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cd8520a26b28c16876163cf8f2c0f7a57b3c33ad
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0a4e0e62121d289f9eb897c79abb2991a57890a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043053"
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada alteração aplicada à tabela de origem dentro do intervalo LSN (número de sequência de log) especificado. Se uma linha de origem tiver passado por várias alterações durante o intervalo, todas as alterações serão representadas no conjunto de resultados retornado. Além de retornar os dados de alteração, quatro colunas de metadados fornecem as informações necessárias para a aplicação de alterações em outra fonte de dados. As opções de filtragem de linha regem o conteúdo das colunas de metadados, bem como as linhas retornadas no conjunto de resultados. Quando a opção de filtragem de linha 'all' é especificada, cada alteração tem exatamente uma linha para identificar a alteração. Quando a opção 'all update old' é especificada, as operações de atualização são representadas como duas linhas: uma contendo os valores das colunas capturadas antes da atualização e outra contendo os valores das colunas capturadas após a atualização.  
   
- Essa função de enumeração é criada no momento em que uma tabela de origem é habilitada para change data capture. O nome da função é derivado e usa o formato **CDC. fn_cdc_get_all_changes _**_capture_instance_ onde *capture_instance* é o valor especificado para a captura instância quando a tabela de origem está habilitada para change data capture.  
+ Essa função de enumeração é criada no momento em que uma tabela de origem é habilitada para change data capture. O nome da função é derivado e usa o formato **CDC. fn_cdc_get_all_changes _** _capture_instance_ onde *capture_instance* é o valor especificado para a captura instância quando a tabela de origem está habilitada para change data capture.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,16 +46,16 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>Argumentos  
  *from_lsn*  
- O valor LSN que representa o ponto de extremidade inferior do intervalo LSN a ser incluído no conjunto de resultados. *from_lsn* está **binário (10)**.  
+ O valor LSN que representa o ponto de extremidade inferior do intervalo LSN a ser incluído no conjunto de resultados. *from_lsn* está **binário (10)** .  
   
  Apenas as linhas as [cdc.&#91; capture_instance&#93;CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) alterar tabela com um valor em **_ $start_lsn** maior que ou igual a *from_lsn* estão incluídos no conjunto de resultados.  
   
  *to_lsn*  
- O valor LSN que representa o ponto de extremidade superior do intervalo LSN a ser incluído no conjunto de resultados. *to_lsn* está **binário (10)**.  
+ O valor LSN que representa o ponto de extremidade superior do intervalo LSN a ser incluído no conjunto de resultados. *to_lsn* está **binário (10)** .  
   
  Apenas as linhas as [cdc.&#91; capture_instance&#93;CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) alterar tabela com um valor em **_ $start_lsn** menor ou igual a *from_lsn* ou igual a *to_lsn* estão incluídos no conjunto de resultados.  
   
- <row_filter_option> ::= { all | all update old }  
+ < row_filter_option >:: = {todos | todos os atualização antigo}  
  Opção que rege o conteúdo das colunas de metadados, assim como as linhas retornadas no conjunto de resultados.  
   
  Pode ser uma das seguintes opções:  
@@ -83,7 +82,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="remarks"></a>Comentários  
  Se o intervalo de LSN especificado não estiver dentro da linha de tempo do controle de alterações, a função retornará o erro 208 ("Um número insuficiente de argumentos foi fornecido para o procedimento ou função cdc.fn_cdc_get_all_changes").  
   
- Colunas de tipo de dados **imagem**, **texto**, e **ntext** sempre são atribuídos a um valor nulo valor quando **_ $operation** = 1 ou **_ $ operação** = 3. Colunas de tipo de dados **varbinary (max)**, **varchar (max)**, ou **nvarchar (max)** são atribuídos a um valor nulo valor quando **_ $operation** = 3 a menos que a coluna alterada durante a atualização. Quando **_ $operation** = 1, essas colunas são atribuídas a seu valor no momento da exclusão. Colunas computadas que são incluídas em uma instância de captura têm sempre um valor de NULL.  
+ Colunas de tipo de dados **imagem**, **texto**, e **ntext** sempre são atribuídos a um valor nulo valor quando **_ $operation** = 1 ou **_ $ operação** = 3. Colunas de tipo de dados **varbinary (max)** , **varchar (max)** , ou **nvarchar (max)** são atribuídos a um valor nulo valor quando **_ $operation** = 3 a menos que a coluna alterada durante a atualização. Quando **_ $operation** = 1, essas colunas são atribuídas a seu valor no momento da exclusão. Colunas computadas que são incluídas em uma instância de captura têm sempre um valor de NULL.  
   
 ## <a name="examples"></a>Exemplos  
  Vários [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] modelos estão disponíveis que mostram como usar as funções de consulta do change data capture. Esses modelos estão disponíveis na **modo de exibição** menu no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para obter mais informações, consulte [Explorador de modelos](../../ssms/template/template-explorer.md).  

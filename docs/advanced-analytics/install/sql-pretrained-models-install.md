@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 002713c8c3eb92a33cbb1461eaacb8a0d63a5c3f
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 78e2a544766875b03144eb85b12aacee59295a2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962871"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Instalar previamente treinado modelos de machine learning no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +28,7 @@ Para usar os modelos pré-treinados, chame as funções listadas na tabela a seg
 | [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | Gera a pontuação de sentimento negativo positivo sobre entradas de texto. |
 | [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | Extrai informações de texto de entradas de arquivo de imagem. |
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Algoritmos de aprendizado de máquina são computacionalmente intensivas. Recomendamos 16 GB de RAM para cargas de trabalho de baixo a moderado, incluindo a conclusão do tutorial passo a passo usando todos os dados de exemplo.
 
@@ -208,7 +207,7 @@ Para obter mais informações sobre os algoritmos usados nesses modelos de apren
 ## <a name="see-also"></a>Confira também
 
 + [SQL Server 2016 R Services](sql-r-services-windows-install.md)
-+ [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md)
++ [Serviços de aprendizado de máquina do SQL Server 2017](sql-machine-learning-services-windows-install.md)
 + [Atualizar os componentes de R e Python em instâncias do SQL Server](../install/upgrade-r-and-python.md)
 + [Pacote MicrosoftML para R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + [pacote microsoftml para Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

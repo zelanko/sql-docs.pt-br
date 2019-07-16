@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e7ce25eda44c3581362bd145fa13efaa8359f20d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8883679a85d1e134b1759c90cde524bb97995130
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932863"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 Especifica o status atual da execução de um evento.  
@@ -35,7 +34,7 @@ Especifica o status atual da execução de um evento.
 |**adStatusUnwantedEvent**|5|Impede que as notificações subsequentes antes do método de evento terminou de executar.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Package: **com.ms.wfc.data**  
+ Pacote: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

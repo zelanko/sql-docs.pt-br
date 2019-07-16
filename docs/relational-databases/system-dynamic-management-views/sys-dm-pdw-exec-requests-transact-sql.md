@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuL-Preview
 ms.author: xiaoyul
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a3aa0219e1e8d0733926662b22f929fa923ae071
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: 8e6514991c0819342861a50a2a50b37e7d8748cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67564180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899396"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -26,7 +25,7 @@ ms.locfileid: "67564180"
 
   Contém informações sobre todas as solicitações ativas no momento ou recentemente em [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Ele lista uma linha por solicitação/consulta.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|A chave para este modo de exibição. ID numérico exclusivo associado com a solicitação.|Exclusivo entre todas as solicitações no sistema.|  
 |session_id|**nvarchar(32)**|ID numérico exclusivo associado à sessão em que essa consulta foi executada. Ver [DM pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  

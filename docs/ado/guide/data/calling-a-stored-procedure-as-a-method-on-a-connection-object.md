@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f60c8d460ae2a7b103f0c8c13e81c5aed3708c58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2189bf9b2a82cdf21fdd13ed77a977f6b333ac87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925894"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Chamar um procedimento armazenado como um método em um objeto Connection
 Você pode chamar um procedimento armazenado como se fosse um método nativo na abertura associada **Conexão** objeto. Isso é semelhante a chamar um comando nomeado na **Conexão** objeto.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 925eefdbe8f5ff9196689026edb685c8f76d7d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920804"
 ---
 # <a name="adorecordconstruction-interface"></a>Interface ADORecordConstruction
 O **ADORecordConstruction**interface é usada para construir o ADO **registro** objeto a partir de um banco de dados OLE **linha** objeto em um aplicativo C/C++.  
@@ -33,13 +32,13 @@ O **ADORecordConstruction**interface é usada para construir o ADO **registro** 
 |||  
 |-|-|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Somente gravação.<br />Define o contêiner de um banco de dados OLE **linha** objeto esse ADO **registro** objeto.|  
-|[Row](../../../ado/reference/ado-api/row-property-ado.md)|Leitura/gravação.<br />Obtém/define um banco de dados OLE **linha** objeto de/nesse ADO **registro** objeto.|  
+|[linha](../../../ado/reference/ado-api/row-property-ado.md)|Leitura/gravação.<br />Obtém/define um banco de dados OLE **linha** objeto de/nesse ADO **registro** objeto.|  
   
 ## <a name="methods"></a>Métodos  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="events"></a>Events  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="remarks"></a>Comentários  
  Dado um banco de dados OLE **linha** objeto (`pRow`), a construção de ADO **registro** objeto (`adoR`), de valores para as três operações básicas a seguir:  

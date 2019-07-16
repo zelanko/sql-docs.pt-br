@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 331bb44faa2938241de98a6bff08f1e660583c4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62689853"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899405"
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contém informações sobre todas as sessões abertas no momento ou recentemente no dispositivo. Ele lista uma linha por sessão.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |session_id|**nvarchar(32)**|A id da consulta atual ou a última consulta executada (se a sessão é ENCERRADA e a consulta estava em execução no momento do encerramento). A chave para este modo de exibição.|Exclusivo em todas as sessões no sistema.|  
 |status|**nvarchar(10)**|Para sessões atuais, identifica se a sessão está atualmente ativo ou ocioso. Para sessões anteriores, a sessão de status poderá mostrar fechado ou eliminado (se a sessão foi fechada à força).|'ACTIVE', 'FECHADO', 'OCIOSA', 'ENCERRADO'|  

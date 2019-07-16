@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5a0abfda-912a-4dfc-acf7-0e0a6cae15c5
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ae39915e38ec6a13719aa46d834582b5cfcc46f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2c57efc70353d3499096a2faceb55ce21037411
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986397"
 ---
 # <a name="global-settings-editor-accesstosql"></a>Configurações globais (Editor) (AccessToSQL)
 Use a página do Editor do **configurações globais** caixa de diálogo para especificar configurações para janelas do editor de código.  

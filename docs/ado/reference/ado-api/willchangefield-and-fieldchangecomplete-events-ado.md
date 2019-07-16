@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 35efd51d640943c4d5293956a0638fa85ac302f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7484e2a57925cc22c83456c244dc67aded5cefd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945888"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>Eventos WillChangeField e FieldChangeComplete (ADO)
 O **eventos WillChangeField** evento é chamado antes de uma operação pendente altera o valor de um ou mais [campo](../../../ado/reference/ado-api/field-object.md) objetos no [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). O **FieldChangeComplete** evento é chamado após o valor de um ou mais **campo** objetos foi alterado.  
@@ -42,7 +41,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *cFields*  
  Um **longo** que indica o número de **campo** objetos no *campos*.  
   
- *Fields*  
+ *Campos*  
  Para **eventos WillChangeField**, o *campos* parâmetro é uma matriz de **variantes** que contém **campo** objetos com os valores originais. Para **FieldChangeComplete**, o *campos* parâmetro é uma matriz de **variantes** que contém **campo** objetos com os valores alterados .  
   
  *pError*  

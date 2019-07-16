@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d2ba2ef38d52ff1f8152145ce8c1c3290b426209
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5ca4e8aa690aae9c8c3e30ed73745f2054dc396
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915796"
 ---
 # <a name="odbc-driver-for-oracle-user39s-guide"></a>O Driver ODBC para Oracle usuário&#39;guia
 > [!IMPORTANT]  

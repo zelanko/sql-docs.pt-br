@@ -2,19 +2,18 @@
 title: Elementos de linguagem T-SQL - Parallel Data Warehouse | Microsoft Docs
 description: Elementos de linguagem T-SQL para análise Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f019599e5dde2759da9f1e8f94e71b2fe2b9c9a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959957"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Elementos de linguagem T-SQL para Parallel Data Warehouse
 Elementos de linguagem T-SQL para análise Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
@@ -24,7 +23,7 @@ Elementos de linguagem T-SQL para análise Platform System (APS) SQL Server Para
 * [regras de nomenclatura de objeto](../relational-databases/databases/database-identifiers.md)
 * [palavras-chave reservadas](../t-sql/language-elements/reserved-keywords-transact-sql.md)
 * [Agrupamentos](https://msdn.microsoft.com/library/ff848763.aspx)
-* [comments](../t-sql/language-elements/comment-transact-sql.md)
+* [Comentários](../t-sql/language-elements/comment-transact-sql.md)
 * [constants](../t-sql/data-types/constants-transact-sql.md)
 * [Tipos de dados](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
@@ -69,7 +68,7 @@ Elementos de linguagem T-SQL para análise Platform System (APS) SQL Server Para
 * [NÃO É](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
-* [OR](../t-sql/language-elements/or-transact-sql.md)
+* [OU](../t-sql/language-elements/or-transact-sql.md)
 
 ### <a name="bitwise-operators"></a>Operadores bit a bit
 * [& (AND bit a bit)](../t-sql/language-elements/bitwise-and-transact-sql.md)
@@ -268,7 +267,7 @@ Elementos de linguagem T-SQL para análise Platform System (APS) SQL Server Para
 * [SET FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
 * [SET IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
 * [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
-* [SET NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
+* [CONJUNTO NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
 * [SET QUOTED_IDENTIFIER](../t-sql/statements/set-quoted-identifier-transact-sql.md)
 * [SET ROWCOUNT](../t-sql/statements/set-rowcount-transact-sql.md)
 * [SET TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)

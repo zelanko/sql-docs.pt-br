@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 75a5405ef51ea8bfe2d365796b311cbaa36b2d0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c16ac4d18806b670c8b3e27dc09c9019d7ecdeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967241"
 ---
 # <a name="append-method-adox-tables"></a>Método Append (Tabelas do ADOX)
 Adiciona um novo [tabela](../../../ado/reference/adox-api/table-object-adox.md) do objeto para o [tabelas](../../../ado/reference/adox-api/tables-collection-adox.md) coleção.  
@@ -35,7 +34,7 @@ Tables.Append Table
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Table*  
+ *Tabela*  
  Um **Variant** valor que contém uma referência para o **tabela** para acrescentar ou o nome da tabela para criar e anexar.  
   
 ## <a name="remarks"></a>Comentários  

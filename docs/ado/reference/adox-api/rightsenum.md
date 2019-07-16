@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a34cbd8ee3d274d3b3d45049611ca9cc99fa7758
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6db3d1fecd8a2670a81fb239cb1a100389be21a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718842"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965279"
 ---
 # <a name="rightsenum"></a>RightsEnum
 Especifica os direitos ou permissões para um grupo ou usuário em um objeto.  

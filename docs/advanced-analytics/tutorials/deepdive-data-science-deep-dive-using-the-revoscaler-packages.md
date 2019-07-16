@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 48d65bfe54890c5ea0d8bfdca9c76fa0978a917d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28f3ebe1887e188513c01881f68d5d7f323e31f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962240"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Tutorial: Usar funções RevoScaleR R com dados do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +21,7 @@ ms.locfileid: "62641307"
 
 Neste tutorial com várias partes, você será apresentado a um intervalo de **RevoScaleR** funções para tarefas associadas com a ciência de dados. O processo, você aprenderá como criar um contexto de computação remota, mover dados entre contextos de computação local e remota e executar código R em um SQL Server remoto. Você também aprenderá como analisar e plotar os dados localmente e no servidor remoto e criar e implantar modelos.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 + [Serviços de aprendizado de máquina do SQL Server 2017](../install/sql-machine-learning-services-windows-install.md) com o recurso de R, ou [SQL Server 2016 R Services (no banco de dados)](../install/sql-r-services-windows-install.md)
   

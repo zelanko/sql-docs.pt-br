@@ -7,13 +7,12 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 99c96c860d2862b059077326be4f4fe313491cd3
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 07a0ce0688e56f0d7b2edac5cdbc87116c75d5ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961910"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lição 1: Explorar e visualizar os dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -114,7 +113,7 @@ O procedimento armazenado retorna a imagem como um fluxo de dados varbinary, que
   
     **Resultados**
     
-    *plot* *0xFFD8FFE000104A4649...*
+    *plotagem* *0xFFD8FFE000104A4649...*
   
 2. Abra um prompt de comando do PowerShell e execute o seguinte comando, fornecendo o nome da instância apropriada, o nome de banco de dados, nome de usuário e as credenciais como argumentos. Para aqueles que usam identidades do Windows, você pode substituir **- U** e **-P** com **-T**.
   

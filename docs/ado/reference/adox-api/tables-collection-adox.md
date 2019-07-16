@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1ba06c10b3f890f08abac371346c3d03a0278aa8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bf28af10084a30a5c81c76fe7e44781178979ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965138"
 ---
 # <a name="tables-collection-adox"></a>Coleção Tables (ADOX)
 Contém todos os [tabela](../../../ado/reference/adox-api/table-object-adox.md) objetos de um catálogo.  

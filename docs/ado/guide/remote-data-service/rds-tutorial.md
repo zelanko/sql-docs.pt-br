@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3d1f328baf628e86c75abc9a452600e1f0e8cf88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 541c92cd34b9cbaecdd1001be29dbab8d9b194a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704259"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922418"
 ---
 # <a name="rds-tutorial"></a>Tutorial RDS
 Este tutorial ilustra como usar o modelo de programação do RDS para consultar e atualizar uma fonte de dados. Primeiro, ele descreve as etapas necessárias para realizar essa tarefa. Em seguida, o tutorial é repetido no Microsoft® Visual Basic Scripting Edition (apresentando o ADO para Windows Foundation Classes (ADO/WFC)).  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 57f88c22-e7fa-4270-a0bf-443a2684cf6e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8da271ace5dd8a55e6d5c444de7cff334ed60b6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13c713da543883ac4a5c4aaa0aad0631ae47be30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034887"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039953"
 ---
 # <a name="diagnostic-handling-examples"></a>Exemplos de tratamento de diagnóstico
 Os exemplos a seguir mostram como vários componentes de uma conexão ODBC podem gerar mensagens de diagnóstico e como vários drivers podem retornar o diagnóstico para o aplicativo com **SQLGetDiagRec**.  

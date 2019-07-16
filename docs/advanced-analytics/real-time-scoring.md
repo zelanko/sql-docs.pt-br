@@ -7,13 +7,12 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 22f6c48aec0c9434b17ceda0a2b729f6e63bf136
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: cccbae1e1957baedaba665e68a3a058db69f4885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645468"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962370"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Pontuação com sp_rxPredict no aprendizado de máquina do SQL Server em tempo real
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +32,7 @@ Pontuação em tempo real é um processo de várias etapa:
 3. Você fornecer novos dados de entrada a serem pontuados, linhas de tabela ou únicas, como entrada para o modelo.
 4. Para gerar pontuações, chame o [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) procedimento armazenado.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 + [Habilitar integração CLR do SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
 
@@ -121,7 +120,7 @@ Pontuação em tempo real não usa um interpretador; Portanto, qualquer funciona
   + Usando uma função de transformação ou fórmula que contém uma transformação, como os modelos <code>A ~ log(B)</code> não têm suporte no sistema de pontuação em tempo real. Para usar um modelo desse tipo, é recomendável que você realize a transformação de dados de entrada antes de passar os dados para a pontuação em tempo real.
 
 
-## <a name="example-sprxpredict"></a>Example: sp_rxPredict
+## <a name="example-sprxpredict"></a>Exemplo: sp_rxPredict
 
 Esta seção descreve as etapas necessárias para configurar **em tempo real** previsão e fornece um exemplo em R de como chamar a função de T-SQL.
 

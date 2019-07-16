@@ -11,27 +11,26 @@ dev_langs:
 ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 63a39ab5ace1ec3666b3f5c70cc628268304ce92
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ae1a8aa94eebe6eae203c0b09641b13a18eca9d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899156"
 ---
 # <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contém informações sobre todas as etapas que compõem uma determinada solicitação ou consulta no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Ele lista uma linha para cada etapa de consulta.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|request_id e step_index constituem a chave para esta exibição.<br /><br /> Id numérico exclusivo associado com a solicitação.|Consulte request_id na [DM pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|request_id e step_index constituem a chave para esta exibição.<br /><br /> A posição dessa etapa na sequência de etapas que formam a solicitação.|0 (n-1) para uma solicitação de n etapas.|  
 |operation_type|**nvarchar(35)**|Tipo de operação representada por essa etapa.|**Operações de plano de consulta do DMS:** 'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **Operações do plano de consulta SQL:** 'OnOperation', 'RemoteOperation'<br /><br /> **Outras operações do plano de consulta:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Operações externas para leituras:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Operações externas para o MapReduce:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Operações externas para gravações:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Para obter mais informações, consulte "Noções básicas sobre planos de consulta" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].|  
 |distribution_type|**nvarchar(32)**|Tipo de distribuição que passará por essa etapa.|'AllNodes', 'AllDistributions', 'AllComputeNodes', 'ComputeNode', 'Distribution', 'SubsetNodes', 'SubsetDistributions', 'Unspecified'|  
-|location_type|**nvarchar(32)**|Em que a etapa está em execução.|'Compute', 'Control', 'DMS'|  
+|location_type|**nvarchar(32)**|Em que a etapa está em execução.|'Calcular', 'Control', 'DMS'|  
 |status|**nvarchar(32)**|Status desta etapa.|Pendente, executando, completo e com falha, UndoFailed, PendingCancel, cancelado, desfeita, anulada|  
 |error_id|**nvarchar(36)**|Id exclusiva do erro associado a esta etapa, se houver.|Consulte error_id dos [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). NULL se nenhum erro tiver ocorrido.|  
 |start_time|**datetime**|Hora em que a etapa começou a execução.|Menor ou igual à hora atual e maior ou igual a end_compile_time da consulta ao qual pertence essa etapa. Para obter mais informações sobre consultas, consulte [DM pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  

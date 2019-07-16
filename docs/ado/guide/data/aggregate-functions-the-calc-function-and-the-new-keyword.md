@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0a72cf80f9fee9c887e7805f3a2a5bd542d7f47c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a7ed836b9b57ddd690dd85dd94cc12cb967c472
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702428"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926005"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Funções de agregação, a função CALC e a palavra-chave NEW
 Formatação de dados oferece suporte a funções a seguir. O nome atribuído o capítulo que contém a coluna a ser operado é o *capítulo alias*.  
@@ -40,11 +39,11 @@ Formatação de dados oferece suporte a funções a seguir. O nome atribuído o 
   
 |expressão calculada|Descrição|  
 |---------------------------|-----------------|  
-|CALC(*expression*)|Calcula uma expressão arbitrária, mas apenas na linha do **Recordset** que contém a função CALC. Qualquer expressão usando esses [do Visual Basic for Applications (VBA) funções](../../../ado/guide/data/visual-basic-for-applications-functions.md) é permitido.|  
+|CALC (*expressão*)|Calcula uma expressão arbitrária, mas apenas na linha do **Recordset** que contém a função CALC. Qualquer expressão usando esses [do Visual Basic for Applications (VBA) funções](../../../ado/guide/data/visual-basic-for-applications-functions.md) é permitido.|  
   
 |NOVA palavra-chave|Descrição|  
 |-----------------|-----------------|  
-|NEW *field-type* [(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|Adiciona uma coluna vazia do tipo especificado para o **conjunto de registros**.|  
+|NOVOS *tipo de campo* [(*largura* &#124; *escala* &#124; *precisão* &#124; *erro*[, *escala* &#124; *erro*])]|Adiciona uma coluna vazia do tipo especificado para o **conjunto de registros**.|  
   
  O *tipo de campo* transmitido com a nova palavra-chave pode ser qualquer um dos seguintes tipos de dados.  
   

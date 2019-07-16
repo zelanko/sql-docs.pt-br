@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 370ea53d652f88f1870d81440e6a676cbc29da26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 158b9084ebe9aac28a2ec05c18938338c1bc90ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718336"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922965"
 ---
 # <a name="address-book-navigation-buttons"></a>Botões de navegação do catálogo de endereços
 O aplicativo de catálogo de endereços exibe os botões de navegação na parte inferior da página da Web. Você pode usar os botões de navegação para navegar por meio dos dados na exibição de grade HTML selecionando a primeira ou última linha de dados ou linhas adjacentes à seleção atual.  

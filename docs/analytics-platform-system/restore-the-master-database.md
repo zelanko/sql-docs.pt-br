@@ -2,19 +2,18 @@
 title: Restaurar o banco de dados mestre - Analytics Platform System | Microsoft Docs
 description: Restaure o banco de dados mestre no Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 184184f332225e76e152c2d909cfff788b4fea91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c9931ab6fb0946de83c3113a36de723a7a05cd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960133"
 ---
 # <a name="restore-the-master-database-in-analytics-platform-system"></a>Restaurar o banco de dados mestre no Analytics Platform System
 O **mestre de restauração** página do SQL Server PDW Configuration Manager permite que você restaure o banco de dados mestre de um backup.  
@@ -36,5 +35,5 @@ O **mestre de restauração** página do SQL Server PDW Configuration Manager pe
   
 5.  Para executar a restauração, SQL Server PDW desligará todos os serviços do dispositivo e desconecte todos os usuários. Após a conclusão da restauração, SQL Server PDW reiniciará os serviços do dispositivo.  
   
-![DWConfig Appliance PDW Restore master](./media/restore-the-master-database/SQL_Server_PDW_DWConfig_ApplPDWRestore.png "SQL_Server_PDW_DWConfig_ApplPDWRestore")  
+![Mestre de restauração de PDW do dispositivo de DWConfig](./media/restore-the-master-database/SQL_Server_PDW_DWConfig_ApplPDWRestore.png "SQL_Server_PDW_DWConfig_ApplPDWRestore")  
   

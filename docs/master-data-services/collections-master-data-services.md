@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 68586b63d77ceb1c4e84ef9e073812f61b56eb65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da4ed587d3b77a4e2bc4eee782c6312eb2dc12ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941121"
 ---
 # <a name="collections-master-data-services"></a>Coleções (Master Data Services)
 
@@ -44,7 +43,7 @@ ms.locfileid: "65484356"
   
  Se você definir valores de peso para membros específicos em uma coleção, estes valores estarão disponíveis em exibições de assinatura relacionadas.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

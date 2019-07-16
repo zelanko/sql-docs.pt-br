@@ -2,26 +2,25 @@
 title: Inicie o Gerenciador de configuração - Analytics Platform System | Microsoft Docs
 description: Instruções para iniciar a ferramenta Configuration Manager para o dispositivo do Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 087360981a7c31de6980755cfee4f98f88f48a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7aef9ada4a93605460cf2759dbe9deeddfc9e0d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960722"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Inicie o Gerenciador de configurações no Analytics Platform System
 Este tópico fornece instruções para iniciar o **Configuration Manager** para o dispositivo do Analytics Platform System.  
   
 ## <a name="before-you-begin"></a>Antes de começar  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Pré-requisitos  
 O Analytics Platform System**Configuration Manager** só pode ser executado pelo administrador de domínio do dispositivo. Para executar essa ferramenta, você precisa da senha para o administrador de domínio do dispositivo. Para criar outros administradores APS, consulte [criar um administrador de domínio de APS &#40;pontos de acesso&#41;](create-an-aps-domain-administrator-aps.md).  
   
 ## <a name="Accessing"></a>Inicie a ferramenta Configuration Manager  

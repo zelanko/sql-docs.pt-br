@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 09b96f6934fec9e24ca4a254a1d14c23327ebe5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a2c525c89a70f4a36749d7b9c6fb769362d517b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962040"
 ---
 # <a name="quickstart-verify-python-exists-in-sql-server"></a>Início Rápido: Verificar se o Python existe no SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +24,7 @@ SQL Server inclui o suporte de linguagem do Python para análises de ciência de
 
 Neste início rápido, você verificará que [serviços de aprendizado de máquina do SQL Server 2017](../what-is-sql-server-machine-learning.md) está instalado e configurado.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Este exercício exige o acesso a uma instância do SQL Server com [serviços de aprendizado de máquina do SQL Server 2017](../install/sql-machine-learning-services-windows-install.md) instalado.
 
@@ -146,4 +145,4 @@ A Microsoft fornece um número de pacotes de Python pré-instalados com serviço
 Agora que você confirmou a que sua instância estiver pronta para trabalhar com Python, dar uma interação de Python básica examinar mais detalhadamente.
 
 > [!div class="nextstepaction"]
-> [Guia de início rápido: Script de Python de "Hello world" no SQL Server](quickstart-python-run-using-t-sql.md)
+> [Início Rápido: Script de Python de "Hello world" no SQL Server](quickstart-python-run-using-t-sql.md)

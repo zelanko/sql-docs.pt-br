@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 0c56f5c2386f06c6ae35269dc62f82431ce0936b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a826d0f526a12e75a113375ec8f2398331dc4775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935604"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Limpar dados usando o conhecimento do DQS (interno)
 
@@ -107,7 +106,7 @@ ms.locfileid: "66802182"
   
  Com base no nível de confiança, os valores são exibidos nas cinco guias a seguir:  
   
-|Tab|Descrição|  
+|Tabulação|Descrição|  
 |---------|-----------------|  
 |**Sugerido**|Exibe os valores de domínio para os quais o DQS encontrou os valores sugeridos que têm um nível de confiança superior ao valor de *limite de sugestão automática* , mas inferior ao valor do *limite de correção automática* .<br /><br /> Os valores sugeridos são exibidos na coluna **Corrigir para** em relação ao valor original. Você pode clicar no botão de opção na coluna **Aprovar** ou **Rejeitar** em relação a um valor na grade superior para aceitar ou rejeitar a sugestão para todas as instâncias do valor. Nesse caso, o valor aceito passa para a guia **Corrigido** e o valor rejeitado passa para a guia **Inválido** .|  
 |**Nova**|Exibe o domínio válido para o qual o DQS não tem informações suficientes e, portanto, não pode ser mapeado para nenhuma outra guia. Posteriormente, essa guia também conterá valores que tenham um nível de confiança inferior ao valor de *limite de sugestão automática* , porém alto o suficiente para ser marcado como válido.<br /><br /> Se você considerar o valor correto, clique no botão de opção na coluna **Aprovar** . Ou clique no botão de opção na coluna **Rejeitar** . O valor aceito passa para a guia **Corrigir** e o valor rejeitado passa para a guia **Inválido** . Também é possível digitar manualmente o valor correto como uma substituição do valor original na coluna **Corrigir Para** do valor e, depois, clicar no botão de opção na coluna **Aprovar** para aceitar a alteração. Nesse caso, o valor passa para a guia **Corrigido** .|  

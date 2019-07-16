@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 56760100d49e76179b868c892dd3cd61cf2c8142
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: b659aa13a8704a060be12bb015bd0de0fd126562
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985999"
 ---
 # <a name="aggregate-functions---avg"></a>Funções de Agregação – avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

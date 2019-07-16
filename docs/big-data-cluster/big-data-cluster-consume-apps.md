@@ -5,17 +5,16 @@ description: Consuma um aplicativo implantado em um cluster de big data de 2019 
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 308bbe40ba49566bf6cbccad13f8edab0db3d363
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 919ffb2cd4916451245f29c7d783ca05dbfa6998
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729301"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958887"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Consumir um aplicativo implantado no cluster de big data do SQL Server usando um serviço web RESTful
 
@@ -95,7 +94,7 @@ Cole o conteúdo da `swagger.json` para o [Editor do Swagger](https://editor.swa
 
 Observe que o `app` método GET, bem como a `token` método POST. Como a autenticação para aplicativos usa tokens JWT é necessário obter um token meu usando sua ferramenta favorita para fazer uma chamada POST para o `token` método. Aqui está um exemplo de como fazer isso [Postman](https://www.getpostman.com/):
 
-![Postman Token](media/big-data-cluster-consume-apps/postman_token.png)
+![Token do postman](media/big-data-cluster-consume-apps/postman_token.png)
 
 O resultado dessa solicitação lhe dará um JWT `access_token`, que você precisará chamar a URL para executar o aplicativo.
 

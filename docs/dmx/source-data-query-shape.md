@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8e5c86484252d45c8c7edbd79690159e116d9b3a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c928d4c96917479f8c37415d5ebe2db9b7f9eb98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938113"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;consulta de fonte de dados&gt; -forma
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +54,7 @@ APPEND ({ <child table query> }
  *nome da tabela de coluna*  
  Nome de coluna recentemente adicionada à tabela pai da tabela aninhada.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  É preciso classificar as consultas pela coluna que relaciona a tabela pai à tabela filho.  
   
 ## <a name="examples"></a>Exemplos  

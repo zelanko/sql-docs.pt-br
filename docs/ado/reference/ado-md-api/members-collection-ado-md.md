@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e7f2221f511d48acc68c379dce72e7708819b1aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79394abee5b12bb10f34a34e882d2ac0562722fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949437"
 ---
 # <a name="members-collection-ado-md"></a>Coleção Members (ADO MD)
 Contém o [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objetos de um nível ou uma posição ao longo do eixo.  

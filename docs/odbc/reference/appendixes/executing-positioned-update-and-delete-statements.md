@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2391c01d93c876562ab9d870ab0dba22bf74cea5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c69f784c2ce7c29cb49c81bf23f34a9cad12089
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63189020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913625"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>Executar instruções de exclusão e atualização posicionadas
 > [!IMPORTANT]  
@@ -37,11 +36,11 @@ ms.locfileid: "63189020"
   
      **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
-     [ **,** *column-identifier* **=** {*expression* &#124; **NULL**}]  
+     [ **,** *identificador de coluna* **=** {*expressão* &#124; **nulo**}]  
   
      **WHERE CURRENT OF** *nome de cursor*  
   
-     **DELETE FROM** *table-name* **WHERE CURRENT OF** *cursor-name*  
+     **DELETE FROM** *nome da tabela* **WHERE CURRENT OF** *nome de cursor*  
   
      A maneira mais fácil para construir o **definir** cláusula em uma instrução de atualização posicionada é usar marcadores de parâmetro para cada coluna para ser atualizado e use **SQLBindParameter** associar esses para os buffers de conjunto de linhas para o linha a ser atualizada. Nesse caso, o tipo de dados C do parâmetro será o mesmo que o tipo de dados C do buffer de linhas.  
   

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 997c3278-3630-47f6-ada3-190b6c16ce0e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e80aef6d8a0ee33aa7a9a0d9bb71abc3ddf1e15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c783eaf32e0f1ca37e14022ab981864747ca171
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62742016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004934"
 ---
 # <a name="sysdmdbftsindexphysicalstats-transact-sql"></a>sys.dm_db_fts_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62742016"
 ||||  
 |-|-|-|  
 |**Nome da coluna**|**Tipo**|**Descrição**|  
-|**object_id**|INT|ID do objeto da tabela que contém o índice.|  
+|**object_id**|int|ID do objeto da tabela que contém o índice.|  
 |**fulltext_index_page_count**|**bigint**|Tamanho lógico da extração em número de páginas de índice.|  
 |**keyphrase_index_page_count**|**bigint**|Tamanho lógico da extração em número de páginas de índice.|  
 |**similarity_index_page_count**|**bigint**|Tamanho lógico da extração em número de páginas de índice.|  
@@ -54,7 +53,7 @@ ms.locfileid: "62742016"
 ## <a name="permissions"></a>Permissões
 
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
+Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer a permissão `VIEW DATABASE STATE` no banco de dados.   
 
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra como consultar o tamanho lógico de cada índice de texto completo ou semântico em cada tabela que tenha um índice de texto completo ou semântico associado:  

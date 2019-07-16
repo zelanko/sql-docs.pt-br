@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3fbd5ec98791d782fe7ad1fdb1e1884b646dcf9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0230329d10d2414724379d4b9d38c4851a031bca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912328"
 ---
 # <a name="update---sql-command"></a>UPDATE – comando SQL
 Atualiza os registros em uma tabela com novos valores.  
@@ -41,7 +40,7 @@ SET Column_Name1 = eExpression1
   
  *DatabaseName1!* Especifica o nome de um banco de dados que não seja o banco de dados especificado com a fonte de dados que contém a tabela. Você deve incluir o nome do banco de dados que contém a tabela se o banco de dados não for atual. Inclua o delimitador de ponto de exclamação (!) após o nome do banco de dados e antes do nome da tabela.  
   
- SET *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
+ DEFINIR *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
  Especifica as colunas que são atualizadas e seus novos valores. Se você omitir a cláusula WHERE, cada linha na coluna é atualizada com o mesmo valor.  
   
  Em que *FilterCondition1*[AND &#124; ou *FilterCondition2*...]  

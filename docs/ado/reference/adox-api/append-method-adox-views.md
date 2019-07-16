@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f5f58ff2f38ff80d90750901b8943efc00f389c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 637932fed7effb87705b3aa195578cfd506e1454
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967158"
 ---
 # <a name="append-method-adox-views"></a>Método Append (Exibições do ADOX)
 Cria um novo [modo de exibição](../../../ado/reference/adox-api/view-object-adox.md) do objeto e anexa-o para o [modos de exibição](../../../ado/reference/adox-api/views-collection-adox.md) coleção.  
@@ -35,7 +34,7 @@ Views.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Nome*  
+ *Name*  
  Um **cadeia de caracteres** valor que especifica o nome da exibição a ser criada.  
   
  *Comando*  

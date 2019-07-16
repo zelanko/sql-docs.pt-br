@@ -7,13 +7,12 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 1f19e3322b8aee78fdb5a76a29a719148cc6a0c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9f5552a106d0549aaf3b5e9ae291ebe3b534543
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963047"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Visão geral de segurança para a estrutura de extensibilidade em serviços do SQL Server Machine Learning
 
@@ -71,7 +70,7 @@ Portanto, todos os scripts externos que são iniciados de um cliente remoto deve
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Serviços usados no processamento externo (Launchpad)
 
-A estrutura de extensibilidade adiciona um novo serviço de NT para o [lista de serviços](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) em uma instalação do SQL Server: [**SQL Server Launchpad (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
+A estrutura de extensibilidade adiciona um novo serviço de NT para o [lista de serviços](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) em uma instalação do SQL Server: [**Launchpad do SQL Server (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
 
 O mecanismo de banco de dados usa o serviço Launchpad do SQL Server para criar uma instância de uma sessão de R ou Python como um processo separado. O processo é executado sob uma conta de baixo privilégio; diferente do SQL Server, o Launchpad em si e a identidade do usuário na qual a consulta de host ou o procedimento armazenada foi executada. Executar o script em um processo separado, na conta de baixo privilégio, é a base do modelo de segurança e isolamento para R e Python no SQL Server.
 

@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 44fdc387-67b0-4139-8bf5-ed26cf640cd1
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e822f034ff4af30fc2d8c6992544b65aaea865e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26d4860c7ea434aecb0255134178b73fb7c01be4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995612"
 ---
 # <a name="syssysobjects-transact-sql"></a>sys.sysobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -39,10 +38,10 @@ ms.locfileid: "62632297"
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|nome|**sysname**|Nome do objeto|  
+|name|**sysname**|Nome do objeto|  
 |id|**int**|Número de identificação do objeto|  
 |xtype|**char(2)**|Tipo de objeto. Pode ser um dos seguintes tipos de objeto:<br /><br /> AF = Função de agregação (CLR)<br /><br /> C = Restrição CHECK<br /><br /> D = Padrão ou restrição DEFAULT<br /><br /> F = Restrição FOREIGN KEY<br /><br /> L = Log<br /><br /> FN = Função escalar<br /><br /> FS = Função escalar de assembly (CLR)<br /><br /> FT = Função avaliada por tabela de assembly (CLR)<br /><br /> IF = Função de tabela em linha<br /><br /> IT = tabela interna<br /><br /> P = Procedimento armazenado<br /><br /> PC = procedimento armazenado Assembly (CLR)<br /><br /> PK = Restrição PRIMARY KEY (o tipo é K)<br /><br /> RF = Procedimento armazenado de filtro de replicação<br /><br /> S = Tabela do sistema<br /><br /> SN = Sinônimo<br /><br /> SQ = Fila de serviço<br /><br /> TA = Gatilho DML de assembly (CLR)<br /><br /> TF = Função de tabela<br /><br /> TR = gatilho DML SQL<br /><br /> TT = Tipo de tabela<br /><br /> U = Tabela de usuário<br /><br /> UQ = Restrição UNIQUE (o tipo é K)<br /><br /> V = Exibição<br /><br /> X = Procedimento armazenado estendido|  
-|uid|**smallint**|ID de esquema do proprietário do objeto. Em bancos de dados atualizados de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o ID de esquema é idêntico ao ID de usuário do proprietário. Excederá ou retornará NULL se o número de usuários e funções exceder 32.767.<br /><br /> **\*\* Importante \* \***  se você usar qualquer um dos seguintes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instruções DDL, você deve usar o [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) exibição em vez de sys. sysobjects do catálogo.<br /><br /> CRIAR &AMP;#124; ALTER &AMP;#124; DROP USER<br /><br /> CREATE &#124; ALTER &#124; DROP ROLE<br /><br /> CREATE &#124; ALTER &#124; DROP APPLICATION ROLE<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
+|uid|**smallint**|ID de esquema do proprietário do objeto. Em bancos de dados atualizados de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o ID de esquema é idêntico ao ID de usuário do proprietário. Excederá ou retornará NULL se o número de usuários e funções exceder 32.767.<br /><br /> **\*\* Importante \* \***  se você usar qualquer um dos seguintes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instruções DDL, você deve usar o [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) exibição em vez de sys. sysobjects do catálogo.<br /><br /> CRIAR &#124; ALTER &#124; DROP USER<br /><br /> CRIAR &#124; ALTER &#124; DROP ROLE<br /><br /> CRIAR &#124; ALTER &#124; DROP APPLICATION ROLE<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
 |info|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |base_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

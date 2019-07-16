@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 148180d95bcbff1626069e72fb66dd9a3ca859c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028664"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Configurações do projeto (mapeamento de tipo) (SybaseToSQL)
 A página de mapeamento de tipo de **configurações do projeto** caixa de diálogo contém configurações que personalizam como SSMA converte tipos de dados do Sybase Adaptive Server Enterprise (ASE) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados.  
@@ -41,7 +40,7 @@ Clique para adicionar um tipo de dados à lista de mapeamento.
 **Editar**  
 Clique para editar o tipo de dados selecionado na lista de mapeamento.  
   
-**Remover**  
+**Removerr**  
 Clique para remover o mapeamento de tipo de dados selecionado da lista de mapeamento.  
   
 **Restaurar Padrões**  
@@ -54,7 +53,7 @@ A tabela a seguir contém o mapeamento de tipo padrão entre o ASE e [!INCLUDE[s
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
 |**binary**|**binary**|  
-|**binary[\*..8000]**|**binary[\*]**|  
+|**binário [\*... 8000]**|**binary[\*]**|  
 |**binary[8001..\*]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
@@ -67,7 +66,7 @@ A tabela a seguir contém o mapeamento de tipo padrão entre o ASE e [!INCLUDE[s
 |**a variável de caractere**|**varchar**|  
 |**a variável de caractere [\*... 8000]**|**varchar[\*]**|  
 |**a variável de caractere [8001...\*]**|**varchar(max)**|  
-|**character[\*..8000]**|**char[\*]**|  
+|**caracteres [\*... 8000]**|**char[\*]**|  
 |**caracteres [8001...\*]**|**varchar(max)**|  
 |**date**|**date**|  
 |**datetime**|**datetime2[3]**|  
@@ -79,7 +78,7 @@ A tabela a seguir contém o mapeamento de tipo padrão entre o ASE e [!INCLUDE[s
 |**decimal[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
 |**precisão dupla**|**float[53]**|  
 |**float**|**float[53]**|  
-|**float[\*..15]**|**float[24]**|  
+|**float [\*... 15]**|**float[24]**|  
 |**float [16...\*]**|**float[53]**|  
 |**image**|**image**|  
 |**int**|**int**|  
@@ -99,10 +98,10 @@ A tabela a seguir contém o mapeamento de tipo padrão entre o ASE e [!INCLUDE[s
 |**a variável de caractere nacional [\*... 4000]**|**nvarchar[\*]**|  
 |**a variável de caractere nacional [4001...\*]**|**nvarchar(max)**|  
 |**national varchar**|**nvarchar**|  
-|**national varchar[\*..4000]**|**nvarchar[\*]**|  
+|**varchar nacional [\*... 4000]**|**nvarchar[\*]**|  
 |**varchar nacional [4001...\*]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
-|**nchar varying**|**nvarchar**|  
+|**nchar variados**|**nvarchar**|  
 |**nchar variados [\*... 4000]**|**nvarchar[\*]**|  
 |**nchar variados [4001...\*]**|**nvarchar(max)**|  
 |**nchar[\*..4000]**|**nchar[\*]**|  
@@ -118,13 +117,13 @@ A tabela a seguir contém o mapeamento de tipo padrão entre o ASE e [!INCLUDE[s
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
 |**sysname**|**nvarchar[128]**|  
-|**sysname[\*..\*]**|**nvarchar[255]**|  
+|**sysname [\*... \*]**|**nvarchar[255]**|  
 |**text**|**text**|  
 |**time**|**time[3]**|  
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**unichar**|**nchar**|  
-|**unichar varying**|**nvarchar**|  
+|**UNICHAR variados**|**nvarchar**|  
 |**variando UNICHAR [\*... 4000]**|**nvarchar[\*]**|  
 |**variando UNICHAR [4001...\*]**|**nvarchar(max)**|  
 |**unichar[\*..4000]**|**nchar[\*]**|  
@@ -133,12 +132,12 @@ A tabela a seguir contém o mapeamento de tipo padrão entre o ASE e [!INCLUDE[s
 |**univarchar**|**nvarchar**|  
 |**univarchar[\*..4000]**|**nvarchar[\*]**|  
 |**univarchar[4001..\*]**|**nvarchar(max)**|  
-|**unsigned bigint**|**numeric[20][0]**|  
+|**bigint sem sinal**|**numeric[20][0]**|  
 |**unsigned int**|**bigint**|  
-|**unsigned smallint**|**int**|  
+|**smallint não assinado**|**int**|  
 |**tinyint sem sinal**|**tinyint**|  
 |**varbinary**|**varbinary**|  
-|**varbinary[\*..8000]**|**varbinary[\*]**|  
+|**varbinary [\*... 8000]**|**varbinary[\*]**|  
 |**varbinary[8001..\*]**|**varbinary(max)**|  
 |**varchar**|**varchar**|  
 |**varchar[\*..8000]**|**varchar[\*]**|  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 2f50b0292b9139dcbb2b3a5652ad41136b31702a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d88e78e49a52919ff710cd123ab2b25022aa5d1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037061"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>Palavras-chave reservadas (Sintaxe MDX)
 

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 56e8e1eca3e57eba19f2dc17e3b1ec0eaa815594
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ee1058299becb4a7a4234debc097516cb02dd41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719031"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937863"
 ---
 # <a name="type-property-ado"></a>Propriedade Type (ADO)
 Indica o tipo de dados ou tipo operacional de um [parâmetro](../../../ado/reference/ado-api/parameter-object.md), [campo](../../../ado/reference/ado-api/field-object.md), ou [propriedade](../../../ado/reference/ado-api/property-object-ado.md) objeto.  

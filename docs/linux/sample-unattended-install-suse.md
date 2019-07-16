@@ -4,17 +4,16 @@ titleSuffix: SQL Server
 description: Exemplo de Script do SQL Server - instalação autônoma no SUSE Linux Enterprise Server
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 41f1a996698dbc0d8a08e049e7d8ed7d4e139acb
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: eb19357b739dbc52b3eb19cf2390f225e4205d6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910453"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Amostra: Script de instalação autônoma do SQL Server para SUSE Linux Enterprise Server
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b34584a32d5a0adbf95a76415d1141a464b3fe8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a5939ee2b8163e5e71899d5074b851dfda87484
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658248"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901391"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Gramática SQL adicional do ODBC com suporte
 Os drivers ODBC oferecem suporte total a gramática mínima ODBC 2.5 e as seguintes cláusulas na gramática do núcleo e estendidos ODBC 2.5. Informações adicionais podem ser exibidas indo diretamente para o [ALTER tabela instrução](../../odbc/microsoft/alter-table-statement.md), [nomes de correlação](../../odbc/microsoft/correlation-names.md), e [invocação de procedimento](../../odbc/microsoft/procedure-invocation.md) tópicos.  
@@ -60,7 +59,7 @@ Os drivers ODBC oferecem suporte total a gramática mínima ODBC 2.5 e as seguin
   
 -   Instrução SELECT (estendido) (incluindo GROUP BY, HAVING e cláusulas UNION)  
   
--   Subqueries (SUBSELECTs) (Core)  
+-   Subconsultas (subseleções) (núcleos)  
   
 -   [Funções escalares](../../odbc/microsoft/scalar-functions.md)  
   

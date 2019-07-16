@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c541c61f32b24a2d32ee78d20a78a6f894a0dece
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6121d2e55d6e97d6fc474146d5f2cf41f3c8371
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906588"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>Criar um sinalizador de versão (Master Data Services)
 
@@ -28,7 +27,7 @@ ms.locfileid: "65477076"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um sinalizador de versão a ser atribuído a uma versão. O sinalizador pode indicar a versão que os usuários ou sistemas de assinatura devem usar.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Gerenciamento de Versões** .  
@@ -45,7 +44,7 @@ ms.locfileid: "65477076"
   
 3.  Na página **Gerenciar Sinalizadores de Versão** , no campo **Modelo** , selecione o modelo para o qual você deseja criar um sinalizador.  
   
-4.  Clique em **Adicionar**.  
+4.  Clique em **Adicionar** .  
   
 5.  Na caixa **Nome** , digite um nome.  
   

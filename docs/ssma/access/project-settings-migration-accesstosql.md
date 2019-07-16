@@ -1,5 +1,5 @@
 ---
-title: Project Settings (Migration) (AccessToSQL) | Microsoft Docs
+title: Configurações (migração) (AccessToSQL) do projeto | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 441366208d2bfd886794dd7e50dca7e0aef7b3ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929391"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Configurações do projeto (migração) (AccessToSQL)
 As configurações de projeto de migração permitem que você configure como os dados são migrados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
@@ -33,47 +32,47 @@ O painel de migração está disponível na **configurações do projeto** e **c
 **Verificar restrições**  
 Especifica se o SSMA deve verificar restrições quando ele adiciona dados às tabelas.  
   
--   **Modo padrão**: Falso  
+-   **Modo padrão**: False  
   
--   **Modo otimista**: True  
+-   **Modo otimista**: verdadeiro  
   
--   **Modo de inteira**: Falso  
+-   **Modo de inteira**: False  
   
 **Acionadores**  
 Especifica se o SSMA deve ativar gatilhos de inserção quando ele adiciona dados a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelas.  
   
--   **Modo padrão**: Falso  
+-   **Modo padrão**: False  
   
--   **Modo otimista**: True  
+-   **Modo otimista**: verdadeiro  
   
--   **Modo de inteira**: Falso  
+-   **Modo de inteira**: False  
   
 **Manter identidade**  
 Especifica se o SSMA preserva os valores de identidade de acesso quando ele adiciona dados a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se esse valor for False, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui valores de identidade.  
   
--   **Modo padrão**: True  
+-   **Modo padrão**: verdadeiro  
   
--   **Modo otimista**: True  
+-   **Modo otimista**: verdadeiro  
   
--   **Modo de inteira**: Falso  
+-   **Modo de inteira**: False  
   
 **Manter nulos**  
 Especifica se o SSMA preserva valores nulos na fonte de dados quando ele adiciona dados a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], independentemente dos valores padrão que são especificados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Modo padrão**: True  
+-   **Modo padrão**: verdadeiro  
   
--   **Modo otimista**: Falso  
+-   **Modo otimista**: False  
   
--   **Modo de inteira**: True  
+-   **Modo de inteira**: verdadeiro  
   
 **Bloqueios de tabela**  
 Especifica se o SSMA bloqueia tabelas quando ele adiciona dados às tabelas durante a migração de dados. Se o valor for False, o SSMA usa bloqueios de linha.  
   
--   **Modo padrão**: True  
+-   **Modo padrão**: verdadeiro  
   
--   **Modo otimista**: True  
+-   **Modo otimista**: verdadeiro  
   
--   **Modo de inteira**: True  
+-   **Modo de inteira**: verdadeiro  
   
 **Substituir datas sem suporte**  
 Especifica se o SSMA deve corrigir as datas de acesso anteriores ao mais antigo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data e hora data (01 de janeiro de 1753).  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 67b428a06679bdb0cade14314195d576a1ccc596
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920924"
 ---
 # <a name="ado-methods"></a>Métodos ADO
 
@@ -32,7 +31,7 @@ ms.locfileid: "66696861"
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Cancela a execução de uma chamada de método assíncrono pendente.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Cancela uma atualização em lotes pendentes.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Cancela todas as alterações foram feitas para a linha atual ou nova de um **conjunto de registros** objeto, ou o **campos** coleção de um **registro** objeto antes de chamar o  **Atualização** método.|  
-|[Liberada](../../../ado/reference/ado-api/clear-method-ado.md)|Remove todos os **erro** objetos da **erros** coleção.|  
+|[Limpar](../../../ado/reference/ado-api/clear-method-ado.md)|Remove todos os **erro** objetos da **erros** coleção.|  
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Cria uma duplicata **conjunto de registros** objeto de uma já existente **Recordset** objeto. Opcionalmente, especifica que o clone ser somente leitura.|  
 |[Fechar](../../../ado/reference/ado-api/close-method-ado.md)|Fecha um objeto aberto e todos os objetos dependentes.|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|Compara dois indicadores e retorna uma indicação dos valores relativos.|  
@@ -41,7 +40,7 @@ ms.locfileid: "66696861"
 |[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)|Cria um novo **parâmetro** objeto que tem as propriedades especificadas.|  
 |[Delete (coleção de parâmetros ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)|Exclui um objeto a partir de **parâmetros** coleção.|  
 |[Excluir (coleção de campos ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)|Exclui um objeto a partir de **campos** coleção.|  
-|[Delete (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Exclui o registro atual ou um grupo de registros.|  
+|[Delete (conjunto de registros ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Exclui o registro atual ou um grupo de registros.|  
 |[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|Exclui um arquivo ou diretório e todos os seus subdiretórios.|  
 |[Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Executa a consulta, a instrução SQL ou o procedimento armazenado especificado na **CommandText** propriedade.|  
 |[Execute (Conexão ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Executa a consulta especificada, instrução SQL, procedimento armazenado ou texto específico do provedor.|  
@@ -54,7 +53,7 @@ ms.locfileid: "66696861"
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Recupera vários registros de uma **Recordset** objeto em uma matriz.|  
 |[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)|Retorna o **Recordset** como uma cadeia de caracteres.|  
 |[LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)|Carrega o conteúdo de um arquivo existente em uma **Stream**.|  
-|[Migrar](../../../ado/reference/ado-api/move-method-ado.md)|Move a posição do registro atual em um **Recordset** objeto.|  
+|[Moverr](../../../ado/reference/ado-api/move-method-ado.md)|Move a posição do registro atual em um **Recordset** objeto.|  
 |[MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Move para a primeira, última, registro anterior ou seguinte em um especificado **Recordset** objeto e torna esse registro o registro atual.|  
 |[MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)|Move um arquivo, ou um diretório e seu conteúdo para outro local.|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Limpa o atual **conjunto de registros** do objeto e retorna o próximo **Recordset** por Avançar até uma série de comandos.|  

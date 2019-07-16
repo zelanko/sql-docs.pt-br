@@ -1,5 +1,5 @@
 ---
-title: New Project (SSMA) (AccessToSQL) | Microsoft Docs
+title: Novo projeto (SSMA) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: af3859f5e402dce2854cce02439ff6cb26529f46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8828a439e9685529068ab160a44d5a38a5e8555e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002455"
 ---
-# <a name="new-project-ssma-accesstosql"></a>New Project (SSMA) (AccessToSQL)
+# <a name="new-project-ssma-accesstosql"></a>Novo projeto (SSMA) (AccessToSQL)
 Use o **novo projeto** caixa de diálogo para criar um novo projeto SSMA. Para acessar o **novo projeto** caixa de diálogo do **arquivo** menu, clique em **novo projeto**.  
   
 ## <a name="options"></a>Opções  
-**Nome**  
+**Name**  
   
 Insira o nome do projeto. O SSMA acrescentará a extensão de arquivo.  
   

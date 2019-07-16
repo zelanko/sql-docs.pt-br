@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215631"
+---
 ## <a name="connect-locally"></a>Conectar-se localmente
 
 As etapas a seguir usam o **sqlcmd** para conectar-se localmente à nova instância do SQL Server.
@@ -44,7 +52,7 @@ As etapas a seguir criam um novo banco de dados denominado `TestDB`.
    ```
 
 > [!TIP]
-> Para saber mais sobre como escrever consultas e instruções em Transact-SQL, veja [Tutorial: Escrever instruções de Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
+> Para saber mais sobre como escrever consultas e instruções Transact-SQL, consulte [Tutorial: Escrevendo instruções Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
 ### <a name="insert-data"></a>Inserir dados
 
@@ -108,9 +116,10 @@ Além **sqlcmd**, você pode usar as seguintes ferramentas de plataforma cruzada
 
 |||
 |---|---|
-| [Studio de dados do Azure](../azure-data-studio/index.md) | Um utilitário de gerenciamento de banco de dados de GUI de plataforma cruzada. |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Uma interface de linha de comando de plataforma cruzada para a execução de comandos Transact-SQL. |
+| [Azure Data Studio](../azure-data-studio/index.md) | Um utilitário de gerenciamento de banco de dados de GUI de plataforma cruzada. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Um editor de código de GUI de plataforma cruzada que executam instruções Transact-SQL com a extensão mssql. |
+| [O PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Uma ferramenta de automação e configuração de plataforma cruzada com base nos cmdlets. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Uma interface de linha de comando de plataforma cruzada para a execução de comandos Transact-SQL. |
 
 ## <a name="connecting-from-windows"></a>Conectando do Windows
 

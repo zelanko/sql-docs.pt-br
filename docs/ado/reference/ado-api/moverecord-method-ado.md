@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fe9dc770f537b9b9f8b53461c30b890a4144a821
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 157e38c2c9c23ff8f7e92af40385b0962c6dcb70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918071"
 ---
 # <a name="moverecord-method-ado"></a>Método MoveRecord (ADO)
 Move a entidade representada por uma [registro](../../../ado/reference/ado-api/record-object-ado.md) para outro local.  
@@ -35,7 +34,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Origem*  
+ *Source*  
  Opcional. Um **cadeia de caracteres** valor que contém um URL que identifica o **registro** a ser movido. Se *fonte* for omitido ou especifica uma cadeia de caracteres vazia, o objeto representado por esse **registro** é movido. Por exemplo, se o **registro** representa um arquivo, o conteúdo do arquivo é movidas para o local especificado por *destino*.  
   
  *Destino*  

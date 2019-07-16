@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 98c803e53b0d0fd4cbf9676670c14509a8fb4746
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fac57f53242fa7445820aaed5a39694a7277653c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935076"
 ---
 # <a name="managing-a-composite-domain"></a>Gerenciando um domínio composto
 
@@ -39,7 +38,7 @@ ms.locfileid: "66776151"
 |Crie uma regra de domínio cruzado quando o valor de um domínio em um domínio composto afetar o valor de outro.|[Criar uma regra de domínio cruzado](../data-quality-services/create-a-cross-domain-rule.md)|  
 |Identifique as combinações de valor para que o DQS possa relatar sua frequência.|[Usar relações de valor em um domínio de composição](../data-quality-services/use-value-relations-in-a-composite-domain.md)|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 015ea45d1383e6813973aeb1e4c86451a506a2aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14837bc5ba3368fbb0d33680ee1c54936ab0a224
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898844"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
@@ -73,7 +72,7 @@ ms.locfileid: "63213324"
   
  SQL_CONVERT_LONGVARCHAR retornará 0.  
   
- SQL_CONVERT_NUMERIC returns 0.  
+ SQL_CONVERT_NUMERIC retornará 0.  
   
  SQL_CONVERT_REAL retornará 0.  
   
@@ -108,7 +107,7 @@ ms.locfileid: "63213324"
   
  SQL_DBMS_VER retorna "03.00.0000".  
   
- SQL_DEFAULT_TXN_ISOLATION returns SQL_TXN_READ_COMMITTED. Leituras sujas não são possíveis, mas leituras não repetíveis e fantasmas são possíveis.  
+ SQL_DEFAULT_TXN_ISOLATION retorna SQL_TXN_READ_COMMITTED. Leituras sujas não são possíveis, mas leituras não repetíveis e fantasmas são possíveis.  
   
  SQL_DRIVER_HDBC é implementada pelo Gerenciador de Driver.  
   
@@ -118,7 +117,7 @@ ms.locfileid: "63213324"
   
  SQL_DRIVER_HSTMT é implementada pelo Gerenciador de Driver.  
   
- SQL_DRIVER_NAME returns "vfpodbc.dll".  
+ SQL_DRIVER_NAME retorna "vfpodbc".  
   
  SQL_DRIVER_ODBC_VER retorna "02.50" (SQL_SPEC_MAJOR, SQL_SPEC_MINOR).  
   
@@ -147,7 +146,7 @@ ms.locfileid: "63213324"
  SQL_FILE_USAGE retorna SQL_FILE_QUALIFIER ambas as para o banco de dados (arquivo. dbc) e fontes de dados (arquivo. dbf) de tabela gratuitamente.  
   
 ## <a name="g-h"></a>G-H  
- SQL_GETDATA_EXENSIONS returns:  
+ SQL_GETDATA_EXENSIONS retorna:  
   
 -   SQL_GD_ANY_COLUMN  
   
@@ -165,7 +164,7 @@ ms.locfileid: "63213324"
  Retorna SQL_IDENTIFIER_QUOTE_CHAR '.  
   
 ## <a name="k"></a>K  
- SQL_KEYWORDS returns "".  
+ SQL_KEYWORDS retorna "".  
   
 ## <a name="l"></a>L  
  Retorna SQL_LIKE_ESCAPE_CLAUSE ' n '.  
@@ -173,25 +172,25 @@ ms.locfileid: "63213324"
  SQL_LOCK_TYPES retorna SQL_LCK_NO_CHANGE.  
   
 ## <a name="m"></a>M  
- SQL_MAX_BINARY_LITERAL_LEN returns 0.  
+ SQL_MAX_BINARY_LITERAL_LEN retornará 0.  
   
- SQL_MAX_CHAR_LITERAL_LEN returns 254.  
+ SQL_MAX_CHAR_LITERAL_LEN retorna 254.  
   
  SQL_MAX_COLUMN_NAME_LEN retorna 128.  
   
- SQL_MAX_COLUMNS_IN_GROUP_BY returns 16.  
+ SQL_MAX_COLUMNS_IN_GROUP_BY retorna 16.  
   
- SQL_MAX_COLUMNS_IN_ORDER_BY returns 16.  
+ SQL_MAX_COLUMNS_IN_ORDER_BY retorna 16.  
   
- SQL_MAX_COLUMNS_IN_INDEX returns 0.  
+ SQL_MAX_COLUMNS_IN_INDEX retornará 0.  
   
  SQL_MAX_COLUMNS_IN_SELECT returns 254.  
   
- SQL_MAX_COLUMNS_IN_TABLE returns 254.  
+ SQL_MAX_COLUMNS_IN_TABLE retorna 254.  
   
  SQL_MAX_CURSOR_NAME_LEN returns 254.  
   
- SQL_MAX_INDEX_SIZE returns 0.  
+ SQL_MAX_INDEX_SIZE retornará 0.  
   
  SQL_MAX_OWNER_NAME_LEN returns 0.  
   
@@ -199,15 +198,15 @@ ms.locfileid: "63213324"
   
  SQL_MAX_QUALIFIER_NAME_LEN retorna o comprimento do caminho máximo do sistema operacional.  
   
- SQL_MAX_ROW_SIZE returns 254^2.  
+ SQL_MAX_ROW_SIZE retorna 254 ^ 2.  
   
  Retorna SQL_MAX_ROW_SIZE_INCLUDES_LONG ' n '.  
   
- SQL_MAX_STATEMENT_LEN returns 8192.  
+ SQL_MAX_STATEMENT_LEN retorna 8192.  
   
  SQL_MAX_TABLE_NAME_LEN retorna 128.  
   
- SQL_MAX_TABLES_IN_SELECT returns 16.  
+ SQL_MAX_TABLES_IN_SELECT retorna 16.  
   
  SQL_MAX_USER_NAME_LEN returns 0.  
   
@@ -216,7 +215,7 @@ ms.locfileid: "63213324"
  SQL_MULTIPLE_ACTIVE_TXN retorna 'Y'. Várias conexões podem ter várias transações abertas ao mesmo tempo.  
   
 ## <a name="n"></a>N  
- SQL_NEED_LONG_DATA_LEN returns 'N'.  
+ Retorna SQL_NEED_LONG_DATA_LEN ' n '.  
   
  SQL_NON_NULLABLE_COLUMNS retorna SQL_NNC_NON_NULL.  
   
@@ -279,7 +278,7 @@ ms.locfileid: "63213324"
   
  SQL_ODBC_VER é implementada pelo Gerenciador de Driver.  
   
- SQL_ORDER_BY_COLUMNS_IN_SELECT returns "N".  
+ Retorna um SQL_ORDER_BY_COLUMNS_IN_SELECT "N".  
   
  Retorna um SQL_OUTER_JOINS "N".  
   
@@ -319,7 +318,7 @@ ms.locfileid: "63213324"
   
  SQL_SERVER_NAME returns "".  
   
- SQL_SPECIAL_CHARACTERS returns "~@#$%^".  
+ SQL_SPECIAL_CHARACTERS retorna "~ @# $% ^".  
   
  SQL_STATIC_SENSITIVITY retornará 0. O Driver de ODBC do Visual FoxPro não oferece suporte a atualizações posicionais.  
   
@@ -450,9 +449,9 @@ ms.locfileid: "63213324"
   
  SQL_TXN_CAPABLE retorna SQL_TC_DML.  
   
- SQL_TXN_ISOLATION_OPTION returns SQL_TXN_READ_COMMITTED.  
+ SQL_TXN_ISOLATION_OPTION retorna SQL_TXN_READ_COMMITTED.  
   
 ## <a name="u-z"></a>U-Z  
  SQL_UNION retorna SQL_U_UNION ou SQL_U_UNION_ALL.  
   
- SQL_USER_NAME returns \<blank>.
+ Retorna SQL_USER_NAME \<em branco >.

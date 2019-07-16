@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 45c56d89-4160-4d84-80bf-a7a05488792d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a40bd9acc3961a77cb69bc24fc37f5e89192c34a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ed9ac8e81abaf6367d3a9c5518f1f18cb94ef8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990402"
 ---
 # <a name="dbosystaskids-transact-sql"></a>dbo.systaskids (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47802256"
   Contém um mapeamento das tarefas criadas em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para trabalhos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] na versão atual. Essa tabela é armazenada na **msdb** banco de dados.  
   
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**task_id**|**int**|ID da tarefa|  
 |**job_id**|**uniqueidentifier**|ID do trabalho para o qual a tarefa está mapeada|  

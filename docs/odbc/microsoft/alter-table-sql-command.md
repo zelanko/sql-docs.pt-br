@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f656396455a8d5669debc158c3edc866491fcb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c78d3f20e5a03fc80029549318c9c53662e4121
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63457628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901378"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE – comando SQL
 Modifica programaticamente a estrutura de uma tabela.  
@@ -67,7 +66,7 @@ ALTER TABLE TableName1
  Adicionar [coluna] *FieldName1*  
  Especifica o nome do campo a ser adicionado.  
   
- ALTER [COLUMN] *FieldName1*  
+ ALTER [coluna] *FieldName1*  
  Especifica o nome de um campo existente para modificar.  
   
  *FieldType* [( *nFieldWidth* [, *nPrecision*]])  
@@ -85,10 +84,10 @@ ALTER TABLE TableName1
  VERIFICAR *lExpression1*  
  Especifica uma regra de validação para o campo. *lExpression1* deve ser avaliada como uma expressão lógica e pode ser uma função definida pelo usuário ou um procedimento armazenado. Sempre que um registro em branco for anexado, a regra de validação é verificada. Um erro será gerado se a regra de validação não permite um valor de campo em branco em um registro acrescentado.  
   
- ERROR *cMessageText1*  
+ Erro *cMessageText1*  
  Especifica a mensagem de erro exibida quando a regra de validação de campo gera um erro.  
   
- DEFAULT *eExpression1*  
+ PADRÃO *eExpression1*  
  Especifica um valor padrão para o campo. O tipo de dados *eExpression1* deve ser o mesmo que o tipo de dados para o campo.  
   
  PRIMARY KEY  
@@ -119,16 +118,16 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
    memo1 M, memo2 M NOCPTRANS)  
 ```  
   
- ALTER [COLUMN] *FieldName2*  
+ ALTER [coluna] *FieldName2*  
  Especifica o nome de um campo existente para modificar.  
   
- SET DEFAULT *eExpression2*  
+ Definir padrão *eExpression2*  
  Especifica um novo valor padrão para um campo existente. O tipo de dados *eExpression2* deve ser o mesmo que o tipo de dados para o campo.  
   
  SELEÇÃO de conjunto *lExpression2*  
  Especifica uma nova regra de validação para um campo existente. *lExpression2* deve ser avaliada como uma expressão lógica e pode ser uma função definida pelo usuário ou um procedimento armazenado.  
   
- ERROR *cMessageText2*  
+ Erro *cMessageText2*  
  Especifica a mensagem de erro exibida quando a regra de validação de campo gera um erro. A mensagem é exibida somente quando dados são alterados em uma janela Procurar ou editar.  
   
  DROP DEFAULT  
@@ -137,7 +136,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  REMOVER SELEÇÃO  
  Remove a regra de validação para um campo existente.  
   
- DROP [COLUMN] *FieldName3*  
+ SOLTAR [coluna] *FieldName3*  
  Especifica um campo a ser removido da tabela. Também remover um campo da tabela remove a configuração do valor do campo padrão e a regra de validação de campo.  
   
  Se as expressões de índice de chave ou gatilho fazem referência ao campo, as expressões de se tornar inválidas quando o campo é removido. Nesse caso, um erro não é gerado quando o campo é removido, mas as expressões de gatilho ou de chave de índice inválido irão gerar erros em tempo de execução.  
@@ -145,7 +144,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  SELEÇÃO de conjunto *lExpression3*  
  Especifica a regra de validação de tabela. *lExpression3* deve ser avaliada como uma expressão lógica e pode ser uma função definida pelo usuário ou um procedimento armazenado.  
   
- ERROR *cMessageText3*  
+ Erro *cMessageText3*  
  Especifica a mensagem de erro exibida quando a regra de validação de tabela gera um erro. A mensagem é exibida somente quando dados são alterados em uma janela Procurar ou editar.  
   
  REMOVER SELEÇÃO  
@@ -166,13 +165,13 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  Adicionar a chave estrangeira [ *eExpression5*] marca *TagName4*  
  Adiciona um índice (não primária) externo à tabela. *eExpression5* Especifica a expressão de chave estrangeira de índice, e *TagName4* Especifica o nome da marca externa do índice. Nomes de marca de índice podem conter até 10 caracteres.  
   
- REFERENCES *TableName2*[TAG *TagName5*]  
+ As referências *TableName2*[marca *TagName5*]  
  Especifica a tabela pai para o qual é estabelecida uma relação de persistente. Marcação include *TagName5* para estabelecer uma relação com base em uma marca de índice existente para a tabela pai. Nomes de marca de índice podem conter até 10 caracteres. Se você omitir a marca *TagName5*, a relação é estabelecida usando a marca de índice primário da tabela pai.  
   
  MARCA de chave estrangeira SOLTAR *TagName6*[Salvar]  
  Exclui uma marca cujo índice é de chave estrangeira *TagName6*. Se você omitir o salvamento, a marca de índice é excluída do índice estrutural. Incluir Salvar para impedir a exclusão da marca do índice do índice estrutural.  
   
- RENAME COLUMN *FieldName4*TO *FieldName5*  
+ COLUNA de RENOMEAÇÃO *FieldName4*TO *FieldName5*  
  Permite que você altere o nome de um campo na tabela. *FieldName4* Especifica o nome do campo que é renomeado. *FieldName5* Especifica o novo nome do campo.  
   
 > [!CAUTION]  

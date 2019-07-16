@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c6efbbd-2c7d-4342-aa7b-201f94b3e3e3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 09e55da499359bfcb44cd794db1ba11503d1fc62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd52aa1427e5fa768ab521d3533cbabfa4d6ad0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901358"
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>Eventos gerados pelo Gerenciador de Driver ODBC
 > [!IMPORTANT]  
@@ -29,7 +28,7 @@ ms.locfileid: "63061634"
   
 |Eventos do Visual Studio Analyzer|Descrição|  
 |----------------------------------|-----------------|  
-|**Chamada**|Gerado em todas as entradas de ODBC API.|  
+|**Call**|Gerado em todas as entradas de ODBC API.|  
 |**ReturnException**|Gerado em cada retorno de API ODBC se o código de retorno é SQL_ERROR.|  
 |**ReturnNormal**|Gerado em cada retorno de API ODBC se o código de retorno não é SQL_ERROR.|  
 |**Início da Conexão**|Indica que uma conexão foi iniciado; gerado quando o Gerenciador de Driver ODBC chama de conexão do driver APIs.|  

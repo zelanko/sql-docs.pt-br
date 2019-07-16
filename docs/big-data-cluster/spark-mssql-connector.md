@@ -5,17 +5,16 @@ description: Saiba como usar o conector do Spark MSSQL no Spark para leitura e g
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aaa9cd54c3540c17f9995f985f4537dafe05d5c2
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 5b603e91e2dffae034dd9d66a1bcd3e5f812a308
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727468"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957839"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Como ler e gravar para o SQL Server no Spark usando o conector do Spark MSSQL
 
@@ -50,7 +49,7 @@ O conector usa em massa do SQL Server gravar APIs. Qualquer gravação em massa 
 
 - Um [cluster de big data do SQL Server](deploy-get-started.md).
 
-- [Azure Data Studio](https://aka.ms/azdata-insiders).
+- [Dados do Azure Studio](https://aka.ms/azdata-insiders).
 
 ## <a name="create-the-target-database"></a>Criar o banco de dados de destino
 

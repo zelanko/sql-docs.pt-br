@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c996ad6f-e790-40f4-a962-843422496149
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f5d27a09715259bf6adf08cb9b9de1d01ffa228a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d778f53f2d82be88aa62489f49712048991b579f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63457400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909967"
 ---
 # <a name="sqlprocedures-desktop-database-drivers"></a>SQLProcedures (Drivers de banco de dados de área de trabalho)
 **SQLProcedures** retornará apenas as linhas para esses procedimentos que têm pelo menos um argumento. Os procedimentos que não têm nenhum argumento são tratados como modos de exibição.  

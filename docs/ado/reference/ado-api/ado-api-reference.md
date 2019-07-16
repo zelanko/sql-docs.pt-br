@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6436ca3b67587751757ae01b4248c1ce8b35722d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e3c71d7233e75e0c97cacf6ec35d86bd4c8df31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921227"
 ---
 # <a name="ado-api-reference"></a>Referência de API ADO
 Esta seção da documentação do ADO contém tópicos para cada ADO objeto, coleção, propriedade, a propriedade dinâmica, método, eventos e enumeração. Além disso, ele contém uma lista de índices de sintaxe do ADO a ser usado com o Microsoft Visual C++ e Windows Foundation Classes (WFC).  

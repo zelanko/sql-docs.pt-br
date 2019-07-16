@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ea485d3afaf5785cca18f76be9b093dcc051dffe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64b7d8fd3f2220562e3695d6e31c83261daa2e60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947492"
 ---
 # <a name="writetext-method"></a>Método WriteText
 Grava uma cadeia de caracteres de texto especificado para um [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
@@ -35,7 +34,7 @@ Stream.WriteText Data, Options
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Data*  
+ *Dados*  
  Um **cadeia de caracteres** valor que contém o texto em caracteres a serem gravados.  
   
  *Opções*  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5854df5b70664de7455e3da87cd7233b7f419c5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72ac77fd62bd0dd0f315bd214f94fe759923ffda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007195"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Permissões de folha (Serviços de Dados Mestre)
 
@@ -43,7 +42,7 @@ ms.locfileid: "65488180"
 |**Leitura**|O usuário pode ler membros folha e atributos.|  
 |**Criar**|O usuário pode criar membros folha e atribuir valores de atributo durante a criação.|  
 |**Update (atualizar)**|O usuário pode atualizar membros folha e atributos.|  
-|**Delete (excluir)**|O usuário pode excluir membros folha.|  
+|**Excluir**|O usuário pode excluir membros folha.|  
 |**Deny**|Nega todo o acesso aos membros folha.|  
   
  As permissões Ler, Criar, Atualizar e Excluir podem ser combinadas. Ao atribuir Criar, Atualizar e Excluir, a permissão de leitura é atribuída automaticamente.  
@@ -56,7 +55,7 @@ ms.locfileid: "65488180"
 |**Leitura**|O usuário pode ler atributos.|  
 |**Criar**|O usuário pode atribuir valores ao criar membros.|  
 |**Update (atualizar)**|O usuário pode atualizar atributos.|  
-|**Delete (excluir)**|Nenhum efeito.|  
+|**Excluir**|Nenhum efeito.|  
 |**Deny**|O atributo não é exibido.<br /><br /> Observação: Você não pode negar acesso explicitamente para atributos Name e Code.|  
   
 ### <a name="example"></a>Exemplo  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c1d1863b28367ba825541c6e334613f65d3bc657
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6549fd10b173a8e133c941ea4315634badb3f35f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917831"
 ---
 # <a name="open-method-ado-stream"></a>Método Open (Fluxo do ADO)
 Abre um [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto para manipular fluxos de dados de texto ou binárias.  
@@ -35,7 +34,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Origem*  
+ *Source*  
  Opcional. Um **Variant** valor que especifica a fonte de dados para o **Stream**. *Origem* pode conter uma cadeia de caracteres de URL absoluta que aponta para um nó existente em uma estrutura de árvore bem conhecidos, como um sistema de email ou arquivo. Uma URL deve ser especificada usando a palavra-chave de URL ("URL =*esquema de*://*server*/*pasta*"). Como alternativa, *fonte* pode conter uma referência a uma já aberta [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto, que abre o fluxo padrão associado a **registro**. Se *fonte* não for especificado, um **Stream** é instanciada e aberta, associado a nenhuma fonte subjacente por padrão. Para obter mais informações sobre esquemas de URL e os provedores associados, consulte [absoluta e relativa URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
  *Modo*  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6babeebec1eac78949f0a80eb0701b5b5ba1dcc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d96b7968c7aba8d1249db2f43b53fc8a22596419
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694834"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918455"
 ---
 # <a name="getrows-method-ado"></a>Método GetRows (ADO)
 Recupera vários registros de uma [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto em uma matriz.  
@@ -44,7 +43,7 @@ array = recordset.GetRows(Rows, Start, Fields )
  *Iniciar*  
  Opcional. Um **cadeia de caracteres** valor ou **Variant** que é avaliada para o indicador para o registro do que o **GetRows** deve começar a operação. Você também pode usar um [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valor.  
   
- *Fields*  
+ *Campos*  
  Opcional. Um **Variant** que representa um nome de campo único ou posição ordinal ou uma matriz de nomes de campo ou números de posição ordinal. ADO retorna apenas os dados nesses campos.  
   
 ## <a name="remarks"></a>Comentários  

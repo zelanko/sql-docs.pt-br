@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 436c4480-f1e3-403f-b2bd-de04539afe3c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b8935bc203c616f88a7e5929bd19e10a41592d3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 7392edabcef2b1ff8348bab641380b6ab64cea0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950761"
 ---
 # <a name="domainconstraints-transact-sql"></a>DOMAIN_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,9 +40,9 @@ ms.locfileid: "53591030"
 |**CONSTRAINT_NAME**|**sysname**|Nome de regra.|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|Banco de dados no qual o tipo de dados de alias existe.|  
 |**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém o tipo de dados de alias.<br /><br /> <strong>\*\* Importante \* \*</strong>  não use exibições INFORMATION_SCHEMA para determinar o esquema de um tipo de dados. O único modo seguro para localizar o esquema de um tipo é usar a função TYPEPROPERTY.|  
-|**NOME_DO_DOMÍNIO**|**sysname**|Tipo de dados de alias.|  
-|**IS_DEFERRABLE**|**varchar (** 2 **)**|Especifica se a verificação de restrição é adiável. Sempre retorna NO.|  
-|**INITIALLY_DEFERRED**|**varchar (** 2 **)**|Especifica se a verificação de restrição é inicialmente adiada. Sempre retorna NO.|  
+|**DOMAIN_NAME**|**sysname**|Tipo de dados de alias.|  
+|**IS_DEFERRABLE**|**varchar(** 2 **)**|Especifica se a verificação de restrição é adiável. Sempre retorna NO.|  
+|**INITIALLY_DEFERRED**|**varchar(** 2 **)**|Especifica se a verificação de restrição é inicialmente adiada. Sempre retorna NO.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições do sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d41d5a0239f11882c135c27fd4af8e817e83b799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b322dacbf85ec24b58e315ecbbf9d547d1481f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926485"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Usar o ADO com linguagens de script
 Dentro de um ambiente de script, o ADO permite que você exponha os dados por meio de scripts do lado do servidor. Nesse cenário, o ADO, o provedor OLE DB subjacente que ele usa, e todos os outros componentes necessários para fazer referência a um repositório de dados fornecidos são instalados em um servidor executando o Internet Information Services (IIS). Usando o Active Server Pages (ASP), o ADO é um componente referenciado em um script que pode gerar HTML, por exemplo. Esse conteúdo HTML pode ser passado por meio de HTTP para um navegador da Web de cliente. Usando scripts, a página da Web pode enviar ações de volta para o script do lado do servidor, permitindo que você atualizar, percorrer ou exibir dados específicos.  
@@ -33,7 +32,7 @@ Dentro de um ambiente de script, o ADO permite que você exponha os dados por me
 |Parâmetro ADO|Não|  
 |ADO Recordset|Sim|  
 |ADO Record|Sim|  
-|ADO Stream|Sim|  
+|Stream de ADO|Sim|  
 |Erro de ADO|Não|  
 |Catálogo do ADOX|Não|  
 |Conjunto de células do ADOX|Não|  

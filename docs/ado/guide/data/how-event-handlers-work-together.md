@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cb02a96e6ee3d28c67e21996677c02b58fc97c07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b744dbd464aedbd9b87d22aa74277787fcc3c7a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925047"
 ---
 # <a name="how-event-handlers-work-together"></a>Como os manipuladores de eventos funcionam em conjunto
 A menos que você está programando no Visual Basic, todos os manipuladores de eventos **Conexão** e **Recordset** eventos devem ser implementados, independentemente se você realmente processar todos os eventos. A quantidade de trabalho de implementação, que você precisa fazer depende de sua linguagem de programação. Para obter mais informações, consulte [instanciação de evento ADO por linguagem](../../../ado/guide/data/ado-event-instantiation-by-language.md).  

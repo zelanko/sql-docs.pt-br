@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ff4a76c38f04c7b9b12842ef800bc8a26a27ed9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf6b5127bac7aedf9e67918d38020c73a4afe186
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079597"
 ---
 # <a name="using-arrays-of-parameters"></a>Usar matrizes de parâmetros
 Usar matrizes de parâmetros, o aplicativo chama **SQLSetStmtAttr** com um *atributo* argumento de SQL_ATTR_PARAMSET_SIZE para especificar o número de conjuntos de parâmetros. Ele chama **SQLSetStmtAttr** com um *atributo* argumento de SQL_ATTR_PARAMS_PROCESSED_PTR para especificar o endereço de uma variável na qual o driver pode retornar o número de conjuntos de parâmetros processados, Erro incluindo define. Ele chama **SQLSetStmtAttr** com um *atributo* argumento de SQL_ATTR_PARAM_STATUS_PTR para apontar para uma matriz no qual retornar informações de status para cada linha de valores de parâmetro. O driver armazena esses endereços na estrutura, que ele mantém para a instrução.  
@@ -29,7 +28,7 @@ Usar matrizes de parâmetros, o aplicativo chama **SQLSetStmtAttr** com um *atri
   
  Antes de executar a instrução, o aplicativo define o valor de cada elemento de cada matriz associada. Quando a instrução é executada, o driver usa as informações armazenada para recuperar os valores de parâmetro e enviá-los para a fonte de dados; Se possível, o driver deve enviar esses valores como matrizes. Embora o uso de matrizes de parâmetros é implementado da melhor forma, executando a instrução SQL com todos os parâmetros da matriz com uma única chamada para a fonte de dados, essa funcionalidade não é amplamente disponível em DBMSs hoje mesmo. No entanto, drivers podem simular-executar uma instrução SQL várias vezes, cada um com um único conjunto de parâmetros.  
   
- Antes de um aplicativo usa matrizes de parâmetros, ele deve ser-se de que eles têm suporte pelos drivers usados pelo aplicativo. Isso pode ser feito de duas maneiras:  
+ Antes de um aplicativo usa matrizes de parâmetros, ele deve ser-se de que eles têm suporte pelos drivers usados pelo aplicativo. Há duas formas de fazer isso:  
   
 -   Use somente os drivers que reconhecidamente dão suporte a matrizes de parâmetros. O aplicativo pode codificar os nomes desses drivers ou o usuário pode ser instruído a usar somente esses drivers. Aplicativos personalizados e aplicativos verticais geralmente usam um conjunto limitado de drivers.  
   

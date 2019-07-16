@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 47e1321802b237f02a63535572b1850dbb4c74f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29669535f3544dafea58e7064e6d2c5281f6102f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989704"
 ---
 # <a name="edit-type-mapping-db2tosql"></a>Editar mapeamento de tipo (DB2ToSQL)
 O **editar mapeamento de tipo** caixa de diálogo permite que você especifique como os tipos são mapeados entre os objetos de banco de dados de origem e de destino.  
@@ -34,10 +33,10 @@ Selecione o tipo de dados de origem para mapear para um [!INCLUDE[ssNoVersion](.
   
 Se for o tipo de dados de comprimento variável, os campos a seguir aparecerá sob **tipo de fonte**:  
   
-**De**  
+**From**  
 Especifique o comprimento mínimo para esse mapeamento. Por exemplo, para o **nchar** tipo de dados, você pode inserir 10 para especificar que esse mapeamento é para um intervalo começando **nchar(10)** .  
   
-**Para**  
+**To**  
 Especifique o comprimento máximo para esse mapeamento. Por exemplo, para o **nchar** tipo de dados, você pode inserir 20 para especificar que esse mapeamento é para um intervalo terminando às **nchar(20)** .  
   
 **Tipo de destino**  

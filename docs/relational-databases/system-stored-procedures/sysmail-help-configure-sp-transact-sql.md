@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1ef80206f9ff82cf1ab2917e90f61432be15c190
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f55025f8eec24925aec8661c46b81a1a40ed2aa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838424"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909069"
 ---
 # <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@parameter_name** =] **'***parameter_name***'**  
+ [ **@parameter_name** =] **'***parameter_name***'**  
  O nome da definição de configuração a ser recuperado. Quando especificado, o valor da configuração é retornado na **@parameter_value** parâmetro de saída. Quando nenhum **@parameter_name** for especificado, esse procedimento armazenado retorna um conjunto de resultados contendo todas as definições de configuração do Database Mail na instância.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -51,15 +50,15 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
   
 ||||  
 |-|-|-|  
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |**paramname**|**nvarchar(256)**|O nome do parâmetro de configuração.|  
 |**paramvalue**|**nvarchar(256)**|O valor do parâmetro de configuração.|  
-|**Descrição**|**nvarchar(256)**|A descrição do parâmetro de configuração.|  
+|**description**|**nvarchar(256)**|A descrição do parâmetro de configuração.|  
   
 ## <a name="remarks"></a>Comentários  
  O procedimento armazenado **sysmail_help_configure_sp** lista as definições de configuração do Database Mail atuais para a instância.  
   
- Quando um **@parameter_name** for especificado, mas nenhum parâmetro de saída é fornecido para **@parameter_value**, esse procedimento armazenado não produz nenhuma saída.  
+ Quando um **@parameter_name** for especificado, mas nenhum parâmetro de saída é fornecido para **@parameter_value** , esse procedimento armazenado não produz nenhuma saída.  
   
  O procedimento armazenado **sysmail_help_configure_sp** está no **msdb** banco de dados e é de propriedade de **dbo** esquema. O procedimento deve ser invocado com um nome de três partes se o banco de dados atual não for **msdb**.  
   

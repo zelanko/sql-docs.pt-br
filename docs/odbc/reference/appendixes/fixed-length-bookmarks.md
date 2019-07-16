@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cbd8185e-fb03-408f-b80b-1a2e164534fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21af6ef1be21e000d25582151650f274fe3561a4
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 5877a6cb7a99803f854338321e333c87037c2e90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913579"
 ---
 # <a name="fixed-length-bookmarks"></a>Indicadores de comprimento fixo
 Se um ODBC *3.x* driver deve funcionar com um ODBC *2.x* aplicativo que usa indicadores de comprimento fixo, o driver devem oferecer suporte a seguir:  

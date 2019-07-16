@@ -18,24 +18,23 @@ helpviewer_keywords:
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 195c8dc2db7011801023e7e21e68ed1f5ed75a6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c58f34404119592308515f95934e23cfc94e1fc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900400"
 ---
 # <a name="sysdmiobackuptapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna a lista de dispositivos de fita e o estado de solicitações de montagem para backups.   
  
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**physical_device_name**|**nvarchar(520)**|Nome do dispositivo físico atual no qual um backup pode ser realizado. Não permite valor nulo.|  
 |**logical_device_name**|**nvarchar(256)**|O nome especificado pelo usuário para a unidade (de **sys. backup_devices**). NULL se nenhum nome especificado pelo usuário estiver disponível. Permite valor nulo.|  
-|**status**|**int**|Status da fita.<br /><br /> 1 = Aberta, disponível para uso<br /><br /> 2 = Montagem pendente<br /><br /> 3 = Em uso<br /><br /> 4 = Carregando<br /><br /> **Observação:** enquanto uma fita que está sendo carregada (**status = 4**), o rótulo de mídia ainda não foi lido. Colunas que copiam valores do rótulo de mídia, tais como **media_sequence_number**, exibem valores antecipados que podem ser diferentes dos valores atuais na fita. Depois que o rótulo é lida, **status** alterações **3** (em uso), e as colunas de rótulo de mídia, em seguida, refletem a fita atual que é carregada.<br /><br /> Não permite valor nulo.|  
+|**status**|**int**|Status da fita.<br /><br /> 1 = Aberta, disponível para uso<br /><br /> 2 = Montagem pendente<br /><br /> 3 = Em uso<br /><br /> 4 = Carregando<br /><br /> **Observação:** Enquanto uma fita que está sendo carregada (**status = 4**), o rótulo de mídia ainda não foi lido. Colunas que copiam valores do rótulo de mídia, tais como **media_sequence_number**, exibem valores antecipados que podem ser diferentes dos valores atuais na fita. Depois que o rótulo é lida, **status** alterações **3** (em uso), e as colunas de rótulo de mídia, em seguida, refletem a fita atual que é carregada.<br /><br /> Não permite valor nulo.|  
 |**status_desc**|**nvarchar(520)**|Descrição do status da fita:<br /><br /> AVAILABLE<br /><br /> MOUNT PENDING<br /><br /> IN USE<br /><br /> LOADING MEDIA<br /><br /> Não permite valor nulo.|  
 |**mount_request_time**|**datetime**|Hora em que a montagem foi solicitada. NULL se nenhuma montagem estiver pendente (**status! = 2**). Permite valor nulo.|  
 |**mount_expiration_time**|**datetime**|Hora em que o pedido de montagem expirará (tempo limite). NULL se nenhuma montagem estiver pendente (**status! = 2**). Permite valor nulo.|  

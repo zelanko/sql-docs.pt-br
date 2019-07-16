@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d807b4b62eed46e99fdeaf0225fadb59b26042a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a2c2802f0bd077c64800225590b2346205fb30a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029784"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ ms.locfileid: "62817010"
 |**allow_subscriber_initiated_snapshot**|**bit**|Indica que os Assinantes podem iniciar o processo que gera o instantâneo para uma publicação usando filtros com parâmetros. **1** indica que os assinantes podem iniciar o processo de instantâneo.|  
 |**dynamic_snapshot_queue_timeout**|**int**|Especifica quantos minutos um Assinante precisa esperar na fila para que o processo de geração de instantâneo comece, ao usar filtros com parâmetros.|  
 |**dynamic_snapshot_ready_timeout**|**int**|Especifica quantos minutos um Assinante espera para que o processo de geração de instantâneo seja concluído, ao usar filtros com parâmetros.|  
-|**distributor**|**sysname**|O nome do Distribuidor para a publicação.|  
+|**distribuidor**|**sysname**|O nome do Distribuidor para a publicação.|  
 |**snapshot_jobid**|**binary(16)**|Identifica o trabalho de agente que gera o instantâneo quando o Assinante pode iniciar o processo de geração de instantâneo.|  
 |**allow_web_synchronization**|**bit**|Especifica se a publicação está habilitada para sincronização da Web, onde **1** significa que a sincronização da Web está habilitada para a publicação.|  
 |**web_synchronization_url**|**nvarchar(500)**|Especifica o valor padrão da URL da Internet usado para sincronização da Web.|  

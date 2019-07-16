@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 7477a3fe-afb3-44c8-bb2c-c6e1d9bdee6f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b5b9f84f432a0861483066f3367556b5afc1f9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49d2ae259d2c91316a8134a7a92c39b73673d897
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001317"
 ---
 # <a name="sysallsqlmodules-transact-sql"></a>sys.all_sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,14 +34,14 @@ ms.locfileid: "47684136"
   
  A exibição retorna uma linha para cada função definida pelo usuário compilada nativamente, escalar. Para obter mais informações, consulte [Funções escalares definidas pelo usuário para OLTP in-memory](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID do objeto contentor. É exclusivo em um banco de dados.|  
-|**Definição**|**nvarchar(max)**|Texto SQL que define esse módulo.<br /><br /> NULL = Criptografado|  
+|**definition**|**nvarchar(max)**|Texto SQL que define esse módulo.<br /><br /> NULL = Criptografado|  
 |**uses_ansi_nulls**|**bit**|O módulo foi criado com SET ANSI_NULLS ON.|  
 |**uses_quoted_identifier**|**bit**|O módulo foi criado com SET QUOTED_IDENTIFIER ON.|  
 |**is_schema_bound**|**bit**|O módulo foi criado com a opção SCHEMABINDING.|  
-|**uses_database_collation**|**bit**|1 = A definição de módulo associada a esquema depende do agrupamento padrão do banco de dados para avaliação correta; caso contrário, 0. Essa dependência impede a alteração do agrupamento padrão do banco de dados.|  
+|**uses_database_collation**|**bit**|1 = A definição de módulo associada a esquema depende do agrupamento padrão do banco de dados para avaliação correta; caso contrário, 0. Essa dependência impede a alteração da ordenação padrão do banco de dados.|  
 |**is_recompiled**|**bit**|O procedimento foi criado com a opção WITH RECOMPILE.|  
 |**null_on_null_input**|**bit**|O módulo foi declarado para produzir uma saída NULL em qualquer entrada NULL.|  
 |**execute_as_principal_id**|**int**|A identificação do principal de banco de dados EXECUTE AS.<br /><br /> NULL por padrão ou se EXECUTE AS CALLER.<br /><br /> ID da entidade especificada se EXECUTE AS SELF ou EXECUTE AS \<principal >.<br /><br /> -2 = EXECUTE AS OWNER.|  

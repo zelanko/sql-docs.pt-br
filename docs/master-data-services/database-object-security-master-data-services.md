@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: df262ea32662a160b0a0ebcadc26eb43676271b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65aa1f12870d47e61a0fa634f0281f8bde9c9462
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906469"
 ---
 # <a name="database-object-security-master-data-services"></a>Segurança de objeto de banco de dados (Master Data Services)
 
@@ -46,7 +45,7 @@ ms.locfileid: "65487738"
 ##  <a name="Staging"></a> Preparação de dados  
  Na tabela a seguir, cada protegível tem "name" como parte do nome. Isso indica o nome da tabela de preparo que é especificada quando uma entidade é criada. Para obter mais informações, confira [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
-|Ação|Protegíveis|Permissões|  
+|Action|Protegíveis|Permissões|  
 |------------|----------------|-----------------|  
 |Criar, atualizar e excluir membros folha e seus atributos.|stg.name_Leaf|Obrigatório: INSERT<br /><br /> Opcional: SELECT e UPDATE|  
 |Carregar os dados da tabela de preparo de Folha nas tabelas adequadas do banco de dados do MDS.|stg.udp_name_Leaf|Execute|  
@@ -60,7 +59,7 @@ ms.locfileid: "65487738"
   
 ##  <a name="rules"></a> Validando dados em relação a regras de negócio  
   
-|Ação|Protegível|Permissões|  
+|Action|Protegível|Permissões|  
 |------------|---------------|-----------------|  
 |Validar uma versão de dados em relação às regras de negócio|mdm.udpValidateModel|Execute|  
   
@@ -68,7 +67,7 @@ ms.locfileid: "65487738"
   
 ##  <a name="Versions"></a> Exclusão de versões  
   
-|Ação|Protegíveis|Permissões|  
+|Action|Protegíveis|Permissões|  
 |------------|----------------|-----------------|  
 |Determinar a ID da versão que deseja excluir|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
 |Excluir uma versão de um modelo|mdm.udpVersionDelete|Execute|  
@@ -77,7 +76,7 @@ ms.locfileid: "65487738"
   
 ##  <a name="Hierarchy"></a> Aplicação imediata de permissões de membro de hierarquia  
   
-|Ação|Protegíveis|Permissões|  
+|Action|Protegíveis|Permissões|  
 |------------|----------------|-----------------|  
 |Aplicação imediata de permissões de membro|mdm.udpSecurityMemberProcessRebuildModel|Execute|  
   

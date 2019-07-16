@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 4f0930e3f7f9d037ebb3033cc947f243657a1480
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 8bf0485b63e341dbeff24a1974df840b0a28dfef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961898"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutorial: Análise de dados de R para desenvolvedores do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,7 +46,7 @@ O objetivo deste tutorial com várias partes é uma introdução a um fluxo de t
 
 Depois que o modelo foi salvo no banco de dados, chame o modelo de previsões de [!INCLUDE[tsql](../../includes/tsql-md.md)] usando procedimentos armazenados.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Todas as tarefas podem ser feitas usando [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimentos armazenados no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f9c16ccd42dbd1ef1e375cdc98fbcd155b8dc07b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 345b87539452a974b054b3aec07c648a3c2b6fad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947392"
 ---
 # <a name="axis-example-vbscript"></a>Exemplo Axis (VBScript)
 Esta página Active Server Page exibe dados OLAP de uma cadeia de caracteres de consulta MDX e grava o conjunto de células resultante em uma estrutura de tabela HTML.  

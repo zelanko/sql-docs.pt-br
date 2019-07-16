@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6c42ecb976884573e313c06adc4241e202e123df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a2dad29a3a1b0ca5fdae12b11b190fd7e59380f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62503569"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937681"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +54,7 @@ AND [Age] <40
   
 ## <a name="see-also"></a>Consulte também  
  [Conjuntos de dados de treinamento e teste](../analysis-services/data-mining/training-and-testing-data-sets.md)   
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Consultas de mineração de dados](../analysis-services/data-mining/data-mining-queries.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984540"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introdução ao SSMA para MySQL (MySQLToSQL)
 SQL Server SSMA (Migration Assistant) para MySQL permite converter esquemas de banco de dados MySQL para esquemas SQL Server ou SQL do Azure, carregar os esquemas resultantes no SQL Server ou o Azure SQL DB e migrar dados do MySQL para o SQL Server ou SQL do Azure rapidamente.  
@@ -56,7 +55,7 @@ Para obter mais informações sobre essas tarefas e como realizá-las, consulte 
   
 As seções a seguir descrevem os recursos da interface do usuário do SSMA.  
   
-### <a name="metadata-explorers"></a>Metadata Explorers  
+### <a name="metadata-explorers"></a>Gerenciadores de metadados  
 O SSMA contém dois gerenciadores de metadados para procurar e executar ações nos bancos de dados MySQL e SQL Server.  
   
 ### <a name="mysql-metadata-explorer"></a>Gerenciador de metadados do MySQL  
@@ -109,7 +108,7 @@ A tabela a seguir mostra os menus do SSMA.
 |||  
 |-|-|  
 |**Menu**|**Descrição**|  
-|**File**|Contém comandos para trabalhar com projetos, conectar-se ao MySQL e conectar-se ao SQL Server ou SQL do Azure.|  
+|**Arquivo**|Contém comandos para trabalhar com projetos, conectar-se ao MySQL e conectar-se ao SQL Server ou SQL do Azure.|  
 |**Editar**|Contém comandos para localizar e trabalhar com texto nas páginas de detalhes. Para abrir **gerenciar indicadores** caixa de diálogo, no menu Editar clique em Gerenciar indicadores. Na caixa de diálogo, você verá uma lista de indicadores atuais. Você pode usar os botões no lado direito da caixa de diálogo para gerenciar os indicadores.|  
 |**Exibir**|Contém o **sincronizar metadados Explorers** comando. Que sincroniza os objetos entre o Gerenciador de metadados do MySQL e SQL Server ou o Gerenciador de metadados do Azure SQL DB. Também contém comandos para mostrar e ocultar os **saída** e **lista de erros** painéis e uma opção **Layouts** para gerenciar com os Layouts.|  
 |**Ferramentas**|Contém comandos para criar relatórios, converter o esquema, de atualização do banco de dados, migrar objetos e dados e salvar como Script. Também fornece acesso para o **configurações globais, configurações do projeto padrão** e **configurações do projeto** caixas de diálogo.|  

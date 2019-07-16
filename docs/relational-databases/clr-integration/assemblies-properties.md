@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5983223e1f945cc9f09ceee08a07230847c5f869
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cab96fb470e4cc19da0612163f364d6339841985
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027967"
 ---
 # <a name="assemblies---properties"></a>Assemblies – propriedades
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47735484"
  Digite um nome de proprietário ou nome de esquema ou selecione na lista.  
   
  **Conjunto de permissões**  
- Defina o nível de segurança para o assembly. Três níveis de segurança são fornecidos: **seguro**, **acesso externo**, e **Unsafe** acesso.  
+ Defina o nível de segurança para o assembly. São fornecidos três níveis de segurança: **Seguro**, **External access**, e **Unsafe** acesso.  
   
  **Caminho para assembly**  
  Digite o caminho do arquivo assembly.  

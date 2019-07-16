@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ceb128aec3a4cbe5ef7180483eb2a033ae57138
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996245"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Apêndice B: Tabelas de transição de estado ODBC
 As tabelas neste apêndice mostram como funções ODBC causam transições do ambiente, conexão, instrução e estados do descritor. O estado do ambiente, conexão, instrução ou descritor geralmente determina quando as funções que usam o tipo correspondente do identificador (ambiente, conexão, instrução ou descritor) podem ser chamadas. Os estados de ambiente, conexão, instrução e descritor se sobrepor aproximadamente conforme mostrado nas ilustrações a seguir. Por exemplo, a sobreposição exata da conexão declara C5 e C6 e estados de instrução que S1 por meio de S12 é dependente da fonte, dados uma vez que as transações começam em momentos diferentes em diferentes fontes de dados, e depende do estado de descritor D1i (implicitamente alocados descritor) sobre o estado da instrução ao qual o descritor está associado, enquanto o estado D1e (descritor alocado explicitamente) é independente do estado de qualquer instrução. Para obter uma descrição de cada estado, consulte [transições de ambiente](../../../odbc/reference/appendixes/environment-transitions.md), [transições de Conexão](../../../odbc/reference/appendixes/connection-transitions.md), [transições de instrução](../../../odbc/reference/appendixes/statement-transitions.md), e [transições de descritor ](../../../odbc/reference/appendixes/descriptor-transitions.md), mais adiante neste apêndice.  
@@ -67,7 +66,7 @@ As tabelas neste apêndice mostram como funções ODBC causam transições do am
 |d|Precisa de dados. A função retornou SQL_NEED_DATA.|  
 |e|Erro. A função retornou SQL_ERROR.|  
 |i|Linha inválida. O cursor é posicionado em uma linha no resultado do conjunto e a linha tinham sido excluídos ou ocorreu um erro em uma operação na linha. Se a matriz de status de linha existia, o valor na matriz de status de linha para a linha era SQL_ROW_DELETED ou SQL_ROW_ERROR. (A matriz de status de linha é apontada pelo atributo de instrução SQL_ATTR_ROW_STATUS_PTR.)|  
-|nf|Não foi encontrado. A função retornar SQL_NO_DATA. Isso não se aplica quando **SQLExecDirect**, **SQLExecute**, ou **SQLParamData** retorna SQL_NO_DATA após a execução de um pesquisada instrução update ou delete.|  
+|NF|Não foi encontrado. A função retornar SQL_NO_DATA. Isso não se aplica quando **SQLExecDirect**, **SQLExecute**, ou **SQLParamData** retorna SQL_NO_DATA após a execução de um pesquisada instrução update ou delete.|  
 |np|Não preparado. A instrução não foi preparada.|  
 |nr|Nenhum resultado. A instrução não irá ou não tiver criado um conjunto de resultados.|  
 |o|Outra função. Outra função estava em execução de forma assíncrona.|  

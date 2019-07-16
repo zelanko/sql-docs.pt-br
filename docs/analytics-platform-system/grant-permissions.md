@@ -2,19 +2,18 @@
 title: Permissões Grant de T-SQL – Parallel Data Warehouse | Microsoft Docs
 description: Permissões Grant de T-SQL para operações de banco de dados no Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 01ef7b199a07be8bbc2dc1dee40d9c4d5771db1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15798edc4d6a9b1f00c8dd489dfed76a39e5f340
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960944"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Permissões Grant de T-SQL para Parallel Data Warehouse
 Permissões Grant de T-SQL para operações de banco de dados no Parallel Data Warehouse.

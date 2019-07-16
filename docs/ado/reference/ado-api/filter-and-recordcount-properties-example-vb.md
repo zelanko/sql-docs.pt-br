@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0fbb20e623c37528285b8c1dd248ad24217cb2bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f94440d9ddd0d0b5091f2a106f603397147ebda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918647"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Exemplo das propriedades Filter e RecordCount (VB)
 Este exemplo aberto um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) na tabela editores a ***Pubs*** banco de dados. Ele usa o [filtro](../../../ado/reference/ado-api/filter-property.md) propriedade para limitar o número de registros visíveis para esses editores em um país/região específico. O **RecordCount** propriedade é usada para mostrar a diferença entre os conjuntos de registros filtrados e não filtradas.  

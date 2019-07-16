@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e9136a3057000258518cb64d048a8cc6245e7c20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d5cc44950754c4b63e644d2d9210edcc94bd9ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933261"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 Especifica qual funcionalidade do [dá suporte a](../../../ado/reference/ado-api/supports-method.md) método deve testar.  
@@ -43,7 +42,7 @@ Especifica qual funcionalidade do [dá suporte a](../../../ado/reference/ado-api
 |**adUpdateBatch**|0x10000|Dá suporte à atualização em lotes ([UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) e [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) métodos) para transmitir grupos de alterações no provedor.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Package: **com.ms.wfc.data**  
+ Pacote: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

@@ -1,5 +1,5 @@
 ---
-title: Distinct (MDX) | Microsoft Docs
+title: Distinto (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: fc3e4680991f88743bbab8eec1de3bb629c94b66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 283f1c10f4030ea2efc23ee237a61b402cefb396
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999895"
 ---
 # <a name="distinct-mdx"></a>Distinct (MDX)
 

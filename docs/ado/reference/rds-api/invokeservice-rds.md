@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d7d0c205b5045f4cd743776894f62fbc4f0750cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86ebb27ebdc5de5a045304afe45cd8653e491827
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963868"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 Retorna um ponteiro para a interface solicitada em uma versão mais robustos do objeto.  
