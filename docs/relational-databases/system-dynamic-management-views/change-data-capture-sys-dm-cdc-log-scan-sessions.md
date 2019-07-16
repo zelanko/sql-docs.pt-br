@@ -19,26 +19,25 @@ helpviewer_keywords:
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d789ec1dd936b7eb40ecae56226a5879754a2260
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698584"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017989"
 ---
 # <a name="change-data-capture---sysdmcdclogscansessions"></a>Change Data Capture - DM cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada sessão de verificação de log no banco de dados atual. A última linha retornada representa a sessão atual. Você pode usar esta exibição para retornar informações de status sobre a sessão de exame de log atual ou informações agregadas sobre todas as sessões desde que a instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi iniciada pela última vez.  
    
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID da sessão.<br /><br /> 0 = os dados retornados nesta linha são uma agregação de todas as sessões como a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que foi iniciada por último.|  
 |**start_time**|**datetime**|A hora em que a sessão foi iniciada.<br /><br /> Quando **session_id** = 0, a hora de início da coleta de dados agregados.|  
 |**end_time**|**datetime**|A hora em que a sessão foi encerrada.<br /><br /> NULL = a sessão está ativa.<br /><br /> Quando **session_id** = 0, o tempo a última sessão foi encerrada.|  
 |**duration**|**bigint**|A duração da sessão em segundos.<br /><br /> 0 = a sessão não contém transações do Change Data Capture.<br /><br /> Quando **session_id** = 0, a soma da duração (em segundos) de todas as sessões com transações do change data capture.|  
-|**scan_phase**|**nvarchar(200)**|A fase atual da sessão. Estes são os valores possíveis e suas descrições:<br /><br /> 1: configuração de leitura<br />2: primeiro exame, criação de tabela de hash<br />3: verificar segundo<br />4: verificar segundo<br />5: verificar segundo<br />6: controle de versão do esquema<br />7: da última verificação<br />8: concluído<br /><br /> Quando **session_id** = 0, esse valor é sempre "Aggregate".|  
+|**scan_phase**|**nvarchar(200)**|A fase atual da sessão. Estes são os valores possíveis e suas descrições:<br /><br /> 1: Lendo a configuração<br />2: Primeira verificação enquanto a tabela de hash<br />3: Segunda verificação<br />4: Segunda verificação<br />5: Segunda verificação<br />6: Controle de versão do esquema<br />7: Última verificação<br />8: feito<br /><br /> Quando **session_id** = 0, esse valor é sempre "Aggregate".|  
 |**error_count**|**int**|Número de erros encontrados.<br /><br /> Quando **session_id** = 0, o número total de erros em todas as sessões.|  
 |**start_lsn**|**nvarchar(23)**|Iniciando LSN para a sessão.<br /><br /> Quando **session_id** = 0, iniciando o LSN da última sessão.|  
 |**current_lsn**|**nvarchar(23)**|LSN atual sendo verificado.<br /><br /> Quando **session_id** = 0, o LSN atual é 0.|  
@@ -52,7 +51,7 @@ ms.locfileid: "47698584"
 |**first_begin_cdc_lsn**|**nvarchar(23)**|Primeiro LSN que contém transações do Change Data Capture.<br /><br /> Quando **session_id** = 0, o primeiro LSN que contém transações do change data capture.|  
 |**last_commit_cdc_lsn**|**nvarchar(23)**|LSN do último registro de log de confirmação que contém transações do Change Data Capture.<br /><br /> Quando **session_id** = 0, o último registro de log de confirmação LSN para qualquer sessão que continha transações do change data capture|  
 |**last_commit_cdc_time**|**datetime**|Horário em que o último registro de log de confirmação foi processado que contém transações do Change Data Capture.<br /><br /> Quando **session_id** = 0, a hora em que o último log de confirmação registrar para qualquer sessão que continha transações do change data capture.|  
-|**latência**|**int**|A diferença, em segundos, entre **end_time** e **last_commit_cdc_time** na sessão. Este contador é populado no final da fase 7.<br /><br /> Quando **session_id** = 0, o último valor de latência diferente de zero registrado por uma sessão.|  
+|**latency**|**int**|A diferença, em segundos, entre **end_time** e **last_commit_cdc_time** na sessão. Este contador é populado no final da fase 7.<br /><br /> Quando **session_id** = 0, o último valor de latência diferente de zero registrado por uma sessão.|  
 |**empty_scan_count**|**int**|Número de sessões sucessivas que não contém nenhuma transação do Change Data Capture.|  
 |**failed_sessions_count**|**int**|Número de sessões que falharam.|  
   

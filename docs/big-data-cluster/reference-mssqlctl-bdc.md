@@ -5,17 +5,16 @@ description: Artigo de referência para comandos de bdc mssqlctl.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 96ecf1c987baffec0ff71b8b6ef5eccb204b3108
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: a9da2de60248246bee3daeeaee40d3071da69c4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957952"
 ---
 # <a name="mssqlctl-bdc"></a>mssqlctl bdc
 
@@ -27,8 +26,8 @@ O artigo a seguir fornece referência para o **bdc** comandos na **mssqlctl** fe
 |     |     |
 | --- | --- |
 [Criar mssqlctl bdc](#mssqlctl-bdc-create) | Crie um Cluster de Big Data.
-[mssqlctl bdc delete](#mssqlctl-bdc-delete) | Exclua o Cluster de Big Data.
-[mssqlctl bdc config](reference-mssqlctl-bdc-config.md) | Comandos de configuração.
+[exclusão de bdc mssqlctl](#mssqlctl-bdc-delete) | Exclua o Cluster de Big Data.
+[configuração do bdc mssqlctl](reference-mssqlctl-bdc-config.md) | Comandos de configuração.
 [o ponto de extremidade do mssqlctl bdc](reference-mssqlctl-bdc-endpoint.md) | Comandos de ponto de extremidade.
 [status do bdc mssqlctl](reference-mssqlctl-bdc-status.md) | Comandos de status.
 [depuração de bdc mssqlctl](reference-mssqlctl-bdc-debug.md) | Comandos de depuração.

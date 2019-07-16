@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 012e454d03a0eb4ad16095353351d67e50d9586a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 010d05990396c10836c0a2130e5d9f4392ae56ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061514"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069865"
 ---
 # <a name="fetching-a-row-of-data"></a>Buscar uma linha de dados
 Para buscar uma linha de dados, um aplicativo chama **SQLFetch**. **SQLFetch** podem ser chamados com qualquer tipo de cursor, mas ele só move o cursor de conjunto de linhas em uma direção de somente avanço. **SQLFetch** avança o cursor para a próxima linha e retorna os dados para todas as colunas que foram ligados com chamadas para **SQLBindCol**. Quando o cursor atinge o final do resultado definido, **SQLFetch** retorne SQL_NO_DATA. Para obter exemplos de chamada **SQLFetch**, consulte [usando SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  

@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 571ed8140e408577626c437d38080ccabb6c241f
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 350b1eca94f8041a0a38105c650e1c0ec7e1f617
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046278"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ fn_get_audit_file ( file_pattern,
   
 ## <a name="arguments"></a>Argumentos  
  *file_pattern*  
- Especifica o diretório ou caminho e o nome de arquivo do conjunto de arquivos de auditoria que será lido. É do tipo **nvarchar (260)**. 
+ Especifica o diretório ou caminho e o nome de arquivo do conjunto de arquivos de auditoria que será lido. É do tipo **nvarchar (260)** . 
  
  - **SQL Server**:
     
@@ -70,7 +69,7 @@ fn_get_audit_file ( file_pattern,
 >  Indicar um caminho sem um padrão de nome de arquivo irá gerar um erro.  
   
  *initial_file_name*  
- Especifica o caminho e o nome de um arquivo especificado no conjunto de arquivos de auditoria a partir do qual iniciar a leitura dos registros de auditoria. É do tipo **nvarchar (260)**.  
+ Especifica o caminho e o nome de um arquivo especificado no conjunto de arquivos de auditoria a partir do qual iniciar a leitura dos registros de auditoria. É do tipo **nvarchar (260)** .  
   
 > [!NOTE]  
 >  O *initial_file_name* argumento deve conter entradas válidas ou deve conter um padrão | Valor nulo.  
@@ -84,7 +83,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>Tabelas retornadas  
  A tabela a seguir descreve o conteúdo do arquivo de auditoria que pode ser retornado por essa função.  
   
-| Nome da coluna | Tipo | Descrição |  
+| Nome da coluna | type | Descrição |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | A identificação da ação. Não permite valor nulo. |  
 | additional_information | **nvarchar(4000)** | Informações exclusivas que se aplicam somente a um evento são retornadas como XML. Um número pequeno de ações auditável contém esse tipo de informação.<br /><br /> Um nível de pilha TSQL será exibido em formato XML para ações que tenham pilha TSQL associada a elas. O formato XML será:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> O nest_level do quadro indica o nível de aninhamento atual do quadro. O nome do Módulo é representado em formato de três partes (database_name, schema_name e object_name).  O nome do módulo será analisado para escape de caracteres de xml inválido, como `'\<'`, `'>'`, `'/'`, `'_x'`. Eles serão de saída como `_xHHHH\_`. O HHHH representa o código UCS-2 hexadecimal de quatro dígitos do caractere<br /><br /> Permite valor nulo. Retornará NULL quando o evento não reportar informações adicionais. |

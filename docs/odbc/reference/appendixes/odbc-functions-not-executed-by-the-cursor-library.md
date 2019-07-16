@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2941522-75eb-4db9-9468-4800b884dac2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e3daee4ea5f5d46ecf0e7490e1d2e82303dd8a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62fcf860aba5c9f0be80e575428a362a7f3ca588
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100649"
 ---
 # <a name="odbc-functions-not-executed-by-the-cursor-library"></a>Funções ODBC não executadas pela biblioteca de cursores
 > [!IMPORTANT]  

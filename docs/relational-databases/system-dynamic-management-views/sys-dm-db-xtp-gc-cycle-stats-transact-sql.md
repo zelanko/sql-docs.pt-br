@@ -19,32 +19,31 @@ helpviewer_keywords:
 ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b59b0bdfb2852c20c2f13641682a1adff3547662
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 95e173cd20bd04c3b5a5a6cd7ad7299ef13971d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026854"
 ---
 # <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Envia o estado atual das transações confirmadas que excluíram uma ou mais linhas. O thread inativo de coleta de lixo é ativado a cada minuto ou quando o número de transações DML confirmadas excede um limite interno desde o último ciclo de coleta de lixo. Como parte do ciclo de coleta de lixo, ele move as transações que foram confirmadas em uma ou mais filas associadas às gerações. As transações que geraram versões obsoletas são agrupadas em uma unidade de 16 transações em 16 gerações, da seguinte maneira:  
   
--   Geração 0: armazena todas as transações confirmadas antes da transação ativa mais antiga. As versões de linha geradas por essas transações são imediatamente disponibilizadas para coleta de lixo.  
+-   Geração 0: Isso armazena todas as transações confirmadas antes que a transação ativa mais antiga. As versões de linha geradas por essas transações são imediatamente disponibilizadas para coleta de lixo.  
   
--   Gerações 1 a 14: armazena as transações com carimbo de data/hora posterior à transação ativa mais antiga. As versões de linha não podem ser coletadas como lixo. Cada geração pode reter até 16 transações. Pode existir um total de 224 (14 * 16) transações nessas gerações.  
+-   Gerações 1 a 14: Armazena as transações com carimbo de hora maior que a transação ativa mais antiga. As versões de linha não podem ser coletadas como lixo. Cada geração pode reter até 16 transações. Pode existir um total de 224 (14 * 16) transações nessas gerações.  
   
--   Geração 15: as transações restantes com carimbo de data/hora posterior à transação ativa mais antiga vai para a geração 15. Similar à geração 0, não há limite de número de transações na geração 15.  
+-   Geração 15: As transações restantes com carimbo de hora maior que a transação ativa mais antiga vai para a geração 15. Similar à geração 0, não há limite de número de transações na geração 15.  
   
  Quando há pressão de memória, o thread de coleta de lixo atualiza agressivamente a dica de transação ativa mais antiga, o que força a coleta de lixo.  
   
  Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
   
-|Nome da coluna|Tipo|Descrição|  
+|Nome da coluna|type|Descrição|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|Um identificador de exclusividade para o ciclo de coleta de lixo.|  
 |ticks_at_cycle_start|**bigint**|Tiques no momento em que o ciclo foi iniciado.|  

@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a0fdeb7bb85fb00656390dcc537ccebd3b9142bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c1b91f8c1d8f032516a7b2e04a8533f4b792b3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030053"
 ---
 # <a name="using-database-mail"></a>Usando o Database Mail
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47784904"
 ## <a name="examples"></a>Exemplos  
  Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
- Para programas que usam [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Mail, você deve incluir o **importações** instrução para qualificar o namespace do Mail. Insira a instrução após outras instruções **Imports** , antes de qualquer declaração no aplicativo, como:  
+ Para programas que usam o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Mail, inclua a instrução **Imports** para qualificar o namespace do Mail. Insira a instrução após outras instruções **Imports** , antes de qualquer declaração no aplicativo, como:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

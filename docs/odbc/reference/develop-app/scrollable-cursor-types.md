@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6290d18ec26fcfa6e2960c3a2c1c408938d9e0e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 210b66a800670f033508f903b18778f88ddd4c8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061631"
 ---
 # <a name="scrollable-cursor-types"></a>Tipos de cursor rolável
 Os quatro tipos de cursores roláveis são estáticos, dinâmicos, controlados por e misto. Cursores estáticos detectam poucas ou nenhuma alteração, mas são relativamente baratos implementar. Cursores dinâmicos detectam todas as alterações, mas são caros de implementar. Cursores controlados por e mistos se encontra a média, detectando a maioria das alterações, mas, ao menos despesas que cursores dinâmicos.  

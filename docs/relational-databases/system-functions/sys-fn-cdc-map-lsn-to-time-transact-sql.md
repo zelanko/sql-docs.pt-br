@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 64f5763284ec35caee46565ec596e72870b5631f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3573b876a10b4400969bf63200682e91bfc45fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756775"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046338"
 ---
 # <a name="sysfncdcmaplsntotime-transact-sql"></a>sys.fn_cdc_map_lsn_to_time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sys.fn_cdc_map_lsn_to_time ( lsn_value )
   
 ## <a name="arguments"></a>Argumentos  
  *lsn_value*  
- É o valor LSN a ser utilizado para comparação. *lsn_value* está **binário (10)**.  
+ É o valor LSN a ser utilizado para comparação. *lsn_value* está **binário (10)** .  
   
 ## <a name="return-type"></a>Tipo de retorno  
  **datetime**  

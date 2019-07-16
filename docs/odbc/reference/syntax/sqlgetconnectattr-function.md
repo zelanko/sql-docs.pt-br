@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7051c94e4883c57daab4d5706feb073323e1c371
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06c158c49c0ce175204bc9738a4f4136db7fe344
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006218"
 ---
 # <a name="sqlgetconnectattr-function"></a>Função SQLGetConnectAttr
 **Conformidade com**  
@@ -50,7 +49,7 @@ SQLRETURN SQLGetConnectAttr(
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *ConnectionHandle*  
+ *Identificador da conexão*  
  [Entrada] Identificador de conexão.  
   
  *Atributo*  

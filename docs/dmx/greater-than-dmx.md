@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 17c48c5321a0eef25a7fdf3ad0fba5aa643398d4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9156525f463a3597c60421be7de0af64bd4f4ac7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38046402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074820"
 ---
 # <a name="gt-greater-than-dmx"></a>&gt; (Maior que) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,6 +37,6 @@ DMX_Expression > DMX_Expression
 ## <a name="see-also"></a>Consulte também  
  [Operadores de comparação &#40;DMX&#41;](../dmx/operators-comparison.md)   
  [Extensões de mineração de dados &#40;DMX&#41; referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6ccc858603fc5662f380c5d3ae48d777005ddac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bf24afb193742125fda0d6693274acb98d186c90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018933"
 ---
 # <a name="sqlrowcount-function"></a>Função SQLRowCount
 **Conformidade com**  
