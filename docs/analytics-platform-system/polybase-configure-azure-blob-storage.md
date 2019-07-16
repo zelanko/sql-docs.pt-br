@@ -2,19 +2,18 @@
 title: Configurar o PolyBase para acessar dados externos no armazenamento de BLOBs do Azure | Microsoft Docs
 description: Explica como configurar o PolyBase no Parallel Data Warehouse para se conectar ao Hadoop externo.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7bbf2dface759da63bd6b9845f4e62321b1cbe76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82c57ef57a01cabf2786c71fc53aed3660289451
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960284"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurar o PolyBase para acessar dados externos no armazenamento de BLOBs do Azure
 
@@ -23,7 +22,7 @@ O artigo explica como usar o PolyBase em uma instância do SQL Server para consu
 > [!NOTE]
 > Pontos de acesso atualmente suporta apenas o armazenamento com redundância (local LRS) o Blob do Azure padrão de uso geral v1.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
  - Armazenamento de BLOBs do Azure em sua assinatura.
  - Um contêiner criado no armazenamento de BLOBs do Azure.

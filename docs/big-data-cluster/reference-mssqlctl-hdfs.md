@@ -5,17 +5,16 @@ description: Artigo de referência de comandos do hdfs mssqlctl.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8f211faf827bdf925a8fde938fff8f96998bc359
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 6a2044594065e6f98ed919ace2171279e6f72c25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957912"
 ---
 # <a name="mssqlctl-hdfs"></a>mssqlctl hdfs
 
@@ -36,8 +35,8 @@ O artigo a seguir fornece referência para o **hdfs** comandos na **mssqlctl** f
 [mssqlctl hdfs rm](#mssqlctl-hdfs-rm) | Remova um arquivo ou diretório.
 [mssqlctl hdfs rmr](#mssqlctl-hdfs-rmr) | Removem recursivamente um arquivo ou diretório.
 [mssqlctl hdfs chmod](#mssqlctl-hdfs-chmod) | Altere a permissão no arquivo ou diretório especificado.
-[mssqlctl hdfs chown](#mssqlctl-hdfs-chown) | Altere o proprietário ou o grupo do arquivo especificado.
-## <a name="mssqlctl-hdfs-shell"></a>mssqlctl hdfs shell
+[alterar o proprietário mssqlctl hdfs](#mssqlctl-hdfs-chown) | Altere o proprietário ou o grupo do arquivo especificado.
+## <a name="mssqlctl-hdfs-shell"></a>shell do hdfs mssqlctl
 O shell do HDFS é um shell de comando interativo simples para o sistema de arquivos HDFS.
 ```bash
 mssqlctl hdfs shell 
@@ -294,7 +293,7 @@ Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 Cadeia de caracteres de consulta JMESPath. Ver [ http://jmespath.org/ ](http://jmespath.org/]) para obter mais informações e exemplos.
 #### `--verbose`
 Aumente o nível de detalhes do registro em log. Use--debug para logs de depuração completos.
-## <a name="mssqlctl-hdfs-chown"></a>mssqlctl hdfs chown
+## <a name="mssqlctl-hdfs-chown"></a>alterar o proprietário mssqlctl hdfs
 Altere o proprietário ou o grupo do arquivo especificado.
 ```bash
 mssqlctl hdfs chown --path -p 

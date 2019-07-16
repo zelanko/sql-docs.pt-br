@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 051b96e608fdd4aece4e7e712e5cf8ef51f95c40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eaa57e58b05b1a5d68355d71cbd6fa6c2ca47ee0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014793"
 ---
 # <a name="building-a-knowledge-base"></a>Criando uma base de dados de conhecimento
 
@@ -35,7 +34,7 @@ ms.locfileid: "66802213"
 |Adicionar conhecimento a uma base de dados de conhecimento através de descoberta de conhecimento; gerenciamento de valor de domínio; adicionando uma política de comparação; importando um conhecimento, domínio ou valores; ou usando a base de dados de conhecimento padrão, Dados do DQS.|[Adicionar conhecimento a uma base de dados de conhecimento](../data-quality-services/adding-knowledge-to-a-knowledge-base.md)|  
 |Analisar um exemplo de dados para critérios de qualidade de dados.|[Executar descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md)|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

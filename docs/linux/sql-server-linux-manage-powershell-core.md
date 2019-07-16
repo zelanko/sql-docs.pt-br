@@ -8,13 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-manager: jroth
-ms.openlocfilehash: e96fe471f78e02e5667431f7065a169a5c136417
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d8d0675bbb7ebbedc9d1efec29fff8854670c10f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952533"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>Gerenciar o SQL Server no Linux com o PowerShell Core
 

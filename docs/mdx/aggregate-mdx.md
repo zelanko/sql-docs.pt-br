@@ -1,5 +1,5 @@
 ---
-title: Aggregate (MDX) | Microsoft Docs
+title: Função Aggregate (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 11e10d5a03702329a5ed59ed42acee0abc2d27c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017174"
 ---
 # <a name="aggregate-mdx"></a>Função Aggregate (MDX)
 

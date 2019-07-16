@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dc503340e741e2503803cc51ad4a57c15e2a8a7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa5096a19753bf860453b23476116fd422f3c6cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941133"
 ---
 # <a name="commit-a-version-master-data-services"></a>Confirmar uma versão (Master Data Services)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65484290"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], confirme uma versão de um modelo para evitar alterações para os membros do modelo e seus atributos. As versões confirmadas não podem ser desbloqueadas.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Gerenciamento de Versões** .  

@@ -31,14 +31,13 @@ helpviewer_keywords:
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cdd0c4efafbab577aef1016d367ca2210ea3d863
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6201ddd9a04fd95ae27b987710f94701161577cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011428"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005285"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modelo de objeto de carregamento em massa de XML do SQL Server (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -140,7 +139,7 @@ ms.locfileid: "56011428"
  O valor padrão é FALSE.  
   
  TempFilePath  
- Especifica o caminho do arquivo onde o Carregamento em Massa de XML cria os arquivos temporários para um carregamento em massa transacionado. (Essa propriedade só é útil quando a propriedade de Transação é definida como TRUE.) Você precisa garantir que a conta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usada para o Carregamento em Massa de XML tenha acesso a esse caminho. Se essa propriedade não for definida, o Carregamento em Massa de XML armazenará os arquivos temporários no local especificado na variável de ambiente TEMP.  
+ Especifica o caminho do arquivo onde o Carregamento em Massa de XML cria os arquivos temporários para um carregamento em massa transacionado. (Essa propriedade é útil somente quando a propriedade de transação é definida como TRUE.) Você deve garantir que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conta que é usada para o XML Bulk Load tenha acesso a esse caminho. Se essa propriedade não for definida, o Carregamento em Massa de XML armazenará os arquivos temporários no local especificado na variável de ambiente TEMP.  
   
  Transaction  
  Especifica se o Carregamento em Massa deveria ser executado como uma transação, caso em que a reversão será garantida se houver falha do Carregamento em Massa. Essa é uma propriedade booliana. Se a propriedade for definida como TRUE, o Carregamento em Massa ocorrerá em um contexto transacional. A propriedade TempFilePath é útil somente quando a transação é definida como TRUE.  

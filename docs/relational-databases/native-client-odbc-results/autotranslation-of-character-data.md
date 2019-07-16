@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 07f4dd70166928ed517e46fceb5a3ef81eba5bee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0e5ff3b73bfab224d21c35d1eff801df487b327
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937149"
 ---
 # <a name="autotranslation-of-character-data"></a>Tradução automática de dados de caracteres
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,6 +64,6 @@ ms.locfileid: "47839794"
   
 ## <a name="see-also"></a>Consulte também  
  [Processando resultados &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)   
- [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

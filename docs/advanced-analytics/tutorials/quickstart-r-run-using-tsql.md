@@ -7,20 +7,19 @@ ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 1c3ee703bca46bf46dba8225e1d28da3174dc932
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 331184f49918dbb17b7b97590b3155cbc8eb89ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961982"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>Início Rápido: Script de R "Hello world" no SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Neste início rápido, você aprenderá conceitos-chave, executando um "Hello World" R script inT-SQL, uma introdução para o **sp_execute_external_script** procedimento armazenado do sistema. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Um início rápido anterior, [R Verifique se existe no SQL Server](quickstart-r-verify.md), fornece informações e links para configurar o ambiente de R necessários para este início rápido.
 
@@ -91,4 +90,4 @@ Entradas para esse procedimento armazenado incluem:
 Agora que executar alguns scripts de R simples, dar uma olhada nas estruturação de entradas e saídas.
 
 > [!div class="nextstepaction"]
-> [Guia de início rápido: Lidar com entradas e saídas](quickstart-r-inputs-and-outputs.md)
+> [Início Rápido: Lidar com entradas e saídas](quickstart-r-inputs-and-outputs.md)

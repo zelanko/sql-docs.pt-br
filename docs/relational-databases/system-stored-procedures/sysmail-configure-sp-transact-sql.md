@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: abe47df497b61d35c66bfebfb3ba5a75fad0e183
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 7984fba52f813644c9dcb25bca2beb123be85622
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017724"
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,27 +41,27 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@parameter_name** =] **'**_parameter_name_**'**  
+ [ **@parameter_name** =] **'** _parameter_name_ **'**  
  O nome do parâmetro a ser alterado.  
   
- [**@parameter_value** =] **'**_parameter_value_**'**  
+ [ **@parameter_value** =] **'** _parameter_value_ **'**  
  O novo valor do parâmetro.  
   
- [**@description** =] **'**_descrição_**'**  
+ [ **@description** =] **'** _descrição_ **'**  
  Uma descrição do parâmetro.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="remarks"></a>Comentários  
  O Database Mail usa os seguintes parâmetros:  
   
 ||||  
 |-|-|-|  
-|Nome do parâmetro|Descrição|Valor Padrão|  
+|Nome do parâmetro|Descrição|Default Value|  
 |*AccountRetryAttempts*|O número de vezes que o processo de email externo tenta enviar a mensagem de email usando cada conta no perfil especificado.|**1**|  
 |*AccountRetryDelay*|O período de tempo, em segundos, que o processo de email externo deve esperar entre tentativas de envio de uma mensagem.|**5000**|  
 |*DatabaseMailExeMinimumLifeTime*|O período mínimo de tempo, em segundos, que o processo de email externo permanece ativo. Quando o Database Mail estiver enviando muitas mensagens, aumente este valor para manter o Database Mail ativo e evitar a sobrecarga de inícios e paradas frequentes.|**600**|  

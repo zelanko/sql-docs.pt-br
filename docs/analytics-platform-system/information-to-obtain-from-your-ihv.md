@@ -2,19 +2,18 @@
 title: Obtenha informações do IHV - Analytics Platform System | Microsoft Docs
 description: Informações a serem obtidas do IHV sobre o dispositivo do Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 57b61ed7741bc6d36b7531a62416893e7cc10fb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 016a20567968e45456be79c8c67e77d7c3fbb2bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150227"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960834"
 ---
 # <a name="information-to-obtain-from-your-ihv"></a>Informações a serem obtidas do IHV
 Quando o seu fornecedor independente de hardware (IHV) seu novo dispositivo de PDW do SQL Server para você, eles também fornecerá informações sobre o hardware do dispositivo e a configuração que eles executaram em seu dispositivo. Você precisará dessas informações para administrar seu dispositivo.  

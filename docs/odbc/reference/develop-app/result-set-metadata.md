@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6d134515-e34d-4563-96d7-8ad7714818fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7dc88892fab2fd18dbcbec5ce54fa09c9c9b89e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d8da8c15c861fff4767aa598e1b989d8f699c95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020594"
 ---
 # <a name="result-set-metadata"></a>Metadados de conjunto de resultados
 *Metadados* são dados que descrevem outros dados. Por exemplo, os metadados de conjunto de resultados descrevem o conjunto de resultados, como o número de colunas no conjunto de resultados, os tipos de dados dessas colunas, seus nomes, precisão, nulidade e assim por diante.  

@@ -2,19 +2,18 @@
 title: Gerenciamento de carga de trabalho no Analytics Platform System | Microsoft Docs
 description: Gerenciamento de carga de trabalho no Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2281262c086f4d8dcab27debc8bb735ea5e8e1ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adc3928e1b7464d93970d280af6acf303ebc6d16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959744"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Gerenciamento de carga de trabalho no Analytics Platform System
 
@@ -60,7 +59,7 @@ A tabela a seguir descreve as classes de recursos e suas alocações de recursos
   
 |Classe de recurso|Importância da solicitação|Uso máximo da memória *|Slots de simultaneidade (máximo = 32)|Descrição|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|padrão|Média|400 MB|1|Por padrão, cada logon é permitida uma pequena quantidade de memória e recursos de simultaneidade para suas solicitações.<br /><br />Quando um logon é adicionado a uma classe de recurso, a nova classe terá precedência. Quando um logon é descartado de todas as classes de recursos, o logon reverterá para a alocação de recurso padrão.|  
+|default|Média|400 MB|1|Por padrão, cada logon é permitida uma pequena quantidade de memória e recursos de simultaneidade para suas solicitações.<br /><br />Quando um logon é adicionado a uma classe de recurso, a nova classe terá precedência. Quando um logon é descartado de todas as classes de recursos, o logon reverterá para a alocação de recurso padrão.|  
 |MediumRC|Média|1200 MB|3|Exemplos de solicitações que talvez seja necessário a classe de recursos de mídia:<br /><br />Operações de CTAS que tenham grandes junções de hash.<br /><br />Selecione as operações que precisam de mais memória para evitar o armazenamento em cache em disco.<br /><br />Carregar dados em índices columnstore clusterizados.<br /><br />Compilar, recompilar e reorganizar índices de columnstore clusterizado para tabelas menores com 10 a 15 colunas.|  
 |Largerc|Alta|2,8 GB|7|Exemplos de solicitações que talvez seja necessário a classe de recurso grande:<br /><br />Operações de CTAS muito grandes que junções de hash grande ou que contêm agregações grandes, como grandes cláusulas ORDER BY ou GROUP BY.<br /><br />Selecione as operações que exigem grandes quantidades de memória para operações como junções de hash ou agregações como cláusulas ORDER BY ou GROUP BY<br /><br />Carregar dados em índices columnstore clusterizados.<br /><br />Compilar, recompilar e reorganizar índices de columnstore clusterizado para tabelas menores com 10 a 15 colunas.|  
 |xlargerc|Alta|8.4 GB|22|É a classe de recurso muito grande para solicitações que podem exigir o consumo de recurso muito grande em tempo de execução.|  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2a2787be1bf44e1f214d396444a73b938acf7ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942834"
 ---
 # <a name="update-delete-and-insert-statements"></a>Instruções UPDATE, DELETE e INSERT
 Aplicativos baseados em SQL fazer alterações em tabelas, executando o **atualização**, **excluir**, e **inserir** instruções. Essas instruções fazem parte do nível de conformidade de gramática SQL mínima e devem ser suportadas por todos os drivers e fontes de dados.  
@@ -37,11 +36,11 @@ Aplicativos baseados em SQL fazer alterações em tabelas, executando o **atuali
   
  [**WHERE** _search-condition_]  
   
- **DELETE FROM** _table-name_[**WHERE** _search-condition_]  
+ **DELETE FROM** _nome da tabela_[**onde** _critério de pesquisa_]  
   
  **INSERT INTO** _nome da tabela_[ **(** _identificador de coluna_ [ **,** _deidentificadordecoluna_]... **)** ]  
   
- {*query-specification* &#124; **VALUES (** _insert-value_ [ **,** _insert-value_]... **)** }  
+ {*especificação de consulta* &#124; **valores (** _Inserir valor_ [ **,** _Inserir valor_]... **)** }  
   
  Observe que o *especificação de consulta* elemento só é válido nas gramáticas do Core e SQL estendida e que o *expressão* e *critério de pesquisa* elementos se tornem mais complexo nas gramáticas do Core e SQL estendida.  
   

@@ -2,19 +2,18 @@
 title: Exibições do sistema - Analytics Platform System Parallel Data Warehouse | Microsoft Docs
 description: Exibições do sistema para análise Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0cf828263d8d3c70fc9b972bbc584b73397cbf91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c459b3656f4b7a2d61cbe0109a78848894600fb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63252617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959965"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Exibições do sistema para o Analytics Platform System Parallel Data Warehouse
 Exibições do sistema para análise Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
@@ -213,7 +212,7 @@ Cada um desses DMV tem uma coluna específica, chamada pdw_node_id. Este é o id
 * [sys.dm_exec_external_operations](../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)
 * [sys.dm_exec_external_work](../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)
 
-## <a name="sql-server-informationschema-views"></a>SQL Server INFORMATION_SCHEMA views
+## <a name="sql-server-informationschema-views"></a>Exibições INFORMATION_SCHEMA do SQL Server
 * [CHECK_CONSTRAINTS](../relational-databases/system-information-schema-views/check-constraints-transact-sql.md)
 * [COLUMNS](../relational-databases/system-information-schema-views/columns-transact-sql.md)
 * [PARAMETERS](../relational-databases/system-information-schema-views/parameters-transact-sql.md)

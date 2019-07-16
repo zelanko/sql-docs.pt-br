@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: baea56d983ac1c2fff9016d1a385c8b4d918fb7a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1cd32e7224b66c012d3422a3754cb0b4e0ca325b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029777"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "52802788"
 |subscriber_type|**int**|O tipo de assinante:<br /><br /> **1** = global.<br /><br /> **2** = local.<br /><br /> **3** = anônimo.|  
 |subscription_type|**int**|O tipo de assinatura:<br /><br /> **0** = push.<br /><br /> **1** = pull.<br /><br /> **2** = anônimo.|  
 |sync_type|**tinyint**|O tipo de sincronização:<br /><br /> **1** = automatic.<br /><br /> **2** não = nenhuma sincronização.|  
-|descrição|**nvarchar(255)**|Uma descrição breve da assinatura.|  
+|description|**nvarchar(255)**|Uma descrição breve da assinatura.|  
 |priority|**real**|Especifica a prioridade da assinatura e permite a implementação de resolução de conflito com base em prioridade. É igual a **0.00** para todas as assinaturas locais ou anônimas.|  
 |recgen|**bigint**|O número da última geração recebida.|  
 |recguid|**uniqueidentifier**|A ID exclusiva da última geração recebida.|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c5b7babb3f34f906a241669bbde753e3beaace92
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662265"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946017"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Funções de Extensão XQuery – sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

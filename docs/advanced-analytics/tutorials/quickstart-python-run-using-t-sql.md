@@ -7,20 +7,19 @@ ms.date: 04/10/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 6d8da3ce90e915344f2380d4cd5cc866db6715ef
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: a2d0987441f8f26304590f5ccbde15a2e15cf3c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59476631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962063"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>Início Rápido: Script de Python de "Hello world" no SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Neste início rápido, você aprenderá conceitos-chave, executando um Python "Hello World" script inT-SQL, uma introdução para o **sp_execute_external_script** procedimento armazenado do sistema. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Um início rápido anterior, [Python Verifique se existe no SQL Server](quickstart-python-verify.md), fornece informações e links para configurar o ambiente do Python necessário para este início rápido.
 
@@ -98,4 +97,4 @@ Entradas para esse procedimento armazenado incluem:
 Agora que executar alguns scripts de Python simples, dar uma olhada nas estruturação de entradas e saídas.
 
 > [!div class="nextstepaction"]
-> [Guia de início rápido: Lidar com entradas e saídas](quickstart-python-inputs-and-outputs.md)
+> [Início Rápido: Lidar com entradas e saídas](quickstart-python-inputs-and-outputs.md)

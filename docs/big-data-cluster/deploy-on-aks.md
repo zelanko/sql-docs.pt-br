@@ -5,17 +5,16 @@ description: Saiba como configurar o serviço de Kubernetes do Azure (AKS) para 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 07/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 872988b29cddc202ea2c0f199548bc28b946b918
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: d39f62345a539094c585b196c9b6030b673f8e89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958482"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurar o serviço Kubernetes do Azure para implantações de cluster de big data do SQL Server
 
@@ -110,7 +109,7 @@ Escolha a versão mais recente disponível para seu cluster. Registre o número 
 
    Certifique-se de que criar o cluster do AKS no mesmo grupo de recursos que você usou nas seções anteriores.
 
-   **bash:**
+   **Bash:**
 
    ```bash
    az aks create --name kubcluster \

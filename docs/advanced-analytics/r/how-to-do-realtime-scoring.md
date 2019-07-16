@@ -7,13 +7,12 @@ ms.date: 08/30/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 001b90eafd26c90f730e5647f0dc62d756ca9d1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4af5fff7581ae2ae8f74e09603b75bca620ca775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62503767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962631"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Como gerar previsões e previsões usando modelos de aprendizado de máquina no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +25,7 @@ A tabela a seguir resume as estruturas de pontuação para previsão e previsõe
 
 | Metodologia           | Interface         | Requisitos da biblioteca | Velocidades de processamento |
 |-----------------------|-------------------|----------------------|----------------------|
-| Estrutura de extensibilidade | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Nenhum. Modelos podem ser baseados em qualquer função R ou Python | Centenas de milissegundos. <br/>Carregar um ambiente de tempo de execução tem um custo fixo, média de três a seis centenas de milissegundos, antes de todos os novos dados são pontuados. |
+| Estrutura de extensibilidade | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | nenhuma. Modelos podem ser baseados em qualquer função R ou Python | Centenas de milissegundos. <br/>Carregar um ambiente de tempo de execução tem um custo fixo, média de três a seis centenas de milissegundos, antes de todos os novos dados são pontuados. |
 | [Extensão CLR de pontuação em tempo real](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) em um modelo serializado | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Dezenas de milissegundos em média. |
 | [Pontuação nativa de extensão do C++](../sql-native-scoring.md) | [Função T-SQL PREVER](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) em um modelo serializado | R: RevoScaleR <br/>Python: revoscalepy | Menor que 20 milissegundos em média. | 
 

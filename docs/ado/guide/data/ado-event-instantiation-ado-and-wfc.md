@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1a4bb76e9172458c26e59dc366e8a321a548f34e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e83ffa37af2a6e33cad2645105b0df034f59d9f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926186"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Instanciação de evento ADO: ADO e WFC
 ADO para Windows Foundation Classes (ADO/WFC) se baseia no modelo de evento ADO e apresenta uma interface de programação de aplicativos simplificado. Em geral, o ADO/WFC intercepta eventos ADO, consolida os parâmetros de evento em uma classe de evento único e, em seguida, chama o manipulador de eventos.  
@@ -63,7 +62,7 @@ ADO para Windows Foundation Classes (ADO/WFC) se baseia no modelo de evento ADO 
   
 ## <a name="see-also"></a>Consulte também  
  [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO - WFC Syntax Index](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
+ [ADO – índice de sintaxe WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
  [Parâmetros de evento](../../../ado/guide/data/event-parameters.md)   
  [Como os manipuladores de eventos funcionam juntos](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [Tipos de eventos](../../../ado/guide/data/types-of-events.md)

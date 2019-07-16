@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56091fcb-71e1-463a-b8ae-c09108eece2f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2acf613e7fade721522f7b10b7c6478c9acf302f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8724fb0ff522730f2335653058c7eeaaf18b0810
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949204"
 ---
 # <a name="positions-collection-properties-methods-and-events"></a>Propriedades, métodos e eventos da coleção Positions
 ## <a name="properties"></a>Propriedades  
@@ -30,7 +29,7 @@ ms.locfileid: "66708741"
  [Método Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Events  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="see-also"></a>Consulte também  
  [Coleção Positions (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)

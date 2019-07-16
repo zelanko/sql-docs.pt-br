@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 634fbc4ddd96fd407aa124c98ae2b55897edaa71
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6adf267137533d7436349de5a42e8552072216bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942562"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "52391210"
 |**subject**|**nvarchar(4000)**|Assunto deste certificado.|  
 |**expiry_date**|**datetime**|Quando o certificado expira.|  
 |**start_date**|**datetime**|Quando o certificado é validado.|  
-|**impressão digital**|**varbinary(32)**|Hash SHA-1 do certificado. O hash SHA-1 é globalmente exclusivo.|  
+|**thumbprint**|**varbinary(32)**|Hash SHA-1 do certificado. O hash SHA-1 é globalmente exclusivo.|  
 |**attested_by**|**nvarchar(260)**|Somente para uso do sistema.|  
 |pvt_key_last_backup_date|**datetime**|A data e hora que última exportação da chave privada do certificado.|  
   

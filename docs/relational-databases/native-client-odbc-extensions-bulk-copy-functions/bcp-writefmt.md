@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2a0eaba9e5318f9f3486c36635b6f3c814cdf0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc379866c2d36ae4e84c284526b8cd5ad2fb931c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987710"
 ---
 # <a name="bcpwritefmt"></a>bcp_writefmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +41,7 @@ RETCODE bcp_writefmt (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *HDBC*  
+ *hdbc*  
  É o identificador de conexão ODBC habilitado para cópia em massa.  
   
  *szFormatFile*  
@@ -59,7 +58,7 @@ RETCODE bcp_writefmt (
  Para carregar um arquivo de formato salvo, use [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md).  
   
 > [!NOTE]  
->  O arquivo de formato gerado por **bcp_writefmt** só é suportado por versões dos **bcp** utilitário distributed com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0 e versões posterior.  
+>  O arquivo de formato gerado por **bcp_writefmt** só é suportado por versões do utilitário **bcp** distribuídas com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0 e posterior.  
   
 ## <a name="example"></a>Exemplo  
   

@@ -7,15 +7,14 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: df1c4c50e21ba5db5459da958f915be560500dc7
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: baa7a378c85668ac87ff8dc28422d4a6bbbcd225
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962026"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>Guia de início rápido: Lidar com tipos de dados e objetos usando o R no SQL Server
+# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>Início Rápido: Lidar com tipos de dados e objetos usando o R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Neste início rápido, obtenha uma introdução prática para problemas comuns que ocorrem durante a movimentação de dados entre R e SQL Server. A experiência obtida por meio deste exercício fornece essenciais em segundo plano ao trabalhar com dados em seu próprio script.
@@ -27,7 +26,7 @@ Problemas comuns de saber com antecedência incluem:
 + Às vezes, operações de conversão são necessárias
 + R e SQL usam objetos de dados diferentes
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Um início rápido anterior, [R Verifique se existe no SQL Server](quickstart-r-verify.md), fornece informações e links para configurar o ambiente de R necessários para este início rápido.
 
@@ -283,4 +282,4 @@ Para obter informações sobre o impacto no desempenho da conversão de tempo de
 O próximo início rápido, você aprenderá como aplicar funções R aos dados do SQL Server.
 
 > [!div class="nextstepaction"]
-> [Guia de início rápido: Usar funções de R com dados do SQL Server](quickstart-r-functions.md)
+> [Início Rápido: Usar funções de R com dados do SQL Server](quickstart-r-functions.md)

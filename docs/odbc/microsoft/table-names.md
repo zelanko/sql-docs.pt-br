@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: f7a5cb0a-3be7-4f46-82f9-64ffdbceaa9b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2d72d7868d0e19719ea7992bdb8ccd1f61f3718d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5dd8de055521f4a1831d20a9a34bedb9309d1de6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633152"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939784"
 ---
 # <a name="table-names"></a>Nomes de tabela
 Quando o dBASE, Microsoft Excel, Paradox, ou texto driver é usado, nomes de tabela que ocorrem na cláusula FROM de SELECT ou DELETE, depois da cláusula INTO em INSERT e UPDATE, CREATE TABLE e DROP TABLE podem conter um caminho válido, nome primário e arquivo de extensão de nome .  
   
  Uso de um nome de tabela em outro lugar em uma instrução SQL não suporta o uso de caminhos ou extensões, mas aceitará somente o nome primário (por exemplo, EMP de C:\ABC\EMP).  
   
- Nomes de correlação (alias) podem ser usados. Por exemplo:   
+ Nomes de correlação (alias) podem ser usados. Por exemplo:  
   
 ```  
 SELECT *    

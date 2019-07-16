@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2b7ce62ebedbd5d0622c8b69720f7153d7711a48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924513"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Registros e campos fornecidos pelo provedor
 Quando um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto é aberto, sua origem pode ser a linha atual de um aberto [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md), uma URL absoluta ou uma URL relativa em conjunto com um aberto [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto .  
@@ -56,7 +55,7 @@ Quando um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto
 ## <a name="resource-recordset-columns"></a>Colunas do conjunto de registros de recursos  
  Um *conjunto de registros de recurso* consiste nas seguintes colunas.  
   
-|Nome da coluna|Tipo|Descrição|  
+|Nome da coluna|type|Descrição|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|Somente leitura. Indica a URL do recurso.|  
 |RESOURCE_PARENTNAME|AdVarWChar|Somente leitura. Indica a URL absoluta do registro pai.|  
