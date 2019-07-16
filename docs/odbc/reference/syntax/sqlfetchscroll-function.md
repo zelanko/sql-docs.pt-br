@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 20a1580503ad141817edcf8e01772dfcc8dc39a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f3d82cc11763722f552896a29bb3831d892054b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003038"
 ---
 # <a name="sqlfetchscroll-function"></a>Função SQLFetchScroll
 **Conformidade com**  
@@ -148,7 +147,7 @@ SQLRETURN SQLFetchScroll(
 ## <a name="cursor-positioning-rules"></a>Regras de posicionamento do cursor  
  As seções a seguir descrevem as regras exatas para cada valor de FetchOrientation. Essas regras usar a notação a seguir.  
   
-|Notação|Significado|  
+|Notation|Significado|  
 |--------------|-------------|  
 |*Antes de iniciar*|O cursor em bloco é posicionado antes do início do conjunto de resultados. Se a primeira linha do novo conjunto de linhas é antes do início do conjunto de resultados, **SQLFetchScroll** retorne SQL_NO_DATA.|  
 |*Após o fim*|O cursor em bloco é posicionado após o final do resultado definido. Se a primeira linha do novo conjunto de linhas for após o final do conjunto de resultados **SQLFetchScroll** retorne SQL_NO_DATA.|  
@@ -164,7 +163,7 @@ SQLRETURN SQLFetchScroll(
 |Condição|Primeira linha do novo conjunto de linhas|  
 |---------------|-----------------------------|  
 |*Antes de iniciar*|1|  
-|*CurrRowsetStart + RowsetSize*[1] *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
+|*CurrRowsetStart + RowsetSize*[1]  *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1] *> LastResultRow*|*Após o fim*|  
 |*Após o fim*|*Após o fim*|  
   
@@ -177,7 +176,7 @@ SQLRETURN SQLFetchScroll(
 |---------------|-----------------------------|  
 |*Antes de iniciar*|*Antes de iniciar*|  
 |*CurrRowsetStart = 1*|*Antes de iniciar*|  
-|*1 < CurrRowsetStart <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*1 < CurrRowsetStart < = RowsetSize* <sup>[2].</sup>|*1* <sup>[1]</sup>|  
 |*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart - RowsetSize* <sup>[2]</sup>|  
 |*Após o término e LastResultRow < RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*Após o término LastResultRow e > = RowsetSize* <sup>[2]</sup>|*LastResultRow - RowsetSize + 1* <sup>[2].</sup>|  
@@ -193,7 +192,7 @@ SQLRETURN SQLFetchScroll(
 |---------------|-----------------------------|  
 |*(Antes de iniciar e FetchOffset > 0) OU (após final e FetchOffset < 0)*|*--* <sup>[1]</sup>|  
 |*BeforeStart e FetchOffset < = 0*|*Antes de iniciar*|  
-|*CurrRowsetStart = 1 AND FetchOffset < 0*|*Antes de iniciar*|  
+|*CurrRowsetStart = 1 FetchOffset AND < 0*|*Antes de iniciar*|  
 |*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 e &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Antes de iniciar*|  
 |*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 e &#124; FetchOffset &#124; < = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
 |*1 < = CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
@@ -229,14 +228,14 @@ SQLRETURN SQLFetchScroll(
   
 |Condição|Primeira linha do novo conjunto de linhas|  
 |---------------|-----------------------------|  
-|*Any*|*1*|  
+|*Qualquer*|*1*|  
   
 ## <a name="sqlfetchlast"></a>SQL_FETCH_LAST  
  As seguintes regras se aplicam.  
   
 |Condição|Primeira linha do novo conjunto de linhas|  
 |---------------|-----------------------------|  
-|*RowsetSize* <sup>[1]</sup> <= LastResultRow|*LastResultRow - RowsetSize + 1* <sup>[1]</sup>|  
+|*RowsetSize* <sup>[1]</sup> < = LastResultRow|*LastResultRow - RowsetSize + 1* <sup>[1]</sup>|  
 |*RowsetSize* <sup>[1]</sup> > LastResultRow|*1*|  
   
  [1] se o tamanho do conjunto de linhas tiver sido alterado desde a chamada anterior para buscar linhas, isso é o novo tamanho do conjunto de linhas.  
@@ -287,11 +286,11 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |Excluir linha 20|PRIOR|0|10 a 19|  
 |Inserir uma linha entre as linhas 21 e 22|PRIOR|0|11 a 20|  
 |Inserir uma linha entre as linhas 20 e 21|PRIOR|0|linha de 12 a 20, inserida|  
-|Excluir linha 21|RELATIVE|0|22 to 31<sup>[2]</sup>|  
+|Excluir linha 21|RELATIVE|0|22 a 31<sup>[2]</sup>|  
 |Excluir linha 21|RELATIVE|1|22 a 31|  
 |Inserir uma linha entre as linhas 21 e 22|RELATIVE|0|linha inserida 21, 22 a 29|  
 |Inserir uma linha entre as linhas 21 e 22|RELATIVE|1|22 a 31|  
-|Excluir linha 21|ABSOLUTE|21|22 to 31<sup>[2]</sup>|  
+|Excluir linha 21|ABSOLUTE|21|22 a 31<sup>[2]</sup>|  
 |Excluir linha 22|ABSOLUTE|21|21, 23 a 31|  
 |Inserir uma linha entre as linhas 21 e 22|ABSOLUTE|22|Linha inserida, 22 a 29|  
   

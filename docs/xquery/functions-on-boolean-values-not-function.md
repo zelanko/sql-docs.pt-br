@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5a39312142a2d81761320c1e5f75cefe2a85b9d7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038907"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>Funções em Valores Boolianos – função not 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ fn:not($arg as item()*) as xs:boolean
  Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
   
 ### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Usando a função XQuery de not () para localizar modelos de produto cujas descrições de catálogo não incluem o \<especificações > elemento.  
- A consulta a seguir constrói um XML que contém IDs de modelos de produto para modelos de produto cujas descrições de catálogo não incluem o elemento <`Specifications`>.  
+ A consulta a seguir constrói XML que contém as IDs de modelo de produto para modelos de produto cujas descrições de catálogo não incluem o <`Specifications`> elemento.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -94,7 +93,7 @@ WHERE ProductModelID=7
   
 -   Na consulta, o **não (@MachineHours)** predicado retornar True se não houver nenhuma **MachineHours** atributo.  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 ProductModelID Result   

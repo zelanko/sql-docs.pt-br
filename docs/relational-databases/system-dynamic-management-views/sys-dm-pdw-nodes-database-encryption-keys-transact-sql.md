@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 34de2634c0aa1dd6a0b55ef281dba4c7d8579afd
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 7819be3ffe1f3d3efc5d39c3973d089e3ab7757c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089138"
 ---
 # <a name="sysdmpdwnodesdatabaseencryptionkeys-transact-sql"></a>sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Retorna informações sobre o estado de criptografia de um banco de dados e suas chaves de criptografia de banco de dados associadas. **sys.dm_pdw_nodes_database_encryption_keys** fornece essas informações para cada nó. Para obter mais informações sobre a criptografia de banco de dados, consulte [criptografia transparente de dados (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md).  
   
-|Nome da coluna|Tipo de Dados|Descrição|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID do banco de dados físico em cada nó.|  
 |encryption_state|**int**|Indica se o banco de dados neste nó é criptografado ou não criptografado.<br /><br /> 0 = Nenhuma chave de criptografia de banco de dados presente, nenhuma criptografia<br /><br /> 1 = Sem-criptografia<br /><br /> 2 = Criptografia em andamento<br /><br /> 3 = Criptografado<br /><br /> 4 = Alteração de chave em andamento<br /><br /> 5 = Descriptografia em andamento<br /><br /> 6 = alteração de proteção em andamento (o certificado que está criptografando a chave de criptografia de banco de dados está sendo alterado.)|  

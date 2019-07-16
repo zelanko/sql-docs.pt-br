@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 996bf79c296ff11c708c687f5a084d73b0bcde95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b97ed315b8266c165a14a7f2b05912a7ae530b1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054678"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analisar relatórios de avaliação consolidado criados pelo Assistente de migração de dados com o Power BI
 
@@ -34,7 +33,7 @@ Você pode baixar exemplos de relatórios do Power BI para avaliações consolid
 
 Os relatórios a seguir estão incluídos: 
 
-- [Dashboard](#dashboard-report)
+- [Painel de controle](#dashboard-report)
 
   Inclui estatísticas de instantâneo e um relatório de detalhamento.
 

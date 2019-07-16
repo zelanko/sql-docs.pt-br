@@ -1,5 +1,5 @@
 ---
-title: NonEmptyCrossjoin (MDX) | Microsoft Docs
+title: Função NonEmptyCrossjoin (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7da56ac658f57d6eb664762f9dd94351df39fe0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d152b51e0c1c996e0bb3309e554a70683937493
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63456570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088351"
 ---
 # <a name="nonemptycrossjoin-mdx"></a>Função NonEmptyCrossjoin (MDX)
 

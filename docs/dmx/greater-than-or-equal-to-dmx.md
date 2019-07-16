@@ -1,5 +1,5 @@
 ---
-title: '&gt;= (Maior ou igual a) (DMX) | Microsoft Docs'
+title: '&gt;= (Maior que ou igual a) (DMX) | Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,15 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3bea462fcd0a2bd2258ae62be988eda2dff442a1
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: 3615dc8b5de0e5057e2dedaa0077aae51ed87ebe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074795"
 ---
-# <a name="gt-greater-than-or-equal-to-dmx"></a>&gt;= (Maior ou igual a) (DMX)
+# <a name="gt-greater-than-or-equal-to-dmx"></a>&gt;= (Maior que ou igual a) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Realiza uma operação de comparação que determina se o valor de uma expressão DMX (Data Mining Extensions) é maior do que ou igual ao valor de outra expressão DMX.  
@@ -38,6 +37,6 @@ DMX_Expression >= DMX_Expression
 ## <a name="see-also"></a>Consulte também  
  [Operadores de comparação &#40;DMX&#41;](../dmx/operators-comparison.md)   
  [Extensões de mineração de dados &#40;DMX&#41; referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   
