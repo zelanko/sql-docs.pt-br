@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 86a931c9132a23d9ceb3d46b48fbdce23bf76f92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0eab4f23e342c95d83baa70dd03aba2f5d4bc8d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989642"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Introdução ao SSMA para DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para DB2 permite que você rapidamente os esquemas de banco de dados do DB2 para converter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquemas, carregar os esquemas resultantes em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e migrar dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -42,10 +41,10 @@ Para obter mais informações sobre essas tarefas e como realizá-las, consulte 
   
 As seções a seguir descrevem os recursos da interface do usuário do SSMA.  
   
-### <a name="metadata-explorers"></a>Metadata Explorers  
+### <a name="metadata-explorers"></a>Gerenciadores de metadados  
 O SSMA contém dois gerenciadores de metadados para procurar e executar ações no DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dados.  
   
-#### <a name="db2-metadata-explorer"></a>DB2 Metadata Explorer  
+#### <a name="db2-metadata-explorer"></a>DB2 Gerenciador de metadados  
 Gerenciador de metadados de DB2 mostra informações sobre esquemas do DB2. Usando o Gerenciador de metadados do DB2, você pode executar as seguintes tarefas:  
   
 -   Procure os objetos em cada esquema.  
@@ -91,7 +90,7 @@ A tabela a seguir mostra os menus do SSMA.
   
 |Menu|Descrição|  
 |----|-----------|  
-|**File**|Contém comandos para trabalhar com projetos, conectar ao DB2 e conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Arquivo**|Contém comandos para trabalhar com projetos, conectar ao DB2 e conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Editar**|Contém comandos para localizar e trabalhar com texto nas páginas de detalhes, como copiar [!INCLUDE[tsql](../../includes/tsql-md.md)] do painel de detalhes do SQL. Também contém o **gerenciar indicadores** opção, onde você poderá ver uma lista de indicadores atuais. Você pode usar os botões no lado direito da caixa de diálogo para gerenciar os indicadores.|  
 |**Exibir**|Contém o **sincronizar metadados Explorers** comando. Que sincroniza os objetos entre o Gerenciador de metadados do DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gerenciador de metadados. Também contém comandos para mostrar e ocultar os **saída** e **lista de erros** painéis e uma opção **Layouts** para gerenciar os Layouts.|  
 |**Ferramentas**|Contém comandos para criar relatórios e migrar dados e objetos. Também fornece acesso para o **configurações globais** e **configurações do projeto** caixas de diálogo.|  
