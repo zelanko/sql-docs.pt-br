@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b27bc6e2a9e75ee7112269fc3af5dc1ba7a4bbe0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ee11d62c5e8d38dda95577a08dff78024ac211b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488174"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092368"
 ---
 # <a name="export-data-to-excel-from-master-data-services"></a>Exportar dados para o Excel do Master Data Services
 
@@ -26,7 +25,7 @@ ms.locfileid: "65488174"
   
  Se você deseja filtrar o conjunto de dados antes de carregá-lo, consulte [Filtrar dados antes da exportação &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional do **Gerenciador** .  

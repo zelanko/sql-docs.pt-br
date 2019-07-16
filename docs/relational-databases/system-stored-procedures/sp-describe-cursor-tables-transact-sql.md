@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a4627491075dd7b7db9d75188137271edd17804
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c005ff603f21dca387215cafd9dff572db53960
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053091"
 ---
 # <a name="spdescribecursortables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,33 +52,33 @@ sp_describe_cursor_tables
  É o nome de uma variável de cursor declarada para recebimento da saída do cursor. *output_cursor_variable* está **cursor**, sem padrão e deve não ser associado a nenhum cursor no momento da sp_describe_cursor_tables é chamada. O cursor retornado é um cursor rolável, dinâmico, somente leitura.  
   
  [ @cursor_source=] {N'local' | N'global' | N'variable'}  
- Especifica se o cursor que está sendo relatado foi especificado usando o nome de um cursor local, de um cursor global ou de uma variável de cursor. O parâmetro é **nvarchar (30)**.  
+ Especifica se o cursor que está sendo relatado foi especificado usando o nome de um cursor local, de um cursor global ou de uma variável de cursor. O parâmetro é **nvarchar (30)** .  
   
  [ @cursor_identity=] N'*local_cursor_name*'  
- É o nome de um cursor criado por uma instrução DECLARE CURSOR que tem a palavra-chave LOCAL, ou que adotou o padrão LOCAL. *local_cursor_name* está **nvarchar (128)**.  
+ É o nome de um cursor criado por uma instrução DECLARE CURSOR que tem a palavra-chave LOCAL, ou que adotou o padrão LOCAL. *local_cursor_name* está **nvarchar (128)** .  
   
  [ @cursor_identity=] N'*global_cursor_name*'  
- É o nome de um cursor criado por uma instrução DECLARE CURSOR que tem a palavra-chave GLOBAL, ou que adotou GLOBAL como padrão. *global_cursor_name* também pode ser o nome de um cursor de servidor API aberto por um aplicativo ODBC que então nomeou o cursor chamando SQLSetCursorName. *global_cursor_name* está **nvarchar (128)**.  
+ É o nome de um cursor criado por uma instrução DECLARE CURSOR que tem a palavra-chave GLOBAL, ou que adotou GLOBAL como padrão. *global_cursor_name* também pode ser o nome de um cursor de servidor API aberto por um aplicativo ODBC que então nomeou o cursor chamando SQLSetCursorName. *global_cursor_name* está **nvarchar (128)** .  
   
  [ @cursor_identity=] N'*input_cursor_variable*'  
- É o nome de uma variável de cursor associada a um cursor aberto. *input_cursor_variable* está **nvarchar (128)**.  
+ É o nome de uma variável de cursor associada a um cursor aberto. *input_cursor_variable* está **nvarchar (128)** .  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- None  
+ Nenhum  
   
 ## <a name="cursors-returned"></a>Cursores retornados  
  sp_describe_cursor_tables encapsula seu relatório como uma [!INCLUDE[tsql](../../includes/tsql-md.md)] **cursor** parâmetro de saída. Isso permite que lotes [!INCLUDE[tsql](../../includes/tsql-md.md)], procedimentos armazenados e gatilhos trabalhem com a saída uma linha de cada vez. Isso também significa que o procedimento não pode ser chamado diretamente de funções API. O **cursor** parâmetro de saída deve ser associado a uma variável de programa, mas as APIs não dão suporte a ligação **cursor** parâmetros ou variáveis.  
   
  A tabela a seguir mostra o formato do cursor retornado por sp_describe_cursor_tables.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|table owner|**sysname**|ID de usuário do proprietário de tabela.|  
+|Proprietário da tabela|**sysname**|ID de usuário do proprietário de tabela.|  
 |Table_name|**sysname**|Nome do objeto ou tabela base. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cursores de servidor sempre retornam o objeto especificado pelo usuário, não as tabelas base.|  
 |Optimizer_hints|**smallint**|Bitmap constituído de um ou mais dos seguinte itens:<br /><br /> 1 = Bloqueio de nível de linha (ROWLOCK)<br /><br /> 4 = Bloqueio em nível de página (PAGELOCK)<br /><br /> 8 = Bloqueio de tabela (TABLOCK)<br /><br /> 16 = Bloqueio de tabela exclusivo (TABLOCKX)<br /><br /> 32 = Update lock (UPDLOCK)<br /><br /> 64 = Sem bloqueio (NOLOCK)<br /><br /> 128 = Opção primeira-linha rápida (FASTFIRST)<br /><br /> 4096 = Semântica de repetição de leitura, quando usado com DECLARE CURSOR (HOLDLOCK)<br /><br /> Quando são fornecidas diversas opções, o sistema usa a mais restritiva. No entanto, sp_describe_cursor_tables mostra os sinalizadores especificados na consulta.|  
 |lock_type|**smallint**|Tipo de scroll lock solicitado, explícita ou implicitamente, para cada tabela base subjacente a este cursor. O valor pode ser um dos seguintes:<br /><br /> 0 = Nenhum<br /><br /> 1 = Compartilhado<br /><br /> 3 = atualizar|  
 |server_name|**sysname, que permite valor nulo**|Nome do servidor vinculado em que reside a tabela. NULL quando OPENQUERY ou OPENROWSET são usados.|  
-|Objectid|**int**|ID do objeto da tabela. 0 quando OPENQUERY ou OPENROWSET são usados.|  
+|ObjectId|**int**|ID do objeto da tabela. 0 quando OPENQUERY ou OPENROWSET são usados.|  
 |dbid|**int**|ID do banco de dados em que a tabela reside. 0 quando OPENQUERY ou OPENROWSET são usados.|  
 |dbname|**sysname**, **que permitem valor nulo**|Nome do banco de dados em que a tabela reside. NULL quando OPENQUERY ou OPENROWSET são usados.|  
   

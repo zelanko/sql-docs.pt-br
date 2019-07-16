@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 9879a065db11bb8e8b8ddff9c57376faf36fe151
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074157"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Comandos de menu e outras teclas de atalho (DB2ToSQL)
 As seções a seguir descrevem os atalhos de teclado para acessar os comandos de menu e outras teclas de atalho usadas em várias caixas de diálogo do SSMA para DB2 aplicativo.  
@@ -47,7 +46,7 @@ Para acessar o menu Editar, o atalho de teclado usado é ALT + E. A tabela a seg
 |Exiba a caixa de diálogo Gerenciar indicadores.|ALT + E + B ou CTRL + X|  
 |Ir para linha|ALT + E + G ou CTRL + G|  
 |Salve as alterações feitas à instrução.|ALT + E + S ou CTRL + S|  
-|Submenu de localização de acesso.|ALT + E + F|  
+|Submenu de localização de acesso.|E AS TECLAS ALT + F|  
 |Localizar ou localização rápida.|ALT + E + F + F ou CTRL + F|  
 |Exiba a caixa de diálogo de pesquisa avançada.|ALT + E + F + A ou ALT + F12|  
 |Inicie a informações rápidas.|ALT + E + F + I ou CTRL + SHIFT + espaço|  

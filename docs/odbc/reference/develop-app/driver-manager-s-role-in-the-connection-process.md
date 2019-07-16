@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af81fd6c4b0b56474497a829985a754ccf88f3ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fdc7f82059579f23c9a1a1203aee5e45c87693e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63238021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046945"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>Gerenciador de driver&#39;s de função no processo de Conexão
 Lembre-se de que aplicativos não chamam funções do driver diretamente. Em vez disso, eles chamam funções do Gerenciador de Driver com o mesmo nome e o Gerenciador de Driver chama as funções de driver. Geralmente, isso acontece quase imediatamente. Por exemplo, o aplicativo chama **SQLExecute** no Gerenciador de Driver e depois de algumas verificações de erro, o Gerenciador de Driver chamará **SQLExecute** no driver.  

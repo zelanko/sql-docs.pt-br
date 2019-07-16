@@ -8,25 +8,24 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7a85644328591f037ee342866ca7dfb5e887ed17
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 4e0dfafb74e6e86185872ea8e736b95dce7d4058
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070907"
 ---
 # <a name="data-mining-extensions-dmx-operator-reference"></a>Referência de operador de DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   A linguagem de extensões DMX (Data Mining) no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oferece suporte aos operadores de aritmética, atribuição, comparação, lógicos e unário. A tabela a seguir lista os operadores que a DMX suporta.  
   
-|Operador|Description|  
+|Operador|Descrição|  
 |--------------|-----------------|  
-|[+ &#40;Adicionar&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|Um operador aritmético que soma dois números.|  
-|[- &#40;Subtrair&#41; &#40;DMX&#41;](../dmx/subtract-dmx.md)|Operador aritmético que subtrai um número de outro.|  
-|[&#42;&#40;Multiplicar&#41; &#40;DMX&#41;](../dmx/multiply-dmx.md)|Operador aritmético que multiplica um número por outro.|  
-|[&#40;Dividir&#41; &#40;DMX&#41;](../dmx/divide-dmx.md)|Operador aritmético que divide um número por outro.|  
+|[+ &#40;Add&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|Um operador aritmético que soma dois números.|  
+|[- &#40;Subtract&#41; &#40;DMX&#41;](../dmx/subtract-dmx.md)|Operador aritmético que subtrai um número de outro.|  
+|[&#42; &#40;Multiply&#41; &#40;DMX&#41;](../dmx/multiply-dmx.md)|Operador aritmético que multiplica um número por outro.|  
+|[&#40;Divide&#41; &#40;DMX&#41;](../dmx/divide-dmx.md)|Operador aritmético que divide um número por outro.|  
 |[&#60;&#40;Menor que&#41; &#40;DMX&#41;](../dmx/less-than-dmx.md)|Operador de comparação. Para argumentos que avaliam valores não nulos; que retornam TRUE se o valor do argumento da esquerda for menor que o valor do argumento da direita; que retornam FALSE se for o contrário. Se um ou ambos os argumentos forem avaliados como um valor nulo, o operador retornará um valor nulo.|  
 |[&#62;&#40;Maior que&#41; &#40;DMX&#41;](../dmx/greater-than-dmx.md)|Operador de comparação. Para argumentos que avaliam valores não nulos; que retornam TRUE se o valor do argumento da esquerda for maior que o valor do argumento da direita; que retornam FALSE se for o contrário. Se um ou ambos os argumentos forem avaliados como um valor nulo, o operador retornará um valor nulo.|  
 |[= &#40;Igual a&#41; &#40;DMX&#41;](../dmx/equal-to-dmx.md)|Operador de comparação. Para argumentos que avaliam valores não nulos; que retornam TRUE se o valor do argumento da esquerda for igual ao valor do argumento da direita; que retornam FALSE se for o contrário. Se um ou ambos os argumentos forem avaliados como um valor nulo, o operador retornará um valor nulo.|  
@@ -44,10 +43,10 @@ ms.locfileid: "38006828"
   
 ## <a name="see-also"></a>Consulte também  
  [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Extensões de mineração de dados &#40;DMX&#41; referência](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Referência de DMX &#40;extensões DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Extensões de mineração de dados &#40;DMX&#41; referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)   
  [Extensões de mineração de dados &#40;DMX&#41; convenções de sintaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Extensões de mineração de dados &#40;DMX&#41; elementos de sintaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

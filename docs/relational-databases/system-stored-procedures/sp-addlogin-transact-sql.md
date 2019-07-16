@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7d6981879f08b65c334eae9cd81e73223bc353bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5868120af1e98c4b2f3be78f2cf7927df53b42d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724564"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072660"
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,12 +67,12 @@ sp_addlogin [ @loginame = ] 'login'
  É o idioma padrão do logon. *linguagem* está **sysname**, com um padrão NULL. Se *linguagem* não for especificado, o padrão *idioma* do novo logon é definido como o idioma padrão atual do servidor.  
   
  [ @sid=] '*sid*'  
- É o número de identificação de segurança (SID). *SID* está **varbinary (16)**, com um padrão NULL. Se *sid* for NULL, o sistema gera um SID para o novo logon. Apesar do uso de um **varbinary** tipo de dados, valores diferentes de NULL devem ter exatamente 16 bytes de comprimento e não deve existir. Especificando *sid* é útil, por exemplo, quando você está criando scripts ou movendo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logons de um servidor para outro e você deseja que os logons tenham o mesmo SID em servidores diferentes.  
+ É o número de identificação de segurança (SID). *SID* está **varbinary (16)** , com um padrão NULL. Se *sid* for NULL, o sistema gera um SID para o novo logon. Apesar do uso de um **varbinary** tipo de dados, valores diferentes de NULL devem ter exatamente 16 bytes de comprimento e não deve existir. Especificando *sid* é útil, por exemplo, quando você está criando scripts ou movendo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logons de um servidor para outro e você deseja que os logons tenham o mesmo SID em servidores diferentes.  
   
  [ @encryptopt=] '*encryption_option*'  
- Especifica se a senha é passada como texto não criptografado ou como o hash da senha de texto não criptografado. Observe que não há nenhuma criptografia. A palavra "criptografia" é usada nesta discussão por causa de compatibilidade com versões anteriores. Se uma senha de texto não criptografado for passada, ocorrerá hash. O hash é armazenado. *encryption_option* está **varchar(20)**, e pode ser um dos valores a seguir.  
+ Especifica se a senha é passada como texto não criptografado ou como o hash da senha de texto não criptografado. Observe que não há nenhuma criptografia. A palavra "criptografia" é usada nesta discussão por causa de compatibilidade com versões anteriores. Se uma senha de texto não criptografado for passada, ocorrerá hash. O hash é armazenado. *encryption_option* está **varchar(20)** , e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |NULL|A senha é passada sem-criptografia. Esse é o padrão.|  
 |**skip_encryption**|A senha já tem hash. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve armazenar o valor sem hash.|  
@@ -97,7 +96,7 @@ sp_addlogin [ @loginame = ] 'login'
   
  A tabela a seguir mostra vários procedimentos armazenados que são usados com sp_addlogin.  
   
-|Procedimento armazenado|Description|  
+|Procedimento armazenado|Descrição|  
 |----------------------|-----------------|  
 |[sp_grantlogin](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)|Adiciona um usuário ou grupo do Windows.|  
 |[sp_password](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md)|Altera a senha de um usuário.|  

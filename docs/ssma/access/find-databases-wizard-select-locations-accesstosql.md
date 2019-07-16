@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 86e9d39e6dd56cb5762933dc5ed37b5740a34ea5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82558c7839263a777a15d374acff28b4c40103d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759585"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024750"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Localizar o Assistente de bancos de dados (selecione os locais) (AccessToSQL)
 Na página Selecionar locais do assistente localizar bancos de dados, você pode inserir os parâmetros de pesquisa para localizar bancos de dados do Access.  
@@ -40,7 +39,7 @@ Adiciona o local na caixa de texto caminho à lista de locais.
 **Substituir**  
 Se um item na lista de locais é selecionado, o item na caixa de texto caminho substitui o item selecionado.  
   
-**Remover**  
+**Removerr**  
 Remove o item selecionado da lista de locais para pesquisa.  
   
 **Todo ou parte do nome do arquivo**  
@@ -52,7 +51,7 @@ Para localizar bancos de dados que foram criados dentro de um intervalo de datas
 **Data da última atualização**  
 Para localizar bancos de dados que foram atualizados por último no intervalo de datas específico, insira a data de início na **de** caixa e o término de data na **para** caixa.  
   
-**Tamanho**  
+**Size**  
 Para localizar bancos de dados que correspondem a um critério de tamanho, selecione um caractere de comparação na primeira caixa, digite um número para o tamanho e selecione bytes, quilobytes ou megabytes na terceira caixa de.  
   
 **Proprietário**  

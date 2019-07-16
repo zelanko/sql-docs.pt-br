@@ -15,13 +15,12 @@ apitype: DLLExport
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: dc464988d46d5896b4a925253c8c42916897bcd2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b06364adefd62b4267d43bac50d79f8f1d37958a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022091"
 ---
 # <a name="localdbstartinstance-function"></a>Função LocalDBStartInstance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +107,7 @@ HRESULT LocalDBStartInstance(
 ## <a name="details"></a>Detalhes  
  O argumento do buffer de conexão (*wszSqlConnection*) e o argumento do tamanho do buffer de conexão (*lpcchSqlConnection*) são opcionais. A tabela a seguir mostra opções para o uso desses argumentos e seus resultados.  
   
-|Buffer|Tamanho do buffer|Fundamento|Ação|  
+|Buffer|Tamanho do buffer|Fundamento|Action|  
 |------------|-----------------|---------------|------------|  
 |NULL|NULL|Deseja iniciar a instância de usuário e não precisa de um pipe de nome.|Inicia uma instância (sem retorno de pipe e sem retorno do tamanho de buffer necessário).|  
 |NULL|Presente|O usuário solicita o tamanho do buffer de saída. (Na próxima chamada, o usuário provavelmente solicitará uma inicialização real.)|Retorna um tamanho de buffer necessário (sem inicialização e sem retorno de pipe). O resultado é S_OK.|  

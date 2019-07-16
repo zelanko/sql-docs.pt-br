@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: d70ee72c-6e2a-4bcd-9456-4a697a866361
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d8d549d2619fa3804d6228ece1498169e9a66fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d17649720fe92f23b0b7aa4fcc8a90657c202ec0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069488"
 ---
 # <a name="isolation-levels-ole-db"></a>Níveis de isolamento (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,6 +43,6 @@ ms.locfileid: "47739804"
 >  O [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu o nível de isolamento do instantâneo. Para obter mais informações, confira [Trabalhando com o isolamento de instantâneos](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Transações](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
+ [Transactions](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
   

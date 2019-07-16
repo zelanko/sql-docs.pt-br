@@ -12,22 +12,21 @@ dev_langs:
 ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eed8badea9b7136cb71c5d89a76494aab190a0d2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: eea7709c67eab0dc9fe1890135f9ae03225cdff2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51655956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068089"
 ---
 # <a name="sysperiods-transact-sql"></a>sys.periods (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada tabela para a qual período foi definido.  
   
-|Cabeçalho de coluna|Tipo de dados|Description|  
+|Cabeçalho de coluna|Tipo de dados|Descrição|  
 |-------------------|---------------|-----------------|  
-|nome|**sysname**|Nome do período|  
+|name|**sysname**|Nome do período|  
 |period_type|**tinyint**|O valor numérico que representa o tipo de período:<br /><br /> 1 = período de tempo do sistema|  
 |period_type_desc|**nvarchar(60)**|A descrição de texto do tipo de coluna:<br /><br /> SYSTEM_TIME_PERIOD|  
 |object_id|**int**|A id da tabela que contém a coluna period_type|  

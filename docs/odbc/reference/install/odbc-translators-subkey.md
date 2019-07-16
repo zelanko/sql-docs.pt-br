@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6b170f1f-e263-4aac-9d49-8d0ca0470ca2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e7109a6f1b88cf7639b2fc823ce0c5f14d05002
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d26f2d33d81e08cfe4bddff9b2260bd2f098f00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093937"
 ---
 # <a name="odbc-translators-subkey"></a>Subchave de conversores ODBC
 Os valores sob a subchave de conversores ODBC listam os tradutores instalados. O formato desses valores é mostrado na tabela a seguir.  
   
-|Nome|Tipo de dados|Dados|  
+|Nome|Tipo de dados|Data|  
 |----------|---------------|----------|  
 |*translator-desc*|REG_SZ|**instalado**|  
   

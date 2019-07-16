@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 576fe7268ccf71a8c926f6b1124ebbf8a8c711b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018363"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100640"
 ---
 # <a name="outer-join-escape-sequence"></a>Sequência de escape de junção externa
 ODBC usa sequências de escape de junções externas. A sintaxe dessa sequência de escape é da seguinte maneira:  
@@ -36,15 +35,15 @@ ODBC usa sequências de escape de junções externas. A sintaxe dessa sequência
   
  *Iniciador do ODBC-esc* oj *junção externa ODBC esc terminador*  
   
- *outer-join* ::= *table-name* [*correlation-name*] {LEFT &#124; RIGHT &#124; FULL}  
+ *junção externa* :: = *nome da tabela* [*nome de correlação*] {esquerda &#124; direita &#124; completo}  
   
- OUTER JOIN{*table-name* [*correlation-name*] &#124; *outer-join*} ON  
+ JUNÇÃO externa {*nome da tabela* [*nome de correlação*] &#124; *junção externa*} ON  
   
  *search-*  
   
  *Condição*  
   
- *correlation-name* ::= *user-defined-name*  
+ *nome de correlação* :: = *nome definido pelo usuário*  
   
  *Iniciador do ODBC-esc* :: = {  
   

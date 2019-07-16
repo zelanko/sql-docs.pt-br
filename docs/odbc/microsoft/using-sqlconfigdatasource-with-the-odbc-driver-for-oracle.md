@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9edd9ae15e66a39abd84a8a6d8e50a83ed4a39ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa5f1ecf9f3100480081e3744fc7d280a4da282b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259342"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088032"
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>Usar SQLConfigDatasource com o driver ODBC para Oracle
 > [!IMPORTANT]  
@@ -35,7 +34,7 @@ ms.locfileid: "63259342"
   
 |Configuração|máx Len|Valor padrão|Valores válidos|Descrição|  
 |-------------|-------------|-------------------|------------------|-----------------|  
-|BufferSize|7|65535|1\.000|Até 65535 bytes de tamanho do buffer de busca mínimo|  
+|BufferSize|7|65535|1000|Até 65535 bytes de tamanho do buffer de busca mínimo|  
 |CatalogCap|2|1|0 ou 1|Se for 1, identificadores nonquoted será convertido em letras maiusculas no catálogo de funções.|  
 |ConnectString|128|""|A/N|Cadeia de conexão. Método necessário de especificar o nome do servidor com o driver Msorcl10.dll.|  
 |Descrição|256|""|A/N|Descrição.|  

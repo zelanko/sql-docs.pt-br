@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 388147de8935d36180ba9845c8353bbf3dd6edc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b783c2fc6766f0e2d2685724169894160c15ffc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077196"
 ---
 # <a name="allocating-and-freeing-buffers"></a>Alocar e liberar buffers
 Todos os buffers alocados e liberados pelo aplicativo. Se um buffer não for adiado, ele precisa existir somente para a duração da chamada para uma função. Por exemplo, **SQLGetInfo** retorna o valor associado a uma determinada opção no buffer apontado pela *InfoValuePtr* argumento. Esse buffer pode ser liberado imediatamente após a chamada para **SQLGetInfo**, conforme mostrado no exemplo de código a seguir:  

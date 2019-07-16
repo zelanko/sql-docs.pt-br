@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b9ff2c3a-2003-4832-adbe-08dd0f5ad948
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7b33bc399646a6d274c875abd36d53219a2814e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc37ef6d268dba71f8270909ea9c5b938ef3ee75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070489"
 ---
 # <a name="procedure-invocation"></a>Invocação de procedimento
 Quando o driver do Microsoft Access for usado, os procedimentos podem ser chamados do driver usando o **SQLExecDirect** ou **SQLPrepare** função com a seguinte sintaxe: {chamar *nome do procedimento*  [(*parâmetro*[,*parâmetro*]...)]}. Observe que não há suporte para expressões como parâmetros para um procedimento chamado.  

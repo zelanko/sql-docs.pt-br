@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c36f1850a5ab6aff1537d8000872d157dbe2eb41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8bb6507ef56537561847eeaee017d81c65292085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085669"
 ---
 # <a name="security-master-data-services"></a>Segurança (Master Data Services)
 
@@ -53,7 +52,7 @@ ms.locfileid: "65488138"
   
  A única limitação é que toda a segurança atribuída no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] não entra em vigor no Excel antes de um intervalo de 20 minutos. O intervalo é definido pela configuração *MdsMaximumUserInformationCacheInterval* no arquivo web.config. Para alterar o intervalo, você pode alterar a configuração e reiniciar o IIS.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

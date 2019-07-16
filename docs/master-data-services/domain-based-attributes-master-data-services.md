@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7552d30b0c435147cc9b94a01ec9303977fc7f00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1a905ebe84754c792c32a1151740cf0134b0a13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487503"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086489"
 ---
 # <a name="domain-based-attributes-master-data-services"></a>Atributos baseados em domínio (Master Data Services)
 
@@ -41,7 +40,7 @@ ms.locfileid: "65487503"
 ## <a name="domain-based-attributes-form-derived-hierarchies"></a>Atributos baseados em domínio formam hierarquias derivadas  
  As relações de atributos baseados em domínio são a base das hierarquias derivadas. Para obter mais informações, consulte [Hierarquias derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

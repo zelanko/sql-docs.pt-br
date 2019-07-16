@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 361b1d318a7db08007d4506531441ab19347ea62
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 9538e66180fa401059135a5f8714ea39dd4e3f4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058808"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Avaliar uma empresa e consolidar relatórios de avaliação com o DMA
 
 As seguintes instruções passo a passo ajudam você a usar o Assistente de migração de dados para realizar uma avaliação de dimensionado com êxito para a atualização do SQL Server no local ou a execução do SQL Server em VMs do Azure ou para migrar para o banco de dados SQL.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Designe um computador de ferramentas em sua rede do qual o DMA será iniciado. Certifique-se de que esse computador tenha conectividade com seus destinos do SQL Server.
 - Baixe e instale:
@@ -264,7 +263,7 @@ Esta seção é a parte principal do relatório, que mostra a preparação de um
 
 - InstanceDatabase
 - ChangeCategory
-- Title
+- Título
 - ObjectType
 - ImpactedObjectName
 

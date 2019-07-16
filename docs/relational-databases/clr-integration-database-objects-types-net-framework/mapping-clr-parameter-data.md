@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c4697d2dcbad80d1da0fd8ed6c81750ac90695b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 530db4d31d3db4773713816f1b68404990997512
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534118"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081309"
 ---
 # <a name="mapping-clr-parameter-data"></a>Mapeando dados de parâmetro CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,41 +42,41 @@ ms.locfileid: "52534118"
 |**bigint**|**SqlInt64**|**Int64, que permite valor nulo\<Int64 >**|  
 |**binary**|**SqlBytes, SqlBinary**|**Byte[]**|  
 |**bit**|**SqlBoolean**|**Booliano, que permite valor nulo\<booleano >**|  
-|**char**|None|None|  
-|**cursor**|None|None|  
+|**char**|Nenhum|Nenhum|  
+|**cursor**|Nenhum|Nenhum|  
 |**date**|**SqlDateTime**|**Data e hora, que permite valor nula\<DateTime >**|  
 |**datetime**|**SqlDateTime**|**Data e hora, que permite valor nula\<DateTime >**|  
-|**datetime2**|None|**Data e hora, que permite valor nula\<DateTime >**|  
+|**datetime2**|Nenhum|**Data e hora, que permite valor nula\<DateTime >**|  
 |**DATETIMEOFFSET**|**Nenhum**|**DateTimeOffset, que permite valor nulo\<DateTimeOffset >**|  
 |**decimal**|**SqlDecimal**|**Decimal, Nullable\<Decimal>**|  
 |**float**|**SqlDouble**|**Double, que permite valor nulo\<Double >**|  
-|**geografia**|**SqlGeography**<br /><br /> **SqlGeography** é definido em Types, que é instalado com o SQL Server e pode ser baixado do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack do](https://www.microsoft.com/download/details.aspx?id=52676).|None|  
-|**geometria**|**SqlGeometry**<br /><br /> **SqlGeometry** é definido em Types, que é instalado com o SQL Server e pode ser baixado do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack do](https://www.microsoft.com/download/details.aspx?id=52676).|None|  
-|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** é definido em Types, que é instalado com o SQL Server e pode ser baixado do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack do](https://www.microsoft.com/download/details.aspx?id=52676).|None|  
-|**image**|None|None|  
+|**geografia**|**SqlGeography**<br /><br /> **SqlGeography** é definido em Types, que é instalado com o SQL Server e pode ser baixado do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack do](https://www.microsoft.com/download/details.aspx?id=52676).|Nenhum|  
+|**geometria**|**SqlGeometry**<br /><br /> **SqlGeometry** é definido em Types, que é instalado com o SQL Server e pode ser baixado do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack do](https://www.microsoft.com/download/details.aspx?id=52676).|Nenhum|  
+|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** é definido em Types, que é instalado com o SQL Server e pode ser baixado do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack do](https://www.microsoft.com/download/details.aspx?id=52676).|Nenhum|  
+|**image**|Nenhum|Nenhum|  
 |**int**|**SqlInt32**|**Int32, que permite valor nulo\<Int32 >**|  
 |**money**|**SqlMoney**|**Decimal, Nullable\<Decimal>**|  
 |**nchar**|**SqlChars, SqlString**|**String, Char[]**|  
-|**ntext**|None|None|  
+|**ntext**|Nenhum|Nenhum|  
 |**numeric**|**SqlDecimal**|**Decimal, Nullable\<Decimal>**|  
 |**nvarchar**|**SqlChars, SqlString**<br /><br /> **SQLChars** é uma melhor correspondência para transferência de dados e acesso, e **SQLString** é uma melhor correspondência para executar operações de cadeia de caracteres.|**String, Char[]**|  
 |**nvarchar(1), nchar(1)**|**SqlChars, SqlString**|**Char, String, Char [], que permite valor nulo\<char >**|  
 |**real**|**SqlSingle** (o intervalo de **SqlSingle**, no entanto, é maior que **real**)|**Único, que permite valor nulo\<único >**|  
-|**rowversion**|None|**Byte[]**|  
+|**rowversion**|Nenhum|**Byte[]**|  
 |**smallint**|**SqlInt16**|**Int16, que permite valor nulo\<Int16 >**|  
 |**smallmoney**|**SqlMoney**|**Decimal, Nullable\<Decimal>**|  
-|**sql_variant**|None|**Objeto**|  
-|**table**|None|None|  
-|**text**|None|None|  
-|**time**|None|**TimeSpan, que permite valor nulo\<TimeSpan >**|  
-|**timestamp**|None|None|  
+|**sql_variant**|Nenhum|**Object**|  
+|**table**|Nenhum|Nenhum|  
+|**text**|Nenhum|Nenhum|  
+|**time**|Nenhum|**TimeSpan, que permite valor nulo\<TimeSpan >**|  
+|**timestamp**|Nenhum|Nenhum|  
 |**tinyint**|**SqlByte**|**Byte, Nullable\<Byte>**|  
 |**uniqueidentifier**|**SqlGuid**|**GUID, que permite valor nulo\<Guid >**|  
-|**Type(UDT) definida pelo usuário**|None|A mesma classe que é associada ao tipo definido pelo usuário no mesmo assembly ou em um assembly dependente.|  
+|**Type(UDT) definida pelo usuário**|Nenhum|A mesma classe que é associada ao tipo definido pelo usuário no mesmo assembly ou em um assembly dependente.|  
 |**varbinary**|**SqlBytes, SqlBinary**|**Byte[]**|  
 |**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**byte, Byte[], Nullable\<byte>**|  
-|**varchar**|None|None|  
-|**xml**|**SqlXml**|None|  
+|**varchar**|Nenhum|Nenhum|  
+|**xml**|**SqlXml**|Nenhum|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>Conversão automática de tipo de dados com parâmetros out  
  Um método CLR pode retornar informações para o código de chamada ou programa marcando um parâmetro de entrada com o **horizontalmente** modificador (Microsoft Visual c#) ou  **\<out () > ByRef** (Microsoft Visual Basic) Se o parâmetro de entrada é um tipo de dados CLR na **SqlTypes** namespace e o programa de chamada especifica seu equivalente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de tipo de dados como o parâmetro de entrada, uma conversão de tipo ocorre automaticamente Quando o método CLR retorna o tipo de dados.  
@@ -111,9 +110,9 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**Tipo de dados CLR (SQL Server)**|**Tipo de dados do SQL Server**|  
-|**decimal**|SMALLMONEY|  
+|**Decimal**|SMALLMONEY|  
 |**SqlMoney**|SMALLMONEY|  
-|**decimal**|money|  
+|**Decimal**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
   

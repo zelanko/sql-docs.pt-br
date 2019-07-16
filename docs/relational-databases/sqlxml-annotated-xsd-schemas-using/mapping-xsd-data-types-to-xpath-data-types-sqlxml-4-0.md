@@ -19,14 +19,13 @@ ms.assetid: ced1a95e-18d4-4a5a-8da8-dbb6d58bbd45
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f10134d4aa4d71c4471e5e3120b3f8fbd8ee1748
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7f79a4d756a76dc6b59e76bbbfc28076ba36eae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067055"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>Mapeando tipos de dados XSD para tipos de dados XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,12 +35,12 @@ ms.locfileid: "65980779"
   
 |Tipo de dados XSD|Tipo de dados XDR|Equivalente<br /><br /> tipos de dados XPath|SQL Server<br /><br /> conversão que é usada|  
 |-------------------|-------------------|------------------------------------|--------------------------------------------|  
-|**Base64Binary**<br /><br /> **HexBinary**|**Nenhum**<br /><br /> **bin.base64bin.hex**|**Não aplicável**|None<br /><br /> EmployeeID|  
+|**Base64Binary**<br /><br /> **HexBinary**|**Nenhum**<br /><br /> **bin.base64bin.hex**|**Não aplicável**|Nenhum<br /><br /> EmployeeID|  
 |**Booliano**|**booleano**|**booleano**|CONVERT(bit, EmployeeID)|  
-|**Decimal, integer, float, byte, short, int, long, float, double, unsignedByte, unsignedShort, unsignedInt, unsignedLong**|**number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8**|**number**|CONVERT(float(53), EmployeeID)|  
-|**id, idref, idrefsentity, entities, notation, nmtoken, nmtokens, DateTime, string, AnyURI**|**id, idref, idrefsentity, entities, enumeration, notation, nmtoken, nmtokens, char, dateTime, dateTime.tz, string, uri, uuid**|**cadeia de caracteres**|CONVERT(nvarchar(4000), EmployeeID, 126)|  
+|**Decimal, inteiro, float, byte, short, int, long, float, double, unsignedByte, Short sem sinal, unsignedInt, unsignedLong**|**número, int, float, i1, i2, i4, i8, r4, r8ui1, ui2, ui4, ui8**|**number**|CONVERT(float(53), EmployeeID)|  
+|**ID, idref, idrefsentity, entidades, notação, nmtoken e nmtokens, DateTime, string, AnyURI**|**id, idref, idrefsentity, entities, enumeration, notation, nmtoken, nmtokens, char, dateTime, dateTime.tz, string, uri, uuid**|**string**|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |**decimal**|**fixed14.4**|**Não aplicável (não há nenhum tipo de dados no XPath equivalente ao tipo de dados XDR fixed14.4.)**|CONVERT(money, EmployeeID)|  
-|**date**|**date**|**cadeia de caracteres**|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
-|**time**|**time**<br /><br /> **time.tz**|**cadeia de caracteres**|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
+|**date**|**date**|**string**|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|**time**|**time**<br /><br /> **time.tz**|**string**|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
   

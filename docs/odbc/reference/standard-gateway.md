@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b8341492-2141-4bab-80bd-f2752223079e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c70a558b065765dd9f8c0895345959e8aa22ebfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8120f3cda584240b0b58ed5d6758621b18fe44d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070484"
 ---
 # <a name="standard-gateway"></a>Gateway padrão
 Um *gateway* é uma parte do software que faz com que um DBMS para se parecer com o outro. Ou seja, o gateway aceita a interface de programação, a gramática SQL e o protocolo de um DBMS único de fluxo de dados e converte-o para a interface de programação, gramática SQL, e protocolo do DBMS oculto de fluxo de dados. Por exemplo, aplicativos escritos para usar o Microsoft® SQL Server™ também podem acessar dados do DB2 por meio do Gateway Micro Decisionware DB2; Este produto faz com que o DB2 para se parecer com o SQL Server. Quando os gateways são usados, um gateway diferente deve ser escrito para cada banco de dados de destino.  

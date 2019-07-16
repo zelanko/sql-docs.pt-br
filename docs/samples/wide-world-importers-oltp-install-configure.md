@@ -9,19 +9,18 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c31c6c2071d276da9b3ab0e498a090659ba589a7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6fc303892fdefda350a2bb6513a71226264e50fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067667"
 ---
 # <a name="installation-and-configuration"></a>Instalação e configuração
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 OLTP de importadores mundiais instruções de instalação e configuração do banco de dados.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (ou superior) ou [banco de dados SQL](https://azure.microsoft.com/services/sql-database/). Para a versão completa do exemplo, use o SQL Server Developer/avaliação/Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Para obter os melhores resultados, use a versão de junho de 2016 ou posterior.
@@ -86,7 +85,7 @@ No banco de dados SQL Azure, a auditoria é configurada por meio de [portal do A
 
 ### <a name="row-level-security"></a>Segurança em nível de linha
 
-Aplica-se a: banco de dados SQL do Azure
+Aplica-se a: Banco de dados SQL do Azure
 
 Segurança em nível de linha não está habilitada por padrão no download de WideWorldImporters bacpac. Para habilitar a segurança em nível de linha no banco de dados, execute o seguinte procedimento armazenado:
 

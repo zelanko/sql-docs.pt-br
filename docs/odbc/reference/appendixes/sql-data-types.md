@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 56caa8131cea834b88eeb338bb05d20c25349ea9
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 4be0e017988670d740067011f775f8477037aa18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794159"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057035"
 ---
 # <a name="sql-data-types"></a>Tipos de dados SQL
 Cada DBMS define seus próprios tipos SQL. Cada driver ODBC expõe apenas esses tipos de dados SQL que define o DBMS associado. Informações sobre como um driver mapeia tipos de DBMS SQL para os identificadores de tipo definidas pelo ODBC SQL e como um driver mapeia os tipos de DBMS SQL para seus próprio identificadores de tipo SQL específica do driver é retornado por uma chamada para **SQLGetTypeInfo**. Um driver também retorna os tipos de dados SQL ao descrever os tipos de dados de colunas e parâmetros por meio de chamadas para **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  
@@ -35,18 +34,18 @@ Cada DBMS define seus próprios tipos SQL. Cada driver ODBC expõe apenas esses 
   
  A tabela a seguir lista os identificadores de tipo SQL válidos para todos os tipos de dados SQL. A tabela também lista o nome e a descrição do tipo de dados correspondente do SQL-92 (se houver).  
   
-|Identificador de tipo SQL [1]|Típica de dados do SQL<br /><br /> type[2]|Descrição de tipo comum|  
+|Identificador de tipo SQL [1]|Típica de dados do SQL<br /><br /> tipo [2]|Descrição de tipo comum|  
 |------------------------------|------------------------------------|------------------------------|  
 |SQL_CHAR|CHAR(*n*)|Cadeia de caracteres de comprimento de cadeia de caracteres fixa *n*.|  
-|SQL_VARCHAR|VARCHAR(*n*)|Cadeia de caracteres de comprimento variável com um comprimento máximo da cadeia *n*.|  
+|SQL_VARCHAR|VARCHAR (*n*)|Cadeia de caracteres de comprimento variável com um comprimento máximo da cadeia *n*.|  
 |SQL_LONGVARCHAR|LONG VARCHAR|Dados de caracteres de comprimento variável. Comprimento máximo é dependente da fonte de dados. [9]|  
 |SQL_WCHAR|WCHAR(*n*)|A cadeia de caracteres Unicode de comprimento de cadeia de caracteres fixa *n*|  
 |SQL_WVARCHAR|VARWCHAR(*n*)|Cadeia de caracteres de comprimento variável de Unicode com um comprimento máximo da cadeia de caracteres *n*|  
 |SQL_WLONGVARCHAR|LONGWVARCHAR|Dados de caractere de comprimento variável Unicode. Comprimento máximo é dependente da fonte de dados|  
-|SQL_DECIMAL|DECIMAL(*p*,*s*)|Assinado, um valor numérico exato, com uma precisão de pelo menos *p* e a escala *s.* (A precisão máxima é definido pelo driver). (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
+|SQL_DECIMAL|DECIMAL (*p*,*s*)|Assinado, um valor numérico exato, com uma precisão de pelo menos *p* e a escala *s.* (A precisão máxima é definido pelo driver). (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
 |SQL_NUMERIC|NUMÉRICO (*p*,*s*)|Valor numérico exato, com uma precisão sinal *p* e a escala *s* (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
-|SQL_SMALLINT|SMALLINT|Valor numérico exato com precisão 5 e escala 0 (assinado: -32.768 < = *n* < = 32,767, sem sinal:  0 <= *n* <= 65,535)[3].|  
-|SQL_INTEGER|INTEGER|Valor numérico exato com precisão 10 e escala 0 (assinado: -2 [31] < = *n* < = 2 [31] – 1, sem sinal:  0 <= *n* <= 2[32] - 1)[3].|  
+|SQL_SMALLINT|SMALLINT|Valor numérico exato com precisão 5 e escala 0 (assinado: -32.768 < = *n* < = 32,767, sem sinal:  0 < = *n* < = 65,535) [3].|  
+|SQL_INTEGER|INTEGER|Valor numérico exato com precisão 10 e escala 0 (assinado: -2 [31] < = *n* < = 2 [31] – 1, sem sinal:  0 < = *n* < = 2 [32] – 1) [3].|  
 |SQL_REAL|real|Assinado, o valor numérico aproximado com uma precisão binária de 24 (zero ou valor absoluto 10 [-38] para 10[38]).|  
 |SQL_FLOAT|FLOAT (*p*)|Assinado, valor numérico aproximado com uma precisão binária de pelo menos *p*. (A precisão máxima é definido pelo driver). [5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|Assinado, o valor numérico aproximado com uma precisão binária de 53 (zero ou valor absoluto 10 [-308] para 10[308]).|  

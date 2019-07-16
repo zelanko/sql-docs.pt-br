@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 96ac9859-5976-4b06-ae1f-2fec3231e266
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9100405c91387faa66b714a94b8259167ae31899
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97541c9d594b282b871cb7869d0e8c2d2224205d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267653"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076862"
 ---
 # <a name="ddl-statements"></a>Instruções DDL
 Instruções de Definition Language (DDL) de dados podem variar muito entre DBMSs. SQL ODBC define as instruções para as operações de definição de dados mais comuns: criar e Descartar tabelas, índices e exibições; alterando tabelas; e conceder e revogar privilégios. Todas as outras instruções DDL são específicos da fonte de dados. Portanto, os aplicativos interoperáveis não podem executar algumas operações de definição de dados. Em geral, isso não é um problema, porque essas operações tendem a ser altamente específicas do DBMS e são melhor esquerda para o software de administração de banco de dados proprietário fornecidos com a maioria dos DBMSs ou o programa de instalação fornecido com o driver.  

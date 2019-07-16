@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26400946d2ea9e656a659bf9d3a761fa0e5e8f74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7d5bd6584316ceb1da4462ab2459781b1cf1e32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095908"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069192"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>Usando palavras-chave da cadeia de conexão com o SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -80,7 +79,7 @@ ms.locfileid: "65095908"
 |**MARS_Connection**|Habilita ou desabilita MARS (Multiple Active Result Sets) na conexão. Os valores reconhecidos são "sim" e "não". O padrão é "não".|  
 |**MultiSubnetFailover**|Sempre especifique **multiSubnetFailover = Yes** ao se conectar ao ouvinte do grupo de disponibilidade de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grupo de disponibilidade ou um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância de Cluster de Failover. **multiSubnetFailover = Yes** configura [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para fornecer detecção mais rápida e conexão para o servidor ativo (atualmente). Os valores possíveis são **Sim** e **Não**. O padrão é **No**. Por exemplo:<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> Para obter mais informações sobre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suporte do cliente nativo [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [SQL Server Native Client dá suporte para alta disponibilidade, recuperação de desastres](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).|  
 |**Net**|Sinônimo de "Rede".|  
-|**Rede**|Os valores válidos são **dbnmpntw** (pipes nomeados) e **dbmssocn** (TCP/IP).<br /><br /> É um erro para especificar um valor para o **rede** palavra-chave e um protocolo de prefixo na **Server** palavra-chave.|  
+|**Network**|Os valores válidos são **dbnmpntw** (pipes nomeados) e **dbmssocn** (TCP/IP).<br /><br /> É um erro para especificar um valor para o **rede** palavra-chave e um protocolo de prefixo na **Server** palavra-chave.|  
 |**PWD**|A senha para a conta de login para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] especificada no parâmetro UID. **PWD** não precisa ser especificado se o logon tiver uma senha NULL ou ao usar a autenticação do Windows (`Trusted_Connection = yes`).|  
 |**QueryLog_On**|Em caso de "sim", o registro em log de dados de consultas demoradas é habilitado na conexão. Em caso de "não", os dados de consultas demoradas não são registrados.|  
 |**QueryLogFile**|Caminho completo e nome de um arquivo a ser usado para registrar em log dados de consultas demoradas.|  
@@ -159,7 +158,7 @@ ms.locfileid: "65095908"
 |**Idioma**|SSPROPT_INIT_CURRENTLANGUAGE|O idioma do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |**MarsConn**|SSPROP_INIT_MARSCONNECTION|Habilita ou desabilita MARS na conexão caso o servidor seja [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou posterior. Os valores possíveis são "sim" e "não". O valor padrão é "não".|  
 |**Net**|SSPROP_INIT_NETWORKLIBRARY|Sinônimo de "Rede".|  
-|**Rede**|SSPROP_INIT_NETWORKLIBRARY|A biblioteca de rede usada para estabelecer uma conexão com uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na organização.|  
+|**Network**|SSPROP_INIT_NETWORKLIBRARY|A biblioteca de rede usada para estabelecer uma conexão com uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na organização.|  
 |**Biblioteca de rede**|SSPROP_INIT_NETWORKLIBRARY|Sinônimo de "Rede".|  
 |**PacketSize**|SSPROP_INIT_PACKETSIZE|Tamanho do pacote de rede. O padrão é 4096.|  
 |**PersistSensitive**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|Aceita as cadeias de caracteres "sim" e "não" como valores. Em caso de "não", o objeto de fonte de dados não tem permissão para manter informações confidenciais de autenticação|  

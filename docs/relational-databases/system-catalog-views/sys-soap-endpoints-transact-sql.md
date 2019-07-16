@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 251e5f79c03c02499aec9f3c0f90f42902d32474
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f7081d96d996d33bbabedd13201d7b0fa2547563
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078670"
 ---
 # <a name="syssoapendpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51656605"
  Contém uma linha para cada ponto de extremidade no servidor que transmite uma carga útil do tipo SOAP. Para cada linha nesta exibição, há uma linha correspondente com o mesmo **endpoint_id** na **sys. http_endpoints** exibição do catálogo que carrega os metadados de configuração de HTTP.  
   
  
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**< colunas herdadas >**||Para obter uma lista de colunas que essa exibição herda valores, consulte [Endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**is_sql_language_enabled**|**bit**|1 = A opção BATCHES = ENABLED foi especificada, o que significa que são permitidos lotes SQL ad hoc no ponto de extremidade.|  

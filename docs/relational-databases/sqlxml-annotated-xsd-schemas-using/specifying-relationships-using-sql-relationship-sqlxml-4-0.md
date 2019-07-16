@@ -28,14 +28,13 @@ ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f3bbe0b7ebe9d516ab23339632e96db184db1e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7a1d6dc5c678d4f0e523a757eabc89d18d85944
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066943"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Especificando relações usando sql:relationship (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "65980701"
   
  Para fornecer os nomes de tabela e as informações de junção necessárias, os seguintes atributos são especificados na **SQL: Relationship** anotação. Esses atributos são válidos somente com o  **\<SQL: Relationship >** elemento:  
   
- **Nome**  
+ **Name**  
  Especifica o nome exclusivo da relação.  
   
  **Parent**  
@@ -62,7 +61,7 @@ ms.locfileid: "65980701"
  **parent-key**  
  Especifica a chave pai do pai. Se a chave pai for composta por várias colunas, os valores serão especificados com um espaço entre eles. Há um mapeamento posicional entre os valores que são especificados para a chave de várias colunas e para a chave filha correspondente.  
   
- **Child**  
+ **filho**  
  Especifica a relação de filho (tabela).  
   
  **child-key**  

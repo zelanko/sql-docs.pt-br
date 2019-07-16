@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f8ee54383074e624d082d2ab782d6b038fd03d06
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 190b4f0598afa6d434b5dada8c8464cb8209dac7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817054"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061257"
 ---
 # <a name="spdbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ sp_dbmmonitorupdate [ database_name ]
  O nome do banco de dados para o qual atualizar o status de espelhamento. Se *database_name* não for especificado, o procedimento atualiza a tabela de status para cada banco de dados espelhado na instância do servidor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- None  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="remarks"></a>Comentários  
  **sp_dbmmonitorupdate** pode ser executado somente no contexto do **msdb** banco de dados.  

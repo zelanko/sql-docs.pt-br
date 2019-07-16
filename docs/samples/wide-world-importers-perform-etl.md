@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d17cc2ccc46733c857f884f78a1b0c9b3f980586
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f33d36cccbbea6f37139410f9d3d6e03f740ee96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067618"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Fluxo de trabalho ETL WideWorldImportersDW
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ Inicia o processamento principal, preenchendo a tabela de dimensões de data. O 
 
 Em seguida, uma série de tarefas de fluxo de dados carrega cada dimensão. Em seguida, ele carregam cada fato.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - SQL Server 2016 (ou posterior), com WideWorldImporters e WideWorldImportersDW bancos de dados (na mesma ou em diferentes instâncias do SQL Server)
 - SQL Server Management Studio

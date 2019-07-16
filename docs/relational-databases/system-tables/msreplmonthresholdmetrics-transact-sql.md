@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0cc9b40a-36ce-485b-9bc2-d4abd5aa6727
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2ce0bca2913dc6b0fbc9c8deaa4e4dd28f32f747
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b3e8b9c2443a6fa74e113dc1a3f25880ac753dc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079938"
 ---
 # <a name="msreplmonthresholdmetrics-transact-sql"></a>MSreplmonthresholdmetrics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +37,8 @@ ms.locfileid: "52796348"
 |**alertmessageid**|**int**|A ID da mensagem de erro que é exibida quando a condição de aviso de limite ocorre.|  
 |**description**|**nvarchar(3000)**|A descrição da métrica de desempenho da replicação|  
 |**default_value**|**sql_variant**|Um valor padrão para a métrica de desempenho da replicação.|  
-|**MIN_VALUE**|**sql_variant**|O valor mínimo para uma métrica de desempenho de replicação associada.|  
-|**MAX_VALUE**|**sql_variant**|O valor máximo para uma métrica de desempenho de replicação associada.|  
+|**min_value**|**sql_variant**|O valor mínimo para uma métrica de desempenho de replicação associada.|  
+|**max_value**|**sql_variant**|O valor máximo para uma métrica de desempenho de replicação associada.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb596b4971edb41e406467e1b60a076768fbab3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8742ebefab7a4b826eac0088a2d57f022a27715b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073185"
 ---
 # <a name="syssqldependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47645214"
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) em vez disso.  
 
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|Identifica a classe da entidade referenciada:<br /><br /> 0 = Objeto ou coluna (somente referências não associadas a esquema)<br /><br /> 1 = Objeto ou coluna (somente referências associadas a esquema)<br /><br /> 2 = Tipos (referências associadas a esquema)<br /><br /> 3 = Coleções de esquema XML (referências associadas a esquema)<br /><br /> 4 = Função de partição (referências associadas a esquema)|  
 |**class_desc**|**nvarchar(60)**|Descrição da classe da entidade referenciada:<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_NON_SCHEMA_BOUND**<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_SCHEMA_BOUND**<br /><br /> **TYPE_REFERENCE**<br /><br /> **XML_SCHEMA_COLLECTION_REFERENCE**<br /><br /> **PARTITION_FUNCTION_REFERENCE**|  

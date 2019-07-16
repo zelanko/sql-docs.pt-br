@@ -1,5 +1,5 @@
 ---
-title: sys.database_scoped_credentials (Transact-SQL) | Microsoft Docs
+title: database_scoped_credentials (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: sql
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 68e8aa6b-bcdc-42aa-93d8-d498f724c188
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1deb05541e46ec1007d234dc622b14ea1e20eb3f
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
+ms.openlocfilehash: 03687ea50b04c96aa4dbafab9d02d2bbc33a14b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079418"
 ---
 # <a name="sysdatabasescopedcredentials-transact-sql"></a>sys.database_scoped_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "67492573"
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|nome|**sysname**|Credencial no escopo do nome do banco de dados. É exclusivo no banco de dados.|  
+|name|**sysname**|Credencial no escopo do nome do banco de dados. É exclusivo no banco de dados.|  
 |credential_id|**int**|ID da credencial no escopo do banco de dados. É exclusivo no banco de dados.|  
 |principal_id|**int**|ID da entidade de banco de dados que possui a chave.|  
 |credential_identity|**nvarchar(4000)**|Nome da identidade a ser usada. Geralmente é um usuário do Windows. Não precisa ser exclusivo.|  

@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 686976b4-2d5d-4d64-bf12-56eba1dc59b1
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 19f26a2f65a3b9c8484a62f79dc2995b47aca593
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0bc6c97f4d41023b822f42a6bbe4c5b193d42e45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088752"
 ---
 # <a name="sysdmpdwsysinfo-transact-sql"></a>sys.dm_pdw_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Fornece um conjunto de contadores de nível de dispositivo que refletem a atividade geral no dispositivo.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |total_sessions|**int**|Número de sessões atualmente no sistema.|0 para max_active_sessions (veja abaixo).|  
 |idle_sessions|**int**|Número de sessões ociosos no momento.||  
