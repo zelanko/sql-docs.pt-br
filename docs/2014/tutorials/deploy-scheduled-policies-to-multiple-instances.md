@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016717"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185816"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Implantar diretivas agendadas em várias instâncias
   Usando Servidores Registrados, você poderá implantar políticas agendadas em servidores gerenciados a partir de um local central. Você poderá implantar diretivas agendadas a partir de um grupo de servidores local ou de um Servidor Central de Gerenciamento.  
@@ -28,7 +28,7 @@ ms.locfileid: "56016717"
   
  Você executará essas tarefas no computador em que concluiu as tarefas anteriores desta lição.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Esta tarefa tem os seguintes pré-requisitos:  
   
 -   Você deve ter concluído as tarefas anteriores desta lição.  
@@ -71,7 +71,7 @@ ms.locfileid: "56016717"
     > [!NOTE]  
     >  Se o botão direito do mouse **grupos de servidores locais** ou o servidor de gerenciamento Central em si, as diretivas serão implantadas para todos os servidores gerenciados. Se você clicar com o botão direito do mouse em um grupo específico de servidores, as diretivas serão implantadas somente nos servidores desse grupo. Se você clicar com o botão direito do mouse em um servidor registrado específico, as políticas serão implantadas nesse servidor.  
   
-3.  Lado **arquivos a importar**, clique no botão de reticências (**...** ).  
+3.  Lado **arquivos a importar**, clique no botão de reticências ( **...** ).  
   
 4.  No **Selecionar política** caixa de diálogo, navegue até o local da pasta onde você salvou as políticas agendadas. Neste exemplo, navegue até o local **C:\Scheduled_BP_Policies**.  
   

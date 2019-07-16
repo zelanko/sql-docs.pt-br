@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dea1ce298f9c032b785ced601a0d50d52fbb6f96
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: aa33e418b81cb2f77a39f20d36bba7a25caffb4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104580"
 ---
 # <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @plan_name = ] 'plan_name'` Especifica o nome do plano de manutenção a ser adicionado. *plan_name* está **varchar (128)**.  
+`[ @plan_name = ] 'plan_name'` Especifica o nome do plano de manutenção a ser adicionado. *plan_name* está **varchar (128)** .  
   
  **@plan_id = '** *plan_id* **'**  
  Especifica a ID do plano de manutenção. *plan_id* está **uniqueidentifier**.  

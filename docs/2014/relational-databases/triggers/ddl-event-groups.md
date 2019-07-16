@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812748"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211724"
 ---
 # <a name="ddl-event-groups"></a>grupos de eventos DDL
   As tabelas a seguir listam os grupos de eventos DDL que podem ser usados para executar uma notificação de evento ou um gatilho DDL, bem como as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] abordadas por eles. Observe a natureza inclusiva dos grupos de eventos. Por exemplo, um gatilho ou notificação de evento DDL que especifique FOR DDL_TABLE_EVENTS (10018) cobre as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE e DROP TABLE. Um gatilho ou notificação de evento DDL que especifique FOR DDL_TABLE_VIEW_EVENTS (10017) cobre todas as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] nos tipos DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS e DDL_STATISTICS_EVENTS.  
@@ -27,12 +27,12 @@ ms.locfileid: "52812748"
 > [!NOTE]  
 >  Certos procedimentos armazenados do sistema que executam operações similares a DDL também podem acionar gatilhos ou notificações de eventos DDL. Teste seus gatilhos e notificações de eventos DDL para determinar suas respostas aos procedimentos armazenados do sistema que são executados. Por exemplo, a instrução CREATE TYPE e o procedimento armazenado **sp_addtype** acionarão um gatilho DDL ou uma notificação de eventos que tenham sido criados em um evento CREATE_TYPE.  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Os eventos listados em DDL_DATABASE_LEVEL_EVENTS são executados no nível do servidor (instância) ou do banco de dados. Os eventos listados em DDL_SERVER_LEVEL_EVENTS são executados apenas no nível do servidor.  
   
 ||||  
 |-|-|-|  
-|parent_type|Tipo|nome|  
+|parent_type|type|name|  
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  
 |10001|10016|&#124;    DDL_DATABASE_LEVEL_EVENTS|  

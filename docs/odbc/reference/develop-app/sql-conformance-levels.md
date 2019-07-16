@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3529df2c-a09b-4c16-9c60-eae7a06d903a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c2e8ce5aeeb94a4f7a33b22054adc8067e0654ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7862b2e3a86c6d98a51c73ecb470d59bcfe29dc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107517"
 ---
 # <a name="sql-conformance-levels"></a>Níveis de conformidade SQL
 O nível de gramática de SQL-92 com suporte por um driver é indicado pelo valor retornado por uma chamada para **SQLGetInfo** com o tipo de informação SQL_SQL_CONFORMANCE. Isso indica se o driver está de acordo com os níveis de entrada, Transitional FIPS, intermediário ou completo definidos no SQL-92.  

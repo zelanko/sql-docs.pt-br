@@ -1,5 +1,5 @@
 ---
-title: SystemGetAccuracyResults (Analysis Services – mineração de dados) | Microsoft Docs
+title: SystemGetAccuracyResults (Analysis Services - mineração de dados) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54fc91b67a695110383c19422befab0d7b0f7a9d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017793"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209667"
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -97,21 +97,21 @@ SystemGetAccuracyResults(<mining structure>,
   
  A tabela a seguir lista as colunas retornadas por **GetValidationResults**.  
   
-|Nome da coluna|Description|  
+|Nome da coluna|Descrição|  
 |-----------------|-----------------|  
 |Modelo|O nome do modelo que foi testado. **Tudo** indica que o resultado é uma agregação para todos os modelos.|  
 |AttributeName|O nome da coluna previsível.|  
 |AttributeState|Um valor de destino na coluna previsível.<br /><br /> Se essa coluna contiver um valor, só serão coletadas métrica para o estado especificado.<br /><br /> Se esse valor não for especificado ou for nulo, as métrica são computadas para o estado mais provável para cada previsão.|  
 |PartitionIndex|Denota a partição à qual o resultado se aplica.<br /><br /> Para esse procedimento, sempre 0.|  
-|PartitionCases|Um inteiro que indica o número de linhas no conjunto de casos, com base no  *\<conjunto de dados >* parâmetro.|  
+|PartitionCases|Um inteiro que indica o número de linhas no conjunto de casos, com base nas  *\<conjunto de dados >* parâmetro.|  
 |Teste|O tipo de teste que foi executado.|  
 |Measure|Nome da medida retornada pelo teste. Medidas para cada modelo dependem do tipo modelo e do tipo do valor previsível.<br /><br /> Para obter uma lista de medidas retornadas para cada tipo previsível, consulte [Medidas no relatório de validação cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Para obter uma definição de cada medida, consulte [Validação cruzada &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
-|Value|O valor para a medida especificada.|  
+|Valor|O valor para a medida especificada.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A tabela a seguir fornece exemplos dos valores que você pode usar para especificar os dados na estrutura de mineração usados para validação cruzada. Se você desejar usar casos de teste para validação cruzada, a estrutura de mineração já deverá conter um conjunto de dados para teste. Para obter informações sobre como definir um conjunto de dados de teste ao criar uma estrutura de mineração, consulte [Conjuntos de dados de treinamento e teste](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
-|Valor inteiro|Description|  
+|Valor inteiro|Descrição|  
 |-------------------|-----------------|  
 |1|Somente casos de treinamento são usados.|  
 |2|Somente os casos de teste são usados.|  
@@ -141,7 +141,7 @@ CALL SystemGetAccuracyResults (
   
  Resultados do exemplo:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Teste|Medida|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Teste|Measure|Valor|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |v Target Mail DT|Bike Buyer|1|0|1638|Classificação|True Positivo|605|  
 |v Target Mail DT|Bike Buyer|1|0|1638|Classificação|False Positivo|177|  
@@ -157,7 +157,7 @@ CALL SystemGetAccuracyResults (
 ## <a name="see-also"></a>Consulte também  
  [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services – mineração de dados&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

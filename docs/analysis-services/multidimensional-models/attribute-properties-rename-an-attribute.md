@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 602dd05b4fb33b50de8b58c67f3aa245eee8e24b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024003"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179511"
 ---
-# <a name="attribute-properties---rename-an-attribute"></a>Propriedades de atributo - renomear um atributo
+# <a name="attribute-properties---rename-an-attribute"></a>Propriedades do atributo – Renomear um atributo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   O nome de um atributo no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é definido pela sua propriedade **Name** . Para renomear um atributo, clique nele com o botão direito do mouse no painel **Atributos** da guia **Estrutura da Dimensão** do Designer de Dimensão no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e clique em **Renomear**. Se o painel **Atributos** estiver em exibição de grade, clique no nome do atributo e o edite diretamente na grade. Você também pode selecionar um atributo e configurar a propriedade **Name** na janela **Propriedades** .  
   

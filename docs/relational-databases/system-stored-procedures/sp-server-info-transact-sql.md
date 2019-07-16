@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 034c4ab2c8ce57ac072e9711fb4e6d621584f273
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6aae34fb03322a40f1b970df6271bb89d18b3293
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104452"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 `[ @attribute_id = ] 'attribute_id'` É a ID de inteiro do atributo. *attribute_id* está **int**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- None  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -72,7 +71,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**20**|MULTI_RESULT_SETS<br /><br /> Especifica se o banco de dados subjacente ou o próprio gateway oferece suporte a vários conjuntos de resultados (várias instruções podem ser enviadas pelo gateway com vários conjuntos de resultados retornados ao cliente).|S|  
 |**22**|ACCESSIBLE_TABLES<br /><br /> Especifica se deve em **sp_tables**, o gateway retorna somente tabelas, exibições e assim por diante, acessíveis pelo usuário atual (ou seja, o usuário que tem pelo menos permissões SELECT para a tabela).|S|  
 |**100**|USERID_LENGTH<br /><br /> Especifica o número máximo de caracteres para um nome de usuário.|128|  
-|**101**|QUALIFIER_TERM<br /><br /> Especifica o termo do fornecedor do DBMS de um qualificador de tabela (a primeira parte de um nome de tabela com três partes).|Banco de Dados|  
+|**101**|QUALIFIER_TERM<br /><br /> Especifica o termo do fornecedor do DBMS de um qualificador de tabela (a primeira parte de um nome de tabela com três partes).|database|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> Especifica se o DBMS subjacente oferece suporte a transações nomeadas.|S|  
 |**103**|SPROC_AS_LANGUAGE<br /><br /> Especifica se os procedimentos armazenados podem ser executados como eventos de linguagem.|S|  
 |**104**|ACCESSIBLE_SPROC<br /><br /> Especifica se deve em **sp_stored_procedures**, o gateway retorna somente os procedimentos armazenados que são executáveis pelo usuário atual.|S|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 533b096b11ded9c76db81e640c961449a2785330
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b01628e339e4a3ce1f824f27edd75e2e5aea2526
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123768"
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ xp_cmdshell { 'command_string' } [ , no_output ]
   
 ## <a name="arguments"></a>Argumentos  
  **'** *command_string* **'**  
- É a cadeia de caracteres que contém um comando a ser passado para o sistema operacional. *command_string* está **varchar(8000)** ou **nvarchar (4000)**, sem padrão. *command_string* não pode conter mais de um conjunto de aspas duplas. Um único par de aspas será necessário se qualquer espaço está presente nos caminhos de arquivo ou nomes de programa referenciados em *command_string*. Se você tiver dificuldade com espaços inseridos, considere o uso de nomes de arquivo FAT 8.3 como uma solução alternativa.  
+ É a cadeia de caracteres que contém um comando a ser passado para o sistema operacional. *command_string* está **varchar(8000)** ou **nvarchar (4000)** , sem padrão. *command_string* não pode conter mais de um conjunto de aspas duplas. Um único par de aspas será necessário se qualquer espaço está presente nos caminhos de arquivo ou nomes de programa referenciados em *command_string*. Se você tiver dificuldade com espaços inseridos, considere o uso de nomes de arquivo FAT 8.3 como uma solução alternativa.  
   
  **no_output**  
  É um parâmetro opcional, especificando que nenhuma saída deve ser retornada ao cliente.  
@@ -74,7 +73,7 @@ The command(s) completed successfully.
 >  Se **xp_cmdshell** é executado dentro de um lote e retorna um erro, o lote falhará. É uma alteração de comportamento. Em versões anteriores do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o lote continuaria a ser executado.  
   
 ## <a name="xpcmdshell-proxy-account"></a>Conta proxy xp_cmdshell  
- Quando ele é chamado por um usuário que não é um membro do **sysadmin** função de servidor fixa **xp_cmdshell** se conecta ao Windows usando o nome de conta e senha armazenadas na credencial chamada **# # xp_cmdshell_proxy_account # #**. Se não existir, essa credencial de proxy **xp_cmdshell** falhará.  
+ Quando ele é chamado por um usuário que não é um membro do **sysadmin** função de servidor fixa **xp_cmdshell** se conecta ao Windows usando o nome de conta e senha armazenadas na credencial chamada **# # xp_cmdshell_proxy_account # #** . Se não existir, essa credencial de proxy **xp_cmdshell** falhará.  
   
  A credencial da conta proxy pode ser criada executando **sp_xp_cmdshell_proxy_account**. Como argumentos, esse procedimento armazenado possui um nome de usuário e uma senha do Windows. Por exemplo, o comando a seguir cria uma credencial de proxy para o usuário de domínio do Windows `SHIPPING\KobeR` que possui a senha do Windows `sdfh%dkc93vcMt0`.  
   
@@ -128,7 +127,7 @@ REVERT ;
 EXEC master..xp_cmdshell 'dir *.exe''  
 ```  
   
-### <a name="b-returning-no-output"></a>b. Não retornando nenhuma saída  
+### <a name="b-returning-no-output"></a>B. Não retornando nenhuma saída  
  O exemplo a seguir usa `xp_cmdshell` para executar uma cadeia de caracteres de comando sem retornar a saída ao cliente.  
   
 ```  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 854edf82c32058c45df4ab4f71803933f59f2582
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 5af11c14c7b0bf3b8e32d503c4b77e59623ce9ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140454"
 ---
 # <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,9 +57,9 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ## <a name="arguments"></a>Argumentos  
 `[ @database = ] 'database'` É o nome do log envio banco de dados primário. *banco de dados* está **sysname**, sem padrão, e não pode ser NULL.  
   
-`[ @backup_directory = ] 'backup_directory'` É o caminho para a pasta de backup no servidor primário. *backup_directory* está **nvarchar(500)**, sem padrão, e não pode ser NULL.  
+`[ @backup_directory = ] 'backup_directory'` É o caminho para a pasta de backup no servidor primário. *backup_directory* está **nvarchar(500)** , sem padrão, e não pode ser NULL.  
   
-`[ @backup_share = ] 'backup_share'` É o caminho de rede para o diretório de backup no servidor primário. *backup_share* está **nvarchar(500)**, sem padrão, e não pode ser NULL.  
+`[ @backup_share = ] 'backup_share'` É o caminho de rede para o diretório de backup no servidor primário. *backup_share* está **nvarchar(500)** , sem padrão, e não pode ser NULL.  
   
 `[ @backup_job_name = ] 'backup_job_name'` É o nome do trabalho do SQL Server Agent no servidor primário que copia o backup na pasta de backup. *backup_job_name* está **sysname** e não pode ser NULL.  
   
@@ -102,7 +101,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="remarks"></a>Comentários  
  **sp_add_log_shipping_primary_database** deve ser executado a partir de **mestre** banco de dados no servidor primário. Esse procedimento armazenado executa as seguintes funções:  

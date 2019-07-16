@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a6af04d1ed2b8db53425ad0aaf83d95d73dd6f8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020633"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180273"
 ---
 # <a name="add-a-standard-action"></a>Adicionar uma ação padrão
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "34020633"
   
     -   Na lista suspensa **Tipo** , selecione o tipo de ação que você quer criar. A tabela a seguir lista os tipos de ações disponíveis.  
   
-        |Tipo|Description|  
+        |type|Descrição|  
         |----------|-----------------|  
-        |Conjunto de dados|Recupera um conjunto de dados.|  
+        |Dataset|Recupera um conjunto de dados.|  
         |Proprietário|Executa uma operação usando uma interface diferente das listadas nesta tabela.|  
         |Conjunto de linhas|Recupera um conjunto de linhas.|  
         |Instrução|Executa um comando OLE DB.|  
@@ -61,7 +61,7 @@ ms.locfileid: "34020633"
   
     -   Na lista suspensa **Invocação**, especifique como a ação é invocada. A tabela seguinte descreve as opções disponíveis para invocar uma ação.  
   
-        |Opção|Description|  
+        |Opção|Descrição|  
         |------------|-----------------|  
         |Interativo|A ação é disparada pela interação do usuário.|  
         |Lote|A ação é executada como uma operação de lote.|  
@@ -72,7 +72,7 @@ ms.locfileid: "34020633"
         > [!NOTE]  
         >  As ações proprietárias não são retornadas para o servidor a menos que o aplicativo cliente restrinja explicitamente o conjunto de linhas de esquema para retornar somente ações que correspondam ao nome especificadas em **Aplicativo**.  
   
-    -   Em **ação conteúdo**, se você estiver usando o tipo de URL, coloque o endereço de Internet entre aspas, por exemplo, "http://www.adventure-works.com".  
+    -   Na **conteúdo da ação**, se você estiver usando o tipo de URL, coloque o endereço de Internet entre aspas, por exemplo, "http://www.adventure-works.com".  
   
     -   Em **Descrição**, digite uma descrição para a ação.  
   

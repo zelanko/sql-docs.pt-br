@@ -20,29 +20,28 @@ helpviewer_keywords:
 ms.assetid: 24e2764b-c8e5-4322-97a4-7407d8b8a92b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33c87d4b784e46defac98823a5cf9d4dc9420aaa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f91339990e5d12d1b2b674ea9fd124fc4161424
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125354"
 ---
 # <a name="sysparameters-transact-sql"></a>sys.parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contém uma linha para cada parâmetro de um objeto que aceita parâmetros. Se o objeto for uma função escalar, também haverá uma única linha descrevendo o valor de retorno. Essa linha terá um **parameter_id** valor de 0.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID do objeto ao qual pertence o parâmetro.|  
 |**name**|**sysname**|Nome do parâmetro. É exclusiva no objeto.<br /><br /> Se o objeto for uma função escalar, o nome de parâmetro será uma cadeia de caracteres vazia na linha que representa o valor de retorno.|  
 |**parameter_id**|**int**|ID do parâmetro. É exclusiva no objeto.<br /><br /> Se o objeto for uma função escalar, **parameter_id** = 0 representa o valor de retorno.|  
 |**system_type_id**|**tinyint**|ID do tipo de sistema do parâmetro.|  
 |**user_type_id**|**int**|ID do tipo do parâmetro como definido pelo usuário.<br /><br /> Para retornar o nome do tipo, Junte-se para o [Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) essa coluna de exibição do catálogo.|  
-|**max_length**|**smallint**|Comprimento máximo do parâmetro, em bytes.<br /><br /> Valor = -1 quando o tipo de dados de coluna é **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.|  
-|**Precisão**|**tinyint**|Precisão do parâmetro se tiver base numérica; Caso contrário, 0.|  
+|**max_length**|**smallint**|Comprimento máximo do parâmetro, em bytes.<br /><br /> Valor = -1 quando o tipo de dados de coluna é **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , ou **xml**.|  
+|**precisão**|**tinyint**|Precisão do parâmetro se tiver base numérica; Caso contrário, 0.|  
 |**scale**|**tinyint**|Escala do parâmetro, se numérico; do contrário, 0.|  
 |**is_output**|**bit**|1 = Parâmetro é OUTPUT ou RETURN; caso contrário, 0.|  
 |**is_cursor_ref**|**bit**|1 = parâmetro é um parâmetro de referência de cursor.|  

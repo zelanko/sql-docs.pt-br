@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2bebee1057180259c9813d7a650594c0c6d4736d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023003"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208705"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>O script básico de MDX (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34023003"
   
  O script MDX padrão também contém comandos de script que criam conjuntos nomeados, atribuições e membros calculados criados no Designer de Cubo:  
   
--   O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] adiciona diretamente comandos de script ao script MDX padrão.  
+-   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] adiciona diretamente comandos de script ao script MDX padrão.  
   
 -   Para cada conjunto nomeado do cubo, existe uma instrução CREATE SET correspondente no script MDX padrão.  
   
@@ -47,18 +47,18 @@ ms.locfileid: "34023003"
  Todas as instruções de script MDX  
  Em scripts MDX, as instruções de script MDX controlam o contexto e o escopo dos cálculos e gerenciam o comportamento de outras instruções do script MDX. Essa categoria inclui as seguintes instruções:  
   
--   [CALCULAR](../../../mdx/mdx-scripting-calculate.md)  
+-   [CALCULATE](../../../mdx/mdx-scripting-calculate.md)  
   
--   [CONGELAR](../../../mdx/mdx-scripting-freeze.md)  
+-   [FREEZE](../../../mdx/mdx-scripting-freeze.md)  
   
--   [ESCOPO](../../../mdx/mdx-scripting-scope.md)  
+-   [SCOPE](../../../mdx/mdx-scripting-scope.md)  
   
  Para obter mais informações sobre instruções de scripts MDX, consulte [Instruções de script MDX &#40;MDX&#41;](../../../mdx/mdx-scripting-statements-mdx.md).  
   
- [CRIAR MEMBRO](../../../mdx/mdx-data-definition-create-member.md)  
+ [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md)  
  Uma instrução CREATE MEMBER cria membros calculados. Para obter mais informações sobre como criar membros calculados, consulte [Criando membros calculados em MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md).  
   
- [CRIAR CONJUNTO](../../../mdx/mdx-data-definition-create-set.md)  
+ [CREATE SET](../../../mdx/mdx-data-definition-create-set.md)  
  A instrução CREATE SET cria conjuntos nomeados. Para obter mais informações sobre como criar conjuntos de nomes, consulte [Criando conjuntos nomeados em MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md).  
   
  Instruções condicionais  
@@ -85,7 +85,7 @@ ms.locfileid: "34023003"
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de linguagem MDX & #40; MDX & #41;](../../../mdx/mdx-language-reference-mdx.md)   
- [Conceitos básicos de script MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [Referência da linguagem MDX &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [Conceitos básicos do script MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   

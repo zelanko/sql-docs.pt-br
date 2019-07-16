@@ -1,5 +1,5 @@
 ---
-title: Identifiers (MDX) | Microsoft Docs
+title: Identificadores (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7562beb2cccd94853c346aaf2f1be1886a2e3ac5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 24a1f2b1cb49335ba529126005c41b062e7a9e60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105411"
 ---
 # <a name="identifiers-mdx"></a>Identificadores (MDX)
 

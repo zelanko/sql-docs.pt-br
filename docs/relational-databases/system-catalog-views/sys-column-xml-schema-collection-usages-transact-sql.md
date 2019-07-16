@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 4fd1ec7f-b9dc-4ddb-ab3a-0d59ab05ad20
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21f7299c42a5c339d65d21fee6aa0ce2eba9a756
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99d1135fcf2229ca08e42a2afc45ad98f923ac95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139975"
 ---
 # <a name="syscolumnxmlschemacollectionusages-transact-sql"></a>sys.column_xml_schema_collection_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada coluna que é validada por um esquema XML.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|A ID do objeto ao qual a coluna pertence.|  
 |**column_id**|**int**|A ID da coluna. É exclusiva no objeto.|  

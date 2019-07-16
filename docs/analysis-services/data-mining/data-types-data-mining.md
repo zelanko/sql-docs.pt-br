@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4b62c9a4ebc9caf9875a1e5b6aef987bf0b4fa8a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014633"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183357"
 ---
 # <a name="data-types-data-mining"></a>Tipos de dados (Mineração de Dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,9 +22,9 @@ ms.locfileid: "34014633"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte aos seguintes tipos de dados para colunas de estrutura de mineração:  
   
-|Tipo de Dados|Tipos de conteúdo com suporte|  
+|Tipo de dados|Tipos de conteúdo com suporte|  
 |---------------|-----------------------------|  
-|**Texto**|Cyclical, Discrete, Discretized, Key Sequence, Ordered, Sequence|  
+|**Text**|Cyclical, Discrete, Discretized, Key Sequence, Ordered, Sequence|  
 |**Longo**|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Key Time, Ordered, Sequence, Time<br /><br /> Classificados|  
 |**Booliano**|Cyclical, Discrete, Ordered|  
 |**Double**|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Key Time, Ordered, Sequence, Time<br /><br /> Classificados|  
@@ -47,12 +47,12 @@ ms.locfileid: "34014633"
  Se você alterar o tipo de dados de uma coluna, sempre terá que reprocessar a estrutura de mineração e qualquer modelo de mineração baseado nessa estrutura. Às vezes, se você alterar o tipo de dados, essa coluna não poderá mais ser usada em um modelo específico. Nesse caso, o Analysis Services gerará um erro quando você reprocessar o modelo ou processará o modelo, mas omitirá essa coluna em particular.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo tipos & #40; mineração de dados & #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [Conteúdo tipos & #40; DMX & #41;](../../dmx/content-types-dmx.md)   
- [Algoritmos de mineração de dados e &#40; Analysis Services – Data Mining e &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Estruturas de mineração & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Tipos de dados & #40; DMX & #41;](../../dmx/data-types-dmx.md)   
+ [Tipos de conteúdo &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [Tipos de conteúdo &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Tipos de dados &#40;DMX&#41;](../../dmx/data-types-dmx.md)   
  [Colunas do modelo de mineração](../../analysis-services/data-mining/mining-model-columns.md)   
- [Colunas de estrutura de mineração](../../analysis-services/data-mining/mining-structure-columns.md)  
+ [Colunas da estrutura de mineração](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   

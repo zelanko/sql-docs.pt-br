@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6b9363c9-04bf-4492-a210-7aa15dea4af8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 13cb433da64b78a8b5e70f28642fd576f6803ed5
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 1cb92afa9467717b8a589ddbcaee4ab8a5a529f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130087"
 ---
 # <a name="datetime-data-types"></a>Tipo de dados datetime
 Em ODBC *3.x*, os identificadores de data, hora e tipos de dados SQL de carimbo de hora foram alterados de SQL_DATE, SQL_TIME e SQL_TIMESTAMP (com instâncias de **#define** no arquivo de cabeçalho de 9, 10 e 11) para SQL _ TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP (com instâncias de **#define** no arquivo de cabeçalho de 91, 92 e 93), respectivamente. O tipo correspondente de C identificadores foram alterados de SQL_C_DATE, SQL_C_TIME e SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME e SQL_C_TYPE_TIMESTAMP, respectivamente e as instâncias de **#define** foram alterados adequadamente.  

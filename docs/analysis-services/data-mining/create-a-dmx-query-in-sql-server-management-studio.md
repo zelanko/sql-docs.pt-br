@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9842dd19b9f613c7b10c86e3596ddda96a99f59b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014563"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183997"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Criar uma consulta DMX no SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Fornece um conjunto de recursos para ajudá-lo a criar consultas de previsão, consultas de conteúdo e consultas de definição de dados em modelos de mineração e estruturas de mineração.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um conjunto de recursos para ajudar a criar consultas de previsão, consultas de conteúdo e consultas de definição de dados em modelos de mineração e estruturas de mineração.  
   
 -   O Construtor de consulta de previsão gráfico está disponível no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], para simplificar o processo de escrever consultas de previsão e conjuntos de dados de mapeamento em um modelo.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34014563"
  Você também pode criar modelos personalizados, para consultas ou comandos que você executa com frequência.  
   
 ## <a name="xmla-query-templates"></a>Modelos de consulta XMLA  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]também fornece modelos para consultas XMLA.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também fornece modelos para consultas XMLA.  
   
  Há alguma sobreposição entre os tipos de consultas que você pode executar usando XMLA e DMX. Por exemplo, você pode criar algumas consultas de conteúdo de modelo usando DMX ou os conjuntos de linhas de esquema de mineração de dados, mas os conjuntos de linhas de esquema às vezes contêm informações que não são expostas em consultas de conteúdo DMX.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "34014563"
  [Criar uma consulta de conteúdo em um modelo de mineração](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Ferramentas de Consulta de Mineração de Dados](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Extensões de mineração de dados & #40; DMX & #41; Referência](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [Ferramentas de Consulta de Data Mining](../../analysis-services/data-mining/data-mining-query-tools.md)   
+ [Referência de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fd72f62cc513064e01c04e5a501b18a070f4c7a8
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50098969"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208279"
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Conectar-se o aplicativo de serviço do Power Pivot para o aplicativo Web do SharePoint na autoridade de certificação
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "50098969"
 > [!IMPORTANT]  
 >  Deve haver apenas um aplicativo do serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no grupo padrão para garantir o funcionamento correto do Painel de Gerenciamento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Não adicione mais de um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ao grupo padrão. A adição de várias entradas do mesmo tipo de aplicativo do serviço não é uma configuração compatível e pode causar erros. Se você estiver criando aplicativos de serviço adicionais, adicione-os a listas personalizadas.  
   
- Este tópico contém as seguintes seções:  
+ Esse tópico contém as seguintes seções:  
   
  [Adicionar um aplicativo de serviço do Power Pivot ao grupo padrão](#default)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "50098969"
   
 2.  Em Grupo Proxy de Aplicativo, clique em **padrão**.  
   
-3.  Marque a caixa de seleção ao lado do aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (indicado pelo nome do tipo **Power Pivot Service Application Proxy (Proxy de Aplicativo de Serviço Power Pivot)**). Se houver mais de um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , escolha apenas um.  
+3.  Marque a caixa de seleção ao lado do aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (indicado pelo nome do tipo **Power Pivot Service Application Proxy (Proxy de Aplicativo de Serviço Power Pivot)** ). Se houver mais de um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , escolha apenas um.  
   
 4.  Clique em **OK**.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "50098969"
   
 3.  Em Aplicativos Web, em Gerenciar, clique em **Conexões de Serviço**.  
   
-4.  Em **Editar o seguinte grupo de conexões**, selecione **[personalizado]**.  
+4.  Em **Editar o seguinte grupo de conexões**, selecione **[personalizado]** .  
   
 5.  Marque a caixa de seleção ao lado de cada conexão de aplicativo de serviço a ser usada. Se você tiver vários aplicativos de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (indicado por Tipo definido como **Power Pivot Service Application Proxy**[Proxy de Aplicativo de Serviço Power Pivot]), escolha apenas um.  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d61f6e2d5c2999a1ff7cea86d497eb4f0fb13244
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49f0023f726dd4bb290ffba1018ce2608800dd90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216367"
 ---
 # <a name="getting-long-data"></a>Obter dados Long
 Definem DBMSs *dados long* como qualquer caractere ou dados binários ao longo de um determinado tamanho, como 255 caracteres. Esses dados podem ser pequenos o suficiente para ser armazenado em um único buffer, como uma descrição da parte de vários milhares de caracteres. No entanto, pode ser muito longo para armazenar na memória, como documentos de texto longos ou bitmaps. Porque esses dados não podem ser armazenados em um único buffer, ela é recuperada do driver em partes com **SQLGetData** depois que os outros dados na linha foi buscados.  

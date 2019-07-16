@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375938"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206604"
 ---
 # <a name="working-with-query-notifications"></a>Trabalhando com notificações de consulta
   As notificações de consulta foram introduzidas no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Baseadas na infraestrutura do Service Broker, introduzida no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], as notificações de consulta permitem que os aplicativos sejam notificados em caso de alteração nos dados. Esse recurso é particularmente útil para aplicativos que fornecem um cache de informações de um banco de dados, como um aplicativo da Web, e precisam ser notificados quando os dados de origem são alterados.  
@@ -73,7 +73,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>O conjunto de propriedades DBPROPSET_SQLSERVERROWSET  
  Para dar suporte a notificações de consulta através do OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adiciona as novas propriedades a seguir ao conjunto de propriedades DBPROPSET_SQLSERVERROWSET.  
   
-|Nome|Tipo|Descrição|  
+|Name|Tipo|Descrição|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|O número de segundos que a notificação de consulta permanece ativa.<br /><br /> O padrão é 432000 segundos (5 dias). O valor mínimo é 1 segundo e o valor máximo é 2^31-1 segundos.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|O texto da mensagem da notificação. É definido pelo usuário e não tem um formato predefinido.<br /><br /> Por padrão, a cadeia de caracteres fica vazia. Você pode especificar uma mensagem que contenha entre 1-2000 caracteres.|  
@@ -131,7 +131,7 @@ RECEIVE * FROM MyQueue
   
  Se uma solicitação de assinatura for feita para um lote ou procedimento armazenado, outra solicitação de assinatura será feita para cada instrução executada no lote ou procedimento armazenado. As instruções EXECUTE não registrarão notificações, mas enviarão a solicitação de notificação para o comando executado. Se for um lote, o contexto será aplicado às instruções executadas e as mesmas regras descritas anteriormente serão aplicadas.  
   
- O envio de uma consulta para notificação que foi enviada pelo mesmo usuário no mesmo contexto de banco de dados e que tem o mesmo modelo, os mesmos valores de parâmetros, a mesma ID de notificação e o mesmo local de entrega de uma assinatura ativa existente, renovará a assinatura existente, redefinindo o novo tempo limite especificado. Isso significa que, se for solicitada uma notificação para consultas idênticas, apenas uma notificação será enviada. Isso se aplica a uma consulta duplicada em um lote ou a uma consulta em um procedimento armazenado chamada várias vezes.  
+ Envio de uma consulta de notificação que foi enviada pelo mesmo usuário sob o mesmo contexto de banco de dados e tem o mesmo modelo, mesmos valores de parâmetro, mesma ID de notificação e mesmo local de entrega de uma assinatura ativa existente, renovará existente assinatura, redefinir o novo especificado de tempo limite. Isso significa que, se a notificação for solicitada para consultas idênticas, apenas uma notificação será enviada. Isso se aplica a uma consulta duplicada em um lote ou a uma consulta em um procedimento armazenado chamada várias vezes.  
   
 ## <a name="see-also"></a>Consulte também  
  [Recursos do SQL Server Native Client](sql-server-native-client-features.md)  

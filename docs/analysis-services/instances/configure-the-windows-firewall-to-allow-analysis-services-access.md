@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d5d4da4f1d01d0afb66c998fc2c782afe0c2e6ff
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211575"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181931"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurar o Firewall do Windows para permitir o acesso ao Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "53211575"
   
  Somente uma porta TCP pode ser usada por uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Em computadores com várias placas de rede ou vários endereços IP, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escuta em uma porta TCP para todos os endereços IP atribuídos ou com alias para o computador. Se você tiver requisitos de várias portas específicas, é recomendável configurar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para acesso HTTP. Em seguida, você poderá configurar vários pontos de extremidade HTTP em qualquer porta escolhida. Consulte [Configurar o acesso HTTP ao Analysis Services no Serviços de Informações da Internet &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
- Este tópico contém as seguintes seções:  
+ Esse tópico contém as seguintes seções:  
   
 -   [Verificar as configurações de porta e de firewall do Analysis Services](#bkmk_checkport)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "53211575"
 ##  <a name="bkmk_default"></a> Configurar o Firewall do Windows para uma instância padrão do Analysis Services  
  A instância padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escuta na porta TCP 2383. Se você instalou a instância padrão e deseja usar esta porta, basta desbloquear o acesso de entrada à porta TCP 2383 no Firewall do Windows para habilitar o acesso remoto à instância padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Se você instalou a instância padrão mas deseja configurar o serviço para escutar em uma porta fixa, consulte [Usar uma porta fixa para uma instância padrão ou nomeada do Analysis Services](#bkmk_fixed) neste tópico.  
   
- Para verificar se o serviço está sendo executado como a instância padrão (MSSQLServerOLAPService), verifique o nome do serviço no Gerenciador de Configuração do SQL Server. Uma instância padrão do Analysis Services sempre é listada como o **SQL Server Analysis Services (MSSQLSERVER)**.  
+ Para verificar se o serviço está sendo executado como a instância padrão (MSSQLServerOLAPService), verifique o nome do serviço no Gerenciador de Configuração do SQL Server. Uma instância padrão do Analysis Services sempre é listada como o **SQL Server Analysis Services (MSSQLSERVER)** .  
   
 > [!NOTE]  
 >  Diferentes sistemas operacionais Windows oferecem ferramentas alternativas para configurar o Firewall do Windows. A maioria dessas ferramentas permitem optar entre abrir uma porta específica ou o programa executável. A menos que você tenha um motivo para especificar o programa executável, recomendamos que especifique a porta.  

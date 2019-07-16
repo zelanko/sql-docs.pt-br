@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eabecbc399751f03e9e5c25b32423ce0839072dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 576e7e10d9d6f5c7e8616f57bde2dfed05503eae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112068"
 ---
 # <a name="delete-tag-command"></a>Comando DELETE TAG
 Remove uma marca ou marcas de um arquivo de índice composto (. cdx).  
@@ -34,10 +33,10 @@ DELETE TAG ALL [OF CDXFileName]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *TagName1*OF *CDXFileName1*[, *TagName2*[OF *CDXFileName2*]] ...  
+ *TagName1*OF *CDXFileName1*[, *TagName2*[OF *CDXFileName2*]]...  
  Especifica uma marca a ser removido de um arquivo de índice composto. Você pode excluir várias marcas com uma marca de excluir, incluindo uma lista de nomes de marca separados por vírgulas. Se duas ou mais marcas com o mesmo nome existirem nos arquivos de índice aberto, você pode remover uma marca de um arquivo de índice específico incluindo OF *CDXFileName*.  
   
- ALL [OF *CDXFileName*]  
+ Todos os [OF *CDXFileName*]  
  Remove cada marca de um arquivo de índice composto. Se a tabela atual tem um arquivo de índice composto estrutural, todas as marcas são removidas do arquivo de índice, o arquivo de índice é excluído do disco e o sinalizador no cabeçalho da tabela que indica a presença de um arquivo de índice composto de estrutural associado é removido. Use tudo isso com OF *CDXFileName* para remover todas as marcas de um arquivo de índice composto aberto que não seja o arquivo de índice composto estrutural.  
   
 ## <a name="remarks"></a>Comentários  

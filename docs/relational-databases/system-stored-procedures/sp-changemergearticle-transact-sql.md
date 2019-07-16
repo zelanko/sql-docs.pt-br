@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e9d2baf65dedf1116a85f7271b1929e0ead4ca23
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 35d1ef721df6f67e4cd5c0f993458238394ac0e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104508"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ sp_changemergearticle [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` É o nome do artigo a alterar. *artigo* está **sysname**, sem padrão.  
   
-`[ @property = ] 'property'` É a propriedade a ser alterada para um determinado artigo e publicação. *propriedade* está **nvarchar (30)**, e pode ser um dos valores listado na tabela.  
+`[ @property = ] 'property'` É a propriedade a ser alterada para um determinado artigo e publicação. *propriedade* está **nvarchar (30)** , e pode ser um dos valores listado na tabela.  
   
-`[ @value = ] 'value'` É o novo valor para a propriedade especificada. *valor* está **nvarchar (1000)**, e pode ser um dos valores listado na tabela.  
+`[ @value = ] 'value'` É o novo valor para a propriedade especificada. *valor* está **nvarchar (1000)** , e pode ser um dos valores listado na tabela.  
   
  Essa tabela descreve as propriedades de artigos e os valores dessas propriedades.  
   
@@ -62,7 +61,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x10**|Permissões em nível de tabela são verificadas no Publicador antes que as instruções INSERT feitas no Assinante sejam aplicadas no Publicador.|  
 ||**0x20**|Permissões em nível de tabela são verificadas no Publicador antes que as instruções UPDATE feitas no Assinante sejam aplicadas no Publicador.|  
 ||**0x40**|Permissões em nível de tabela são verificadas no Publicador antes que as instruções DELETE feitas no Assinante sejam aplicadas no Publicador.|  
-|**column_tracking**|**true**|Ativa o rastreamento em nível de coluna. Aplica-se somente a um artigo de tabela.<br /><br /> Observação: O rastreamento em nível de coluna não pode ser usado ao publicar tabelas com mais de 246 colunas.|  
+|**column_tracking**|**true**|Ativa o rastreamento em nível de coluna. Aplica-se somente a um artigo de tabela.<br /><br /> Observação: Rastreamento em nível de coluna não pode ser usado ao publicar tabelas com mais de 246 colunas.|  
 ||**false**|Ativa o rastreamento em nível de coluna e deixa a detecção de conflito no nível de linha. Aplica-se somente a um artigo de tabela.|  
 |**compensate_for_errors**|**true**|Ações de compensação são executadas quando ocorrem erros durante a sincronização. Para obter mais informações, consulte [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 ||**false**|As ações de compensação não são executadas, o que é o comportamento padrão. Para obter mais informações, consulte [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).<br /><br /> **\*\* Importante \* \***  embora dados nas linhas afetadas pareçam estar fora de convergência, assim que você resolva os erros, as alterações podem ser aplicadas e dados serão convergidos. Se a tabela de origem para um artigo já estiver publicada em outra publicação e, em seguida, o valor de *compensate_for_errors* deve ser o mesmo para os dois artigos.|  
@@ -90,7 +89,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**pub_identity_range**||**bigint** que especifica o tamanho do intervalo alocado a um assinante com assinatura de servidor, se o artigo tiver **identityrangemanagementoption** definido como **automático** ou **auto_ identity_range** definido como **verdadeiro**. Esse intervalo de identidade é reservado para um Assinante de republicação para ser alocado a seus próprios Assinantes. Aplica-se apenas a um artigo de tabela. Para obter mais informações, consulte a seção "Replicação de mesclagem" do [replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**published_in_tran_pub**|**true**|Artigo também é publicado em uma publicação transacional.|  
 ||**false**|O artigo também não é publicado em uma publicação transacional.|  
-|**resolver_info**||É usado para especificar informações adicionais requeridas por um determinador personalizado. Alguns resolvedores do [!INCLUDE[msCoName](../../includes/msconame-md.md)] necessitam de uma coluna fornecida como entrada para o resolvedor. **resolver_info** está **nvarchar (255)**, com um padrão NULL. Para obter mais informações, consulte [Resolvedores Microsoft baseados em COM](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).|  
+|**resolver_info**||É usado para especificar informações adicionais requeridas por um determinador personalizado. Alguns resolvedores do [!INCLUDE[msCoName](../../includes/msconame-md.md)] necessitam de uma coluna fornecida como entrada para o resolvedor. **resolver_info** está **nvarchar (255)** , com um padrão NULL. Para obter mais informações, consulte [Resolvedores Microsoft baseados em COM](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).|  
 |**schema_option** (bitmap)||Para obter mais informações, consulte a seção Comentários, mais adiante neste tópico.|  
 ||**0x00**|Desabilita a execução de script pelo Snapshot Agent e usa o script fornecido **creation_script**.|  
 ||**0x01**|Gera o script de criação de objeto (CREATE TABLE, CREATE PROCEDURE e assim por diante).|  
@@ -119,7 +118,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x4000000**|Replica índices em **xml** colunas.|  
 ||**0x8000000**|Cria qualquer esquema ainda não presente no assinante.|  
 ||**0x10000000**|Converte **xml** colunas a serem **ntext** no assinante.|  
-||**0x20000000**|Converte tipos de dados objeto grande (**nvarchar (max)**, **varchar (max)**, e **varbinary (max)**) que foram introduzidos no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para tipos de dados com suporte em [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
+||**0x20000000**|Converte tipos de dados objeto grande (**nvarchar (max)** , **varchar (max)** , e **varbinary (max)** ) que foram introduzidos no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para tipos de dados com suporte em [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
 ||**0x40000000**|Replica as permissões.|  
 ||**0x80000000**|Tentativa de remover dependências de todos os objetos que não fazem parte da publicação.|  
 ||**0x100000000**|Use esta opção para replicar o atributo FILESTREAM, se ele for especificado em **varbinary (max)** colunas. Não especifique essa opção se você estiver replicando tabelas para Assinantes [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Replicação de tabelas com colunas FILESTREAM para [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] assinantes não é suportada, independentemente de como essa opção de esquema é definida. Consulte a opção relacionada **0x800000000**.|  
@@ -132,7 +131,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x8000000000**|Converte o **geografia** e **geometry** tipos de dados **varbinary (max)** para que colunas desses tipos podem ser replicadas para assinantes que executam o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x10000000000**|Replica índices em colunas do tipo **geografia** e **geometry**.|  
 ||NULL|O sistema gera automaticamente uma opção de esquema válida para o artigo.|  
-|**status**|**active**|O script de processamento inicial para publicação da tabela é executado.|  
+|**status**|**Active Directory**|O script de processamento inicial para publicação da tabela é executado.|  
 ||**unsynced**|O script de processamento inicial para publicar a tabela é executado da próxima vez que o Snapshot Agent é executado.|  
 |**stream_blob_columns**|**true**|Uma otimização de fluxo de dados é usada ao replicar colunas de objeto binário grande. Porém, certas funcionalidades de replicação de mesclagem, como registros lógicos, ainda podem impedir que a otimização de fluxo seja usada. *stream_blob_columns* é definido como true quando FILESTREAM está habilitado. Isso permite a replicação de dados FILESTREAM para executar da maneira ideal e reduzir a utilização de memória. Para forçar os artigos da tabela FILESTREAM a não usarem o fluxo de blob, defina *stream_blob_columns* como false.<br /><br /> **\*\* Importante \* \***  a habilitação dessa otimização de memória pode prejudicar o desempenho do Merge Agent durante a sincronização. Esta opção só deve ser usada ao replicar colunas que contêm megabytes de dados.|  
 ||**false**|A otimização não é usada ao replicar colunas de objeto binário grande.|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eed879fa9bdeab12398f53d424bb5eaf8aea5bc7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023884"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209117"
 ---
 # <a name="configure-measure-group-properties"></a>Configurar propriedades do grupo de medidas
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34023884"
 |**EstimatedSize**|Especifica o tamanho estimado (em bytes) do grupo de medidas.|  
 |**ID**|Especifica o identificador do objeto.|  
 |**IgnoreUnrelatedDimensions**|Determina se as dimensão não relacionadas são forçadas para seu nível superior quando os membros das dimensões que não estão relacionados ao grupo de medidas são incluídos em uma consulta. A configuração padrão é **True**.|  
-|**Nome**|Nome da medida. Esta propriedade é somente leitura.|  
+|**Name**|Nome da medida. Esta propriedade é somente leitura.|  
 |**ProactiveCaching**|As definições configuráveis de tratamento de erros para tratamento de chaves duplicadas, chaves desconhecidas, chaves nulas, limites de erro, ação devido à detecção de erros, arquivo de log de erros.|  
 |**ProcessingMode**|Indica se a indexação e a agregação devem ocorrer durante ou após o processamento. As opções são Regular e LazyAggregations. LazyAggregations pode ser usado para executar a agregação como uma tarefa em segundo plano.|  
 |**ProcessingPriority**|Determina a prioridade de processamento do cubo durante as operações em segundo plano, como agregações lentas e indexação. O valor padrão é **0**.|  

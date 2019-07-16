@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c3bf71447581375fca06d8190cf6a5a863c136dc
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145701"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209197"
 ---
 # <a name="actions-in-multidimensional-models"></a>Ações em modelos multidimensionais
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "50145701"
   
  Use a guia **Ações** do Designer de Cubo para criar ações para um cubo. Especifique o seguinte:  
   
- **Nome**  
+ **Name**  
  Selecione um nome que identifica a ação.  
   
  **Destino da Ação**  
@@ -52,7 +52,7 @@ ms.locfileid: "50145701"
  **Conteúdo da Ação**  
  Selecione o tipo de ação. A tabela a seguir resume os tipos disponíveis:  
   
-|Tipo|Description|  
+|type|Descrição|  
 |----------|-----------------|  
 |Conjunto de Dados|Recupera um conjunto de dados.|  
 |Proprietário|Executa uma operação usando uma interface diferente das listadas nesta tabela.|  
@@ -65,7 +65,7 @@ ms.locfileid: "50145701"
  **Propriedades Adicionais**  
  Selecione a propriedade. A tabela a seguir resume as propriedades disponíveis:  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**Invocação**|Especifica como a ação é executada. Interativo, o padrão, especifica que a ação será executada quando um usuário acessar um objeto. Os configurações possíveis são:<br /><br /> Lote<br /><br /> Interativo<br /><br /> Em Aberto|  
 |**Aplicativo**|Descreve o aplicativo da ação.|  
@@ -82,7 +82,7 @@ ms.locfileid: "50145701"
  **Servidor de relatório**  
  As propriedades descritas na tabela a seguir são especificadas para o servidor de relatório.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**Nome do servidor**|O nome do computador que executa o servidor de relatório.|  
 |**Caminho do servidor**|O caminho exibido pelo servidor de relatório.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 297dbbf13da14916d12fc1ef457279a1268bc991
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dab15a076200e464e82d0b01ef6a156447a537f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108040"
 ---
 # <a name="spmsxgetaccount-transact-sql"></a>sp_msx_get_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_msx_get_account
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Retorna o seguinte conjunto de resultados:  
   
-|Nome da coluna|Tipo|Description|  
+|Nome da coluna|type|Descrição|  
 |-----------------|----------|-----------------|  
 |msx_connection|**int**|Número de conexão do servidor mestre.|  
 |msx_credential_id|**int**|ID da credencial usada para esta conexão de servidor mestre.|  

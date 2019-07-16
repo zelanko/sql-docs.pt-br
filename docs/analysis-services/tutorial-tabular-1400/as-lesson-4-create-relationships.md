@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 16fcf8e5f85464dbba7666f0f4ebebba829405af
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 7f593dafc1a734cd5f3a0c9fde4f47987f0b92af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685593"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207402"
 ---
 # <a name="create-relationships"></a>Criar relações
 
@@ -25,7 +25,7 @@ Nesta lição, você verifica as relações que foram criadas automaticamente qu
   
 Tempo estimado para concluir esta lição: **10 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 
 Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 3: Marcar como tabela de data](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md). 
   
@@ -58,7 +58,7 @@ Antes de prosseguir com a criação de seu modelo, você deve verificar essas re
   
 3.  Verifique se as seguintes relações foram criadas quando cada uma das tabelas foi importada do banco de dados AdventureWorksDW:  
   
-    |Ativa|Table|Tabela de Pesquisa Relacionada|  
+    |Ativa|Tabela|Tabela de Pesquisa Relacionada|  
     |----------|---------|------------------------|  
     |Sim|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
     |Sim|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  

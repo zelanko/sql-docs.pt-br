@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7dc119aaaf24457bc9267ee750ce82a9a4a69104
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ea3fd7937447ba3ed0f3ad89965301dead772cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122879"
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contém uma linha para cada família de mídia. Se uma família de mídia residir em um conjunto de mídias espelhado, a família terá uma linha separada para cada espelho no conjunto de mídias. Essa tabela é armazenada na **msdb** banco de dados.  
     
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**media_set_id**|**int**|Número de identificação exclusivo que identifica o conjunto de mídias do qual esta família é um membro. Referências **backupmediaset (media_set_id)**|  
 |**family_sequence_number**|**tinyint**|Posição desta família de mídias no conjunto de mídias.|  
