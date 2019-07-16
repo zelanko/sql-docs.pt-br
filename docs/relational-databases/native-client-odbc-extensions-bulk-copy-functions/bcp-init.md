@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74400acc3030967a985fca6041a60b96947ef64b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e47c7c4f5324da021db2624e5e936493fd54ea45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630294"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895526"
 ---
 # <a name="bcpinit"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ RETCODE bcp_init (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *HDBC*  
+ *hdbc*  
  É o identificador de conexão ODBC habilitado para cópia em massa.  
   
  *szTable*  
@@ -84,7 +83,7 @@ RETCODE bcp_init (
   
 -   Ao copiar para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a posição ordinal de uma coluna no arquivo de dados deve ser idêntica à posição ordinal da coluna na tabela do banco de dados. Ao copiar de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp_exec** coloca dados com base na posição ordinal da coluna na tabela de banco de dados.  
   
--   Se um tipo de dados do banco de dados é de comprimento variável (por exemplo, **varbinary(22)**) ou se uma coluna de banco de dados pode conter valores nulos, os dados no arquivo de dados serão prefixados com um indicador de comprimento/nulo. A largura do indicador varia dependendo do tipo de dados e da versão da cópia em massa.  
+-   Se um tipo de dados do banco de dados é de comprimento variável (por exemplo, **varbinary(22)** ) ou se uma coluna de banco de dados pode conter valores nulos, os dados no arquivo de dados serão prefixados com um indicador de comprimento/nulo. A largura do indicador varia dependendo do tipo de dados e da versão da cópia em massa.  
   
  Para alterar valores de formato de dados especificados para um arquivo de dados, chame [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) e [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md).  
   

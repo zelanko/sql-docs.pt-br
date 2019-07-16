@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0a44320072f11a56b735502be3f1776f29cc1c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86f888955e6188cd7f90e54f39eeef3723dcfbe8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538015"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897721"
 ---
 # <a name="sqlgetfunctions-function"></a>Função SQLGetFunctions
 **Conformidade com**  
@@ -45,7 +44,7 @@ SQLRETURN SQLGetFunctions(
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *ConnectionHandle*  
+ *Identificador da conexão*  
  [Entrada] Identificador de conexão.  
   
  *FunctionId*  
