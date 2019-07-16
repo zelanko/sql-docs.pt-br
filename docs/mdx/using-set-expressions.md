@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 012a2946ff931e1326dcd3fa6321472761d67c56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 622458f3ea3f8baf74b3aaa4aa9c46f94972f490
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038017"
 ---
 # <a name="using-set-expressions"></a>Usando expressões de conjunto
 
@@ -61,6 +60,6 @@ ms.locfileid: "62861700"
  Para obter exemplos de funções que retornam conjuntos, consulte [trabalhando com membros, tuplas e conjuntos de &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  
+ [Expressões &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

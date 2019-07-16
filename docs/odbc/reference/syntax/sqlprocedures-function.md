@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76e1154e3cdf3cc52d311d0afa6372b4be9019c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1bdaf63313a339d2b25ca6648ad25c1b4466b3f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005721"
 ---
 # <a name="sqlprocedures-function"></a>Função SQLProcedures
 **Conformidade com**  
@@ -120,7 +119,7 @@ SQLRETURN SQLProcedures(
 |Coluna de ODBC 2.0|3 de ODBC *. x* coluna|  
 |---------------------|-----------------------|  
 |PROCEDURE_QUALIFIER|PROCEDURE_CAT|  
-|PROCEDIMENTO _OWNER|PROCEDURE _SCHEM|  
+|PROCEDIMENTO _OWNER|PROCEDIMENTO _SCHEM|  
   
  Para determinar os comprimentos reais das colunas PROCEDURE_CAT, PROCEDURE_SCHEM e PROCEDURE_NAME, um aplicativo pode chamar **SQLGetInfo** com o SQL_MAX_CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN e SQL_MAX_PROCEDURE_ Opções de NAME_LEN.  
   

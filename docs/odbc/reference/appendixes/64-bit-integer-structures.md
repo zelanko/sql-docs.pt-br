@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac80c798-d9b2-4430-85ed-bd2461db0ac7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ac1a80e94d225b26cf879b27bdb0e138e0b0d1d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93d9e6fd01d6b9ef98ebb10f6728ec4ba205fbb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996261"
 ---
 # <a name="64-bit-integer-structures"></a>Estruturas de inteiro de 64 bits
 O tipo de C para os identificadores de tipo de dados SQL_C_SBIGINT e SQL_C_UBIGINT nos compiladores Microsoft C é _int64. Quando um compilador em vez de um compilador C da Microsoft® é usado, o tipo C pode ser diferente. Se o compilador dá suporte a inteiros de 64 bits nativamente, o driver ou o aplicativo deve definir ODBCINT64 para ser do tipo inteiro de 64 bits nativo. Se o compilador não dá suporte nativamente inteiros de 64 bits, um aplicativo ou driver pode definir as estruturas a seguir para garantir que ele tenha acesso a esses dados:  

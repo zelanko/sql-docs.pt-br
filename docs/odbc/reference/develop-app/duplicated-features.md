@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 641b16bc-f791-46d8-b093-31736473fe3d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d7b4e3991331e1a6f9dd731466cc2f514f75bbc9
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: ca73b5b9b41c99bd6db8e6181fa3582cae47c1d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046897"
 ---
 # <a name="duplicated-features"></a>Recursos duplicados
 O ODBC a seguir *2.x* funções foram duplicadas pelo ODBC *3.x* funções. Como resultado, o ODBC *2.x* funções foram preteridas no ODBC *3.x*. O ODBC *3.x* funções são referidas como funções de substituição.  

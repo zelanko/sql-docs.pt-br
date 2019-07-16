@@ -5,17 +5,16 @@ description: Artigo de referência para comandos de sql mssqlctl.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 844ea94e9df18132fd0729745ff154783b578fc1
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ead81f324f6946903c490b254b026bbcd799c20d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728503"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957908"
 ---
 # <a name="mssqlctl-sql"></a>mssqlctl sql
 
@@ -27,7 +26,7 @@ O artigo a seguir fornece referência para o **sql** comandos na **mssqlctl** fe
 |     |     |
 | --- | --- |
 [mssqlctl sql shell](#mssqlctl-sql-shell) | A CLI do banco de dados SQL permite que o usuário interaja com o SQL Server por meio do T-SQL.
-[mssqlctl sql query](#mssqlctl-sql-query) | O comando de consulta permite a execução de uma consulta T-SQL.
+[consulta de sql mssqlctl](#mssqlctl-sql-query) | O comando de consulta permite a execução de uma consulta T-SQL.
 ## <a name="mssqlctl-sql-shell"></a>mssqlctl sql shell
 A CLI do banco de dados SQL permite que o usuário interaja com o SQL Server por meio do T-SQL.
 ```bash

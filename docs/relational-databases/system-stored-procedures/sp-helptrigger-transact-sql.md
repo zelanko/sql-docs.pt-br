@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d59f7e05180ce2f0528159d64b0199ae8975464a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1e6244443fc1f6ba7d83376226fedd56563e0d39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048223"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,9 +41,9 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @tabname = ] 'table'` É o nome da tabela no banco de dados atual para o qual retornar informações de gatilho. *tabela* está **nvarchar(776)**, sem padrão.  
+`[ @tabname = ] 'table'` É o nome da tabela no banco de dados atual para o qual retornar informações de gatilho. *tabela* está **nvarchar(776)** , sem padrão.  
   
-`[ @triggertype = ] 'type'` É o tipo de gatilho DML para retornar informações sobre. *tipo de* está **char(6)**, com um padrão de NULL, e pode ser um destes valores.  
+`[ @triggertype = ] 'type'` É o tipo de gatilho DML para retornar informações sobre. *tipo de* está **char(6)** , com um padrão de NULL, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  

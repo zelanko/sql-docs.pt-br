@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 78cdaabe867ae67e3a1dfcb80e82cfaf95a94ed1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8285ca9fddf0e1b77ca171414e4c00b0029d110
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036498"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>Conectar-se com o SQLDriverConnect
 **SQLDriverConnect** é usado para se conectar a uma fonte de dados usando uma cadeia de caracteres de conexão. **SQLDriverConnect** é usado em vez de **SQLConnect** pelos seguintes motivos:  

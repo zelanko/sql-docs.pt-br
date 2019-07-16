@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 84f343ebda18e65217b18446707373a743b6a9d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a482acb22ad535e44d6ceb06a20474945a477e58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648924"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046374"
 ---
 # <a name="sysfncdcincrementlsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
   
 ## <a name="arguments"></a>Argumentos  
  *lsn_value*  
- Valor do LSN. *lsn_value* está **binário (10)**.  
+ Valor do LSN. *lsn_value* está **binário (10)** .  
   
 ## <a name="return-type"></a>Tipo de retorno  
  **binary(10)**  

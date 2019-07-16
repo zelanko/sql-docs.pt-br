@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 34423903-1aaa-4a55-88a6-8228315d84e7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 657376be08e4cd404ce53d78114604cdd11fbda2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90df7425c7265db141d393b774728a8fe2662061
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63005832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033043"
 ---
 # <a name="dboserverquotas-azure-sql-database"></a>dbo.server_quotas (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "63005832"
   
  Retorna os tipos de quota de bancos de dados disponíveis no servidor.  
   
-|Nome da coluna|Tipo de Dados|Descrição|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |quota_name|**nvarchar**|O tipo de quota para o servidor. O tipo **Premium_database** é equivalente a bancos de dados com uma reserva de recursos.|  
 |quota_value|**int**|O número do tipo de quota permitido no servidor.|  

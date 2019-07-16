@@ -14,42 +14,41 @@ helpviewer_keywords:
 ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d477dbc6b54d7ebd82b7e2ef8611f5f6dd807e83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6352a5ae894adb09f714a78386bfecfa3ce1df77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041623"
 ---
 # <a name="interval-literal-syntax"></a>Sintaxe literal de intervalo
 A sintaxe a seguir é usada para literais de intervalo em ODBC.  
   
- *interval-literal ::= INTERVAL* [+ *&#124;* -] *interval-string interval-qualifier*  
+ *literal de intervalo:: = intervalo* [+ *&#124;* -] *qualificador de intervalo de cadeia de caracteres do intervalo*  
   
  *interval-string* ::= *quote* { *year-month-literal* &#124; *day-time-literal* } *quote*  
   
- *year-month-literal* ::= *years-value* &#124; [*years-value* -] *months-value*  
+ *ano-mês-literal* :: = *valor de ano* &#124; [*valor de ano* -] *valor de meses*  
   
  *day-time-literal* ::= *day-time-interval* &#124; *time-interval*  
   
  *day-time-interval* ::= *days-value* [*hours-value* [:*minutes-value*[:*seconds-value*]]]  
   
- *time-interval* ::= *hours-value* [:*minutes-value* [:*seconds-value* ] ]  
+ *intervalo de tempo* :: = *valor de horas* [:*valor de minutos* [:*valor de segundos* ]]  
   
  &#124; *minutes-value* [:*seconds-value* ]  
   
  &#124; *seconds-value*  
   
- *years-value* ::= *datetime-value*  
+ *valor de ano* :: = *valor datetime*  
   
- *months-value* ::= *datetime-value*  
+ *valor de meses* :: = *valor datetime*  
   
- *days-value* ::= *datetime-value*  
+ *valor de dias* :: = *valor datetime*  
   
- *hours-value* ::= *datetime-value*  
+ *valor de horas* :: = *valor datetime*  
   
- *minutes-value* ::= *datetime-value*  
+ *valor de minutos* :: = *valor datetime*  
   
  *seconds-value* ::= *seconds-integer-value* [.[*seconds-fraction*] ]  
   

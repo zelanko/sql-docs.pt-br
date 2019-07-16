@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: be3ccf8b0c85b61f536c381e4a42d1b5e37fbacf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c9d0a82422675c9698d7216b92e1c9401392a79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004825"
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_article_validation [ @publication = ] 'publication'
   
 `[ @full_or_fast = ] full_or_fast` O método é usado para calcular o número de linhas. *full_or_fast* está **tinyint**, e pode ser um destes valores.  
   
-|**Value**|**Descrição**|  
+|**Valor**|**Descrição**|  
 |---------------|---------------------|  
 |**0**|Executa a contagem completa usando COUNT(*).|  
 |**1**|Executa uma contagem rápida de **sysindexes**. Contagem de linhas em **sysindexes** é mais rápido do que contar linhas na tabela atual. No entanto, **sysindexes** é atualizado com lentidão, e o número de linhas pode não ser preciso.|  

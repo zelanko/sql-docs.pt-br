@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 884ed081e9d1ec445815802545da2160057e9f3b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cf5835e513b1d03ac1065ae039c989c6f80a659f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018543"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Introdução aos diagramas de atualização (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,10 +42,10 @@ ms.locfileid: "56026877"
 >  Esta documentação parte do pressuposto de que você esteja familiarizado com suporte a modelos e ao esquema de mapeamento no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Introdução a esquemas de XSD anotados &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para aplicativos herdados que usam XDR, consulte [os esquemas XDR anotados &#40;substituídos no SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="required-namespaces-in-the-updategram"></a>Namespaces necessários no diagrama de atualização  
- As palavras-chave em um diagrama de atualização, como  **\<sincronização >**,  **\<antes >**, e  **\<depois >**, existem no **urn: schemas-microsoft-com: XML-diagrama de atualização** namespace. O prefixo de namespace utilizado é arbitrário. Nesta documentação, o **updg** prefixo denota a **updategram** namespace.  
+ As palavras-chave em um diagrama de atualização, como  **\<sincronização >** ,  **\<antes >** , e  **\<depois >** , existem no **urn: schemas-microsoft-com: XML-diagrama de atualização** namespace. O prefixo de namespace utilizado é arbitrário. Nesta documentação, o **updg** prefixo denota a **updategram** namespace.  
   
 ## <a name="reviewing-syntax"></a>Revisando a sintaxe  
- Um diagrama de atualização é um modelo com  **\<sincronização >**,  **\<antes >**, e  **\<depois >** blocos que formam a sua sintaxe de diagrama de atualização. O seguinte código mostra esta sintaxe em sua forma mais simples:  
+ Um diagrama de atualização é um modelo com  **\<sincronização >** ,  **\<antes >** , e  **\<depois >** blocos que formam a sua sintaxe de diagrama de atualização. O seguinte código mostra esta sintaxe em sua forma mais simples:  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

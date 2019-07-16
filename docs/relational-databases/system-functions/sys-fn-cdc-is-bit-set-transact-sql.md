@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0796f25396d4c5303fb0de1762f6f04a18035fa9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d14e4e85d6ee52955ba17f42d288e0c770a183a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046347"
 ---
 # <a name="sysfncdcisbitset-transact-sql"></a>sys.fn_cdc_is_bit_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
  É a posição ordinal na máscara a ser verificada. *posição* está **int**.  
   
  *update_mask*  
- É a máscara que identifica colunas atualizadas. *update_mask* está **varbinary(128)**.  
+ É a máscara que identifica colunas atualizadas. *update_mask* está **varbinary(128)** .  
   
 ## <a name="return-type"></a>Tipo de retorno  
  **bit**  

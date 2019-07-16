@@ -6,13 +6,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 805dd613c49351c0106231b9147a4af54ac8cf0d
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 88dcbbf3a336af38b80ab8c5aa4b49dbe17d9184
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140732"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962817"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemas conhecidos no serviços de Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -494,7 +493,7 @@ Esse problema foi corrigido no SQL Server 2017 atualização cumulativa 3 (CU3).
 
 Começando com o SQL Server 2017 cumulativa atualização 12 (CU12), tipos de dados numeric, decimal e dinheiro em com conjuntos de resultados não têm suportados ao usar o Python com `sp_execute_external_script`. As seguintes mensagens de erro podem aparecer:
 
-> *[Código: 39004, SQL State: S1000] 'Python' erro de script durante a execução de 'sp_execute_external_script' com HRESULT 0x80004004.*
+> *[Código: 39004, estado do SQL: S1000] 'Python' erro de script durante a execução de 'sp_execute_external_script' com HRESULT 0x80004004.*
 
 > *[Código: 39019, estado do SQL: S1000] Ocorreu um erro de script externo:*
 > 

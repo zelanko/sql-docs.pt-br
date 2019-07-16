@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 563cd62cb600be54ab1e4412db4d8869bd84e18f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d22a41b67d4b33d573a1c3ecc5f2235560cceea3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947511"
 ---
 # <a name="legal-notice-ssma-for-access"></a>Aviso legal (SSMA para Access)
 Esta documentação, incluindo os aplicativos de exemplo nela mencionados, é fornecida apenas em caráter informativo e não estipula garantias expressas ou tácitas. As informações contidas nesta documentação, incluindo URLs e outras referências a sites da Internet, estão sujeitas a alterações sem aviso prévio. Todo o risco associado ao uso ou aos resultados do uso desta documentação é de responsabilidade do usuário.  
   
 A principal finalidade de um exemplo contido nesta documentação é ilustrar um conceito ou uso razoável de uma determinada instrução ou cláusula. A maioria dos exemplos não inclui todo o código geralmente encontrado em um sistema de produção completo, pois algumas das funções comuns de validação de dados e tratamento de erros foram removidas para focalizar o exemplo em um determinado conceito ou instrução. Não há suporte técnico para esses exemplos nem para quaisquer códigos-fonte incluídos.  
   
-A menos que indicado o contrário, os exemplos de empresas, organizações, produtos, nomes de domínio, endereços de email, pessoas, lugares e eventos aqui descritos são fictícios, e nenhuma associação com empresas, organizações, produtos, nomes de domínio, endereços de email, pessoas, lugares ou eventos reais é intencional ou deve ser inferida. Obedecer a todas as leis de direitos autorais aplicáveis é responsabilidade do usuário. Sem limitar os direitos autorais, nenhuma parte desta documentação pode ser reproduzida, armazenada ou introduzida em um sistema de recuperação, ou transmitida de qualquer forma ou por qualquer meio (seja eletrônico, mecânico, fotocópia, gravação ou outro), ou para qualquer finalidade, sem a permissão expressa e por escrito da Microsoft Corporation.  
+A menos que indicado o contrário, os exemplos de empresas, organizações, produtos, nomes de domínio, endereços de email, pessoas, lugares e eventos aqui descritos são fictícios, e nenhuma associação com empresas, organizações, produtos, nomes de domínio, endereços de email, pessoas, lugares ou eventos reais é intencional ou deve ser inferida. Estar em conformidade com todas as leis de direitos autorais aplicáveis é responsabilidade do usuário. Sem limitar os direitos autorais, nenhuma parte desta documentação pode ser reproduzida, armazenada ou introduzida em um sistema de recuperação, ou transmitida de qualquer forma ou por qualquer meio (seja eletrônico, mecânico, fotocópia, gravação ou outro), ou para qualquer finalidade, sem a permissão expressa e por escrito da Microsoft Corporation.  
   
 A Microsoft pode ter patentes ou requisições para obtenção de patente, marcas comerciais, direitos autorais ou outros direitos de propriedade intelectual que abrangem o conteúdo desta documentação. A posse desta documentação não lhe confere nenhum direito sobre as citadas patentes, marcas comerciais, direitos autorais ou outros direitos de propriedade intelectual, salvo aqueles expressamente mencionados em um contrato de licença, por escrito, da Microsoft.  
   

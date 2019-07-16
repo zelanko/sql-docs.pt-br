@@ -7,15 +7,14 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0105cf099bbee30d167c498646778520fcdbd805
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: ffbbd39c08221db4afa6427626ca618e04617166
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962087"
 ---
-# <a name="quickstart-python-data-structures-in-sql-server"></a>Guia de início rápido: Estruturas de dados do Python no SQL Server
+# <a name="quickstart-python-data-structures-in-sql-server"></a>Início Rápido: Estruturas de dados do Python no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este início rápido mostra como usar as estruturas de dados ao usar o Python em serviços do SQL Server Machine Learning.
@@ -28,7 +27,7 @@ SQL Server depende do Python **pandas** pacote, que é ideal para trabalhar com 
 
 Como você poderia expor o resultado de um cálculo como um quadro de dados, se um frame requer uma estrutura tabular? Uma resposta é representar o único valor escalar como uma série, o que é facilmente convertida em um quadro de dados. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Um início rápido anterior, [Python Verifique se existe no SQL Server](quickstart-python-verify.md), fornece informações e links para configurar o ambiente do Python necessário para este início rápido.
 

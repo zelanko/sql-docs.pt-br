@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed234a487d5c382400b3a839820a4509c8b880f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0124126556967800e37b296a73bd951a18d3936e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035981"
 ---
 # <a name="sql-graph-architecture"></a>Arquitetura de grafo do SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ Use essas exibições de metadados para ver os atributos de uma tabela de nó ou
 ### <a name="systables"></a>sys.tables
 A seguinte nova, tipo de bit, colunas serão adicionadas a SYS. TABELAS. Se `is_node` é definido como 1, que indica que a tabela é uma tabela de nó e se `is_edge` é definido como 1, que indica que a tabela é uma tabela de borda.
  
-|Nome da coluna |Tipo de Dados |Descrição |
+|Nome da coluna |Tipo de dados |Descrição |
 |--- |---|--- |
 |is_node |bit |1 = essa é uma tabela de nó |
 |is_edge |bit |1 = Esta é uma tabela de borda |
@@ -76,9 +75,9 @@ A seguinte nova, tipo de bit, colunas serão adicionadas a SYS. TABELAS. Se `is_
 ### <a name="syscolumns"></a>sys.columns
 O `sys.columns` exibição contém colunas adicionais `graph_type` e `graph_type_desc`, que indicam o tipo de coluna nas tabelas de nó e de borda.
  
-|Nome da coluna |Tipo de Dados |Descrição |
+|Nome da coluna |Tipo de dados |Descrição |
 |--- |---|--- |
-|graph_type |INT |Coluna interna com um conjunto de valores. Os valores estão entre 1 a 8 para colunas do gráfico e NULL para outras pessoas.  |
+|graph_type |int |Coluna interna com um conjunto de valores. Os valores estão entre 1 a 8 para colunas do gráfico e NULL para outras pessoas.  |
 |graph_type_desc |nvarchar(60)  |coluna interna com um conjunto de valores |
  
 A tabela a seguir lista os valores válidos para `graph_type` coluna
@@ -99,19 +98,19 @@ A tabela a seguir lista os valores válidos para `graph_type` coluna
 
 Colunas implícitas em uma tabela de nó
 
-|Nome da coluna    |Tipo de Dados  |is_hidden  |Comentário  |
+|Nome da coluna    |Tipo de dados  |is_hidden  |Comentário  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |interno `graph_id` coluna  |
-|$node_id_\<hex_string> |NVARCHAR   |0  |Nós externo `node_id` coluna  |
+|$node_id_\<hex&lt;1}{2&gt;hex_string&lt;2 > |NVARCHAR   |0  |Nós externo `node_id` coluna  |
 
 Colunas implícitas em uma tabela de borda
 
-|Nome da coluna    |Tipo de Dados  |is_hidden  |Comentário  |
+|Nome da coluna    |Tipo de dados  |is_hidden  |Comentário  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |interno `graph_id` coluna  |
-|$edge_id_\<hex_string> |NVARCHAR   |0  |externo `edge_id` coluna  |
+|$edge_id_\<hex&lt;1}{2&gt;hex_string&lt;2 > |NVARCHAR   |0  |externo `edge_id` coluna  |
 |from_obj_id_\<hex_string>  |INT    |1  |interno do nó `object_id`  |
-|from_id_\<hex_string>  |bigint |1  |interno do nó `graph_id`  |
+|from_id_\<hex&lt;1}{2&gt;hex_string&lt;2 >  |bigint |1  |interno do nó `graph_id`  |
 |$from_id_\<hex_string> |NVARCHAR   |0  |externa do nó `node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |internos para nó `object_id`  |
 |to_id_\<hex_string>    |bigint |1  |internos para nó `graph_id`  |

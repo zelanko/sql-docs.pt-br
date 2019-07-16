@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 26c5ebe206ed9d8530a7158b464e974920dd878e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 201072b1b0e371e1f22ee9e32b009ebcea47b2b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038173"
 ---
 # <a name="mdx-data-definition---drop-set"></a>Definição de dados MDX – DROP SET
 
@@ -37,7 +36,7 @@ DROP [SESSION] SET
  *Cube_Name*  
  Uma expressão de cadeia de caracteres válida que fornece o nome do cubo.  
   
- *Set_Name*  
+ *1&gt;PsFile&lt;1*  
  Uma expressão de cadeia de caracteres válida que fornece esse nome do conjunto nomeado a ser descartado.  
   
 ## <a name="remarks"></a>Comentários  

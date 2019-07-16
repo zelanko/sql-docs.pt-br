@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 080353df8c140349e60247c3e18b0430601a2972
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83b8916072aa36b2b823306dabbcebfc0bc9c1d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992026"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importar valores de projeto de limpeza para um domínio
 
@@ -70,7 +69,7 @@ ms.locfileid: "66776518"
   
 9. Para procurar uma cadeia de caracteres específica, insira essa cadeia de caracteres na caixa **Localizar** . Clique na seta para cima ou para baixo para percorrer os valores que atendem os critérios de pesquisa. Eles serão realçados em amarelo.  
   
-10. Clique em **Concluir**.  
+10. Clique em **Finalizar**.  
   
     > [!NOTE]  
     >  Para obter mais informações sobre como trabalhar com valores na página **Valores de Domínio** , consulte [Change Domain Values](../data-quality-services/change-domain-values.md).  

@@ -10,13 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: bc865b36dc8b8036fa9a6a1a9c58c6890acadf47
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 9b25fd044b94e21151b687d428c469a12d8c8a5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959212"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensão do SQL Server 2019 (visualização)
 
@@ -182,7 +181,7 @@ Para obter detalhes, consulte [Clusters de Big Data](../big-data-cluster/big-dat
 * Após a criação da tabela externa, ela aparece imediatamente na árvore de objetos do banco de dados no qual ele foi criado.
 
 
-## <a name="known-issues"></a>Problemas conhecidos
+## <a name="known-issues"></a>Problemas Conhecidos
 
 * Se a senha não é salvo durante a criação de uma conexão, algumas ações como enviar trabalho do Spark podem não ter êxito.
 * Blocos de anotações ipynb existentes devem ser atualizados para a versão 4 ou superior para carregar conteúdo no visualizador.

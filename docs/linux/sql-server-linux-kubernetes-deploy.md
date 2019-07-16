@@ -4,18 +4,17 @@ description: Este artigo explica os parâmetros para os Kubernetes Always On do 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 88b3b2a8c955c628284bec59c9e9fead98e174b8
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: a4811c1f41c4c8b9a566dc13b3de713576b4980d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952621"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>Implantar um grupo de disponibilidade Always On do SQL Server em um cluster Kubernetes
 
