@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e397bf4480dd7a9955fb8c7acbce0d11fd910893
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 346fcd2ea7f83abcb9a5c23a22cb0eded76acc0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63215939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944684"
 ---
 # <a name="setting-project-options-mysqltosql"></a>Definir opções do projeto (MySQLToSQL)
 Para cada projeto do SSMA, você pode definir opções de nível de projeto. Essas opções especificam como os objetos são convertidos, como os dados são migrados e como os tipos de dados de origem são mapeados para tipos de dados de destino.  Antes de converter os objetos do SQL Server ou SQL Azure ou migrar dados para o SQL Server ou SQL Azure, verifique se as opções de configuração apropriadas para o projeto.  
@@ -45,7 +44,7 @@ As configurações do projeto podem ser configuradas de quatro maneiras:
   
 -   Completo  
   
--   Personalizar  
+-   Personalizado  
   
 O modo padrão é recomendado para a maioria dos usuários. O modo otimista mantém mais da sintaxe atual do MySQL e é mais fácil de ler. No entanto, a manter a sintaxe atual pode não ser precisa. Se a sintaxe do MySQL deve ser convertida em sintaxe equivalente do SQL Server ou SQL Azure, o modo completo executa a conversão mais completa. O código resultante, no entanto, pode ser mais difícil de ler. No modo personalizado, você pode definir as opções.  
   

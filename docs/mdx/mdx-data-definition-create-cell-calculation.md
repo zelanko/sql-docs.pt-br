@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7e69aa9e3da29abe054aaf272c5fe3ed12172a4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 411ae301c2f0ce858b7273c6bb721269f709b5c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63309138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098481"
 ---
 # <a name="mdx-data-definition---create-cell-calculation"></a>Definição de dados MDX – CREATE CELL CALCULATION
 
@@ -50,7 +49,7 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
  *Set_Expression*  
  Uma linguagem MDX válida que retorna um conjunto.  
   
- *String*  
+ *Cadeia de caracteres*  
  Um valor de cadeia de caracteres válido.  
   
  *MDX_Expression*  

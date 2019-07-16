@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7135d6582ea6d09c6f1b0ab3842c69d3d60d4fc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 886825b4d32354572a5162487add419b00ec35d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931063"
 ---
 # <a name="seekenum"></a>SeekEnum
 Especifica o tipo de [busca](../../../ado/reference/ado-api/seek-method.md) para executar.  
@@ -36,7 +35,7 @@ Especifica o tipo de [busca](../../../ado/reference/ado-api/seek-method.md) para
 |**adSeekBefore**|32|Buscas imediatamente antes de uma chave em que uma correspondência com *KeyValues* teria ocorrido.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Package: **com.ms.wfc.data**  
+ Pacote: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

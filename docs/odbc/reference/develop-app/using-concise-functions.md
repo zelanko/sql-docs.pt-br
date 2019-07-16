@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d70d3ca60a046a355549260406edba261f805e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43004601845d3032d404c308b7b1fa4850f694ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022202"
 ---
 # <a name="using-concise-functions"></a>Usar funções concisas
 Algumas funções ODBC acessem implícita descritores. Criadores de aplicativo podem encontrá-los mais convenientes do que chamar **SQLSetDescField** ou **SQLGetDescField**. Essas funções são chamadas *concisa* funções porque elas executam várias funções, incluindo a configuração ou obter campos de descritor. Algumas funções concisas permitem que um aplicativo definir ou recuperar vários campos de descritor relacionados em uma única chamada de função.  

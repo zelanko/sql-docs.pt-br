@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f071cf4391c760f7d269382537c3cd4f2b758c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66fc728440808314dbdaa30065c68232f4a89fba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63278307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100608"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Substituir a precisão e a escala padrão para tipos de dados numéricos
 Quando o campo SQL_DESC_TYPE em um descartar é definido como SQL_C_NUMERIC, chamando **SQLBindCol** ou **SQLSetDescField**, o campo SQL_DESC_SCALE a descartar estiver definido como 0 e o campo SQL_DESC_PRECISION é definido a precisão de um padrão definido pelo driver. Isso também é verdadeiro quando o campo SQL_DESC_TYPE em um APD é definido para SQL_C_NUMERIC, chamando **SQLBindParameter** ou **SQLSetDescField**. Isso é verdadeiro para entrada, entrada/saída ou parâmetros de saída.  

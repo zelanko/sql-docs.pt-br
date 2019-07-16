@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac00462e-c0f7-4b8d-86f2-d9eda2598a15
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5394724845e66e1d51f0c48379f10df124a63e4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6002b634c38d40f9446bb7facc087fb0eef462ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486051"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074436"
 ---
 # <a name="reorder-columns-mds-add-in-for-excel"></a>Reordenar colunas (suplemento MDS para Excel)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65486051"
   
  Quando você reorganizar atributos na caixa de diálogo **Filtro** , os dados serão carregados no Excel com a nova ordem. Porém, da próxima vez que você filtrar os dados de atributo, a ordem reverterá para a ordem no design original. Para alterar a ordem permanentemente, um administrador deverá alterar a ordem na área de **Administração do sistema** de Master Data Manager. Para obter mais informações, consulte [Change the Order of Attributes](../../master-data-services/change-the-order-of-attributes.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional do **Gerenciador** .  

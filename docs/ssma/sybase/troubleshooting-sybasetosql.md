@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d2f8fa753623e9b7d978556c16c5c4bbeba6efe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ecbd6235e0ebec1850bb959aec2aa25832e857f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63069641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020884"
 ---
 # <a name="troubleshooting-sybasetosql"></a>Solução de problemas (SybaseToSQL)
 Não é incomum enfrentar midway de problemas de migração executando os comandos ou scripts do console.  
@@ -28,9 +27,9 @@ Os erros corrigível podem estar relacionados a:
   
 2.  Procedimento  
   
-3.  Exibição  
+3.  Exibir  
   
-4.  Gatilho  
+4.  Disparador  
   
 5.  Modificando o tipo de dados  
   

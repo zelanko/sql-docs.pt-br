@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 36614b4c-e037-43ef-8692-67f4861b144d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5870cb445d7afd098aba32ffd9be7a88c048bae5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0c7817d37e14ad07b9cc64f59691c27cf665177
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070090"
 ---
 # <a name="system-functions"></a>Funções de sistema
 A tabela a seguir lista as funções do sistema que estão incluídas no conjunto de função escalar ODBC. Chamando **SQLGetInfo** com um *tipo de informação* de SQL_SYSTEM_FUNCTIONS, um aplicativo pode determinar quais funções de sistema são suportadas por um driver.  

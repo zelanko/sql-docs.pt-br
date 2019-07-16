@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f842060c6ca621fc52fa34f08838541dc65e993
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42a98fe7af16c4e8aab22d6ace02f359dfe02c54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096200"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 `[ @plan_id = ] 'plan\_id'` Especifica a ID do plano do plano de manutenção. *plan_id* está **UNIQUEIDENTIFIER**. O padrão é NULO.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- None  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Se *plan_id* for especificado, **sp_help_maintenance_plan** retornará três tabelas: Plano, o banco de dados e o trabalho.  

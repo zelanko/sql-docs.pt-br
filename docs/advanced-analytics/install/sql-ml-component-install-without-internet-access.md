@@ -7,13 +7,12 @@ ms.date: 03/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: da9676f029bb917adf15690b6870583fb0465fc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09934e01d6118bfa48a7c3f62e8086763ebf44c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65836211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962913"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Instalar o R e Python de aprendizado em computadores sem acesso à internet de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +41,7 @@ Versão  |Link de download  |
 ---------|---------------|
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
-Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
+Python de Microsoft Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
 ###  <a name="2---get-sql-server-2017-installation-media"></a>2 - obter a mídia de instalação do SQL Server 2017

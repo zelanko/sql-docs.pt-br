@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e26299f221facfc6828369e1c75225f206937eb4
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 7e9d8fe2dba82e83594c73e442a2e52260900ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091249"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catálogo de banco de dados de WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ WideWorldImporters usa esquemas para finalidades diferentes, como armazenamento 
 
 Esses esquemas contenham os dados. Um número de tabelas é necessários para todos os outros esquemas e está localizado no esquema do aplicativo.
 
-|esquema|Descrição|
+|Esquema|Descrição|
 |-----------------------------|---------------------|
 |Aplicativo|Todo o aplicativo de usuários, contatos e parâmetros. Isso também contém tabelas de referência com dados que são usados por vários esquemas|
 |Purchasing|Item de estoque compras de fornecedores e detalhes sobre fornecedores.|  
@@ -40,7 +39,7 @@ Esses esquemas contenham os dados. Um número de tabelas é necessários para to
 
 Esses esquemas são usados para aplicativos externos que não têm permissão para acessar as tabelas de dados diretamente. Eles contêm exibições e procedimentos armazenados usados por aplicativos externos.
 
-|esquema|Descrição|
+|Esquema|Descrição|
 |-----------------------------|---------------------|
 |Site|Todo o acesso ao banco de dados do site da empresa é por meio desse esquema.|
 |Relatórios|Todo o acesso ao banco de dados de relatórios do Reporting Services é por meio desse esquema.|
@@ -52,7 +51,7 @@ Observe que os relatórios e o Power BI esquemas não são usados na versão ini
 
 Esquemas de finalidade especial
 
-|esquema|Descrição|
+|Esquema|Descrição|
 |-----------------------------|---------------------|
 |Integração|Objetos e procedimentos necessários para a integração do depósito de dados (ou seja, migrando os dados para o banco de dados WideWorldImportersDW).|
 |Sequências|Contém sequências usadas por todas as tabelas no aplicativo.|
@@ -65,7 +64,7 @@ Todas as tabelas no banco de dados estão em esquemas de dados.
 
 Detalhes de parâmetros e as pessoas (usuários e contatos), juntamente com as tabelas de referência comum (comuns a vários outras esquemas).
 
-|Table|Descrição|
+|Tabela|Descrição|
 |-----------------------------|---------------------|
 |SystemParameters|Contém os parâmetros configuráveis de todo o sistema.|
 |Pessoas|Contém os nomes de usuário, informações de contato para todos que usam o aplicativo e para as pessoas que se trata da Wide World Importers em organizações do cliente. Isso inclui todos os outros contatos, clientes, fornecedores e equipe. Para as pessoas que receberam permissão para usar o sistema ou o site, as informações incluem detalhes de logon.|
@@ -80,9 +79,9 @@ Detalhes de parâmetros e as pessoas (usuários e contatos), juntamente com as t
 
 Detalhes de fornecedores e de compras de item de estoque.
 
-|Table|Descrição|
+|Tabela|Descrição|
 |-----------------------------|---------------------|
-|Suppliers|Tabela de entidade principal para fornecedores (organizações)|
+|Fornecedores|Tabela de entidade principal para fornecedores (organizações)|
 |SupplierCategories|Categorias de fornecedores (por exemplo, novelties, brinquedos, roupas, empacotamento, etc.)|
 |SupplierTransactions|Todas as transações financeiras que são relacionados ao fornecedor (faturas, pagamentos)|
 |PurchaseOrders|Detalhes de pedidos de compra de fornecedor|
@@ -93,7 +92,7 @@ Detalhes de fornecedores e de compras de item de estoque.
 
 Detalhes de clientes, vendedores e das vendas do item de estoque.
 
-|Table|Descrição|
+|Tabela|Descrição|
 |-----------------------------|---------------------|
 |Customers|Tabelas de entidade principal para clientes (organizações ou indivíduos)|
 |CustomerCategories|Categorias para os clientes (ou seja novidade armazenamentos, supermercados, etc.)|
@@ -109,7 +108,7 @@ Detalhes de clientes, vendedores e das vendas do item de estoque.
 
 Detalhes de itens de estoque, holdings e transações.
 
-|Table|Descrição|
+|Tabela|Descrição|
 |-----------------------------|---------------------|
 |StockItems|Tabela de entidade principal para itens de estoque|
 |StockItemHoldings|Colunas não temporal para itens de estoque. Essas são as colunas atualizadas com frequência.|

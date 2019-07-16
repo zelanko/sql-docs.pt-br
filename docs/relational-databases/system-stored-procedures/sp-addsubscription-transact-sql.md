@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2ca3505d952e1bffa68d23fe2de5b51c050640c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096221"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,13 +75,13 @@ sp_addsubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @publication=] '*publication*'  
+ [ @publication=] '*publicação*'  
  É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [ @article=] '*article*'  
+ [ @article=] '*artigo*'  
  É o artigo no qual a publicação é assinada. *artigo* está **sysname**, com um padrão de all. Se for todos, uma assinatura será adicionada a todos os artigos naquela publicação. Somente valores de todos ou NULL têm suporte para Publicadores Oracle.  
   
- [ @subscriber=] '*subscriber*'  
+ [ @subscriber=] '*assinante*'  
  É o nome do Assinante. *assinante* está **sysname**, com um padrão NULL.  
   
  [ @destination_db=] '*destination_db*'  
@@ -93,7 +92,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|none|O Assinante já tem o esquema e os dados iniciais para as tabelas publicadas.<br /><br /> Observação: Essa opção foi preterida. Use, em vez disso, suporte a replicação.|  
+|nenhum|O Assinante já tem o esquema e os dados iniciais para as tabelas publicadas.<br /><br /> Observação: Essa opção foi preterida. Use, em vez disso, suporte a replicação.|  
 |automatic (padrão)|Esquema e dados iniciais de tabelas publicadas são transferidos ao Assinante primeiro.|  
 |suporte de replicação só|Fornece geração automática no Assinante de procedimentos armazenados personalizados de artigo e gatilhos que oferecem suporte a assinaturas de atualização, se apropriado. Presume que o Assinante já tem o esquema e os dados iniciais para as tabelas publicadas. Ao configurar uma topologia de replicação transacional ponto a ponto, verifique se os dados em todos os nós na topologia são idênticos. Para obter mais informações, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).<br /><br /> *Não tem suporte para assinaturas para publicações não SQL Server.*|  
 |initialize with backup|Esquema e dados iniciais para tabelas publicadas são obtidos de um backup do banco de dados de publicação. Presume que o Assinante tem acesso a um backup do banco de dados de publicação. O local do tipo de backup e mídia para o backup são especificadas por *backupdevicename* e *backupdevicetype*. Ao usar essa opção, uma topologia de replicação transacional ponto a ponto não precisa ser desativada durante a configuração.<br /><br /> *Não tem suporte para assinaturas para publicações não SQL Server.*|  
@@ -199,7 +198,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @optional_command_line=] '*optional_command_line*'  
  É o prompt de comando opcional a ser executado. *optional_command_line* está **nvarchar (4000)** , com um padrão NULL.  
   
- [ @reserved=] '*reserved*'  
+ [ @reserved=] '*reservado*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
@@ -226,7 +225,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @dts_package_location= ] '*dts_package_location*'  
  Especifica o local do pacote. *dts_package_location* é um **nvarchar(12**, com um padrão de DISTRIBUIDOR. O local do pacote pode ser distribuidor ou assinante.  
   
- [ @distribution_job_name= ] '*distribution_job_name*'  
+ [ @distribution_job_name=] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @publisher= ] '*publisher*'  
@@ -261,7 +260,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @fileidhint= ] *fileidhint*  
  Identifica um valor ordinal do conjunto de backup a ser restaurado. *fileidhint* está **int**, com um valor padrão de NULL.  
   
- [ @unload= ] *unload*  
+ [ @unload=] *descarregar*  
  Especifica se um dispositivo de backup em fita deve ser descarregado quando a inicialização do backup for concluída. *Descarregar* está **bit**, com um valor padrão de 1. 1 Especifica que a fita deve ser descarregada. *Descarregar* é usado apenas quando *backupdevicetype* é fita.  
   
  [ @subscriptionlsn=] *subscriptionlsn*  

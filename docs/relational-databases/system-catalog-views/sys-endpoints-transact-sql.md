@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 61a541457f170ee884a1f0b8c3560b04601ffde5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b814f8cb0013a202f88aba76b99cf52c49dd1c1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061410"
 ---
 # <a name="sysendpoints-transact-sql"></a>sys.endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contém uma linha por ponto de extremidade que é criado no sistema. Sempre há exatamente um ponto de extremidade SYSTEM.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do ponto de extremidade. É exclusivo dentro do servidor. Não permite valor nulo.|  
 |**endpoint_id**|**int**|ID do ponto de extremidade. É exclusivo dentro do servidor. Um ponto de extremidade com uma ID inferior a 65536 é um ponto de extremidade de sistema. Não permite valor nulo.|  

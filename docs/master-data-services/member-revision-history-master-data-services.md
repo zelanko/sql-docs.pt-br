@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f4f39c05c0f2d8bccafa31488bab2fad700a0d90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ee2921a8e7178385651dc52c48b7bf82866dc49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092584"
 ---
 # <a name="member-revision-history-master-data-services"></a>Histórico de revisão de membro (Master Data Services)
 

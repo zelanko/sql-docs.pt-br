@@ -1,5 +1,5 @@
 ---
-title: sys.objects (Transact-SQL) | Microsoft Docs
+title: sys. Objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: sql
@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35ca43c379e896072ecebf1c313c9ce9b210d73f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47e332d8dfda76bbf2702335b72793c112c15d75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997867"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102322"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "62997867"
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|nome|**sysname**|Nome do objeto.|  
+|name|**sysname**|Nome do objeto.|  
 |object_id|**int**|Número de identificação do objeto. É exclusivo em um banco de dados.|  
 |principal_id|**int**|ID do proprietário individual, se for diferente do proprietário do esquema. Por padrão, os objetos contidos no esquema pertencem ao proprietário do esquema. No entanto, um proprietário alternativo pode ser especificado usando a instrução ALTER AUTHORIZATION para alterar a propriedade.<br /><br /> Será NULL se não houver nenhum proprietário individual alternativo.<br /><br /> Será NULL se o tipo de objeto for um dos seguintes:<br /><br /> C = Restrição CHECK<br /><br /> D = DEFAULT (restrição ou autônomo)<br /><br /> F = Restrição FOREIGN KEY<br /><br /> PK = Restrição PRIMARY KEY<br /><br /> R = Regra (estilo antigo, autônomo)<br /><br /> TA = Gatilho de assembly (integração CLR)<br /><br /> TR = Gatilho SQL<br /><br /> UQ = Restrição UNIQUE<br /><br /> EC = restrição de borda |  
 |schema_id|**int**|ID do esquema em que o objeto está contido.<br /><br /> Os objetos do sistema de escopo de esquema estão sempre contidos nos esquemas sys ou INFORMATION_SCHEMA.|  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8bff406485266af99a1c2538a4df237fd5bf43bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f5b2a5170b499f5e88d4caac4822d2998691eea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966227"
 ---
 # <a name="getpermissions-method-adox"></a>Método GetPermissions (ADOX)
 Retorna as permissões para um [grupo](../../../ado/reference/adox-api/group-object-adox.md) ou [usuário](../../../ado/reference/adox-api/user-object-adox.md) em um objeto ou um contêiner de objetos.  
@@ -40,7 +39,7 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
  Retorna um **longo** valor que especifica uma máscara de bits que contém as permissões que o grupo ou usuário tem sobre o objeto. Esse valor pode ser um ou mais dos [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) constantes.  
   
 #### <a name="parameters"></a>Parâmetros  
- *Nome*  
+ *Name*  
  Um **Variant** valor que especifica o nome do objeto para o qual definir as permissões. Definir *nome* com um valor nulo, se você quiser obter as permissões para o objeto recipiente.  
   
  *ObjectType*  

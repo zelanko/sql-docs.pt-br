@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ba9a9a88-55d2-41a7-b09b-342e8b9a54c5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 20ac49b8da959732c54e912898b375c9175d546d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 709d1bfe0b1d4288c8eae4ec947a60064cec6b3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822564"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076477"
 ---
 # <a name="syssyspermissions-transact-sql"></a>sys.syspermissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47822564"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID do objeto para permissões de objeto.<br /><br /> 0 = Permissões de instrução.|  
 |**grantee**|**smallint**|ID do usuário, grupo ou função afetada pela permissão.|  

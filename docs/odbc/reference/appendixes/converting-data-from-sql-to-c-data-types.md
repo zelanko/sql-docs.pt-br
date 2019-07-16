@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6819b28ba57f1e6314535a6a90ad13de39b4842c
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 95a44698c12abf0de64c8d6f7d316e9156dc139c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019112"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Converter dados de SQL para tipos de dados do C
 Quando um aplicativo chama **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData**, o driver recupera os dados da fonte de dados. Se necessário, ele converte os dados do tipo de dados em que o driver recuperados-lo para o tipo de dados especificado pela *TargetType* argumento **SQLBindCol** ou **SQLGetData.** Por fim, ele armazena os dados no local apontado pela *TargetValuePtr* argumento **SQLBindCol** ou **SQLGetData** (e o campo SQL_DESC_DATA_PTR da descartar).  
@@ -67,7 +66,7 @@ Quando um aplicativo chama **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData**, 
   
 -   [SQL para c: tempo](../../../odbc/reference/appendixes/sql-to-c-time.md)  
   
--   [SQL para c: Timestamp](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
+-   [SQL para c: carimbo de hora](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
   
 -   [SQL para c: Intervalos de ano / mês](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
   

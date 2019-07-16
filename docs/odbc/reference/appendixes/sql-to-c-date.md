@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe0c30f0f0fbf0ea695d79387fdec3694a54ebca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d282798a31ac9059ed3c1901ea01f1f3104f09c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63151270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056883"
 ---
 # <a name="sql-to-c-date"></a>SQL para C: Date
 O identificador para a data do tipo de dados SQL do ODBC:  
@@ -31,10 +30,10 @@ O identificador para a data do tipo de dados SQL do ODBC:
   
 |Identificador de tipo C|Teste|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > bytes de comprimento de caracteres<br /><br /> 11 < = *BufferLength* < = comprimento de byte do caractere<br /><br /> *BufferLength* < 11|Dados<br /><br /> Dados truncados<br /><br /> Indefinido|10<br /><br /> Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > comprimento de caracteres<br /><br /> 11 < = *BufferLength* < = comprimento de caracteres<br /><br /> *BufferLength* < 11|Dados<br /><br /> Dados truncados<br /><br /> Indefinido|10<br /><br /> Comprimento dos dados em caracteres<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Comprimento de bytes de dados < = *BufferLength*<br /><br /> Comprimento de bytes de dados > *BufferLength*|Dados<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|None [a]|Dados|6[c]|n/d|  
+|SQL_C_CHAR|*BufferLength* > bytes de comprimento de caracteres<br /><br /> 11 < = *BufferLength* < = comprimento de byte do caractere<br /><br /> *BufferLength* < 11|Data<br /><br /> Dados truncados<br /><br /> Indefinido|10<br /><br /> Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > comprimento de caracteres<br /><br /> 11 < = *BufferLength* < = comprimento de caracteres<br /><br /> *BufferLength* < 11|Data<br /><br /> Dados truncados<br /><br /> Indefinido|10<br /><br /> Comprimento dos dados em caracteres<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|Comprimento de bytes de dados < = *BufferLength*<br /><br /> Comprimento de bytes de dados > *BufferLength*|Data<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|None [a]|Data|6[c]|n/d|  
 |SQL_C_TYPE_TIMESTAMP|None [a]|Dados [b]|16[c]|n/d|  
   
  [a] o valor de *BufferLength* é ignorado para essa conversão. O driver pressupõe que o tamanho de **TargetValuePtr* é o tamanho do tipo de dados C.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f28178d9-ecd6-4e8c-9644-9bb624999dcb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6ab470951162b5e4035c1253ed4ce425356ad8ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 240bdf074fbe7fd28f5aafff5c1bbab7651d0c71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067471"
 ---
 # <a name="custom-applications"></a>Aplicativos personalizados
 Aplicativos personalizados normalmente executam uma tarefa específica para alguns DBMSs. Por exemplo, um aplicativo pode recuperar dados de um DBMS único e gerar um relatório, ou ele pode transferir dados entre vários DBMSs. O que esses aplicativos têm em comum é que esses DBMSs são conhecidos antes que o aplicativo é escrito e são improváveis de ser alterado durante a vida útil do aplicativo.  

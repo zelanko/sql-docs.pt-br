@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9d65d8686dcb5651e19a2e18fec4f0e82e51402
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e5a79a4ab38fd1cb7d118624fd170219aa90a94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096250"
 ---
 # <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |object_id |**int**|ID do objeto (tabela ou exibição indexada) para o qual as propriedades do objeto de estatísticas serão retornadas.|  
 |stats_id |**int**|ID do objeto de estatísticas. É exclusiva na tabela ou exibição indexada. Para obter mais informações, veja [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  

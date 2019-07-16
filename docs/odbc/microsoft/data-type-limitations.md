@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d4ce0eb96832f4a6b9c1953b0a9a9d0af65cb3b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64d16a9181c475427677371d1e6e180570225b7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096459"
 ---
 # <a name="data-type-limitations"></a>Limitações de tipo de dados
 Os Drivers de banco de dados de área de trabalho do Microsoft ODBC impõe as seguintes limitações nos tipos de dados:  
