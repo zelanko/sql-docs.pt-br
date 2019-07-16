@@ -4,19 +4,18 @@ titleSuffix: SQL Server
 description: Instalar, atualizar e desinstalar o SQL Server no Linux. Este artigo aborda cenários autônomos, online e offline.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: c4e58111fd6a584344b4f73e6986774040aa6211
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 7f4b2aa37b20cceaa3269527c95bfa97a2daa311
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032440"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Orientação de instalação do SQL Server no Linux
 
@@ -42,7 +41,7 @@ Há suporte para o SQL Server 2017 no Ubuntu, SUSE Linux Enterprise Server (SLES
 | **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Obter RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [Obter o SP2 do SLES v12](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Obter o Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
-| **Mecanismo do docker** | 1.8+ | [Get Docker](https://www.docker.com/get-started)
+| **Mecanismo do docker** | 1.8+ | [Obter o Docker](https://www.docker.com/get-started)
 
 A Microsoft também oferece suporte a implantar e gerenciar contêineres do SQL Server usando o OpenShift e o Kubernetes.
 
@@ -103,7 +102,7 @@ Esses comandos baixam o pacote mais recente e substitua os binários localizados
 > [!TIP]
 > Se você primeiro [alterar seu repositório configurado](sql-server-linux-change-repo.md), é possível que o **atualizar** comando para atualizar sua versão do SQL Server. Isso é apenas o caso se o caminho de atualização tem suporte entre os dois repositórios.
 
-## <a id="rollback"></a> Rollback SQL Server
+## <a id="rollback"></a> Reversão SQL Server
 
 A reversão ou fazer downgrade do SQL Server para uma versão anterior, use as seguintes etapas:
 

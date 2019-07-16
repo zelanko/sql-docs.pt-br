@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2bb83ef1-4bbe-4be3-8c32-c4d1140aae1d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 69516a613cbd9071686067350ced2ce5ca166a27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e9b7229882b3b7f94e6b059e04c6496bde09641
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63294449"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938048"
 ---
 # <a name="about-drivers-and-data-sources"></a>Sobre drivers e fontes de dados
 *Drivers* são os componentes que processam solicitações ODBC e retornam dados para o aplicativo. Se necessário, drivers de modificar uma solicitação de aplicativo em um formulário que é entendido pela fonte de dados. Você deve usar o programa de instalação do driver para adicionar ou excluir um driver do seu computador.  

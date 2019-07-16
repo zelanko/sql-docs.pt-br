@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f2b3abf36923d11776ac08f4e4386981eb2aad48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2edf02c31b8b52d6743113e6c6c5878bf5180a83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024744"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>Localizar o Assistente de bancos de dados (Verifique a seleção) (AccessToSQL)
 A página de seleção Verificar do assistente localizar bancos de dados de lista os arquivos a serem adicionados ao SSMA. Se a lista de arquivos estiver incorreta, clique em **volta** para modificar a lista. Caso contrário, clique em **concluir** para adicionar os arquivos.  

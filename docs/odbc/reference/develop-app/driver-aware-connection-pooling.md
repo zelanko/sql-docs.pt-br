@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 53e7e3f7-edab-4d0b-8943-45442ba3ebc9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8ea4643354990ad416ac3975467c5991842adacc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5dee7ee2b08e4b3b0249ede7f999cfb23d8db944
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658249"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047049"
 ---
 # <a name="driver-aware-connection-pooling"></a>Pool de conexões com reconhecimento de driver
 Pooling de conexão com suporte do driver é um novo recurso do Gerenciador de Driver no Windows 8. Pooling de conexão com suporte a driver permite que os gravadores de driver personalizar o comportamento em seu driver ODBC do pooling de conexão.  

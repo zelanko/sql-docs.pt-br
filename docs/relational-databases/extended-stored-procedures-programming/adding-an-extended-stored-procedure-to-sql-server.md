@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fdfd4effc0d41dc31c4aefb95e8574525fb03544
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bba543dbf89cb1dd3c0eb8a456a54c3c31c51d02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903398"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>Adicionando um procedimento armazenado estendido ao SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ Server: Msg 17750, Level 16, State 1, Procedure xp_Hello, Line 1
 Could not load the DLL xp_hello.dll, or one of the DLLs it references. Reason: 127(The specified procedure could not be found.).  
 ```  
   
- Se o nome da função especificado em `sp_addextendedproc` corresponder exatamente ao nome da função na DLL, e o agrupamento da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferenciar maiúsculas e minúsculas, o usuário poderá chamar o procedimento armazenado estendido usando qualquer combinação de letras maiúsculas e minúsculas no nome.  
+ Se o nome da função especificado em `sp_addextendedproc` corresponder exatamente ao nome da função na DLL, e a ordenação da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferenciar maiúsculas e minúsculas, o usuário poderá chamar o procedimento armazenado estendido usando qualquer combinação de letras maiúsculas e minúsculas no nome.  
   
 ```  
 --Register the function (xp_hello)  
@@ -78,7 +77,7 @@ DECLARE @txt varchar(33);
 EXEC xp_HELLO @txt OUTPUT;  
 ```  
   
- Quando o agrupamento da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferenciar maiúsculas de minúsculas, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá chamar o procedimento armazenado estendido – mesmo que tenha sido registrado exatamente com o mesmo nome e agrupamento da função na DLL –, se o procedimento for chamado com um uso de maiúsculas e minúsculas diferente.  
+ Quando a ordenação da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferenciar maiúsculas de minúsculas, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá chamar o procedimento armazenado estendido – mesmo que tenha sido registrado exatamente com o mesmo nome e ordenação da função na DLL –, se o procedimento for chamado com um uso de maiúsculas e minúsculas diferente.  
   
 ```  
 --Register the function (xp_hello)  

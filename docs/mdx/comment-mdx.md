@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6469921572b8a1809e228fff0d25061475399ae7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0aa1455ffd9f52fd917f68d2bb0bb80e3f25a94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006278"
 ---
 # <a name="comment-mdx"></a>Comentário (MDX)
 

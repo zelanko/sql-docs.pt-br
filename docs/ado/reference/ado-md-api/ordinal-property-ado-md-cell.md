@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c4a40c59ad222c943cefe089ffaddd53f2cec25a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 194b72ce66eb2efdc3a246f24948b01c790f7b8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949371"
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Propriedade Ordinal (Célula do ADO MD)
 Identifica exclusivamente um [célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md) por sua posição dentro de um conjunto de células.  

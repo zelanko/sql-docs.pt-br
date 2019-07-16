@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 27b5758dcac60f2c36ad08f600a36d9d501a811d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd9ed184d56cf85487d1f8833f7ec22acf60635c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017319"
 ---
 # <a name="versions-master-data-services"></a>Versões (Master Data Services)
 
@@ -69,7 +68,7 @@ ms.locfileid: "65486487"
     > [!NOTE]  
     >  Uma configuração no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] determina se você pode ou não copiar todas as versões ou somente as confirmadas. Para criar versões simultâneas você deve configurar o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para permitir que você copie todas as versões. Esta configuração também está disponível na tabela de Configurações do Sistema. Para obter mais informações, veja [Configurações do sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2b17e400d71df77fb52d20c157c8394c61673b2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91386e4464f02b3ce03f6c09c4cba01ade6260ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085664"
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>Configuração do servidor (Gerenciador de Configuração do MDS)
 

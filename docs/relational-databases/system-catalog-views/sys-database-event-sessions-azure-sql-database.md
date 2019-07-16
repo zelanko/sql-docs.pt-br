@@ -8,14 +8,13 @@ ms.topic: language-reference
 ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 844a002f7fc57e49fedabc353cdb0622964d7f28
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4ef8388e18ee73a0f1217e4e04adc13379892520
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915086"
 ---
 # <a name="sysdatabaseeventsessions-azure-sql-database"></a>sys.database_event_sessions (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "56031997"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|A ID exclusiva da sessão de evento. Não permite valor nulo.|  
-|nome|**sysname**|O nome definido pelo usuário para identificar a sessão de evento. nome é exclusivo. Não permite valor nulo.|  
+|name|**sysname**|O nome definido pelo usuário para identificar a sessão de evento. nome é exclusivo. Não permite valor nulo.|  
 |event_retention_mode|**nchar(1)**|Determina como a perda de evento é tratada. O padrão é S. Não é anulável. É um dos seguintes:<br /><br /> S. Mapeia para event_retention_mode_desc = ALLOW_SINGLE_EVENT_LOSS<br /><br /> M. Mapeia para event_retention_mode_desc = ALLOW_MULTIPLE_EVENT_LOSS<br /><br /> N. Mapeia para event_retention_mode_desc = NO_EVENT_LOSS|  
 |event_retention_mode_desc|**sysname**|Descreve como a perda de evento é tratada. O padrão é ALLOW_SINGLE_EVENT_LOSS. Não permite valor nulo. É um dos seguintes:<br /><br /> ALLOW_SINGLE_EVENT_LOSS. Os eventos podem ser perdidos da sessão. Eventos únicos serão descartados somente quando todos os buffers de evento estiverem cheios. A perda de um único evento quando os buffers de evento estiverem cheios permite características de desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aceitáveis, enquanto minimiza a perda no fluxo de eventos processados.<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS. Os buffers de evento cheios podem ser perdidos da sessão. O número de eventos depende do tamanho de memória alocado à sessão, do particionamento da memória e do tamanho dos eventos no buffer. Essa opção minimiza o impacto de desempenho no servidor quando os buffers de evento forem rapidamente cheios. No entanto, números elevados de eventos podem ser perdidos da sessão.<br /><br /> NO_EVENT_LOSS. Nenhuma perda de evento é permitida. Essa opção assegura que todos os eventos gerados serão retidos. Usando essa opção força todas as tarefas que acionam eventos a esperar até que haja espaço disponível em um buffer de evento. Isso pode causar redução no desempenho detectável enquanto a sessão de evento está ativa.|  
 |max_dispatch_latency|**int**|A quantidade de tempo, em milissegundos, em que haverá buffer de eventos na memória antes que sejam entregues para destinos de sessão. Os valores válidos são de 1 a 2147483648 e -1. Um valor de -1 indica que a latência de distribuição é infinita. Permite valor nulo.|  

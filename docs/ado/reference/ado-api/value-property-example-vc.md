@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2d879720ed3ee338adcf4bf5b9d6feb5d54e28de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f30b6663ff532fe12eede6042df5c9f0cc29ccb6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944460"
 ---
 # <a name="value-property-example-vc"></a>Exemplo da propriedade Value (VC++)
 Este exemplo demonstra a [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade com [campo](../../../ado/reference/ado-api/field-object.md) e [propriedade](../../../ado/reference/ado-api/property-object-ado.md) objetos exibindo valores de campo e propriedade para o ***funcionários*** tabela.  

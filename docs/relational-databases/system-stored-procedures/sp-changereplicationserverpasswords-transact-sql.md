@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6fa6606d7daf4a1b61ff986d1d7c5675b5ae5f1f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e138a8845336c41a031bd6e25b92138ae03ed63b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099061"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação  
   
-`[ @login = ] 'login'` É o nome da conta do Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon sendo alterado. *login* está **nvarchar(257)**, sem padrão  
+`[ @login = ] 'login'` É o nome da conta do Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon sendo alterado. *login* está **nvarchar(257)** , sem padrão  
   
 `[ @password = ] 'password'` É a nova senha a ser armazenado especificado *login*. *senha* está **sysname**, sem padrão.  
   
@@ -58,7 +57,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**distributor**|Todas as conexões do agente com o Distribuidor.|  
+|**distribuidor**|Todas as conexões do agente com o Distribuidor.|  
 |**publisher**|Todas as conexões do agente com o Publicador.|  
 |**Assinante**|Todas as conexões do agente com o Assinante.|  
 |**%** (padrão)|Todas as conexões do agente com todos os servidores em uma topologia de replicação.|  

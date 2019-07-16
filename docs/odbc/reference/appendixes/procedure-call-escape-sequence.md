@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 914bd4759552680a57c345dc3a7c3bc1bcc103a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa936eb9f8ef3328945d4ece63fb36432a5fd618
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100588"
 ---
 # <a name="procedure-call-escape-sequence"></a>Sequência de escape da chamada de procedimento
 ODBC usa sequências de escape para chamadas de procedimento. A sintaxe dessa sequência de escape é da seguinte maneira:  
   
- **{** [?=]**call** *procedure-name*[ **(** [*parameter*][,[*parameter*]]... **)** ] **}**  
+ **{** [? =]**chamar** *nome do procedimento*[ **(** [*parâmetro*] [, [*parâmetro*]]... **)** ] **}**  
   
  Na notação BNF, a sintaxe é:  
   
@@ -35,11 +34,11 @@ ODBC usa sequências de escape para chamadas de procedimento. A sintaxe dessa se
   
  *procedure* ::= *procedure-name* &#124; *procedure-name* (*procedure-parameter-list*)  
   
- *procedure-identifier* ::= *user-defined-name*  
+ *Identificador de procedimento* :: = *nome definido pelo usuário*  
   
- *procedure-name* ::= *procedure-identifier*  
+ *nome do procedimento* :: = *identificador de procedimento*  
   
- &#124; *owner-name*.*procedure-identifier*  
+ &#124;*nome do proprietário*. *Identificador de procedimento*  
   
  &#124;*separador de catálogo do nome do catálogo* *identificador de procedimento*  
   
@@ -47,21 +46,21 @@ ODBC usa sequências de escape para chamadas de procedimento. A sintaxe dessa se
   
  (A sintaxe a terceira é válida somente se a fonte de dados não der suporte a proprietários.)  
   
- *owner-name* ::= *user-defined-name*  
+ *nome do proprietário* :: = *nome definido pelo usuário*  
   
- *catalog-name* ::= *user-defined-name*  
+ *nome do catálogo* :: = *nome definido pelo usuário*  
   
- *catalog-separator* ::= {*implementation-defined*}  
+ *separador de catálogo* :: = {*definido pela implementação*}  
   
  (O separador de catálogo é retornado por **SQLGetInfo** com a opção de informações SQL_CATALOG_NAME_SEPARATOR.)  
   
- *procedure-parameter-list* ::= *procedure-parameter*  
+ *lista de parâmetros de procedimento* :: = *parâmetro de procedimento*  
   
  &#124; *procedure-parameter*, *procedure-parameter-list*  
   
- *procedure-parameter* ::= *dynamic-parameter* &#124; *literal* &#124; *empty-string*  
+ *parâmetro de procedimento* :: = *parâmetro dinâmico* &#124; *literal* &#124; *cadeia de caracteres vazia*  
   
- *empty-string* ::=  
+ *cadeia de caracteres vazia* :: =  
   
  *Iniciador do ODBC-esc* :: = {  
   

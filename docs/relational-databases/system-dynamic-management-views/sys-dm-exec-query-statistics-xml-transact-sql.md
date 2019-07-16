@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 63e1d22670929448110083c31e9900e462d576bc
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 06091ffc26ea036a4a0bd7e30196545bcaca60d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936941"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,18 +46,24 @@ sys.dm_exec_query_statistics_xml(session_id)
 
 ## <a name="table-returned"></a>Tabela retornada
 
-|Nome da coluna|Tipo de Dados|Descrição|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|ID da sessão. Não permite valor nulo.|
 |request_id|**int**|ID da solicitação. Não permite valor nulo.|
-|sql_handle|**varbinary(64)**|Mapa de hash do texto SQL da solicitação. Anulável.|
-|plan_handle|**varbinary(64)**|Mapa de hash do plano de consulta. Anulável.|
-|query_plan|**xml**|Showplan XML estatísticas parcial. Anulável.|
+|sql_handle|**varbinary(64)**|É um token que identifica exclusivamente o lote ou procedimento armazenado que a consulta faz parte. Anulável.|
+|plan_handle|**varbinary(64)**|É um token que identifica exclusivamente um plano de execução de consulta para um lote que está sendo executado. Anulável.|
+|query_plan|**xml**|Contém a representação de plano de execução do plano de execução de consulta que é especificado com o tempo de execução *plan_handle* que contém estatísticas parciais. O Showplan está em formato XML. Um plano é gerado para cada lote que contém, por exemplo, instruções ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)], chamadas de procedimento armazenado e chamadas de função definidas pelo usuário. Anulável.|
 
 ## <a name="remarks"></a>Comentários
 Essa função do sistema está disponível começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. Consulte o artigo [3190871](https://support.microsoft.com/en-us/help/3190871)
 
-Essa função do sistema funciona em ambos **standard** e **leve** infraestrutura de criação de perfil de estatísticas de execução de consulta. Para obter mais informações, confira [Infraestrutura de Criação de Perfil de Consulta](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md).  
+Essa função do sistema funciona em ambos **standard** e **leve** infraestrutura de criação de perfil de estatísticas de execução de consulta. Para obter mais informações, confira [Infraestrutura de Criação de Perfil de Consulta](../../relational-databases/performance/query-profiling-infrastructure.md).  
+
+Sob as seguintes condições, nenhuma saída Showplan é retornada na **query_plan** coluna da tabela retornada para **DM exec_query_statistics_xml**:  
+  
+-   Se o plano de consulta que corresponde à especificada *session_id* não está em execução, o **query_plan** coluna da tabela retornada é nula. Por exemplo, essa condição pode ocorrer se houver um atraso entre quando o identificador de plano foi capturado e quando ele foi usado com **DM exec_query_statistics_xml**.  
+    
+Devido a uma limitação no número de níveis aninhados permitida na **xml** tipo de dados **DM exec_query_statistics_xml** não pode retornar planos de consulta que atendem ou excedem 128 níveis de elementos aninhados. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta condição evitava que o plano de consulta retornasse e gerasse um erro 6335. Na [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versões posteriores, o **query_plan** coluna retorna NULL.   
 
 ## <a name="permissions"></a>Permissões  
  Requer a permissão `VIEW SERVER STATE` no servidor.  

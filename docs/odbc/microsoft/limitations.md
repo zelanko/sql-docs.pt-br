@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8d71c2a-23c8-4e9b-b5f7-aca51c5a4721
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9901d2169876930a41956338bb216c1282f7bc71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5912bf4b09a3acd50ae148f642360642fce23277
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026841"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054114"
 ---
 # <a name="limitations"></a>Limitações
 Esta seção descreve as limitações dos Drivers ODBC de banco de dados de área de trabalho em relação aos tópicos a seguir:  
@@ -45,4 +44,4 @@ Esta seção descreve as limitações dos Drivers ODBC de banco de dados de áre
 |||[Exibições](../../odbc/microsoft/views-limitations.md)|  
 |||[ONDE cláusula](../../odbc/microsoft/where-clause-limitations.md)|  
 |||[ONDE atual da cláusula](../../odbc/microsoft/where-current-of-clause-limitations.md)|  
-|||[String](../../odbc/microsoft/string-limitations.md)|
+|||[Cadeia de caracteres](../../odbc/microsoft/string-limitations.md)|

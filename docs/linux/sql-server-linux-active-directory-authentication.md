@@ -6,19 +6,18 @@ author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: jroth
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: b99d4a7f6b246db75caf1d394d9a4670a574d6af
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 69bbeb31f8da4023bd0630ae0d944165407e2dec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027333"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Usar autenticação do Active Directory com o SQL Server no Linux
 
@@ -321,7 +320,7 @@ systemctl restart mssql-server
 
 Isso vai usar LDAPS pela SSSD se ingressar no domínio do AD no host foi feito por meio do pacote SSSD e **disablesssd** não está definido como true. Se **disablesssd** é definido como true, juntamente com **forcesecureldap** sendo definida como true, ele usará o protocolo LDAPS pela openldap biblioteca chamadas feitas pelo SQL Server.
 
-### <a name="post-sql-server-2017-cu14"></a>Post SQL Server 2017 CU14
+### <a name="post-sql-server-2017-cu14"></a>Postar CU14 do SQL Server 2017
 
 Começando com CU14 de 2017 do SQL Server, se o SQL Server ingressou em um controlador de domínio do AD usando provedores de terceiros e é configurado para usar openldap chamadas para pesquisa geral do AD, definindo **disablesssd** para true, você também pode usar **enablekdcfromkrb5** opção para forçar o SQL Server para usar a biblioteca krb5 para pesquisa KDC em vez de pesquisa inversa de DNS para o servidor do KDC.
 

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ea48cf80-904a-4273-a950-6d35b1b0a1b6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab6e80c80e2fab306b1b890f62546de07d6be108
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da427117b2282c9014ff0171e1a7c29f7490940e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049813"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078751"
 ---
 # <a name="syscredentials-transact-sql"></a>sys.credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "63049813"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |credential_id|**int**|ID da credencial. É exclusivo no servidor.|  
-|nome|**sysname**|Nome da credencial. É exclusivo no servidor.|  
+|name|**sysname**|Nome da credencial. É exclusivo no servidor.|  
 |credential_identity|**nvarchar(4000)**|Nome da identidade a ser usada. Geralmente é um usuário do Windows. Não precisa ser exclusivo.|  
 |create_date|**datetime**|Hora em que a credencial foi criada.|  
 |modify_date|**datetime**|Hora da última modificação feita na credencial.|  

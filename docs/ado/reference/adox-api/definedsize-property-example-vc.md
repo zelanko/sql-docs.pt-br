@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8638449e89701638e215ebfd79eae2ab216a56e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c6930cd849ca7d0dd8b8905d52fd8355a38b66a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966465"
 ---
 # <a name="definedsize-property-example-vc"></a>Exemplo da propriedade DefinedSize (VC++)
 Este exemplo demonstra a [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) propriedade de uma [coluna](../../../ado/reference/adox-api/column-object-adox.md). O código irá redefinir o tamanho da coluna FirstName do **funcionários** tabela da *Northwind* banco de dados. Em seguida, a alteração nos valores de FirstName [campo](../../../ado/reference/ado-api/field-object.md) de uma [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) com base no **funcionários** tabela é exibida. Observe que por padrão, o campo FirstName fica preenchido com espaços após você redefinir o **DefinedSize** propriedade.  

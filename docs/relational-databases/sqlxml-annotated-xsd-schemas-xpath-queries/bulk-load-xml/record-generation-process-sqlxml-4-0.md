@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c89d3859ad7f9f8f32dfc1cddd1ed805aa466867
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 73b7a8b42832c2d0a6c8c6d9589f953a93f39ce8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038417"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005290"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Registrar processo de geração (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,7 +102,7 @@ ms.locfileid: "56038417"
 >  Nesse modelo, como um registro é inserido quando uma marca final é atingida (ou o nó fica fora do escopo), você deve definir todos os dados que estão associados ao registro dentro do escopo do nó.  
   
 ## <a name="record-subset-and-the-key-ordering-rule"></a>Subconjunto de registro e a chave de ordenação de regra  
- Quando você especifica um esquema de mapeamento que usa  **\<SQL: Relationship >**, o termo subconjunto refere-se ao conjunto de registros que é gerado no lado externo da relação. No exemplo a seguir, os registros CustOrder estão no lado externo,  **\<SQL: Relationship >**.  
+ Quando você especifica um esquema de mapeamento que usa  **\<SQL: Relationship >** , o termo subconjunto refere-se ao conjunto de registros que é gerado no lado externo da relação. No exemplo a seguir, os registros CustOrder estão no lado externo,  **\<SQL: Relationship >** .  
   
  Por exemplo, suponha que um banco de dados contenha as seguintes tabelas:  
   
@@ -149,9 +148,9 @@ ms.locfileid: "56038417"
   
  Os dados XML de exemplo e as etapas para criar um exemplo de funcionamento são dados a seguir.  
   
--   Quando um  **\<cliente >** nó de elemento no arquivo de dados XML entra no escopo, o XML Bulk Load gera um registro para a tabela Cust. Carregamento em massa XML, em seguida, copia os valores de coluna necessárias (CustomerID, CompanyName e City) da  **\<CustomerID >**,  **\<CompanyName >** e o  **\<Cidade >** elementos filho como esses elementos entrarem no escopo.  
+-   Quando um  **\<cliente >** nó de elemento no arquivo de dados XML entra no escopo, o XML Bulk Load gera um registro para a tabela Cust. Carregamento em massa XML, em seguida, copia os valores de coluna necessárias (CustomerID, CompanyName e City) da  **\<CustomerID >** ,  **\<CompanyName >** e o  **\<Cidade >** elementos filho como esses elementos entrarem no escopo.  
   
--   Quando um  **\<ordem >** nó de elemento entra no escopo, o XML Bulk Load gera um registro para a tabela CustOrder. Carregamento em massa XML copia o valor da **OrderID** de atributo para este registro. O valor necessário para a coluna CustomerID é obtida o  **\<CustomerID >** elemento filho do  **\<cliente >** elemento. O XML Bulk Load usa as informações que são especificadas no  **\<SQL: Relationship >** para obter o valor da chave estrangeiro CustomerID para este registro, a menos que o **CustomerID** foi de atributo especificado na  **\<ordem >** elemento. A regra geral é que, se o elemento filho especifica explicitamente um valor para o atributo de chave estrangeiro, o XML Bulk Load usa esse valor e não obter o valor do elemento pai usando especificado **\<SQL: Relationship >**. Como isso  **\<ordem >** nó de elemento sai do escopo, carregamento em massa XML envia o registro de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, processa todos os próximos  **\<Order >** nós de elemento da mesma maneira.  
+-   Quando um  **\<ordem >** nó de elemento entra no escopo, o XML Bulk Load gera um registro para a tabela CustOrder. Carregamento em massa XML copia o valor da **OrderID** de atributo para este registro. O valor necessário para a coluna CustomerID é obtida o  **\<CustomerID >** elemento filho do  **\<cliente >** elemento. O XML Bulk Load usa as informações que são especificadas no  **\<SQL: Relationship >** para obter o valor da chave estrangeiro CustomerID para este registro, a menos que o **CustomerID** foi de atributo especificado na  **\<ordem >** elemento. A regra geral é que, se o elemento filho especifica explicitamente um valor para o atributo de chave estrangeiro, o XML Bulk Load usa esse valor e não obter o valor do elemento pai usando especificado **\<SQL: Relationship >** . Como isso  **\<ordem >** nó de elemento sai do escopo, carregamento em massa XML envia o registro de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, processa todos os próximos  **\<Order >** nós de elemento da mesma maneira.  
   
 -   Por fim, o  **\<cliente >** nó de elemento sai do escopo. Nesse instante, o Carregamento em massa XML envia o registro do cliente ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O Carregamento em massa XML segue este processo para todos os clientes subsequentes no fluxo de dados XML.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 85fd4bd0-393b-4dc1-9d73-80dced4f2fbe
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d126bcd26a74c091193bcff14154a34188b4a5d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a4b3ab6c9b623544f1cc93f26394fa1905b6d3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705661"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964983"
 ---
 # <a name="unique-property-adox"></a>Propriedade Unique (ADOX)
 Indica se as chaves de índice devem ser exclusivas.  

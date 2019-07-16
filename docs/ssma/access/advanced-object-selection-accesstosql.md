@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4d2b367f-8ac7-4534-b66f-10300ef64ebc
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a44e3882121347235141aacf879beea8127e3133
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d65cac7c857e8b6357dc31ca130dcdbdaa43b58f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910699"
 ---
 # <a name="advanced-object-selection--accesstosql"></a>Seleção de objetos avançada (AccessToSQL)
 O **seção de objeto avançado** caixa de diálogo permite que você filtre os objetos de banco de dados usando cadeias de caracteres e subcadeias de caracteres no nome do objeto e, em seguida, selecionar ou desmarcar esses objetos. O SSMA executa operações de conversão e a migração em objetos selecionados.  
@@ -42,7 +41,7 @@ Exibe itens em uma tabela de filtrados.
 **Carregado apenas itens exibidos**  
 Alterna a exibição de categorias ou itens. Quando esse botão é selecionado, o SSMA mostra todos os itens que correspondem aos critérios de filtro e aqueles que foram carregados anteriormente. Quando esse botão não estiver selecionado, o SSMA mostra as pastas de categoria.  
   
-**Filter**  
+**Filtrar**  
 Insira a cadeia de caracteres que você deseja usar para filtrar itens. Por exemplo, para localizar os itens disponíveis que contêm a cadeia de caracteres "ID" no nome do item, digite a cadeia de caracteres "ID" no **filtro** caixa.  
   
 Se itens correspondem aos critérios de filtro, as categorias ou itens serão exibida conforme você digita a cadeia de caracteres. Para ver os itens correspondentes, é recomendável que você clique o **exibido somente itens carregados** botão.  

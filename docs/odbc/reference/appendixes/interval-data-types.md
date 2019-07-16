@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 930a848ea01d128cb248c7929408ce7510937ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a42c8767228c75d3b7b0da308d739516875cf966
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947551"
 ---
 # <a name="interval-data-types"></a>Tipo de dados de intervalo
 Um intervalo é definido como a diferença entre duas datas e horas. Intervalos são expressas em uma das duas maneiras diferentes. Um é um *ano-mês* intervalo que expressa a intervalos em termos de anos e um número integral de meses. O outro é um *tempo-dia* intervalo que expressa a intervalos em termos de dias, minutos e segundos. Esses dois tipos de intervalos são distintos e não podem ser misturados, como meses podem ter diferentes números de dias.  
