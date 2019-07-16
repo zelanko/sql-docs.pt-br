@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e0f6984c464c08518c7b3143986a041b195cce69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d375ed3dd4ea7ae7e2e5405d1feec962c5f56ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918698"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Especifica um ou mais atributos de uma [campo](../../../ado/reference/ado-api/field-object.md) objeto.  
@@ -47,7 +46,7 @@ Especifica um ou mais atributos de uma [campo](../../../ado/reference/ado-api/fi
 |**adFldUpdatable**|0x4|Indica que você pode escrever para o campo.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Package: **com.ms.wfc.data**  
+ Pacote: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

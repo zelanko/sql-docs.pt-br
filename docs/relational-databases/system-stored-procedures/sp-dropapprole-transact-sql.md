@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
 author: VanMSFT
-manager: jroth
-ms.openlocfilehash: 0928137201d9a731051ab95e603744f60c3a52e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36c3aaf72390ac5005ff5577000820f07ac5856d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001037"
 ---
 # <a name="spdropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
 

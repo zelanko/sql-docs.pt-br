@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cf2b724b-4ca7-470a-8dd7-fa95b1e060a4
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d7b6a8a48bedfc2ecd17660eb8743e89ee94e978
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3801526bfec64fa8efeb992ec7552a232d2e13c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298754"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989513"
 ---
 # <a name="installing-ssma-components-on-sql-server-db2tosql"></a>Instalar os componentes do SSMA no SQL Server (DB2ToSQL)
 Nesta versão do SSMA não é necessário para uma instalação separada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do pacote de extensão SSMA, que dá suporte à migração de dados e provedores do DB2 para habilitar a conectividade de servidor para servidor.  

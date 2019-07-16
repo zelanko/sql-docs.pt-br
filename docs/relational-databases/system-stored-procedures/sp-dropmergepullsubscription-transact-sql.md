@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f15e5104c03e271b72f6b61dc40077aabdea4e76
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: ab2cda06971e56a8c15e2fb7382977a36fe7a34a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933882"
 ---
 # <a name="spdropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

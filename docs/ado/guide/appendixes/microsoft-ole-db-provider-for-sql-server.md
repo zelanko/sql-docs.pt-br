@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f083f62a67a2255b59fe9ca7cffc03e5aaf5f0a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701189"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926614"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Provedor Microsoft OLE DB para visão geral do SQL Server
 O Microsoft OLE DB Provider para SQL Server, SQLOLEDB, permite que o ADO para acessar o Microsoft SQL Server.
@@ -122,7 +121,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
 -   Várias coerções de tipo de dados resultará em tipos que não correspondem. Por exemplo, a coerção uma **sql_variant** com um subtipo do **GUID** para um **DBTYPE_VARIANT** resultará em um subtipo do **safearray**(bytes) . Conversão desse tipo de volta para um **sql_variant** resultará em um novo subtipo **matriz**(bytes).
 
--   **Conjunto de registros** campos que contêm **sql_variant** dados podem ser remotos (empacotado) ou persistente somente se o **sql_variant** contiver subtipos específicos. A tentativa de remoto ou manter os dados com o seguinte sem suporte subtipos causará um erro de tempo de execução (não há suporte para conversão) do provedor de persistência de Microsoft (MSPersist): **VT_VARIANT**, **VT_RECORD**, **VT_ILLEGAL**, **VT_UNKNOWN**, **VT_BSTR**, and **VT_DISPATCH.**
+-   **Conjunto de registros** campos que contêm **sql_variant** dados podem ser remotos (empacotado) ou persistente somente se o **sql_variant** contiver subtipos específicos. A tentativa de remoto ou manter os dados com o seguinte sem suporte subtipos causará um erro de tempo de execução (não há suporte para conversão) do provedor de persistência de Microsoft (MSPersist): **VT_VARIANT**, **VT_RECORD**, **VT_ILLEGAL**, **VT_UNKNOWN**, **VT_BSTR**, e **VT_DISPATCH.**
 
 -   O provedor OLE DB para SQL Server no MDAC 2.7, MDAC 2.8 e 6.0 do Windows DAC tem uma propriedade dinâmica chamada **permitir variantes nativas** que, como o nome sugere, permite que os desenvolvedores acessem os **sql_variant** em seu formulário nativo em vez de um **DBTYPE_VARIANT**. Se essa propriedade for definida e um **conjunto de registros** é aberta com o mecanismo de Cursor do cliente (**adUseClient**), o **Recordset.Open** chamada falhará. Se essa propriedade é definida e uma **conjunto de registros** é aberto com cursores de servidor (**adUseServer**), o **Recordset.Open** chamada terá êxito, mas acessando as colunas do tipo **sql_variant** produzirá um erro.
 
@@ -353,7 +352,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Identidade de linha forte|DBPROP_STRONGIDENTITY|
 |Capacidade de atualização|DBPROP_UPDATABILITY|
 |Usar indicadores|DBPROP_BOOKMARKS|
-|XML Root|SSPROP_STREAM_XMLROOT|
+|Raiz XML|SSPROP_STREAM_XMLROOT|
 |XSL|SSPROP_STREAM_XSL|
 
  Para detalhes específicos de implementação e funcionais informações sobre o Microsoft SQL Server OLE DB Provider, consulte a [provedor do SQL Server](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635).

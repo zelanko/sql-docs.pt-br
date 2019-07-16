@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a23b67141c7c07845438ed43f00d3124043a53c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e062c67f0dedf55d63a076725b46d4405918741
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917703"
 ---
 # <a name="parameters-collection-ado"></a>Coleção Parameters (ADO)
 Contém todos os [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objetos de uma [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  

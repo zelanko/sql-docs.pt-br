@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6750e17b694086cf716e32629fcf3b3f3b48f486
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64348e33502e8407e567b8901890246344765f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989686"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>Executar o Console do SSMA (DB2ToSQL)
 Microsoft fornece um conjunto robusto de script de comandos de arquivo para executar e controlar atividades do SSMA. Seções a seguir detalham os mesmos. O aplicativo de console usa determinados comandos do arquivo de script padrão como enumerado nesta seção.  
@@ -29,7 +28,7 @@ create-new-project
   
 Cria um novo projeto SSMA.  
   
-**Script**  
+**script**  
   
 -   `project-folder` indica a pasta do projeto sendo criado.  
   
@@ -64,7 +63,7 @@ Abrir projeto
   
 Abre um projeto existente.  
   
-**Script**  
+**script**  
   
 -   `project-folder` indica a pasta do projeto sendo criado. O comando falhará se a pasta especificada não existe.  {string}  
   
@@ -89,7 +88,7 @@ Salvar projeto
   
 Salva o projeto de migração.  
   
-**Script**  
+**script**  
   
 **Exemplo de sintaxe:**  
   
@@ -98,11 +97,11 @@ Salva o projeto de migração.
 ```  
 **Comando**  
   
-close-project  
+Fechar projeto  
   
 Fecha o projeto de migração.  
   
-**Script**  
+**script**  
   
 **Exemplo de sintaxe:**  
   
@@ -129,7 +128,7 @@ conectar-se-origem-banco de dados
   
 -   Se a conexão à fonte não pode ser estabelecida, um erro será gerado e o aplicativo de console para ainda mais a execução  
   
-**Script**  
+**script**  
   
 Definição de servidor é recuperada do atributo nome definido para cada conexão na seção servidor de arquivo de conexão do servidor ou o arquivo de script.  
   
@@ -148,7 +147,7 @@ Force-carga-origem/destino-banco de dados
   
 -   Se a conexão para o origem/destino não puder ser estabelecida, um erro será gerado e o aplicativo de console para ainda mais a execução  
   
-**Script**  
+**script**  
   
 Requer um ou vários nós de metabase como parâmetro de linha de comando.  
   
@@ -159,7 +158,7 @@ Requer um ou vários nós de metabase como parâmetro de linha de comando.
   
   metabase="<source/target>"/>  
 ```  
-ou em  
+ou  
   
 ```xml  
 <force-load>  
@@ -170,13 +169,13 @@ ou em
 ```  
 **Comando**  
   
-reconnect-source-database  
+Reconecte-origem-banco de dados  
   
 -   Reconecta-se à fonte de dados, mas não carrega todos os metadados ao contrário do comando connect-origem-banco de dados.  
   
 -   Se não é possível estabelecer (conexão com a fonte de re), um erro será gerado e o aplicativo de console ainda mais para a execução.  
   
-**Script**  
+**script**  
   
 **Exemplo de sintaxe:**  
   
@@ -191,7 +190,7 @@ connect-target-database
   
 -   Se a conexão para o destino não puder ser estabelecida, um erro será gerado e o aplicativo de console ainda mais para a execução.  
   
-**Script**  
+**script**  
   
 Definição de servidor é recuperada do atributo nome definido para cada conexão na seção servidor de arquivo de conexão do servidor ou o arquivo de script  
   
@@ -208,7 +207,7 @@ reconnect-target-database
   
 -   Se a (re) conexão para o destino não puder ser estabelecida, um erro será gerado e o aplicativo de console ainda mais para a execução.  
   
-**Script**  
+**script**  
   
 **Exemplo de sintaxe:**  
   
@@ -221,7 +220,7 @@ Os comandos de relatório geram relatórios sobre o desempenho de várias ativid
   
 **Comando**  
   
-generate-assessment-report  
+Gerar--relatório de avaliação  
   
 -   Gera relatórios de avaliação no banco de dados de origem.  
   
@@ -229,7 +228,7 @@ generate-assessment-report
   
 -   Falha ao se conectar ao servidor de banco de dados de origem durante a execução do comando, também resulta em encerrar o aplicativo de console.  
   
-**Script**  
+**script**  
   
 -   `conversion-report-folder:` Especifica a pasta onde o relatório de avaliação pode ser armazenado. (atributo opcional)  
   
@@ -272,7 +271,7 @@ generate-assessment-report
   
 />  
 ```  
-ou em  
+ou  
   
 ```xml  
 <generate-assessment-report  
@@ -301,7 +300,7 @@ convert-schema
   
 -   Se a conexão de banco de dados de origem ou de destino não é executada antes de executar esse comando ou a conexão para o servidor de banco de dados de origem ou destino falha durante a execução do comando, será gerado um erro e sai do aplicativo de console.  
   
-**Script**  
+**script**  
   
 -   `conversion-report-folder:` Especifica a pasta onde o relatório de avaliação pode ser armazenado. (atributo opcional)  
   
@@ -344,7 +343,7 @@ convert-schema
   
 />  
 ```  
-ou em  
+ou  
   
 ```xml  
 <convert-schema  
@@ -361,9 +360,9 @@ ou em
 ```  
 **Comando**  
   
-migrate-data: Migra os dados de origem para o destino.  
+migrar dados de: Migra os dados de origem para o destino.  
   
-**Script**  
+**script**  
   
 -   `conversion-report-folder:` Especifica a pasta onde o relatório de avaliação pode ser armazenado. (atributo opcional)  
   
@@ -410,7 +409,7 @@ migrate-data: Migra os dados de origem para o destino.
   
 </migrate-data>  
 ```  
-ou em  
+ou  
   
 ```xml  
 <migrate-data  
@@ -435,7 +434,7 @@ map-schema
   
 Mapeamento de esquema de banco de dados de origem ao esquema de destino.  
   
-**Script**  
+**script**  
   
 -   `source-schema` Especifica o esquema de origem que nossa intenção é migrar.  
   
@@ -456,7 +455,7 @@ map-schema
   
 Mapeamento de esquema de banco de dados de origem ao esquema de destino.  
   
-**Script**  
+**script**  
   
 `source-schema` Especifica o esquema de origem que nossa intenção é migrar.  
   
@@ -479,7 +478,7 @@ A saída do console padrão definindo para os comandos de migração é o relat�
   
 **Comando**  
   
-synchronize-target  
+Sincronizar de destino  
   
 -   Sincroniza os objetos de destino com o banco de dados de destino.  
   
@@ -487,7 +486,7 @@ synchronize-target
   
 -   Se a conexão de banco de dados de destino não é executada antes de executar esse comando ou a conexão ao servidor de banco de dados de destino falha durante a execução do comando, será gerado um erro e o aplicativo de console é encerrado.  
   
-**Script**  
+**script**  
   
 -   `object-name:` Especifica os objetos de destino considerados para sincronizar com o banco de dados de destino (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
@@ -520,7 +519,7 @@ synchronize-target
   
 />  
 ```  
-ou em  
+ou  
   
 ```xml  
 <synchronize-target  
@@ -529,7 +528,7 @@ ou em
   
    object-type="<object-category>"/>  
 ```  
-ou em  
+ou  
   
 ```xml  
 <synchronize-target>  
@@ -550,7 +549,7 @@ refresh-from-database
   
 -   Se esse comando é executado no banco de dados de destino, um erro será gerado.  
   
-**Script**  
+**script**  
   
 Requer um ou vários nós de metabase como parâmetro de linha de comando.  
   
@@ -585,7 +584,7 @@ Requer um ou vários nós de metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou em  
+ou  
   
 ```xml  
 <refresh-from-database  
@@ -594,7 +593,7 @@ ou em
   
    object-type="<object-category>"/>  
 ```  
-ou em  
+ou  
   
 ```xml  
 <refresh-from-database>  
@@ -613,7 +612,7 @@ Salvar como script
   
 Usado para salvar os scripts dos objetos em um arquivo mencionado quando metabase Target, essa é uma alternativa ao comando de sincronização, onde podemos obter os scripts e execute o mesmo banco de dados de destino.  
   
-**Script**  
+**script**  
   
 Requer um ou vários nós de metabase como parâmetro de linha de comando.  
   
@@ -644,7 +643,7 @@ Requer um ou vários nós de metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou em  
+ou  
   
 ```xml  
 <save-as-script  
@@ -689,7 +688,7 @@ convert-sql-statement
   
     -   detalhado (= "true/false", com padrão como "false" (atributos opcionais)).  
   
-**Script**  
+**script**  
   
 Requer um ou vários nós de metabase como parâmetro de linha de comando.  
   
@@ -720,7 +719,7 @@ Requer um ou vários nós de metabase como parâmetro de linha de comando.
   
 </convert-sql-statement>  
 ```  
-ou em  
+ou  
   
 ```  
 <convert-sql-statement  
@@ -743,7 +742,7 @@ ou em
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-ou em  
+ou  
   
 ```  
 <convert-sql-statement  

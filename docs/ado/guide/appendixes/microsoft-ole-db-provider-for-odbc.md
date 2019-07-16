@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fd8374eaa97ffc08528c245569ec7bff8499747a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701322"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926633"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Provedor Microsoft OLE DB para visão geral do ODBC
 Para um programador do ADO ou RDS, um mundo ideal seria um no qual todos os dados fonte expõe uma interface OLE DB, para que o ADO pode chamar diretamente na fonte de dados. Embora cada vez mais fornecedores de banco de dados estiver implementando interfaces OLE DB, algumas fontes de dados não são ainda expostos dessa maneira. No entanto, a maioria dos sistemas DBMS em uso atualmente podem ser acessados por meio de ODBC.
@@ -93,7 +92,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-connection-properties"></a>Propriedades de Conexão específicas do provedor
  O provedor OLE DB para ODBC adiciona várias propriedades para o [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção da **Conexão** objeto. A tabela a seguir lista essas propriedades com o nome de propriedade do OLE DB correspondente entre parênteses.
 
-|Nome da propriedade|Descrição|
+|Nome da Propriedade|Descrição|
 |-------------------|-----------------|
 |Procedimentos acessíveis (KAGPROP_ACCESSIBLEPROCEDURES)|Indica se o usuário tem acesso a procedimentos armazenados.|
 |Tabelas acessíveis (KAGPROP_ACCESSIBLETABLES)|Indica se o usuário tem permissão para executar instruções SELECT nas tabelas de banco de dados.|
@@ -101,7 +100,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Nome do driver (KAGPROP_DRIVERNAME)|Indica o nome do arquivo do driver ODBC.|
 |Versão do ODBC driver (KAGPROP_DRIVERODBCVER)|Indica a versão do ODBC que dá suporte a este driver.|
 |Uso de arquivos (KAGPROP_FILEUSAGE)|Indica como o driver trata um arquivo em uma fonte de dados; como uma tabela ou como um catálogo.|
-|Like Escape Clause (KAGPROP_LIKEESCAPECLAUSE)|Indica se o driver dá suporte a definição e o uso de um caractere de escape para o caractere de porcentagem (%) e sublinhado (_) de caractere no predicado LIKE de uma cláusula WHERE.|
+|Como a cláusula de Escape (KAGPROP_LIKEESCAPECLAUSE)|Indica se o driver dá suporte a definição e o uso de um caractere de escape para o caractere de porcentagem (%) e sublinhado (_) de caractere no predicado LIKE de uma cláusula WHERE.|
 |Máximo de colunas em Group By (KAGPROP_MAXCOLUMNSINGROUPBY)|Indica o número máximo de colunas que podem ser listadas na cláusula GROUP BY de uma instrução SELECT.|
 |Máximo de colunas no índice (KAGPROP_MAXCOLUMNSININDEX)|Indica o número máximo de colunas que podem ser incluídos em um índice.|
 |Máximo de colunas em Order By (KAGPROP_MAXCOLUMNSINORDERBY)|Indica o número máximo de colunas que podem ser listadas na cláusula ORDER BY de uma instrução SELECT.|
@@ -120,7 +119,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-recordset-and-command-properties"></a>Conjunto de registros específicos do provedor e propriedades de comando
  O provedor OLE DB para ODBC adiciona várias propriedades para o **propriedades** coleção da **conjunto de registros** e **comando** objetos. A tabela a seguir lista essas propriedades com o nome de propriedade do OLE DB correspondente entre parênteses.
 
-|Nome da propriedade|Descrição|
+|Nome da Propriedade|Descrição|
 |-------------------|-----------------|
 |Consulta com base em atualizações/exclusões/inserções (KAGPROP_QUERYBASEDUPDATES)|Indica se as atualizações, exclusões e inserções podem ser executadas por meio de consultas SQL.|
 |Tipo de simultaneidade ODBC (KAGPROP_CONCURRENCY)|Indica o método usado para reduzir possíveis problemas causados por dois usuários tentam acessar os mesmos dados da fonte de dados simultaneamente.|
@@ -184,14 +183,14 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|somente leitura|somente leitura|somente leitura|somente leitura|
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
+|[Filtrar](../../../ado/reference/ado-api/filter-property.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|leitura/gravação|não disponível|somente leitura|somente leitura|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|leitura/gravação|não disponível|somente leitura|somente leitura|
-|[Origem](../../../ado/reference/ado-api/source-property-ado-recordset.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
+|[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
 |[Estado](../../../ado/reference/ado-api/state-property-ado.md)|somente leitura|somente leitura|somente leitura|somente leitura|
 |[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|somente leitura|somente leitura|somente leitura|somente leitura|
 
@@ -207,9 +206,9 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sim|Sim|Sim|Sim|
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Não|Não|Sim|Sim|
 |[Fechar](../../../ado/reference/ado-api/close-method-ado.md)|Sim|Sim|Sim|Sim|
-|[Delete (excluir)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sim|Sim|Sim|Sim|
+|[Excluir](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sim|Sim|Sim|Sim|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sim|Sim|Sim|Sim|
-|[Migrar](../../../ado/reference/ado-api/move-method-ado.md)|Sim|Sim|Sim|Sim|
+|[Moverr](../../../ado/reference/ado-api/move-method-ado.md)|Sim|Sim|Sim|Sim|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sim|Sim|Sim|Sim|
 |[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Não|Sim|Sim|Sim|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sim|Sim|Sim|Sim|

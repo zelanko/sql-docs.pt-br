@@ -21,23 +21,22 @@ helpviewer_keywords:
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ca29b9925de2d2c1c80e18372a8abf6e818edd15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9c66e12ec326ba5021de0829b0d7cc479f858c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814714"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997588"
 ---
 # <a name="sysavailabilitygrouplisteneripaddresses-transact-sql"></a>sys.availability_group_listener_ip_addresses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna uma linha para cada endereço IP que está associado com qualquer Always On do ouvinte do grupo disponibilidade no cluster do Windows Server Failover Clustering (WSFC).  
+  Retorna uma linha para cada endereço IP associado a qualquer ouvinte de grupo de disponibilidade Always On no cluster do WSFC (Windows Server Failover Clustering).  
   
  Chave primária: **listener_id** + **endereço_IP** + **ip_sub_mask**  
   
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**listener_id**|**nvarchar(36)**|GUID do recurso do cluster do WSFC (Windows Server Failover Clustering).|  
 |**ip_address**|**nvarchar(48)**|Endereço IP virtual configurado do ouvinte do grupo de disponibilidade. Retorna um único endereço IPv4 ou IPv6.|  

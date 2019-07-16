@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 1d265a40d21a09bf7682075bf13d5b4c5079d914
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c732645c526b2179265a6669055d005e944ee114
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802803"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992098"
 ---
 # <a name="dqs-security"></a>Segurança do DQS
 
@@ -38,7 +37,7 @@ ms.locfileid: "66802803"
 ## <a name="user-management"></a>Gerenciamento de usuário  
  O DBA (administrador de banco de dados) cria os usuários DQS e associa-os a funções DQS no SQL Server Management Studio. O DBA gerencia suas permissões, adicionando Logons do SQL como usuários do banco de dados DQS_MAIN e associando cada usuário a uma das funções do DQS. Cada função recebe permissões a um conjunto de procedimentos armazenados no banco de dados DQS_MAIN. As três funções DQS não estão disponíveis para os bancos de dados DQS_PROJECTS e DQS_STAGING_DATA.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

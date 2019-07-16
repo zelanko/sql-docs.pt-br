@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7440c46a8dea10096efc66b4680a2b6c8536695a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd6b25ebc06df82fa9974b3274ae527e6f6fa347
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63135314"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003156"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>Valores retornados SQLGetInfo para dBASE
 A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os valores correspondentes retornados pelo **SQLGetInfo**. Essas informações podem ser recuperadas, passando a linguagem listada C# defines **SQLGetInfo** na *fInfoType* argumento. Para obter mais informações sobre os valores retornados pelo **SQLGetInfo**, consulte o *referência do programador de ODBC*.  
@@ -30,7 +29,7 @@ A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os
 > [!NOTE]  
 >  Em que **SQLGetInfo** retorna um bitmask de 32 bits, uma barra vertical (&#124;) representa um OR bit a bit.  
   
-|InfoType|Valor retornado|  
+|tipo de informação|Valor retornado|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  

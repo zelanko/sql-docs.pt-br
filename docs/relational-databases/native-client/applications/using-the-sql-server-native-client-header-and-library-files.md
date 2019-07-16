@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb4265ac502aa5d8a90cf4df3060b1d10d5b4f36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01cfd9fe1aba63e5b63c6878d0332bd3a4a8eaff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987549"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Usando os arquivos de biblioteca e de cabeçalho do SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

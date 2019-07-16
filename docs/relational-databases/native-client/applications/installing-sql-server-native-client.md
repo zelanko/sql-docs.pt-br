@@ -7,7 +7,6 @@ ms.reviewer: ''
 ms.technology: native-client
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, uninstalling
@@ -22,12 +21,12 @@ helpviewer_keywords:
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2c6695fd8e005311667b1edaad1b9e315019487
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dee5cebb97ff491595ca5e875c3adfc08c82bf2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987583"
 ---
 # <a name="installing-sql-server-native-client"></a>Instalando o SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

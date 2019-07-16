@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c87862f97a1fc00d625542c177d85e11d0a7ad45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12b2e6c6f12fc06cb223551b55cb7f9a38df9ac3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921838"
 ---
 # <a name="absolutepage-property-ado"></a>Propriedade AbsolutePage (ADO)
 Indica em qual página de registro atual reside.  

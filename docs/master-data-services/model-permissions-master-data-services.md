@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1f42513c7f8fa52fddfa9d3f77f537d81a34c0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 027240f161ec2853aa2d40a7b4792ccea82c7e64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484079"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000026"
 ---
 # <a name="model-permissions-master-data-services"></a>Permissões de modelo (Master Data Services)
 
@@ -35,7 +34,7 @@ ms.locfileid: "65484079"
 |**Leitura**|O usuário pode ler membros, atributos, associações de hierarquia ou hierarquias de coleção.|  
 |**Criar**|O usuário pode criar membros e atribuir valores de atributo durante a criação.|  
 |**Update (atualizar)**|O usuário pode atualizar membros, atributos, associações de hierarquia ou hierarquias de coleção.|  
-|**Delete (excluir)**|O usuário pode excluir membros.|  
+|**Excluir**|O usuário pode excluir membros.|  
 |**Deny**|Nega todo o acesso ao modelo|  
 |**Admin**|Permissão de administrador no modelo. A permissão de administrador está disponível somente no nível do modelo.|  
   

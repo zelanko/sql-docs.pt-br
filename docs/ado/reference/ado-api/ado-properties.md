@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3b6155de4c1bbc04e921b3b019eb0128694f6412
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920894"
 ---
 # <a name="ado-properties"></a>Propriedades ADO
 
@@ -54,7 +53,7 @@ ms.locfileid: "66696627"
 |[Direção](../../../ado/reference/ado-api/direction-property.md)|Indica se o **parâmetro** representa um parâmetro de entrada, um parâmetro de saída ou ambos, ou se o parâmetro é o valor de retorno de um procedimento armazenado.|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Indica o status de edição do registro atual.|  
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|Indica se a posição atual está no final do fluxo.|  
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|Indica um filtro para os dados em um **conjunto de registros**.|  
+|[Filtrar](../../../ado/reference/ado-api/filter-property.md)|Indica um filtro para os dados em um **conjunto de registros**.|  
 |[HelpContext e HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|Indica o arquivo de Ajuda e o tópico associado a um **erro** objeto.<br /><br /> **IdentificaçãoDoContextoDaAjuda** retorna uma ID de contexto, como uma **longo** valor para um tópico em um arquivo de Ajuda.<br /><br /> **HelpFile** retorna um **cadeia de caracteres** valor que é avaliada para um caminho totalmente resolvido de um arquivo de Ajuda.|  
 |[Index](../../../ado/reference/ado-api/index-property.md)|Indica o nome do índice atualmente em vigor para um **Recordset** objeto.|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|Indica o nível de isolamento para um **Conexão** objeto.|  
@@ -64,7 +63,7 @@ ms.locfileid: "66696627"
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|Indica quais registros devem ser empacotados de volta para o servidor.|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|Indica o número máximo de registros a serem retornados para um **conjunto de registros** de uma consulta.|  
 |[Modo](../../../ado/reference/ado-api/mode-property-ado.md)|Indica as permissões disponíveis para modificar dados em um **Conexão**, **registro**, ou **Stream** objeto.|  
-|[Nome](../../../ado/reference/ado-api/name-property-ado.md)|Indica o nome de um objeto.|  
+|[Name](../../../ado/reference/ado-api/name-property-ado.md)|Indica o nome de um objeto.|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|Indica o código de erro específico do provedor para um determinado **erro** objeto.|  
 |[número](../../../ado/reference/ado-api/number-property-ado.md)|Indica o número que identifica exclusivamente um **erro** objeto.|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|Indica a escala de valores numéricos em uma **parâmetro** ou **campo** objeto.|  
@@ -79,7 +78,7 @@ ms.locfileid: "66696627"
 |[Provedor](../../../ado/reference/ado-api/provider-property-ado.md)|Indica o nome do provedor para uma **Conexão** objeto.|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Indica o número de registros em uma **Recordset** objeto.|  
 |[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)|Indica o tipo de **registro** objeto.|  
-|[Row](../../../ado/reference/ado-api/row-property-ado.md)|Obtém ou define um banco de dados OLE **linha** objeto de/em uma **ADORecordConstruction** objeto.|  
+|[linha](../../../ado/reference/ado-api/row-property-ado.md)|Obtém ou define um banco de dados OLE **linha** objeto de/em uma **ADORecordConstruction** objeto.|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Obtém ou define um banco de dados OLE **RowPosition** objeto de/em uma **ADORecordsetConstruction** objeto.|  
 |[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|Obtém ou define um banco de dados OLE **conjunto de linhas** objeto de/em uma **ADORecordsetConstruction** objeto.|  
 |[Fonte (Erro ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)|Indica o nome do objeto ou aplicativo que originalmente gerou um erro.|  
@@ -94,7 +93,7 @@ ms.locfileid: "66696627"
 |[Tipo](../../../ado/reference/ado-api/type-property-ado.md)|Indica o tipo de dados ou tipo operacional de um **parâmetro**, **campo**, ou **propriedade** objeto.|  
 |[Tipo (Stream do ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Indica o tipo de dados que estão contidos na **Stream** (binários ou texto).|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Indica o valor atual no banco de dados para um **campo** objeto.|  
-|[Value](../../../ado/reference/ado-api/value-property-ado.md)|Indica o valor atribuído a um **campo**, **parâmetro**, ou **propriedade** objeto.|  
+|[Valor](../../../ado/reference/ado-api/value-property-ado.md)|Indica o valor atribuído a um **campo**, **parâmetro**, ou **propriedade** objeto.|  
 |[Versão](../../../ado/reference/ado-api/version-property-ado.md)|Indica o número de versão do ADO.|  
   
 ## <a name="see-also"></a>Consulte também  

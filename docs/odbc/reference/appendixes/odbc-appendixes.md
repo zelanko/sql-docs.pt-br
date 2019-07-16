@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3331aa89-24d0-4c0e-b377-c720c1107ad5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4934ed875a427e68938ed09d4353b7fe14f3aee2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c9e54bec1c4a4f57ade8ded1034c8c503c0cece
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990652"
 ---
 # <a name="odbc-appendixes"></a>Apêndices do ODBC
 Detalhes técnicos relacionados à interface do Microsoft ODBC estão contidos nos seguintes apêndices:  

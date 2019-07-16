@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f69ab97a522e148d8027042ff7e2c6b09a690424
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d7f351b90030e755dde8ad13905ef4533eff08e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924057"
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>Etapa 3: Preencher a caixa de listagem de campos
 Para preencher a caixa de lista de campos, insira o seguinte código no manipulador de eventos de clique de `lstMain`:  

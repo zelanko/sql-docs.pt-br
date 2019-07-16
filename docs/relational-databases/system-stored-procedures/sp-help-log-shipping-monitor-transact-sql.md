@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36e9d82a85c651044decbd951d49a0234568d5bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2b8fc2ac96821427aaf0ef2550fb6624a923d7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000935"
 ---
 # <a name="sphelplogshippingmonitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_help_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

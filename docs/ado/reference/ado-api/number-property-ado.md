@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4ef1665bf96688fba5fc7d157b73d2df2fcd2c68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce027747c843e02998f4845db7075e70cf8733b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705604"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917992"
 ---
 # <a name="number-property-ado"></a>Propriedade Number (ADO)
 Indica o número que identifica exclusivamente um [erro](../../../ado/reference/ado-api/error-object.md) objeto.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8337a6e93aba36e8b5838dcbf6d2e084fe022f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 520c484bdaaa6eb59488900208993a607c5b0f7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924114"
 ---
 # <a name="static-cursors"></a>Cursores estáticos
 O cursor estático sempre exibe o resultado definido como ele era quando o cursor foi aberto pela primeira vez. Dependendo da implementação, os cursores estáticos são somente leitura ou leitura/gravação e fornecer a rolagem para frente e para trás. O cursor estático não detecta normalmente, as alterações feitas à associação, ordem ou valores do conjunto de resultados depois que o cursor é aberto. Cursores estáticos podem detectar as próprias atualizações, exclusões e inserções, embora não precisem fazer isso.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 251c35977421d63027fbc9d6042e193125da854d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933293"
 ---
 # <a name="createparameter-method-ado"></a>Método CreateParameter (ADO)
 Cria um novo [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objeto com as propriedades especificadas.  
@@ -38,7 +37,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  Retorna um **parâmetro** objeto.  
   
 #### <a name="parameters"></a>Parâmetros  
- *Nome*  
+ *Name*  
  Opcional. Um **cadeia de caracteres** que contém o nome do valor de **parâmetro** objeto.  
   
  *Tipo*  
@@ -47,10 +46,10 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *Direção*  
  Opcional. Um [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) valor que especifica o tipo de **parâmetro** objeto.  
   
- *Tamanho*  
+ *Size*  
  Opcional. Um **longo** valor que especifica o comprimento máximo para o valor do parâmetro em caracteres ou bytes.  
   
- *Value*  
+ *Valor*  
  Opcional. Um **Variant** que especifica o valor para o **parâmetro** objeto.  
   
 ## <a name="remarks"></a>Comentários  

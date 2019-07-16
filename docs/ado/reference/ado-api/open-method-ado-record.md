@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b4d105d648c7877e7099dea637c2a2c6a094985f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97c7f1c143c83dd35ca5ff17e9776d79fb734ff9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63241083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917921"
 ---
 # <a name="open-method-ado-record"></a>Método Open (Registro do ADO)
 Abre um existente [registro](../../../ado/reference/ado-api/record-object-ado.md) do objeto ou cria um novo item representado pelo **registro**, como um arquivo ou diretório.  
@@ -35,7 +34,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Origem*  
+ *Source*  
  Opcional. Um **Variant** que pode representar a URL da entidade a ser representado por esse **registro** objeto, uma **comando**, um aberto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou outra **registro** object, uma cadeia de caracteres que contém uma instrução SQL SELECT ou um nome de tabela.  
   
  *ActiveConnection*  

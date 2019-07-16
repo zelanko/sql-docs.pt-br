@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b238aa8f58c3c657cf94a749060b933b659ae696
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b73773b064fd50d8b1422a9a0aad2fe67aa71e91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966398"
 ---
 # <a name="deleterule-property-example-vc"></a>Exemplo da propriedade DeleteRule (VC++)
 Este exemplo demonstra a [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) propriedade de uma [chave](../../../ado/reference/adox-api/key-object-adox.md) objeto. O código acrescenta uma nova [tabela](../../../ado/reference/adox-api/table-object-adox.md) e, em seguida, define uma nova chave primária, definindo **DeleteRule** para **adRICascade**.  

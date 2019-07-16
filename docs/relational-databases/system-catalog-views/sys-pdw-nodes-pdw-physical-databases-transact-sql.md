@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e01ca29eec9062f6dd7592e4c3b1d4bb2125d999
-ms.sourcegitcommit: cead0faa2fa91d849a41d25e247a0ceba4310d4a
+ms.openlocfilehash: 3dd4551d2dac629912eb4fe799d6a9e58ec1792b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56893436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001135"
 ---
 # <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Contém uma linha para cada banco de dados físico em um nó de computação. Agregar informações de banco de dados físico para obter informações detalhadas sobre bancos de dados. Para combinar informações, Junte-se a `sys.pdw_nodes_pdw_physical_databases` para o `sys.pdw_database_mappings` e `sys.databases` tabelas.  
   
-|Nome da coluna|Tipo de Dados|Descrição|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|A ID de objeto para o banco de dados. Observe que esse valor não é igual um database_id na [sys. Databases &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) exibição.|  
 |physical_name|**sysname**|O nome físico do banco de dados em nós de computação/Shell. Esse valor é o mesmo que um valor na coluna physical_name a [sys.pdw_database_mappings &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) exibição.|  
@@ -47,7 +46,7 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS PD
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="b-using-syspdwnodespdwphysicaldatabases-to-gather-detailed-object-information"></a>b. Usando sys.pdw_nodes_pdw_physical_databases para coletar informações detalhadas de objeto  
+### <a name="b-using-syspdwnodespdwphysicaldatabases-to-gather-detailed-object-information"></a>B. Usando sys.pdw_nodes_pdw_physical_databases para coletar informações detalhadas de objeto  
  A consulta a seguir mostra informações sobre índices e inclui informações úteis sobre o banco de dados os objetos que pertencem aos objetos no banco de dados.  
   
 ```  
@@ -87,7 +86,7 @@ SELECT TOP 1 encryption_state
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [SQL Data Warehouse e Parallel Data Warehouse exibições do catálogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Exibições de Catálogo do SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   

@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 11ae959f-2fb6-4b85-ac5d-1476a82136d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ff1b60e1fec128da9c78ca6e0b909fbd5f0911a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd4c9321b0d8ae841fe3f099870d65b87a1f95b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913146"
 ---
 # <a name="sparse-columns-support-odbc"></a>Suporte a colunas esparsas (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47638925"
  Um novo IRD (descritor de linha de implementação), um campo SQLSMALLINT somente leitura chamado SQL_CA_SS_IS_COLUMN_SET, pode ser usado para determinar se uma coluna é um valor XML **column_set** . SQL_CA_SS_IS_COLUMN_SET usa os valores SQL_TRUE e SQL_FALSE.  
   
 ## <a name="catalog-metadata"></a>Metadados de catálogo  
- Duas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] colunas específicas (SS_IS_SPARSE e SS_IS_COLUMN_SET) foram adicionadas ao conjunto de resultados de [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
+ Duas colunas específicas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SS_IS_SPARSE e SS_IS_COLUMN_SET) foram adicionadas ao conjunto de resultados de [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
   
 ## <a name="odbc-function-support-for-sparse-columns"></a>Suporte da função de ODBC para colunas esparsas  
  As seguintes funções de ODBC foram atualizadas para oferecer suporte a colunas esparsas no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  

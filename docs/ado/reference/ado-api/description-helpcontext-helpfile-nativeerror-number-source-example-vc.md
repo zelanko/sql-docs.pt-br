@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5321fc0f-cd0c-4e2a-a5bc-0008fba86b59
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bf87fb09d27ae47ab8a3b952f30443629356581c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac5a73f49650d1f292cee9e0a17b447011845141
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919035"
 ---
 # <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vc"></a>Descrição, HelpContext, HelpFile, NativeError, número, código-fonte e SQLState exemplo das propriedades (VC + +)
 Neste exemplo dispara um erro, intercepta e exibe a [descrição](../../../ado/reference/ado-api/description-property.md), [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md), [ Número](../../../ado/reference/ado-api/number-property-ado.md), [código-fonte](../../../ado/reference/ado-api/source-property-ado-error.md), e [SQLState](../../../ado/reference/ado-api/sqlstate-property.md) propriedades resultantes [erro](../../../ado/reference/ado-api/error-object.md) objeto.  

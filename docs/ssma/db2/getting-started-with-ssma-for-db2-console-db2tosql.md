@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3b8417d75ab0a08532dd073b3ce7f803b3f7490c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fbb0a90d9cfd628e9251a55de3df8b66a22f1ef7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989665"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Introdução ao SSMA para DB2 Console (DB2ToSQL)
 Esta seção descreve o procedimento para iniciar e começar a trabalhar com o aplicativo de console do DB2. Também é listado, aqui, são as convenções usadas em uma janela de saída do Console do SSMA típica.  

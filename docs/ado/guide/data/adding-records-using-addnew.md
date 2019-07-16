@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0be4014809500c4d83b2019dc16bd083b8ed6452
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36f6bad9a8f0d74a81d02ce64c78d7a91ddc0fa8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701197"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926289"
 ---
 # <a name="adding-records-using-addnew-method"></a>Adicionando registros usando o método AddNew
 Esta é a sintaxe básica do **AddNew** método:

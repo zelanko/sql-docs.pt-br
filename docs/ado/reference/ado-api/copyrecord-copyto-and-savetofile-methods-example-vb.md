@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ea4614191ea8be88f801f92f1ca90eb5110b7dec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b128c935ec0119344a213dbe5289cc8a3cd190fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919363"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>Exemplo de CopyRecord, CopyTo e SaveToFile exemplo dos métodos (VB)
 Este exemplo demonstra como criar cópias de um arquivo usando [Stream](../../../ado/reference/ado-api/stream-object-ado.md) ou [registro](../../../ado/reference/ado-api/record-object-ado.md) objetos. Uma cópia é feita para uma pasta da Web para publicação na Internet. Incluem outras propriedades e métodos mostrados [tipo Stream](../../../ado/reference/ado-api/type-property-ado-stream.md), **abra**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), e [registro aberto](../../../ado/reference/ado-api/open-method-ado-record.md).  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a867dc15-5a0d-457c-8304-ac323bcf9377
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d81fdef23f1d35997aaddce8d6e61e5ce51f76dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 990e86f905ac1ce82a25831c29f55153e78da236
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988138"
 ---
 # <a name="combine-data-mds-add-in-for-excel"></a>Combinar dados (Suplemento do MDS para Excel)
 
@@ -24,7 +23,7 @@ ms.locfileid: "65488897"
 
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], combine dados de duas planilhas quando você desejar comparar dados antes de publicar. Nesse procedimento, você combina dados de duas planilhas em uma. Assim, você pode executar mais comparações e determinar quais dados, se houver, publicar no repositório do MDS.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
   
 -   Você deve ter uma planilha que contenha dados gerenciados no MDS. Para obter mais informações, consulte [Exportar dados para o Excel do Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md).  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85f281aefe79a09806c42e13cd771f976362d053
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127873"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943782"
 ---
 # <a name="select---sql-command"></a>SELECT – comando SQL
 Recupera dados de uma ou mais tabelas.  
@@ -48,7 +47,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 > [!NOTE]  
 >  Um *subconsulta*, referenciado em argumentos a seguir, é um SELECT dentro de uma seleção e devem ser colocados entre parênteses. Você pode ter até duas subconsultas no mesmo nível (não aninhado) na cláusula WHERE. (Consulte a seção de argumentos.) Subconsultas podem conter várias condições de junção.  
   
- [ALL &#124; DISTINCT]   [*Alias*.] *Select_Item* [AS *Column_Name*]    [, [*Alias*.] *Select_Item* [AS *Column_Name*] ...]  
+ [Todos os &#124; DISTINCT]   [*Alias*.] *Select_Item* [AS *Column_Name*] [, [*Alias*.] *Select_Item* [AS *Column_Name*]...]  
  A cláusula SELECT especifica os campos, constantes e expressões que são exibidas nos resultados da consulta.  
   
  Por padrão, todos os exibe todas as linhas nos resultados da consulta.  
@@ -97,14 +96,14 @@ FROM [DatabaseName!]Table [Local_Alias]
  AS *Column_Name*  
  Especifica o título de uma coluna na saída da consulta. Isso é útil quando *Select_Item* é uma expressão ou contém um campo de função e você deseja atribuir um nome significativo de coluna. *Column_Name* pode ser uma expressão, mas não pode conter caracteres (por exemplo, espaços) que não são permitidos em nomes de campo de tabela.  
   
- FROM [*DatabaseName*!]*Table* [*Local_Alias*]   [, [*DatabaseName*!]*Table* [*Local_Alias*] ...]  
+ DE [*DatabaseName*!] *Tabela* [*Local_Alias*] [, [*DatabaseName*!] *Tabela* [*Local_Alias*]...]  
  Lista as tabelas que contêm os dados que a consulta recupera. Se nenhuma tabela estiver aberta, Visual FoxPro exibe a **abrir** caixa de diálogo para que você possa especificar o local do arquivo. Depois que ele tiver sido aberto, a tabela permanece aberta depois que a consulta for concluída.  
   
  *DatabaseName*! Especifica o nome de um banco de dados diferente daquele especificado com a fonte de dados. Você deve incluir o nome do banco de dados que contém a tabela se o banco de dados não for especificado com a fonte de dados. Inclua o delimitador de ponto de exclamação (!) após o nome do banco de dados e antes do nome da tabela.  
   
  *Local_Alias* Especifica um nome temporário para a tabela nomeada na *tabela*. Se você especificar um alias de local, você deve usar o alias do local em vez do nome de tabela em toda a instrução SELECT. O alias de local não afeta o ambiente do Visual FoxPro.  
   
- WHERE *JoinCondition* [AND *JoinCondition* ...]    [AND &#124; OR *FilterCondition* [AND &#124; OR *FilterCondition* ...]]  
+ Em que *JoinCondition* [AND *JoinCondition* ...]    [AND &#124; ou *FilterCondition* [AND &#124; ou *FilterCondition* ...]]  
  Informa ao Visual FoxPro para incluir apenas determinados registros nos resultados da consulta. ONDE é necessário para recuperar dados de várias tabelas.  
   
  *JoinCondition* Especifica os campos que vinculam as tabelas na cláusula FROM. Se você incluir mais de uma tabela em uma consulta, você deve especificar uma condição de junção para cada tabela após a primeira.  
@@ -124,10 +123,10 @@ FROM [DatabaseName!]Table [Local_Alias]
   
 |Operador|Comparação|  
 |--------------|----------------|  
-|=|Equal|  
+|=|Igual|  
 |==|Exatamente iguais|  
-|LIKE|SQL LIKE|  
-|<>, !=, #|Não igual|  
+|LIKE|SQL COMO|  
+|<>, !=, #|Não é igual a|  
 |>|Mais de|  
 |>=|Maior ou igual a|  
 |<|Menor que|  
@@ -177,7 +176,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `orders.postalcode)`  
   
- **Example 7** *FieldName* [NOT] IN *Value_Set*  
+ **Exemplo 7** *FieldName* [NOT] IN *Value_Set*  
   
  `customer.postalcode NOT IN ("98052","98072","98034")`  
   
@@ -213,7 +212,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  Uma cláusula HAVING sem uma cláusula GROUP BY se comporta como uma cláusula WHERE. Você pode usar aliases de locais e funções de campos na cláusula HAVING. Use uma cláusula WHERE para melhorar o desempenho se a cláusula HAVING não contiver funções nenhum campo.  
   
- [UNION [ALL] *SELECTCommand*]  
+ [[ALL] de união *SELECTCommand*]  
  Combina os resultados finais de uma SELECT com os resultados finais do outro "SELECT". Por padrão, a união verifica os resultados combinados e elimina linhas duplicadas. Use parênteses para combinar várias cláusulas UNION.  
   
  Todos os impede que união eliminar linhas duplicadas dos resultados combinados.  
@@ -259,7 +258,7 @@ WHERE customer.cust_id NOT IN ;
     > [!NOTE]  
     >  Os espaços reservados devem ser do mesmo tipo que os campos que eles representam. Se o campo for um tipo de data, o espaço reservado deve ser {/ /}. Se o campo é um campo de caractere, o espaço reservado deve ser a cadeia de caracteres vazia ("").  
   
- ORDER BY *Order_Item* [ASC &#124; DESC] [, *Order_Item* [ASC &#124; DESC] ...]  
+ ORDER BY *Order_Item* [ASC &#124; DESC] [, *Order_Item* [ASC &#124; DESC]...]  
  Classifica os resultados da consulta com base nos dados de uma ou mais colunas. Cada *Order_Item* deve corresponder a uma coluna nos resultados da consulta e pode ser um dos seguintes:  
   
 -   Um campo em uma tabela FROM também é um item select na cláusula SELECT principal (não em uma subconsulta).  
@@ -285,4 +284,4 @@ WHERE customer.cust_id NOT IN ;
  [CRIAR TABELA - SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERIR - SQL](../../odbc/microsoft/insert-sql-command.md)   
  [SET ANSI](../../odbc/microsoft/set-ansi-command.md)   
- [SET EXACT](../../odbc/microsoft/set-exact-command.md)
+ [CONJUNTO EXATO](../../odbc/microsoft/set-exact-command.md)

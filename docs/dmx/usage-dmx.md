@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 459d6a0240ac2588c0924eae7bdae348a71f5946
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4f576243ead99869ae4b12dfc4e79a1a6d57f5cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37990980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939903"
 ---
 # <a name="usage-dmx"></a>Uso (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,8 +39,8 @@ ms.locfileid: "37990980"
  Para obter mais informações sobre a coluna de uso de tipos que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dá suporte, consulte [colunas do modelo de mineração](../analysis-services/data-mining/mining-model-columns.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Extensões de mineração de dados &#40;DMX&#41; referência](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Referência de DMX &#40;extensões DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Extensões de mineração de dados &#40;DMX&#41; elementos de sintaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Extensões de mineração de dados &#40;DMX&#41; referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
