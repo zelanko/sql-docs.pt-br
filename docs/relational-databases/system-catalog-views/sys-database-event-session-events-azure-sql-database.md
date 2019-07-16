@@ -10,14 +10,13 @@ ms.topic: language-reference
 ms.assetid: f4c9eb0a-173c-4c66-8dd8-6f7176b2657f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0e3d1035488696697d2f717e888806fb352b187
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 959c595f4ac394bbaf50c07b27a4679d9a30556e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915129"
 ---
 # <a name="sysdatabaseeventsessionevents-azure-sql-database"></a>sys.database_event_session_events (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -28,13 +27,13 @@ ms.locfileid: "47707204"
 |-|  
 |**Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e versões posteriores.|  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|A identificação da sessão de evento. Não permite valor nulo.|  
 |event_id|**int**|A ID do evento. Essa ID é exclusiva dentro de um objeto de sessão de evento. Não permite valor nulo.|  
-|nome|**sysname**|O nome do evento. Não permite valor nulo.|  
+|name|**sysname**|O nome do evento. Não permite valor nulo.|  
 |pacote|**sysname**|O nome do pacote de eventos que contém um evento. Não permite valor nulo.|  
-|módulo|**sysname**|O nome do módulo que contém o evento. Não permite valor nulo.|  
+|module|**sysname**|O nome do módulo que contém o evento. Não permite valor nulo.|  
 |predicate|**nvarchar(3000)**|A expressão de predicado que é aplicada ao evento. Permite valor nulo.|  
 |predicate_xml|**nvarchar(3000)**|A expressão de predicado XML que é aplicada ao evento. Permite valor nulo.|  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 987a2671-1801-45c4-93e6-29f883c58720
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f18dcbb159975620f2d8eb8e8bf9b7472dcbec65
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c7f5c207f786936a6bb9aebec03fb6e14fe7c1cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672905"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912038"
 ---
 # <a name="getcurrentcertificate-method-securitycertificate-class"></a>Método GetCurrentCertificate (classe SecurityCertificate)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,12 +41,12 @@ object.GetCurrentCertificate(SHA , SQLInstance)
   
 #### <a name="parameters"></a>Parâmetros  
   
-|Parâmetro|Description|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*SHA*|Um valor de objeto da cadeia de caracteres (parâmetro de saída) que especifica a impressão digital SHA do certificado de segurança atual depois que o método é concluído.|  
 |*SQLInstance*|Um valor da cadeia de caracteres que especifica a instância para a qual o certificado é necessário.|  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
  Um valor **uint32** , que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  
   
 ## <a name="remarks"></a>Comentários  

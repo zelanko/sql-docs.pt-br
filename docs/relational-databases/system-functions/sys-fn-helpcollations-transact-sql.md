@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cae28e453e37f6f2d91826aefef265b7991ef51d
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: ee626b9eef8cf2f2e80217b2a3709271a227f293
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906123"
 ---
 # <a name="sysfnhelpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
@@ -48,7 +47,7 @@ fn_helpcollations ()
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|Nome|**sysname**|Nome de ordenação padrão|  
+|Name|**sysname**|Nome de ordenação padrão|  
 |Descrição|**nvarchar(1000)**|Descrição da ordenação.|  
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a ordenações do Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também dá suporte a um número limitado (< 80) de agrupamentos chamados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agrupamentos, que foram desenvolvidos antes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agrupamentos do Windows com suporte. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agrupamentos ainda são suportados para compatibilidade com versões anteriores, mas não devem ser usados para o novo trabalho de desenvolvimento. Para obter mais informações sobre a ordenação do Windows, veja [Nome de ordenação do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Para obter mais informações sobre ordenações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  

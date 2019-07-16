@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: a69b06c4-28f0-4535-8fa1-9f132db4d916
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a46af6af140ab755479aac2f35eaf96ecff3424b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c31bf39c4f133aa6f693614845cb54a5cf2bfc6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899754"
 ---
 # <a name="sysdmosstacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47787244"
   
 -   Supor ou validar a lógica usada pelos componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nos lugares em que o componente pressupõe que uma determinada chamada foi feita.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**stack_address**|**varbinary(8)**|Endereço exclusivo para esta alocação de pilha. Não permite valor nulo.|  
 |**frame_index**|**int**|Cada linha representa uma função chamada que, quando classificada em ordem crescente pelo índice do quadro para um determinado **stack_address**, retorna a pilha de chamadas completa. Não permite valor nulo.|  
@@ -49,7 +48,7 @@ ms.locfileid: "47787244"
 ## <a name="permissions"></a>Permissões
 
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
+Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer a permissão `VIEW DATABASE STATE` no banco de dados.   
 
 
 ## <a name="see-also"></a>Consulte também  

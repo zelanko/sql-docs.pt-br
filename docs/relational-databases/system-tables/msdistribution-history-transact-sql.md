@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 305223fca45bb1916598f02c16cc4e38981e861d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1053181486dba8c8119f9160d9c08cb8d2bbe56b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62903663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907388"
 ---
 # <a name="msdistributionhistory-transact-sql"></a>MSdistribution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +34,11 @@ ms.locfileid: "62903663"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|A ID do Distribution Agent.|  
-|**runstatus**|**int**|O status de execução:<br /><br /> **1** = Start.<br /><br /> **2** = êxito.<br /><br /> **3** = em andamento.<br /><br /> **4** = ocioso.<br /><br /> **5** = repetição.<br /><br /> **6** = Fail.|  
+|**runstatus**|**int**|O status de execução:<br /><br /> **1** = início.<br /><br /> **2** = êxito.<br /><br /> **3** = em andamento.<br /><br /> **4** = ocioso.<br /><br /> **5** = repetição.<br /><br /> **6** = falha.|  
 |**start_time**|**datetime**|A hora inicial de execução do trabalho.|  
 |**time**|**datetime**|A hora de registro da mensagem.|  
 |**duration**|**int**|A duração, em segundos, da sessão de mensagem.|  
-|**comments**|**nvarchar(4000)**|O texto da mensagem.|  
+|**Comentários**|**nvarchar(4000)**|O texto da mensagem.|  
 |**xact_seqno**|**varbinary(16)**|O último número de sequência da transação processado.|  
 |**current_delivery_rate**|**float**|O número médio de comandos fornecidos por segundo desde a última entrada de histórico.|  
 |**current_delivery_latency**|**int**|A latência entre o comando que insere o banco de dados de distribuição e o aplicado ao Assinante desde a última entrada de histórico Em milissegundos.|  

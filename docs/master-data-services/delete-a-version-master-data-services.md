@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 29a4c0bb160a291dc4fd5d015f676f1d3c84b2f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0886701a5e3554702c077c2a165029af71a545e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906426"
 ---
 # <a name="delete-a-version-master-data-services"></a>Excluir uma versão (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65478607"
 > [!WARNING]  
 >  Se um modelo tiver somente uma versão e você a excluir, ele se tornará inutilizável.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para ver a exibição mdm.viw_SYSTEM_SCHEMA_VERSION e executar o procedimento armazenado mds.udpVersionDelete no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Para obter mais informações, consulte [Segurança do objeto de banco de dados &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md).  

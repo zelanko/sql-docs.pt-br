@@ -1,5 +1,5 @@
 ---
-title: Project Settings (GUI)  (MySQLToSQL) | Microsoft Docs
+title: Configurações (GUI) (MySQLToSQL) do projeto | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd92aa77-21e3-41ac-8f3e-08608a734b7f
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 15107082c9556b42e53a0746c8400e83f22abf3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10d45c885570d048aea33480990161fb0413ca4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63261812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908779"
 ---
 # <a name="project-settings-gui--mysqltosql"></a>Configurações de projeto (GUI) (MySQLToSQL)
 As configurações de projeto GUI permitem que você configure como os dados aparecem na **dados** guia e se é preciso incluir relatórios de dados com relatórios de avaliação.  
@@ -40,5 +39,5 @@ Configura o número de linhas de dados exibidos na **dados** guia da tabela de d
 **Mostrar relatório após a conversão**  
 Para exibir um relatório depois de converter esquemas, selecione True. O relatório de conversão resultante contém o mesmo layout e informações que o relatório de avaliação.  
   
-**Default**: Falso  
+**Default**: False  
   

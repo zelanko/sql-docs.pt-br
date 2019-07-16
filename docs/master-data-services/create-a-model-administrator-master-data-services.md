@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 44bede292cb49ddcfd791b3e7d65605e1aa2399c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a98aa3752259fe93fff7086c7918a31532a7d7e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906690"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Criar um administrador de modelo (Master Data Services)
 
@@ -29,7 +28,7 @@ ms.locfileid: "65487489"
 > [!TIP]  
 >  Para simplificar a administração, crie um grupo local ou do Windows e configure-o como um administrador de modelo. Isso lhe permitirá adicionar e remover usuários do grupo sem acessar o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Permissões de Usuário e Grupo** .  

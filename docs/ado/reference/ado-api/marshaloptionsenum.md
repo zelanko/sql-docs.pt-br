@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e1a89759d6943dc6ccae2a6bfbe65bd96927f87c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f356097f1262630d47b4b4b4048c61d42816a4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62863938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918230"
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 Especifica quais registros devem ser retornados para o servidor.  
@@ -32,7 +31,7 @@ Especifica quais registros devem ser retornados para o servidor.
 |**adMarshalModifiedOnly**|1|Retorna somente modificada linhas para o servidor.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Package: **com.ms.wfc.data**  
+ Pacote: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

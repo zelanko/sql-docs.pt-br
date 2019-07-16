@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e9ed2152873f40fd2f2ded34a11a2cfded2fbe2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 379dae51b913fc02a16a562037776620b1e0433c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904471"
 ---
 # <a name="sysresourcegovernorexternalresourcepools-transact-sql"></a>resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,10 +31,10 @@ ms.locfileid: "47823534"
 
 Retorna a configuração de pool de recursos externos armazenados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cada linha da exibição determina a configuração de um pool.
   
-|Nome da coluna|Tipo de dados|Description|
+|Nome da coluna|Tipo de dados|Descrição|
 |-----------------|---------------|-----------------|
-|pool_id|**int**|ID exclusivo do pool de recursos. Não permite valor nulo.<br /><br /> **Observação:** podem ser renomeados no futuro.|
-|nome|**sysname**|Nome do pool de recursos. Não permite valor nulo.|
+|pool_id|**int**|ID exclusivo do pool de recursos. Não permite valor nulo.<br /><br /> **Observação:** Podem ser renomeados no futuro.|
+|name|**sysname**|Nome do pool de recursos. Não permite valor nulo.|
 |max_cpu_percent|**int**|Largura de banda de CPU máxima permitida para todas as solicitações no pool de recursos quando houver contenção de CPU. Não permite valor nulo.|
 |max_memory_percent|**int**|Porcentagem de memória total de servidor que pode ser usada por solicitações nesse pool de recursos. Não permite valor nulo. O efetivo máximo depende dos mínimos de pools. Por exemplo, max_memory_percent pode ser definido como 100, mas o máximo efetivo é inferior.|
 |max_processes|**int**|Número máximo de processos externos simultâneos. O valor padrão, 0, não especifica nenhum limite. Não permite valor nulo.|

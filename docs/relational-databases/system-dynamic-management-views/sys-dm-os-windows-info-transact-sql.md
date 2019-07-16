@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f258d7e49f86ed8015d8e51f2373633b7d7f10c4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d25713ba8fb298ce465910eae786befb710961d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899587"
 ---
 # <a name="sysdmoswindowsinfo-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "51663129"
   
   Aplica-se somente ao SQL Server em execução no Windows. Para ver informações semelhantes para o SQL Server em execução em um host não Windows, como o Linux, use [DM os_host_info &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**windows_release**|**nvarchar(256)**|Para Windows, retorna o número de versão. Para obter uma lista de valores e descrições, consulte [versão do sistema operacional (Windows)](/windows/desktop/SysInfo/operating-system-version). Não pode ser NULL.|  
 |**windows_service_pack_level**|**nvarchar(256)**| Para Windows, retorna o número do service pack. Não pode ser NULL. |  
@@ -44,7 +43,7 @@ ms.locfileid: "51663129"
 ## <a name="permissions"></a>Permissões  
 Por padrão, a permissão SELECT no sys.dm_os_windows_info é concedida à função pública. Se revogado, requer a permissão VIEW SERVER STATE no servidor.  
 
-## <a name="limitations-and-restrictions"></a>Limitações e restrições
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições
 Para ver informações para o SQL em execução em um host não Windows, como o Linux, use [DM os_host_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
   
 ## <a name="examples"></a>Exemplos  
