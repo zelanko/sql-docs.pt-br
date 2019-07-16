@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d89825bcfc9f885d4339874c870cbc5a29938062
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e37cef235949473beb52e0836553ca16316bc744
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042735"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083120"
 ---
 # <a name="connecting-with-sqlconnect"></a>Conectar-se com o SQLConnect
 **SQLConnect** é a função de conexão mais simples. Ele requer um nome de fonte de dados e aceita um ID de usuário opcional e uma senha. Ele funciona bem para aplicativos que codificar um fonte de dados nome e não requerem uma ID de usuário ou senha. Ele também funciona bem para aplicativos que desejam controlam seu próprios "aparência" ou que não tem nenhuma interface do usuário. Esses aplicativos podem criar uma lista de fontes de dados usando **SQLDataSources**avisar o usuário para a fonte de dados, ID de usuário e senha e, em seguida, chame **SQLConnect**.  

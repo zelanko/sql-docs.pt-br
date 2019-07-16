@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f7c22eea63e00126eb674532736071ed39aa9a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c12a94abcc8f31071bb13639c6df1e9c1e2e264a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023258"
 ---
 # <a name="programming-considerations"></a>Considerações sobre programação
 Esta seção aborda brevemente alguns tópicos relacionados ao escrever drivers e aplicativos de ODBC.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7d632b040a5124d73470ce825af91e254866a0ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16f987415e59d145c4ff423b1c221bffe54bd13d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989563"
 ---
 # <a name="global-settings-logging-db2tosql"></a>Configurações globais (registro em log) (DB2ToSQL)
 Use o **configurações globais** caixa de diálogo para especificar as configurações de registro em log para o SSMA. Normalmente, você alteraria essas configurações somente ao trabalhar com o suporte ao produto.  
@@ -34,10 +33,10 @@ As seguintes opções estão disponíveis sob **nível de mensagens**:
 |**Migrator de dados**|Migra dados do banco de dados de origem em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Formatador**|Subcomponente do conversor que gera scripts para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquema.|  
 |**Interface gráfica do usuário**|Mensagens que aparecem quando você usa a ferramenta SSMA.|  
-|**Linker**|Resolve identificadores SQL e fornece informações para outros componentes.|  
-|**Outro**|Todas as mensagens que não estão em nenhuma outra categoria.|  
-|**Parser**|Analisa o esquema de origem.|  
-|**Synchronizer**|Objetos de banco de dados da fonte de cargas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Vinculador**|Resolve identificadores SQL e fornece informações para outros componentes.|  
+|**Outros**|Todas as mensagens que não estão em nenhuma outra categoria.|  
+|**Analisador**|Analisa o esquema de origem.|  
+|**Sincronizador**|Objetos de banco de dados da fonte de cargas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**TreeConverter**|Converte objetos nos metadados do código-fonte em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadados.|  
 |**Testador**|Mensagens que aparecem quando você usa o testador SSMA.|  
   

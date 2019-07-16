@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c7ec642a516d4ad2ac5a0f8d894351fc6670c117
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038985"
 ---
 # <a name="context-functions---position-xquery"></a>Funções de Contexto – position (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ fn:position() as xs:integer
  Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo a [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Usando a função position() XQuery para recuperar os primeiros dois recursos de produto  
- A consulta a seguir recupera os primeiros dois recursos, os primeiros dois elementos filho do elemento <`Features`>, da descrição do catálogo de modelo de produtos. Se houver mais recursos, ele adicionará um elemento <`there-is-more/`> ao resultado.  
+ A consulta a seguir recupera os primeiros dois recursos, os primeiros dois elementos filho da <`Features`> elemento, na descrição de catálogo de modelo de produto. Se houver mais recursos, ele adiciona um <`there-is-more/`> elemento para o resultado.  
   
 ```  
 SELECT CatalogDescription.query('  

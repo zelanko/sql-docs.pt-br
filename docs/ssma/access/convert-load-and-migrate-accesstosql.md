@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: fdfdfc65abef5c7d0793c4a00cdb78a033e67998
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 672aff153c2f31416550bc850af959faca253ff1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138749"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006639"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>Converter, carregar e migrar (AccessToSQL)
 O **converter, carregar e migrar** caixa de diálogo relata o status de migração quando você usa o botão Converter, carregar e migrar ou o Assistente de migração.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce80e7b9c6e8cfcf15c0810986c1a34e8d881ade
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cca223510ebb6838048e3babbf8fdcada42f87a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62742252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039743"
 ---
 # <a name="sqlsetdescfield-function"></a>Função SQLSetDescField
 
@@ -140,7 +139,7 @@ SQLRETURN SQLSetDescField(
   
  A inicialização de campos de cabeçalho é descrita na tabela a seguir.  
   
-|Nome do campo de cabeçalho|Tipo|R/W|Padrão|  
+|Nome do campo de cabeçalho|type|R/W|Padrão|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|DESCARTAR: R APD: R IRD: R IPD: R|DESCARTAR: SQL_DESC_ALLOC_AUTO para implícita ou SQL_DESC_ALLOC_USER para explícita<br /><br /> APD: SQL_DESC_ALLOC_AUTO para implícita ou SQL_DESC_ALLOC_USER para explícita<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|DESCARTAR: R/W APD: R/W IRD: Não utilizado IPD: Não usado|DESCARTAR: APD [1]: [1] IRD: Não utilizado IPD: Não usado|  
@@ -154,14 +153,14 @@ SQLRETURN SQLSetDescField(
   
  A inicialização de campos de registro é conforme mostrado na tabela a seguir.  
   
-|Nome do campo de registro|Tipo|R/W|Padrão|  
+|Nome do campo de registro|type|R/W|Padrão|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: Não usado|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: Não usado|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: Não usado|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: Não usado|  
 |SQL_DESC_BASE_TABLE_NAME|SQLCHAR *|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: Não usado|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: Não usado|  
 |SQL_DESC_CASE_SENSITIVE|SQLINTEGER|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: R|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: D[1]|  
 |SQL_DESC_CATALOG_NAME|SQLCHAR *|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: Não usado|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: Não usado|  
-|SQL_DESC_CONCISE_TYPE|SQLSMALLINT|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: SQL_C_ DEFAULT APD: SQL_C_ DEFAULT IRD: D IPD: ND|  
+|SQL_DESC_CONCISE_TYPE|SQLSMALLINT|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: SQL_C_ APD DO PADRÃO: SQL_C_ DEFAULT IRD: D IPD: ND|  
 |SQL_DESC_DATA_PTR|SQLPOINTER|DESCARTAR: R/W APD: R/W IRD: Não utilizado IPD: Não usado|DESCARTAR: Ptr nulo APD: Ptr nulo IRD: Não utilizado IPD: Não utilizado de [2]|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|SQLSMALLINT|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
 |SQL_DESC_DATETIME_INTERVAL_PRECISION|SQLINTEGER|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
@@ -368,22 +367,22 @@ SQLRETURN SQLSetDescField(
 |--------------------|------------------------------|  
 |SQL_TYPE_DATE/SQL_C_TYPE_DATE|SQL_CODE_DATE|  
 |SQL_TYPE_TIME/SQL_C_TYPE_TIME|SQL_CODE_TIME|  
-|SQL_TYPE_TIMESTAMP/ SQL_C_TYPE_TIMESTAMP|SQL_CODE_TIMESTAMP|  
+|SQL_TYPE_TIMESTAMP / SQL_C_TYPE_TIMESTAMP|SQL_CODE_TIMESTAMP|  
   
  Este campo pode ser definido para os tipos de dados de intervalo listados na tabela a seguir.  
   
 |Tipo de intervalo|DATETIME_INTERVAL_CODE|  
 |-------------------|------------------------------|  
-|SQL_INTERVAL_DAY/ SQL_C_INTERVAL_DAY|SQL_CODE_DAY|  
+|SQL_INTERVAL_DAY / SQL_C_INTERVAL_DAY|SQL_CODE_DAY|  
 |SQL_INTERVAL_DAY_TO_HOUR/ SQL_C_INTERVAL_DAY_TO_HOUR|SQL_CODE_DAY_TO_HOUR|  
 |SQL_INTERVAL_DAY_TO_MINUTE/ SQL_C_INTERVAL_DAY_TO_MINUTE|SQL_CODE_DAY_TO_MINUTE|  
 |SQL_INTERVAL_DAY_TO_SECOND/ SQL_C_INTERVAL_DAY_TO_SECOND|SQL_CODE_DAY_TO_SECOND|  
 |SQL_INTERVAL_HOUR/ SQL_C_INTERVAL_HOUR|SQL_CODE_HOUR|  
 |SQL_INTERVAL_HOUR_TO_MINUTE/ SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
 |SQL_INTERVAL_HOUR_TO_SECOND/ SQL_C_INTERVAL_HOUR_TO_SECOND|SQL_CODE_HOUR_TO_SECOND|  
-|SQL_INTERVAL_MINUTE/ SQL_C_INTERVAL_MINUTE|SQL_CODE_MINUTE|  
+|SQL_INTERVAL_MINUTE / SQL_C_INTERVAL_MINUTE|SQL_CODE_MINUTE|  
 |SQL_INTERVAL_MINUTE_TO_SECOND/ SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_CODE_MINUTE_TO_SECOND|  
-|SQL_INTERVAL_MONTH/ SQL_C_INTERVAL_MONTH|SQL_CODE_MONTH|  
+|SQL_INTERVAL_MONTH / SQL_C_INTERVAL_MONTH|SQL_CODE_MONTH|  
 |SQL_INTERVAL_SECOND/ SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
 |SQL_INTERVAL_YEAR/ SQL_C_INTERVAL_YEAR|SQL_CODE_YEAR|  
 |SQL_INTERVAL_YEAR_TO_MONTH/ SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_CODE_YEAR_TO_MONTH|  

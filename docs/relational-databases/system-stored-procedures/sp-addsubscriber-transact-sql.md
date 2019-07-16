@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd59aae098a91a47e1137bd55cd97cf1066b02bf
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: cb21731dd02fee4ec3779affed56f85e5dbc0e9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079236"
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |-----------|-----------------|  
 |**0** (padrão)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinante|  
 |**1**|Servidor de fontes de dados ODBC|  
-|**2**|Banco de dados [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet |  
+|**2**|Banco de dados [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet|  
 |**3**|Provedor OLE DB|  
   
 `[ @login = ] 'login'` É a ID de logon para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. *login* é **sysname**, com um padrão de NULL.  
@@ -77,7 +76,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts. A propriedade agora é especificada em uma base por assinatura ao executar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Quando um valor é especificado, ele é usado como padrão na criação de assinaturas neste Assinante e uma mensagem de aviso é retornada.  
   
-`[ @password = ] 'password'` É a senha para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. *senha* está **nvarchar(524)**, com um padrão NULL.  
+`[ @password = ] 'password'` É a senha para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. *senha* está **nvarchar(524)** , com um padrão NULL.  
   
 > [!IMPORTANT]  
 >  Não use uma senha em branco. Use uma senha forte.  
@@ -116,7 +115,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts. A propriedade agora é especificada em uma base por assinatura ao executar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Quando um valor é especificado, ele é usado como padrão na criação de assinaturas neste Assinante e uma mensagem de aviso é retornada.  
   
- [**@frequency_interval=** ] *frequency_interval*  
+ [ **@frequency_interval=** ] *frequency_interval*  
  O valor aplicado à frequência definida *frequency_type*. *frequency_interval* está **int**, com um padrão de 1.  
   
 > [!NOTE]  
@@ -177,7 +176,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts. A propriedade agora é especificada em uma base por assinatura ao executar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Quando um valor é especificado, ele é usado como padrão na criação de assinaturas neste Assinante e uma mensagem de aviso é retornada.  
   
-`[ @description = ] 'description'` É uma descrição de texto do assinante. *Descrição* está **nvarchar (255)**, com um padrão NULL.  
+`[ @description = ] 'description'` É uma descrição de texto do assinante. *Descrição* está **nvarchar (255)** , com um padrão NULL.  
   
 `[ @security_mode = ] security_mode` É o modo de segurança implementado. *security_mode* está **int**, com um padrão de 1. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. **1** Especifica a autenticação do Windows.  
   

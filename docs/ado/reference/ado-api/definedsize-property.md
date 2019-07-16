@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b80838ce47bdb74878efb2918fd79b057abce216
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bfb0db701801f1853009594b9d6d24aeb41c629
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933219"
 ---
 # <a name="definedsize-property"></a>Propriedade DefinedSize
 Indica a capacidade de dados de um [campo](../../../ado/reference/ado-api/field-object.md) objeto.  

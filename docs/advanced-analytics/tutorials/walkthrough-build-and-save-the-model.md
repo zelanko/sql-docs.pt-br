@@ -7,20 +7,19 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 039e5a8970b2161bfe54b1836f3bd12b48477e1a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4ad8446f52f5bf85794e8444d8d1b53f53bc54dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513053"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961817"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Criar um modelo do R e salvar para o SQL Server (passo a passo)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Nesta etapa, saiba como criar um modelo de aprendizado de máquina e salvar o modelo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao salvar um modelo, você pode chamá-lo diretamente do [!INCLUDE[tsql](../../includes/tsql-md.md)] de código, usando o procedimento armazenado do sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ou o [função PREDICT (T-SQL)](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Essa etapa pressupõe que uma sessão de R em andamento, com base nas etapas anteriores neste passo a passo. Ele usa as conexão cadeias de caracteres e dados de origem objetos criados nessas etapas. As ferramentas e os pacotes a seguir são usados para executar o script.
 
@@ -204,7 +203,7 @@ Você pode verificar o contexto de computação é local, executando `rxGetCompu
 
 Depois que você tiver criado um modelo e determinou que ele tem um bom desempenho, você provavelmente desejará implantá-lo em um site em que os usuários ou as pessoas em sua organização podem fazer usar do modelo, ou talvez treinar novamente e recalibrar o modelo com regularidade. Esse processo às vezes é chamado *operacionalização* um modelo. No SQL Server, a operacionalização é obtida, inserindo código R em um procedimento armazenado. Como o código reside no procedimento, ele pode ser chamado de qualquer aplicativo que pode se conectar ao SQL Server.
 
-Antes de chamar o modelo de um aplicativo externo, você deve salvar o modelo para o banco de dados usado para a produção. Modelos treinados são armazenados em formato binário, em uma única coluna do tipo **varbinary (max)**.
+Antes de chamar o modelo de um aplicativo externo, você deve salvar o modelo para o banco de dados usado para a produção. Modelos treinados são armazenados em formato binário, em uma única coluna do tipo **varbinary (max)** .
 
 Um fluxo de trabalho de implantação típica consiste as seguintes etapas:
 

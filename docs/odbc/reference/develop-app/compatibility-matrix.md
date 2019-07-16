@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e948b1e2fa5bb0877597e3fc3429f306afe991f2
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 273633532b9b9247ea7aa12fe90bfcc3c6f6bb81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083271"
 ---
 # <a name="compatibility-matrix"></a>Matriz de compatibilidade
 A tabela a seguir descreve a compatibilidade dos tipos de aplicativos e drivers definidos anteriormente nesta seção.  

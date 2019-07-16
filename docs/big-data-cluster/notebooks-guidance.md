@@ -5,17 +5,16 @@ description: Este artigo explica como executar o Jupyter Notebooks no estúdio d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea907e507c9b37b8a6b911b7e1705ce31f231796
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 166964f97f5201d906ea2d1f6262b7a221eb2cba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958295"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Como usar blocos de anotações na visualização do SQL Server de 2019
 
@@ -52,7 +51,7 @@ O Kernel de SQL também pode ser usado para se conectar a instâncias de servido
 
 ![Conexão do PostgreSQL](media/notebooks-guidance/sql-kernel-dropdown.png)
 
-### <a name="sql-kernel"></a>SQL Kernel
+### <a name="sql-kernel"></a>Núcleo do SQL
 
 As células de código dentro do bloco de anotações, semelhante ao nosso editor de consultas, damos suporte a SQL moderna experiência que facilita as tarefas diárias com recursos internos, como um editor SQL Avançado, IntelliSense e trechos de código internos de codificação. Trechos de código que você possa gerar a sintaxe apropriada do SQL para criar bancos de dados, tabelas, exibições, procedimentos armazenados, etc. e para atualizar os objetos de banco de dados existente. Use trechos de código para rapidamente criar cópias de seu banco de dados para fins de teste ou desenvolvimento e para gerar e executar scripts.
 
@@ -60,7 +59,7 @@ Clique em **executar** para executar cada célula.
 
 Kernel de SQL para se conectar à instância do SQL Server
 
-![SQL Kernel](media/notebooks-guidance/intellisense-code-cell.png)
+![Núcleo do SQL](media/notebooks-guidance/intellisense-code-cell.png)
 
 Resultados da consulta
 
@@ -99,10 +98,10 @@ Depois que a instalação for bem-sucedida, você encontrará uma notificação 
 
 |Kernel|Descrição
 |:-----|:-----
-| SQL Kernel | Escreva o código de SQL direcionado a seu banco de dados relacional.
+| Núcleo do SQL | Escreva o código de SQL direcionado a seu banco de dados relacional.
 |PySpark3 e o Kernel PySpark| Escreva o código do Python usando computação Spark do cluster.
-|Spark Kernel|Escreva código Scala e o R usando computação Spark do cluster.
-|Python Kernel|Escreva o código do Python para o desenvolvimento local.
+|Kernel Spark|Escreva código Scala e o R usando computação Spark do cluster.
+|Kernel Python|Escreva o código do Python para o desenvolvimento local.
 
 `Attach to` fornece o contexto para o Kernel anexar. Se você estiver usando o Kernel de SQL, você pode `Attach to` qualquer uma de suas instâncias do SQL Server.
 

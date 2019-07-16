@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b1d1a55d3b417ff7a0a673bda8d289a72d7c1cb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 578c85331a65c15cb25b5d9b75b7156ab509e910
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312859"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036413"
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Dados Long e SQLSetPos e SQLBulkOperations
 Como é o caso com parâmetros em instruções SQL, os dados longos podem ser enviados quando atualizar as linhas com **SQLBulkOperations** ou **SQLSetPos** ou ao inserir linhas com **SQLBulkOperations**. Os dados são enviados em partes, com várias chamadas para **SQLPutData**. Colunas para o qual os dados são enviados em tempo de execução são conhecidas como *colunas de dados em execução*.  

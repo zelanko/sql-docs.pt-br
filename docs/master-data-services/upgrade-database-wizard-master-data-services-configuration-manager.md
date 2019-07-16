@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4e587d29d8e711fa3e61a7e80fa447566b2e1411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28330ba902b32f0b9622a3b8df0ca316848e1752
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102575"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Atualizar Assistente para Banco de Dados (Gerenciador de Configuração do Master Data Services)
 
@@ -24,7 +23,7 @@ ms.locfileid: "65485047"
 
   Use o **Assistente para Atualizar Banco de Dados** para atualizar um banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="action"></a>Ação  
+## <a name="action"></a>Action  
  Essa é a página de introdução do assistente. Clique em **Avançar** para iniciar o processo de atualização do banco de dados.  
   
 ## <a name="upgrade-review"></a>Análise da atualização  

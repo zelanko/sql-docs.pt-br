@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bf2d1108-ba3c-4830-9c49-78e833ff37b1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c60d01af54dc19f0b89bbe516c096b89ac55efc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e80c7ae85b32bde70f863181b808256f91302917
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938598"
 ---
 # <a name="cubedefs-collection-properties-methods-and-events"></a>Propriedades, métodos e eventos da coleção CubeDefs
 ## <a name="properties"></a>Propriedades  
@@ -30,7 +29,7 @@ ms.locfileid: "66709334"
  [Método Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Events  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="see-also"></a>Consulte também  
  [Coleção CubeDefs (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)

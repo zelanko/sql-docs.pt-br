@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: jroth
-ms.openlocfilehash: f424e8e799c7550ff426a7b4c2a2022fe4b0c4bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8366b04be48df3e47e9c6d531738ebebfee45da0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058820"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Atualizar o local SQL Server para SQL Server ou SQL Server em VMs do Azure usando o Assistente de migração de dados
 

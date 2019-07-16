@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 151c94a8-66d3-4c46-a5ff-a22df456940a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71c2f79ae39ff8617d491d015db7eecb23647d30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85483de3a30699829a22be4f0fc57d2806e127ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041097"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>Convertendo esquemas XDR anotados a esquemas XSD equivalentes (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "62678035"
 cvtschema XDRFileName, [-y], [-w] [-?]  
 ```  
   
- Onde:  
+ Sendo que:  
   
  XDRFileName  
  É o nome do arquivo XDR a ser convertido em XSD. A ferramenta lê o arquivo XDR de entrada e cria um arquivo de saída XSD no diretório funcional atual. Caso o arquivo de entrada tenha uma extensão .xdr ou .xml, o arquivo XSD de saída é criado com o mesmo nome, mas com uma extensão .xsd. Se a extensão de nome de arquivo de entrada é diferente de. XML ou. XDR (ou se a extensão esteja ausente), o arquivo de saída é criado com o mesmo nome e a extensão. xsd é acrescentada ao nome do arquivo de entrada. Por exemplo, caso o nome de arquivo XDR de entrada seja SampleFile.abc, o XSD resultante é salvo como SampleFile.abc.xsd.  

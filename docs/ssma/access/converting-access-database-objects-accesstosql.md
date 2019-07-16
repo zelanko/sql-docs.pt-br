@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63139012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006623"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Convertendo objetos de banco de dados do Access (AccessToSQL)
 Depois de ter adicionado bancos de dados do Access e conectado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure, o SSMA exibe metadados para o acesso e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objetos de banco de dados do SQL Azure. Você pode agora selecionar objetos de banco de dados do Access e, em seguida, converter os esquemas em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou esquemas do SQL Azure.  
@@ -64,7 +63,7 @@ A tabela a seguir mostra quais objetos de acesso são convertidos e resultante [
 |relatório|não convertido|  
 |Formulário|não convertido|  
 |macro|não convertido|  
-|módulo|não convertido|  
+|module|não convertido|  
 |Valor padrão|Valor padrão|  
 |permitir que a propriedade de coluna zero comprimento|restrição de verificação|  
 |regra de validação de coluna|restrição de verificação|  
@@ -88,7 +87,7 @@ Para converter objetos de banco de dados do Access, você primeiro deve selecion
   
     -   Para converter ou omitir tabelas individuais, expanda o banco de dados, expanda **tabelas**e, em seguida, selecione ou desmarque a caixa de seleção ao lado da tabela.  
   
-3.  Siga um destes procedimentos:  
+3.  Realize um dos seguintes procedimentos:  
   
     -   Para converter esquemas, clique com botão direito **bancos de dados** e selecione **converter esquema**.  
   

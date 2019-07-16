@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1068811d987745b5c4404079230a1a625deb9316
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6081551a19b832e4fb518f80dcd85c04ec54c8f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028824"
 ---
 # <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>Novos recursos de GUI no SSMA para Sybase (SybaseToSQL)
 Este capítulo descreve os novos recursos da Interface de usuário do SSMA.  
@@ -48,7 +47,7 @@ Para abrir a caixa de diálogo Gerenciar Layouts, no menu Exibir, aponte para La
 ## <a name="bookmarks"></a>Indicadores  
 Esse recurso permite que você defina um ou mais indicadores na fonte ou código de destino, o rápido encontrado um indicador usando atalhos, gerenciar indicadores com uma caixa de diálogo amigável.  
   
-### <a name="toggle-bookmark"></a>Toggle Bookmark  
+### <a name="toggle-bookmark"></a>Ativar/Desativar indicador  
 Você pode definir/remover o indicador das seguintes maneiras:  
   
 -   Use o botão Ativar/Desativar indicador na parte superior da janela SQL de origem ou destino  

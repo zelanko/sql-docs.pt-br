@@ -1,5 +1,5 @@
 ---
-title: ': (Range) (MDX) | Microsoft Docs'
+title: ': (Intervalo) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 882082d503bf88f21566ac79ea4393a24ee551e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6afc3a73b958062bd6472153b2452bc0e3fa6cfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020623"
 ---
 # <a name="-range-mdx"></a>: (Intervalo) (MDX)
 

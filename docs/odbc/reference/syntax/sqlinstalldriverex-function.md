@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5664a4cb745a250aa8db6d98b92a275bb91c7a8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 673e3e53468780ef261a22b00a2ec1bb9df0e184
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030598"
 ---
 # <a name="sqlinstalldriverex-function"></a>Função SQLInstallDriverEx
 **Conformidade com**  
@@ -102,7 +101,7 @@ BOOL SQLInstallDriverEx(
   
  _driver-desc_ **\\** 0Driver **=** _driver-DLL-filename_ **\\** 0[Setup **=** _setup-DLL-filename_<b>\\</b>0]  
   
- [_driver-attr-keyword1_ **=** _value1_<b>\\</b>0][_driver-attr-keyword2_ **=** _value2_<b>\\</b>0]...<b>\\</b>0  
+ [_attr-driver-keyword1_ **=** _value1_<b>\\</b>0] [_driver-attr-keyword2_  **=** _value2_<b>\\</b>0]... <b> \\ </b>0  
   
  onde \0 é um byte nulo e *attr-driver-keywordn* é qualquer palavra-chave do atributo de driver. As palavras-chave deverá aparecer na ordem especificada. Por exemplo, suponha que um driver para arquivos de texto formatado tem DLLs de instalação e de driver separado e pode usar os arquivos com as extensões. txt e. csv. O *lpszDriver* argumento para esse driver pode ser da seguinte maneira:  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59799119920170db3dcab21619c01b52e7dda8db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e060411864c0f354ee9107216b86a47f738bf43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028058"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Atributos de proteção de host e programação da Integração CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47800764"
   
 -   **ExternalProcessMgmt**, que indica se a API expõe uma maneira de controlar o processo de host.  
   
- Dados esses atributos, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especifica uma lista de HPAs desaprovadas no ambiente hospedado por meio da CAS (segurança de acesso do código). Os requisitos de CAS são especificados por um dos três [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de permissões: **seguro**, **EXTERNAL_ACCESS**, ou **UNSAFE**. Um desses três níveis de segurança é especificado quando o assembly é registrado no servidor, usando o **CREATE ASSEMBLY** instrução. Código em execução dentro de **seguro** ou **EXTERNAL_ACCESS** conjuntos de permissões devem evitar determinados tipos ou membros que têm o **System.Security.Permissions.HostProtectionAttribute** atributo aplicado. Para obter mais informações, consulte [criando um Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) e [restrições do modelo de programação de integração de CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ Dados esses atributos, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especifica uma lista de HPAs desaprovadas no ambiente hospedado por meio da CAS (segurança de acesso do código). Os requisitos de CAS são especificados por um dos três [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de permissões: **SEGURO**, **EXTERNAL_ACCESS**, ou **UNSAFE**. Um desses três níveis de segurança é especificado quando o assembly é registrado no servidor, usando o **CREATE ASSEMBLY** instrução. Código em execução dentro de **seguro** ou **EXTERNAL_ACCESS** conjuntos de permissões devem evitar determinados tipos ou membros que têm o **System.Security.Permissions.HostProtectionAttribute** atributo aplicado. Para obter mais informações, consulte [criando um Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) e [restrições do modelo de programação de integração de CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
  O **HostProtectionAttribute** não é uma permissão de segurança tanto quanto constrói uma maneira de aumentar a confiabilidade, ela identifica o código específico, tipos ou métodos, que o host pode desautorizar. O uso do **HostProtectionAttribute** impõe um modelo de programação que ajuda a proteger a estabilidade do host.  
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8df4339ae30b9058e5a5864c37807c6b02e4fdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3424c58d25be69d2ddc42a3088aa457ebddf1d4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947609"
 ---
 # <a name="interval-data-type-precision"></a>Precisão do tipo de dados de intervalo
 Precisão para um tipo de dados de intervalo inclui o intervalo à esquerda de precisão, a precisão de intervalo e a precisão de segundos.  

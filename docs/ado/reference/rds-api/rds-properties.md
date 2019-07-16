@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fc366321c9c9c3a6e19bb6a6e520007247bca5a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f6ada7e9c6c793ebc412abc00bf4c0957072740
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694667"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963611"
 ---
 # <a name="rds-properties"></a>Propriedades RDS
 > [!IMPORTANT]
@@ -37,7 +36,7 @@ ms.locfileid: "66694667"
 |[InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)|Indica o número de milissegundos de espera antes que uma solicitação expira.|  
 |[ReadyState (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)|Indica o progresso de uma **DataControl** do objeto conforme ele busca dados em seus **Recordset** objeto.|  
 |[Conjunto de registros e SourceRecordset (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|Indica o **Recordset** objeto retornado de um objeto comercial personalizado.|  
-|[Server (RDS)](../../../ado/reference/rds-api/server-property-rds.md)|Indica o protocolo de comunicação e o nome de serviços de informações da Internet (IIS).|  
+|[Servidor (RDS)](../../../ado/reference/rds-api/server-property-rds.md)|Indica o protocolo de comunicação e o nome de serviços de informações da Internet (IIS).|  
 |[SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)|Indica por qual coluna para classificar os registros.|  
 |[SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)|Indica se uma ordem de classificação é crescente ou decrescente.|  
 |[SQL (RDS)](../../../ado/reference/rds-api/sql-property.md)|Indica a cadeia de caracteres de consulta usada para recuperar o **conjunto de registros**.|  

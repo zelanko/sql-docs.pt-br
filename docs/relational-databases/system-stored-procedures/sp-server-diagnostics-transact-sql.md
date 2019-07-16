@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb0923c57006041c8d01fd0beecbc7cef08c1135
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 30ea7fba212cc99b8d6d7e58397d29731048c6f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535258"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056303"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,14 +60,14 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indica o carimbo de data/hora de criação de linha. Cada linha em um único conjunto de linhas tem o mesmo carimbo de data/hora.|  
 |**component_type**|**sysname**|Indica se a linha contém informações para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nível de componente ou para um grupo de disponibilidade Always On da instância:<br /><br /> instância<br /><br /> AlwaysOn: AvailabilityGroup|  
-|**component_name**|**sysname**|Indica o nome de componente ou o nome do grupo de disponibilidade:<br /><br /> sistema<br /><br /> recurso<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventos<br /><br /> *\<nome do grupo de disponibilidade >*|  
+|**component_name**|**sysname**|Indica o nome de componente ou o nome do grupo de disponibilidade:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventos<br /><br /> *\<nome do grupo de disponibilidade >*|  
 |**state**|**int**|Indica o status de integridade do componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|Descreve a coluna de estado. Descrições que correspondem aos valores na coluna de estado são:<br /><br /> 0: Unknown (desconhecido)<br /><br /> 1: limpar<br /><br /> 2: aviso<br /><br /> 3: erro|  
+|**state_desc**|**sysname**|Descreve a coluna de estado. Descrições que correspondem aos valores na coluna de estado são:<br /><br /> 0: Unknown<br /><br /> 1: limpar<br /><br /> 2: aviso<br /><br /> 3: erro|  
 |**data**|**varchar (max)**|Especifica dados que são específicos do componente.|  
   
  Aqui estão as descrições dos cinco componentes:  
   
--   **system**: Coleta dados de uma perspectiva do sistema em spinlocks, condições de processamento severas, tarefas não produzidas, falhas de página e uso da CPU. Essas informações produzem uma recomendação de estado de integridade geral.  
+-   **sistema**: Coleta dados de uma perspectiva do sistema em spinlocks, condições de processamento severas, tarefas não produzidas, falhas de página e uso da CPU. Essas informações produzem uma recomendação de estado de integridade geral.  
   
 -   **recurso**:  Coleta dados de uma perspectiva de recurso na memória física e virtual, pools de buffers, páginas, cache e outros objetos de memória. Essas informações produz uma recomendação de estado de integridade geral.  
   
@@ -78,7 +77,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **Eventos**: Coleta de dados e superfícies por meio do procedimento armazenado nos erros e eventos interessantes registrados pelo servidor, incluindo detalhes sobre exceções de buffer de anel, eventos de buffer de anel sobre agente de memória, fora de memória, monitor do Agendador, pool de buffer, spinlocks, segurança e conectividade. Eventos sempre mostrarão 0 como o estado.  
   
--   **\<nome do grupo de disponibilidade >**: Coleta dados para o grupo de disponibilidade especificado (se component_type = "sempre em: AvailabilityGroup").  
+-   **\<nome do grupo de disponibilidade >** : Coleta dados para o grupo de disponibilidade especificado (se component_type = "sempre em: AvailabilityGroup").  
   
 ## <a name="remarks"></a>Comentários  
 De uma perspectiva de falha, os componentes system, resource e query_processing serão aproveitados para detecção de falha, enquanto os componentes io_subsystem e eventos serão aproveitados apenas para fins de diagnóstico.  
@@ -88,7 +87,7 @@ A tabela a seguir mapeia os componentes para seus estados de integridade associa
 |Componentes|Clean (1)|Warning (2)|Erro (3)|Unknowns (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |sistema|x|x|x||  
-|recurso|x|x|x||  
+|resource|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
 |eventos||||x|  

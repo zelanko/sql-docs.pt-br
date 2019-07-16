@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: cfb8d905-c34f-44de-9574-dde81e170916
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4bf4c0d15f2a27179d8f88831a940bca1ecb1aea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2d5815783528b89716cc8bfb426ea7c1b274802e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088727"
 ---
 # <a name="sysdmpdwwaitstats-transact-sql"></a>sys.dm_pdw_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contém informações relacionadas ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relacionados ao estado do sistema operacional para instâncias em execução em nós diferentes. Para obter uma lista dos tipos de esperas e suas descrições, consulte [DM os_wait_stats](https://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx).  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |**pdw_node_id**|**int**|ID do nó que essa entrada se refere.||  
 |**wait_name**|**nvarchar(255)**|Nome do tipo de espera.||  

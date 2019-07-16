@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 2b505de916ba274ebb69137aa3f61fe384386829
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9726d654427d394a5a43712ce70dc4c98a5548f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038269"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Definição de dados MDX – CREATE SUBCUBE
 
@@ -44,10 +43,10 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
 |Membro padrão original|Pode ser agregado|Subseleção|Membro padrão revisado|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
 |Time.Year.All|Sim|{Time.Year.2003}|Nenhuma alteração|  
-|Time.Year.[1997]|Sim|{Time.Year.2003}|Time.Year.All|  
-|Time.Year.[1997]|Não|{Time.Year.2003}|Time.Year.[2003]|  
-|Time.Year.[1997]|Sim|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
-|Time.Year.[1997]|Não|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] ou<br /><br /> Time.Year.[2004]|  
+|Time.Year. [1997]|Sim|{Time.Year.2003}|Time.Year.All|  
+|Time.Year. [1997]|Não|{Time.Year.2003}|Time.Year. [2003]|  
+|Time.Year. [1997]|Sim|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
+|Time.Year. [1997]|Não|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] ou<br /><br /> Time.Year.[2004]|  
   
  Os membros [All] sempre existirão em um subcubo.  
   

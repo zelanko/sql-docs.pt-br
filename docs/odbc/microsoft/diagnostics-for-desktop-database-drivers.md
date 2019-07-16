@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d6c21af2ef3f47c05aacf4b47673ab42a170f506
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4e7c8ea96708886f9edf54047bd2a2104ba0ec8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031225"
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>Diagnóstico para drivers de banco de dados de área de trabalho
 Todos os erros e avisos não verificados ou parcialmente verificado pelo Gerenciador de Driver são tratados pelo driver. O driver também mapeia nativo erros ou erros retornados pela fonte de dados, para SQLSTATEs. Cada função listada na *referência do programador de ODBC* contém uma seção de "Diagnóstico" que especifica as condições e mensagens.  
@@ -31,7 +30,7 @@ Todos os erros e avisos não verificados ou parcialmente verificado pelo Gerenci
 |DiagIdentifiers|Nível de suporte|  
 |---------------------|-------------------|  
 |SQL_DIA_DYNAMIC_FUNCTION|Sem suporte|  
-|SQL_DIAG_CLASS_ORIGIN|Tem suporte. Sempre "ODBC 3.0" para versões 3.0 e posterior do driver em questão.|  
+|SQL_DIAG_CLASS_ORIGIN|Com suporte. Sempre "ODBC 3.0" para versões 3.0 e posterior do driver em questão.|  
 |SQL_DIAG_COLUMN_NUMBER|Tem suporte|  
 |SQL_DIAG_CURSOR_ROW_COUNT|Sem suporte|  
 |SQL_DIAG_DYNAMIC_FUNCTION_CODE|Sem suporte|  

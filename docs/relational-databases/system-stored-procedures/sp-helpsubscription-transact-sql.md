@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 07259854acfcad39a583b117a51bcda9de809486
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dd33fc16d399cc6d628eb4b3e80af98efca4ecc8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048354"
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +42,13 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação associada. *publicação* está **sysname**, com um padrão de **%**, que retorna todas as informações de assinatura para esse servidor.  
+`[ @publication = ] 'publication'` É o nome da publicação associada. *publicação* está **sysname**, com um padrão de **%** , que retorna todas as informações de assinatura para esse servidor.  
   
-`[ @article = ] 'article'` É o nome do artigo. *artigo* está **sysname**, com um padrão de **%**, que retorna todas as informações de assinatura para as publicações e assinantes selecionados. Se **todos os**, apenas uma entrada é retornada para a assinatura completa em uma publicação.  
+`[ @article = ] 'article'` É o nome do artigo. *artigo* está **sysname**, com um padrão de **%** , que retorna todas as informações de assinatura para as publicações e assinantes selecionados. Se **todos os**, apenas uma entrada é retornada para a assinatura completa em uma publicação.  
   
-`[ @subscriber = ] 'subscriber'` É o nome do assinante no qual obter informações de assinatura. *assinante* está **sysname**, com um padrão de **%**, que retorna todas as informações de assinatura para as publicações e assinantes selecionados.  
+`[ @subscriber = ] 'subscriber'` É o nome do assinante no qual obter informações de assinatura. *assinante* está **sysname**, com um padrão de **%** , que retorna todas as informações de assinatura para as publicações e assinantes selecionados.  
   
-`[ @destination_db = ] 'destination_db'` É o nome do banco de dados de destino. *destination_db* está **sysname**, com um padrão de **%**.  
+`[ @destination_db = ] 'destination_db'` É o nome do banco de dados de destino. *destination_db* está **sysname**, com um padrão de **%** .  
   
 `[ @found = ] 'found'OUTPUT` É um sinalizador para indicar linhas de retorno. *encontrado*está **int** e um parâmetro de saída, com um padrão de 23456.  
   
@@ -67,10 +66,10 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Assinante**|**sysname**|Nome do Assinante.|  
-|**publication**|**sysname**|Nome da publicação.|  
+|**publicação**|**sysname**|Nome da publicação.|  
 |**article**|**sysname**|Nome do artigo.|  
 |**banco de dados de destino**|**sysname**|Nome do banco de dados de destino no qual os dados replicados são colocados.|  
-|**status da assinatura**|**tinyint**|O status da assinatura:<br /><br /> **0** = inativo<br /><br /> **1** = assinado<br /><br /> **2** = Active|  
+|**status da assinatura**|**tinyint**|O status da assinatura:<br /><br /> **0** = inativo<br /><br /> **1** = assinado<br /><br /> **2** = ativo|  
 |**tipo de sincronização**|**tinyint**|O tipo de sincronização da assinatura:<br /><br /> **1** = automático<br /><br /> **2** = nenhum|  
 |**tipo de assinatura**|**int**|O tipo de assinatura:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = anônimo|  
 |**assinatura completa**|**bit**|Se a assinatura é para todos os artigos na publicação:<br /><br /> **0** = Não<br /><br /> **1** = Sim|  
@@ -84,9 +83,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**dts_package_location**|**int**|Local do pacote DTS, se um estiver atribuído à assinatura. Se houver um pacote, um valor de **0** Especifica o local do pacote na **distribuidor**. Um valor de **1** Especifica a **assinante**.|  
 |**subscriber_security_mode**|**smallint**|É o modo de segurança no assinante, onde **1** significa que a autenticação do Windows, e **0** significa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.|  
 |**subscriber_login**|**sysname**|É o nome de logon no Assinante.|  
-|**subscriber_password**||A senha do Assinante atual nunca é retornada. O resultado é mascarado por um "**&#42;&#42;&#42;&#42;&#42;&#42;**" cadeia de caracteres.|  
+|**subscriber_password**||A senha do Assinante atual nunca é retornada. O resultado é mascarado por um " **&#42;&#42;&#42;&#42;&#42;&#42;** " cadeia de caracteres.|  
 |**job_login**|**sysname**|Nome da conta do Windows na qual o Distribution Agent é executado.|  
-|**job_password**||A senha de trabalho atual nunca é retornada. O resultado é mascarado por um "**&#42;&#42;&#42;&#42;&#42;&#42;**" cadeia de caracteres.|  
+|**job_password**||A senha de trabalho atual nunca é retornada. O resultado é mascarado por um " **&#42;&#42;&#42;&#42;&#42;&#42;** " cadeia de caracteres.|  
 |**distrib_agent_name**|**nvarchar(100)**|Nome do trabalho de agente que sincroniza a assinatura.|  
 |**subscriber_type**|**tinyint**|Tipo do Assinante, que pode ser um dos seguintes:<br /><br /> **0** = assinante do SQL Server<br /><br /> **1** = servidor de fonte de dados ODBC<br /><br /> **2** = banco de dados Microsoft JET (preterido)<br /><br /> **3** = provedor OLE DB|  
 |**subscriber_provider**|**sysname**|PROGID (identificador programático) exclusivo com o qual o provedor OLE DB para fonte de dados não SQL Server é registrado.|  
