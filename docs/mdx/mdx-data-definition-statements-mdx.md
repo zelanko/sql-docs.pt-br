@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: d6a440b76ee639c345d24c1c1e60a2038fca75de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b499fe50854e979b9407487903324b80e16ede77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629775"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038118"
 ---
 # <a name="mdx-data-definition-statements-mdx"></a>Instruções de definição de dados MDX (MDX)
 

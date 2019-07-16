@@ -10,19 +10,18 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: efff2a0ac451afb869451735545be6cc50ad15f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdb1a9c8efb8ebdf5d2e35c1da00c12578ade7d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959433"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Início Rápido: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar e consultar o banco de dados SQL do Azure
 
 Neste início rápido, você usará [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar a um servidor de banco de dados SQL. Em seguida, você vai executar instruções Transact-SQL (T-SQL) para criar e consultar o banco de dados TutorialDB, que é usado em outros [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriais.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para concluir este início rápido, você precisa [!INCLUDE[name-sos](../includes/name-sos-short.md)]e um servidor de banco de dados SQL.
 

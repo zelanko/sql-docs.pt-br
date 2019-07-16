@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 883cd29d8628f1e9270ae95a772c4d116b896710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39ebda5de5820cdfd7333ad1d0997593922e0a4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039896"
 ---
 # <a name="diagnostic-messages"></a>Mensagens de diagnóstico
 Uma mensagem de diagnóstico será retornada com cada SQLSTATE. O SQLSTATE mesmo frequentemente é retornado com um número de mensagens diferentes. Por exemplo, o SQLSTATE 42000 (sintaxe ou violação de acesso) é retornado para a maioria dos erros de sintaxe SQL. No entanto, cada erro de sintaxe é a probabilidade de ser descrito por uma mensagem diferente.  
@@ -37,14 +36,14 @@ Uma mensagem de diagnóstico será retornada com cada SQLSTATE. O SQLSTATE mesmo
   
  Para erros e avisos que ocorrem em uma fonte de dados, a mensagem de diagnóstico deve usar este formato:  
   
- **[** *vendor-identifier* **][** *ODBC-component-identifier* **][** *data-source-identifier* **]** *data-source-supplied-text*  
+ **[** *identificador de fornecedor* **] [** *identificador de componente de ODBC* **] [** *identificador da fonte de dados*  **]** *dados--fornecido-texto de origem*  
   
  A tabela a seguir mostra o significado de cada elemento.  
   
 |Elemento|Significado|  
 |-------------|-------------|  
 |*vendor-identifier*|Identifica o fornecedor do componente no qual ocorreu o erro ou aviso ou que recebeu o erro ou aviso diretamente da fonte de dados.|  
-|*ODBC-component-identifier*|Identifica o componente no qual ocorreu o erro ou aviso ou que recebeu o erro ou aviso diretamente da fonte de dados.|  
+|*Identificador do componente de ODBC*|Identifica o componente no qual ocorreu o erro ou aviso ou que recebeu o erro ou aviso diretamente da fonte de dados.|  
 |*data-source-identifier*|Identifica a fonte de dados. Para drivers baseados em arquivo, isso normalmente é um formato de arquivo, como drivers baseados em DBMS para Xbase [1], isso é o produto do DBMS.|  
 |*component-supplied-text*|Gerado pelo componente do ODBC.|  
 |*data-source-supplied-text*|Gerado pela fonte de dados.|  

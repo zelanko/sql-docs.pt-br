@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6e151d06d086569b16fcdf1dc3570f9b220dfcd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74eec478baad335cb5be6a78ec1faea2d15030ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62928153"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037989"
 ---
 # <a name="using-string-functions"></a>Usando as funções de cadeia de caracteres
 
@@ -102,8 +101,8 @@ ms.locfileid: "62928153"
 >  O **StrToMember** e **StrToSet** funções devem ser usadas com cuidado. Elas podem gerar um desempenho de consulta insatisfatório se forem usadas em definições de cálculo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Generate &#40;MDX&#41;](../mdx/generate-mdx.md)   
- [Name &#40;MDX&#41;](../mdx/name-mdx.md)   
+ [Gerar &#40;MDX&#41;](../mdx/generate-mdx.md)   
+ [Nome &#40;MDX&#41;](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
  [Funções &#40;sintaxe MDX&#41;](../mdx/functions-mdx-syntax.md)   
  [Usando procedimentos armazenados &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)   

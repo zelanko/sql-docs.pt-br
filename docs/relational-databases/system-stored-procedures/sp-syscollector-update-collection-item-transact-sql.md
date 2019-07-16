@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e1eb288a7bb99f5f24f05e4369836d21031f7e68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63001393"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010547"
 ---
 # <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  É o identificador exclusivo que identifica o item de coleta. *collection_item_id* está **int** com um valor padrão de NULL. *collection_item_id* deve ter um valor se *nome* é NULL.  
   
  [ @name = ] '*name*'  
@@ -61,7 +60,7 @@ sp_syscollector_update_collection_item
  [ @frequency =] *frequência*  
  É a frequência (em segundos) com que os dados são coletados por esse item de coleta. *frequência* está **int**, com um padrão de 5, o valor mínimo que pode ser especificado.  
   
- [ @parameters = ] '*parameters*'  
+ [ @parameters =] '*parâmetros*'  
  Os parâmetros de entrada para o item da coleta. *parâmetros* está **xml** com um padrão NULL. O *parâmetros* esquema deve corresponder ao esquema de parâmetros do tipo de coletor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

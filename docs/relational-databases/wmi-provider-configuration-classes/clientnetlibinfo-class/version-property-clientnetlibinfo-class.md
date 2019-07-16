@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5e196ed9354ae697f8492ab3cde504691f12307c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a6b598c26e60a30e0d822a13a4d4d9cef878402
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63035235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040991"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Propriedade Version (classe ClientNetLibInfo)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ object.Version [= value]
  *object*  
  Um objeto da [classe ClientNetLibInfo](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) que representa informações sobre a biblioteca de rede de cliente.  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
  Um valor da cadeia de caracteres que especifica a versão do arquivo de biblioteca de rede do cliente.  
   
 ## <a name="remarks"></a>Comentários  

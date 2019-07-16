@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: jroth
-ms.openlocfilehash: f88562c25982ce8c5d6c8d4b87dd629e4ba57c03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5251b4da6334e8aeba1c467ff921f6f25b2ab26a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008373"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novidades do Assistente de Migração de Dados
 Este artigo lista as adições em cada versão de DMA Data Migration Assistant ().
 
-## <a name="dma-v43"></a>DMA v4.3
+## <a name="dma-v43"></a>V DMA 4.3
 
 A versão v 4.3 de DMA oferece suporte para:
 
@@ -40,11 +39,11 @@ Além disso, esta versão de DMA fornece melhor desempenho para lidar com um gra
 * Procedimentos compilados com compilação nativa, em alguns casos.
 * Esquemas de banco de dados complexos.
 
-## <a name="dma-v42"></a>DMA v4.2
+## <a name="dma-v42"></a>O DMA v4.2
 
 A versão v4.2 de DMA fornece suporte de linha de comando para avaliação de prontidão para uma ou mais instâncias do servidor de destino quando a instância gerenciada do Migrando do SQL Server no local para um banco de dados do SQL Azure. Os clientes agora podem usar a linha de comando DMA para reunir metadados sobre seu esquema de banco de dados, detectar os bloqueadores e saiba mais sobre recursos parcialmente compatíveis ou não que afetam a migração para uma instância gerenciada do banco de dados SQL. Os resultados podem então ser processados usando o modelo do Power BI fornecido.
 
-## <a name="dma-v41"></a>DMA v4.1
+## <a name="dma-v41"></a>V 4.1 DMA
 
 A versão v 4.1 de DMA introduz suporte para uma avaliação abrangente dos bancos de dados do SQL Server local migrando para o banco de dados de instância gerenciada do SQL.
 
@@ -60,7 +59,7 @@ O fluxo de trabalho de avaliação ajuda a detectar os problemas a seguir, que p
 
 Depois que a avaliação for concluída, use nosso [serviço de migração de banco de dados do Azure](https://azure.microsoft.com/services/database-migration/) (DMS) para executar a migração de bancos de dados do SQL Server para o banco de dados de instância gerenciada do SQL.  DMS dá suporte a ambos [offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (uma vez) e [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) migrações de banco de dados (tempo de inatividade mínimo) para o banco de dados de instância gerenciada do SQL.
 
-## <a name="dma-v40"></a>DMA v4.0
+## <a name="dma-v40"></a>O DMA v4.0
 
 A versão de v 4.0 de DMA apresenta o recurso de recomendações de SKU de banco de dados SQL do Azure, que permite que os usuários identifiquem o mínimo recomendado de SKU de banco de dados SQL do Azure com base nos contadores de desempenho coletados dos computadores de seus bancos de dados de hospedagem. Esse recurso fornece recomendações relacionadas ao preço da camada, nível de computação e tamanho máximo de dados, bem como o custo estimado por mês. Ele também oferece a capacidade de provisionar todos os seus bancos de dados do Azure em massa.
 
@@ -69,7 +68,7 @@ A versão de v 4.0 de DMA apresenta o recurso de recomendações de SKU de banco
 
 Para obter mais detalhes, consulte o artigo [identificar a SKU certa de banco de dados de SQL do Azure para seu banco de dados local](dma-sku-recommend-sql-db.md).
 
-## <a name="dma-v36"></a>DMA v3.6
+## <a name="dma-v36"></a>V3.6 DMA
 
 A versão de v3.6 do DMA apresenta "Correção automática" para os objetos de esquema que são afetados pelos bloqueadores de migração mais comuns.
 
@@ -83,7 +82,7 @@ O DMA executa a conversão automática de esquema para os objetos afetados pelos
 
 DMA usa a tecnologia de síntese de programa da Microsoft (PROSA) para sugerir que correções de código. Saiba mais sobre [PROSA](https://microsoft.github.io/prose/).
 
-## <a name="dma-v35"></a>DMA v3.5
+## <a name="dma-v35"></a>V3.5 DMA
 
 A versão v3.5 de DMA inclui as seguintes adições:
 
@@ -118,7 +117,7 @@ Se o arquivo de backup físico estiver em um computador que executa:
 
 Enquanto a migração de logons do Active Directory (AD) é oficialmente suportada pelo SQL Server 2017 no Linux, ele requer configuração adicional para funcionar com êxito. Consulte o artigo [autenticação do Active Directory com o SQL Server no Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) para obter informações detalhadas sobre como configurar logons do Active Directory no SQL Server 2017 no Linux. Depois de executar a configuração necessária, a instalação for concluída e você pode migrar logons do Active Directory como de costume. A autenticação SQL padrão funciona como esperado sem nenhuma configuração adicional.
 
-## <a name="dma-v32"></a>DMA v3.2
+## <a name="dma-v32"></a>A versão 3.2 DMA
 
 A versão 3.2 de DMA inclui as seguintes adições:
 

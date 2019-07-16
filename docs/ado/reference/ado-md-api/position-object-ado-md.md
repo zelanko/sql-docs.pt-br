@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 32f6cea0eb9cf28ee50276968eca996714b96698
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 299df229489a9000c1dc2e97f7d7c489c490aed4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949257"
 ---
 # <a name="position-object-ado-md"></a>Objeto Position (ADO MD)
 Representa um conjunto de um ou mais membros de diferentes dimensões que define um ponto ao longo do eixo.  

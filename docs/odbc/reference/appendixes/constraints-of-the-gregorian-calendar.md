@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30fbdd17e7ec5eb970948e1c7133020081222614
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f67d313f5a1261dba1f88e9ef3a70d30c1cd503
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224562"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019180"
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>Restrições do calendário gregoriano
 Tipos de dados de data e a data e hora e os campos à direita dos tipos de dados de intervalo, devem estar em conformidade com as restrições do calendário gregoriano. Essas restrições são da seguinte maneira:  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8a80ed397ae494bc686ef76aaeeef10b61662f19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14e62555db2e88c6573f3bdca0d4a1a2733d428b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006243"
 ---
 # <a name="column-name-limitations"></a>Limitações de nome de coluna
 Nomes de coluna podem conter quaisquer caracteres válidos (por exemplo, espaços). Se os nomes de coluna contiverem qualquer caractere, exceto letras, números e sublinhados, o nome deve ser delimitado, colocando-o no back-aspas (').  

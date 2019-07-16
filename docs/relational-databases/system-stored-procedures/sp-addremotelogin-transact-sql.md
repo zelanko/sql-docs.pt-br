@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e23684e04d8e49d1a6456185f94ad74b71b1604c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eb45ce1c3e1786eb5a9a3cd630741dd4df773c40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030964"
 ---
 # <a name="spaddremotelogin-transact-sql"></a>sp_addremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +44,13 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @remoteserver **=** ] **'**_remoteserver_**'**  
+ [ @remoteserver **=** ] **'** _remoteserver_ **'**  
  É o nome do servidor remoto ao qual o logon remoto se aplica. *remoteserver* está **sysname**, sem padrão. Se apenas *remoteserver* for especificado, todos os usuários no *remoteserver* são mapeados para logons existentes de mesmo nome no servidor local. O servidor deve ser conhecido do servidor local. Isso é adicionado usando sp_addserver. Quando os usuários na *remoteserver* conecte-se ao servidor local que está executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar um procedimento armazenado remoto, eles se conectam com o logon local que corresponde ao seu próprio logon no *remoteserver* . *remoteserver* é o servidor que inicia a chamada de procedimento remoto.  
   
- [ @loginame **=** ] **'**_logon_**'**  
+ [ @loginame **=** ] **'** _logon_ **'**  
  É a ID do logon do usuário na instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* é **sysname**, com um padrão de NULL. *login*já deve existir na instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *login* for especificado, todos os usuários no *remoteserver* são mapeados para esse logon local específico. Quando os usuários na *remoteserver* conecte-se à instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar um procedimento armazenado remoto, eles se conectam com *logon*.  
   
- [ @remotename **=** ] **'**_remote_name_**'**  
+ [ @remotename **=** ] **'** _remote_name_ **'**  
  É a ID do logon do usuário no servidor remoto. *remote_name* está **sysname**, com um padrão NULL. *remote_name* deve existir no *remoteserver*. Se *remote_name* for especificado, o usuário específico *remote_name* é mapeado para *logon* no servidor local. Quando *remote_name* nos *remoteserver* conecta-se à instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar um procedimento armazenado remoto, ele se conecta como *logon*. A ID de logon do *remote_name* pode ser diferente da ID de logon no servidor remoto, *login*.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -74,7 +73,7 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
 EXEC sp_addremotelogin 'ACCOUNTS';  
 ```  
   
-### <a name="b-mapping-many-to-one"></a>b. Mapeando muitos para um  
+### <a name="b-mapping-many-to-one"></a>B. Mapeando muitos para um  
  O exemplo a seguir cria uma entrada que mapeia todos os usuários do servidor remoto `ACCOUNTS` para a ID de logon local `Albert`.  
   
 ```  

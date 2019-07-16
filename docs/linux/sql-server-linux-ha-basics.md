@@ -4,17 +4,16 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 203fad6aa3c39d57446738b9c74631fe114c609e
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d7d7d7eeacca4e18fe5b5fdc97331e24a6ca212d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952614"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Noções básicas de disponibilidade do SQL Server para implantações do Linux
 
@@ -86,7 +85,7 @@ Semelhante ao Windows, distribuições do Linux tem um firewall interno. Se sua 
 
 | Número da Porta | type     | Descrição                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
+| 111         | TCP/UDP  | NFS- `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (se usado) - mapeador de ponto de extremidade                                                                                          |
 | 137         | UDP      | Samba (se usado) - serviço de nomes NetBIOS                                                                                      |
 | 138         | UDP      | Samba (se usado) - datagrama NetBIOS                                                                                          |

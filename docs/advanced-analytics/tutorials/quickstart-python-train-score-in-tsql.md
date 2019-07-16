@@ -7,15 +7,14 @@ ms.date: 01/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e8bacc383eba1148c1b357c344bc483e824df99b
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 9bbdaa2d23b5e605eb9e36490536a25ab344c8a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046735"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962058"
 ---
-# <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>Guia de início rápido: Criar, treinar e usar um modelo de Python com procedimentos armazenados no SQL Server
+# <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>Início Rápido: Criar, treinar e usar um modelo de Python com procedimentos armazenados no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Neste início rápido usando o Python, você criará e executará os dois procedimentos armazenados. O primeiro usa o conjunto de dados de flor de íris clássico e gera um modelo de Naïve Bayes para prever uma espécie de íris com base nas características da flor. É o segundo procedimento para pontuação. Ele chama o modelo gerado no primeiro procedimento para um conjunto de previsões de saída. Colocando o código em um procedimento armazenado, as operações são independentes, reutilizáveis e que pode ser chamado por outros procedimentos armazenados e os aplicativos cliente. 
@@ -27,7 +26,7 @@ Ao concluir este início rápido, você aprenderá:
 > * Como passar entradas para seu código por meio de entradas no procedimento armazenado
 > * Como os procedimentos armazenados são usados para operacionalizar os modelos
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Um início rápido anterior, [Python Verifique se existe no SQL Server](quickstart-python-verify.md), fornece informações e links para configurar o ambiente do Python necessário para este início rápido.
 

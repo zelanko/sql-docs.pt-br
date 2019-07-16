@@ -6,13 +6,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: fa0d9d4ed647a6616c525533e696960784d09290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e8e2f43d176bb0f828545c5d7d0abcf5849a7ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63142308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961620"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>Eventos estendidos para monitoramento de instruções PREDICT
 
@@ -20,7 +19,7 @@ Este artigo descreve os eventos estendidos, fornecido no SQL Server que você po
 
 Pontuação em tempo real gera as pontuações de um modelo de machine learning que foram armazenado no SQL Server. A função PREDICT não exige um tempo de execução externo, como R ou Python, apenas um modelo que foi criado usando um formato binário específico. Para obter mais informações, consulte [em tempo real de pontuação](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para obter informações gerais sobre eventos estendidos (às vezes chamados de XEvents) e como controlar os eventos em uma sessão, consulte estes artigos:
 
@@ -34,7 +33,7 @@ Os seguintes eventos estendidos estão disponíveis em todas as versões do SQL 
 
 A instrução T-SQL PREVER foi introduzida no SQL Server 2017. 
 
-|nome |object_type|description| 
+|name |object_type|description| 
 |----|----|----|
 |predict_function_completed |event  |Divisão de tempo de execução interno|
 |predict_model_cache_hit |event|Ocorre quando um modelo é recuperado do cache de modelo da função PREDICT. Use esse evento junto com outros eventos predict_model_cache _ * para solucionar problemas causados pelo cache de modelo da função PREDICT.|

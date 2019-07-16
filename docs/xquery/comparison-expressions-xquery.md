@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ac4e617b7abb220dd2a8767a334ddbdf1c685d2c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7462e089f70b4da76edea25dcfe6e7e314ad7c46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039034"
 ---
 # <a name="comparison-expressions-xquery"></a>Expressões de comparação (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +44,10 @@ ms.locfileid: "51661826"
   
  Os operadores gerais estão definidos na tabela a seguir.  
   
-|Operador|Description|  
+|Operador|Descrição|  
 |--------------|-----------------|  
-|=|Equal|  
-|!=|Não igual|  
+|=|Igual|  
+|!=|Não é igual a|  
 |\<|Menor que|  
 |>|Maior que|  
 |\<=|Menor que ou igual a|  
@@ -122,7 +121,7 @@ WHERE ContactID=1
   
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 \<act:number   
@@ -140,10 +139,10 @@ WHERE ContactID=1
   
  Os operadores de comparação de valor são definidos na tabela a seguir.  
   
-|Operador|Description|  
+|Operador|Descrição|  
 |--------------|-----------------|  
-|eq|Equal|  
-|ne|Não igual|  
+|eq|Igual|  
+|ne|Não é igual a|  
 |lt|Menor que|  
 |gt|Maior que|  
 |le|Menor que ou igual a|  
@@ -174,7 +173,7 @@ WHERE ProductModelID=19
   
 -   Observe que, como os operadores de valor só funcionam em valores atômicos, o **Data ()** função implicitamente é usada para recuperar o valor do nó. Ou seja, o `data($P/PD:Size) eq "small"` produz o mesmo resultado.  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 \<PD:Picture   
@@ -208,7 +207,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7           
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 ProductModelID       Result          
@@ -221,9 +220,9 @@ ProductModelID       Result
   
  Estas são as comparações feitas, com base na ordem do documento:  
   
--   `<<` : O **operando 1** preceder **operando 2** na ordem do documento.  
+-   `<<` : Faz **operando 1** preceder **operando 2** na ordem do documento.  
   
--   `>>` : O **operando 1** siga **operando 2** na ordem do documento.  
+-   `>>` : Faz **operando 1** siga **operando 2** na ordem do documento.  
   
  A consulta a seguir retornará True se a descrição do catálogo de produto tem a \<garantia > que aparecem antes do elemento a \<manutenção > elemento na ordem do documento de um produto específico.  
   

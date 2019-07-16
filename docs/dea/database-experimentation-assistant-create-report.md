@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: ff0a31fc4d825966fefafc11d8780862634f1937
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d53d8734e0c01fa2056b9d560f3bc65b7f64d9a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058972"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>Criar relatórios de análise no Assistente de experimentação do banco de dados
 
@@ -36,11 +35,11 @@ Sob **relatórios de análise**, selecione **relatório de análise de novos**.
 
 Insira ou selecione as seguintes informações:
 
-- **Nome do relatório**: Insira um nome para seu relatório. O nome do relatório é usado tanto para A e B bancos de dados. Exemplo: *A (ou B)* + *nome do relatório* + *identificador exclusivo*. 
+- **Nome do relatório**: Insira um nome para seu relatório. O nome do relatório é usado tanto para A e B bancos de dados. Exemplo: *A (ou B)*  + *nome do relatório* + *identificador exclusivo*. 
 - **Nome do servidor**: Insira o nome do computador servidor que você deseja incluir em A, B e bancos de dados de análise.
 - **Nome da instância do SQL Server**: Insira o nome da instância do SQL Server a ser usado para o relatório.
 - **Rastreamento de servidor de origem**: Insira o primeiro arquivo de rastreamento (. TRC) do SQL Server (2008 R2).
-- **Rastreamento de servidor de destino**: Enter the target SQL Server (2014) first .trc file.
+- **Rastreamento de servidor de destino**: Insira o destino do SQL Server (2014) primeiro arquivo. TRC.
 
 ![Nova página de relatório de análise](./media/database-experimentation-assistant-create-report/dea-create-reports-inputs.png)
 
@@ -98,7 +97,7 @@ Se ocorrer um erro enquanto o relatório é criado, a página de progresso mostr
 |---|---|  
 |RInterop encontrou um erro na inicialização. Verifique os logs de RInterop e tente novamente.|DEA requer acesso à internet para baixar os pacotes de R dependentes. Verifique os logs de RInterop em % temp %\\RInterop e DEA registra em log em % temp %\\DEA. Se RInterop foi inicializado incorretamente ou se ele inicializado sem os pacotes de R corretos, você poderá ver a exceção "Falha ao gerar o relatório de análise de novo" após a etapa InitializeRInterop nos logs de DEA.<br><br>Os logs de RInterop também podem mostrar um erro semelhante a "não há nenhum pacote jsonlite disponível." Se seu computador não tiver acesso à internet, você pode baixar manualmente o pacote necessário jsonlite R:<br><br><li>Vá para o % userprofile %\\DEARPackages pasta no sistema de arquivos do computador. Essa pasta consiste em pacotes usados pelo R para DEA.</li><br><li>Se a pasta jsonlite está ausente na lista de pacotes instalados, você precisa de uma máquina com acesso à internet para baixar a versão de lançamento do jsonlite\_1.4.zip partir [ https://cran.r-project.org/web/packages/jsonlite/index.html ](https://cran.r-project.org/web/packages/jsonlite/index.html).</li><br><li>Copie o arquivo. zip para o computador no qual você está executando DEA.  Extraia a pasta jsonlite e copiá-lo para % userprofile %\\DEARPackages. Esta etapa instala automaticamente o pacote jsonlite em R. A pasta deve ser nomeada **jsonlite** e o conteúdo deve ser diretamente dentro da pasta, não um nível abaixo.</li><br><li>Fechar DEA, abra-a novamente e tente análise novamente.</li><br>Você também pode usar o RGUI. Vá para **pacotes** > **instalar do zip**. Vá para o pacote baixado anteriormente e instalar.<br><br>Se RInterop foi inicializado e configurado corretamente, você deverá ver "Instalando dependentes R pacote jsonlite" nos logs de RInterop.|  
 |Não é possível conectar-se à instância do SQL Server, verifique se que o nome do servidor está correto e verificar o acesso necessário para o usuário que está conectado.|Você pode não ter acesso ou direitos de usuário para o servidor ou o nome do servidor podem estar incorretos.| 
-|Processo RInterop atingiu o tempo limite. Verifique os logs DEA e RInterop, interromper o processo de RInterop no Gerenciador de tarefas e, em seguida, tente novamente.<br><br>ou em<br><br>RInterop está em estado de falha. Interromper o processo de RInterop no Gerenciador de tarefas e, em seguida, tente novamente.|Verifique os logs em % temp %\\RInterop para confirmar o erro. Remova o processo de RInterop no Gerenciador de tarefas antes de tentar novamente. Se o problema persistir, entre em contato com a equipe de produto.| 
+|Processo RInterop atingiu o tempo limite. Verifique os logs DEA e RInterop, interromper o processo de RInterop no Gerenciador de tarefas e, em seguida, tente novamente.<br><br>ou<br><br>RInterop está em estado de falha. Interromper o processo de RInterop no Gerenciador de tarefas e, em seguida, tente novamente.|Verifique os logs em % temp %\\RInterop para confirmar o erro. Remova o processo de RInterop no Gerenciador de tarefas antes de tentar novamente. Se o problema persistir, entre em contato com a equipe de produto.| 
 
 ### <a name="the-report-is-generated-but-data-appears-to-be-missing"></a>O relatório é gerado, mas dados parecem estar ausente
     

@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cfeb9b5965c61977ab8d152c67a626534bb88910
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8609c7bac3d701ef6c6cf087f46e8b236842b71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964374"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto DataFactory (RDSServer)
 > [!IMPORTANT]
 >  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="properties"></a>Propriedades  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -41,7 +40,7 @@ ms.locfileid: "66718794"
 |[Método Synchronize21 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Sincronize o determinado conjunto de registros com o banco de dados especificado pela cadeia de conexão (para uso com o ADO 2.1).|  
   
 ## <a name="events"></a>Events  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

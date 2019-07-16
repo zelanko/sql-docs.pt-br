@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc5d09bca83724bb956d39512c51c3dc47db1bad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e90f7683c13d8693529c60f1ba893bd645920bb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041914"
 ---
 # <a name="interval-literals"></a>Literais de intervalo
 O ODBC exige que todos os drivers de suporte à conversão do tipo de dados SQL_CHAR ou SQL_VARCHAR todos os tipos de dados de intervalo de C. Se a fonte de dados subjacente não oferece suporte a tipos de dados de intervalo, no entanto, o driver precisa saber o formato correto do valor no campo SQL_CHAR para dar suporte a essas conversões. Da mesma forma, o ODBC exige que qualquer tipo ser conversível para SQL_CHAR ou SQL_VARCHAR, portanto, um driver precisa saber qual formato de um intervalo armazenado no campo de caractere do ODBC C deve ter. Esta seção descreve a sintaxe de literais de intervalo, o que o gravador de driver precisa ser usado para validar os campos SQL_CHAR durante a conversão para ou de tipos de dados de intervalo de C.  
@@ -93,5 +92,5 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{HOUR(2) DE INTERVALO '163'}|A precisão de intervalo à esquerda é 2, mas o valor do campo à esquerda é 163.|  
 |{SECOND(2,2) DE INTERVALO '223.16'}<br /><br /> {SECOND(3,1) DE INTERVALO '223.16'}|No primeiro exemplo, a precisão à esquerda é muito pequena e, no segundo exemplo, a precisão de segundos é muito pequena.|  
 |{INTERVALO '223.16' SEGUNDO}<br /><br /> {INTERVALO '223' ANO}|Porque a precisão à esquerda não for especificada, o padrão é 2, que é muito pequeno para conter o literal especificado.|  
-|{INTERVAL '22.1234567' SECOND}|A precisão de segundos é especificada, portanto, o padrão é 6. O literal tem sete dígitos após o ponto decimal.|  
+|{INTERVALO '22.1234567' SEGUNDO}|A precisão de segundos é especificada, portanto, o padrão é 6. O literal tem sete dígitos após o ponto decimal.|  
 |{INTERVALO ' 163-13' YEAR(3) AO MÊS}<br /><br /> {INTERVALO ' 163 65' DAY(3) HORA}<br /><br /> {DAY(3) DO INTERVALO '163 62:39' MINUTO}<br /><br /> {DAY(3) DO INTERVALO '163 12:125:59.163' PARA SECOND(3)}<br /><br /> {INTERVALO '163:144' HOUR(3) MINUTO}<br /><br /> {INTERVALO '163:567:234.163' HOUR(3) PARA SECOND(4)}<br /><br /> {INTERVALO '163:591.163' MINUTE(3) PARA SECOND(5)}|O campo à direita não segue as regras do calendário gregoriano.|

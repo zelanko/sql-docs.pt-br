@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b78764e1dccb7118d43cc967f3b03838366d6eb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96073b8d5e68d10caaff268aae4c5af60554ef76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915540"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>Função SQLAsyncNotificationCallback
 **Conformidade com**  
  Versão introduzida: ODBC 3.8  
   
- Conformidade com padrões: None  
+ Conformidade com padrões: Nenhum  
   
  **Resumo**  
  **SQLAsyncNotificationCallback** permite que um driver de retorno de chamada para o Gerenciador de Driver quando há algum progresso da operação assíncrona atual depois que o driver retornará SQL_STILL_EXECUTING. **SQLAsyncNotificationCallback** pode apenas chamado pelo driver.  

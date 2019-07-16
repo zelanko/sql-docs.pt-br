@@ -19,13 +19,12 @@ ms.assetid: 70142d3a-f8b5-4ee2-8287-3935f0f67aa2
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 7066592f665309cfbe476c3ff8f05ab57306deef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b9ab66e0a25067440a496c6c5eb04b5d8b61e64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039284"
 ---
 # <a name="sysxmlschemacomponents-transact-sql"></a>sys.xml_schema_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "64945920"
 |**symbol_space_desc**|**nvarchar**<br /><br /> **(60)**|Descrição de espaço no qual esse nome de símbolo é exclusivo, com base em **tipo**:<br /><br /> Nenhuma<br /><br /> TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP|  
 |**kind**|**char(1)**|Tipo de componente de esquema XML.<br /><br /> N = Qualquer tipo (componente intrínseco especial)<br /><br /> Z = Qualquer tipo simples (componente intrínseco especial)<br /><br /> P = Tipo primitivo (tipos intrínsecos)<br /><br /> S = Tipo simples<br /><br /> L = Tipo de lista<br /><br /> U = Tipo de união<br /><br /> C = Tipo simples complexo (derivado de Simples)<br /><br /> K = Tipo complexo<br /><br /> E = Elemento<br /><br /> M = Grupo de modelo<br /><br /> W = Curinga de elemento<br /><br /> A = Atributo<br /><br /> G = Grupo de atributo<br /><br /> V = Curinga de atributo|  
 |**kind_desc**|**nvarchar**<br /><br /> **(60)**|Descrição do tipo de componente de esquema XML:<br /><br /> ANY_TYPE<br /><br /> ANY_SIMPLE_TYPE<br /><br /> PRIMITIVE_TYPE<br /><br /> SIMPLE_TYPE<br /><br /> LIST_TYPE<br /><br /> UNION_TYPE<br /><br /> COMPLEX_SIMPLE_TYPE<br /><br /> COMPLEX_TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ELEMENT_WILDCARD<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP<br /><br /> ATTRIBUTE_WILDCARD|  
-|**derivation**|**char(1)**|Método de derivação para tipos derivados:<br /><br /> N = Nenhum (não derivado)<br /><br /> X= Extensão<br /><br /> R = Restrição<br /><br /> S = Substituição|  
+|**Derivação**|**char(1)**|Método de derivação para tipos derivados:<br /><br /> N = Nenhum (não derivado)<br /><br /> X= Extensão<br /><br /> R = Restrição<br /><br /> S = Substituição|  
 |**derivation_desc**|**nvarchar**<br /><br /> **(60)**|Descrição de método de derivação para tipos derivados:<br /><br /> Nenhuma<br /><br /> EXTENSION<br /><br /> RESTRICTION<br /><br /> SUBSTITUTION|  
 |**base_xml_component_id**|**int**|ID do componente do qual esse componente é derivado. NULL se não existir nenhuma.|  
 |**scoping_xml_component_id**|**int**|ID exclusiva do componente de escopo. NULL se não existir nenhuma (escopo global).|  

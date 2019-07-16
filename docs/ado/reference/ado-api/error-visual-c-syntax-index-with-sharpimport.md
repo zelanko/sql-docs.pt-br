@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ee59754-59c8-48e2-a4fb-242fa788c1f9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a1b4172efbccf5fb86ce1c8251c8a3d0bd4c400b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23208742a3c103bd25a38477a55106485fea018d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918908"
 ---
 # <a name="error-visual-c-syntax-index-with-import"></a>Erro (Visual C++ índice de sintaxe com #import)
 ## <a name="properties"></a>Propriedades  

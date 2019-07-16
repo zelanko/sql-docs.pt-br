@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31afdbb14229fa7c0eaf13f1b3a215e31356945f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7adc7ed5677fdc511f0c8801a5ab56b55d4b9cde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950404"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Índice espacial procedimentos armazenados – argumentos e propriedades
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "58528808"
  **Base_Table_Rows**  
  O número de linhas da tabela base. O valor é **bigint**.  
   
- **Bounding_Box_xmin**  
+ **Colunas Bounding_Box_xmin**  
  Mínimo de X delimitadora do índice espacial para propriedades da caixa **geometria** tipo. Esse valor da propriedade é NULL para **geografia**tipo. O valor é **float**.  
   
  **Bounding_Box_ymin**  

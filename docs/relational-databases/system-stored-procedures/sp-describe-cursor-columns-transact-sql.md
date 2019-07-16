@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c64e89fd5d965b98b59107d6047e6f43c0bcc9b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dffb53a2b6436725a2b7dc19dfb209a58b1134e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053116"
 ---
 # <a name="spdescribecursorcolumns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,28 +51,28 @@ sp_describe_cursor_columns
  É o nome de uma variável de cursor declarada para recebimento da saída do cursor. *output_cursor_variable* está **cursor**, sem padrão e deve não ser associado a nenhum cursor no momento em que sp_describe_cursor_columns é chamado. O cursor retornado é um cursor rolável, dinâmico, somente leitura.  
   
  [ @cursor_source=] {N'local' | N'global' | N'variable'}  
- Especifica se o cursor que está sendo relatado foi especificado usando o nome de um cursor local, de um cursor global ou de uma variável de cursor. O parâmetro é **nvarchar (30)**.  
+ Especifica se o cursor que está sendo relatado foi especificado usando o nome de um cursor local, de um cursor global ou de uma variável de cursor. O parâmetro é **nvarchar (30)** .  
   
  [ @cursor_identity=] N'*local_cursor_name*'  
- É o nome de um cursor criado por uma instrução DECLARE CURSOR, que tem a palavra-chave LOCAL ou que adotou o padrão LOCAL. *local_cursor_name* está **nvarchar (128)**.  
+ É o nome de um cursor criado por uma instrução DECLARE CURSOR, que tem a palavra-chave LOCAL ou que adotou o padrão LOCAL. *local_cursor_name* está **nvarchar (128)** .  
   
  [ @cursor_identity=] N'*global_cursor_name*'  
- É o nome de um cursor criado por uma instrução DECLARE CURSOR, que tem a palavra-chave GLOBAL ou que adotou o padrão GLOBAL. *global_cursor_name* está **nvarchar (128)**.  
+ É o nome de um cursor criado por uma instrução DECLARE CURSOR, que tem a palavra-chave GLOBAL ou que adotou o padrão GLOBAL. *global_cursor_name* está **nvarchar (128)** .  
   
  *global_cursor_name* também pode ser o nome de um cursor de servidor de API que é aberto por um aplicativo ODBC e depois nomeado chamando SQLSetCursorName.  
   
  [ @cursor_identity=] N'*input_cursor_variable*'  
- É o nome de uma variável de cursor associada a um cursor aberto. *input_cursor_variable* está **nvarchar (128)**.  
+ É o nome de uma variável de cursor associada a um cursor aberto. *input_cursor_variable* está **nvarchar (128)** .  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- None  
+ Nenhum  
   
 ## <a name="cursors-returned"></a>Cursores retornados  
  sp_describe_cursor_columns encapsula seu relatório como uma [!INCLUDE[tsql](../../includes/tsql-md.md)] **cursor** parâmetro de saída. Isso permite que lotes [!INCLUDE[tsql](../../includes/tsql-md.md)], procedimentos armazenados e gatilhos trabalhem com a saída uma linha de cada vez. Isto também significa que o procedimento não pode ser chamado diretamente de funções da API de banco de dados. O **cursor** parâmetro de saída deve ser associado a uma variável de programa, mas as APIs de banco de dados não dão suporte a associação **cursor** parâmetros ou variáveis.  
   
  A tabela a seguir mostra o formato do cursor retornado quando se usa sp_describe_cursor_columns.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |column_name|**sysname** (anulável)|Nome atribuído à coluna do conjunto de resultados. A coluna será NULL se tiver sido especificada sem uma cláusula AS associada.|  
 |ordinal_position|**int**|Posição relativa da coluna a partir da coluna mais à esquerda do conjunto de resultados. A primeira coluna está na posição 0.|  
@@ -83,7 +82,7 @@ sp_describe_cursor_columns
 |column_precision|**tinyint**|Precisão máxima da coluna conforme o *bPrecision* valor no OLE DB.|  
 |column_scale|**tinyint**|Número de dígitos à direita do ponto decimal para o **numéricos** ou **decimal** tipos de dados de acordo o *bScale* valor no OLE DB.|  
 |order_position|**int**|Se a coluna participar da ordenação do conjunto de resultados, a posição da coluna na chave de ordem relativa à coluna mais à esquerda.|  
-|order_direction|**varchar(1)**(anulável)|A = A coluna está na chave de ordem e a ordenação é crescente.<br /><br /> D = A coluna está na chave de ordem e a ordenação é decrescente.<br /><br /> NULL = A coluna não participa na ordenação.|  
+|order_direction|**varchar(1)** (anulável)|A = A coluna está na chave de ordem e a ordenação é crescente.<br /><br /> D = A coluna está na chave de ordem e a ordenação é decrescente.<br /><br /> NULL = A coluna não participa na ordenação.|  
 |hidden_column|**smallint**|0 = esta coluna aparece na lista de seleção.<br /><br /> 1 = Reservado para uso futuro.|  
 |columnid|**int**|ID da coluna base. Se a coluna do conjunto de resultados foi criada a partir de uma expressão, columnid será -1.|  
 |objectid|**int**|O ID do objeto ou da tabela base que está fornecendo a coluna. Se a coluna do conjunto de resultados foi criada a partir de uma expressão, objectid será -1.|  

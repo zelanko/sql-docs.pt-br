@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61cd3c5c4ba15d42c1b1fe261703cfbb67b3e24f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1dc80f17fc88fa665b41a130bb69ebe0d4f1f26c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032870"
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -51,11 +50,11 @@ Para [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](../.
    
  É o nome qualificado ou não qualificado da tabela, da exibição indexada ou da fila para a qual as informações de uso do espaço são solicitadas. As aspas são obrigatórias apenas se um nome de objeto qualificado for especificado. Se um nome de objeto totalmente qualificado (incluindo um nome de banco de dados) for fornecido, o nome de banco de dados deve ser o nome do banco de dados atual.  
 Se *objname* não for especificado, os resultados são retornados para o banco de dados inteiro.  
-*objname* está **nvarchar(776)**, com um padrão NULL.  
+*objname* está **nvarchar(776)** , com um padrão NULL.  
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] só há suporte para objetos de banco de dados e tabela.
   
-`[ @updateusage = ] 'updateusage'` Indica que DBCC UPDATEUSAGE deve ser executado para atualizar as informações de uso de espaço. Quando *objname* não é especificado, a instrução é executada no banco de dados inteiro; caso contrário, a instrução é executada no *objname*. Os valores podem ser **verdadeira** ou **falso**. *UPDATEUSAGE* está **varchar(5)**, com um padrão de **false**.  
+`[ @updateusage = ] 'updateusage'` Indica que DBCC UPDATEUSAGE deve ser executado para atualizar as informações de uso de espaço. Quando *objname* não é especificado, a instrução é executada no banco de dados inteiro; caso contrário, a instrução é executada no *objname*. Os valores podem ser **verdadeira** ou **falso**. *UPDATEUSAGE* está **varchar(5)** , com um padrão de **false**.  
   
 `[ @mode = ] 'mode'` Indica o escopo dos resultados. Para uma tabela ampliada ou banco de dados, o *modo* parâmetro permite que você inclua ou exclua a parte remota do objeto. Para obter mais informações, consulte [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
@@ -67,7 +66,7 @@ Se *objname* não for especificado, os resultados são retornados para o banco d
 |LOCAL_ONLY|Retorna as estatísticas de armazenamento somente a parte local do objeto ou banco de dados. Se o objeto ou o banco de dados não estiver habilitada para Stretch, retorna as mesmas estatísticas, como quando @mode = ALL.|  
 |REMOTE_ONLY|Retorna as estatísticas de armazenamento do somente a parte remota do banco de dados ou objeto. Essa opção gera um erro quando uma das seguintes condições for verdadeira:<br /><br /> A tabela não está habilitada para ampliação.<br /><br /> A tabela está habilitada para ampliação, mas você nunca habilitou a migração de dados. Nesse caso, a tabela remota ainda não tem um esquema.<br /><br /> O usuário caiu manualmente a tabela remota.<br /><br /> O provisionamento de arquivo de dados remoto retornou um status de êxito, mas na verdade ele falhou.|  
   
- *modo* está **varchar(11)**, com um padrão de **n' '**.  
+ *modo* está **varchar(11)** , com um padrão de **n' '** .  
   
 `[ @oneresultset = ] oneresultset` Indica se deve retornar um único conjunto de resultados. O *oneresultset* argumento pode ter os seguintes valores:  
   

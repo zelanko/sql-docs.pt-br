@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1d479c8f7de1c9d7463e57f37f9e8588c9bc68b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d67b52a75f3c5b2a96bf17b5ee039e08a38a5875
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989483"
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>Instalar o SSMA para cliente DB2 (DB2ToSQL)
 O cliente SSMA consiste em arquivos de programa que executam as seguintes tarefas:  
@@ -32,7 +31,7 @@ O cliente SSMA consiste em arquivos de programa que executam as seguintes tarefa
   
 Este tópico fornece os pré-requisitos de instalação e as instruções para instalar o SSMA.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 O SSMA é projetado para trabalhar com o DB2 em z/OS versão 9.0 e 10.0 ou DB2 em LUW versão 9,8 e 10.1 ou versões posteriores e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014.  
   
 Antes de instalar o SSMA, certifique-se de que o computador atende aos seguintes requisitos:  

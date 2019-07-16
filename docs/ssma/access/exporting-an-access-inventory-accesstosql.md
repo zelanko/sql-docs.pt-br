@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006560"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportando um inventário do Access (AccessToSQL)
 Se você tiver vários bancos de dados do Access e não tiver certeza quais para migrar para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode exportar um inventário de todos os bancos de dados do Access em um projeto. Você pode revisar e consultar os metadados de inventário para determinar quais bancos de dados e objetos dentro desses bancos de dados para migrar. Esse inventário permite que você realize rapidamente encontrar respostas para perguntas, como o seguinte:  
@@ -58,7 +57,7 @@ As instruções a seguir descrevem como criar um projeto, adicionar bancos de da
   
 2.  No menu **Arquivo**, selecione **Novo Projeto**.  
   
-    A caixa de diálogo **Novo Projeto** será exibida.  
+    A caixa de diálogo **Novo Projeto** é exibida.  
   
 3.  No **nome** , digite um nome para seu projeto.  
   
@@ -107,7 +106,7 @@ Para obter mais informações sobre como adicionar bancos de dados para projetos
   
     -   Se você estiver se conectando à instância padrão em outro computador, digite o nome do computador.  
   
-    -   Se você estiver se conectando a uma instância nomeada, digite o nome do computador, uma barra invertida e o nome da instância. Por exemplo: MyServer\MyInstance.  
+    -   Se você estiver se conectando a uma instância nomeada, digite o nome do computador, uma barra invertida e o nome da instância. Por exemplo:  MyServer\MyInstance.  
   
 3.  No **banco de dados** , digite o nome do banco de dados de destino para os metadados exportados.  
   

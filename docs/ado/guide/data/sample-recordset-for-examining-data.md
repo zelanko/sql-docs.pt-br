@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9ffc34dd95ac2f5ef6e26e796c4c05cd91b28ae0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1882c5298d92e17a7ddaa165288fddfab7fdb02b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700392"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924303"
 ---
 # <a name="sample-recordset-for-examining-data"></a>Conjunto de registros de exemplo para examinar dados
 Primeiro, vamos examinar a **Recordset** objeto conforme retornados usando a seguinte consulta SQL, executada nos dados de exemplo Northwind base no Microsoft SQL Server.  
@@ -38,7 +37,7 @@ WHERE CategoryID = 7
 |14|Bananas|23.2500|  
 |28|Rssle chucrute|45.6000|  
 |51|Maçãs Secas Manjimup|53.0000|  
-|74|Longlife Tofu|10.0000|  
+|74|Longlife Bananas|10.0000|  
   
  Se você estiver interessado em obter esses resultados por conta própria, experimente o seguinte exemplo de JScript:  
   

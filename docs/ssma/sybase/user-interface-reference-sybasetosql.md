@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c2b8e9404b447c098fb4513fe0cea261da04626a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14c817420c13e7355c43324bf09fcb3abc6737dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62626556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020864"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>Referência da interface do usuário (SybaseToSQL)
 Esta seção inclui tópicos de ajuda para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para Sybase.  
@@ -44,7 +43,7 @@ Esta seção inclui tópicos de ajuda para [!INCLUDE[ssNoVersion](../../includes
 |[Configurações do projeto &#40;sincronização&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)|Use a página de sincronização do **configurações do projeto** migrados de caixa de diálogo para personalizar como o SSMA para Sybase cria ou altera os objetos de banco de dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.|  
 |[Configurações do projeto &#40;banco de dados SQL do Azure &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)|Use a página do SQL Azure da **configurações do projeto** caixa de diálogo para personalizar as configurações de conectividade para migrar os dados do Sybase para o SQL Azure.|  
 |[Configurações do projeto &#40;mapeamento de tipo&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)|Use a página mapeamento de tipo dos **configurações do projeto** caixa de diálogo para especificar os mapeamentos de tipo padrão para todos os bancos de dados e objetos de banco de dados no SSMA para Sybase projeto.|  
-|[Save Metadata  &#40;SybaseToSQL&#41;](../../ssma/sybase/save-metadata-sybasetosql.md)|O **salvar metadados** caixa de diálogo aparece quando você salvar um projeto que falta metadados.|  
+|[Salvar metadados &#40;SybaseToSQL&#41;](../../ssma/sybase/save-metadata-sybasetosql.md)|O **salvar metadados** caixa de diálogo aparece quando você salvar um projeto que falta metadados.|  
   
 ## <a name="see-also"></a>Consulte também  
 [Introdução ao SSMA para Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  

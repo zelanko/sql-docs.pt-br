@@ -5,17 +5,16 @@ description: Artigo de referência para comandos de status de pool mssqlctl bdc.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 818773708087927b5c2f3ccea44ba52cd77e7a71
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 2a93fe8ba55b7b9508cff32d4272645fab7cb975
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958047"
 ---
 # <a name="mssqlctl-bdc-pool-status"></a>status do pool de bdc mssqlctl
 

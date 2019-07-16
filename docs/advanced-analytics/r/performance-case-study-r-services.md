@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce4bb94efa8c8ffb1b0a3b0c52c29de74a2b966e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962553"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Desempenho para R Services: recursos e os resultados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -90,7 +89,7 @@ Esta seção compara antes e depois os resultados para cada um dos testes.
 
 O primeiro teste em comparação com o uso de compactação e uma tabela Colunar para reduzir o tamanho dos dados.
 
-| Nome da tabela            | Linhas     | Reservado   | Dados       | index_size | Não usado  | % de economia (reservado) |
+| Nome da tabela            | Linhas     | Reservado   | Data       | index_size | Não usado  | % de economia (reservado) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816 KB | 2972160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784 KB  | 623744 KB  | 1352 KB    | 688 KB  | 79%                 |
@@ -180,7 +179,7 @@ Esse teste avaliar o impacto de modificar o código R para evitar um problema co
 
 | Nome da tabela          | Nome do teste   | Tempo médio |
 |---------------------|-------------|--------------|
-| *Airline*           | *FactorCol* | 10.72        |
+| *Companhia aérea*           | *FactorCol* | 10.72        |
 | *airlineWithIntCol* | *IntCol*    | 3.4475       |
 
 **Conclusões**
@@ -359,7 +358,7 @@ A seguir estão links para informações, ferramentas e scripts usados no desenv
 
 + [Como o SQL Server dá suporte a NUMA](https://technet.microsoft.com/library/ms180954.aspx)
 
-+ [Soft NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
 
 ### <a name="learn-about-sql-server-optimizations"></a>Saiba mais sobre as otimizações do SQL Server
 

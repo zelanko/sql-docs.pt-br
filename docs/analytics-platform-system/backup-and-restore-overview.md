@@ -2,19 +2,18 @@
 title: Backup e restauração - Parallel Data Warehouse | Microsoft Docs
 description: Descreve como os dados de backup e restauração funcionam para o Parallel Data Warehouse (PDW). Operações de backup e restauração são usadas para recuperação de desastres. Backup e restauração também podem ser usados para copiar um banco de dados de um dispositivo para outro dispositivo.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d322eb27a92c644afa834371d5f38b3d9d7ad28b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961408"
 ---
 # <a name="backup-and-restore"></a>Backup e restauração
 
@@ -128,7 +127,7 @@ Por exemplo, ao restaurar um banco de dados de 60 GB de um dispositivo de 2 nós
   
 Após a redistribuição, cada nó de computação conterá menos dados reais e mais espaço livre do que cada nó de computação no dispositivo de origem menor. Use o espaço adicional para adicionar mais dados ao banco de dados. Se o tamanho do banco de dados restaurado é maior do que você precisa, você pode usar [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) para reduzir os tamanhos dos arquivos de banco de dados.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Tarefa de restauração e backup|Descrição|  
 |---------------------------|---------------|  

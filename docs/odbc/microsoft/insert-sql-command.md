@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9b648198-349f-46f6-b869-13d129945971
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44e773248cd2d61e211f6de98d5a0f81acc78bd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 884a33339db10ee8e07d8b432d1765720d45734a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019456"
 ---
 # <a name="insert---sql-command"></a>INSERT – comando SQL
 Acrescenta um registro ao final de uma tabela que contém os valores de campo especificado.  

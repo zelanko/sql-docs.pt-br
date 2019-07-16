@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 58a380336d3b1abc99e00f1f4052cd24a8cc5988
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98e2ec3538de68bffa5b22acc94dda3d81e5c6f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699406"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921883"
 ---
 # <a name="writing-your-own-customized-handler"></a>Escrever seu próprio manipulador personalizado
 Talvez você queira escrever seu próprio manipulador se você for um administrador de servidor IIS que queiram padrão dão suporte a RDS, mas mais controle sobre as solicitações do usuário e direitos de acesso.  

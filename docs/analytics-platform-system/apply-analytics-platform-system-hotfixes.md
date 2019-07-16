@@ -2,19 +2,18 @@
 title: Aplicar hotfixes do Analytics Platform System | Microsoft Docs
 description: Este artigo discute como aplicar hotfixes para o software do sistema de plataforma de análise.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b4b72017bb23ae44da9c5884f0ebf2a8b099fd3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6af4a1eaf1e9891356fae40a3d3bb7f11e41dc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63019041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961424"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Aplicar hotfixes do Analytics Platform System
 Este artigo discute como aplicar hotfixes para o software do sistema de plataforma de análise.  
@@ -27,7 +26,7 @@ Este artigo discute como aplicar hotfixes para o software do sistema de platafor
 > [!WARNING]  
 > Não aplique um hotfix do Analytics Platform System, enquanto o dispositivo está em uso. Aplicar um hotfix, nós de dispositivo a reinicialização pode causar. O hotfix deve ser aplicado durante uma janela de manutenção quando o dispositivo não está sendo usado.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Pré-requisitos  
 Para executar essas etapas, você precisará de:  
   
 -   Um logon do Analytics Platform System com permissões para acessar o Console de administração para monitorar o estado do dispositivo. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  

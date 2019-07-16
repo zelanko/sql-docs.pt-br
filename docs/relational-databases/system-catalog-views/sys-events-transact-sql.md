@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: f245a97a-80fc-43fb-a6e4-139420c9a47a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 122ef1eb4461b1ac3305da2c7ce9aac285616594
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15fac5b2449e90fe7d6500bca383a71bc73954f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025787"
 ---
 # <a name="sysevents-transact-sql"></a>sys.events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Contém uma linha para cada evento para qual um gatilho ou uma notificação de eventos são disparados. Esses eventos representam os tipos de eventos que são especificados quando a gatilho ou notificação de eventos é criada usando [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) ou [CREATE EVENT NOTIFICATION](../../t-sql/statements/create-event-notification-transact-sql.md).  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID do gatilho ou da notificação de eventos. Esse valor, junto com **tipo**, exclusivamente identifica a linha.|  
 |**type**|**int**|Evento que faz o gatilho ser disparado.|  

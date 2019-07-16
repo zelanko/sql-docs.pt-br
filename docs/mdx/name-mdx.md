@@ -1,5 +1,5 @@
 ---
-title: Name (MDX) | Microsoft Docs
+title: Nome (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 143fb6409e430b8fcbda7c073b8614cd0ecfcbe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fd8aa240a72dacc67e7cd09cb058192cddee282
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088386"
 ---
 # <a name="name-mdx"></a>Name (MDX)
 
@@ -42,7 +41,7 @@ Member_Expression.Name
  *Dimension_Expression*  
  Uma linguagem MDX válida que retorna uma dimensão.  
   
- *Hierarchy_Expression*  
+ *Expressão_Hierarquia*  
  Uma linguagem MDX válida que retorna uma hierarquia.  
   
  *Level_Expression*  

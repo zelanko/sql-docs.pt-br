@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 3126872e3333383d0cea53f38b3cfd06be86b704
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 887bae28ffe35ad006bceb08a1b62b824795be0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962790"
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>Pacotes de R padrão e Python no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +52,7 @@ A tabela a seguir resume as versões do R fornecidas pelo MRO usando a instalaç
 |Versão             | Versão do R       |
 |--------------------|-----------------|
 | [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) | 3.2.2   | 
-| [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
+| [Serviços de aprendizado de máquina do SQL Server 2017](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
 
 Nunca manualmente, você deve substituir a versão do R instalado pela instalação do SQL Server com as versões mais recentes na web. Pacotes de R da Microsoft se baseiam em versões específicas de R. modificar sua instalação pode desestabilizar.
 
@@ -91,14 +90,14 @@ Caminhos de arquivo também incluem os nomes de instância. O SQL Server instala
 |----------------------|------------|
 | SQL Server 2016 |C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library|
 | SQL Server 2017 com R|C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
-| SQL Server 2017 com o Python |C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages |
+| SQL Server 2017 com o Python |Server\MSSQL14 SQL do C:\Program Files\Microsoft. Pacotes de MSSQLSERVER\PYTHON_SERVICES\Lib\site |
 
 
 #### <a name="file-path-for-standalone-server-installations"></a>Caminho de arquivo para instalações autônomas de servidores
 
 A tabela a seguir lista os caminhos padrão de binários quando o SQL Server 2016 R Server (autônomo) ou o servidor do Machine Learning Server (autônomo) do SQL Server 2017 está instalado. 
 
-|Versão| Instalação|Caminho padrão|
+|Version| Instalação|Caminho padrão|
 |-------|-------------|------------|
 | SQL Server 2016|R Server (Autônomo)| C:\Program Files\Microsoft SQL Server\130\R_SERVER|
 |SQL Server 2017|Machine Learning Server com R |C:\Program Files\Microsoft SQL Server\140\R_SERVER|

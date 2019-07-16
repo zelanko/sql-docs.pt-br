@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 08eb9db7645448157a76b3bcfdd302f6654f68f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12dffe315485aadc839654996f6af3a561161246
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003131"
 ---
 # <a name="sqlexecute-function"></a>Função SQLExecute
 **Conformidade com**  
@@ -60,7 +59,7 @@ SQLRETURN SQLExecute(
 |01004|Dados de cadeia de caracteres truncados à direita|Cadeia de caracteres ou dados binários retornados para um parâmetro de saída resultaram em truncamento de caractere não vazios ou nulos de dados binários. Se fosse um valor de cadeia de caracteres, ele era truncados à direita. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01006|Privilégio não revogado|A instrução preparada associada a *StatementHandle* foi uma **REVOGAR** instrução e o usuário não tem o privilégio especificado. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01007|Privilégio não concedido|A instrução preparada associada a *StatementHandle* foi uma **GRANT** instrução e o usuário não foi possível conceder o privilégio especificado.|  
-|01S02|Valor de opção alterado|Um atributo de declaração especificada era inválido devido a condições de trabalho de implementação, portanto, um valor semelhante foi substituído temporariamente. (**SQLGetStmtAttr** pode ser chamado para determinar o que é o valor substituído temporariamente.) O valor de substituição é válido para o *StatementHandle* até que o cursor seja fechado, ponto em que o atributo de instrução será revertido para seu valor anterior. Os atributos de instrução que podem ser alterados são: SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, SQL_ATTR_KEYSET_SIZE, SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS, SQL_ATTR_QUERY_TIMEOUT, and SQL_ATTR_SIMULATE_CURSOR. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
+|01S02|Valor de opção alterado|Um atributo de declaração especificada era inválido devido a condições de trabalho de implementação, portanto, um valor semelhante foi substituído temporariamente. (**SQLGetStmtAttr** pode ser chamado para determinar o que é o valor substituído temporariamente.) O valor de substituição é válido para o *StatementHandle* até que o cursor seja fechado, ponto em que o atributo de instrução será revertido para seu valor anterior. Os atributos de instrução que podem ser alterados são: SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, SQL_ATTR_KEYSET_SIZE, SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS, SQL_ATTR_QUERY_TIMEOUT e SQL_ATTR_SIMULATE_CURSOR. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01S07|Truncamento fracionário|Os dados retornados para uma entrada/saída ou parâmetro de saída foi truncado de modo que a parte fracionária de um tipo de dados numéricos foi truncada ou a parte fracionária do componente de tempo de um hora, o carimbo de hora ou intervalo do tipo de dados foi truncada.<br /><br /> (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |07002|Campo COUNT incorreto|O número de parâmetros especificado na **SQLBindParameter** era menor do que o número de parâmetros na instrução SQL contidos em \* *StatementText*.<br /><br /> **SQLBindParameter** foi chamado com *ParameterValuePtr* definido como um ponteiro nulo, *StrLen_or_IndPtr* não é definido como SQL_NULL_DATA ou SQL_DATA_AT_EXEC, e *InputOutputType*  não é definido como SQL_PARAM_OUTPUT, para que o número de parâmetros especificado na **SQLBindParameter** era maior que o número de parâmetros na instrução SQL que está contido em **StatementText* .|  
 |07006|Violação do atributo de tipo de dados restrito|O valor de dados identificado pela *ValueType* argumento **SQLBindParameter** para o parâmetro associado não pôde ser convertido para o tipo de dados identificado pelo *ParameterType*argumento na **SQLBindParameter**.<br /><br /> O valor dos dados retornados para um parâmetro associado como SQL_PARAM_INPUT_OUTPUT ou SQL_PARAM_OUTPUT não pôde ser convertido para o tipo de dados identificado pelo *ValueType* argumento **SQLBindParameter**.<br /><br /> (Se os valores de dados para uma ou mais linhas não pôde ser convertidos, mas uma ou mais linhas foram retornadas com êxito, essa função retorna SQL_SUCCESS_WITH_INFO).|  

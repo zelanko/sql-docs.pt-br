@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78bb9a95-7ac4-44b6-818b-d1787f952ed7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: df85810e45ff63de0b12cb8995294e4de6dc4349
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd4bef039b082d281f2426cc9c7695d8115fad05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921175"
 ---
 # <a name="ado-code-examples-vbscript"></a>Exemplos do código ADO VBScript
 Use os exemplos de código a seguir para saber mais sobre como usar os métodos do ADO ao escrever no Microsoft® Visual Basic® Scripting Edition (VBScript).  

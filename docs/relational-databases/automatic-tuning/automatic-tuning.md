@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7382e4d1b9e9d968d7ad87af9830691dd931d657
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226613"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934551"
 ---
 # <a name="automatic-tuning"></a>Ajuste automático
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ Ajuste automático no [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] per
 
 O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] monitora as consultas que são executadas no banco de dados e automaticamente melhora o desempenho da carga de trabalho. O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] tem um mecanismo de inteligência interna que pode ajustar e melhorar o desempenho de suas consultas adaptando dinamicamente o banco de dados para sua carga de trabalho automaticamente. Há dois recursos de ajuste automático que estão disponíveis:
 
- -  **Correção automática de plano** identifica problemática consulta planos de execução e corrige problemas de desempenho do plano de execução da consulta. **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando com [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ -  **Correção automática de plano** identifica problemática consulta planos de execução e corrige problemas de desempenho do plano de execução da consulta. **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
  -  **Gerenciamento de índice automático** identifica os índices que devem ser adicionados ao seu banco de dados e índices que devem ser removidos. **Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## <a name="why-automatic-tuning"></a>Por que o ajuste automático?
@@ -96,7 +95,7 @@ Planos forçados manualmente não devem ser forçados para sempre, pois o [!INCL
 
 No [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], você pode encontrar as regressões de escolha de plano usando exibições do sistema de Store de consulta. Na [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detecta e mostra as regressões de escolha do plano potencial e as ações recomendadas que devem ser aplicadas na [DM db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) exibição. O modo de exibição mostra informações sobre o problema, a importância do problema e detalhes de como a consulta identificada, a ID do plano regredido, o ID do plano que foi usado como linha de base para comparação e o [!INCLUDE[tsql_md](../../includes/tsql-md.md)] instrução que pode ser executada para corrigir o problema.
 
-| Tipo | descrição | DATETIME | score | detalhes | ... |
+| type | description | datetime | score | details | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | Tempo de CPU alterado de 4 ms a ms 14 | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | Tempo de CPU alterado de 37 ms a ms 84 | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |

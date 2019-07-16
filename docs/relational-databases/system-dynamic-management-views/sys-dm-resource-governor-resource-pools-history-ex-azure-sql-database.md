@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 130c4f9c38e5eb7ee47d31377a224c5b602b5b35
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 7b40d9afe54137fb31088aa8aa8b5664c90b715d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053297"
 ---
 # <a name="sysdmresourcegovernorresourcepoolshistoryex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
@@ -36,15 +35,15 @@ Os pools de instantâneo retorna no intervalo de 15 segundos para os últimos 30
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**pool_id**|INT|ID do pool de recursos. Não permite valor nulo.
+|**pool_id**|int|ID do pool de recursos. Não permite valor nulo.
 |**name**|sysname|O nome do pool de recursos. Não permite valor nulo.|
 |**snapshot_time**|datetime2|Data e hora do instantâneo resource pool stats tirado|
-|**duration_ms**|INT|Duração entre o instantâneo atual e anterior|
+|**duration_ms**|int|Duração entre o instantâneo atual e anterior|
 |**statistics_start_time**|datetime2|O momento em que as estatísticas deste pool foram redefinidas. Não permite valor nulo.|
-|**active_session_count**|INT|Total de sessões Active Directory no instantâneo atual|
-|**active_worker_count**|INT|Total de funcionários no instantâneo atual|
-|**delta_cpu_usage_ms**|INT|Uso da CPU em milissegundos desde o último instantâneo. Não permite valor nulo.|
-|**delta_cpu_usage_preemptive_ms**|INT|Controlam chamadas win32 PreEmptive por RG de CPU do SQL, desde o último instantâneo|
+|**active_session_count**|int|Total de sessões Active Directory no instantâneo atual|
+|**active_worker_count**|int|Total de funcionários no instantâneo atual|
+|**delta_cpu_usage_ms**|int|Uso da CPU em milissegundos desde o último instantâneo. Não permite valor nulo.|
+|**delta_cpu_usage_preemptive_ms**|int|Controlam chamadas win32 PreEmptive por RG de CPU do SQL, desde o último instantâneo|
 |**used_data_space_kb**|BIGINT|Espaço total usado em bancos de dados de usuário associados ao pool de usuário|
 |**allocated_disk_space_kb**|BIGINT|Total de dados tamanho dos bancos de dados de usuário do arquivo associado ao pool de usuário|
 |**target_memory_kb**|BIGINT|A meta de quantidade de memória, em quilobytes, que o pool de recursos está tentando obter. Tem como base as configurações atuais e o estado do servidor. Não permite valor nulo.|
@@ -54,37 +53,37 @@ Os pools de instantâneo retorna no intervalo de 15 segundos para os últimos 30
 |**active_memgrant_count**|BIGINT|A contagem atual de concessões de memória. Não permite valor nulo.|
 |**active_memgrant_kb**|BIGINT|A soma, em quilobytes (KB), de concessões de memória atuais. Não permite valor nulo.|
 |**used_memgrant_kb**|BIGINT|O total atual de memória usada de concessões de memória. Não permite valor nulo.|
-|**delta_memgrant_timeout_count**|INT|Contagem de memória conceder tempos limite nesse pool de recursos nesse período. Não permite valor nulo.|
-|**delta_memgrant_waiter_count**|INT|A contagem de consultas que estão pendentes em concessões de memória. Não permite valor nulo.|
-|**delta_out_of_memory_count**|INT|O número de alocações de memória com falha no pool desde o último instantâneo. Não permite valor nulo.|
-|**delta_read_io_queued**|INT|O total de leitura lidas enfileiradas desde o último instantâneo. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S.|
-|**delta_read_io_issued**|INT|O total lidas emitidas desde o último instantâneo. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S.|
-|**delta_read_io_completed**|INT|O total lidas concluídas desde o último instantâneo. Não permite valor nulo.|
-|**delta_read_io_throttled**|INT|O total lidas limitadas desde o último instantâneo. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S.|
+|**delta_memgrant_timeout_count**|int|Contagem de memória conceder tempos limite nesse pool de recursos nesse período. Não permite valor nulo.|
+|**delta_memgrant_waiter_count**|int|A contagem de consultas que estão pendentes em concessões de memória. Não permite valor nulo.|
+|**delta_out_of_memory_count**|int|O número de alocações de memória com falha no pool desde o último instantâneo. Não permite valor nulo.|
+|**delta_read_io_queued**|int|O total de leitura lidas enfileiradas desde o último instantâneo. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S.|
+|**delta_read_io_issued**|int|O total lidas emitidas desde o último instantâneo. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S.|
+|**delta_read_io_completed**|int|O total lidas concluídas desde o último instantâneo. Não permite valor nulo.|
+|**delta_read_io_throttled**|int|O total lidas limitadas desde o último instantâneo. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S.|
 |**delta_read_bytes**|BIGINT|O número total de bytes lidos desde o último instantâneo. Não permite valor nulo.|
-|**delta_read_io_stall_ms**|INT|Tempo total (em milissegundos) entre a chegada de e/s de leitura e a conclusão desde o último instantâneo. Não permite valor nulo.|
-|**delta_read_io_stall_queued_ms**|INT|Tempo total (em milissegundos) entre a chegada de e/s de leitura e problema desde o último instantâneo. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S. Delta_read_io_stall_queued_ms diferente de zero significa que a e/s está sendo afetado pelo RG.|
-|**delta_write_io_queued**|INT|O total SS de gravação enfileiradas desde o último instantâneo. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S.|
-|**delta_write_io_issued**|INT|O total de gravação emitidas desde o último instantâneo de IOs. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S.|
-|**delta_write_io_completed**|INT|O total de gravação concluídas desde o último instantâneo de IOs. Não permite valor nulo|
-|**delta_write_io_throttled**|INT|O total de gravação limitadas do IOs desde o último instantâneo. Não permite valor nulo|
+|**delta_read_io_stall_ms**|int|Tempo total (em milissegundos) entre a chegada de e/s de leitura e a conclusão desde o último instantâneo. Não permite valor nulo.|
+|**delta_read_io_stall_queued_ms**|int|Tempo total (em milissegundos) entre a chegada de e/s de leitura e problema desde o último instantâneo. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S. Delta_read_io_stall_queued_ms diferente de zero significa que a e/s está sendo afetado pelo RG.|
+|**delta_write_io_queued**|int|O total SS de gravação enfileiradas desde o último instantâneo. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S.|
+|**delta_write_io_issued**|int|O total de gravação emitidas desde o último instantâneo de IOs. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S.|
+|**delta_write_io_completed**|int|O total de gravação concluídas desde o último instantâneo de IOs. Não permite valor nulo|
+|**delta_write_io_throttled**|int|O total de gravação limitadas do IOs desde o último instantâneo. Não permite valor nulo|
 |**delta_write_bytes**|BIGINT|O número total de bytes gravados desde o último instantâneo. Não permite valor nulo.|
-|**delta_write_io_stall_ms**|INT|Tempo total (em milissegundos) entre a chegada de e/s de gravação e conclusão desde o último instantâneo. Não permite valor nulo.|
-|**delta_write_io_stall_queued_ms**|INT|Tempo total (em milissegundos) entre a chegada de e/s de gravação e problema desde o último instantâneo. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S.|
-|**delta_io_issue_delay_ms**|INT|Tempo total (em milissegundos) entre o problema agendado e o problema real de e/s desde o último instantâneo. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S.|
-|**max_iops_per_volume**|INT|O máximo e/s por segundo (IOPS) por configuração de volume de disco deste pool. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S.|
+|**delta_write_io_stall_ms**|int|Tempo total (em milissegundos) entre a chegada de e/s de gravação e conclusão desde o último instantâneo. Não permite valor nulo.|
+|**delta_write_io_stall_queued_ms**|int|Tempo total (em milissegundos) entre a chegada de e/s de gravação e problema desde o último instantâneo. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S.|
+|**delta_io_issue_delay_ms**|int|Tempo total (em milissegundos) entre o problema agendado e o problema real de e/s desde o último instantâneo. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S.|
+|**max_iops_per_volume**|int|O máximo e/s por segundo (IOPS) por configuração de volume de disco deste pool. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S.|
 |**max_memory_kb**|BIGINT|A quantidade máxima de memória, em quilobytes, que o pool de recursos pode ter. Tem como base as configurações atuais e o estado do servidor. Não permite valor nulo.
 |**max_log_rate_kb**|BIGINT|Taxa de log máximo (-quilobytes por segundo) no nível do pool de recursos.|
 |**max_data_space_kb**|BIGINT|Limite de armazenamento máximo do pool Elástico definindo para este pool Elástico em quilobytes.|
-|**max_session**|INT|Limite de sessão para o pool|
-|**max_worker**|INT|Limite de trabalho para o pool|
-|**min_cpu_percent**|INT|A configuração atual de largura de banda de CPU garantida para todas as solicitações no pool de recursos quando houver contenção de CPU. Não permite valor nulo.|
-|**max_cpu_percent**|INT|A configuração atual do máximo de largura de banda de CPU média permitida para todas as solicitações no pool de recursos quando houver contenção de CPU. Não permite valor nulo.|
-|**cap_cpu_percent**|INT|Extremidade rígida na largura de banda de CPU que todas as solicitações no pool de recursos receberão. Limita o nível de largura de banda máxima de CPU ao nível especificado. O intervalo permitido para o valor é de 1 a 100. Não permite valor nulo.|
+|**max_session**|int|Limite de sessão para o pool|
+|**max_worker**|int|Limite de trabalho para o pool|
+|**min_cpu_percent**|int|A configuração atual de largura de banda de CPU garantida para todas as solicitações no pool de recursos quando houver contenção de CPU. Não permite valor nulo.|
+|**max_cpu_percent**|int|A configuração atual do máximo de largura de banda de CPU média permitida para todas as solicitações no pool de recursos quando houver contenção de CPU. Não permite valor nulo.|
+|**cap_cpu_percent**|int|Extremidade rígida na largura de banda de CPU que todas as solicitações no pool de recursos receberão. Limita o nível de largura de banda máxima de CPU ao nível especificado. O intervalo permitido para o valor é de 1 a 100. Não permite valor nulo.|
 |**min_vcores**|decimal(5,2)|A configuração atual de largura de banda de CPU garantida para todas as solicitações no pool de recursos quando houver contenção de CPU.  Em unidades de vCores|
 |**max_vcores**|decimal(5,2)|A configuração atual do máximo de largura de banda de CPU média permitida para todas as solicitações no pool de recursos quando houver contenção de CPU.  Na unidade de vCores|
 |**cap_vcores**|decimal(5,2)|Extremidade rígida na largura de banda de CPU que todas as solicitações no pool de recursos receberão.  Na unidade de vCores|
-|**instance_cpu_count**|INT|Número de CPU configurada para a instância|
+|**instance_cpu_count**|int|Número de CPU configurada para a instância|
 |**instance_cpu_percent|decimal(5,2)|Porcentagem de CPU configuradas para a instância|
 |**instance_vcores**|decimal(5,2)|Número de vCores configuradas para a instância|
 |**delta_log_bytes_used**|decimal(5,2)|Geração de log total (em bytes) no nível do pool desde o último instantâneo|

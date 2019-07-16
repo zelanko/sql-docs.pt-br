@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b37bdfae5f97a453477768aca39b801c06c0701
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023288"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Instruções de atualização e exclusão posicionadas
 Aplicativos podem atualizar ou excluir a linha atual em um conjunto de resultados com uma atualização posicionada ou instrução delete. Posicionado update e delete instruções são suportadas por algumas fontes de dados, mas nem todos eles. Para determinar se uma fonte de dados dá suporte a posicionado atualiza e excluir instruções, um aplicativo chama **SQLGetInfo** com o SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ Dos atributos1 ou SQL_STATIC_CURSOR_ATTRIBUTES1 *tipo de informação* (dependendo do tipo de cursor). Observe que a biblioteca de cursores ODBC simula posicionado instruções update e delete.  
@@ -46,7 +45,7 @@ Aplicativos podem atualizar ou excluir a linha atual em um conjunto de resultado
   
  **WHERE CURRENT OF** *nome de cursor*  
   
- **DELETE FROM** *table-name* **WHERE CURRENT OF** *cursor-name*  
+ **DELETE FROM** *nome da tabela* **WHERE CURRENT OF** *nome de cursor*  
   
  Observe que essas instruções exigem um nome de cursor. O aplicativo pode especificar um nome de cursor com **SQLSetCursorName** antes de executar a instrução que cria o resultado definido ou pode permitir que a fonte de dados automaticamente gerar um nome de cursor quando o cursor é criado. No último caso, o aplicativo recupera esse nome de cursor para uso em instruções de exclusão e atualização posicionadas chamando **SQLGetCursorName**.  
   

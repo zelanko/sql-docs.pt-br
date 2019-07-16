@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f860306c721bba75a9d5fc9af63ddbe0c6fc9bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38d21e20ec158ea316caf6acd17f7225c8d3a49d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649525"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002654"
 ---
 # <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,11 +50,11 @@ sys.dm_db_missing_index_columns(index_handle)
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|ID da coluna.|  
 |**column_name**|**sysname**|Nome da coluna da tabela.|  
-|**column_usage**|**varchar(20)**|Como a coluna é usada pela consulta. Os valores possíveis e suas descrições são:<br /><br /> IGUALDADE: A coluna contribui com um predicado que expressa igualdade, do formulário: <br />                        *table.column* = *constant_value*<br /><br /> Operador de DESIGUALDADE: A coluna contribui com um predicado que expressa desigualdade, por exemplo, um predicado do formulário: *tabela* > *constant_value*. Qualquer operador de comparação diferente de "=" expressa desigualdade.<br /><br /> INCLUDE: Coluna não é usada para avaliar um predicado, mas é usada por outro motivo, por exemplo, para abranger uma consulta.|  
+|**column_usage**|**varchar(20)**|Como a coluna é usada pela consulta. Os valores possíveis e suas descrições são:<br /><br /> IGUALDADE: A coluna contribui com um predicado que expressa igualdade, do formulário: <br />                        *table.column* = *constant_value*<br /><br /> OPERADOR DE DESIGUALDADE: A coluna contribui com um predicado que expressa desigualdade, por exemplo, um predicado do formulário: *tabela* > *constant_value*. Qualquer operador de comparação diferente de "=" expressa desigualdade.<br /><br /> INCLUEM: Coluna não é usada para avaliar um predicado, mas é usada por outro motivo, por exemplo, para abranger uma consulta.|  
   
 ## <a name="remarks"></a>Comentários  
  Informações retornadas por **DM db_missing_index_columns** é atualizada quando uma consulta for otimizada pelo otimizador de consulta e não é persistente. As informações do índice ausente são mantidas apenas até o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ser reiniciado. Os administradores de banco de dados devem periodicamente gerar cópias de backup de informações de índice ausente se quiserem mantê-las após o desligamento e a reinicialização do servidor.  

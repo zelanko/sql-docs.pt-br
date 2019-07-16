@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 93462a0f9529b20b3a74d37a3b844eb643e9f7b3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fbbe2e782da5892640ab66a93911b959317d0538
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526638"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022287"
 ---
 # <a name="spmschangedistributionagentproperties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` É a propriedade de publicação a alterar. *propriedade* está **sysname**, sem padrão.  
   
-`[ @value = ] 'value'` É o novo valor da propriedade. *valor* está **nvarchar(524)**, com um padrão NULL.  
+`[ @value = ] 'value'` É o novo valor da propriedade. *valor* está **nvarchar(524)** , com um padrão NULL.  
   
  Esta tabela descreve as propriedades do trabalho do Agente de Distribuição que podem ser alteradas e restrições nos valores dessas propriedades.  
   
@@ -76,7 +75,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 |**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinante|  
 ||**1**|Servidor de fontes de dados ODBC|  
 ||**3**|Provedor OLE DB|  
-|**subscriptionstreams**||Denota o número de conexões permitido pelo Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante. *Não há suportada para não -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *assinantes, Publicadores Oracle ou assinaturas ponto a ponto.*|  
+|**fluxos de assinatura**||Denota o número de conexões permitido pelo Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante. *Não há suportada para não -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *assinantes, Publicadores Oracle ou assinaturas ponto a ponto.*|  
   
 > [!NOTE]  
 >  Depois de alterar o logon ou a senha de um agente, você deve parar e reiniciar o agente antes que as alterações entrem em vigor.  

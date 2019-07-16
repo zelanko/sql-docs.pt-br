@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9330c41ccf23cdb03add4c15fc2160594c2ff7a7
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: c6427f786de727f22c3dd74b0dcf91d63b36c4ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004875"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sys.dm_db_index_physical_stats (
   
  A função interna [DB_ID](../../t-sql/functions/db-id-transact-sql.md) pode ser especificado. Quando você usar DB_ID sem especificar um nome de banco de dados, o nível de compatibilidade do banco de dados atual deverá ser 90 ou mais.  
   
- *object_id* | NULL | 0 | DEFAULT  
+ *object_id* | NULO | 0 | PADRÃO  
  É a ID do objeto da tabela ou exibição em que o índice está ativado. *object_id* é **int**.  
   
  As entradas válidas são o número da ID de uma tabela e de uma exibição, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto. Como de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], as entradas válidas também incluem o nome de fila do service broker ou o nome de tabela interna da fila. Quando os parâmetros padrão são aplicados (ou seja, todos os objetos, todos os índices, etc), informações de fragmentação para todas as filas são incluídos no conjunto de resultados.  
@@ -75,7 +74,7 @@ sys.dm_db_index_physical_stats (
   
  Especifique NULL para retornar informações de todos os índices de uma tabela base ou exibição. Se você especificar NULL para *index_id*, você também deverá especificar NULL para *partition_number*.  
   
- *partition_number* | NULL | 0 | DEFAULT  
+ *partition_number* | NULO | 0 | PADRÃO  
  É o número da partição no objeto. *partition_number* está **int**. As entradas válidas são o *partion_number* de um índice ou heap, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.  
   
  Especifique NULL para retornar informações de todas as partições do objeto proprietário.  
@@ -95,7 +94,7 @@ sys.dm_db_index_physical_stats (
 |partition_number|**int**|Número de partição de base 1 no objeto proprietário; uma tabela, exibição ou índice.<br /><br /> 1 = Índice ou heap não particionado.|  
 |index_type_desc|**nvarchar(60)**|Descrição do tipo de índice:<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> ÍNDICE de mapeamento do COLUMNSTORE (interno)<br /><br /> ÍNDICE de DELETEBUFFER COLUMNSTORE (interno)<br /><br /> ÍNDICE de DELETEBITMAP COLUMNSTORE (interno)|  
 |hobt_id|**bigint**|Heap ou a ID de árvore B do índice ou partição.<br /><br /> Além de retornar o hobt_id de índices definidos pelo usuário, isso também retorna o hobt_id dos índices columnstore interno.|  
-|alloc_unit_type_desc|**nvarchar(60)**|Descrição do tipo de unidade de alocação:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> Unidade de alocação LOB_DATA contém os dados que são armazenados em colunas do tipo **texto**, **ntext**, **imagem**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, e **xml**. Para obter mais informações, veja [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> Unidade de alocação ROW_OVERFLOW_DATA contém os dados que são armazenados em colunas do tipo **varchar (n)**, **nvarchar (n)**, **varbinary (n)**, e **SQL _ variante** que foi colocada fora da linha.|  
+|alloc_unit_type_desc|**nvarchar(60)**|Descrição do tipo de unidade de alocação:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> Unidade de alocação LOB_DATA contém os dados que são armazenados em colunas do tipo **texto**, **ntext**, **imagem**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , e **xml**. Para obter mais informações, veja [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> Unidade de alocação ROW_OVERFLOW_DATA contém os dados que são armazenados em colunas do tipo **varchar (n)** , **nvarchar (n)** , **varbinary (n)** , e **SQL _ variante** que foi colocada fora da linha.|  
 |index_depth|**tinyint**|Número de níveis de índice.<br /><br /> 1 = Heap ou unidade de alocação LOB_DATA ou ROW_OVERFLOW_DATA.|  
 |index_level|**tinyint**|Nível atual do índice.<br /><br /> 0 para níveis folha de índice, heaps e unidades de alocação LOB_DATA ou ROW_OVERFLOW_DATA.<br /><br /> Maior que 0 para níveis de índice nonleaf. *index_level* será o mais alto no nível raiz de um índice.<br /><br /> Os níveis não folha dos índices só são processados quando *modo* = DETAILED.|  
 |avg_fragmentation_in_percent|**float**|Fragmentação lógica para índices ou fragmentação de extensão para heaps na unidade de alocação IN_ROW_DATA.<br /><br /> O valor é medido como uma porcentagem e leva em consideração vários arquivos. Para definições de fragmentação lógica e de extensão, consulte Comentários.<br /><br /> 0 para unidades de alocação LOB_DATA e ROW_OVERFLOW_DATA.<br /><br /> NULL para heaps quando *modo* = SAMPLED.|  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029147"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Executar o console do SSMA (SybaseToSQL)
 Microsoft fornece um conjunto robusto de script de comandos de arquivo para executar e controlar atividades do SSMA. Seções a seguir detalham os mesmos.  
@@ -94,7 +93,7 @@ Este comando salva o projeto de migração.
 <save-project/>  
 ```  
   
-### <a name="close-project"></a>close-project  
+### <a name="close-project"></a>Fechar projeto  
 Esse comando fecha o projeto de migração.  
   
 **Exemplo de sintaxe:**  
@@ -143,7 +142,7 @@ Este comando requer um ou vários nós de metabase como parâmetro de linha de c
 </force-load>  
 ```  
   
-### <a name="reconnect-source-database"></a>reconnect-source-database  
+### <a name="reconnect-source-database"></a>Reconecte-origem-banco de dados  
 Esse comando se reconecta ao banco de dados de origem, mas não carrega todos os metadados ao contrário do comando connect-origem-banco de dados.  
   
 Se não é possível estabelecer (conexão com a fonte de re), um erro será gerado e o aplicativo de console ainda mais para a execução.  
@@ -182,7 +181,7 @@ Se a (re) conexão para o destino não puder ser estabelecida, um erro será ger
 ## <a name="report-commands"></a>Comandos de relatório  
 Os comandos de relatório geram relatórios sobre o desempenho de várias atividades do Console do SSMA.  
   
-### <a name="generate-assessment-report"></a>generate-assessment-report  
+### <a name="generate-assessment-report"></a>Gerar--relatório de avaliação  
   
 Este comando gera relatórios de avaliação no banco de dados de origem.  
   
@@ -231,7 +230,7 @@ Falha ao se conectar ao servidor de banco de dados de origem durante a execuçã
   
 />  
 ```  
-ou em  
+ou  
   
 ```xml  
 <generate-assessment-report  
@@ -296,7 +295,7 @@ Se a conexão de banco de dados de origem ou de destino não é executada antes 
   
 />  
 ```  
-ou em  
+ou  
   
 ```xml  
 <convert-schema  
@@ -312,7 +311,7 @@ ou em
 </convert-schema>  
 ```  
   
-### <a name="migrate-data"></a>migrate-data  
+### <a name="migrate-data"></a>migrar dados  
 Esse comando migra os dados de origem ao destino.  
   
 -   `object-name:` Especifica os objetos de origem considerados para a migração de dados (dá suporte a nomes de objeto individual ou um nome de objeto de grupo).  
@@ -352,7 +351,7 @@ Esse comando migra os dados de origem ao destino.
   
 </migrate-data>  
 ```  
-ou em  
+ou  
   
 ```xml  
 <migrate-data  
@@ -393,7 +392,7 @@ Os comandos de capacidade de gerenciamento ajudam a sincronizar os objetos de ba
 > [!NOTE]  
 > A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: Resumo somente no nó de raiz da árvore de objeto de origem.  
   
-### <a name="synchronize-target"></a>synchronize-target  
+### <a name="synchronize-target"></a>Sincronizar de destino  
 Este comando sincroniza os objetos de destino com o banco de dados de destino.  
  
 Se esse comando for executado no banco de dados de origem, um erro for encontrado.  
@@ -431,7 +430,7 @@ fail-script>" (optional)
   
 />  
 ```  
-ou em  
+ou  
   
 ```xml  
 <synchronize-target  
@@ -440,7 +439,7 @@ ou em
   
   object-type="<object-category>"/>  
 ```  
-ou em  
+ou  
   
 ```xml  
 <synchronize-target>  
@@ -492,7 +491,7 @@ Este comando requer um ou vários nós de metabase como parâmetro de linha de c
   
 />  
 ```  
-ou em  
+ou  
   
 ```xml  
 <refresh-from-database  
@@ -501,7 +500,7 @@ ou em
   
   object-type="<object-category>" />  
 ```  
-ou em  
+ou  
   
 ```xml  
 <refresh-from-database>  
@@ -546,7 +545,7 @@ Este comando requer um ou vários nós de metabase como parâmetro de linha de c
   
 />  
 ```  
-ou em  
+ou  
   
 ```xml  
 <save-as-script  
@@ -620,7 +619,7 @@ Este comando requer um ou vários nós de metabase como parâmetro de linha de c
   
 </convert-sql-statement>  
 ```  
-ou em  
+ou  
   
 ```  
 <convert-sql-statement  
@@ -645,7 +644,7 @@ ou em
   
 />  
 ```  
-ou em  
+ou  
   
 ```  
 <convert-sql-statement  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 099fd0ff318a77f1f1916395fbd13087ab8ba18b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 45cec32e818eab1ec5586196eadef998b8f988ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036393"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Mapear funções de substituição para compatibilidade com versões anteriores de aplicativos
 ODBC *3.x* aplicativo funcionando por meio de ODBC *3.x* Gerenciador de Driver funcionará contra um ODBC *2.x* driver, desde que não há novos recursos são usados. Ambos duplicado funcionalidades e alterações de comportamento, no entanto, afetam a maneira como que o ODBC *3.x* aplicativo funciona no ODBC *2.x* driver. Ao trabalhar com ODBC *2.x* driver, o Gerenciador de Driver ODBC a seguir é mapeado *3.x* funções, que substituíram o ODBC de um ou mais *2. x* funções, para o ODBC correspondente *2.x* funções.  
@@ -37,7 +36,7 @@ ODBC *3.x* aplicativo funcionando por meio de ODBC *3.x* Gerenciador de Driver f
 |**SQLEndTran**|**SQLTransact**|  
 |**SQLFetch**|**SQLExtendedFetch**|  
 |**SQLFetchScroll**|**SQLExtendedFetch**|  
-|**SQLFreeHandle**|**SQLFreeEnv**, **SQLFreeConnect**, or **SQLFreeStmt**|  
+|**SQLFreeHandle**|**SQLFreeEnv**, **SQLFreeConnect**, ou **SQLFreeStmt**|  
 |**SQLGetConnectAttr**|**SQLGetConnectOption**|  
 |**SQLGetDiagRec**|**SQLError**|  
 |**SQLGetStmtAttr**|**SQLGetStmtOption**[1]|  
@@ -98,7 +97,7 @@ SQLColAttribute(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttribu
   
 1.  Se *FieldIdentifier* é um dos seguintes:  
   
-     SQL_DESC_PRECISION, SQL_DESC_SCALE, SQL_DESC_LENGTH, SQL_DESC_OCTET_LENGTH, SQL_DESC_UNNAMED, SQL_DESC_BASE_COLUMN_NAME, SQL_DESC_LITERAL_PREFIX, SQL_DESC_LITERAL_SUFFIX, or SQL_DESC_LOCAL_TYPE_NAME  
+     SQL_DESC_PRECISION, SQL_DESC_SCALE, SQL_DESC_LENGTH, SQL_DESC_OCTET_LENGTH, SQL_DESC_UNNAMED, SQL_DESC_BASE_COLUMN_NAME, SQL_DESC_LITERAL_PREFIX, SQL_DESC_LITERAL_SUFFIX ou SQL_DESC_LOCAL_TYPE_NAME  
   
      o Gerenciador de Driver retornará SQL_ERROR com SQLSTATE HY091 (identificador de campo de descritor inválido). Nenhuma regra adicional desta seção se aplicam.  
   
@@ -454,7 +453,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |ColumnName|"" (cadeia de caracteres vazia)|  
 |*NameLengthPtr|0|  
 |*DataTypePtr|SQL_BINARY|  
-|*ColumnSizePtr|4|  
+|\* ColumnSizePtr|4|  
 |*DecimalDigitsPtr|0|  
 |*NullablePtr|SQL_NO_NULLS|  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6318389fd53f1358602e939551134d157debc928
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f6a1a532b092acb6c23faf4282d40100cc579c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712428"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963840"
 ---
 # <a name="onerror-event-rds"></a>Evento onError (RDS)
 O **onError** eventos é chamado sempre que ocorrer um erro durante uma operação.  
@@ -41,7 +40,7 @@ onError SCode, Description, Source, CancelDisplay
  *Descrição*  
  Um **cadeia de caracteres** que indica uma descrição do erro.  
   
- *Origem*  
+ *Source*  
  Um **cadeia de caracteres** que indica que a consulta ou o comando que causou o erro.  
   
  *CancelDisplay*  

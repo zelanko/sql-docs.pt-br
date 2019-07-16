@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 99fe38d78ff146503995a3e28dbe186b04be870d
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 5c60567da677564c168f0601625686bdfb8b3d67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926593"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Visão geral do provedor Microsoft OLE DB remotamente
 O Microsoft OLE DB provedor remoto permite que um usuário local em um computador cliente invocar os provedores de dados em um computador remoto. Especifique os parâmetros de provedor de dados para o computador remoto, como você faria se fosse um usuário local no computador remoto. Em seguida, especifique os parâmetros usados pelo provedor de comunicação remota para acessar o computador remoto. Em seguida, você pode acessar o computador remoto como se fosse um usuário local.
@@ -47,7 +46,7 @@ O Microsoft OLE DB provedor remoto permite que um usuário local em um computado
 
 |Nome da propriedade dinâmica|Descrição|
 |---------------------------|-----------------|
-|**DFMode**|Indica o modo do DataFactory. Uma cadeia de caracteres que especifica a versão desejada do [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto no servidor. Defina essa propriedade antes de abrir uma conexão para solicitar uma versão específica do **DataFactory**. Se a versão solicitada não estiver disponível, será feita uma tentativa para usar a versão anterior. Se não houver nenhuma versão anterior, ocorrerá um erro. Se **DFMode** é menor que a versão disponível, ocorrerá um erro. Essa propriedade é somente leitura depois que uma conexão é feita.<br /><br /> Pode ser um dos seguintes valores de cadeia de caracteres válida:<br /><br /> -"25"-versão 2.5 (padrão)<br />-   "21"-Version 2.1<br />-   "20"-Version 2.0<br />-"15"-versão 1.5|
+|**DFMode**|Indica o modo do DataFactory. Uma cadeia de caracteres que especifica a versão desejada do [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto no servidor. Defina essa propriedade antes de abrir uma conexão para solicitar uma versão específica do **DataFactory**. Se a versão solicitada não estiver disponível, será feita uma tentativa para usar a versão anterior. Se não houver nenhuma versão anterior, ocorrerá um erro. Se **DFMode** é menor que a versão disponível, ocorrerá um erro. Essa propriedade é somente leitura depois que uma conexão é feita.<br /><br /> Pode ser um dos seguintes valores de cadeia de caracteres válida:<br /><br /> -"25"-versão 2.5 (padrão)<br />-"21"-versão 2.1<br />– "20"-versão 2.0<br />-"15"-versão 1.5|
 |**Propriedades de comando**|Indica os valores que serão adicionados à cadeia de caracteres de propriedades de comando (conjunto de linhas) enviada ao servidor pelo provedor Remote MS. O valor padrão para essa cadeia de caracteres é vt_empty.|
 |**DFMode atual**|Indica o número de versão real a **DataFactory** no servidor. Verifique se a propriedade para ver se a versão solicitada na **DFMode** propriedade tiver sido cumprida.<br /><br /> Pode ser um dos seguintes valores de inteiro longo válido:<br /><br /> -25-versão 2.5 (padrão)<br />-21-versão 2.1<br />-20-versão 2.0<br />-15-versão 1.5<br /><br /> Adicionando "DFMode = 20;" à cadeia de conexão ao usar o **MSRemote** provedor pode melhorar o desempenho do servidor quando a atualização de dados. Com essa configuração, o **RDSServer.DataFactory** objeto no servidor usa um modo menos intensivo de recursos. No entanto, os seguintes recursos não estão disponíveis nesta configuração:<br /><br /> -Usando consultas parametrizadas.<br />– Obtendo informações de parâmetro ou coluna antes de chamar o **Execute** método.<br />-Configuração **Transact atualizações** à **verdadeiro**.<br />-Ao obter o status de linha.<br />-O chamando o **ressincronizar** método.<br />-Atualizando (explícita ou automaticamente) por meio de **atualização ressincronizar** propriedade.<br />-Configuração **comando** ou **Recordset** propriedades.<br />-Usando **adCmdTableDirect**.|
 |**Manipulador**|Indica o nome de um programa de personalização do lado do servidor (ou manipulador) que estende a funcionalidade dos [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), e os parâmetros usados pelo manipulador, todos separados por vírgulas (","). Um valor de **String**.|

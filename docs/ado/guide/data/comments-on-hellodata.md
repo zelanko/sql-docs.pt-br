@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 23ba7235ddd8ea05b7217c88bc76e7bfe50bbd98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c4897f82ff8562c031ec3522f47cddebfb56eb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925802"
 ---
 # <a name="comments-on-hellodata"></a>Comentários sobre o HelloData
 O aplicativo HelloData percorre as operações básicas de um aplicativo típico do ADO: Introdução, o exame, edição e atualização de dados. Quando você inicia o aplicativo, clique no botão de primeira **obter dados**. Isso executará o **GetData** sub-rotina.  

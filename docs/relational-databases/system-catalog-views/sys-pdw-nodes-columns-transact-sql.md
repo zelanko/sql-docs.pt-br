@@ -11,24 +11,23 @@ dev_langs:
 ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 949d8a90892e1954ee0a96f0025cb623569fbe55
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 201af9001703bb8f1dfbdaf2c41151697b945df3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024417"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059399"
 ---
 # <a name="syspdwnodescolumns-transact-sql"></a>sys.pdw_nodes_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Mostra as colunas de tabelas definidas pelo usuário e exibições definidas pelo usuário.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|ID do objeto ao qual esta coluna pertence.||  
-|nome|**sysname**|Nome da coluna. Exclusivo no objeto.||  
+|name|**sysname**|Nome da coluna. Exclusivo no objeto.||  
 |column_id|**int**|ID da coluna. Exclusivo no objeto.||  
 |system_type_id|**tinyint**|ID do tipo de sistema da coluna.||  
 |user_type_id|**int**|ID do tipo da coluna, como definido pelo usuário.||  
@@ -58,7 +57,7 @@ ms.locfileid: "56024417"
  Requer a permissão CONTROL SERVER.  
   
 ## <a name="see-also"></a>Consulte também  
- [SQL Data Warehouse e Parallel Data Warehouse exibições do catálogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Exibições de Catálogo do SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)  
   
   

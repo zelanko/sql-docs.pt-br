@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 547ac1bce010e1f25eb2fce178844ff2b3f77bd1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 2ac7ec92a47f56982300e81395d24fc5b197ed64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997484"
 ---
 # <a name="sphelprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**DbRole**|**sysname**|Nome da função no banco de dados atual.|  
-|**MemberName**|**sysname**|Nome de um membro de **DbRole.**|  
+|**Nome do membro**|**sysname**|Nome de um membro de **DbRole.**|  
 |**MemberSID**|**varbinary(85)**|Identificador de segurança do **MemberName.**|  
   
 ## <a name="remarks"></a>Comentários  

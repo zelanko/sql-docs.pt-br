@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e1e268da5eb4c53b6270e474987c69b88383cd9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924141"
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
 Uma cláusula COMPUTE de forma gera um pai **conjunto de registros**, cujas colunas consistem em uma referência para o filho **conjunto de registros**; opcional colunas cujo conteúdo é capítulo, novo, ou colunas calculadas, ou o resultado da execução de funções de agregação no filho **conjunto de registros** ou formatados anteriormente **conjunto de registros**; e todas as colunas de filho **Recordset** listados em o opcional pela cláusula.  
@@ -83,7 +82,7 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
 |OU|Medford|200,000|  
 |OU|Portland|400,000|  
 |CA|Los Angeles|800,000|  
-|CA|San Diego|600,000|  
+|CA|SAN Diego|600,000|  
 |WA|Tacoma|500,000|  
 |OU|Corvallis|300,000|  
   
@@ -116,7 +115,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |Estado|Cidade|População|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800,000|  
-|CA|San Diego|600,000|  
+|CA|SAN Diego|600,000|  
   
 ## <a name="child2"></a>Child2  
   

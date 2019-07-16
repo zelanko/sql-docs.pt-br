@@ -1,5 +1,5 @@
 ---
-title: sys.internal_tables (Transact-SQL) | Microsoft Docs
+title: sys. internal_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2019
 ms.prod: sql
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a84e1d2fa9d65cfdab4e4753315d44346af4597e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b3f262943d41f1cd9592ab805d02bce3ade77a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044544"
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

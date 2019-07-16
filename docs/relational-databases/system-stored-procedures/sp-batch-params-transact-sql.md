@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b66e8b2d1b0d397a24c4ff5c702c00aff14988d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a5b4ac7c5e1e8d3c136f99475fa7a17ebd8b002
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001814"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 `[ @tsqlbatch = ] 'tsqlbatch'` É uma cadeia de caracteres Unicode que contém um [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote para o qual parâmetro informações são que você deseja. *tsqlbatch* está **nvarchar (max)** ou implicitamente conversível em **nvarchar (max)** .  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- None  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -57,7 +56,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**LENGTH**|**int**|Tamanho da transferência dos dados. Esse valor será NULL.|  
 |**ESCALA**|**smallint**|Número de dígitos à direita da vírgula decimal. Esse valor será NULL.|  
 |**RADIX**|**smallint**|É a base para tipos numéricos. Esse valor será NULL.|  
-|**NULLABLE**|**smallint**|Especifica a condição de nulidade:<br /><br /> 1 = O tipo de dados do parâmetro pode ser criado permitindo valores nulos.<br /><br /> 0 = Não são permitidos valores nulos.<br /><br /> Esse valor será NULL.|  
+|**PERMITE VALOR NULO**|**smallint**|Especifica a condição de nulidade:<br /><br /> 1 = O tipo de dados do parâmetro pode ser criado permitindo valores nulos.<br /><br /> 0 = Não são permitidos valores nulos.<br /><br /> Esse valor será NULL.|  
 |**SQL_DATA_TYPE**|**smallint**|Valor do tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como ele aparece no campo TYPE do descritor. Esta coluna é igual à coluna **DATA_TYPE**, com exceção dos tipos de dados **datetime** e **interval** ISO. Esta coluna sempre retorna um valor. Esse valor será NULL.|  
 |**SQL_DATETIME_SUB**|**smallint**|O **datetime** ou ISO **intervalo** subcódigo se o valor de **SQL_DATA_TYPE** for SQL_DATETIME ou SQL_INTERVAL. Para tipos de dados diferente de **datetime** e ISO **intervalo**, essa coluna será NULL. Esse valor será NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Comprimento máximo em bytes de um **caractere** ou **binário** parâmetro de tipo de dados. Para todos os outros tipos de dados, esta coluna retorna um valor nulo. Esse valor é sempre NULL.|  
