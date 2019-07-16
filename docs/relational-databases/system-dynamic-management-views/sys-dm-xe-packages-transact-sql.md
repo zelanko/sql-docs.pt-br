@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 895eeeea22b305236d263827156c6717b458a96a
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 065625fdaca015de9c445e6e6f0e1ad0013f38e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785917"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090265"
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +34,9 @@ ms.locfileid: "53785917"
  
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|nome|**nvarchar(256)**|O nome do pacote. A descrição é exposta no próprio pacote. Não permite valor nulo.|  
+|name|**nvarchar(256)**|O nome do pacote. A descrição é exposta no próprio pacote. Não permite valor nulo.|  
 |guid|**uniqueidentifier**|O GUID que identifica o pacote. Não permite valor nulo.|  
-|descrição|**nvarchar(3072)**|A descrição do pacote. descriptionis definido pelo autor do pacote e não permite valor nulo.|  
+|description|**nvarchar(3072)**|A descrição do pacote. descriptionis definido pelo autor do pacote e não permite valor nulo.|  
 |funcionalidades|**int**|Bitmap que descreve os recursos deste pacote. Permite valor nulo.|  
 |capabilities_desc|**nvarchar(256)**|Uma lista de todas as funcionalidades possíveis para este pacote. Permite valor nulo.|  
 |module_guid|**nvarchar(60)**|O GUID do módulo que expõe este pacote. Não permite valor nulo.|  

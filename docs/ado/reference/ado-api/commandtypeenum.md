@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 09874df6d9e09da8b6dc0df3e9670e4ff130c511
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a2de155d9c4a61246245b2c7f9c3c73a535994a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919683"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Especifica como um argumento de comando deve ser interpretado.  
@@ -39,7 +38,7 @@ Especifica como um argumento de comando deve ser interpretado.
 |**adCmdTableDirect**|512|Avalia **CommandText** como um nome de tabela cujas colunas são retornadas. Usado com **Recordset.Open** ou **Requery** apenas. Para usar o [Seek](../../../ado/reference/ado-api/seek-method.md) método, o **conjunto de registros** deve ser aberto com **adCmdTableDirect**.<br /><br /> Esse valor não pode ser combinado com o [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valor **adAsyncExecute**.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Package: **com.ms.wfc.data**  
+ Pacote: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

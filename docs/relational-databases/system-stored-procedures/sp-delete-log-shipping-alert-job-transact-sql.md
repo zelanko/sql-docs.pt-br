@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5d6c7f07-a163-48fa-8c1f-abc252043dde
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48778b3c84a739bb6773077a0c703e893d461632
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e413b677062841dbd25e2c57e0437efe566ccf98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085325"
 ---
 # <a name="spdeletelogshippingalertjob-transact-sql"></a>sp_delete_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +40,13 @@ sp_delete_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="remarks"></a>Comentários  
  **sp_delete_log_shipping_alert_job** deve ser executado a partir de **mestre** banco de dados no servidor monitor.  

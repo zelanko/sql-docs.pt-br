@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ceb77a97-d6d5-4a92-90a6-342e97d12b54
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7a3e6b18377f01d93dfb4bdda840bc6abc0dafee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 006a90ca082861aea4fecbe6934947afa2020335
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63139055"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006664"
 ---
 # <a name="connect-to-sql-server-accesstosql"></a>Conectar-se ao SQL Server (AccessToSQL)
 Use o **conectar-se ao SQL Server** caixa de diálogo para se conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você deseja migrar para o. Para acessar o **conectar-se ao SQL Server** caixa de diálogo do **arquivo** menu, clique em **conectar-se ao SQL Server**.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ae3f26f9-141c-47cf-afe4-14f99b6b9567
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 81d025bddf780c95196d32c30e19967698c87a0e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: edc44d2e47a66402b6c522bc2035c97cd0905e2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088962"
 ---
 # <a name="friendlyname-property-securitycertificate-class"></a>Propriedade FriendlyName (classe SecurityCertificate)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ object.FriendlyName [= value]
  *object*  
  Um objeto da [classe SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) que representa um certificado de segurança.  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
  Um valor da cadeia de caracteres que especifica um nome amigável alternativo para o certificado de segurança.  
   
 ## <a name="remarks"></a>Comentários  

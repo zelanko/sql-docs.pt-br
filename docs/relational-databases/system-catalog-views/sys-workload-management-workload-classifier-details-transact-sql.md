@@ -11,14 +11,13 @@ dev_langs:
 - TSQL
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: d5494cb7e8fc49e9aa6e8335d0c65e6415375a1a
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: f9314b9297af7e8156ed86b2bfa2dadd18896bb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413091"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061292"
 ---
 # <a name="sysworkloadmanagementworkloadclassifierdetails-transact-sql"></a>sys.workload_management_workload_classifier_details (Transact-SQL)
 
@@ -26,10 +25,10 @@ ms.locfileid: "67413091"
 
   Retorna detalhes de cada classificador.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|ID do classificador. Junções para [sys.workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md). Não permite valor nulo.|
-|classifier_type|**sysname**|A entidade na qual a classificação está sendo feita. Não permite valor nulo.|MEMBERNAME|
+|classifier_type|**sysname**|A entidade na qual a classificação está sendo feita. Não permite valor nulo.|NOME DO MEMBRO|
 |classifier_value|**sysname**|O valor do classificador. Não permite valor nulo.||
 
 ## <a name="permissions"></a>Permissões

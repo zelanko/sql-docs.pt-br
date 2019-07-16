@@ -11,25 +11,24 @@ dev_langs:
 ms.assetid: 5130e498-1c77-4ae3-a80b-9aae396494e9
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 61824058d90b7a922f6bd2d288a85b4923c0975e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 476b2f251bd41480962eb9925af6e3619507e791
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042867"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088757"
 ---
 # <a name="sysdmpdwwaits-transact-sql"></a>sys.dm_pdw_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Armazena estados encontrados durante a execução de uma solicitação de espera de informações sobre todos os ou consulta, inclusive bloqueios, espera-se em filas de transmissão e assim por diante.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|Id numérico exclusivo associado com o estado de espera.<br /><br /> A chave para este modo de exibição.|Exclusivo em todas as esperas no sistema.|  
 |session_id|**nvarchar(32)**|ID da sessão na qual ocorreu o estado de espera.|Consulte session_id [DM pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|Tipo|**nvarchar(255)**|Tipo de espera que essa entrada representa.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|type|**nvarchar(255)**|Tipo de espera que essa entrada representa.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |object_type|**nvarchar(255)**|Tipo de objeto que é afetado pelo tempo de espera.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |object_name|**nvarchar(386)**|Nome ou GUID do objeto especificado que foi afetado por tempo de espera.||  
 |request_id|**nvarchar(32)**|ID da solicitação em que ocorreu o estado de espera.|Consulte request_id na [DM pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  

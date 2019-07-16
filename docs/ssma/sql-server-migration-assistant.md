@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6c0f5d54f8a6d3ac1dd35c7d02b05e1b5900278
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083559"
 ---
 # <a name="sql-server-migration-assistant"></a>Assistente de Migração do SQL Server
 Microsoft SQL Server SSMA (Migration Assistant) é uma ferramenta projetada para automatizar a migração de banco de dados para o SQL Server do Microsoft Access, DB2, MySQL, Oracle e SAP ASE.  
@@ -78,7 +77,7 @@ Esta documentação, incluindo os aplicativos de exemplo nela mencionados, é fo
   
 A principal finalidade de um exemplo contido nesta documentação é ilustrar um conceito ou uso razoável de uma determinada instrução ou cláusula. A maioria dos exemplos não inclui todo o código geralmente encontrado em um sistema de produção completo, pois algumas das funções comuns de validação de dados e tratamento de erros foram removidas para focalizar o exemplo em um determinado conceito ou instrução. Não há suporte técnico para esses exemplos nem para quaisquer códigos-fonte incluídos.  
   
-A menos que indicado o contrário, os exemplos de empresas, organizações, produtos, nomes de domínio, endereços de email, pessoas, lugares e eventos aqui descritos são fictícios, e nenhuma associação com empresas, organizações, produtos, nomes de domínio, endereços de email, pessoas, lugares ou eventos reais é intencional ou deve ser inferida. Obedecer a todas as leis de direitos autorais aplicáveis é responsabilidade do usuário. Sem limitar os direitos autorais, nenhuma parte desta documentação pode ser reproduzida, armazenada ou introduzida em um sistema de recuperação, ou transmitida de qualquer forma ou por qualquer meio (seja eletrônico, mecânico, fotocópia, gravação ou outro), ou para qualquer finalidade, sem a permissão expressa e por escrito da Microsoft Corporation.  
+A menos que indicado o contrário, os exemplos de empresas, organizações, produtos, nomes de domínio, endereços de email, pessoas, lugares e eventos aqui descritos são fictícios, e nenhuma associação com empresas, organizações, produtos, nomes de domínio, endereços de email, pessoas, lugares ou eventos reais é intencional ou deve ser inferida. Estar em conformidade com todas as leis de direitos autorais aplicáveis é responsabilidade do usuário. Sem limitar os direitos autorais, nenhuma parte desta documentação pode ser reproduzida, armazenada ou introduzida em um sistema de recuperação, ou transmitida de qualquer forma ou por qualquer meio (seja eletrônico, mecânico, fotocópia, gravação ou outro), ou para qualquer finalidade, sem a permissão expressa e por escrito da Microsoft Corporation.  
   
 A Microsoft pode ter patentes ou requisições para obtenção de patente, marcas comerciais, direitos autorais ou outros direitos de propriedade intelectual que abrangem o conteúdo desta documentação. A posse desta documentação não lhe confere nenhum direito sobre as citadas patentes, marcas comerciais, direitos autorais ou outros direitos de propriedade intelectual, salvo aqueles expressamente mencionados em um contrato de licença, por escrito, da Microsoft.  
   

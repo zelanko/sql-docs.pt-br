@@ -3,18 +3,17 @@ title: Notas de versão do SQL Server 2017 no Linux
 description: Este artigo contém as notas de versão e recursos com suporte para SQL Server 2017 em execução no Linux. Notas de versão são incluídas para a versão mais recente e várias versões anteriores.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 06/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 06c46a54f21c0397f4ee801349acbebafeedf7a1
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 3f59495ffe4bc58ec673e643b0d011a501c51ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896170"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de versão do SQL Server 2017 no Linux
 
@@ -48,8 +47,8 @@ A tabela a seguir lista o histórico de lançamento para [!INCLUDE[ssSQL17](../i
 | Versão               | Version       | Data de liberação |
 |-----------------------|---------------|--------------|
 | [CU15](#CU15)         | 14.0.3162.1   | 2019-05-23   |
-| [CU14](#CU14)         | 14.0.3076.1   | 2019-03-25   |
-| [CU13](#CU13)         | 14.0.3048.4   | 2018-12-18   |
+| [CU14](#CU14)         | 14.0.3076.1   | 25-03-2019   |
+| [CU13](#CU13)         | 14.0.3048.4   | 2018-12 a 18   |
 | [CU12](#CU12)         | 14.0.3045.24  | 2018-10-24   |
 | [CU11](#CU11)         | 14.0.3038.14  | 2018-09-20   |
 | [CU10](#CU10)         | 14.0.3037.1   | 2018-08-27   |
@@ -190,7 +189,7 @@ Para instalações de pacote manual ou off-line, você pode baixar os pacotes De
 | Pacote RPM SLES | 14.0.2002.14-1 | [pacote de RPM do mecanismo de MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2002.14-1.x86_64.rpm)</br>[Pacote de alta disponibilidade RPM](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2002.14-1.x86_64.rpm)</br>[Pacote de RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2002.14-1.x86_64.rpm) | 
 | Pacote Debian do Ubuntu 16.04 | 14.0.2002.14-1 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server/mssql-server_14.0.2002.14-1_amd64.deb)</br>[Pacote de alta disponibilidade de Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.2002.14-1_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.2002.14-1_amd64.deb) |
 
-## <a id="CU9"></a> CU9 (Jul 2018)
+## <a id="CU9"></a> CU9 (julho de 2018)
 
 Esta é a versão de atualização cumulativa 9 (CU9) do [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versão para esta versão é 14.0.3030.27. Para obter informações sobre as correções e aprimoramentos nesta versão, consulte [ https://support.microsoft.com/help/4341265 ](https://support.microsoft.com/help/4341265).
 
@@ -246,7 +245,7 @@ Para instalações de pacote manual ou off-line, você pode baixar os pacotes De
 | Pacote RPM SLES | 14.0.3025.34-3 | [pacote de RPM do mecanismo de MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[Pacote de alta disponibilidade RPM](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[Pacote de RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) | 
 | Pacote Debian do Ubuntu 16.04 | 14.0.3025.34-3 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[Pacote de alta disponibilidade de Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[Pacote do SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU5"></a> CU5 (Mar 2018)
+## <a id="CU5"></a> CU5 (março de 2018)
 
 Esta é a versão de atualização cumulativa 5 (CU5) de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versão para esta versão é 14.0.3023.8. Para obter informações sobre as correções e aprimoramentos nesta versão, consulte [ https://support.microsoft.com/help/4092643 ](https://support.microsoft.com/help/4092643).
 
@@ -295,7 +294,7 @@ Para instalações de pacote manual ou off-line, você pode baixar os pacotes De
 | Pacote RPM SLES | 14.0.3022.28-2 | [pacote de RPM do mecanismo de MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3022.28-2.x86_64.rpm)</br>[Pacote de alta disponibilidade RPM](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3022.28-2.x86_64.rpm)</br>[Pacote de RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3022.28-2.x86_64.rpm) | 
 | Pacote Debian do Ubuntu 16.04 | 14.0.3022.28-2 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3022.28-2_amd64.deb)</br>[Pacote de alta disponibilidade de Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3022.28-2_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3022.28-2_amd64.deb)<br/>[Pacote do SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="GDR1"></a> GDR1 (Jan 2018)
+## <a id="GDR1"></a> GDR1 (de janeiro de 2018)
 
 Esta é uma atualização de segurança que inclui somente as correções de segurança de GDR1 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versão para esta versão é 14.0.2000.63. Para obter informações sobre as correções e aprimoramentos nesta versão, consulte [ https://support.microsoft.com/help/4057122 ](https://support.microsoft.com/help/4057122).
 
@@ -309,7 +308,7 @@ Para instalações de pacote manual ou off-line, você pode baixar os pacotes De
 | Pacote RPM SLES | 14.0.2000.63-3 | [pacote de RPM do mecanismo de MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2000.63-3.x86_64.rpm)</br>[Pacote de alta disponibilidade RPM](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2000.63-3.x86_64.rpm)</br>[Pacote de RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2000.63-3.x86_64.rpm) | 
 | Pacote Debian do Ubuntu 16.04 | 14.0.2000.63-3 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server/mssql-server_14.0.2000.63-3_amd64.deb)</br>[Pacote de alta disponibilidade de Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.2000.63-3_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.2000.63-3_amd64.deb) |
 
-## <a id="CU3"></a> CU3 (Jan 2018)
+## <a id="CU3"></a> CU3 (de janeiro de 2018)
 
 Esta é a versão de atualização cumulativa 3 (CU3) do [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versão para esta versão é 14.0.3015.40. Para obter informações sobre as correções e aprimoramentos nesta versão, consulte [ https://support.microsoft.com/help/4052987 ](https://support.microsoft.com/help/4052987).
 

@@ -9,14 +9,13 @@ ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c667b76764dc4ea6c6409d0ea5a55d16ae68c656
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 0a3b5c8d98b2c7bbfa62641b89b0bfcb031a6c02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419756"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067253"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Suporte do SQL Server Native Client à alta disponibilidade e recuperação de desastre
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "52419756"
 ## <a name="connecting-with-multisubnetfailover"></a>Conectando-se ao MultiSubnetFailover  
  Sempre especifique **MultiSubnetFailover=Yes** quando for se conectar a um ouvinte de grupo de disponibilidade do SQL Server 2012 ou uma instância de cluster de failover do SQL Server 2012. **MultiSubnetFailover** permite failover mais rápido para todos os grupos de disponibilidade e o cluster de failover da instância do SQL Server 2012 e reduzem significativamente o tempo de failover para topologias únicas e várias sub-redes AlwaysOn. Durante um failover de várias sub-redes, o cliente tentará conexões em paralelo. Durante um failover de sub-rede, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client tentará novamente a conexão TCP de forma agressiva.  
   
- A propriedade de conexão **MultiSubnetFailover** indica que o aplicativo está sendo implantado em um grupo de disponibilidade ou instância de cluster de failover e que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client tentará se conectar ao banco de dados na instância primária do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tentando se conectar a todos os endereços IP do grupo de disponibilidade. Quando **MultiSubnetFailover = Yes** é especificado para uma conexão, o cliente repete as tentativas de conexão TCP mais rápido do que os intervalos de retransmissão de TCP do sistema operacional padrão. Isso permite uma reconexão mais rápida após o failover de um grupo de disponibilidade AlwaysOn ou um Cluster de instância de Failover AlwaysOn e é aplicável a única e várias sub-redes grupos de disponibilidade e instâncias de Cluster de Failover.  
+ A propriedade de conexão **MultiSubnetFailover** indica que o aplicativo está sendo implantado em um grupo de disponibilidade ou instância de cluster de failover e que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client tentará se conectar ao banco de dados na instância primária do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tentando se conectar a todos os endereços IP do grupo de disponibilidade. Quando **MultiSubnetFailover=Yes** é especificado para uma conexão, o cliente repete as tentativas de conexão TCP mais rápido do que os intervalos de retransmissão TCP padrão do sistema operacional. Isso permite uma reconexão mais rápida após o failover de um grupo de disponibilidade AlwaysOn ou um Cluster de instância de Failover AlwaysOn e é aplicável a única e várias sub-redes grupos de disponibilidade e instâncias de Cluster de Failover.  
   
  Para obter mais informações sobre palavras-chave de cadeia de conexão, consulte [Usando palavras-chave da cadeia de conexão com o SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -48,7 +47,7 @@ ms.locfileid: "52419756"
   
 -   Conectar-se a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurada com mais de 64 endereços IP causará uma falha de conexão.  
   
--   Comportamento de um aplicativo que usa o **MultiSubnetFailover** propriedade de conexão não é afetada com base no tipo de autenticação: Autenticação [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Autenticação Kerberos ou Autenticação do Windows.  
+-   Comportamento de um aplicativo que usa o **MultiSubnetFailover** propriedade de conexão não é afetada com base no tipo de autenticação: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Autenticação, a autenticação Kerberos ou autenticação do Windows.  
   
 -   Você pode aumentar o valor de **loginTimeout** para acomodar o tempo de failover e reduzir as tentativas de repetição de conexão do aplicativo.  
   

@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 455b7b8e5b12f330a970589b04844d3a62f983b8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cdef6129f6cdc513382a747e82d84dd27fc433eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068485"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitetura de integração CLR – Ambiente hospedado de CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +102,7 @@ ms.locfileid: "51661295"
 ## <a name="how-sql-server-and-the-clr-work-together"></a>Como o SQL Server e o CLR trabalham juntos  
  Esta seção discute como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integra os modelos de threading, agendamento, sincronização e gerenciamento de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do CLR. Em particular, esta seção examina a integração sob o ponto de vista das metas de escalabilidade, confiabilidade e segurança. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atua essencialmente como o sistema operacional para o CLR quando este é hospedado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O CLR chama rotinas de baixo nível implementadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para threading, agendamento e gerenciamento de memória. Elas são as mesmas primitivas que o restante do mecanismo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa. Esta abordagem fornece vários benefícios de escalabilidade, confiabilidade e segurança.  
   
-###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>Escalabilidade: Threading, agendamento e sincronização comuns  
+###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>Escalabilidade: Comuns de threading, agendamento e sincronização  
  O CLR chama as APIs do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para criar threads, tanto para executar código de usuário quanto para seu próprio uso interno. Para fazer a sincronização de vários threads, o CLR chama objetos de sincronização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isto permite que o agendador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para agende outras tarefas quando um thread estiver esperando um objeto de sincronização. Por exemplo, quando o CLR iniciar a coleta de lixo, todos os seus threads esperam a coleta de lixo terminar. Como os threads do CLR e os objetos de sincronização pelos quais eles estão esperando são conhecidos para o agendador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode agendar threads que estão executando outras tarefas do banco de dados que não envolvem o CLR. Isto também permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detecte deadlocks que envolvem bloqueios tomados pelos objetos de sincronização CLR e utilize técnicas tradicionais para remoção de deadlock.  
   
  O código gerenciado é executado preventivamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O agendador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem a capacidade de detectar e parar threads que não tenham sido executados durante um tempo significativo. A capacidade de conectar threads do CLR a threads do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implica que o agendador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode identificar threads “fugitivos” no CLR e gerenciar sua prioridade. Tais threads fugitivos são suspensos e devolvidos à fila. Os threads que são identificados repetidamente como fugitivos não recebem permissão de execução por um determinado período de tempo, para que outros trabalhos possam ser executados.  
@@ -119,16 +118,16 @@ ms.locfileid: "51661295"
   
  Quando é feita hospedagem no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essas anulações de thread são manipuladas da seguinte forma: o CLR detecta qualquer estado compartilhado no domínio do aplicativo no qual a anulação de thread ocorre. Ele faz isto verificando para a presença de objetos de sincronização. Se houver um estado compartilhado no domínio do aplicativo, então o próprio domínio do aplicativo será descarregado. A descarga do domínio do aplicativo para transações de banco de dados que estão em execução no momento, naquele domínio de aplicativo. Como a presença do estado compartilhado pode ampliar o impacto de tais exceções críticas para as sessões de usuário que não são aquela que está disparando a exceção, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o CLR tomaram medidas para reduzir a probabilidade de estado compartilhado. Para obter mais informações, consulte a documentação do .NET Framework.  
   
-###### <a name="security-permission-sets"></a>Segurança: conjuntos de permissões  
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que os usuários especifiquem os requisitos de confiabilidade e segurança para o código implantado no banco de dados. Quando os assemblies são carregados no banco de dados, o autor do assembly pode especificar um dos três conjuntos de permissões para esse assembly: SAFE, EXTERNAL_ACCESS e UNSAFE.  
+###### <a name="security-permission-sets"></a>Segurança: Conjuntos de permissões  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que os usuários especifiquem os requisitos de confiabilidade e segurança para o código implantado no banco de dados. Quando os assemblies são carregados no banco de dados, o autor do assembly pode especificar um dos três conjuntos de permissões para esse assembly: -SAFE, EXTERNAL_ACCESS e UNSAFE.  
   
 |||||  
 |-|-|-|-|  
 |Conjunto de permissões|SAFE|EXTERNAL_ACCESS|UNSAFE|  
-|Segurança de Acesso do Código|Somente execução|Execução + acesso a recursos externos|Irrestrito|  
+|Segurança de acesso do código|Somente execução|Execução + acesso a recursos externos|Irrestrito|  
 |Restrições do modelo de programação|Sim|Sim|Sem restrições|  
-|Requisito de verificabilidade|Sim|Sim|não|  
-|Capacidade de chamar código nativo|não|não|Sim|  
+|Requisito de verificabilidade|Sim|Sim|Não|  
+|Capacidade de chamar código nativo|Não|Não|Sim|  
   
  SAFE é o modo mais confiável e seguro, com restrições associadas ao modelo de programação permitido. Assemblies SAFE recebem permissão suficiente para executar, realizar cálculos e ter acesso ao banco de dados local. Assemblies SAFE precisam ser seguros do tipo verificável e não têm permissão para chamar código não gerenciado.  
   

@@ -3,18 +3,17 @@ title: Como configurar o MSDTC no Linux
 description: Este artigo fornece um passo a passo para configurar o MSDTC no Linux.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 03/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f4fe81c5e306b059414fe0f2245aca9c9787ee1b
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: c44458e1a68c842b6433d7a137865ae8451c136c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834019"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077616"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Como configurar o Microsoft Distributed Transaction coordenador (MSDTC) no Linux
 

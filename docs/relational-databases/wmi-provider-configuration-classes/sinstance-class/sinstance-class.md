@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ddda92fa-5bb9-45dd-b421-243b02db4caf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d244725bb901bad03e1c38b012cfb801846e6eef
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 100cc7b4b230beecfc96482bf66c9237fc590ab4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052485"
 ---
 # <a name="sinstance-class"></a>Classe SInstance
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

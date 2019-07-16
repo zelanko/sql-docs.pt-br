@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 628de07f90de47efb0546dff84c03f56efb0674c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086299"
 ---
 # <a name="odbc-dynamic-cursors"></a>Cursores dinâmicos ODBC
 Um cursor dinâmico é exatamente isso: dinâmico. Ele pode detectar as alterações feitas para a associação, pedido e valores do conjunto de resultados depois que o cursor é aberto. Por exemplo, suponha que um cursor dinâmico busque duas linhas e outro aplicativo então atualize uma dessas linhas e exclua a outra. Se o cursor dinâmico, em seguida, tenta buscar essas linhas novamente, ele não localizará a linha excluída, mas retornará os novos valores para a linha atualizada.  

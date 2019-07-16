@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b2ee476694098f4734c31439b48a7ec9efdc892
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534428"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054933"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,15 +82,15 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**2**|Repetir (somente a etapa)|  
 |**3**|Canceled|  
 |**4**|Mensagem em andamento|  
-|**5**|Unknown (desconhecido)|  
+|**5**|Unknown|  
   
 `[ @minimum_retries = ] minimum_retries` O número mínimo de vezes para que repetir a execução de um trabalho. *minimum_retries* está **int**, com um padrão NULL.  
   
 `[ @oldest_first = ] oldest_first` Especifica se deve ser apresentada a saída com os trabalhos mais antigos primeiro. *oldest_first* está **int**, com um padrão de **0**, que apresenta os trabalhos mais recentes primeiro. **1** apresenta os trabalhos mais antigos primeiro.  
   
-`[ @server = ] 'server'` O nome do servidor no qual o trabalho foi executado. *servidor* está **nvarchar (30)**, com um padrão NULL.  
+`[ @server = ] 'server'` O nome do servidor no qual o trabalho foi executado. *servidor* está **nvarchar (30)** , com um padrão NULL.  
   
-`[ @mode = ] 'mode'` Especifica se o SQL Server imprime todas as colunas no conjunto de resultados (**completo**) ou um resumo das colunas. *modo* está **varchar(7)**, com um padrão de **resumo**.  
+`[ @mode = ] 'mode'` Especifica se o SQL Server imprime todas as colunas no conjunto de resultados (**completo**) ou um resumo das colunas. *modo* está **varchar(7)** , com um padrão de **resumo**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

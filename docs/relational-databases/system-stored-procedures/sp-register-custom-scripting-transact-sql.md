@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85f9104d9a9bb634dd10dfb588cf07e01d1c1fb1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075754"
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @type = ] 'type'` O tipo de procedimento armazenado personalizado ou script está sendo registrado. *tipo de* está **varchar(16)**, sem padrão e pode ser um dos valores a seguir.  
+`[ @type = ] 'type'` O tipo de procedimento armazenado personalizado ou script está sendo registrado. *tipo de* está **varchar(16)** , sem padrão e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -50,7 +49,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 |**delete**|Procedimento armazenado personalizado registrado é executado quando uma instrução DELETE é replicada.|  
 |**custom_script**|O script é executado ao término do gatilho DDL (Data Definition Language).|  
   
-`[ @value = ] 'value'` Nome de um procedimento armazenado ou o nome e o caminho totalmente qualificado para o [!INCLUDE[tsql](../../includes/tsql-md.md)] arquivo de script que está sendo registrado. *valor* está **nvarchar(1024)**, sem padrão.  
+`[ @value = ] 'value'` Nome de um procedimento armazenado ou o nome e o caminho totalmente qualificado para o [!INCLUDE[tsql](../../includes/tsql-md.md)] arquivo de script que está sendo registrado. *valor* está **nvarchar(1024)** , sem padrão.  
   
 > [!NOTE]  
 >  Especificação de NULL para *valor*parâmetro irá cancelar o registro de um script registrado anteriormente, o que é o mesmo que executar [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  

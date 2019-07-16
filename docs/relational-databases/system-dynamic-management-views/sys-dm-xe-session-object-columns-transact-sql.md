@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e87e0d981d2ee6f18368394329cf524da7e49a22
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 039c3b0be4feab53215bae22836b7fd5be4ecfb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785837"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090229"
 ---
 # <a name="sysdmxesessionobjectcolumns-transact-sql"></a>sys.dm_xe_session_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

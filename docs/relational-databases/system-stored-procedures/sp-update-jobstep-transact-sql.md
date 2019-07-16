@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1ab6c1408b9f9c2de2e4070ab35e34ea8a458df
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084884"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +69,9 @@ sp_update_jobstep
   
 `[ @step_name = ] 'step_name'` É um novo nome para a etapa. *step_name*está **sysname**, com um padrão NULL.  
   
-`[ @subsystem = ] 'subsystem'` O subsistema usado pelo Microsoft SQL Server Agent para executar *comando*. *subsistema* está **nvarchar(40)**, com um padrão NULL.  
+`[ @subsystem = ] 'subsystem'` O subsistema usado pelo Microsoft SQL Server Agent para executar *comando*. *subsistema* está **nvarchar(40)** , com um padrão NULL.  
   
-`[ @command = ] 'command'` O comando a ser executado por meio *subsistema*. *comando* está **nvarchar (max)**, com um padrão NULL.  
+`[ @command = ] 'command'` O comando a ser executado por meio *subsistema*. *comando* está **nvarchar (max)** , com um padrão NULL.  
   
 `[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -100,7 +99,7 @@ sp_update_jobstep
   
 `[ @on_fail_step_id = ] fail_step_id` O número de identificação da etapa neste trabalho a ser executado se a etapa falhar e *fail_action* é **4**. *fail_step_id* está **int**, com um padrão NULL.  
   
-`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *servidor* está **nvarchar (128)**, com um padrão NULL.  
+`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *servidor* está **nvarchar (128)** , com um padrão NULL.  
   
 `[ @database_name = ] 'database'` O nome do banco de dados no qual executar um [!INCLUDE[tsql](../../includes/tsql-md.md)] etapa. *banco de dados*está **sysname**. Os nomes entre colchetes ([ ]) não são permitidos. O valor padrão é NULL.  
   
@@ -112,7 +111,7 @@ sp_update_jobstep
   
 `[ @os_run_priority = ] run_priority` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @output_file_name = ] 'file_name'` O nome do arquivo no qual a saída desta etapa é salvo. *file_name* está **nvarchar(200)**, com um padrão NULL. Este parâmetro é válido somente com comandos executados nos subsistemas do [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CmdExec.  
+`[ @output_file_name = ] 'file_name'` O nome do arquivo no qual a saída desta etapa é salvo. *file_name* está **nvarchar(200)** , com um padrão NULL. Este parâmetro é válido somente com comandos executados nos subsistemas do [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CmdExec.  
   
  Para definir output_file_name novamente como NULL, você deve definir *output_file_name* em uma cadeia de caracteres vazia (' ') ou em uma cadeia de caracteres em branco, mas você não pode usar o **CHAR(32)** função. Por exemplo, defina este argumento como uma cadeia de caracteres vazios como segue:  
   

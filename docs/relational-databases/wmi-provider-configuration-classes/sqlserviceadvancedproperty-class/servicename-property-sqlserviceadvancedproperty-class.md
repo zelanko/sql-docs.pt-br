@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c8d7d12cc2a9c5f071a3ae4f2e5b72bd4ccc20dc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7490394c8e1949de48585e151dad37663d40f95b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681054"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091875"
 ---
 # <a name="servicename-property-sqlserviceadvancedproperty-class"></a>Propriedade ServiceName (classe SqlServiceAdvancedProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ object.ServiceName [= value]
  *object*  
  Um objeto da [classe SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) que representa uma propriedade avançada.  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
  Um valor da cadeia de caracteres que especifica o nome do serviço associado com a propriedade avançada.  
   
 ## <a name="remarks"></a>Comentários  

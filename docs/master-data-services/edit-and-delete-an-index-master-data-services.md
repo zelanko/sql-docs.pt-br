@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b938ee83469579e5440697205856de32ea41ea1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 106a496bd1bd7acb0895de2bc41438ef76cbea1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086435"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>Editar e excluir um índice (Master Data Services)
 
@@ -24,7 +23,7 @@ ms.locfileid: "65487022"
 
   É possível editar e excluir um índice que tenha sido criado nos atributos.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional Administração do Sistema. Para obter mais informações, consulte [Permissões de área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  

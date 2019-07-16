@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 83cb2faad86268c3270e9386ca10b25e4807e030
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 1fee0aa76bc5b903d65461261a8eb5dbc2349581
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793755"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087760"
 ---
 # <a name="unicode-function-arguments"></a>Argumentos da função Unicode
 O Gerenciador de Driver ODBC 3.5 (ou superior) dá suporte a versões ANSI e Unicode de todas as funções que aceitam ponteiros para cadeias de caracteres ou SQLPOINTER em seus argumentos. As funções do Unicode são implementadas como funções (com um sufixo *W*), e não como macros. As funções ANSI (que pode ser chamado com ou sem um sufixo *um*) são idênticas as funções API ODBC atuais.  

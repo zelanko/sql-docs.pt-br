@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 82aedab7b83cadd43ac649837ef848b8a8471613
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e46fe3243f39f8783743bf11e08b6368d67116eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62644940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091897"
 ---
 # <a name="xpsscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **cadeia de caracteres**  
+ **string**  
  É a cadeia de caracteres a partir da qual os valores de argumentos serão lidos.  
   
  OUTPUT  

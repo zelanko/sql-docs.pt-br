@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 537c5bfa6e1da125b562d4cc26820a2fcb5618fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 807a8d7e5757a2caf76f100a1ae51c4a8a3f4e98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931146"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
 Especifica se um arquivo deve ser criado ou substituído quando salvar uma [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto. Os valores podem ser **adSaveCreateNotExist** ou **adSaveCreateOverWrite**...  

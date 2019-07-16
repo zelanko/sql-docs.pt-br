@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4e368a2957e8caf8b83541e8cf0e1fd158f8eeb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9c800ecf5eabd6c97ab3f0c96dec998d911d11c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092406"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Enviar um arquivo de consulta de atalho por email (suplemento MDS para Excel)
 
@@ -24,7 +23,7 @@ ms.locfileid: "65488065"
 
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], envie um arquivo de consulta de atalho por email para alguém quando desejar garantir que ele trabalhe com os mesmos dados que você. Você deve compartilhar consultas em vez de salvar a planilha e enviá-la por email.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter o Outlook 2010 ou posterior instalado.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db287e729678f54aaf637950c89c724724678f08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f748e75f4e1579446b72b519356f2f649889fe0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078971"
 ---
 # <a name="was-a-result-set-created"></a>Um conjunto de resultados foi criado?
 Na maioria das situações, os programadores de aplicativos saber se as instruções de que seu aplicativo executa criará um conjunto de resultados. Esse é o caso se o aplicativo usa instruções SQL embutido em código escritas pelo programador. Normalmente é o caso quando o aplicativo constrói instruções SQL em tempo de execução: O programador pode incluir facilmente o código que sinaliza se um **selecionar** instrução ou um **inserir** instrução está sendo construída. Em algumas situações, o programador não é possível saber se uma instrução criará um conjunto de resultados. Isso é verdadeiro se o aplicativo fornece uma maneira para o usuário inserir e executar uma instrução SQL. Ele também é verdadeiro quando o aplicativo constrói uma instrução em tempo de execução para executar um procedimento.  

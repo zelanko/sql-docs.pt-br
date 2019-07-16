@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 57fee409bbaa286f052c2fa11e15a956fcd7d540
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0a2cf94ed3575a6da1ec072e9cf19df0b467741
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699224"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086240"
 ---
 # <a name="sysmailsentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +31,11 @@ ms.locfileid: "47699224"
   
  Para ver todas as mensagens processadas pelo Database Mail, use [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). Para ver somente mensagens com o status de falha, use [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Para ver apenas unsent ou tentar novamente mensagens, use [sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Para ver os anexos de email, use [sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md).  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificador do item de email na fila de email.|  
 |**profile_id**|**int**|O identificador do perfil usado para enviar a mensagem.|  
-|**destinatários**|**varchar(max)**|Os endereços de email dos destinatários da mensagem.|  
+|**recipients**|**varchar(max)**|Os endereços de email dos destinatários da mensagem.|  
 |**copy_recipients**|**varchar(max)**|Os endereços de email daqueles que recebem cópias da mensagem.|  
 |**blind_copy_recipients**|**varchar(max)**|Os endereços de email daqueles que recebem cópias da mensagem, mas cujos nomes não aparecem no cabeçalho.|  
 |**subject**|**nvarchar(510)**|A linha de assunto da mensagem.|  

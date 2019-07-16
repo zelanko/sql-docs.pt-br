@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a3084f7b98edc3c9159576ae19323baeaa1b105
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bc10288e7dbe204633eef70f9affb07855ae3e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62684034"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053324"
 ---
 # <a name="sysdmresourcegovernorresourcepools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "62684034"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|ID do pool de recursos. Não permite valor nulo.|  
-|nome|**sysname**|O nome do pool de recursos. Não permite valor nulo.|  
+|name|**sysname**|O nome do pool de recursos. Não permite valor nulo.|  
 |statistics_start_time|**datetime**|O momento em que as estatísticas deste pool foram redefinidas. Não permite valor nulo.|  
 |total_cpu_usage_ms|**bigint**|O uso cumulativo de CPU em milissegundos desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo.|  
 |cache_memory_kb|**bigint**|O uso de memória cache total atual em quilobytes. Não permite valor nulo.|  

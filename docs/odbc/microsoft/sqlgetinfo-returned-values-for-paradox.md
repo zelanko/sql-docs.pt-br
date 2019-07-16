@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3bdeddbd8e2b94fe28f3086c7d2f4a96318cc8ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8745580b1e478c2cfa9548887affb64e07322779
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898813"
 ---
 # <a name="sqlgetinfo-returned-values-for-paradox"></a>Valores retornados SQLGetInfo para Paradox
 A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os valores correspondentes retornados pelo **SQLGetInfo**. Essas informações podem ser recuperadas, passando a linguagem listada C# defines **SQLGetInfo** na *fInfoType* argumento. Para obter mais informações sobre os valores retornados pelo **SQLGetInfo**, consulte o *referência do programador de ODBC*.  
@@ -30,7 +29,7 @@ A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os
 > [!NOTE]  
 >  Em que **SQLGetInfo** retorna um bitmask de 32 bits, uma barra vertical (&#124;) representa um OR bit a bit.  
   
-|InfoType|Valor retornado|  
+|tipo de informação|Valor retornado|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  

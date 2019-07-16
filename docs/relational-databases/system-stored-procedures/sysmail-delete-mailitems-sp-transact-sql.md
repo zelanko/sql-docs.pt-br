@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3a8549d33b000744f4d8430ee306e0083455894c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 23ecda5fd8d91f20133eb2295d38dc9d9ace66f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069099"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- Mensagens do Database Mail e seus anexos são armazenados na **msdb** banco de dados. As mensagens devem ser excluídas periodicamente para evitar **msdb** fique maior do que o esperado e para estar em conformidade com seu programa de retenção de documentos de organizações. Use o **sysmail_delete_mailitems_sp** procedimento armazenado para excluir permanentemente as mensagens de email das tabelas do Database Mail. Um argumento opcional permite excluir somente os emails mais antigos fornecendo uma data e hora. Os emails mais antigos que o argumento serão excluídos. Outro argumento opcional permite excluir somente os emails de um determinado tipo, especificado como o **sent_status** argumento. Você deve fornecer um argumento para **@sent_before** ou **@sent_status**. Para excluir todas as mensagens, use  **@sent_before = getDate ()**.  
+ Mensagens do Database Mail e seus anexos são armazenados na **msdb** banco de dados. As mensagens devem ser excluídas periodicamente para evitar **msdb** fique maior do que o esperado e para estar em conformidade com seu programa de retenção de documentos de organizações. Use o **sysmail_delete_mailitems_sp** procedimento armazenado para excluir permanentemente as mensagens de email das tabelas do Database Mail. Um argumento opcional permite excluir somente os emails mais antigos fornecendo uma data e hora. Os emails mais antigos que o argumento serão excluídos. Outro argumento opcional permite excluir somente os emails de um determinado tipo, especificado como o **sent_status** argumento. Você deve fornecer um argumento para **@sent_before** ou **@sent_status** . Para excluir todas as mensagens, use  **@sent_before = getDate ()** .  
   
  A exclusão de email também exclui anexos relacionados a essas mensagens. A exclusão de email não exclui as entradas correspondentes no **sysmail_event_log**. Use [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) para excluir itens do log.  
   

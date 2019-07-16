@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ecdbff5b071ae82fe8bd8322c1ef9d46f153b0cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 785d65d17f1f14cc7fb2e7b7ec80b609d2950fb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092477"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Alterar o tipo de atributo (suplemento MDS para Excel)
 
@@ -29,7 +28,7 @@ ms.locfileid: "65488901"
 > [!NOTE]  
 >  Não é possível atualizar o tipo ou o tamanho da coluna **Nome** ou **Código**.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você precisa ter permissão para acessar as áreas funcionais **Administração do Sistema** e **Gerenciador** .  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e63ca7d4-47d6-455e-9aac-421f9683dadc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 619f6d44f1918220b1e6d5a7227f7ea29818c5a9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6aadde09a22d766033704dffe0ecc8b4247954c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526388"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096040"
 ---
 # <a name="sptestlinkedserver-transact-sql"></a>sp_testlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_testlinkedserver [ @servername ] = servername
 `[ @servername = ]servername` É o nome do servidor vinculado. *servername* está **sysname**, sem nenhum valor padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Nenhuma permissão é verificada; porém, o chamador deve ter o mapeamento de logon apropriado.  

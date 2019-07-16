@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 65bc88be1b9a6cdb9a69d41a526916ab3aa7ab2a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 07dc611371cbff373fb60036c8c16da6656a8de1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088589"
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,15 +44,15 @@ ms.locfileid: "56031827"
 |**wszArtdesttable**|**nvarchar(514)**|Nome do objeto publicado no destino.|  
 |**wszArtdesttableowner**|**nvarchar(514)**|Proprietário do objeto publicado no destino.|  
 |**wszArtinscmd**|**nvarchar(510)**|Comando ou procedimento armazenado usado para inserções.|  
-|**cmdTypeIns**|**int**|Sintaxe de chamada do procedimento armazenado de inserção, podendo ser um destes valores.<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **7** = UNKNOWN|  
+|**cmdTypeIns**|**int**|Sintaxe de chamada do procedimento armazenado de inserção, podendo ser um destes valores.<br /><br /> **1** = CHAMADA DE<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **7** = DESCONHECIDO|  
 |**wszArtdelcmd**|**nvarchar(510)**|Comando ou procedimento armazenado usado em exclusões.|  
-|**cmdTypeDel**|**int**|Sintaxe de chamada do procedimento armazenado de exclusão, podendo ser um destes valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **7** = UNKNOWN|  
+|**cmdTypeDel**|**int**|Sintaxe de chamada do procedimento armazenado de exclusão, podendo ser um destes valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CHAMADA DE<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **7** = DESCONHECIDO|  
 |**wszArtupdcmd**|**nvarchar(510)**|Comando ou procedimento armazenado usado em atualizações.|  
-|**cmdTypeUpd**|**int**|Sintaxe de chamada do procedimento armazenado de atualização, podendo ser um destes valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = UNKNOWN|  
+|**cmdTypeUpd**|**int**|Sintaxe de chamada do procedimento armazenado de atualização, podendo ser um destes valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CHAMADA DE<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = DESCONHECIDO|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|Comando ou procedimento armazenado usado em atualizações parciais.|  
 |**cmdTypePartialUpd**|**int**|Sintaxe de chamada do procedimento armazenado de atualização parcial, podendo ser um destes valores.<br /><br /> **2** = SQL|  
 |**numcol**|**int**|Número de colunas na partição de um artigo filtrado verticalmente.|  
-|**artcmdtype**|**tinyint**|Tipo de comando atualmente sendo replicado, podendo ser um destes valores.<br /><br /> **1** = INSERT<br /><br /> **2** = DELETE<br /><br /> **3** = UPDATE<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = nenhum<br /><br /> **6** = somente para uso interno<br /><br /> **7** = somente para uso interno<br /><br /> **8** = UPDATE parcial|  
+|**artcmdtype**|**tinyint**|Tipo de comando atualmente sendo replicado, podendo ser um destes valores.<br /><br /> **1** = INSERIR<br /><br /> **2** = EXCLUIR<br /><br /> **3** = ATUALIZAÇÃO<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = nenhum<br /><br /> **6** = somente para uso interno<br /><br /> **7** = somente para uso interno<br /><br /> **8** = UPDATE parcial|  
 |**artgeninscmd**|**nvarchar(510)**|Modelo de comando INSERT baseado nas colunas incluídas no artigo.|  
 |**artgendelcmd**|**nvarchar(510)**|Modelo de comando DELETE, que pode incluir a chave primária ou as colunas incluídas no artigo, dependendo de a sintaxe de chamada ser usada ou não.|  
 |**artgenupdcmd**|**nvarchar(510)**|Modelo de comando UPDATE, que pode incluir a chave primária, colunas atualizadas ou uma lista de colunas completa, dependendo de a sintaxe de chamada ser usada ou não.|  

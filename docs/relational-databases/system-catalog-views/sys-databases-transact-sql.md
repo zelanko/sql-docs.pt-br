@@ -1,5 +1,5 @@
 ---
-title: sys.databases (Transact-SQL) | Microsoft Docs
+title: sys. Databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbb52087baa5c11f972ae531f6c619352fbd13a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6817e41f48df740a59e371da9b78e09dd6894af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079394"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -117,7 +116,7 @@ Se um banco de dados não for `ONLINE`, ou `AUTO_CLOSE` é definido como `ON` e 
 |**is_temporal_retention_enabled**|**bit**|Indica se a tarefa de limpeza de política de retenção temporal está habilitada.<br /> **Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|A configuração de agrupamento de catálogo:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|A configuração de agrupamento de catálogo:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on is on</br>0 = is_result_set_caching_on is off</br>**Aplica-se ao**: Azure SQL Data Warehouse Gen2. Embora esse recurso está sendo distribuída para todas as regiões, verifique se a versão implantada em sua instância e a versão mais recente [notas de versão do SQL DW do Azure](/azure/sql-data-warehouse/release-notes-10-0-10106-0) para disponibilidade de recursos.|
+|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on está em</br>0 = is_result_set_caching_on está desativado</br>**Aplica-se ao**: Azure SQL Data Warehouse Gen2. Embora esse recurso está sendo distribuída para todas as regiões, verifique se a versão implantada em sua instância e a versão mais recente [notas de versão do SQL DW do Azure](/azure/sql-data-warehouse/release-notes-10-0-10106-0) para disponibilidade de recursos.|
   
 ## <a name="permissions"></a>Permissões  
  Se o chamador de `sys.databases` não for o proprietário do banco de dados e o banco de dados não é `master` ou `tempdb`, as permissões mínimas necessárias para ver a linha correspondente serão `ALTER ANY DATABASE` ou o `VIEW ANY DATABASE` permissão de nível de servidor, ou `CREATE DATABASE` permissão no `master` banco de dados. O banco de dados ao qual o chamador está conectado sempre pode ser exibido em `sys.databases`.  

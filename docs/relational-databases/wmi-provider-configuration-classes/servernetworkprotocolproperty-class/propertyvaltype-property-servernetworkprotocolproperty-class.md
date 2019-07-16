@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fbd42e8e-0642-4a19-b3c8-6ce88345145f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 162283486f6e0126c78bcee7c2ca2f4094744b3b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bb4daf3fda674de6f7fab730cdc6245312c5a0dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019918"
 ---
 # <a name="propertyvaltype-property-servernetworkprotocolproperty-class"></a>Propriedade PropertyValType (classe ServerNetworkProtocolProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ object.PropertyValType [= value]
  *object*  
  A [classe ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) que representa um atributo do protocolo de rede na instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
  Um **uint32** valor que especifica o tipo de dados do valor da propriedade. Retorna 0 para um valor da cadeia de caracteres e 1 para um tipo numérico.  
   
 ## <a name="remarks"></a>Comentários  

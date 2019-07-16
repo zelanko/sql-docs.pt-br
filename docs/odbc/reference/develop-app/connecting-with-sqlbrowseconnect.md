@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6c2e9f76-b766-48df-b109-246bb05ae45d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec1cd42e6704bc5168b1eb20841100fc279a66ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04df089b97bf385925c87a98b3f89cdac3ef21e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083129"
 ---
 # <a name="connecting-with-sqlbrowseconnect"></a>Conectar-se com o SQLBrowseConnect
 **SQLBrowseConnect**, como **SQLDriverConnect**, usa uma cadeia de caracteres de conexão. No entanto, usando **SQLBrowseConnect**, um aplicativo pode construir uma cadeia de caracteres de conexão completa no tempo de execução. Isso permite que o aplicativo faça duas tarefas:  

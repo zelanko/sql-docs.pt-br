@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 326dc32a-30e5-4f91-85ab-84663db41279
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3d7221f349b4ef94bad376488f2d073c0319da91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93e30d470e074c119517621f3bb12d8f06c942ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949748"
 ---
 # <a name="hierarchies-collection-properties-methods-and-events"></a>Propriedades, métodos e eventos da coleção Hierarchies
 ## <a name="properties"></a>Propriedades  
@@ -30,7 +29,7 @@ ms.locfileid: "66709172"
  [Método Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Events  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="see-also"></a>Consulte também  
  [Coleção Hierarchies (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)

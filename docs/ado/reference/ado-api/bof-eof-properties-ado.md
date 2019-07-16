@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9a449c0e635c7fe0e63bc1f4d8b1b0b91712135d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696283"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920382"
 ---
 # <a name="bof-eof-properties-ado"></a>Propriedades BOF, EOF (ADO)
 -   **BOF** indica que a posição do registro atual está antes do primeiro registro em um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -51,7 +50,7 @@ ms.locfileid: "66696283"
 ||MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> Mover < 0|Mover 0|MoveNext,<br /><br /> Mover > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
 |**BOF**=**verdadeiro**, **EOF**=**False**|Allowed (permitido)|Erro|Erro|Allowed (permitido)|  
-|**BOF**=**False**, **EOF**=**True**|Allowed (permitido)|Allowed (permitido)|Erro|Erro|  
+|**BOF**=**falso**, **EOF**=**True**|Allowed (permitido)|Allowed (permitido)|Erro|Erro|  
 |Ambos **True**|Erro|Erro|Erro|Erro|  
 |Ambos **False**|Allowed (permitido)|Allowed (permitido)|Allowed (permitido)|Allowed (permitido)|  
   
@@ -62,9 +61,9 @@ ms.locfileid: "66696283"
 ||BOF|EOF|  
 |------|---------|---------|  
 |**MoveFirst**, **MoveLast**|Definido como **True**|Definido como **True**|  
-|**Move** 0|Nenhuma alteração|Nenhuma alteração|  
+|**Mover** 0|Nenhuma alteração|Nenhuma alteração|  
 |**MovePrevious**, **mover** < 0|Definido como **True**|Nenhuma alteração|  
-|**MoveNext**, **Move** > 0|Nenhuma alteração|Definido como **True**|  
+|**MoveNext**, **mover** > 0|Nenhuma alteração|Definido como **True**|  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
