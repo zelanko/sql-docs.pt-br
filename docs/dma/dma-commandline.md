@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 18ac429a536b657b7f7c0cf91c100eed8a152e52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed669adc19dddc96ba953ba73f73805925968d19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058908"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Executar o Assistente de migração de dados da linha de comando
 
-Com a versão 2.1 e posterior, quando você instala o Assistente de migração de dados, ele também instalará dmacmd.exe na *% ProgramFiles %\\Assistente de migração de dados da Microsoft\\*. Use dmacmd.exe para avaliar seus bancos de dados em um modo autônomo e o resultado para o arquivo CSV ou JSON de saída. Esse método é especialmente útil ao avaliar vários bancos de dados ou bancos de dados grandes. 
+Com a versão 2.1 e posterior, quando você instala o Assistente de migração de dados, ele também instalará dmacmd.exe na *% ProgramFiles %\\Assistente de migração de dados da Microsoft\\* . Use dmacmd.exe para avaliar seus bancos de dados em um modo autônomo e o resultado para o arquivo CSV ou JSON de saída. Esse método é especialmente útil ao avaliar vários bancos de dados ou bancos de dados grandes. 
 
 > [!NOTE]
 > Dmacmd.exe dá suporte à execução apenas para avaliações. Não há suporte para migrações no momento.
@@ -46,7 +45,7 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | Como usar o texto de ajuda de dmacmd.exe        | N
 |`/AssessmentName`     |   Nome do projeto de avaliação   | S
 |`/AssessmentDatabases`     | Lista delimitada por espaço de cadeias de caracteres de conexão. Nome do banco de dados (catálogo inicial) diferencia maiusculas de minúsculas. | S
-|`/AssessmentSourcePlatform`     | Plataforma de origem para a avaliação: <br>Valores com suporte para a avaliação: SqlOnPrem, RdsSqlServer (default) <br>Valores com suporte para a avaliação de prontidão de destino: SqlOnPrem RdsSqlServer (padrão), Cassandra (versão prévia)   | N
+|`/AssessmentSourcePlatform`     | Plataforma de origem para a avaliação: <br>Valores com suporte para a avaliação: SqlOnPrem, RdsSqlServer (padrão) <br>Valores com suporte para a avaliação de prontidão de destino: SqlOnPrem RdsSqlServer (padrão), Cassandra (versão prévia)   | N
 |`/AssessmentTargetPlatform`     | Plataforma de destino para a avaliação:  <br> Valores com suporte para a avaliação: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, lt;sqlserver2014, SqlServer2016, SqlServerLinux2017 e SqlServerWindows2017 (padrão)  <br> Valores com suporte para a avaliação de prontidão de destino: ManagedSqlServer (padrão), o cosmos DB (versão prévia)   | N
 |`/AssessmentEvaluateFeatureParity`  | Execute as regras de paridade de recurso. Se a plataforma de origem é RdsSqlServer, avaliação de paridade de recurso não tem suporte para a plataforma de destino AzureSqlDatabase  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | Executar regras de compatibilidade  | S <br> (AssessmentEvaluateCompatibilityIssues ou AssessmentEvaluateRecommendations é necessário.)
@@ -257,9 +256,9 @@ Esses comandos recomendações de suporte para o banco de dados individual do ba
 |`/SkuRecommendationJsonOutputResultsFilePath` | Caminho completo para o arquivo de resultado JSON | S <br> (Requer o caminho do arquivo TSV ou JSON ou HTML)
 |`/SkuRecommendationHtmlResultsFilePath` | Caminho completo para o arquivo de resultado HTML | S <br> (Requer o caminho do arquivo TSV ou JSON ou HTML)
 |`/SkuRecommendationPreventPriceRefresh` | Impede que o preço de atualização ocorra. Use se executando no modo offline (por exemplo, true). | S <br> (Selecione qualquer um desse argumento para preços estáticos ou abaixo de todos os argumentos precisam ser selecionados para obter os preços mais recentes)
-|`/SkuRecommendationCurrencyCode` | A moeda na qual exibir os preços (por exemplo "USD") | S <br> (Para os preços mais recentes)
-|`/SkuRecommendationOfferName` | A oferta de nome (por exemplo "MS-AZR-0003P"). Para obter mais informações, consulte o [detalhes da oferta do Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) página. | S <br> (Para os preços mais recentes)
-|`/SkuRecommendationRegionName` | A região (por exemplo, nomeie "WestUS") | S <br> (Para os preços mais recentes)
+|`/SkuRecommendationCurrencyCode` | A moeda na qual exibir os preços (por exemplo "US") | S <br> (Para os preços mais recentes)
+|`/SkuRecommendationOfferName` | A oferta de nome (por exemplo "MS-AZR - 0003P"). Para obter mais informações, consulte o [detalhes da oferta do Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) página. | S <br> (Para os preços mais recentes)
+|`/SkuRecommendationRegionName` | A região (por exemplo, nomeie "Oeste dos EUA") | S <br> (Para os preços mais recentes)
 |`/SkuRecommendationSubscriptionId` | A ID da assinatura. | S <br> (Para os preços mais recentes)
 |`/SkuRecommendationDatabasesToRecommend` | Lista separada por espaços dos bancos de dados a ser recomendado (por exemplo "Database1" "Database2" "Database3"). Nomes diferenciam maiusculas de minúsculas e devem ser colocados entre aspas duplas. Se omitido, as recomendações são fornecidas para todos os bancos de dados. | N
 |`/AzureAuthenticationTenantId` | O locatário de autenticação. | S <br> (Para os preços mais recentes)

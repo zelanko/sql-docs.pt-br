@@ -4,18 +4,17 @@ titleSuffix: SQL Server
 description: Este início rápido mostra como executar o SQL Server em Linux na sua nuvem preferida.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/25/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 00b2f24de925c1d957e535030079ad0b1e18487d
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 39cde4a4f3b4e970bfe1367432e986c48f55a975
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910518"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>Início Rápido: Executar o SQL Server na nuvem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -27,7 +26,7 @@ Neste início rápido, você instalará o SQL Server no Red Hat Enterprise Linux
 
 ## <a name="amazon-web-services"></a>Amazon Web Services
 1.  Criar um AMI Linux com pelo menos 2 GB de memória do marketplace 
-    * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
+    * [RHEL 7.3 +](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  Conectar-se para o AMI com ssh
@@ -53,7 +52,7 @@ Neste início rápido, você instalará o SQL Server no Red Hat Enterprise Linux
     
 ## <a name="google-cloud-platform"></a>Plataforma de nuvem do Google
 1.  Criar uma imagem do Linux com pelo menos 2 GB de memória do que o iniciador de nuvem 
-    * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
+    * [RHEL 7.3 +](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  Conectar-se para a imagem com ssh

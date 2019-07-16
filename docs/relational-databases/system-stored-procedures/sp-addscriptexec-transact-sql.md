@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 97e6d74a619bc19571dda69a63ac8b3caf27f6d3
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: e8ae792ba7f8422e841abbbe2f80b096497df993
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022453"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_addscriptexec [ @publication = ] publication
 ## <a name="arguments"></a>Argumentos  
 `[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
-`[ @scriptfile = ] 'scriptfile'` É o caminho completo para o arquivo de script SQL. *ScriptFile* está **nvarchar (4000)**, sem padrão.  
+`[ @scriptfile = ] 'scriptfile'` É o caminho completo para o arquivo de script SQL. *ScriptFile* está **nvarchar (4000)** , sem padrão.  
   
 `[ @skiperror = ] 'skiperror'` Indica se o Distribution Agent ou Merge Agent deve parar quando um erro é encontrado durante o processamento de script. *SkipError* está **bit**, com um padrão de 0.  
   

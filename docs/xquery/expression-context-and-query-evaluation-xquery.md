@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f8092182bff23580936e17923985739525309097
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038923"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Contexto de expressão e avaliação de consulta (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ ms.locfileid: "54256871"
   
 -   Se a consulta com um tipo **xml** coluna ou variável, os componentes da coleção de esquemas XML associada com a coluna ou variável são importados para o contexto estático. Para obter mais informações, consulte [Comparar XML digitado com XML não digitado](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
--   Para todo tipo atômico nos esquemas importados, uma função de conversão também se torna disponível no contexto estático. Isso é ilustrado no exemplo a seguir. Neste exemplo, uma consulta é especificada em relação a um tipado **xml** variável. A coleção de esquemas XML associada a essa variável define um tipo atômico, myType. Correspondendo a esse tipo, uma função de conversão **myType()**, está disponível durante a análise estática. A expressão de consulta (`ns:myType(0)`) retorna um valor de myType.  
+-   Para todo tipo atômico nos esquemas importados, uma função de conversão também se torna disponível no contexto estático. Isso é ilustrado no exemplo a seguir. Neste exemplo, uma consulta é especificada em relação a um tipado **xml** variável. A coleção de esquemas XML associada a essa variável define um tipo atômico, myType. Correspondendo a esse tipo, uma função de conversão **myType()** , está disponível durante a análise estática. A expressão de consulta (`ns:myType(0)`) retorna um valor de myType.  
   
     ```  
     -- DROP XML SCHEMA COLLECTION SC  

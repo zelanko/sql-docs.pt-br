@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_loaded_modules (Transact-SQL) | Microsoft Docs
+title: DM os_loaded_modules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3967e3f8548a7b8ef804d054cf746243a8fb5b96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f43e03e482bb7125100ed7bed56337fb75a2e711
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047183"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900085"
 ---
 # <a name="sysdmosloadedmodules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +38,8 @@ ms.locfileid: "63047183"
 |**base_address**|**varbinary(8)**|Endereço do módulo no processo.|  
 |**file_version**|**varchar(23)**|Versão do arquivo Aparece no seguinte formato:<br /><br /> x.x:x.x|  
 |**product_version**|**varchar(23)**|Versão do produto. Aparece no seguinte formato:<br /><br /> x.x:x.x|  
-|**debug**|**bit**|1 = O módulo é uma versão de depuração do módulo carregado.|  
-|**patched**|**bit**|1 = O módulo foi corrigido.|  
+|**Depurar**|**bit**|1 = O módulo é uma versão de depuração do módulo carregado.|  
+|**corrigido**|**bit**|1 = O módulo foi corrigido.|  
 |**prerelease**|**bit**|1 = O módulo é uma versão de pré-lançamento do módulo carregado.|  
 |**private_build**|**bit**|1 = O módulo é uma compilação privada do módulo carregado.|  
 |**special_build**|**bit**|1 = módulo é uma versão especial do módulo carregado.|  

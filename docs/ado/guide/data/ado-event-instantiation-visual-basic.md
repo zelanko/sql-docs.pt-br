@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 590a3c282492fd07a86eae1715ffc9b027764fac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ead713a37d4ecf8bdfecd0d6c485684d1ad0777f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926074"
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>Instanciação de evento ADO: Visual Basic
 Para tratar eventos ADO no Microsoft® Visual Basic®, você deve declarar uma variável de nível de módulo usando o **WithEvents** palavra-chave. A variável pode ser declarada somente como parte de um módulo de classe e deve ser declarada no nível de módulo. Isso não é tão restritivo quanto parece, no entanto, como Visual Basic **formulário** objetos também são classes. A maneira mais simples para lidar com eventos ADO é declarar uma variável usando **WithEvents**. A exemplo a seguir identifica os **eventos ConnectComplete** evento para um **Conexão** objeto:  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 18e1e0c1-b43f-44d9-b310-7d9e1d499e8b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 072373adbca54132b3f1f34284d12c31f721e7c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85511a9997ccbae0ebe4838218d43bc997344085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997781"
 ---
 # <a name="scalar-functions"></a>Funções escalares
 Os Drivers de banco de dados de área de trabalho do Microsoft ODBC dão suporte as funções escalares a seguir:  

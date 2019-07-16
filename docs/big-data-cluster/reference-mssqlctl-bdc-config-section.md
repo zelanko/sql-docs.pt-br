@@ -5,17 +5,16 @@ description: Artigo de referência para comandos de seção de configuração ms
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3ca96ddbbf64b04e8ccd8854a8338fe6e118debb
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 3f3ba7854b4df63495926e4cc207de7cbe6a9378
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958199"
 ---
 # <a name="mssqlctl-bdc-config-section"></a>seção de configuração do bdc mssqlctl
 

@@ -11,25 +11,24 @@ dev_langs:
 ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 634cded452697c91dfd2ff60635faa7fe1163958
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 35868774efc7083b835bb6f44b6c71cbffc7ae2c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899203"
 ---
 # <a name="sysdmpdwresourcewaits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Exibe espera informações para todos os tipos de recurso em [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|Posição da solicitação na lista de espera.|ordinal com base em 0. Ele não é exclusivo em todas as entradas de espera.|  
 |session_id|**nvarchar(32)**|ID da sessão na qual ocorreu o estado de espera.|Consulte session_id [DM pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|Tipo|**nvarchar(255)**|Tipo de espera que essa entrada representa.|Valores possíveis:<br /><br /> Conexão<br /><br /> Simultaneidade de consultas locais<br /><br /> Simultaneidade de consultas distribuídas<br /><br /> Simultaneidade do DMS<br /><br /> Simultaneidade de backup|  
+|type|**nvarchar(255)**|Tipo de espera que essa entrada representa.|Valores possíveis:<br /><br /> Conexão<br /><br /> Simultaneidade de consultas locais<br /><br /> Simultaneidade de consultas distribuídas<br /><br /> Simultaneidade do DMS<br /><br /> Simultaneidade de backup|  
 |object_type|**nvarchar(255)**|Tipo de objeto que é afetado pelo tempo de espera.|Valores possíveis:<br /><br /> **OBJECT**<br /><br /> **DATABASE**<br /><br /> **SYSTEM**<br /><br /> **SCHEMA**<br /><br /> **APLICATIVO**|  
 |object_name|**nvarchar(386)**|Nome ou GUID do objeto especificado que foi afetado por tempo de espera.|Tabelas e exibições são exibidas com nomes de três partes.<br /><br /> Índices e estatísticas são exibidas com nomes de quatro partes.<br /><br /> Nomes de entidades de segurança e bancos de dados são nomes de cadeia de caracteres.|  
 |request_id|**nvarchar(32)**|ID da solicitação em que ocorreu o estado de espera.|Identificador QID da solicitação.<br /><br /> Identificador GUID para solicitações de carga.|  

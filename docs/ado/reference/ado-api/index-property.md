@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 21f8ec6ea0ed9cd1af8257dcd10b18f59903c929
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba871d6d0e84b8068cb36a3ed2516a2665db28d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932432"
 ---
 # <a name="index-property"></a>Propriedade Index
 Indica o nome do índice atualmente em vigor para um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -46,7 +45,7 @@ Indica o nome do índice atualmente em vigor para um [Recordset](../../../ado/re
   
  Se o índice pode ser definido e o [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) é de propriedade **adLockPessimistic** ou **adLockOptimistic**, em seguida, implícito [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) operação é executada. Isso libera os grupos afetados e atuais. Qualquer filtro existente é liberado, e a posição da linha atual é alterada para a primeira linha da reordenados **conjunto de registros**.  
   
- O **índice** propriedade é usada em conjunto com o [busca](../../../ado/reference/ado-api/seek-method.md) método. Se o provedor subjacente não dá suporte a **índice** propriedade e, portanto, o **busca** método, considere o uso a [localizar](../../../ado/reference/ado-api/find-method-ado.md) método em vez disso. Determinar se o **conjunto de registros** objeto dá suporte a índices com o [suporta](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** método.  
+ O **índice** propriedade é usada em conjunto com o [busca](../../../ado/reference/ado-api/seek-method.md) método. Se o provedor subjacente não dá suporte a **índice** propriedade e, portanto, o **busca** método, considere o uso a [localizar](../../../ado/reference/ado-api/find-method-ado.md) método em vez disso. Determinar se o **conjunto de registros** objeto dá suporte a índices com o [suporta](../../../ado/reference/ado-api/supports-method.md) **(adIndex)** método.  
   
  Interna **índice** propriedade não está relacionada a dinâmica [otimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriedade, embora ambos lidam com índices.  
   

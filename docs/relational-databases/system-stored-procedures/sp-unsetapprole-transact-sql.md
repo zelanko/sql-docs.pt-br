@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52a3c04463eb4384d48e333e6d81097a33fd9ac1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65fe8e1496fba4e622d63f1ce560aba4c1acfb83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022245"
 ---
 # <a name="spunsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +40,10 @@ sp_unsetapprole @cookie
   
 ## <a name="arguments"></a>Argumentos  
  **@cookie**  
- Especifica o cookie criado quando a função de aplicativo foi ativada. O cookie é criado pelo [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary(8000)**.  
+ Especifica o cookie criado quando a função de aplicativo foi ativada. O cookie é criado pelo [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary(8000)** .  
   
 > [!NOTE]  
->  O parâmetro **OUTPUT** de cookie para **sp_setapprole** está documentado atualmente como **varbinary(8000)** , que tem o tamanho máximo correto. No entanto, a implementação atual retorna **varbinary(50)**. Aplicativos devem continuar a reservar **varbinary(8000)** para que o aplicativo continue a operar corretamente se o cookie retornar aumentos de tamanho em uma versão futura.  
+>  O parâmetro **OUTPUT** de cookie para **sp_setapprole** está documentado atualmente como **varbinary(8000)** , que tem o tamanho máximo correto. No entanto, a implementação atual retorna **varbinary(50)** . Aplicativos devem continuar a reservar **varbinary(8000)** para que o aplicativo continue a operar corretamente se o cookie retornar aumentos de tamanho em uma versão futura.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) e 1 (falha)  

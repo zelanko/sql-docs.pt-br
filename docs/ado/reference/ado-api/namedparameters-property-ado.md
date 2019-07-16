@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 42409387-026c-435f-a9b1-bf4167095875
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ce517f4ba3f2fc4a80932024a8fe51ac285cdb7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d63c413ebed585782ca5ce0568119dd7e05bf8ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932069"
 ---
 # <a name="namedparameters-property-ado"></a>Propriedade NamedParameters (ADO)
 Indica se os nomes de parâmetro devem ser passados para o provedor.  

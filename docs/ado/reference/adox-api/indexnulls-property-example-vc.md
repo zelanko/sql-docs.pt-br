@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 00b3e27d847969ac59d61418f047f6831e9e2a9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b6a51a16abf767924ee83e93016743693a9f335
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965966"
 ---
 # <a name="indexnulls-property-example-vc"></a>Exemplo da propriedade IndexNulls (VC++)
 Este exemplo demonstra a [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) propriedade de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código cria um novo índice e define o valor de **IndexNulls** com base na entrada do usuário. Em seguida, o **índice** é acrescentado para o **funcionários** [tabela](../../../ado/reference/adox-api/table-object-adox.md) no *Northwind* [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md). O novo **índice** é aplicado a um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) com base no **funcionários** tabela e o **Recordset** é aberto. Um novo registro é adicionado para o **funcionários** tabela, com um **nulo** valor no campo indexado. Se este novo registro é exibido depende da configuração das **IndexNulls** propriedade.  

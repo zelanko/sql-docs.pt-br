@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2b8d842e9febc94d35f2a8c53c6106159f44423a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2951d4c3bf1eae73ffd066d796b0e3dda4d28cf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020957"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>Selecionar e configurar os objetos a testar (SybaseToSQL)
 Nesta etapa, você seleciona objetos a testar e definir as configurações para comparar procedimentos e dos funções parâmetros de saída, bem como os valores de retorno de funções.  

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3880573328f7143b90033f04e84ba1bd76eed654
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 764ba5c11e6ec4b41017e9839c46c0e8f4c8d70a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073470"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>Executando um DiffGram usando o ADO (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,7 +102,7 @@ End Sub
   
 6.  Edite o código para especificar os nomes do DiffGram e do arquivo XSD. Edite também a cadeia de conexão, conforme apropriado.  
   
-7.  Execute o aplicativo. O resultado da execução depende do DiffGram que você está executando.  
+7.  Executar o aplicativo. O resultado da execução depende do DiffGram que você está executando.  
 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1d216db1a0d8d83279babb2e772413dfb94889c2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946424"
 ---
 # <a name="path-expressions---specifying-node-test"></a>Expressões de Caminho – Especificar Teste de Nó
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -148,7 +147,7 @@ select @x.query('
   
  Essa expressão retorna o nó de elemento `<b>` e seus nós de elemento descendentes. Ao retornar os nós descendentes, o tipo de nó primário do eixo descendente ou independente, o tipo de nó de elemento, determina que tipo de nós são retornados.  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <b>text1  
@@ -170,7 +169,7 @@ select @x.query('
 /child::a/child::b/descendant::node()  
 ```  
   
- Porque `node()` é um tipo de nó, você receberá todos os nós do eixo descendente. Este é o resultado:  
+ Porque `node()` é um tipo de nó, você receberá todos os nós do eixo descendente. Esse é o resultado:  
   
 ```  
 text1  
@@ -202,7 +201,7 @@ text3
 ### <a name="b-specifying-a-node-name-in-the-node-test"></a>B. Especificando um nome de nó no node test  
  O exemplo a seguir especifica um nome de nó como o node test em todas as expressões de caminho. Como resultado, todas as expressões retornam nós do tipo de nó principal do eixo que tem o nome de nó especificado no node test.  
   
- A expressão de consulta a seguir retorna o elemento <`Warranty`> do documento XML do catálogo de produtos na tabela `Production.ProductModel`:  
+ A consulta a seguir retorna o <`Warranty`> elemento do documento XML do catálogo de produtos armazenados no `Production.ProductModel` tabela:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -222,9 +221,9 @@ WHERE ProductModelID=19
   
 -   A parte do qualificador de etapa opcional da etapa de eixo não é especificada nas etapas da expressão.  
   
- A consulta retorna os filhos do elemento <`Warranty`> do filho do elemento <`Features`> do elemento <`ProductDescription`>.  
+ A consulta retorna o <`Warranty`> filhos do elemento de <`Features`> do filho do elemento a <`ProductDescription`> elemento.  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <wm:Warranty xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
@@ -245,9 +244,9 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- O caractere curinga é especificado para o nome de nó. Dessa forma, a consulta retorna todos os filhos do nó de elemento do filho do nó de elemento <`Features`> do nó de elemento <`ProductDescription`>.  
+ O caractere curinga é especificado para o nome de nó. Assim, a consulta retorna o elemento todos os filhos do nó a <`Features`> filho do nó de elemento de <`ProductDescription`> nó de elemento.  
   
- A consulta a seguir é semelhante à consulta anterior, exceto que junto com o caractere curinga, é especificado um namespace. Como resultado, são retornados todos os filhos do nó de elemento nesse namespace. Observe que o elemento <`Features`> pode conter elementos de namespaces diferentes.  
+ A consulta a seguir é semelhante à consulta anterior, exceto que junto com o caractere curinga, é especificado um namespace. Como resultado, são retornados todos os filhos do nó de elemento nesse namespace. Observe que o <`Features`> elemento pode conter elementos de namespaces diferentes.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -271,7 +270,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Essa consulta retorna os filhos do nó de elemento <`Maintenance`> em todos os namespaces do documento XML do catálogo de produtos.  
+ Esta consulta retorna o <`Maintenance`> filhos do nó de elemento em todos os namespaces do documento XML do catálogo de produto.  
   
 ### <a name="c-specifying-node-kind-in-the-node-test"></a>C. Especificando o tipo de nó no node test  
  O exemplo a seguir especifica um tipo de nó como o node test em todas as expressões de caminho. Como resultado, todas as expressões retornam nós do tipo especificado no node test.  
@@ -296,15 +295,15 @@ WHERE ProductModelID=19
   
 -   As primeiras duas etapas especificam um nome de nó como o node test, e a terceira etapa especifica um tipo de nó como o node test.  
   
--   A expressão retorna os filhos do nó de texto do filho do elemento <`Features`> do nó de elemento <`ProductDescription`>.  
+-   A expressão retorna texto filhos do nó a <`Features`> do filho do elemento de <`ProductDescription`> nó de elemento.  
   
- Apenas um nó de texto é retornado. Este é o resultado:  
+ Apenas um nó de texto é retornado. Esse é o resultado:  
   
 ```  
 These are the product highlights.   
 ```  
   
- A consulta a seguir retorna os filhos do nó de comentário do elemento <`ProductDescription`>.  
+ A consulta a seguir retorna o comentário filhos do nó de <`ProductDescription`> elemento:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -320,9 +319,9 @@ WHERE ProductModelID=19
   
 -   A segunda etapa especifica um tipo de nó como o node test.  
   
--   Consequentemente, a expressão retorna os filhos do nó de comentário dos nós de elemento <`ProductDescription`>.  
+-   Como resultado, a expressão retorna o comentário filhos do nó de <`ProductDescription`> nós de elemento.  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <!-- add one or more of these elements... one for each specific product in this product model -->  
@@ -341,7 +340,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <?xml-stylesheet href="ProductDescription.xsl" type="text/xsl"?>   

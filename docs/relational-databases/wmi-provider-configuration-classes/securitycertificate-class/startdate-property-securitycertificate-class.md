@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2606401e86a37592976f7fe9912e0b3b4be1468d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 779b37dca89f1bcacf44e96755ca12a4ccd8ce6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071638"
 ---
 # <a name="startdate-property-securitycertificate-class"></a>Propriedade StartDate (classe SecurityCertificate)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ object.StartDate [= value]
  *object*  
  Um objeto da [classe SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) que representa um certificado de segurança.  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
  Um valor uint32 que especifica a data em que o certificado de segurança começa a ter efeito.  
   
 ## <a name="remarks"></a>Comentários  

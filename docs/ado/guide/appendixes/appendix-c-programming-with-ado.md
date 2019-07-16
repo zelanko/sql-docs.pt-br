@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63dfa7de6bd952f86718b90ce446868c9d74be10
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d06cf8343bf100077fccc34645ccb14dbdbfaae6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926872"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>Apêndice C: Programando com o ADO em ambientes de desenvolvimento
 O ADO é um componente de interface de automação COM pode ser usado com várias linguagens de programação, incluindo Microsoft Visual Basic, VBScript, JScript e Visual C++. Uma versão do ADO é instalada com cada uma dessas ferramentas e outros aplicativos, como o Microsoft Office e o Microsoft SQL Server.

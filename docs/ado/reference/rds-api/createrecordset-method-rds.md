@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e0ac86f4ceac4c806bfa3f6df5cc9e2024b4d03d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964510"
 ---
 # <a name="createrecordset-method-rds"></a>Método CreateRecordset (RDS)
 Cria um vazio, desconectado [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -41,7 +40,7 @@ object.CreateRecordset(ColumnInfos)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Objeto*  
+ *Object*  
  Uma variável de objeto que representa um [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) ou [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
   
  *ColumnsInfos*  
@@ -50,8 +49,8 @@ object.CreateRecordset(ColumnInfos)
 |attribute|Descrição|  
 |---------------|-----------------|  
 |Nome|Nome do cabeçalho da coluna.|  
-|Tipo|Inteiro do tipo de dados.|  
-|Tamanho|Inteiro da largura em caracteres, independentemente do tipo de dados.|  
+|type|Inteiro do tipo de dados.|  
+|Size|Inteiro da largura em caracteres, independentemente do tipo de dados.|  
 |Nulidade|Valor booliano.|  
 |Escala (opcional)|Esse atributo opcional define a escala para campos numéricos. Se esse valor não for especificado, serão truncados para uma escala de três valores numéricos. Precisão não é afetada, mas o número de dígitos após o ponto decimal será truncado para três.|  
   

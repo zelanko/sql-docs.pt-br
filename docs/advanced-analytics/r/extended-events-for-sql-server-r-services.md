@@ -6,20 +6,19 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 96b791d98aa7fee588e4f72b76a733f48917f77a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce4aae5c9725768a9c4c85fc7aaeaf4884dfba0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962668"
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>Eventos estendidos para serviços do SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 O SQL Server fornece um conjunto de eventos estendidos para usar em operações relacionadas à solução de problemas de [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], bem como Python ou R trabalhos enviados ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-**Aplica-se a:**  SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
+**Aplica-se a:**  SQL Server 2016 R Services, serviços de aprendizado de máquina do SQL Server 2017
 
 ## <a name="sql-server-events-for-machine-learning"></a>Eventos do SQL Server para o machine learning
 
@@ -47,7 +46,7 @@ Para obter mais informações sobre como fazer isso, consulte a seção [coletan
 
 ##  <a name="bkmk_xeventtable"></a> Tabela de eventos estendidos
 
-|Evento|Descrição|Observações|  
+|evento|Descrição|Observações|  
 |-----------|-----------------|---------|  
 |connection_accept|Ocorre quando uma nova conexão é aceita. Este evento serve para registrar todas as tentativas de conexão.||  
 |failed_launching|Falha na inicialização.|Indica um erro.|  

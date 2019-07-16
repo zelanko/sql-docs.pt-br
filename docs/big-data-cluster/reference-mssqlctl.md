@@ -5,17 +5,16 @@ description: Artigo de referência para comandos mssqlctl.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a30f78b24a85f85b85beb914dc0f26af652242fd
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 5567b46376acc5aee6c42cdae19eef133c7af506
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957894"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 

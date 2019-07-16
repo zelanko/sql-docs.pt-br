@@ -2,19 +2,18 @@
 title: O que há de novo no Analytics Platform System – um depósito de dados de expansão
 description: Veja o que há de novo no Microsoft Analytics Platform System, um dispositivo de escalabilidade horizontal no local que hospeda o MPP SQL Server Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b56791e9fd59aef57c2d107e21eb76896ebb4910
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78b2b0e7fd05bbfa430c7a8939378091850537ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959801"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>O que há de novo no Analytics Platform System, um data warehouse MPP de escalabilidade horizontal
 Veja o que há de novo nas atualizações mais recentes do dispositivo para o Microsoft Analytics Platform System (APS). Pontos de acesso é um dispositivo de escalabilidade horizontal no local que hospeda o MPP SQL Server Parallel Data Warehouse. 
@@ -115,7 +114,7 @@ Usar objetos de catálogo para chamadas de metadados em vez de usar o SMO mostro
 ### <a name="bug-fixes"></a>Correções de bugs
 Atualizamos para SQL Server 2016 SP2 CU2 com CU7.1 APS. A atualização corrige alguns problemas descritos abaixo.
 
-| Title | Descrição |
+| Título | Descrição |
 |:---|:---|
 | **Deadlock potencial de motor de tupla** |A atualização corrige uma possibilidade de longa data de deadlock em um thread de plano de fundo de motor tupla e de transação distribuído. Depois de instalar CU7.1, os clientes que usaram TF634 para interromper o motor da tupla como parâmetro de inicialização do SQL Server ou o sinalizador de rastreamento global com segurança remova-a. | 
 | **Ocorre falha na consulta determinados lag/lead.** |Determinadas consultas em tabelas CCI com funções aninhadas lag/lead que seriam o erro agora é corrigido com essa atualização. | 
@@ -138,7 +137,7 @@ Agora há suporte para dicas de consulta HASH e o grupo de ordem. Para obter mai
 ### <a name="feature-switch"></a>Comutador de recurso
 Apresenta o comutador de recurso no APS AU7 [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled e DmsProcessStopMessageTimeoutInSeconds agora são opções configuráveis que podem ser alteradas por administradores.
 
-### <a name="known-issues"></a>Problemas conhecidos
+### <a name="known-issues"></a>Problemas Conhecidos
 Com o software AU7 APS, uma atualização do BIOS da Intel é fornecida que corrige um problema descrito como *ataques de canal lateral de execução especulativa*. Os ataques tem como objetivo para explorar o que é chamado *vulnerabilidades Spectre e Meltdown*. Embora empacotado junto com os pontos de acesso, a atualização do BIOS é instalada manualmente e não como parte da instalação de software AU7 APS.
 
 Microsoft recomenda que todos os clientes instalem a atualização do BIOS. Microsoft mediu o efeito de Kernel Virtual endereço sombreamento (KVAS), o Kernel página tabela de indireção (kpti) e e mitigação de previsão de ramificação indireta (IBP) em várias cargas de trabalho do SQL em vários ambientes. As medidas encontrada uma redução significativa no algumas cargas de trabalho. Com base nos resultados, a recomendação é que você teste o efeito de desempenho de habilitar a atualização do BIOS antes de implantá-los em um ambiente de produção. Consulte o guia do SQL Server [aqui](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
@@ -187,7 +186,7 @@ APS AU6 dá suporte a esses aprimoramentos de compatibilidade do T-SQL.  Esses e
 
 **Funções adicionais**
 
-- [NEWID()][]
+- [NEWID)][]
 - [RAND()][]
 
 ### <a name="polybasehadoop-enhancements"></a>Aprimoramentos do PolyBase/Hadoop
@@ -248,7 +247,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [CHECKSUM()]:/sql/t-sql/functions/checksum-transact-sql
 [BINARY_CHECKSUM()]:/sql/t-sql/functions/binary-checksum-transact-sql
 [HAS_PERMS_BY_NAME()]:/sql/t-sql/functions/has-perms-by-name-transact-sql
-[NEWID()]:/sql/t-sql/functions/newid-transact-sql
+[NEWID)]:/sql/t-sql/functions/newid-transact-sql
 [RAND()]:/sql/t-sql/functions/rand-transact-sql
 
 
