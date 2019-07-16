@@ -5,17 +5,16 @@ description: Este artigo explica como configurar o HDFS disposição em camadas 
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 823e24b4ec78996140fa3f17cef9c1e56365a3f7
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 0397b0a27b98bb43a7513e0552124bba0972dfdf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958310"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Configurar o HDFS disposição em camadas em clusters de grandes dados do SQL Server
 

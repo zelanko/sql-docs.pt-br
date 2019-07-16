@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf5f584a556db9e32fcaf1f53b907adcb8d08e25
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2a01e41c67c937a0a6d85e9f5c46427ab149b65b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940203"
 ---
 # <a name="sysdatabaseauditspecifications-transact-sql"></a>database_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "52522977"
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|Nome|**sysname**|Nome da especificação de auditoria.|  
+|Name|**sysname**|Nome da especificação de auditoria.|  
 |database_specification_id|**int**|ID da especificação do banco de dados.|  
 |create_date|**datetime**|Data de criação da especificação de auditoria.|  
 |modified_date|**datetime**|Data da última alteração feita na especificação de auditoria.|  

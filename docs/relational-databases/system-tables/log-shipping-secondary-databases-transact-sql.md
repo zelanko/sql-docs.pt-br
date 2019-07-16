@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: ba2374af-86b8-480c-a10c-51e7c4e3ae23
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2311b37f3d804cd402715a1b9b9b1197ced78e2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad6d61f4267e30c6c0b3f6cede9085cad5d39006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095782"
 ---
 # <a name="logshippingsecondarydatabases-transact-sql"></a>log_shipping_secondary_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Armazena um registro para o banco de dados secundário em uma configuração de envio de logs. Essa tabela é armazenada na **msdb** banco de dados.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**secondary_database**|**sysname**|Nome do banco de dados secundário na configuração de envio de logs.|  
 |**secondary_id**|**uniqueidentifier**|ID de servidor secundário na configuração de envio de logs.|  

@@ -7,13 +7,12 @@ ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f31da296bf55b7da55a4e5a8398d411bc5a5b0ea
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: d5a434b6e089cd77a2bd685506e5552c4e1e7f6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961945"
 ---
 # <a name="sql-server-2017-python-tutorials"></a>Tutoriais do Python do SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,8 +30,8 @@ Este artigo descreve os tutoriais do Python para análise no banco de dados em [
 
 | Link | Descrição |
 |------|-------------|
-| [Guia de início rápido: Script de Python de "Hello world" no SQL Server](quickstart-python-run-using-t-sql.md) | Conheça os fundamentos de como chamar o Python no T-SQL. |
-| [Guia de início rápido: Criar, treinar e usar um modelo de Python com procedimentos armazenados no SQL Server](quickstart-python-train-score-in-tsql.md) | Explica a mecânica de incorporar código Python em um procedimento armazenado, fornecendo entradas e a execução do procedimento armazenado. |
+| [Início Rápido: Script de Python de "Hello world" no SQL Server](quickstart-python-run-using-t-sql.md) | Conheça os fundamentos de como chamar o Python no T-SQL. |
+| [Início Rápido: Criar, treinar e usar um modelo de Python com procedimentos armazenados no SQL Server](quickstart-python-train-score-in-tsql.md) | Explica a mecânica de incorporar código Python em um procedimento armazenado, fornecendo entradas e a execução do procedimento armazenado. |
 | [Tutorial: Criar um modelo usando revoscalepy](use-python-revoscalepy-to-create-model.md) | Demonstra como executar código em um terminal de Python remoto, usando o contexto de computação do SQL Server. Você deve ser um pouco familiarizado com os ambientes e ferramentas do Python. Código de exemplo é fornecido que cria um modelo usando **rxLinMod**, da nova **revoscalepy** biblioteca. |
 | [Tutorial: Aprenda a análise de Python no banco de dados para desenvolvedores do SQL](sqldev-in-database-python-for-sql-developers.md) | Este passo a passo de ponta a ponta demonstra o processo de criação de uma solução completa do Python usando procedimentos armazenados T-SQL. Todo o código Python é incluído.|
 

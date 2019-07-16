@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 225e80855c0042085b35670efc0666f133806d04
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 8b241d1f90a24ae69ab180404621a2feda393c01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940232"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Banco de Dados SQL do Azure)
 
@@ -33,7 +32,7 @@ ms.locfileid: "59242324"
 
   Contém estatísticas para [!INCLUDE[ssSDS](../../includes/sssds-md.md)] banco de dados **conectividade** eventos, fornecendo uma visão geral de falhas e êxitos de conexão de banco de dados. Para obter mais informações sobre eventos de conectividade, consulte tipos de evento em [sys. event_log &#40;banco de dados SQL&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Estatística|Tipo|Descrição|  
+|Estatística|type|Descrição|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Nome do banco de dados.|  
 |**start_time**|**datetime2**|Data e hora UTC do início do intervalo de agregação. A hora é sempre um múltiplo de 5 minutos. Por exemplo:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  

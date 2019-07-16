@@ -8,18 +8,17 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: fdd0a3091440295e393d969f1b8161b83fb58d95
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 83dbe0c2ea6eb066f208223acd2c6062f964fcf3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938083"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;consulta de fonte de dados&gt;
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Para treinar um modelo de mineração de dados e criar previsões a partir de um modelo de mineração, você tem que acessar dados externos para o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados. Você usa o \<consulta de fonte de dados > cláusula em extensões DMX (Data Mining) para definir estes dados externos. O [INSERT INTO &#40;DMX&#41;](../dmx/insert-into-dmx.md), [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), e [SELECT FROM NATURAL PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) usam todas as instruções  **\<consulta de fonte de dados >**.  
+  Para treinar um modelo de mineração de dados e criar previsões a partir de um modelo de mineração, você tem que acessar dados externos para o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados. Você usa o \<consulta de fonte de dados > cláusula em extensões DMX (Data Mining) para definir estes dados externos. O [INSERT INTO &#40;DMX&#41;](../dmx/insert-into-dmx.md), [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), e [SELECT FROM NATURAL PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) usam todas as instruções  **\<consulta de fonte de dados >** .  
   
 ## <a name="query-types"></a>Tipos de consultas  
  As três modos mais comuns para especificar dados de origem são:  

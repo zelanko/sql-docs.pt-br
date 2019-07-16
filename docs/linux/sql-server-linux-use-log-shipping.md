@@ -3,17 +3,16 @@ title: Configurar o envio de logs para o SQL Server no Linux
 description: Este tutorial mostra um exemplo básico de como replicar uma instância do SQL Server no Linux para uma instância secundária usando envio de logs.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 04/19/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0bbe4e8076578afd3addb9521a60bc72b5be9a06
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 5f5b795d35899025f1651b0f7db758d60103c511
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032202"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Introdução ao envio de logs no Linux
 

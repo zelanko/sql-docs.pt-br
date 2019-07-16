@@ -5,17 +5,16 @@ description: Artigo de referência para comandos de pool de armazenamento do mss
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd1b32a725e1204a09e44b44c6576d24c67e3a0d
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 500a86c0a8a33bec781eb87ffc370d55b530d973
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957981"
 ---
 # <a name="mssqlctl-bdc-storage-pool"></a>pool de armazenamento do bdc mssqlctl
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f8d11e97fd31745752449c5649e1096d0bb667a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44d6b5f06bffb1cea786ba34d3d2aa8a3efb45ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949492"
 ---
 # <a name="member-object-ado-md"></a>Objeto Member (ADO MD)
 Representa um membro de um nível em um cubo, os filhos de um membro de um nível ou membro de uma posição ao longo do eixo de um conjunto de células.  

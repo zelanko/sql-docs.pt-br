@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5524a575-67dd-4ef6-9d17-3412df9b9f9c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f44ef4421419d3b3dd452fb7fab2e4a8768f1b06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0bb755336e3d26dd54ea1820ed4fdcfab75e757
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026603"
 ---
 # <a name="data-migration-report--mysqltosql"></a>Relatório de migração de dados (MySQLToSQL)
 O **relatório de migração de dados** caixa de diálogo é exibida após a migração de dados a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -24,10 +23,10 @@ O **relatório de migração de dados** caixa de diálogo é exibida após a mig
 **Status**  
 Mostra o status da migração da fonte de dados no banco de dados de destino.  
   
-**De**  
+**From**  
 A tabela de origem.  
   
-**Para**  
+**To**  
 A tabela de destino.  
   
 **Número total de linhas**  

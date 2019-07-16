@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7502cef1a02ff580b16b8df0d6f1c2c6c54fb8ef
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4e8ba9bb523d4ce7aed76f61c569f5e8b1775972
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946420"
 ---
 # <a name="path-expressions---specifying-predicates"></a>Expressões de Caminho – Especificar Predicados
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -71,13 +70,13 @@ select @x.query('/People/Person[1]/Name')
 select @x.query('/People[1]/Person/Name')  
 ```  
   
- Observe que em cada caso, o predicado associa-se ao nó na expressão de caminho em que ele é aplicado. Por exemplo, a primeira expressão de caminho seleciona o primeiro elemento <`Name`> dentro de cada nó de /People/Person e, com a instância XML fornecida, retorna o seguinte:  
+ Observe que em cada caso, o predicado associa-se ao nó na expressão de caminho em que ele é aplicado. Por exemplo, a primeira expressão de caminho seleciona o primeiro <`Name`> elemento dentro de cada nó de pessoa/pessoas/e, com a instância XML fornecida, retorna o seguinte:  
   
 ```  
 <Name>John</Name><Name>Goofy</Name><Name>Daffy</Name>  
 ```  
   
- Porém, a segunda expressão de caminho seleciona todos os elementos <`Name`> que estão sob o primeiro nó de /People/Person. Portanto, ele retorna o seguinte:  
+ No entanto, a segunda expressão de caminho seleciona todos os <`Name`> elementos que estão sob o nó de pessoa/pessoas/primeira. Portanto, ele retorna o seguinte:  
   
 ```  
 <Name>John</Name>  
@@ -106,7 +105,7 @@ select @x.query('/People/Person[contains(Name[1], "J") and xs:integer(Age[1]) < 
 /child::root/child::Location[attribute::LocationID=10]  
 ```  
   
- A condição especificada por esse predicado é aplicada a todos os nós do elemento filho <`Location`>. O resultado é que só aqueles locais de centro de trabalho cujo valor do atributo LocationID seja 10 serão retornados.  
+ A condição especificada por esse predicado é aplicada a todos os <`Location`> filhos do nó de elemento. O resultado é que só aqueles locais de centro de trabalho cujo valor do atributo LocationID seja 10 serão retornados.  
   
  A expressão de caminho anterior é executada na seguinte instrução SELECT:  
   
@@ -135,11 +134,11 @@ WHERE ProductModelID=7
     WHERE ProductModelID=7  
     ```  
   
-     O caminho de expressão nessa consulta, só retornará aqueles nós do elemento <`Location`> que tenham um atributo LotSize especificado. Se o predicado retornar uma sequência vazia para um <`Location`>específico, aquele local de centro de trabalho não será retornado no resultado.  
+     A expressão de caminho nesta consulta retorna apenas aqueles <`Location`> nós de elemento que têm um atributo LotSize especificado. Se o predicado retornar uma sequência vazia para um determinado <`Location`>, que o local de centro de trabalho não é retornado no resultado.  
   
 2.  Valores só podem ser xs: Integer, xs: Boolean ou nó de predicado\*. Para o nó\*, o predicado é avaliada como True se houver quaisquer nós e False para uma sequência vazia. Qualquer outro tipo numérico, como dobro e tipo de float, gera um erro de tipo estático. O valor verdadeiro do predicado de uma expressão é True se e somente se o inteiro resultante for igual ao valor da posição de contexto. Além disso, apenas valores inteiros literais e os **Last ()** função reduzem a cardinalidade da expressão de etapa filtrada para 1.  
   
-     Por exemplo, a consulta a seguir recupera o terceiro nó do elemento filho do elemento <`Features`>.  
+     Por exemplo, a consulta a seguir recupera o terceiro nó do elemento filho de <`Features`> elemento.  
   
     ```  
     SELECT CatalogDescription.query('  
@@ -157,7 +156,7 @@ WHERE ProductModelID=7
   
     -   A terceira etapa também especifica um caractere curinga (*) que indica todos os nós no teste de nó. Porém, o predicado filtra os nós e retorna apenas o nó na terceira posição.  
   
-    -   A consulta retorna o terceiro nó do elemento filho do elemento filho <`Features`> do elemento filho do <`ProductDescription`> do documento raiz.  
+    -   A consulta retorna o terceiro filho do nó do elemento de <`Features`> filhos do elemento de <`ProductDescription`> elementos filhos da raiz do documento.  
   
 3.  Se o valor da expressão do predicado é um valor de tipo simples de tipo Booliano, o valor verdadeiro do predicado é igual ao valor da expressão do predicado.  
   
@@ -194,7 +193,7 @@ WHERE ProductModelID=7
   
     -   A expressão na **para** loop tem duas etapas, e a segunda etapa especifica um predicado. O valor desse predicado é um valor de tipo Booliano. Se esse valor for True, o valor verdadeiro do predicado também será True.  
   
-    -   A consulta retorna o <`Customer`> filhos do elemento, cujo valor de predicado é True, da \<Survey > elementos filhos da raiz do documento. Este é o resultado:  
+    -   A consulta retorna o <`Customer`> filhos do elemento, cujo valor de predicado é True, da \<Survey > elementos filhos da raiz do documento. Esse é o resultado:  
   
         ```  
         <CustomerWithChildren CustomerID="1"/>   

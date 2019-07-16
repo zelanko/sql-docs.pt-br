@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 035f4ae31a364055cee18ac4026b2c2760d3661d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad9942121c6b6173e773cc601f33b572a58512d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928534"
 ---
 # <a name="adox-object-model"></a>Modelo de objeto ADOX
 O diagrama a seguir ilustra como os objetos são representados e relacionados de ADOX. Para obter mais informações sobre um objeto específico ou uma coleção, consulte o tópico de referência específica, ou [objetos ADOX](../../../ado/reference/adox-api/adox-objects.md) e [coleções ADOX](../../../ado/reference/adox-api/adox-collections.md).  

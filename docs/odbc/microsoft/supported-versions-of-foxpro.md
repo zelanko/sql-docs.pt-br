@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 203fdabe-9b5c-4840-824c-792b508262c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8935e36676e2016d5fbf72239130956d40a875e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3902917eb2c219983c6d1ac3c86f738d272aeb5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939842"
 ---
 # <a name="supported-versions-of-foxpro"></a>Versões do FoxPro com suporte
 Você pode usar o Microsoft® Visual FoxPro® ODBC Driver para acessar dados armazenados nas tabelas do FoxPro. Há suporte para as seguintes versões de dados FoxPro:  

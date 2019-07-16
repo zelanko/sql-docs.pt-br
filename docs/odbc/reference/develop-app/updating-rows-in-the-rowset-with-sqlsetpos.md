@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dfb57a6512245c9adb36a511ce48721dd901995c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0575c7ef7e380b1157640f9927e41192838c1ac0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313095"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091605"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>Atualizar linhas no conjunto de linhas com SQLSetPos
 A operação de atualização do **SQLSetPos** faz com que a fonte de dados atualizar um ou mais linhas selecionadas de uma tabela, usando dados nos buffers de aplicativo para cada coluna associada (a menos que o valor no buffer de comprimento/indicador é SQL_COLUMN_IGNORE). Colunas que não são associadas não serão atualizadas.  

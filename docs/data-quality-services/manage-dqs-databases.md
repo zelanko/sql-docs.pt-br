@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 90a96a06ba15afab165bedf3c5a8a9fd367c2c73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ebf86ddf0c9b2e54d2cc27248074263f13a0c860
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776142"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935113"
 ---
 # <a name="manage-dqs-databases"></a>Gerenciar bancos de dados do DQS
 
@@ -51,7 +50,7 @@ ms.locfileid: "66776142"
   
  Para obter informações detalhadas sobre ideias a serem consideradas antes e durante a desanexação e anexação de bancos de dados no SQL Server, consulte [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

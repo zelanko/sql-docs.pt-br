@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 893921a7100ca22cae219f5a0e88d543499053b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 55ea62fac0cb2fe73b368429bb164cd28147fa7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923360"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Cenário de persistência do conjunto de registros XML
 Nesse cenário, você criará um aplicativo de Active Server Pages (ASP) que salva o conteúdo de um objeto Recordset diretamente para o objeto de resposta do ASP.  

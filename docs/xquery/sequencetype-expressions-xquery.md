@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59c6718ce034f8a0b9d37bc62591a7ffc44ce999
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946288"
 ---
 # <a name="sequencetype-expressions-xquery"></a>Expressões SequenceType (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +39,11 @@ ms.locfileid: "54255117"
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- Observe que o `instance of` operador, o `Occurrence indicator`, especifica a cardinalidade, o número de itens na sequência resultante. Se não estiver especificada, supõe-se que a cardinalidade seja 1. Na [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], apenas o ponto de interrogação (**?)**  indicador de ocorrência é suportado. O **?** indicador de ocorrência indica que `Expression` pode retornar zero ou um item. Se o **?** indicador de ocorrência for especificado, `instance of` retorna True quando o `Expression` tipo corresponde ao especificado `SequenceType`, independentemente de `Expression` retornar um singleton ou uma sequência vazia.  
+ Observe que o `instance of` operador, o `Occurrence indicator`, especifica a cardinalidade, o número de itens na sequência resultante. Se não estiver especificada, supõe-se que a cardinalidade seja 1. Na [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], apenas o ponto de interrogação ( **?)**  indicador de ocorrência é suportado. O **?** indicador de ocorrência indica que `Expression` pode retornar zero ou um item. Se o **?** indicador de ocorrência for especificado, `instance of` retorna True quando o `Expression` tipo corresponde ao especificado `SequenceType`, independentemente de `Expression` retornar um singleton ou uma sequência vazia.  
   
  Se o **?** indicador de ocorrência não for especificado, `sequence of` só retornará True quando o `Expression` correspondência do tipo a `Type` especificado e `Expression` retornar um singleton.  
   
- **Observação** o símbolo de adição (**+**) e o asterisco (**&#42;**) não há suporte para os indicadores de ocorrência no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **Observação** o símbolo de adição ( **+** ) e o asterisco ( **&#42;** ) não há suporte para os indicadores de ocorrência no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Os exemplos a seguir ilustram o uso do**instância de** operador XQuery.  
   
@@ -164,7 +163,7 @@ CREATE XML SCHEMA COLLECTION MyTestSchema AS '
 Go  
 ```  
   
- A consulta a seguir retorna False, pois o SequenceType especificado na expressão `instance of` não é o pai mais alto do tipo real da expressão especificada. Ou seja, o valor do <`TestElement`> é do tipo inteiro. O pai mais alto é xs:decimal. Porém, não é especificado como o segundo operando ao operador `instance of`.  
+ A consulta a seguir retorna False, pois o SequenceType especificado na expressão `instance of` não é o pai mais alto do tipo real da expressão especificada. Ou seja, o valor da <`TestElement`> é um tipo inteiro. O pai mais alto é xs:decimal. Porém, não é especificado como o segundo operando ao operador `instance of`.  
   
 ```  
 SET QUOTED_IDENTIFIER ON  
@@ -191,7 +190,7 @@ go
 ### <a name="example-d"></a>Exemplo D  
  Neste exemplo, você primeiro crie uma coleção de esquemas XML e usá-lo para o tipo de um **xml** variável. Com o tipo **xml** variável é então consultada para ilustrar o `instance of` funcionalidade.  
   
- A coleção de esquemas XML a seguir define um tipo simples, myType, e um elemento, <`root`>, do tipo myType:  
+ Coleção de esquema XML a seguir define um tipo simples, myType e um elemento <`root`>, do tipo myType:  
   
 ```  
 drop xml schema collection SC  
@@ -315,7 +314,7 @@ select @x.query(' declare namespace CustOrders="Customers";
   
 -   Quando você estiver usando uma forma do **Element ()** que especifica um nome de tipo, como tipo de sequência `element(ElementName, TypeName)`, o tipo deve ser qualificado com um ponto de interrogação (?). Por exemplo, `element(Title, xs:string?)` indica que o elemento pode ser nulo. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não oferece suporte a detecção de tempo de execução do **xsi: nil** propriedade usando `instance of`.  
   
--   Se o valor na `Expression` vier de um elemento ou atributo digitado como uma união, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode identificar só o tipo primitivo, não derivado, do qual o tipo do valor foi derivado. Por exemplo, se <`e1`> for definido como tendo um tipo estático de (xs:integer | xs:string), o seguinte retornará False.  
+-   Se o valor na `Expression` vier de um elemento ou atributo digitado como uma união, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode identificar só o tipo primitivo, não derivado, do qual o tipo do valor foi derivado. Por exemplo, se <`e1`> é definido para ter um tipo estático de (xs: Integer | xs: String), o seguinte retornará False.  
   
     ```  
     data(<e1>123</e1>) instance of xs:integer  

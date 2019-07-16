@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7875796167917700e5a1a952106915ca70a61c3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b34570120b22cea1ca12eaf146d41b596e43aecf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946255"
 ---
 # <a name="string-search-in-xquery"></a>Pesquisa de cadeia de caracteres em XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ WHERE ProductModelID=19
   
  Na consulta anterior, o `where` em FLOWR expressão filtra o resultado do `for` expressão e retorna apenas os elementos que satisfazem a **Contains ()** condição.  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <p1:Maintenance     

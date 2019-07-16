@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1b360eed1619317e7ca3092bc47da086c520bf04
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8bf38ef67089c65d53bedcb56afd81de3e21a413
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933879"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,11 +48,11 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscription_database*está **sysname**, com um padrão NULL.  
   
-`[ @subscription_type = ] 'subscription_type'` É o tipo de assinatura. *subscription_type*está **nvarchar(15)**, e pode ser um destes valores.  
+`[ @subscription_type = ] 'subscription_type'` É o tipo de assinatura. *subscription_type*está **nvarchar(15)** , e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**all**|Assinaturas push, pull e anônimas|  
+|**Todos os**|Assinaturas push, pull e anônimas|  
 |**Anônimo**|Assinatura anônima.|  
 |**push**|Assinatura push.|  
 |**pull**|Assinatura pull.|  

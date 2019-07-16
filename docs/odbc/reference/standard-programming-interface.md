@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2fa727e-51f2-4123-ae25-0ee28e611231
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e0e10a6b8c15b6522e6b34ab008295fc411fcd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a241ea92af6c1273039cc45daab232a1fbe763a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232059"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081844"
 ---
 # <a name="standard-programming-interface"></a>Interface de programação padrão
 A interface de programação é talvez o candidato mais óbvio para padronização. Na verdade, quando estava sendo desenvolvido ODBC, ANSI e ISO já fornecidos padrões para embedded SQL e SQL módulos. Embora nenhum padrões existiam para um banco de dados da CLI, SQL Access Group - um consórcio do setor de fornecedores de banco de dados - foi considerar a possibilidade de criar um; partes do ODBC posteriormente tornou-se a base para o seu trabalho.  

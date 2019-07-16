@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8222454d5e016733abef3c086e38add777cd304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62684303"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004889"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +59,7 @@ sys.dm_db_index_operational_stats (
     
  A função interna [DB_ID](../../t-sql/functions/db-id-transact-sql.md) pode ser especificado.    
     
- *object_id* | NULL | 0 | DEFAULT    
+ *object_id* | NULO | 0 | PADRÃO    
  ID do objeto da tabela ou exibição em que o índice está ativado. *object_id* é **int**.    
     
  As entradas válidas são o número da ID de uma tabela e de uma exibição, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.    
@@ -72,7 +71,7 @@ sys.dm_db_index_operational_stats (
     
  Especifique NULL para retornar informações em cache de todos os índices de uma tabela base ou exibição. Se você especificar NULL para *index_id*, você também deverá especificar NULL para *partition_number*.    
     
- *partition_number* | NULL | 0 | DEFAULT    
+ *partition_number* | NULO | 0 | PADRÃO    
  O número da partição no objeto. *partition_number* está **int**. As entradas válidas são o *partion_number* de um índice ou heap, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.    
     
  Especifique NULL para retornar informações em cache de todas as partições do índice ou heap.    
@@ -152,7 +151,7 @@ sys.dm_db_index_operational_stats (
     
  Para identificar a contenção de bloqueio e trava, use estas colunas:    
     
--   **page_latch_wait_count** and **page_latch_wait_in_ms**    
+-   **page_latch_wait_count** e **page_latch_wait_in_ms**    
     
      Essas colunas indicam se há uma contenção de trava no índice ou heap e a importância da contenção.    
     
@@ -166,7 +165,7 @@ sys.dm_db_index_operational_stats (
     
  **Para analisar estatísticas de e/SS físicas em uma partição de índice ou heap**    
     
--   **page_io_latch_wait_count** and **page_io_latch_wait_in_ms**    
+-   **page_io_latch_wait_count** e **page_io_latch_wait_in_ms**    
     
      Essas colunas indicam se foram emitidas E/S físicas para trazer as páginas de índice ou heap para a memória e quantas E/S foram emitidas.    
     

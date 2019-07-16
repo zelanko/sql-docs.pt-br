@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 967ccb49cd2bbaa805420e7c982cc11721931022
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f4efddad1b55ce57c62ce52418539ec06599bb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925918"
 ---
 # <a name="boundaries-of-a-recordset"></a>Limites de um conjunto de registros
 **Conjunto de registros** oferece suporte a **BOF** e **EOF** propriedades para delimitar o início e no final, respectivamente, do conjunto de dados. Você pode pensar **BOF** e **EOF** como "fantasmas" registros que são posicionados no início e no final do **conjunto de registros**. Contando **BOF** e **EOF**, em nosso exemplo **Recordset** agora ficaria assim:  
@@ -32,7 +31,7 @@ ms.locfileid: "66702351"
 |14|Bananas|23.2500|  
 |28|Rssle chucrute|45.6000|  
 |51|Maçãs Secas Manjimup|53.0000|  
-|74|Longlife Tofu|10.0000|  
+|74|Longlife Bananas|10.0000|  
 |EOF|||  
   
  Quando um cursor se move além do último registro, **EOF** é definido como **verdadeiro**; caso contrário, seu valor é **False**. Da mesma forma, quando o cursor é movido antes do primeiro registro, **BOF** é definido como **verdadeiro**; caso contrário, seu valor é **False**. Essas propriedades são comumente usadas ao enumerar os registros no conjunto de dados, conforme ilustrado no seguinte fragmento de código JScript.  

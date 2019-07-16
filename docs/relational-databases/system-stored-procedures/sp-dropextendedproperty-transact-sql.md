@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e01b14407198ed88654527bd247a116c200fb1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 560cecf8b6cc0aff5b503602c521e503e7cc7fcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627424"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934018"
 ---
 # <a name="spdropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_dropextendedproperty
  É o nome da propriedade a ser removida. *Property_Name* está **sysname** e não pode ser NULL.  
   
  [ @level0type=] {'*level0_object_type*'}  
- É o nome do tipo de objeto de nível 0 especificado. *level0_object_type* está **varchar (128)**, com um padrão NULL.  
+ É o nome do tipo de objeto de nível 0 especificado. *level0_object_type* está **varchar (128)** , com um padrão NULL.  
   
  As entradas válidas são ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE e NULL.  
   
@@ -81,7 +80,7 @@ sp_dropextendedproperty
  0 (êxito) ou 1 (falha)  
   
 ## <a name="remarks"></a>Comentários  
- Com o propósito de especificar as propriedades estendidas, os objetos em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são classificados em três níveis: 0, 1 e 2. O nível 0 é o mais alto e é definido como objetos que estão contidos no escopo do banco de dados. Os objetos de nível 1 estão contidos em um esquema ou escopo de usuário e os objetos de nível 2 estão contidos pelos objetos de nível 1. As propriedades estendidas podem ser definidas para os objetos em qualquer um desses níveis. As referências a um objeto de um nível precisam ser qualificadas com os tipos e os nomes de todos os objetos de nível.  
+ Para fins de especificar as propriedades estendidas, os objetos em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados são classificados em três níveis: 0, 1 e 2. O nível 0 é o mais alto e é definido como objetos que estão contidos no escopo do banco de dados. Os objetos de nível 1 estão contidos em um esquema ou escopo de usuário e os objetos de nível 2 estão contidos pelos objetos de nível 1. As propriedades estendidas podem ser definidas para os objetos em qualquer um desses níveis. As referências a um objeto de um nível precisam ser qualificadas com os tipos e os nomes de todos os objetos de nível.  
   
  Dado um válido *property_name*, se todos os tipos de objeto e os nomes forem nulos e a propriedade existir no banco de dados atual, essa propriedade será excluída. Veja o exemplo B a seguir, após este tópico.  
   

@@ -2,19 +2,18 @@
 title: Componentes do Data Warehouse - Analytics Platform System em paralelo | Microsoft Docs
 description: Este artigo explica o software de dispositivo e os componentes de software não seja de dispositivo do Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: aaf90124cc7877b633a997a2c4f170057b965028
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87525a741c1d0081b366394c0c5dd1b152ad15f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960472"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Componentes do Data Warehouse - Analytics Platform System em paralelo
 Este artigo explica o software de dispositivo e os componentes de software não seja de dispositivo do Analytics Platform System.  
