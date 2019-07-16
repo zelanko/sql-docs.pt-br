@@ -3,18 +3,17 @@ title: Criar e executar trabalhos do SQL Server no Linux
 description: Este tutorial mostra como executar o trabalho do SQL Server Agent no Linux.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: 436d7af77557863c647b172062149d26a01ae326
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 5abd2db590a89350f45497d7f94b81940a0ec5bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065149"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Criar e executar trabalhos do SQL Server Agent no Linux
 

@@ -7,20 +7,19 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 8e5f874e43e70ce1bddfe21b745199fef44aa04a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3d4d8108fda500d48425abfb52fd9f72c6faa147
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963052"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Arquitetura de extensibilidade em serviços do SQL Server Machine Learning 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server tem uma estrutura de extensibilidade para a execução de script externo, como R ou Python no servidor. Script é executado em um ambiente de tempo de execução de linguagem como uma extensão para o mecanismo de banco de dados principal. 
 
-## <a name="background"></a>Plano de fundo
+## <a name="background"></a>Informações preliminares
 
 A estrutura de extensibilidade foi introduzida no SQL Server 2016 para dar suporte o tempo de execução de R. Adiciona o suporte para Python para SQL Server 2017
 

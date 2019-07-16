@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4d554a7269b8f10f8d2d44a48bc401e866f3dce8
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 6eb770951e48f7145311fb75de18a17236a09d7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090326"
 ---
 # <a name="sysdmxemapvalues-transact-sql"></a>sys.dm_xe_map_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "53785767"
  
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|nome|**nvarchar(256)**|O nome do mapa. nome é exclusivo em todo o sistema local. Não permite valor nulo.|  
+|name|**nvarchar(256)**|O nome do mapa. nome é exclusivo em todo o sistema local. Não permite valor nulo.|  
 |object_package_guid|**uniqueidentifier**|O GUID do pacote que contém o mapa. Não permite valor nulo.|  
 |map_key|**int**|O valor da chave interno. Não permite valor nulo.|  
 |map_value|**nvarchar(3072)**|Uma descrição do valor da chave. Não permite valor nulo.|  

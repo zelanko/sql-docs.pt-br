@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3f0fce34f57591d9c6c3f3a9c7382266d655f364
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 32cf59ea3ca8c7f153170881ac5eb970e50c90b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076401"
 ---
 # <a name="functions-dmx"></a>Funções (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "37985443"
   
  A maioria das funções DMX retornam um valor escalar, como suporte para previsão, mas algumas retornam de resultado tabular. Por exemplo, a função PredictHistogram retorna uma tabela que contém o suporte e probabilidade para cada estado da coluna previsível especificada. Os resultados são exibidos como nova coluna de tabela.  
   
- **Para obter mais informações:** [funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [extensões &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **Para obter mais informações:** [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
 ## <a name="visual-basic-for-applications-vba-and-excel-functions"></a>Funções do Visual Basic for Applications (VBA) e do Excel  
  Além das funções DMX, é possível chamar também uma série de funções VBA e Excel de instruções DMX. Por exemplo, você pode usar a função lCase para modificar como a coluna Attribute_Name no conteúdo do modelo TM_Decision_Tree é exibida. Isso é demonstrado no exemplo de código a seguir.  
@@ -49,10 +48,10 @@ FROM [TM_Decision_Tree].CONTENT
 ## <a name="stored-procedures"></a>Procedimentos armazenados  
  Use as linguagens CLR (Common Language Runtime) para criar procedimentos armazenados que estendem a funcionalidade de DMX. Por exemplo, um modelo de mineração de árvore de regressão retorna coeficientes, como A, B e assim por diante, que descrevem a equação de regressão, mas o modelo não retorna a equação em si, como um + Bx = y. Entretanto, é possível gravar um procedimento armazenado que utilize o objeto do modelo de mineração de dados para pesquisar o esquema de conteúdo, e retornar a equação de regressão como saída. Por isso, uma instrução DMX pode retornar a lista das equações de regressão como parte de um resultado de consulta.  
   
- **Para obter mais informações:** [gerenciamento de Assemblies de modelo Multidimensional](../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
+ **Para obter mais informações:** [Gerenciamento de assemblies de modelo multidimensional](../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Extensões de mineração de dados &#40;DMX&#41; referência](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Referência de DMX &#40;extensões DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Extensões de mineração de dados &#40;DMX&#41; referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Extensões de mineração de dados &#40;DMX&#41; referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)   

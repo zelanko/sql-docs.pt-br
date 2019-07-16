@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dcc3d02505a1bd568d440d5b70fc06bcfff93ae9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14e532d76f70f6a2d4fa623d80fa02e6c756348a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62688365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096141"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +43,10 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>Argumentos  
  [ @table_name= ] '*table_name*'  
- É a tabela usada para retornar informações do catálogo. *table_name* está **nvarchar (** 384 **)**, sem padrão. Há suporte para a correspondência do padrão curinga.  
+ É a tabela usada para retornar informações do catálogo. *table_name* está **nvarchar (** 384 **)** , sem padrão. Há suporte para a correspondência do padrão curinga.  
   
  [ @table_owner= ] '*table_owner*'  
- É o proprietário da tabela usada para retornar informações de catálogo. *table_owner*está **nvarchar (** 384 **)**, com um padrão NULL. Há suporte para a correspondência do padrão curinga. Se o proprietário não for especificado, serão aplicadas as regras de visibilidade de tabela padrão do DBMS subjacente.  
+ É o proprietário da tabela usada para retornar informações de catálogo. *table_owner*está **nvarchar (** 384 **)** , com um padrão NULL. Há suporte para a correspondência do padrão curinga. Se o proprietário não for especificado, serão aplicadas as regras de visibilidade de tabela padrão do DBMS subjacente.  
   
  Se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela são retornadas. Se *proprietário* não for especificado e o usuário atual não possuir uma tabela com especificado *nome*, esse procedimento procurará uma tabela com especificado *table_name* pertencentes a proprietário do banco de dados. Caso exista, as colunas dessa tabela serão retornadas.  
   
@@ -58,7 +57,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
  Determina se o caractere de sublinhado (_), porcentagem (%)) e entre colchetes ([ou]) caracteres são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* está **bit**, com um padrão de 1.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- None  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

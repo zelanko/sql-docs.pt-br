@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: d56e1458-8da2-4d73-a777-09e045c30a33
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be133079c1b6beffd484942eb9ae058c14dd5c1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0b5e33f94c5452a2062f7c18339f27c8da73fa9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086061"
 ---
-# <a name="transaction-support"></a>Suporte à transação
+# <a name="transaction-support"></a>Suporte a transações
 O grau de suporte para transações é definido pelo driver. ODBC é projetada para ser implementada em um banco de dados da área de trabalho ou de usuário único que não precisa gerenciar várias atualizações para seus dados. Além disso, alguns bancos de dados que oferecem suporte a transações fazer apenas para as instruções de linguagem de manipulação de dados (DML) do SQL; há restrições ou semântica de transação especial sobre o uso de linguagem de definição de dados (DDL) quando uma transação está ativa. Ou seja, pode haver suporte a transações para várias atualizações simultâneas em tabelas, mas não para alterar o número e a definição das tabelas durante uma transação.  
   
  Um aplicativo determina se há suporte para transações, se o DDL pode ser incluída em uma transação e qualquer efeitos especiais de inclusão de DDL em uma transação, chamando **SQLGetInfo** com a opção SQL_TXN_CAPABLE. Para obter mais informações, consulte o [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrição da função.  

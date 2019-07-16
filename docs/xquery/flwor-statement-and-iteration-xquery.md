@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4c95d86b64c28bbf78b111f21de7afd58b44616f
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858661"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038906"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>Iteração e instrução FLWOR (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "51858661"
   
 -   Uma expressão `return`. A expressão na cláusula `return` constrói o resultado da instrução FLWOR.  
   
- Por exemplo, a consulta a seguir itera em relação aos elementos <`Step`> no primeiro local de fabricação e retorna o valor da cadeia de caracteres dos nós <`Step`>:  
+ Por exemplo, a consulta a seguir itera sobre o <`Step`> elementos no primeiro local de fabricação e retorna o valor de cadeia de caracteres da <`Step`> nós:  
   
 ```sql
 declare @x xml  
@@ -80,7 +79,7 @@ SELECT @x.query('
 Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1  
 ```  
   
- A consulta a seguir é semelhante à anterior, exceto que é especificada em relação à coluna Instructions, uma coluna xml digitada, da tabela ProductModel. A consulta itera todas as etapas de fabricação, os elementos <`step`>, no primeiro local do centro de trabalho de um produto específico.  
+ A consulta a seguir é semelhante à anterior, exceto que é especificada em relação à coluna Instructions, uma coluna xml digitada, da tabela ProductModel. A consulta itera em todas as etapas de fabricação, <`step`> elementos no primeiro local de centro de trabalho para um produto específico.  
   
 ```sql
 SELECT Instructions.query('  
@@ -97,11 +96,11 @@ where ProductModelID=7
   
 -   A `$Step` é a variável de iterador.  
   
--   O [expressão de caminho](../xquery/path-expressions-xquery.md), `//AWMI:root/AWMI:Location[1]/AWMI:step`, gera a sequência de entrada. Essa sequência é a sequência dos filhos do nó de elemento <`step`> do primeiro nó do elemento <`Location`>.  
+-   O [expressão de caminho](../xquery/path-expressions-xquery.md), `//AWMI:root/AWMI:Location[1]/AWMI:step`, gera a sequência de entrada. Essa sequência é a sequência da <`step`> filhos do nó de elemento da primeira <`Location`> nó de elemento.  
   
 -   A cláusula de predicado opcional, `where`, não é usada.  
   
--   A expressão `return` retorna um valor da cadeia de caracteres do elemento <`step`>.  
+-   O `return` expressão retorna um valor de cadeia de caracteres da <`step`> elemento.  
   
  O [função string (XQuery)](../xquery/data-accessor-functions-string-xquery.md) é usado para recuperar o valor de cadeia de caracteres da <`step`> nó.  
   
@@ -156,7 +155,7 @@ SELECT @x.query('
 ...  
 ```  
   
- A consulta a seguir constrói o novo XML com elementos <`Location`> com os atributos do local do centro de trabalho retornados como elementos filho:  
+ A consulta a seguir constrói XML novos que tem o <`Location`> elementos com o trabalho de centralizar os atributos de localização retornados como elementos filho:  
   
 ```xml
 <Location>  
@@ -188,7 +187,7 @@ where ProductModelID=7
   
  Observe o seguinte na consulta anterior:  
   
--   A instrução FLWOR recupera uma sequência de elementos <`Location`> de um produto específico.  
+-   A instrução FLWOR recupera uma sequência de <`Location`> elementos de um produto específico.  
   
 -   O [função data (XQuery)](../xquery/data-accessor-functions-data-xquery.md) é usado para extrair o valor de cada atributo, portanto, eles serão adicionados ao XML resultante como nós de texto em vez de como atributos.  
   
@@ -229,7 +228,7 @@ where ProductModelID=7
 ## <a name="using-the-where-clause"></a>Usando a cláusula where  
  Você pode usar o `where` cláusula para filtrar os resultados de uma iteração. Isso é ilustrado no exemplo a seguir.  
   
- Na fabricação de uma bicicleta, o processo de produção passa por uma série de locais do centro de trabalho. Cada local do centro de trabalho define uma sequência de etapas de produção. A consulta a seguir recupera somente os locais do centro de trabalho que fabricam um modelo de bicicleta e têm menos de três etapas de produção. Ou seja, eles têm menos de três elementos <`step`>.  
+ Na fabricação de uma bicicleta, o processo de produção passa por uma série de locais do centro de trabalho. Cada local do centro de trabalho define uma sequência de etapas de produção. A consulta a seguir recupera somente os locais do centro de trabalho que fabricam um modelo de bicicleta e têm menos de três etapas de produção. Ou seja, eles têm menos de três <`step`> elementos.  
   
 ```sql
 SELECT Instructions.query('  
@@ -268,7 +267,7 @@ where ProductModelID=7
 4.  Caso contrário, ele gera um erro estático.  
   
 ## <a name="multiple-variable-binding-in-flwor"></a>Associação de variável múltipla em FLWOR  
- Você pode ter uma única expressão FLWOR que associa diversas variáveis a sequências de entrada. No exemplo a seguir, a consulta é especificada em uma coluna xml não digitada. A expressão FLOWR retorna o primeiro filho do elemento <`Step`> em cada elemento <`Location`>.  
+ Você pode ter uma única expressão FLWOR que associa diversas variáveis a sequências de entrada. No exemplo a seguir, a consulta é especificada em uma coluna xml não digitada. A expressão FLOWR retorna o primeiro <`Step`> filho do elemento em cada <`Location`> elemento.  
   
 ```sql
 declare @x xml  
@@ -298,7 +297,7 @@ SELECT @x.query('
   
 -   As expressões `two`, `/ManuInstructions/Location` e `$FirstStep in $Loc/Step[1]`, são correlacionadas pelo fato de que os valores de `$FirstStep` dependem dos valores de `$Loc`.  
   
--   A expressão associada com `$Loc` gera uma sequência de elementos <`Location`>. Para cada elemento <`Location`>, o `$FirstStep` gera uma sequência de um elemento <`Step`>, um singleton.  
+-   A expressão associada `$Loc` gera uma sequência de <`Location`> elementos. Para cada <`Location`> elemento, `$FirstStep` gera uma sequência de um <`Step`> elemento, um singleton.  
   
 -   `$Loc` é especificado na expressão associada com a variável `$FirstStep`.  
   
@@ -407,7 +406,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- Também é possível a classificação por valor do atributo. Por exemplo, a consulta a seguir recupera os elementos <`Location`> recentemente criados que têm os atributos LocationID e LaborHours classificados pelo atributo LaborHours na ordem decrescente. Consequentemente, os locais do centro de trabalho com o maior número de horas de trabalho são retornados primeiro.  
+ Também é possível a classificação por valor do atributo. Por exemplo, a consulta a seguir recupera o recém-criado <`Location`> elementos que têm os atributos LocationID e LaborHours classificados pelo atributo LaborHours na ordem decrescente. Consequentemente, os locais do centro de trabalho com o maior número de horas de trabalho são retornados primeiro.  
   
 ```sql
 SELECT Instructions.query('  
@@ -435,7 +434,7 @@ WHERE ProductModelID=7;
 <Location LocationID="45" LaborHours=".5"/>  
 ```  
   
- Na consulta a seguir, os resultados são classificados por nome de elemento. A consulta recupera as especificações de um produto específico do catálogo de produtos. As especificações são os filhos do elemento <`Specifications`>.  
+ Na consulta a seguir, os resultados são classificados por nome de elemento. A consulta recupera as especificações de um produto específico do catálogo de produtos. As especificações são os filhos de <`Specifications`> elemento.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -451,7 +450,7 @@ where ProductModelID=19;
   
  Observe o seguinte na consulta anterior:  
   
--   A expressão `/p1:ProductDescription/p1:Specifications/*` retorna os filhos do elemento de <`Specifications`>.  
+-   O `/p1:ProductDescription/p1:Specifications/*` expressão retorna os filhos do elemento <`Specifications`>.  
   
 -   A expressão `order by (local-name($a))` classifica a sequência pela parte local do nome de elemento.  
   
@@ -490,7 +489,7 @@ select @x.query('
 <Person Name="B" />  
 ```  
   
- Você pode especificar vários critérios de classificação, como mostrado no exemplo a seguir. A consulta neste exemplo classifica elementos <`Employee`> primeiro pelos valores de atributo por título e, em seguida, por administrador.  
+ Você pode especificar vários critérios de classificação, como mostrado no exemplo a seguir. A consulta neste exemplo classifica <`Employee`> valores de atributo de elementos primeiro por título e, em seguida, pelo administrador.  
   
 ```sql
 declare @x xml  

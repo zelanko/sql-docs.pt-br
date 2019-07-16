@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7288d143-f9e5-4f90-9b31-2549df79c109
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 57f4fd34cfe3896bb29ed31f02906ce675e4b854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40fe9d23f14d4a7af80fe31a418cccf7133b7252
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067424"
 ---
 # <a name="data-buffer-length"></a>Comprimento do buffer de dados
 O aplicativo passa o comprimento de bytes no buffer de dados para o driver em um argumento nomeado *BufferLength* ou um nome semelhante. Por exemplo, na seguinte chamada para **SQLBindCol**, o aplicativo especifica o comprimento do *ValuePtr* buffer (**sizeof (***ValuePtr***)** ):  

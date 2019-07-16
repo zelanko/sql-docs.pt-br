@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b702219ebf0c6a4a7eaec33c21fccc5fb821454c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb72f41278f356704b7abedba8e9e60cb00b8e60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094368"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>Excluir um membro ou uma coleção (Master Data Services)
 
@@ -33,7 +32,7 @@ ms.locfileid: "65478572"
 > [!NOTE]  
 >  Você não poderá excluir um membro se ele for usado como um valor de atributo baseado em domínio de outro membro.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional do **Gerenciador** .  

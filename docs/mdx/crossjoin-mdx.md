@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: b68dafa89f8285f532fc6e92e80f9741be239f65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 275a7546bae70ba329cff7af2df107e43c3d1b4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248259"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047163"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
 
@@ -42,7 +41,7 @@ Set_Expression1 * Set_Expression2 [* ...n]
 ## <a name="remarks"></a>Comentários  
  O **Crossjoin** função retorna o produto cruzado de dois ou mais conjuntos especificados. A ordem das tuplas no conjunto resultante depende da ordem dos conjuntos a serem unidos e da ordem de seus membros. Por exemplo, quando o primeiro conjunto consiste em {x1, x2,..., x*n*}, e o segundo conjunto consiste em {y1, y2,..., y*n*}, o produto cruzado desses conjuntos será:  
   
- {(x1, y1), (x1, y2),...,(x1, y*n*), (x2, y1), (x2, y2),...,  
+ {(x1, y1), (x1, y2),..., (x1, y*n*), (x2, y1), (x2, y2),...,  
   
  (x2, y*n*),..., (x*n*, y1), (x*n*, y2),..., (xn, y*n*)}  
   
@@ -117,7 +116,7 @@ FROM [Adventure Works]
 WHERE Measures.[Internet Sales Amount]  
 ```  
   
-### <a name="example-3"></a>Exemplo 3  
+### <a name="example-3"></a>Exemplo 3:  
   
 ```  
 SELECT   

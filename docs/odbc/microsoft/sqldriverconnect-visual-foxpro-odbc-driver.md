@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 10492c8f-3a18-4971-9db8-879e878083b9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc0bcf6a191f67b87b422b17778f56feda1f5227
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6fd8f3be1213a91195cd74a8b723629e2c5833f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63238088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053892"
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
@@ -45,7 +44,7 @@ ms.locfileid: "63238088"
 |Exclusive|"Sim" ou "Não"|  
 |SourceDB|Um caminho totalmente qualificado para um diretório que contém zero ou mais [tabelas livres](../../odbc/microsoft/visual-foxpro-terminology.md), ou o nome de arquivo e caminho absoluto para um [banco de dados](../../odbc/microsoft/visual-foxpro-terminology.md).|  
 |SourceType|"DBC" ou "DBF"|  
-|Versão||  
+|Version||  
   
  Se o nome da fonte de dados não for especificado, o Gerenciador de Driver solicita ao usuário para obter as informações (dependendo da configuração do *fDriverCompletion* argumento) e, em seguida, continua. Se mais informações são necessárias, o Driver de ODBC do Visual FoxPro exibe a caixa de diálogo de aviso.  
   

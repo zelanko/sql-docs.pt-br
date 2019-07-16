@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dcc027ad80d4bbe1142a9e17add52f8a42d7d404
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a001a6a2da2532ac6d0e2a00079c8bd7c7036b66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060380"
 ---
 # <a name="syscollectorcollectionsets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "62760194"
 |-----------------|---------------|-----------------|  
 |collection_set_id|**int**|É o identificador local do conjunto de coleções. Não permite valor nulo.|  
 |collection_set_uid|**uniqueidentifier**|O identificador global exclusivo do conjunto de coleta. Não permite valor nulo.|  
-|nome|**nvarchar(4000)**|Nome do conjunto de coleta. Permite valor nulo.|  
+|name|**nvarchar(4000)**|Nome do conjunto de coleta. Permite valor nulo.|  
 |target|**nvarchar(max)**|Identifica o destino do conjunto de coleta. Permite valor nulo.|  
 |is_system|**bit**|Ativado (1) ou desativado (0) para indicar se o conjunto de coleta foi incluído no coletor de dados ou se foi adicionado depois pelo dc_admin. Pode ser um conjunto de coleta personalizado desenvolvido internamente ou por um terceiro. Não permite valor nulo.|  
 |is_running|**bit**|Indica se o conjunto de coleta está sendo executado ou não. Não permite valor nulo.|  

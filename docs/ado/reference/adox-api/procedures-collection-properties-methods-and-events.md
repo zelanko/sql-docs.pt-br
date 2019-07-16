@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 557890e5-9a45-405d-a8d3-4f7c2b899c08
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e9fef0bce2a18a262ab0121dec6844195361e855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76b345a61754b491e74a8f8962c0e8e8f06d68f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965412"
 ---
 # <a name="procedures-collection-properties-methods-and-events"></a>Propriedades, Métodos e Eventos da coleção Procedures
 ## <a name="properties"></a>Propriedades  
@@ -34,7 +33,7 @@ ms.locfileid: "66706070"
  [Método Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Events  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="see-also"></a>Consulte também  
  [Coleção Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

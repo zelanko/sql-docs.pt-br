@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3d602faed36d2348652aa8fd026f0c0810928b6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5000a537e068136de98e8635f348ff6aa3d9e364
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931834"
 ---
 # <a name="optimize-property-example-vc"></a>Exemplo da propriedade Optimize (VC++)
 Este exemplo demonstra a [campo](../../../ado/reference/ado-api/field-object.md) objeto dinâmico **otimizar** propriedade. O **zip** campo da **autores** na tabela a **Pubs** banco de dados não está indexado. Definindo o [otimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriedade a ser **verdadeiro** no **zip** campo autoriza o ADO para criar um índice que melhora o desempenho do [localizar](../../../ado/reference/ado-api/find-method-ado.md)método.  
@@ -133,7 +132,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Akiko Yokomoto    3 Silver Ct. Autoridade de certificação Walnut Creek**   
+ **Akiko Yokomoto 3 Silver Ct. Autoridade de certificação Walnut Creek**   
 ## <a name="see-also"></a>Consulte também  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
  [Otimizar a propriedade dinâmica (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

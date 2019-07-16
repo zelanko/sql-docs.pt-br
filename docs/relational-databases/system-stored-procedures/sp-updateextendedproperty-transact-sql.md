@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 347e8d170006cb289b421171851140b18e64f14b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f1c1c856cadbb4f005a99d5a5d49dc0c1280a8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843844"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898415"
 ---
 # <a name="spupdateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_updateextendedproperty
  É o valor associado à propriedade. *valor* está **sql_variant**, com um padrão NULL. O tamanho de *valor* não pode ser maior que 7.500 bytes.  
   
  [ @level0type=] {'*level0_object_type*'}  
- É o usuário ou tipo definido pelo usuário. *level0_object_type* está **varchar (128)**, com um padrão NULL. As entradas válidas são ASSEMBLY, contrato, notificação de eventos, grupo de arquivos, tipo de mensagem, PARTITION FUNCTION, PARTITION SCHEME, guia de plano, REMOTE SERVICE BINDING, ROTA, esquema, serviço, usuário, GATILHO, tipo e NULL.  
+ É o usuário ou tipo definido pelo usuário. *level0_object_type* está **varchar (128)** , com um padrão NULL. As entradas válidas são ASSEMBLY, contrato, notificação de eventos, grupo de arquivos, tipo de mensagem, PARTITION FUNCTION, PARTITION SCHEME, guia de plano, REMOTE SERVICE BINDING, ROTA, esquema, serviço, usuário, GATILHO, tipo e NULL.  
   
 > [!IMPORTANT]  
 >  USER e TYPE como tipos de nível 0 serão removidos em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente. Use SCHEMA como o tipo de nível 0 em vez de USER. Para TYPE, use SCHEMA como o tipo de nível 0 e TYPE como o tipo de nível 1.  

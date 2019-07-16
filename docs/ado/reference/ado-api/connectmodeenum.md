@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3528034b4a87115d704e7cbbc1f9d98a36e11794
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: debf6f9dc4ac1326caf9fbf32b65f15f34a19094
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933453"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 Especifica as permissões disponíveis para modificar dados em um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md), abrindo uma [registro](../../../ado/reference/ado-api/record-object-ado.md), ou especificando valores para o [modo](../../../ado/reference/ado-api/mode-property-ado.md) propriedade do  **Registro** e [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objetos.  
@@ -39,7 +38,7 @@ Especifica as permissões disponíveis para modificar dados em um [Conexão](../
 |**adModeWrite**|2|Indica as permissões de somente gravação.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Package: **com.ms.wfc.data**  
+ Pacote: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

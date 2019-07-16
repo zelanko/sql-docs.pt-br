@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 23b75beb0782fc0a13155d12890cbe3a620e1733
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8b36fffa5c1999033f0cc1902eda9c2cb4ba61d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061801"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -61,7 +60,7 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @configname = ] 'option_name'` É o nome de uma opção de configuração. *option_name* é **varchar(35)**, com um padrão de NULL. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] reconhece qualquer cadeia de caracteres única que faça parte do nome de configuração. Se não for especificado, a lista completa de opções será retornada.  
+`[ @configname = ] 'option_name'` É o nome de uma opção de configuração. *option_name* é **varchar(35)** , com um padrão de NULL. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] reconhece qualquer cadeia de caracteres única que faça parte do nome de configuração. Se não for especificado, a lista completa de opções será retornada.  
   
  Para obter informações sobre as opções de configuração disponíveis e suas configurações, consulte [opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
@@ -98,7 +97,7 @@ RECONFIGURE
   
  A instrução RECONFIGURE atualiza algumas opções dinamicamente, outras opções requerem a parada do servidor e reinicialização. Por exemplo, o **memória mínima do servidor** e **memória máxima do servidor** opções server memory são atualizadas dinamicamente no [!INCLUDE[ssDE](../../includes/ssde-md.md)]; portanto, você pode alterá-los sem reiniciar o servidor. Por outro lado, reconfigurar o valor em execução do **fator de preenchimento** opção requer a reinicialização a [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- Após executar RECONFIGURE em uma opção de configuração, você pode ver se a opção foi dinamicamente atualizada executando **sp_configure'***option_name***'**. Os valores de **run_value** e **config_value** colunas devem corresponder com uma opção dinamicamente atualizada. Você também pode verificar para ver quais opções são dinâmicas, observando a **is_dynamic** coluna das **sys. Configurations** exibição do catálogo.  
+ Após executar RECONFIGURE em uma opção de configuração, você pode ver se a opção foi dinamicamente atualizada executando **sp_configure'***option_name***'** . Os valores de **run_value** e **config_value** colunas devem corresponder com uma opção dinamicamente atualizada. Você também pode verificar para ver quais opções são dinâmicas, observando a **is_dynamic** coluna das **sys. Configurations** exibição do catálogo.  
   
 > [!NOTE]  
 >  Se for especificado *valor* é muito alta para uma opção, o **run_value** coluna reflete o fato de que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] definiu como padrão para a memória dinâmica em vez de usar uma configuração que não é válida.  

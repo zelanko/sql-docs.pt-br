@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d9ad01fb0aa73dc34739c5584a510dbe1bc854da
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004535"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Manipulando namespaces em XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ WHERE ProductModelID=7
   
  Observe que o **namespace** palavra-chave é usada para definir um novo prefixo de namespace, "AWMI:". Esse prefixo deve, então, ser usado na consulta para todos os elementos que estejam dentro do escopo desse namespace.  
   
-### <a name="b-declaring-a-default-namespace"></a>b. Declarando um namespace padrão  
+### <a name="b-declaring-a-default-namespace"></a>B. Declarando um namespace padrão  
  Na consulta anterior, um novo prefixo de namespace foi definido. Depois, esse prefixo teve de ser usado na consulta para selecionar as estruturas XML planejadas. Alternativamente, você pode declarar um namespace como o namespace padrão, como mostrado na seguinte consulta modificada:  
   
 ```  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cd106345-f561-4966-88d3-a69139b2bd78
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 26b3bedcd92729f2573cf82f944258f77faf14b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 75bbf9f18a6cbc7dd8ef78ff63e505299cf596c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988142"
 ---
 # <a name="apply-business-rules-mds-add-in-for-excel"></a>Aplicar regras de negócio (suplemento MDS para Excel)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65488938"
 > [!NOTE]  
 >  A validação dos dados ocorre automaticamente quando você os publica. Para obter mais informações, consulte [Validação &#40;Master Data Services&#41;](../../master-data-services/validation-master-data-services.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter acesso à área funcional do **Gerenciador** .  

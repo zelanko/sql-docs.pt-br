@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90a39ad540f3320ed78e981030679b59d911eeef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080769"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Suporte para regras, gatilhos, valores padrão e procedimentos armazenados (Driver ODBC do Visual FoxPro)
 Você não pode criar regras do Visual FoxPro, gatilhos, valores padrão ou procedimentos armazenados usando o Driver de ODBC do Visual FoxPro. No entanto, seu aplicativo pode interagir com os procedimentos armazenados, gatilhos, valores padrão ou as regras existentes, como ele insere, atualiza ou exclui dados do Visual FoxPro armazenados em um banco de dados.  
@@ -231,7 +230,7 @@ Você não pode criar regras do Visual FoxPro, gatilhos, valores padrão ou proc
 |Comando de filtro de conjunto|Comando de conjunto de fixo|Comando de caminho completo do conjunto|  
 |Comando FWEEK SET|DEFINIDAS horas de comando|Comando de conjunto de índice|  
 |Comando de bloqueio de conjunto|Comando MULTILOCKS SET|Definir próximo ao comando|  
-|SET NOCPTRANS Command|Comando de notificação de conjunto|Comando SET NULL|  
+|Comando NOCPTRANS SET|Comando de notificação de conjunto|Comando SET NULL|  
 |Comando de otimização do conjunto|Comando de ordem de conjunto|Comando SET PATH|  
 |Comando do conjunto de PROCEDURE|Comando de relação de conjunto|Definir relação OFF comando|  
 |Comando SET REPROCESS|DEFINIR o comando Ignorar|Comando UDFPARMS SET|  
@@ -268,7 +267,7 @@ Você não pode criar regras do Visual FoxPro, gatilhos, valores padrão ou proc
 |-|-|-|  
 |Função do VAL)|Função () de versão||  
   
-## <a name="w"></a>L  
+## <a name="w"></a>W  
   
 ||||  
 |-|-|-|  

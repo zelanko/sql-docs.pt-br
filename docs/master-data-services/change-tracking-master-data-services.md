@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5920b8bc460a2c0147b68c78f87b7d38543be564
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8ba29c99c7744793b3c2829f45cf1303a1c0e90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052064"
 ---
 # <a name="change-tracking-master-data-services"></a>Controle de alterações (Master Data Services)
 
@@ -32,7 +31,7 @@ ms.locfileid: "65477021"
 > [!NOTE]  
 >  Regras de negócio de controle de alterações consideram os dados preparados (importados) a serem alterados.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

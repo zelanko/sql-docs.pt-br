@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9ae478cb2efc557acfd86e174d59a160fb8920c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3476ba45f7f563524cdfd9855e80f9c5dd96524
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054451"
 ---
 # <a name="managing-clr-integration-assemblies"></a>Gerenciando assemblies de integração CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,10 +28,10 @@ ms.locfileid: "47686534"
   
  Informações de assembly são armazenadas em do **assembly_files** tabela no banco de dados em que o assembly foi instalado. O **assembly_files** tabela contém as colunas a seguir.  
   
-|coluna|Description|  
+|coluna|Descrição|  
 |------------|-----------------|  
 |assembly_id|O identificador definido para o assembly. Este número é atribuído a todos os objetos relacionados ao mesmo assembly.|  
-|nome|O nome do objeto.|  
+|name|O nome do objeto.|  
 |file_id|Um número que identifica cada objeto, com o primeiro objeto associado com um determinado **assembly_id** o valor de 1. Se vários objetos estão associados com o mesmo **assembly_id**, em seguida, cada subsequentes **file_id** valor é incrementado em 1.|  
 |content|A representação hexadecimal do assembly ou arquivo.|  
   

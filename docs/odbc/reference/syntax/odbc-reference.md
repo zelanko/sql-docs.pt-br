@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ba0f6cc-dfa7-4fe8-8bc2-f862b386156d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3a7412e42032900c24e90cffdf74abb2caac9842
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1fab61517e226a0f78089d909188a275a61d0928
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036347"
 ---
 # <a name="odbc-reference"></a>Propriedade ODBC
 Os tópicos a seguir contêm sintaxe e semânticas informações para todas as funções ODBC.  

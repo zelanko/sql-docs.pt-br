@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf650c095e27fe3a270ad9610e959bd6f5f1a6a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8771d7c821a82733b0664f09c5dadf2128baf877
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997091"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090848"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Local de armazenamento na pasta de instantâneo se o local for diferente de ou Além disso, para o local padrão.|  
 |**description**||Descrição da assinatura pull de mesclagem.|  
-|**distributor**||Nome do Distribuidor.|  
+|**distribuidor**||Nome do Distribuidor.|  
 |**distributor_login**||ID do logon usado no Distribuidor para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**distributor_password**||A senha (criptografada) usada no Distribuidor para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**distributor_security_mode**|**1**|Use a Autenticação do Windows ao se conectar ao Distribuidor.|  
@@ -66,7 +65,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**ftp_login**||Disponível somente para compatibilidade com versões anteriores. O nome de usuário é usado para se conectar ao serviço FTP.|  
 |**ftp_password**||Disponível somente para compatibilidade com versões anteriores. É a senha de usuário usada para se conectar ao serviço FTP.|  
 |**ftp_port**||Disponível somente para compatibilidade com versões anteriores. É o número da porta do serviço FTP para o Distribuidor.|  
-|**hostname**||Especifica o valor para HOST_NAME() quando essa função for usada na cláusula WHERE de uma relação de filtro de junção ou registro lógico.|  
+|**nome do host**||Especifica o valor para HOST_NAME() quando essa função for usada na cláusula WHERE de uma relação de filtro de junção ou registro lógico.|  
 |**internet_login**||Logon que o Agente de Mesclagem usa ao se conectar ao servidor da Web que está hospedando a sincronização da Web usando Autenticação Básica.|  
 |**internet_password**||Senha para o logon que o Merge Agent usa ao se conectar ao servidor da Web que está hospedando a sincronização da Web usando Autenticação Básica.|  
 |**internet_security_mode**|**1**|Use a Autenticação do Windows para se conectar ao servidor da Web que está hospedando a sincronização da Web.|  
@@ -81,7 +80,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**publisher_security_mode**|**0**|Use a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao se conectar ao Publicador.|  
 ||**1**|Use a Autenticação do Windows ao se conectar ao Publicador.|  
 ||**2**|Gatilhos de sincronização usam um estático **sysservers** entrada de fazer a chamada de procedimento remoto (RPC) e o publicador deve ser definida na **sysservers** tabela como um servidor remoto ou vinculado.|  
-|**sync_type**|**automatic**|Esquema e dados iniciais de tabelas publicadas são transferidos ao Assinante primeiro.|  
+|**sync_type**|**Automático**|Esquema e dados iniciais de tabelas publicadas são transferidos ao Assinante primeiro.|  
 ||**None**|O Assinante já tem o esquema e os dados iniciais para as tabelas publicadas; tabelas de sistema e dados são sempre transferidos.|  
 |**use_ftp**|**true**|Use o FTP em vez do protocolo típico para recuperar instantâneos.|  
 ||**false**|Use o FTP em vez do protocolo típico para recuperar instantâneos.|  

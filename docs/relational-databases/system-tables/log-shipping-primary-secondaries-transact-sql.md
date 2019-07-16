@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4b315c70-7265-4acd-b35b-a4dbb7881d98
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a3ef89cbfccaa936b00654210e21b87d7edce172
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6bf9b02afe0312a2be1a057ee19a594c9c488675
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095851"
 ---
 # <a name="logshippingprimarysecondaries-transact-sql"></a>log_shipping_primary_secondaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47733674"
   Mapeia cada banco de dados primário para seus bancos de dados secundários. Essa tabela é armazenada na **msdb** banco de dados.  
 
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**primary_id**|**uniqueidentifier**|A ID do banco de dados primário para a configuração de envio de log.|  
 |**secondary_server**|**sysname**|O nome da instância secundária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs.|  

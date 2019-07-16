@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c81fc58-57f0-4dd7-be16-2b146eb15cbc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7759221f579161424fdc08cc42d1357376efc60b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65cc8fa7517d3093b7314cacdafd8f607d89bc3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62687575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081990"
 ---
 # <a name="convert-function-limitations"></a>Limitações da função CONVERT
 Tipo de resultado de falhas de conversão da coluna em questão que está sendo definida como NULL.  

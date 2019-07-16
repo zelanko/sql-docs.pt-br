@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8b52f2cf665232c5e16677a257465d020c227c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926793"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Microsoft Cursor Service para visão geral do OLE DB
 O Microsoft Cursor Service para OLE DB complementa as funções de suporte de cursor de provedores de dados. Como resultado, o usuário percebe a funcionalidade relativamente uniforme de todos os provedores de dados.
@@ -57,7 +56,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  Não há suporte para a propriedade dinâmica DBPROP_SERVERDATAONINSERT pelo serviço de cursor, mesmo se for suportado pelo provedor de dados subjacente.
 
-|Nome da propriedade|Descrição|
+|Nome da Propriedade|Descrição|
 |-------------------|-----------------|
 |Recálculo automático (DBPROP_ADC_AUTORECALC)|Para conjuntos de registros criados com o Data Shaping Service, esse valor indica a frequência com que as colunas calculadas e de agregação são calculadas. O padrão (valor = 1) é recalcular sempre que o Data Shaping Service determina que os valores foram alterados. Se o valor for 0, as colunas calculadas ou de agregação só são calculadas quando a hierarquia é inicialmente criada.|
 |Tamanho do lote (DBPROP_ADC_BATCHSIZE)|Indica o número de instruções de atualização que podem ser enviadas em lote antes de serem enviados ao armazenamento de dados. As instruções mais em um lote, as menos viagens de ida e aos dados armazenar.|
@@ -83,7 +82,7 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>Comportamento de propriedade interna
  O Cursor Service para OLE DB também afeta o comportamento de determinadas propriedades internas.
 
-|Nome da propriedade|Descrição|
+|Nome da Propriedade|Descrição|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Complementa os tipos de cursores que estão disponíveis para um **conjunto de registros**.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Complementa os tipos de bloqueios disponíveis para um **conjunto de registros**. Permite o atualizações em lotes.|

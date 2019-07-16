@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d0568403cb7f5bdf48d9be33e1b40f0be3fc1c33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03e888cc3d36b909035247d5f1c16dd1ab61e0d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061191"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62470824"
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Coluna de identidade que fornece a sequência de inserção natural de linhas.|  
 |**source_server**|**sysname**|Nome do servidor de origem.|  
-|**operation_code**|**tinyint**|Código de operação para o trabalho:<br /><br /> **1** = INS (INSERT)<br /><br /> **2** = UPD (ATUALIZAÇÃO)<br /><br /> **3** = DEL (DELETE)<br /><br /> **4** = START<br /><br /> **5** = STOP|  
+|**operation_code**|**tinyint**|Código de operação para o trabalho:<br /><br /> **1** = INS (INSERT)<br /><br /> **2** = UPD (ATUALIZAÇÃO)<br /><br /> **3** = DEL (DELETE)<br /><br /> **4** = START<br /><br /> **5** = PARAR|  
 |**object_type**|**tinyint**|Código de tipo de objeto.|  
 |**object_id** <sup>1</sup>|**uniqueidentifier**|Número de identificação do objeto.|  
 |**target_server**|**sysname**|Nome do servidor de destino.|  

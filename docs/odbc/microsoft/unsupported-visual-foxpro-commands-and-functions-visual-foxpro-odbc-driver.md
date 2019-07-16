@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db6aff35944b8811e79627c6076ab61e838edf3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912318"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Comandos e funções do Visual FoxPro sem suporte (Driver ODBC do Visual FoxPro)
 A tabela a seguir lista os comandos do FoxPro e funções que não têm suporte para o Driver de ODBC do Visual FoxPro, mas são suportadas pelo Microsoft® Visual FoxPro®.  
@@ -35,7 +34,7 @@ A tabela a seguir lista os comandos do FoxPro e funções que não têm suporte 
 |-|-|-|  
 |#DEFINE... #UNDEF|... #IF #ENDIF diretiva de pré-processador|#IFDEF &#124; #IFNDEF|  
 |# Pré-processador diretiva INCLUDE|:: Operador de resolução de escopo|! Comando (consulte execução &#124; ! Comando)|  
-|? &#124; ?? Comando|??? Comando|\ &#124; \\\ Command|  
+|? &#124; ?? Comando|??? Comando|\ &#124; \\\ Comando|  
 |@ ... CAIXA de comando|@ ... CLASSE de comando|@ ... Comando de limpeza|  
 |@ ... Editar - Editar caixas comando|@ ... Comando preencher|@ ... OBTER|  
 |@ ... Comando de MENU|@ ... Comando PROMPT|@ ... Digamos que o comando|  
@@ -66,7 +65,7 @@ A tabela a seguir lista os comandos do FoxPro e funções que não têm suporte 
 ||||  
 |-|-|-|  
 |Variável de memória do sistema _CALCVALUE|Variável de memória do sistema _CLIPTEXT|Variável de memória do sistema _CONVERTER|  
-|_CUROBJ System Memory Variable|CHAMAR o comando|Cancelar o comando|  
+|Variável de memória do sistema _CUROBJ|CHAMAR o comando|Cancelar o comando|  
 |Função do CAPSLOCK)|Comando de CD|Comando de alteração|  
 |Comando CHDIR|Função do CHRSAW)|Comando Fechar Memorando|  
 |Função do CNTBAR)|Função do CNTPAD)|Função () de COL|  
@@ -172,7 +171,7 @@ A tabela a seguir lista os comandos do FoxPro e funções que não têm suporte 
 |Função do MENU)|Função do MESSAGEBOX)|Modifique o comando de conexão|  
 |MODIFICAR a classe de comando|Modifique o comando de comando|Modifique o comando de formulário|  
 |Modifique o comando de banco de dados|MODIFICAR o arquivo de comando|Modifique o comando de memorando|  
-|Modifique o comando geral|MODIFY LABEL Command|Modifique o comando de projeto|  
+|Modifique o comando geral|Modifique o comando de rótulo|Modifique o comando de projeto|  
 |Modifique o comando de MENU|Modifique o comando de procedimento|Modifique o comando de tela|  
 |Modifique o comando de consulta|Modifique o comando de relatório|MODIFICAR a janela de comando|  
 |MODIFICAR a estrutura de comando|Modifique o comando de modo de exibição|Mover a janela comando|  
@@ -203,7 +202,7 @@ A tabela a seguir lista os comandos do FoxPro e funções que não têm suporte 
   
 ||||  
 |-|-|-|  
-|Variável de memória do sistema _PADVANCE|Variável de memória do sistema _PAGENO|_PBPAGE System Memory Variable|  
+|Variável de memória do sistema _PADVANCE|Variável de memória do sistema _PAGENO|Variável de memória do sistema _PBPAGE|  
 |Variável de memória do sistema _PCOLNO|Variável de memória do sistema _PCOPIES|Variável de memória do sistema _PDRIVER|  
 |Variável de memória do sistema _PDSETUP|Variável de memória do sistema _PECODE|Variável de memória do sistema _PEJECT|  
 |Variável de memória do sistema _PEPAGE|Variável de memória do sistema _PLENGTH|Variável de memória do sistema _PLINENO|  
@@ -237,7 +236,7 @@ A tabela a seguir lista os comandos do FoxPro e funções que não têm suporte 
 |RENOMEAR um comando de conexão|RENOMEAR tabela comando|RESTAURAR a partir de comando|  
 |Comando de relatório|Repetir a consulta de função)|RESTAURAR janela comando|  
 |MACROS de comando RESTORE|RESTAURAR comando de tela|Função do RGBSCHEME)|  
-|Comando RESUME|Função do RGB)|RUN &#124; ! Comando|  
+|Comando RESUME|Função do RGB)|EXECUTE &#124; ! Comando|  
 |Comando RMDIR|Função () de linha||  
 |Comando RUNSCRIPT|Função do RDLEVEL)||  
   
@@ -265,7 +264,7 @@ A tabela a seguir lista os comandos do FoxPro e funções que não têm suporte 
 |Comando MACHELP SET|Comando MACKEY SET|Comando de MARGEM de conjunto|  
 |MARCA de conjunto de comando|Defina a marca de comando|Comando MEMOWIDTH SET|  
 |Comando do conjunto de mensagem|Comando de MOUSE SET|Comando do HODÔMETRO SET|  
-|Comando OLEOBJECT SET|SET PALETTE Command|Comando PDSETUP SET|  
+|Comando OLEOBJECT SET|Comando do conjunto de PALETA|Comando PDSETUP SET|  
 |Comando definir ponto|Comando de impressora SET|Comando READBORDER SET|  
 |Comando de atualização de conjunto|Comando do conjunto de recursos|Comando do conjunto de segurança|  
 |Comando do conjunto de PLACAR|Comando de segundos de conjunto|Comando de SEPARADOR de conjunto|  
@@ -275,11 +274,11 @@ A tabela a seguir lista os comandos do FoxPro e funções que não têm suporte 
 |Comando de PALESTRA SET|Comando TEXTMERGE SET|Comando de DELIMITADORES TEXTMERGE SET|  
 |Comando do conjunto de tópico|Comando de ID do conjunto de tópico|Comando TRBETWEEN SET|  
 |Comando de digitação antecipada de conjunto|Comando de modo de exibição de conjunto|CONJUNTO de janela de comando de memorando|  
-|Comando XCMDFILE SET|_SHELL System Memory Variable|Mostrar comando GET|  
+|Comando XCMDFILE SET|Variável de memória do sistema _SHELL|Mostrar comando GET|  
 |Mostrar comando OBTÉM|Mostrar comando de MENU|Mostrar o objeto de comando|  
 |Mostrar comando pop-up|Mostrar janela de comando|Comando de pop-up de tamanho|  
 |Comando de janela de tamanho|Função do SKPBAR)|Função do SKPPAD)|  
-|Função SOUNDEX)|_SPELLCHK System Memory Variable|Funções SQL|  
+|Função SOUNDEX)|Variável de memória do sistema _SPELLCHK|Funções SQL|  
 |Função do SROWS)|Variável de memória do sistema Startup|Comando de suspensão|  
 |Funções sys() exceto SYS(2011)|Função do SYSMETRIC)||  
   
@@ -303,7 +302,7 @@ A tabela a seguir lista os comandos do FoxPro e funções que não têm suporte 
 |-|-|-|  
 |Validar o comando de banco de dados|Função do VARREAD)|Função () de versão|  
   
-## <a name="w"></a>L  
+## <a name="w"></a>W  
   
 ||||  
 |-|-|-|  

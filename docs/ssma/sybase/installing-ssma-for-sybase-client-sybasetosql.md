@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6cca10f2a54a70e91e46bb8b98e9799885b5f175
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8680685640b234e47f6e68d7fb802fc7e2f5d81c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029025"
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>Instalar o cliente SSMA para Sybase (SybaseToSQL)
 O cliente SSMA consiste nos arquivos de programa que são usados para se conectar a um servidor de banco de dados do Sybase Adaptive Server Enterprise (ASE) e uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o Azure SQL DB, converter objetos de banco de dados do ASE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou sintaxe de BD SQL do Azure, carregue o objetos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o Azure SQL DB, e, em seguida, migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Azure SQLDB.  
   
 Este tópico fornece os pré-requisitos de instalação e as instruções para instalar o SSMA.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 O SSMA é projetado para trabalhar com o ASE 11.9.2 ou versões posteriores e todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 Antes de instalar o SSMA, certifique-se de que o computador atende aos seguintes requisitos:  

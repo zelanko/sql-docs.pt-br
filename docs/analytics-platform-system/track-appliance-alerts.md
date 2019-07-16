@@ -2,19 +2,18 @@
 title: Controlar os alertas do dispositivo - Analytics Platform System | Microsoft Docs
 description: Controlar os alertas do dispositivo no Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f38f76975290538a35203ddbbed84b9354285edc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62f116b8e45512d5a6fc5ce50c0fbc76344103be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960022"
 ---
 # <a name="track-appliance-alerts-in-analytics-platform-system"></a>Controlar os alertas do dispositivo no Analytics Platform System
 Este tópico explica como usar o Console de administração e as exibições do sistema para controlar os alertas em um dispositivo de PDW do SQL Server.  

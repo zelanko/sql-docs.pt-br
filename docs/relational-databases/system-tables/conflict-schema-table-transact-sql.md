@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4725da28e9cd83df4979d1cc476cd60a488c0aa4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084776"
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "62471075"
 |__$update_bitmap|**varbinary(** *n* **)** . Tamanho varia de acordo com o conteúdo.|Bitmap que indica quais colunas foram atualizadas na ocorrência de um conflito atualização- atualização.|  
 |__$inserted_date|**datetime**|Dada e hora em que a linha conflitante foi inserida nesta tabela.|  
 |__$row_id|**timestamp**|Versão da linha associada à linha que causou o conflito.|  
-|__$change_id|**binary (8)**|No caso de uma linha local, este valor é igual a __$row_id da linha de entrada que gerou o conflito com a linha local. Esse valor é NULL para uma linha de entrada.|  
+|__$change_id|**binário (8)**|No caso de uma linha local, este valor é igual a __$row_id da linha de entrada que gerou o conflito com a linha local. Esse valor é NULL para uma linha de entrada.|  
 |\<nomes de coluna da tabela de base >|\<tipos de coluna de tabela base >|A tabela de conflito contém uma coluna para cada coluna na tabela base.|  
   
 ## <a name="see-also"></a>Consulte também  
