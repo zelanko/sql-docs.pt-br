@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8ea84d69-2292-4128-89a0-f184f68abb98
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee08f42a4ccd7eb51f45e1654f20e264f80c49d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db39751059d84e4e3a7950acbbbcb7f1a2b0b00d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056864"
 ---
 # <a name="sql-to-c-day-time-intervals"></a>SQL para C: Intervalos de dia-horário
 
@@ -42,11 +41,11 @@ A tabela a seguir mostra os tipos de dados ao qual o intervalo de tempo-dia de d
 
 |Identificador de tipo C|Teste|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|Todos os tipos de intervalo de C de tempo-dia|Parte de campos à direita não truncado<br /><br /> Parte de campos à direita truncado<br /><br /> A precisão do destino inicial não é grande o suficiente para manter os dados de origem|Dados<br /><br /> Dados truncados<br /><br /> Indefinido|Comprimento dos dados<br /><br /> Comprimento dos dados<br /><br /> Indefinido|n/d<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_STINYINT[b] SQL_C_UTINYINT[b] SQL_C_USHORT[b] SQL_C_SHORT[b] SQL_C_SLONG[b] SQL_C_ULONG[b] SQL_C_NUMERIC[b] SQL_C_BIGINT[b]|Precisão de intervalo foi um único campo e os dados foi convertidos sem truncamento<br /><br /> Precisão de intervalo era um único campo e truncado fracionário<br /><br /> Precisão de intervalo foi um único campo e truncado para inteiros<br /><br /> Precisão de intervalo não era um único campo|Dados<br /><br /> Dados truncados<br /><br /> Dados truncados<br /><br /> Indefinido|Tamanho do tipo de dados C<br /><br /> Comprimento dos dados<br /><br /> Comprimento dos dados<br /><br /> Tamanho do tipo de dados C|n/d<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
-|SQL_C_BINARY|Comprimento de bytes de dados < = *BufferLength*<br /><br /> Comprimento de bytes de dados > *BufferLength*|Dados<br /><br /> Indefinido|Comprimento dos dados<br /><br /> Indefinido|n/d<br /><br /> 22003|  
-|SQL_C_CHAR|Bytes de comprimento de caracteres < *BufferLength*<br /><br /> Número de dígitos de inteiro (em vez de fracionários) < *BufferLength*<br /><br /> Número de dígitos de inteiro (em vez de fracionários) > = *BufferLength*|Dados<br /><br /> Dados truncados<br /><br /> Indefinido|Tamanho do tipo de dados C<br /><br /> Tamanho do tipo de dados C<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|Comprimento de caracteres < *BufferLength*<br /><br /> Número de dígitos de inteiro (em vez de fracionários) < *BufferLength*<br /><br /> Número de dígitos de inteiro (em vez de fracionários) > = *BufferLength*|Dados<br /><br /> Dados truncados<br /><br /> Indefinido|Tamanho do tipo de dados C<br /><br /> Tamanho do tipo de dados C<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
+|Todos os tipos de intervalo de C de tempo-dia|Parte de campos à direita não truncado<br /><br /> Parte de campos à direita truncado<br /><br /> A precisão do destino inicial não é grande o suficiente para manter os dados de origem|Data<br /><br /> Dados truncados<br /><br /> Indefinido|Comprimento dos dados<br /><br /> Comprimento dos dados<br /><br /> Indefinido|n/d<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_STINYINT[b] SQL_C_UTINYINT[b] SQL_C_USHORT[b] SQL_C_SHORT[b] SQL_C_SLONG[b] SQL_C_ULONG[b] SQL_C_NUMERIC[b] SQL_C_BIGINT[b]|Precisão de intervalo foi um único campo e os dados foi convertidos sem truncamento<br /><br /> Precisão de intervalo era um único campo e truncado fracionário<br /><br /> Precisão de intervalo foi um único campo e truncado para inteiros<br /><br /> Precisão de intervalo não era um único campo|Data<br /><br /> Dados truncados<br /><br /> Dados truncados<br /><br /> Indefinido|Tamanho do tipo de dados C<br /><br /> Comprimento dos dados<br /><br /> Comprimento dos dados<br /><br /> Tamanho do tipo de dados C|n/d<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
+|SQL_C_BINARY|Comprimento de bytes de dados < = *BufferLength*<br /><br /> Comprimento de bytes de dados > *BufferLength*|Data<br /><br /> Indefinido|Comprimento dos dados<br /><br /> Indefinido|n/d<br /><br /> 22003|  
+|SQL_C_CHAR|Bytes de comprimento de caracteres < *BufferLength*<br /><br /> Número de dígitos de inteiro (em vez de fracionários) < *BufferLength*<br /><br /> Número de dígitos de inteiro (em vez de fracionários) > = *BufferLength*|Data<br /><br /> Dados truncados<br /><br /> Indefinido|Tamanho do tipo de dados C<br /><br /> Tamanho do tipo de dados C<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|Comprimento de caracteres < *BufferLength*<br /><br /> Número de dígitos de inteiro (em vez de fracionários) < *BufferLength*<br /><br /> Número de dígitos de inteiro (em vez de fracionários) > = *BufferLength*|Data<br /><br /> Dados truncados<br /><br /> Indefinido|Tamanho do tipo de dados C<br /><br /> Tamanho do tipo de dados C<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
   
  [a] intervalo de tempo-dia de um tipo SQL pode ser convertido em qualquer tipo de intervalo de tempo-dia C.  
   

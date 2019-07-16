@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 84710ffd69ea377c979adf94af1394d8436ef10b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 590bd488ae87e8e871837c3055a3225794850d00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077010"
 ---
 # <a name="data-type-conversions"></a>Conversões de tipo de dados
 Dados podem ser convertidos de um tipo para outro em um dos quatro vezes: quando dados são transferidos da variável de um aplicativo para outro (C para C), quando os dados em uma variável de aplicativo são enviados para um parâmetro de instrução (C to SQL), quando os dados em uma coluna do conjunto de resultados são retornados no uma variável de aplicativo (SQL para C), e quando os dados são transferidos da coluna de origem de dados para outro SQL (SQL).  

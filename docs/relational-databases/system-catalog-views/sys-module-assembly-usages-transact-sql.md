@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: b0f9ffab-6ac7-49d5-8369-477fa6b1c02b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: da94e88f08e662789a2fb97d9316e743c49783ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8bd525cc13b3716bf8173dcdd9350fdb9b2412c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102425"
 ---
 # <a name="sysmoduleassemblyusages-transact-sql"></a>sys.module_assembly_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada referência de módulo para assembly.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Número de identificação do objeto SQL. É exclusivo em um banco de dados.|  
 |**assembly_id**|**int**|ID do assembly a partir do qual o módulo foi criado.|  

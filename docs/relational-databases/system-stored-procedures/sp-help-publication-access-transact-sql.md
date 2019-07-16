@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb281923e5b6d48a23cb6aa3f60bf36bbe9764da
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8af56ae768ca883e22d7c9e18150e75025086d63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085258"
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 `[ @return_granted = ] 'return_granted'` É a ID de logon. *return_granted* está **bit**, com um padrão de 1. Se **0** for especificado e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação é usada, os logons disponíveis que aparecem no publicador, mas não no distribuidor serão retornados. Se **0** for especificado e a autenticação do Windows é usada, os logons que não foram especificamente negados acessam em um publicador ou distribuidor serão retornados.  
   
-`[ @login = ] 'login'` É a ID de logon de segurança padrão. *login* está **sysname**, com um padrão de **%**.  
+`[ @login = ] 'login'` É a ID de logon de segurança padrão. *login* está **sysname**, com um padrão de **%** .  
   
 `[ @initial_list = ] initial_list` Especifica se deve retornar todos os membros com acesso à publicação ou apenas aqueles que tinham acesso antes que novos membros fossem adicionados à lista. *initial_list* é bit, com um padrão de **0**.  
   

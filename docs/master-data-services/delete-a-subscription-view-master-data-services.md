@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0409df7157705d5e2c8b5ea0fdfe18ef4fd0e4c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e37b2b4f4f6dc101f553fe4a399e428d1580b42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094361"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>Excluir uma exibição de assinatura (Master Data Services)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65478641"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], exclua uma exibição de assinatura quando ela não for mais necessária. A exclusão de uma exibição de assinatura no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] remove a exibição do banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Você também pode editar uma exibição de assinatura.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Gerenciamento de Integração** . Para obter mais informações, consulte [Permissões de área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3796714cbdfb55900447bf23904136ac5abefa9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e4336fdeeb0867018e9a2a630f2212cc06259482
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984910"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62470649"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identificador de operador.|  
 |**name**|**sysname**|Nome do operador.|  
-|**enabled**|**tinyint**|Estado de notificações alertas (Booliano). Se **1**, esse operador pode receber notificações quando ocorre um alerta.|  
+|**habilitado**|**tinyint**|Estado de notificações alertas (Booliano). Se **1**, esse operador pode receber notificações quando ocorre um alerta.|  
 |**email_address**|**nvarchar(100)**|Endereço de email deste operador.|  
 |**last_email_date**|**int**|Data em que este operador recebeu a última notificação de alerta por e-mail.|  
 |**last_email_time**|**int**|Hora do dia em que este operador recebeu a última notificação de alerta por e-mail.|  

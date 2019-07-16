@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f948b50fae0995e16024ac41d8dd891630d1dbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fe4383e397c0fd06197be2ff25e6dbb876f6c0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037774"
 ---
 # <a name="c-data-types"></a>Tipos de dados do C
 Tipos de dados ODBC C indicam o tipo de dados de buffers de C usada para armazenar dados no aplicativo.  
@@ -46,7 +45,7 @@ Tipos de dados ODBC C indicam o tipo de dados de buffers de C usada para armazen
 |SQL_C_STINYINT[j]|SQLSCHAR|char assinada|  
 |SQL_C_UTINYINT[j]|SQLCHAR|char não assinada|  
 |SQL_C_SBIGINT|SQLBIGINT|_int64[h]|  
-|SQL_C_UBIGINT|SQLUBIGINT|unsigned _int64[h]|  
+|SQL_C_UBIGINT|SQLUBIGINT|_int64 não assinados [h]|  
 |SQL_C_BINARY|SQLCHAR *|unsigned char *|  
 |SQL_C_BOOKMARK[i]|INDICADOR|inteiro longo não [d]|  
 |SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|  

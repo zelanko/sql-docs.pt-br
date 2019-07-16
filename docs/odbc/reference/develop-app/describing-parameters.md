@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1bc752afc0cb5214e629a343c35464e612b57c36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d32e5212ba1ba28262d871498f2974485d38233
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049836"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040022"
 ---
 # <a name="describing-parameters"></a>Descrever parâmetros
 **SQLBindParameter** tem argumentos que descrevem o parâmetro: o tipo SQL, precisão e escala. O driver usa essas informações, ou *metadados,* para converter o valor do parâmetro para o tipo necessário pela fonte de dados. À primeira vista, pode parecer que o driver está em uma posição melhor para conhecer os metadados de parâmetro que o aplicativo; Afinal de contas, o driver pode facilmente descobrir os metadados para um resultado de coluna do conjunto. Na verdade, isso não for o caso. Em primeiro lugar, a maioria das fontes de dados não fornecem uma maneira para o driver descobrir os metadados de parâmetro. Segundo, a maioria dos aplicativos já conhece os metadados.  

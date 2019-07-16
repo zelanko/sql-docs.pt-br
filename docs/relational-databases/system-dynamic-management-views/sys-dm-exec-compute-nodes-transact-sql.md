@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f82087cc2549871147d0a85d6c36e9d8d211979
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 429075f01018abbe39b13f46b79a30aa95c5c2db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097860"
 ---
 # <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -37,12 +36,12 @@ ms.locfileid: "63013486"
   
  Use este DMV para ver a lista de todos os nós do cluster de escala horizontal com sua função, o nome e o endereço IP.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|Id numérico exclusivo associado ao nó. A chave para este modo de exibição.|Exclusivo em todo o cluster de escala horizontal, independentemente do tipo.|  
 |type|**nvarchar(32)**|Tipo de nó.|'CALCULAR', 'PRINCIPAL'|  
-|nome|**nvarchar(32)**|Nome lógico do nó.|Qualquer cadeia de caracteres de tamanho apropriado.|  
-|address|**nvarchar(32)**|Endereço P deste nó.|Intervalo de endereços IP|  
+|name|**nvarchar(32)**|Nome lógico do nó.|Qualquer cadeia de caracteres de tamanho apropriado.|  
+|endereço|**nvarchar(32)**|Endereço P deste nó.|Intervalo de endereços IP|  
   
 ## <a name="see-also"></a>Consulte também  
  [Solução de problemas com exibições de gerenciamento dinâmico do PolyBase](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   

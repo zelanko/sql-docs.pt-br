@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c50371a0-b1b2-406c-a4e5-d5191d519f5b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b7c433de56ff5e171a817e8a25b9d850c0ecefa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b6c0aa518e1471e0b316dcf9ffd8e5a668851fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087988"
 ---
 # <a name="using-the-visual-foxpro-odbc-driver"></a>Usar o driver ODBC do Visual FoxPro
 Nesta seção, os tópicos a seguir discutem como usar o Driver ODBC do Microsoft® Visual FoxPro®:  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0f923761144389a97962f7269cc5164d0dbdbf51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e49fc5a7ffd4c0adff38628a143ded695785e29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306715"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016880"
 ---
 # <a name="bottomsum-mdx"></a>BottomSum (MDX)
 
@@ -32,7 +31,7 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
- *Value*  
+ *Valor*  
  Uma expressão numérica válida que especifica o valor contra o qual cada tupla é comparada.  
   
  *Numeric_Expression*  

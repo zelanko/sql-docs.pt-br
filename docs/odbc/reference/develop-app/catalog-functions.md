@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81ba9453-c085-47c0-b411-90ca6a5ee428
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 268d5f00d787cef8dfdcb29bd9e091f81a5ed2c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 232d2e9b7e9eb695a40058075ea511392e464a32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064399"
 ---
 # <a name="catalog-functions"></a>Funções de catálogo
 Todos os bancos de dados têm uma estrutura que descreve como os dados serão armazenados no banco de dados. Por exemplo, um banco de dados do pedido de vendas simples pode ter a estrutura mostrada na ilustração a seguir, na qual as colunas do ID são usadas para vincular as tabelas.  

@@ -2,19 +2,18 @@
 title: dwloader carregador de linha de comando - Parallel Data Warehouse | Microsoft Docs
 description: dwloader é uma ferramenta de linha de comando do Parallel Data Warehouse (PDW) que carrega linhas da tabela em massa em uma tabela existente.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd3f005346c5faae9e02513a144d04d80857b770
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961024"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Carregador de linha de comando para Parallel Data Warehouse de dwloader
 **dwloader** é uma ferramenta de linha de comando do Parallel Data Warehouse (PDW) que carrega linhas da tabela em massa em uma tabela existente. Quando o carregamento de linhas, você pode adicionar todas as linhas ao final da tabela (*modo de acréscimo* ou *modo fastappend*), acrescentar novas linhas e atualizar as linhas existentes (*modo upsert*), ou excluir todos linhas antes do carregamento de existente e, em seguida, inserir todas as linhas em uma tabela vazia (*recarregar modo*).  
@@ -224,13 +223,13 @@ O delimitador para cada campo (coluna) na linha. O delimitador de campo é um ou
   
 |Nome|Caractere de escape|Caractere hexadecimal|  
 |--------|--------------------|-----------------|  
-|Tab|\t|0x09|  
+|Tabulação|\t|0x09|  
 |Retorno de carro (CR)|\r|0x0D|  
 |Alimentação de linha (LF)|\n|0x0a|  
 |CRLF|\r\n|0x0d0x0a|  
-|Comma|','|0x2c|  
-|aspas duplas|\\"|0x22|  
-|aspas simples|\\'|0x27|  
+|Vírgula|','|0x2c|  
+|Aspas duplas|\\"|0x22|  
+|Aspas simples|\\'|0x27|  
   
 Para especificar o caractere de barra vertical na linha de comando, coloque-o entre aspas duplas, com "|". Isso evitará a interpretação errônea pelo analisador de linha de comando. Outros caracteres são colocados entre aspas simples.  
   
@@ -244,7 +243,7 @@ Exemplos:
   
 -t \t  
   
--t '~|~'  
+-t ' ~ | ~'  
   
 **-r** *row_delimiter*  
 O delimitador para cada linha do arquivo de dados de origem. O delimitador de linha é um ou mais valores ASCII.  
@@ -265,7 +264,7 @@ Exemplos de CR:
   
 Exemplos de LF:  
   
--r \n  
+\n - r  
   
 -r 0x0a  
   
@@ -334,16 +333,16 @@ Exemplos de CR:
   
 Exemplos de LF:  
   
--r \n  
+\n - r  
   
 -r 0x0a  
   
 Um LF é necessário para Unix. Uma CR é necessária para Windows.  
   
-**-D** { **ymd** | ydm | mdy | myd |  dmy | dym | *custom_date_format* }  
+**-D** { **ymd** | ydm | mdy | myd |  DMY | dym | *custom_date_format* }  
 Especifica a ordem de mês (m), (d) do dia e ano (y) para todos os campos de data e hora no arquivo de entrada. A ordem padrão é ymd. Para especificar vários formatos de ordem para o mesmo arquivo de origem, use a opção -dt.  
   
-ymd | dmy  
+YMD | DMY  
 ydm e dmy permitem que os mesmos formatos de entrada. Ambos permitem que o ano a ser no início ou no fim da data. Por exemplo, para ambos **ydm** e **dmy** data formatos, você poderia ter 2013-02-03 ou 02-03-2013 no arquivo de entrada.  
   
 ydm  

@@ -1,5 +1,5 @@
 ---
-title: 'SQL para C: Time | Microsoft Docs'
+title: 'SQL para C: Tempo | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6dc59973-7bb5-40f1-87c8-5bf68b3bf2ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e028502bd7bc6ac1a81006d340b6ce606a0ae337
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99f8219ef53f72b0d7ab1477bba5d24d441a3141
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065077"
 ---
 # <a name="sql-to-c-time"></a>SQL para C: Time
 O identificador para a hora em que o tipo de dados SQL ODBC é:  
@@ -31,11 +30,11 @@ O identificador para a hora em que o tipo de dados SQL ODBC é:
   
 |Identificador de tipo C|Teste|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > bytes de comprimento de caracteres<br /><br /> *9* <= *BufferLength* < = comprimento de byte do caractere<br /><br /> *BufferLength* < 9|Dados<br /><br /> Dados truncados [a]<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > comprimento de caracteres<br /><br /> *9* <= *BufferLength* < = comprimento de caracteres<br /><br /> *BufferLength* < 9|Dados<br /><br /> Dados truncados [a]<br /><br /> Indefinido|Comprimento dos dados em caracteres<br /><br /> Comprimento dos dados em caracteres<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Comprimento de bytes de dados < = *BufferLength*<br /><br /> Comprimento de bytes de dados > *BufferLength*|Dados<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 22003|  
-|SQL_C_TYPE_TIME|None [b]|Dados|6[d]|n/d|  
-|SQL_C_TYPE_TIMESTAMP|None [b]|Data[c]|16[d]|n/d|  
+|SQL_C_CHAR|*BufferLength* > bytes de comprimento de caracteres<br /><br /> *9* <= *BufferLength* < = comprimento de byte do caractere<br /><br /> *BufferLength* < 9|Data<br /><br /> Dados truncados [a]<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > comprimento de caracteres<br /><br /> *9* <= *BufferLength* < = comprimento de caracteres<br /><br /> *BufferLength* < 9|Data<br /><br /> Dados truncados [a]<br /><br /> Indefinido|Comprimento dos dados em caracteres<br /><br /> Comprimento dos dados em caracteres<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|Comprimento de bytes de dados < = *BufferLength*<br /><br /> Comprimento de bytes de dados > *BufferLength*|Data<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 22003|  
+|SQL_C_TYPE_TIME|None [b]|Data|6[d]|n/d|  
+|SQL_C_TYPE_TIMESTAMP|None [b]|Dados [c]|16[d]|n/d|  
   
  [a] as frações de tempo são truncadas.  
   

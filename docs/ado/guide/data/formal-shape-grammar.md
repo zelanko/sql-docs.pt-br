@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0af2421a0d1f80922560be556062c89074c21838
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91bdf0cfbfe87075d2c9484bca7edd835a950ee6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925343"
 ---
 # <a name="formal-shape-grammar"></a>Gramática de forma formal
 Esta é a gramática formal para a criação de qualquer comando de forma:  
@@ -43,18 +42,18 @@ Esta é a gramática formal para a criação de qualquer comando de forma:
 |Termo|Definição|  
 |----------|----------------|  
 |\<shape-command>|SHAPE [\<table-exp> [[AS] \<alias>]][\<shape-action>]|  
-|\<table-exp>|{\<provider-command-text>} &#124;<br /><br /> (\<shape-command>) &#124;<br /><br /> TABELA \<entre aspas-name >&#124;<br /><br /> \<quoted-name>|  
+|\<table-exp>|{\<texto de comando do provedor >}&#124;<br /><br /> (\<comando shape >)&#124;<br /><br /> TABELA \<entre aspas-name >&#124;<br /><br /> \<quoted-name>|  
 |\<shape-action>|ACRESCENTAR \<lista de campos de um alias >&#124;<br /><br /> COMPUTAR \<lista de campos de um alias > [BY \<lista de campos >]|  
 |\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
 |\<aliased-field>|\<field-exp> [[AS] \<alias>]|  
 |\<field-exp>|(\<relation-exp>) &#124;<br /><br /> \<calculated-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
-|<relation_exp>|\<table-exp> [[AS] \<alias>]<br /><br /> RELATE \<relation-cond-list>|  
+|<relation_exp>|\<table-exp> [[AS] \<alias>]<br /><br /> Relacionar \<relação-cond-list >|  
 |\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
-|\<relation-cond>|\<field-name> TO \<child-ref>|  
-|\<child-ref>|\<field-name> &#124;<br /><br /> PARÂMETRO \<ref param >|  
+|\<relation-cond>|\<nome do campo > TO \<filho ref >|  
+|\<child-ref>|\<nome do campo >&#124;<br /><br /> PARÂMETRO \<ref param >|  
 |\<param-ref>|\<number>|  
 |\<field-list>|\<field-name> [, \<field-name>]|  
-|\<aggregate-exp>|SUM(\<qualified-field-name>) &#124;<br /><br /> AVG(\<qualified-field-name>) &#124;<br /><br /> MIN(\<qualified-field-name>) &#124;<br /><br /> MAX(\<qualified-field-name>) &#124;<br /><br /> COUNT(\<qualified-alias> &#124; \<qualified-name>) &#124;<br /><br /> STDEV(\<qualified-field-name>) &#124;<br /><br /> ANY(\<qualified-field-name>)|  
+|\<aggregate-exp>|Soma (\<nome qualificado de campo >)&#124;<br /><br /> AVG(\<qualified-field-name>) &#124;<br /><br /> MIN(\<qualified-field-name>) &#124;<br /><br /> MAX(\<qualified-field-name>) &#124;<br /><br /> COUNT(\<qualified-alias> &#124; \<qualified-name>) &#124;<br /><br /> STDEV(\<qualified-field-name>) &#124;<br /><br /> ANY(\<qualified-field-name>)|  
 |\<calculated-exp>|CALC(\<expression>)|  
 |\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
 |\<alias>|\<quoted-name>|  
@@ -64,8 +63,8 @@ Esta é a gramática formal para a criação de qualquer comando de forma:
 |\<name>|alfa [alfa &#124; dígitos &#124; _ &#124; # &#124; : &#124; ...]|  
 |\<number>|Dígito [dígito...]|  
 |\<new-exp>|NOVOS \<tipo de campo > [(\<número > [, \<número >])]|  
-|\<field-type>|Um tipo de dados OLE DB ou ADO.|  
-|\<string>|unicode-char [unicode-char...]|  
+|\<tipo de campo >|Um tipo de dados OLE DB ou ADO.|  
+|\<string>|caractere Unicode [unicode char...]|  
 |\<expression>|Um Visual Basic para a expressão de aplicativos cujos operandos são outras colunas não CALC na mesma linha.|  
   
 ## <a name="see-also"></a>Consulte também  

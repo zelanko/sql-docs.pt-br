@@ -1,5 +1,5 @@
 ---
-title: Project Settings (Conversion) (DB2ToSQL) | Microsoft Docs
+title: Configurações (conversão) (DB2ToSQL) do projeto | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6918dac33ce0e69116f713cb8906b2774d00575
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084555"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Configurações do projeto (conversão) (DB2ToSQL)
 A página de conversão do **configurações do projeto** caixa de diálogo contém configurações que personalizam como SSMA converte a sintaxe do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintaxe.  
@@ -358,7 +357,7 @@ Define o tipo de conversão do DB2 aninhados subprograma (declarada em autônomo
   
 Quando você seleciona um modo de conversão na **modo** caixa, o SSMA aplica-se a configuração a seguir:  
   
-**Modo padrão/otimista/completo:** embutido  
+**Modo padrão/otimista/completo:** Embutido  
   
 ### <a name="use-isnull-in-string-concatenation"></a>Use ISNULL em concatenação de cadeia de caracteres  
 DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornar resultados diferentes quando concatenações de cadeia de caracteres incluem valores nulos. DB2 tratará o valor nulo como um conjunto de caracteres vazia. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna NULL.  
@@ -372,7 +371,7 @@ Quando você seleciona um modo de conversão na **modo** caixa, o SSMA aplica-se
 ### <a name="use-isnull-in-replace-function-calls"></a>Use ISNULL em chamadas de função REPLACE  
 Instrução de ISNULL é usada em chamadas de função REPLACE para emular o comportamento do DB2. As opções a seguir estão presentes para essa configuração:  
   
--   YES  
+-   SIM  
   
 -   Não  
   
@@ -385,7 +384,7 @@ Quando você seleciona um modo de conversão na **modo** caixa, o SSMA aplica-se
 ### <a name="use-isnull-in-concat-function-calls"></a>Use ISNULL em chamadas de função CONCAT  
 Instrução de ISNULL é usada em chamadas de função CONCAT para emular o comportamento do DB2. As opções a seguir estão presentes para essa configuração:  
   
--   YES  
+-   SIM  
   
 -   Não  
   

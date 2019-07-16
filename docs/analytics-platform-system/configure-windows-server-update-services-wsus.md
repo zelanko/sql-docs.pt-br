@@ -2,19 +2,18 @@
 title: Configurar o WSUS - Analytics Platform System | Microsoft Docs
 description: Essas instruções você percorrer as etapas para usar o Assistente de configuração do Windows Server Update Services (WSUS) para configurar o WSUS para o Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16dc05500964bb37e3252edf81aff85042b7abdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63134728"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961120"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurar o Windows Server Update Services (WSUS) no Analytics Platform System
 Essas instruções você percorrer as etapas para usar o Assistente de configuração do Windows Server Update Services (WSUS) para configurar o WSUS para o Analytics Platform System. Você precisa configurar o WSUS antes de aplicar as atualizações de software para o dispositivo. WSUS já está instalado na máquina virtual VMM do dispositivo.  
@@ -71,7 +70,7 @@ Para configurar o WSUS, você precisa:
   
     6.  Sobre o **ingressar no programa de aperfeiçoamento do Microsoft Update** página, selecione **Sim, eu gostaria de ingressar no programa de aperfeiçoamento do Microsoft Update**e, em seguida, clique em **próxima**.  
   
-        ![WSUS Improvement Program](./media/configure-windows-server-update-services-wsus/WSUS_Wiz3.png "WSUS_Wiz3")  
+        ![Programa de aperfeiçoamento do WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz3.png "WSUS_Wiz3")  
   
     Agora você deve ver a **escolher servidor Upstream** página. Captura de tela a seguir é o ponto inicial do Assistente de configuração.  
   
@@ -99,7 +98,7 @@ Para configurar o WSUS, você precisa:
   
     3.  Se esse for um servidor de réplica, selecione a **esta é uma réplica do servidor upstream** caixa de seleção. É possível selecionar ambas **usar SSL ao sincronizar informações de atualização** e **esta é uma réplica do servidor upstream**.  
   
-        ![WSUS Upstream Server Replica](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4d.png "WSUS_Wiz4d")  
+        ![Réplica do servidor Upstream WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4d.png "WSUS_Wiz4d")  
   
     4.  Neste ponto, você terá concluído com a configuração do servidor upstream. Clique em **próxima**, ou selecione **especificar servidor de proxy** no painel de navegação à esquerda.  
   
@@ -167,7 +166,7 @@ Para configurar o WSUS, você precisa:
   
 12. Data de término.  
   
-    Clique em **Concluir**.  
+    Clique em **Finalizar**.  
   
 ## <a name="bkmk_WSUSGroup"></a>Agrupar os servidores de dispositivo no WSUS  
 Depois de configurar o WSUS para o Analytics Platform System, a próxima etapa é agrupar os servidores do dispositivo. Adicionando todos os servidores de dispositivo a um grupo, WSUS poderão aplicar atualizações de software para todos os servidores no dispositivo.  
@@ -195,7 +194,7 @@ Depois de configurar o WSUS para o Analytics Platform System, a próxima etapa �
   
 5.  Selecione o novo grupo de computadores que você criou clicando na caixa de seleção e, em seguida, clicando em **Okey**.  
   
-    ![Set Computer Group Membership](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
+    ![Associação de grupo de computadores do conjunto](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
   
 6.  Selecione o novo grupo de computadores, altere sua **Status** à **qualquer**e, em seguida, clique em **atualizar**. Todos os computadores agora devem ser atribuídos a esse grupo e listados no painel à direita. Geralmente é seguro continuar quando nós mostram avisos, como **este nó não tenha comunicado seu status ainda**.  
   

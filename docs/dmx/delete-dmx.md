@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: bc78718c813ef1aa599c1ab299c634d018bc88d6
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: c1c75a6ff18b26bee65365acbc068de87678a9c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070761"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,9 +42,9 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
 |de|Resultado|  
 |---------------|------------|  
-|DELETE FROM MINING STRUCTURE*\<estrutura >*<br /><br /> ou em<br /><br /> DELETE FROM MINING STRUCTURE*\<estrutura >*. CONTEÚDO|Executa ProcessClear na estrutura de mineração. Todo o conteúdo é limpo da estrutura de mineração e de seus modelos de mineração associados.|  
-|DELETE FROM MINING STRUCTURE*\<estrutura >*. CASOS|Executa ProcessClearStructureOnly na estrutura de mineração. Todo o conteúdo é limpo da estrutura de mineração, deixando intactos os modelos de mineração associados. O detalhamento dos modelos de mineração associados falhará após a estrutura de mineração ter sido desmarcada.|  
-|Excluir de MINING MODEL*\<modelo >*<br /><br /> ou em<br /><br /> Excluir de MINING MODEL*\<modelo >*. CONTEÚDO|Executa ProcessClear no modelo de mineração, mas deixa intacto os valores de estado. Os valores de estado consistem nos estados possíveis de uma coluna. Por exemplo, os valores de estado de uma coluna de sexo seriam masculino e feminino.|  
+|DELETE FROM MINING STRUCTURE *\<estrutura >*<br /><br /> ou<br /><br /> DELETE FROM MINING STRUCTURE *\<estrutura >* . CONTEÚDO|Executa ProcessClear na estrutura de mineração. Todo o conteúdo é limpo da estrutura de mineração e de seus modelos de mineração associados.|  
+|DELETE FROM MINING STRUCTURE *\<estrutura >* . CASOS|Executa ProcessClearStructureOnly na estrutura de mineração. Todo o conteúdo é limpo da estrutura de mineração, deixando intactos os modelos de mineração associados. O detalhamento dos modelos de mineração associados falhará após a estrutura de mineração ter sido desmarcada.|  
+|Excluir de MINING MODEL *\<modelo >*<br /><br /> ou<br /><br /> Excluir de MINING MODEL *\<modelo >* . CONTEÚDO|Executa ProcessClear no modelo de mineração, mas deixa intacto os valores de estado. Os valores de estado consistem nos estados possíveis de uma coluna. Por exemplo, os valores de estado de uma coluna de sexo seriam masculino e feminino.|  
   
  Para obter mais informações sobre tipos de processamento, consulte [tipo de elemento &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla).  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6c2929062451d139cc3452b6bd272dd85bac951
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054996"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_help_job { [ @job_id = ] job_id
 > [!NOTE]  
 >  Para exibir um trabalho específico, ou *job_id* ou *job_name* deve ser especificado.  Omitir ambas *job_id* e *job_name* para retornar informações sobre todos os trabalhos.
   
-`[ @job_aspect = ] 'job_aspect'` O atributo de trabalho para exibir. *job_aspect* está **varchar(9)**, com um padrão de NULL, e pode ser um destes valores.  
+`[ @job_aspect = ] 'job_aspect'` O atributo de trabalho para exibir. *job_aspect* está **varchar(9)** , com um padrão de NULL, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -70,11 +69,11 @@ sp_help_job { [ @job_id = ] job_id
 |**STEPS**|Informações de etapa do trabalho|  
 |**DESTINOS**|Informações de destino|  
   
-`[ @job_type = ] 'job_type'` O tipo de trabalhos a serem incluídos no relatório. *job_type* está **varchar(12)**, com um padrão NULL. *job_type* pode ser **LOCAL** ou **MULTISSERVIDOR**.  
+`[ @job_type = ] 'job_type'` O tipo de trabalhos a serem incluídos no relatório. *job_type* está **varchar(12)** , com um padrão NULL. *job_type* pode ser **LOCAL** ou **MULTISSERVIDOR**.  
   
 `[ @owner_login_name = ] 'login_name'` O nome de logon do proprietário do trabalho. *login_name* está **sysname**, com um padrão NULL.  
   
-`[ @subsystem = ] 'subsystem'` O nome do subsistema. *subsistema* está **nvarchar(40)**, com um padrão NULL.  
+`[ @subsystem = ] 'subsystem'` O nome do subsistema. *subsistema* está **nvarchar(40)** , com um padrão NULL.  
   
 `[ @category_name = ] 'category'` O nome da categoria. *categoria* está **sysname**, com um padrão NULL.  
   
@@ -98,7 +97,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @date_last_modified = ] date_modified` A data em que o trabalho foi modificado pela última vez. *date_modified* está **datetime**, com um padrão NULL.  
   
-`[ @description = ] 'description_pattern'` A descrição do trabalho. *description_pattern* está **nvarchar(512)**, com um padrão NULL. *description_pattern* pode incluir os caracteres de curinga do SQL Server para correspondência de padrões.  
+`[ @description = ] 'description_pattern'` A descrição do trabalho. *description_pattern* está **nvarchar(512)** , com um padrão NULL. *description_pattern* pode incluir os caracteres de curinga do SQL Server para correspondência de padrões.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -111,7 +110,7 @@ sp_help_job { [ @job_id = ] job_id
 |**job_id**|**uniqueidentifier**|A ID exclusiva do trabalho.|  
 |**originating_server**|**nvarchar(30)**|Nome do servidor do qual o trabalho originou.|  
 |**name**|**sysname**|Nome do trabalho.|  
-|**enabled**|**tinyint**|Indica se o trabalho está habilitado para ser executado.|  
+|**habilitado**|**tinyint**|Indica se o trabalho está habilitado para ser executado.|  
 |**description**|**nvarchar(512)**|Descrição do trabalho.|  
 |**start_step_id**|**int**|ID da etapa do trabalho em que a execução deve começar.|  
 |**category**|**sysname**|Categoria do trabalho.|  
@@ -177,7 +176,7 @@ sp_help_job { [ @job_id = ] job_id
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Identificador da agenda (exclusivo em todos os trabalhos).|  
 |**schedule_name**|**sysname**|Nome da agenda (exclusivo somente para este trabalho).|  
-|**enabled**|**int**|Se a agenda está ativa (**1**) ou não (**0**).|  
+|**habilitado**|**int**|Se a agenda está ativa (**1**) ou não (**0**).|  
 |**freq_type**|**int**|Valor que indica quando o trabalho será executado:<br /><br /> **1** = uma vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = mensalmente, relativo a **freq_interval**<br /><br /> **64** = executar quando **SQLServerAgent** inicia o serviço.|  
 |**freq_interval**|**int**|Dias quando o trabalho é executado. O valor depende do valor de **freq_type**. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_type**|**Int**|Unidades para **freq_subday_interval**. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6a43eb9fbf6877a43454e85bf59f97b4650e96ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1da9e1876995f81fd2b40b9ef1bb4b509b4c848d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65481178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074482"
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>Visão geral: Importar dados do Excel (Suplemento MDS para Excel)
 
@@ -51,7 +50,7 @@ ms.locfileid: "65481178"
 ## <a name="business-rule-and-other-validation"></a>Regra de negócio e outra validação  
  Ao publicar dados, a validação é executada para garantir que dados estejam precisos antes de serem adicionados ao repositório do MDS. Se os dados não estiverem de acordo com os critérios especificados, eles não serão publicados no repositório. Para obter mais informações, consulte [Validando dados &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

@@ -18,32 +18,31 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0157288c21e7b4f9b5d0b06bbf698369a216bf07
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061918"
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>Consultar notificações - DM qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações sobre as assinaturas de notificações de consulta ativa no servidor. Você pode usar essa exibição para verificar assinaturas ativas no servidor ou em um banco de dados especificado, ou verificar um principal de servidor especificado.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID de uma assinatura.|  
 |**database_id**|**int**|ID do banco de dados no qual a consulta de notificação foi executada. Esse banco de dados armazena informações relativas a essa assinatura.|  
 |**sid**|**varbinary(85)**|ID de segurança do principal do servidor que criou e detém essa assinatura.|  
 |**object_id**|**int**|ID da tabela interna que armazena informações sobre parâmetros de assinatura.|  
 |**created**|**datetime**|Data e hora em que a assinatura foi criada.|  
-|**timeout**|**int**|Tempo limite para a assinatura em segundos. A notificação será sinalizada para disparar após o decorrer desse período.<br /><br /> Observação: O tempo real do disparo pode ser maior que o tempo limite especificado. No entanto, se uma alteração que invalida a assinatura ocorrer após o tempo limite especificado, mas antes de a assinatura ser disparada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegurará que o disparo ocorra no momento em que a alteração for realizada.|  
+|**timeout**|**int**|Tempo limite para a assinatura em segundos. A notificação será sinalizada para disparar após o decorrer desse período.<br /><br /> Observação: O tempo real do disparo pode ser maior que o tempo limite especificado. No entanto, se uma alteração que invalida a assinatura ocorre após o tempo limite especificado, mas antes que a assinatura seja acionada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garante que o disparo ocorra no momento em que a alteração foi feita.|  
 |**status**|**int**|Indica o status da assinatura. Veja a tabela abaixo dos comentários para obter a lista de códigos.|  
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relações  
   
-|De|Para|Em|Tipo|  
+|De|Para|Em|type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Muitos para um|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Muitos para um|  
@@ -53,11 +52,11 @@ ms.locfileid: "51657245"
   
  Os códigos de status a seguir indicam que uma assinatura foi acionada devido a uma alteração:  
   
-|Código|Status secundário|Informações de|  
+|Código|Status secundário|Info|  
 |----------|------------------|----------|  
 |65798|Assinatura acionada porque os dados foram alterados|Assinatura disparada por inserção|  
-|65799|Assinatura acionada porque os dados foram alterados|DELETE|  
-|65800|Assinatura acionada porque os dados foram alterados|Update|  
+|65799|Assinatura acionada porque os dados foram alterados|Excluir|  
+|65800|Assinatura acionada porque os dados foram alterados|Atualização|  
 |65801|Assinatura acionada porque os dados foram alterados|Mesclagem|  
 |65802|Assinatura acionada porque os dados foram alterados|Truncar tabela|  
 |66048|Assinatura acionada porque o tempo limite expirou|Modo de informações indefinido|  
@@ -70,7 +69,7 @@ ms.locfileid: "51657245"
   
  Os códigos de status a seguir indicam que uma assinatura não pôde ser criada:  
   
-|Código|Status secundário|Informações de|  
+|Código|Status secundário|Info|  
 |----------|------------------|----------|  
 |132609|A criação de assinatura falhou porque não há suporte à instrução|Consulta muito complexa|  
 |132610|A criação de assinatura falhou porque não há suporte à instrução|Instrução inválida para assinatura|  
@@ -81,7 +80,7 @@ ms.locfileid: "51657245"
   
  Os códigos de status a seguir são usados internamente e são classificados como modos de check kill e init:  
   
-|Código|Status secundário|Informações de|  
+|Código|Status secundário|Info|  
 |----------|------------------|----------|  
 |198656|Usado internamente: modos check kill e init|Modo de informações indefinido|  
 |198928|Assinatura destruída|Assinatura acionada porque o banco de dados foi anexado|  

@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: d29234810e30efd204f498e2f7c63ba6571cbfe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959532"
 ---
 # <a name="integrated-terminal"></a>Terminal integrado
 
@@ -96,10 +95,10 @@ Abaixo estão os atalhos de teclado para navegar rapidamente no terminal integra
 
 |Chave|Comando|  
 |---|---|  
-|**Ctrl+\`**|Mostrar o terminal integrado|  
+|**CTRL +\`**|Mostrar o terminal integrado|  
 |**Ctrl+Shift+\`**|Criar um novo terminal|  
 |**CTRL + seta para cima**|Role para cima|  
-|**Ctrl+Down**|Role para baixo|  
+|**CTRL + seta para baixo**|Role para baixo|  
 |**Ctrl+PageUp**|Rola página para cima|  
 |**Ctrl+PageDown**|Rolar página para baixo|  
 |**CTRL + Home**|Role para cima|  

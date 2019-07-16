@@ -4,18 +4,17 @@ description: Implementar a alta disponibilidade por meio da configuração de cl
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: b2eb3a0a135fc43e3dadb855682cea9f6465d5ca
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 5ca2cd85087cf26be925e8899dfc3a1957e284ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833145"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032284"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado do Red Hat Enterprise Linux para SQL Server
 
@@ -276,7 +275,7 @@ Neste ponto, ambas as instâncias do SQL Server são configuradas para executar 
 
    > Se você estiver usando outro firewall que não tem uma configuração de alta disponibilidade interna, as seguintes portas precisam ser abertas para o Pacemaker seja capaz de se comunicar com outros nós no cluster
    >
-   > * TCP: Ports 2224, 3121, 21064
+   > * TCP: Portas 2224, 3121, 21064
    > * UDP: Porta 5405
 
 1. Instale os pacotes do Pacemaker em cada nó.

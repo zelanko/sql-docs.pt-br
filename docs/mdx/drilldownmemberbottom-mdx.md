@@ -1,5 +1,5 @@
 ---
-title: DrilldownMemberBottom (MDX) | Microsoft Docs
+title: Drilldownmemberbottom=1=«conjunto1 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 854f880cf9cb4f06ee4fc44fd18cec5f0ab99ca8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79bea49705c4f2fb66b8c9866be335433cbb783f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62691063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049262"
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom (MDX)
 

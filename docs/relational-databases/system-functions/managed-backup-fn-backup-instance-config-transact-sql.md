@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2be102c3d1b967d4376385b2bc20f61e16ecbde7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41c689d03ebae3afe16dc51d8a47c54e923d3a82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067758"
 ---
 # <a name="managedbackupfnbackupinstanceconfig-transact-sql"></a>managed_backup.fn_backup_instance_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,18 +44,18 @@ managed_backup.fn_backup_db_config ()
 ```  
   
 ##  <a name="Arguments"></a> Argumentos  
- None  
+ Nenhum  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |is_smart_backup_enabled|INT|Exibe 1 quando [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitado e 0 quando [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está desabilitado.|  
 |credential_name|SYSNAME|A Credencial SQL padrão é usada para realizar a autenticação no armazenamento.|  
 |retention_days|INT|Período de retenção padrão definido no nível da instância.|  
 |storage_url|NVARCHAR(1024)|A URL padrão da conta de armazenamento definida no nível de instância.|  
 |encryption_algorithm|SYSNAME|Nome do algoritmo de criptografia. Será definido como NULL se a criptografia não for especificada.|  
-|encryptor_type|NVARCHAR(32)|O tipo de criptografador usado: certificado ou chave assimétrica. Será definido como NULL se não houver criptografador especificado.|  
+|encryptor_type|NVARCHAR(32)|O tipo de criptografador usado: Certificado ou Chave Assimétrica. Será definido como NULL se não houver criptografador especificado.|  
 |encryptor_name|SYSNAME|O nome do certificado ou da chave assimétrica. Será definido como NULL se não houver nome especificado|  
   
 ## <a name="security"></a>Segurança  

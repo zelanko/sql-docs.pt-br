@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c3138140502c995e1c018f33e49d90180d9b42df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37fc296ecf520dc6ccc2964315a449bf508a2284
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718859"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965845"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Exemplo das propriedades UpdateRule e RelatedTable, RelatedColumn, Key Type e do método Keys Append (VC++)
 O código a seguir demonstra como criar uma nova chave estrangeira. Ele pressupõe que existam duas tabelas (clientes e pedidos).  

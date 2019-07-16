@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b665cb1a0694a6798131606e031f165b255066f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65a015888223fc94f5bf427b1d0b560d5e888ac5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926538"
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>Usar o ADO com o Microsoft Visual C++
 Para obter informações sobre como usar o ADO com o Visual C++, consulte as seções a seguir:  

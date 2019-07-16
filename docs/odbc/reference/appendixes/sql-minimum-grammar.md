@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85b1f59efd809c604458bd7b99882705db240e9a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270494"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057013"
 ---
 # <a name="sql-minimum-grammar"></a>Gramática SQL mínima
 Esta seção descreve a sintaxe SQL mínima que deve dar suporte a um driver ODBC. A sintaxe descrita nesta seção é um subconjunto da sintaxe de nível de entrada do SQL-92.  
@@ -29,7 +28,7 @@ Esta seção descreve a sintaxe SQL mínima que deve dar suporte a um driver ODB
  Drivers que funcionam somente com fontes de dados somente leitura podem não oferecer suporte a essas partes da gramática incluídos nesta seção que lidam com dados de alteração. Um aplicativo pode determinar se uma fonte de dados é somente leitura, chamando **SQLGetInfo** com o tipo de informação SQL_DATA_SOURCE_READ_ONLY.  
   
 ## <a name="statement"></a>de  
- *create-table-statement* ::=  
+ *instrução CREATE table* :: =  
   
  CREATE TABLE *nome da tabela de base*  
   
@@ -38,11 +37,11 @@ Esta seção descreve a sintaxe SQL mínima que deve dar suporte a um driver ODB
 > [!IMPORTANT]  
 >  Como uma *tipo de dados* em um *-instrução create table*, aplicativos devem usar um tipo de dados da coluna de TYPE_NAME do conjunto de resultados retornado pela **SQLGetTypeInfo**.  
   
- *delete-statement-searched* ::=  
+ *pesquisados de instrução de exclusão* :: =  
   
- DELETE FROM *table-name* [WHERE *search-condition*]  
+ DELETE FROM *nome da tabela* [onde *critério de pesquisa*]  
   
- *drop-table-statement* ::=  
+ *instrução de drop-tabela* :: =  
   
  DROP TABLE *nome da tabela de base*  
   
@@ -50,35 +49,35 @@ Esta seção descreve a sintaxe SQL mínima que deve dar suporte a um driver ODB
   
  INSERT INTO *nome da tabela* [( *identificador de coluna* [, *identificador de coluna*]...)]      VALORES (*valor de inserção*[, *Inserir valor*]...)  
   
- *select-statement* ::=  
+ *instrução Select* :: =  
   
- SELECT [ALL &#124; DISTINCT] *select-list*  
+ Selecione [todos os &#124; DISTINCT] *lista de select*  
   
- FROM *table-reference-list*  
+ DE *lista de referências de tabela*  
   
  [Onde *critério de pesquisa*]  
   
- [*order-by-clause*]  
+ [*ordem por cláusula*]  
   
  *statement* ::= *create-table-statement*  
   
- &#124; *delete-statement-searched*  
+ &#124;*pesquisados de instrução de exclusão*  
   
  &#124; *drop-table-statement*  
   
  &#124; *insert-statement*  
   
- &#124; *select-statement*  
+ &#124;*instrução select*  
   
- &#124; *update-statement-searched*  
+ &#124;*pesquisados de instrução de atualização*  
   
  *update-statement-searched*  
   
- UPDATE *table-name*  
+ ATUALIZAÇÃO *nome de tabela*  
   
- SET *column-identifier* = {*expression* &#124; NULL }  
+ DEFINIR *identificador de coluna* = {*expressão* &#124; nulo}  
   
- [, *column-identifier* = {*expression* &#124; NULL}]...  
+ [, *identificador de coluna* = {*expressão* &#124; nulo}]...  
   
  [Onde *critério de pesquisa*]  
   

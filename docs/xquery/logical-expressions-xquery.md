@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fd6417c10be286164b9d56a0c2587dfd63a1de23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5b1dc7b961dd0b85824ea180cbc4815d5488a360
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004499"
 ---
 # <a name="logical-expressions-xquery"></a>Expressões lógicas (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ expression1 or expression2
   
  A lógica **e** e **ou** operador é então aplicado a valores booliano resultantes das expressões com as semânticas lógicas padrão.  
   
- A consulta a seguir recupera do catálogo de produtos as pequenas imagens de ângulo frontal, o elemento <`Picture`>, para um modelo de produto específico. Observe que para cada documento de descrição de produto, o catálogo pode armazenar uma ou mais imagens de produto com atributos diferentes, como tamanho e ângulo.  
+ A consulta a seguir recupera do catálogo de produtos, as imagens pequenas de ângulo frontal, o <`Picture`> elemento, para um modelo de produto específico. Observe que para cada documento de descrição de produto, o catálogo pode armazenar uma ou mais imagens de produto com atributos diferentes, como tamanho e ângulo.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -62,7 +61,7 @@ FROM  Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <PD:Picture   

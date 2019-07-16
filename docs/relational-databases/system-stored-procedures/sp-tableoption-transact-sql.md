@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d2b4b47e6aa0426d09397844b291ee3636226fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15c3c9716adefbb95d24c9528dce8607678998c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096066"
 ---
 # <a name="sptableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Define valores de opção para tabelas definidas pelo usuário. sp_tableoption podem ser usadas para controlar o comportamento na linha de tabelas com **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **texto**, **ntext**, **imagem**, ou colunas de tipo definido pelo usuário grande.  
+  Define valores de opção para tabelas definidas pelo usuário. sp_tableoption podem ser usadas para controlar o comportamento na linha de tabelas com **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , **xml**, **texto**, **ntext**, **imagem**, ou colunas de tipo definido pelo usuário grande.  
   
 > [!IMPORTANT]  
->  O recurso text in row será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para armazenar dados de valor grande, é recomendável que você use do **varchar (max)**, **nvarchar (max)** e **varbinary (max)** tipos de dados.  
+>  O recurso text in row será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para armazenar dados de valor grande, é recomendável que você use do **varchar (max)** , **nvarchar (max)** e **varbinary (max)** tipos de dados.  
   
 
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -48,23 +47,23 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 ## <a name="arguments"></a>Argumentos  
  [ @TableNamePattern =] '*tabela*'  
- É o nome qualificado ou não qualificado de uma tabela de banco de dados definida pelo usuário. Se um nome de tabela totalmente qualificado, incluindo um nome de banco de dados, for fornecido, o nome de banco de dados deve ser o nome do banco de dados atual. Não se pode definir opções de tabela para várias tabelas ao mesmo tempo. *tabela* está **nvarchar(776)**, sem padrão.  
+ É o nome qualificado ou não qualificado de uma tabela de banco de dados definida pelo usuário. Se um nome de tabela totalmente qualificado, incluindo um nome de banco de dados, for fornecido, o nome de banco de dados deve ser o nome do banco de dados atual. Não se pode definir opções de tabela para várias tabelas ao mesmo tempo. *tabela* está **nvarchar(776)** , sem padrão.  
   
  [ @OptionName =] '*option_name*'  
- É um nome de opção de tabela. *option_name* está **varchar(35)**, sem nenhum padrão de NULL. *option_name* pode ser um dos valores a seguir.  
+ É um nome de opção de tabela. *option_name* está **varchar(35)** , sem nenhum padrão de NULL. *option_name* pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |table lock on bulk load|Quando desabilitado (o padrão), faz com que o processo de carregamento em massa em tabelas definidas pelo usuário obtenha bloqueio de linhas. Quando habilitado, faz com que os processos de carregamento em massa em tabelas definidas pelo usuário obtenham um bloqueio de atualização em massa.|  
 |insert row lock|Não tem mais suporte.<br /><br /> Essa opção não tem nenhum efeito no comportamento de bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e só é incluída para a compatibilidade de scripts e procedimentos existentes.|  
 |text in row|Quando OFF ou 0 (desabilitado, o padrão), não altera o comportamento atual e não há nenhum BLOB na linha.<br /><br /> Quando especificado e @OptionValue está ON (habilitado) ou um valor inteiro de 24 a 7000, novas **texto**, **ntext**, ou **imagem** cadeias de caracteres são armazenadas diretamente na linha de dados. Todos os BLOBs existentes (objeto binário grande: **texto**, **ntext**, ou **imagem** dados) será alterado para texto em formato de linha quando o valor do BLOB for atualizado. Para obter mais informações, consulte Comentários.|  
-|large value types out of row|1 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml** e grande tipo definido pelo usuário (UDT) colunas na tabela são armazenadas fora de linha, com um ponteiro de 16 bytes para a raiz.<br /><br /> 0 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml** e valores UDT grandes são armazenados diretamente na linha de dados, até o limite de 8000 bytes e desde que o valor pode se ajustar no registro. Se o valor não se ajustar ao registro, um ponteiro será armazenado na linha e o restante será armazenado fora da linha no espaço de armazenamento de LOB. O valor padrão é 0.<br /><br /> O UDT (tipo definido pelo usuário) grande aplica-se a: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. <br /><br /> Use a opção TEXTIMAGE_ON da [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) para especificar um local para o armazenamento de tipos de dados grandes. |  
+|large value types out of row|1 = **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , **xml** e grande tipo definido pelo usuário (UDT) colunas na tabela são armazenadas fora de linha, com um ponteiro de 16 bytes para a raiz.<br /><br /> 0 = **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , **xml** e valores UDT grandes são armazenados diretamente na linha de dados, até o limite de 8000 bytes e desde que o valor pode se ajustar no registro. Se o valor não se ajustar ao registro, um ponteiro será armazenado na linha e o restante será armazenado fora da linha no espaço de armazenamento de LOB. O valor padrão é 0.<br /><br /> O UDT (tipo definido pelo usuário) grande aplica-se a: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. <br /><br /> Use a opção TEXTIMAGE_ON da [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) para especificar um local para o armazenamento de tipos de dados grandes. |  
 |formato de armazenamento vardecimal|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Quando TRUE, ON ou 1, a tabela designada é habilitada para o formato de armazenamento vardecimal. Quando FALSE, OFF ou 0, a tabela designada não é habilitada para o formato de armazenamento vardecimal. Formato de armazenamento vardecimal pode ser habilitado somente quando o banco de dados foi habilitado para o formato de armazenamento vardecimal usando [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md). Na [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versões posteriores, **vardecimal** o formato de armazenamento foi preterido. Em vez disso, use compactação ROW. Para saber mais, veja [Data Compression](../../relational-databases/data-compression/data-compression.md). O valor padrão é 0.|  
   
  [ @OptionValue =] '*valor*'  
- É se o *option_name* está habilitado (TRUE, DIANTE ou 1) ou desabilitado (FALSE, OFF ou 0). *valor* está **varchar(12)**, sem padrão. *valor* diferencia maiusculas de minúsculas.  
+ É se o *option_name* está habilitado (TRUE, DIANTE ou 1) ou desabilitado (FALSE, OFF ou 0). *valor* está **varchar(12)** , sem padrão. *valor* diferencia maiusculas de minúsculas.  
   
- Para a opção text in row, valores válidos são 0, ON, OFF ou um inteiro de 24 a 7000.  Quando *valor* for ON, o limite padrão é 256 bytes.  
+ Para a opção text in row, valores válidos são 0, ON, OFF ou um inteiro de 24 a 7000. Quando *valor* for ON, o limite padrão é 256 bytes.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número de erro (falha)  
@@ -86,7 +85,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
  Quando cadeias BLOB são armazenadas na linha de dados, leitura e gravação a **texto**, **ntext**, ou **imagem** cadeias de caracteres podem ser tão rápidas quanto a leitura ou gravação de cadeias de caracteres binárias e de caracteres. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não precisa acessar páginas separadas para ler ou gravar a cadeia de caracteres BLOB.  
   
- Se um **texto**, **ntext**, ou **imagem** cadeia de caracteres for maior que o limite especificado ou o espaço disponível na linha, ponteiros são armazenados na linha. As condições para armazenar as cadeias de caracteres BLOB na linha ainda assim se aplicam: deve haver espaço suficiente na linha de dados para conter os ponteiros.  
+ Se um **texto**, **ntext**, ou **imagem** cadeia de caracteres for maior que o limite especificado ou o espaço disponível na linha, ponteiros são armazenados na linha. As condições para armazenar as cadeias de caracteres BLOB na linha ainda assim se aplicam: Deve haver espaço suficiente na linha de dados para conter os ponteiros.  
   
  As cadeias e ponteiros BLOB armazenados na linha de uma tabela são tratados de modo semelhante a cadeias de comprimento variável. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa só o número de bytes exigido para armazenar a cadeia de caracteres ou o ponteiro.  
   
@@ -95,7 +94,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 > [!NOTE]  
 >  Desabilitar a opção text in row ou reduzir o limite da opção exigirá a conversão de todas as BLOBs; assim, o processo pode ser longo, dependendo do número de cadeias BLOB que devem ser convertidas. A tabela é bloqueada durante o processo de conversão.  
   
- Uma variável de tabela, incluindo uma função que retorna uma variável de tabela, tem a opção text in row automaticamente habilitada com um limite padrão embutido de 256.  Essa opção não pode ser alterada.  
+ Uma variável de tabela, incluindo uma função que retorna uma variável de tabela, tem a opção text in row automaticamente habilitada com um limite padrão embutido de 256. Essa opção não pode ser alterada.  
   
  A opção text in row oferece suporte as funções TEXTPTR, WRITETEXT, UPDATETEXT e READTEXT. Os usuários podem ler partes de um BLOB com a função SUBSTRING(), mas devem se lembrar de que os ponteiros de texto na linha têm limites de número e duração diferentes de outros ponteiros de texto.  
   

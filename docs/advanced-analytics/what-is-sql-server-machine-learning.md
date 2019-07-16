@@ -7,15 +7,14 @@ ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: ea6db43d999c2c0102cde0c0b30867f255bce569
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 2d05c48f1492509fe05272560dd3cf332b424cb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961671"
 ---
-# <a name="sql-server-machine-learning-services-r-python"></a>SQL Server Machine Learning Services (R, Python)
+# <a name="sql-server-machine-learning-services-r-python"></a>Serviços (R, Python) de aprendizado de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Serviços de Machine Learning é um recurso do SQL Server, usado para executar os scripts de R e Python no banco de dados. O recurso inclui [pacotes Microsoft R e Python](#components) para alto desempenho análise preditiva e aprendizado de máquina. Os dados relacionais podem ser usados em scripts de R e Python por meio de procedimentos armazenados, o script T-SQL que contém instruções de R e Python, ou código T-SQL que contém a R e Python.
@@ -45,7 +44,7 @@ O SQL Server 2017 oferece suporte às linguagens R e Python. A tabela a seguir d
 |-----------|-------------|
 | Serviço do Launchpad do SQL Server | Um serviço que gerencia a comunicação entre os tempos de execução de R e Python externos e a instância do mecanismo de banco de dados. |
 | Pacotes do R | [**RevoScaleR** ](r/ref-r-revoscaler.md) é a biblioteca principal para funções de R. escalonável nessa biblioteca estão entre mais amplamente usados. Transformações de dados e manipulação, resumo estatístico, visualização e muitas formas de modelagem e as análises são encontradas nessas bibliotecas. Além disso, funções nessas bibliotecas distribuir automaticamente as cargas de trabalho entre os núcleos disponíveis para processamento paralelo, com a capacidade de trabalhar em partes de dados que são coordenados e gerenciados pelo mecanismo de cálculo.  <br/>[**MicrosoftML (R)** ](r/ref-r-microsoftml.md) adiciona algoritmos de aprendizado de máquina para criar modelos personalizados para análise de sentimento, análise de imagem e análise de texto. <br/>[**sqlRUtils** ](r/ref-r-sqlrutils.md) fornece funções auxiliares para colocar os scripts do R em um procedimento armazenado T-SQL, registrando um procedimento armazenado com um banco de dados e executar o procedimento armazenado de um ambiente de desenvolvimento de R.<br/>[**olapR** ](r/ref-r-olapr.md) é para criar ou executar uma consulta MDX no script R.|
-| Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) é a distribuição do código-fonte aberto da Microsoft do R. O pacote e o interpretador são incluídos. Sempre use a versão do MRO instalado pela instalação. |
+| Microsoft R Open MRO) | [**MRO** ](https://mran.microsoft.com/open) é a distribuição do código-fonte aberto da Microsoft do R. O pacote e o interpretador são incluídos. Sempre use a versão do MRO instalado pela instalação. |
 | Ferramentas do R | Janelas do console de R e prompts de comando são ferramentas padrão em uma distribuição de R.  |
 | Exemplos de R e scripts |  Pacotes de R e RevoScaleR do código-fonte aberto incluem conjuntos de dados internos para que você pode criar e executar o script usando os dados previamente instalados. |
 | Pacotes do Python | [**revoscalepy** ](python/ref-py-revoscalepy.md) é a biblioteca principal para o Python escalonável com funções de manipulação de dados, transformação, visualização e análise. <br/>[**microsoftml (Python)** ](python/ref-py-microsoftml.md) adiciona algoritmos de aprendizado de máquina para criar modelos personalizados para análise de sentimento, análise de imagem e análise de texto.  |
@@ -135,8 +134,8 @@ Serviços de aprendizado de máquina do SQL Server 2017 é a próxima geração 
 
 | Nome do produto | Versão do mecanismo | Data de liberação |
 |--------------|---------|--------------|
-| Serviços de Machine Learning do SQL Server 2017 (no banco de dados) | R Server 9.2.1 <br/> Python Server 9.2 | Outubro de 2017 |
-| SQL Server 2017 Machine Learning Server (autônomo) | R Server 9.2.1 <br/> Python Server 9.2 | Outubro de 2017 |
+| Serviços de Machine Learning do SQL Server 2017 (no banco de dados) | R Server 9.2.1 <br/> Servidor de Python 9.2 | Outubro de 2017 |
+| SQL Server 2017 Machine Learning Server (autônomo) | R Server 9.2.1 <br/> Servidor de Python 9.2 | Outubro de 2017 |
 | SQL Server 2016 R Services (no banco de dados) | R Server 9.1  | Julho de 2017  |
 | SQL Server 2016 R Server (autônomo)  |  R Server 9.1 | Julho de 2017 |
 

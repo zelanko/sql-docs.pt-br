@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e5aa95edeb1a947aea517de30efcbbbc3c6c799c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a4be6cffcc7e4f13b88d8037b53d438d604b9650
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089942"
 ---
 # <a name="msmergecontents-transact-sql"></a>MSmerge_contents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +32,10 @@ ms.locfileid: "52750378"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|O apelido da tabela publicada.|  
-|**ROWGUID**|**uniqueidentifier**|O identificador para a linha determinada.|  
+|**rowguid**|**uniqueidentifier**|O identificador para a linha determinada.|  
 |**geração**|**bigint**|A geração da linha identificada pelo **tablenick** e **rowguid**.|  
 |**partchangegen**|**bigint**|A geração associada à última alteração de dados que poderia ter sido alterada se a linha pertencesse a uma publicação filtrada.|  
-|**linhagem**|**varbinary(501)**|O apelido do Assinante, pares de números de versão que são usados para manter um histórico das alterações nessa linha.|  
+|**lineage**|**varbinary(501)**|O apelido do Assinante, pares de números de versão que são usados para manter um histórico das alterações nessa linha.|  
 |**colvl**|**varbinary(7489)**|As informações de versão da coluna.|  
 |**marcador**|**uniqueidentifier**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**logical_record_parent_rowguid**|**uniqueidentifier**|Identifica a linha pai de alto nível **MSmerge_contents** (por **rowguid**) para cada linha filho correspondente em um registro lógico.|  

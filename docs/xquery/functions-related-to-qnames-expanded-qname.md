@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e95081c03a5a3f91b601e9db1ddbb24b9c5f295a
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256891"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004588"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Funções Relacionadas a QNames – expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ SELECT * from T
 go  
 ```  
   
- Este é o resultado. Observe que o elemento <`ElemQN`> do tipo QName agora tem um novo valor:  
+ Este é o resultado. Observe que o elemento <`ElemQN`> de QName tipo agora tem um novo valor:  
   
 ```  
 <Root xmlns="QNameXSD" xmlns:ns="urn">  
@@ -132,7 +131,7 @@ drop xml schema collection SC
 go  
 ```  
   
-### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>b. Tratando as limitações ao usar a função expanded-QName()  
+### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>B. Tratando as limitações ao usar a função expanded-QName()  
  O **expanded-QName** função não pode ser usada na construção XML. O exemplo a seguir ilustra essa situação. Para solucionar essa limitação, o exemplo primeiro insere um nó e, em seguida, modifica o nó.  
   
 ```  
@@ -158,7 +157,7 @@ SELECT *
 FROM T  
 ```  
   
- A tentativa a seguir adiciona outro elemento <`root`> mas falha, pois não há suporte para a função expanded-QName() na construção XML.  
+ A tentativa a seguir adiciona outro <`root`> elemento, mas falha, porque não há suporte para a função expanded-QName() na construção XML.  
   
 ```  
 update T SET xmlCol.modify('  
@@ -166,7 +165,7 @@ insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into /
 go  
 ```  
   
- Uma solução para isso é primeiro inserir uma instância com um valor para o elemento <`root`> e, em seguida, modificá-lo. Neste exemplo, um valor inicial nulo é usado quando o elemento <`root`> é inserido. A coleção de esquemas XML neste exemplo permite um valor nulo para o elemento <`root`>.  
+ Uma solução para isso é primeiro inserir uma instância com um valor para o <`root`> elemento e, em seguida, modificá-lo. Neste exemplo, um valor inicial nulo é usado quando o <`root`> elemento é inserido. A coleção de esquemas XML neste exemplo permite um valor nulo para o <`root`> elemento.  
   
 ```  
 update T SET xmlCol.modify('  

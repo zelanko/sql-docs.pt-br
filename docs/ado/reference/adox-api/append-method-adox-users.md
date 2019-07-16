@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4c1f772b041aa5f7be2c1fc0c7aeb7c69189b5d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99a21cd5dd32af9e84877865cfe7c0fc92f6c087
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967220"
 ---
 # <a name="append-method-adox-users"></a>Método Append (Usuários do ADOX)
 Adiciona um novo [usuário](../../../ado/reference/adox-api/user-object-adox.md) do objeto para o [usuários](../../../ado/reference/adox-api/users-collection-adox.md) coleção.  

@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9aa68c8c0dbc702b7f0db3e3186c7ddb56266dbc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fc4f107ef1c26aa51f3f1d58f910be9721f2a51a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067829"
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações sobre cada transação replicada ou do Change Data Capture.  
 
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**fp2p_pub_exists**|**tinyint**|Se a transação estiver em um banco de dados publicado com o uso de replicação transacional ponto a ponto. Se verdadeiro, o valor será 1; caso contrário, será 0.|  
 |**db_ver**|**int**|Versão do banco de dados.|  

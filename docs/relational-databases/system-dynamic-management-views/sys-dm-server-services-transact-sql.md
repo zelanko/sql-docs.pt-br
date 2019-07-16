@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8acb2fae0aa0edadf1995a0a103ff60b66a912a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c968c1c7445b89d0291faf97056417952e417dec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62686228"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090685"
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "62686228"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |servicename|**nvarchar(256)**|Nome da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], texto completo ou o serviço SQL Server Agent. Não pode ser nulo.|  
-|startup_type|**int**|Indica o modo inicial do serviço. A seguir estão os valores possíveis e suas descrições correspondentes.<br /><br /> 0: Outro<br />1: Outro<br />2: Automatic<br />3: Manual<br />4: Desabilitado<br /><br /> Permite valor nulo.|  
+|startup_type|**int**|Indica o modo inicial do serviço. A seguir estão os valores possíveis e suas descrições correspondentes.<br /><br /> 0: Outros<br />1: Outros<br />2: Automático<br />3: Manual<br />4: Desabilitado<br /><br /> Permite valor nulo.|  
 |startup_desc|**nvarchar(256)**|Descreve o modo inicial do serviço. A seguir estão os valores possíveis e suas descrições correspondentes.<br /><br /> Outros: Outros (iniciar reinicialização)<br />Outros: Outros (Iniciar sistema)<br />Automático: Inicialização automática<br />Manual: Iniciar por demanda<br />Desabilitado: Desabilitado<br /><br /> Não pode ser nulo.|  
 |status|**int**|Indica o status atual do serviço. A seguir estão os valores possíveis e suas descrições correspondentes.<br /><br /> 1: Stopped (parado)<br />2: Outros (início pendente)<br />3: Outros (parada pendente)<br />4: Executando<br />5: Outros (continuação pendente)<br />6: Outros (pausa pendente)<br />7: Em Pausa<br /><br /> Permite valor nulo.|  
 |status_desc|**nvarchar(256)**|Descreve o status atual do serviço. A seguir estão os valores possíveis e suas descrições correspondentes.<br /><br /> Interrompido: O serviço foi interrompido.<br />Outros (início de operação pendente): O serviço está iniciando.<br />Outros (parada de operação pendente): O serviço está no processo de parada.<br />Executando: O serviço está sendo executado.<br />Outros (continuar operações pendente): O serviço está em um estado pendente.<br />Outros (pausa pendente): O serviço está no processo de pausa.<br />Em pausa: O serviço foi pausado.<br /><br /> Não pode ser nulo.|  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 657ce658704b519c31dfaa2186429a7df4110308
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17fe804de8bf2c20581ca5c00bee3a28dbce4d55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045214"
 ---
 # <a name="count-hierarchy-levels-mdx"></a>Count (Níveis de hierarquia) (MDX)
 
@@ -29,7 +28,7 @@ Hierarchy_Expression.Levels.Count
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Hierarchy_Expression*  
+ *Expressão_Hierarquia*  
  Uma linguagem MDX válida que retorna uma hierarquia.  
   
 ## <a name="remarks"></a>Comentários  

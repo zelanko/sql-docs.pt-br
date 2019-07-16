@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 75708c6b714806e54afc5802f8084c9635958acb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9adf9fae067ca87db14138fa267563ddd5dd1c79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045118"
 ---
 # <a name="microsoft-access-driver-programming-considerations"></a>Considerações sobre programação de drivers do Microsoft Access
 Esta seção contém os tópicos a seguir.  

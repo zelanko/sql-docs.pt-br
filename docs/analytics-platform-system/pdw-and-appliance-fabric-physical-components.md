@@ -2,19 +2,18 @@
 title: Componentes do dispositivo físicos – Analytics Platform System | Microsoft Docs
 description: Nomes e descrições para os componentes físicos de malha do dispositivo e PDW.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0adbd92d1a29a98a80de65268c53ea63e3941d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb7ad8715d3f7a885bc48f6bdcc7f1ec2842f269
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960422"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>Componentes do dispositivo físicos – Analytics Platform System
 Nomes e descrições para os componentes físicos de malha do dispositivo e PDW. 
@@ -50,7 +49,7 @@ Uma máquina virtual que executa o nó de computação. Neste diagrama de nó de
 Esses componentes são parte da malha do dispositivo.  
   
 ### <a name="virtual-machines"></a>Máquinas virtuais  
-*appliance_domain*-WDS  
+*appliance_domain*- WDS  
 Este hosts de máquina virtual Windows Deployment Services (WDS), que usa o Analytics Platform System implantem os sistemas operacionais Windows na rede de dispositivo. Ele também hospeda o serviço DHCP, que permite que os hosts de dispositivo ingressar na rede do dispositivo sem a necessidade de um endereço IP configurado previamente.  
   
 O *appliance_domain*máquina de virtual - WDS é executado em HST01 e pode fazer failover para HST02. A máquina de virtual do WDS e a máquina virtual do VMM, implante o Windows em hosts físicos durante a instalação do dispositivo. Durante o ciclo de vida do dispositivo, o WDS e o VMM executam operações como substituição de um host.  

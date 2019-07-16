@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9dbc6e9e78fc08be2bba08d0fbeb897496a2058b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ae822794b1b06a975e1cc3cd397b5a5f00036dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918252"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 Especifica o tipo de bloqueio colocado em registros durante a edição.  
@@ -35,7 +34,7 @@ Especifica o tipo de bloqueio colocado em registros durante a edição.
 |**adLockUnspecified**|-1|Não especifica um tipo de bloqueio. Para clones, o clone é criado com o mesmo tipo de bloqueio do original.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Package: **com.ms.wfc.data**  
+ Pacote: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

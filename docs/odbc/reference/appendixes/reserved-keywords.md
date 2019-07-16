@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057212"
 ---
 # <a name="reserved-keywords"></a>Palavras-chave reservadas
 As palavras seguintes são reservadas para uso em chamadas de função ODBC. Essas palavras não restringem a gramática SQL mínima; No entanto, para garantir a compatibilidade com drivers que dão suporte à gramática principal do SQL, aplicativos devem evitar usar qualquer uma dessas palavras-chave. O #**definir** valor SQL_ODBC_KEYWORDS contém uma lista separada por vírgulas dessas palavras-chave.  
@@ -45,7 +44,7 @@ As palavras seguintes são reservadas para uso em chamadas de função ODBC. Ess
 |BEGIN|MODULE|  
 |BETWEEN|MONTH|  
 |BIT|NAMES|  
-|BIT_LENGTH|NATIONAL|  
+|FUNÇÃO BIT_LENGTH|NATIONAL|  
 |BOTH|NATURAL|  
 |BY|NCHAR|  
 |CASCADE|NEXT|  

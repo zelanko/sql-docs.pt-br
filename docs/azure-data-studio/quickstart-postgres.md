@@ -10,18 +10,17 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-manager: jroth
-ms.openlocfilehash: be8683ae563e4e0676f53203cb40386cf8aa4840
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9dcbbe621ab237eeceff55cd5f931d7d650dd3b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959463"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Início Rápido: Conectar e consultar PostgreSQL usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Neste início rápido mostra como usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] conectem Postgres, e, em seguida, usar instruções SQL para criar o banco de dados *tutorialdb* e consultá-lo.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para concluir este início rápido, você precisa [!INCLUDE[name-sos](../includes/name-sos-short.md)], a extensão do PostgreSQL para [! INCLUIR[sos nome](../includes/name-sos-short.md)e o acesso a um servidor PostgreSQL.
 
@@ -47,7 +46,7 @@ Para concluir este início rápido, você precisa [!INCLUDE[name-sos](../include
    | Configuração       | Valor de exemplo | Descrição |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nome do servidor** | localhost | O nome do servidor totalmente qualificado |
-   | **Nome de usuário** | postgres | O nome de usuário que você deseja fazer logon com. |
+   | **Nome de usuário** | Postgres | O nome de usuário que você deseja fazer logon com. |
    | **Senha (logon do SQL)** | *password* | A senha para a conta que você está fazendo logon em com. |
    | **Senha** | *Verificar* | Essa caixa de seleção se você não quiser inserir a senha sempre que você se conectar. |
    | **Nome do banco de dados** | \<Default\> | Preencha este se você quiser que a conexão para especificar um banco de dados. |

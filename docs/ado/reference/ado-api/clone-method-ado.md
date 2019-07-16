@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fbeedf9e56c1f0606a7c8f842baedc9d11ad3929
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7439f9a4a04582f4cf4c4878892ed0f4f33e228c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920013"
 ---
 # <a name="clone-method-ado"></a>Método Clone (ADO)
 Cria uma duplicata [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto de uma já existente **Recordset** objeto. Opcionalmente, especifica que o clone ser somente leitura.  
@@ -68,7 +67,7 @@ rsNew.Filter = rsOriginal.Filter
   
  A tabela a seguir fornece uma lista completa de todos os **Recordset** eventos. Ele indica se eles são válidos e disparada para qualquer clones de conjunto de registros gerados usando o **Clone** método.  
   
-|Evento|Disparada em clones?|  
+|evento|Disparada em clones?|  
 |-----------|--------------------------|  
 |[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Não|  
 |[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Não|  

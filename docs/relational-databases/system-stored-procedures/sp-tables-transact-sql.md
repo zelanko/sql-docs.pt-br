@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13c566ef9163cd7bc71ac6934f3db9782c87f06f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 71aaa9e52cfca8435501695a4ebf60b2a6aa6ee4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096048"
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,15 +48,15 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_name = ] 'name'` A tabela é usada para retornar informações de catálogo. *nome da* está **nvarchar(384)**, com um padrão NULL. Há suporte para a correspondência do padrão curinga.  
+`[ @table_name = ] 'name'` A tabela é usada para retornar informações de catálogo. *nome da* está **nvarchar(384)** , com um padrão NULL. Há suporte para a correspondência do padrão curinga.  
   
-`[ @table_owner = ] 'owner'` É o proprietário da tabela usada para retornar informações de catálogo. *proprietário* está **nvarchar(384)**, com um padrão NULL. Há suporte para a correspondência do padrão curinga. Se o proprietário não for especificado, serão aplicadas as regras de visibilidade de tabela padrão do DBMS subjacente.  
+`[ @table_owner = ] 'owner'` É o proprietário da tabela usada para retornar informações de catálogo. *proprietário* está **nvarchar(384)** , com um padrão NULL. Há suporte para a correspondência do padrão curinga. Se o proprietário não for especificado, serão aplicadas as regras de visibilidade de tabela padrão do DBMS subjacente.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se o proprietário não estiver especificado e o usuário atual não possuir uma tabela com o nome especificado, este procedimento procurará uma tabela com o nome especificado, pertencente ao proprietário do banco de dados. Caso exista, as colunas dessa tabela serão retornadas.  
   
-`[ @table_qualifier = ] 'qualifier'` É o nome do qualificador de tabela. *qualificador* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
+`[ @table_qualifier = ] 'qualifier'` É o nome do qualificador de tabela. *qualificador* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (_qualificador_ **.** _proprietário_ **.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
   
-``[ , [ @table_type = ] "'type', 'type'" ]`` É uma lista de valores, separados por vírgulas, que fornece informações sobre todas as tabelas dos tipos de tabela que são especificados. Eles incluem **tabela**, **SYSTEMTABLE**, e **exibição**. *tipo de* está **varchar(100)**, com um padrão NULL.  
+``[ , [ @table_type = ] "'type', 'type'" ]`` É uma lista de valores, separados por vírgulas, que fornece informações sobre todas as tabelas dos tipos de tabela que são especificados. Eles incluem **tabela**, **SYSTEMTABLE**, e **exibição**. *tipo de* está **varchar(100)** , com um padrão NULL.  
   
 > [!NOTE]  
 >  Aspas simples devem incluir cada tipo de tabela e aspas duplas devem incluir o parâmetro inteiro. Os tipos de tabela devem ser em maiúsculas. Se SET QUOTED_IDENTIFIER for ON, cada aspa simples deverá ser duplicada e o parâmetro inteiro deverá ser incluído entre aspas duplas.  
@@ -65,7 +64,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 `[ @fUsePattern = ] 'fUsePattern'` Determina se o caractere de sublinhado (_), porcentagem (%)) e entre colchetes ([ou]) caracteres são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* está **bit**, com um padrão de 1.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- None  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -75,7 +74,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_OWNER**|**sysname**|Nome do proprietário de tabela. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta coluna representa o nome do usuário de banco de dados que criou a tabela. Esse campo sempre retorna um valor.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela. Esse campo sempre retorna um valor.|  
 |**TABLE_TYPE**|**varchar(32)**|Tabela, tabela do sistema ou exibição.|  
-|**REMARKS**|**varchar(254)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
+|**COMENTÁRIOS**|**varchar(254)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
   
 ## <a name="remarks"></a>Comentários  
  Para interoperabilidade máxima, o cliente de gateway deve pressupor correspondência apenas do padrão SQL SQL-92 (os caracteres curinga % e _).  

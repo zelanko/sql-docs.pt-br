@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1aeaef9b120a0bd4be008adafe8e9a24724279a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 58f69b9f3088c063faa39da677f2865abdfc6476
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003014"
 ---
 # <a name="sqlforeignkeys-function"></a>Função SQLForeignKeys
 **Conformidade com**  
@@ -194,7 +193,7 @@ SQLRETURN SQLForeignKeys(
 |ORDERID|ORDERID|CUSTID|  
 |CUSTID|LINHAS|NAME|  
 |OPENDATE|PARTID|ENDEREÇO|  
-|SALESPERSON|QUANTIDADE|TELEFONE|  
+|VENDEDOR|QUANTIDADE|TELEFONE|  
 |STATUS|||  
   
  Na tabela de pedidos, CUSTID identifica o cliente a quem a venda foi feita. É uma chave estrangeira que se refere ao CUSTID na tabela CUSTOMERS.  

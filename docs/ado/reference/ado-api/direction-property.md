@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 244cf01b2845e7f5ef6729efd9ea7a7cfa6b994c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6135650d3b5cb015fad21d1eac7b350827965ca1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933075"
 ---
 # <a name="direction-property"></a>Propriedade Direction
 Indica se o [parâmetro](../../../ado/reference/ado-api/parameter-object.md) representa um parâmetro de entrada, um parâmetro de saída, uma entrada e um parâmetro de saída, ou se o parâmetro é o valor de retorno de um procedimento armazenado.  

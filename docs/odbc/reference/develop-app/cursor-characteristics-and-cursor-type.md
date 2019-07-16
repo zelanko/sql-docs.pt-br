@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dbef278f3f25b572ddc44e87d60b5cdcd33058c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8803e7827102f564be63454b0387df938064d84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63043821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002049"
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>Características do cursor e tipo de cursor
 Um aplicativo pode especificar as características de um cursor em vez de especificar o tipo de cursor (somente de avanço, estático, controlado por conjunto de chaves ou dinâmico). Para fazer isso, o aplicativo seleciona a rolagem do cursor (definindo o atributo de instrução SQL_ATTR_CURSOR_SCROLLABLE) e sensibilidade (definindo o atributo da instrução SQL_ATTR_CURSOR_SENSITIVITY) antes de abrir o cursor na instrução identificador. O driver, em seguida, escolhe o tipo de cursor que fornece com mais eficiência as características que o aplicativo solicitado.  
@@ -39,7 +38,7 @@ Um aplicativo pode especificar as características de um cursor em vez de especi
   
 |Aplicativo define o atributo para|Outros atributos definidos implicitamente|  
 |-----------------------------------|-------------------------------------|  
-|SQL_ATTR_CONCURRENCY to SQL_CONCUR_READ_ONLY|SQL_ATTR_CURSOR_SENSITIVITY como SQL_INSENSITIVE.|  
+|SQL_ATTR_CONCURRENCY para SQL_CONCUR_READ_ONLY|SQL_ATTR_CURSOR_SENSITIVITY como SQL_INSENSITIVE.|  
 |SQL_ATTR_CONCURRENCY e SQL_CONCUR_LOCK, SQL_CONCUR_ROWVER, SQL_CONCUR_VALUES|SQL_ATTR_CURSOR_SENSITIVITY SQL_UNSPECIFIED ou SQL_SENSITIVE, conforme definido pelo driver. Ele nunca pode ser definido como SQL_INSENSITIVE, como cursores sem distinção sempre são somente leitura.|  
 |SQL_ATTR_CURSOR_SCROLLABLE como SQL_NONSCROLLABLE|SQL_ATTR_CURSOR_TYPE para SQL_CURSOR_FORWARD_ONLY|  
 |SQL_ATTR_CURSOR_SCROLLABLE como SQL_SCROLLABLE|SQL_ATTR_CURSOR_TYPE SQL_CURSOR_STATIC, SQL_CURSOR_KEYSET_DRIVEN ou SQL_CURSOR_DYNAMIC, conforme especificado pelo driver. Ele nunca é definido como SQL_CURSOR_FORWARD_ONLY.|  

@@ -1,5 +1,5 @@
 ---
-title: CurrentMember (MDX) | Microsoft Docs
+title: Função CurrentMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f7d47e12b95a92930bbdfceaba5cc8997c286eec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03583c9af74bd21511dfe871b229d03370a7b436
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047112"
 ---
 # <a name="currentmember-mdx"></a>Função CurrentMember (MDX)
 
@@ -29,7 +28,7 @@ Hierarchy_Expression.CurrentMember
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Hierarchy_Expression*  
+ *Expressão_Hierarquia*  
  Uma linguagem MDX válida que retorna uma hierarquia.  
   
 ## <a name="remarks"></a>Comentários  

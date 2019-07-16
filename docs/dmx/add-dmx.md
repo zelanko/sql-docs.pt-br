@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1cbb2714e9bc4f5d4944494c3b900bab737fe705
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 015876ba13963b8427a5c9f535ed182616d4677e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070160"
 ---
 # <a name="-add-dmx"></a>+ (Adicionar) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,12 +34,12 @@ Numeric_Expression + Numeric_Expression
 ## <a name="return-value"></a>Valor retornado  
  Valor que possui o tipo de dados do parâmetro que tem prioridade alta.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As duas expressões devem ser do mesmo tipo de dados ou uma expressão deve poder ser convertida implicitamente no tipo de dados da outra expressão. Se uma expressão avaliar a um valor nulo, o operador retornará o resultado da outra expressão.  
   
 ## <a name="see-also"></a>Consulte também  
  [Operadores aritméticos &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
  [Extensões de mineração de dados &#40;DMX&#41; referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

@@ -7,13 +7,12 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e036aa2a4c104eaf92e3e9aaf4513f2542bf23b4
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: cf64f8ad137f8dea94bbc08d4a72981393de44ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961903"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>Tutorial: Análise de dados do Python para desenvolvedores do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,7 +49,7 @@ Se você for um programador SQL novo Python ou o desenvolvedor Python novidade n
 
 Depois que o modelo foi salvo no banco de dados, você pode chamar o modelo para previsões de [!INCLUDE[tsql](../../includes/tsql-md.md)] usando procedimentos armazenados.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 + [Serviços de aprendizado de máquina do SQL Server 2017 com o Python](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 

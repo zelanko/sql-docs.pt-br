@@ -33,14 +33,13 @@ helpviewer_keywords:
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad4e43d04c16443323358f0b84e6f26a9f9ab6bf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d7526bd23d5b49160748eff653d0e2d9c1e07ce4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086845"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Inserindo dados usando diagramas de atualização XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -159,7 +158,7 @@ ms.locfileid: "56019007"
 </ROOT>  
 ```  
   
-### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>b. Inserindo vários registros usando um diagrama de atualização  
+### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. Inserindo vários registros usando um diagrama de atualização  
  Este diagrama de atualização adiciona dois novos registros de troca à tabela HumanResources.Shift. O diagrama não especifica opcional  **\<antes de >** bloco.  
   
 ```  
@@ -238,7 +237,7 @@ ms.locfileid: "56019007"
   
  A coluna UnitPrice da tabela Order Details é do **dinheiro** tipo. Para aplicar a conversão de tipo apropriada (de um **cadeia de caracteres** de tipo para um **dinheiro** tipo), o caractere de cifrão ($) deve ser adicionado como parte do valor. Se o diagrama não especifica um esquema de mapeamento, o primeiro caractere dos **cadeia de caracteres** valor é avaliado. Se o primeiro caractere for um cifrão ($), a conversão apropriada será aplicada.  
   
- Se o diagrama de atualização é especificado em um esquema de mapeamento em que a coluna adequadamente está marcada como **dt:type="fixed.14.4"** ou **SQL: DataType = "dinheiro"**, o sinal de cifrão ($) não é necessário e o conversão é feita pelo mapeamento. Esse é o modo recomendado para garantir uma conversão de tipos bem-sucedida.  
+ Se o diagrama de atualização é especificado em um esquema de mapeamento em que a coluna adequadamente está marcada como **dt:type="fixed.14.4"** ou **SQL: DataType = "dinheiro"** , o sinal de cifrão ($) não é necessário e o conversão é feita pelo mapeamento. Esse é o modo recomendado para garantir uma conversão de tipos bem-sucedida.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para testar uma consulta XPath de exemplo com relação ao esquema  
   

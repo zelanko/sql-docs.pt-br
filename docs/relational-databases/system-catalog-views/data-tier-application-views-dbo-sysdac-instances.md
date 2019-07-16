@@ -20,26 +20,25 @@ helpviewer_keywords:
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 049f3d0201957cfee5d7bc88301c6af97c0b6dcb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b1530e58597947a7e19f4ca264808fbfefd164ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033117"
 ---
 # <a name="data-tier-application-views---dbosysdacinstances"></a>Exibições de aplicativo da camada de dados - dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Exibe uma linha para cada instância do DAC (Aplicativo da Camada de Dados) implantada a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. sysdac_instances pertence ao esquema dbo no banco de dados msdb. A tabela a seguir descreve as colunas na exibição de sysdac_instances.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |instance_id|**uniqueidentifier**|Identificador da instância do DAC.|  
 |instance_name|**sysname**|Nome da instância do DAC especificada quando o DAC foi implantado.|  
 |type_name|**sysname**|Nome do DAC especificado quando o pacote do DAC foi criado.|  
 |type_version|**nvarchar(64)**|Versão do DAC especificado quando o pacote do DAC foi criado.|  
-|descrição|**nvarchar(4000)**|Uma descrição do DAC escrita quando o pacote do DAC foi criado.|  
+|description|**nvarchar(4000)**|Uma descrição do DAC escrita quando o pacote do DAC foi criado.|  
 |type_stream|**varbinary(max)**|Fluxo que contém uma representação codificada dos objetos lógicos, como tabelas e exibições, contidos no DAC.|  
 |date_created|**datetime**|Data e hora em que a instância do DAC foi criada.|  
 |created_by|**sysname**|Logon que criou a instância do DAC.|  

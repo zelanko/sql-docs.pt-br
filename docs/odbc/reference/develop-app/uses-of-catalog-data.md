@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5915d0c-eec3-4382-850e-bd863763c99a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d9b75d59d8fc28e364f5826d95e7fc50cb6afda7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc8999c0a7189772145f553646b45eb1f1fbd695
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091611"
 ---
 # <a name="uses-of-catalog-data"></a>Usos de dados do catálogo
 Aplicativos usam dados de catálogo em uma variedade de formas. Aqui estão alguns usos comuns:  

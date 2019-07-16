@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bfa85e91-060e-4d70-88c3-f5c48df634f1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 586e5f26c943fdc267ad98627ada3b56cbc4013c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f13193ba437d0da0ee15bd4072fe6f53c7db5b9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043783"
 ---
 # <a name="other-text-file-driver-programming-details"></a>Outros detalhes de programação de drivers de Arquivo de texto
 > [!NOTE]  

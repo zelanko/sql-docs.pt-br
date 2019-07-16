@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ac1fb436ded0d829d9b6a9c8fe4e642f8de8cb16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690314"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084838"
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +63,10 @@ sp_update_operator
  Um número que indica o status atual do operador (**1** se está habilitado no momento, **0** se não). *habilitada* está **tinyint**, com um padrão NULL. Se não estiver habilitado, um operador não receberá notificações de alerta.  
   
  [ @email_address=] '*email_address*'  
- O endereço de email do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *email_address* está **nvarchar(100)**, com um padrão NULL.  
+ O endereço de email do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *email_address* está **nvarchar(100)** , com um padrão NULL.  
   
  [ @pager_address=] '*pager_number*'  
- O endereço de pager do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *pager_number* está **nvarchar(100)**, com um padrão NULL.  
+ O endereço de pager do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *pager_number* está **nvarchar(100)** , com um padrão NULL.  
   
  [ @weekday_pager_start_time=] *weekday_pager_start_time*  
  Especifica a hora depois da qual uma notificação de pager pode ser enviada a esse operador, de segunda-feira a sexta-feira. *weekday_pager_start_time*está **int**, com um padrão de NULL e deve ser inserida no formato HHMMSS para uso com um relógio de 24 horas.  
@@ -90,7 +89,7 @@ sp_update_operator
  [ @pager_days=] *pager_days*  
  Especifica os dias em que o operador está disponível para receber páginas (sujeitos aos horários de início/término especificados). *pager_days*está **tinyint**, com um padrão de NULL, e deve ser um valor de **0** por meio de **127**. *pager_days* é calculado somando os valores individuais para os dias necessários. Por exemplo, de segunda-feira a sexta-feira é **2**+**4**+**8**+**16** + **32** = **64**.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Segunda-feira|  
@@ -101,7 +100,7 @@ sp_update_operator
 |**64**|Sábado|  
   
  [ @netsend_address=] '*netsend_address*'  
- O endereço de rede do operador para o qual a mensagem de rede é enviada. *netsend_address*está **nvarchar(100)**, com um padrão NULL.  
+ O endereço de rede do operador para o qual a mensagem de rede é enviada. *netsend_address*está **nvarchar(100)** , com um padrão NULL.  
   
  [ @category_name=] '*categoria*'  
  O nome da categoria para este alerta. *categoria* está **sysname**, com um padrão NULL.  

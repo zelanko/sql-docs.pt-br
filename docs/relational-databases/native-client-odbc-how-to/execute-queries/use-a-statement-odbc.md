@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ee6581bca5dac6331571d1b1b71957cc3df7eac
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: abf5910d032b921f6cefa1aeb89fef1a6fcfbc44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661305"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898458"
 ---
 # <a name="use-a-statement-odbc"></a>Usar uma instrução (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,11 +39,11 @@ ms.locfileid: "51661305"
   
 5.  Execute uma instrução diretamente usando SQLExecDirect.  
   
-     \- ou –  
+     \- ou -  
   
      Se a instrução tiver sido preparada, execute-a várias vezes usando [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400).  
   
-     \- ou –  
+     \- ou -  
   
      Chame uma função de catálogo, que retorna resultados.  
   
@@ -52,11 +51,11 @@ ms.locfileid: "51661305"
   
      Busque uma linha de cada vez no conjunto de resultados de uma instrução.  
   
-     \- ou –  
+     \- ou -  
   
      Busque várias linhas por vez no conjunto de resultados usando um cursor em bloco.  
   
-     \- ou –  
+     \- ou -  
   
      Chame [SQLRowCount](../../../relational-databases/native-client-odbc-api/sqlrowcount.md) para determinar o número de linhas afetadas por uma instrução INSERT, UPDATE ou DELETE.  
   

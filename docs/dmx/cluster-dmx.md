@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 41f835a93e5976945281b6b04258c516b0322236
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: fa7df2782b8102e386c70d5e874a25f7868dbb1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071085"
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,13 +33,13 @@ Cluster()
 ## <a name="return-type"></a>Tipo de retorno  
  O **Cluster** função não requer parâmetros.  
   
- O **Cluster** função retorna um valor escalar de um nome de cluster. No entanto, se você usar essa função como um argumento de outra função, você deve considerá-la como um \<cluster referência de coluna >.  
+ O **Cluster** função retorna um valor escalar de um nome de cluster. No entanto, se você usar essa função como um argumento de outra função, você deve considerá-la como um \<referência de coluna do cluster >.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **Cluster** também pode ser usado como um `<`referência de coluna de cluster`>` para um **PredictHistogram** função.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir usa uma consulta singleton com o [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) e funções para retornar a distância do caso individual de cada cluster do modelo de mineração de Clustering TM do Cluster e o probabilidade de que o caso individual existirá em cada cluster.  
+ O exemplo a seguir usa uma consulta de singleton com o [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) e funções para retornar a distância do caso individual de cada cluster do modelo de mineração de Clustering de TM do Cluster e o probabilidade de que o caso individual existirá em cada cluster.  
   
 ```  
 SELECT  
@@ -59,6 +58,6 @@ FROM
  [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
  [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

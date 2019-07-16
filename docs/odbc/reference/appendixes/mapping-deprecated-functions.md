@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0568306ad0e2fd8a73737bf80a4270e8eaa3ed18
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990713"
 ---
 # <a name="mapping-deprecated-functions"></a>Funções preteridas de mapeamento
 Esta seção descreve as funções como preteridas são mapeados por ODBC *3.x* Gerenciador de Driver para garantir a compatibilidade com versões anteriores do ODBC *3.x* drivers que são usados com o ODBC *2.x* aplicativos. O Gerenciador de Driver realiza esse mapeamento independentemente da versão do aplicativo. Porque cada um dos ODBC *2.x* funções na lista a seguir é mapeado para o ODBC correspondente *3.x* funcionar quando chamado em um ODBC *3.x* driver, o ODBC *3.x* driver não precisa implementar o ODBC *2.x* funções.  

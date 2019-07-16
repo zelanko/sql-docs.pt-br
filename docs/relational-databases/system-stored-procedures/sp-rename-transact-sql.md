@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330b330375ee49d13242dd400ed76fae2bfc6e71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 070c2a362a69fb6863cc263da3975efc66c7c9f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006936"
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,18 +50,18 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  [ @objname =] '*object_name*'  
  É o nome atual qualificado ou não qualificado do objeto do usuário ou do tipo de dados. Se o objeto a ser renomeado for uma coluna em uma tabela *object_name* deve estar no formato *tabela* ou *schema.table.column*. Se o objeto a ser renomeado for um índice *object_name* deve estar no formato *index* ou *schema.table.index*. Se o objeto a ser renomeado for uma restrição *object_name* deve estar no formato *schema.constraint*.  
   
- As aspas serão necessárias apenas se um objeto qualificado estiver especificado. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *object_name* está **nvarchar(776)**, sem padrão.  
+ As aspas serão necessárias apenas se um objeto qualificado estiver especificado. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *object_name* está **nvarchar(776)** , sem padrão.  
   
- [ @newname =] '*new_name*'  
+ [ @newname = ] '*new_name*'  
  É o novo nome do objeto especificado. *new_name* deve ser um nome de uma parte e devem seguir as regras para identificadores. *newname* está **sysname**, sem padrão.  
   
 > [!NOTE]  
 >  Os nomes de gatilhos não podem começar com # ou ##.  
   
  [ @objtype =] '*object_type*'  
- É o tipo do objeto que está sendo renomeado. *object_type* está **varchar(13)**, com um padrão de NULL, e pode ser um destes valores.  
+ É o tipo do objeto que está sendo renomeado. *object_type* está **varchar(13)** , com um padrão de NULL, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |COLUMN|Uma coluna a ser renomeada.|  
 |DATABASE|Um banco de dados definido pelo usuário. Esse tipo de objeto é necessário quando um banco de dados é renomeado.|  

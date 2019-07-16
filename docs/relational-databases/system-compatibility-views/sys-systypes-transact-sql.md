@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4acf3466615548e9c88b7743c48e39d3915f9c8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5533e521ba28c0190a5be57ed7637632213d7447
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018083"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,13 +36,13 @@ ms.locfileid: "47602685"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do tipo de dados.|  
 |**tipoX**|**tinyint**|Tipo de armazenamento físico.|  
 |**status**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|Tipo de usuário estendido. Estoura ou retorna NULL se o número de tipos de dados exceder 32.767.|  
-|**Comprimento**|**smallint**|Comprimento físico do tipo de dados.|  
+|**length**|**smallint**|Comprimento físico do tipo de dados.|  
 |**xprec**|**tinyint**|Precisão interna, como usado pelo servidor. Não deve ser usada em consultas.|  
 |**xscale**|**tinyint**|Escala interna, como usada pelo servidor. Não deve ser usada em consultas.|  
 |**tdefault**|**int**|ID do procedimento armazenado que contém verificações de integridade para este tipo de dados.|  

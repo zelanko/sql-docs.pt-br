@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9dca1aca3883b16b13f4e0abdb842deaf5bbfdd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 55fedd154195b4f5abf230120a0e16e6a41ce6e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032933"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @triggername = ] '[ _triggerschema.] _triggername'` É o nome do gatilho e o esquema ao qual ele pertence, se aplicável, cuja ordem será definida ou alterada. [_triggerschema_**.**] *triggername* é **sysname**. Se o nome não corresponder a um disparador ou se o nome corresponder a um disparador INSTEAD OF, o procedimento retornará um erro. *triggerschema* não pode ser especificado para gatilhos DDL ou de logon.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'` É o nome do gatilho e o esquema ao qual ele pertence, se aplicável, cuja ordem será definida ou alterada. [_triggerschema_ **.** ] *triggername* é **sysname**. Se o nome não corresponder a um disparador ou se o nome corresponder a um disparador INSTEAD OF, o procedimento retornará um erro. *triggerschema* não pode ser especificado para gatilhos DDL ou de logon.  
   
 `[ @order = ] 'value'` É a configuração da nova ordem do gatilho. *valor* está **varchar(10)** e pode ser qualquer um dos valores a seguir.  
   
@@ -61,7 +60,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  Um gatilho pode ser designado como o **primeira** ou **última** gatilho para um tipo de instrução somente depois que o disparador foi definido como um gatilho para esse tipo de instrução. Por exemplo, disparar **TR1** pode ser designada **primeiro** para inserção na tabela **T1** se **TR1** é definido como um gatilho INSERT. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] retornará um erro se **TR1**, que foi definido somente como um gatilho de inserção está definido como um **primeiro**, ou **último**, gatilho para uma instrução UPDATE. Para obter mais informações, consulte a seção Comentários.  
   
- **@namespace=** { **'DATABASE'** | **'SERVER'** | NULL }  
+ **@namespace=** { **'DATABASE'**  |  **'SERVER'** | NULL }  
  Quando *triggername* é um gatilho DDL, **@namespace** Especifica se *triggername* foi criado com escopo de banco de dados ou escopo do servidor. Se *triggername* é um gatilho de logon, servidor deve ser especificado. Para obter mais informações sobre o escopo do gatilho DDL, consulte [gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md). Se não for especificado, ou se NULL for especificado, *triggername* é um gatilho DML.  
   
 ||  

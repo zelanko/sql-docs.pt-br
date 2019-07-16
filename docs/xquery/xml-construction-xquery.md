@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d5c63b6e2f128871740f816cf0772f44646e31f3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 51c1898ddaee1ecf878944a3b43c3d8adbb38590
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946179"
 ---
 # <a name="xml-construction-xquery"></a>Construção XML (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- Embora seja útil construir elementos de expressões constantes, como mostrado neste exemplo, o verdadeiro poder desse recurso de linguagem do XQuery é a capacidade de construir XML capaz de extrair dinamicamente dados de um banco de dados. Você pode usar chaves para especificar expressões de consulta. No XML resultante, a expressão é substituída por seu valor. Por exemplo, a consulta a seguir constrói um elemento <`NewRoot`> com um elemento filho (<`e`>). O valor do elemento <`e`> é computado pela especificação de uma expressão de caminho entre chaves ("{...}").  
+ Embora seja útil construir elementos de expressões constantes, como mostrado neste exemplo, o verdadeiro poder desse recurso de linguagem do XQuery é a capacidade de construir XML capaz de extrair dinamicamente dados de um banco de dados. Você pode usar chaves para especificar expressões de consulta. No XML resultante, a expressão é substituída por seu valor. Por exemplo, a consulta a seguir construções de um <`NewRoot`> elemento com um elemento filho (<`e`>). O valor do elemento <`e`> é computado pela especificação de uma expressão de caminho entre chaves ("{...}").  
   
 ```sql
 DECLARE @x xml;  
@@ -137,7 +136,7 @@ SELECT @y;
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
 ```  
   
- A consulta a seguir é outro exemplo de construção de elementos com o uso do construtor de elemento direto. Além disso, o valor do elemento <`FirstLocation`> é obtido pela execução da expressão entre chaves. A expressão de consulta retorna as etapas de fabricação no primeiro local de centro de trabalho da coluna Instructions da tabela Production.ProductModel.  
+ A consulta a seguir é outro exemplo de construção de elementos com o uso do construtor de elemento direto. Além disso, o valor da <`FirstLocation`> elemento é obtido pela execução da expressão entre chaves. A expressão de consulta retorna as etapas de fabricação no primeiro local de centro de trabalho da coluna Instructions da tabela Production.ProductModel.  
   
 ```sql
 SELECT Instructions.query('  
@@ -235,7 +234,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- O elemento <`ProductModel`> construído tem um atributo ProductModelID e estes nós filho:  
+ O elemento construído <`ProductModel`> tem um atributo ProductModelID e estes nós filho:  
   
 -   Um nó de texto, `This is product model catalog description.`  
   
@@ -337,7 +336,7 @@ where ProductModelID=7;
     SELECT @x.query( '<a attr="{/x}{/x}"/>' )  
     ```  
   
--   Não há suporte para sequências heterogêneas. Qualquer tentativa para atribuir uma sequência heterogênea como um valor de atributo retornará um erro, como mostrado no exemplo a seguir. Neste exemplo, uma sequência heterogênea - um "Item" de cadeia de caracteres e um elemento <`x`> - é especificada como o valor de atributo:  
+-   Não há suporte para sequências heterogêneas. Qualquer tentativa para atribuir uma sequência heterogênea como um valor de atributo retornará um erro, como mostrado no exemplo a seguir. Neste exemplo, uma sequência heterogênea, uma cadeia de caracteres "Item" e um elemento <`x`>, é especificado como o valor do atributo:  
   
     ```sql
     DECLARE @x xml  
@@ -382,7 +381,7 @@ where ProductModelID=7;
 -   No prólogo do XQuery.  
   
 #### <a name="using-a-namespace-declaration-attribute-to-add-namespaces"></a>Usando um atributo de declaração de namespace para adicionar namespaces  
- O exemplo a seguir usa um atributo de declaração de namespace na construção do elemento <`a`> para declarar um namespace padrão. A construção do elemento filho <`b`> desfaz a declaração do namespace padrão declarada no elemento pai.  
+ O exemplo a seguir usa um atributo de declaração de namespace na construção do elemento <`a`> para declarar um namespace padrão. A construção do elemento filho <`b`> desfaz a declaração do namespace padrão declarado no elemento pai.  
   
 ```sql
 declare @x xml  
@@ -420,7 +419,7 @@ select @x.query( '
 </x:a>  
 ```  
   
- É possível desfazer a declaração de um namespace padrão na construção XML, mas não desfazer a declaração de um prefixo de namespace. A consulta a seguir retorna um erro, pois não é possível desfazer a declaração de um prefixo especificado na construção do elemento <`b`>.  
+ É possível desfazer a declaração de um namespace padrão na construção XML, mas não desfazer a declaração de um prefixo de namespace. A consulta a seguir retorna um erro, pois não é possível cancelar-declarar um prefixo especificado na construção do elemento <`b`>.  
   
 ```sql
 declare @x xml  
@@ -431,7 +430,7 @@ select @x.query( '
   </x:a>' )  
 ```  
   
- O namespace recentemente construído está disponível para uso na consulta. Por exemplo, a consulta a seguir declara um namespace na construção do elemento, <`FirstLocation`>, bem como especifica o prefixo nas expressões para obter os valores de atributo LocationID e SetupHrs.  
+ O namespace recentemente construído está disponível para uso na consulta. Por exemplo, a consulta a seguir declara um namespace na construção do elemento <`FirstLocation`> e especifica o prefixo nas expressões para os valores de atributo LocationID e SetupHrs.  
   
 ```sql
 SELECT Instructions.query('  
@@ -445,7 +444,7 @@ FROM  Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Observe que a criação de um novo prefixo de namespace desse modo substituirá qualquer declaração preexistente de namespace desse prefixo. Por exemplo, a declaração de namespace, `AWMI="https://someURI"`, no prólogo de consulta é anulada pela declaração de namespace no elemento <`FirstLocation`>.  
+ Observe que a criação de um novo prefixo de namespace desse modo substituirá qualquer declaração preexistente de namespace desse prefixo. Por exemplo, a declaração de namespace `AWMI="https://someURI"`, na consulta prólogo é substituído pela declaração de namespace no <`FirstLocation`> elemento.  
   
 ```sql
 SELECT Instructions.query('  
@@ -549,7 +548,7 @@ test
   
  **Observação** para obter um exemplo de como usar um construtor de nó de texto explícito, consulte o exemplo específico na [insert &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
   
- Na consulta a seguir, o XML construído inclui um elemento, dois atributos, um comentário e uma instrução de processamento. Observe que uma vírgula é usada antes de <`FirstLocation`>, pois uma sequência está sendo construída.  
+ Na consulta a seguir, o XML construído inclui um elemento, dois atributos, um comentário e uma instrução de processamento. Observe que a vírgula é usada antes do <`FirstLocation`>, pois uma sequência que está sendo construída.  
   
 ```sql
 SELECT Instructions.query('  
@@ -584,7 +583,7 @@ where ProductModelID=7;
 ```  
   
 ## <a name="using-computed-constructors"></a>Usando construtores computados  
- para obter informações sobre a ferramenta de configuração e recursos adicionais. Nesse caso, especifique as palavras-chave que identificam o tipo de nó que você deseja construir. São suportadas apenas as seguintes palavras-chave:  
+ . Nesse caso, especifique as palavras-chave que identificam o tipo de nó que você deseja construir. São suportadas apenas as seguintes palavras-chave:  
   
 -   elemento  
   

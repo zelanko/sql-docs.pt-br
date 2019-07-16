@@ -3,18 +3,17 @@ title: Configurar configurações do SQL Server com variáveis de ambiente
 description: Este artigo descreve como usar variáveis de ambiente para configurar as configurações específicas do SQL Server 2017 no Linux.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 71f537d0f9da626fbd7624727b3aee22d2a47676
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 2e28c995e5c2c0bb08938bf7ca73bda718c44ff7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967493"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurar configurações do SQL Server com variáveis de ambiente no Linux
 
@@ -96,7 +95,7 @@ Este exemplo executa `mssql-conf setup` com configurado variáveis de ambiente. 
 
 - **ACCEPT_EULA** aceita o contrato de licença de usuário final.
 - **MSSSQL_PID** Especifica a licenciadas gratuitamente Developer Edition do SQL Server para uso de não produção.
-- **MSSQL_SA_PASSWORD** sets a strong password.
+- **MSSQL_SA_PASSWORD** define uma senha forte.
 - **MSSQL_TCP_PORT** define a porta TCP que o SQL Server escuta para 1234.
 
 ```bash
@@ -109,7 +108,7 @@ Este exemplo de comando do docker usa as seguintes variáveis de ambiente para c
 
 - **ACCEPT_EULA** aceita o contrato de licença de usuário final.
 - **MSSSQL_PID** Especifica a licenciadas gratuitamente Developer Edition do SQL Server para uso de não produção.
-- **MSSQL_SA_PASSWORD** sets a strong password.
+- **MSSQL_SA_PASSWORD** define uma senha forte.
 - **MSSQL_TCP_PORT** define a porta TCP que o SQL Server escuta para 1234. Isso significa que, em vez de mapeamento a porta 1433 (padrão) para uma porta de host, a porta TCP personalizada deve ser mapeada com o `-p 1234:1234` comando neste exemplo.
 
 <!--SQL Server 2017 on Linux -->

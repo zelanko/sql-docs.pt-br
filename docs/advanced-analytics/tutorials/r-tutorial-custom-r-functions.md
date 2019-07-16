@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 5773641f442fe844657e6aabd6b9dcea24f4475b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c9cb9d84637d20f3f0e73f97fa6565d84d12fb4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509903"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961951"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>Executar funções de R personalizadas no SQL Server usando rxExec
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +23,7 @@ O **rxExec** funcionar **RevoScaleR** fornece um mecanismo para executar qualque
 
 Neste tutorial, você usará dados simulados para demonstrar a execução de uma função personalizada do R que é executado em um servidor remoto.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 + [Serviços de aprendizado de máquina do SQL Server 2017 (com R)](../install/sql-machine-learning-services-windows-install.md) ou [SQL Server 2016 R Services (no banco de dados)](../install/sql-r-services-windows-install.md)
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1f941269d1e42e1adc09dce2a6937b900e0aaa13
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ba27f90c8d2fc4c7e174333080815d56f90e48c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091920"
 ---
 # <a name="spaddmaintenanceplanjob-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +44,9 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@plan_id =**] **'**_plan_id_**'**  
- Especifica a ID do plano de manutenção. *plan_id* está **uniqueidentifier**, e deve ser uma ID válida.  
+`[ @plan_id = ] 'plan_id'` Especifica a ID do plano de manutenção. *plan_id* está **uniqueidentifier**, e deve ser uma ID válida.  
   
- [  **@job_id =**] **'**_job_id_**'**  
- Especifica a ID do trabalho a ser associado ao plano de manutenção. *job_id* está **uniqueidentifier**, e deve ser uma ID válida. Para criar um trabalho ou trabalhos, execute **sp_add_job**, ou usar o SQL Server Management Studio.  
+`[ @job_id = ] 'job_id'` Especifica a ID do trabalho a ser associado com o plano de manutenção. *job_id* está **uniqueidentifier**, e deve ser uma ID válida. Para criar um trabalho ou trabalhos, execute **sp_add_job**, ou usar o SQL Server Management Studio.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: e492498ee6e15866e7fe6fd96588480c914b0622
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 0373bbda2d0c97946f15e048b7cc49175ca66669
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097162"
 ---
 # <a name="using-dimension-expressions"></a>Usando expressões de dimensão
 
@@ -62,6 +61,6 @@ ms.locfileid: "67597517"
  Um identificador de hierarquia aparece como *Dimension_Name.Hierarchy_Name* na notação BNF usada para descrever instruções MDX.  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  
+ [Expressões &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

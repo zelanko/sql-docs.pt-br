@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f776d467-5d5d-4761-9043-3dad5f73c610
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4274188beb0b67fa5a49ce9e25b781c5b1cd95d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 507d23e6f7a344e9d3fe4a17cf34903235803426
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63151251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083176"
 ---
 # <a name="conformance-levels"></a>Níveis de conformidade
 Drivers ODBC de concedem o acesso de aplicativo para diversas fontes de dados. Cada driver permite que o aplicativo determinar no tempo de execução quais recursos ODBC e quais gramática SQL o driver e dá suporte a cada fonte de dados. Isso não é um requisito de aplicativos projetados para trabalhar com um único driver ou um conjunto de drivers, pequeno, conhecido como esses aplicativos simplesmente podem ser gravados para os recursos desse driver ou drivers. Para descobrir aplicativos de driver e recursos de fonte de dados, duas áreas de conformidade estão disponíveis: a interface ODBC e a gramática SQL.  

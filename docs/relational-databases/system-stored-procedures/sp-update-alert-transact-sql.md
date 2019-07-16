@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54d96cf86b55a7c5a24917672bcae470a3bf7335
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: baecdca82d7edcb27196c7c43d9d071a82adf792
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084956"
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,13 +74,13 @@ sp_update_alert
   
 `[ @delay_between_responses = ] delay_between_responses` O novo período de espera, em segundos, entre respostas ao alerta. *delay_between_responses* está **int**, com um padrão NULL.  
   
-`[ @notification_message = ] 'notification_message'` O texto revisado de uma mensagem adicional enviada ao operador como parte de email, **net send**, ou notificação de pager. *notification_message* está **nvarchar(512)**, com um padrão NULL.  
+`[ @notification_message = ] 'notification_message'` O texto revisado de uma mensagem adicional enviada ao operador como parte de email, **net send**, ou notificação de pager. *notification_message* está **nvarchar(512)** , com um padrão NULL.  
   
 `[ @include_event_description_in = ] include_event_description_in` Especifica se a descrição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erro do log de aplicativo Windows deve ser incluído na mensagem de notificação. *include_event_description_in* está **tinyint**, com um padrão de NULL, e pode ser um ou mais destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**0**|None|  
+|**0**|Nenhum|  
 |**1**|Email|  
 |**2**|Pager|  
 |**4**|**net send**|  
@@ -89,7 +88,7 @@ sp_update_alert
   
 `[ @database_name = ] 'database'` O nome do banco de dados no qual o erro deve ocorrer para o alerta seja acionado. *banco de dados* é **sysname.** Os nomes entre colchetes ([ ]) não são permitidos. O valor padrão é NULL.  
   
-`[ @event_description_keyword = ] 'event_description_keyword'` Uma sequência de caracteres que deve ser encontrado na descrição do erro no log de mensagem de erro. Os caracteres correspondentes ao padrão da expressão LIKE do [!INCLUDE[tsql](../../includes/tsql-md.md)] podem ser usados. *event_description_keyword* está **nvarchar(100)**, com um padrão NULL. Esse parâmetro é útil para filtrar nomes de objeto (por exemplo, **% customer_table %**).  
+`[ @event_description_keyword = ] 'event_description_keyword'` Uma sequência de caracteres que deve ser encontrado na descrição do erro no log de mensagem de erro. Os caracteres correspondentes ao padrão da expressão LIKE do [!INCLUDE[tsql](../../includes/tsql-md.md)] podem ser usados. *event_description_keyword* está **nvarchar(100)** , com um padrão NULL. Esse parâmetro é útil para filtrar nomes de objeto (por exemplo, **% customer_table %** ).  
   
 `[ @job_id = ] job_id` O número de identificação do trabalho. *job_id* está **uniqueidentifier**, com um padrão NULL. Se *job_id* for especificado, *job_name* deverão ser omitidos.  
   
@@ -111,19 +110,19 @@ sp_update_alert
   
 `[ @raise_snmp_trap = ] raise_snmp_trap` Reservado.  
   
-`[ @performance_condition = ] 'performance_condition'` Um valor expressado no formato **'***itemcomparatorvalue***'**. *performance_condition* está **nvarchar(512)**, com um padrão de NULL e consiste nestes elementos.  
+`[ @performance_condition = ] 'performance_condition'` Um valor expressado no formato **'***itemcomparatorvalue***'** . *performance_condition* está **nvarchar(512)** , com um padrão de NULL e consiste nestes elementos.  
   
 |Elemento Format|Descrição|  
 |--------------------|-----------------|  
 |*Item*|Um objeto de desempenho, contador de desempenho ou instância nomeada do contador|  
-|*Comparador*|Um destes operadores: **>**, **<**, **=**|  
-|*Value*|Valor numérico do contador|  
+|*Comparador*|Um destes operadores: **>** , **<** , **=**|  
+|*Valor*|Valor numérico do contador|  
   
 `[ @category_name = ] 'category'` O nome da categoria de alerta. *categoria* está **sysname** com um padrão NULL.  
   
 `[ @wmi_namespace = ] 'wmi_namespace'` O namespace do WMI para consulta de eventos. *wmi_namespace* está **sysname**, com um padrão NULL.  
   
-`[ @wmi_query = ] 'wmi_query'` A consulta que especifica o evento WMI para o alerta. *wmi_query* está **nvarchar(512)**, com um padrão NULL.  
+`[ @wmi_query = ] 'wmi_query'` A consulta que especifica o evento WMI para o alerta. *wmi_query* está **nvarchar(512)** , com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
