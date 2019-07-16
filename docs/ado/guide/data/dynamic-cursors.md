@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b2fe669c521e1d21b46b6eb503f0ca03944e12e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86e51b7880004117e8efc96bd310c6de705d43a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925505"
 ---
 # <a name="dynamic-cursors"></a>Cursores dinâmicos
 Cursores dinâmicos detectam todas as alterações feitas nas linhas no conjunto de resultados, independentemente se ocorrerem as alterações de dentro do cursor ou por outros usuários fora do cursor. Todos os insert, update e as instruções delete feitas por todos os usuários são visíveis pelo cursor. O cursor dinâmico pode detectar todas as alterações feitas a linhas, a ordem e a valores no conjunto de resultados depois que o cursor é aberto. As atualizações feitas fora do cursor não são visíveis até serem confirmadas (a menos que o nível de isolamento da transação de cursor é definido como "não confirmado").  

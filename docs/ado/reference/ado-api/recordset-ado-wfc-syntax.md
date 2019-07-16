@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9d2b9a08dd6c9951d9603c1c27bc56c6691433cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 58e0cde8798f73257a54be5cc95f64474334a153
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931384"
 ---
 # <a name="recordset-ado---wfc-syntax"></a>Conjunto de registros (ADO – Sintaxe WFC)
 ## <a name="package-commswfcdata"></a>pacote com.ms.wfc.data  

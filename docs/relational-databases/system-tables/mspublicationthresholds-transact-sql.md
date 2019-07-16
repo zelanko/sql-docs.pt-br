@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cec59e0b5cb933822790a1f2497ca1bd5a3cbb2e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2bf5659dc8a5a440b764b3264556359205646d75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794158"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088520"
 ---
 # <a name="mspublicationthresholds-transact-sql"></a>MSpublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52794158"
 |**metric_id**|**int**|Identifica uma métrica de desempenho de replicação sendo monitorada como definida na [MSreplmonthresholdmetrics](../../relational-databases/system-tables/msreplmonthresholdmetrics-transact-sql.md) tabela do sistema.|  
 |**value**|**sql_variant**|O valor de limite da métrica que está sendo monitorada.|  
 |**shouldalert**|**bit**|Um valor de **1** indica que um alerta deve ser gerado quando a métrica excede o limite definido.|  
-|**IsEnabled**|**bit**|Um valor de **1** indica que o monitoramento está habilitado para esta métrica de desempenho de replicação.|  
+|**isenabled**|**bit**|Um valor de **1** indica que o monitoramento está habilitado para esta métrica de desempenho de replicação.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

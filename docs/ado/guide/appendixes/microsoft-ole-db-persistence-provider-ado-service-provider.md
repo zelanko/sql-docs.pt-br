@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d1ae4f8cba9235700edf410904862d39ed4f7f64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2bd341a3af2d1fdb076312b4c0993184fb4fae39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926761"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Visão geral do provedor de persistência OLE DB da Microsoft
 O Microsoft OLE DB provedor de persistência permite que você salve uma [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) em um arquivo de objeto e restaurá-lo mais tarde **Recordset** objeto do arquivo. Informações de esquema, dados e as alterações pendentes são preservados.
