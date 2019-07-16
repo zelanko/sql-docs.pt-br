@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9ab74e76db2820d5a0242e386aa70130597e7e9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 801997509242bae7af2d2ae438dfdb952be9e1fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090809"
 ---
 # <a name="sysdmresourcegovernorresourcepoolvolumes-transact-sql"></a>sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47718534"
   Retorna informações sobre o pool de recursos atual e estatísticas de e/s para cada volume de disco. Essas informações também estão disponíveis no nível do pool de recursos no [DM resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|ID do pool de recursos. Não permite valor nulo.|  
 |volume_name|**sysname**|O nome do volume de disco. Não permite valor nulo.|  
