@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: df659c55-4f63-45f8-8afe-ce300031bc5b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f96dd7be6de1415abb8a71425b083c58e7012d9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b880820ac633402d1d3cdd679b16a54d1be358e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62691376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899537"
 ---
 # <a name="sysdmpdwdiagprocessingstats-transact-sql"></a>sys.dm_pdw_diag_processing_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Exibe informações relacionadas a todos os eventos de diagnóstico internos que podem ser incorporados em sessões de diagnóstico definidas pelo administrador. Consulte essa exibição para entender as estatísticas por trás do diagnóstico e os subsistemas de eventos que a população de todos os outros DMVs de unidade. Há um grupo de filas para cada processo em cada nó.  
   
-|Nome da coluna|Tipo de Dados|Descrição|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**pdw_node_id**|**int**|Esse log é de um nó de dispositivo.|  
 |**process_id**|**int**|Identificador do processo em execução enviando essa estatística.|  

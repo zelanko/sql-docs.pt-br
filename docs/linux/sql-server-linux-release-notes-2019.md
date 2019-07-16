@@ -3,18 +3,17 @@ title: Notas de versão para versão prévia de 2019 do SQL Server no Linux
 description: Este artigo contém as notas de versão e recursos com suporte para visualização de 2019 do SQL Server em execução no Linux. Notas de versão são incluídas para a versão mais recente e várias versões anteriores.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 07/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 88c4ebbd5d2e106dbab2dcb057ef024fe0c7f26c
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 490b47c43e5a930f42163edc75280b2642e2dabc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896147"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Notas de versão para versão prévia de 2019 do SQL Server no Linux
 

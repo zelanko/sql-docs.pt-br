@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f653af8294002bf73b98bd4adc096fac8ba1658
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b70920cd223223d5efb14925a6808168ca9cc16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911675"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Tabela exclusiva, esquema exclusivo exclusiva catálogo propriedades dinâmica (ADO)
 Permite que você de perto as modificações de controle para uma tabela base específica em um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) que foi formada por uma operação de junção em várias tabelas base.  

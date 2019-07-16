@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e4b7b7a97af9059e944d2d2d9e7d19afedf4234d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9d575460daf0f801f6d6dd2e80b0c67f4886dc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696419"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920560"
 ---
 # <a name="appendchunk-method-ado"></a>Método AppendChunk (ADO)
 Acrescenta dados a um grande de texto ou dados binários [campo](../../../ado/reference/ado-api/field-object.md), ou como um [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objeto.  
@@ -38,7 +37,7 @@ object.AppendChunk Data
  *object*  
  Um **campo** ou **parâmetro** objeto.  
   
- *Data*  
+ *Dados*  
  Um **Variant** que contém os dados para acrescentar ao objeto.  
   
 ## <a name="remarks"></a>Comentários  

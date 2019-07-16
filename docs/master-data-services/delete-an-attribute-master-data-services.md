@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fdf3b766e48843a15e73b7a41b7c434ba604e0af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab9f0266120a298ab6f033c7d2e2a4b4fe4903fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906370"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Excluir um atributo (Master Data Services)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65478220"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], exclua um atributo quando você quiser excluir permanentemente esse atributo e todos os valores associados a ele.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  

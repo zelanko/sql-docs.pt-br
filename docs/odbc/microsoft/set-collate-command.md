@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 372d3b2df79d66084f5599b4ac098b8c273ee78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a7701edd4c1902399f1d040ae9027365bdf04ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997746"
 ---
 # <a name="set-collate-command"></a>Comando SET COLLATE
 Especifica uma sequência de agrupamento para campos de caractere em subsequentes de indexação e operações de classificação.  

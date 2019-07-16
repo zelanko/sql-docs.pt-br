@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 34a4ab7327edfb6f6f4204fb457ade97be4f5975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70486a27cfbe5c977d371906da89563059685093
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927002"
 ---
 # <a name="ado-java-class-wrappers"></a>Wrappers de classe Java ADO
 Esse código declara uma instância do ADO [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) wrapper de classe e a inicializa, tudo na mesma linha de código. Além disso, ele declara variáveis para cada um dos argumentos de [aberto](../../../ado/reference/ado-api/open-method-ado-recordset.md) método, especialmente para [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) e [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (porque não dá suporte a Java enumerados tipos). Ele abre e fecha o **Recordset** objeto. Definir Rs1 como NULL simplesmente agenda essa variável para ser liberado quando o Java executa sua versão de intermitente e sistemática de objetos não utilizados.  

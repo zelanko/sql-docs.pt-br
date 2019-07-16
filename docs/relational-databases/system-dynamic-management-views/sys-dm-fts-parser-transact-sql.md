@@ -19,13 +19,12 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 16df7ce483209be058d44448e9071406f897b41a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900914"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 
@@ -68,7 +67,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|palavra-chave|**varbinary(128)**|A representação hexadecimal de uma determinada palavra-chave retornada por um separador de palavras. Essa representação é usada para armazenar a palavra-chave no índice de texto completo. Esse valor não é legível, mas é útil para relacionadas a uma determinada palavra-chave para a saída retornada por outros modos de exibição de gerenciamento dinâmico que retornam o conteúdo de um índice de texto completo, como [DM fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) e [ DM fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Observação:** OxFF representa o caractere especial que indica o final de um arquivo ou conjunto de dados.|  
+|keyword|**varbinary(128)**|A representação hexadecimal de uma determinada palavra-chave retornada por um separador de palavras. Essa representação é usada para armazenar a palavra-chave no índice de texto completo. Esse valor não é legível, mas é útil para relacionadas a uma determinada palavra-chave para a saída retornada por outros modos de exibição de gerenciamento dinâmico que retornam o conteúdo de um índice de texto completo, como [DM fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) e [ DM fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Observação:** OxFF representa o caractere especial que indica o final de um arquivo ou conjunto de dados.|  
 |group_id|**int**|Contém um valor de inteiro que é útil para diferenciar o grupo lógico a partir do qual um determinado termo foi gerado. Por exemplo, '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' produz os seguintes valores group_id em inglês:<br /><br /> 1: Servidor<br />2: DB<br />3: DB|  
 |phrase_id|**int**|Contém um valor inteiro que é útil para diferenciar os casos em que formas alternativas de palavras compostas, como texto completo, são geradas pelo separador de palavras. Às vezes, devido à existência de palavras compostas ('multi-million'), formas alternativas são geradas pelo separador de palavras. Às vezes, essas formas alternativas (frases) precisam ser diferenciadas.<br /><br /> Por exemplo, '`multi-million`' produz os seguintes valores phrase_id em inglês:<br /><br /> 1 para `multi`<br />1 para `million`<br />2 para `multimillion`|  
 |ocorrência|**int**|Indica a ordem de cada termo no resultado da análise. Por exemplo, a ocorrência "`SQL Server query processor`" de frase poderia conter os seguintes valores de ocorrência para os termos da frase em inglês:<br /><br /> 1 para `SQL`<br />2 para `Server`<br />3 para `query`<br />4 para `processor`|  

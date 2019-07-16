@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1af86e92d689f262833e1bc00d8caf0fb0c78b39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96307c0106a99ae1b95d58d9ec08cf2732863eb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911689"
 ---
 # <a name="ado-glossary"></a>Glossário ADO
 Este tópico define termos relevantes à ADO.  
@@ -49,7 +48,7 @@ Este tópico define termos relevantes à ADO.
  entrada de associação  
  Um mapeamento entre um campo em uma tabela e uma variável. Nas extensões do Visual C++ de ADO, **Recordset** campos são mapeados para variáveis de C/C++.  
   
- bitmask  
+ Máscara de bits  
  Um valor numérico destinado a uma comparação de valor de bit por bit com outros valores numéricos, normalmente para sinalizar opções em valores de retornados ou parâmetro. Normalmente, essa comparação é feita com operadores lógicos bit a bit, tal como **e** e **ou** no Visual Basic **&** e **&#124;** em C++.  
   
  Por exemplo, o ADO **FieldAttributeEnum** valores podem ser usados como máscaras de bits para determinar os atributos de um campo. Suponha que você quiser determinar se um campo era atualizável. Você pode testar isso com a seguinte expressão no Visual Basic:`Field.Attributes AND adFldUpdatable`  
@@ -257,7 +256,7 @@ Este tópico define termos relevantes à ADO.
  fonte de dados remota  
  Uma fonte de dados que existe em um outro computador, em vez de no sistema local (em que o aplicativo cliente é executado).  
   
- resource record  
+ registro de recurso  
  Um registro de um provedor de origem de documento que contém campos para a definição e a descrição de uma pasta ou documento. O documento em si não está contido no registro de recurso, mas normalmente pode ser acessado por fluxo padrão ou um campo no registro de recurso que contém uma URL. Consulte também o provedor de código-fonte do documento, fluxo de padrão de URL.  
   
  conjunto de linhas  
@@ -289,7 +288,7 @@ Este tópico define termos relevantes à ADO.
  Uma operação iniciada pelo código que seja concluído antes da próxima operação pode iniciar. Consulte também a operação assíncrona.  
   
 ## <a name="t-z"></a>T-Z  
- trEE  
+ Árvore  
  Uma estrutura que representa uma relação hierárquica entre os elementos (nós). Há um nó de nível superior de uma árvore (raiz). Abaixo da raiz, pode haver vários filhos. Cada filho por sua vez pode ser o pai de outros filhos, ramificação, portanto, como uma árvore. Uma pasta que contém outras pastas e documentos é um exemplo típico de uma estrutura de árvore. Consulte também hierarquia, nó, raiz, filho e pai.  
   
  Servidor Web  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4a423404a8f5db4e20331c3b187365a889bea48a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f3c989626f36c003937723869b5e17d1a405ea9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63261818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908861"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>Configurações do projeto (migração) (MySQLToSQL)
 A página de migração do **configurações do projeto** caixa de diálogo contém configurações que personalizam como o SSMA migra os dados do MySQL para o SQL Server.  
@@ -32,12 +31,12 @@ O painel de migração está disponível na **configurações do projeto** e **c
   
 |Termo|Definição|  
 |--------|--------------|  
-|**Tamanho do lote**|Especifica o lote tamanho usado durante a migração de dados.<br /><br />**Modo padrão**:  1.000<br /><br />**Modo otimista**:  1.000<br /><br />**Modo de inteira**:  1.000|  
-|**Verificar restrições**|Especifica se o SSMA deve verificar restrições quando ele insere dados em tabelas do SQL Server.<br /><br />**Modo padrão**:  Falso<br /><br />**Modo otimista**:  Falso<br /><br />**Modo de inteira**:  Falso|  
-|**Acionadores**|Especifica se o SSMA deve ativar gatilhos de inserção quando ele adiciona dados a tabelas do SQL Server.<br /><br />**Modo padrão**:  Falso<br /><br />**Modo otimista**:  Falso<br /><br />**Modo de inteira**:  Falso|  
-|**Manter identidade**|Especifica se o SSMA preserva valores de identidade do MySQL quando ele adiciona dados ao SQL Server. Um valor False faz com que os valores de identidade a ser atribuídos pelo destino.<br /><br />**Modo padrão**:  True<br /><br />**Modo otimista**:  True<br /><br />**Modo de inteira**:  True|  
-|**Manter nulos**|Especifica se o SSMA preserva valores nulos na fonte de dados quando ele adiciona dados ao SQL Server, independentemente dos valores padrão que são especificados no SQL Server.<br /><br />**Modo padrão**:  True<br /><br />**Modo otimista**:  True<br /><br />**Modo de inteira**:  True|  
-|**Bloqueio de tabela**|Especifica se o SSMA bloqueia tabelas quando ele adiciona dados às tabelas durante a migração de dados. Obtém um bloqueio de atualização em massa para a duração da operação de cópia em massa. Se o valor for False, um bloqueio é definido no nível de linha.<br /><br />**Modo padrão**:  Falso<br /><br />**Modo otimista**:  Falso<br /><br />**Modo de inteira**:  Falso|  
+|**Tamanho do lote**|Especifica o lote tamanho usado durante a migração de dados.<br /><br />**Modo padrão**:  1000<br /><br />**Modo otimista**:  1000<br /><br />**Modo de inteira**:  1000|  
+|**Verificar restrições**|Especifica se o SSMA deve verificar restrições quando ele insere dados em tabelas do SQL Server.<br /><br />**Modo padrão**:  False<br /><br />**Modo otimista**:  False<br /><br />**Modo de inteira**:  False|  
+|**Acionadores**|Especifica se o SSMA deve ativar gatilhos de inserção quando ele adiciona dados a tabelas do SQL Server.<br /><br />**Modo padrão**:  False<br /><br />**Modo otimista**:  False<br /><br />**Modo de inteira**:  False|  
+|**Manter identidade**|Especifica se o SSMA preserva valores de identidade do MySQL quando ele adiciona dados ao SQL Server. Um valor False faz com que os valores de identidade a ser atribuídos pelo destino.<br /><br />**Modo padrão**:  verdadeiro<br /><br />**Modo otimista**:  verdadeiro<br /><br />**Modo de inteira**:  verdadeiro|  
+|**Manter nulos**|Especifica se o SSMA preserva valores nulos na fonte de dados quando ele adiciona dados ao SQL Server, independentemente dos valores padrão que são especificados no SQL Server.<br /><br />**Modo padrão**:  verdadeiro<br /><br />**Modo otimista**:  verdadeiro<br /><br />**Modo de inteira**:  verdadeiro|  
+|**Bloqueio de tabela**|Especifica se o SSMA bloqueia tabelas quando ele adiciona dados às tabelas durante a migração de dados. Obtém um bloqueio de atualização em massa para a duração da operação de cópia em massa. Se o valor for False, um bloqueio é definido no nível de linha.<br /><br />**Modo padrão**:  False<br /><br />**Modo otimista**:  False<br /><br />**Modo de inteira**:  False|  
   
 ### <a name="data-modification"></a>Modificação de dados  
   

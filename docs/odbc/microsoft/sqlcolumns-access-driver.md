@@ -1,5 +1,5 @@
 ---
-title: SQLColumns (Access Driver) | Microsoft Docs
+title: SQLColumns (Driver do Access) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1eac255c-6110-4805-a1bc-feee1eec35d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c0e0977aebfe16b9274df8e93260eb98a24742cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2916532b9dd79e25adce791b2201d77eb2cdff84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985254"
 ---
 # <a name="sqlcolumns-access-driver"></a>SQLColumns (Driver do Access)
 > [!NOTE]  

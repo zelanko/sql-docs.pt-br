@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fcc44037ac746621c044bca755fd9b957356dc38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50a609d0cebe70ea5127ed448e57a70881e35097
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965222"
 ---
 # <a name="setpermissions-method-adox"></a>Método SetPermissions (ADOX)
 Especifica as permissões para um [grupo](../../../ado/reference/adox-api/group-object-adox.md) ou [usuário](../../../ado/reference/adox-api/user-object-adox.md) em um objeto.  
@@ -37,7 +36,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Nome*  
+ *Name*  
  Um **cadeia de caracteres** valor que especifica o nome do objeto para o qual definir as permissões.  
   
  *ObjectType*  
@@ -49,7 +48,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *Direitos*  
  Um **longo** valor que pode ser uma máscara de bits de um ou mais da [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) constantes, que indica os direitos para definir.  
   
- *Inherit*  
+ *Herdar*  
  Opcional. Um **longo** valor que pode ser um dos [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) constantes, que especifica como objetos herdarão essas permissões. O valor padrão é **adInheritNone**.  
   
  *ObjectTypeId*  

@@ -4,17 +4,16 @@ titleSuffix: SQL Server
 description: Exemplo de Script do SQL Server - instalação autônoma no Red Hat Enterprise Linux
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: f8a58ecebdbd8f5ffb8b03a06f44ab85d5281245
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 696ba88a9f2d5f29de8dc3afb45af8c392f2de68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910442"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Amostra: Script de instalação autônoma do SQL Server para Red Hat Enterprise Linux
 

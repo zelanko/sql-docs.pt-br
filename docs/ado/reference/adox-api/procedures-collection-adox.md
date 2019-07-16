@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 101cb855ea4d73b5f537e8738ab3177b7f618fbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 693029bf83fe28343b450906da3e16e2665819d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706059"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965430"
 ---
 # <a name="procedures-collection-adox"></a>Coleção Procedures (ADOX)
 Contém todos os [procedimento](../../../ado/reference/adox-api/procedure-object-adox.md) objetos de um catálogo.  

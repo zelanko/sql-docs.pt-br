@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 42a4725efde507112d51b4f9c41af4ba83f63da4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e52d05cdbc0fe0ca397c3a7b417fec72703b8e1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719091"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916937"
 ---
 # <a name="size-property-ado-stream"></a>Propriedade Size (Fluxo do ADO)
 Indica o tamanho do fluxo no número de bytes.  

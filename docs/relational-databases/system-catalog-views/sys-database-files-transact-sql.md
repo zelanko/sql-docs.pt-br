@@ -1,5 +1,5 @@
 ---
-title: sys.database_files (Transact-SQL) | Microsoft Docs
+title: sys. database_files (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/19/2016
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 36fe2a156a7c83e8f884c135f24351371b0af533
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 37ec05a27421b8b55fb0085dbac97ab564bc5bff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915091"
 ---
 # <a name="sysdatabasefiles-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "56032297"
 |**state_desc**|**nvarchar(60)**|Descrição do estado do arquivo:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Para obter mais informações, consulte [Estados de arquivo](../../relational-databases/databases/file-states.md).|  
 |**size**|**int**|Tamanho atual do arquivo, em páginas de 8 KB.<br /><br /> 0 = Não aplicável<br /><br /> Para um instantâneo do banco de dados, tamanho reflete o espaço máximo que o instantâneo poderá usar para o arquivo.<br /><br /> Para contêineres do grupo de arquivos FILESTREAM, tamanho reflete que o tamanho do contêiner usado atual.|  
 |**max_size**|**int**|Tamanho de arquivo máximo, em páginas de 8 KB:<br /><br /> 0 = Crescimento não é permitido.<br /><br /> -1 = Arquivo crescerá até que o disco esteja completo.<br /><br /> 268435456 = Arquivo de log crescerá a um tamanho máximo de 2 TB.<br /><br /> Para contêineres do grupo de arquivos FILESTREAM, max_size reflete o tamanho máximo do contêiner.<br /><br /> Observe que os bancos de dados que são atualizados com um tamanho de arquivo de log ilimitado informarão -1 para o tamanho máximo do arquivo de log.|  
-|**growth**|**int**|0 = Arquivo tem tamanho fixo e não crescerá.<br /><br /> >0 = Arquivo crescerá automaticamente.<br /><br /> Se is_percent_growth = 0, incremento de crescimento será em unidades de páginas de 8 KB, arredondadas para o mais próximo de 64 KB.<br /><br /> Se is_percent_growth = 1, o incremento de crescimento será expresso em porcentagem de número inteiro.|  
+|**growth**|**int**|0 = Arquivo tem tamanho fixo e não crescerá.<br /><br /> > 0 = arquivo crescerá automaticamente.<br /><br /> Se is_percent_growth = 0, incremento de crescimento será em unidades de páginas de 8 KB, arredondadas para o mais próximo de 64 KB.<br /><br /> Se is_percent_growth = 1, o incremento de crescimento será expresso em porcentagem de número inteiro.|  
 |**is_media_read_only**|**bit**|1 = O arquivo está em mídia somente leitura.<br /><br /> 0 = O arquivo está em mídia de leitura/gravação.|  
 |**is_read_only**|**bit**|1 = Arquivo está marcado como somente leitura.<br /><br /> 0 = O arquivo está marcado como leitura/gravação.|  
 |**is_sparse**|**bit**|1 = O arquivo é um arquivo esparso.<br /><br /> 0 = O arquivo não é um arquivo esparso.<br /><br /> Para obter mais informações, consulte [Exibir o tamanho do arquivo esparso de um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).|  

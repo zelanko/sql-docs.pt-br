@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 021a20ba3aa151181d3ce26a5a1fd3cef621984c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 245affed25c7fb3d0ccc91504de0cfaaeee1807a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917070"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Salvar e abrir um exemplo dos métodos (VC + +)
 Esses três exemplos demonstram como o [salve](../../../ado/reference/ado-api/save-method.md) e **abrir** métodos podem ser usados juntos.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f809b09-3c1b-415e-80c5-a603e8e25d5b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d213b0bfb108eec38fc524eece6626fd302d4267
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 022d19a291b4fab93925fd103620c4bc16839872
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005754"
 ---
 # <a name="sqlprimarykeys-function"></a>Função SQLPrimaryKeys
 **Conformidade com**  

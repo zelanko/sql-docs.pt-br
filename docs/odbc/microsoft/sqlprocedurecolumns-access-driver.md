@@ -1,5 +1,5 @@
 ---
-title: SQLProcedureColumns (Access Driver) | Microsoft Docs
+title: SQLProcedureColumns (Driver do Access) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 34fee995-5848-4ecb-bda0-fc362a77b2d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a438823d1aa71eecb25c4935026c1b43e45842d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a33d449396b5cc80e8d29767708d2f9f16736fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987842"
 ---
 # <a name="sqlprocedurecolumns-access-driver"></a>SQLProcedureColumns (Driver do Access)
 > [!NOTE]  

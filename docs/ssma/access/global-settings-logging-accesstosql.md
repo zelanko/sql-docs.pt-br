@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 835b09b5-eb42-47ea-b46e-e115d4d6461f
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2cc49bbd3d2927431da2c16debbe0f35dbf4bb79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72efa0f050a3b930ebaa99ff425b48e1fe9b6ba5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986643"
 ---
 # <a name="global-settings-logging-accesstosql"></a>Configurações globais (registro em log) (AccessToSQL)
 Use o **configurações globais** caixa de diálogo para especificar as configurações de registro em log para o SSMA. Normalmente, você alteraria essas configurações somente ao trabalhar com o suporte ao produto.  
@@ -34,10 +33,10 @@ As seguintes opções estão disponíveis sob **nível de mensagens**:
 |**Migrator de dados**|Migra dados do banco de dados de origem em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Formatador**|Subcomponente do conversor que gera scripts para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquema.|  
 |**Interface gráfica do usuário**|Mensagens que aparecem quando você usa a ferramenta SSMA.|  
-|**Linker**|Resolve identificadores SQL e fornece informações para outros componentes.|  
-|**Outro**|Todas as mensagens que não estão em nenhuma outra categoria.|  
-|**Parser**|Analisa o esquema de origem.|  
-|**Synchronizer**|Objetos de banco de dados da fonte de cargas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Vinculador**|Resolve identificadores SQL e fornece informações para outros componentes.|  
+|**Outros**|Todas as mensagens que não estão em nenhuma outra categoria.|  
+|**Analisador**|Analisa o esquema de origem.|  
+|**Sincronizador**|Objetos de banco de dados da fonte de cargas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**TreeConverter**|Converte objetos nos metadados do código-fonte em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadados.|  
   
 Para cada opção sob **nível de mensagens**, configure um dos seguintes níveis de log para o SSMA:  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec97f949-126f-40a2-b67e-e74520a524cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8138a0cef3a28d31242a74162f0024e28e8b8fe9
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: c94c3718c116b37eb198264887dfb4a319bd1dc3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985150"
 ---
 # <a name="trace-file"></a>Arquivo de rastreamento
 Um aplicativo especifica o arquivo de rastreamento, definindo o **TraceFile** palavra-chave na entrada do registro ini ou chamando **SQLSetConnectAttr** com o atributo de conexão SQL_ATTR_TRACEFILE. Se o arquivo não existir quando o rastreamento está habilitado, o Gerenciador de Driver criará o arquivo. Cada aplicativo deve ter seu próprio arquivo de rastreamento dedicado para evitar a contenção. Um aplicativo pode usar mais de um arquivo de rastreamento; o programa de instalação do aplicativo pode fornecer ao usuário com uma opção de arquivos de rastreamento. Se o rastreamento é habilitado dinamicamente, um aplicativo também pode exibir resultados de rastreamento, em vez de registro em log para o arquivo de rastreamento.  

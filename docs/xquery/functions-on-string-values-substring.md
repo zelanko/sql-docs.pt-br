@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3185da6f25f0e224240ad0891ad448267b26465c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004644"
 ---
 # <a name="functions-on-string-values---substring"></a>Funções em Valores da Cadeia de Caracteres – substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ fn:substring($sourceString as xs:string?,
  Este tópico fornece exemplos de XQuery em instâncias XML armazenadas em várias **xml** colunas de tipo a [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
   
 ### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. Usando uma função substring() XQuery para recuperar descrições resumidas parciais de modelos de produtos  
- A consulta recupera os primeiros 50 caracteres do texto que descreve o modelo de produto, o elemento <`Summary`> no documento.  
+ A consulta recupera os primeiros 50 caracteres do texto que descreve o modelo de produto, o <`Summary`> elemento no documento.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -86,9 +85,9 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  Observe o seguinte na consulta anterior:  
   
--   O **String ()** função retorna o valor de cadeia de caracteres da <`Summary`> elemento. Essa função é usada, porque o elemento <`Summary`> contém o texto e os subelementos (html que formata elementos), e porque você ignorará esses elementos e recuperará todo o texto.  
+-   O **String ()** função retorna o valor de cadeia de caracteres da <`Summary`> elemento. Essa função é usada, porque o <`Summary`> elemento contém o texto e os subelementos (html que formata elementos), e porque você ignorará esses elementos e recuperará todo o texto.  
   
--   O **substring ()** função recupera os primeiros 50 caracteres do valor de cadeia de caracteres recuperado pelo **String ()**.  
+-   O **substring ()** função recupera os primeiros 50 caracteres do valor de cadeia de caracteres recuperado pelo **String ()** .  
   
  Este é um resultado parcial:  
   

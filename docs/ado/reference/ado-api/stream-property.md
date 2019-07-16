@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0fecd8a1bfed75bd922ed39bd57144b9f32b6bb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 58bbbc299f13c0d876807476136cede76894bbb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710734"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916694"
 ---
 # <a name="stream-property"></a>Propriedade Stream
 Obtém ou define um banco de dados OLE **Stream** objeto de/em uma **ADOStreamConstruction** objeto.  

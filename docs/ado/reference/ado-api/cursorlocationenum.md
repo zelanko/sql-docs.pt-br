@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 43c2043917d6b21293fea71566dfdf1202b6f59e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3af18120af91fe06da48c2e3636bf8a7c572161
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919299"
 ---
 # <a name="cursorlocationenum"></a>CursorLocationEnum
 Especifica o local do serviço de cursor.  
@@ -33,7 +32,7 @@ Especifica o local do serviço de cursor.
 |**adUseServer**|2|Padrão. Usa cursores fornecidos pelo provedor de dados ou driver. Esses cursores, às vezes, são muito flexíveis e permitem a sensibilidade adicional para as alterações feitas por outras pessoas para a fonte de dados. No entanto, alguns recursos do [o Microsoft Cursor Service para OLE DB](../../../ado/guide/data/the-microsoft-cursor-service-for-ole-db.md), tais como desassociado<br /><br /> [Conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) objetos, não podem ser simulados com cursores do lado do servidor e esses recursos não estarão disponíveis com essa configuração.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Package: **com.ms.wfc.data**  
+ Pacote: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cd2bc95e6fe5468e88fc61dd8ed4adcd985ec052
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51619902398f0e3d0a8307a0c76a40ab898ce88d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912438"
 ---
 # <a name="text-file-format-text-file-driver"></a>Text File Format (Driver de Arquivo de texto)
 O driver ODBC texto dá suporte a ambos os arquivos de texto delimitados e de largura fixa. Um arquivo de texto consiste em uma linha de cabeçalho opcional e zero ou mais linhas de texto.  
@@ -41,7 +40,7 @@ O driver ODBC texto dá suporte a ambos os arquivos de texto delimitados e de la
 |Formatar|Representação|  
 |------------|--------------------|  
 |Não itálico|Caracteres que devem ser inseridos conforme mostrado|  
-|*italics*|Argumentos que são definidos em outro lugar na gramática|  
+|*Itálico*|Argumentos que são definidos em outro lugar na gramática|  
 |colchetes ([])|Itens opcionais|  
 |chaves ({})|Uma lista de opções mutuamente exclusivas|  
 |barras verticais (&#124;)|Opções mutuamente exclusivas separadas|  

@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e9d28588237030c45bd352994ac77d511db139e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab30ca777997a8d7dff819c3c797cae740922ca4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631734"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913536"
 ---
 # <a name="accessing-the-current-transaction"></a>Acessando a transação atual
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Se uma transação está ativa no ponto em que common language runtime (CLR) o código em execução no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é inserido, a transação é exposta por meio de **Transactions** classe. A propriedade **Transaction.Current** é usada para acessar a transação atual. Na maioria das vezes, não é necessário acessar a transação explicitamente. Para conexões de banco de dados, ADO.NET verifica **Transaction.Current** automaticamente quando o método **Connection.Open** é chamado e inscreve a conexão de forma transparente nessa transação (a menos que a palavra-chave **Enlist** esteja definida como falsa na cadeia de conexão).  
+  Se uma transação estiver ativa no ponto em que o código CLR (Common Language Runtime) que está sendo executado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for inserido, ela será exposta pela classe **System.Transactions.Transaction** . A propriedade **Transaction.Current** é usada para acessar a transação atual. Na maioria das vezes, não é necessário acessar a transação explicitamente. Para conexões de banco de dados, ADO.NET verifica **Transaction.Current** automaticamente quando o método **Connection.Open** é chamado e inscreve a conexão de forma transparente nessa transação (a menos que a palavra-chave **Enlist** esteja definida como falsa na cadeia de conexão).  
   
  Convém usar o objeto **Transaction** diretamente nos seguintes cenários:  
   
@@ -42,9 +41,9 @@ ms.locfileid: "47631734"
 ## <a name="canceling-an-external-transaction"></a>Cancelando uma transação externa  
  Você pode cancelar transações externas em uma função ou em um procedimento gerenciado das seguintes maneiras:  
   
--   A função ou o procedimento gerenciado pode retornar um valor usando um parâmetro de saída. A chamada [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimento pode verificar o valor retornado e, se apropriado, executar **ROLLBACK TRANSACTION**.  
+-   A função ou o procedimento gerenciado pode retornar um valor usando um parâmetro de saída. O procedimento [!INCLUDE[tsql](../../includes/tsql-md.md)] de chamada pode verificar o valor retornado e, se apropriado, executar **ROLLBACK TRANSACTION**.  
   
--   A função ou o procedimento gerenciado pode gerar uma exceção personalizada. A chamada [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimento pode capturar a exceção gerada pelo procedimento gerenciado ou função em um bloco try/catch e executar **ROLLBACK TRANSACTION**.  
+-   A função ou o procedimento gerenciado pode gerar uma exceção personalizada. O procedimento [!INCLUDE[tsql](../../includes/tsql-md.md)] de chamada pode capturar a exceção gerada pela função ou pelo procedimento gerenciado em um bloco try/catch e executar **ROLLBACK TRANSACTION**.  
   
 -   A função ou o procedimento gerenciado poderá cancelar a transação atual chamando o método **Transaction.Rollback** se uma determinada condição for atendida.  
   
