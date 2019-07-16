@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9121485ddbe3f4fd72bf40b4518a7af8b196fa23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73638d41c7a24a37c068d365771b4d0469a174d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041017"
 ---
 # <a name="sysspxtpmergecheckpointfiles-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47725404"
   
 ||  
 |-|  
-|**Observação**: esse procedimento armazenado foi preterido no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Ele não for mais necessário e não pode ser usado, iniciando [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|  
+|**Observação**: Esse procedimento armazenado foi preterido no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Ele não for mais necessário e não pode ser usado, iniciando [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,10 +56,10 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  O limite de superior (bigint) de transações para um arquivo de dados, conforme mostrado na [DM db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md). Um erro é gerado para o valor inválido de transactonId.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- None  
+ Nenhum  
   
 ## <a name="cursors-returned"></a>Cursores retornados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Requer a função de servidor fixa sysadmin e a função de banco de dados fixa db_owner.  

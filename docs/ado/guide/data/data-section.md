@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76cd14b8ee1c5a55e0312993090bfaf098c7e219
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925648"
 ---
 # <a name="data-section"></a>Seção de dados
 A seção de dados define os dados do conjunto de linhas, juntamente com qualquer pendente atualizações, inserções ou exclusões. A seção de dados pode conter zero ou mais linhas. Ele pode conter apenas dados de um conjunto de linhas em que a linha é definida pelo esquema. Além disso, conforme observado anteriormente, as colunas, sem nenhum dado podem ser omitidas. Se um atributo ou o subelemento for usado na seção de dados e essa construção não foi definida na seção de esquema, ele será ignorado silenciosamente.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1d731738938eab5732dcbfa86c0d624ae7941ed5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66c3b9ecefd63cf7de1806e6fa838a0204626605
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697259"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963253"
 ---
 # <a name="synchronize21-method-rds"></a>Método Synchronize21 (RDS)
 Sincronize o determinado conjunto de registros com o banco de dados especificado pela cadeia de conexão para uso com o ADO 2.1.  

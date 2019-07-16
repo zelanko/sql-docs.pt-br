@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: fe60197671e40317f56a62ad98ea364a238df174
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80bb86beedf54c29fbe67e2362a4163cb489c05a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67033398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962074"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>Início Rápido: Lidar com entradas e saídas usando o Python no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +25,7 @@ Outros tipos de entrada podem ser passados como variáveis SQL: por exemplo, voc
 
 O procedimento armazenado retorna um único Python [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) de estruturas de dados como saída, mas você também pode gerar modelos como variáveis e escalares. Por exemplo, você pode gerar um modelo treinado como uma variável binária e passá-lo para uma instrução T-SQL INSERT, para gravar esse modelo em uma tabela. Você também pode gerar plotagens (em formato binário) ou escalares (valores individuais, como a data e hora, o tempo decorrido para treinar o modelo e assim por diante).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Um início rápido anterior, [Python Verifique se existe no SQL Server](quickstart-python-verify.md), fornece informações e links para configurar o ambiente do Python necessário para este início rápido.
 
@@ -114,4 +113,4 @@ Vamos dar uma olhada no padrão variáveis de entrada e saídas de sp_execute_ex
 Examine alguns dos problemas que podem ocorrer ao passar dados tabulares entre Python e o SQL Server.
 
 > [!div class="nextstepaction"]
-> [Guia de início rápido: Estruturas de dados do Python no SQL Server](quickstart-python-data-structures.md)
+> [Início Rápido: Estruturas de dados do Python no SQL Server](quickstart-python-data-structures.md)

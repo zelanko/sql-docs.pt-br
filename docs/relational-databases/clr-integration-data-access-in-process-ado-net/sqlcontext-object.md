@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3293cbed44cc6eeae12c3c48247de8748ddad894
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 746ce8cec228b6fe9a9d36c4e0287ad7c2f3c517
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951675"
 ---
 # <a name="sqlcontext-object"></a>Objeto SqlContext
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

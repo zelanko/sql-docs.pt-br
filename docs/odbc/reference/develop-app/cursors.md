@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91765f0572d8c880f7505948f7756b373fe28f62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c9179506ac96c1902c40de271f6024ed7e5c54d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001991"
 ---
 # <a name="cursors"></a>Cursores
 Um aplicativo busca os dados com um *cursor*. Um cursor é diferente de um conjunto de resultados: Um conjunto de resultados é o conjunto de linhas que corresponde aos critérios de pesquisa específica, enquanto que um cursor é o software que retorna as linhas para o aplicativo. O nome *cursor,* como ele se aplica aos bancos de dados, provavelmente foi originado o cursor piscando em um terminal do computador. Assim como o cursor indica a posição atual na tela e onde as palavras digitadas aparecerá próximo, um cursor em um conjunto de resultados indica a posição atual no conjunto de resultados e quais linhas serão retornadas em seguida.  

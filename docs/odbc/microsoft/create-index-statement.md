@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 93ddc3881796aee3194ec5268afc68ecbab1a487
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad15ad436b0f34f00acbd75e371e998183f22d2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081915"
 ---
 # <a name="create-index-statement"></a>Instrução CREATE INDEX
 A sintaxe da instrução CREATE INDEX é:  
   
  Criar índice [UNIQUE] *nome do índice* ON *nome da tabela* (*identificador de coluna* [ASC] [DESC] [, *identificador da coluna* [ASC][DESC]...]) COM o \< *lista de opções de índice*>  
   
- em que \< *lista de opções de índice*> pode ser: PRIMARY &#124; DISALLOW NULL &#124; IGNORE NULL  
+ em que \< *lista de opções de índice*> pode ser: PRINCIPAL &#124; NÃO PERMITIR NULOS &#124; IGNORAR NULL  
   
  Somente o driver do Microsoft Access usa as opções de índice não permitir nulo e ignorar nulo. O dBASE e drivers do Paradox aceitam a sintaxe, mas ignorar a presença de uma das opções.  
   

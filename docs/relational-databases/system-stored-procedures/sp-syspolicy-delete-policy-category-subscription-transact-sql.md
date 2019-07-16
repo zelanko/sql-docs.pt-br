@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 39a658a9e2d863f3e4ed8c60a69773e439757cc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1cc965b55cb1f7216d4711c129a5e99bb4da067f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010487"
 ---
 # <a name="spsyspolicydeletepolicycategorysubscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

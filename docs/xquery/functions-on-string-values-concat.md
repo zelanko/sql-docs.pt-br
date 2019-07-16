@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3a2dd68c36887c373c7102b150ffc1032750eb52
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 063eca49a6a4d69e84e8a3d05221b632d0690bef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099835"
 ---
 # <a name="functions-on-string-values---concat"></a>Funções em Valores da Cadeia de Caracteres – concat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ fn:concat ($string as xs:string?
  Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados de exemplo AdventureWorks.  
   
 ### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. Uso da função concat() XQuery para concatenar cadeias de caracteres  
- Para um modelo de produto específico, essa consulta retorna uma cadeia de caracteres criada concatenando o período de garantia e a descrição de garantia. No documento de descrição do catálogo, o elemento <`Warranty`> é composto pelos elementos filho <`WarrantyPeriod`> e <`Description`>.  
+ Para um modelo de produto específico, essa consulta retorna uma cadeia de caracteres criada concatenando o período de garantia e a descrição de garantia. No documento de descrição de catálogo, o <`Warranty`> elemento é composto por <`WarrantyPeriod`> e <`Description`> elementos filho.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -78,7 +77,7 @@ WHERE  PD.ProductModelID=28
   
 -   O documento contra o qual a consulta é executada usa namespaces. Portanto, o **namespace** palavra-chave é usada para definir o prefixo do namespace. Para obter mais informações, consulte [prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md).  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  

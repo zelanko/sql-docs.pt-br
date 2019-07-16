@@ -7,13 +7,12 @@ ms.date: 10/29/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 8d701d9e8595eee3a583e913baabc2148af214fe
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 4fd41ebb8f486b6117ba3e99c080566771bd4a63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963149"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Monitorar serviços do SQL Server Machine Learning usando exibições de gerenciamento dinâmico (DMVs)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -223,7 +222,7 @@ A consulta retorna as colunas a seguir:
 
 | coluna | Descrição |
 |--------|-------------|
-| nome | Nome do pool de recursos externos ou do SQL Server. |
+| name | Nome do pool de recursos externos ou do SQL Server. |
 | max_memory_percent | A memória máxima que pode usar o SQL Server ou o pool de recursos externos. |
 
 ## <a name="resource-pools"></a>Pools de recursos
@@ -278,7 +277,7 @@ As colunas retornadas são:
 | coluna | Descrição |
 |--------|-------------|
 | Pacote | Nome do pacote instalado. |
-| Versão | Versão do pacote. |
+| Version | Versão do pacote. |
 | Depende | Lista o pacote (s) que depende do pacote instalado. |
 | Licença | Licença para o pacote instalado. |
 | LibPath | Diretório onde você pode encontrar o pacote. |
@@ -304,7 +303,7 @@ As colunas retornadas são:
 | coluna | Descrição |
 |--------|-------------|
 | Pacote | Nome do pacote instalado. |
-| Versão | Versão do pacote. |
+| Version | Versão do pacote. |
 | Location | Diretório onde você pode encontrar o pacote. |
 
 ## <a name="next-steps"></a>Próximas etapas

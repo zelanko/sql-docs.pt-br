@@ -1,5 +1,5 @@
 ---
-title: dbo.sysschedules (Transact-SQL) | Microsoft Docs
+title: dbo. sysschedules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a1922fd8b9cdfb327186afe453fc1904d698579
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a87e7819d96151ea918b8b5f33fb5f4c9e1fbd3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096990"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "62470708"
 |**originating_server_id**|**int**|ID do servidor mestre do qual a agenda de trabalho foi originada.|  
 |**name**|**sysname (nvarchar(128))**|Nome definido pelo usuário para a agenda de trabalho. Este nome deve ser exclusivo em um trabalho.|  
 |**owner_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* do usuário ou grupo que possui a agenda de trabalho.|  
-|**enabled**|**int**|O status da agenda de trabalho:<br /><br /> **0** = não habilitado.<br /><br /> **1** = habilitado.<br /><br /> Se o agendamento não estiver habilitado, nenhum trabalho será executado nele.|  
+|**habilitado**|**int**|O status da agenda de trabalho:<br /><br /> **0** = não habilitado.<br /><br /> **1** = habilitado.<br /><br /> Se o agendamento não estiver habilitado, nenhum trabalho será executado nele.|  
 |**freq_type**|**int**|A frequência com que um trabalho é executado para esta agenda.<br /><br /> **1** = apenas uma vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = mensalmente, relativo ao **freq_interval**<br /><br /> **64** = executado quando o serviço do SQL Server Agent é iniciado<br /><br /> **128** = executado quando o computador estiver ocioso|  
 |**freq_interval**|**int**|Dias em que o trabalho é executado. Depende do valor de **freq_type**. O valor padrão é **0**, que indica que **freq_interval** não é usado. Consulte a tabela abaixo para os valores possíveis e seus efeitos.|  
 |**freq_subday_type**|**int**|Unidades para o **freq_subday_interval**. A seguir estão os valores possíveis e suas descrições.<br /><br /> <br /><br /> **1** : Na hora especificada<br /><br /> **2** : Seconds (segundos)<br /><br /> **4** : Minutes (minutos)<br /><br /> **8** : Hours (horas)|  

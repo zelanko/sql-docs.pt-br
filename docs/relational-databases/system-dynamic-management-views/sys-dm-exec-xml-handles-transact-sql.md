@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed7479109ef50ee3744b3a9acafc17a799670cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 303ceed8cc7078e4025f160d25ce1474d1be6aed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936785"
 ---
 # <a name="sysdmexecxmlhandles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]

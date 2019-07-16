@@ -7,13 +7,12 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e9dd0a0884c96a8f5b17948c21b7f891a2e997ab
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 879b3e3d4a213c4b6f1ae1fd2c8e6f8f302a4eda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961876"
 ---
 # <a name="explore-and-visualize-the-data"></a>Explorar e visualizar os dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

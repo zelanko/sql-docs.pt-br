@@ -7,13 +7,12 @@ ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: c9195a6c2b9a2192e9d8fd04ce3e5d2592b1b23e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d58125cc8e6ffe4378759d4ceb4bdd0354e2e6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962364"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>Usar funções de criação de perfil de código de R para melhorar o desempenho
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

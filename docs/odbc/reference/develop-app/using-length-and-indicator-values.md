@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 442d0865ede4819ea3413d662411295daa5b48bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3a0b54617d55033addabc729adbd078680022fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62501107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902466"
 ---
 # <a name="using-length-and-indicator-values"></a>Usar valores de indicador e de comprimento
 O buffer de comprimento/indicador é usado para passar o tamanho em bytes dos dados no buffer de dados ou um indicador especial, como SQL_NULL_DATA, que indica que os dados são NULL. Dependendo da função na qual ele é usado, um buffer de comprimento/indicador é definido para ser um sqlinteger que contém ou um SQLSMALLINT. Portanto, um único argumento é necessário para descrevê-lo. Se o buffer de dados é um buffer de entrada nondeferred, esse argumento contém o comprimento em bytes de dados em si ou um valor de indicador. Ele geralmente é denominado *StrLen_or_Ind* ou um nome semelhante. Por exemplo, o código a seguir chama **SQLPutData** para passar um buffer completo dos dados; o comprimento de bytes (*ValueLen*) é passada diretamente, porque o buffer de dados (*ValuePtr*) é um buffer de entrada.  

@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad210f91d00f9e692c8ee20fef01a808a01501c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fae642b46b4c652583622ec4832b3217d0b1681c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068556"
 ---
 # <a name="data-source-specification-subkeys"></a>Subchaves de especificação de fonte de dados
 Cada fonte de dados listado na subchave de fontes de dados ODBC tem uma subchave de seu próprio. Essa subchave tem o mesmo nome que o valor correspondente sob a subchave de fontes de dados ODBC. Os valores nessa subchave devem listar o DLL do driver e podem listar uma descrição da fonte de dados. Se o driver dá suporte a conversores, os valores podem listar o nome de um conversor padrão, a DLL de conversão padrão e a opção de conversão padrão. Os valores também podem listar outras informações necessárias pelo driver para se conectar à fonte de dados. Por exemplo, o driver pode exigir um nome do servidor, o nome do banco de dados ou o nome do esquema.  
   
  Os formatos de valores são conforme mostrado na tabela a seguir. Somente o valor do Driver é necessário.  
   
-|Nome|Tipo de dados|Dados|  
+|Nome|Tipo de dados|Data|  
 |----------|---------------|----------|  
 |Descrição|REG_SZ|*description*|  
 |Driver|REG_SZ|*driver-DLL-path*|  

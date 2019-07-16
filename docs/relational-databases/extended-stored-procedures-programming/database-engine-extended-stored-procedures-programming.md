@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a2f25356cfc035fa2185fabe4dae4d9a6d3443f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 541f24693598d20925dd37d4970c6d9916945793
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688564"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032013"
 ---
 # <a name="database-engine-extended-stored-procedures---programming"></a>Procedimento armazenado estendido do mecanismo do banco de dados – Programação +
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47688564"
 > [!NOTE]  
 >  Se você tiver aplicativos de gateway existentes, não poderá usar opends60.dll que acompanha o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar os aplicativos. Os aplicativos de gateway já não são mais suportados.  
   
-## <a name="extended-stored-procedures-vs-clr-integration"></a>Procedimentos armazenados estendidos e Integração com o CLR  
+## <a name="extended-stored-procedures-vs-clr-integration"></a>Procedimentos armazenados estendidos e. Integração com o CLR  
  Nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os procedimentos armazenados estendidos forneciam o único mecanismo disponível para os desenvolvedores de aplicativos de banco de dados gravarem lógica no lado do servidor, o que era difícil de expressar ou impossível de gravar no [!INCLUDE[tsql](../../includes/tsql-md.md)]. A Integração CLR fornece uma alternativa mais robusta para gravar esses procedimentos. Além disso, com a Integração CLR, a lógica que costumava ser gravada na forma de procedimentos armazenados é, em geral, melhor expressada como funções com valor de tabela, o que permite que os resultados criados pela função sejam consultados nas instruções SELECT, inserindo-os na cláusula FROM.  
   
 ## <a name="see-also"></a>Consulte também  

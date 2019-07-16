@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 40696085bc8eb9980d1150feade91a9edd627be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc058fea8e2ce86584c19a7a93018734f4782f69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084760"
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>Tabelas de aplicativo da camada de dados – sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +37,10 @@ ms.locfileid: "62471135"
 |**action_type**|**tinyint**|Identificador do tipo da ação:<br /><br /> **0** = implantar<br /><br /> **1** = criar<br /><br /> **2** = renomear<br /><br /> **3** = detach<br /><br /> **4** = excluir|  
 |**action_type_name**|**varchar(19)**|Nome do tipo de ação.<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|Identificador do tipo de objeto afetado pela ação:<br /><br /> **0** = dacpac<br /><br /> **1** = logon<br /><br /> **2** = banco de dados|  
-|**dac_object_type_name**|**varchar(8)**|Nome do tipo de objeto afetado pela ação:<br /><br /> **dacpac** = DAC instance<br /><br /> **login**<br /><br /> **banco de dados**|  
-|**action_status**|**tinyint**|Código que identifica o status atual da ação:<br /><br /> **0** = pendente<br /><br /> **1** = êxito<br /><br /> **2** = fail|  
-|**action_status_name**|**varchar(11)**|Status atual da ação:<br /><br /> **pending**<br /><br /> **success**<br /><br /> **fail**|  
-|**Necessário**|**bit**|Usada pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] ao reverter uma operação de DAC.|  
+|**dac_object_type_name**|**varchar(8)**|Nome do tipo de objeto afetado pela ação:<br /><br /> **dacpac** = instância do DAC<br /><br /> **login**<br /><br /> **banco de dados**|  
+|**action_status**|**tinyint**|Código que identifica o status atual da ação:<br /><br /> **0** = pendente<br /><br /> **1** = êxito<br /><br /> **2** = falha|  
+|**action_status_name**|**varchar(11)**|Status atual da ação:<br /><br /> **Pendente**<br /><br /> **Sucesso**<br /><br /> **fail**|  
+|**Necessária**|**bit**|Usada pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] ao reverter uma operação de DAC.|  
 |**dac_object_name_pretran**|**sysname**|Nome do objeto antes que a transação que contém a ação seja confirmada. Usado somente para bancos de dados e logons.|  
 |**dac_object_name_posttran**|**sysname**|Nome do objeto depois que a transação que contém a ação seja confirmada. Usado somente para bancos de dados e logons.|  
 |**sqlscript**|**nvarchar(max)**|Script [!INCLUDE[tsql](../../includes/tsql-md.md)] que implementa uma ação em um banco de dados ou logon.|  
@@ -59,7 +58,7 @@ ms.locfileid: "62471135"
 |-|-|-|-|  
 |**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
 |12|0|criar|dacpac|  
-|12|1|criar|login|  
+|12|1|criar|Logon|  
 |12|2|criar|database|  
 |12|3|renomear|database|  
   

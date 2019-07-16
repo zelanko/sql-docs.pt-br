@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b71e79f28abb5932fc9a7a644bf466f848c1e6e7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1e6d3ed9c31307fb032d4ccc3cc950565c39c52c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095929"
 ---
 # <a name="sptracesetstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
