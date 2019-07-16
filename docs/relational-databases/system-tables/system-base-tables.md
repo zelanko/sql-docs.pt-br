@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dafea3c43e8287b92665cbdc5c901ab2ba0116d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43f5e96a280614d3f69472c7d794489bf1a5ba58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029564"
 ---
 # <a name="system-base-tables"></a>Tabelas base do sistema
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,15 +42,15 @@ ms.locfileid: "47833624"
 ## <a name="system-base-tables"></a>Tabelas base do sistema  
  A tabela a seguir lista e descreve cada tabela base do sistema no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Tabela base|Description|  
+|Tabela base|Descrição|  
 |----------------|-----------------|  
 |**sys.sysschobjs**|Existe em todos os bancos de dados. Cada linha representa um objeto no banco de dados.|  
-|**sys.sysbinobjs**|Existe em todos os bancos de dados. Contém uma linha para cada entidade do Service Broker no banco de dados. Entidades do Service Broker incluem o seguinte:<br /><br /> Tipo de mensagem<br /><br /> Contrato de serviço<br /><br /> Serviço<br /><br /> Os nomes e tipos usam agrupamento binário que é fixo.|  
-|**sys.sysclsobjs**|Existe em todos os bancos de dados. Contém uma linha para cada entidade classificada que compartilha as mesmas propriedades comuns que incluem o seguinte:<br /><br /> Assembly<br /><br /> Dispositivo de backup<br /><br /> Catálogo de texto completo<br /><br /> Função de partição<br /><br /> Esquema de partição<br /><br /> Grupo de arquivos<br /><br /> Chave de ofuscação|  
+|**sys.sysbinobjs**|Existe em todos os bancos de dados. Contém uma linha para cada entidade do Service Broker no banco de dados. Entidades do Service Broker incluem o seguinte:<br /><br /> Tipo de mensagem<br /><br /> Contrato de serviço<br /><br /> Serviço<br /><br /> Os nomes e tipos usam ordenação primária que é fixa.|  
+|**sys.sysclsobjs**|Existe em todos os bancos de dados. Contém uma linha para cada entidade classificada que compartilha as mesmas propriedades comuns que incluem o seguinte:<br /><br /> Assembly<br /><br /> Dispositivo de backup<br /><br /> Catálogo de texto completo<br /><br /> Função Partition<br /><br /> Esquema de partição<br /><br /> Grupo de arquivos<br /><br /> Chave de ofuscação|  
 |**sys.sysnsobjs**|Existe em todos os bancos de dados. Contém uma linha para cada entidade no escopo de namespace. Esta tabela é usada para armazenar entidades de coleção XML.|  
 |**sys.syscolpars**|Existe em todos os bancos de dados. Contém uma linha para cada coluna de uma tabela, exibição ou função com valor de tabela. Também contém linhas para cada parâmetro de um procedimento ou função.|  
 |**sys.systypedsubobjs**|Existe em todos os bancos de dados. Contém uma linha para cada subentidade digitada. Apenas parâmetros de função de partição entram nessa categoria.|  
-|**sys.sysidxstats**|Existe em todos os bancos de dados. Contém uma linha para cada índice ou estatísticas de tabelas e exibições indexadas<br /><br /> Observação: Todos os índices (exceto o heap) é associado uma estatística que tem o mesmo nome que o índice.|  
+|**sys.sysidxstats**|Existe em todos os bancos de dados. Contém uma linha para cada índice ou estatísticas de tabelas e exibições indexadas<br /><br /> Observação: Cada índice (exceto o heap) é associado uma estatística que tem o mesmo nome que o índice.|  
 |**sys.sysiscols**|Existe em todos os bancos de dados. Contém uma linha para cada índice persistente e coluna de estatísticas.|  
 |**sys.sysscalartypes**|Existe em todos os bancos de dados. Contém uma linha para cada tipo definido pelo usuário ou sistema.|  
 |**sys.sysdbreg**|Existe na **mestre** somente de banco de dados. Contém uma linha para cada banco de dados registrado.|  

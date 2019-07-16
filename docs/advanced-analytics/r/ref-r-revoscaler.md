@@ -7,13 +7,12 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 3745c6cd8c340ce4ad89cac84c5b6286126e3f89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0691508ff3be52a4af744c1167ca799f8d23050
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962480"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (biblioteca de R no SQL Server)
 
@@ -36,7 +35,7 @@ O **RevoScaleR** biblioteca é distribuída em vários produtos da Microsoft, ma
 O **RevoScaleR** biblioteca é com base em R 3.4.3 e está disponível apenas quando você instala um dos seguintes produtos da Microsoft ou downloads:
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [Serviços de aprendizado de máquina do SQL Server 2017](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 ou posterior](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R client](set-up-a-data-science-client.md)
 
@@ -79,7 +78,7 @@ Depois de criar um objeto de fonte de dados, você pode usar o objeto para carre
 
 | Função | Descrição |
 |----------|-------------|
-| [rxOpen-methods](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | Verifique se uma fonte de dados está disponível, abra ou feche uma fonte de dados, ler dados de uma fonte, gravar dados no destino e fechar uma fonte de dados.|
+| [rxOpen métodos](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | Verifique se uma fonte de dados está disponível, abra ou feche uma fonte de dados, ler dados de uma fonte, gravar dados no destino e fechar uma fonte de dados.|
 | [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) | Mova dados de uma fonte de dados no armazenamento de arquivos ou em um quadro de dados.|
 | [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) | Transforme os dados ao movê-lo entre fontes de dados.|
 

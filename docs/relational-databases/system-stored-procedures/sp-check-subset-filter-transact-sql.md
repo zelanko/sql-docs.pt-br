@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ee22bbf5028959d0aab178924d38465c9d98b432
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fa956275619286c059dacf25a5b9b2b83ed732e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070521"
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +44,9 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @filtered_table = ] 'filtered_table'` É o nome de uma tabela filtrada. *filtered_table* está **nvarchar (400)**, sem padrão.  
+`[ @filtered_table = ] 'filtered_table'` É o nome de uma tabela filtrada. *filtered_table* está **nvarchar (400)** , sem padrão.  
   
-`[ @subset_filterclause = ] 'subset_filterclause'` A cláusula de filtro está sendo testada. *subset_filterclause* está **nvarchar (1000)**, sem padrão.  
+`[ @subset_filterclause = ] 'subset_filterclause'` A cláusula de filtro está sendo testada. *subset_filterclause* está **nvarchar (1000)** , sem padrão.  
   
 `[ @has_dynamic_filters = ] has_dynamic_filters` É se a cláusula de filtro é um filtro de linha com parâmetros. *has_dynamic_filters* está **bit**, com um padrão de NULL e é um parâmetro de saída. Retorna um valor de **1** quando a cláusula de filtro é um filtro de linha com parâmetros.  
   

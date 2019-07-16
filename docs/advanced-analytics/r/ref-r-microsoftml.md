@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0266f6288e0b28ebd56c2aff634dc27a1ec72b06
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: e3dc94026f90ef769abb3889a716b5dadb317c4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962509"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (biblioteca de R no SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +30,7 @@ O **MicrosoftML** biblioteca é distribuída em vários produtos da Microsoft, m
 O **MicrosoftML** biblioteca é com base em R 3.4.3 e está disponível apenas quando você instala um dos seguintes produtos da Microsoft ou downloads:
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [Serviços de aprendizado de máquina do SQL Server 2017](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 ou posterior](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R client](set-up-a-data-science-client.md)
 
@@ -126,7 +125,7 @@ Esta seção lista as funções por categoria para lhe dar uma ideia de como cad
 
 | Nome da função | Descrição |
 |---------------|-------------|
-|[optimizer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Especifica os algoritmos de otimização para o [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) algoritmo de aprendizado de máquina.|
+|[Otimizador](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Especifica os algoritmos de otimização para o [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) algoritmo de aprendizado de máquina.|
 
 
 ## <a name="8-package-state-functions"></a>Funções de estado do pacote de 8

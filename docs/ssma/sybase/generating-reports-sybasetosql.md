@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: bb377e36f73bad59da35fabc2f6e9189544230e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a63ad1dad1a1dcab28e2a8ffb5c96d9564210475
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029128"
 ---
 # <a name="generating-reports-sybasetosql"></a>Geração de relatórios (SybaseToSQL)
 Os relatórios de determinadas atividades executadas usando os comandos são gerados no Console do SSMA no nível da árvore de objeto.  
@@ -33,11 +32,11 @@ Use o procedimento a seguir para gerar relatórios:
     ||||  
     |-|-|-|  
     |**Sl. Não.**|**Comando**|**Título do relatório**|  
-    |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
+    |1|Gerar--relatório de avaliação|AssessmentReport&lt;n&gt;.XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
-    |3|migrate-data|DataMigrationReport&lt;n&gt;.XML|  
+    |3|migrar dados|DataMigrationReport&lt;n&gt;.XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
-    |5|synchronize-target|TargetSynchronizationReport&lt;n&gt;.XML|  
+    |5|Sincronizar de destino|TargetSynchronizationReport&lt;n&gt;.XML|  
     |6|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
@@ -87,7 +86,7 @@ Use o procedimento a seguir para gerar relatórios:
 />  
 ```  
   
-### <a name="synchronize-target"></a>synchronize-target:  
+### <a name="synchronize-target"></a>Sincronizar-target:  
 O comando **destino sincronizar** tem **erros de relatório para** parâmetro, que especifica o local do relatório de erros para a operação de sincronização. Em seguida, um arquivo por nome **TargetSynchronizationReport&lt;n&gt;. XML** é criado no local especificado, onde **&lt;n&gt;** é o número de arquivo exclusivo que é incrementada com um dígito com cada execução do mesmo comando.  
   
 **Observação:** Se o caminho da pasta for fornecido, 'relatório-erros-to' parâmetro torna-se um atributo opcional para o destino do comando' Sincronizar-'.  
@@ -107,7 +106,7 @@ O comando **destino sincronizar** tem **erros de relatório para** parâmetro, q
 ```  
 **object-name:** Especifica os objetos considerados para sincronização (ele também pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
-**on-error:** Especifica se deve especificar os erros de sincronização como avisos ou erros. Opções disponíveis para em caso de erro:  
+**em caso de erro:** Especifica se deve especificar os erros de sincronização como avisos ou erros. Opções disponíveis para em caso de erro:  
   
 -   report-total-as-warning  
   
@@ -115,7 +114,7 @@ O comando **destino sincronizar** tem **erros de relatório para** parâmetro, q
   
 -   Falha-script  
   
-### <a name="refresh-from-database"></a>refresh-from-database:  
+### <a name="refresh-from-database"></a>atualização-do-banco de dados:  
 O comando **atualização de banco de dados** tem **erros de relatório para** parâmetro, que especifica o local do relatório de erros para a operação de atualização. Em seguida, um arquivo por nome **SourceDBRefreshReport&lt;n&gt;. XML** é criado no local especificado, onde **&lt;n&gt;** é o número de arquivo exclusivo que é incrementada com um dígito com cada execução do mesmo comando.  
   
 **Observação:** Se o caminho da pasta for fornecido, 'relatório-erros-to' parâmetro torna-se um atributo opcional para o destino do comando' Sincronizar-'.  
@@ -137,7 +136,7 @@ O comando **atualização de banco de dados** tem **erros de relatório para** p
 ```  
 **object-name:** Especifica os objetos considerados para a atualização (ele também pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
-**on-error:** Especifica se deve especificar os erros de atualização como avisos ou erros. Opções disponíveis para em caso de erro:  
+**em caso de erro:** Especifica se deve especificar os erros de atualização como avisos ou erros. Opções disponíveis para em caso de erro:  
   
 -   report-total-as-warning  
   

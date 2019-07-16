@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62073e1618d4ab43acbbfbaad1fb6e2ff16c7658
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23f0f32e07430dcb9829be48fea9f966dd1b453f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62631694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031924"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>SPNs (Nomes da Entidade de Serviço) em conexões de cliente (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62631694"
 ## <a name="data-source-initialization-properties"></a>Propriedades de inicialização da fonte de dados  
  As seguintes propriedades na **DBPROPSET_SQLSERVERDBINIT** conjunto de propriedades permitem que os aplicativos especifiquem SPNs.  
   
-|Nome|Tipo|Uso|  
+|Nome|type|Uso|  
 |----------|----------|-----------|  
 |SSPROP_INIT_SERVERSPN|VT_BSTR, leitura/gravação|Especifica o SPN do servidor. O valor padrão é uma cadeia de caracteres vazia, que faz com que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client use o SPN padrão gerado pelo provedor.|  
 |SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR, leitura/gravação|Especifica o SPN para o parceiro de failover. O valor padrão é uma cadeia de caracteres vazia, que faz com que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client use o SPN padrão gerado pelo provedor.|  
@@ -44,7 +43,7 @@ ms.locfileid: "62631694"
 ## <a name="data-source-properties"></a>Propriedades de fonte de dados  
  As seguintes propriedades na **DBPROPSET_SQLSERVERDATASOURCEINFO** conjunto de propriedades permitem que os aplicativos descubram o método de autenticação.  
   
-|Nome|Tipo|Uso|  
+|Nome|type|Uso|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR, somente leitura|Retorna o método de autenticação usado para a conexão. O valor retornado ao aplicativo é o valor que o Windows retorna ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. O valores possíveis são os seguintes: <br />"NTLM", que é retornado quando uma conexão é aberta usando a autenticação NTLM.<br />"Kerberos", que é retornado quando uma conexão é aberta usando a autenticação Kerberos.<br /><br /> Se uma conexão foi aberta e não for possível determinar o método de autenticação, VT_EMPTY será retornado.<br /><br /> Essa propriedade só pode ser lida quando uma fonte de dados tiver sido inicializada. Se você tentar ler a propriedade antes da inicialização da fonte de dados, IDBProperties::GetProperies retornará DB_S_ERRORSOCCURRED ou DB_E_ERRORSOCCURRED, conforme apropriado, e DBPROPSTATUS_NOTSUPPORTED será definido em DBPROPSET_PROPERTIESINERROR para essa propriedade. Esse comportamento está de acordo com a especificação principal do OLE DB.|  
 |SSPROP_MUTUALLYAUTHENICATED|VT_BOOL, somente leitura|Retorna VARIANT_TRUE se os servidores da conexão forem autenticados mutuamente. Caso contrário, retorna VARIANT_FALSE.<br /><br /> Essa propriedade só pode ser lida quando uma fonte de dados tiver sido inicializada. Se houver uma tentativa de ler a propriedade antes da inicialização da fonte de dados, IDBProperties::GetProperies retornará DB_S_ERRORSOCCURRED ou DB_E_ERRORSOCCURRED, conforme apropriado, e DBPROPSTATUS_NOTSUPPORTED será definido em DBPROPSET_PROPERTIESINERROR para essa propriedade. Esse comportamento está de acordo com a especificação principal do OLE DB<br /><br /> Se esse atributo for consultado para uma conexão que não usou a Autenticação do Windows, será retornado VARIANT_FALSE.|  

@@ -2,19 +2,18 @@
 title: Comportamento de bloqueio – Parallel Data Warehouse | Microsoft Docs
 description: Saiba como Parallel Data Warehouse usa bloqueio para garantir a integridade de transações e manter a consistência dos bancos de dados quando vários usuários estão acessando os dados ao mesmo tempo.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3f9862fed432036dcb4a3905fb3af1d3132349a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d93743c83d6315e6ab9484445f344b06f80be845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960641"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>Comportamento de bloqueio no Parallel Data Warehouse
 Saiba como Parallel Data Warehouse usa bloqueio para garantir a integridade de transações e manter a consistência dos bancos de dados quando vários usuários estão acessando os dados ao mesmo tempo.  
@@ -89,9 +88,9 @@ SQL Server suporta os seguintes tipos de bloqueios. Nem todos os tipos de bloque
   
 -   RangeI_X. Bloqueio de conversão de intervalo de chave criado por uma sobreposição dos bloqueios RangeI_N e X.  
   
--   RangeX_S. Bloqueio de conversão de intervalo de chaves criado por uma sobreposição de bloqueios RangeI_N e RangeS-S.  
+-   Rangeix_s. Bloqueio de conversão de intervalo de chaves criado por uma sobreposição de bloqueios RangeI_N e RangeS-S.  
   
--   RangeX_U. Bloqueio de conversão de intervalo de chave criado por uma sobreposição dos bloqueios RangeI_N e RangeS_U.  
+-   Rangeix_u. Bloqueio de conversão de intervalo de chave criado por uma sobreposição dos bloqueios RangeI_N e RangeS_U.  
   
 -   RangeX_X (bloqueio de intervalo de chave exclusivo e de recurso exclusivo). Este é um bloqueio de conversão usado na atualização de uma chave em um intervalo.  
   

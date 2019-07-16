@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0695fac-4593-4b3d-8675-cb8f73dab966
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f4e17074616111ee93ce87c04036d1fc3fd48dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50476cb92d477bb9a72ac8d4311d24572b0368e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63062414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069680"
 ---
 # <a name="gateways-diagnostic-example"></a>Exemplo de diagnóstico de gateways
 Em uma arquitetura de gateway, um driver envia solicitações a um gateway que oferece suporte ao ODBC. O gateway envia solicitações de um DBMS. Como é o componente que faz interface com o Gerenciador de Driver, o driver formata e retorna os argumentos para **SQLGetDiagRec**.  

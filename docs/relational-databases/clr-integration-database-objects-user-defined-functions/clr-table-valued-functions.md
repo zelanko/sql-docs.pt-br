@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 97ad8e64260d337135a1b0d5cda739d8c81b1799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be67029c8a98408b3fccd61051cd50d0da0c6b24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62707153"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009788"
 ---
 # <a name="clr-table-valued-functions"></a>Funções com valor de tabela CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +176,7 @@ WHERE T.Category = N'Logon/Logoff';
 go  
 ```  
   
-## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Exemplo: Retornando os resultados de uma consulta do SQL Server  
+## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Amostra: Retornando os resultados de uma consulta do SQL Server  
  O exemplo a seguir mostra uma função com valor de tabela que consulta um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este exemplo usa o banco de dados AdventureWorks Light do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Ver [ https://www.codeplex.com/sqlserversamples ](https://go.microsoft.com/fwlink/?LinkId=87843) para obter mais informações sobre o download do AdventureWorks.  
   
  Nomeie seu arquivo de código-fonte como FindInvalidEmails.cs ou FindInvalidEmails.vb.  

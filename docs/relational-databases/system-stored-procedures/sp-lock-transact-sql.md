@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9eaa0ec2-2ad9-457c-ae48-8da92a03dcb0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8d917f71d7cf7a36bb5d2c50b0cddd7893102a7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb2c193b975d46eedf5139771ffe261bd6bfe93d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029993"
 ---
 # <a name="splock-transact-sql"></a>sp_lock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

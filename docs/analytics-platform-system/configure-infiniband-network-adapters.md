@@ -2,19 +2,18 @@
 title: Configurar InfiniBand - Analytics Platform System | Microsoft Docs
 description: Descreve como configurar os adaptadores de rede InfiniBand em um servidor não seja de dispositivo cliente para se conectar ao nó de controle no Parallel Data Warehouse (PDW). Use estas instruções para a conectividade básica e de alta disponibilidade, para que o carregamento, backup e outros processos se conectam automaticamente à rede InfiniBand Active Directory.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4739a79989321c215819bab90da1d1831764f820
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057157"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961240"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurar adaptadores de rede InfiniBand para o Analytics Platform System
 Descreve como configurar os adaptadores de rede InfiniBand em um servidor não seja de dispositivo cliente para se conectar ao nó de controle no Parallel Data Warehouse (PDW). Use estas instruções para a conectividade básica e de alta disponibilidade, para que o carregamento, backup e outros processos se conectam automaticamente à rede InfiniBand Active Directory.  
@@ -53,7 +52,7 @@ Você precisa de uma conta de domínio de dispositivo de APS para fazer logon no
   
 Você precisa de uma conta de Windows no servidor de cliente que tenha permissão para configurar os adaptadores de rede.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Pré-requisitos  
 Essas instruções pressupõem que o servidor de cliente já está em rack e cabeado para a rede InfiniBand de solução de virtualização. Para o acompanhamento de cabeamento e instruções, consulte [adquirir e configurar um servidor carregando](acquire-and-configure-loading-server.md).  
   
 ### <a name="general-remarks"></a>Comentários gerais  

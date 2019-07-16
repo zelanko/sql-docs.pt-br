@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5d2a6ee2-d975-4fd6-adb5-ed43d0cc7fdd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 961973131c1ee1089037630cd2151f08c4fb39ab
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: af70858fdc4a242cc6b914f062fb8abd0200095a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071620"
 ---
 # <a name="systemstore-property-securitycertificate-class"></a>Propriedade SystemStore (classe SecurityCertificate)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ object.SystemStore [= value]
  *object*  
  Um objeto da [classe SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) que representa um certificado de segurança.  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
  Um valor da cadeia de caracteres que especifica o repositório do sistema para o certificado de segurança.  
   
 ## <a name="remarks"></a>Comentários  

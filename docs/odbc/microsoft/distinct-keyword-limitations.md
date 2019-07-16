@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 111e2dd7-d64e-4670-8bf0-2135d0a056b8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1bbd01a38e7e78d0db64d254b9574d23e7dfeffe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b0167e804111cdbbc0db9437134d898942d8aa3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071902"
 ---
 # <a name="distinct-keyword-limitations"></a>Limitações da palavra-chave DISTINCT
 Não suportado para campos de texto longo (Microsoft Access) ou memorando (do dBASE).

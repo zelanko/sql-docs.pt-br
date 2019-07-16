@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 084761fe-e65b-4f38-ba4f-69884b2a7700
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98bd56051c724186d7308eff669263d29b82ecd5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb2587f733f5042436144f7865627fee576e3d9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096310"
 ---
 # <a name="delete-statement-limitations"></a>Limitações da instrução DELETE
 Não há suporte para a instrução DELETE para o driver do Microsoft Excel ou texto. Observe que a instrução INSERT tem suporte para o driver de texto.  

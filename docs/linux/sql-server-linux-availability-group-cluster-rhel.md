@@ -5,18 +5,17 @@ description: Saiba mais sobre clusters de grupo de disponibilidade ao executar o
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 03/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 2ceefd4ce2fa643a66a289e3c3ab3e0d169b5ff8
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 086138fc1df6245de33b348c529e56e606c3ddc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027317"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurar o Cluster do RHEL para o grupo de disponibilidade do SQL Server
 

@@ -1,5 +1,5 @@
 ---
-title: Data Migration Report (SybaseToSQL) | Microsoft Docs
+title: Relatório de migração de dados (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3d70a2546a925474e0b80bb1d7cee4ee7ab2c266
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b05ca315401e587a4a200ff6fc78634993260b07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029401"
 ---
 # <a name="data-migration-report-sybasetosql"></a>Relatório de migração de dados (SybaseToSQL)
 O **relatório de migração de dados** caixa de diálogo é exibida após a migração de dados a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -24,10 +23,10 @@ O **relatório de migração de dados** caixa de diálogo é exibida após a mig
 **Status**  
 Mostra o status da migração da fonte de dados no banco de dados de destino.  
   
-**De**  
+**From**  
 A tabela de origem.  
   
-**Para**  
+**To**  
 A tabela de destino.  
   
 **Número total de linhas**  

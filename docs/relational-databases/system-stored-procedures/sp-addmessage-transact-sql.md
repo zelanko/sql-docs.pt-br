@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63d206e6b6f32aeb12e2e04b9edc2ef1d84599b2
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 52d3db15c46af273e2f151e769a6b04be322ce5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494228"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061844"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,10 +61,10 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="remarks"></a>Comentários  
- Para versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não estão em inglês, a versão em inglês dos EUA de uma mensagem já deverá existir para que a mensagem possa ser adicionada usando outro idioma. A severidade das duas versões da mensagem deve corresponder.  
+ Para versões diferentes do inglês do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], EUA A versão em inglês de uma mensagem já deve existir antes que a mensagem pode ser adicionada usando outro idioma. A severidade das duas versões da mensagem deve corresponder.  
   
  Ao localizar mensagens contendo parâmetros, use números de parâmetro que correspondem aos parâmetros da mensagem original. Insira um ponto de exclamação (!) depois de cada número de parâmetro.  
   
@@ -92,8 +91,8 @@ EXEC sp_addmessage 50001, 16,
 GO  
 ```  
   
-### <a name="b-adding-a-message-in-two-languages"></a>b. Adicionando uma mensagem em dois idiomas  
- O exemplo seguinte adiciona primeiro uma mensagem em inglês dos EUA e, em seguida, adiciona a mesma mensagem em francês`.`  
+### <a name="b-adding-a-message-in-two-languages"></a>B. Adicionando uma mensagem em dois idiomas  
+ O exemplo a seguir primeiro adiciona uma mensagem nos Estados Unidos Inglês e, em seguida, adiciona a mesma mensagem em francês`.`  
   
 ```  
 USE master;  
@@ -109,7 +108,7 @@ GO
 ```  
   
 ### <a name="c-changing-the-order-of-parameters"></a>C. Alterando a ordem dos parâmetros  
- O exemplo seguinte adiciona primeiro uma mensagem em inglês ds EUA e, em seguida, adiciona a mensagem localizada na qual a ordem de parâmetros é alterada.  
+ O exemplo a seguir primeiro adiciona uma mensagem nos Estados Unidos Inglês e, em seguida, adiciona a mensagem localizada na qual a ordem dos parâmetros é alterada.  
   
 ```  
 USE master;  

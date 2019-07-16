@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ad27017466429bba36b062a86ed4c39ff1293885
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea6081cb68d084bf51132824a143fc6fdd544399
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028879"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>Comandos de menu e outras teclas de atalho (SybaseToSQL)
 As seções a seguir descrevem os atalhos de teclado para acessar os comandos de menu e outras teclas de atalho usadas em várias caixas de diálogo do SSMA para Sybase aplicativo.  
@@ -47,7 +46,7 @@ Para acessar o menu Editar, o atalho de teclado usado é ALT + E. A tabela a seg
 |Exiba a caixa de diálogo Gerenciar indicadores.|ALT + E + B ou CTRL + X|  
 |Ir para linha|ALT + E + G ou CTRL + G|  
 |Salve as alterações feitas à instrução.|ALT + E + S ou CTRL + S|  
-|Submenu de localização de acesso.|ALT + E + F|  
+|Submenu de localização de acesso.|E AS TECLAS ALT + F|  
 |Localizar ou localização rápida.|ALT + E + F + F ou CTRL + F|  
 |Exiba a caixa de diálogo de pesquisa avançada.|ALT + E + F + A ou ALT + F12|  
 |Inicie a informações rápidas.|ALT + E + F + I ou CTRL + SHIFT + espaço|  

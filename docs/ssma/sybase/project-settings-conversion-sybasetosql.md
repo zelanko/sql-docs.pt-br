@@ -1,5 +1,5 @@
 ---
-title: Project Settings (Conversion) (SybaseToSQL) | Microsoft Docs
+title: Configurações (conversão) (SybaseToSQL) do projeto | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4d7f290459e1da736605acad941602399ec3ea53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d4936638fc9e283caafffc2f2a7cfdbed396920
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62664658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028758"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Configurações do projeto (conversão) (SybaseToSQL)
 A página de conversão do **configurações do projeto** caixa de diálogo contém configurações que personalizam como SSMA converte a sintaxe do Sybase Adaptive Server Enterprise (ASE) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou a sintaxe do SQL Azure.  
@@ -436,11 +435,11 @@ Quando você seleciona um modo de conversão na **modo** caixa, o SSMA aplica-se
 **Adicione a chave primária**  
 Cria uma nova chave primária no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou tabela do SQL Azure se uma tabela do Access não tem nenhuma chave primária ou índice exclusivo.  
   
--   **Modo padrão**: Falso  
+-   **Modo padrão**: False  
   
--   **Modo otimista**: Falso  
+-   **Modo otimista**: False  
   
--   **Modo de inteira**: True  
+-   **Modo de inteira**: verdadeiro  
   
 > [!NOTE]  
 > Quando conectado ao SQL Azure, é por padrão True.  

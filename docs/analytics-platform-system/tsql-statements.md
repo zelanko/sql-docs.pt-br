@@ -2,19 +2,18 @@
 title: Instruções T-SQL - Parallel Data Warehouse | Microsoft Docs
 description: Instruções T-SQL para análise Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ca12b3926fb848defc2a19a08ffa9702516726fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 804f4cb744ad036978341de4eedcc3351d5f620c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034933"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959951"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>Instruções T-SQL para Parallel Data Warehouse
 Instruções de Transact-SQL (T-SQL) para análise Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
@@ -23,13 +22,13 @@ Instruções de Transact-SQL (T-SQL) para análise Platform System (APS) SQL Ser
 * [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
-* [ALTER SCHEMA](../t-sql/statements/alter-schema-transact-sql.md)
+* [ALTERAR ESQUEMA](../t-sql/statements/alter-schema-transact-sql.md)
 * [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
 * [CREATE COLUMNSTORE INDEX](../t-sql/statements/create-columnstore-index-transact-sql.md)
 * [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 * [CRIAR BANCO DE DADOS COM ESCOPO DE CREDENCIAL](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-* [CRIAR FONTE DE DADOS EXTERNA](../t-sql/statements/create-external-data-source-transact-sql.md)
-* [CRIAR FORMATO DE ARQUIVO EXTERNO](../t-sql/statements/create-external-file-format-transact-sql.md)
+* [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)
+* [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)
 * [CRIAR TABELA EXTERNA](../t-sql/statements/create-external-table-transact-sql.md)
 * [CRIAR FUNÇÃO](../t-sql/statements/create-function-sql-data-warehouse.md)
 * [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md)
@@ -46,7 +45,7 @@ Instruções de Transact-SQL (T-SQL) para análise Platform System (APS) SQL Ser
 * [PROCEDIMENTO DE DESCARTE](../t-sql/statements/drop-procedure-transact-sql.md)
 * [REMOVER ESTATÍSTICAS](../t-sql/statements/drop-statistics-transact-sql.md)
 * [DROP TABLE](../t-sql/statements/drop-table-transact-sql.md)
-* [DROP SCHEMA](../t-sql/statements/drop-schema-transact-sql.md)
+* [DESCARTAR ESQUEMA](../t-sql/statements/drop-schema-transact-sql.md)
 * [REMOVER EXIBIÇÃO](../t-sql/statements/drop-view-transact-sql.md)
 * [RENAME](../t-sql/statements/rename-transact-sql.md)
 * [TRUNCATE TABLE](../t-sql/statements/truncate-table-transact-sql.md)
@@ -80,7 +79,7 @@ Instruções de Transact-SQL (T-SQL) para análise Platform System (APS) SQL Ser
 * [UNION](../t-sql/language-elements/set-operators-union-transact-sql.md)
 * [WHERE](../t-sql/queries/where-transact-sql.md)
 * [TOP](../t-sql/queries/top-transact-sql.md)
-* [Aliasing](../t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md)
+* [Uso de alias](../t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md)
 * [Critério de pesquisa](../t-sql/queries/search-condition-transact-sql.md)
 * [Subconsultas](../t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md)
 
