@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53c091fd0b7a6cfdf390997fb5163fbc9d98e18c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861714"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023349"
 ---
 # <a name="pattern-value-arguments"></a>Argumentos de valor de padrão
 Alguns argumentos no catálogo de funções, como o *TableName* argumento **SQLTables**, aceite os padrões de pesquisa. Esses argumentos aceitam os padrões de pesquisa se o atributo da instrução SQL_ATTR_METADATA_ID for definido como SQL_FALSE; são argumentos de identificador que não aceitam um padrão de pesquisa se esse atributo é definido como SQL_TRUE.  

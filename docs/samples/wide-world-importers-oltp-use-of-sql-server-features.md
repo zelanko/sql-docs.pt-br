@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 914ec6be6d73bf6411a700ab6fc9586743c40527
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: a2dfe7b9efa78d03a2233eedaa040e47d6f2b25c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067662"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>Uso de recursos e recursos do SQL Server
 
@@ -37,13 +36,13 @@ WideWorldImporters foi projetado para demonstrar muitos dos principais recursos 
 |PolyBase|Para ver essa PolyBase em ação, usando uma tabela externa com um conjunto de dados público hospedado no armazenamento de BLOBs do Azure, use o script correspondente no exemplo-script.zip, que faz parte do [versão do exemplo](https://go.microsoft.com/fwlink/?LinkID=800630).|
 |OLTP na memória|(Versão completa do banco de dados) Os tipos de tabela são todos com otimização de memória, que se beneficiam com valor de tabela (TVPs) todos os parâmetros da otimização de memória.<br/><br/>As duas tabelas de monitoramento `Warehouse.VehicleTemperatures` e `Warehouse.ColdRoomTemperatures`, são a otimização de memória. A otimização de memória permite que a tabela de ColdRoomTemperatures a ser preenchido em velocidade superior de uma tabela tradicional baseada em disco. A tabela VehicleTemperatures mantém o conteúdo JSON e se presta a extensão para cenários de IoT. A tabela VehicleTemperatures ainda mais se presta a cenários que envolvem o hubs de eventos, Stream Analytics e Power BI.<br/><br/>O procedimento armazenado `Website.RecordColdRoomTemperatures` é compilado nativamente para melhorar ainda mais o desempenho de gravação de temperaturas frias.<br/><br/>Para ver um exemplo de OLTP na memória em ação, consulte o driver de carga de trabalho locais do veículo na carga de trabalho-drivers.zip, que faz parte do [versão do exemplo](https://go.microsoft.com/fwlink/?LinkID=800630).|
 |Índice columnstore clusterizado|(Versão completa do banco de dados) A tabela `Warehouse.StockItemTransactions` usa um índice columnstore clusterizado. Espera-se que o número de linhas nesta tabela aumente grandes e o índice columnstore clusterizado significativamente reduz o tamanho em disco da tabela e melhora o desempenho de consulta. A modificação nesta tabela são somente para insert - não há nenhuma atualização/exclusão nesta tabela na carga de trabalho online - e índice columnstore clusterizado funciona bem para cargas de trabalho de inserção.|
-|Mascaramento de dados dinâmicos|No esquema de banco de dados, máscara de dados foi aplicada para os detalhes do banco mantidos por fornecedores, na tabela `Purchasing.Suppliers`. Não-administrador equipe não terá acesso a essas informações.|
+|Máscara de Dados Dinâmicos|No esquema de banco de dados, máscara de dados foi aplicada para os detalhes do banco mantidos por fornecedores, na tabela `Purchasing.Suppliers`. Não-administrador equipe não terá acesso a essas informações.|
 |Always Encrypted|Uma demonstração para Always Encrypted está incluída no que pode ser baixado Samples, que faz parte do [versão do exemplo](https://go.microsoft.com/fwlink/?LinkID=800630). A demonstração cria uma chave de criptografia, uma tabela usando a criptografia para dados confidenciais e um pequeno aplicativo de exemplo que insere dados na tabela.|
 |Stretch Database|O `Warehouse.ColdRoomTemperatures` tabela tiver sido implementada como uma tabela temporal e é a otimização de memória na versão completa do banco de dados de exemplo. A tabela de arquivo morto é baseada em disco e pode ser ampliada para o Azure.|
 |Índices de texto completo|Índices de texto completo melhoram pesquisas para as pessoas, clientes e StockItems. Os índices são aplicados a consultas somente se você tiver instalado na instância do SQL Server de indexação de texto completo. Uma coluna computada não persistente é usada para criar os dados que é o texto completo indexado na tabela StockItems.<br/><br/>`CONCAT` é usado para concatenar os campos para criar SearchData é indexada com texto completo.<br/>Para habilitar o uso de índices de texto completo no exemplo, execute a seguinte instrução no banco de dados:<br/><br/>`EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>O procedimento cria um catálogo de texto completo padrão se ainda não existir, então substitui as exibições de pesquisa com as versões de texto completo dessas exibições).<br/><br/>Observe que usando índices de texto completo no SQL Server requer a seleção da opção de texto completo durante a instalação. Não requer um banco de dados SQL do Azure e configuração específica para habilitar índices de texto completo.|
 |Colunas computadas persistentes indexadas|Indexado usadas em SupplierTransactions e CustomerTransactions as colunas computadas persistentes.|
 |Verificar restrições|Uma restrição de verificação relativamente complexo é em `Sales.SpecialDeals`. Isso garante que um e somente um dos DiscountAmount, DiscountPercentage, e UnitPrice está configurado.|
-|Restrições exclusivas|Um muitos para muitos construção (e restrições exclusivas) são configuradas para `Warehouse.StockItemStockGroups`.|
+|Restrições únicas|Um muitos para muitos construção (e restrições exclusivas) são configuradas para `Warehouse.StockItemStockGroups`.|
 |O particionamento de tabela|(Versão completa do banco de dados) As tabelas `Sales.CustomerTransactions` e `Purchasing.SupplierTransactions` são particionados por ano usando a função de partição `PF_TransactionDate` e o esquema de partição `PS_TransactionDate`. O particionamento é usado para melhorar a capacidade de gerenciamento de grandes tabelas.|
 |Processamento da lista|Um tipo de tabela de exemplo `Website.OrderIDList` é fornecido. Ele é usado por um procedimento de exemplo `Website.InvoiceCustomerOrders`. O procedimento usa a tabela CTEs (expressões comuns), TRY/CATCH, JSON_MODIFY, XACT_ABORT, NOCOUNT, THROW e XACT_STATE para demonstra a capacidade de processar uma lista de pedidos em vez de apenas uma única ordem, para minimizar as viagens de ida e do aplicativo para o mecanismo de banco de dados.|
 |Compactação GZip|No `Warehouse.VehicleTemperature` modo de exibição, sua tabela contém dados de sensor completo. Mas, quando esses dados são mais do que alguns meses, ele é compactado para economizar espaço. A função COMPRESS usa compactação GZip.<br/><br/>O modo de exibição `Website.VehicleTemperatures` usa a função DECOMPRESS ao recuperar dados que foi anteriormente compactados.|

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5c980cbc6f8d212cf615469c199f6ccafcd70b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b75962019d9b39728ceff0b151e770dd0f51a25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075629"
 ---
 # <a name="spreleaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
  É um nome de recurso de bloqueio especificado pelo aplicativo cliente. O aplicativo deve garantir que o recurso seja exclusivo. O nome especificado é internamente transformado em hash para um valor que pode ser armazenado no gerenciador de bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* está **nvarchar (255)** sem nenhum padrão. *resource_name* é binário comparado e, portanto, diferencia maiusculas de minúsculas, independentemente das configurações de agrupamento do banco de dados atual.  
   
  [ @LockOwner=] '*lock_owner*'  
- É o proprietário do bloqueio, que é o valor de *lock_owner* quando o bloqueio foi solicitado. *lock_owner* é **nvarchar(32)**. O valor pode ser **Transaction** (o padrão) ou **Session**. Quando o *lock_owner* valor estiver **transação**, por padrão ou explicitamente especificado, sp_getapplock deve ser executado de dentro de uma transação.  
+ É o proprietário do bloqueio, que é o valor de *lock_owner* quando o bloqueio foi solicitado. *lock_owner* é **nvarchar(32)** . O valor pode ser **Transaction** (o padrão) ou **Session**. Quando o *lock_owner* valor estiver **transação**, por padrão ou explicitamente especificado, sp_getapplock deve ser executado de dentro de uma transação.  
   
  [ @DbPrincipal=] '*database_principal*'  
  É o usuário, função ou função de aplicativo que tem permissões para um objeto em um banco de dados. O chamador da função deve ser membro da função de banco de dados fixa *database_principal*, dbo ou db_owner para chamar a função com êxito. O padrão é público.  

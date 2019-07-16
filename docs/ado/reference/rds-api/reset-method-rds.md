@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c8e83341a72e6864b6545a4ccbbc2262403f9b06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 416aaefa95871e909a12117756ea59747c555650
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963490"
 ---
 # <a name="reset-method-rds"></a>Método Reset (RDS)
 Executa a classificação ou filtragem em um lado do cliente **Recordset** baseada nas propriedades de classificação e filtro especificadas.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 26889228181b16c7ea58560708766d048b939f0d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ff1d3f0a184c928a103abeaa6e957ebd5f9ba314
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929763"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>Propriedade AcceptStop (classe SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ object.AcceptStop [= value]
  *object*  
  Um [SqlService classe](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) objeto que representa o serviço  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
  Um valor booliano que especifica se o serviço pode ser interrompido: **verdadeira** se o serviço pode ser interrompido, ou **falso** se o serviço não pode ser interrompido.  
   
 ## <a name="remarks"></a>Comentários  

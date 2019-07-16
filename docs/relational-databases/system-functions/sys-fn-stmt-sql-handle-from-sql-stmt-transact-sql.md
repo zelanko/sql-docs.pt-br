@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 049fb28c9d49dcfe359363e0be8d78ba8a4bca8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92ebff45c8599e6257ad22f563da6af5067d8e3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059267"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="arguments"></a>Argumentos  
  *query_sql_text*  
- É o texto da consulta no repositório de consultas que você deseja que o identificador do. *query_sql_text* é um **nvarchar (max)**, sem padrão.  
+ É o texto da consulta no repositório de consultas que você deseja que o identificador do. *query_sql_text* é um **nvarchar (max)** , sem padrão.  
   
  *query_param_type*  
  É o tipo de parâmetro da consulta. *query_param_type* é um **tinyint**. Os valores possíveis são:  
@@ -58,7 +57,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="columns-returned"></a>Colunas retornadas  
  A tabela a seguir lista as colunas que sys.fn_stmt_sql_handle_from_sql_stmt retorna.  
   
-|Nome da coluna|Tipo|Descrição|  
+|Nome da coluna|type|Descrição|  
 |-----------------|----------|-----------------|  
 |**statement_sql_handle**|**varbinary(64)**|O identificador SQL.|  
 |**query_sql_text**|**nvarchar(max)**|O texto do [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução.|  

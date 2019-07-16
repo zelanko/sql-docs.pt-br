@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 49be961d1bc34bcc06b046e95b73d0b5c8ed33ac
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5c4ba291619ae756fa9803606eda4427a155ae39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896488"
 ---
 # <a name="sppublisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@publisher** =] **'***publisher***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  É o nome do Publicador heterogêneo. *Publisher* está **sysname**, sem padrão.  
   
- [**@propertyname** =] **'***propertyname***'**  
+ [ **@propertyname** =] **'***propertyname***'**  
  É o nome da propriedade que está sendo definida. *PropertyName* está **sysname**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
@@ -54,7 +53,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
  Quando *propertyname* for omitido todas as propriedades configuráveis são retornadas.  
   
- [**@propertyvalue** =] **'***propertyvalue***'**  
+ [ **@propertyvalue** =] **'***propertyvalue***'**  
  É o novo valor da configuração da propriedade. *PropertyValue* está **sysname**, com um valor padrão de NULL. Quando *propertyvalue* for omitido, a configuração atual para a propriedade é retornada.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  

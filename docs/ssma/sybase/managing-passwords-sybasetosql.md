@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 83fad699c78a1d405d7d67bda544b6c5781fbed5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14cd4a9c4fb3c49bfa3bd5778e4872bd7b002017
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62939516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028901"
 ---
 # <a name="managing-passwords-sybasetosql"></a>Gerenciamento de senhas (SybaseToSQL)
 Esta seção é sobre como proteger as senhas de banco de dados e o procedimento para importar ou exportá-los entre servidores:  

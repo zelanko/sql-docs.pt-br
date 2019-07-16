@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9723b28ff56f4fe8eced52cecc43d58921d101e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: db369b32737c0e2dae4603a4a5a6c26cdd3a7142
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920235"
 ---
 # <a name="cancel-method-ado"></a>Método Cancel (ADO)
 Cancela a execução de uma chamada de método assíncrono pendente.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d18169eb-89f7-4079-be70-a85713030191
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 146d1cdbb62c54acd9669b803b9d85dddf259601
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c72c5e3c8176b878265dcaa4a7b27544ed8946b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073788"
 ---
 # <a name="setup-dll-function-summary"></a>Resumo de funções de DLL da instalação
 A tabela a seguir descreve as funções de DLL de instalação. Para obter mais informações sobre a sintaxe e semântica para cada função, consulte [referência de API de DLL de instalação](../../../odbc/reference/syntax/setup-dll-api-reference.md).  

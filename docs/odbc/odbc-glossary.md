@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a6741b5f07f2427ef502f5177bbf01acd56c4d5b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: a91f051badfabe19373825edd156e6b2c21ca2c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911368"
 ---
 # <a name="odbc-glossary"></a>Glossário do ODBC
 ## <a name="a"></a>Um  
@@ -38,7 +37,7 @@ ms.locfileid: "67794175"
  **API**  
  Interface de programação de aplicativo. Um conjunto de rotinas que um aplicativo usa para solicitar e executar serviços de nível inferior. A API do ODBC é composta de funções ODBC.  
   
- **application**  
+ **Aplicativo**  
  Um programa executável que chama as funções na API do ODBC.  
   
  **parâmetro APD (descritor aplicativo)**  
@@ -60,7 +59,7 @@ ms.locfileid: "67794175"
  **Objeto binário grande (BLOB)**  
  Quaisquer dados binários durante um determinado número de bytes, como 255. Normalmente muito maior. Esses dados geralmente são enviados para e recuperados da fonte de dados em partes. Também conhecido como *dados long*.  
   
- **binding**  
+ **Associação**  
  Como um verbo, o ato de associar uma coluna em um conjunto de resultados ou um parâmetro em uma instrução SQL com uma variável de aplicativo. Como um substantivo, a associação.  
   
  **deslocamento de associação**  
@@ -119,7 +118,7 @@ ms.locfileid: "67794175"
  Uma parte do software que retorna linhas de dados para o aplicativo. Provavelmente é chamado após o cursor piscando em um computador com terminal; Assim como o cursor indica a posição atual na tela, um cursor em um conjunto de resultados indica a posição atual no conjunto de resultados.  
   
 ## <a name="d"></a>D  
- **data buffer**  
+ **buffer de dados**  
  Um buffer usado para passar dados. Muitas vezes associados com dados de um buffer é uma *buffer de comprimento de dados*.  
   
  **dicionário de dados**  
@@ -155,7 +154,7 @@ ms.locfileid: "67794175"
  **DDL**  
  Linguagem de definição de dados. Essas instruções SQL que definem, em vez de manipular os dados. Por exemplo, **CREATE TABLE**, **CREATE INDEX**, **GRANT**, e **REVOGAR**.  
   
- **delimited identifier**  
+ **identificador delimitado**  
  Um identificador que é colocado entre caracteres de aspas do identificador para que ele possa conter caracteres especiais ou corresponder a palavras-chave (também conhecido como um identificador entre aspas).  
   
  **descriptor**  
@@ -164,7 +163,7 @@ ms.locfileid: "67794175"
  **banco de dados da área de trabalho**  
  Um DBMS projetado para ser executado em um computador pessoal. Geralmente, esses DBMSs não fornecem um mecanismo de banco de dados autônomo e devem ser acessados por meio de um driver com base em arquivo. Os mecanismos desses drivers geralmente reduziram o suporte para SQL e transações. Por exemplo, dBASE, Paradox, Btrieve ou FoxPro para Microsoft®.  
   
- **diagnostic**  
+ **Diagnóstico**  
  Um registro que contém informações de diagnóstico sobre a última função chamada que usado um identificador específico. Registros de diagnóstico são associados com ambiente, conexão, instrução e identificadores de descritor.  
   
  **DML**  
@@ -173,7 +172,7 @@ ms.locfileid: "67794175"
  **driver**  
  Uma biblioteca de rotina que expõe as funções na API do ODBC. Drivers são específicos para um único DBMS.  
   
- **Driver Manager**  
+ **Gerenciador de driver**  
  Uma biblioteca de rotina que gerencia o acesso aos drivers para o aplicativo. O Gerenciador de Driver carrega e descarrega (ou se conecta ao e desconecta) chamadas de drivers e passa para funções ODBC para o driver correto.  
   
  **DLL de instalação do driver**  
@@ -182,7 +181,7 @@ ms.locfileid: "67794175"
  **cursor dinâmico**  
  Um cursor rolável capaz de detectar linhas atualizadas, excluídas ou inseridas no conjunto de resultados.  
   
- **dynamic SQL**  
+ **SQL dinâmico**  
  Um tipo de SQL inserido no qual o SQL instruções são criadas e compiladas em tempo de execução. *Consulte também* SQL estático.  
   
 ## <a name="e"></a>E  
@@ -224,7 +223,7 @@ ms.locfileid: "67794175"
  Um cursor que só pode mover para frente por meio do conjunto de resultados e, em geral, buscará apenas uma linha por vez. A maioria dos bancos de dados relacionais dão suporte a apenas os cursores de somente avanço.  
   
 ## <a name="h"></a>H  
- **handle**  
+ **Identificador**  
  Um valor que identifica exclusivamente algo como uma estrutura de dados ou arquivo. Os identificadores são significativos apenas para o software que cria e usa-los, mas é passado por outros softwares para identificar as coisas. ODBC define identificadores para ambientes, conexões, instruções e descritores.  
   
 ## <a name="i"></a>I  
@@ -243,7 +242,7 @@ ms.locfileid: "67794175"
  **nível de conformidade de interface**  
  O nível da interface ODBC 3.7 compatível com um driver. pode ser o Core, nível 1 ou nível 2.  
   
- **interoperability**  
+ **Interoperabilidade**  
  A capacidade de um aplicativo para usar o mesmo código, ao acessar dados em DBMSs diferentes.  
   
  **IPD**  
@@ -256,7 +255,7 @@ ms.locfileid: "67794175"
  Padrões internacionais comissão de eletrotécnica internacional/organização. A API de ODBC é baseada na Interface de nível de chamada de ISO/IEC.  
   
 ## <a name="j"></a>J  
- **join**  
+ **junção**  
  Uma operação em um banco de dados relacional que vincula as linhas em duas ou mais tabelas combinando valores de colunas especificadas.  
   
 ## <a name="k"></a>K  
@@ -273,7 +272,7 @@ ms.locfileid: "67794175"
  **literal**  
  Uma representação de caractere de um valor de dados reais em uma instrução SQL.  
   
- **locking**  
+ **Bloqueio**  
  O processo pelo qual um DBMS restringe o acesso a uma linha em um ambiente multiusuário. O DBMS geralmente define um bit em uma linha ou página física que contém uma linha que indica a linha ou página é bloqueada.  
   
  **dados Long**  
@@ -286,7 +285,7 @@ ms.locfileid: "67794175"
  **Modo de confirmação manual**  
  Um modo de confirmação de transação na qual as transações devem ser confirmadas explicitamente chamando **SQLTransact**.  
   
- **metadata**  
+ **Metadados**  
  Dados que descrevem um parâmetro em uma instrução SQL ou uma coluna em um conjunto de resultados. Por exemplo, o tipo de dados, comprimento em bytes e a precisão de um parâmetro.  
   
  **driver de várias camadas**  
@@ -300,7 +299,7 @@ ms.locfileid: "67794175"
  **octet**  
  Oito bits ou um byte. *Consulte também* bytes.  
   
- **octet length**  
+ **comprimento do octeto**  
  O comprimento em octetos de um buffer ou os dados que ele contém.  
   
  **ODBC**  
@@ -415,7 +414,7 @@ ms.locfileid: "67794175"
  **cursor rolável**  
  Um cursor que pode se mover para frente ou para trás com o conjunto de resultados.  
   
- **serializability**  
+ **capacidade de serialização**  
  Se duas transações sendo executadas simultaneamente produzem um resultado que é o mesmo que a execução serial (ou sequencial) dessas transações. Transações serializáveis são necessários para manter a integridade do banco de dados.  
   
  **banco de dados do servidor**  
@@ -463,7 +462,7 @@ ms.locfileid: "67794175"
  **cursor estático**  
  Um cursor rolável que não consegue detectar atualizações, exclui ou insere no conjunto de resultados. Geralmente é implementado fazendo uma cópia do conjunto de resultados.  
   
- **static SQL**  
+ **SQL estático**  
  Um tipo de SQL inserido no qual o SQL instruções são embutidos e compiladas quando o restante do programa é compilado. *Consulte também* SQL dinâmico.  
   
  **procedimento armazenado**  

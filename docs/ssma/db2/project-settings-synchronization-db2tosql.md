@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 5dce11338b2d67412df1259e48d50c0734778d0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38b3da74ce30799a01f28f3961a4fa0461d7543f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270079"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060172"
 ---
-# <a name="project-settingssynchronization-db2tosql"></a>Project Settings(Synchronization) (DB2ToSQL)
+# <a name="project-settingssynchronization-db2tosql"></a>Projeto (sincronização) (DB2ToSQL)
 A página de sincronização do **configurações do projeto** caixa de diálogo contém configurações que personalizam o SSMA carrega e as atualizações de banco de dados objetos como tabelas e procedimentos armazenados, em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 As opções de ações padrão especificam as configurações padrão para atualizar objetos do banco de dados DB2 e para sincronização de objetos com o banco de dados do SQL Server. Para obter mais informações, consulte [Refresh do banco de dados &#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md).  

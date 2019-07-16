@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c17f1ba2b6e57fe9194d4cbf4a6e365e65a89d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b16284240d4e93e8de3f56a704c97efcfebdc4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097736"
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="arguments"></a>Argumentos  
  *plan_handle*  
- Identifica exclusivamente um plano de consulta de um lote que foi executado e cujo plano reside no cache de plano. *plan_handle* is **varbinary(64)** . O identificador de plano pode ser obtido de [DM exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) exibição de gerenciamento dinâmico.  
+ Identifica exclusivamente um plano de consulta de um lote que foi executado e cujo plano reside no cache de plano. *plan_handle* está **varbinary(64)** . O identificador de plano pode ser obtido de [DM exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) exibição de gerenciamento dinâmico.  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
@@ -82,7 +81,7 @@ Na tabela acima, **atributo** pode ter os seguintes valores:
 ## <a name="permissions"></a>Permissões  
 
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
+Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer a permissão `VIEW DATABASE STATE` no banco de dados.   
 
 ## <a name="remarks"></a>Comentários  
   
@@ -122,7 +121,7 @@ Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STA
   
 |Opção|Valor|  
 |------------|-----------|  
-|None|0|  
+|Nenhum|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  

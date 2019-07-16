@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b02be45157036a9f29971b7e51447eb8b1c89361
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa05b563fc72f3908fe2ab796d77917d58b16636
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047392"
 ---
 # <a name="business-rules-master-data-services"></a>Regras de negócio (Master Data Services)
 
@@ -72,7 +71,7 @@ ms.locfileid: "65485385"
 ## <a name="system-settings"></a>Configurações do sistema  
  Há duas configurações no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] que afetam as regras de negócio. Você pode ajustar essas configurações no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ou diretamente na tabela Configurações do Sistema. Para obter mais informações, veja [Configurações do sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

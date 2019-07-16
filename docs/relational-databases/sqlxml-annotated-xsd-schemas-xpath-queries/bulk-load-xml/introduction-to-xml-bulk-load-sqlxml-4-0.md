@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3b8c47c79209c11f4c9f7023b8b69f8e0f4b605
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4c00dc0f155ed79cddd715aad96238cfe8723a10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046548"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>Introdução ao XML Bulk Load (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "56028327"
   
 -   Os mecanismos de inserção em massa do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], como a instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)]BULK INSERT e o utilitário bcp. Para obter mais informações, consulte [BULK INSERT &#40;Transact-SQL&#41; ](../../../t-sql/statements/bulk-insert-transact-sql.md) e [utilitário bcp](../../../tools/bcp-utility.md).  
   
-## <a name="streaming-of-xml-data"></a>Fluindo de dados XML   
+## <a name="streaming-of-xml-data"></a>Fluindo de dados XML  
  Como o documento XML de origem pode ser grande, ele não é lido na memória para o processamento do carregamento em massa. Em vez disso, o XML Bulk Load interpreta os dados XML como um fluxo e faz a leitura deles. À medida que o utilitário lê os dados, ele identifica a(s) tabela(s) de banco de dados, gera o(s) registro(s) apropriado(s) a partir da fonte de dados XML e envia o(s) registro(s) para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para inserção.  
   
  Por exemplo, o seguinte documento XML de origem consiste  **\<cliente >** elementos e  **\<Order >** elementos filho:  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02577370218a799faf86a7f8986859c415962f5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897733"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Desenvolvimento um reconhecimento de pool de conexão em um driver ODBC
 Este tópico discute os detalhes do desenvolvimento de um driver ODBC que contém informações sobre como o driver deve fornecer os serviços de pooling de conexão.  
@@ -82,7 +81,7 @@ Este tópico discute os detalhes do desenvolvimento de um driver ODBC que conté
   
  Uma pontuação entre 0 e 100 é possível, onde 0 significa não reutilize e 100 significa que perfeitamente adequados. [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md) é a função de classificação de uma conexão.  
   
-## <a name="new-odbc-handle---sqlhandledbcinfotoken"></a>New ODBC Handle - SQL_HANDLE_DBC_INFO_TOKEN  
+## <a name="new-odbc-handle---sqlhandledbcinfotoken"></a>Novo identificador ODBC - SQL_HANDLE_DBC_INFO_TOKEN  
  Para dar suporte a pool de conexão reconhecimento de driver, o driver precisa de informações de conexão para calcular a ID do Pool. O driver também precisa de informações de conexão a ser comparado a novas solicitações de conexão com conexões no pool.  Sempre que pode ser reutilizada sem conexão no pool, o driver deve estabelecer uma nova conexão, exigindo, portanto, as informações de conexão.  
   
  Como as informações de conexão podem vir de várias fontes (cadeia de caracteres de conexão, os atributos de conexão e DSN), o driver seja necessário analisar a cadeia de caracteres de conexão e resolver o conflito entre essas fontes em cada chamada de função acima.  

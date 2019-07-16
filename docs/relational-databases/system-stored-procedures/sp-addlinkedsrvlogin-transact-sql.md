@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c34d7f326c10ceebb3ee3b97c72b583e13a78ff5
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072676"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  É o nome do servidor vinculado ao qual o mapeamento de logon se aplica. *rmtsrvname* está **sysname**, sem padrão.  
   
  `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
- Determina se é necessário se conectar ao *rmtsrvname* pela representação de logons locais ou envio explícito de um logon e senha. O tipo de dados é **varchar (** 8 **)**, com um padrão de TRUE.  
+ Determina se é necessário se conectar ao *rmtsrvname* pela representação de logons locais ou envio explícito de um logon e senha. O tipo de dados é **varchar (** 8 **)** , com um padrão de TRUE.  
   
  Um valor TRUE Especifica que os logons usam suas próprias credenciais para se conectar ao *rmtsrvname*, com o *rmtuser* e *rmtpassword* argumentos que está sendo ignorados. FALSE Especifica que o *rmtuser* e *rmtpassword* argumentos são usados para se conectar ao *rmtsrvname* especificado *locallogin* . Se *rmtuser* e *rmtpassword* também estiver definido como NULL, nenhum logon ou a senha será usada para se conectar ao servidor vinculado.  
   

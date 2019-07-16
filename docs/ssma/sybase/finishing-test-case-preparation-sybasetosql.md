@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: b31739bb4db23ccd2159ec8146ef857d7a5d66e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3085d17804866015a78e93556dd5373d3a1b8cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62631543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029144"
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>Concluir a preparação do caso de teste (SybaseToSQL)
 A página do assistente final exibe a descrição do caso de teste e informações sobre os objetos envolvidos no teste. Além disso, nesta página você pode definir o teste de opções de execução.  

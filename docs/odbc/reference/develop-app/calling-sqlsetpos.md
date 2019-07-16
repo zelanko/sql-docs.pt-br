@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 846354b8-966c-4c2c-b32f-b0c8e649cedd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f94b1191815f37728a2d8de8fc1175113644bc5a
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: c64575777fc9210c36be5d417cd3def0c2c7102a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068681"
 ---
 # <a name="calling-sqlsetpos"></a>Chamar SQLSetPos
 Em ODBC *2.x*, o ponteiro para a matriz de status de linha era um argumento para **SQLExtendedFetch**. A matriz de status de linha fosse atualizada posteriormente por uma chamada para **SQLSetPos**. Alguns drivers têm contavam com o fato de que essa matriz não é alterado entre **SQLExtendedFetch** e **SQLSetPos**. Em ODBC *3.x*, o ponteiro para a matriz de status é um campo de descritor e, portanto, o aplicativo pode alterá-la facilmente para apontar para uma matriz diferente. Isso pode ser um problema ao ODBC *3.x* aplicativo está funcionando com um ODBC *2.x* driver, mas está chamando **SQLSetStmtAttr** para definir o ponteiro de status de matriz e está chamando  **SQLFetchScroll** para buscar dados. O Gerenciador de Driver mapeia-os como uma sequência de chamadas para **SQLExtendedFetch**. No código a seguir, um erro teria normalmente gerado quando o Gerenciador de Driver mapeia o segundo **SQLSetStmtAttr** chamar ao trabalhar com ODBC *2.x* driver:  

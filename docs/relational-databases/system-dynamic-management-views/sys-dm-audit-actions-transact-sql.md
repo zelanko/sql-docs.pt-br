@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a64e683ebe83da31f678f1a5ec1e6c97abf1e601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e6a6c91cb31c9c3036bc95239f0aff9c75fda7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936973"
 ---
 # <a name="sysdmauditactions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Retorna uma linha para cada ação de auditoria que pode ser reportada no log de auditoria e para cada grupo de ação de auditoria que pode ser configurado como parte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Para obter mais informações sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auditoria, consulte [auditoria do SQL Server &#40;mecanismo de banco de dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**action_id**|**varchar(4)**|ID da ação de auditoria. Relacionados para o **action_id** valor gravado para cada registro de auditoria. Permite valor nulo. É NULL para grupos de auditoria.|  
 |**action_in_log**|**bit**|Indica se uma ação pode ser gravada em um log de auditoria. Os valores são da seguinte maneira:<br /><br /> 1 = Sim<br /><br /> 0 = Não|  

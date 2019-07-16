@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6eb6bedb20e1f61c48776d03df59aa6865cfb2a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f40299dccc0313f662aeadfcb26b71326cdc6d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62751206"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073900"
 ---
 # <a name="sqlgetinfo-support"></a>Suporte SQLGetInfo
 Quando um ODBC 2. *x* aplicativo chamará **SQLGetInfo** para um ODBC 3 *. x* driver, o *tipo de informação* argumentos na tabela a seguir devem ser suportados.  
@@ -30,7 +29,7 @@ Quando um ODBC 2. *x* aplicativo chamará **SQLGetInfo** para um ODBC 3 *. x* dr
 |SQL_ALTER_TABLE (ODBC 2.0) **Observação:**  Este tipo de informação não é substituído; as máscaras de bits na coluna à direita são preteridas.|Um bitmask sqlinteger que contém enumerando as cláusulas na **ALTER TABLE** instrução tem suportada pela fonte de dados.<br /><br /> As máscaras de bits a seguir são usadas para determinar quais cláusulas têm suporte:<br /><br /> SQL_AT_DROP_COLUMN = há suporte para a capacidade para descartar colunas. Se isso resulta em cascata ou restringir o comportamento é definido pelo driver. (ODBC 2.0)<br /><br /> SQL_AT_ADD_COLUMN = a capacidade de adicionar várias colunas em uma única instrução ALTER TABLE é suportado. Esse bit não combina com outros SQL_AT_ADD_COLUMN_XXX ou SQL_AT_CONSTRAINT_XXX bits. (ODBC 2.0)|  
 |SQL_FETCH_DIRECTION (ODBC 1.0)<br /><br /> O tipo de informação foi introduzido no ODBC 1.0; cada máscara de bits é rotulada com a versão na qual ele foi introduzido.|Um bitmask sqlinteger que contém enumerando as opções de direção de busca com suporte.<br /><br /> As máscaras de bits a seguir são usadas em conjunto com o sinalizador para determinar quais opções têm suporte:<br /><br /> SQL_FD_FETCH_NEXT (ODBC 1.0) SQL_FD_FETCH_FIRST (ODBC 1.0) SQL_FD_FETCH_LAST (ODBC 1.0) SQL_FD_FETCH_PRIOR (ODBC 1.0) SQL_FD_FETCH_ABSOLUTE (ODBC 1.0) SQL_FD_FETCH_RELATIVE (ODBC 1.0) SQL_FD_FETCH_BOOKMARK (ODBC 2.0)|  
 |SQL_LOCK_TYPES (ODBC 2.0)|Os tipos de um bitmask sqlinteger que contém Enumerando o bloqueio com suporte para o *usam* argumento **SQLSetPos**.<br /><br /> As máscaras de bits a seguir são usadas em conjunto com o sinalizador para determinar quais tipos de bloqueio têm suporte:<br /><br /> SQL_LCK_NO_CHANGE SQL_LCK_EXCLUSIVE SQL_LCK_UNLOCK|  
-|SQL_ODBC_API_CONFORMANCE (ODBC 1.0)|Um valor de SQLSMALLINT, que indica o nível de conformidade do ODBC.<br /><br /> SQL_OAC_NONE = None<br /><br /> SQL_OAC_LEVEL1 = 1 de nível de suporte<br /><br /> SQL_OAC_LEVEL2 = 2 de nível de suporte|  
+|SQL_ODBC_API_CONFORMANCE (ODBC 1.0)|Um valor de SQLSMALLINT, que indica o nível de conformidade do ODBC.<br /><br /> SQL_OAC_NONE = nenhum<br /><br /> SQL_OAC_LEVEL1 = 1 de nível de suporte<br /><br /> SQL_OAC_LEVEL2 = 2 de nível de suporte|  
 |SQL_ODBC_SQL_CONFORMANCE (ODBC 1.0)|Um valor SQLSMALLINT indicando a gramática SQL com suporte pelo driver. Consulte [apêndice c: Gramática SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md) para obter uma definição de níveis de conformidade do SQL.<br /><br /> SQL_OSC_MINIMUM = gramática mínima com suporte<br /><br /> SQL_OSC_CORE = gramática Core com suporte<br /><br /> SQL_OSC_EXTENDED = gramática estendido com suporte|  
 |SQL_POS_OPERATIONS (ODBC 2.0)|Um bitmask sqlinteger que contém enumerando as operações com suporte no **SQLSetPos**.<br /><br /> Seguir as máscaras de bits são usadas em conjunto com o sinalizador para determinar quais opções têm suporte:<br /><br /> SQL_POS_POSITION (ODBC 2.0) SQL_POS_REFRESH   (ODBC 2.0) SQL_POS_UPDATE     (ODBC 2.0) SQL_POS_DELETE     (ODBC 2.0) SQL_POS_ADD          (ODBC 2.0)|  
 |SQL_POSITIONED_STATEMENTS (ODBC 2.0)|Um bitmask de sqlinteger que contém a enumeração com o suporte posicionado instruções SQL.<br /><br /> As máscaras de bits a seguir são usadas para determinar quais declarações são suportadas:<br /><br /> SQL_PS_POSITIONED_DELETE SQL_PS_POSITIONED_UPDATE SQL_PS_SELECT_FOR_UPDATE|  

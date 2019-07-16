@@ -10,13 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 70b06749d1cbecc2127c70fee28b60f49583d5ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e40e377310b33034b4abecdc5e58eab17d39695d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959193"
 ---
 # <a name="sql-server-dacpac-extension-preview"></a>Extensão de dacpac do SQL Server (versão prévia)
 

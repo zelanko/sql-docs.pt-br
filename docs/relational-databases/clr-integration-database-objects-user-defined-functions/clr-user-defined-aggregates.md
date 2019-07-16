@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: bad9b7e8-5967-4afa-8dc8-6d840faf9372
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d7194f151caf4495e448bbdde649d5bd77cc683c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e654e1e14aa09e5414a100e6d06c64eba93dab7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009803"
 ---
 # <a name="clr-user-defined-aggregates"></a>Agregações CLR definidas pelo usuário
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  As funções de agregação executam um cálculo em um conjunto de valores e retornam um único valor. Tradicionalmente, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem suporte somente funções de agregação internas, como **soma** ou **MAX**, que operam em um conjunto de valores escalares de entrada e gerar uma única agregação valor a partir desse conjunto. A integração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o CLR (common language runtime) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework agora permite que os desenvolvedores criem funções de agregação personalizadas no código gerenciado e tornem essas funções acessíveis ao [!INCLUDE[tsql](../../includes/tsql-md.md)] ou a outro código gerenciado.  
+  As funções de agregação executam um cálculo em um conjunto de valores e retornam um único valor. Tradicionalmente, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece supoute somente a funções de agregação internas, como **SUM** ou **MAX**, que operam em um conjunto de valores escalares de entrada e geram um único valor de agregação a partir desse conjunto A integração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o CLR (common language runtime) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework agora permite que os desenvolvedores criem funções de agregação personalizadas no código gerenciado e tornem essas funções acessíveis ao [!INCLUDE[tsql](../../includes/tsql-md.md)] ou a outro código gerenciado.  
   
  A tabela a seguir lista os tópicos desta seção.  
   

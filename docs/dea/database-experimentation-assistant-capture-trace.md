@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: dc53a9e1d151e07ce7e2eebf1444fd0d0065f8be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab361c4e83ae5e2b2bb6614bdc4a513e0bdd77ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794495"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058999"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturar um rastreamento no Assistente de experimentação do banco de dados
 

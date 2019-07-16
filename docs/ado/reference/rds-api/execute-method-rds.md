@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5c0fa79bdf5acc89b7d884afa604ab08e926d9e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1a5fa5c9002d4a27490dfc98fb79f482539f042
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964312"
 ---
 # <a name="execute-method-rds"></a>Método Execute (RDS)
 Executa a solicitação e cria um conjunto de registros ADO para uso no ADO 2.5 e posteriores.  

@@ -6,13 +6,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: a6943a850a2955a36723d14c0226bd5c503f23ec
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 2d7f82230dbc6b87bcc8f752c99b7c92ef759253
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140206"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963129"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Problemas comuns com o serviço Launchpad e execução de script externo no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +56,7 @@ No entanto, em organizações onde as políticas de segurança mais restritivas 
 
 Para corrigir o problema, garanta que o **SQLRUserGroup** tenha o direito de sistema **Permitir logon local**.
 
-Para obter mais informações, consulte [Windows configurar contas de serviço e permissões](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
+Para saber mais, leia o tópico [Configurar contas de serviço e permissões do Windows](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
 ## <a name="permissions-to-run-external-scripts"></a>Permissões para executar scripts externos
 
@@ -180,7 +179,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 *[1] "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.SQL2016\\R_SERVICES"*
 
-*[1] "C:/Program Files/Microsoft SQL Server/MSSQL13.SQL2016/R_SERVICES/library"*
+*[1] "SQL de arquivos e Microsoft Server/MSSQL13 da c: / programa. SQL2016 / / biblioteca R_SERVICES"*
 
 Para resolver o problema, reinstale o pacote para a biblioteca de instância do SQL Server.
 

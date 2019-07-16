@@ -5,18 +5,17 @@ description: Saiba como criar clusters de grupo de disponibilidade do SQL Server
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 0f6638d1d31be45f12f0b80b7fc63f918e90d5ca
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 063adf4f1f180138150484e4ac9fc397ef886f5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003564"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurar o Cluster SLES para o grupo de disponibilidade do SQL Server
 

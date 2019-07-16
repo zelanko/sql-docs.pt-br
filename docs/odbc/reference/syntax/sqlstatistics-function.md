@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc0c1d981180c61452f97a01bc0aba6fdc2d81e3
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: ef0f25660a0faa0747752a8ca15c207c1e939669
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793728"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039553"
 ---
 # <a name="sqlstatistics-function"></a>Função SQLStatistics
 **Conformidade com**  
@@ -148,7 +147,7 @@ SQLRETURN SQLStatistics(
 |TIPO (ODBC 1.0)|7|Smallint não NULL|Tipo de informação que está sendo retornado:<br /><br /> SQL_TABLE_STAT indica uma estatística para a tabela (na coluna CARDINALIDADE ou páginas).<br /><br /> SQL_INDEX_BTREE indica um índice de árvore B.<br /><br /> SQL_INDEX_CLUSTERED indica um índice clusterizado.<br /><br /> SQL_INDEX_CONTENT indica um índice de conteúdo.<br /><br /> SQL_INDEX_HASHED indica um índice de hash.<br /><br /> SQL_INDEX_OTHER indica outro tipo de índice.|  
 |ORDINAL_POSITION (ODBC 1.0)|8|Smallint|Número de sequência de coluna no índice (começando com 1); NULL será retornado se o tipo é SQL_TABLE_STAT.|  
 |COLUMN_NAME (ODBC 1.0)|9|Varchar|Nome da coluna. Se a coluna se baseia em uma expressão, como o SALÁRIO + benefícios, a expressão é retornada; Se a expressão não pode ser determinada, uma cadeia de caracteres vazia será retornada. NULL será retornado se o tipo é SQL_TABLE_STAT.|  
-|ASC_OR_DESC (ODBC 1.0)|10|Char(1)|Sequência de classificação da coluna: "A" para em ordem crescente; "D" para decrescente; NULL será retornado se a sequência de classificação de coluna não é compatível com a fonte de dados ou se o tipo é SQL_TABLE_STAT.|  
+|ASC_OR_DESC (ODBC 1.0)|10|char(1)|Sequência de classificação da coluna: "A" para em ordem crescente; "D" para decrescente; NULL será retornado se a sequência de classificação de coluna não é compatível com a fonte de dados ou se o tipo é SQL_TABLE_STAT.|  
 |CARDINALIDADE (ODBC 1.0)|11|Inteiro|Cardinalidade da tabela ou índice; número de linhas na tabela se o tipo é SQL_TABLE_STAT; número de valores exclusivos no índice se o tipo não é SQL_TABLE_STAT; NULL será retornado se o valor não está disponível da fonte de dados.|  
 |PÁGINAS DE (ODBC 1.0)|12|Inteiro|Número de páginas usadas para armazenar o índice ou tabela; número de páginas para a tabela se o tipo é SQL_TABLE_STAT; número de páginas para o índice se o tipo não é SQL_TABLE_STAT; NULL será retornado se o valor não está disponível da fonte de dados ou se não for aplicável à fonte de dados.|  
 |FILTER_CONDITION (ODBC 2.0)|13|Varchar|Se o índice for um índice filtrado, essa é a condição de filtro, como o SALÁRIO > 30000; Se a condição de filtro não pode ser determinada, isso é uma cadeia de caracteres vazia.<br /><br /> NULO se o índice não é um índice filtrado, ele não pode ser determinado se o índice é um índice filtrado ou o tipo é SQL_TABLE_STAT.|  

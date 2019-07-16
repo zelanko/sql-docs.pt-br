@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: acb2fe2d6c6b439295c0a6f0b7a4e233c23cb337
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 7fc3da1474546f0719af20c52f44248baa8ce5da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028263"
 ---
 # <a name="creating-user-defined-types---requirements"></a>Criar tipos definidos pelo usuário – Requisitos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +102,7 @@ ms.locfileid: "49119744"
   
  O **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** tem as seguintes propriedades.  
   
- **Formato**  
+ **Formatar**  
  Especifica o formato de serialização, que pode ser **nativos** ou **UserDefined**, dependendo dos tipos de dados do UDT.  
   
  **IsByteOrdered**  
@@ -113,7 +112,7 @@ ms.locfileid: "49119744"
  Indica se todas as instâncias desse UDT têm a mesma extensão.  
   
  **MaxByteSize**  
- O tamanho máximo da instância, em bytes. Você deve especificar **MaxByteSize** com o **UserDefined** formato de serialização. Para um UDT com serialização definida pelo usuário especificado, **MaxByteSize** refere-se ao tamanho total do UDT em sua forma serializada conforme definido pelo usuário. O valor de **MaxByteSize** deve estar no intervalo de 1 a 8000 ou definido como -1 para indicar que o UDT é maior que 8000 bytes (o tamanho total não pode exceder o tamanho LOB máximo). Considere um UDT com uma propriedade de uma cadeia de caracteres de 10 caracteres (**System. Char**). Quando o UDT é serializado usando um BinaryWriter, o tamanho total da cadeia de caracteres serializada é de 22 bytes: 2 bytes por caractere Unicode UTF-16, multiplicados pelo número máximo de caracteres, mais 2 bytes de controle da sobrecarga ocasionada pela serialização de um fluxo binário. Portanto, ao determinar o valor de **MaxByteSize**, deve ser considerado o tamanho total do UDT serializado: o tamanho dos dados serializados em formato binário mais a sobrecarga ocasionada pela serialização.  
+ O tamanho máximo da instância, em bytes. Você deve especificar **MaxByteSize** com o **UserDefined** formato de serialização. Para um UDT com serialização definida pelo usuário especificado, **MaxByteSize** refere-se ao tamanho total do UDT em sua forma serializada conforme definido pelo usuário. O valor de **MaxByteSize** deve estar no intervalo de 1 a 8000 ou definido como -1 para indicar que o UDT é maior que 8000 bytes (o tamanho total não pode exceder o tamanho LOB máximo). Considere um UDT com uma propriedade de uma cadeia de caracteres de 10 caracteres (**System. Char**). Quando o UDT é serializado usando um BinaryWriter, o tamanho total da cadeia de caracteres serializada é de 22 bytes: 2 bytes por caractere Unicode UTF-16, multiplicado pelo número máximo de caracteres, além de controle de 2 bytes de sobrecarga ocasionada pela serialização de um fluxo binário. Portanto, ao determinar o valor de **MaxByteSize**, deve ser considerado o tamanho total do UDT serializado: o tamanho dos dados serializados em formato binário mais a sobrecarga ocasionada pela serialização.  
   
  **ValidationMethodName**  
  O nome do método usado para validar instâncias do UDT.  
@@ -141,9 +140,9 @@ ms.locfileid: "49119744"
   
 -   Menor que (\<)  
   
--   Maior que ou igual a (>=)  
+-   Maior que ou igual a (> =)  
   
--   Menor que ou igual a (<=)  
+-   Menor ou igual a (< =)  
   
 ### <a name="implementing-nullability"></a>Implementando a nulidade  
  Além de especificar corretamente os atributos dos assemblies, sua classe também precisa suportar a nulidade. Os UDTs carregados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reconhecem nulos, mas para o UDT reconheça um valor nulo, a classe deve implementar a **INullable** interface. Para obter mais informações e um exemplo de como implementar a nulidade em um UDT, consulte [Codificando tipos](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  

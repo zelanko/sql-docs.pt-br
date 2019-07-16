@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e547a21eb86a76a76bc1d4560005bcd58595dfb3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4f9fe3c7f5753788df339484bbf29e2d6e953dba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030433"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>Conversões do tipo de dados datetime do C para SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "52417217"
 
   Este tópico lista os problemas a considerar ao converter tipos C a tipos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de data/hora.  
   
- As conversões descritas na tabela a seguir se aplicam a conversões feitas no cliente. Em casos em que o cliente especifica a precisão de segundo fracionário para um parâmetro que é diferente do que definido no servidor, a conversão do cliente pode ter êxito, mas o servidor retornará um erro quando **SQLExecute** ou  **SQLExecuteDirect** é chamado. Em particular, o ODBC trata qualquer truncamento de frações de segundo como um erro, enquanto o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamento é arredondar; por exemplo, o arredondamento ocorre quando você vai **datetime2(6)** para **datetime2(2)**. Os valores da coluna datetime são arredondados para 1/300º de um segundo e as colunas smalldatetime têm os segundos definidos como zero pelo servidor.  
+ As conversões descritas na tabela a seguir se aplicam a conversões feitas no cliente. Em casos em que o cliente especifica a precisão de segundo fracionário para um parâmetro que é diferente do que definido no servidor, a conversão do cliente pode ter êxito, mas o servidor retornará um erro quando **SQLExecute** ou  **SQLExecuteDirect** é chamado. Em particular, o ODBC trata qualquer truncamento de frações de segundo como um erro, enquanto o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamento é arredondar; por exemplo, o arredondamento ocorre quando você vai **datetime2(6)** para **datetime2(2)** . Os valores da coluna datetime são arredondados para 1/300º de um segundo e as colunas smalldatetime têm os segundos definidos como zero pelo servidor.  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -49,7 +48,7 @@ ms.locfileid: "52417217"
   
 ## <a name="key-to-symbols"></a>Legenda dos símbolos  
   
--   **-**: Não há suporte a nenhuma conversão. Será gerado um registro de diagnóstico com SQLSTATE 07006 e a mensagem "Violação do atributo de tipo de dados restrito".  
+-   **-** : Não há suporte a nenhuma conversão. Será gerado um registro de diagnóstico com SQLSTATE 07006 e a mensagem "Violação do atributo de tipo de dados restrito".  
   
 -   **1**: Se os dados fornecidos não forem válidos, um registro de diagnóstico será gerado com SQLSTATE 22007 e a mensagem "Formato de datetime inválido".  
   
@@ -83,7 +82,7 @@ ms.locfileid: "52417217"
   
     ||||  
     |-|-|-|  
-    |Tipo|Escala implícita<br /><br /> 0|Escala implícita<br /><br /> 1..9|  
+    |type|Escala implícita<br /><br /> 0|Escala implícita<br /><br /> 1..9|  
     |SQL_C_TYPE_TIMESTAMP|19|21..29|  
   
      Entretanto, para SQL_C_TYPE_TIMESTAMP, se as frações de segundo puderem ser representadas com três dígitos sem perda de dados e o tamanho da coluna for 23 ou maior, serão gerados exatamente três dígitos de frações de segundo. Esse comportamento assegura a compatibilidade com versões anteriores de aplicativos desenvolvidos usando drivers ODBC mais antigos.  

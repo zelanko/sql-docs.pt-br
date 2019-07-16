@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 153c2e2b8c75c21451dca3b673129a059d78e3a6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e8285713df1fb17b2e82dcfa6edac0fd6db5500a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950667"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +41,17 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@dbname=**] **'***dbname***'**  
+ [ **@dbname=** ] **'***dbname***'**  
  É o banco de dados para o qual a opção de banco de dados de replicação está sendo definida. *DB_NAME* está **sysname**, sem padrão.  
   
- [**@optname=**] **'***optname***'**  
+ [ **@optname=** ] **'***optname***'**  
  É a opção de banco de dados de replicação a ser habilitada ou desabilitada. *optname* está **sysname**, e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**publicação de mesclagem**|O banco de dados pode ser usado para publicações de mesclagem.|  
-|**publish**|O banco de dados pode ser usado para outros tipos de publicação.|  
-|**subscribe**|O banco de dados é um banco de dados de assinatura.|  
+|**Publicar**|O banco de dados pode ser usado para outros tipos de publicação.|  
+|**Inscrever-se**|O banco de dados é um banco de dados de assinatura.|  
 |**sincronizar com backup**|O banco de dados está habilitado para backup coordenado. Para obter mais informações, consulte [habilitar Backups coordenados para replicação transacional &#40;programação Transact-SQL de replicação&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
 `[ @value = ] 'value'` É se deseja habilitar ou desabilitar a opção de banco de dados de replicação. *valor* está **sysname**e pode ser **verdadeira** ou **false**. Quando esse valor é **falsos** e *optname* é **publicação de mesclagem**, as assinaturas para o banco de dados publicado de mesclagem também serão descartadas.  

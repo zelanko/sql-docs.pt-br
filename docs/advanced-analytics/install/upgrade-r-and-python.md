@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 93384c8152109b01720ae7e861731638316d4966
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 6210cfe67b4c360f14fc3e68929a5ac4f5f5d570
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962821"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Atualizar os componentes do machine learning (R e Python) em instâncias do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -61,7 +60,7 @@ Microsoft R Open (MRO) r | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4
 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | NA | 1.0 |  1.0 |  1.0 |  1.0 |
 
 
-[**SQL Server 2017 Machine Learning Services**](../install/sql-machine-learning-services-windows-install.md)
+[**Serviços de aprendizado de máquina do SQL Server 2017**](../install/sql-machine-learning-services-windows-install.md)
 
 Componente |Versão inicial | MLS 9.3 | | | |
 ----------|----------------|---------|-|-|-|-|
@@ -243,7 +242,7 @@ Você tem duas opções para reverter a associação: Repetir a instalação nov
 2. O instalador identifica instâncias locais que são candidatos para a desassociação.
 3. Desmarque a caixa de seleção ao lado da instância que você deseja reverter para a configuração original.
 4. Aceite o contrato de licenciamento. Você deve indicar sua aceitação dos termos de licenciamento, mesmo durante a instalação.
-5. Clique em **Concluir**. O processo leva algum tempo.
+5. Clique em **Finalizar**. O processo leva algum tempo.
 
 #### <a name="bkmk_cmdunbind"></a> Desassociar a linha de comando
 
@@ -277,7 +276,7 @@ Você pode ter adicionado outros pacotes de terceiros ou de código-fonte aberto
 
 ### <a name="parameters"></a>Parâmetros
 
-|Nome|Descrição|
+|Name|Descrição|
 |------|------|
 |*list*| Exibe uma lista de todas as IDs de instância do Banco de Dados SQL no computador atual|
 |*bind*| Atualiza a instância do Banco de Dados SQL especificada para a última versão do R Server e garante que a instância obtém automaticamente as atualizações futuras do R Server|

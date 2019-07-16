@@ -11,14 +11,13 @@ dev_langs:
 - TSQL
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 5d125f6bdbc024e0f72cb138075e5abb97ae93eb
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: c6947ae0df357c1a1bd1da2973ff3bf6a81717f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059335"
 ---
 # <a name="sysworkloadmanagementworkloadclassifiers-transact-sql"></a>sys.workload_management_workload_classifiers (Transact-SQL)
 
@@ -26,11 +25,11 @@ ms.locfileid: "67413230"
 
  Retorna detalhes de classificadores de carga de trabalho.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|ID exclusiva do classificador. Não permite valor nulo||
 group_name|**sysname**|Nome do grupo de carga de trabalho, a que o classificador é atribuído. Não permite valor nulo. |Classes de recurso estáticas</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br> </br>Classes de recurso dinâmicas</br>smallrc</br>mediumrc</br>largerc</br>xlargerc|
-nome|**sysname**|Nome do classificador. Deve ser exclusivo para a instância. Não permite valor nulo.||
+name|**sysname**|Nome do classificador. Deve ser exclusivo para a instância. Não permite valor nulo.||
 |importance|**sysname**|É a importância relativa de uma solicitação neste grupo de carga de trabalho e em grupos de carga de trabalho para recursos compartilhados.  Importância especificada no classificador substitui a configuração de importância do grupo de carga de trabalho.|baixa, below_normal, normal, above_normal, alto |
 |create_time|**datetime**|Hora em que o classificador foi criado. Não permite valor nulo.||
 modify_time|**datetime**|Tempo de que classificador foi modificado pela última vez. Não permite valor nulo.||

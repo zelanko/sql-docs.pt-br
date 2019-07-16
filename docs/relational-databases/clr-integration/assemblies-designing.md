@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6d1fc46d8ccffa84ad820153a060b6b02c2deb71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 205347e9d70ae378e10245c45d2580767eafbd8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028028"
 ---
 # <a name="assemblies---designing"></a>Assemblies – criação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47808024"
 -   Se uma parte do código gerenciado requerer permissão mais alta, será melhor separar aquele código em um assembly separado do código que não requer tal permissão.  
   
 ## <a name="managing-assembly-security"></a>Gerenciando segurança de assembly  
- Você pode controlar quanto um assembly pode acessar recursos protegidos por Código de .NET Access Security quando executar código gerenciado. Você faz isto especificando um de três conjuntos de permissão quando você cria ou modifica um assembly: SAFE, EXTERNAL_ACCESS ou UNSAFE.  
+ Você pode controlar quanto um assembly pode acessar recursos protegidos por Código de .NET Access Security quando executar código gerenciado. Você pode fazer isso especificando um dos três conjuntos de permissões ao criar ou modificar um assembly: -SAFE, EXTERNAL_ACCESS ou UNSAFE.  
   
 ### <a name="safe"></a>SAFE  
  SAFE é o conjunto de permissões padrão e é o mais restritivo. Código executado por um assembly com permissões SAFE não pode acessar recursos do sistema externo, como arquivos, rede, variáveis de ambiente ou Registro. O código SAFE pode acessar dados dos bancos de dados locais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou pode executar computações e lógica empresarial que não envolvam acesso de recursos fora dos bancos de dados locais.  

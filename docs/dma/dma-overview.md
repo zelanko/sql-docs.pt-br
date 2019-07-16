@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 2766005287a522a84d209d995be0de9a94e45c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9aaadf6f4226b2c9a457c7437412f35c1bbe20fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054712"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Visão geral do Assistente de migração de dados
 O Assistente de DMA (Data Migration) o ajuda a que atualizar para uma plataforma de dados moderna, detectando problemas de compatibilidade que podem afetar a funcionalidade de banco de dados na nova versão do SQL Server ou banco de dados SQL. O DMA recomenda melhorias no desempenho e confiabilidade para seu ambiente de destino e permite que você mova seu esquema, dados e objetos não contidos do servidor de origem para o servidor de destino.
@@ -31,7 +30,7 @@ O Assistente de DMA (Data Migration) o ajuda a que atualizar para uma plataforma
 ## <a name="get-data-migration-assistant"></a>Obter o Assistente de Migração de Dados
 Para instalar o DMA, baixe a versão mais recente da ferramenta do [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595)e, em seguida, execute o **DataMigrationAssistant.msi** arquivo.
 
-## <a name="capabilities"></a>Recursos
+## <a name="capabilities"></a>Capacidades
 - Avalie as instâncias do SQL Server local migrando para bancos de dados SQL do Azure. O fluxo de trabalho de avaliação ajuda você a detectar os seguintes problemas que podem afetar a migração de banco de dados SQL do Azure e fornece orientações detalhadas sobre como resolvê-los.
 
   - Problemas de bloqueio de migração: Descobre os problemas de compatibilidade que bloqueiam a migração no local do SQL Server bancos de dados de para bancos de dados SQL do Azure. O DMA fornece recomendações para ajudá-lo a resolver esses problemas.
@@ -59,7 +58,7 @@ Para instalar o DMA, baixe a versão mais recente da ferramenta do [Microsoft Do
 
 - Após uma migração bem-sucedida, aplicativos podem se conectar aos bancos de dados de SQL Server de destino diretamente.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 Para executar uma avaliação, você precisa ser um membro do SQL Server **sysadmin** função.
 
 ## <a name="supported-source-and-target-versions"></a>Versões com suporte de origem e destino

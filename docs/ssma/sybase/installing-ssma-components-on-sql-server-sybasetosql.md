@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6121c75390e7493052a16b2e898eac69283e41ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1fbc3a8f74b21bd5a53bdd874b5c41ef522e29f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63294567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029013"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>Instalar os componentes do SSMA no SQL Server (SybaseToSQL)
 Além de instalar o SSMA, para usar a migração de dados do lado servidor, você também deve instalar componentes no computador que está executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esses componentes incluem o pacote de extensão do SSMA, que dá suporte à migração de dados e provedores do Sybase para habilitar a conectividade de servidor para servidor.  

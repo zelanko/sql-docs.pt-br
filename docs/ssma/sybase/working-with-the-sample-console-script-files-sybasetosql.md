@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4a87b213731ac0b8cb1b76eb87b1997f86157c6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe9e05f0078f0d1a9d3ab5ea6e2763ac28207085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62902668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091788"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Trabalhar com os arquivos de script de console de exemplo (SybaseToSQL)
 Alguns arquivos de exemplo foram fornecidos juntamente com o produto para a referência de usuário e o uso. Esta seção descreve a maneira de personalizar facilmente esses scripts para as necessidades do usuário final.  

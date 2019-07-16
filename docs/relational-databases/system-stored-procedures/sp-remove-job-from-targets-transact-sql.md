@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e6ec60d6b11f9d17a6f5446e2840688fd1e4cb75
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1ba55c2744d1fad0b6453e0f1d1cd2ea96934bfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006974"
 ---
 # <a name="spremovejobfromtargets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ sp_remove_job_from_targets [ @job_id = ] job_id
   
 `[ @job_name = ] 'job_name'` O nome do trabalho do qual remover os servidores de destino especificados ou grupos de servidores de destino. Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados. *job_name* está **sysname**, com um padrão NULL.  
   
-`[ @target_server_groups = ] 'target_server_groups'` Uma lista separada por vírgulas de grupos de servidores de destino a ser removido do trabalho especificado. *target_server_groups* está **nvarchar(1024)**, com um padrão NULL.  
+`[ @target_server_groups = ] 'target_server_groups'` Uma lista separada por vírgulas de grupos de servidores de destino a ser removido do trabalho especificado. *target_server_groups* está **nvarchar(1024)** , com um padrão NULL.  
   
-`[ @target_servers = ] 'target_servers'` Uma lista separada por vírgulas de servidores de destino a ser removido do trabalho especificado. *target_servers* está **nvarchar(1024)**, com um padrão NULL.  
+`[ @target_servers = ] 'target_servers'` Uma lista separada por vírgulas de servidores de destino a ser removido do trabalho especificado. *target_servers* está **nvarchar(1024)** , com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

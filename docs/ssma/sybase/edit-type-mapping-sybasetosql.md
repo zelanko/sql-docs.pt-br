@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d6daf0e74ff8c7a7c65441bc98afc9c47964ef0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd8dfbd7aa4205424c45861f6ada1113f76d344e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029176"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>Editar mapeamento de tipo (SybaseToSQL)
 O **editar mapeamento de tipo** caixa de diálogo permite que você especifique como os tipos são mapeados entre os objetos de banco de dados de origem e de destino.  
@@ -34,10 +33,10 @@ Selecione o tipo de dados de origem para mapear para um [!INCLUDE[ssNoVersion](.
   
 Se for o tipo de dados de comprimento variável, os campos a seguir aparecerá sob **tipo de fonte**:  
   
-**De**  
+**From**  
 Especifique o comprimento mínimo para esse mapeamento. Por exemplo, para o **nchar** tipo de dados, você pode inserir 10 para especificar que esse mapeamento é para um intervalo começando **nchar(10)** .  
   
-**Para**  
+**To**  
 Especifique o comprimento máximo para esse mapeamento. Por exemplo, para o **nchar** tipo de dados, você pode inserir 20 para especificar que esse mapeamento é para um intervalo terminando às **nchar(20)** .  
   
 **Tipo de destino**  

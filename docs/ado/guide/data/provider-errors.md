@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 56fff67f882eceec3c07553e5c465da65a69ce65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924542"
 ---
 # <a name="provider-errors"></a>Erros do provedor
 Quando ocorre um erro do provedor, um erro de tempo de execução de -2147467259 é retornado. Quando você recebe esse erro, verifique as **erros** coleção de ativo **Conexão** objeto, que irá conter um ou mais erros que descreve o que ocorreu.  
@@ -71,7 +70,7 @@ End Function
 |**HelpContext, HelpFile**|Refere-se para o arquivo de Ajuda e o tópico da Ajuda que contém uma descrição do erro que ocorreu.|  
 |**NativeError**|O número de erro específico do provedor.|  
 |**número**|Um inteiro longo que representa o número (listados na **ErrorValueEnum**) do erro que ocorreu.|  
-|**Origem**|Indica o nome do objeto ou aplicativo que gerou um erro.|  
+|**Source**|Indica o nome do objeto ou aplicativo que gerou um erro.|  
 |**SQLState**|Um código de erro de cinco caracteres que o provedor retorna durante o processo de uma instrução SQL.|  
   
  O ADO **erro** objeto é muito semelhante ao padrão Visual Basic **Err** objeto. Suas propriedades descrevem o erro que ocorreu. Além do número do erro, você também receberá dois conjuntos relacionados de informações. O **NativeError** propriedade contém um número de erro específica do provedor que você está usando. No exemplo anterior, o provedor é o Microsoft OLE DB Provider para SQL Server, portanto **NativeError** conterá os erros específicos ao SQL Server. O **SQLState** propriedade tem um código de cinco letras que descreve um erro em uma instrução SQL.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c297578fabca3c20781c6227307f25dbece1bbfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62797821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055235"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**JOB**|Fornece informações sobre uma categoria de trabalho.|  
-|**ALERT**|Fornece informações sobre uma categoria de alerta.|  
+|**ALERTA**|Fornece informações sobre uma categoria de alerta.|  
 |**OPERADOR**|Fornece informações sobre uma categoria de operador.|  
   
 `[ @type = ] 'type'` O tipo de categoria para a qual as informações são solicitadas. *tipo de* está **varchar(12)** , com um padrão de NULL, e pode ser um destes valores.  

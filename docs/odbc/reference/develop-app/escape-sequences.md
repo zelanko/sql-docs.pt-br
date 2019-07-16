@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5913abfa-d280-43e4-a2f1-05a924388bf9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c1423d7bcc0f0b943b490fdcf8f931efb6b533c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d73282cde4d0598d7e6a35ac6273935626b96969
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001376"
 ---
 # <a name="escape-sequences"></a>Sequências de escape
 ODBC define sequências de escape que contém a gramática padrão para chamadas de função escalar de data, hora, carimbo de hora e literais de intervalo de data e hora **como** predicado caracteres de escape, junções externas e chamadas de procedimento. Aplicativos interoperáveis devem usar essas sequências sempre que possível.  

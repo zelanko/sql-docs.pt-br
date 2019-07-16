@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 497bbda56028394547414aff5b360473445da9c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e60af25238f52e9a1f6245fc938cee1aabec0bab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485882"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945202"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Permissões de membro de hierarquia (Master Data Services)
 
@@ -43,7 +42,7 @@ ms.locfileid: "65485882"
 |**leitura**|Os membros são exibidos.<br /><br /> <br /><br /> Observação: Se você atribuir apenas a permissão **Leitura** a **Raiz**, os membros de **Raiz** serão somente leitura; porém, em hierarquias e coleções explícitas, o usuário poderá mover os membros para **Raiz** e adicionar novos membros a **Raiz**.|  
 |**Criar**|A permissão Criar não está disponível na permissão de membro da hierarquia.|  
 |**Update (atualizar)**|Os membros são exibidos e o usuário pode alterá-los. O usuário também pode mover os membros em qualquer hierarquia explícita ou coleções a que os membros pertencem.|  
-|**Delete (excluir)**|Os membros são exibidos e o usuário pode excluí-los.|  
+|**Excluir**|Os membros são exibidos e o usuário pode excluí-los.|  
 |**Deny**|Os membros não são exibidos.|  
   
  Na guia **Membros da Hierarquia** , as permissões que você atribui não entram em vigor imediatamente. A frequência com que as permissões são aplicadas depende da **Configuração de intervalo de processamento da segurança de membro** na tabela de Configurações do Sistema no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . É possível aplicar permissões de membros imediatamente seguindo as etapas em [Aplicar permissões de membros imediatamente &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  

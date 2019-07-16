@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 37b775d1-65ac-45ac-8572-454bc4e3c1a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c9b8999e229e8a6ed4804b2f06a4072d139ae93a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 330b55ef2d4fee090c453990d3fe75e6e2dacb6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063606"
 ---
 # <a name="setting-extendedansisql"></a>Configurar o ExtendedAnsiSQL
 O atributo pode ser controlado na cadeia de conexão, adicionando o atributo ExtendedAnsiSQL:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|ExtendedAnsiSQL=0 (default)|Essa configuração não permite os novos recursos.|  
+|ExtendedAnsiSQL = 0 (padrão)|Essa configuração não permite os novos recursos.|  
 |ExtendedAnsiSQL=1|Essa configuração permite que os novos recursos.|  
   
  O atributo também pode ser definido em um DSN por meio de **opções avançadas de** ao configurar um DSN por meio do painel de controle de caixa de diálogo.  

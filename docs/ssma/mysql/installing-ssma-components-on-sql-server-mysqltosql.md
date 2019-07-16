@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1f80198787dd85d8f0c65e9881925641f9f081e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64040f4a0caf8253e6d6e8a3b00ff21e0cebe6d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075356"
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Instalar os componentes do SSMA no SQL Server (MySQLToSql)
 Além de instalar o SSMA, você também deve instalar componentes no computador que está executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esses componentes incluem o pacote de extensão do SSMA, que dá suporte à migração de dados e provedores do MySQL para habilitar a conectividade de servidor para servidor.  
@@ -27,7 +26,7 @@ O pacote de extensão do SSMA adiciona um banco de dados **sysdb**, para a inst�
   
 Além disso, quando você migra dados a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o SSMA cria [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalhos do Agent, quando o mecanismo de migração de dados do lado servidor é usado para migrar os dados.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Pré-requisitos  
 Antes de instalar o SSMA para componentes do servidor MySQL em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], certifique-se de que o computador atende aos seguintes requisitos:  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 ou posterior.  

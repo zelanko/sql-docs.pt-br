@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 29f3683f-12f3-4304-8a54-fe133c25a423
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 51899f0c3b37cf8228bb25ae8183d8f8e27ba4e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8e4e59606f3b68fbd9ce272db8ea8a50ab53e88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922712"
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>Deadlocks com o nível de isolamento repetível de leitura
 Se um objeto comercial personalizado usa um nível de isolamento de leitura repetível para acessar um SQL Server e o objeto de negócios é chamado simultaneamente por dois clientes que enviar uma consulta e atualização na mesma transação, um deadlock é possível. Serviço de dados remoto foi projetado para permitir que um dos processos de tempo limite para liberar o bloqueio, mas a atualização falhará para esse cliente.  

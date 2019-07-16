@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5d135b3b4b0f9d63ccd89db04be259f3c7031b7e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 77d1512c472005e59909342c94a88c4464c4fe5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096071"
 ---
 # <a name="sptablesex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,20 +65,20 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE**|Nome de uma tabela de usuário.|  
 |**VIEW**|Nome de uma exibição.|  
   
-`[ @fUsePattern = ] 'fUsePattern'` Determina se os caracteres **_**, **%**, **[**, e **]** são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* está **bit**, com um padrão de 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina se os caracteres **_** , **%** , **[** , e **]** são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* está **bit**, com um padrão de 1.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- None  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nome do qualificador de tabela. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em outros produtos, ela representa o nome do servidor do ambiente de banco de dados da tabela. Esse campo pode ser NULL.|  
+|**TABLE_CAT**|**sysname**|Nome do qualificador de tabela. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (_qualificador_ **.** _proprietário_ **.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em outros produtos, ela representa o nome do servidor do ambiente de banco de dados da tabela. Esse campo pode ser NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome do proprietário de tabela. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta coluna representa o nome do usuário de banco de dados que criou a tabela. Esse campo sempre retorna um valor.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela. Esse campo sempre retorna um valor.|  
 |**TABLE_TYPE**|**varchar(32)**|Tabela, tabela do sistema ou exibição.|  
-|**REMARKS**|**varchar(254)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
+|**COMENTÁRIOS**|**varchar(254)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
   
 ## <a name="remarks"></a>Comentários  
  **sp_tables_ex** é executado consultando o conjunto de linhas de tabelas do **IDBSchemaRowset** interface do provedor OLE DB correspondente a *table_server*. O *table_name*, *table_schema*, *table_catalog*, e *coluna* parâmetros são passados para essa interface para restringir as linhas retornado.  

@@ -7,13 +7,12 @@ ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: bd0a79a3991c34ddbcf874aca80160299074919a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 65a7954aa18f9e8dbdfd814a6b0d189683e4606f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962319"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Pontuação nativa usando a função PREVER T-SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ Para usar a pontuação nativa, chame a função PREVER T-SQL e passar as entrad
 
 A função retorna previsões para os dados de entrada, junto com qualquer coluna de dados de origem que você deseja passar.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 PREVER está disponível em todas as edições do mecanismo de banco de dados do SQL Server 2017 e habilitado por padrão, incluindo os serviços do SQL Server 2017 Machine Learning no Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) ou banco de dados SQL. Você não precisa instalar o R, Python, ou habilitar recursos adicionais.
 

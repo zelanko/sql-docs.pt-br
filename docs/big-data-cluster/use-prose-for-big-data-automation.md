@@ -5,17 +5,16 @@ description: Este artigo descreve como usar o Acelerador de código PROSA no est
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c26a6efa1f96ac5016d1560f0ae4d9e02f0d369d
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957680"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Wrangling de dados usando o Acelerador de código PROSA
 
@@ -114,7 +113,7 @@ Para obter mais informações, consulte o [documentação](https://aka.ms/prose-
 Outro cenário comum é detectar padrões em uma coluna de cadeia de caracteres com a finalidade de limpeza ou de agrupamento. Por exemplo, você pode ter uma coluna de data com datas em vários formatos diferentes. Para padronizar os valores, você talvez queira escrever instruções condicionais usando expressões regulares.
 
 
-|   |Nome                      |BirthDate      |
+|   |Name                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Unknown        |

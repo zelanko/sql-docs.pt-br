@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7e308589ab565b5702bbf2cba939835a50c08d8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f07f230f52fee5707084c01060e92220b35cb75c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029117"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Introdução ao SSMA para SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA (Migration Assistant) para o SAP ASE permite que você rapidamente esquemas de banco de dados do SAP Adaptive Server Enterprise (ASE) para converter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou esquemas de banco de dados SQL, carregar os esquemas resultantes em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou banco de dados SQL Azure, e migrar os dados SAP ASE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou banco de dados SQL do Azure.  
@@ -95,7 +94,7 @@ O SSMA contém os seguintes menus:
   
 |Menu|Descrição|  
 |--------|---------------|  
-|**File**|Contém comandos para trabalhar com projetos, conectar-se ao SAP ASE e conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou banco de dados SQL.|  
+|**Arquivo**|Contém comandos para trabalhar com projetos, conectar-se ao SAP ASE e conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou banco de dados SQL.|  
 |**Editar**|Contém comandos para localizar e trabalhar com texto nas páginas de detalhes, como copiar [!INCLUDE[tsql](../../includes/tsql-md.md)] do painel de detalhes do SQL. Também contém o **gerenciar indicadores** opção, onde você pode ver uma lista de indicadores atuais. Você pode usar os botões no lado direito da caixa de diálogo para gerenciar os indicadores.|  
 |**Exibir**|Contém o **sincronizar metadados Explorers** comando. Isso sincroniza os objetos entre o Gerenciador de metadados do Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Gerenciador de metadados do SQL Azure. Também contém comandos para exibir e ocultar os **saída** e **lista de erros** painéis e uma opção **Layouts** para gerenciar os Layouts.|  
 |**Ferramentas**|Contém comandos para criar relatórios, exportar dados e migrar objetos e dados. Também fornece acesso para o **configurações globais** e **configurações do projeto** caixas de diálogo.|  

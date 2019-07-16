@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1a6e149c81345cae00d5fdc918fa4366685bfd58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32a36388b1be6dc7f5bab6bbb0bd9f97b01aac46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708613"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910616"
 ---
 # <a name="adox-properties"></a>Propriedades ADOX
 
@@ -36,7 +35,7 @@ ms.locfileid: "66708613"
 |[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|Indica a ação executada quando uma chave primária é excluída.|  
 |[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)|Indica se os registros que têm valores nulos em seus campos de índice têm entradas de índice.|  
 |[Item](../../../ado/reference/ado-api/item-property-ado.md)|Indica um membro específico de uma coleção por nome ou número ordinal.|  
-|[Nome](../../../ado/reference/adox-api/name-property-adox.md)|Indica o nome do objeto.|  
+|[Name](../../../ado/reference/adox-api/name-property-adox.md)|Indica o nome do objeto.|  
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|Indica a escala de um valor numérico na coluna.|  
 |[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|Especifica o catálogo do pai de uma tabela ou coluna para fornecer acesso a propriedades específicas do provedor.|  
 |[Precisão](../../../ado/reference/adox-api/precision-property-adox.md)|Indica a precisão máxima de valores de dados na coluna.|  

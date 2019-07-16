@@ -2,24 +2,23 @@
 title: Monitorar consultas ativas - Parallel Data Warehouse | Microsoft Docs
 description: Use as exibições de sistema do Console de administração e Parallel Data Warehouse para monitorar consultas ativas no Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d2b1ee84b2ae738d7790e1238176331a221ac473
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65d656b02ef0d726292a7d37aef565bf508d7662
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960490"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>Monitorando consultas ativas - Parallel Data Warehouse
 Este artigo mostra como usar o Console de administração e as exibições do sistema do SQL Server PDW para monitorar consultas do Active Directory. Ver [monitorar o dispositivo usando o Console de administração](monitor-the-appliance-by-using-the-admin-console.md) e [exibições do sistema](tsql-system-views.md) para obter informações sobre essas ferramentas.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 Independentemente do método usado para monitorar consultas ativas, o logon deve ter as permissões descritas em "Use todos os do Console de administração" [conceder permissões para usar o Console de administração](grant-permissions.md#grant-permissions-to-use-the-admin-console).  
   
 ## <a name="PermsAdminConsole"></a>Monitor de consultas ativas  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 14caf6e96b41fdf2e7f8b4d20f16852e890bd166
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96bb307607792a3846ee6566027457a05ce3b905
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037930"
 ---
 # <a name="var-mdx"></a>Var (MDX)
 

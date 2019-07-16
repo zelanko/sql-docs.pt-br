@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 918836e949593672417240c1b91026e1e02c4788
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964545"
 ---
 # <a name="createobject-method-rds"></a>Método CreateObject (RDS)
 Cria o proxy para o objeto de negócios de destino e retorna um ponteiro para ele. Os pacotes e realizar marshaling dos dados de proxy para o stub do lado do servidor para comunicações com o objeto de negócios enviar solicitações e dados pela Internet. Para objetos de componente do processo, sem os proxies são usados, apenas um ponteiro para o objeto é fornecido.  
@@ -38,7 +37,7 @@ Cria o proxy para o objeto de negócios de destino e retorna um ponteiro para el
 |Em processo|Set object = DataSpace.CreateObject("ProgId", "")|  
   
 ## <a name="parameters"></a>Parâmetros  
- *Objeto*  
+ *Object*  
  Uma variável de objeto que é avaliada como um objeto que é o tipo especificado na *ProgID*.  
   
  *DataSpace*  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d003b1f15500b1f6d0b8490d9e712a6a34b100a3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906103"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +44,11 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @object_type = ] 'object_type'` O tipo de informação a ser retornado. *object_type*está **char(9)**, sem padrão. *object_type* pode ser ALERTS, que lista os alertas atribuídos ao nome de operador fornecido *,* ou OPERATORS, que lista os operadores responsáveis pelo nome de alerta fornecido *.*  
+`[ @object_type = ] 'object_type'` O tipo de informação a ser retornado. *object_type*está **char(9)** , sem padrão. *object_type* pode ser ALERTS, que lista os alertas atribuídos ao nome de operador fornecido *,* ou OPERATORS, que lista os operadores responsáveis pelo nome de alerta fornecido *.*  
   
 `[ @name = ] 'name'` Um nome de operador (se *object_type* for OPERATORS) ou um nome de alerta (se *object_type* for ALERTS). *nome da* está **sysname**, sem padrão.  
   
-`[ @enum_type = ] 'enum_type'` O *object_type*informações que são retornadas. *enum_type* é ACTUAL na maioria dos casos. *enum_type*está **char(10)**, sem padrão e pode ser um destes valores.  
+`[ @enum_type = ] 'enum_type'` O *object_type*informações que são retornadas. *enum_type* é ACTUAL na maioria dos casos. *enum_type*está **char(10)** , sem padrão e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  

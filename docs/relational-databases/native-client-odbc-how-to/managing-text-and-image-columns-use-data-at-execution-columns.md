@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54b15c11eacdd29eeea01b867f9f1c7e8a7186b4
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 641310f127e37f00e096c5e9ed2da8ed4b09347f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580267"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898423"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Gerenciar colunas Text e Image – Usar colunas de dados em execução
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

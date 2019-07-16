@@ -1,5 +1,5 @@
 ---
-title: sys.database_query_store_options (Transact-SQL) | Microsoft Docs
+title: database_query_store_options (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2019
 ms.prod: sql
@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02f1d456e7b2e6849bd179a4cb42d862e3d06d03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de6033aaa70b415ff7d218c2a0d8c3138845c8fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022645"
 ---
 # <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "65725137"
 |-----------------|---------------|-----------------|  
 |**desired_state**|**smallint**|Indica o modo de operação desejada de Store de consulta, explicitamente definidas pelo usuário.<br /> 0 = OFF <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE|  
 |**desired_state_desc**|**nvarchar(60)**|Descrição textual do modo de operação desejada da consulta Store:<br />OFF<br />READ_ONLY<br />READ_WRITE|  
-|**actual_state**|**smallint**|Indica o modo de operação de consulta Store. Além de lista de estados desejados exigidos pelo usuário, o estado real pode ser um estado de erro.<br /> 0 = OFF <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE<br /> 3 = ERROR|  
+|**actual_state**|**smallint**|Indica o modo de operação de consulta Store. Além de lista de estados desejados exigidos pelo usuário, o estado real pode ser um estado de erro.<br /> 0 = OFF <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE<br /> 3 = ERRO|  
 |**actual_state_desc**|**nvarchar(60)**|Descrição textual do modo de operação real da consulta Store.<br />OFF<br />READ_ONLY<br />READ_WRITE<br />erro<br /><br /> Há situações quando o estado real for diferente do estado desejado:<br />-Se o banco de dados está definido para o modo somente leitura ou se o tamanho de consulta Store exceder sua cota configurada, consulta Store podem operar em modo somente leitura, mesmo se leitura / gravação tiver sido especificada pelo usuário.<br />-Em cenários extremos Store consulta pode entrar em um estado de erro devido a erros internos. Se isso acontecer, para o SQL 2017 e versões posteriores, consulta Store pode ser recuperado executando o `sp_query_store_consistency_check` procedimento armazenado no banco de dados afetado. Se executando `sp_query_store_consistency_check` não funciona e para o SQL 2016, você precisará limpar os dados, executando `ALTER DATABASE [YourDatabaseName] SET QUERY_STORE CLEAR ALL;`|  
 |**readonly_reason**|**int**|Quando o **desired_state_desc** é READ_WRITE e o **actual_state_desc** é READ_ONLY, **readonly_reason** retorna um pouco do mapa para indicar por que a consulta Store está em modo somente leitura.<br /><br /> **1** -banco de dados está no modo somente leitura<br /><br /> **2** -banco de dados está no modo de usuário único<br /><br /> **4** -banco de dados está no modo de emergência<br /><br /> **8** -banco de dados é a réplica secundária (aplica-se ao Always On e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] replicação geográfica). Esse valor pode ser observado com eficiência apenas no **legível** réplicas secundárias<br /><br /> **65536** -Store a consulta atingiu o limite de tamanho definido pela opção MAX_STORAGE_SIZE_MB.<br /><br /> **131072** -o número de instruções diferentes em Store consulta atingiu o limite de memória interna. Considere remover consultas que você não precisa ou atualizando para uma camada de serviço superior para habilitar a transferência de Store de consulta para o modo de leitura / gravação.<br />**Aplica-se ao:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> **262144** -tamanho dos itens na memória aguardando para ser persistido em disco atingiu o limite de memória interna. Consulta Store estará em modo somente leitura temporariamente, até que os itens na memória são mantidos em disco. <br />**Aplica-se ao:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> **524288** -banco de dados atingiu o limite de tamanho de disco. Consulta Store é parte do banco de dados de usuário, portanto, se não houver espaço não mais disponível para um banco de dados, o que significa que Store de consulta não pode crescer mais mais.<br />**Aplica-se ao:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. <br /> <br /> Para alternar as operações de consulta Store back modo leitura / gravação, consulte **Verify Query Store está coletando dados de consulta continuamente** seção [melhor prática com a Store consulta](../../relational-databases/performance/best-practice-with-the-query-store.md#Verify).|  
 |**current_storage_size_mb**|**bigint**|Tamanho da consulta Store em disco em megabytes.|  

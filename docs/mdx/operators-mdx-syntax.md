@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c4af3d6a65f6104240c5c9a32d1761e4be69a41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1a03ecd9f41fe7d236f8c61f7059014a6ac07fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088214"
 ---
 # <a name="operators-mdx-syntax"></a>Operadores (sintaxe MDX)
 
@@ -92,11 +91,11 @@ ms.locfileid: "63277599"
   
 |Tipo original|Tipo necessário|Conversão|  
 |-------------------|-----------------|----------------|  
-|Nível|Defina|\<level>.members|  
+|Nível|Defina|\<nível >. Members|  
 |Hierarquia|Membro|\<hierarchy>.defaultmember|  
-|Membro|Tupla|(\<Member>)|  
-|Tupla|Membro|\<tuple>.item(0)|  
-|Tupla|Escalar|\<tuple>.value|  
+|Membro|Tupla|(\<Membro >)|  
+|Tupla|Membro|\<tupla > .item(0)|  
+|Tupla|Escalar|\<tupla >. Value|  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de operador MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   

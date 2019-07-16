@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cac190a634185a5bed77a7ff38423782044c83ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33f2050be5a0fb1b6d58bf00dd8c76c33219a237
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079575"
 ---
 # <a name="using-scrollable-cursors"></a>Usar cursores roláveis
 Usando um cursor rolável exige estas três etapas:  

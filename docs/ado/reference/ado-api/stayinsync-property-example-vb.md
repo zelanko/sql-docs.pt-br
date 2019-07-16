@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b8c271409657aa48ea1187c719254f2eef6b89b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a97ff4191aa065ece5af53087295e13885209d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930812"
 ---
 # <a name="stayinsync-property-example-vb"></a>Exemplo da propriedade StayInSync (VB)
 Este exemplo demonstra como o [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) propriedade facilita o acesso às linhas no modo hierárquico [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  

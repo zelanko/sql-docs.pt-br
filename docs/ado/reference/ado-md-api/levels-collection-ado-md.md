@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fed8684a-b428-4ee4-8f8d-928abe4ad9ad
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 210135807dce19676df68c100b02b351672eea17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68b0f56de12ade676024933c3cfdbfd834f5cc46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949571"
 ---
 # <a name="levels-collection-ado-md"></a>Coleção Levels (ADO MD)
 Contém o [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) objetos que compõem uma hierarquia.  

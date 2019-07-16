@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c03726aa3d4ca4c3f6f405aa518d8128aca980a2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: daa906f14711976587661640fba30130de1a01c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030378"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Comportamento de tipos de data e hora aprimorados com versões anteriores do SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "52527023"
   
 |Tipo SQL Server 2005|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou posterior) Tipo|Tipo de cliente ODBC|Conversão do resultado (de SQL para C)|Conversão do parâmetro (de C para SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|DATETIME|data|SQL_C_TYPE_DATE|OK|OK (1)|  
+|DateTime|Date|SQL_C_TYPE_DATE|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Campos de hora definidos como zero.|OK (2)<br /><br /> Falha se o campo de hora for diferente de zero. Funciona com o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Campos de data definidos como a data atual.|OK (2)<br /><br /> Data ignorada. Falhará se os segundos fracionários forem diferentes de zero. Funciona com o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
@@ -46,7 +45,7 @@ ms.locfileid: "52527023"
 |||SQL_C_TYPE_TIMESTAMP|Falha – literal de hora inválido.|OK (1)|  
 ||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|OK|OK (1)|  
 ||datetime2(7)|SQL_C_TYPE_TIMESTAMP|OK|Valor será arredondado para 1/300º segundo por conversão de cliente.|  
-|Smalldatetime|data|SQL_C_TYPE_DATE|OK|OK|  
+|Smalldatetime|Date|SQL_C_TYPE_DATE|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|Campos de hora definidos como zero.|OK (2)<br /><br /> Falha se o campo de hora for diferente de zero. Funciona com o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|Campos de data definidos como a data atual.|OK (2)<br /><br /> Data ignorada. Falha se os segundos fracionários forem diferentes de zero.<br /><br /> Funciona com o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
@@ -70,10 +69,10 @@ ms.locfileid: "52527023"
 ### <a name="column-metadata-returned-by-sqlcolumns-sqlprocedurecolumns-and-sqlspecialcolumns"></a>Metadados de coluna retornados por SQLColumns, SQLProcedureColumns e SQLSpecialColumns  
  Os valores de coluna a seguir são retornados para tipos de data/hora:  
   
-|Tipo de coluna|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Tipo de coluna|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
-|TYPE_NAME|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |COLUMN_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|20|16, 20..32|16|16|38, 42..54|52, 56..68|  
 |DECIMAL_DIGITS|NULL|NULL|0|3|NULL|NULL|  
@@ -87,9 +86,9 @@ ms.locfileid: "52527023"
 ### <a name="data-type-metadata-returned-by-sqlgettypeinfo"></a>Metadados de tipo de dados retornados por SQLGetTypeInfo  
  Os valores de coluna a seguir são retornados para tipos de data/hora:  
   
-|Tipo de coluna|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Tipo de coluna|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -101,7 +100,7 @@ ms.locfileid: "52527023"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
-|LOCAL_TYPE_NAME|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |SQL_DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_DATETIME|SQL_DATETIME|SQL_WVARCHAR|SQL_WVARCHAR|  

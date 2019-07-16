@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 437b25af01544a1df6197a0d63e21ae2f7bee605
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d07ca74ffb2b793038f230d2b3a5b265101a7eb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824234"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102341"
 ---
 # <a name="sysnumberedprocedureparameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47824234"
 > [!NOTE]  
 >  Não há suporte para os parâmetros XML e CLR em procedimentos numerados.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID do objeto ao qual pertence o parâmetro.|  
 |**procedure_number**|**smallint**|Número deste procedimento no objeto, 2 ou maior.|  
@@ -47,7 +46,7 @@ ms.locfileid: "47824234"
 |**system_type_id**|**tinyint**|ID do tipo de sistema do parâmetro|  
 |**user_type_id**|**int**|ID do tipo do parâmetro, conforme definido pelo usuário.|  
 |**max_length**|**smallint**|Comprimento máximo do parâmetro em bytes.<br /><br /> -1 = O tipo de dados de coluna é varchar(max), nvarchar(max) ou varbinary(max).|  
-|**Precisão**|**tinyint**|Precisão do parâmetro se tiver base numérica; Caso contrário, 0.|  
+|**precisão**|**tinyint**|Precisão do parâmetro se tiver base numérica; Caso contrário, 0.|  
 |**scale**|**tinyint**|Escala do parâmetro, se numérico; do contrário, 0.|  
 |**is_output**|**bit**|1 = Parâmetro é saída ou retorno; do contrário, 0.|  
 |**is_cursor_ref**|**bit**|1 = parâmetro é um parâmetro de referência de cursor.|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 28e8334aa0dfb9c35abbb915ece778961abd84ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b92b93148d7baf1782820ccff6b033983bc6de5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047325"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>Alterar o nome de um sinalizador de versão (Master Data Services)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65485338"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode alterar o nome de um sinalizador de versão.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Gerenciamento de Versões** .  

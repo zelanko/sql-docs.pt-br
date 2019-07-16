@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 010d985245052949451a0b519ee4d7b312a97f4a
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: eb84f1cc40a05078910d10a48de67f1ac3467fe3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413072"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035903"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Processamento de grafo com o SQL Server e banco de dados SQL
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ Estamos começando a adicionar extensões de grafo para o SQL Server, para facil
 
 
 ### <a name="create-graph-objects"></a>Criar objetos de grafo
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensões permitirá que os usuários criar tabelas de nó ou borda. Nós e bordas podem ter propriedades associadas a eles. Como nós e bordas são armazenadas como tabelas, todas as operações que têm suporte em tabelas relacionais têm suporte na tabela de nó ou borda. A seguir está um exemplo:  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensões permitirá que os usuários criar tabelas de nó ou borda. Nós e bordas podem ter propriedades associadas a eles. Como nós e bordas são armazenadas como tabelas, todas as operações que têm suporte em tabelas relacionais têm suporte na tabela de nó ou borda. Veja um exemplo:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

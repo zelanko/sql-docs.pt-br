@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c238b89f6fefbb158c50531d28d2c234c64f64bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9aac31af80ff5774d464f76f130d2d113002e60a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001391"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Escolher uma fonte de dados ou um driver
 A fonte de dados ou o driver usado por um aplicativo às vezes é embutido em código no aplicativo. Por exemplo, um aplicativo personalizado escrito por um departamento de MIS para transferir dados de uma fonte de dados para outro contém os nomes desses dados de fontes – o aplicativo simplesmente não funcionariam com outras fontes de dados. Outro exemplo é um aplicativo vertical, como aquele usado para entrada de ordem. Esse aplicativo sempre usa a mesma fonte de dados, que tem um esquema predefinido conhecido pelo aplicativo.  

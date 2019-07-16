@@ -2,19 +2,18 @@
 title: Capacidade de processamento e armazenamento - Analytics Platform System | Microsoft Docs
 description: Seus requisitos de negócios determinam o número de unidades de escala de dados e o tamanho dos discos de nó de computação que você precisa em seu dispositivo do Analytics Platform System (APS).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f20de8ebc4e3b2970e439dbc413e588aa08b5324
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db2b68230e0e2a1fa9a5645ff40c25cc5146392c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960232"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacidade de processamento e armazenamento no Analytics Platform System
 Seus requisitos de negócios determinam o número de unidades de escala de dados e o tamanho dos discos de nó de computação que você precisa em seu dispositivo do Analytics Platform System (APS). Use esses cálculos de processamento e armazenamento para orientar sua capacidade de compra e decisões de planejamento.  
@@ -87,7 +86,7 @@ Esta tabela estima que você pode carregar e armazenar até 6 petabytes de dados
 |HPE|2 TB|32 TB|8|256 TB|640 TB|7|4,480 TB|  
 |HPE|4 TB|64 TB|8|512 TB|1280 TB|7|8,960 TB|  
 |DELL|1 TB|16 TB|9|144 TB|360 TB|6|2,160 TB|  
-|DELL|2 TB|32 TB|9|288 TB|720 TB|6|4,320 TB|  
+|DELL|2 TB|32 TB|9|288 TB|720 TB|6|4\.320 TB|  
 |DELL|4 TB|64 TB|9|576 TB|1440 TB|6|8,640 TB|   
   
 Explicação:  

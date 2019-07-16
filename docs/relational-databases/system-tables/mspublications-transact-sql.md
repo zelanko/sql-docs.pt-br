@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb939681cb97b80a7bd0498a2e0c1fa30202c404
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: de4970e82155454b3d05d6200bc7413baca97aef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939017"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "52791538"
 |**allow_subscription_copy**|**bit**|Habilita ou desabilita a capacidade para copiar os bancos de dados de assinatura que assinam essa publicação. **0** significa que a cópia está desabilitada, e **1** significa que ele está habilitado.|  
 |**thirdparty_options**|**int**|Especifica se a exibição de uma publicação na pasta replicação do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é suprimida:<br /><br /> **0** = exibir uma publicação heterogênea na pasta replicação do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].<br /><br /> **1** = suprimir a exibição uma publicação heterogênea na pasta replicação do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |**allow_queued_tran**|**bit**|Especifica se a publicação permite atualização enfileirada:<br /><br /> **0 =** publicação não é enfileirada.<br /><br /> **1** = publicação é enfileirada.|  
-|**Opções**|**int**|Nenhuma informação está disponível para esta versão.|  
+|**options**|**int**|Nenhuma informação está disponível para esta versão.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

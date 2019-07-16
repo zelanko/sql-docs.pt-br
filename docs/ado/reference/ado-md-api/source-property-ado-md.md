@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 875a99ea-7f1a-4570-87b1-5ecbebbcf845
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 83c20c90310202a51b5dc0f3e4fb8dcc1bb8232d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0af28306ebc8aa1c10d33f3c96d7871e67144ca7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63061904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949148"
 ---
 # <a name="source-property-ado-md"></a>Propriedade Source (ADO MD)
 Indica a origem dos dados do [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  

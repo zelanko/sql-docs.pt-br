@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: e59b3f16-5b59-40da-880f-f3edf657d1ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7393b4900b2942ef67f28fc6ecd9cbf3eee5d54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 28d16d1ef5e63ee48d2e2251f5661437883c4324
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895641"
 ---
 # <a name="bcpdone"></a>bcp_done
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +40,7 @@ DBINT bcp_done (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *HDBC*  
+ *hdbc*  
  É o identificador de conexão ODBC habilitado para cópia em massa.  
   
 ## <a name="returns"></a>Retorna  

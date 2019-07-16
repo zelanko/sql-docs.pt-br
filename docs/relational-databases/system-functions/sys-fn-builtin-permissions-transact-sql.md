@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 460e620f9b91b3b616b487f6324e640dbaf4f83a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 730508fca6b6f9d3e9515e9ec496971a4b758279
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660745"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046519"
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,16 +67,16 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  *empty_string*  
  Equivalente a DEFAULT.  
   
- **'**<securable_class>**'**  
+ **'** <securable_class> **'**  
  Quando ele é chamado com o nome de uma classe protegível, sys. fn_builtin_permissions retornará todas as permissões que se aplicam à classe. < securable_class > é uma cadeia de caracteres literal que requer aspas. **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>Tabelas retornadas  
   
-|Nome da coluna|Tipo de dados|Ordenação|Description|  
+|Nome da coluna|Tipo de dados|Ordenação|Descrição|  
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|Ordenação do servidor|Descrição da classe de protegível.|  
 |permission_name|**nvarchar(60)**|Ordenação do servidor|Nome de permissão.|  
-|Tipo|**varchar(4)**|Ordenação do servidor|Código de tipo de permissão compacto. Consulte a tabela a seguir.|  
+|type|**varchar(4)**|Ordenação do servidor|Código de tipo de permissão compacto. Consulte a tabela a seguir.|  
 |covering_permission_name|**nvarchar(60)**|Ordenação do servidor|Se não for NULL, será o nome da permissão nessa classe que indica as outras permissões dela.|  
 |parent_class_desc|**nvarchar(60)**|Ordenação do servidor|Se não for NULL, será o nome da classe pai que contém a classe atual.|  
 |parent_covering_permission_name|**nvarchar(60)**|Ordenação do servidor|Se não for NULL, será o nome da permissão nessa classe pai que indica todas as outras permissões dela.|  
@@ -221,9 +220,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO|ADMINISTRAR OPERAÇÕES EM LOTE DO BANCO DE DADOS<br /> **Aplica-se a**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|DATABASE|  
-|DL|Delete (excluir)|DATABASE|  
-|DL|Delete (excluir)|OBJECT|  
-|DL|Delete (excluir)|SCHEMA|  
+|DL|DELETE|DATABASE|  
+|DL|DELETE|OBJECT|  
+|DL|DELETE|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |EX|Execute|DATABASE|  
 |EX|Execute|OBJECT|  

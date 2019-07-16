@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 49f7c204dd5c8fd74c1e2fe1c1c57adb38e60d69
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946118"
 ---
 # <a name="xqueries-involving-order"></a>XQueries que envolvem ordem
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ WHERE ProductModelID=7
   
 -   **@\*** recupera todos os atributos do segundo local de centro de trabalho.  
   
--   A iteração FLWOR (FOR ... RETURN) recupera todos os elementos filho <`step`> do segundo local de centro de trabalho.  
+-   A iteração FLWOR (para... RETURN) recupera todos os <`step`> elementos filho do segundo trabalho center local.  
   
 -   O [função SQL: Column (XQuery)](../xquery/xquery-extension-functions-sql-column.md) inclui o valor relacional no XML que está sendo construído.  
   
@@ -84,7 +83,7 @@ WHERE ProductModelID=7
   
  A consulta anterior recupera apenas os nós de texto. Se você quiser que todo o <`step`> elemento retornado em vez disso, remova o **String ()** função da consulta:  
   
-### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>b. Localizar todos os materiais e ferramentas usados no segundo local do centro de trabalho na fabricação de um produto  
+### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. Localizar todos os materiais e ferramentas usados no segundo local do centro de trabalho na fabricação de um produto  
  Para um modelo de produto específico, a consulta a seguir recupera as ferramentas e os materiais usados no segundo centro de trabalho na sequência de locais de centro de trabalho no processo de produção.  
   
 ```sql
@@ -138,7 +137,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. Recuperar as descrições dos dois primeiros recursos do produto no catálogo de produtos  
- Para um modelo de produto específico, a consulta recupera as primeiras duas descrições do elemento <`Features`> do catálogo de modelo de produtos.  
+ Para um modelo de produto específico, a consulta recupera as primeiras duas descrições do <`Features`> elemento no catálogo de modelo do produto.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -158,7 +157,7 @@ where ProductModelID=19
   
  Observe o seguinte na consulta anterior:  
   
- O corpo da consulta constrói XML que inclui o elemento <`ProductModel`> que tem os atributos ProductModelID e ProductModelName.  
+ O corpo da consulta constrói XML que inclui o <`ProductModel`> elemento que tem os atributos ProductModelID e ProductModelName.  
   
 -   A consulta usa um loop FOR... RETURN para recuperar as descrições de recurso de modelo de produto. O **Position ()** função é usada para recuperar os primeiros dois recursos.  
   

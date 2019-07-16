@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0865502928e98329764ae6085ab2b67aa26f0517
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 278950bac7589b8a6b02d894c8133a699c3bd1ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071800"
 ---
 # <a name="drop-table-command"></a>Comando DROP TABLE
 Remove uma tabela de banco de dados especificado com a fonte de dados e a exclui do disco.  
@@ -51,4 +50,4 @@ DROP TABLE TableName | FileName | ?
 |Sintaxe de ODBC|Fonte de dados|Sintaxe do Visual FoxPro|  
 |-----------------|-----------------|--------------------------|  
 |DROP TABLE *nome da tabela de base*|Banco de dados (arquivo. dbc)|Remover tabela *TableName* excluir|  
-||Diretório de tabelas livres (arquivos. dbf)|ERASE *dbfName*<br /><br /> ERASE *cdxName*<br /><br /> ERASE *fptName*|
+||Diretório de tabelas livres (arquivos. dbf)|ERASE *dbfName*<br /><br /> APAGAR *cdxName*<br /><br /> APAGAR *fptName*|

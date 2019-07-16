@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource (Access Driver) | Microsoft Docs
+title: SQLConfigDataSource (Driver do Access) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1b152fb7-fa12-46b9-b168-006bb1355e77
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd626d476bf1c4ac8b4f83f397584c367299904f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85b515ed4c30d68e62a49e1044c4ddf6f5cc5ab1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985239"
 ---
 # <a name="sqlconfigdatasource-access-driver"></a>SQLConfigDataSource (Driver do Access)
 > [!NOTE]  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 13f4c879f94118a2e2302a2032991e85551be0f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65f6145f0cbfbd59fffb71e030f6427ea1f551c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036208"
 ---
 # <a name="sqlbindparameter-function"></a>Função SQLBindParameter
 
@@ -243,7 +242,7 @@ SQLRETURN SQLBindParameter(
 > [!NOTE]  
 >  Na **SQLSetParam**, a maneira na qual um aplicativo especifica o comprimento do **ParameterValuePtr* do buffer para que o driver pode retornar o caractere ou dados binários e a maneira na qual um aplicativo envia um matriz de caracteres ou valores de parâmetro binário para o driver, são definidos pelo driver.  
   
-## <a name="strlenorindptr-argument"></a>StrLen_or_IndPtr Argument
+## <a name="strlenorindptr-argument"></a>Argumento StrLen_or_IndPtr
 
  O *StrLen_or_IndPtr* argumento aponta para um buffer que, quando **SQLExecute** ou **SQLExecDirect** é chamado, contém um dos seguintes. (Este argumento define os campos de registro SQL_DESC_OCTET_LENGTH_PTR e SQL_DESC_INDICATOR_PTR dos ponteiros de parâmetro de aplicativo).  
   

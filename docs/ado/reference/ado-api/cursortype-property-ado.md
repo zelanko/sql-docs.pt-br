@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7361b453272289107ea3c5ae268b951178aa1b43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4dc881b96a1e2641d4946340c9462455197f2043
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919251"
 ---
 # <a name="cursortype-property-ado"></a>Propriedade CursorType (ADO)
 Indica o tipo de cursor usado em uma [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -40,7 +39,7 @@ Indica o tipo de cursor usado em uma [Recordset](../../../ado/reference/ado-api/
   
 |Para um conjunto de registros desse CursorType|O método dá suporte a deve retornar True para todas as constantes|  
 |----------------------------------------|---------------------------------------------------------------------|  
-|**adOpenForwardOnly**|none|  
+|**adOpenForwardOnly**|nenhum|  
 |**adOpenKeyset**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
 |**adOpenDynamic**|**adMovePrevious**|  
 |**adOpenStatic**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  

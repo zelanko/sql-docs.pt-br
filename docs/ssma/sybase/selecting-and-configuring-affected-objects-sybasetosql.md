@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 48d5305854d214e61036e00ca23a94b85313138a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667503"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020994"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Selecionar e configurar os objetos afetados (SybaseToSQL)
 Nessa página, você pode selecionar tabelas e chaves estrangeiras, as alterações no qual devem ser comparadas ao SSMA verifica os resultados da execução para os objetos escolhidos na etapa anterior. Além disso, você pode personalizar os parâmetros de verificação.  
@@ -27,12 +26,12 @@ Na árvore de objetos do Sybase localizado no lado esquerdo da janela, marque as
   
 Se o testador SSMA não é possível verificar qualquer um desses objetos, você verá o link rotulado **alguns objetos selecionados contêm erros** abaixo da árvore de objetos. Clique neste link para exibir as razões por que esses objetos não podem ser comparados e desmarque a seleção de objetos errados.  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>Tabela  
 Na guia da tabela contém a exibição de grade da tabela selecionada. A grade contém as seguintes informações sobre a tabela selecionada:  
   
 -   Nome da coluna  
   
--   Tipo de Dados  
+-   Tipo de dados  
   
 -   Precisão  
   
@@ -49,7 +48,7 @@ Na guia da tabela contém a exibição de grade da tabela selecionada. A grade c
 ## <a name="sql"></a>Sql  
 Guia SQL contém a tabela"criar" SQL da tabela selecionada.  
   
-## <a name="data"></a>Dados  
+## <a name="data"></a>Data  
 Guia de dados exibe dados presentes na tabela selecionada.  
   
 ## <a name="properties"></a>Propriedades  

@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect (Access Driver) | Microsoft Docs
+title: SQLDriverConnect (Driver do Access) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d133e9b-7545-464d-aa3c-677fa7e2a41d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9a71874c91e48c25072fbfed8f66a312d65b4697
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e211797147c4da8f197247244f6f2805185b3b0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63048470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053985"
 ---
 # <a name="sqldriverconnect-access-driver"></a>SQLDriverConnect (Driver do Access)
 > [!NOTE]  

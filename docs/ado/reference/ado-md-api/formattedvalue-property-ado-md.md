@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2234450af35b5bd84be0f2855b3e187c87aede15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2c48630a8d8cafc96f192e07d41a6245f86e60c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709463"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938423"
 ---
 # <a name="formattedvalue-property-ado-md"></a>Propriedade FormattedValue (ADO MD)
 Indica a exibição formatada de um [célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md) valor.  

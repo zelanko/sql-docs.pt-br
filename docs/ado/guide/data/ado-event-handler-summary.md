@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f1901892b3e48446f3598b24ebb0a529360b9edf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4fef63ff610ad85e353c2ef1dc0f8e5987c74ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926194"
 ---
 # <a name="ado-connection-and-recordset-events"></a>Conexão do ADO e o conjunto de registros eventos
 Dois objetos do ADO podem gerar eventos: o [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto e o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto. O **ConnectionEvent** família pertence às operações na **Conexão** objeto e o **RecordsetEvent** família pertence às operações no  **Conjunto de registros** objeto.
@@ -33,7 +32,7 @@ Dois objetos do ADO podem gerar eventos: o [Conexão](../../../ado/reference/ado
 |ConnectionEvent|Descrição|
 |---------------------|-----------------|
 |[BeginTransComplete, CommitTransComplete, RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**Gerenciamento de transações** -notificação de que a transação atual na conexão foi iniciada, confirmada ou revertida.|
-|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md), [ConnectComplete, Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**Gerenciamento de Conexão** -notificação de que a conexão atual será iniciado, começou ou terminou.|
+|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md), [eventos ConnectComplete, desconectar](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**Gerenciamento de Conexão** -notificação de que a conexão atual será iniciado, começou ou terminou.|
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md), [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**Gerenciamento de execução de comando** -notificação de que a execução do comando atual em que a conexão será iniciado ou terminou.|
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**Informativo** -notificação de que há informações adicionais sobre a operação atual.|
 

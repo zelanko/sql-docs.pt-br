@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 93acd6ad9e904e1e3db5dfe7e244b459e7853d70
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e5363e741c827a0fb16528a8b617e26a5b95f8a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025457"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025694"
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
  **[@start_ip_address** =] '*start_ip_address*'  
  O endereço IP mais baixo no intervalo da configuração do firewall em nível de banco de dados. Os endereços IP iguais a ou maiores que esse podem tentar se conectar à instância do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. O endereço IP mais baixo possível é `0.0.0.0`. *start_ip_address* está **varchar (50)** sem nenhum valor padrão.  
   
- [**@end_ip_address** =] '*end_ip_address*'  
+ [ **@end_ip_address** =] '*end_ip_address*'  
  O endereço IP mais alto no intervalo da configuração do firewall em nível de banco de dados. Os endereços IP iguais a ou menores que esse podem tentar se conectar à instância do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. O endereço IP mais alto possível é `255.255.255.255`. *end_ip_address* está **varchar (50)** sem nenhum valor padrão.  
   
  A tabela a seguir demonstra os argumentos com suporte e as opções em [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

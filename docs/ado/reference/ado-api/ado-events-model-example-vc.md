@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8a79d6e39cb71c7dd7c5e055d9aa71cba23bc9c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1af45d9ac4674af98097083e2da89a217f17a58f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921010"
 ---
 # <a name="ado-events-model-example-vc"></a>Exemplo do modelo de eventos ADO (VC++)
 A seção do Visual C++ [instanciação de evento ADO por linguagem](../../../ado/guide/data/ado-event-instantiation-by-language.md) fornece uma descrição geral de como criar uma instância do modelo de evento ADO. A seguir está um exemplo específico de instanciar o modelo de evento dentro do ambiente criado pela **#import** diretiva.  

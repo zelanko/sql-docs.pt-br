@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: eeaef98e2bd5ae195cb8a15b9c82a2946807d90d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba706c62aff34dca72db032fdb09a0d8f5dea4f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992231"
 ---
 # <a name="data-quality-projects-dqs"></a>Projetos de qualidade de dados (DQS)
 
@@ -55,7 +54,7 @@ ms.locfileid: "66797689"
 ##  <a name="ProfilingNotification"></a> Perfil de dados e notificações  
  Ao executar as atividades de limpeza e correspondência em um projeto de qualidade de dados, você encontra estatísticas em tempo real e informações sobre os dados que estão sendo processados pelo DQS. A criação de perfil de dados o ajuda a avaliar a eficácia dos processos de limpeza e correspondência, e a potencialmente determinar até que ponto a limpeza ou a correspondência de dados ajudaram a melhorar a qualidade dos dados. A criação de perfil do DQS fornece duas dimensões de qualidade de dados: *integridade* (até que ponto os dados estão presentes) e *exatidão* (até que ponto os dados podem ser empregados para o uso pretendido). Além disso, com base nas informações de criação de perfil de dados, notificações são exibidas para o usuário nas ações que podem ser adotadas para aprimorar as operações de limpeza e correspondência de dados. Para obter informações detalhadas sobre a criação de perfil de dados e notificações, consulte [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

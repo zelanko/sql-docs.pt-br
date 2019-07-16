@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dea7ec95efc1f560a2279868b2116d02d7ad6fef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926661"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Provedor Microsoft OLE DB para visão geral do serviço de indexação da Microsoft
 O Microsoft OLE DB Provider for Microsoft Indexing Service fornece acesso programático de somente leitura para o sistema de arquivos e dados da Web indexados pelo serviço de indexação da Microsoft. Aplicativos ADO podem emitir consultas SQL para recuperar informações de propriedade de conteúdo e o arquivo.
@@ -75,18 +74,18 @@ MSIDXS
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|somente leitura|
 |[Indicador](../../../ado/reference/ado-api/bookmark-property-ado.md)*|leitura/gravação|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|leitura/gravação|
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|sempre **adUseServer**|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|sempre **adOpenStatic**|
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|sempre **adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|somente leitura|
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|leitura/gravação|
+|[Filtrar](../../../ado/reference/ado-api/filter-property.md)|leitura/gravação|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|leitura/gravação|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|não disponível|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|leitura/gravação|
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|somente leitura|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|leitura/gravação|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|somente leitura|
-|[Origem](../../../ado/reference/ado-api/source-property-ado-recordset.md)|leitura/gravação|
+|[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|leitura/gravação|
 |[Estado](../../../ado/reference/ado-api/state-property-ado.md)|somente leitura|
 |[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|somente leitura|
 
@@ -102,9 +101,9 @@ MSIDXS
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Não|
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Sim|
 |[Fechar](../../../ado/reference/ado-api/close-method-ado.md)|Sim|
-|[Delete (excluir)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Não|
+|[Excluir](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Não|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sim|
-|[Migrar](../../../ado/reference/ado-api/move-method-ado.md)|Sim|
+|[Moverr](../../../ado/reference/ado-api/move-method-ado.md)|Sim|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sim|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Sim|
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sim|

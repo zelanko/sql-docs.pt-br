@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: f0b734d5-816f-4b10-a60c-615931b515c2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: abd00bbc8b9ee63edb8846ea5968edbbdd21bd5e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cb602bf26b20ea916a46655cf813f4c1a6ab4f1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950732"
 ---
 # <a name="domains-transact-sql"></a>DOMAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,21 +37,21 @@ ms.locfileid: "54126856"
 |-----------------|---------------|-----------------|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|Banco de dados no qual o tipo de dados de alias existe.|  
 |**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém o tipo de dados de alias.<br /><br /> **&#42;&#42;Importante &#42; &#42;**  não use exibições INFORMATION_SCHEMA para determinar o esquema de um tipo de dados. O único modo seguro para localizar o esquema de um tipo é usar a função TYPEPROPERTY.|  
-|**NOME_DO_DOMÍNIO**|**sysname**|Tipo de dados de alias.|  
+|**DOMAIN_NAME**|**sysname**|Tipo de dados de alias.|  
 |**DATA_TYPE**|**sysname**|Tipo de dados fornecido pelo sistema.|  
 |**CHARACTER_MAXIMUM_LENGTH**|**int**|Comprimento máximo, em caracteres, de dados binários, dados de caracteres e dados de texto e imagem.<br /><br /> -1 para **xml** e dados de tipo de valor grande. Caso contrário, será retornado NULL. Para obter mais informações, veja [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
 |**CHARACTER_OCTET_LENGTH**|**int**|Comprimento máximo, em bytes, de dados binários, dados de caracteres e dados de texto e imagem.<br /><br /> -1 para **xml** e dados de tipo de valor grande. Caso contrário, será retornado NULL.|  
 |**COLLATION_CATALOG**|**varchar (** 6 **)**|Sempre retorna NULL.|  
-|**COLLATION_SCHEMA**|**varchar (** 3 **)**|Sempre retorna NULL.|  
+|**COLLATION_SCHEMA**|**varchar(** 3 **)**|Sempre retorna NULL.|  
 |**COLLATION_NAME**|**nvarchar(** 128 **)**|Retorna o nome exclusivo para a ordem de classificação, se a coluna de dados de caractere ou **texto** tipo de dados. Caso contrário, será retornado NULL.|  
 |**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|Retorna **mestre**. Isso indica que o banco de dados no qual o conjunto de caracteres está localizado, se a coluna de dados de caractere ou **texto** tipo de dados. Caso contrário, será retornado NULL.|  
-|**CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|Sempre retorna NULL.|  
+|**CHARACTER_SET_SCHEMA**|**varchar(** 3 **)**|Sempre retorna NULL.|  
 |**CHARACTER_SET_NAME**|**nvarchar(** 128 **)**|Retorna o nome exclusivo para o conjunto de caracteres se essa coluna é dados de caractere ou **texto** tipo de dados. Caso contrário, será retornado NULL.|  
 |**NUMERIC_PRECISION**|**tinyint**|Precisão de dados numéricos aproximados, dados numéricos exatos, dados de inteiro ou dados monetários. Caso contrário, será retornado NULL.|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Base de precisão de dados numéricos aproximados, dados numéricos exatos, dados de inteiro ou dados monetários. Caso contrário, será retornado NULL.|  
 |**NUMERIC_SCALE**|**tinyint**|Escala de dados numéricos aproximados, dados numéricos exatos, dados de inteiro ou dados monetários. Caso contrário, será retornado NULL.|  
 |**DATETIME_PRECISION**|**smallint**|Código de subtipo para **datetime** e ISO **intervalo** tipo de dados. Para outros tipos de dados, esta coluna retorna um valor nulo.|  
-|**DOMAIN_DEFAULT**|**nvarchar (** 4000 **)**|Texto real da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] de definição.|  
+|**DOMAIN_DEFAULT**|**nvarchar(** 4000 **)**|Texto real da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] de definição.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições do sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

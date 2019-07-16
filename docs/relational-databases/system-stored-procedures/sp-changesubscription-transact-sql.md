@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c81843220b9613bfc59f03d197f369e77a850f84
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cddc14c14054ecfa81a963d15a7a604e8d71d085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016535"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +56,9 @@ sp_changesubscription [ @publication = ] 'publication'
   
 `[ @destination_db = ] 'destination_db'` É o nome do banco de dados de assinatura. *destination_db* está **sysname**, sem padrão.  
   
-`[ @property = ] 'property'` É a propriedade a ser alterada para a assinatura fornecida. *propriedade* está **nvarchar (30)**, e pode ser um dos valores na tabela.  
+`[ @property = ] 'property'` É a propriedade a ser alterada para a assinatura fornecida. *propriedade* está **nvarchar (30)** , e pode ser um dos valores na tabela.  
   
-`[ @value = ] 'value'` É o novo valor especificado *propriedade*. *valor* está **nvarchar (4000)**, e pode ser um dos valores na tabela.  
+`[ @value = ] 'value'` É o novo valor especificado *propriedade*. *valor* está **nvarchar (4000)** , e pode ser um dos valores na tabela.  
   
 |Propriedade|Valor|Descrição|  
 |--------------|-----------|-----------------|  
@@ -74,7 +73,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**0**|Use Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao se conectar ao Assinante.|  
 |**subscriber_provider**||PROGID (identificador programático) exclusivo com o qual o provedor OLE DB para fonte de dados não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é registrado. *Essa propriedade só é válida para não -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *assinantes.*|  
 |**subscriber_providerstring**||Cadeia de conexão específica de provedor OLE DB que identifica a fonte de dados. *Essa propriedade só é válida para não -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *assinantes.*|  
-|**subscriptionstreams**||É o número de conexões permitido por Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante. Um intervalo de valores de **1** à **64** há suporte para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. Esta propriedade deve ser **0** para não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes, Publicadores Oracle ou assinaturas ponto a ponto.|  
+|**fluxos de assinatura**||É o número de conexões permitido por Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante. Um intervalo de valores de **1** à **64** há suporte para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. Esta propriedade deve ser **0** para não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes, Publicadores Oracle ou assinaturas ponto a ponto.|  
 |**subscriber_type**|**1**|Servidor de fontes de dados ODBC|  
 ||**3**|Provedor OLE DB|  
 |**memory_optimized**|**bit**|Indica que a assinatura dá suporte a tabelas com otimização de memória. *memory_optimized* está **bit**, onde 1 é igual a true (a assinatura dá suporte a tabelas com otimização de memória).|  

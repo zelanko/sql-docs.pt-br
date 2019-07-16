@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be459530-6f28-458f-ad70-759eae3ae08c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 30111c664368f0fc30df866045a021b96b671e1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3cb4546839d09954f7d08f71164ecba59595fbd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930518"
 ---
 # <a name="axes-collection-properties-methods-and-events"></a>Propriedades, métodos e eventos da coleção Axes
 ## <a name="properties"></a>Propriedades  
@@ -30,7 +29,7 @@ ms.locfileid: "66709969"
  [Método Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Events  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="see-also"></a>Consulte também  
  [Coleção Axes (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)

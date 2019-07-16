@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 40ce74748e15a2715de26e813007e00be0c33729
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: afd5d9ca0de6b8d2ffba75f862e6ca0afb594848
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919441"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 Especifica se uma caixa de diálogo deve ser exibida para solicitar parâmetros ausentes ao abrir uma conexão a uma fonte de dados.  
@@ -34,7 +33,7 @@ Especifica se uma caixa de diálogo deve ser exibida para solicitar parâmetros 
 |**adPromptNever**|4|Nunca prompts.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Package: **com.ms.wfc.data**  
+ Pacote: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

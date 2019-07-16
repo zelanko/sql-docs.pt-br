@@ -1,5 +1,5 @@
 ---
-title: INSERT INTO (DMX) | Microsoft Docs
+title: INSERIR (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 463bd3ac40a2f90a66457faa9a80b9512b67b53a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62505161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937783"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +64,7 @@ INSERT INTO [MINING MODEL] <model>
 ||A estrutura de mineração é não processada.|O modelo de mineração e a estrutura de mineração são processadas.|  
 ||A estrutura de mineração contém modelos de mineração adicionais.|Falha no processo. É preciso reprocessar a estrutura e os modelos de mineração associados.|  
 |INSERT INTO MINING STRUCTURE *\<estrutura >*|A estrutura de mineração é processada ou não processada.|A estrutura de mineração e os modelos de mineração associados são processados.|  
-|INSERT INTO MINING MODEL *\<modelo >* que contém uma consulta de origem<br /><br /> ou em<br /><br /> INSERT INTO MINING STRUCTURE *\<estrutura >* que contém uma consulta de origem|A estrutura ou o modelo já encerram um conteúdo.|Falha no processo. Você deve limpar os objetos antes de executar essa operação, usando [excluir &#40;DMX&#41;](../dmx/delete-dmx.md).|  
+|INSERT INTO MINING MODEL *\<modelo >* que contém uma consulta de origem<br /><br /> ou<br /><br /> INSERT INTO MINING STRUCTURE *\<estrutura >* que contém uma consulta de origem|A estrutura ou o modelo já encerram um conteúdo.|Falha no processo. Você deve limpar os objetos antes de executar essa operação, usando [excluir &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Colunas de modelo mapeado  
  Usando o \<mapear colunas do modelo > elemento, você pode mapear as colunas da fonte de dados para as colunas no modelo de mineração. O \<mapear colunas do modelo > elemento tem o seguinte formato:  

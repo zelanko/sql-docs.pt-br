@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9435f6c2-16e7-41b1-906d-d9f09b336f8f
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: b9e8c3cc4d091027881f41faff401eef3b5e349f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a531208e03c38af7edfa8baf071f855ecd89024d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63215941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944642"
 ---
 # <a name="troubleshooting-mysqltosql"></a>Solução de problemas (MySQLToSQL)
 Não é incomum enfrentar midway de problemas de migração executando os comandos ou scripts do console.  
@@ -26,9 +25,9 @@ Os erros corrigível podem estar relacionados a:
   
 2.  Procedimento  
   
-3.  Exibição  
+3.  Exibir  
   
-4.  Gatilho  
+4.  Disparador  
   
 5.  Modificando o tipo de dados  
   

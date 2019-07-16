@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3466382-71cb-4f82-8318-092a8fcef3df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c781113124d456e1ba866546d6ada7a17371d71f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 251ae0e4e94cec903e2c4b5cf687ed9b8b41dfc8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952395"
 ---
 # <a name="identifiers-limitations"></a>Limitações de identificadores
 Se um identificador contiver um espaço ou um símbolo especial, o identificador deve ser colocado entre aspas back. Um nome válido é uma cadeia de caracteres de não mais do que 64 caracteres, dos quais o primeiro caractere não deve ser um espaço. Nomes válidos não podem incluir caracteres de controle ou os seguintes caracteres especiais: ' &#124; # *? [ ] . ! $ .  

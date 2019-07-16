@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_schedulers (Transact-SQL) | Microsoft Docs
+title: DM os_schedulers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86b2ed6f19f17147eb5622f120898e6f579cb77a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f167aa6f4572fc1a44db83cfb9f7ea7b7a092b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65626767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899839"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "65626767"
 |parent_node_id|**int**|ID do nó ao qual o agendador pertence, também conhecido como nó pai. Isso representa um nó NUMA (acesso não uniforme à memória). Não permite valor nulo.|  
 |scheduler_id|**int**|ID do agendador. Todos os agendadores que são usados para executar consultas normais têm números de ID menores que 1048576. Os agendadores que tiverem IDs maiores ou iguais a 1048576 serão usados internamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como o agendador da conexão de administrador dedicada. Não permite valor nulo.|  
 |cpu_id|**smallint**|A ID da CPU atribuída ao agendador.<br /><br /> Não permite valor nulo.<br /><br /> **Observação:** 255 não indica nenhuma afinidade como fazia no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Ver [DM os_threads &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) para obter informações de afinidade adicionais.|  
-|status|**nvarchar(60)**|Indica o status do agendador. Pode ser um dos seguintes valores:<br /><br /> -OCULTO ONLINE<br />-OCULTO OFFLINE<br />-VISÍVEIS ONLINE<br />-VISÍVEL OFFLINE<br />-ON-LINE VISÍVEL (DAC)<br />-   HOT_ADDED<br /><br /> Não permite valor nulo.<br /><br /> Os agendadores HIDDEN são usados para processar solicitações internas do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Os agendadores VISIBLE são usados para processar solicitações de usuários.<br /><br /> Os agendadores OFFLINE são mapeados para processadores que estão offline na máscara de afinidade e, portanto, não estão sendo usados para processar solicitações. Os agendadores ONLINE são mapeados para processadores que estão online na máscara de afinidade e estão disponíveis para processar threads.<br /><br /> DAC indica que o agendador está sendo executado em uma conexão de administrador dedicada.<br /><br /> HOT ADDED indica que os agendadores foram adicionados em resposta a um evento de CPU de adição a quente.|  
+|status|**nvarchar(60)**|Indica o status do agendador. Pode ser um dos seguintes valores:<br /><br /> -OCULTO ONLINE<br />-OCULTO OFFLINE<br />-VISÍVEIS ONLINE<br />-VISÍVEL OFFLINE<br />-ON-LINE VISÍVEL (DAC)<br />-HOT_ADDED<br /><br /> Não permite valor nulo.<br /><br /> Os agendadores HIDDEN são usados para processar solicitações internas do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Os agendadores VISIBLE são usados para processar solicitações de usuários.<br /><br /> Os agendadores OFFLINE são mapeados para processadores que estão offline na máscara de afinidade e, portanto, não estão sendo usados para processar solicitações. Os agendadores ONLINE são mapeados para processadores que estão online na máscara de afinidade e estão disponíveis para processar threads.<br /><br /> DAC indica que o agendador está sendo executado em uma conexão de administrador dedicada.<br /><br /> HOT ADDED indica que os agendadores foram adicionados em resposta a um evento de CPU de adição a quente.|  
 |is_online|**bit**|Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver configurado para usar somente alguns dos processadores disponíveis no servidor, essa configuração pode indicar que alguns agendadores estão mapeados para processadores que não estão na máscara de afinidade. Se esse for o caso, essa coluna retornará 0. Esse valor indica que o agendador não está sendo usado para processar consultas ou lotes.<br /><br /> Não permite valor nulo.|  
 |is_idle|**bit**|1 = O agendador está ocioso. Nenhum operador está em execução no momento. Não permite valor nulo.|  
 |preemptive_switches_count|**int**|Número de vezes que os operadores deste agendador alternaram para o modo preemptivo.<br /><br /> Para executar código fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, procedimentos armazenados estendidos e consultas distribuídas), um thread deve ser executado fora do controle de um agendador não preventivo. Para fazer isso, um trabalhador muda para o modo preventivo.|  
@@ -71,7 +70,7 @@ ms.locfileid: "65626767"
 ## <a name="permissions"></a>Permissões
 
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
+Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer a permissão `VIEW DATABASE STATE` no banco de dados.   
 
 ## <a name="examples"></a>Exemplos  
   

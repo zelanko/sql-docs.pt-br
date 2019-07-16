@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 46700bb94749269eb56e60cade035fdf4c8f388c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124678"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094821"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ ms.locfileid: "54124678"
 |**fast_multicol_updateproc**|**bit**|Especifica se o Merge Agent foi habilitado para aplicar alterações em várias colunas na mesma linha em uma instrução UPDATE.<br /><br /> **0** = problemas uma UPDATE separada para cada coluna alterada.<br /><br /> **1** = emitido em instrução UPDATE que faz com que as atualizações ocorram em várias colunas em uma instrução.|  
 |**check_permissions**|**int**|O bitmap das permissões no nível de tabela que serão verificadas quando o Agente de Mesclagem aplicar alterações no Publicador. *check_permissions* pode ter um destes valores:<br /><br /> **0x00** = as permissões não são verificadas.<br /><br /> **0x10** = verifica permissões no publicador antes que INSERTs feitas no assinante sejam carregadas.<br /><br /> **0x20** = verifica permissões no publicador antes que as atualizações feitas no assinante sejam carregadas.<br /><br /> **0x40** = verifica permissões no publicador antes que DELETEs feitas no assinante sejam carregadas.|  
 |**maxversion_at_cleanup**|**int**|A geração máxima que é limpa na próxima execução do Agente de Mesclagem.|  
-|**processing_order**|**int**|Indica a ordem de processamento de artigos em uma publicação de mesclagem; onde um valor de **0** indica que o artigo não está ordenado e artigos são processados na ordem do menor para o maior valor. Se dois artigos tiverem o mesmo valor, serão processados simultaneamente. Para obter mais informações, consulte [propriedades de replicação de mesclagem especificar](../../relational-databases/replication/merge/specify-merge-replication-properties.md).|  
+|**processing_order**|**int**|Indica a ordem de processamento de artigos em uma publicação de mesclagem; onde um valor de **0** indica que o artigo não está ordenado e artigos são processados na ordem do menor para o maior valor. Se dois artigos tiverem o mesmo valor, serão processados simultaneamente. Para obter mais informações, confira [propriedades de Especificar Replicação de Mesclagem](../../relational-databases/replication/merge/specify-merge-replication-properties.md).|  
 |**upload_options**|**tinyint**|Define se as alterações poderão ser feitas ou carregadas do Assinante, que pode ser um dos valores a seguir.<br /><br /> **0** = não há restrições em atualizações feitas no assinante; todas as alterações são carregadas no publicador.<br /><br /> **1** = as alterações são permitidas no assinante, mas eles não são carregados no publicador.<br /><br /> **2** = as alterações não são permitidas no assinante.|  
 |**published_in_tran_pub**|**bit**|Indica que um artigo em uma publicação de mesclagem também é publicado em uma publicação transacional.<br /><br /> **0** = o artigo não é publicado em um artigo transacional.<br /><br /> **1** = o artigo também é publicado em um artigo transacional.|  
 |**lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

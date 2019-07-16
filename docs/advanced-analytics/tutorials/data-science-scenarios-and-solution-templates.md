@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 7511e630d88e23faa1f0141529e7425c3da882f1
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: 83c659c3982225221c7ad262af925863c821c5ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962299"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Cenários de ciência de dados e modelos de solução
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +79,7 @@ Cada solução inclui dados de exemplo, o código R ou o código do Python e pro
 
 [Modelo com o SQL Server R Services de previsão de demanda de energia](https://gallery.cortanaintelligence.com/Tutorial/Energy-Demand-Forecast-Template-with-SQL-Server-R-Services-1)
 
-**O que:**: Previsão de demanda é um problema importante em vários domínios, incluindo serviços, varejo e energia. Previsão de demanda precisa de ajuda as empresas a conduzir um melhor planejamento de produção, alocação de recursos e tomar outras decisões de negócios importantes. No setor de energia, é essencial para reduzir o custo de armazenamento de energia e balanceamento de demanda e fornecimento de previsão de demanda.
+**O que:** : Previsão de demanda é um problema importante em vários domínios, incluindo serviços, varejo e energia. Previsão de demanda precisa de ajuda as empresas a conduzir um melhor planejamento de produção, alocação de recursos e tomar outras decisões de negócios importantes. No setor de energia, é essencial para reduzir o custo de armazenamento de energia e balanceamento de demanda e fornecimento de previsão de demanda.
 
 **Como:** Este modelo usa o SQL Server R Services para prever a demanda de energia elétrica. O modelo usado para previsão é um modelo de regressão de floresta aleatória com base em **rxDForest**, uma incluídos no Microsoft R Server do algoritmo de aprendizado de máquina de alto desempenho. A solução inclui um simulador de demanda, todo o código do R e T-SQL necessário para treinar um modelo e procedimentos armazenados que podem ser usados para gerar e relatar as previsões. 
 
