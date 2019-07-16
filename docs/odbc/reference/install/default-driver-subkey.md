@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9e58b24f-ebfc-4286-a272-0843b4d6f2d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d78101fd564e18467e6833f480cec2409dc2c44b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e82644d3bddab5d4f6fde6f7103bd9731872bab9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094194"
 ---
 # <a name="default-driver-subkey"></a>Subchave do driver padrão
 A subchave padrão contém um único valor que descreve o driver usado pela fonte de dados padrão. O formato desse valor é mostrado na tabela a seguir.  
   
-|Nome|Tipo de dados|Dados|  
+|Nome|Tipo de dados|Data|  
 |----------|---------------|----------|  
 |**Driver**|REG_SZ|*default-driver-description*|  
   

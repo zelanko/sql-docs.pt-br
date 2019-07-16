@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dbc8f17b-2913-4bdf-841c-d79213993cd8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c99c251fe90eb90d546b59ae9e53f908a2965e4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62d91d6e5493665af55e440dcdd8594e03241978
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996348"
 ---
 # <a name="sqlprepare-desktop-database-drivers"></a>SQLPrepare (Drivers de banco de dados de área de trabalho)
 Uma instrução preparada com um número incorreto de colunas retornará um erro em tempo de execução, após a preparação da instrução.

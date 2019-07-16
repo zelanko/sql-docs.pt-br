@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 253959175db3519c00874db43466fa21c31cf5e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fbd066113f5ad4394b83e0151643ab9ea3b7b82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900666"
 ---
 # <a name="sysdmhadrdatabasereplicaclusterstates-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna uma linha que contém informações destinadas a fornecer uma visão da integridade da disponibilidade dos bancos de dados os grupos de disponibilidade Always On em cada grupo de disponibilidade AlwaysOn no cluster do Windows Server Failover Clustering (WSFC). Consulta **DM hadr_database_replica_states** para responder às seguintes perguntas:  
+  Retorna uma linha que contém informações destinadas a fornecer uma visão da integridade dos bancos de dados de disponibilidade nos grupos de disponibilidade Always On em cada grupo de disponibilidade Always On no cluster do WSFC (Windows Server Failover Clustering). Consulta **DM hadr_database_replica_states** para responder às seguintes perguntas:  
   
 -   Todos os bancos de dados estão em um grupo de disponibilidade pronto para um failover?  
   
@@ -39,9 +38,9 @@ ms.locfileid: "47636674"
   
 -   Se a réplica primária estiver indisponível no momento, qual réplica secundária permitirá a perda de dados mínima caso se torne a réplica primária?  
   
--   Quando o valor de [sys. Databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** coluna for "AVAILABILITY_REPLICA", qual réplica secundária em um grupo de disponibilidade está mantendo truncamento de log em um determinado banco de dados primário ?     
+-   Quando o valor de [sys. Databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** coluna for "AVAILABILITY_REPLICA", qual réplica secundária em um grupo de disponibilidade está mantendo truncamento de log em um determinado banco de dados primário ?  
    
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|O identificador da réplica de disponibilidade dentro do grupo de disponibilidade.|  
 |**group_database_id**|**uniqueidentifier**|O identificador do banco de dados dentro do grupo de disponibilidade. Esse identificador é idêntico em cada réplica à qual este banco de dados é unido.|  

@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed1ebf610eafe5c882b2e19ed70129e0cac432fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86ab3a31f53f480713ae27a70bfe59d3817af017
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078558"
 ---
 # <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -66,7 +65,7 @@ sys.dm_fts_index_keywords_by_document
   
 |coluna|Data type|Descrição|  
 |------------|---------------|-----------------|  
-|palavra-chave|**nvarchar(4000)**|A representação hexadecimal da palavra-chave armazenada no índice de texto completo.<br /><br /> Observação: OxFF representa o caractere especial que indica o final de um arquivo ou conjunto de dados.|  
+|keyword|**nvarchar(4000)**|A representação hexadecimal da palavra-chave armazenada no índice de texto completo.<br /><br /> Observação: OxFF representa o caractere especial que indica o final de um arquivo ou conjunto de dados.|  
 |display_term|**nvarchar(4000)**|O formato legível da palavra-chave. Esse formato é derivado do formato interno, que é armazenado no índice de texto completo.<br /><br /> Observação: OxFF representa o caractere especial que indica o final de um arquivo ou conjunto de dados.|  
 |column_id|**int**|A ID da coluna a partir da qual a palavra-chave atual foi indexada com texto completo.|  
 |document_id|**int**|A ID do documento ou linha a partir da qual o termo atual foi indexado com texto completo. Essa ID corresponde ao valor da chave de texto completo desse documento ou linha.|  
@@ -81,7 +80,7 @@ sys.dm_fts_index_keywords_by_document
   
 -   Quantas vezes uma palavra-chave aparece no índice de texto completo inteiro; ou seja:  
   
-     ([SUM](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) WHERE **keyword**=*keyword_value* )  
+     ([Soma](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) em que **palavra-chave**=*keyword_value* )  
   
 -   Quantas vezes uma palavra-chave aparece em um determinado documento ou linha.  
   

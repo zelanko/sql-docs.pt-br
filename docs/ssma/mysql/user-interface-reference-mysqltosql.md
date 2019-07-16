@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e4aaf05b0d53e7d0fea5e509f02562ea9213bbef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17a287b38eb1dd1c1d9e3cee6943f7c069a39c61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63215930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944623"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Referência da interface do usuário (MySQLToSQL)
 Esta seção inclui tópicos de ajuda para o SQL Server SSMA (Migration Assistant) para MySQL.  

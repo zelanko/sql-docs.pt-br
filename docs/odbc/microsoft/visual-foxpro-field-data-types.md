@@ -13,27 +13,26 @@ helpviewer_keywords:
 ms.assetid: 50b733dc-679a-4b10-bc5d-98bb474dead2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 07aa06eae9f1e75a047bdd302754d884790436e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 217058bf328677bf375d346ae7201c6eb81efa4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087952"
 ---
 # <a name="visual-foxpro-field-data-types"></a>Tipos de dados de campo do Visual FoxPro
 A tabela a seguir lista os valores para o *FieldType* argumento em ALTER TABLE e CREATE TABLE e indica se *nFieldWidth* e *nPrecision* argumentos são Necessário.  
   
-|*FieldType*|*NFieldWidth*|*nPrecision*|Description|  
+|*FieldType*|*NFieldWidth*|*nPrecision*|Descrição|  
 |-----------------|-------------------|------------------|-----------------|  
 |B|-|d|Double|  
 |C|N|-|Campo de caracteres de largura *n*|  
-|D|-|-|data|  
+|D|-|-|Date|  
 |F|N|d|Um campo numérico da largura de flutuante *n* com *1!d* casas decimais|  
 |G|-|-|Geral|  
-|I|-|-|Integer|  
+|I|-|-|Inteiro|  
 |L|-|-|Logical|  
 |M|-|-|Memorando|  
 |N|N|d|Um campo numérico da largura *n* com *1!d* casas decimais|  
 |T|-|-|DateTime|  
-|S|-|-|CURRENCY|
+|S|-|-|Currency|

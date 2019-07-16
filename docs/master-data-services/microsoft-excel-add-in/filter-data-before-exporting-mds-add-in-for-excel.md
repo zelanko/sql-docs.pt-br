@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 003cf7c4871b89067316d2331f658f95a179e37b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 58887c2e1590631b4d80cad0191a2bb9158e5b68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488079"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092360"
 ---
 # <a name="filter-data-before-exporting-mds-add-in-for-excel"></a>Filtrar dados antes da exportação (Suplemento MDS para Excel)
 
@@ -24,7 +23,7 @@ ms.locfileid: "65488079"
 
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], filtre os dados quando quiser limitar o tamanho ou o escopo dos dados que estiver exportando no Excel.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional do **Gerenciador** .  

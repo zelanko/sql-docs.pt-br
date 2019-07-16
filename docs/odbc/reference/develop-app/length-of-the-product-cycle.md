@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c8a5b88f3fdca03be7740ba086e7ff61edbf684
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 203ad92dd6abfc71b0fdeddc466752612e666cee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127228"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100450"
 ---
 # <a name="length-of-the-product-cycle"></a>Comprimento do ciclo do produto
 A última pergunta sobre a interoperabilidade é a hora. Desenvolver um aplicativo interoperável geralmente leva mais tempo do que desenvolver um noninteroperable. O motivo é que o aplicativo deve verificar os recursos do DBMS, executar as mesmas tarefas de forma diferente para diferentes DBMSs, contornar a funcionalidade com suporte de alguns DBMSs, mas não para outros e assim por diante.  

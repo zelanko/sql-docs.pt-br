@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f8b32f3d32a7279e6403f572e59e1c22fe39ca81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e73afa32b07f6d66fc6689215733fea35548f9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006336"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>Alterar o nome de uma hierarquia explícita (Master Data Services)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65486332"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode alterar o nome de uma hierarquia explícita.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  

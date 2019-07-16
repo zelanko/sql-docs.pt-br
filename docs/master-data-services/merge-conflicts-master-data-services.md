@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 993e46a9795aa8528f4e1a1744dbf9dd5b27f89f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b28c432ec05b1b26861073b2444d52caba7e5ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488915"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092576"
 ---
 # <a name="merge-conflicts-master-data-services"></a>Conflitos de mesclagem (Master Data Services)
 
@@ -24,7 +23,7 @@ ms.locfileid: "65488915"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se os dados que você estiver tentando publicar tiverem sido alterados por outro usuário, a publicação falhará com um erro de conflito. Para resolver esse erro, você pode executar conflitos de mesclagem e republicar as alterações.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional do **Gerenciador** .  

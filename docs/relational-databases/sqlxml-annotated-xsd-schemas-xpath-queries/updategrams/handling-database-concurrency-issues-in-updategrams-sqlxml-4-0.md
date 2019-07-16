@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee4f532954092bd7e969e666fe05dcbeb320b42c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cb7981be5bcb3885003e0fdd7adc367b28c9690c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023028"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086859"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Manipulando problemas de simultaneidade de banco de dados nos diagramas de atualização (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ ms.locfileid: "56023028"
   
 -   Especificar a coluna de carimbo de hora (se disponível) na  **\<antes de >** bloco.  
   
-     Em vez de especificar todas as colunas no registro a  **\<antes de**> bloco, você pode especificar apenas a coluna de carimbo de hora (se a tabela tiver uma) junto com as colunas de chave primárias no  **\<antes >** bloco. O banco de dados atualiza a coluna de carimbo de data e hora com um valor exclusivo depois de cada atualização do registro. Nesse caso, o diagrama de atualização compara o valor do carimbo de data e hora com o valor correspondente no banco de dados. O valor do carimbo de data e hora armazenado no banco de dados é um valor binário. Portanto, a coluna de carimbo de hora deve ser especificada no esquema como **dt:type="bin.hex"**, **dt:type="bin.base64"**, ou **SQL: DataType = "timestamp"**. (Você pode especificar o **xml** tipo de dados ou o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de dados.)  
+     Em vez de especificar todas as colunas no registro a  **\<antes de**> bloco, você pode especificar apenas a coluna de carimbo de hora (se a tabela tiver uma) junto com as colunas de chave primárias no  **\<antes >** bloco. O banco de dados atualiza a coluna de carimbo de data e hora com um valor exclusivo depois de cada atualização do registro. Nesse caso, o diagrama de atualização compara o valor do carimbo de data e hora com o valor correspondente no banco de dados. O valor do carimbo de data e hora armazenado no banco de dados é um valor binário. Portanto, a coluna de carimbo de hora deve ser especificada no esquema como **dt:type="bin.hex"** , **dt:type="bin.base64"** , ou **SQL: DataType = "timestamp"** . (Você pode especificar o **xml** tipo de dados ou o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de dados.)  
   
 #### <a name="to-test-the-updategram"></a>Para testar o diagrama de atualização  
   

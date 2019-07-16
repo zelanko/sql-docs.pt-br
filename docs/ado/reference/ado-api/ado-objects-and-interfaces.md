@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48b1f3794828af7f60c1d00313506fa9f9c522c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696638"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920905"
 ---
 # <a name="ado-objects-and-interfaces"></a>Objetos e interfaces do ADO
 As relações entre esses objetos são representadas na [modelo de objeto ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -38,7 +37,7 @@ As relações entre esses objetos são representadas na [modelo de objeto ADO](.
 |[Erro](../../../ado/reference/ado-api/error-object.md)|Contém detalhes sobre erros de acesso de dados que pertencem a uma única operação que envolva o provedor.<br /><br /> O **erro** objeto não é seguro para script.|  
 |[Campo](../../../ado/reference/ado-api/field-object.md)|Representa uma coluna de dados com um tipo de dados comum.|  
 |[Parâmetro](../../../ado/reference/ado-api/parameter-object.md)|Representa um parâmetro ou um argumento associado a um **comando** objeto com base em uma consulta parametrizada ou procedimento armazenado.<br /><br /> O **parâmetro** objeto não é seguro para script.|  
-|[Propriedade](../../../ado/reference/ado-api/property-object-ado.md)|Representa uma característica dinâmica de um objeto ADO que é definido pelo provedor.|  
+|[Property](../../../ado/reference/ado-api/property-object-ado.md)|Representa uma característica dinâmica de um objeto ADO que é definido pelo provedor.|  
 |[Record](../../../ado/reference/ado-api/record-object-ado.md)|Representa uma linha de uma **Recordset**, ou um arquivo ou diretório em um sistema de arquivos. O **registro** objeto é seguro para script.|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Representa o conjunto de registros de uma tabela base ou os resultados de um comando executado. A qualquer momento, o **Recordset** objeto se refere a um único registro dentro do conjunto de como o registro atual.<br /><br /> O **Recordset** objeto é seguro para script.|  
 |[fluxo](../../../ado/reference/ado-api/stream-object-ado.md)|Representa um fluxo binário de dados.<br /><br /> O **Stream** objeto é seguro para script.|  

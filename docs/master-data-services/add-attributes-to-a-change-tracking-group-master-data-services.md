@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 335bdd657c0aa2f687d89f31dfcdd45d757e0cbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3ba92322f64550f8a773b49ba533e96e113e17f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047892"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>Adicionar atributos a um grupo de controle de alterações (Master Data Services)
 
@@ -31,7 +30,7 @@ ms.locfileid: "65484810"
 > [!NOTE]  
 >  Depois de adicionar um atributo a um grupo de controle de alterações, quando os valores do atributo forem alterados, o atributo será sinalizado como alterado no banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Crie uma regra de negócio para executar uma ação com base na alteração.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
@@ -66,7 +65,7 @@ ms.locfileid: "65484810"
   
 9. Clique em **Salvar atributo**.  
   
-     Para o atributo editado, a coluna **Habilitar Grupo de Controle de Alterações** da grade é alterada para **Sim (Grupo: número do grupo inserido)**.  
+     Para o atributo editado, a coluna **Habilitar Grupo de Controle de Alterações** da grade é alterada para **Sim (Grupo: número do grupo inserido)** .  
   
 10. Repita esse procedimento para todos os atributos que você deseja incluir no grupo. Use o mesmo número de grupo de controle de alterações para cada atributo no grupo.  
   

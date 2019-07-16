@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a17ed52371a6c7eae057332a3e80bd215131d287
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6230fb7ffbaa1226bc65d391d988ad064617998
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922893"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Configurar o RDS no Windows 2000
 Se você tiver dificuldade para obtenção de RDS para funcionar corretamente após a atualização para o Windows 2000, siga estas etapas para solucionar o problema:  

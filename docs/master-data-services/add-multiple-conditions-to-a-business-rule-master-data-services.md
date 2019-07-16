@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7429694f469071b2383911314bd7e78e8808fdfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc678925ca35260131b318a1c3f674f5157a1fe5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486469"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047844"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Adicionar várias condições a uma regra de negócio (Master Data Services)
 
@@ -29,7 +28,7 @@ ms.locfileid: "65486469"
 > [!NOTE]  
 >  Se você criar uma regra de negócio que usa o operador **OR** , considere a criação de uma regra separada para cada instrução condicional que possa ser avaliada independentemente. É possível excluir regras conforme necessário, para garantir mais flexibilidade e uma solução de problemas mais fácil.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
@@ -56,7 +55,7 @@ ms.locfileid: "65486469"
   
 8.  No bloco **If** , no lado esquerdo da lista suspensa do operador lógico, selecione **AND/OR/ NOT**.  
   
-9. Clique em **Adicionar**. Um painel será exibido.  
+9. Clique em **Adicionar** . Um painel será exibido.  
   
 10. Na lista suspensa **Atributo** , selecione um atributo.  
   

@@ -2,19 +2,18 @@
 title: Crie uma tarefa de script com o adaptador de destino do PDW SSIS | Microsoft Docs
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4f1f668c0fca14c81173141df3767319f987c9a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8781a84bd3a96364930618db83f6900009540be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63142298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961065"
 ---
 # <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Criar uma tarefa de script que usa o adaptador de destino SSIS Parallel Data Warehouse
 Esse código de script de pacote do SSIS é um exemplo de código para usar o adaptador de destino SSIS PDW.  A tarefa de Script do Integration Services permite que você execute praticamente qualquer operação que pode ser feita em um aplicativo .net dentro do contexto de um fluxo de controle do SSIS. 

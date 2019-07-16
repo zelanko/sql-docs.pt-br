@@ -21,21 +21,20 @@ helpviewer_keywords:
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5a11a5e7090f89f4a31ffd15f8ebbce78ea395a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d47c6ae6d43b48b83be934a0bbfcce822e16fc42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097881"
 ---
 # <a name="sysdmexeccomputenodeerrors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Erros de retorna que ocorrem no PolyBase nós de computação.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|**nvarchar(36)**|Id numérico exclusivo associado ao erro.|Exclusivo em todos os erros de consulta no sistema|  
 |source|**nvarchar(255)**|Descrição da fonte de thread ou processo||  
@@ -45,7 +44,7 @@ ms.locfileid: "63013395"
 |rexecution_id|**nvarchar(36)**|Identificador da consulta do PolyBase, se houver.||  
 |spid|**int**|Identificador da sessão do SQL Server||  
 |thread_id|**int**|Identificador numérico do thread no qual ocorreu o erro.||  
-|detalhes|nvarchar(4000)|Descrição completa dos detalhes do erro.||  
+|details|nvarchar(4000)|Descrição completa dos detalhes do erro.||  
   
 ## <a name="see-also"></a>Consulte também  
  [Solução de problemas com exibições de gerenciamento dinâmico do PolyBase](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   

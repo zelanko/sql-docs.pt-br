@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dac94d8bfb0e2bc0ab91f6a18e6f18606481b112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79a9c9a86e290f568f205a7e7678122f9089a7e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096328"
 ---
 # <a name="delete---sql-command"></a>DELETE – comando SQL
 Registros de marcas para exclusão.  
@@ -34,7 +33,7 @@ DELETE FROM [DatabaseName!]TableName
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- FROM [ *DatabaseName!* ] *TableName*  
+ DE [ *DatabaseName!* ] *TableName*  
  Especifica a tabela na qual os registros são marcados para exclusão.  
   
  *DatabaseName!* Especifica o nome de um banco de dados que contém a tabela se o banco de dados que contém não for o banco de dados especificado com a fonte de dados. Você deve incluir o nome de um banco de dados que contém a tabela se o banco de dados não for o banco de dados especificado com a fonte de dados. Inclua o delimitador de ponto de exclamação (!) após o nome do banco de dados e antes do nome da tabela.  

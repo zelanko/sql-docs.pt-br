@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 73ca766827c1b6149bcb40cec8adefe86e944890
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9181cfc0203bc9c37b5c8eece8d742d628e4bba5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044434"
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar(6)**|O tipo de fila. Os valores possíveis são **mail** e **status**.|  
-|**Comprimento**|**int**|O número de itens de email na fila especificada.|  
+|**length**|**int**|O número de itens de email na fila especificada.|  
 |**state**|**nvarchar(64)**|Estado do monitor. Os valores possíveis são **INACTIVE** (a fila é inativa), **NOTIFIED** (fila foi notificada recebimento ocorra), e **RECEIVES_OCCURRING** (a fila está recebendo).|  
 |**last_empty_rowset_time**|**DATETIME**|A data e a hora em que a fila estava vazia pela última vez. Em formato de hora militar e fuso horário GMT.|  
 |**last_activated_time**|**DATETIME**|A data e a hora em que a fila foi ativada pela última vez. Em formato de hora militar e fuso horário GMT.|  
