@@ -1,5 +1,5 @@
 ---
-title: SystemGetCrossValidationResults (Analysis Services – mineração de dados) | Microsoft Docs
+title: SystemGetCrossValidationResults (Analysis Services - mineração de dados) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2febed19e2bd481a8e442f115f9691e5abb6be4b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018613"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209778"
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -108,7 +108,7 @@ SystemGetCrossValidationResults(
  O padrão é **nulo**.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não gerará um erro se você definir *limiar de estado* como 0.0, mas você nunca deve usar esse valor. Na realidade, um limite de 0.0 significa que as previsões com uma probabilidade de 0 por cento foram contadas como corretas.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não gerará um erro se você definir o *limite de estado* como 0.0, mas você nunca deve usar este valor. Na realidade, um limite de 0.0 significa que as previsões com uma probabilidade de 0 por cento foram contadas como corretas.  
   
  (opcional)  
   
@@ -124,7 +124,7 @@ SystemGetCrossValidationResults(
   
  A tabela a seguir descreve as colunas no conjunto de linhas.  
   
-|Nome da coluna|Description|  
+|Nome da coluna|Descrição|  
 |-----------------|-----------------|  
 |ModelName|O nome do modelo que foi testado.|  
 |AttributeName|O nome da coluna previsível.|  
@@ -133,9 +133,9 @@ SystemGetCrossValidationResults(
 |PartitionSize|Um inteiro que indica quantos casos foram incluídos em cada partição.|  
 |Teste|Categoria do teste que foi executado. Para obter uma descrição das categorias e dos testes incluídos em cada categoria, consulte [Medidas no relatório de validação cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
 |Measure|Nome da medida retornada pelo teste. Medidas para cada modelo dependem do tipo do valor previsível. Para obter uma definição de cada medida, consulte [Validação cruzada &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Para obter uma lista de medidas retornadas para cada tipo previsível, consulte [Medidas no relatório de validação cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
-|Value|O valor da medida de teste especificada.|  
+|Valor|O valor da medida de teste especificada.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para retornar métricas de precisão para o conjunto de dados completo, use [SystemGetAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
   
  Se o modelo de mineração já tiver sido dividido em dobras, você poderá ignorar o processamento e retornar somente os resultados da validação cruzada usando [SystemGetAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
@@ -162,7 +162,7 @@ NULL
   
  Resultados do exemplo:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Teste|Medida|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Teste|Measure|Valor|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Target Mail DT|Bike Buyer|1|1|500|Classificação|True Positivo|144|  
 |Target Mail DT|Bike Buyer|1|1|500|Classificação|False Positivo|105|  
@@ -185,7 +185,7 @@ NULL
 ## <a name="see-also"></a>Consulte também  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services – mineração de dados&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

@@ -20,26 +20,25 @@ helpviewer_keywords:
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 434d0b3c220685e317f8069183c7be28d0254018
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50ba26f679dd6a3040dea242127661bf7d954a5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124925"
 ---
 # <a name="sysservereventsessionactions-transact-sql"></a>sys.server_event_session_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada ação em cada evento de uma sessão de eventos.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|A identificação da sessão de evento. Não permite valor nulo.|  
 |event_id|**int**|A ID do evento. Essa ID é exclusiva de um objeto da sessão de evento. Não permite valor nulo.|  
-|nome|**sysname**|O nome da ação. Permite valor nulo.|  
+|name|**sysname**|O nome da ação. Permite valor nulo.|  
 |pacote|**sysname**|O nome do pacote de eventos que contém um evento. Permite valor nulo.|  
-|módulo|**sysname**|O nome do módulo que contém o evento. Permite valor nulo.|  
+|module|**sysname**|O nome do módulo que contém o evento. Permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  
  , é necessário ter permissão VIEW SERVER STATE no servidor.  

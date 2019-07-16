@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4f4bfab3bc18958a51bb05c68e90c17a1359d046
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629091"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105298"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -37,7 +36,7 @@ InStr([start, ]searched_string, search_string[, compare])
  *search_string*  
  A expressão da cadeia de caracteres na qual pesquisar.  
   
- *Comparar*  
+ *Compare*  
  (opcional) Um valor inteiro. Esse argumento é sempre ignorado. Ele é definido para compatibilidade com outras **Instr** funções em outros idiomas.  
   
 ## <a name="return-value"></a>Valor retornado  

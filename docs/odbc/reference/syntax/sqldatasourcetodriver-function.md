@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 022387847cb1371af13465cee7a9e3e1c21e5749
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba5019b15fdbb8bce06f04d5109813b88c40647d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537653"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104845"
 ---
 # <a name="sqldatasourcetodriver-function"></a>Função SQLDataSourceToDriver
 **SQLDataSourceToDriver** supportstranslations para drivers ODBC. Essa função não é chamada por aplicativos ODBC habilitado; os aplicativos solicitam tradução por meio **SQLSetConnectAttr**. O driver associado a *ConnectionHandle* especificado na **SQLSetConnectAttr** chama a DLL especificada para executar conversões de todos os dados que fluem da fonte de dados para o driver. Uma DLL de conversão padrão pode ser especificado no arquivo de inicialização ODBC.  

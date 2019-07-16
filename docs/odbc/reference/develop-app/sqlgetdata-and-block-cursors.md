@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 12599cdc-7725-4faf-bcae-e163ea0f5851
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a14c98f045fd974b404209cc998496dc5fa7193e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4841d8d923ff73d187569df3d7f9e29daf0f4e48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107405"
 ---
 # <a name="sqlgetdata-and-block-cursors"></a>SQLGetData e cursores em bloco
 **SQLGetData** opera em uma única coluna de uma única linha e não é possível buscar uma matriz que contém dados de várias linhas. Isso ocorre porque o uso primário dos **SQLGetData** é buscar dados longos em partes, e há pouco ou nenhum motivo para fazer isso para mais de uma linha por vez.  

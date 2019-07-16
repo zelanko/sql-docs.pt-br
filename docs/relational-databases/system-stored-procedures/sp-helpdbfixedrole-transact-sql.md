@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1f3b4416ac9c297af84240e630730b0bad855780
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dc461bcd1b5adbbc64b2eadaa4bb55af690ea88a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527958"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123826"
 ---
 # <a name="sphelpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
   
  A tabela a seguir mostra os procedimentos armazenados usados para modificar as funções de banco de dados.  
   
-|Procedimento armazenado|Ação|  
+|Procedimento armazenado|Action|  
 |----------------------|------------|  
 |**sp_addrolemember**|Adiciona um usuário de banco de dados a uma função de banco de dados fixa.|  
 |**sp_helprole**|Exibe uma lista dos membros de uma função de banco de dados fixa.|  

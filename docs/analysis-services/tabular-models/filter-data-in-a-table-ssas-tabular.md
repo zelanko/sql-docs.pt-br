@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9b1fcdda5bd49f8056a6035ec10da8fb52f1c5d1
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072115"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162815"
 ---
 # <a name="filter-data-in-a-table"></a>Filtrar dados em uma tabela 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "53072115"
   
 1.  Clique na seta no cabeçalho da coluna da qual você deseja limpar um filtro.  
   
-2.  Clique em **Limpar filtro de \<nome da coluna >**.  
+2.  Clique em **Limpar filtro de \<nome da coluna >** .  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>Para desmarcar todos os filtros de uma tabela  
   

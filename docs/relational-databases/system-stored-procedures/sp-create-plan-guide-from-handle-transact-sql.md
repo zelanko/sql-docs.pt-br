@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 29e5bd9f5dc682862d636b49d77e6b338fe937b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15fa1de65ada904ecf4b93947e1e9e9f818fd0d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108673"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  É o nome da guia de plano. Os nomes de guia de plano têm escopo no banco de dados atual. *plan_guide_name* deve estar em conformidade com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md) e não pode começar com o sinal de número (#). O comprimento máximo de *plan_guide_name* é de 124 caracteres.  
   
  [ @plan_handle = ] *plan_handle*  
- Identifica um lote no cache de plano. *plan_handle* is **varbinary(64)** . *plan_handle* pode ser obtido de [DM exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) exibição de gerenciamento dinâmico.  
+ Identifica um lote no cache de plano. *plan_handle* está **varbinary(64)** . *plan_handle* pode ser obtido de [DM exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) exibição de gerenciamento dinâmico.  
   
  [ @statement_start_offset = ] { *statement_start_offset* | NULL } ]  
  Identifica a posição inicial da instrução no lote do especificado *plan_handle*. *statement_start_offset* está **int**, com um padrão NULL.  

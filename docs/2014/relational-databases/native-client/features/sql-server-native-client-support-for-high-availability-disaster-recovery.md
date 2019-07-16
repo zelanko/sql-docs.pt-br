@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bd73d32a58e156a3ae8577d41bbdd4725f85656
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040227"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206640"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Suporte do SQL Server Native Client à alta disponibilidade e recuperação de desastre
   Este tópico discute o suporte do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (adicionado no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para obter mais informações sobre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [ouvintes do grupo de disponibilidade, conectividade de cliente e Failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md), [criação e configuração dos grupos de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de Failover e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), e [secundárias ativas: Réplicas secundárias legíveis (grupos de disponibilidade AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "56040227"
   
  Para obter mais informações sobre palavras-chave de cadeia de conexão, consulte [Usando palavras-chave da cadeia de conexão com o SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- A especificação de `MultiSubnetFailover=Yes` durante a conexão a algo que não seja um ouvinte de grupo de disponibilidade ou uma Instância de Cluster de Failover pode resultar em um impacto de desempenho negativo; não há suporte para essa especificação.  
+ Especificar `MultiSubnetFailover=Yes` ao conectar-se a algo que não seja um ouvinte de grupo de disponibilidade ou uma Instância de Cluster de Failover pode resultar em um impacto de desempenho negativo, para o qual não há suporte.  
   
  Use as diretrizes a seguir para conectar-se a um servidor em um grupo de disponibilidade ou Instância de Cluster de Failover:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "56040227"
   
 -   Conectar-se a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurada com mais de 64 endereços IP causará uma falha de conexão.  
   
--   Comportamento de um aplicativo que usa a propriedade de conexão do `MultiSubnetFailover` não é afetada com base no tipo de autenticação: Autenticação [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Autenticação Kerberos ou Autenticação do Windows.  
+-   Comportamento de um aplicativo que usa o `MultiSubnetFailover` propriedade de conexão não é afetada com base no tipo de autenticação: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Autenticação, a autenticação Kerberos ou autenticação do Windows.  
   
 -   Você pode aumentar o valor de `loginTimeout` para acomodar o tempo de failover e reduzir as tentativas de repetição de conexão do aplicativo.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "56040227"
   
 2.  Se um aplicativo usar `ApplicationIntent=ReadWrite` (abordado abaixo) e o local da réplica secundária estiver configurado para acesso somente leitura.  
   
- Uma conexão apresentará falha se uma réplica primária estiver configurada para rejeitar cargas de trabalho somente leitura e a cadeia de conexão contiver `ApplicationIntent=ReadOnly`.  
+ Uma conexão falhará se uma réplica primária estiver configurada para rejeitar cargas de trabalho somente leitura e a cadeia de conexão contiver `ApplicationIntent=ReadOnly`.  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Atualizando para usar clusters de várias sub-redes a partir do espelhamento de banco de dados  
  Um erro de conexão ocorrerá se as palavras-chave de conexão `MultiSubnetFailover` e `Failover_Partner` estiverem presentes na cadeia de conexão. Um erro também ocorrerá se a palavra-chave `MultiSubnetFailover` for usada e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] retornar uma resposta de parceiro de failover indicando que ela faz parte de um par de espelhamento de banco de dados.  
@@ -68,7 +68,7 @@ ms.locfileid: "56040227"
 ## <a name="specifying-application-intent"></a>Especificando a intenção do aplicativo  
  Quando `ApplicationIntent=ReadOnly`, o cliente solicita uma carga de trabalho leitura ao se conectar a um banco de dados habilitado para AlwaysOn. O servidor irá impor a intenção no momento da conexão e durante uma instrução USE de banco de dados, mas somente para um banco de dados habilitado para AlwaysOn.  
   
- A palavra-chave `ApplicationIntent` não funciona com bancos de dados herdados somente leitura.  
+ A palavra-chave `ApplicationIntent` não funciona com bancos de dados somente leitura de versões anteriores.  
   
  Um banco de dados pode permitir ou não cargas de trabalho de leitura no banco de dados AlwaysOn de destino. (Isso é feito com o `ALLOW_CONNECTIONS` cláusula do `PRIMARY_ROLE` e `SECONDARY_ROLE` [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruções.)  
   

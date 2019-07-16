@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 905a0a4189a97b6cd8ef3cc461f805adf0afd727
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131496"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210709"
 ---
 # <a name="parameterized-row-filters"></a>Parameterized Row Filters
   Os filtros de linha com parâmetros permitem que diferentes partições de dados sejam enviadas a diferentes Assinantes sem a necessidade de criar múltiplas publicações (os filtros com parâmetros foram referidos como filtros dinâmicos em versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Uma partição é um subconjunto das linhas de uma tabela; dependendo das configurações escolhidas ao criar um filtro de linha com parâmetros, cada linha de uma tabela publicada pode pertencer a uma partição somente (o que produz partições que não se sobrepõem) ou a duas ou mais partições (o que produzem partições que se sobrepõem).  
@@ -37,7 +37,7 @@ ms.locfileid: "54131496"
  Para definir ou modificar um filtro de linha com parâmetros, consulte [Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem](../publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 ## <a name="how-parameterized-filters-work"></a>Como funcionam os filtros com parâmetros  
- Um filtro de linha com parâmetros usa uma cláusula WHERE para selecionar os dados apropriados a serem publicados. Em vez de especificar um valor literal na cláusula (como você faria com um filtro de linha estático), você especifica uma das seguintes funções do sistema ou ambas: Suser_sname () e HOST_NAME (). Funções definidas pelo usuário também podem ser usadas, mas devem incluir SUSER_SNAME() ou HOST_NAME() no corpo da função, ou avaliar uma dessas funções de sistema (como `MyUDF(SUSER_SNAME()`). Se uma função definida pelo usuário incluir SUSER_SNAME() ou HOST_NAME() no corpo da função, você não pode passar parâmetros para a função.  
+ Um filtro de linha com parâmetros usa uma cláusula WHERE para selecionar os dados apropriados a serem publicados. Em vez de especificar um valor literal na cláusula (como você faria com um filtro de linha estático), você especifica uma das seguintes funções do sistema ou ambas: SUSER_SNAME() e HOST_NAME(). Funções definidas pelo usuário também podem ser usadas, mas devem incluir SUSER_SNAME() ou HOST_NAME() no corpo da função, ou avaliar uma dessas funções de sistema (como `MyUDF(SUSER_SNAME()`). Se uma função definida pelo usuário incluir SUSER_SNAME() ou HOST_NAME() no corpo da função, você não pode passar parâmetros para a função.  
   
  As funções de sistema SUSER_SNAME() e HOST_NAME() não são específicas para replicação de mesclagem, mas são usadas para por replicação de mesclagem para filtragem com parâmetros:  
   

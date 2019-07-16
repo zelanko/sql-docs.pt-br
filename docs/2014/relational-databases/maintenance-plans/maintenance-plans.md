@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0643c6fbf8e9a6aa649d4d335117bcb4f5b35208
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803068"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206856"
 ---
 # <a name="maintenance-plans"></a>Planos de manutenção
   Os planos de manutenção criam um fluxo de trabalho das tarefas necessárias para garantir que o banco de dados seja otimizado, armazenado regularmente em backup e livre de inconsistências. O Assistente de Plano de Manutenção também cria os planos principais de manutenção, mas criar planos de forma manual pode oferecer uma flexibilidade bem maior.  
@@ -58,7 +58,7 @@ ms.locfileid: "52803068"
   
  Os resultados gerados pelas tarefas de manutenção podem ser gravados como relatórios em arquivos de texto ou como tabelas de plano de manutenção, (`sysmaintplan_log` e `sysmaintplan_logdetail`) no `msdb`. Para exibir os resultados no visualizador de arquivos de log, clique com o botão direito do mouse em **Planos de Manutenção** e clique em **Exibir Histórico**.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  Use os tópicos a seguir como introdução rápida aos planos de manutenção.  
   
 |||  
