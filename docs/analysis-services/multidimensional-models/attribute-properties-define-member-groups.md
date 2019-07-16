@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1da226353847409f1d808472dc155cb2055395cd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021073"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179598"
 ---
-# <a name="attribute-properties---define-member-groups"></a>Propriedades de atributo - definir grupos de membros
+# <a name="attribute-properties---define-member-groups"></a>Propriedades do atributo – Definir grupos de membros
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Se um atributo possuir um grande número de membros, será possível agrupá-los em blocos, reduzindo o número de membros que os usuários veem ao navegar pelos dados da hierarquia. Você pode determinar o número de blocos em que os membros são agrupados e definir um esquema de nomeação para os blocos. Para obter mais informações, consulte [Agrupar membros de atributo &#40;Diferenciação&#41;](../../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   

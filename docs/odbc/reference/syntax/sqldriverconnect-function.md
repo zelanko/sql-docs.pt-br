@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 225b882a6c48900e9a15a23e4073910315848985
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9528280514be2eb2424b15a39ded3206aaca112f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104701"
 ---
 # <a name="sqldriverconnect-function"></a>Função SQLDriverConnect
 **Conformidade com**  
@@ -62,7 +61,7 @@ SQLRETURN SQLDriverConnect(
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *ConnectionHandle*  
+ *Identificador da conexão*  
  [Entrada] Identificador de conexão.  
   
  *WindowHandle*  

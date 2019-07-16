@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1d7cccc5-f847-4321-b240-28570854ee5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9eecd202a17a0a08e8607ebec0caaa31b7b3ca9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bab3571ba880658d9f1a2629b899484008428083
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199201"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118794"
 ---
 # <a name="bookmarks-odbc"></a>Indicadores (ODBC)
 Um indicador é um valor usado para identificar uma linha de dados. O significado do valor de indicador só é conhecido para o driver ou a fonte de dados. Por exemplo, ele poderá ser tão simples quanto um número de linha ou tão complexo quanto um endereço de disco. Os indicadores no ODBC são um pouco diferentes de indicadores em livros real. Em um livro real, o leitor coloca um indicador em uma página específica e, em seguida, procura por esse indicador retornar à página. Em ODBC, o aplicativo solicita um indicador para uma linha específica, armazena-o e transmite-o novamente ao cursor para que retorne à linha. Assim, os indicadores no ODBC são semelhantes a um leitor anotar um número de página, lembrá-la e, em seguida, verificando novamente a página.  

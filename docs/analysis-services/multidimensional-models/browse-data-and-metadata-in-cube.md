@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fda788cecbad21a73186b96a6c360ceeae3948e3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537284"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179057"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Procurar dados e metadados no Cubo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52537284"
   
 -   Expanda uma dimensão no painel de Metadados e arraste uma hierarquia para o painel de Filtro.  
   
-     \- ou –  
+     \- ou -  
   
 -   No **dimensão** coluna das **filtro** painel, clique em  **\<selecionar dimensão >** e selecione uma dimensão na lista e clique em  **\<Selecionar hierarquia >** na **hierarquia** coluna e selecione uma hierarquia na lista.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "52537284"
   
 |Operador|Expressão de filtro|Descrição|  
 |--------------|-----------------------|-----------------|  
-|Equal|Um ou mais membros|Os valores devem ser iguais a um membro especificado.<br /><br /> (Fornece várias seleções de membro para hierarquias de atributo, além de hierarquias pai-filho e seleção única de membro para outras hierarquias.)|  
+|Igual|Um ou mais membros|Os valores devem ser iguais a um membro especificado.<br /><br /> (Fornece várias seleções de membro para hierarquias de atributo, além de hierarquias pai-filho e seleção única de membro para outras hierarquias.)|  
 |Diferente de|Um ou mais membros|Os valores não devem ser iguais a um membro especificado.<br /><br /> (Fornece várias seleções de membro para hierarquias de atributo, além de hierarquias pai-filho e seleção única de membro para outras hierarquias.)|  
 |Entrada|Um ou mais conjuntos nomeados|Os valores devem estar em um conjunto nomeado especificado.<br /><br /> (Suporte somente a hierarquias de atributo.)|  
 |Não Está em|Um ou mais conjuntos nomeados|Os valores não devem estar em um conjunto nomeado especificado.<br /><br /> (Suporte somente a hierarquias de atributo.)|  

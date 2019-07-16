@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b93943109267db79b1c8475eb3e1875950f9970a
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: d6eec5c523e2bdd321af145f19d0b5e7e7cba39b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135306"
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -36,12 +35,12 @@ ms.locfileid: "58161783"
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|nome|**sysname**|Nome da política de segurança, exclusivo no banco de dados.|  
+|name|**sysname**|Nome da política de segurança, exclusivo no banco de dados.|  
 |object_id|**int**|ID da política de segurança.|  
 |principal_id|**int**|ID do proprietário da política de segurança, conforme registrado no banco de dados. NULL se o proprietário for determinado por meio do esquema.|  
 |schema_id|**int**|ID do esquema onde o objeto reside.|  
 |parent_object_id|**int**|ID do objeto ao qual esta política pertence. Deve ser 0.|  
-|Tipo|**vachar(2)**|Deve ser **SP**.|  
+|type|**vachar(2)**|Deve ser **SP**.|  
 |type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
 |create_date|**datetime**|A data UTC em que a política de segurança foi criada.|  
 |modify_date|**datetime**|A data UTC em que a política de segurança foi modificada.|  

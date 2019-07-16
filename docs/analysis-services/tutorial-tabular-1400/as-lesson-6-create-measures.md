@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f3592f1494661fa603e6dc252d3cd2e10093c24e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 715fe6144cc430e545feb3c484d148531cff6ec9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685643"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207341"
 ---
 # <a name="create-measures"></a>Criar medidas
 
@@ -31,7 +31,7 @@ Nesta lição, você criará medidas inserindo uma fórmula DAX na barra de fór
   
 Tempo estimado para concluir esta lição: **30 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 
 Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 5: Criar colunas calculadas](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).  
   
@@ -51,7 +51,7 @@ Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser conclu
   
     Observe que a célula superior esquerda agora contém um nome de medida **DaysCurrentQuarterToDate**, seguido do resultado **92**. O resultado não é relevante neste ponto porque nenhum filtro de usuário foi aplicado.
     
-      ![as-lesson6-newmeasure](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
+      ![novamedida como lesson6](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
     
     Ao contrário de colunas calculadas, com fórmulas de medida, você pode digitar o nome da medida, seguido por dois-pontos, seguido pela expressão da fórmula.
 
@@ -89,7 +89,7 @@ Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser conclu
 
     |coluna|Nome da medida|AutoSoma (∑)|Fórmula|  
     |----------------|----------|-----------------|-----------|  
-    |SalesOrderLineNumber|InternetOrderLinesCount|Contagem|=COUNTA([SalesOrderLineNumber])|  
+    |SalesOrderLineNumber|InternetOrderLinesCount|Count|=COUNTA([SalesOrderLineNumber])|  
     |OrderQuantity|InternetTotalUnits|Sum|=SUM([OrderQuantity])|  
     |DiscountAmount|InternetTotalDiscountAmount|Sum|=SUM([DiscountAmount])|  
     |TotalProductCost|InternetTotalProductCost|Sum|=SUM([TotalProductCost])|  

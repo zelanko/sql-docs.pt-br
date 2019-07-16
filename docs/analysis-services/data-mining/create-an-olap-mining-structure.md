@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eeac51c5ba3926eb95c00bd0f3f372aae5c5f3f1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408556"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183881"
 ---
 # <a name="create-an-olap-mining-structure"></a>Criar uma estrutura de mineração OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52408556"
 ##  <a name="bkmk_Reqs"></a> Requisitos para a estrutura e modelos de mineração OLAP  
  Se você está criando um modelo de mineração OLAP, sua fonte de dados já existe, no banco de dados usado para criar o cubo. Você não pode se conectar a um cubo remoto e criar objetos de mineração de dados; os objetos de cubo devem estar disponíveis na mesma solução que o banco de dados como a estrutura de mineração que você criará.  
   
- Se você não tiver os arquivos de projeto originais, ou não quiser alterá-los, poderá usar a opção no Visual Studio, **Importar do Servidor (Multidimensional ou Mineração de dados)**, para obter uma cópia dos metadados e dos objetos de solução. Você pode modificar o destino de implantação, editar fontes de dados e trabalhar com os objetos de cubo sem afetar os objetos existentes.  
+ Se você não tiver os arquivos de projeto originais, ou não quiser alterá-los, poderá usar a opção no Visual Studio, **Importar do Servidor (Multidimensional ou Mineração de dados)** , para obter uma cópia dos metadados e dos objetos de solução. Você pode modificar o destino de implantação, editar fontes de dados e trabalhar com os objetos de cubo sem afetar os objetos existentes.  
   
  Para obter mais informações, consulte [Importar um projeto de mineração de dados usando o Assistente de Importação do Analysis Services](../../analysis-services/data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   

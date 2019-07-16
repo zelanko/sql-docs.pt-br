@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cf8844188330a408c29c8b959994637e097f7043
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529343"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164847"
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>Hierarquias definidas pelo usuário – Hierarquias desbalanceadas
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52529343"
   
  A primeira etapa é verificar como o aplicativo cliente trata o caminho de busca detalhada. Por exemplo, o Excel repete os nomes pai como espaços reservados para valores ausentes. Para ver esse comportamento, crie uma Tabela Dinâmica usando a dimensão Sales Territory no modelo multidimensional do Adventure Works. Em uma Tabela Dinâmica que tem os atributos Group, Country e Region de Sales Territory, você verá que os países sem um valor de região obterão um espaço reservado; nesse caso, uma repetição do pai acima dele (nome do país). Esse comportamento deriva da propriedade da cadeia de conexão MDX Compatibility=1, que é fixa no Excel. Se o cliente não fornece naturalmente os comportamentos de busca detalhada buscados, você pode definir propriedades no modelo para alterar pelo menos alguns desses comportamentos.  
   
- Este tópico contém as seguintes seções:  
+ Esse tópico contém as seguintes seções:  
   
 -   [Abordagens para modificar a navegação da busca detalhada em uma hierarquia desbalanceada](#bkmk_approach)  
   

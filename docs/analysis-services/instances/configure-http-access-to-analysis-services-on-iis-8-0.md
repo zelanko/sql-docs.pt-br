@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b2e318d8426f9c78e0065377dcb27a6186e31c0d
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079462"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182038"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Configurar o acesso HTTP ao Analysis Services no IIS 8.0
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "56079462"
   
 -   **Desenvolvimento de aplicativos** | **Extensões ISAPI**  
   
- Para verificar ou adicionar esses componentes, use **Gerenciador do Servidor** | **Gerenciar** | **Adicionar Funções e Recursos**. Percorrer o assistente até chegar nas **Funções de servidor**. Role para baixo até localizar o **Servidor Web (IIS)**.  
+ Para verificar ou adicionar esses componentes, use **Gerenciador do Servidor** | **Gerenciar** | **Adicionar Funções e Recursos**. Percorrer o assistente até chegar nas **Funções de servidor**. Role para baixo até localizar o **Servidor Web (IIS)** .  
   
 1.  Abra **Servidor Web** | **Segurança** e escolha os métodos de autenticação.  
   
@@ -91,12 +91,12 @@ ms.locfileid: "56079462"
 > [!NOTE]  
 >  Lembre-se de desbloquear as portas no Firewall do Windows para permitir conexões de cliente a um servidor remoto do Analysis Services. Para obter mais informações, consulte [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-##  <a name="bkmk_copy"></a> Etapa 1: Copiar os arquivos MSMDPUMP para uma pasta no servidor Web  
+##  <a name="bkmk_copy"></a> Etapa 1: Copie os arquivos MSMDPUMP para uma pasta no servidor Web  
  Cada ponto de extremidade HTTP criado deve ter seu próprio conjunto de arquivos MSMDPUMP. Nesta etapa, você copia o executável do MSMDPUMP, o arquivo de configuração e os arquivos de recurso das pastas de programas do Analysis Services para uma nova pasta de diretório virtual que será criada no sistema de arquivos do computador que está executando o IIS.  
   
  A unidade deve ser formatada para o sistema de arquivos NTFS. O caminho para a pasta que você cria não deve conter espaços.  
   
-1.  Copie os seguintes arquivos, encontrados em \<unidade >: \Program Files\Microsoft do SQL Server\\< instância\>\OLAP\bin\isapi: MSMDPUMP.DLL, MSMDPUMP.INI e uma pasta Resources.  
+1.  Copie os seguintes arquivos, encontrados em \<unidade >: \Program Files\Microsoft do SQL Server\\< instância\>\OLAP\bin\isapi: MSMDPUMP. DLL, MSMDPUMP. INI e uma pasta de recursos.  
   
      ![Estrutura de pastas de arquivos MSMDPUMP](../../analysis-services/instances/media/ssas-httpaccess-msmdpumpfilecopy.PNG "estrutura de pastas de arquivos MSMDPUMP")  
   
@@ -104,13 +104,13 @@ ms.locfileid: "56079462"
   
 3.  Cole os arquivos que você copiou anteriormente para essa nova pasta.  
   
-4.  Verifique se a pasta \inetpub\wwwroot\OLAP no servidor Web contém o seguinte: MSMDPUMP.DLL, MSMDPUMP.INI e uma pasta Resources. A estrutura de pastas devem ter a seguinte aparência:  
+4.  Verifique se a pasta \inetpub\wwwroot\OLAP no seu servidor web contém o seguinte: MSMDPUMP. DLL, MSMDPUMP. INI e uma pasta de recursos. A estrutura de pastas devem ter a seguinte aparência:  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
-    -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
+    -   \<unidade >: \inetpub\wwwroot\OLAP\Resources  
 > [!NOTE]  
 >  O Gerenciador do IIS pode não ser capaz de se conectar ao Analysis Services na versão atual, se o banco de dados for um backup da anterior. Isso é causado por alterações no MSMDPUMP e deve ser resolvido, copiando o arquivo msmdpump. dll da versão anterior do trabalho.
   
@@ -167,7 +167,7 @@ ms.locfileid: "56079462"
   
  A**Autenticação anônima** é frequentemente usada durante o teste inicial porque a facilidade de configuração ajuda a validar rapidamente a conectividade HTTP com o Analysis Services. Em apenas algumas etapas, você pode atribuir uma conta de usuário exclusiva como identidade, conceder essas permissões de conta no Analysis Services, usar a conta para verificar o acesso aos dados em um aplicativo cliente e, em seguida, desabilitar a autenticação Anônima quando o teste for concluído.  
   
- Você também poderá usar a autenticação Anônima em um ambiente de produção se os usuários não tiverem contas de usuário do Windows, mas siga as práticas recomendadas bloqueando as permissões no sistema host, conforme destacado neste artigo: [Habilitar a autenticação anônima (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Verifique se a autenticação está definida no diretório virtual, e não no site pai, a fim de reduzir ainda mais o nível da conta de acesso.  
+ Você também pode usar a autenticação anônima em um ambiente de produção se os usuários não têm contas de usuário do Windows, mas siga as práticas recomendadas bloqueando as permissões no sistema host, conforme destacado neste artigo: [Habilitar a autenticação anônima (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Verifique se a autenticação está definida no diretório virtual, e não no site pai, a fim de reduzir ainda mais o nível da conta de acesso.  
   
  Quando a opção Anônima for habilitada, qualquer conexão de usuário com o ponto de extremidade HTTP será permitida como usuário anônimo. Você não conseguirá auditar as conexões de usuário individuais, nem usar a identidade do usuário para selecionar dados de um modelo. Como você pode ver, o uso da opção Anônima impacta tudo, do modelo de design ao acesso e à atualização dos dados. No entanto, se os usuários não tiverem um logon de usuário do Windows para começar, o uso da conta Anônima talvez seja sua única opção.  
   
@@ -229,7 +229,7 @@ ms.locfileid: "56079462"
   
  Se você configurou uma nomeada ou padrão da instância do Analysis Services para escutar em uma porta fixa, você deve adicionar o número da porta ao nome do servidor (por exemplo, \<ServerName > AW-AW-Srv01:55555</servername\</ServerName >) e você deve permitir entrada conexões no Firewall do Windows para essa porta.  
   
-## <a name="step-5-grant-data-access-permissions"></a>Etapa 5: Conceder permissões de acesso a dados  
+## <a name="step-5-grant-data-access-permissions"></a>Etapa 5: Conceder permissões de acesso de dados  
  Como mencionado anteriormente, será preciso conceder permissões à instância do Analysis Services. Cada objeto de banco de dados terá funções que fornecem um nível específico de permissões (leitura ou leitura/gravação), e cada função terá os membros que consistem em identidades de usuário do Windows.  
   
  Para definir permissões, você pode usar o SQL Server Management Studio. Na pasta **Banco de dados** | **Funções** , você pode criar funções, especificar permissões de banco de dados, atribuir a associação às contas de grupo ou de usuário do Windows e conceder permissões de leitura ou gravação em objetos específicos. Normalmente, as permissões de **Leitura** em um cubo são suficientes para as conexões de cliente que usam, mas não atualizam, dados do modelo.  

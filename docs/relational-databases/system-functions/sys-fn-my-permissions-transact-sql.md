@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 244e8935a580a8febc483673d6d747b6cc4b7b1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122628"
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +46,12 @@ fn_my_permissions ( securable , 'securable_class' )
  É o nome do protegível. Se o protegível for o servidor ou um banco de dados, esse valor deverá ser definido como NULL. *securable* é uma expressão escalar do tipo **sysname**. *protegível* pode ser um nome com diversas partes.  
   
  '*securable_class*'  
- É o nome da classe de protegível para a qual são listadas as permissões. *securable_class* é um **sysname**. *securable_class* deve ser um dos seguintes: função de aplicativo, ASSEMBLY, chave ASSIMÉTRICA, certificado, contrato, banco de dados, ponto de EXTREMIDADE, FULLTEXT CATALOG, LOGIN, MESSAGE TYPE, objeto, REMOTE SERVICE BINDING, função, ROTA, esquema, servidor, serviço , CHAVE SIMÉTRICA, TIPO, USUÁRIO, COLEÇÃO DE ESQUEMAS XML.  
+ É o nome da classe de protegível para a qual são listadas as permissões. *securable_class* é um **sysname**. *securable_class* deve ser um dos seguintes: FUNÇÃO DE APLICATIVO, ASSEMBLY, CHAVE ASSIMÉTRICA, CERTIFICADO, CONTRATO, BANCO DE DADOS, PONTO DE EXTREMIDADE, FULLTEXT CATALOG, LOGIN, TIPO DE MENSAGEM, OBJETO, ASSOCIAÇÃO DE SERVIÇO REMOTO, FUNÇÃO, ROTA, ESQUEMA, SERVIDOR, SERVIÇO, CHAVE SIMÉTRICA, TIPO, USUÁRIO, COLEÇÃO DE ESQUEMAS XML.  
   
 ## <a name="columns-returned"></a>Colunas retornadas  
  A tabela a seguir lista as colunas que **fn_my_permissions** retorna. Cada linha retornada descreve uma permissão mantida pelo contexto de segurança atual no protegível. Retorna NULL se a consulta falhar.  
   
-|Nome da coluna|Tipo|Description|  
+|Nome da coluna|type|Descrição|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|Nome do protegível no qual as permissões listadas são efetivamente concedidas.|  
 |subentity_name|**sysname**|Nome da coluna se o protegível tiver colunas; caso contrário, será NULL.|  

@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e79087f98d5947706720b1dc63c000ae9d9e0ad5
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982598"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164046"
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Criar e configurar o aplicativo de serviço do Power Pivot na autoridade de certificação
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é uma instância de serviço compartilhado do Serviço do Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Cada aplicativo de serviço tem sua própria identidade, definições de configuração, propriedades e armazenamento de dados interno.  
   
- Este tópico contém as seguintes seções:  
+ Esse tópico contém as seguintes seções:  
   
  [Determinar se deseja criar um novo aplicativo de serviço do Power Pivot](#determine)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "38982598"
   
 3.  Selecione **Aplicativo de Serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] do SQL Server**. Se não aparecer na lista, significa que o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint não está instalado ou configurado corretamente.  
   
-4.  Na página **Criar Novo Aplicativo de Serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, insira um nome para o aplicativo. O padrão é PowerPivotServiceApplication\<número >. Se você estiver criando vários aplicativos de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , um nome descritivo ajudará outros administradores a entender como o aplicativo é usado.  
+4.  Na página **Criar Novo Aplicativo de Serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** , insira um nome para o aplicativo. O padrão é PowerPivotServiceApplication\<número >. Se você estiver criando vários aplicativos de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , um nome descritivo ajudará outros administradores a entender como o aplicativo é usado.  
   
 5.  Em Pool de Aplicativos, crie um novo pool de aplicativos para o aplicativo (recomendável). Selecione ou crie uma conta gerenciada para o pool de aplicativos. Não se esqueça de especificar uma conta de usuário do domínio. Uma conta de usuário de domínio habilita o uso do recurso de conta gerenciado do SharePoint que o deixa atualizar senhas e informações de conta em um único local. Contas de domínio também serão obrigatórias se você pretender diminuir a implantação para incluir instâncias de serviço adicionais a serem executadas sob a mesma identidade.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "38982598"
   
      Para obter mais informações sobre associações de serviço, consulte [Conectar um aplicativo de serviço do Power Pivot a um aplicativo Web do SharePoint na Administração Central](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
   
-10. Clique em **OK.** O serviço aparecerá ao lado de outros serviços gerenciados na lista de aplicativos de serviço do farm.  
+10. Clique em **OK** O serviço aparecerá ao lado de outros serviços gerenciados na lista de aplicativos de serviço do farm.  
   
 ##  <a name="ConfigApp"></a> Configurar o aplicativo de serviço do Power Pivot  
  Um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é criado usando uma configuração padrão. As configurações padrão são recomendadas para a maioria dos cenários. Somente as altere se você encontrar um tempo de resposta lento ou conexões removidas, ou se você estiver variando a configuração de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para aplicativos Web do SharePoint específicos.  
@@ -106,7 +106,7 @@ ms.locfileid: "38982598"
   
 9. Em Atualização de Dados, em **Horário Comercial**, você pode especificar um intervalo de horas que define um dia comercial. Os agendamentos de atualização de dados podem ser realizados depois do fim de um dia útil para escolher dados transacionais que foram gerados durante o horário comercial normal.  
   
-10. Em **Conta Autônoma de Atualização de Dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, você pode especificar um aplicativo destino do Serviço de Repositório Seguro predefinido que armazena uma conta predefinida para executar trabalhos de atualização de dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Especifique o nome do aplicativo de destino, e não a ID. O aplicativo de destino para atualização de dados autônoma será criado automaticamente se você usar a opção Novo Servidor na Instalação do SQL Server para instalar o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Caso contrário, crie o aplicativo de destino manualmente. Para obter instruções sobre como configurar a conta, consulte [Configurar a conta autônoma de atualização de dados do Power Pivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493).  
+10. Em **Conta Autônoma de Atualização de Dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** , você pode especificar um aplicativo destino do Serviço de Repositório Seguro predefinido que armazena uma conta predefinida para executar trabalhos de atualização de dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Especifique o nome do aplicativo de destino, e não a ID. O aplicativo de destino para atualização de dados autônoma será criado automaticamente se você usar a opção Novo Servidor na Instalação do SQL Server para instalar o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Caso contrário, crie o aplicativo de destino manualmente. Para obter instruções sobre como configurar a conta, consulte [Configurar a conta autônoma de atualização de dados do Power Pivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493).  
   
 11. Em **Permitir que os usuários insiram credenciais personalizadas do Windows**, é possível marcar ou desmarcar a caixa de seleção para especificar se os proprietários da agenda podem inserir credenciais do Windows arbitrárias para executar uma agenda de atualização de dados. Se você marcar essa caixa de seleção, o aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] criará e gerenciará um aplicativo de destino para cada conjunto de credenciais armazenadas. Para obter mais informações, consulte [Configurar credenciais armazenadas para atualização de dados do Power Pivot (Power Pivot para SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).  
   
@@ -123,7 +123,7 @@ ms.locfileid: "38982598"
      Alterações do tempo limite de carregamento ou do método de alocação somente são aplicadas a novas solicitações de entrada. Solicitações em andamento estão sujeitas aos valores que estavam em vigor quando a solicitação foi recebida.  
   
 ##  <a name="AssignGSA"></a> Atribuir um aplicativo de serviço do Power Pivot a um aplicativo Web  
- Depois de configurar um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , você pode atribuí-lo a um aplicativo Web acrescentando-o à lista de conexão de aplicativo de serviço para aquele aplicativo Web. Isso pode ser feito de duas maneiras:  
+ Depois de configurar um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , você pode atribuí-lo a um aplicativo Web acrescentando-o à lista de conexão de aplicativo de serviço para aquele aplicativo Web. Há duas formas de fazer isso:  
   
 -   Acrescente-o ao grupo de conexão **Padrão** . O *grupo de conexão padrão* é uma coleção de conexões de aplicativo de serviço que estão disponíveis para qualquer aplicativo Web que faça referência a ele. Você deve adicionar um aplicativo do serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a essa lista.  
   
@@ -137,9 +137,9 @@ ms.locfileid: "38982598"
   
 3.  Clique em **Conexões de Serviço**.  
   
-4.  Em **Editar o seguinte grupo de associações**, selecione **padrão** ou **[personalizado]**.  
+4.  Em **Editar o seguinte grupo de associações**, selecione **padrão** ou **[personalizado]** .  
   
-5.  Para **[personalizado]**, marque a caixa de seleção ao lado de cada conexão de aplicativo de serviço a ser usada. Se você tiver vários aplicativos de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (indicado por Tipo definido como **Proxy de Aplicativo de Serviço Power Pivot**), escolha apenas um.  
+5.  Para **[personalizado]** , marque a caixa de seleção ao lado de cada conexão de aplicativo de serviço a ser usada. Se você tiver vários aplicativos de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (indicado por Tipo definido como **Proxy de Aplicativo de Serviço Power Pivot**), escolha apenas um.  
   
 6.  Clique em **OK**.  
   

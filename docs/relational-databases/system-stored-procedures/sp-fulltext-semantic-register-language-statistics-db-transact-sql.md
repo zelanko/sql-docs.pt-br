@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bb0dcefe09bba8f3df06ed5730ea5bdae2be27d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59cf70574a73827887542221f556e65e46090395
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124211"
 ---
 # <a name="spfulltextsemanticregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ GO
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-set"></a>Conjunto de resultados  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  O banco de dados de Estatísticas de Idioma Semântico contém estatísticas relacionadas a idioma que são necessárias para processamento semântico de conteúdo textual.  

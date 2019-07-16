@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e23b7dd9ce81f02a822bece3546bf1c604030df1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4577b97c827d527422fe2448656496d7c196c40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118698"
 ---
 # <a name="sqlcolattribute-function"></a>Função SQLColAttribute
 **Conformidade com**  
@@ -77,7 +76,7 @@ SQLRETURN SQLColAttribute (
   
 -   Se *CharacterAttributePtr* é um ponteiro para um buffer de binário, o aplicativo coloca o resultado do SQL_LEN_BINARY_ATTR (*comprimento*) macro na *BufferLength*. Isso coloca um valor negativo em *BufferLength*.  
   
--   Se *CharacterAttributePtr* é um ponteiro para um tipo de dados de comprimento fixo *BufferLength* deve ser um dos seguintes: SQL_IS_INTEGER, SQL_IS_UNINTEGER, SQL_SMALLINT, or SQLUSMALLINT.  
+-   Se *CharacterAttributePtr* é um ponteiro para um tipo de dados de comprimento fixo *BufferLength* deve ser um dos seguintes: SQL_IS_INTEGER, SQL_IS_UNINTEGER, SQL_SMALLINT ou SQLUSMALLINT.  
   
  *StringLengthPtr*  
  [Saída] Ponteiro para um buffer no qual retornar o número total de bytes (excluindo o byte nulo de terminação para dados de caracteres) disponíveis para retornar no **CharacterAttributePtr*.  
@@ -146,7 +145,7 @@ SQLRETURN SQLColAttribute (
   
  A tabela a seguir lista os tipos de descritor retornados por **SQLColAttribute**. O tipo para *NumericAttributePtr* valores é **SQLLEN \*** .  
   
-|*FieldIdentifier*|Informações<br /><br /> retornado no|Descrição|  
+|*FieldIdentifier*|Information<br /><br /> retornado no|Descrição|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE se a coluna for uma coluna de incremento automático.<br /><br /> SQL_FALSE se a coluna não é uma coluna de incremento automático ou não for numérica.<br /><br /> Este campo é válido para somente colunas de tipo de dados numéricos. Um aplicativo pode inserir valores em uma linha que contém uma coluna de incremento automático, mas geralmente não é possível atualizar os valores na coluna.<br /><br /> Quando uma instrução insert é feito em uma coluna de incremento automático, um valor exclusivo é inserido na coluna em tempo de inserção. O incremento não está definido, mas é específico da fonte de dados. Um aplicativo não deve presumir que uma coluna de incremento automático é iniciado em qualquer ponto específico ou incrementos por nenhum valor específico.|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0)|*CharacterAttributePtr*|O nome da coluna de base para o resultado de definir a coluna. Se não existir um nome de coluna de base (como no caso de colunas que são expressões), essa variável conterá uma cadeia de caracteres vazia.<br /><br /> Essas informações são retornadas do campo de registro SQL_DESC_BASE_COLUMN_NAME do IRD, que é um campo somente leitura.|  
@@ -155,10 +154,10 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_CATALOG_NAME (ODBC 2.0)|*CharacterAttributePtr*|O catálogo da tabela que contém a coluna. O valor retornado é definido pela implementação se a coluna é uma expressão ou se a coluna faz parte de uma exibição. Se a fonte de dados não dá suporte a catálogos ou o nome do catálogo não pode ser determinado, uma cadeia de caracteres vazia será retornada. Este campo de registro VARCHAR não é limitado a 128 caracteres.|  
 |SQL_DESC_CONCISE_TYPE (ODBC 1.0)|*NumericAttributePtr*|O tipo de dados concisa.<br /><br /> Para os tipos de dados de data e hora e intervalo, esse campo retorna o tipo de dados concisa; Por exemplo, SQL_TYPE_TIME ou SQL_INTERVAL_YEAR. (Para obter mais informações, consulte [Data Type Identifiers and Descriptors](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) no Apêndice d: Tipos de dados).<br /><br /> Essas informações são retornadas do campo do IRD registro SQL_DESC_CONCISE_TYPE.|  
 |SQL_DESC_COUNT  (ODBC 1.0)|*NumericAttributePtr*|O número de colunas disponíveis no conjunto de resultados. Isso retornará 0 se não houver nenhuma coluna no conjunto de resultados. O valor de *ColumnNumber* argumento será ignorado.<br /><br /> Essas informações são retornadas do campo de cabeçalho SQL_DESC_COUNT do IRD.|  
-|SQL_DESC_DISPLAY_SIZE (ODBC 1.0)|*NumericAttributePtr*|Número máximo de caracteres necessários para exibir dados da coluna. Para obter mais informações sobre o tamanho de exibição, consulte [tamanho da coluna, dígitos decimais, o comprimento do octeto de transferência e exibir tamanho](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) no Apêndice d: Tipos de dados.|  
+|COLUNAS DE SQL_DESC_DISPLAY_SIZE (ODBC 1.0)|*NumericAttributePtr*|Número máximo de caracteres necessários para exibir dados da coluna. Para obter mais informações sobre o tamanho de exibição, consulte [tamanho da coluna, dígitos decimais, o comprimento do octeto de transferência e exibir tamanho](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) no Apêndice d: Tipos de dados.|  
 |SQL_DESC_FIXED_PREC_SCALE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE se a coluna tem uma precisão fixa e uma escala diferente de zero que são específicos da fonte de dados.<br /><br /> SQL_FALSE se a coluna não tem uma precisão fixa e uma escala diferente de zero que são específicos da fonte de dados.|  
 |SQL_DESC_LABEL (ODBC 2.0)|*CharacterAttributePtr*|O rótulo da coluna ou o título. Por exemplo, uma coluna denominada EmpName pode ser rotulado como nome do funcionário ou pode ser rotulada com um alias.<br /><br /> Se uma coluna não tiver um rótulo, o nome da coluna será retornado. Se a coluna é sem rótulo e sem nome, uma cadeia de caracteres vazia será retornada.|  
-|SQL_DESC_LENGTH  (ODBC 3.0)|*NumericAttributePtr*|Um valor numérico que é o comprimento de caracteres real ou máximo da cadeia de caracteres ou binário dados de caracteres de tipo. É o número máximo de caracteres para um tipo de dados de comprimento fixo ou o comprimento de caracteres real para um tipo de dados de comprimento variável. Seu valor sempre exclui o byte nulo de terminação que encerra a cadeia de caracteres.<br /><br /> Essas informações são retornadas do campo do IRD registro SQL_DESC_LENGTH.<br /><br /> Para obter mais informações sobre o tamanho, consulte [tamanho da coluna, dígitos decimais, o comprimento do octeto de transferência e o tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) no Apêndice d: Tipos de dados.|  
+|SQL_DESC_LENGTH (ODBC 3.0)|*NumericAttributePtr*|Um valor numérico que é o comprimento de caracteres real ou máximo da cadeia de caracteres ou binário dados de caracteres de tipo. É o número máximo de caracteres para um tipo de dados de comprimento fixo ou o comprimento de caracteres real para um tipo de dados de comprimento variável. Seu valor sempre exclui o byte nulo de terminação que encerra a cadeia de caracteres.<br /><br /> Essas informações são retornadas do campo do IRD registro SQL_DESC_LENGTH.<br /><br /> Para obter mais informações sobre o tamanho, consulte [tamanho da coluna, dígitos decimais, o comprimento do octeto de transferência e o tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) no Apêndice d: Tipos de dados.|  
 |SQL_DESC_LITERAL_PREFIX (ODBC 3.0)|*CharacterAttributePtr*|Este campo de registro de varchar (128) contém um ou mais caracteres que o driver reconhece como um prefixo para um literal deste tipo de dados. Este campo contém uma cadeia de caracteres vazia para um tipo de dados para o qual um prefixo de literal não é aplicável. Para obter mais informações, consulte [Literal prefixos e sufixos](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md).|  
 |SQL_DESC_LITERAL_SUFFIX (ODBC 3.0)|*CharacterAttributePtr*|Este campo de registro de varchar (128) contém um ou mais caracteres que o driver reconhece como um sufixo para um literal deste tipo de dados. Este campo contém uma cadeia de caracteres vazia para um tipo de dados para o qual um sufixo literal não é aplicável. Para obter mais informações, consulte [Literal prefixos e sufixos](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md).|  
 |SQL_DESC_LOCAL_TYPE_NAME (ODBC 3.0)|*CharacterAttributePtr*|Este campo de registro de varchar (128) contém qualquer nome localizado (idioma nativo) para o tipo de dados que pode ser diferente do nome do tipo de dados regular. Se não houver nenhum nome localizado, uma cadeia de caracteres vazia é retornada. Este campo é somente para exibição. O conjunto de caracteres da cadeia de caracteres é dependente da localidade e normalmente é o conjunto de caracteres padrão do servidor.|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f26430a70d3ff6f2688727b135e8bf46649af62
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181342"
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2013"></a>Exemplo de privilégios mínimos Pivot - SharePoint 2013 de energia
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "40393582"
   
  A tabela a seguir resume as três contas usadas neste exemplo de uma configuração com privilégios mínimos.  
   
-|Escopo|Nome|  
+|Escopo|Name|  
 |-----------|----------|  
 |Conta do administrador do SharePoint|**SPAdmin**|  
 |Conta do farm do SharePoint|**SPFarm**|  

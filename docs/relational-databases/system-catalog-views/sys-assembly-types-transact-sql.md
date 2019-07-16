@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 35f0384f-7a6d-41b1-9461-f1406d68f317
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f62185fc99512a966789f1b878b23f90264fba9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a5358b75da914919cb4db567dc7eae6ad8617f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721265"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118105"
 ---
 # <a name="sysassemblytypes-transact-sql"></a>sys.assembly_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Contém uma linha para cada tipo definido pelo usuário que está definido por um assembly CLR. O seguinte **sys.assembly_types** aparecem na lista de colunas herdadas (consulte [Types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) após **rule_object_id**.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**int**|ID do assembly a partir do qual este tipo foi criado.|  
 |**assembly_class**|**sysname**|Nome da classe no assembly que define este tipo.|  

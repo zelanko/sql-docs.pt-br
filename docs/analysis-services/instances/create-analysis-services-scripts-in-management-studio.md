@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28b1b0068f9ddd9bf47bc2fe93177db469c8b4f1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057814"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181861"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Criar scripts do Analysis Services no Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "38057814"
   
 2.  Clique com o botão direito do mouse em um banco de dados e clique em **Backup**. Essa ação abre a caixa de diálogo Banco de Dados de Backup. Especifique um nome de arquivo de backup e escolha as opções que você deseja para esse backup.  
   
-3.  Clique em **Script** na parte superior da caixa de diálogo. O recurso Script faz parte de todas as caixas de diálogo baseadas em tarefas no Management Studio. Ele tem as seguintes opções: **Ação do Script para a Nova Janela de Consulta** para abrir a janela do editor de consultas, **Ação de Script no Arquivo** para salvar o script XMLA em um arquivo ou **Ação de Script na Área de Transferência** para salvar o script XMLA na Área de Transferência.  
+3.  Clique em **Script** na parte superior da caixa de diálogo. O recurso Script faz parte de todas as caixas de diálogo baseadas em tarefas no Management Studio. Ele tem as seguintes opções: **Ação para a nova janela de consulta de script** para abrir a janela de editor de consultas **ação de Script no arquivo** para salvar o script XMLA em um arquivo, ou **ação de Script para área de transferência** para salvar o script XMLA para o Área de transferência.  
   
      Observe que a opção **Ação de Script no Trabalho** listada como opção de script no Management Studio não tem suporte nos scripts do Analysis Services.  
   
@@ -56,12 +56,12 @@ ms.locfileid: "38057814"
   
 2.  Localize o objeto para o qual você deseja criar um script que cria, altera ou exclui objetos.  
   
-3.  Clique com o botão direito do mouse no objeto, aponte para **Script de Cubo como**, aponte para **CRIAR para**, **ALTERAR para**ou **Excluir para**e, então, clique em uma destas opções: **Nova Janela do Editor de Consulta** para abrir a janela do editor de consultas, **Arquivo** para salvar o script do XMLA em um arquivo ou **Área de Transferência** para salvar o script do XMLA nessa área.  
+3.  O objeto com o botão direito, aponte para **Script de cubo como**, aponte para **CREATE To**, **alterar para**, ou **Delete To**e, em seguida, clique em um do seguintes opções: **Nova janela do Editor de consultas** para abrir a janela de editor de consultas **arquivo** para salvar o script XMLA em um arquivo, ou **na área de transferência** para salvar o script XMLA na área de transferência.  
   
     > [!NOTE]  
     >  Normalmente, você selecionaria **Arquivo** se quisesse criar várias versões diferentes do arquivo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de consultas XMLA &#40;Analysis Services - dados multidimensionais&#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
+ [Editor de Consultas XMLA &#40;Analysis Services – Dados Multidimensionais&#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   

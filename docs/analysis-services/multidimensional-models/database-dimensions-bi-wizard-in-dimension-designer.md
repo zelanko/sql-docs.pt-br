@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dac1d67f4a3027b31deeb3b27feb754da80dd6c3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023563"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178934"
 ---
-# <a name="database-dimensions---bi-wizard-in-dimension-designer"></a>Dimensões - Assistente de BI no Designer de dimensão do banco de dados
+# <a name="database-dimensions---bi-wizard-in-dimension-designer"></a>Dimensões – Assistente de BI no Designer de dimensão de banco de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], crie operadores de rollup personalizado e fórmulas de membro personalizado e configure dimensões para write-back usando o Assistente de Business Intelligence ou o Designer de Dimensão. Você pode iniciar o Assistente de Business Intelligence por meio do Gerenciador de Soluções ou do Designer de Cubo no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. O Designer de Dimensão pode ser acessado pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   

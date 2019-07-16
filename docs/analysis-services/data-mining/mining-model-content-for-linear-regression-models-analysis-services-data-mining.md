@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c016d54d9272409e3edc3d6fc379980b952dd917
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120176"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182744"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de regressão linear (Analysis Services – Mineração de Dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "49120176"
  Nome do modelo.  
   
  ATTRIBUTE_NAME  
- **Nó raiz:** em branco  
+ **Nó raiz:** Em branco  
   
- **Nó de regressão** O nome do atributo previsível.  
+ **Nó de regressão:** O nome do atributo previsível.  
   
  NODE_NAME  
  Sempre igual a NODE_UNIQUE_NAME.  
@@ -54,16 +54,16 @@ ms.locfileid: "49120176"
  NODE_TYPE  
  Um modelo de regressão linear gera os seguintes tipos de nó:  
   
-|ID do tipo de nó|Tipo|Description|  
+|ID do tipo de nó|type|Descrição|  
 |------------------|----------|-----------------|  
 |25|Raiz da árvore de regressão|Contém a fórmula que descreve a relação entre a variável de entrada e saída.|  
   
  NODE_CAPTION  
  Um rótulo ou uma legenda associada ao nó. Essa propriedade é usada principalmente para exibição.  
   
- **Nó raiz:** em branco  
+ **Nó raiz:** Em branco  
   
- **Nó de regressão:** Tudo.  
+ **Nó de regressão:** Todos.  
   
  CHILDREN_CARDINALITY  
  Uma estimativa do número de filhos do nó.  
@@ -78,9 +78,9 @@ ms.locfileid: "49120176"
  NODE_DESCRIPTION  
  Uma descrição do nó.  
   
- **Nó raiz:** em branco  
+ **Nó raiz:** Em branco  
   
- **Nó de regressão:** Tudo.  
+ **Nó de regressão:** Todos.  
   
  NODE_RULE  
  Não é usado em modelos de regressão linear.  
@@ -123,7 +123,7 @@ ms.locfileid: "49120176"
   
  **Nó raiz:** 0  
   
- **Nó de regressão:** Contagem dos casos de treinamento.  
+ **Nó de regressão:** Contagem de casos de treinamento.  
   
  MSOLAP_MODEL_COLUMN  
  Nome do atributo previsível.  

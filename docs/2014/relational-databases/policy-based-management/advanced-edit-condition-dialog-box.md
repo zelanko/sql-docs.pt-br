@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5849baa119174cacc99d4ab99a68de28c2966c53
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353197"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210804"
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>Caixa de diálogo Edição Avançada (Condição)
   Use a caixa de diálogo **Edição Avançada** para criar expressões complexas para condições do Gerenciamento Baseado em Políticas.  
@@ -82,7 +82,7 @@ ms.locfileid: "53353197"
 |`False()`|Bool False()<br /><br /> Retorna um valor booliano FALSE.||Retorna um valor booliano FALSE.|`IsDatabaseMailEnabled = False()`|  
 |`GetDate()`|DateTime GetDate()<br /><br /> Retorna a data do sistema.||Retorna a data de sistema como DateTime.|`@DateLastModified = GetDate()`|  
 |`Guid()`|Guid Guid(String *guidString*)<br /><br /> Retorna um GUID de uma cadeia de caracteres.|*guidString* – A representação de cadeia de caracteres do GUID a ser criado.|Retorna o GUID criado a partir da cadeia de caracteres.|`Guid('12340000-0000-3455-0000-000000000454')`|  
-|`IsNull()`|Variant IsNull (Variant *check_expression*, Variant *replacement_value*)<br /><br /> O valor de *check_expression* será retornado se não for NULL; caso contrário, *replacement_value* será retornado. Se os tipos forem diferentes, *replacement_value* será implicitamente convertido para o tipo *check_expression*.|*check_expression* – A expressão a ser verificada quanto a NULL. *check_expression* podem ser de qualquer tipo de gerenciamento baseado em políticas com suporte: Numeric, String, Bool, DateTime, Array e Guid.<br /><br /> *replacement_value* – A expressão a ser retornada se *check_expression* for NULL. *replacement_value* deve ser de um tipo que seja implicitamente convertido para o tipo *check_expression*.|O tipo de retorno será o tipo de *check_expression* se *check_expression* não for NULL; caso contrário, o tipo de *replacement_value* será retornado.||  
+|`IsNull()`|Variant IsNull (Variant *check_expression*, Variant *replacement_value*)<br /><br /> O valor de *check_expression* será retornado se não for NULL; caso contrário, *replacement_value* será retornado. Se os tipos forem diferentes, *replacement_value* será implicitamente convertido para o tipo *check_expression*.|*check_expression* – A expressão a ser verificada quanto a NULL. *check_expression* pode ser qualquer um dos tipos de Gerenciamento Baseado em Políticas compatíveis: Numeric, String, Bool, DateTime, Array e Guid.<br /><br /> *replacement_value* – A expressão a ser retornada se *check_expression* for NULL. *replacement_value* deve ser de um tipo que seja implicitamente convertido para o tipo *check_expression*.|O tipo de retorno será o tipo de *check_expression* se *check_expression* não for NULL; caso contrário, o tipo de *replacement_value* será retornado.||  
 |`Len()`|Numeric Len (*string_expression*)<br /><br /> Retorna o número de caracteres, da expressão da cadeia de caracteres atribuída, excluindo espaços em branco à direita.|*string_expression* – A expressão de cadeia de caracteres a ser avaliada.|Retorna um valor da categoria de tipo de dados integer.|`Len('Hello')` retorna `5` neste exemplo.|  
 |`Lower()`|String Lower (String *_expression*)<br /><br /> Retorna a cadeia de caracteres após converter todas as maiúsculas em minúsculas.|*expression* – A expressão de cadeia de caracteres de origem.|Retorna uma cadeia de caracteres que representa a expressão da cadeia de caracteres de origem após a conversão de todas as maiúsculas em minúsculas.|`Len('HeLlO')` retorna `'hello'` neste exemplo.|  
 |`Mod()`|Numeric Mod (Numeric *expression_dividend*, Numeric *expression_divisor*)<br /><br /> Fornece o resto inteiro após dividir a primeira expressão numérica pela segunda expressão numérica.|*expression_dividend* –Expressão numérica a ser dividida. *expression_dividend* deve ser qualquer expressão válida de qualquer um dos tipos de dados nas categorias de tipos de dados integer ou numeric.<br /><br /> *expression_divisor* – A expressão numérica pela qual o dividendo será dividido. *expression_divisor* deve ser qualquer expressão válida de qualquer um dos tipos de dados nas categorias de tipos de dados integer ou numeric.|Retorna um valor da categoria de tipo de dados integer.|`Mod(Property1, 3)`|  

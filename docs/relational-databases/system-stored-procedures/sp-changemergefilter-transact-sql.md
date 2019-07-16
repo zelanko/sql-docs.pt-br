@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 32facb58645e0fbb3750ca02da0d3a22b320fc67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0c38af1089a1d59c9964e39aecca6b1773a8e22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124889"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**filter_type**|**1**|Filtro de junção.<br /><br /> Essa opção é requerida para suporte a Assinantes [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 ||**2**|Relação de registro lógico.|  
 ||**3**|Filtro de junção é também uma relação de registro lógico.|  
-|**filtername**||Nome do filtro.|  
+|**FilterName**||Nome do filtro.|  
 |**join_articlename**||Nome do artigo de junção.|  
 |**join_filterclause**||Cláusula de filtro.|  
 |**join_unique_key**|**true**|A junção está em uma chave exclusiva|  
