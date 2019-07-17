@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03f63929d54039399a292e086315c0b8d660f206
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 88eb2923a9037ad0e4ad07f2f560b85b45260cd2
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079452"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866251"
 ---
 # <a name="time-transact-sql"></a>hora (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "56079452"
   
 |ISO 8601|Observações|  
 |--------------|-----------|  
-|hh:mm:ss<br /><br /> hh:mm[:ss][.segundos fracionários]|hh são dois dígitos, variando de 0 a 14, que representam o número de horas no deslocamento de fuso horário.<br /><br /> mm são dois dígitos, variando de 0 a 59, que representam o número de minutos adicionais no deslocamento de fuso horário.|  
+|hh:mm:ss<br /><br /> hh:mm[:ss][.segundos fracionários]|hh equivale a dois dígitos, variando de 0 a 23, que representam o número de horas no deslocamento de fuso horário.<br /><br /> mm são dois dígitos, variando de 0 a 59, que representam o número de minutos adicionais no deslocamento de fuso horário.|  
   
 |ODBC|Observações|  
 |----------|-----------|  
@@ -105,7 +105,7 @@ ms.locfileid: "56079452"
 ### <a name="converting-timen-data-type-to-other-date-and-time-types"></a>Convertendo tipo de dados time(n) em outros tipos de data e hora  
  A tabela a seguir descreve o que ocorre quando um tipo de dados **time** é convertido em outros tipos de dados de data e hora.  
   
- Quando a conversão é feita em **time(n)**, a hora, os minutos e os segundos são copiados. Quando a precisão de destino é menor que a precisão da origem, os segundos fracionários são arredondados para cima, de forma a se ajustarem à precisão de destino. O exemplo a seguir mostra os resultados da conversão de um valor `time(4)` em um valor `time(3)`.  
+ Quando a conversão é feita em **time(n)** , a hora, os minutos e os segundos são copiados. Quando a precisão de destino é menor que a precisão da origem, os segundos fracionários são arredondados para cima, de forma a se ajustarem à precisão de destino. O exemplo a seguir mostra os resultados da conversão de um valor `time(4)` em um valor `time(3)`.  
   
 ```  
 DECLARE @timeFrom time(4) = '12:34:54.1237';  
@@ -166,7 +166,7 @@ SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';
   
 ```  
   
- Se a conversão é feita em **datetimeoffset(n)**, a data é definida como '1900-01-01' e a hora é copiada. O deslocamento de fuso horário é definido como +00:00. Quando a precisão de segundos fracionários do valor de **time(n)** é maior que a precisão do valor de **datetimeoffset(n)**, o valor é arredondado para cima, de forma a ser ajustado. O exemplo a seguir mostra os resultados da conversão de um valor `time(4)` em um tipo de valor `datetimeoffset(3)`.  
+ Se a conversão é feita em **datetimeoffset(n)** , a data é definida como '1900-01-01' e a hora é copiada. O deslocamento de fuso horário é definido como +00:00. Quando a precisão de segundos fracionários do valor de **time(n)** é maior que a precisão do valor de **datetimeoffset(n)** , o valor é arredondado para cima, de forma a ser ajustado. O exemplo a seguir mostra os resultados da conversão de um valor `time(4)` em um tipo de valor `datetimeoffset(3)`.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -183,7 +183,7 @@ SELECT @time AS '@time', @datetimeoffset AS '@datetimeoffset';
   
 ```  
   
- Ao fazer a conversão em **datetime2(n)**, a data é definida como '1900-01-01', o componente de hora é copiado e o deslocamento de fuso horário é definido como 00:00. Quando a precisão de segundos fracionários do valor de **datetime2(n)** for maior que de **time(n)**, o valor será arredondado, de forma a ser ajustado.  O exemplo a seguir mostra os resultados da conversão de um valor `time(4)` em um valor `datetime2(2)`.  
+ Ao fazer a conversão em **datetime2(n)** , a data é definida como '1900-01-01', o componente de hora é copiado e o deslocamento de fuso horário é definido como 00:00. Quando a precisão de segundos fracionários do valor de **datetime2(n)** for maior que de **time(n)** , o valor será arredondado, de forma a ser ajustado.  O exemplo a seguir mostra os resultados da conversão de um valor `time(4)` em um valor `datetime2(2)`.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  

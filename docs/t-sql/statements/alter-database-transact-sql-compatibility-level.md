@@ -1,7 +1,7 @@
 ---
 title: Nível de compatibilidade de ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 07/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccc7241c6d549985df4a838ebcc8cbb2120d3eb0
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 151e6573ebeb5497f2de001d57272af647f5e737
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469201"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860689"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nível de compatibilidade de ALTER DATABASE (Transact-SQL)
 
@@ -86,12 +86,12 @@ Para exibir o nível de compatibilidade atual de um banco de dados, consulte a c
 > [!NOTE]
 > Um [banco de dados de distribuição](../../relational-databases/replication/distribution-database.md) criado em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e atualizado para o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM ou o Service Pack 1 tem um nível de compatibilidade 90, para o qual não há suporte em outros bancos de dados. Isso não tem um impacto sobre a funcionalidade de replicação. A atualização para service packs e versões posteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resultará no aumento do nível de compatibilidade do banco de dados de distribuição para que ele corresponda ao banco de dados **mestre**.
 
-A partir de **janeiro de 2018**, no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], o nível de compatibilidade padrão é 140 para bancos de dados recém-criados. Não atualizamos o nível de compatibilidade dos bancos de dados existentes. É responsabilidade dos clientes fazer isso a seu critério. É altamente recomendável pela Microsoft que os clientes planejem atualizar para o último nível de compatibilidade, para aproveitar as últimas melhorias de otimização de consulta.
+A partir de **janeiro de 2018**, no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], o nível de compatibilidade padrão é 140 para bancos de dados recém-criados. Não atualizamos o nível de compatibilidade dos bancos de dados existentes. É responsabilidade dos clientes fazer isso a seu critério. A Microsoft recomenda que os clientes planejem atualizar para o último nível de compatibilidade, para aproveitar as últimas melhorias de otimização de consulta.
 Para aproveitar o nível de compatibilidade do banco de dados 140 para seu banco de dados geral, mas optar pelo modelo de [**estimativa de cardinalidade**](../../relational-databases/performance/cardinality-estimation-sql-server.md) de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], que mapeia para o nível de compatibilidade do banco de dados 110, veja [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) e, em especial, sua palavra-chave `LEGACY_CARDINALITY_ESTIMATION = ON`.
 
 Para obter detalhes sobre como avaliar as diferenças de desempenho das consultas mais importantes, entre dois níveis de compatibilidade no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], consulte [Melhor desempenho de consultas com o nível de compatibilidade 130 no Banco de Dados SQL do Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Observe que este artigo se refere ao nível de compatibilidade 130 e ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas a mesma metodologia se aplica à migração para o nível 140 do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Para determinar a versão do [!INCLUDE[ssDE](../../includes/ssde-md.md)] à qual você está conectado, execute a seguinte consulta.
+Para determinar a versão do [!INCLUDE[ssDE](../../includes/ssde-md.md)] à qual você está conectado, execute a consulta a seguir.
 
 ```sql
 SELECT SERVERPROPERTY('ProductVersion');
@@ -165,7 +165,7 @@ Para obter mais detalhes, incluindo o fluxo de trabalho recomendado para atualiz
 > - Alterações de nomes de coluna em objetos do sistema. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], a coluna *single_pages_kb* no sys.dm_os_sys_info foi renomeada para *pages_kb*. Seja qual for o nível de compatibilidade, a consulta `SELECT single_pages_kb FROM sys.dm_os_sys_info` gerará o erro 207 (Nome de coluna inválido).
 > - Objetos do sistema removidos. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o `sp_dboption` foi removido. Seja qual for o nível de compatibilidade, a instrução `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` gerará o erro 2812 (Não foi possível encontrar o procedimento armazenado 'sp_dboption').
 >
-> Para obter mais informações sobre alterações recentes, consulte [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014), [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali) e [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2008](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#KJKatmai).
+> Para saber mais sobre alterações recentes, confira [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) e [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali).
 
 ## <a name="best-practices-for-upgrading-database-compatibility-level"></a>Melhores práticas para atualizar o nível de compatibilidade do banco de dados
 
@@ -215,7 +215,7 @@ Esta seção descreve os novos comportamentos introduzidos com o nível de compa
 |--------------------------------------------------|-----------------------------------------|
 |O INSERT em uma instrução INSERT-SELECT é single-thread.|O INSERT em uma instrução INSERT-SELECT tem vários threads ou pode ter um plano paralelo.|
 |As consultas em uma tabela com otimização de memória são executadas no modo single-thread.|As consultas em uma tabela com otimização de memória agora podem ter planos paralelos.|
-|Introdução do avaliador de Cardinalidade do SQL 2014 **CardinalityEstimationModelVersion="120"**|Outras melhorias de CE (estimativa de cardinalidade) com o Modelo de Estimativa de Cardinalidade 130 que é visível em um Plano de consulta. **CardinalityEstimationModelVersion="130"**|
+|Introdução do avaliador de Cardinalidade do SQL 2014 **CardinalityEstimationModelVersion="120"**|Outras melhorias de CE (estimativa de cardinalidade) com o Modelo de Estimativa de Cardinalidade 130 que está visível em um Plano de consulta. **CardinalityEstimationModelVersion="130"**|
 |Alterações do modo de lote versus modo de linha com índices columnstore:<br /><ul><li>As classificações em uma tabela com índice Columnstore estão no modo de Linha <li>As agregações de função em janela operam no modo de linha, como `LAG` ou `LEAD` <li>Consultas em tabelas Columnstore com várias cláusulas distintas operadas no modo de Linha <li>Consultas em execução em MAXDOP 1 ou com um plano serial executadas no modo de Linha</li></ul>| Alterações do modo de lote versus modo de linha com índices columnstore:<br /><ul><li>As classificações em uma tabela com um índice Columnstore agora estão no modo de lote <li>As agregações em janela agora funcionam no modo de lote, como `LAG` ou `LEAD` <li>Consultas em tabelas Columnstore com várias cláusulas distintas operadas no modo de Lote <li>As consultas em execução em MAXDOP 1 ou com um plano serial são executadas no Modo de lote</li></ul>|
 |As estatísticas podem ser atualizadas automaticamente. | A lógica que atualiza automaticamente as estatísticas é mais agressiva em tabelas grandes. Na prática, isso deve reduzir casos em que os clientes observaram problemas de desempenho de consultas nas quais as linhas recém-inseridas são consultadas com frequência, mas nas quais as estatísticas não foram atualizadas para incluir esses valores. |
 |O rastreamento 2371 é OFF por padrão no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. | O [Rastreamento 2371](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/) é ON por padrão no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. O sinalizador de rastreamento 2371 instrui o atualizador automático de estatísticas a coletar uma amostra de um subconjunto menor, porém, mais inteligente, de linhas em uma tabela que tem um grande número de linhas. <br/> <br/> Uma melhoria é incluir na amostra mais linhas que foram inseridas recentemente. <br/> <br/> Outra melhoria é permitir que as consultas sejam executadas enquanto o processo de atualização de estatísticas está em execução, em vez de bloquear a consulta. |
@@ -240,7 +240,7 @@ Esta seção descreve os novos comportamentos apresentados com o nível de compa
 |Os gatilhos desabilitados serão habilitados se os gatilhos forem alterados.|A alteração de um gatilho não altera o estado (habilitado ou desabilitado) do gatilho.|
 |A cláusula de tabela OUTPUT INTO ignora o `IDENTITY_INSERT SETTING = OFF` e permite a inserção de valores explícitos.|Não é possível inserir valores explícitos para uma coluna de identidade em uma tabela quando `IDENTITY_INSERT` é definido como OFF.|
 |Quando a contenção do banco de dados é definida como parcial, a validação do campo `$action` na cláusula `OUTPUT` de uma instrução `MERGE` pode retornar um erro de ordenação.|A ordenação dos valores retornados pela cláusula `$action` de uma instrução `MERGE` é a ordenação de banco de dados, em vez da ordenação do servidor, e um erro de conflito de ordenação não é retornado.|
-|Uma instrução `SELECT INTO` sempre criará uma operação de inserção de thread único.|Uma instrução `SELECT INTO` pode criar uma operação de inserção paralela. Ao inserir um número grande de linhas, a operação paralela pode melhorar o desempenho.|
+|Uma instrução `SELECT INTO` sempre criará uma operação de inserção de thread único.|Uma instrução `SELECT INTO` pode criar uma operação de inserção paralela. Ao inserir um grande número de linhas, a operação paralela pode melhorar o desempenho.|
 
 ## <a name="differences-between-lower-compatibility-levels-and-levels-100-and-110"></a>Diferenças entre níveis de compatibilidade inferiores e os níveis 100 e 110
 

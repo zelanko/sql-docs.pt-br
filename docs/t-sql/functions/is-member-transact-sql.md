@@ -28,17 +28,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d45b1d74242476da155e387f8ec00f8e4e23278f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 94ccde1511dc2084574127190dc6f830bfd0a995
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946981"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716591"
 ---
 # <a name="ismember-transact-sql"></a>IS_MEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Indica se o usuário atual é membro do grupo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows especificado ou da função de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Indica se o usuário atual é membro do grupo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows especificado ou da função de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não há suporte para a função IS_MEMBER em grupos do Azure Active Directory.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -23,12 +23,12 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5233d1bf98d332187e38f3806a9483fee38355d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48b1e9b9b7c2b48736a54e255649c409d3b4bfd2
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506617"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624595"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +57,7 @@ Para acessar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
  Escolher a estratégia de firewall é uma tarefa mais complexa do que simplesmente decidir se uma dada porta deve ficar aberta ou fechada. Ao elaborar uma estratégia de firewall para sua empresa, é importante que você considere todas as regras e opções de configuração disponíveis. Este artigo não examina todas as possíveis opções de firewall. É recomendável analisar os seguintes documentos:  
   
- [Guia de Implantação do Firewall do Windows ](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide)    
+ [Guia de Implantação do Firewall do Windows](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide)    
  [Guia de Design do Firewall do Windows](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide)    
  [Introduction to Server and Domain Isolation](/windows/security/threat-protection/windows-firewall/domain-isolation-policy-design)  
   

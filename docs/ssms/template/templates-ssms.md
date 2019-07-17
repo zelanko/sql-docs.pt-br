@@ -9,7 +9,7 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Management Studio
 - source controls [SQL Server Management Studio], tutorials
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 30b40d10ec7a4da7df0bfc9e4ba1f3aa6bb68ef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a634a106704cebd91ce74910de17166c85c6c4de
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822946"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866265"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>Usar modelos no SQL Server Management Studio
 
@@ -35,8 +35,9 @@ Este tutorial apresenta a você os modelos predefinidos do T-SQL (Transact-SQL) 
 
 Para concluir este tutorial, você precisará do SQL Server Management Studio e de acesso a um SQL Server.
 
-- Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-- Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+* Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+
+* Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
 ## <a name="use-template-browser"></a>Usar o Navegador de Modelos
 
@@ -108,15 +109,17 @@ Você também pode criar um novo modelo no Navegador de Modelos. As etapas a seg
 
 5. Clique com o botão direito do mouse no modelo que você criou e, em seguida, selecione **Editar**. A janela Nova Consulta é aberta.
 
-6. Insira o texto T-SQL que você deseja salvar. 
+6. Insira o texto T-SQL que você deseja salvar.
 
 7. No menu **Arquivo**, selecione **Salvar**.
 
-8. Feche a janela de consulta existente e abra seu novo modelo personalizado. 
+8. Feche a janela de consulta existente e abra seu novo modelo personalizado.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-O próximo artigo apresenta mais dicas e truques para usar o SQL Server Management Studio. 
+O melhor modo de se familiarizar com o SSMS é praticando. Estes artigos com *tutoriais* e *instruções* ajudam nos diversos recursos disponíveis no SSMS.  Estes artigos ensinam a administrar os componentes do SSMS e a encontrar os recursos que você usa com regularidade.
 
-> [!div class="nextstepaction"]
-> [Mais dicas e truques para usar o SSMS](../tutorials/ssms-tricks.md)
+* [Conectar-se e consultar uma instância](../tutorials/connect-query-sql-server.md)
+* [Script](../tutorials/scripting-ssms.md)
+* [Configuração do SSMS](../tutorials/ssms-configuration.md)
+* [Mais dicas e truques para usar o SSMS](../tutorials/ssms-tricks.md)

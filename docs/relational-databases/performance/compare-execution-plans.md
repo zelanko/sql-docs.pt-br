@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 7703ad7ce46c9dda59dacbc86ebbd9646b1015cf
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 5ee4fc6502b9d31d9ccade786c5cc0129c61da22
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584485"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860550"
 ---
 # <a name="compare-execution-plans"></a>Comparar planos de execução
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ Quando dois planos de execução são comparados, regiões do plano que **fazem 
      > [!TIP]
      > Todas as opções de zoom e navegação disponíveis para planos de execução funcionam no modo de comparação do plano. Para obter mais detalhes, confira [Exibir um plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md).
 
-5.  Também é aberta uma janela Propriedades dupla à direita no escopo da seleção padrão. As propriedades que existem em ambos os operadores comparados, mas que têm diferenças, serão ser precedidas pelo sinal *não igual* (?) para facilitar a identificação.
+5.  Também é aberta uma janela Propriedades dupla à direita no escopo da seleção padrão. As propriedades que existem em ambos os operadores comparados, mas que apresentem diferenças, serão precedidas pelo sinal *não igual* (&ne;) para facilitar a identificação.
 
     ![Janela Propriedades duplas](../../relational-databases/performance/media/plancomparison-properties.png "Janela Propriedades duplas")  
 

@@ -18,12 +18,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a38cad4af807d5d9d7a64e6ca45a4fdfa0df77c7
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 6d3abb2fe6d16b89ce80b50c5e33d397d1c38403
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973574"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652818"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Melhorar o desempenho de índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,11 +133,11 @@ Para obter informações essenciais sobre as fórmulas a seguir, consulte as not
   
 |Plataforma|Estimando as necessidades de memória de fdhost.exe em MB-*F*^1|Fórmula para calcular a memória máxima do servidor -*M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *Número de intervalos de rastreamento* * 50|*M* =mínimo(*T*, 2000) - F - 500|  
-|x64|*F* = *Número de intervalos de rastreamento* * 10 * 8|*M* = *T* - *F* - 500|  
+|x86|*F* = *Número de intervalos de rastreamento* \* 50|*M* =mínimo(*T*, 2000) - F - 500|  
+|x64|*F* = *Número de intervalos de rastreamento* \* 10 \* 8|*M* = *T* - *F* - 500|  
 
 **Observações sobre as fórmulas**
-1.  Se houver várias populações completas em andamento, calcule os requisitos de memória de fdhost.exe de cada uma separadamente, como *F1*, *F2* e assim por diante. Em seguida, calcule *M* como _T_**-** sigma **(**_F_i **)**.  
+1.  Se houver várias populações completas em andamento, calcule os requisitos de memória de fdhost.exe de cada uma separadamente, como *F1*, *F2* e assim por diante. Em seguida, calcule *M* como _T_ **-** sigma **(** _F_i **)** .  
 2.  500 MB é uma estimativa da memória exigida por outros processos no sistema. Se o sistema estiver executando trabalho adicional, aumente esse valor de maneira correspondente.  
 3.  .*ism_size* é presumido como 8 MB para plataformas x64.  
   

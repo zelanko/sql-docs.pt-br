@@ -29,12 +29,12 @@ author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: ab639417592966f1c591116743d2d38bfacc837f
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: d580ed70608dc68fbd86b31177a568e7b74e3796
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342901"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866229"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ Move as páginas atribuídas do final do arquivo para páginas não atribuídas 
   
 O espaço livre no final do arquivo não é retornado ao sistema operacional, e o tamanho físico do arquivo não é alterado. Como tal, o banco de dados não parecerá reduzido quando você especificar NOTRUNCATE.  
   
-NOTRUNCATE aplica-se apenas a arquivos de dados. NONTRUNCATE não afeta o arquivo de log.  
+NOTRUNCATE aplica-se apenas a arquivos de dados. NOTRUNCATE não afeta o arquivo de log.  
   
 TRUNCATEONLY  
 Libera todo o espaço livre no final do arquivo para o sistema operacional. Não move todas as páginas dentro do arquivo. O arquivo de dados é reduzido somente para a última extensão atribuída. Ignora _target\_percent_ se ele é especificado com TRUNCATEONLY. O SQL Data Warehouse do Azure não é compatível com essa opção.
@@ -165,7 +165,7 @@ DBCC SHRINKDATABASE (UserDB, 10);
 GO  
 ```  
   
-### <a name="b-truncating-a-database"></a>b. Truncando um banco de dados  
+### <a name="b-truncating-a-database"></a>B. Truncando um banco de dados  
 O exemplo a seguir reduz os arquivos de dados e de log no banco de dados de exemplo `AdventureWorks` até a última extensão atribuída.  
   
 ```sql  

@@ -14,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: d7035a47368ead8af3a20d9ca56f0c5452395516
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 17879dc4c932ff127b858657a9af0aca340029b5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586174"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860517"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar e gerenciar arquivos de dicionário de sinônimos para Pesquisa de texto completo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Um dicionário de sinônimos de Pesquisa de Texto Completo é um arquivo de text
 
 -   Configuração de diacríticos  
   
-     Em um determinado dicionário de sinônimos, todos os padrões de pesquisa diferenciam ou não as marcas diacríticas, como um til ( **~** ), acento agudo ( **?** ) ou trema ( **?** ), ou seja, eles *diferenciam acentos* ou *não diferenciam acentos*. Por exemplo, vamos supor que você especifique o padrão "caf?" a ser substituído por outros padrões em uma consulta de texto completo. Se o dicionário de sinônimos não diferenciar acentos, a pesquisa de texto completo substituirá os padrões "caf?" e "café". Se o dicionário de sinônimos diferenciar acentos, a pesquisa de texto completo substituirá somente o padrão "caf?". Por padrão, um dicionário de sinônimos não diferencia acentos.  
+     Em um determinado dicionário de sinônimos, todos os padrões de pesquisa diferenciam ou não as marcas diacríticas, como um til ( **~** ), acento agudo ( **&acute;** ) ou trema ( **&uml;** ), ou seja, *diferenciam acentos* ou *não diferenciam acentos*. Por exemplo, vamos supor que você especificou que o padrão "caf&eacute;" deve ser substituído por outros padrões em uma consulta de texto completo. Se o dicionário de sinônimos não diferenciar acentos, a pesquisa de texto completo substituirá os padrões "caf&eacute;" e "cafe". Se o dicionário de sinônimos diferenciar acentos, a pesquisa de texto completo substituirá somente o padrão "caf&eacute;". Por padrão, um dicionário de sinônimos não diferencia acentos.  
   
 ##  <a name="initial_thesaurus_files"></a> Arquivos de dicionário de sinônimos padrão
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece um conjunto de arquivos XML de dicionário de sinônimos, um para cada idioma com suporte. Esses arquivos estão basicamente vazios. Eles contêm apenas a estrutura XML de alto nível que é comum a todos os dicionários de sinônimos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um dicionário de sinônimos de exemplo comentado.  

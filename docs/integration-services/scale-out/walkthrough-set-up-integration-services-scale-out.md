@@ -8,15 +8,15 @@ ms.prod_service: integration-services
 ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
-author: haoqian
+author: HaoQian-MS
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: e566c31f03284660456f7a96f2d19adc32bf4404
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 001172611503dbff0275448833d05b06aa22512e
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66012943"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826635"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Passo a passo: Configurar o Integration Services (SSIS) Scale Out
 
@@ -160,7 +160,7 @@ No computador do Mestre do Scale Out, abra a porta especificada durante a instal
 
 Se você não definir o tipo de inicialização dos serviços como **Automático** durante a instalação, inicie os seguintes serviços:
 
--   Mestre do SQL Server Integration Services Scale Out 14.0 (SSISScaleOutMaster140S)
+-   Mestre do SQL Server Integration Services Scale Out 14.0 (SSISScaleOutMaster140)
 
 -   Trabalho do SQL Server Integration Services Scale Out 14.0 (SSISScaleOutWorker140)
 

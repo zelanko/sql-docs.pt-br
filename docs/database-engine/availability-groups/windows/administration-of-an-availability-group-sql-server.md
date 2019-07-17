@@ -13,12 +13,12 @@ ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 379511e36b7e6a680b9971ace79b269a9df0db86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f1626c21649d276e6e6cb3e51207aaede006b566
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789679"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681085"
 ---
 # <a name="administration-of-an-availability-group"></a>Administração de um grupo de disponibilidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

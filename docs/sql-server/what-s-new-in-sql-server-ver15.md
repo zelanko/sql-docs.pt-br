@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f3bd726fc0320d1dd0980f9e568190e00ea08bbb
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 9c833144fb94a06d4c8941dd7b39b762fc17ba3c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469097"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687766"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novidades no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -76,7 +76,7 @@ Além disso, os recursos a seguir foram adicionados ou aprimorados para o [!INCL
 | Atualizações de **mssqlctl** | Várias [atualizações de comando e parâmetro](../big-data-cluster/reference-mssqlctl.md) do **mssqlctl**. Isso inclui uma atualização do comando **mssqlctl login**, que agora direciona o nome de usuário do controlador e o ponto de extremidade. |
 | Melhorias no armazenamento | Suporte para diferentes configurações de armazenamento para logs e dados. Além disso, o número de declarações de volume persistente para um cluster de Big Data foi reduzido. |
 | Várias instâncias do pool de computação | Suporte para várias instâncias do pool de computação. |
-| Novas funcionalidades e novo comportamento do pool | O pool de computação agora é usado por padrão em operações do pool de dados e do pool de armazenamento apenas em uma distribuição **ROUND_ROBIN**. O pool de dados agora pode usar um novo tipo de distribuição **REPLICATED**, o que significa que os mesmos dados estão presentes em todas as instâncias do pool de dados. |
+| Novas funcionalidades e novo comportamento do pool | O pool de computação agora é usado por padrão em operações do pool de dados e do pool de armazenamento apenas em uma distribuição **ROUND_ROBIN**. Agora o pool de dados pode usar um novo tipo de distribuição **REPLICATED**, o que significa que os mesmos dados estão presentes em todas as instâncias do pool de dados. |
 | Melhorias na tabela externa | As tabelas externas do tipo de fonte de dados HADOOP agora dão suporte à leitura de linhas com até 1 MB. As tabelas externas (ODBC, pool de armazenamento, pool de dados) agora dão suporte a linhas da mesma largura de uma tabela do SQL Server. |
 | &nbsp; | &nbsp; |
 
@@ -315,7 +315,7 @@ Além disso, os recursos a seguir foram adicionados ou aprimorados para o [!INCL
 |Suporte estendido para dispositivos de memória persistentes.|[Pool de Buffers Híbrido](../database-engine/configure-windows/hybrid-buffer-pool.md) |
 |Suporte para estatísticas de columnstore em `DBCC CLONEDATABASE`|[Blob de estatísticas para índices columnstore](../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md#ctp23)|
 |`sp_estimate_data_compression_savings` apresenta `COLUMNSTORE` e `COLUMNSTORE_ARCHIVE`.|[Considerações para Índices Columnstore](../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md#considerations-for-columnstore-indexes)|
-|Serviços do Machine Learning com suporte no Cluster de Failover do Windows Server. |[ Novidades – Serviços do Machine Learning do SQL Server](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)|
+|Serviços do Machine Learning com suporte no Cluster de Failover do Windows Server. |[Novidades – Serviços do Machine Learning do SQL Server](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)|
 |Suporte para Machine Learning para modelagem baseada em partição.|[Novidades – Serviços do Machine Learning do SQL Server](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) |
 |Infraestrutura de perfil de consulta leve habilitada por padrão |[Infraestrutura de criação de perfil de estatísticas de execução de consulta leve v3](../relational-databases/performance/query-profiling-infrastructure.md#lightweight-query-execution-statistics-profiling-infrastructure-v3) |
 |Novos conectores de PolyBase para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata e MongoDB. |[O que é o PolyBase?](../relational-databases/polybase/polybase-guide.md) |

@@ -2,22 +2,21 @@
 title: Solucionar problemas de conectividade do PolyBase Kerberos | Microsoft Docs
 author: alazad-msft
 ms.author: alazad
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: craigg
 ms.technology: polybase
-ms.custom: ''
 ms.devlang: ''
 ms.topic: conceptual
 ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 626d188dca3a013cba246f54523aa4fe9532815d
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 58725a5f0ebf3038bd95be410ae6b1db8de01845
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581222"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860562"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solucionar problemas de conectividade do PolyBase Kerberos
 
@@ -106,7 +105,7 @@ A ferramenta é executada independentemente do SQL Server, portanto, ela não pr
 | *Porta do nó de nome* | A porta do nó de nome. Refere-se ao argumento "LOCATION" em seu CREATE EXTERNAL DATA SOURCE T-SQL. Por exemplo, 8020. |
 | *Entidade de Serviço* | A entidade de serviço do administrador para o KDC. Corresponde ao argumento "IDENTITY" no seu `CREATE DATABASE SCOPED CREDENTIAL` T-SQL.|
 | *Senha do serviço* | Em vez de digitar a senha no console, armazene-a em um arquivo e passe o caminho do arquivo aqui. O conteúdo do arquivo deve corresponder ao usado como seu argumento "SECRET" no seu `CREATE DATABASE SCOPED CREDENTIAL` T-SQL. |
-| *Caminho do arquivo HDFS remoto (opcional) * | O caminho de um arquivo existente a ser acessado. Se não estiver especificado, a raiz "/" será usada. |
+| *Caminho do arquivo HDFS remoto (opcional)* | O caminho de um arquivo existente a ser acessado. Se não estiver especificado, a raiz "/" será usada. |
 
 ## <a name="example"></a>Exemplo
 

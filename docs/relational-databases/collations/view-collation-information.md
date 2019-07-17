@@ -1,5 +1,5 @@
 ---
-title: Exibir informações de agrupamento | Microsoft Docs
+title: Exibir informações de ordenação | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d03fde715ba1f7edcfa89d6f5b6955e0543c121
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f88bb389da837501b2ab724a505b43a57e339e90
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765799"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732310"
 ---
-# <a name="view-collation-information"></a>Exiba informações de agrupamento
+# <a name="view-collation-information"></a>Exibir informações de ordenação
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
-<a name="Top"></a> Você pode exibir o agrupamento de um servidor, banco de dados ou coluna no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando as opções de menu do Pesquisador de Objetos ou usando o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+<a name="Top"></a> Você pode exibir a ordenação de um servidor, banco de dados ou coluna no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando as opções de menu do Pesquisador de Objetos ou usando o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-##  <a name="Procedures"></a> Como exibir uma configuração de agrupamento  
+##  <a name="Procedures"></a> Como exibir uma configuração de ordenação  
  Você pode usar uma das seguintes opções:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
@@ -33,19 +33,19 @@ ms.locfileid: "47765799"
 -   [Transact-SQL](#TsqlProcedure)  
   
 ###  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- **Para exibir uma configuração de agrupamento para um servidor (instância do SQL Server) no Pesquisador de Objetos**  
+ **Para exibir uma configuração de ordenação para um servidor (instância do SQL Server) no Pesquisador de Objetos**  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Clique com o botão direito do mouse na instância e selecione **Propriedades**.  
   
- **Para exibir uma configuração de agrupamento para um banco de dados no Pesquisador de Objetos**  
+ **Para exibir uma configuração de ordenação para um banco de dados no Pesquisador de Objetos**  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
   
 2.  Expanda **Banco de Dados**, clique com o botão direito do mouse no banco de dados e selecione **Propriedades**.  
   
- **Para exibir uma configuração de agrupamento para uma coluna no Pesquisador de Objetos**  
+ **Para exibir uma configuração de ordenação para uma coluna no Pesquisador de Objetos**  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
   
@@ -53,10 +53,10 @@ ms.locfileid: "47765799"
   
 3.  Expanda a tabela que contém a coluna e expanda **Colunas**.  
   
-4.  Clique com o botão direito do mouse na coluna e selecione **Propriedades**. Se a propriedade de agrupamento estiver vazia, a coluna não será um tipo de dados de caractere.  
+4.  Clique com o botão direito do mouse na coluna e selecione **Propriedades**. Se a propriedade de ordenação estiver vazia, a coluna não será um tipo de dados de caractere.  
   
 ###  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
- **Para exibir a configuração de agrupamento de um servidor**  
+ **Para exibir a configuração de ordenação de um servidor**  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e, na barra de ferramentas, clique em **Nova Consulta**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47765799"
     EXECUTE sp_helpsort;  
     ```  
   
- **Para exibir todos os agrupamentos com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**  
+ **Para exibir todas as ordenações com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e, na barra de ferramentas, clique em **Nova Consulta**.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "47765799"
     SELECT name, description FROM sys.fn_helpcollations();  
     ```  
   
- **Para exibir a configuração de agrupamento de um banco de dados.**  
+ **Para exibir a configuração de ordenação de um banco de dados.**  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e, na barra de ferramentas, clique em **Nova Consulta**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47765799"
     SELECT CONVERT (varchar, DATABASEPROPERTYEX('database_name','collation'));  
     ```  
   
- **Para exibir a configuração de agrupamento de uma coluna**  
+ **Para exibir a configuração de ordenação de uma coluna**  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e, na barra de ferramentas, clique em **Nova Consulta**.  
   
@@ -108,13 +108,27 @@ ms.locfileid: "47765799"
     SELECT name, collation_name FROM sys.columns WHERE name = N'<insert character data type column name>';  
     ```  
   
+ **Para exibir as configurações de agrupamentos para tabelas e colunas**  
+
+1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e, na barra de ferramentas, clique em **Nova Consulta**.  
+  
+2.  Na janela de consulta, insira a instrução a seguir que usa a exibição de catálogo de sistema sys.columns.  
+  
+    ```sql  
+    SELECT t.name TableName, c.name ColumnName, collation_name  
+    FROM sys.columns c  
+    inner join sys.tables t on c.object_id = t.object_id;  
+    ```  
+
+
+
 ## <a name="see-also"></a>Consulte Também  
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [Precedência de agrupamento &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)      
+ [Precedência de ordenação &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
+ [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)      
  [sp_helpsort &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsort-transact-sql.md)  
   
   

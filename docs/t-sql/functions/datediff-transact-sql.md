@@ -32,12 +32,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa470b663a28a69014a7884b30fb384fe62276a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 837cf72fd303259a4fb2a9fd23c6cac925f054ca
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943648"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793637"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +99,7 @@ Para um valor retornado fora do intervalo para **int** (-2.147.483.648 a +2.147.
   
 Se *startdate* e *enddate* receberem apenas um valor temporal e *datepart* não for um *datepart* de hora, `DATEDIFF` retornará 0.
   
-`DATEDIFF` não usa um componente de deslocamento de fuso horário de *startdate* ou *enddate* para calcular o valor retornado.
+`DATEDIFF` usa um componente de deslocamento de fuso horário de *startdate* ou *enddate* para calcular o valor retornado.
   
 Como [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) tem precisão apenas quanto ao minuto, segundos e milissegundos são sempre definidos como 0 no valor retornado quando um valor *smalldatetime* é usado para *startdate* ou **enddate**.
   
