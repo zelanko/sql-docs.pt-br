@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 94fa4e719e99928a56694b748e11fff1ad16db9c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534708"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178747"
 ---
 # <a name="define-database-dimensions"></a>Definir as dimensões do banco de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52534708"
   
  O Designer de Dimensão tem três guias diferentes que são descritas na tabela a seguir.  
   
-|Tab|Descrição|  
+|Tabulação|Descrição|  
 |---------|-----------------|  
 |**Estrutura da Dimensão**|Use esta guia para trabalhar com a estrutura de uma dimensão para examinar ou criar o esquema de exibição de fonte de dados para uma dimensão, para trabalhar com atributos e para organizar atributos em hierarquias definidas pelo usuário.|  
 |**Relações de atributo**|Use essa guia para criar, modificar ou excluir as relações de atributo de uma dimensão.|  

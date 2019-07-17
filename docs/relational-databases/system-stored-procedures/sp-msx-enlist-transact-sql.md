@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7ba29ca0d4522367e22273b4f07720f4e563ef6f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 905ec9c26fe84ceaf1230665c3ff13e2e7ffe9f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108028"
 ---
 # <a name="spmsxenlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +45,13 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ## <a name="arguments"></a>Argumentos  
 `[ @msx_server_name = ] 'msx_server'` O nome do servidor de administração multisservidor (mestre). *msx_server* está **sysname**, sem padrão.  
   
-`[ @location = ] 'location'` O local do servidor de destino para adicionar. *local* está **nvarchar(100)**, com um padrão NULL.  
+`[ @location = ] 'location'` O local do servidor de destino para adicionar. *local* está **nvarchar(100)** , com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  As permissões para executar esse procedimento usam como padrão membros da função de servidor fixa **sysadmin** .  

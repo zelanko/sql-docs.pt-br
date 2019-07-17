@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 1f3d69d8fdfffaa6573f4813392509d0ca71c684
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133068"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats (banco de dados SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ O **sys.server_resource_stats** exibição tem definições diferentes dependend
   
  A tabela a seguir descreve as colunas disponíveis em um servidor v12:  
   
-|Colunas|Tipo de Dados|Descrição|  
+|Colunas|Tipo de dados|Descrição|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|Hora UTC que indica o início do intervalo de emissão de relatórios de 15 segundos|  
 |end_time|**datetime**|Hora UTC que indica o final do intervalo de relatório de 15 segundos|
@@ -45,7 +44,7 @@ O **sys.server_resource_stats** exibição tem definições diferentes dependend
 |resource_name|nvarchar(128)|Nome do recurso.|
 |sku|nvarchar(128)|Gerenciados de camada de serviço da instância da instância. O valores possíveis são os seguintes: <br><ul><li>Uso Geral</li></ul><ul><li>Comercialmente Crítica</li></ul>|
 |hardware_generation|nvarchar(128)|Identificador de geração de hardware: como Gen 4 ou 5 Gen|
-|virtual_core_count|INT|Representa o número de núcleos virtuais por instância (8, 16 ou 24 em visualização pública)|
+|virtual_core_count|int|Representa o número de núcleos virtuais por instância (8, 16 ou 24 em visualização pública)|
 |avg_cpu_percent|decimal(5,2)|Média de utilização em porcentagem do limite da camada de serviço de instância gerenciada utilizado pela instância de computação. Ele é calculado como a soma do tempo de CPU de todos os pools de recursos para todos os bancos de dados na instância e dividido pelo tempo de CPU disponível para essa camada em determinado intervalo.|
 |reserved_storage_mb|BIGINT|Reservado armazenamento por instância (espaço de volume de armazenamento desse cliente adquirido para a instância gerenciada)|
 |storage_space_used_mb|decimal(18,2)|Armazenamento usado pelos arquivos de todas as instância gerenciada dos bancos de dados (incluindo bancos de dados de usuário e sistema)|

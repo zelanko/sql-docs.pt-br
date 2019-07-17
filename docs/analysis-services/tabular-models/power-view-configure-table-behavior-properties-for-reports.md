@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9635dfd55e9ad78e70d849f46c7dafe880a1870d
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579606"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207586"
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View – configurar propriedades de comportamento de tabela para relatórios
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

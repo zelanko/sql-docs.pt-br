@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791908"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185968"
 ---
 # <a name="tablediff-utility"></a>utilitário tablediff
   O utilitário **tablediff** é usado para comparar dados em duas tabelas para não convergência e é particularmente útil para solução de problemas de não convergência em uma topologia de replicação. Esse utilitário pode ser usado no prompt de comando ou em um arquivo em lotes para executar as seguintes tarefas:  
@@ -76,8 +76,8 @@ ms.locfileid: "52791908"
  [ **-?** ]  
  Retorna a lista de parâmetros com suporte.  
   
- **-sourceserver** *source_server_name*[**\\**_instance_name_]  
- É o nome do servidor de origem. Especificar _fonte\_server\_nome_ para a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especificar _fonte\_server\_nome_**\\**_instância\_nome_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** *source_server_name*[ **\\** _instance_name_]  
+ É o nome do servidor de origem. Especificar _fonte\_server\_nome_ para a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especificar _fonte\_server\_nome_ **\\** _instância\_nome_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *source_database*  
  É o nome do banco de dados de origem.  
@@ -100,8 +100,8 @@ ms.locfileid: "52791908"
  **-sourcelocked**  
  A tabela de origem é bloqueada durante a comparação que usa dicas de tabela TABLOCK e HOLDLOCK.  
   
- **-destinationserver** *destination_server_name*[**\\**_instância\_nome_]  
- É o nome do servidor de destino. Especifique *destination_server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especificar _destino\_server\_nome_**\\**_instância\_nome_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** *destination_server_name*[ **\\** _instância\_nome_]  
+ É o nome do servidor de destino. Especifique *destination_server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especificar _destino\_server\_nome_ **\\** _instância\_nome_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *subscription_database*  
  É o nome do banco de dados de destino.  

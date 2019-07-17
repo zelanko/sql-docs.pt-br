@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e5b806f897a22c53688731067acf53f7b647acb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 493fcac9f5de8ee85a2e3c014763045c697bbe0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737604"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119440"
 ---
 # <a name="spupgradelogshipping-transact-sql"></a>sp_upgrade_log_shipping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +39,13 @@ sp_upgrade_log_shipping
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (outra coisa)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="remarks"></a>Comentários  
  Este procedimento armazenado é chamado automaticamente durante a atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a fim de atualizar metadados para o envio de logs. Você não precisa executar este procedimento explicitamente, a menos que aconteça um problema com os metadados durante a atualização.  

@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 26975562f3617742cbcc3bfb3a47e41af09ba8b3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026663"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208918"
 ---
 # <a name="dimension-attribute-properties-reference"></a>Referência de propriedades de atributo de dimensão
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], existem muitas propriedades que determinam como funcionam as dimensões e os atributos da dimensão. A tabela a seguir lista e descreve cada uma dessas propriedades de atributo.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**AttributeHierarchyDisplayFolder**|Identifica a pasta na qual deve ser exibida a hierarquia de atributo associada aos usuários finais.|  
 |**AttributeHierarchyEnabled**|Determina se uma hierarquia de atributo é gerada pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para o atributo. Se a hierarquia de atributo não for habilitada, o atributo não poderá ser usado em uma hierarquia definida pelo usuário e a hierarquia de atributo não poderá ser consultada nas instruções de linguagem MDX.|  
@@ -42,7 +42,7 @@ ms.locfileid: "34026663"
 |**MemberNamesUnique**|Determina se nomes de membro na hierarquia de atributo devem ser exclusivos.|  
 |**MembersWithData**|Usado por atributos pai para determinar se devem ou não exibir membros de dados para membros não folha no atributo pai. Esse valor da propriedade somente é usado quando o valor da propriedade **Usage** é definido como pai. Isso significa que uma hierarquia pai-filho foi definida. As opções disponíveis são as seguintes:<br /><br /> **NonLeafDataHidden** Dados não folha estão ocultos.<br /><br /> **NonLeafDataVisible** Dados não folha estão visíveis.|  
 |**MembersWithDataCaption**|Fornece uma cadeia de caracteres modelo usada por atributos pai para criar legendas para membros de dados gerados pelo sistema no atributo pai. Esse valor da propriedade somente é usado quando o valor da propriedade **Usage** é definido como pai. Isso significa que uma hierarquia pai-filho foi definida.|  
-|**Nome**|Contém o nome amigável do atributo.|  
+|**Name**|Contém o nome amigável do atributo.|  
 |**NameColumn**|Identifica a coluna que fornece o nome do atributo exibido aos usuários, em vez do valor na coluna de chave do atributo. Essa coluna será usada quando o valor da coluna de chave de um membro de atributo for secreto ou não for útil ao usuário, ou quando a coluna de chave for baseada em uma chave composta. A propriedade **NameColumn** não é usada em hierarquias pai-filho; em vez disso, a propriedade **NameColumn** para membros filho é usada como nomes de membro em uma hierarquia pai-filho.|  
 |**NamingTemplate**|Define como os níveis construídos a partir do atributo pai são nomeados em uma hierarquia pai-filho. Esse valor da propriedade somente é usado quando o valor da propriedade **Usage** é definido como pai. Isso significa que uma hierarquia pai-filho foi definida.|  
 |**OrderBy**|Descreve como ordenar os membros contidos na hierarquia de atributo. O valor padrão é Name, que especifica que a ordenação dos membros de atributo é baseada no valor da propriedade **NameColumn** , caso haja algum. Caso contrário, os membros são ordenados pelo valor da coluna de chave. As opções disponíveis são as seguintes:<br /><br /> **NameColumn** Ordem pelo valor da propriedade **NameColumn** .<br /><br /> **Key** Ordem pelo valor da coluna de chave do membro de atributo.<br /><br /> **AttributeKey** Ordem pelo valor da chave de membro de um atributo especificado, que deve ter uma relação de atributo com o atributo.<br /><br /> **AttributeName** Ordem pelo valor do nome de membro de um atributo especificado, que deve ter uma relação de atributo com o atributo.|  
@@ -60,6 +60,6 @@ ms.locfileid: "34026663"
 >  O membro padrão em um atributo será usado para avaliar as expressões quando um membro da hierarquia não for incluído explicitamente em uma consulta. O membro padrão de um atributo é especificado pela sua propriedade **DefaultMember** . Sempre que uma hierarquia de uma dimensão for incluída em uma consulta, todos os membros padrão de atributos correspondentes a níveis na hierarquia serão ignorados. Se nenhuma hierarquia de uma dimensão for incluída em uma consulta, os membros padrão serão usados em todos os atributos da dimensão. Para obter mais informações, consulte [Definir um membro padrão](../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Atributos e hierarquias de atributo](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
+ [Atributos e hierarquias de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

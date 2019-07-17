@@ -17,31 +17,30 @@ helpviewer_keywords:
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c0f9efbedc1f380bca66c198accae17b70cb4da2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee0f269fcfda93733d36a0b7396fd72d16bc01d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823104"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121166"
 ---
 # <a name="syspolicyconditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Exibe uma linha para cada condição do gerenciamento baseado em políticas na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. syspolicy_conditions pertence ao esquema dbo do banco de dados msdb. A tabela a seguir descreve as colunas na exibição syspolicy_conditions.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |condition_id|**int**|Identificador desta condição. Cada condição representa uma coleção de uma ou mais expressões de condição.|  
-|nome|**sysname**|O nome da condição.|  
+|name|**sysname**|O nome da condição.|  
 |date_created|**datetime**|Data e hora em que a condição foi criada.|  
-|descrição|**nvarchar(max)**|A descrição da condição. A coluna de descrição é opcional e pode ser NULL.|  
+|description|**nvarchar(max)**|A descrição da condição. A coluna de descrição é opcional e pode ser NULL.|  
 |created_by|**sysname**|Logon que criou a condição.|  
 |modified_by|**sysname**|Logon que modificou a condição mais recentemente. É NULL se nunca foi modificada.|  
 |date_modified|**datetime**|Data e hora em que a condição foi criada. É NULL se nunca foi modificada.|  
 |is_name_condition|**smallint**|Especifica se a condição é uma condição de nomeação.<br /><br /> 0 = a expressão de condição não contém a variável @Name.<br /><br /> 1 = a expressão de condição contém a variável @Name.|  
 |faceta|**nvarchar(max)**|Nome da faceta na qual a condição é baseada.|  
-|Expression|**nvarchar(max)**|A expressão dos estados da faceta.|  
+|Expressão|**nvarchar(max)**|A expressão dos estados da faceta.|  
 |obj_name|**sysname**|O nome de objeto é atribuído a @Name quando a expressão de condição contém esta variável.|  
   
 ## <a name="remarks"></a>Comentários  

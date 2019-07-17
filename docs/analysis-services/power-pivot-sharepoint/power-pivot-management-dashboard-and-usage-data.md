@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f53c8835da14fc3ee41eb9598303f80c062a0e82
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087745"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208098"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Painel de Gerenciamento Power Pivot e dados de uso
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "55087745"
   
 ### <a name="open-the-dashboard-from-general-application-settings"></a>Abra o painel em Configurações Gerais do Aplicativo  
   
-1.  Na Administração Central, no grupo **Configurações Gerais do Aplicativo**, clique em **Painel de Gerenciamento do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]**.  
+1.  Na Administração Central, no grupo **Configurações Gerais do Aplicativo**, clique em **Painel de Gerenciamento do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]** .  
   
 2.  Na página principal, selecione o aplicativo do serviço Power Pivot para o qual você deseja exibir dados de operações.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "55087745"
   
 -   [Configurar a coleta de dados de uso para o &#40;Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- Para capturar dados sobre o sistema de servidor do Power Pivot, verifique se as mensagens de eventos, o histórico de atualização de dados e outro histórico de uso estão habilitados para cada aplicativo de serviço Power Pivot. Os dados de servidor e de uso coletados durante as operações normais do servidor são os dados de origem resultantes no modelo de dados interno. **Observação:** Se você desativar o histórico de eventos ou de uso, os relatórios compostos serão incompletos ou incorretos.  
+ Para capturar dados sobre o sistema de servidor do Power Pivot, verifique se as mensagens de eventos, o histórico de atualização de dados e outro histórico de uso estão habilitados para cada aplicativo de serviço Power Pivot. Os dados de servidor e de uso coletados durante as operações normais do servidor são os dados de origem resultantes no modelo de dados interno. **Observação:** Se você desativar eventos ou o histórico de uso, os relatórios compostos serão ser incompletos ou incorretos.  
   
 ##  <a name="edit"></a> Editar o Painel do Power Pivot  
  Se você tiver experiência em desenvolvimento ou personalização de painéis, poderá editar o painel para incluir novas Web parts. Você também poderá editar as propriedades das Web parts incluídas no painel.  
@@ -81,7 +81,7 @@ ms.locfileid: "55087745"
  Para começar a usar o recurso de relatórios personalizados, o Painel de Gerenciamento do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] fornece um arquivo Office Data Connection (.odc) para estabelecer a conexão com a pasta de trabalho de origem. Por exemplo, você pode usar o arquivo .odc no Excel para criar relatórios adicionais.  
   
 > [!NOTE]  
->  Edite o arquivo para evitar o seguinte erro ao tentar usar o arquivo .odc no Excel: "Falha na inicialização da fonte de dados". O arquivo .odc gerado automaticamente inclui um parâmetro que não é suportado pelo provedor OLE DB do MSOLAP. As instruções a seguir apresentam a solução de contorno para excluir os parâmetros.  
+>  Edite o arquivo para evitar o seguinte erro ao tentar usar o arquivo. odc no Excel: "Falha na inicialização da fonte de dados". O arquivo .odc gerado automaticamente inclui um parâmetro que não é suportado pelo provedor OLE DB do MSOLAP. As instruções a seguir apresentam a solução de contorno para excluir os parâmetros.  
   
  Você deve ser um administrador de farm ou de serviços para compilar relatórios com base na pasta de trabalho do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] na Administração Central.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "55087745"
   
 2.  Role até a seção **Relatórios** na parte inferior da página.  
   
-3.  Clique em **Dados de Gerenciamento do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]**.  
+3.  Clique em **Dados de Gerenciamento do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]** .  
   
 4.  Salve o arquivo .odc em uma pasta local.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "55087745"
   
 9. 1.  Inicie o Excel 2010.  
   
-    2.  Na faixa de opções [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)], clique em **Inicializar Janela [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]**.  
+    2.  Na faixa de opções [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)], clique em **Inicializar Janela [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]** .  
   
     3.  Na faixa de opções Design na janela do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , clique em **Conexões Existentes**.  
   

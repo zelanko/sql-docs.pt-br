@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 55150d0835fc0a9e3324acfb8007a1d22e9b55d8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022393"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208506"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>Objetos e características de objeto ASSL
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Os objetos da ASSL (Analysis Services Scripting Language) seguem diretrizes específicas a respeito de grupos de objetos, herança, nomenclatura, expansão e processamento.  
   
 ## <a name="object-groups"></a>Grupos de objetos  
- Todos os [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos têm uma representação XML. Os objetos estão divididos em dois grupos:  
+ Todos os objetos do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] possuem uma representação XML. Os objetos estão divididos em dois grupos:  
   
  **Objetos principais**  
  Os objetos principais podem ser criados, alterados e excluídos de forma independente. Entre eles, estão incluídos:  
@@ -38,7 +38,7 @@ ms.locfileid: "34022393"
   
 -   Partições  
   
--   Perspectivas  
+-   perspectivas  
   
 -   Modelos de mineração  
   
@@ -77,7 +77,7 @@ ms.locfileid: "34022393"
 ## <a name="object-expansion"></a>Expansão de objetos  
  A restrição **ObjectExpansion** pode ser usada para controlar o grau de expansão do XML ASSL retornado pelo servidor. As opções dessa restrição estão relacionadas na tabela a seguir.  
   
-|Valor de enumeração|Permitido para \<Alter >|Description|  
+|Valor de enumeração|Permitido para \<Alter >|Descrição|  
 |-----------------------|---------------------------|-----------------|  
 |*ReferenceOnly*|não|Retorna somente o nome, a ID e o carimbo de data/hora do objeto solicitado e de todos os objetos principais contidos de forma recursiva.|  
 |*ObjectProperties*|sim|Expande o objeto solicitado e os objetos secundários contidos, mas não retorna objetos principais contidos.|  
@@ -87,7 +87,7 @@ ms.locfileid: "34022393"
  Esta seção de referência de ASSL descreve a representação *ExpandFull* . Todos os outros níveis de **ObjectExpansion** derivam desse nível.  
   
 ## <a name="object-processing"></a>Processamento de objetos  
- ASSL inclui elementos ou propriedades somente leitura (por exemplo, **LastProcessed**) que pode ser lido o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância, mas que são omitidos quando os scripts de comando são enviados para a instância. O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignora valores modificados para elementos somente leitura sem aviso ou erro.  
+ A ASSL inclui elementos ou propriedades somente leitura (por exemplo, **LastProcessed**) que podem ser lidos na instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , mas que são omitidos quando os scripts de comando são enviados à instância. O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignora valores modificados para elementos somente leitura sem aviso ou erro.  
   
  O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] também ignora propriedades impróprias ou irrelevantes sem gerar erros de validação. Por exemplo, o elemento X só deve estar presente quando o elemento Y tiver um valor específico. A instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignora o elemento X em vez de validar aquele elemento em relação ao valor do elemento Y.  
   

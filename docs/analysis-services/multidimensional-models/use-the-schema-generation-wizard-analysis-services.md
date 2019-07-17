@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a9f60b324a706d28145fb9e843957b20da5ed90a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022803"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208419"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Use o assistente de geração de esquema (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34022803"
 > [!NOTE]  
 >  Para desassociar dimensões e cubos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dos objetos gerados anteriormente, exclua a exibição da fonte de dados à qual as dimensões e os cubos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] foram associados e, em seguida, defina uma nova exibição da fonte de dados para eles usando o Assistente de Geração de Esquema.  
   
-## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>Etapa 3: Especificar opções de esquema para o banco de dados da área de assunto  
+## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>Etapa 3: Especificar opções de esquema para o banco de dados de área de assunto  
  O Assistente de Geração de Esquema oferece inúmeras opções para definição do esquema que é gerado para o banco de dados da área de assunto. Você pode especificar essas opções na página **Opções de Esquema de Banco de Dados da Área de Assunto** do assistente.  
   
 ### <a name="specifying-the-schema-owner"></a>Especificando o proprietário do esquema  

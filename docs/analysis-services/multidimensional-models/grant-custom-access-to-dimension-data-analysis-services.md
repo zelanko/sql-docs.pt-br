@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb93b4aeeaae9d659a225763286fc15a7d9f52a3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024723"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208864"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Conceder acesso personalizado a dados da dimensão (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34024723"
 > [!NOTE]  
 >  As instruções a seguir pressupõem uma conexão de cliente que emite consultas MDX. Se o cliente usa o DAX, como o Power View no Power BI, a segurança de dimensão não fica evidente nos resultados da consulta. Consulte [Compreendendo o Power View para modelos multidimensionais](understanding-power-view-for-multidimensional-models.md) .para obter mais informações.
       
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Nem todos os membros de medidas ou dimensão podem ser usados ​​em cenários de acesso personalizados. A conexão irá falhar se uma função restringir o acesso a uma medida ou membro padrão ou restringir o acesso a medidas que fazem parte de expressões de medida.  
   
  **Verifique se há obstruções à segurança da dimensão: medidas padrão, membros padrão e medidas usados em expressões de medidas**  
@@ -87,7 +87,7 @@ ms.locfileid: "34024723"
  Criar um AllowedSet gera um efeito dominó quando o atributo participa de uma hierarquia de vários níveis. Por exemplo, suponha que uma função permita o acesso ao estado de Washington (imagine um cenário em que a função está concedendo permissões para a divisão de vendas do estado de Washington de uma empresa). Para as pessoas que se conectam por meio dessa função, as consultas que incluem ancestrais (Estados Unidos) ou descendentes (Seattle e Redmond) só verão os membros em uma cadeia incluindo o estado de Washington. Como os outros estados não são explicitamente permitidos, o efeito será o mesmo que se eles fossem negados.  
   
 > [!NOTE]  
->  Se você definir um conjunto vazio ({}) de membros de atributo, nenhum membro do atributo ficará visível à função de banco de dados. A ausência de um conjunto permitido não é interpretada como um conjunto vazio.  
+>  Se você definir um conjunto vazio ({}) dos membros de atributo, nenhum membro do atributo ficará visível à função de banco de dados. A ausência de um conjunto permitido não é interpretada como um conjunto vazio.  
   
  **Conjunto de membros negado**  
  A propriedade DeniedSet pode determinar nenhum membro, todos os membros (padrão) ou alguns membros de atributo. Quando o conjunto negado contiver apenas um conjunto específico de membros de atributo, a função de banco de dados tem o acesso negado apenas a esses membros específicos, bem como a descendentes se o atributo estiver em uma hierarquia de vários níveis. Considere o exemplo da divisão de vendas do estado de Washington. Se Washington for colocado em DeniedSet, as pessoas que se conectam por meio desse papel verão todos os outros estados, exceto Washington e seus atributos descendentes.  
@@ -117,8 +117,8 @@ ms.locfileid: "34024723"
   
 ## <a name="see-also"></a>Consulte também  
  [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [Conceder acesso personalizado aos dados da célula &#40;do Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
- [Conceder permissões em estruturas de mineração de dados e modelos de &#40;do Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Conceder permissões em um objeto de fonte de dados & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Conceder acesso personalizado a dados de célula &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
+ [Conceder permissões em estruturas e modelos de mineração de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Conceder permissões em um objeto de fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

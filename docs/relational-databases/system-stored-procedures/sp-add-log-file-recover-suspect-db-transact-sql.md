@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b170d26aa67be39c6e41af37033de3c6a90dc582
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 9f951aaee96bccf0c2876c781aaebdd2a009b51d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140484"
 ---
 # <a name="spaddlogfilerecoversuspectdb-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +46,17 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
 ## <a name="arguments"></a>Argumentos  
 `[ @dbName = ] 'database'` É o nome do banco de dados. *banco de dados* está **sysname**, sem padrão.  
   
-`[ @name = ] 'logical_file_name'` É o nome usado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao referenciar o arquivo. O nome deve ser exclusivo no servidor. *logical_file_name* está **nvarchar (260)**, sem padrão.  
+`[ @name = ] 'logical_file_name'` É o nome usado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao referenciar o arquivo. O nome deve ser exclusivo no servidor. *logical_file_name* está **nvarchar (260)** , sem padrão.  
   
-`[ @filename = ] 'os_file_name'` O caminho e nome de arquivo é usado pelo sistema operacional para o arquivo. O arquivo deve residir no servidor no qual o [!INCLUDE[ssDE](../../includes/ssde-md.md)] está instalado. *os_file_name* está **nvarchar (260)**, sem padrão.  
+`[ @filename = ] 'os_file_name'` O caminho e nome de arquivo é usado pelo sistema operacional para o arquivo. O arquivo deve residir no servidor no qual o [!INCLUDE[ssDE](../../includes/ssde-md.md)] está instalado. *os_file_name* está **nvarchar (260)** , sem padrão.  
   
-`[ @size = ] 'size_ '` É o tamanho inicial do arquivo. *tamanho* está **nvarchar (20)**, com um padrão NULL. Especifique um número inteiro; não inclua um decimal. Os sufixos MB e KB podem ser usados para especificar megabytes ou quilobytes. O padrão é MB. O valor mínimo é 512 KB. Se *tamanho* não for especificado, o padrão é 1 MB.  
+`[ @size = ] 'size_ '` É o tamanho inicial do arquivo. *tamanho* está **nvarchar (20)** , com um padrão NULL. Especifique um número inteiro; não inclua um decimal. Os sufixos MB e KB podem ser usados para especificar megabytes ou quilobytes. O padrão é MB. O valor mínimo é 512 KB. Se *tamanho* não for especificado, o padrão é 1 MB.  
   
-`[ @maxsize = ] 'max_size_ '` É o tamanho máximo para o qual o arquivo pode crescer. *max_size* está **nvarchar (20)**, com um padrão NULL. Especifique um número inteiro; não inclua um decimal. Os sufixos MB e KB podem ser usados para especificar megabytes ou quilobytes. O padrão é MB.  
+`[ @maxsize = ] 'max_size_ '` É o tamanho máximo para o qual o arquivo pode crescer. *max_size* está **nvarchar (20)** , com um padrão NULL. Especifique um número inteiro; não inclua um decimal. Os sufixos MB e KB podem ser usados para especificar megabytes ou quilobytes. O padrão é MB.  
   
  Se *max_size* não for especificado, o arquivo crescerá até que o disco está cheio. O log de aplicativo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows adverte o administrador quando o disco está quase cheio.  
   
-`[ @filegrowth = ] 'growth_increment_ '` É a quantidade de espaço adicionada ao arquivo cada vez que novo espaço é necessário. *growth_increment* está **nvarchar (20)**, com um padrão NULL. Um valor de 0 indica que não houve crescimento. Especifique um número inteiro; não inclua um decimal. O valor pode ser especificado em MB, KB ou porcentagem (%). Quando a % é especificada, o incremento de crescimento é a porcentagem especificada do tamanho do arquivo no momento em que ocorre o incremento. Se um número for especificado sem um sufixo MB, KB, ou %, o padrão será MB.  
+`[ @filegrowth = ] 'growth_increment_ '` É a quantidade de espaço adicionada ao arquivo cada vez que novo espaço é necessário. *growth_increment* está **nvarchar (20)** , com um padrão NULL. Um valor de 0 indica que não houve crescimento. Especifique um número inteiro; não inclua um decimal. O valor pode ser especificado em MB, KB ou porcentagem (%). Quando a % é especificada, o incremento de crescimento é a porcentagem especificada do tamanho do arquivo no momento em que ocorre o incremento. Se um número for especificado sem um sufixo MB, KB, ou %, o padrão será MB.  
   
  Se *growth_increment* for NULL, o valor padrão é 10% e o valor de tamanho mínimo é de 64 KB. O tamanho especificado é arredondado para o mais próximo de 64 KB.  
   
@@ -65,7 +64,7 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Execute permissões padrão para os membros de **sysadmin** função de servidor fixa. Essas permissões não são transferíveis.  

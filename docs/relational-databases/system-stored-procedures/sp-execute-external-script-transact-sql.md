@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 77d5386f05e371a2e653f4f6097257e99457e910
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ce26cd3d4e42d6d94e32a3454318a0ee841c486
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67046717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124494"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -75,10 +74,10 @@ sp_execute_external_script
 ::: moniker-end
 
 ## <a name="arguments"></a>Argumentos
- **@language** = N'*language*'  
+ **@language** = N'*linguagem*'  
  Indica a linguagem de script. *linguagem* está **sysname**.  Dependendo da sua versão do SQL Server, os valores válidos são R (SQL Server 2016 e posterior), (SQL Server 2017 e posterior) do Python e Java (versão prévia do SQL Server 2019). 
   
- **@script** = N'*script*' especificado como uma entrada de literal ou uma variável de script de linguagem externo. *script* is **nvarchar(max)** .  
+ **@script** = N'*script*' especificado como uma entrada de literal ou uma variável de script de linguagem externo. *script* está **nvarchar (max)** .  
 
 `[ @input_data_1 =  N'input_data_1' ]` Especifica os dados de entrada usados pelo script externo na forma de um [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta. O tipo de dados *input_data_1* é **nvarchar (max)** .
 
@@ -162,7 +161,7 @@ Como alternativa, **CAST** a coluna ou valor em um tipo com suporte no [!INCLUDE
   
 -   **xml**  
   
--   **hierarchyid**, **geometry**, **geography**  
+-   **HierarchyID**, **geometria**, **geografia**  
   
 -   Tipos definidos pelo usuário de CLR
 

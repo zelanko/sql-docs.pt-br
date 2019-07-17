@@ -1,5 +1,5 @@
 ---
-title: Entendendo os esquemas de banco de dados | Microsoft Docs
+title: Noções básicas sobre os esquemas de banco de dados | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 91a54be06727a674a16f12295fa886f869b188e4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023473"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164968"
 ---
 # <a name="understanding-the-database-schemas"></a>Entendendo os esquemas de banco de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "34023473"
 > [!NOTE]  
 >  Ocorrerá um erro se mais de uma atributo de chave for especificado na dimensão na qual se baseia a tabela de dimensões.  
   
- Traduções  
+ Translations  
  O assistente gera uma tabela separada para manter os valores traduzidos para qualquer atributo que precise de uma coluna de tradução. O assistente cria também uma coluna separada para cada um dos idiomas necessários.  
   
 ## <a name="fact-tables"></a>Tabelas de fatos  
@@ -71,7 +71,7 @@ ms.locfileid: "34023473"
   
  Se você decidir impor a integridade referencial, restrições de integridade referencial serão geradas entre as tabelas de dimensões e as tabelas de fatos sempre que aplicável.  
   
- Traduções  
+ Translations  
  O assistente gera uma tabela separada para manter os valores traduzidos para qualquer propriedade do grupo de medidas que precise de uma coluna de tradução. O assistente cria também uma coluna separada para cada um dos idiomas necessários.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversão do tipo de dados e comprimentos padrão  
@@ -88,7 +88,7 @@ ms.locfileid: "34023473"
 |UnaryOperatorColumn|1|  
   
 ## <a name="see-also"></a>Consulte também  
- [Noções básicas sobre geração Incremental](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
- [Gerenciar alterações em exibições da fonte de dados e fontes de dados](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
+ [Entendendo a geração com incremento](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
+ [Gerenciar alterações em exibições da fonte de dados e em fontes de dados](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   
   

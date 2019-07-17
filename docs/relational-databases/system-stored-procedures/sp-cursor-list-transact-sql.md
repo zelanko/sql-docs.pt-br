@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5adcaab96bfe9af3945b479e4bff5180ca8140d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108586"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |3|Informar cursores locais e globais.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- None  
+ Nenhum  
   
 ## <a name="cursors-returned"></a>Cursores retornados  
  sp_cursor_list retorna seu relatório como um parâmetro de saída de cursor [!INCLUDE[tsql](../../includes/tsql-md.md)], não como um conjunto de resultados. Isso permite que lotes, procedimentos armazenados e gatilhos [!INCLUDE[tsql](../../includes/tsql-md.md)] funcionem com a saída, uma linha de cada vez. Isso também significa que o procedimento não pode ser chamado diretamente de funções API do banco de dados. O parâmetro de saída de cursor deve ser associado a uma variável de programa, mas as APIs do banco de dados não oferecem suporte a associações de parâmetros ou variáveis de cursor.  
@@ -82,7 +81,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ## <a name="remarks"></a>Comentários  
  sp_cursor_list gera uma lista dos cursores de servidor atuais aberta pela conexão e descreve os atributos globais de cada cursor, como a capacidade do cursor de ser rolável e atualizável. Os cursores listados por sp_cursor_list incluem:  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]Cursores de servidor   
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]Cursores de servidor  
   
 -   Cursores de servidor API abertos por um aplicativo ODBC que é chamado SQLSetCursorName para o nome do cursor.  
   

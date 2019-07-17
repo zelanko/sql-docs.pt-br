@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d37eebfad3f8a3e89dc65ad9602f4b5d61b5072e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024983"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181145"
 ---
 # <a name="debugging-stored-procedures"></a>Depurando procedimentos armazenados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "34024983"
   
 6.  No Visual Studio, anexe ao processo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (Msmdsrv.exe).  
   
-    1.  Do **depurar** menu, escolha **toProcess anexar**.  
+    1.  Dos **Debug** menu, escolha **anexar toProcess**.  
   
     2.  No **anexar toProcess** caixa de diálogo, selecione **Mostrar processos de todos os usuários**.  
   
-    3.  No **processos disponíveis** lista, o **processo** coluna, clique em **Msmdsrv.exe**. Se houver mais que uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em execução no servidor, será necessário identificar o processo pelo ID da instância que você deseja usar.  
+    3.  No **processos disponíveis** listar, as **processo** coluna, clique em **Msmdsrv.exe**. Se houver mais que uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em execução no servidor, será necessário identificar o processo pelo ID da instância que você deseja usar.  
   
-    4.  No **anexar a** texto caixa, certifique-se de que o tipo de programa apropriado está selecionado. Para uma DLL CLR, clique em **selecione**, em seguida, clique em **depurar esses tipos de código**, em seguida, clique em **gerenciado**, em seguida, clique em **Okey**. Para uma DLL COM, clique em **selecione**, em seguida, clique em **depurar esses tipos de código**, em seguida, clique em **nativo**, em seguida, clique em **Okey**.  
+    4.  No **anexar a** texto caixa, certifique-se de que o tipo de programa apropriado é selecionado. Para uma DLL CLR, clique em **selecionar**, em seguida, clique em **depurar esses tipos de código**, em seguida, clique em **gerenciado**, em seguida, clique em **Okey**. Para uma DLL de COM, clique em **selecionar**, em seguida, clique em **depurar esses tipos de código**, em seguida, clique em **nativo**, em seguida, clique em **Okey**.  
   
     5.  Clique em **anexar**.  
   

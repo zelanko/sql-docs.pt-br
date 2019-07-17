@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4a4d87ccae235aee1a11e58aff60fe8e34d6205
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376378"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207090"
 ---
 # <a name="handling-errors-and-messages"></a>Tratando de erros e mensagens
   Quando um aplicativo chama uma função ODBC, o driver executa a função e retorna informações de diagnóstico de duas maneiras: Um código de retorno indica o êxito ou falha de uma função ODBC geral e os registros de diagnóstico fornecem informações detalhadas sobre a função. Os registros de diagnóstico incluem um registro de cabeçalho e registros de status. Pelo menos um registro de diagnóstico, o registro de cabeçalho, será retornado, mesmo que a função tenha êxito.  

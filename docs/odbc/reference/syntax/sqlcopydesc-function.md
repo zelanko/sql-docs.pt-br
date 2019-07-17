@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 601c0cdab47c338b903514f2e2e47547551ef678
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bacf438180dd6fe2823660e8275e48a2316e9efa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537723"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121436"
 ---
 # <a name="sqlcopydesc-function"></a>Função SQLCopyDesc
 **Conformidade com**  
