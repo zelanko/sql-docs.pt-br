@@ -1,5 +1,5 @@
 ---
-title: SystemGetClusterAccuracyResults (Analysis Services – mineração de dados) | Microsoft Docs
+title: SystemGetClusterAccuracyResults (Analysis Services - mineração de dados) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b9521cfd6e2b9ec0d08f290c60167c682c98e46f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019153"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209656"
 ---
 # <a name="systemgetclusteraccuracyresults-analysis-services---data-mining"></a>SystemGetClusterAccuracyResults (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +72,7 @@ SystemGetClusterAccuracyResults(
   
  A tabela a seguir lista as colunas retornadas por **SystemGetClusterAccuracyResults**. Para aprender como interpretar as informações retornadas pelo procedimento armazenado, consulte [Medidas no relatório de validação cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
   
-|Nome da coluna|Description|  
+|Nome da coluna|Descrição|  
 |-----------------|-----------------|  
 |ModelName|O nome do modelo que foi testado. **Tudo** indica que o resultado é uma agregação para todos os modelos.|  
 |AttributeName|Não aplicável a modelos de clustering.|  
@@ -81,12 +81,12 @@ SystemGetClusterAccuracyResults(
 |PartitionCases|Um inteiro que indica quantos casos foram testados.|  
 |Teste|O tipo de teste que foi executado.|  
 |Measure|Nome da medida retornada pelo teste. Medidas para cada modelo dependem do tipo modelo e do tipo do valor previsível.<br /><br /> Para obter uma lista de medidas retornadas para cada tipo previsível, consulte [Medidas no relatório de validação cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Para obter uma definição de cada medida, consulte [Validação cruzada &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
-|Value|Uma pontuação de probabilidade que indica a probabilidade de caso de cluster.|  
+|Valor|Uma pontuação de probabilidade que indica a probabilidade de caso de cluster.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A tabela a seguir fornece exemplos dos valores que você pode usar para especificar os dados na estrutura de mineração usados para validação cruzada. Se você desejar usar casos de teste para validação cruzada, a estrutura de mineração já deverá conter um conjunto de dados para teste. Para obter informações sobre como definir um conjunto de dados de teste ao criar uma estrutura de mineração, consulte [Conjuntos de dados de treinamento e teste](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
-|Valor inteiro|Description|  
+|Valor inteiro|Descrição|  
 |-------------------|-----------------|  
 |1|Somente casos de treinamento são usados.|  
 |2|Somente os casos de teste são usados.|  
@@ -111,7 +111,7 @@ CALL SystemGetClusterAccuracyResults (
   
  Resultados do exemplo:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Teste|Medida|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Teste|Measure|Valor|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Cluster 1|||0|5545|Clustering|Probabilidade de caso|0.796514342249313|  
 |Cluster 2|||0|5545|Clustering|Probabilidade de caso|0.732122471228572|  
@@ -121,8 +121,8 @@ CALL SystemGetClusterAccuracyResults (
   
 ## <a name="see-also"></a>Consulte também  
  [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services – mineração de dados&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
  [SystemClusterGetAccuracyResults](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

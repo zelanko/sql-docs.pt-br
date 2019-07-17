@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049577"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68197771"
 ---
 # <a name="event-notifications"></a>Notificações de eventos
   As notificações de evento enviam informações sobre eventos a um serviço do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . As notificações de evento são executadas em resposta a uma variedade de instruções DDL (linguagem de definição de dados) do [!INCLUDE[tsql](../../includes/tsql-md.md)] e eventos de Rastreamento do SQL por meio do envio de informações sobre esses eventos a um serviço do [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
@@ -51,7 +51,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 ## <a name="event-notifications-concepts"></a>Conceitos das notificações de evento  
  Quando uma notificação de evento é criada, uma ou mais conversas de [!INCLUDE[ssSB](../../includes/sssb-md.md)] são abertas entre uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o serviço de destino especificado. Normalmente, as conversações permanecem abertas enquanto a notificação de eventos existir como objeto na instância do servidor. Em alguns casos de erro, as conversações podem ser fechadas antes de a notificação de eventos ser descartada. Essas conversações nunca são compartilhadas entre notificações de eventos. Cada notificação de eventos tem suas próprias conversações exclusivas. Terminar explicitamente uma conversa impede que o serviço de destino receba mais mensagens, e a conversa não será reaberta na próxima vez que a notificação de evento for acionada.  
   
- Informações de evento é entregue para o [!INCLUDE[ssSB](../../includes/sssb-md.md)] serviço como uma variável do tipo `xml` que fornece informações sobre quando ocorre um evento, sobre o objeto de banco de dados afetado, o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução por lotes envolvida e outras informações. Para obter mais informações sobre o esquema XML produzido por notificações de evento, consulte [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql).  
+ As informações de evento são entregues ao serviço do [!INCLUDE[ssSB](../../includes/sssb-md.md)] como uma variável do tipo `xml` que fornece informações especificando quando um evento ocorreu, informações sobre o objeto de banco de dados afetado, a instrução do lote [!INCLUDE[tsql](../../includes/tsql-md.md)] envolvida e outros dados. Para obter mais informações sobre o esquema XML produzido por notificações de evento, consulte [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql).  
   
 ### <a name="event-notifications-vs-triggers"></a>Notificações de evento x Gatilhos  
  A tabela a seguir compara e contrasta gatilhos e notificações de evento.  

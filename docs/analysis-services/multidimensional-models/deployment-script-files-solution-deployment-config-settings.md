@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4535ce33d0615cd98bf910da9b765a0e972131d7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525659"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208946"
 ---
 # <a name="deployment-script-files---solution-deployment-config-settings"></a>Arquivos de script de implantação – Definições de configuração de implantação de solução
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "52525659"
   
 -   Execute o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] interativamente, e na página **Parâmetros de Configuração** , especifique o parâmetro de configuração para os objetos que estão sendo implantados.  
   
-     -ou-  
+     - ou -  
   
 -   Execute o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no prompt de comando e defina o assistente para executar em modo de arquivo de resposta. Para obter mais informações sobre o modo de arquivo de resposta, consulte [Running the Analysis Services Deployment Wizard](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md).  
   
-     -ou-  
+     - ou -  
   
 -   Modificar a \< *nome do projeto*> arquivo. configsettings usando qualquer editor de texto.  
   

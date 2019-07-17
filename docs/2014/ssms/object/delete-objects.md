@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e8912b0e3cac7ccde8f89c1818fd9737c29ebc0a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822010"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211243"
 ---
 # <a name="delete-objects"></a>Excluir Objetos
   Use essa caixa de diálogo para excluir um banco de dados ou objeto de banco de dados.  

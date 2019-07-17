@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b2539995f50e31e7342a4cd27fe7277a103d041f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748519"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211736"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Sobre o change data capture (SQL Server)
   Os registros do Change Data Capture inserem, atualizam e excluem atividades aplicadas a uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ele também disponibiliza os detalhes das mudanças em um formato relacional facilmente utilizável. As informações de coluna e os metadados exigidos para a aplicação de alterações em um ambiente de destino são capturados para as linhas modificadas e armazenados nas tabelas de alteração que espelham a estrutura da coluna das tabelas de origem rastreadas. As funções avaliadas da tabela são fornecidas para permitir acesso sistemático aos dados de alteração pelos consumidores.  
@@ -43,7 +43,7 @@ ms.locfileid: "52748519"
   
  Cada operação de inserção ou exclusão que é aplicada a uma tabela de origem aparece como uma única linha dentro da tabela de alteração. As colunas de dados da linha, que é o resultado de uma operação de inserção, contêm os valores de coluna depois da inserção. As colunas de dados da linha, que é o resultado uma operação de exclusão, contêm valores de coluna antes da exclusão. Uma operação de atualização requer uma entrada de linha para identificar os valores da coluna antes da atualização e uma segunda entrada para identificar os valores da coluna depois da atualização.  
   
- Cada linha em uma tabela de alteração também contém metadados adicionais para permitir interpretação da atividade de alteração. A coluna __$start_lsn identifica o número da sequência do log de confirmação (LSN) que foi atribuído à alteração. O LSN de confirmação não só identifica alterações que foram confirmadas dentro da mesma transação, mas também ordena essas transações. A coluna \_\_$seqval podem ser usados para ordenar mais alterações que acontecem na mesma transação. A coluna \_ \_$operation registra a operação que está associada com a alteração: 1 = excluir, 2 = inserir, 3 = atualizar (antes da imagem) e 4 = atualizar (depois da imagem). A coluna \_\_$update_mask é uma máscara de bit variável com um bit definido para cada coluna capturada. Para inserir e excluir entradas, a máscara de atualização sempre terá todos os bits definidos. No entanto, as linhas de atualização terão definidos apenas os bits que correspondam às colunas alteradas.  
+ Cada linha em uma tabela de alteração também contém metadados adicionais para permitir interpretação da atividade de alteração. A coluna __$start_lsn identifica o número da sequência do log de confirmação (LSN) que foi atribuído à alteração. O LSN de confirmação não só identifica alterações que foram confirmadas dentro da mesma transação, mas também ordena essas transações. A coluna \_\_$seqval podem ser usados para ordenar mais alterações que acontecem na mesma transação. A coluna \_\_$operation registra a operação associada à alteração: 1 = excluir, 2 = inserir, 3 = atualizar (antes da imagem) e 4 = atualizar (depois da imagem). A coluna \_\_$update_mask é uma máscara de bit variável com um bit definido para cada coluna capturada. Para inserir e excluir entradas, a máscara de atualização sempre terá todos os bits definidos. No entanto, as linhas de atualização terão definidos apenas os bits que correspondam às colunas alteradas.  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>Intervalo de validade de captura de dados de alteração para um banco de dados  
  O intervalo de validade da captura de dados de alteração para um banco de dados é o tempo durante o qual os dados de alteração estão disponíveis para as instâncias de captura. O intervalo de validade começa quando a primeira instância de captura é criada para uma tabela de banco de dados e continua no momento atual.  

@@ -16,11 +16,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373518"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198420"
 ---
 # <a name="sql-server-audit-database-engine"></a>Auditoria do SQL Server (Mecanismo de Banco de Dados)
   A*auditoria* de uma instância do [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] ou de um banco de dados individual envolve o controle e o registro em log dos eventos que ocorrem no [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. A auditoria do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite criar auditorias de servidor, que podem conter especificações de auditoria de servidor para eventos no nível de servidor, além de especificações de auditoria de banco de dados para eventos no nível de banco de dados. Os eventos auditados podem ser gravados nos logs de eventos ou nos arquivos de auditoria.  
@@ -119,7 +119,7 @@ ms.locfileid: "53373518"
 ### <a name="database-mirroring-and-sql-server-audit"></a>Espelhamento de Banco de Dados e o SQL Server Audit  
  Um banco de dados com uma especificação de auditoria de banco de dados definida e que usa espelhamento de banco de dados incluirá a especificação de auditoria de banco de dados. Para funcionar corretamente na instância de SQL espelhada, é necessário configurar os seguintes itens:  
   
--   É necessário que o servidor espelho tenha uma auditoria com o mesmo GUID para habilitar a especificação de auditoria de banco de dados para gravar registros de auditoria. Isso pode ser configurado usando o comando CREATE AUDIT WITH GUID`=`*\<GUID da auditoria de servidor de origem*>.  
+-   É necessário que o servidor espelho tenha uma auditoria com o mesmo GUID para habilitar a especificação de auditoria de banco de dados para gravar registros de auditoria. Isso pode ser configurado usando o comando CREATE AUDIT WITH GUID`=` *\<GUID da auditoria de servidor de origem*>.  
   
 -   Para destinos de arquivos binários, é necessário que a conta do serviço de servidor espelho tenha as permissões apropriadas onde a trilha de auditoria começou a ser gravada.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "53373518"
 > [!CAUTION]  
 >  Entidades na função sysadmin podem violar qualquer componente de auditoria e aqueles na função db_owner podem violar quaisquer especificações em um banco de dados. A auditoria do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valida esse logon que cria ou altera uma especificação de auditoria que tenha pelo menos a permissão ALTER ANY DATABASE AUDIT. No entanto, ela não faz nenhuma validação quando você anexa um banco de dados. Você deve considerar que todas as Especificações de Auditoria de Banco de Dados são seguras somente para as entidades nas funções sysadmin ou db_owner.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  [Criar uma auditoria de servidor e uma especificação de auditoria de servidor](create-a-server-audit-and-server-audit-specification.md)  
   
  [Criar uma especificação de auditoria de banco de dados e de servidor](create-a-server-audit-and-database-audit-specification.md)  
@@ -213,7 +213,7 @@ ms.locfileid: "53373518"
  [Gatilhos DDL](../../triggers/ddl-triggers.md)  
  Explica como os gatilhos DDL (linguagem de definição de dados) podem ser usados para controlar alterações nos bancos de dados.  
   
- [Microsoft TechNet: TechCenter do SQL Server: Proteção e segurança do SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: SQL Server TechCenter: Proteção e Segurança do SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Fornece informações atualizadas sobre a segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte também  

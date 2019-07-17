@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4228f5ae90f7fdd2510787b6fca6ad10f7302e4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016143"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182474"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Requisitos e considerações de processamento (mineração de dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,13 +58,13 @@ ms.locfileid: "34016143"
   
  Os modelos de mineração também são processados nestes cenários:  
   
- **Implantação de um projeto**: dependendo das configurações do projeto e do estado atual do projeto, os modelos de mineração no projeto são geralmente processados completamente quando o projeto é implantado.  
+ **Implantação de um projeto**: Dependendo das configurações do projeto e o estado atual do projeto, os modelos de mineração no projeto são geralmente processados completamente quando o projeto é implantado.  
   
  Ao iniciar a implantação, o processamento começa automaticamente, a menos que exista uma versão processada anteriormente no servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e não houve mudanças na estrutura. É possível implantar um projeto selecionando **Implantar solução** na lista suspensa ou pressionando a tecla F5. É possível  
   
  Para obter mais informações sobre como definir propriedades de implantação no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que controlam como os modelos de mineração são implantados, consulte [Implantação de soluções de Data Mining](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md).  
   
- **Movendo um modelo de mineração**: quando você move um modelo de mineração usando o comando EXPORT, somente a definição do modelo é exportada, incluindo o nome da estrutura de mineração que é esperada que forneça dados ao modelo.  
+ **Movendo um modelo de mineração**: Quando você move um modelo de mineração usando o comando EXPORT, somente a definição do modelo é exportada, o que inclui o nome da estrutura de mineração que é esperado para fornecer dados para o modelo.  
   
  Reprocessando requisitos para os cenários a seguir usando os comandos EXPORT e IMPORT:  
   
@@ -83,8 +83,8 @@ ms.locfileid: "34016143"
  Para obter mais informações, consulte [Exportar e importar objetos de Data Mining](../../analysis-services/data-mining/export-and-import-data-mining-objects.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Estruturas de mineração & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Estruturas de mineração & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Processar um modelo multidimensional &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

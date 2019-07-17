@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a205a23c4c7e7e45269fd00fc0923d4168ec7091
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d31d36f315291d6826712771d0e3b6b1d8fbc496
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139037"
 ---
 # <a name="handles"></a>Alças
 Os identificadores são opacos, 32 bits os valores que identificam um item em particular; no ODBC, este item pode ser um ambiente, a conexão, a instrução ou o descritor. Quando o aplicativo chama **SQLAllocHandle**, o Gerenciador de Driver ou driver cria um novo item do tipo especificado e retorna sua alça para o aplicativo. Posteriormente, o aplicativo usa o identificador para identificar o item ao chamar funções ODBC. O Gerenciador de Driver e o driver usam o identificador para localizar informações sobre o item.  

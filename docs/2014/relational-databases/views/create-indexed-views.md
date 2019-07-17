@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131806"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196432"
 ---
 # <a name="create-indexed-views"></a>Criar exibições indexadas
   Este tópico descreve como criar uma exibição indexada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O primeiro índice criado em uma exibição deve ser um índice clusterizado exclusivo. Depois que o índice clusterizado exclusivo for criado, você poderá criar mais índices não clusterizados. Criar um índice clusterizado exclusivo em uma exibição melhora o desempenho da consulta porque a exibição é armazenada no banco de dados da mesma forma que uma tabela com um índice clusterizado é armazenada. O otimizador de consulta pode usar exibições indexadas para acelerar a execução da consulta. A exibição não precisa estar referenciada na consulta para o otimizador considerá-la para uma substituição.  
@@ -43,7 +43,7 @@ ms.locfileid: "54131806"
 5.  Crie o índice clusterizado exclusivo na exibição.  
   
 ###  <a name="Restrictions"></a> Opções SET necessárias para exibições indexadas  
- A avaliação da mesma expressão poderá produzir resultados diferentes no [!INCLUDE[ssDE](../../includes/ssde-md.md)] quando houver diferentes opções SET ativas durante a execução da consulta. Por exemplo, depois que a opção SET CONCAT_NULL_YIELDS_NULL for definida como ON, a expressão **'** abc **'** + NULL retornará o valor NULL. Entretanto, depois que CONCAT_NULL_YIEDS_NULL for definido como OFF, a mesma expressão produzirá **'** abc **'**.  
+ A avaliação da mesma expressão poderá produzir resultados diferentes no [!INCLUDE[ssDE](../../includes/ssde-md.md)] quando houver diferentes opções SET ativas durante a execução da consulta. Por exemplo, depois que a opção SET CONCAT_NULL_YIELDS_NULL for definida como ON, a expressão **'** abc **'** + NULL retornará o valor NULL. Entretanto, depois que CONCAT_NULL_YIEDS_NULL for definido como OFF, a mesma expressão produzirá **'** abc **'** .  
   
  Para verificar se as exibições podem ser mantidas corretamente e retornar resultados consistentes, as exibições indexadas requerem valores fixos para várias opções SET. As opções SET na tabela a seguir devem ser definidas para os valores mostrados na **RequiredValue** coluna sempre que ocorrerem as seguintes condições:  
   
@@ -86,11 +86,11 @@ ms.locfileid: "54131806"
   
 -   Quando você cria o índice, a opção IGNORE_DUP_KEY deve ser definida como OFF (a configuração padrão).  
   
--   As tabelas devem ser referenciadas por meio de nomes de duas partes, _schema_**.**_tablename_ na definição da exibição.  
+-   As tabelas devem ser referenciadas por meio de nomes de duas partes, _schema_ **.** _tablename_ na definição da exibição.  
   
 -   Funções definidas pelo usuário referenciadas na exibição devem ser criadas usando a opção WITH SCHEMABINDING.  
   
--   Qualquer função definida pelo usuário referenciada na exibição deve ser referenciada por nomes de duas partes, _esquema_**.**_função_.  
+-   Qualquer função definida pelo usuário referenciada na exibição deve ser referenciada por nomes de duas partes, _esquema_ **.** _função_.  
   
 -   A propriedade de acesso de dados de uma função definida pelo usuário deve ser NO SQL e a propriedade de acesso externa deve ser NO.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "54131806"
 ####  <a name="Permissions"></a> Permissões  
  Requer a permissão CREATE VIEW no banco de dados e a permissão ALTER no esquema no qual a exibição está sendo criada.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-an-indexed-view"></a>Para criar uma exibição indexada  
   

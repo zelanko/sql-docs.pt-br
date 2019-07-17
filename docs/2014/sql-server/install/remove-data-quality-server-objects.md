@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f273823825cf94da6269a58389f04207ad1c2707
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211877"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68190664"
 ---
 # <a name="remove-data-quality-server-objects"></a>Remover objetos do Data Quality Server
   A desinstalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou a total remoção de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tem o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] não exclui alguns objetos do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , incluindo bancos de dados DQS. Isso implica que você não perca seus dados DQS se desinstalar o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] usando a instalação do SQL Server. Exclua manualmente esses objetos do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] quando o processo de desinstalação estiver concluído.  

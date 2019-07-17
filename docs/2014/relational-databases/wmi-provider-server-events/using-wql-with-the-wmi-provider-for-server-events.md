@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 18c4b6448438ebb8c95f999569d51edfecf04206
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375818"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211584"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Usando o WQL com o Provedor WMI para eventos de servidor
   Os aplicativos de gerenciamento acessam eventos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usam o Provedor WMI para eventos de servidor emitindo instruções WQL. O WQL é um subconjunto simplificado da linguagem SQL, com algumas extensões específicas do WMI. Ao usar o WQL, um aplicativo recupera um tipo de evento em uma instância específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um banco de dados ou um objeto de banco de dados (o único objeto com suporte no momento é o de fila). O provedor WMI para eventos de servidor converte a consulta em uma notificação de eventos é criada no banco de dados destino para notificações de eventos no escopo do banco de dados ou no escopo do objeto, ou na **mestre** banco de dados para eventos no escopo do servidor notificações.  
@@ -91,7 +91,7 @@ WHERE where_condition
   
  O Provedor WMI para eventos de servidor usa um algoritmo ascendente, o primeiro que for válido (first fit), a fim de gerar o escopo mais restrito possível para a EVENT NOTIFICATION subjacente. O algoritmo tenta minimizar a atividade interna no servidor e o tráfego de rede entre a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o processo do host WMI. O provedor examina o *event_type* especificado na cláusula FROM e as condições na cláusula WHERE e tenta registrar a EVENT NOTIFICATION subjacente com o menor escopo possível. Se o provedor não puder registrar com o escopo mais restrito, ele tentará registrar com escopos sucessivamente superiores, até que um registro finalmente tenha êxito. Se o escopo mais alto (o nível de servidor) for atingido e falhar, um erro será retornado ao consumidor.  
   
- Por exemplo, se DatabaseName =**'** AdventureWorks **'** é especificado na cláusula WHERE, o provedor tentará registrar uma notificação de evento no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados. Se o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] existir e o cliente que fez a chamada tiver as permissões necessárias para criar uma notificação de eventos em [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], o registro terá êxito. Caso contrário, será feita uma tentativa de registrar a notificação de eventos no nível de servidor. O registro terá êxito se o cliente WMI tiver as permissões necessárias. Porém, neste cenário, os eventos não são retornados ao cliente até que o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] tenha sido criado.  
+ Por exemplo, se DatabaseName = **'** AdventureWorks **'** é especificado na cláusula WHERE, o provedor tentará registrar uma notificação de evento no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados. Se o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] existir e o cliente que fez a chamada tiver as permissões necessárias para criar uma notificação de eventos em [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], o registro terá êxito. Caso contrário, será feita uma tentativa de registrar a notificação de eventos no nível de servidor. O registro terá êxito se o cliente WMI tiver as permissões necessárias. Porém, neste cenário, os eventos não são retornados ao cliente até que o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] tenha sido criado.  
   
  O *where_condition* também pode atuar como um filtro para limitar adicionalmente a consulta a um banco de dados específico, o esquema ou o objeto. Por exemplo, considere a seguinte consulta WQL:  
   
@@ -122,7 +122,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 SELECT * FROM SERVER_MEMORY_CHANGE  
 ```  
   
-### <a name="b-querying-for-events-at-the-database-scope"></a>b. Consultando eventos no escopo de banco de dados  
+### <a name="b-querying-for-events-at-the-database-scope"></a>B. Consultando eventos no escopo de banco de dados  
  A consulta WQL a seguir recupera propriedades de evento específicas de qualquer evento que ocorre no banco de dados `AdventureWorks` e existe que existe no grupo de eventos `DDL_DATABASE_LEVEL_EVENTS`.  
   
 ```  

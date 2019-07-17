@@ -1,5 +1,5 @@
 ---
-title: Definir propriedade de uso | Microsoft Docs
+title: Definir a propriedade Usage | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 603ef66e0021c2250987a0605fe9b28aae5e3490
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020083"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209175"
 ---
-# <a name="attribute-properties---set-usage-property"></a>Propriedades de atributo - defina a propriedade de uso
+# <a name="attribute-properties---set-usage-property"></a>Propriedades do atributo – Definir propriedade de uso
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Você pode definir o uso de um atributo empregando a exibição **Estrutura da Dimensão** do Designer de Dimensão, acessado pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   

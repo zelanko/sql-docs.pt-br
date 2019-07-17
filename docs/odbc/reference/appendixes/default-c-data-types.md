@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9c4147b1bfa5ffb1e379c3aa8be2c9ea2a9d2775
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9e0a9b8e85967ce46344e824c03e74fe3552e7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240964"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130009"
 ---
 # <a name="default-c-data-types"></a>Tipos de dados do C padrão
 Se um aplicativo especifica SQL_C_DEFAULT na **SQLBindCol**, **SQLGetData**, ou **SQLBindParameter**, o driver pressupõe que o C tipo de dados do buffer de entrada ou saída corresponde ao tipo de dados SQL da coluna ou parâmetro ao qual o buffer está associado.  

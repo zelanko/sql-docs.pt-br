@@ -10,25 +10,25 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28f87d9cbe6dfa0bf41a0d0547e8da7bec5659bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521354"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209105"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Criar um Cubo de um modelo sem usar uma Exibição da Fonte de Dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Selecione **Criar o cubo sem usar uma fonte de dados** na primeira página do Assistente para Cubos para criar um cubo sem usar uma exibição da fonte de dados. Posteriormente, o Assistente de Geração de Esquema pode ser usado para gerar o esquema relacional para a exibição da fonte de dados com base na estrutura do cubo e possivelmente outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter mais informações sobre como gerar um esquema, consulte [Assistente de Geração de Esquema &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
   
 ## <a name="selecting-the-build-method"></a>Selecionando o Método de Criação  
- No Assistente para Cubos, na página **Selecionar Método de Criação** , clique em **Criar o cubo sem usar uma fonte de dados**. Para criar o cubo usando um modelo de cubo existente, marque a caixa de seleção **Usar modelo de cubo** . para obter informações sobre a ferramenta de configuração e recursos adicionais. Se você não selecionar para usar um modelo, deverá definir as opções manualmente.  
+ No Assistente para Cubos, na página **Selecionar Método de Criação** , clique em **Criar o cubo sem usar uma fonte de dados**. Para criar o cubo usando um modelo de cubo existente, marque a caixa de seleção **Usar modelo de cubo** . . Se você não selecionar para usar um modelo, deverá definir as opções manualmente.  
   
  Os modelos de cubo contêm medidas predefinidas, grupos de medidas, dimensões, hierarquias e atributos. Se você selecionar um modelo, o assistente usará as definições de objeto nos modelos como a base para definir opções nas páginas seguintes. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é instalado com vários modelos para cubos padrão. O administrador do servidor também pode adicionar modelos de cubo ou de dimensão que são criados especificamente para obter os dados de sua organização.  
   
 ## <a name="selecting-dimensions"></a>Selecionando dimensões  
  Use a página **Selecionar Dimensões** do assistente para adicionar dimensões ao cubo. Esta página será exibida somente se já houver dimensões compartilhadas sem uma fonte de dados no projeto ou banco de dados. Ela não lista dimensões que têm uma fonte de dados.  
   
- Para adicionar dimensões existentes, selecione uma ou mais dimensões na lista **Dimensões compartilhadas** e clique no botão de seta para a direita (**>**) para movê-las para a lista **Dimensões do cubo** . Clique no botão da seta dupla (**>>**) para mover todas as dimensões na lista.  
+ Para adicionar dimensões existentes, selecione uma ou mais dimensões na lista **Dimensões compartilhadas** e clique no botão de seta para a direita ( **>** ) para movê-las para a lista **Dimensões do cubo** . Clique no botão da seta dupla ( **>>** ) para mover todas as dimensões na lista.  
   
 ## <a name="defining-new-measures"></a>Definindo novas medidas  
  Use a página **Definir Novas Medidas** do assistente para especificar as medidas e os grupos de medidas no novo cubo. Os grupos de medidas que você especifica aqui corresponderão a tabelas de fato no esquema gerado. As medidas que você especifica aqui corresponderão a colunas não chave numéricas nas tabelas.  
@@ -58,7 +58,7 @@ ms.locfileid: "52521354"
 |coluna|Descrição|  
 |------------|-----------------|  
 |**Tipo**|Exibe o tipo de dimensão para uma dimensão de modelo. Clique nesta célula para alterar o tipo de dimensão para uma dimensão. Essa coluna define a propriedade **Type** para o objeto de dimensão.|  
-|**Nome**|Exibe o nome da dimensão. Clique nessa célula para digitar um nome diferente. Esse valor define a propriedade **Name** para o objeto de dimensão.|  
+|**Name**|Exibe o nome da dimensão. Clique nessa célula para digitar um nome diferente. Esse valor define a propriedade **Name** para o objeto de dimensão.|  
 |**SCD**|Especifica que esta é uma SCD (dimensão de alteração lenta). Marcar esta caixa de seleção adiciona os atributos Data de Início da SCD, ID Original da Data de Término e Status à dimensão. **SCD** será selecionado por padrão se você usar um modelo para criar o cubo e o assistente detectar estes quatro tipos de atributo em uma dimensão de modelo.|  
 |**Atributos**|Exibe os atributos que devem ser criados para a dimensão. Cada nome de atributo na lista é precedido pelo nome de dimensão. Esta lista é somente leitura. Você pode editar os atributos usando o Designer de Dimensão depois de concluir o assistente.|  
   

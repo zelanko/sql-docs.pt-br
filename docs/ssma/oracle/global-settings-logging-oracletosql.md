@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: abe73fd789a74d358c0573b6c0778a15612532a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 374630b5e5eab1602bb33e176e6f205ee1375af9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192395"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264426"
 ---
 # <a name="global-settings-logging-oracletosql"></a>Configurações globais (registro em log) (OracleToSQL)
 Use o **configurações globais** caixa de diálogo para especificar as configurações de registro em log para o SSMA. Normalmente, você alteraria essas configurações somente ao trabalhar com o suporte ao produto.  
@@ -34,10 +34,10 @@ As seguintes opções estão disponíveis sob **nível de mensagens**:
 |**Migrator de dados**|Migra dados do banco de dados de origem em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Formatador**|Subcomponente do conversor que gera scripts para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquema.|  
 |**Interface gráfica do usuário**|Mensagens que aparecem quando você usa a ferramenta SSMA.|  
-|**Linker**|Resolve identificadores SQL e fornece informações para outros componentes.|  
-|**Outro**|Todas as mensagens que não estão em nenhuma outra categoria.|  
-|**Parser**|Analisa o esquema de origem.|  
-|**Synchronizer**|Objetos de banco de dados da fonte de cargas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Vinculador**|Resolve identificadores SQL e fornece informações para outros componentes.|  
+|**Outros**|Todas as mensagens que não estão em nenhuma outra categoria.|  
+|**Analisador**|Analisa o esquema de origem.|  
+|**Sincronizador**|Objetos de banco de dados da fonte de cargas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**TreeConverter**|Converte objetos nos metadados do código-fonte em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadados.|  
 |**Testador**|Mensagens que aparecem quando você usa o testador SSMA.|  
   

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ee768eb4e50e4501af204c885916cd14409df2c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785188"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210750"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Alternar entre modos de atualização para uma assinatura transacional atualizável
   Este tópico descreve como alternar entre modos de atualização para uma assinatura de transação atualizável no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Especifique o modo para assinaturas atualizáveis usando o Assistente para Nova Assinatura. Para obter informações sobre como configurar o modo ao usar esse assistente, consulte [Exibir e modificar propriedades de assinatura pull](../view-and-modify-pull-subscription-properties.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "52785188"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   É possível realizar failover da atualização imediata para a atualização em fila a qualquer momento. Entretanto, após fazê-lo, não será possível retornar para atualização imediata até que o Assinante ou o Publicador esteja conectado e o Queue Reader Agent tenha aplicado todas as mensagens pendentes na fila para o Publicador.  
   
@@ -49,25 +49,25 @@ ms.locfileid: "52785188"
   
 3.  Clique com o botão direito na assinatura para a qual se quer definir o modo de atualização e, então, clique em **Configurar Método de Atualização**.  
   
-4.  No **definir o método de atualização - \<assinante >: \<SubscriptionDatabase >** caixa de diálogo, selecione **atualização imediata** ou **atualização na fila**.  
+4.  Na caixa de diálogo **Configurar Método de Atualização – \<Assinante>: \<SubscriptionDatabase>** , selecione **Atualização imediata** ou **Atualização na fila**.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>Para definir o modo de atualização para uma assinatura pull  
   
-1.  No **propriedades da assinatura – \<Publisher >: \<PublicationDatabase >** caixa de diálogo, selecione um valor de **replicar as atualizações imediatamente** ou **enfileirar alterações** para o **o método de atualização do assinante** opção.  
+1.  A caixa de diálogo **Propriedades da Assinatura – \<Editor>: \<PublicationDatabase>** , selecione o valor **Replicar as atualizações imediatamente** ou **Enfileirar alterações** para a opção **Método de atualização do assinante**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- Para obter mais informações sobre como acessar o **propriedades da assinatura – \<Publisher >: \<PublicationDatabase >** caixa de diálogo, consulte [exibir e modificar propriedades de assinatura Pull](../view-and-modify-pull-subscription-properties.md).  
+ Para saber mais sobre como acessar a caixa de diálogo **Propriedades da Assinatura – \<Editor>: \<PublicationDatabase >** , confira [Exibir e modificar as propriedades da assinatura Pull](../view-and-modify-pull-subscription-properties.md).  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-switch-between-update-modes"></a>Para alternar entre modos de atualização  
   
 1.  Verifique se a assinatura oferece suporte para failover executando [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql) para uma assinatura pull ou [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql) para uma assinatura push. Se o valor do **modo de atualização** no conjunto de resultados for **3** ou **4**, há suporte para failover.  
   
-2.  No Assinante, no banco de dados da assinatura, execute [sp_setreplfailovermode](/sql/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql). Especifique **@publisher**, **@publisher_db**, **@publication**, e um dos seguintes valores para **@failover_mode**:  
+2.  No Assinante, no banco de dados da assinatura, execute [sp_setreplfailovermode](/sql/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql). Especifique **@publisher** , **@publisher_db** , **@publication** , e um dos seguintes valores para **@failover_mode** :  
   
     -   **em fila** - failover para atualização em fila quando a conectividade for perdida temporariamente.  
   

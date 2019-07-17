@@ -16,11 +16,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545258"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211982"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Criar uma especificação de auditoria de banco de dados e de servidor
   Este tópico descreve como criar uma especificação de auditoria de servidor e de banco de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "52545258"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
  As especificações de auditoria de banco de dados são objetos não protegidos que residem em um determinado banco de dados. Quando uma especificação de auditoria de banco de dados é criada, ela fica em um estado desabilitado.  
   
  Quando você estiver criando ou modificando uma especificação de auditoria de banco de dados em um banco de dados de usuário, não inclua ações de auditoria em objetos do escopo de servidor, como as exibições do sistema. Se forem incluídos objetos de escopo do servidor, a auditoria será criada. No entanto, os objetos de escopo do servidor não serão incluídos e nenhum erro será retornado. Para auditar objetos de escopo do servidor, use uma especificação de auditoria de banco de dados no banco de dados mestre.  
@@ -64,7 +64,7 @@ ms.locfileid: "52545258"
   
 1.  No Pesquisador de Objetos, expanda a pasta **Segurança** .  
   
-2.  Clique com o botão direito do mouse na pasta **Auditorias** e selecione **Nova Auditoria...**. Para obter mais informações, consulte [Criar uma auditoria de servidor e uma especificação de auditoria de servidor](create-a-server-audit-and-server-audit-specification.md).  
+2.  Clique com o botão direito do mouse na pasta **Auditorias** e selecione **Nova Auditoria...** . Para obter mais informações, consulte [Criar uma auditoria de servidor e uma especificação de auditoria de servidor](create-a-server-audit-and-server-audit-specification.md).  
   
 3.  Quando terminar de selecionar as opções, clique em **OK**.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "52545258"
   
 2.  Expanda a pasta **Segurança** .  
   
-3.  Clique com o botão direito do mouse na pasta **Especificações de Auditoria do Banco de Dados** e selecione **Nova Especificação de Auditoria do Banco de Dados...**.  
+3.  Clique com o botão direito do mouse na pasta **Especificações de Auditoria do Banco de Dados** e selecione **Nova Especificação de Auditoria do Banco de Dados...** .  
   
      As opções a seguir estão disponíveis na caixa de diálogo **Criar Especificação de Auditoria de Banco de Dados** .  
   
-     **Nome**  
+     **Name**  
      O nome da especificação de auditoria de banco de dados. Esse nome é gerado automaticamente quando você cria uma nova especificação de auditoria de servidor, mas é editável.  
   
      **Auditoria**  
@@ -104,7 +104,7 @@ ms.locfileid: "52545258"
   
 4.  Quando terminar de selecionar as opções, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>Para criar uma auditoria de servidor  
   

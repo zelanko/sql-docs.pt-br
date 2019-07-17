@@ -1,5 +1,5 @@
 ---
-title: Não foi possível carregar o 'Microsoft.AnalysisServices.SharePoint.Integration' | Microsoft Docs
+title: Não foi possível carregar 'Microsoft.AnalysisServices.SharePoint.Integration' | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4da716ab3797f4f6ea54d94c53f753685972df25
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022503"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208296"
 ---
 # <a name="could-not-load-microsoftanalysisservicessharepointintegration"></a>Não foi possível carregar Microsoft.AnalysisServices.SharePoint.Integration
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

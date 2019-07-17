@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a7cb3d9895c7524bf0517270b50ac7830774dd9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026833"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68177799"
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>Explorar dados em uma exibição da fonte de dados (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,17 +34,17 @@ ms.locfileid: "34026833"
   
 3.  Clique com o botão direito do mouse na tabela, exibição ou consulta nomeada que contém os dados que você deseja exibir e, em seguida, clique em **Explorar Dados**.  
   
-     Os dados de origem subjacente da tabela, exibição, ou consulta nomeada na exibição da fonte de dados são consultas e os resultados aparecem no **explorar \<nome do objeto > tabela** guia.  
+     Os dados fonte subjacente da tabela, exibição ou consulta nomeada na exibição da fonte de dados são consultas e os resultados aparecem na **explorar \<nome do objeto > tabela** guia.  
   
 4.  Sobre o **explorar \<nome do objeto > tabela** barra de ferramentas, clique no **opções de amostragem** ícone.  
   
      A caixa de diálogo **Opções de Exploração de Dados** é aberta. Nela você pode especificar o método de amostragem (menos ou mais registros que o tamanho de amostragem padrão de 5000 linhas) ou a contagem de exemplo.  
   
-5.  Clique em **OK** ou em **Cancelar**, conforme apropriado.  
+5.  Clique em **OK** ou em **Cancelar** , conforme apropriado.  
   
-6.  Para obter uma nova amostra dos dados, clique em **criar nova amostra dos dados** no **explorar \<nome do objeto > tabela** barra de ferramentas.  
+6.  Para criar nova amostra dos dados, clique em **criar nova amostra dos dados** sobre o **explorar \<nome do objeto > tabela** barra de ferramentas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições da fonte de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [Exibições de fontes de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

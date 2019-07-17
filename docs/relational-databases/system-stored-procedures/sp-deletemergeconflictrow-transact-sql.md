@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5bef3e4902562edde0adb2a4f495c51e6a82b091
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a315bc147cf86df40cf6fa216b8c45eeb1fcccca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111966"
 ---
 # <a name="spdeletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,15 +41,15 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @conflict_table = ] 'conflict_table'` É o nome da tabela de conflitos. *conflict_table* está **sysname**, com um padrão de **%**. Se o *conflict_table* é especificado como NULL ou **%**, o conflito é considerado como um conflito de exclusão e a correspondência de linhas *rowguid* e *origin_datasource* e *source_object* é excluído do [MSmerge_conflicts_info &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) tabela.  
+`[ @conflict_table = ] 'conflict_table'` É o nome da tabela de conflitos. *conflict_table* está **sysname**, com um padrão de **%** . Se o *conflict_table* é especificado como NULL ou **%** , o conflito é considerado como um conflito de exclusão e a correspondência de linhas *rowguid* e *origin_datasource* e *source_object* é excluído do [MSmerge_conflicts_info &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) tabela.  
   
-`[ @source_object = ] 'source_object'` É o nome da tabela de origem. *source_object* está **nvarchar(386)**, com um padrão NULL.  
+`[ @source_object = ] 'source_object'` É o nome da tabela de origem. *source_object* está **nvarchar(386)** , com um padrão NULL.  
   
 `[ @rowguid = ] 'rowguid'` É o identificador de linha para o conflito de exclusão. *ROWGUID* está **uniqueidentifier**, sem padrão.  
   
-`[ @origin_datasource = ] 'origin_datasource'` É a origem do conflito. *origin_datasource* está **varchar(255)**, sem padrão.  
+`[ @origin_datasource = ] 'origin_datasource'` É a origem do conflito. *origin_datasource* está **varchar(255)** , sem padrão.  
   
-`[ @drop_table_if_empty = ] 'drop_table_if_empty'` É um sinalizador que indica que o *conflict_table* é removida se estiver vazia. *drop_table_if_empty* está **varchar(10)**, com um padrão de FALSE.  
+`[ @drop_table_if_empty = ] 'drop_table_if_empty'` É um sinalizador que indica que o *conflict_table* é removida se estiver vazia. *drop_table_if_empty* está **varchar(10)** , com um padrão de FALSE.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

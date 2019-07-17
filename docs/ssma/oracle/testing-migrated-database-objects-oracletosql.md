@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: f03ef5e1-66e6-4c84-ada2-252dd5ada82f
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 771e9a4553679ae2afa0dd58d83b1d15ccf0fd62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 858c564c965fe7105c86a3087923887097e4ddac
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62626053"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266477"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>Testar objetos de banco de dados migrados (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de migração para o Testador de Oracle (SSMA testador) testa automaticamente a conversão do objeto de banco de dados e a migração de dados feitas por SSMA. Depois que todas as etapas de migração do SSMA estiverem concluídas, use o SSMA testador para verificar objetos convertidos funcionam da mesma maneira e que todos os dados foi transferido corretamente.  
@@ -45,7 +45,7 @@ O SSMA testador executa objetos selecionados para um teste no Oracle e suas cont
 > [!NOTE]  
 > Atenção! Nunca use testador SSMA em sistemas de produção. Durante a execução do testador o esquema de origem e os dados são modificados. Enquanto isso, a restauração completa do estado original pode ser impossível para alguns tipos de código testado.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 Se você quiser usar o testador SSMA, instale o pacote de extensão do SSMA Oracle com o **instalar o banco de dados do testador** opção ativada.  
   
 Para habilitar a comparação dos dados da tabela resultante, definir a **coluna gerar ROWID** opção **Sim** antes de inicia a conversão de esquema. O SSMA adicionará uma coluna ROWID a todas as tabelas durante a execução do **converter esquema** comando.  
@@ -58,7 +58,7 @@ Além disso, verifique o seguinte:
   
 Observe que a versão atual do testador do SSMA não suporta a execução paralela por usuários diferentes no mesmo servidor de origem ou destino.  
   
-## <a name="getting-started"></a>Introdução  
+## <a name="getting-started"></a>Guia de Introdução  
 [Criando casos de teste &#40;OracleToSQL&#41;](../../ssma/oracle/creating-test-cases-oracletosql.md)  
   
 ## <a name="see-also"></a>Consulte também  

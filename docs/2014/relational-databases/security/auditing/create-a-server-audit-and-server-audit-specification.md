@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ec1c7205597224e5fca27942ca25ad4e197ec0d0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135756"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198409"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Criar uma auditoria de servidor e uma especificação de auditoria de servidor
   Este tópico descreve como criar uma especificação de auditoria de servidor no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. *Auditar* uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] envolve eventos de rastreamento e de log que ocorrem no sistema. O objeto *SQL Server Audit* coleta uma instância única de ações no nível do servidor e/ou do banco de dados e grupos de ações a serem monitoradas. A auditoria está no nível de instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Você pode ter várias auditorias por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O objeto *Especificação da Auditoria do Servidor* pertence a uma auditoria. É possível criar uma especificação de auditoria de servidor por auditoria, já que ambas são criadas no escopo da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](sql-server-audit-database-engine.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "54135756"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Deve existir uma auditoria antes da criação de uma especificação de auditoria de servidor para ela. Quando uma especificação de auditoria de servidor é criada, ela fica em um estado desabilitado.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54135756"
   
 1.  No Pesquisador de Objetos, expanda a pasta **Segurança** .  
   
-2.  Clique com o botão direito do mouse na pasta **Auditorias** e selecione **Nova Auditoria...**.  
+2.  Clique com o botão direito do mouse na pasta **Auditorias** e selecione **Nova Auditoria...** .  
   
      As opções a seguir estão disponíveis na página **Geral** da caixa de diálogo **Criar Auditoria** :  
   
@@ -88,14 +88,14 @@ ms.locfileid: "54135756"
     > [!IMPORTANT]  
     >  Quando a auditoria estiver em um estado com falha, a Conexão de administrador dedicada poderá continuar executando eventos auditados.  
   
-     Lista**Destino da auditoria**   
+     Lista**Destino da auditoria**  
      Especifica o destino para dados de auditoria. As opções disponíveis são um arquivo binário, o log de aplicativos do Windows ou o log de segurança do Windows. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não poderá gravar no log de segurança do Windows se não forem definidas configurações adicionais no Windows. Para obter mais informações, veja [Gravar eventos de auditoria do SQL Server no log de segurança](write-sql-server-audit-events-to-the-security-log.md).  
   
      **Caminho do arquivo**  
      Especifica a localização da pasta em que os dados de auditoria serão gravados quando o **Destino da auditoria** for um arquivo.  
   
      **Reticências (...)**  
-     Abre o **localizar pasta –**_nome_do_servidor_ caixa de diálogo para especificar um caminho de arquivo ou criar uma pasta em que o arquivo de auditoria é gravado.  
+     Abre o **localizar pasta –** _nome_do_servidor_ caixa de diálogo para especificar um caminho de arquivo ou criar uma pasta em que o arquivo de auditoria é gravado.  
   
      **Audite o limite máximo de arquivo:**  
      **Máximo de arquivos de substituição**  
@@ -104,16 +104,16 @@ ms.locfileid: "54135756"
      **Máximo de arquivos**  
      Especifica que, quando o número máximo de arquivos de auditoria for atingido, haverá falha com um erro em qualquer ação que provoque a geração de eventos de auditoria adicionais.  
   
-     Caixa de seleção**Ilimitado**   
+     Caixa de seleção**Ilimitado**  
      Quando a caixa de seleção **Ilimitado** sob **Máximo de arquivos de substituição** for marcada, não haverá nenhum limite imposto para o número de arquivos de auditoria a serem criados. A caixa de seleção **Ilimitado** é marcada por padrão e se aplica às seleções **Máximo de arquivos de substituição** e **Máximo de arquivos** .  
   
-     Caixa**Número de arquivos**   
+     Caixa**Número de arquivos**  
      Especifica o número de arquivos de auditoria a serem criados, até 2.147.483.647. Essa opção estará disponível somente se **Ilimitado** estiver desmarcado.  
   
      **Tamanho máximo de arquivo**  
      Especifica o tamanho máximo para um arquivo de auditoria em megabytes (MB), gigabytes (GB) ou terabytes (TB). Você pode especificar entre 1024 MB e 2.147.483.647 TB. Marcar a caixa de seleção **Ilimitado** não estabelece um limite para o tamanho do arquivo. A especificação de um valor abaixo de 1024 MB falhará, gerando um erro. A caixa de seleção **Ilimitada** fica marcada por padrão.  
   
-     Caixa de seleção**Reservar espaço em disco**   
+     Caixa de seleção**Reservar espaço em disco**  
      Especifica o espaço pré-alocado no disco que é igual ao tamanho de arquivo máximo especificado. Essa configuração pode ser usada se a caixa de seleção **Ilimitada** sob **Tamanho máximo do arquivo** não for marcada. Essa caixa de seleção não é marcada por padrão.  
   
 3.  Opcionalmente, na página **Filtro** , insira um predicado ou a cláusula `WHERE` , para a auditoria de servidor para especificar opções adicionais não disponíveis da página **Geral** . Inclua o predicado em parênteses; por exemplo: `(object_name = 'EmployeesTable')`.  
@@ -124,11 +124,11 @@ ms.locfileid: "54135756"
   
 1.  No Pesquisador de Objetos, clique no sinal de mais para expandir a pasta **Segurança** .  
   
-2.  Clique com o botão direito do mouse na pasta **Especificações de Auditoria de Servidor** e selecione **Nova Especificação de Auditoria de Servidor...**.  
+2.  Clique com o botão direito do mouse na pasta **Especificações de Auditoria de Servidor** e selecione **Nova Especificação de Auditoria de Servidor...** .  
   
      As opções a seguir estão disponíveis na caixa de diálogo **Criar Especificação de Auditoria de Servidor** .  
   
-     **Nome**  
+     **Name**  
      O nome da especificação de auditoria de servidor. Esse nome é gerado automaticamente quando você cria uma nova especificação de auditoria de servidor, mas é editável.  
   
      **Auditoria**  
@@ -154,7 +154,7 @@ ms.locfileid: "54135756"
   
 3.  Quando terminar, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>Para criar uma auditoria de servidor  
   

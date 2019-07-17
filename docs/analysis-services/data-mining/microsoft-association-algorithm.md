@@ -1,5 +1,5 @@
 ---
-title: Algoritmo de associação da Microsoft | Microsoft Docs
+title: Algoritmo associação da Microsoft | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c5a6f5046c93355b3b1359c59d2e935c9aa6288a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017183"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209918"
 ---
 # <a name="microsoft-association-algorithm"></a>Algoritmo Associação da Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "34017183"
 ## <a name="viewing-an-association-model"></a>Exibindo um modelo de associação  
  Para explorar o modelo, você pode usar o **Visualizador de Associação da Microsoft**. Quando você exibir um modelo de associação, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] apresentará as correlações de ângulos diferentes para que você possa entender melhor as relações e as regras encontradas nos dados. O painel **Conjunto de Itens** do visualizador fornece uma análise detalhada das combinações, ou conjuntos de itens, mais comuns. O painel **Regras** apresenta uma lista de regras que foram generalizadas por meio dos dados, adiciona cálculos de probabilidade e classifica as regras por importância relativa. Com o Visualizador de Rede de Dependências, você pode explorar como se conectam itens diferentes. Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Cluster da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md).  
   
- Para obter mais detalhes sobre qualquer dos conjuntos de itens ou das regras, você pode navegar pelo modelo no [Visualizador de Árvore de Conteúdo Genérica da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). O conteúdo armazenado para o modelo inclui o suporte para cada conjunto de itens, uma pontuação para cada regra e outras estatísticas. Para obter mais informações, consulte [Mining Model Content for Association Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md).  
+ Para obter mais detalhes sobre qualquer dos conjuntos de itens ou das regras, você pode navegar pelo modelo no [Visualizador de Árvore de Conteúdo Genérica da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). O conteúdo armazenado para o modelo inclui o suporte para cada conjunto de itens, uma pontuação para cada regra e outras estatísticas. Para obter mais informações, consulte [Conteúdo do modelo de mineração para modelos de associação &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Criando previsões  
  Depois de processado o modelo, você pode usar as regras e os conjuntos de itens para fazer previsões. Em um modelo de associação, uma previsão indica qual item deveria aparecer mediante a presença do item especificado, além de poder incluir informações como probabilidade, suporte ou importância. Para obter exemplos de como criar consultas em um modelo de associação, consulte [Exemplos de consulta de um modelo associação](../../analysis-services/data-mining/association-model-query-examples.md).  
@@ -77,10 +77,10 @@ ms.locfileid: "34017183"
 -   Suporta a criação de dimensões de mineração de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados e &#40; Analysis Services – Data Mining e &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Procurar um modelo usando o Visualizador de regras de associação da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Conteúdo do modelo de mineração para modelos de associação &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Procurar um modelo usando o Visualizador de Regras de Associação da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Conteúdo do modelo de mineração para modelos de associação &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Referência técnica do algoritmo de associação da Microsoft](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
- [Exemplos de consulta de modelo de associação](../../analysis-services/data-mining/association-model-query-examples.md)  
+ [Exemplos de consulta de um modelo de associação](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   

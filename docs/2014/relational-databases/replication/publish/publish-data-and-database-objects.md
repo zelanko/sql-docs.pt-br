@@ -42,11 +42,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8cdc2ee8c14e62106775438f932957c69c7c0daa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777128"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199394"
 ---
 # <a name="publish-data-and-database-objects"></a>Publicar dados e objetos de banco de dados
   Ao criar uma publicação, você escolhe as tabelas e outros objetos de banco de dados que deseja publicar. Você pode publicar os objetos de banco de dados a seguir usando replicação.  
@@ -168,7 +168,7 @@ ms.locfileid: "52777128"
 -   Se você estiver publicando um objeto de banco de dados que depende de outros objetos de banco de dados, terá de publicar todos os objetos referenciados. Por exemplo, se você publicar uma exibição que depende de uma tabela, terá de publicar a tabela também.  
   
     > [!NOTE]  
-    >  Se você adicionar um artigo a uma publicação de mesclagem e o artigo existente depender do artigo novo, será preciso especificar uma ordem de processamento para ambos os artigos usando o parâmetro **@processing_order** de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Considere o seguinte cenário: uma tabela é publicada, mas não é publicada a função que é referenciada pela tabela. Se a função não for publicada, a tabela não poderá ser criada no Assinante. Ao adicionar a função à publicação: especifique o valor **1** para o parâmetro **@processing_order** de **sp_addmergearticle**e especifique o valor **2** para o parâmetro **@processing_order** de **sp_changemergearticle**, especificando o nome da tabela para o parâmetro **@article**. Essa ordem de processamento garante a criação da função no Assinante antes da tabela que depende disso. Você pode usar números diferentes para cada artigo desde que o número para a função seja menor do que o número para a tabela.  
+    >  Se você adicionar um artigo a uma publicação de mesclagem e o artigo existente depender do artigo novo, será preciso especificar uma ordem de processamento para ambos os artigos usando o parâmetro **@processing_order** de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Considere o seguinte cenário: uma tabela é publicada, mas não é publicada a função que é referenciada pela tabela. Se a função não for publicada, a tabela não poderá ser criada no Assinante. Ao adicionar a função à publicação: especifique o valor **1** para o parâmetro **@processing_order** de **sp_addmergearticle**e especifique o valor **2** para o parâmetro **@processing_order** de **sp_changemergearticle**, especificando o nome da tabela para o parâmetro **@article** . Essa ordem de processamento garante a criação da função no Assinante antes da tabela que depende disso. Você pode usar números diferentes para cada artigo desde que o número para a função seja menor do que o número para a tabela.  
   
 -   Os nomes de publicação não podem incluir nenhum dos seguintes caracteres: % * [ ] | : " ? \ / \< >.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "52777128"
   
 -   Se um artigo for publicado em uma publicação transacional e em uma publicação de mesclagem, certifique-se de que a propriedade *@published_in_tran_pub* esteja definida como TRUE para o artigo de mesclagem. Para obter mais informações sobre como definir propriedades, consulte [Exibir e modificar as propriedades da publicação](view-and-modify-publication-properties.md) e [Exibir e modificar as propriedades do artigo](view-and-modify-article-properties.md).  
   
-     Você também deve definir a propriedade *@published_in_tran_pub* se um artigo for parte de uma assinatura transacional e for incluído em uma publicação de mesclagem. Se esse for o caso, esteja ciente de que, por padrão, a replicação transacional espera que as tabelas no Assinante sejam tratadas como somente leitura; se a replicação de mesclagem alterar dados em uma tabela em uma assinatura transacional, pode haver não convergência de dados. Para evitar essa possibilidade, recomendamos que qualquer tabela desse tipo seja especificada como somente download na publicação de mesclagem. Isso impede que um Assinante de mesclagem carregue alterações de dados na tabela. Para obter mais informações, consulte [Optimize Merge Replication Performance with Download-Only Articles](../merge/optimize-merge-replication-performance-with-download-only-articles.md) (Otimizar o desempenho da replicação de mesclagem com artigos somente para download).  
+     Você também deve definir a propriedade *@published_in_tran_pub* se um artigo for parte de uma assinatura transacional e for incluído em uma publicação de mesclagem. Se esse for o caso, esteja ciente de que, por padrão, a replicação transacional espera que as tabelas no Assinante sejam tratadas como somente leitura; se a replicação de mesclagem alterar dados em uma tabela em uma assinatura transacional, pode haver não convergência de dados. Para evitar essa possibilidade, recomendamos que qualquer tabela desse tipo seja especificada como somente download na publicação de mesclagem. Isso impede que um Assinante de mesclagem carregue alterações de dados na tabela. Para obter mais informações, consulte [Otimizar o desempenho da replicação de mesclagem com artigos somente para download](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
 -   Um artigo não pode ser publicado tanto em uma publicação de mesclagem quanto em uma publicação transacional com assinaturas de atualização enfileirada.  
   

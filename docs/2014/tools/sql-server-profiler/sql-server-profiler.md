@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780718"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211049"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
   O [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é uma interface avançada para criar e gerenciar rastreamentos, e analisar e reproduzir resultados de rastreamento. Os eventos são salvos em um arquivo de rastreamento que posteriormente pode ser analisado ou utilizado para reproduzir uma série específica de etapas na tentativa de diagnosticar um problema.  
@@ -67,7 +67,7 @@ ms.locfileid: "52780718"
 > [!NOTE]  
 >  Ao trabalhar com o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], é útil compreender o Rastreamento do SQL. Para obter mais informações, consulte [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).  
   
- **Evento**  
+ **Event**  
  Um evento é uma ação gerada dentro de uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. São exemplos:  
   
 -   Conexões, falhas e desconexões de logon.  
@@ -119,7 +119,7 @@ ms.locfileid: "52780718"
   
  O SQL Server dispõe de duas formas de rastrear uma instância sua: através do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou de procedimentos armazenados do sistema.  
   
- **Filter**  
+ **Filtrar**  
  Ao criar um rastreamento ou modelo, você pode definir critérios para filtrar os dados coletados pelo evento. Para impedir que os rastreamentos se tornem grandes demais, você pode filtrá-los de modo que apenas um subconjunto dos dados do evento sejam coletados. Por exemplo, você pode limitar os nomes de usuário do Windows no rastreamento a usuários específicos, reduzindo, assim, os dados de saída.  
   
  Se não houver um filtro definido, serão retornados todos os eventos das classes de evento selecionadas na saída do rastreamento.  

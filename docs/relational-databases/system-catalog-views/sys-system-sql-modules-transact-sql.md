@@ -19,28 +19,27 @@ helpviewer_keywords:
 ms.assetid: ad3548bc-4780-4821-b962-b421d52daed9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 349abe5ccc5fb36ee6c3568e97163e6eb665f633
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe249cd389e71fa5565e2877fba46b47cf0a4f38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108780"
 ---
 # <a name="syssystemsqlmodules-transact-sql"></a>sys.system_sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna uma linha por objeto de sistema que contém um módulo definido em linguagem SQL. Objetos de sistema do tipo FN, IF, P, PC, TF, V têm um módulo SQL associado. Para identificar o objeto recipiente, você pode unir esta exibição à [sys. system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md).  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Número de identificação de objeto do objeto recipiente, exclusivo no banco de dados.|  
-|**Definição**|**nvarchar(max)**|Texto SQL que define esse módulo.|  
+|**definition**|**nvarchar(max)**|Texto SQL que define esse módulo.|  
 |**uses_ansi_nulls**|**bit**|1 = O módulo foi criado com a opção de banco de dados SET ANSI_NULLS definida como ON.<br /><br /> Sempre retorna 1.|  
 |**uses_quoted_identifier**|**bit**|1 = O módulo foi criado com SET QUOTED_IDENTIFIER como ON.<br /><br /> Sempre retorna 1.|  
 |**is_schema_bound**|**bit**|0 = O módulo não foi criado com a opção SCHEMABINDING.<br /><br /> Sempre retorna 0.|  
-|**uses_database_collation**|**bit**|0 = O módulo não depende do agrupamento padrão do banco de dados.<br /><br /> Sempre retorna 0.|  
+|**uses_database_collation**|**bit**|0 = O módulo não depende da ordenação padrão do banco de dados.<br /><br /> Sempre retorna 0.|  
 |**is_recompiled**|**bit**|0 = O procedimento não foi criado com o uso da opção WITH RECOMPILE.<br /><br /> Sempre retorna 0.|  
 |**null_on_null_input**|**bit**|0 = O módulo não foi criado para produzir uma saída NULL em nenhuma entrada NULL.<br /><br /> Sempre retorna 0.|  
 |**execute_as_principal_id**|**int**|Sempre retorna NULL.|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c2306f89ba724d6ba799f6bda6ec03f7f6377a97
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210855"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208335"
 ---
 # <a name="configure-or-repair-power-pivot-for-sharepoint-2013"></a>Configurar ou reparar o Power Pivot para SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "53210855"
   
      **Frase Secreta:** digite uma frase secreta. Se o farm do SharePoint for novo, a frase secreta será usada sempre que novos servidores ou aplicativos forem adicionados ao farm do SharePoint. Se o farm existir, insira a frase secreta que permite adicionar um aplicativo de servidor ao farm.  
   
-5.  **Porta:** opcionalmente, digite um número da porta para se conectar ao aplicativo Web Administração Central ou use o número fornecido, gerado aleatoriamente. A ferramenta de configuração verifica se o número está disponível antes de oferecê-lo como opção.  
+5.  **Porta:** Opcionalmente, digite um número de porta para se conectar ao aplicativo web Administração Central ou use o número gerado aleatoriamente fornecido. A ferramenta de configuração verifica se o número está disponível antes de oferecê-lo como opção.  
   
 6.  Na página principal, digite o nome de um Servidor do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em execução no modo do SharePoint.  
   
@@ -107,22 +107,22 @@ ms.locfileid: "53210855"
   
  A tabela a seguir descreve os valores que são usados para configurar o servidor.  
   
-|Página|Valor de entrada|Origem|Descrição|  
+|Página|Valor de entrada|Source|Descrição|  
 |----------|-----------------|------------|-----------------|  
 |**Configurar ou Reparar o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint**|Conta padrão|Usuário atual|A conta padrão é uma conta de usuário de domínio do Windows usada para provisionar serviços compartilhados no farm. Ela é usada para provisionar o seguinte:|  
 ||||-<br />                    [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Padrão|  
-||||- Serviço de Repositório Seguro|  
-||||- Serviços do Excel|  
-||||- A identidade do pool de aplicativos Web|  
-||||- O administrador de conjunto de sites|  
-||||- A conta autônoma de atualização de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
+||||\- Serviço de Repositório Seguro|  
+||||\- Serviços do Excel|  
+||||\- A identidade do pool de aplicativos Web|  
+||||\- O administrador de conjunto de sites|  
+||||\- A conta autônoma de atualização de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 ||||Por padrão, a conta de domínio do usuário atual é usada.<br /><br /> Observação: É recomendável substituir o valor padrão, a menos que você esteja configurando um servidor para fins de avaliação e de não produção.<br /><br /> É possível alterar as identidades do serviço após a configuração ou o reparo usando a Administração Central.<br /><br /> Opcionalmente, na ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , especifique contas dedicadas para o seguinte:|  
-||||- Aplicativo Web, usando a página **Criar Aplicativo Web Padrão** (presumindo que a ferramenta esteja criando um aplicativo Web para o farm).|  
+||||\- Aplicativo Web, usando a página **Criar Aplicativo Web Padrão** (presumindo que a ferramenta esteja criando um aplicativo Web para o farm).|  
 ||||-<br />                    [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , usando a página **Criar Conta Autônoma para Atualização de Dados** nesta ferramenta.|  
 ||Servidor de Banco de Dados|Instância nomeada local do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , se estiver disponível.|Se uma instância de mecanismo de banco de dados for instalada como uma instância nomeada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , a ferramenta populará o campo de servidor de banco de dados com este nome de instância. Se você não instalou o mecanismo de banco de dados, este campo estará vazio.<br /><br /> O**Servidor de Banco de Dados**  é um parâmetro obrigatório. Pode ser qualquer versão ou edição de SQL Server que tenha suporte para farms do SharePoint.|  
 ||Frase Secreta|Entradas de usuário|Se estiver criando um novo farm, a frase secreta que você inserir será usada como a frase secreta para o farm. Se você estiver adicionando o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint a um farm existente, digite a frase secreta de farm existente.|  
 ||Porta da Administração Central do SharePoint|Padrão, se necessário|Se o farm não estiver configurado, a ferramenta fornecerá opções para criar o farm, inclusive criar um ponto de extremidade de HTTP para a Administração Central. Ele escolhe um número de porta gerado aleatoriamente que não esteja em uso.|  
-||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Serviços do Excel ([ServerName]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Entradas de usuário|O servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é necessário para que os Serviços do Excel habilitem os recursos principais do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . O nome do servidor digitado nesta página também é adicionado à lista na página **Configurar Servidores do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.|  
+||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Serviços do Excel ([ServerName]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Entradas de usuário|O servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é necessário para que os Serviços do Excel habilitem os recursos principais do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . O nome do servidor digitado nesta página também é adicionado à lista na página **Configurar Servidores do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .|  
 |**Configurar Novo Farm**|Servidor de Banco de Dados<br /><br /> Conta do Farm<br /><br /> Frase Secreta<br /><br /> Porta da Administração Central do SharePoint|Padrão, se necessário|O padrão das configurações é o valor inserido na página principal.|  
 |**Criar um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Nome do Aplicativo de Serviço|Padrão|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] padrão é **Default [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application**. Você pode substituir um valor diferente na ferramenta.|  
 ||Servidor de Banco de Dados|Padrão|O servidor de banco de dados que hospeda o banco de dados do aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . O nome do servidor padrão é o mesmo servidor de banco de dados usado para o farm. Você pode substituir um valor diferente do nome de servidor padrão.|  
@@ -146,7 +146,7 @@ ms.locfileid: "53210855"
 |**Criar Proxy de Aplicativo de Serviço de Repositório Seguro**|Nome do Aplicativo de Serviço|Padrão, se necessário|Digite o nome do aplicativo de serviço de Repositório Seguro que você digitou na página anterior.|  
 ||Proxy de aplicativo de serviço|Padrão, se necessário|Digite o nome do proxy de aplicativo do serviço de Repositório Seguro. O nome aparecerá no grupo de conexões padrão que associa aplicativos a aplicativos Web de conteúdo do SharePoint.|  
 |**Atualizar Chave Mestra do Serviço de Repositório Seguro**|Proxy de aplicativo de serviço|Padrão, se necessário|Digite o nome do proxy do aplicativo de serviço de Repositório Seguro que você digitou na página anterior.|  
-||Frase Secreta|Entradas de usuário|A chave mestra é usada para criptografia de dados. Por padrão, a frase secreta usada para gerar a chave é a mesma que é usada para provisionar novos servidores no farm. Você pode substituir a frase secreta padrão por uma frase secreta exclusiva.|  
+||Passphrase|Entradas de usuário|A chave mestra é usada para criptografia de dados. Por padrão, a frase secreta usada para gerar a chave é a mesma que é usada para provisionar novos servidores no farm. Você pode substituir a frase secreta padrão por uma frase secreta exclusiva.|  
 |**Criar Conta Autônoma para DataRefresh**|ID do Aplicativo de Destino|Padrão, se necessário|Crie um aplicativo de destino para armazenar as credenciais para a atualização de dados autônoma do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> A ID do aplicativo pode ser um texto descritivo.|  
 ||Nome Amigável para Aplicativo de Destino|Padrão, se necessário||  
 ||Nome de Usuário e Senha da Conta Autônoma|Padrão, se necessário|Digite as credenciais de uma conta de usuário do Windows que é usada pelo aplicativo de destino para executar a atualização de dados autônoma. Para obter mais informações, consulte [atualização de dados de configuração dos serviços Excel, usando a conta de serviço autônoma no SharePoint Server 2013](http://technet.microsoft.com/library/hh525344\(office.15\).aspx) (http://technet.microsoft.com/library/hh525344(office.15).aspx).|  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782878"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211783"
 ---
 # <a name="tables"></a>Tabelas
   Tabelas são objetos de banco de dados que contêm todos os dados em um banco de dados. Nas tabelas, os dados são organizados de maneira lógica em um formato de linha-e-coluna semelhante ao de uma planilha. Cada linha representa um registro exclusivo e cada coluna representa um campo no registro. Por exemplo, uma tabela que contém dados de funcionários de uma empresa pode conter uma linha para cada funcionário e colunas representando as informações sobre o funcionário, como número, nome, endereço, cargo e número do telefone residencial do funcionário.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8be4f1f78b444933cc1ad7f4ec4fb71b28bfae1b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072563"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207470"
 ---
 # <a name="tabular-model-designer"></a>Designer de modelos de tabela
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -83,7 +83,7 @@ O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../inc
   
 -   Model.bim  
   
--   Table  
+-   Tabela  
   
 -   coluna  
   
@@ -108,7 +108,7 @@ O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../inc
   
  Por padrão, a **Lista de Erros** não aparece a menos que um erro seja retornado. Porém, você pode exibir a janela **Lista de Erros** a qualquer momento. Para exibir a janela **Lista de Erros** , clique no menu **Exibir** e clique na **Lista de Erros**.  
   
-### <a name="output"></a>Saída  
+### <a name="output"></a>Output  
  As informações de build e implantação são exibidas na janela **Saída** (além da caixa de diálogo de andamento modal). Para exibir a janela **Saída** , clique no menu **Exibir** e clique em Saída.  
   
 ### <a name="menu-items"></a>Itens de menu  
@@ -116,7 +116,7 @@ O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../inc
   
  Além desses itens de menu, mais configurações foram adicionadas às opções do Analysis Services nos itens do menu Ferramentas.  
   
-### <a name="toolbar"></a>Barra de Ferramentas  
+### <a name="toolbar"></a>Barra de ferramentas  
  A barra de ferramentas de Analysis Services fornece acesso rápido e fácil aos comandos de criação de modelo mais frequentemente usados.  
   
 ##  <a name="bkmk_vsint"></a> Integração do Visual Studio  

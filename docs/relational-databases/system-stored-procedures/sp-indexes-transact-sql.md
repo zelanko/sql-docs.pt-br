@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b1a14d1cf8c9eac0ace93e3aac6e16219fd60eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62961908"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139916"
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @table_catalog= ] '*table_db*'  
  É o nome do banco de dados no qual *table_name* reside. *table_db* está **sysname**, com um padrão NULL. Se for NULL, *table_db* assume como padrão **mestre**.  
   
- [ @index_name= ] '*index_name*'  
+ [ @index_name=] '*index_name*'  
  É o nome do índice para o qual as informações estão sendo solicitadas. *índice* está **sysname**, com um padrão NULL.  
   
  [ @is_unique= ] '*is_unique*'  

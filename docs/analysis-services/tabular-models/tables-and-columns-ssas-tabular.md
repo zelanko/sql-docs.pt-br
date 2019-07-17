@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7a9844032ad24de1c81144ca742bfb185aecc36
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072153"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207489"
 ---
 # <a name="tables-and-columns"></a>Tabelas e colunas 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53072153"
  **Metadados de tabela**  
  Relações, medidas, funções, perspectivas e dados colados são todos os metadados que definem objetos dentro do contexto de uma tabela.  
   
- **Data**  
+ **Dados**  
  Os dados são populados em colunas de tabela quando você primeiro importa as tabelas usando o Assistente de Importação de Tabela ou criando novos dados em colunas calculadas. Quando os dados são alterados na origem, ou quando um modelo é removido de memória, você deve executar uma operação de processo para repopular os dados nas tabelas.  
   
 ##  <a name="bkmk_working"></a> Trabalhando com tabelas e colunas  

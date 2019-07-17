@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c59cd8e-a713-4095-9065-20d5bdeafe43
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0e669f02eeb76ba529c75851ce8bf6ff9a7831a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c74f1a79ef79b682bc2900d671e07bbe34c4dbf5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107270"
 ---
 # <a name="statement-attributes"></a>Atributos de instrução
 Atributos de instrução são características da instrução. Por exemplo, se usar indicadores e o que o tipo de cursor a ser usado com o resultado da instrução conjunto são atributos de instrução.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 21177dba0c17ec2ba8bd7af73585b4ede5a7d7e8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015353"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209887"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Algoritmo Microsoft Clustering
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34015353"
   
  Modelos de clustering identificam as relações em um conjunto de dados que não podem ser derivados de forma lógica através de observação casual. Por exemplo, você pode discernir imaginar facilmente que as pessoas que vão para o trabalho de bicicleta normalmente não moram longe do local onde trabalham. Porém, o algoritmo pode encontrar outras características dos usuários de bicicleta que não são tão óbvias. No diagrama a seguir, o cluster A representa dados sobre pessoas que pretendem ir de carro para o trabalho, enquanto o cluster B representa dados sobre pessoas que pretendem ir de bicicleta para o trabalho.  
   
- ![Padrão de tendências de comutador de cluster](../../analysis-services/data-mining/media/clustering-example.gif "padrão de tendências de comutador de Cluster")  
+ ![Padrão de cluster tendências de comutador](../../analysis-services/data-mining/media/clustering-example.gif "padrão de tendências de comutador de Cluster")  
   
  O algoritmo de clustering difere dos demais algoritmos de mineração de dados, como o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , porque você não precisa designar uma coluna previsível para poder criar um modelo de clustering. O algoritmo de clustering treina o modelo estritamente a partir das relações existentes nos dados e a partir dos clusters que o algoritmo identifica.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "34015353"
   
  Após definir primeiro os clusters, o algoritmo calcula como os mesmos representam satisfatoriamente agrupamentos dos pontos, e em seguida, tenta redefinir os agrupamentos para criar os clusters que melhor representem os dados. O algoritmo itera através desse processo até não poder mais melhorar os resultados pela redefinição dos clusters.  
   
- Você pode personalizar o modo como o algoritmo funciona ao selecionar uma técnica de clustering específica, limitando o número máximo de clusters ou alterando o valor de suporte necessário para criar um cluster. Para obter mais informações, consulte [Referência técnica do algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md). esse algoritmo inclui dois métodos de clusters populares: clustering K-means e o método de maximização de expectativa.  
+ Você pode personalizar o modo como o algoritmo funciona ao selecionar uma técnica de clustering específica, limitando o número máximo de clusters ou alterando o valor de suporte necessário para criar um cluster. Para obter mais informações, consulte [Referência técnica do algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md). Esse algoritmo inclui dois métodos de clusters populares: Clustering de K-means e o método de maximização de expectativa.  
   
 ## <a name="data-required-for-clustering-models"></a>Dados requeridos por agrupar modelos  
  Ao preparar dados para usar no treinamento de um modelo de clustering, é preciso entender os requisitos de um determinado algoritmo, incluindo a quantidade de dados necessária e como eles são usados.  
@@ -54,7 +54,7 @@ ms.locfileid: "34015353"
 ## <a name="viewing-a-clustering-model"></a>Exibindo um modelo de clustering  
  Para explorar o modelo, você pode usar o **Visualizador de Cluster da Microsoft**. Quando você exibir um modelo de clustering, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mostrará os clusters em um diagrama que descreve as relações entre eles, além de fornecer um perfil detalhado de cada cluster, uma lista dos atributos que distinguem cada um deles e as características de todo o conjunto de dados de treinamento. Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Cluster da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md).  
   
- Para obter mais detalhes, você pode navegar pelo modelo no [Visualizador de Árvore de Conteúdo Genérica da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). O conteúdo armazenado para o modelo inclui a distribuição de todos os valores em cada nó, a probabilidade de cada cluster e outras informações. Para obter mais informações, consulte [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
+ Para obter mais detalhes, você pode navegar pelo modelo no [Visualizador de Árvore de Conteúdo Genérica da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). O conteúdo armazenado para o modelo inclui a distribuição de todos os valores em cada nó, a probabilidade de cada cluster e outras informações. Para obter mais informações, consulte [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Criando previsões  
  Depois que o modelo tiver sido treinado, os resultados serão armazenados como um conjunto de padrões, que você poderá explorar ou usar para realizar previsões.  
@@ -72,9 +72,9 @@ ms.locfileid: "34015353"
 -   Dá suporte ao uso de modelos de mineração OLAP e à criação de dimensões de mineração de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados e &#40; Analysis Services – Data Mining e &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft Clustering Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
- [Conteúdo do modelo de mineração para Clustering modelos & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Referência técnica do algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
+ [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
  [Exemplos de consulta de modelo de clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
   

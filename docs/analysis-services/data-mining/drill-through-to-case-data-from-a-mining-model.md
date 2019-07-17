@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7b5b2cbfd141642cb5d36d0ec67958ec7ae14ae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015123"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210054"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Detalhar dados do caso a partir do modelo de mineração
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,16 +29,16 @@ ms.locfileid: "34015123"
   
 |Nome do visualizador|Painel ou nome da guia|Selecionar nó|  
 |-----------------|----------------------|-----------------|  
-|**Visualizador de árvores da Microsoft**|Guia**Árvore de Decisão** |Clique em um nó de árvore.<br /><br /> **Observação** : Evita usar o detalhamento no nó **All** uma vez que isso pode levar muito tempo para retornar resultados.|  
+|**Visualizador de árvores da Microsoft**|Guia**Árvore de Decisão**|Clique em um nó de árvore.<br /><br /> **Observação** : Evita usar o detalhamento no nó **All** uma vez que isso pode levar muito tempo para retornar resultados.|  
 |**Visualizador de cluster da Microsoft**|**Diagrama de Cluster**|Clique em um nó de cluster.|  
 |**Visualizador de cluster da Microsoft**|**Perfis de Cluster**|Clique em qualquer parte da coluna de cluster.|  
-|**Visualizador de Associação da Microsoft**|Guia**Regras** |Clique em uma linha que contém um conjunto de regras.|  
-|**Visualizador de Associação da Microsoft**|Guia**Conjuntos de Itens** |Clique em uma linha que contém um conjunto de itens.|  
-|**Visualizador de Cluster de Sequência da Microsoft**|Guia**Regras** |Clique em uma linha que contém um conjunto de regras.|  
-|**Visualizador de Cluster de Sequência da Microsoft**|Guia**Conjuntos de Itens** |Clique em uma linha que contém um conjunto de itens.|  
+|**Visualizador de Associação da Microsoft**|Guia**Regras**|Clique em uma linha que contém um conjunto de regras.|  
+|**Visualizador de Associação da Microsoft**|Guia**Conjuntos de Itens**|Clique em uma linha que contém um conjunto de itens.|  
+|**Visualizador de Cluster de Sequência da Microsoft**|Guia**Regras**|Clique em uma linha que contém um conjunto de regras.|  
+|**Visualizador de Cluster de Sequência da Microsoft**|Guia**Conjuntos de Itens**|Clique em uma linha que contém um conjunto de itens.|  
   
 > [!NOTE]  
->  Alguns modelos não podem usar detalhamento. A capacidade de usar detalhamento depende do algoritmo utilizado para criar o modelo. Para obter uma lista dos tipos de modelo de mineração que dão suporte ao drillthrough, consulte [Drillthrough Queries &#40;Data Mining&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+>  Alguns modelos não podem usar detalhamento. A capacidade de usar detalhamento depende do algoritmo utilizado para criar o modelo. Para obter uma lista dos tipos de modelo de mineração que dão suporte ao drillthrough, consulte [Consultas de detalhamento &#40;Mineração de dados&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 ### <a name="to-view-drillthrough-data-from-a-mining-model"></a>Para exibir dados de detalhamento de um modelo de mineração  
   
@@ -55,6 +55,6 @@ ms.locfileid: "34015123"
 6.  Para copiar os dados para a Área de Transferência, clique com o botão direito do mouse na tabela e selecione **Copiar Tudo**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Consultas de detalhamento & #40; mineração de dados & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+ [Consultas de detalhamento &#40;Mineração de dados&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533308"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195579"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover valores XML frequentemente usados com colunas computadas
   Se as consultas forem feitas principalmente em um pequeno número de valores de elementos e atributos, você poderá desejar promover essas quantidades em colunas relacionais. Isso é útil quando consultas são emitidas em uma pequena parte dos dados XML enquanto toda a instância XML é recuperada. A criação de um índice XML na coluna XML não é necessária. Em vez disso, a coluna promovida pode ser indexada. As consultas devem ser escritas para usar a coluna promovida. Isto é, o otimizador de consultas não destina consultas novamente na coluna XML para a coluna promovida.  
@@ -28,7 +28,7 @@ ms.locfileid: "58533308"
 ## <a name="computed-column-based-on-the-xml-data-type"></a>Coluna computada com base no tipo de dados xml  
  Uma coluna computada pode ser criada usando uma função definida pelo usuário que invoca `xml` métodos de tipo de dados. O tipo da coluna computada pode ser qualquer tipo SQL, inclusive XML. Isso é ilustrado no exemplo a seguir.  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Exemplo: Coluna computada com base no método de tipo de dados xml  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Exemplo: Coluna computada com base no método do tipo de dados xml  
  Crie a função definida pelo usuário para um número ISBN de livro:  
   
 ```  
@@ -78,7 +78,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   Crie gatilhos na coluna XML para manter as tabelas de propriedades. Dentro dos gatilhos, proceda de uma das seguintes maneiras:  
   
-    -   Use `xml` tipo de dados métodos, como **Nodes ()** e **Value ()**, para inserir e excluir linhas das tabelas de propriedades.  
+    -   Use `xml` tipo de dados métodos, como **Nodes ()** e **Value ()** , para inserir e excluir linhas das tabelas de propriedades.  
   
     -   Crie funções com valor de tabela de streaming no CLR (Common Language Runtime) para inserir e excluir linhas das tabelas de propriedades.  
   
@@ -91,7 +91,7 @@ WHERE  ISBN = '0-7356-1588-2'
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Exemplo: Criar uma função definida pelo usuário para gerar um conjunto de linhas de uma instância XML  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Exemplo: Criar uma função definida pelo usuário para gerar um conjunto de linhas com base em uma instância XML  
  A função com valor de tabela a seguir, udf_XML2Table, aceita um valor de chave primária e uma instância XML. Ela recupera o nome de todos os autores dos elementos de <`book`> e retorna um conjunto de linhas de chave primária, primeiros pares de nomes.  
   
 ```  
@@ -107,7 +107,7 @@ begin
 end  
 ```  
   
-### <a name="example-create-triggers-to-populate-a-property-table"></a>Exemplo: Crie gatilhos para popular uma tabela de propriedades  
+### <a name="example-create-triggers-to-populate-a-property-table"></a>Exemplo: Criar gatilhos para popular uma tabela de propriedades  
  O gatilho de inserção insere linhas na tabela de propriedades:  
   
 ```  
@@ -154,7 +154,7 @@ begin
 end  
 ```  
   
-### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Exemplo: Localize instâncias XML cujos autores têm o mesmo nome  
+### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Exemplo: Localizar instâncias XML cujos autores têm o mesmo nome  
  A consulta pode ser formada na coluna XML. Como alternativa, é possível pesquisar o nome "David" na tabela de propriedades e executar uma junção retroativa com a tabela base para retornar a instância XML. Por exemplo:  
   
 ```  
@@ -163,7 +163,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Exemplo: Solução usando o função com valor de tabela de Streaming de CLR  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Exemplo: Solução usando a função com valor de tabela de streaming de CLR  
  Esta solução é composta das seguintes etapas:  
   
 1.  Definir uma classe CLR, SqlReaderBase, que implementa ISqlReader e gera um streaming, saída com valor de tabela, aplicando uma expressão de caminho em uma instância XML.  

@@ -1,5 +1,5 @@
 ---
-title: XPath do lado do cliente e Formatação de XML do lado do servidor (SQLXML 4.0) | Microsoft Docs
+title: Lado do cliente e Formatação de XML do lado do servidor (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd9f76b11edf684c68658f040b4aa3e0f63727d4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d02eeb0ad64a62343fda53a1907cec2b4bb9e850
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220360"
 ---
-# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>XPath do lado do cliente e Formatação XML do lado do servidor (SQLXML 4.0)
+# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Lado do cliente e Formatação XML do lado do servidor (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Este tópico descreve as diferenças gerais entre a formatação XML no lado cliente e no lado servidor no SQLXML.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "56028827"
   
  Você pode executar este modelo em código do aplicativo e um erro será retornado, porque a formatação XML no lado do cliente não dá suporte à formatação de vários conjuntos de linha. Se você especificar as consultas em dois separe  **\<sql:query >** blocos, você obterá os resultados desejados.  
   
-## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp mapeia de forma diferente as formatações no lado do cliente e no lado do servidor  
+## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp mapeia de forma diferente no cliente vs. Formatação do lado servidor  
  Na formatação, a coluna de banco de dados de XML no lado do servidor **carimbo de hora** tipo é mapeado para o tipo i8 XDR (quando a opção XMLDATA é especificada na consulta).  
   
  Na formatação, a coluna de banco de dados de XML no lado do cliente **timestamp** digite mapeia para o as **uri** ou o **bin.base64** tipo XDR (dependendo se binary base64 opção for especificada na consulta). O **bin.base64** tipo XDR é útil se você usar os recursos diagrama de atualização e carregamento em massa, porque esse tipo é convertido para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **timestamp** tipo. Deste modo, as operações de inserção, atualização ou exclusão são bem-sucedidas.  
@@ -78,7 +77,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- Quando você executar o modelo, o seguinte XML será retornado: (Somente resultados parciais serão mostrados) Observe que os nomes do elemento são os nomes das exibições em que as consultas são executadas.  
+ Quando você executar o modelo, o seguinte XML será retornado: (Somente resultados parciais são exibidos.) Observe que os nomes de elemento são os nomes das exibições em relação ao qual a consulta é executada.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -134,7 +133,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>   
 ```  
   
- Quando você usa o modo NESTED de FOR XML no lado do cliente, os nomes da tabela são retornados como nomes do elemento no XML resultante. (Os aliases da tabela que são especificados na consulta não são usados) Por exemplo, considere este modelo:  
+ Quando você usa o modo NESTED de FOR XML no lado do cliente, os nomes da tabela são retornados como nomes do elemento no XML resultante. (Alias de tabela que são especificadas na consulta não são usadas). Por exemplo, considere este modelo:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -182,7 +181,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- Se a formatação XML é feita no servidor (**client-side-xml = "0"**), você pode usar o alias para as colunas que retornam consultas dbobject em qual coluna e tabela reais nomes são retornados (mesmo se você tiver aliases especificados). Por exemplo, o modelo a seguir executa uma consulta e a formatação XML é feita no servidor (a **client-side-xml** opção não for especificada e o **Run On Client** opção não estiver selecionada para o raiz virtual). A consulta também especifica o modo AUTO (não o modo NESTED do lado do cliente).  
+ Se a formatação XML é feita no servidor (**client-side-xml = "0"** ), você pode usar o alias para as colunas que retornam consultas dbobject em qual coluna e tabela reais nomes são retornados (mesmo se você tiver aliases especificados). Por exemplo, o modelo a seguir executa uma consulta e a formatação XML é feita no servidor (a **client-side-xml** opção não for especificada e o **Run On Client** opção não estiver selecionada para o raiz virtual). A consulta também especifica o modo AUTO (não o modo NESTED do lado do cliente).  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -206,7 +205,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
-### <a name="client-side-vs-server-side-xpath"></a>XPath do lado do cliente e do lado do servidor  
+### <a name="client-side-vs-server-side-xpath"></a>Lado do cliente e XPath do lado do servidor  
  O XPath funciona da mesma forma no lado do cliente e no lado do servidor, exceto por estas diferenças:  
   
 -   As conversões de dados que são aplicadas quando você usa consultas XPath no lado do cliente são diferentes das aplicadas quando você usa consultas XPath no lado do servidor. XPath no lado do cliente usa o modo CAST em vez de CONVERT mode 126.  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786138"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210713"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Práticas recomendadas para filtros de linha baseados em tempo
   Usuários de aplicativos requerem frequentemente um subconjunto de dados baseados no tempo de uma tabela. Por exemplo, um vendedor pode requisitar dados de pedidos da semana passada ou um organizador de eventos pode requisitar dados para os eventos da semana seguinte. Em muitos casos, os aplicativos usam consultas que contêm a função `GETDATE()` para realizar isso. Considere a seguinte instrução de filtro de linha:  

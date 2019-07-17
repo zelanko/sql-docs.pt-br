@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752599"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189135"
 ---
 # <a name="make-a-master-server"></a>Criar um servidor mestre
   Este tópico descreve como criar um servidor mestre do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -115,7 +115,7 @@ ms.locfileid: "52752599"
      **Criar um novo logon, se necessário, e atribuir-lhe direitos ao MSX**  
      Cria um novo logon no servidor de destino se o logon especificado ainda não existir.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-make-a-master-server"></a>Para criar um servidor mestre  
   

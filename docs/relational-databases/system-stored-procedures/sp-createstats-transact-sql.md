@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a32df85b1a2b7362a22c27d05f68c07cf32a3200
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0bb7d109323f4eb4a33181ab45b4b17d15faf54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724449"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108611"
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,13 +48,13 @@ sp_createstats
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @indexonly = ] 'indexonly'` Só cria estatísticas em colunas que estão em um índice existente e não a primeira coluna em qualquer definição de índice. **indexonly** está **char(9)**. O padrão é NO.  
+`[ @indexonly = ] 'indexonly'` Só cria estatísticas em colunas que estão em um índice existente e não a primeira coluna em qualquer definição de índice. **indexonly** está **char(9)** . O padrão é NO.  
   
-`[ @fullscan = ] 'fullscan'` Usa o [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrução com o **FULLSCAN** opção. **FULLSCAN** está **char(9)**.  O padrão é NO.  
+`[ @fullscan = ] 'fullscan'` Usa o [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrução com o **FULLSCAN** opção. **FULLSCAN** está **char(9)** .  O padrão é NO.  
   
-`[ @norecompute = ] 'norecompute'` Usa o [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrução com o **NORECOMPUTE** opção. **NORECOMPUTE** está **char(12)**.  O padrão é NO.  
+`[ @norecompute = ] 'norecompute'` Usa o [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrução com o **NORECOMPUTE** opção. **NORECOMPUTE** está **char(12)** .  O padrão é NO.  
   
-`[ @incremental = ] 'incremental'` Usa o [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrução com o **INCREMENTAL = ON** opção. **Incremental** está **char(12)**.  O padrão é NO.  
+`[ @incremental = ] 'incremental'` Usa o [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrução com o **INCREMENTAL = ON** opção. **Incremental** está **char(12)** .  O padrão é NO.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

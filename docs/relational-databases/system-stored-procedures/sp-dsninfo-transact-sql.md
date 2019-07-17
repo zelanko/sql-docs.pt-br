@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e6eacb453fc2f66f4b87790770fa50916916a27c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb67524304807eba6765387590fd53a52b92f19a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124713"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ sp_dsninfo [ @dsn =] 'dsn'
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Tipo de informação**|**nvarchar(64)**|Tipos de informações como DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER.|  
-|**Value**|**nvarchar(512)**|Valor do tipo de informação associado.|  
+|**Valor**|**nvarchar(512)**|Valor do tipo de informação associado.|  
   
 ## <a name="remarks"></a>Comentários  
  **sp_dsninfo** é usado em todos os tipos de replicação.  

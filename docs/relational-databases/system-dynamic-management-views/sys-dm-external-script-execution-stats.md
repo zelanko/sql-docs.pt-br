@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
 author: HeidiSteen
 ms.author: heidist
-manager: cgronlund
-ms.openlocfilehash: 8bdbaf1fdb0fb0c27127611ace0fac00d861838f
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+manager: cgronlun
+ms.openlocfilehash: 06b8e29e9aaf02c8e82f541a9113d5943b829b3b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743131"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262163"
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ Retorna uma linha para cada tipo de solicitação de script externo. As solicita
 > [!NOTE]  
 > Este modo de exibição de gerenciamento dinâmico (DMV) está disponível somente se você tiver instalado e habilitado o recurso que dá suporte à execução de script externo. Para obter mais informações, consulte [R Services no SQL Server 2016](../../advanced-analytics/r/sql-server-r-services.md) e [serviços Machine Learning (R, Python) no SQL Server 2017](../../advanced-analytics/what-is-sql-server-machine-learning.md).  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |language|**nvarchar**|Nome da linguagem de script externo registrada. Cada script externo deve especificar a linguagem na solicitação de script para iniciar o inicializador associado. |  
 |counter_name|**nvarchar**|Nome de uma função de script externo registrada. Não permite valor nulo.|  

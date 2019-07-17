@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be861ae0e27bccb682bd4beb89db2c0dd791b04b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef8bd6cfbcc10fa0625b4925da618ab275331a32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124237"
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -56,7 +55,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 >  Para obter informações sobre como usar um, dois ou três parâmetros, consulte "Comentários", posteriormente neste tópico.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

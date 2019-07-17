@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb674ea7bd9540f7ae74bf9ad8737bdb83c237f7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538598"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195619"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML, uma palavra-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] , fornece um conjunto de linhas em documentos XML na memória que é semelhante a uma tabela ou exibição. OPENXML permite acesso a dados XML ainda que ele seja um conjunto de linhas relacional. Ele faz isso fornecendo uma exibição do conjunto de linhas da representação interna de um documento XML. Os registros no conjunto de linhas podem ser armazenados em tabelas do banco de dados.  
@@ -164,11 +164,11 @@ EXEC sp_xml_removedocument @docHandle;
   
  É possível especificar o mapeamento de qualquer um dos modos e também especificar os dois:  
   
--   Usando o parâmetro *flags*   
+-   Usando o parâmetro *flags*  
   
      O mapeamento especificado pelo parâmetro *flags* pressupõe correspondência de nomes na qual os nós XML são mapeados para as colunas do conjunto de linhas correspondentes com o mesmo nome.  
   
--   Usando o parâmetro *ColPattern*   
+-   Usando o parâmetro *ColPattern*  
   
      *ColPattern*, uma expressão XPath , é especificada como parte de *SchemaDeclaration* na cláusula WITH. O mapeamento especificado em *ColPattern* substitui o mapeamento especificado pelo parâmetro *flags* .  
   

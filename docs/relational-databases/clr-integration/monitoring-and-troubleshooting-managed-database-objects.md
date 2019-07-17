@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 79e95ac14691a4e712710303542c5743f57aacf6
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 8762f13eab6cf56e85cb4802db0d3b8fa962a306
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118530"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Monitorando e diagnosticando objetos de banco de dados gerenciado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "58305974"
 ## <a name="profiler-trace-events"></a>Eventos de rastreamento do Profiler  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece o Rastreamento do SQL e notificações de eventos para monitorar os eventos que ocorrem no Mecanismo de Banco de Dados. Registrando os eventos especificados, o Rastreamento do SQL ajuda a solucionar problemas de desempenho, auditar a atividade de banco de dados, coletar dados de amostra em um ambiente de teste, depurar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e procedimentos armazenados e reunir dados para ferramentas de análise de desempenho. Para obter mais informações, consulte [rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md) e [eventos estendidos](../../relational-databases/extended-events/extended-events.md).  
   
-|Evento|Descrição|  
+|evento|Descrição|  
 |-----------|-----------------|  
 |[Classe de evento Assembly Load](/sql/database-engine/assembly-load-event-class)|Usado para monitorar solicitações de carregamento de assembly (com êxito e com falha).|  
 |[Classe de evento SQL: BatchStarting](../../relational-databases/event-classes/sql-batchstarting-event-class.md), [classe de evento SQL: BatchCompleted](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|Fornece informações sobre lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] iniciados ou concluídos.|  

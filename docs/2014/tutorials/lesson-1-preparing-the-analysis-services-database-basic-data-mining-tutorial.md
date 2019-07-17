@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5cfb2590ea31003446bcb7027049e70924fd3f16
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036847"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185762"
 ---
 # <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>Lição 1: Preparando o banco de dados do Analysis Services (Tutorial de mineração de dados básico)
   Você é um novo funcionário da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] que recebeu a tarefa de criar um aplicativo de business intelligence em [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] espera utilizar sua [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] experiência em mineração de dados para descobrir informações interessantes e acionáveis sobre pessoas que compraram Bicicletas. Eles desejam que você preveja quais clientes potenciais têm mais probabilidade de comprar uma bicicleta no futuro.  

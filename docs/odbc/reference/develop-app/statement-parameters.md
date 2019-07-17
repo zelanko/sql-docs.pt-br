@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b366ddd7a665112e6b40b814b13037a517d623a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f3aad1537475e288cff06725b5dbd0fe2383924
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107240"
 ---
 # <a name="statement-parameters"></a>Parâmetros de instrução
 Um *parâmetro* é uma variável em uma instrução SQL. Por exemplo, suponha que uma tabela de peças possui colunas nomeadas PartID, descrição e preço. Para adicionar uma parte sem parâmetros exigiria construindo uma instrução SQL, como:  

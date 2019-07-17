@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783878"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188825"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é um serviço do Microsoft Wnodows que executa tarefas admnoistrativas agendadas, que são chamadas de *trabalhos* no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -148,7 +148,7 @@ ms.locfileid: "52783878"
   
  Cada proxy corresponde a uma credencial de segurança. Cada proxy pode ser associado a um conjunto de subsistemas e um conjunto de logons. O proxy só pode ser usado para etapas de trabalho que utilizem um subsistema associado ao proxy. Para criar uma etapa de trabalho que utilize um proxy específico, o proprietário do trabalho deve usar um logon associado a esse proxy ou ser membro de uma função com acesso irrestrito a proxies. Os membros de `sysadmin` função de servidor fixa têm acesso irrestrito a proxies. Membros de **SQLAgentUserRole**, **SQLAgentReaderRole**ou **SQLAgentOperatorRole** só podem usar proxies para os quais detém concessão de acesso específica. Cada usuário membro de alguma dessas funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve ter acesso concedido a proxies específicos para poder criar etapas de trabalho que utilizem esses proxies.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  Use as seguintes etapas para configurar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para automatizar a administração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 1.  Estabeleça quais tarefas administrativas ou eventos de servidor ocorrem regularmente e se essas tarefas ou eventos podem ser administrados via programação. Uma tarefa é uma boa candidata para automação sempre que envolve uma sequência previsível de etapas e ocorre em um horário específico ou em resposta a um evento específico.  

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 9727df6d-b0f5-464b-a349-d32b626cedef
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 90c6c1a75c975d8c4c79c87516ac628cfab15690
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: b1b77b5ac7562ffcf39e065fb99df9da5b1f6ca6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62991462"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266569"
 ---
 # <a name="project-settings-gui-oracletosql"></a>Configurações de projeto (GUI) (OracleToSQL)
 As configurações de projeto GUI permitem que você configure como os dados aparecem na **dados** guia e mostrar o relatório de avaliação após a conversão ou não.  
@@ -40,5 +40,5 @@ Configura o número de linhas de dados exibidos na **dados** guia da tabela de d
 **Mostrar relatório após a conversão**  
 Para exibir um relatório depois de converter esquemas, selecione True. O relatório de conversão resultante contém o mesmo layout e informações que o relatório de avaliação.  
   
-**Default**: Falso  
+**Default**: False  
   

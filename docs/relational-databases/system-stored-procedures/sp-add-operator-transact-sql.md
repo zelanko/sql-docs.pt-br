@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c1a6a9e45b1640a82cd15074373f162a97d9a0a6
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 49d7ac030eb8e391f083311fc0248b0f0752e72a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121014"
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,20 +52,20 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'` O nome de um operador (destinatário da notificação). Esse nome deve ser exclusivo e não pode conter a porcentagem (**%**) caracteres. *nome da* está **sysname**, sem padrão.  
+`[ @name = ] 'name'` O nome de um operador (destinatário da notificação). Esse nome deve ser exclusivo e não pode conter a porcentagem ( **%** ) caracteres. *nome da* está **sysname**, sem padrão.  
   
 `[ @enabled = ] enabled` Indica o status atual do operador. *habilitada* está **tinyint**, com um padrão de **1** (habilitado). Se **0**, o operador não está habilitado e não recebe notificações.  
   
-`[ @email_address = ] 'email_address'` O endereço de email do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *email_address* está **nvarchar(100)**, com um padrão NULL.  
+`[ @email_address = ] 'email_address'` O endereço de email do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *email_address* está **nvarchar(100)** , com um padrão NULL.  
   
  Você pode especificar um endereço de email físico ou um alias para *email_address*. Por exemplo:  
   
- '**jdoe**'ou'**jdoe@xyz.com**'  
+ '**jdoe**'ou' **jdoe@xyz.com** '  
   
 > [!NOTE]  
 >  Você deve usar o endereço de email para Database Mail.  
   
-`[ @pager_address = ] 'pager_address'` O endereço de pager do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *pager_address* está **narchar(100)**, com um padrão NULL.  
+`[ @pager_address = ] 'pager_address'` O endereço de pager do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *pager_address* está **narchar(100)** , com um padrão NULL.  
   
 `[ @weekday_pager_start_time = ] weekday_pager_start_time` O tempo após o qual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent envia notificação por pager ao operador especificado em dias do semana, de segunda-feira a sexta-feira. *weekday_pager_start_time*está **int**, com um padrão de **090000**, que indica as 9h00 em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
@@ -92,7 +91,7 @@ sp_add_operator [ @name = ] 'name'
 |**32**|Sexta-feira|  
 |**64**|Sábado|  
   
-`[ @netsend_address = ] 'netsend_address'` O endereço de rede do operador para quem a mensagem de rede será enviada. *netsend_address*está **nvarchar(100)**, com um padrão NULL.  
+`[ @netsend_address = ] 'netsend_address'` O endereço de rede do operador para quem a mensagem de rede será enviada. *netsend_address*está **nvarchar(100)** , com um padrão NULL.  
   
 `[ @category_name = ] 'category'` O nome da categoria para esse operador. *categoria* está **sysname**, com um padrão NULL.  
   
@@ -100,7 +99,7 @@ sp_add_operator [ @name = ] 'name'
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="remarks"></a>Comentários  
  **sp_add_operator** deve ser executado a partir de **msdb** banco de dados.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6314331be3a844b86ff8790c8c38abb4c0d3758e
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072523"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207509"
 ---
 # <a name="relationships"></a>Relações 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "53072523"
   
  A tabela a seguir mostra as relações entre as três tabelas:  
   
-|Relação|Tipo|coluna de pesquisa|coluna|  
+|Relação|type|coluna de pesquisa|coluna|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|um-para-um|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|um-para-muitos|Customers.CustomerID|Orders.CustomerID|  

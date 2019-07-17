@@ -1,5 +1,5 @@
 ---
-title: Criar uma dimensão ao gerar uma tabela não seja de tempo na fonte de dados | Microsoft Docs
+title: Criar uma dimensão ao gerar uma tabela que não seja de tempo na fonte de dados | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f9f84131307282b00fd99c1d5770ac352e31713
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024073"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209070"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Criar uma dimensão ao gerar uma tabela que não seja de tempo na fonte de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34024073"
   
 -   Cliente  
   
--   Data  
+-   Date  
   
 -   Departamento  
   
@@ -40,7 +40,7 @@ ms.locfileid: "34024073"
   
 -   Organização  
   
--   Product  
+-   Produto  
   
 -   Promoção  
   
@@ -84,7 +84,7 @@ ms.locfileid: "34024073"
   
  Quando você marcar a caixa de seleção **Esta é uma dimensão variável** , o Assistente para Dimensões definirá os atributos indicados na seguinte tabela:  
   
-|Atributo|Tipo|  
+|attribute|type|  
 |---------------|----------|  
 |SCD OriginalID|SCDOriginalID|  
 |Data de Término da SCD|SCDEndDate|  

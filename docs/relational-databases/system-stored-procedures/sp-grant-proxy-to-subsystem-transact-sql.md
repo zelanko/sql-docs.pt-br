@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-manager: jroth
-ms.openlocfilehash: c31c10dc5c0917286e6621fedc91f08c8d385555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123817"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
@@ -72,7 +71,7 @@ sp_grant_proxy_to_subsystem
 |**Instantâneo**|Replication Snapshot Agent|  
 |**LogReader**|Replication Agente de Leitor de Log|  
 |**Distribuição**|Agente de distribuição de replicação|  
-|**Mesclagem**|Replication Merge Agent|  
+|**Mesclar**|Replication Merge Agent|  
 |**QueueReader**|Agente de Leitor de Fila de Replicação|  
 |**ANALYSISQUERY**|Consulta do Analysis Services|  
 |**ANALYSISCOMMAND**|Comando do Analysis Services|  

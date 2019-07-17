@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d9254d42d61fdf6bf087d83d0ced4ff1761dd077
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539951"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210199"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Aplicar filtros a dados de testes de modelo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "52539951"
   
 3.  Na guia **Seleção de Entrada** , em **Selecionar conjunto de dados a ser usado para Gráfico de Precisão**, selecione a opção **Especificar um conjunto de dados diferente**.  
   
-4.  Clique no botão Procurar **(...)**  para abrir uma caixa de diálogo e escolha o conjunto de dados externo.  
+4.  Clique no botão Procurar **(...)** para abrir uma caixa de diálogo e escolha o conjunto de dados externo.  
   
 5.  Escolha a tabela de caso e adicione uma tabela aninhada, caso necessário. Mapeie colunas no modelo para colunas no conjunto de dados externo, caso necessário. Feche a caixa de diálogo **Especificar Mapeamento de Coluna** para salvar a definição de tabela de origem.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "52539951"
   
 9. Clique na caixa de texto **E/Ou** e selecione um operador lógico para definir como combinar várias condições.  
   
-10. Opcionalmente, clique no botão Procurar **(...)**  à direita do **valor** caixa de texto para abrir o **filtro** caixa de diálogo caixa e defina as condições na tabela aninhada ou nas colunas da tabela de casos individual.  
+10. Opcionalmente, clique no botão Procurar **(...)** à direita do **valor** caixa de texto para abrir o **filtro** caixa de diálogo caixa e defina as condições na tabela aninhada ou nas colunas da tabela de casos individual.  
   
 11. Verifique se as condições de filtro atendidas estão corretas exibindo o texto no painel **Expressão** .  
   

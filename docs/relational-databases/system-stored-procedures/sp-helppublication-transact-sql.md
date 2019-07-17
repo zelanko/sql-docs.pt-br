@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d6f2760d225848503d93ea361a54a0069ce16c14
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 18fc2e1dfadff4e276cd40ff6d64a0aa2fc9a06e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137570"
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação a ser exibida. *publicação* é sysname, com um padrão de **%**, que retorna informações sobre todas as publicações.  
+`[ @publication = ] 'publication'` É o nome da publicação a ser exibida. *publicação* é sysname, com um padrão de **%** , que retorna informações sobre todas as publicações.  
   
 `[ @found = ] 'found' OUTPUT` É um sinalizador para indicar linhas de retorno. *encontrado*está **int** e um parâmetro OUTPUT, com um padrão de **23456**. **1** indica que a publicação foi localizada. **0** indica a publicação não foi encontrada.  
   
@@ -54,13 +53,13 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |pubid|**int**|ID da publicação.|  
-|nome|**sysname**|Nome da publicação.|  
-|restrito|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|name|**sysname**|Nome da publicação.|  
+|restricted|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**tinyint**|O status atual da publicação.<br /><br /> **0** = inativo.<br /><br /> **1** = ativo.|  
 |tarefa||Usado para compatibilidade com versões anteriores.|  
 |frequência de replicação|**tinyint**|Tipo de frequência de replicação:<br /><br /> **0** = transacional<br /><br /> **1** = instantâneo|  
 |método de sincronização|**tinyint**|Modo de sincronização:<br /><br /> **0** = programa de cópia em massa nativa (**bcp** utilitário)<br /><br /> **1** = cópia em massa de caracteres<br /><br /> **3** = simultâneo, o que significa que essa cópia em massa nativa (**bcp**utilitário) é usado, mas as tabelas não são bloqueadas durante o instantâneo<br /><br /> **4** = Concurrent_c, o que significa que a cópia em massa de caracteres é usada mas tabelas não são bloqueadas durante o instantâneo|  
-|descrição|**nvarchar(255)**|Descrição opcional para a publicação.|  
+|description|**nvarchar(255)**|Descrição opcional para a publicação.|  
 |immediate_sync|**bit**|Se os arquivos de sincronização serão criados ou recriados em cada execução do Agente de Instantâneo.|  
 |enabled_for_internet|**bit**|Se os arquivos de sincronização para a publicação são expostos na Internet pelo FTP (File Transfer Protocol) e outros serviços.|  
 |allow_push|**bit**|Se são permitidas assinaturas push na publicação.|  
@@ -81,14 +80,14 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |compress_snapshot|**bit**|Especifica que o instantâneo gravado para o *alt_snapshot_folder* local deve ser compactado no [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. **0** Especifica que o instantâneo não será compactado.|  
 |ftp_address|**sysname**|O endereço de rede do serviço FTP para o Distribuidor. Especifica onde os arquivos de instantâneo de publicação ficam localizados para serem captados pelo Agente de Distribuição ou por um Assinante.|  
 |ftp_port|**int**|O número da porta do serviço FTP do Distribuidor.|  
-|ftp_subdirectory|**nvarchar(255)**|Especifica onde os arquivos de instantâneo estarão disponíveis para serem retirados pelo Agente de Distribuição ou Agente de Mesclagem do Assinante se a publicação oferecer suporte à propagação de instantâneo usando o FTP.  |  
+|ftp_subdirectory|**nvarchar(255)**|Especifica onde os arquivos de instantâneo estarão disponíveis para serem retirados pelo Agente de Distribuição ou Agente de Mesclagem do Assinante se a publicação oferecer suporte à propagação de instantâneo usando o FTP.|  
 |ftp_login|**sysname**|O nome de usuário usado para se conectar ao serviço FTP.|  
 |allow_dts|**bit**|Especifica que a publicação permite transformações de dados. **0** Especifica que transformações DTS não são permitidas.|  
 |allow_subscription_copy|**bit**|Especifica se a capacidade para copiar os bancos de dados de assinatura que assinam esta publicação foi habilitada. **0** significa que não é permitido copiar.|  
 |centralized_conflicts|**bit**|Especifica se registros de conflito são ou não armazenados no Publicador:<br /><br /> **0** = registros de conflito são armazenados no publicador e no assinante que causou o conflito.<br /><br /> **1** = registros de conflito são armazenados no publicador.|  
 |conflict_retention|**int**|Especifica o período de retenção de conflito, em dias.|  
 |conflict_policy|**int**|Especifica a política de resolução de conflito seguida quando a opção de assinante de atualização enfileirado é usada. Pode ser um destes valores:<br /><br /> **1** = o publicador ganha o conflito.<br /><br /> **2** = o assinante ganha o conflito.<br /><br /> **3** = assinatura é reinicializada.|  
-|queue_type||Especifica o tipo de fila usado. Pode ser um destes valores:<br /><br /> **MSMQ** = usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] enfileiramento de mensagens para armazenar transações.<br /><br /> **SQL** = usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar transações.<br /><br /> Observação: O suporte ao Serviço de Enfileiramento de Mensagens foi descontinuado.|  
+|queue_type||Especifica o tipo de fila usado. Pode ser um destes valores:<br /><br /> **MSMQ** = usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] enfileiramento de mensagens para armazenar transações.<br /><br /> **SQL** = usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar transações.<br /><br /> Observação: Suporte para o enfileiramento de mensagens foi descontinuado.|  
 |backward_comp_level||O nível de compatibilidade do banco de dados, podendo ser um dos seguintes:<br /><br /> **90** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|Especifica se a publicação é publicada no [!INCLUDE[msCoName](../../includes/msconame-md.md)] do Active Directory???. Um valor de **1** indica que ele é publicado e um valor de **0** indica que não é publicado.|  
 |allow_initialize_from_backup|**bit**|Indica se os Assinantes podem iniciar uma assinatura para essa publicação de um backup em vez de um instantâneo inicial. **1** significa que as assinaturas podem ser inicializadas de um backup, e **0** significa que eles não podem. Para obter mais informações, consulte [inicializar uma assinatura transacional sem um instantâneo](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) um assinante transacional sem um instantâneo.|  

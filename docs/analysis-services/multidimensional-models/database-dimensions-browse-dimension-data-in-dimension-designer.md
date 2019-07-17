@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3692d8f7267531e00f0393149823198cc59bab7d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022863"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178919"
 ---
-# <a name="database-dimensions---browse-dimension-data-in-dimension-designer"></a>Dimensões de banco de dados - procurar dados de dimensão no Designer de dimensão
+# <a name="database-dimensions---browse-dimension-data-in-dimension-designer"></a>Dimensões de banco de dados – procurar dados de dimensão no Designer de dimensão
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Você pode procurar dados em uma dimensão usando a exibição **Navegador** do Designer de Dimensão, acessado pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -34,7 +34,7 @@ ms.locfileid: "34022863"
     >  Deve existir uma tradução definida na dimensão para o idioma selecionado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Introdução às dimensões & #40; Analysis Services - dados multidimensionais & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md)   
+ [Introdução a Dimensões &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md)   
  [Dimensões em modelos multidimensionais](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

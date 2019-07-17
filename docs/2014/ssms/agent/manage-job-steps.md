@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768448"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189154"
 ---
 # <a name="manage-job-steps"></a>Gerenciar etapas de trabalho
   Uma etapa de trabalho é uma ação que o trabalho realiza em um banco de dados ou servidor. Todo trabalho deve ter, pelo menos, uma etapa de trabalho. As etapas de trabalho podem ser:  
@@ -75,7 +75,7 @@ ms.locfileid: "52768448"
   
 -   O código de saída do processo retornado, se o comando teve êxito.  
   
--   O comando a ser executado. Para executar um comando de sistema operacional, trata-se do próprio comando. Um programa externo, isso é o nome do programa e os argumentos para o programa, por exemplo: **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e - q "sp_who"**  
+-   O comando a ser executado. Para executar um comando de sistema operacional, trata-se do próprio comando. Para um programa externo, esse é o nome do programa e os argumentos para o programa, por exemplo: **C:\Arquivos de Programas\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     >  É necessário fornecer o caminho completo para o executável, caso este não esteja localizado em um diretório especificado no caminho de sistema ou no caminho para o usuário em cujo nome a etapa de trabalho é executada.  
@@ -195,7 +195,7 @@ Set oServer = nothing
   
  Para obter mais informações sobre como criar etapas de trabalho que executam pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consulte [Trabalhos do SQL Server Agent para pacotes](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |||  
 |-|-|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 316fe295473d106d0bea8150deed6a19c07bc3bc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408544"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208064"
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Agendar atualização de dados e fontes de dados – nenhuma autenticação do Windows
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,19 +24,19 @@ ms.locfileid: "52408544"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2010 &#124; SharePoint 2013.|  
   
- **Visão geral:** Crie dois aplicativos de destino de repositório seguro. Configure o primeiro aplicativo de destino (PowerPivotDataRefresh) para usar as credenciais do Windows. Configure o segundo aplicativo de destino com as credenciais de uma fonte de dados que não ofereça suporte à autenticação do Windows; por exemplo, um banco de dados Oracle. O segundo aplicativo de destino também usa o primeiro aplicativo de destino para a conta autônoma de atualização de dados.  
+ **Visão geral:** Crie dois proteger aplicativos de destino de Store. Configure o primeiro aplicativo de destino (PowerPivotDataRefresh) para usar as credenciais do Windows. Configure o segundo aplicativo de destino com as credenciais de uma fonte de dados que não ofereça suporte à autenticação do Windows; por exemplo, um banco de dados Oracle. O segundo aplicativo de destino também usa o primeiro aplicativo de destino para a conta autônoma de atualização de dados.  
   
  ![as_powerpivot_refresh_no_windows_auth](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh:** uma ID de aplicativo de destino de repositório seguro definida com a autenticação do Windows.  
+-   **(1) PowerPivotDatarefresh:** Um Store destino ID de aplicativo seguro definida com a autenticação do windows.  
   
--   **(2) OracleAuthentication:** uma ID de aplicativo de destino de repositório seguro definida com as credenciais do Oracle.  
+-   **(2) OracleAuthentication:** Um Store destino ID de aplicativo seguro definida com as credenciais do Oracle.  
   
 -   **(3)**  As [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aplicativo de serviço é configurado para usar o aplicativo de destino "PowerPivotDataRefresh" para o **conta autônoma de atualização de dados**.  
   
 -   **(4)** A pasta de trabalho PowerPivot usa dados Oracle. As configurações de atualização da pasta de trabalho especificam a conexão da fonte de dados para usar o aplicativo de destino **(2)** para credenciais.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
   
 -   Existe um aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -60,9 +60,9 @@ ms.locfileid: "52408544"
   
     -   **Email de Contato:** ?  
   
-    -   **Tipo de aplicativo de destino:** Grupo.  
+    -   **Tipo de aplicativo de destino:** grupo.  
   
-    -   **URL de página de aplicativo de destino:** Nenhum.  
+    -   **URL de página de aplicativo de destino:** nenhuma.  
   
 5.  Clique em **Avançar**.  
   
@@ -94,9 +94,9 @@ ms.locfileid: "52408544"
   
     -   **Email de Contato:** ?  
   
-    -   **Tipo de aplicativo de destino:** Grupo.  
+    -   **Tipo de aplicativo de destino:** grupo.  
   
-    -   **URL de página de aplicativo de destino:** Nenhum.  
+    -   **URL de página de aplicativo de destino:** nenhuma.  
   
 5.  Clique em **Avançar**.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "52408544"
 ## <a name="to-verify-data-refresh-with-the-new-authentication"></a>Para verificar a atualização de dados com a nova autenticação  
  Ao clicar em **OK**, você verá a página **Histórico de Atualização** . Em alguns minutos, você verá um novo item no histórico de atualização porque, na etapa anterior, selecionou **Também atualizar o mais rápido possível**. O valor padrão do  **Trabalho de Timer da Atualização de Dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** é um minuto. Se um novo item não aparecer no histórico de atualização, aguarde alguns minutos e atualize o navegador. Se, ainda assim, o novo item não aparecer, verifique o valor atual do trabalho de timer.  
   
-## <a name="more-information"></a>Mais Informações  
+## <a name="more-information"></a>Mais informações  
   
 -   [Configurar o Serviço de Repositório Seguro no SharePoint 2013](http://technet.microsoft.com/library/ee806866.aspx).  
   

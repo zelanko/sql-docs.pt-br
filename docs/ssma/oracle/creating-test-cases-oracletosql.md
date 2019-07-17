@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: a2c1bd3fea167a784d86f7e323566f73c3a01f86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 697f7049a60aa7ae2b8c89d1fb6c5ce8e3d29312
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287713"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266130"
 ---
 # <a name="creating-test-cases-oracletosql"></a>Criar casos de teste (OracleToSQL)
 Use o Assistente de caso de teste para criar um teste. Este assistente permite criar casos de teste escolhendo testados e verificados os objetos e especificando os parâmetros de testes.  

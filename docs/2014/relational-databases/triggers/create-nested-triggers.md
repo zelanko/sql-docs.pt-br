@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ba5b5edf57bf877827fefe4f8764b8b71124a550
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078326"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196534"
 ---
 # <a name="create-nested-triggers"></a>Criar gatilhos aninhados
   Os gatilhos DML e DDL são aninhados quando um gatilho executa uma ação que inicia outro gatilho. Essas ações podem iniciar outros gatilhos, e assim por diante. Os gatilhos DML e DDL podem ser aninhados em até 32 níveis. Você pode controlar se os gatilhos AFTER podem ser aninhados pela opção de configuração do servidor **nested triggers** . Os gatilhos INSTEAD OF (apenas gatilhos DML podem ser gatilhos INSTEAD OF) podem ser aninhados, independentemente dessa configuração.  

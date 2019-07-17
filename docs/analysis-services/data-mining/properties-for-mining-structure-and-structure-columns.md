@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 72f89879ac7b50f35af283e13b25fb8c8b439b2d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017133"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182450"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Propriedades para estruturas de mineração e colunas de estrutura
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,23 +32,23 @@ ms.locfileid: "34017133"
   
 ### <a name="properties-of-the-mining-structure"></a>Propriedades da Estrutura de Mineração  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
-|**CacheMode**|Especifica se os casos usados no treinamento devem ser colocados em cachê ou descartados após a conclusão do treinamento. **Observação:**  esta propriedade deve ser definida como **KeepTrainingCases** para habilitar drillthrough e controle.|  
-|**Agrupamento**|Especifica o agrupamento padrão para a coluna. Se um agrupamento não for especificado, o agrupamento do servidor será usado.|  
+|**CacheMode**|Especifica se os casos usados no treinamento devem ser colocados em cachê ou descartados após a conclusão do treinamento. **Observação:**  Essa propriedade deve ser definida como **KeepTrainingCases** para habilitar o detalhamento e validação.|  
+|**Ordenação**|Especifica a ordenação padrão para a coluna. Se uma ordenação não for especificada, a ordenação do servidor será usada.|  
 |**Descrição**|Descreve a estrutura de mineração. Como uma prática recomendada, a descrição deve declarar o propósito e a composição dos dados na estrutura.|  
 |**ErrorConfiguration (padrão)**|Especifica opções para manipulação especial de erros, se houver.|  
-|**HoldoutMaxCases**|Especifica o número de máximo de casos de estrutura que podem ser reservados como uns conjunto de dados de testes.  Se forem especificados valores para **HoldoutMaxCases** e **HoldoutPercent**, as condições serão combinadas. **Observação:**  para definir essa propriedade, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve ser definido como **KeepTrainingCases**.|  
-|**HoldoutPercent**|Especifica a porcentagem dos casos de estrutura a ser reservada como um conjunto de dados de testes. Se forem especificados valores para **HoldoutMaxCases** e **HoldoutPercent**, as condições serão combinadas. **Observação:**  para definir essa propriedade, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve ser definido como **KeepTrainingCases**.|  
-|**HoldoutSeed**|Especifica uma semente para inicializar o particionamento do conjunto de teste de validação, a fim de garantir que o conjunto de dados de testes possa ser criado novamente. **Observação:**  para definir essa propriedade, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve ser definido como **KeepTrainingCases**.|  
+|**HoldoutMaxCases**|Especifica o número de máximo de casos de estrutura que podem ser reservados como uns conjunto de dados de testes.  Se forem especificados valores para **HoldoutMaxCases** e **HoldoutPercent**, as condições serão combinadas. **Observação:**  Para definir essa propriedade, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve ser definida como **KeepTrainingCases**.|  
+|**HoldoutPercent**|Especifica a porcentagem dos casos de estrutura a ser reservada como um conjunto de dados de testes. Se forem especificados valores para **HoldoutMaxCases** e **HoldoutPercent**, as condições serão combinadas. **Observação:**  Para definir essa propriedade, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve ser definida como **KeepTrainingCases**.|  
+|**HoldoutSeed**|Especifica uma semente para inicializar o particionamento do conjunto de teste de validação, a fim de garantir que o conjunto de dados de testes possa ser criado novamente. **Observação:**  Para definir essa propriedade, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve ser definida como **KeepTrainingCases**.|  
 |**ID**|Exibe o identificador exclusivo da estrutura de mineração.<br /><br /> O nome que você atribuiu à estrutura de mineração quando você criou que a estrutura é usado como ID. Se, mais tarde, você alterar o nome digitando um novo valor para a propriedade **Name** , o novo nome será usado apenas como um alias; a ID não é alterada.|  
 |**Idioma**|Especifica o idioma das legendas na estrutura de mineração.|  
-|**Nome**|Especifica o nome ou o alias da estrutura de mineração.<br /><br /> Se você alterar o valor da propriedade Name, o novo nome será usado apenas como uma legenda ou um alias; a identificação da estrutura de mineração não é alterada.|  
+|**Name**|Especifica o nome ou o alias da estrutura de mineração.<br /><br /> Se você alterar o valor da propriedade Name, o novo nome será usado apenas como uma legenda ou um alias; a identificação da estrutura de mineração não é alterada.|  
 |**Origem**|Exibe o nome da origem de dados e o tipo de origem de dados.|  
   
 ### <a name="properties-of-the-mining-structure-columns"></a>Propriedades das colunas da estrutura de mineração  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**ClassifiedColumns**|Identifica a coluna descrita por uma coluna classificada.|  
 |**Conteúdo**|O tipo de conteúdo da coluna.|  
@@ -60,10 +60,10 @@ ms.locfileid: "34017133"
 |**IsKey**|Indica se a coluna é uma coluna de chave.|  
 |**KeyColumns**|Contém a definição de uma coluna que é a chave para um atributo, ou faz parte da chave.|  
 |**ModelingFlags**|Define parâmetros adicionais disponibilizados pelo algoritmo.|  
-|**Nome**|O nome da coluna.|  
+|**Name**|O nome da coluna.|  
 |**NameColumn**|Identifica a coluna que fornece o nome do elemento pai.|  
-|**Origem**|Exibe a origem da coluna.<br /><br /> Para fontes de dados relacionais, o valor é sempre **(nenhum)**.<br /><br /> Para estruturas baseadas em um cubo OLAP, o valor é a instrução MDX que define a fatia usada como a origem da tabela aninhada.|  
-|**SourceMeasureGroup**|Exibe a origem do grupo de medidas.<br /><br /> Para fontes de dados relacionais, o valor é sempre **(nenhum)**.<br /><br /> Para estruturas baseadas em um cubo OLAP, o valor é a instrução MDX que define a fatia usada como a origem da tabela aninhada.|  
+|**Source**|Exibe a origem da coluna.<br /><br /> Para fontes de dados relacionais, o valor é sempre **(nenhum)** .<br /><br /> Para estruturas baseadas em um cubo OLAP, o valor é a instrução MDX que define a fatia usada como a origem da tabela aninhada.|  
+|**SourceMeasureGroup**|Exibe a origem do grupo de medidas.<br /><br /> Para fontes de dados relacionais, o valor é sempre **(nenhum)** .<br /><br /> Para estruturas baseadas em um cubo OLAP, o valor é a instrução MDX que define a fatia usada como a origem da tabela aninhada.|  
 |**Tipo**|O tipo de dados para o conteúdo na coluna.|  
   
  Para obter mais informações sobre a definição ou alteração de propriedades, consulte [Tarefas e instruções da estrutura de mineração](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md).  

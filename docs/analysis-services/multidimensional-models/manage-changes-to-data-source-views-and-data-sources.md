@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f8cb72fe4650cd76465207f3e7cd529e2a7b032
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026003"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208814"
 ---
 # <a name="manage-changes-to-data-source-views-and-data-sources"></a>Gerenciar alterações em exibições da fonte de dados e em fontes de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -25,6 +25,6 @@ ms.locfileid: "34026003"
  Por outro lado, se você alterar a cadeia de conexão da fonte de dados para um banco de dados diferente daquele usado na geração anterior, nenhum erro será gerado. O novo banco de dados será usado e nenhuma alteração será feita no banco de dados anterior.  
   
 ## <a name="see-also"></a>Consulte também  
- [Noções básicas sobre geração Incremental](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)  
+ [Noções básicas sobre a geração com incremento](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)  
   
   

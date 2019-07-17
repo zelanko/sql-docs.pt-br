@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 981b98523a53e0c828de5e9cdf8a6c35c6843805
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852901"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207655"
 ---
 # <a name="impersonation"></a>Representação 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -58,7 +58,7 @@ Quando dados são importados ou processados, credenciais de representação usad
  
 |Opção|Descrição|  
 |------------|-----------------|  
-|**Representar conta**|Especifica o modelo usa uma conta de usuário do Windows para importar ou processar dados da fonte de dados. O domínio e o nome da conta de usuário usa o seguinte formato:**\<nome de domínio >\\< nome da conta de usuário\>**.|  
+|**Representar conta**|Especifica o modelo usa uma conta de usuário do Windows para importar ou processar dados da fonte de dados. O domínio e o nome da conta de usuário usa o seguinte formato: **\<nome de domínio >\\< nome da conta de usuário\>** .|  
 |**Representar usuário atual**|Especifica que dados devem ser acessados da fonte de dados usando a identidade do usuário que enviou a solicitação. Essa configuração aplica-se somente para o modo DirectQuery.|  
 |**Representar identidade**|Especifica um nome de usuário para acessar a fonte de dados, mas não precisa especificar a senha da conta. Essa configuração se aplica somente quando a delegação de Kerberos está habilitada e especifica que a autenticação S4U deve ser usada.|  
 |**Representar conta de serviço**|Especifica o modelo usa as credenciais de segurança associadas com a instância do serviço do Analysis Services que gerencia o modelo.|  
@@ -72,7 +72,7 @@ Quando dados são importados ou processados, credenciais de representação usad
  
 |Opção|Descrição|  
 |------------|-----------------|  
-|**Senha e nome de usuário específicos do Windows**|Esta opção especifica o modelo usa uma conta de usuário do Windows para importar ou processar dados da fonte de dados. O domínio e o nome da conta de usuário usa o seguinte formato:**\<nome de domínio >\\< nome da conta de usuário\>**. Ao criar um novo modelo usando o Assistente de importação de tabela, essa configuração é a opção padrão.|  
+|**Senha e nome de usuário específicos do Windows**|Esta opção especifica o modelo usa uma conta de usuário do Windows para importar ou processar dados da fonte de dados. O domínio e o nome da conta de usuário usa o seguinte formato: **\<nome de domínio >\\< nome da conta de usuário\>** . Ao criar um novo modelo usando o Assistente de importação de tabela, essa configuração é a opção padrão.|  
 |**Conta de Serviço**|Esta opção especifica que o modelo usa as credenciais de segurança associadas à instância de serviço do Analysis Services que gerencia o modelo.|  
   
 ##  <a name="bkmk_impers_sec"></a> Segurança  

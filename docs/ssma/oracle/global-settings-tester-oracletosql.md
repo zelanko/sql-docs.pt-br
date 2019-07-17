@@ -1,5 +1,5 @@
 ---
-title: Global Settings (Tester) (OracleToSQL) | Microsoft Docs
+title: Configurações globais (testador) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 0cbe66e8298053ef1682e25e97024fa0a96e9abb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: f7e421774d3a09622835b181d5c053c994e905ee
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62864897"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264408"
 ---
 # <a name="global-settings-tester-oracletosql"></a>Configurações globais (testador) (OracleToSQL)
 Use a página do testador do **configurações globais** caixa de diálogo para especificar configurações para o testador SSMA.  

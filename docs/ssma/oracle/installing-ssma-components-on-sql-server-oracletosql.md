@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 2041901a851ca755b1079535ccbf763472ec7bc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 2ce13298c61595d5e5641cb89bffb28fd277e0d7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63055666"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259729"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Instalar os componentes do SSMA no SQL Server (OracleToSQL)
 Além de instalar o SSMA, você também deve instalar componentes no computador que está executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esses componentes incluem o pacote de extensão do SSMA, que dá suporte à migração de dados e provedores da Oracle para habilitar a conectividade de servidor para servidor.  
@@ -28,7 +28,7 @@ O pacote de extensão do SSMA adiciona os bancos de dados **sysdb** e **ssmatest
   
 Além disso, quando você migra dados a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o SSMA cria [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalhos do agente quando o mecanismo de migração de dados do lado servidor é usado para migrar os dados.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Pré-requisitos  
 Antes de instalar o SSMA para componentes do servidor Oracle em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], certifique-se de que o sistema atende aos seguintes requisitos:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância está instalada. O SSMA não oferece suporte para o SQL Server 2008 Express Edition.  

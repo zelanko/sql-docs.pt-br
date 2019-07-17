@@ -1,5 +1,5 @@
 ---
-title: O usuário da conexão de dados não puderam ser delegado | Microsoft Docs
+title: O usuário de conexão de dados não foi possível delegar | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbf9b41b58e4c492c4b278aa4cad60fa26dbcb08
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028337"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208009"
 ---
-# <a name="the-data-connection-user-could-not-be-delegated"></a>O usuário da conexão de dados não pode ser delegado
+# <a name="the-data-connection-user-could-not-be-delegated"></a>Não foi possível delegar o usuário de conexão de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Para pastas de trabalho do Excel que contenham dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , os Serviços do Excel retornarão esse erro se não conseguirem se conectar a uma instância de servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no SharePoint.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "34028337"
 |Aplica-se a|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint|  
 |Versão do Produto|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Causa|Falha de conexão ao tentar usar um provedor de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
-|Texto da mensagem|A conexão de dados usa a Autenticação do Windows e não foi possível delegar as credenciais de usuário. As conexões a seguir não foram atualizadas: dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
+|Texto da mensagem|A conexão de dados usa a Autenticação do Windows e não foi possível delegar as credenciais de usuário. As conexões a seguir não foram atualizadas: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Dados|  
   
 ## <a name="explanation"></a>Explicação  
  Há várias causas para essa mensagem de erro. O fator comum por trás de todas elas é que os Serviços do Excel não podem obter uma identidade do usuário do Windows válida de um token de declarações no SharePoint. No caso de pastas de trabalho do Excel que contenham dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , esse erro ocorre quando uma destas condições existe:  

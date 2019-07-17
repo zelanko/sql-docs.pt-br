@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210778"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Estratégias para fazer backup e restaurar o instantâneo e a replicação transacional
   Ao projetar uma estratégia de backup e restauração para instantâneo e replicação transacional, há três áreas a serem consideradas:  
@@ -91,7 +91,7 @@ ms.locfileid: "54125226"
   
  A restauração dos bancos de dados **msdb** e **mestre** , que também são tratados nesta seção, é a mesma para todos os quatro tipos.  
   
-#### <a name="publication-database-snapshot-replication"></a>Banco de dados de publicação: Replicação de instantâneo  
+#### <a name="publication-database-snapshot-replication"></a>Banco de Dados de Publicação: Replicação de instantâneo  
   
 1.  Restaure o último backup de banco de dados do banco de dados de publicação. Vá para a etapa 2.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "54125226"
   
      Para obter mais informações sobre como remover a replicação, consulte [sp_removedbreplication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql).  
   
-#### <a name="publication-database-read-only-transactional-replication"></a>Banco de dados de publicação: Replicação transacional somente leitura  
+#### <a name="publication-database-read-only-transactional-replication"></a>Banco de Dados de Publicação: Replicação transacional somente leitura  
   
 1.  Restaure o último backup de banco de dados do banco de dados de publicação. Vá para a etapa 2.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "54125226"
   
          Para obter mais informações sobre como especificar que o Assinante já tem os dados, consulte [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Banco de dados de publicação: Replicação transacional com assinaturas de atualização  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Banco de Dados de Publicação: Replicação transacional com assinaturas de atualização  
   
 1.  Restaure o último backup de banco de dados do banco de dados de publicação. Vá para a etapa 2.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "54125226"
   
          Para obter mais informações sobre como especificar que o Assinante já tem os dados, consulte [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-peer-to-peer-transactional-replication"></a>Banco de dados de publicação: Peer-to-Peer Transactional Replication  
+#### <a name="publication-database-peer-to-peer-transactional-replication"></a>Banco de Dados de Publicação: Peer-to-Peer Transactional Replication  
  Nas etapas seguintes, os bancos de dados de publicação **A**, **B**e **C** estão em uma topologia de replicação transacional ponto a ponto. Os bancos de dados **A** e **C** estão online e funcionando corretamente; o banco de dados **B** é o banco de dados a ser restaurado. O processo aqui descrito, especialmente as etapas 7,10 e 11, são muito similares ao processo requerido para adicionar um nó a uma topologia ponto a ponto. O modo mais direto para executar essas etapas é por meio do Assistente para Configurar Topologia Ponto a Ponto, mas você também pode usar procedimentos armazenados.  
   
 1.  Execute os Agentes de Distribuição para sincronizar as assinaturas nos bancos de dados **A** e **C**. Vá para a etapa 2.  
@@ -213,7 +213,7 @@ ms.locfileid: "54125226"
   
 9. Após a restauração, o intervalo de identidade atribuído para cada tabela no banco de dados **A** será usado também no banco de dados **B**. Verifique se o banco de dados restaurado **B** recebeu todas as alterações do banco de dados que apresentou falha **B** que foram propagadas para o banco de dados **A** e o banco de dados **C**; e, então, propague novamente o intervalo de identidade para cada tabela.  
   
-    1.  Execute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) no banco de dados **B** e recupere o parâmetro de saída **@request_id**. Vá para a etapa b.  
+    1.  Execute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) no banco de dados **B** e recupere o parâmetro de saída **@request_id** . Vá para a etapa b.  
   
     2.  Por padrão, o Distribution Agent está definido para executar continuamente; portanto, tokens devem ser enviados automaticamente a todos os nós. Se o Distribution Agent não estiver executando em modo contínuo, execute o agente. Para obter mais informações, consulte [Conceitos Executáveis do Agente de Replicação](../concepts/replication-agent-executables-concepts.md) ou [Iniciar e Parar um Agente de Replicação &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Vá para a etapa c.  
   
@@ -229,7 +229,7 @@ ms.locfileid: "54125226"
   
     1.  Pare todas as atividades nas tabelas publicadas na topologia ponto a ponto. Vá para a etapa b.  
   
-    2.  Execute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) no banco de dados **B** e recupere o parâmetro de saída **@request_id**. Vá para a etapa c.  
+    2.  Execute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) no banco de dados **B** e recupere o parâmetro de saída **@request_id** . Vá para a etapa c.  
   
     3.  Por padrão, o Distribution Agent está definido para executar continuamente; portanto, tokens devem ser enviados automaticamente a todos os nós. Se o Distribution Agent não estiver executando em modo contínuo, execute o agente. Vá para a etapa d.  
   
@@ -321,7 +321,7 @@ ms.locfileid: "54125226"
   
 2.  Restaure o último backup de banco de dados de assinatura. Vá para a etapa 3.  
   
-3.  Se o banco de dados de assinatura só contiver assinaturas push, vá para etapa 4. Se o banco de dados de assinatura contiver qualquer assinatura pull, faça as seguintes perguntas: As informações de assinatura são atuais? O banco de dados inclui todas as tabelas e opções que foram definidas na hora da falha? Se sim, vá para a etapa 4. Se não, reinicialize a assinatura. A recuperação está concluída.  
+3.  Se o banco de dados de assinatura só contiver assinaturas push, vá para etapa 4. Se o banco de dados de assinatura contiver qualquer assinatura pull, faça as seguintes perguntas: As informações de assinatura estão atualizadas? O banco de dados inclui todas as tabelas e opções que foram definidas na hora da falha? Se sim, vá para a etapa 4. Se não, reinicialize a assinatura. A recuperação está concluída.  
   
 4.  Para sincronizar o Assinante, execute o Distribution Agent. A recuperação está concluída.  
   
@@ -350,7 +350,7 @@ ms.locfileid: "54125226"
  [Fazer backup e restaurar bancos de dados replicados](back-up-and-restore-replicated-databases.md)   
  [Configurar Distribuição](../configure-distribution.md)   
  [Publicar dados e objetos de banco de dados](../publish/publish-data-and-database-objects.md)   
- [Subscribe to Publications](../subscribe-to-publications.md)   
+ [Assinar publicações](../subscribe-to-publications.md)   
  [Inicializar uma assinatura](../initialize-a-subscription.md)   
  [Sincronizar dados](../synchronize-data.md)  
   

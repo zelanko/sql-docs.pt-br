@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 77fbdc3bf2f579d585a802d5ed137cfe2a149c2b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133596"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196455"
 ---
 # <a name="modify-user-defined-functions"></a>Modificar funções definidas pelo usuário
   Você pode modificar funções definidas pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. A modificação das funções definidas pelo usuário, como descrito abaixo, não alterará as permissões das funções, nem afetará as funções dependentes, os procedimentos armazenados ou os gatilhos.  
@@ -72,7 +72,7 @@ ms.locfileid: "54133596"
   
 6.  No menu **Arquivo** , clique em **Salvar**_function_name_.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-modify-a-user-defined-function"></a>Para modificar uma função definida pelo usuário  
   

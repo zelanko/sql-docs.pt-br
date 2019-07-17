@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 639c090f1c133183dc4b864a3e0215e4c64b6773
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 5c8d968a3baa17749acccdde5ef54b4da7394ca5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117920"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,12 +67,12 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscriber_db*está **sysname**, com um padrão NULL.  
   
-`[ @subscription_type = ] 'subscription_type'` É o tipo de assinatura. *subscription_type*está **nvarchar(15)**, com um padrão PUSH. Se **push**, uma assinatura push será adicionada e o Merge Agent é adicionado ao distribuidor. Se **pull**, uma assinatura pull será adicionada sem adicionar um agente de mesclagem no distribuidor.  
+`[ @subscription_type = ] 'subscription_type'` É o tipo de assinatura. *subscription_type*está **nvarchar(15)** , com um padrão PUSH. Se **push**, uma assinatura push será adicionada e o Merge Agent é adicionado ao distribuidor. Se **pull**, uma assinatura pull será adicionada sem adicionar um agente de mesclagem no distribuidor.  
   
 > [!NOTE]  
 >  Assinaturas anônimas não precisam usar esse procedimento armazenado.  
   
-`[ @subscriber_type = ] 'subscriber_type'` É o tipo de assinante. *subscriber_type*está **nvarchar(15)**, e pode ser um dos valores a seguir.  
+`[ @subscriber_type = ] 'subscriber_type'` É o tipo de assinante. *subscriber_type*está **nvarchar(15)** , e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -84,7 +83,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscription_priority = ] subscription_priority` É um número que indica a prioridade da assinatura. *subscription_priority*está **real**, com um padrão NULL. Para assinaturas locais e anônimas, a prioridade é 0.0. Para assinaturas globais, a prioridade deve ser menos que 100.0.  
   
-`[ @sync_type = ] 'sync_type'` É o tipo de sincronização de assinatura. *sync_type*está **nvarchar(15)**, com um padrão de **automática**. Pode ser **automáticas** ou **none**. Se **automática**, o esquema e os dados iniciais para tabelas publicadas serão transferidos para o assinante primeiro. Se **none**, supõe-se o assinante já tem o esquema e os dados iniciais para tabelas publicadas. Tabelas de sistema e dados sempre são transferidos.  
+`[ @sync_type = ] 'sync_type'` É o tipo de sincronização de assinatura. *sync_type*está **nvarchar(15)** , com um padrão de **automática**. Pode ser **automáticas** ou **none**. Se **automática**, o esquema e os dados iniciais para tabelas publicadas serão transferidos para o assinante primeiro. Se **none**, supõe-se o assinante já tem o esquema e os dados iniciais para tabelas publicadas. Tabelas de sistema e dados sempre são transferidos.  
   
 > [!NOTE]  
 >  É recomendável que você não especificar um valor de **none**.  
@@ -150,11 +149,11 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @active_end_date = ] active_end_date` É a data em que o Merge Agent deixa de ser agendado, formatada como AAAAMMDD. *active_end_date* está **int**, com um padrão NULL.  
   
-`[ @optional_command_line = ] 'optional_command_line'` É o prompt de comando opcional para executar. *optional_command_line*está **nvarchar (4000)**, com um padrão NULL. Esse parâmetro é usado para adicionar um comando que captura a saída e a salva em um arquivo ou para especificar um arquivo de configuração ou atributo.  
+`[ @optional_command_line = ] 'optional_command_line'` É o prompt de comando opcional para executar. *optional_command_line*está **nvarchar (4000)** , com um padrão NULL. Esse parâmetro é usado para adicionar um comando que captura a saída e a salva em um arquivo ou para especificar um arquivo de configuração ou atributo.  
   
-`[ @description = ] 'description'` É uma descrição breve desta assinatura de mesclagem. *Descrição*está **nvarchar (255)**, com um padrão NULL. Esse valor é exibido pelo Replication Monitor na **nome amigável** coluna, que pode ser usada para classificar as assinaturas para uma publicação monitorada.  
+`[ @description = ] 'description'` É uma descrição breve desta assinatura de mesclagem. *Descrição*está **nvarchar (255)** , com um padrão NULL. Esse valor é exibido pelo Replication Monitor na **nome amigável** coluna, que pode ser usada para classificar as assinaturas para uma publicação monitorada.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Especifica se a assinatura pode ser sincronizada pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Gerenciador de sincronização do Windows. *enabled_for_syncmgr* está **nvarchar (5)**, com um padrão de FALSE. Se **falsos**, a assinatura não está registrada com o Gerenciador de sincronização. Se **verdadeira**, a assinatura é registrada com o Gerenciador de sincronização e será sincronizada sem iniciar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Especifica se a assinatura pode ser sincronizada pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Gerenciador de sincronização do Windows. *enabled_for_syncmgr* está **nvarchar (5)** , com um padrão de FALSE. Se **falsos**, a assinatura não está registrada com o Gerenciador de sincronização. Se **verdadeira**, a assinatura é registrada com o Gerenciador de sincronização e será sincronizada sem iniciar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 `[ @offloadagent = ] remote_agent_activation` Especifica que o agente pode ser ativado remotamente. *remote_agent_activation* está **bit** com um padrão de **0**.  
   
@@ -163,7 +162,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @offloadserver = ] 'remote_agent_server_name'` Especifica o nome de rede do servidor a ser usado para ativação remota de agente. *remote_agent_server_name*está **sysname**, com um padrão NULL.  
   
-`[ @use_interactive_resolver = ] 'use_interactive_resolver'` Permite que os conflitos sejam resolvidos interativamente para todos os artigos que permitem resolução interativa. *use_interactive_resolver* está **nvarchar (5)**, com um padrão de FALSE.  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver'` Permite que os conflitos sejam resolvidos interativamente para todos os artigos que permitem resolução interativa. *use_interactive_resolver* está **nvarchar (5)** , com um padrão de FALSE.  
   
 `[ @merge_job_name = ] 'merge_job_name'` O *@merge_job_name* parâmetro é preterido e não pode ser definido. *merge_job_name* está **sysname**, com um padrão NULL.  
   
@@ -178,7 +177,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>Comentários  
  **sp_addmergesubscription** é usado em replicação de mesclagem.  
   
- Quando **sp_addmergesubscription** é executada por um membro das **sysadmin** função fixa de servidor para criar uma assinatura push, o trabalho do Merge Agent é implicitamente criado e é executado sob a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente conta de serviço. Recomendamos que você execute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) e especifique as credenciais da conta diferente, específica de agente do Windows para **@job_login** e **@job_password**. Para obter mais informações, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Quando **sp_addmergesubscription** é executada por um membro das **sysadmin** função fixa de servidor para criar uma assinatura push, o trabalho do Merge Agent é implicitamente criado e é executado sob a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente conta de serviço. Recomendamos que você execute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) e especifique as credenciais da conta diferente, específica de agente do Windows para **@job_login** e **@job_password** . Para obter mais informações, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a39742fa8e97e198d54baf73d91534d69a6ee36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516670"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210036"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Consultas de detalhamento (mineração de dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -81,8 +81,8 @@ ms.locfileid: "52516670"
 |Algoritmo Microsoft Naïve Bayes|Sem suporte. Estes algoritmos não atribuem casos a nós específicos no conteúdo.|  
 |Algoritmo Rede Neural da Microsoft|Sem suporte. Estes algoritmos não atribuem casos a nós específicos no conteúdo.|  
 |Algoritmo Regressão Logística da Microsoft|Sem suporte. Estes algoritmos não atribuem casos a nós específicos no conteúdo.|  
-|Algoritmo Regressão Linear da Microsoft|Tem suporte. Porém, como o modelo cria um único nó, **All**, o detalhamento retorna todos os casos de treinamento para o modelo. Se o conjunto de treinamento for grande, o carregamento dos resultados poderá demorar muito tempo.|  
-|Algoritmo Microsoft Time Series|Tem suporte. Porém, você não pode detalhar a estrutura nem os dados de casos utilizando o **Visualizador de Modelo de Mineração** no Designer de Mineração de Dados. Em vez disso, você deve criar uma consulta DMX.<br /><br /> Além disso, você não pode detalhar nós específicos nem gravar uma consulta DMX para recuperar casos em nós específicos do modelo Time Series. Você pode recuperar dados de casos a partir da redução do modelo ou da estrutura utilizando outros critérios, como valores data ou de atributo.<br /><br /> Você também pode retornar as datas dos casos no modelo, usando a função [Lag &#40;DMX&#41;](../../dmx/lag-dmx.md).<br /><br /> Se você quiser ver detalhes dos nós ARTXP e ARIMA criados pelo algoritmo MTS, poderá utilizar o [Visualizador de Árvore de Conteúdo Genérico da Microsoft &#40;Mineração de dados&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).|  
+|Algoritmo Regressão Linear da Microsoft|Com suporte. Porém, como o modelo cria um único nó, **All**, o detalhamento retorna todos os casos de treinamento para o modelo. Se o conjunto de treinamento for grande, o carregamento dos resultados poderá demorar muito tempo.|  
+|Algoritmo Microsoft Time Series|Com suporte. Porém, você não pode detalhar a estrutura nem os dados de casos utilizando o **Visualizador de Modelo de Mineração** no Designer de Mineração de Dados. Em vez disso, você deve criar uma consulta DMX.<br /><br /> Além disso, você não pode detalhar nós específicos nem gravar uma consulta DMX para recuperar casos em nós específicos do modelo Time Series. Você pode recuperar dados de casos a partir da redução do modelo ou da estrutura utilizando outros critérios, como valores data ou de atributo.<br /><br /> Você também pode retornar as datas dos casos no modelo, usando a função [Lag &#40;DMX&#41;](../../dmx/lag-dmx.md).<br /><br /> Se você quiser ver detalhes dos nós ARTXP e ARIMA criados pelo algoritmo MTS, poderá utilizar o [Visualizador de Árvore de Conteúdo Genérico da Microsoft &#40;Mineração de dados&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).|  
   
 ##  <a name="bkmk_Tasks"></a> Tarefas relacionadas  
  Use os links a seguir para trabalhar com detalhamento em cenários específicos.  

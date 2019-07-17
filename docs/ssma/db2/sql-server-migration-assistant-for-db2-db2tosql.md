@@ -10,19 +10,19 @@ ms.assetid: 7633f631-ffad-469a-8441-8831a6a9f932
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 89c8ab8693ae814e9b471fe8212f8a1961d09873
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 986b151c12abcc12036bc653b7e41c6833e04f26
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267896"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259879"
 ---
 # <a name="sql-server-migration-assistant-for-db2-db2tosql"></a>Assistente de migração do SQL Server para DB2 (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA (Migration Assistant) for DB2 é uma ferramenta para migrar bancos de dados do DB2 para [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 no Windows e Linux ( Versão prévia), ou o banco de dados SQL do Azure. SSMA para DB2 converte objetos de banco de dados DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de banco de dados, cria esses objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e migra os dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou BD SQL do Azure.  
   
 Esta documentação apresenta SSMA para DB2 e fornece instruções passo a passo para migrar bancos de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A tabela a seguir mostra os tópicos para ajudá-lo a saber mais:  
   
-## <a name="contents"></a>Sumário  
+## <a name="contents"></a>Conteúdo  
   
 |`Section`|Descrição|  
 |-----------|---------------|  

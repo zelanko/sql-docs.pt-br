@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a0bdf517f2845e28a9d3520034d9de16ff65a25e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020983"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181165"
 ---
 # <a name="calling-stored-procedures"></a>Chamando procedimentos armazenados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,17 +58,17 @@ SELECT Country.Members on 0, MySproc(Measures.Sales) ON 1 FROM Sales
 ```  
   
 ## <a name="calling-stored-procedures-with-the-call-statement"></a>Chamando procedimentos armazenados com a instrução Call  
- Procedimentos armazenados podem ser chamados fora do contexto de uma consulta MDX usando MDX **chamar** instrução.  
+ Procedimentos armazenados podem ser chamados fora do contexto de uma consulta MDX usando o MDX **chamar** instrução.  
   
- Use esse método para instanciar os efeitos colaterais de uma consulta armazenada ou para o aplicativo obter os resultados de uma consulta armazenada. Um uso comum de **chamar** instrução seria usar o Analysis Management Objects (AMO) para executar funções administrativas que não têm um resultado de retorno. Por exemplo, o comando a seguir chama um procedimento armazenado:  
+ Use esse método para instanciar os efeitos colaterais de uma consulta armazenada ou para o aplicativo obter os resultados de uma consulta armazenada. Um uso comum dos **chamar** instrução seria usar o Analysis Management Objects (AMO) para executar funções administrativas que não têm um resultado de retorno. Por exemplo, o comando a seguir chama um procedimento armazenado:  
   
 ```  
 Call MyStoredProcedure(a,b,c)  
 ```  
   
- A única com suporte a tipo retornado pelo procedimento armazenado em um **chamar** instrução é um conjunto de linhas. A serialização de um conjunto de linhas é definido pelo XML for Analysis. Se um procedimento armazenado em um **chamar** instrução retorna qualquer outro tipo, ele será ignorado e não retornado em XML para o aplicativo de chamada. Para obter mais informações sobre conjuntos de linhas do XML for Analysis, consulte Conjuntos de linhas de esquema do XML for Analysis.  
+ A única com suporte a tipo retornado do procedimento armazenado em uma **chamar** instrução é um conjunto de linhas. A serialização de um conjunto de linhas é definido pelo XML for Analysis. Se um procedimento armazenado em uma **chamar** instrução retorna qualquer outro tipo, ele será ignorado e não retornado no XML para o aplicativo de chamada. Para obter mais informações sobre conjuntos de linhas do XML for Analysis, consulte Conjuntos de linhas de esquema do XML for Analysis.  
   
- Se o procedimento armazenado retornar um conjunto de linhas do .NET, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] converterá o resultado no servidor em um conjunto de linhas do XML for Analysis. O XML para o conjunto de linhas do Analysis é sempre retornado por um procedimento armazenado no **chamar** função. Se um conjunto de dados contiver recursos que não possam ser expressos no conjunto de linhas do XML for Analysis, ocorrerá uma falha.  
+ Se o procedimento armazenado retornar um conjunto de linhas do .NET, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] converterá o resultado no servidor em um conjunto de linhas do XML for Analysis. O XML para análise de conjunto de linhas é sempre retornado por um procedimento armazenado na **chamar** função. Se um conjunto de dados contiver recursos que não possam ser expressos no conjunto de linhas do XML for Analysis, ocorrerá uma falha.  
   
  Também podem ser empregados procedimentos que retornam valores nulos (por exemplo, sub-rotinas em Visual Basic) com a palavra-chave CALL. Se, por exemplo, você quiser usar a função MyVoidFunction() em uma instrução MDX, a seguinte sintaxe será empregada:  
   

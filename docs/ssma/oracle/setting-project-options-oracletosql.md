@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 7760a893082f7b4a8899e00480fc43914b1c12ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 6947a51b731b22b28ffbaa509f7cd38be5e7ebc5
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625910"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266526"
 ---
 # <a name="setting-project-options-oracletosql"></a>Definir opções do projeto (OracleToSQL)
 Para cada projeto do SSMA, você pode definir opções de nível de projeto. Essas opções especificam a conversão do objeto, o carregamento do objeto, configurações de migração de dados e interface do usuário. Antes de converter objetos a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou migrar os dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verifique se as opções de configuração são adequadas para o projeto.  
@@ -45,7 +45,7 @@ Ele também tem quatro modos para definir essas configurações:
   
 -   Completo  
   
--   Personalizar  
+-   Personalizado  
   
 O modo padrão é recomendado para a maioria dos usuários. O modo otimista mantém mais da sintaxe do Oracle atual e é mais fácil de ler. No entanto, a manter a sintaxe atual pode não ser precisa. Se a sintaxe do Oracle deve ser convertida para equivalentes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintaxe, o modo completo executa a conversão mais completa, mas o código resultante pode ser mais difícil de ler. No modo personalizado, você deve definir as opções.  
   

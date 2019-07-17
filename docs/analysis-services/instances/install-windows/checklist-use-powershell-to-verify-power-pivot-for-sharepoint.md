@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 46cfdd9075bd950b287bef399ca3a505a1261f5d
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087825"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181589"
 ---
-# <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Lista de verificação: Usar o PowerShell para verificar o Power Pivot para SharePoint
+# <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Lista de verificação: Use o PowerShell para verificar o Power Pivot para SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Nenhuma instalação do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] ou operação de recuperação será completa sem um teste de verificação rigoroso que confirme o funcionamento correto dos serviços e dos dados. Neste artigo, mostramos como executar essas etapas usando o Windows PowerShell. Colocamos cada etapa em sua própria seção para que você possa ir diretamente para as tarefas específicas. Por exemplo, execute o script na seção [Bancos de dados](#bkmk_databases) deste tópico para verificar o nome dos bancos de dados de conteúdo e aplicativo de serviço se quiser agendá-los para manutenção ou backup.  
   
@@ -48,7 +48,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
   
 |||  
 |-|-|  
-|![PowerPivot no sharepoint gerais do aplicativo conjunto](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "powerpivot no conjunto de aplicativos em geral do sharepoint")|Se desejar, você pode verificar a maioria dos componentes na Administração Central, usando o painel de gerenciamento do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Para abrir o painel na Administração Central, clique em **Configurações Gerais do Aplicativo**e clique em **Painel de Gerenciamento** no **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**. Para obter mais informações sobre o painel, consulte [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
+|![PowerPivot no sharepoint gerais do aplicativo conjunto](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "powerpivot no conjunto de aplicativos em geral do sharepoint")|Se desejar, você pode verificar a maioria dos componentes na Administração Central, usando o painel de gerenciamento do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Para abrir o painel na Administração Central, clique em **Configurações Gerais do Aplicativo**e clique em **Painel de Gerenciamento** no **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** . Para obter mais informações sobre o painel, consulte [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
   
 ##  <a name="bkmk_symptoms"></a> Sintomas e ações recomendadas  
  A tabela a seguir é uma lista de sintomas ou problemas e a ação sugerida deste tópico para ajudar você a resolver o problema.  
@@ -275,7 +275,7 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
  
  **Nome do serviço:** MSOLAP$POWERPIVOT  
   
- **Nome de exibição nos serviços do Windows:** SQL Server Analysis Services (PowerPivot)  
+ **Nome de exibição nos serviços do Windows:** SQL Server Analysis Services (POWERPIVOT)  
   
 ```  
 Get-EventLog "application" | Where-Object {$_.source -like "msolap`$powerpivot*"}  |select timegenerated, entrytype , source, message | format-table -property * -autosize | out-default  

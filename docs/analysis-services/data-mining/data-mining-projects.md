@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3f2fd0817aeae714ca1e217b9dc2011df92c4b28
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579376"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210109"
 ---
 # <a name="data-mining-projects"></a>Projetos de mineração de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -202,7 +202,7 @@ ms.locfileid: "57579376"
  É possível executar essas tarefas usando ASSL (Analysis Services Scripting Language), ou AMO (Objetos de Gerenciamento de Análise). Para obter mais informações, consulte [Desenvolvendo com XMLA no Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).  
   
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  Os tópicos a seguir descrevem o uso do Assistente de Mineração de Dados para criar um projeto de mineração de dados e os objetos associados.  
   
 |Tarefas|Tópicos|  

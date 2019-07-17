@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5430aa0125e621a574d8fb9cc6b28f6b73794b46
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519247"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68184449"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Aplicar um filtro a um modelo de mineração
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  Selecione o modelo, e clique com o botão direito do mouse para abrir o menu de atalho.  
   
-     -ou-  
+     - ou -  
   
      Selecione o modelo. Em seguida, no menu **Modelo de Mineração** , selecione **Definir Filtro de Modelos**.  
   

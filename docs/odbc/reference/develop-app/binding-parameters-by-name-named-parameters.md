@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 68dfb8976312016ee7f2e42fc4fcdecb93fd28cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fdd8d00bd6af5479079e66c1ca42f249e033d29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107637"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Parâmetros de associação por nome (parâmetros nomeados)
 Determinados DBMSs permitem que um aplicativo especificar os parâmetros para um procedimento armazenado por nome em vez de por posição na chamada de procedimento. Esses parâmetros são chamados *parâmetros nomeados*. ODBC oferece suporte ao uso de parâmetros nomeados. No ODBC, os parâmetros nomeados são usados somente em chamadas para procedimentos armazenados e não podem ser usados em outras instruções SQL.  

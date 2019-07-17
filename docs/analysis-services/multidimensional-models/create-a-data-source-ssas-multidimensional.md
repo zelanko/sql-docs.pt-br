@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2d22e4b3b9c53aa02a7666c929fcba25d2c17ced
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410313"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209084"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Criar uma fonte de dados (SSAS multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -111,7 +111,7 @@ ms.locfileid: "52410313"
   
 8.  Clique em **Avançar**.  Em **Concluindo o Assistente**, insira um nome da fonte de dados ou use o nome padrão. O nome padrão é o nome do banco de dados especificado na conexão. O painel **Visualizar** exibe a cadeia de conexão dessa nova fonte de dados.  
   
-9. Clique em **Concluir**.  A nova fonte de dados aparece na pasta **Fontes de Dados** do Gerenciador de Soluções.  
+9. Clique em **Finalizar**.  A nova fonte de dados aparece na pasta **Fontes de Dados** do Gerenciador de Soluções.  
   
 ##  <a name="bkmk_connection"></a> Criar uma fonte de dados usando uma conexão existente  
  Quando você trabalha em um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , a fonte de dados pode se basear em uma fonte de dados existente na solução ou em um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . O Assistente de Fonte de Dados fornece várias opções para criar o objeto de fonte de dados, inclusive usar uma conexão existente no mesmo projeto.  

@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b614db01d4128ec30d6d52260a781fffd69e8c8b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363808"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207018"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Usar recursos avançados de data e hora (OLE DB)
   Este exemplo mostra como usar os recursos de data/hora introduzidos no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. O exemplo usa os quatro tipos de data e hora de novo (`date`, **tempo**, `datetime2`, e `datetimeoffset`) para executar comandos com parâmetros e recuperar resultados de conjunto de linhas.  

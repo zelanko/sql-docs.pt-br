@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0c65762dc69ee1a5f84a22984995fac5e909629c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014673"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68184456"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>Adicionar uma tabela aninhada a uma estrutura de mineração
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,6 +39,6 @@ ms.locfileid: "34014673"
      Uma nova coluna de tabela que contém a coluna de chave é adicionada à estrutura de mineração. Para obter mais informações sobre como adicionar colunas extras, consulte [Adicionar colunas a uma estrutura de mineração](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas de estrutura de mineração e instruções](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Tarefas e instruções da estrutura de mineração](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

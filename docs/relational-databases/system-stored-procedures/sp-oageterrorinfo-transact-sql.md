@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2f4ab09693234d72890524628f4def5afcf447ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65450077"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107910"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +49,13 @@ sp_OAGetErrorInfo [ objecttoken ]
  _código-fonte_ **saída**  
  É a origem das informações de erro. Se for especificado, ele deve ser um local **char**, **nchar**, **varchar**, ou **nvarchar** variável. O valor de retorno é truncado para se ajustar à variável local se necessário.  
   
- _description_ **OUTPUT**  
+ _Descrição_ **saída**  
  É a descrição do erro. Se for especificado, ele deve ser um local **char**, **nchar**, **varchar**, ou **nvarchar** variável. O valor de retorno é truncado para se ajustar à variável local se necessário.  
   
- _helpfile_ **OUTPUT**  
+ _HelpFile_ **saída**  
  É o arquivo de ajuda para o objeto OLE. Se for especificado, ele deve ser um local **char**, **nchar**, **varchar**, ou **nvarchar** variável. O valor de retorno é truncado para se ajustar à variável local se necessário.  
   
- _helpid_ **OUTPUT**  
+ _helpid_ **saída**  
  É a ID de contexto do arquivo de ajuda. Se for especificado, ele deve ser um local **int** variável.  
   
 > [!NOTE]  
@@ -73,7 +72,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |Nomes de coluna|Tipo de dados|Descrição|  
 |------------------|---------------|-----------------|  
 |**Erro**|**binary(4)**|Representação binária do número do erro.|  
-|**Origem**|**nvarchar(nn)**|A origem do erro.|  
+|**Source**|**nvarchar(nn)**|A origem do erro.|  
 |**Descrição**|**nvarchar(nn)**|Descrição do erro.|  
 |**Helpfile**|**nvarchar(nn)**|Arquivo de ajuda para a origem.|  
 |**HelpID**|**int**|ID de contexto de ajuda do arquivo de origem da Ajuda.|  

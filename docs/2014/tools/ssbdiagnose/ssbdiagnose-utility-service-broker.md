@@ -1,5 +1,5 @@
 ---
-title: ssbdiagnose (Service Broker) do utilitário | Microsoft Docs
+title: Utilitário ssbdiagnose (Service Broker) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823680"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211001"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilitário ssbdiagnose (Service Broker)
   O utilitário **ssbdiagnose** relata problemas em conversas do [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou na configuração de serviços do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . É possível fazer verificações de configuração para dois serviços ou um único serviço. Os problemas são reportados na janela de prompt de comando como texto legível ou XML formatado que pode ser redirecionado para um arquivo ou outro programa.  
@@ -116,7 +116,7 @@ ms.locfileid: "52823680"
  **-IGNORE** *error_id*  
  Especifica que os erros ou as mensagens com a *error_id* especificada não serão incluídos em relatórios. Você pode especificar **-IGNORE** várias vezes para suprimir IDs de mensagens múltiplas.  
   
- **\<baseconnectionoptions >**  
+ **\<baseconnectionoptions>**  
  Especifica as informações de conexão base usadas por **ssbdiagnose** quando opções de conexão não estão incluídas em uma cláusula específica. A informações de conexão atribuídas em uma cláusula específica substituem as informações de **baseconnectionoption** . Essa operação é executada separadamente para cada parâmetro. Por exemplo, se **-S** e **-d** estiverem especificados no **baseconnetionoptions**, e somente **-d** estiver especificado no **toconnetionoptions**, o **ssbdiagnose** usará -S do **baseconnetionoptions** e -d do **toconnetionoptions**.  
   
  **CONFIGURATION**  
@@ -125,7 +125,7 @@ ms.locfileid: "52823680"
  **FROM SERVICE** *service_name*  
  Especifica o serviço que inicia as conversas.  
   
- **\<fromconnectionoptions >**  
+ **\<fromconnectionoptions>**  
  Especifica as informações necessárias para se conectar ao banco de dados que contém o serviço iniciador. Se **fromconnectionoptions** não for especificado, o **ssbdiagnose** usará as informações de conexão de **baseconnectionoptions** para se conectar ao banco de dados do iniciador. Se **fromconnectionoptions** for especificado, essa opção deverá incluir o banco de dados que contém o serviço iniciador. Se **fromconnectionoptions** não for especificado, o **baseconnectionoptions** deverá especificar o banco de dados do iniciador.  
   
  **TO SERVICE** *service_name*[, *broker_id* ]  
@@ -141,7 +141,7 @@ FROM sys.databases
 WHERE database_id = DB_ID();  
 ```  
   
- **\<toconnectionoptions >**  
+ **\<toconnectionoptions>**  
  Especifica as informações necessárias para se conectar ao banco de dados que contém o serviço de destino. Se **toconnectionoptions** não for especificado, o **ssbdiagnose** usará as informações de conexão de **baseconnectionoptions** para se conectar ao banco de dados de destino.  
   
  **MIRROR**  
@@ -156,11 +156,11 @@ WHERE database_id = DB_ID();
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
  Solicita verificação se o diálogo está configurado corretamente para o nível especificado de criptografia:  
   
- **ON**: Configuração padrão. A segurança de diálogo total está configurada. Certificados foram implantados nos dois lados do diálogo, uma associação de serviço remoto está presente e a instrução GRANT SEND do serviço de destino especificou o usuário iniciador.  
+ **LIGADO**: configuração padrão. A segurança de diálogo total está configurada. Certificados foram implantados nos dois lados do diálogo, uma associação de serviço remoto está presente e a instrução GRANT SEND do serviço de destino especificou o usuário iniciador.  
   
- **DESATIVAR**: Nenhuma segurança de diálogo está configurada. Nenhum certificado foi implantado, nenhuma associação de serviço remoto foi criada e a instrução GRANT SEND do serviço iniciador especificou a função **public** .  
+ **DESLIGADO**: nenhuma segurança de diálogo está configurada. Nenhum certificado foi implantado, nenhuma associação de serviço remoto foi criada e a instrução GRANT SEND do serviço iniciador especificou a função **public** .  
   
- **ANÔNIMO**: Segurança de diálogo anônima está configurada. Um certificado foi implantado, a associação de serviço remoto especificou a cláusula anônima e a instrução GRANT SEND do serviço de destino especificou a função **public** .  
+ **ANÔNIMO**: a segurança de diálogo anônima está configurada. Um certificado foi implantado, a associação de serviço remoto especificou a cláusula anônima e a instrução GRANT SEND do serviço de destino especificou a função **public** .  
   
  **RUNTIME**  
  Solicita um relatório de problemas que causam erros de tempo de execução para uma conversa do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Se nem **-NEW** ou **-ID** forem especificadas, o **ssbdiagnose** monitorará todas as conversas em todos os bancos de dados especificados nas opções de conexão. Se **-NEW** ou **-ID** forem especificadas, o **ssbdiagnose** criará uma lista de IDs especificadas nos parâmetros.  
@@ -200,7 +200,7 @@ WHERE database_id = DB_ID();
  Identificadores de conversa são relatados na `conversation_id` coluna do **sys. conversation_endpoints** exibição do catálogo.  
   
  **-TIMEOUT** *timeout_interval*  
- Especifica o número de segundos para a execução de um relatório **RUNTIME** . Se **-TIMEOUT** não for especificado, o relatório de tempo de execução será executado indefinidamente. **-TIMEOUT** é usado somente em relatórios de **RUNTIME** , não relatórios de **CONFIGURATION** . Use ctrl + C para sair de **ssbdiagnose** if **-TIMEOUT** não foi especificado ou para encerrar um relatório de tempo de execução antes de o intervalo**-** limite expirar. *timeout_interval* deve ser um número entre 1 e 2.147.483.647.  
+ Especifica o número de segundos para a execução de um relatório **RUNTIME** . Se **-TIMEOUT** não for especificado, o relatório de tempo de execução será executado indefinidamente. **-TIMEOUT** é usado somente em relatórios de **RUNTIME** , não relatórios de **CONFIGURATION** . Use ctrl + C para sair de **ssbdiagnose** if **-TIMEOUT** não foi especificado ou para encerrar um relatório de tempo de execução antes de o intervalo **-** limite expirar. *timeout_interval* deve ser um número entre 1 e 2.147.483.647.  
   
  **\<runtimeconnectionoptions>**  
  Especifica as informações de conexão para os bancos de dados que contêm os serviços associados aos elementos de conversa sendo monitorados. Se todos os serviços estiverem no mesmo banco de dados, você terá de especificar apenas uma cláusula **CONNECT TO** . Se os serviços estiverem em bancos de dados separados, você deverá fornecer uma cláusula **CONNECT TO** para cada banco de dados. Se **runtimeconnectionoptions** não for especificado, **ssbdiagnose** usará as informações de conexão de **baseconnectionoptions**.  
@@ -329,7 +329,7 @@ WHERE database_id = DB_ID();
 ssbdiagnose -E -d MyDatabase CONFIGURATION FROM SERVICE /test/initiator TO SERVICE /test/target  
 ```  
   
-### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>b. Verificando a configuração de dois serviços em computadores separados que não usam logon  
+### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>B. Verificando a configuração de dois serviços em computadores separados que não usam logon  
  O exemplo a seguir mostra como solicitar um relatório de configuração quando os serviços iniciador e de destino estão em computadores separados, mas podem ser acessados com o uso do mesmo logon de Autenticação do Windows.  
   
 ```  

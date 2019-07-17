@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013577"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185753"
 ---
-# <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Lição 1: Avalie práticas recomendadas em uma base por demanda
+# <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Lição 1: Avaliar práticas recomendadas sob demanda
   Usando o método sob demanda (ou "ad hoc") de avaliação de política, você pode avaliar rapidamente as políticas de práticas recomendadas para determinar se uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] corresponde a diretrizes de práticas recomendadas.  
   
  Nesta lição, você realizará uma avaliação sob demanda de políticas de práticas recomendadas para o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] em um ou mais instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

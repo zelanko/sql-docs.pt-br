@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3af481b1-d694-446e-948d-e3a5edcad050
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3091d379bca6c061437e7767fdf6f99d69dc9861
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9455c6589ed93a51e404f3e50d1cb86a0c0c8476
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114156"
 ---
 # <a name="step-4b-fetch-the-row-count"></a>Etapa 4b: Buscar a contagem de linhas
 A próxima etapa é buscar a contagem de linhas, conforme mostrado na ilustração a seguir.  

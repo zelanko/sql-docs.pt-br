@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 9211013a-ab24-4c52-9b26-87994b35e502
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 6d615ad3d0642d2e738359089f2ea51159e7f1b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 0b146c1585bdcddcf2d45c6b9efbd24f7e90d718
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63223481"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263017"
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>Instalar o SSMA para Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA (Migration Assistant) para Oracle consiste em um aplicativo cliente que você pode usar para executar uma migração do Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e BD SQL do Azure. Ele também contém um pacote de extensão que oferece suporte à migração de dados e o uso das funções do sistema Oracle em seus bancos de dados migrados.  
@@ -25,7 +25,7 @@ Instalar o aplicativo cliente no computador do qual você executará as etapas d
 ## <a name="upgrading-ssma-for-oracle"></a>Atualizando o SSMA para Oracle  
 Se você quiser atualizar para uma versão posterior do SSMA para Oracle, você deve primeiro desinstalar o cliente e o pacote de extensão do servidor e, em seguida, instale a versão mais recente.  
   
-## <a name="contents"></a>Sumário  
+## <a name="contents"></a>Conteúdo  
   
 |Tópico|Descrição|  
 |---------|---------------|  

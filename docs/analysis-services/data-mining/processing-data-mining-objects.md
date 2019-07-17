@@ -1,5 +1,5 @@
 ---
-title: Processar objetos de mineração de dados | Microsoft Docs
+title: Processando objetos de mineração de dados | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,19 +10,19 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 017f1d751e81fa80b8a7e4c2655fd1de59459fed
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016833"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209724"
 ---
 # <a name="processing-data-mining-objects"></a>Processando objetos de mineração de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Um objeto de mineração de dados é apenas um contêiner vazio até que seja processado. O*processamento* de um modelo de mineração de dados também é chamado de *treinamento*.  
   
- **Processando estruturas de mineração:** uma estrutura de mineração obtém dados de uma fonte de dados externa, conforme definido pelas associações de coluna e pelos metadados de uso, e lê esses dados. Esses dados são totalmente lidos e, depois, analisados para se extrair diversas estatísticas. O Analysis Services armazena uma representação compacta de dados, que é adequada para a análise de algoritmos de mineração de dados, em um cache local. Você pode tanto manter esse cache com excluí-lo depois do processamento de seus modelos. Por padrão, o cache é armazenado. Para obter mais informações, consulte [Processar uma estrutura de mineração](../../analysis-services/data-mining/process-a-mining-structure.md).  
+ **Processando estruturas de mineração:** Uma estrutura de mineração obtém dados de uma fonte de dados externos, conforme definido por associações de coluna e metadados de uso e lê os dados. Esses dados são totalmente lidos e, depois, analisados para se extrair diversas estatísticas. O Analysis Services armazena uma representação compacta de dados, que é adequada para a análise de algoritmos de mineração de dados, em um cache local. Você pode tanto manter esse cache com excluí-lo depois do processamento de seus modelos. Por padrão, o cache é armazenado. Para obter mais informações, consulte [Processar uma estrutura de mineração](../../analysis-services/data-mining/process-a-mining-structure.md).  
   
- **Processando modelos de mineração:** um modelo de mineração está vazio e contém apenas definições até que seja processado. Para processar um modelo de mineração, a estrutura de mineração na qual ele se baseia deve ter sido processada. O modelo de mineração obtém dados do cache da estrutura de mineração e aplica quaisquer filtros que tenham sido criados no modelo. Em seguida, ele submete o conjunto de dados ao algoritmo para detectar padrões. Depois que o modelo é processado, ele armazena apenas os resultados do processamento, e não os próprios dados. Para obter mais informações, consulte [Processar um modelo de mineração](../../analysis-services/data-mining/process-a-mining-model.md).  
+ **Processando modelos de mineração:** Um modelo de mineração está vazio, contém apenas definições até que ele seja processado. Para processar um modelo de mineração, a estrutura de mineração na qual ele se baseia deve ter sido processada. O modelo de mineração obtém dados do cache da estrutura de mineração e aplica quaisquer filtros que tenham sido criados no modelo. Em seguida, ele submete o conjunto de dados ao algoritmo para detectar padrões. Depois que o modelo é processado, ele armazena apenas os resultados do processamento, e não os próprios dados. Para obter mais informações, consulte [Processar um modelo de mineração](../../analysis-services/data-mining/process-a-mining-model.md).  
   
  O diagrama a seguir mostra o fluxo de dados quando uma estrutura de mineração é processada e quando um modelo de mineração é processado.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "34016833"
  Para obter mais informações, consulte [Requisitos e considerações sobre processamento &#40;Mineração de dados&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Consultas de detalhamento & #40; mineração de dados & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
- [Estruturas de mineração & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Modelos de mineração & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
- [Arquitetura lógica & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [Consultas de detalhamento &#40;Mineração de dados&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Modelos de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
+ [Arquitetura lógica &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   

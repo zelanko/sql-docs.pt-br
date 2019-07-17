@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: db5ef518a715553b1eecbeeaf5a5ba248b365bf5
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071533"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207852"
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>Adicionar dados de exemplo a um modelo DirectQuery no Modo de Design
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,7 +36,7 @@ No entanto, você pode adicionar uma quantidade menor de dados de exemplo ao ban
   
 2.  Clique em **Tabela** > **Propriedades** para abrir a caixa de diálogo Gerenciamento de Partição.  
   
-    Observe que a partição padrão é **(consulta direta) \<nome da tabela >**. Esta é a exibição de dados completa. Não exclua essa partição. Essa partição será usada quando o modelo for implantado.  
+    Observe que a partição padrão é **(consulta direta) \<nome da tabela >** . Esta é a exibição de dados completa. Não exclua essa partição. Essa partição será usada quando o modelo for implantado.  
   
 4.  Selecione a partição e clique em **Copiar**.  
 
