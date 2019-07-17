@@ -20,12 +20,12 @@ ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b2d0004204829225d7767c53a7d2406ff557f36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: b2b6f88e857ab7fc6300698174914126fb0881f6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899876"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265735"
 ---
 # <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ A tabela seguinte fornece informações sobre esses nós.
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|ID do nó.|  
-|node_state_desc|**nvarchar(256)**|Descrição do estado do nó. Os valores são exibidos primeiro com os valores mutuamente exclusivos, seguidos pelos valores combinados. Por exemplo: <br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />Há quatro valores node_state_desc mutuamente exclusivos. Eles são listados com suas descrições.<br /><ul><li>ONLINE: O nó está online<li>OFFLINE: O nó está offline<li>IDLE: Nó não tem nenhuma solicitação de trabalho pendente e entrou em um estado ocioso.<li>IDLE_READY: Nó não tem nenhuma solicitação de trabalho pendente e está pronto para entrar em um estado ocioso.</li></ul><br />Há três valores combináveis de node_state_desc, listados abaixo, suas descrições.<br /><ul><li>DAC: Este nó é reservado para o [Conexão administrativa dedicada](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: Nenhum thread novo pode ser criado neste nó devido a uma condição de pouca memória.<li>FREQUENTE ADICIONADOS: Indica os nós foram adicionados em resposta ao evento de CPU de adicionar um ativo.</li></ul>|  
+|node_state_desc|**nvarchar(256)**|Descrição do estado do nó. Os valores são exibidos primeiro com os valores mutuamente exclusivos, seguidos pelos valores combinados. Por exemplo:<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />Há quatro valores node_state_desc mutuamente exclusivos. Eles são listados com suas descrições.<br /><ul><li>ONLINE: O nó está online<li>OFFLINE: O nó está offline<li>IDLE: Nó não tem nenhuma solicitação de trabalho pendente e entrou em um estado ocioso.<li>IDLE_READY: Nó não tem nenhuma solicitação de trabalho pendente e está pronto para entrar em um estado ocioso.</li></ul><br />Há três valores combináveis de node_state_desc, listados abaixo, suas descrições.<br /><ul><li>DAC: Este nó é reservado para o [Conexão administrativa dedicada](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: Nenhum thread novo pode ser criado neste nó devido a uma condição de pouca memória.<li>FREQUENTE ADICIONADOS: Indica os nós foram adicionados em resposta ao evento de CPU de adicionar um ativo.</li></ul>|  
 |memory_object_address|**varbinary(8)**|Endereço de objeto de memória associado a esse nó. Relação um para um para [DM os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).memory_object_address.|  
 |memory_clerk_address|**varbinary(8)**|Endereço de administrador de memória associado a este nó. Relação um para um para [DM os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).memory_clerk_address.|  
 |io_completion_worker_address|**varbinary(8)**|Endereço de trabalhador atribuído à conclusão de E/S deste nó. Relação um para um para [DM os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).worker_address.|  
@@ -64,7 +64,7 @@ A tabela seguinte fornece informações sobre esses nós.
 ## <a name="permissions"></a>Permissões
 
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer a permissão `VIEW DATABASE STATE` no banco de dados.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` permissão no banco de dados. Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e básica, requer a **administrador de servidor** ou uma **administrador do Active Directory do Azure** conta.   
 
 ## <a name="see-also"></a>Consulte também    
  [Sistema operacional SQL Server relacionados exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   

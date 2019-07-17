@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 50cd429809a556797eb1c552172a7dc5f314d407
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e29fd0d0231fe14a5267868c455304dc2560dfc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62685960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68202523"
 ---
- Quando possível, use a Autenticação do Windows. 
+ Quando possível, use a autenticação do Windows. 

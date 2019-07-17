@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bac867f5f3532f931d2708c46979659e2851645f
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 1394414db170826fa96ca51a5d35ff8dea199310
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68212258"
 ---
 Este artigo fornece uma visão geral das soluções de continuidade de negócios para alta disponibilidade e recuperação de desastre no SQL Server. 
 
@@ -12,7 +12,7 @@ Todos que implantam o SQL Server têm uma tarefa comum para levar em consideraç
 
 O SQL Server 2017 apresenta muitos novos recursos ou aprimoramentos aos existentes, alguns dos quais são de disponibilidade. A maior adição ao 2017 do SQL Server é o suporte para SQL Server em distribuições do Linux. Para obter uma lista completa dos novos recursos no SQL Server 2017, consulte o tópico [Novidades no SQL Server](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017).
 
-Este artigo está focado em abordar os cenários de disponibilidade no SQL Server 2017, bem como os novos e aprimorados recursos de disponibilidade no SQL Server 2017. Os cenários incluem os híbridos que serão capazes de estender as implantações do SQL Server no Windows Server e no Linux, bem como aquelas que podem aumentar o número de cópias legíveis de um banco de dados. Embora este artigo não aborde as opções de disponibilidade externas ao SQL Server, como as fornecidas pela virtualização, tudo discutido aqui se aplica às instalações do SQL Server em uma máquina virtual convidada, tanto na nuvem pública ou hospedada pelo servidor do hipervisor local anon.
+Este artigo está focado em abordar os cenários de disponibilidade no SQL Server 2017, bem como os novos e aprimorados recursos de disponibilidade no SQL Server 2017. Os cenários incluem os híbridos que serão capazes de estender as implantações do SQL Server no Windows Server e no Linux, bem como aquelas que podem aumentar o número de cópias legíveis de um banco de dados. Embora este artigo não aborde as opções de disponibilidade externas ao SQL Server, como as fornecidas pela virtualização, tudo discutido aqui se aplica às instalações do SQL Server em uma máquina virtual convidada, seja na nuvem pública ou hospedada em um servidor do hipervisor local.
 
 ## <a name="sql-server-2017-scenarios-using-the-availability-features"></a>Cenários de 2017 do SQL Server usando os recursos de disponibilidade
 
