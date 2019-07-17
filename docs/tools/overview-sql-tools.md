@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ''
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 84cebceddc18ee3d288226ebd00bc86ea25ac926
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
-ms.translationtype: MTE75
+ms.openlocfilehash: 0d7683ed4f45a2d2e28843b24d9abd2592b08fae
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190986"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731601"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Ferramentas do SQL e utilitários para o SQL Server, o banco de dados SQL do Azure e o Azure SQL Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,6 @@ ms.locfileid: "52190986"
 Para gerenciar (consulta, monitor, etc.) o banco de dados que você precisa de uma ferramenta. Enquanto os bancos de dados podem estar em execução na nuvem, no Windows ou em [Linux](../linux/sql-server-linux-overview.md), sua ferramenta não precisa ser executado na mesma plataforma de banco de dados. 
 
 Há muitas ferramentas de banco de dados disponíveis, portanto, este artigo fornece descrições e indicadores para algumas das ferramentas disponíveis para trabalhar com bancos de dados SQL. Se precisar de ajuda para decidir qual ferramenta você precisa, consulte [qual ferramenta devo usar?](#which-tool-should-i-choose).
-
 
 ## <a name="gui-tools-to-manage-databases"></a>Ferramentas de GUI para gerenciar bancos de dados  
 
@@ -45,13 +44,13 @@ Estas são as principais ferramentas de linha de comando:
 
 | Ferramenta | Descrição | É executado em |
 |:--|:--|:--|
-|[**mssql-cli (versão prévia)**](mssql-cli.md)|**MSSQL-cli** é uma ferramenta de linha de comando interativa para consultar o SQL Server. | Windows, macOS e Linux|
+|[**mssql-cli (versão prévia)** ](mssql-cli.md)|**MSSQL-cli** é uma ferramenta de linha de comando interativa para consultar o SQL Server. | Windows, macOS e Linux|
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage** é um utilitário de linha de comando que automatiza várias tarefas de desenvolvimento de banco de dados. macOS e Linux em versões do sqlpackage está atualmente em visualização. | Windows, macOS e Linux|
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** fornece cmdlets para trabalhar com SQL| Windows, macOS e Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |**Sqlcmd** utilitário permite que você insira instruções Transact-SQL, procedimentos do sistema e arquivos de script no prompt de comando. | Windows, macOS e Linux|
 |[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|O utilitário **bcp** (**b**ulk **c**opy **p**rogram) copia dados em massa entre uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e um arquivo de dados em um formato especificado pelo usuário.|Windows, macOS e Linux|
-|[**MSSQL-scripter (visualização)**](https://github.com/Microsoft/mssql-scripter)|**MSSQL scripter** é uma experiência de linha de comando multiplataforma para scripts de bancos de dados do SQL Server|Windows, macOS e Linux|
-|[**MSSQL-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**MSSQL-conf** configura o SQL Server em execução no Linux.|Linux|
+|[**MSSQL-scripter (visualização)** ](https://github.com/Microsoft/mssql-scripter)|**MSSQL scripter** é uma experiência de linha de comando multiplataforma para scripts de bancos de dados do SQL Server|Windows, macOS e Linux|
+|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**MSSQL-conf** configura o SQL Server em execução no Linux.|Linux|
 
 
 

@@ -9,21 +9,20 @@ ms.topic: conceptual
 ms.assetid: 88f05392-1e97-4693-ba60-a4910af3c000
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7b3c6cb1c61c15cb81a5c9452b874263cf62bc02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 770ddc4d1e182360b13d4f9e27d9e0bbf80cceee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899582"
 ---
 # <a name="sysdmpdwcomponenthealthalerts-transact-sql"></a>sys.dm_pdw_component_health_alerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Repositórios emitido anteriormente alertas sobre componentes do dispositivo.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|Identificador exclusivo de um [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] nó.<br /><br /> pdw_node_id, identificação_do_componente, component_instance_id, alert_id e alert_instance_id formam a chave para esta exibição.|NOT NULL|  
 |component_id|**int**|A ID do componente. Ver [sys.pdw_health_components &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> pdw_node_id, identificação_do_componente, component_instance_id, alert_id e alert_instance_id formam a chave para esta exibição.|NOT NULL|  

@@ -7,13 +7,12 @@ ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f4a57f89a89ed8d5cbf81cc3d63fc1f19b42e51a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26358fea3b7d08d986a5078cf6484e7c4e0d3dd1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962111"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Dados de demonstração de íris para tutoriais do Python e R no SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +23,7 @@ Para concluir este exercício, você deve ter [SQL Server Management Studio](htt
 
 Tutoriais e guias de início rápido usando esse conjunto de dados incluem o seguinte:
 
-+  [Guia de início rápido: Criar, treinar e usar um modelo de Python com procedimentos armazenados no SQL Server](quickstart-python-train-score-in-tsql.md)
++  [Início Rápido: Criar, treinar e usar um modelo de Python com procedimentos armazenados no SQL Server](quickstart-python-train-score-in-tsql.md)
 
 ## <a name="create-the-database"></a>Criar o banco de dados
 
@@ -156,4 +155,4 @@ Como uma etapa de validação, execute uma consulta para confirmar se que os dad
 
 O seguinte guia de início rápido, você criará um modelo de aprendizado de máquina e salvá-lo em uma tabela e, em seguida, usar o modelo para gerar os resultados previstos.
 
-+ [Guia de início rápido: Criar, treinar e usar um modelo de Python com procedimentos armazenados no SQL Server](quickstart-python-train-score-in-tsql.md)
++ [Início Rápido: Criar, treinar e usar um modelo de Python com procedimentos armazenados no SQL Server](quickstart-python-train-score-in-tsql.md)

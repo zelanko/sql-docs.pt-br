@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 19e9abcf3af93ef85934d536de6ca726139afde0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 585243f46296808a5ed190c3e6d9448eec1c63da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63311839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908806"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Comandos de menu e outras teclas de atalho (MySQLToSQL)
 As seções a seguir descrevem os atalhos de teclado para acessar os comandos de menu e outras teclas de atalho usadas em várias caixas de diálogo do SSMA para MySQL de aplicativo.  
@@ -47,7 +46,7 @@ Para acessar o menu Editar, o atalho de teclado usado é ALT + E. A tabela a seg
 |Exiba a caixa de diálogo Gerenciar indicadores.|ALT + E + B ou CTRL + X|  
 |Ir para linha|ALT + E + G ou CTRL + G|  
 |Salve as alterações feitas à instrução.|ALT + E + S ou CTRL + S|  
-|Submenu de localização de acesso.|ALT + E + F|  
+|Submenu de localização de acesso.|E AS TECLAS ALT + F|  
 |Localizar ou localização rápida.|ALT + E + F + F ou CTRL + F|  
 |Exiba a caixa de diálogo de pesquisa avançada.|ALT + E + F + A ou ALT + F12|  
 |Inicie a informações rápidas.|ALT + E + F + I ou CTRL + SHIFT + espaço|  

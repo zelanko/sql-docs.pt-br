@@ -19,22 +19,21 @@ helpviewer_keywords:
 ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ac97ef26a358fb48749b7758f32ed5d2f82d3ba1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87bb4a97db318330f253d068febb1309e4eda12a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102399"
 ---
 # <a name="sysmasterkeypasswords-transact-sql"></a>sys.master_key_passwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna uma linha para cada senha de chave mestra de banco de dados adicionada usando o **sp_control_dbmasterkey_password** procedimento armazenado. As senhas que são usadas para proteger as chaves mestras são armazenadas no armazenamento de credenciais. O nome da credencial segue este formato: ##DBMKEY_<database_family_guid>_<random_password_guid>##. A senha é armazenada como o segredo de credencial. Para cada senha adicionada usando **sp_control_dbmasterkey_password**, há uma linha na **sys. Credentials**.  
+  Retorna uma linha para cada senha de chave mestra de banco de dados adicionada usando o **sp_control_dbmasterkey_password** procedimento armazenado. As senhas que são usadas para proteger as chaves mestras são armazenadas no armazenamento de credenciais. O nome da credencial segue este formato: # # DBMKEY_ < database_family_guid > _ < random_password_guid > # #. A senha é armazenada como o segredo de credencial. Para cada senha adicionada usando **sp_control_dbmasterkey_password**, há uma linha na **sys. Credentials**.  
   
  Cada linha nessa exibição mostra uma **credential_id** e o **family_guid** de um banco de dados que a chave mestra que é protegida por senha associada a essa credencial. Uma junção com **sys. Credentials** sobre o **credential_id** retornará campos úteis, como o **create_date** e o nome da credencial.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**credential_id**|**int**|A ID da credencial à qual a senha pertence. Essa ID é exclusiva na instância de servidor.|  
 |**family_guid**|**uniqueidentifier**|ID exclusiva do banco de dados original na criação. Esse GUID permanece o mesmo depois que o banco de dados é restaurado ou anexado, mesmo que o nome de banco de dados seja alterado.<br /><br /> Se a descriptografia automática pela chave mestra de serviço falhar, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa o **family_guid** para identificar as credenciais que podem conter a senha usada para proteger a chave mestra de banco de dados.|  

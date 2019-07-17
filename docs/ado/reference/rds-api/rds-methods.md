@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2b733230abfe7d9fc3c9e73831f097955cd056b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d045858ddd0cde818eedb983f10527fe7e94a2fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694749"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963681"
 ---
 # <a name="rds-methods"></a>Métodos RDS
 > [!IMPORTANT]
@@ -27,7 +26,7 @@ ms.locfileid: "66694749"
   
 |||  
 |-|-|  
-|[Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)|Cancela a execução de uma chamada de método assíncrono pendente.|  
+|[Cancelar (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)|Cancela a execução de uma chamada de método assíncrono pendente.|  
 |[CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)|Cancela qualquer alteração feita na linha atual ou nova de um **Recordset** objeto.|  
 |[ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Converte um **Recordset** para uma cadeia de caracteres MIME que representa os dados do conjunto de registros.|  
 |[CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)|Cria o proxy para o objeto de negócios de destino e retorna um ponteiro para ele.|  
@@ -38,7 +37,7 @@ ms.locfileid: "66694749"
 |[MoveFirst, MoveLast, MoveNext, MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|Move para a primeira, última, registro anterior ou seguinte em um especificado **Recordset** objeto.|  
 |[Consulta (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|Usa uma cadeia de caracteres de consulta SQL válida para retornar um **conjunto de registros**.|  
 |[Atualização (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|Repete a consulta a fonte de dados especificada na **Connect** propriedade e atualizações, os resultados da consulta.|  
-|[Reset (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|Executa a classificação ou filtragem em um lado do cliente **Recordset**, com base nas propriedades de classificação e filtro especificadas.|  
+|[Redefinir (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|Executa a classificação ou filtragem em um lado do cliente **Recordset**, com base nas propriedades de classificação e filtro especificadas.|  
 |[SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Envia as alterações de localmente em cache e atualizáveis pendentes **conjunto de registros** à fonte de dados especificado na **Connect** propriedade.|  
 |[Método Synchronize (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Sincronize o determinado conjunto de registros com o banco de dados especificado pela cadeia de conexão (para uso com o ADO 2.5 e posterior).|  
 |[Método Synchronize21 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Sincronize o determinado conjunto de registros com o banco de dados especificado pela cadeia de conexão (para uso com o ADO 2.1).|

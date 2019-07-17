@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 94c9258ff71454134c5ff2023e174a0811d7afe6
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 3a9395b27aa7ddf6d6fd85734da5d66a870eb634
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52159084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900608"
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ ms.locfileid: "52159084"
 ##  <a name="LSNcolumns"></a> Noções básicas sobre os valores da coluna LSN  
  Os valores de **end_of_log_lsn**, **last_hardened_lsn**, **last_received_lsn**, **last_sent_lsn**, **recuperação _lsn**, e **truncation_lsn** colunas não são números de sequência de log real (LSNs). Em vez disso, cada um desses valores reflete uma ID de bloco de log preenchida com zeros.  
   
- **end_of_log_lsn**, **last_hardened_lsn**, e **recovery_lsn** são LSNs de liberação. Por exemplo, **last_hardened_lsn** indica o início do próximo bloco além dos blocos que já estão no disco.  Portanto, qualquer LSN < o valor de **last_hardened_lsn** está no disco.  O LSN que for >= a esse valor não será liberado.  
+ **end_of_log_lsn**, **last_hardened_lsn**, e **recovery_lsn** são LSNs de liberação. Por exemplo, **last_hardened_lsn** indica o início do próximo bloco além dos blocos que já estão no disco.  Portanto, qualquer LSN < o valor de **last_hardened_lsn** está no disco.  LSN que for > = a esse valor não será liberado.  
   
  Dos valores de LSN retornados pela **DM hadr_database_replica_states**, apenas **last_redone_lsn** é um LSN real.  
   

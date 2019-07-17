@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00d722d4-ce99-4dbe-a503-1ab27cb6fe0a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bb5476902d36bd5761ebea6139bd1b7085da414b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef140d51bd51295a794352e57a2ef41f96f38c64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911446"
 ---
 # <a name="visual-foxpro-odbc-driver-programmer39s-reference"></a>Programador de Driver ODBC do Visual FoxPro&#39;referência de s
 Esta seção da documentação do Driver ODBC do Visual FoxPro contém os tópicos a seguir:  

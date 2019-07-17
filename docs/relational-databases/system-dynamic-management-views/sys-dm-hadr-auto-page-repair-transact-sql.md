@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9d46e5ee0b350e7164c0dfec55666d4b6c8e34a7
-ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
+ms.openlocfilehash: e817b17de8a8af93a13628334337686abbe66b5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55771322"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900684"
 ---
 # <a name="sysdmhadrautopagerepair-transact-sql"></a>sys.dm_hadr_auto_page_repair (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

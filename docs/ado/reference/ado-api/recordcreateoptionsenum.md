@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d57f1bc241e5e27618a9598895ea7be089ce20dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65fe33b73cf77a27fcd69743ffb09cb05e197797
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917340"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 Especifica se uma existente **registro** deve ser aberta ou uma nova **registro** criado para o [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto [abrir](../../../ado/reference/ado-api/open-method-ado-record.md) método. Os valores podem ser combinados com um operador AND.  

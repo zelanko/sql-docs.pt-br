@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 47345015-f861-451e-97c4-6e1cb81d1922
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d02a1d50e9c7a5f906e78fa6753d594edced341f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1778cbb88fcd6a4142e800cd45109602509125d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62691045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899499"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] exibição do sistema que contém informações sobre todas as etapas de serviço de movimentação de dados (DMS) para operações externas.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Consulta que está usando este trabalhador DMS.<br /><br /> request_id, step_index e dms_step_index formam a chave para esta exibição.|Mesmo que request_id na [DM pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Etapa de consulta que está invocando este trabalhador DMS.<br /><br /> request_id, step_index e dms_step_index formam a chave para esta exibição.|Mesmo que step_index na [DM pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
@@ -38,7 +37,7 @@ ms.locfileid: "62691045"
 |estimated_bytes_processed|**bigint**|Número de bytes processados por este trabalhador.|Maior que ou igual a 0.|  
 |comprimento|**bigint**|Número de bytes no arquivo de divisão.<br /><br /> Para Hadoop, esse é o tamanho do bloco de HDFS.|Definido pelo usuário. O padrão é 64 MB.|  
 |status|**nvarchar(32)**|Estado do trabalhador.|Pendente, processando, concluído, falha, anulado|  
-|start_time|**datetime**|Hora de início a execução deste trabalhador.|Maior que ou igual à hora de início da etapa de consulta esse trabalho pertence. See [sys.dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
+|start_time|**datetime**|Hora de início a execução deste trabalhador.|Maior que ou igual à hora de início da etapa de consulta esse trabalho pertence. Ver [DM pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |end_time|**datetime**|Hora em que a execução foi encerrado, falhou ou foi cancelada.|NULL para os trabalhos em andamento ou em fila. Caso contrário, maior que start_time.|  
 |total_elapsed_time|**int**|Tempo total gasto na execução, em milissegundos.|Maior que ou igual a 0.<br /><br /> Se total_elapsed_time exceder o valor máximo para um número inteiro, o total_elapsed_time continuará a ser o valor máximo. Essa condição gerará o aviso "o valor máximo foi excedido."<br /><br /> O valor máximo em milissegundos é equivalente a 24,8 dias.|  
   

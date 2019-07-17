@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5d143889672754be353b5868e955841d9e2869bc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 2c97fec403da1913f7f39f1da706d107cd964aa4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902924"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

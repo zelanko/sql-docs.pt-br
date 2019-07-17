@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: bc5ee796addb8c77170de2e3166aefb74d046ad1
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
-ms.translationtype: MTE75
+ms.openlocfilehash: a8ff4689c4b9746178d9030d82b9ed8fccdb961f
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044612"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733415"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>Protocolos para propriedades de MSSQLSERVER (guia Avançado)
 
@@ -40,9 +40,9 @@ A**Proteção Estendida** tem suporte completo do [!INCLUDE[ssNoVersion](../../i
 
 Há três valores possíveis:  
 
-- **Off**: Significa **proteção estendida** está desabilitado. A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aceitará conexões de qualquer cliente, independentemente de o cliente estar protegido ou não. A opção**Desativada** é compatível com sistemas operacionais mais antigos e sem patches, mas é menos segura. Só use essa configuração se souber que os sistemas operacionais cliente não têm suporte para proteção estendida.
+- **Desativar**: significa **proteção estendida** está desabilitado. A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aceitará conexões de qualquer cliente, independentemente de o cliente estar protegido ou não. A opção**Desativada** é compatível com sistemas operacionais mais antigos e sem patches, mas é menos segura. Só use essa configuração se souber que os sistemas operacionais cliente não têm suporte para proteção estendida.
 
-- **Permitida**: significa que a **Proteção Estendida** é necessária para conexões de sistemas operacionais com suporte para a **Proteção Estendida**. As conexões de aplicativos cliente desprotegidos que estejam sendo executados em sistemas operacionais cliente protegidos são rejeitadas. A**Proteção Estendida** é ignorada para conexões de sistemas operacionais desprotegidos. Essa configuração é mais segura que **Desativada**, mas não é a configuração mais segura. Use essa configuração em ambientes mistos, onde alguns sistemas operacionais ou aplicativos dão suporte à **Proteção Estendida** e outros não.
+- **Permitido**: significa que a **Proteção Estendida** é necessária para conexões de sistemas operacionais com suporte para a **Proteção Estendida**. As conexões de aplicativos cliente desprotegidos que estejam sendo executados em sistemas operacionais cliente protegidos são rejeitadas. A**Proteção Estendida** é ignorada para conexões de sistemas operacionais desprotegidos. Essa configuração é mais segura que **Desativada**, mas não é a configuração mais segura. Use essa configuração em ambientes mistos, onde alguns sistemas operacionais ou aplicativos dão suporte à **Proteção Estendida** e outros não.
 
 - **Necessário**: significa que para uma conexão seja aceita, ele deve vir de um aplicativo protegido em um sistema operacional protegido. Essa configuração é a mais segura dentre as três opções. Mas conexões de sistemas operacionais que não suportam **proteção estendida** não poderão se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 

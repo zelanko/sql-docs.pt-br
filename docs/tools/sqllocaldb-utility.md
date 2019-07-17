@@ -12,15 +12,15 @@ helpviewer_keywords:
 - local database runtime utility
 - LocalDB, SqlLocalDB Utility
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 19902c030538d0384c89dd632aaf1d6f8c728048
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: MTE75
+ms.openlocfilehash: bf71626fcec01b1140f85a67a03a69dc1a9736e8
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538758"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728148"
 ---
 # <a name="sqllocaldb-utility"></a>Utilitário SqlLocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [**-s** ]  
- Cria uma nova instância do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. O **SqlLocalDB** usa a versão de binários [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] especificada pelo argumento *\<instance-version>*. O número da versão é especificado em formato numérico com pelo menos um decimal. Os números de versões secundárias (pacotes de serviço) são opcionais. Por exemplo, os dois números de versão seguintes são aceitáveis: 11.0 ou 11.0.1186. A versão especificada deve ser estalada no computador. Se não especificado, o número da versão será padronizado como a versão do utilitário **SqlLocalDB** . A adição de **–s** inicia a nova instância do **LocalDB**.  
+ [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [ **-s** ]  
+ Cria uma nova instância do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. O **SqlLocalDB** usa a versão de binários [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] especificada pelo argumento *\<instance-version>* . O número da versão é especificado em formato numérico com pelo menos um decimal. Os números de versões secundárias (pacotes de serviço) são opcionais. Por exemplo, os dois números de versão seguintes são aceitáveis: 11.0 ou 11.0.1186. A versão especificada deve ser estalada no computador. Se não especificado, o número da versão será padronizado como a versão do utilitário **SqlLocalDB** . A adição de **-s** inicia a nova instância do **LocalDB**.  
   
  [ **share** | **h** ]  
  Compartilha a instância privada especificada do **LocalDB** que usa o nome compartilhado especificado. Se a SID ou o nome de conta do usuário for omitido, o valor padrão será o usuário atual.  
@@ -57,11 +57,11 @@ SqlLocalDB.exe
  [ **delete** | **d** ] *\<instance-name>*  
  Exclui a instância especificada do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**.  
   
- [ **start** | **s** ] "*\<instance-name>*"  
+ [ **start** | **s** ] " *\<instance-name>* "  
  Inicia a instância especificada do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Quando tem êxito, a instrução retorna o endereço de pipe nomeado do **LocalDB**.  
   
- [ **stop** | **p** ] *\<instance-name>* [**-i** ] [**-k** ]  
- Interrompe a instância especificada do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. A adição de **–i** solicita o desligamento da instância com a opção **NOWAIT** . A adição de **–k** elimina o processo da instância sem contatá-la.  
+ [ **stop** | **p** ] *\<instance-name>* [ **-i** ] [ **-k** ]  
+ Interrompe a instância especificada do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. A adição de **-i** solicita o desligamento da instância com a opção **NOWAIT**. A adição de **-k** elimina o processo da instância sem contatá-la.  
   
  [ **info** | **i** ] [ *\<instance-name>* ]  
  Lista todas as instâncias do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** de propriedade do usuário atual.  

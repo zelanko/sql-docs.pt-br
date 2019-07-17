@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bff2c273-b535-4b32-83b3-0336a406859c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b8edd574dea39712f8b2acbc092a0a90482d2fff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be7f1cfdff083984f4aff4dd12d5d8251fd623f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921483"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vb"></a>Exemplo de ActualSize e propriedades DefinedSize (VB)
 Este exemplo usa o [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) e [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) propriedades para exibir o tamanho definido e o tamanho real de um campo.  

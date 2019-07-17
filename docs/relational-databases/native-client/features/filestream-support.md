@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 030f2e002c4dba8148a1e4bbcbb9eff9033308f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47ea988c3c9ec2b784109e46ce30d1a0ed56dc61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987519"
 ---
 # <a name="filestream-support"></a>Suporte a FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47688990"
   
  Também é possível acessar e atualizar colunas FILESTREAM usando as APIs do sistema de arquivos do Windows.  
   
- Para obter mais informações, consulte os tópicos a seguir:  
+ Para mais informações, consulte os seguintes tópicos:  
   
 -   [Suporte a FILESTREAM &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   

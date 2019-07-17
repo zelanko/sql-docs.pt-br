@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 207ac319852435d3d0178e4a0dcc78a1cc1a0c8e
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926361"
 ---
 # <a name="absolute-and-relative-urls"></a>URLs absolutas e relativas
 Uma URL especifica o local de um destino armazenado em um computador local ou em rede. O destino pode ser um arquivo, diretório, página HTML, imagem, programa e assim por diante.  

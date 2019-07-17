@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 10f531b601e44f346e27b52e40e6591457055ee8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 292a4a8c26b3b10aa47fcbe7046a5897f601ed9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698454"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919350"
 ---
 # <a name="count-property-ado"></a>Propriedade Count (ADO)
 Indica o número de objetos em uma coleção.  

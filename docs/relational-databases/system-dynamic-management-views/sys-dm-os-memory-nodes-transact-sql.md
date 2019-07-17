@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: bf4032fe-7db1-40e9-a62e-d69cebff4b44
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97ddb7d39334f9953f12372bffe45913f8d2cd18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d1be540f73a5a5e625a1f33f1c3f24e409fd307
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710974"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265761"
 ---
 # <a name="sysdmosmemorynodes-transact-sql"></a>sys.dm_os_memory_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47710974"
 > [!NOTE]  
 >  Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_memory_nodes**.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**memory_node_id**|**smallint**|Especifica a ID do nó de memória. Relacionado ao **memory_node_id** dos **DM os_memory_clerks**. Não permite valor nulo.|  
 |**virtual_address_space_reserved_kb**|**bigint**|Indica o número de reservas de endereço virtual, em quilobytes (KB), que não são nem confirmadas nem mapeadas em páginas físicas. Não permite valor nulo.|  
@@ -61,7 +60,7 @@ ms.locfileid: "47710974"
 ## <a name="permissions"></a>Permissões
 
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` permissão no banco de dados. Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e básica, requer a **administrador de servidor** ou uma **administrador do Active Directory do Azure** conta.   
 
 ## <a name="see-also"></a>Consulte também  
   [Sistema operacional SQL Server relacionados exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  

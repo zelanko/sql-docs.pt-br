@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3de66fdf-053b-4354-979d-e76a5a5e975f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f319e6a28a1eba5f803e9cf7f7087f45f227fd87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e530d0b16811cdf25a5bc1d99f5386efdb55ccd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200503"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905324"
 ---
 # <a name="sqlspecialcolumns-desktop-database-drivers"></a>SQLSpecialColumns (Drivers de banco de dados de área de trabalho)
 Um índice exclusivo será retornado (se houver) para o sinalizador SQL_BEST_ROWID na *fColType*. Nenhum conjunto de resultados será retornado para o sinalizador SQL_ROWVER.  

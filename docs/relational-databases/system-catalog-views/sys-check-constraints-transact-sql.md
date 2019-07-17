@@ -19,29 +19,28 @@ helpviewer_keywords:
 ms.assetid: 940ebc5e-44ba-4dae-8b29-da94f2d1d6c4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d79720c8e4e966c7f0129371dd6a22be4217f356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2212ebe8551f27c880ebf0c674f4b8d134617b07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942506"
 ---
 # <a name="syscheckconstraints-transact-sql"></a>sys.check_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Contém uma linha para cada objeto que é uma restrição CHECK, com **sys.objects.type** = 'c'.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**\<Colunas herdadas de sys. Objects >**||Para obter uma lista de colunas que essa exibição herda valores, consulte [sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**is_disabled**|**bit**|A restrição CHECK está desabilitada.|  
 |**is_not_for_replication**|**bit**|A restrição CHECK foi criada com a opção NOT FOR REPLICATION.|  
 |**is_not_trusted**|**bit**|A restrição CHECK não foi verificada pelo sistema para todas as linhas.|  
 |**parent_column_id**|**int**|0 indica uma restrição CHECK do nível da tabela.<br /><br /> O valor diferente de zero indica que esta é uma restrição CHECK em nível de coluna definida na coluna com o valor de ID especificado.|  
-|**Definição**|**nvarchar(max)**|Expressão SQL que define esta restrição CHECK.|  
-|**uses_database_collation**|**bit**|1 = A definição de restrição depende do agrupamento padrão do banco de dados para avaliação correta; caso contrário, 0. Tal dependência impede a alteração do agrupamento padrão do banco de dados.|  
+|**definition**|**nvarchar(max)**|Expressão SQL que define esta restrição CHECK.|  
+|**uses_database_collation**|**bit**|1 = A definição de restrição depende da ordenação padrão do banco de dados para avaliação correta; caso contrário, 0. Tal dependência impede a alteração da ordenação padrão do banco de dados.|  
 |**is_system_named**|**bit**|1 = O nome foi gerado pelo sistema.<br /><br /> 0 = O nome foi fornecido pelo usuário.|  
   
 ## <a name="permissions"></a>Permissões  

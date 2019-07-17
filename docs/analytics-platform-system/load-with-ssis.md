@@ -2,19 +2,18 @@
 title: Carregar com o Integration Services – Parallel Data Warehouse | Microsoft Docs
 description: Fornece informações de referência e a implantação para carregar dados no Parallel Data Warehouse (PDW) usando pacotes do SQL Server Integration Services (SSIS).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90d9f7422a3073df79a93949b3b7ed2e94208412
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960677"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Carregar dados com o Integration Services para Parallel Data Warehouse
 Fornece informações de referência e a implantação para carregar dados no SQL Server Parallel Data Warehouse por meio de pacotes do SQL Server Integration Services (SSIS).  
@@ -216,7 +215,7 @@ Especifique o destino para o fluxo de dados.
   
 4.  Selecione **criar uma nova Conexão**.  
   
-5.  Preencha as informações para o banco de dados do servidor, usuário, senha e destino com informações específicas para seu dispositivo. (Os exemplos são mostrados abaixo). Em seguida, clique em **OK**.  
+5.  Preencha as informações para o banco de dados do servidor, usuário, senha e destino com informações específicas para seu dispositivo. (Os exemplos são mostrados abaixo). Clique em **OK**.  
   
     Para conexões do InfiniBand **nome do servidor**: Insira o < nome do dispositivo >-SQLCTL01, 17001.  
   

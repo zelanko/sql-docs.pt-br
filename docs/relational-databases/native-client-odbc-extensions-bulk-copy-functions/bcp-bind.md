@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0574683e2f77efe0654a8c3193bee2f499a9400b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c1c53d7fc6578f753e92cf3192c7cd7783590292
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895732"
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +47,7 @@ RETCODE bcp_bind (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *HDBC*  
+ *hdbc*  
  É o identificador de conexão ODBC habilitado para cópia em massa.  
   
  *pData*  
@@ -144,11 +143,11 @@ bcp_bind(hdbc, szName, 0,
 |SQLBITN|char|  
 |SQLINT1|char|  
 |SQLINT2|short int|  
-|SQLINT4|INT|  
+|SQLINT4|int|  
 |SQLINT8|_int64|  
 |SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|  
-|SQLFLT4|FLOAT|  
-|SQLFLT8|FLOAT|  
+|SQLFLT4|float|  
+|SQLFLT8|float|  
 |SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|  
 |SQLDECIMALN|SQL_NUMERIC_STRUCT|  
 |SQLNUMERICN|SQL_NUMERIC_STRUCT|  
@@ -189,7 +188,7 @@ bcp_bind(hdbc, szName, 0,
   
  Se *pData* de uma coluna é definida como nulo porque seu valor será fornecido por chamadas para [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md), todas as colunas subsequentes com *eDataType* definido como SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR ou SQLIMAGE também deve ser associado com *pData* definido como NULL, e seus valores também devem ser fornecidos por chamadas para **bcp_moretext**.  
   
- Para novos tipos de valor grande, como **varchar (max)**, **varbinary (max)**, ou **nvarchar (max)**, você pode usar SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, e SQLNCHAR como indicadores de tipo na *eDataType* parâmetro.  
+ Para novos tipos de valor grande, como **varchar (max)** , **varbinary (max)** , ou **nvarchar (max)** , você pode usar SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, e SQLNCHAR como indicadores de tipo na *eDataType* parâmetro.  
   
  Se *cbTerm* é não em 0, qualquer valor (1, 2, 4 ou 8) é válido para o prefixo (*cbIndicator*). Nessa situação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client irá pesquisar o terminador, calcular o comprimento dos dados em relação ao terminador de (*eu*) e defina o *cbData* com o menor valor de i e o valor de prefixo.  
   

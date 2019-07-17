@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 571c63e0b8e06c08fb066c3bb6b2d42a019895e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0e7c29be102e9c5c7709816895a6647c95337c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710039"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936611"
 ---
 # <a name="willexecute-event-ado"></a>Evento WillExecute (ADO)
 O **WillExecute** evento é chamado antes de um comando pendente é executado em uma conexão.  
@@ -35,7 +34,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Origem*  
+ *Source*  
  Um **cadeia de caracteres** que contém um comando SQL ou um nome de procedimento armazenado.  
   
  *CursorType*  

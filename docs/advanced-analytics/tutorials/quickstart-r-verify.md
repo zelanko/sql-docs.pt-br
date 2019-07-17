@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0f461a00c1b9ecca1569b2b4f6257966c075491c
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: f294f5f12e3efd734d1e54ace3041702c39d390a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961963"
 ---
 # <a name="quickstart-verify-r-exists-in-sql-server"></a>Início Rápido: Verificar se o R existe no SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +26,7 @@ Execução do script é por meio de procedimentos armazenados, usando qualquer u
 
 Neste início rápido, você verificará que [serviços do SQL Server 2017 Machine Learning](../what-is-sql-server-machine-learning.md) ou [SQL Server 2016 R Services](../r/sql-server-r-services.md) está instalado e configurado.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Este exercício exige o acesso a uma instância do SQL Server com um dos seguintes já instalados:
 
@@ -103,4 +102,4 @@ A Microsoft fornece um número de pacotes de R pré-instalados com serviços de 
 Agora que você confirmou a que sua instância estiver pronta para trabalhar com R, dar uma olhada mais próxima em uma interação básica do R.
 
 > [!div class="nextstepaction"]
-> [Guia de início rápido: Script de R "Hello world" no SQL Server](quickstart-r-run-using-tsql.md)
+> [Início Rápido: Script de R "Hello world" no SQL Server](quickstart-r-run-using-tsql.md)

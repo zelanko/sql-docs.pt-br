@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 07/11/2019
-ms.openlocfilehash: 9b6fa6e7ec82853e05070a1675154f06091e5092
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: 8f19424b1e7946c7fb3d7a7056c1bda94b83b79b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959385"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de versão do estúdio de dados do Azure
 
@@ -33,7 +32,7 @@ ms.locfileid: "67826511"
 | Versão da extensão do Gerenciador de plano SentryOne | Nossa parceira importante da Microsoft, SentryOne, enviará suas [extensão SentryOne planejar Explorer para o Azure Data Studio](https://www.sentryone.com/products/sentryone-plan-explorer-extension-azure-data-studio). <br> Isso é uma extensão gratuita, que fornece diagramas de plano aprimorado para consultas é executada no estúdio de dados do Azure, com os algoritmos de layout otimizado e intuitiva codificação por cores para ajudar a identificar rapidamente os operadores mais caros que afetam o desempenho da consulta. Para saber mais sobre a extensão, confira a postagem do blog do SentryOne [aqui](https://sqlperformance.com/2019/07/sentryone/plan-explorer-extension-azure-data-studio). |
 | Novos recursos que virão a comparação de esquemas | &bull; &nbsp; Suporte de arquivo de comparação de esquema (. SCMP) <br/>&bull; &nbsp; Cancelar o suporte a comparação de esquemas <br/>&bull; &nbsp; As alterações completas podem ser encontradas [aqui](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed+)|
 | Aprimoramentos de bloco de anotações | &bull; &nbsp; Suporte do Python plotly <br/>&bull; &nbsp; Abrir o Notebook do navegador <br/> &bull; &nbsp; Caixa de diálogo gerenciamento de pacotes do Python <br/> &bull; &nbsp; Aprimoramentos de desempenho e Markdown <br/> &bull; &nbsp; Atualização de atalhos de teclado <br/>  &bull; &nbsp; Correções de bugs e recursos podem ser encontrados [aqui](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22+) |
-| SQL Server 2019 Support |  Esta versão inclui suporte para recursos de Cluster de Big Data do SQL Server de 2019 adicionais, incluindo: <br/> &bull; &nbsp; Tabela de pontos de extremidade de serviço dentro do painel de gerenciamento do que lista todos os principais serviços no cluster. <br/> &bull; &nbsp; O bloco de anotações do cluster Status mostra como você pode consultar e solucionar problemas de status do cluster em todos os serviços e os pods.| 
+| Suporte do SQL Server de 2019 |  Esta versão inclui suporte para recursos de Cluster de Big Data do SQL Server de 2019 adicionais, incluindo: <br/> &bull; &nbsp; Tabela de pontos de extremidade de serviço dentro do painel de gerenciamento do que lista todos os principais serviços no cluster. <br/> &bull; &nbsp; O bloco de anotações do cluster Status mostra como você pode consultar e solucionar problemas de status do cluster em todos os serviços e os pods.| 
 | Pacotes de idiomas atualizado disponível| Agora há 10 pacotes de idiomas disponíveis no marketplace do Gerenciador de extensões. Simplesmente, pesquise o idioma específico usando o marketplace de extensão e instalar. Depois de instalar o idioma selecionado, o Studio de dados do Azure solicitará que você reiniciar com a nova linguagem. |
 | Atualização do SQL Server Profiler | A extensão de perfil do SQL Server foi atualizada para incluir novos recursos, incluindo: <br/> &bull; &nbsp; Filtrando pelo nome do banco de dados <br/> &bull; &nbsp; Copie e cole o suporte <br/> &bull; &nbsp; Salvar/carregar filtro <br/>Encontre uma lista completa das melhorias para a extensão do SQL Server Profiler [aqui](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+SQL+Profiler%22+).  |
 | Código do Visual Studio versão de maio de mesclagem 1.35 | Melhorias mais recentes podem ser encontradas [aqui](https://code.visualstudio.com/updates/v1_35). |

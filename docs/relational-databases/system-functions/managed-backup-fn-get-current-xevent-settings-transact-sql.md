@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1fa350d9ff9d5e90eb595f1f693b8e62a46fa555
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4133f8bb64d5d7e2e2b511c2128b9ddbca1fa550
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741054"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910240"
 ---
 # <a name="managedbackupfngetcurrentxeventsettings-transact-sql"></a>managed_backup.fn_get_current_xevent_settings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ smart_admin.fn_get_current_xevent_settings ()
 ## <a name="table-returned"></a>Tabela retornada  
  A administração, as análises e os canais operacionais dos Eventos Estendidos são necessários, habilitados por padrão e não são configuráveis.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR(128)|Tipo de eventos estendidos|  
 |is_configurable|NVARCHAR(128)|Isso é definido como **verdadeira** se o evento for configurável, caso contrário ele definido como **falso**.|  

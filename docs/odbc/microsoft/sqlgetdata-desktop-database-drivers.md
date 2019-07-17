@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c9d9a32d-5dc2-4189-9bfb-2b008bc3d6a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6f362d725f8b734ab9ecdbdc79c268af08a495b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 086c5381f1801baf919508525c17faab93746ca0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003361"
 ---
 # <a name="sqlgetdata-desktop-database-drivers"></a>SQLGetData (Drivers de banco de dados de área de trabalho)
 Essa função pode recuperar dados de qualquer coluna, se ou não há colunas associadas e depois dela e independentemente da ordem na qual as colunas são recuperadas.  

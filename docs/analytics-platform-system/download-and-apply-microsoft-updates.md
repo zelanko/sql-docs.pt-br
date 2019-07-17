@@ -2,19 +2,18 @@
 title: Baixar atualizações da Microsoft - Analytics Platform System | Microsoft Docs
 description: Este tópico discute como baixar atualizações do catálogo do Microsoft Update para o Windows Server Update Services (WSUS) e aplicar essas atualizações para os servidores de dispositivo do Analytics Platform System. Microsoft Update instalará todas as atualizações aplicáveis do Windows e o SQL Server. O WSUS está instalado na máquina virtual VMM do dispositivo.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d71a6ddc965b422f0f96f40788352213501b4db2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78da7bd46282bb42bc3630c71c1cafd1ea0f11bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961043"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Baixe e aplique as atualizações da Microsoft para o Analytics Platform System
 Este tópico discute como baixar atualizações do catálogo do Microsoft Update para o Windows Server Update Services (WSUS) e aplicar essas atualizações para os servidores de dispositivo do Analytics Platform System. Microsoft Update instalará todas as atualizações aplicáveis do Windows e o SQL Server. O WSUS está instalado na máquina virtual VMM do dispositivo.  
@@ -26,7 +25,7 @@ Este tópico discute como baixar atualizações do catálogo do Microsoft Update
 >   
 > Não aplique Microsoft Updates enquanto o dispositivo está em uso. Aplicação de atualizações pode causar a nós de dispositivo a reinicialização. As atualizações devem ser aplicadas durante uma janela de manutenção quando o dispositivo não está sendo usado.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Pré-requisitos  
 Antes de executar essas etapas, você precisa:  
   
 -   Configurar o WSUS em seu dispositivo seguindo as instruções em [configurar o Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
@@ -65,7 +64,7 @@ Antes de executar essas etapas, você precisa:
   
 1.  No painel esquerdo do console do WSUS, clique em **todas as atualizações**.  
   
-2.  No **todas as atualizações** painel, clique no **aprovação** menu suspenso, defina **aprovação** para **qualquer exceto recusada**. Clique o **Status** menu suspenso, defina **Status** para **qualquer**. Clique em **Atualizar**.  
+2.  No **todas as atualizações** painel, clique no **aprovação** menu suspenso, defina **aprovação** para **qualquer exceto recusada**. Clique o **Status** menu suspenso, defina **Status** para **qualquer**. Cliquem em **Atualizar**.  
   
     Clique com botão direito do **Title** coluna e selecione **Status do arquivo** para verificar o status do arquivo após a conclusão do download.  
   
@@ -129,7 +128,7 @@ Antes de executar essas etapas, você precisa:
   
 8.  No **todas as atualizações** janela, defina **Status** para **falharam ou necessárias**.  
   
-9. Clique em **Atualizar**.  
+9. Cliquem em **Atualizar**.  
   
 10. Se **as atualizações necessárias** é maior que zero, contate o suporte para obter assistência.  
   

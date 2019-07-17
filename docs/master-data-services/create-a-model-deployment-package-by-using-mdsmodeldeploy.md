@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 37c7d590b58c5591a7ce441e8b9a3f202454f3f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b080e704abb4a187ad975f6b1b7b94334648f92b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906661"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Criar um pacote de implantação de modelo usando o MDSModelDeploy
 
@@ -30,7 +29,7 @@ ms.locfileid: "65487399"
   
  Se desejar implantar um pacote que contém apenas objetos de modelo, você poderá usar o assistente de implantação de modelo no aplicativo Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Para obter mais informações, consulte [Criar um pacote de implantação de modelo usando o assistente](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 1.  As permissões básicas exigidas para executar a ferramenta MDSModelDeploy são as seguintes:  

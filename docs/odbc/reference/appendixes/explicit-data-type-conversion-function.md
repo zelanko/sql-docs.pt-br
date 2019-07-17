@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77cb69877324b36120b3a277688bb1ad737f5c4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6982f7b7caa71abc08c5b84ef1bb6211dcadaecd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913609"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Função de conversão de tipo de dados explícitos
 Conversão de tipo de dados explícito é especificada em termos de definições de tipo de dados SQL.  
@@ -29,7 +28,7 @@ Conversão de tipo de dados explícito é especificada em termos de definições
   
  O formato do **converter** função é:  
   
- **CONVERT(** _value_exp_, _data_type_**)**  
+ **CONVERT(** _value_exp_, _data_type_ **)**  
   
  A função retorna o valor especificado por *value_exp* convertido especificado *data_type*, onde *data_type* é uma das seguintes palavras-chave:  
   
@@ -57,7 +56,7 @@ Conversão de tipo de dados explícito é especificada em termos de definições
   
  A sintaxe ODBC para a função de conversão de tipo de dados explícito não oferece suporte a especificação de formato de conversão. Se a especificação dos formatos explícitas tem suporte pela fonte de dados subjacente, um driver deve especificar um valor padrão ou implementar a especificação de formato.  
   
- O argumento *value_exp* pode ser um nome de coluna, o resultado de outra função escalar ou um numérico ou cadeia de caracteres literal. Por exemplo:   
+ O argumento *value_exp* pode ser um nome de coluna, o resultado de outra função escalar ou um numérico ou cadeia de caracteres literal. Por exemplo:  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  

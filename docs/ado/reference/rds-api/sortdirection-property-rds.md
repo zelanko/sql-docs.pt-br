@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dccaa1974b685c7d889f287cf4a1b0312aa87acd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28f0e247c29673fe4dfec507794ad8977b51fcc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963413"
 ---
 # <a name="sortdirection-property-rds"></a>Propriedade SortDirection (RDS)
 Indica se uma ordem de classificação é crescente ou decrescente.  
@@ -38,7 +37,7 @@ DataControl.SortDirection = value
  *DataControl*  
  Uma variável de objeto que representa um [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
   
- *Value*  
+ *Valor*  
  Um **Boolean** valor que, quando definido como **verdadeiro**, indica a direção de classificação é crescente. **False** indica a ordem decrescente.  
   
 ## <a name="remarks"></a>Comentários  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 68905871b28eae34a3adf91111be60ec10d1fff8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f01d93394caf538931fc60e9d3484792e225a74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074447"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>Atualizando dados (suplemento MDS para Excel)
 
@@ -46,7 +45,7 @@ ms.locfileid: "65485992"
 ## <a name="how-to-refresh-mds-managed-data"></a>Como atualizar dados gerenciados no MDS  
  No grupo **Conectar e Carregar** na faixa de opções, o botão **Atualizar** tem duas opções: **Atualizar Tudo** e **Atualizar Seleção**. A ação padrão do botão de faixa de opções é **Atualizar Tudo**. Para atualizar a planilha inteira com os valores do servidor, clique no botão **Atualizar** ou escolha a opção **Atualizar Tudo** . Para atualizar somente algumas células de uma planilha, selecione as células (deve ser uma seleção contígua) e escolha a opção **Atualizar Seleção** .  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

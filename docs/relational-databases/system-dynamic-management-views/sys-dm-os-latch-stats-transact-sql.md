@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eb61a77aca509393143d4abae98af0a9efb5e888
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MT
+ms.openlocfilehash: 0b7650dc05118de5c07e7d12a7a77a9c2f9d6652
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900076"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "63047993"
 ## <a name="permissions"></a>Permissões  
 
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
+Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer a permissão `VIEW DATABASE STATE` no banco de dados.   
   
 ## <a name="remarks"></a>Comentários  
  sys.dm_os_latch_stats pode ser usado para identificar a origem de uma contenção de travamento, examinando os números e os tempos de espera relativos para as diferentes classes de trava. Em algumas situações, talvez seja possível resolver ou reduzir contenção de trava. Entretanto, pode haver situações em que seja necessário contatar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Serviço de Atendimento ao Cliente.  

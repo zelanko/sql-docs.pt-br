@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 52ede9c21077c81dd1bd90f12acbfc3dff796d50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9524e9801f284d3dff3125b850cdd1fd32a361a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928642"
 ---
 # <a name="cellset-object-ado-md"></a>Objeto Cellset (ADO MD)
 Representa os resultados de uma consulta multidimensional. É uma coleção de células selecionadas de cubos ou outros conjuntos de células.  

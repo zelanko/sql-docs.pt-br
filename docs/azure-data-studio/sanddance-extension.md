@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 466b2b60548d1dcef104979d1e291d44bf53b3de
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: a96bde6a66642bf02cc076c3d4d4f3ac44e02a3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67563985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959337"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance para o Studio de dados do Azure (visualização)
 O estúdio de dados do Azure agora oferece uma maneira de criar visualizações rápidas para os arquivos. csv e tsv que você está trabalhando. Isso inclui arquivos locais ou arquivos no HDFS em seu Cluster de dados grande do SQL Server de 2019. Essa extensão é útil quando você está tentando ter uma rápida de examinar os dados e entender o que está acontecendo. Usamos uma tecnologia chamada SandDance da Microsoft Research, que pode gerar visualizações no local dos dados.
@@ -34,7 +33,7 @@ A partir do menu Arquivo, use Abrir pasta ou [Ctrl + K, Ctrl + O] para abrir o d
 
 Clique com botão direito em um arquivo. csv ou tsv no HDFS se você está conectado ao Cluster de Big Data do SQL Server de 2019 e escolha *modo de exibição no SandDance*.
 
-## <a name="known-issues"></a>Problemas conhecidos
+## <a name="known-issues"></a>Problemas Conhecidos
 
 No momento, seus dados devem ter a primeira coluna como um identificador exclusivo.
 

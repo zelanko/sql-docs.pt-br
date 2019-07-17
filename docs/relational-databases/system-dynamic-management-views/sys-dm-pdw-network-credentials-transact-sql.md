@@ -11,25 +11,24 @@ dev_langs:
 ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d9e18284ac4d97efaa217802682fe79ebb2dfc5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b75eb53da9961025e3310f27e4a12608dd4fda78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899356"
 ---
 # <a name="sysdmpdwnetworkcredentials-transact-sql"></a>sys.dm_pdw_network_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Retorna uma lista de todas as credenciais de rede armazenada do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance para todos os servidores de destino. Os resultados são listados para o nó de controle e cada nó de computação.  
   
-|Nome da coluna|Tipo de Dados|Descrição|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |pdw_node_id|**int**|Id numérico exclusivo associado ao nó.|  
 |target_server_name|**nvarchar(32)**|Endereço IP do servidor de destino que [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] acessará usando as credenciais de nome de usuário e senha.|  
-|username|**nvarchar(32)**|O nome de usuário para o qual a senha é armazenada.|  
+|Nome de Usuário|**nvarchar(32)**|O nome de usuário para o qual a senha é armazenada.|  
 |last_modified|**datetime**|Data e hora da última operação que modificou a credencial.|  
   
 ## <a name="permissions"></a>Permissões  

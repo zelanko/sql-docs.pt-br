@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c9c980e293b06e7fa9642ace7d425b7ffd3c0197
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba441a52958e423308e648f15dd36e14d6d1d895
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918473"
 ---
 # <a name="helpcontext-helpfile-properties"></a>Propriedades HelpContext, HelpFile
 Indica o arquivo de Ajuda e o tópico associado a um [erro](../../../ado/reference/ado-api/error-object.md) objeto.  

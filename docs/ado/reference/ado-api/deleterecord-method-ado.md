@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f67f074596bfcf93eb7017a7afe273285f721aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919079"
 ---
 # <a name="deleterecord-method-ado"></a>Método DeleteRecord (ADO)
 Exclui uma entidade representada por uma [registro](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -35,7 +34,7 @@ Record.DeleteRecord Source, Async
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Origem*  
+ *Source*  
  Opcional. Um **cadeia de caracteres** valor que contém uma URL que identifica a entidade (por exemplo, o arquivo ou diretório) a ser excluído. Se *fonte* for omitido ou especifica uma cadeia de caracteres vazia, a entidade representada por atual [registro](../../../ado/reference/ado-api/record-object-ado.md) é excluído. Se o registro é um registro de coleção ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) dos **adCollectionRecord**, como um diretório) todos os filhos (por exemplo, subdiretórios) também serão excluídos.  
   
  *Async*  

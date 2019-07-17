@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34680d0af0e8c69bca15e4e93cddbe6b2a3386cb
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946209"
 ---
 # <a name="type-system-xquery"></a>Sistema de tipos (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +96,7 @@ SELECT @x.query( '/a[1] instance of element()')
 > [!NOTE]  
 >  Quando você está consultando uma instância XML digitada e a expressão de consulta inclui o eixo pai, as informações do tipo estática dos nós resultantes não estarão mais disponíveis. Porém, o tipo dinâmico ainda está associado com os nós.  
   
-## <a name="typed-value-vs-string-value"></a>Valor com tipo versus valor de cadeia de caracteres  
+## <a name="typed-value-vs-string-value"></a>Valor com tipo versus. Valor da cadeia de caracteres  
  Todo nó tem um valor digitado e um valor de cadeia de caracteres. Para os dados XML digitados, o tipo do valor digitado é fornecido pela coleção de esquemas XML associada à coluna ou variável sendo consultada. Para dados XML não tipados, é o tipo do valor digitado **XDT: untypedatomic**.  
   
  Você pode usar o **Data ()** ou **String ()** função para recuperar o valor de um nó:  
@@ -106,7 +105,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 -   O [função de cadeia de caracteres &#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md) retorna o valor de cadeia de caracteres do nó.  
   
- Na coleção de esquemas XML a seguir, o elemento <`root`> do tipo inteiro é definida:  
+ Na seguinte coleção de esquemas XML, o <`root`> elemento do tipo inteiro é definido:  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 64e8a75df1cfda03d0f90e1debb6fcbab750eaf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2598634f239c738e0287caa9706aad497cb706a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906313"
 ---
 # <a name="delete-an-entity-master-data-services"></a>Excluir uma entidade (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65478210"
 > [!NOTE]  
 >  Serão excluídos permanentemente os membros da entidade de todas as versões.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  

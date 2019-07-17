@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 56e09dc849223832bbd65c09c16e1f6aeed09e17
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: d64f3e03db3eaf12755eb36d41814d4548a2ae52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079405"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

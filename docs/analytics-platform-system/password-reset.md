@@ -2,19 +2,18 @@
 title: Redefinição de senha - Analytics Platform System | Microsoft Docs
 description: A página de redefinição de senha permite que você altere a senha para as contas de administrador usada pelo sistema de plataforma de análise.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5fb3bbb5adba5754c220c34503a22656f6da39c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960469"
 ---
 # <a name="password-reset---analytics-platform-system"></a>Redefinição de senha - Analytics Platform System
 O **redefinição de senha** página permite que você altere a senha para as contas de administrador usada pelo sistema de plataforma de análise.  
@@ -24,7 +23,7 @@ O **redefinição de senha** página permite que você altere a senha para as co
   
 Você recebe as senhas do Analytics Platform System quando o dispositivo é entregue. Sempre altere as senhas para novos valores quando você assume a responsabilidade para o seu dispositivo. Há três senhas para atualizar. As senhas não precisa ser o mesmo que uns aos outros.  
   
-**F<*xxxx*>\Administrator**  
+**F <*xxxx*> \administrator.**  
 O **administrador** do domínio do dispositivo.  
   
 **.\Administrator**  

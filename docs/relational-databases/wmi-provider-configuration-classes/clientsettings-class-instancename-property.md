@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 58dacb4a-751a-491f-9adb-88ec6afc797c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0ae187e69973a53ffb0afd7ee972fbb9817527e3
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: aa006ea5fa97609d39aa0809ba0467bffa630b80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905307"
 ---
 # <a name="clientsettings-class---instancename-property"></a>Classe ClientSettings – Propriedade InstanceName
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ object.InstanceName [= value]
  *object*  
  Um objeto do **ClientSettings** que representa configurações em uma instância de cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
  Um valor da cadeia de caracteres que especifica o nome da instância do cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="remarks"></a>Comentários  

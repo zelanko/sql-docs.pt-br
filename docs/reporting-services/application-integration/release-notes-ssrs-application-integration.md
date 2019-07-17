@@ -9,18 +9,38 @@ ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
 ms.reviewer: maghan
 author: RhysSchmidtke
 ms.author: rhys
-ms.openlocfilehash: d6d4da6d5574288fa66ea18a9c63b1488a6abcca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1528358c8aff5d6e99869f0f4f8c1676ee2d5e75
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226000"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730910"
 ---
 # <a name="release-notes-for-the-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>Notas de versão para os controles de Visualizador de relatórios para WebForms e WinForms do SSRS
 
 Essas são as notas de versão para os controles de Visualizador de relatórios de WebForms e WinForms, relacionados ao [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS).
 
 Para obter as notas de versão para o SSRS, consulte [notas de versão para o SQL Server Reporting Services (SSRS) 2017 e posterior](../release-notes-reporting-services.md).
+
+## <a name="15013580"></a>150.1358.0
+| Alterar descrição | Detalhes |
+| :----------------- | :------ |
+| Correções de bugs | Reverter uma alteração que removido Microsoft.ReportViewer.Design assemblies de referências do projeto. |
+|           | Como parte de outras alterações, os dois assemblies foram alterados de versão 15.0 a 15.3. Isso foi revertido. |
+| &nbsp; | &nbsp; |
+
+## <a name="15013570"></a>150.1357.0
+| Alterar descrição | Detalhes |
+| :----------------- | :------ |
+| Correções de bugs  | Visualização de impressão apropriada para o monitor de DPI alto |
+|            | Caixa de diálogo Imprimir mostraria fora do espaço visível |
+|            | Grande número de parâmetros resultou em barras de rolagem de parâmetro e listas suspensas não está funcionando corretamente |
+|            | Corrigido o problema com os parâmetros de tempo de Null e data |
+|            | JQuery atualizado para a versão 3.3.1 |
+|            | Corrigido sobrepor células tablix em renderização HTML |
+|            | Removido o projeto referencia para eliminar os assemblies incorretos do VS que está sendo adicionados aos projetos de tempo de design |
+|            | Correção de acessibilidade para a barra de ferramentas narrar somente para itens do Active Directory |
+| &nbsp; | &nbsp; |
 
 ## <a name="15900148"></a>15.900.148
 

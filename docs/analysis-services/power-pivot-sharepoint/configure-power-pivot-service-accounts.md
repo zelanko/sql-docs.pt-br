@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 55eb472ef14e980f77a47a2c6989031cebec91e9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509547"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208300"
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Configurar contas de serviço Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52509547"
   
  Uma vez definidas as contas de serviço, as alterações em qualquer uma delas deverão ser feitas através da Administração Central do SharePoint. Se você usar ferramentas alternativas (como o aplicativo de console Serviços, o Gerenciador do IIS ou o SQL Server Configuration Manager), as permissões não serão atualizadas para acesso a banco de dados no farm ou para acesso a arquivo local no servidor físico.  
   
- Este tópico contém as seguintes seções:  
+ Esse tópico contém as seguintes seções:  
   
  [Atualizar uma senha expirada para a instância do SQL Server Analysis Services (Power Pivot)](#bkmk_passwordssas)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "52509547"
   
 ##  <a name="bkmk_passwordssas"></a> Atualizar uma senha expirada para a instância do SQL Server Analysis Services (Power Pivot)  
   
-1.  Aponte para Iniciar, clique em **Ferramentas Administrativas**e em **Serviços**. Clique duas vezes em **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**. Clique em **Logon**e digite a nova senha da conta.  
+1.  Aponte para Iniciar, clique em **Ferramentas Administrativas**e em **Serviços**. Clique duas vezes em **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** . Clique em **Logon**e digite a nova senha da conta.  
   
 2.  Na Administração Central, na seção Segurança, clique em **Configurar contas gerenciadas**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52509547"
   
 3.  Em **Selecione uma conta para esse serviço**, escolha uma conta gerenciada existente ou crie uma nova. A conta deve ser uma conta de usuário de domínio.  
   
-4.  Selecione **Pool de Aplicativos de Serviço - Sistema de Serviços Web do SharePoint** para alterar a identidade do pool de aplicativos do aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] padrão. Dependendo em como sua instalação foi configurada, o serviço pode estar em execução sob um pool de aplicativos de serviço existente criado para os serviços do SharePoint. Por padrão, a Ferramenta de configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] registra o serviço como **Aplicativo de Serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Padrão (Aplicativo de Serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**.  
+4.  Selecione **Pool de Aplicativos de Serviço - Sistema de Serviços Web do SharePoint** para alterar a identidade do pool de aplicativos do aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] padrão. Dependendo em como sua instalação foi configurada, o serviço pode estar em execução sob um pool de aplicativos de serviço existente criado para os serviços do SharePoint. Por padrão, a Ferramenta de configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] registra o serviço como **Aplicativo de Serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Padrão (Aplicativo de Serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** .  
   
      Se o serviço tiver sido configurado manualmente por um administrador do SharePoint, ele provavelmente terá seu próprio pool de aplicativos de serviço.  
   
@@ -113,14 +113,14 @@ ms.locfileid: "52509547"
 |Requisito de provisionamento|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] O Serviço do Sistema é um recurso compartilhado no farm que fica disponível quando você cria um aplicativo de serviço. O pool de aplicativos de serviço deve ser especificado quando o aplicativo de serviço é criado. Ele pode ser especificado de dois modos: usando a Ferramenta de configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou por comandos do PowerShell.<br /><br /> Você pode ter configurado a identidade do pool de aplicativos para executar sob uma conta exclusiva. Porém, se você não fez isso, considere alterá-la agora para ser executado sob uma conta diferente.|  
 |Requisito da conta de usuário de domínio|A identidade do pool de aplicativos deve ser uma conta de usuário de domínio do Windows. São proibidas contas de máquinas internas (como Serviço de Rede ou Serviço Local).|  
 |Requisitos de permissão|Esta conta não precisa de permissões de Administrador do sistema local no computador. Entretanto, essa conta deve ter permissões de administrador de sistema do Analysis Services no [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] local instalado no mesmo computador. Essas permissões são concedidas automaticamente pela Instalação do SQL Server, ou quando você define ou altera a identidade de pool e aplicativos na Administração Central.<br /><br /> Permissões administrativas são necessárias para encaminhar consultas ao [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. Elas também são necessárias para monitorar a integridade, fechar sessões inativas e escutar eventos de rastreamento.<br /><br /> A conta precisa ter permissões de conexão, leitura e gravação no banco de dados do aplicativo do serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Essas permissões são concedidas automaticamente quando o aplicativo é criado e são atualizadas automaticamente quando você altera as contas ou senhas na Administração Central.<br /><br /> O aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] verificará se um usuário do SharePoint está autorizado a exibir dados antes de recuperar o arquivo, mas ele não representa o usuário. Não há requisitos de permissão para representação.|  
-|Requisitos de expansão|Nenhum.|  
+|Requisitos de expansão|nenhuma.|  
   
 ##  <a name="updatemanually"></a> Solução de problemas: Conceder permissões administrativas manualmente  
  As permissões administrativas não atualizarão se a pessoa que atualiza as credenciais não for um administrador local no computador. Se isto ocorrer, você poderá conceder permissões administrativas manualmente. O modo mais fácil de fazer isto é executar o trabalho do temporizador de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] na Administração Central. Com esta abordagem, você pode reiniciar permissões para todos os servidores do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no farm. Observe que esta abordagem somente funcionará se o trabalho de timer do SharePoint estiver sendo executado como administrador de farm e como administrador local no computador.  
   
 1.  Em Monitoração, clique em **Revisar definições de trabalho**.  
   
-2.  Selecione **Trabalho do temporizador de configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+2.  Selecione **Trabalho do temporizador de configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 3.  Clique em **Executar Agora**.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "52509547"
   
 3.  Clique em **Segurança**.  
   
-4.  Clique em **Adicionar**.  
+4.  Clique em **Adicionar** .  
   
 5.  Digite o nome da conta que é usada para o pool de aplicativos do serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e clique em **OK**.  
   
@@ -146,11 +146,11 @@ ms.locfileid: "52509547"
   
 9. Clique duas vezes em SQLServerMSASUser$\<servername > $PowerPivot.  
   
-10. Clique em **Adicionar**.  
+10. Clique em **Adicionar** .  
   
 11. Digite o nome da conta que é usada para o pool de aplicativos do serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e clique em **OK**.  
   
-##  <a name="expired"></a> Solução de problemas: resolver erros HTTP 503 devido a senhas expiradas para Administração Central ou serviço do aplicativo Web do Microsoft SharePoint Foundation  
+##  <a name="expired"></a> Solução de problemas: Resolver HTTP serviço do aplicativo Web de 503 erros devido a senhas expiradas para Administração Central ou o SharePoint Foundation  
  Se o serviço da Administração Central ou o serviço do aplicativo Web do Microsoft SharePoint Foundation deixar de funcionar devido a uma redefinição de conta ou expiração de senha, você receberá a mensagem de erro HTTP 503 "Serviço não disponível" ao tentar abrir a Administração Central do SharePoint ou um site do SharePoint. Siga estas etapas para colocar o servidor online novamente. Quando a Administração Central estiver disponível, você poderá continuar atualizando informações de conta expiradas.  
   
 1.  Em Ferramentas administrativas, clique em **Gerenciador dos Serviços de Informações da Internet**.  

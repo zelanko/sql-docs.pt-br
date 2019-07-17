@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e8c84237113696df7dba0559602f5ec07ec13e2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35e68ce4e92a9de688ab686af7244dc6b597989c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911437"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>Tabela de preparo de membros consolidados (Master Data Services)
 
@@ -39,8 +38,8 @@ ms.locfileid: "65484377"
 |**BatchTag**<br /><br /> Necessário, exceto pelo serviço Web|Um nome exclusivo para o lote, de até 50 caracteres.|  
 |**HierarchyName**<br /><br /> Obrigatório|O nome da hierarquia explícita. Cada membro consolidado pode pertencer a apenas uma hierarquia.|  
 |**ErrorCode**|Exibe um código de erro. Para todos os registros com um **ImportStatus_ID** de **2**, consulte [Erros de processo de preparo &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md).|  
-|**Code**<br /><br /> Obrigatório, exceto quando códigos são gerados automaticamente para **ImportType1** ou **2**; consulte [Criação automática de código &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md) para obter mais informações|Um código exclusivo para o membro.|  
-|**Nome**<br /><br /> Opcional|Um nome para o membro.|  
+|**Código**<br /><br /> Obrigatório, exceto quando códigos são gerados automaticamente para **ImportType1** ou **2**; consulte [Criação automática de código &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md) para obter mais informações|Um código exclusivo para o membro.|  
+|**Name**<br /><br /> Opcional|Um nome para o membro.|  
 |**NewCode**|Use apenas se você estiver alterando o código do membro.|  
 |\<Nome do atributo>|Existe uma coluna para cada atributo da entidade. Use com um **ImportType** de **0** ou **2**. Para atributos de forma livre, especifique o novo texto ou valor da cadeia de caracteres para o atributo. Para atributos baseados em domínio, especifique o código do membro que será o atributo. Para atributos de link, a URL deve iniciar com **https://** .<br /><br /> <br /><br /> Observação: Não é possível preparar atributos de arquivo.|  
   

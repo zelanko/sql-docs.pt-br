@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 06e538ebbdab9d6438182eaa0b61d44818286547
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: e5f14f79c355317f5e5d7a047b2d2c1ca71a4acb
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62796016"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262963"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Mapeamento de tipos de dados do Oracle e do SQL Server (OracleToSQL)
 Os tipos de banco de dados Oracle variam de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de banco de dados. Quando você converte objetos de banco de dados Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, você deve especificar como mapear tipos de dados do Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode aceitar os mapeamentos de tipo de dados padrão, ou você pode personalizar os mapeamentos conforme mostrado nas seções a seguir.  
@@ -51,7 +51,7 @@ O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco d
   
 2.  Para adicionar um novo mapeamento, faça o seguinte:  
   
-    1.  Clique em **Adicionar**.  
+    1.  Clique em **Adicionar** .  
   
     2.  Sob **tipo de fonte**, selecione o tipo de dados Oracle para mapear.  
   

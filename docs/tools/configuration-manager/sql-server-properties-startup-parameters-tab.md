@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: ea089a65065aedac59eb7cac7308acdab097ff47
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: MTE75
+ms.openlocfilehash: f1a48d9b2892033ee0e6203800a5b30cbd45b7c3
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213065"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731930"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propriedades do SQL Server (guia Parâmetros de Inicialização)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "53213065"
  Para obter mais informações sobre como mover o banco de dados mestre, consulte o tópico "Movendo bancos de dados do sistema" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="optional-parameters"></a>Parâmetros opcionais  
- Todos os parâmetros de inicialização com suporte são descritos no tópico "Usando as opções de inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ", nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um parâmetro de inicialização -T*trace#* indica que uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser iniciada com um sinalizador de rastreamento (*trace#*) em vigor. São usados sinalizadores de rastreamento para iniciar o servidor com comportamento fora do padrão. Para obter mais informações sobre sinalizadores de rastreamento, confira o tópico "Sinalizadores de rastreamento ([!INCLUDE[tsql](../../includes/tsql-md.md)])" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Todos os parâmetros de inicialização com suporte são descritos no tópico "Usando as opções de inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ", nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um parâmetro de inicialização -T*trace#* indica que uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser iniciada com um sinalizador de rastreamento (*trace#* ) em vigor. São usados sinalizadores de rastreamento para iniciar o servidor com comportamento fora do padrão. Para obter mais informações sobre sinalizadores de rastreamento, confira o tópico "Sinalizadores de rastreamento ([!INCLUDE[tsql](../../includes/tsql-md.md)])" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!CAUTION]  
 >  Talvez você veja parâmetros de inicialização e sinalizadores de rastreamento adicionais não documentados na Internet. Os parâmetros de inicialização e os indicadores de rastreamento não documentados são criados para resolver problemas ou para forçar determinas condições necessárias para testes. O uso de parâmetros de inicialização não documentados pode ter resultados inesperados. Não use parâmetros não documentados a não ser quando direcionado pelos Serviços de Atendimento ao Cliente da Microsoft.  
@@ -80,6 +80,6 @@ ms.locfileid: "53213065"
 -   A conta de domínio usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] estiver configurado para ser executado em uma conta de domínio.  
   
 ## <a name="books-online-references"></a>Referências dos Manuais Online  
- Para obter informações adicionais sobre os parâmetros de inicialização [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira "Como: configurar opções de inicialização do servidor ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Gerenciador de Configurações)" nos Manuais Online [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para obter mais informações sobre os parâmetros de inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira "Como configurar as opções de inicialização do servidor (Configuration Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   

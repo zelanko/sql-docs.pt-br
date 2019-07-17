@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48554e48d09822b23320d36080084d4947882736
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 4ff8d99bd31e2638aa63393fb5ba052f442bf75f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936891"
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="arguments"></a>Argumentos  
 *sql_handle*  
-É um token que identifica exclusivamente um lote que foi executado ou está em execução atualmente. *sql_handle* is **varbinary(64)**. 
+É um token que identifica exclusivamente um lote que foi executado ou está em execução atualmente. *sql_handle* está **varbinary(64)** . 
 
 O *sql_handle* pode ser obtido dos seguintes objetos de gerenciamento dinâmico:  
   
@@ -59,7 +58,7 @@ O *sql_handle* pode ser obtido dos seguintes objetos de gerenciamento dinâmico:
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
   
 *plan_handle*  
-É um token que identifica exclusivamente um plano de execução de consulta para um lote que foi executado e seu plano reside no cache de plano ou em execução no momento. *plan_handle* is **varbinary(64)**.   
+É um token que identifica exclusivamente um plano de execução de consulta para um lote que foi executado e seu plano reside no cache de plano ou em execução no momento. *plan_handle* está **varbinary(64)** .   
 
 O *plan_handle* pode ser obtido dos seguintes objetos de gerenciamento dinâmico:    
   
@@ -80,7 +79,7 @@ O *plan_handle* pode ser obtido dos seguintes objetos de gerenciamento dinâmico
 |**dbid**|**smallint**|ID do banco de dados.<br /><br /> Para instruções SQL preparadas e ad hoc, a ID do banco de dados no qual as instruções foram compiladas.|  
 |**objectid**|**int**|ID do objeto.<br /><br /> É NULL para instruções SQL ad hoc e preparadas.|  
 |**number**|**smallint**|Para um procedimento armazenado numerado, esta coluna retorna o número do procedimento armazenado. Para obter mais informações, consulte [numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> É NULL para instruções SQL ad hoc e preparadas.|  
-|**encrypted**|**bit**|1 = O texto SQL é criptografado.<br /><br /> 0 = O texto SQL não é criptografado.|  
+|**Criptografado**|**bit**|1 = O texto SQL é criptografado.<br /><br /> 0 = O texto SQL não é criptografado.|  
 |**text**|**nvarchar(max** **)**|Texto da consulta SQL.<br /><br /> É NULL para objetos criptografados.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -133,7 +132,7 @@ Adquirir o **sql_handle** partir **. DM exec_requests**. Em seguida, passe o **s
          ```      
     
   
-### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>b. Obter informações sobre as cinco principais consultas por tempo médio de CPU  
+### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. Obter informações sobre as cinco principais consultas por tempo médio de CPU  
  O exemplo a seguir retorna o texto da instrução SQL e o tempo médio de CPU das cinco primeiras consultas.  
   
 ```sql  

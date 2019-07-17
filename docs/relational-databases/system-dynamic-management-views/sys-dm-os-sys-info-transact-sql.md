@@ -21,21 +21,20 @@ helpviewer_keywords:
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4323fd5542216550013624dc75a6428cd1a8cd0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c56eeab15da21b4c202cd217b0df009db1391616
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663585"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265667"
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Retorna um conjunto diverso de informações úteis sobre o computador e sobre os recursos disponíveis e consumidos pelo [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
   
-> **Observação:** chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_sys_info**.  
+> **OBSERVAÇÃO:** Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_sys_info**.  
   
 |Nome da coluna|Tipo de dados|Descrição e notas de versão específica |  
 |-----------------|---------------|-----------------|  
@@ -73,18 +72,18 @@ ms.locfileid: "51663585"
 |**virtual_machine_type_desc**|**nvarchar(60)**|**Aplica-se a:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Descreve o **virtual_machine_type** coluna. Não permite valor nulo.<br /><br /> NONE = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não está em execução em uma máquina virtual.<br /><br /> HYPERVISOR = o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução dentro de um hipervisor, o que implica uma virtualização assistida por hardware. Quando a função Hyper-V é instalada, o hipervisor hospeda o sistema operacional, para que uma instância em execução no sistema operacional host esteja em execução no hipervisor.<br /><br /> OTHER = o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução dentro de uma máquina virtual que não usa assistente de hardware, como o Microsoft Virtual PC.|  
 |**softnuma_configuration**|**int**|**Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Especifica que os nós NUMA forma são configurados. Não permite valor nulo.<br /><br /> 0 = OFF indica o padrão de hardware<br /><br /> 1 = automatizado soft-NUMA<br /><br /> 2 = soft-NUMA manual por meio do registro|  
 |**softnuma_configuration_desc**|**nvarchar(60)**|**Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> OFF = Soft-NUMA recurso está desativado<br /><br /> NA = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determina automaticamente os tamanhos de nó para o Soft-NUMA<br /><br /> MANUAL = soft-NUMA configurado manualmente|
-|**process_physical_affinity**|**nvarchar(3072)** |**Aplica-se a:** começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].<br /><br />Informações ainda por vir. |
+|**process_physical_affinity**|**nvarchar(3072)** |**Aplica-se a:** Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].<br /><br />Informações ainda por vir. |
 |**sql_memory_model**|**int**|**Aplica-se a:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Especifica o modelo de memória usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para alocar memória. Não permite valor nulo.<br /><br />1 = o modelo de memória convencional<br />2 = bloquear páginas na memória<br /> 3 = páginas grandes na memória|
 |**sql_memory_model_desc**|**nvarchar(120)**|**Aplica-se a:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Especifica o modelo de memória usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para alocar memória. Não permite valor nulo.<br /><br />**CONVENCIONAL**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está usando o modelo de memória convencional para alocar memória. Isso é a memória sql padrão de modelo quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta de serviço não tem bloquear páginas na privilégios de memória durante a inicialização.<br />**LOCK_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está usando bloquear páginas na memória para alocar memória. Isso é o Gerenciador de memória do sql padrão, quando a conta de serviço do SQL Server possuem bloquear páginas na privilégio de memória durante a inicialização do SQL Server.<br /> **LARGE_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está usando páginas grandes na memória para alocar memória. SQL Server usa um alocador de páginas grandes para alocar memória com o Enterprise edition, quando a conta de serviço do SQL Server possuem bloquear páginas na privilégio de memória durante a inicialização do servidor e 834 do sinalizador de rastreamento está ativado.|
 |**pdw_node_id**|**int**|**Aplica-se a:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
-|**socket_count** |**int** | **Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Especifica o número de soquetes de processador disponíveis no sistema. |  
-|**cores_per_socket** |**int** | **Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Especifica o número de processadores por soquete disponível no sistema. |  
-|**numa_node_count** |**int** | **Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Especifica o número de nós de numa disponíveis no sistema. Esta coluna inclui nós numa físicos, bem como nós soft-numa. |  
+|**socket_count** |**int** | **Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Especifica o número de soquetes de processador disponíveis no sistema. |  
+|**cores_per_socket** |**int** | **Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Especifica o número de processadores por soquete disponível no sistema. |  
+|**numa_node_count** |**int** | **Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Especifica o número de nós de numa disponíveis no sistema. Esta coluna inclui nós numa físicos, bem como nós soft-numa. |  
   
 ## <a name="permissions"></a>Permissões
 
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` permissão no banco de dados. Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e básica, requer a **administrador de servidor** ou uma **administrador do Active Directory do Azure** conta.   
 
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

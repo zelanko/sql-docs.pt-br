@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 44da7e087cc5439e0424398128e55f6e770142c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee0a3d6bc4acb276f1915954f0f1b540419993b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906487"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Caixa de diálogo Criar Site (Gerenciador de Configuração do Master Data Services)
 
@@ -40,7 +39,7 @@ ms.locfileid: "65487780"
   
 |Nome do controle|Descrição|  
 |------------------|-----------------|  
-|**Nome**|Digite um nome amigável e exclusivo para um novo pool de aplicativos ou use o nome padrão que é fornecido. O aplicativo Web raiz desse site executa nesse pool de aplicativos.<br /><br /> Os pools de aplicativos fornecem limites que impedem que os aplicativos em um pool de aplicativos afetem aplicativos em outro pool de aplicativos.|  
+|**Name**|Digite um nome amigável e exclusivo para um novo pool de aplicativos ou use o nome padrão que é fornecido. O aplicativo Web raiz desse site executa nesse pool de aplicativos.<br /><br /> Os pools de aplicativos fornecem limites que impedem que os aplicativos em um pool de aplicativos afetem aplicativos em outro pool de aplicativos.|  
 |**Nome de usuário**|Digite um domínio e nome de usuário do Active Directory. Essa conta de serviço é a identidade do pool de aplicativos no qual o aplicativo Web é executado.<br /><br /> Essa conta é adicionada à função de banco de dados mds_exec no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para acesso ao banco de dados. Para obter mais informações, veja [Logons, usuários e funções de banco de dados &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md). Também é adicionada a um grupo do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] no Windows, **MDS_ServiceAccounts**, que recebe permissão para o diretório temporário de compilação, **MDSTempDir**, no sistema de arquivos. Para obter mais informações, veja [Permissões de pasta e arquivo &#40;Master Data Services&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md).|  
 |**Senha**|Digite a senha da conta de usuário especificada.|  
 |**Confirmar senha**|Digite novamente a senha da conta de usuário especificada. Os campos **Senha** e **Confirmar senha** devem conter a mesma senha.|  

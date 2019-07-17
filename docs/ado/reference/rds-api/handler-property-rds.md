@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6b538767f62a3d80b9cf2cd9b558f14c5de91549
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7423879b8263d87575d913c4863143faf3573e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964003"
 ---
 # <a name="handler-property-rds"></a>Propriedade Handler (RDS)
 Indica o nome de um programa de personalização do lado do servidor (manipulador) que estende a funcionalidade dos [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)e os parâmetros usados pelo *manipulador*.  
@@ -40,7 +39,7 @@ DataControl.Handler = String
  *DataControl*  
  Uma variável de objeto que representa um [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
   
- *String*  
+ *Cadeia de caracteres*  
  Um **cadeia de caracteres** valor que contém o nome do manipulador e os parâmetros, todos separados por vírgulas (por exemplo, `"handlerName,parm1,parm2,...,parm` *N*`"`).  
   
 ## <a name="remarks"></a>Comentários  

@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: e0f611ac-7b67-4245-8d1c-804c1c44c935
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d0c2fa02eaf5ec72c31bd733401ff93ee259a9cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e460a5b571988de65f1d3921f73f011520e6ca15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929447"
 ---
-# <a name="project-settings-gui-accesstosql"></a>Project Settings (GUI) (AccessToSQL)
+# <a name="project-settings-gui-accesstosql"></a>Configurações de projeto (GUI) (AccessToSQL)
 As configurações de projeto GUI permitem que você configure como os dados aparecem na **dados** guia e se é preciso incluir relatórios de dados com relatórios de avaliação.  
   
 O painel de interface gráfica do usuário está disponível na **configurações do projeto** e **configurações do projeto padrão** caixas de diálogo.  
@@ -40,5 +39,5 @@ Configura o número de linhas de dados exibidos na **dados** guia da tabela de d
 **Mostrar relatório após a conversão**  
 Para exibir um relatório depois de converter esquemas, selecione True. O relatório de conversão resultante contém o mesmo layout e informações que o relatório de avaliação.  
   
-**Default**: Falso  
+**Default**: False  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2bd552b6d364bcfd2ccc9f2b9505c54df38a4fae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c309319ceb81e9af4a8b84d0b96537d0be933e32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694733"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918346"
 ---
 # <a name="item-property-example-vb"></a>Exemplo da propriedade Item (VB)
 Este exemplo demonstra como o [Item](../../../ado/reference/ado-api/item-property-ado.md) propriedade acessa os membros de uma coleção. O exemplo abre o ***autores*** tabela da ***Pubs*** banco de dados com um comando com parâmetros.  

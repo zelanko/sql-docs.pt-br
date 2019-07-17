@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1ad1a0935c084aab515d6e91181695af55860773
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9822b9f4b26897b1162a336b1adaa6f38c5ff117
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025065"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Criar e publicar uma regra de negócio (Master Data Services)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65489611"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie uma regra de negócio para garantir a exatidão de seus dados mestres. Depois de ser criada, uma regra deve ser publicada para poder ser aplicada aos dados.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
@@ -46,7 +45,7 @@ ms.locfileid: "65489611"
   
 5.  Na lista suspensa **Tipo de Membro** , selecione um tipo de membro para aplicar a regra de negócio.  
   
-6.  Clique em **Adicionar**.  
+6.  Clique em **Adicionar** .  
   
 7.  Na caixa **Nome** , digite um nome para a regra de negócios.  
   
@@ -106,7 +105,7 @@ ms.locfileid: "65489611"
 |Nome|Descrição|  
 |----------|-----------------|  
 |Status|Quando você clica em **Salvar** , a imagem a seguir é exibida indicando que a regra de negócio está sendo atualizada.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> Se houver erros ao criar ou editar uma regra de negócio, a imagem a seguir será exibida.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Se o status for OK, a imagem a seguir será exibida.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|Nome|O nome da regra de negócio.|  
+|Name|O nome da regra de negócio.|  
 |Descrição|A descrição da regra de negócio.|  
 |Estado da Regra de Negócio|Um dos seguintes status da regra de negócios: Regra não definida, Ativa, Excluída, Alterações Pendentes e Exclusão Pendente.|  
 |Excluído|Especifica se a regra de negócio é ou não excluída.|  

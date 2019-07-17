@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc6511c6a0999dfd366c87fcfa18630614215efa
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 524f0d82b5f426ae41169b8358dd8ad8be66da03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900286"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +57,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* | NULL
 
- **APLICA-SE A:** SQL Server (começando com o 2008), o banco de dados SQL
+ **APLICA-SE A:** SQL Server (começando com o 2008), o Banco de Dados SQL do Azure
 
  ID do banco de dados. *database_id* é int, sem padrão. São entradas válidas o número de ID de um banco de dados ou NULL. Quando NULL for especificado, serão retornados todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -66,7 +65,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *file_id* | NULL
 
-**APLICA-SE A:** SQL Server (começando com o 2008), o banco de dados SQL
+**APLICA-SE A:** SQL Server (começando com o 2008), o Banco de Dados SQL do Azure
  
 ID do arquivo. *file_id* é int, sem padrão. São entradas válidas o número de ID de um arquivo ou NULL. Quando NULL for especificado, serão retornados todos os arquivos do banco de dados.  
   
@@ -89,8 +88,8 @@ ID do arquivo. *file_id* é int, sem padrão. São entradas válidas o número d
 |**io_stall**|**bigint**|Tempo total, em milissegundos, que os usuários aguardaram até o término de E/S no arquivo.|  
 |**size_on_disk_bytes**|**bigint**|Número de bytes do disco usado por esse arquivo. No caso de arquivos esparsos, esse número é o número real de bytes do disco que é utilizado para os instantâneos do banco de dados.|  
 |**file_handle**|**varbinary**|Identificador de arquivo do Windows desse arquivo.|  
-|**io_stall_queued_read_ms**|**bigint**|**Não é aplicável a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Latência total de E/S apresentada pela administração do recurso de E/S para leituras. Não permite valor nulo. Para obter mais informações, consulte [DM resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
-|**io_stall_queued_write_ms**|**bigint**|**Não é aplicável a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Latência total de E/S apresentada pela administração do recurso de E/S para gravações. Não permite valor nulo.|
+|**io_stall_queued_read_ms**|**bigint**|**Não é aplicável a:** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Latência total de E/S apresentada pela administração do recurso de E/S para leituras. Não permite valor nulo. Para obter mais informações, consulte [DM resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
+|**io_stall_queued_write_ms**|**bigint**|**Não é aplicável a:** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Latência total de E/S apresentada pela administração do recurso de E/S para gravações. Não permite valor nulo.|
 |**pdw_node_id**|**int**|**Aplica-se a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificador do nó para a distribuição.
  
   
@@ -101,7 +100,7 @@ ID do arquivo. *file_id* é int, sem padrão. São entradas válidas o número d
 
 ### <a name="a-return-statistics-for-a-log-file"></a>A. Retornar as estatísticas para um arquivo de log
 
-**Aplica-se a:** SQL Server (começando com o 2008), o banco de dados SQL
+**Aplica-se a:** SQL Server (começando com o 2008), o Banco de Dados SQL do Azure
 
  O exemplo a seguir retorna todas as estatísticas do arquivo de log no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
@@ -110,7 +109,7 @@ SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
-### <a name="b-return-statistics-for-file-in-tempdb"></a>b. Retornar as estatísticas para o arquivo em tempdb
+### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Retornar as estatísticas para o arquivo em tempdb
 
 **Aplica-se a:** Azure SQL Data Warehouse
 

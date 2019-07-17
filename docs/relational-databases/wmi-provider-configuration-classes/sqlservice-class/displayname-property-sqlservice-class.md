@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 49c408aa-6eb4-45cd-8d5c-60f065f24f5c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c4f58ea7caad7c07d0ab818627d2bbbb21632e5c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9a60ae08f500021d2c11dacbd4bcfd5a73395cf7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669705"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929692"
 ---
 # <a name="displayname-property-sqlservice-class"></a>Propriedade DisplayName (classe SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ object.DisplayName [= value]
  *object*  
  Um objeto da [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) que representa o serviço.  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
  Um valor da cadeia de caracteres que exibe o nome de host do serviço.  
   
 ## <a name="remarks"></a>Comentários  

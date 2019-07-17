@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9b49dcdca30b9dcc9a56a9b19ae1f1dda54d8d27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28a16d531cceb7147c5d4971d662797cb57242e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918016"
 ---
 # <a name="nextrecordset-method-example-vb"></a>Exemplo do método NextRecordset (VB)
 Este exemplo usa o [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) método para exibir os dados em um conjunto de registros que usa uma instrução composta comando composta por três separado **selecione** instruções.  

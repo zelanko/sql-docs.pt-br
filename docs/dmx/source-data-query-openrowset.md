@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 43431be3f68bc7146d9e5a6cc137100ec384c960
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: 8be3fe8cbf30121ec2895f59306c925a422d5c39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938121"
 ---
 # <a name="ltsource-data-querygt---openrowset"></a>&lt;consulta de fonte de dados&gt; -OPENROWSET
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,8 +37,8 @@ OPENROWSET(provider_name,provider_string,query_syntax)
  *query_syntax*  
  Sintaxe de consulta que retorna um conjunto de linhas.  
   
-## <a name="remarks"></a>Remarks  
- O provedor de mineração de dados estabelecerá uma conexão com o objeto de fonte de dados usando *provider_name* e *provider_string,* e executará a consulta especificada no *query_syntax* para recuperar o conjunto de linhas de dados de origem.  
+## <a name="remarks"></a>Comentários  
+ O provedor de mineração de dados estabelecerá uma conexão para o objeto de fonte de dados usando *provider_name* e *provider_string,* e executará a consulta especificada no *query_syntax* para recuperar o conjunto de linhas de dados de origem.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir pode ser usado em uma instrução PREDICTION JOIN para recuperar dados do banco de dados [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], usando uma instrução [!INCLUDE[tsql](../includes/tsql-md.md)] SELECT.  

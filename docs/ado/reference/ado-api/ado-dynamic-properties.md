@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2ad6c2804b70011380a12b5b9e0cd1f52fd56398
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71396a071a42d7dd40a6537a2834541aab2b6bad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921090"
 ---
 # <a name="ado-dynamic-properties"></a>Propriedades dinâmicas do ADO
 Propriedades dinâmicas podem ser adicionadas para o [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleções da [Conexão](../../../ado/reference/ado-api/connection-object-ado.md), [comando](../../../ado/reference/ado-api/command-object-ado.md), ou [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos. O código-fonte para essas propriedades é qualquer um provedor de dados, como o [OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), ou um provedor de serviços, como o [Microsoft Cursor Service para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Consulte a documentação do provedor de serviços para obter mais informações sobre uma propriedade dinâmica específica ou provedor de dados apropriado.  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 155e266cf3d12c964f2996943847f80ff8ac9903
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fff10431e020ad7092a82ff18ae55e3c85ab2df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991916"
 ---
 # <a name="managing-a-domain"></a>Gerenciando um domínio
 
@@ -56,7 +55,7 @@ ms.locfileid: "66776119"
 |Usar relações para corrigir um termo que faz parte de um valor em um domínio|[Criar relações baseadas em termos](../data-quality-services/create-term-based-relations.md)|  
 |Concluir, fechar ou cancelar a atividade de gerenciamento de domínio|[Encerrar a atividade Gerenciamento de Domínio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

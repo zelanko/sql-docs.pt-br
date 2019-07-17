@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15074b31b1c147ef78a898dbb8624f3b40358d13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f9b3171d496f54942e7ac1005acea1b3566ff76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003070"
 ---
 # <a name="sqlfetch-function"></a>Função SQLFetch
 **Conformidade com**  
@@ -107,7 +106,7 @@ SQLRETURN SQLFetch(
 |Condição|Primeira linha do novo conjunto de linhas|  
 |---------------|-----------------------------|  
 |Antes de iniciar|1|  
-|*CurrRowsetStart* \<= *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* \< =  *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
 |*CurrRowsetStart* > *LastResultRow - RowsetSize*[1]|Após o fim|  
 |Após o fim|Após o fim|  
   
@@ -115,7 +114,7 @@ SQLRETURN SQLFetch(
   
  [2] se o tamanho do conjunto de linhas é alterado entre buscas, esse é o tamanho do conjunto de linhas que foi usado com a nova busca.  
   
-|Notação|Significado|  
+|Notation|Significado|  
 |--------------|-------------|  
 |Antes de iniciar|O cursor em bloco é posicionado antes do início do conjunto de resultados. Se a primeira linha do novo conjunto de linhas é antes do início do conjunto de resultados, **SQLFetch** retorne SQL_NO_DATA.|  
 |Após o fim|O cursor em bloco é posicionado após o final do resultado definido. Se a primeira linha do novo conjunto de linhas for após o final do conjunto de resultados **SQLFetch** retorne SQL_NO_DATA.|  
@@ -132,9 +131,9 @@ SQLRETURN SQLFetch(
 |52 a 56|SQL_SUCCESS|57 para 61|5|  
 |91 a 95|SQL_SUCCESS|96 a 100|5|  
 |93 para 97|SQL_SUCCESS|98 a 100. Linhas 4 e 5 da matriz de status de linha são definidas como SQL_ROW_NOROW.|3|  
-|96 a 100|SQL_NO_DATA|Nenhum.|0|  
-|99 a 100|SQL_NO_DATA|Nenhum.|0|  
-|Após o fim|SQL_NO_DATA|Nenhum.|0|  
+|96 a 100|SQL_NO_DATA|nenhuma.|0|  
+|99 a 100|SQL_NO_DATA|nenhuma.|0|  
+|Após o fim|SQL_NO_DATA|nenhuma.|0|  
   
 ## <a name="returning-data-in-bound-columns"></a>Retornando dados em colunas associadas  
  Como **SQLFetch** retorna cada linha, ele coloca os dados para cada coluna associada no buffer associado a essa coluna. Se nenhuma coluna estiver associada, **SQLFetch** mover o cursor em bloco para frente, mas não retorna nenhum dado. Os dados ainda podem ser recuperados usando **SQLGetData**. Se o cursor é multilinha (ou seja, se SQL_ATTR_ROW_ARRAY_SIZE for maior que 1), **SQLGetData** pode ser chamado apenas se SQL_GD_BLOCK é retornado quando **SQLGetInfo** é chamado com um  *Tipo de informação* de SQL_GETDATA_EXTENSIONS. (Para obter mais informações, consulte [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).)  
@@ -232,7 +231,7 @@ SQLRETURN SQLFetch(
   
 |Campo do descritor|Desc.|Campo em|Definido por meio de|  
 |----------------------|-----------|--------------|-----------------|  
-|SQL_DESC_ARRAY_SIZE|DESCARTAR|Cabeçalho|SQL_ATTR_ROW_ARRAY_SIZE statement attribute|  
+|SQL_DESC_ARRAY_SIZE|DESCARTAR|Cabeçalho|Atributo de instrução SQL_ATTR_ROW_ARRAY_SIZE|  
 |SQL_DESC_ARRAY_STATUS_PTR|IRD|Cabeçalho|Atributo de instrução SQL_ATTR_ROW_STATUS_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR|DESCARTAR|Cabeçalho|Atributo de instrução SQL_ATTR_ROW_BIND_OFFSET_PTR|  
 |SQL_DESC_BIND_TYPE|DESCARTAR|Cabeçalho|Atributo de instrução SQL_ATTR_ROW_BIND_TYPE|  

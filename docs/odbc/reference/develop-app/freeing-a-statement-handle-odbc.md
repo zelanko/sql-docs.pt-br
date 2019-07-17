@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee18e2f1-2690-4cc1-9e5c-e20244e5d480
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc16e820671aa69c15365413d44fb9bcf807236b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 638cf9fb3c7af73130cf1413559b9baee2a354c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069785"
 ---
 # <a name="freeing-a-statement-handle-odbc"></a>Liberar um identificador de instrução ODBC
 Como mencionado anteriormente, é mais eficiente reutilizar as instruções que to soltá-los e alocar novos. Antes de executar uma nova instrução SQL em uma instrução, os aplicativos devem ser-se de que as configurações de instrução atuais são apropriadas. Essas configurações incluem atributos de instrução, associações de parâmetro e associações de conjunto de resultados. Geralmente, parâmetros e conjuntos de resultados para a instrução SQL antiga precisará ser desassociado (chamando **SQLFreeStmt** com as opções SQL_RESET_PARAMS e SQL_UNBIND) e a reassociação para a nova instrução SQL.  

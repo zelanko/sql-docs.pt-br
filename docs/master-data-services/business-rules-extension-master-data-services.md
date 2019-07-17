@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 64f77ccc8a1e4fdc6bb2aa35aa2b4d4d7b0d5de0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f490bd51ac31046e6daf3c1e90420b4efb84e03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047415"
 ---
 # <a name="business-rules-extension-master-data-services"></a>Extensão das Regras de Negócio (Master Data Services)
 
@@ -71,7 +70,7 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional Administração do Sistema.  
@@ -92,7 +91,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 5.  Na lista suspensa **Tipo de Membro** , selecione um tipo de membro para aplicar a regra de negócio.  
   
-6.  Clique em **Adicionar**.  
+6.  Clique em **Adicionar** .  
   
 7.  Faça o seguinte para criar um script definido pelo usuário como uma condição.  
   

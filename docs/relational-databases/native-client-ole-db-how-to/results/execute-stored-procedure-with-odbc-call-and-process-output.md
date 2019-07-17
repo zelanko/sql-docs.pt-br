@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8670b3e6a12f6e512788586a69348f0ddb7ee25
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0944145ae740b7448a19a2607122c8ad07fd33ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908268"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Executar o procedimento armazenado com ODBC CALL e a saída do processo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,11 +51,11 @@ ms.locfileid: "53215502"
   
  Este exemplo exige o banco de dados de exemplo AdventureWorks, que pode ser baixado na home page de [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (em inglês).  
   
- Execute a primeira ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) listagem para criar o procedimento armazenado usado pelo aplicativo de código.  
+ Execute a primeira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para criar o procedimento armazenado usado pelo aplicativo.  
   
  Compile com ole32.lib oleaut32.lib e execute a segunda listagem de código (C++). Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   
- Execute a terceira ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) listagem para excluir o procedimento armazenado usado pelo aplicativo de código.  
+ Execute a terceira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para excluir o procedimento armazenado usado pelo aplicativo.  
   
 ```  
 USE AdventureWorks  

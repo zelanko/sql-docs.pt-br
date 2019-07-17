@@ -18,22 +18,21 @@ helpviewer_keywords:
 ms.assetid: 3aa15c55-6b72-4f76-97d7-bd88391d105c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b0fdece346bf77efb9ae78092717bfba9098089
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77d47f620fe7b426f8193138fb3abdf1c403ec87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676914"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910160"
 ---
 # <a name="restorefilegroup-transact-sql"></a>restorefilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contém uma linha para cada grupo de arquivos restaurado. Essa tabela é armazenada na **msdb** banco de dados.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**restore_history_id**|**int**|Número de identificação exclusivo que identifica a operação de restauração correspondente. As referências **RestoreHistory (restore_history_id)**.|  
+|**restore_history_id**|**int**|Número de identificação exclusivo que identifica a operação de restauração correspondente. As referências **RestoreHistory (restore_history_id)** .|  
 |**filegroup_name**|**nvarchar(128)**|Nome do grupo de arquivos sendo restaurado. Pode ser NULL.<br /><br /> Quando um banco de dados é revertido para um instantâneo do banco de dados, esse valor é preenchido da mesma maneira que uma restauração completa.|  
   
 ## <a name="remarks"></a>Comentários  

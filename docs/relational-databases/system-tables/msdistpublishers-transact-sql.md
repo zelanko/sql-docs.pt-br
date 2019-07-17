@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b867e4ffe4b23ee1a7195bb3c201ae05c2b6d075
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c19f2d8e75a3c9744318d65683b29d1d84857ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907421"
 ---
 # <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +36,10 @@ ms.locfileid: "62817048"
 |**security_mode**|**int**|O modo de segurança implementado no Distribuidor.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.<br /><br /> **1** = autenticação do Windows.|  
 |**login**|**sysname**|A ID de logon para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password**|**nvarchar(524)**|A senha (criptografada) para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**active**|**bit**|Indica se o Distribuidor local está em uso pelo Publicador remoto.|  
-|**trusted**|**bit**|Indica se o Publicador remoto usa mesma senha que o Distribuidor local.<br /><br /> **0** = uma senha é necessária no publicador remoto para se conectar ao distribuidor.<br /><br /> **1** = nenhuma senha é necessária.|  
+|**Active Directory**|**bit**|Indica se o Distribuidor local está em uso pelo Publicador remoto.|  
+|**confiável**|**bit**|Indica se o Publicador remoto usa mesma senha que o Distribuidor local.<br /><br /> **0** = uma senha é necessária no publicador remoto para se conectar ao distribuidor.<br /><br /> **1** = nenhuma senha é necessária.|  
 |**third_party**|**bit**|Se o Publicador é uma instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalação. **1** = fonte de dados heterogêneos.|  
-|**publisher_type**|**sysname**|Tipo de Publicador:<br /><br /> **MSSQLSERVER** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.<br /><br /> **ORACLE** = editor Oracle padrão.<br /><br /> **ORACLE GATEWAY** = editor Oracle Gateway.|  
+|**publisher_type**|**sysname**|Tipo de Publicador:<br /><br /> **MSSQLSERVER**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.<br /><br /> **ORACLE** = editor Oracle padrão.<br /><br /> **ORACLE GATEWAY** = editor Oracle Gateway.|  
 |**storage_connection_string**|**nvarchar(779)**|Valor da cadeia de conexão de armazenamento do banco de dados SQL.|  
 
   

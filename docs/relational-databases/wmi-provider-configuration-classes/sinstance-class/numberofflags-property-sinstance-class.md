@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 26716906460905b307dfc9ca0e959ec3e61fd224
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e81ea322405352f5f78a29d0c7d45a8bd25307e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62515491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052532"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>Propriedade NumberOfFlags (classe SInstance)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ object.NumberOfFlags [= value]
  *object*  
  Uma [classe SInstance](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) objeto que representa uma instância de servidor.  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
  Um **uint32** valor que especifica o número de sinalizadores para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="remarks"></a>Comentários  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b426d7f4f5056c76e7ccc6807785366f0f12287f
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038995"
 ---
 # <a name="constructor-functions-xquery"></a>Funções do construtor (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -139,7 +138,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. Usando a função dateTime() XQuery para recuperar descrições de produtos mais antigos  
- Neste exemplo, um documento XML de exemplo é atribuído pela primeira vez para um **xml** variável de tipo. Esse documento contém três exemplos de elementos <`ProductDescription`>, com cada um deles contendo um elemento filho <`DateCreated`>.  
+ Neste exemplo, um documento XML de exemplo é atribuído pela primeira vez para um **xml** variável de tipo. Este documento contém três exemplos <`ProductDescription`> elementos, com cada um deles contendo um <`DateCreated`> elemento filho.  
   
  A variável é então consultada para recuperar apenas aquelas descrições de produtos que tenham sido criados antes de uma data específica. Para fins de comparação, a consulta usa o **xs:dateTime()** a função de construtor para digitar as datas.  
   
@@ -174,13 +173,13 @@ select @x.query('
   
  Observe o seguinte na consulta anterior:  
   
--   A estrutura de loop FOR ... Estrutura de loop em que é usada para recuperar o \<ProductDescription > elemento que satisfaz a condição especificada na cláusula WHERE.  
+-   O FOR... Estrutura de loop em que é usada para recuperar o \<ProductDescription > elemento que satisfaz a condição especificada na cláusula WHERE.  
   
 -   O **DateTime ()** função de construtor é usada para construir **dateTime** digite valores para que eles possam ser comparados adequadamente.  
   
 -   A consulta então constrói o XML resultante. Como você está construindo uma sequência de atributos, vírgulas e parênteses são usados na construção XML.  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <Product   

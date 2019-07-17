@@ -1,5 +1,5 @@
 ---
-title: Assessment Report (SybaseToSQL) | Microsoft Docs
+title: Relatório de avaliação (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: af24f2c4-5e86-4135-a4f3-a24faaeeefe7
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: aae49bb6eb8ecf067911b2cb64017af0f3143aa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6d83e81253430f243fcaed55b66f6d0de6299ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63132796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083501"
 ---
 # <a name="assessment-report-sybasetosql"></a>Relatório de avaliação (SybaseToSQL)
 A janela relatório de avaliação mostra os resultados da conversão de objetos de banco de dados para [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxe, e também pode ajudar a estimar a complexidade e custo de seus projetos de migração.  

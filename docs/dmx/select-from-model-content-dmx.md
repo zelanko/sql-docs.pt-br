@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3498e841b70ca7a19d9353d277221a88b9cbf86f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 63cd10aaddfb0a22f8942e48007d36f8e634b233
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906731"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;modelo&gt;. CONTEÚDO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +46,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Opcional. Uma expressão que retorna um valor escalar.  
   
 ## <a name="remarks"></a>Comentários  
- O **SELECT FROM**  _\<modelo >_**. CONTEÚDO** instrução retorna o conteúdo é específico para cada algoritmo. Por exemplo, talvez você queira usar as descrições de todas as regras de um modelo de regras associado em um aplicativo personalizado. Você pode usar um **SELECT FROM \<modelo >. CONTEÚDO** instrução para retornar os valores na coluna NODE_RULE do modelo.  
+ O **SELECT FROM**  _\<modelo >_ **. CONTEÚDO** instrução retorna o conteúdo é específico para cada algoritmo. Por exemplo, talvez você queira usar as descrições de todas as regras de um modelo de regras associado em um aplicativo personalizado. Você pode usar um **SELECT FROM \<modelo >. CONTEÚDO** instrução para retornar os valores na coluna NODE_RULE do modelo.  
   
  A tabela a seguir lista as colunas que são incluídas no conteúdo do modelo de mineração.  
   
@@ -62,7 +61,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |ATTRIBUTE_NAME|O nome do atributo que corresponde ao nó.|  
 |NODE_NAME|O nome do nó.|  
 |NODE_UNIQUE_NAME|O nome exclusivo do nó no modelo.|  
-|NODE_TYPE|Um número inteiro que representa o tipo do nó. para obter informações sobre a ferramenta de configuração e recursos adicionais.|  
+|NODE_TYPE|Um número inteiro que representa o tipo do nó. .|  
 |NODE_GUID|Nó GUID. NULL se não houver GUID.|  
 |NODE_CAPTION|Rótulo ou legenda associada ao nó. Usado principalmente para fins de exibição. Se não houver legenda, NODE_NAME é retornado.|  
 |CHILDREN_CARDINALITY|Número de filhos do nó.|  
@@ -144,7 +143,7 @@ WHERE NODE_TYPE = 26
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>Consulte também  
- [SELECIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Extensões de mineração de dados &#40;DMX&#41; instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

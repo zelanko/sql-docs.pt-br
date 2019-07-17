@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 580d72a3-9be3-4f19-a9b3-5b41cc84b589
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a7c7daef9e60ae969e282d148649f0505653f9ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b510e1362fc003d85b678343ee23db8395af1649
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62956460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944661"
 ---
 # <a name="shortcut-keys-mysqltosql"></a>Teclas de atalho (MySQLToSQL)
 Você pode usar atalhos de teclado para navegar pelo aplicativo do SSMA. Para obter mais informações, consulte os tópicos a seguir.  

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b308f17a7b5555f77f36174c7d11dd9979cf4ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89493294fe08f82b3a61bb8eab7a99e7a941ed28
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725894"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265776"
 ---
 # <a name="sysdmosmemoryclerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47725894"
 > [!NOTE]  
 >  Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_memory_clerks**.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**memory_clerk_address**|**varbinary(8)**|Especifica o endereço de memória exclusivo do administrador de memória. Esta é a coluna de chave primária. Não permite valor nulo.|  
 |**type**|**nvarchar(60)**|Especifica o tipo do administrador de memória. Todo administrador de memória tem um tipo específico, como os Administradores MEMORYCLERK_SQLCLR do CLR. Não permite valor nulo.|  
@@ -58,7 +57,7 @@ ms.locfileid: "47725894"
 ## <a name="permissions"></a>Permissões 
 
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` permissão no banco de dados. Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e básica, requer a **administrador de servidor** ou uma **administrador do Active Directory do Azure** conta.   
   
 ## <a name="remarks"></a>Comentários  
  O gerenciador de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste em uma hierarquia de três camadas. Na parte inferior da hierarquia estão os nós de memória. O próximo nível médio consiste em administradores de memória, caches de memória e pools de memória. A camada superior consiste em objetos de memória. Esses objetos geralmente são usados para alocar memória em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

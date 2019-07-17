@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2e48337afee5320355eb71025bffb972b85e3358
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 2b3af47a1c09160faab97494d9749fd67c051cd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793613"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898405"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |-----------------|---------------|-----------------|  
 |**nome da conta**|**sysname**|Nome da conta do Windows completamente qualificada.|  
 |**type**|**char(8)**|Tipo de conta do Windows. Os valores válidos são **usuário** ou **grupo**.|  
-|**privilege**|**char(9)**|Privilégio de acesso para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os valores válidos são **admin**, **usuário**, ou **nulo**.|  
+|**privilégio**|**char(9)**|Privilégio de acesso para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os valores válidos são **admin**, **usuário**, ou **nulo**.|  
 |**nome de logon mapeado**|**sysname**|Contas de usuário que tem o privilégio de usuário **mapeada de nome de logon** mostra o nome de logon mapeado que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta usar ao efetuar logon nesta conta usando as regras mapeadas com o nome de domínio é adicionado antes dele.|  
 |**caminho de permissão**|**sysname**|Associação de grupo que permitiu o acesso à conta.|  
   

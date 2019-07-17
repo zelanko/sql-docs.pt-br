@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1feb7d741a867f729df83442ba4d9f407a062710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f84faca18ad1f4f4bf7e036fa4ccbe0335154a63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917329"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto de conjunto de registros
 ## <a name="propertiescollections"></a>Propriedades/coleções  

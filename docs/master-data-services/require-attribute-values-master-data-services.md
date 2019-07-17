@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ae1eb0a03e7387c7985a4b05f9f0fba562d03d67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e430e158c301279398574bee64d744a40664b623
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085706"
 ---
 # <a name="require-attribute-values-master-data-services"></a>Exigir valores de atributos (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65485972"
 > [!NOTE]  
 >  Os membros que não possuírem valores de atributos baseados em domínio não serão exibidos em hierarquias derivadas baseadas nessas relações.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
@@ -49,7 +48,7 @@ ms.locfileid: "65485972"
   
 5.  Na lista suspensa **Tipo de Membro** , selecione um tipo de membro para aplicar a regra de negócio.  
   
-6.  Clique em **Adicionar**.  
+6.  Clique em **Adicionar** .  
   
 7.  Na caixa **Nome** , digite um nome para a regra de negócios.  
   

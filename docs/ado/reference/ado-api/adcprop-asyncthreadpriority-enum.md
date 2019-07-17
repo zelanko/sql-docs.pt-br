@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 18ffebe5cbf781212b6b8962f9f48d61281c7d30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22a8cd4bb8d1bdddbaaa68e92349d9c728557ac0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921463"
 ---
 # <a name="adcpropasyncthreadpriorityenum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
 Para um RDS [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) de objeto, que especifica a prioridade de execução do thread assíncrona que recupera dados.  
@@ -37,7 +36,7 @@ Para um RDS [conjunto de registros](../../../ado/reference/ado-api/recordset-obj
 |**adPriorityNormal**|3|Define a prioridade como normal.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Package: **com.ms.wfc.data**  
+ Pacote: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

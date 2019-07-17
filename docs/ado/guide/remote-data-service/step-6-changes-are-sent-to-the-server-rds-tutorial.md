@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fa60fd6db3da59de9d833c488811b5921ae53987
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a48b9c54496100bfe502bd496b12f35ced9ea8ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922042"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Etapa 6: As alterações são enviadas ao servidor (Tutorial RDS)
 Se o **Recordset** objeto é editado, todas as alterações (ou seja, linhas que são adicionadas, alteradas ou excluídas) podem ser enviadas de volta para o servidor.  

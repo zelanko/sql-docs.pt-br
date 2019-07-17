@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f1fa87ff82d9fb47cc51f5add1380ae26270cd7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: c24e98f15793820df59bf372a73e42204814fb19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913075"
 ---
 # <a name="using-catalog-functions"></a>Usando funções de catálogo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "54255381"
   
      Retorna uma lista dos catálogos contidos em um servidor vinculado.  
   
- Depois de ter um nome de servidor vinculado e um nome de catálogo, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte à obtenção de informações do catálogo usando um nome de duas partes de _linked_server_name_**.** _catálogo_ para *CatalogName* funções de catálogo ODBC a seguir:  
+ Depois de ter um nome de servidor vinculado e um nome de catálogo, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte à obtenção de informações do catálogo usando um nome de duas partes de _linked_server_name_ **.** _catálogo_ para *CatalogName* funções de catálogo ODBC a seguir:  
   
 -   **SQLColumnPrivileges**  
   
@@ -62,7 +61,7 @@ ms.locfileid: "54255381"
   
 -   **SQLTables**  
   
- As duas partes _linked_server_name_**.** _catálogo_ também há suporte para *FKCatalogName* e *PKCatalogName* na [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
+ As duas partes _linked_server_name_ **.** _catálogo_ também há suporte para *FKCatalogName* e *PKCatalogName* na [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
   
  O uso de SQLLinkedServers e SQLLinkedCatalogs exige os seguintes arquivos:  
   

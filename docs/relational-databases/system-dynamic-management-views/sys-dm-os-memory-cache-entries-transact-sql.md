@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2d00a5e39057f6c1410cb170095bc9c0d5f322fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MT
+ms.openlocfilehash: 04abb6062986e17f4f84c9d4ac6f6bd1ef6d2204
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63048057"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899983"
 ---
 # <a name="sysdmosmemorycacheentries-transact-sql"></a>sys.dm_os_memory_cache_entries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ ms.locfileid: "63048057"
 ## <a name="permissions"></a>Permissões 
 
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
+Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer a permissão `VIEW DATABASE STATE` no banco de dados.   
 
 ## <a name="see-also"></a>Consulte também  
  

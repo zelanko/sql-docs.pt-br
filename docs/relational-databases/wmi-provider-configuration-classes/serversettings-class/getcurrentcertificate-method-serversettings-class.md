@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a76ebaf25bb96f1f809b8b257e99595f5eebba7e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f55a54ac0e92fbe12842a2574336e0555b497072
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657415"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052921"
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>Método GetCurrentCertificate (classe ServerSettings)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +41,11 @@ object.GetCurrentCertificate(SHA)
   
 #### <a name="parameters"></a>Parâmetros  
   
-|Parâmetro|Description|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*SHA*|Um valor de objeto da cadeia de caracteres (parâmetro de saída) que especifica o certificado de segurança atual depois que o método é concluído.|  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
  Um valor **uint32** , que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  
   
 ## <a name="remarks"></a>Comentários  

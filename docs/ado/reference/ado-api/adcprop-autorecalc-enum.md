@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c3c085a09b800bb5dd6ce02ca3fa2d570b74190e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 738f4cece8cf2355c12c0de4ac42314152c6370a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921448"
 ---
 # <a name="adcpropautorecalcenum"></a>ADCPROP_AUTORECALC_ENUM
 Especifica quando o [MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) provedor calcula novamente colunas agregadas e calculadas em um conjunto de registros hierárquico.  

@@ -20,22 +20,21 @@ helpviewer_keywords:
 ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5e39bd1072f3de3448381d9ac457ef8ab4459184
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5021a2074d49d7a8b1da88d82c52b175f16ff3c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900641"
 ---
 # <a name="sysdmhadravailabilityreplicaclusterstates-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna uma linha para cada sempre na réplica de disponibilidade (independentemente de seu estado de junção) de todos os grupos Always On disponibilidade (independentemente do local de réplica) no cluster do Windows Server Failover Clustering (WSFC).  
+  Retorna uma linha para cada réplica de disponibilidade Always On (independentemente de seu estado de junção) de todos os grupos de disponibilidade Always On (independentemente do local da réplica) no cluster do WSFC (Windows Server Failover Clustering).  
   
 ##  <a name="connected_state"></a>  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|Identificador exclusivo da réplica de disponibilidade.|  
 |**replica_server_name**|**nvarchar(256)**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda a réplica.|  

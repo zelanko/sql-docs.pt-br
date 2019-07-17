@@ -2,19 +2,18 @@
 title: Configuração do firewall do PDW - Analytics Platform System | Microsoft Docs
 description: A página de firewall do SQL Server PDW Configuration Manager permite que você habilitar ou desabilitar regras de firewall para permitem ou impedir o acesso a portas específicas no dispositivo do Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d92d92752b4de105857f5611fbe95262476a4e13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f650aac34e3a5299cabae500a8ee73250c3974d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960414"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Configuração de firewall Parallel Data Warehouse no Analytics Platform System
 
@@ -39,7 +38,7 @@ As seguintes portas estão abertas para conexões de cliente provenientes de for
 |-----------|-----------|---------|  
 |Acesso para cliente do SQL para PDW (TDS)|17001|CTL|  
 |Acesso para cliente do carregador (dwloader & SSIS)|8001|CTL|  
-|Acesso de área de trabalho remoto|3389|CTL, CMP|  
+|Acesso de área de trabalho remoto|3389|LISTA DE CERTIFICADOS CONFIÁVEIS, CMP|  
 |SSIS BinaryLoaderDataChannel|16551|CTL|  
 |dwloader BinaryLoaderDataChannel|16551|CMP|  
 |SSL criptografado conexões (para comunicações internas, para acessar o Console de administração)|443|Todos os nós|  
@@ -53,13 +52,13 @@ As seguintes portas são usadas pelo PDW para a comunicação interna, mas não 
   
 |Finalidade|Porta n º|Nós|  
 |-----------|-----------|---------|  
-|Tráfego de canal de controle DMS|16450|CTL, CMP|  
-|Tráfego de canal de dados DMS|16550|CTL, CMP|  
-|Diagnósticos internos|16650|CTL, CMP|  
-|Status do failover (DMS)|15000|CTL, CMP|  
+|Tráfego de canal de controle DMS|16450|LISTA DE CERTIFICADOS CONFIÁVEIS, CMP|  
+|Tráfego de canal de dados DMS|16550|LISTA DE CERTIFICADOS CONFIÁVEIS, CMP|  
+|Diagnósticos internos|16650|LISTA DE CERTIFICADOS CONFIÁVEIS, CMP|  
+|Status do failover (DMS)|15000|LISTA DE CERTIFICADOS CONFIÁVEIS, CMP|  
 |Status do failover (mecanismo de)|15001|CMP|  
-|Intervalo de portas dinâmicas de (efêmero)|20000-65535|CTL, CMP|  
-|Intervalos de porta do SQL Server (TDS)|1433, 1500-1508|CTL, CMP|  
+|Intervalo de portas dinâmicas de (efêmero)|20000-65535|LISTA DE CERTIFICADOS CONFIÁVEIS, CMP|  
+|Intervalos de porta do SQL Server (TDS)|1433, 1500-1508|LISTA DE CERTIFICADOS CONFIÁVEIS, CMP|  
 | &nbsp; | &nbsp; | &nbsp; |
   
 > [!NOTE]  

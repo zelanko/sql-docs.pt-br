@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7a7fd3ce556a1d5766d0f68ffdbe307f83c4ccaa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: eaf42b746fca4999e7a67e0aff220ff2d09772cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950724"
 ---
 # <a name="spreplflush-transact-sql"></a>sp_replflush (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

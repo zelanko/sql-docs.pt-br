@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 10a17dba594359ca83fbc3b15e148fb72356e162
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a45f2e392f0d3a6a82a93ba43746eb937fe6bb9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998000"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262732"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +54,7 @@ ms.locfileid: "62998000"
   
  **Proprietário do recurso de pool de threads:**  
   
--   threadpool id=scheduler\<hex-address>  
+-   id do ThreadPool = Agendador\<hex-address >  
   
  **Proprietário do recurso de consulta paralela:**  
   
@@ -79,7 +78,7 @@ ms.locfileid: "62998000"
   
  **Proprietário do recurso de bloqueio:**  
   
--   \<type-specific-description> id=lock\<lock-hex-address> mode=\<mode> associatedObjectId=\<associated-obj-id>  
+-   \<tipo-specific-description > id = bloqueio\<bloqueio-hex-address > modo =\<modo > associatedObjectId =\<associado-obj-id >  
   
      **\<tipo-specific-description > pode ser:**  
   
@@ -131,14 +130,14 @@ ms.locfileid: "62998000"
   
 -   \<db-id>:\<file-id>:\<page-in-file>  
   
--   \<GUID>  
+-   \<GUID >  
   
 -   \<latch-class> (\<latch-address>)  
   
 ## <a name="permissions"></a>Permissões
 
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` permissão no banco de dados. Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e básica, requer a **administrador de servidor** ou uma **administrador do Active Directory do Azure** conta.   
  
 ## <a name="example"></a>Exemplo
 Este exemplo identificará as sessões bloqueadas.  Execute o [!INCLUDE[tsql](../../includes/tsql-md.md)] consultar em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].

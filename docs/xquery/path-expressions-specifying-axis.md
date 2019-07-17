@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d8f6c624427a8dc8c5a6c1828b9a48ff7f335cea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946488"
 ---
 # <a name="path-expressions---specifying-axis"></a>Expressões de Caminho – Especificar Eixo
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "51670324"
   
  A implementação XQuery no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oferece suporte às seguintes etapas de eixo:  
   
-|Axis|Description|  
+|Axis|Descrição|  
 |----------|-----------------|  
 |**child**|Retorna os filhos do nó de contexto.|  
 |**descendant**|Retorna todos os descendentes do nó de contexto.|  
@@ -109,11 +108,11 @@ select @y
   
  Nesta expressão, se você especificar um eixo descendente para a expressão de caminho,  
   
- `/child::a/child::b/descendant::*`, estará solicitando todos os descendentes do nó do elemento <`b`>.  
+ `/child::a/child::b/descendant::*`, você está solicitando todos os descendentes da <`b`> nó de elemento.  
   
  O asterisco (*) no teste de nó representa o nome do nó como um teste de nó. Dessa forma, o tipo de nó primário do eixo descendente, o nó do elemento, determina os tipos de nós retornados. Ou seja, a expressão retorna todos os nós do elemento. Não são retornados nós de texto. Para obter mais informações sobre o tipo de nó primário e sua relação com o teste de nó, consulte [especificando o teste de nó em uma etapa de expressão de caminho](../xquery/path-expressions-specifying-node-test.md) tópico.  
   
- Os nós do elemento <`c`> e <`d`> são retornados, como mostrado no resultado a seguir:  
+ Os nós do elemento <`c`> e <`d`> são retornados, como mostrado no seguinte resultado:  
   
 ```  
 <c>text2  
@@ -122,9 +121,9 @@ select @y
 <d>text3</d>  
 ```  
   
- Se você especificar um eixo descendente ou self em vez do eixo descendente, `/child::a/child::b/descendant-or-self::*` retorna o nó de contexto, o elemento <`b`> e seu descendente.  
+ Se você especificar um eixo descendente ou self em vez do eixo descendente, `/child::a/child::b/descendant-or-self::*` retorna o nó de contexto, elemento <`b`> e seu descendente.  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <b>text1  
@@ -152,9 +151,9 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="c-specifying-a-parent-axis"></a>C. Especificando um eixo pai  
- A consulta a seguir retorna o filho do elemento <`Summary`> do elemento <`ProductDescription`> no documento XML do catálogo de produtos armazenado na tabela `Production.ProductModel`.  
+ A seguinte consulta retorna o <`Summary`> filho do elemento de <`ProductDescription`> elemento no documento XML do catálogo de produto armazenado no `Production.ProductModel` tabela.  
   
- Este exemplo usa o eixo pai para retornar ao pai do elemento <`Feature`> e recuperar o filho do elemento <`Summary`> do elemento <`ProductDescription`>.  
+ Este exemplo usa o eixo pai para retornar ao pai da <`Feature`> elemento e recuperar o <`Summary`> do filho do elemento de <`ProductDescription`> elemento.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -194,7 +193,7 @@ WHERE  ProductModelID=19
 <Feature ProductModelID="...">...</Feature>  
 ```  
   
- Para adicionar o `ProductModelID` para cada elemento `<Feature`>, é especificado o eixo `parent`:  
+ Para adicionar o `ProductModelID` para cada `<Feature`> elemento, o `parent` eixo for especificado:  
   
 ```  
 SELECT CatalogDescription.query('  

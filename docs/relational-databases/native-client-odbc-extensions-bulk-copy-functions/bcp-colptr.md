@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bb66baa1cfefdeb857641daad0e454a1088d005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09dc87f27f1e6cc9dc062addbe97945b47dc7802
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648274"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895702"
 ---
 # <a name="bcpcolptr"></a>bcp_colptr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +42,7 @@ RETCODE bcp_colptr (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *HDBC*  
+ *hdbc*  
  É o identificador de conexão ODBC habilitado para cópia em massa.  
   
  *pData*  
@@ -51,7 +50,7 @@ RETCODE bcp_colptr (
   
  Se *pData* é definido como NULL e a coluna correspondente ao campo associado não é um tipo de valor grande **bcp_colptr** falhar.  
   
- Para obter mais informações sobre tipos de valor grande, consulte [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)**.**  
+ Para obter mais informações sobre tipos de valor grande, consulte [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) **.**  
   
  *idxServerCol*  
  É a posição ordinal da coluna na tabela do banco de dados na qual os dados são copiados. A primeira coluna em uma tabela é a coluna 1. A posição ordinal de uma coluna é relatada por [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  

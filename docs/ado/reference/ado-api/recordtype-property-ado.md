@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c68a8d5664002651271026e9448c40c4100afc4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e832ec871a353b994c1858bb01a2a2ab557f3869
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917314"
 ---
 # <a name="recordtype-property-ado"></a>Propriedade RecordType (ADO)
 Indica o tipo de [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto.  

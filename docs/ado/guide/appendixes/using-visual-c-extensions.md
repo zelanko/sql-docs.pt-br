@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f89b08d968b5f601c37f89b15196d6ef03db434
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926458"
 ---
 # <a name="visual-c-extensions"></a>Extensões do Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>A Interface IADORecordBinding
@@ -95,9 +94,9 @@ Update(CADORecordBinding *binding)
  **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
 
 ### <a name="numeric-data"></a>Dados numéricos
- **ADO_NUMERIC_ENTRY**(*Ordinal, DataType, Buffer, Precision, Scale, Status, Modify*)
+ **ADO_NUMERIC_ENTRY**(*Ordinal, tipo de dados, Buffer, precisão, escala, Status, modificar*)
 
- **ADO_NUMERIC_ENTRY2**(*Ordinal, DataType, Buffer, Precision, Scale, Modify*)
+ **ADO_NUMERIC_ENTRY2**(*Ordinal, tipo de dados, Buffer, precisão, escala, modificar*)
 
 ### <a name="variable-length-data"></a>Dados de comprimento variável
  **ADO_VARIABLE_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Size, Status, Length, Modify*)
@@ -113,11 +112,11 @@ Update(CADORecordBinding *binding)
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*Classe*|Classe na qual as variáveis de C/C++ e entradas de vinculação são definidas.|
+|*Class*|Classe na qual as variáveis de C/C++ e entradas de vinculação são definidas.|
 |*Ordinal*|Número ordinal, contando a partir de um, do **Recordset** campo correspondente à sua variável de C/C++.|
 |*DataType*|Tipo de dados ADO equivalente da variável C/C++ (consulte [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) para obter uma lista de tipos de dados válidos). O valor de **conjunto de registros** campo será convertido para esse tipo de dados, se necessário.|
 |*buffer*|Nome da variável C/C++ no qual o **Recordset** campo será armazenado.|
-|*Tamanho*|Tamanho máximo em bytes do *Buffer*. Se *Buffer* conterá uma cadeia de caracteres de comprimento variável, fazer espaço para um terminação de zero.|
+|*Size*|Tamanho máximo em bytes do *Buffer*. Se *Buffer* conterá uma cadeia de caracteres de comprimento variável, fazer espaço para um terminação de zero.|
 |*Status*|Nome de uma variável que indicará se o conteúdo do *Buffer* são válidos e se a conversão do campo a ser *DataType* foi bem-sucedida.<br /><br /> Os dois valores mais importantes para essa variável forem **adFldOK**, que significa que a conversão foi bem-sucedida; e **adFldNull**, que significa que o valor do campo seria uma VARIANTE do tipo VT_NULL e não simplesmente vazio.<br /><br /> Os valores possíveis para *Status* são listadas na tabela a seguir, "Valores de Status".|
 |*Modificar*|Sinalizador booliano; Se for TRUE, indica o ADO tem permissão para atualizar o correspondente **conjunto de registros** campo com o valor contido no *Buffer*.<br /><br /> Defina o booliano *modificar* parâmetro como TRUE para permitir que o ADO atualizar o campo associado e FALSE se você quiser examinar o campo, mas não alterá-lo.|
 |*Precisão*|Número de dígitos que podem ser representados em uma variável numérica.|

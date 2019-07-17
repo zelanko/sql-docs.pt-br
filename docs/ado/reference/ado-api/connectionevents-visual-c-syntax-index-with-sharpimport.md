@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd052d36-7730-4400-822b-0544fb1992b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0b588b245956b75af0ff0dffa9387a70edb5f120
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e813759c6500d8982145d12bac57f75448a9574d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919460"
 ---
 # <a name="connectionevents-visual-c-syntax-index-with-import"></a>ConnectionEvents (índice Visual C++ sintaxe com #import)
 ## <a name="events"></a>Events  

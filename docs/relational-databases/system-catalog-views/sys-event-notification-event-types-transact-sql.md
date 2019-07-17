@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 73dae456-7044-4b00-b0bd-990ef810b356
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6957119fb21343c4b66c05948c72b8a8cc55d34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b113044f46a09b54ed8c9d6f0fafdab2ec5b06c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061390"
 ---
 # <a name="syseventnotificationeventtypes-transact-sql"></a>sys.event_notification_event_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada evento ou grupo de eventos nos quais uma notificação de eventos pode ser acionada.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**type**|**int**|Tipo de evento ou grupo de eventos que faz uma notificação de eventos ser acionada.|  
 |**type_name**|**nvarchar(128)**|Nome de um evento ou grupo de eventos. Isso pode ser especificado na cláusula FOR de um [CREATE EVENT NOTIFICATION](../../t-sql/statements/create-event-notification-transact-sql.md) instrução.|  

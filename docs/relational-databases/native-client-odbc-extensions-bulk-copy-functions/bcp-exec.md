@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 762384c9bd57db037b894e8522f0eb0d4b5d2392
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7d6ce92fe3ca3a4fb2c6209a01b3eee6b575b0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627294"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895605"
 ---
 # <a name="bcpexec"></a>bcp_exec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,17 +41,17 @@ RETCODE bcp_exec (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *HDBC*  
+ *hdbc*  
  É o identificador de conexão ODBC habilitado para cópia em massa.  
   
  *pnRowsProcessed*  
  É um ponteiro para um DBINT. A função **bcp_exec** preenche esse DBINT com o número de linhas copiadas com êxito. Se *pnRowsProcessed* for NULL, ele será ignorado por **bcp_exec**.  
   
 ## <a name="returns"></a>Retorna  
- SUCCEED, SUCCEED_ASYNC ou FAIL. Os lucros de função **bcp_exec** retornarão SUCCEED se todas as linhas forem copiadas. **bcp_exec** retornará SUCCEED_ASYNC se uma operação de cópia em massa assíncrona ainda estiver pendente. **bcp_exec** retornará FAIL se ocorrer uma falha completa, ou se o número de linhas que geram erros alcançar o valor especificado para BCPMAXERRS usando [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md). O padrão de BCPMAXERRS é definido como 10. A opção BCPMAXERRS afeta somente os erros de sintaxe detectados pelo provedor ao ler as linhas do arquivo de dados (e não as linhas enviadas para o servidor). O servidor anula o lote ao detectar um erro com uma linha. Verifique o parâmetro *pnRowsProcessed* para o número de linhas copiadas com êxito.  
+ SUCCEED, SUCCEED_ASYNC ou FAIL. Os lucros de função **bcp_exec** retornarão SUCCEED se todas as linhas forem copiadas. **bcp_exec** retornará SUCCEED_ASYNC se uma operação de cópia em massa assíncrona ainda estiver pendente. **bcp_exec** retornará FAIL se uma falha completa ocorrer, ou se o número de linhas que geram erros alcançar o valor especificado para BCPMAXERRS usando [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md). O padrão de BCPMAXERRS é definido como 10. A opção BCPMAXERRS afeta somente os erros de sintaxe detectados pelo provedor ao ler as linhas do arquivo de dados (e não as linhas enviadas para o servidor). O servidor anula o lote ao detectar um erro com uma linha. Verifique o parâmetro *pnRowsProcessed* para o número de linhas copiadas com êxito.  
   
 ## <a name="remarks"></a>Comentários  
- Esta função copia os dados de um arquivo de usuário para uma tabela de banco de dados ou vice-versa, dependendo do valor da *eDirection* parâmetro na [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  
+ Esta função copia os dados de um arquivo de usuário para uma tabela de banco de dados ou vice-versa, dependendo do valor do parâmetro *eDirection* em [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  
   
  Antes de chamar **bcp_exec**, chame **bcp_init** com um nome de arquivo de usuário válido. Caso isso não seja feito, será gerado um erro.  
   

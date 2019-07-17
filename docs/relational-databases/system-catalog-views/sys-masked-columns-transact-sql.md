@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5e90fb00a74324cce6267e372199153707ca7ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e059265dc5f5e0d2e4bc4a3b1396d2401386d7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726104"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102371"
 ---
 # <a name="sysmaskedcolumns-transact-sql"></a>masked_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Use o **masked_columns** exibição para consultar colunas de tabela que têm uma função aplicada a eles de mascaramento de dados dinâmicos. Essa exibição herda valores da exibição **sys.columns** . Ela retorna todas as colunas na exibição **sys.columns** , mais as colunas **is_masked** e **masking_function** , indicando se a coluna é mascarada e, em caso positivo, qual função de mascaramento foi definida. Essa exibição só mostra colunas com uma função de máscara aplicada.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|ID do objeto ao qual esta coluna pertence.|  
-|nome|**sysname**|Nome da coluna. É exclusiva no objeto.|  
+|name|**sysname**|Nome da coluna. É exclusiva no objeto.|  
 |column_id|**int**|ID da coluna. É exclusiva no objeto.<br /><br /> Os IDs de coluna podem não ser sequenciais.|  
 |**masked_columns** retorna muitas colunas mais herdadas de **sys. Columns**.|vários|Ver [Columns &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) para obter mais definições de coluna.|  
 |is_masked|**bit**|Indica se a coluna é mascarada. 1 indica mascarado.|  
@@ -57,7 +56,7 @@ WHERE is_masked = 1;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Mascaramento de dados dinâmicos](../../relational-databases/security/dynamic-data-masking.md)   
+ [Máscara de Dados Dinâmicos](../../relational-databases/security/dynamic-data-masking.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   

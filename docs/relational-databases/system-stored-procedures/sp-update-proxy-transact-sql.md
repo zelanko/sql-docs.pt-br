@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 29a95b506fbbfb5342410d8d393f0091dd98834b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 632df5807e1e857c852807d0088219dee4448b6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946702"
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_update_proxy
   
 `[ @enabled = ] is_enabled` É se o proxy está habilitado. O *is_enabled* sinalizador é **tinyint**, com um padrão NULL. Quando *is_enabled* é **0**, o proxy não está habilitado e não pode ser usado por uma etapa de trabalho. Quando esse argumento for NULL, o status do proxy permanecerá inalterado.  
   
-`[ @description = ] 'description'` A nova descrição do proxy. O *descrição* é **nvarchar(512)**, com um padrão NULL. Quando esse argumento for NULL, a descrição do proxy permanecerá inalterada.  
+`[ @description = ] 'description'` A nova descrição do proxy. O *descrição* é **nvarchar(512)** , com um padrão NULL. Quando esse argumento for NULL, a descrição do proxy permanecerá inalterada.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

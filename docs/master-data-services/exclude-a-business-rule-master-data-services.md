@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6f5cfa2b6bb4566f42dfe7f5049cb9d55282f8d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 333e147ebf74b8062852f838db4d1797ef6e457f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915958"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>Apagar uma regra de negócio (Master Data Services)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65484007"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], exclua uma regra de negócio quando não desejar removê-la permanentemente, nem validar dados em relação a ela.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  

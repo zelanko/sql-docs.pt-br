@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ebd95ace4abbdfe2b69eef63fc41f94624bffe73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 326019b8e870739954c059475d851dbac62e0b57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930674"
 ---
 # <a name="stream-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto Stream
 ## <a name="properties"></a>Propriedades  
@@ -68,7 +67,7 @@ ms.locfileid: "66710748"
  [Método WriteText](../../../ado/reference/ado-api/writetext-method.md)  
   
 ## <a name="events"></a>Events  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

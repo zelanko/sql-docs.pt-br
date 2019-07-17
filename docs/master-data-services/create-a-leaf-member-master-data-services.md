@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 43108a02bb4eace9fda31fd8cdd1c75cefaadcc1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7204fb8183ed84390bd3eaec38b16833dd8eb2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487483"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906741"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>Criar um membro folha (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65487483"
   
  Você também pode usar o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] para importar os dados.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional do **Gerenciador** .  
