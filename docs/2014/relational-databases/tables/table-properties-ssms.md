@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356286"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196716"
 ---
 # <a name="table-properties"></a>Propriedades da tabela
   Este tópico descreve as propriedades de tabela que são exibidas na caixa de diálogo Propriedades da Tabela no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre como exibir essas propriedades, veja [Exibir a definição da tabela](view-the-table-definition.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "53356286"
  **Data da Criação**  
  A data e a hora em que a tabela foi criada.  
   
- **Nome**  
+ **Name**  
  O nome da tabela.  
   
  **Esquema**  

@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2263ac667b65def1bd59745e3cfef711820b494
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021643"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208794"
 ---
-# <a name="mdx-cell-calculations---build-cell-calculations"></a>Cálculos de célula MDX - cálculos de célula de compilação
+# <a name="mdx-cell-calculations---build-cell-calculations"></a>Cálculos de célula MDX – cálculos de célula de compilação
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   As expressões multidimensionais (MDX) fornecem inúmeras ferramentas para a geração de valores calculados, como membros calculados, acúmulos personalizados e membros personalizados. No entanto, usar esses recursos para afetar um conjunto específico de células, ou uma única célula para esse fim, seria difícil.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "34021643"
      Para obter mais informações sobre como usar a instrução CREATE CELL CALCULATION ou ALTER CUBE para criar células calculadas em uma sessão, consulte [Criando células calculadas no escopo da sessão](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Instrução ALTER CUBE & #40; MDX & #41;](../../../mdx/mdx-data-definition-alter-cube.md)   
- [Criar instrução de CÁLCULO de CÉLULA & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)   
- [Criando cálculos de célula no escopo da consulta & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
- [Conceitos básicos de consulta MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Instrução ALTER CUBE &#40;MDX&#41;](../../../mdx/mdx-data-definition-alter-cube.md)   
+ [Instrução CREATE CELL CALCULATION &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)   
+ [Criando cálculos de célula no escopo da consulta &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
+ [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

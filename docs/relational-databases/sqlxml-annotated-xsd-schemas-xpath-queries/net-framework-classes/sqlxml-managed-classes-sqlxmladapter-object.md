@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 0a16eddf-fc26-4d92-82d4-359b5fb905d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db67e12449118ad3bfd03faeb540056ad6570ffe
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 761a3be11c75844d7e7e014339cfa03bc2196ad3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119628"
 ---
 # <a name="sqlxml-managed-classes---sqlxmladapter-object"></a>Classes gerenciadas SQLXML – Objeto SqlXmlAdapter
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

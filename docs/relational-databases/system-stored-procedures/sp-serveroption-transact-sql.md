@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2b2594ca16f3cd7378dbd8632af448471b8f1654
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1fcd6f158908893ce5eb86c24a3bb3882867bc2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529258"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104377"
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_serveroption [@server = ] 'server'
 ## <a name="arguments"></a>Argumentos  
 `[ @server = ] 'server'` É o nome do servidor para o qual definir a opção. *server* é **sysname**, sem padrão.  
   
-`[ @optname = ] 'option_name'` É a opção de definir para o servidor especificado. *option_name* está **varchar (** 35 **)**, sem padrão. *option_name* pode ser qualquer um dos valores a seguir.  
+`[ @optname = ] 'option_name'` É a opção de definir para o servidor especificado. *option_name* está **varchar (** 35 **)** , sem padrão. *option_name* pode ser qualquer um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -56,7 +55,7 @@ sp_serveroption [@server = ] 'server'
 |**dist**|Distribuidor.|  
 |**validação de esquema lenta**|Determina se o esquema de tabelas remotas será verificado.<br /><br /> Se **verdadeira**, ignorar a verificação do esquema de tabelas remotas no início da consulta.|  
 |**pub**|Editor.|  
-|**query timeout**|O valor do tempo limite para consultas em um servidor vinculado.<br /><br /> Se **0**, use o **sp_configure** padrão.|  
+|**tempo limite da consulta**|O valor do tempo limite para consultas em um servidor vinculado.<br /><br /> Se **0**, use o **sp_configure** padrão.|  
 |**rpc**|Habilita RPC a partir do servidor fornecido.|  
 |**RPC out**|Habilita RPC para o servidor fornecido.|  
 |**sub**|Assinante.|  
@@ -64,7 +63,7 @@ sp_serveroption [@server = ] 'server'
 |**usar agrupamento remoto**|Determina se a ordenação de uma coluna remota ou de um servidor local será usada.<br /><br /> Se **verdadeira**, o agrupamento de colunas remotas é usado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fontes de dados e o agrupamento especificado em **nome do agrupamento** é usado para não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fontes de dados.<br /><br /> Se **falsos**, consultas distribuídas sempre usarão o agrupamento padrão do servidor local, enquanto **nome do agrupamento** e o agrupamento de colunas remotas serão ignorados. O padrão é **false**. (O **falsos** valor é compatível com a semântica dos agrupamentos usada em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.)|  
 |**promoção de transação de proc remoto**|Use esta opção para proteger as ações de um procedimento servidor a servidor por meio de uma transação do MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Quando essa opção for TRUE (ou ON) chamar um procedimento armazenado remoto inicia uma transação distribuída e inscreverá a transação com o MS DTC. A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que chama o procedimento armazenado remoto é o que origina a transação e controla a conclusão da transação. Quando as instruções subsequentes COMMIT TRANSACTION ou ROLLBACK TRANSACTION são emitidas para a conexão, a instância controladora solicita que o MS DTC gerencie a conclusão da transação distribuída em todas os computadores envolvidos.<br /><br /> Depois que uma transação distribuída [!INCLUDE[tsql](../../includes/tsql-md.md)] foi iniciada, é possível fazer chamadas de procedimento armazenado remoto a outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que foram definidas como servidores vinculados. Os servidores vinculados são todos inscritos na transação de distribuição do [!INCLUDE[tsql](../../includes/tsql-md.md)], e o MS DTC garante que a transação seja completada em cada servidor vinculado.<br /><br /> Se essa opção estiver definida como FALSE (ou OFF), uma transação local não será promovida a uma transação distribuída durante a chamada de um procedimento remoto em um servidor vinculado.<br /><br /> Se antes de fazer uma chamada de procedimento de servidor a servidor, a transação já for uma transação distribuída, essa opção não terá efeito. A chamada de procedimento em relação ao servidor vinculado executará sob a mesma transação distribuída.<br /><br /> Se antes de fazer uma chamada de procedimento armazenado de servidor a servidor não houver nenhuma transação ativa, essa opção não terá efeito. Em seguida, o procedimento executa em relação ao servidor vinculado sem transações ativas.<br /><br /> O valor padrão dessa opção é TRUE (ou ON).|  
   
-`[ @optvalue = ] 'option_value'` Especifica ou não o *option_name* deve ser habilitada (**verdadeiro** ou **na**) ou desabilitado (**FALSE** ou **desativar**). *option_value* está **varchar (** 10 **)**, sem padrão.  
+`[ @optvalue = ] 'option_value'` Especifica ou não o *option_name* deve ser habilitada (**verdadeiro** ou **na**) ou desabilitado (**FALSE** ou **desativar**). *option_value* está **varchar (** 10 **)** , sem padrão.  
   
  *option_value* pode ser um inteiro não negativo para o **tempo limite de conexão** e **tempo limite de consulta** opções. Para o **nome do agrupamento** opção *option_value* pode ser um nome de agrupamento ou NULL.  
   

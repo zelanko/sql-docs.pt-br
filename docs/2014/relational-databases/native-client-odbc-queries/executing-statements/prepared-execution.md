@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01982222ba5a18086aeadbbec776cba222f0e235
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354221"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207055"
 ---
 # <a name="prepared-execution"></a>Execução preparada
   A API do ODBC define a execução preparada como um modo de reduzir a sobrecarga de análise e compilação associada à execução repetida da instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)]. O aplicativo compila uma cadeia de caracteres que contém uma instrução SQL e então a executa em duas fases. Ele chama [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360) uma vez para que a instrução seja analisada e compilada no plano de execução pelo [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Em seguida, ele chama **SQLExecute** para cada execução do plano de execução preparada. Dessa forma, a sobrecarga de análise e compilação é salva em cada execução. A execução preparada geralmente é usada através de aplicativos para executar a mesma instrução SQL com parâmetros várias vezes.  

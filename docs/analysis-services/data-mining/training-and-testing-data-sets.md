@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 15ee82c04372528d29289a3ed6c5c55271acf5fb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145611"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209597"
 ---
 # <a name="training-and-testing-data-sets"></a>Conjuntos de dados de teste e treinamento
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "50145611"
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>Modificando propriedades de estrutura para criar um conjunto de dados de teste  
  Se você criar e processar uma estrutura de mineração e posteriormente decidir que deseja definir separadamente um conjunto de dados de teste, poderá modificar as propriedades da estrutura de mineração. Para alterar a maneira que os dados são particionados, edite as seguintes propriedades:  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**HoldoutMaxCases**|Especifica o número máximo de casos a serem incluídos no conjunto de teste.|  
 |**HoldoutMaxPercent**|Especifica o número de casos a serem incluídos no conjunto de teste como uma porcentagem do conjunto de dados completo. Para não ter nenhum conjunto de dados, especifique 0.|  

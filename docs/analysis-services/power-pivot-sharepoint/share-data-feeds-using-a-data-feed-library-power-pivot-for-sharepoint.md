@@ -1,5 +1,5 @@
 ---
-title: Compartilhar Feeds de dados usando uma biblioteca de Feed de dados (PowerPivot para SharePoint) | Microsoft Docs
+title: Compartilhar Feeds de dados usando uma biblioteca de feeds de dados (Power Pivot para SharePoint) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f262fe19ba39f217135908173189bf93a7e68817
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34030687"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163704"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>Compartilhar feeds de dados usando uma biblioteca de feed de dados (Power Pivot para SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34030687"
   
  Se já usar uma combinação de aplicativos com reconhecimento do Atom, você talvez nunca precise saber como os feeds são gerados e consumidos porque a transferência de dados é transparente entre os aplicativos. No entanto, frequentemente as organizações que usam soluções personalizadas para publicar feeds Atom precisam de uma maneira de disponibilizar os feeds para os operadores de informações. Uma maneira de fazer isso é criar e compartilhar arquivos de documento de serviço de dados (.atomsvc) que fornecem conexões às origens online que geram os feeds. Uma biblioteca com finalidade especial, chamada de biblioteca de feed de dados, dá suporte à criação e ao compartilhamento de documentos de serviço de dados em um aplicativo Web do SharePoint.  
   
- Este tópico contém as seguintes seções:  
+ Esse tópico contém as seguintes seções:  
   
  [Pré-requisitos](#prereq)  
   

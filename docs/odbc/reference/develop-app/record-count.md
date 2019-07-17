@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46eec3cc-0ecc-4980-9020-fb74a9af5730
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8f8b0a6fc7aa5765d9373af33ab4fac0a4a07aac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4d684fb6d9614defdca3897c53c4bae9fc231a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63151232"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138079"
 ---
 # <a name="record-count"></a>Contagem de registros
 O campo de cabeçalho de um descritor de SQL_DESC_COUNT é o índice baseado em um do registro de número mais alto que contém dados. Este campo não é uma contagem de todas as colunas ou parâmetros que estão associados. Quando um descritor é alocado, o valor inicial de SQL_DESC_COUNT é 0.  

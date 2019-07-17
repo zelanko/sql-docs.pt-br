@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ce74bb210e3d5d3cd01120b0bd406672db6dd5ed
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785817"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207961"
 ---
 # <a name="server-properties-in-analysis-services"></a>Propriedades do servidor do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

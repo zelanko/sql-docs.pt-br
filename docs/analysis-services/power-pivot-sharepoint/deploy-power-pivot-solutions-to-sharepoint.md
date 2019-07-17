@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc0286a3799aa56090fc6861b0a79b302b47aa26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544275"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208217"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Implantar soluções Power Pivot para SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "52544275"
   
  Antes de implantar as soluções, você deverá primeiro instalar o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usando a mídia de instalação do SQL Server 2012. A instalação do SQL Server instala os pacotes de solução que você está prestes a implantar.  
   
- Este tópico contém as seguintes seções:  
+ Esse tópico contém as seguintes seções:  
   
  [Pré-requisito: Verifique se que o aplicativo Web usa a autenticação de modo clássico](#bkmk_classic)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "52544275"
   
  [Sobre as soluções Power Pivot](#intro)  
   
-##  <a name="bkmk_classic"></a> Pré-requisito: Verificar se o aplicativo Web usa a autenticação de modo clássico  
+##  <a name="bkmk_classic"></a> Pré-requisito: Verifique se que o aplicativo Web usa a autenticação de modo clássico  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint tem suporte apenas para aplicativos Web que utilizam a autenticação de modo clássico do Windows. Para verificar se o aplicativo utiliza o modo clássico, execute o seguinte cmdlet do PowerShell a partir de **Shell de gerenciamento do SharePoint 2010**, substituindo **http://\<nome do site de nível superior >** com o nome do seu site do SharePoint:  
   
 ```  
@@ -104,7 +104,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Clique em **Implantar Solução**.  
   
-4.  Em **Implantar em?**, selecione o aplicativo Web do SharePoint ao qual você deseja adicionar suporte ao recurso [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+4.  Em **Implantar em?** , selecione o aplicativo Web do SharePoint ao qual você deseja adicionar suporte ao recurso [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 5.  Clique em **OK**.  
   

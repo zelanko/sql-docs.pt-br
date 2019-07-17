@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760878"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211383"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>Propriedades do trabalho e novo trabalho (página Geral)
   Use esta página para exibir e modificar as propriedades gerais de um trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="options"></a>Opções  
- **Nome**  
+ **Name**  
  Altera o nome do trabalho.  
   
  **Proprietário**  
@@ -38,10 +38,10 @@ ms.locfileid: "52760878"
  **Descrição**  
  Altera a descrição do trabalho.  
   
- **Enabled**  
+ **Habilitado**  
  Habilita o trabalho. Quando o trabalho não está habilitado, ele não é executado em resposta a uma agenda ou a um alerta, embora você ainda possa iniciar o trabalho usando o procedimento armazenado **sp_start_job** .  
   
- **Origem**  
+ **Source**  
  Exibe o servidor mestre para o trabalho. Só disponível na página **Propriedades do Trabalho** – Geral.  
   
  **Criado**  

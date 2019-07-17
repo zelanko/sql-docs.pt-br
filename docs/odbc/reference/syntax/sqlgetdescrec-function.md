@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c737a9dfd6e7a33b5e160b3d952fac0b354148b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c27b16d8b72e289f66a051cb2710004f72309599
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103792"
 ---
 # <a name="sqlgetdescrec-function"></a>Função SQLGetDescRec
 **Conformidade com**  
@@ -59,7 +58,7 @@ SQLRETURN SQLGetDescRec(
  *RecNumber*  
  [Entrada] Indica que o registro do descritor do qual o aplicativo busca informações. Registros de descritor são numerados de 1, com o número de registro que está sendo o registro de indicador de 0. O *RecNumber* argumento deve ser menor ou igual ao valor de SQL_DESC_COUNT. Se *RecNumber* é menor ou igual a SQL_DESC_COUNT, mas a linha não contém dados para uma coluna ou parâmetro, uma chamada para **SQLGetDescRec** retornará os valores padrão dos campos. (Para obter mais informações, consulte "Inicialização de campos de descritor" na [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   
- *Nome*  
+ *Name*  
  [Saída] Um ponteiro para um buffer no qual retornar o campo SQL_DESC_NAME para o registro do descritor.  
   
  Se *nome* for NULL, *StringLengthPtr* ainda retornará o número total de caracteres (exceto o caractere nulo de terminação para dados de caracteres) disponíveis para retornar no buffer apontado por  *Nome*.  

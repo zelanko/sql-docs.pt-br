@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135826"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212052"
 ---
 # <a name="view-and-modify-publication-properties"></a>Visualizar e modificar as propriedades da publicação
   Este tópico descreve como exibir e modificar propriedades de publicação no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou RMO (Replication Management Objects).  
@@ -46,7 +46,7 @@ ms.locfileid: "54135826"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Algumas propriedades não podem ser modificadas após uma publicação ter sido criada, e outras não podem ser modificadas se houverem assinaturas na publicação. As propriedades que não podem ser definidas são exibidas como somente leitura.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54135826"
 -   Depois que uma publicação é criada, algumas alterações de propriedade requerem um novo instantâneo. Se uma publicação tiver assinaturas, algumas alterações também exigirão que todas as assinaturas sejam reiniciadas. Para obter mais informações, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md) e [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Exibir e modificar propriedades de publicação na caixa de diálogo **Propriedades de Publicação – \<Publicação >**, que está disponível em [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e o Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
+ Exibir e modificar propriedades de publicação na caixa de diálogo **Propriedades de Publicação – \<Publicação >** , que está disponível em [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e o Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
   
  A caixa de diálogo **Propriedades da Publicação – \<Publicação>** inclui as seguintes páginas:  
   
@@ -97,7 +97,7 @@ ms.locfileid: "54135826"
   
 3.  Modifique propriedades, se necessário, depois clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Publicações podem ser modificadas e suas propriedades retornadas programaticamente usando-se procedimentos armazenados de replicação. Os procedimentos armazenados usados dependerão do tipo de publicação.  
   
 #### <a name="to-view-the-properties-of-a-snapshot-or-transactional-publication"></a>Para visualizar as propriedades de uma publicação de instantâneo ou transacional  
@@ -109,7 +109,7 @@ ms.locfileid: "54135826"
 1.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), especificando a propriedade de publicação a ser alterada no parâmetro **@property** e o novo valor dessa propriedade no parâmetro **@value** .  
   
     > [!NOTE]  
-    >  Se a alteração exigir a geração de um novo instantâneo, deve-se também especificar um valor de **1** para **@force_invalidate_snapshot**, e se a alteração exigir que os Assinantes sejam reinicializados, deve-se especificar um valor de **1** para **@force_reinit_subscription**. Para obter mais informações sobre as propriedades que, quando alteradas, exigem um novo instantâneo ou uma nova reinicialização, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md).  
+    >  Se a alteração exigir a geração de um novo instantâneo, deve-se também especificar um valor de **1** para **@force_invalidate_snapshot** , e se a alteração exigir que os Assinantes sejam reinicializados, deve-se especificar um valor de **1** para **@force_reinit_subscription** . Para obter mais informações sobre as propriedades que, quando alteradas, exigem um novo instantâneo ou uma nova reinicialização, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>Para visualizar as propriedades de uma publicação de mesclagem  
   
@@ -120,7 +120,7 @@ ms.locfileid: "54135826"
 1.  Execute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql),  especificando a propriedade de publicação que está sendo alterada no parâmetro **@property** e o novo valor dessa propriedade no parâmetro **@value** .  
   
     > [!NOTE]  
-    >  Se a alteração exigir a geração de um novo instantâneo, deve-se também especificar um valor de **1** para **@force_invalidate_snapshot** e se a alteração exigir que os Assinantes sejam reinicializados, deve-se especificar um valor de **1** para **@force_reinit_subscription**. Para obter mais informações sobre as propriedades que, quando alteradas, exigem um instantâneo novo ou reinicialização, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md).  
+    >  Se a alteração exigir a geração de um novo instantâneo, deve-se também especificar um valor de **1** para **@force_invalidate_snapshot** e se a alteração exigir que os Assinantes sejam reinicializados, deve-se especificar um valor de **1** para **@force_reinit_subscription** . Para obter mais informações sobre as propriedades que, quando alteradas, exigem um instantâneo novo ou reinicialização, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>Para visualizar as propriedades de um instantâneo  
   

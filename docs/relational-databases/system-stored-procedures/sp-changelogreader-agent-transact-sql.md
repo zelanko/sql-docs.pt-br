@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6d3671c96b73fa1fb8138a7085748704c7a38d76
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: cfa7196c0ad197a3eb7cb1a31fbdb58e74a78968
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110822"
 ---
 # <a name="spchangelogreaderagent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_login = ] 'job_login'` É o logon para a conta sob a qual o agente é executado. *job_login* está **nvarchar(257)**, com um padrão NULL. No banco de dados de instância gerenciada do SQL, use uma conta do SQL Server. *Isso não pode ser alterado para um não -* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publicador.*  
+`[ @job_login = ] 'job_login'` É o logon para a conta sob a qual o agente é executado. *job_login* está **nvarchar(257)** , com um padrão NULL. No banco de dados de instância gerenciada do SQL, use uma conta do SQL Server. *Isso não pode ser alterado para um não -* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publicador.*  
   
 `[ @job_password = ] 'job_password'` É a senha para a conta sob a qual o agente é executado. *job_password* está **sysname**, com um padrão NULL.  
   

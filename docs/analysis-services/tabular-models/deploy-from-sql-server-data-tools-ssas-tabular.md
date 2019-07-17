@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 09d859cf8b5c372b9588266b9210837012396ea6
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072133"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162865"
 ---
 # <a name="deploy-from-sql-server-data-tools"></a>Implantar das Ferramentas de Dados do SQL Server
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "53072133"
   
 #### <a name="to-deploy-a-tabular-model"></a>Para implantar um modelo de tabela
   
--   No SSDT, sobre o **compilar** menu, clique em **Deploy \<nome do projeto >**.  
+-   No SSDT, sobre o **compilar** menu, clique em **Deploy \<nome do projeto >** .  
   
      A caixa de diálogo **Implantação** aparecerá e indicará o status da implantação de metadados e o processamento (a menos que a propriedade Opção de Processamento esteja configurada como Não Processar) de cada tabela incluída no modelo. Depois que o processo de implantação for concluído, use o SSMS para se conectar à instância do Analysis Services e verificar que o novo objeto de banco de dados de modelo foi criado ou usar um cliente de relatório de aplicativo para se conectar ao modelo implantado.  
   

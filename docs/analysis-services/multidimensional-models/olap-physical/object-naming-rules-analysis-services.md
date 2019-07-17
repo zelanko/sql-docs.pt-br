@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7267097b1a06cb44c801ed20cbfd206c330328ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509468"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165465"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regras de nomenclatura de objeto (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -68,9 +68,9 @@ ms.locfileid: "52509468"
 |------------|------------------------|  
 |**Servidor**|Ao nomear um objeto de servidor, siga as convenções de nomenclatura de servidor do Windows. Para obter detalhes, consulte [Convenções de nomenclatura (Windows)](/windows/desktop/DNS/naming-conventions) .|  
 |**DataSource**|: / \ * &#124; ? "[()] {} <>|  
-|**Level** ou **Attribute**|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
-|**Dimension** ou **Hierarchy**|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = [()] {} \<, >|  
-|Todos os outros objetos|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = [()] {} < >|  
+|**Level** ou **Attribute**|. , ; ' ` : / \ * &#124; ? "& % $! + = [] {} < >|  
+|**Dimension** ou **Hierarchy**|. , ; ' ` : / \ * &#124; ? "& % $! + = [()] {} \<, >|  
+|Todos os outros objetos|. , ; ' ` : / \ * &#124; ? "& % $! + = [()] {} < >|  
   
  **Exceções: Quando caracteres reservados são permitidos**  
   

@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028277"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210940"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>Realize uma avaliação sob demanda usando o Pesquisador de Objetos
   Nesta tarefa, você usará o Pesquisador de Objetos para realizar uma avaliação sob demanda das políticas de práticas recomendadas para o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] em uma única instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -23,7 +23,7 @@ ms.locfileid: "56028277"
 > [!NOTE]  
 >  Você também pode avaliar políticas em uma única instância através de servidores registrados. Para obter mais informações, consulte [realizar uma avaliação sob demanda por usando servidores registrados](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Esta lição baseia-se na versão do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
@@ -38,13 +38,13 @@ ms.locfileid: "56028277"
     > [!NOTE]  
     >  Por padrão, a instância local é usada como a origem das políticas. Se você importou políticas de práticas recomendadas previamente, elas serão listadas, junto com qualquer outra política que você criou. Você pode selecionar qualquer uma das políticas de práticas recomendadas importadas e, em seguida, clique em **Evaluate**. Se você não importou as políticas de práticas recomendadas, continue com este procedimento.  
   
-3.  No **avaliar políticas** caixa de diálogo, em seguida o **fonte** , clique no botão de reticências (**...** ) botão.  
+3.  No **avaliar políticas** caixa de diálogo, em seguida o **fonte** , clique no botão de reticências ( **...** ) botão.  
   
 4.  No **Selecionar origem** caixa de diálogo, você pode selecionar um **arquivos** ou **Server** como a origem dos arquivos de política para avaliar. Se você clicar **Server**, você pode realizar uma avaliação sob demanda de quaisquer políticas de práticas recomendadas que foram importados anteriormente para o gerenciamento baseado em políticas em um servidor local ou remoto. Neste tutorial, você clicará **arquivos**e, em seguida, selecione os arquivos de política individuais que você deseja avaliar. Para fazer isso, siga estas etapas:  
   
     1.  Clique em **arquivos**.  
   
-    2.  Lado **arquivos**, clique no botão de reticências (**...** ) botão.  
+    2.  Lado **arquivos**, clique no botão de reticências ( **...** ) botão.  
   
     3.  No **Selecionar política** caixa de diálogo, navegue até a pasta a seguir, que contém as políticas de práticas recomendadas:  
   

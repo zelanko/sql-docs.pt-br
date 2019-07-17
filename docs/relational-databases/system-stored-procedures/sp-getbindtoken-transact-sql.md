@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3636ce2bb082d4686d0895716fb10567b5dc750
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac8bc2087b4c100b784aadac8458e106538f76d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124000"
 ---
 # <a name="spgetbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +46,10 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
  É o token a ser usado para associar sessões. *RETURN_VALUE* está **varchar(255)** sem nenhum padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- None  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="remarks"></a>Comentários  
  sp_getbindtoken retornará um token válido somente quando o procedimento armazenado for executado dentro de uma transação ativa. Caso contrário, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] retornará uma mensagem de erro. Por exemplo:  

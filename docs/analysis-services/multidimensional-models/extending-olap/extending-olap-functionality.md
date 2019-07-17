@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 06b73c0b9f8b4c2d93bb81762ebec442f94e7198
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021413"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68177795"
 ---
 # <a name="extending-olap-functionality"></a>Estendendo a funcionalidade OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "34021413"
  As personalizações são objetos personalizados que você adiciona a um cubo para fornecer um comportamento que varia de acordo com o usuário. As personalizações não são objetos permanentes no cubo, mas sim objetos que o aplicativo cliente aplica dinamicamente durante a sessão do usuário. Exemplos incluem a alteração da moeda de um valor monetário dependendo da pessoa que está acessando os dados, o fornecimento de KPIs individualizados ou uma lista de sugestões para clientes que compram online regularmente.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Estendendo OLAP por meio de personalizações](../../../analysis-services/multidimensional-models/extending-olap/extending-olap-through-personalizations.md)  
+ [Estendendo o OLAP por meio de personalizações](../../../analysis-services/multidimensional-models/extending-olap/extending-olap-through-personalizations.md)  
   
  [Extensões de personalização do Analysis Services](../../../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)  
   

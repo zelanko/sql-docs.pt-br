@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e51c42237b57830cbe894114019657ab5b3742c3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 71027fb060a5085289aed4c8a637bc76a71bbd2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108686"
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +43,11 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @filename = ] 'file_name'` É a cadeia de caracteres que especifica o caminho completo, incluindo o nome do arquivo, no qual uma cópia do arquivo de dados (. mdf) é salva. *nome do arquivo* está **nvarchar (260)**, sem padrão.  
+`[ @filename = ] 'file_name'` É a cadeia de caracteres que especifica o caminho completo, incluindo o nome do arquivo, no qual uma cópia do arquivo de dados (. mdf) é salva. *nome do arquivo* está **nvarchar (260)** , sem padrão.  
   
-`[ @temp_dir = ] 'temp_dir'` É o nome do diretório que contém os arquivos temporários. *temp_dir* está **nvarchar (260)**, com um padrão NULL. Se for NULL, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diretório de dados padrão será usado. O diretório deve ter bastante espaço suficiente para conter um arquivo do tamanho de todos os arquivos de banco de dados de assinante combinados.  
+`[ @temp_dir = ] 'temp_dir'` É o nome do diretório que contém os arquivos temporários. *temp_dir* está **nvarchar (260)** , com um padrão NULL. Se for NULL, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diretório de dados padrão será usado. O diretório deve ter bastante espaço suficiente para conter um arquivo do tamanho de todos os arquivos de banco de dados de assinante combinados.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'` É um sinalizador booliano opcional que especifica se deve ou não substituir um arquivo existente de mesmo nome especificado na **@filename**. *overwrite_existing_file*está **bit**, com um padrão de **0**. Se **1**, ele substituirá o arquivo especificado por **@filename**, se ele existir. Se **0**, o procedimento armazenado falhará se o arquivo existe e o arquivo não será substituído.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'` É um sinalizador booliano opcional que especifica se deve ou não substituir um arquivo existente de mesmo nome especificado na **@filename** . *overwrite_existing_file*está **bit**, com um padrão de **0**. Se **1**, ele substituirá o arquivo especificado por **@filename** , se ele existir. Se **0**, o procedimento armazenado falhará se o arquivo existe e o arquivo não será substituído.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

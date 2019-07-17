@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3bfa37a34ae6c3010c36dfe7693bb6d569e6e63d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241457"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209060"
 ---
 # <a name="create-calculated-members"></a>Criar membros calculados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "59241457"
   
  Os membros calculados são criados em cubos. Para criar um membro calculado, no Designer de Cubo, na guia **Cálculos** , clique no ícone **Novo Membro Calculado** na barra de ferramentas. Esse comando exibirá um formulário para você especificar as seguintes opções para o membro calculado:  
   
- **Nome**  
+ **Name**  
  Selecione o nome do membro calculado. Ele aparecerá como título da coluna ou linha dos valores do membro calculado quando os usuários navegarem no cubo.  
   
  **Hierarquia pai**  
@@ -37,7 +37,7 @@ ms.locfileid: "59241457"
   
  Hierarquias são divididas em níveis que contêm membros. Cada membro produz um título. Ao procurar dados em um cubo, os usuários finais podem fazer uma busca detalhada a partir de um título selecionado até títulos subordinados que antes não eram exibidos. O título do membro calculado é adicionado ao nível diretamente abaixo do membro pai selecionado.  
   
- **Expression**  
+ **Expressão**  
  Especifique a expressão que produz os valores do membro calculado. Ela pode ser escrita em MDX. A expressão pode conter uma das seguintes opções:  
   
 -   Expressões de dados que representam componentes de cubo, como dimensões, níveis, medidas, etc.  

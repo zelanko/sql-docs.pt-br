@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc53253c93f5f52c6bbe00941eadbf14b65d5f64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084027"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206825"
 ---
 # <a name="using-cursors-odbc"></a>Usando cursores (ODBC)
   ODBC dá suporte a um modelo de cursor que permite:  
@@ -38,7 +38,7 @@ ms.locfileid: "48084027"
   
  Esta é uma comparação de como scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] e aplicativos ODBC funcionam com cursores.  
   
-|Ação|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
+|Action|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
 |------------|------------------------|----------|  
 |Definir o comportamento do cursor|Especifique por meio de parâmetros DECLARE CURSOR|Definir atributos de cursor usando [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)|  
 |Abrir um cursor|DECLARE CURSOR aberto *cursor_name*|**SQLExecDirect** ou **SQLExecute**|  

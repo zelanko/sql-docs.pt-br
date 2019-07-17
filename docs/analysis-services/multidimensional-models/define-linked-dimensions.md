@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8441f37d902c823e9d8dce27a96b2d78f3f38b26
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023623"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209009"
 ---
 # <a name="define-linked-dimensions"></a>Definir dimensões vinculadas
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34023623"
 > [!NOTE]  
 >  Como a atualização não está disponível, a maioria dos desenvolvedores do Analysis Services copiam as dimensões em vez de vinculá-las. Você pode copiar dimensões entre projetos dentro da mesma solução. Para obter mais informações, consulte [Atualização de uma dimensão vinculada no SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  O banco de dados de origem que fornece a dimensão e o banco de dados atual que o usam deve estar na mesma versão e nível de compatibilidade. Para obter mais informações, consulte [Nível de compatibilidade de um banco de dados multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
  O banco de dados de origem deve estar implantado e online. Os servidores que publicam ou consomem objetos vinculados devem ser configurados para permitir a operação (consulte abaixo).  

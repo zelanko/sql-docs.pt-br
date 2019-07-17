@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 80fc86c4b3d9385dc056b0c0ea9633f9f5f26675
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782064"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68220598"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Introdução ao SSMA para Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de migração (SSMA) para Oracle permite que você rapidamente converter esquemas de banco de dados Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquemas, carregar os esquemas resultantes em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e migrar dados do Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -65,7 +65,7 @@ Você pode usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gerenc
 Para obter mais informações, consulte [Carregando objetos de banco de dados convertidos no SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md).  
   
 ### <a name="metadata"></a>Metadados  
-À direita de cada Gerenciador de metadados são guias que descrevem o objeto selecionado. Por exemplo, se você selecionar uma tabela no Gerenciador de metadados do Oracle, as seis guias serão exibidas: **tabela**, **SQL**, **mapeamento de tipo, o relatório**, **propriedades**, e **dados**. O **relatório** guia contém informações somente depois de criar um relatório que contém o objeto selecionado. Se você selecionar uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gerenciador de metadados, são exibidas três guias: **tabela**, **SQL**, e **dados**.  
+À direita de cada Gerenciador de metadados são guias que descrevem o objeto selecionado. Por exemplo, se você selecionar uma tabela no Gerenciador de metadados do Oracle, seis guias serão exibida: **Tabela**, **SQL**, **tipo de mapeamento, o relatório**, **propriedades**, e **dados**. O **relatório** guia contém informações somente depois de criar um relatório que contém o objeto selecionado. Se você selecionar uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gerenciador de metadados, três guias serão exibida: **Tabela**, **SQL**, e **dados**.  
   
 A maioria das configurações de metadados são somente leitura. No entanto, você pode alterar os metadados a seguir:  
   
@@ -94,9 +94,9 @@ A tabela a seguir mostra a migração de comandos da barra de ferramentas:
 ### <a name="menus"></a>Menus  
 A tabela a seguir mostra os menus do SSMA.  
   
-|Menu|Description|  
+|Menu|Descrição|  
 |----|-----------|  
-|**File**|Contém comandos para trabalhar com projetos, conectar-se ao Oracle e conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Arquivo**|Contém comandos para trabalhar com projetos, conectar-se ao Oracle e conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Editar**|Contém comandos para localizar e trabalhar com texto nas páginas de detalhes, como copiar [!INCLUDE[tsql](../../includes/tsql-md.md)] do painel de detalhes do SQL. Também contém o **gerenciar indicadores** opção, onde você poderá ver uma lista de indicadores atuais. Você pode usar os botões no lado direito da caixa de diálogo para gerenciar os indicadores.|  
 |**Exibir**|Contém o **sincronizar metadados Explorers** comando. Que sincroniza os objetos entre o Gerenciador de metadados do Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gerenciador de metadados. Também contém comandos para mostrar e ocultar os **saída** e **lista de erros** painéis e uma opção **Layouts** para gerenciar os Layouts.|  
 |**Ferramentas**|Contém comandos para criar relatórios e migrar dados e objetos. Também fornece acesso para o **configurações globais** e **configurações do projeto** caixas de diálogo.|  

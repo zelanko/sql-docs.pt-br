@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca0953b9ac191dfb765992f79988f3cc1502dfa4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529118"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211561"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Adicionar lógica de negócios a dados XML
   Sua lógica comercial pode ser adicionada a dados XML de vários modos:  
@@ -30,7 +30,7 @@ ms.locfileid: "58529118"
   
 -   É possível gravar funções e procedimentos armazenados Transact-SQL que começam o processamento na coluna XML para suas necessidades comerciais.  
   
-## <a name="example-applying-xsl-transformation"></a>Exemplo: Aplicando transformação XSL  
+## <a name="example-applying-xsl-transformation"></a>Exemplo: Aplicando a transformação XSL  
  Considere uma função CLR **transformXML ()** que aceita um `xml` tipo de instância e uma transformação XSL armazenada em um arquivo de dados, aplica a transformação dos dados XML e, em seguida, retorna o XML transformado no resultado. O seguinte é um função em esqueleto escrita em C#:  
   
 ```  
@@ -51,7 +51,7 @@ public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {
 }   
 ```  
   
- Após o assembly ser registrado e a função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário ser criada, **SqlXslTransform()** correspondente a **TransformXml()**, a função pode ser invocada no Transact-SQL conforme mostrado na consulta a seguir:  
+ Após o assembly ser registrado e a função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário ser criada, **SqlXslTransform()** correspondente a **TransformXml()** , a função pode ser invocada no Transact-SQL conforme mostrado na consulta a seguir:  
   
 ```  
 SELECT SqlXslTransform (xCol, 'C:\MyFile\xsltransform.xsl')  

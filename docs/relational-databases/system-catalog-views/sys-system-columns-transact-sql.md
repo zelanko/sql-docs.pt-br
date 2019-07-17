@@ -19,29 +19,28 @@ helpviewer_keywords:
 ms.assetid: 4ab1d48a-d57a-4e76-a08c-9627eeaf4588
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bc916f827fb190142dd07b56485b8a9d6005d94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd94f90a823ba57910809a54aed470ddd0bb0010
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108865"
 ---
 # <a name="syssystemcolumns-transact-sql"></a>sys.system_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contém uma linha para cada coluna de objetos do sistema que têm colunas.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID do objeto ao qual esta coluna pertence.|  
 |**name**|**sysname**|Nome da coluna. É exclusiva no objeto.|  
 |**column_id**|**int**|ID da coluna. É exclusiva no objeto.<br /><br /> Os IDs de coluna podem não ser sequenciais.|  
 |**system_type_id**|**tinyint**|ID do tipo de sistema da coluna|  
 |**user_type_id**|**int**|ID do tipo da coluna, como definido pelo usuário.<br /><br /> Para retornar o nome do tipo, Junte-se para o [Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) essa coluna de exibição do catálogo.|  
-|**max_length**|**smallint**|Comprimento máximo (em bytes) da coluna.<br /><br /> -1 = a coluna é do tipo de dados **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.<br /><br /> Para **texto** colunas, o **max_length** valor será 16 ou o valor definido pelo **sp_tableoption** 'text in row'.|  
-|**Precisão**|**tinyint**|Precisão da coluna se tiver base numérica; Caso contrário, 0.|  
+|**max_length**|**smallint**|Comprimento máximo (em bytes) da coluna.<br /><br /> -1 = a coluna é do tipo de dados **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , ou **xml**.<br /><br /> Para **texto** colunas, o **max_length** valor será 16 ou o valor definido pelo **sp_tableoption** 'text in row'.|  
+|**precisão**|**tinyint**|Precisão da coluna se tiver base numérica; Caso contrário, 0.|  
 |**scale**|**tinyint**|Escala da coluna com base numérica, caso contrário é 0.|  
 |**collation_name**|**sysname**|Nome do agrupamento da coluna se baseados em caracteres; Caso contrário, nulo.|  
 |**is_nullable**|**bit**|1 = A coluna permite valor nulo.|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3b3486aacb727f002b004d079f5e4a17f235ef9c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022373"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178534"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>Excluir uma exibição da fonte de dados (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,10 +26,10 @@ ms.locfileid: "34022373"
   
  Excluir uma DSV invalidará outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que dependem dela; portanto, antes de excluir a DSV, consulte a lista de objetos que ficarão inválidos quando a DSV for removida. Examine esta lista com cuidado para ter certeza de que ela não inclui objetos que você ainda espera usar.  
   
- ![Caixa de diálogo de objetos excluir](../../analysis-services/multidimensional-models/media/ssas-olapdsv-deleteobjects.gif "caixa de diálogo Excluir objetos")  
+ ![Excluir a caixa de diálogo de objetos](../../analysis-services/multidimensional-models/media/ssas-olapdsv-deleteobjects.gif "caixa de diálogo Excluir objetos")  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições da fonte de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Alterar propriedades em uma exibição da fonte de dados & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
+ [Exibições de fontes de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Alterar propriedades em uma exibição da fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

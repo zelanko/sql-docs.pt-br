@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5859d7e4c026375d5e9ade69628b9cf9e4a76ed0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8bfa9ff0683f67a1d38aeb17bccd0cfc1443d6d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117964"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -214,15 +213,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @active_end_date = ] active_end_date` É a data em que o Merge Agent deixa de ser agendado, formatada como AAAAMMDD. *active_end_date* está **int**, com um padrão NULL.  
   
-`[ @optional_command_line = ] 'optional_command_line'` É um prompt de comando opcional fornecido ao Merge Agent. *optional_command_line* está **nvarchar (255)**, com um padrão de ' '. Pode ser usado para fornecer parâmetros adicionais ao Agente de Mesclagem, como no exemplo seguinte que aumenta o tempo limite de consulta padrão para `600` segundos:  
+`[ @optional_command_line = ] 'optional_command_line'` É um prompt de comando opcional fornecido ao Merge Agent. *optional_command_line* está **nvarchar (255)** , com um padrão de ' '. Pode ser usado para fornecer parâmetros adicionais ao Agente de Mesclagem, como no exemplo seguinte que aumenta o tempo limite de consulta padrão para `600` segundos:  
   
 ```  
 @optional_command_line = N'-QueryTimeOut 600'  
 ```  
   
-`[ @merge_jobid = ] merge_jobid` É o parâmetro de saída para a ID do trabalho. *merge_jobid* está **binário (16)**, com um padrão NULL.  
+`[ @merge_jobid = ] merge_jobid` É o parâmetro de saída para a ID do trabalho. *merge_jobid* está **binário (16)** , com um padrão NULL.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Especifica se a assinatura pode ser sincronizada por meio do Gerenciador de sincronização do Windows. *enabled_for_syncmgr* está **nvarchar (5)**, com um padrão de FALSE. Se **falsos**, a assinatura não está registrada com o Gerenciador de sincronização. Se **verdadeira**, a assinatura é registrada com o Gerenciador de sincronização e será sincronizada sem iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Especifica se a assinatura pode ser sincronizada por meio do Gerenciador de sincronização do Windows. *enabled_for_syncmgr* está **nvarchar (5)** , com um padrão de FALSE. Se **falsos**, a assinatura não está registrada com o Gerenciador de sincronização. Se **verdadeira**, a assinatura é registrada com o Gerenciador de sincronização e será sincronizada sem iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 `[ @ftp_address = ] 'ftp_address'` Para compatibilidade com versões anteriores.  
   
@@ -232,15 +231,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @ftp_password = ] 'ftp_password'` Para compatibilidade com versões anteriores.  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` Especifica o local do qual retirar os arquivos de instantâneo. *alternate_snapshot_folder* está **nvarchar (255)**, com um padrão NULL. Se for NULL, os arquivos de instantâneo serão retirados do local padrão especificado pelo Publicador.  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` Especifica o local do qual retirar os arquivos de instantâneo. *alternate_snapshot_folder* está **nvarchar (255)** , com um padrão NULL. Se for NULL, os arquivos de instantâneo serão retirados do local padrão especificado pelo Publicador.  
   
-`[ @working_directory = ] 'working_directory'` É o nome do diretório de trabalho usado para armazenar temporariamente os arquivos de dados e o esquema para a publicação quando o FTP é usado para transferir arquivos de instantâneo. *working_directory* está **nvarchar (255)**, com um padrão NULL.  
+`[ @working_directory = ] 'working_directory'` É o nome do diretório de trabalho usado para armazenar temporariamente os arquivos de dados e o esquema para a publicação quando o FTP é usado para transferir arquivos de instantâneo. *working_directory* está **nvarchar (255)** , com um padrão NULL.  
   
-`[ @use_ftp = ] 'use_ftp'` Especifica o uso do FTP em vez do protocolo típico para recuperar instantâneos. *use_ftp* está **nvarchar (5)**, com um padrão de FALSE.  
+`[ @use_ftp = ] 'use_ftp'` Especifica o uso do FTP em vez do protocolo típico para recuperar instantâneos. *use_ftp* está **nvarchar (5)** , com um padrão de FALSE.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]` Usa o resolvedor interativo para resolver conflitos para todos os artigos que permitem resolução interativa. *use_interactive_resolver* está **nvarchar (5)**, com um padrão de FALSE.  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]` Usa o resolvedor interativo para resolver conflitos para todos os artigos que permitem resolução interativa. *use_interactive_resolver* está **nvarchar (5)** , com um padrão de FALSE.  
   
 `[ @offloadagent = ] 'remote_agent_activation'`
  > [!NOTE]  
@@ -252,15 +251,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @job_name = ] 'job_name' ]` É o nome de um trabalho de agente existente. *job_name* está **sysname**, com um valor padrão de NULL. Esse parâmetro só é especificado quando a assinatura será sincronizada usando um trabalho existente em vez de um trabalho recém-criado (o padrão). Se você não for um membro do **sysadmin** função de servidor fixa, você deve especificar *job_login* e *job_password* quando você especifica *job_name*.  
   
-`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` O caminho para a pasta onde os arquivos de instantâneo serão lidos se um instantâneo de dados filtrados deve ser usada. *dynamic_snapshot_location* está **nvarchar (260)**, com um padrão NULL. Para obter mais informações, consulte [Filtros de linha com parâmetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` O caminho para a pasta onde os arquivos de instantâneo serão lidos se um instantâneo de dados filtrados deve ser usada. *dynamic_snapshot_location* está **nvarchar (260)** , com um padrão NULL. Para obter mais informações, consulte [Filtros de linha com parâmetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 `[ @use_web_sync = ] use_web_sync` Indica que a sincronização da Web está habilitada. *use_web_sync* está **bit**, com um padrão de 0. **1** Especifica que a assinatura pull pode ser sincronizada pela internet usando HTTP.  
   
-`[ @internet_url = ] 'internet_url'` É o local do replication listener (REPLISAPI. DLL) para sincronização da Web. *internet_url* está **nvarchar (260)**, com um padrão NULL. *internet_url* é uma URL totalmente qualificada, no formato `http://server.domain.com/directory/replisapi.dll`. Se o servidor for configurado para ouvir em uma porta diferente da porta 80, o número da porta também deverá ser fornecido no formato `http://server.domain.com:portnumber/directory/replisapi.dll`, onde `portnumber` representa a porta.  
+`[ @internet_url = ] 'internet_url'` É o local do replication listener (REPLISAPI. DLL) para sincronização da Web. *internet_url* está **nvarchar (260)** , com um padrão NULL. *internet_url* é uma URL totalmente qualificada, no formato `http://server.domain.com/directory/replisapi.dll`. Se o servidor for configurado para ouvir em uma porta diferente da porta 80, o número da porta também deverá ser fornecido no formato `http://server.domain.com:portnumber/directory/replisapi.dll`, onde `portnumber` representa a porta.  
   
 `[ @internet_login = ] 'internet_login'` É o logon que o Merge Agent usa ao se conectar ao servidor da Web que está hospedando a sincronização da Web usando autenticação básica HTTP. *internet_login* está **sysname**, com um padrão NULL.  
   
-`[ @internet_password = ] 'internet_password'` É a senha que o Merge Agent usa ao se conectar ao servidor da Web que está hospedando a sincronização da Web usando autenticação básica HTTP. *internet_password* está **nvarchar(524)**, com um valor padrão de NULL.  
+`[ @internet_password = ] 'internet_password'` É a senha que o Merge Agent usa ao se conectar ao servidor da Web que está hospedando a sincronização da Web usando autenticação básica HTTP. *internet_password* está **nvarchar(524)** , com um valor padrão de NULL.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
@@ -279,7 +278,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @hostname = ] 'hostname'` Substitui o valor HOST_NAME () quando essa função é usada na cláusula WHERE de um filtro com parâmetros. *nome do host* está **sysname**, com um padrão NULL.  
   
-`[ @job_login = ] 'job_login'` É o logon para a conta do Windows sob a qual o agente é executado. *job_login* está **nvarchar(257)**, sem padrão. Essa conta do Windows é sempre usada para conexões do agente com o Assinante e para conexões com o Distribuidor e o Publicador ao usar a Autenticação Integrada do Windows.  
+`[ @job_login = ] 'job_login'` É o logon para a conta do Windows sob a qual o agente é executado. *job_login* está **nvarchar(257)** , sem padrão. Essa conta do Windows é sempre usada para conexões do agente com o Assinante e para conexões com o Distribuidor e o Publicador ao usar a Autenticação Integrada do Windows.  
   
 `[ @job_password = ] 'job_password'` É a senha para a conta do Windows sob a qual o agente é executado. *job_password* está **sysname**, sem padrão.  
   

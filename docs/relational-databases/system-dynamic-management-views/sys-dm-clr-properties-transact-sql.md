@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f7ff1fd534876d177288dad396276e95d78d681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.openlocfilehash: 7d7f5959eaacc9e25f7a80d338bcdac0bed59cff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138399"
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47735704"
   
  O **sys.dm_clr_properties** modo de exibição contém o **nome** e **valor** colunas. Cada linha nesta exibição fornece detalhes sobre uma propriedade do CLR hospedado. Use esta exibição para coletar informações sobre o CLR hospedado, como o diretório de instalação do CLR, a versão do CLR e o estado atual do CLR hospedado. Esta exibição poderá ajudá-lo a determinar se o código de integração CLR não está funcionando devido a problemas com a instalação de CLR no computador do servidor.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|O nome da propriedade.|  
 |**value**|**nvarchar(128)**|Valor da propriedade.|  
@@ -75,7 +74,7 @@ ms.locfileid: "47735704"
 ## <a name="permissions"></a>Permissões  
   
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
+Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer a permissão `VIEW DATABASE STATE` no banco de dados.   
 
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir recupera informações sobre o CLR hospedado:  

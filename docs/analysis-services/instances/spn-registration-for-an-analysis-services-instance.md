@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7b4516470b1b55c697cbfee065dbf53c3187a6a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209426"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52526490"
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** é uma ferramenta de diagnóstico que ajuda a solucionar problemas de Kerberos relativos à conectividade com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
   
- Este tópico contém as seguintes seções:  
+ Esse tópico contém as seguintes seções:  
   
  [Quando o registro de SPN é necessário](#bkmk_scnearios)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "52526490"
 |Conta do serviço|Esta é a conta de inicialização do serviço do Windows **MSSQLServerOLAPService** . Ela pode ser uma conta de usuário de domínio do Windows, uma conta virtual, uma conta de serviço gerenciado (MSA) ou uma conta interna, como um SID por serviço, NetworkService ou LocalSystem. Uma conta de usuário de domínio do Windows pode ser formatada como domínio \ usuário ou user@domain.|  
   
 ##  <a name="bkmk_virtual"></a> Registro de SPN de uma conta virtual  
- As contas virtuais são o tipo de conta padrão para os serviços do SQL Server. A conta virtual é **NT Service\MSOLAPService** para uma instância padrão e **NT Service\MSOLAP$**\<nome da instância > para uma instância nomeada.  
+ As contas virtuais são o tipo de conta padrão para os serviços do SQL Server. A conta virtual é **NT Service\MSOLAPService** para uma instância padrão e **NT Service\MSOLAP$** \<nome da instância > para uma instância nomeada.  
   
  Como o nome implica, essas contas não existem no Active Directory. Uma conta virtual existe somente no computador local. Ao conectar a serviços externos, aplicativos ou dispositivos, a conexão é feita usando a conta da máquina local. Por essa razão, um registro de SPN para o Analysis Services executado em uma conta virtual é na verdade um registro de SPN para a conta do computador.  
   
@@ -93,7 +93,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **Exemplo de sintaxe para uma instância nomeada em execução como NT Service\MSOLAP$\<-nome da instância >**  
   
- Esse exemplo mostra a sintaxe **setspn** para uma instância nomeada executada na conta virtual padrão. Nesse exemplo, o nome do host do computador é **AW-SRV02** e o nome da instância é **AW-FINANCE**. Novamente, é a conta do computador especificado para o SPN, em vez da conta virtual **NT Service\MSOLAP$**\<nome da instância >.  
+ Esse exemplo mostra a sintaxe **setspn** para uma instância nomeada executada na conta virtual padrão. Nesse exemplo, o nome do host do computador é **AW-SRV02** e o nome da instância é **AW-FINANCE**. Novamente, é a conta do computador especificado para o SPN, em vez da conta virtual **NT Service\MSOLAP$** \<nome da instância >.  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  

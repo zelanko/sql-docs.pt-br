@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 449f86b80b93055bb23fe4cd32ace10e15724dbc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038337"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210999"
 ---
-# <a name="lesson-1-create-windows-azure-storage-objects"></a>Lição 1: Criar objetos de armazenamento do Azure do Windows
+# <a name="lesson-1-create-windows-azure-storage-objects"></a>Lição 1: Criar objetos do Armazenamento do Microsoft Azure
   Para que você possa criar backups do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no armazenamento em nuvem, primeiro crie uma conta de armazenamento e, depois, um contêiner de blob. A lição 1 conduzirá você pelas etapas do registro em log no portal de gerenciamento do Windows Azure, criando uma conta de armazenamento e um contêiner de blob.  
   
 ## <a name="create-a-storage-account"></a>Criar uma conta de armazenamento  

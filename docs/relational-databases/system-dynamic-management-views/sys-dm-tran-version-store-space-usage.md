@@ -21,11 +21,11 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8ae2babba09f30b03ea512a85bdc6f06c4bf7f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688274"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68204703"
 ---
 # <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -34,9 +34,9 @@ Retorna uma tabela que exibe o total de espaço em tempdb usado pelos registros 
   
 Cada registro com controle de versão é armazenado como dados binários, junto com algumas informações de rastreamento ou de status. Semelhante a registros em tabelas de banco de dados, os registros de armazenamento de versão são armazenados em páginas de 8.192 bytes. Se um registro exceder 8.192 bytes, ele será dividido em dois registros diferentes.  
   
-Porque o registro com controle de versão é armazenado como binário, não há nenhum problema com agrupamentos diferentes de bancos de dados diferentes. Use **tran_version_store_space_usage** para monitorar e planejar tamanho de tempdb com base no uso de espaço de armazenamento a versão de bancos de dados em uma instância do SQL Server.
+Porque o registro com controle de versão é armazenado como binário, não há nenhum problema com ordenações diferentes de bancos de dados diferentes. Use **tran_version_store_space_usage** para monitorar e planejar tamanho de tempdb com base no uso de espaço de armazenamento a versão de bancos de dados em uma instância do SQL Server.
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID do banco de dados do banco de dados.|  
 |**reserved_page_count**|**bigint**|Contagem total de páginas reservadas no tempdb para a versão armazenar os registros do banco de dados.|  

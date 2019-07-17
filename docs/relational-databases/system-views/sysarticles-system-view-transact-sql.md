@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18f8c9b3-cab7-4e8f-8754-11ac38c3f789
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9764c33f311aa799935a51301c2c5237abfc9d6c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f0d1f6c1036d946088e2cc1aa91c08f620c3f597
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129537"
 ---
 # <a name="sysarticles-system-view-transact-sql"></a>sysarticles (exibição de sistema) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "52759818"
 |**del_cmd**|**nvarchar(255)**|O comando para executar em DELETE; caso contrário, construir do log.|  
 |**description**|**nvarchar(255)**|A entrada descritiva para o artigo.|  
 |**dest_table**|**sysname**|O nome da tabela de destino.|  
-|**filtro**|**int**|A ID do procedimento armazenado, usado para particionamento horizontal.|  
+|**filter**|**int**|A ID do procedimento armazenado, usado para particionamento horizontal.|  
 |**filter_clause**|**ntext**|A cláusula WHERE do artigo, usado para filtragem horizontal.|  
 |**ins_cmd**|**nvarchar(255)**|O comando para executar em INSERT; caso contrário, construir do log.|  
 |**name**|**sysname**|O nome associado ao artigo, exclusivo dentro da publicação.|  

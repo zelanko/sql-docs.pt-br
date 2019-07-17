@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5368288930526435682723ba8f50d878ff029ce1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021703"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179619"
 ---
-# <a name="attribute-properties---define-a-new-attribute-automatically"></a>Propriedades de atributo - definir um novo atributo automaticamente
+# <a name="attribute-properties---define-a-new-attribute-automatically"></a>Propriedades do atributo – Definir um novo atributo automaticamente
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Você pode criar um novo atributo em uma dimensão usando o recurso de edição arrastar-e-soltar no Designer de Dimensão.  
   

@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763938"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206959"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objeto Recursos Preteridos
   O objeto SQLServer:Recursos Preteridos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um contador para monitorar recursos designados como preteridos. Em cada caso, o contador fornece uma contagem de uso que lista o número de vezes em que o recurso preterido foi encontrado desde a última inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "52763938"
 |Instâncias do contador de Recursos Preteridos do SQL Server|Descrição|  
 |------------------------------------------------------|-----------------|  
 |'#' e '##' como o nome de tabelas temporárias e procedimentos armazenados|Um identificador que não contém nenhum caractere diferente de # foi encontrado. Use pelo menos um caractere adicional. Ocorre uma vez por compilação.|  
-|sintaxe '::' de chamada de função|A sintaxe de chamada de função :: foi encontrada para uma função com valor de tabela. Substituir por `SELECT column_list FROM`  *\< nome_da_função >*`()`. Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)`por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Ocorre uma vez por compilação.|  
+|sintaxe '::' de chamada de função|A sintaxe de chamada de função :: foi encontrada para uma função com valor de tabela. Substituir por `SELECT column_list FROM`  *\< nome_da_função >* `()`. Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)`por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Ocorre uma vez por compilação.|  
 |'\@' e nomes que começam com '\@\@' como identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]|Foi encontrado um identificador que começava com \@ ou \@\@. Não use \@ nem \@\@ ou nomes que comecem com \@\@ como identificadores. Ocorre uma vez por compilação.|  
 |ADDING TAPE DEVICE|O recurso preterido sp_addumpdevice'`tape`' foi encontrado. Use sp_addumpdevice'`disk`' em vez disso. Ocorre uma vez por uso.|  
 |Permissão ALL|Número total de vezes que a sintaxe GRANT ALL, DENY ALL ou REVOKE ALL foi encontrada. Modifique a sintaxe para negar permissões específicas. Ocorre uma vez por consulta.|  
@@ -112,7 +112,7 @@ ms.locfileid: "52763938"
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Referencias a sys.numbered_procedure_parameters preterido foram encontradas. Não use. Ocorre uma vez por compilação.|  
 |numbered_procedures|Referencias a sys.numbered_procedures preterido foram encontradas. Não use. Ocorre uma vez por compilação.|  
-|RAISEERROR em estilo antigo|A sintaxe RAISERROR preterida (formato: cadeia de inteiros RAISERROR) foi encontrada. Reescreva a instrução usando a sintaxe RAISERROR atual. Ocorre uma vez por compilação.|  
+|RAISEERROR em estilo antigo|A sintaxe RAISERROR preterida (formato: Sintaxe de cadeia de inteiros RAISERROR) foi encontrada. Reescreva a instrução usando a sintaxe RAISERROR atual. Ocorre uma vez por compilação.|  
 |OLEDB para conexões ad hoc|SQLOLEDB não é um provedor com suporte. Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para conexões ad hoc.|  
 |PERMISSIONS|Foram encontradas referencias à função intrínseca PERMISSIONS. Consulte sys.fn_my_permissions. Ocorre uma vez por consulta.|  
 |ProcNums|A sintaxe ProcNums preterida foi encontrada. Reescreva as instruções para remover as referências. Ocorre uma vez por compilação.|  

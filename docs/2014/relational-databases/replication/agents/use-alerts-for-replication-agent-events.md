@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a670a78f6e906221638fb67c1cf5be8398b415b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762578"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210737"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Usar Alertas para eventos do agente de replicação
   Os Agentes [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporcionam um modo para monitorar eventos, como eventos do agente de replicação, usando alertas. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent monitora o log do aplicativo do Windows para eventos que são associados com alertas. Se esse evento ocorrer, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent responderá automaticamente, executando uma tarefa que você definiu e/ou enviando uma mensagem de email ou pager a um operador especificado. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclui um conjunto de alertas predefinidos para agentes de replicação que você pode configurar para executar uma tarefa e/ou notificar um operador. Para obter mais informações sobre como definir uma tarefa a executar, consulte a seção “Automatizando uma resposta para um alerta” neste tópico.  
@@ -39,9 +39,9 @@ ms.locfileid: "52762578"
 |14151|**Replicação: falha do agente**|Agente é desligado com um erro.|Sim|  
 |14152|**Replicação: repetição do agente**|O agente desliga após repetir uma operação sem-êxito (agente encontra erro, como servidor não disponível, deadlock, falha de conexão ou falha de tempo limite).|Sim|  
 |14157|**Replicação: assinatura expirada cancelada**|A assinatura expirada foi descartada.|Não|  
-|20572|**Replicação: Assinatura reinicializada após falha de validação**|Trabalho de resposta 'Reinicializar assinatura em falha de validação de dados' reinicializa uma assinatura com êxito.|Não|  
-|20574|**Replicação: Assinante Falha na validação de dados**|O Agente de Distribuição ou Mesclagem falha na validação de dados.|Sim|  
-|20575|**Replicação: Validação de dados do assinante**|Distribution ou Merge Agent passa na validação de dados.|Sim|  
+|20572|**Replicação: assinatura reinicializada após falha de validação**|Trabalho de resposta 'Reinicializar assinatura em falha de validação de dados' reinicializa uma assinatura com êxito.|Não|  
+|20574|**Replicação: falha na validação de dados do assinante**|O Agente de Distribuição ou Mesclagem falha na validação de dados.|Sim|  
+|20575|**Replicação: o assinante foi aprovado na validação de dados**|Distribution ou Merge Agent passa na validação de dados.|Sim|  
 |20578|**Replicação: desligamento personalizado do agente**|||  
 |22815|**Alerta de detecção de conflito ponto a ponto**|O Agente de Distribuição detectou um conflito ao tentar aplicar uma alteração a um nó ponto a ponto.|Sim|  
   

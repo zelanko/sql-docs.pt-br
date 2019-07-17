@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5b7a56afb2ffa11dbe4ec8937efb602c13c9599d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65450022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107927"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *progid*  
+ *ProgID*  
  É o identificador programático (ProgID) do objeto OLE a ser criado. Essa cadeia de caracteres descreve a classe do objeto OLE e tem o formato: **'** _OLEComponent_ **.** _Objeto_ **'**  
   
  *OLEComponent* é o nome do componente do servidor de automação OLE, e *objeto* é o nome do objeto OLE. O objeto OLE especificado deve ser válido e deve oferecer suporte a **IDispatch** interface.  
@@ -52,7 +51,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Por exemplo, {00026ba1-0000-0000-C000-000000000046} é o CLSID do SQL-DMO **SQLServer** objeto.  
   
- _objecttoken_ **OUTPUT**  
+ _objecttoken_ **saída**  
  É o token de objeto retornado, e deve ser uma variável local de tipo de dados **int**. Esse token de objeto identifica o objeto OLE criado e é usado em chamadas para os outros procedimentos armazenados de automação OLE.  
   
  *context*  

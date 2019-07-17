@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3eac4057f8a4db818a02068f33cbc7b295353f0c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145861"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207900"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>CSDLBI (Anotações CSDL para Business Intelligence)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "50145861"
 ### <a name="csdlbi-versions"></a>Versões da CSDLBI  
  A especificação da CSDL original (da Estrutura de Dados de Entidade) oferece a maioria das entidades e propriedades necessárias para oferecer suporte à modelagem. As anotações de BI oferecem suporte aos requisitos especiais de modelos de tabela, às propriedades de relatório exigidas por clientes como o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] e aos metadados adicionais exigidos pelos modelos multidimensionais. Esta seção descreve as atualizações em cada versão.  
   
- **1.0 DA CSDLBI**  
+ **CSDLBI 1.0**  
   
  O conjunto inicial de adições ao esquema da CSDL para oferecer suporte a modelos de tabela do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] continha anotações para suporte à modelagem de dados, aos cálculos personalizados e à apresentação aprimorada:  
   
@@ -49,7 +49,7 @@ ms.locfileid: "50145861"
   
 -   Propriedades de visualização e navegação. Por exemplo, as propriedades foram adicionadas para oferecer suporte a campos de classificação personalizados, imagens padrão e  
   
- **1.1 DA CSDLBI**  
+ **CSDLBI 1.1**  
   
  Essa versão do esquema da CSDLBI inclui adições para suporte de bancos de dados multidimensionais (como cubos OLAP). Os novos elementos e propriedades são os seguintes:  
   

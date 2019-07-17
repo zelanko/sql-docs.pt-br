@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119328"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "52402840"
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Número de identificação exclusivo de conjunto de backup que o identifica. Identidade, chave primária.|  
 |**backup_set_uuid**|**uniqueidentifier**|Número de identificação exclusivo de conjunto de backup que o identifica.|  
-|**media_set_id**|**int**|Número de identificação exclusivo de conjunto de mídia que identifica o conjunto de mídia contendo o conjunto de backup. As referências **backupmediaset (media_set_id)**.|  
+|**media_set_id**|**int**|Número de identificação exclusivo de conjunto de mídia que identifica o conjunto de mídia contendo o conjunto de backup. As referências **backupmediaset (media_set_id)** .|  
 |**first_family_number**|**tinyint**|Número de família da mídia em que conjunto de backup é iniciado. Pode ser NULL.|  
 |**first_media_number**|**smallint**|Número de mídia da mídia em que conjunto de backup é iniciado. Pode ser NULL.|  
 |**last_family_number**|**tinyint**|Número de família da mídia em que conjunto de backup é encerrado. Pode ser NULL.|  
@@ -100,7 +99,7 @@ ms.locfileid: "52402840"
 |**compressed_backup_size**|**Numeric(20,0)**|Contagem total de bytes do backup armazenado em disco.<br /><br /> Para calcular a taxa de compactação, use **compressed_backup_size** e **backup_size**.<br /><br /> Durante um **msdb** atualização, esse valor é definido como NULL. o que indica um backup não compactado.|  
 |**key_algorithm**|**nvarchar(32)**|O algoritmo de criptografia usado para criptografar o backup. O valor de NO_Encryption indica que o backup não foi criptografado.|  
 |**encryptor_thumbprint**|**varbinary(20)**|A impressão digital do criptografador que pode ser usada para localizar o certificado ou chave assimétrica no banco de dados. Quando o backup não tiver sido criptografado, esse valor será NULL.|  
-|**encryptor_type**|**nvarchar(32)**|Tipo de criptografador usado: Certificate ou Asymmetric Key. para obter informações sobre a ferramenta de configuração e recursos adicionais. Quando o backup não tiver sido criptografado, esse valor será NULL.|  
+|**encryptor_type**|**nvarchar(32)**|O tipo de criptografador usado: Certificado ou Chave Assimétrica. . Quando o backup não tiver sido criptografado, esse valor será NULL.|  
   
 ## <a name="remarks"></a>Comentários  
  RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY preenche a coluna da **backupmediaset** tabela com os valores apropriados do cabeçalho de conjunto de mídias.  

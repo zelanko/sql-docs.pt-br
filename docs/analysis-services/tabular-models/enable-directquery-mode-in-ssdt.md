@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 83fa1cf8d99f18cd82e00b4020a2d846b1bdfdc6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162886"
 ---
 # <a name="enable-directquery-mode-in-ssdt"></a>Habilitar o modo DirectQuery no SSDT
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

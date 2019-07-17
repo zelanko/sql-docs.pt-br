@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 66ec81fdc6ebdbecf83791c6fffa5735a37723bc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9e92b9ec98ee08579164c403fe1be6ff6ef47816
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104502"
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @sequence_name = ] N'sequence'` O nome do objeto de sequência. O esquema é opcional. *sequence_name* está **nvarchar(776)**.  
+`[ @sequence_name = ] N'sequence'` O nome do objeto de sequência. O esquema é opcional. *sequence_name* está **nvarchar(776)** .  
   
 `[ @range_size = ] range_size` O número de valores a ser buscado da sequência. **@range_size** está **bigint**.  
   

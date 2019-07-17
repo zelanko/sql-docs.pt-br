@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9de1f394184c6dab26f691251af85bfe631ae6c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2302b64253c824ea21ef23f96bd2fae2952972d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724924"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121212"
 ---
 # <a name="sysmailunsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +41,11 @@ ms.locfileid: "47724924"
   
  Para ver todas as mensagens processadas pelo Database Mail, use [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). Para ver somente mensagens com o status de falha, use [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Para ver apenas as mensagens que foram enviadas, use [sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificador do item de email na fila de email.|  
 |**profile_id**|**int**|O identificador do perfil usado para enviar a mensagem.|  
-|**destinatários**|**varchar(max)**|Os endereços de email dos destinatários da mensagem.|  
+|**recipients**|**varchar(max)**|Os endereços de email dos destinatários da mensagem.|  
 |**copy_recipients**|**varchar(max)**|Os endereços de email daqueles que recebem cópias da mensagem.|  
 |**blind_copy_recipients**|**varchar(max)**|Os endereços de email daqueles que recebem cópias da mensagem, mas cujos nomes não aparecem no cabeçalho.|  
 |**subject**|**nvarchar(510)**|A linha de assunto da mensagem.|  

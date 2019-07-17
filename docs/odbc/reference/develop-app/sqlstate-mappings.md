@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 597fe4f7697375cc2e75bef79059beeba9d91e14
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 3987085d7d04bf248bcc728c3bcd1ee5503d9af1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792759"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107363"
 ---
 # <a name="sqlstate-mappings"></a>Mapeamentos de SQLSTATE
 Este tópico discute os valores de SQLSTATE para ODBC *2.x* e ODBC *3.x*. Para obter mais informações sobre ODBC *3.x* valores SQLSTATE, consulte [apêndice a: Códigos de erro ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  

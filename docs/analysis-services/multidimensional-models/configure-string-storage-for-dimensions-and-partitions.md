@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6a5aff8822d3fceb05d22433094dc952c6cb872
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023853"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209113"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurar o armazenamento de cadeia de caracteres para dimensões e partições
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34023853"
   
  Os valores válidos para essa propriedade incluem os seguintes:  
   
-|Value|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1050**|Especifica a arquitetura de armazenamento de cadeias de caracteres padrão, sujeita a um tamanho de arquivo máximo de 4 GB por repositório.|  
 |**1100**|Especifica um maior armazenamento de cadeias de caracteres, dá suporte a até quatro bilhões de cadeias de caracteres exclusivas por repositório.|  
@@ -32,15 +32,15 @@ ms.locfileid: "34023853"
 > [!IMPORTANT]  
 >  A alteração das configurações do armazenamento de cadeias de caracteres de um objeto requer que você reprocesse próprio objeto e qualquer objeto dependente. O processamento é necessário para concluir o procedimento.  
   
- Este tópico contém as seguintes seções:  
+ Esse tópico contém as seguintes seções:  
   
 -   [Sobre repositórios de cadeias de caracteres](#bkmk_background)  
   
 -   [Pré-requisitos](#bkmk_prereq)  
   
--   [Etapa 1: definir a propriedade StringStoreCompatiblityLevel no SQL Server Data Tools](#bkmk_step1)  
+-   [Etapa 1: Definir a propriedade StringStoreCompatiblityLevel no SQL Server Data Tools](#bkmk_step1)  
   
--   [Etapa 2: processar os objetos](#bkmk_step2)  
+-   [Etapa 2: Os objetos de processo](#bkmk_step2)  
   
 ##  <a name="bkmk_background"></a> Sobre repositórios de cadeias de caracteres  
  A configuração do armazenamento de cadeias de caracteres é opcional, o que significa que até mesmo novos bancos de dados criados usam a arquitetura de repositório de cadeias de caracteres padrão que está sujeita ao tamanho de arquivo máximo de 4 GB. O uso de uma maior arquitetura de armazenamento de cadeia de caracteres tem um impacto pequeno mas notável no desempenho. Você deve usá-la apenas se seus arquivos de armazenamento de cadeias de caracteres estiverem próximos ou no limite máximo de 4 GB.  
@@ -61,7 +61,7 @@ ms.locfileid: "34023853"
   
  O nível de compatibilidade do banco de dados deve ser definido como 1100. Se você criar ou implantar um banco de dados usando o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] e o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou uma versão posterior do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o nível de compatibilidade do banco de dados já estará definido como 1100. Se você mover um banco de dados criado em uma versão anterior do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para o ssSQL11 ou posterior, deverá atualizar o nível de compatibilidade. Para bancos de dados que você está movendo, mas não reimplantando, você poderá usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para definir o nível de compatibilidade. Para obter mais informações, consulte [Nível de compatibilidade de um banco de dados multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
-##  <a name="bkmk_step1"></a> Etapa 1: definir a propriedade StringStoreCompatiblityLevel no SQL Server Data Tools  
+##  <a name="bkmk_step1"></a> Etapa 1: Definir a propriedade StringStoreCompatiblityLevel no SQL Server Data Tools  
   
 1.  Usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto que contém as dimensões ou as partições que você deseja modificar.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "34023853"
   
 8.  Salve o arquivo.  
   
-##  <a name="bkmk_step2"></a> Etapa 2: processar os objetos  
+##  <a name="bkmk_step2"></a> Etapa 2: Os objetos de processo  
  A nova arquitetura de armazenamento será usada depois que você processar os objetos. O processamento dos objetos também prova que você resolveu o problema de restrição de armazenamento com êxito porque o erro que relatava uma condição de estouro do repositório de cadeias de caracteres não deve mais ocorrer.  
   
 -   No Gerenciador de Soluções, clique com o botão direito do mouse na dimensão que você acabou de modificar e selecione **Processar**.  
@@ -88,8 +88,8 @@ ms.locfileid: "34023853"
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas e abordagens para processamento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [Opções de processamento e as configurações de & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Modos de armazenamento de partição e processamento](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
- [Armazenamento de dimensão](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
+ [Processando opções e configurações &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [Modos e processamento de armazenamento de partição](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+ [Armazenamento de dimensões](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8590a33f870dc14ac34118ce5e655acc6e67f257
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7abf136187b4f45a03cebc92fd23ee544dddb117
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62645105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116694"
 ---
 # <a name="xploginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ xp_loginconfig ['config_name']
 |**Domínio padrão**|Nome do domínio padrão do Windows para usuários de rede de conexões confiáveis. O domínio padrão é o domínio do computador que executa o Windows e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse valor é fornecido para a compatibilidade com versões anteriores.|  
 |**nível de auditoria**|Nível de auditoria. Os valores possíveis são **none**, **sucesso**, **falha**, e **todos os**. As auditorias são gravadas no log de erros e no recurso Visualizador de Eventos do Windows.|  
 |**nome do host do conjunto**|Indica se o nome do host do registro de logon do cliente é substituído pelo nome de usuário de rede do Windows. Os valores possíveis são **verdadeira** ou **falso**. Se isso estiver definido, o nome de usuário de rede aparecerá na saída de **sp_who**.|  
-|**map _**|Relata quais caracteres especiais do Windows são mapeados para o caractere de sublinhado (_) válido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os valores possíveis são **separador de domínio** (padrão), **espaço**, **nulo**, ou qualquer caractere único. Esse valor é fornecido para a compatibilidade com versões anteriores.|  
+|**mapa _**|Relata quais caracteres especiais do Windows são mapeados para o caractere de sublinhado (_) válido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os valores possíveis são **separador de domínio** (padrão), **espaço**, **nulo**, ou qualquer caractere único. Esse valor é fornecido para a compatibilidade com versões anteriores.|  
 |**mapear $**|Relata quais caracteres especiais do Windows são mapeados para o caractere de cifrão ($) válido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os valores possíveis são **separador de domínio**, **espaço**, **nulo**, ou qualquer caractere único. O padrão é **espaço**. Esse valor é fornecido para a compatibilidade com versões anteriores.|  
 |**n º do mapa**|Relata quais caracteres especiais do Windows são mapeados para o caractere de sinal numérico (#) válido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os valores possíveis são **separador de domínio**, **espaço**, **nulo**, ou qualquer caractere único. Hífen é o padrão. Esse valor é fornecido para a compatibilidade com versões anteriores.|  
   
@@ -65,7 +64,7 @@ xp_loginconfig ['config_name']
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Valor de configuração|  
-|**config value**|**sysname**|Definição de valor de configuração|  
+|**valor de configuração**|**sysname**|Definição de valor de configuração|  
   
 ## <a name="remarks"></a>Comentários  
  **XP_LOGINCONFIG** não pode ser usado para definir valores de configuração.  

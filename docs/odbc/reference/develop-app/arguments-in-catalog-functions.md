@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5dd36e82b71ff862a543bfa38cda4b4a660738a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 649c00f1db486dab4a996138be4e26b0e270fbae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106289"
 ---
 # <a name="arguments-in-catalog-functions"></a>Argumentos em funções de catálogo
 Todas as funções de catálogo aceitam argumentos com os quais um aplicativo pode restringir o escopo dos dados retornados. Por exemplo, as primeiros e segunda chamadas para **SQLTables** no código a seguir retornam um conjunto de resultados contendo informações sobre todas as tabelas, enquanto a terceira chamada retorna informações sobre a tabela de pedidos:  
@@ -38,7 +37,7 @@ SQLTables(hstmt3, NULL, 0, NULL, 0, "Orders", SQL_NTS, NULL, 0);
 |--------------|--------------|---------------------------------------------------------------|--------------------------------------------------------------|  
 |**SQLColumnPrivileges**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA OA OA PV|ID DE IDENTIFICAÇÃO DE ID DE ID|  
 |**SQLColumns**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA PV PV PV|ID DE IDENTIFICAÇÃO DE ID DE ID|  
-|**SQLForeignKeys**|*PKCatalogName* *PKSchemaName* *PKTableName* *FKCatalogName* *FKSchemaName* *FKTableName*|OA OA OA OA OA OA|ID ID ID ID ID ID|  
+|**SQLForeignKeys**|*PKCatalogName* *PKSchemaName* *PKTableName* *FKCatalogName* *FKSchemaName*  *FKTableName*|OA OA OA OA OA OA|ID ID ID ID ID ID|  
 |**SQLPrimaryKeys**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID DE IDENTIFICAÇÃO DE ID|  
 |**SQLProcedureColumns**|*CatalogName* *SchemaName* *ProcName* *ColumnName*|OA PV PV PV|ID DE IDENTIFICAÇÃO DE ID DE ID|  
 |**SQLProcedures**|*CatalogName* *SchemaName* *ProcName*|VP DE PV OA|ID DE IDENTIFICAÇÃO DE ID|  

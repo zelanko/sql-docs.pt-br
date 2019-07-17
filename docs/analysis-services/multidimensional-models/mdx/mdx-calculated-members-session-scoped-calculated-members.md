@@ -1,5 +1,5 @@
 ---
-title: Criando no escopo da sessão calculados membros (MDX) | Microsoft Docs
+title: No escopo da sessão de criação de membros (MDX) calculados | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 476c62ef2aa4f0aad3d65cd2b78f27fc9ae6fd7c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021283"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68176579"
 ---
-# <a name="mdx-calculated-members---session-scoped-calculated-members"></a>MDX calculadas membros - membros calculados no escopo da sessão
+# <a name="mdx-calculated-members---session-scoped-calculated-members"></a>Membros - membros calculados no escopo da sessão calculados MDX
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  Para criar um membro calculado disponível por meio de uma sessão de expressões MDX, use a instrução [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md). Um membro calculado criado com a instrução CREATE MEMBER não será removido até que a sessão MDX seja encerrada.  
+  Para criar um membro calculado disponível por meio de uma sessão de expressões MDX, use a instrução [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md) . Um membro calculado criado com a instrução CREATE MEMBER não será removido até que a sessão MDX seja encerrada.  
   
  Como discutido neste tópico, a sintaxe da instrução CREATE MEMBER é direta e fácil usar.  
   
@@ -49,6 +49,6 @@ sum(([Stores].[ByLocation].Lag(3) :
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Criando no escopo da consulta calculados membros & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)  
+ [Criando membros calculados no escopo da consulta &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

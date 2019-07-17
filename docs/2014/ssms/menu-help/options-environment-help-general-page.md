@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e9f8e5d5f196452a8cd0f56e26aac40895bcd9d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774980"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188539"
 ---
 # <a name="options-environment-help-general-page"></a>Opções (página ambiente – ajuda – geral)
   Use a caixa de diálogo **Opções** para escolher conjuntos de documentação e decidir se serão exibidos tópicos internamente no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou externamente em uma janela separada. Para acessar essa caixa de diálogo, clique em **Opções** no menu **Ferramentas** , expanda a **Ajuda** no nó **Ambiente** e clique em **Geral**.  

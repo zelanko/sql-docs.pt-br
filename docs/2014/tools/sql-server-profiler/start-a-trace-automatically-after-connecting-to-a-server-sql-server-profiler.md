@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: facde89ad6b476fa01b34badce10dd3cae52ecac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753718"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186124"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>Iniciar um rastreamento automaticamente após a conexão com um servidor (SQL Server Profiler)
   Este tópico descreve como iniciar rastreamentos automaticamente após o estabelecimento de conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-start-a-trace-automatically-after-connecting-to-a-server-with-sql-server-profiler"></a>Para iniciar um rastreamento automaticamente após a conexão com um servidor de SQL Server Profiler  
   
-1.  No menu **Ferramentas** , clique em **Opções**.  
+1.  No menu **Ferramentas**, clique em **Opções**.  
   
 2.  Marque a caixa de seleção **Iniciar rastreamento imediatamente após estabelecer a conexão** .  
   

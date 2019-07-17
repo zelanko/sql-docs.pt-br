@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d7dd7de5aac016239c2b778a7afeee9447144259
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145681"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183226"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gerenciamento de soluções de mineração de dados e objetos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "50145681"
   
 -   [Instruções de definição de dados de extensões DMX &#40;extensões DMX&#41;](../../dmx/dmx-statements-data-definition.md)  
   
- **Restrições:** algumas propriedades não podem ser alteradas usando DMX.  
+ **Restrições:** Algumas propriedades não podem ser alteradas usando DMX.  
   
 ### <a name="xml-for-analysis-xmla"></a>XML for Analysis (XMLA)  
  XML for Analysis (XMLA) é a linguagem de definição de dados para todos os Analysis Services. O XMLA dá a você o controle sobre a maioria dos objetos de mineração de dados e operações de servidor. Todas as operações de gerenciamento entre o cliente e o servidor podem ser executadas com o uso de XMLA. Para sua conveniência, é possível usar a ASSL ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Linguagem) para encapsular o XML.  

@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 20f16e9deeb9e07d2c63090c92100871331e0443
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206486"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211187"
 ---
 # <a name="creating-views-and-stored-procedures"></a>criando exibições e procedimentos armazenados
   Agora que a Mary pode acessar o banco de dados **TestData** , talvez convenha criar alguns objetos de banco de dados, como uma exibição e um procedimento armazenado, e conceder a Mary acesso a eles. Uma exibição é uma instrução SELECT armazenada e um procedimento armazenado é uma ou mais instruções [!INCLUDE[tsql](../includes/tsql-md.md)] executadas como um lote.  
@@ -77,7 +77,7 @@ ms.locfileid: "48206486"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Conceder acesso a um objeto de banco de dados](lesson-2-4-granting-access-to-a-database-object.md)  
+ [concedendo acesso a um objeto de banco de dados](lesson-2-4-granting-access-to-a-database-object.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)   

@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c9cb6f083751b14ad3cd8f2ffaac692ef4e6eb86
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022833"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208777"
 ---
-# <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>Cálculos de célula MDX - cálculos de célula no escopo da consulta
+# <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>Cálculos de célula MDX – cálculos de célula no escopo da consulta
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Use a palavra-chave **WITH** em expressões MDX para descrever células calculadas no contexto de uma consulta. A sintaxe da palavra-chave **WITH** é:  
   
@@ -26,7 +26,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  O valor `CellCalc_Identifier` é o nome das células calculadas. O valor `String_Expression` contém uma lista de expressões de conjunto MDX ortogonais e unidimensionais. Cada uma delas deve resolver uma das categorias listadas na tabela a seguir.  
   
-|Categoria|Description|  
+|Category|Descrição|  
 |--------------|-----------------|  
 |Conjunto vazio|Uma expressão de conjunto MDX resolvida em um conjunto vazio. Nesse caso, o escopo da célula calculada é o cubo inteiro.|  
 |Conjunto de membro único|Uma expressão de conjunto MDX resolvida em um único membro.|  
@@ -51,6 +51,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  Por outro lado, a linguagem MDX processará a fórmula do cálculo sempre que uma consulta MDX for emitida para um cubo que contém células incluídas na definição de células calculadas. Esse processamento ocorre independentemente do escopo de criação.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar instrução de CÁLCULO de CÉLULA & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [Instrução CREATE CELL CALCULATION &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

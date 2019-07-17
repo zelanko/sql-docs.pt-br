@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c357efe4636c1b502cdb57305b9072907d4b2e98
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532075"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165219"
 ---
 # <a name="assl-xml-conventions"></a>Convenções de XML do ASSL
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "52532075"
   
  Geralmente, a herança não é usada quando vários tipos têm uma propriedade com o mesmo nome. Por exemplo, o **nome** e **ID** propriedades são exibidas em vários elementos, mas essas propriedades não foram promovidas para um tipo abstrato.  
   
-## <a name="whitespace"></a>Espaço em branco  
+## <a name="whitespace"></a>Whitespace  
  O espaço em branco dentro de um valor de elemento é preservado. No entanto, os espaços em branco inicial e final são sempre retirados. Por exemplo, os elementos a seguir contêm o mesmo texto mas quantidades diferentes de espaços em branco no texto e, portanto, são tratados como se tivessem valores diferentes:  
   
  `<Description>My text<Description>`  
@@ -112,7 +112,7 @@ ms.locfileid: "52532075"
  **Long**  
  Um valor inteiro no intervalo de -263 até 263-1.  
   
- **String**  
+ **Cadeia de caracteres**  
  Um valor de cadeia de caracteres em conformidade com as seguintes regras globais:  
   
 -   Os caracteres de controle são retirados.  
@@ -134,8 +134,8 @@ ms.locfileid: "52532075"
   
 |Tipo de dados XML|Valor padrão|  
 |-------------------|-------------------|  
-|**Booliano**|Falso|  
-|**String**|"" (cadeia de caracteres vazia)|  
+|**Booliano**|False|  
+|**Cadeia de caracteres**|"" (cadeia de caracteres vazia)|  
 |**Número inteiro** ou **longo**|0 (zero)|  
 |**carimbo de hora**|12:00:00 AM, 1/1/0001 (correspondente a um .NET Frameworks **System. DateTime** com 0 tiques)|  
   

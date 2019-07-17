@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f0d49d6aeb8231dbffb56b42fe1151ae90d0e41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505218"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181304"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Atualizar pastas de trabalho e atualização de dados agendada (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "52505218"
 |Criado em|\<|Suporte e comportamento|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2010**|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2010**|**2012 SP1 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2013**|  
-|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para Excel 2010**|Todos os recursos|**Experiência:** Os usuários podem interagir com a pasta de trabalho no navegador e usá-la como uma fonte de dados para outras soluções.<br /><br /> **Atualização:** Pastas de trabalho serão atualizadas automaticamente na biblioteca de documentos se a atualização automática está habilitada para o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] serviço no farm do SharePoint, do sistema<br /><br /> **Agendar atualização de dados:** SEM suporte. A pasta de trabalho precisa ser atualizada.|**Experiência:** Os usuários podem interagir com a pasta de trabalho e usá-la como uma fonte de dados para outras soluções.<br /><br /> **Atualização:** A atualização automática não está disponível. Os usuários devem atualizar manualmente suas pastas de trabalho do 2008 R2 para a versão 2012 ou para a versão 2013 do Office.<br /><br /> **Agendar atualização de dados:** SEM suporte. A pasta de trabalho precisa ser atualizada.|  
-|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para Excel**|Sem suporte|Todos os recursos|**Experiência:** Os usuários podem interagir com a pasta de trabalho no navegador e usá-la como uma fonte de dados para outras soluções. A atualização de dados agendada está disponível.<br /><br /> **Atualização:** A atualização automática não tem suporte. Os usuários podem atualizar manualmente suas pastas de trabalho para a versão 2013 do Office.<br /><br /> **Atualização de dados agendada:** com suporte.|  
+|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para Excel 2010**|Todos os recursos|**Experiência:** Os usuários podem interagir com a pasta de trabalho no navegador e usá-lo como uma fonte de dados para outras soluções.<br /><br /> **Atualização:** Pastas de trabalho serão atualizadas automaticamente na biblioteca de documentos se a atualização automática está habilitada para o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] serviço no farm do SharePoint, do sistema<br /><br /> **Agendar atualização de dados:** NÃO tem suporte. A pasta de trabalho precisa ser atualizada.|**Experiência:** Os usuários podem interagir com a pasta de trabalho e usá-lo como uma fonte de dados para outras soluções.<br /><br /> **Atualização:** Atualização automática não está disponível. Os usuários devem atualizar manualmente suas pastas de trabalho do 2008 R2 para a versão 2012 ou para a versão 2013 do Office.<br /><br /> **Agendar atualização de dados:** NÃO tem suporte. A pasta de trabalho precisa ser atualizada.|  
+|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para Excel**|Sem suporte|Todos os recursos|**Experiência:** Os usuários podem interagir com a pasta de trabalho no navegador e usá-lo como uma fonte de dados para outras soluções. A atualização de dados agendada está disponível.<br /><br /> **Atualização:** Não há suporte para atualização automática. Os usuários podem atualizar manualmente suas pastas de trabalho para a versão 2013 do Office.<br /><br /> **Atualização de dados agendada:** com suporte.|  
 |**Excel 2013**|Sem suporte|Sem suporte|Todos os recursos|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> Atualizar para pastas de trabalho do SQL Server 2012 Service Pack 1 (SP1) de pastas de trabalho do 2008 R2  
@@ -58,7 +58,7 @@ ms.locfileid: "52505218"
   
 -   SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para Excel 2013.  
   
- **Como atualizar uma pasta de trabalho:** A atualização de dados agendada não funcionará até você atualizar para uma pasta de trabalho do 2012. Para atualizar a pasta de trabalho e o modelos que ela contém, siga um destes procedimentos:  
+ **Como atualizar uma pasta de trabalho:** A atualização de dados agendada não funcionará até você atualizar a pasta de trabalho para uma pasta de trabalho do 2012. Para atualizar a pasta de trabalho e o modelos que ela contém, siga um destes procedimentos:  
   
 -   Baixe e abra a pasta de trabalho no Microsoft Excel 2010 com o suplemento SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para Excel instalado.  
   

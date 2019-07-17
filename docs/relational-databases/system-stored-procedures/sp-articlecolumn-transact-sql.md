@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e10d4e46e01f4da5a36d7bdf59d7566f2a989e75
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: acbbd043080b107a5d545408fabe271d62015e54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493148"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105084"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_articlecolumn [ @publication = ] 'publication'
   
 `[ @column = ] 'column'` É o nome da coluna a ser adicionada ou descartada. *coluna* está **sysname**, com um padrão NULL. Se for NULL, todas as colunas serão publicadas.  
   
-`[ @operation = ] 'operation'` Especifica se deve adicionar ou remover colunas em um artigo. *operação* está **nvarchar (5)**, com um padrão de add. **Adicionar** marca a coluna para replicação. **Descartar** desmarca a coluna.  
+`[ @operation = ] 'operation'` Especifica se deve adicionar ou remover colunas em um artigo. *operação* está **nvarchar (5)** , com um padrão de add. **Adicionar** marca a coluna para replicação. **Descartar** desmarca a coluna.  
   
 `[ @refresh_synctran_procs = ] refresh_synctran_procs` Especifica se os procedimentos armazenados que dão suporte a assinaturas de atualização imediata são gerados para corresponder ao número de colunas replicadas. *refresh_synctran_procs* está **bit**, com um padrão de **1**. Se **1**, os procedimentos armazenados são gerados.  
   
@@ -68,7 +67,7 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  **1** Especifica que as alterações no artigo podem invalidar o instantâneo ser inválida e se houver assinaturas existentes que exigem um novo instantâneo, dará permissão para o instantâneo existente seja marcado como obsoleto e um novo instantâneo seja gerado.  
   
- [**@force_reinit_subscription =** ] *force_reinit_subscription*  
+ [ **@force_reinit_subscription =** ] *force_reinit_subscription*  
  Confirma que a ação tomada por esse procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo fazem com que a assinatura seja reiniciada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas sejam reiniciadas, ocorrerá um erro e nenhuma alteração é feita. **1** Especifica que as alterações no artigo fazem com que as assinaturas existentes sejam reinicializadas e dá permissão para que ocorra a reinicialização da assinatura.  

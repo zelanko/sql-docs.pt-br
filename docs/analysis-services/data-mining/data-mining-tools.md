@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 70d08ebe145e64f21299f5e46d33bbc7ae41536f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015143"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210085"
 ---
 # <a name="data-mining-tools"></a>Ferramentas de mineração de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "34015143"
 ## <a name="data-mining-wizard"></a>Assistente de Mineração de Dados  
  Use o Assistente de Mineração de Dados para começar a criar soluções de mineração de dados. O assistente é fácil e rápido, e foi criado para guiá-lo no processo de criação de uma estrutura de mineração de dados e um modelo de mineração inicial relacionado; além disso, inclui as tarefas de seleção de um tipo de algoritmo e uma fonte de dados, bem como de definição dos dados de caso usados para a análise.  
   
- **Para obter mais informações:** [Assistente de Mineração de Dados &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ **Para obter mais informações:** [Assistente de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
-## <a name="data-mining-designer"></a>Designer de Mineração de Dados  
+## <a name="data-mining-designer"></a>Data Mining Designer  
  Após ter criado uma estrutura de mineração e um modelo de mineração usando o Assistente de Mineração de Dados, você pode utilizar o Designer de Mineração de Dados do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para trabalhar com modelos e estruturas existentes.  
   
  O designer inclui ferramentas para estas tarefas:  
@@ -80,12 +80,12 @@ ms.locfileid: "34015143"
   
 -   Usando regressão logística para segmentar clientes de entrada por risco.  
   
- **Para obter mais informações:** [Projetos relacionados a soluções de mineração de dados](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
+ **Para obter mais informações:** [Projetos relacionados a soluções de Mineração de dados](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Extensões de mineração de dados & #40; DMX & #41; Referência](../../dmx/data-mining-extensions-dmx-reference.md)   
- [Tutoriais e tarefas do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Tarefas do Visualizador do modelo e instruções de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Referência de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Tarefas e instruções do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Tarefas e instruções do visualizador do modelo de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Soluções de mineração de dados](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   
