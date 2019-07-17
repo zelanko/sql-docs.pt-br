@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eec9be936a14b0d5c78b5bc183516a8118c339a2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122343"
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +38,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação sobre a qual recuperar informações. *publicação*está **sysname**, com um padrão de **%**, que retorna informações sobre todos os artigos de mesclagem contidos em todas as publicações no banco de dados atual.  
+`[ @publication = ] 'publication'` É o nome da publicação sobre a qual recuperar informações. *publicação*está **sysname**, com um padrão de **%** , que retorna informações sobre todos os artigos de mesclagem contidos em todas as publicações no banco de dados atual.  
   
-`[ @article = ] 'article'` É o nome do artigo para o qual retornar informações. *artigo*está **sysname**, com um padrão de **%**, que retorna informações sobre todos os artigos de mesclagem na determinada publicação.  
+`[ @article = ] 'article'` É o nome do artigo para o qual retornar informações. *artigo*está **sysname**, com um padrão de **%** , que retorna informações sobre todos os artigos de mesclagem na determinada publicação.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
   

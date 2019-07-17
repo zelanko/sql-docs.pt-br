@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 565cc98059c056dbb4fc73f3e0734229754aad93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c15a36678bf0bd1ff5fc933eb79bff96b6780b60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108346"
 ---
 # <a name="spcycleerrorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_cycle_errorlog
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="remarks"></a>Comentários  
  Sempre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado, o log de erros atual é renomeado para **errorlog.1**; **errorlog.1** se torna **errorlog.2**, **errorlog.2** se torna **errorlog.3**e assim por diante. **sp_cycle_errorlog** lhe permite alternar os arquivos de log de erros sem interromper e iniciar o servidor.  

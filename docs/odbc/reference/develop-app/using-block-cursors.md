@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 388995cd5cb8a711d72533685c14088a7e908475
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 529b71540b4abde5fce868975fcbf2749e31dc8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135535"
 ---
 # <a name="using-block-cursors"></a>Usar cursores em bloco
 Suporte para cursores em bloco é incorporado ao ODBC 3. *x*. **SQLFetch** pode ser usado apenas para buscas de várias linhas quando chamado em ODBC 3. *x*; se o ODBC 2. *x* aplicativo chamará **SQLFetch**, ele será aberto somente um cursor de uma única linha, apenas de encaminhamento. Quando um ODBC 3. *x* aplicativo chamará **SQLFetch** em um ODBC 2. *x* driver, ele retorna uma única linha, a menos que o driver suporta **SQLExtendedFetch**. Para obter mais informações, consulte [cursores em bloco, cursores roláveis e compatibilidade com versões anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) no Apêndice g: Diretrizes de driver para compatibilidade com versões anteriores.  

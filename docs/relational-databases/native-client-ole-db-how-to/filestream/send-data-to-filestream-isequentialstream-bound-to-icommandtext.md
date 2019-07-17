@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af2c8eb24f9fc3928d1b62ed5461f4a44ccdab4e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 29002e403b028f9f879782241588961a04007b65
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110097"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Enviar dados para FILESTREAM – ISequentialStream associado a ICommandText
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "53205615"
   
  Ao executar este exemplo, você precisará passar o nome de um servidor ou de um servidor\nome_da_instância, bem como um valor entre 4 MB (0x400001) e 4 GB (0xFFFFFFFF) que indique a quantidade de dados a ser gravada.  
   
- O quarto ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) listagem de código exclui o banco de dados criado por este exemplo.  
+ A quarta listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) exclui o banco de dados criado por esta amostra.  
   
 ```  
 // ISSHelper.h: interface for the CISSHelper class.  

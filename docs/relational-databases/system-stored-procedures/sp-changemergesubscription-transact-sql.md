@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3b37e09147652e856ac0c4c8160c1d7d3caf6f6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c205bab104bd81eda3e7d14dc30844352caa7f66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62993117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124865"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @property = ] 'property'` É a propriedade a ser alterada para a publicação determinada. *propriedade* está **sysname**, e pode ser um dos valores na tabela.  
   
-`[ @value = ] 'value'` É o novo valor especificado *propriedade*. *valor* está **nvarchar (255)**, e pode ser um dos valores na tabela.  
+`[ @value = ] 'value'` É o novo valor especificado *propriedade*. *valor* está **nvarchar (255)** , e pode ser um dos valores na tabela.  
   
 |Propriedade|Valor|Descrição|  
 |--------------|-----------|-----------------|  
@@ -67,7 +66,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ||**0**|Use Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao se conectar ao Assinante.|  
 |**subscriber_login**||Nome de logon no Assinante.|  
 |**subscriber_password**||Senha forte para o logon de Assinante fornecido.|  
-|**sync_type**|**automatic**|Esquema e dados iniciais de tabelas publicadas são transferidos ao Assinante primeiro.|  
+|**sync_type**|**Automático**|Esquema e dados iniciais de tabelas publicadas são transferidos ao Assinante primeiro.|  
 ||**None**|O Assinante já tem o esquema e os dados iniciais para as tabelas publicadas; tabelas de sistema e dados são sempre transferidos.|  
 |**use_interactive_resolver**|**true**|Permite resolver conflitos interativamente para todos os artigos que permitem resolução interativa.|  
 ||**false**|Conflitos são resolvidos automaticamente usando um resolvedor padrão ou resolvedor personalizado.|  

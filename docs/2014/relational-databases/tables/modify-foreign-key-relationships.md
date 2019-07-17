@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129616"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196839"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modificar relações de chave estrangeira
   Você pode modificar parte da chave estrangeira de uma relação no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Modificar a chave estrangeira de uma tabela altera as colunas que estão relacionadas às colunas na tabela de chaves primárias.  
@@ -42,7 +42,7 @@ ms.locfileid: "54129616"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
  A nova coluna de chave estrangeira deve corresponder ao tipo de dados e ao tamanho da coluna de chave primária à qual está relacionada, com estas exceções:  
   
 -   Uma coluna `char` ou `sysname` pode estar relacionada a uma coluna `varchar`.  
@@ -82,7 +82,7 @@ ms.locfileid: "54129616"
      Verifique todos os dados anteriores existentes na tabela quando a restrição foi criada ou habilitada novamente, em relação à restrição.  
   
      **Categoria de Especificações de Tabelas e Colunas**  
-     Expanda para mostrar quais colunas de quais tabelas atuam como a chave estrangeira e chave primária (ou exclusiva) na relação. Para editar ou definir esses valores, clique no botão de reticências (**...**) à direita do campo de propriedade.  
+     Expanda para mostrar quais colunas de quais tabelas atuam como a chave estrangeira e chave primária (ou exclusiva) na relação. Para editar ou definir esses valores, clique no botão de reticências ( **...** ) à direita do campo de propriedade.  
   
      **Tabela Base de Chaves Estrangeiras**  
      Mostra qual tabela contém a coluna que atua como uma chave estrangeira na relação selecionada.  
@@ -99,7 +99,7 @@ ms.locfileid: "54129616"
      **Categoria de identidade**  
      Expanda para mostrar os campos de propriedade para **Nome** e **Descrição**.  
   
-     **Nome**  
+     **Name**  
      Mostra o nome da relação. Quando uma nova relação é criada, é determinado um nome padrão com base na tabela na janela ativa em **Designer de Tabela**. O nome pode ser alterado a qualquer momento.  
   
      **Descrição**  
@@ -141,7 +141,7 @@ ms.locfileid: "54129616"
   
 4.  No menu **Arquivo** , clique em **Salvar**_table name_.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para modificar uma chave estrangeira**  
   
  Para modificar uma restrição FOREIGN KEY usando o Transact-SQL, exclua primeiramente a FOREIGN KEY já existente e, em seguida, recrie-a com a nova definição. Para obter mais informações, consulte [Delete Foreign Key Relationships](delete-foreign-key-relationships.md) e [Create Foreign Key Relationships](create-foreign-key-relationships.md).  

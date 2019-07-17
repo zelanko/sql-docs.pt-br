@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ead23c8feb428772fcde5bcdb59f19e1a23b6cd9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4e52fb6700d0af133a687c8b93e28cd12f72221c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492838"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117933"
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ sp_addtype [ @typename = ] type,
  *s*  
  É um inteiro não negativo indicando o número máximo de dígitos decimais que podem ser armazenados à direita do ponto decimal e deve ser menor que ou igual à precisão. Para obter mais informações, consulte [decimal e numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
-`[ @nulltype = ] 'null_type'` Indica a forma como o tipo de dados de alias trata valores nulos. *null_type* está **varchar (** 8 **)**, com um padrão de NULL e deve ser colocado entre aspas simples ('NULL', 'NOT NULL' ou 'NONULL'). Se *null_type* não é explicitamente definido por **sp_addtype**, ele é definido como a nulabilidade padrão atual. Use a função de sistema GETANSINULL para determinar a nulabilidade padrão atual. Isso pode ser ajustado usando a instrução SET ou ALTER DATABASE. A nulabilidade deve ser definida explicitamente. Se **@phystype** é **bit**, e **@nulltype** não for especificado, o padrão não é nulo.  
+`[ @nulltype = ] 'null_type'` Indica a forma como o tipo de dados de alias trata valores nulos. *null_type* está **varchar (** 8 **)** , com um padrão de NULL e deve ser colocado entre aspas simples ('NULL', 'NOT NULL' ou 'NONULL'). Se *null_type* não é explicitamente definido por **sp_addtype**, ele é definido como a nulabilidade padrão atual. Use a função de sistema GETANSINULL para determinar a nulabilidade padrão atual. Isso pode ser ajustado usando a instrução SET ou ALTER DATABASE. A nulabilidade deve ser definida explicitamente. Se **@phystype** é **bit**, e **@nulltype** não for especificado, o padrão não é nulo.  
   
 > [!NOTE]  
 >  O *null_type* parâmetro define apenas a nulabilidade padrão para esse tipo de dados. Se a nulabilidade for explicitamente definida quando o tipo de dados de alias for usado durante a criação da tabela, ela terá precedência sobre a nulabilidade padrão. Para obter mais informações, consulte [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) e [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
@@ -80,7 +79,7 @@ sp_addtype [ @typename = ] type,
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="remarks"></a>Comentários  
  Um nome de tipo de dados de alias deve ser exclusivo no banco de dados, mas os tipos de dados com nomes diferentes podem ter a mesma definição.  
@@ -92,7 +91,7 @@ sp_addtype [ @typename = ] type,
 > [!IMPORTANT]  
 >  Para fins de compatibilidade com versões anteriores, o **pública** função de banco de dados é concedida automaticamente a permissão REFERENCES em tipos de dados de alias são criados usando **sp_addtype**. Observe que quando os tipos de dados de alias são criados usando a instrução CREATE TYPE em vez de **sp_addtype**, essa concessão automática não ocorre.  
   
- Tipos de dados de alias não podem ser definidos usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp**, **tabela**, **xml**, **varchar (max)**, **nvarchar (max)** ou **varbinary (max)** tipos de dados.  
+ Tipos de dados de alias não podem ser definidos usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp**, **tabela**, **xml**, **varchar (max)** , **nvarchar (max)** ou **varbinary (max)** tipos de dados.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação na **db_owner** ou **db_ddladmin** função fixa de banco de dados.  
@@ -111,7 +110,7 @@ EXEC sp_addtype ssn, 'varchar(11)', 'NOT NULL';
 GO  
 ```  
   
-### <a name="b-creating-an-alias-data-type-that-allows-for-null-values"></a>b. Criando um tipo de dados de alias que permite valores nulos  
+### <a name="b-creating-an-alias-data-type-that-allows-for-null-values"></a>B. Criando um tipo de dados de alias que permite valores nulos  
  O exemplo a seguir cria um tipo de dados de alias (baseado em `datetime`) chamado `birthday` que permite valores nulos.  
   
 ```  

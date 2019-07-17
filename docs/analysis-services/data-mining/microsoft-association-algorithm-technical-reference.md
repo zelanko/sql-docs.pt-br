@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 21f779f1e0b1764fd35d6399aa220e244574d576
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545588"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183166"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Referência técnica do algoritmo de associação da Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -133,7 +133,7 @@ ms.locfileid: "52545588"
  Aplica-se à coluna da estrutura de mineração.  
   
  MODEL_EXISTENCE_ONLY  
- Significa que a coluna será tratada como se tivesse dois estados possíveis: **Faltando** e **existentes**. Nulo é um valor ausente.  
+ Significa que a coluna será tratada como tendo dois estados possíveis: **Faltando** e **existentes**. Nulo é um valor ausente.  
   
  Aplica-se à coluna do modelo de mineração.  
   

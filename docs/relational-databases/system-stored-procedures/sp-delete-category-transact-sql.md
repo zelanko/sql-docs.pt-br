@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2574cdb06b82c6ebc89c54b70ade59694f5811e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9a6812e12366900dfc1c5808eaede727c05f958
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120046"
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**JOB**|Exclui uma categoria de trabalho.|  
-|**ALERT**|Exclui uma categoria de alerta.|  
+|**ALERTA**|Exclui uma categoria de alerta.|  
 |**OPERADOR**|Exclui uma categoria de operador.|  
   
 `[ @name = ] 'name'` O nome da categoria a ser removido. *nome da* está **sysname**, sem padrão.  
@@ -55,7 +54,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="remarks"></a>Comentários  
  **sp_delete_category** deve ser executado a partir de **msdb** banco de dados.  

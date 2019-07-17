@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f799b086833f0be7b08786aff08e65d202f29674
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024633"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68177633"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Conceder permissões de banco de dados (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Se você estiver acessando a administração de banco de dados do Analysis Services com experiência em bancos de dados relacionais, a primeira coisa que você precisa entender é que, em termos de acesso a dados, o banco de dados não é o principal objeto protegível no Analysis Services.  
   
- A estrutura de consulta primária no Analysis Services é um cubo (ou um modelo de tabela), com permissões de usuário definidas nesses objetos particulares. Contrastando com o mecanismo de banco de dados relacional ─ em que os logons do banco de dados e as permissões de usuário (normalmente **db_datareader**) são definidas no próprio banco de dados ─ um banco de dados do Analysis Services é principalmente um contêiner dos principais objetos de consulta em um modelo de dados. Se o objetivo imediato é permitir o acesso a dados para um modelo de cubo ou de tabela, você pode ignorar as permissões de banco de dados agora e ir direto para este tópico: [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
+ A estrutura de consulta primária no Analysis Services é um cubo (ou um modelo de tabela), com permissões de usuário definidas nesses objetos particulares. Contrastando com o mecanismo de banco de dados relacional ─ em que os logons do banco de dados e as permissões de usuário (normalmente **db_datareader**) são definidas no próprio banco de dados ─ um banco de dados do Analysis Services é principalmente um contêiner dos principais objetos de consulta em um modelo de dados. Se seu objetivo imediato é permitir o acesso a dados para um cubo ou modelo de tabela, você pode ignorar as permissões de banco de dados de dados agora e ir direto para este tópico: [Conceder permissões de cubo ou modelo de &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
  As permissões de banco de dados no Analysis Services habilitam funções administrativas. Em um contexto mais amplo, como é o caso da permissão Controle Total do banco de dados ou de natureza mais granular se você estiver delegando operações de processamento. Os níveis de permissão para um banco de dados do Analysis Services são especificados no painel **Geral** da caixa de diálogo **Criar Função** , exibidos na ilustração a seguir e descritos abaixo.  
   
  Não há logons no Analysis Services. Basta criar funções e atribuir contas do Windows no painel **Associação** . Todos os usuários, inclusive os administradores, conectam-se ao Analysis Services usando uma conta do Windows.  
   
- ![Função diálogo mostrando as permissões Create database](../../analysis-services/multidimensional-models/media/ssas-permsdbrole.png "função diálogo mostrando as permissões Create database")  
+ ![Função de caixa de diálogo que mostra as permissões Create database](../../analysis-services/multidimensional-models/media/ssas-permsdbrole.png "função caixa de diálogo que mostra as permissões Create database")  
   
  Há três tipos de permissões especificadas em nível de banco de dados.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34024633"
   
 3.  Marque a caixa de seleção **Controle Total (Administrador)** para o cubo. Observe que **Processar Banco de Dados** e **Ler Definição** são selecionados automaticamente. Ambas as permissões são sempre incluídas nas funções que incluem **Controle Total**.  
   
-4.  No painel **Associação**, insira as contas de usuário e de grupo do Windows que se conectam ao Analysis Services usando essa função.  
+4.  No painel **Associação** , insira as contas de usuário e de grupo do Windows que se conectam ao Analysis Services usando essa função.  
   
 5.  Clique em **OK** para concluir a criação da função.  
   
@@ -76,6 +76,6 @@ ms.locfileid: "34024633"
   
 ## <a name="see-also"></a>Consulte também  
  [Conceder direitos de administração de servidor a uma instância do Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [Conceder permissões de processo & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ [Conceder permissões de processo &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   

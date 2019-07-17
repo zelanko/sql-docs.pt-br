@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7e80433c224f08b9074a8d1ef93ef96bdc157853
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147161"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178844"
 ---
 # <a name="database-readwritemodes"></a>Banco de dados ReadWriteModes
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "50147161"
   
 |Modo ReadOnly|Operações restritas|  
 |-------------------|---------------------------|  
-|Comandos XML/A<br /><br /> <br /><br /> Observação: ocorre um erro quando você executa qualquer um destes comandos.|**Criar**<br /><br /> **Alter**<br /><br /> **Delete (excluir)**<br /><br /> **Processar**<br /><br /> **MergePartitions**<br /><br /> **DesignAggregations**<br /><br /> **CommitTransaction**<br /><br /> **Restaurar**<br /><br /> **Sincronizar**<br /><br /> **Insert**<br /><br /> **Update (atualizar)**<br /><br /> **Drop**<br /><br /> <br /><br /> Observação: o write-back de célula é permitido em conjuntos de bancos de dados definidos como somente leitura, no entanto, as alterações não podem ser confirmadas.|  
-|Instruções MDX<br /><br /> <br /><br /> Observação: ocorre um erro quando você executa qualquer uma destas instruções.|**COMMIT TRAN**<br /><br /> **CREATE SESSION CUBE**<br /><br /> **ALTER CUBE**<br /><br /> **ALTER DIMENSION**<br /><br /> **CREATE DIMENSION MEMBER**<br /><br /> **DROP DIMENSION MEMBER**<br /><br /> **ALTER DIMENSION**<br /><br /> <br /><br /> Observação: os usuários do Excel não podem usar o recurso de agrupamento em tabelas dinâmicas, pois esse recurso é implementado internamente usando os comandos **CREATE SESSION CUBE** .|  
-|Instruções DMX<br /><br /> <br /><br /> Observação: ocorre um erro quando você executa qualquer uma destas instruções.|**CREATE [SESSION] MINING STRUCTURE**<br /><br /> **ALTER MINING STRUCTURE**<br /><br /> **DROP MINING STRUCTURE**<br /><br /> **CREATE [SESSION] MINING MODEL**<br /><br /> **DROP MINING MODEL**<br /><br /> **IMPORT**<br /><br /> **SELECT INTO**<br /><br /> **INSERT**<br /><br /> **UPDATE**<br /><br /> **DELETE**|  
+|Comandos XML/A<br /><br /> <br /><br /> Observação: Um erro é gerado quando você executa qualquer um desses comandos.|**Criar**<br /><br /> **Alter**<br /><br /> **Delete (excluir)**<br /><br /> **Processar**<br /><br /> **MergePartitions**<br /><br /> **DesignAggregations**<br /><br /> **CommitTransaction**<br /><br /> **Restaurar**<br /><br /> **Sincronizar**<br /><br /> **Inserir**<br /><br /> **Update (atualizar)**<br /><br /> **Drop**<br /><br /> <br /><br /> Observação: Write-back de célula é permitido em bancos de dados definidos como somente leitura; No entanto, as alterações não podem ser confirmadas.|  
+|Instruções MDX<br /><br /> <br /><br /> Observação: Um erro é gerado quando você executa qualquer uma dessas instruções.|**COMMIT TRAN**<br /><br /> **CREATE SESSION CUBE**<br /><br /> **ALTER CUBE**<br /><br /> **ALTER DIMENSION**<br /><br /> **CREATE DIMENSION MEMBER**<br /><br /> **DROP DIMENSION MEMBER**<br /><br /> **ALTER DIMENSION**<br /><br /> <br /><br /> Observação: Os usuários do Excel não é possível usar o recurso de agrupamento em tabelas dinâmicas, pois esse recurso é implementado internamente usando **CREATE SESSION CUBE** comandos.|  
+|Instruções DMX<br /><br /> <br /><br /> Observação: Um erro é gerado quando você executa qualquer uma dessas instruções.|**CREATE [SESSION] MINING STRUCTURE**<br /><br /> **ALTER MINING STRUCTURE**<br /><br /> **DROP MINING STRUCTURE**<br /><br /> **CREATE [SESSION] MINING MODEL**<br /><br /> **DROP MINING MODEL**<br /><br /> **IMPORT**<br /><br /> **SELECT INTO**<br /><br /> **INSERT**<br /><br /> **UPDATE**<br /><br /> **DELETE**|  
 |Operações em segundo plano|Todas as operações em segundo plano que poderiam modificar o banco de dados são desabilitadas. Isso inclui o processamento lento e o cache pró-ativo.|  
   
 ## <a name="readwritemode-usage"></a>Uso de ReadWriteMode  

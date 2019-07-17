@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131136"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212023"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Exibir e modificar propriedades de Publicador e Distribuidor
   Este tópico descreve como exibir e modificar propriedades do Distribuidor e do Publicador no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], ou RMO (Replication Management Objects).  
@@ -58,11 +58,11 @@ ms.locfileid: "54131136"
   
 2.  Clique com o botão direito do mouse na pasta **Replicação** e em seguida clique em **Propriedades do Distribuidor**.  
   
-3.  Exibir e modificar as propriedades na caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>**.  
+3.  Exibir e modificar as propriedades na caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>** .  
   
-    -   Para exibir e modificar as propriedades de um banco de dados de distribuição, clique no botão de propriedades (**...**) do banco de dados na página **Geral** da caixa de diálogo.  
+    -   Para exibir e modificar as propriedades de um banco de dados de distribuição, clique no botão de propriedades ( **...** ) do banco de dados na página **Geral** da caixa de diálogo.  
   
-    -   Para exibir e modificar as propriedades do Publicador associado ao Distribuidor, clique no botão de propriedades (**…**) para o Publicador na página **Publicadores** da caixa de diálogo.  
+    -   Para exibir e modificar as propriedades do Publicador associado ao Distribuidor, clique no botão de propriedades ( **…** ) para o Publicador na página **Publicadores** da caixa de diálogo.  
   
     -   Para acessar os perfis para os agentes de replicação, clique no botão **Padrões de Perfil** na página **Geral** da caixa de diálogo. Para obter mais informações, consulte [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   
@@ -82,7 +82,7 @@ ms.locfileid: "54131136"
   
 4.  Modifique propriedades, se necessário, depois clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  As propriedades do Publicador e do Distribuidor podem ser exibidas programaticamente usando os procedimentos armazenados de replicação.  
   
 #### <a name="to-view-distributor-and-distribution-database-properties"></a>Para exibir as propriedades do banco de dados de distribuição e do Distribuidor  
@@ -128,7 +128,7 @@ ms.locfileid: "54131136"
   
 1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
   
 3.  (Opcional) Verificar a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> para verificar se o servidor conectado no momento é um Distribuidor.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "54131136"
   
 1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase> . Especifique o nome da propriedade e passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase>. Especifique o nome da propriedade e passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
   
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do servidor. Se este método retornar `false`, o banco de dados com o nome especificado não existirá no servidor.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "54131136"
   
 1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
   
 3.  Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "54131136"
   
     1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-    2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
+    2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
   
     3.  Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 6a.  
   

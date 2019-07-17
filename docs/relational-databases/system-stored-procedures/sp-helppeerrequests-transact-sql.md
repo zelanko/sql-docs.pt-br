@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a51015d8c1e6e6df7f23f32fc7febf7fe9e429f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5b9e2a370c9acc9c22dac7e5e60ceb10e08e46ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537158"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137624"
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +40,14 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ## <a name="arguments"></a>Argumentos  
 `[ @publication = ] 'publication'` É o nome da publicação em uma topologia ponto a ponto para o qual as solicitações de status foram enviadas. *publicação* está **sysname**, sem padrão.  
   
-`[ @description = ] 'description'` Valor que pode ser usado para identificar solicitações de status individuais, que permite que você filtrar respostas retornadas com base em usuário definiu informações fornecidas ao chamar [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *Descrição* está **nvarchar (4000)**, com um padrão de **%**. Por padrão, todas as solicitações de status para a publicação são retornadas. Esse parâmetro é usado para retornar somente as solicitações de status com uma descrição correspondente ao valor fornecido no *descrição*, em que as cadeias de caracteres são correspondidas usando uma [como &#40;Transact-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)cláusula.  
+`[ @description = ] 'description'` Valor que pode ser usado para identificar solicitações de status individuais, que permite que você filtrar respostas retornadas com base em usuário definiu informações fornecidas ao chamar [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *Descrição* está **nvarchar (4000)** , com um padrão de **%** . Por padrão, todas as solicitações de status para a publicação são retornadas. Esse parâmetro é usado para retornar somente as solicitações de status com uma descrição correspondente ao valor fornecido no *descrição*, em que as cadeias de caracteres são correspondidas usando uma [como &#40;Transact-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)cláusula.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifica uma solicitação.|  
-|**publication**|**sysname**|Nome da publicação para a qual a solicitação de status foi enviada.|  
+|**publicação**|**sysname**|Nome da publicação para a qual a solicitação de status foi enviada.|  
 |**sent_date**|**datetime**|Data e hora de envio da solicitação de status.|  
 |**description**|**nvarchar(4000)**|Informações que podem ser usadas para identificar solicitações de status individuais definidas pelo usuário.|  
   

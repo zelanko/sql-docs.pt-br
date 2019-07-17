@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ab36e1835af05010fa3fa206e49feec6161c31d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023433"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178640"
 ---
 # <a name="define-semiadditive-behavior"></a>Definir um comportamento semiaditivo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,11 +44,11 @@ ms.locfileid: "34023433"
   
 -   Primeiro Filho Não Vazio  
   
--   Nenhuma  
+-   Nenhum  
   
- Essa opção não altera as medidas com uma função de agregação regular: **Sum**, **Min**, **Max**, **Count**ou **Distinct****Count**.  
+ Essa opção não altera as medidas com uma função de agregação regular: **Soma**, **Min**, **máx**, **contagem**, ou **distintos * * * contagem**.  
   
- **O assistente detectou a dimensão de conta 'Conta", que contém membros semiaditivos. O servidor agregará membros dessa dimensão de acordo com o comportamento semiaditivo especificado para cada tipo de conta.**  
+ **O assistente detectou a ' conta "dimensão de conta, que contém membros semiaditivos. O servidor agregará membros dessa dimensão de acordo com o comportamento semiaditivo especificado para cada tipo de conta.**  
  Faz com que o sistema configure todas as medidas de um grupo de medidas de uma dimensão por uma dimensão do tipo Conta para a função de agregação Por Conta e o servidor agregará os membros da dimensão de acordo com o comportamento semiaditivo especificado para cada tipo de conta.  
   
 > [!NOTE]  
@@ -62,7 +62,7 @@ ms.locfileid: "34023433"
   
  Para cada medida, você pode selecionar um dos tipos de funcionalidade semiaditiva descritos na tabela a seguir.  
   
-|Função semiaditiva|Description|  
+|Função semiaditiva|Descrição|  
 |---------------------------|-----------------|  
 |Average of Children|A agregação de um membro é a média de seus filhos.|  
 |ByAccount|O sistema lê o comportamento de semiaditivo especificado para o tipo de conta.|  
@@ -73,8 +73,8 @@ ms.locfileid: "34023433"
 |LastChild|O valor do membro é avaliado como o valor de seu último filho juntamente com a dimensão de tempo.|  
 |LastNonEmpty|O valor do membro é avaliado como o valor de seu último filho juntamente com a dimensão que contém dados.|  
 |Max|A função de agregação máxima é aplicada.|  
-|Min|A função de agregação mínima é aplicada.|  
-|Nenhum.|Nenhuma agregação é aplicada.|  
+|Mín|A função de agregação mínima é aplicada.|  
+|Nenhum|Nenhuma agregação é aplicada.|  
 |SUM|A função de soma padrão é aplicada.|  
   
  Qualquer comportamento semiaditivo existente será substituído quando você concluir o assistente.  

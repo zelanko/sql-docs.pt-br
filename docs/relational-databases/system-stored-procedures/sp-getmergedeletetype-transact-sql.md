@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3056c5c298fc1987e7c6f25e4a28220d3e033115
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 478d483da545a6b149a0fb2b03c41f106a73da60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123983"
 ---
 # <a name="spgetmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @source_object = ] 'source_object'` É o nome do objeto de origem. *source_object* está **nvarchar(386)**, sem padrão.  
+`[ @source_object = ] 'source_object'` É o nome do objeto de origem. *source_object* está **nvarchar(386)** , sem padrão.  
   
 `[ @rowguid = ] 'rowguid'` É o identificador de linha para o tipo de exclusão. *ROWGUID* está **uniqueidentifier**, sem padrão.  
   

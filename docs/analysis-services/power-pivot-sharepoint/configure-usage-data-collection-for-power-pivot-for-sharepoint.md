@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 52a2754a4c6410430042f2b31805db42def4ec1f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420277"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164154"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Configurar a coleta de dados de uso para o Power Pivot para SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "52420277"
   
 4.  Clique em **Executar Agora**. Se o botão **Executar Agora** for desabilitado, clique em **Habilitar** e clique em **Executar Agora**.  
   
-5.  Na lista Definições de Trabalho, clique em **Trabalho do Temporizador do Processamento do Painel de Gerenciamento de Dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+5.  Na lista Definições de Trabalho, clique em **Trabalho do Temporizador do Processamento do Painel de Gerenciamento de Dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 6.  Clique em **Executar Agora**.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "52420277"
  Para obter mais informações sobre como os dados de uso são coletados e armazenados, consulte [Coleta de dados de uso do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Defina categorias de resposta de consulta rápida, média e lenta para fins de relatórios  
- O desempenho de processamento da consulta é medido em relação a categorias predefinidas que definem um ciclo da solicitação-resposta pelo tempo que leva para ser concluído. As categorias predefinidas incluem: Trivial, Rápido, Esperado, Demorado e Excedido. Toda solicitação para um servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] corresponderá a uma das categorias com base no tempo para conclusão.  
+ O desempenho de processamento da consulta é medido em relação a categorias predefinidas que definem um ciclo da solicitação-resposta pelo tempo que leva para ser concluído. Categorias predefinidas incluem: Trivial, rápido, esperado, de longa duração e foi excedido. Toda solicitação para um servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] corresponderá a uma das categorias com base no tempo para conclusão.  
   
  As informações de resposta da consulta são usadas em relatórios de atividades. Dentro dos relatórios, cada categoria é usada diferentemente para revelar melhor as tendências de desempenho do sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Por exemplo, são totalmente excluídas solicitações triviais pois isso remove ruídos nos dados e mostra tendências mais significativas que usam as categorias restantes. Em contraste, estatísticas de solicitação Demorado ou Excedido são proeminentes no relatório de forma que administradores ou proprietários de pasta de trabalho podem adotar uma ação corretiva imediatamente.  
   
@@ -179,15 +179,15 @@ ms.locfileid: "52420277"
   
  A tabela a seguir mostra os valores padrão da configuração da coleta de dados de uso.  
   
-|Configuração|Valor Padrão|Tipo|Intervalo válido|  
+|Configuração|Default Value|type|Intervalo válido|  
 |-------------|-------------------|----------|-----------------|  
-|**Eventos de uso do Analysis Services** (Conexão, Carregamento, Descarregamento, Solicitações)|\<habilitado >|Booliano|Estes valores são habilitados ou desabilitados.|  
-|**Query Reporting interval**|300 (em segundos)|Integer|1 até qualquer inteiro positivo. O padrão é 5 minutos.|  
-|**Usage data history**|365 (em dias)|Integer|0 especifica ilimitado, mas você também pode definir um limite superior para expirar dados históricos e permitir sua exclusão automática. Valores válidos para um período de retenção limitado variam de 1 a 5000 (em dias).|  
-|Limite Superior de Resposta Trivial|500 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta trivial. Qualquer solicitação concluída entre 0 e 500 milissegundos é uma solicitação trivial e ignorada para fins de relatórios.|  
-|Limite superior de resposta rápida|1000 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta rápida.|  
-|Limite Superior de Resposta Esperado|3000 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta esperada.|  
-|Limite Superior de Respostas Demoradas|10000 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta demorada. Qualquer solicitação que exceda esse limite superior entrará na categoria Excedida, que não tem limite superior.|  
+|**Eventos de uso do Analysis Services** (Conexão, Carregamento, Descarregamento, Solicitações)|\<enabled>|Boolean|Estes valores são habilitados ou desabilitados.|  
+|**Query Reporting interval**|300 (em segundos)|Inteiro|1 até qualquer inteiro positivo. O padrão é 5 minutos.|  
+|**Usage data history**|365 (em dias)|Inteiro|0 especifica ilimitado, mas você também pode definir um limite superior para expirar dados históricos e permitir sua exclusão automática. Valores válidos para um período de retenção limitado variam de 1 a 5000 (em dias).|  
+|Limite Superior de Resposta Trivial|500 (em milissegundos)|Inteiro|Define um limite superior que define uma troca de solicitação-resposta trivial. Qualquer solicitação concluída entre 0 e 500 milissegundos é uma solicitação trivial e ignorada para fins de relatórios.|  
+|Limite superior de resposta rápida|1000 (em milissegundos)|Inteiro|Define um limite superior que define uma troca de solicitação-resposta rápida.|  
+|Limite Superior de Resposta Esperado|3000 (em milissegundos)|Inteiro|Define um limite superior que define uma troca de solicitação-resposta esperada.|  
+|Limite Superior de Respostas Demoradas|10000 (em milissegundos)|Inteiro|Define um limite superior que define uma troca de solicitação-resposta demorada. Qualquer solicitação que exceda esse limite superior entrará na categoria Excedida, que não tem limite superior.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de parâmetro de configuração &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f8874a442897bd5dd887d7e9903777f81824cb46
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543530"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165089"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Noções básicas sobre o Power View para modelos multidimensionais
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "52543530"
   
  ![Power View para arquitetura de modelos multidimensionais](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "Power View para arquitetura de modelos multidimensionais")  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  **Requisitos do servidor**  
   
 -   Microsoft SQL Server 2016 Analysis Services em execução no modo Multidimensional.  
@@ -56,9 +56,9 @@ ms.locfileid: "52543530"
 |Objeto multidimensional|Objeto tabular|  
 |-----------------------------|--------------------|  
 |Cube|Modelo|  
-|Dimensão do cubo|Table|  
+|Dimensão do cubo|Tabela|  
 |Atributos de dimensão (chave(s), nome)|coluna|  
-|Grupo de Medidas|Table|  
+|Grupo de Medidas|Tabela|  
 |Measure|Measure|  
 |Medida sem um grupo de medidas|Em uma tabela chamada Medidas|  
 |Grupo de Medidas Cubo Dimensão Relação|Relação|  
@@ -97,7 +97,7 @@ ms.locfileid: "52543530"
  Os modelos tabulares oferece aos usuários a capacidade de criar medidas *implícitas* como contagem, soma ou média em campos. Para modelos multidimensionais, como dados de atributo de dimensão são armazenados de forma diferente, consultar as medidas implícitas pode levar muito tempo. Por causa disso, as medidas implícitas não estão disponíveis no Power View.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensões, atributos e hierarquias  
- As dimensões de cubo são expostas como tabelas em metadados tabulares. Na Lista de Campos do Power View, os atributos de dimensão são mostrados como colunas nas pastas de exibição.  Os atributos de dimensão que têm a propriedade AttributeHierarchyEnabled definida como false. Por exemplo: Atributo de data de nascimento na dimensão cliente ou a propriedade AttributeHierarchyVisible definida como false não aparecerão na lista de campos do Power View. Hierarquias de vários níveis ou hierarquias de usuário; por exemplo, Geografia do Cliente na dimensão Cliente, são expostas como hierarquias na Lista de Campos do Power View. UnknownMembers ocultos de um atributo de dimensão são expostos em Consultas DAX e no Power View.  
+ As dimensões de cubo são expostas como tabelas em metadados tabulares. Na Lista de Campos do Power View, os atributos de dimensão são mostrados como colunas nas pastas de exibição.  Os atributos de dimensão que têm a propriedade AttributeHierarchyEnabled definida como false; Por exemplo: Atributo de data de nascimento na dimensão cliente ou a propriedade AttributeHierarchyVisible definida como false não aparecerão na lista de campo do Power View. Hierarquias de vários níveis ou hierarquias de usuário; por exemplo, Geografia do Cliente na dimensão Cliente, são expostas como hierarquias na Lista de Campos do Power View. UnknownMembers ocultos de um atributo de dimensão são expostos em Consultas DAX e no Power View.  
   
  **Dimensão, atributos e hierarquias no SQL Server Data Tools (SSDT) e na Lista de Campos do Power View**  
   
@@ -136,7 +136,7 @@ ms.locfileid: "52543530"
  Dimensão de suporte a modelos multidimensionais e segurança no nível da célula por meio de funções. Um usuário que estiver se conectando a um cubo usando o Power View é autenticado e avaliado para obtenção das permissões adequadas. Quando a segurança de dimensão for aplicada, os respectivos membros da dimensão não serão vistos pelo usuário no Power View; entretanto, se um usuário tiver uma permissão de segurança de célula definida onde determinadas células estiverem restritas, então esse usuário não poderá se conectar ao cubo usando o Power View. Em alguns casos, os usuários poderão agregar dados quando partes desses dados forem calculados a partir dos dados protegidos.  
   
 ### <a name="non-aggregatable-attributeshierarchies"></a>Atributos/hierarquias não agregáveis  
- Em um modelo multidimensional, atributos de uma dimensão podem ter a propriedade IsAggregatable definida como falsa. Isso significa que o autor do modelo especificou que aplicativos cliente não devem agregar os dados entre hierarquias (no nível do atributos ou em vários níveis) quando consultarem os dados. No Power View, esse atributo de dimensão é exposto como uma coluna para a qual subtotais não estão disponíveis. Na imagem abaixo, você pode ver um exemplo de uma hierarquia não agregável: contas. O nível superior da hierarquia pai-filho de Contas é não agregável, enquanto os outros níveis são agregáveis. em uma visualização em matriz da hierarquia de Contas (os dois primeiros níveis), você verá subtotais para o Nível de Conta 02, mas não para o nível superior, Nível de Conta 01.  
+ Em um modelo multidimensional, atributos de uma dimensão podem ter a propriedade IsAggregatable definida como falsa. Isso significa que o autor do modelo especificou que aplicativos cliente não devem agregar os dados entre hierarquias (no nível do atributos ou em vários níveis) quando consultarem os dados. No Power View, esse atributo de dimensão é exposto como uma coluna para a qual subtotais não estão disponíveis. Na imagem abaixo, você pode ver um exemplo de uma hierarquia não agregável: Contas. O nível superior da hierarquia pai-filho de Contas é não agregável, enquanto os outros níveis são agregáveis. em uma visualização em matriz da hierarquia de Contas (os dois primeiros níveis), você verá subtotais para o Nível de Conta 02, mas não para o nível superior, Nível de Conta 01.  
   
  **Hierarquia não agregável no Power View**  
   
@@ -217,7 +217,7 @@ ms.locfileid: "52543530"
   
  A solicitação DISCOVER_CSDL_METADATA tem as seguintes restrições:  
   
-|Nome|Obrigatório|Descrição|  
+|Name|Obrigatório|Descrição|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Sim|O nome do catálogo/banco de dados.|  
 |PERSPECTIVE_NAME|Sim, se o cubo contiver mais de uma perspectiva. Opcional se houver somente um cubo ou se houver uma perspectiva padrão.|O nome do cubo ou o nome da perspectiva no banco de dados multidimensional.|  

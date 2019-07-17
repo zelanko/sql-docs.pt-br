@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c6a6e31b4dc36e0f280dfb03d8eadf09a7d4ff7c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 957bbdc43c0f0adf3a545fee76e9f69df130d8f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116666"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ## <a name="arguments"></a>Argumentos  
 `[ @loginame = ] 'login'` É o nome do usuário do Windows ou grupo a ser adicionado. O usuário do Windows ou grupo deve ser qualificado com um nome de domínio do Windows na forma *domínio*\\*usuário*. *login* está **sysname**, sem padrão.  
   
-`[ @logintype = ] 'logintype'` É o nível de segurança do logon que está sendo concedido acesso. *logintype* está **varchar(5)**, com um padrão NULL. Somente **admin** pode ser especificado. Se **admin** for especificado, *login* tem acesso concedido ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e adicionado como um membro do **sysadmin** função de servidor fixa.  
+`[ @logintype = ] 'logintype'` É o nível de segurança do logon que está sendo concedido acesso. *logintype* está **varchar(5)** , com um padrão NULL. Somente **admin** pode ser especificado. Se **admin** for especificado, *login* tem acesso concedido ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e adicionado como um membro do **sysadmin** função de servidor fixa.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

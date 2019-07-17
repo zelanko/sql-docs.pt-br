@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6f2843456f4f95d1019b51f82082d59977ce14d5
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ce5d59e050aafa69a0b2584c66328c568f5ddee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118064"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @join_articlename = ] 'join_articlename'` É o artigo pai ao qual o artigo filho, especificado por *artigo*, deve ser Unido com a cláusula de junção especificada por *join_filterclause*, para determinar as linhas no artigo filho que atendem aos o critério de filtro de filtro de mesclagem. *join_articlename* está **sysname**, sem padrão. O artigo deve estar na publicação fornecida por *publicação*.  
   
-`[ @join_filterclause = ] join_filterclause` É a cláusula de junção que deve ser usada para unir o artigo filho especificado por *artigo*e o artigo pai especificado por *join_article*, para determinar as linhas que qualificam o filtro de mesclagem. *join_filterclause* está **nvarchar (1000)**.  
+`[ @join_filterclause = ] join_filterclause` É a cláusula de junção que deve ser usada para unir o artigo filho especificado por *artigo*e o artigo pai especificado por *join_article*, para determinar as linhas que qualificam o filtro de mesclagem. *join_filterclause* está **nvarchar (1000)** .  
   
 `[ @join_unique_key = ] join_unique_key` Especifica se a junção entre o artigo filho *artigo*e o artigo pai *join_article*é um-para-muitos, um para um, muitos-para-um ou muitos-para-muitos. *join_unique_key* está **int**, com um padrão de 0. **0** indica uma junção muitos-para-um ou muitos-para-muitos. **1** indica uma junção ou um-para-muitos. Esse valor é **1** quando as colunas de junção formam uma chave exclusiva *join_article*, ou se *join_filterclause* entre uma chave estrangeira em *artigo* e uma chave primária em *join_article*.  
   

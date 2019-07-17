@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1446a999029b2c39bfbe4c6c43cf48ad3a09e58f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 620ccce9a035139482b2d9b4630bb2242f720af8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103772"
 ---
 # <a name="sqlgetdiagfield-function"></a>Função SQLGetDiagField
 
@@ -190,7 +189,7 @@ SQLRETURN SQLGetDiagField(
   
 |instrução SQL<br /><br /> Executado|Valor de<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION|Valor de<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION_CODE|  
 |--------------------------------|-----------------------------------------------|-----------------------------------------------------|  
-|*alter-domain-statement*|"ALTER DOMÍNIO"|SQL_DIAG_ALTER_DOMAIN|  
+|*instrução ALTER de domínio*|"ALTER DOMÍNIO"|SQL_DIAG_ALTER_DOMAIN|  
 |*alter-table-statement*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
 |*assertion-definition*|"CRIAR A DECLARAÇÃO"|SQL_DIAG_CREATE_ASSERTION|  
 |*character-set-definition*|"CRIAR CONJUNTO DE CARACTERES"|SQL_DIAG_CREATE_CHARACTER_SET|  
@@ -199,7 +198,7 @@ SQLRETURN SQLGetDiagField(
 |*create-index-statement*|"CRIAR O ÍNDICE"|SQL_DIAG_CREATE_INDEX|  
 |*create-table-statement*|"CRIAR A TABELA"|SQL_DIAG_CREATE_TABLE|  
 |*create-view-statement*|"CRIAR MODO DE EXIBIÇÃO"|SQL_DIAG_CREATE_VIEW|  
-|*cursor-specification*|"SELECIONAR CURSOR"|SQL_DIAG_SELECT_CURSOR|  
+|*especificação de cursor*|"SELECIONAR CURSOR"|SQL_DIAG_SELECT_CURSOR|  
 |*delete-statement-positioned*|"CURSOR DINÂMICA DE EXCLUSÃO"|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
 |*delete-statement-searched*|"DELETE WHERE"|SQL_DIAG_DELETE_WHERE|  
 |*drop-assertion-statement*|"ASSERÇÃO SOLTAR"|SQL_DIAG_DROP_ASSERTION|  
@@ -211,15 +210,15 @@ SQLRETURN SQLGetDiagField(
 |*drop-table-statement*|"DROP TABLE"|SQL_DIAG_DROP_TABLE|  
 |*drop-translation-statement*|"CONVERSÃO DE SOLTAR"|SQL_DIAG_DROP_TRANSLATION|  
 |*drop-view-statement*|"DROP VIEW"|SQL_DIAG_DROP_VIEW|  
-|*grantstatement*|"GRANT"|SQL_DIAG_GRANT|
+|*grantstatement*|"CONCESSÃO"|SQL_DIAG_GRANT|
 |*insert-statement*|"INSERT"|SQL_DIAG_INSERT|  
-|*ODBC-procedure-extension*|"CHAMAR"|CHAMADA SQL_DIAG_|  
+|*Extensão do procedimento de ODBC*|"CHAMAR"|CHAMADA SQL_DIAG_|  
 |*revoke-statement*|"REVOKE"|SQL_DIAG_REVOKE|  
-|*schema-definition*|"CREATE SCHEMA"|SQL_DIAG_CREATE_SCHEMA|  
+|*schema-definition*|"CRIAR ESQUEMA"|SQL_DIAG_CREATE_SCHEMA|  
 |*translation-definition*|"CRIAR TRADUÇÃO"|SQL_DIAG_CREATE_TRANSLATION|  
 |*update-statement-positioned*|"A ATUALIZAÇÃO DINÂMICA CURSOR"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
 |*update-statement-searched*|"ATUALIZAR WHERE"|SQL_DIAG_UPDATE_WHERE|  
-|Unknown (desconhecido)|*cadeia de caracteres vazia*|SQL_DIAG_UNKNOWN_STATEMENT|  
+|Unknown|*cadeia de caracteres vazia*|SQL_DIAG_UNKNOWN_STATEMENT|  
 
 <!--
 These two malformed table rows were fixed by educated GUESS only.

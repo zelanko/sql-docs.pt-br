@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0d4d19f7b32297401ff036e61806308b54e44c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810274"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124077"
 ---
 # <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +43,13 @@ sp_get_query_template
   
 ## <a name="arguments"></a>Argumentos  
  '*query_text*'  
- É a consulta para a qual a versão com parâmetros será gerada. '*query_text*' deve ser colocado entre aspas simples e ser precedido pelo especificador Unicode N. N'*query_text*' é o valor atribuído para o @querytext parâmetro. Isso é do tipo **nvarchar (max)**.  
+ É a consulta para a qual a versão com parâmetros será gerada. '*query_text*' deve ser colocado entre aspas simples e ser precedido pelo especificador Unicode N. N'*query_text*' é o valor atribuído para o @querytext parâmetro. Isso é do tipo **nvarchar (max)** .  
   
  @templatetext  
- É um parâmetro de saída do tipo **nvarchar (max)**, fornecido como indicado, para receber o formulário parametrizado da *query_text* como um literal de cadeia de caracteres.  
+ É um parâmetro de saída do tipo **nvarchar (max)** , fornecido como indicado, para receber o formulário parametrizado da *query_text* como um literal de cadeia de caracteres.  
   
  @parameters  
- É um parâmetro de saída do tipo **nvarchar (max)**, fornecido como indicado, para receber um literal de cadeia de caracteres dos tipos de dados e nomes de parâmetro que foram parametrizados em @templatetext.  
+ É um parâmetro de saída do tipo **nvarchar (max)** , fornecido como indicado, para receber um literal de cadeia de caracteres dos tipos de dados e nomes de parâmetro que foram parametrizados em @templatetext.  
   
 ## <a name="remarks"></a>Comentários  
  sp_get_query_template retorna um erro quando ocorre o seguinte:  

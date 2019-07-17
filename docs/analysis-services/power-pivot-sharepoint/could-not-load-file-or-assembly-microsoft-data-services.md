@@ -1,5 +1,5 @@
 ---
-title: Não foi possível carregar arquivo ou assembly serviços de dados Microsoft | Microsoft Docs
+title: Não foi possível carregar arquivo ou assembly Microsoft serviços de dados | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9472fffb790d8d18ced8d2a528011927717aabc6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026593"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164162"
 ---
-# <a name="could-not-load-file-or-assembly-microsoft-data-services"></a>Não foi possível carregar arquivo ou assembly serviços de dados Microsoft
+# <a name="could-not-load-file-or-assembly-microsoft-data-services"></a>Não foi possível carregar arquivo ou assembly Microsoft serviços de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Em ambientes do SharePoint 2010 com o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, este erro ocorrerá se você tentar fazer uma exportação de feed de dados e o sistema não contiver a versão necessária do Microsoft ADO.NET Data Services.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "34026593"
   
 ## <a name="user-action"></a>Ação do usuário  
   
-1.  Vá para a documentação de requisitos de hardware e software para o SharePoint 2010, [determinar requisitos de Hardware e Software (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734).  
+1.  Vá para a documentação de requisitos de hardware e software para o SharePoint 2010 [determinar requisitos de Hardware e Software (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734).  
   
 2.  Em **Instalando pré-requisitos de software**, localize o link para o ADO.NET Data Services 3.5 que corresponde ao sistema operacional você está usando.  
   

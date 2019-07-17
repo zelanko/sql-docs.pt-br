@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137648"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +42,13 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @publication **=** ] **'** _publication_ **'**  
+ [ @publication **=** ] **'** _publicação_ **'**  
  O nome da publicação. *publicação*está **sysname**, com um padrão de **%** , que retorna informações sobre todas as publicações de mesclagem no banco de dados atual.  
   
  [ @found **=** ] **'***encontrado***'** saída  
  Um sinalizador para indicar linhas de retorno. *encontrado*está **int** e um parâmetro de saída, com um padrão NULL. **1** indica que a publicação foi localizada. **0** indica a publicação não foi encontrada.  
   
- [ @publication_id **=** ] **'***publication_id***'** OUTPUT  
+ [ @publication_id **=** ] **'***publication_id***'** saída  
  O número de identificação da publicação. *publication_id* está **uniqueidentifier** e um parâmetro de saída, com um padrão NULL.  
   
  [ @reserved **=** ] **'***reservado***'**  
@@ -66,7 +65,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Ordem sequencial da publicação na lista de conjunto de resultados.|  
-|nome|**sysname**|Nome da publicação.|  
+|name|**sysname**|Nome da publicação.|  
 |description|**nvarchar(255)**|Descrição da publicação.|  
 |status|**tinyint**|Indica quando os dados da publicação estão disponíveis.|  
 |retenção|**int**|O tempo para salvar metadados sobre alterações para artigos na publicação. As unidades desse período de tempo podem ser dias, semanas, meses ou anos. Para obter informações sobre unidades, consulte a coluna retention_period_unit.|  

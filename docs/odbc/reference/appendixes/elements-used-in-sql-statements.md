@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e33beff29463172a26d53953dd5f563fe1f3f5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caf8f68221c1ac14649bf10be0105e1e691c7482
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129964"
 ---
 # <a name="elements-used-in-sql-statements"></a>Elementos usados em instruções SQL
 Os seguintes elementos são usados nas instruções SQL listadas anteriormente.  
   
 ## <a name="element"></a>Elemento  
- *base-table-identifier* ::= *user-defined-name*  
+ *Identificador da tabela de base* :: = *nome definido pelo usuário*  
   
  *base-table-name* ::= *base-table-identifier*  
   
@@ -38,25 +37,25 @@ Os seguintes elementos são usados nas instruções SQL listadas anteriormente.
   
  *character-string-literal* ::= ''{*character*}...'' (*caractere* é qualquer caractere no conjunto de caracteres da fonte de dados/driver. Para incluir um caractere literal de aspas (") em um literal de caractere-cadeia de caracteres, use dois caracteres de aspas literais [' '].)  
   
- *column-identifier* ::= *user-defined-name*  
+ *Identificador de coluna* :: = *nome definido pelo usuário*  
   
- *column-name* ::= [*table-name*.]*column-identifier*  
+ *nome da coluna* :: = [*nome da tabela*.] *identificador de coluna*  
   
  *comparison-operator* ::= < &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
   
- *comparison-predicate* ::= *expression* comparison-operator expression  
+ *predicado de comparação* :: = *expressão* expressão de operador de comparação  
   
  *tipo de dados* :: = *tipo de cadeia de caracteres de caractere* (*tipo de cadeia de caracteres de caractere* é qualquer tipo de dados para os quais a coluna "" DATA_TYPE"" no conjunto de resultados retornado por SQLGetTypeInfo é qualquer SQL_CHAR ou SQL_VARCHAR.)  
   
  *digit* ::= 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
   
- *dynamic-parameter* ::= ?  
+ *parâmetro dinâmico* :: =?  
   
  *expressão* :: = termo &#124; expressão {+&#124;-} termo  
   
  *factor* ::= [ *+* &#124; *-* ]*primary*  
   
- *insert-value* ::=  
+ *Inserir valor* :: =  
   
  *dynamic-parameter*  
   
@@ -90,15 +89,15 @@ Os seguintes elementos são usados nas instruções SQL listadas anteriormente.
   
  *sort-specification* ::= {*unsigned-integer &#124; column-name*} [*ASC &#124; DESC*]  
   
- *table-identifier* ::= *user-defined-name*  
+ *Identificador de tabela* :: = *nome definido pelo usuário*  
   
  *table-name* ::= *table-identifier*  
   
  *table-reference* ::= *table-name*  
   
- *table-reference-list* ::= *table-reference* [,*table-reference*]...  
+ *lista de referências de tabela* :: = *referência de tabela* [,*referência de tabela*]...  
   
- *term* ::= *factor* &#124; *term* {\*&#124; */* } *factor*  
+ *termo* :: = *fator* &#124; *termo* {\*&#124; */* } *fator*  
   
  *unsigned-integer* ::= {*digit*}  
   

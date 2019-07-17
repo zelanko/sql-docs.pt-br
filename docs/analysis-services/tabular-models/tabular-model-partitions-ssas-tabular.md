@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5e8fbbfe1aaf7c97a5739768413cdc04644be6a6
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072643"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162507"
 ---
 # <a name="tabular-model-partitions"></a>Partições de modelo tabular 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "53072643"
 |Permissão|Ações|  
 |----------------|-------------|  
 |Administrador|Ler, processar, criar, copiar, mesclar, excluir|  
-|Processar|Leitura e processo|  
-|Somente Leitura|leitura|  
+|Process|Leitura e processo|  
+|Somente Leitura|Ler|  
   
  Para saber mais sobre como criar funções durante a criação de modelo usando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], consulte [funções](../../analysis-services/tabular-models/roles-ssas-tabular.md). Para saber mais sobre como gerenciar os membros da função para funções de modelo de tabela implantadas por meio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consulte [funções de modelo Tabular](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   

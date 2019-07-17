@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4776dffb30382c58ceb63ec0c2b55f8e4fcb42a4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014963"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210124"
 ---
 # <a name="cross-validation-formulas"></a>Fórmulas de validação cruzada
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34014963"
 ## <a name="formulas-used-for-cross-validation-measures"></a>Fórmulas usadas para medidas de validação cruzada  
   
 > [!NOTE]  
->  **Importante:** estas medidas de precisão são computadas para cada atributo de destino. Para cada atributo, você pode especificar ou omitir um valor de destino. Se um caso no conjunto de dados não tiver nenhum valor para o atributo de destino, o caso será tratado como tendo um valor especial chamado de *valor ausente*. Não são consideradas as linhas com valores ausentes durante a computação da medida de exatidão para um atributo de destino específico. Observe que, como as pontuações são computadas individualmente para cada atributo, se valores estiverem presentes para o atributo de destino, mas ausentes para outros atributos, isso não afetará a pontuação do atributo de destino.  
+>  **Importante:** Estas medidas de precisão são computadas para cada atributo de destino. Para cada atributo, você pode especificar ou omitir um valor de destino. Se um caso no conjunto de dados não tiver nenhum valor para o atributo de destino, o caso será tratado como tendo um valor especial chamado de *valor ausente*. Não são consideradas as linhas com valores ausentes durante a computação da medida de exatidão para um atributo de destino específico. Observe que, como as pontuações são computadas individualmente para cada atributo, se valores estiverem presentes para o atributo de destino, mas ausentes para outros atributos, isso não afetará a pontuação do atributo de destino.  
   
 |Measure|Aplica-se a|Implementação|  
 |-------------|----------------|--------------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "34014963"
 |**Erro de quadrado da média de raiz**|Atributo diferenciado, nenhum destino especificado.|Raiz quadrada da média dos quadrados de complemento da pontuação de probabilidade, dividida pelo número de casos na partição, excluindo os casos com valores ausentes para o atributo de destino.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Teste e validação & #40; mineração de dados & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
+ [Teste e validação &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
  [Validação cruzada &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
   
   

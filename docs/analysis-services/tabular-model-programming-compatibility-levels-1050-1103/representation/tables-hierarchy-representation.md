@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ed1232a991ccdefbd9cae614698400cfe639492
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039889"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163297"
 ---
-# <a name="tables---hierarchy-representation"></a>Tabelas - representação de hierarquia
+# <a name="tables---hierarchy-representation"></a>Tabelas – Representação de hierarquia
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Em modelos de tabela, uma hierarquia é o caminho de navegação de um atributo para outro com base em valores selecionados pelo usuário.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "34039889"
 ### <a name="hierarchy-in-amo"></a>Hierarquia no AMO  
  Ao usar o AMO para gerenciar uma tabela de modelo de tabela, há correspondência de objeto um para um em uma hierarquia no AMO. Uma hierarquia é representada pelo objeto <xref:Microsoft.AnalysisServices.Hierarchy>.  
   
- O trecho de código a seguir mostra como adicionar uma hierarquia a um modelo de tabela existente. O código supõe que você tenha um objeto de banco de dados de AMO, newDatabase e um objeto de cubo AMO, modelCube.  
+ O snippet de código a seguir mostra como adicionar uma hierarquia a um modelo de tabela existente. O código supõe que você tenha um objeto de banco de dados de AMO, newDatabase e um objeto de cubo AMO, modelCube.  
   
 ```  
   

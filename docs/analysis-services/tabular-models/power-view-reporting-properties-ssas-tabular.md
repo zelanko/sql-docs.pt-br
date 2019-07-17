@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 302a4885833c6e26f9c4eaf6e3acf57d2b278845
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072253"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162736"
 ---
 # <a name="power-view---reporting-properties"></a>Power View – Propriedades de relatório 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53072253"
   
  Ao criar projetos de modelo tabular no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], você pode configurar determinadas propriedades de relatório exclusivas para relatórios do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . Os tópicos nesta seção descrevem como otimizar um modelo para melhorar a experiência de relatórios no [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Tópico|Descrição|  
 |-----------|-----------------|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bc158c0c5ba35da95fe3bf1af688e12a7b162045
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413083"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181786"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Verificador de consistência do banco de dados (DBCC) para o Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -220,9 +220,9 @@ Execution complete
 |**Objeto**|**Descrição de verificação do DBCC**|**Erro na falha**|  
 |banco de dados|Verifica a contagem de tabelas no banco de dados.  Um valor menor que zero indica corrupção.|Há corrupção na camada de armazenamento. A coleção de tabelas no banco de dados '%{parent/}' está corrompida.|  
 |banco de dados|Verifica a estrutura interna usada para rastrear a integridade referencial e lança um erro se o tamanho estiver incorreto.|Os arquivos de banco de dados não passaram nas verificações de consistência.|  
-|Table|Verifica o valor interno usado para determinar se a tabela é uma tabela de dimensão ou de fatos.  Um valor que está fora do intervalo conhecido que indica corrupção.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da tabela.|  
-|Table|Verifica se o número de partições no mapa do segmento da tabela corresponde ao número de partições definidas para a tabela.|Há corrupção na camada de armazenamento. A coleção de partições na tabela '%{parent/}' está corrompida.|  
-|Table|Se um banco de dados tabular for criado ou importado do PowerPivot para Excel 2010 e tiver uma contagem de partição maior que um, um erro será gerado, pois o suporte de partição foi adicionado em versões posteriores e isso poderia indicar corrupção.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar o mapa do segmento.|  
+|Tabela|Verifica o valor interno usado para determinar se a tabela é uma tabela de dimensão ou de fatos.  Um valor que está fora do intervalo conhecido que indica corrupção.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da tabela.|  
+|Tabela|Verifica se o número de partições no mapa do segmento da tabela corresponde ao número de partições definidas para a tabela.|Há corrupção na camada de armazenamento. A coleção de partições na tabela '%{parent/}' está corrompida.|  
+|Tabela|Se um banco de dados tabular for criado ou importado do PowerPivot para Excel 2010 e tiver uma contagem de partição maior que um, um erro será gerado, pois o suporte de partição foi adicionado em versões posteriores e isso poderia indicar corrupção.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar o mapa do segmento.|  
 |Partition|Verifica para cada partição que o número de segmentos do banco de dados e a contagem de registros de cada segmento de dados do segmento correspondem aos valores armazenados no índice do segmento.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar o mapa do segmento.|  
 |Partition|Gerar um erro se o número total de registros, segmentos ou registros por segmento não é válido (menor que zero) ou o número de segmentos não corresponde ao número calculado de segmentos necessários com base na contagem total de registros.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar o mapa do segmento.|  
 |Relação|Gerará um erro se a estrutura usada para armazenar dados sobre o relacionamento não contiver registros ou se o nome da tabela usada na relação estiver vazio.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar a relação.|  

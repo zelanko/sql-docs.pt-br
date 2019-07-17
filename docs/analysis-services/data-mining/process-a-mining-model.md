@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2bfc8d22ff87f467fa89d178d46b422918aa4dd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017913"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209735"
 ---
 # <a name="process-a-mining-model"></a>Processar um modelo de mineração
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34017913"
   
 4.  Clique em **Fechar** na caixa de diálogo **Andamento do Processo** , após o modelo completar seu processamento.  
   
-5.  Clique em **fechar** no **processando modelo de mineração - \<modelo >** caixa de diálogo.  
+5.  Clique em **feche** na **processando modelo de mineração - \<modelo >** caixa de diálogo.  
   
  Só foram processados a estrutura de mineração e o modelo de mineração selecionado.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "34017913"
   
 5.  Clique em **Fechar** na caixa de diálogo **Andamento do Processo** , após os modelos completarem seu processamento.  
   
-6.  Clique em **fechar** no **processamento \<modelo >** caixa de diálogo.  
+6.  Clique em **feche** na **processamento \<modelo >** caixa de diálogo.  
   
  A estrutura de mineração e todos os modelos de mineração associados foram processados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutoriais e tarefas do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Tarefas e instruções do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 907e6cc6deaa9617a4af93ab2080bfe495dacd0b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025373"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208466"
 ---
 # <a name="supported-data-sources-ssas---multidimensional"></a>Fontes de Dados com Suporte (SSAS - Multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "34025373"
   
 |||||  
 |-|-|-|-|  
-|Origem|Versões|Tipo de arquivo|Provedores*|  
+|Source|Versões|Tipo de arquivo|Provedores*|  
 |Bancos de dados do Access|Microsoft Access  2010, 2013, 2016|.accdb ou .mdb|Provedor OLE DB do Microsoft Jet 4.0|  
-|Bancos de dados relacionais do SQL Server*|Microsoft SQL Server 2008, 2008 R2, 2012, 2014, 2016, [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> Observação: para obter mais informações sobre [!INCLUDE[ssSDS](../../includes/sssds-md.md)] no [Azure.com](http://go.microsoft.com/fwlink/?LinkID=157856).<br /><br /> Observação: Analytics Platform System (APS) era anteriormente conhecido como SQL Server Parallel Data Warehouse (PDW). Originalmente, conectar o PDW a partir do Analysis Services exigia um provedor de dados especial. Esse provedor foi substituído no SQL Server 2012. A partir do SQL Server 2012, o cliente nativo do SQL Server é usado para as conexões com o PDW/APS. Para saber mais sobre o APS, acesse o site [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx).|(não se aplica)|Provedor OLE DB para SQL Server<br /><br /> Provedor OLE DB do SQL Server Native Client<br /><br /> Provedor OLE DB do SQL Server Native 11.0 Client<br /><br /> Provedor de dados .NET Framework para SQL Client|  
+|Bancos de dados relacionais do SQL Server*|Microsoft SQL Server 2008, 2008 R2, 2012, 2014, 2016, [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> Observação: Para obter mais informações sobre [!INCLUDE[ssSDS](../../includes/sssds-md.md)] na [Azure.com](http://go.microsoft.com/fwlink/?LinkID=157856).<br /><br /> Observação: Analytics Platform System (APS) era anteriormente conhecido como SQL Server Parallel Data Warehouse (PDW). Originalmente, conectar o PDW a partir do Analysis Services exigia um provedor de dados especial. Esse provedor foi substituído no SQL Server 2012. A partir do SQL Server 2012, o cliente nativo do SQL Server é usado para as conexões com o PDW/APS. Para saber mais sobre o APS, acesse o site [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx).|(não se aplica)|Provedor OLE DB para SQL Server<br /><br /> Provedor OLE DB do SQL Server Native Client<br /><br /> Provedor OLE DB do SQL Server Native 11.0 Client<br /><br /> Provedor de dados .NET Framework para SQL Client|  
 |Bancos de dados relacionais da Oracle|Oracle 9i, 10g, 11g, 12g|(não se aplica)|Provedor OLE DB Oracle<br /><br /> Provedor de Dados .NET Framework para Cliente Oracle<br /><br /> Provedor de dados do .NET Framework para SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Bancos de dados relacionais do Teradata|Teradata V2R6, V12|(não se aplica)|Provedor OLE DB TDOLEDB<br /><br /> Provedor de .NET Data para Teradata|  
 |Bancos de dados relacionais do Informix|V11.10|(não se aplica)|Provedor OLE DB para Informix|  
@@ -45,6 +45,6 @@ ms.locfileid: "34025373"
 ## <a name="see-also"></a>Consulte também  
  [Fontes de dados com suporte](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Fontes de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Exibições da fonte de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [Exibições de fontes de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

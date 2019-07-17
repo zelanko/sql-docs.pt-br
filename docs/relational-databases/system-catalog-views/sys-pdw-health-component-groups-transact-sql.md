@@ -9,21 +9,20 @@ ms.topic: conceptual
 ms.assetid: 5ba27432-7a29-4420-b73d-def621c0b3ac
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7c366b8e823cff578e7f580ded7cf7b959d4c1f0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 79d459fdff2e26726168f5200b53c82f3bb6a79c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127514"
 ---
 # <a name="syspdwhealthcomponentgroups-transact-sql"></a>sys.pdw_health_component_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Armazena informações sobre agrupamentos lógicos de componentes e dispositivos.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |group_id|**int**|Identificador exclusivo para componentes e dispositivos.<br /><br /> A chave para este modo de exibição.|NOT NULL|  
 |group_name|**nvarchar(255)**|Nome do grupo lógico para os componentes e dispositivos.|NOT NULL|  

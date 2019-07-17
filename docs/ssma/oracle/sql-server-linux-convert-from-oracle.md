@@ -3,18 +3,18 @@ title: Migrar do Oracle HR Schema para SQL Server no Linux | Microsoft Docs
 description: Converter o esquema do Oracle de exemplo para o SQL Server no Linux
 author: shamikg
 ms.author: shamikg
-manager: v-thobro
+manager: shamikg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
-ms.openlocfilehash: 312797b2b883f764fc65588e72cd67d7227e327a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1926c13b739de8294966fd6ce84df3d1e02a676e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629848"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266525"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Migrar um esquema do Oracle para o SQL Server 2017 no Linux com o SQL Server Migration Assistant
 
@@ -28,7 +28,7 @@ Este tutorial usa o SQL Server Migration Assistant (SSMA) para Oracle no Windows
 > * Converter o esquema de RH de exemplo
 > * Migrar os dados
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Uma instância do Oracle 12c (12.2.0.1.0) com o **HR** esquema instalada
 - Uma instância de trabalho do SQL Server no Linux

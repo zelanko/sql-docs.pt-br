@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 194395728e60f31c689293191be2cedca4d549f3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 487d88a7580432bf947893920d307e2f0adffd18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528908"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111988"
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @server_name = ] 'server'` O nome do servidor a ser removido como um servidor de destino disponíveis. *servidor* está **nvarchar (30)**, sem padrão.  
+`[ @server_name = ] 'server'` O nome do servidor a ser removido como um servidor de destino disponíveis. *servidor* está **nvarchar (30)** , sem padrão.  
   
 `[ @clear_downloadlist = ] clear_downloadlist` Especifica se é necessário limpar a lista de download para o servidor de destino. *clear_downloadlist* é do tipo **bit**, com um padrão de **1**. Quando *clear_downloadlist* é **1**, o procedimento desmarca a lista de download para o servidor antes de excluir o servidor. Quando *clear_downloadlist* é **0**, a lista de download não é limpo.  
   
@@ -52,7 +51,7 @@ sp_delete_targetserver [ @server_name = ] 'server'
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="remarks"></a>Comentários  
  O modo normal para excluir um servidor de destino é chamar **sp_msx_defect** no servidor de destino. Use **sp_delete_targetserver** apenas quando uma remoção manual é necessária.  

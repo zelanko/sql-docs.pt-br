@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 04eb5a41bec6e9abb62cfde516f2dad2ff820521
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024243"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165743"
 ---
 # <a name="measures-and-measure-groups"></a>Medidas e Grupos de Medidas
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,13 +22,13 @@ ms.locfileid: "34024243"
   
  Este tópico descreve [medidas](#bkmk_measure) e [grupos de medidas](#bkmk_mg). Ele também contém a tabela a seguir, com links para procedimentos para medidas de criação e configuração e grupos de medidas.  
   
-|**Link**|**Description**|  
+|**Link**|**Descrição**|  
 |--------------|---------------------|  
 |[Criar medidas e grupos de medidas em modelos multidimensionais](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|Escolha uma das várias abordagens para criar medidas e grupos de medidas.|  
 |[Configurar propriedades de medida](../../analysis-services/multidimensional-models/configure-measure-properties.md)|Se você usou o Assistente de cubo para iniciar seu cubo, talvez seja necessário alterar o método de agregação, aplicar um formato de dados, definir a visibilidade da medida em aplicativos cliente ou possivelmente adicionar uma expressão de medida para manipular os dados antes de os valores serem agregados.|  
 |[Configurar propriedades do grupo de medidas](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)|Em um modelo multidimensional, um grupo de medidas é igual a uma tabela de fatos no armazém de dados de origem. Propriedades em um grupo de medidas permitem especificar comportamentos de cache, armazenamento e diretivas de processamento que operam coletivamente no nível do grupo de medidas. A configuração de partição é parcialmente determinada pelas propriedades definidas em objetos do grupo de medidas.|  
-|[Use as funções de agregação](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|Compreenda os métodos de agregação que podem ser atribuídos a uma medida.|  
-|[Definir comportamento Semiaditivo](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|Comportamento semiaditivo se refere a agregações que são válidas para algumas dimensões, mas não para outras. Um exemplo comum é um saldo da conta bancária. Talvez você deseje agregar saldos por cliente e região, mas não por tempo. Por exemplo, não convém adicionar saldos da mesma conta por dias consecutivos. Para definir o comportamento semiaditivo, use o Assistente para Adicionar Business Intelligence.|  
+|[Usar funções de agregação](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|Compreenda os métodos de agregação que podem ser atribuídos a uma medida.|  
+|[Definir comportamento semiaditivo](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|Comportamento semiaditivo se refere a agregações que são válidas para algumas dimensões, mas não para outras. Um exemplo comum é um saldo da conta bancária. Talvez você deseje agregar saldos por cliente e região, mas não por tempo. Por exemplo, não convém adicionar saldos da mesma conta por dias consecutivos. Para definir o comportamento semiaditivo, use o Assistente para Adicionar Business Intelligence.|  
 |[Grupos de medidas vinculados](../../analysis-services/multidimensional-models/linked-measure-groups.md)|Reutilizar um grupo de medidas existente em outros cubos no mesmo banco de dados ou em bancos de dados diferentes do Analysis Services.|  
   
 ##  <a name="bkmk_measure"></a> Measures  
@@ -46,7 +46,7 @@ ms.locfileid: "34024243"
   
  O que acontece se a medida não estiver relacionada às dimensões usadas na consulta? Normalmente, o Analysis Services mostrará a medida padrão e o valor será o mesmo para todos os membros. Neste exemplo, **Vendas pela Internet**, que mede vendas diretas feitas por clientes que usam o catálogo online, não tem relação com a organização de vendas.  
   
- ![Valores de medida de tabela dinâmica mostrando repetidas](../../analysis-services/multidimensional-models/media/ssas-unrelatedmeasure.PNG "valores de medida de tabela dinâmica mostrando repetidas")  
+ ![Valores de medidas da tabela dinâmica mostrando repetidas](../../analysis-services/multidimensional-models/media/ssas-unrelatedmeasure.PNG "valores de medidas da tabela dinâmica mostrando repetidas")  
   
  Para minimizar a possibilidade de encontrar esses comportamentos em um aplicativo cliente, você poderia compilar vários cubos ou perspectivas no mesmo banco de dados e verificar se cada cubo ou perspectiva contém apenas os objetos relacionados. As relações que você precisa verificar estão entre o grupo de medidas (mapeado para a tabela de fatos) e as dimensões.  
   

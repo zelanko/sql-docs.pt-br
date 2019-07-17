@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0040f986e5ff3b6de025761b32d2f40e2e127d39
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe75ffcf1e8cdcc387acb48c882e247b21889c06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113817"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,23 +64,23 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, com um padrão de **%**. Se *publicação* não for especificado, todas as publicações são afetadas.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, com um padrão de **%** . Se *publicação* não for especificado, todas as publicações são afetadas.  
   
-`[ @article = ] 'article'` É o nome do artigo. Deve ser exclusivo para a publicação. *artigo* está **sysname**, com um padrão de **%**. Se *artigo* não for especificado, todos os artigos são afetados.  
+`[ @article = ] 'article'` É o nome do artigo. Deve ser exclusivo para a publicação. *artigo* está **sysname**, com um padrão de **%** . Se *artigo* não for especificado, todos os artigos são afetados.  
   
-`[ @subscriber = ] 'subscriber'` É o nome do assinante para alterar o status. *assinante* está **sysname**, com um padrão de **%**. Se *assinante* não for especificado, status é alterado para todos os assinantes para o artigo especificado.  
+`[ @subscriber = ] 'subscriber'` É o nome do assinante para alterar o status. *assinante* está **sysname**, com um padrão de **%** . Se *assinante* não for especificado, status é alterado para todos os assinantes para o artigo especificado.  
   
 `[ @status = ] 'status'` É o status da assinatura do **syssubscriptions** tabela. *status* está **sysname**, sem padrão e pode ser um destes valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**active**|O Assinante está sincronizado e recebendo dados.|  
+|**Active Directory**|O Assinante está sincronizado e recebendo dados.|  
 |**inactive**|Entrada de assinante existe sem uma assinatura.|  
 |**assinado**|O Assinante está solicitando dados, mas ainda não está sincronizado.|  
   
 `[ @previous_status = ] 'previous_status'` É o status anterior para a assinatura. *previous_status* está **sysname**, com um padrão NULL. Esse parâmetro permite que você altere qualquer assinatura atualmente com esse status, permitindo assim que as funções de grupo em um conjunto específico de assinaturas (por exemplo, definindo todos os assinantes ativos de volta para as assinaturas **inscrito**).  
   
-`[ @destination_db = ] 'destination_db'` É o nome do banco de dados de destino. *destination_db* está **sysname**, com um padrão de **%**.  
+`[ @destination_db = ] 'destination_db'` É o nome do banco de dados de destino. *destination_db* está **sysname**, com um padrão de **%** .  
   
 `[ @frequency_type = ] frequency_type` É a frequência de agendamento da tarefa de distribuição. *frequency_type* está **int**, com um padrão NULL.  
   
@@ -120,9 +119,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @active_end_date = ] active_end_date` É a data em que a tarefa de distribuição deixa de ser agendado, formatada como AAAAMMDD. *active_end_date* está **int**, com um padrão NULL.  
   
-`[ @optional_command_line = ] 'optional_command_line'` É um prompt de comando opcional. *optional_command_line* está **nvarchar (4000)**, com um padrão NULL.  
+`[ @optional_command_line = ] 'optional_command_line'` É um prompt de comando opcional. *optional_command_line* está **nvarchar (4000)** , com um padrão NULL.  
   
-`[ @distribution_jobid = ] distribution_jobid` É a ID do trabalho do Distribution Agent no distribuidor para a assinatura ao alterar o status da assinatura de inativo para ativo. Em outros casos, não é definida. Se mais de um Distribution Agent estiver envolvido em uma única chamada para esse procedimento armazenado, o resultado não será definido. *distribution_jobid* está **binário (16)**, com um padrão NULL.  
+`[ @distribution_jobid = ] distribution_jobid` É a ID do trabalho do Distribution Agent no distribuidor para a assinatura ao alterar o status da assinatura de inativo para ativo. Em outros casos, não é definida. Se mais de um Distribution Agent estiver envolvido em uma única chamada para esse procedimento armazenado, o resultado não será definido. *distribution_jobid* está **binário (16)** , com um padrão NULL.  
   
 `[ @from_auto_sync = ] from_auto_sync` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

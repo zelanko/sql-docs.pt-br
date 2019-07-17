@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0706db7d-e125-4845-a13a-7fe4308f7360
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dcfefffb167b97ace09bfa358296d886265a987f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b337d317092ad6ae20cc91236d69c1314de96bce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107280"
 ---
 # <a name="state-transition-checks"></a>Verificações de transição de estado
 O Gerenciador de Driver verifica se o estado do ambiente, conexão ou instrução é apropriado para a função que está sendo chamada. Por exemplo, uma conexão deve estar em um alocado estado quando **SQLConnect** é chamado; uma instrução deve estar em um preparada estado quando **SQLExecute** é chamado. O Gerenciador de Driver retornará SQL_ERROR para erros de transição de estado.

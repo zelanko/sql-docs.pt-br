@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7d2c5df-0e17-4e94-9d41-d36c7ee60662
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 302a0ea8c058eb3e69d89c2fc1e742af1965c4ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17bf8ff345e2869d6189491cbf09df49312e1f75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628294"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106659"
 ---
 # <a name="systraceevents-transact-sql"></a>sys.trace_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47628294"
  Para obter mais informações sobre esses eventos de rastreamento, consulte [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|ID exclusiva do evento. Esta coluna também está na **sys. trace_event_bindings** e **sys. trace_subclass_values** exibições do catálogo.|  
 |**category_id**|**smallint**|A ID de categoria do evento. Esta coluna também está na **sys. trace_categories** exibição do catálogo.|  

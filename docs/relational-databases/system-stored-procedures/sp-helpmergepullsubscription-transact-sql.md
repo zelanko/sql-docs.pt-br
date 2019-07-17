@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 899846e0868b6381c019281c432c014144e6354c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c92ea8e2f172d9cb5b40559c2a7b77a60153065b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137707"
 ---
 # <a name="sphelpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,26 +40,26 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>Argumento  
-`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, com um padrão de **%**. Se *publicação* é **%**, serão retornadas informações sobre todas as publicações de mesclagem e assinaturas no banco de dados atual.  
+`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, com um padrão de **%** . Se *publicação* é **%** , serão retornadas informações sobre todas as publicações de mesclagem e assinaturas no banco de dados atual.  
   
-`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher*está **sysname**, com um padrão de **%**.  
+`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher*está **sysname**, com um padrão de **%** .  
   
-`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados publicador. *publisher_db*está **sysname**, com um padrão de **%**.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados publicador. *publisher_db*está **sysname**, com um padrão de **%** .  
   
-`[ @subscription_type = ] 'subscription_type'` Especifica se deve mostrar assinaturas pull. *subscription_type*está **nvarchar (10)**, com um padrão de **'pull'**. Os valores válidos são **'push'**, **'pull'**, ou **'both'**.  
+`[ @subscription_type = ] 'subscription_type'` Especifica se deve mostrar assinaturas pull. *subscription_type*está **nvarchar (10)** , com um padrão de **'pull'** . Os valores válidos são **'push'** , **'pull'** , ou **'both'** .  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**nvarchar(1000)**|O nome da assinatura.|  
-|**publication**|**sysname**|Nome da publicação.|  
+|**publicação**|**sysname**|Nome da publicação.|  
 |**publisher**|**sysname**|Nome do Publicador.|  
 |**publisher_db**|**sysname**|Nome do banco de dados publicador.|  
 |**Assinante**|**sysname**|Nome do Assinante.|  
 |**subscription_db**|**sysname**|Nome do banco de dados de assinatura.|  
 |**status**|**int**|O status da assinatura:<br /><br /> **0** = assinatura inativa<br /><br /> **1** = assinatura ativa<br /><br /> **2** = assinatura excluída<br /><br /> **3** = assinatura desanexada<br /><br /> **4** = assinatura anexada<br /><br /> **5** = assinatura foi marcada para reinicialização com carga<br /><br /> **6** = anexando a assinatura falhou<br /><br /> **7** = assinatura restaurada de backup|  
-|**subscriber_type**|**int**|O tipo de Assinante:<br /><br /> **1** = Global<br /><br /> **2** = Local<br /><br /> **3** = anônimo|  
+|**subscriber_type**|**int**|O tipo de Assinante:<br /><br /> **1** = global<br /><br /> **2** = local<br /><br /> **3** = anônimo|  
 |**subscription_type**|**int**|O tipo de assinatura:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = anônimo|  
 |**priority**|**float(8)**|A prioridade da assinatura. O valor deve ser menor que **100,00**.|  
 |**sync_type**|**tinyint**|O tipo de sincronização da assinatura:<br /><br /> **1** = automático<br /><br /> **2** = instantâneo não é usado.|  
@@ -71,7 +70,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**publisher_login**|**sysname**|O nome de logon do Publicador.|  
 |**publisher_password**|**sysname**|A senha do Publicador.|  
 |**publisher_security_mode**|**int**|Especifica o modo de segurança do Publicador:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows|  
-|**distributor**|**sysname**|Nome do Distribuidor.|  
+|**distribuidor**|**sysname**|Nome do Distribuidor.|  
 |**distributor_login**|**sysname**|O nome de logon do Distribuidor.|  
 |**distributor_password**|**sysname**|A senha do Distribuidor.|  
 |**distributor_security_mode**|**int**|Especifica o modo de segurança do Distribuidor:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows|  
@@ -95,9 +94,9 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**internet_password**|**nvarchar(524)**|Senha para o logon que o Merge Agent usa ao se conectar ao servidor da Web que está hospedando a sincronização da Web usando Autenticação Básica.|  
 |**internet_security_mode**|**int**|O modo de autenticação usado para se conectar ao servidor da Web que está hospedando a sincronização da Web. Um valor de **1** significa autenticação do Windows e um valor de **0** significa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.|  
 |**internet_timeout**|**int**|Período de tempo, em segundos, antes que uma solicitação de sincronização da Web expire.|  
-|**hostname**|**nvarchar(128)**|Especifica o valor sobrecarregado para [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) quando essa função é usada na cláusula WHERE de um filtro de linha com parâmetros.|  
+|**nome do host**|**nvarchar(128)**|Especifica o valor sobrecarregado para [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) quando essa função é usada na cláusula WHERE de um filtro de linha com parâmetros.|  
 |**job_login**|**nvarchar(512)**|É a conta de Windows na qual o Merge agent é executado, que é retornada no formato *domínio*\\*username*.|  
-|**job_password**|**sysname**|Por motivos de segurança, um valor de "**\*\*\*\*\*\*\*\*\*\***" é sempre retornado.|  
+|**job_password**|**sysname**|Por motivos de segurança, um valor de " **\*\*\*\*\*\*\*\*\*\*** " é sempre retornado.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

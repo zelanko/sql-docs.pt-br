@@ -10,12 +10,12 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 5258a95b713da0ec1fe526e94ce11c6e5e0b595c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d888fa133e6cb1026ae23486dfabfc5e0b13b57
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138768"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259832"
 ---
 # <a name="creating-script-files-accesstosql"></a>Criar arquivos de script (AccessToSQL)
 A primeira etapa antes de iniciar o aplicativo de console do SSMA é criar o arquivo de script e se for necessário criar o arquivo de valor da variável e o arquivo de conexão do servidor.  
@@ -24,9 +24,9 @@ O arquivo de script pode ser dividido em três seções, sobre visualização..,
   
 1.  **config:** Permite que o usuário definir os parâmetros de configuração para o aplicativo de console.  
   
-2.  **servers:** Permite que o usuário defina definições de servidor de origem/destino. Isso também pode ser em um arquivo de conexão de servidor separado.  
+2.  **servidores:** Permite que o usuário defina definições de servidor de origem/destino. Isso também pode ser em um arquivo de conexão de servidor separado.  
   
-3.  **script-commands:** Permite que o usuário execute comandos de fluxo de trabalho do SSMA.  
+3.  **comandos de script:** Permite que o usuário execute comandos de fluxo de trabalho do SSMA.  
   
 Cada seção é descrita em detalhes abaixo:  
   
@@ -43,7 +43,7 @@ As opções configuráveis pelo usuário incluem:
   
     -   nome do arquivo: O caminho do arquivo (opcional).  
   
-    -   suppress-messages: Suprime as mensagens do console. Isso é 'false', por padrão.  
+    -   Suprimir-messages: Suprime as mensagens do console. Isso é 'false', por padrão.  
   
     **Exemplo:**  
   
@@ -84,9 +84,9 @@ As opções configuráveis pelo usuário incluem:
   
     Apenas um ou outro atributo especificado pode ser usado ou seja:  
   
-    - source-use-last-used="true" (default) or source-server="source_servername"  
+    - código-fonte-use-last-used = "true" (padrão) ou servidor de origem = "source_servername"  
   
-    - target-use-last-used="true" (default) or target-server="target_servername"  
+    - destino-use-last-used = "true" (padrão) ou servidor de destino = "target_servername"  
   
     **Exemplo:**  
   
@@ -148,7 +148,7 @@ As opções configuráveis pelo usuário incluem:
   
     Os modos de reconexão são:  
   
-    -   reconnect-to-last-used-server: Se a conexão não está ativo, ele tentará reconectar-se para o último servidor usado no máximo 5 vezes.  
+    -   reconectar-se a última-usado-servidor: Se a conexão não está ativo, ele tentará reconectar-se para o último servidor usado no máximo 5 vezes.  
   
     -   Gerar-um-erro: Se a conexão não está ativa, um erro será gerado.  
   
@@ -196,7 +196,7 @@ As opções configuráveis pelo usuário incluem:
   
     -   Erro: O console exibe um erro e interrompe a execução.  
   
-    -   overwrite: Substitui os valores de objeto existentes. Essa ação é executada por padrão.  
+    -   Substitua: Substitui os valores de objeto existentes. Essa ação é executada por padrão.  
   
     -   Ignore: O console irá ignorar os objetos que já existem no banco de dados  
   
@@ -284,13 +284,13 @@ As opções configuráveis pelo usuário incluem:
   
     As opções de nível de agente de log incluem:  
   
-    -   fatal-error: Somente as mensagens de erro fatal são registradas.  
+    -   Erro-fatal: Somente as mensagens de erro fatal são registradas.  
   
     -   Erro: Apenas as mensagens de erro e fatal erro são registradas.  
   
     -   Aviso: Todos os níveis, exceto as mensagens de depuração e as informações são registradas.  
   
-    -   info: Todos os níveis, exceto as mensagens de depuração são registrados.  
+    -   INFO: Todos os níveis, exceto as mensagens de depuração são registrados.  
   
     -   Depure: Todos os níveis de mensagens registradas.  
   

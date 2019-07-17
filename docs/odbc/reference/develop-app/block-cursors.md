@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc62e7b5225c434bac33630f2f0cf8f39c72bfc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e0ea6ff655140c979f400f67a59cd7259bac9e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199294"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118816"
 ---
 # <a name="block-cursors"></a>Cursores em bloco
 Muitos aplicativos gastam uma quantidade significativa de tempo de trazer dados pela rede. Parte desse tempo é gasto na verdade, trazer os dados pela rede e parte dela é gasto na sobrecarga de rede, como a chamada feita pelo driver para solicitar uma linha de dados. A hora do último pode ser reduzida se o aplicativo faz uso eficiente de *bloco,* ou *fat* *cursores,* que pode retornar mais de uma linha por vez.  

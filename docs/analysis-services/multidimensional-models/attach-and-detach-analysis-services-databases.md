@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2419b057f6bc3fbe85c937911dd76bc8b9729b95
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144846"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180261"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Anexar e desanexar Bancos de Dados do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "50144846"
   
 |Desanexar um banco de dados de leitura/gravação|Desanexar um banco de dados somente leitura|  
 |--------------------------------------|-------------------------------------|  
-|1) O servidor emite uma solicitação para um Bloqueio de CommitExclusive no banco de dados<br /><br /> 2) O servidor espera até que todas as transações contínuas sejam confirmadas ou revertidas<br /><br /> 3) O servidor cria todos os metadados necessários para desanexar o banco de dados<br /><br /> 4) O banco de dados é marcado como excluído<br /><br /> 5) O servidor confirma a transação|1) O banco de dados é marcado como excluído<br /><br /> 2) O servidor confirma a transação<br /><br /> Observação: a senha para desanexar não pode ser alterada para um banco de dados somente leitura. Ocorrerá um erro caso o parâmetro de senha seja fornecido a um banco de dados anexado que já tenha uma senha.|  
+|1) O servidor emite uma solicitação para um Bloqueio de CommitExclusive no banco de dados<br /><br /> 2) O servidor espera até que todas as transações contínuas sejam confirmadas ou revertidas<br /><br /> 3) O servidor cria todos os metadados necessários para desanexar o banco de dados<br /><br /> 4) O banco de dados é marcado como excluído<br /><br /> 5) O servidor confirma a transação|1) O banco de dados é marcado como excluído<br /><br /> 2) O servidor confirma a transação<br /><br /> Observação: A senha para desanexar não pode ser alterada para um banco de dados somente leitura. Ocorrerá um erro caso o parâmetro de senha seja fornecido a um banco de dados anexado que já tenha uma senha.|  
   
  Os comandos **Attach** e **Detach** devem ser executados como operações únicas. Eles não podem ser combinados com outras operações na mesma transação. Os comandos **Attach** e **Detach** também são comandos transacionais atômicos. Isso significa que a operação poderá ser bem-sucedida ou não. Nenhum banco de dados ficará incompleto.  
   

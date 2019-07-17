@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31755bb0ca1ba00d8d9b6f61b6091ce2e997f58e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 32fe9edf5c3d8621046a27937d83f642b1689d1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123985"
 ---
 # <a name="spgetdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  Você deve especificar esse parâmetro.  
   
-`[ @source_version = ] 'source_version'` É o número de versão do DBMS de origem. *source_version* está **varchar(10)**, com um valor padrão de NULL.  
+`[ @source_version = ] 'source_version'` É o número de versão do DBMS de origem. *source_version* está **varchar(10)** , com um valor padrão de NULL.  
   
 `[ @source_type = ] 'source_type'` É o tipo de dados no DBMS de origem. *source_type* está **sysname**, sem padrão.  
   
@@ -84,7 +83,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  Você deve especificar esse parâmetro.  
   
-`[ @destination_version = ] 'destination_version'` É a versão de produto do DBMS de destino. *destination_version* está **varchar(10)**, com um valor padrão de NULL.  
+`[ @destination_version = ] 'destination_version'` É a versão de produto do DBMS de destino. *destination_version* está **varchar(10)** , com um valor padrão de NULL.  
   
 `[ @destination_type = ] 'destination_type' OUTPUT` O tipo de dados é listado no DBMS de destino. *destination_type* está **sysname**, com um valor padrão de NULL.  
   

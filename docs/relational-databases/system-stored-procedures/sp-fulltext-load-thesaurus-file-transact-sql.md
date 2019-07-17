@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c0857066ba5f8f57a5a6d088a4f37d69315225ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a71c4d61ec920b51146cc3d3111adefc09f23b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124227"
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
@@ -54,10 +53,10 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 |1|Carregar o arquivo de dicionário de sinônimos apenas se ele ainda não tiver sido carregado.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- None  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="remarks"></a>Comentários  
  Arquivos de dicionários de sinônimos são carregados automaticamente por consultas de texto completo que usam o dicionário de sinônimos. Para evitar esse impacto de desempenho pela primeira vez em consultas de texto completo, recomendamos que você execute **sp_fulltext_load_thesaurus_file**.  

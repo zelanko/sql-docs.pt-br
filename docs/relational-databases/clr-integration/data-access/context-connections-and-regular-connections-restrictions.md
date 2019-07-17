@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 800ec59fb837b167b1bcbffc61ddf7e8ce695849
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8cbdd195f698090602b98cdb6e5bab0a86556ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216417"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>Conexões de contexto e conexões normais – Restrições
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "47641784"
 ## <a name="restrictions-on-regular-connections"></a>Restrições em conexões comuns  
  Ao desenvolver seu aplicativo, leve em consideração as restrições a seguir que se aplicam a conexões comuns:  
   
--   Não existe suporte para a execução assíncrona de comandos em servidores internos. Incluindo "async = true" na cadeia de conexão de um comando e, em seguida, executar o comando resulta em **System. NotSupportedException** que está sendo gerada. Esta mensagem será exibida: "Não existe suporte para processamento assíncrono quando executado dentro do processo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Não existe suporte para a execução assíncrona de comandos em servidores internos. Incluindo "async = true" na cadeia de conexão de um comando e, em seguida, executar o comando resulta em **System. NotSupportedException** que está sendo gerada. Essa mensagem será exibida: "O processamento assíncrono não é suportado quando em execução dentro de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] processo."  
   
 -   **SqlDependency** não há suporte para o objeto.  
   

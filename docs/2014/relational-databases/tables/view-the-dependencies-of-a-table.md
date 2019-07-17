@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5f30232a4f6d382af6e3a21f022b86cdf1a4fd4
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100741"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196616"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Exibir as dependências de uma tabela
   Você pode exibir as dependências de uma tabela no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -52,11 +52,11 @@ ms.locfileid: "54100741"
   
 2.  Clique com o botão direito do mouse em uma tabela e clique em **Exibir Dependências**.  
   
-3.  Na caixa de diálogo **Dependências do Objeto**_\<object name>_, selecione **Objetos que dependem do**  _\<<nome do objeto>_ ou **Objetos dos quais o** _\<object name>_**depende**.  
+3.  Na caixa de diálogo **Dependências do Objeto** _\<object name>_ , selecione **Objetos que dependem do**  _\<<nome do objeto>_ ou **Objetos dos quais o** _\<object name>_ **depende**.  
   
 4.  Selecione um objeto na grade **Dependências** . O tipo de objeto (como “Gatilho” ou “Procedimento Armazenado”) aparece na caixa **Tipo** .  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-the-objects-that-depend-on-a-table"></a>Para exibir os objetos que dependem de uma tabela  
   

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4f6b6d89ced88a570ce242ae9490d4c6d8bd6ac8
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 39a0db181f3b1d1a40af1a5fa27ba78366a9d2b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135015"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Funções VBA no MDX e no DAX
 
@@ -68,7 +67,7 @@ ms.locfileid: "67500043"
 |FileAttr|Sem suporte||  
 |FileDateTime|Sem suporte||  
 |FileLen|Sem suporte||  
-|Filtrar|Sem suporte|**Aviso** MDX implementa uma função diferente com o mesmo nome; a função FILTER (Set_Expression, Logical_Expression) retorna o conjunto resultante da filtragem de um conjunto especificado com base em um critério de pesquisa dos argumentos determinados<br /><br /> **Aviso** DAX implementa uma função diferente com o mesmo nome; o filtro (\<tabela >,\<filtro >) função retorna uma tabela que representa um subconjunto de outra tabela ou expressão dos argumentos determinados|  
+|Filtro|Sem suporte|**Aviso** MDX implementa uma função diferente com o mesmo nome; a função FILTER (Set_Expression, Logical_Expression) retorna o conjunto resultante da filtragem de um conjunto especificado com base em um critério de pesquisa dos argumentos determinados<br /><br /> **Aviso** DAX implementa uma função diferente com o mesmo nome; o filtro (\<tabela >,\<filtro >) função retorna uma tabela que representa um subconjunto de outra tabela ou expressão dos argumentos determinados|  
 |Fix|Somente MDX||  
 |Formato (Visual Basic for Applications)|DAX, MDX||  
 |FormatCurrency|Sem suporte||  
@@ -89,7 +88,7 @@ ms.locfileid: "67500043"
 |InputBox|Sem suporte||  
 |InStr|Somente MDX||  
 |InStrRev|Sem suporte||  
-|Int|DAX, MDX||  
+|int|DAX, MDX||  
 |IPmt|Somente MDX||  
 |IRR|Somente MDX||  
 |IsArray|Somente MDX||  
@@ -150,14 +149,14 @@ ms.locfileid: "67500043"
 |StrReverse|Sem suporte||  
 |Alternar|Somente MDX||  
 |SYD|Somente MDX||  
-|Tab|Sem suporte||  
+|Tabulação|Sem suporte||  
 |Tan|Somente MDX||  
 |Time|Sem suporte||  
 |Timer|Somente MDX||  
 |TimeSerial|Somente MDX||  
 |TimeValue|DAX, MDX||  
 |Trim|DAX, MDX||  
-|TypeName|Somente MDX||  
+|NomeDoTipo|Somente MDX||  
 |UBound|Sem suporte||  
 |UCase|Somente MDX||  
 |Val|Somente MDX||  

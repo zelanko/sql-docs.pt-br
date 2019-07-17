@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: be7d8a59-3c00-4f1b-b4b0-3dcd5572e002
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f2065fbb7c84adbfc521e5622e8826bedebf5a11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c226b3c5daef98c9a34c7ac25934a94abc8baabc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679734"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132997"
 ---
 # <a name="sysservertriggerevents-transact-sql"></a>sys.server_trigger_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contém uma linha para cada evento para o qual é acionado um gatilho (síncrono) em nível de servidor.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**colunas herdadas**||Herda todas as colunas de [server_events](../../relational-databases/system-catalog-views/sys-server-events-transact-sql.md).|  
 |**is_first**|**bit**|O gatilho é marcado para ser o primeiro a ser acionado para este evento.|  

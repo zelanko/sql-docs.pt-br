@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ddd49ce6d3edc3f1e2f72a3fe7f5ab61621eef62
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044170"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162387"
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>Traduções em modelos de tabela (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "34044170"
     |-|-|  
     |Substituir traduções existentes|Substitui todas as legendas ou descrições existentes do mesmo idioma do arquivo que está sendo importado.|  
     |Ignorar objetos inválidos|Especifica se as discrepâncias de metadados devem ser ignoradas ou sinalizadas como um erro.|  
-    |Gravar resultados de importação em um arquivo de log|Arquivos de log são salvos na pasta do projeto por padrão. O caminho exato para o arquivo é fornecido após a conclusão da importação. O nome do arquivo de log é SSDT_Translations_Log_\<carimbo de hora >.|  
+    |Gravar resultados de importação em um arquivo de log|Arquivos de log são salvos na pasta do projeto por padrão. O caminho exato para o arquivo é fornecido após a conclusão da importação. O nome do arquivo de log é SSDT_Translations_Log_\<timestamp >.|  
     |Fazer backup de tradução em um arquivo JSON antes da importação|Faz backup de uma tradução existente que corresponda à cultura das strings sendo importadas.  Se a cultura importada não estiver presente no modelo, o backup ficará vazio.<br /><br /> Se precisar restaurá-lo mais tarde, você pode substituir o conteúdo de model.bim com esse arquivo JSON.|  
   
 4.  Clique em **Importar**.  
@@ -99,7 +99,7 @@ ms.locfileid: "34044170"
 ## <a name="connect-using-a-locale-identifier"></a>Conectar-se usando um identificador de localidade  
  Esta seção descreve uma abordagem para validar se as strings corretas são retornadas do modelo.  
   
-1.  No Excel, conecte-se ao modelo de tabela. Esta etapa pressupõe que o modelo foi implantado. Se o modelo só existe no espaço de trabalho, você deve implantá-lo em uma instância do Analysis Services para realizar a verificação de validação.  
+1.  No Excel, conecte-se ao modelo de tabela. Esta etapa pressupõe que o modelo foi implantado. Se o modelo só existe no workspace, você deve implantá-lo em uma instância do Analysis Services para realizar a verificação de validação.  
   
      Como alternativa, você pode usar o recurso **Analisar no Excel** para se conectar ao modelo  
   

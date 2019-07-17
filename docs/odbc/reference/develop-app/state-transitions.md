@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30c1db4f850e6f181757d974ae74bb475b0cc5cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2512d277980b071523cfea6cbe132f2a3861b7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107296"
 ---
 # <a name="state-transitions"></a>Transições de estado
 ODBC define discreto *estados* para cada ambiente, cada conexão e cada instrução. Por exemplo, o ambiente tem três estados possíveis: Não alocado (em que nenhum ambiente é alocado), alocado (em que um ambiente é alocado, mas nenhuma conexão é alocado) e Conexão (em que um ambiente e uma ou mais conexões estão alocadas). As conexões têm sete estados possíveis; as instruções ter 13 estados possíveis.  

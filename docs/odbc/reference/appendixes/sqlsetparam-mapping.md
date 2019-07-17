@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 022dfbc0-8d18-4c35-8a28-d9eb16063188
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5d420bc68c4704705018a37c6459181481b1d7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c8d2d567f899c30dfe91cd35445956cd6214da9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297468"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125548"
 ---
 # <a name="sqlsetparam-mapping"></a>Mapeamento SQLSetParam
 **SQLSetParam** continua a ser mapeada na parte superior da **SQLBindParameter** como no ODBC 2. *x*. Mesmo que ele é conceitualmente semelhante a **SQLBindParam**, o Gerenciador de Driver não mapeia **SQLSetParam** para **SQLBindParam**. Isso ocorre porque determinado existente ODBC 2. *x* drivers usam o valor especial *BufferLength* (SQL_SETPARAM_VALUE_MAX) que o Gerenciador de Driver gera quando ele mapeia **SQLSetParam** na parte superior da  **SQLBindParameter** para determinar quando ele é chamado por 1. *x* aplicativo ODBC.  

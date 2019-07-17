@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c43d969f56619109cfb6ebe09b8a416824f59638
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ede8b65cb3f11ed6640121031ea6a2fe5b57b83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124187"
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_fulltext_service [ [@action=] 'action'
 > [!NOTE]  
 >  As ações a seguir serão removidas em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **clean_up**, **connect_timeout**, **data_timeout**, e **resource_ uso**. Evite usar essas ações em novos trabalhos de desenvolvimento e planeje a modificação dos aplicativos que as usam atualmente.  
   
-|Ação|Tipo de dados|Descrição|  
+|Action|Tipo de dados|Descrição|  
 |------------|---------------|-----------------|  
 |**clean_up**|**int**|Com suporte somente para compatibilidade com versões anteriores. O valor padrão é sempre 0.|  
 |**connect_timeout**|**int**|Com suporte somente para compatibilidade com versões anteriores. O valor padrão é sempre 0.|  
@@ -67,7 +66,7 @@ sp_fulltext_service [ [@action=] 'action'
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Somente os membros dos **serveradmin** função de servidor fixa ou o administrador do sistema pode executar **sp_fulltext_service**.  

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 537865967d0e43b7dd9501f9fbb7b9605f5b9367
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625784"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266553"
 ---
 # <a name="running-test-cases-oracletosql"></a>Executar casos de teste (OracleToSQL)
 Quando o SSMA testador executa um caso de teste, ele executa os objetos selecionados para teste e cria um relatório sobre os resultados da verificação. Se os resultados são idênticos em ambas as plataformas, o teste foi bem-sucedido. A correspondência de objetos entre Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é determinado de acordo com as configurações de mapeamento de esquema para o projeto atual do SSMA.  
@@ -33,7 +33,7 @@ Quando o teste for concluído, o relatório de caso de teste é criado. Clique o
   
 ## <a name="test-case-execution-steps"></a>Etapas de execução do caso de teste  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Pré-requisitos  
 O SSMA testador verifica se todos os pré-requisitos foram atendidos para a execução de teste antes do início do teste. Se algumas condições não forem atendidas, uma mensagem de erro é exibida.  
   
 ### <a name="initialization"></a>Inicialização  
@@ -43,12 +43,12 @@ Suponha que a tabela verificada é denominada USER_TABLE. Para essa tabela, os s
   
 ||||  
 |-|-|-|  
-|Nome|Tipo|Descrição|  
-|USER_TABLE$Trg|gatilho|Gatilho de auditoria de alterações na tabela verificada.|  
-|USER_TABLE$AUD|table|Tabela onde as linhas excluídas e substituídas são salvos.|  
-|USER_TABLE$AUDID|table|Tabela onde as linhas novas e alteradas são salvos.|  
+|Name|Tipo|Descrição|  
+|USER_TABLE$ Trg|gatilho|Gatilho de auditoria de alterações na tabela verificada.|  
+|USER_TABLE$ AUD|table|Tabela onde as linhas excluídas e substituídas são salvos.|  
+|USER_TABLE$ AUDID|table|Tabela onde as linhas novas e alteradas são salvos.|  
 |USER_TABLE|exibição|Representação simplificada de modificações de tabela.|  
-|USER_TABLE$NEW|exibição|Representação simplificada de linhas inseridas e substituídas.|  
+|USER_TABLE$ NOVO|exibição|Representação simplificada de linhas inseridas e substituídas.|  
 |USER_TABLE$NEW_ID|exibição|Identificação de linhas inseridas e alteradas.|  
 |USER_TABLE$OLD|exibição|Representação simplificada de linhas excluídas e substituídas.|  
   
@@ -56,20 +56,20 @@ O seguinte objeto é criado no esquema da tabela verificado na [!INCLUDE[ssNoVer
   
 ||||  
 |-|-|-|  
-|Nome|Tipo|Descrição|  
-|USER_TABLE$Trg|gatilho|Gatilho de auditoria de alterações na tabela verificada.|  
+|Name|Tipo|Descrição|  
+|USER_TABLE$ Trg|gatilho|Gatilho de auditoria de alterações na tabela verificada.|  
   
 E os seguintes objetos são criados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no banco de dados ssmatesterdb.  
   
 ||||  
 |-|-|-|  
 |Nome|Tipo|Descrição|  
-|USER_TABLE$Aud|table|Tabela onde as linhas excluídas e substituídas são salvos.|  
+|USER_TABLE$ Aud|table|Tabela onde as linhas excluídas e substituídas são salvos.|  
 |USER_TABLE$AudID|table|Tabela onde as linhas novas e alteradas são salvos.|  
 |USER_TABLE|exibição|Representação simplificada de modificações de tabela.|  
-|USER_TABLE$new|exibição|Representação simplificada de linhas inseridas e substituídas.|  
+|USER_TABLE$ novo|exibição|Representação simplificada de linhas inseridas e substituídas.|  
 |USER_TABLE$new_id|exibição|Identificação de linhas inseridas e alteradas.|  
-|USER_TABLE$old|exibição|Representação simplificada de linhas excluídas e substituídas.|  
+|USER_TABLE$ antigo|exibição|Representação simplificada de linhas excluídas e substituídas.|  
   
 ### <a name="test-object-calls"></a>Chamadas de objeto de teste  
 Nesta etapa, o SSMA testador invoca cada objeto selecionado para o teste, compara os resultados e mostra o relatório.  

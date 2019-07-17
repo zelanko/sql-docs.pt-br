@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 279aff4acd671318b75988919d7625591f17812f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533810"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165193"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Definir opções de representação (SSAS multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52533810"
 3.  Escolha uma opção descrita em [Opções de representação](#bkmk_options) neste tópico.  
   
 ## <a name="set-impersonation-options-in-management-studio"></a>Definir opções de representação no Management Studio  
- No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra a caixa de diálogo **Informações sobre Representação** clicando no botão de reticências (**...**) das seguintes propriedades destas caixas de diálogo:  
+ No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra a caixa de diálogo **Informações sobre Representação** clicando no botão de reticências ( **...** ) das seguintes propriedades destas caixas de diálogo:  
   
 -   Caixa de diálogo**Propriedades de Banco de Dados** , por meio da propriedade Informações sobre Representação de Fonte de Dados.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "52533810"
  Todas as opções estão disponíveis na caixa de diálogo, mas nem todas as opções são apropriadas para todos os cenários. Use as informações a seguir para determinar a melhor opção para seu cenário.  
   
  **Usar nome de usuário e senha específicos**  
- Selecione esta opção para fazer o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto usar as credenciais de segurança de uma conta de usuário do Windows especificadas neste formato: *\<Nome de domínio >***\\***\<nome da conta de usuário >*.  
+ Selecione esta opção para fazer o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto usar as credenciais de segurança de uma conta de usuário do Windows especificadas neste formato: *\<Nome de domínio >***\\***\<nome da conta de usuário >* .  
   
  Escolha esta opção para usar uma identidade de usuário dedicada e com privilégios mínimos do Windows que você criou especificamente para finalidade de acesso a dados. Por exemplo, se você periodicamente criar uma conta de finalidade geral para recuperar dados usados em relatórios, poderá especificar essa conta aqui.  
   

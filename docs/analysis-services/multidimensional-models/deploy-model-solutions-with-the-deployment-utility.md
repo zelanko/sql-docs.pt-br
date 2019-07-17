@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76d1a3e3cfff777f610bb00f52644af3903ac615
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975157"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178506"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Implantar soluções modelo com o Utilitário de Implantação
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -59,7 +59,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 > [!NOTE]  
 >  O argumento **/d** é usado apenas no modo de saída. Esse argumento será ignorado se especificado em modo de resposta ou sem confirmação. Para obter mais informações sobre modos, consulte a seção, [Modos](#Modes), mais adiante neste tópico.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O utilitário **Microsoft.AnalysisServices.Deployment** usa um conjunto de arquivos que fornecem as definições de objetos, destinos da implantação, opções da implantação e definições da configuração e tenta implantar as definições de objetos nos destinos de implantação especificados usando as opções de implantação e os parâmetros de configuração especificados. Esse utilitário pode fornecer uma interface do usuário quando invocado em modo de arquivo de resposta ou de saída. Para obter mais informações sobre como usar a interface do usuário fornecida para esse utilitário para criar arquivos de resposta, consulte [Implantar soluções modelo usando o Assistente de Implantação](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
  O utilitário está localizado na pasta \Program files (x86) \Microsoft SQL Server\140\Binn\ManagementStudio.  
@@ -67,7 +67,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 ##  <a name="Modes"></a> Modos  
  O utilitário pode ser executado nos modos listados na tabela a seguir.  
   
-|Modo|Description|  
+|Modo|Descrição|  
 |----------|-----------------|  
 |Modo sem confirmação|Nenhuma interface do usuário é exibida e todas as informações necessárias para a implantação são fornecidas pelos arquivos de entrada. Nenhum progresso é exibido pelo utilitário em modo sem confirmação. Em vez disso, um arquivo de log opcional pode ser usado para capturar o progresso e informações de erro para revisão posterior.|  
 |Modo de resposta|A interface do usuário do Assistente para Implantação é exibida e as respostas do usuário são salvas nos arquivos de entrada especificados para implantação posterior. A implantação não acontece em modo de resposta. O único propósito do modo de resposta é capturar respostas do usuário.|  

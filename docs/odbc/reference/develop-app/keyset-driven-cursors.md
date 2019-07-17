@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be6dc5a164220befb534368eace4f51f4dbd84e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c40fe8c823115c3131a1719185bce8f1506df81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138840"
 ---
 # <a name="keyset-driven-cursors"></a>Cursores controlados por conjunto de chaves
 Um cursor controlado por conjunto de chaves se encontra entre um estático e um cursor dinâmico em sua capacidade de detectar alterações. Como um cursor estático, ele nem sempre detecta alterações à associação e à ordem do conjunto de resultados. Como um cursor dinâmico, ele detectar alterações nos valores de linhas no resultado definido (sujeito ao nível de isolamento da transação, conforme definido pelo atributo SQL_ATTR_TXN_ISOLATION conexão).  

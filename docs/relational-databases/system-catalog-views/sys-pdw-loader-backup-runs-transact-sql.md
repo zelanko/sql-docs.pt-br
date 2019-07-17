@@ -11,24 +11,23 @@ dev_langs:
 ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 067a39c807b546bc8364bab05d0423f86407a625
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8e7826e4dcefdbed65fb0fa1f3368411a9ef12a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047201"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127466"
 ---
 # <a name="syspdwloaderbackupruns-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contém informações sobre operações de restauração em e de backup em andamento e concluído [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]e sobre backup em andamento e concluído, restauração e operações de carregamento em [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. As informações persistem entre os reinícios do sistema.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |run_id|**int**|Identificador exclusivo de um backup específico, a restauração ou a execução de carga.<br /><br /> A chave para este modo de exibição.||  
-|nome|**nvarchar(255)**|NULL para a carga. Nome opcional para backup ou restauração.||  
+|name|**nvarchar(255)**|NULL para a carga. Nome opcional para backup ou restauração.||  
 |submit_time|**datetime**|Hora em que a solicitação foi enviada.||  
 |start_time|**datetime**|Hora em que a operação iniciada.||  
 |end_time|**datetime**|Tempo a operação concluída, falhou ou foi cancelada.||  

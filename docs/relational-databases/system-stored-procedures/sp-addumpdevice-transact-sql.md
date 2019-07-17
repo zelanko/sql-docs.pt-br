@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e8c1ee1b5bdf2796aa64159867389639496a4906
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117913"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @devtype = ] 'device_type'` É o tipo de dispositivo de backup. *device_type* está **varchar(20)**, sem padrão e pode ser um dos valores a seguir.  
+`[ @devtype = ] 'device_type'` É o tipo de dispositivo de backup. *device_type* está **varchar(20)** , sem padrão e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -57,7 +56,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 `[ @logicalname = ] 'logical_name'` É o nome lógico do dispositivo de backup usado nas instruções BACKUP e restauração. *logical_name* está **sysname**, sem padrão, e não pode ser NULL.  
   
-`[ @physicalname = ] 'physical_name'` É o nome físico do dispositivo de backup. Os nomes físicos devem seguir as regras para nomes de arquivo do sistema operacional ou convenções universais de nomenclatura de dispositivos de rede e devem incluir um caminho completo. *physical_name* está **nvarchar (260)**, sem nenhum padrão de valor e não pode ser NULL.  
+`[ @physicalname = ] 'physical_name'` É o nome físico do dispositivo de backup. Os nomes físicos devem seguir as regras para nomes de arquivo do sistema operacional ou convenções universais de nomenclatura de dispositivos de rede e devem incluir um caminho completo. *physical_name* está **nvarchar (260)** , sem nenhum padrão de valor e não pode ser NULL.  
   
  Ao criar um dispositivo de backup em um local de rede remota, certifique-se de que o nome com o qual o [!INCLUDE[ssDE](../../includes/ssde-md.md)] foi iniciado tenha os recursos adequados de gravação no computador remoto.  
   
@@ -74,7 +73,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="remarks"></a>Comentários  
  **sp_addumpdevice** adiciona um dispositivo de backup para o **sys. backup_devices** exibição do catálogo. O dispositivo pode ser referenciado logicamente em instruções BACKUP e RESTORE. **sp_addumpdevice** não realiza qualquer acesso ao dispositivo físico. O acesso ao dispositivo especificado ocorre apenas quando uma instrução BACKUP ou RESTORE é executada. A criação de um dispositivo de backup lógico pode simplificar as instruções BACKUP e RESTORE, em que a especificação do nome do dispositivo é uma alternativa que usa uma cláusula "TAPE = " ou "DISK = " para especificar o caminho do dispositivo.  
@@ -105,7 +104,7 @@ GO
 EXEC sp_addumpdevice 'disk', 'mydiskdump', 'c:\dump\dump1.bak';  
 ```  
   
-### <a name="b-adding-a-network-disk-backup-device"></a>b. Adicionando um dispositivo de backup de disco de rede  
+### <a name="b-adding-a-network-disk-backup-device"></a>B. Adicionando um dispositivo de backup de disco de rede  
  O exemplo a seguir mostra a adição de um dispositivo de backup de disco remoto denominado `networkdevice`. O nome sob o qual o [!INCLUDE[ssDE](../../includes/ssde-md.md)] foi iniciado deve ter permissões para aquele arquivo remoto (`\\<servername>\<sharename>\<path>\<filename>.bak`).  
   
 ```  

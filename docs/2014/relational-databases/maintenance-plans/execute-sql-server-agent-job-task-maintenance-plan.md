@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 33f037f4d82cbf5bbdebde01a5c4492128ecc8ae
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775828"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206020"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>Tarefa Executar Trabalho do SQL Server Agent (Plano de Manutenção)
   Use a caixa de diálogo **Tarefa Executar Trabalho do SQL Server Agent** para executar trabalhos do Microsoft SQL Server Agent dentro de um plano de manutenção. Essa opção não estará disponível se você não tiver nenhum trabalho do SQL Server Agent na conexão selecionada.  

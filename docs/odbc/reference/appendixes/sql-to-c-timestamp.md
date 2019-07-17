@@ -1,5 +1,5 @@
 ---
-title: 'SQL para C: Timestamp | Microsoft Docs'
+title: 'SQL para C: Carimbo de hora | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 69c9f1258f35a69d6554783f5d1b4ca79be313d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee3852c688f495d54eb07ca9c2866ac17a1f5a1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118840"
 ---
 # <a name="sql-to-c-timestamp"></a>SQL para C: Timestamp
 
@@ -32,10 +31,10 @@ A tabela a seguir mostra os tipos de dados ao qual o carimbo de hora de dados do
 
 |Identificador de tipo C|Teste|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > bytes de comprimento de caracteres<br /><br /> 20 < = *BufferLength* < = comprimento de byte do caractere<br /><br /> *BufferLength* < 20|Dados<br /><br /> Dados truncados [b]<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > comprimento de caracteres<br /><br /> 20 < = *BufferLength* < = comprimento de caracteres<br /><br /> *BufferLength* < 20|Dados<br /><br /> Dados truncados [b]<br /><br /> Indefinido|Comprimento dos dados em caracteres<br /><br /> Comprimento dos dados em caracteres<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Comprimento de bytes de dados < = *BufferLength*<br /><br /> Comprimento de bytes de dados > *BufferLength*|Dados<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|Parte de hora do carimbo de hora é zero [a]<br /><br /> Parte de hora do carimbo de hora é diferente de zero [a]|Dados<br /><br /> Dados truncados [c]|6[f]<br /><br /> 6[f]|n/d<br /><br /> 01S07|  
+|SQL_C_CHAR|*BufferLength* > bytes de comprimento de caracteres<br /><br /> 20 < = *BufferLength* < = comprimento de byte do caractere<br /><br /> *BufferLength* < 20|Data<br /><br /> Dados truncados [b]<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > comprimento de caracteres<br /><br /> 20 < = *BufferLength* < = comprimento de caracteres<br /><br /> *BufferLength* < 20|Data<br /><br /> Dados truncados [b]<br /><br /> Indefinido|Comprimento dos dados em caracteres<br /><br /> Comprimento dos dados em caracteres<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|Comprimento de bytes de dados < = *BufferLength*<br /><br /> Comprimento de bytes de dados > *BufferLength*|Data<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|Parte de hora do carimbo de hora é zero [a]<br /><br /> Parte de hora do carimbo de hora é diferente de zero [a]|Data<br /><br /> Dados truncados [c]|6[f]<br /><br /> 6[f]|n/d<br /><br /> 01S07|  
 |SQL_C_TYPE_TIME|A parte fracionária de segundos de carimbo de hora é zero [a]<br /><br /> A parte fracionária de segundos de carimbo de hora é diferente de zero [a]|Dados [d]<br /><br /> Dados truncados [d], [e]|6[f]<br /><br /> 6[f]|n/d<br /><br /> 01S07|  
 |SQL_C_TYPE_TIMESTAMP|A parte fracionária de segundos de carimbo de hora não será truncado [a]<br /><br /> A parte fracionária de segundos de carimbo de hora é truncado [a]|Dados [e]<br /><br /> Dados truncados [e]|16[f]<br /><br /> 16[f]|n/d<br /><br /> 01S07|  
 

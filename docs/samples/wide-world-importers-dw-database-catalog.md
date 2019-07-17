@@ -9,14 +9,13 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ead11248d0eebe198890884b427f864cfea756c
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 7c3da2af72743cc8f89273bfce24fe74fc7e4dc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270159"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104295"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catálogo de banco de dados WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ Os dados em WideWorldImportersDW espelha, portanto, os dados de WideWorldImporte
 
 Os diferentes tipos de tabelas são organizados em três esquemas.
 
-|esquema|Description|
+|Esquema|Descrição|
 |-----------------------------|---------------------|
 |Dimensão|Tabelas de dimensões.|
 |Fato|Tabelas de fatos.|  
@@ -44,11 +43,11 @@ As tabelas de dimensões e fatos são listadas abaixo. As tabelas no esquema de 
 
 WideWorldImportersDW tem as seguintes tabelas de dimensões. A descrição inclui a relação com as tabelas de origem no banco de dados de WideWorldImporters.
 
-|Table|Tabelas de origem|
+|Tabela|Tabelas de origem|
 |-----------------------------|---------------------|
 |Cidade|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Cliente|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
-|data|Nova tabela com informações sobre as datas, incluindo o ano fiscal (com base em 1º de novembro Iniciar para o ano fiscal).|
+|Date|Nova tabela com informações sobre as datas, incluindo o ano fiscal (com base em 1º de novembro Iniciar para o ano fiscal).|
 |Employee|`Application.People`.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |Fornecedor|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
@@ -59,7 +58,7 @@ WideWorldImportersDW tem as seguintes tabelas de dimensões. A descrição inclu
 
 WideWorldImportersDW tem as seguintes tabelas de fatos. A descrição inclui a relação com as tabelas de origem no banco de dados de WideWorldImporters, bem como as classes de consultas de análise/relatórios com que cada tabela de fatos é normalmente usada.
 
-|Table|Tabelas de origem|Exemplo de análise|
+|Tabela|Tabelas de origem|Exemplo de análise|
 |-----------------------------|---------------------|---------------------|
 |Order|`Sales.Orders` e `Sales.OrderLines`|Produtividade de seletor/packer, as pessoas de vendas e no tempo para separar as ordens. Além disso, baixo estoque situações que levam a fazer pedidos.|
 |Venda|`Sales.Invoices` e `Sales.InvoiceLines`|Datas de vendas, datas de entrega, lucratividade ao longo do tempo, lucratividade por vendedor.|

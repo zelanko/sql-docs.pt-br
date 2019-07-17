@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ab4f304d865992a3269b4ee83c9e25f61069e8c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984688"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210269"
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Compatibilidade com versões anteriores do Analysis Services (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -35,11 +35,11 @@ Os seguintes recursos foram preteridos nessa versão:
 |Multidimensional|Dimensões vinculadas|   
 |Multidimensional|Notificações de tabela do SQL Server para o cache pró-ativo.  <br />A substituição é usar a sondagem para o cache pró-ativo. <br />Consulte [Cache pró-ativo &#40;Dimensões&#41;](../analysis-services/multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md) e [Cache pró-ativo e &#40;Partições&#41;](../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  
 |Multidimensional|Cubos de sessão. Não há nenhuma substituição.|  
-|Multidimensional|Cubos locais. Não há substituições.|  
+|Multidimensional|Cubos locais. Não há nenhuma substituição.|  
 |Tabular|Os níveis de compatibilidade de modelo de tabela 1100 e 1103 não terão suporte em uma versão futura. A substituição é definir modelos de nível de compatibilidade 1200 ou superior, convertendo definições de modelo para metadados tabulares. Consulte [Nível de compatibilidade para modelos de tabela no Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
 |Ferramentas|SQL Server Profiler para captura de rastreamento<br /><br /> A substituição é usar o Extended Events Profiler interno no SQL Server Management Studio.  <br /> Consulte [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Ferramentas|Server Profiler para reprodução de rastreamento <br />Substituição. Não há nenhuma substituição.|  
-|APIs Trace Management Objects e Trace|Objetos Microsoft.AnalysisServices.Trace (contêm as APIs para os objetos Analysis Services Trace e Replay). A substituição é composta por várias partes:<br /><br /> -Configuração de rastreamento: XEvent<br />-Leitura de rastreamento: XEvent<br />-   Reprodução de rastreamento: nenhuma|  
+|APIs Trace Management Objects e Trace|Objetos Microsoft.AnalysisServices.Trace (contêm as APIs para os objetos Analysis Services Trace e Replay). A substituição é composta por várias partes:<br /><br /> -Configuração de rastreamento: Microsoft.SqlServer.Management.XEvent<br />-Leitura de rastreamento: Microsoft.SqlServer.XEvent.Linq<br />-Reprodução de rastreamento: Nenhum|  
   
 > [!NOTE]  
 >  Os anúncios anteriores de recursos preteridos do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] permanecem em vigor. Como o código de suporte a esses recursos ainda não foi retirado do produto, muitos desses recursos ainda estão presentes nesta versão. Enquanto os recursos anteriormente preteridos possam ser acessíveis, que eles ainda são considerados preteridos e podem ser fisicamente removidos do produto a qualquer momento.  
@@ -52,11 +52,11 @@ Os seguintes recursos foram preteridos em uma versão anterior e não têm mais 
 |||  
 |-|-|  
 |**Recurso**|**Substituição ou solução alternativa**|  
-|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Nenhum. Esse recurso foi preterido no SQL Server 2005.|  
-|[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|Nenhum. Esse recurso foi preterido no SQL Server 2005.|  
-|Dica do otimizador de consulta NON_EMPTY_BEHAVIOR|Nenhum. Esse recurso foi preterido no SQL Server 2008.|  
-|Assemblies COM|Nenhum. Esse recurso foi preterido no SQL Server 2008.|  
-|Propriedade de célula intrínseca CELL_EVALUATION_LIST|Nenhum. Esse recurso foi preterido no SQL Server 2005.|  
+|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|nenhuma. Esse recurso foi preterido no SQL Server 2005.|  
+|[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|nenhuma. Esse recurso foi preterido no SQL Server 2005.|  
+|Dica do otimizador de consulta NON_EMPTY_BEHAVIOR|nenhuma. Esse recurso foi preterido no SQL Server 2008.|  
+|Assemblies COM|nenhuma. Esse recurso foi preterido no SQL Server 2008.|  
+|Propriedade de célula intrínseca CELL_EVALUATION_LIST|nenhuma. Esse recurso foi preterido no SQL Server 2005.|  
   
 > [!NOTE]  
 >  Os anúncios anteriores de recursos preteridos do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] permanecem em vigor. Como o código de suporte a esses recursos ainda não foi retirado do produto, muitos desses recursos ainda estão presentes nesta versão. Enquanto os recursos anteriormente preteridos possam ser acessíveis, que eles ainda são considerados preteridos e podem ser fisicamente removidos do produto a qualquer momento.  
