@@ -1,5 +1,5 @@
 ---
-title: Conteúdo do modelo de associação de modelos de mineração (Analysis Services – mineração de dados) | Microsoft Docs
+title: Mining Model Content para modelos de associação (Analysis Services - mineração de dados) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e5b9c977cbe5a31672d6738e2aaa7f3f911975e8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017573"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182785"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de associação (Analysis Services – Mineração de Dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "34017573"
  NODE_TYPE  
  O modelo de associação produz apenas os seguintes tipos de nó:  
   
-|ID do tipo de nó|Tipo|  
+|ID do tipo de nó|type|  
 |------------------|----------|  
 |1 (Modelo)|Raiz ou nó pai.|  
 |7 (Conjunto de itens)|Um conjunto de itens ou coleção de pares atributo-valor. Exemplos:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> ou<br /><br /> `Gender = Male`.|  
@@ -89,7 +89,7 @@ ms.locfileid: "34017573"
   
  **Nó pai** Inclui uma lista separada por vírgula das seguintes informações sobre o modelo:  
   
-|Item|Description|  
+|Item|Descrição|  
 |----------|-----------------|  
 |ITEMSET_COUNT|Contagem de todos os conjuntos de itens do modelo.|  
 |RULE_COUNT|Contagem de todas as regras do modelo.|  
@@ -97,10 +97,10 @@ ms.locfileid: "34017573"
 |MAX_SUPPORT|O suporte máximo localizado para qualquer conjunto de itens único.<br /><br /> **Observação** Esse valor pode ser diferente daquele que você definiu para o parâmetro *MAXIMUM_SUPPORT* .|  
 |MIN_ITEMSET_SIZE|O tamanho do menor conjunto de itens, representado por uma contagem de itens.<br /><br /> Um valor de 0 indica que o estado **Ausente** foi tratado como um item independente.<br /><br /> **Observação** O valor padrão do parâmetro *MINIMUM_ITEMSET_SIZE* é 1.|  
 |MAX_ITEMSET_SIZE|Indica o tamanho do maior conjunto de dados localizado.<br /><br /> **Observação** Esse valor é restrito pelo valor que você definiu para o parâmetro *MAX_ITEMSET_SIZE* ao criar o modelo. Esse valor nunca pode exceder aquele valor; no entanto, pode ser menor. O valor padrão é 3.|  
-|MIN_PROBABILITY|A probabilidade mínima detectada para qualquer conjunto de itens único ou regra do modelo.<br /><br /> Exemplo: 0,400390625<br /><br /> **Observação** Para conjuntos de itens, esse valor é sempre maior que valor que você definiu para o parâmetro *MINIMUM_PROBABILITY* ao criar o modelo.|  
-|MAX_PROBABILITY|A probabilidade máxima detectada para qualquer conjunto de itens único ou regra do modelo.<br /><br /> Example: 1<br /><br /> **Observação** Não há nenhum parâmetro para restringir a probabilidade máxima de conjuntos de itens. Para eliminar itens que são muito frequentes, use o parâmetro *MAXIMUM_SUPPORT* .|  
-|MIN_LIFT|O valor mínimo de comparação de precisão fornecido pelo modelo para qualquer conjunto de itens.<br /><br /> Exemplo: 0,14309369632511<br /><br /> Observação: saber o valor mínimo de comparação de precisão pode ajudar a determinar se a comparação de precisão de algum conjunto de dados é significativa.|  
-|MAX_LIFT|O valor máximo de comparação de precisão fornecido pelo modelo para qualquer conjunto de itens.<br /><br /> Exemplo: 1,95758227647523 **Observação** Saber o valor máximo de comparação de precisão pode ajudar a determinar se a comparação de precisão de qualquer conjunto de dados é significante.|  
+|MIN_PROBABILITY|A probabilidade mínima detectada para qualquer conjunto de itens único ou regra do modelo.<br /><br /> Exemplo: 0.400390625<br /><br /> **Observação** Para conjuntos de itens, esse valor é sempre maior que valor que você definiu para o parâmetro *MINIMUM_PROBABILITY* ao criar o modelo.|  
+|MAX_PROBABILITY|A probabilidade máxima detectada para qualquer conjunto de itens único ou regra do modelo.<br /><br /> Exemplo: 1<br /><br /> **Observação** Não há nenhum parâmetro para restringir a probabilidade máxima de conjuntos de itens. Para eliminar itens que são muito frequentes, use o parâmetro *MAXIMUM_SUPPORT* .|  
+|MIN_LIFT|O valor mínimo de comparação de precisão fornecido pelo modelo para qualquer conjunto de itens.<br /><br /> Exemplo: 0.14309369632511<br /><br /> Observação: Conhecer a comparação de precisão mínima pode ajudar a determinar se a comparação de precisão de qualquer conjunto de dados é significante.|  
+|MAX_LIFT|O valor máximo de comparação de precisão fornecido pelo modelo para qualquer conjunto de itens.<br /><br /> Exemplo: 1,95758227647523 **Observação** saber a comparação de precisão máximo pode ajudá-lo a determinar se a comparação de precisão de qualquer conjunto de dados é significante.|  
   
  **Nó do conjunto de itens** Os nós de conjuntos de itens contêm uma lista dos itens, exibida como uma cadeia de caracteres de texto separada por vírgula.  
   
@@ -187,8 +187,8 @@ ms.locfileid: "34017573"
  Em branco.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Algoritmo de associação da Microsoft](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Exemplos de consulta de modelo de associação](../../analysis-services/data-mining/association-model-query-examples.md)  
+ [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Algoritmo Associação da Microsoft](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
+ [Exemplos de consulta de um modelo associação](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   

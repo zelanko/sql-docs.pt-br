@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5416684273d74a5f40ff6219eaab95323de6a0d8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414593"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206995"
 ---
 # <a name="using-large-value-types"></a>Usando tipos de valor grande
-  Antes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], trabalhar com tipos de dados de valor grande exigia procedimentos especiais. Os tipos de dados de valores grandes são os que excedem o tamanho de linha máximo de 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduzida uma **max** especificador para **varchar**, **nvarchar** e **varbinary** tipos de dados para permitir o armazenamento de valores tão grandes quanto 2 ^-31 1 bytes. Colunas da tabela e [!INCLUDE[tsql](../../../includes/tsql-md.md)] variáveis podem especificar **varchar (max)**, **nvarchar (max)** ou **varbinary (max)** tipos de dados.  
+  Antes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], trabalhar com tipos de dados de valor grande exigia procedimentos especiais. Os tipos de dados de valores grandes são os que excedem o tamanho de linha máximo de 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduzida uma **max** especificador para **varchar**, **nvarchar** e **varbinary** tipos de dados para permitir o armazenamento de valores tão grandes quanto 2 ^-31 1 bytes. Colunas da tabela e [!INCLUDE[tsql](../../../includes/tsql-md.md)] variáveis podem especificar **varchar (max)** , **nvarchar (max)** ou **varbinary (max)** tipos de dados.  
   
 > [!NOTE]  
 >  Os tipos de dados de valor grande podem ter entre 1 e 8 KB ou podem ser especificados como ilimitado.  
@@ -33,21 +33,21 @@ ms.locfileid: "52414593"
  Anteriormente, apenas os tipos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como **text**, **ntext** e **image** podiam ter esses tamanhos. O **max** especificador para **varchar**, **nvarchar** e **varbinary** feitas a esses tipos de dados redundantes. No entanto, pelo fato de esses tipos de dados longos ainda estarem disponíveis, a maioria das interfaces para os componentes de dados OLE DB e ODBC permanecerá a mesma. Para fins de compatibilidade com versões anteriores, o sinalizador DBCOLUMNFLAGS_ISLONG no provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e o SQL_LONGVARCHAR no driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client permanecem em uso. Os provedores e drivers criados no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e posterior continuam a usar essas condições para os novos tipos quando definidos como comprimento máximo ilimitado.  
   
 > [!NOTE]  
->  Você também pode especificar os tipos de dados **varchar(max)**, **nvarchar(max)** e **varbinary(max)** como tipos de parâmetro de entrada e saída de procedimentos armazenados, tipos de retorno de função ou nas funções [CAST e CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
+>  Você também pode especificar os tipos de dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** como tipos de parâmetro de entrada e saída de procedimentos armazenados, tipos de retorno de função ou nas funções [CAST e CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 > [!NOTE]  
 >  Se estiver replicando dados talvez precise configurar o [máximo de opção de configuração text repl size server](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) como -1.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provedor OLE DB do SQL Server Native Client  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client expõe a **varchar (max)**, **varbinary (max)**, e **nvarchar (max)** tipos como DBTYPE_STR, DBTYPE_BYTES, e DBTYPE_WSTR, respectivamente.  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client expõe a **varchar (max)** , **varbinary (max)** , e **nvarchar (max)** tipos como DBTYPE_STR, DBTYPE_BYTES, e DBTYPE_WSTR, respectivamente.  
   
- Os tipos de dados **varchar(max)**, **varbinary(max)** e **nvarchar(max)** em colunas com o tamanho **max** definido como ilimitado são representados como ISLONG por meio de conjuntos de linhas de esquema e interfaces principais do OLE DB que retornam tipos de dados de coluna.  
+ Os tipos de dados **varchar(max)** , **varbinary(max)** e **nvarchar(max)** em colunas com o tamanho **max** definido como ilimitado são representados como ISLONG por meio de conjuntos de linhas de esquema e interfaces principais do OLE DB que retornam tipos de dados de coluna.  
   
- O objeto de comando **IAccessor** implementação foi alterada para permitir a associação como DBTYPE_IUNKNOWN. Se o consumidor especificar DBTYPE_IUNKNOWN e definir *pObject* como nulo, o provedor retornará a interface **ISequentialStream** para o consumidor, de modo que ele possa transmitir os dados **varchar(max)**, **nvarchar(max)** ou **varbinary(max)** usando variáveis de saída.  
+ A implementação de **IAccessor** do objeto de comando foi alterada para permitir a associação como DBTYPE_IUNKNOWN. Se o consumidor especificar DBTYPE_IUNKNOWN e definir *pObject* como nulo, o provedor retornará a interface **ISequentialStream** para o consumidor, de modo que ele possa transmitir os dados **varchar(max)** , **nvarchar(max)** ou **varbinary(max)** usando variáveis de saída.  
   
  Os valores de parâmetro de saída transmitidos são retornados após as linhas de resultado. Se o aplicativo tentar avançar para o próximo conjunto de resultados chamando **IMultipleResults::GetResult** sem consumir todos os valores de parâmetro de saída retornados, DB_E_OBJECTOPEN será retornado.  
   
- Para dar suporte a streaming, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client requer parâmetros de comprimento variável sejam acessados em ordem sequencial. Isso significa que DBPROP_ACCESSORDER precisa ser definido como DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS ou DBPROPVAL_AO_SEQUENTIAL sempre que as colunas **varchar(max)**, **nvarchchar(max)** ou **varbinary(max)** ou os parâmetros de saída estão associados a DBTYPE_IUNKNOWN. As chamadas a **IRowset::GetData** falharão com DBSTATUS_E_UNAVAILABLE se essa restrição de ordem de acesso não for atendida. Essa restrição não se aplica quando não há associações de saída usando DBTYPE_IUNKNOWN.  
+ Para dar suporte a streaming, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client requer parâmetros de comprimento variável sejam acessados em ordem sequencial. Isso significa que DBPROP_ACCESSORDER precisa ser definido como DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS ou DBPROPVAL_AO_SEQUENTIAL sempre que as colunas **varchar(max)** , **nvarchchar(max)** ou **varbinary(max)** ou os parâmetros de saída estão associados a DBTYPE_IUNKNOWN. As chamadas a **IRowset::GetData** falharão com DBSTATUS_E_UNAVAILABLE se essa restrição de ordem de acesso não for atendida. Essa restrição não se aplica quando não há associações de saída usando DBTYPE_IUNKNOWN.  
   
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client também dá suporte a parâmetros de saída de associação como DBTYPE_IUNKNOWN para tipos de dados de valor grande facilitar cenários em que um procedimento armazenado retorna tipos de valor grande como valores de retorno que são expostos como DBTYPE_IUNKNOWN para o cliente.  
   
@@ -63,9 +63,9 @@ ms.locfileid: "52414593"
   
 -   O tamanho máximo definido, que é, por exemplo, 2000 para uma **varchar (** 2000 **)** coluna, ou  
   
--   O valor "ilimitado", que no caso de uma coluna **varchar(max)**, é igual a ~0. Esse valor é definido para a propriedade de metadados DBCOLUMN_COLUMNSIZE.  
+-   O valor "ilimitado", que no caso de uma coluna **varchar(max)** , é igual a ~0. Esse valor é definido para a propriedade de metadados DBCOLUMN_COLUMNSIZE.  
   
- As regras padrão de conversão serão aplicadas a uma coluna **varchar(max)**, o que significa que qualquer conversão válida para uma coluna **varchar(** 2000 **)** também será válida para uma coluna **varchar(max)**. O mesmo vale para as colunas **nvarchar(max)** e **varbinary(max)**.  
+ As regras padrão de conversão serão aplicadas a uma coluna **varchar(max)** , o que significa que qualquer conversão válida para uma coluna **varchar(** 2000 **)** também será válida para uma coluna **varchar(max)** . O mesmo vale para as colunas **nvarchar(max)** e **varbinary(max)** .  
   
  Ao recuperar tipos de valor grande, a abordagem mais eficiente é associar como DBTYPE_IUNKNOWN e definir a propriedade do conjunto de linhas DBPROP_ACCESSORDER como DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. Esse procedimento fará com que o valor seja transmitido diretamente da rede sem utilização de buffer intermediário, como no seguinte exemplo:  
   
@@ -690,7 +690,7 @@ _ExitProcessResultSet:
  Para obter mais informações sobre como o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB do Native Client expõe os tipos de dados de valor grande, consulte [BLOBs e objetos OLE](../../native-client-ole-db-blobs/blobs-and-ole-objects.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC do SQL Server Native Client  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client expõe a **varchar (max)**, **varbinary (max)** e **nvarchar (max)** tipos como SQL_VARCHAR, SQL_VARBINARY e SQL _ WVARCHAR nas funções API ODBC que aceitam ou retornam tipos de dados SQL ODBC.  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client expõe a **varchar (max)** , **varbinary (max)** e **nvarchar (max)** tipos como SQL_VARCHAR, SQL_VARBINARY e SQL _ WVARCHAR nas funções API ODBC que aceitam ou retornam tipos de dados SQL ODBC.  
   
  Ao informar o tamanho máximo de uma coluna, o driver usará:  
   
@@ -698,7 +698,7 @@ _ExitProcessResultSet:
   
 -   O valor "ilimitado" que no caso de uma **varchar (max)** coluna é igual a 0.  
   
- As regras de conversão padrão se aplicam a um **varchar (max)** coluna, o que significa que qualquer conversão válida para um **varchar (** 2000 **)** coluna também será válida para um **varchar (max)** coluna. O mesmo vale para as colunas **nvarchar(max)** e **varbinary(max)**.  
+ As regras de conversão padrão se aplicam a um **varchar (max)** coluna, o que significa que qualquer conversão válida para um **varchar (** 2000 **)** coluna também será válida para um **varchar (max)** coluna. O mesmo vale para as colunas **nvarchar(max)** e **varbinary(max)** .  
   
  A seguir, encontra-se uma lista das funções API ODBC que foram aprimoradas para aceitar tipos de dados de valor grande:  
   

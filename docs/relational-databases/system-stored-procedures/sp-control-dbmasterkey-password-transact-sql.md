@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: af6e23ba3cce2ef4dfaa6901f51a9d6c0b034e60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0af97dacdf5927428042d8e67593a0c6ee78542d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108770"
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 > [!NOTE]  
 >  Quando você estiver usando a credencial que foi adicionada com o uso de sp_control_dbmasterkey_password para abrir a chave mestra do banco de dados, essa chave será criptografada novamente pela chave mestra de serviço. Se o banco de dados estiver no modo somente leitura, a operação de nova criptografia falhará e a chave mestra de banco de dados permanecerá não criptografada. Para o acesso subsequente à chave mestra de banco de dados, você deve usar a instrução OPEN MASTER KEY e uma senha. Para evitar o uso de uma senha, crie a credencial antes de mover o banco de dados para o modo somente leitura.  
   
- **Possível problema de compatibilidade com versões anteriores:** no momento, o procedimento armazenado não verifica se existe uma chave mestra. Isso é permitido para compatibilidade com versões anteriores, mas exibe um aviso. Este comportamento é preterido. Em uma versão futura, a chave mestra deve existir e a senha usada no procedimento armazenado **sp_control_dbmasterkey_password** deve ser a mesma senha como uma das senhas usadas para criptografar a chave mestra de banco de dados.  
+ **Possível problema de compatibilidade com versões anteriores:** Atualmente, o procedimento armazenado não verifica se existe uma chave mestra. Isso é permitido para compatibilidade com versões anteriores, mas exibe um aviso. Este comportamento é preterido. Em uma versão futura, a chave mestra deve existir e a senha usada no procedimento armazenado **sp_control_dbmasterkey_password** deve ser a mesma senha como uma das senhas usadas para criptografar a chave mestra de banco de dados.  
   
 ## <a name="permissions"></a>Permissões  
  Exige a permissão CONTROL no banco de dados.  

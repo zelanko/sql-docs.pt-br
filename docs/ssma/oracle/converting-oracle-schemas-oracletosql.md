@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 18da150a435b5d3d61740139309d109a16691da3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 638c16de8312456410c14e38fa632085e504913e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288887"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266148"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Converter esquemas Oracle (OracleToSQL)
 Depois de se conectar ao Oracle, conectado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e defina o projeto e as opções de mapeamento de dados, você pode converter objetos de banco de dados Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de banco de dados.  
@@ -43,7 +43,7 @@ A tabela a seguir mostra quais objetos do Oracle são convertidos e resultante [
 |Tabelas com objetos dependentes, como índices e disparadores|O SSMA cria tabelas com objetos dependentes.|  
 |Exibir com objetos dependentes, como gatilhos|O SSMA cria exibições com objetos dependentes.|  
 |Exibições materializadas|**O SSMA cria exibições indexadas no SQL server com algumas exceções. Conversão falhará se a exibição materializada inclui um ou mais das construções a seguir:**<br /><br />Função definida pelo usuário<br /><br />Campo não determinístico de função / expressão no, selecione onde ou cláusulas GROUP BY<br /><br />Uso de coluna Float em SELECT *, onde ou cláusulas GROUP BY (caso especial de edição anterior)<br /><br />Tipo de dados personalizados (tabelas aninhadas de incl.)<br /><br />COUNT (distinct &lt;campo&gt;)<br /><br />FETCH<br /><br />junções OUTER (LEFT, RIGHT ou FULL)<br /><br />Subconsulta, outro modo de exibição<br /><br />ACIMA, CLASSIFICAR, CLIENTE POTENCIAL, FAÇA LOGON<br /><br />MIN, MAX<br /><br />UNION, SUBTRAÇÃO, SE CRUZAM<br /><br />HAVING|  
-|Gatilho|**O SSMA cria gatilhos com base nas seguintes regras:**<br /><br />ANTES dos gatilhos são convertidos em gatilhos INSTEAD OF.<br /><br />Gatilhos AFTER são convertidos em gatilhos AFTER.<br /><br />Os gatilhos INSTEAD OF são convertidos em gatilhos INSTEAD OF. Vários gatilhos INSTEAD OF definidos na mesma operação são combinados em um gatilho.<br /><br />Gatilhos de nível de linha são emulados usando cursores.<br /><br />Gatilhos em cascata são convertidos em vários disparadores individuais.|  
+|Disparador|**O SSMA cria gatilhos com base nas seguintes regras:**<br /><br />ANTES dos gatilhos são convertidos em gatilhos INSTEAD OF.<br /><br />Gatilhos AFTER são convertidos em gatilhos AFTER.<br /><br />Os gatilhos INSTEAD OF são convertidos em gatilhos INSTEAD OF. Vários gatilhos INSTEAD OF definidos na mesma operação são combinados em um gatilho.<br /><br />Gatilhos de nível de linha são emulados usando cursores.<br /><br />Gatilhos em cascata são convertidos em vários disparadores individuais.|  
 |Sinônimos|**Sinônimos são criados para os seguintes tipos de objeto:**<br /><br />Tabelas e tabelas de objeto<br /><br />Modos de exibição e objeto<br /><br />Procedimentos armazenados<br /><br />Funções<br /><br />**Sinônimos para os seguintes objetos são resolvidos e substituídos por referências de objeto:**<br /><br />Sequências<br /><br />Packages<br /><br />Objetos de esquema de classe de Java<br /><br />Tipos de objeto definido pelo usuário<br /><br />Sinônimos de outro sinônimo não podem ser migrados e serão marcados como erros.<br /><br />Sinônimos não são criados para Materialized modos de exibição.|  
 |Tipos definidos pelo usuário|**O SSMA fornece suporte para a conversão de tipos definidos pelo usuário. Tipos definidos pelo usuário, incluindo seu uso em programas de PL/SQL são marcados com erros de conversão especial guiados pelas seguintes regras:**<br /><br />Coluna da tabela de um tipo definido pelo usuário é convertida em VARCHAR(8000).<br /><br />Tipo definido pelo argumento do usuário para um procedimento armazenado ou função é convertida em VARCHAR(8000).<br /><br />Variável do tipo definido pelo usuário no bloco de PL/SQL é convertido em VARCHAR(8000).<br /><br />Tabela de objeto é convertida em uma tabela padrão.<br /><br />Exibição do objeto é convertida em uma exibição padrão.|  
   

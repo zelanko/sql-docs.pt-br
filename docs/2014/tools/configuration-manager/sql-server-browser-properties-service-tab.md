@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6421b0a7d6703e2a5d126aa83b227166492558a4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757548"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211157"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>Propriedades do Navegador do SQL Server (guia Serviço)
   O programa Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado como um serviço no servidor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta as solicitações de entrada de recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece informações sobre as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador.  
@@ -35,7 +35,7 @@ ms.locfileid: "52757548"
  **Nome do Host**  
  Exibe o nome do computador ou do cluster que está executando o serviço do Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Nome**  
+ **Name**  
  Indica o nome para exibição do serviço.  
   
  **ID do Processo**  
@@ -47,14 +47,14 @@ ms.locfileid: "52757548"
  **Modo Inicial**  
  Defina este serviço com as seguintes opções:  
   
--   Manual: Esse serviço não é iniciado automaticamente na inicialização do computador. Você deve iniciá-lo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou outra ferramenta.  
+-   Manual: Esse serviço não iniciar automaticamente quando o computador é iniciado. Você deve iniciá-lo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou outra ferramenta.  
   
--   Automático: Este serviço tenta ser iniciado na inicialização do computador.  
+-   Automático: Este serviço tenta ser iniciado quando o computador é iniciado.  
   
--   Desabilitado: Esse serviço não pode ser iniciado.  
+-   Desabilitado: Este serviço não pode ser iniciado.  
   
  **Estado**  
- Indica se este serviço está sendo executado, se está parado ou desabilitado. "**...**" indica que há uma alteração de estado pendente.  
+ Indica se este serviço está sendo executado, se está parado ou desabilitado. " **...** " indica que há uma alteração de estado pendente.  
   
 ## <a name="see-also"></a>Consulte também  
  [Serviço Navegador do SQL Server](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  

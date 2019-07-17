@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: af2441fadc30254871a5d74209d645fc93a99456
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 2c1aaa12ed6ffb86b6e3f7979deac0e6f933dff8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124382"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 `[ @fktab_catalog = ] 'fktab_catalog'` É o nome do catálogo com uma chave estrangeira. *fktab_catalog*está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- None  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (_catálogo_**.** _esquema_**.** _tabela_), que é representado no conjunto de resultados.  
+ Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (_catálogo_ **.** _esquema_ **.** _tabela_), que é representado no conjunto de resultados.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  

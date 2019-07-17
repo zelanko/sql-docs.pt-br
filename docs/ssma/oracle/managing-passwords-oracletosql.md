@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: c6b99dfd27655894456a1b0957c8c42f31819e1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: d8520224662c02d1ffbe9fd2fd6ef76f8b1e698a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62795736"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262919"
 ---
 # <a name="managing-passwords-oracletosql"></a>Gerenciar senhas (OracleToSQL)
 Esta seção é sobre como proteger as senhas de banco de dados e o procedimento para importar ou exportá-los entre servidores:  

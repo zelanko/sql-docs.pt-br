@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64690a297e70ac9d8d07a7ade58b03bee01df3da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d661072ae999721c258b2fd85b53665e2104b2f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106918"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Metadados – parâmetro e conjunto de linhas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,10 +41,10 @@ ms.locfileid: "51662435"
   
 |Tipo de parâmetro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|Data|DBTYPE_DBDATE|6|10|0|Liberada|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Defina|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Liberada|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|Defina|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26,28..34|0..7|Defina|  
   
@@ -59,11 +58,11 @@ ms.locfileid: "51662435"
 |*pwszDataSourceType*<br /><br /> (específico do provedor)|*pwszDataSourceType*<br /><br /> (OLE DB genérico)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|Ignored|  
-|Data|DBTYPE_DBDATE|6|Ignored|  
+|date|DBTYPE_DBDATE|6|Ignored|  
 ||DBTYPE_DBTIME|10|Ignored|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|Ignored|  
-|DATETIME||16|Ignored|  
+|datetime||16|Ignored|  
 |datetime2 ou DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
@@ -76,7 +75,7 @@ ms.locfileid: "51662435"
 |Tipo de associação|*pwszDataSourceType*<br /><br /> (específico do provedor)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|Data|  
+|DBTYPE_DBDATE|date|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -87,10 +86,10 @@ ms.locfileid: "51662435"
   
 |Tipo de coluna|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|Data|DBTYPE_DBDATE|6|10|0|Liberada|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Defina|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Liberada|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Defina|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Defina|  
   
@@ -121,10 +120,10 @@ ms.locfileid: "51662435"
   
 |Tipo de parâmetro|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|Data|DBTYPE_DBDATE|6|10|0|Liberada|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Defina|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Liberada|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Defina|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Defina|  
   

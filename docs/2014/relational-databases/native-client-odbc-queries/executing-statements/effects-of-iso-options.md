@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ebef85cf1deb2327122edfd536991f689b14c747
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180339"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206766"
 ---
 # <a name="effects-of-iso-options"></a>Efeitos das opções ISO
   O padrão ODBC corresponde bastante ao padrão ISO e os aplicativos ODBC esperam o comportamento padrão de um driver ODBC. Para fazer seu comportamento se conformar melhor com que definido no padrão ODBC, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client sempre usa qualquer opção ISO disponível na versão do SQL Server com o qual ele se conecta.  

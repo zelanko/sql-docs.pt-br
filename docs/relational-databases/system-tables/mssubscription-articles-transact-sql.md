@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 36d6c5db3f675c570237a436557bbe6827af09e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8518c787f876152787ee30a20b9f25f936b9fa86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139783"
 ---
 # <a name="mssubscriptionarticles-transact-sql"></a>MSsubscription_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52758548"
 |**artid**|**int**|A ID do artigo do **sysarticles** tabela.|  
 |**article**|**sysname**|O nome do artigo dos **sysarticles** tabela.|  
 |**dest_table**|**sysname**|O nome da tabela de destino a partir de **sysarticles** tabela.|  
-|**Proprietário**|**sysname**|O proprietário da assinatura.|  
+|**owner**|**sysname**|O proprietário da assinatura.|  
 |**cft_table**|**sysname**|O nome da tabela de conflito para este artigo, para tipo de replicação de atualização enfileirada.|  
   
 ## <a name="see-also"></a>Consulte também  

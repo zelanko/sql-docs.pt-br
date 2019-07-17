@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24a779a751ac93c4c132c2dbf8ae63987de2666a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027343"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208230"
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Create a trusted location for Power Pivot sites in Central Administration
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Os Serviços do Excel permitem especificar quais locais são repositórios válidos para pastas de trabalho que você abrir em um servidor do SharePoint. Esses locais são chamados de "locais confiáveis" e você pode usar diferentes definições de configuração para cada local confiável que você criar. Para uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, você pode considerar criar um local confiável para sites que tenham pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , de forma que você possa aplicar as configurações que funcionam melhor para acesso a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , enquanto preserva valores padrão para o resto do farm.  
   
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Você deve ser um farm ou administrador de serviço para designar uma URL como um local confiável.  
   
- Você deve saber o endereço da URL do site do SharePoint que contém a Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou outra biblioteca que armazena suas pastas de trabalho. Para obter o endereço, abra o site que contém a biblioteca, clique com o botão direito do mouse em **Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, selecione **Propriedades** e copie a primeira parte do Endereço (URL) que contém o nome do servidor e o caminho do site.  
+ Você deve saber o endereço da URL do site do SharePoint que contém a Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou outra biblioteca que armazena suas pastas de trabalho. Para obter o endereço, abra o site que contém a biblioteca, clique com o botão direito do mouse em **Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** , selecione **Propriedades** e copie a primeira parte do Endereço (URL) que contém o nome do servidor e o caminho do site.  
   
 ##  <a name="overview"></a> Visão geral  
  Uma instalação inicial de Serviços do Excel especifica 'http://' como seu local confiável, o que significa que podem ser abertas pastas de trabalho de qualquer site no farm no servidor. Se você precisar de mais controle sobre quais locais são considerados confiáveis, você poderá criar novos locais confiáveis que sejam mapeados para sites específicos em seu farm e então variar as configurações e permissões para cada um.  
@@ -62,7 +62,7 @@ ms.locfileid: "34027343"
   
 ## <a name="see-also"></a>Consulte também  
  [Galeria do Power Pivot](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   
- [Criar e personalizar a Galeria do Power Pivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
+ [Criar e personalizar a galeria do Power Pivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
  [Usar Galeria do Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
   
   

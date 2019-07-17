@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2008f066d537b1f88b9bf674c4a864217eae9890
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 41ff4c51d3dc357f253a42689565849f07235ff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685563"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162146"
 ---
 # <a name="mark-as-date-table"></a>Marcar como Tabela de Data
 
@@ -31,7 +31,7 @@ Antes de marcar a tabela de data e a coluna de data, é um bom momento para faze
   
 Tempo estimado para concluir esta lição: **Três minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 
 Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 2: Obter dados](../tutorial-tabular-1400/as-lesson-2-get-data.md). 
 

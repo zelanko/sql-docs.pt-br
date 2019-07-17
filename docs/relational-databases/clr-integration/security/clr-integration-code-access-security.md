@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 25f802f5c9cb67646903179c9100c7014fe466df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f49968392dd813b48f43e5e63586fd0c6bec71d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802274"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118524"
 ---
 # <a name="clr-integration-code-access-security"></a>Segurança de acesso a código da integração CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,18 +29,18 @@ ms.locfileid: "47802274"
   
  A política de segurança que determina as permissões concedidas a assemblies é definida em três locais diferentes:  
   
--   Política de máquina: trata-se da política em vigor para todo o código gerenciado em execução na máquina na qual o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está instalado.  
+-   Política do computador: Esta é a política em vigor para todo o código gerenciado em execução na máquina na qual [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está instalado.  
   
--   Política de usuário: trata-se da política em vigor para o código gerenciado hospedado por um processo. No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a política de usuário é específica da conta do Windows na qual o serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está em execução.  
+-   Política de usuário: Esta é a política em vigor para código gerenciado hospedado por um processo. No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a política de usuário é específica da conta do Windows na qual o serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está em execução.  
   
--   Política de host: trata-se da política configurada pelo host do CLR (nesse caso, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) em vigor para o código gerenciado em execução no host.  
+-   Política de host: Isso é a política configurada pelo host do CLR (nesse caso, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) que está em vigor para código gerenciado em execução nesse host.  
   
  O mecanismo da segurança de acesso do código para o qual o CLR oferece suporte se baseia na pressuposição de que o tempo de execução pode hospedar tanto o código totalmente confiável quanto o parcialmente confiável. Os recursos que são protegidos pela segurança de acesso do código CLR costumam estar em interfaces de programação de aplicativo gerenciado que exigem a permissão correspondente antes de permitir o acesso ao recurso. A demanda para a permissão é satisfatória apenas quando todos os chamadores (no nível de assembly) na pilha de chamadas tiverem a permissão do recurso correspondente.  
   
  O conjunto de permissões da segurança de acesso do código concedidas ao código gerenciado em execução no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é a interseção do conjunto de permissões concedidas pelos três níveis de política acima. Mesmo que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conceda um conjunto de permissões a um assembly carregado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o conjunto de permissões final dado ao código do usuário pode ser restringido ainda mais com as políticas de nível do usuário e da máquina.  
   
 ## <a name="sql-server-host-policy-level-permission-sets"></a>Conjuntos de permissões do nível de política do host do SQL Server  
- O conjunto de permissões da segurança de acesso do código concedidas a assemblies pelo nível de política de host do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é determinado pelo conjunto de permissões especificado durante a criação do assembly. Há três conjuntos de permissão: **seguro**, **EXTERNAL_ACCESS** e **UNSAFE** (especificados usando o **PERMISSION_SET** opção do [ CRIAR o ASSEMBLY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-assembly-transact-sql.md)).  
+ O conjunto de permissões da segurança de acesso do código concedidas a assemblies pelo nível de política de host do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é determinado pelo conjunto de permissões especificado durante a criação do assembly. Há três conjuntos de permissões: **SEGURO**, **EXTERNAL_ACCESS** e **UNSAFE** (especificados usando o **PERMISSION_SET** opção de [CREATE ASSEMBLY &#40; Transact-SQL&#41;](../../../t-sql/statements/create-assembly-transact-sql.md)).  
   
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece um nível de política de segurança em nível de host ao CLR ao hospedá-lo; essa política é um nível de política adicional abaixo dos dois níveis de política que estão sempre em vigor. Essa política é definida para todos os domínios de aplicativo criados pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Essa política não se destina ao domínio de aplicativo padrão que entraria em vigor quando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] criasse uma instância do CLR.  
   
@@ -58,8 +57,8 @@ ms.locfileid: "47802274"
   
 |Permissão|Valor(es)/descrição|  
 |----------------|-----------------------------|  
-|**SecurityPermission**|**Execução:** permissão para executar código gerenciado.|  
-|**SqlClientPermission**|**Conexão de contexto = true**, **conexão de contexto = yes**: apenas a conexão de contexto pode ser usado e a cadeia de caracteres de conexão só pode especificar um valor de "conexão de contexto = true" ou "conexão de contexto = yes".<br /><br /> **AllowBlankPassword = false:** senhas em branco não são permitidas.|  
+|**SecurityPermission**|**Execução:** Permissão para executar código gerenciado.|  
+|**SqlClientPermission**|**Conexão de contexto = true**, **conexão de contexto = yes**: Apenas a conexão de contexto pode ser usado e a cadeia de caracteres de conexão só pode especificar um valor de "conexão de contexto = true" ou "conexão de contexto = yes".<br /><br /> **AllowBlankPassword = false:**  Senhas em branco não são permitidas.|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Assemblies EXTERNAL_ACCESS têm as mesmas permissões que **seguro** assemblies, com a habilidade adicional para acessar recursos externos do sistema como arquivos, redes, variáveis de ambiente e o registro.  
@@ -68,20 +67,20 @@ ms.locfileid: "47802274"
   
 |Permissão|Valor(es)/descrição|  
 |----------------|-----------------------------|  
-|**DistributedTransactionPermission**|**Irrestrito:** transações distribuídas são permitidas.|  
-|**DNSPermission**|**Irrestrito:** permissão para solicitar informações de servidores de nomes de domínio.|  
-|**EnvironmentPermission**|**Irrestrito:** total acesso a variáveis de ambiente do sistema e do usuário é permitido.|  
-|**EventLogPermission**|**Administrar:** as seguintes ações são permitidas: criar uma origem do evento, ler logs existentes, excluir fontes de eventos ou logs, responder a entradas, limpar um log de eventos, escutar eventos e acessar uma coleção de todos os logs de eventos.|  
-|**FileIOPermission**|**Irrestrito:** acesso completo a arquivos e pastas é permitida.|  
-|**KeyContainerPermission**|**Irrestrito:** total acesso aos contêineres de chave é permitido.|  
-|**NetworkInformationPermission**|**Acesso:** Pinging é permitido.|  
+|**DistributedTransactionPermission**|**Irrestrito:** Transações distribuídas são permitidas.|  
+|**DNSPermission**|**Irrestrito:** Permissão para solicitar informações de servidores de nomes de domínio.|  
+|**EnvironmentPermission**|**Irrestrito:** É permitido o acesso completo às variáveis de ambiente do sistema e do usuário.|  
+|**EventLogPermission**|**Administrar:** As seguintes ações são permitidas: criar uma origem do evento, ler logs existentes, excluir fontes de eventos ou logs, responder a entradas, limpar um log de eventos, escutar eventos e acessar uma coleção de todos os logs de eventos.|  
+|**FileIOPermission**|**Irrestrito:** É permitido o acesso completo aos arquivos e pastas.|  
+|**KeyContainerPermission**|**Irrestrito:** É permitido o acesso completo a contêineres de chave.|  
+|**NetworkInformationPermission**|**Acesso:** Execução de ping é permitida.|  
 |**RegistryPermission**|Permite que os direitos de leitura **HKEY_CLASSES_ROOT**, **HKEY_LOCAL_MACHINE**, **HKEY_CURRENT_USER**, **HKEY_CURRENT_CONFIG**e  **HKEY_USERS.**|  
-|**SecurityPermission**|**Asserção:** capacidade de declarar que todos os chamadores desse código têm a permissão necessária para a operação.<br /><br /> **ControlPrincipal:** capacidade de manipular o objeto principal.<br /><br /> **Execução:** permissão para executar código gerenciado.<br /><br /> **SerializationFormatter:** capacidade de fornecer serviços de serialização.|  
-|**SmtpPermission**|**Acesso:** são permitidas conexões de saída para a porta de host SMTP 25.|  
-|**SocketPermission**|**Conecte-se:** são permitidas conexões de saída (todas as portas, todos os protocolos) em um endereço de transporte.|  
-|**SqlClientPermission**|**Irrestrito:** total acesso à fonte de dados é permitido.|  
-|**StorePermission**|**Irrestrito:** acesso completo para o certificado x. 509 armazenamentos é permitida.|  
-|**WebPermission**|**Conecte-se:** são permitidas conexões de saída para recursos da web.|  
+|**SecurityPermission**|**Asserção:** Capacidade de declarar que todos os chamadores desse código têm a permissão necessária para a operação.<br /><br /> **ControlPrincipal:** Capacidade de manipular o objeto principal.<br /><br /> **Execução:** Permissão para executar código gerenciado.<br /><br /> **SerializationFormatter:** Capacidade de fornecer serviços de serialização.|  
+|**SmtpPermission**|**Acesso:** São permitidas conexões de saída para a porta de host SMTP 25.|  
+|**SocketPermission**|**Conecte-se:** São permitidas conexões de saída (todas as portas, todos os protocolos) em um endereço de transporte.|  
+|**SqlClientPermission**|**Irrestrito:** É permitido o acesso completo à fonte de dados.|  
+|**StorePermission**|**Irrestrito:** É permitido o acesso completo aos repositórios de certificados x. 509.|  
+|**WebPermission**|**Conecte-se:** São permitidas conexões de saída para recursos da web.|  
   
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE permite que os assemblies tenham acesso irrestrito aos recursos, dentro e fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Código em execução em um **UNSAFE** assembly também pode chamar código não gerenciado.  
@@ -109,9 +108,9 @@ ms.locfileid: "47802274"
 ||**SAFE**|**EXTERNAL_ACCESS**|**NÃO SEGURO**|  
 |**Permissões de segurança de acesso do código**|Somente execução|Execução + acesso a recursos externos|Irrestrito (inclusive P/Invoke)|  
 |**Restrições do modelo de programação**|Sim|Sim|Sem restrições|  
-|**Requisito de capacidade de verificação**|Sim|Sim|não|  
+|**Requisito de capacidade de verificação**|Sim|Sim|Não|  
 |**Acesso a dados locais**|Sim|Sim|Sim|  
-|**Capacidade de chamar código nativo**|não|não|Sim|  
+|**Capacidade de chamar código nativo**|Não|Não|Sim|  
   
 ## <a name="see-also"></a>Consulte também  
  [Segurança da integração CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

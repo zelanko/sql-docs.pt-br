@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 561dc878302afe7636a2660a9e194ac14a35c7f1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020313"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179120"
 ---
-# <a name="bi-wizard---enable-dimension-writeback"></a>Assistente de BI - habilitar write-back
+# <a name="bi-wizard---enable-dimension-writeback"></a>Assistente de BI – Habilitar o write-back de dimensão
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Adicione o aprimoramento de write-back de dimensão a um cubo ou dimensão para que os usuários possam modificar manualmente a estrutura e os membros da dimensão. Atualizações em uma dimensão habilitada para gravação são registradas diretamente na tabela de dimensões. Esse aprimoramento altera a configuração de propriedade **WriteEnabled** de uma dimensão.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34020313"
 ## <a name="setting-dimension-writeback-capability"></a>Definindo a capacidade de write-back de dimensão  
  Na segunda página **Habilitar o Write-back de Dimensão** do assistente, você realmente define a opção **Habilitar write-back na dimensão** . A seleção dessa opção definirá automaticamente a propriedade **WriteEnabled** da dimensão como **True**. Desmarcar essa opção definirá automaticamente a propriedade como **False**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Ao criar um novo membro, você deve incluir todo atributo em uma dimensão. Você não pode inserir um membro sem especificar um valor para o atributo de chave da dimensão. Portanto, a criação de membros está sujeita às restrições (como valores de chave não nulos) definidas na tabela de dimensões. Você também deve considerar opcionalmente colunas especificadas por propriedades de dimensão, como colunas especificadas na propriedade de dimensão **CustomRollupColumn**, **CustomRollupPropertiesColumn** ou **UnaryOperatorColumn** .  
   
 > [!WARNING]  
