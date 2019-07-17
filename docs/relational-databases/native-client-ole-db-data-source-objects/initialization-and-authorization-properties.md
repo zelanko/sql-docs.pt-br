@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e49f9b2bcd4784c76f693863c7837dd827ba2924
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07e487201b34b165304d946161e93ed28cd09612
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128584"
 ---
 # <a name="initialization-and-authorization-properties"></a>Propriedades de inicialização e autorização
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "62806035"
 |DBPROP_INIT_ASYNCH|O provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client oferece suporte à iniciação assíncrona.<br /><br /> A definição do bit DBPROPVAL_ASYNCH_INITIALIZE na propriedade DBPROP_INIT_ASYNCH faz com que **IDBInitialize::Initialize** se torne uma chamada sem bloqueio. Para obter mais informações, consulte [executando operações assíncronas](../../relational-databases/native-client/features/performing-asynchronous-operations.md).|  
 |DBPROP_INIT_CATALOG|Nome de um banco de dados existente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao qual se conectar.|  
 |DBPROP_INIT_DATASOURCE|Nome da rede de um servidor que executa uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se houver várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em execução no computador, para se conectar a uma instância específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o valor DBPROP_INIT_DATASOURCE será especificado como *\\\ServerName\InstanceName*. A sequência de escape \\\ é usada para a própria barra invertida.|  
-|DBPROP_INIT_GENERALTIMEOUT|Indica o número de segundos antes que uma solicitação, além de inicialização e execução do comando de fonte de dados, o tempo limite. Um valor de 0 indica que nunca expirará. Provedores que trabalham em conexões de rede ou em cenários distribuídos ou transacionados podem oferecer suporte a esta propriedade para orientar um componente inscrito a expirar no caso de uma solicitação de longa execução. Os tempos limites para a inicialização da fonte de dados e a execução de comando permanecem controlados por DBPROP_INIT_TIMEOUT e DBPROP_COMMANDTIMEOUT, respectivamente.<br /><br /> DBPROP_INIT_GENERALTIMEOUT é somente leitura e, se uma pessoa tentar defini-lo, o erro *dwstatus* de DBPROPSTATUS_NOTSETTABLE será retornado.|  
+|DBPROP_INIT_GENERALTIMEOUT|Indica o número de segundos antes de uma solicitação, que não seja a inicialização da fonte de dados e a execução do comando, expirar. Um valor de 0 indica que nunca expirará. Provedores que trabalham em conexões de rede ou em cenários distribuídos ou transacionados podem aceitar esta propriedade para orientar um componente inscrito a expirar no caso de uma solicitação de longa duração. Os tempos limites para a inicialização da fonte de dados e a execução de comando permanecem controlados por DBPROP_INIT_TIMEOUT e DBPROP_COMMANDTIMEOUT, respectivamente.<br /><br /> DBPROP_INIT_GENERALTIMEOUT é somente leitura e, se uma pessoa tentar defini-lo, o erro *dwstatus* de DBPROPSTATUS_NOTSETTABLE será retornado.|  
 |DBPROP_INIT_HWND|O identificador do Windows do aplicativo de chamada. Um identificador de janela válido é necessário para a caixa de diálogo de inicialização exibida quando a solicitação de propriedades de inicialização é permitida.|  
 |DBPROP_INIT_IMPERSONATION_LEVEL|O provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client não oferece suporte ao ajuste do nível de representação.<br /><br /> O provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retorna DB_S_ERRORSOCCURRED em uma tentativa para definir o valor da propriedade. O membro *dwStatus* da Estrutura DBPROP indica DBPROPSTATUS_NOTSUPPORTED.|  
 |DBPROP_INIT_LCID|O provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client valida a ID de localidade e retornará um erro se a ID de localidade não tiver suporte ou não estiver instalada no cliente.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b08de0ce5acde863d8f2683b9bc8d6f38c2fa4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108627"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,14 +71,14 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  TEMPLATE  
  Indica que o guia de plano se aplica a qualquer consulta que parâmetros ao formulário indicado na *statement_text*. Se o modelo for especificado, somente a PARAMETRIZAÇÃO {FORCED | Dica de consulta simples} pode ser especificada no \@dicas de parâmetro. Para obter mais informações sobre guias de plano TEMPLATE, consulte [especificar o comportamento de parametrização de consulta por guias de plano usando](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
   
- [\@module_or_batch =]{ N'[ *schema_name*. ] *object_name*' | N'*batch_text*' | NULL }  
+ [\@module_or_batch =] {N'[ *schema_name*. ] *object_name*' | N'*batch_text*' | NULL}  
  Especifica o nome do objeto no qual *statement_text* for exibida, ou o texto de lote no qual *statement_text* é exibida. O texto de lote não pode incluir um uso*banco de dados* instrução.  
   
  Para obter um guia de plano corresponder a um lote enviado de um aplicativo *batch_tex*deve ser fornecido no mesmo formato, caractere por caractere, que é enviado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nenhuma conversão interna é executada para facilitar essa correspondência. Para obter mais informações, consulte a seção Comentários.  
   
  [*schema_name*.] *object_name* Especifica o nome de uma [!INCLUDE[tsql](../../includes/tsql-md.md)] armazenados procedimento, função escalar, função com valor de tabela com várias instruções, ou [!INCLUDE[tsql](../../includes/tsql-md.md)] gatilho DML que contém *statement_text*. Se *schema_name* não for especificado, *schema_name* usa o esquema do usuário atual. Se NULL for especificado e \@tipo = 'SQL', o valor da \@module_or_batch é definido como o valor de \@stmt. Se \@tipo = ' modelo **'** , \@module_or_batch deverá ser NULL.  
   
- [ \@params = ]{ N' *\@parameter_name data_type* [ , *...n* ]' | NULL }  
+ [ \@params =] {N' *\@data_type parameter_name* [, *... n* ]' | NULL}  
  Especifica as definições de todos os parâmetros que são inseridos no *statement_text*. \@param. autom aplica-se somente quando uma das seguintes opções for verdadeira:  
   
 -   \@tipo = 'SQL' ou 'TEMPLATE'. Se 'TEMPLATE' \@params não deve ser NULL.  

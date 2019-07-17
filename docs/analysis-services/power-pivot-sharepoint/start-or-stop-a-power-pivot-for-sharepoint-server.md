@@ -1,5 +1,5 @@
 ---
-title: Iniciar ou parar um PowerPivot para SharePoint Server | Microsoft Docs
+title: Iniciar ou parar um Power Pivot para SharePoint Server | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4b53cc7730f962d790ebdb9a0373bf98e9bf32bf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34037400"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208092"
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>Iniciar ou parar um Power Pivot para SharePoint Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] O Serviço de Sistema e uma instância do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] funcionam em conjunto no mesmo servidor de aplicativos local para dar suporte à solicitação coordenada e ao processamento de dados em um farm do SharePoint.  
   
- Este tópico contém as seguintes seções:  
+ Esse tópico contém as seguintes seções:  
   
  [Dependências de serviço](#dependencies)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "34037400"
 ##  <a name="effects"></a> Efeitos da interrupção de um servidor do Power Pivot  
  A tabela a seguir descreve os efeitos de parar o Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e o serviço Analysis Services em um servidor do SharePoint.  
   
-|Efeito em|Description|  
+|Efeito em|Descrição|  
 |---------------|-----------------|  
 |Consultas existentes|As consultas que estão em andamento em um servidor do Analysis Services pararão imediatamente. O usuário receberá o erro de dados não localizados ou conexão da fonte de dados não localizada.|  
 |Trabalhos de atualização de dados existentes em processamento no momento|Os trabalhos que estão em andamento em um servidor do Analysis Services atual pararão imediatamente. A atualização de dados falhará e um erro será registrado no histórico da atualização de dados.<br /><br /> É possível exibir o status de trabalhos atuais antes de parar o serviço, usando-se a página Verificar status do trabalho na Administração Central do SharePoint.<br /><br /> Embora seja impossível saber quais trabalhos estão em processamento no momento, não há como exibir a própria fila para verificar se outros trabalhos estão prestes a começar.|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 18013587c8c6eb23989f8f22150b8980d0e5afc1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513776"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182659"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de série temporal (Analysis Services – Mineração de dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "52513776"
  As seções a seguir explicam como os nós são organizados dentro de cada tipo de modelo.  
   
 ### <a name="structure-of-an-artxp-model"></a>Estrutura de um modelo ARTXP  
- O algoritmo ARTXP cria um modelo semelhante a um modelo de árvore de decisão. Ele agrupa atributos previsíveis e os divide sempre que são localizadas diferenças significativas. Consequentemente, cada modelo ARTXP contém uma ramificação separada para cada atributo previsível. Por exemplo, o tutorial Mineração de dados básica cria um modelo que prevê o volume de vendas para várias regiões. Nesse caso, **[Amount]** é o atributo previsível e uma ramificação separada é criada para cada região. Se tivéssemos dois atributos previsíveis, **[Amount]** e **[Quantity]**, seria criada uma ramificação separada para cada combinação de um atributo e uma região.  
+ O algoritmo ARTXP cria um modelo semelhante a um modelo de árvore de decisão. Ele agrupa atributos previsíveis e os divide sempre que são localizadas diferenças significativas. Consequentemente, cada modelo ARTXP contém uma ramificação separada para cada atributo previsível. Por exemplo, o tutorial Mineração de dados básica cria um modelo que prevê o volume de vendas para várias regiões. Nesse caso, **[Amount]** é o atributo previsível e uma ramificação separada é criada para cada região. Se tivéssemos dois atributos previsíveis, **[Amount]** e **[Quantity]** , seria criada uma ramificação separada para cada combinação de um atributo e uma região.  
   
  O nó superior da divisão ARTXP contém a mesma informação presente no nó raiz da árvore de decisão. Isso inclui o número de filhos de cada nó (CHILDREN_CARDINALITY), o número de casos que atendem as condições deste nó (NODE_SUPPORT) e uma variedade de estatísticas descritivas (NODE_DISTRIBUTION).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52513776"
 >  Caso queira exibir as fórmulas, poderá encontrar a fórmula de regressão completa no nível do nó folha, mas não em um nó intermediário ou no nó raiz.  
   
 ### <a name="structure-of-an-arima-model"></a>Estrutura de um modelo ARIMA  
- O algoritmo ARIMA cria uma única informação para cada combinação de uma série de dados (como **[Região]**) e um atributo previsível (como **[Sales Amount]**)-a equação que descreve o alteração do atributo previsível ao longo do tempo.  
+ O algoritmo ARIMA cria uma única informação para cada combinação de uma série de dados (como **[Região]** ) e um atributo previsível (como **[Sales Amount]** )-a equação que descreve o alteração do atributo previsível ao longo do tempo.  
   
  A equação para cada série é derivada de vários componentes, um para cada estrutura periódica que foi encontrada nos dados. Por exemplo, se você tem dados de vendas que são coletados mensalmente, o algoritmo pode detectar estruturas periódicas mensais, trimestrais ou anuais.  
   
@@ -303,7 +303,7 @@ WHERE NODE_TYPE = 15
 ##  <a name="bkmk_ARIMA_1"></a> Entendendo a árvore ARIMA  
  Cada estrutura em um modelo ARIMA corresponde a uma *periodicidade* ou *estrutura periódica*. Uma estrutura periódica é um padrão de dados que se repete ao longo da série de dados. São permitidas algumas pequenas variações no padrão, dentro de limites estatísticos. A periodicidade é medida de acordo com as unidades de tempo padrão que foram usadas nos dados de treinamento. Por exemplo, se os dados de treinamento fornecem informações de vendas para cada dia, a unidade de tempo padrão é um dia e todas as estruturas periódicas são definidas como um número específico de dias.  
   
- Cada período detectado pelo algoritmo adquire seu próprio nó de estrutura. Por exemplo, se você estiver analisando dados de vendas diárias, os modelo pode detectar estruturas periódicas que representam semanas. Nesse caso, o algoritmo criará duas estruturas periódicas no modelo finalizado: uma para o período diário padrão, indicada por {1}, e uma para semanas, indicada por {7}.  
+ Cada período detectado pelo algoritmo adquire seu próprio nó de estrutura. Por exemplo, se você estiver analisando dados de vendas diárias, os modelo pode detectar estruturas periódicas que representam semanas. Nesse caso, o algoritmo criará duas estruturas periódicas no modelo finalizado: uma para o período diário padrão, indicado por {1}, e uma para semanas, indicada por {7}.  
   
  Por exemplo, a consulta a seguir retorna todas as estruturas ARIMA de um modelo de mineração.  
   

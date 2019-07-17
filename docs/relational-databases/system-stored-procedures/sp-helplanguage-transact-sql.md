@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1b567b7d20f4d588fe0ca70f68be4318ce24398
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d46e178fc1872a84bb573f16629803c59f2fb6c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122506"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |-----------------|---------------|-----------------|  
 |**langid**|**smallint**|Número de identificação do idioma.|  
 |**dateformat**|**nchar(3)**|Formato da data.|  
-|**datefirst**|**tinyint**|Primeiro dia da semana: 1 para segunda-feira, 2 para terça-feira e assim por diante, até 7 para domingo.|  
-|**upgrade**|**int**|Versão da última atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para este idioma.|  
+|**datefirst**|**tinyint**|Primeiro dia da semana: 1 para segunda-feira, 2 para terça-feira, e assim por diante, até 7 para domingo.|  
+|**Atualizar**|**int**|Versão da última atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para este idioma.|  
 |**name**|**sysname**|Nome do idioma.|  
 |**alias**|**sysname**|Nome alternativo do idioma.|  
 |**meses**|**nvarchar(372)**|Nomes de meses.|  

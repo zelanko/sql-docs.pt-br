@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797738"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196511"
 ---
 # <a name="dml-triggers"></a>Gatilhos DML
   Os gatilhos DML são um tipo especial de procedimento armazenado que entra em vigor automaticamente quando um evento DML (linguagem de manipulação de dados) ocorre e afeta a tabela ou exibição definida no gatilho. Os eventos DML são instruções INSERT, UPDATE ou DELETE. Os gatilhos DML podem ser usados para impor regras de negócios e integridade de dados, consultar outras tabelas e incluir instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] complexas. O gatilho e a instrução que o dispara são tratados como uma transação simples, que pode ser revertida dentro do gatilho. Se um erro grave for detectado (espaço em disco insuficiente, por exemplo), toda a transação será revertida automaticamente.  
@@ -59,7 +59,7 @@ ms.locfileid: "52797738"
 |Aplicabilidade|Tabelas|Tabelas e exibições|  
 |Quantidade por tabela ou exibição|Múltiplas ações por ação de gatilho (UPDATE, DELETE e INSERT)|Uma ação por ação de gatilho (UPDATE, DELETE e INSERT)|  
 |Referências em cascata|Nenhuma restrição se aplica|Os gatilhos INSTEAD OF UPDATE e DELETE não são permitidos em tabelas que são destinos de restrições de integridade referencial em cascata.|  
-|Execução|Após:<br /><br /> Processamento da restrição<br />Ações referenciais declarativas<br />Criação de tabelas**inserted** e **deleted** <br />A ação de gatilho|Antes: Processamento da restrição<br /><br /> Em lugar de:  A ação de gatilho<br /><br /> Depois: criação de tabelas  **inserted** e **deleted**|  
+|Execução|Após:<br /><br /> Processamento da restrição<br />Ações referenciais declarativas<br />Criação de tabelas**inserted** e **deleted**<br />A ação de gatilho|Antes: Processamento da restrição<br /><br /> Em lugar de:  A ação de gatilho<br /><br /> Depois: criação de tabelas  **inserted** e **deleted**|  
 |Ordem de execução|A primeira e a última execução podem ser especificadas|Não aplicável|  
 |`varchar(max)`, `nvarchar(max)`, e `varbinary(max)` a coluna referenciada na **inserido** e **excluído** tabelas|Allowed (permitido)|Allowed (permitido)|  
 |`text`, `ntext`, e `image` a coluna referenciada na **inserido** e **excluído** tabelas|Não permitido|Allowed (permitido)|  
@@ -67,7 +67,7 @@ ms.locfileid: "52797738"
  Gatilhos CLR  
  Um gatilho CLR pode ser um gatilho AFTER ou INSTEAD OF. Um gatilho CLR também pode ser um gatilho DDL. Em vez de executar um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] , um gatilho CLR executa um ou mais métodos gravados em código gerenciado que são membros de um assembly criado no .NET Framework e carregado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Tarefa|Tópico|  
 |----------|-----------|  

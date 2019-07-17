@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ab561b096c4436349580201eec3b3ea10a8aaa75
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 4e8e6bea11794545a2b0ab9c340e85344ec23d33
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685303"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162199"
 ---
 # <a name="deploy"></a>Implantar
 
@@ -25,7 +25,7 @@ Nesta lição, você configura as propriedades de implantação especificando pa
   
 Tempo estimado para concluir esta lição: **5 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 
 Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 12: Analisar no Excel](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md).  
 
@@ -72,7 +72,7 @@ Esta lição descreve o método mais comum e mais fácil para implantar um model
 ## <a name="conclusion"></a>Conclusão  
 Parabéns! Você terminou a criar e implantar seu primeiro modelo de tabela do Analysis Services. Este tutorial ajudou você a concluir as tarefas mais comuns da criação de um modelo de tabela. Agora que o Modelo de Vendas pela Internet do Adventure Works está implantado, você pode usar o SQL Server Management Studio para gerenciar o modelo; crie scripts de processo e um plano de backup. Os usuários agora também podem se conectar ao modelo usando um aplicativo cliente de relatório, como o Microsoft Excel ou Power BI.  
 
-![as-lesson13-ssms](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
+![ssms como lesson13](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
   
   
   

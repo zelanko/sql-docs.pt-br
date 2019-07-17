@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0ae12ee7c40fe72e78bde2602177f741093a83c4
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579566"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183052"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Referência técnica do algoritmo Regressão Logística da Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -128,7 +128,7 @@ WHERE NODE_TYPE = 23
  Aplica-se às colunas de estrutura de mineração.  
   
  MODEL_EXISTENCE_ONLY  
- Significa que a coluna será tratada como se tivesse dois estados possíveis: **Faltando** e **existentes**. Nulo é um valor ausente.  
+ Significa que a coluna será tratada como tendo dois estados possíveis: **Faltando** e **existentes**. Nulo é um valor ausente.  
   
  Aplica-se à coluna de modelo de mineração.  
   

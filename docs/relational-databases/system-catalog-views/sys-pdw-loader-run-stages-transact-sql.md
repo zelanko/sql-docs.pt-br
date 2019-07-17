@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 255681e9-323c-42c0-a63c-1f05536efdd5
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ed0721ada78b3aa70741510818c5e312b3bd4d55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d10a3bcbf02e88e054c12060299e9462af3004d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127448"
 ---
 # <a name="syspdwloaderrunstages-transact-sql"></a>sys.pdw_loader_run_stages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "63047196"
   
 |||||  
 |-|-|-|-|  
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |run_id|**int**|Identificador exclusivo de um carregador de executar.||  
 |estágio|**nvarchar(30)**|O estágio atual para a execução.|'CREATE_STAGING', 'DMS_LOAD', 'LOAD_INSERT', 'LOAD_CLEANUP'|  
 |request_id|**nvarchar(32)**|ID da solicitação em execução neste estágio.||  
